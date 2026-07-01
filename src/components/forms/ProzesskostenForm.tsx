@@ -80,7 +80,12 @@ function PostenKarte({ titel, posten }: { titel: string; posten: PostenErgebnis 
         : posten.schlichtungspauschale
           ? <p className="mt-1 text-body-s text-ink-600">Art. 95 II lit. a ZPO: eigener, meist reduzierter Tarif (oft ein Bruchteil der Entscheidgebühr) – hier nicht beziffert.</p>
           : posten.ergebnis && !posten.ergebnis.deterministisch
-            ? <p className="mt-1 text-body-s text-ink-600">Ermessensrahmen – konkrete Festsetzung durch die Behörde.</p>
+            ? <p className="mt-1 text-body-s text-ink-600">
+                Ermessensrahmen – konkrete Festsetzung durch die Behörde
+                {q.kriterien && q.kriterien.length > 0
+                  ? <>; massgebend: {q.kriterien.join(', ')}{q.kriterienNorm ? ` (${q.kriterienNorm})` : ''}.</>
+                  : '.'}
+              </p>
             : null}
       <p className="mt-2 text-xs text-ink-500">
         {q.erlassName} ({q.erlassNr}), <KantonArtikelTrigger quelle={q} /> · Stand {q.stand}
@@ -294,6 +299,12 @@ export function ProzesskostenForm({ minimal = false }: { minimal?: boolean } = {
           <p className="mt-3 text-xs text-ink-500">
             Betreibungsrechtliche Verfahren (Rechtsöffnung, Arrest, Aberkennung): Für die Betreibungshandlungen gilt die bundesrechtlich abschliessende GebV SchKG (Art. 16 SchKG, vorbehalten in Art. 96 ZPO) — siehe{' '}
             <a href="/rechner/betreibungskosten" className="underline hover:text-ink-800">Betreibungskosten-Rechner</a>. Die gerichtliche Entscheidgebühr (z. B. Rechtsöffnung) richtet sich nach dem kantonalen Tarif bzw. Art. 48 GebV SchKG.
+          </p>
+
+          {/* I9: Querverweis auf die Notariats-/Grundbuchgebühren (freiwillige Gerichtsbarkeit, eigener kantonaler Tarif). */}
+          <p className="mt-3 text-xs text-ink-500">
+            Beurkundung & Grundbuch (Kaufvertrag, Grundpfand, Eintragung): Notariats- und Grundbuchgebühren folgen einem eigenen kantonalen Tarif (öffentliche Beurkundung Art. 55 SchlT ZGB; Grundbuchgebühren Art. 954 ZGB) und sind nicht Teil der Prozesskosten — siehe{' '}
+            <a href="/rechner/notariat-grundbuch" className="underline hover:text-ink-800">Notariats- &amp; Grundbuchkosten-Rechner</a>.
           </p>
 
           <div className="mt-4 flex flex-wrap items-center gap-3">

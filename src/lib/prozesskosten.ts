@@ -105,6 +105,10 @@ export interface TarifQuelle {
   hinweis?: string;
   /** true = Betrag bereits inkl. MwSt (kein MwSt-Aufschlag auf die PE). */
   mwstInbegriffen?: boolean;
+  /** I4 — Bemessungskriterien der kantonalen Norm (Anzeige bei Spanne, §8). */
+  kriterien?: string[];
+  /** Bezeichnung der Bemessungsnorm, aus der `kriterien` stammen. */
+  kriterienNorm?: string;
 }
 
 export interface PostenErgebnis {
@@ -133,6 +137,7 @@ export interface ProzesskostenErgebnis {
 const quelle = (t: KantonalerTarif): TarifQuelle => ({
   erlassName: t.erlassName, erlassNr: t.erlassNr, artikel: t.artikel,
   quelleUrl: t.quelleUrl, stand: t.stand, verifiziert: t.verifiziert, hinweis: t.hinweis, mwstInbegriffen: t.mwstInbegriffen,
+  kriterien: t.kriterien, kriterienNorm: t.kriterienNorm,
 });
 
 const bgerQuelle = (t: BgerTarif): TarifQuelle => ({

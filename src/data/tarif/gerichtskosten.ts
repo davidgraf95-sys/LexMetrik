@@ -14,7 +14,9 @@ const INF = Infinity;
 export const GERICHTSKOSTEN: Record<KantonCode, KantonalerTarif> = {
   ZH: {
     kanton: 'ZH', erlassName: 'Gebührenverordnung des Obergerichts (GebV OG)', erlassNr: 'LS 211.11',
-    artikel: '§ 4 Abs. 1', stand: '1.1.2015 (Nachtrag 087)', verifiziert: 'doppelt',
+    artikel: '§ 4 Abs. 1', stand: '1.1.2015 (Nachtrag 087)', kriterien: ['Streitwert bzw. tatsächliches Streitinteresse', 'Zeitaufwand des Gerichts', 'Schwierigkeit des Falls'],
+    kriterienNorm: '§ 2 GebV OG (Erhöhung § 4 Abs. 2)',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html',
     hinweis: 'Grundgebühr; nach § 4 Abs. 2 um bis zu ⅓ (ausnahmsweise aufs Doppelte) erhöh-/ermässigbar (richterliches Ermessen).',
     regel: { typ: 'staffel_sockel_prozent', baender: [
@@ -30,7 +32,9 @@ export const GERICHTSKOSTEN: Record<KantonCode, KantonalerTarif> = {
   },
   BE: {
     kanton: 'BE', erlassName: 'Verfahrenskostendekret (VKD)', erlassNr: 'BSG 161.12',
-    artikel: 'Art. 36 (Art. 38 vereinfacht)', stand: '1.5.2026', verifiziert: 'doppelt',
+    artikel: 'Art. 36 (Art. 38 vereinfacht)', stand: '1.5.2026', kriterien: ['Zeit- und Arbeitsaufwand', 'Bedeutung des Geschäfts', 'wirtschaftliche Leistungsfähigkeit'],
+    kriterienNorm: 'Art. 5 VKD',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://www.belex.sites.be.ch/app/de/texts_of_law/161.12',
     hinweis: 'Rahmen je Band; Festsetzung nach Aufwand/Bedeutung/Leistungsfähigkeit. ≥2 Mio: 0,5–7 % des Streitwerts.',
     regel: { typ: 'staffel_rahmen', baender: [
@@ -45,7 +49,9 @@ export const GERICHTSKOSTEN: Record<KantonCode, KantonalerTarif> = {
   },
   LU: {
     kanton: 'LU', erlassName: 'Justiz-Kostenverordnung (JusKV)', erlassNr: 'SRL Nr. 265',
-    artikel: '§ 5', stand: '1.1.2026', verifiziert: 'doppelt',
+    artikel: '§ 5', stand: '1.1.2026', kriterien: ['Umfang, Bedeutung und Schwierigkeit der Streitsache', 'Umfang der Prozesshandlungen', 'Zeitaufwand', 'Interessen an der Beurteilung'],
+    kriterienNorm: '§ 1 Abs. 1 JusKV',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://srl.lu.ch/app/de/texts_of_law/265',
     hinweis: 'Rahmen je Band; >10 Mio: 1–2,5 % des Streitwerts.',
     regel: { typ: 'staffel_rahmen', baender: [
@@ -61,7 +67,9 @@ export const GERICHTSKOSTEN: Record<KantonCode, KantonalerTarif> = {
   },
   UR: {
     kanton: 'UR', erlassName: 'Gerichtsgebührenreglement (GGebR)', erlassNr: 'RB 2.3232',
-    artikel: 'Art. 5/6', stand: '1.10.2023', verifiziert: 'doppelt',
+    artikel: 'Art. 5/6', stand: '1.10.2023', kriterien: ['Aufwand der Gerichtsbehörde', 'Anzahl der Verhandlungen', 'Umfang der Beweisführung', 'Schwierigkeit von Sachverhalt und Rechtsfragen'],
+    kriterienNorm: 'Art. 3 GGebV i.V.m. Art. 2 GGebR',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://rechtsbuch.ur.ch/app/de/texts_of_law/2.3232',
     hinweis: 'Bis 30 000 vereinfachtes Verfahren (Art. 6). >1 Mio: 1–4 %, mind. CHF 20 000.',
     regel: { typ: 'staffel_rahmen', baender: [
@@ -75,7 +83,9 @@ export const GERICHTSKOSTEN: Record<KantonCode, KantonalerTarif> = {
   },
   SZ: {
     kanton: 'SZ', erlassName: 'Gebührenordnung (GebO)', erlassNr: 'SRSZ 173.111',
-    artikel: '§ 33 Ziff. 4/6', stand: '1.1.2026', verifiziert: 'doppelt',
+    artikel: '§ 33 Ziff. 4/6', stand: '1.1.2026', kriterien: ['Bedeutung der Sache', 'Zeitaufwand (max. Fr. 180/Std.)'],
+    kriterienNorm: '§ 3 Abs. 2 GebO',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://www.sz.ch/public/upload/assets/32452/173_111.pdf',
     hinweis: 'Reiner Rahmen, NICHT streitwert-gestaffelt; Festsetzung nach Bedeutung/Zeitaufwand (Ansatz max. CHF 180/Std.). Einzelrichter (vereinfacht): CHF 100–50 000.',
     regel: { typ: 'rahmen', vonChf: 100, bisChf: 100000 },
@@ -95,7 +105,9 @@ export const GERICHTSKOSTEN: Record<KantonCode, KantonalerTarif> = {
     // 50'000–100'000 → 2'000–6'000; über 100'000–350'000 → 2'500–10'500; über
     // 350'000 → 3'000 bis 3 % des Streitwerts.
     kanton: 'OW', erlassName: 'Gebührenordnung für die Rechtspflege (GebOR)', erlassNr: 'GDB 134.15',
-    artikel: 'Art. 12 (Kantonsgericht; bis 30 000 Art. 9 Kantonsgerichtspräsidium)', stand: '1.3.2015', verifiziert: 'doppelt',
+    artikel: 'Art. 12 (Kantonsgericht; bis 30 000 Art. 9 Kantonsgerichtspräsidium)', stand: '1.3.2015', kriterien: ['persönliche und wirtschaftliche Bedeutung', 'Schwierigkeit der Sache', 'Umfang', 'Zeitaufwand'],
+    kriterienNorm: 'Art. 4a GebOR',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://gdb.ow.ch/app/de/texts_of_law/134.15',
     hinweis: 'Rahmen je Band. Bis Streitwert 30 000 vereinfachtes Verfahren vor dem Kantonsgerichtspräsidium (Art. 9 Ziff. 2 lit. a); ab über 30 000 ordentliches Verfahren vor dem Kantonsgericht (Art. 12). Über 350 000: 3 000 bis 3 % des Streitwerts (Art. 12 Abs. 1 Ziff. 4).',
     regel: { typ: 'staffel_rahmen', baender: [
@@ -108,7 +120,9 @@ export const GERICHTSKOSTEN: Record<KantonCode, KantonalerTarif> = {
   },
   NW: {
     kanton: 'NW', erlassName: 'Prozesskostengesetz (PKoG)', erlassNr: 'NG 261.2',
-    artikel: 'Art. 7', stand: '1.1.2016', verifiziert: 'doppelt',
+    artikel: 'Art. 7', stand: '1.1.2016', kriterien: ['persönliche und wirtschaftliche Bedeutung', 'Schwierigkeit der Sache', 'Umfang der Prozesshandlungen', 'Zeitaufwand'],
+    kriterienNorm: 'Art. 7 Abs. 1 PKoG',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://gesetze.nw.ch/app/de/texts_of_law/261.2',
     hinweis: 'Rahmen je Band; >300 000: 2–3,5 % des Streitwerts.',
     regel: { typ: 'staffel_rahmen', baender: [
@@ -123,7 +137,9 @@ export const GERICHTSKOSTEN: Record<KantonCode, KantonalerTarif> = {
   },
   GL: {
     kanton: 'GL', erlassName: 'Zivil- und Strafprozesskostenverordnung', erlassNr: 'GS III A/5',
-    artikel: 'Art. 3', stand: '1.1.2026', verifiziert: 'doppelt',
+    artikel: 'Art. 3', stand: '1.1.2026', kriterien: ['Streitwert bzw. Interesse an der Beurteilung', 'Zeit- und Verwaltungsaufwand'],
+    kriterienNorm: 'Art. 1 Abs. 1 Zivil-/Strafprozesskostenverordnung',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://gesetze.gl.ch/app/de/texts_of_law/III-A.5',
     hinweis: 'Rahmen je Band; >1 Mio: CHF 4000 bis 4 % des Streitwerts. Schlichtung CHF 100–800.',
     regel: { typ: 'staffel_rahmen', baender: [
@@ -136,7 +152,9 @@ export const GERICHTSKOSTEN: Record<KantonCode, KantonalerTarif> = {
   },
   ZG: {
     kanton: 'ZG', erlassName: 'Kostenverordnung Obergericht (KoV OG)', erlassNr: 'BGS 161.7',
-    artikel: '§ 11 Abs. 1', stand: '1.1.2026', verifiziert: 'doppelt',
+    artikel: '§ 11 Abs. 1', stand: '1.1.2026', kriterien: ['Streitwert bzw. tatsächliches Streitinteresse', 'Bedeutung des Falls', 'Zeitaufwand', 'Schwierigkeit des Falls'],
+    kriterienNorm: '§ 3 Abs. 1 KoV OG',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://bgs.zg.ch/app/de/texts_of_law/161.7',
     hinweis: 'Rahmen je Band (zusätzlich %-Decke des Streitwerts); >5 Mio: ab CHF 60 000 / max 1,2 %.',
     regel: { typ: 'staffel_rahmen', baender: [
@@ -156,14 +174,18 @@ export const GERICHTSKOSTEN: Record<KantonCode, KantonalerTarif> = {
   },
   FR: {
     kanton: 'FR', erlassName: 'Règlement sur la justice (RJ)', erlassNr: 'RSF 130.11',
-    artikel: 'Art. 20/21', stand: '1.12.2025', verifiziert: 'doppelt',
+    artikel: 'Art. 20/21', stand: '1.12.2025', kriterien: ['Streitwert', 'Komplexität des Verfahrens', 'wirtschaftliche Lage der kostenpflichtigen Partei'],
+    kriterienNorm: 'Art. 11 Abs. 2 RJ',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://bdlf.fr.ch/app/fr/texts_of_law/130.11',
     hinweis: 'Einheitlicher Rahmen unabhängig vom Streitwert; bei Schwierigkeit/sehr hohem Streitwert auf das Doppelte (max CHF 1 Mio).',
     regel: { typ: 'rahmen', vonChf: 100, bisChf: 500000 },
   },
   SO: {
     kanton: 'SO', erlassName: 'Gebührentarif (GT)', erlassNr: 'BGS 615.11',
-    artikel: '§ 145', stand: '1.3.2026', verifiziert: 'doppelt',
+    artikel: '§ 145', stand: '1.3.2026', kriterien: ['Zeit- und Arbeitsaufwand', 'Bedeutung des Geschäftes', 'Interesse an der Verrichtung', 'wirtschaftliche Leistungsfähigkeit'],
+    kriterienNorm: '§ 3 Abs. 1 GT',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://bgs.so.ch/app/de/texts_of_law/615.11',
     hinweis: 'Rahmen je Band; >1 Mio: Höchstgebühr zzgl. bis 1 % des Streitwerts (§ 145 Abs. 2).',
     regel: { typ: 'staffel_rahmen', baender: [
@@ -178,7 +200,9 @@ export const GERICHTSKOSTEN: Record<KantonCode, KantonalerTarif> = {
   },
   BS: {
     kanton: 'BS', erlassName: 'Reglement über die Gerichtsgebühren (GGR)', erlassNr: 'SG 154.810',
-    artikel: '§ 5', stand: 'Reglement v. 11.9.2017', verifiziert: 'doppelt',
+    artikel: '§ 5', stand: 'Reglement v. 11.9.2017', kriterien: ['Bedeutung des Falles', 'Zeitaufwand des Gerichts', 'tatsächliche und rechtliche Komplexität', 'Streitwert bzw. tatsächliches Streitinteresse'],
+    kriterienNorm: '§ 2 Abs. 1 GGR',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810',
     hinweis: 'Grundgebühr als Rahmen je Band (§§ 15–17 modifizierbar); >5 Mio: 0,5–1,5 %, mind. CHF 60 000.',
     regel: { typ: 'staffel_rahmen', baender: [
@@ -193,7 +217,9 @@ export const GERICHTSKOSTEN: Record<KantonCode, KantonalerTarif> = {
   },
   BL: {
     kanton: 'BL', erlassName: 'Gebührentarif (GebT)', erlassNr: 'SGS 170.31',
-    artikel: '§ 8 Abs. 1 lit. f', stand: '1.1.2021', verifiziert: 'doppelt',
+    artikel: '§ 8 Abs. 1 lit. f', stand: '1.1.2021', kriterien: ['Streitwert', 'Bedeutung der Streitsache', 'Schwierigkeit des Falles', 'Arbeits- und Zeitaufwand'],
+    kriterienNorm: '§ 3 GebT',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://bl.clex.ch/app/de/texts_of_law/170.31',
     hinweis: 'Rahmen je Band; Erhöhung bis aufs Doppelte bzw. bis Maximalgebühr § 52 Abs. 3 GOG möglich.',
     regel: { typ: 'staffel_rahmen', baender: [
@@ -205,7 +231,9 @@ export const GERICHTSKOSTEN: Record<KantonCode, KantonalerTarif> = {
   },
   SH: {
     kanton: 'SH', erlassName: 'Justizgesetz (JG)', erlassNr: 'SHR 173.200',
-    artikel: 'Art. 83 (i.V.m. Art. 81)', stand: '1.5.2026', verifiziert: 'doppelt',
+    artikel: 'Art. 83 (i.V.m. Art. 81)', stand: '1.5.2026', kriterien: ['Streitwert', 'Aufwand der Justizbehörden', 'Schwierigkeit des Falls'],
+    kriterienNorm: 'Art. 81 Abs. 1 JG',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200',
     hinweis: 'Rahmen je Band; nur erhoben «wenn Verfahren nicht kostenlos» (Art. 113/114 ZPO). >2 Mio: oberer Rahmen nach Tarif.',
     regel: { typ: 'staffel_rahmen', baender: [
@@ -219,21 +247,27 @@ export const GERICHTSKOSTEN: Record<KantonCode, KantonalerTarif> = {
   },
   AR: {
     kanton: 'AR', erlassName: 'Verordnung über Rechtskosten (Gebührenordnung)', erlassNr: 'bGS 233.3',
-    artikel: 'Art. 17 (i.V.m. Art. 20)', stand: '1.12.2017', verifiziert: 'doppelt',
+    artikel: 'Art. 17 (i.V.m. Art. 20)', stand: '1.12.2017', kriterien: ['Bedeutung des Geschäfts', 'Grösse des Zeitaufwands', 'Einkommens- und Vermögensverhältnisse', 'Art der Prozessführung'],
+    kriterienNorm: 'Art. 4 Abs. 1 Gebührenordnung',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://ar.clex.ch/app/de/texts_of_law/233.3',
     hinweis: 'Grundrahmen CHF 100–5000; Streitwert-Multiplikator Art. 20: >50k–100k ×2 (max 10 000), >100k–250k ×3 (max 15 000), je +250k +100 %, besonders aufwendig ×4.',
     regel: { typ: 'rahmen', vonChf: 100, bisChf: 5000 },
   },
   AI: {
     kanton: 'AI', erlassName: 'Gerichtsgebührenverordnung (GGV)', erlassNr: 'GS 173.810',
-    artikel: 'Art. 11 (i.V.m. Art. 15)', stand: '1.1.2024', verifiziert: 'doppelt',
+    artikel: 'Art. 11 (i.V.m. Art. 15)', stand: '1.1.2024', kriterien: ['Art der Sache', 'finanzielle Interessen', 'Umtriebe (Aufwand)', 'Vermögensverhältnisse', 'Art der Prozessführung'],
+    kriterienNorm: 'Art. 2 Abs. 1 GGV',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://ai.clex.ch/app/de/texts_of_law/173.810',
     hinweis: 'Grundrahmen CHF 500–6000 (Kollegialgericht); Streitwert-Decke Art. 15 (>50k 200 %, >100k 300 %, je +250k +100 %); Höchstrahmen Art. 45 GOG (90 000, ×4).',
     regel: { typ: 'rahmen', vonChf: 500, bisChf: 6000 },
   },
   SG: {
     kanton: 'SG', erlassName: 'Gerichtskostenverordnung (GKV)', erlassNr: 'sGS 941.12',
-    artikel: 'Art. 10 (i.V.m. Art. 11)', stand: '1.3.2012 (Folgefassung 1.7.2026 wortgleich)', verifiziert: 'doppelt',
+    artikel: 'Art. 10 (i.V.m. Art. 11)', stand: '1.3.2012 (Folgefassung 1.7.2026 wortgleich)', kriterien: ['Art des Falls', 'finanzielle Interessen der Beteiligten', 'Umtriebe', 'finanzielle Verhältnisse des Kostenpflichtigen', 'Art der Prozessführung'],
+    kriterienNorm: 'Art. 4 Abs. 2 GKV',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://www.gesetzessammlung.sg.ch/api/de/versions/2808/pdf_file',
     hinweis: 'Reiner Rahmen (Einzelrichter CHF 500–5000); Art. 11 streitwertabhängige %-Decke (>50k 200 %, >100k 300 %, je +250k +100 %).',
     regel: { typ: 'rahmen', vonChf: 500, bisChf: 6000 },
@@ -247,7 +281,9 @@ export const GERICHTSKOSTEN: Record<KantonCode, KantonalerTarif> = {
   },
   AG: {
     kanton: 'AG', erlassName: 'Gebührendekret (GebührD)', erlassNr: 'SAR 662.110',
-    artikel: '§ 7 Abs. 1', stand: '1.7.2024', verifiziert: 'doppelt',
+    artikel: '§ 7 Abs. 1', stand: '1.7.2024', kriterien: ['angefallene Kosten (Aufwand)', 'Bedeutung der Sache'],
+    kriterienNorm: '§ 5 Abs. 1 GebührD',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://gesetzessammlungen.ag.ch/app/de/texts_of_law/662.110',
     hinweis: 'Grundansatz = Fix + Prozent vom gesamten Streitwert; § 5 GebührD Modulation (bis aufs Doppelte des Höchstbetrags / unter Mindestbetrag).',
     regel: { typ: 'staffel_voll_prozent', baender: [
@@ -265,7 +301,9 @@ export const GERICHTSKOSTEN: Record<KantonCode, KantonalerTarif> = {
   },
   TG: {
     kanton: 'TG', erlassName: 'Verordnung über die Gerichtsgebühren (VGG)', erlassNr: 'RB 638.1',
-    artikel: '§ 11 Abs. 1 (§ 8 Einzelrichter)', stand: '1.1.2022', verifiziert: 'doppelt',
+    artikel: '§ 11 Abs. 1 (§ 8 Einzelrichter)', stand: '1.1.2022', kriterien: ['Aufwand der Behörde', 'Bedeutung des Falles', 'Vermögensverhältnisse der kostenpflichtigen Partei', 'Streitwert'],
+    kriterienNorm: '§ 3 Abs. 1 VGG',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://www.rechtsbuch.tg.ch/app/de/texts_of_law/638.1',
     hinweis: 'Rahmen je Band; >1 Mio: 1–3 % des Streitwerts. <30 000 Einzelrichter (§ 8).',
     regel: { typ: 'staffel_rahmen', baender: [
@@ -278,7 +316,9 @@ export const GERICHTSKOSTEN: Record<KantonCode, KantonalerTarif> = {
   },
   TI: {
     kanton: 'TI', erlassName: 'Legge sulla tariffa giudiziaria (LTG)', erlassNr: 'RL 178.200',
-    artikel: 'Art. 7', stand: '10.2.2015', verifiziert: 'doppelt',
+    artikel: 'Art. 7', stand: '10.2.2015', kriterien: ['Streitwert', 'Natur der Sache', 'Komplexität'],
+    kriterienNorm: 'Art. 2 LTG',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137',
     hinweis: 'Rahmen je Band; >10 Mio: oberer Rahmen nach Tarif.',
     regel: { typ: 'staffel_rahmen', baender: [
@@ -296,7 +336,9 @@ export const GERICHTSKOSTEN: Record<KantonCode, KantonalerTarif> = {
   },
   VD: {
     kanton: 'VD', erlassName: 'Tarif des frais judiciaires civils (TFJC)', erlassNr: 'BLV 270.11.5',
-    artikel: 'Art. 18 (i.V.m. Art. 17)', stand: '1.9.2019', verifiziert: 'doppelt',
+    artikel: 'Art. 18 (i.V.m. Art. 17)', stand: '1.9.2019', kriterien: ['Streitwert', 'Natur der Sache', 'Umfang', 'Schwierigkeit'],
+    kriterienNorm: 'Art. 4 TFJC',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://www.lexfind.ch/tolv/105539/fr',
     hinweis: 'Feste Beträge je Streitwert-Stufe; über CHF 500 000: CHF 15 500 + 1,5 % des Überschusses (max CHF 300 000).',
     regel: { typ: 'staffel_sockel_prozent', baender: [
@@ -309,7 +351,9 @@ export const GERICHTSKOSTEN: Record<KantonCode, KantonalerTarif> = {
   },
   VS: {
     kanton: 'VS', erlassName: 'Gebührentarif (GTar/LTar)', erlassNr: 'SR 173.8',
-    artikel: 'Art. 16', stand: '1.1.2025', verifiziert: 'doppelt',
+    artikel: 'Art. 16', stand: '1.1.2025', kriterien: ['Streitwert', 'Umfang der Sache', 'Schwierigkeit', 'Prozessverhalten der Parteien', 'finanzielle Lage der Parteien'],
+    kriterienNorm: 'Art. 13 LTar',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://lex.vs.ch/app/de/texts_of_law/173.8',
     hinweis: 'Rahmen je Band.',
     regel: { typ: 'staffel_rahmen', baender: [
@@ -326,7 +370,9 @@ export const GERICHTSKOSTEN: Record<KantonCode, KantonalerTarif> = {
   },
   NE: {
     kanton: 'NE', erlassName: 'Loi sur les tarifs des frais (LTFrais)', erlassNr: 'RSN 164.1',
-    artikel: 'Art. 12', stand: '1.4.2023', verifiziert: 'doppelt',
+    artikel: 'Art. 12', stand: '1.4.2023', kriterien: ['Beanspruchung der Behörde', 'Bedeutung der Sache', 'Schwierigkeiten', 'schriftliche Begründung', 'Streitwert'],
+    kriterienNorm: 'Art. 6 LTFrais (i.V.m. Art. 12)',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://rsn.ne.ch/DATA/program/books/RSN2024/20245/htm/164.1.htm',
     hinweis: 'Gemischt: fix bis 10 000; 10–30k = 13 % des Streitwerts; 30–100k = 4000 + 3 % über 30 000; 100k–1 Mio = 6500 + 3 % über 100 000; >1 Mio = 4 % (max CHF 300 000).',
     regel: { typ: 'staffel_sockel_prozent', baender: [
@@ -342,7 +388,9 @@ export const GERICHTSKOSTEN: Record<KantonCode, KantonalerTarif> = {
   },
   GE: {
     kanton: 'GE', erlassName: 'Règlement fixant le tarif des frais en matière civile (RTFMC)', erlassNr: 'rsGE E 1 05.10',
-    artikel: 'Art. 17', stand: '1.7.2025', verifiziert: 'doppelt',
+    artikel: 'Art. 17', stand: '1.7.2025', kriterien: ['auf dem Spiel stehende Interessen', 'Komplexität der Sache', 'Umfang des Verfahrens', 'Umfang der Arbeit', 'Streitwert'],
+    kriterienNorm: 'Art. 5 RTFMC',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://silgeneve.ch/legis/data/rsg_e1_05p10.htm',
     hinweis: 'Rahmen je Band.',
     regel: { typ: 'staffel_rahmen', baender: [
@@ -355,8 +403,10 @@ export const GERICHTSKOSTEN: Record<KantonCode, KantonalerTarif> = {
     ] },
   },
   JU: {
-    kanton: 'JU', erlassName: 'Décret fixant le tarif des frais judiciaires', erlassNr: 'RSJU 176.511',
-    artikel: 'Art. 19', stand: '1.1.2025', verifiziert: 'doppelt',
+    kanton: 'JU', erlassName: 'Décret fixant les émoluments judiciaires', erlassNr: 'RSJU 176.511',
+    artikel: 'Art. 19', stand: '1.1.2025', kriterien: ['erforderliche Zeit und Arbeit', 'Bedeutung der Sache (Streitwert)', 'Interesse für den Pflichtigen', 'Vorgehensweise', 'finanzielle Leistungsfähigkeit'],
+    kriterienNorm: 'Art. 4 Abs. 2 Décret (RSJU 176.511)',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1',
     hinweis: 'Rahmen je Band.',
     regel: { typ: 'staffel_rahmen', baender: [

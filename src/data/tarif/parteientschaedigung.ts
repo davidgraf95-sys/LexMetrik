@@ -55,14 +55,18 @@ const GE_STAFFEL: SockelProzentBand[] = [
 export const PARTEIENTSCHAEDIGUNG: Record<KantonCode, KantonalerTarif> = {
   ZH: {
     kanton: 'ZH', erlassName: 'Verordnung über die Anwaltsgebühren (AnwGebV)', erlassNr: 'LS 215.3',
-    artikel: '§ 4 Abs. 1', stand: '1.1.2015', verifiziert: 'doppelt',
+    artikel: '§ 4 Abs. 1', stand: '1.1.2015', kriterien: ['Streitwert bzw. tatsächliches Streitinteresse', 'Verantwortung des Anwalts', 'notwendiger Zeitaufwand', 'Schwierigkeit des Falls'],
+    kriterienNorm: '§ 2 AnwGebV (Modulation § 4 Abs. 2)',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-215_3-2010_09_08-2011_01_01-087.html',
     hinweis: 'Grundgebühr; § 4 Abs. 2 ±⅓, § 9 summarisch ⅖–⅕.',
     regel: { typ: 'staffel_sockel_prozent', baender: ZH_SKALA },
   },
   BE: {
     kanton: 'BE', erlassName: 'Parteikostenverordnung (PKV)', erlassNr: 'BSG 168.811',
-    artikel: 'Art. 5', stand: '1.1.2012', verifiziert: 'doppelt',
+    artikel: 'Art. 5', stand: '1.1.2012', kriterien: ['besonderer Zeit- und Arbeitsaufwand', 'Schwierigkeit', 'Umfang (Akten/Briefwechsel)', 'bedeutende vermögensrechtliche Interessen'],
+    kriterienNorm: 'Art. 9 PKV (Zuschlag; Grundhonorar Art. 5 nach Streitwert)',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://www.belex.sites.be.ch/app/de/texts_of_law/168.811',
     hinweis: 'Rahmen je Band; >2 Mio: bis 3,8 % des Streitwerts. Nicht bestimmbar: CHF 400–11 800; summarisch 30–60 %.',
     regel: { typ: 'staffel_rahmen', baender: [
@@ -79,7 +83,9 @@ export const PARTEIENTSCHAEDIGUNG: Record<KantonCode, KantonalerTarif> = {
   },
   LU: {
     kanton: 'LU', erlassName: 'Justiz-Kostenverordnung (JusKV)', erlassNr: 'SRL Nr. 265',
-    artikel: '§ 31 Abs. 1 (i.V.m. § 5)', stand: '1.1.2026', verifiziert: 'doppelt',
+    artikel: '§ 31 Abs. 1 (i.V.m. § 5)', stand: '1.1.2026', kriterien: ['Umfang, Bedeutung und Schwierigkeit der Streitsache', 'Art der Vertretung', 'sachlich gebotener Zeitaufwand'],
+    kriterienNorm: '§ 2 Abs. 1 JusKV',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://srl.lu.ch/app/de/texts_of_law/265',
     hinweis: 'Honorar = 75–150 % der Gerichtsgebühr. >10 Mio: ca. 0,75–3,75 % des Streitwerts.',
     regel: { typ: 'staffel_rahmen', baender: [
@@ -95,7 +101,9 @@ export const PARTEIENTSCHAEDIGUNG: Record<KantonCode, KantonalerTarif> = {
   },
   UR: {
     kanton: 'UR', erlassName: 'Gerichtsgebührenreglement (GGebR)', erlassNr: 'RB 2.3232',
-    artikel: 'Art. 28 Abs. 1 (i.V.m. Art. 29, Art. 34)', stand: '1.10.2023', verifiziert: 'recherche',
+    artikel: 'Art. 28 Abs. 1 (i.V.m. Art. 29, Art. 34)', stand: '1.10.2023', kriterien: ['Aufwand', 'Anzahl der Verhandlungen', 'Umfang der Beweisführung', 'Schwierigkeit von Sachverhalt und Rechtsfragen'],
+    kriterienNorm: 'Art. 3 GGebV i.V.m. Art. 2 GGebR',
+    verifiziert: 'recherche',
     quelleUrl: 'https://rechtsbuch.ur.ch/app/de/texts_of_law/2.3232',
     hinweis: 'Rahmen je Band; >500 000: 1,5–4 % des Streitwerts. Anker korrigiert (Audit/Re-Verifikation 21.6.): Zivilstaffel steht in Art. 28 Abs. 1 lit. a–f GGebR (nicht Art. 30 = Strafverfahren); Werte wortgetreu bestätigt. Rechtsmittel Art. 29 (bis 60 %), Zeitaufwand Art. 34.',
     regel: { typ: 'staffel_rahmen', baender: [
@@ -109,7 +117,9 @@ export const PARTEIENTSCHAEDIGUNG: Record<KantonCode, KantonalerTarif> = {
   },
   SZ: {
     kanton: 'SZ', erlassName: 'Gebührentarif für Rechtsanwälte', erlassNr: 'SRSZ 280.411',
-    artikel: '§ 8', stand: '1.1.2015', verifiziert: 'doppelt',
+    artikel: '§ 8', stand: '1.1.2015', kriterien: ['Wichtigkeit der Streitsache', 'Schwierigkeit', 'Umfang und Art der Arbeitsleistung', 'notwendiger Zeitaufwand'],
+    kriterienNorm: '§ 2 Abs. 1 GebT Rechtsanwälte',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://www.sz.ch/public/upload/assets/5862/280_411.pdf',
     hinweis: 'Rahmen je Band; <2000 nach Zeitaufwand (max CHF 1500); >1 Mio: 1–3,5 % des Streitwerts.',
     regel: { typ: 'staffel_rahmen', baender: [
@@ -125,7 +135,9 @@ export const PARTEIENTSCHAEDIGUNG: Record<KantonCode, KantonalerTarif> = {
   },
   OW: {
     kanton: 'OW', erlassName: 'Gebührenordnung (GebOR)', erlassNr: 'GDB 134.15',
-    artikel: 'Art. 35 Abs. 1', stand: '1.3.2015', verifiziert: 'doppelt',
+    artikel: 'Art. 35 Abs. 1', stand: '1.3.2015', kriterien: ['persönliche und wirtschaftliche Bedeutung', 'Schwierigkeit der Sache', 'Umfang und Art der Arbeit', 'Zeitaufwand'],
+    kriterienNorm: 'Art. 32 GebOR (Zuschläge Art. 41)',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://gdb.ow.ch/app/de/texts_of_law/134.15',
     hinweis: 'Rahmen je Band; über 500 000 oberer Rahmen nach Tarif (Höchstwert nicht abschliessend erhoben). Summarisch Art. 35a (CHF 400–5000/15 000).',
     regel: { typ: 'staffel_rahmen', baender: [
@@ -139,7 +151,9 @@ export const PARTEIENTSCHAEDIGUNG: Record<KantonCode, KantonalerTarif> = {
   },
   NW: {
     kanton: 'NW', erlassName: 'Prozesskostengesetz (PKoG)', erlassNr: 'NG 261.2',
-    artikel: 'Art. 42', stand: '1.1.2016', verifiziert: 'doppelt',
+    artikel: 'Art. 42', stand: '1.1.2016', kriterien: ['Bedeutung der Sache (persönlich und wirtschaftlich)', 'Schwierigkeit', 'Umfang und Art der Arbeit', 'Zeitaufwand'],
+    kriterienNorm: 'Art. 33 Abs. 1 PKoG',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://gesetze.nw.ch/app/de/texts_of_law/261.2',
     hinweis: 'Rahmen je Band; >1,5 Mio: 2–4 % des Streitwerts.',
     regel: { typ: 'staffel_rahmen', baender: [
@@ -156,35 +170,45 @@ export const PARTEIENTSCHAEDIGUNG: Record<KantonCode, KantonalerTarif> = {
   },
   GL: {
     kanton: 'GL', erlassName: 'EG ZPO', erlassNr: 'GS III C/1',
-    artikel: 'Art. 20', stand: '1.7.2022', verifiziert: 'doppelt',
+    artikel: 'Art. 20', stand: '1.7.2022', kriterien: ['notwendiger Zeitaufwand', 'Streit- oder Interessenwert', 'Schwierigkeit des Falles'],
+    kriterienNorm: 'Art. 20 Abs. 1 EG ZPO',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://gesetze.gl.ch/app/de/texts_of_law/III-C.1',
     hinweis: 'Kein Streitwert-Tarif — Bemessung nach Ermessen (Zeitaufwand, Interessenwert, Schwierigkeit). Art. 20 Abs. 3: Arbeit bis 30 000 keine Parteientschädigung.',
     regel: { typ: 'formel_extern', hinweis: 'Parteientschädigung nach richterlichem Ermessen (Art. 20 Abs. 1 EG ZPO); kein streitwertabhängiger Tarif.' },
   },
   ZG: {
-    kanton: 'ZG', erlassName: 'V. über die Anwaltskosten', erlassNr: 'BGS 163.4',
-    artikel: '§ 3', stand: '1.1.2026', verifiziert: 'doppelt',
+    kanton: 'ZG', erlassName: 'Verordnung über den Anwaltstarif (AnwT)', erlassNr: 'BGS 163.4',
+    artikel: '§ 3', stand: '1.1.2026', kriterien: ['Schwierigkeit des Falls', 'Umfang und Art der Bemühungen', 'Verantwortung', 'notwendiger Zeitaufwand'],
+    kriterienNorm: '§ 2 AnwT (Modulation § 3 Abs. 3)',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://bgs.zg.ch/app/de/texts_of_law/163.4',
     hinweis: 'Grundhonorar nach der autonomen Zuger Tabelle (§ 3); Abs. 3 ±⅓.',
     regel: { typ: 'staffel_sockel_prozent', baender: ZH_SKALA.map((b, i) => i === 0 ? { ...b, minChf: 200 } : b) },
   },
   FR: {
     kanton: 'FR', erlassName: 'Règlement sur la justice (RJ)', erlassNr: 'RSF 130.11',
-    artikel: 'Art. 64–66', stand: '1.1.2018', verifiziert: 'doppelt',
+    artikel: 'Art. 64–66', stand: '1.1.2018', kriterien: ['Art des Verfahrens', 'Schwierigkeit', 'Umfang', 'notwendiger Arbeitsaufwand', 'wirtschaftliches Interesse und Lage der Parteien'],
+    kriterienNorm: 'Art. 63 RJ',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://bdlf.fr.ch/app/fr/texts_of_law/130.11',
     hinweis: 'Aufwandbasiert: Stundenansatz CHF 250 + streitwertabhängiger Zuschlag (max 350 %). Pauschale ≤30k: max CHF 6000.',
     regel: { typ: 'formel_extern', hinweis: 'Honorar = Zeitaufwand × CHF 250, zzgl. streitwertabhängiger Zuschlag (Art. 66); kein direkter Streitwert-Tarif.' },
   },
   SO: {
     kanton: 'SO', erlassName: 'Gebührentarif (GT)', erlassNr: 'BGS 615.11',
-    artikel: '§ 160', stand: '1.3.2026', verifiziert: 'doppelt',
+    artikel: '§ 160', stand: '1.3.2026', kriterien: ['erforderlicher Aufwand für sorgfältige Vertretung', 'Bedeutung des Geschäfts', 'Interesse', 'wirtschaftliche Leistungsfähigkeit'],
+    kriterienNorm: '§ 160 GT (i.V.m. § 3 analog)',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://bgs.so.ch/app/de/texts_of_law/615.11',
     hinweis: 'Aufwandbasiert: Zeitaufwand × Stundenansatz CHF 230–330 (zzgl. MwSt). Kein Streitwert-Tarif.',
     regel: { typ: 'formel_extern', hinweis: 'Honorar = Zeitaufwand × Stundenansatz CHF 230–330 (§ 160 GT); Streitwert nur mittelbar (§ 3).' },
   },
   BS: {
     kanton: 'BS', erlassName: 'Honorarordnung (HoR)', erlassNr: 'SG 291.400',
-    artikel: '§ 5', stand: '23.5.2024', verifiziert: 'doppelt',
+    artikel: '§ 5', stand: '23.5.2024', kriterien: ['Umfang der Bemühungen', 'Bedeutung der Sache für die Parteien', 'Schwierigkeit (tatsächlich/rechtlich)', 'finanzielle Verhältnisse (in besonderen Fällen)'],
+    kriterienNorm: '§ 2 HoR',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/291.400',
     hinweis: 'Grundhonorar als Rahmen je Band; >5 Mio: 1–3 % des Streitwerts. § 5 Abs. 2: vereinfachtes Verfahren >30k −⅓. § 4: Schlichtung max ⅓.',
     regel: { typ: 'staffel_rahmen', baender: [
@@ -201,7 +225,9 @@ export const PARTEIENTSCHAEDIGUNG: Record<KantonCode, KantonalerTarif> = {
   },
   BL: {
     kanton: 'BL', erlassName: 'Tarifordnung für die Anwältinnen und Anwälte', erlassNr: 'SGS 178.112',
-    artikel: '§ 7', stand: '1.1.2014', verifiziert: 'doppelt',
+    artikel: '§ 7', stand: '1.1.2014', kriterien: ['Verhältnis Streitwert/Bemühung/Bedeutung', 'Schwierigkeit', 'Bedeutung', 'Verantwortung', 'persönliche und finanzielle Verhältnisse'],
+    kriterienNorm: '§ 9 i.V.m. § 3 Abs. 1 Tarifordnung Anwälte',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://bl.clex.ch/app/de/texts_of_law/178.112',
     hinweis: 'Rahmen je Band; >2 Mio: CHF 75 000 zzgl. Zuschlag bis 2 % des Streitwerts.',
     regel: { typ: 'staffel_rahmen', baender: [
@@ -220,14 +246,18 @@ export const PARTEIENTSCHAEDIGUNG: Record<KantonCode, KantonalerTarif> = {
   },
   SH: {
     kanton: 'SH', erlassName: 'Justizgesetz (JG)', erlassNr: 'SHR 173.200',
-    artikel: 'Art. 86', stand: '1.5.2026', verifiziert: 'doppelt',
+    artikel: 'Art. 86', stand: '1.5.2026', kriterien: ['angemessener und erforderlicher Aufwand', 'üblicher Ansatz (ohne Erfolgszuschlag)', 'Verhältnis zur Bedeutung der Sache'],
+    kriterienNorm: 'Art. 86 JG',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200',
     hinweis: 'Kein Streitwert-Tarif — Festsetzung nach Ermessen, ausgehend von der Anwaltsrechnung (üblicher Ansatz, angemessener Aufwand).',
     regel: { typ: 'formel_extern', hinweis: 'Parteientschädigung nach Ermessen (Art. 86 JG), ausgehend von der eingereichten Anwaltsrechnung; kein streitwertabhängiger Tarif.' },
   },
   AR: {
-    kanton: 'AR', erlassName: 'Honorarordnung', erlassNr: 'bGS 145.53',
-    artikel: 'Art. 9', stand: '1.1.2019', verifiziert: 'doppelt',
+    kanton: 'AR', erlassName: 'Verordnung über den Anwaltstarif', erlassNr: 'bGS 145.53',
+    artikel: 'Art. 9', stand: '1.1.2019', kriterien: ['Bedeutung und Schwierigkeit des Falles', 'wirtschaftliche Verhältnisse', 'notwendiger Zeitaufwand', 'Vertretung mehrerer Parteien', 'ausserordentliche vorprozessuale Bemühungen'],
+    kriterienNorm: 'Art. 11 V. über den Anwaltstarif',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://ar.clex.ch/app/de/texts_of_law/145.53',
     hinweis: 'Mittleres Honorar (Fix + % vom Gesamtstreitwert); Art. 11 ±¼; summarisch 10–50 % (Art. 10). Ohne MwSt/Barauslagen.',
     regel: { typ: 'staffel_voll_prozent', baender: [
@@ -243,7 +273,9 @@ export const PARTEIENTSCHAEDIGUNG: Record<KantonCode, KantonalerTarif> = {
   },
   AI: {
     kanton: 'AI', erlassName: 'Anwaltshonorarverordnung (AnwHV)', erlassNr: 'GS 177.410',
-    artikel: 'Art. 9/10', stand: '1.1.2024', verifiziert: 'doppelt',
+    artikel: 'Art. 9/10', stand: '1.1.2024', kriterien: ['Bedeutung und Schwierigkeit des Falles', 'wirtschaftliche Verhältnisse', 'notwendiger Zeitaufwand', 'Vertretung mehrerer Parteien', 'ausserordentliche vorprozessuale Bemühungen'],
+    kriterienNorm: 'Art. 13 Abs. 1 AnwHV',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://ai.clex.ch/app/de/texts_of_law/177.410',
     hinweis: 'Mittleres Honorar (Fix + % vom Gesamtstreitwert); Art. 13 ±¼; summarisch 10–50 % (Art. 11); einzige Instanz +⅕ (Art. 12).',
     regel: { typ: 'staffel_voll_prozent', baender: [
@@ -259,7 +291,9 @@ export const PARTEIENTSCHAEDIGUNG: Record<KantonCode, KantonalerTarif> = {
   },
   SG: {
     kanton: 'SG', erlassName: 'Honorarordnung (HonO)', erlassNr: 'sGS 963.75',
-    artikel: 'Art. 14', stand: '1.1.2019', verifiziert: 'doppelt',
+    artikel: 'Art. 14', stand: '1.1.2019', kriterien: ['grundsätzliche Bedeutung des Falles', 'Schwierigkeit', 'wirtschaftliche Verhältnisse', 'Art und Umfang der Bemühungen', 'Vertretung mehrerer Parteien', 'ausserordentliche vorprozessuale Bemühungen'],
+    kriterienNorm: 'Art. 17 Abs. 1 HonO',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://www.gesetzessammlung.sg.ch/app/de/texts_of_law/963.75',
     hinweis: 'Mittleres Honorar (Fix + % vom Gesamtstreitwert); Art. 17 ±50 %; Handels-/Kantonsgericht +20 % (Art. 15); summarisch 10–60 % (Art. 16). Maximaltarif.',
     regel: { typ: 'staffel_voll_prozent', baender: [
@@ -274,14 +308,18 @@ export const PARTEIENTSCHAEDIGUNG: Record<KantonCode, KantonalerTarif> = {
   },
   GR: {
     kanton: 'GR', erlassName: 'Honorarverordnung (HV)', erlassNr: 'BR 310.250',
-    artikel: 'Art. 2/3', stand: '1.1.2011', verifiziert: 'doppelt',
+    artikel: 'Art. 2/3', stand: '1.1.2011', kriterien: ['Ermessen der urteilenden Instanz', 'üblicher Stundenansatz (210–270 Fr.)', 'Angemessenheit und Erforderlichkeit des Aufwands', 'Interessenwertzuschlag nach Streitwert'],
+    kriterienNorm: 'Art. 2 i.V.m. Art. 3 HV',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://www.gr-lex.gr.ch/app/de/texts_of_law/310.250',
     hinweis: 'Aufwandbasiert: Stundenansatz CHF 210–270 + einmaliger streitwertabhängiger Interessenwertzuschlag (>1 Mio max 2 %). Kein reiner Streitwert-Tarif.',
     regel: { typ: 'formel_extern', hinweis: 'Honorar = Zeitaufwand × CHF 210–270 + fakultativer Interessenwertzuschlag (Art. 3 Abs. 2); kein streitwertabhängiger Grundtarif.' },
   },
   AG: {
     kanton: 'AG', erlassName: 'Anwaltstarif (AnwT)', erlassNr: 'SAR 291.150',
-    artikel: '§ 3 Abs. 1', stand: '1.1.2024', verifiziert: 'doppelt',
+    artikel: '§ 3 Abs. 1', stand: '1.1.2024', kriterien: ['Zahl der Rechtsschriften und Verhandlungen', 'Umfang des Aktenmaterials', 'besondere Schwierigkeit', 'Mehrvertretung', 'Umfang der Beweiserhebung'],
+    kriterienNorm: '§§ 6/7 AnwT (Zu-/Abschläge; Grundentschädigung § 3)',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://gesetzessammlungen.ag.ch/app/de/texts_of_law/291.150',
     hinweis: 'Grundentschädigung (Fix + % vom Gesamtstreitwert); § 3 Abs. 2 reduziert (Vollstreckung 10–50 %, summarisch 25–100 %).',
     regel: { typ: 'staffel_voll_prozent', baender: [
@@ -301,7 +339,9 @@ export const PARTEIENTSCHAEDIGUNG: Record<KantonCode, KantonalerTarif> = {
   },
   TG: {
     kanton: 'TG', erlassName: 'Honorartarif (HonTV)', erlassNr: 'RB 176.31',
-    artikel: '§ 5', stand: '1.1.2025', verifiziert: 'doppelt',
+    artikel: '§ 5', stand: '1.1.2025', kriterien: ['Streitwert', 'notwendiger Zeitaufwand (nicht vermögensrechtlich)', 'Bedeutung der Sache für die Parteien', 'Schwierigkeit (tatsächlich/rechtlich)'],
+    kriterienNorm: '§ 2 HonTV',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://www.rechtsbuch.tg.ch/app/de/texts_of_law/176.31',
     hinweis: 'Rahmen je Band; >2 Mio: oberer Rahmen nach Tarif. Schlichtung im Grundhonorar inbegriffen (§ 5 Abs. 4).',
     regel: { typ: 'staffel_rahmen', baender: [
@@ -317,7 +357,9 @@ export const PARTEIENTSCHAEDIGUNG: Record<KantonCode, KantonalerTarif> = {
   },
   TI: {
     kanton: 'TI', erlassName: 'Tariffa dell’Ordine degli avvocati (onorari)', erlassNr: 'RL 178.310',
-    artikel: 'Art. 11', stand: '29.5.2026', verifiziert: 'doppelt',
+    artikel: 'Art. 11', stand: '29.5.2026', kriterien: ['Bedeutung des Streits', 'Schwierigkeit', 'Umfang der Arbeit', 'aufgewendete Zeit', 'Verlauf des Mandats'],
+    kriterienNorm: 'Art. 11 Abs. 5 Tarif-Regolamento (RL 178.310)',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/141',
     hinweis: 'Prozent-Rahmen vom Streitwert je Band; Rechtsmittel 30–60 %, Spezialverfahren 20–70 %. Ohne bestimmten Streitwert: Zeitaufwand (CHF 280/Std.).',
     regel: { typ: 'staffel_rahmen', baender: [
@@ -333,7 +375,9 @@ export const PARTEIENTSCHAEDIGUNG: Record<KantonCode, KantonalerTarif> = {
   },
   VD: {
     kanton: 'VD', erlassName: 'Tarif des dépens en matière civile (TDC)', erlassNr: 'BLV 270.11.6',
-    artikel: 'Art. 4 (i.V.m. Art. 3)', stand: '1.5.2019', verifiziert: 'recherche',
+    artikel: 'Art. 4 (i.V.m. Art. 3)', stand: '1.5.2019', kriterien: ['Bedeutung der Sache', 'Schwierigkeit', 'Umfang der Arbeit', 'aufgewendete Zeit'],
+    kriterienNorm: 'Art. 3 Abs. 2 TDC',
+    verifiziert: 'recherche',
     quelleUrl: 'https://www.lexfind.ch/tolv/135783/fr',
     hinweis: 'Rahmen je Band (Art. 4 TDC; Art. 3 = allgemeine Bemessungsregel). >5 Mio: 40 000 bis 2 % des Streitwerts. Art. 2 Abs. 2: keine dépens in der Schlichtung. Mietsachen (LJB) max CHF 1500. Anker/Obergrenze korrigiert (Re-Verifikation 21.6.): Staffel in Art. 4, alle Bänder amtlich bestätigt.',
     regel: { typ: 'staffel_rahmen', baender: [
@@ -349,7 +393,9 @@ export const PARTEIENTSCHAEDIGUNG: Record<KantonCode, KantonalerTarif> = {
   },
   VS: {
     kanton: 'VS', erlassName: 'Gebührentarif (LTar)', erlassNr: 'SR 173.8',
-    artikel: 'Art. 32 (i.V.m. Art. 27/28)', stand: '1.1.2018', verifiziert: 'doppelt', mwstInbegriffen: true,
+    artikel: 'Art. 32 (i.V.m. Art. 27/28)', stand: '1.1.2018', kriterien: ['Natur und Bedeutung der Sache', 'Schwierigkeit', 'Umfang der Arbeit', 'sinnvoll aufgewendete Zeit', 'finanzielle Lage der Partei'],
+    kriterienNorm: 'Art. 27 Abs. 1 LTar',
+    verifiziert: 'doppelt', mwstInbegriffen: true,
     hinweis: 'Rahmen je Band; >1 Mio: 3,3 % des Streitwerts, max CHF 140 000. Inkl. MwSt. Amtliche Verteidigung 70 %.',
     quelleUrl: 'https://lex.vs.ch/app/fr/texts_of_law/173.8',
     regel: { typ: 'staffel_rahmen', baender: [
@@ -370,7 +416,9 @@ export const PARTEIENTSCHAEDIGUNG: Record<KantonCode, KantonalerTarif> = {
   },
   NE: {
     kanton: 'NE', erlassName: 'Loi sur les tarifs des frais (LTFrais)', erlassNr: 'RSN 164.1',
-    artikel: 'Art. 58/59', stand: '1.4.2023', verifiziert: 'doppelt',
+    artikel: 'Art. 58/59', stand: '1.4.2023', kriterien: ['Streitwert', 'erforderliche Zeit', 'Natur und Bedeutung', 'Schwierigkeit', 'erzieltes Ergebnis', 'übernommene Verantwortung'],
+    kriterienNorm: 'Art. 58 LTFrais',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://rsn.ne.ch/DATA/program/books/RSN2024/20245/htm/164.1.htm',
     hinweis: 'Höchstbeträge je Band («jusqu’à»), ermessensweise; >2 Mio: bis 3 % des Streitwerts. Familienrecht max CHF 15 000.',
     regel: { typ: 'staffel_rahmen', baender: [
@@ -387,14 +435,18 @@ export const PARTEIENTSCHAEDIGUNG: Record<KantonCode, KantonalerTarif> = {
   },
   GE: {
     kanton: 'GE', erlassName: 'Règlement fixant le tarif des frais (RTFMC, défraiement)', erlassNr: 'rsGE E 1 05.10',
-    artikel: 'Art. 84/85', stand: '1.7.2025', verifiziert: 'recherche',
+    artikel: 'Art. 84/85', stand: '1.7.2025', kriterien: ['Streitwert', 'Bedeutung der Sache', 'Schwierigkeiten', 'Umfang der Arbeit', 'aufgewendete Zeit'],
+    kriterienNorm: 'Art. 84 RTFMC (Modulation ±10 % Art. 85)',
+    verifiziert: 'recherche',
     quelleUrl: 'https://silgeneve.ch/legis/data/rsg_e1_05p10.htm',
     hinweis: 'Défraiement nach der autonomen GE-Prozentstaffel (Art. 85 RTFMC); Abweichung ±10 % nach Art. 84. Nicht bestimmbar: CHF 600–18 000 (Art. 86). Etikett korrigiert (Re-Verifikation 21.6.): eigenständige GE-Staffel (kein Verweis auf die ZH-Skala), betragsgleich, Tranchen amtlich bestätigt.',
     regel: { typ: 'staffel_sockel_prozent', baender: GE_STAFFEL },
   },
   JU: {
-    kanton: 'JU', erlassName: 'Décret fixant le tarif des dépens', erlassNr: 'RSJU 188.61',
-    artikel: 'Art. 7 i.V.m. Art. 13', stand: '1.9.2015', verifiziert: 'doppelt',
+    kanton: 'JU', erlassName: "Ordonnance fixant le tarif des honoraires d'avocat", erlassNr: 'RSJU 188.61',
+    artikel: 'Art. 7 i.V.m. Art. 13', stand: '1.9.2015', kriterien: ['Art der Sache', 'Bedeutung (Streitwert)', 'Schwierigkeit (tatsächlich/rechtlich)', 'übernommene Verantwortung', 'Arbeit des Anwalts'],
+    kriterienNorm: 'Art. 8 Abs. 1 i.V.m. Art. 13 Ordonnance (RSJU 188.61)',
+    verifiziert: 'doppelt',
     quelleUrl: 'https://rsju.jura.ch/fr/viewdocument.html?idn=20028&id=27021&download=1',
     hinweis: 'Rahmen je Band; >2 Mio: bis 3,8 % des Streitwerts. Zuschlag bis 75 % bei ausserordentlichem Aufwand (Art. 13).',
     regel: { typ: 'staffel_rahmen', baender: [

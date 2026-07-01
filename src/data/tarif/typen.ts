@@ -60,5 +60,17 @@ export interface KantonalerTarif {
   /** true = der Tarifbetrag enthält die MwSt bereits (kein zusätzlicher
    *  MwSt-Aufschlag auf die Parteientschädigung — verhindert Doppelzählung). */
   mwstInbegriffen?: boolean;
+  /** I4 — Bemessungskriterien: wonach die Behörde die konkrete Gebühr / das
+   *  Honorar INNERHALB des Rahmens festsetzt. Aufzählung der Faktoren aus der
+   *  kantonalen Bemessungsnorm (§7, wörtlich belegt in
+   *  `bibliothek/register/bemessungskriterien-tarife-kantone.md`). Reines
+   *  Anzeigefeld — die Engine liest es NICHT (golden byte-gleich); die UI
+   *  zeigt es nur, wenn das Ergebnis eine Spanne ist (§8). Die genaue Norm, aus
+   *  der die Kriterien stammen, steht in `kriterienNorm` (oft eine andere
+   *  Bestimmung als `artikel`, das die Betrags-/Staffelnorm bezeichnet). */
+  kriterien?: string[];
+  /** Bezeichnung der Bemessungsnorm, aus der `kriterien` stammen (Anzeige-
+   *  Beleg; z. B. «§ 2 GebV OG» oder «Art. 4a GebOR»). */
+  kriterienNorm?: string;
   verifiziert: Verifiziert;
 }
