@@ -298,6 +298,7 @@ export function extrahiereArtikelAusAnker(html: string, ankerRoh: string): Artik
   }
 
   ergaenzeFehlendeBilder(bloecke, inner);
+  markiereFormeln(bloecke);
   return { ...mitGrundlage, bloecke };
 }
 
@@ -735,6 +736,26 @@ function parseBildKacheln(tableInner: string): Array<{ bild?: BildRef; nummer?: 
  * Platzierung am Ende statt inline ist eine bewusste, dokumentierte Vereinfachung
  * (Formel-Symbol-Inline = eigener Folgeschritt); Vollständigkeit hat Vorrang.
  */
+// Ein Standalone-Bild ist eine FORMEL, wenn der nächste vorausgehende Text-Block
+// eine Rechen-Einleitung ist («Formel …», «… wie folgt:», «… umgerechnet:»). §8-
+// konservativ: Piktogramme (Signale/Warnzeichen) stehen NIE nach so einem Lead-in
+// (sie folgen normalen Sätzen/Überschriften), werden also nicht fälschlich als
+// Formel etikettiert. Kachel-Signale (bildKacheln) sind ausgenommen.
+const FORMEL_KONTEXT = /\bFormeln?\b|\bGleichung\b|(?:berechnet|ermittelt|errechnet|umgerechnet|umzurechnen|bestimmt sich|wie folgt)\s*:?\s*$/i;
+
+function markiereFormeln(bloecke: ArtikelText['bloecke']): void {
+  bloecke.forEach((b, i) => {
+    if (!b.bild) return;
+    for (let j = i - 1; j >= 0; j--) {
+      const t = bloecke[j].text;
+      if (t) {
+        if (FORMEL_KONTEXT.test(t)) b.bild.formel = true;
+        break;
+      }
+    }
+  });
+}
+
 function ergaenzeFehlendeBilder(bloecke: ArtikelText['bloecke'], quellHtml: string): void {
   const erfasst = new Set<string>();
   for (const b of bloecke) {
@@ -1176,6 +1197,7 @@ export function extrahiereAnhang(html: string, ankerRoh: string): AnhangText | n
   // Vollständigkeit/Struktur erfasst und konsistent mit dem Artikel-Pfad.
   if (bloecke.length === 0) return { titel, bloecke: [{ absatz: null, text: '…' }] };
   ergaenzeFehlendeBilder(bloecke, koerper);
+  markiereFormeln(bloecke);
   return { titel, bloecke };
 }
 

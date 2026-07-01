@@ -5101,6 +5101,7 @@
             "alt": "Amtliche Abbildung",
             "breite": 49,
             "hoehe": 9,
+            "formel": true,
             "sha": "02707c83575e2eeb967856d87446a80481d5270d4565620537b4462e887c251e"
           }
         },
@@ -5110,6 +5111,7 @@
           "bild": {
             "datei": "bilder/uvv/image2.png",
             "alt": "Amtliche Abbildung",
+            "formel": true,
             "sha": "8ffd9b77858540d911cfd82a1fe84f06294d00efa91f092d661b9b9483d7fc3c"
           }
         },
@@ -5119,6 +5121,7 @@
           "bild": {
             "datei": "bilder/uvv/image3.png",
             "alt": "Amtliche Abbildung",
+            "formel": true,
             "sha": "5dcacfea1f693c02e82cfc70b36b2eecbbd3e316d9dc3c38043a0c8b22ed9cfb"
           }
         }
