@@ -4587,14 +4587,32 @@
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/mepv/image1.png",
+            "alt": "Amtliche Abbildung",
+            "sha": "ff39c01a7a183951b92cd6c4f21115ac737631220f89c87a25ec25fce77ed6c8"
+          }
+        },
+        {
+          "absatz": null,
           "text": "Sofern eine bezeichnete Stelle beigezogen werden muss, ist neben ihrem Konformitätskennzeichen auch ihre Kennnummer anzugeben."
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/mepv/image2.png",
+            "alt": "Amtliche Abbildung",
+            "sha": "2ade2954291d69e4cebbde17b85502bf609f534033ba47562db80ef12c2885a3"
+          }
         }
       ],
       "stand": "2023-11-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/552/de#annex_5",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20231101",
-      "sha": "0e628ff8336b226ac9ad21f4e7096cbc9cb50f62defde4ec365b19dd9bbcede8"
+      "sha": "a38fc304b95de254230507a2d3dc80f7d72716951aac34cc92736e2b79d5a85f"
     },
     {
       "id": "bund/MEPV/annex_5_a",

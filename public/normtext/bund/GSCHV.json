@@ -4379,6 +4379,28 @@
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/gschv/image1.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 72,
+            "hoehe": 13,
+            "sha": "2826bc27a67b2ddee8542bb97f164dfb8f8b5915bdeade8f4ec16b2adfbf53b0"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/gschv/image2.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 72,
+            "hoehe": 8,
+            "sha": "bd72ea889c8252288753ddcef9b198892236d7dee21a91aa2636945257139e50"
+          }
+        },
+        {
+          "absatz": null,
           "text": "3 Zusätzliche Anforderungen für die Einleitung in empfindliche Gewässer",
           "titel": 3
         },
@@ -4404,7 +4426,7 @@
               [
                 "1",
                 "Gesamtphosphor (nach Aufschluss)",
-                "Für Abwasser aus Anlagen – im Einzugsgebiet von Seen, – an Fliessgewässern unterhalb von Seen, wenn dies zum Schutz des betreffenden Fliessgewässers erforderlich ist, [tab] und – ab 10 000 EW an Fliessgewässern im Einzugsgebiet des Rheins unterhalb von Seen [tab] gilt: – Abflusskonzentration: 0,8 mg/l P [tab] und – Reinigungseffekt, bezogen auf Rohabwasser: 80 %"
+                "Für Abwasser aus Anlagen – im Einzugsgebiet von Seen, – an Fliessgewässern unterhalb von Seen, wenn dies zum Schutz des betreffenden Fliessgewässers erforderlich ist, und – ab 10 000 EW an Fliessgewässern im Einzugsgebiet des Rheins unterhalb von Seen gilt: – Abflusskonzentration: 0,8 mg/l P und – Reinigungseffekt, bezogen auf Rohabwasser: 80 %"
               ],
               [
                 "2",
@@ -4620,7 +4642,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1998/2863_2863_2863/de#annex_3_1",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20251201",
-      "sha": "96623a7618cb8aef51ee9be6dc6d051dc7d3cca196d88a9538457a39d631a96b"
+      "sha": "1e73fc7ddc947538151a68f03ae37e4661b74b915ab7c6d97469514a26516fcb"
     },
     {
       "id": "bund/GSCHV/annex_3_2",

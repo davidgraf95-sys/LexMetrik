@@ -211,6 +211,39 @@ describe('extrahiereArtikel', () => {
     });
   });
 
+  // Bilder&Formeln (1.7.2026): Piktogramm-Katalog-Tabelle → bildKacheln; eine Zelle
+  // mit EINEM Bild + MEHREREN Signalen (6.10/6.11/6.12) darf keinen Text verlieren.
+  describe('Bilder — Piktogramm-Katalog (bildKacheln)', () => {
+    const KATALOG = '<article id="art_x"><div class="collapseable"><table>'
+      + '<tr><td><p class="bild "><img src="image/image1.png"></p>'
+      + '<dl class="man-template-tab-struktur-1"><dt><b>1.01</b> </dt><dd>Rechtskurve (Art. 4)</dd></dl></td>'
+      + '<td><p class="bild "><img src="image/image2.png"></p>'
+      + '<dl><dt><b>6.10</b> </dt><dd>Haltelinie</dd><dt><b>6.11</b> </dt><dd>Stop</dd><dt><b>6.12</b> </dt><dd>Längslinie</dd></dl></td>'
+      + '<td><p class="bild "><img src="image/image3.png"></p>'
+      + '<dl><dt><b>1.02</b> </dt><dd>Linkskurve (Art. 4)</dd></dl></td>'
+      + '</tr></table></div></article>';
+
+    it('erzeugt bildKacheln mit Nummer/Name/Bild je Signal', () => {
+      const r = extrahiereArtikel(KATALOG, 'x');
+      const k = r!.bloecke.find((b) => b.bildKacheln)?.bildKacheln;
+      expect(k).toBeDefined();
+      expect(k![0]).toMatchObject({ nummer: '1.01', name: 'Rechtskurve (Art. 4)' });
+      expect(k![0].bild?.datei).toBe('image/image1.png');
+      expect(k![0].bild?.alt).toBe('Signal: Rechtskurve (Art. 4)');
+    });
+
+    it('Zelle mit einem Bild + MEHREREN Signalen verliert keinen Text (§1)', () => {
+      const r = extrahiereArtikel(KATALOG, 'x');
+      const k = r!.bloecke.find((b) => b.bildKacheln)!.bildKacheln!;
+      const namen = k.map((x) => x.name);
+      expect(namen).toContain('Haltelinie');
+      expect(namen).toContain('Stop');
+      expect(namen).toContain('Längslinie');
+      // das Bild hängt an der ersten Marke der Zelle, die übrigen sind Text-Kacheln
+      expect(k.find((x) => x.nummer === '6.10')?.bild?.datei).toBe('image/image2.png');
+    });
+  });
+
   describe('Verschachtelte <dl> — lit. → nummerierte Unterpunkte (Bug 25.6.2026)', () => {
     // Reale Fedlex-Struktur MStG art_42 (verkürzt): ein lit-<dd> enthält eine
     // verschachtelte <dl> mit nummerierten Unterpunkten; danach folgen weitere

@@ -4222,7 +4222,20 @@
         },
         {
           "absatz": "1",
-          "text": "Der Deckungsgrad der Vorsorgeeinrichtung wird wie folgt ermittelt:",
+          "text": "Der Deckungsgrad der Vorsorgeeinrichtung wird wie folgt ermittelt:"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/bvv_2/image1.png",
+            "alt": "Amtliche Abbildung",
+            "sha": "ac95b4ad030bb80dd0f5d4024657063aeb302481adef9f667c5dc6457edab03a"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
           "items": [
             {
               "marke": "Wobei für Vv gilt",
@@ -4243,7 +4256,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/543_543_543/de#annex_u1",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250101",
-      "sha": "076013064dce3c96d8ded0ea12690f7a4a3c6113b1d1d20896d1437b4f8b9df5"
+      "sha": "b16cfe2b32f4e5555bc8b5bdeb40efa9ab8118b00bad36807d58c0310b06a92c"
     }
   ]
 }

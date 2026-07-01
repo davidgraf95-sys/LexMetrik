@@ -2791,7 +2791,7 @@
                 "70"
               ],
               [
-                "[tab] 1 Die höheren Werte gelten für die erste Nachtstunde (22–23 Uhr)",
+                "1 Die höheren Werte gelten für die erste Nachtstunde (22–23 Uhr)",
                 "",
                 "",
                 ""
@@ -2807,6 +2807,15 @@
         {
           "absatz": null,
           "text": "Zusätzlich zu den Belastungsgrenzwerten in Lrk gelten für den Lärm des Verkehrs auf zivilen Flugplätzen, auf denen ausschliesslich Helikopter verkehren (Helikopterflugplätze), die nachfolgenden Belastungsgrenzwerte in max:"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/lsv/image2.png",
+            "alt": "Amtliche Abbildung",
+            "sha": "ac17a008b5fa435c6d85c8c1a9c15f9cc2ea4a19a1c07011c6f35ce646ab6d61"
+          }
         },
         {
           "absatz": null,
@@ -2856,6 +2865,33 @@
                 "95"
               ]
             ]
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/lsv/image3.png",
+            "alt": "Amtliche Abbildung",
+            "sha": "0a3f614b1b9aeb2b6e21fe4cab387bba81f7d2e70145af54b2c4f04ed8d3c856"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/lsv/image4.png",
+            "alt": "Amtliche Abbildung",
+            "sha": "0a3f614b1b9aeb2b6e21fe4cab387bba81f7d2e70145af54b2c4f04ed8d3c856"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/lsv/image4.png",
+            "alt": "Amtliche Abbildung",
+            "sha": "0a3f614b1b9aeb2b6e21fe4cab387bba81f7d2e70145af54b2c4f04ed8d3c856"
           }
         },
         {
@@ -3010,15 +3046,53 @@
           "text": "Der mittlere maximale Lärmpegel max bei Helikopterflugplätzen ist das energetische Mittel der maximalen Lärmpegel einer repräsentativen Anzahl Über- oder Vorbeiflüge."
         },
         {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/lsv/image2.png",
+            "alt": "Amtliche Abbildung",
+            "sha": "ac17a008b5fa435c6d85c8c1a9c15f9cc2ea4a19a1c07011c6f35ce646ab6d61"
+          }
+        },
+        {
           "absatz": "2",
           "text": "Messungen zur Ermittlung des max müssen mit der Geräteeinstellung SLOW durchgeführt werden."
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/lsv/image6.png",
+            "alt": "Amtliche Abbildung",
+            "sha": "92f746368683326ea50015fb72dae490e60e0fac1b3070a00c52106f86ba39f8"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/lsv/image1.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 3,
+            "hoehe": 4,
+            "sha": "0ad3b5f6a838813825690de4a47b1a725c42ae5f734254948d63711f64be9ca8"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/lsv/image5.png",
+            "alt": "Amtliche Abbildung",
+            "sha": "47f71b7987aa58d9f0afab4c5d1750e55d455703df28b09ea31775dd7aa04e64"
+          }
         }
       ],
       "stand": "2026-04-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#annex_5",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260401",
-      "sha": "abcf22fe0bbb97b48948aa211ac7d3ee2690e76904b1a8ee7a24d5761b819c18"
+      "sha": "3daf651947f2715ad1172ea53e55d12a29d40c5129c53ac0a9c53c3deb5ea7d1"
     },
     {
       "id": "bund/LSV/annex_6",
@@ -3164,6 +3238,17 @@
         {
           "absatz": "1",
           "text": "Der Beurteilungspegel Lr für Industrie- und Gewerbelärm und ähnliche Lärmarten wird, getrennt für den Tag (07 bis 19 Uhr) und die Nacht (19 bis 07 Uhr), aus den Teilbeurteilungspegeln Lr,i der einzelnen Lärmphasen wie folgt berechnet:"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/lsv/image7.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 108,
+            "hoehe": 8,
+            "sha": "9b0f8823165b304f08d677b388e280c9ea300a812d5d2b78776456db356ea086"
+          }
         },
         {
           "absatz": "2",
@@ -3321,7 +3406,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#annex_6",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260401",
-      "sha": "8c5180c38d6fb85daf6c9ca6d3b95f81d15dac8215646cdc40c27c744dd3a965"
+      "sha": "dfd78b9d46cf1fcbaa8da0dbaaba5b20b344fa02c628a59970c934d5fe80d57a"
     },
     {
       "id": "bund/LSV/annex_7",
@@ -3461,6 +3546,17 @@
           "text": "Der Beurteilungspegel Lr für den Lärm von Schiessanlagen ist die energetische Summe der Teilbeurteilungspegel Lri der Waffenkategorien:"
         },
         {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/lsv/image8.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 31,
+            "hoehe": 9,
+            "sha": "74714064c5eb10f3cadd215742b70cd27ac43dd9975041f9e81217c8587a9fb8"
+          }
+        },
+        {
           "absatz": "2",
           "text": "Der Teilbeurteilungspegel Lri ist die Summe des mittleren Einzelschusspegels Li einer Waffenkategorie und der Pegelkorrektur Ki:"
         },
@@ -3471,6 +3567,17 @@
         {
           "absatz": "3",
           "text": "Der mittlere Einzelschusspegel Li ist das über die Schusszahlen gewichtete energetische Mittel der energetisch gemittelten Einzelschusspegel Lj eines Waffen- bzw. Munitionstyps:"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/lsv/image9.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 36,
+            "hoehe": 10,
+            "sha": "23eccca45428e86221c7a14ed4944b32a3753b3275150c8cadb4713de2100ac2"
+          }
         },
         {
           "absatz": "4",
@@ -3557,7 +3664,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#annex_7",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260401",
-      "sha": "9f1caddcc11ee828caf2cea41fb1aaebaada8f76027cb3b25d94d841ce7c3e66"
+      "sha": "040f3b57c903448189216656a740b6e09f3c01e85f82913eef63a0a81116ca00"
     },
     {
       "id": "bund/LSV/annex_8",

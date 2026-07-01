@@ -1864,6 +1864,15 @@
         {
           "absatz": null,
           "text": "",
+          "bild": {
+            "datei": "bilder/fav/image1.png",
+            "alt": "Amtliche Abbildung",
+            "sha": "bdedc2f68778684822a2185f051b90edc3a7460649b8793bcd6823fda3d02f0c"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
           "items": [
             {
               "marke": "1.2",
@@ -1878,6 +1887,15 @@
               "text": "Zugelassen ist das Konformitätskennzeichen, das in Anhang II der Verordnung (EG) Nr. 765/2008 festgelegt ist. Die Illustration dient Informationszwecken."
             }
           ]
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/fav/image2.png",
+            "alt": "Amtliche Abbildung",
+            "sha": "9859b2dbf091fe920f94732bc23fe02808db3235d8b3f4216fde35d49d31f998"
+          }
         },
         {
           "absatz": null,
@@ -1898,7 +1916,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#annex_1",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20240815",
-      "sha": "b7eb0163b9b11888a8a40e466bf8a0140ff789c0fa79729355cbb3a72b6b9c2c"
+      "sha": "984c4d0036dfd1cf3ecdeea358a747b21c1a7223c0bc2b493fd216f97652cc43"
     },
     {
       "id": "bund/FAV/annex_2",

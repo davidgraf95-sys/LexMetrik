@@ -41,6 +41,7 @@ import { pdfLawIdSafe } from './normtext/lawid-safe.ts';
 import { baueManifest } from './normtext/kanton-manifest.ts';
 import { baueBrowseManifest } from './normtext/browse-manifest.ts';
 import type { NormSnapshot, NormSnapshotDatei } from '../src/lib/normtext/typen.ts';
+import type { BildRef } from './normtext/extrahiere-fedlex.ts';
 
 // ── Argument --datum= auslesen ────────────────────────────────────────────────
 function leseDatum(): string {
@@ -270,6 +271,54 @@ function sortiereTokens(tokens: string[]): string[] {
 // Der sha muss auch die items abdecken, sonst erkennt der Drift-Check
 // Inhaltsänderungen in den lit./Ziff.-Punkten nicht. marke + text je item
 // fliessen ein (Reihenfolge stabil).
+// ─── Bilder herunterladen + selbst hosten (Bilder&Formeln 1.7.2026) ─────────
+// Der Extraktor hat je Bild die RELATIVE Quell-src («image/imageN.png») erfasst.
+// Hier: → absolute Filestore-URL (gleiche Basis wie fedlex-cache.sh), herunterladen
+// nach public/normtext/bilder/<erlass>/, sha über die Bytes, `datei` auf den lokalen
+// Pfad setzen. IDEMPOTENT (Datei existiert → nur sha aus den Bytes; kein Re-Fetch).
+// ESCAPE-HATCH: Nicht-200 / Content-Type ≠ image/* → Build-Fehler (nie stilles Loch).
+const BILDER_BASIS = 'https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli';
+
+async function ladeBilder(
+  bloecke: Array<{ bild?: BildRef; bildKacheln?: Array<{ bild?: BildRef }> }>,
+  name: string,
+  eli: string,
+  konsolidierung: string,
+): Promise<void> {
+  const nameLc = name.toLowerCase();
+  const dir = `public/normtext/bilder/${nameLc}`;
+  const base = `${BILDER_BASIS}/${eli}/${konsolidierung}/de/html/`;
+  const refs: BildRef[] = [];
+  for (const b of bloecke) {
+    if (b.bild) refs.push(b.bild);
+    for (const k of b.bildKacheln ?? []) if (k.bild) refs.push(k.bild);
+  }
+  for (const ref of refs) {
+    if (ref.sha) continue; // im selben Lauf bereits verarbeitet
+    const relName = ref.datei.split('/').pop() ?? ref.datei; // imageN.png
+    const lokal = `${dir}/${relName}`;
+    let bytes: Buffer;
+    if (existsSync(lokal)) {
+      bytes = readFileSync(lokal);
+    } else {
+      const url = `${base}${ref.datei}`; // base + «image/imageN.png»
+      const res = await fetch(url);
+      const ct = res.headers.get('content-type') ?? '';
+      if (!res.ok || !ct.startsWith('image/')) {
+        throw new Error(
+          `[Bilder] Download fehlgeschlagen: ${name} ${url} → http=${res.status}, type=${ct}. ` +
+            `(Filestore-URL instabil? Escape-Hatch: Erlass ausnehmen statt stilles Bild-Loch.)`,
+        );
+      }
+      bytes = Buffer.from(await res.arrayBuffer());
+      mkdirSync(dir, { recursive: true });
+      writeFileSync(lokal, bytes);
+    }
+    ref.sha = createHash('sha256').update(bytes).digest('hex');
+    ref.datei = `bilder/${nameLc}/${relName}`;
+  }
+}
+
 function sha256Bloecke(
   bloecke: Array<{
     absatz: string | null;
@@ -277,6 +326,8 @@ function sha256Bloecke(
     items?: Array<{ marke: string; text: string; tiefe?: number }>;
     tabelle?: Array<{ beschreibung: string; betrag: string }>;
     mehrspaltig?: { kopf?: string[]; zeilen: string[][] };
+    bild?: { datei: string; alt: string; sha?: string };
+    bildKacheln?: Array<{ bild?: { datei: string; sha?: string }; nummer?: string; name?: string }>;
   }>,
 ): string {
   const zusammen = bloecke
@@ -291,7 +342,14 @@ function sha256Bloecke(
       const mTeil = b.mehrspaltig
         ? [(b.mehrspaltig.kopf ?? []).join('\t'), ...b.mehrspaltig.zeilen.map((z) => z.join('\t'))].join('\n')
         : '';
-      return [b.text, itemTeil, tabTeil, mTeil].filter(Boolean).join('\n');
+      // Bilder fliessen über die STABILE Prüfsumme der Bytes in den Daten-Index
+      // (nicht über die evtl. gehashte lokale Datei-Adresse) — so bleibt der sha
+      // reproduzierbar unabhängig vom Speicherpfad (§7).
+      const bildTeil = b.bild?.sha ? `bild:${b.bild.sha}` : '';
+      const kachelTeil = (b.bildKacheln ?? [])
+        .map((k) => `${k.nummer ?? ''}\t${k.name ?? ''}\t${k.bild?.sha ?? ''}`)
+        .join('\n');
+      return [b.text, itemTeil, tabTeil, mTeil, bildTeil, kachelTeil].filter(Boolean).join('\n');
     })
     .join('\n');
   return createHash('sha256').update(zusammen, 'utf8').digest('hex');
@@ -1019,6 +1077,7 @@ async function main(): Promise<void> {
         uebersprungen.push({ gesetz: gesetzKey, token: ankerVoll });
         continue;
       }
+      await ladeBilder(extrakt.bloecke, name, eli, konsolidierung);
 
       const id = `bund/${gesetzKey}/${ankerVoll}`;
       const snapshot: NormSnapshot = {
@@ -1060,6 +1119,7 @@ async function main(): Promise<void> {
         uebersprungen.push({ gesetz: gesetzKey, token: anker });
         continue;
       }
+      await ladeBilder(extrakt.bloecke, name, eli, konsolidierung);
       const token = ankerZuToken(anker);
       const id = `bund/${gesetzKey}/${token}`;
       const snapshot: NormSnapshot = {
@@ -1097,6 +1157,7 @@ async function main(): Promise<void> {
         uebersprungen.push({ gesetz: gesetzKey, token: anker });
         continue;
       }
+      await ladeBilder(extrakt.bloecke, name, eli, konsolidierung);
       const token = ankerZuToken(anker); // annex_1 / annex_1_1 — kein «art_», kein «/» → unverändert
       const id = `bund/${gesetzKey}/${token}`;
       const snapshot: NormSnapshot = {

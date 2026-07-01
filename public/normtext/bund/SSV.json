@@ -2445,16 +2445,60 @@
           "text": "Die dem Signal «Fussweg» (2.61) beigefügte Zusatztafel « gestattet» erlaubt es Radfahrern und Motorfahrradfahrern, den Fussweg zu benützen. Auf Trottoirs ist diese Signalisation ausnahmsweise, insbesondere zur Schulwegsicherung, zulässig, sofern das Trottoir schwach begangen und die Strasse relativ stark befahren ist. Es gelten die Bestimmungen über die gemeinsame Benützung nach Artikel 33 Absatz 4."
         },
         {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/ssv/image1.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 3,
+            "hoehe": 2,
+            "sha": "66ea1f73c75b7e9fffa73d6555deb75eb98cf507c154e30e89f5dd0b3c6459cc"
+          }
+        },
+        {
           "absatz": "2",
           "text": "Die den nach Absatz 1 gekennzeichneten Fusswegen beigefügte Zusatztafel « verboten» untersagt es Führern von schweren und schnellen Motorfahrrädern, den gekennzeichneten Weg zu benützen."
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/ssv/image2.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 4,
+            "hoehe": 2,
+            "sha": "086b2fc80351ddc9ce36473f55dde3b31660ada2d47201992e3c93fddc447af6"
+          }
         },
         {
           "absatz": "3",
           "text": "Die den Signalen «Radweg» (2.60), «Rad- und Fussweg mit getrennten Verkehrsflächen» (2.63) und «Gemeinsamer Rad- und Fussweg» (2.63.1) beigefügte Zusatztafel « freiwillig» nimmt die Führer von schweren und schnellen Motorfahrrädern von der Pflicht aus, den gekennzeichneten Weg zu benützen."
         },
         {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/ssv/image2.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 4,
+            "hoehe": 2,
+            "sha": "086b2fc80351ddc9ce36473f55dde3b31660ada2d47201992e3c93fddc447af6"
+          }
+        },
+        {
           "absatz": "4",
           "text": "Die den Signalen «Radweg» (2.60), «Rad- und Fussweg mit getrennten Verkehrsflächen» (2.63) und «Gemeinsamer Rad- und Fussweg» (2.63.1) beigefügte Zusatztafel « verboten» untersagt es Führern von schweren und schnellen Motorfahrrädern, den gekennzeichneten Weg zu benützen. Die Zusatztafel darf nur in Ausnahmefällen verwendet werden, namentlich bei hohem Fussgängeraufkommen und engen Platzverhältnissen."
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/ssv/image2.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 4,
+            "hoehe": 2,
+            "sha": "086b2fc80351ddc9ce36473f55dde3b31660ada2d47201992e3c93fddc447af6"
+          }
         },
         {
           "absatz": "5",
@@ -2465,7 +2509,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1961_1961_1961/de#art_64_a",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250701",
-      "sha": "93b774b0fa0db57ddd680c96ebb5cc78b3922d675800fa6033be9f9d675a8414"
+      "sha": "ed4d59b23eeca94a97e92a3484b58be8ab5a21bcb80e03215e1b98caffbde5c9"
     },
     {
       "id": "bund/SSV/art_65",
@@ -2532,6 +2576,17 @@
           "text": "Die dem Signal «Parkieren verboten» (2.50) beigefügte Zusatztafel « gestattet» zeigt an, dass die betroffene Fläche für den Ladevorgang von Fahrzeugen mit elektrischem Antrieb verwendet werden darf."
         },
         {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/ssv/image3.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 7,
+            "hoehe": 3,
+            "sha": "0a029740fac238ccabe58613d6be5540a566a9fb5a2b3b48a23411db7015a369"
+          }
+        },
+        {
           "absatz": "15",
           "text": "Die den Signalen «Allgemeines Fahrverbot in beiden Richtungen» (2.01), «Verbot für Motorwagen» (2.03) und «Busfahrbahn» (2.64) beigefügte Zusatztafel mit dem Wort «ausgenommen» und dem Symbol «Mitfahrgemeinschaft» (5.43) zeigt an, dass die betroffene Fahrbahn oder der betroffene Fahrstreifen von Fahrzeugen verwendet werden darf, die mindestens mit einer der Zahl auf dem Symbol entsprechenden Anzahl an Personen besetzt sind."
         },
@@ -2544,7 +2599,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1961_1961_1961/de#art_65",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250701",
-      "sha": "dad31c59e05c15c91c84e4a0f1f75e12689cd05f6d4f0da40e6f4432162ed7ad"
+      "sha": "05bea2cc6f73275b91a8028b2ecded65754e936f91579c225ff0207e231d6fc5"
     },
     {
       "id": "bund/SSV/art_66",
@@ -5250,10 +5305,10 @@
               ],
               [
                 "1. Allgemein (1.01–1.16, 1.18, 1.22–1.32)",
-                "[tab]",
-                "[tab]",
-                "[tab]",
-                "[tab]"
+                "",
+                "",
+                "",
+                ""
               ],
               [
                 "– Seitenlänge",
@@ -5271,27 +5326,27 @@
               ],
               [
                 "2. …",
-                "[tab]",
-                "[tab]",
-                "[tab]",
-                "[tab]"
+                "",
+                "",
+                "",
+                ""
               ],
               [
                 "II. Vorschriftssignale"
               ],
               [
                 "1. Durchmesser",
-                "[tab] 120 cm",
-                "[tab] 90 cm",
-                "[tab] 60 cm",
-                "[tab] 40 cm"
+                "120 cm",
+                "90 cm",
+                "60 cm",
+                "40 cm"
               ],
               [
                 "2. Randbreite",
-                "[tab]",
-                "[tab]",
-                "[tab]",
-                "[tab]"
+                "",
+                "",
+                "",
+                ""
               ],
               [
                 "– Allgemein",
@@ -5309,17 +5364,17 @@
               ],
               [
                 "3. Breite der Balken bei den Signalen 2.13, 2.42, 2.43, 2.46, 2.49, 2.54, 2.57, 2.60.1",
-                "[tab] 10 cm",
-                "[tab] 7,5 cm",
-                "[tab] 5 cm",
-                "[tab] 3,3 cm"
+                "10 cm",
+                "7,5 cm",
+                "5 cm",
+                "3,3 cm"
               ],
               [
                 "4. Breite des weissen Randes bei den Signalen 2.31–2.41.1, 2.48, 2.54, 2.57, 2.60–2.64",
-                "[tab] 1,8 cm",
-                "[tab] 1,4 cm",
-                "[tab] 0,9 cm",
-                "[tab] 0,6 cm"
+                "1,8 cm",
+                "1,4 cm",
+                "0,9 cm",
+                "0,6 cm"
               ],
               [
                 "5. Lichtsignal-System für die zeitweilige Sperrung von Fahrstreifen (2.65)",
@@ -5327,17 +5382,17 @@
               ],
               [
                 "6. Signale 2.30.1 und 2.53.1: Höhe der Schrift «GENERELL» im Rand 7 cm (Normalformat)",
-                "[tab]",
-                "[tab]",
-                "[tab]",
-                "[tab]"
+                "",
+                "",
+                "",
+                ""
               ],
               [
                 "7. Zonensignale, insbesondere 2.59.1, 2.59.3 und 2.59.5",
-                "[tab]",
-                "[tab]",
-                "[tab]",
-                "[tab]"
+                "",
+                "",
+                "",
+                ""
               ],
               [
                 "– Breite",
@@ -5358,10 +5413,10 @@
               ],
               [
                 "1. Dreieckige Signale(3.02, 3.05–3.08)",
-                "[tab]",
-                "[tab]",
-                "[tab]",
-                "[tab]"
+                "",
+                "",
+                "",
+                ""
               ],
               [
                 "– Seitenlänge",
@@ -5379,10 +5434,10 @@
               ],
               [
                 "2. Signal «Stop» (3.01)",
-                "[tab]",
-                "[tab]",
-                "[tab]",
-                "[tab]"
+                "",
+                "",
+                "",
+                ""
               ],
               [
                 "– Durchmesser, über parallele Seiten gemessen",
@@ -5400,10 +5455,10 @@
               ],
               [
                 "3. Quadratische Signale (3.03, 3.04, 3.10)",
-                "[tab]",
-                "[tab]",
-                "[tab]",
-                "[tab]"
+                "",
+                "",
+                "",
+                ""
               ],
               [
                 "– Seitenlänge",
@@ -5428,10 +5483,10 @@
               ],
               [
                 "4. Signal «Dem Gegenverkehr Vortritt lassen» (3.09)",
-                "[tab]",
-                "[tab]",
-                "[tab]",
-                "[tab]"
+                "",
+                "",
+                "",
+                ""
               ],
               [
                 "– Durchmesser",
@@ -5449,10 +5504,10 @@
               ],
               [
                 "5. …",
-                "[tab]",
-                "[tab]",
-                "[tab]",
-                "[tab]"
+                "",
+                "",
+                "",
+                ""
               ],
               [
                 "6. Signale 3.20–3.25",
@@ -5462,11 +5517,11 @@
                 "IV. Hinweissignale"
               ],
               [
-                "[tab] A. Verhaltens- und Informationshinweise"
+                "A. Verhaltens- und Informationshinweise"
               ],
               [
                 "1. Quadratische Signale (4.05, 4.06, 4.08, 4.09, 4.09.1, 4.14, 4.17–4.21, 4.25)",
-                "[tab]"
+                ""
               ],
               [
                 "– Seitenlänge",
@@ -5484,10 +5539,10 @@
               ],
               [
                 "2. Rechteckige Signale (4.01–4.04, 4.07, 4.08.1, 4.10–4.13, 4.15–4.25, 4.25, 4.79–4.90, 4.92)",
-                "[tab]",
-                "[tab]",
-                "[tab]",
-                "[tab]"
+                "",
+                "",
+                "",
+                ""
               ],
               [
                 "– Breite",
@@ -5519,10 +5574,10 @@
               ],
               [
                 "3. Besondere Fälle",
-                "[tab]",
-                "[tab]",
-                "[tab]",
-                "[tab]"
+                "",
+                "",
+                "",
+                ""
               ],
               [
                 "a. Signal «Strassenzustand» (4.75)",
@@ -5615,7 +5670,7 @@
                 "Für Masse und Ausgestaltung ist die Richtlinie des ASTRA 13010 (Ausgabe 2011) zu berücksichtigen"
               ],
               [
-                "[tab] B. Wegweisung auf Haupt- und Nebenstrassen"
+                "B. Wegweisung auf Haupt- und Nebenstrassen"
               ],
               [
                 "1. Ortschaftstafeln (4.27–4.30)",
@@ -5762,7 +5817,7 @@
                 "Für Masse und Ausgestaltung gilt die SN 640 821a (Fassung vom März 2003)."
               ],
               [
-                "[tab] C. Wegweisung auf Autobahnen und Autostrassen"
+                "C. Wegweisung auf Autobahnen und Autostrassen"
               ],
               [
                 "1. Allgemeines",
@@ -5863,10 +5918,10 @@
               ],
               [
                 "– Seitenlänge",
-                "[tab] 90 cm",
-                "[tab] 70 cm",
-                "[tab] 50 cm",
-                "[tab] 35 cm"
+                "90 cm",
+                "70 cm",
+                "50 cm",
+                "35 cm"
               ],
               [
                 "5.14",
@@ -5877,10 +5932,10 @@
               ],
               [
                 "– Seitenlänge",
-                "[tab] –",
-                "[tab] –",
-                "[tab] 50 cm",
-                "[tab] 35 cm"
+                "–",
+                "–",
+                "50 cm",
+                "35 cm"
               ],
               [
                 "",
@@ -5895,10 +5950,10 @@
               ],
               [
                 "– Seitenlänge",
-                "[tab] 100 cm",
-                "[tab] 80 cm",
-                "[tab] 60 cm",
-                "[tab] 40 cm"
+                "100 cm",
+                "80 cm",
+                "60 cm",
+                "40 cm"
               ],
               [
                 "5.18",
@@ -5924,7 +5979,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1961_1961_1961/de#annex_1",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250701",
-      "sha": "88aecced1ec386472d13a943384b70c8dc9a922ec10b389c2355fb3a00c8ba20"
+      "sha": "324401e4c0176f6eb72eae6fc3dcf220cdd60e062d9c450d6f44a6419fec6bbb"
     },
     {
       "id": "bund/SSV/annex_2",
@@ -5956,56 +6011,186 @@
         {
           "absatz": null,
           "text": "",
-          "mehrspaltig": {
-            "spalten": [
-              {
-                "typ": "text",
-                "titel": ""
+          "bildKacheln": [
+            {
+              "bild": {
+                "datei": "bilder/ssv/image4.png",
+                "alt": "Signal: Rechtskurve (Art. 4)",
+                "breite": 42,
+                "hoehe": 37,
+                "sha": "e90f8787a88994df8bbbf7624dd0dc2f2d060f3e2fb1536450d16d4c3fec4225"
               },
-              {
-                "typ": "text",
-                "titel": ""
-              }
-            ],
-            "zeilen": [
-              [
-                "1.01 Rechtskurve (Art. 4)",
-                "1.02 Linkskurve (Art. 4)"
-              ],
-              [
-                "1.03 Doppelkurve nach rechts beginnend (Art. 4)",
-                "1.04 Doppelkurve nach links beginnend (Art. 4)"
-              ],
-              [
-                "1.05 Schleudergefahr (Art. 5)",
-                "1.06 Unebene Fahrbahn (Art. 6)"
-              ],
-              [
-                "1.07 Engpass (Art. 7)",
-                "1.08 Verengung rechts (Art. 7)"
-              ],
-              [
-                "1.09 Verengung links (Art. 7)",
-                "1.10 Gefährliches Gefälle (Art. 8)"
-              ],
-              [
-                "1.11 Starke Steigung (Art. 8)",
-                "1.12 Rollsplit (Art. 8)"
-              ],
-              [
-                "1.13 Steinschlag (Art. 8)",
-                "1.14 Baustelle (Art. 9)"
-              ],
-              [
-                "1.15 Schranken (Art. 10)",
-                "1.16 Bahnübergang ohne Schranken (Art. 10)"
-              ],
-              [
-                "1.17 …",
-                "1.18 Strassenbahn (Art. 10)"
-              ]
-            ]
-          }
+              "nummer": "1.01",
+              "name": "Rechtskurve (Art. 4)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image5.png",
+                "alt": "Signal: Linkskurve (Art. 4)",
+                "breite": 42,
+                "hoehe": 37,
+                "sha": "ab8657a13eded2c4074a41e92d3cdafdadc87f5ea313f8eb7a6339ddeabc9f17"
+              },
+              "nummer": "1.02",
+              "name": "Linkskurve (Art. 4)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image6.png",
+                "alt": "Signal: Doppelkurve nach rechts beginnend (Art. 4)",
+                "breite": 42,
+                "hoehe": 37,
+                "sha": "dd04685672a0e1fc428b89835f0161705d18a3aad4e2d43c3ab2f3bc6887a67f"
+              },
+              "nummer": "1.03",
+              "name": "Doppelkurve nach rechts beginnend (Art. 4)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image7.png",
+                "alt": "Signal: 1.04 Doppelkurve nach links beginnend (Art. 4)",
+                "breite": 42,
+                "hoehe": 37,
+                "sha": "00aa73be3d3ed296626a7a206d1d95f094289db5e0bfae1132a540351ca15249"
+              },
+              "name": "1.04 Doppelkurve nach links beginnend (Art. 4)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image8.png",
+                "alt": "Signal: Schleudergefahr (Art. 5)",
+                "breite": 42,
+                "hoehe": 37,
+                "sha": "71ed3eb226d762ab05e161bd8788712deb44f1ba4bc8897bdda5b292fdf05baf"
+              },
+              "nummer": "1.05",
+              "name": "Schleudergefahr (Art. 5)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image9.png",
+                "alt": "Signal: 1.06 Unebene Fahrbahn (Art. 6)",
+                "breite": 42,
+                "hoehe": 37,
+                "sha": "9c92b6f4da7895ecbcc27874ea4a10d607262ddb6096282cb5d853c64321f0ba"
+              },
+              "name": "1.06 Unebene Fahrbahn (Art. 6)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image10.png",
+                "alt": "Signal: 1.07 Engpass (Art. 7)",
+                "breite": 42,
+                "hoehe": 37,
+                "sha": "62474fb735cf3ef5b7fd41a3787b7ac265ce9bd3864e514a3651bc51b127c36c"
+              },
+              "name": "1.07 Engpass (Art. 7)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image11.png",
+                "alt": "Signal: 1.08 Verengung rechts (Art. 7)",
+                "breite": 42,
+                "hoehe": 37,
+                "sha": "a75e672d573e97c483dfe524a4fbb0facb1d7255020453aca82242e771d8b776"
+              },
+              "name": "1.08 Verengung rechts (Art. 7)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image12.png",
+                "alt": "Signal: 1.09 Verengung links (Art. 7)",
+                "breite": 42,
+                "hoehe": 37,
+                "sha": "895f36ee7325b79298fe026bb8333938fe81e0a166a95eccc2173ce7c8a1ec07"
+              },
+              "name": "1.09 Verengung links (Art. 7)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image13.png",
+                "alt": "Signal: 1.10 Gefährliches Gefälle (Art. 8)",
+                "breite": 42,
+                "hoehe": 37,
+                "sha": "acb45b4a71f2526eb9b5c89fd72378ea6602d51b586b652238b70d125062368d"
+              },
+              "name": "1.10 Gefährliches Gefälle (Art. 8)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image14.png",
+                "alt": "Signal: 1.11 Starke Steigung (Art. 8)",
+                "breite": 42,
+                "hoehe": 37,
+                "sha": "b304c6bc8ed855dfb3bcc47bced2a3cede9786e9458bb4fc3f1d6137c899c0e6"
+              },
+              "name": "1.11 Starke Steigung (Art. 8)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image15.png",
+                "alt": "Signal: 1.12 Rollsplit (Art. 8)",
+                "breite": 42,
+                "hoehe": 37,
+                "sha": "112408a3b5993caa54022beac803481cc96a431e6963cf2f31ec648d32b2bd95"
+              },
+              "name": "1.12 Rollsplit (Art. 8)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image16.png",
+                "alt": "Signal: 1.13 Steinschlag (Art. 8)",
+                "breite": 42,
+                "hoehe": 37,
+                "sha": "107448b620ff5329ac0efbead51de867472ccf5ed1528c150428c20e627beb3e"
+              },
+              "name": "1.13 Steinschlag (Art. 8)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image17.png",
+                "alt": "Signal: 1.14 Baustelle (Art. 9)",
+                "breite": 42,
+                "hoehe": 37,
+                "sha": "20b93084f96f49d9c86ecb981be5bf8c952c9d0ac9340d307e9e81f4bf554602"
+              },
+              "name": "1.14 Baustelle (Art. 9)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image18.png",
+                "alt": "Signal: 1.15 Schranken (Art. 10)",
+                "breite": 42,
+                "hoehe": 37,
+                "sha": "493e0a489e2d42e7592888e9eb0c105b393858b76e14c1e39ac57ead3346b7d7"
+              },
+              "name": "1.15 Schranken (Art. 10)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image19.png",
+                "alt": "Signal: 1.16 Bahnübergang ohne Schranken (Art. 10)",
+                "breite": 42,
+                "hoehe": 37,
+                "sha": "099ddd66c5017821654c6c9b7b454a9548fbc1a230d2dcf8588f3190621b60ae"
+              },
+              "name": "1.16 Bahnübergang ohne Schranken (Art. 10)"
+            },
+            {
+              "nummer": "1.17",
+              "name": "…"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image20.png",
+                "alt": "Signal: 1.18 Strassenbahn (Art. 10)",
+                "breite": 42,
+                "hoehe": 37,
+                "sha": "53e602414b933f2db6cc83959555bd9f19cf3a813237cc7baeb81a81dfe4dcc6"
+              },
+              "name": "1.18 Strassenbahn (Art. 10)"
+            }
+          ]
         },
         {
           "absatz": null,
@@ -6015,33 +6200,115 @@
         {
           "absatz": null,
           "text": "",
-          "mehrspaltig": {
-            "zeilen": [
-              [
-                "1.22 Fussgängerstreifen (Art. 11)",
-                "1.23 Kinder (Art. 11)"
-              ],
-              [
-                "1.24 Wildwechsel (Art. 12)",
-                "1.25 Tiere (Art. 12)"
-              ],
-              [
-                "1.26 Gegenverkehr (Art. 13)",
-                "1.27 Lichtsignale (Art. 14)"
-              ],
-              [
-                "1.28 …",
-                "1.29 …"
-              ],
-              [
-                "1.30 Andere Gefahren (Art. 15)",
-                "1.31 Stau (Art. 14)"
-              ],
-              [
-                "1.32 Radfahrer (Art. 11)"
-              ]
-            ]
-          }
+          "bildKacheln": [
+            {
+              "bild": {
+                "datei": "bilder/ssv/image21.png",
+                "alt": "Signal: Fussgängerstreifen (Art. 11)",
+                "breite": 42,
+                "hoehe": 37,
+                "sha": "befda5558506714e4a4c76cebde639bf93d4005a2d5b331f26b6b4923c4211a9"
+              },
+              "nummer": "1.22",
+              "name": "Fussgängerstreifen (Art. 11)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image22.png",
+                "alt": "Signal: Kinder (Art. 11)",
+                "breite": 42,
+                "hoehe": 37,
+                "sha": "b4fae567c6231261d0ad405bd8a2cc64e2cfeb1fd7da1c70f028ecc2a0e00d49"
+              },
+              "nummer": "1.23",
+              "name": "Kinder (Art. 11)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image23.png",
+                "alt": "Signal: Wildwechsel (Art. 12)",
+                "breite": 42,
+                "hoehe": 37,
+                "sha": "a777d506b33cdcf8e3af28073b0442897e44082e8487b1feb17f72b1608db48f"
+              },
+              "nummer": "1.24",
+              "name": "Wildwechsel (Art. 12)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image24.png",
+                "alt": "Signal: Tiere (Art. 12)",
+                "breite": 42,
+                "hoehe": 37,
+                "sha": "bde20db0135298f4f762768fa031d295a66bb11f571931fa165a799143ef71a2"
+              },
+              "nummer": "1.25",
+              "name": "Tiere (Art. 12)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image25.png",
+                "alt": "Signal: Gegenverkehr (Art. 13)",
+                "breite": 42,
+                "hoehe": 37,
+                "sha": "9dcee44857e5247e5dc95254916f6aab642711b98b8bb3015f55e42bafc8b169"
+              },
+              "nummer": "1.26",
+              "name": "Gegenverkehr (Art. 13)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image26.png",
+                "alt": "Signal: Lichtsignale (Art. 14)",
+                "breite": 42,
+                "hoehe": 37,
+                "sha": "154792553c89af2ce134e38d379799f84345bf8c3dae04ce249c6c037f41afae"
+              },
+              "nummer": "1.27",
+              "name": "Lichtsignale (Art. 14)"
+            },
+            {
+              "nummer": "1.28",
+              "name": "…"
+            },
+            {
+              "nummer": "1.29",
+              "name": "…"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image27.png",
+                "alt": "Signal: Andere Gefahren (Art. 15)",
+                "breite": 42,
+                "hoehe": 37,
+                "sha": "c02c739f5622efedb6d2a8b243affad05b9aba68d876e7d12925b023f69985af"
+              },
+              "nummer": "1.30",
+              "name": "Andere Gefahren (Art. 15)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image28.png",
+                "alt": "Signal: Stau (Art. 14)",
+                "breite": 42,
+                "hoehe": 37,
+                "sha": "9c4bc933c4612bf9d7cc6c6ed2bc721dea61efcfc552a87156e159ca406f9c6f"
+              },
+              "nummer": "1.31",
+              "name": "Stau (Art. 14)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image29.png",
+                "alt": "Signal: Radfahrer (Art. 11)",
+                "breite": 42,
+                "hoehe": 37,
+                "sha": "32e6fd4941b6777be39242f71f02e8f303448572eca72ff3bbe589952b238b57"
+              },
+              "nummer": "1.32",
+              "name": "Radfahrer (Art. 11)"
+            }
+          ]
         },
         {
           "absatz": null,
@@ -6056,53 +6323,276 @@
         {
           "absatz": null,
           "text": "",
-          "mehrspaltig": {
-            "zeilen": [
-              [
-                "2.01 Allgemeines Fahrverbot in beiden Richtungen (Art. 18)",
-                "2.02 Einfahrt verboten (Art. 18)",
-                "2.03 Verbot für Motorwagen (Art. 19)"
-              ],
-              [
-                "2.04 Verbot für Motorräder (Art. 19)",
-                "2.05 Verbot für Fahrräder und Motorfahrräder (Art. 19)",
-                "2.06 Verbot für Motorfahrräder (Art. 19)"
-              ],
-              [
-                "2.07 Verbot für Lastwagen (Art. 19)",
-                "2.08 Verbot für Gesellschaftswagen (Art. 19)",
-                "2.09 Verbot für Anhänger (Art. 19)"
-              ],
-              [
-                "2.09.1 Verbot für Anhänger mit Ausnahme von Sattel- und Zentralachsanhängern (Art. 19)",
-                "2.10 …",
-                "2.10.1 Verbot für Fahrzeuge mit gefährlicher Ladung (Art. 19)"
-              ],
-              [
-                "2.11 Verbot für Fahrzeuge mit wassergefährdender Ladung (Art. 19)",
-                "2.12 Verbot für Tiere (Art. 19)",
-                "2.13 Verbot für Motorwa- gen und Motorräder (Beispiel) (Art. 19)"
-              ],
-              [
-                "2.14 Verbot für Motorwagen, Motorräder und Motor- fahrräder (Beispiel) (Art. 19)",
-                "2.15 Verbot für Fussgänger (Art. 19)",
-                "2.15.1 Skifahren verboten (Art. 19)"
-              ],
-              [
-                "2.15.2 Schlitteln verboten (Art. 19)",
-                "2.15.3 Verbot für fahrzeug- ähnliche Geräte (Art. 19)",
-                "2.16 Höchstgewicht (Art. 20)"
-              ],
-              [
-                "2.17 Achsdruck (Art. 20)",
-                "2.18 Höchstbreite (Art. 21)",
-                "2.19 Höchsthöhe (Art. 21)"
-              ],
-              [
-                "2.20 Höchstlänge (Art. 21)"
-              ]
-            ]
-          }
+          "bildKacheln": [
+            {
+              "bild": {
+                "datei": "bilder/ssv/image30.png",
+                "alt": "Signal: Allgemeines Fahrverbot in beiden Richtungen (Art. 18)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "81d2af3f1e4f2244c08e74b7354255d2dd7aee1d462494f62dd9e8ebe714107c"
+              },
+              "nummer": "2.01",
+              "name": "Allgemeines Fahrverbot in beiden Richtungen (Art. 18)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image31.png",
+                "alt": "Signal: Einfahrt verboten (Art. 18)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "ffcfba9652ad6fb2ee86cb11d122119071f125412857f124051b0d50727bad25"
+              },
+              "nummer": "2.02",
+              "name": "Einfahrt verboten (Art. 18)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image32.png",
+                "alt": "Signal: Verbot für Motorwagen (Art. 19)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "05ce04c8994931850af852a3f5e547dfffea395d86799054dd8f734de2528de2"
+              },
+              "nummer": "2.03",
+              "name": "Verbot für Motorwagen (Art. 19)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image33.png",
+                "alt": "Signal: Verbot für Motorräder (Art. 19)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "6d3ce17433a7a93c56882f7eaa0d5fe334a94d1afcb642c2d9ce9e821835d6af"
+              },
+              "nummer": "2.04",
+              "name": "Verbot für Motorräder (Art. 19)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image34.png",
+                "alt": "Signal: Verbot für Fahrräder und Motorfahrräder (Art. 19)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "dddd061de3764e98de25031910b5f7f7e7c8b59ced8fbbb70785fc43059c3b50"
+              },
+              "nummer": "2.05",
+              "name": "Verbot für Fahrräder und Motorfahrräder (Art. 19)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image35.png",
+                "alt": "Signal: Verbot für Motorfahrräder (Art. 19)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "0d18e69f1e9f21f7f343a5b19c278226d61c3a45340167b0bbd3beaaecf53d22"
+              },
+              "nummer": "2.06",
+              "name": "Verbot für Motorfahrräder (Art. 19)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image36.png",
+                "alt": "Signal: Verbot für Lastwagen (Art. 19)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "650e7b7e7867977b3776354bbdd42b9fa7ab7615253aca8fbd82849871e458a8"
+              },
+              "nummer": "2.07",
+              "name": "Verbot für Lastwagen (Art. 19)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image37.png",
+                "alt": "Signal: Verbot für Gesellschaftswagen (Art. 19)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "4f8e044ea8cf9482770fb8acb7e4fe4e9beb69488eea3114129a317370ba1afd"
+              },
+              "nummer": "2.08",
+              "name": "Verbot für Gesellschaftswagen (Art. 19)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image38.png",
+                "alt": "Signal: Verbot für Anhänger (Art. 19)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "c1aa18863b6dfe4be11a80c410669f3b7725980c103a02f3685b097f1cd3152a"
+              },
+              "nummer": "2.09",
+              "name": "Verbot für Anhänger (Art. 19)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image39.png",
+                "alt": "Signal: Verbot für Anhänger mit Ausnahme von Sattel- und Zentralachsanhängern (Art. 19)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "4f8e2fde4f8397181b76950d238a190e4b2a9ee22e8d674c561ff3e1d2993628"
+              },
+              "nummer": "2.09.1",
+              "name": "Verbot für Anhänger mit Ausnahme von Sattel- und Zentralachsanhängern (Art. 19)"
+            },
+            {
+              "nummer": "2.10",
+              "name": "…"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image40.png",
+                "alt": "Signal: Verbot für Fahrzeuge mit gefährlicher Ladung (Art. 19)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "4d21ae2cf1eca2d89c614b3b5c4f71bb877646e298b07ba3ac800c783856bd55"
+              },
+              "nummer": "2.10.1",
+              "name": "Verbot für Fahrzeuge mit gefährlicher Ladung (Art. 19)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image41.png",
+                "alt": "Signal: Verbot für Fahrzeuge mit wassergefährdender Ladung (Art. 19)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "ab12431eea79297615045aef5e52ece5f3dbac5d93f613d7746706ab9911aa3f"
+              },
+              "nummer": "2.11",
+              "name": "Verbot für Fahrzeuge mit wassergefährdender Ladung (Art. 19)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image42.png",
+                "alt": "Signal: Verbot für Tiere (Art. 19)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "63b31c48a3f1e00ffbeab4628fe751a943eb6c6acbb2545938f54eb6b1f60727"
+              },
+              "nummer": "2.12",
+              "name": "Verbot für Tiere (Art. 19)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image43.png",
+                "alt": "Signal: Verbot für Motorwa- gen und Motorräder (Beispiel) (Art. 19)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "df3ad5638fa11ebc744d96b067f904db140853866f6a4ca2e43ef521e67b5a7d"
+              },
+              "nummer": "2.13",
+              "name": "Verbot für Motorwa- gen und Motorräder (Beispiel) (Art. 19)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image44.png",
+                "alt": "Signal: Verbot für Motorwagen, Motorräder und Motor- fahrräder (Beispiel) (Art. 19)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "356899848ea020d2df5cb3d242f90c4dd98d7845463f37a2c7585cddc0e4a43e"
+              },
+              "nummer": "2.14",
+              "name": "Verbot für Motorwagen, Motorräder und Motor- fahrräder (Beispiel) (Art. 19)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image45.png",
+                "alt": "Signal: Verbot für Fussgänger (Art. 19)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "bf0393fe3995e891ef3a6b7cafa27ea237c752b07cfef1489f07e482156d92a0"
+              },
+              "nummer": "2.15",
+              "name": "Verbot für Fussgänger (Art. 19)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image46.png",
+                "alt": "Signal: Skifahren verboten (Art. 19)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "1389778f18d0309bf83c3af8d368e27e58777bf6b199f5843c20b76ee9972085"
+              },
+              "nummer": "2.15.1",
+              "name": "Skifahren verboten (Art. 19)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image47.png",
+                "alt": "Signal: Schlitteln verboten (Art. 19)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "f980ca85fff9b8b19543d76eb43b08c3edf8a17425e933d8b2a4785a83b58b30"
+              },
+              "nummer": "2.15.2",
+              "name": "Schlitteln verboten (Art. 19)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image48.png",
+                "alt": "Signal: Verbot für fahrzeug- ähnliche Geräte (Art. 19)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "158b5719b8e2320bff8178a60c83f03061f9ace6bb3c901b0b497182fa1bd3c4"
+              },
+              "nummer": "2.15.3",
+              "name": "Verbot für fahrzeug- ähnliche Geräte (Art. 19)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image49.png",
+                "alt": "Signal: Höchstgewicht (Art. 20)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "a34bb57976445e2cfa551bdd293ea5541b705e6ba4963d6f7bf374cf3fd7ab97"
+              },
+              "nummer": "2.16",
+              "name": "Höchstgewicht (Art. 20)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image50.png",
+                "alt": "Signal: Achsdruck (Art. 20)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "c1e65b6b6a3800dd7237be8ad2c66f66ebf90c941413b26cefd1ef34588bc3b2"
+              },
+              "nummer": "2.17",
+              "name": "Achsdruck (Art. 20)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image51.png",
+                "alt": "Signal: Höchstbreite (Art. 21)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "2c24ea8409338a6e91aa9f514d047ab27958d9302b907e98d561e1335c13c4a0"
+              },
+              "nummer": "2.18",
+              "name": "Höchstbreite (Art. 21)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image52.png",
+                "alt": "Signal: Höchsthöhe (Art. 21)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "b62d709d4ce0d3e95e04c051c6b9b52f929bc2d8cf84d956cb427b2a55831950"
+              },
+              "nummer": "2.19",
+              "name": "Höchsthöhe (Art. 21)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image53.png",
+                "alt": "Signal: Höchstlänge (Art. 21)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "e3570fb44a6a109319a7e1c0966bbe0d507b38017608eea05c908741930924a1"
+              },
+              "nummer": "2.20",
+              "name": "Höchstlänge (Art. 21)"
+            }
+          ]
         },
         {
           "absatz": null,
@@ -6112,80 +6602,450 @@
         {
           "absatz": null,
           "text": "",
-          "mehrspaltig": {
-            "zeilen": [
-              [
-                "2.30 Höchstgeschwindigkeit (Art. 22)",
-                "2.30.1 Höchstgeschwindigkeit 50 generell (Art. 22)",
-                "2.31 Mindestgeschwin digkeit (Art. 23)"
-              ],
-              [
-                "2.32 Fahrtrichtung rechts (Art. 24)",
-                "2.33 Fahrtrichtung links (Art. 24)",
-                "2.34 Hindernis rechts umfahren"
-              ],
-              [
-                "2.35 Hindernis links umfahren (Art. 24)",
-                "2.36 Geradeausfahren (Art. 24)",
-                "2.37 Rechtsabbiegen (Art. 24)"
-              ],
-              [
-                "2.38 Linksabbiegen (Art. 24)",
-                "2.39 Rechts- oder Linksabbiegen (Art. 24)",
-                "2.40 Geradeaus oder Rechtsabbiegen (Art. 24)"
-              ],
-              [
-                "2.41 Geradeaus oder Linksabbiegen (Art. 24)",
-                "2.41.1 Kreisverkehrsplatz (Art. 24)",
-                "2.41.2 Vorgeschriebene Fahrtrichtung für Fahrzeuge mit gefährlicher Ladung (Beispiel) (Art. 24)"
-              ],
-              [
-                "2.42 Abbiegen nach rechts verboten (Art. 25)",
-                "2.43 Abbiegen nach links verboten (Art. 25)",
-                "2.44 Überholen verboten (Art. 26)"
-              ],
-              [
-                "2.45 Überholen für Lastwagen verboten (Art. 26)",
-                "2.46 Wenden verboten (Art. 27)",
-                "2.47 Mindestabstand (Art. 28)"
-              ],
-              [
-                "2.48 Schneeketten obligatorisch (Art. 29)",
-                "2.49 Halten verboten (Art. 30)",
-                "2.50 Parkieren verboten (Art. 30)"
-              ],
-              [
-                "2.51 Zollhaltestelle (Art. 31)",
-                "2.52 Polizei (Art. 31)",
-                "2.53 Ende der Höchstgeschwindigkeit (Art. 32)"
-              ],
-              [
-                "2.53.1 Ende der Höchstgeschwindigkeit 50 generell (Art. 22)",
-                "2.54 Ende der Mindest-geschwindigkeit (Art. 32)",
-                "2.55 Ende des Überhol-verbotes (Art. 32)"
-              ],
-              [
-                "2.56 Ende des Überholverbotes für Lastwagen (Art. 32)",
-                "2.56.1 Ende des Teilfahrverbotes (Beispiel) (Art. 32)",
-                "2.57 Ende des Schneeketten-Obligatoriums (Art. 32)"
-              ],
-              [
-                "2.58 Freie Fahrt (Art. 32)"
-              ],
-              [
-                "2.59.1 Zonensignal (z.B. Tempo-30-Zone) (Art. 2a und 22a)",
-                "2.59.2 Ende-Zonensignal (z.B. Ende Tempo-30-Zone) (Art. 2a)"
-              ],
-              [
-                "2.59.3 Fussgängerzone (Art. 2a und 22c)",
-                "2.59.4 Ende der Fussgängerzone (Art. 2a)"
-              ],
-              [
-                "2.59.5 Begegnungszone (Art. 2a und 22b)",
-                "2.59.6 Ende der Begegnungszone (Art. 2a)"
-              ]
-            ]
-          }
+          "bildKacheln": [
+            {
+              "bild": {
+                "datei": "bilder/ssv/image54.png",
+                "alt": "Signal: Höchstgeschwindigkeit (Art. 22)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "7148b91ed6d02bcd6b1a2332632693f446f8b1d7061695c11ade4298f52898b6"
+              },
+              "nummer": "2.30",
+              "name": "Höchstgeschwindigkeit (Art. 22)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image55.png",
+                "alt": "Signal: Höchstgeschwindigkeit 50 generell (Art. 22)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "2c4219e746ddddd502adc202d67644089533bf864ae0c2551488f694d38626a0"
+              },
+              "nummer": "2.30.1",
+              "name": "Höchstgeschwindigkeit 50 generell (Art. 22)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image56.png",
+                "alt": "Signal: Mindestgeschwin digkeit (Art. 23)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "eb8857820ae717c542d2be750557cb7f109b9ff245c781df6b400e4adfa8a5c6"
+              },
+              "nummer": "2.31",
+              "name": "Mindestgeschwin digkeit (Art. 23)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image57.png",
+                "alt": "Signal: Fahrtrichtung rechts (Art. 24)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "6549f5027c85d80aae1b3166e2351be5e7c9d1a4c38d35e5d030edda7dc263d7"
+              },
+              "nummer": "2.32",
+              "name": "Fahrtrichtung rechts (Art. 24)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image58.png",
+                "alt": "Signal: Fahrtrichtung links (Art. 24)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "221c4583abcf78ebbba82228bb21e6ec8da63c9371f97053c5e5889303620cf0"
+              },
+              "nummer": "2.33",
+              "name": "Fahrtrichtung links (Art. 24)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image59.png",
+                "alt": "Signal: Hindernis rechts umfahren",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "90a8ac83176f4622bd3676d82e9d22eb177bfcbb7fdf0b192f92b5bb0c3c0609"
+              },
+              "nummer": "2.34",
+              "name": "Hindernis rechts umfahren"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image60.png",
+                "alt": "Signal: Hindernis links umfahren (Art. 24)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "53cb907d4e94ef6d56a56191de66e19fe456d2d34eafdaa12e84c8e51c70709c"
+              },
+              "nummer": "2.35",
+              "name": "Hindernis links umfahren (Art. 24)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image61.png",
+                "alt": "Signal: Geradeausfahren (Art. 24)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "9b0985db33799bd1808980be2bd1a2e75e73f3a35bdce83837fb85b1eb24c6a6"
+              },
+              "nummer": "2.36",
+              "name": "Geradeausfahren (Art. 24)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image62.png",
+                "alt": "Signal: Rechtsabbiegen (Art. 24)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "a101529fdb8e5c4c5f15748416f6905d99d527ddeeaae6c728213288bf86b622"
+              },
+              "nummer": "2.37",
+              "name": "Rechtsabbiegen (Art. 24)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image63.png",
+                "alt": "Signal: Linksabbiegen (Art. 24)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "0eecbc6750901def4258dc59fa79e90b14cd2fd0489d929b811d3d6f025787c5"
+              },
+              "nummer": "2.38",
+              "name": "Linksabbiegen (Art. 24)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image64.png",
+                "alt": "Signal: Rechts- oder Linksabbiegen (Art. 24)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "aa9c755c08706eefa53f1bba33ffb93cf48132440854a476b92e04026061a46a"
+              },
+              "nummer": "2.39",
+              "name": "Rechts- oder Linksabbiegen (Art. 24)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image65.png",
+                "alt": "Signal: Geradeaus oder Rechtsabbiegen (Art. 24)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "66cd28fe54390c2ebcb44bef12cfa91dd91d8284282122402fad34b81a14b6ce"
+              },
+              "nummer": "2.40",
+              "name": "Geradeaus oder Rechtsabbiegen (Art. 24)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image66.png",
+                "alt": "Signal: Geradeaus oder Linksabbiegen (Art. 24)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "4d493b4d77a9e9780deaa448715966f3831505589de829dfb7b9d5d721ed2e89"
+              },
+              "nummer": "2.41",
+              "name": "Geradeaus oder Linksabbiegen (Art. 24)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image67.png",
+                "alt": "Signal: Kreisverkehrsplatz (Art. 24)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "07471d21d241b13a4151d6cb59347c6bad4de5964493f379180402f5f4e368b2"
+              },
+              "nummer": "2.41.1",
+              "name": "Kreisverkehrsplatz (Art. 24)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image68.png",
+                "alt": "Signal: Vorgeschriebene Fahrtrichtung für Fahrzeuge mit gefährlicher Ladung (Beispiel) (Art. 24)",
+                "breite": 33,
+                "hoehe": 47,
+                "sha": "6924b183035daa89b2e1e3a898e2f77df973eda73c274c1d3dd562fbf3897ca4"
+              },
+              "nummer": "2.41.2",
+              "name": "Vorgeschriebene Fahrtrichtung für Fahrzeuge mit gefährlicher Ladung (Beispiel) (Art. 24)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image69.png",
+                "alt": "Signal: Abbiegen nach rechts verboten (Art. 25)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "a9c96cc9f3fb8666c72a8dd7601a6b9819d25e79da76db1136bf00d1103203ff"
+              },
+              "nummer": "2.42",
+              "name": "Abbiegen nach rechts verboten (Art. 25)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image70.png",
+                "alt": "Signal: Abbiegen nach links verboten (Art. 25)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "5d7a993061ef879bcea0cc5ab9f26104b7598cabed6e586c131b2c3e510804d2"
+              },
+              "nummer": "2.43",
+              "name": "Abbiegen nach links verboten (Art. 25)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image71.png",
+                "alt": "Signal: Überholen verboten (Art. 26)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "ed0942bdba598ef32bcb83fce7fc76b00a231bb71ad76837b5256f3d8882848b"
+              },
+              "nummer": "2.44",
+              "name": "Überholen verboten (Art. 26)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image72.png",
+                "alt": "Signal: Überholen für Lastwagen verboten (Art. 26)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "62e6887b620cbd6c72fd04525ab63fa1076acc71307b989e34f5c7c13511e4a1"
+              },
+              "nummer": "2.45",
+              "name": "Überholen für Lastwagen verboten (Art. 26)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image73.png",
+                "alt": "Signal: Wenden verboten (Art. 27)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "fb092992ff6a12dc4271908a00f020add25da566936a1ae65852190ebfd3c9e3"
+              },
+              "nummer": "2.46",
+              "name": "Wenden verboten (Art. 27)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image74.png",
+                "alt": "Signal: Mindestabstand (Art. 28)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "17237cc9ff2b011931e5721269436c26ed346ce977934f23be89629104708e18"
+              },
+              "nummer": "2.47",
+              "name": "Mindestabstand (Art. 28)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image75.png",
+                "alt": "Signal: Schneeketten obligatorisch (Art. 29)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "efbba95458f05f34712f4c2f341ecc7d97cea7bab54661d9b019457f01c479d9"
+              },
+              "nummer": "2.48",
+              "name": "Schneeketten obligatorisch (Art. 29)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image76.png",
+                "alt": "Signal: Halten verboten (Art. 30)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "f492e0bc4eaa17ed151fa35f2542c382339c02de3bbbfc5e49d6f0383c127bd1"
+              },
+              "nummer": "2.49",
+              "name": "Halten verboten (Art. 30)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image77.png",
+                "alt": "Signal: Parkieren verboten (Art. 30)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "3cdea4b297b34cb41532a2c25e90fc969719ab32e5e4b7f1d6842a195714cc50"
+              },
+              "nummer": "2.50",
+              "name": "Parkieren verboten (Art. 30)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image78.png",
+                "alt": "Signal: Zollhaltestelle (Art. 31)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "1ea3411294e71389359064c6b987a9c655419db7aec996df075181c056150c82"
+              },
+              "nummer": "2.51",
+              "name": "Zollhaltestelle (Art. 31)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image79.png",
+                "alt": "Signal: Polizei (Art. 31)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "57ea429bf2abc347f3d38d960500b9abbc7e939bd8d818fac09d8fe134b029c6"
+              },
+              "nummer": "2.52",
+              "name": "Polizei (Art. 31)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image80.png",
+                "alt": "Signal: Ende der Höchstgeschwindigkeit (Art. 32)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "f0f7537a192efe227d9b846f5b2ebfe927bb754e55f2963eb7612cde5a916106"
+              },
+              "nummer": "2.53",
+              "name": "Ende der Höchstgeschwindigkeit (Art. 32)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image81.png",
+                "alt": "Signal: Ende der Höchstgeschwindigkeit 50 generell (Art. 22)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "123eda949eca9d6957f25ba98864c771564183d2de69b61a51a1ced58f7dfec4"
+              },
+              "nummer": "2.53.1",
+              "name": "Ende der Höchstgeschwindigkeit 50 generell (Art. 22)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image82.png",
+                "alt": "Signal: Ende der Mindest-geschwindigkeit (Art. 32)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "32057fa2e59fb3e33722206edeaf8ae6cd888f325319ce68a2de113a6b0ec3bd"
+              },
+              "nummer": "2.54",
+              "name": "Ende der Mindest-geschwindigkeit (Art. 32)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image83.png",
+                "alt": "Signal: Ende des Überhol-verbotes (Art. 32)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "3975869f1ccca27084053f9a0818ed696d93b4761443bf6960cf72eb728a2816"
+              },
+              "nummer": "2.55",
+              "name": "Ende des Überhol-verbotes (Art. 32)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image84.png",
+                "alt": "Signal: Ende des Überholverbotes für Lastwagen (Art. 32)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "d6f16b0b8f30d75176494c513fa98123ea763f0e096b18607b3598a2254756d2"
+              },
+              "nummer": "2.56",
+              "name": "Ende des Überholverbotes für Lastwagen (Art. 32)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image85.png",
+                "alt": "Signal: Ende des Teilfahrverbotes (Beispiel) (Art. 32)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "d4502999ad95cc1f3c24b59e1f069c1f514c27b03fbc473aca16a1335e09eb13"
+              },
+              "nummer": "2.56.1",
+              "name": "Ende des Teilfahrverbotes (Beispiel) (Art. 32)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image86.png",
+                "alt": "Signal: Ende des Schneeketten-Obligatoriums (Art. 32)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "de264d109d886c126c64b8de881f2659e38742bc231bf0f0b74d1c60e6dcae0b"
+              },
+              "nummer": "2.57",
+              "name": "Ende des Schneeketten-Obligatoriums (Art. 32)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image87.png",
+                "alt": "Signal: Freie Fahrt (Art. 32)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "d800c010c462d41e4250b7c325563c2edcb0579f12007e4d61cc4a5ee60c43a5"
+              },
+              "nummer": "2.58",
+              "name": "Freie Fahrt (Art. 32)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image88.png",
+                "alt": "Signal: Zonensignal (z.B. Tempo-30-Zone) (Art. 2a und 22a)",
+                "breite": 25,
+                "hoehe": 35,
+                "sha": "d57eaae33ea6e572c3669e29766a48d40289d2fe4efc3b916d8b51158f0d09e0"
+              },
+              "nummer": "2.59.1",
+              "name": "Zonensignal (z.B. Tempo-30-Zone) (Art. 2a und 22a)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image89.png",
+                "alt": "Signal: Ende-Zonensignal (z.B. Ende Tempo-30-Zone) (Art. 2a)",
+                "breite": 25,
+                "hoehe": 35,
+                "sha": "78e27cbbdeb0d3a6894ad45c85dd2d52f2b7e7f49712160b6ebc0016662942f0"
+              },
+              "nummer": "2.59.2",
+              "name": "Ende-Zonensignal (z.B. Ende Tempo-30-Zone) (Art. 2a)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image90.png",
+                "alt": "Signal: Fussgängerzone (Art. 2a und 22c)",
+                "breite": 25,
+                "hoehe": 35,
+                "sha": "9af7903956a9d97bd9998dcd75e4aba3526dba89e22dcafa6e425126e21c95eb"
+              },
+              "nummer": "2.59.3",
+              "name": "Fussgängerzone (Art. 2a und 22c)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image91.png",
+                "alt": "Signal: Ende der Fussgängerzone (Art. 2a)",
+                "breite": 25,
+                "hoehe": 35,
+                "sha": "a31730bea79e310ab88e28dd21f26c702db918ea6a1f44e66ff77a71eed7926e"
+              },
+              "nummer": "2.59.4",
+              "name": "Ende der Fussgängerzone (Art. 2a)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image92.png",
+                "alt": "Amtliche Abbildung",
+                "breite": 35,
+                "hoehe": 25,
+                "sha": "77e55739d35f863fa2af7634c580cdab3120cf78f96498a10810edff5e38a3a7"
+              }
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image93.png",
+                "alt": "Amtliche Abbildung",
+                "breite": 35,
+                "hoehe": 25,
+                "sha": "8c15a8fd889176cc1b78dce64a281545ff01af498e60ee45a505ca3379b72498"
+              }
+            },
+            {
+              "name": "2.59.5 Begegnungszone (Art. 2a und 22b)"
+            },
+            {
+              "name": "2.59.6 Ende der Begegnungszone (Art. 2a)"
+            }
+          ]
         },
         {
           "absatz": null,
@@ -6195,24 +7055,96 @@
         {
           "absatz": null,
           "text": "",
-          "mehrspaltig": {
-            "zeilen": [
-              [
-                "2.60 Radweg (Art. 33)",
-                "2.60.1 Ende des Radweges (Art. 33)",
-                "2.61 Fussweg (Art. 33)"
-              ],
-              [
-                "2.62 Reitweg (Art. 33)",
-                "2.63 Rad- und Fussweg mit getrennten Verkehrsflächen (Beispiel) (Art. 33)",
-                "2.63.1 Gemeinsamer Rad- und Fussweg (Beispiel) (Art. 33)"
-              ],
-              [
-                "2.64 Busfahrbahn (Art. 34)",
-                "2.65 Lichtsignal-System für die zeitweilige Regulierung von Fahrstreifen"
-              ]
-            ]
-          }
+          "bildKacheln": [
+            {
+              "bild": {
+                "datei": "bilder/ssv/image94.png",
+                "alt": "Signal: Radweg (Art. 33)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "cf0390a044dd477e34e1257d3f3b39b5f4b657fdbe51512a90674a616c6e9942"
+              },
+              "nummer": "2.60",
+              "name": "Radweg (Art. 33)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image95.png",
+                "alt": "Signal: Ende des Radweges (Art. 33)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "fe2996233a45bc37067d7cad0e55c1b48645b38563cdb8cfb2249e809308ebdf"
+              },
+              "nummer": "2.60.1",
+              "name": "Ende des Radweges (Art. 33)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image96.png",
+                "alt": "Signal: Fussweg (Art. 33)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "04eb4230490bca4704717878e7af158227dc1b3dbab6b5c147d9f7195355e9f3"
+              },
+              "nummer": "2.61",
+              "name": "Fussweg (Art. 33)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image97.png",
+                "alt": "Signal: Reitweg (Art. 33)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "873fffdff7f6d1d6e3409ac4b399591e7184dd489a5f15d3a2f1b3222262eac5"
+              },
+              "nummer": "2.62",
+              "name": "Reitweg (Art. 33)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image98.png",
+                "alt": "Signal: Rad- und Fussweg mit getrennten Verkehrsflächen (Beispiel) (Art. 33)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "49260dc2a052750db5bd5ece81be0fba5433bb9f6921e1121ff156eb8c5c5cbc"
+              },
+              "nummer": "2.63",
+              "name": "Rad- und Fussweg mit getrennten Verkehrsflächen (Beispiel) (Art. 33)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image99.png",
+                "alt": "Signal: Gemeinsamer Rad- und Fussweg (Beispiel) (Art. 33)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "d0b69bf7ae5500805eb2a259698607e54de201c1b19a401afb6bf690d98ab74a"
+              },
+              "nummer": "2.63.1",
+              "name": "Gemeinsamer Rad- und Fussweg (Beispiel) (Art. 33)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image100.png",
+                "alt": "Signal: Busfahrbahn (Art. 34)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "bea85ed1cede068ed9ef0563ef08de633f7cafb66059944d4f41ac3c309029d8"
+              },
+              "nummer": "2.64",
+              "name": "Busfahrbahn (Art. 34)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image101.png",
+                "alt": "Signal: Lichtsignal-System für die zeitweilige Regulierung von Fahrstreifen",
+                "breite": 71,
+                "hoehe": 20,
+                "sha": "b99bda3100bcb7f14405c4ce0a3ff6604e200e40ac54f00b2e533e948efc0725"
+              },
+              "nummer": "2.65",
+              "name": "Lichtsignal-System für die zeitweilige Regulierung von Fahrstreifen"
+            }
+          ]
         },
         {
           "absatz": null,
@@ -6267,6 +7199,138 @@
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/ssv/image102.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 30,
+            "hoehe": 30,
+            "sha": "a90f0c5e0e4c8b4eae2639ea129c80e0f6c53d7553f0177a5089a0e33a3d5e96"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/ssv/image103.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 33,
+            "hoehe": 29,
+            "sha": "0e54a670a09336471e956e8d2cc4ed7ee4d737942fbf49fa51173120d2aaa5e3"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/ssv/image104.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 35,
+            "hoehe": 35,
+            "sha": "89bfe825d59b823d19059ac3851d29f68deb5e51ad930e66955dd7d69b8b69f9"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/ssv/image105.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 35,
+            "hoehe": 35,
+            "sha": "6dd69dbbc64a91949d89269084c8b7b185bd21be68d91c94b3b5a1cc911e64f5"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/ssv/image106.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 42,
+            "hoehe": 37,
+            "sha": "7c48bd34ed00bee61953899d67dd014b1a3d6165476b92f259bb20ca5fbcd52d"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/ssv/image107.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 42,
+            "hoehe": 37,
+            "sha": "f853b7453ccd63a89719fc96214814e67df70db145bc2214d54ae6bfab127a70"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/ssv/image108.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 30,
+            "hoehe": 30,
+            "sha": "7a83e9d0bff6eebb5d4063f98f7905bd192d01a71b31727d05ac48c5098cfe41"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/ssv/image109.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 25,
+            "hoehe": 25,
+            "sha": "c4480359c0f5d4d1ba537085c8ed06860d6d3e70a038ae94b6fe935e5c251c98"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/ssv/image110.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 30,
+            "hoehe": 26,
+            "sha": "e3f01669cfd389e1b41dea48db26b0da9228aae2b8d9f6783c763958a58bdbe8"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/ssv/image111.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 15,
+            "hoehe": 13,
+            "sha": "e554652f4296f611897866cf123decbc5f339fd790eadf2d8702130e85a5fd75"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/ssv/image112.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 27,
+            "hoehe": 14,
+            "sha": "90e0887a6cf3976581440bffe353bb9437090a3bb5e252b74bb123d222987c69"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/ssv/image113.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 14,
+            "hoehe": 27,
+            "sha": "716b815ed1cc9f2028b5042aa0b9a5fb54690a9e3182913ea0e76c9e013cdadc"
+          }
+        },
+        {
+          "absatz": null,
           "text": "4. Hinweissignale (Art. 44–62 und Art. 84–91)",
           "titel": 3
         },
@@ -6278,69 +7342,290 @@
         {
           "absatz": null,
           "text": "",
-          "mehrspaltig": {
-            "spalten": [
-              {
-                "typ": "text",
-                "titel": ""
+          "bildKacheln": [
+            {
+              "bild": {
+                "datei": "bilder/ssv/image114.png",
+                "alt": "Signal: Autobahn (Art. 45)",
+                "breite": 25,
+                "hoehe": 35,
+                "sha": "1ec4568b558838369efc0c6bba8cda56c5137d3da828f4d7ed994158353fb990"
               },
-              {
-                "typ": "text",
-                "titel": ""
+              "nummer": "4.01",
+              "name": "Autobahn (Art. 45)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image115.png",
+                "alt": "Signal: Ende der Autobahn (Art. 45)",
+                "breite": 25,
+                "hoehe": 35,
+                "sha": "f5a71c8de9b82792ff225e7e5cf84801ebdbc1bef5f4819482de2d79ef211f01"
               },
-              {
-                "typ": "text",
-                "titel": ""
-              }
-            ],
-            "zeilen": [
-              [
-                "4.01 Autobahn (Art. 45)",
-                "4.02 Ende der Autobahn (Art. 45)",
-                "4.03 Autostrasse (Art. 45)"
-              ],
-              [
-                "4.04 Ende der Autostrasse (Art. 45)",
-                "4.05 Bergpoststrasse (Art. 45)",
-                "4.06 Ende der Bergpoststrasse (Art. 45)"
-              ],
-              [
-                "4.07 Tunnel (Art. 45)",
-                "4.08 Einbahnstrasse (Art. 46)",
-                "4.08.1 Einbahnstrasse mit Gegenverkehr von Radfahrern (Beispiel) (Art. 46)"
-              ],
-              [
-                "4.09 Sackgasse (Art. 46)",
-                "[tab] 4.09.1 Sackgasse mit Ausnahmen (Beispiel) (Art. 46)",
-                "4.10 Wasserschutz- gebiet (Art. 46)"
-              ],
-              [
-                "4.11 Standort eines Fussgängerstreifens (Art. 47)",
-                "4.12 Fussgänger- Unterführung (Art. 47)",
-                "4.13 Fussgänger- Überführung (Art. 47)"
-              ],
-              [
-                "4.14 Spital (Art. 47)",
-                "4.15 Ausstellplatz (Art. 47)",
-                "4.16 Abstellplatz für Pannenfahrzeuge (Art. 47)"
-              ],
-              [
-                "4.17 Parkieren gestattet (Art. 48)",
-                "4.18 Parkieren mit Parkscheibe (Art. 48)",
-                "4.19 …"
-              ],
-              [
-                "4.20 Parkieren gegen Gebühr (Art. 48)",
-                "4.21 Parkhaus (Art. 48)",
-                "4.22 …"
-              ],
-              [
-                "4.23 Vorwegweiser für bestimmte Fahrzeugarten (Beispiel Lastwagen) (Art. 54)",
-                "4.24 Notfallspur (Beispiel) (Art. 47)",
-                "4.25 Parkplatz mit Anschluss an öffentliche Verkehrsmittel (Beispiel) (Art. 48)"
-              ]
-            ]
-          }
+              "nummer": "4.02",
+              "name": "Ende der Autobahn (Art. 45)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image116.png",
+                "alt": "Signal: Autostrasse (Art. 45)",
+                "breite": 25,
+                "hoehe": 35,
+                "sha": "03afe776a2a62b169660c715838ceb3659a3a14ee4ee9aaf125ffca2ed2e34fa"
+              },
+              "nummer": "4.03",
+              "name": "Autostrasse (Art. 45)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image117.png",
+                "alt": "Signal: Ende der Autostrasse (Art. 45)",
+                "breite": 25,
+                "hoehe": 35,
+                "sha": "2100dca7d745a57cbb332cee707ae9b62c2c15de1079959249b8b60e541ec5a5"
+              },
+              "nummer": "4.04",
+              "name": "Ende der Autostrasse (Art. 45)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image118.png",
+                "alt": "Signal: Bergpoststrasse (Art. 45)",
+                "breite": 25,
+                "hoehe": 25,
+                "sha": "03c7fb9e6317e6b3ce078f52710c8bb45fe847da22dfb1616a5fd4dfab722283"
+              },
+              "nummer": "4.05",
+              "name": "Bergpoststrasse (Art. 45)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image119.png",
+                "alt": "Signal: Ende der Bergpoststrasse (Art. 45)",
+                "breite": 25,
+                "hoehe": 25,
+                "sha": "15e23deeb786e1ee66a34f87b115ee35936d45abb128aec64bb85e8b9a9c0567"
+              },
+              "nummer": "4.06",
+              "name": "Ende der Bergpoststrasse (Art. 45)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image120.png",
+                "alt": "Signal: Tunnel (Art. 45)",
+                "breite": 25,
+                "hoehe": 35,
+                "sha": "b85d5b20505fb15f78db4b2f17e06e6d6f2b6f80c487bb351c50583c6b5a7c78"
+              },
+              "nummer": "4.07",
+              "name": "Tunnel (Art. 45)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image121.png",
+                "alt": "Signal: Einbahnstrasse (Art. 46)",
+                "breite": 25,
+                "hoehe": 25,
+                "sha": "896df5f1e0e77fd4d39d609e52c437ad4a756e7e95add786847de458237a9da0"
+              },
+              "nummer": "4.08",
+              "name": "Einbahnstrasse (Art. 46)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image122.png",
+                "alt": "Signal: Einbahnstrasse mit Gegenverkehr von Radfahrern (Beispiel) (Art. 46)",
+                "breite": 25,
+                "hoehe": 35,
+                "sha": "4bdb7bb2784cda1e322ad7d65beef54c14c74ed29d2adc6bf287f9b64c78ceb5"
+              },
+              "nummer": "4.08.1",
+              "name": "Einbahnstrasse mit Gegenverkehr von Radfahrern (Beispiel) (Art. 46)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image123.png",
+                "alt": "Signal: Sackgasse (Art. 46)",
+                "breite": 25,
+                "hoehe": 25,
+                "sha": "27521bc2666045215afff37fae1ae523824f190a9cc3800ea78895e59d44aed9"
+              },
+              "nummer": "4.09",
+              "name": "Sackgasse (Art. 46)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image124.png",
+                "alt": "Signal: 4.09.1 Sackgasse mit Ausnahmen (Beispiel) (Art. 46)",
+                "breite": 33,
+                "hoehe": 33,
+                "sha": "e287d7ef4bd3e1f2b59c5cb0aac86c39fb1d62ae34144d2e1e402a26938c3ae9"
+              },
+              "name": "4.09.1 Sackgasse mit Ausnahmen (Beispiel) (Art. 46)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image125.png",
+                "alt": "Signal: Wasserschutz- gebiet (Art. 46)",
+                "breite": 25,
+                "hoehe": 35,
+                "sha": "a6130d7ef98a65f707c8032b861a313d16b920abcd7933e7f8d733072a64b6f8"
+              },
+              "nummer": "4.10",
+              "name": "Wasserschutz- gebiet (Art. 46)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image126.png",
+                "alt": "Signal: Standort eines Fussgängerstreifens (Art. 47)",
+                "breite": 25,
+                "hoehe": 35,
+                "sha": "f15c38eadc719dfab0bd6c547535a0d67c11b6bdd4ecd53931a7aeaf6e892c44"
+              },
+              "nummer": "4.11",
+              "name": "Standort eines Fussgängerstreifens (Art. 47)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image127.png",
+                "alt": "Signal: Fussgänger- Unterführung (Art. 47)",
+                "breite": 25,
+                "hoehe": 35,
+                "sha": "0733a4cc2275c4f4f3b96d45678a9651036e7755cb028040745fb10ebdfe7d41"
+              },
+              "nummer": "4.12",
+              "name": "Fussgänger- Unterführung (Art. 47)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image128.png",
+                "alt": "Signal: Fussgänger- Überführung (Art. 47)",
+                "breite": 25,
+                "hoehe": 35,
+                "sha": "9bc298294cfcb760551d8ef0245547cc711625222376039b3cffe1388623bd7e"
+              },
+              "nummer": "4.13",
+              "name": "Fussgänger- Überführung (Art. 47)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image129.png",
+                "alt": "Signal: Spital (Art. 47)",
+                "breite": 25,
+                "hoehe": 25,
+                "sha": "bf9b79dcf17808602ccc8449fbd79c42cf899173b9d4d7d85feb03aeab456b22"
+              },
+              "nummer": "4.14",
+              "name": "Spital (Art. 47)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image130.png",
+                "alt": "Signal: Ausstellplatz (Art. 47)",
+                "breite": 25,
+                "hoehe": 35,
+                "sha": "6f78e588e6340be3e8bdea13c30ef430282e739909048e2c949576f939d9f1bb"
+              },
+              "nummer": "4.15",
+              "name": "Ausstellplatz (Art. 47)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image131.png",
+                "alt": "Signal: Abstellplatz für Pannenfahrzeuge (Art. 47)",
+                "breite": 25,
+                "hoehe": 35,
+                "sha": "9ee6c963b21bcc0b7c70eec8d51c5c2819b0330d844c462d22c6162c9eb05e3c"
+              },
+              "nummer": "4.16",
+              "name": "Abstellplatz für Pannenfahrzeuge (Art. 47)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image132.png",
+                "alt": "Signal: Parkieren gestattet (Art. 48)",
+                "breite": 25,
+                "hoehe": 25,
+                "sha": "b7159afe4cdc1626287eadaba1e632f1262d49b3ffa507208939d12f37e8e224"
+              },
+              "nummer": "4.17",
+              "name": "Parkieren gestattet (Art. 48)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image133.png",
+                "alt": "Signal: Parkieren mit Parkscheibe (Art. 48)",
+                "breite": 25,
+                "hoehe": 35,
+                "sha": "dcb207ea161ffdcc557c4a79c50eb65e758bd25155978d3de7da7d52e67a639f"
+              },
+              "nummer": "4.18",
+              "name": "Parkieren mit Parkscheibe (Art. 48)"
+            },
+            {
+              "nummer": "4.19",
+              "name": "…"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image134.png",
+                "alt": "Signal: Parkieren gegen Gebühr (Art. 48)",
+                "breite": 25,
+                "hoehe": 35,
+                "sha": "d0a7cf11e5ffaf1fa8363b120b13b5dc61ad6c6aa73542e637997c008b7eb282"
+              },
+              "nummer": "4.20",
+              "name": "Parkieren gegen Gebühr (Art. 48)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image135.png",
+                "alt": "Signal: Parkhaus (Art. 48)",
+                "breite": 25,
+                "hoehe": 25,
+                "sha": "5595f482ad337e2ed69eae35084223c2af04e56ebc28ed94e9667024457c32bf"
+              },
+              "nummer": "4.21",
+              "name": "Parkhaus (Art. 48)"
+            },
+            {
+              "nummer": "4.22",
+              "name": "…"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image136.png",
+                "alt": "Signal: Vorwegweiser für bestimmte Fahrzeugarten (Beispiel Lastwagen) (Art. 54)",
+                "breite": 25,
+                "hoehe": 35,
+                "sha": "52130d5938a45a674bee4cb7ae6bc646f49a28180bad3115986430148aeb7c76"
+              },
+              "nummer": "4.23",
+              "name": "Vorwegweiser für bestimmte Fahrzeugarten (Beispiel Lastwagen) (Art. 54)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image137.png",
+                "alt": "Signal: Notfallspur (Beispiel) (Art. 47)",
+                "breite": 25,
+                "hoehe": 35,
+                "sha": "6fe6e16ab97a1077bbc68fa2f3c5a60707debaa673c0280085174e0cf7ad3e0f"
+              },
+              "nummer": "4.24",
+              "name": "Notfallspur (Beispiel) (Art. 47)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image138.png",
+                "alt": "Signal: Parkplatz mit Anschluss an öffentliche Verkehrsmittel (Beispiel) (Art. 48)",
+                "breite": 25,
+                "hoehe": 35,
+                "sha": "96cc4198428984b8939f7a562167f5f50e42547c44d04507b7390b427092ff1f"
+              },
+              "nummer": "4.25",
+              "name": "Parkplatz mit Anschluss an öffentliche Verkehrsmittel (Beispiel) (Art. 48)"
+            }
+          ]
         },
         {
           "absatz": null,
@@ -6350,117 +7635,479 @@
         {
           "absatz": null,
           "text": "",
-          "mehrspaltig": {
-            "zeilen": [
-              [
-                "4.27 Ortsbeginn auf Hauptstrassen (Art. 50)",
-                "4.28 Ortsende auf Hauptstrassen (Art. 50)",
-                "4.29 Ortsbeginn auf Nebenstrassen (Art. 50)"
-              ],
-              [
-                "4.30 Ortsende auf Nebenstrassen (Art. 50)",
-                "",
-                ""
-              ],
-              [
-                "4.31 Wegweiser zu Autobahnen oder Autostrassen (Art. 57)",
-                "4.32 Wegweiser für Hauptstrassen (Art. 51)"
-              ],
-              [
-                "4.33 Wegweiser für Nebenstrassen (Art. 51)",
-                "4.34 Wegweiser bei Umleitungen (Art. 55)"
-              ],
-              [
-                "4.34.1 Wegweiser für Umleitungen ohne Zielangabe (Art. 55)",
-                ""
-              ]
-            ]
-          }
+          "bildKacheln": [
+            {
+              "bild": {
+                "datei": "bilder/ssv/image139.png",
+                "alt": "Signal: Ortsbeginn auf Hauptstrassen (Art. 50)",
+                "breite": 28,
+                "hoehe": 20,
+                "sha": "c2bd6533c5c0b1a277b7458d86bb71cd79508f59ad36b84b6af41a50de6ee20c"
+              },
+              "nummer": "4.27",
+              "name": "Ortsbeginn auf Hauptstrassen (Art. 50)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image140.png",
+                "alt": "Signal: Ortsende auf Hauptstrassen (Art. 50)",
+                "breite": 28,
+                "hoehe": 20,
+                "sha": "9d3f8b20c430ac3a483b40e414feb0e76e024342bdfb4f1d0f312facaf667aa0"
+              },
+              "nummer": "4.28",
+              "name": "Ortsende auf Hauptstrassen (Art. 50)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image141.png",
+                "alt": "Signal: Ortsbeginn auf Nebenstrassen (Art. 50)",
+                "breite": 28,
+                "hoehe": 20,
+                "sha": "f3b9d1c8ddc1ef50978db72d065e66f1b1a0c812ac51b92959e2b52dfa97b545"
+              },
+              "nummer": "4.29",
+              "name": "Ortsbeginn auf Nebenstrassen (Art. 50)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image142.png",
+                "alt": "Signal: Ortsende auf Nebenstrassen (Art. 50)",
+                "breite": 28,
+                "hoehe": 19,
+                "sha": "c5d7f8a8d0db88df72873087999cef45880ab45bb1eefc76206391b4bf39b2e5"
+              },
+              "nummer": "4.30",
+              "name": "Ortsende auf Nebenstrassen (Art. 50)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image143.png",
+                "alt": "Signal: Wegweiser zu Autobahnen oder Autostrassen (Art. 57)",
+                "breite": 51,
+                "hoehe": 12,
+                "sha": "f24e163a22275d968bf2cd6876040833a220f0590437ebae78367c592f578726"
+              },
+              "nummer": "4.31",
+              "name": "Wegweiser zu Autobahnen oder Autostrassen (Art. 57)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image144.png",
+                "alt": "Signal: Wegweiser für Hauptstrassen (Art. 51)",
+                "breite": 50,
+                "hoehe": 12,
+                "sha": "5c1e4441ed07c530df871c97090569bbf9541e7e07f0fcde45cacea3c67b8fe4"
+              },
+              "nummer": "4.32",
+              "name": "Wegweiser für Hauptstrassen (Art. 51)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image145.png",
+                "alt": "Signal: Wegweiser für Nebenstrassen (Art. 51)",
+                "breite": 50,
+                "hoehe": 12,
+                "sha": "5340ed832c093dbd5d3c98aa2e2ae75fbdc04d0e6817cf5c068d9ea1d96fa005"
+              },
+              "nummer": "4.33",
+              "name": "Wegweiser für Nebenstrassen (Art. 51)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image146.png",
+                "alt": "Signal: Wegweiser bei Umleitungen (Art. 55)",
+                "breite": 50,
+                "hoehe": 12,
+                "sha": "0673575e6d8cb770067de5243e3dc5c2bbb862b3db930762111bf3ad951db591"
+              },
+              "nummer": "4.34",
+              "name": "Wegweiser bei Umleitungen (Art. 55)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image147.png",
+                "alt": "Signal: Wegweiser für Umleitungen ohne Zielangabe (Art. 55)",
+                "breite": 50,
+                "hoehe": 12,
+                "sha": "018fa3193952d982621734d28575a86e60420c5eefa3d63c90eb1a8c813bc180"
+              },
+              "nummer": "4.34.1",
+              "name": "Wegweiser für Umleitungen ohne Zielangabe (Art. 55)"
+            }
+          ]
         },
         {
           "absatz": null,
           "text": "",
-          "mehrspaltig": {
-            "zeilen": [
-              [
-                "4.35 Wegweiser in Tabellenform (Art. 51)",
-                "4.36 Vorwegweiser auf Hauptstrassen (Art. 52)"
-              ],
-              [
-                "4.37 Vorwegweiser auf Nebenstrassen (Art. 52)",
-                "4.38 Vorwegweiser mit Fahr- streifenaufteilung auf Hauptstrassen (Art. 52)"
-              ],
-              [
-                "4.39 Vorwegweiser mit Fahr- streifenaufteilung auf Nebenstrassen (Art. 52)",
-                "4.40 Vorwegweiser mit An- zeige von Beschränkungen (Art. 52)"
-              ],
-              [
-                "4.41 Einspurtafel über Fahrstreifen auf Hauptstrassen (Art. 53)",
-                "4.42 Einspurtafel über Fahrstreifen auf Nebenstrassen (Art. 53)"
-              ],
-              [
-                "4.43 …",
-                ""
-              ],
-              [
-                "4.45 Wegweiser für bestimmte Fahrzeug arten (Beispiel Lastwagen) (Art. 54)",
-                "4.46 Wegweiser «Parkplatz» (Art. 54)"
-              ],
-              [
-                "4.46.1 Wegweiser «Parkplatz mit Anschluss an öffentliches Verkehrsmittel» (Beispiel) (Art. 54)",
-                "4.47 Wegweiser «Zeltplatz» (Art. 54)"
-              ],
-              [
-                "4.48 Wegweiser «Wohnwagenplatz» (Art. 54)",
-                "4.49 Betriebswegweiser (Art. 54)"
-              ],
-              [
-                "4.50 …",
-                ""
-              ],
-              [
-                "4.50.1 Wegweiser «Route für Fahrräder» (Beispiel) (Art. 54a)",
-                "4.50.2 …"
-              ],
-              [
-                "4.50.3 Wegweiser «Route für Mountainbikes» (Beispiel) (Art. 54a)",
-                "4.50.4 Wegweiser «Route für fahrzeugähnliche Geräte» (Beispiel) (Art. 54a)"
-              ],
-              [
-                "4.50.5 Wegweiser in Tabellenform für einen einzigen Adressatenkreis (Beispiel) (Art. 54a)",
-                "4.50.6 Wegweiser in Tabellenform für mehrere Adressatenkreise (Beispiel) (Art. 54a)"
-              ],
-              [
-                "4.51 …",
-                "4.51.1 Wegweiser ohne Zielangabe (Beispiel) (Art. 54a)"
-              ],
-              [
-                "4.51.2 Vorwegweiser ohne Zielangabe (Beispiel) (Art. 54a)",
-                "4.51.3 Bestätigungstafel (Beispiel) (Art. 54a)"
-              ],
-              [
-                "4.51.4 Endetafel (Beispiel) (Art. 54a)",
-                "4.52 Verkehrsführung (Art. 54)"
-              ],
-              [
-                "4.53 Vorwegweiser für Umleitungen (Art. 55)",
-                "4.54 Vorwegweiser bei Kreisverkehrsplatz (Beispiel) (Art. 52)"
-              ],
-              [
-                "4.55 Abzweigende Strasse mit Gefahrenstelle oder Verkehrsbeschränkung (Art. 54)",
-                ""
-              ],
-              [
-                "4.56 Nummerntafeln für Europastrassen (Art. 56)",
-                "4.57 Nummerntafel für Hauptstrassen (Art. 56)",
-                "4.58 Nummerntafel für Autobahnen und Autostrassen (Art. 56)"
-              ],
-              [
-                "4.59 Nummerntafel für Anschlüsse (Art. 56)",
-                "4.59.1 Nummerntafel für Verzweigungen (Art. 56)"
-              ]
-            ]
-          }
+          "bildKacheln": [
+            {
+              "bild": {
+                "datei": "bilder/ssv/image148.png",
+                "alt": "Signal: Wegweiser in Tabellenform (Art. 51)",
+                "breite": 40,
+                "hoehe": 28,
+                "sha": "0bec40f656fd6a33a01d9de229dffed613b88aad0fb324cf88f800f3bc9c69bf"
+              },
+              "nummer": "4.35",
+              "name": "Wegweiser in Tabellenform (Art. 51)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image149.png",
+                "alt": "Signal: Vorwegweiser auf Hauptstrassen (Art. 52)",
+                "breite": 38,
+                "hoehe": 32,
+                "sha": "d05090a4c6a136ee33ffe6d2d814b390a8a308c59093a019d01a23a2d4e39dcb"
+              },
+              "nummer": "4.36",
+              "name": "Vorwegweiser auf Hauptstrassen (Art. 52)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image150.png",
+                "alt": "Signal: Vorwegweiser auf Nebenstrassen (Art. 52)",
+                "breite": 44,
+                "hoehe": 28,
+                "sha": "71eebb02ed63e3d24cf1ead305d628a66b86497d47330c836b3b9252fff25005"
+              },
+              "nummer": "4.37",
+              "name": "Vorwegweiser auf Nebenstrassen (Art. 52)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image151.png",
+                "alt": "Signal: Vorwegweiser mit Fahr- streifenaufteilung auf Hauptstrassen (Art. 52)",
+                "breite": 44,
+                "hoehe": 52,
+                "sha": "7dcc6a574c2d1f2e256b9fcf49115a7e220557326da1e5ddd3dc16579891978a"
+              },
+              "nummer": "4.38",
+              "name": "Vorwegweiser mit Fahr- streifenaufteilung auf Hauptstrassen (Art. 52)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image152.png",
+                "alt": "Signal: Vorwegweiser mit Fahr- streifenaufteilung auf Nebenstrassen (Art. 52)",
+                "breite": 48,
+                "hoehe": 38,
+                "sha": "83c2f5abaabe5991cb0846a12ea3a0d430702e7b3999b0b1549b9a5275c7a45e"
+              },
+              "nummer": "4.39",
+              "name": "Vorwegweiser mit Fahr- streifenaufteilung auf Nebenstrassen (Art. 52)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image153.png",
+                "alt": "Signal: Vorwegweiser mit An- zeige von Beschränkungen (Art. 52)",
+                "breite": 36,
+                "hoehe": 28,
+                "sha": "eb6bacdebee2b9f50f517afd3846387260e8f9531d9ad74aebbc7cf98d1ffc35"
+              },
+              "nummer": "4.40",
+              "name": "Vorwegweiser mit An- zeige von Beschränkungen (Art. 52)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image154.png",
+                "alt": "Signal: Einspurtafel über Fahrstreifen auf Hauptstrassen (Art. 53)",
+                "breite": 49,
+                "hoehe": 46,
+                "sha": "86cb7e816b658432647f84c6e37ee3865290f491f33d40edb69e3919cd08b96f"
+              },
+              "nummer": "4.41",
+              "name": "Einspurtafel über Fahrstreifen auf Hauptstrassen (Art. 53)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image155.png",
+                "alt": "Signal: Einspurtafel über Fahrstreifen auf Nebenstrassen (Art. 53)",
+                "breite": 46,
+                "hoehe": 44,
+                "sha": "2f5852f25370370d1fb473c3ef2a47cc6502764e1b1c87ef2856b002b1eb7939"
+              },
+              "nummer": "4.42",
+              "name": "Einspurtafel über Fahrstreifen auf Nebenstrassen (Art. 53)"
+            },
+            {
+              "name": "4.43 …"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image156.png",
+                "alt": "Signal: Wegweiser für bestimmte Fahrzeug arten (Beispiel Lastwagen) (Art. 54)",
+                "breite": 50,
+                "hoehe": 12,
+                "sha": "eaf0059e21ded6d9e2510f89fa8b62bd8b8036f8b229e65553b7d4cbd67748e3"
+              },
+              "nummer": "4.45",
+              "name": "Wegweiser für bestimmte Fahrzeug arten (Beispiel Lastwagen) (Art. 54)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image157.png",
+                "alt": "Signal: Wegweiser «Parkplatz» (Art. 54)",
+                "breite": 50,
+                "hoehe": 12,
+                "sha": "d348d2675a97324ed03a3fe4341bf6f1b40231df2937f148c3a281a2356ab1a8"
+              },
+              "nummer": "4.46",
+              "name": "Wegweiser «Parkplatz» (Art. 54)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image158.png",
+                "alt": "Signal: Wegweiser «Parkplatz mit Anschluss an öffentliches Verkehrsmittel» (Beispiel) (Art. 54)",
+                "breite": 57,
+                "hoehe": 14,
+                "sha": "08e85ddf203e241296a44ea90ac5113772b3d08ceb38e66eaac0ed2b893fca85"
+              },
+              "nummer": "4.46.1",
+              "name": "Wegweiser «Parkplatz mit Anschluss an öffentliches Verkehrsmittel» (Beispiel) (Art. 54)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image159.png",
+                "alt": "Signal: Wegweiser «Zeltplatz» (Art. 54)",
+                "breite": 50,
+                "hoehe": 12,
+                "sha": "ad1675094b15cb147036601b64faec3a9cecd08f3096e2d40917e91ae70387f8"
+              },
+              "nummer": "4.47",
+              "name": "Wegweiser «Zeltplatz» (Art. 54)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image160.png",
+                "alt": "Signal: Wegweiser «Wohnwagenplatz» (Art. 54)",
+                "breite": 50,
+                "hoehe": 12,
+                "sha": "22369611f50ba9090e9e9a0a42ae09ee62a61ee9e3e1ad635af47a0d96105371"
+              },
+              "nummer": "4.48",
+              "name": "Wegweiser «Wohnwagenplatz» (Art. 54)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image161.png",
+                "alt": "Signal: Betriebswegweiser (Art. 54)",
+                "breite": 49,
+                "hoehe": 9,
+                "sha": "eb6fc360b1f1290cf9acba6dfdd4c248fd8d7f45e4c346c31562f86c034acfe7"
+              },
+              "nummer": "4.49",
+              "name": "Betriebswegweiser (Art. 54)"
+            },
+            {
+              "name": "4.50 …"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image162.png",
+                "alt": "Signal: Wegweiser «Route für Fahrräder» (Beispiel) (Art. 54a)",
+                "breite": 57,
+                "hoehe": 11,
+                "sha": "380fd343b1b5f36b934613cfd777f3d8d3a2c7a05adbec7fb5098f9bd5153647"
+              },
+              "nummer": "4.50.1",
+              "name": "Wegweiser «Route für Fahrräder» (Beispiel) (Art. 54a)"
+            },
+            {
+              "nummer": "4.50.2",
+              "name": "…"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image163.png",
+                "alt": "Signal: Wegweiser «Route für Mountainbikes» (Beispiel) (Art. 54a)",
+                "breite": 52,
+                "hoehe": 10,
+                "sha": "c6c98798d37e0410d3e00db0a08a28de0f1261d26eb0f52fb61021b73aad2557"
+              },
+              "nummer": "4.50.3",
+              "name": "Wegweiser «Route für Mountainbikes» (Beispiel) (Art. 54a)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image164.png",
+                "alt": "Signal: Wegweiser «Route für fahrzeugähnliche Geräte» (Beispiel) (Art. 54a)",
+                "breite": 30,
+                "hoehe": 7,
+                "sha": "a7feb9b69595775cceac68145e4520cb4ca2bcde4a9407a8230595b0b5024982"
+              },
+              "nummer": "4.50.4",
+              "name": "Wegweiser «Route für fahrzeugähnliche Geräte» (Beispiel) (Art. 54a)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image165.png",
+                "alt": "Signal: Wegweiser in Tabellenform für einen einzigen Adressatenkreis (Beispiel) (Art. 54a)",
+                "breite": 27,
+                "hoehe": 28,
+                "sha": "0d05ddf7acd59885bbc927f93dede68e0e552238a47c606c03bb551ef219f08e"
+              },
+              "nummer": "4.50.5",
+              "name": "Wegweiser in Tabellenform für einen einzigen Adressatenkreis (Beispiel) (Art. 54a)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image166.png",
+                "alt": "Signal: Wegweiser in Tabellenform für mehrere Adressatenkreise (Beispiel) (Art. 54a)",
+                "breite": 33,
+                "hoehe": 22,
+                "sha": "9146066b14c87ca1ceef52e9e5d13b4157a088d4bbbb7588fda6058400345d12"
+              },
+              "nummer": "4.50.6",
+              "name": "Wegweiser in Tabellenform für mehrere Adressatenkreise (Beispiel) (Art. 54a)"
+            },
+            {
+              "nummer": "4.51",
+              "name": "…"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image167.png",
+                "alt": "Signal: Wegweiser ohne Zielangabe (Beispiel) (Art. 54a)",
+                "breite": 32,
+                "hoehe": 9,
+                "sha": "b2febbba908366b59b33a673f291ffa592b74d9d6c83b6be5558036ec283f997"
+              },
+              "nummer": "4.51.1",
+              "name": "Wegweiser ohne Zielangabe (Beispiel) (Art. 54a)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image168.png",
+                "alt": "Signal: Vorwegweiser ohne Zielangabe (Beispiel) (Art. 54a)",
+                "breite": 15,
+                "hoehe": 23,
+                "sha": "d7c0aeb4a87e5bc3841e995252284ae9307c74d08dc5def75d53cf7796d44637"
+              },
+              "nummer": "4.51.2",
+              "name": "Vorwegweiser ohne Zielangabe (Beispiel) (Art. 54a)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image169.png",
+                "alt": "Signal: Bestätigungstafel (Beispiel) (Art. 54a)",
+                "breite": 15,
+                "hoehe": 22,
+                "sha": "24d0fb43da718770d8eb8f004f5d75656789558397d8b00fa07a06696c34f97d"
+              },
+              "nummer": "4.51.3",
+              "name": "Bestätigungstafel (Beispiel) (Art. 54a)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image170.png",
+                "alt": "Signal: Endetafel (Beispiel) (Art. 54a)",
+                "breite": 22,
+                "hoehe": 22,
+                "sha": "405ed8fa7b7eb10437d66560ec6b82003e45b22908bacc3621d2af5d5a764ea2"
+              },
+              "nummer": "4.51.4",
+              "name": "Endetafel (Beispiel) (Art. 54a)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image171.png",
+                "alt": "Signal: Verkehrsführung (Art. 54)",
+                "breite": 35,
+                "hoehe": 25,
+                "sha": "59c16c2b94270cf20baf40dad0d57ac93f72a0e86e4031be737c72095dec0583"
+              },
+              "nummer": "4.52",
+              "name": "Verkehrsführung (Art. 54)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image172.png",
+                "alt": "Signal: Vorwegweiser für Umleitungen (Art. 55)",
+                "breite": 46,
+                "hoehe": 40,
+                "sha": "4d2cb6e185d68124b8e56c5247ddad28d21427a19e3f86f8e960778edbe65ac6"
+              },
+              "nummer": "4.53",
+              "name": "Vorwegweiser für Umleitungen (Art. 55)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image173.png",
+                "alt": "Signal: Vorwegweiser bei Kreisverkehrsplatz (Beispiel) (Art. 52)",
+                "breite": 42,
+                "hoehe": 37,
+                "sha": "ec89db45678136b3ffab3a0f2f2c39211db61e2d90cd93a07e6d6efb54db7d11"
+              },
+              "nummer": "4.54",
+              "name": "Vorwegweiser bei Kreisverkehrsplatz (Beispiel) (Art. 52)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image174.png",
+                "alt": "Signal: Abzweigende Strasse mit Gefahrenstelle oder Verkehrsbeschränkung (Art. 54)",
+                "breite": 46,
+                "hoehe": 36,
+                "sha": "4e3d5a0ffef061087ddd7766113c594f03a39f70fe76683908ebb8954a8f89f8"
+              },
+              "nummer": "4.55",
+              "name": "Abzweigende Strasse mit Gefahrenstelle oder Verkehrsbeschränkung (Art. 54)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image175.png",
+                "alt": "Signal: Nummerntafeln für Europastrassen (Art. 56)",
+                "breite": 28,
+                "hoehe": 16,
+                "sha": "51ee038d9ddbe3ecce396e767562925ff000732c07c76a40229e66d0899f144b"
+              },
+              "nummer": "4.56",
+              "name": "Nummerntafeln für Europastrassen (Art. 56)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image176.png",
+                "alt": "Signal: Nummerntafel für Hauptstrassen (Art. 56)",
+                "breite": 17,
+                "hoehe": 15,
+                "sha": "8c10e0f3dacc634ef6c531916869bf0a3e7b9d73e60c70913fc791d860f6a2c7"
+              },
+              "nummer": "4.57",
+              "name": "Nummerntafel für Hauptstrassen (Art. 56)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image177.png",
+                "alt": "Signal: Nummerntafel für Autobahnen und Autostrassen (Art. 56)",
+                "breite": 26,
+                "hoehe": 15,
+                "sha": "5e7807ce76f13ed2d23b564b6b31155a55986aed19e217b77ed57db0345f4643"
+              },
+              "nummer": "4.58",
+              "name": "Nummerntafel für Autobahnen und Autostrassen (Art. 56)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image178.png",
+                "alt": "Signal: Nummerntafel für Anschlüsse (Art. 56)",
+                "breite": 35,
+                "hoehe": 17,
+                "sha": "21f37622b25f9503d56f9b99cea3de3bcd8d68b0f724195a349c213c3dba7e8e"
+              },
+              "nummer": "4.59",
+              "name": "Nummerntafel für Anschlüsse (Art. 56)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image179.png",
+                "alt": "Signal: Nummerntafel für Verzweigungen (Art. 56)",
+                "breite": 35,
+                "hoehe": 17,
+                "sha": "a1b9391bad80c388ea1e30124e5921b2cfac155d909a7cce228668443f57b629"
+              },
+              "nummer": "4.59.1",
+              "name": "Nummerntafel für Verzweigungen (Art. 56)"
+            }
+          ]
         },
         {
           "absatz": null,
@@ -6470,42 +8117,162 @@
         {
           "absatz": null,
           "text": "",
-          "mehrspaltig": {
-            "zeilen": [
-              [
-                "4.60 Ankündigung des nächsten Anschlusses (Art. 86)",
-                "4.61 Vorwegweiser bei Anschlüssen (Art. 86)"
-              ],
-              [
-                "4.62 Wegweiser bei Anschlüssen (Art. 86)",
-                "4.63 Ausfahrtstafel (Art. 86)"
-              ],
-              [
-                "4.64 Trennungstafel (Art. 86 und 87)",
-                ""
-              ],
-              [
-                "4.65 Entfernungstafel (Art. 86 und 87)",
-                ""
-              ],
-              [
-                "4.66 Verzweigungstafel (Art. 87)",
-                "4.67 Erster Vorwegweiser bei Verzweigungen (Art. 87)"
-              ],
-              [
-                "4.68 Zweiter Vorwegweiser bei Verzweigungen (Art. 87)",
-                "4.69 Einspurtafel über Fahrstreifen auf Autobahnen und Autostrassen (Art. 86 und 87)"
-              ],
-              [
-                "4.70 Hinweis auf Notrufsäulen (Art. 89)",
-                "4.71 Hinweis auf Polizeistützpunkte (Art. 89 Abs. 5)"
-              ],
-              [
-                "4.72 Kilometertafel (Art. 89)",
-                "4.73 Hektometertafel (Art. 89)"
-              ]
-            ]
-          }
+          "bildKacheln": [
+            {
+              "bild": {
+                "datei": "bilder/ssv/image180.png",
+                "alt": "Signal: Ankündigung des nächsten Anschlusses (Art. 86)",
+                "breite": 45,
+                "hoehe": 21,
+                "sha": "b4199401de91615ad2eb35e0402b9c95b7f68e965c3a23c2dd65f7f36dbbe86b"
+              },
+              "nummer": "4.60",
+              "name": "Ankündigung des nächsten Anschlusses (Art. 86)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image181.png",
+                "alt": "Signal: Vorwegweiser bei Anschlüssen (Art. 86)",
+                "breite": 55,
+                "hoehe": 39,
+                "sha": "f95b172efba0c7339bdf491f07d174b83a7faa80e91da2dc68fc609f31e1e65e"
+              },
+              "nummer": "4.61",
+              "name": "Vorwegweiser bei Anschlüssen (Art. 86)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image182.png",
+                "alt": "Signal: Wegweiser bei Anschlüssen (Art. 86)",
+                "breite": 45,
+                "hoehe": 33,
+                "sha": "619f61c74bdc4fcc15bb031e9782c16a9eab9f76487a44b9513ab95a13579420"
+              },
+              "nummer": "4.62",
+              "name": "Wegweiser bei Anschlüssen (Art. 86)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image183.png",
+                "alt": "Signal: Ausfahrtstafel (Art. 86)",
+                "breite": 40,
+                "hoehe": 40,
+                "sha": "d61ad942606360a45a6438d5d828858515ec675a4c5c8687c381d2739dc694dc"
+              },
+              "nummer": "4.63",
+              "name": "Ausfahrtstafel (Art. 86)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image184.png",
+                "alt": "Signal: Trennungstafel (Art. 86 und 87)",
+                "breite": 61,
+                "hoehe": 27,
+                "sha": "4c104a238df01b806993a80ddcead016dba0819b5b7acae7ee82284af1b3f03b"
+              },
+              "nummer": "4.64",
+              "name": "Trennungstafel (Art. 86 und 87)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image185.png",
+                "alt": "Signal: Entfernungstafel (Art. 86 und 87)",
+                "breite": 60,
+                "hoehe": 32,
+                "sha": "97d28798aef7643b252fafa0fca7d660f72a59b8baeea180f565c9dbfb8256a8"
+              },
+              "nummer": "4.65",
+              "name": "Entfernungstafel (Art. 86 und 87)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image186.png",
+                "alt": "Signal: Verzweigungstafel (Art. 87)",
+                "breite": 30,
+                "hoehe": 32,
+                "sha": "86a4d579fd08b05b076ca56c741c7a3ae95e2c1f2e6453855f37ac67fe5793a6"
+              },
+              "nummer": "4.66",
+              "name": "Verzweigungstafel (Art. 87)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image187.png",
+                "alt": "Signal: Erster Vorwegweiser bei Verzweigungen (Art. 87)",
+                "breite": 52,
+                "hoehe": 34,
+                "sha": "4717c7300f246173165f6338ae641efe8efa0ebe85395d89dfd31389a2abd82a"
+              },
+              "nummer": "4.67",
+              "name": "Erster Vorwegweiser bei Verzweigungen (Art. 87)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image188.png",
+                "alt": "Signal: Zweiter Vorwegweiser bei Verzweigungen (Art. 87)",
+                "breite": 57,
+                "hoehe": 50,
+                "sha": "13ab3f8b90c9b2730857570152de2ca120a40418a9e687947dfa81faf5cc0cd1"
+              },
+              "nummer": "4.68",
+              "name": "Zweiter Vorwegweiser bei Verzweigungen (Art. 87)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image189.png",
+                "alt": "Signal: Einspurtafel über Fahrstreifen auf Autobahnen und Autostrassen (Art. 86 und 87)",
+                "breite": 42,
+                "hoehe": 39,
+                "sha": "9f9af534fe73c0037a260496a42c1fe3b8719aa0bac56a4c004b10eb6f8f6628"
+              },
+              "nummer": "4.69",
+              "name": "Einspurtafel über Fahrstreifen auf Autobahnen und Autostrassen (Art. 86 und 87)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image190.png",
+                "alt": "Signal: Hinweis auf Notrufsäulen (Art. 89)",
+                "breite": 26,
+                "hoehe": 30,
+                "sha": "0c5f922789eaf029d155566c68caee0226a67d495c533abc30367231ee62894b"
+              },
+              "nummer": "4.70",
+              "name": "Hinweis auf Notrufsäulen (Art. 89)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image191.png",
+                "alt": "Signal: Hinweis auf Polizeistützpunkte (Art. 89 Abs. 5)",
+                "breite": 31,
+                "hoehe": 19,
+                "sha": "7c02f1e31acaf9bf1c57dd94dc8e9cdf8b39911f8a5700a440aa0c90bc973ae5"
+              },
+              "nummer": "4.71",
+              "name": "Hinweis auf Polizeistützpunkte (Art. 89 Abs. 5)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image192.png",
+                "alt": "Signal: Kilometertafel (Art. 89)",
+                "breite": 24,
+                "hoehe": 25,
+                "sha": "abae43eb21847c1e32782248e46a0ca1493d2b5f37bbdbe9cf8d0005cdb3453e"
+              },
+              "nummer": "4.72",
+              "name": "Kilometertafel (Art. 89)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image193.png",
+                "alt": "Signal: Hektometertafel (Art. 89)",
+                "breite": 24,
+                "hoehe": 15,
+                "sha": "f952070b3bb0ac7e7acee7e06bfafa494fa2698c912eca8d613059765b21cd7a"
+              },
+              "nummer": "4.73",
+              "name": "Hektometertafel (Art. 89)"
+            }
+          ]
         },
         {
           "absatz": null,
@@ -6515,59 +8282,281 @@
         {
           "absatz": null,
           "text": "",
-          "mehrspaltig": {
-            "zeilen": [
-              [
-                "4.75 Strassenzustand (Art. 58)",
-                "4.76 Vororientierung über den Strassenzustand (Art. 58)"
-              ],
-              [
-                "4.77 Anzeige der Fahrstreifen (Beispiele) (Art. 59)"
-              ],
-              [
-                "4.77.1 Anzeige von Fahrstreifen mit Beschränkungen (Beispiel) (Art. 59)",
-                "4.77.2 Freigabe des Pannenstreifens (Beispiele) (Art. 59)",
-                ""
-              ],
-              [
-                "",
-                "4.78 …",
-                "4.79 Zeltplatz (Art. 62)"
-              ],
-              [
-                "4.80 Wohnwagenplatz (Art. 62)",
-                "4.81 Telefon (Art. 62)",
-                "4.82 Erste Hilfe (Art. 62)"
-              ],
-              [
-                "4.83 Pannenhilfe (Art. 62)",
-                "4.84 Tankstelle (Art. 62)",
-                "4.85 Hotel-Motel (Art. 62)"
-              ],
-              [
-                "4.86 Restaurant (Art. 62)",
-                "4.87 Erfrischungen (Art. 62)",
-                "4.88 Informationsstelle (Art. 62)"
-              ],
-              [
-                "4.89 Jugendherberge (Art. 62)",
-                "4.90 Radio- Verkehrsinformation (Art. 62 und 89)",
-                "4.91 Gottesdienst (Art. 62)"
-              ],
-              [
-                "4.91bis Fahrzeuge mit einem Automatisierungssystem (Art. 62)",
-                "4.92 Feuerlöscher (Art. 62)"
-              ],
-              [
-                "4.93 Anzeige der allgemeinen Höchstgeschwindigkeiten (Art. 61)",
-                "[tab]"
-              ],
-              [
-                "4.94 Richtung und Entfernung zum nächsten Notausgang (Art. 62)",
-                "4.95 Notausgang (Art. 62)"
-              ]
-            ]
-          }
+          "bildKacheln": [
+            {
+              "bild": {
+                "datei": "bilder/ssv/image194.png",
+                "alt": "Signal: Strassenzustand (Art. 58)",
+                "breite": 36,
+                "hoehe": 51,
+                "sha": "20d378d496365c7fe15275021caa79dc5919712ad219e4eb26d969f0e0a150f3"
+              },
+              "nummer": "4.75",
+              "name": "Strassenzustand (Art. 58)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image195.png",
+                "alt": "Signal: Vororientierung über den Strassenzustand (Art. 58)",
+                "breite": 45,
+                "hoehe": 42,
+                "sha": "2470223a751464ae19f9cc25d34d3ad36bbfedd87c0e2653b120a8748a95190b"
+              },
+              "nummer": "4.76",
+              "name": "Vororientierung über den Strassenzustand (Art. 58)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image196.png",
+                "alt": "Signal: Anzeige der Fahrstreifen (Beispiele) (Art. 59)",
+                "breite": 107,
+                "hoehe": 38,
+                "sha": "f8860bfc5b2980007bf9969ce435b90122836f0d5a2122eaca534aa7d401b57a"
+              },
+              "nummer": "4.77",
+              "name": "Anzeige der Fahrstreifen (Beispiele) (Art. 59)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image197.png",
+                "alt": "Signal: 4.77.1 Anzeige von Fahrstreifen mit Beschränkungen (Beispiel) (Art. 59)379",
+                "breite": 35,
+                "hoehe": 35,
+                "sha": "f0fe07a2ca8d55283381a05c5043306d18d3764baa4de3310ae41cf543b1bd10"
+              },
+              "name": "4.77.1 Anzeige von Fahrstreifen mit Beschränkungen (Beispiel) (Art. 59)379"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image198.png",
+                "alt": "Signal: 4.77.2 Freigabe des Pannenstreifens (Beispiele) (Art. 59)",
+                "breite": 34,
+                "hoehe": 35,
+                "sha": "efa695afcbf367e77c41f28a759a188123866054015459d72d0513ffa028a4ad"
+              },
+              "name": "4.77.2 Freigabe des Pannenstreifens (Beispiele) (Art. 59)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image199.png",
+                "alt": "Amtliche Abbildung",
+                "breite": 34,
+                "hoehe": 34,
+                "sha": "53af8985f343bcf6691a44f14c7ae07a02b89d657490cb5329cad14f91838065"
+              }
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image200.png",
+                "alt": "Amtliche Abbildung",
+                "breite": 34,
+                "hoehe": 35,
+                "sha": "03c1e21606b523de22291706586b4d2116acfbb1d25e01425d2dc496920ab7cf"
+              }
+            },
+            {
+              "nummer": "4.78",
+              "name": "…"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image201.png",
+                "alt": "Signal: Zeltplatz (Art. 62)",
+                "breite": 25,
+                "hoehe": 35,
+                "sha": "8c6413ef16d27555fc238d9582283a5d62c9aae4fd43ec8b2f820c820ef65044"
+              },
+              "nummer": "4.79",
+              "name": "Zeltplatz (Art. 62)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image202.png",
+                "alt": "Signal: Wohnwagenplatz (Art. 62)",
+                "breite": 25,
+                "hoehe": 35,
+                "sha": "dd0d4511257268ffacb4261fa5b7a8383a28dbaefda31b130f402ad1fb3903de"
+              },
+              "nummer": "4.80",
+              "name": "Wohnwagenplatz (Art. 62)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image203.png",
+                "alt": "Signal: Telefon (Art. 62)",
+                "breite": 25,
+                "hoehe": 35,
+                "sha": "6ce7e0dec02a6227c7a9a433a9c344deb8b696b8bf38184f23045567dea2bfa0"
+              },
+              "nummer": "4.81",
+              "name": "Telefon (Art. 62)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image204.png",
+                "alt": "Signal: Erste Hilfe (Art. 62)",
+                "breite": 25,
+                "hoehe": 35,
+                "sha": "0c42332f610c2e1b776a7767c938d4ff731f4a08945caafb71ca8d9d7d79ade2"
+              },
+              "nummer": "4.82",
+              "name": "Erste Hilfe (Art. 62)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image205.png",
+                "alt": "Signal: Pannenhilfe (Art. 62)",
+                "breite": 25,
+                "hoehe": 35,
+                "sha": "c9f9450a1bc021ef2c00fd1c51042aafcffaf26b515390c46bc6a8cd9e0e00fc"
+              },
+              "nummer": "4.83",
+              "name": "Pannenhilfe (Art. 62)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image206.png",
+                "alt": "Signal: Tankstelle (Art. 62)",
+                "breite": 25,
+                "hoehe": 35,
+                "sha": "ec09f56b2716454c52dbebf4792e3bb7df8fc3a8b71ab38d315b311eb98a802b"
+              },
+              "nummer": "4.84",
+              "name": "Tankstelle (Art. 62)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image207.png",
+                "alt": "Signal: Hotel-Motel (Art. 62)",
+                "breite": 25,
+                "hoehe": 35,
+                "sha": "47b128d6d4c00e88f13873c0929d38424bf5de1d9a905f188870d04611dc3bb6"
+              },
+              "nummer": "4.85",
+              "name": "Hotel-Motel (Art. 62)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image208.png",
+                "alt": "Signal: Restaurant (Art. 62)",
+                "breite": 25,
+                "hoehe": 35,
+                "sha": "ee7248e8e8987149f4722e94adc9870af6bdf43d40bf8503bfee14953a17e06f"
+              },
+              "nummer": "4.86",
+              "name": "Restaurant (Art. 62)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image209.png",
+                "alt": "Signal: Erfrischungen (Art. 62)",
+                "breite": 25,
+                "hoehe": 35,
+                "sha": "b79b15c1c7a2f0aacffb6048c000a3f1da45dd5680c421f4db4de53cc6753981"
+              },
+              "nummer": "4.87",
+              "name": "Erfrischungen (Art. 62)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image210.png",
+                "alt": "Signal: Informationsstelle (Art. 62)",
+                "breite": 25,
+                "hoehe": 35,
+                "sha": "ffef7acbd31e5a507eba0c9ad6b1d2ba34b334f0bc30129e7ad9b16a215a070c"
+              },
+              "nummer": "4.88",
+              "name": "Informationsstelle (Art. 62)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image211.png",
+                "alt": "Signal: Jugendherberge (Art. 62)",
+                "breite": 25,
+                "hoehe": 35,
+                "sha": "a96cba82fa6b51b6ba80688c3c6fc1eac03984f4371fc2c7f08c7c01e909bc7a"
+              },
+              "nummer": "4.89",
+              "name": "Jugendherberge (Art. 62)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image212.png",
+                "alt": "Signal: Radio- Verkehrsinformation (Art. 62 und 89)",
+                "breite": 24,
+                "hoehe": 35,
+                "sha": "5dd7b3eacd2ac24dde1f6a86e50d67ccaa2ec36f510691aca579bbba0f34d36e"
+              },
+              "nummer": "4.90",
+              "name": "Radio- Verkehrsinformation (Art. 62 und 89)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image213.png",
+                "alt": "Signal: Gottesdienst (Art. 62)",
+                "breite": 23,
+                "hoehe": 34,
+                "sha": "87577881fb0639112f58631d4f1fcfaea4e35f755fdc3f1809879c88b4578451"
+              },
+              "nummer": "4.91",
+              "name": "Gottesdienst (Art. 62)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image214.png",
+                "alt": "Signal: Fahrzeuge mit einem Automatisierungssystem (Art. 62)",
+                "breite": 24,
+                "hoehe": 34,
+                "sha": "81be5650473d119ae0d7baf14fd72743e06a075fbea1ef2584a8ea7c0b25867d"
+              },
+              "nummer": "4.91bis",
+              "name": "Fahrzeuge mit einem Automatisierungssystem (Art. 62)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image215.png",
+                "alt": "Signal: Feuerlöscher (Art. 62)",
+                "breite": 24,
+                "hoehe": 34,
+                "sha": "51c8c8b6b6d8a9347b9679825aac6e61a27285c560a165467176c0239f6aed92"
+              },
+              "nummer": "4.92",
+              "name": "Feuerlöscher (Art. 62)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image216.png",
+                "alt": "Signal: Anzeige der allgemeinen Höchstgeschwindigkeiten (Art. 61)",
+                "breite": 42,
+                "hoehe": 83,
+                "sha": "f72655bfdf0d17c304f80c2e6fef8f475332fb0f93a872455770ed629648ae4a"
+              },
+              "nummer": "4.93",
+              "name": "Anzeige der allgemeinen Höchstgeschwindigkeiten (Art. 61)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image217.png",
+                "alt": "Signal: Richtung und Entfernung zum nächsten Notausgang (Art. 62)",
+                "breite": 57,
+                "hoehe": 27,
+                "sha": "220e556a232e13b0f052b2deda264a38d4bb623500b1f3e8e9ba6762127cc3c9"
+              },
+              "nummer": "4.94",
+              "name": "Richtung und Entfernung zum nächsten Notausgang (Art. 62)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image218.png",
+                "alt": "Signal: Notausgang (Art. 62)",
+                "breite": 25,
+                "hoehe": 34,
+                "sha": "d69f52c9e726cc4916b4c011ee0453ff49ef486f6e7d56a087a31e00cfe71c80"
+              },
+              "nummer": "4.95",
+              "name": "Notausgang (Art. 62)"
+            }
+          ]
         },
         {
           "absatz": null,
@@ -6577,101 +8566,609 @@
         {
           "absatz": null,
           "text": "",
-          "mehrspaltig": {
-            "zeilen": [
-              [
-                "[tab] [tab] 5.01 Distanztafel (Art. 64)",
-                "5.02 Anzeige von Entfernung und Richtung (Art. 64)",
-                "[tab] [tab] 5.03 Streckenlänge (Art. 64)"
-              ],
-              [
-                "5.04 Wiederholungstafel (Art. 64)",
-                "5.05 Anfangstafel (Art. 64)",
-                "5.06 Endetafel (Art. 64)",
-                "[tab] [tab] 5.07 Richtungstafel (Art. 64)"
-              ],
-              [
-                "[tab] [tab] [tab] [tab] [tab] [tab] 5.08 …",
-                "5.09 Richtung der Hauptstrasse (Art. 65)",
-                "5.10 Ausnahmen vom Halteverbot (Art. 65)"
-              ],
-              [
-                "5.11 Ausnahmen vom Parkierungsverbot (Art. 65) 5.12 Blinklicht (Art. 65)",
-                "5.13 Vereiste Fahrbahn (Art. 65)",
-                "5.14 Gehbehinderte (Art. 65)"
-              ],
-              [
-                "5.15 Fahrbahnbreite (Art. 65)",
-                "5.16 Schiesslärm (Art. 65)",
-                "5.17 Übernächste Tankstelle (Art. 89)"
-              ],
-              [
-                "5.18 Rechtsabbiegen für Radfahrer gestattet (Art. 69a)",
-                "",
-                ""
-              ],
-              [
-                "5.20 Leichte Motorwagen (Art. 64)",
-                "5.21 Schwere Motorwagen (Art. 64)",
-                "5.22 Lastwagen (Art. 64)"
-              ],
-              [
-                "5.23 Lastwagen mit Anhänger (Art. 64)",
-                "5.24 Sattelmotorfahrzeug (Art. 64)",
-                "5.25 Gesellschaftswagen (Art. 64)"
-              ],
-              [
-                "5.26 Anhänger (Art. 64)",
-                "5.27 Wohnanhänger (Art. 64)",
-                "5.28 Wohnmotorwagen (Art. 64)"
-              ],
-              [
-                "5.29 Motorrad (Art. 64)",
-                "5.30 Motorfahrrad (Art. 64)",
-                "5.31 Fahrrad (Art. 64)"
-              ],
-              [
-                "5.31.1 Lastenfahrrad",
-                "5.32 Mountain-Bike (Art. 64)",
-                "5.33 Fahrrad schieben (Art. 64)"
-              ],
-              [
-                "5.34 Fussgänger (Art. 64)",
-                "5.35 Strassenbahn (Art. 64)",
-                "5.36 Traktor (Art. 64)"
-              ],
-              [
-                "5.37 Panzer (Art. 64)",
-                "5.38 Pistenfahrzeug (Art. 64)",
-                "5.39 Langlauf (Art. 64)"
-              ],
-              [
-                "5.40 Skifahren (Art. 64)",
-                "5.41 Schlitteln (Art. 64)",
-                "5.42 Ladestation (Art. 65)"
-              ],
-              [
-                "5.43 Mitfahrgemeinschaft (Art. 65)",
-                "5.44 Fahrzeuge mit einem Automatisierungssystem (Art. 64)",
-                "5.50 Flugzeug/Flugplatz (Art. 64)"
-              ],
-              [
-                "[tab] 5.51 Autoverlad auf Eisenbahn (Art. 64)",
-                "[tab] 5.52 Autoverlad auf Fähre (Art. 64)",
-                "5.53 Industrie und Gewerbegebiet (Art. 64)"
-              ],
-              [
-                "5.54 Zollabfertigung mit Sichtdeklaration (Art. 65)",
-                "5.55 S-Verkehr (Art. 65)",
-                "5.56 Spital mit Notfallstation (Art. 65)"
-              ],
-              [
-                "5.57 Notfalltelefon (Art. 65)",
-                "5.58 Feuerlöscher (Art. 65)",
-                "[tab]"
-              ]
-            ]
-          }
+          "bildKacheln": [
+            {
+              "bild": {
+                "datei": "bilder/ssv/image219.png",
+                "alt": "Amtliche Abbildung",
+                "breite": 36,
+                "hoehe": 12,
+                "sha": "3ad8a6fdb69037b60c1162886008a6729203b42fc496d793576beb38fc166cd1"
+              }
+            },
+            {},
+            {
+              "nummer": "5.01",
+              "name": "Distanztafel (Art. 64)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image220.png",
+                "alt": "Signal: Anzeige von Entfernung und Richtung (Art. 64)",
+                "breite": 25,
+                "hoehe": 17,
+                "sha": "50c057cd543e1819f9f31a9449fc24d4a76744ccffa69d0ea8739449cf24ecbc"
+              },
+              "nummer": "5.02",
+              "name": "Anzeige von Entfernung und Richtung (Art. 64)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image221.png",
+                "alt": "Amtliche Abbildung",
+                "breite": 33,
+                "hoehe": 11,
+                "sha": "e952407d441fae8ba78c9dc9e76a3919b8f6237a3f90c66434d2de7cfbf83ea9"
+              }
+            },
+            {},
+            {
+              "nummer": "5.03",
+              "name": "Streckenlänge (Art. 64)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image222.png",
+                "alt": "Signal: Wiederholungstafel (Art. 64)",
+                "breite": 12,
+                "hoehe": 36,
+                "sha": "14c593517a738a8719cd818c07a7687e5176ab346e6ea08253b657293c5fce9d"
+              },
+              "nummer": "5.04",
+              "name": "Wiederholungstafel (Art. 64)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image223.png",
+                "alt": "Signal: Anfangstafel (Art. 64)",
+                "breite": 12,
+                "hoehe": 36,
+                "sha": "e94a543e261d348d1f7865cc7b0740898cd6a739521de7c3f1764d2f085e8555"
+              },
+              "nummer": "5.05",
+              "name": "Anfangstafel (Art. 64)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image224.png",
+                "alt": "Signal: Endetafel (Art. 64)",
+                "breite": 12,
+                "hoehe": 36,
+                "sha": "de5267a80b1b772ac43621f6b45f645d09793d5ae8cbc27ae70f809959293373"
+              },
+              "nummer": "5.06",
+              "name": "Endetafel (Art. 64)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image225.png",
+                "alt": "Amtliche Abbildung",
+                "breite": 27,
+                "hoehe": 10,
+                "sha": "5f2da40f82a082e57ff2708410d1e917f5b0bc1a5601ac5582e4dcbd471de3d3"
+              }
+            },
+            {},
+            {
+              "nummer": "5.07",
+              "name": "Richtungstafel (Art. 64)"
+            },
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {
+              "nummer": "5.08",
+              "name": "…"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image226.png",
+                "alt": "Signal: Richtung der Hauptstrasse (Art. 65)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "d4482a9baacac35fcddfbb0d02e8caa392b0f738e6c3a13d361223b0d1e49edb"
+              },
+              "nummer": "5.09",
+              "name": "Richtung der Hauptstrasse (Art. 65)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image227.png",
+                "alt": "Signal: Ausnahmen vom Halteverbot (Art. 65)",
+                "breite": 30,
+                "hoehe": 20,
+                "sha": "76cdb08cfd8f3eebc30702af1d429dc59344a1dd4d6f63581b6ae6e9221cb994"
+              },
+              "nummer": "5.10",
+              "name": "Ausnahmen vom Halteverbot (Art. 65)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image228.png",
+                "alt": "Signal: Ausnahmen vom Parkierungsverbot (Art. 65)",
+                "breite": 30,
+                "hoehe": 10,
+                "sha": "8420885ff2f516105458b3c74c1a7d4666b8010a99c683fc0f958de8446c529b"
+              },
+              "nummer": "5.11",
+              "name": "Ausnahmen vom Parkierungsverbot (Art. 65)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image229.png",
+                "alt": "Signal: Blinklicht (Art. 65)",
+                "breite": 36,
+                "hoehe": 12,
+                "sha": "4d7ba7d4815d03498171157409fd4af6f76ee979413653beaf07bbffa4864b16"
+              },
+              "nummer": "5.12",
+              "name": "Blinklicht (Art. 65)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image230.png",
+                "alt": "Signal: Vereiste Fahrbahn (Art. 65)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "2b44d5bb1bec4fe71dcabf9094c88812f298b51e5455cd6c81cf0f3a1c0139d3"
+              },
+              "nummer": "5.13",
+              "name": "Vereiste Fahrbahn (Art. 65)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image231.png",
+                "alt": "Signal: Gehbehinderte (Art. 65)",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "741c30e91020dd6a417ba0e062e4d1db07d8d096dbbc288634d10d05838a212a"
+              },
+              "nummer": "5.14",
+              "name": "Gehbehinderte (Art. 65)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image232.png",
+                "alt": "Amtliche Abbildung",
+                "breite": 36,
+                "hoehe": 12,
+                "sha": "6cf199d11e64970b166fa04e59bdfed148d5ee85bf0f613ade1ec73624220475"
+              }
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image233.png",
+                "alt": "Amtliche Abbildung",
+                "breite": 30,
+                "hoehe": 30,
+                "sha": "68d55d4d0a4b179862e072ace155fe14a0d2e8ac9df7228c0199a8c82e43048e"
+              }
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image234.png",
+                "alt": "Amtliche Abbildung",
+                "breite": 33,
+                "hoehe": 11,
+                "sha": "c0a9a68858296618e2a7ee087fed71183d8eb9dae73b5cff0e53f228ed5ca71b"
+              }
+            },
+            {
+              "nummer": "5.15",
+              "name": "Fahrbahnbreite (Art. 65)"
+            },
+            {
+              "nummer": "5.16",
+              "name": "Schiesslärm (Art. 65)"
+            },
+            {
+              "nummer": "5.17",
+              "name": "Übernächste Tankstelle (Art. 89)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image235.png",
+                "alt": "Signal: Rechtsabbiegen für Radfahrer gestattet (Art. 69a)",
+                "breite": 22,
+                "hoehe": 22,
+                "sha": "7df573a2197ba71d5223319d09985c236e906e924952ef03bc0d72f5063f039a"
+              },
+              "nummer": "5.18",
+              "name": "Rechtsabbiegen für Radfahrer gestattet (Art. 69a)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image236.png",
+                "alt": "Signal: Leichte Motorwagen (Art. 64)",
+                "breite": 28,
+                "hoehe": 10,
+                "sha": "1f256627051ff8aba792586564f56dffa7747e80830d79c6714d2049631190a3"
+              },
+              "nummer": "5.20",
+              "name": "Leichte Motorwagen (Art. 64)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image237.png",
+                "alt": "Signal: Schwere Motorwagen (Art. 64)",
+                "breite": 37,
+                "hoehe": 7,
+                "sha": "4d36755c8dbee135cebf3983d9855c0390c978f0ae9cdfa27877f0421f0a4cfe"
+              },
+              "nummer": "5.21",
+              "name": "Schwere Motorwagen (Art. 64)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image238.png",
+                "alt": "Signal: Lastwagen (Art. 64)",
+                "breite": 20,
+                "hoehe": 10,
+                "sha": "c32d7bea1371a9e826c4e8a2c99755174dfc5c29cea8f7c51f1fbfaf8abb087b"
+              },
+              "nummer": "5.22",
+              "name": "Lastwagen (Art. 64)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image239.png",
+                "alt": "Signal: Lastwagen mit Anhänger (Art. 64)",
+                "breite": 36,
+                "hoehe": 10,
+                "sha": "d535806a8d226c3918677fe0bbebf80ed30cfed4c0b5bfe96f82f6b91af3f56a"
+              },
+              "nummer": "5.23",
+              "name": "Lastwagen mit Anhänger (Art. 64)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image240.png",
+                "alt": "Signal: Sattelmotorfahrzeug (Art. 64)",
+                "breite": 27,
+                "hoehe": 10,
+                "sha": "ac8fba756b4315a97cab41a35d2affad5cadebff09076335f8c6012d39544437"
+              },
+              "nummer": "5.24",
+              "name": "Sattelmotorfahrzeug (Art. 64)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image241.png",
+                "alt": "Signal: Gesellschaftswagen (Art. 64)",
+                "breite": 24,
+                "hoehe": 10,
+                "sha": "91e0c605c3d1656d0b6b470a39bc258235123b434123088a25577a71f93b594d"
+              },
+              "nummer": "5.25",
+              "name": "Gesellschaftswagen (Art. 64)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image242.png",
+                "alt": "Signal: Anhänger (Art. 64)",
+                "breite": 25,
+                "hoehe": 10,
+                "sha": "c8a47db8819c23f5ebe77776e6db9ef38e1e91daa5929a247431fec1811b9d3d"
+              },
+              "nummer": "5.26",
+              "name": "Anhänger (Art. 64)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image243.png",
+                "alt": "Signal: Wohnanhänger (Art. 64)",
+                "breite": 15,
+                "hoehe": 10,
+                "sha": "f3f7cb52ec940982bc91a59f3e133a7ae738665b3b0bd9208e337a4194743bef"
+              },
+              "nummer": "5.27",
+              "name": "Wohnanhänger (Art. 64)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image244.png",
+                "alt": "Signal: Wohnmotorwagen (Art. 64)",
+                "breite": 19,
+                "hoehe": 10,
+                "sha": "890d3433f72d014be52461a17b6a6275a6bc1ca0bdeb5ac6975dd517e0dedc08"
+              },
+              "nummer": "5.28",
+              "name": "Wohnmotorwagen (Art. 64)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image245.png",
+                "alt": "Signal: Motorrad (Art. 64)",
+                "breite": 18,
+                "hoehe": 10,
+                "sha": "351d299aa46cae8b3d9a238494f3dd62e9609d3ee71207d719220b2956340f07"
+              },
+              "nummer": "5.29",
+              "name": "Motorrad (Art. 64)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image246.png",
+                "alt": "Signal: Motorfahrrad (Art. 64)",
+                "breite": 18,
+                "hoehe": 10,
+                "sha": "0da1e77543105b67a6e6c54673c6a77a2536094d8cf7e2a67fa785cb142b9743"
+              },
+              "nummer": "5.30",
+              "name": "Motorfahrrad (Art. 64)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image1.png",
+                "alt": "Signal: Fahrrad (Art. 64)",
+                "breite": 15,
+                "hoehe": 10,
+                "sha": "66ea1f73c75b7e9fffa73d6555deb75eb98cf507c154e30e89f5dd0b3c6459cc"
+              },
+              "nummer": "5.31",
+              "name": "Fahrrad (Art. 64)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image247.png",
+                "alt": "Signal: Lastenfahrrad",
+                "breite": 23,
+                "hoehe": 10,
+                "sha": "3b44fbd6739caf4c93354df70541d5ddda0070fa5d9b2c398f16afa127a4c1a3"
+              },
+              "nummer": "5.31.1",
+              "name": "Lastenfahrrad"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image248.png",
+                "alt": "Signal: Mountain-Bike (Art. 64)",
+                "breite": 8,
+                "hoehe": 10,
+                "sha": "88df5ab5c722a6169300a40ee8a69354684965a459ba7580c8f0086d1491a564"
+              },
+              "nummer": "5.32",
+              "name": "Mountain-Bike (Art. 64)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image249.png",
+                "alt": "Signal: Fahrrad schieben (Art. 64)",
+                "breite": 9,
+                "hoehe": 10,
+                "sha": "dd3fdd3d907ec5b18b3e21f2030fabe537b03ce8722fa19930fad303b370997e"
+              },
+              "nummer": "5.33",
+              "name": "Fahrrad schieben (Art. 64)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image250.png",
+                "alt": "Signal: Fussgänger (Art. 64)",
+                "breite": 5,
+                "hoehe": 10,
+                "sha": "0030d4ee2d26430eeafed7c9c7777accf15935ccc7f333f9d7281ac272ea2780"
+              },
+              "nummer": "5.34",
+              "name": "Fussgänger (Art. 64)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image251.png",
+                "alt": "Signal: Strassenbahn (Art. 64)",
+                "breite": 22,
+                "hoehe": 10,
+                "sha": "88fd113b12614121b98fa4d824541951cecf05668342a91eda10acb86835c814"
+              },
+              "nummer": "5.35",
+              "name": "Strassenbahn (Art. 64)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image252.png",
+                "alt": "Signal: Traktor (Art. 64)",
+                "breite": 15,
+                "hoehe": 10,
+                "sha": "336a691dfeca246740c44743ad74e9c93e60b6e880509dda6d08e03f856f2ee5"
+              },
+              "nummer": "5.36",
+              "name": "Traktor (Art. 64)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image253.png",
+                "alt": "Signal: Panzer (Art. 64)",
+                "breite": 23,
+                "hoehe": 10,
+                "sha": "d9cdae39440ccb237d880de738696d3c3ecd7d169597892c5ae65daea9908c6e"
+              },
+              "nummer": "5.37",
+              "name": "Panzer (Art. 64)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image254.png",
+                "alt": "Signal: Pistenfahrzeug (Art. 64)",
+                "breite": 21,
+                "hoehe": 10,
+                "sha": "c40b374997881693eab1813d57f7237eb1458efc459559c35eae087ac186adb7"
+              },
+              "nummer": "5.38",
+              "name": "Pistenfahrzeug (Art. 64)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image255.png",
+                "alt": "Signal: Langlauf (Art. 64)",
+                "breite": 13,
+                "hoehe": 10,
+                "sha": "0b309c7098b21b3c5345874a2a191aa2d67aa103bcfa8b98e1fa560bf6d5d444"
+              },
+              "nummer": "5.39",
+              "name": "Langlauf (Art. 64)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image256.png",
+                "alt": "Signal: Skifahren (Art. 64)",
+                "breite": 10,
+                "hoehe": 10,
+                "sha": "ff1b1311d8e4ba0095f4b66aaacafd80c2acbe3b66b8fe53cfec34ac720bacf5"
+              },
+              "nummer": "5.40",
+              "name": "Skifahren (Art. 64)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image257.png",
+                "alt": "Signal: Schlitteln (Art. 64)",
+                "breite": 10,
+                "hoehe": 10,
+                "sha": "8d1944f1f9a0305be8b3d68b22d4c1958af38105ac503732121150db4ebdf55b"
+              },
+              "nummer": "5.41",
+              "name": "Schlitteln (Art. 64)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image258.png",
+                "alt": "Signal: Ladestation (Art. 65)",
+                "breite": 37,
+                "hoehe": 14,
+                "sha": "269199c4f31f7c40e791dce5aba2a95365e8eac5244d704c4e940a805803d863"
+              },
+              "nummer": "5.42",
+              "name": "Ladestation (Art. 65)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image259.png",
+                "alt": "Signal: Mitfahrgemeinschaft (Art. 65)",
+                "breite": 28,
+                "hoehe": 13,
+                "sha": "b1898591a1330020f21ea325cc8efdd63b16a20828314e1374358fbf4546a14d"
+              },
+              "nummer": "5.43",
+              "name": "Mitfahrgemeinschaft (Art. 65)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image260.png",
+                "alt": "Signal: Fahrzeuge mit einem Automatisierungssystem (Art. 64)",
+                "breite": 31,
+                "hoehe": 18,
+                "sha": "b06bb2a2c45d53de413e5e128e033932c13be4c179a8db80659f9c7b16ded778"
+              },
+              "nummer": "5.44",
+              "name": "Fahrzeuge mit einem Automatisierungssystem (Art. 64)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image261.png",
+                "alt": "Signal: Flugzeug/Flugplatz (Art. 64)",
+                "breite": 12,
+                "hoehe": 10,
+                "sha": "b3e3de993b9d9e9958aa65ae62b938442ceab86c52553a2f0674546c7a49000b"
+              },
+              "nummer": "5.50",
+              "name": "Flugzeug/Flugplatz (Art. 64)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image262.png",
+                "alt": "Amtliche Abbildung",
+                "breite": 32,
+                "hoehe": 10,
+                "sha": "27a3c7c55636d23c7f4ea47825f5faa5ec036b9da380f597f949baf2781a0832"
+              }
+            },
+            {
+              "nummer": "5.51",
+              "name": "Autoverlad auf Eisenbahn (Art. 64)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image263.png",
+                "alt": "Amtliche Abbildung",
+                "breite": 29,
+                "hoehe": 10,
+                "sha": "77ec7a06e59068d4e4e0aa41f9bbfd9f2c6a336fd460844b113ef613887b5536"
+              }
+            },
+            {
+              "nummer": "5.52",
+              "name": "Autoverlad auf Fähre (Art. 64)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image264.png",
+                "alt": "Signal: Industrie und Gewerbegebiet (Art. 64)",
+                "breite": 10,
+                "hoehe": 10,
+                "sha": "0f00a39ab803387709f3a3274ac9bbe02387e93b947321381b0dcec2998445da"
+              },
+              "nummer": "5.53",
+              "name": "Industrie und Gewerbegebiet (Art. 64)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image265.png",
+                "alt": "Signal: Zollabfertigung mit Sichtdeklaration (Art. 65)",
+                "breite": 19,
+                "hoehe": 19,
+                "sha": "8dbe3cb3e22199a67ad1c53cd2133914aacc6cedc9ae23aa8e920c0f20154084"
+              },
+              "nummer": "5.54",
+              "name": "Zollabfertigung mit Sichtdeklaration (Art. 65)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image266.png",
+                "alt": "Signal: S-Verkehr (Art. 65)",
+                "breite": 15,
+                "hoehe": 15,
+                "sha": "3b8ab88ee55e1643bdfc09d881b657f1c33604c48137946087bf722f5942c089"
+              },
+              "nummer": "5.55",
+              "name": "S-Verkehr (Art. 65)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image267.png",
+                "alt": "Signal: Spital mit Notfallstation (Art. 65)",
+                "breite": 21,
+                "hoehe": 21,
+                "sha": "9cce87c98088b35b8f51feeff390d994b9d00a204630953792c8bf1ea1e6a99a"
+              },
+              "nummer": "5.56",
+              "name": "Spital mit Notfallstation (Art. 65)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image268.png",
+                "alt": "Signal: Notfalltelefon (Art. 65)",
+                "breite": 26,
+                "hoehe": 26,
+                "sha": "360fc3f8f5852c9ea1ff4c14c12513e3e0a7bb63bb23657d483af0ee4e9b6b6f"
+              },
+              "nummer": "5.57",
+              "name": "Notfalltelefon (Art. 65)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image269.png",
+                "alt": "Signal: Feuerlöscher (Art. 65)",
+                "breite": 10,
+                "hoehe": 19,
+                "sha": "98893c8cf1581ea4074f29f29a040e61d1f7da01ac431b2a3b30cbc54996f458"
+              },
+              "nummer": "5.58",
+              "name": "Feuerlöscher (Art. 65)"
+            }
+          ]
         },
         {
           "absatz": null,
@@ -6681,70 +9178,317 @@
         {
           "absatz": null,
           "text": "",
-          "mehrspaltig": {
-            "zeilen": [
-              [
-                "6.01 Sicherheitslinie (Art. 73)",
-                "6.02 Doppelte Sicherheitslinie 6.03 Leitlinie (Art. 73)"
-              ],
-              [
-                "6.04 Doppellinie (Art. 73)",
-                "6.05 Vorwarnlinie (Art. 73)"
-              ],
-              [
-                "6.06 Einspurpfeile (Art. 74)",
-                "6.07 Abweispfeile (Art. 74)"
-              ],
-              [
-                "6.08 Bus-Streifen (Art. 74b)",
-                "6.09 Radstreifen (Art. 74a)"
-              ],
-              [
-                "6.10 Haltelinie 6.11 Stop 6.12 Ununterbrochene Längslinie (Art. 75)",
-                "6.12 Ununterbrochene Längslinie 6.13 Wartelinie 6.14 Vorankündigung der Wartelinie (Art. 75)"
-              ],
-              [
-                "6.15 Randlinie 6.16 Führungslinie (Art. 76)",
-                "[tab] 6.16.1 Führungslinie im Anschluss an Wartelinie (Art. 76)"
-              ],
-              [
-                "[tab] 6.16.2 Führungslinie bei Richtungs‑ änderung der Hauptstrasse (Art. 76)",
-                "[tab] 6.16.3 Führungslinie bei Richtungs‑ änderung der Hauptstrasse (Art. 76)"
-              ],
-              [
-                "6.17 Fussgängerstreifen 6.18 Halteverbotslinie (Art. 77)",
-                "6.19 Längsstreifen für Fussgänger (Art. 77)"
-              ],
-              [
-                "6.20 Sperrflächen (Art. 78)",
-                "6.21 Zickzacklinie (Art. 79)"
-              ],
-              [
-                "6.22 Parkverbotslinie (Art. 79)",
-                "6.23 Parkverbotsfeld (Art. 79)"
-              ],
-              [
-                "6.24 …",
-                "6.25 Halteverbotslinie (Art. 79)"
-              ],
-              [
-                "6.26 Aufstellbereich für Radfahrer (Beispiele) (Art. 75)",
-                ""
-              ],
-              [
-                "6.30 Leitpfosten rechts (Art. 82)",
-                "6.31 Leitpfosten links (Art. 82)",
-                "[tab]"
-              ]
-            ]
-          }
+          "bildKacheln": [
+            {
+              "bild": {
+                "datei": "bilder/ssv/image270.png",
+                "alt": "Signal: Sicherheitslinie (Art. 73)",
+                "breite": 46,
+                "hoehe": 28,
+                "sha": "d179e30a2a8f9b0c082e36b91a1e0fd17652031bd595e6b76dba58d350167dc0"
+              },
+              "nummer": "6.01",
+              "name": "Sicherheitslinie (Art. 73)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image271.png",
+                "alt": "Signal: Doppelte Sicherheitslinie",
+                "breite": 46,
+                "hoehe": 28,
+                "sha": "d11586a89ad8c3102cbf864af2800d24f3ed476ed7bbb086b60244067c1e22ef"
+              },
+              "nummer": "6.02",
+              "name": "Doppelte Sicherheitslinie"
+            },
+            {
+              "nummer": "6.03",
+              "name": "Leitlinie (Art. 73)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image272.png",
+                "alt": "Signal: Doppellinie (Art. 73)",
+                "breite": 46,
+                "hoehe": 28,
+                "sha": "3855f4861d24fa60f580dc1166639c14d41acc44b7cfdeb61c4006545a4cfac4"
+              },
+              "nummer": "6.04",
+              "name": "Doppellinie (Art. 73)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image273.png",
+                "alt": "Signal: Vorwarnlinie (Art. 73)",
+                "breite": 46,
+                "hoehe": 28,
+                "sha": "adf3528a2ca438855714f597177c4bd78357b34edeaec75dc750ee70bd219dc5"
+              },
+              "nummer": "6.05",
+              "name": "Vorwarnlinie (Art. 73)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image274.png",
+                "alt": "Signal: Einspurpfeile (Art. 74)",
+                "breite": 46,
+                "hoehe": 28,
+                "sha": "66c88e2748b8acf664779015d1f16cbb6b08b94fa4d0d74978389f5c9139473a"
+              },
+              "nummer": "6.06",
+              "name": "Einspurpfeile (Art. 74)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image275.png",
+                "alt": "Signal: Abweispfeile (Art. 74)",
+                "breite": 46,
+                "hoehe": 27,
+                "sha": "05299c097bf700622c86c54565eaf0a7d8390cf6f00ce68497ac668f5f4749e7"
+              },
+              "nummer": "6.07",
+              "name": "Abweispfeile (Art. 74)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image276.png",
+                "alt": "Signal: Bus-Streifen (Art. 74b)",
+                "breite": 46,
+                "hoehe": 28,
+                "sha": "ef45e5941c90440e61b4c65da932a4c16e0eb8fefa203ef03b49e3243b832c56"
+              },
+              "nummer": "6.08",
+              "name": "Bus-Streifen (Art. 74b)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image277.png",
+                "alt": "Signal: Radstreifen (Art. 74a)",
+                "breite": 46,
+                "hoehe": 28,
+                "sha": "1fc58bed3ed454c3ff5a0d420975ec6334f5ceabaf0820d1fb3975741298af2d"
+              },
+              "nummer": "6.09",
+              "name": "Radstreifen (Art. 74a)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image278.png",
+                "alt": "Signal: Haltelinie",
+                "breite": 46,
+                "hoehe": 28,
+                "sha": "62b3eb399d1cdfad6a498396f4928b12104c4d41137b156c30e2155a2aa32ef2"
+              },
+              "nummer": "6.10",
+              "name": "Haltelinie"
+            },
+            {
+              "nummer": "6.11",
+              "name": "Stop"
+            },
+            {
+              "nummer": "6.12",
+              "name": "Ununterbrochene Längslinie (Art. 75)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image279.png",
+                "alt": "Signal: Ununterbrochene Längslinie",
+                "breite": 28,
+                "hoehe": 28,
+                "sha": "eb2711742dea0f042a31cf6d52f5a0a96da7226aba34af0e102b0b4256ca612d"
+              },
+              "nummer": "6.12",
+              "name": "Ununterbrochene Längslinie"
+            },
+            {
+              "nummer": "6.13",
+              "name": "Wartelinie"
+            },
+            {
+              "nummer": "6.14",
+              "name": "Vorankündigung der Wartelinie (Art. 75)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image280.png",
+                "alt": "Signal: Randlinie",
+                "breite": 46,
+                "hoehe": 28,
+                "sha": "ecc1b56ec3d4fcc480ed0c4886a33e07a3a3e0642f9754c0c2336eda2d6a5c66"
+              },
+              "nummer": "6.15",
+              "name": "Randlinie"
+            },
+            {
+              "nummer": "6.16",
+              "name": "Führungslinie (Art. 76)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image281.png",
+                "alt": "Signal: 6.16.1 Führungslinie im Anschluss an Wartelinie (Art. 76)",
+                "breite": 28,
+                "hoehe": 28,
+                "sha": "434a8d4a71d8f6fe6d7b38f5b3cb08f005ac65f8ef94d24a99ab459d0534eb22"
+              },
+              "name": "6.16.1 Führungslinie im Anschluss an Wartelinie (Art. 76)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image282.png",
+                "alt": "Signal: 6.16.2 Führungslinie bei Richtungs‑ änderung der Hauptstrasse (Art. 76)",
+                "breite": 28,
+                "hoehe": 28,
+                "sha": "25663510b3bfd2885369130f2b95240be891c150b41f1a215764024b2bcbd40d"
+              },
+              "name": "6.16.2 Führungslinie bei Richtungs‑ änderung der Hauptstrasse (Art. 76)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image283.png",
+                "alt": "Signal: 6.16.3 Führungslinie bei Richtungs‑ änderung der Hauptstrasse (Art. 76)",
+                "breite": 28,
+                "hoehe": 28,
+                "sha": "57f7b3fc737e483e3486341a4bba6c4bc0a06590b99cdea88fa8101e7c722622"
+              },
+              "name": "6.16.3 Führungslinie bei Richtungs‑ änderung der Hauptstrasse (Art. 76)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image284.png",
+                "alt": "Signal: Fussgängerstreifen",
+                "breite": 46,
+                "hoehe": 28,
+                "sha": "3fbb6a7c64a8c8cd9f22803b48aeae490812682913b7dbd6421c00086bab556f"
+              },
+              "nummer": "6.17",
+              "name": "Fussgängerstreifen"
+            },
+            {
+              "nummer": "6.18",
+              "name": "Halteverbotslinie (Art. 77)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image285.png",
+                "alt": "Signal: Längsstreifen für Fussgänger (Art. 77)",
+                "breite": 46,
+                "hoehe": 28,
+                "sha": "e1e4cbb5528105d45759aee2f50a789dc88d830b2a7c1001eab15b5b08db63de"
+              },
+              "nummer": "6.19",
+              "name": "Längsstreifen für Fussgänger (Art. 77)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image286.png",
+                "alt": "Signal: Sperrflächen (Art. 78)",
+                "breite": 46,
+                "hoehe": 28,
+                "sha": "7334a8b1333332151992457785f0f165a4f3ab439c6718d7ac0ef8941d106f30"
+              },
+              "nummer": "6.20",
+              "name": "Sperrflächen (Art. 78)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image287.png",
+                "alt": "Signal: Zickzacklinie (Art. 79)",
+                "breite": 46,
+                "hoehe": 28,
+                "sha": "99eeb21ada4ce98e3112f96589c9500cd2f71bc2ce370c6f99e8effac2afefd0"
+              },
+              "nummer": "6.21",
+              "name": "Zickzacklinie (Art. 79)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image288.png",
+                "alt": "Signal: Parkverbotslinie (Art. 79)",
+                "breite": 46,
+                "hoehe": 28,
+                "sha": "4cc8ef1b6e350d887762498b6bc41e35f10ee680459e50eede5b0138abe18e63"
+              },
+              "nummer": "6.22",
+              "name": "Parkverbotslinie (Art. 79)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image289.png",
+                "alt": "Signal: Parkverbotsfeld (Art. 79)",
+                "breite": 46,
+                "hoehe": 28,
+                "sha": "de5a5a8c9f8665f29c73a3acc92e54f0088c8465d00e2c633c1d76ac675cefd1"
+              },
+              "nummer": "6.23",
+              "name": "Parkverbotsfeld (Art. 79)"
+            },
+            {
+              "nummer": "6.24",
+              "name": "…"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image290.png",
+                "alt": "Signal: Halteverbotslinie (Art. 79)",
+                "breite": 46,
+                "hoehe": 28,
+                "sha": "1c0777d6d2adcc6d12672db6e7da7cb26a964528f4cf50ae4021cf9ed8c155fc"
+              },
+              "nummer": "6.25",
+              "name": "Halteverbotslinie (Art. 79)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image291.png",
+                "alt": "Signal: Aufstellbereich für Radfahrer (Beispiele) (Art. 75)",
+                "breite": 46,
+                "hoehe": 28,
+                "sha": "21f3deab35bd29958dc280bbda203c6ce64b4e8b65bd2bcb672488edd0a9bf2d"
+              },
+              "nummer": "6.26",
+              "name": "Aufstellbereich für Radfahrer (Beispiele) (Art. 75)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image292.png",
+                "alt": "Amtliche Abbildung",
+                "breite": 45,
+                "hoehe": 26,
+                "sha": "f53f4cb73930b427294057171979a3d2d9494a7d441cc8a2e42de0a36d368d85"
+              }
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image293.png",
+                "alt": "Signal: Leitpfosten rechts (Art. 82)",
+                "breite": 6,
+                "hoehe": 50,
+                "sha": "fecbe650bd2baf9f1ce889e65317299c871e80352d8bb00a84f58aa336dbfc5b"
+              },
+              "nummer": "6.30",
+              "name": "Leitpfosten rechts (Art. 82)"
+            },
+            {
+              "bild": {
+                "datei": "bilder/ssv/image294.png",
+                "alt": "Signal: Leitpfosten links (Art. 82)",
+                "breite": 6,
+                "hoehe": 50,
+                "sha": "7e70e8fecf23ba09a44c3ecb2b2ed0aa1cb288df7bd525d1c096535cac651d12"
+              },
+              "nummer": "6.31",
+              "name": "Leitpfosten links (Art. 82)"
+            }
+          ]
         }
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1961_1961_1961/de#annex_2",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250701",
-      "sha": "df70d8f652a7f0db6012c18b8dea5ad36c7d7e0b1e941900ebdc77c50fdd6a20"
+      "sha": "6d03f7d52ef3947ccd5d78872c1ef139cb2463ef17e65b98b72ec63be497318c"
     },
     {
       "id": "bund/SSV/annex_3",
@@ -6896,6 +9640,17 @@
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/ssv/image295.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 53,
+            "hoehe": 76,
+            "sha": "0da6e02927d6c0c391423b04b997ea023a074cd05b0708493cba75feba553ac5"
+          }
+        },
+        {
+          "absatz": null,
           "text": "2 Parkkarte für behinderte Personen (Art. 65 Abs. 5 SSV, Art. 20a VRV)",
           "titel": 3
         },
@@ -6924,13 +9679,35 @@
               ]
             ]
           }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/ssv/image296.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 92,
+            "hoehe": 65,
+            "sha": "10f64f653ba1a8aa79c3f78388c802bfa562e1bfe5dcc976960febfcec28de93"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/ssv/image297.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 92,
+            "hoehe": 65,
+            "sha": "d57243921b9bbe673682bbd48b9be3848407f993c84f417573107f8fcd7e3a73"
+          }
         }
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1961_1961_1961/de#annex_3",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250701",
-      "sha": "2b7995489a812e1777ea010e669bd4fc4ad08cb29962a55206e81a3bdce24e42"
+      "sha": "06a566f63149de2a2cf977f5451d36c8eae1a7b8957d449e06eab03c17b585ee"
     }
   ]
 }

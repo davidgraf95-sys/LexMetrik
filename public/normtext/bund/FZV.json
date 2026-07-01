@@ -1074,6 +1074,15 @@
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/fzv/image1.png",
+            "alt": "Amtliche Abbildung",
+            "sha": "a998dd32982f7a0a8909503407983eae79bd1a0c1d4e21770c86ca1ee4065c15"
+          }
+        },
+        {
+          "absatz": null,
           "text": "2. Dabei bezeichnet:"
         },
         {
@@ -1095,13 +1104,49 @@
         {
           "absatz": null,
           "text": "3. Die Barwerte und Anwartschaften werden auf der Basis der technischen Grundlagen BVG berechnet, die im für die Umrechnung massgebenden Zeitpunkt bestehen. Dabei werden die im Kalenderjahr der Berechnung geltenden unverstärkten Generationentafeln und der gewichtete Durchschnitt der technischen Durchschnittszinssätze gemäss dem zuletzt veröffentlichten Bericht der Oberaufsichtskommission Berufliche Vorsorge zur finanziellen Lage der Vorsorgeeinrichtungen verwendet."
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/fzv/image2.png",
+            "alt": "Amtliche Abbildung",
+            "sha": "504e7ece65823f5c518dc93d2b139a890d6ed82305a0e2dee73f9d9a0ecd09bc"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/fzv/image3.png",
+            "alt": "Amtliche Abbildung",
+            "sha": "41972f695cd4392a01637252c72523ad688a91685f364e0da3947c07b39bc1c0"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/fzv/image4.png",
+            "alt": "Amtliche Abbildung",
+            "sha": "e77fbe4b796399c899caa1eafece796c5d39f463cd478c45eacb6b8e14cddd37"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/fzv/image5.png",
+            "alt": "Amtliche Abbildung",
+            "sha": "c9bd4b80d58096a57f8edcfc8b4148f0b9adf33c236cbe1e8606b0452945e61a"
+          }
         }
       ],
       "stand": "2024-03-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#lvl_u1",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20240301",
-      "sha": "09b15bef5ea84b0324a200c2a1e1c9e860e1af5de4195915641482940c35e38e"
+      "sha": "d00247736fe2c650663975745dea9af9f1570972dc5662b7fd4b3bf9021b7786"
     }
   ]
 }

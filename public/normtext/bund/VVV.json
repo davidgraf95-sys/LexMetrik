@@ -3285,6 +3285,28 @@
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vvv/image1.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 25,
+            "hoehe": 39,
+            "sha": "8c3a9da30489d823aa506f74d4175c819d9ed36c591a0e90d294fda90f4cdb66"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vvv/image2.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 23,
+            "hoehe": 37,
+            "sha": "fcc7a9bbe57a3f1e5462d704d4b33847c69d26c42756c9cdff15ce1d606c288c"
+          }
+        },
+        {
+          "absatz": null,
           "text": "3. Die Kontrollmarken werden von den Kantonen beschafft."
         }
       ],
@@ -3292,7 +3314,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1959/1271_1321_1317/de#annex_2",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260101",
-      "sha": "ffdcad3689178e7b268ce0500353158d9a0852cf6ccbe9dfb9b8cf2bc77354e8"
+      "sha": "57a2c66e15fd4ba2d643cdd26e37b96280f986480d557c3536b3a882852c940d"
     },
     {
       "id": "bund/VVV/annex_3",
@@ -3310,13 +3332,24 @@
           "absatz": null,
           "text": "Versicherungsvignetten für Motorfahrräder",
           "titel": 2
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vvv/image3.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 28,
+            "hoehe": 25,
+            "sha": "1ec6765d6414288cfb349f47a3e9840f8cc7d984d2ce0a8f69d69451ba9c9adc"
+          }
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1959/1271_1321_1317/de#annex_3",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260101",
-      "sha": "a3ad1c02c95d53dc9c0cfac1cfcc33aee31372e6fadac1559ab9931c586e0d8c"
+      "sha": "51c264cdf8dbf9034915fc5c84ca41c10ea9eb0b7611a4cbef537d8967249c98"
     },
     {
       "id": "bund/VVV/annex_4",
@@ -3386,6 +3419,17 @@
                 "direkt im Motorfahrzeugbereich hauptberuflich beschäftigten Personen ist. Zudem müssen pro Jahr je Kollektiv-Fahrzeugausweis weitere 20 Fahrzeuge hergestellt werden."
               ]
             ]
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vvv/image4.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 11,
+            "hoehe": 6,
+            "sha": "299a75bf0303266d076dae4f4f1d40772ba270cb64a293372c97b0c032e01b57"
           }
         },
         {
@@ -3478,6 +3522,17 @@
                 "direkt im Motorfahrzeugbereich hauptberuflich beschäftigten Personen ist. Zudem müssen pro Jahr je Kollektiv-Fahrzeugausweis weitere 20 neue Fahrzeuge importiert werden."
               ]
             ]
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vvv/image5.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 11,
+            "hoehe": 6,
+            "sha": "299a75bf0303266d076dae4f4f1d40772ba270cb64a293372c97b0c032e01b57"
           }
         },
         {
@@ -3630,6 +3685,17 @@
         {
           "absatz": null,
           "text": "",
+          "bild": {
+            "datei": "bilder/vvv/image6.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 11,
+            "hoehe": 6,
+            "sha": "299a75bf0303266d076dae4f4f1d40772ba270cb64a293372c97b0c032e01b57"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
           "items": [
             {
               "marke": "–",
@@ -3754,6 +3820,17 @@
         {
           "absatz": null,
           "text": "",
+          "bild": {
+            "datei": "bilder/vvv/image7.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 11,
+            "hoehe": 6,
+            "sha": "c0ad4e05579e8e6421f58da776ee8bf84a938eb60564dc9b3ece55f1681ab0eb"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
           "items": [
             {
               "marke": "4.3",
@@ -3841,6 +3918,17 @@
                 "direkt im Motorfahrzeugbereich hauptberuflich beschäftigten Personen ist. Zudem müssen pro Jahr je Kollektiv-Fahrzeugausweis an weiteren 20 Fahrzeugen entgeltliche Reparaturarbeiten ausgeführt werden, die Probe- oder Überführungsfahrten notwendig machen."
               ]
             ]
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vvv/image8.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 11,
+            "hoehe": 6,
+            "sha": "c0ad4e05579e8e6421f58da776ee8bf84a938eb60564dc9b3ece55f1681ab0eb"
           }
         },
         {
@@ -3938,6 +4026,17 @@
         {
           "absatz": null,
           "text": "",
+          "bild": {
+            "datei": "bilder/vvv/image9.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 11,
+            "hoehe": 6,
+            "sha": "c0ad4e05579e8e6421f58da776ee8bf84a938eb60564dc9b3ece55f1681ab0eb"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
           "items": [
             {
               "marke": "6.3",
@@ -4025,6 +4124,17 @@
                 "direkt im Motorfahrzeugbereich hauptberuflich beschäftigten Personen ist. Zudem müssen pro Jahr je Kollektiv-Fahrzeugausweis an weiteren 30 Fahrzeugen entgeltliche Reparaturarbeiten ausgeführt werden, die Probe- oder Überführungsfahrten notwendig machen."
               ]
             ]
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vvv/image10.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 11,
+            "hoehe": 6,
+            "sha": "c0ad4e05579e8e6421f58da776ee8bf84a938eb60564dc9b3ece55f1681ab0eb"
           }
         },
         {
@@ -4122,6 +4232,17 @@
         {
           "absatz": null,
           "text": "",
+          "bild": {
+            "datei": "bilder/vvv/image11.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 11,
+            "hoehe": 6,
+            "sha": "c0ad4e05579e8e6421f58da776ee8bf84a938eb60564dc9b3ece55f1681ab0eb"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
           "items": [
             {
               "marke": "8.3",
@@ -4209,6 +4330,17 @@
                 "direkt im Motorfahrzeugbereich hauptberuflich beschäftigten Personen ist. Zudem müssen pro Jahr je Kollektiv-Fahrzeugausweis an weiteren 30 Fahrzeugen entgeltliche Arbeiten ausgeführt werden, die Probe- oder Überführungsfahrten notwendig machen."
               ]
             ]
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vvv/image12.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 11,
+            "hoehe": 6,
+            "sha": "c0ad4e05579e8e6421f58da776ee8bf84a938eb60564dc9b3ece55f1681ab0eb"
           }
         },
         {
@@ -4306,6 +4438,17 @@
         {
           "absatz": null,
           "text": "",
+          "bild": {
+            "datei": "bilder/vvv/image13.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 11,
+            "hoehe": 6,
+            "sha": "c0ad4e05579e8e6421f58da776ee8bf84a938eb60564dc9b3ece55f1681ab0eb"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
           "items": [
             {
               "marke": "10.3",
@@ -4393,6 +4536,17 @@
                 "direkt im Motorfahrzeugbereich hauptberuflich beschäftigten Personen ist. Zudem müssen pro Jahr je Kollektiv-Fahrzeugausweis an weiteren 50 Fahrzeugen entgeltliche Arbeiten ausgeführt werden, die Probe- oder Überführungsfahrten notwendig machen."
               ]
             ]
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vvv/image14.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 11,
+            "hoehe": 6,
+            "sha": "c0ad4e05579e8e6421f58da776ee8bf84a938eb60564dc9b3ece55f1681ab0eb"
           }
         },
         {
@@ -4489,6 +4643,17 @@
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vvv/image15.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 11,
+            "hoehe": 6,
+            "sha": "c0ad4e05579e8e6421f58da776ee8bf84a938eb60564dc9b3ece55f1681ab0eb"
+          }
+        },
+        {
+          "absatz": null,
           "text": "Einrichtungen für Autosattlerei und vollständiges Sortiment von Sattlerwerkzeugen.",
           "items": [
             {
@@ -4567,6 +4732,17 @@
                 "direkt im Motorfahrzeugbereich hauptberuflich beschäftigten Personen ist. Zudem müssen pro Jahr je Kollektiv-Fahrzeugausweis an weiteren 50 Fahrzeugen entgeltliche Arbeiten ausgeführt werden, die Probe- oder Überführungsfahrten notwendig machen."
               ]
             ]
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vvv/image16.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 11,
+            "hoehe": 6,
+            "sha": "c0ad4e05579e8e6421f58da776ee8bf84a938eb60564dc9b3ece55f1681ab0eb"
           }
         },
         {
@@ -4664,6 +4840,17 @@
         {
           "absatz": null,
           "text": "",
+          "bild": {
+            "datei": "bilder/vvv/image17.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 11,
+            "hoehe": 6,
+            "sha": "c0ad4e05579e8e6421f58da776ee8bf84a938eb60564dc9b3ece55f1681ab0eb"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
           "items": [
             {
               "marke": "14.3",
@@ -4755,6 +4942,17 @@
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vvv/image18.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 11,
+            "hoehe": 6,
+            "sha": "c0ad4e05579e8e6421f58da776ee8bf84a938eb60564dc9b3ece55f1681ab0eb"
+          }
+        },
+        {
+          "absatz": null,
           "text": "Geräte und Einrichtungen für den Einbau, die Prüfung und die Reparatur von Fahrtschreibern.",
           "items": [
             {
@@ -4841,6 +5039,17 @@
                 "direkt im Motorfahrzeugbereich hauptberuflich beschäftigten Personen ist. Zudem müssen pro Jahr je Kollektiv-Fahrzeugausweis an weiteren 50 Fahrzeugen entgeltliche Arbeiten ausgeführt werden, die Probe- oder Überführungsfahrten notwendig machen."
               ]
             ]
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vvv/image19.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 11,
+            "hoehe": 6,
+            "sha": "c0ad4e05579e8e6421f58da776ee8bf84a938eb60564dc9b3ece55f1681ab0eb"
           }
         },
         {
@@ -4937,6 +5146,17 @@
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vvv/image20.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 11,
+            "hoehe": 6,
+            "sha": "c0ad4e05579e8e6421f58da776ee8bf84a938eb60564dc9b3ece55f1681ab0eb"
+          }
+        },
+        {
+          "absatz": null,
           "text": "Einrichtungen und Werkzeugsortiment für Bremsenreparaturen, Bremsenprüfstand.",
           "items": [
             {
@@ -5019,6 +5239,17 @@
         },
         {
           "absatz": null,
+          "text": "",
+          "bild": {
+            "datei": "bilder/vvv/image21.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 11,
+            "hoehe": 6,
+            "sha": "c0ad4e05579e8e6421f58da776ee8bf84a938eb60564dc9b3ece55f1681ab0eb"
+          }
+        },
+        {
+          "absatz": null,
           "text": "Reparaturraum für mindestens zwei Fahrzeuge.",
           "items": [
             {
@@ -5097,6 +5328,17 @@
         {
           "absatz": null,
           "text": "",
+          "bild": {
+            "datei": "bilder/vvv/image22.png",
+            "alt": "Amtliche Abbildung",
+            "breite": 11,
+            "hoehe": 6,
+            "sha": "c0ad4e05579e8e6421f58da776ee8bf84a938eb60564dc9b3ece55f1681ab0eb"
+          }
+        },
+        {
+          "absatz": null,
+          "text": "",
           "items": [
             {
               "marke": "19.3",
@@ -5147,7 +5389,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1959/1271_1321_1317/de#annex_4",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260101",
-      "sha": "fcc5bcaa7955fdf4f15eb2a557e3462a35d51677ef1a8601c2bd0a6338e910d5"
+      "sha": "422c7c36da1d635ee844edd51aeed5bdd29701c7585252efa9494eb4d9d16e6f"
     },
     {
       "id": "bund/VVV/annex_5",
@@ -5195,16 +5437,16 @@
             ],
             "zeilen": [
               [
-                "[tab] Name/Firma:"
+                "Name/Firma:"
               ],
               [
-                "[tab] Vorname:"
+                "Vorname:"
               ],
               [
-                "[tab] Strasse/Nr.:"
+                "Strasse/Nr.:"
               ],
               [
-                "[tab] PLZ/Ort:"
+                "PLZ/Ort:"
               ]
             ]
           }
@@ -5238,16 +5480,16 @@
             ],
             "zeilen": [
               [
-                "[tab] Kontrollschild-Nr.:"
+                "Kontrollschild-Nr.:"
               ],
               [
-                "[tab] Marke/Typ:"
+                "Marke/Typ:"
               ],
               [
-                "[tab] Fahrgestell-Nr.:"
+                "Fahrgestell-Nr.:"
               ],
               [
-                "[tab] Stamm-Nr.:"
+                "Stamm-Nr.:"
               ]
             ]
           }
@@ -5300,7 +5542,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1959/1271_1321_1317/de#annex_5",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260101",
-      "sha": "9de6eda5af5db62f1936b367a39559684f821e8458775473d96ab27ee1d7a0a7"
+      "sha": "291b429f1d7f8944385ef92bde82edadc5e0901a1c9704bd3ff40a53606bbceb"
     }
   ]
 }
