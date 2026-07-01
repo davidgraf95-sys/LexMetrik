@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Rank 11 (QS-PERF, §15/2): metrik-angepasste Fallback-Fonts. Solange der Webfont
+   (Geist / Source Serif 4) via font-display:swap lädt, rendert der System-Fallback
+   (Arial / Georgia) mit exakt angepasstem Zeilenkasten — size-adjust/ascent-/descent-/
+   line-gap-override sind aus den ECHTEN fontsource-woff2 GEMESSEN (nicht geraten):
+   scripts/gen-font-fallbacks.ts (@capsizecss). Damit erzeugt der Swap keinen
+   Reflow-Sprung mehr (CLS). Webfont-Version wechselt → Script neu laufen lassen.
+   Reine Darstellung, kein Inhaltseffekt (§3). */
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local('Arial'), local('ArialMT');
+  ascent-override: 95.9379%;
+  descent-override: 28.1609%;
+  line-gap-override: 0%;
+  size-adjust: 104.7553%;
+}
+@font-face {
+  font-family: 'Source Serif 4 Fallback';
+  src: local('Georgia');
+  ascent-override: 96.4195%;
+  descent-override: 31.1781%;
+  size-adjust: 107.4471%;
+}
+
 @layer base {
   :root {
     /* ── LexMetrik-Designtokens (Designsystem §2) ─────────────────────── */
@@ -98,11 +121,14 @@
     --vorschau-fs-kompakt:.88rem;
     /* Display = Geist (Wunsch David 6.6.2026): die Serife Fraunces ist aus
        der UI entfernt; PDF-Berichte behalten ihre eingebetteten Schriften. */
-    --font-display:'Geist Variable','Hanken Grotesk';
-    --font-sans:'Geist Variable','Hanken Grotesk';
+    /* Rank 11: 'Geist Fallback'/'Source Serif 4 Fallback' (metrik-angepasstes
+       Arial/Georgia, @font-face oben) direkt HINTER dem Webfont — sie tragen den
+       Zeilenkasten während font-display:swap CLS-frei, bis der Webfont da ist. */
+    --font-display:'Geist Variable','Geist Fallback','Hanken Grotesk';
+    --font-sans:'Geist Variable','Geist Fallback','Hanken Grotesk';
     --font-mono:'Geist Mono Variable','IBM Plex Mono';
     /* Lese-Serif NUR für den Gesetzes-Volltext (Rubrik V). */
-    --font-serif:'Source Serif 4 Variable','Charter','Georgia';
+    --font-serif:'Source Serif 4 Variable','Source Serif 4 Fallback','Charter','Georgia';
     /* Fein-Typo der Leser/Chrome (25.6.2026, DESIGN-REGLEMENT B2): die zuvor
        12 rohen text-[…rem]-Sonderwerte sind auf die bestehende Skala
        (micro/xs/body-s/base/body-l/h3) verdichtet — keine Sondertokens mehr,

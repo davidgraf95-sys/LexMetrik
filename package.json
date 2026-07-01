@@ -56,6 +56,7 @@
     "check:pdf": "vite-node scripts/normtext/check-pdf.ts",
     "check:pdf-netz": "vite-node scripts/normtext/check-pdf.ts -- --netz",
     "check:perf-budget": "vite-node scripts/check-perf-budget.ts",
+    "gen:font-fallbacks": "vite-node scripts/gen-font-fallbacks.ts",
     "plan:next": "vite-node scripts/plan/next.ts",
     "plan:set": "vite-node scripts/plan/set.ts",
     "check:plan": "vite-node scripts/plan/check.ts",
@@ -77,6 +78,9 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.11.3",
+    "@capsizecss/core": "^4.1.3",
+    "@capsizecss/metrics": "^4.1.0",
+    "@capsizecss/unpack": "^4.0.1",
     "@eslint/js": "^10.0.1",
     "@playwright/test": "^1.60.0",
     "@tailwindcss/container-queries": "^0.1.1",
