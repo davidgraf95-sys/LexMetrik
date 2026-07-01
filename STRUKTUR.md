@@ -23,6 +23,18 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 1.7.2026 — QS-PERF Bug-Check-Nachzug: tocToggle-memo + prefetch-.catch (Branch `fix/perf-toctoggle-memo-prefetch-catch`)
+
+**Fundierter Bug-Check (3 unabhängige adversariale Opus-Reviewer) über alle 5 QS-PERF-Änderungen der Session.**
+Zwei echte, geringfügige Befunde (kein Korrektheits-/Logik-/Treue-Verlust), beide gefixt: (1) `tocToggle`
+war doch **kein** `useCallback` (Linter-Revert-Falle wie zuvor bei parts.tsx) → `SektionBaumTOC`-`React.memo`
+lief bei jeder Scroll-Spy-Aktualisierung leer; jetzt `useCallback([])`. (2) `prefetchLeser` (Rank 2) hängte
+kein `.catch` an die Prefetch-Promises → unbehandelte Rejection bei Chunk-404 (offline/veralteter Hash);
+jetzt `.catch(() => {})` (best-effort, Route-Load fängt via lazyRetry). Reviewer bestätigten sauber:
+sektionMeta byte-identisch, Rules-of-Hooks/Deps korrekt, Debounce race-frei (Sprung 0ms≪110ms), Scroll-Rettung
+kohärent, NewsHeader/Fonts/Kalender ohne Bug (Font-Generator neu ausgeführt → CSS byte-identisch). **Verifikation:**
+`npm run gate` grün, 9 TOC-e2e grün. Trailer `Roadmap: QS-PERF` · `Gegenpruefung: n/a`.
+
 ## Session 1.7.2026 — QS-PERF Rank 9 (Teil): In-Gesetz-Suche entprellt (Branch `feat/perf-batch4-suche-debounce`)
 
 **Geräte-Last / Performance (Querschnitt QS-PERF, `[OF]`).** Die In-Gesetz-Suche im Reader filterte bei

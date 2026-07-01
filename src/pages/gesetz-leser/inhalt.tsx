@@ -99,7 +99,10 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // Manuelles Auf-/Zuklappen im TOC: beim Öffnen in manuellOffenRef aufnehmen
   // (bleibt offen) + aus manuellZuRef nehmen; beim Schliessen umgekehrt (in
   // manuellZuRef, aus manuellOffenRef); nie im Auto-Set (K).
-  const tocToggle = (id: string) => {
+  // Rank 4 (QS-PERF, §15/4): useCallback ([] — liest nur setTocBaum + stabile Refs),
+  // sonst hätte onToggle bei jedem Parent-Render neue Identität und die React.memo-
+  // Wrapper von SektionBaumTOC liefe bei jeder Scroll-Spy-Aktualisierung leer.
+  const tocToggle = useCallback((id: string) => {
     setTocBaum((o) => {
       const offenJetzt = !o[id];
       autoOffenRef.current.delete(id);
@@ -107,7 +110,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
       else { manuellOffenRef.current.delete(id); manuellZuRef.current.add(id); }
       return { ...o, [id]: offenJetzt };
     });
-  };
+  }, []);
   const [aktivIds, setAktivIds] = useState<string[]>([]); // Sektions-IDs (TOC-Markierung, eindeutig)
   const [tocAuf, setTocAuf] = useState(false); // unter lg: Gliederungs-Drawer offen?
   const [tocOffen, setTocOffen] = useState(true); // ab lg: Gliederungsspalte ein-/ausklappen
