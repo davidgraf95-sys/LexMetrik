@@ -375,7 +375,7 @@ export function Shell({ children }: { children: ReactNode }) {
                 style={multipane ? wachstum(0) : undefined}
                 className={multipane ? `flex flex-col flex-1 min-w-0 border-l-2 ${dnd.spalte(0).ueber ? 'border-l-brass-700' : 'border-l-transparent'} max-lg:flex-none max-lg:w-full max-lg:snap-start` : 'contents'}>
                 {multipane && (
-                  <PaneKopf {...titelVon(pathname)} breadcrumb={kopfDaten?.breadcrumb} artikel={kopfDaten?.artikel}
+                  <PaneKopf {...titelVon(pathname)} breadcrumb={kopfDaten?.breadcrumb} onBreadcrumb={(to) => navigate(to)} artikel={kopfDaten?.artikel}
                     rolle="primaer" onSchliessen={schliesseHaupt}
                     onRechts={() => verschiebePane(0, 1)} kannRechts={pane.sekundaer.length > 0}
                     ziehbar {...dnd.griff(0)} />
