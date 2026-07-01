@@ -105,9 +105,13 @@ wbqdyap3x: Prozesskosten I2 — Schlichtungs-/Reduktionsfaktoren (Recherche offe
   Session-Disziplin statt an einem Tor. **Design-Detailquelle:**
   [`docs/superpowers/specs/2026-07-01-gegenpruefung-gate-design.md`](docs/superpowers/specs/2026-07-01-gegenpruefung-gate-design.md);
   Nachweis-Register [`bibliothek/register/gegenpruefung-register.md`](bibliothek/register/gegenpruefung-register.md).
-  **Stand 1.7.2026: Bausteine a+b+c gebaut** (Tor `check:gegenpruefung` in `npm run gate`,
-  Skill »gegenpruefung«, Register + Quittier-Helfer `npm run gegenpruefung:ok`); offen nur
-  Baustein d (rückwirkende Kampagne). Bausteine:
+  **Stand 1.7.2026: Bausteine a+b+c gebaut, gemergt PR #67 (`252731bd`) + prod-live** (Tor
+  `check:gegenpruefung` in `npm run gate`, Skill »gegenpruefung«, Register + Quittier-Helfer
+  `npm run gegenpruefung:ok`); offen nur Baustein d (rückwirkende Kampagne). **Hinweis:** die
+  Risiko-Glob-Formen unten sind der *ursprüngliche Plan* — beim Bau korrigiert (verschachtelte
+  `public/normtext/**` statt Top-Level-`*.json`, hand-gerolltes Pfad-Prädikat statt kaputter
+  `*(a|b)*`-Alternation, `git status -uall`); die **as-built**-Wahrheit steht in
+  `scripts/gegenpruefung/kern.ts` + der Spec. Bausteine:
   - **a · Gegenprüfungs-Gate `check:gegenpruefung`** — eingehängt in `npm run gate` (**nur lokal**,
     CI unverändert). Schneidet `git diff` ∩ Risiko-Pfade: **Extraktion** `scripts/normtext/**`,
     `src/lib/normtext/**`, `public/normtext/*.json` · **Rechnen** `src/lib/*(tarif|kosten|gebuehr|`

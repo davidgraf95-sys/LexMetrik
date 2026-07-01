@@ -23,7 +23,7 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
-## Session 1.7.2026 — QS-GP Gegenprüfungs-Gate gebaut (Bausteine a+b+c; NICHT deployt)
+## Session 1.7.2026 — QS-GP Gegenprüfungs-Gate gebaut (Bausteine a+b+c) — gemergt PR #67 + PROD-LIVE
 
 **Grundlagenarbeit (Querschnitt QS-GP, `[OF]`, ultracode).** Das adversariale Gegenprüfungs-Protokoll
 ist von Session-Disziplin zu einem **mechanischen Tor** geworden. **Baustein a:** `check:gegenpruefung`
@@ -41,6 +41,7 @@ verschachtelte `public/normtext/**`, kaputte Glob-Alternation → hand-gerolltes
 ohne Bypass) + unabhängiger Live-E2E; Gate grün, **golden 201 Fälle byte-gleich**, 21 Tests grün.
 Golden-neutral (reine Prüflogik), keine Davids-Fachzeit. Design + Befunde:
 `docs/superpowers/specs/2026-07-01-gegenpruefung-gate-design.md`. CLAUDE.md §14.4 auf «Tor steht» aktualisiert.
+**Gemergt PR #67 (`252731bd`) + Prod-live** (Git-Integration `dpl_Go2D1D3…`, target production READY; App-Output byte-identisch — reines Tooling, kein User-sichtbarer Change). Branch aufgeräumt.
 
 ## Session 1.7.2026 — I4 Bemessungskriterien + I9-Rest → W1·4 geparkt, 26×-Slot frei (NICHT gemergt/deployt)
 
