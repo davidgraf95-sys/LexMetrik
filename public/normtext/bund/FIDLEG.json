@@ -161,7 +161,7 @@
             },
             {
               "marke": "b",
-              "text": "Effekten: vereinheitlichte und zum massenweisen Handel geeignete Wertpapiere, Wertrechte, insbesondere einfache Wertrechte nach Artikel 973 c des Obligationenrechts (OR) und Registerwertrechte nach Artikel 973 d OR, sowie Derivate und Bucheffekten;"
+              "text": "Effekten: vereinheitlichte und zum massenweisen Handel geeignete Wertpapiere, Wertrechte, insbesondere einfache Wertrechte nach Artikel 973c des Obligationenrechts (OR) und Registerwertrechte nach Artikel 973d OR, sowie Derivate und Bucheffekten;"
             },
             {
               "marke": "c",
@@ -194,7 +194,7 @@
             },
             {
               "marke": "d",
-              "text": "Finanzdienstleister: Personen, die gewerbsmässig Finanzdienstleistungen in der Schweiz oder für Kundinnen und Kunden in der Schweiz erbringen, wobei Gewerbsmässigkeit gegeben ist, wenn eine selbstständige, auf dauernden Erwerb ausgerichtete wirtschaftliche Tätigkeit vorliegt ;"
+              "text": "Finanzdienstleister: Personen, die gewerbsmässig Finanzdienstleistungen in der Schweiz oder für Kundinnen und Kunden in der Schweiz erbringen, wobei Gewerbsmässigkeit gegeben ist, wenn eine selbstständige, auf dauernden Erwerb ausgerichtete wirtschaftliche Tätigkeit vorliegt;"
             },
             {
               "marke": "e",
@@ -223,7 +223,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_3",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20240301",
-      "sha": "da0e6d5fff17d5fbbbd3e0881caaf2da9896984626166d35a5bd317e83e7aafe"
+      "sha": "80336391de6cffd974c3d0e0743087f8f6bbb45fc98adff7fe93aba82f7af459"
     },
     {
       "id": "bund/FIDLEG/art_4",
@@ -293,7 +293,7 @@
             },
             {
               "marke": "i",
-              "text": "für vermögende Privatkundinnen und -kunden errichtete private Anlage strukturen mit professioneller Tresorerie."
+              "text": "für vermögende Privatkundinnen und -kunden errichtete private Anlagestrukturen mit professioneller Tresorerie."
             }
           ]
         },
@@ -332,7 +332,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_4",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20240301",
-      "sha": "4de618547709828fd88392cdf928bc03c99d7e74a76b84dbd329b945d6c5bc91"
+      "sha": "f176ab259c95816c066868d40679ec3b08492716dcc6ddf2279f33d3298ac15c"
     },
     {
       "id": "bund/FIDLEG/art_5",
@@ -344,7 +344,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Vermögende Privatkundinnen und -kunden und für diese errichtete private An lagestrukturen können erklären, dass sie als professionelle Kunden gelten wollen ( Opting-out )."
+          "text": "Vermögende Privatkundinnen und -kunden und für diese errichtete private Anlagestrukturen können erklären, dass sie als professionelle Kunden gelten wollen (Opting-out)."
         },
         {
           "absatz": "2",
@@ -370,7 +370,7 @@
         },
         {
           "absatz": "5",
-          "text": "Professionelle Kunden, die keine institutionellen Kunden im Sinn von Artikel 4 Absatz 4 sind, können erklären, dass sie als Privatkunden gelten wollen ( Opting-in )."
+          "text": "Professionelle Kunden, die keine institutionellen Kunden im Sinn von Artikel 4 Absatz 4 sind, können erklären, dass sie als Privatkunden gelten wollen (Opting-in)."
         },
         {
           "absatz": "6",
@@ -389,7 +389,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_5",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20240301",
-      "sha": "a9f3c658db07b43d1beae936dc3442559718ddee11713da9eb1c2f293d1368e5"
+      "sha": "aa732726ae6c0906a0661461078989f3457829a60d380767e3e7440ff3eca6c4"
     },
     {
       "id": "bund/FIDLEG/art_6",
@@ -487,7 +487,7 @@
         },
         {
           "absatz": "4",
-          "text": "Kein Basisinformationsblatt muss zur Verfügung gestellt werden, wenn die Dienstleistung ausschliesslich in der Aus führung oder Übermittlung von Kunden aufträgen besteht, ausser wenn bereits ein Basisinformationsblatt für das Finanzinstrument vorhanden ist."
+          "text": "Kein Basisinformationsblatt muss zur Verfügung gestellt werden, wenn die Dienstleistung ausschliesslich in der Ausführung oder Übermittlung von Kundenaufträgen besteht, ausser wenn bereits ein Basisinformationsblatt für das Finanzinstrument vorhanden ist."
         },
         {
           "absatz": "5",
@@ -502,7 +502,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_8",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20240301",
-      "sha": "0d3ba1c67c8ca5e648e9769596f5a949849bb8ceb6838ab4b42210f5ec4b02be"
+      "sha": "295bdb52093db9824132187dbbb310065578a02db33ca8437b8e6fc7d8e9ee74"
     },
     {
       "id": "bund/FIDLEG/art_9",
@@ -1068,11 +1068,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "die nach den Artikeln 89–92 dieses Gesetzes oder nach Artikel 86 VAG strafrechtlich verurteilt oder wegen strafbarer Handlungen gegen das Vermögen nach den Artikeln 137–172 ter des Strafgesetzbuches im Strafregister eingetragen sind; oder"
+              "text": "die nach den Artikeln 89–92 dieses Gesetzes oder nach Artikel 86 VAG strafrechtlich verurteilt oder wegen strafbarer Handlungen gegen das Vermögen nach den Artikeln 137–172ter des Strafgesetzbuches im Strafregister eingetragen sind; oder"
             },
             {
               "marke": "b",
-              "text": "gegen die für die einzutragende Tätigkeit ein Tätigkeitsverbot nach Artikel 33 a FINMAG oder ein Berufsverbot nach Artikel 33 FINMAG vorliegt."
+              "text": "gegen die für die einzutragende Tätigkeit ein Tätigkeitsverbot nach Artikel 33a FINMAG oder ein Berufsverbot nach Artikel 33 FINMAG vorliegt."
             }
           ]
         },
@@ -1085,7 +1085,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_29",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20240301",
-      "sha": "86b2989b5b90af27588d456b4861f722402641d76235125fe47f6ddb5c1bafdf"
+      "sha": "aeaafb11125bf03f7ef1721be4e4eccda8b7ba1f52dce49025a550b7d98a5963"
     },
     {
       "id": "bund/FIDLEG/art_30",
@@ -1234,14 +1234,14 @@
         },
         {
           "absatz": "2",
-          "text": "Der Bundesrat regelt die Gebühren. Die Regelung richtet sich nach Artikel 46 a des Regierungs- und Verwaltungsorganisationsgesetzes vom 21. März 1997."
+          "text": "Der Bundesrat regelt die Gebühren. Die Regelung richtet sich nach Artikel 46a des Regierungs- und Verwaltungsorganisationsgesetzes vom 21. März 1997."
         }
       ],
       "stand": "2024-03-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_33",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20240301",
-      "sha": "3fdbccdb5600e5a1c31fd16fb63e656f70b58d45a98fc8974e7a081f439ed07e"
+      "sha": "213617f68f7723ef3b4e629cd3b6cc74d7b09de7a436052458bdf3241130b861"
     },
     {
       "id": "bund/FIDLEG/art_34",
@@ -1276,7 +1276,7 @@
         },
         {
           "absatz": "1bis",
-          "text": "Für die Zulassung von DLT-Effekten nach Artikel 2 Buchstabe b bis FinfraG zum Handel an einem DLT-Handelssystem nach Artikel 73 a FinfraG gelten die Artikel 35–57 und 64–69 sinngemäss."
+          "text": "Für die Zulassung von DLT-Effekten nach Artikel 2 Buchstabe bbis FinfraG zum Handel an einem DLT-Handelssystem nach Artikel 73a FinfraG gelten die Artikel 35–57 und 64–69 sinngemäss."
         },
         {
           "absatz": "2",
@@ -1287,7 +1287,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_35",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20240301",
-      "sha": "475676247a57381b7e3134084e95aabce1ac4bcb3f8574c670c653fb72e04b49"
+      "sha": "146f44f1d53ce13ac7ac4cf4ca01e707613291dd366060f5dab2e1cbf05e8d43"
     },
     {
       "id": "bund/FIDLEG/art_36",
@@ -1480,14 +1480,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Besteht keine Prospektpflicht, so behan deln die Anbieter oder Emittenten die Anlegerinnen und Anleger gleich, wenn sie diesen wesentliche Informationen zu einem öffentlichen Angebot zukommen lassen."
+          "text": "Besteht keine Prospektpflicht, so behandeln die Anbieter oder Emittenten die Anlegerinnen und Anleger gleich, wenn sie diesen wesentliche Informationen zu einem öffentlichen Angebot zukommen lassen."
         }
       ],
       "stand": "2024-03-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_39",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20240301",
-      "sha": "06d3b866bd5b2495f4a45d36464055517f57b96c666fef7dd589f7b6289ab626"
+      "sha": "6522747e707fa359af15ae13bad0488008652e112f9326cc16b4c77a6bd9b0b6"
     },
     {
       "id": "bund/FIDLEG/art_40",
@@ -1905,14 +1905,14 @@
         },
         {
           "absatz": "2",
-          "text": "Die FINMA kann kollektive Kapitalanlagen nach dem KAG ganz oder teilweise von den Bestimmungen dieses Kapitels befreien, sofern sie ausschliesslich qualifizierten Anlegerinnen und Anlegern nach Artikel 10 Absätze 3 und 3 ter KAG offenstehen und der Schutzzweck dieses Gesetzes dadurch nicht beeinträchtigt wird."
+          "text": "Die FINMA kann kollektive Kapitalanlagen nach dem KAG ganz oder teilweise von den Bestimmungen dieses Kapitels befreien, sofern sie ausschliesslich qualifizierten Anlegerinnen und Anlegern nach Artikel 10 Absätze 3 und 3ter KAG offenstehen und der Schutzzweck dieses Gesetzes dadurch nicht beeinträchtigt wird."
         }
       ],
       "stand": "2024-03-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_50",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20240301",
-      "sha": "2ce728f6c1396fcddd123915f221d72ba76c8fd405a2081da2b0ee3241fa9746"
+      "sha": "7f7af14f68b3c72cb604e9a2ab8ed88c55412c1a9b56bc7aa48efaa338f98aaa"
     },
     {
       "id": "bund/FIDLEG/art_51",
@@ -2124,14 +2124,14 @@
         },
         {
           "absatz": "2",
-          "text": "Der Bundesrat regelt die Gebühren. Die Regelung richtet sich nach Artikel 46 a des Regierungs- und Verwaltungsorganisationsgesetzes vom 21. März 1997."
+          "text": "Der Bundesrat regelt die Gebühren. Die Regelung richtet sich nach Artikel 46a des Regierungs- und Verwaltungsorganisationsgesetzes vom 21. März 1997."
         }
       ],
       "stand": "2024-03-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2019/758/de#art_57",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20240301",
-      "sha": "47b1ccf9deba6e527062535def057ccb78c85aab794f40c7c39b3a1e0fda20f9"
+      "sha": "3934fc75cb8302acbbac58d99f91864a362bfad0e3344dedc8a34c9ebef6fee1"
     },
     {
       "id": "bund/FIDLEG/art_58",

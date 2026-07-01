@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import { NORM_IM_TEXT, fedlexLinkFuerArtikel } from '../lib/fedlex';
+import { NORM_IM_TEXT, fedlexLinkFuerArtikel, fremdgesetzNachArtikel } from '../lib/fedlex';
 import { NormChip } from './vorlagen/ui';
 import { RechtsprechungText } from './RechtsprechungLink';
 
@@ -57,9 +57,29 @@ const ART_INTERN = /\bArt(?:\.|ikel)\s+(\d+(?:[a-z])?(?:bis|ter|quater|quinquies
 
 function restMitIntern(s: string, key: string, intern?: InternRefs): React.ReactNode {
   if (!intern || !s) return s ? <RechtsprechungText key={key} text={s} /> : null;
+  // N2 (Bündel N): Kürzel DIESES Erlasses (aus dem Lese-Basispfad, «…/bund/AHVV»
+  // → «AHVV») — nennt ein Verweis exakt das eigene Kürzel, ist es ein echter
+  // Self-Verweis und bleibt verlinkt; ein FREMDES Kürzel unterdrückt den Link.
+  // Normalisiert (nur A–Z0–9): der Register-Schlüssel trägt «_» (FINFRAV_FINMA),
+  // der FEDLEX-Key «-» (FinfraV-FINMA) — ohne Normalisierung würde ein Gesetz mit
+  // getrenntem Kürzel den eigenen Self-Verweis fälschlich unterdrücken (QS-GP-Fund
+  // 1.7.: FinfraV-FINMA art_50a, betrifft alle 6 getrennt-benannten Kind-Erlasse).
+  const kuerzelKanon = (s: string) => s.toUpperCase().replace(/[^A-Z0-9]/g, '');
+  const eigenesKuerzel = kuerzelKanon(intern.basisPfad.split('/').pop() ?? '');
   const out: React.ReactNode[] = [];
   let last = 0;
   for (const m of s.matchAll(ART_INTERN)) {
+    const rest = s.slice(m.index + m[0].length);
+    // N2: Nennt der Verweis ein ANDERES Bundesgesetz — aus- ODER abgeschrieben
+    // («Artikel 1a Absatz 1 Buchstabe c AHVG» in der AHVV → AHVG) —, zeigt
+    // «Artikel N» auf JENES Gesetz; der interne Self-Link wäre falsch (§1) →
+    // unterdrücken. Deterministisch aus der FEDLEX-Kürzelliste (§5). Das genaue
+    // Fremdgesetz-Routing (Verweis-Chip auf den anderen Erlass) bleibt eine
+    // eigene, verifizierte Datenaufgabe (David-Entscheid 28.6.: kein Link >
+    // falscher Link). Ergänzt die alte Sofort-Kürzel-Regel unten (die auch
+    // Nicht-FEDLEX-Kürzel fängt), fängt aber die ausgeschriebene Passus-Form.
+    const fremd = fremdgesetzNachArtikel(rest);
+    if (fremd && kuerzelKanon(fremd) !== eigenesKuerzel) continue;
     // M12 (§1/§6): Folgt dem bare «Art./Artikel N» ein Gesetzes-KÜRZEL (≥2 Gross-
     // buchstaben, z.B. «Artikel 64 BGG», «Art. 5 VwVG»), ist es ein Verweis auf
     // ein ANDERES Gesetz (in Verordnungen meist das Trägergesetz) — NICHT auf
@@ -70,7 +90,7 @@ function restMitIntern(s: string, key: string, intern?: InternRefs): React.React
     // Link UNTERDRÜCKT (lieber kein Link als ein plausibel-falscher, §1/§6,
     // David-Entscheid 28.6.). «Absatz/Buchstabe/Ziffer» (EIN Grossbuchstabe)
     // bleiben unberührt → echte Self-Verweise («Artikel 6 Absatz 2») weiter verlinkt.
-    if (/^\s+(?:[A-ZÄÖÜ]{2,}|[A-ZÄÖÜ][a-zäöü]*[A-ZÄÖÜ]\w*)/.test(s.slice(m.index + m[0].length))) continue;
+    if (/^\s+(?:[A-ZÄÖÜ]{2,}|[A-ZÄÖÜ][a-zäöü]*[A-ZÄÖÜ]\w*)/.test(rest)) continue;
     const token = intern.tokenMap.get(normRef(m[1]));
     if (!token) continue; // kein Artikel dieses Erlasses → als Text belassen
     const start = m.index;

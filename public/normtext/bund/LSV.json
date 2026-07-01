@@ -1688,7 +1688,7 @@
         },
         {
           "absatz": "3",
-          "text": "Für den Vollzug der Vorschriften über Emissionsbegrenzungen (Art. 4, 7–9 und 12), Sanierungen (Art. 13, 14, 16–18 und 20) sowie über die Ermittlung und Beurteilung von Lärmimmissionen (Art. 36, 37, 37 a und 40) sorgt:",
+          "text": "Für den Vollzug der Vorschriften über Emissionsbegrenzungen (Art. 4, 7–9 und 12), Sanierungen (Art. 13, 14, 16–18 und 20) sowie über die Ermittlung und Beurteilung von Lärmimmissionen (Art. 36, 37, 37a und 40) sorgt:",
           "items": [
             {
               "marke": "a",
@@ -1769,7 +1769,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_45",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260401",
-      "sha": "c5f935c328f8cd760c0e9f1348062d1dd10ae24bffac09c8d35117de36270a2c"
+      "sha": "0ff9e9e371c6f93d6c1614b5fe4933df1e5bbbe37f94b9f4aeccdd033385e9ba"
     },
     {
       "id": "bund/LSV/art_45_a",
@@ -1935,7 +1935,7 @@
         },
         {
           "absatz": "1",
-          "text": "Das bewertete Bau-Schalldämm-Mass mit am Bau gemessenem Spektrum-Anpassungswert R’w + (C oder C tr ) der Fenster einschliesslich der zugehörigen Bauteile wie Rollladenkästen und Schalldämmlüfter muss in Abhängigkeit des massgebenden Beurteilungspegels Lr mindestens folgende Werte aufweisen:"
+          "text": "Das bewertete Bau-Schalldämm-Mass mit am Bau gemessenem Spektrum-Anpassungswert R’w + (C oder Ctr) der Fenster einschliesslich der zugehörigen Bauteile wie Rollladenkästen und Schalldämmlüfter muss in Abhängigkeit des massgebenden Beurteilungspegels Lr mindestens folgende Werte aufweisen:"
         },
         {
           "absatz": null,
@@ -1952,7 +1952,7 @@
               },
               {
                 "typ": "zahl",
-                "titel": "R’w + (C oder C tr ) in dB"
+                "titel": "R’w + (C oder Ctr) in dB"
               }
             ],
             "zeilen": [
@@ -1979,11 +1979,11 @@
         },
         {
           "absatz": "4",
-          "text": "Das bewertete Bau-Schalldämm-Mass R’w und der Spektrum-Anpassungswert C oder C tr werden nach den anerkannten Regeln ermittelt. Als solche gelten insbesondere die Normen der Internationalen Normenorganisation ISO 140 und ISO 717."
+          "text": "Das bewertete Bau-Schalldämm-Mass R’w und der Spektrum-Anpassungswert C oder Ctr werden nach den anerkannten Regeln ermittelt. Als solche gelten insbesondere die Normen der Internationalen Normenorganisation ISO 140 und ISO 717."
         },
         {
           "absatz": "5",
-          "text": "Der Spektrum-Anpassungswert C tr gilt bei überwiegend tieffrequentem Lärm, insbesondere von Strassen mit einer Höchstgeschwindigkeit bis 80 km/h und von Flugplätzen. Der Spektrum-Anpassungswert C gilt bei überwiegend hochfrequentem Lärm, insbesondere von Strassen mit einer Höchstgeschwindigkeit über 80 km/h und von Eisenbahnen."
+          "text": "Der Spektrum-Anpassungswert Ctr gilt bei überwiegend tieffrequentem Lärm, insbesondere von Strassen mit einer Höchstgeschwindigkeit bis 80 km/h und von Flugplätzen. Der Spektrum-Anpassungswert C gilt bei überwiegend hochfrequentem Lärm, insbesondere von Strassen mit einer Höchstgeschwindigkeit über 80 km/h und von Eisenbahnen."
         },
         {
           "absatz": "6",
@@ -1994,7 +1994,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#annex_1",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260401",
-      "sha": "e0679ac60095c562700affd385eed02929720f062589abf08e7486f1c11fce18"
+      "sha": "b26ff0877eae067e46f5c2ac34af88888c0ebc40a5d5f5a33c61912d9bc9b620"
     },
     {
       "id": "bund/LSV/annex_2",
@@ -2181,7 +2181,7 @@
         },
         {
           "absatz": null,
-          "text": "Lr = 10 ⋅ log (10 0,1 Lr1 +10 0,1 Lr2 )"
+          "text": "Lr = 10 ⋅ log (100,1 Lr1 +100,1 Lr2)"
         },
         {
           "absatz": "2",
@@ -2320,7 +2320,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#annex_3",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260401",
-      "sha": "e8414fff4b0f4682e2c4778ac03fa57a6fcef6ab62723acb7bf285f6941e3dde"
+      "sha": "f49582543ea7c2001eab9e3f960375ca96986827f0f2a253d3ed49a05015eb02"
     },
     {
       "id": "bund/LSV/annex_4",
@@ -2451,7 +2451,7 @@
         },
         {
           "absatz": null,
-          "text": "Lr = 10 ⋅ log (10 01, ⋅ Lr1 + 10 01, ⋅ Lr2 )"
+          "text": "Lr = 10 ⋅ log (1001, ⋅ Lr1 + 1001, ⋅ Lr2)"
         },
         {
           "absatz": "2",
@@ -2582,7 +2582,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#annex_4",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260401",
-      "sha": "53cffa1c6726835936cf5e0ef150213bdc484910c36b128a927badf093f21163"
+      "sha": "260e473951dea33033430cf1fdefe21797844bfc1f0361d559bc2127f241ea61"
     },
     {
       "id": "bund/LSV/annex_5",
@@ -2633,7 +2633,7 @@
         },
         {
           "absatz": null,
-          "text": "21 Belastungsgrenzwerte in Lr k für den Lärm des Verkehrs von Kleinluftfahrzeugen",
+          "text": "21 Belastungsgrenzwerte in Lrk für den Lärm des Verkehrs von Kleinluftfahrzeugen",
           "titel": 4
         },
         {
@@ -2647,15 +2647,15 @@
               },
               {
                 "typ": "zahl",
-                "titel": "Planungswert Lr k in dB(A)"
+                "titel": "Planungswert Lrk in dB(A)"
               },
               {
                 "typ": "zahl",
-                "titel": "Immissionsgrenzwert Lr k in dB(A)"
+                "titel": "Immissionsgrenzwert Lrk in dB(A)"
               },
               {
                 "typ": "zahl",
-                "titel": "Alarmwert Lr k in dB(A)"
+                "titel": "Alarmwert Lrk in dB(A)"
               }
             ],
             "zeilen": [
@@ -2693,11 +2693,11 @@
         },
         {
           "absatz": null,
-          "text": "Zusätzlich zu den Belastungsgrenzwerten in Lr k gelten für den Lärm des gesamten Verkehrs auf zivilen Flugplätzen, auf denen Grossflugzeuge verkehren, die nachfolgenden Belastungsgrenzwerte:"
+          "text": "Zusätzlich zu den Belastungsgrenzwerten in Lrk gelten für den Lärm des gesamten Verkehrs auf zivilen Flugplätzen, auf denen Grossflugzeuge verkehren, die nachfolgenden Belastungsgrenzwerte:"
         },
         {
           "absatz": null,
-          "text": "221 Belastungsgrenzwerte in Lr t für den Tag (06–22 Uhr)",
+          "text": "221 Belastungsgrenzwerte in Lrt für den Tag (06–22 Uhr)",
           "titel": 5
         },
         {
@@ -2711,15 +2711,15 @@
               },
               {
                 "typ": "zahl",
-                "titel": "Planungswert Lr t in dB(A)"
+                "titel": "Planungswert Lrt in dB(A)"
               },
               {
                 "typ": "zahl",
-                "titel": "Immissionsgrenzwert Lr t in dB(A)"
+                "titel": "Immissionsgrenzwert Lrt in dB(A)"
               },
               {
                 "typ": "zahl",
-                "titel": "Alarmwert Lr t in dB(A)"
+                "titel": "Alarmwert Lrt in dB(A)"
               }
             ],
             "zeilen": [
@@ -2752,7 +2752,7 @@
         },
         {
           "absatz": null,
-          "text": "222 Belastungsgrenzwerte in Lr n für die erste (22–23 Uhr), die zweite (23–24 Uhr) und die letzte Nachtstunde (05–06 Uhr)",
+          "text": "222 Belastungsgrenzwerte in Lrn für die erste (22–23 Uhr), die zweite (23–24 Uhr) und die letzte Nachtstunde (05–06 Uhr)",
           "titel": 5
         },
         {
@@ -2761,9 +2761,9 @@
           "mehrspaltig": {
             "kopf": [
               "Empfindlichkeitsstufe (Art. 43)",
-              "Planungswert Lr n in dB(A)",
-              "Immissionsgrenzwert Lr n in dB(A)",
-              "Alarmwert Lr n in dB(A)"
+              "Planungswert Lrn in dB(A)",
+              "Immissionsgrenzwert Lrn in dB(A)",
+              "Alarmwert Lrn in dB(A)"
             ],
             "zeilen": [
               [
@@ -2806,7 +2806,7 @@
         },
         {
           "absatz": null,
-          "text": "Zusätzlich zu den Belastungsgrenzwerten in Lr k gelten für den Lärm des Verkehrs auf zivilen Flugplätzen, auf denen ausschliesslich Helikopter verkehren (Helikopterflugplätze), die nachfolgenden Belastungsgrenzwerte in max:"
+          "text": "Zusätzlich zu den Belastungsgrenzwerten in Lrk gelten für den Lärm des Verkehrs auf zivilen Flugplätzen, auf denen ausschliesslich Helikopter verkehren (Helikopterflugplätze), die nachfolgenden Belastungsgrenzwerte in max:"
         },
         {
           "absatz": null,
@@ -2860,7 +2860,7 @@
         },
         {
           "absatz": null,
-          "text": "3 Ermittlung des Beurteilungspegels Lr k für den Lärm des Verkehrs von Kleinluftfahrzeugen",
+          "text": "3 Ermittlung des Beurteilungspegels Lrk für den Lärm des Verkehrs von Kleinluftfahrzeugen",
           "titel": 3
         },
         {
@@ -2870,15 +2870,15 @@
         },
         {
           "absatz": "1",
-          "text": "Der Beurteilungspegel Lr k für den Lärm des Verkehrs von Kleinluftfahrzeugen ist die Summe des A-bewerteten Mittelungspegels Leq k und der Pegelkorrektur K:"
+          "text": "Der Beurteilungspegel Lrk für den Lärm des Verkehrs von Kleinluftfahrzeugen ist die Summe des A-bewerteten Mittelungspegels Leqk und der Pegelkorrektur K:"
         },
         {
           "absatz": null,
-          "text": "Lr k = Leq k + K"
+          "text": "Lrk = Leqk + K"
         },
         {
           "absatz": "2",
-          "text": "Der Mittelungspegel Leq k wird für die durchschnittliche Zahl der stündlichen Flugbewegungen (Flugbewegungszahl n) für einen Tag mit durchschnittlichem Spitzenbetrieb ermittelt."
+          "text": "Der Mittelungspegel Leqk wird für die durchschnittliche Zahl der stündlichen Flugbewegungen (Flugbewegungszahl n) für einen Tag mit durchschnittlichem Spitzenbetrieb ermittelt."
         },
         {
           "absatz": "3",
@@ -2961,27 +2961,27 @@
         },
         {
           "absatz": "2",
-          "text": "Der Beurteilungspegel für den Tag Lr t für den Lärm des Gesamtverkehrs auf zivilen Flugplätzen, auf denen Grossflugzeuge verkehren, wird aus den Beurteilungspegeln für Kleinluftfahrzeuge Lr k und Grossflugzeuge Lr g wie folgt berechnet:"
+          "text": "Der Beurteilungspegel für den Tag Lrt für den Lärm des Gesamtverkehrs auf zivilen Flugplätzen, auf denen Grossflugzeuge verkehren, wird aus den Beurteilungspegeln für Kleinluftfahrzeuge Lrk und Grossflugzeuge Lrg wie folgt berechnet:"
         },
         {
           "absatz": null,
-          "text": "Lr t = 10 · log (10 0,1 · Lr k + 10 0,1 · Lr g )"
+          "text": "Lrt = 10 · log (10 0,1 · Lrk + 10 0,1 · Lrg)"
         },
         {
           "absatz": null,
-          "text": "3 Der Beurteilungspegel für den Tag Lr g für den Lärm des Verkehrs von Grossflugzeugen ist die Summe des A-bewerteten Mittelungspegels Leq g, der durch den Betrieb von Flugzeugen in der Zeit von 06–22 Uhr im Jahresmittel verursacht wird:"
+          "text": "3 Der Beurteilungspegel für den Tag Lrg für den Lärm des Verkehrs von Grossflugzeugen ist die Summe des A-bewerteten Mittelungspegels Leqg, der durch den Betrieb von Flugzeugen in der Zeit von 06–22 Uhr im Jahresmittel verursacht wird:"
         },
         {
           "absatz": null,
-          "text": "Lr g = Leq g"
+          "text": "Lrg = Leqg"
         },
         {
           "absatz": "4",
-          "text": "Der Beurteilungspegel Lr n für den Lärm des Verkehrs von Grossflugzeugen für die erste, zweite und letzte Nachtstunde ist der A-bewertete Mittelungspegel Leq n, der durch den Betrieb von Flugzeugen in der Zeit von 22–23 Uhr, 23–24 Uhr und 05–06 Uhr im Jahresmittel verursacht wird:"
+          "text": "Der Beurteilungspegel Lrn für den Lärm des Verkehrs von Grossflugzeugen für die erste, zweite und letzte Nachtstunde ist der A-bewertete Mittelungspegel Leqn, der durch den Betrieb von Flugzeugen in der Zeit von 22–23 Uhr, 23–24 Uhr und 05–06 Uhr im Jahresmittel verursacht wird:"
         },
         {
           "absatz": null,
-          "text": "Lr n = Leq n"
+          "text": "Lrn = Leqn"
         },
         {
           "absatz": null,
@@ -2990,7 +2990,7 @@
         },
         {
           "absatz": "1",
-          "text": "Die Mittelungspegel Leq g und Leq n werden anhand der Betriebsdaten ermittelt."
+          "text": "Die Mittelungspegel Leqg und Leqn werden anhand der Betriebsdaten ermittelt."
         },
         {
           "absatz": "2",
@@ -3018,7 +3018,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#annex_5",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260401",
-      "sha": "d1ae257fa5208f27f893049878e76af470f7adfb725d644d19890f5c43df4f30"
+      "sha": "abcf22fe0bbb97b48948aa211ac7d3ee2690e76904b1a8ee7a24d5761b819c18"
     },
     {
       "id": "bund/LSV/annex_6",
@@ -3659,12 +3659,12 @@
         },
         {
           "absatz": null,
-          "text": "22 Belastungsgrenzwerte in Lr z",
+          "text": "22 Belastungsgrenzwerte in Lrz",
           "titel": 4
         },
         {
           "absatz": null,
-          "text": "Zusätzlich zu den Belastungsgrenzwerten in Lr gelten für den Lärm des zivilen Verkehrs auf Militärflugplätzen die Belastungsgrenzwerte in Lr nach Anhang 5, im Folgenden Lr z genannt."
+          "text": "Zusätzlich zu den Belastungsgrenzwerten in Lr gelten für den Lärm des zivilen Verkehrs auf Militärflugplätzen die Belastungsgrenzwerte in Lr nach Anhang 5, im Folgenden Lrz genannt."
         },
         {
           "absatz": null,
@@ -3678,43 +3678,43 @@
         },
         {
           "absatz": "1",
-          "text": "Der Beurteilungspegel Lr für den Lärm von Militärflugplätzen wird aus den Beurteilungspegeln für Militärfluglärm Lr m und Zivilfluglärm Lr z wie folgt berechnet:"
+          "text": "Der Beurteilungspegel Lr für den Lärm von Militärflugplätzen wird aus den Beurteilungspegeln für Militärfluglärm Lrm und Zivilfluglärm Lrz wie folgt berechnet:"
         },
         {
           "absatz": null,
-          "text": "Lr = 10 · log (10 0,1 · Lr m + 10 0,1 · Lr z )"
+          "text": "Lr = 10 · log (100,1 · Lrm + 100,1 · Lrz)"
         },
         {
           "absatz": "2",
-          "text": "Der Beurteilungspegel Lr z wird wie der entsprechende Lr von zivilen Flugplätzen nach Anhang 5 Ziffern 3 und 4 ermittelt."
+          "text": "Der Beurteilungspegel Lrz wird wie der entsprechende Lr von zivilen Flugplätzen nach Anhang 5 Ziffern 3 und 4 ermittelt."
         },
         {
           "absatz": "3",
-          "text": "Der Beurteilungspegel Lr m wird aus den Teilbeurteilungspegeln für den Lärm von Flugzeugen mit Strahlantrieb Lr j und mit Propellerantrieb Lr p wie folgt berechnet:"
+          "text": "Der Beurteilungspegel Lrm wird aus den Teilbeurteilungspegeln für den Lärm von Flugzeugen mit Strahlantrieb Lrj und mit Propellerantrieb Lrp wie folgt berechnet:"
         },
         {
           "absatz": null,
-          "text": "Lr m = 10 · log (10 0,1 · Lr j + 10 0,1 · Lr p )"
+          "text": "Lrm = 10 · log (100,1 · Lrj + 100,1 · Lrp)"
         },
         {
           "absatz": "4",
-          "text": "Der Teilbeurteilungspegel Lr j ist die Summe des A-bewerteten Mittelungspegels Leq j, der durch den Betrieb von Flugzeugen mit Strahlantrieb verursacht wird, und den Pegelkorrekturen K 0 und K 1:"
+          "text": "Der Teilbeurteilungspegel Lrj ist die Summe des A-bewerteten Mittelungspegels Leqj, der durch den Betrieb von Flugzeugen mit Strahlantrieb verursacht wird, und den Pegelkorrekturen K 0 und K 1:"
         },
         {
           "absatz": null,
-          "text": "Lr j = Leq j + K 0 + K 1"
+          "text": "Lrj = Leqj + K 0 + K 1"
         },
         {
           "absatz": "5",
-          "text": "Der Teilbeurteilungspegel Lr p ist die Summe des A-bewerteten Mittelungspegels Leq p, der durch den Betrieb von Flugzeugen mit Propellerantrieb verursacht wird, und den Pegelkorrekturen K 0 und K 2:"
+          "text": "Der Teilbeurteilungspegel Lrp ist die Summe des A-bewerteten Mittelungspegels Leqp, der durch den Betrieb von Flugzeugen mit Propellerantrieb verursacht wird, und den Pegelkorrekturen K 0 und K 2:"
         },
         {
           "absatz": null,
-          "text": "Lr p = Leq p + K 0 + K 2"
+          "text": "Lrp = Leqp + K 0 + K 2"
         },
         {
           "absatz": "6",
-          "text": "Die Mittelungspegel Leq j und Leq p werden für die durchschnittliche Zahl der stündlichen Flugbewegungen getrennt nach Flugzeugen mit Strahl- und mit Propellerantrieb (Flugbewegungszahlen n j und n p ) für einen Tag mit durchschnittlichem Betrieb ermittelt."
+          "text": "Die Mittelungspegel Leqj und Leqp werden für die durchschnittliche Zahl der stündlichen Flugbewegungen getrennt nach Flugzeugen mit Strahl- und mit Propellerantrieb (Flugbewegungszahlen nj und np) für einen Tag mit durchschnittlichem Betrieb ermittelt."
         },
         {
           "absatz": "7",
@@ -3722,16 +3722,16 @@
         },
         {
           "absatz": null,
-          "text": "32 Flugbewegungszahlen n j und n p bei Militärflugplätzen",
+          "text": "32 Flugbewegungszahlen nj und np bei Militärflugplätzen",
           "titel": 4
         },
         {
           "absatz": "1",
-          "text": "Bei bestehenden Militärflugplätzen werden die Flugbewegungszahlen n j und n p wie folgt ermittelt:"
+          "text": "Bei bestehenden Militärflugplätzen werden die Flugbewegungszahlen nj und np wie folgt ermittelt:"
         },
         {
           "absatz": null,
-          "text": "n j = M j /(12 · 130) n p = M p /(12 · 130)",
+          "text": "nj = Mj/(12 · 130) np = Mp/(12 · 130)",
           "items": [
             {
               "marke": "a",
@@ -3739,17 +3739,17 @@
             },
             {
               "marke": "b",
-              "text": "für diese sechs Monate werden die Zahlen der Flugbewegungen von Flugzeugen mit Strahlantrieb M j und mit Propellerantrieb M p ermittelt;"
+              "text": "für diese sechs Monate werden die Zahlen der Flugbewegungen von Flugzeugen mit Strahlantrieb Mj und mit Propellerantrieb Mp ermittelt;"
             },
             {
               "marke": "c",
-              "text": "aus M j und M p werden durch Mittelung über 130 Tage und zwölf Tagesstunden die Flugbewegungszahlen n j und n p wie folgt berechnet:"
+              "text": "aus Mj und Mp werden durch Mittelung über 130 Tage und zwölf Tagesstunden die Flugbewegungszahlen nj und np wie folgt berechnet:"
             }
           ]
         },
         {
           "absatz": "2",
-          "text": "Bei Militärflugplätzen, die neu erstellt oder geändert werden, werden die Flugbewegungszahlen n j und n p anhand von Prognosen über die Verkehrsentwicklung ermittelt."
+          "text": "Bei Militärflugplätzen, die neu erstellt oder geändert werden, werden die Flugbewegungszahlen nj und np anhand von Prognosen über die Verkehrsentwicklung ermittelt."
         },
         {
           "absatz": null,
@@ -3762,34 +3762,34 @@
         },
         {
           "absatz": "2",
-          "text": "Die Pegelkorrektur K 1 wird anhand der jährlichen Flugbewegungszahl von Flugzeugen mit Strahlantrieb N j wie folgt berechnet:"
+          "text": "Die Pegelkorrektur K 1 wird anhand der jährlichen Flugbewegungszahl von Flugzeugen mit Strahlantrieb Nj wie folgt berechnet:"
         },
         {
           "absatz": null,
-          "text": "K 1 = 0 für N j < 15 000"
+          "text": "K 1 = 0 für Nj < 15 000"
         },
         {
           "absatz": null,
-          "text": "K 1 = 10 · log (N j /15 000) für N j ≥ 15 000"
+          "text": "K 1 = 10 · log (Nj/15 000) für Nj ≥ 15 000"
         },
         {
           "absatz": "3",
-          "text": "Die Pegelkorrektur K 2 wird anhand der jährlichen Flugbewegungszahl von Flugzeugen mit Propellerantrieb N p wie folgt berechnet:"
+          "text": "Die Pegelkorrektur K 2 wird anhand der jährlichen Flugbewegungszahl von Flugzeugen mit Propellerantrieb Np wie folgt berechnet:"
         },
         {
           "absatz": null,
-          "text": "K 2 = 0 für N p < 15 000"
+          "text": "K 2 = 0 für Np < 15 000"
         },
         {
           "absatz": null,
-          "text": "K 2 = 10 · log (N p /15 000) für N p ≥ 15 000"
+          "text": "K 2 = 10 · log (Np/15 000) für Np ≥ 15 000"
         }
       ],
       "stand": "2026-04-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#annex_8",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260401",
-      "sha": "97c7a1ed88fddd3706187ed0c3a416c2a0b68c58ba534a6d654f163004b4f0bb"
+      "sha": "7cbf089dfd7a202e6e3bde4f288139a256f3f95ca97982f40f0e1e7fb81960aa"
     },
     {
       "id": "bund/LSV/annex_9",
@@ -3845,15 +3845,15 @@
               },
               {
                 "typ": "zahl",
-                "titel": "Planungswert L r in dB(A)"
+                "titel": "Planungswert Lr in dB(A)"
               },
               {
                 "typ": "zahl",
-                "titel": "Immissionsgrenzwert L r in dB(A)"
+                "titel": "Immissionsgrenzwert Lr in dB(A)"
               },
               {
                 "typ": "zahl",
-                "titel": "Alarmwert L r in dB(A)"
+                "titel": "Alarmwert Lr in dB(A)"
               }
             ],
             "zeilen": [
@@ -3900,7 +3900,7 @@
         },
         {
           "absatz": null,
-          "text": "L r =10. log(10 0. 1. L AE1 +10 0. 1. (L AE2 +K1) ) – 10. log(T) + K2"
+          "text": "Lr =10. log(100. 1.L AE1 +100. 1.(L AE2 +K1) ) – 10. log(T) + K2"
         },
         {
           "absatz": null,
@@ -3950,7 +3950,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#annex_9",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260401",
-      "sha": "83a83ee51c91ed1ca781e0e33320c09160c01d900409744fee2dc98ce0fecd01"
+      "sha": "5ede37a3c8e167c2a87a2899482ec9257716ba055f7536ca1366b8ab565be7da"
     }
   ]
 }

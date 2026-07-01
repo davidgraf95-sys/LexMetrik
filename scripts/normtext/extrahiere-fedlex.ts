@@ -361,9 +361,9 @@ function parseDefinitionsListe(
     if (!text && subDlIdx < 0 && markeMatch) {
       // Die nackte Marke + Punkt/Klammer aus dem getaggt-/fussnoten-bereinigten
       // <dt> entfernen; der Rest ist der Punkttext.
-      const dtTextRoh = dekodiereEntities(dtOhneFn.replace(/<[^>]+>/g, ' '))
-        .replace(/\s+/g, ' ')
-        .trim();
+      // entferneTags: identische Bereinigung wie zuvor inline, aber inkl. N1-Fix
+      // (Inline-Tags leerzeichenlos) — «14<i>a</i>» im <dt>-Text bleibt «14a».
+      const dtTextRoh = entferneTags(dtOhneFn);
       const nachMarke = dtTextRoh.replace(
         /^[0-9]+(?:bis|ter|quater|quinquies)?[a-z]?\s*[.)]?\s*|^[a-z](?:bis|ter|quater|quinquies)?\s*[.)]?\s*/i,
         '',
@@ -561,14 +561,48 @@ function parseRohTabelle(tableInner: string, anhang = false): RohTabelle {
   return { kopfZeilen, datenZeilen };
 }
 
+// Inline-Formatierungs-Tags rendern im Fliesstext OHNE Wortabstand
+// (HTML setzt <i>/<sup>/<b>/<a> inline, ohne Leerzeichen). Sie werden darum
+// beim Strippen durch '' ersetzt; Block-/Umbruch-Tags (<br>, <p>, <td>, …)
+// trennen visuell → ' ', damit keine Wörter verkleben.
+const INLINE_STRIP_TAGS = new Set([
+  'i', 'b', 'em', 'strong', 'sup', 'sub', 'span', 'a', 'inl',
+  'abbr', 'cite', 'u', 's', 'small', 'q', 'var', 'mark', 'wbr',
+]);
+
 /**
  * Entfernt alle HTML-Tags, dekodiert HTML-Entities (via dekodiereEntities)
  * und normalisiert Whitespace.
- * Fussnoten-Nummern in <sup><a>…</a></sup> werden durch diese Funktion ebenfalls
- * entfernt, weil der <sup>-Tag als solcher wegfällt.
+ *
+ * N1-Fix (Bündel N, 1.7.2026): Inline-Formatierungs-Tags werden OHNE Leerzeichen
+ * entfernt — die Quelle setzt den Artikelnummer-Buchstaben/das lat. Suffix inline
+ * direkt an die Ziffer («329<i>g</i>», «1<sup>bis</sup>»); ein Leerzeichen an der
+ * Tag-Grenze war UNSER Artefakt («329 g»). Kein blindes Zahl-Leer-Buchstabe-
+ * Muster: echte «1 a)»-Aufzählungen tragen das Leerzeichen in der Quelle und
+ * bleiben unangetastet (§1/§2). Block-/Umbruch-Tags trennen weiterhin mit ' '.
+ * Fussnoten-Nummern in <sup><a>…</a></sup> sind an ALLEN Aufrufstellen schon vor
+ * entferneTags getilgt (entferneFussnotenSups) — hier bleibt kein Marker, der
+ * durch das leerzeichenlose Strippen in den Text leaken könnte.
  */
 function entferneTags(s: string): string {
-  return dekodiereEntities(s.replace(/<[^>]+>/g, ' '))
+  return dekodiereEntities(
+    s
+      // Reine Ziffern-<sup>/<sub> (Exponent «m²», typografischer Bruch «133¹⁄₃»,
+      // Absatz-Hochzahl «72³» im BV-Register, Tabellen-Fussnote «47/50¹») tragen
+      // eine Bedeutung, die beim leerzeichenlosen Verkleben an eine Nachbarziffer
+      // eine IRREFÜHRENDE grössere Zahl erzeugt («1331/3», «723»). Sie behalten
+      // darum den trennenden Abstand (bisheriges Verhalten) — §1: nie zwei Ziffern
+      // stillschweigend zu einer Zahl zusammenführen. NUR Buchstaben-Suffixe
+      // (bis/ter/g …) und sonstige Inline-Formatierung werden verklebt (N1-Fix).
+      .replace(
+        /<sup\b[^>]*>\s*(\d[\d\s]*)\s*<\/sup>|<sub\b[^>]*>\s*(\d[\d\s]*)\s*<\/sub>/gi,
+        (_m, a, b) => ` ${(a ?? b).trim()} `,
+      )
+      .replace(/<[^>]+>/g, (tag) => {
+        const name = tag.match(/^<\/?\s*([a-zA-Z][a-zA-Z0-9]*)/);
+        return name && INLINE_STRIP_TAGS.has(name[1].toLowerCase()) ? '' : ' ';
+      }),
+  )
     .replace(/\s+/g, ' ')
     .trim();
 }

@@ -169,7 +169,7 @@
             },
             {
               "marke": "ater",
-              "text": "Komplementärarzneimittel mit Indikationsangabe: Arzneimittel mit behörd lich genehmigter Angabe eines bestimmten Anwendungsgebiets, die nach den Herstellungsvorschriften komple mentärmedizinischer Therapierichtun gen wie der Homöopathie, der anthroposophischen Medizin oder der tra ditionellen asiatischen Medizin hergestellt und deren Anwendungsgebiet gemäss den Prinzipien der entsprechenden Therapierichtung festgelegt wird;"
+              "text": "Komplementärarzneimittel mit Indikationsangabe: Arzneimittel mit behördlich genehmigter Angabe eines bestimmten Anwendungsgebiets, die nach den Herstellungsvorschriften komplementärmedizinischer Therapierichtungen wie der Homöopathie, der anthroposophischen Medizin oder der traditionellen asiatischen Medizin hergestellt und deren Anwendungsgebiet gemäss den Prinzipien der entsprechenden Therapierichtung festgelegt wird;"
             },
             {
               "marke": "aquater",
@@ -239,15 +239,15 @@
             },
             {
               "marke": "h",
-              "text": "neuer Wirkstoff : Wirkstoff, der in der Schweiz erstmals im Rahmen eines ordentlichen Verfahrens nach Artikel 11 zugelassen wird. Bisher nur in Humanarzneimitteln zugelassene Wirkstoffe gelten als neue Wirkstoffe, wenn sie in Tierarzneimitteln eingesetzt werden, und umgekehrt;"
+              "text": "neuer Wirkstoff: Wirkstoff, der in der Schweiz erstmals im Rahmen eines ordentlichen Verfahrens nach Artikel 11 zugelassen wird. Bisher nur in Humanarzneimitteln zugelassene Wirkstoffe gelten als neue Wirkstoffe, wenn sie in Tierarzneimitteln eingesetzt werden, und umgekehrt;"
             },
             {
               "marke": "i",
-              "text": "ö ffentliche Apotheke: kantonal bewilligter Apothekenbetrieb, durch eine Apothekerin oder einen Apotheker geführt, der regelmässige Öffnungszeiten garantiert und einen direkten Zugang für die Öffentlichkeit anbietet;"
+              "text": "öffentliche Apotheke: kantonal bewilligter Apothekenbetrieb, durch eine Apothekerin oder einen Apotheker geführt, der regelmässige Öffnungszeiten garantiert und einen direkten Zugang für die Öffentlichkeit anbietet;"
             },
             {
               "marke": "j",
-              "text": "Spitalapotheke: Einrichtung in einem Spitalbetrieb, die von einer Apothekerin oder einem Apotheker geführt wird und namentlich pharmazeutische Dienstleistungen an die Kundschaft des Spitals anbietet; für die Herstellung von Radiopharmazeutika nach Artikel 9 Absatz 2 Buchstabe a und Absatz 2 bis gilt auch ein spitalinterner radiopharmazeutischer Betrieb als Spitalapotheke;"
+              "text": "Spitalapotheke: Einrichtung in einem Spitalbetrieb, die von einer Apothekerin oder einem Apotheker geführt wird und namentlich pharmazeutische Dienstleistungen an die Kundschaft des Spitals anbietet; für die Herstellung von Radiopharmazeutika nach Artikel 9 Absatz 2 Buchstabe a und Absatz 2bis gilt auch ein spitalinterner radiopharmazeutischer Betrieb als Spitalapotheke;"
             },
             {
               "marke": "k",
@@ -268,7 +268,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/422/de#art_4",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250101",
-      "sha": "bf19159701ef6a22c2e1aad37222c75aa22a5136f1d652872656cd00502c28e2"
+      "sha": "ed57400d15c2ff1fd99c49fae7e395b9c8b9501b750e88daf6a5edabcbf0118b"
     },
     {
       "id": "bund/HMG/art_5",
@@ -298,7 +298,7 @@
           "items": [
             {
               "marke": "a",
-              "text": "die Herstellung von Arzneimitteln nach Artikel 9 Absatz 2 Buchstaben a–c bis einer kantonalen Bewilligungs- oder Meldepflicht unterstellen;"
+              "text": "die Herstellung von Arzneimitteln nach Artikel 9 Absatz 2 Buchstaben a–cbis einer kantonalen Bewilligungs- oder Meldepflicht unterstellen;"
             },
             {
               "marke": "b",
@@ -308,14 +308,14 @@
         },
         {
           "absatz": "3",
-          "text": "Er kann für die Herstellung bestimmter Kategorien pharmazeutischer Hilfsstoffe, die ein erhöhtes Risiko für Patientinnen und Patienten aufweisen, in Überein stimmung mit den entsprechenden, international anerkannten Anforde rungen eine Be willigungspflicht vorsehen ."
+          "text": "Er kann für die Herstellung bestimmter Kategorien pharmazeutischer Hilfsstoffe, die ein erhöhtes Risiko für Patientinnen und Patienten aufweisen, in Übereinstimmung mit den entsprechenden, international anerkannten Anforderungen eine Bewilligungspflicht vorsehen."
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/422/de#art_5",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250101",
-      "sha": "678f1cfcc63709f1c77ea15436fb78199b5df6548e8135609c264d07740836f0"
+      "sha": "727211a7c9b6d3fbe5c5f6cd83ca7078f008e823114ec93b0e430728e0980a11"
     },
     {
       "id": "bund/HMG/art_6",
@@ -439,11 +439,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "Arzneimittel, die in einer öffentlichen Apotheke oder in einer Spitalapotheke in Ausführung einer ärztlichen Verschreibung für eine bestimmte Person oder einen bestimmten Personenkreis oder für ein bestimmtes Tier oder einen bestimmten Tierbestand hergestellt werden ( Formula magistra lis ); gestützt auf eine solche Verschreibung kann das Arzneimittel in der öffentlichen Apotheke oder der Spitalapotheke ad hoc oder defekturmässig hergestellt, aber nur auf ärztliche Verschreibung hin abgegeben werden;"
+              "text": "Arzneimittel, die in einer öffentlichen Apotheke oder in einer Spitalapotheke in Ausführung einer ärztlichen Verschreibung für eine bestimmte Person oder einen bestimmten Personenkreis oder für ein bestimmtes Tier oder einen bestimmten Tierbestand hergestellt werden (Formula magistralis); gestützt auf eine solche Verschreibung kann das Arzneimittel in der öffentlichen Apotheke oder der Spitalapotheke ad hoc oder defekturmässig hergestellt, aber nur auf ärztliche Verschreibung hin abgegeben werden;"
             },
             {
               "marke": "b",
-              "text": "Arzneimittel, die in einer öffentlichen Apotheke, einer Spitalapotheke, einer Drogerie oder in einem anderen Betrieb, der über eine Herstellungsbewilligung verfügt, nach einer speziellen Präparate-Monografie der Pharmakopöe oder eines andern vom Institut anerkannten Arzneibuchs oder Formulariums ad hoc oder defekturmässig hergestellt werden und die für die Abgabe an die eigene Kundschaft bestimmt sind ( Formula officinalis );"
+              "text": "Arzneimittel, die in einer öffentlichen Apotheke, einer Spitalapotheke, einer Drogerie oder in einem anderen Betrieb, der über eine Herstellungsbewilligung verfügt, nach einer speziellen Präparate-Monografie der Pharmakopöe oder eines andern vom Institut anerkannten Arzneibuchs oder Formulariums ad hoc oder defekturmässig hergestellt werden und die für die Abgabe an die eigene Kundschaft bestimmt sind (Formula officinalis);"
             },
             {
               "marke": "c",
@@ -463,21 +463,21 @@
             },
             {
               "marke": "f",
-              "text": "Arzneimittel, die am 1. Januar 2002 in einem Kanton zugelassen waren und sich im Zeitpunkt des Inkrafttretens der Änderung vom 18. März 2016 noch in Verkehr befinden; sie sind entsprechend zu kennzeichnen und dürfen ausschliesslich im betreffenden Kanton in Verkehr gebracht und nur durch Personen abgegeben werden, die nach diesem Gesetz zur Abgabe von Arz neimitteln berechtigt sind."
+              "text": "Arzneimittel, die am 1. Januar 2002 in einem Kanton zugelassen waren und sich im Zeitpunkt des Inkrafttretens der Änderung vom 18. März 2016 noch in Verkehr befinden; sie sind entsprechend zu kennzeichnen und dürfen ausschliesslich im betreffenden Kanton in Verkehr gebracht und nur durch Personen abgegeben werden, die nach diesem Gesetz zur Abgabe von Arzneimitteln berechtigt sind."
             }
           ]
         },
         {
           "absatz": "2",
-          "text": "bis Mit der Herstellung von Arzneimitteln nach Absatz 2 Buchstaben a–c bis darf ein Betrieb mit Herstellungsbewilligung beauftragt werden (Lohnherstellung)."
+          "text": "bis Mit der Herstellung von Arzneimitteln nach Absatz 2 Buchstaben a–cbis darf ein Betrieb mit Herstellungsbewilligung beauftragt werden (Lohnherstellung)."
         },
         {
           "absatz": null,
-          "text": "2ter Betriebe mit einer Herstellungsbewilligung des Instituts können ein Komplementärarzneimittel, für das nachweislich kein alternativ anwendbares und gleichwertiges Arzneimittel verfügbar oder zugelassen ist, auch ohne Lohnherstellungsauftrag nach Absatz 2 bis herstellen und an Betriebe, die nach Absatz 2 Buchstaben a, b und c herstellberechtigt sind, vertreiben. Ein Betrieb darf pro Wirkstoff und Jahr höchstens 100 Packungen eines solchen Arzneimittels mit insgesamt höchstens 3000 Tagesdosen herstellen; bei homöopathischen und anthroposophischen Arzneimitteln gilt diese Beschränkung für jede Verdünnungsstufe einzeln."
+          "text": "2ter Betriebe mit einer Herstellungsbewilligung des Instituts können ein Komplementärarzneimittel, für das nachweislich kein alternativ anwendbares und gleichwertiges Arzneimittel verfügbar oder zugelassen ist, auch ohne Lohnherstellungsauftrag nach Absatz 2bis herstellen und an Betriebe, die nach Absatz 2 Buchstaben a, b und c herstellberechtigt sind, vertreiben. Ein Betrieb darf pro Wirkstoff und Jahr höchstens 100 Packungen eines solchen Arzneimittels mit insgesamt höchstens 3000 Tagesdosen herstellen; bei homöopathischen und anthroposophischen Arzneimitteln gilt diese Beschränkung für jede Verdünnungsstufe einzeln."
         },
         {
           "absatz": "2quater",
-          "text": "Der Bundesrat legt die qualitativen und quantitativen Kriterien für die Arzneimittel fest, die nach den Absätzen 2 Buchstaben a–c bis und 2 bis hergestellt werden, und die qualitativen Kriterien für Arzneimittel, die nach Absatz 2 ter hergestellt werden."
+          "text": "Der Bundesrat legt die qualitativen und quantitativen Kriterien für die Arzneimittel fest, die nach den Absätzen 2 Buchstaben a–cbis und 2bis hergestellt werden, und die qualitativen Kriterien für Arzneimittel, die nach Absatz 2ter hergestellt werden."
         },
         {
           "absatz": "3",
@@ -492,7 +492,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/422/de#art_9",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250101",
-      "sha": "a02ffb767b1cd5d611215c41818f0cc356ee0bdc6620043dc49e5f1441b4f451"
+      "sha": "b2bdfb421660be1c17fe845c44ed68a79319cd4b5599dd85aa40e370aee802e4"
     },
     {
       "id": "bund/HMG/art_9_a",
@@ -676,7 +676,7 @@
             },
             {
               "marke": "6",
-              "text": "das pädiatrische Prüfkonzept nach Artikel 54 a ;",
+              "text": "das pädiatrische Prüfkonzept nach Artikel 54a;",
               "tiefe": 1
             },
             {
@@ -727,7 +727,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/422/de#art_11",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250101",
-      "sha": "873a8d8cc16be67c8585e744aadb3fd588eced6ba1dc207f7fec0b25b90d35e4"
+      "sha": "7a3132a7a2bdd7bf3da71f460b734daeba501b8d3f73f15f36a9841f874ec93e"
     },
     {
       "id": "bund/HMG/art_11_a",
@@ -762,7 +762,7 @@
         },
         {
           "absatz": "2",
-          "text": "Für eine neue Indikation wird diese Schutzdauer durch das Institut auf Antrag hin auf 10 Jahre festgelegt, wenn ein bedeutender klinischer Nutzen gegenüber beste henden Therapien erwartet werden kann und die Indikation durch umfangreiche klinische Prüfungen gestützt wird."
+          "text": "Für eine neue Indikation wird diese Schutzdauer durch das Institut auf Antrag hin auf 10 Jahre festgelegt, wenn ein bedeutender klinischer Nutzen gegenüber bestehenden Therapien erwartet werden kann und die Indikation durch umfangreiche klinische Prüfungen gestützt wird."
         },
         {
           "absatz": "3",
@@ -781,7 +781,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/422/de#art_11_b",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250101",
-      "sha": "02946db05506b5498065c95dae8f9fcce1cb46f60f8fcf07b68757fcf7cc07e7"
+      "sha": "47195916722f196c91d9bc1f0c51c7f74b85d0444ee8686603ffcb94a78281ea"
     },
     {
       "id": "bund/HMG/art_12",
@@ -793,7 +793,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Gesuch um Zulassung eines Arzneimittels, das im Wesentlichen gleich ist wie ein Arzneimittel, dessen Unterlagen gemäss Artikel 11 a oder 11 b geschützt sind, kann sich auf die Ergebnisse dessen pharmakologischer, toxikologischer und klinischer Prüfungen stützen, wenn:",
+          "text": "Das Gesuch um Zulassung eines Arzneimittels, das im Wesentlichen gleich ist wie ein Arzneimittel, dessen Unterlagen gemäss Artikel 11a oder 11b geschützt sind, kann sich auf die Ergebnisse dessen pharmakologischer, toxikologischer und klinischer Prüfungen stützen, wenn:",
           "items": [
             {
               "marke": "a",
@@ -814,7 +814,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/422/de#art_12",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250101",
-      "sha": "68dcac1c034a7593bb2f2c254d4e26618359985a25b4015a1bb184cfae831f24"
+      "sha": "3e5000161d3c43af51a9f50f6a91ba92a2e1d06a28468fb7149a68c496c9559a"
     },
     {
       "id": "bund/HMG/art_13",
@@ -932,7 +932,7 @@
           "items": [
             {
               "marke": "a",
-              "text": "Arzneimittel nach Artikel 14 Absatz 1 Buchstabe a bis :"
+              "text": "Arzneimittel nach Artikel 14 Absatz 1 Buchstabe abis:"
             },
             {
               "marke": "1",
@@ -946,7 +946,7 @@
             },
             {
               "marke": "b",
-              "text": "Arzneimittel nach Artikel 14 Absatz 1 Buchstabe a ter :"
+              "text": "Arzneimittel nach Artikel 14 Absatz 1 Buchstabe ater:"
             },
             {
               "marke": "1",
@@ -965,7 +965,7 @@
             },
             {
               "marke": "c",
-              "text": "Arzneimittel nach Artikel 14 Absatz 1 Buchstabe a quater :"
+              "text": "Arzneimittel nach Artikel 14 Absatz 1 Buchstabe aquater:"
             },
             {
               "marke": "1",
@@ -988,7 +988,7 @@
             },
             {
               "marke": "e",
-              "text": "Arzneimittel nach Artikel 14 Absatz 1 Buchstabe c bis : die Angaben und Unterlagen nach Artikel 11 Absätze 1 und 2 Buchstabe a, wobei die Angaben nach Artikel 11 Absatz 2 Buchstabe a Ziffer 2 ersetzt werden können durch einen bibliografischen Nachweis von Wirksamkeit und Sicherheit oder durch Anwendungsbelege."
+              "text": "Arzneimittel nach Artikel 14 Absatz 1 Buchstabe cbis: die Angaben und Unterlagen nach Artikel 11 Absätze 1 und 2 Buchstabe a, wobei die Angaben nach Artikel 11 Absatz 2 Buchstabe a Ziffer 2 ersetzt werden können durch einen bibliografischen Nachweis von Wirksamkeit und Sicherheit oder durch Anwendungsbelege."
             }
           ]
         },
@@ -1011,7 +1011,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/422/de#art_14_a",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250101",
-      "sha": "d7cc8e9e449b90fc4af5a3385e9dcffd827fb872acd00f3efaf746b42e311617"
+      "sha": "5b9efcd2e506795212e5215e3be1dbe2d3ace84980560f7631285728590f0cb8"
     },
     {
       "id": "bund/HMG/art_15",
@@ -1064,7 +1064,7 @@
           "items": [
             {
               "marke": "a",
-              "text": "sich um befristete Zulassungen nach Artikel 9 a handelt; oder"
+              "text": "sich um befristete Zulassungen nach Artikel 9a handelt; oder"
             },
             {
               "marke": "b",
@@ -1085,7 +1085,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/422/de#art_16",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250101",
-      "sha": "59bcddb5614187a218a047b98277a442d5c7b97929cc30cea356ce08f32ba9b3"
+      "sha": "fb310b3f7fd853ca015a65e608e00f66554bf62df9d5b47592e9fc32c22c45a0"
     },
     {
       "id": "bund/HMG/art_16_a",
@@ -1119,7 +1119,7 @@
         },
         {
           "absatz": "4",
-          "text": "Beabsichtigt die Zulassungsinhaberin, ein für eine pädiatrische Indikation oder für die pädiatrische Anwendung zugelassenes Arzneimittel nicht mehr weiter in Verkehr zu bringen, für das sie den Schutz nach Artikel 11 b Absätze 3 und 4 dieses Gesetzes oder nach Artikel 140 n oder 140 t des Patentgesetzes vom 25. Juni 1954 erhalten hat, so hat sie diese Absicht in geeigneter Form zu publizieren."
+          "text": "Beabsichtigt die Zulassungsinhaberin, ein für eine pädiatrische Indikation oder für die pädiatrische Anwendung zugelassenes Arzneimittel nicht mehr weiter in Verkehr zu bringen, für das sie den Schutz nach Artikel 11b Absätze 3 und 4 dieses Gesetzes oder nach Artikel 140n oder 140t des Patentgesetzes vom 25. Juni 1954 erhalten hat, so hat sie diese Absicht in geeigneter Form zu publizieren."
         },
         {
           "absatz": "5",
@@ -1130,7 +1130,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/422/de#art_16_a",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250101",
-      "sha": "1260a6b3683fa474cf62bd1bba99848d0cfb0c812ca0809334dee1fcbf8663c3"
+      "sha": "7e66c732ff8fc275af3ddc12dbc09b5e47dd102b4f4bfd0164dbf79191515145"
     },
     {
       "id": "bund/HMG/art_16_b",
@@ -1600,7 +1600,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Bei der Verschreibung, Abgabe und Anwendung von Arzneimitteln müssen die anerkannten Regeln der medizinischen und pharmazeutischen Wissenschaften be achtet werden, bei Komplementärarzneimitteln ohne Indikationsangabe zudem die Prinzipien der entsprechenden Therapierichtung. Der Bundesrat kann diese Regeln näher umschreiben ."
+          "text": "Bei der Verschreibung, Abgabe und Anwendung von Arzneimitteln müssen die anerkannten Regeln der medizinischen und pharmazeutischen Wissenschaften beachtet werden, bei Komplementärarzneimitteln ohne Indikationsangabe zudem die Prinzipien der entsprechenden Therapierichtung. Der Bundesrat kann diese Regeln näher umschreiben."
         },
         {
           "absatz": "2",
@@ -1633,7 +1633,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/422/de#art_26",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250101",
-      "sha": "eb2d7f967cea43b63c650d76626ffad7358ae7605009367f88d405e001f372b7"
+      "sha": "180aad04c4f8fc01d5299f41fd0356193fb9e0197e6abfcac4f562b5b702c653"
     },
     {
       "id": "bund/HMG/art_27",
@@ -1978,7 +1978,7 @@
         },
         {
           "absatz": "1bis",
-          "text": "Blut und labile Blutprodukte, die für Transfusionen eingeführt werden, müssen den Anforderungen an die Unentgeltlichkeit der Blutspende nach Artikel 33 a genügen."
+          "text": "Blut und labile Blutprodukte, die für Transfusionen eingeführt werden, müssen den Anforderungen an die Unentgeltlichkeit der Blutspende nach Artikel 33a genügen."
         },
         {
           "absatz": "2",
@@ -1989,7 +1989,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/422/de#art_35",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250101",
-      "sha": "56bc620df8f683573141868e69823781e9cf2fa0b464b60dbd4a4aeb8ee861b3"
+      "sha": "559a4861a991115a4cf43c1c8c78c0e5db1cba1528477715d00b301476771cac"
     },
     {
       "id": "bund/HMG/art_36",
@@ -2459,7 +2459,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Der Hersteller muss Medizinprodukte im Informationssystem nach Artikel 62 c oder in der Europäischen Datenbank für Medizinprodukte (Eudamed) registrieren. Er muss zudem sicherstellen, dass dem Medizinprodukt ein eindeutiger Produktidentifikator zugewiesen wird."
+          "text": "Der Hersteller muss Medizinprodukte im Informationssystem nach Artikel 62c oder in der Europäischen Datenbank für Medizinprodukte (Eudamed) registrieren. Er muss zudem sicherstellen, dass dem Medizinprodukt ein eindeutiger Produktidentifikator zugewiesen wird."
         },
         {
           "absatz": "2",
@@ -2504,7 +2504,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/422/de#art_47",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250101",
-      "sha": "0dbbfd8fe381ee38b71bc13295e3dec9b9559452d68a4952409d475c02b19af3"
+      "sha": "80003a12733d5e3ef608b8f178e70989f6dcc1d2d562bbdddb03754acf69ca07"
     },
     {
       "id": "bund/HMG/art_47_a",
@@ -2642,7 +2642,7 @@
             },
             {
               "marke": "c",
-              "text": "für Wirtschaftsakteure sowie Konformitätsbewertungsstellen die Pflicht vorsehen, Eudamed oder das Informationssystem nach Artikel 62 c zu nutzen."
+              "text": "für Wirtschaftsakteure sowie Konformitätsbewertungsstellen die Pflicht vorsehen, Eudamed oder das Informationssystem nach Artikel 62c zu nutzen."
             }
           ]
         },
@@ -2665,7 +2665,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/422/de#art_47_e",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250101",
-      "sha": "bc3480a1b59e6aa664681dc64b5fda1f8af4bfe2d3c89eb8d0ff88405fec9837"
+      "sha": "81bd688fcfbf5d7846c67eb31795d45ceedbb8c27fac57f381f7c8ed2d5dc3fe"
     },
     {
       "id": "bund/HMG/art_48",
@@ -3155,7 +3155,7 @@
         },
         {
           "absatz": "3",
-          "text": "Wer berufsmässig Heilmittel abgibt oder an Menschen oder an Tieren anwendet oder als Medizinalperson dazu berechtigt ist, muss dem Institut schwerwiegende oder bisher nicht bekannte unerwünschte Wirkungen und Vorkommnisse, Beobachtungen anderer schwerwiegender oder bisher nicht bekannter Tatsachen sowie Qualitätsmängel melden, die für die Heilmittelsicherheit von Bedeutung sind ."
+          "text": "Wer berufsmässig Heilmittel abgibt oder an Menschen oder an Tieren anwendet oder als Medizinalperson dazu berechtigt ist, muss dem Institut schwerwiegende oder bisher nicht bekannte unerwünschte Wirkungen und Vorkommnisse, Beobachtungen anderer schwerwiegender oder bisher nicht bekannter Tatsachen sowie Qualitätsmängel melden, die für die Heilmittelsicherheit von Bedeutung sind."
         },
         {
           "absatz": "3bis",
@@ -3182,7 +3182,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/422/de#art_59",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250101",
-      "sha": "e7ff8dea3072939b2effef2efdc81073f03ed4b50712c7d406a8477c453a4eb5"
+      "sha": "aaaa5140aba4db9dcddd04a2269ba6375e0604b59b86ab798f0eec4ba3022771"
     },
     {
       "id": "bund/HMG/art_60",
@@ -3308,7 +3308,7 @@
             },
             {
               "marke": "4",
-              "text": "im Rahmen von Gesuchen für befristete Bewilligungen nach Artikel 9 b Absatz 1 sowie für Ausnahmebewilligungen für Medizinprodukte nach Artikel 46 Absatz 3 Buchstabe b;",
+              "text": "im Rahmen von Gesuchen für befristete Bewilligungen nach Artikel 9b Absatz 1 sowie für Ausnahmebewilligungen für Medizinprodukte nach Artikel 46 Absatz 3 Buchstabe b;",
               "tiefe": 1
             },
             {
@@ -3362,7 +3362,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/422/de#art_62_a",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250101",
-      "sha": "9be53f2c2a63527457b2c67f08f4170d6943b0edd7a6800b16e8dcab0bebb953"
+      "sha": "60b34faf3858476aa4be80169127a9e890528722445b35723be42970213b2602"
     },
     {
       "id": "bund/HMG/art_62_b",
@@ -3401,7 +3401,7 @@
         },
         {
           "absatz": "2",
-          "text": "Das Informationssystem enthält Daten nach Artikel 62 a , die für die Überwachung von Medizinprodukten und die Durchführung von Melde- und Bewilligungsverfahren für klinische Versuche nach diesem Gesetz notwendig sind."
+          "text": "Das Informationssystem enthält Daten nach Artikel 62a, die für die Überwachung von Medizinprodukten und die Durchführung von Melde- und Bewilligungsverfahren für klinische Versuche nach diesem Gesetz notwendig sind."
         },
         {
           "absatz": "3",
@@ -3438,7 +3438,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/422/de#art_62_c",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250101",
-      "sha": "3063410728dfb7d215deb9172a4ca31dbc308410d3f0af609b7f2aa6d780d4c6"
+      "sha": "77f47d5a36c468c604f33e26313bff086b74c7ed6f137c018bacdb67b9ddbcf4"
     },
     {
       "id": "bund/HMG/art_63",
@@ -3701,7 +3701,7 @@
           "items": [
             {
               "marke": "a",
-              "text": "Daten aus anderen Anwendungen des gemeinsamen zentralen Informationssystems entlang der Lebensmittelkette gemäss Artikel 64 c Absatz 2;"
+              "text": "Daten aus anderen Anwendungen des gemeinsamen zentralen Informationssystems entlang der Lebensmittelkette gemäss Artikel 64c Absatz 2;"
             },
             {
               "marke": "b",
@@ -3714,7 +3714,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/422/de#art_64_d",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250101",
-      "sha": "ac929d0f26f84ee1cc7e25fe030eaf5f9d630187ff9e2ee3b7b42f8daf743440"
+      "sha": "a585cf5f99037842af4fced583d01f80a2fb0ab7228acef204921d315412314a"
     },
     {
       "id": "bund/HMG/art_64_e",
@@ -3756,7 +3756,7 @@
             },
             {
               "marke": "d",
-              "text": "Tierärztinnen und Tierärzte sowie die weiteren der Meldepflicht nach Artikel 64 f Buchstabe h unterstellten Personen: Daten, die sie selbst betreffen, sowie Daten, die sie gemeldet haben."
+              "text": "Tierärztinnen und Tierärzte sowie die weiteren der Meldepflicht nach Artikel 64f Buchstabe h unterstellten Personen: Daten, die sie selbst betreffen, sowie Daten, die sie gemeldet haben."
             }
           ]
         }
@@ -3765,7 +3765,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/422/de#art_64_e",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250101",
-      "sha": "2059c86e39c865235949fcf94883f490ee10009692f3a077f2a239dad088f476"
+      "sha": "ac8aca5f3f915f983cecdc7ff3ab9a9ec0a01e33e91df15f0468421f9683f05f"
     },
     {
       "id": "bund/HMG/art_64_f",
@@ -3789,7 +3789,7 @@
             },
             {
               "marke": "c",
-              "text": "die Zugriffsrechte nach Artikel 64 e , namentlich deren Umfang;"
+              "text": "die Zugriffsrechte nach Artikel 64e, namentlich deren Umfang;"
             },
             {
               "marke": "d",
@@ -3822,7 +3822,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/422/de#art_64_f",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250101",
-      "sha": "3eea0c849179beed44d1067bcc9779fb0e891a908b3091663c720ac65e0ca097"
+      "sha": "b919fa0620a793e650c70e32bd45f7c0edadac8b5389baf72e571c46263d3930"
     },
     {
       "id": "bund/HMG/art_64_g",
@@ -4040,7 +4040,7 @@
         },
         {
           "absatz": "2",
-          "text": "Der Bund kann zu diesem Zweck eine Datenbank durch Dritte erstellen und betrei ben lassen. Diese Datenbank darf keine Personendaten enthalten."
+          "text": "Der Bund kann zu diesem Zweck eine Datenbank durch Dritte erstellen und betreiben lassen. Diese Datenbank darf keine Personendaten enthalten."
         },
         {
           "absatz": "3",
@@ -4069,7 +4069,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/422/de#art_67_a",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250101",
-      "sha": "96b5cf93fe313d29e068d3d9a6f77ca4d0e51b2e5e65848e67a85bb82142eafe"
+      "sha": "d98170fec67e5bae63e345c3d71ac7d1d59bc63d39674eedb5ec1e4afd83e378"
     },
     {
       "id": "bund/HMG/art_67_b",
@@ -4443,7 +4443,7 @@
             },
             {
               "marke": "f",
-              "text": "Sie entscheidet über die Begründung, Änderung und die Beendigung der Arbeitsverhältnisse des Personals des Instituts; vorbehalten bleibt Artikel 72 a Absatz 1 Buchstabe h."
+              "text": "Sie entscheidet über die Begründung, Änderung und die Beendigung der Arbeitsverhältnisse des Personals des Instituts; vorbehalten bleibt Artikel 72a Absatz 1 Buchstabe h."
             },
             {
               "marke": "g",
@@ -4460,7 +4460,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/422/de#art_73",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250101",
-      "sha": "b2806b9d7d0816e61743e5968f102fe5f70e6c97ce4de07a3ca5bd7cf8b49ceb"
+      "sha": "56c5b92926fa705007d5186a35e2aadef108d913d069be7576075b709d8df759"
     },
     {
       "id": "bund/HMG/art_74",
@@ -4515,18 +4515,18 @@
         },
         {
           "absatz": "3",
-          "text": "Für den Lohn der Geschäftsleitungsmitglieder und weiterer Personen, die in vergleichbarer Weise entlöhnt werden, sowie für die weiteren mit diesen Personen vereinbarten Vertragsbedingungen gilt Artikel 6 a Absätze 1–5 des Bundespersonalgesetzes vom 24. März 2000 sinngemäss."
+          "text": "Für den Lohn der Geschäftsleitungsmitglieder und weiterer Personen, die in vergleichbarer Weise entlöhnt werden, sowie für die weiteren mit diesen Personen vereinbarten Vertragsbedingungen gilt Artikel 6a Absätze 1–5 des Bundespersonalgesetzes vom 24. März 2000 sinngemäss."
         },
         {
           "absatz": "4",
-          "text": "Der Bundesrat legt die Entschädigungen der Mitglieder des Institutsrats fest. Für das Honorar der Mitglieder des Institutsrats und die weiteren mit diesen Personen vereinbarten Vertragsbedingungen gilt Artikel 6 a Absätze 1–5 des Bundespersonalgesetzes."
+          "text": "Der Bundesrat legt die Entschädigungen der Mitglieder des Institutsrats fest. Für das Honorar der Mitglieder des Institutsrats und die weiteren mit diesen Personen vereinbarten Vertragsbedingungen gilt Artikel 6a Absätze 1–5 des Bundespersonalgesetzes."
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/422/de#art_75",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250101",
-      "sha": "851179376e6823ccd66d7f9220f8a7bde0c3d7c51029dec9fd8a773aa21f0109"
+      "sha": "ce8745f9a9d2f5edf036542e91558fb41a3efa2e8f11726f7c912baa1f4c44a2"
     },
     {
       "id": "bund/HMG/art_75_a",
@@ -4741,7 +4741,7 @@
         },
         {
           "absatz": "3",
-          "text": "Die aufgabenspezifische Verwendung der Mittel nach Absatz 2 Buchstaben a und b sowie der Ausgleich bei Über- oder Unterfinanzierung der Aufgaben und Tätigkeiten nach Absatz 2 bis werden im Rahmen der Genehmigung der strategischen Ziele festgelegt."
+          "text": "Die aufgabenspezifische Verwendung der Mittel nach Absatz 2 Buchstaben a und b sowie der Ausgleich bei Über- oder Unterfinanzierung der Aufgaben und Tätigkeiten nach Absatz 2bis werden im Rahmen der Genehmigung der strategischen Ziele festgelegt."
         },
         {
           "absatz": "4",
@@ -4752,7 +4752,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/422/de#art_77",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250101",
-      "sha": "ccf6b41c344026a73a136764256c7125c48b34d66384f85a920960a97032c496"
+      "sha": "57f4a8e4a4ce743d2719a32b00332108c181a28dfea37a5f0570c02075d7c22c"
     },
     {
       "id": "bund/HMG/art_78",
@@ -5003,7 +5003,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Der Bundesrat und das Institut vollziehen dieses Gesetz, soweit es den Bund für zuständig erklärt. Das Institut ist die Vollzugsbehörde für Produkte nach Artikel 2 a . Für den Vollzug des 4. Kapitels 2 a . Abschnitt ist das BAG zuständig. Der Bundesrat kann einzelne Aufgaben des Instituts oder des BAG anderen Behörden übertragen."
+          "text": "Der Bundesrat und das Institut vollziehen dieses Gesetz, soweit es den Bund für zuständig erklärt. Das Institut ist die Vollzugsbehörde für Produkte nach Artikel 2a. Für den Vollzug des 4. Kapitels 2a. Abschnitt ist das BAG zuständig. Der Bundesrat kann einzelne Aufgaben des Instituts oder des BAG anderen Behörden übertragen."
         },
         {
           "absatz": "2",
@@ -5018,7 +5018,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/422/de#art_82",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250101",
-      "sha": "0d6410ac6818000c59e3d554525db27ed47b048db3648c0992adbd753fc2fc22"
+      "sha": "01ce12663a7870009fbd67f1fdfe532aa5d2a932805445d7b17c4169a92b2b4e"
     },
     {
       "id": "bund/HMG/art_82_a",
@@ -5154,7 +5154,7 @@
             },
             {
               "marke": "b",
-              "text": "antibiotische Wirkstoffe entgegen den gestützt auf Artikel 42 a Absatz 2 erlassenen Einschränkungen oder Verboten einsetzt;"
+              "text": "antibiotische Wirkstoffe entgegen den gestützt auf Artikel 42a Absatz 2 erlassenen Einschränkungen oder Verboten einsetzt;"
             },
             {
               "marke": "c",
@@ -5182,15 +5182,15 @@
             },
             {
               "marke": "i",
-              "text": "Produkte in Verkehr bringt, die den vom Bundesrat nach Artikel 2 a festgelegten Anforderungen nicht entsprechen;"
+              "text": "Produkte in Verkehr bringt, die den vom Bundesrat nach Artikel 2a festgelegten Anforderungen nicht entsprechen;"
             },
             {
               "marke": "j",
-              "text": "für menschliches Gewebe oder menschliche Zellen einen finanziellen Gewinn oder einen anderen Vorteil anbietet, gewährt, fordert oder annimmt oder solche Gewebe oder Zellen für die Herstellung von Produkten nach Artikel 2 a verwendet;"
+              "text": "für menschliches Gewebe oder menschliche Zellen einen finanziellen Gewinn oder einen anderen Vorteil anbietet, gewährt, fordert oder annimmt oder solche Gewebe oder Zellen für die Herstellung von Produkten nach Artikel 2a verwendet;"
             },
             {
               "marke": "k",
-              "text": "menschliches Gewebe oder menschliche Zellen für die Herstellung von Produkten nach Artikel 2 a entnimmt oder verwendet, ohne dass für die Entnahme eine Zustimmung vorliegt."
+              "text": "menschliches Gewebe oder menschliche Zellen für die Herstellung von Produkten nach Artikel 2a entnimmt oder verwendet, ohne dass für die Entnahme eine Zustimmung vorliegt."
             }
           ]
         },
@@ -5221,7 +5221,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/422/de#art_86",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250101",
-      "sha": "cca0f76a50bc112a4ea9693f469a944e0fe59ee1ad3b704a85a4a258edd030b2"
+      "sha": "75b60578aba2d0238ceff3dd19c7d1e0be10efeeee9bfce4c58a0804ff3c3bf9"
     },
     {
       "id": "bund/HMG/art_87",
@@ -5257,7 +5257,7 @@
             },
             {
               "marke": "f",
-              "text": "eine Widerhandlung nach Artikel 86 Absatz 1 Buchstaben a – g begeht, sofern das Heilmittel ausschliesslich für den Eigengebrauch bestimmt ist oder es sich um frei verkäufliche Arzneimittel oder um Medizinprodukte der Klasse I gemäss Anhang IX der Richtlinie 93/42/EWG über Medizinprodukte handelt;"
+              "text": "eine Widerhandlung nach Artikel 86 Absatz 1 Buchstaben a–g begeht, sofern das Heilmittel ausschliesslich für den Eigengebrauch bestimmt ist oder es sich um frei verkäufliche Arzneimittel oder um Medizinprodukte der Klasse I gemäss Anhang IX der Richtlinie 93/42/EWG über Medizinprodukte handelt;"
             },
             {
               "marke": "g",
@@ -5294,7 +5294,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/422/de#art_87",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250101",
-      "sha": "60cf954e04e852154496c1e62d5fb72d0da40827df3f99b1c9dec7552fe2edd7"
+      "sha": "3ce0aa15b939ab590abde466515138b1012612e4e1d4f6a7fb2deabccfa9c049"
     },
     {
       "id": "bund/HMG/art_88",
@@ -5379,7 +5379,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Institut oder das BAZG kann geheime Überwachungsmassnahmen nach den Artikeln 282 und 283 oder 298 a –298 d StPO anordnen."
+          "text": "Das Institut oder das BAZG kann geheime Überwachungsmassnahmen nach den Artikeln 282 und 283 oder 298a–298d StPO anordnen."
         },
         {
           "absatz": "2",
@@ -5402,7 +5402,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/422/de#art_90_a",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250101",
-      "sha": "c40acfe9825f504585b2e7ec639c02e86b5a54b606ae5098dd9699ec63d49f69"
+      "sha": "1c4eab5a9d76ef4b06a37c7a237f5b8fad1d4177cbc7fcfd8b6f35358e46551c"
     },
     {
       "id": "bund/HMG/art_90_b",
@@ -5597,14 +5597,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Für Arzneimittel, die im Zeitpunkt des Inkrafttretens der Änderung vom 13. Juni 2008 zugelassen sind, beginnen die Fristen nach Artikel 16 a Absatz 1 mit Datum des Inkrafttretens dieser Änderung zu laufen."
+          "text": "Für Arzneimittel, die im Zeitpunkt des Inkrafttretens der Änderung vom 13. Juni 2008 zugelassen sind, beginnen die Fristen nach Artikel 16a Absatz 1 mit Datum des Inkrafttretens dieser Änderung zu laufen."
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2001/422/de#art_95_a",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250101",
-      "sha": "e1d48711c3260d1f4fcbdddd3041b6fb0ae41bf535d1938d5d54304e20e80633"
+      "sha": "c9747d030290d31b6258a7efd0cda3acf216f8ab968992f8c1a235cdcf745858"
     },
     {
       "id": "bund/HMG/art_95_b",

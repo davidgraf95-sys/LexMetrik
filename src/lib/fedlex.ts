@@ -409,3 +409,46 @@ export const NORM_IM_TEXT = new RegExp(
     '\\s+(?:' + NORM_NAMEN_ESC.join('|') + ')\\b',
   'g',
 );
+
+// ─── N2 (Bündel N): Fremdgesetz-Erkennung nach einem bare «Artikel N» ────────
+//
+// Der Inline-Auto-Linker (NormText.restMitIntern) macht ein bare «Artikel N» zum
+// Sprung-Link auf DEN AKTUELLEN Erlass. Nennt der Verweis aber ein anderes Gesetz
+// («Artikel 1a Absatz 1 Buchstabe c AHVG» in der AHVV → AHVG, nicht AHVV), wäre
+// der Self-Link falsch (§1). NORM_IM_TEXT erfasst nur die ABGEKÜRZTE Zitatform
+// («Art. N Abs. X GESETZ»); die AUSGESCHRIEBENE Form («Artikel N Absatz X …
+// GESETZ», 727 Fälle im Bund-Korpus) fällt durch. Dieser Erkenner deckt beide
+// Schreibweisen ab und liefert das erkannte Fremdgesetz-Kürzel — deterministisch
+// aus DERSELBEN FEDLEX-Kürzelliste (§5), kein Raten: das Kürzel IST das genannte
+// Ziel. Verbraucher (restMitIntern) unterdrückt bei Treffer ≠ eigenem Erlass den
+// falschen Self-Link (David-Entscheid 28.6.: «lieber kein Link als ein falscher»;
+// das genaue Fremdgesetz-Routing bleibt eine eigene, verifizierte Datenaufgabe).
+//
+// Bounded: die Passus-Kette akzeptiert nur bekannte Zitat-Tokens + Werte (Zahl/
+// Buchstabe/Bereich), läuft also NIE über Fliesstext oder ein zweites «Artikel»
+// hinaus — «Artikel 6 Absatz 2 und die Bestimmungen des OR» matcht NICHT (nach
+// «Absatz 2» folgt «und …», kein Gesetz-Kürzel) und bleibt ein Self-Link.
+const N2_ARTNR = '\\d+[a-z]?(?:bis|ter|quater|quinquies|sexies)?';
+const N2_PASSUS = '(?:Abs(?:atz|ätze|\\.)|Buchstaben?|Bst\\.|lit\\.|Ziff(?:ern?|\\.)|Satz|Sätze)';
+const N2_WERT = '(?:' + N2_ARTNR + '|[a-z]|[ivxl]+)';
+const N2_KONN = '(?:[–-]|und|oder|bis|,|sowie)';
+const FREMDGESETZ_NACH_ARTIKEL = new RegExp(
+  '^\\s+' +
+    // weitere Artikelnummern im selben Verweis («1a oder 2 …», «25–31 …»)
+    '(?:' + N2_KONN + '\\s*' + N2_ARTNR + '\\s*)*' +
+    // Passus-Kette (Absatz/Buchstabe/Ziffer/Satz, aus- oder abgeschrieben) + Werte
+    '(?:' + N2_PASSUS + '\\s+' + N2_WERT + '(?:\\s*' + N2_KONN + '\\s*' + N2_WERT + ')*\\s+)*' +
+    // optionale Präposition vor dem Gesetzesnamen («des IVG», «der ZPO»)
+    '(?:(?:des|der|über|vom)\\s+)?' +
+    '(' + NORM_NAMEN_ESC.join('|') + ')\\b',
+);
+
+/**
+ * Prüft, ob der Text UNMITTELBAR nach einem bare «Artikel N» eine Zitat-
+ * Fortsetzung ist, die auf ein benanntes Bundesgesetz-Kürzel endet (aus- oder
+ * abgeschrieben). Gibt das Kürzel zurück (Verweis auf JENES Gesetz) oder null.
+ */
+export function fremdgesetzNachArtikel(restNachArtikel: string): FedlexGesetz | null {
+  const m = FREMDGESETZ_NACH_ARTIKEL.exec(restNachArtikel);
+  return m ? erkenneFedlexGesetz(m[1]) : null;
+}

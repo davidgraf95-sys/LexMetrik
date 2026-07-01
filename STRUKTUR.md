@@ -23,6 +23,35 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 1.7.2026 — Bündel N: Normtext-Fidelity + Verweise (Worktree `buendel-n-normtext-fidelity`, gegated, Push/Deploy §9 offen)
+
+**Phase 0 der AKN-XML-Quell-Architektur (Council 30.6.), 4 Teile, je eigener Commit (Risiko-Klassen getrennt §14.2):**
+- **N1 — zerrissene Artikelnummer «329 g»→«329g»** (`3b1db26e`). Ursache: `entferneTags` (`scripts/normtext/extrahiere-fedlex.ts`)
+  ersetzte JEDES Tag durch ' '; Quelle setzt Buchstabe/lat. Suffix inline OHNE Abstand («329<i>g</i>», «1<sup>bis</sup>»).
+  Fix: Inline-Formatierungs-Tags leerzeichenlos strippen, Block-/Umbruch-Tags weiter mit ' '; **reine Ziffern-`<sup>`/`<sub>`
+  behalten den Abstand** (Exponent/Bruch «133 1/3» nicht «1331/3», §1). Zweiter Sitz (dt-eingebetteter Text) mitgefixt →
+  räumt zugleich geleakten «bis .»-Marke-Rest ab. **194 Bund-Snapshots regeneriert** (datum unverändert 2026-06-30), golden
+  byte-gleich; Verifikation: 0 Drop/Leak/Strukturdrift, 9 bis/ter-Marke-Dedup, sonst Zeichenfolge identisch. **Opus-Gegenprüfung
+  BESTANDEN** gegen amtl. Fedlex-HTML.
+- **N2 — falscher Self-Link auf benanntes Fremdgesetz** (`e55caed5`, render-only). Bare «Artikel N» wurde interner Sprung-Link
+  auf den AKTUELLEN Erlass, auch wenn ein anderes Gesetz genannt war («Artikel 1a Absatz 1 … AHVG» in der AHVV). Alte Regel
+  fing nur UNMITTELBAR folgendes Kürzel; ausgeschriebene Passus-Form (~1195 Fälle) entging ihr. Neu `fremdgesetzNachArtikel`
+  (`src/lib/fedlex.ts`) erkennt deterministisch (FEDLEX-Kürzelliste §5) Fremd-Zitate (Passus aus-/abgeschrieben + Artikel-Listen
+  + «des/der»); `restMitIntern` (`NormText.tsx`) unterdrückt Self-Link bei fremdem Kürzel (kein Fremd-Link erzeugt).
+  **§7-Abweichung:** Roadmap-Premisse «ELI-Ziel im HTML» trifft NICHT zu (0/225 Body-Verweise verlinkt; ELI nur Fussnoten/XML=Phase 1)
+  → erlass-genaue Verweis-Chips = Phase-1-Folge. **Opus-Gegenprüfung fand+fixte** FinfraV-FINMA-Regression (Register-«_» vs FEDLEX-«-»
+  → Kürzelvergleich normalisiert); über alle 6 getrennt-benannten Kind-Erlasse re-verifiziert.
+- **Verifikations-Tor `check:invarianten`** (`3b865c3f`, in `check`-Kette). Drei robuste, FP-freie Invarianten (Bund-Korpus = 0):
+  kein HTML-Markup im Body, keine unaufgelöste Entity, kein geleaktes lat. Zähl-Suffix am Textanfang (N1-Regressionswächter).
+  Bewusst NICHT: Absatz-Lückenlosigkeit (echte Teil-Aufhebungen = legitime Lücken) / Marken-Format (Anhang-Legenden) / naives
+  Wort-Containment (28-58 % Rauschen, Council-Befund).
+- **Status-Marker — §7 empirisch schon erfüllt, kein Neubau** (Mehrwert-Test §0): aufgehoben = «· aufgehoben»-Statuszeile
+  (`parts.tsx:167`) + Default-Einklappen + amtl. Aufhebungsnotiz; in Kraft = Default; noch-nicht-in-Kraft kommt bei
+  current-consolidation-Pinning nicht vor (die 6 Quellstellen sind Sachtext über EU-Verordnungen).
+
+**Gate voll GRÜN** (tsc/vitest 2954/golden/lint/check inkl. neuem Tor + gegenpruefung). Offen: Davids §9-Ja für Push/Deploy,
+danach Worktree/Branch aufräumen. Detail `FAHRPLAN-NORMTEXT-DARSTELLUNG.md §Quell-Architektur` / ROADMAP W2·5b/W2·6.
+
 ## Session 1.7.2026 — QS-PERF Bug-Check-Nachzug: tocToggle-memo + prefetch-.catch (Branch `fix/perf-toctoggle-memo-prefetch-catch`)
 
 **Fundierter Bug-Check (3 unabhängige adversariale Opus-Reviewer) über alle 5 QS-PERF-Änderungen der Session.**

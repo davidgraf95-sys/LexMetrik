@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { FEDLEX, fedlexUrl, fedlexLinkFuerArtikel, erkenneFedlexGesetz } from '../lib/fedlex';
+import { FEDLEX, fedlexUrl, fedlexLinkFuerArtikel, erkenneFedlexGesetz, fremdgesetzNachArtikel } from '../lib/fedlex';
 
 describe('fedlexUrl', () => {
   it('Zahl-Artikel', () => {
@@ -104,5 +104,32 @@ describe('Audit 5.6.2026 – Kombi-Anker Buchstabe+Suffix', () => {
     expect(fedlexUrl('OR', '335c')).toContain('#art_335_c');
     expect(fedlexUrl('ZGB', '334bis')).toContain('#art_334_bis');
     expect(fedlexUrl('OR', '77')).toContain('#art_77');
+  });
+});
+
+// N2 (Bündel N): erkennt, ob nach einem bare «Artikel N» ein FREMDES Bundesgesetz
+// genannt ist (aus- ODER abgeschrieben). Eingabe ist der Text NACH «Artikel N».
+describe('fremdgesetzNachArtikel (N2 — Fremdgesetz-Verweis-Erkennung)', () => {
+  it('erkennt die ausgeschriebene Passus-Form «Absatz X Buchstabe Y … GESETZ»', () => {
+    expect(fremdgesetzNachArtikel(' Absatz 1 Buchstabe c Ziffer 2 AHVG')).toBe('AHVG');
+    expect(fremdgesetzNachArtikel(' Absatz 2 ATSG')).toBe('ATSG');
+  });
+  it('erkennt die Präpositions-Form «Absatz X des IVG»', () => {
+    expect(fremdgesetzNachArtikel(' Absatz 2 des IVG')).toBe('IVG');
+    expect(fremdgesetzNachArtikel(' der ZPO')).toBe('ZPO');
+  });
+  it('erkennt Artikel-Listen «oder 2 AHVG» / «25–31 … GESETZ»', () => {
+    expect(fremdgesetzNachArtikel(' oder 2 AHVG')).toBe('AHVG');
+  });
+  it('erkennt das unmittelbar folgende Kürzel', () => {
+    expect(fremdgesetzNachArtikel(' OR')).toBe('OR');
+    expect(fremdgesetzNachArtikel(' Abs. 1 SchKG')).toBe('SchKG');
+  });
+  it('§1-Präzision: KEIN Fremdgesetz bei Fliesstext oder entferntem Namen', () => {
+    // «und die Bestimmungen des OR» ist ein SEPARATER Verweis, nicht Teil des
+    // «Artikel N»-Zitats → kein Treffer (der Self-Link bleibt zulässig).
+    expect(fremdgesetzNachArtikel(' Absatz 2 und die Bestimmungen des OR')).toBeNull();
+    expect(fremdgesetzNachArtikel(' Absatz 2 hier')).toBeNull();
+    expect(fremdgesetzNachArtikel(' gilt sinngemäss für die OR-Berechnung')).toBeNull();
   });
 });

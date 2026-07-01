@@ -151,7 +151,7 @@
             },
             {
               "marke": "2",
-              "text": "räumlich beschränkt : nur für die Durchreise durch die internationalen Transitzonen der Flughäfen eines oder mehrerer Schengen-Staaten gültig;",
+              "text": "räumlich beschränkt: nur für die Durchreise durch die internationalen Transitzonen der Flughäfen eines oder mehrerer Schengen-Staaten gültig;",
               "tiefe": 1
             },
             {
@@ -164,7 +164,7 @@
             },
             {
               "marke": "h",
-              "text": "Grenzüberschreitende Regionen : alle Kantone entlang der Landesgrenze der Schweiz zuzüglich der Kantone Appenzell Ausserrhoden und Appenzell Innerrhoden."
+              "text": "Grenzüberschreitende Regionen: alle Kantone entlang der Landesgrenze der Schweiz zuzüglich der Kantone Appenzell Ausserrhoden und Appenzell Innerrhoden."
             }
           ]
         }
@@ -173,7 +173,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_2",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260612",
-      "sha": "dbfd18f2668f361e63647bd37727f1407926f8a4898bc29afc8dd05b127081f8"
+      "sha": "20631fb52b803970b3df4aeaac4dfe85fcaf8edbdca9a051f472b208e67ba819"
     },
     {
       "id": "bund/VEV/art_3",
@@ -640,11 +640,11 @@
       "erlass": "VEV",
       "artikel": "10_a",
       "artikelLabel": "Art. 10a",
-      "grundlage": "(Art. 5 Abs. 3 und Art. 65 a AIG)",
+      "grundlage": "(Art. 5 Abs. 3 und Art. 65a AIG)",
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Bewilligt das SEM eine Ausnahme von den Einreisebeschränkungen nach Artikel 65 a Absatz 2 AIG, so berechtigt dies die betroffene Person zur Einreise für einen kurzfristigen Aufenthalt in der Schweiz."
+          "text": "Bewilligt das SEM eine Ausnahme von den Einreisebeschränkungen nach Artikel 65a Absatz 2 AIG, so berechtigt dies die betroffene Person zur Einreise für einen kurzfristigen Aufenthalt in der Schweiz."
         },
         {
           "absatz": "2",
@@ -673,7 +673,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_10_a",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260612",
-      "sha": "6933f559da4463f196524c136afe0183fe763c0a6201a648dcf5d895e14e9e15"
+      "sha": "c649343ae375c10a0ced1d880f7c83f15a8ffa5b76b3b1f4bd37e1c55edfebd7"
     },
     {
       "id": "bund/VEV/art_10_b",
@@ -726,7 +726,7 @@
             },
             {
               "marke": "c",
-              "text": "Einreise in die Schweiz nach Artikel 10 a Absätze 1 und 2."
+              "text": "Einreise in die Schweiz nach Artikel 10a Absätze 1 und 2."
             }
           ]
         }
@@ -735,7 +735,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_11",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260612",
-      "sha": "b6547e91176e103d149b803bbb7a2deb31c1d9cff84486c2df598c2c44c0729e"
+      "sha": "3d4596bf6b8a2a5884a91c1537b98c6913c7fb4f0930697ea3a4417c24efb34a"
     },
     {
       "id": "bund/VEV/art_12",
@@ -1313,14 +1313,14 @@
         },
         {
           "absatz": "4",
-          "text": "Die Kantone können die für die Grenzkontrollen zuständigen Mitarbeiterinnen und Mitarbeiter des BAZG ermächtigen, die Wegweisungsverfügung nach Artikel 64 Absatz 1 Buchstaben a und b und nach Artikel 64 c bis AIG zu erlassen und zu eröffnen."
+          "text": "Die Kantone können die für die Grenzkontrollen zuständigen Mitarbeiterinnen und Mitarbeiter des BAZG ermächtigen, die Wegweisungsverfügung nach Artikel 64 Absatz 1 Buchstaben a und b und nach Artikel 64cbis AIG zu erlassen und zu eröffnen."
         }
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_31",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260612",
-      "sha": "d84978c59b86a1a08b42343f1a531a7e1379518fb6380287316ba82138aa2a77"
+      "sha": "f684b0c026cfe2e098fc7142c15836b68c09949d988b7ac6211ebec4013d44cb"
     },
     {
       "id": "bund/VEV/art_32",
@@ -1367,7 +1367,7 @@
             },
             {
               "marke": "e",
-              "text": "keine Personen befördert werden, die einer Einreisebeschränkung unterliegen, die der Bundesrat nach Artikel 65 a AIG oder der Rat der EU nach Artikel 21 a des Schengener Grenzkodex angeordnet hat, sofern letztere aufgrund eines Abkommens mit der EU auch für die Schweiz gilt."
+              "text": "keine Personen befördert werden, die einer Einreisebeschränkung unterliegen, die der Bundesrat nach Artikel 65a AIG oder der Rat der EU nach Artikel 21a des Schengener Grenzkodex angeordnet hat, sofern letztere aufgrund eines Abkommens mit der EU auch für die Schweiz gilt."
             }
           ]
         },
@@ -1394,7 +1394,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_32",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260612",
-      "sha": "edb47b8af1125bb9c66e90950d1d2baa1375c6536d5cf8795521dd7e7b989d90"
+      "sha": "3b7562d445aa1aacc285338bfd6092e679b1d1b51bbd537c3242bd51bd68e60d"
     },
     {
       "id": "bund/VEV/art_33",
@@ -1447,7 +1447,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das SEM ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von Durchführungsrechtsakten der Europäischen Kommission zum Visakodex, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7 a RVOG darstellen und sofern die Durchführungsrechtsakte gestützt auf die nachfolgend genannten Artikel und Absätze des Visakodex erlassen wurden und Folgendes regeln:",
+          "text": "Das SEM ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von Durchführungsrechtsakten der Europäischen Kommission zum Visakodex, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7a RVOG darstellen und sofern die Durchführungsrechtsakte gestützt auf die nachfolgend genannten Artikel und Absätze des Visakodex erlassen wurden und Folgendes regeln:",
           "items": [
             {
               "marke": "a",
@@ -1455,7 +1455,7 @@
             },
             {
               "marke": "b",
-              "text": "das Ausweichverfahren, falls Beförderungsunternehmen der Datenzugriff technisch nicht möglich ist, und die in diesen Fällen durch die ETIAS-Zentralstelle zu leistende Unterstützung und die Mittel zur Bereitstellung dieser Unterstützung (Art. 13 a Abs. 3 und 4);"
+              "text": "das Ausweichverfahren, falls Beförderungsunternehmen der Datenzugriff technisch nicht möglich ist, und die in diesen Fällen durch die ETIAS-Zentralstelle zu leistende Unterstützung und die Mittel zur Bereitstellung dieser Unterstützung (Art. 13a Abs. 3 und 4);"
             },
             {
               "marke": "c",
@@ -1467,7 +1467,7 @@
             },
             {
               "marke": "e",
-              "text": "Weisungen zur Erteilung von Visa an den Schengen-Aussengrenzen an Seeleute (Art. 36 Abs. 2 a );"
+              "text": "Weisungen zur Erteilung von Visa an den Schengen-Aussengrenzen an Seeleute (Art. 36 Abs. 2a);"
             },
             {
               "marke": "f",
@@ -1485,15 +1485,15 @@
         },
         {
           "absatz": "2",
-          "text": "Es ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von Durchführungsrechtsakten der Europäischen Kommission, welche die Verfahren für die Berichterstattung über die Betriebskostenunterstützung im Rahmen der nationalen Programme der Schengen-Staaten betreffen und gestützt auf die Artikel 10 Absatz 6 und 11 Absatz 6 der Verordnung (EU) Nr. 515/2014 erlassen wurden, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7 a RVOG darstellen."
+          "text": "Es ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von Durchführungsrechtsakten der Europäischen Kommission, welche die Verfahren für die Berichterstattung über die Betriebskostenunterstützung im Rahmen der nationalen Programme der Schengen-Staaten betreffen und gestützt auf die Artikel 10 Absatz 6 und 11 Absatz 6 der Verordnung (EU) Nr. 515/2014 erlassen wurden, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7a RVOG darstellen."
         },
         {
           "absatz": "2bis",
-          "text": "Es ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von delegierten Rechtsakten der Europäischen Kommission, welche die Einführung eines Programms für die Entwicklung von IT-Systemen zur Unterstützung der Steuerung von Migrationsströmen über die Aussengrenzen betreffen und gestützt auf Artikel 5 Absatz 5 Buchstaben b und Artikel 15 und 17 der Verordnung (EU) Nr. 515/2014 erlassen wurden, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7 a RVOG darstellen."
+          "text": "Es ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von delegierten Rechtsakten der Europäischen Kommission, welche die Einführung eines Programms für die Entwicklung von IT-Systemen zur Unterstützung der Steuerung von Migrationsströmen über die Aussengrenzen betreffen und gestützt auf Artikel 5 Absatz 5 Buchstaben b und Artikel 15 und 17 der Verordnung (EU) Nr. 515/2014 erlassen wurden, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7a RVOG darstellen."
         },
         {
           "absatz": "3",
-          "text": "Es ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von delegierten und Durchführungsrechtsakten der Europäischen Kommission zur Verordnung (EU) Nr. 514/2014, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7 a RVOG darstellen und:",
+          "text": "Es ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von delegierten und Durchführungsrechtsakten der Europäischen Kommission zur Verordnung (EU) Nr. 514/2014, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7a RVOG darstellen und:",
           "items": [
             {
               "marke": "a",
@@ -1554,7 +1554,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_34",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260612",
-      "sha": "ca7fc885ac9aee4a876b8c7c879713153ac9416e4e9130c7703046e480479eb9"
+      "sha": "1857ab54e78bf5388739c137098391c60e0bc6fc236d4df271d76c3296eff365"
     },
     {
       "id": "bund/VEV/art_34_a",
@@ -1566,7 +1566,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das SEM ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von Durchführungsrechtsakten der Europäischen Kommission zur Verordnung (EU) 2018/1240, sofern die Durchführungsrechtsakte gestützt auf die nachfolgend genannten Artikel und Absätze der Verordnung (EU) 2018/1240 erlassen wurden und sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7 a RVOG darstellen und Folgendes regeln:",
+          "text": "Das SEM ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von Durchführungsrechtsakten der Europäischen Kommission zur Verordnung (EU) 2018/1240, sofern die Durchführungsrechtsakte gestützt auf die nachfolgend genannten Artikel und Absätze der Verordnung (EU) 2018/1240 erlassen wurden und sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7a RVOG darstellen und Folgendes regeln:",
           "items": [
             {
               "marke": "a",
@@ -1648,7 +1648,7 @@
         },
         {
           "absatz": "2",
-          "text": "Das SEM ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von delegierten Rechtsakten der Europäischen Kommission zur Verordnung (EU) 2018/1240, sofern die delegierten Rechtsakte gestützt auf die nachfolgend genannten Artikel und Absätze der Verordnung (EU) 2018/1240 erlassen wurden und sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7 a RVOG darstellen und Folgendes regeln:",
+          "text": "Das SEM ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von delegierten Rechtsakten der Europäischen Kommission zur Verordnung (EU) 2018/1240, sofern die delegierten Rechtsakte gestützt auf die nachfolgend genannten Artikel und Absätze der Verordnung (EU) 2018/1240 erlassen wurden und sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7a RVOG darstellen und Folgendes regeln:",
           "items": [
             {
               "marke": "a",
@@ -1717,7 +1717,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_34_a",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260612",
-      "sha": "c81e278c52f6e182b147e379a9d17a1f8a7468b5d3f25b545c3bda4b08acb7a5"
+      "sha": "0d38283e6078415396642d7dbb748b1c10cbd75e8ca6ea0d870c565177ec2006"
     },
     {
       "id": "bund/VEV/art_34_b",
@@ -1729,15 +1729,15 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das SEM ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von Durchführungsrechtsakten der Europäischen Kommission zum Visakodex, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7 a RVOG darstellen und sofern die Durchführungsrechtsakte gestützt auf die nachfolgend genannten Artikel und Absätze des Visakodex erlassen wurden und Folgendes regeln:",
+          "text": "Das SEM ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von Durchführungsrechtsakten der Europäischen Kommission zum Visakodex, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7a RVOG darstellen und sofern die Durchführungsrechtsakte gestützt auf die nachfolgend genannten Artikel und Absätze des Visakodex erlassen wurden und Folgendes regeln:",
           "items": [
             {
               "marke": "a",
-              "text": "die Festlegung einer einheitlichen Liste von Belegen, die in den einzelnen Konsularbezirken zu verwenden ist (Art. 14 Abs. 5 a );"
+              "text": "die Festlegung einer einheitlichen Liste von Belegen, die in den einzelnen Konsularbezirken zu verwenden ist (Art. 14 Abs. 5a);"
             },
             {
               "marke": "b",
-              "text": "die in den einzelnen Konsularbezirken geltenden Bedingungen für die Erteilung von Visa für die mehrfache Einreise (Art. 24 Abs. 2 d );"
+              "text": "die in den einzelnen Konsularbezirken geltenden Bedingungen für die Erteilung von Visa für die mehrfache Einreise (Art. 24 Abs. 2d);"
             },
             {
               "marke": "c",
@@ -1745,11 +1745,11 @@
             },
             {
               "marke": "d",
-              "text": "das Anbringen der Visummarke (Art. 29 Abs. 1 a );"
+              "text": "das Anbringen der Visummarke (Art. 29 Abs. 1a);"
             },
             {
               "marke": "e",
-              "text": "Weisungen zur Erteilung von Visa an den Schengen-Aussengrenzen an Seeleute (Art. 36 Abs. 2 a );"
+              "text": "Weisungen zur Erteilung von Visa an den Schengen-Aussengrenzen an Seeleute (Art. 36 Abs. 2a);"
             },
             {
               "marke": "f",
@@ -1763,19 +1763,19 @@
         },
         {
           "absatz": "2",
-          "text": "Es ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von Durchführungsrechtsakten des Rates der EU zum Visakodex, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7 a RVOG darstellen und sofern die Durchführungsrechtsakte gestützt auf die nachfolgend genannten Artikel und Absätze des Visakodex erlassen wurden und Folgendes regeln:",
+          "text": "Es ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von Durchführungsrechtsakten des Rates der EU zum Visakodex, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7a RVOG darstellen und sofern die Durchführungsrechtsakte gestützt auf die nachfolgend genannten Artikel und Absätze des Visakodex erlassen wurden und Folgendes regeln:",
           "items": [
             {
               "marke": "a",
-              "text": "die Aussetzung der Anwendung der Gebührenfreiheit oder der Erleichterungen hinsichtlich der Vorlage von Belegen, der Behandlungsfristen oder der Ausstellung von Visa für die mehrfache Einreise für sämtliche Staatsangehörige oder bestimmte Kategorien von Staatsangehörigen eines bestimmten Drittstaates, der bei der Rückübernahme von illegal aufhältigen Personen nicht ausreichend kooperiert (Art. 25 a Abs. 5 Bst. a und 6);"
+              "text": "die Aussetzung der Anwendung der Gebührenfreiheit oder der Erleichterungen hinsichtlich der Vorlage von Belegen, der Behandlungsfristen oder der Ausstellung von Visa für die mehrfache Einreise für sämtliche Staatsangehörige oder bestimmte Kategorien von Staatsangehörigen eines bestimmten Drittstaates, der bei der Rückübernahme von illegal aufhältigen Personen nicht ausreichend kooperiert (Art. 25a Abs. 5 Bst. a und 6);"
             },
             {
               "marke": "b",
-              "text": "die schrittweise Erhöhung der Visumgebühr bei fortbestehender unzureichender Kooperation des betroffenen Drittstaates (Art. 25 a Abs. 5 Bst. b und 6);"
+              "text": "die schrittweise Erhöhung der Visumgebühr bei fortbestehender unzureichender Kooperation des betroffenen Drittstaates (Art. 25a Abs. 5 Bst. b und 6);"
             },
             {
               "marke": "c",
-              "text": "die Einräumung besonderer Erleichterungen für sämtliche Staatsangehörige oder bestimmte Kategorien von Staatsangehörigen eines bestimmten Drittstaates, der bei der Rückübernahme von illegal aufhältigen Personen ausreichend kooperiert (Art. 25 a Abs. 8)."
+              "text": "die Einräumung besonderer Erleichterungen für sämtliche Staatsangehörige oder bestimmte Kategorien von Staatsangehörigen eines bestimmten Drittstaates, der bei der Rückübernahme von illegal aufhältigen Personen ausreichend kooperiert (Art. 25a Abs. 8)."
             }
           ]
         }
@@ -1784,7 +1784,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_34_b",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260612",
-      "sha": "f8cc3519ae7eae44ea2b941d01f1d1abb091dfa2122fef0dde5b0253094d0b28"
+      "sha": "75a4e8e6f00dca6473c126d1abd09980f7353a93406a0e773f36edac1aa61011"
     },
     {
       "id": "bund/VEV/art_34_c",
@@ -1796,7 +1796,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das SEM ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von Durchführungsrechtsakten der Europäischen Kommission zu den Verordnungen (EU) 2019/817 und (EU) 2019/818, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7 a RVOG darstellen und sofern die Durchführungsrechtsakte gestützt auf die nachfolgend genannten Artikel und Absätze der Verordnungen (EU) 2019/817 und (EU) 2019/818 erlassen wurden und Folgendes regeln:",
+          "text": "Das SEM ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von Durchführungsrechtsakten der Europäischen Kommission zu den Verordnungen (EU) 2019/817 und (EU) 2019/818, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7a RVOG darstellen und sofern die Durchführungsrechtsakte gestützt auf die nachfolgend genannten Artikel und Absätze der Verordnungen (EU) 2019/817 und (EU) 2019/818 erlassen wurden und Folgendes regeln:",
           "items": [
             {
               "marke": "a",
@@ -1818,7 +1818,7 @@
         },
         {
           "absatz": "2",
-          "text": "Es ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von delegierten Rechtsakten der Europäischen Kommission zu den Verordnungen (EU) 2019/817 und (EU) 2019/818, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7 a RVOG darstellen und sofern die delegierten Rechtsakte gestützt auf die nachfolgend genannten Artikel und Absätze der Verordnungen (EU) 2019/817 und (EU) 2019/818 erlassen wurden und Folgendes regeln:",
+          "text": "Es ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von delegierten Rechtsakten der Europäischen Kommission zu den Verordnungen (EU) 2019/817 und (EU) 2019/818, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7a RVOG darstellen und sofern die delegierten Rechtsakte gestützt auf die nachfolgend genannten Artikel und Absätze der Verordnungen (EU) 2019/817 und (EU) 2019/818 erlassen wurden und Folgendes regeln:",
           "items": [
             {
               "marke": "a",
@@ -1835,7 +1835,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_34_c",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260612",
-      "sha": "56fb6d85941bdae03680cf6d7c1f26c5f59ba6f997543c36463cf59d5983e51c"
+      "sha": "ab5c410e6de8374f8afddbf8ab880b2cd02404848d7eb620b7fbf8be31f7ee78"
     },
     {
       "id": "bund/VEV/art_34_d",
@@ -1847,11 +1847,11 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das SEM ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von Durchführungsrechtsakten der Europäischen Kommission zur Verordnung (EG) Nr. 1683/95, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7 a RVOG darstellen und sofern die Durchführungsrechtsakte gestützt auf Artikel 2 der Verordnung (EG) Nr. 1683/95 erlassen wurden und technische Spezifikationen für die einheitliche Visagestaltung oder den geheimen Charakter dieser Spezifikationen festlegen."
+          "text": "Das SEM ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von Durchführungsrechtsakten der Europäischen Kommission zur Verordnung (EG) Nr. 1683/95, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7a RVOG darstellen und sofern die Durchführungsrechtsakte gestützt auf Artikel 2 der Verordnung (EG) Nr. 1683/95 erlassen wurden und technische Spezifikationen für die einheitliche Visagestaltung oder den geheimen Charakter dieser Spezifikationen festlegen."
         },
         {
           "absatz": "2",
-          "text": "Das SEM ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von Durchführungsrechtsakten der Europäischen Kommission zur Verordnung (EG) Nr. 1030/2002, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7 a RVOG darstellen und sofern die Durchführungsrechtsakte gestützt auf die nachfolgend genannten Artikel der Verordnung (EG) Nr. 1030/2002 erlassen wurden und Folgendes regeln:",
+          "text": "Das SEM ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von Durchführungsrechtsakten der Europäischen Kommission zur Verordnung (EG) Nr. 1030/2002, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7a RVOG darstellen und sofern die Durchführungsrechtsakte gestützt auf die nachfolgend genannten Artikel der Verordnung (EG) Nr. 1030/2002 erlassen wurden und Folgendes regeln:",
           "items": [
             {
               "marke": "a",
@@ -1859,7 +1859,7 @@
             },
             {
               "marke": "b",
-              "text": "technische Spezifikationen für die Erfassung der biometrischen Daten (Art. 4 b )."
+              "text": "technische Spezifikationen für die Erfassung der biometrischen Daten (Art. 4b)."
             }
           ]
         }
@@ -1868,7 +1868,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_34_d",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260612",
-      "sha": "5cc138d00c806e3ad169d348fb77b6e4ba1ed7f2bf4157358b5ad94394ff2631"
+      "sha": "72bca285a9cc984f488137489c37690c88c928707e6bda51a35bd1146181afda"
     },
     {
       "id": "bund/VEV/art_34_e",
@@ -1880,11 +1880,11 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das SEM ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von Durchführungsrechtsakten der Europäischen Kommission zur Verordnung (EG) Nr. 767/2008 , sofern die Durchführungsrechtsakte gestützt auf die nachfolgend genannten Artikel und Absätze der Verordnung (EG) Nr. 767/2008 erlassen wurden und sofern die Verträge völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7 a RVOG darstellen und Folgendes regeln:",
+          "text": "Das SEM ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von Durchführungsrechtsakten der Europäischen Kommission zur Verordnung (EG) Nr. 767/2008, sofern die Durchführungsrechtsakte gestützt auf die nachfolgend genannten Artikel und Absätze der Verordnung (EG) Nr. 767/2008 erlassen wurden und sofern die Verträge völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7a RVOG darstellen und Folgendes regeln:",
           "items": [
             {
               "marke": "a",
-              "text": "die Festlegung detaillierter Bestimmungen über die Funktion für die zentrale Verwaltung der Liste der anerkannten Reisedokumente und der Mitteilung der Anerkennung oder Nichtanerkennung der aufgeführten Reisedokumente (Art. 5 a Abs. 3);"
+              "text": "die Festlegung detaillierter Bestimmungen über die Funktion für die zentrale Verwaltung der Liste der anerkannten Reisedokumente und der Mitteilung der Anerkennung oder Nichtanerkennung der aufgeführten Reisedokumente (Art. 5a Abs. 3);"
             },
             {
               "marke": "b",
@@ -1892,15 +1892,15 @@
             },
             {
               "marke": "c",
-              "text": "die Festlegung der Risiken, auf die sich die spezifischen Risikoindikatoren stützen (Art. 9 j Abs. 3);"
+              "text": "die Festlegung der Risiken, auf die sich die spezifischen Risikoindikatoren stützen (Art. 9j Abs. 3);"
             },
             {
               "marke": "d",
-              "text": "die Festlegung und Weiterentwicklung des Mechanismus und der Verfahren für die Durchführung von Qualitätskontrollen sowie angemessener Voraussetzungen für die Einhaltung der Qualität der in das C-VIS eingegebenen Daten (Art. 29 Abs. 2 a );"
+              "text": "die Festlegung und Weiterentwicklung des Mechanismus und der Verfahren für die Durchführung von Qualitätskontrollen sowie angemessener Voraussetzungen für die Einhaltung der Qualität der in das C-VIS eingegebenen Daten (Art. 29 Abs. 2a);"
             },
             {
               "marke": "e",
-              "text": "die Festlegung der Spezifikationen der Qualitätsstandards für die Speicherung der in das C-VIS eingegebenen Daten (Art. 29 a Abs. 3);"
+              "text": "die Festlegung der Spezifikationen der Qualitätsstandards für die Speicherung der in das C-VIS eingegebenen Daten (Art. 29a Abs. 3);"
             },
             {
               "marke": "f",
@@ -1920,29 +1920,29 @@
             },
             {
               "marke": "i",
-              "text": "die Festlegung detaillierter Bestimmungen über die Voraussetzungen für den Betrieb des Zugangs für Beförderungsunternehmen und die geltenden Datenschutz- und Sicherheitsvorschriften (Art. 45 c Abs. 3);"
+              "text": "die Festlegung detaillierter Bestimmungen über die Voraussetzungen für den Betrieb des Zugangs für Beförderungsunternehmen und die geltenden Datenschutz- und Sicherheitsvorschriften (Art. 45c Abs. 3);"
             },
             {
               "marke": "j",
-              "text": "die Festlegung des Authentifizierungssystems für Beförderungsunternehmen (Art. 45 c Abs. 5);"
+              "text": "die Festlegung des Authentifizierungssystems für Beförderungsunternehmen (Art. 45c Abs. 5);"
             },
             {
               "marke": "k",
-              "text": "die Festlegung der Einzelheiten der Ausweichverfahren für den Fall, dass der Datenzugriff durch Beförderungsunternehmen technisch nicht möglich ist (Art. 45 d Abs. 3);"
+              "text": "die Festlegung der Einzelheiten der Ausweichverfahren für den Fall, dass der Datenzugriff durch Beförderungsunternehmen technisch nicht möglich ist (Art. 45d Abs. 3);"
             },
             {
               "marke": "l",
-              "text": "die Festlegung der Spezifikationen der technischen Lösung, die den Mitgliedstaaten zur Erleichterung der Datenerhebung gemäss Kapitel III b im Hinblick auf die Erstellung von Statistiken zur Verfügung gestellt wird (Art. 50 Abs. 4)."
+              "text": "die Festlegung der Spezifikationen der technischen Lösung, die den Mitgliedstaaten zur Erleichterung der Datenerhebung gemäss Kapitel IIIb im Hinblick auf die Erstellung von Statistiken zur Verfügung gestellt wird (Art. 50 Abs. 4)."
             }
           ]
         },
         {
           "absatz": "2",
-          "text": "Es ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von delegierten Rechtsakten der Europäischen Kommission zur Verordnung (EG) Nr. 767/2008, sofern die delegierten Rechtsakte gestützt auf die nachfolgend genannten Artikel und Absätze der Verordnung (EG) Nr. 767/2008 erlassen wurden und sofern die Verträge völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7 a RVOG darstellen und Folgendes regeln:",
+          "text": "Es ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von delegierten Rechtsakten der Europäischen Kommission zur Verordnung (EG) Nr. 767/2008, sofern die delegierten Rechtsakte gestützt auf die nachfolgend genannten Artikel und Absätze der Verordnung (EG) Nr. 767/2008 erlassen wurden und sofern die Verträge völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7a RVOG darstellen und Folgendes regeln:",
           "items": [
             {
               "marke": "a",
-              "text": "die Festlegung vereinfachter Antragsformulare auf der EU‑Visumantragsplattform, die in den Verfahren zur Bestätigung gültiger Visa in einem neuen Reisedokument oder zur Verlängerung eines Visums zu verwenden sind (Art. 7 b Abs. 7);"
+              "text": "die Festlegung vereinfachter Antragsformulare auf der EU‑Visumantragsplattform, die in den Verfahren zur Bestätigung gültiger Visa in einem neuen Reisedokument oder zur Verlängerung eines Visums zu verwenden sind (Art. 7b Abs. 7);"
             },
             {
               "marke": "abis",
@@ -1950,11 +1950,11 @@
             },
             {
               "marke": "b",
-              "text": "die genauere Definition des Risikos für die Sicherheit, des Risikos der illegalen Einwanderung oder des hohen Epidemierisikos (Art. 9 j Abs. 2);"
+              "text": "die genauere Definition des Risikos für die Sicherheit, des Risikos der illegalen Einwanderung oder des hohen Epidemierisikos (Art. 9j Abs. 2);"
             },
             {
               "marke": "c",
-              "text": "die Erstellung eines Handbuchs, das die für Abfragen, Verifizierungen und Bewertungen im Rahmen der Interoperabilität der Informationssysteme erforderlichen Verfahren und Regeln festlegt (Art. 9 h Abs. 2 und 22 b Abs. 18)."
+              "text": "die Erstellung eines Handbuchs, das die für Abfragen, Verifizierungen und Bewertungen im Rahmen der Interoperabilität der Informationssysteme erforderlichen Verfahren und Regeln festlegt (Art. 9h Abs. 2 und 22b Abs. 18)."
             }
           ]
         }
@@ -1963,7 +1963,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_34_e",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260612",
-      "sha": "713d83291b4e96e9a51fa46ec08aad097ee79c5c108eca8685476c6798c6360d"
+      "sha": "75a0c6e445a224b4711f1a3a9485de2907c6caf60145793228f1d5a448de4e98"
     },
     {
       "id": "bund/VEV/art_34_f",
@@ -1975,15 +1975,15 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das SEM ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von Durchführungsrechtsakten der Europäischen Kommission zur Verordnung (EU) 2021/1148 , sofern die Durchführungsrechtsakte das Muster für die jährliche Leistungsbilanz erstellen und gestützt auf Artikel 29 Absatz 5 der Verordnung (EU) 2021/1148 erlassen wurden und sofern die Verträge völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7 a RVOG darstellen."
+          "text": "Das SEM ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von Durchführungsrechtsakten der Europäischen Kommission zur Verordnung (EU) 2021/1148, sofern die Durchführungsrechtsakte das Muster für die jährliche Leistungsbilanz erstellen und gestützt auf Artikel 29 Absatz 5 der Verordnung (EU) 2021/1148 erlassen wurden und sofern die Verträge völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7a RVOG darstellen."
         },
         {
           "absatz": "2",
-          "text": "Es ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von delegierten Rechtsakten der Europäischen Kommission zur Verordnung (EU) 2021/1148, sofern die delegierten Rechtsakte gestützt auf Artikel 31 Absatz 2 der Verordnung (EU) 2021/1148 erlassen wurden und sofern die Verträge völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7 a RVOG darstellen."
+          "text": "Es ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von delegierten Rechtsakten der Europäischen Kommission zur Verordnung (EU) 2021/1148, sofern die delegierten Rechtsakte gestützt auf Artikel 31 Absatz 2 der Verordnung (EU) 2021/1148 erlassen wurden und sofern die Verträge völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7a RVOG darstellen."
         },
         {
           "absatz": "3",
-          "text": "Es ist zuständig für den Abschluss von völkerrechtlichen Verträgen betreffend Durchführungsrechtsakten der Europäischen Kommission zur Verordnung (EU) 2021/1060 , sofern die Durchführungsrechtsakte gestützt auf die nachfolgend genannten Artikel und Absätze der Verordnung (EU) 2021/1060 erlassen wurden und sofern die Verträge völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7 a RVOG darstellen und Folgendes regeln:",
+          "text": "Es ist zuständig für den Abschluss von völkerrechtlichen Verträgen betreffend Durchführungsrechtsakten der Europäischen Kommission zur Verordnung (EU) 2021/1060, sofern die Durchführungsrechtsakte gestützt auf die nachfolgend genannten Artikel und Absätze der Verordnung (EU) 2021/1060 erlassen wurden und sofern die Verträge völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7a RVOG darstellen und Folgendes regeln:",
           "items": [
             {
               "marke": "a",
@@ -1997,14 +1997,14 @@
         },
         {
           "absatz": "4",
-          "text": "Es ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von delegierten Rechtsakten der Europäischen Kommission zur Verordnung (EU) 2021/1160, sofern die delegierten Rechtsakte gestützt auf Artikel 114 Absatz 2 der Verordnung (EU) 2021/1060 erlassen wurden und sofern die Verträge völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7 a RVOG darstellen."
+          "text": "Es ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von delegierten Rechtsakten der Europäischen Kommission zur Verordnung (EU) 2021/1160, sofern die delegierten Rechtsakte gestützt auf Artikel 114 Absatz 2 der Verordnung (EU) 2021/1060 erlassen wurden und sofern die Verträge völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7a RVOG darstellen."
         }
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_34_f",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260612",
-      "sha": "19e0434d77861a43ecaf343f94ed57c64fad86f72eaaf6cac335b18d4a1c3d6a"
+      "sha": "d4f2a3ce5ea7b4dd82849bfad913446499848dddb675cc3e3723e4b68b142443"
     },
     {
       "id": "bund/VEV/art_34_g",
@@ -2016,14 +2016,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Das SEM ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von Durchführungsrechtsakten der Europäischen Kommission, welche die Liste der visierfähigen Reisedokumente, die zum Überschreiten der Aussengrenzen berechtigen, erstellen oder aktualisieren und die gestützt auf den Beschluss Nr. 1105/2011/EU erlassen wurden, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7 a RVOG darstellen."
+          "text": "Das SEM ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von Durchführungsrechtsakten der Europäischen Kommission, welche die Liste der visierfähigen Reisedokumente, die zum Überschreiten der Aussengrenzen berechtigen, erstellen oder aktualisieren und die gestützt auf den Beschluss Nr. 1105/2011/EU erlassen wurden, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7a RVOG darstellen."
         }
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_34_g",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260612",
-      "sha": "2f26e9e4ec68e0cef6be0c16bd49fb1d2f8a374ac5dbe7c0605932b34233aad6"
+      "sha": "43b2ceb54b49428935bd63732078691a7453d79c36aea699ad7c2e9b0c03da30"
     },
     {
       "id": "bund/VEV/art_34_h",
@@ -2035,14 +2035,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Das SEM ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von Durchführungsrechtsakten der Europäischen Kommission zur Verordnung (EG) Nr. 694/2003, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7 a RVOG darstellen und sofern die Durchführungsrechtsakte gestützt auf Artikel 2 der Verordnung (EG) Nr. 694/2003 erlassen wurden und technische Spezifikationen für das einheitliche Dokument für den erleichterten Transit, einschliesslich des Transits im Eisenbahnverkehr, oder den geheimen Charakter dieser Spezifikationen festlegen."
+          "text": "Das SEM ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von Durchführungsrechtsakten der Europäischen Kommission zur Verordnung (EG) Nr. 694/2003, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7a RVOG darstellen und sofern die Durchführungsrechtsakte gestützt auf Artikel 2 der Verordnung (EG) Nr. 694/2003 erlassen wurden und technische Spezifikationen für das einheitliche Dokument für den erleichterten Transit, einschliesslich des Transits im Eisenbahnverkehr, oder den geheimen Charakter dieser Spezifikationen festlegen."
         }
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_34_h",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260612",
-      "sha": "c54627ecb1ffaeccef30e4b303ebee0cb52627452b37c680e760da113ddb537e"
+      "sha": "a6c74a901e4d87eca3f78c549ada4d652a1bd3f24d628d03b8e5ef2f0987eb37"
     },
     {
       "id": "bund/VEV/art_34_i",
@@ -2054,7 +2054,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das SEM ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von Durchführungsrechtsakten der Europäischen Kommission zur Verordnung (EU) 2016/399, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7 a RVOG darstellen und sofern die Durchführungsrechtsakte gestützt auf die nachfolgend genannten Artikel und Absätze der Verordnung (EU) 2016/399 erlassen wurden und Folgendes regeln:",
+          "text": "Das SEM ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von Durchführungsrechtsakten der Europäischen Kommission zur Verordnung (EU) 2016/399, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7a RVOG darstellen und sofern die Durchführungsrechtsakte gestützt auf die nachfolgend genannten Artikel und Absätze der Verordnung (EU) 2016/399 erlassen wurden und Folgendes regeln:",
           "items": [
             {
               "marke": "a",
@@ -2068,7 +2068,7 @@
         },
         {
           "absatz": "2",
-          "text": "Es ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von delegierten Rechtsakten der Europäischen Kommission zur Verordnung (EU) 2016/399, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7 a RVOG darstellen und sofern die delegierten Rechtsakte gestützt auf die nachfolgend genannten Artikel und Absätze der Verordnung (EU) 2016/399 erlassen wurden und Folgendes regeln:",
+          "text": "Es ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von delegierten Rechtsakten der Europäischen Kommission zur Verordnung (EU) 2016/399, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7a RVOG darstellen und sofern die delegierten Rechtsakte gestützt auf die nachfolgend genannten Artikel und Absätze der Verordnung (EU) 2016/399 erlassen wurden und Folgendes regeln:",
           "items": [
             {
               "marke": "a",
@@ -2089,7 +2089,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_34_i",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260612",
-      "sha": "e5dbdb68f636c68afc66c0a8a78e4f29e134bf73898f9e6ebaa8e058a3506eb9"
+      "sha": "cbad1e402f7f6647b38cf8ac190d14422b2bcff48babe4f8fc396d991dc6215a"
     },
     {
       "id": "bund/VEV/art_34_j",
@@ -2101,7 +2101,7 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Das SEM ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von Durchführungsrechtsakten der Europäischen Kommission zur Verordnung (EU) 2024/1356, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7 a RVOG darstellen und sofern die Durchführungsrechtsakte gestützt auf die nachfolgend genannten Artikel und Absätze der Verordnung (EU) 2024/1356 erlassen wurden und Folgendes regeln:",
+          "text": "Das SEM ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von Durchführungsrechtsakten der Europäischen Kommission zur Verordnung (EU) 2024/1356, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7a RVOG darstellen und sofern die Durchführungsrechtsakte gestützt auf die nachfolgend genannten Artikel und Absätze der Verordnung (EU) 2024/1356 erlassen wurden und Folgendes regeln:",
           "items": [
             {
               "marke": "a",
@@ -2118,7 +2118,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_34_j",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260612",
-      "sha": "3303556812282d76e66f05f3e5b63645fa3ecf080aa609c2f66c4de190dfb881"
+      "sha": "088af6ce477ad40a9043eaa3b1e5e1e31e30e4d47290cd91583b80aa77afc18b"
     },
     {
       "id": "bund/VEV/art_34_k",
@@ -2130,7 +2130,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das SEM ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von Durchführungsrechtsakten der Europäischen Kommission zur Verordnung (EU) 2025/12, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7 a RVOG darstellen und sofern die Durchführungsrechtsakte gestützt auf die nachfolgend genannten Artikel und Absätze der Verordnung (EU) 2025/12 erlassen wurden und Folgendes festlegen:",
+          "text": "Das SEM ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von Durchführungsrechtsakten der Europäischen Kommission zur Verordnung (EU) 2025/12, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7a RVOG darstellen und sofern die Durchführungsrechtsakte gestützt auf die nachfolgend genannten Artikel und Absätze der Verordnung (EU) 2025/12 erlassen wurden und Folgendes festlegen:",
           "items": [
             {
               "marke": "a",
@@ -2156,7 +2156,7 @@
         },
         {
           "absatz": "2",
-          "text": "Es ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von delegierten Rechtsakten der Europäischen Kommission zur Verordnung (EU) 2025/12, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7 a RVOG darstellen und sofern die delegierten Rechtsakte gestützt auf die nachfolgend genannten Artikel und Absätze der Verordnung (EU) 2025/12 erlassen wurden und Folgendes festlegen:",
+          "text": "Es ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von delegierten Rechtsakten der Europäischen Kommission zur Verordnung (EU) 2025/12, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7a RVOG darstellen und sofern die delegierten Rechtsakte gestützt auf die nachfolgend genannten Artikel und Absätze der Verordnung (EU) 2025/12 erlassen wurden und Folgendes festlegen:",
           "items": [
             {
               "marke": "a",
@@ -2181,7 +2181,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_34_k",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260612",
-      "sha": "eb818e1cf305208b261e6ce4d9564edcdd91a853a166b4822d922d66c9bc453c"
+      "sha": "86c384bc4caeaeebf4717a788b325bff442b070e0d084adb85a34bc11c92f2c9"
     },
     {
       "id": "bund/VEV/art_35",
@@ -2358,7 +2358,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das EDA und das SEM stellen sicher, dass eine Aufgabenübertragung nach Artikel 98 b AIG nur an externe Dienstleistungserbringer erfolgt, die ein angemessenes Datenschutzniveau garantieren."
+          "text": "Das EDA und das SEM stellen sicher, dass eine Aufgabenübertragung nach Artikel 98b AIG nur an externe Dienstleistungserbringer erfolgt, die ein angemessenes Datenschutzniveau garantieren."
         },
         {
           "absatz": "2",
@@ -2396,7 +2396,7 @@
         },
         {
           "absatz": "5",
-          "text": "Dienstleistungserbringer können nach dem Grundsatz der Deckung der effektiven Kosten zusätzlich zu den üblicherweise für die Visumerteilung erhobenen Gebühren Dienstleistungsgebühren nach Artikel 17 Absätze 4, 4 a und 4 b des Visakodex erheben."
+          "text": "Dienstleistungserbringer können nach dem Grundsatz der Deckung der effektiven Kosten zusätzlich zu den üblicherweise für die Visumerteilung erhobenen Gebühren Dienstleistungsgebühren nach Artikel 17 Absätze 4, 4a und 4b des Visakodex erheben."
         },
         {
           "absatz": "6",
@@ -2407,7 +2407,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_39_a",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260612",
-      "sha": "f298d043f0ed55bf025af7bf6a7cd67ee10bb6ca5910aa15981cc397ada51d17"
+      "sha": "004c8fadf87cc345075f043521ce99d349c7f85a4b87c1e75fb1a3b255387c79"
     },
     {
       "id": "bund/VEV/art_40",
@@ -2552,7 +2552,7 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "An der automatisierten Grenzkontrolle können die folgenden ausländischen Personen teilnehmen, sofern sie die Voraussetzungen nach Artikel 103 g Absatz 2 AIG erfüllen:",
+          "text": "An der automatisierten Grenzkontrolle können die folgenden ausländischen Personen teilnehmen, sofern sie die Voraussetzungen nach Artikel 103g Absatz 2 AIG erfüllen:",
           "items": [
             {
               "marke": "a",
@@ -2569,7 +2569,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_45",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260612",
-      "sha": "f2f6fb2ec7a297d269be5ceb2cca8f19f7d3c24003f58c2feaff992e133209a9"
+      "sha": "d320f607e2b8f4f59ac5e424d0ddecbe24c0a3b8bb896734d7ea56aff2f034bf"
     },
     {
       "id": "bund/VEV/art_46_53",
@@ -2849,7 +2849,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das EJPD kann im Einvernehmen mit dem EDA, dem EFD oder den für die Grenzkontrolle zuständigen Behörden der Kantone Abkommen mit ausländischen Staaten über den Einsatz von Dokumentenberaterinnen und -beratern (Art. 100 a Abs. 3 AIG) abschliessen."
+          "text": "Das EJPD kann im Einvernehmen mit dem EDA, dem EFD oder den für die Grenzkontrolle zuständigen Behörden der Kantone Abkommen mit ausländischen Staaten über den Einsatz von Dokumentenberaterinnen und -beratern (Art. 100a Abs. 3 AIG) abschliessen."
         },
         {
           "absatz": "2",
@@ -2860,7 +2860,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_63",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260612",
-      "sha": "f2f73617f64fd66eb568109c62f30070218d01fb9b94b41d0642e5adf769df0d"
+      "sha": "af350be0d0581a3bdbbab15c515cdd9aad7b85262604f1fad29f68d6c781b29e"
     },
     {
       "id": "bund/VEV/art_64",

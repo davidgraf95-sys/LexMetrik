@@ -221,6 +221,18 @@ bringt ein Quell-Wechsel HTML→XML das? Entschieden per Council (DMAD, 5 Opus-A
 
 - **B** «AKN-XML direkt rendern, kein Extrakt» **verworfen**: löst N2 nicht, koppelt 60+ Live-Gesetze an
   einen unbewiesenen Renderer, Display schon korrekt.
+> **✅ Phase 0 GEBAUT (1.7.2026, Worktree `buendel-n-normtext-fidelity`, gegated — Push/Deploy §9 offen).**
+> **N1** (Extraktor `entferneTags`: Inline-Tags leerzeichenlos, reine Ziffern-`<sup>`/`<sub>` behalten Abstand;
+> 194 Bund-Snapshots regeneriert, golden byte-gleich, Opus-Gegenprüfung BESTANDEN). **N2** (render-only,
+> `fremdgesetzNachArtikel` in `fedlex.ts`: falscher Self-Link auf benanntes Fremdgesetz unterdrückt, ~1195
+> Fälle; **§7-Abweichung:** ELI-Ziel steht NICHT im HTML-Body — 0/225 Body-Verweise verlinkt, ELI nur in
+> Fussnoten/XML=Phase 1 — darum Suppression statt Fremd-Chip; erlass-genaue Verweis-Chips = Phase-1-Folge;
+> Gegenprüfung fand+fixte FinfraV-FINMA-Kürzel-Regression `_`↔`-`). **Verifikations-Tor** = `check:invarianten`
+> (Markup-/Entity-/Suffix-Leak; robuste FP-freie Teilmenge — Absatz-Lückenlosigkeit + Wort-Containment
+> bewusst NICHT, als Nicht-Invariante/28-58%-Rauschen nachgewiesen). **Status-Marker** = **§7 empirisch schon
+> erfüllt** (aufgehoben-Statuszeile + Einklappen vorhanden; noch-nicht-in-Kraft kommt bei
+> current-consolidation-Pinning nicht vor) → dokumentiert, kein Neubau.
+
 - **Phase 0 — jetzt, `[OF]`, variantenunabhängig** (= die Arbeit aus Bündel N, deckt sich mit QS-GP/LERNPHASE-B):
   1. Asymmetrisches **Verifikations-Tor**: **Containment** (jedes Quell-Wort verbucht → fängt stille Drops) +
      **Struktur-Invarianten** (Absätze lückenlos 1→2→3, jeder interne Verweis löst auf, kein Fussnoten-Markup

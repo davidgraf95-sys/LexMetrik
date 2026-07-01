@@ -38,7 +38,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Gesetz ist, unter Vorbehalt von Artikel 3 a , nicht anwendbar:",
+          "text": "Das Gesetz ist, unter Vorbehalt von Artikel 3a, nicht anwendbar:",
           "items": [
             {
               "marke": "a",
@@ -87,7 +87,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1966/57_57_57/de#art_2",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20230901",
-      "sha": "1ced5e90fbceaba06f98b2c87a298635155f585481a2585fc6b853751a691c83"
+      "sha": "a07fe5c620451afa94313f11362c337a8bad448131984b30fefe38106760a6a1"
     },
     {
       "id": "bund/ARG/art_3",
@@ -99,7 +99,7 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Das Gesetz ist, unter Vorbehalt von Artikel 3 a , ferner nicht anwendbar:",
+          "text": "Das Gesetz ist, unter Vorbehalt von Artikel 3a, ferner nicht anwendbar:",
           "items": [
             {
               "marke": "a",
@@ -140,7 +140,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1966/57_57_57/de#art_3",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20230901",
-      "sha": "e4bbe5149694addc5e2a25b837b1035832853f60cbb5abe6f4d7a6eb269b621d"
+      "sha": "8fd9fc2a8b02e83be1d6aa050fb02a078cee430f3e24768fa797f099a1e3e35e"
     },
     {
       "id": "bund/ARG/art_3_a",
@@ -152,7 +152,7 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die Vorschriften dieses Gesetzes über den Gesundheitsschutz (Art. 6, 35 und 36 a ) sind jedoch anwendbar:",
+          "text": "Die Vorschriften dieses Gesetzes über den Gesundheitsschutz (Art. 6, 35 und 36a) sind jedoch anwendbar:",
           "items": [
             {
               "marke": "a",
@@ -173,7 +173,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1966/57_57_57/de#art_3_a",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20230901",
-      "sha": "c37d4c4645e501d47bb0bfe88f7212ec1cd0c3f0ec1c9698e88dda8975641117"
+      "sha": "296507c3bbde6b16abfde024779984f2e1a6d7d586681ec61088c5c4a6d00058"
     },
     {
       "id": "bund/ARG/art_4",
@@ -296,14 +296,14 @@
         },
         {
           "absatz": "4",
-          "text": "Ist für die Errichtung oder Umgestaltung eines Betriebs die Genehmigung einer Bundesbehörde erforderlich, so erteilt diese auch die Plangenehmigung im Verfahren nach Absatz 1. Auf Berichte und Mitberichte sind die Artikel 62 a und 62 b des Regierungs- und Verwaltungsorganisationsgesetzes vom 21. März 1997 anwendbar."
+          "text": "Ist für die Errichtung oder Umgestaltung eines Betriebs die Genehmigung einer Bundesbehörde erforderlich, so erteilt diese auch die Plangenehmigung im Verfahren nach Absatz 1. Auf Berichte und Mitberichte sind die Artikel 62a und 62b des Regierungs- und Verwaltungsorganisationsgesetzes vom 21. März 1997 anwendbar."
         }
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1966/57_57_57/de#art_7",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20230901",
-      "sha": "a52795c381acad7c2b855a7202eaaf6702c5d0446383ae1868e35ad67c06fbfa"
+      "sha": "0d98a27edf3fddffc9a9eda901e77eb3c85d074038591a35f36b63a9974ab415"
     },
     {
       "id": "bund/ARG/art_8",
@@ -1035,7 +1035,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Bestimmte Gruppen von Betrieben oder Arbeitnehmern können durch Verordnung ganz oder teilweise von den Vorschriften der Artikel 9–17 a , 17 b Absatz 1, 18–20, 21, 24, 25, 31 und 36 ausgenommen und entsprechenden Sonderbestimmungen unterstellt werden, soweit dies mit Rücksicht auf ihre besonderen Verhältnisse notwendig ist."
+          "text": "Bestimmte Gruppen von Betrieben oder Arbeitnehmern können durch Verordnung ganz oder teilweise von den Vorschriften der Artikel 9–17a, 17b Absatz 1, 18–20, 21, 24, 25, 31 und 36 ausgenommen und entsprechenden Sonderbestimmungen unterstellt werden, soweit dies mit Rücksicht auf ihre besonderen Verhältnisse notwendig ist."
         },
         {
           "absatz": "1bis",
@@ -1108,7 +1108,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1966/57_57_57/de#art_27",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20230901",
-      "sha": "cbce540e3b973f885ebb8527951d7d3938d1becf1c5649dff1647e88a5f2a92b"
+      "sha": "c015d42a10858349b35888ca2215ca94ccbe8e244dac1c57381669b13c9acb40"
     },
     {
       "id": "bund/ARG/art_28",
@@ -1659,7 +1659,7 @@
         },
         {
           "absatz": "2",
-          "text": "An andere Behörden von Bund, Kantonen und Gemeinden oder an Dritte dürfen Daten auf begründetes schriftliches Gesuch hin bekannt gegeben werden, wenn die betroffene Person schriftlich eingewilligt hat oder die Einwilligung nach den Umständen vorausgesetzt werden darf ."
+          "text": "An andere Behörden von Bund, Kantonen und Gemeinden oder an Dritte dürfen Daten auf begründetes schriftliches Gesuch hin bekannt gegeben werden, wenn die betroffene Person schriftlich eingewilligt hat oder die Einwilligung nach den Umständen vorausgesetzt werden darf."
         },
         {
           "absatz": "3",
@@ -1678,7 +1678,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1966/57_57_57/de#art_44_a",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20230901",
-      "sha": "b12a6adeb3a6ab6f1b122516a61e8c99fa56ac677101dd274a5c526ae378faad"
+      "sha": "2a1ab4ff0177b36563f5a2f97f7f6a7c96c0e443e120546feef35370d8902dd7"
     },
     {
       "id": "bund/ARG/art_44_b",
@@ -1814,7 +1814,7 @@
             },
             {
               "marke": "c",
-              "text": "hinsichtlich der bei Nachtarbeit vorgesehenen Massnahmen im Sinne von Artikel 17 e ."
+              "text": "hinsichtlich der bei Nachtarbeit vorgesehenen Massnahmen im Sinne von Artikel 17e."
             }
           ]
         },
@@ -1827,7 +1827,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1966/57_57_57/de#art_48",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20230901",
-      "sha": "ee843c3d77dca6c721a2356eff95f38e63896155bb2478f63292aa8806bab8b0"
+      "sha": "abed80f83765d27faa93313f3ca380e547dc3801afaf9d0f5c043b8371b8bb2a"
     },
     {
       "id": "bund/ARG/art_49",
@@ -2368,7 +2368,7 @@
         },
         {
           "absatz": "2",
-          "text": "Kantonale Vorschriften über die Feriendauer, die längere Ferien als Artikel 341 bis Absatz 1 des Obligationenrechts vorsehen, bleiben als zivilrechtliche Bestimmungen im Rahmen von Artikel 341 bis Absatz 2 des Obligationenrechts weiterhin in Kraft."
+          "text": "Kantonale Vorschriften über die Feriendauer, die längere Ferien als Artikel 341bis Absatz 1 des Obligationenrechts vorsehen, bleiben als zivilrechtliche Bestimmungen im Rahmen von Artikel 341bis Absatz 2 des Obligationenrechts weiterhin in Kraft."
         },
         {
           "absatz": "3",
@@ -2383,7 +2383,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1966/57_57_57/de#art_73",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20230901",
-      "sha": "ab1f4dfd0d7b653ca5fdbeb2a9483c3f48c1fa6767bae5a0c5da56c9302c87a4"
+      "sha": "f62b4ffd9894650596c256c6f81301a80cc2e78a62cdd0af0fb22b89470a9aa9"
     },
     {
       "id": "bund/ARG/art_74",

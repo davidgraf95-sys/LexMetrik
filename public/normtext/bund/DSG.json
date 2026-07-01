@@ -161,7 +161,7 @@
             },
             {
               "marke": "b",
-              "text": "betroffene Person : natürliche Person, über die Personendaten bearbeitet werden;"
+              "text": "betroffene Person: natürliche Person, über die Personendaten bearbeitet werden;"
             },
             {
               "marke": "c",
@@ -199,15 +199,15 @@
             },
             {
               "marke": "d",
-              "text": "Bearbeiten : jeder Umgang mit Personendaten, unabhängig von den angewandten Mitteln und Verfahren, insbesondere das Beschaffen, Speichern, Aufbewahren, Verwenden, Verändern, Bekanntgeben, Archivieren, Löschen oder Vernichten von Daten;"
+              "text": "Bearbeiten: jeder Umgang mit Personendaten, unabhängig von den angewandten Mitteln und Verfahren, insbesondere das Beschaffen, Speichern, Aufbewahren, Verwenden, Verändern, Bekanntgeben, Archivieren, Löschen oder Vernichten von Daten;"
             },
             {
               "marke": "e",
-              "text": "Bekanntgeben : das Übermitteln oder Zugänglichmachen von Personendaten;"
+              "text": "Bekanntgeben: das Übermitteln oder Zugänglichmachen von Personendaten;"
             },
             {
               "marke": "f",
-              "text": "Profiling : jede Art der automatisier ten Bearbeitung von Personendaten, die darin besteht, dass diese Daten verwendet werden, um bestimmte persön liche Aspekte, die sich auf eine na türliche Person beziehen, zu bewerten, insbesondere um Aspekte bezüglich Arbeitsleistung, wirtschaftlicher Lage, Gesundheit, persönlicher Vorlieben, Interessen, Zuverlässigkeit, Verhalten, Aufenthaltsort oder Ortswechsel dieser natürlichen Person zu analysieren oder vorherzusagen;"
+              "text": "Profiling: jede Art der automatisierten Bearbeitung von Personendaten, die darin besteht, dass diese Daten verwendet werden, um bestimmte persönliche Aspekte, die sich auf eine natürliche Person beziehen, zu bewerten, insbesondere um Aspekte bezüglich Arbeitsleistung, wirtschaftlicher Lage, Gesundheit, persönlicher Vorlieben, Interessen, Zuverlässigkeit, Verhalten, Aufenthaltsort oder Ortswechsel dieser natürlichen Person zu analysieren oder vorherzusagen;"
             },
             {
               "marke": "g",
@@ -219,15 +219,15 @@
             },
             {
               "marke": "i",
-              "text": "Bundesorgan : Behörde oder Dienststelle des Bundes oder Person, die mit öffentlichen Aufgaben des Bundes betraut ist;"
+              "text": "Bundesorgan: Behörde oder Dienststelle des Bundes oder Person, die mit öffentlichen Aufgaben des Bundes betraut ist;"
             },
             {
               "marke": "j",
-              "text": "Verantwortlicher : private Person oder Bundesorgan, die oder das allein oder zusammen mit anderen über den Zweck und die Mittel der Bearbeitung entscheidet;"
+              "text": "Verantwortlicher: private Person oder Bundesorgan, die oder das allein oder zusammen mit anderen über den Zweck und die Mittel der Bearbeitung entscheidet;"
             },
             {
               "marke": "k",
-              "text": "Auftragsbearbeiter : private Person oder Bundesorgan, die oder das im Auftrag des Verantwortlichen Personendaten bearbeitet."
+              "text": "Auftragsbearbeiter: private Person oder Bundesorgan, die oder das im Auftrag des Verantwortlichen Personendaten bearbeitet."
             }
           ]
         }
@@ -236,7 +236,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/491/de#art_5",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250707",
-      "sha": "ac3b3d391558b4b80f7f905d6f9e80b36312320db4e166edd8a1619c6aa05d76"
+      "sha": "e0621c63e2486f0167e18c21f6ca20dafc9047cfaf3ea7d56b8715faca9ae9a7"
     },
     {
       "id": "bund/DSG/art_6",
@@ -459,7 +459,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Berufs-, Branchen- und Wirtschaftsverbände , die nach ihren Statuten zur Wahrung der wirtschaftlichen Interessen ihrer Mitglieder befugt sind, sowie Bundesorgane können dem EDÖB Verhaltenskodizes vorle gen ."
+          "text": "Berufs-, Branchen- und Wirtschaftsverbände, die nach ihren Statuten zur Wahrung der wirtschaftlichen Interessen ihrer Mitglieder befugt sind, sowie Bundesorgane können dem EDÖB Verhaltenskodizes vorlegen."
         },
         {
           "absatz": "2",
@@ -470,7 +470,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/491/de#art_11",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250707",
-      "sha": "f65c34ab4bfcfe4b9eff49165a277130e1931a04ee81f9921ccd22989e855d51"
+      "sha": "aeb850dd52cdeef4c674c73164625e00bbc01904db4f608ff324dc61db8d1c19"
     },
     {
       "id": "bund/DSG/art_12",
@@ -528,14 +528,14 @@
         },
         {
           "absatz": "5",
-          "text": "Der Bundesrat sieht Ausnahmen für Unternehmen vor, die weniger als 250 Mitarbeiterinnen und Mitarbeiter beschäf tigen und deren Datenbearbeitung ein geringes Risiko von Verletzungen der Persönlichkeit der betroffenen Personen mit sich bringt."
+          "text": "Der Bundesrat sieht Ausnahmen für Unternehmen vor, die weniger als 250 Mitarbeiterinnen und Mitarbeiter beschäftigen und deren Datenbearbeitung ein geringes Risiko von Verletzungen der Persönlichkeit der betroffenen Personen mit sich bringt."
         }
       ],
       "stand": "2025-07-07",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/491/de#art_12",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250707",
-      "sha": "e1e71c966a34e4e8c3630a59766a45ee14361970b83de76adfa817357bf09cf8"
+      "sha": "12dfd8411c967b4aa7d3852a1da110f09753ce94c243f22deb92df9735610809"
     },
     {
       "id": "bund/DSG/art_13",
@@ -970,7 +970,7 @@
         },
         {
           "absatz": "2",
-          "text": "Das hohe Risiko ergibt sich, insbeson dere bei Verwendung neuer Technologien, aus der Art , dem Umfang, den Umständen und dem Zweck der Bearbeitung. Es liegt namentlich vor:",
+          "text": "Das hohe Risiko ergibt sich, insbesondere bei Verwendung neuer Technologien, aus der Art, dem Umfang, den Umständen und dem Zweck der Bearbeitung. Es liegt namentlich vor:",
           "items": [
             {
               "marke": "a",
@@ -1013,7 +1013,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/491/de#art_22",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250707",
-      "sha": "cd19efadd6fc969355b37994c3c4ee4c8c2edfa5eb91ddc96602846bcee88e1c"
+      "sha": "146076f5528b297e954a89570857843071ff55b1a310458c06c2d3fbbd4cc5e1"
     },
     {
       "id": "bund/DSG/art_23",
@@ -1163,7 +1163,7 @@
         },
         {
           "absatz": "6",
-          "text": "Der Verantwortliche muss kostenlos Auskunft erteilen. Der Bundesrat kann Ausnahmen vorsehen, namentlich wenn der Aufwand unverhältnismässig ist ."
+          "text": "Der Verantwortliche muss kostenlos Auskunft erteilen. Der Bundesrat kann Ausnahmen vorsehen, namentlich wenn der Aufwand unverhältnismässig ist."
         },
         {
           "absatz": "7",
@@ -1174,7 +1174,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/491/de#art_25",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250707",
-      "sha": "4e1bdda14949168975fffd7e94f5f69301f2d3e0a89e6356457a81ea62bcecfb"
+      "sha": "15bf0002b3fedabd41d2b4dae3f8e0b3056e74dd704cd81d48228b5fbc888591"
     },
     {
       "id": "bund/DSG/art_26",
@@ -1190,7 +1190,7 @@
           "items": [
             {
               "marke": "a",
-              "text": "ein Gesetz im formellen Sinn dies vorsieht, namentlich um ein Berufs geheimnis zu schützen;"
+              "text": "ein Gesetz im formellen Sinn dies vorsieht, namentlich um ein Berufsgeheimnis zu schützen;"
             },
             {
               "marke": "b",
@@ -1249,7 +1249,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/491/de#art_26",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250707",
-      "sha": "bd6f663cb1c634ed1a4a6406b024dbb6f6cad950d039a86909f5b30beef02876"
+      "sha": "975f5b7276ba6a35f33df493c1beda0290947ea3939547c0092c9e920cb730e9"
     },
     {
       "id": "bund/DSG/art_27",
@@ -1497,7 +1497,7 @@
         },
         {
           "absatz": "2",
-          "text": "Klagen zum Schutz der Persönlichkeit richten sich nach den Artikeln 28, 28 a sowie 28 g –28 l des Zivilgesetzbuchs. Die klagende Partei kann insbesondere verlangen, dass:",
+          "text": "Klagen zum Schutz der Persönlichkeit richten sich nach den Artikeln 28, 28a sowie 28g–28l des Zivilgesetzbuchs. Die klagende Partei kann insbesondere verlangen, dass:",
           "items": [
             {
               "marke": "a",
@@ -1526,7 +1526,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/491/de#art_32",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250707",
-      "sha": "aa9f2021705ef27838b239c841fff5fc5ffc8adf8b92b3da027cdfb436e6a0d8"
+      "sha": "5b13be6f5cb0cbe913ae55a3285019db93c239139f830760ab6bf9f18f576568"
     },
     {
       "id": "bund/DSG/art_33",
@@ -1982,7 +1982,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Vereinigte Bundesversammlung wählt die Leiterin oder den Leiter des EDÖB (die oder der Beauftragte) ."
+          "text": "Die Vereinigte Bundesversammlung wählt die Leiterin oder den Leiter des EDÖB (die oder der Beauftragte)."
         },
         {
           "absatz": "2",
@@ -2013,7 +2013,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/491/de#art_43",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250707",
-      "sha": "595bd1821e81168c2162edad89851d27b878c0e0d2e73983af6911e5d75f4b62"
+      "sha": "ddf163959e753837401f0734b20783edfc94a3c227a12aa49ffd258c1ca70033"
     },
     {
       "id": "bund/DSG/art_44",
@@ -2081,14 +2081,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Der EDÖB reicht den Entwurf seines Budgets jähr lich über die Bundeskanzlei dem Bundesrat ein. Dieser leitet ihn unverändert an die Bundesversammlung weiter."
+          "text": "Der EDÖB reicht den Entwurf seines Budgets jährlich über die Bundeskanzlei dem Bundesrat ein. Dieser leitet ihn unverändert an die Bundesversammlung weiter."
         }
       ],
       "stand": "2025-07-07",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/491/de#art_45",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250707",
-      "sha": "84039241726fad7934698952e4011550ac314860a13a79119a1f446c6daa9dc9"
+      "sha": "6753d78e62c066451c16f0e94354c74c8bb5955c66008a3d47e47bd50ac7be97"
     },
     {
       "id": "bund/DSG/art_46",
@@ -2577,14 +2577,14 @@
         },
         {
           "absatz": "3",
-          "text": "Der EDÖB ist befugt, gegenüber den ausländischen Behörden, die für den Datenschutz zuständig sind, zu erklären, dass im Bereich des Datenschutzes in der Schweiz die direkte Zustellung zuläs sig ist, sofern der Schweiz Gegenrecht gewährt wird."
+          "text": "Der EDÖB ist befugt, gegenüber den ausländischen Behörden, die für den Datenschutz zuständig sind, zu erklären, dass im Bereich des Datenschutzes in der Schweiz die direkte Zustellung zulässig ist, sofern der Schweiz Gegenrecht gewährt wird."
         }
       ],
       "stand": "2025-07-07",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/491/de#art_58",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250707",
-      "sha": "17024e2e4c581937a6d3aa044b7456c811b264ccccacf09809dbcbdd48a9d4f5"
+      "sha": "1c1d37f44241d79016782582b14a84eee84fabb839a90a580aa58b29b8e56924"
     },
     {
       "id": "bund/DSG/art_59",
@@ -2604,7 +2604,7 @@
             },
             {
               "marke": "b",
-              "text": "die Genehmigung von Standarddatenschutzklauseln und verbindlichen unter nehmensinternen Datenschutzvorschriften nach Artikel 16 Absatz 2 Buchstaben d und e;"
+              "text": "die Genehmigung von Standarddatenschutzklauseln und verbindlichen unternehmensinternen Datenschutzvorschriften nach Artikel 16 Absatz 2 Buchstaben d und e;"
             },
             {
               "marke": "c",
@@ -2633,7 +2633,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/491/de#art_59",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250707",
-      "sha": "0ab746d6aae1c64824383ca87eb2f73d477c3b2a8093552dd437441ffe6018eb"
+      "sha": "842b05a62a90bd49f592d9f3c5a8e3e035d76c6e39c5eb8faa171b6a80b3a3af"
     },
     {
       "id": "bund/DSG/art_60",
@@ -2880,14 +2880,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die Artikel 7, 22 und 23 sind nicht an wendbar auf Datenbearbeitungen, die vor Inkrafttreten dieses Gesetzes begonnen wurden, wenn der Bearbeitungszweck unverändert bleibt und keine neuen Daten beschafft werden."
+          "text": "Die Artikel 7, 22 und 23 sind nicht anwendbar auf Datenbearbeitungen, die vor Inkrafttreten dieses Gesetzes begonnen wurden, wenn der Bearbeitungszweck unverändert bleibt und keine neuen Daten beschafft werden."
         }
       ],
       "stand": "2025-07-07",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/491/de#art_69",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250707",
-      "sha": "6c2385f12e76176b238aa330ca73d01518039cba8637ed12afa927af8ac4f4ba"
+      "sha": "b44dd972337df341010814da7a5894f969433592b2d1c7e10294afc323cebedb"
     },
     {
       "id": "bund/DSG/art_70",
@@ -2918,14 +2918,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Für Bundesorgane finden Vorschriften in anderen Bundeserlassen, die sich auf Personendaten beziehen, während fünf Jahren nach Inkrafttreten dieses Gesetzes weiter Anwendung auf Daten juristischer Personen. Insbesondere können Bundesorgane während fünf Jahren nach Inkrafttreten dieses Gesetzes Daten juristischer Personen nach Artikel 57 s Absätze 1 und 2 des Regierungs- und Verwaltungsorganisationsgesetzes vom 21. März 1997 weiterhin bekanntgeben, wenn sie gestützt auf eine Rechtsgrundlage zur Bekanntgabe von Personendaten ermächtigt sind."
+          "text": "Für Bundesorgane finden Vorschriften in anderen Bundeserlassen, die sich auf Personendaten beziehen, während fünf Jahren nach Inkrafttreten dieses Gesetzes weiter Anwendung auf Daten juristischer Personen. Insbesondere können Bundesorgane während fünf Jahren nach Inkrafttreten dieses Gesetzes Daten juristischer Personen nach Artikel 57s Absätze 1 und 2 des Regierungs- und Verwaltungsorganisationsgesetzes vom 21. März 1997 weiterhin bekanntgeben, wenn sie gestützt auf eine Rechtsgrundlage zur Bekanntgabe von Personendaten ermächtigt sind."
         }
       ],
       "stand": "2025-07-07",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/491/de#art_71",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20250707",
-      "sha": "5d63bb8e4203c9ae6afe35f35cc0435591b6fe1603ab51f5aa8e28ca861562f0"
+      "sha": "150ed104af2521e6c9c4062a5c19a46fa15fccc9e42449768aaea84f709d3c72"
     },
     {
       "id": "bund/DSG/art_72",

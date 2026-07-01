@@ -86,7 +86,7 @@
             },
             {
               "marke": "b",
-              "text": "Unternehmen : rechtliche Einheit mit einer eigenen Unternehmens-Identifikationsnummer oder solche in einem Konzern zusammengeschlossene Einheiten mit einem gemeinsam organisierten Abfallentsorgungssystem;"
+              "text": "Unternehmen: rechtliche Einheit mit einer eigenen Unternehmens-Identifikationsnummer oder solche in einem Konzern zusammengeschlossene Einheiten mit einem gemeinsam organisierten Abfallentsorgungssystem;"
             },
             {
               "marke": "c",
@@ -106,7 +106,7 @@
             },
             {
               "marke": "fbis",
-              "text": "Quecksilberabfälle :"
+              "text": "Quecksilberabfälle:"
             },
             {
               "marke": "1",
@@ -145,7 +145,7 @@
             },
             {
               "marke": "l",
-              "text": "Thermische Behandlung : die Behandlung von Abfällen mit so hoher Temperatur, dass umweltgefährdende Stoffe zerstört oder durch Mineralisierung physikalisch oder chemisch gebunden werden;"
+              "text": "Thermische Behandlung: die Behandlung von Abfällen mit so hoher Temperatur, dass umweltgefährdende Stoffe zerstört oder durch Mineralisierung physikalisch oder chemisch gebunden werden;"
             },
             {
               "marke": "m",
@@ -168,7 +168,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/891/de#art_3",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260101",
-      "sha": "a236717d0c37ea12060bdac1ed09fcdd9c0ae900a09489589ac1a24871ca49cf"
+      "sha": "2d3b2f81226a4bfc257f887195b630f92b1aa7889785750949be5892ff553d71"
     },
     {
       "id": "bund/VVEA/art_4",
@@ -655,14 +655,14 @@
         },
         {
           "absatz": "2",
-          "text": "Das BAFU überprüft unter Einbezug der Kantone und der Branchen alle 8–10 Jahre die Zweckmässigkeit der nach Artikel 15 a Absätze 2 und 3 zurückzugewinnenden Menge an Phosphor; es schlägt dem UVEK entsprechende Massnahmen vor."
+          "text": "Das BAFU überprüft unter Einbezug der Kantone und der Branchen alle 8–10 Jahre die Zweckmässigkeit der nach Artikel 15a Absätze 2 und 3 zurückzugewinnenden Menge an Phosphor; es schlägt dem UVEK entsprechende Massnahmen vor."
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/891/de#art_15_c",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260101",
-      "sha": "d9bdf74541039753dc280fa37ae28aa6da926bf1f1f28141d755e55df1ba7ae6"
+      "sha": "43a78ad495e05fb033d99133a94b01b6c6f176a760c8b0198f8c7664f6dd8c11"
     },
     {
       "id": "bund/VVEA/art_16",
@@ -1018,18 +1018,18 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Quecksilberabfälle nach Artikel 3 Buchstabe f bis Ziffern 1 und 2 sind umweltverträglich und nach dem Stand der Technik zu entsorgen."
+          "text": "Quecksilberabfälle nach Artikel 3 Buchstabe fbis Ziffern 1 und 2 sind umweltverträglich und nach dem Stand der Technik zu entsorgen."
         },
         {
           "absatz": "2",
-          "text": "Quecksilberabfälle nach Artikel 3 Buchstabe f bis Ziffer 3 sind umweltverträglich und nach dem Stand der Technik zu behandeln und abzulagern."
+          "text": "Quecksilberabfälle nach Artikel 3 Buchstabe fbis Ziffer 3 sind umweltverträglich und nach dem Stand der Technik zu behandeln und abzulagern."
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/891/de#art_25_a",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260101",
-      "sha": "d105cd5c67af63531573fca5d1b98f355f6cd5ad1399122b06c06b9c0f676d48"
+      "sha": "85bc01395fe3fe889182f311a2134b8ebf4cd9a1ff23f89bad3782896ebc3d0a"
     },
     {
       "id": "bund/VVEA/art_26",
@@ -1897,14 +1897,14 @@
         },
         {
           "absatz": "2",
-          "text": "Ab diesem Zeitpunkt müssen die Abgeber von Klärschlamm sowie von Tier- und Knochenmehl der zuständigen kantonalen Behörde den Nachweis nach Artikel 15 b erbringen."
+          "text": "Ab diesem Zeitpunkt müssen die Abgeber von Klärschlamm sowie von Tier- und Knochenmehl der zuständigen kantonalen Behörde den Nachweis nach Artikel 15b erbringen."
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/891/de#art_51",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260101",
-      "sha": "31db4f102b88bbd5a7dba03d7e600e4764f4642838adffd55064005877d6db0d"
+      "sha": "038ff25aca439b76e69a215359395833bd13b7b1d4902583b39804998cd33ad0"
     },
     {
       "id": "bund/VVEA/art_52",
@@ -2622,12 +2622,12 @@
             },
             {
               "marke": "a",
-              "text": "Bei Deponien und Kompartimenten des Typs B muss eine 2 m mächtige, weitgehend homogene, natürliche geologische Barriere mit einem mittleren Durchlässigkeitsbeiwert (k) von 1,0 × 10 -7 m/s vorhanden sein oder der Untergrund nach den Regeln des Erdbaus durch 3 lagenweise geschüttete, homogene, mineralische Einbauschichten mit einem mittleren k von 1,0 × 10 -8 m/s, welche zusammen 60 cm mächtig sind, ergänzt werden. Für eine Ergänzung des Untergrunds darf nur Material verwendet werden, das die Anforderungen nach Anhang 3 Ziffer 1 einhält.",
+              "text": "Bei Deponien und Kompartimenten des Typs B muss eine 2 m mächtige, weitgehend homogene, natürliche geologische Barriere mit einem mittleren Durchlässigkeitsbeiwert (k) von 1,0 × 10-7 m/s vorhanden sein oder der Untergrund nach den Regeln des Erdbaus durch 3 lagenweise geschüttete, homogene, mineralische Einbauschichten mit einem mittleren k von 1,0 × 10-8 m/s, welche zusammen 60 cm mächtig sind, ergänzt werden. Für eine Ergänzung des Untergrunds darf nur Material verwendet werden, das die Anforderungen nach Anhang 3 Ziffer 1 einhält.",
               "tiefe": 1
             },
             {
               "marke": "b",
-              "text": "Bei Deponien der Typen C, D und E muss eine 7 m mächtige, weitgehend homogene, natürliche geologische Barriere mit einem mittleren k von 1,0 × 10 -7 m/s vorhanden sein oder eine 2 m mächtige, weitgehend homogene, natürliche geologische Barriere mit einem mittleren k von 1,0 × 10 -7 m/s, die nach den Regeln des Erdbaus durch 3 lagenweise geschüttete, homogene, mineralische Einbauschichten mit einem mittleren k von 1,0 × 10 -9 m/s, welche zusammen 60 cm mächtig sind, ergänzt wird. Für die Ergänzung des Untergrunds darf nur Material verwendet werden, das die Anforderungen nach Anhang 3 Ziffer 1 einhält.",
+              "text": "Bei Deponien der Typen C, D und E muss eine 7 m mächtige, weitgehend homogene, natürliche geologische Barriere mit einem mittleren k von 1,0 × 10-7 m/s vorhanden sein oder eine 2 m mächtige, weitgehend homogene, natürliche geologische Barriere mit einem mittleren k von 1,0 × 10-7 m/s, die nach den Regeln des Erdbaus durch 3 lagenweise geschüttete, homogene, mineralische Einbauschichten mit einem mittleren k von 1,0 × 10-9 m/s, welche zusammen 60 cm mächtig sind, ergänzt wird. Für die Ergänzung des Untergrunds darf nur Material verwendet werden, das die Anforderungen nach Anhang 3 Ziffer 1 einhält.",
               "tiefe": 1
             },
             {
@@ -2646,7 +2646,7 @@
             },
             {
               "marke": "c",
-              "text": "der Untergrund nach den Regeln des Erdbaus durch 3 lagenweise geschüttete, homogene, mineralische Einbauschichten mit einem mittleren k von 1,0 × 10 -9 m/s, welche zusammen 80 cm mächtig sind, ergänzt wird. Für die Ergänzung des Untergrunds darf nur Material verwendet werden, das die Anforderungen nach Anhang 3 Ziffer 1 einhält.",
+              "text": "der Untergrund nach den Regeln des Erdbaus durch 3 lagenweise geschüttete, homogene, mineralische Einbauschichten mit einem mittleren k von 1,0 × 10-9 m/s, welche zusammen 80 cm mächtig sind, ergänzt wird. Für die Ergänzung des Untergrunds darf nur Material verwendet werden, das die Anforderungen nach Anhang 3 Ziffer 1 einhält.",
               "tiefe": 1
             },
             {
@@ -2694,7 +2694,7 @@
             },
             {
               "marke": "a",
-              "text": "Mineralische Abdichtung: Sie muss eine Mindestmächtigkeit von 80 cm und einen mittleren k von weniger oder gleich 1 × 10 -9 m/s aufweisen und in mindestens 3 Schichten eingebaut werden, wobei jede Schicht einzeln verdichtet und vor dem Austrocknen geschützt werden muss.",
+              "text": "Mineralische Abdichtung: Sie muss eine Mindestmächtigkeit von 80 cm und einen mittleren k von weniger oder gleich 1 × 10-9 m/s aufweisen und in mindestens 3 Schichten eingebaut werden, wobei jede Schicht einzeln verdichtet und vor dem Austrocknen geschützt werden muss.",
               "tiefe": 1
             },
             {
@@ -2745,7 +2745,7 @@
             },
             {
               "marke": "a",
-              "text": "Mineralische Abtrennungen: Sie müssen 80 cm mächtig sein und einen mittleren k von weniger oder gleich 1 × 10 -9 m/s aufweisen.",
+              "text": "Mineralische Abtrennungen: Sie müssen 80 cm mächtig sein und einen mittleren k von weniger oder gleich 1 × 10-9 m/s aufweisen.",
               "tiefe": 1
             },
             {
@@ -2892,7 +2892,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/891/de#annex_2",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260101",
-      "sha": "ad87593b58ef66dfb31c29d391d7b7416ac66be32498209b3799bbb4192822e2"
+      "sha": "1f0288ce8fb9ea415cb00228e7f926ffce3c5efc3bec4f070d0b7ad1f35ce014"
     },
     {
       "id": "bund/VVEA/annex_3",
@@ -3018,23 +3018,23 @@
                 "3"
               ],
               [
-                "Benzo[ a ]pyren",
+                "Benzo[a]pyren",
                 "0,3"
               ],
               [
-                "* Σ7 LCKW: Dichlormethan, Trichlormethan, Tetrachlormethan, cis -1,2-Dichlorethylen, 1,1,1-Trichlorethan, Trichlorethylen (Tri), Perchlorethylen (Per)"
+                "* Σ7 LCKW: Dichlormethan, Trichlormethan, Tetrachlormethan, cis-1,2-Dichlorethylen, 1,1,1-Trichlorethan, Trichlorethylen (Tri), Perchlorethylen (Per)"
               ],
               [
                 "** Σ6 Kongenere × 4.3 (IUPAC-Nr.): 28, 52, 101, 138, 153, 180"
               ],
               [
-                "*** ΣC 5 - bis C 10 -KW: Fläche FID-Chromatogramm zwischen n -Pentan und n -Decan, multipliziert mit dem Response Faktor von n -Hexan, minus ΣBTEX"
+                "*** ΣC 5 - bis C 10 -KW: Fläche FID-Chromatogramm zwischen n-Pentan und n-Decan, multipliziert mit dem Response Faktor von n-Hexan, minus ΣBTEX"
               ],
               [
-                "**** Σ6BTEX: Benzol, Toluol, Ethylbenzol, o -Xylol, m -Xylol, p -Xylol"
+                "**** Σ6BTEX: Benzol, Toluol, Ethylbenzol, o-Xylol, m-Xylol, p-Xylol"
               ],
               [
-                "***** Σ16 EPA-PAK: Naphthalin, Acenaphthylen, 1,2-Dihydroacenaphthylen, Fluoren, Phenanthren, Anthracen, Fluoranthen, Pyren, Benz[ a ]anthracen, Chrysen, Benzo[ a ]pyren, Benzo[ b ]fluoranthen, Benzo[ k] fluoranthen, Dibenz[ a,h ]anthracen, Benzo[ g,h,i ]perylen, Indeno[1,2,3- c,d ]pyren"
+                "***** Σ16 EPA-PAK: Naphthalin, Acenaphthylen, 1,2-Dihydroacenaphthylen, Fluoren, Phenanthren, Anthracen, Fluoranthen, Pyren, Benz[a]anthracen, Chrysen, Benzo[a]pyren, Benzo[b]fluoranthen, Benzo[k]fluoranthen, Dibenz[a,h]anthracen, Benzo[g,h,i]perylen, Indeno[1,2,3-c,d]pyren"
               ]
             ]
           }
@@ -3142,7 +3142,7 @@
                 "12,5"
               ],
               [
-                "Benzo[ a ]pyren",
+                "Benzo[a]pyren",
                 "1,5"
               ],
               [
@@ -3170,7 +3170,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/891/de#annex_3",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260101",
-      "sha": "f3b207bc116d0be713f3869dbdf35c59144a9d3e88cd9e9758b3299cbc31af36"
+      "sha": "bbee4dd5892e35bb01a1c5517d367ad3ce8fd028b4a4690631e98e498335def3"
     },
     {
       "id": "bund/VVEA/annex_4",
@@ -3290,7 +3290,7 @@
                 "250"
               ],
               [
-                "Benzo[ a ]pyren",
+                "Benzo[a]pyren",
                 "10"
               ],
               [
@@ -3298,19 +3298,19 @@
                 "50 000"
               ],
               [
-                "* Σ7 LCKW: Dichlormethan, Trichlormethan, Tetrachlormethan, cis -1,2-Dichlorethylen, 1,1,1-Trichlorethan, Trichlorethylen (Tri), Perchlorethylen (Per)"
+                "* Σ7 LCKW: Dichlormethan, Trichlormethan, Tetrachlormethan, cis-1,2-Dichlorethylen, 1,1,1-Trichlorethan, Trichlorethylen (Tri), Perchlorethylen (Per)"
               ],
               [
                 "** Σ6 Kongenere × 4.3 (IUPAC_Nr.): 28, 52, 101, 138, 153, 180"
               ],
               [
-                "*** ΣC 5 - bis C 10 -KW: Fläche FID-Chromatogramm zwischen n -Pentan und n -Decan, multipliziert mit dem Response Faktor von n -Hexan, minus ΣBTEX"
+                "*** ΣC 5 - bis C 10 -KW: Fläche FID-Chromatogramm zwischen n-Pentan und n-Decan, multipliziert mit dem Response Faktor von n-Hexan, minus ΣBTEX"
               ],
               [
-                "**** Σ6BTEX: Benzol, Toluol, Ethylbenzol, o -Xylol, m -Xylol, p -Xylol"
+                "**** Σ6BTEX: Benzol, Toluol, Ethylbenzol, o-Xylol, m-Xylol, p-Xylol"
               ],
               [
-                "***** Σ16 EPA-PAK: Naphthalin, Acenaphthylen, 1,2-Dihydroacenaphthylen, Fluoren, Phenanthren, Anthracen, Fluoranthen, Pyren, Benz[ a ]anthracen, Chrysen, Benzo[ a ]pyren, Benzo[ b ]fluoranthen, Benzo[ k ]fluoranthen, Dibenz[ a,h ]anthracen, Benzo[ g,h,i ]perylen, Indeno[1,2,3- c,d ]pyren"
+                "***** Σ16 EPA-PAK: Naphthalin, Acenaphthylen, 1,2-Dihydroacenaphthylen, Fluoren, Phenanthren, Anthracen, Fluoranthen, Pyren, Benz[a]anthracen, Chrysen, Benzo[a]pyren, Benzo[b]fluoranthen, Benzo[k]fluoranthen, Dibenz[a,h]anthracen, Benzo[g,h,i]perylen, Indeno[1,2,3-c,d]pyren"
               ]
             ]
           }
@@ -3474,7 +3474,7 @@
             },
             {
               "marke": "e",
-              "text": "Klärschlamm aus zentralen Abwasserreinigungsanlagen sowie Tier- und Knochenmehl, wenn die Vorgaben gemäss den Artikeln 15–15 b erfüllt sind.",
+              "text": "Klärschlamm aus zentralen Abwasserreinigungsanlagen sowie Tier- und Knochenmehl, wenn die Vorgaben gemäss den Artikeln 15–15b erfüllt sind.",
               "tiefe": 1
             },
             {
@@ -3759,7 +3759,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/891/de#annex_4",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260101",
-      "sha": "5538acc8b01002a1b9891b3e88d5d47a7e0ecc934f22fc9634c9cd8065da462a"
+      "sha": "b9ad118354ff9886b9f7a783f456d8c67d6ce02eca3d0be2ca253e641f9e4ca1"
     },
     {
       "id": "bund/VVEA/annex_5",
@@ -4033,7 +4033,7 @@
                 "25"
               ],
               [
-                "Benzo( a )pyren",
+                "Benzo(a)pyren",
                 "3"
               ],
               [
@@ -4041,19 +4041,19 @@
                 "20 000"
               ],
               [
-                "* Σ7 LCKW: Dichlormethan, Trichlormethan, Tetrachlormethan, cis -1,2-Dichlorethylen, 1,1,1-Trichlorethan, Trichlorethylen (Tri), Perchlorethylen (Per)"
+                "* Σ7 LCKW: Dichlormethan, Trichlormethan, Tetrachlormethan, cis-1,2-Dichlorethylen, 1,1,1-Trichlorethan, Trichlorethylen (Tri), Perchlorethylen (Per)"
               ],
               [
                 "** Σ6 Kongenere x 4.3 (IUPAC-Nr.): 28, 52, 101, 138, 153, 180"
               ],
               [
-                "*** ΣC 5 - bis C 10 -KW: Fläche FID-Chromatogramm zwischen n -Pentan und n -Decan, multipliziert mit dem Response Faktor von n -Hexan, minus ΣBTEX"
+                "*** ΣC 5 - bis C 10 -KW: Fläche FID-Chromatogramm zwischen n-Pentan und n-Decan, multipliziert mit dem Response Faktor von n-Hexan, minus ΣBTEX"
               ],
               [
-                "**** Σ6BTEX: Benzol, Toluol, Ethylbenzol, o -Xylol, m -Xylol, p -Xylol"
+                "**** Σ6BTEX: Benzol, Toluol, Ethylbenzol, o-Xylol, m-Xylol, p-Xylol"
               ],
               [
-                "***** Σ16 EPA-PAK: Naphthalin, 1,2 Dihydroacenaphthylen, Acenaphthen, Fluoren, Phenanthren, Anthracen, Fluoranthen, Pyren, Benz[ a ]anthracen, Chrysen, Benzo[ a ]pyren, Benzo[ b ]fluoranthen, Benzo[ k ]fluoranthen, Dibenz[ a,h ]anthracen, Benzo[ g,h,i ]perylen, Indeno[1,2,3- c,d ]pyren"
+                "***** Σ16 EPA-PAK: Naphthalin, 1,2 Dihydroacenaphthylen, Acenaphthen, Fluoren, Phenanthren, Anthracen, Fluoranthen, Pyren, Benz[a]anthracen, Chrysen, Benzo[a]pyren, Benzo[b]fluoranthen, Benzo[k]fluoranthen, Dibenz[a,h]anthracen, Benzo[g,h,i]perylen, Indeno[1,2,3-c,d]pyren"
               ]
             ]
           }
@@ -4368,7 +4368,7 @@
                 "25"
               ],
               [
-                "Benzo( a )pyren",
+                "Benzo(a)pyren",
                 "3"
               ],
               [
@@ -4552,7 +4552,7 @@
                 "25"
               ],
               [
-                "Benzo( a) pyren",
+                "Benzo(a)pyren",
                 "3"
               ],
               [
@@ -4713,7 +4713,7 @@
                 "250"
               ],
               [
-                "Benzo( a )pyren",
+                "Benzo(a)pyren",
                 "10"
               ],
               [
@@ -4773,7 +4773,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/891/de#annex_5",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260101",
-      "sha": "ce42c2a4585784813766c0253f47810229ac7103869e868f37a7b7f1a3a4ebb5"
+      "sha": "5b66976a42cff373b258ff81ff9d26519e689f7798fa156812e21c43a6259a54"
     },
     {
       "id": "bund/VVEA/annex_6",
@@ -4817,7 +4817,7 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "(Art. 14 a )"
+          "text": "(Art. 14a)"
         },
         {
           "absatz": null,
@@ -4894,7 +4894,7 @@
                 "* ∑6 Kongenere × 4.3 (IUPAC_Nr.): 28, 52, 101, 138, 153, 180"
               ],
               [
-                "** ∑16 EPA-PAK: Naphthalin, Acenaphthylen, 1,2-Dihydroacenaphthylen, Fluoren, Phenanthren, Anthracen, Fluoranthen, Pyren, Benz[ a ]anthracen, Chrysen, Benzo[ a ]pyren, Benzo[ b ]fluoranthen, Benzo[ k ]fluoranthen, Dibenz[ a,h ]anthracen, Benzo[ g,h,i ]perylen, Indeno[1,2,3- c,d ]pyren"
+                "** ∑16 EPA-PAK: Naphthalin, Acenaphthylen, 1,2-Dihydroacenaphthylen, Fluoren, Phenanthren, Anthracen, Fluoranthen, Pyren, Benz[a]anthracen, Chrysen, Benzo[a]pyren, Benzo[b]fluoranthen, Benzo[k]fluoranthen, Dibenz[a,h]anthracen, Benzo[g,h,i]perylen, Indeno[1,2,3-c,d]pyren"
               ]
             ]
           }
@@ -4976,7 +4976,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/891/de#annex_7",
       "abgerufen": "2026-06-30",
       "fassungsToken": "20260101",
-      "sha": "c4a0e4fe4b747c7ad15a609a32acf63edab36275b44c669e836fe0f39b550de5"
+      "sha": "e27b824db055521faa0eed3e981b01968ea3769d5ee59bb4dcd50af7397f3d46"
     }
   ]
 }
