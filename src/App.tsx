@@ -6,6 +6,7 @@ import { ErrorBoundary } from './components/ErrorBoundary';
 import { RouteMeta } from './components/RouteMeta';
 import { TabTracker } from './components/TabTracker';
 import { RouteSwitch } from './RouteSwitch';
+import { prefetchLeser } from './leserPrefetch';
 import { tabSchluessel } from './lib/tabs';
 
 // SPA-Scroll-Reset: Beim Routenwechsel nach oben scrollen (sonst behält die
@@ -136,6 +137,23 @@ export default function App() {
   // (Redesign E8). Der Such-Parameter (?q= der Hero-Suche) ändert den
   // pathname NICHT → kein Remount, der Katalog-Zustand bleibt erhalten.
   const { pathname } = useLocation();
+  // Rank 2 (QS-PERF): schwere Leser-Chunks nach dem Erstpaint idle vorwärmen, damit
+  // das erste Gesetz/Entscheid ohne Chunk-Parse-Wartezeit öffnet. requestIdleCallback
+  // hält es vom kritischen Pfad fern (setTimeout-Fallback, garantiert feuernd, §15/3).
+  useEffect(() => {
+    const w = window as typeof window & {
+      requestIdleCallback?: (cb: () => void) => number;
+      cancelIdleCallback?: (id: number) => void;
+    };
+    let idleId: number | undefined;
+    let toId: number | undefined;
+    if (w.requestIdleCallback) idleId = w.requestIdleCallback(prefetchLeser);
+    else toId = window.setTimeout(prefetchLeser, 1500);
+    return () => {
+      if (idleId != null) w.cancelIdleCallback?.(idleId);
+      if (toId != null) window.clearTimeout(toId);
+    };
+  }, []);
   return (
     <LocaleProvider>
     <Shell>

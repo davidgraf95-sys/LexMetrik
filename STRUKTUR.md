@@ -23,6 +23,19 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 1.7.2026 — QS-PERF Rank 2-Rest: Reader-Chunk idle-Vorladen (Branch `feat/perf-batch3-reader-preload`)
+
+**Geräte-Last / Performance (Querschnitt QS-PERF, `[OF]`).** Die schweren Leser-Route-Chunks
+(`GesetzLeser`/`EntscheidLeser`) werden nach dem Erstpaint **idle** vorgewärmt → erstes Gesetz/Entscheid
+öffnet ohne Chunk-Parse-Warten/Spinner-Frame auf schwacher CPU. Neu `src/leserPrefetch.ts` (Import-Thunks
+als EINE Quelle §5 + `prefetchLeser()`; eigene Datei wegen react-refresh/only-export-components),
+`RouteSwitch` teilt die Thunks, `App.tsx` ruft `prefetchLeser` via `requestIdleCallback`(+setTimeout-Fallback)
+aus einem Client-`useEffect` (kein SSR/Prerender-Effekt, golden byte-gleich). **Verifikation:** `npm run gate`
+grün, Playwright: beide Chunks laden auf `/` OHNE Navigation. Rein additiver Cache-Warm, off-critical-path
+(§6.4/§15/3). Trailer `Roadmap: QS-PERF` · `Gegenpruefung: n/a`. **Damit ist die sichere Autonom-«Dry»-Grenze
+erreicht:** CLS, Render-CPU, Fonts, Bundle-Split, Chunk-Preload sind erledigt+deployt; der Rest (OR-LCP im
+M-Daten-Pfad, Rank 6/7/8/10) braucht Architektur-Entscheid bzw. Risiko-Pfad-Gegenprüfung. Detail: `FAHRPLAN-PERFORMANCE.md` §Stand.
+
 ## Session 1.7.2026 — QS-PERF Rank 11 Fallback-Fonts (Branch `feat/perf-fonts-fallback-metrics`)
 
 **Geräte-Last / Performance (Querschnitt QS-PERF, `[OF]`).** Metrik-angepasste Fallback-Fonts
