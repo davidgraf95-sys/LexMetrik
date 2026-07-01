@@ -59,10 +59,26 @@ plus 49 Reader/Startseiten/Rechtsprechungs-e2e grün; §9-Bug-Check + gemessen):
   Zeilenkasten Webfont↔Fallback **Δ 0,0 px** (Sans UND Serif) → font-display:swap erzeugt keinen
   Reflow mehr. CSS-only, reine Darstellung.
 
-**Offen / nächste:** Lighthouse-Schranken am Tor (CI-Chrome) · Rank 2-Reader-Chunk-Vorladen +
-News-Prerender (3-optional) · **M-Daten-Pfad → LCP** (6 idle-Defer, 7 Web-Worker-Suche,
-8 Register-Sharding, 10 Snapshot-Format) · Split-View-Feinschliff (9, 12, 14) · optionaler
-build-time-Preload der 2 latin-woff2 (LCP-sekundär, braucht hashfeste Injektion).
+**1.7.2026 — Rank 2-Rest gebaut** (Branch `feat/perf-batch3-reader-preload`, Gate grün + gemessen):
+
+- ✅ **Rank 2 (Reader-Chunk-Vorladen)** — die schweren Leser-Chunks (`GesetzLeser`/`EntscheidLeser`)
+  werden nach dem Erstpaint **idle** vorgewärmt (`prefetchLeser` in neuem `src/leserPrefetch.ts`,
+  gerufen via `requestIdleCallback`+setTimeout-Fallback aus `App.tsx`; Thunks = EINE Quelle §5, von
+  RouteSwitch geteilt). **Gemessen** (Playwright): beide Chunks laden auf der Startseite OHNE
+  Navigation → erstes Gesetz öffnet ohne Chunk-Parse-Warten/Spinner-Frame. Rein additiver Cache-Warm,
+  off-critical-path (§6.4/§15/3). Der CLS-Teil von Rank 2 war schon in Batch 1 (min-h) gelöst.
+
+**Offen / nächste:** Lighthouse-Schranken am Tor (CI-Chrome) · News-Prerender (3-optional) ·
+**M-Daten-Pfad → LCP** (6 idle-Defer *braucht Architektur-Entscheid*, 7 Web-Worker-Suche,
+8 Register-Sharding, 10 Snapshot-Format — **7/8/10 sind Risiko-Pfad → `check:gegenpruefung`**) ·
+Split-View-Feinschliff (9 Debounce/Pane-Guard, 12/13 marginal, 14) · optionaler build-time-Preload
+der 2 latin-woff2 (LCP-sekundär, braucht hashfeste Injektion).
+
+> **«Dry»-Grenze der sicheren Autonom-Arbeit (1.7.2026):** CLS (2/3), Render-CPU (1/4), Fonts (11),
+> Bundle-Split (5) und Chunk-Preload (2-Rest) sind **erledigt + deployt**. Der grösste verbleibende
+> Hebel ist die **OR-LCP** (6,2 s @ 4×-CPU) im M-Daten-Pfad — der braucht entweder einen
+> Architektur-Entscheid (Rank 6, render-then-replace, ggf. Council) oder Risiko-Pfad-Zyklen mit
+> Gegenprüfung + Snapshot-/Register-Regen (7/8/10). Das ist bewusst **kein** mechanischer Autonom-Edit.
 
 ---
 

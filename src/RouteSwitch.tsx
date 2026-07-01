@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import { ROUTEN_MANIFEST } from './routesManifest';
 import { lazyRetry } from './lazyRetry';
+import { importGesetzLeser, importEntscheidLeser } from './leserPrefetch';
 
 // ─── Routen-Baum (eine Quelle) ─────────────────────────────────────────────
 //
@@ -38,12 +39,15 @@ const Einstellungen = lazyRetry(() => import('./pages/Einstellungen').then((m) =
 // wird prerendert (seo.ts), die Lesesicht /gesetze/:ebene/:key ist client-lazy
 // (SPA-Fallback via vercel.json-Rewrite) — die Routenzahl bleibt stabil bei +1.
 const Gesetze = lazyRetry(() => import('./pages/Gesetze').then((m) => ({ default: m.Gesetze })));
-const GesetzLeser = lazyRetry(() => import('./pages/GesetzLeser').then((m) => ({ default: m.GesetzLeser })));
+// Rank 2 (QS-PERF): der Gesetzes-Leser ist der schwerste Route-Chunk. Der Import-Thunk
+// lebt in leserPrefetch.ts (EINE Quelle, §5), damit prefetchLeser() exakt denselben
+// Chunk idle vorwärmen kann.
+const GesetzLeser = lazyRetry(importGesetzLeser);
 // Rubrik VI «Rechtsprechung» (Bundesgerichtsentscheide) — analog zu Gesetze:
 // Übersicht /rechtsprechung wird prerendert (seo.ts), der Reader
 // /rechtsprechung/:key ist client-lazy (SPA-Fallback). Routenzahl +1.
 const Rechtsprechung = lazyRetry(() => import('./pages/Rechtsprechung').then((m) => ({ default: m.Rechtsprechung })));
-const EntscheidLeser = lazyRetry(() => import('./pages/EntscheidLeser').then((m) => ({ default: m.EntscheidLeser })));
+const EntscheidLeser = lazyRetry(importEntscheidLeser);
 // Rubrik «International»: eigenständige Übersicht der für die Schweiz
 // massgeblichen Staatsverträge & des internationalen Rechts — alle Einträge
 // nur-live-link (amtliche Quelle), kein Volltext-Snapshot. Übersicht /international
