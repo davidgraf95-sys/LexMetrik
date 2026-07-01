@@ -49,15 +49,20 @@ plus 49 Reader/Startseiten/Rechtsprechungs-e2e grün; §9-Bug-Check + gemessen):
   Preview): Streifen 11,61 rem Desktop / 11,17 rem mobil < 12,5 rem → `min-h` dominiert in beiden
   Zuständen → **CLS von NewsHeader = 0** (statt Voll-Höhe-Einwachsen). Echter Leerfall (leeres
   Register) kollabiert bewusst auf `null` (§8, in Prod nie — 272 BGE).
-- ⏸️ **Rank 11 (Fonts) bewusst verschoben** — braucht **gemessene** `size-adjust`/`ascent`/
-  `descent`/`line-gap-override` (fontkit/Fontaine), sonst verschlechtert ein geratener Wert den
-  Swap-Reflow. Eigener Schritt mit echter Metrik-Extraktion; Sekundärfix (dominanter OR-CLS ist
-  Rank 2/6, nicht Fonts).
+**1.7.2026 — Rank 11 (Fonts) gebaut** (Branch `feat/perf-fonts-fallback-metrics`, Gate grün + gemessen):
+
+- ✅ **Rank 11** — metrik-angepasste Fallback-Fonts. `@font-face 'Geist Fallback'` (Arial) /
+  `'Source Serif 4 Fallback'` (Georgia) in `src/index.css`, `size-adjust`/`ascent-`/`descent-`/
+  `line-gap-override` **GEMESSEN** aus den echten fontsource-woff2 via `scripts/gen-font-fallbacks.ts`
+  (`@capsizecss`, reproduzierbar über `npm run gen:font-fallbacks`) — nicht geraten. Fallback-Family
+  direkt hinter dem Webfont in `--font-display`/`-sans`/`-serif`. **Verifikation:** Playwright-Messung
+  Zeilenkasten Webfont↔Fallback **Δ 0,0 px** (Sans UND Serif) → font-display:swap erzeugt keinen
+  Reflow mehr. CSS-only, reine Darstellung.
 
 **Offen / nächste:** Lighthouse-Schranken am Tor (CI-Chrome) · Rank 2-Reader-Chunk-Vorladen +
-News-Prerender (3-optional) · **Fonts (11)** mit gemessenen Metriken · **M-Daten-Pfad → LCP**
-(6 idle-Defer, 7 Web-Worker-Suche, 8 Register-Sharding, 10 Snapshot-Format) · Split-View-Feinschliff
-(9, 12, 14).
+News-Prerender (3-optional) · **M-Daten-Pfad → LCP** (6 idle-Defer, 7 Web-Worker-Suche,
+8 Register-Sharding, 10 Snapshot-Format) · Split-View-Feinschliff (9, 12, 14) · optionaler
+build-time-Preload der 2 latin-woff2 (LCP-sekundär, braucht hashfeste Injektion).
 
 ---
 
