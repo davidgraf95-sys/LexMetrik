@@ -1,4 +1,4 @@
-import { Suspense, useContext, useEffect, useMemo, useRef, useState, type CSSProperties, type DragEvent } from 'react';
+import { Suspense, useCallback, useContext, useEffect, useMemo, useRef, useState, type CSSProperties, type DragEvent } from 'react';
 import { createPath, parsePath, UNSAFE_NavigationContext, type Location, type To } from 'react-router-dom';
 import { ErrorBoundary } from '../ErrorBoundary';
 import { RouteSwitch } from '../../RouteSwitch';
@@ -75,6 +75,13 @@ export function SekundaerPane(props: SekundaerPaneProps) {
   // AKTUELL gezeigten Pfad, nicht den Anfangs-pfad). Der Pane-Key bleibt der
   // Seed-pfad → kein Remount bei In-Pane-Navigation.
   useEffect(() => { onNavigiert?.(pfad, loc); }, [pfad, loc, onNavigiert]);
+  // Breadcrumb-Klick in der Titelleiste navigiert PANE-LOKAL (David 1.7.2026):
+  // dieselbe push-Semantik wie der Pane-Navigator (neuer Stack-Eintrag hinter dem
+  // aktuellen Index), nie der globale Router. setHist ist stabil → Deps []. §15/4.
+  const navigiere = useCallback((to: string) => setHist((h) => {
+    const stack = [...h.stack.slice(0, h.idx + 1), to];
+    return { stack, idx: stack.length - 1 };
+  }), []);
   const navKontext = useMemo(() => ({
     ...elternNav,
     static: false,
@@ -102,7 +109,7 @@ export function SekundaerPane(props: SekundaerPaneProps) {
         className={`flex flex-col flex-1 min-w-0 border-l ${ueber ? 'border-l-2 border-l-brass-700' : 'border-line'} max-lg:flex-none max-lg:w-full max-lg:snap-start`}
       >
         <PaneKopf
-          label={label} stand={stand} breadcrumb={kopf?.breadcrumb} artikel={kopf?.artikel} rolle="sekundaer"
+          label={label} stand={stand} breadcrumb={kopf?.breadcrumb} onBreadcrumb={navigiere} artikel={kopf?.artikel} rolle="sekundaer"
           onSchliessen={onSchliessen} onHauptfenster={onHauptfenster} onTeilen={onTeilen}
           onLinks={onLinks} onRechts={onRechts} kannLinks={kannLinks} kannRechts={kannRechts}
           ziehbar={ziehbar} onDragStart={onDragStart} onDragEnd={onDragEnd}

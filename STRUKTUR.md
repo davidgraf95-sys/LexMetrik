@@ -23,6 +23,23 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 1.7.2026 — Split-View-Breadcrumb klickbar (pane-lokal) — Branch `fix/split-view-breadcrumb-klickbar`, PR + Auto-Merge, Deploy §9 offen
+
+**Bug David:** «Breadcrumbs nicht mehr klickbar.» **Root Cause (systematisch, Browser-verifiziert):** kein Perf-Regressions-Bug —
+in der Einzelansicht war die Breadcrumb immer klickbar (`InhaltsKopf` → `<Link>`). David war im **Split-View** (persistiert
+`localStorage["lexmetrik-panes"]`); dort rendert die `PaneKopf`-Titelleiste die Breadcrumb, die **per Design statisch** war
+(`PaneKopf.tsx`: „keine Navigation im Pane", alle Labels `<span>`, `to` ignoriert). Der `PaneKopf` liegt zudem AUSSERHALB des
+Pane-`UNSAFE_NavigationContext`, ein `<Link>` hätte das ganze Fenster wegnavigiert.
+
+**Fix (Auftrag David 1.7.: klickbar, PANE-LOKAL navigieren):** neuer Prop `PaneKopf.onBreadcrumb(to)` → Krümel mit `to` werden
+`<button>` (Blatt bleibt `<span>`), kein globaler `<Link>`, kein `<nav>`-Landmark. **Sekundär-Pane** (`Pane.tsx`): Klick über
+den Pane-eigenen Navigator (`setHist`-push). **Primär-Pane** (`Shell.tsx`): Klick über den Haupt-Router (`navigate`).
+
+**Verifiziert:** Browser live — Sekundär-Krümel navigiert NUR das Pane (Top-Level-URL + Primär-Pane unverändert), Primär-Krümel
+bewegt den Haupt-Router. Neuer SSR-Unit-Test `paneKopfBreadcrumb.test.tsx` (TDD rot→grün). **`npm run gate` GRÜN**
+(tsc/vitest/**golden byte-identisch**/lint/check — reine Darstellung §3/§6.4, kein Logik-/Prerender-Drift; kein Risiko-Pfad →
+`check:gegenpruefung` n/a). **Push/Deploy §9: PR + Auto-Merge bei grüner CI; Prod-Deploy wartet auf Davids Ja.**
+
 ## Session 1.7.2026 — Bündel N: Normtext-Fidelity + Verweise (Worktree `buendel-n-normtext-fidelity`, gegated, Push/Deploy §9 offen)
 
 **Phase 0 der AKN-XML-Quell-Architektur (Council 30.6.), 4 Teile, je eigener Commit (Risiko-Klassen getrennt §14.2):**

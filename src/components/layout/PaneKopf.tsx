@@ -14,9 +14,13 @@ export interface PaneKopfProps {
   label: string;
   /** In-Kraft-/Konsolidierungs-Stand, nur wenn auflösbar (§8 — kein erfundener Stand). */
   stand?: string | null;
-  /** F: Breadcrumb «Gesetze › Bund › OR» statt blossem Label (Parität zur Einzelansicht);
-   *  im Pane reine Anzeige (keine Navigation — der Pane-Navigator liegt nicht hier). */
+  /** F: Breadcrumb «Gesetze › Bund › OR» statt blossem Label (Parität zur Einzelansicht). */
   breadcrumb?: { label: string; to?: string }[];
+  /** Klick auf einen Krümel mit `to` navigiert PANE-LOKAL (David 1.7.2026): der
+   *  Callback geht an den Pane-eigenen Navigator (sekundär) bzw. den Haupt-Router
+   *  (primär) — NIE ein globaler <Link> (der das ganze Fenster wegnavigieren würde).
+   *  Fehlt der Callback (z. B. SSR/Prerender), bleibt die Breadcrumb statisch. */
+  onBreadcrumb?: (to: string) => void;
   /** F: aktuell gelesener Artikel (Gesetz, live), z. B. «Art. 7 OR». */
   artikel?: string | null;
   rolle: 'primaer' | 'sekundaer';
@@ -38,7 +42,7 @@ export interface PaneKopfProps {
 
 const knopf = 'inline-flex h-7 w-7 items-center justify-center rounded-md text-ink-500 hover:text-brass-700 hover:bg-brass-100/40 disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-ink-500 transition-colors';
 
-export function PaneKopf({ icon, label, stand, breadcrumb, artikel, rolle, onSchliessen, onHauptfenster, onTeilen, onLinks, onRechts, kannLinks, kannRechts, ziehbar, onDragStart, onDragEnd }: PaneKopfProps) {
+export function PaneKopf({ icon, label, stand, breadcrumb, onBreadcrumb, artikel, rolle, onSchliessen, onHauptfenster, onTeilen, onLinks, onRechts, kannLinks, kannRechts, ziehbar, onDragStart, onDragEnd }: PaneKopfProps) {
   return (
     <div className={`shrink-0 grid grid-cols-[1fr_auto] items-center gap-2 h-9 px-1.5 border-b border-line bg-paper ${rolle === 'primaer' ? 'border-l-2 border-l-brass-700' : ''}`}>
       {/* Links: Identität (Icon · Label · Stand). pl-0 + enger gap → der Breadcrumb-
@@ -57,14 +61,21 @@ export function PaneKopf({ icon, label, stand, breadcrumb, artikel, rolle, onSch
         )}
         {icon && <span className="shrink-0">{icon}</span>}
         {breadcrumb && breadcrumb.length > 0 ? (
-          // Breadcrumb (Parität zur Einzelansicht) — reine Anzeige (keine Navigation
-          // im Pane), daher KEIN <nav>-Landmark (sonst gleichnamige Landmark-Flut bei
-          // mehreren Panes). Plus laufender Artikel + Stand (rechts angehängt).
+          // Breadcrumb (Parität zur Einzelansicht). KEIN <nav>-Landmark (sonst
+          // gleichnamige Landmark-Flut bei mehreren Panes). Krümel mit `to` sind
+          // PANE-LOKAL klickbar (David 1.7.2026): <button> → onBreadcrumb (Pane-
+          // Navigator bzw. Haupt-Router), nie ein globaler <Link>. Ohne Callback
+          // (SSR/Prerender) rein statisch. Plus laufender Artikel + Stand (rechts).
           <span className="flex min-w-0 items-center gap-1 text-body-s">
             {breadcrumb.map((b, i) => (
               <span key={`${i}-${b.label}`} className="inline-flex min-w-0 items-center gap-1">
                 {i > 0 && <span aria-hidden className="shrink-0 text-ink-300">›</span>}
-                <span className={`truncate ${i === breadcrumb.length - 1 ? 'font-medium text-ink-800' : 'text-ink-500'}`}>{b.label}</span>
+                {b.to && onBreadcrumb ? (
+                  <button type="button" onClick={() => onBreadcrumb(b.to!)}
+                    className="truncate text-ink-500 no-underline hover:text-brass-700 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass-600 focus-visible:-outline-offset-2 rounded-sm">{b.label}</button>
+                ) : (
+                  <span className={`truncate ${i === breadcrumb.length - 1 ? 'font-medium text-ink-800' : 'text-ink-500'}`}>{b.label}</span>
+                )}
               </span>
             ))}
           </span>
