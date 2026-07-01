@@ -23,7 +23,22 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
-## Session 1.7.2026 — QS-PERF Quick-Win-Batch 2 (Rank 4 + Rank 3; NICHT deployt)
+## Session 1.7.2026 — QS-PERF Rank 11 Fallback-Fonts (Branch `feat/perf-fonts-fallback-metrics`)
+
+**Geräte-Last / Performance (Querschnitt QS-PERF, `[OF]`).** Metrik-angepasste Fallback-Fonts
+gegen den font-display:swap-Reflow (CLS-Sekundärfix). `@font-face 'Geist Fallback'` (Arial) /
+`'Source Serif 4 Fallback'` (Georgia) in `src/index.css` mit `size-adjust`/`ascent-`/`descent-`/
+`line-gap-override` **gemessen** aus den echten fontsource-woff2 via neuem `scripts/gen-font-fallbacks.ts`
+(`@capsizecss` devDeps, reproduzierbar `npm run gen:font-fallbacks`) — nicht geraten (§7). Fallback-Family
+direkt hinter dem Webfont in `--font-display`/`-sans`/`-serif`. **Verifikation:** `npm run gate` grün,
+gebautes CSS enthält beide `@font-face`, Playwright-Messung Zeilenkasten Webfont↔Fallback **Δ 0,0 px**
+(Sans + Serif) → Swap-Reflow eliminiert. CSS-only, reine Darstellung. Trailer `Roadmap: QS-PERF` ·
+`Gegenpruefung: n/a`. **Nebenbefund (nicht meine Arbeit):** die e2e `schnellrechner-kalender.e2e.ts:38`
+(Füllgrad >0,55) ist **seit ihrem Einführungs-Commit `8719d336` rot** (deterministisch 0,516 = 16/31,
+macOS + CI identisch) — main ist nicht branch-protected, daher nicht-blockierend; separat zu klären
+(Kalender-Layout füllt real nur 51,6 % ODER Test-Schwelle zu eng). Detail: `FAHRPLAN-PERFORMANCE.md` §Stand.
+
+## Session 1.7.2026 — QS-PERF Quick-Win-Batch 2 (Rank 4 + Rank 3; deployt)
 
 **Geräte-Last / Performance (Querschnitt QS-PERF, `[OF]`, Branch `feat/perf-batch2-render-cls-fonts`).**
 Zweiter Quick-Win-Batch aus `FAHRPLAN-PERFORMANCE.md`, rein Darstellungs-/Build-Schicht (kein
