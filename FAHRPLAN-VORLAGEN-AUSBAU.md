@@ -1,5 +1,9 @@
 # FAHRPLAN VORLAGEN-AUSBAU — Verträge-Rahmen, P1-Vorlagen, Rechner-Erweiterungen
 
+> **§14-gebündelt (Phase 0, 2.7.2026):** **Einzige Planungs-Heimat für Bürgschaft/Ehevertrag/ABV**
+> (V5/V6). Die entsprechenden `FAHRPLAN-VERTRAGS-VARIANTEN.md`-Punkte (F/H/I) sind nur Verweis.
+> ROADMAP-Anker: `W3·13`.
+
 **Quelle:** Wettbewerbsanalyse 12.6.2026
 (`bibliothek/recherche/wettbewerbsanalyse-rechtswissen-schweizer-vertraege.md`,
 Auftrag David `PROMPT-wettbewerbsanalyse.md`). **Stand: IN ARBEIT**
