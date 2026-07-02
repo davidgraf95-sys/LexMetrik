@@ -40,8 +40,13 @@ import {
 //        nationale Rechtshilfe in Strafsachen und Amtshilfe in Steuersachen;
 //        e) öffentliche Beschaffungen.
 //   3. Werktagsverschiebung des letzten Tages: Art. 20 Abs. 3 VwVG bzw.
-//      Art. 45 Abs. 1 BGG (massgebend ist das Recht des Kantons, in dem die
-//      Partei/Vertretung Wohnsitz oder Sitz hat).
+//      Art. 45 BGG. Anders als das VwVG (Art. 20 Abs. 3 trägt BEIDE Sätze in
+//      EINEM Absatz) verteilt das BGG die Regel auf zwei Absätze: Abs. 1 =
+//      Werktagsverschiebung, Abs. 2 = «Massgebend ist das Recht des Kantons, in
+//      dem die Partei oder ihr Vertreter … den Wohnsitz oder den Sitz hat».
+//      Darum trägt der BGG-Anker Art. 45 BGG (nicht nur Abs. 1) — amtlich
+//      verifiziert am Fedlex-Filestore SR 173.110, Konsolidierung 20260401
+//      (§7-Gegenprüfung 2.7.2026).
 //
 // Diese Engine ist eine reine Kompositions-Schicht über der fristenEngine –
 // keine eigene Datums-Arithmetik, kein LLM (§2/§3). Sie deckt die ordentliche
@@ -92,7 +97,12 @@ const REGIME: Record<StillstandRegime, RegimeMeta> = {
     kuerzel: 'BGG',
     stillstandNorm: 'Art. 46 Abs. 1 BGG',
     ausnahmeNorm: 'Art. 46 Abs. 2 BGG',
-    werktagNorm: 'Art. 45 Abs. 1 BGG',
+    // Art. 45 BGG: Abs. 1 = Werktagsverschiebung, Abs. 2 = massgebendes
+    // kantonales Recht (Wohnsitz/Sitz der Partei/Vertretung). Beide Sätze
+    // hängen hier am selben werktagNorm-Anker → Art. 45 BGG als Ganzes zitieren,
+    // nicht nur Abs. 1 (die Wohnsitz/Sitz-Aussage steht in Abs. 2). Amtlich
+    // verifiziert Fedlex SR 173.110, Konsolidierung 20260401 (§7, 2.7.2026).
+    werktagNorm: 'Art. 45 BGG',
     ausnahmen: [
       'die aufschiebende Wirkung und andere vorsorgliche Massnahmen',
       'die Wechselbetreibung',

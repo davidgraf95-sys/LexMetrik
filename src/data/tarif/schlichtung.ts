@@ -243,7 +243,7 @@ export const SCHLICHTUNG: Record<KantonCode, KantonalerTarif> = {
     kanton: 'GE', erlassName: 'Règlement fixant le tarif des frais en matière civile (RTFMC)', erlassNr: 'rsGE E 1 05.10',
     artikel: 'Art. 15', stand: '1.7.2025', verifiziert: 'recherche',
     quelleUrl: 'https://silgeneve.ch/legis/data/rsg_e1_05p10.htm',
-    hinweis: 'Émolument forfaitaire de conciliation (Art. 15 RTFMC): bis 30 000 CHF 100, darüber CHF 200. Re-Verifikation 21.6.: kein «+20 %»-Zuschlag im Artikel; fester Forfait (deterministisch, zweistufig).',
+    hinweis: 'Émolument forfaitaire de conciliation (Art. 15 RTFMC): bis 30 000 CHF 100, darüber CHF 200. Bei Mehrheit von Klägern oder Beklagten erhöht sich die Gebühr um 20 % (Art. 13 RTFMC, Dispositions communes — gemeinsame Bestimmung auch für die Schlichtung); die Engine kennt keinen Parteien-Input, daher hier nicht eingerechnet.',
     regel: { typ: 'staffel_inklusiv', baender: [{ bisChf: 30000, chf: 100 }, { bisChf: INF, chf: 200 }] },
   },
   JU: {

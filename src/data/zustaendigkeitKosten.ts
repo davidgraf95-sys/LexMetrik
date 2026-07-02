@@ -11,8 +11,9 @@ import type { Kanton } from '../types/legal';
 // Es sind RAHMEN (keine Berechnung!): die konkrete Festsetzung liegt bei
 // der Behörde. Bundesrechtliche Kostenfreiheit (Art. 113 Abs. 2 ZPO)
 // entscheidet die Engine — diese Schicht liefert nur die kantonalen Zahlen.
-// Pflege: jeder Eintrag trägt den Erlass; Verfalls-Punkte (z. B. SG GKV
-// endet 30.6.2026!) stehen im Parameter-Verfallsregister.
+// Pflege: jeder Eintrag trägt den Erlass; Verfalls-Punkte stehen im
+// Parameter-Verfallsregister (z. B. SG GKV sGS 941.12: Nachfolgefassung v3863
+// seit 1.7.2026 in Vollzug, Beträge wortgleich — Currency aufgelöst, QS-GP 2.7.2026).
 
 export interface KostenRahmen {
   /** Kurzrahmen in CHF, z. B. «100–1'000» oder beschreibend. */
@@ -156,9 +157,9 @@ export const ZUSTAENDIGKEIT_KOSTEN: Record<Kanton, KantonKosten> = {
   },
   SG: {
     stand: '5.6.2026',
-    schlichtung: { text: "Klagebewilligung CHF 200–1'000", erlass: 'GKV Art. 8, sGS 941.12', hinweis: 'GKV in Vollzug nur bis 30.6.2026 — ab 1.7.2026 Nachfolgefassung prüfen!' },
-    gericht: { text: "CHF 500–6'000 (Kreisgericht; Erhöhung bis 300 % ab Streitwert 100'000)", erlass: 'GKV Art. 10/11, sGS 941.12', hinweis: 'GKV endet 30.6.2026' },
-    nichtVermoegensrechtlich: { text: "kein eigener Rahmen — Bemessung im Rahmen (Kreisgericht End-/Zwischenentscheide 500–6'000, Einzelrichter 500–5'000; Kantonsgericht Kammer Art. 10 Ziff. 2: 800–8'000)", erlass: 'GKV Art. 4/10, sGS 941.12', hinweis: 'GKV in Vollzug nur bis 30.6.2026 — ab 1.7.2026 Nachfolgefassung prüfen!' },
+    schlichtung: { text: "Klagebewilligung CHF 200–1'000", erlass: 'GKV Art. 8, sGS 941.12', hinweis: 'GKV sGS 941.12: Nachfolgefassung v3863 seit 1.7.2026 in Vollzug (sGS-Nr. unverändert, Beträge wortgleich).' },
+    gericht: { text: "CHF 500–6'000 (Kreisgericht; Erhöhung bis 300 % ab Streitwert 100'000)", erlass: 'GKV Art. 10/11, sGS 941.12', hinweis: 'GKV sGS 941.12: Fassung v3863 seit 1.7.2026 in Vollzug (Beträge wortgleich)' },
+    nichtVermoegensrechtlich: { text: "kein eigener Rahmen — Bemessung im Rahmen (Kreisgericht End-/Zwischenentscheide 500–6'000, Einzelrichter 500–5'000; Kantonsgericht Kammer Art. 10 Ziff. 2: 800–8'000)", erlass: 'GKV Art. 4/10, sGS 941.12', hinweis: 'GKV sGS 941.12: Nachfolgefassung v3863 seit 1.7.2026 in Vollzug (sGS-Nr. unverändert, Beträge wortgleich).' },
   },
   GR: {
     stand: '5.6.2026',
