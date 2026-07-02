@@ -381,3 +381,23 @@ Nummerierung W0–W13. Reihenfolge ist die empfohlene Abarbeitung.
 
 *Danach:* W4 (Botschaft, amtlich, hoher Materialien-Wert) und W8 (Rails formalisieren) parallelisierbar; W11 (LexWork-Upgrade)
 erst nach **Davids Schema-Entscheid a/b/c** — Planner-Empfehlung (c) zuerst.
+
+---
+
+## OFFENE PUNKTE DIESER SESSION → Übergabe an Bauplan-Rework (andere Session, 2.7.2026)
+
+**Rechtsprechung / OCL-Abbau (Plan W1/W4–W13):**
+- **#16 R2-neu:** FR/IT-Decision→Norm-Mapping MIT 3 Wächtern (CO₂-Kontext-Guard · Ausland-Marker-Guard · **Artikel-Plausibilitäts-Tor**, das nebenbei das STHG/157-Phantom fängt). R2 war von der Gegenprüfung widerlegt (CO₂→OR, ital. CP/I→StGB) + revertiert.
+- **W11 LexWork `json_content`-Upgrade** — Schema-Entscheid David a/b/c (Detail-Gap-Analyse in `FAHRPLAN-OPENCASELAW-QUELLEN.md §Einbau-Gap-Analyse GESETZE`).
+- **W4 Materialien/Botschaft-Feed** (amtlich Fedlex, grösster Neu-Fund) · **W1 Fedlex-SPARQL-Härtung** (UNION-Falle) · **W5** Struktur-Splitter härten · **W6** Instanzenzug · **W7** Zitationsgraph-UI · **W10** Rechtsetzungs-Tracking · **W12** Bulk-Parquet · **W13** Verifikations-Rails + Suchindex-Härtung + Amendment-Refs/ELI.
+
+**HF-Datensatz `voilaj/swiss-caselaw` (David-Entscheide):**
+- USABLE: Port-Oracle-Harness (Treue-Tor, 90-MB-Graph) · structure-Oracle für abschnitte · norm-index-Eval.
+- Grösser (Architektur-Entscheid): Zitations-Graph-Feature (8,7M Kanten statt 342) · Parquet als Volltext-Quelle · Breiten-Korpus 1M.
+- Additiv-Felder: publication_date / outcome / text_length.
+
+**Parallel-Session Fedlex (NICHT meins, §12):** `FAHRPLAN-FEDLEX-PORTFOLIO.md` (untracked, 251 Z., 6 Fedlex-Datenarten „Fable plant/Opus baut") — von der Fedlex-Session zu committen + §14-ROADMAP-intaken.
+
+**§9-Backlog Rechen-Engines (anderer Agent, dokumentiert in `bibliothek/register/QS-GP-KAMPAGNE-2026-07-02.md`):** verzugszins (Konventions-Übergriff) · streitwert-Berufungsgrenze · verjaehrung-Einredeverzicht-Deckel + 2 Follow-ups (GRUNDPFAND.SG 1998-Tarif, verjaehrung BGE-Anker).
+
+**Deploy/Push offen (§9 — Push-Agent/David):** lokales `main` ist **11 Commits ahead of origin/main** (unpushed); INDEX-Fix ist drin → nach Push CI-grün; `npx vercel --prod` bewusst nicht gemacht.

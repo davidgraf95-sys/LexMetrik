@@ -177,3 +177,56 @@ Passt eng auf `[[immer-doppelt-verifizieren]]` + Skill `gegenpruefung`. Vier **d
 **Nächster konkreter Schritt (wartet auf Go):** kleiner TS-Extraktor 1 Kanton end-to-end in unsere Normtext-Struktur (`public/normtext/*`, Token=`uid`) + Doppel-Generator + `check:struktur-konsistenz` + Gegenprüfung, Review-Quote gegen jetzige LexFind-Extraktion messen. Andockpunkt `register.ts` `ErlassStatus→render_mode` (`[[lexfind-clex-quelle-strategie]]`). Isoliert auf eigenem Branch/Worktree (nicht auf `feat/normtext-phase1-fundament`).
 
 Geklontes OCL-Repo lag unter `scratchpad/ocl` (ephemer). POC-Probe-Artefakte im Scratchpad (ephemer).
+
+---
+
+## Einbau-Gap-Analyse GESETZE (2.7.2026) — REFRAMING
+
+**Wichtige Korrektur:** *kein* Greenfield. Die **kantonale Pipeline existiert schon und zieht bereits von LexWork** (Tier A, `scripts/normtext/adapter-lexwork.ts`; 1'232 Kantons-Snapshots live in `public/normtext/kanton/`; Discovery+Tier-Klassifikation `scripts/normtext/lexfind-discovery.ts`; geteilter, level-agnostischer Render-Pfad `src/pages/gesetz-leser/inhalt.tsx` + `src/components/normtext/ArtikelBody.tsx`). „Nützlichmachung" = **Upgrade INNERHALB des bestehenden Adapters**, kein neuer Tier, keine Parallel-Pipeline.
+
+**Der Umbau konkret:** heute liest `holeLexWork()` das Feld `xhtml_tol` (HTML-String, regex-geparst, **Fussnoten gestrippt, NBSP/Whitespace kollabiert** — `adapter-lexwork.ts:71-87`). Der reichere `json_content`-Baum (mein POC) ist **bekannt aber ungenutzt** (nur im Kommentar `lexfind-discovery.ts:20` benannt: „*erschliessbar mit dem BESTEHENDEN adapter-lexwork.ts, kein neuer Parser*"). Live verifiziert 2.7.: `GET …/show_as_json` liefert `json_content` (typisierter Baum) — **aber kein `xhtml_tol`** (das kommt vom anderen Endpunkt); `version_uid` (Drift-Token) sitzt auf `text_of_law`-Ebene und bleibt verfügbar. → Umbau = Endpunkt-/Feld-Wechsel im Adapter, Signatur `LexWorkErgebnis` unverändert, alles downstream (`erzeugeKantonsSnapshots` etc.) unberührt.
+
+**Ziel-Schema** (`src/lib/normtext/typen.ts:3-93`): `NormSnapshot` = 1 Artikel; `bloecke[]` = `{absatz, text, items?[{marke,text,tiefe}], tabelle?, mehrspaltig?}`; Datei `public/normtext/kanton/{KT}-{sysNr}.json`; id `kanton/{KT}/{sysNr}/art_{token}`. Golden = flache Map `id→sha256` (`golden/normtext-snapshot.json`), sha über text+items+tabelle+mehrspaltig. Kantonale Erlasse werden **NICHT** von Hand registriert (Generator leitet Identität aus Snapshot+Dateiname ab, `register.ts:358-373`) — anders als Bund (`ERLASS_MAP` ist bund-only). Pipeline: `npm run normtext -- --nur=kanton --kanton=XX [--discovery] --datum=$(date +%F)` → `normtext:struktur-kanton` → `check:confidence` (0.95, = die ~25-40% Review-Quote) → `check:vollstaendigkeit` → `normtext:register` → `gate`.
+
+**Zwei verbleibende Lücken:**
+1. **`json_content`-Feldmap** (Knoten article/paragraph/enumeration/title, `uid`-eIds, footnotes-Dict) — **grösstenteils vom POC schon geliefert**; im Adapter noch nicht gepinnt. eId→flacher `artikel`-Token/`items[].marke`+`tiefe` deterministisch abbilden (kollisionsfrei).
+2. **SCHEMA-ENTSCHEID (David):** `bloecke` hat **kein** Fussnoten-Feld und normalisiert NBSP weg. Reicherer `json_content` HAT Fussnoten + NBSP. Optionen: **(a) in-place upgraden** (reicher, aber **Golden-Churn auf allen 1'232 Snapshots + Pflicht-`gegenpruefung`**), **(b) `json_content` nur für NEUE Kantone** (Schema-Divergenz), **(c) json_content nur für saubereres Parsing, in dasselbe `bloecke` mappen** (Fussnoten/NBSP wie heute verwerfen → minimaler Churn, moderater Fidelity-Gewinn). Nebenbei: `check:confidence`-Kalibrierung für die sauberere Quelle prüfen; `version_uid`/`version_dates_str` im json_content-Pfad bestätigen (für `stand`/Drift, `check-drift.ts:191`).
+
+**Verdikt Gesetze: Senke gebaut + bewährt, Quelle bewährt. Offen nur (1) [~erledigt] + (2) = dein Trade-off Fidelity vs. Golden-Churn.**
+
+---
+
+## Einbau-Gap-Analyse RECHTSPRECHUNG (2.7.2026)
+
+**Senke existiert + OCL ist schon DIE Quelle.** `scripts/normtext/adapter-entscheide.ts` (`API=mcp.opencaselaw.ch/api`), nur **keyed** `/decisions/{id}`+`/structure`+`/erwaegung` (Listing/leading-cases bewusst gemieden: „unzuverlässig, R1/R9"). 344 Snapshots `public/rechtsprechung/{bund,kanton}/`. Schema `src/lib/rechtsprechung/typen.ts:59` `EntscheidSnapshot` (regeste + abschnitte/erwaegung + BGE-Auszug/Volltext-Switch + bgeReferenz + zitierteNormen/zitierteEntscheide + rubrum.vorinstanz). Reader `EntscheidLeser.tsx`/`Rechtsprechung.tsx`. **Live-Suche nutzt entscheidsuche.ch direkt** (`LiveSuche.tsx`→`_search.php`), nicht OCL = doktrin-korrekt. Gate `check:entscheide` + §8-Invarianten + Pflicht-Gegenprüfung.
+
+**Reichere OCL-Assets — Hebel-Ranking (Produktwert):**
+1. **Pro-Artikel-Leitfälle** (höchster Wert). Verzahnung existiert, aber nur **gesetz-eben** (21 Codes, `norm-index.json.proNorm`); `statutesZuNormKeys` (`entscheide-mapping.ts:28`) wirft Art./Abs. weg. FAHRPLAN-RECHTSPRECHUNG:410 spezifizierte `proNorm['BGG/32']` + `rechtsprechungFuer(idx,key,art)` — **nie gebaut**, Impl. auf Gesetz-Ebene regrediert. Umbau: Art. behalten → `LAW/ART`-Index → Andock pro `<article>` in `gesetz-leser/inhalt.tsx`. Unbekannt: Index-Grösse/`BUDGET_MB`-Impact des Fan-outs.
+2. **Zitationsgraph-UI** (cites/cited-by). Daten halb da (`zitierteEntscheide` gespeichert, aber nur als Crawl-BFS), **kein UI**; `/citations/{id}` ungenutzt. Umbau: inbound-Kanten build-time invertieren + Panel im Reader + id→interne `ERFASST`-Keys vs. externe bger.ch-Links.
+3. **Instanzenzug** — ganz fehlt; nur `rubrum.vorinstanz` Freitext. OCL `extract_prior_instance` portieren ODER `/appeal-chain`. Neues Feld + Render + eigene Gegenprüfung.
+4. **ECLI** — absent (grep leer). `EntscheidSnapshot.ecli` + reine Mint-Fn (aus `ecli.py`). Sehr billig, rein additiv.
+5. **OCL /materialien** — Materialien-Gerüst existiert (Schema+Render+`check:materialien`) aber **hand-kuratiert**, nicht OCL-gespeist. Adapter fehlt. Dedup/Botschaft-Lizenz klären.
+
+**Verbatim Erwägung/regeste = schon verdrahtet (reifer Teil), keine Lücke.**
+
+## SCRAPER-VERDIKT (Davids Frage „58 Scraper übernehmen?") — NEIN, Hybrid
+
+**Wir scrapen heute keine Gerichte selbst** → „Übernehmen" hiesse, funktionierenden Consume-Pfad durch wartungsintensiven Build-Pfad ersetzen. OCLs Flotte = **67 Scraper**, aber sie **kollabieren auf ~15 echte Ziele**:
+- **entscheidsuche.ch deckt ~24/26 Kantone bei Near-Parity** (OCLs eigene Side-by-Side-Overlap-Daten `entscheidsuche_ingest.py:103-182`: TI 58'116/59'273, OW 2'205/2'205 voll, GR/FR/NE/SO/LU/SZ/JU ~parität) + historische Bundesgerichte (Tier D). **Ein Kanal statt ~24 Scraper.** Wir nutzen entscheidsuche schon für Live-Suche.
+- **Direkt-only (irreduzibel ~15):** BGer-frisch (aber **PoW + Incapsula-JS-Challenge + SSH-SOCKS-Tunnel** weil IP geblockt; Frische = *gleicher Werktag*, stündlicher Poller — NICHT ~15 Min wie README behauptet), ~13 Regulatoren (WEKO/ElCom/PostCom/ESBK/RAB/Preisüberw./BAZG/UBI/FINMA/EDÖB/TA-SST — off-entscheidsuche, CMS-Regex-brüchig, winziges Volumen), ECHR/HUDOC.
+- **Wartungsrealität:** Incapsula-Arms-Race (Cookies 20-30 Min), Tunnel-Babysitting, Weblaw-Portal-Churn (BStGer schon einmal migriert), 61-GB-DB, Health/Alert-Subsystem. Voll-Port ≈ **3-5 Eng-Monate + 0,5-1 FTE Dauerbetrieb** → für Solo-Projekt Non-Starter.
+
+**Empfohlener Hybrid (>95% Korpus, Bruchteil des Aufwands):**
+| Familie | Strategie | Warum |
+|---|---|---|
+| 26 Kantone | **entscheidsuche 1 Kanal** | Near-Parity bewiesen; nutzen wir schon |
+| Regulatoren (~13) + hist. Bund/BGE | **OCL CC0-Parquet konsumieren** | off-es, brüchig, winziges Volumen; schlechtester Port-ROI |
+| BStGer/BVGer | **portieren (billig)** | saubere JSON-APIs (Weblaw-Churn beachten) |
+| HUDOC/ECHR | **portieren** | einzigartige JSON-API, trivial |
+| BGer/BGE frisch | **Endpunkt-Wissen portieren (optional)** | einzige Gleichtags-Quelle, aber teuerste Wartung (PoW/Incapsula/Tunnel) |
+
+**Uniformes Schema** (Pydantic `Decision`, 29 Felder + derived → 34; Dedup `decision_id={court}_{docket_norm}`) — Consume- und Port-Pfad erzeugen identische Records.
+
+## GESAMT-VERDIKT beide Achsen
+
+Der grösste ungenutzte Hebel ist **NICHT Scraper**, sondern **Technik-Ports build-time**: pro-Artikel-Leitfälle (#1) + Zitationsgraph + Instanzenzug + ECLI — deterministisches JSON im Produktpfad, keine Laufzeit-OCL-API (FAHRPLAN §8). Scraper: Hybrid statt Flotte. Nächste Entscheidung Davids: (Gesetze) Schema-Trade-off (a/b/c) · (Rechtsprechung) welcher Hebel zuerst — pro-Artikel-Leitfälle ist der Produkt-Nordstern.
