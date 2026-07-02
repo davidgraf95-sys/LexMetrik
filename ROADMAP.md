@@ -615,7 +615,7 @@ harter Auflage.
   SG-Füllpunkte/ZH-PDF-Residuen.
 - **Infrastruktur-Fundament:** GESETZESTEXT-POPUP (Snapshot/Drift) trägt RECHTSSAMMLUNG/Rechtsprechungs-
   Verzahnung/GESETZE-IMPORT → vor aufsetzenden Strängen mitdenken.
-- **Archiv-Kandidaten** (Code-Stand prüfen): BGE-DARSTELLUNG-EINHEITLICH · INTERNATIONAL-VOLLTEXT-Rest.
+- **Archiv-Kandidaten** (Code-Stand prüfen): INTERNATIONAL-VOLLTEXT-Rest.
   RECHTSPRECHUNG-Dach/TARIF-STUFE2/BGER-RECHTSWEG deployt → nur Abnahme.
   **Methode** (verify-then-archive, ultracode): die 28→`ROADMAP.md`-Konsolidierung ist seit 28.6.
   erledigt — offen ist nur das Archivieren obsoleter `FAHRPLAN-*.md` (Repo-Wurzel). Je FAHRPLAN

@@ -11,7 +11,6 @@ export interface Problem { id: string | null; meldung: string }
 // Altlast jedesmal rotzumachen. Beim Archivieren/Verlinken einer Datei hier streichen.
 const ARCHIV_BACKLOG = new Set<string>([
   'FAHRPLAN-BEURKUNDUNGS-AUSBAU.md',
-  'FAHRPLAN-BGE-DARSTELLUNG-EINHEITLICH.md',
   'FAHRPLAN-BGER-RECHTSWEG.md',
   'FAHRPLAN-FALL-RUECKGRAT.md',
   'FAHRPLAN-FUNDAMENT-UMBAU.md',
