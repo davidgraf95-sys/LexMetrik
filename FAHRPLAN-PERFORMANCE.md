@@ -82,7 +82,7 @@ Gate grün + 15 Reader-e2e grün):
   (eigener, split-view-spezifischer Schritt).
 
 **Offen / nächste:** Lighthouse-Schranken am Tor (CI-Chrome) · News-Prerender (3-optional) ·
-**M-Daten-Pfad → LCP** (6 idle-Defer *braucht Architektur-Entscheid*, 7 Web-Worker-Suche,
+**M-Daten-Pfad → LCP** (6 idle-Defer *braucht Architektur-Entscheid*, 7 Web-Worker-Suche (QS-DATA-Vorbehalt, s. Rank 7),
 8 Register-Sharding, 10 Snapshot-Format — **7/8/10 sind Risiko-Pfad → `check:gegenpruefung`**) ·
 Split-View-Feinschliff (9 Pane-Guard, 12/13 marginal, 14) · optionaler build-time-Preload
 der 2 latin-woff2 (LCP-sekundär, braucht hashfeste Injektion).
@@ -148,7 +148,7 @@ Kanton-Register, kein 16-MiB-Suchindex im kritischen Pfad).
 `check:normtext`, `check:struktur-konsistenz`, `check:suchindex` byte-sauber **+** ein
 Reader-Smoke (Playwright via Bash) auf `/gesetze/bund/OR`: Ctrl+F findet einen Artikel der
 *letzten* Sektion · `#art_X`-Deep-Link springt korrekt · Print-to-PDF enthält den vollständigen
-Normtext · Fussnoten-Popover öffnet. Schlägt ein Treue-Check fehl, ist der Perf-Gewinn **ungültig**.
+Normtext · Fussnoten-Popover öffnet. Schlägt ein Treue-Check fehl, ist der Perf-Gewinn **ungültig**. **`check:perf-budget` ist zugleich Abnahme-Kriterium für jede QS-DATA-Etappe mit UI-Anteil** (Edge-Suche/Long-Tail-Route dürfen den kritischen Pfad nicht belasten; `FAHRPLAN-DATENHALTUNG.md` §4).
 
 ---
 
@@ -174,7 +174,7 @@ marginalen Zusatzgewinn — entsprechend spät.
 | 4 | mittel/S | niedrig | **Render-Hotpath:** Sektions-Bereichslabel/Artikelzahl in **einem** Bottom-up-`useMemo` `[sektionen,artIndex]` vorberechnen (statt 2× O(Subtree) je Sektion je Render, `inhalt.tsx:762`); `tocToggle`/`springeZuSektion` `useCallback` (**`sektionen` in Deps**, sonst stale Sprung), `SektionBaumTOC` (`parts.tsx:342`) `React.memo`. Labels byte-identisch → `check:struktur-konsistenz`+golden grün halten. |
 | 5 | niedrig/S | keins | **`vendor-react` manualChunks** in `vite.config.ts` — nur `react`/`react-dom`/`react-router`(+`scheduler`) aus dem 323-KB-Entry isolieren, Default sonst unberührt. Hilft Repeat-Visits nach Deploy (stabiler Cache-Chunk), nicht den Cold-LCP. Verlustfrei (golden pinnt Outputs, nicht Asset-Hashes). |
 | 6 | **hoch/M** | mittel | **OR-Reader von der kritischen Last entlasten:** Fetch+Parse+Reconcile und die zwei Struktur-Loads (`inhalt.tsx:178`) hinter `requestIdleCallback` (+`setTimeout`-Fallback, **immer feuernd**, nie an Sichtbarkeit gaten). **Vollen Parse behalten** (kein Visible-Band-Teilparse → verlöre G11-Sektions-Fussnoten/Kopf). `content-visibility:auto` behalten (alle Knoten im DOM für Cmd+F/Anker/Print). **Kein** naives `hydrateRoot`. Mobile-CLS gegen 0,64 nachmessen. |
-| 7 | mittel/M | niedrig | **Volltext-Suche in Web-Worker:** 16-MiB-JSON-Parse + FlexSearch-Build + Query in einen Module-Worker (`artikelVolltext.ts:33`), **byte-identische** Index-Config. `useUniversalSuche.ts:52` sync→async. Generator + `artikel-bund.json` unangetastet; Treffer (IDs/Reihenfolge/Snippets) für Query-Set vorher/nachher = identisch. §8-Fallback erhalten. |
+| 7 | mittel/M | niedrig | **Volltext-Suche in Web-Worker:** 16-MiB-JSON-Parse + FlexSearch-Build + Query in einen Module-Worker (`artikelVolltext.ts:33`), **byte-identische** Index-Config. `useUniversalSuche.ts:52` sync→async. Generator + `artikel-bund.json` unangetastet; Treffer (IDs/Reihenfolge/Snippets) für Query-Set vorher/nachher = identisch. §8-Fallback erhalten. **QS-DATA-Vorbehalt:** evtl. hinfällig, wenn die Edge-Suche (`FAHRPLAN-DATENHALTUNG.md` E2) den 16-MiB-Client-Index ablöst — vor Bau QS-DATA-Stand prüfen. |
 | 8 | mittel/M | niedrig | **`register.json` (900 KB, 1460 Erlasse) generator-seitig sharden:** `register-bund.json` (~93 KB) + `register-kanton.json` (~623 KB), Union datengleich. Inhaltsseite lädt Shard nach Route-Ebene; Shell/Reiter laden bedarfsgesteuert (graceful Fallback). `ladeBrowseManifest()` merged lazy für Suche/Übersicht/SEO. `normtext-register.test` (Union==Original byte-gleich) mitziehen. Spart ~623-KB-Kanton-Parse auf jeder Bund-Seite. |
 | 9 | mittel/M | niedrig | **Split-View:** Suchfeld ~250 ms **entprellen** (speist Treffer + Observer-Dep, `inhalt.tsx:545/773`), Effekt-Dep auf getrimmt/entprellt; **Pane-Open-Guard:** höchstens 1 schweres (OR-Klasse) Gesetz-Pane gleichzeitig, deterministische Heavy-Klassifikation aus Register, ehrlicher disabled-Grund. **Kein** Artikel-Windowing/naives Pane-Unmount (Ctrl-F/Pane-State-Verlust). Sekundär-Pane-Mount auf idle defern. |
 | 10 | mittel/M | niedrig | **Snapshot-Format verschlanken:** konstante Provenienz (`ebene/quelle/erlass/stand/abgerufen/fassungsToken/quelleUrlBasis`) in den **Datei-Header hoisten**, pro-Artikel-`sha` entfernen (bleibt in golden + neu berechenbar). `laden.ts`/`browse.ts` **rehydrieren** je Eintrag → NormPopover/§7-Zitat/SEO sehen unveränderte Form. Alle 218 Bund- + Kanton-Dateien neu generieren; `check:normtext`+golden grün. Spart ~18 % OR.json-Bytes. |

@@ -174,7 +174,7 @@ Nummerierung W0–W13. Reihenfolge ist die empfohlene Abarbeitung.
 
 **R2 (FR/IT-Gesetzescode-Aliase) — WIDERLEGT + REVERTIERT:** Gegenprüfung fand 4/26 Falsch-Positive durch Abkürzungs-Kollisionen: **CO₂-Gesetz→OR** (BGE 150 II 390, ₂-Trennung) + **ital. CP/I «600quater»→StGB** (BGE 152 I 105, Rechtsvergleich, Ausland-Marker schon in OCL-Rohdaten weg). §1 → nicht geshippt, revertiert. **Korrekter Nachbau = Aufgabe #16** mit 3 Wächtern: CO₂-Kontext-Guard · Ausland-Marker-Guard · **Artikel-Plausibilitäts-Tor** (Artikel muss im echten Artikelraum des Ziel-Erlasses existieren, aus `public/normtext/bund/*.json` — fängt 600quater UND das vorbestehende STHG/157-Phantom).
 
-**HF-Datensatz `voilaj/swiss-caselaw` untersucht (Fable, ergebnisoffen):** =OCL-Output (Zirkelschluss: Match=Port-Treue, NICHT Korrektheit). 995k Zeilen/7,5 GB, **Kronjuwelen = Graph-Dateien ~90 MB** (8,7M Zitat-Kanten, 11,9M Norm→Entscheid, structure). Null-lastig (~15/36 Felder real). POC: unsere `zitat-extraktion.ts` = byte-genau OCLs Graph (Treue). **USABLE:** Port-Regressions-Oracle (bester Nutzen, „Treue-Tor" nicht „Korrektheit", = QS-GP d) · structure-Oracle für abschnitte · norm-index-Eval. **CONDITIONAL:** FR/IT-Normalisierung (bestätigt R2-Wert: 45% FR-Entscheide blind — via #16-Wächter) · Regesten (nur amtl. BGE) · additive Felder (publication_date/outcome/text_length). **DAVID-ENTSCHEID (grösser, nicht in-branch):** Zitations-Graph-Feature (Leitfall-Gewichte aus 8,7M statt 342, eigener ROADMAP-Schritt) · Parquet als Volltext-Bezugsquelle · Breiten-Korpus 1M (kollidiert mit static-public/*.json).
+**HF-Datensatz `voilaj/swiss-caselaw` untersucht (Fable, ergebnisoffen):** =OCL-Output (Zirkelschluss: Match=Port-Treue, NICHT Korrektheit). 995k Zeilen/7,5 GB, **Kronjuwelen = Graph-Dateien ~90 MB** (8,7M Zitat-Kanten, 11,9M Norm→Entscheid, structure). Null-lastig (~15/36 Felder real). POC: unsere `zitat-extraktion.ts` = byte-genau OCLs Graph (Treue). **USABLE:** Port-Regressions-Oracle (bester Nutzen, „Treue-Tor" nicht „Korrektheit", = QS-GP d) · structure-Oracle für abschnitte · norm-index-Eval. **CONDITIONAL:** FR/IT-Normalisierung (bestätigt R2-Wert: 45% FR-Entscheide blind — via #16-Wächter) · Regesten (nur amtl. BGE) · additive Felder (publication_date/outcome/text_length). **DAVID-ENTSCHEID → ENTSCHIEDEN (Council 2.7.2026, `FAHRPLAN-DATENHALTUNG.md` / ROADMAP W2·6-DATA):** Zitations-Graph = Etappe E4 · Parquet-Volltext = E3 · Breiten-Korpus = E3 (26×-Slot); die static-public-Kollision ist durch das Projektions-Modell (DB=Quelle, `public/*` = Schaufenster-Projektion) aufgelöst.
 
 **Offen im Plan:** #16 (R2-neu) · W4 Materialien/Botschaft · W1 Fedlex-SPARQL · W5–W7 · W10–W13. **Wartet auf Davids Priorisierung** (Frage gestellt 2.7.).
 
@@ -332,7 +332,7 @@ Nummerierung W0–W13. Reihenfolge ist die empfohlene Abarbeitung.
 - **Deps:** eigenständig; **Davids Entscheid a/b/c ist der Blocker** — Empfehlung Planner: **(c) zuerst** (sicher, Churn
   gering), (a) später als bewusste QS-GP-Kampagne mit vollem Golden-Rebuild.
 
-### W12 · Bulk-Konsum für Hybrid-Randfälle (F2) — optional, nachgelagert
+### W12 · Bulk-Konsum (F2) — = Import-Schritt E3 des DB-Strangs (`FAHRPLAN-DATENHALTUNG.md`)
 - **Ziel:** Regulatoren (~13) + hist. Bund/BGE via CC0-Parquet konsumieren (schlechtester Port-ROI, off-entscheidsuche).
 - **Dateien:** `adapter-entscheide.ts` (zweiter Consume-Pfad neben OCL-REST/entscheidsuche); uniformes Schema.
 - **Verifikation:** `check:entscheide` + `BUDGET_MB`.
@@ -393,7 +393,7 @@ erst nach **Davids Schema-Entscheid a/b/c** — Planner-Empfehlung (c) zuerst.
 
 **HF-Datensatz `voilaj/swiss-caselaw` (David-Entscheide):**
 - USABLE: Port-Oracle-Harness (Treue-Tor, 90-MB-Graph) · structure-Oracle für abschnitte · norm-index-Eval.
-- Grösser (Architektur-Entscheid): Zitations-Graph-Feature (8,7M Kanten statt 342) · Parquet als Volltext-Quelle · Breiten-Korpus 1M.
+- Grösser: **ENTSCHIEDEN → W2·6-DATA/`FAHRPLAN-DATENHALTUNG.md`** (E3/E4). USABLE-Punkte (Port-Oracle/structure-Oracle/norm-index-Eval) unverändert offen.
 - Additiv-Felder: publication_date / outcome / text_length.
 
 **Parallel-Session Fedlex (NICHT meins, §12):** `FAHRPLAN-FEDLEX-PORTFOLIO.md` (untracked, 251 Z., 6 Fedlex-Datenarten „Fable plant/Opus baut") — von der Fedlex-Session zu committen + §14-ROADMAP-intaken.

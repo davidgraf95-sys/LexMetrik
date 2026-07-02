@@ -85,7 +85,7 @@ Integration von **Rechtsprechung** (Bundesgericht zuerst, kantonale Gerichte ges
 ### Rolle der Quellen
 - **Build-time (Snapshot):** OpenCaseLaw für Struktur/Regeste/Citations; entscheidsuche als Adapter-Fallback bei OCL-Ausfall.
 - **Volltextsuche (später):** entscheidsuche-ES (falls CORS), nie OpenCaseLaw-FTS (Latenz).
-- **Backfill:** HuggingFace `voilaj/swiss-caselaw` Parquet (CC0, ~24 GB), getrennter Einmal-Pfad.
+- **Backfill:** HuggingFace `voilaj/swiss-caselaw` Parquet (CC0) — **seit QS-DATA der reguläre Massen-Kanal in die DB (E3, `FAHRPLAN-DATENHALTUNG.md`)**, nicht mehr nur Einmal-Pfad.
 
 ### Recht (Art. 5 URG) — verbindliche Linie (Review M11)
 Die Lizenz-Begründung im Produkt stützt sich auf **Art. 5 Abs. 1 lit. a URG** (amtliche Entscheidungen gemeinfrei), **nicht** auf „OpenCaseLaw sagt CC0". CC0 ist die Aggregator-Zusage; die Rechtsquelle für den Wortlaut ist URG Art. 5. Die **amtliche Regeste** ist eine Graustufe (vom Gericht verfasst; herrschende, aber nicht zweifelsfreie Lehre wertet sie als Art.-5-Teil) → konservativ behandeln: anzeigen mit Quellennennung + amtlichem Live-Link, nicht als eigene LexMetrik-Leistung framen. Die Rechtsfrage „Attribution nötig?" gehört in die Abnahme-Warteschlange (nach 1.12.2026). **Keine De-Anonymisierung, kein Personen-Index, keine Klarnamen-FTS** (Abschnitt 9, als Invariante verankert).
@@ -348,6 +348,8 @@ Im `baueEntscheidManifest` (nicht „später"): existiert eine `bge_reference`/`
 
 **Verbindlich:** P1-Regesten **nicht** als 21k Einzeldateien (Git-/Deploy-Last, Review M8), sondern gebündelt pro Band. **Zweigeteiltes Budget-Tor** in `check:entscheide`: Volltext-Budget (P0-Einzeldateien) und Index-Budget (Regesten/Manifest) je mit eigener, **empirisch kalibrierter** Schwelle (vor Umsetzung tatsächliche Größe messen, nicht „20-25 MB" raten). Überschreitung = Exit 1.
 
+**Nachtrag QS-DATA (2.7.2026):** Das Stufen-/Budget-Modell begrenzt weiterhin die **committete Projektion** (`public/rechtsprechung/`), ist aber **nicht mehr die Obergrenze des Korpus**: die Masse (P1–P3+) lebt im DB-Artefakt und wird on-demand/per Edge geliefert (`FAHRPLAN-DATENHALTUNG.md` E2/E3). `BUDGET_MB` bleibt Tor für das Schaufenster.
+
 ### 6.6 Currency/Drift-Gate (ehrlich)
 Ein ergangener Entscheid ändert seinen Text nie — **kein** Konsolidierungs-Drift. `fassungsToken = content_hash` ist ein **Inhalts-/Verfügbarkeits-Fingerabdruck**, kein „Fassungsstand". Neue Prüfungen in `check-entscheide.ts`:
 - **Offline:** Register⊇Snapshots (Orphan-Tor, eigener Namespace); Provenienz vollständig (`datum`/`quelleUrl`/`quelle`/`fassungsToken`); `sha`==`sha256EntscheidBloecke(abschnitte)`; Budget-Tor (6.5); Lizenz-Defensive (nie aus `/scholarship/*`).
@@ -429,7 +431,7 @@ export function werkzeugeFuerEntscheid(normKeys: string[]): Werkzeug[] {
 ### 8.4 Suche — 3-Stufen nach Latenz-Befund
 - **Stufe A (P0/P1):** Client-Filter über das erfasste Manifest (`filterEntscheide`) + Taxonomie-Navigation. Offline, schnell, deterministisch. **Das allein schlägt entscheidsuche bei der Übersicht.**
 - **Stufe B (P1, CORS BESTÄTIGT 23.6.2026):** entscheidsuche `_search.php` live aus dem Browser durchgereicht (Preflight: OPTIONS→200, `allow-origin: *`, `allow-methods POST,GET,OPTIONS`, `allow-headers: *`; POST liefert ES-JSON in ~18 ms). Im statischen Frontend baubar, **kein Backend nötig**. Auflagen: Selbstdrosselung + Eingabe-Debounce (esuche „be kind to server"), Quellennennung sichtbar, ES-Query/Feld-Mapping definieren. Bei künftigem Header-Wegfall greift der Frische-/Suche-Monitor (Stufe A bleibt als Offline-Fallback immer da).
-- **Stufe C (später):** eigener clientseitiger/Server-FTS über erfassten Bestand bzw. Bulk-Parquet.
+- **Stufe C (ENTSCHIEDEN 2.7.2026 → QS-DATA):** eigene **Edge-Suche über das DB-Artefakt** (FTS5, `FAHRPLAN-DATENHALTUNG.md` E2); Stufe A bleibt Offline-Fallback, Stufe B bleibt Zweitkanal.
 
 **Verbindlich:** OpenCaseLaw-FTS (`q=`) nie im Live-Produktpfad. Scope-Grenze (Abschnitt 2): Anspruch ist kuratierte Übersicht + Verzahnung, nicht Volltext-Recall.
 
@@ -501,6 +503,7 @@ Tore laufen automatisch (in `check` eingehängt) + e2e. Bug-Check-Agents auf das
 **DoD:** Frische-Cron stabil; Suche markiert ehrlich (extern/erfasst).
 
 ### P3+ — Kantone (gestaffelt)
+*(Mengen-seitig durch QS-DATA entsperrt — Grenze ist nicht mehr `public/`-Budget, sondern der 26×-Slot + Kuratierung; Senke = DB, `FAHRPLAN-DATENHALTUNG.md`.)*
 **Inhalt:** je Kanton Gerichts-Codes; Schema/Adapter/Manifest tragen ohne Nachbau. **Mehraufwand explizit:** kein `/structure` für Kanton → einfacherer Fliesstext-Reader oder Segmentierungs-Heuristik; kantonaler Norm-Resolver für Kantonalnorm-Buckets; Anonymisierungs-Stichprobe vor Ausweitung (abnahmepflichtig).
 **DoD:** je Kanton-Tranche eigenes grünes Tor; Reader-Grenze (Bund=gegliedert, Kanton=Fliesstext) ehrlich markiert.
 
