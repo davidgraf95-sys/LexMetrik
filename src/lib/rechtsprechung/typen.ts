@@ -76,6 +76,12 @@ export interface EntscheidSnapshot {
    */
   azaUrteil?: { aktenzeichen: string; key: string; quelleUrl: string } | null;
   zitierung: string;        // OCL citation_string_de
+  /**
+   * ECLI (European Case Law Identifier), deterministisch aus Gericht/Nummer/
+   * Datum gemintet (`ecli.ts`). Interop-Schlüssel zu europäischen Resolvern +
+   * OpenCaseLaw. Optional/additiv; null, wenn kein Jahr ableitbar war.
+   */
+  ecli?: string | null;
   datum: string;            // OCL decision_date ('YYYY-MM-DD')
   sprache: EntscheidSprache;
   leitcharakter: Leitcharakter;
