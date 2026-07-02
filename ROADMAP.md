@@ -59,9 +59,9 @@ Werkzeuge bleiben **strikt zustandslos** (rechnen/drucken/ICS, keine Persistenz 
 3. **Zeitsperre bis 1.12.2026.** Nur Arbeit, die (a) **keine Davids-Fachzeit** braucht `[OF]`
    und (b) die spätere Abnahme-Welle billiger macht. Kein `verified`/`geprüft` ohne David
    (§7/§8). `[D]` = geparkt, in der Abnahme-Warteschlange (nicht drängen). G1-Gespräche ab Feb 2027.
-4. **Nie zwei 26×-Datenassets gleichzeitig offen** — eine Säule fertig führen. Die fünf 26×-Assets:
+4. **Nie zwei 26×-Datenassets gleichzeitig offen** — eine Säule fertig führen. Die sechs 26×-Assets:
    Prozesskosten-Cockpit · Notariat-Grundbuch · Beurkundungs-Ausbau · Gesetze-Import-3Tier ·
-   Kantonale-Entscheide. *Ein P0-Bugfix an einem Asset ist kein Daten-Bulklauf und **öffnet den
+   Kantonale-Entscheide · BGer-Massenkorpus (QS-DATA E3). *Ein P0-Bugfix an einem Asset ist kein Daten-Bulklauf und **öffnet den
    26×-Slot nicht**.*
 5. **Worktree-Isolation (§12)** bei Datei-Kollision: FUNDAMENT-UMBAU ⟂ VORLAGEN-AUSBAU ⟂
    VERTRAGS-VARIANTEN ⟂ Startseiten-Rahmen (`App.tsx`/`startseiteConfig.ts`/`vorlagenRegistry`);
@@ -169,6 +169,17 @@ wbqdyap3x: Prozesskosten I2 — Schlichtungs-/Reduktionsfaktoren (Recherche offe
     DOM-entfernendes Virtualisieren/`hydrateRoot`/Teilparse (Treue-Verlust, verworfen); Snapshot-
     Regenerierung (c) öffnet **keinen** 26×-Slot (nur Format, Union byte-gleich); Worktree-Isolation
     bei `vite.config.ts`/Generatoren/`public/normtext/**` (§12). Trailer `Roadmap: QS-PERF`.
+- **Datenhaltung / Single-Source-DB** *(QS-DATA, `[OF]`, neu 2.7.2026 — Council-Entscheid)*.
+  <!-- @meta id: QS-DATA · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein · fahrplan: FAHRPLAN-DATENHALTUNG.md -->
+  Für die Korpus-Inhalte (Normtext · Rechtsprechung · Materialien) wird ein **generator-erzeugtes
+  DB-Artefakt die EINE Wahrheit (§5)**; `public/*.json` + prerenderte Seiten sind fortan
+  **byte-gleiche Projektion** daraus — nie parallel gepflegt. Amtlicher Arbiter bleiben
+  Fedlex/bger.ch (§7 a–d je Zeile); voilaj/swiss-caselaw (CC0) wird KONSUMIERT, nie gescrapt
+  (Scraper-Verdikt `FAHRPLAN-OPENCASELAW-QUELLEN.md`). Zwei Dauer-Tore: **`check:paritaet`**
+  (Projektion byte-gleich gegen den bisherigen Generator-Output) + **Drift-Tor** (DB-Manifest
+  sha/Zeilenzahlen vs. committete Projektion; bestehende `check:*-netz` bleiben Quellen-Arbiter).
+  Kuratiertes Schaufenster bleibt prerendert (§15); Long-Tail on-demand inhaltsvollständig (§15.6).
+  Bau-Strang = **W2·6-DATA**; Detailquelle **`FAHRPLAN-DATENHALTUNG.md`**. Trailer `Roadmap: QS-DATA`.
 
 ---
 
@@ -383,7 +394,7 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   - **Rechtsprechungs-Übersicht** *(KANTONALE/ENTSCHEIDSUCHE/RECHTSPRECHUNG)*: **P0-Fix** SG-Regeste
     + kant. Norm-Resolver (Bugfix, **öffnet keinen 26×-Slot**); **Korpus-/Übersichts-Breite [OF]**
     (Facetten/Sprachfilter-Vorbereitung). Live-Adapter §4-blockiert → geparkt.
-    - [D] **Quellen-Steinbruch OpenCaseLaw** *(Analyse 2.7.2026, Richtungsentscheid offen)* — Auswertung
+    - [D] **Quellen-Steinbruch OpenCaseLaw** *(Analyse 2.7.2026; **Richtungsentscheid gefallen 2.7.: KONSUMIEREN statt scrapen** — Massen-/Graph-Verwertung läuft im DB-Strang **W2·6-DATA**/`FAHRPLAN-DATENHALTUNG.md`; Technik-Ports W1/W4–W13 unverändert nach `PLAN-OCL-ABBAU.md`)* — Auswertung
       von opencaselaw.ch/`caselaw-repo-1` (Daten CC0, Code MIT): was für LexMetrik verwertbar ist
       (LexWork-Kantons-API · Fedlex-SPARQL-Eigenheiten · Zitat-Regexes/ECLI · Verifikations-Rails →
       Gegenprüfung). Leit-Doktrin: OCL nie load-bearing, nur Seed/Diff-Orakel + Endpunkt-Wissen selbst
@@ -391,6 +402,15 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
     - [D] **Fedlex-Datenarten-Portfolio** *(Plan 2.7.2026, §14-Intake je Paket pending David-Freigabe)* — 6 verwertbare
       Fedlex-Datenarten (Erlasse/Materialien/Verfahren/Staatsverträge u.a.), ausschliesslich amtliche Fedlex-Stelle
       (SPARQL + Filestore, nie Dritt-Repo). **Detailquelle:** `FAHRPLAN-FEDLEX-PORTFOLIO.md`.
+    - [ ] **Datenhaltung-Bau: DB-Artefakt + Massen-Korpus + Edge-Suche** *(W2·6-DATA; Council 2.7.2026 — löst die drei OCL-Abbau-„DAVID-ENTSCHEID"-Punkte auf)*.
+      <!-- @meta id: W2·6-DATA · status: ready · of: ja · blocker: null · dep: [] · kollision: [scripts/normtext-snapshot.ts, scripts/prerender.ts, public/normtext/register.json] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-DATENHALTUNG.md -->
+      Andockpunkt **eine Schicht UNTER dem heutigen Generator** — die bestehenden Adapter befüllen
+      ein libSQL/SQLite-Artefakt, `public/*.json` + Prerender werden Projektion (Tor `check:paritaet`,
+      §7 Build-Regel 6). Etappen (Detail `FAHRPLAN-DATENHALTUNG.md`): **E0** Fundament/Reverse-
+      Befüllung+Parität → **E1** Generator-Flip → **E2** Edge-Suche-POC (alle BGE + alle Bund-Gesetze)
+      → **E3** BGer-Massen-Import (voilaj-Konsum; **öffnet den 26×-Slot** — Reihenfolge vs. W3·12 =
+      Davids Wahl) → **E4** Zitat-Graph. E0–E2 golden-neutral zu den Gesetzen; jede Projektions-
+      Änderung golden byte-gleich (§6) + `QS-GP`. OCL-Pakete W12 (Bulk-Parquet) + F2 gehen hier auf.
     - [ ] **+ Auftrags-Eingang 30.6.: Bündel B** — **B1** BGE ohne «vollständiges Urteil» (12/272,
       <!-- @meta id: W2·6-B · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->
       `azaUrteil:null`+kein Auszug → AZA-Resolver, *Daten/`QS-GP`*) · **B2** Regeste amtlich = Absätze +

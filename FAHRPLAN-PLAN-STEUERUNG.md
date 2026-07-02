@@ -56,7 +56,7 @@ Nicht jeder Bullet ist ein Schritt. Erfasst werden **ausschliesslich** Einheiten
   (Schritte 1–14 über Welle 1–3) **und** jedes eigenständig schedulebare **Unter-Bündel** mit eigener
   Checkbox (`- [ ] **+ Auftrags-Eingang …: Bündel B/S**`, Responsive-Audit, a11y-Restpunkte).
 - Sektion **«Querschnitt-Band»**: jeder Top-Level-Strang-Bullet `- **<Titel>** *(<ID>, …)*`
-  (checkbox-los; ID aus dem Klammerteil: `QS-GP`, `QS-PH`, `QS-PERF`, sowie `LERNPHASE-AB` für
+  (checkbox-los; ID aus dem Klammerteil: `QS-GP`, `QS-PH`, `QS-PERF`, `QS-DATA`, sowie `LERNPHASE-AB` für
   «Status-Marker…» und `SEO-A11Y` für «SEO/A11y»).
 
 **NICHT etikettiert (Referenz, explizit ausgeschlossen):** «So sieht das Taschenmesser aus»,
