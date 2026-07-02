@@ -23,6 +23,18 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 2.7.2026 — OCL-Abbau (Rechtsprechung/Suche) + Konsolidierung auf EIN `main` — gepusht, NICHT deployed
+
+**Auftrag David:** aus OpenCaseLaw (`caselaw-repo-1`, CC0/MIT) alles für Lexmetrik Nützliche heben + einbauen. Regeln: **OCL-first** (zuerst OCL-Code nach Lösung durchsuchen, dann portieren), **Fable plant / Opus baut**, Bug-Check + Gegenprüfung zwischen JEDEM Schritt.
+
+**Gebaut + gegengeprüft (ex `feat/ocl-abbau`, jetzt in `main`):** W0 ECLI (Mint + alle 342 Snapshots) · W2 Zitat-Extraktion (`_INVALID_LAW_CODES` 151 verbatim; `[ab]?`-BGE-Fix besser als OCL) · **W3 Pro-Artikel-Leitfälle** (`proNormArtikel`, topisches In-degree) — Gegenprüfung fing echten Bug **StG föderal/kantonal-Kollision** → OCL-`_SR_NUMBER_MAP`-aligned gefixt, auch erlass-eben proNorm (#12) · W9 OCL-Such-Vokabular (232 Einträge) · R1 Verweis-Audit (Lexmetrik VORAUS bei Chips/Norm↔Entscheid). **R2 FR/IT-Aliase von Gegenprüfung widerlegt (CO₂→OR, ital. CP/I→StGB) → revertiert (§1).**
+
+**Konsolidierung (Auftrag «nur ein main»):** PR#78 Normtext + PR#79 QS-GP-Engines + OCL-Arbeit + S7-INDEX-Fix zu **einem `main` vereint**, alle Seiten-Branches + Worktrees entfernt, Register-Union aufgelöst. **Gepusht** (`origin/main` = `82477068`), **CI GRÜN**. **Deploy bewusst NICHT gemacht** (separates §9-Ja; nach `push` ein Befehl entfernt).
+
+**Verifikation:** `gate` GRÜN (tsc · 3013 Tests · lint · build · **golden byte-gleich 201** · check inkl. gegenprüfung/plan · e2e 86 · perf-budget); 2 unabhängige §9-Bug-Checks (Code-Lupe + empirische Repros) grün.
+
+**Offen → Bauplan `PLAN-OCL-ABBAU.md §OFFENE PUNKTE`:** #16 R2-neu-MIT-Wächtern (CO₂/Ausland/Artikel-Plausibilität) · #17 norm-index `proNormArtikel`-Split (~380KB von keiner UI gelesen, non-blocking) · OCL W1/W4–W13 · HF-Datensatz `voilaj/swiss-caselaw`-Entscheide (Port-Oracle/Graph-Feature) · Fedlex-Portfolio (Parallel-Session). **Bauplan-REWORK = andere Session.**
+
 ## Session 2.7.2026 — Normtext Phase-1-Fundament (rein HTML, 4 von 5 Punkten) + verlässliche-Umwandlung-Spec (Fable-Ultracode) — Branch `feat/normtext-phase1-fundament`
 
 **Auftrag David:** Fable/Ultracode-Untersuchung «verlässliche Umwandlungsstruktur HTML/AKN-XML → Normtext (nur Bund), Tabellen + Links besser als Fedlex», dann **ersten Bau-Schritt bauen (rein HTML, Opus)**.
