@@ -1,5 +1,6 @@
 import { Component, type ErrorInfo, type ReactNode } from 'react';
 import { SeitenKopf } from './layout/SeitenKopf';
+import { KONTAKT_EMPFAENGER } from '../lib/kontakt';
 
 // Auffangnetz für unerwartete Render-Fehler (CLAUDE.md §3: reine Darstellung,
 // keine Rechtslogik). React kennt für solche Fehler nur Klassen-Komponenten
@@ -51,9 +52,22 @@ export class ErrorBoundary extends Component<Props, State> {
             <code className="rounded bg-paper-sunken px-1.5 py-0.5 text-ink-700">{this.state.nachricht}</code>
           </p>
         )}
-        <button type="button" onClick={() => window.location.reload()} className="lc-btn-primary">
-          Seite neu laden
-        </button>
+        <div className="flex flex-wrap items-center gap-4">
+          <button type="button" onClick={() => window.location.reload()} className="lc-btn-primary">
+            Seite neu laden
+          </button>
+          {/* A5: freiwillige Fehlermeldung per Mail (kein Fremd-Dienst, kein Tracking) — nur wenn
+              eine Empfänger-Adresse konfiguriert ist; sonst verschwindet der Absturz spurlos. */}
+          {KONTAKT_EMPFAENGER && (
+            <a
+              href={`mailto:${KONTAKT_EMPFAENGER}?subject=${encodeURIComponent('[LexMetrik] Fehlermeldung')}&body=${encodeURIComponent(
+                `Seite: ${typeof window !== 'undefined' ? window.location.href : '–'}\nTechnische Meldung: ${this.state.nachricht ?? '–'}\n\n(Bitte kurz schildern, was Sie getan haben.)`,
+              )}`}
+              className="text-body-s text-ink-500 underline hover:text-ink-700">
+              Fehler melden
+            </a>
+          )}
+        </div>
       </div>
     );
   }
