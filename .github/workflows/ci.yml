@@ -58,6 +58,11 @@ jobs:
         run: npm run golden:vergleich
       - name: SSR-Smoke (alle Seiten)
         run: npm run check:smoke
+      - name: Playwright-Browser-Cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
       - name: Playwright-Browser (Chromium)
         run: npx playwright install --with-deps chromium
       - name: Browser-Smoke (Playwright, e2e/ gegen dist)
