@@ -94,6 +94,12 @@ wbqdyap3x: Prozesskosten I2 — Schlichtungs-/Reduktionsfaktoren (Recherche offe
 26x-slot: frei (Beurkundung entlassen 2.7.); nächster Inhaber E3 (W2·6-DATA, Phase 2), W3·12 wartet dahinter (Leitprinzip 4)
 -->
 
+<!-- @slot-kette (dokumentarisch; harte Prüfung via @meta-Feld `slot: inhaber`, check.ts 5b)
+inhaber: (frei)
+kette: E3(W2·6-DATA) · W3·12(Kanton-Gesetze) · Tarif-Bündel(W1·4) · E5(Kanton-Rechtsprechung) · Gerichtsferien-Matrix
+uebergabe: nur per explizitem `plan:set <id> slot=inhaber`-Commit; check:plan erzwingt höchstens EINEN Inhaber (muss 26x: ja)
+-->
+
 ---
 
 ## Querschnitt-Band (läuft begleitend — kein Reihenfolge-Slot)

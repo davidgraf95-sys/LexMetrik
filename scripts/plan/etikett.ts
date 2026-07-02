@@ -13,6 +13,7 @@ export interface Etikett {
   worktree: boolean;
   asset26x: boolean;
   fahrplan: string | null;
+  slot?: 'inhaber' | null;
 }
 
 function ja(v: string): boolean {
@@ -43,6 +44,8 @@ export function parseEtikett(line: string): Etikett {
   if (!STATUS_WERTE.includes(status)) throw new Error(`@meta: ungültiger Status "${status}"`);
   const noetig = ['id', 'status', 'of', 'blocker', 'dep', 'kollision', 'worktree', '26x'];
   for (const k of noetig) if (!(k in feld)) throw new Error(`@meta: Feld "${k}" fehlt`);
+  const slotRaw = 'slot' in feld ? feld.slot : null;
+  if (slotRaw !== null && slotRaw !== 'inhaber') throw new Error(`@meta: slot nur "inhaber", bekam "${slotRaw}"`);
   return {
     id: feld.id,
     status,
@@ -54,6 +57,7 @@ export function parseEtikett(line: string): Etikett {
     worktree: ja(feld.worktree),
     asset26x: ja(feld['26x']),
     fahrplan: 'fahrplan' in feld ? nullbar(feld.fahrplan) : null,
+    slot: slotRaw as 'inhaber' | null,
   };
 }
 
@@ -70,5 +74,6 @@ export function serializeEtikett(e: Etikett, indent: string): string {
     `26x: ${e.asset26x ? 'ja' : 'nein'}`,
   ];
   if (e.fahrplan) teile.push(`fahrplan: ${e.fahrplan}`);
+  if (e.slot) teile.push(`slot: ${e.slot}`);
   return `${indent}<!-- @meta ${teile.join(' · ')} -->`;
 }
