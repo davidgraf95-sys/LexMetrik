@@ -1,5 +1,9 @@
 # Rechtssammlung — Rubrik V «Gesetze» — Implementierungs-Fahrplan
 
+> **§14-gebündelt (Phase 0, 2.7.2026):** Volltext-Kanton-Zulieferer (P6) des **Kanton-Gesetze-Bündels**
+> (ROADMAP `W3·12`, führende Detailquelle `FAHRPLAN-GESETZE-IMPORT-3TIER.md`). P4-Suche läuft
+> künftig über die QS-DATA-Edge-Suche (`FAHRPLAN-DATENHALTUNG.md` E2) statt Client-FlexSearch.
+
 > **Für agentische Worker:** ERFORDERLICHE SUB-SKILL: `superpowers:subagent-driven-development`
 > (empfohlen) oder `superpowers:executing-plans`, Task für Task. Schritte nutzen
 > Checkbox-Syntax (`- [ ]`). Vor jeder Struktur-Arbeit: `CLAUDE.md` §1–§12 und
