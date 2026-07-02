@@ -11,6 +11,7 @@ import type { EntscheidSnapshot, EntscheidSnapshotDatei } from '../../src/lib/re
 import type { BrowseEntscheid, EntscheidManifest } from '../../src/lib/rechtsprechung/register';
 import type { EntscheidRef, LeitfallRef } from '../../src/lib/rechtsprechung/norm-index';
 import { extrahiereStatutRefs } from '../../src/lib/rechtsprechung/zitat-extraktion';
+import { minteEcliFuerSnapshot } from '../../src/lib/rechtsprechung/ecli';
 import { normKeyFuerAbk } from './entscheide-mapping';
 
 export function keyVon(snap: EntscheidSnapshot): { key: string; datei: string } {
@@ -188,6 +189,9 @@ export function schreibeKorpus(auswahl: EntscheidSnapshot[], datum: string, root
     // additiver Lauf (neue Gerichte ergänzen) für unveränderte Bestands-Snapshots
     // byte-gleich (kein Drift der 272 BGE, §6), während neue Einträge ihr echtes
     // Abrufdatum behalten. Für einen Vollbau (alle abgerufen==datum) verhaltensneutral.
+    // ECLI deterministisch aus Gericht/Nummer/Datum minten (W0/R1 — schliesst die
+    // Interop-Lücke; additives Identitätsfeld, lässt die abschnitte-`sha` unberührt).
+    snap.ecli = minteEcliFuerSnapshot(snap);
     const wrap: EntscheidSnapshotDatei = { erzeugt: snap.abgerufen || datum, eintraege: [snap] };
     writeFileSync(ziel, JSON.stringify(wrap, null, 2) + '\n', 'utf8');
 
