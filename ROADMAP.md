@@ -25,13 +25,16 @@
 3. **Bau in eigenem Worktree**, wenn der Schritt eine Kollisionsdatei berührt (§12).
 4. **Gate vor Abschluss:** `npm run gate` grün; verhaltensändernd ⇒ Golden byte-gleich.
 5. **Markiere erledigt** (Häkchen + Datum hier), zieh die Session-Karte in `STRUKTUR.md` nach,
-   → nächster Schritt. **Push/Deploy nicht selbst** — sammeln fürs Batch-Deploy-Fenster.
+   → nächster Schritt. **Push/PR/Auto-Merge stehend freigegeben (§9 Weg 1, David 3.7.2026:
+   Merge nach `main` = Deploy-Entscheid; die §9-Sorgfalt — Tore/Golden/Bug-Check — gilt VOR dem
+   Merge).** *(Ersetzt das frühere «Push/Deploy nicht selbst — sammeln fürs Batch-Deploy-Fenster».)*
 
 ---
 
 ## So sieht das Taschenmesser aus (Produktvision)
 
-**LexMetrik ist der Anlaufpunkt für alle Arten von Juristen** — Kanzlei, Gericht, Inhouse,
+**LexMetrik ist DIE EINE Anlaufplattform für alle Rechtsanwender** *(Nordstern geschärft, David
+3.7.2026)* — Kanzlei, Gericht, Inhouse, **Steuerbehörden, Ämter/Verwaltung, Notariate, Treuhänder**,
 Studierende — um **das Schweizer Recht zu konsultieren und damit zu arbeiten.** Ein vielseitiges
 Werkzeug, zu dem man zuerst greift; **alles auf amtlichen Quellen** (Fedlex, amtliche
 Entscheid-Sammlungen, amtliche Tarife/Materialien — Art. 5 URG, urheberrechtlich frei),
@@ -41,18 +44,33 @@ Die «Klingen» (= die Informationsarchitektur):
 
 - **Konsultieren.** Gesetze (Volltext + amtliche Systematik, **mehrsprachig DE/FR/IT zum
   Vergleich**) · Rechtsprechung (BGE/BGer-Korpus, amtliche Regesten) · amtliche Materialien
-  (Botschaften/BBl) · **Gesetzgebung/Rechtsetzung** (was kommt: Vernehmlassung/Parlament/AS-BBl).
+  (Botschaften/BBl) · **Gesetzgebung/Rechtsetzung** (was kommt: Vernehmlassung/Parlament/AS-BBl) · **Verwaltungsverordnungen/amtliche Praxis** (Kreisschreiben ESTV/BSV/FINMA/SEM, Weisungen, Merkblätter, Rundschreiben — Etappe E6a, Detail `FAHRPLAN-DATENHALTUNG.md` §5).
 - **Rechnen.** Die deterministischen Klingen: Fristen · Streitwert · Prozesskosten · Verzug/
   Forderung · Zuständigkeit/Rechtsweg · Verjährung · Beurkundung · Gründungen — jeder Wert mit
   Norm + Link + Stand.
 - **Verzahnen (der Burggraben).** **Norm → Werkzeug → Schriftsatz** und zurück: vom Artikel in
   den passenden Rechner/Entscheid, vom Rechen-Ergebnis in den kopierfertigen Begründungs-Absatz.
+  Und quer über den ganzen Korpus: **Norm ↔ Entscheid ↔ Material ↔ Verwaltungsverordnung** — ein
+  Kreisschreiben zeigt, welche Norm es auslegt; ein Entscheid, welchen Artikel er anwendet; eine
+  Botschaft hängt am Gesetz; von jedem Artikel zu allem, was ihn betrifft, und zurück. **Dieselbe
+  Graph-Struktur, nicht vier Silos — das Organisationsprinzip des gesamten Datenausbaus**
+  (Architektur `FAHRPLAN-DATENHALTUNG.md` §0/§0bis/§1; Etappen E4/E5/E6), nicht nur der Rechner-Achse.
 - **Finden (der Griff).** Eine Auffindbarkeits-Schicht: zweiachsiger Einstieg (Rechtsgebiet ×
   Aufgabe) + globale Suche → die richtige Klinge in einem Klick.
 
 Universell, nicht in Personas-Schubladen: dieselben Klingen dienen allen; einzig die Verpackung
 (Einstiege, Erklär-/Übungs-Layer) variiert. **Geparkt:** Dossier-/Mandatsverwaltung — alle
 Werkzeuge bleiben **strikt zustandslos** (rechnen/drucken/ICS, keine Persistenz von Falldaten).
+
+**Verzahnung als Rückgrat (Organisationsprinzip, kein Einzelfeature):** die tragenden Schritte
+dieses Plans sind Glieder EINES Graphen — W1·2 (Norm↔Werkzeug, live) · W2·6 Norm→Entscheid +
+W2·6-DATA E4 Zitat-Graph · W2·7 Verzahnungs-Klingen · E5/E6a/E6b (Kanton-Entscheide, VerwVO,
+Materialien) · W3·14 Split-View (macht den Graphen sichtbar). Das kann kein einzelnes Amtsportal —
+darum ist die Verzahnung Burggraben UND das Kriterium, nach dem neue Schritte einsortiert werden
+(§14: neue Doktypen docken immer an den Graphen an, nie als Silo). Der bestehende Code-Bestand dazu
+(kontext.ts/KontextPanel/norm-index) ist in `FAHRPLAN-DATENHALTUNG.md` §0bis inventarisiert.
+*Ehrliche Grenze: das Rückgrat ist Plan-Doktrin, kein maschinelles Tor — es wird über
+§14-Einsortierung und Review gelebt, nicht von einem `check:` erzwungen.*
 
 ---
 
@@ -67,9 +85,10 @@ Werkzeuge bleiben **strikt zustandslos** (rechnen/drucken/ICS, keine Persistenz 
 3. **Zeitsperre bis 1.12.2026.** Nur Arbeit, die (a) **keine Davids-Fachzeit** braucht `[OF]`
    und (b) die spätere Abnahme-Welle billiger macht. Kein `verified`/`geprüft` ohne David
    (§7/§8). `[D]` = geparkt, in der Abnahme-Warteschlange (nicht drängen). G1-Gespräche ab Feb 2027.
-4. **Nie zwei 26×-Datenassets gleichzeitig offen** — eine Säule fertig führen. Die sechs 26×-Assets:
-   Prozesskosten-Cockpit · Notariat-Grundbuch · Beurkundungs-Ausbau · Gesetze-Import-3Tier ·
-   Kantonale-Entscheide · BGer-Massenkorpus (QS-DATA E3). *Ein P0-Bugfix an einem Asset ist kein Daten-Bulklauf und **öffnet den
+4. **Nie zwei 26×-Datenassets gleichzeitig offen** — eine Säule fertig führen. Die sechs 26×-Assets — **fertig gebaut + aus dem Slot entlassen**
+   (Abnahme ausstehend): Notariat-Grundbuch · Beurkundungs-Ausbau (entlassen 2.7.2026); **offen,
+   Reihenfolge = @slot-kette-Kommentar unten:** BGer-Massenkorpus (QS-DATA E3) · Gesetze-Import-3Tier
+   (W3·12) · Prozesskosten-Cockpit (W1·4-Rest) · Kantonale-Entscheide (E5). *Ein P0-Bugfix an einem Asset ist kein Daten-Bulklauf und **öffnet den
    26×-Slot nicht**.*
 5. **Worktree-Isolation (§12)** bei Datei-Kollision: FUNDAMENT-UMBAU ⟂ VORLAGEN-AUSBAU ⟂
    VERTRAGS-VARIANTEN ⟂ Startseiten-Rahmen (`App.tsx`/`startseiteConfig.ts`/`vorlagenRegistry`);
@@ -109,7 +128,11 @@ uebergabe: nur per explizitem `plan:set <id> slot=inhaber`-Commit; check:plan er
 - **Status-Marker-Audit + Verifikations-Infrastruktur** *(LERNPHASE A/B, `[OF]`)*. Jede Karte/Engine
   <!-- @meta id: LERNPHASE-AB · status: wip · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein · fahrplan: FAHRPLAN-LERNPHASE-2026.md -->
   trägt sichtbaren ehrlichen Status (`verified`/`entwurf`/`geplant`) + Stand; Golden-Abdeckung &
-  Norm-Anker-Prüfung automatisieren. **Stärkste zeitsperre-konforme Arbeit** — macht die
+  Norm-Anker-Prüfung automatisieren. **Werkzeug-Andockung (Audit 1, 2.7.):** `fast-check`-Property-Tests
+  für Staffel-/Bandgrenzen (`src/tests/tarifInvarianten.test.ts` — fängt Off-by-one; Dev-Dependency,
+  seed-deterministisch §2) · **Gate-Kette parallelisieren** (`package.json`-`check` via Promise.all/spawn,
+  ~9,6 s → ~2–3 s, Bordmittel) · Myers-`diff`-Package NUR als `golden:diff`-Diagnose — **das Gate selbst
+  bleibt Byte-Vergleich.** Detail `BACKLOG-AUDIT-WERKZEUGE-2026-07.md`. **Stärkste zeitsperre-konforme Arbeit** — macht die
   Dez-Abnahme billig; dauerhaft begleitend.
 - **Adversariale Gegenprüfung — systematisiert** *(QS-GP, LERNPHASE B, `[OF]`)*, neu 29.6.2026 —
   <!-- @meta id: QS-GP · status: wip · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->
@@ -175,7 +198,7 @@ uebergabe: nur per explizitem `plan:set <id> slot=inhaber`-Commit; check:plan er
     (kappt Scroll-Spy-Kaskade über ~1000 Artikel) · token-Mindesthöhen gegen CLS (Reader-Ladezustand,
     Suspense-Fallback, `NewsHeader`) + Reader-Chunk vorladen · `vendor-react`-manualChunks.
   - **c · M-Daten-Pfad** *(adopt-with-care, golden-gegated)*: OR-Fetch/Struktur-Parse per
-    `requestIdleCallback` defern (vollen Parse behalten) · Suchindex (16 MiB) in Web-Worker ·
+    `requestIdleCallback` defern (vollen Parse behalten) · Suchindex (16 MiB) in Web-Worker (bzw. **FlexSearch `export()`/`import()`** — Index build-time serialisieren statt Client-Rebuild, Audit-1-B4; entfällt evtl. via E2-Edge-Suche, `FAHRPLAN-DATENHALTUNG.md` §8) ·
     `register.json` in Bund/Kanton sharden · Snapshot-Format verschlanken (Provenienz-Header-Hoist).
   - **d · Render-/Split-View-Feinschliff** *(zuletzt — nach den Memos marginal)*: TOC stabilisieren,
     `aktArtikel`-Tracker auslagern, Pane-Open-Guard + Such-Debounce, Fallback-Font-Metriken.
@@ -184,7 +207,7 @@ uebergabe: nur per explizitem `plan:set <id> slot=inhaber`-Commit; check:plan er
     Regenerierung (c) öffnet **keinen** 26×-Slot (nur Format, Union byte-gleich); Worktree-Isolation
     bei `vite.config.ts`/Generatoren/`public/normtext/**` (§12). Trailer `Roadmap: QS-PERF`.
 - **Datenhaltung / Single-Source-DB** *(QS-DATA, `[OF]`, neu 2.7.2026 — Council-Entscheid)*.
-  <!-- @meta id: QS-DATA · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein · fahrplan: FAHRPLAN-DATENHALTUNG.md -->
+  <!-- @meta id: QS-DATA · status: wip · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein · fahrplan: FAHRPLAN-DATENHALTUNG.md -->
   Für die Korpus-Inhalte (Normtext · Rechtsprechung · Materialien) wird ein **generator-erzeugtes
   DB-Artefakt die EINE Wahrheit (§5)**; `public/*.json` + prerenderte Seiten sind fortan
   **byte-gleiche Projektion** daraus — nie parallel gepflegt. Amtlicher Arbiter bleiben
@@ -193,7 +216,7 @@ uebergabe: nur per explizitem `plan:set <id> slot=inhaber`-Commit; check:plan er
   (Projektion byte-gleich gegen den bisherigen Generator-Output) + **Drift-Tor** (DB-Manifest
   sha/Zeilenzahlen vs. committete Projektion; bestehende `check:*-netz` bleiben Quellen-Arbiter).
   Kuratiertes Schaufenster bleibt prerendert (§15); Long-Tail on-demand inhaltsvollständig (§15 Regel 6).
-  Bau-Strang = **W2·6-DATA**; Detailquelle **`FAHRPLAN-DATENHALTUNG.md`**. Trailer `Roadmap: QS-DATA`.
+  Bau-Strang = **W2·6-DATA**; Detailquelle **`FAHRPLAN-DATENHALTUNG.md`**. **Stand 3.7.2026: E0 (Bund) gemergt** — Details am Schritt W2·6-DATA. Trailer `Roadmap: QS-DATA`.
 
 ---
 
@@ -396,6 +419,17 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
     SSV-Kachel-379-Leak, **P1** sha deckt `mehrspaltig.spalten`, **P5** `[tab]`-Negativ-Lexikon (Expected-Fail-Register).
     **[ ] P3** Drop-Klasse laut (OR 361/362) **deferiert** = eigener Schritt (korpusweite `<p>`-Klassen-Kalibrierung,
     Keim §4-Quell-Containment). Detail STRUKTUR-Karte 2.7. + Spec §7.
+  - [ ] **+ Audit-Andockung 3.7.2026 (Audit 1, `BACKLOG-AUDIT-WERKZEUGE-2026-07.md`):** **N3 · `he` statt
+    Handtabelle** (`scripts/normtext/html-entities.ts`, 2231 vs. ~90 Entities; `&ge;`/`&le;` haben real
+    Tarif-Schwellen verfälscht). **Das ist eine KORREKTUR, kein No-op — golden kann an den bisher falsch
+    dekodierten Stellen NICHT byte-gleich bleiben.** Verfahren: (i) Umstellung, Regenerat, `golden:diff`;
+    (ii) **erwartete Diffs AUSSCHLIESSLICH an Entity-Stellen** — jede Abweichung einzeln als bewusstes
+    golden-Update begründen (Risiko-Pfad ⇒ `QS-GP`-Quittung Pflicht); (iii) **Rest-Byte-Parität als hartes
+    Kriterium:** jeder Diff, der NICHT auf eine Entity-Dekodierung zurückführbar ist, bricht den Umbau ab.
+    Gehört zur L0-Extraktor-Härtungslinie (Geschwister von N1/N2). **linkedom-POC** (B1 — Regex-Tiefenzähler
+    in `extrahiere-fedlex.ts` ablösen, «buggigste Stelle, fachlich wertvollster Umbau»): POC an einem
+    komplexen Artikel gegen golden, zeitlich **VOR dem Normtext-Freeze** (Phase 1, `FAHRPLAN-GESAMTAUFBAU.md`);
+    nur bei bestandenem POC umstellen — sonst bauen E0/E1 auf dem alten Parser.
 - [ ] **6 · Konsultieren-Klingen** *(`[OF]`, amtlich)*:
   <!-- @meta id: W2·6 · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->
   - **Mehrsprachiger Normvergleich DE/FR/IT** (Auslegungswerkzeug, Art. 14 PublG — alle drei
@@ -410,6 +444,7 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
     (Facetten/Sprachfilter-Vorbereitung). Live-Adapter §4-blockiert → geparkt. §14-gebündelt (Phase 0):
     führende Detailquelle für Live-/Volltextsuche (`livesuche.ts`, P1–P6) = `FAHRPLAN-ENTSCHEIDSUCHE-AUSBAU.md`;
     nicht doppelt planen (BGE-Darstellung-Teil B ist Verweis).
+    *— Datenausbau-Unterschritte (Quellen → DB → Korpus = Fundament der Verzahnung):*
     - [D] **Quellen-Steinbruch OpenCaseLaw** *(Analyse 2.7.2026; **Richtungsentscheid gefallen 2.7.: KONSUMIEREN statt scrapen** — Massen-/Graph-Verwertung läuft im DB-Strang **W2·6-DATA**/`FAHRPLAN-DATENHALTUNG.md`; Technik-Ports W1/W4–W13 unverändert nach `PLAN-OCL-ABBAU.md`)* — Auswertung
       von opencaselaw.ch/`caselaw-repo-1` (Daten CC0, Code MIT): was für LexMetrik verwertbar ist
       (LexWork-Kantons-API · Fedlex-SPARQL-Eigenheiten · Zitat-Regexes/ECLI · Verifikations-Rails →
@@ -418,15 +453,17 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
     - [D] **Fedlex-Datenarten-Portfolio** *(Plan 2.7.2026, §14-Intake je Paket pending David-Freigabe)* — 6 verwertbare
       Fedlex-Datenarten (Erlasse/Materialien/Verfahren/Staatsverträge u.a.), ausschliesslich amtliche Fedlex-Stelle
       (SPARQL + Filestore, nie Dritt-Repo). **Detailquelle:** `FAHRPLAN-FEDLEX-PORTFOLIO.md`.
-    - [ ] **Datenhaltung-Bau: DB-Artefakt + Massen-Korpus + Edge-Suche** *(W2·6-DATA; Council 2.7.2026 — löst die drei OCL-Abbau-„DAVID-ENTSCHEID"-Punkte auf)*.
-      <!-- @meta id: W2·6-DATA · status: ready · of: ja · blocker: null · dep: [] · kollision: [scripts/normtext-snapshot.ts, scripts/prerender.ts, public/normtext/register.json] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-DATENHALTUNG.md -->
+    - [~] **Datenhaltung-Bau: DB-Artefakt + Massen-Korpus + Edge-Suche** *(W2·6-DATA; Council 2.7.2026 — löst die drei OCL-Abbau-„DAVID-ENTSCHEID"-Punkte auf)*.
+      <!-- @meta id: W2·6-DATA · status: wip · of: ja · blocker: null · dep: [] · kollision: [scripts/normtext-snapshot.ts, scripts/prerender.ts, public/normtext/register.json] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-DATENHALTUNG.md -->
       Andockpunkt **eine Schicht UNTER dem heutigen Generator** — die bestehenden Adapter befüllen
       ein libSQL/SQLite-Artefakt, `public/*.json` + Prerender werden Projektion (Tor `check:paritaet`,
       §7 Build-Regel 6). Etappen (Detail `FAHRPLAN-DATENHALTUNG.md`): **E0** Fundament/Reverse-
       Befüllung+Parität → **E1** Generator-Flip → **E2** Edge-Suche-POC (alle BGE + alle Bund-Gesetze)
-      → **E3** BGer-Massen-Import (voilaj-Konsum; **öffnet den 26×-Slot** — Reihenfolge vs. W3·12 =
-      Davids Wahl) → **E4** Zitat-Graph. E0–E2 golden-neutral zu den Gesetzen; jede Projektions-
-      Änderung golden byte-gleich (§6) + `QS-GP`. OCL-Pakete W12 (Bulk-Parquet) + F2 gehen hier auf.
+      → **E3** BGer-Massen-Import (voilaj-Konsum; **öffnet den 26×-Slot** — Reihenfolge ENTSCHIEDEN:
+      E3 zuerst, W3·12 danach, David 2.7., `FAHRPLAN-DATENHALTUNG.md` §10(1)) → **E4** Zitat-Graph → **E5** Kanton-Rechtsprechung (26×, Slot-Kette #4) → **E6a**
+      Verwaltungsverordnungen (Kreisschreiben — Bund-Strang, kein Slot; Nordstern-Doktyp) → **E6b**
+      Materialien-Vollausbau (Detail `FAHRPLAN-DATENHALTUNG.md` §5). E0–E2 golden-neutral zu den Gesetzen; jede Projektions-
+      Änderung golden byte-gleich (§6) + `QS-GP`. OCL-Pakete W12 (Bulk-Parquet) + F2 gehen hier auf. **E0 ✅ 2.7.2026** (PR #80/81, `ad065c03`: 218 Bund-Normtext byte-gleich DB↔JSON, `check:paritaet` in der Gate-Kette, doppelt verifiziert). **Nächstes: E0+-Ausdehnung** (expliziter Sub-Schritt, KEIN neuer ROADMAP-Schritt — §14, Detail `FAHRPLAN-DATENHALTUNG.md`): Kanton-Normtext 1231 (empirisch 3.7.2026: 1231 Erlass-JSONs in `public/normtext/kanton/`; die separate `index.json` macht 1232 committete Dateien) + Rechtsprechung + `register.json`/`index.json` (`ingest.ts` heute Bund-only) → dann E1. **Klarstellung Leitprinzip 4:** der Reverse-Ingest bereits committeter Kantons-JSONs öffnet **KEINEN** 26×-Slot (Leitprinzip 4 meint neuen Massenimport, nicht Reverse-Befüllung committeter Daten). **Weichen entschieden 3.7.:** Kontext-Auslieferung = Hybrid (Shards+Edge, `FAHRPLAN-DATENHALTUNG.md` §10(6)/§11.5) · Massen-Rebuild = Voll-Rebuild (§10(7)).
     - [ ] **+ Auftrags-Eingang 30.6.: Bündel B** — **B1** BGE ohne «vollständiges Urteil» (12/272,
       <!-- @meta id: W2·6-B · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->
       `azaUrteil:null`+kein Auszug → AZA-Resolver, *Daten/`QS-GP`*) · **B2** Regeste amtlich = Absätze +
@@ -487,7 +524,10 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   der Prozesskosten-26×-Slot frei ist** (Schritt 4). §14-gebündelt (Phase 0): führende Detailquelle
   `FAHRPLAN-GESETZE-IMPORT-3TIER.md`; **BS-Sofortfixes S1–S13** = `FAHRPLAN-BS-VORBILDKANTON.md`
   (korpusweiter Adapter-Hebel VOR jedem Bulk); Volltext-Kanton = `FAHRPLAN-RECHTSSAMMLUNG.md` (P6).
-  BS-Pilot; Kantonale-Entscheide-Import hart **nachgelagert**, nie gleichzeitig.
+  BS-Pilot; Kantonale-Entscheide-Import hart **nachgelagert**, nie gleichzeitig. *Werkzeug-Funde (Audit 1):
+  LexWork-Adapter auf dieselbe DOM-Parser-Infra wie der linkedom-POC heben (strikt NACH dessen Bestehen, B5);
+  `pdfplumber` (Python) NUR als nicht-lasttragendes Gegenprüf-Skript, falls die TS-PDF-Extraktion
+  (pdfjs-Koordinaten) belegt versagt (B3) — kein Sprachwechsel am Produktpfad.*
 - [ ] **13 · Vorlagen-Breite** *(VORLAGEN V5/V6/V8, GMBH G2, VERTRAGS-VARIANTEN P3; Worktree)*.
   <!-- @meta id: W3·13 · status: ready · of: ja · blocker: null · dep: [] · kollision: [src/lib/vorlagen] · worktree: ja · 26x: nein -->
   Tiefe vor Stückzahl. GmbH qualifizierte Gründung (777c II) · Musterklagen (Bauhandwerkerpfand) ·
@@ -525,7 +565,9 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
 Kaum eigene Engines — **Erklär-/Übungs-Schichten** auf amtlicher Substanz (§3, Darstellungsschicht):
 ausklappbarer **Rechenweg/«Warum»** an den Rechnern (Begründungs-Baustein), der **Mehrsprach-Vergleich**
 (Schritt 6) als Auslegungsübung, **amtliche Zitierhilfe** (aus Schritt 7), der **Norm↔Entscheid↔
-Rechner-Lernpfad** (Schritt 2/6). Einbau jeweils im Mutter-Schritt, nicht als eigener Strang.
+Rechner-Lernpfad** (Schritt 2/6). Einbau jeweils im Mutter-Schritt, nicht als eigener Strang. Gilt
+sinngemäss für jeden fachfremden Rechtsanwender (Ämter/Steuerbehörden/Treuhänder — Nordstern 3.7.);
+Sprachregel bleibt CLAUDE.md §13.3 (klar für Fach UND Laie) — keine parallele «Nicht-Juristen-Layer» erfinden.
 
 ---
 
@@ -551,6 +593,9 @@ Ja** (§9), aus sauberem HEAD-Worktree (§12).
   noch nichts Konkretes; abgleichen mit *Redesign-zurückgestellt* (16.6.) + FUNDAMENT-UMBAU-
   Startseitenrahmen (W2·5) + Branding-Neuausrichtung (I2 im Auftrags-Eingang 30.6.).
 - **Live-Rechtsprechung** — §4-blockiert (s. Verifikations-Blockaden).
+- **Betriebs-Instrumente (später):** Sentry (erst bei Traffic; A5-Fehler-Link deckt jetzt) · CodeQL ·
+  `npm audit` als Prüf-**Meldung** (nie Stopper) · Claude-Code-PR-Action (bewusster Entscheid) —
+  Detail + Verworfen-Liste: `BACKLOG-AUDIT-WERKZEUGE-2026-07.md`.
 - **Abnahme-Warteschlange** (Haftungsrang: 1 Fristen → 2 Form-Gate-Vorlagen → 3 Beträge; aufgereiht,
   nicht gedrängt): BGER-RECHTSWEG (§7) · BEURKUNDUNGS-AUSBAU · NOTARIAT/LUECKEN (`geprüft`) ·
   GESETZESTEXT-POPUP-Snapshots · GRUNDLAGEN G2/B.

@@ -1,7 +1,7 @@
 # FAHRPLAN-GESAMTAUFBAU - Chronologischer Zukunfts-Ausbau der LexMetrik-Website
 
-**Stand:** 2.7.2026 · **Erarbeitet:** Council + Fable (Kritik-Runde eingearbeitet) · **Status:** ORDNET die bestehenden FAHRPLÄNE und die `ROADMAP.md` (§14) chronologisch — **ersetzt die ROADMAP nicht**; sie bleibt die eine Steuerungsquelle.
-**Nordstern:** Übersichtliches Zuhause für JEGLICHE amtlichen Materialien von Bund + 26 Kantonen — DB = die EINE Wahrheit, selbst gehostet, immer geltender Stand, transparent mit Fundstelle, Historie.
+**Stand:** 2.7.2026 · **Erarbeitet:** Council + Fable (Kritik-Runde eingearbeitet) · **Status:** ORDNET die bestehenden FAHRPLÄNE und die `ROADMAP.md` (§14) chronologisch — **ersetzt die ROADMAP nicht**; sie bleibt die eine Steuerungsquelle. · **Ist-Stand-Nachtrag 3.7.2026** (E0 gemergt, Phase 0 vollzogen, Betriebs-Fixes A2–A6 — s. Abschnitt «Ist-Stand-Nachtrag (3.7.2026)» unten).
+**Nordstern (geschärft David 3.7.2026):** DIE EINE Anlaufplattform für JEDEN Rechtsanwender — Gerichte, Steuerbehörden, Ämter/Verwaltung, Studierende, Notariate, Treuhänder, nicht nur Anwältinnen. Übersichtliches Zuhause für JEGLICHE amtlichen Materialien von Bund + 26 Kantonen (inkl. Verwaltungsverordnungen/amtliche Praxis) — DB = die EINE Wahrheit, selbst gehostet, immer geltender Stand, transparent mit Fundstelle, Historie. *(Wortlaut-SSoT = ROADMAP-Produktvision; hier nur nachzitiert.)*
 
 **Zeit-Hinweis (David 2.7.2026):** Der Plan ist **NICHT zeitgebunden** — die Monatslabels sind nur
 **indikative Reihenfolge/Orientierung, keine Termine**. Einzige harte Zeitschranke: **Davids
@@ -28,12 +28,30 @@ kein Zwang).
 | 5c | BS-Differenzierer „gegated" ohne Tor-Namen | **Berechtigt** | Tore benannt: `check:struktur-konsistenz` + Golden + Playwright-Regressionsfälle je Welle |
 | 6a | Phase 6 führt E5 + E6a + Pakete 3/4 im selben Fenster (Rule 3 schwelt) | **Teils widerlegt, teils übernommen** | E6a (Kreisschreiben ESTV/BSV/FINMA/SEM) und Pakete 3/4 sind **Bund-Stränge**, keine 26×-Kandidaten — nur E5 hält den Slot, Rule 3 ist gewahrt. Übernommen wird der Mechanik-Fix: **Slot-Inhaber als @meta-Etikett** in der ROADMAP, Übergabe nur per explizitem Etikett-Commit |
 | 6b | Turso doppelt (T0b Grund / T1 Betrag) | **Berechtigt** | Zusammengelegt: T0b entscheidet **Grund UND Betragsrahmen (Cap)**; T1 entfällt, Rückfrage nur bei Cap-Überschreitung |
+| 7 | Nordstern 3.7. macht Steuerbehörden/Ämter zur Kernzielgruppe — E6a (ihr Kernarbeitsmittel) liegt erst in Phase 6, obwohl slot-frei (Bund-Strang) und nur E3/E4-abhängig | **Offen (T0b/David)** | Vorschlag: E6a als Bahn-A-Nebengleis nach Phase 3/4 vorziehen (analog Pakete 2/5 in Phase 2, «günstigste Nordstern-Doktyp-Erweiterung»). Default bleibt Phase 6; Umsortierung NUR auf Davids Ja |
+
+---
+
+## Ist-Stand-Nachtrag (3.7.2026)
+
+Vorangestellter Ist-Stand (Commit-Forensik; hebt die Council-Historie unten nicht auf — sie bleibt unverändert lesbar):
+
+| Plan-Stelle | Ist-Stand | Beleg |
+|---|---|---|
+| Phase 0 (b)1 §14-Bündelungen | ✅ alle 3 | `f66215a3`/`107c6eb5`/`e1fbcc94` |
+| Phase 0 (b)2 QS-PH + Slot-Etikett | ✅ | `0021112a`, `check:plan` läuft |
+| Phase 0 (b)3 Batch-Deploy | ✅ 2.7.2026 | Deploy `a3769d72` |
+| Phase 0 (b)4 Freigabe-Paket | ⚠️ teilweise — (i)/(iii) ✅, (ii)/(iv)–(vii) offen | s. Phase-0-Text |
+| Phase 1 A-2 Vollständigkeits-Audit | `annex_*` ✅ · `<img>` ✅ · nur LugÜ/Marken-Garbling offen | `check:vollstaendigkeit`/`check:bilder` |
+| Phase 1 A-3 E0 | ✅ gemergt | `ad065c03`, PR #80/81 |
+| Phase 1 A-4 E1 | ❌ offen; davor Pflicht-Zwischenschritt **E0-Ausdehnung** | `BACKLOG-AUDIT…` §DB-Strang |
+| Ausserhalb der Phasen | Betriebs-Fixes A2–A6 ✅ (Bahn-D-orthogonal) | `c6f030f9`/`075574bb` |
 
 ---
 
 ## Leitgedanke der Chronologie
 
-Die Wertkette (Ordnungsregel 4) gibt das Rückgrat vor: **Quelle → Senke (DB) → Darstellung → Verzahnung**. Der QS-DATA-Strang E0–E6 ist das tragende Fundament und wird in Phase 1 verortet; alles andere ordnet sich in **vier dauerhafte Parallel-Bahnen** um ihn herum. Die Bahnen sind **kollisionsarm** (eigene Worktrees, weitgehend disjunkte Dateiflächen), aber nicht kollisionsfrei: die bekannten geteilten Knoten (`ArtikelBody.tsx`, `App.tsx`/`prerender.ts`/`startseiteConfig.ts`, `lib/tabs.ts`) werden über die **Datei-Eigentümer-Regel** entschärft — pro Knoten und Phase genau ein schreibender Strang, alle anderen warten oder rebasen dahinter (Detail: Risiko 5).
+Die Wertkette (Ordnungsregel 4) gibt das Rückgrat vor: **Quelle → Senke (DB) → Darstellung → Verzahnung**. **Verzahnung ist dabei kein Endpunkt der Kette, sondern das Organisationsprinzip, das jede Phase mitträgt** — W1·2 Norm↔Werkzeug (Welle 1, live) · E4 Zitat-Graph + Norm↔Entscheid-Panel (Phase 3) · Kantonaler Norm-Resolver + E6a-VerwVO-Verzahnung (Phase 6): der Burggraben wächst kumulativ über alle Phasen, nicht an einem einzelnen Schritt. Der QS-DATA-Strang E0–E6 ist das tragende Fundament und wird in Phase 1 verortet; alles andere ordnet sich in **vier dauerhafte Parallel-Bahnen** um ihn herum. Die Bahnen sind **kollisionsarm** (eigene Worktrees, weitgehend disjunkte Dateiflächen), aber nicht kollisionsfrei: die bekannten geteilten Knoten (`ArtikelBody.tsx`, `App.tsx`/`prerender.ts`/`startseiteConfig.ts`, `lib/tabs.ts`) werden über die **Datei-Eigentümer-Regel** entschärft — pro Knoten und Phase genau ein schreibender Strang, alle anderen warten oder rebasen dahinter (Detail: Risiko 5).
 
 | Bahn | Inhalt | Kern-Dateifläche (+ bekannte geteilte Knoten) |
 |---|---|---|
@@ -63,8 +81,8 @@ Das fertig gebaute 26×-Asset **Beurkundung** wird in Phase 0 per Batch-Deploy a
    - Kanton-Adapter-Trio: BS-VORBILDKANTON S1–S13 + Popup-Kanton-Rest + GESETZE-IMPORT-3TIER/Rechtssammlung P6 → **ein** «Kanton-Gesetze-Bündel» (Bau in Phase 4).
    - `FAHRPLAN-PRODUKTAUSBAU-BURGGRABEN.md`: P3/P4-Reste in ROADMAP nachverlinken, Rest archivieren.
 2. **QS-PH @meta-System ausbauen** (`plan:next`/`check:plan`, FAHRPLAN-PLAN-STEUERUNG) + **Thema D Doku-Hygiene** (FUNDAMENT-UMBAU) — inkl. neuem **Slot-Inhaber-Etikett** für den 26×-Slot; macht diesen Phasenplan maschinell steuerbar.
-3. **§9-Batch-Deploy-Fenster** [DAVID]: alle fertig gebauten, gegateten, ungepushten Stände in EINEM Ritual (`deploy-check`) vorlegen: M1–M3/M9/M10, M13, AKN Phase 0, Bündel N, S0, Begründungs-Absatz, Vertrags-Varianten P0–P2, Vorlagen V1–V3, **Beurkundungs-Ausbau** (entlastet den 26×-Slot; Status bleibt `entwurf` bis Abnahme).
-4. **EIN Freigabe-Paket** [DAVID, ~30 Min, reine Ja/Nein-Entscheide, keine Fachprüfung]: (i) E0-Start (Prozess-Freigabe 5), (ii) Fedlex Paket 1 Currency, (iii) Bestätigung 26×-Kette inkl. Slot-Etikett (E3 zuerst, §10.1), (iv) FUNDAMENT-UMBAU Thema B+C Go/No-Go, (v) GmbH-G2-Go (optional, kann warten), (vi) **Turso-Billing dem Grunde nach + Betragsrahmen/Cap** (einziger Turso-Touchpoint; Rückfrage nur bei Cap-Überschreitung), (vii) **Optional-Frage Abnahme-Welle 1: Feb 2027 (Default) oder Vorziehen auf Dez 2026?**
+3. **§9-Batch-Deploy-Fenster** [DAVID]: alle fertig gebauten, gegateten, ungepushten Stände in EINEM Ritual (`deploy-check`) vorlegen: M1–M3/M9/M10, M13, AKN Phase 0, Bündel N, S0, Begründungs-Absatz, Vertrags-Varianten P0–P2, Vorlagen V1–V3, **Beurkundungs-Ausbau** (entlastet den 26×-Slot; Status bleibt `entwurf` bis Abnahme). **✅ Vollzogen 2.7.2026 (Deploy `a3769d72`).**
+4. **EIN Freigabe-Paket** [DAVID, ~30 Min, reine Ja/Nein-Entscheide, keine Fachprüfung]: (i) E0-Start (Prozess-Freigabe 5), (ii) Fedlex Paket 1 Currency, (iii) Bestätigung 26×-Kette inkl. Slot-Etikett (E3 zuerst, §10.1), (iv) FUNDAMENT-UMBAU Thema B+C Go/No-Go, (v) GmbH-G2-Go (optional, kann warten), (vi) **Turso-Billing dem Grunde nach + Betragsrahmen/Cap** (einziger Turso-Touchpoint; Rückfrage nur bei Cap-Überschreitung), (vii) **Optional-Frage Abnahme-Welle 1: Feb 2027 (Default) oder Vorziehen auf Dez 2026?** **Stand 3.7.2026:** (i) ✅ (E0 gebaut) · (iii) ✅ (Slot-Etikett existiert, `check.ts` 5b) · **(ii)/(iv)/(v)/(vi)/(vii) offen — kein dokumentiertes Ja/Nein** (T0b nicht abhakbar). **Neu (viii):** Dependabot einschalten + `npm audit fix` (dompurify via jspdf) — Audit-2-A1, reiner David-Klick.
 5. **Konfliktfreie Sofort-Arbeit parallel:** Rechtsprechung #1 SG-P0-Reparatur (Treue vor Menge), Entscheidsuche P6 Korpus-Cross-Check-Tor, OCL W8 Verifikations-Rails (QS-GP), Lighthouse-CI-Schranken (PERFORMANCE), UX-Batch A Quick-Wins, Lernphase Strang A Status-Marker beginnen (LERNPHASE-2026).
 
 **(c) Warum hier:** Ohne §14-Bündelung droht Doppel-Bau auf denselben Dateien (Ordnungsregel 3); ohne Deploy-Fenster wächst der ungepushte Berg und blockiert den 26×-Slot; beide P0-Stränge (E0 + Paket 1) stehen an derselben Freigabe-Schwelle — ein einziges Freigabe-Paket minimiert Davids Touchpoints. Die Sofort-Arbeit hat keine Kollisionsfläche mit Phase 1.
@@ -82,10 +100,11 @@ Das fertig gebaute 26×-Asset **Beurkundung** wird in Phase 0 per Batch-Deploy a
 **(a) Voraussetzung:** T0b (Freigaben E0 + Paket 1).
 
 **(b) Inhalt:**
-- **Bahn A (seriell, Normtext-Freeze):**
-  1. **Fedlex Paket 1 — Gesetze-Currency** (FEDLEX-PORTFOLIO): 20 veraltete Erlasse, 11 Pins, 56 Wiedervorlagen. *Zuerst*, damit E0 die DB mit geltendem Recht befüllt statt mit Drift.
-  2. **Vollständigkeits-Audit nach M13** (NORMTEXT-DARSTELLUNG, dortiges explizites NÄCHSTES): **Anhänge `annex_*` (99 Gesetze) → Bilder/Formeln `<img>` (29 Gesetze) → LugÜ-Protokolle/Marken-Garbling** — letzte Parser-Eingriffe vor dem Freeze. Falls der `<img>`-Teil das Fenster sprengt: Rest reitet im AKN-Fenster Phase 3 auf DB-Substrat mit, `annex_*` und LugÜ sind nicht verschiebbar.
-  3. **E0 Fundament + Reverse-Befüllung** (DATENHALTUNG): Schema/Ingest/Projektion, `check:paritaet` (DoD: Tor existiert + grün), golden-neutral.
+- **Bahn A (seriell, Normtext-Freeze):** *(Etappen-Tore je E-Schritt = `FAHRPLAN-DATENHALTUNG.md` §5-Etappen-Tabelle; Import-Reihenfolge bindend nach `FAHRPLAN-DATENHALTUNG.md` §4.5 — Fundament-Vertiefung, konsolidiert 3.7.2026: strukturiert/klein zuerst, nie zwei 26×-Assets parallel.)*
+  1. **Fedlex Paket 1 — Gesetze-Currency** (FEDLEX-PORTFOLIO): 20 veraltete Erlasse, 11 Pins, 56 Wiedervorlagen. *Zuerst*, damit E0 die DB mit geltendem Recht befüllt statt mit Drift. **Ist-Abweichung 3.7.2026:** E0 wurde bereits gebaut, BEVOR Paket 1 lief — unschädlich (E0 = golden-neutrale Reverse-Befüllung aus `public/*.json`; nach dem Paket-1-Fix wird schlicht re-ingestet, kein Zusatzaufwand). Paket-1-Notwendigkeit unverändert.
+  2. **Vollständigkeits-Audit nach M13** (NORMTEXT-DARSTELLUNG, dortiges explizites NÄCHSTES): **Anhänge `annex_*` (99 Gesetze) → Bilder/Formeln `<img>` (29 Gesetze) → LugÜ-Protokolle/Marken-Garbling** — letzte Parser-Eingriffe vor dem Freeze. Falls der `<img>`-Teil das Fenster sprengt: Rest reitet im AKN-Fenster Phase 3 auf DB-Substrat mit, `annex_*` und LugÜ sind nicht verschiebbar. **Stand 3.7.2026: `annex_*` ✅ (390 Einträge/134 Gesetze) · `<img>` ✅ (445 Bilder, 1.7.) — offen nur LugÜ-Protokolle + Marken-Garbling** (kleiner Rest, kein E1-Blocker). **Vor dem Freeze zusätzlich: linkedom-POC** (Audit-1-B1, s. ROADMAP W2·5b) — Regex-Tiefenzähler nur bei bestandenem POC ablösen; B5 LexWork analog erst Phase 4.
+  3. **E0 Fundament + Reverse-Befüllung** (DATENHALTUNG): Schema/Ingest/Projektion, `check:paritaet` (DoD: Tor existiert + grün), golden-neutral. **✅ ERLEDIGT 2.7.2026** (`ad065c03`, PR #80/81; `check:paritaet` in der Gate-Kette).
+  3b. **E0-Ausdehnung** (aus `BACKLOG-AUDIT-WERKZEUGE-2026-07.md` §DB-Strang): Kanton-Normtext (1231) + Rechtsprechung + `register.json`/`index.json` (Trailing-Newline) in `ingest.ts` nachziehen, `check:paritaet`-Allowlist erweitern — Pflicht-Zwischenschritt VOR E1. (Import-Reihenfolge-Klarstellung `FAHRPLAN-DATENHALTUNG.md` §4.5: Reverse-Ingest bereits committeter Kantons-JSONs ≠ 26×-Slot.)
   4. **E1 Generator-Flip**: Generatoren schreiben in DB, `public/*.json` = byte-gleiche Projektion; 3 Doppelläufe byte-gleich vor Altpfad-Entfernung; Risiko-Pfad ⇒ `check:gegenpruefung` Pflicht.
   - **Normtext-Freeze:** Während E0/E1 fasst KEIN anderer Strang `normtext-snapshot.ts`/`public/normtext/**`/`register.json` an (AKN Phase 1, Reader-Batches am Datenpfad, UX-C5 Ingress warten).
 - **Bahn B parallel:** OCL W5 Struktur-Splitter → W6 Instanzenzug → #10 FR/IT-Mapping (R2-neu, 3 Wächter + Pflicht-Gegenprüfung) — seriell innerhalb der Bahn (`adapter-entscheide.ts`), aber unabhängig von Bahn A. Dazu #11 norm-index-Split.
@@ -107,7 +126,7 @@ Das fertig gebaute 26×-Asset **Beurkundung** wird in Phase 0 per Batch-Deploy a
 **(a) Voraussetzung:** E1 grün (DB = Wahrheit), Normtext-Freeze aufgehoben.
 
 **(b) Inhalt:**
-- **Bahn A:** **E2 POC-Scheibe + Edge-Suche** (alle BGE + 218 Bund-Gesetze in DB, Turso-Replika im T0b-Cap, `universalSuche` read-only) → danach **E3 BGer-Massen-Import** (~191k, voilaj-Parquet, DB-only, Long-Tail-Route) — **26×-Slot Nr. 1**, inkl. OCL W12/Entscheidsuche P5 (dieselbe Senke, Council-Entscheid 2.7.).
+- **Bahn A:** **E2 POC-Scheibe + Edge-Suche** (alle BGE + 218 Bund-Gesetze in DB, Turso-Replika im T0b-Cap, `universalSuche` read-only) → danach **E3 BGer-Massen-Import** (~191k, voilaj-Parquet, DB-only, Long-Tail-Route) — **26×-Slot Nr. 1**, inkl. OCL W12/Entscheidsuche P5 (dieselbe Senke, Council-Entscheid 2.7.). *(Etappen-Tore E2/E3 + Vorbedingungen — B2-POC inkl. Resolve-Pass-Messung, VPS-Angebot gegen die Posten-Tabelle — verbindlich in `FAHRPLAN-DATENHALTUNG.md` §5-Etappen-Tabelle; Import-Reihenfolge `FAHRPLAN-DATENHALTUNG.md` §4.5 bindend.)* **Weiche C ENTSCHIEDEN (David 3.7.2026): Voll-Rebuild** (kein Delta-Update) — die transiente Disk-Spitze ~200–250 GB ist der akzeptierte Preis der Determinismus-Beweisbarkeit (zwei Läufe → identisches Dump-Manifest); das VPS-Sizing folgt daraus, der Kosten-POC gegen ein reales Anbieter-Angebot fällt vor E3-Freigabe. Detail `FAHRPLAN-DATENHALTUNG.md` (Fundament-Vertiefung, Weiche C).
 - **Bahn A-Nebengleis (kollisionsarm, neue Fläche):** **Fedlex Paket 2 Botschaften** → **Paket 5 AS-Änderungshistorie** (erbt Pipeline; = E6b-Vorbau). UI-Andockung in `gesetz-leser/inhalt.tsx` mit Bahn-D-Arbeit koordinieren (ein Worktree-Fahrplan, Datei-Eigentümer-Regel).
 - **Bahn B:** gebündelter **Entscheidsuche-Ausbau P1+P2** (Facetten/Pagination/Sprache, Geschäftsnummer-Direktzugriff, Zitat-Verifikation) — nach Phase-0-Bündelung genau einmal gebaut.
 - **Bahn C:** **P3 neue Vertragsgrundtypen** (Kauf/Schenkung/Tausch) beginnen; Prozesskosten-Reste OHNE 26×-Charakter.
@@ -129,7 +148,7 @@ Das fertig gebaute 26×-Asset **Beurkundung** wird in Phase 0 per Batch-Deploy a
 
 **(b) Inhalt:**
 - **Bahn A:** **E4 Zitat-Graph** (`zitat_kanten`/`norm_kanten`, in-degree-Ranking). Danach **M16 Geltungsstände/Versionierung** + **AKN-XML Phase 1** (inkl. allfälligem `<img>`-Rest aus Phase 1) — beide XL, beide **erst jetzt**, weil sie auf DB-Artefakt statt JSON-Generator aufsetzen; inkrementell, reitet auf Drift-Zyklen, `check:akn-containment`.
-- **Bahn B:** **OCL W7 Zitationsgraph-UI** (auf E4-Kanten) + **Entscheidsuche P3/B4 Norm↔Entscheid live im GesetzLeser** — Panel-Fläche `EntscheidLeser`/`parts.tsx` seriell vergeben. **W13 Suchindex-Härtung** (auf E2-Basis).
+- **Bahn B:** **OCL W7 Zitationsgraph-UI** (auf E4-Kanten) + **Entscheidsuche P3/B4 Norm↔Entscheid live im GesetzLeser** — Panel-Fläche `EntscheidLeser`/`parts.tsx` seriell vergeben. **W13 Suchindex-Härtung** (auf E2-Basis). *(**Weiche B ENTSCHIEDEN (David 3.7.2026): Hybrid** — Schaufenster-Chips «Was betrifft Art. X» aus geshardeter Projektion (offline-treu, CDN-cachebar) + Masse-Anteil per Edge-Query auf `norm_referenzen`/`norm_rangliste` nachgeladen mit ehrlicher «+n weitere (online)»-Kante; damit ist die datenquellen-seitige Blockade der Artikel-Chip-Ausrollung aufgelöst. §15.6-Treuepflichten gelten für den Edge-Anteil. Detail `FAHRPLAN-DATENHALTUNG.md` (Fundament-Vertiefung, Weiche B).)*
 - **Rechtssammlung P4 Volltextsuche:** als **E2-Consumer** realisiert (Edge-Suche statt FlexSearch-Doppelbau — der QS-DATA-Vorbehalt des Fahrplans löst sich damit auf); P5 Gliederung nur nach Redundanz-Check gegen M3/`struktur-extrahiere.ts`.
 - **Bahn C:** P4–P5 Vertragsgrundtypen; **GmbH G2–G7** falls T0b-Go (AG-Fahrplan 1:1).
 - **Bahn D:** SEO **Welle 2**, UX **Batch B Tab-System** (koordiniert mit Split-View-Rest — geteiltes `lib/tabs.ts`, ein Eigentümer), danach **Batch E Einstellungen**; QS-PERF **OR-LCP-Architektur-Entscheid** — jetzt entscheidbar, weil E2 klärt, ob Rank 7 (Worker-Suche) entfällt; M15 Sprachverfügbarkeit.
@@ -195,7 +214,7 @@ Das fertig gebaute 26×-Asset **Beurkundung** wird in Phase 0 per Batch-Deploy a
 **(b) Inhalt:**
 - **[DAVID] T3a — Abnahme-Welle 1 (gebündelt, Pakete aus Phase 5 fertig):** BGer-Rechtsweg, Beurkundungs-Ausbau, Notariat/NG-4-`geprüft`, Popup, Vorlagen-Ausbau/Vertrags-Varianten, G2/B-Start (Fristen-Engines zuerst), Kanton-Quarantäne-Fälle (grosse Kantone priorisiert), kuratierte SEO-Descriptions, Tarif-Bündel-Werte.
 - **[DAVID] T3b — Entscheid-Paket 2 (eine Sitzung):** Teil-D-Neuzugänge, Fall-Rückgrat 5 Entscheide, Fristerstreckung (b), Doktrin Art. 142 ZPO, Themen E/F (FUNDAMENT-UMBAU), Live-Rechtsprechung-Lizenzfrage, **Anonymisierungs-Stichprobe kantonale Entscheide (entsperrt E5)**.
-- **Bahn A (nach T3b-Stichprobe grün): E5 Kantone-Vollkorpus Rechtsprechung** + **Vendor-Ausbau** (Tribuna/Findinfo-Cluster statt 26 Einzelscraper — **nur bei grünem Sondierungs-Tor**, sonst Fallback-Pfad) — **26×-Slot Nr. 4**, in Kantons-Wellen (grosse Kantone zuerst). Danach **E6a Verwaltungsverordnungen** (Kreisschreiben ESTV/BSV/FINMA/SEM — **Bund-Strang, belegt den 26×-Slot NICHT**; Quell-Inventar-Probe nach §7 zuerst). Zum Abschluss **Gerichtsferien/Feiertags-Matrix** — **26×-Slot Nr. 5** (Etikett-Übergabe nach E5-Abschluss; Bau autonom, Fristen-Abnahme in Welle 2).
+- **Bahn A (nach T3b-Stichprobe grün): E5 Kantone-Vollkorpus Rechtsprechung** + **Vendor-Ausbau** (Tribuna/Findinfo-Cluster statt 26 Einzelscraper — **nur bei grünem Sondierungs-Tor**, sonst Fallback-Pfad) — **26×-Slot Nr. 4**, in Kantons-Wellen (grosse Kantone zuerst). Danach **E6a Verwaltungsverordnungen** (Kreisschreiben ESTV/BSV/FINMA/SEM — **Bund-Strang, belegt den 26×-Slot NICHT**; Quell-Inventar-Probe nach §7 zuerst) — zentraler Doktyp für die Kernzielgruppe Steuerbehörden/Ämter (Nordstern 3.7.), nicht nur Bund-Strang-Vollständigkeit. Zum Abschluss **Gerichtsferien/Feiertags-Matrix** — **26×-Slot Nr. 5** (Etikett-Übergabe nach E5-Abschluss; Bau autonom, Fristen-Abnahme in Welle 2).
 - **Bahn A-Nebengleis (Bund, kein Slot):** **Fedlex Paket 3 Vernehmlassungen** (POC zwingend zuerst) + **Paket 4 Staatsverträge** kuratiert + International P2-Rest — komplettiert E6b.
 - **Bahn B:** **Kantonaler Norm-Resolver** (#5; Linkziele existieren seit Phase 4) + **NormText Phase 2** kantonale §-Verweise + NormText Phase 3 Prosa-Literale — die Verzahnung Norm↔Entscheid↔Material über alle Ebenen.
 - **Bahn C/D:** **UX-Batch D Internationale Verträge** — jetzt echt koordiniert mit Paket 4 (gleiche Phase, ein Fahrplan-Slot); Fall-Rückgrat Phase 0–3 (falls T3b-Entscheide gefallen), Rest-Musterklagen, hreflang/i18n gemäss Thema-F-Entscheid.

@@ -12,6 +12,11 @@
 > selbstkritisch: drei Vorschläge werden **verworfen** bzw. an Davids Entscheid
 > gebunden, weil ihr §6-Risiko den Nutzen übersteigt. Das ist Teil des Plans,
 > kein Versehen.
+>
+> **Hinweis 3.7.2026 (Plan-Struktur-Council):** keine Gesamt-Restrukturierung/
+> Sammel-Archivierung; Archivierung weiterhin nur einzeln per verify-then-archive
+> (ROADMAP §Archiv-Kandidaten). Themen B–F dieses Fahrplans bleiben unberührt offen
+> (B/C im T0b-Freigabe-Paket).
 
 ---
 

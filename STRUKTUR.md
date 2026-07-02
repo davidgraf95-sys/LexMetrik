@@ -23,6 +23,24 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 3.7.2026 — Bauplan-Umbau: Ist-Stand + Nordstern + Audit-Funde eingewoben (reine Plan-Schicht, Branch `feat/bauplan-einbau`)
+
+**Auftrag David (3.7.2026):** «behalte alles was drin ist und ordne es neu» + die zwei Audit-Reports (Sprachen/Werkzeuge im Code + Instrumente/Dienste) in ROADMAP/FAHRPLÄNE einweben. Chirurgisch, kein Greenfield. Fable-Spec, Opus-Ausführung; jeder Commit lässt `check:plan` grün (§A der Umbau-Spec).
+
+**Umgebaut (reine Plan-/Doku-Schicht, kein Code — Glob-Erweiterung/`he`/`p-limit` bleiben *angekündigte* Bau-Schritte):** ROADMAP (Nordstern-Publikum verbreitert auf alle Rechtsanwender, Verzahnungs-Rückgrat als Organisationsprinzip, Audit-Funde `he`/`fast-check`/`p-limit`/Gate-Parallelisierung/linkedom-POC/DuckDB-Dreiarm-POC/FlexSearch an die Ziel-Schritte angedockt, E0/E0-Ausdehnung nachgezogen) · `FAHRPLAN-GESAMTAUFBAU.md` (Ist-Stand-Nachtrag 3.7., E0-Ausdehnung als Pflicht-Zwischenschritt vor E1) · `FAHRPLAN-DATENHALTUNG.md` (§0bis Verzahnungs-Bestand, E0-Teil-Erledigt, DuckDB-POC-Vorprüfung) · `CLAUDE.md` (Leitbild-Nordstern + SSoT-Verweis) · `BACKLOG-AUDIT-WERKZEUGE-2026-07.md` (A2–A6 abgehakt, alle Funde verortet) · `FAHRPLAN-FEDLEX-PORTFOLIO-OPUS.md` in `FAHRPLAN-FEDLEX-PORTFOLIO.md` verheiratet (§14.1, löst das rote `check:plan`).
+
+**Verifikation:** `check:plan` grün nach der Verheiratung (untracked Waise entfällt). *(Karte nachgetragen — laufender Einbau; zentraler Commit.)*
+
+## Session 2.7.2026 — E0 DB-Fundament + Byte-Paritäts-Tor (nachgetragen, Commit-Forensik)
+
+**Gebaut (PR #80/81, `ad065c03`, auf `main`):** generator-erzeugtes DB-Artefakt (`daten/lexmetrik.db`, libSQL) als kanonische Zwischenschicht (CLAUDE.md §7 Regel 6, QS-DATA E0). **218 Bund-Normtext-Dateien byte-gleich DB↔JSON**, Paritäts-Tor `check:paritaet` in der Gate-Kette, doppelt verifiziert.
+
+**Offen — E0-Ausdehnung (`BACKLOG-AUDIT-WERKZEUGE-2026-07.md` §DB-Strang):** Kanton-Normtext (1231) + Rechtsprechung + `register.json`/`index.json` (Trailing-Newline) in `ingest.ts` (heute Bund-only) nachziehen + `check:paritaet`-Allowlist erweitern — **Pflicht-Zwischenschritt vor E1**. *(Karte nachgetragen — Commit-Forensik.)*
+
+## Session 2.7.2026 — Betriebs-Sofortgewinne A2–A6 (nachgetragen, Commit-Forensik)
+
+**Gebaut (`c6f030f9`/`075574bb`, PR #83, Branch `feat/betriebs-sofortgewinne`, Bahn-D-orthogonal):** A2 Normen-Monitor-Alarm (GitHub-Issue bei Rot + `check:normtext-netz`/`check:pdf-netz`) · A6 CI-Playwright-Browser-Cache · A4 Kontaktformular aktiviert (Env-Var-Empfänger, `075574bb`) · A5 «Fehler melden»-Link auf der Absturz-Seite (`src/components/ErrorBoundary.tsx`). **A3** (Vercel-Deploy-Gate) per Regel-Anpassung gelöst (CLAUDE.md §9 «Merge = Deploy-Entscheid», David «Weg 1»); **A1** (Dependabot + `npm audit fix`) bleibt reiner David-Klick (verortet T0b Punkt viii). Detail: `BACKLOG-AUDIT-WERKZEUGE-2026-07.md`. *(Karte nachgetragen — Commit-Forensik.)*
+
 ## Session 2.7.2026 — OCL-Abbau (Rechtsprechung/Suche) + Konsolidierung auf EIN `main` — gepusht, NICHT deployed
 
 **Auftrag David:** aus OpenCaseLaw (`caselaw-repo-1`, CC0/MIT) alles für Lexmetrik Nützliche heben + einbauen. Regeln: **OCL-first** (zuerst OCL-Code nach Lösung durchsuchen, dann portieren), **Fable plant / Opus baut**, Bug-Check + Gegenprüfung zwischen JEDEM Schritt.

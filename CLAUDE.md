@@ -7,8 +7,10 @@ gerade gebaut ist.
 **Was als Nächstes zu bauen ist: `ROADMAP.md`** (DER eine Handlungsplan, 28.6.2026).
 Eine Bau-Session liest oben das **Ausführungs-Protokoll** und nimmt den **obersten
 offenen Schritt** der Bau-Reihenfolge (S0 + Wellen 1–13), dessen Abhängigkeiten
-erfüllt sind. Leitbild: «Schweizer Taschenmesser für Juristen» — Anlaufpunkt für
-alle Juristen, **nur amtliche/urheberrechtsfreie Quellen** (Art. 5 URG, keine
+erfüllt sind. Leitbild: «Schweizer Taschenmesser für Juristen» — DIE EINE
+Anlaufplattform für alle Rechtsanwender (Kanzlei, Gericht, Behörden/Ämter,
+Steuerbehörden, Notariate, Treuhänder, Studierende; Wortlaut-SSoT = ROADMAP-Produktvision,
+Nordstern David 3.7.2026), **nur amtliche/urheberrechtsfreie Quellen** (Art. 5 URG, keine
 Kommentare), Dossier geparkt, Werkzeuge zustandslos. Detail je Schritt in der
 jeweiligen `FAHRPLAN-*.md`.
 
