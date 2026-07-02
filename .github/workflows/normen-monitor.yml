@@ -17,6 +17,9 @@ jobs:
     name: Fedlex-Caches · Zitate · Versions-Monitoring
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    permissions:
+      contents: read
+      issues: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -30,6 +33,29 @@ jobs:
         run: npm run check:zitate
       - name: Konsolidierungs-Versionen (SPARQL)
         run: npm run check:fedlex-versionen
+      - name: Kantons-Gesetze (live version_uid)
+        if: always()
+        run: npm run check:normtext-netz
+      - name: PDF-Erreichbarkeit (Kanton)
+        if: always()
+        run: npm run check:pdf-netz
       - name: Verfallsregister (Termine)
         if: always()
         run: npm run check:verfall
+      # A2 (2.7.2026): Ein roter Lauf verhallte bisher still in der Verlaufsliste (15.6./29.6.
+      # real rot, unbemerkt). Bei Rot legen wir einen sichtbaren Aufgaben-Zettel an — ODER
+      # kommentieren den bestehenden, damit keine Issue-Flut entsteht.
+      - name: Bei Rot — sichtbaren Aufgaben-Zettel anlegen/aktualisieren
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          offen=$(gh issue list --state open --search 'Normen-Monitor rot in:title' --json number --jq '.[0].number // empty')
+          rumpf="Der wöchentliche Normen-Monitor ist fehlgeschlagen — ein gepinnter Rechtsstand ist möglicherweise überholt, ein Anker weg oder eine amtliche Quelle nicht erreichbar. **§7-Verifikation fällig** (Pins nachziehen, Wortlaute prüfen, Verfallsregister führen). Lauf: ${RUN_URL}"
+          if [ -n "$offen" ]; then
+            gh issue comment "$offen" --body "Erneut rot am $(date +%F). ${rumpf}"
+          else
+            gh issue create --title "🔴 Normen-Monitor rot ($(date +%F)) — gepinnter Stand prüfen (§7)" --body "$rumpf"
+          fi
