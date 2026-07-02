@@ -228,6 +228,9 @@ export function schreibeKorpus(auswahl: EntscheidSnapshot[], datum: string, root
     // bundesgericht). Kantonale/eidg. Entscheide bleiben über die Rubrik auffindbar.
     if (snap.gerichtstyp === 'bundesgericht') {
       for (const nk of snap.normKeys) {
+        // Föderal/kantonal mehrdeutige Kürzel (StG) auch erlass-eben ausschliessen
+        // (gleiche OCL-orientierte Entscheidung wie Artikel-Ebene; Gegenprüfung W3 #12).
+        if (AMBIGE_BUND_KANTON_KUERZEL.has(nk)) continue;
         (proNorm[nk] ??= []).push({
           key, zitierung: snap.zitierung, regesteKurz, datum: snap.datum,
           leitcharakter: snap.leitcharakter, gericht: snap.gericht, kanton: snap.kanton,

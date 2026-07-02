@@ -136,7 +136,8 @@ describe('Erlass-Ebene (proNorm) bleibt unverändert; Artikel-Ebene additiv', ()
     const root = mkdtempSync(join(tmpdir(), 'lexm-w3-'));
     mkdirSync(join(root, 'src', 'lib', 'rechtsprechung'), { recursive: true });
     try {
-      const A = bge('150 III 1', { normKeys: ['OR'], zitierteNormen: ['Art. 41 OR'], zitierteEntscheide: ['BGE 150 III 3'] });
+      // A trägt zusätzlich den mehrdeutigen normKey 'STG' → darf NICHT in proNorm landen (#12).
+      const A = bge('150 III 1', { normKeys: ['OR', 'STG'], zitierteNormen: ['Art. 41 OR'], zitierteEntscheide: ['BGE 150 III 3'] });
       const C = bge('150 III 3', { normKeys: ['OR'], zitierteNormen: ['Art. 41 OR'] });
       const res = schreibeKorpus([A, C], '2026-07-02', root);
       const idx = JSON.parse(readFileSync(join(root, 'public', 'rechtsprechung', 'norm-index.json'), 'utf8')) as NormEntscheidIndex;
@@ -144,6 +145,8 @@ describe('Erlass-Ebene (proNorm) bleibt unverändert; Artikel-Ebene additiv', ()
       // Erlass-Ebene: proNorm['OR'] enthält beide Fälle, Refs OHNE gewicht-Feld (unverändert).
       expect(idx.proNorm.OR.map((r) => r.key).sort()).toEqual(['bge_150_III_1', 'bge_150_III_3']);
       expect(idx.proNorm.OR.every((r) => !('gewicht' in r))).toBe(true);
+      // Mehrdeutiges «StG» erlass-eben ausgeschlossen (OCL-aligned, #12).
+      expect(idx.proNorm.STG).toBeUndefined();
 
       // Artikel-Ebene additiv vorhanden.
       expect(idx.proNormArtikel).toBeDefined();
