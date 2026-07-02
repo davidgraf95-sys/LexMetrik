@@ -1,7 +1,7 @@
 // scripts/plan/parse.ts
 import { parseEtikett, type Etikett } from './etikett';
 
-export type Checkbox = '[ ]' | '[x]' | '[~]' | null;
+export type Checkbox = '[ ]' | '[x]' | '[~]' | '[d]' | null;
 export interface Einheit {
   id: string;
   etikett: Etikett;
@@ -10,7 +10,7 @@ export interface Einheit {
 }
 
 function checkboxAus(zeile: string): Checkbox {
-  const m = zeile.match(/^\s*[-*+]\s*\[([ xX~])\]/);
+  const m = zeile.match(/^\s*[-*+]\s*\[([ xX~Dd])\]/);
   return m ? (`[${m[1].toLowerCase()}]` as Checkbox) : null;
 }
 
