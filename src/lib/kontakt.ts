@@ -1,15 +1,17 @@
 // ─── Kontakt-Konfiguration ───────────────────────────────────────────────────
 //
-// Der Versandweg des Kontaktformulars ist noch NICHT definiert (David,
-// 5.6.2026). Solange `KONTAKT_EMPFAENGER` null ist, zeigt die Kontakt-Seite
-// das Formular mit ehrlichem Hinweis und deaktiviertem Versand (§8 – kein
-// stilles Ins-Leere-Senden). Sobald die Adresse bzw. der Weg feststeht:
-//   - E-Mail-Weg: Adresse hier eintragen → «Senden» öffnet das Mailprogramm
-//     (mailto, kein Server, Eingaben verlassen den Browser nur in die Mail).
-//   - Backend-Weg (später): diese Konstante durch einen API-Aufruf ersetzen;
-//     die Seite ist darauf vorbereitet (eine Versandfunktion, eine Stelle).
+// Der Versandweg ist der mailto-Weg (David 3.7.2026): «Senden» öffnet das
+// Mailprogramm des Nutzers, kein Server, Eingaben verlassen den Browser nur in
+// die Mail. Die Empfänger-Adresse kommt aus der Umgebungsvariable
+// `VITE_KONTAKT_EMPFAENGER` (in Vercel gesetzt) — so bleibt die Adresse aus der
+// öffentlichen Git-Historie und ist ohne Commit änderbar. Ist sie NICHT gesetzt
+// (lokal/CI/Prod-ohne-Env), bleibt `null` → das Formular zeigt weiter den ehrlichen
+// Hinweis + deaktivierten Versand (§8, kein stilles Ins-Leere-Senden; verhaltensneutral).
+// Backend-Weg (später): diese Konstante durch einen API-Aufruf ersetzen — die Seite
+// ist darauf vorbereitet (eine Versandfunktion, eine Stelle).
 
-export const KONTAKT_EMPFAENGER: string | null = null;
+export const KONTAKT_EMPFAENGER: string | null =
+  (import.meta.env.VITE_KONTAKT_EMPFAENGER as string | undefined)?.trim() || null;
 
 export type KontaktEingaben = {
   name: string;
