@@ -3,6 +3,13 @@
 **Stand:** 2.7.2026 · **Erarbeitet:** Council + Fable (Kritik-Runde eingearbeitet) · **Status:** ORDNET die bestehenden FAHRPLÄNE und die `ROADMAP.md` (§14) chronologisch — **ersetzt die ROADMAP nicht**; sie bleibt die eine Steuerungsquelle.
 **Nordstern:** Übersichtliches Zuhause für JEGLICHE amtlichen Materialien von Bund + 26 Kantonen — DB = die EINE Wahrheit, selbst gehostet, immer geltender Stand, transparent mit Fundstelle, Historie.
 
+**Zeit-Hinweis (David 2.7.2026):** Der Plan ist **NICHT zeitgebunden** — die Monatslabels sind nur
+**indikative Reihenfolge/Orientierung, keine Termine**. Einzige harte Zeitschranke: **Davids
+fachliche Abnahme erst ab Dezember 2026** (Zeitsperre `[OF]`). Bis dahin ausschliesslich
+Fachzeit-freie, tor-verifizierte Schritte; Tempo = so schnell die Tore grün werden. Das im Plan
+genannte „ab Feb 2027" für die Abnahme-Welle ist damit **nach vorne offen ab Dez 2026** (Davids Wahl,
+kein Zwang).
+
 ---
 
 ## Kritik-Einarbeitung (Council-Runde 2.7.2026)
