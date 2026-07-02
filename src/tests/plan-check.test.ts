@@ -74,6 +74,14 @@ describe('pruefe — Lücken-Abdeckung (Task-5-Review)', () => {
     const md = plan(unit('[~]', 'id: A · status: done · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein'));
     expect(ok(md, ['A']).some((p) => p.id === 'A')).toBe(true);
   });
+  it('Checkbox [D] (geparkt) mit status parked → kein Coupling-Problem', () => {
+    const md = plan(unit('[D]', 'id: A · status: parked · of: ja · blocker: b1 · dep: [] · kollision: [] · worktree: nein · 26x: nein'));
+    expect(ok(md, ['A'])).toEqual([]);
+  });
+  it('Checkbox [D] (geparkt) mit status done → Problem', () => {
+    const md = plan(unit('[D]', 'id: A · status: done · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein'));
+    expect(ok(md, ['A']).some((p) => p.id === 'A')).toBe(true);
+  });
   it('status ready mit blocker → Problem', () => {
     const md = plan(unit('[ ]', 'id: A · status: ready · of: ja · blocker: b1 · dep: [] · kollision: [] · worktree: nein · 26x: nein'));
     expect(ok(md, ['A']).some((p) => p.id === 'A')).toBe(true);

@@ -28,6 +28,7 @@ const CHECKBOX_STATUS: Record<string, string[]> = {
   '[x]': ['done'],
   '[~]': ['wip'],
   '[ ]': ['ready', 'blocked', 'parked'],
+  '[d]': ['parked', 'blocked'], // Legenden-Status «geparkt/zurückgestellt» — nie auf ready/wip/done
 };
 
 function zyklus(einheiten: Einheit[]): string | null {
