@@ -1,4 +1,5 @@
 import type { SuchTreffer } from '../universalSuche';
+import { expandiereSuchbegriff } from './vokabular';
 
 // ─── Artikel-Volltextsuche (ROADMAP Schritt 5, FlexSearch) ──────────────────
 //
@@ -55,9 +56,19 @@ async function baue(): Promise<(q: string, limit?: number) => SuchTreffer[]> {
   }));
 
   suchFn = (q: string, limit = 40): SuchTreffer[] => {
-    const roh = idx.search(q.toLowerCase(), { limit, suggest: true });
-    const ids = [...new Set(roh.flatMap((r) => r.result))].slice(0, limit);
-    return ids.map((i) => {
+    // Original zuerst (behält das FlexSearch-Ranking), dann Vokabular-
+    // Erweiterungen (OCL-portiert, §2-deterministisch): so trifft z. B.
+    // «vaterschaftsurlaub» auch den Normtext, der «Urlaub … Geburt» sagt.
+    const terme = [q.toLowerCase(), ...expandiereSuchbegriff(q)];
+    const gesehen = new Set<number | string>();
+    const ids: (number | string)[] = [];
+    for (const term of terme) {
+      if (ids.length >= limit) break;
+      for (const id of idx.search(term, { limit, suggest: true }).flatMap((r) => r.result)) {
+        if (!gesehen.has(id)) { gesehen.add(id); ids.push(id); }
+      }
+    }
+    return ids.slice(0, limit).map((i) => {
       const e = eintraege[i as number];
       return {
         id: `art:${e.k}:${e.a}`,
