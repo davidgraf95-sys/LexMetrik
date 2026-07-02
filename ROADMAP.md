@@ -5,13 +5,19 @@
 > Schritt für Schritt abarbeiten** kann. Sie faltet das frühere `HANDLUNGSPLAN.md` ein
 > (→ `archiv/`). Das *Wie* je Strang steht in der jeweiligen `FAHRPLAN-*.md` (Detailquelle),
 > der **Ist-Zustand/Deploy** in `STRUKTUR.md`, die G1-Praxis-Abdeckung in `KATALOG-ROADMAP.md`.
+>
+> **Chronologische Ordnungs-Schicht:** `FAHRPLAN-GESAMTAUFBAU.md` (Council+Fable 2.7.2026) ordnet
+> ALLE offenen Stränge in **7 Phasen bis zum Nordstern** (Juli 2026 → ab Mitte 2027) — 4 Parallel-Bahnen,
+> serieller 26×-Slot (@meta-Etikett), Autonomie bis 1.12.2026, Abnahme-Welle ab Feb 2027. Sie **ordnet**
+> diese ROADMAP, ersetzt sie nicht; bei Divergenz gilt die ROADMAP nach Davids Freigabe-Paket (T0b).
 
 ---
 
 ## ▶ Ausführungs-Protokoll (für jede künftige Bau-Session)
 
 1. **Nimm den obersten offenen Schritt** der «Geordneten Abarbeitung», dessen Abhängigkeiten
-   erfüllt sind (`[OF]` zuerst; `[D]`/blockierte überspringen).
+   erfüllt sind (`[OF]` zuerst; `[D]`/blockierte überspringen). Die **phasen-übergreifende
+   Reihenfolge** (welcher Strang wann, konfliktfrei) gibt `FAHRPLAN-GESAMTAUFBAU.md` vor.
 2. **Halte die Leitprinzipien** (Zeitsperre/`[OF]` · amtliche Quellen · nie zwei 26×-Assets
    parallel · Worktree-Isolation · golden-gegated · Deploy nur auf Davids Ja).
 3. **Bau in eigenem Worktree**, wenn der Schritt eine Kollisionsdatei berührt (§12).
