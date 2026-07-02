@@ -14,6 +14,13 @@ describe('minteEcli — Bundesebene', () => {
       .toBe('ECLI:CH:BGE:2014:140.III.86');
   });
 
+  it('historische BGE-Abteilung «Ia»/«Va» (Bug-Check E2)', () => {
+    expect(minteEcli({ gericht: 'bge', bgeReferenz: '120 Ia 31', datum: '1994-05-01' }))
+      .toBe('ECLI:CH:BGE:1994:120.IA.31');
+    expect(minteEcli({ gericht: 'bge_historical', bgeReferenz: '100 Va 5', datum: '1974-01-01' }))
+      .toBe('ECLI:CH:BGE:1974:100.VA.5');
+  });
+
   it('BGer-Docket: «/»→«.», Rest unverändert', () => {
     expect(minteEcli({ gericht: 'bger', nummer: '5A_1100/2025', datum: '2025-03-10' }))
       .toBe('ECLI:CH:BGER:2025:5A_1100.2025');

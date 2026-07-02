@@ -67,6 +67,11 @@ describe('extrahiereStatutRefs — Gesetzes-Zitate', () => {
     expect(INVALID_LAW_CODES.has('OR')).toBe(false); // echter Gesetzes-Code
     expect(INVALID_LAW_CODES.size).toBe(151);
   });
+
+  it('IT-Bundesverfassung «Cost.» bleibt trotz Filter erhalten (Bug-Check Z1)', () => {
+    const refs = extrahiereStatutRefs("Giusta l'art. 8 Cost. federale, ...");
+    expect(refs[0]).toMatchObject({ gesetz: 'COST', artikel: '8', normalisiert: 'ART.8.COST' });
+  });
 });
 
 describe('extrahiereEntscheidRefs — Entscheid-Zitate', () => {
@@ -86,6 +91,11 @@ describe('extrahiereEntscheidRefs — Entscheid-Zitate', () => {
   it('Bare-BGE ohne vorangehendes «BGE» bleibt als Aktenzeichen erhalten', () => {
     expect(extrahiereEntscheidRefs('Der Verweis 151 I 62 steht allein.')).toEqual(['151 I 62']);
   });
+
+  it('historische BGE-Abteilung «Ia»/«Va» wird erkannt (Bug-Check E2)', () => {
+    expect(extrahiereEntscheidRefs('Vgl. BGE 120 Ia 31 E. 2.')).toEqual(['BGE 120 Ia 31']);
+    expect(extrahiereEntscheidRefs('Siehe BGE 100 Va 5.')).toEqual(['BGE 100 Va 5']);
+  });
 });
 
 describe('Normalisierungs-Helfer', () => {
@@ -96,6 +106,7 @@ describe('Normalisierungs-Helfer', () => {
 
   it('normalisiereDocket: BGE-artig behält Spaces, sonst Trenner → _', () => {
     expect(normalisiereDocket('151 I 62')).toBe('151 I 62');
+    expect(normalisiereDocket('120 Ia 31')).toBe('120 Ia 31'); // historische Abteilung
     expect(normalisiereDocket('4A_123/2020')).toBe('4A_123_2020');
     expect(normalisiereDocket('1A.122/2005')).toBe('1A_122_2005');
   });

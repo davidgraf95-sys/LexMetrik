@@ -59,7 +59,9 @@ const STATUTE_QUELLE =
   `\\b`;
 const STATUTE_PATTERN = new RegExp(STATUTE_QUELLE, 'gi');
 
-const BGE_PATTERN = /\bBGE\s+(?<vol>\d{1,3})\s+(?<div>[IVX]{1,4})\s+(?<page>\d{1,4})\b/gi;
+// Abteilung: römische Zahl I–VI (nie höher → kein L/C/D/M) plus optionaler
+// Kleinbuchstabe für die historischen Abteilungen «Ia»/«Ib»/«Va» (Bug-Check E2/E3).
+const BGE_PATTERN = /\bBGE\s+(?<vol>\d{1,3})\s+(?<div>[IVX]{1,4}[ab]?)\s+(?<page>\d{1,4})\b/gi;
 
 // Aktenzeichen-Muster (Reihenfolge wie im Python-Original; ohne IGNORECASE).
 const DOCKET_PATTERNS: RegExp[] = [
@@ -67,9 +69,22 @@ const DOCKET_PATTERNS: RegExp[] = [
   /\b[A-Z0-9]{1,4}[._-]\d{1,6}[/_]\d{4}\b/g,
   // VB.2018.00411, RR.2012.25
   /\b[A-Z]{1,6}\.\d{4}\.\d{1,6}\b/g,
-  // 151 I 62 — BGE-interne Nennung ohne explizites «BGE»
-  /\b\d{1,3}\s+[IVX]{1,4}\s+\d{1,4}\b/g,
+  // 151 I 62 / 120 Ia 31 — BGE-interne Nennung ohne explizites «BGE»
+  /\b\d{1,3}\s+[IVX]{1,4}[ab]?\s+\d{1,4}\b/g,
 ];
+
+/** Abteilung normalisieren: römischer Teil gross, Suffix-Buchstabe klein («Ia», «Va»). */
+function normAbteilung(div: string): string {
+  const m = /^([ivx]+)([ab]?)$/i.exec(div);
+  if (!m) return div.toUpperCase();
+  return m[1].toUpperCase() + m[2].toLowerCase();
+}
+
+/**
+ * Kurze Codes mit nur einem Grossbuchstaben, die trotz Filter GÜLTIGE Gesetzes-
+ * Abkürzungen sind (Bug-Check Z1): «Cost.» = italienische Bundesverfassung.
+ */
+const GUELTIGE_AUSNAHMEN: ReadonlySet<string> = new Set(['COST']);
 
 /**
  * Blockliste: Tokens, die dem Gesetzes-Code-Muster ähneln, aber keine Gesetzes-
@@ -124,12 +139,12 @@ export function normalisiereStatut(
  * `/`) zu `_` vereinheitlicht und Mehrfach-`_` kollabiert.
  */
 export function normalisiereDocket(text: string): string {
-  const compact = text.trim().toUpperCase().replace(/\s+/g, ' ');
-  if (/^\d{1,3}\s+[IVX]{1,4}\s+\d{1,4}$/.test(compact)) {
-    return compact;
+  const compact = text.trim().replace(/\s+/g, ' ');
+  const bge = /^(\d{1,3})\s+([IVX]{1,4}[ab]?)\s+(\d{1,4})$/i.exec(compact);
+  if (bge) {
+    return `${bge[1]} ${normAbteilung(bge[2])} ${bge[3]}`;
   }
-  return text
-    .trim()
+  return compact
     .toUpperCase()
     .replace(/[-./]/g, '_')
     .replace(/_+/g, '_')
@@ -166,7 +181,7 @@ export function extrahiereStatutRefs(text: string): StatutRef[] {
     // bleibt — die Blockliste fängt die Falsch-Positiven darunter.
     const nGross = anzahlGross(lawRaw);
     if (nGross === 0) continue;
-    if (nGross === 1 && lawRaw.length > 3) continue;
+    if (nGross === 1 && lawRaw.length > 3 && !GUELTIGE_AUSNAHMEN.has(lawRaw.toUpperCase())) continue;
 
     const gesetz = lawRaw.toUpperCase();
     if (INVALID_LAW_CODES.has(gesetz)) continue;
@@ -193,7 +208,7 @@ export function extrahiereEntscheidRefs(text: string): string[] {
   // BGE-Zitate, z.B. «BGE 147 I 268»
   for (const match of text.matchAll(BGE_PATTERN)) {
     const g = match.groups!;
-    const normalisiert = `BGE ${g.vol} ${g.div.toUpperCase()} ${g.page}`;
+    const normalisiert = `BGE ${g.vol} ${normAbteilung(g.div)} ${g.page}`;
     if (gesehen.has(normalisiert)) continue;
     gesehen.add(normalisiert);
     refs.push(normalisiert);

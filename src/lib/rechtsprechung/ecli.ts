@@ -58,8 +58,10 @@ const ECLI_ID_UNSICHER = /[^A-Za-z0-9._-]/g;
 /**
  * BGE-Fundstelle, mit ODER ohne «BGE»-Präfix (unsere Daten führen sie ohne):
  * «150 I 17» bzw. «BGE 140 III 86» → vol / div / page.
+ * Abteilung = römische Zahl (I–VI; BGE geht nie über VI, darum KEIN L/C/D/M)
+ * plus optionaler Kleinbuchstabe für die historischen Abteilungen «Ia»/«Ib»/«Va».
  */
-const BGE_FUNDSTELLE = /^(?:BGE\s+)?(\d+)\s+([IVXLCDM]+)\s+(\d+)$/i;
+const BGE_FUNDSTELLE = /^(?:BGE\s+)?(\d+)\s+([IVX]+[ab]?)\s+(\d+)$/i;
 
 /** Docket ECLI-ID-tauglich machen: «/»→«.», Leerraum→«.», Fremdzeichen weg. */
 function normalisiereDocket(docket: string): string {
@@ -69,6 +71,9 @@ function normalisiereDocket(docket: string): string {
   s = s.replace(ECLI_ID_UNSICHER, '');
   s = s.replace(/\.{2,}/g, '.');
   s = s.replace(/^\.+|\.+$/g, '');
+  // Bewusste Abweichung von ecli.py (dort «unknown»-Fallback): normalisiert sich
+  // ein Docket zu leer, gibt minteEcli null zurück statt eine bedeutungslose,
+  // nicht-eindeutige ECLI zu prägen (§8: kein Schein-Identifier).
   return s;
 }
 
