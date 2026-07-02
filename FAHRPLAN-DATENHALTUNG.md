@@ -166,9 +166,19 @@ Korrektheit) → amtliche Stichproben-Gegenprüfung Pflicht; Edge-Query öffnet 
 Laufzeit-Server-Pfad (bisher 100 % statisch) → strikt read-only, non-load-bearing, Fallback
 immer statisch; Turso-Vendor-Risiko begrenzt (Artefakt ist portable SQLite-Datei).
 
-## 10. Offene David-Entscheide
+## 10. Entscheide (2.7.2026 festgezogen; Prozess-Freigaben bei David)
 
-1. Reihenfolge 26×-Slot: E3 (BGer-Masse) vs. W3·12 (Kantone). Empfehlung Planner: E3 zuerst
-   (Pipeline frisch, W3·12 profitiert von der DB-Senke).
-2. Long-Tail-URL-Raum sofort öffnen (E3) oder erst nach E4-Graph (mehr Kontext je Seite)?
-3. Turso-Konto/Billing (erst ab E2 nötig; E0/E1 sind rein lokal).
+1. **26×-Reihenfolge: E3 (BGer-Masse) ZUERST**, W3·12 (Kantone) danach. Grund: die DB-Motivation
+   kommt von der Rechtsprechungs-Masse; voilaj liefert ~191k BGer konsumfertig, während die Kantone
+   der ungelöste LexFind-3-Tier-Schmerz sind — die frische Pipeline zuerst am sauberen, hochwertigen
+   Fall beweisen; W3·12 erbt danach die fertige Senke.
+2. **Long-Tail-URLs: mit E3 öffnen (progressiv), NICHT auf E4 warten.** Jeder Entscheid bekommt
+   sofort seine on-demand-gerenderte, §15-Regel-6-inhaltsvollständige Seite (Volltext + Regeste +
+   zitierte Normen + amtlicher Link); der Zitat-Graph (E4) reichert diese Seiten später an, ohne sie
+   zu blockieren. Der Flagship-Wert darf nicht an einem Nice-to-have hängen.
+3. **Turso/Billing: aufgeschoben bis kurz vor E2.** E0/E1 sind rein lokal + kostenfrei; erst die
+   Edge-Suche (E2) braucht das gehostete Replika — nicht früher provisionieren/zahlen.
+
+**Prozess-Freigaben (bleiben bei David, §9/Plan):** (4) Branch push/PR erst auf Davids §9-Ja
+(vorher `npm run gate`) — bis dahin liegt er isoliert. (5) Code-Bau E0 startet erst auf Davids
+ausdrückliche Freigabe (empfohlen als nächster Schritt: golden-neutral, Lernphase-konform).
