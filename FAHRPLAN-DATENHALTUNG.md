@@ -72,6 +72,11 @@ Neon verworfen: kein lokal reproduzierbares Artefakt → wäre selbst eine zweit
 JSON-Projektion (byte-gleich) und (b) einem kanonischen, sortierten Dump-Manifest
 (Tabellen→Zeilenzahl→sha über kanonisch serialisierte Zeilen), committed als Drift-Anker.
 
+**Validierung durch die Quelle (verifiziert 2.7.2026):** `voilaj/swiss-caselaw` selbst läuft auf
+**SQLite + FTS5 + Parquet** (täglicher Voll-Rebuild mit atomic swap; MCP-Server + HF-Parquet als
+Auslieferung) — der Autor des grössten CH-Rechtsprechungs-Korpus nutzt exakt diese Architektur
+(Artefakt · Volltext-Engine · Rebuild-Swap). Unabhängige Bestätigung der Wahl; kein Postgres/DuckDB.
+
 ## 3. Schema-Skizze (IDs = bestehende Keys, additiv)
 
 - `erlasse(key, ebene, sr, titel, stand, quelle_url, fassungs_token, abgerufen, status)`
@@ -160,7 +165,8 @@ Client.
 
 ## 9. Ehrliche Grenzen / Risiken
 
-Voll-Korpus 991k ≈ 24 GB Text + FTS ⇒ jenseits Gratis-Tiers → E3 bewusst BGer-only; voilaj =
+Voll-Korpus 991k: der Quell-FTS5-Index ist **~58 GB** (empirisch, voilaj) neben ~24 GB Text ⇒
+weit jenseits Gratis-Tiers → E3 bewusst BGer-only, Vollkorpus wäre eigenes Kostenthema; voilaj =
 OCL-Output (Zirkelschluss-Warnung aus PLAN-OCL-ABBAU: Match beweist Port-Treue, nicht
 Korrektheit) → amtliche Stichproben-Gegenprüfung Pflicht; Edge-Query öffnet erstmals einen
 Laufzeit-Server-Pfad (bisher 100 % statisch) → strikt read-only, non-load-bearing, Fallback
