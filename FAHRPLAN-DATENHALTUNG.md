@@ -29,6 +29,43 @@
    main konsolidiert; W2·5b-Worktrees via §12 koordinieren — Kollisionsfläche
    `normtext-snapshot.ts`/`public/normtext/**`).
 
+**NORDSTERN-Umfang (David 2.7.2026):** LexMetrik soll **jegliche amtlichen Materialien von Bund UND
+allen 26 Kantonen übersichtlich darstellen** — alle Doktypen in EINER Datenbank:
+- **Gesetze/Erlasse** (Bund + Kantone) — bestehend, wird Projektion aus der DB (E1)
+- **Rechtsprechung** (alle Gerichte, **≥ voilaj-Vollkorpus ~991k**) — E3 (BGer) + E5 (Kantone)
+- **Verwaltungsverordnungen / amtliche Praxis** (Kreisschreiben ESTV/BSV/FINMA/SEM, Weisungen,
+  Merkblätter, Praxisfestlegungen) — E6
+- **Materialien** (Botschaften/BBl, Parlamentsdebatten/Amtliches Bulletin, Vernehmlassungen,
+  Staatsverträge) — E6, überschneidet `FAHRPLAN-FEDLEX-PORTFOLIO.md`
+
+Das ist die «alle amtlichen Quellen»-Vision als EIN Datastore. Die Architektur trägt das **ohne
+Umbau** (DB=Quelle skaliert additiv: je Quelle/Doktyp EIN Adapter, mehr Zeilen; gemeinsames
+Schema + Norm-Verzahnung). Es ist ein **mehrjähriges, gestaffeltes** Vorhaben (nie Big-Bang);
+Hosting-Kosten wachsen moderat mit dem Umfang (§9); **Status-Marker** machen die ungeprüfte Masse
+ehrlich nutzbar (§8). Der POC (BGE + Bund-Gesetze) ist nur der Einstieg, nicht die Grenze.
+
+**Kern-Anforderungen (David 2.7.2026):**
+- **Selbst gehostet.** Serving/Betrieb auf **eigener Infrastruktur** (portables SQLite-Artefakt +
+  FTS5 auf eigenem Server/VPS, z. B. libSQL-Server oder schlichte Read-API); **keine erzwungene
+  Vendor-Bindung** — Turso o. ä. nur optionale Bequemlichkeit, nie Voraussetzung. Das Artefakt ist
+  überall lauffähig; Anbieterwechsel = Datei umziehen.
+- **Immer auf geltendem Stand.** Die DB trägt stets die **aktuelle amtliche Fassung**: robuste
+  Update-Pipeline (voller Rebuild/Delta wie voilaj) + **Drift-Tore gegen die amtliche Quelle**
+  (`check:*-netz`, `check:fedlex-versionen`, `content_hash`-Verfügbarkeit) — **kein stilles
+  Veralten**; erkannter Drift = rot + automatischer Nachlauf. Aktualität ist load-bearing, nicht
+  Kür.
+- **Transparent wiedergegeben, mit Fundstelle.** LexMetrik zeigt an **jedem** Dokument sichtbar:
+  die **amtliche Fundstelle/Zitierung** (SR-Nr., BGE-/BGer-Zitat, ECLI, BBl/AS-Fundstelle),
+  **Stand/Abrufdatum**, **amtliche Quelle-URL (Live-Link)**, **Verifikations-Status** (geprüft /
+  automatisch übernommen) und **Aktualitäts-Marker** (zuletzt gegen Quelle geprüft; ggf. „Quelle
+  geändert"). §7 (a)–(d) + §8 — nie wegglätten, nie Ungeprüftes als geprüft ausgeben.
+- **Historie, sofern verfügbar.** Wo die amtliche Quelle frühere Fassungen führt (v. a. Fedlex:
+  konsolidierte Erlass-Versionen über die Zeit via ELI-Datum; AS-Änderungshistorie), hält die DB
+  die **zeitversionierten Fassungen** (`gueltig_von`/`gueltig_bis` je Version) → Nutzer sehen „was
+  galt an Datum X" + Änderungsverlauf. Entscheide sind unveränderlich (keine Historie nötig);
+  Gesetze/Verwaltungsverordnungen nicht. Best-effort: fehlt die Quelle-Historie, wird nur die
+  geltende Fassung geführt (ehrlich markiert).
+
 ## 1. Architektur
 
 ```
@@ -85,7 +122,12 @@ Auslieferung) — der Autor des grössten CH-Rechtsprechungs-Korpus nutzt exakt 
 - `entscheide(id, ecli, gericht, kanton, nummer, bge_referenz, datum, sprache, leitcharakter,
   kuratierung, bestand, regeste_json, abschnitte_json, quelle, quelle_url, fassungs_token, sha, abgerufen)`
 - `zitat_kanten(von_id, nach_id, konfidenz, quelle)` · `norm_kanten(entscheid_id, norm_key, art, quelle)`
-- `materialien(…)` analog `MaterialRegistereintrag`
+- `materialien(…)` analog `MaterialRegistereintrag` (Botschaften/BBl, Parlamentsdebatten/Amtl.
+  Bulletin, Vernehmlassungen, Staatsverträge) · `verwaltungsverordnung(…)` (Kreisschreiben/Weisungen)
+- **Historie/Versionierung:** `erlass_fassungen(erlass_key, fassungs_token, gueltig_von, gueltig_bis,
+  stand, quelle_url, sha)` — mehrere zeitversionierte Fassungen je Erlass; `artikel` hängt an einer
+  Fassung; geltende Fassung = `gueltig_bis IS NULL`. **Fundstelle-Felder** je Doktyp (`sr`,
+  `bge_referenz`, `ecli`, `bbl_as_fundstelle`) für sichtbare Zitierung (§0-Transparenz).
 - FTS5-Virtualtabellen `fts_artikel`, `fts_entscheide` (external content, unicode61 rd=2)
 - Jede Inhalts-Tabelle trägt §7 (a)–(d) als Spalten; keine Personen-Felder (Anonymisierungs-
   Invariante aus FAHRPLAN-RECHTSPRECHUNG §9.2 gilt fort).
@@ -130,15 +172,32 @@ Auslieferung) — der Autor des grössten CH-Rechtsprechungs-Korpus nutzt exakt 
 - **E4 · Zitat-Graph.** 8,7M+11,9M Kanten in `zitat_kanten`/`norm_kanten`; topisches
   in-degree-Ranking (W3-Muster); Plausibilitäts-Checks als DB-Invarianten; UI-Panels
   (erfasst = build-time-Projektion, Masse = Edge). Ersetzt „Leitfall-Gewichte aus 342".
-- **E5 · Kantone/Erweiterung** — nachgelagert, hängt an W3·12/W11-Schema-Entscheid.
+- **E5 · Kantone/Erweiterung** — nachgelagert, hängt an W3·12/W11-Schema-Entscheid. **E3+E5 zusammen
+  = voilaj-Vollkorpus** (BGer erste Tranche in E3, restliche Bundes-/Kantons-Gerichte hier); Ziel-
+  Umfang §0.
+- **E6 · Weitere amtliche Doktypen — Verwaltungsverordnungen + Materialien.** **(a)** Amtliche Praxis-Dokumente
+  (ESTV/BSV/FINMA/SEM u. a. — meist PDF auf den Ämter-Sites, **NICHT in voilaj**) via eigenen
+  browserlosen Adapter (§7 Quell-Wahl-zuerst: Format/Endpunkt je Amt empirisch erheben) als neuer
+  Doktyp `verwaltungsverordnung` in dieselbe DB; Norm↔KS-Verzahnung analog Norm↔Entscheid. Amtliche
+  Quelle bleibt Arbiter, §7 (a)–(d) je Eintrag, Anonymisierung meist n/a (keine Personendaten).
+  Quell-Inventar zuerst; nachgelagert zu E3/E4. **(b) Materialien** — Botschaften/BBl,
+  Parlamentsdebatten/Amtliches Bulletin (parlament.ch/Curia Vista), Vernehmlassungen,
+  Staatsverträge — Doktyp `material`; überschneidet `FAHRPLAN-FEDLEX-PORTFOLIO.md`, das ab E1 in die
+  DB speist. (Verwaltungsverordnungen/KS = eigene Ämter-Quellen, nicht Fedlex.)
 
 ## 6. Betrieb (Import-Läufer ausserhalb Vercel)
 
 Ingest/Projektion laufen **lokal oder als GitHub-Actions-Workflow** (Cron → Ingest → Tore →
 Auto-PR, **kein** Auto-Deploy §9) — nie in Vercel-Builds (7,5-GB-Parquet, Laufzeit).
 `daten/lexmetrik.db` gitignored; committed werden nur: JSON-Projektion (wie heute),
-Dump-Manifest, Golden. Turso-Sync per CLI aus dem Läufer; Tokens nur in CI/Vercel-Env, nie im
-Client.
+Dump-Manifest, Golden. Tokens/Secrets nur serverseitig, nie im Client.
+
+**Selbst gehostet (Anforderung §0):** Serving auf **eigener Infrastruktur** — eigener Server/VPS mit
+dem SQLite-Artefakt + FTS5 (libSQL-Server oder schlanke Read-only-API); Vercel ruft diese eigene
+API read-only auf. Turso nur *optionale* gehostete Bequemlichkeit, nie Abhängigkeit; das Artefakt
+ist portabel (Anbieterwechsel = Datei umziehen). **Aktualitäts-Läufer** (Cron auf eigenem Server /
+GitHub-Actions): reingest → Drift-Tore → atomic Artefakt-Swap → Manifest-Commit; erkannter
+Quell-Drift **alarmiert**, statt still zu veralten.
 
 ## 7. Sicherheits-/Rollback-Konzept
 
@@ -166,7 +225,11 @@ Client.
 ## 9. Ehrliche Grenzen / Risiken
 
 Voll-Korpus 991k: der Quell-FTS5-Index ist **~58 GB** (empirisch, voilaj) neben ~24 GB Text ⇒
-weit jenseits Gratis-Tiers → E3 bewusst BGer-only, Vollkorpus wäre eigenes Kostenthema; voilaj =
+weit jenseits Gratis-Tiers. **Ziel ist der Vollkorpus + weitere Doktypen (§0)** → der 58-GB-Index
+ist Teil des Endausbaus, nicht ausgeschlossen; am Vollausbau fallen **reale, aber moderate
+Hosting-Kosten** an (Self-Host-VPS oder Turso-Bezahlplan, ~einstellig bis zweistellig $/Monat),
+**gestaffelt** eingeführt (E0–E2 gratis, Kosten wachsen mit dem Nutzen); BGer ist nur die erste
+Tranche (E3), nicht die Grenze; voilaj =
 OCL-Output (Zirkelschluss-Warnung aus PLAN-OCL-ABBAU: Match beweist Port-Treue, nicht
 Korrektheit) → amtliche Stichproben-Gegenprüfung Pflicht; Edge-Query öffnet erstmals einen
 Laufzeit-Server-Pfad (bisher 100 % statisch) → strikt read-only, non-load-bearing, Fallback
