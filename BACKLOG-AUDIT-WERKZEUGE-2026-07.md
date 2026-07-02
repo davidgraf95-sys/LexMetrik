@@ -47,5 +47,5 @@
 
 ## DB-Strang (QS-DATA) — Ist-Stand
 - [x] **E0** DB-Fundament + Byte-Paritäts-Tor (218 Bund-Normtext byte-gleich, doppelt verifiziert) — auf main.
-- [ ] **E0-Ausdehnung:** kanton-Normtext (1231, gleiche Form) → rechtsprechung → `register.json`/`index.json` (Trailing-Newline). `ingest.ts` heute nur bund; `check:paritaet`-Allowlist erweitern.
+- [x] **E0+ (E0-Ausdehnung)** ✅ 3.7.2026 (Branch `feat/qs-data-e0-plus`): kanton-Normtext (1231) + rechtsprechung (342) + Manifeste (`register.json`/`kanton-index.json`/rsp-`register.json`/`norm-index.json`, Trailing-Newline nachgebildet) + Materialien (1) — `check:paritaet` byte-gleich über **1796 Dateien**; Ziel-Schema §3 angelegt (leere Kanten-Tabellen), Partitionierung je Doktyp (`daten/{normtext,rechtsprechung,soft-law}.db`; `lexmetrik.db` entfällt), `normalisiere-zitat.ts` + Unit-Tests. Doppelt verifiziert (unabhängiger Zweitbeweis-Roundtrip), golden-neutral.
 - [ ] **E1** Generator→DB-Flip; dann `scripts/datenhaltung/**` in `check:gegenpruefung`-Globs.
