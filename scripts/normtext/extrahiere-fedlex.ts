@@ -219,11 +219,49 @@ export function extrahiereArtikelAusAnker(html: string, ankerRoh: string): Artik
       // Fussnoten-<sup> sehen so aus: <sup><a href="...">188</a></sup> → verwerfen.
       const supMatch = roh.match(/^(?:\s|&nbsp;|<\/?inl>)*<sup(?:[^>]*)>([\s\S]*?)<\/sup>/i);
       let absatz: string | null = null;
-      if (supMatch) {
-        const supInhalt = supMatch[1];
-        // Nur akzeptieren wenn kein <a>-Tag drin steckt und der Text nur Ziffern/[a-z] ist
-        if (!/<a[\s>]/i.test(supInhalt) && /^\d+(?:bis|ter|quater|quinquies)?[a-z]?$/.test(supInhalt.trim())) {
-          absatz = supInhalt.trim();
+      // Regex, die die erkannte Absatz-Nummer (ein ODER — bei gespaltenem Suffix —
+      // zwei <sup>) vom Roh-Text abtrennt. Default deckt den Ein-<sup>-Fall.
+      let absatzNrStrip =
+        /^(?:\s|&nbsp;|<\/?inl>)*<sup[^>]*>\d+(?:bis|ter|quater|quinquies)?[a-z]?<\/sup>(?:&nbsp;|\s|<\/?inl>)*/i;
+      if (supMatch && !/<a[\s>]/i.test(supMatch[1])) {
+        const supInhalt = supMatch[1].trim();
+        // GESPALTENES Suffix ZUERST prüfen: Fedlex trennt Ziffer und lat. Suffix in
+        // ZWEI benachbarte <sup> — «<sup>1</sup><sup>bis</sup>» statt «<sup>1bis</sup>»
+        // (empirisch GEBV_SCHKG art_9, HMG art_9/67, KLV art_7, CO2_GESETZ art_16,
+        // VRV art_67, AVIG). Der erste <sup> matcht sonst schon als solo-«1», und das
+        // «bis» leakt als Text-Präfix in den nächsten Block. Nur verkleben, wenn das
+        // ZWEITE <sup> ein Suffix-Wort oder ein einzelner Buchstabe ist — NIE eine
+        // reine Ziffer, damit ein Exponent («72³», «133¹⁄₃») nie zur Nummer wird (§1).
+        const split = /^\d+$/.test(supInhalt)
+          ? roh.match(
+              /^(?:\s|&nbsp;|<\/?inl>)*<sup[^>]*>\s*(\d+)\s*<\/sup>(?:&nbsp;|\s|<\/?inl>)*<sup[^>]*>\s*([^<]*?)\s*<\/sup>/i,
+            )
+          : null;
+        // Nur LIVE-Absätze verkleben: folgt nach dem Suffix ein Konnektor / eine
+        // Ellipsis / ein weiteres <sup> («2bis und 2ter …»), ist das ein AUFGEHOBENER
+        // Absatz-Bereich (R7), kein Live-Absatz (AVIG art_13) — dann NICHT verkleben,
+        // sonst leakt «und 2ter» in den Text. Solche Bereiche bleiben im Baseline-
+        // Zustand und werden in der R7-Aufgehoben-Arbeit einheitlich behandelt.
+        // Leerraum + Spacer-<sup> («<sup>&nbsp;</sup>», HMG art_67) vor dem Test
+        // wegnormalisieren; ein Bereich zeigt sich an Konnektor/Ellipsis oder einem
+        // NICHT-leeren Folge-<sup> («und 2ter …», AVIG art_13).
+        const restNorm = (split ? roh.slice(split[0].length) : '').replace(
+          /^(?:\s|&nbsp;|<sup[^>]*>(?:\s|&nbsp;)*<\/sup>)*/i,
+          '',
+        );
+        const istBereich = /^(?:und\b|oder\b|sowie\b|,|;|\.|…|<sup)/i.test(restNorm);
+        if (
+          split &&
+          !istBereich &&
+          !/<a[\s>]/i.test(split[2]) &&
+          /^(?:bis|ter|quater|quinquies|[a-z])$/i.test(split[2].trim())
+        ) {
+          absatz = split[1] + split[2].trim();
+          absatzNrStrip =
+            /^(?:\s|&nbsp;|<\/?inl>)*<sup[^>]*>\s*\d+\s*<\/sup>(?:&nbsp;|\s|<\/?inl>)*<sup[^>]*>\s*(?:bis|ter|quater|quinquies|[a-z])\s*<\/sup>(?:&nbsp;|\s|<\/?inl>)*/i;
+        } else if (/^\d+(?:bis|ter|quater|quinquies)?[a-z]?$/.test(supInhalt)) {
+          // Ein-<sup>-Fall (unverändert): «<sup>1bis</sup>» / «<sup>2</sup>».
+          absatz = supInhalt;
         }
       }
 
@@ -231,11 +269,9 @@ export function extrahiereArtikelAusAnker(html: string, ankerRoh: string): Artik
       // sonst bleibt die Zahl (z.B. «188») als Text stehen.
       const ohneFootnotes = entferneFussnotenSups(roh);
 
-      // Absatznummer-<sup> (gesetzt falls absatz != null) aus dem Roh-Text entfernen,
-      // damit die Ziffer nicht in den sichtbaren Text einfließt.
-      const ohneAbsatzNr = absatz
-        ? ohneFootnotes.replace(/^(?:\s|&nbsp;|<\/?inl>)*<sup[^>]*>\d+(?:bis|ter|quater|quinquies)?[a-z]?<\/sup>(?:&nbsp;|\s|<\/?inl>)*/i, '')
-        : ohneFootnotes;
+      // Absatznummer-<sup>(s) aus dem Roh-Text entfernen, damit die Ziffer nicht
+      // in den sichtbaren Text einfließt (bei gespaltenem Suffix beide <sup>).
+      const ohneAbsatzNr = absatz ? ohneFootnotes.replace(absatzNrStrip, '') : ohneFootnotes;
 
       const text = entferneTags(ohneAbsatzNr).trim();
       if (text) {
@@ -709,10 +745,16 @@ function parseBildKacheln(tableInner: string): Array<{ bild?: BildRef; nummer?: 
     // ALLE <dt>/<dd>-Paare der Zelle (eine Zelle kann EIN Bild + MEHRERE Signale
     // tragen, z.B. «6.10 Haltelinie / 6.11 Stop / 6.12 …» — sonst Textverlust §1).
     const paare = [...z.matchAll(/<dt\b[^>]*>([\s\S]*?)<\/dt>\s*<dd\b[^>]*>([\s\S]*?)<\/dd>/gi)]
-      .map((m) => ({ nummer: entferneTags(m[1]) || undefined, name: entferneTags(m[2]) || undefined }));
+      .map((m) => ({
+        nummer: entferneTags(entferneFussnotenSups(m[1])) || undefined,
+        name: entferneTags(entferneFussnotenSups(m[2])) || undefined,
+      }));
     // Kein <dt>/<dd> → ganzer bildloser Zelltext als ein Name (nichts verlieren).
+    // Fussnoten-<sup><a>…</a></sup> VOR entferneTags tilgen — sonst leakt die
+    // Fussnoten-Ziffer in den Namen (SSV 4.77.1 «…(Art. 59)379», §1); analog zum
+    // Absatz-Pfad (Zeile 270) und dem <dt>/<dd>-Weg unten.
     if (paare.length === 0) {
-      const rest = entferneTags(z.replace(/<img\b[^>]*>/gi, ''));
+      const rest = entferneTags(entferneFussnotenSups(z.replace(/<img\b[^>]*>/gi, '')));
       if (rest) paare.push({ nummer: undefined, name: rest });
     }
     // Bilder und Paare index-weise zu Kacheln zusammenführen: keine Zeile verliert

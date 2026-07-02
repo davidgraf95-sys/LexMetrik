@@ -179,18 +179,34 @@ export function berechneSchkgFrist(input: SchkgInput): SchkgErgebnis {
   }
 
   // Schritt 3 – Endnormalisierung
-  const { tag: diesAdQuem, verschoben } = normalisiereEnde(endeProvisorisch, input.kanton, st);
+  // QS-GP-Fix 2.7.2026 (Norm: Art. 142 Abs. 3 ZPO, SR 272, Stand 1.7.2026,
+  // https://www.fedlex.admin.ch/eli/cc/2010/262/de): Abs. 3 verschiebt NUR das
+  // Ende einer HANDLUNGSfrist auf den nächsten Werktag. Eine WARTEFRIST (frühestes
+  // zulässiges Datum, Art. 88 Abs. 1 SchKG) läuft dagegen auch an Sa/So/Feiertagen
+  // ab (h.M.). Ihr Fristende wird daher NICHT verschoben; erst der Folgetag als
+  // frühester Handlungstag wird normalisiert (Schritt 4). Zuvor wurde das
+  // Wartefrist-Ende verschoben UND danach +1 gerechnet → frühestes Datum bis zu
+  // mehreren Tagen zu spät (konservativ, aber norm-widrig).
+  const istWartefrist = input.fristnatur === 'wartefrist';
+  const { tag: diesAdQuem, verschoben } = istWartefrist
+    ? { tag: endeProvisorisch, verschoben: false }
+    : normalisiereEnde(endeProvisorisch, input.kanton, st);
   rechenweg.push({
-    beschreibung:
-      modus === 'schkg_betreibungsferien'
+    beschreibung: istWartefrist
+      ? 'Schritt 3 – Ablauf der Wartefrist (keine Werktagsverschiebung, Art. 142 Abs. 3 ZPO)'
+      : modus === 'schkg_betreibungsferien'
         ? 'Schritt 3 – Endnormalisierung (Art. 63 SchKG / Art. 31 i.V.m. Art. 142 Abs. 3 ZPO)'
         : 'Schritt 3 – Endnormalisierung (Art. 142 Abs. 3 / Art. 145 Abs. 1 ZPO)',
-    zwischenergebnis: verschoben
-      ? modus === 'schkg_betreibungsferien'
-        ? `Das rechnerische Ende ${fmt(endeProvisorisch)} fiel in eine geschlossene Zeit oder auf einen arbeitsfreien Tag → verschoben auf ${fmt(diesAdQuem)} (bei Ende in den Betreibungsferien: 3. Werktag danach, Art. 63 SchKG).`
-        : `Das rechnerische Ende ${fmt(endeProvisorisch)} fiel auf einen arbeitsfreien Tag bzw. in einen Stillstand → verschoben auf ${fmt(diesAdQuem)}.`
-      : `Ende ${fmt(diesAdQuem)} ist bereits ein Werktag – keine Verschiebung.`,
-    normen: modus === 'schkg_betreibungsferien' ? [N_63, N_142_3] : [N_142_3, N_145_1],
+    zwischenergebnis: istWartefrist
+      ? `Die Wartefrist läuft am ${fmt(diesAdQuem)} ab und wird NICHT auf den nächsten Werktag verschoben (Art. 142 Abs. 3 ZPO verschiebt nur das Ende einer Handlungsfrist). Der früheste Handlungstag folgt in Schritt 4.`
+      : verschoben
+        ? modus === 'schkg_betreibungsferien'
+          ? `Das rechnerische Ende ${fmt(endeProvisorisch)} fiel in eine geschlossene Zeit oder auf einen arbeitsfreien Tag → verschoben auf ${fmt(diesAdQuem)} (bei Ende in den Betreibungsferien: 3. Werktag danach, Art. 63 SchKG).`
+          : `Das rechnerische Ende ${fmt(endeProvisorisch)} fiel auf einen arbeitsfreien Tag bzw. in einen Stillstand → verschoben auf ${fmt(diesAdQuem)}.`
+        : `Ende ${fmt(diesAdQuem)} ist bereits ein Werktag – keine Verschiebung.`,
+    normen: istWartefrist
+      ? [N_142_3]
+      : modus === 'schkg_betreibungsferien' ? [N_63, N_142_3] : [N_142_3, N_145_1],
     rechtsprechung: modus === 'schkg_betreibungsferien' && verschoben ? [rechtsprechung('BGE_108_III_49')] : undefined,
   });
 
@@ -243,13 +259,22 @@ export function berechneSchkgFrist(input: SchkgInput): SchkgErgebnis {
   // Datum ist erst der FOLGETAG (Art. 88 Abs. 1 SchKG: «frühestens 20 Tage
   // NACH der Zustellung»). Vorher wurde der letzte Tag DER LAUFENDEN Frist
   // als zulässig ausgewiesen (verfrühtes Begehren → Rückweisung).
-  const massgeblich = input.fristnatur === 'wartefrist' ? addDays(diesAdQuem, 1) : diesAdQuem;
-  if (input.fristnatur === 'wartefrist') {
+  // Wartefrist: frühester Handlungstag = Folgetag des (unverschobenen) Fristablaufs.
+  // Fällt dieser Folgetag selbst auf einen Sa/So/Feiertag, ist die Handlung als
+  // HANDLUNGSfrist erst am nächsten Werktag zulässig (Art. 142 Abs. 3 ZPO). Die
+  // Normalisierung wird deshalb NACH dem +1-Folgetag angewandt, nicht davor.
+  const folgetag = istWartefrist ? addDays(diesAdQuem, 1) : diesAdQuem;
+  const massgeblich = istWartefrist
+    ? normalisiereEnde(folgetag, input.kanton, st).tag
+    : diesAdQuem;
+  if (istWartefrist) {
+    const folgetagVerschoben = differenceInCalendarDays(massgeblich, folgetag) > 0;
     rechenweg.push({
       beschreibung: 'Schritt 4 – Frühestes zulässiges Datum (Wartefrist)',
-      zwischenergebnis:
-        `Die Wartefrist läuft am ${fmt(diesAdQuem)} um 24.00 Uhr ab – die Handlung ist frühestens am Folgetag, ${fmt(massgeblich)}, zulässig.`,
-      normen: [N_31],
+      zwischenergebnis: folgetagVerschoben
+        ? `Die Wartefrist läuft am ${fmt(diesAdQuem)} um 24.00 Uhr ab; frühester Handlungstag wäre der Folgetag ${fmt(folgetag)} – da dieser arbeitsfrei ist, ist die Handlung erst am nächsten Werktag, ${fmt(massgeblich)}, zulässig (Art. 142 Abs. 3 ZPO).`
+        : `Die Wartefrist läuft am ${fmt(diesAdQuem)} um 24.00 Uhr ab – die Handlung ist frühestens am Folgetag, ${fmt(massgeblich)}, zulässig.`,
+      normen: [N_31, N_142_3],
     });
   }
   const datumLabel =

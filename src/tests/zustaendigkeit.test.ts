@@ -407,7 +407,7 @@ describe('Zuständigkeit — Praxis-Umbau: Kostenfreiheit (Art. 113 Abs. 2) + Fa
     // Stichproben gegen die zweifach geprüften Dossiers
     expect(ZUSTAENDIGKEIT_KOSTEN.SZ.schlichtung.text).toContain("100–1'000");
     expect(ZUSTAENDIGKEIT_KOSTEN.AG.schlichtung.erlass).toContain('662.110'); // GebührD, NICHT aufgehobenes VKD
-    expect(ZUSTAENDIGKEIT_KOSTEN.SG.schlichtung.hinweis).toContain('30.6.2026');
+    expect(ZUSTAENDIGKEIT_KOSTEN.SG.schlichtung.hinweis).toContain('1.7.2026'); // QS-GP 2.7.2026: SG-GKV-Sunset abgelaufen → Nachfolgefassung v3863 in Vollzug
     expect(ZUSTAENDIGKEIT_KOSTEN.JU.schlichtung.text).toContain('Punkte');
   });
   it('Nicht vermögensrechtlich: alle 26 Kantone haben Rahmen ODER Auffang-Klausel samt Erlass-§ (Dossier 6.6.2026)', async () => {
@@ -434,7 +434,7 @@ describe('Zuständigkeit — Praxis-Umbau: Kostenfreiheit (Art. 113 Abs. 2) + Fa
     expect(ZUSTAENDIGKEIT_KOSTEN.NE.nichtVermoegensrechtlich!.text).toContain("500–50'000");
     // Auffang-Kantone: Klausel, kein Zahlenrahmen suggeriert
     expect(ZUSTAENDIGKEIT_KOSTEN.SZ.nichtVermoegensrechtlich!.text).toContain('kein eigener Rahmen');
-    expect(ZUSTAENDIGKEIT_KOSTEN.SG.nichtVermoegensrechtlich!.hinweis).toContain('30.6.2026');
+    expect(ZUSTAENDIGKEIT_KOSTEN.SG.nichtVermoegensrechtlich!.hinweis).toContain('1.7.2026'); // QS-GP 2.7.2026: SG-GKV-Sunset abgelaufen → Nachfolgefassung v3863 in Vollzug
   });
   it('Familie/Scheidung: eigener Rahmen nur wo das Dossier ihn ausweist; NE als Formel-Text mit %', async () => {
     const { ZUSTAENDIGKEIT_KOSTEN } = await import('../data/zustaendigkeitKosten');

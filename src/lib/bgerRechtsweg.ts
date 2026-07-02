@@ -244,7 +244,15 @@ export function berechneBgerRechtsweg(input: BgerInput): BgerErgebnis {
       normen: [N('Art. 82 BGG'), N('Art. 86 BGG')],
     });
     warnungen.push('Der AUSNAHMEKATALOG des Art. 83 BGG (u. a. Ausländer- und Asylsachen, ordentliche Einbürgerung, öffentliche Beschaffungen ohne Grundsatzfrage) ist hier NICHT abgebildet – vor dem Weiterzug prüfen, ob die Materie ausgenommen ist; ausgenommene Materien führen bei KANTONALEN Vorinstanzen zur subsidiären Verfassungsbeschwerde (Art. 113 BGG) – gegen Entscheide des Bundesverwaltungsgerichts gibt es sie nicht.');
-    normverweise.push(N('Art. 82 BGG'), N('Art. 83 BGG', 'Ausnahmekatalog – nicht abgebildet'));
+    // QS-GP-Befund 2.7.2026 (§8-Offenlegung): Die STREITWERTGRENZEN des Art. 85
+    // BGG werden nicht gerechnet (kein Streitwert-Input für den Verwaltungsweg,
+    // §14-Feature deferiert). Der Wortlaut ist am Fedlex-Filestore (cc/2006/218,
+    // Kons. 20260401) verifiziert: Abs. 1 lit. a Staatshaftung < 30 000, lit. b
+    // öff.-rechtl. Arbeitsverhältnisse < 15 000 → unzulässig; Abs. 2 Ausnahme
+    // Rechtsfrage von grundsätzlicher Bedeutung. Bis der Zweig gebaut ist, wird
+    // die Lücke offengelegt statt pauschal «zulässig» zu suggerieren (§8).
+    warnungen.push('STREITWERTGRENZEN (Art. 85 BGG) sind hier NICHT geprüft: In VERMÖGENSRECHTLICHEN Angelegenheiten ist die Beschwerde auf dem Gebiet der Staatshaftung bei einem Streitwert unter CHF 30 000 (Abs. 1 lit. a) und auf dem Gebiet der öffentlich-rechtlichen Arbeitsverhältnisse bei einem Streitwert unter CHF 15 000 (Abs. 1 lit. b) UNZULÄSSIG – es sei denn, es stellt sich eine Rechtsfrage von grundsätzlicher Bedeutung (Abs. 2). Das hier ausgewiesene «zulässig» steht in diesen beiden Materien unter diesem Streitwert-Vorbehalt.');
+    normverweise.push(N('Art. 82 BGG'), N('Art. 83 BGG', 'Ausnahmekatalog – nicht abgebildet'), N('Art. 85 BGG', 'Streitwertgrenzen öffentliches Recht – nicht abgebildet'));
   }
 
   // ── Stufe B · Anfechtungsobjekt (Art. 90–93) — nicht bei Schiedsbeschwerden ─

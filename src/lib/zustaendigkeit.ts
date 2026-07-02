@@ -9,8 +9,12 @@ import { bgerAbteilungZivil, BGER_SCHWELLEN, type BgerZivilgebiet } from './bger
 // Gerichtsstand. KEIN Date.now(), keine Heuristik (CLAUDE.md §1/§2).
 //
 // NORMBASIS — empirisch gegen das Fedlex-Filestore-HTML SR 272 ZPO verifiziert
-// (Konsolidierung 20250101, in Kraft; Revision «Verbesserung der Praxis-
-// tauglichkeit und der Rechtsdurchsetzung» per 1.1.2025; abgerufen 5.6.2026).
+// (Konsolidierung 20260701, in Kraft; Revision «Verbesserung der Praxis-
+// tauglichkeit und der Rechtsdurchsetzung» per 1.1.2025; abgerufen 5.6.2026,
+// §7-Nachverifikation 2.7.2026 auf die 20260701-Konsolidierung: alle hier
+// tragenden Schwellen/Anker unverändert — die Re-Pin-Änderungen betreffen nur
+// art_260a/b [Besitzesschutz, AS 2026 16] und eine art_314-Fussnote, keine
+// Engine-Werte; so auch gepinnt in scripts/fedlex-cache.sh).
 // Vollständige Herleitung: ZUSTAENDIGKEIT-AUFTRAG.md §3/§4.
 //   · Verfahrensart        Art. 243 (vereinfacht bis 30'000 / streitwertunab-
 //                          hängig bei Miete-Schutzmaterie & GlG), 248 (summ.)
@@ -342,7 +346,7 @@ export function bestimmeZustaendigkeit(input: ZustaendigkeitInput): Zustaendigke
   // STÄNDIGE kantonale Kann-Erweiterung («Die Kantone können das Handels-
   // gericht ausserdem zuständig erklären für: … b. Streitigkeiten aus dem
   // Recht der Handelsgesellschaften und Genossenschaften» — Wortlaut am
-  // Fedlex-Cache verifiziert, Stand 20250101) und setzt die Abs.-2-Merkmale
+  // Fedlex-Cache verifiziert, Stand 20260701) und setzt die Abs.-2-Merkmale
   // (HR-Eintrag, Schwelle >30 000) gerade NICHT voraus. Vorher lief
   // 'gesellschaft' über den Abs.-2-Pfad und die Weiche fehlte genau im
   // Praxisfall Verantwortlichkeitsklage gegen Organe (natürliche Personen
@@ -401,7 +405,7 @@ export function bestimmeZustaendigkeit(input: ZustaendigkeitInput): Zustaendigke
         // lichen Klage (Unterlassung/Beseitigung als Regelfall) GIBT es keinen
         // Streitwert, die Schwellen-Alternative von Art. 5 Abs. 1 lit. d/f
         // («sofern der Streitwert mehr als 30 000 Franken beträgt», Wortlaut am
-        // Fedlex-Cache 20250101 verifiziert) kann nie erfüllt sein. Ehrlich
+        // Fedlex-Cache 20260701 verifiziert) kann nie erfüllt sein. Ehrlich
         // offenlegen statt Eingabe einfordern (§8).
         weichen.push(`Nicht vermögensrechtliche ${ipU === 'uwg' ? 'UWG-Klage' : 'Klage gegen den Bund'}: Die Streitwert-Alternative von Art. 5 Abs. 1 lit. ${ipU === 'uwg' ? 'd' : 'f'} ZPO (über CHF 30 000) kann ohne Streitwert nicht erfüllt sein${ipU === 'uwg' ? ' — als zweite Alternative bliebe nur das Klagerecht des Bundes' : ''}. Ob die einzige kantonale Instanz auf nicht vermögensrechtliche Klagen dieser Art anwendbar ist, ist nicht abschliessend geklärt — Zuordnung gesondert prüfen; berechnet wird der ordentliche Weg.`);
       }

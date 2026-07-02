@@ -18,7 +18,7 @@ export const GERICHTSKOSTEN: Record<KantonCode, KantonalerTarif> = {
     kriterienNorm: '§ 2 GebV OG (Erhöhung § 4 Abs. 2)',
     verifiziert: 'doppelt',
     quelleUrl: 'https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html',
-    hinweis: 'Grundgebühr; nach § 4 Abs. 2 um bis zu ⅓ (ausnahmsweise aufs Doppelte) erhöh-/ermässigbar (richterliches Ermessen).',
+    hinweis: 'Grundgebühr; nach § 4 Abs. 2 ohne betragliche Grenze ermässigbar oder um bis zu ⅓ (ausnahmsweise aufs Doppelte) erhöhbar (richterliches Ermessen).',
     regel: { typ: 'staffel_sockel_prozent', baender: [
       { bisChf: 1000, sockelChf: 0, abChf: 0, prozent: 25, minChf: 150 },
       { bisChf: 5000, sockelChf: 250, abChf: 1000, prozent: 20 },
@@ -336,10 +336,13 @@ export const GERICHTSKOSTEN: Record<KantonCode, KantonalerTarif> = {
   },
   VD: {
     kanton: 'VD', erlassName: 'Tarif des frais judiciaires civils (TFJC)', erlassNr: 'BLV 270.11.5',
-    artikel: 'Art. 18 (i.V.m. Art. 17)', stand: '1.9.2019', kriterien: ['Streitwert', 'Natur der Sache', 'Umfang', 'Schwierigkeit'],
+    // Stand-/Link-Korrektur (QS-GP 2.7.2026): lexfind tolv/105539 zeigt die «version
+    // passée» 1.9.2019; geltend ist die BLV-Konsolidierung «en vigueur dès le
+    // 01.01.2025». Art.-18-Werte sind in dieser Fassung UNVERÄNDERT (kein Rechenfehler).
+    artikel: 'Art. 18 (i.V.m. Art. 17)', stand: '1.1.2025', kriterien: ['Streitwert', 'Natur der Sache', 'Umfang', 'Schwierigkeit'],
     kriterienNorm: 'Art. 4 TFJC',
     verifiziert: 'doppelt',
-    quelleUrl: 'https://www.lexfind.ch/tolv/105539/fr',
+    quelleUrl: 'https://prestations.vd.ch/pub/blv-publication/actes/consolide/270.11.5',
     hinweis: 'Feste Beträge je Streitwert-Stufe; über CHF 500 000: CHF 15 500 + 1,5 % des Überschusses (max CHF 300 000).',
     regel: { typ: 'staffel_sockel_prozent', baender: [
       { bisChf: 30000, sockelChf: 3750, abChf: 0, prozent: 0 },
@@ -369,7 +372,7 @@ export const GERICHTSKOSTEN: Record<KantonCode, KantonalerTarif> = {
     ] },
   },
   NE: {
-    kanton: 'NE', erlassName: 'Loi sur les tarifs des frais (LTFrais)', erlassNr: 'RSN 164.1',
+    kanton: 'NE', erlassName: 'Loi fixant le tarif des frais (LTFrais)', erlassNr: 'RSN 164.1',
     artikel: 'Art. 12', stand: '1.4.2023', kriterien: ['Beanspruchung der Behörde', 'Bedeutung der Sache', 'Schwierigkeiten', 'schriftliche Begründung', 'Streitwert'],
     kriterienNorm: 'Art. 6 LTFrais (i.V.m. Art. 12)',
     verifiziert: 'doppelt',

@@ -7,7 +7,8 @@
 //   1. MwSt 8,1 % auf die Notariatsgebühr — nur freies Notariat (hoheitliches
 //      Amtsnotariat ist von der MwSt ausgenommen).
 //   2. Handelsregistergebühr des Bundes (GebV-HReg) — feste Pauschale je Vorgang.
-//   3. Emissionsabgabe (StG) — 1 % bei AG/GmbH-Kapital über der Freigrenze 1 Mio.
+//   3. Emissionsabgabe (StG) — 1 % auf den den Freibetrag 1 Mio. übersteigenden
+//      Teil des AG/GmbH-Kapitals (Freibetrag, nicht Freigrenze; Art. 6 Abs. 1 lit. h StG).
 //
 // Quelle/Verifikation: doppelt verifiziert gegen Fedlex (StG SR 641.10 Stand
 // 1.1.2024; GebV-HReg SR 221.411.1 Stand 1.1.2021). Auslagen (Porti, Auszüge,
@@ -78,13 +79,15 @@ export function mwstAufschlag(gebuehrChf: number): number {
  *  (zusätzlich zu Notariats-/Grundbuchgebühr; nur einzelne Kantone, z. B.
  *  FR/GE/VS/JU). Satz in % der Pfandsumme. Quelle: amtlich verifiziert
  *  (FAHRPLAN-LUECKEN-SCHLIESSEN L3). Leer = Kanton erhebt keine. */
-export const PFANDSTEUER: Partial<Record<KantonCode, { satzProzent: number; artikel: string; url: string; stand: string; freigrenzeChf?: number }>> = {
+export const PFANDSTEUER: Partial<Record<KantonCode, { satzProzent: number; artikel: string; url: string; stand: string; freigrenzeChf?: number; basisAbrundenChf?: number; mindestChf?: number }>> = {
   FR: { satzProzent: 0.75, artikel: "Art. 23 al. 1 i.V.m. Art. 5 al. 1 lit. a Loi sur les droits de mutation et les droits sur les gages immobiliers (LDMG, RSF 635.1.1)", url: "https://bdlf.fr.ch/app/fr/texts_of_law/635.1.1", stand: "2024-03-01" },
   GE: { satzProzent: 0.65, artikel: "LDE (RSG D 3 30) Art. 84 et Art. 85", url: "https://silgeneve.ch/legis/data/rsg_d3_30.htm", stand: "2026-03-21" },
-  JU: { satzProzent: 0.35, artikel: "Loi reglant les droits de mutation et les droits percus pour la constitution de gages (RSJU 215.326.2), Art. 1, Art. 11 et Art. 13 al. 1", url: "https://rsju.jura.ch/fr/viewdocument.html?idn=20037&id=33943&download=1", stand: "1978-11-09" },
+  // JU: 3,5 o/oo, gesetzlicher Mindestbetrag CHF 30 (Art. 13 al. 1: "et de 30 francs au moins").
+  JU: { satzProzent: 0.35, mindestChf: 30, artikel: "Loi reglant les droits de mutation et les droits percus pour la constitution de gages (RSJU 215.326.2), Art. 1, Art. 11 et Art. 13 al. 1 (mind. 30 fr.)", url: "https://rsju.jura.ch/fr/viewdocument.html?idn=20037&id=33943&download=1", stand: "1978-11-09" },
   // VD: Freigrenze (kein Freibetrag) — Pfandsummen bis und mit CHF 5'000 sind nach
   // LTim Art. 3 al. 3 steuerbefreit; darüber ganze Pfandsumme × 2 o/oo.
-  VD: { satzProzent: 0.2, freigrenzeChf: 5000, artikel: "Loi sur le droit de timbre (LTim, BLV 652.11) du 10.12.2013, Art. 1 (objet: contrats de gages immobiliers art. 793ss CC), Art. 3 al. 2 (taux 2 o/oo) et al. 3 (exoneration <= 5'000 fr.), Art. 4 (perception par le Registre foncier)", url: "https://www.lexfind.ch/tolv/119178/fr", stand: "01.01.2014" },
+  // VD: 2 o/oo; Bemessungsbasis auf die vollen tausend Franken abgerundet (Art. 3 al. 2: "arrondie aux mille francs inferieurs").
+  VD: { satzProzent: 0.2, freigrenzeChf: 5000, basisAbrundenChf: 1000, artikel: "Loi sur le droit de timbre (LTim, BLV 652.11) du 10.12.2013, Art. 1 (objet: contrats de gages immobiliers art. 793ss CC), Art. 3 al. 2 (taux 2 o/oo, base arrondie aux mille francs inferieurs) et al. 3 (exoneration <= 5'000 fr.), Art. 4 (perception par le Registre foncier)", url: "https://www.lexfind.ch/tolv/119178/fr", stand: "01.01.2014" },
   VS: { satzProzent: 0.2, artikel: "Art. 1, 8, 11 Abs. 1 lit. c und Art. 16 lit. b Loi sur les droits de mutations (LDM), RS 643.1", url: "https://lex.vs.ch/app/fr/texts_of_law/643.1", stand: "1.1.2013" },
 };
 
@@ -141,7 +144,11 @@ export function weitereKosten(
   if (pfand && art === 'schuldbrief' && wertChf !== undefined) {
     // Freigrenze: bis und mit dem Schwellenwert steuerbefreit (z. B. VD ≤ 5'000).
     const befreit = pfand.freigrenzeChf !== undefined && wertChf <= pfand.freigrenzeChf;
-    const betrag = befreit ? 0 : Math.round((wertChf * pfand.satzProzent) / 100);
+    // Basis-Abrundung (VD LTim Art. 3 al. 2: auf die vollen tausend Franken).
+    const basis = pfand.basisAbrundenChf ? Math.floor(wertChf / pfand.basisAbrundenChf) * pfand.basisAbrundenChf : wertChf;
+    let betrag = befreit ? 0 : Math.round((basis * pfand.satzProzent) / 100);
+    // Gesetzlicher Mindestbetrag (JU RSJU 215.326.2 Art. 13 al. 1: mind. 30 fr.).
+    if (!befreit && pfand.mindestChf !== undefined) betrag = Math.max(betrag, pfand.mindestChf);
     posten.push({
       label: `Pfandrechtssteuer (${pfand.satzProzent} %)`,
       von: betrag, bis: betrag,
@@ -155,15 +162,24 @@ export function weitereKosten(
   // 3. Emissionsabgabe (1 % auf den CHF 1 Mio übersteigenden Teil = Freibetrag), nur AG/GmbH-Kapital.
   if (EMISSIONSABGABE_ARTEN.has(art) && wertChf !== undefined) {
     const abgabe = emissionsabgabe(wertChf);
+    // §8-Ehrlichkeit (QS-GP 2.7.2026): Der 1-Mio-Freibetrag gilt nach Art. 6 Abs. 1
+    // lit. h StG GESAMTHAFT über alle Leistungen der Gesellschafter (Gründung + alle
+    // früheren Erhöhungen), nicht je isoliertem Vorgang. Bei einer Kapitalerhöhung ist
+    // er darum meist schon aufgebraucht → dann ist der ganze Erhöhungsbetrag zu 1 %
+    // steuerbar. Mangels Eingabe der bisherigen Leistungen wird er hier auf den
+    // isolierten Erhöhungsbetrag angewendet; das wird offengelegt (Wert kann zu tief sein).
+    const kumulNote = art === 'kapitalerhoehung'
+      ? ' Bei Kapitalerhöhungen gilt der Freibetrag von CHF 1 Mio. gesamthaft über alle bisherigen Leistungen (Gründung + frühere Erhöhungen) und ist meist bereits aufgebraucht — dann ist der ganze Erhöhungsbetrag zu 1 % steuerbar. Hier wird er auf den isolierten Erhöhungsbetrag angewendet; der ausgewiesene Betrag kann daher zu tief sein.'
+      : '';
     posten.push({
       label: 'Emissionsabgabe (StG)',
       von: abgabe, bis: abgabe,
       erlass: EMISSIONSABGABE_QUELLE.erlass, url: EMISSIONSABGABE_QUELLE.url, stand: EMISSIONSABGABE_QUELLE.stand,
       // A4-3a: Art. 6 Abs. 1 lit. h StG ist ein FREIBETRAG (nur der übersteigende Teil
       // ist steuerbar), keine Freigrenze (ganzer Betrag) — Text an die Rechnung angeglichen.
-      hinweis: abgabe === 0
+      hinweis: (abgabe === 0
         ? 'Kapital (inkl. Agio) bis CHF 1 Mio: abgabefrei (Freibetrag Art. 6 Abs. 1 lit. h StG).'
-        : 'Bemessung Nennwert + Agio; steuerbar ist nur der CHF 1 Mio übersteigende Teil (Freibetrag Art. 6 Abs. 1 lit. h StG). Befreiungen (Sanierung, Umstrukturierung Art. 6 StG) nicht berücksichtigt.',
+        : 'Bemessung Nennwert + Agio; steuerbar ist nur der CHF 1 Mio übersteigende Teil (Freibetrag Art. 6 Abs. 1 lit. h StG). Befreiungen (Sanierung, Umstrukturierung Art. 6 StG) nicht berücksichtigt.') + kumulNote,
     });
   }
 

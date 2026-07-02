@@ -171,7 +171,11 @@ export function bestimmeSchkgZustaendigkeit(input: SchkgInput): SchkgErgebnis {
       forum = {
         stelle: 'Gericht des Betreibungsortes (Rechtsöffnungsgericht)',
         text: 'Das Gesuch um Rechtsöffnung ist beim GERICHT DES BETREIBUNGSORTES zu stellen (Art. 84 Abs. 1 SchKG); summarisches Verfahren (Art. 251 lit. a ZPO).',
-        normen: [{ artikel: 'Art. 84 SchKG' }, { artikel: 'Art. 251 ZPO' }],
+        // Norm-Anker-Präzision (QS-GP 2.7.2026): Abs./lit. wie im Prosatext –
+        // Art. 84 Abs. 1 SchKG (Richter des Betreibungsortes) / Art. 251 lit. a ZPO
+        // (summarisches Verfahren Rechtsöffnung), verbatim Fedlex SR 281.1 (1.1.2026)
+        // bzw. SR 272 (1.7.2026), https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de.
+        normen: [{ artikel: 'Art. 84 Abs. 1 SchKG' }, { artikel: 'Art. 251 lit. a ZPO' }],
       };
       eingabe = {
         art: art === 'definitiv' ? 'Gesuch um DEFINITIVE Rechtsöffnung (vollstreckbares Urteil/Entscheid, Art. 80 SchKG)' : 'Gesuch um PROVISORISCHE Rechtsöffnung (Schuldanerkennung, Art. 82 SchKG)',

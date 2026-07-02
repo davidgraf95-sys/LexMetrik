@@ -186,6 +186,13 @@ B3 = M15 (FR/IT G29) + M16 (Versionierung #2, G28/G30-33) — eigene Initiativen
 
 > **Steuer-Eintrag: ROADMAP Bündel N** (→ Schritt 5b/6). Dies ist die Detailquelle (§14.1). Memory:
 > `lexmetrik-akn-xml-architektur-entscheid`.
+>
+> **Ausgearbeitetes Umwandlungs-Regelwerk (Fable-Ultracode 2.7.2026):**
+> [`docs/superpowers/specs/2026-07-02-verlaessliche-normtext-umwandlung-bund.md`](docs/superpowers/specs/2026-07-02-verlaessliche-normtext-umwandlung-bund.md)
+> — 30 Fable-Agenten, 7 Bug-Klassen-Gegenprüfungen + Design-Panel. **Verdikt: Hybrid «XML-Träger,
+> HTML-Arbiter»** (pro Erlass genau eine Quelle `source=akn|html`); neues Tor `check:akn-containment`;
+> Nordstern = einwandfreie Tabellen + zielgenaue Links, besser als Fedlex (§0 der Spec). Erster
+> Bau-Schritt ist rein HTML-seitig (fixt 6 Prod-Blöcke, §7 der Spec).
 
 **Frage (David, 30.6.):** Wie senken wir die Fehleranfälligkeit der Gesetzesdarstellung *grundsätzlich* —
 bringt ein Quell-Wechsel HTML→XML das? Entschieden per Council (DMAD, 5 Opus-Advisor + Devil's-Advocate).

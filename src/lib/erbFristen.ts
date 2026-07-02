@@ -61,13 +61,17 @@ export const ERB_FRISTEN: readonly ErbFristPreset[] = [
     label: 'Ausschlagung – gesetzliche Erbin/gesetzlicher Erbe (3 Monate)',
     laenge: 3, einheit: 'monate',
     trigger: 'Kenntnis vom Tod des Erblassers (sofern nicht nachweisbar erst später Kenntnis vom Erbfall)',
-    norm: 'Art. 567 Abs. 2 ZGB',
+    // Gegenprüfung 2.7.2026: Die 3-Monats-Länge steht in Art. 567 Abs. 1 ZGB
+    // («Die Frist zur Ausschlagung beträgt drei Monate»); Abs. 2 regelt nur den
+    // Fristbeginn. Anker beide Absätze. Quelle: Fedlex SR 210, Konsolidierung 1.7.2026.
+    norm: 'Art. 567 Abs. 1 und 2 ZGB',
     hinweis: 'Die Ausschlagung ist bei der zuständigen Behörde mündlich oder schriftlich zu erklären (Art. 570 ZGB); sie muss unbedingt und vorbehaltlos sein.' },
   { key: 'ausschlagung_eingesetzt', gruppe: 'erbgang',
     label: 'Ausschlagung – eingesetzte Erbin/eingesetzter Erbe (3 Monate)',
     laenge: 3, einheit: 'monate',
     trigger: 'Zugang der amtlichen Mitteilung von der Verfügung des Erblassers',
-    norm: 'Art. 567 Abs. 2 ZGB' },
+    // Gegenprüfung 2.7.2026: Länge (3 Monate) aus Art. 567 Abs. 1, Fristbeginn aus Abs. 2.
+    norm: 'Art. 567 Abs. 1 und 2 ZGB' },
   { key: 'ausschlagung_inventar', gruppe: 'erbgang',
     label: 'Ausschlagung nach Sicherungs-Inventar (3 Monate)',
     laenge: 3, einheit: 'monate',
@@ -102,7 +106,13 @@ export const ERB_FRISTEN: readonly ErbFristPreset[] = [
     laenge: 30, einheit: 'jahre',
     trigger: 'Eröffnung der Verfügung',
     norm: 'Art. 521 Abs. 2 ZGB',
-    hinweis: 'NUR bei Verfügungsunfähigkeit des Erblassers oder Rechtswidrigkeit/Unsittlichkeit (Art. 519 Abs. 1 Ziff. 1 und 3 ZGB) – NICHT beim Formmangel (Ziff. 2).' },
+    // Gegenprüfung 2.7.2026: Art. 519 Abs. 1 Ziff. 2 ZGB ist der MANGELHAFTE WILLE
+    // (Willensmangel), nicht der Formmangel; der Formmangel ist ein eigener Grund
+    // in Art. 520 ZGB. Die 30-Jahres-Frist (Art. 521 Abs. 2 ZGB) ist auf
+    // Verfügungsunfähigkeit (Ziff. 1) und Unsittlichkeit/Rechtswidrigkeit (Ziff. 3)
+    // beschränkt – ausgeschlossen sind Willensmangel (Ziff. 2) UND Formmangel (Art. 520).
+    // Quelle: Fedlex SR 210, Konsolidierung 1.7.2026 (https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de).
+    hinweis: 'NUR bei Verfügungsunfähigkeit des Erblassers oder Rechtswidrigkeit/Unsittlichkeit (Art. 519 Abs. 1 Ziff. 1 und 3 ZGB) – NICHT bei mangelhaftem Willen (Art. 519 Abs. 1 Ziff. 2 ZGB) und nicht beim Formmangel (Art. 520 ZGB).' },
   { key: 'herabsetzung_relativ', gruppe: 'klage',
     label: 'Herabsetzungsklage – relative Frist (1 Jahr)',
     laenge: 1, einheit: 'jahre',
@@ -188,7 +198,10 @@ export function berechneErbFrist(
       'EINREDEWEISE kann die Ungültigkeit bzw. der Herabsetzungsanspruch JEDERZEIT geltend gemacht werden (Art. 521 Abs. 3 / 533 Abs. 3 ZGB) – die Frist betrifft nur die KLAGE.',
     );
     if (preset.key.startsWith('ungueltigkeit')) {
-      warnungen.push('Die 30-Jahres-Frist gegen Bösgläubige gilt NUR bei Verfügungsunfähigkeit, Rechtswidrigkeit oder Unsittlichkeit (Art. 519 Abs. 1 Ziff. 1/3 ZGB), nicht beim Formmangel.');
+      // Gegenprüfung 2.7.2026: vollständige Ausschlussliste (Art. 521 Abs. 2 ZGB) –
+      // nicht nur der Formmangel (Art. 520), auch der Willensmangel (Art. 519 Abs. 1 Ziff. 2)
+      // ist von der 30-Jahres-Frist ausgeschlossen. Quelle: Fedlex SR 210, Konsolidierung 1.7.2026.
+      warnungen.push('Die 30-Jahres-Frist gegen Bösgläubige gilt NUR bei Verfügungsunfähigkeit, Rechtswidrigkeit oder Unsittlichkeit (Art. 519 Abs. 1 Ziff. 1/3 ZGB), nicht bei mangelhaftem Willen (Ziff. 2) und nicht beim Formmangel (Art. 520 ZGB).');
     }
   }
 

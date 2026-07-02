@@ -35,13 +35,38 @@ export interface InvariantenEintrag {
 export interface InvariantenVerstoss {
   gesetz: string;
   id: string;
-  art: 'markup' | 'entity' | 'suffix-leak';
+  art: 'markup' | 'entity' | 'suffix-leak' | 'artefakt';
   stelle: string;
   ausschnitt: string;
 }
 
 const TAG_RE = /<[a-z!/][^>]*>/i;
 const ENTITY_RE = /&[a-z]+;|&#\d+;/i;
+// Negativ-Lexikon (Design-Gegenprüfung L2/L3): Generator-Artefakte, die BEIDE
+// Quellformate teilen und darum symmetrisches Containment grün passieren — «[tab]»
+// (Fedlex-`<placeholder message="E40S10-TAB">`/`<span data-message=…>`). Kein
+// Snapshot-Feld darf ein solches Literal tragen (§1). Die HEUTE bekannten Bestands-
+// stellen sind als Expected-Fail registriert (ARTEFAKT_ERWARTET) — sie blockieren
+// nicht, aber jede NEUE Stelle / jede Zunahme in einem bekannten Artikel schlägt an.
+const ARTEFAKT_RE = /\[tab\]|data-message/i;
+// Artikel-Schlüssel (`gesetz|id`) → erwartete Artefakt-Trefferzahl (Bestand 2.7.2026,
+// 23 Stellen / 13 Artikel; HTML-seitiger Alt-Bug, kontrollierte Sanierung = eigener
+// Folge-Batch). Artikel-Ebene statt Block-Index = robust gegen Index-Verschiebung.
+export const ARTEFAKT_ERWARTET: ReadonlyMap<string, number> = new Map([
+  ['AHVG|bund/AHVG/art_3', 1],
+  ['AHVV|bund/AHVV/art_6', 1],
+  ['AVO|bund/AVO/art_216', 2],
+  ['BPV|bund/BPV/art_116', 1],
+  ['CHEMV|bund/CHEMV/art_2', 2],
+  ['KLV|bund/KLV/art_5', 1],
+  ['RPV|bund/RPV/art_43', 1],
+  ['VTS|bund/VTS/annex_6', 1],
+  ['VTS|bund/VTS/annex_9', 8],
+  ['VVV|bund/VVV/annex_1', 1],
+  ['VVV|bund/VVV/annex_4', 1],
+  ['VZV|bund/VZV/annex_2', 2],
+  ['ZPO|bund/ZPO/art_250', 1],
+]);
 // Text, der mit einem freistehenden lat. Zähl-Suffix + Trenner beginnt (der
 // N1-Leak «a bis .» → Text «bis . …»). Nur am ANFANG, gefolgt von Punkt/Klammer,
 // damit legitime Sätze mit «bis» («… bis zum Ende …») nicht getroffen werden.
@@ -58,6 +83,7 @@ function pruefeText(
   if (TAG_RE.test(text)) raus.push({ gesetz, id, art: 'markup', stelle, ausschnitt: text.slice(0, 80) });
   if (ENTITY_RE.test(text)) raus.push({ gesetz, id, art: 'entity', stelle, ausschnitt: text.slice(0, 80) });
   if (SUFFIX_LEAK_RE.test(text)) raus.push({ gesetz, id, art: 'suffix-leak', stelle, ausschnitt: text.slice(0, 80) });
+  if (ARTEFAKT_RE.test(text)) raus.push({ gesetz, id, art: 'artefakt', stelle, ausschnitt: text.slice(0, 80) });
 }
 
 /** Prüft alle Text-Felder eines Gesetzes auf die drei Invarianten. */
@@ -70,13 +96,14 @@ export function pruefeInvarianten(gesetz: string, eintraege: InvariantenEintrag[
       pruefeText(gesetz, id, `block[${bi}].titel`, b.titel, raus);
       (b.items ?? []).forEach((it, ii) => {
         pruefeText(gesetz, id, `block[${bi}].item[${ii}].text`, it.text, raus);
-        // Marken NUR auf Markup/Entity prüfen, NICHT auf Suffix-Leak (Anhang-
-        // Legenden-Marken sind beschreibender Text, kein Leak).
-        if (it.marke && (TAG_RE.test(it.marke) || ENTITY_RE.test(it.marke))) {
-          raus.push({
-            gesetz, id, art: TAG_RE.test(it.marke) ? 'markup' : 'entity',
-            stelle: `block[${bi}].item[${ii}].marke`, ausschnitt: it.marke.slice(0, 80),
-          });
+        // Marken NUR auf Markup/Entity/Artefakt prüfen, NICHT auf Suffix-Leak (Anhang-
+        // Legenden-Marken sind beschreibender Text, kein Leak). Das «[tab]»-Artefakt
+        // sitzt fast ausschliesslich in Marken (Bestand 2.7.2026).
+        if (it.marke) {
+          const markeStelle = `block[${bi}].item[${ii}].marke`;
+          if (TAG_RE.test(it.marke)) raus.push({ gesetz, id, art: 'markup', stelle: markeStelle, ausschnitt: it.marke.slice(0, 80) });
+          if (ENTITY_RE.test(it.marke)) raus.push({ gesetz, id, art: 'entity', stelle: markeStelle, ausschnitt: it.marke.slice(0, 80) });
+          if (ARTEFAKT_RE.test(it.marke)) raus.push({ gesetz, id, art: 'artefakt', stelle: markeStelle, ausschnitt: it.marke.slice(0, 80) });
         }
       });
     });
