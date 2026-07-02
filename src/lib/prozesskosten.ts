@@ -193,9 +193,17 @@ export function berechneProzesskosten(e: ProzesskostenEingabe): ProzesskostenErg
   // Art. 65 Abs. 4 BGG (NICHT Mietrecht!), sonst ordentliche BGer-Staffel.
   if (e.instanz === 'bundesgericht') {
     const nv = e.nichtVermoegensrechtlich === true;
-    const reduziert = !nv && (e.materie === 'gleichstellung' || e.materie === 'behindertengleichstellung'
-      || (e.materie === 'arbeit' && e.streitwertCHF <= 30000));
-    const gkB = nv ? BGER_GERICHTSKOSTEN_OHNE_VERMOEGEN : reduziert ? BGER_GERICHTSKOSTEN_REDUZIERT : BGER_GERICHTSKOSTEN;
+    // Art. 65 Abs. 4 BGG (CHF 200–1000, «wird nicht nach dem Streitwert bemessen»)
+    // ist lex specialis zu Abs. 3 und greift bei Diskriminierung wegen des
+    // Geschlechts (lit. b) und nach Art. 7/8 BehiG (lit. d) UNABHÄNGIG von einem
+    // Vermögensinteresse — gerade diese Klagen sind typischerweise nicht
+    // vermögensrechtlich. Nur die Arbeits-Reduktion (lit. c) trägt die
+    // Streitwert-Bedingung ≤ 30 000 (also vermögensrechtlich). Verifiziert an
+    // Fedlex eli/cc/2006/218, Konsolidierung 1.4.2026 (QS-GP 2.7.2026): früher
+    // wählte der `!nv`-Riegel für nv-GlG/BehiG fälschlich Abs. 3 lit. a (200–5000).
+    const reduziert = e.materie === 'gleichstellung' || e.materie === 'behindertengleichstellung'
+      || (!nv && e.materie === 'arbeit' && e.streitwertCHF <= 30000);
+    const gkB = reduziert ? BGER_GERICHTSKOSTEN_REDUZIERT : nv ? BGER_GERICHTSKOSTEN_OHNE_VERMOEGEN : BGER_GERICHTSKOSTEN;
     const peB = nv ? BGER_PARTEIENTSCHAEDIGUNG_OHNE_VERMOEGEN : BGER_PARTEIENTSCHAEDIGUNG;
     return {
       kanton: e.kanton, streitwertCHF: e.streitwertCHF, phase: 'entscheid', materie: e.materie,
@@ -203,8 +211,9 @@ export function berechneProzesskosten(e: ProzesskostenEingabe): ProzesskostenErg
       parteientschaedigung: { kostenlos: false, ergebnis: auswertenTarif(peB.regel, e.streitwertCHF), quelle: bgerQuelle(peB) },
       hinweise: [
         'Beschwerde ans Bundesgericht (Art. 65/68 BGG); Tarife bundesrechtlich, kantonsunabhängig.',
-        nv ? 'Streitigkeit ohne Vermögensinteresse: Gerichtsgebühr nach Art. 65 Abs. 3 lit. a BGG (CHF 200–5000), streitwertunabhängig; die Parteientschädigung setzt das Gericht nach Ermessen fest.'
-          : reduziert ? 'Reduzierter Ansatz nach Art. 65 Abs. 4 BGG (streitwertunabhängig).' : 'Gerichtsgebühr nach Streitwert (Art. 65 Abs. 3 lit. b BGG); Überschreitung bis zum Doppelten möglich (Abs. 5).',
+        reduziert ? 'Reduzierter Ansatz nach Art. 65 Abs. 4 BGG (CHF 200–1000, streitwertunabhängig; lex specialis, gilt auch ohne Vermögensinteresse).'
+          : nv ? 'Streitigkeit ohne Vermögensinteresse: Gerichtsgebühr nach Art. 65 Abs. 3 lit. a BGG (CHF 200–5000), streitwertunabhängig; die Parteientschädigung setzt das Gericht nach Ermessen fest.'
+          : 'Gerichtsgebühr nach Streitwert (Art. 65 Abs. 3 lit. b BGG); Überschreitung bis zum Doppelten möglich (Abs. 5).',
         'Kostenvorschuss in Höhe der mutmasslichen Gerichtskosten (Art. 62 BGG); unentgeltliche Rechtspflege Art. 64 BGG.',
       ],
     };
@@ -244,9 +253,19 @@ export function berechneProzesskosten(e: ProzesskostenEingabe): ProzesskostenErg
     hinweise.push('Nicht vermögensrechtliche Streitigkeit: kein Streitwert — die Gebühr wird im gesetzlichen Rahmen nach Bedeutung der Sache, Umfang/Schwierigkeit und Zeitaufwand festgesetzt (Ermessen, daher Spanne).');
     if (e.materie === 'arbeit') hinweise.push('Hinweis Arbeitsrecht: Die Kostenfreiheit nach Art. 113 II lit. d / 114 lit. c ZPO knüpft an einen Streitwert ≤ CHF 30 000 an und greift bei einer nicht vermögensrechtlichen Streitigkeit nicht ohne Weiteres.');
   }
+  // §8-Ehrlichkeit: Kostenlosigkeit (Art. 113/114 ZPO) steht unter dem Vorbehalt
+  // des Art. 115 ZPO (dieselbe Regel formuliert zustaendigkeit.ts, §5).
+  if (gkFrei.kostenlos) {
+    hinweise.push('Kostenlosigkeit vorbehältlich Art. 115 ZPO: Bei bös- oder mutwilliger Prozessführung können die Gerichtskosten auch im unentgeltlichen Verfahren einer Partei auferlegt werden (Abs. 1); bei Gewaltschutz-Verfahren (Art. 114 lit. f) trägt die unterliegende Partei die Gerichtskosten, wenn gegen sie ein Verbot nach Art. 28b ZGB oder eine elektronische Überwachung nach Art. 28c ZGB angeordnet wird (Abs. 2).');
+  }
+  // Gewaltschutz: das Schlichtungsverfahren entfällt von Gesetzes wegen (Art. 198
+  // lit. abis ZPO, Fassung seit 1.7.2020) — eine Schlichtungsgebühr fällt nicht an.
+  if (e.phase === 'schlichtung' && e.materie === 'gewaltschutz') {
+    hinweise.push('Bei Klagen wegen Gewalt, Drohungen oder Nachstellungen (Art. 28b/28c ZGB) entfällt das Schlichtungsverfahren von Gesetzes wegen (Art. 198 lit. abis ZPO); die Klage ist direkt beim Gericht einzureichen — die angezeigte Schlichtungsgebühr kommt daher in der Regel nicht zum Tragen.');
+  }
   if (e.instanz === 'handelsgericht') {
     hinweise.push(HANDELSGERICHT_KANTONE.includes(e.kanton)
-      ? `Handelsgericht ${e.kanton}: einzige kantonale Instanz für handelsrechtliche Streitigkeiten (Art. 6 ZPO; Voraussetzungen Abs. 2). Kein Schlichtungsverfahren (Art. 198 lit. f ZPO); Weiterzug direkt mit Beschwerde in Zivilsachen ans Bundesgericht (Art. 75 Abs. 2 lit. b BGG). Es gilt der ordentliche erstinstanzliche Tarif.`
+      ? `Handelsgericht ${e.kanton}: einzige kantonale Instanz für handelsrechtliche Streitigkeiten (Art. 6 ZPO; Voraussetzungen Abs. 2). Die klagende Partei kann die Klage direkt beim Gericht einreichen (Art. 199 Abs. 3 ZPO, Fassung seit 1.1.2025) — ein Schlichtungsverfahren ist nicht erforderlich (nicht mehr Art. 198 lit. f, der seit 1.1.2025 die Art.-7-Instanzen betrifft). Weiterzug direkt mit Beschwerde in Zivilsachen ans Bundesgericht (Art. 75 Abs. 2 lit. b BGG). Es gilt der ordentliche erstinstanzliche Tarif.`
       : `Der Kanton ${e.kanton} führt kein Handelsgericht (nur ZH/BE/AG/SG, Art. 6 ZPO); angezeigt ist zum Vergleich der ordentliche erstinstanzliche Tarif.`);
   }
 

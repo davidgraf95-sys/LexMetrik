@@ -52,7 +52,7 @@ describe('Foren + Fristen je Anliegen (Synthese-Tabelle)', () => {
   });
   it('Rechtsöffnung: Gericht des Betreibungsortes, summarisch ohne Stillstand; provisorisch trägt 20-T-Aberkennungs-Weiche', () => {
     const r = bestimmeSchkgZustaendigkeit(basis({ anliegen: 'rechtsoeffnung', rechtsoeffnungArt: 'provisorisch' }));
-    expect(r.forum.normen.map((n) => n.artikel)).toContain('Art. 84 SchKG');
+    expect(r.forum.normen.map((n) => n.artikel)).toContain('Art. 84 Abs. 1 SchKG'); // QS-GP 2.7.2026: Norm-Anker-Präzision (Abs. 1 = Richter des Betreibungsortes)
     expect(r.eingabe.verfahren).toContain('KEIN Gerichtsferien-Stillstand');
     expect(r.fristen[0]).toMatchObject({ kritisch: true });
     expect(r.fristen[0].frist).toContain('20 Tage');

@@ -337,7 +337,14 @@ export function berechneErbteilung(input: ErbteilungInput): ErbteilungErgebnis {
       'Bei Verfügungen von Todes wegen, die VOR dem 1.1.2023 errichtet wurden, ist durch Auslegung zu ermitteln, ob alte oder neue Quoten gemeint sind (abstrakte Pflichtteils-Verweisungen führen im Zweifel zu den neuen Quoten; fixe Bruchangaben bleiben grundsätzlich bestehen).',
     );
   }
-  if (hatEhe && input.scheidungHaengig && !art472) {
+  // Gegenprüfung 2.7.2026: Diese Warnung nur im neuen Recht (Tod ab 1.1.2023).
+  // Art. 472 ZGB nF existiert erst seit 1.1.2023 (BG vom 18.12.2020, AS 2021 312);
+  // die aF wurde 1988 aufgehoben (AS 1986 122). Für altrechtliche Todesfälle mit
+  // hängiger Scheidung UND erfüllten Voraussetzungen trägt bereits die Annahme
+  // (oben) die korrekte Begründung; die «OHNE erfüllte Voraussetzungen»-Warnung
+  // hätte ihr widersprochen. Quelle: Fedlex SR 210, Konsolidierung 1.7.2026 i.V.m.
+  // Art. 15/16 SchlT ZGB.
+  if (rechtsstand === 'neu' && hatEhe && input.scheidungHaengig && !art472) {
     warnungen.push(
       'Hängiges Scheidungsverfahren OHNE erfüllte Voraussetzungen von Art. 472 ZGB: Erbrecht UND Pflichtteilsschutz des Ehegatten/Partners bestehen unverändert weiter.',
     );

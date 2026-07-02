@@ -10,7 +10,12 @@ import { rechtsprechung } from '../data/verifikation';
 // Berechnungs- (Art. 132 i.V.m. 77/78) und Modifikationsregeln:
 // Stillstand (Art. 134) hängt gehemmte Tage hinten an, Unterbrechung
 // (Art. 135/137/138) setzt die Frist neu. Zwei-Fristen-Logik: relative und
-// absolute Frist laufen parallel; massgeblich ist das frühere Ende.
+// absolute Frist laufen parallel; massgeblich ist grundsätzlich das frühere
+// Ende. Zwei Ausnahmen (Gegenprüfung 2026-07-02): (a) Urkunde/Urteil begründet
+// nach Art. 137 Abs. 2 OR eine SELBSTÄNDIGE 10-Jahres-Frist, die über die
+// absolute Frist hinausreichen kann; (b) eine rechtzeitige Klage/ein
+// Schlichtungsgesuch lässt nach Art. 138 Abs. 1 OR während des hängigen
+// Verfahrens AUCH die absolute Frist ruhen (kein Ablauf im Prozess).
 //
 // Bewusst NICHT modelliert (Warnung/Annahme im Ergebnis): strafrechtliche
 // Längerfrist (Art. 60 Abs. 2, StGB-abhängig), Spezialgesetze (SVG, VG, PrHG),
@@ -258,6 +263,17 @@ export function berechneVerjaehrung(input: VerjaehrungInput): VerjaehrungErgebni
   let segStart = beginn;
   let segJahre = R.relativJahre;
   let offeneHemmungSeit: Date | null = null;
+  // Merkt, ob die zuletzt laufende Frist eine SELBSTÄNDIGE 10-Jahres-Frist nach
+  // Art. 137 Abs. 2 OR ist (Urkunde/Urteil → «stets die zehnjährige»); dann
+  // wird sie NICHT durch die ursprüngliche absolute Frist gekappt.
+  let letztFrist137II = false;
+  // Merkt, ob die letzte wirksame Unterbrechung die GANZE Verjährung neu
+  // ansetzt (Klage/Schlichtung Art. 138 Abs. 1 OR mit Abschluss, oder
+  // Urkunde/Urteil Art. 137 Abs. 2 OR) — dann kappt die ursprüngliche absolute
+  // Frist die neue Frist nicht. Anerkennung/Betreibungsakt (Art. 137 Abs. 1 OR)
+  // bleiben konservativ an der absoluten Frist gedeckelt (§8, doktrinell offen).
+  let letztUnterbrPrimaer = false;
+  let letztUnterbrDatum: Date | null = null;
 
   for (const u of unterbrechungen) {
     const d = parseISO(u.datum);
@@ -299,6 +315,11 @@ export function berechneVerjaehrung(input: VerjaehrungInput): VerjaehrungErgebni
       const ende = parseISO(u.prozessEnde);
       segStart = ende;
       segJahre = u.mitUrteil ? 10 : R.relativJahre;
+      letztFrist137II = !!u.mitUrteil; // Abschluss durch Urteil → Art. 137 Abs. 2 OR
+      // Art. 138 Abs. 1 OR: Die Klage unterbricht die GANZE Verjährung neu →
+      // die neue Frist wird nicht an der alten absoluten Frist gekappt.
+      letztUnterbrPrimaer = true;
+      letztUnterbrDatum = d;
       rechenweg.push({
         beschreibung: `Unterbrechung – ${TYP_LABEL.klage_schlichtung}`,
         zwischenergebnis: `Am ${fmt(d)} unterbrochen (Postaufgabe genügt); während des Verfahrens stand die Verjährung still. Mit Abschluss vor der befassten Instanz am ${fmt(ende)} beginnt eine neue Frist von ${segJahre} Jahren${u.mitUrteil ? ' (gerichtliche Feststellung, Art. 137 Abs. 2 OR)' : ''}.`,
@@ -308,6 +329,11 @@ export function berechneVerjaehrung(input: VerjaehrungInput): VerjaehrungErgebni
     } else {
       segStart = d;
       segJahre = u.typ === 'urkunde_urteil' ? 10 : R.relativJahre;
+      letztFrist137II = u.typ === 'urkunde_urteil'; // Art. 137 Abs. 2 OR: stets 10 Jahre
+      // Urkunde/Urteil setzt selbständig neu an; Anerkennung/Betreibungsakt
+      // bleiben konservativ an der absoluten Frist gedeckelt.
+      letztUnterbrPrimaer = u.typ === 'urkunde_urteil';
+      letztUnterbrDatum = d;
       rechenweg.push({
         beschreibung: `Unterbrechung – ${TYP_LABEL[u.typ]}`,
         zwischenergebnis: `Am ${fmt(d)} unterbrochen; die Verjährung beginnt neu mit einer Frist von ${segJahre} Jahren${u.typ === 'urkunde_urteil' ? ' (stets 10 Jahre, Art. 137 Abs. 2 OR)' : ''}.`,
@@ -348,24 +374,42 @@ export function berechneVerjaehrung(input: VerjaehrungInput): VerjaehrungErgebni
         ? [rechtsprechung('BGE_146_III_25')] : undefined,
     });
     if (unterbrechungen.length > 0 && relativEnde && isAfter(relativEnde, absolutEnde)) {
-      annahmen.push(
-        'Konservative Regel: Die durch Unterbrechung neu angesetzte Frist wird durch die absolute Frist begrenzt (für Art. 67 OR gesichert; nach gerichtlicher Feststellung ist die selbständige 10-Jahres-Frist nach Art. 137 Abs. 2 OR h.M. – das frühere Datum wird ausgewiesen).',
-      );
-      // B9-Fix 6.6.2026: Die nach h.M. SELBSTÄNDIGE 10-Jahres-Frist (Art. 137
-      // Abs. 2 OR) wird als Variante mit konkretem Datum offengelegt statt nur
-      // stillschweigend gekappt — das primäre Ergebnis bleibt konservativ (§8).
-      const ist137II = unterbrechungen.some(
-        (u) => u.typ === 'urkunde_urteil' || (u.typ === 'klage_schlichtung' && u.mitUrteil),
-      );
-      if (ist137II) {
-        // Empirie-v2-Fix 6.6.2026: werktagsverschobene Daten ausweisen — sonst
-        // widerspricht die Warnung dem publizierten Verjährungsdatum, wenn ein
-        // Fristende auf Sa/So/Feiertag fällt.
-        warnungen.push(
-          `VARIANTE Art. 137 Abs. 2 OR: Nach herrschender Lehre begründet die Anerkennung durch Urkunde bzw. die gerichtliche ` +
-          `Feststellung eine SELBSTÄNDIGE 10-Jahres-Frist, die über die ursprüngliche absolute Frist hinauslaufen kann — danach ` +
-          `träte die Verjährung erst am ${fmt(werktagsEnde(relativEnde, input.kanton))} ein. Ausgewiesen wird konservativ das frühere Datum ` +
-          `(${fmt(werktagsEnde(absolutEnde, input.kanton))}); für die Geltendmachung der späteren Variante fachliche Prüfung im Einzelfall.`,
+      const absWirksam = werktagsEnde(absolutEnde, input.kanton);
+      const primaerRechtzeitig = letztUnterbrPrimaer && letztUnterbrDatum != null
+        && !isAfter(letztUnterbrDatum, absWirksam);
+      if (primaerRechtzeitig && letztFrist137II) {
+        // Gegenprüfung 2026-07-02 (Art. 137 Abs. 2 OR, «... so ist die neue
+        // Verjährungsfrist STETS die zehnjährige»; Fedlex SR 220, Stand
+        // 1.1.2026, https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de):
+        // Die durch Urkunde-Anerkennung oder gerichtliche Feststellung
+        // begründete 10-Jahres-Frist ist SELBSTÄNDIG und läuft ab dem Titel;
+        // sie wird NICHT durch die ursprüngliche absolute Frist (Art. 60/67 OR)
+        // gekappt und kann über diese hinausreichen (h.L. zum «stets»-Wortlaut
+        // des Art. 137 Abs. 2 OR; ein einschlägiger BGE-Beleg ist offen und
+        // fachlich zu ergänzen — QS-GP-Gegenprüfung 2.7.2026).
+        // Zuvor überstimmte das «konservative» Kappen den «stets»-Wortlaut und
+        // erzeugte ein falsches «verjährt»-Verdikt für titulierte Forderungen.
+        annahmen.push(
+          `Die durch Anerkennung mit Urkunde bzw. gerichtliche Feststellung begründete Frist ist nach Art. 137 Abs. 2 OR stets zehnjährig und selbständig; sie reicht über die ursprüngliche absolute Frist (${fmt(absWirksam)}) hinaus und ist massgeblich (${fmt(werktagsEnde(relativEnde, input.kanton))}).`,
+        );
+      } else if (primaerRechtzeitig) {
+        // Klage/Schlichtung ohne Urteil (Art. 138 Abs. 1 OR): Die rechtzeitige
+        // Unterbrechung erfasst die GANZE Verjährung; mit Abschluss vor der
+        // befassten Instanz beginnt die (auch die absolute) Frist neu. Die neue
+        // Frist wird daher nicht an der ursprünglichen absoluten Frist gekappt.
+        annahmen.push(
+          `Die rechtzeitige Klage/das Schlichtungsgesuch (Art. 138 Abs. 1 OR) unterbricht die gesamte Verjährung; nach Abschluss läuft die neu angesetzte Frist über die ursprüngliche absolute Frist (${fmt(absWirksam)}) hinaus und ist massgeblich (${fmt(werktagsEnde(relativEnde, input.kanton))}).`,
+        );
+      } else {
+        // anerkennung / betreibungsakt (Art. 137 Abs. 1 OR): Ob solche
+        // Unterbrechungshandlungen die absolute Höchstfrist (Art. 60/67 OR)
+        // überschreiten können, ist höchstrichterlich nicht entschieden; die
+        // frühere Behauptung «für Art. 67 OR gesichert» war unbelegt
+        // (Gegenprüfung 2026-07-02: kein BGE erklärt die absolute
+        // Bereicherungsfrist für unterbrechungsfest). Konservativ wird das
+        // frühere (absolute) Datum ausgewiesen und die Annahme offengelegt (§8).
+        annahmen.push(
+          'Konservative Annahme: Die durch formlose Anerkennung oder Betreibungsakt (Art. 137 Abs. 1 OR) neu angesetzte Frist wird hier durch die absolute Frist (Art. 60/67 OR) begrenzt. Ob die absolute Höchstfrist durch solche Unterbrechungshandlungen überschritten werden kann, ist nicht höchstrichterlich geklärt – ausgewiesen wird das frühere (absolute) Datum; im Einzelfall fachlich zu prüfen.',
         );
       }
     }
@@ -375,10 +419,32 @@ export function berechneVerjaehrung(input: VerjaehrungInput): VerjaehrungErgebni
   let verjaehrung: Date | null = null;
   let massgeblicheFrist: 'relativ' | 'absolut' | undefined;
   if (offeneHemmungSeit) {
-    verjaehrung = absolutEnde; // nur die absolute Frist kann noch ablaufen
-    massgeblicheFrist = absolutEnde ? 'absolut' : undefined;
+    // Art. 138 Abs. 1 OR (Fedlex SR 220, Stand 1.1.2026): Die rechtzeitige Klage/
+    // das Schlichtungsgesuch unterbricht die GANZE Verjährung; die Frist beginnt
+    // erst mit Abschluss vor der befassten Instanz neu. Während des hängigen
+    // Verfahrens ruht damit AUCH die absolute Frist – ein Fristablauf ist
+    // ausgeschlossen (Gegenprüfung 2026-07-02: zuvor lief die absolute Frist
+    // scheinbar weiter und meldete «verjährt» mitten im Prozess). Nur wenn die
+    // Unterbrechung erst NACH Ablauf der absoluten Frist erfolgte, ist sie
+    // verspätet und die absolute Frist bleibt massgeblich.
+    const absWirksam = absolutEnde ? werktagsEnde(absolutEnde, input.kanton) : null;
+    if (absWirksam && isAfter(offeneHemmungSeit, absWirksam)) {
+      verjaehrung = absolutEnde;
+      massgeblicheFrist = 'absolut';
+    } else {
+      verjaehrung = null; // steht prozessbedingt vollständig still
+      massgeblicheFrist = undefined;
+    }
   } else if (relativEnde) {
-    if (absolutEnde && isBefore(absolutEnde, relativEnde)) {
+    // Eine Klage/ein Schlichtungsgesuch (Art. 138 Abs. 1 OR) oder Urkunde/Urteil
+    // (Art. 137 Abs. 2 OR) setzt die GANZE Verjährung neu an — die neue Frist
+    // wird nicht an der ursprünglichen absoluten Frist gekappt, SOFERN die
+    // Unterbrechung noch vor deren Ablauf erfolgte (sonst war die Forderung
+    // bereits verjährt und die Handlung wirkungslos).
+    const absWirksam = absolutEnde ? werktagsEnde(absolutEnde, input.kanton) : null;
+    const primaerRechtzeitig = letztUnterbrPrimaer && letztUnterbrDatum != null
+      && (absWirksam == null || !isAfter(letztUnterbrDatum, absWirksam));
+    if (absolutEnde && isBefore(absolutEnde, relativEnde) && !primaerRechtzeitig) {
       verjaehrung = absolutEnde;
       massgeblicheFrist = 'absolut';
     } else {
@@ -389,19 +455,36 @@ export function berechneVerjaehrung(input: VerjaehrungInput): VerjaehrungErgebni
 
   // Expliziter Vergleichsschritt, sobald beide Fristen parallel laufen
   if (relativEnde && absolutEnde) {
+    // Neu angesetzte Frist reicht über die absolute hinaus und ist dennoch
+    // massgeblich (Art. 137 Abs. 2 / 138 Abs. 1 OR – keine Kappung).
+    const neuFristUeberAbsolut = massgeblicheFrist === 'relativ' && isAfter(relativEnde, absolutEnde);
     rechenweg.push({
       beschreibung: 'Massgebliches Fristende – relative vs. absolute Frist',
-      zwischenergebnis: `Relative Frist endet am ${fmt(relativEnde)}, absolute Frist am ${fmt(absolutEnde)}. ` +
-        `Massgeblich ist das frühere Ende – hier die ${massgeblicheFrist === 'absolut' ? 'absolute' : 'relative'} Frist (${fmt(verjaehrung!)}). ` +
-        'Die relative Frist kann nie über die absolute hinauslaufen.',
-      normen: R.normen,
+      zwischenergebnis: neuFristUeberAbsolut
+        ? `Relative (neu angesetzte) Frist endet am ${fmt(relativEnde)}, ursprüngliche absolute Frist am ${fmt(absolutEnde)}. ` +
+          `${letztFrist137II
+            ? 'Die durch Urkunde/Urteil begründete Frist ist nach Art. 137 Abs. 2 OR stets zehnjährig und selbständig'
+            : 'Die durch rechtzeitige Klage/Schlichtung neu angesetzte Frist (Art. 138 Abs. 1 OR) erfasst die gesamte Verjährung'}; ` +
+          `sie läuft über die ursprüngliche absolute Frist hinaus und ist massgeblich (${fmt(verjaehrung!)}).`
+        : `Relative Frist endet am ${fmt(relativEnde)}, absolute Frist am ${fmt(absolutEnde)}. ` +
+          `Massgeblich ist das frühere Ende – hier die ${massgeblicheFrist === 'absolut' ? 'absolute' : 'relative'} Frist (${fmt(verjaehrung!)}). ` +
+          'Die relative Frist kann nie über die absolute hinauslaufen.',
+      normen: neuFristUeberAbsolut ? [...R.normen, letztFrist137II ? N_137_2 : N_138_1] : R.normen,
     });
   } else if (offeneHemmungSeit && absolutEnde) {
+    const verspaetet = massgeblicheFrist === 'absolut';
     rechenweg.push({
-      beschreibung: 'Massgebliches Fristende – nur absolute Frist bestimmbar',
-      zwischenergebnis: `Die relative Frist steht prozessbedingt still (Art. 138 Abs. 1 OR); ` +
-        `unabhängig davon läuft die absolute Frist und endet am ${fmt(absolutEnde)} – sie bleibt einstweilen massgeblich.`,
+      beschreibung: verspaetet
+        ? 'Massgebliches Fristende – absolute Frist bereits abgelaufen'
+        : 'Fristenlauf während des hängigen Verfahrens (Art. 138 Abs. 1 OR)',
+      zwischenergebnis: verspaetet
+        ? `Die Unterbrechung vom ${fmt(offeneHemmungSeit)} erfolgte erst nach Ablauf der absoluten Frist ` +
+          `(${fmt(werktagsEnde(absolutEnde, input.kanton))}) und ist verspätet; die absolute Frist bleibt massgeblich.`
+        : `Die rechtzeitige Klage/das Schlichtungsgesuch unterbricht die GANZE Verjährung: Während des hängigen Verfahrens ruht ` +
+          `auch die absolute Frist (${fmt(werktagsEnde(absolutEnde, input.kanton))}); ein Fristablauf ist bis zum Abschluss vor der ` +
+          `befassten Instanz ausgeschlossen (Art. 138 Abs. 1 OR).`,
       normen: [...R.normen, N_138_1],
+      rechtsprechung: [rechtsprechung('BGE_147_III_419')],
     });
   }
 
@@ -426,7 +509,7 @@ export function berechneVerjaehrung(input: VerjaehrungInput): VerjaehrungErgebni
       ? verjaehrt
         ? `Am Stichtag ${fmt(stichtag)} ist die Forderung verjährt (letzter Tag: ${fmt(verschoben)}). Die Verjährung wird nur auf Einrede hin beachtet; die Forderung besteht als Naturalobligation weiter.`
         : `Am Stichtag ${fmt(stichtag)} ist die Forderung nicht verjährt; die Verjährung tritt mit unbenütztem Ablauf des ${fmt(verschoben)} ein.`
-      : `Die Verjährung steht seit ${fmt(offeneHemmungSeit!)} prozessbedingt still (Art. 138 Abs. 1 OR); ein Fristende lässt sich erst nach Abschluss des Verfahrens bestimmen${absolutEnde ? '' : '.'}`,
+      : `Die Verjährung steht seit ${fmt(offeneHemmungSeit!)} prozessbedingt still (Art. 138 Abs. 1 OR); während des Verfahrens ruht auch eine allfällige absolute Frist – ein Fristende lässt sich erst nach dessen Abschluss bestimmen.`,
     normen: [N_142],
   });
 
@@ -477,15 +560,23 @@ export function berechneVerjaehrung(input: VerjaehrungInput): VerjaehrungErgebni
     N_142,
   ];
 
-  // Bei Zwei-Fristen-Regimes die massgebliche Frist im Ergebnis benennen
+  // Bei Zwei-Fristen-Regimes die massgebliche Frist im Ergebnis benennen.
+  // Reicht die durch Unterbrechung neu angesetzte Frist über die absolute Frist
+  // hinaus (Art. 137 Abs. 2 / 138 Abs. 1 OR), ist NICHT mehr die ursprüngliche
+  // «relative Frist (X Jahre ab Kenntnis)» massgeblich, sondern die neue Frist –
+  // sonst widerspräche die Zusammenfassung dem korrigierten Verdikt (§8).
+  const neuAngesetztMassgeblich = massgeblicheFrist === 'relativ' && relativEnde != null
+    && absolutEnde != null && isAfter(relativEnde, absolutEnde);
   const fristZusatz = R.absolutJahre != null && massgeblicheFrist
-    ? ` Massgeblich ist die ${massgeblicheFrist === 'absolut' ? `absolute Frist (${R.absolutJahre} Jahre ab ${R.absolutLabel})` : `relative Frist (${R.relativJahre} Jahre ab ${R.beginnLabel})`}.`
+    ? neuAngesetztMassgeblich
+      ? ` Massgeblich ist die durch Unterbrechung neu angesetzte Frist (${letztFrist137II ? 'stets 10 Jahre, Art. 137 Abs. 2 OR' : 'Neubeginn nach Art. 138 Abs. 1 OR'}), die über die absolute Frist hinausreicht.`
+      : ` Massgeblich ist die ${massgeblicheFrist === 'absolut' ? `absolute Frist (${R.absolutJahre} Jahre ab ${R.absolutLabel})` : `relative Frist (${R.relativJahre} Jahre ab ${R.beginnLabel})`}.`
     : '';
   const ergebnisText = verschoben
     ? verjaehrt
       ? `Verjährt: Die Verjährung ist mit Ablauf des ${fmt(verschoben)} eingetreten (Stichtag ${fmt(stichtag)}).${fristZusatz} Sie ist als Einrede geltend zu machen (Art. 142 OR).`
       : `Nicht verjährt: Die Verjährung tritt mit unbenütztem Ablauf des ${fmt(verschoben)} ein.${fristZusatz}${verzichtBis ? ` Zufolge Einredeverzichts ist die Einrede bis ${fmt(verzichtBis)} ausgeschlossen.` : ''}`
-    : `Die Verjährung steht prozessbedingt still (Art. 138 Abs. 1 OR)${absolutEnde ? `; spätestens massgeblich bleibt die absolute Frist per ${fmt(werktagsEnde(absolutEnde, input.kanton))}` : ''}.`;
+    : `Die Verjährung steht prozessbedingt still (Art. 138 Abs. 1 OR); während des hängigen Verfahrens läuft auch eine allfällige absolute Frist nicht weiter – ein Fristende lässt sich erst nach Abschluss des Verfahrens bestimmen.`;
 
   return {
     ergebnis: ergebnisText,

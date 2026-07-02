@@ -91,8 +91,15 @@ export const PRESETS_SCHKG: SchkgPreset[] = [
     wartefrist: { einheit: 'tage', laenge: 20 }, verwirkung: { einheit: 'jahre', laenge: 1 },
     modus: 'schkg_betreibungsferien', fristnatur: 'verwirkung', ausloeser: 'Zustellung Zahlungsbefehl', hemmungMoeglich: true,
     hinweis: 'Abs. 1: vor Ablauf von 20 Tagen unzulässig. Abs. 2: Verwirkung nach 1 Jahr; Stillstand während rechtsvorschlagsbedingtem Verfahren.' },
-  { key: 'teilnahme_pfaendung', phase: 'fortsetzung', label: 'Teilnahme an Pfändung (Anschluss) – 30 Tage', norm: 'Art. 110/111 SchKG',
-    einheit: 'tage', laenge: 30, modus: 'schkg_betreibungsferien', fristnatur: 'frist', ausloeser: 'Pfändungsvollzug' },
+  // Norm-Anker-Korrektur (QS-GP 2.7.2026): Der 30-Tage-Wert ist die ordentliche
+  // Anschlusspfändung nach Art. 110 Abs. 1 SchKG (SR 281.1, Stand 1.1.2026,
+  // https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de, am XML verifiziert).
+  // Das Sammelzitat «Art. 110/111» konflatierte zwei verschieden lange Fristen:
+  // Der privilegierte Anschluss (Art. 111 Abs. 1) läuft 40 Tage – anderes Regime,
+  // hier bewusst nicht als eigenes Preset abgebildet (§8-Offenlegung im hinweis).
+  { key: 'teilnahme_pfaendung', phase: 'fortsetzung', label: 'Teilnahme an Pfändung (Anschluss) – 30 Tage', norm: 'Art. 110 Abs. 1 SchKG',
+    einheit: 'tage', laenge: 30, modus: 'schkg_betreibungsferien', fristnatur: 'frist', ausloeser: 'Pfändungsvollzug',
+    hinweis: 'Ordentliche Anschlusspfändung: 30 Tage ab Pfändungsvollzug (Art. 110 Abs. 1 SchKG). Der privilegierte Anschluss ohne vorgängige Betreibung (Ehegatte, Kinder u.a.) läuft dagegen 40 Tage (Art. 111 Abs. 1 SchKG) und ist hier nicht abgebildet.' },
   { key: 'widerspruch_bestreitung', phase: 'fortsetzung', label: 'Widerspruch – Bestreitungsfrist – 10 Tage', norm: 'Art. 107 Abs. 2 SchKG',
     einheit: 'tage', laenge: 10, modus: 'schkg_betreibungsferien', fristnatur: 'frist', ausloeser: 'Mitteilung/Fristansetzung (Gewahrsam Schuldner)' },
   { key: 'widerspruchsklage_schuldner', phase: 'fortsetzung', label: 'Widerspruchsklage (Gewahrsam Schuldner) – 20 Tage', norm: 'Art. 107 Abs. 5 SchKG',
@@ -131,7 +138,14 @@ export const PRESETS_SCHKG: SchkgPreset[] = [
   { key: 'lastenbereinigung', phase: 'verwertung', label: 'Lastenbereinigung – Bestreitung – 10 Tage', norm: 'Art. 140 i.V.m. 107/109 SchKG',
     einheit: 'tage', laenge: 10, modus: 'schkg_betreibungsferien', fristnatur: 'frist', ausloeser: 'Zustellung Lastenverzeichnis',
     hinweis: 'Bestreitung muss nicht substantiiert sein. Anschliessend Klagefristansetzung 20 Tage (ZPO-Stillstand).', verweise: ['BGer_5A_852_2014'] },
-  { key: 'doppelaufruf', phase: 'verwertung', label: 'Doppelaufruf-Begehren – 10 Tage', norm: 'Art. 141 SchKG',
+  // Norm-Anker-Korrektur (QS-GP 2.7.2026): Der Doppelaufruf steht in Art. 142
+  // Abs. 1 SchKG («…kann der Grundpfandgläubiger innert zehn Tagen nach Zustellung
+  // des Lastenverzeichnisses den Aufruf sowohl mit als auch ohne die Last
+  // verlangen»). Art. 141 SchKG regelt dagegen die Aussetzung der Versteigerung
+  // bei streitigem Lastenverzeichnis-Anspruch – falscher Artikel (um eins
+  // verschoben). SR 281.1, Stand 1.1.2026,
+  // https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de, am XML verifiziert.
+  { key: 'doppelaufruf', phase: 'verwertung', label: 'Doppelaufruf-Begehren – 10 Tage', norm: 'Art. 142 Abs. 1 SchKG',
     einheit: 'tage', laenge: 10, modus: 'schkg_betreibungsferien', fristnatur: 'frist', ausloeser: 'Zustellung Lastenverzeichnis',
     hinweis: 'Nur in der Pfandverwertung.' },
 

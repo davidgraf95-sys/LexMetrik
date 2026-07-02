@@ -59,7 +59,7 @@ export const PARTEIENTSCHAEDIGUNG: Record<KantonCode, KantonalerTarif> = {
     kriterienNorm: '§ 2 AnwGebV (Modulation § 4 Abs. 2)',
     verifiziert: 'doppelt',
     quelleUrl: 'https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-215_3-2010_09_08-2011_01_01-087.html',
-    hinweis: 'Grundgebühr; § 4 Abs. 2 ±⅓, § 9 summarisch ⅖–⅕.',
+    hinweis: 'Grundgebühr; § 4 Abs. 2 ±⅓, § 9 summarisch ⅔–⅕ («in der Regel auf zwei Drittel bis einen Fünftel ermässigt»).',
     regel: { typ: 'staffel_sockel_prozent', baender: ZH_SKALA },
   },
   BE: {
@@ -101,8 +101,11 @@ export const PARTEIENTSCHAEDIGUNG: Record<KantonCode, KantonalerTarif> = {
   },
   UR: {
     kanton: 'UR', erlassName: 'Gerichtsgebührenreglement (GGebR)', erlassNr: 'RB 2.3232',
-    artikel: 'Art. 28 Abs. 1 (i.V.m. Art. 29, Art. 34)', stand: '1.10.2023', kriterien: ['Aufwand', 'Anzahl der Verhandlungen', 'Umfang der Beweisführung', 'Schwierigkeit von Sachverhalt und Rechtsfragen'],
-    kriterienNorm: 'Art. 3 GGebV i.V.m. Art. 2 GGebR',
+    // Kriterien-Anker korrigiert (QS-GP 2.7.2026): die Bemessung der ANWALTS-
+    // entschädigung richtet sich nach Art. 19 Abs. 1 GGebV (RB 2.3231), nicht nach
+    // Art. 3 GGebV (das die GERICHTsgebühr betrifft = Aufwand der Gerichtsbehörde).
+    artikel: 'Art. 28 Abs. 1 (i.V.m. Art. 29, Art. 34)', stand: '1.10.2023', kriterien: ['Zeitaufwand', 'Bedeutung der Sache für die Partei (persönlich/wirtschaftlich)', 'Schwierigkeit der Sache', 'Umfang und Art der Bemühungen'],
+    kriterienNorm: 'Art. 19 Abs. 1 GGebV (RB 2.3231) i.V.m. Art. 2 GGebR',
     verifiziert: 'recherche',
     quelleUrl: 'https://rechtsbuch.ur.ch/app/de/texts_of_law/2.3232',
     hinweis: 'Rahmen je Band; >500 000: 1,5–4 % des Streitwerts. Anker korrigiert (Audit/Re-Verifikation 21.6.): Zivilstaffel steht in Art. 28 Abs. 1 lit. a–f GGebR (nicht Art. 30 = Strafverfahren); Werte wortgetreu bestätigt. Rechtsmittel Art. 29 (bis 60 %), Zeitaufwand Art. 34.',
@@ -295,7 +298,7 @@ export const PARTEIENTSCHAEDIGUNG: Record<KantonCode, KantonalerTarif> = {
     kriterienNorm: 'Art. 17 Abs. 1 HonO',
     verifiziert: 'doppelt',
     quelleUrl: 'https://www.gesetzessammlung.sg.ch/app/de/texts_of_law/963.75',
-    hinweis: 'Mittleres Honorar (Fix + % vom Gesamtstreitwert); Art. 17 ±50 %; Handels-/Kantonsgericht +20 % (Art. 15); summarisch 10–60 % (Art. 16). Maximaltarif.',
+    hinweis: 'Verbindlicher Tarif um ein mittleres Honorar (Fix + % vom Gesamtstreitwert), nach Art. 17 um bis zu ±50 % über-/unterschreitbar (Art. 2 HonO); Handels-/Kantonsgericht +20 % (Art. 15); summarisch 10–60 % (Art. 16).',
     regel: { typ: 'staffel_voll_prozent', baender: [
       { bisChf: 10000, fixChf: 800, prozent: 26 },
       { bisChf: 30000, fixChf: 2000, prozent: 14 },

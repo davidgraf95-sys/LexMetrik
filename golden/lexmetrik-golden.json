@@ -5740,7 +5740,8 @@
    "Formelles (Art. 42 BGG): Begehren, deren Begründung mit Angabe der Beweismittel (inwiefern der Entscheid Recht verletzt) und Unterschrift; wird die Zulässigkeit auf eine Rechtsfrage von grundsätzlicher Bedeutung gestützt, ist dies besonders zu begründen (Abs. 2)."
   ],
   "warnungen": [
-   "Der AUSNAHMEKATALOG des Art. 83 BGG (u. a. Ausländer- und Asylsachen, ordentliche Einbürgerung, öffentliche Beschaffungen ohne Grundsatzfrage) ist hier NICHT abgebildet – vor dem Weiterzug prüfen, ob die Materie ausgenommen ist; ausgenommene Materien führen bei KANTONALEN Vorinstanzen zur subsidiären Verfassungsbeschwerde (Art. 113 BGG) – gegen Entscheide des Bundesverwaltungsgerichts gibt es sie nicht."
+   "Der AUSNAHMEKATALOG des Art. 83 BGG (u. a. Ausländer- und Asylsachen, ordentliche Einbürgerung, öffentliche Beschaffungen ohne Grundsatzfrage) ist hier NICHT abgebildet – vor dem Weiterzug prüfen, ob die Materie ausgenommen ist; ausgenommene Materien führen bei KANTONALEN Vorinstanzen zur subsidiären Verfassungsbeschwerde (Art. 113 BGG) – gegen Entscheide des Bundesverwaltungsgerichts gibt es sie nicht.",
+   "STREITWERTGRENZEN (Art. 85 BGG) sind hier NICHT geprüft: In VERMÖGENSRECHTLICHEN Angelegenheiten ist die Beschwerde auf dem Gebiet der Staatshaftung bei einem Streitwert unter CHF 30 000 (Abs. 1 lit. a) und auf dem Gebiet der öffentlich-rechtlichen Arbeitsverhältnisse bei einem Streitwert unter CHF 15 000 (Abs. 1 lit. b) UNZULÄSSIG – es sei denn, es stellt sich eine Rechtsfrage von grundsätzlicher Bedeutung (Abs. 2). Das hier ausgewiesene «zulässig» steht in diesen beiden Materien unter diesem Streitwert-Vorbehalt."
   ],
   "normverweise": [
    {
@@ -5749,6 +5750,10 @@
    {
     "artikel": "Art. 83 BGG",
     "bemerkung": "Ausnahmekatalog – nicht abgebildet"
+   },
+   {
+    "artikel": "Art. 85 BGG",
+    "bemerkung": "Streitwertgrenzen öffentliches Recht – nicht abgebildet"
    },
    {
     "artikel": "Art. 90 BGG"
@@ -5855,10 +5860,10 @@
    "text": "Das Gesuch um Rechtsöffnung ist beim GERICHT DES BETREIBUNGSORTES zu stellen (Art. 84 Abs. 1 SchKG); summarisches Verfahren (Art. 251 lit. a ZPO).",
    "normen": [
     {
-     "artikel": "Art. 84 SchKG"
+     "artikel": "Art. 84 Abs. 1 SchKG"
     },
     {
-     "artikel": "Art. 251 ZPO"
+     "artikel": "Art. 251 lit. a ZPO"
     }
    ]
   },
@@ -5899,10 +5904,10 @@
     "artikel": "Art. 46 Abs. 1 SchKG"
    },
    {
-    "artikel": "Art. 84 SchKG"
+    "artikel": "Art. 84 Abs. 1 SchKG"
    },
    {
-    "artikel": "Art. 251 ZPO"
+    "artikel": "Art. 251 lit. a ZPO"
    }
   ]
  },
@@ -15109,11 +15114,11 @@
   "verschoben": true,
   "normen": [
    "Art. 46 Abs. 1 BGG",
-   "Art. 45 Abs. 1 BGG"
+   "Art. 45 BGG"
   ],
   "annahmen": [
    "Stillstand nach Art. 46 Abs. 1 BGG berücksichtigt (Ostern ± 7 Tage · 15.7.–15.8. · 18.12.–2.1.); die Stillstandstage werden nicht mitgezählt.",
-   "Endverschiebung nach Art. 45 Abs. 1 BGG: massgebend sind die Feiertage am Wohnsitz/Sitz der Partei (gewählter Kanton ZH)."
+   "Endverschiebung nach Art. 45 BGG: massgebend sind die Feiertage am Wohnsitz/Sitz der Partei (gewählter Kanton ZH)."
   ],
   "warnungen": [],
   "ausnahmen": [
@@ -15131,11 +15136,11 @@
   "verschoben": true,
   "normen": [
    "Art. 46 Abs. 1 BGG",
-   "Art. 45 Abs. 1 BGG"
+   "Art. 45 BGG"
   ],
   "annahmen": [
    "Stillstand nach Art. 46 Abs. 1 BGG berücksichtigt (Ostern ± 7 Tage · 15.7.–15.8. · 18.12.–2.1.); die Stillstandstage werden nicht mitgezählt.",
-   "Endverschiebung nach Art. 45 Abs. 1 BGG: massgebend sind die Feiertage am Wohnsitz/Sitz der Partei (gewählter Kanton TI)."
+   "Endverschiebung nach Art. 45 BGG: massgebend sind die Feiertage am Wohnsitz/Sitz der Partei (gewählter Kanton TI)."
   ],
   "warnungen": [],
   "ausnahmen": [
@@ -15153,13 +15158,13 @@
   "verschoben": false,
   "normen": [
    "Art. 46 Abs. 1 BGG",
-   "Art. 45 Abs. 1 BGG"
+   "Art. 45 BGG"
   ],
   "annahmen": [
-   "Endverschiebung nach Art. 45 Abs. 1 BGG: massgebend sind die Feiertage am Wohnsitz/Sitz der Partei (gewählter Kanton GE)."
+   "Endverschiebung nach Art. 45 BGG: massgebend sind die Feiertage am Wohnsitz/Sitz der Partei (gewählter Kanton GE)."
   ],
   "warnungen": [
-   "Der Stillstand nach Art. 46 Abs. 1 BGG gilt nur für nach Tagen bestimmte Fristen – Jahresfristen stehen nicht still. Es wird nur der letzte Tag auf einen Werktag verschoben (Art. 45 Abs. 1 BGG)."
+   "Der Stillstand nach Art. 46 Abs. 1 BGG gilt nur für nach Tagen bestimmte Fristen – Jahresfristen stehen nicht still. Es wird nur der letzte Tag auf einen Werktag verschoben (Art. 45 BGG)."
   ],
   "ausnahmen": [
    "die aufschiebende Wirkung und andere vorsorgliche Massnahmen",
@@ -20180,5 +20185,5 @@
  "absatz:streitwert:einmalig50k": "Massgeblicher Streitwert (Verfahren/Rechtsmittel): CHF 50'000. Massgebend sind Art. 91 ZPO, Art. 92 ZPO, Art. 93 ZPO, Art. 94 ZPO.",
  "absatz:teuerung:indexmiete": "CHF 2'549.05 (+2.0 %). Massgebend sind Art. 269b OR, Art. 17 VMWG.",
  "absatz:gebv:zb5000": "Amtliche Gebühren (Punktwerte): CHF 104. Der Schuldner trägt die Betreibungskosten; der Gläubiger schiesst sie vor und erhebt sie von den Zahlungen vorab (Art. 68 SchKG). Massgebend sind Art. 68 SchKG, Art. 6 GebV SchKG.",
- "absatz:erbfrist:ausschlagung": "Fristende: 10.06.2026 (Mittwoch) – Ausschlagung – gesetzliche Erbin/gesetzlicher Erbe (3 Monate). Massgebend sind Art. 567 Abs. 2 ZGB, Art. 570 ZGB, Art. 576 ZGB."
+ "absatz:erbfrist:ausschlagung": "Fristende: 10.06.2026 (Mittwoch) – Ausschlagung – gesetzliche Erbin/gesetzlicher Erbe (3 Monate). Massgebend sind Art. 567 Abs. 1 und 2 ZGB, Art. 570 ZGB, Art. 576 ZGB."
 }
