@@ -54,3 +54,6 @@ public/such-index/
 # Gegenprüfungs-Gate (QS-GP): Vor-Commit-Türsteher, an den lokalen Diff gebunden
 # (das dauerhafte Register bibliothek/register/gegenpruefung-register.md wird committet)
 bibliothek/.gegenpruefung-pending
+
+# QS-DATA: DB-Artefakt (Werk-Zwischenprodukt, aus JSON reproduzierbar)
+daten/
