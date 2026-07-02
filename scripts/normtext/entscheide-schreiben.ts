@@ -9,14 +9,167 @@ import { join } from 'node:path';
 import { kuerzeRegeste, normalisiereRegeste } from '../../src/lib/rechtsprechung/register';
 import type { EntscheidSnapshot, EntscheidSnapshotDatei } from '../../src/lib/rechtsprechung/typen';
 import type { BrowseEntscheid, EntscheidManifest } from '../../src/lib/rechtsprechung/register';
-import type { EntscheidRef } from '../../src/lib/rechtsprechung/norm-index';
+import type { EntscheidRef, LeitfallRef } from '../../src/lib/rechtsprechung/norm-index';
+import { extrahiereStatutRefs } from '../../src/lib/rechtsprechung/zitat-extraktion';
+import { normKeyFuerAbk } from './entscheide-mapping';
 
 export function keyVon(snap: EntscheidSnapshot): { key: string; datei: string } {
   const docketSafe = snap.id.split('/').pop()!;
   return { key: `${snap.gericht}_${docketSafe}`, datei: `${snap.id}.json` };
 }
 
-export function schreibeKorpus(auswahl: EntscheidSnapshot[], datum: string, root = process.cwd()): { anzahl: number; normBuckets: number } {
+/** Gekürzte Regeste aus dem geglätteten Text (Single Source für proNorm + Artikel-Index, §5). */
+function regesteKurzVon(snap: EntscheidSnapshot): string | null {
+  return snap.regeste ? kuerzeRegeste(normalisiereRegeste(snap.regeste.text)) : null;
+}
+
+/** EntscheidRef aus einem Snapshot (identischer Inhalt wie im proNorm-Build). */
+function refVon(snap: EntscheidSnapshot): EntscheidRef {
+  const { key } = keyVon(snap);
+  return {
+    key, zitierung: snap.zitierung, regesteKurz: regesteKurzVon(snap), datum: snap.datum,
+    leitcharakter: snap.leitcharakter, gericht: snap.gericht, kanton: snap.kanton,
+  };
+}
+
+// Deckel je Artikel: «Leitfälle», keine Vollliste — bremst die Artikel-Fan-out des
+// norm-index.json (Budget-Tor in check-entscheide.ts). Bewusst kleiner als der
+// Erlass-Deckel (12), weil eine Artikel-Ansicht die wenigen zentralen Fälle zeigt.
+const LEITFAELLE_PRO_ARTIKEL = 8;
+
+/**
+ * Kanonisches Zitat-Token für den Zitier-Abgleich (Entscheid ↔ Entscheid), §2.
+ * Vereinheitlicht BEIDE Seiten (Selbst-Identität eines Snapshots UND ein rohes
+ * `zitierteEntscheide`-Element) auf dieselbe Normalform, damit «BGE 150 I 17»,
+ * «150 I 17» und die aza-Nennung «1C_641/2022» sicher zusammenfinden:
+ *   • BGE  → 'BGE:<band>:<abt>:<seite>'   (Präfix BGE/ATF/DTF optional)
+ *   • aza  → 'AZA:<abt>:<nr>:<jahr>'      ('1C_641/2022', '1P.179/1994', '5A 33/2004')
+ * Kein Treffer → null (nicht abgleichbar).
+ */
+export function kanonZitat(roh: string): string | null {
+  const t = String(roh).trim().toUpperCase();
+  // Abteilung inkl. optionalem Suffix der historischen Abteilungen «Ia»/«Va»
+  // ([AB]?, weil t bereits gross ist) — konsistent zu zitat-extraktion.ts; beide
+  // Abgleich-Seiten laufen durch kanonZitat, also intern eindeutig (Bug-Check W3).
+  const bge = /(?:BGE|ATF|DTF)?\s*(\d{1,3})\s+([IVX]{1,4}[AB]?)\s+(\d{1,4})\b/.exec(t);
+  if (bge) return `BGE:${bge[1]}:${bge[2]}:${bge[3]}`;
+  const aza = /\b(\d[A-Z])[._ ](\d{1,6})[/_](\d{4})\b/.exec(t);
+  if (aza) return `AZA:${aza[1]}:${aza[2]}:${aza[3]}`;
+  return null;
+}
+
+/** Zitat-Token, unter denen ein Snapshot von ANDEREN Entscheiden genannt werden kann. */
+function selbstTokens(snap: EntscheidSnapshot): string[] {
+  const out = new Set<string>();
+  for (const roh of [snap.bgeReferenz, snap.nummer, snap.azaUrteil?.aktenzeichen]) {
+    if (!roh) continue;
+    const t = kanonZitat(roh);
+    if (t) out.add(t);
+  }
+  return [...out];
+}
+
+/**
+ * Kürzel, die föderal UND kantonal existieren und pro Zitat NICHT sicher
+ * unterscheidbar sind → aus dem föderalen Bund-Artikel-Index ausgeschlossen
+ * (§1 Korrektheit vor Abdeckung, §8 keine falsche Bundesrechts-Zuordnung).
+ *
+ * «StG» = eidg. Stempelsteuergesetz (SR 641.10) ODER kantonales Steuergesetz
+ * (StG/BE, StG/ZH, StG/SG …). Der Kantons-Suffix steht nur in der Regeste-
+ * Erstnennung, nicht bei jeder Fliesstext-Nennung; kantonale Grundstückgewinn-/
+ * Einkommenssteuer-Fälle (z.B. BGE 152 II 116, StHG-Kontext) tragen GAR keinen
+ * Suffix — eine Suffix-Heuristik greift also zu kurz. Daher konservativ ganz
+ * weglassen. Preis: die wenigen echten eidg. Stempelsteuer-Leitfälle (z.B.
+ * BGE 151 II 884) fehlen bewusst, bis ein positiver Bund-Signal-Diskriminator
+ * gebaut ist. Befund: Gegenprüfung W3 (Opus, 2.7.2026) — 5 kant. Falsch-Positive.
+ *
+ * Deckt sich mit OCLs Design: deren kuratierte Bund-Whitelist `_SR_NUMBER_MAP`
+ * (mcp_server.py:3810, Abkürzung→SR-Nummer) listet die unzweideutigen Bundes-
+ * gesetze (BV/OR/ZGB/StGB/… bis DBG) und lässt «StG»/StHG bewusst WEG.
+ */
+const AMBIGE_BUND_KANTON_KUERZEL: ReadonlySet<string> = new Set(['STG']);
+
+/** (Register-key, Artikel-Token)-Paare, die ein Snapshot zitiert — 'OR/41'-Form, deduppt. */
+function artikelSchluesselVon(snap: EntscheidSnapshot): Set<string> {
+  const out = new Set<string>();
+  // Roh-statutes (OCL statutes[]) tragen das Artikel-Token; zusammenfügen und einmal
+  // extrahieren (extrahiereStatutRefs dedupliziert über die Normalform).
+  for (const ref of extrahiereStatutRefs((snap.zitierteNormen ?? []).join('\n'))) {
+    const rk = normKeyFuerAbk(ref.gesetz);
+    if (!rk || AMBIGE_BUND_KANTON_KUERZEL.has(rk)) continue;
+    out.add(`${rk}/${ref.artikel}`);
+  }
+  return out;
+}
+
+/**
+ * Artikel-Ebene des Norm-Index (W3), deterministisch (§2). Nur Bundesgerichts-
+ * Entscheide (wie proNorm — die Panel-Überschrift lautet «Bundesgerichtsentscheide
+ * zu Art. X»; eidg./kantonale Gerichte gehören nicht darunter, §8). Für jeden
+ * Artikel A ist die «topische Menge» S_A = {Bundesgerichtsentscheide, die A zitieren};
+ * `gewicht` eines Falls d = Anzahl ANDERER Fälle aus S_A, die d nennen (In-degree
+ * INNERHALB von S_A). Rang: gewicht ↓, dann Leitentscheid vor Routine, dann Datum ↓,
+ * dann key (totaler Tiebreaker) — build-pfad-unabhängig stabil.
+ */
+export function baueArtikelIndex(auswahl: EntscheidSnapshot[]): Record<string, LeitfallRef[]> {
+  const bg = auswahl.filter((s) => s.gerichtstyp === 'bundesgericht');
+
+  // Token → corpus-key (erste Nennung gewinnt; §2-deterministisch bei Eingabefolge).
+  const tokenZuKey = new Map<string, string>();
+  for (const s of bg) {
+    const { key } = keyVon(s);
+    for (const tok of selbstTokens(s)) if (!tokenZuKey.has(tok)) tokenZuKey.set(tok, key);
+  }
+
+  const refByKey = new Map<string, EntscheidRef>();
+  const artikelVon = new Map<string, Set<string>>();   // key → {'OR/41', …}
+  const zitiertKeys = new Map<string, Set<string>>();   // key → {zitierte corpus-keys}
+  for (const s of bg) {
+    const { key } = keyVon(s);
+    refByKey.set(key, refVon(s));
+    artikelVon.set(key, artikelSchluesselVon(s));
+    const cited = new Set<string>();
+    for (const z of s.zitierteEntscheide ?? []) {
+      const tok = kanonZitat(z);
+      if (!tok) continue;
+      const ck = tokenZuKey.get(tok);
+      if (ck && ck !== key) cited.add(ck);   // Selbstzitat nie zählen
+    }
+    zitiertKeys.set(key, cited);
+  }
+
+  // Entscheide je Artikel gruppieren (jeder Fall genau einmal je Artikel).
+  const proArtikel = new Map<string, string[]>();
+  for (const [key, arts] of artikelVon) {
+    for (const a of arts) {
+      const liste = proArtikel.get(a) ?? (proArtikel.set(a, []), proArtikel.get(a)!);
+      liste.push(key);
+    }
+  }
+
+  const out: Record<string, LeitfallRef[]> = {};
+  for (const artikel of [...proArtikel.keys()].sort()) {   // stabile Schlüsselfolge
+    const keys = proArtikel.get(artikel)!;
+    const inSet = new Set(keys);
+    const gewicht = new Map<string, number>(keys.map((k) => [k, 0]));
+    // Topische In-degree: nur Zitierungen von d' ∈ S_A auf d ∈ S_A zählen.
+    for (const d2 of keys) {
+      for (const c of zitiertKeys.get(d2) ?? []) {
+        if (inSet.has(c)) gewicht.set(c, (gewicht.get(c) ?? 0) + 1);
+      }
+    }
+    const refs: LeitfallRef[] = keys.map((k) => ({ ...refByKey.get(k)!, gewicht: gewicht.get(k) ?? 0 }));
+    refs.sort((a, b) =>
+      b.gewicht - a.gewicht
+      || (a.leitcharakter === 'leitentscheid' ? 0 : 1) - (b.leitcharakter === 'leitentscheid' ? 0 : 1)
+      || (a.datum < b.datum ? 1 : a.datum > b.datum ? -1 : 0)
+      || (a.key < b.key ? -1 : a.key > b.key ? 1 : 0));
+    out[artikel] = refs.slice(0, LEITFAELLE_PRO_ARTIKEL);
+  }
+  return out;
+}
+
+export function schreibeKorpus(auswahl: EntscheidSnapshot[], datum: string, root = process.cwd()): { anzahl: number; normBuckets: number; artikelBuckets: number } {
   const PUB = join(root, 'public', 'rechtsprechung');
   const GENKEYS = join(root, 'src', 'lib', 'rechtsprechung', 'erfasste-keys.generated.ts');
 
@@ -40,7 +193,7 @@ export function schreibeKorpus(auswahl: EntscheidSnapshot[], datum: string, root
 
     // regesteKurz aus dem GEGLÄTTETEN Text (normalisiereRegeste strippt u.a. die
     // führende „Regeste"-Überschrift) — sonst stünde „Regeste" doppelt bzw. als Präfix.
-    const regesteKurz = snap.regeste ? kuerzeRegeste(normalisiereRegeste(snap.regeste.text)) : null;
+    const regesteKurz = regesteKurzVon(snap);
     manifest.push({
       key, gericht: snap.gericht, gerichtName: snap.gerichtName, gerichtstyp: snap.gerichtstyp,
       kanton: snap.kanton, nummer: snap.nummer, bgeReferenz: snap.bgeReferenz, datum: snap.datum,
@@ -101,7 +254,9 @@ export function schreibeKorpus(auswahl: EntscheidSnapshot[], datum: string, root
   manifest.sort((a, b) => (a.datum < b.datum ? 1 : a.datum > b.datum ? -1 : 0));
   const manifestObj: EntscheidManifest = { erzeugt: datum, entscheide: manifest };
   writeFileSync(join(PUB, 'register.json'), JSON.stringify(manifestObj, null, 2) + '\n', 'utf8');
-  writeFileSync(join(PUB, 'norm-index.json'), JSON.stringify({ erzeugt: datum, proNorm }, null, 2) + '\n', 'utf8');
+  // Artikel-Ebene (W3) zusätzlich zur Erlass-Ebene — proNorm bleibt unverändert.
+  const proNormArtikel = baueArtikelIndex(auswahl);
+  writeFileSync(join(PUB, 'norm-index.json'), JSON.stringify({ erzeugt: datum, proNorm, proNormArtikel }, null, 2) + '\n', 'utf8');
 
   const keys = manifest.map((m) => m.key).sort();
   writeFileSync(
@@ -115,7 +270,7 @@ export function schreibeKorpus(auswahl: EntscheidSnapshot[], datum: string, root
     'utf8',
   );
 
-  return { anzahl: manifest.length, normBuckets: Object.keys(proNorm).length };
+  return { anzahl: manifest.length, normBuckets: Object.keys(proNorm).length, artikelBuckets: Object.keys(proNormArtikel).length };
 }
 
 /**

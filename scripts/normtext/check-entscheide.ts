@@ -23,6 +23,12 @@ const PUB = join(ROOT, 'public', 'rechtsprechung');
 // grosszügige Reserve) und bei Bedarf deliberat angehoben — er bremst Unfälle, limitiert
 // aber nicht künstlich. Bei Korpus-Ausbau bewusst nachziehen.
 const BUDGET_MB = 35;
+// Eigenes Budget für die eine Datei norm-index.json (W3): die neue Artikel-Ebene
+// (proNormArtikel, keyed 'LAW/ART') fächert breit auf — ein Deckel verhindert, dass
+// der Fan-out still ballooniert. Ist 2.7.2026 ≈ 0.53 MB (Erlass- + Artikel-Ebene);
+// Deckel bewusst fliessend (Ist + grosszügige Reserve, bei Korpus-Ausbau nachziehen),
+// bremst Unfälle, limitiert nicht künstlich (analog BUDGET_MB).
+const NORM_INDEX_BUDGET_MB = 3;
 const AHV = /\b756\.\d{4}\.\d{4}\.\d{2}\b/;   // CH-Sozialversicherungsnummer (darf nicht vorkommen)
 
 const fehler: string[] = [];
@@ -135,12 +141,23 @@ function main() {
     if (refs.length > 1) fehler.push(`aza-Kollision: ${k} von mehreren BGE beansprucht (${refs.join(', ')}) — Fehlzuordnung (§8)`);
   }
 
-  // Norm-Index: jede referenzierte key ⊆ Manifest
-  if (existsSync(join(PUB, 'norm-index.json'))) {
-    const idx = JSON.parse(readFileSync(join(PUB, 'norm-index.json'), 'utf8')) as NormEntscheidIndex;
+  // Norm-Index: jede referenzierte key ⊆ Manifest (Erlass- UND Artikel-Ebene) + Grössen-Budget.
+  const niPfad = join(PUB, 'norm-index.json');
+  if (existsSync(niPfad)) {
+    const idx = JSON.parse(readFileSync(niPfad, 'utf8')) as NormEntscheidIndex;
     for (const [nk, refs] of Object.entries(idx.proNorm)) {
       for (const r of refs) if (!keys.has(r.key)) fehler.push(`norm-index[${nk}]: unbekannter key ${r.key}`);
     }
+    for (const [ak, refs] of Object.entries(idx.proNormArtikel ?? {})) {
+      // Schlüssel 'LAW/ART': genau ein '/' als Trenner (ART-Token kann Buchstaben tragen).
+      if (!/^[^/]+\/[^/]+$/.test(ak)) fehler.push(`norm-index-artikel: ungültiger Schlüssel '${ak}' (erwartet 'LAW/ART')`);
+      for (const r of refs) {
+        if (!keys.has(r.key)) fehler.push(`norm-index-artikel[${ak}]: unbekannter key ${r.key}`);
+        if (typeof r.gewicht !== 'number' || r.gewicht < 0) fehler.push(`norm-index-artikel[${ak}] ${r.key}: ungültiges gewicht ${r.gewicht}`);
+      }
+    }
+    const niMb = statSync(niPfad).size / (1024 * 1024);
+    if (niMb > NORM_INDEX_BUDGET_MB) fehler.push(`norm-index.json-Budget überschritten: ${niMb.toFixed(2)} MB > ${NORM_INDEX_BUDGET_MB} MB (Artikel-Fan-out?)`);
   }
 
   // ERFASST == Manifest-Keys
