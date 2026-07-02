@@ -23,6 +23,21 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 2.7.2026 — Normtext Phase-1-Fundament (rein HTML, 4 von 5 Punkten) + verlässliche-Umwandlung-Spec (Fable-Ultracode) — Branch `feat/normtext-phase1-fundament`
+
+**Auftrag David:** Fable/Ultracode-Untersuchung «verlässliche Umwandlungsstruktur HTML/AKN-XML → Normtext (nur Bund), Tabellen + Links besser als Fedlex», dann **ersten Bau-Schritt bauen (rein HTML, Opus)**.
+
+**Spec (Fable-Ultracode, 30+15 Agenten):** `docs/superpowers/specs/2026-07-02-verlaessliche-normtext-umwandlung-bund.md` — Verdikt **Hybrid «XML-Träger, HTML-Arbiter»** (pro Erlass eine Quelle `source=akn|html`), neues Tor `check:akn-containment`, Nordstern = einwandfreie Tabellen + zielgenaue Links. Verlinkt aus `FAHRPLAN-NORMTEXT-DARSTELLUNG.md §Quell-Architektur`.
+
+**Batch (§7 der Spec), je eigener §6-Schnitt, golden-gegated, Opus:**
+- **P2 Split-sup-Merge** (`extrahiere-fedlex.ts`): gespaltene Absatznummer `<sup>N</sup><sup>bis</sup>` → «Nbis» verklebt, «bis»-Leak weg. **6 Blöcke / 5 Erlasse** (GEBV_SCHKG 1bis · HMG 1bis+2bis · KLV 2bis · CO2_GESETZ 2bis · VRV 1ter). Exponenten-Schutz (72³/m² nie verklebt); AVIG art_13 (aufgehobener Bereich «2bis und 2ter …») bewusst per Guard ausgeschlossen (R7-Follow-up).
+- **P4 Kachel-Fussnoten-Leak** (`parseBildKacheln`): SSV annex_2 «4.77.1 …(Art. 59)379» → «379»-Fussnote entfernt (+ `<dt>/<dd>`-Konsistenz, 0 Kollateral).
+- **P1 sha-Blindstelle** (`sha256Bloecke`): sha deckt jetzt `mehrspaltig.spalten` (Bund-Tabellen-Überschriften+Typen) mit ab — **72 Snapshots re-baselined, nur sha, 0 Content-Drift**.
+- **P5 [tab]-Negativ-Lexikon** (`check:invarianten`): Artefakt-Prüfung `[tab]`/`data-message` über alle Textfelder mit Artikel-Zähl-Register (23 Bestandsstellen/13 Art. als Expected-Fail; neue/zusätzliche `[tab]` → hart). Fail-Pfad getestet.
+- **P3 Drop-Klasse laut (OR 361/362) — DEFERIERT:** braucht korpusweite Kalibrierung der nicht-erfassten `<p>`-Klassen (`man-template-tab-krpr`/`-kpf` u.a.), Keim der §4-Quell-Containment-Arbeit → eigener Schritt, nicht ins Tor gerusht (§1/§6).
+
+**Verifikation:** `npm run gate` GRÜN (tsc/vitest/**golden byte-gleich**/lint/check); 6 Normtext-Tore grün. **Adversariale Gegenprüfung (unabh. Opus, frischer Kontext) BESTANDEN** — 6 Blöcke + SSV-Kachel zeichenweise gegen amtl. Fedlex-HTML, Exponentenschutz korpusweit 0 Fehlklebung, sha-Only 66 Dateien 0 Waisen; `npm run gegenpruefung:ok` quittiert (Hash da837c78). **Nebenbei §14.1:** verwaisten `FAHRPLAN-OPENCASELAW-QUELLEN.md` (Parallel-Session-Analyse) in ROADMAP W2·6 als `[D]` verankert (QS-PH grün).
+
 ## Session 1.7.2026 — Split-View-Breadcrumb klickbar (pane-lokal) — Branch `fix/split-view-breadcrumb-klickbar`, PR + Auto-Merge, Deploy §9 offen
 
 **Bug David:** «Breadcrumbs nicht mehr klickbar.» **Root Cause (systematisch, Browser-verifiziert):** kein Perf-Regressions-Bug —

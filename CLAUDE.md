@@ -321,3 +321,12 @@ Prüfbare Bau-Regeln (jede mit Treue-Vorbehalt):
 `check:suchindex` + einen Reader-Smoke (Ctrl+F/Anker/Print/Fussnote) — **Tempo zählt nur, wenn
 die Treue grün bleibt.** Was zu bauen ist: `ROADMAP.md` → Querschnitt **`QS-PERF`** →
 **`FAHRPLAN-PERFORMANCE.md`** (priorisierter Plan, ultracode-Audit 30.6.2026).
+
+## §16 Framework-APIs live nachschlagen, nicht aus Modellwissen (Anweisung David 1.7.2026)
+
+Bei Fragen zu **Framework-/Library-APIs** (Next.js, React, Vite u. a.) zuerst den
+**Context7-MCP** für die aktuelle, **versions-genaue** Doku konsultieren — nicht aus
+(potenziell veraltetem) Modellwissen antworten. Gilt besonders bei API-Brüchen zwischen
+Versionen (z. B. Next.js Cache Components / `use cache`, `cacheLife`). Betrifft nur
+Fremd-Bibliotheken; Rechtslogik/Normtext bleiben Domänenwissen (§1/§7), eigener Code wird
+direkt gelesen (§5).

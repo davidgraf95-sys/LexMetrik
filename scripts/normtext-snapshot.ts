@@ -325,7 +325,11 @@ function sha256Bloecke(
     text: string;
     items?: Array<{ marke: string; text: string; tiefe?: number }>;
     tabelle?: Array<{ beschreibung: string; betrag: string }>;
-    mehrspaltig?: { kopf?: string[]; zeilen: string[][] };
+    mehrspaltig?: {
+      kopf?: string[];
+      spalten?: Array<{ typ: string; titel: string }>;
+      zeilen: string[][];
+    };
     bild?: { datei: string; alt: string; sha?: string };
     bildKacheln?: Array<{ bild?: { datei: string; sha?: string }; nummer?: string; name?: string }>;
   }>,
@@ -339,8 +343,16 @@ function sha256Bloecke(
         .map((i) => `${i.marke}\t${i.text}${i.tiefe ? `\t${i.tiefe}` : ''}`)
         .join('\n');
       const tabTeil = (b.tabelle ?? []).map((z) => `${z.beschreibung}\t${z.betrag}`).join('\n');
+      // Spalten-Vektor (Bund, kanonisches M10-Modell) trägt die Kopf-TITEL + -Typen —
+      // ohne ihn deckte der sha nur die Zeilen ab, nicht die Tabellen-Überschriften
+      // (Blindstelle: eine Kopf-Drift bliebe unentdeckt). `kopf` bleibt als Kanton-
+      // Legacy-Fallback erhalten (dort ohne `spalten`).
       const mTeil = b.mehrspaltig
-        ? [(b.mehrspaltig.kopf ?? []).join('\t'), ...b.mehrspaltig.zeilen.map((z) => z.join('\t'))].join('\n')
+        ? [
+            ...(b.mehrspaltig.spalten ?? []).map((s) => `${s.typ}\t${s.titel}`),
+            ...(b.mehrspaltig.kopf ? [b.mehrspaltig.kopf.join('\t')] : []),
+            ...b.mehrspaltig.zeilen.map((z) => z.join('\t')),
+          ].join('\n')
         : '';
       // Bilder fliessen über die STABILE Prüfsumme der Bytes in den Daten-Index
       // (nicht über die evtl. gehashte lokale Datei-Adresse) — so bleibt der sha
