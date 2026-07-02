@@ -11,10 +11,7 @@ export interface Problem { id: string | null; meldung: string }
 // Altlast jedesmal rotzumachen. Beim Archivieren/Verlinken einer Datei hier streichen.
 const ARCHIV_BACKLOG = new Set<string>([
   'FAHRPLAN-BEURKUNDUNGS-AUSBAU.md',
-  'FAHRPLAN-BGE-DARSTELLUNG-EINHEITLICH.md',
   'FAHRPLAN-BGER-RECHTSWEG.md',
-  'FAHRPLAN-BS-VORBILDKANTON.md',
-  'FAHRPLAN-ENTSCHEIDSUCHE-AUSBAU.md',
   'FAHRPLAN-FALL-RUECKGRAT.md',
   'FAHRPLAN-FUNDAMENT-UMBAU.md',
   'FAHRPLAN-GMBH-GRUENDUNG.md',
@@ -23,9 +20,7 @@ const ARCHIV_BACKLOG = new Set<string>([
   'FAHRPLAN-KANTONALE-ENTSCHEIDE.md',
   'FAHRPLAN-LUECKEN-SCHLIESSEN.md',
   'FAHRPLAN-NOTARIAT-GRUNDBUCH.md',
-  'FAHRPLAN-PRODUKTAUSBAU-BURGGRABEN.md',
   'FAHRPLAN-RECHTSPRECHUNG.md',
-  'FAHRPLAN-RECHTSSAMMLUNG.md',
   'FAHRPLAN-VERTRAGS-VARIANTEN.md',
 ]);
 
@@ -97,6 +92,10 @@ export function pruefe(
   // (5) max. ein 26x auf wip
   const wip26 = einheiten.filter((e) => e.etikett.asset26x && e.etikett.status === 'wip');
   if (wip26.length > 1) probleme.push({ id: null, meldung: `zwei 26×-Assets gleichzeitig wip: ${wip26.map((e) => e.id).join(', ')}` });
+  // (5b) höchstens EIN 26×-Slot-Inhaber (Etikett-Übergabe); slot:inhaber verlangt 26x:ja
+  const slotInhaber = einheiten.filter((e) => e.etikett.slot === 'inhaber');
+  if (slotInhaber.length > 1) probleme.push({ id: null, meldung: `zwei 26×-Slot-Inhaber: ${slotInhaber.map((e) => e.id).join(', ')}` });
+  for (const e of slotInhaber) if (!e.etikett.asset26x) probleme.push({ id: e.id, meldung: `slot: inhaber ohne 26x: ja` });
   // (7) FAHRPLAN-Link-Check (eingegliedertes QS-PH)
   for (const f of fahrplanDateien) if (!md.includes(f)) probleme.push({ id: null, meldung: `${f} ist nicht aus ROADMAP.md verlinkt` });
 

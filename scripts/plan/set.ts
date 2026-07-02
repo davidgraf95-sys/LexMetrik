@@ -2,7 +2,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { parseEtikett, serializeEtikett } from './etikett';
 
-const FELDER = new Set(['id', 'status', 'of', 'blocker', 'dep', 'kollision', 'worktree', '26x', 'fahrplan']);
+const FELDER = new Set(['id', 'status', 'of', 'blocker', 'dep', 'kollision', 'worktree', '26x', 'fahrplan', 'slot']);
 const CHECKBOX_FUER: Record<string, string> = { done: '[x]', wip: '[~]' };
 
 export function setField(md: string, id: string, feld: string, wert: string): string {

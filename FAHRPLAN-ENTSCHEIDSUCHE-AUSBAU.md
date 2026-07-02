@@ -73,6 +73,8 @@ Den grössten Sofort-Nutzen aus B2 holen.
 - Dateien: `src/components/start/NewsHeader.tsx`, `livesuche.ts`.
 
 ### P5 — Breiten-Ingestion künftiger Entscheide (Server/Build-Zeit, GROSS, höheres Risiko)
+
+> **QS-DATA-Nachtrag (2.7.2026):** P5-Senke ist das DB-Artefakt (E3, `FAHRPLAN-DATENHALTUNG.md`), nicht direkt `public/rechtsprechung/`; die Such-Achse wird langfristig **selbst gehostet** (Edge-Suche E2 über die eigene DB) — P1–P4 (`_search.php`-Live-Suche) bleiben als Zweitkanal/Fallback.
 - Korpus über die 265 kuratierten BGE hinaus (alle Instanzen, Kantone,
   BGer-only, fr/it). **Serverseitig** über den MCP (kein 403) bzw. ES-Bulk/
   HF-Parquet als Backfill.

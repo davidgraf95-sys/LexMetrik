@@ -1,5 +1,9 @@
 # FAHRPLAN VERTRAGS-VARIANTEN — Tiefe & Praxistauglichkeit (Ziel 1000 Vorlagen)
 
+> **§14-gebündelt (Phase 0, 2.7.2026):** Bürgschaft/Ehevertrag/ABV (Punkte F/H/I) sind **gebündelt →
+> Planungs-Heimat `FAHRPLAN-VORLAGEN-AUSBAU.md` V5/V6** (ROADMAP `W3·13`); hier nur Verweis, nicht
+> doppelt pflegen.
+
 **Auftrag David 13.6.2026:** «verschiedene varianten von verträgen mit einfach
 bis experte, auch untergruppen (Manager-Arbeitsvertrag, Lehrvertrag,
 Handelsreisendenvertrag, Heimarbeitsvertrag …) und das gleiche bei allen

@@ -126,7 +126,7 @@ Passt eng auf `[[immer-doppelt-verifizieren]]` + Skill `gegenpruefung`. Vier **d
 
 - **REST-API** `https://mcp.opencaselaw.ch/api`, **No-Auth, CORS `*`** → direkt aus Next aufrufbar. Kern-Read-Endpunkte unquotiert (nur LLM-Endpunkte haben Tageskontingente), nginx ~10–30 req/s/IP → auf Vercel aggressiv cachen. Nützlichste Endpunkte: `GET /api/laws/{abbr}?sr_number=&article=&format=json|xml`, `GET /api/laws/search`, **`GET /api/leading-cases?law_code=OR&article=41`** (Fast-Drop-in „Entscheide zu diesem Artikel"), `GET /api/decisions?query=…`, `GET /api/lookup?q=<docket>`, `GET /api/citations/{id}`, `GET /api/appeal-chain/{id}`.
 - **Bulk:** HF `voilaj/swiss-caselaw`, per-Court-Parquet, 34-Feld-Schema (`export_parquet.py:31-78`, `cited_decisions`=JSON-Array = Graph in Bulk), ~7 GB, täglich. **Statuten NICHT im Parquet** (nur via API oder Repo-Build).
-- **SQLite-Snapshot+Delta:** `artifacts/manifest.json` (sha256-verifiziert), Basis-Snapshot wöchentlich + tägliche Deltas → niedrigste Bandbreite für eigene Kopie. Overkill für stateless Vercel-App.
+- **SQLite-Snapshot+Delta:** `artifacts/manifest.json` (sha256-verifiziert), Basis-Snapshot wöchentlich + tägliche Deltas → niedrigste Bandbreite für eigene Kopie. **ÜBERHOLT (Council 2.7.2026, QS-DATA):** die App bekommt genau so eine eigene Kopie als generator-erzeugtes DB-Artefakt — Snapshot+Delta+Merkle-Manifest ist das passende Bezugsformat für Etappe E3 (`FAHRPLAN-DATENHALTUNG.md`); „stateless" gilt weiter nur für den Client, nicht für die Build-Senke.
 - **Empfehlung Nicht-Load-Bearing:** REST-API direkt (Rang 1, kein Storage, immer frisch), erst bei Latenz/Volumen auf Bulk/Snapshot graduieren, Remote-MCP nur für spätere KI-Assistent-Fläche.
 
 ---

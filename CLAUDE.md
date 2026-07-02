@@ -75,6 +75,12 @@ Katalog = `startseiteConfig.ts` · Vorlagen-Inhalt = die Schemas in
 Assemble-Ergebnis · Behörden-/Schwellen-Stammdaten genau einmal definiert.
 Niemals denselben Fachinhalt an zwei Stellen pflegen.
 
+Für die Korpus-Inhalte (Normtext, Rechtsprechung, Materialien) ist — sobald der
+QS-DATA-Flip (E1, `FAHRPLAN-DATENHALTUNG.md`) vollzogen ist — das generator-erzeugte
+DB-Artefakt die EINE Quelle; `public/*.json` und die prerenderten Seiten sind
+deterministische Projektionen daraus (§7 Build-Regel 6) und werden nie an der DB
+vorbei gepflegt.
+
 ## §6 Refactorings sind verhaltensneutral — und beweisen das
 
 Vor jedem Struktur-Umbau gilt das Protokoll:
@@ -167,6 +173,19 @@ künftige Build/jede neue Norm-Quelle folgt zwingend diesem Muster:
    im `adapter-pdf.ts`, pdfjs Build-Zeit, Body-Spalten-x, Stand/Drift-Token,
    Qualitäts-Tor → sonst ehrlicher Fallback) in
    `bibliothek/normen/norm-vorschau-snapshot-system.md` (§11).
+6. **DB-Artefakt als kanonische Zwischenschicht (Entscheid David/Council 2.7.2026,
+   QS-DATA):** Der Generator DARF die extrahierten Inhalte zuerst in EIN
+   generator-erzeugtes Datenbank-Artefakt (libSQL/SQLite, `daten/lexmetrik.db`)
+   materialisieren; `public/*.json` und die prerenderten Seiten sind dann eine
+   **deterministische Projektion** aus diesem Artefakt. Bedingungen: (i) jede
+   Zeile trägt die Zitat-Ausnahme (a)–(d) als Spalten (Stand, amtliche quelleUrl,
+   Drift-Token/sha; der sichtbare Live-Link kommt aus der Projektion in die UI);
+   (ii) das Paritäts-Tor **`check:paritaet`** beweist die Projektion byte-gleich
+   gegen den bisherigen Generator-Output, solange beide Pfade existieren, danach
+   gegen die committete Projektion; (iii) die Drift-Tore aus Regel 5 bleiben
+   Arbiter gegen die amtliche Quelle; (iv) massgeblich bleibt immer die amtliche
+   Fassung — das DB-Artefakt ist Werk-Zwischenprodukt, nie zweite Wahrheit (§5).
+   Detail: `FAHRPLAN-DATENHALTUNG.md`.
 
 ## §8 Ehrlichkeit gegenüber Nutzern
 
@@ -314,6 +333,13 @@ Prüfbare Bau-Regeln (jede mit Treue-Vorbehalt):
    Markup-Mismatch (stiller Normtext-Verlust) und §5-Mismatches reaktivieren. Bundle-Splitting
    (`manualChunks`) und Datei-Sharding sind erlaubt, solange die Union datengleich/byte-identisch
    bleibt und golden + `check:normtext`/`check:struktur-konsistenz` grün bleiben.
+6. **Long-Tail on demand bleibt inhaltsvollständig.** Wird ein Inhalt jenseits des
+   prerenderten Schaufensters erst on-demand (aus dem QS-DATA-Artefakt / einer
+   Edge-Query) geladen, gelten dieselben Treue-Pflichten wie prerendert: der
+   vollständige Text steht im DOM (Ctrl+F), Anker/Deep-Links und Print/PDF-
+   Vollständigkeit funktionieren, Provenienz (§7 a–d) ist sichtbar, Lade-/Fehler-
+   zustand ist ehrlich (§8) mit amtlichem Live-Link als Fallback. Ein on-demand-
+   Pfad, der kürzt oder nur Ausschnitte lädt, ist Logikverlust.
 
 **Operationalisierung (die «Garantie»):** das Tor **`check:perf-budget`** (Lighthouse-CI auf
 `/gesetze/bund/OR` + Startseite unter 4× CPU, gestaffelte CLS/LCP/TBT/Bundle-Schwellen) in der

@@ -1,5 +1,9 @@
 # FAHRPLAN — Basel-Stadt als Vorbildkanton (beste Gesetzesseite im Netz)
 
+> **§14-gebündelt (Phase 0, 2.7.2026):** Zulieferer des **Kanton-Gesetze-Bündels** (ROADMAP `W3·12`).
+> Führende Detailquelle dort = `FAHRPLAN-GESETZE-IMPORT-3TIER.md`; hier leben die BS-Sofortfixes
+> S1–S13 (korpusweiter Adapter-Hebel VOR jedem Bulk). Ausbau erst, wenn der 26×-Slot frei ist.
+
 **Erstellt:** 23.6.2026 (Auftrag David: BS fundiert über alle Aspekte prüfen + nützlicher machen, «beste Seite im Netz»; Methode: ultracode-Workflow bs-vorbildkanton-audit, 53 Agenten, 8 Dimensionen, adversarial verifiziert). **Status: AKTIVE DIREKTIVE.** BS-Fixes im Extraktor/Systematik wirken korpusweit (alle Tier-A-Kantone), darum zuerst hier perfektionieren.
 
 ## Bestätigte Befunde (43, adversarial verifiziert)

@@ -44,7 +44,7 @@ Der Cron `check:fedlex-versionen` sieht **nur gepinnte** ELIs (`scripts/fedlex-p
 Fedlex hat 56 future-dated Konsolidierungen im Triplestore (z. B. OR ab 2026-10-01, StGB ab 2026-10-01) — **kein Fehler, sondern Re-Extraktions-Horizont**.
 - **Fix:** je Erlass das nächste In-Kraft-Datum > heute als **Verfallsregister-Eintrag** (§11 Pflegebedarf) andocken an das bestehende Drift-/Verfall-System (`scripts/verfall-*.ts`, `check:verfall`). Mehrwert = datierte Wiedervorlage statt flüchtiger Warnung.
 
-**Betroffene Dateien:** `scripts/fedlex-cache.sh` · `scripts/fedlex-pins.ts` · `scripts/fedlex-versionen-pruefen.ts` · `src/lib/normtext/pdf-embed.ts` · `scripts/normtext/pdf-fetch.ts` · `public/normtext/bund/*.json` (regeneriert) · `public/normtext/register.json` (regeneriert) · Verfallsregister.
+**Betroffene Dateien:** `scripts/fedlex-cache.sh` · `scripts/fedlex-pins.ts` · `scripts/fedlex-versionen-pruefen.ts` · `src/lib/normtext/pdf-embed.ts` · `scripts/normtext/pdf-fetch.ts` · `public/normtext/bund/*.json` (regeneriert) · `public/normtext/register.json` (regeneriert) · Verfallsregister. **QS-DATA-Kopplung:** sobald der Generator-Flip (E1, `FAHRPLAN-DATENHALTUNG.md`) vollzogen ist, schreibt der Currency-Lauf in das DB-Artefakt; `public/normtext/` bleibt byte-gleiche Projektion (`check:paritaet`) — Paket 1 baut keinen zweiten Pfad.
 
 **Tore:** bestehend `check:normtext`, `check:normtext-netz`, `check:fedlex-versionen`, `check:tabellen`, `check:invarianten`, `golden:vergleich`; **neu** die Coverage-Assertion. **Gegenprüfung (Risiko-Pfad):** adversarialer Zweitpass je re-extrahiertem Erlass gegen die Filestore-HTML-Quelle — die teuersten Bugs (Tabellen-Drop, Footnote-Leak, `bis`/`ter`-Verlust) sassen real hier.
 
