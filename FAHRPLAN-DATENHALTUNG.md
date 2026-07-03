@@ -675,14 +675,16 @@ Dump-Manifest, Golden. Tokens/Secrets nur serverseitig, nie im Client.
 dem SQLite-Artefakt + FTS5 (libSQL-Server oder schlanke Read-only-API); Vercel ruft diese eigene
 API read-only auf. Turso nur *optionale* gehostete Bequemlichkeit, nie Abhängigkeit; das Artefakt
 ist portabel (Anbieterwechsel = Datei umziehen). **Aktualitäts-Läufer** (Cron auf eigenem Server /
-GitHub-Actions): reingest → Drift-Tore → atomic Artefakt-Swap → Manifest-Commit; erkannter
+GitHub-Actions): reingest → Drift-Tore → atomic Artefakt-Swap → Manifest-Commit → **`npm run gen:zaehler`**
+(Startseiten-Zähler «n Erlasse/Entscheide» sind buildzeit-generiert; ohne Regen wird `check:zaehler`
+rot — gilt für JEDE Korpus-Erweiterung: Fedlex-Currency, E3-Serving, E5/E6); erkannter
 Quell-Drift **alarmiert**, statt still zu veralten.
 
 ### 6.1 Import-Läufer — Zweiteilung nach Herkunft (kuratiert = Handschritt, maschinell = Auto)
 
 Ausbau des §6-Solls zum konkreten Läufer: **Cron → Drift-Erkennung → Re-Extraktion → Tore
 (paritaet/datenhaltung/normtext/invarianten inkl. Fassungs-Diff §3.3) → Enrichment-Pass +
-`norm_rangliste`-Rebuild → atomic Artefakt-Swap → Dump-Manifest-Commit → Auto-PR.** Harte Grenze
+`norm_rangliste`-Rebuild → atomic Artefakt-Swap → Dump-Manifest-Commit → `gen:zaehler` → Auto-PR.** Harte Grenze
 (Doktrin): **Auto-PR ja, Auto-Merge eines Rechtstext-Updates NEIN** — kuratierte Normtext-Re-Extraktion
 bleibt gegengeprüfter **Handschritt**. Für **maschinelle Masse** (`kuratierung='maschinell'`, §8-markiert)
 ist **Auto-Merge nach grünen Toren** vertretbar. Zwei Herkünfte, EIN Artefakt:
@@ -845,6 +847,10 @@ ENTSCHIEDEN, nicht mehr offen):**
   Renderer?» (3 Reader + 1 Kontext-Layer, §11.1).
 
 ## 11. Darstellung (drei Reader + EIN Kontext-Layer)
+
+> **UI-Grammatik der Verzahnung** (Chips/Badges/Gruppen/⧉) detailliert `FAHRPLAN-VERZAHNUNG-UI.md`
+> (ROADMAP **W2·7-VZUI**, David 3.7.2026); die §11.2-Leitfälle-Chips werden dort konsumiert/
+> vereinheitlicht, der Weiche-B-Masse-Anteil ist dessen V2.
 
 > **Neu 3.7.2026 (Fundament-Plan §5).** Die Darstellung ist Teil des Fundaments: sie verdrahtet das
 > bestehende Datenmodell (§0bis) sichtbar und macht die Verzahnung für Nicht-Juristen auffindbar.
