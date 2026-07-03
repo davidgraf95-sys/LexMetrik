@@ -305,10 +305,14 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
 >   mit-resetten. *(S1+S2 bündeln, gleiches Subsystem.)*
 >
 > **Einzeln:**
-> - **I1 Seitenleisten-/Rubriken-Reihenfolge** → `navigation.ts` Z.171–175 SSoT-Array auf
->   **Gesetze → Rechtsprechung → Materialien → Rechner → Vorlagen** umsortieren (treibt Sidebar UND
->   Startseite; Nebenwirkung SEO/Prerender + `navigation.test.ts`). Klein, verzahnt mit W2·5/Startseite.
-> - **I2 Branding-Neuausrichtung** *(eigener Messaging-Schritt, verzahnt mit M-Merker unten):* weg von
+> - **I1 Seitenleisten-/Rubriken-Reihenfolge** → **✅ gebündelt in W2·5c (3.7.2026):** `navigation.ts`-
+>   SSoT-Array auf **Gesetze → Rechtsprechung → Materialien → Rechner → Vorlagen** — Bau im
+>   Plumbing-Schritt von `FAHRPLAN-STARTSEITE-V3.md` §10 (treibt Sidebar UND Startseiten-Kacheln).
+> - **I2 Branding-Neuausrichtung** → **✅ gebündelt in W2·5c (3.7.2026):** das geforderte
+>   **Messaging-Konzept ist erledigt** (Ultracode-Recherche + DMAD-Council, gegen «nicht nach KI
+>   klingen» geprüft; Wortlaut + SSoT-Architektur `seo.ts`→Projektionen + Tor `check:seo-index` in
+>   `FAHRPLAN-STARTSEITE-V3.md` §6, Herleitung `bibliothek/recherche/startseite-v3-design.md`);
+>   Ausrollen = Bausequenz-Schritt 1 des W2·5c. *(Ursprünglicher Auftragstext:)* weg von
 >   «Berechnen statt KI» → **KI-freies Übersichtstool über amtliche Quellen, inkl. Rechner + Vorlagen**;
 >   «KI-frei» als Vertrauensmerkmal (positiv), nicht als Headline. Surfaces ohne SSoT (§5-Geruch,
 >   mitkonsolidieren): `index.html` (title/meta/og/twitter), `seo.ts` (`SITE_TITEL`/`SITE_DESCRIPTION`/
@@ -317,8 +321,9 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
 >   ausrollen + auf EINE SSoT ziehen (`seo.ts` Quelle, `index.html` daraus). Doks-Wording
 >   (ROADMAP/PROJEKTBESCHRIEB «deterministisch statt KI-geschätzt») separat nachziehen.
 >
-> **Merker (kein Bau jetzt) → Geparkt:** grundsätzliche **Startseiten-Überarbeitung**, später mit
-> **ultracode**; abgleichen mit *Redesign-zurückgestellt* (16.6.) + FUNDAMENT-UMBAU-Startseitenrahmen.
+> **Merker Startseiten-Überarbeitung: ✅ entparkt 3.7.2026 → Schritt W2·5c** (Ultracode-Recherche
+> + bindendes Council-Verdikt liegen vor; Redesign-zurückgestellt 16.6. + FUNDAMENT-Startseitenrahmen
+> dort abgeglichen).
 
 ### Welle 1 — Kern: Norm → Werkzeug → Schriftsatz + die Alltags-Klingen
 
@@ -385,8 +390,8 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   Chunk (FlexSearch 17 kB gz, NICHT im Haupt-Bundle — Task 4.4); Lib+Index ~4 MB gz erst auf erste
   Suche. Zitat-/Term-Suche stark («243 ZPO» → Art. 243 ZPO; Notwehr→Art. 16 StGB), Deklinations-
   Phrasen unscharf (§8-ehrlich). Snippet + Sprung `#art-`. Visuell bestätigt.
-  **Offen:** Kanton-Volltext im Index nachziehen · **Startseiten-Modul-Rahmen** (FUNDAMENT-UMBAU
-  Phase 0, eigener Worktree, Visualdiff-Tor).
+  **Offen:** Kanton-Volltext im Index nachziehen · ~~Startseiten-Modul-Rahmen~~ → **wird in W2·5c
+  gebaut** (Modul-Registry, `FAHRPLAN-STARTSEITE-V3.md` §4 — FUNDAMENT-Vorleistung).
 - [~] **5b · Reader-Darstellung Bund** *(GESETZESDARSTELLUNG-BUND, `[OF]`, eigener Worktree)* —
   <!-- @meta id: W2·5b · status: wip(reader-wt) · of: ja · blocker: null · dep: [] · kollision: [src/pages/gesetz-leser/inhalt.tsx, src/pages/gesetz-leser/parts.tsx, src/components/normtext/ArtikelBody.tsx] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-GESETZESDARSTELLUNG-BUND.md -->
   konsolidierter QA-Sweep der **Bund-Gesetzesdarstellung** (29.6.2026): 11 Defekt-/Ausbau-Punkte
@@ -435,6 +440,24 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
     in `extrahiere-fedlex.ts` ablösen, «buggigste Stelle, fachlich wertvollster Umbau»): POC an einem
     komplexen Artikel gegen golden, zeitlich **VOR dem Normtext-Freeze** (Phase 1, `FAHRPLAN-GESAMTAUFBAU.md`);
     nur bei bestandenem POC umstellen — sonst bauen E0/E1 auf dem alten Parser.
+- [ ] **5c · Startseite V3 + Branding I2** *(STARTSEITE-V3, `[OF]`, eigener Worktree; Auftrag David
+  <!-- @meta id: W2·5c · status: ready · of: ja · blocker: null · dep: [] · kollision: [src/pages/Startseite.tsx, src/components/start, src/lib/navigation.ts, src/lib/seo.ts, index.html, tailwind.config.js, src/components/layout/Topbar.tsx, scripts/prerender.ts] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-STARTSEITE-V3.md -->
+  3.7.2026)*. Neubau der Einstiegsseite: **modular** (Modul-Registry als FUNDAMENT-Vorleistung),
+  einfacher Einstieg in alle Funktionen, willkommend + modern OHNE Startup-Look. **Design-Richtung
+  durch DMAD-Council BINDEND entschieden** (Delegation David): Hybrid «A-Basis + Brass-Hero» als
+  Schalter-Liste — `bg-brass-100`-Hero mit integrierter Suche als einzige Wärme-Dosis (Fallback
+  `bg-surface`), KEINE Deko-SVG/Badges/XL-Typo/Gruss-Wort; Schnellrechner VOR den Kacheln;
+  Favoriten → «Zuletzt verwendet»; Zeiterfassung als Sektion auf `/rechner` (keine neue Route,
+  `ERWARTETE_ROUTEN` bleibt 57); H1 wird Value Proposition, I2-Messaging-SSoT in `seo.ts` +
+  neues Tor `check:seo-index`. **Bündelt:** geparkten Startseiten-Merker (30.6.) + I1
+  Sidebar-Reihenfolge + I2 Branding + W2·5-Startseiten-Modul-Rahmen + Redesign-zurückgestellt
+  (16.6., Kernideen im Council verwertet). **Bau-Spec (bau-fertig für autonome Opus-Session,
+  10 verbindliche Auflagen + erzwungene Bausequenz Plumbing→Hero-zuletzt):**
+  `FAHRPLAN-STARTSEITE-V3.md`; Herleitung + volles Council-Verdikt:
+  `bibliothek/recherche/startseite-v3-design.md`. **Auflagen-Kern:** Status-Wording §8-ehrlich
+  (kein «jede Angabe»-Absolutum, kein «geprüfte Bausteine»), Kontrast-MESSUNG vor Merge,
+  golden byte-gleich, e2e-Anker erhalten, §12-Koordination (tailwind↔W3·14, seo/prerender↔SEO-A11Y,
+  Topbar/UniversalSuche↔E2-Suche), Pflicht-Screenshot-Serie + Abnahme-Mappe. Trailer `Roadmap: W2·5c`.
 - [ ] **6 · Konsultieren-Klingen** *(`[OF]`, amtlich)*:
   <!-- @meta id: W2·6 · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->
   - **Mehrsprachiger Normvergleich DE/FR/IT** (Auslegungswerkzeug, Art. 14 PublG — alle drei
@@ -594,9 +617,9 @@ Ja** (§9), aus sauberem HEAD-Worktree (§12).
   `archiv/FAHRPLAN-PRODUKTAUSBAU-BURGGRABEN.md` §P2.
 - **Markt-Themen** — Hosting (Infomaniak), Domain `lexmetrik.ch`, Zahlung (Payrexx/Datatrans/TWINT),
   Login/Pro.
-- **Grundsätzliche Startseiten-Überarbeitung** *(Merker David 30.6.2026, später mit `ultracode`)* —
-  noch nichts Konkretes; abgleichen mit *Redesign-zurückgestellt* (16.6.) + FUNDAMENT-UMBAU-
-  Startseitenrahmen (W2·5) + Branding-Neuausrichtung (I2 im Auftrags-Eingang 30.6.).
+- ~~Grundsätzliche Startseiten-Überarbeitung~~ — **✅ ENTPARKT 3.7.2026 → Welle 2 · Schritt 5c**
+  (Ultracode-Recherche + bindendes Council-Verdikt; bündelt Redesign-zurückgestellt 16.6.,
+  FUNDAMENT-Startseitenrahmen, I1 + I2; Spec `FAHRPLAN-STARTSEITE-V3.md`).
 - **Live-Rechtsprechung** — §4-blockiert (s. Verifikations-Blockaden).
 - **Betriebs-Instrumente (später):** Sentry (erst bei Traffic; A5-Fehler-Link deckt jetzt) · CodeQL ·
   `npm audit` als Prüf-**Meldung** (nie Stopper) · Claude-Code-PR-Action (bewusster Entscheid) —
