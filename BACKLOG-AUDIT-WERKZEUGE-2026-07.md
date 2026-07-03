@@ -32,7 +32,7 @@
 - [ ] **`he`** statt handgepflegter HTML-Entity-Tabelle (`scripts/normtext/html-entities.ts`) — 2231 vs. ~90 Entities; `&ge;`/`&le;` haben real Tarif-Schwellen verfälscht. → verortet: ROADMAP W2·5b (N3; golden-Update-Verfahren dort)
 - [ ] **`fast-check`** (Property-Tests) für die Staffel-Engines (`src/tests/tarifInvarianten.test.ts`) — fängt Bandgrenzen-Off-by-one; Dev-Dependency, seed-deterministisch (§2). → LERNPHASE-AB
 - [ ] **Nebenläufigkeit** (`p-limit`, Concurrency 4–8) in den Fetch-Schleifen (`scripts/normtext-snapshot.ts`, `check-drift.ts --netz`) — I/O-bound, Faktor ~Concurrency; Merge bleibt `sort()` (deterministisch). → FAHRPLAN-DATENHALTUNG §6
-- [ ] **Gate-Kette parallelisieren** (`package.json check` via `Promise.all`/spawn) — ~9,6 s → ~2–3 s; Bordmittel. → LERNPHASE-AB
+- [x] **Gate-Kette parallelisieren** (`package.json check` via `Promise.all`/spawn) — ~9,6 s → ~2–3 s; Bordmittel. → LERNPHASE-AB **✅ 3.7.2026 (`scripts/check-parallel.ts`, Concurrency CPU−1): seriell 12,7 s → parallel 5,0 s (10-Kern); alle 20 Sub-Checks read-only verifiziert; `check:seriell` als Fallback; §6.1 volle Rot-Ausgabe getestet.**
 
 **PILOT (erst messen — §7):**
 - [ ] **B1 · Fedlex-DOM-Parser** (`linkedom`/`cheerio`) statt Regex-Tiefenzähler in `extrahiere-fedlex.ts` — buggigste Stelle des Repos; **fachlich wertvollster Umbau**; POC an einem komplexen Artikel gegen golden. → W2·5b + GESAMTAUFBAU Phase 1 (vor Freeze)
