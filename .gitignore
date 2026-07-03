@@ -57,3 +57,4 @@ bibliothek/.gegenpruefung-pending
 
 # QS-DATA: DB-Artefakt (Werk-Zwischenprodukt, aus JSON reproduzierbar)
 daten/
+.env*
