@@ -483,12 +483,34 @@ OR/ZGB-Renumerierungen, bis/ter). Darum bei jedem neuen `erlass_fassungen`-Eintr
        Turso-Embedded-Replica edge-fähig) = der E2-POC-Zuschnitt; cold = der 58-GB-Vollkorpus-Index
        bleibt server-only.
     2. **Pagination/Streaming by design** (4,5-MB-Payload-Wand, §4) — nie Notfall-Fix.
-    3. **Ein-Renderer-Leitplanke als DoD** (§11): Schaufenster (prerendert) und Masse (on-demand
-       Edge) rendern mit derselben Reader-Komponente; Performance darf nur das Laden spalten (§15.6),
-       nie die Komponente — sonst entsteht schleichend eine «abgespeckte Massen-Darstellung».
+    3. **Ein-Renderer-Leitplanke als DoD** (§11.1): Schaufenster (prerendert) und Masse (on-demand
+       Edge) rendern mit **DERSELBEN Reader-Komponente** je Doktyp. Performance darf nur das **Laden**
+       spalten (§15.3 lazy/off-critical-path · §15.6 on-demand bleibt inhaltsvollständig — voller Text
+       im DOM/Ctrl+F, `#art_`-Anker, Print/PDF, Provenienz §7 a–d, ehrlicher Lade-/Fehlerzustand mit
+       amtlichem Live-Link), **nie die Komponente** — sonst entsteht schleichend eine «abgespeckte
+       Massen-Darstellung» (Logikverlust). Die künftige **Long-Tail-Route** `/rechtsprechung/:key`
+       (E3, §5 E3-Block: Fallback auf on-demand-Edge-Fetch bei nicht-prerenderten Keys) MUSS dieselbe
+       Reader-Komponente wie das Schaufenster mounten; ein zweiter «Massen-Reader» ist verboten.
     - **Turso erst jetzt provisionieren** (Entscheid 10.3 unverändert). **TOR/DoD:** Suchtreffer-
       Stichprobe gegen amtliche Quelle; `check:perf-budget`; Payload-Grenz-Test (bewusst grosse
       Antwort → paginiert, nie 500).
+  - **E2-Vorarbeiten ✅ (W2·6-DATA, 3.7.2026, ohne Turso).** Alles gebaut, was OHNE die
+    Turso-Provisionierung (David-Handschritt) geht: (1) **hot-FTS build-time** in
+    `datenhaltung:build` — `fts_artikel` (external content über `artikel`, Text aus `bloecke_json`,
+    24858 Zeilen) in `daten/normtext.db`; `fts_entscheide_schaufenster` (standalone, 342
+    Schaufenster aus den Blob-Einträgen) in `daten/rechtsprechung.db`; Tokenizer exakt
+    `unicode61 remove_diacritics 2` (diakritik-insensitiv DE/FR/IT verifiziert). `fts_entscheide_masse`
+    nur als Schema-Kommentar (cold, E3). **HOT-Replika 178,41 MiB / 1024 MiB Budget → OK**
+    (normtext.db 139,42 · rechtsprechung.db 38,99). FTS-Schatten empirisch bit-stabil (2 Builds
+    identisch), aber aus dem Dump-Manifest **ausgeklammert** (nur Quell-Tabellen tragen den
+    Determinismus-Beweis; FTS = rebuildbare, plattformabhängige Ableitung — `manifest.ts`/`tabellen()`).
+    (2) **Such-Query-Modul** `scripts/datenhaltung/suche.ts` (`sucheArtikel`/`sucheEntscheide`,
+    bm25 + snippet, **Pagination by design** Default-Limit 20/Max 50, Antwort NIE mit Volltext —
+    nur id/titel/snippet/fundstelle) + Unit-Tests inkl. Payload-Grenz-Test (Antwort << 4,5 MB).
+    (3) **`api/suche.ts`** — read-only Edge-Funktion, dependency-frei (Turso-HTTP `/v2/pipeline`),
+    ohne Env-Vars **ehrlicher 503** (Client-Index bleibt Fallback, §8); Query-Logik mit (2) GETEILT
+    (§5). **Offen bleibt NUR:** Turso provisionieren (2 Env-Vars in Vercel, David-Handschritt) +
+    Anbindung als zusätzliche Treffergruppe in der bestehenden `universalSuche` (§11.3 b).
 - **E3 · BGer-Massen-Import (26×-Slot!).** voilaj-Parquet konsumieren (bger ~191k), Dedup
   `make_canonical_key`, `kuratierung:'maschinell'`, amtlicher bger.ch-Link je Zeile; DB-only
   (nicht nach `public/` projiziert); Long-Tail-Route `/rechtsprechung/:key` fällt bei
