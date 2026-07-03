@@ -13,6 +13,7 @@
 
 import { FEDLEX, type FedlexGesetz } from '../fedlex';
 import { BUND_STUBS } from './bund-stubs.generated';
+import { GRUNDART_SEED } from './grundart.generated';
 import { INTERNATIONAL_EXTERN } from './international-extern';
 import { PDF_EMBED } from './pdf-embed';
 
@@ -28,6 +29,17 @@ export type Sprache = 'de' | 'fr' | 'it';
 //                   Angezeigte IST die amtliche Fassung (§7/§8, kein Extraktionsrisiko).
 // 'nur-live-link' = nur Link zur amtlichen Quelle (kein In-App-Text).
 export type ErlassStatus = 'snapshot' | 'pdf-embed' | 'nur-live-link';
+
+// Render-dominante Grundart (§2.2 FAHRPLAN-GESETZES-UX.md, W2·5d). Steuert die
+// Designvorschrift je Erlass; Datengrundlage ist die UX-Audit-Klassifikation
+// (grundart.generated.ts, Seed per key). Deklariert (§2), nie zur Laufzeit geraten.
+export type Grundart =
+  | 'KODIFIKATION' | 'STANDARD_ERLASS' | 'ERLASS_MIT_ANHANG'
+  | 'FLACHER_KURZERLASS' | 'STAATSVERTRAG' | 'KANTON'
+  | 'PDF_EMBED' | 'LIVE_VERWEIS';
+
+export type ErlassTyp =
+  | 'gesetz' | 'verordnung' | 'staatsvertrag' | 'verfassung' | 'sonstiges';
 
 export interface ErlassRegistereintrag {
   /** == Snapshot-Datei-Stamm ohne .json: 'OR', 'GEBV_SCHKG', 'BE-161.12'. */
@@ -54,6 +66,19 @@ export interface ErlassRegistereintrag {
   /** Nur status 'pdf-embed': Pfad zum gehosteten amtlichen PDF (relativ zu
    *  public/normtext, z.B. 'pdf/EMRK.pdf'). sha/Bytes stehen in pdf-index.json. */
   pdfPfad?: string;
+  /** Render-dominante Grundart (§2.2). Bei Assembly aus GRUNDART_SEED gemerged
+   *  (mitGrundart, Match per key). Präsenz für snapshot/pdf-embed erzwingt das Tor
+   *  check:grundart (§5.2); TS bleibt optional, weil die vier Register-Quellen —
+   *  darunter die auto-generierte bund-stubs — heterogen sind. */
+  grundart?: Grundart;
+  /** Behebt den Heuristik-Bug «Verordnung als Bundesgesetz betitelt» (§5.1):
+   *  das Kopf-Label leitet sich hieraus ab (G2b), nicht aus rechtsgebiet+ebene. */
+  erlassTyp?: ErlassTyp;
+  /** Nur KANTON: §-vs-Art.-Etikett aus Signal paragrafZaehlung. NUR sichtbares
+   *  Label — NIE der Anker (K2/R8, Anker bleibt art-<token>). entwurf bis
+   *  Kanton-Verifikation gegen die amtliche Quelle (K6/§8). */
+  bestimmungsEtikett?: 'art' | 'paragraf';
+  bestimmungsEtikettStatus?: 'entwurf';
 }
 
 /** Anzeige-Reihenfolge + Labels der Sach-Achsen (Übersicht Bund). */
@@ -75,9 +100,26 @@ export const GEBIET_RANG: Record<Rechtsgebiet, number> = Object.fromEntries(
   GEBIETE.map((g, i) => [g.id, i]),
 ) as Record<Rechtsgebiet, number>;
 
+// Merged die render-dominante Grundart (+ erlassTyp) aus der UX-Audit-
+// Klassifikation (GRUNDART_SEED, §5) per key in jeden Eintrag. Reine Daten-
+// Projektion (§3/§5): browse-manifest.ts liest diese Felder NICHT, darum bleibt
+// public/normtext/register.json byte-gleich (golden). Fehlt ein Seed-Eintrag,
+// bleibt grundart undefined → check:grundart meldet die Lücke lesbar (§5.2).
+function mitGrundart(e: ErlassRegistereintrag): ErlassRegistereintrag {
+  const seed = GRUNDART_SEED[e.key];
+  if (!seed) return e;
+  return {
+    ...e,
+    grundart: seed.grundart,
+    ...(seed.erlassTyp ? { erlassTyp: seed.erlassTyp } : {}),
+    ...(seed.bestimmungsEtikett ? { bestimmungsEtikett: seed.bestimmungsEtikett } : {}),
+    ...(seed.bestimmungsEtikettStatus ? { bestimmungsEtikettStatus: seed.bestimmungsEtikettStatus } : {}),
+  };
+}
+
 // ── Bundesgesetze (27) — Schlüssel == Snapshot-Datei (UPPERCASE). SR/Titel
 //    aus den verifizierten ELI-Pins in fedlex.ts (§7), Gebiet deklariert. ──────
-export const ERLASS_REGISTER: ReadonlyArray<ErlassRegistereintrag> = [
+export const ERLASS_REGISTER: ReadonlyArray<ErlassRegistereintrag> = ([
   // Privatrecht
   bund('ZGB', 'ZGB', 'Schweizerisches Zivilgesetzbuch', '210', 'privat', 1),
   bund('OR', 'OR', 'Bundesgesetz betreffend die Ergänzung des ZGB (Obligationenrecht)', '220', 'privat', 2),
@@ -342,7 +384,7 @@ export const ERLASS_REGISTER: ReadonlyArray<ErlassRegistereintrag> = [
   // ── pdf-embed: amtliches PDF in-app (kein extrahierbarer Volltext-HTML),
   //    z.B. EMRK, New Yorker Schiedsspruch-Übk. (§7/§8). ──
   ...PDF_EMBED,
-];
+] as ErlassRegistereintrag[]).map(mitGrundart);
 
 // Bund-Eintrag mit Default-Sprache de + status 'snapshot'. fedlexKey default ==
 // key, wenn der FEDLEX-Schlüssel identisch ist (sonst explizit übergeben).
