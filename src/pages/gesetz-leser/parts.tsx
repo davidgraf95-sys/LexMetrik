@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, memo, type ReactNode } from 'react';
+import { useState, memo, type ReactNode } from 'react';
 import { ArtikelBody, FnRef } from '../../components/normtext/ArtikelBody';
 import type { InternRefs } from '../../components/NormText';
 import { trenneAenderungshistorie, labelMitBereich, artikelGanzAufgehoben } from '../../lib/normtext/darstellung';
@@ -8,7 +8,7 @@ import { NormChip } from '../../components/vorlagen/ui';
 import { KantenChip } from '../../components/verzahnung/KantenChip';
 import { MehrKante } from '../../components/verzahnung/MehrKante';
 import { usePaneSteuerung } from '../../components/layout/usePaneLayout';
-import { leitfaelleFuerArtikel, type LeitfallRef } from '../../lib/rechtsprechung/norm-index';
+import type { LeitfallRef } from '../../lib/rechtsprechung/norm-index';
 import type { BrowseErlass } from '../../lib/normtext/browse-typen';
 import type { NormSnapshot } from '../../lib/normtext/typen';
 import { margStufeStil, fnTextMitLinks, romanFrei } from './helpers';
@@ -17,103 +17,38 @@ import { margStufeStil, fnTextMitLinks, romanFrei } from './helpers';
 // = `gewicht` aus dem Shard), Rest hinter «+n weitere». Bewusst klein, kein Panel.
 const LEITFAELLE_SICHTBAR = 5;
 
-// requestIdleCallback mit garantiert feuerndem Fallback (§15.3) — hält den
-// Shard-Fetch vom Erstpaint fern. «Garantiert» heisst BEIDE Zweige (CI-Befund
-// W2·7-VZUI): ein vorhandenes rIC kann auf ausgelasteten Geräten beliebig lange
-// ausgehungert werden (der Main-Thread wird nie idle) — die rIC-`timeout`-Option
-// erzwingt den Lauf spätestens nach 1200 ms, identisch zum setTimeout-Zweig
-// ohne rIC. Erstpaint/LCP unberührt (feuert weiterhin bevorzugt im Leerlauf).
-function beiLeerlauf(cb: () => void): () => void {
-  if (typeof window === 'undefined') return () => {};
-  const w = window as typeof window & {
-    requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number;
-    cancelIdleCallback?: (id: number) => void;
-  };
-  if (w.requestIdleCallback) {
-    const id = w.requestIdleCallback(cb, { timeout: 1200 });
-    return () => w.cancelIdleCallback?.(id);
-  }
-  const id = window.setTimeout(cb, 1200);
-  return () => window.clearTimeout(id);
-}
-
 // «Leitfälle zu diesem Artikel» (FAHRPLAN-DATENHALTUNG §11.2, Weiche B): Chip-Zeile
-// analog «Verweise», gespeist LAZY aus dem erlass-lokalen Shard (nie das 536-KB-
-// Gesamt-JSON eager). Jeder Chip → Entscheid + «⧉ daneben öffnen» (Split-View-Muster
-// aus dem KontextPanel). Maschinelle Zuordnung, §8 offengelegt. Eigene memo-Komponente,
-// damit der Fetch/State jedes Artikels isoliert bleibt (§15.4).
+// analog «Verweise». V1a-Endzustand (CI-Befund W2·7-VZUI, 3 Iterationen): die Zeile
+// ist ein REINER Renderer — die Daten kommen als Prop vom Reader, der den erlass-
+// lokalen Shard GENAU EINMAL idle lädt (inhalt.tsx). Vorher fetchte jede der ~1000
+// Zeilen grosser Erlasse selbst (idle-Herde: >13 s Long-Tasks im 20×-Throttle,
+// ★ nach ~15 s; ein Sichtbarkeits-Ansatz je Zeile scheiterte am Hydrations-Drift).
+// Ein Fetch + ein setState auf Reader-Ebene: kein Herden-Jam, kein Race — memo
+// re-rendert nur Artikel, deren `leitfaelle`-Prop wirklich wechselt (§15.4).
 //
-// V1.2 (W2·7-VZUI): Chips = geteilter KantenChip (Dichte-Regel: ★-Glyph als EIN
-// Zusatz, aria-label aus dem StatusBadge-Vokabular), «+n weitere» = MehrKante.
-// `normZitat` («Art. 957 OR») wandert als ?norm= an den Entscheid-Link — der
-// EntscheidLeser springt damit zur ERSTEN Erwägung, die den Artikel zitiert
-// (Auftrag David 3.7.2026: Gesetz→Entscheid landet an der Fundstelle; keine
-// Fundstelle ableitbar → ehrlicher Seitenanfang, §8).
-const LeitfallZeile = memo(function LeitfallZeile({ registerKey, artikel, normZitat }: {
-  registerKey: string; artikel: string;
+// Chips = geteilter KantenChip (Dichte-Regel: ★-Glyph als EIN Zusatz, aria-label
+// aus dem StatusBadge-Vokabular), «+n weitere» = MehrKante. `normZitat`
+// («Art. 957 OR») wandert als ?norm= an den Entscheid-Link — der EntscheidLeser
+// springt zur ERSTEN Erwägung, die den Artikel zitiert (Auftrag David 3.7.2026;
+// keine Fundstelle ableitbar → ehrlicher Seitenanfang, §8).
+const LeitfallZeile = memo(function LeitfallZeile({ refs, normZitat }: {
+  /** Leitfälle dieses Artikels aus dem erlass-lokalen Shard (Reader lädt einmal). */
+  refs?: LeitfallRef[];
   /** Voll zitierfähige Norm («Art. 957 OR») für den Fundstellen-Sprung im Ziel. */
   normZitat: string;
 }) {
-  // Ladezustand aus dem Ergebnis-Key ABGELEITET (kein synchrones setState im Effekt-
-  // Body — react-hooks-Regel, gleiches Muster wie KontextPanel §6.4). Der Schlüssel
-  // bindet das Resultat an den (Erlass,Artikel)-Fetch, der es erzeugt hat.
-  const artKey = `${registerKey}/${artikel}`;
-  const [geladen, setGeladen] = useState<{ key: string; refs: LeitfallRef[] } | null>(null);
   const [alleAuf, setAlleAuf] = useState(false);
-  // SICHTBARKEITS-Laden statt Idle-Herde (§15-CI-Befund W2·7-VZUI): grosse Erlasse
-  // (ZGB ~1000 Artikel) mounten ~1000 LeitfallZeilen — liefen ALLE zugleich über
-  // requestIdleCallback, jammten Fetch-Resolves + setState-Bursts den Main-Thread
-  // (gemessen 20×-Throttle: >13 s Long-Tasks, ★ erst nach ~15 s). Jetzt lädt eine
-  // Zeile erst, wenn ihr Artikel in Viewport-Nähe kommt (Sentinel + rootMargin
-  // 600 px) — nur die tatsächlich gelesenen Artikel arbeiten; der Shard-Fetch
-  // bleibt über den Promise-Cache geteilt. Ohne IO (alte Browser): von Anfang an
-  // «nah» (Lazy-Initializer, kein setState im Effekt-Body — react-hooks-Regel).
-  const [nah, setNah] = useState(() => typeof IntersectionObserver === 'undefined');
-  const sentinelRef = useRef<HTMLSpanElement>(null);
   const { oeffneDaneben, kannOeffnen, istOffen } = usePaneSteuerung();
 
-  useEffect(() => {
-    const el = sentinelRef.current;
-    if (!el || nah) return;
-    // Beobachtet wird der TRAGENDE Artikel (nicht der 0×0-Sentinel): der Artikel
-    // hat auch bei übersprungener content-visibility eine Platzhalter-Box, und
-    // Layout-Drift während der Hydration (Artikel wandern beim Einrendern) kann
-    // einen punktförmigen Sentinel zwischen zwei Observer-Ticks aus dem Fenster
-    // schieben (empirisch: art-41 top 240→−64 in <1 s). Der Sentinel dient nur
-    // als React-Anker, um das Artikel-Element zu finden.
-    const ziel = el.closest('article') ?? el;
-    const io = new IntersectionObserver((eintraege) => {
-      if (eintraege.some((e) => e.isIntersecting)) { setNah(true); io.disconnect(); }
-    }, { rootMargin: '600px 0px' });
-    io.observe(ziel);
-    return () => io.disconnect();
-  }, [nah]);
-
-  useEffect(() => {
-    if (!nah) return;
-    let lebt = true;
-    const abbrechen = beiLeerlauf(() => {
-      leitfaelleFuerArtikel(registerKey, artikel).then((r) => { if (lebt) setGeladen({ key: artKey, refs: r }); });
-    });
-    return () => { lebt = false; abbrechen(); };
-  }, [nah, registerKey, artikel, artKey]);
-
-  // Nur das zum AKTUELLEN Artikel gehörende Resultat zeigen; ein veralteter Treffer = «lädt».
-  const leitfaelle: LeitfallRef[] | null = geladen && geladen.key === artKey ? geladen.refs : null;
-
-  // Wie die «Verweise»-Zeile: bei nichts vorhanden GAR KEINE Zeile rendern (kein
-  // reservierter Leerraum) — nur der unsichtbare 0×0-Sentinel bleibt als Beobachtungs-
-  // Anker stehen, bis geladen ist. Bewusst KEINE Mindesthöhe je Artikel — die grosse
-  // Mehrheit der Artikel hat keine Leitfälle; eine Reservierung würde in fast jeden
-  // Artikel Weissraum einziehen (Anti-Ziel §15.2 „Reservierung darf keinen Inhalt
-  // verstecken", schadete der Lesedichte). Die Chips wachsen in Viewport-Nähe am
-  // Artikel-FUSS ein (unterhalb von Body + Verweisen, meist below-fold); der
+  // Wie die «Verweise»-Zeile: ohne Treffer GAR KEINE Zeile (kein reservierter
+  // Leerraum, §15.2 — die grosse Mehrheit der Artikel hat keine Leitfälle; eine
+  // Reservierung zöge in fast jeden Artikel Weissraum ein). Die Zeilen wachsen
+  // mit dem EINEN Shard-Resolve am Artikel-Fuss ein (below-fold); der
   // prerenderte Normtext (LCP/Ctrl+F) bleibt unberührt (§15.1/3).
-  if (!leitfaelle) return <span ref={sentinelRef} aria-hidden />;
-  if (leitfaelle.length === 0) return null;
+  if (!refs || refs.length === 0) return null;
 
-  const sichtbar = alleAuf ? leitfaelle : leitfaelle.slice(0, LEITFAELLE_SICHTBAR);
-  const rest = leitfaelle.length - sichtbar.length;
+  const sichtbar = alleAuf ? refs : refs.slice(0, LEITFAELLE_SICHTBAR);
+  const rest = refs.length - sichtbar.length;
   return (
     <div className="mt-4 flex flex-wrap items-center gap-2">
       <span className="lc-overline mr-1" title="Maschinell aus den zitierten Normen zugeordnet — keine redaktionelle Präjudizienauswahl. Entscheide beziehen sich auf die im Entscheidzeitpunkt geltende Fassung.">Leitfälle</span>
@@ -148,9 +83,11 @@ const LeitfallZeile = memo(function LeitfallZeile({ registerKey, artikel, normZi
 // links «Art. N» als ruhiger Anker mit den Randtiteln darunter (rechtsbündig, nur die
 // gegenüber dem Vorartikel GEÄNDERTEN Stufen, `marg`), rechts der Serif-
 // Bestimmungstext. Ersetzt den früheren fliegenden Standort-Tracker. Reine Darstellung.
-export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, marg, margBasis, imTreffer, onSpringe }: {
+export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, marg, margBasis, imTreffer, onSpringe, leitfaelle }: {
   e: NormSnapshot; erlass: BrowseErlass; basisPfad: string; fussnoten?: Fussnote[]; fussnotenAuf: boolean; intern?: InternRefs;
   marg?: string[];
+  /** Leitfälle dieses Artikels (Reader lädt den erlass-lokalen Shard einmal). */
+  leitfaelle?: LeitfallRef[];
   // Absolute Tiefe der ERSTEN gezeigten Randtitel-Stufe (Delta-Offset). Damit
   // wird die Stufe einheitlich je absoluter Tiefe formatiert, auch wenn nur
   // die geänderten Stufen gezeigt werden. 0 (Default) = volle Kette (Suchsicht).
@@ -346,7 +283,7 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
           {/* LEITFÄLLE (§11.2): Bundesgerichtsentscheide zu genau diesem Artikel, lazy
               aus dem erlass-lokalen Shard. Verdrahtet das bisher tote proNormArtikel-
               Modell (norm-index.ts) sichtbar — vom Artikel direkt zur Rechtsprechung. */}
-          <LeitfallZeile registerKey={erlass.key} artikel={e.artikel} normZitat={zitat} />
+          <LeitfallZeile refs={leitfaelle} normZitat={zitat} />
           {/* Fussnoten (Änderungs-/Quellenhistorie, AS/BBl klickbar): nur auf Wunsch
               (globaler Schalter in der Suchleiste). */}
           {fussnotenAuf && fussAnzeige.length > 0 && (
