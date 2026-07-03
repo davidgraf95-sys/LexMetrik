@@ -70,6 +70,9 @@
     "datenhaltung:manifest": "vite-node scripts/datenhaltung/check-datenhaltung.ts -- --schreibe",
     "datenhaltung:doppellauf": "vite-node scripts/datenhaltung/doppellauf.ts",
     "datenhaltung:turso-sync": "vite-node scripts/datenhaltung/turso-sync.ts",
+    "datenhaltung:masse-ingest": "vite-node scripts/datenhaltung/masse-ingest.ts",
+    "datenhaltung:resolve-zitate": "vite-node scripts/datenhaltung/resolve-zitate.ts",
+    "datenhaltung:masse-invarianten": "vite-node scripts/datenhaltung/masse-invarianten.ts",
     "datenhaltung:stabilitaet": "vite-node scripts/datenhaltung/stabilitaets-report.ts",
     "check:gegenpruefung": "vite-node scripts/check-gegenpruefung.ts",
     "gegenpruefung:ok": "vite-node scripts/gegenpruefung-ok.ts --"
@@ -108,6 +111,8 @@
     "fast-check": "^4.8.0",
     "globals": "^17.6.0",
     "he": "^1.2.0",
+    "hyparquet": "^1.26.2",
+    "hyparquet-compressors": "^1.1.1",
     "p-limit": "^7.3.0",
     "pdfjs-dist": "^4.10.38",
     "postcss": "^8.5.15",

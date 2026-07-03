@@ -576,6 +576,28 @@ OR/ZGB-Renumerierungen, bis/ter). Darum bei jedem neuen `erlass_fassungen`-Eintr
     **TOR/DoD:** `check:datenhaltung`-Invarianten (Orphans, §7-Spalten non-null, ECLI-Form, Match-Key-
     Befüllung, OCL-Plausibilität, «ATTACH nur im Läufer»); amtliche Stichproben-Gegenprüfung;
     `check:perf-budget`.
+  - **[x] LOKAL ERLEDIGT 3.7.2026 — E3-Lokal-Bau (Branch `feat/qs-data-e3-lokal`, 26×-Slot ÜBERNOMMEN).**
+    Produktiver Massen-Import gebaut + verifiziert; Serving folgt separat auf dem VPS (David bestellt).
+    Neue Repo-TS (alle mit der EINEN Kanonisierung `normalisiere-zitat.ts`, node:sqlite wie der
+    Rest des Strangs — nicht better-sqlite3): `masse-mapping.ts` (reine Mapping-/Manifest-Bausteine
+    + Unit-Tests OHNE Parquet) · `masse-schema.ts` · `masse-ingest.ts` (Row-Group-Streaming, PRAGMAs,
+    GROUP-BY-Dedup, Load-then-index — B2-POC-Mechanik) · `resolve-zitate.ts` (idempotenter
+    Enrichment-Pass + Quoten-Report) · `masse-invarianten.ts` (OCL-Plausibilität + Dump-Manifest).
+    **Ergebnis (`daten/masse.db`, gitignored, ~5,79 GB):** entscheide **195 342** (Dedup Δ 0) ·
+    zitat_kanten **8 529 050** (UNIQUE-Dedup Δ 168 014, = POC) · norm_referenzen **10 031 306**
+    (Artikel-Ebene UNIQUE, Δ 1 871 698). **Auflösungsquote 0,8245** (= POC-Baseline 0,823; je
+    match_type bge_bare 1,000 · bge_norm 0,993 · docket_norm 0,815 · bge_pincite 0,020). §7 non-null,
+    Match-Keys befüllt, nach_id-Orphans 0. **2 Voll-Läufe → identisches Manifest** (Weiche C
+    Voll-Rebuild-Determinismus). **Amtliche Gegenprüfung doppelt** (Autor 5 Stichproben + unabhängiger
+    Opus-Durchgang mit eigenen Stichproben + 400/400 Kanten-Orientierungs-Proben, Verdikt BESTANDEN):
+    fand + fixte zwei Anzeige-Bugs (doppeltes «BGE BGE …» ~98 % der BGE; fabrizierte Zitierform bei
+    474 Docket-Müll-bge → jetzt NULL statt erfunden, §8) + dokumentierte voilaj-Quell-Quirks
+    (194 bge ohne datum; ~61 % bge mit Bandjahr-Platzhalter `JJJJ-01-01` — **UI darf das nie als
+    Urteilsdatum zeigen**; IVG/LAI-law-code-Kanonisierung = E4-Aufgabe). `quelle_url` =
+    Parquet-`source_url` verbatim (100 % bger.ch-Domains).
+    Bericht `bibliothek/register/e3-lokal-2026-07-03.md`. **OFFEN (VPS-Schritt):** Datei-rsync +
+    cold-FTS `fts_entscheide_masse` (58-GB-Klasse, NICHT lokal) + Read-API + Long-Tail-Route
+    `/rechtsprechung/:key` (on-demand-Edge-Fallback, §15.6) + VPS-Angebot (Vorbedingung 2).
 - **E4 · Zitat-Graph.** 8,7M+11,9M Kanten in `zitat_kanten`/`norm_kanten`; topisches
   in-degree-Ranking (W3-Muster); Plausibilitäts-Checks als DB-Invarianten; UI-Panels
   (erfasst = build-time-Projektion, Masse = Edge). Ersetzt „Leitfall-Gewichte aus 342".
@@ -590,6 +612,14 @@ OR/ZGB-Renumerierungen, bis/ter). Darum bei jedem neuen `erlass_fassungen`-Eintr
     (ausser wo mehr Korpus die Zahl korrekt erhöht). **TOR/DoD:** Auflösungsquoten-Baseline im Dump-
     Manifest (`check:datenhaltung`); Oracle-Vergleich; Resolve-Laufzeit unter POC-Rahmen; UI-Panels
     unter `check:perf-budget`.
+    **Vorbedingung aus der E3-Gegenprüfung (Q4, 3.7.2026): law-code-Kanonisierung.** Die voilaj-
+    `law_code`s sind mehrsprachig unkanonisiert (IVG/LAI, UVG/LAA/LAINF = derselbe Erlass als
+    getrennte `erlass_key`-Zeilen in `norm_referenzen`) — VOR dem `norm_rangliste`-Rebuild braucht
+    es ein Mapping law_code→Register-`erlass.key` (DE-kanonisch, FR/IT-Aliase; kleine kuratierte
+    Tabelle + `normalisiere-zitat.ts`-Anbindung), sonst zersplittert das In-degree-Ranking je
+    Sprache. Ebenso dort einplanen: bge_pincite-Auflösung via Band+Abteilung+Seitenbereich-Lookup
+    (0,88M Kanten, E3-Quote nur 0,02) und die **Q1-Datums-Semantik** (bge-Bandjahr-Platzhalter
+    `JJJJ-01-01` — jede UI/Query, die nach Entscheiddatum sortiert/filtert, muss das kennen).
 - **E5 · Kantone/Erweiterung** — nachgelagert, hängt an W3·12/W11-Schema-Entscheid. **E3+E5 zusammen
   = voilaj-Vollkorpus** (BGer erste Tranche in E3, restliche Bundes-/Kantons-Gerichte hier); Ziel-
   Umfang §0.
