@@ -19,6 +19,18 @@ export const RECHTSPRECHUNG_DIRS = ['public/rechtsprechung/bund', 'public/rechts
 // Manifeste je Doktyp-DB (Byte-Roundtrip, §5 E0+ 3). register.json trägt Trailing-Newline —
 // der Dokument-Ingest speichert den EXAKTEN Inhalt, bildet sie also automatisch nach.
 export const NORMTEXT_MANIFESTE = ['public/normtext/register.json', 'public/normtext/kanton/index.json'];
+
+// Weitere committete Normtext-Nebendateien (E1-Rest Teil 2, Paritäts-Vollabdeckung):
+// reiner dokument-Byte-Roundtrip (Pfad → exakter Inhalt). Heterogene Serialisierung
+// (Seitendateien 2-Space, Struktur-Sidecars 1-Space) — der Dokument-Ingest speichert
+// den EXAKTEN Inhalt, also byte-genau unabhängig von der Formatierung, ohne Struktur-
+// Zerlegung. So haben ALLE committeten public/normtext/**/*.json eine Paritäts-Klasse.
+export const NORMTEXT_SEITENDATEIEN = [
+  'public/normtext/confidence.json',
+  'public/normtext/kanton-systematik.json',
+  'public/normtext/pdf-index.json',
+];
+export const NORMTEXT_STRUKTUR_DIR = 'public/normtext/struktur'; // rekursiv: bund/ + kanton/
 export const RECHTSPRECHUNG_MANIFESTE = [
   'public/rechtsprechung/register.json',
   'public/rechtsprechung/norm-index.json',
@@ -95,13 +107,18 @@ function ingestDokumente(db: DatabaseSync, pfade: string[], typ: string): void {
 export function ingestNormtext(db: DatabaseSync): Zaehler {
   const bund = jsonFlach(BUND_DIR);
   const kanton = jsonFlach(KANTON_DIR, new Set(['index.json']));
+  const struktur = jsonRekursiv(NORMTEXT_STRUKTUR_DIR);
   ingestEintragDateien(db, bund, 'normtext-bund', false);
   ingestEintragDateien(db, kanton, 'normtext-kanton', false);
   ingestDokumente(db, NORMTEXT_MANIFESTE, 'normtext-manifest');
+  ingestDokumente(db, NORMTEXT_SEITENDATEIEN, 'normtext-seitendatei');
+  ingestDokumente(db, struktur, 'normtext-struktur');
   return {
     'Bund-Normtext': bund.length,
     'Kanton-Normtext': kanton.length,
     'Normtext-Manifeste': NORMTEXT_MANIFESTE.length,
+    'Normtext-Seitendateien': NORMTEXT_SEITENDATEIEN.length,
+    'Normtext-Struktur': struktur.length,
   };
 }
 
