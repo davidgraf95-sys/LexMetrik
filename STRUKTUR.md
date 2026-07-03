@@ -23,6 +23,12 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 3.7.2026 — QS-DATA E0+ (Ziel-Schema + Partitionierung + Reverse-Ingest ausgedehnt), Branch `feat/qs-data-e0-plus`
+
+**Gebaut (W2·6-DATA, golden-neutral, `scripts/datenhaltung/**` + 1 Test):** E0 (Bund-only) auf das **vollständige §3-Zielschema** gehoben — `erlasse`/`erlass_fassungen`/`artikel`/`entscheide` (inkl. `ecli_key`/`bge_key` + Indizes)/`soft_law` + die **leeren** `norm_referenzen`/`zitat_kanten`/`norm_rangliste` (E1 befüllt sie; leere Tabellen kosten nichts). **Partitionierung je Doktyp** ab jetzt: `daten/normtext.db` · `daten/rechtsprechung.db` · `daten/soft-law.db`; das E0-Einzelartefakt `daten/lexmetrik.db` entfällt ersatzlos (gitignored). Neu `scripts/datenhaltung/normalisiere-zitat.ts` (die EINE Match-Key-Kanonisierung: BGE `'BGE 150 III 423'→'150-III-423'`, ECLI kleingeschrieben/trenner-stabil, bis/ter-Suffixe) + DB-freie Unit-Tests (`src/tests/normalisiere-zitat.test.ts`, 19 Fälle). **Reverse-Ingest ausgedehnt** (Blob-Tabellen tragen weiter die Paritäts-Beweise): Kanton-Normtext 1231 · Rechtsprechung bund+kanton 342 (MIT Trailing-Newline) · 4 Manifeste (`normtext/register.json` + `kanton/index.json` + `rechtsprechung/register.json` + `norm-index.json`, generischer `dokument`-Byte-Roundtrip) · Materialien 1.
+
+**Tore grün:** `check:paritaet` byte-gleich über **1796 Dateien** (Bund 218 · Kanton 1231 · Normtext-Manifeste 2 · Rechtsprechung 342 · Rsp-Manifeste 2 · Materialien 1) · `npx tsc -b` · `npm run lint` (nur 1 vorbestehende Warnung, fremd) · `npm test` 3034 grün · `npm run build` (57 Routen) · `golden:vergleich` byte-identisch (201) · `check:gegenpruefung` grün (datenhaltung noch kein Risiko-Pfad-Glob — Glob-Erweiterung erst mit E1). **Doppelt verifiziert:** unabhängiger `node`-Zweitbeweis (parse→stringify-Roundtrip je Klasse inkl. Trailing-Newline) — 0 Diffs. **Nächstes: E1** (Generator-Flip). Detail `FAHRPLAN-DATENHALTUNG.md` §5.
+
 ## Session 3.7.2026 — Bauplan-Umbau: Ist-Stand + Nordstern + Audit-Funde eingewoben (reine Plan-Schicht, Branch `feat/bauplan-einbau`)
 
 **Auftrag David (3.7.2026):** «behalte alles was drin ist und ordne es neu» + die zwei Audit-Reports (Sprachen/Werkzeuge im Code + Instrumente/Dienste) in ROADMAP/FAHRPLÄNE einweben. Chirurgisch, kein Greenfield. Fable-Spec, Opus-Ausführung; jeder Commit lässt `check:plan` grün (§A der Umbau-Spec).

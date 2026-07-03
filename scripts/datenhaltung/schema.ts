@@ -1,14 +1,29 @@
 // scripts/datenhaltung/schema.ts
-// QS-DATA E0: DB-Artefakt als kanonische Zwischenschicht (CLAUDE.md §7 Build-Regel 6).
-// In E0 ist die DB eine *Projektion* der bestehenden JSON-Snapshots — Ziel ist der Beweis,
-// dass `public/*.json` byte-gleich aus der DB rekonstruierbar ist (check:paritaet).
+// QS-DATA E0+: DB-Artefakt als kanonische Zwischenschicht (CLAUDE.md §7 Build-Regel 6).
+//
+// Zwei Schichten in EINER Datei je Doktyp (§1/§2.2 Partitionierung — daten/normtext.db ·
+// daten/rechtsprechung.db · daten/soft-law.db):
+//   (1) Blob-Tabellen (datei/eintrag/dokument): tragen in E0/E0+ die Paritäts-Beweise
+//       (JSON → DB → JSON-Roundtrip byte-gleich). Laufen parallel bis E1.
+//   (2) Ziel-Tabellen (§3 kanonisches Datenmodell): schema-reif angelegt, in E0+ noch LEER —
+//       E1 (Generator-Flip) befüllt sie. Leere Tabellen kosten nichts; eine Nachmigration bei
+//       Millionen Zeilen ist teuer, darum jetzt anlegen (§5 E0+ 1).
 import { DatabaseSync } from 'node:sqlite';
 
-export const SCHEMA = `
+export type Doktyp = 'normtext' | 'rechtsprechung' | 'soft-law';
+
+// ── (1) Blob-Tabellen (Paritäts-Beweis) ────────────────────────────────────────
+// datei/eintrag: strukturierte {erzeugt, eintraege}-Dateien (byte-genaue Rekonstruktion über
+// die geordneten Eintrags-Blobs; trailing_nl bildet die Serialisierungs-Variante je Klasse nach
+// — Bund/Kanton-Normtext ohne, Rechtsprechung mit abschliessendem "\n").
+// dokument: generische Manifeste (Pfad → exakter Byte-Inhalt, reiner Roundtrip-Beweis ohne
+// Struktur-Zerlegung, §5 E0+ 3).
+const SCHEMA_BLOB = `
 CREATE TABLE datei (
-  pfad     TEXT PRIMARY KEY,
-  typ      TEXT NOT NULL,   -- 'normtext-bund' | (spätere: 'normtext-kanton' | 'rechtsprechung' | ...)
-  erzeugt  TEXT             -- top-level "erzeugt"-Feld (falls vorhanden)
+  pfad        TEXT PRIMARY KEY,
+  typ         TEXT NOT NULL,   -- 'normtext-bund' | 'normtext-kanton' | 'rechtsprechung'
+  erzeugt     TEXT,            -- top-level "erzeugt"-Feld (falls vorhanden)
+  trailing_nl INTEGER NOT NULL DEFAULT 0   -- 1 = Datei endet auf "\\n" (Rechtsprechung)
 );
 CREATE TABLE eintrag (
   pfad          TEXT NOT NULL,
@@ -21,7 +36,136 @@ CREATE TABLE eintrag (
   PRIMARY KEY (pfad, idx)
 );
 CREATE INDEX idx_eintrag_erlass ON eintrag(erlass);
+CREATE TABLE dokument (
+  pfad   TEXT PRIMARY KEY,
+  typ    TEXT NOT NULL,   -- 'normtext-manifest' | 'rechtsprechung-manifest' | 'materialien-manifest'
+  inhalt TEXT NOT NULL    -- exakter Datei-Inhalt (Byte-Roundtrip)
+);
 `;
+
+// ── (2) Ziel-Tabellen §3 — Normtext-Seite (Erlasse/Fassungen/Artikel + Norm-Referenzen/Ranking) ──
+// norm_referenzen + norm_rangliste liegen auf der NORM-/Lese-Seite (Kontext-Panel + Ranking lesen
+// sie, §1) → daten/normtext.db. In E0+ leer.
+const SCHEMA_ZIEL_NORMTEXT = `
+CREATE TABLE erlasse (
+  key          TEXT PRIMARY KEY,
+  ebene        TEXT NOT NULL,            -- 'bund' | 'kanton'
+  kanton       TEXT,
+  sr           TEXT,
+  abkuerzung   TEXT NOT NULL,
+  titel        TEXT NOT NULL,
+  rechtsgebiet TEXT NOT NULL,
+  status       TEXT NOT NULL             -- ErlassStatus
+);
+CREATE TABLE erlass_fassungen (
+  erlass_key     TEXT NOT NULL REFERENCES erlasse(key),
+  fassungs_token TEXT NOT NULL,
+  gueltig_von    TEXT NOT NULL,
+  gueltig_bis    TEXT,
+  stand          TEXT NOT NULL,          -- §7(a)
+  quelle_url     TEXT NOT NULL,          -- §7(b)
+  as_fundstelle  TEXT,
+  abgerufen      TEXT NOT NULL,
+  sha            TEXT NOT NULL,
+  PRIMARY KEY (erlass_key, fassungs_token)
+);
+CREATE TABLE artikel (
+  erlass_key     TEXT NOT NULL,
+  fassungs_token TEXT NOT NULL,
+  art_id         TEXT NOT NULL,
+  artikel        TEXT NOT NULL,
+  marg           TEXT,
+  bloecke_json   TEXT NOT NULL,
+  sha            TEXT NOT NULL,
+  PRIMARY KEY (erlass_key, fassungs_token, art_id),
+  FOREIGN KEY (erlass_key, fassungs_token) REFERENCES erlass_fassungen(erlass_key, fassungs_token)
+);
+CREATE TABLE norm_referenzen (
+  id           INTEGER PRIMARY KEY,
+  quelldok_typ TEXT NOT NULL,            -- 'entscheid' | 'material' | 'verwaltungsverordnung'
+  quelldok_id  TEXT NOT NULL,
+  erlass_key   TEXT NOT NULL,
+  artikel      TEXT,
+  zitat_key    TEXT NOT NULL,            -- normalisiert (normalisiere-zitat.ts)
+  roh_zitat    TEXT NOT NULL,
+  konfidenz    TEXT NOT NULL,            -- 'regex-hoch' | 'regex-niedrig' | 'unresolved'
+  quelle       TEXT NOT NULL,            -- 'maschinell' | 'kuratiert'
+  UNIQUE (quelldok_typ, quelldok_id, erlass_key, artikel, zitat_key)
+);
+CREATE INDEX ix_normref_norm ON norm_referenzen(erlass_key, artikel);
+CREATE INDEX ix_normref_dok  ON norm_referenzen(quelldok_typ, quelldok_id);
+CREATE TABLE norm_rangliste (
+  erlass_key   TEXT NOT NULL,
+  artikel      TEXT,
+  entscheid_id TEXT NOT NULL,
+  gewicht      INTEGER NOT NULL,
+  PRIMARY KEY (erlass_key, artikel, entscheid_id)
+);
+`;
+
+// ── (2) Ziel-Tabellen §3 — Rechtsprechungs-Seite (Entscheide + Zitat-Graph) ──
+// zitat_kanten (Entscheid↔Entscheid) leben bei ihrer Quell-Seite (§1) → daten/rechtsprechung.db.
+// entscheide tragen die normalisierten Match-Spalten ecli_key/bge_key + Indizes (§3.1). In E0+ leer.
+const SCHEMA_ZIEL_RECHTSPRECHUNG = `
+CREATE TABLE entscheide (
+  id            TEXT PRIMARY KEY,
+  ecli          TEXT,
+  ecli_key      TEXT,                    -- normalisiert (normalisiere-zitat.ts)
+  gericht       TEXT NOT NULL,
+  kanton        TEXT,
+  nummer        TEXT NOT NULL,
+  bge_referenz  TEXT,                    -- 'BGE 150 III 423' (Anzeige-Form)
+  bge_key       TEXT,                    -- normalisiert '150-III-423' (Match-Form)
+  datum         TEXT NOT NULL,
+  sprache       TEXT NOT NULL,
+  leitcharakter INTEGER NOT NULL DEFAULT 0,
+  kuratierung   TEXT NOT NULL,           -- 'kuratiert' | 'maschinell'
+  regeste_json  TEXT,
+  abschnitte_json TEXT,
+  quelle        TEXT NOT NULL,
+  quelle_url    TEXT NOT NULL,
+  abgerufen     TEXT NOT NULL,
+  sha           TEXT NOT NULL
+);
+CREATE INDEX ix_entscheide_ecli  ON entscheide(ecli_key);
+CREATE INDEX ix_entscheide_bge   ON entscheide(bge_key);
+CREATE INDEX ix_entscheide_datum ON entscheide(gericht, datum);
+CREATE TABLE zitat_kanten (
+  id             INTEGER PRIMARY KEY,
+  von_id         TEXT NOT NULL REFERENCES entscheide(id),
+  nach_id        TEXT,
+  ziel_key       TEXT NOT NULL,          -- normalisierter Match-Key
+  nach_zitierung TEXT NOT NULL,
+  konfidenz      TEXT NOT NULL,
+  quelle         TEXT NOT NULL,
+  UNIQUE (von_id, ziel_key)
+);
+CREATE INDEX ix_zitat_von        ON zitat_kanten(von_id);
+CREATE INDEX ix_zitat_nach       ON zitat_kanten(nach_id);
+CREATE INDEX ix_zitat_unresolved ON zitat_kanten(ziel_key) WHERE nach_id IS NULL;
+`;
+
+// ── (2) Ziel-Tabellen §3 — Soft-Law (Materialien + Verwaltungsverordnungen in EINER Tabelle) ──
+const SCHEMA_ZIEL_SOFTLAW = `
+CREATE TABLE soft_law (
+  id         TEXT PRIMARY KEY,
+  kategorie  TEXT NOT NULL,              -- 'material' | 'verwaltungsverordnung'
+  doktyp     TEXT NOT NULL,              -- 'botschaft' | 'kreisschreiben' | 'vernehmlassung' | …
+  behoerde   TEXT NOT NULL,
+  titel      TEXT NOT NULL,
+  fundstelle TEXT,
+  stand      TEXT NOT NULL,
+  quelle_url TEXT NOT NULL,
+  abgerufen  TEXT NOT NULL,
+  sha        TEXT
+);
+`;
+
+const ZIEL_SCHEMA: Record<Doktyp, string> = {
+  normtext: SCHEMA_ZIEL_NORMTEXT,
+  rechtsprechung: SCHEMA_ZIEL_RECHTSPRECHUNG,
+  'soft-law': SCHEMA_ZIEL_SOFTLAW,
+};
 
 export function oeffneDb(pfad = ':memory:'): DatabaseSync {
   const db = new DatabaseSync(pfad);
@@ -29,6 +173,8 @@ export function oeffneDb(pfad = ':memory:'): DatabaseSync {
   return db;
 }
 
-export function frischesSchema(db: DatabaseSync): void {
-  db.exec(SCHEMA);
+/** Legt Blob-Tabellen (Paritäts-Beweis) + die Ziel-Tabellen des Doktyps an. */
+export function frischesSchema(db: DatabaseSync, doktyp: Doktyp): void {
+  db.exec(SCHEMA_BLOB);
+  db.exec(ZIEL_SCHEMA[doktyp]);
 }

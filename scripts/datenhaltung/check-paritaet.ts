@@ -1,26 +1,32 @@
 // scripts/datenhaltung/check-paritaet.ts
-// QS-DATA E0-Tor: beweist, dass jede Bund-Normtext-Datei byte-gleich aus der DB
-// rekonstruierbar ist (JSON → DB → JSON-Roundtrip). Rot bei jeder Byte-Abweichung.
+// QS-DATA E0+-Tor: beweist, dass JEDE committete Datei byte-gleich aus der DB rekonstruierbar
+// ist (JSON → DB → JSON-Roundtrip), über ALLE Dateiklassen und die drei partitionierten DBs
+// (§2.2: normtext · rechtsprechung · soft-law). Rot bei jeder Byte-Abweichung, mit Klassen-
+// Zählern in der Grün-Meldung.
 import { readFileSync } from 'node:fs';
 import { oeffneDb, frischesSchema } from './schema';
-import { ingestBundNormtext } from './ingest';
-import { projiziereBundDatei, alleBundPfade } from './projektion';
-
-const db = oeffneDb(':memory:');
-frischesSchema(db);
-const n = ingestBundNormtext(db);
-const pfade = alleBundPfade(db);
+import { ingestNormtext, ingestRechtsprechung, ingestSoftLaw, type Zaehler } from './ingest';
+import {
+  projiziereEintragDatei,
+  projiziereDokument,
+  alleEintragPfade,
+  alleDokumentPfade,
+} from './projektion';
+import type { DatabaseSync } from 'node:sqlite';
 
 const diffs: { pfad: string; grund: string }[] = [];
-for (const pfad of pfade) {
+let geprueft = 0;
+
+function vergleiche(pfad: string, projektionFn: (p: string) => string): void {
   const original = readFileSync(pfad, 'utf8');
   let projektion: string;
   try {
-    projektion = projiziereBundDatei(db, pfad);
+    projektion = projektionFn(pfad);
   } catch (e) {
     diffs.push({ pfad, grund: 'Projektion-Fehler: ' + (e as Error).message });
-    continue;
+    return;
   }
+  geprueft++;
   if (projektion !== original) {
     let i = 0;
     while (i < original.length && i < projektion.length && original[i] === projektion[i]) i++;
@@ -30,12 +36,39 @@ for (const pfad of pfade) {
     });
   }
 }
-db.close();
+
+function pruefeDb(db: DatabaseSync): void {
+  for (const pfad of alleEintragPfade(db)) vergleiche(pfad, (p) => projiziereEintragDatei(db, p));
+  for (const pfad of alleDokumentPfade(db)) vergleiche(pfad, (p) => projiziereDokument(db, p));
+}
+
+// Drei partitionierte In-Memory-DBs (je Doktyp), befüllen, projizieren, byte-vergleichen.
+const dbN = oeffneDb();
+frischesSchema(dbN, 'normtext');
+const zN = ingestNormtext(dbN);
+pruefeDb(dbN);
+dbN.close();
+
+const dbR = oeffneDb();
+frischesSchema(dbR, 'rechtsprechung');
+const zR = ingestRechtsprechung(dbR);
+pruefeDb(dbR);
+dbR.close();
+
+const dbS = oeffneDb();
+frischesSchema(dbS, 'soft-law');
+const zS = ingestSoftLaw(dbS);
+pruefeDb(dbS);
+dbS.close();
+
+const zaehler: Zaehler = { ...zN, ...zR, ...zS };
 
 if (diffs.length) {
-  console.error(`check:paritaet ROT: ${diffs.length}/${pfade.length} Bund-Normtext-Dateien weichen ab:`);
+  console.error(`check:paritaet ROT: ${diffs.length} Datei(en) weichen ab:`);
   for (const d of diffs.slice(0, 20)) console.error(`  - ${d.pfad}: ${d.grund}`);
   if (diffs.length > 20) console.error(`  … und ${diffs.length - 20} weitere`);
   process.exit(1);
 }
-console.log(`check:paritaet grün: ${n} Bund-Normtext-Dateien byte-gleich aus der DB projiziert.`);
+
+const teile = Object.entries(zaehler).map(([k, v]) => `${k} ${v}`).join(' · ');
+console.log(`check:paritaet grün: ${geprueft} Dateien byte-gleich aus der DB projiziert (${teile}).`);
