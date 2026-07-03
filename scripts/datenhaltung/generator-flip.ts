@@ -40,3 +40,30 @@ export function flipBundErlass(
   schreibeErlass(db, meta, snapshots);
   return projiziereErlass(db, meta.key, snapshots[0].fassungsToken);
 }
+
+/**
+ * E1-Rest B (Kanton-Flip): schreibt EINEN Kanton-Erlass ins Zielschema und projiziert
+ * ihn zurück. `key` = Dateiname-Stamm/Register-PK ('AG-291.150', mit Bindestrich);
+ * `kanton` = Kantonskürzel ('AG') = snapshots[0].quelle (byte-tragend, 2. id-Segment).
+ * Die Identitätsfelder (sr/titel/rechtsgebiet/status) sind für die Projektion irrelevant
+ * (sie liest nur ebene/abkuerzung/kanton + Artikel-Zeilen) — die echte Kanton-Identität
+ * pflegt der Reverse-Ingest aus dem Register (ingest.ts, Manifest-Grundlage).
+ */
+export function flipKantonErlass(
+  db: DatabaseSync,
+  eintrag: { key: string; kanton: string },
+  snapshots: NormSnapshot[],
+): string {
+  const meta: ErlasseMeta = {
+    key: eintrag.key,
+    ebene: 'kanton',
+    kanton: eintrag.kanton, // == snapshots[0].quelle (2. id-Segment)
+    sr: null,
+    abkuerzung: snapshots[0].erlass, // byte-tragend (= NormSnapshot.erlass)
+    titel: snapshots[0].erlass,
+    rechtsgebiet: '',
+    status: 'snapshot',
+  };
+  schreibeErlass(db, meta, snapshots);
+  return projiziereErlass(db, meta.key, snapshots[0].fassungsToken);
+}

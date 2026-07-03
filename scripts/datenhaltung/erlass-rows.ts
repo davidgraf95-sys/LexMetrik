@@ -1,5 +1,5 @@
 // scripts/datenhaltung/erlass-rows.ts
-// QS-DATA E1 (Generator-Flip): der Spalten-Weg für Erlass-Dateien.
+// QS-DATA E1 (Generator-Flip): der Spalten-Weg für Erlass-Dateien — BUND und KANTON.
 //
 // EINE Wahrheit für zwei Richtungen:
 //   (1) schreibeErlass()  — NormSnapshot[] EINER Datei → Zeilen in erlasse +
@@ -12,17 +12,29 @@
 //   - Generator-Flip (generator-flip.ts ← normtext-snapshot.ts, public kommt aus der Projektion),
 //   - Doppellauf + Unit-Test (Byte-Beweis alt==neu).
 //
-// Fassungs-Invariante (empirisch belegt 3.7.2026 über alle 218 Bund-Dateien): eine
-// Snapshot-Datei = EINE Fassung — alle Einträge teilen ebene/quelle/erlass/stand/
-// abgerufen/fassungsToken. Bruch wird hart geworfen (nie stille Zweitwahrheit, §5).
+// SCHLÜSSEL vs. QUELLE (E1-Rest B, 3.7.2026 — Kanton-Flip): der erlasse-PK `meta.key`
+// ist NICHT identisch mit der byte-tragenden NormSnapshot.quelle (2. id-Segment):
+//   - Bund : key == quelle == gesetzKey ('OR'); kanton == null; id = 'bund/OR/art_11'.
+//   - Kanton: key == Register-/Dateiname-Stamm ('AG-291.150', mit Bindestrich);
+//     quelle == Kantonskürzel ('AG') == meta.kanton; id = 'kanton/AG/291.150/art_4'
+//     (4 Segmente). art_id = alles nach 'kanton/AG/' = '291.150/art_4' (mit Schrägstrich).
+// Die id-Zerlegung/-Rekonstruktion läuft IMMER über `quelle` (2. Segment), die
+// erlasse-Identität über `key`. Bei Bund fallen beide zusammen → Bund-Bytes unverändert.
+//
+// Fassungs-Invariante (empirisch belegt 3.7.2026 über alle 218 Bund- + 1231 Kanton-
+// Dateien): eine Snapshot-Datei = EINE Fassung — alle Einträge teilen ebene/quelle/
+// erlass/stand/abgerufen/fassungsToken. Bruch wird hart geworfen (nie stille
+// Zweitwahrheit, §5). Optionales Artikel-Feld schliesst sich ebenenweise aus: Bund
+// trägt nur `grundlage` (Delegationsnorm), Kanton nur `titel` (Randtitel → Spalte marg).
 import { createHash } from 'node:crypto';
 import type { DatabaseSync } from 'node:sqlite';
 import type { NormSnapshot } from '../../src/lib/normtext/typen.ts';
 
 export interface ErlasseMeta {
-  key: string; // = NormSnapshot.quelle (gesetzKey / Kantonskürzel)
+  key: string; // erlasse-PK. Bund: == NormSnapshot.quelle (gesetzKey 'OR'). Kanton:
+  //            Register-/Dateiname-Stamm 'AG-291.150' (≠ quelle 'AG', s. Modulkopf).
   ebene: 'bund' | 'kanton';
-  kanton: string | null;
+  kanton: string | null; // Kanton: Kürzel 'AG' == NormSnapshot.quelle (byte-tragend für id).
   sr: string | null;
   abkuerzung: string; // MUSS exakt NormSnapshot.erlass sein (byte-tragend für die Projektion)
   titel: string;
@@ -42,11 +54,21 @@ function basisUrl(quelleUrl: string): string {
   return i === -1 ? quelleUrl : quelleUrl.slice(0, i);
 }
 
-/** art_id aus der NormSnapshot.id: 'bund/OR/art_11' → 'art_11'. */
+/**
+ * art_id aus der NormSnapshot.id, zerlegt über die QUELLE (2. id-Segment):
+ *   Bund   'bund/OR/art_11'          (quelle 'OR') → 'art_11'.
+ *   Kanton 'kanton/AG/291.150/art_4' (quelle 'AG') → '291.150/art_4'.
+ * Die erlasse-PK `key` spielt hier NICHT mit (bei Kanton 'AG-291.150' ≠ quelle 'AG').
+ */
 function artIdAusId(id: string, ebene: string, quelle: string): string {
   const praefix = `${ebene}/${quelle}/`;
   if (!id.startsWith(praefix)) throw new Error(`erlass-rows: id '${id}' passt nicht zu Präfix '${praefix}'`);
   return id.slice(praefix.length);
+}
+
+/** Byte-tragende NormSnapshot.quelle (= 2. id-Segment): Bund == key, Kanton == kanton. */
+function quelleVonMeta(meta: ErlasseMeta): string {
+  return meta.ebene === 'kanton' ? (meta.kanton ?? '') : meta.key;
 }
 
 /** Schreibt EINEN Erlass (eine Fassung) als Zeilen in die Ziel-Tabellen. */
@@ -54,9 +76,12 @@ export function schreibeErlass(db: DatabaseSync, meta: ErlasseMeta, snapshots: N
   if (snapshots.length === 0) throw new Error(`schreibeErlass: keine Snapshots für ${meta.key}`);
   const s0 = snapshots[0];
   const { fassungsToken, stand, abgerufen } = s0;
+  const quelle = quelleVonMeta(meta); // 2. id-Segment; bei Kanton == meta.kanton, NICHT meta.key
+  if (meta.ebene === 'kanton' && !meta.kanton)
+    throw new Error(`schreibeErlass: Kanton-Erlass ${meta.key} ohne kanton (quelle-Grundlage fehlt)`);
   for (const s of snapshots) {
-    if (s.ebene !== meta.ebene || s.quelle !== meta.key)
-      throw new Error(`schreibeErlass: ebene/quelle-Bruch in ${meta.key}: ${s.id}`);
+    if (s.ebene !== meta.ebene || s.quelle !== quelle)
+      throw new Error(`schreibeErlass: ebene/quelle-Bruch in ${meta.key}: ${s.id} (quelle '${s.quelle}' ≠ '${quelle}')`);
     if (s.erlass !== meta.abkuerzung)
       throw new Error(`schreibeErlass: erlass-Label uneinheitlich in ${meta.key}: '${s.erlass}' ≠ '${meta.abkuerzung}'`);
     if (s.fassungsToken !== fassungsToken || s.stand !== stand || s.abgerufen !== abgerufen)
@@ -78,7 +103,7 @@ export function schreibeErlass(db: DatabaseSync, meta: ErlasseMeta, snapshots: N
     artStmt.run(
       meta.key,
       fassungsToken,
-      artIdAusId(s.id, meta.ebene, meta.key),
+      artIdAusId(s.id, meta.ebene, quelle),
       i,
       s.artikel,
       s.artikelLabel,
@@ -96,6 +121,7 @@ interface ArtikelRow {
   artikel: string;
   artikel_label: string;
   grundlage: string | null;
+  marg: string | null;
   quelle_url: string;
   bloecke_json: string;
   sha: string;
@@ -104,12 +130,15 @@ interface ArtikelRow {
 /**
  * Projiziert EINEN Erlass (eine Fassung) byte-gleich in die NormSnapshotDatei-Form.
  * Feldreihenfolge exakt wie der Generator sie emittiert (id, ebene, quelle, erlass,
- * artikel, artikelLabel, [grundlage], bloecke, stand, quelleUrl, abgerufen,
- * fassungsToken, sha) — sonst kippt die Byte-Parität.
+ * artikel, artikelLabel, [titel] | [grundlage], bloecke, stand, quelleUrl, abgerufen,
+ * fassungsToken, sha) — sonst kippt die Byte-Parität. `titel`(Kanton, aus Spalte marg)
+ * und `grundlage`(Bund) schliessen sich empirisch aus; die Reihenfolge titel→grundlage
+ * hält beide Ebenen byte-gleich. id/quelle laufen über QUELLE (Kanton == kanton-Spalte,
+ * NICHT die erlasse-PK `key`); siehe Modulkopf SCHLÜSSEL vs. QUELLE.
  */
 export function projiziereErlass(db: DatabaseSync, key: string, fassungsToken: string): string {
-  const erl = db.prepare('SELECT ebene, abkuerzung FROM erlasse WHERE key = ?').get(key) as
-    | { ebene: string; abkuerzung: string }
+  const erl = db.prepare('SELECT ebene, abkuerzung, kanton FROM erlasse WHERE key = ?').get(key) as
+    | { ebene: string; abkuerzung: string; kanton: string | null }
     | undefined;
   if (!erl) throw new Error(`projiziereErlass: erlasse fehlt für ${key}`);
   const fass = db
@@ -118,19 +147,23 @@ export function projiziereErlass(db: DatabaseSync, key: string, fassungsToken: s
   if (!fass) throw new Error(`projiziereErlass: erlass_fassungen fehlt für ${key}/${fassungsToken}`);
   const rows = db
     .prepare(
-      'SELECT art_id, artikel, artikel_label, grundlage, quelle_url, bloecke_json, sha FROM artikel WHERE erlass_key = ? AND fassungs_token = ? ORDER BY ord',
+      'SELECT art_id, artikel, artikel_label, grundlage, marg, quelle_url, bloecke_json, sha FROM artikel WHERE erlass_key = ? AND fassungs_token = ? ORDER BY ord',
     )
     .all(key, fassungsToken) as unknown as ArtikelRow[];
 
+  // 2. id-Segment (byte-tragende quelle): Bund == key, Kanton == kanton-Spalte.
+  const quelle = erl.ebene === 'kanton' ? (erl.kanton ?? '') : key;
+
   const eintraege = rows.map((r) => {
     const o: Record<string, unknown> = {};
-    o.id = `${erl.ebene}/${key}/${r.art_id}`;
+    o.id = `${erl.ebene}/${quelle}/${r.art_id}`;
     o.ebene = erl.ebene;
-    o.quelle = key;
+    o.quelle = quelle;
     o.erlass = erl.abkuerzung;
     o.artikel = r.artikel;
     o.artikelLabel = r.artikel_label;
-    if (r.grundlage !== null) o.grundlage = r.grundlage;
+    if (r.marg !== null) o.titel = r.marg; // Kanton-Randtitel (N1)
+    if (r.grundlage !== null) o.grundlage = r.grundlage; // Bund-Delegationsnorm (G23)
     o.bloecke = JSON.parse(r.bloecke_json);
     o.stand = fass.stand;
     o.quelleUrl = r.quelle_url;

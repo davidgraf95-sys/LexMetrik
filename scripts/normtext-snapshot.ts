@@ -459,6 +459,12 @@ async function erzeugeKantonsSnapshots(
   const ausgangsDir = 'public/normtext/kanton';
   mkdirSync(ausgangsDir, { recursive: true });
 
+  // E1-Rest B (QS-DATA): public/normtext/kanton/*.json entsteht aus der DB-PROJEKTION
+  // (Spalten-Weg), nicht mehr direkt aus dem Blob. Dynamischer Import, damit der
+  // vitest-Import dieser Datei nie node:sqlite lädt (wie der Bund-Flip in main()).
+  const { erstelleFlipDb, flipKantonErlass } = await import('./datenhaltung/generator-flip.ts');
+  const flipDb = erstelleFlipDb();
+
   const cov: KantonCoverage = {
     totalSnapshots: 0,
     reportZeilen: [],
@@ -579,9 +585,9 @@ async function erzeugeKantonsSnapshots(
       continue;
     }
 
-    const datei: NormSnapshotDatei = { erzeugt: abgerufen, eintraege: snapshotListe };
     const ausgabePfad = `${ausgangsDir}/${g.kanton}-${schluessel}.json`;
-    writeFileSync(ausgabePfad, stabelesJson(datei), 'utf8');
+    const projJson = flipKantonErlass(flipDb, { key: `${g.kanton}-${schluessel}`, kanton: g.kanton }, snapshotListe);
+    writeFileSync(ausgabePfad, projJson, 'utf8');
 
     cov.totalSnapshots += snapshotListe.length;
     cov.reportZeilen.push(
@@ -623,6 +629,10 @@ async function erzeugeHtmSnapshots(
   );
   const ausgangsDir = 'public/normtext/kanton';
   mkdirSync(ausgangsDir, { recursive: true });
+
+  // E1-Rest B: Projektion statt Direkt-Blob (s. erzeugeKantonsSnapshots).
+  const { erstelleFlipDb, flipKantonErlass } = await import('./datenhaltung/generator-flip.ts');
+  const flipDb = erstelleFlipDb();
 
   const cov: HtmCoverage = {
     totalSnapshots: 0,
@@ -703,9 +713,9 @@ async function erzeugeHtmSnapshots(
       continue;
     }
 
-    const datei: NormSnapshotDatei = { erzeugt: abgerufen, eintraege: snapshotListe };
     const ausgabePfad = `${ausgangsDir}/${g.kanton}-${safe}.json`;
-    writeFileSync(ausgabePfad, stabelesJson(datei), 'utf8');
+    const projJson = flipKantonErlass(flipDb, { key: `${g.kanton}-${safe}`, kanton: g.kanton }, snapshotListe);
+    writeFileSync(ausgabePfad, projJson, 'utf8');
 
     cov.totalSnapshots += snapshotListe.length;
     cov.reportZeilen.push(
@@ -736,6 +746,10 @@ async function erzeugeZhPdfSnapshots(
   );
   const ausgangsDir = 'public/normtext/kanton';
   mkdirSync(ausgangsDir, { recursive: true });
+
+  // E1-Rest B: Projektion statt Direkt-Blob (s. erzeugeKantonsSnapshots).
+  const { erstelleFlipDb, flipKantonErlass } = await import('./datenhaltung/generator-flip.ts');
+  const flipDb = erstelleFlipDb();
 
   const cov: HtmCoverage = { totalSnapshots: 0, reportZeilen: [], tokenFehlt: [], fetchFehler: [] };
 
@@ -800,9 +814,9 @@ async function erzeugeZhPdfSnapshots(
       continue;
     }
 
-    const datei: NormSnapshotDatei = { erzeugt: abgerufen, eintraege: snapshotListe };
     const ausgabePfad = `${ausgangsDir}/${g.kanton}-${safe}.json`;
-    writeFileSync(ausgabePfad, stabelesJson(datei), 'utf8');
+    const projJson = flipKantonErlass(flipDb, { key: `${g.kanton}-${safe}`, kanton: g.kanton }, snapshotListe);
+    writeFileSync(ausgabePfad, projJson, 'utf8');
     cov.totalSnapshots += snapshotListe.length;
     cov.reportZeilen.push(`  ${g.kanton}-${safe.padEnd(16)} ${snapshotListe.length} Snapshots → ${ausgabePfad}`);
   }
@@ -826,6 +840,10 @@ async function erzeugePdfSnapshots(
   );
   const ausgangsDir = 'public/normtext/kanton';
   mkdirSync(ausgangsDir, { recursive: true });
+
+  // E1-Rest B: Projektion statt Direkt-Blob (s. erzeugeKantonsSnapshots).
+  const { erstelleFlipDb, flipKantonErlass } = await import('./datenhaltung/generator-flip.ts');
+  const flipDb = erstelleFlipDb();
 
   const cov: HtmCoverage = { totalSnapshots: 0, reportZeilen: [], tokenFehlt: [], fetchFehler: [] };
 
@@ -922,9 +940,9 @@ async function erzeugePdfSnapshots(
       continue;
     }
 
-    const datei: NormSnapshotDatei = { erzeugt: abgerufen, eintraege: snapshotListe };
     const ausgabePfad = `${ausgangsDir}/${kanton}-${safe}.json`;
-    writeFileSync(ausgabePfad, stabelesJson(datei), 'utf8');
+    const projJson = flipKantonErlass(flipDb, { key: `${kanton}-${safe}`, kanton }, snapshotListe);
+    writeFileSync(ausgabePfad, projJson, 'utf8');
     cov.totalSnapshots += snapshotListe.length;
     cov.reportZeilen.push(`  ${kanton}-${safe.padEnd(16)} ${snapshotListe.length} Snapshots → ${ausgabePfad}`);
   }

@@ -472,6 +472,39 @@ OR/ZGB-Renumerierungen, bis/ter). Darum bei jedem neuen `erlass_fassungen`-Eintr
     `check:plan`); **adversariale Gegenprüfung bestanden** (unabhängiger Opus-Durchgang: keine
     Schreibpfad-Divergenz in irgendeinem Pfad, Paritäts-Vollabdeckung enumeriert). **Offen bleibt
     E1-Rest B** (Kanton-Normtext-Flip; späterer Schritt) + `scripts/materialien/**`-Globs (mit E6b).
+  - **[x] ERLEDIGT 3.7.2026 — E1-Rest B (Kanton-Normtext-Flip), Branch `feat/qs-data-e1-rest-b`.**
+    Die vier Kanton-Loops (`erzeugeKantonsSnapshots`/`erzeugeHtmSnapshots`/`erzeugeZhPdfSnapshots`/
+    `erzeugePdfSnapshots` in `normtext-snapshot.ts`) schreiben `public/normtext/kanton/*.json` jetzt
+    AUSSCHLIESSLICH aus der DB-Projektion (`flipKantonErlass` in `generator-flip.ts` →
+    `schreibeErlass`/`projiziereErlass`); der `stabelesJson`-Direktweg ist in allen vier Loops
+    entfernt (dynamischer Import wie beim Bund-Flip → vitest lädt nie `node:sqlite`).
+    **Feld-Mapping-Entscheid SCHLÜSSEL ≠ QUELLE (in `erlass-rows.ts` dokumentiert, EINE Datei, keine
+    zweite Wahrheit):** erlasse-PK `key` = Dateiname-Stamm == Register-PK (`AG-291.150`, Bindestrich);
+    byte-tragende `NormSnapshot.quelle` (2. id-Segment) = Kantonskürzel (`AG`) == Spalte
+    `erlasse.kanton`; `art_id` = alles nach `kanton/AG/` (mit Schrägstrich, `291.150/art_4` — Bund
+    bleibt `art_11`); `fassungs_token` = LexWork `version_uid` bzw. `quelleHash` (HTM/ZH/PDF), wie im
+    Snapshot; Kanton-Randtitel `titel` → Spalte `marg` → Projektion exakt zwischen `artikelLabel`
+    und `bloecke` (Bund nutzt dieselbe Position exklusiv für `grundlage` — der ebenenweise
+    Ausschluss ist empirisch über alle 1449 Dateien belegt; Bund-Bytes unverändert, da key==quelle).
+    `ingestNormtextZiel` reverse-ingestet jetzt Bund UND Kanton (Identität aus dem committeten
+    Register, §5 SSoT); der Blob-Reverse-Ingest läuft parallel weiter (Entfernen = späterer Schritt).
+    **Byte-Beweis ohne `public/**`-Diff:** `doppellauf.ts` auf Bund+Kanton erweitert (netzfreier
+    Reverse-Weg: committete JSONs → Ziel-Tabellen → Projektion, derselbe Codepfad wie der Generator;
+    kein Erlass ausgeklammert — alle 1231 Kanton-Dateien im Lauf) — **3 Läufe Projektion==committet
+    über 1449 Dateien (Bund 218 · Kanton 1231) / 55244 Artikel, Gesamt-sha stabil `bd22118d…`**;
+    p-limit(4)-Nebenläufigkeit widerlegt als Einflussgrösse (betrifft nur Fetches; Projektion liest
+    `ORDER BY ord`, DB-Schreibreihenfolge über Dateien hinweg ist für die Per-Datei-Bytes unsichtbar).
+    `daten-manifest.json` regeneriert: erlasse/erlass_fassungen 218→**1449**, artikel 24858→**55244**.
+    Tore grün (`check:paritaet` **2953 unverändert** · `check:datenhaltung` [0 Orphans, §7-Spalten
+    non-null auch Kanton, Manifest 2× deterministisch] · golden 201 byte-gleich · tsc/lint/
+    test 3071 [+6 Kanton-Flip-Tests: Bindestrich-Schlüssel FR-…-de/TI-ti-…, marg-Position,
+    quelle≠kanton-Wächter]/build 1449 Erlass-Seiten · `check:plan` · `check:normtext` offline);
+    **adversariale Gegenprüfung bestanden** (unabhängiger Opus-Durchgang: `diff -r`
+    Projektion==committet EXIT 0 in beide Richtungen auch gegen die echten `public/`-Dateien;
+    Randfälle FR-130.11-de/TI-ti-125101/BS-111.100/AG-662.110-mehrspaltig/JU-PDF-Merge sauber;
+    Stichprobe AG-291.150 §1/§3 gegen die amtliche LexWork-API inhaltstreu, live-`version_uid` ==
+    `fassungsToken`). **Offen bleibt nur noch** `scripts/materialien/**`-Globs (mit E6b) +
+    Blob-Ingest-Rückbau (nach E2-Stabilisierung).
 - **E2 · POC-Scheibe + Edge-Suche.** Scheibe = **alle amtlichen BGE (Volltext in DB; committete
   Projektion bleibt nur das kuratierte Schaufenster) + alle 218 Bund-Gesetze**. Turso-Replika +
   Read-only-Edge-Funktion `api/suche` (Drosselung, kein Write-Token im Client, §8-Offenlegung
