@@ -124,6 +124,9 @@ test('MM4: ★-aria-label textgleich in Reader, Panel, Leitfall-Zeile und Suche;
   await page.reload()
   const art = page.locator('#art-684')
   await art.scrollIntoViewIfNeeded()
+  // Erst der Zeilen-Container (klareres Fehlersignal: Zeile fehlt vs. ★ fehlt),
+  // dann der ★-Glyph mit dem geteilten aria-label.
+  await expect(art.getByText('Leitfälle', { exact: true })).toBeVisible({ timeout: 15_000 })
   await expect(art.locator(`[role="img"][aria-label="${LEIT_ARIA}"]`).first()).toBeVisible({ timeout: 15_000 })
 
   // (d) Universal-Suche (Volltext-Badge im Treffer).

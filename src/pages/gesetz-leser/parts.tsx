@@ -17,16 +17,20 @@ import { margStufeStil, fnTextMitLinks, romanFrei } from './helpers';
 // = `gewicht` aus dem Shard), Rest hinter «+n weitere». Bewusst klein, kein Panel.
 const LEITFAELLE_SICHTBAR = 5;
 
-// requestIdleCallback mit garantiert feuerndem setTimeout-Fallback (§15.3) — hält den
-// Shard-Fetch vom Erstpaint fern; identisches Muster wie App.tsx-Prefetch.
+// requestIdleCallback mit garantiert feuerndem Fallback (§15.3) — hält den
+// Shard-Fetch vom Erstpaint fern. «Garantiert» heisst BEIDE Zweige (CI-Befund
+// W2·7-VZUI): ein vorhandenes rIC kann auf ausgelasteten Geräten beliebig lange
+// ausgehungert werden (der Main-Thread wird nie idle) — die rIC-`timeout`-Option
+// erzwingt den Lauf spätestens nach 1200 ms, identisch zum setTimeout-Zweig
+// ohne rIC. Erstpaint/LCP unberührt (feuert weiterhin bevorzugt im Leerlauf).
 function beiLeerlauf(cb: () => void): () => void {
   if (typeof window === 'undefined') return () => {};
   const w = window as typeof window & {
-    requestIdleCallback?: (cb: () => void) => number;
+    requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number;
     cancelIdleCallback?: (id: number) => void;
   };
   if (w.requestIdleCallback) {
-    const id = w.requestIdleCallback(cb);
+    const id = w.requestIdleCallback(cb, { timeout: 1200 });
     return () => w.cancelIdleCallback?.(id);
   }
   const id = window.setTimeout(cb, 1200);
