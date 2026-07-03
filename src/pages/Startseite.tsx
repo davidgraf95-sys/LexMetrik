@@ -1,26 +1,22 @@
-import { Begruessung } from '../components/start/Begruessung';
-import { NewsHeader } from '../components/start/NewsHeader';
-import { UniversalSuche } from '../components/start/UniversalSuche';
-import { Schnellrechner } from '../components/start/Schnellrechner';
-import { GesetzeRubrik } from '../components/start/GesetzeRubrik';
+import { Fragment } from 'react';
+import { START_MODULE } from '../lib/startseiteModule';
 
-// ─── Startseite — «Suche-zuerst»-Cockpit (Überarbeitung, Auftrag David) ──────
+// ─── Startseite V3 — reiner Registry-Mapper (FAHRPLAN §4/§5) ────────────────
 //
-// Reihenfolge (Auftrag David, #5): Kopf (Gruss/Datum) · Universal-Suche (zuoberst
-// schnell suchen) · Schnellrechner (schnell rechnen) · Gesetze-Rubrik (#6: Suchfeld
-// + Top-Erlasse) · News aus dem Bundesgericht · Rechtlicher Hinweis (§8). Reine
-// Darstellung (§3); jede Sektion ist eine eigene, schlanke Komponente (§6.6). Der
-// «Weiter wo du warst»-Verlauf entfällt (#10) — die In-App-Tableiste deckt das ab.
+// Die Startseite komponiert sich aus der Modul-Registry (startseiteModule.tsx):
+// EINE Reihenfolge (§2), ein Modul = eine Zeile. Diese Seite trägt nur den Rahmen
+// — Sektionstrenner (Seclabel als <h2>) und die optionale CLS-Höhenreservierung.
+// Alle Fach-/Zustandslogik (Leerzustände, localStorage, async) liegt IM Modul
+// (§4: KEIN sichtbar() — Leerzustände gehören ins Modul). Reine Darstellung (§3).
 //
-// Startseite V3 · Bausequenz-Schritt 2 (Plumbing): Favoriten gestrichen (Anweisung
-// David 5.6.), Zeiterfassung auf die /rechner-Übersicht verschoben → die
-// «Werkzeuge»-Sektion entfällt; Container auf `max-w-content`-Token. Die
-// vollständige Neukomposition (Hero/Kacheln/Chips/Zuletzt) folgt in Schritt 4.
+// A11y (§8): genau EIN <h1> (im Hero), je betitelter Sektion ein <h2> mit
+// <section aria-labelledby>, Kacheltitel als <h3> — keine Heading-Sprünge.
+// Titellose Module (Hero/Zuletzt/News/Vertrauen) verwalten Titel/Höhe selbst.
 
-function Seclabel({ children }: { children: React.ReactNode }) {
+function Seclabel({ id, children }: { id: string; children: React.ReactNode }) {
   return (
-    <div className="flex items-center gap-3 mt-9 mb-3">
-      <span className="lc-overline text-ink-500">{children}</span>
+    <div className="flex items-center gap-3 mb-3">
+      <h2 id={id} className="lc-overline text-ink-500">{children}</h2>
       <span aria-hidden className="flex-1 h-px bg-line" />
     </div>
   );
@@ -28,41 +24,26 @@ function Seclabel({ children }: { children: React.ReactNode }) {
 
 export function Startseite() {
   return (
-    <div className="max-w-content">
-      {/* Kopf: Gruss (zufällig, tageszeitpassend) + Datum/Uhr */}
-      <section className="space-y-3">
-        <Begruessung />
-        <p className="text-body-l text-ink-600 leading-relaxed max-w-reading">
-          Schweizer Recht berechnen und erstellen – nach festen Gesetzesregeln, jeder Schritt nachvollziehbar.
-        </p>
-      </section>
-
-      {/* Universal-Suche — zuoberst (Auftrag David #5) */}
-      <Seclabel>Wonach suchen Sie?</Seclabel>
-      <UniversalSuche />
-
-      <Seclabel>Schnell rechnen</Seclabel>
-      <Schnellrechner />
-
-      {/* Gesetze-Rubrik (#6): Suchfeld + Top-Erlasse */}
-      <Seclabel>Gesetze</Seclabel>
-      <GesetzeRubrik />
-
-      {/* News aus dem Bundesgericht — weiter unten (rendert nichts in SSR/bei
-          leerem Register; bringt eigenen Kopf «Neues vom Bundesgericht» mit) */}
-      <div className="mt-9">
-        <NewsHeader />
-      </div>
-
-      {/* Rechtlicher Hinweis (Pflicht, §8) */}
-      <section className="lc-notice mt-10">
-        <p className="lc-overline mb-1">Rechtlicher Hinweis</p>
-        <p className="text-body-s text-ink-600 max-w-reading">
-          Alle Rechner liefern automatisierte Orientierungsberechnungen und keine Rechtsberatung. Massgeblich
-          sind Gesetz, GAV, Vertrag und der konkrete Sachverhalt. Für die Wahrung einer Frist im Einzelfall ist
-          allein die nutzende Person verantwortlich.
-        </p>
-      </section>
+    <div className="space-y-10">
+      {START_MODULE.map((modul) => {
+        const Komponente = modul.Komponente;
+        // Optionale, benannte CLS-Reservierung (§4) — aktuell nutzt sie kein
+        // Modul (die async-Module Zuletzt/News reservieren selbst), bleibt aber
+        // als FUNDAMENT-Fähigkeit generisch bedient.
+        const inhalt = modul.minHoeheKlasse
+          ? <div className={modul.minHoeheKlasse}><Komponente /></div>
+          : <Komponente />;
+        if (modul.titel) {
+          const h2id = `sec-${modul.id}`;
+          return (
+            <section key={modul.id} aria-labelledby={h2id}>
+              <Seclabel id={h2id}>{modul.titel}</Seclabel>
+              {inhalt}
+            </section>
+          );
+        }
+        return <Fragment key={modul.id}>{inhalt}</Fragment>;
+      })}
     </div>
   );
 }

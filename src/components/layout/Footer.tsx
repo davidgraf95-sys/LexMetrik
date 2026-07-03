@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { LexMetrikSiegel, LexMetrikWortmarke } from './Logo';
+import { HERO_TITEL, SITE_KURZFORM } from '../../lib/seo';
 
 // Footer (ausgebaut): dreispaltig – Marke + Kurzbeschrieb, Navigation,
 // Hinweise; darunter Mono-Feinschriftzeile. Paper-Grund, obere Hairline.
@@ -24,9 +25,10 @@ export function Footer() {
             <LexMetrikSiegel size={26} />
             <LexMetrikWortmarke />
           </Link>
+          {/* Marken-Kurzbeschrieb aus der I2-SSoT (seo.ts, §5) — Value Proposition
+              + Methodik-Kurzform statt einer zweitgepflegten Marketing-Zeile. */}
           <p className="text-body-s text-ink-500 leading-relaxed max-w-[34ch]">
-            Schweizer Recht: berechnen und erstellen – nach festen Regeln,
-            Schritt für Schritt nachvollziehbar, jede Norm direkt verlinkt.
+            {HERO_TITEL}. {SITE_KURZFORM}
           </p>
         </div>
 
