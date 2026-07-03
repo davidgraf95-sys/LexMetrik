@@ -1,6 +1,6 @@
 import { useState, type MouseEvent } from 'react';
 import type { EntscheidAbschnitt, EntscheidBlock } from '../../lib/rechtsprechung/typen';
-import { ABSCHNITT_TITEL, abschnittAnker } from '../../lib/rechtsprechung/abschnitte';
+import { ABSCHNITT_TITEL, abschnittAnker, segmente, gruppiereErwaegungen } from '../../lib/rechtsprechung/abschnitte';
 import { NormText } from '../NormText';
 
 // EntscheidBody: amtliches BGer-Lesebild (Art. 112 BGG: Sachverhalt → Erwägungen →
@@ -67,13 +67,8 @@ function BodyText({ text }: { text: string }) {
   return <>{teile}</>;
 }
 
-function segmente(marke: string | null): number[] {
-  const m = /(\d+(?:\.\d+)*)/.exec(marke ?? '');
-  return m ? m[1].split('.').map(Number) : [];
-}
-function ankerFuer(marke: string): string {
-  return marke.toLowerCase().replace(/[^0-9a-z]+/g, '-').replace(/^-+|-+$/g, '');
-}
+// segmente/ankerFuer/gruppiereErwaegungen kommen aus abschnitte.ts — EINE
+// Wahrheit der Erwägungs-Ankerbildung, geteilt mit der Norm-Chip-Fundstellensuche.
 
 export function EntscheidBody({ abschnitte, zitierung, bgeReferenz }: {
   abschnitte: EntscheidAbschnitt[];
@@ -109,13 +104,7 @@ export function EntscheidBody({ abschnitte, zitierung, bgeReferenz }: {
   }
 
   function Erwaegungen({ bloecke }: { bloecke: EntscheidBlock[] }) {
-    const gruppen: { top: number; bloecke: EntscheidBlock[] }[] = [];
-    for (const b of bloecke) {
-      const top = segmente(b.marke)[0] ?? 0;
-      const g = gruppen[gruppen.length - 1];
-      if (!g || g.top !== top) gruppen.push({ top, bloecke: [b] });
-      else g.bloecke.push(b);
-    }
+    const gruppen = gruppiereErwaegungen(bloecke);
     return (
       <div>
         {gruppen.map((g, gi) => {
@@ -123,27 +112,23 @@ export function EntscheidBody({ abschnitte, zitierung, bgeReferenz }: {
           if (g.top === 0) {
             return (
               <div key={`roh-${gi}`} className="space-y-4">
-                {g.bloecke.map((b, i) => <p key={i} className={ABSATZ}><BodyText text={b.text} /></p>)}
+                {g.subs.map((s, i) => <p key={i} className={ABSATZ}><BodyText text={s.block.text} /></p>)}
               </div>
             );
           }
-          const erstesIstKopf = segmente(g.bloecke[0].marke).length === 1;
-          const kopf = erstesIstKopf ? g.bloecke[0] : null;
-          const subs = erstesIstKopf ? g.bloecke.slice(1) : g.bloecke;
-          const kopfAnker = `e-${g.top}`;
           return (
             <section key={g.top} className="mt-7 pt-5 border-t border-line first:mt-2 first:pt-0 first:border-0">
-              <div id={kopfAnker} className="group scroll-mt-[7rem]">
-                <Ziffer label={`${g.top}.`} marke={`E. ${g.top}`} anker={kopfAnker} stark />
-                {kopf && <p className={`${ABSATZ} mt-1`}><BodyText text={kopf.text} /></p>}
+              <div id={g.kopfAnker} className="group scroll-mt-[7rem]">
+                <Ziffer label={`${g.top}.`} marke={`E. ${g.top}`} anker={g.kopfAnker} stark />
+                {g.kopf && <p className={`${ABSATZ} mt-1`}><BodyText text={g.kopf.text} /></p>}
               </div>
-              {subs.map((b, i) => {
+              {g.subs.map((s, i) => {
+                const b = s.block;
                 const ein = Math.max(0, (b.tiefe ?? segmente(b.marke).length) - 1); // Tiefe 1 = bündig
-                const anker = b.marke ? ankerFuer(b.marke) : `${kopfAnker}-${i}`;
                 return (
-                  <div key={i} id={anker} className="group scroll-mt-[7rem] mt-4 border-l border-line/70 pl-4"
+                  <div key={i} id={s.anker} className="group scroll-mt-[7rem] mt-4 border-l border-line/70 pl-4"
                     style={ein > 1 ? { marginLeft: `${(ein - 1)}rem` } : undefined}>
-                    {b.marke && <Ziffer label={b.marke.replace(/^E\.\s*/, '')} marke={b.marke} anker={anker} stark={false} />}
+                    {b.marke && <Ziffer label={b.marke.replace(/^E\.\s*/, '')} marke={b.marke} anker={s.anker} stark={false} />}
                     <p className={ABSATZ}><BodyText text={b.text} /></p>
                   </div>
                 );
