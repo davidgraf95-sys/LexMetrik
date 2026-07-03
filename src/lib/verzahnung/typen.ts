@@ -30,6 +30,10 @@ export type VerzahnungsKante = {
   konfidenz?: Konfidenz;                                     // E4-Slot, V1 ungenutzt
   gewicht?: number;                                          // In-degree, nie «Autorität»
   datum?: { iso: string; praezision: Datumspraezision };     // Q1 im Typ
+  /** V1c-Slot (Normrevisions-Ehrlichkeit, FAHRPLAN-VERZAHNUNG-UI §V1c), V1a
+   *  ungenutzt — Quelle: struktur-Sidecar-Revisions-Fussnoten (hat sich die
+   *  zitierte Norm seit dem Entscheidzeitpunkt revidiert?). */
+  fassungsBezug?: 'gleich' | 'revidiert' | 'unbekannt';
 };
 
 // ─── Status-Vokabular (geschlossene Liste, nur Abweichungen) ─────────────────

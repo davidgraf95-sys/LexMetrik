@@ -30,8 +30,9 @@ export interface SuchTreffer {
   id: string;
   label: string;
   untertitel?: string;
-  /** Status-/Zuordnungs-Marke (z. B. «geprüft», «ZPO»). */
-  marke?: { text: string; ton: 'ok' | 'entwurf' | 'soft' };
+  /** Status-/Zuordnungs-Marke (z. B. «ZPO»). `ton: 'leitentscheid'` rendert das
+   *  geteilte StatusBadge-Vokabular (W2·7-VZUI, EIN aria-label an allen Fundorten). */
+  marke?: { text: string; ton: 'ok' | 'entwurf' | 'soft' | 'leitentscheid' };
   href: string;
 }
 
@@ -113,7 +114,7 @@ export function entscheidGruppe(liste: BrowseEntscheid[] | null, q: string, kapp
     id: e.key,
     label: e.zitierung,
     untertitel: [e.gerichtName, e.regesteKurz].filter(Boolean).join(' — ') || e.gerichtName,
-    marke: e.leitcharakter === 'leitentscheid' ? { text: 'Leitentscheid', ton: 'ok' as const } : undefined,
+    marke: e.leitcharakter === 'leitentscheid' ? { text: 'Leitentscheid', ton: 'leitentscheid' as const } : undefined,
     href: `/rechtsprechung/${encodeURIComponent(e.key)}`,
   }));
   return {

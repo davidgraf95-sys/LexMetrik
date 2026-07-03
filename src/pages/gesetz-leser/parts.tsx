@@ -1,11 +1,12 @@
 import { useState, useEffect, memo, type ReactNode } from 'react';
-import { Link } from 'react-router-dom';
 import { ArtikelBody, FnRef } from '../../components/normtext/ArtikelBody';
 import type { InternRefs } from '../../components/NormText';
 import { trenneAenderungshistorie, labelMitBereich, artikelGanzAufgehoben } from '../../lib/normtext/darstellung';
 import type { Sektion, Fussnote, ErlassKopf } from '../../lib/normtext/browse';
 import { NORM_IM_TEXT, fedlexLinkFuerArtikel } from '../../lib/fedlex';
 import { NormChip } from '../../components/vorlagen/ui';
+import { KantenChip } from '../../components/verzahnung/KantenChip';
+import { MehrKante } from '../../components/verzahnung/MehrKante';
 import { usePaneSteuerung } from '../../components/layout/usePaneLayout';
 import { leitfaelleFuerArtikel, type LeitfallRef } from '../../lib/rechtsprechung/norm-index';
 import type { BrowseErlass } from '../../lib/normtext/browse-typen';
@@ -37,7 +38,18 @@ function beiLeerlauf(cb: () => void): () => void {
 // Gesamt-JSON eager). Jeder Chip → Entscheid + «⧉ daneben öffnen» (Split-View-Muster
 // aus dem KontextPanel). Maschinelle Zuordnung, §8 offengelegt. Eigene memo-Komponente,
 // damit der Fetch/State jedes Artikels isoliert bleibt (§15.4).
-const LeitfallZeile = memo(function LeitfallZeile({ registerKey, artikel }: { registerKey: string; artikel: string }) {
+//
+// V1.2 (W2·7-VZUI): Chips = geteilter KantenChip (Dichte-Regel: ★-Glyph als EIN
+// Zusatz, aria-label aus dem StatusBadge-Vokabular), «+n weitere» = MehrKante.
+// `normZitat` («Art. 957 OR») wandert als ?norm= an den Entscheid-Link — der
+// EntscheidLeser springt damit zur ERSTEN Erwägung, die den Artikel zitiert
+// (Auftrag David 3.7.2026: Gesetz→Entscheid landet an der Fundstelle; keine
+// Fundstelle ableitbar → ehrlicher Seitenanfang, §8).
+const LeitfallZeile = memo(function LeitfallZeile({ registerKey, artikel, normZitat }: {
+  registerKey: string; artikel: string;
+  /** Voll zitierfähige Norm («Art. 957 OR») für den Fundstellen-Sprung im Ziel. */
+  normZitat: string;
+}) {
   // Ladezustand aus dem Ergebnis-Key ABGELEITET (kein synchrones setState im Effekt-
   // Body — react-hooks-Regel, gleiches Muster wie KontextPanel §6.4). Der Schlüssel
   // bindet das Resultat an den (Erlass,Artikel)-Fetch, der es erzeugt hat.
@@ -70,23 +82,16 @@ const LeitfallZeile = memo(function LeitfallZeile({ registerKey, artikel }: { re
   const rest = leitfaelle.length - sichtbar.length;
   return (
     <div className="mt-4 flex flex-wrap items-center gap-2">
-      <span className="lc-overline mr-1" title="Maschinell aus den zitierten Normen zugeordnet — keine geprüfte Präjudizienliste.">Leitfälle</span>
+      <span className="lc-overline mr-1" title="Maschinell aus den zitierten Normen zugeordnet — keine redaktionelle Präjudizienauswahl. Entscheide beziehen sich auf die im Entscheidzeitpunkt geltende Fassung.">Leitfälle</span>
       {sichtbar.map((r) => {
-        const ziel = `/rechtsprechung/${encodeURIComponent(r.key)}`;
+        // ?norm= trägt die Fundstellen-Absicht: das Ziel springt zur ersten
+        // Erwägung, die diese Norm zitiert (Auflösung im EntscheidLeser, §5).
+        const ziel = `/rechtsprechung/${encodeURIComponent(r.key)}?norm=${encodeURIComponent(normZitat)}`;
         return (
           <span key={r.key} className="inline-flex items-center">
-            <Link to={ziel} title={r.regesteKurz ?? r.zitierung}
-              className="lc-chip no-underline hover:text-brass-700 hover:border-brass-400">
-              {r.zitierung}
-              {r.leitcharakter === 'leitentscheid' && (
-                <span
-                  className="ml-1 text-micro text-brass-700"
-                  title="Leitentscheid — in der amtlichen Sammlung (BGE) publiziert"
-                  aria-label="Leitentscheid, amtlich publiziert">
-                  ★
-                </span>
-              )}
-            </Link>
+            <KantenChip to={ziel} label={r.zitierung}
+              leitentscheid={r.leitcharakter === 'leitentscheid'}
+              titel={r.regesteKurz ?? r.zitierung} />
             {kannOeffnen && !istOffen(ziel) && (
               <button type="button" onClick={() => oeffneDaneben(ziel)}
                 title={`${r.zitierung} nebeneinander öffnen`} aria-label={`${r.zitierung} nebeneinander öffnen`}
@@ -97,12 +102,7 @@ const LeitfallZeile = memo(function LeitfallZeile({ registerKey, artikel }: { re
           </span>
         );
       })}
-      {rest > 0 && !alleAuf && (
-        <button type="button" onClick={() => setAlleAuf(true)}
-          className="lc-chip no-underline hover:text-brass-700 hover:border-brass-400 text-ink-500">
-          +{rest} weitere
-        </button>
-      )}
+      <MehrKante rest={rest} offen={alleAuf} onOeffne={() => setAlleAuf(true)} />
       {/* Weiche-B-Erweiterungspunkt (§10(6)): der Massen-Anteil «+n weitere (online)»
           aus der Edge-Query kommt HIER dazu, sobald E2 live ist — heute nur der
           geshardete Schaufenster-Anteil, kein Edge-Fetch. NICHT bauen. */}
@@ -312,7 +312,7 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
           {/* LEITFÄLLE (§11.2): Bundesgerichtsentscheide zu genau diesem Artikel, lazy
               aus dem erlass-lokalen Shard. Verdrahtet das bisher tote proNormArtikel-
               Modell (norm-index.ts) sichtbar — vom Artikel direkt zur Rechtsprechung. */}
-          <LeitfallZeile registerKey={erlass.key} artikel={e.artikel} />
+          <LeitfallZeile registerKey={erlass.key} artikel={e.artikel} normZitat={zitat} />
           {/* Fussnoten (Änderungs-/Quellenhistorie, AS/BBl klickbar): nur auf Wunsch
               (globaler Schalter in der Suchleiste). */}
           {fussnotenAuf && fussAnzeige.length > 0 && (

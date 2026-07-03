@@ -3,7 +3,8 @@ import { createPortal } from 'react-dom';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { EntscheidBody } from '../components/rechtsprechung/EntscheidBody';
 import { Tabs } from '../components/ui/Tabs';
-import { ABSCHNITT_TITEL, abschnittAnker, fundstellenFuerNormen } from '../lib/rechtsprechung/abschnitte';
+import { ABSCHNITT_TITEL, abschnittAnker, fundstellenFuerNormen, ersteFundstelle } from '../lib/rechtsprechung/abschnitte';
+import { StatusBadge } from '../components/verzahnung/StatusBadge';
 import { NormText } from '../components/NormText';
 import { KontextPanel } from '../components/kontext/KontextPanel';
 import { ladeEntscheidEintrag, ladeEntscheid } from '../lib/rechtsprechung/browse';
@@ -163,7 +164,7 @@ function ZitierteNormenChips({ abschnitte, zitierteNormen, regesteAnker }: {
   );
 }
 
-function EntscheidLeserInhalt({ schluessel, ansichtParam }: { schluessel: string; ansichtParam: string | null }) {
+function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam }: { schluessel: string; ansichtParam: string | null; normParam: string | null }) {
   const navigate = useNavigate();
   const { imPane } = usePaneKontext();
   const meldeInhaltsKopf = useMeldeInhaltsKopf();
@@ -243,6 +244,36 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam }: { schluessel: string
   // CLS-Hack). Einmalig pro geladenem Entscheid (ref-Wächter), damit späteres
   // manuelles Scrollen nicht überschrieben wird.
   const hashGesprungen = useRef<string | null>(null);
+  // ?norm=«Art. 957 OR» (Fundstellen-Sprung, Auftrag David 3.7.2026): jeder
+  // eingehende Link (Gesetz-Leitfall-Chip, Kontext-Panel, Suche) darf die Norm
+  // mitgeben, um deren ERSTE Erwägungs-Fundstelle er sich dreht. Auflösung über
+  // dieselbe ersteFundstelle-Logik wie die Zitierte-Normen-Chips (§5, inkl.
+  // i.V.m.-Kette). Keine Fundstelle ableitbar → ehrlicher Seitenanfang, kein
+  // toter Anker (§8). Ein expliziter #hash hat Vorrang (präziseres Ziel).
+  // Einmalig pro (Entscheid, Norm) — ref-Wächter wie beim Hash-Sprung.
+  const normGesprungen = useRef<string | null>(null);
+  useEffect(() => {
+    if (zustand !== 'da' || !snap || !normParam || typeof window === 'undefined') return;
+    if (window.location.hash.slice(1)) return;            // Hash gewinnt
+    const merkKey = `${schluessel}?${normParam}`;
+    if (normGesprungen.current === merkKey) return;
+    // Fundstelle in der beim Laden AKTIVEN Fassung suchen (Auszug bevorzugt beim
+    // Leitentscheid — dieselbe Weiche wie die Start-Ansicht); nicht auf spätere
+    // Tab-Wechsel reagieren (kein erneuter Sprung unter dem Leser).
+    const abschnitte = bodyTab === 'auszug' && (snap.auszugAbschnitte?.length ?? 0) > 0
+      ? snap.auszugAbschnitte!
+      : snap.abschnitte;
+    const anker = ersteFundstelle(abschnitte, normParam);
+    if (!anker) { normGesprungen.current = merkKey; return; } // ehrlicher Seitenanfang
+    let frames = 0;
+    let raf = requestAnimationFrame(function versuche() {
+      if (springeZuAnker(anker)) { normGesprungen.current = merkKey; return; }
+      if (frames++ < 60) raf = requestAnimationFrame(versuche);
+    });
+    return () => cancelAnimationFrame(raf);
+    // bodyTab bewusst NICHT in den Deps: der Sprung gilt der Start-Ansicht.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [zustand, snap, normParam, schluessel]);
   useEffect(() => {
     if (zustand !== 'da' || typeof window === 'undefined') return;
     const roh = window.location.hash.slice(1);
@@ -389,11 +420,12 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam }: { schluessel: string
               <span className="num">{snap.bgeReferenz}</span>
             </>
           )}
-          {snap.leitcharakter === 'leitentscheid' && <span className="lc-badge lc-badge-ok">Leitentscheid (BGE)</span>}
+          {/* V1.2 (W2·7-VZUI): geteiltes StatusBadge-Vokabular — aria-label
+              textgleich zu Suche/Panel/Leitfall-Zeile; hier interaktiv (Begriff-
+              Tooltip, fokussier- und touch-bedienbar, Magic Moment 4). */}
+          {snap.leitcharakter === 'leitentscheid' && <StatusBadge praedikat="leitentscheid" interaktiv />}
           <span className="lc-badge lc-badge-soft uppercase" title={SPRACH_LABEL[snap.sprache]}>{snap.sprache}</span>
-          {snap.kuratierung === 'maschinell' && (
-            <span className="lc-badge lc-badge-soft" title="Automatisch erfasst, fachlich noch nicht geprüft">maschinell erfasst</span>
-          )}
+          {snap.kuratierung === 'maschinell' && <StatusBadge praedikat="maschinell" />}
           <span className="ml-auto inline-flex items-center gap-2">
             {/* Amtliche Quelle direkt oben erreichbar (massgebliche Fassung, §8) —
                 folgt der Ansicht (Voll → Urteil/aza, Auszug → BGE-Sammlung). */}
@@ -656,5 +688,6 @@ export function EntscheidLeser() {
   // Übersicht→Detail-Brücke: ?ansicht=voll|auszug wählt die Start-Fassung.
   const [sp] = useSearchParams();
   const ansichtParam = sp.get('ansicht');
-  return <EntscheidLeserInhalt key={schluessel} schluessel={schluessel} ansichtParam={ansichtParam} />;
+  const normParam = sp.get('norm');
+  return <EntscheidLeserInhalt key={schluessel} schluessel={schluessel} ansichtParam={ansichtParam} normParam={normParam} />;
 }

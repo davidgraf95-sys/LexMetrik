@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import type { SuchGruppe, SuchTreffer } from '../../lib/universalSuche';
 import { suchOptionId } from './suchOptionId';
+import { StatusBadge } from '../verzahnung/StatusBadge';
 
 // ─── Trefferpanel der Universal-Suche (geteilt: Header-Dropdown + Hero, §5) ──
 //
@@ -17,6 +18,10 @@ import { suchOptionId } from './suchOptionId';
 // mehr das ganze Panel, das sonst bei jedem Tastendruck neu vorgelesen würde.
 
 function Marke({ text, ton }: NonNullable<SuchTreffer['marke']>) {
+  // Leitentscheid über das geteilte StatusBadge-Vokabular (W2·7-VZUI): EIN
+  // aria-label an allen vier Fundorten (Suche, Panel, Leitfall-Zeile, Reader).
+  // Nicht interaktiv — die Zeile ist eine ARIA-Option (kein nested-interactive).
+  if (ton === 'leitentscheid') return <StatusBadge praedikat="leitentscheid" className="shrink-0" />;
   const cls = ton === 'ok' ? 'lc-badge-ok' : ton === 'entwurf' ? 'lc-badge-entwurf' : 'lc-badge-soft';
   return <span className={`lc-badge ${cls} shrink-0`}>{text}</span>;
 }
