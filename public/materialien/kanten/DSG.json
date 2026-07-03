@@ -1,0 +1,96 @@
+{
+  "erzeugt": "2026-07-04",
+  "erlass": "DSG",
+  "dokumente": {
+    "EDOEB-LEITFADEN-UNTERSUCHUNG-VERSTOESSEN-GEGEN-DATENSCHUTZVORSCHRIFTEN-DURCH-ANALYSE-ART": {
+      "urlBasis": "https://www.edoeb.admin.ch/dam/de/sd-web/MP2HWv4wQCsu/20241029_Analyse%20Art.%2049_DE.pdf",
+      "stand": "2024-10-01"
+    },
+    "EDOEB-LEITFADEN-WAHLEN-ABSTIMMUNGEN-VERSION-2022": {
+      "urlBasis": "https://www.edoeb.admin.ch/dam/de/sd-web/BtrvC0iBh6aw/Leitfaden%20Wahlen%20und%20Abstimmungen_Version%202022_DE.pdf",
+      "stand": "2022-12-15"
+    },
+    "EDOEB-MERKBLATT-ANMELDEFORMULARE-MIETWOHNUNGEN": {
+      "urlBasis": "https://www.edoeb.admin.ch/dam/de/sd-web/F7ojQw99LBH-/Merkblatt%20zu%20Anmeldeformularen%20f%C3%BCr%20Mietwohnungen%20DE_20250715.pdf",
+      "stand": "2025-07-15"
+    },
+    "EDOEB-MERKBLATT-ERLAEUTERUNGEN-PATIENTENFORMULAREN-AERZTLICHE-THERAPEUTISCHE-KONSULTATIONEN": {
+      "urlBasis": "https://www.edoeb.admin.ch/dam/de/sd-web/aM0429bnFlib/Merkblatt_Erl%C3%A4uterungen%20Patientenformularen%20%C3%A4rztliche%20und%20therapeutische%20Konsultationen_DE.pdf",
+      "stand": "2025-09-30"
+    },
+    "EDOEB-MERKBLATT-PLANUNG-BEGRUENDUNG-ONLINEZUGANGS-PERSONENDATEN": {
+      "urlBasis": "https://www.edoeb.admin.ch/dam/de/sd-web/dFB4b6NNMPWv/online-zugang-personendaten.pdf",
+      "stand": "2024-06-18"
+    },
+    "EDOEB-MERKBLATT-UNTERSUCHUNG-VERSTOESSEN-GEGEN-DATENSCHUTZVORSCHRIFTEN-DURCH": {
+      "urlBasis": "https://www.edoeb.admin.ch/dam/de/sd-web/ekJsT3lqvU35/Merkblatt%20Untersuchung%20von%20Verst%C3%B6ssen%20gegen%20Datenschutzvorschriften_Oktober%202024_DE.pdf",
+      "stand": "2024-10-01"
+    },
+    "EDOEB-MERKBLATT-VERWENDUNG-COOKIES-TECHNOLOGIEN-ZUSAMMENHANG-ONLINE-TRACKING": {
+      "urlBasis": "https://www.edoeb.admin.ch/dam/de/sd-web/ByXs53ExpIEy/20260327%20Merkblatt%20Cookies_DE.pdf",
+      "stand": "2026-03-31"
+    },
+    "EDOEB-MERKBLATT-WHITE-HAT-HACKER-INNEN-WHH-IHRE": {
+      "urlBasis": "https://www.edoeb.admin.ch/dam/de/sd-web/Qu0tiIdnjSAf/MERKBLATT%20White%20Hat%20Hacker%20DE.pdf",
+      "stand": "2023-06-27"
+    }
+  },
+  "kanten": [
+    {
+      "dok": "EDOEB-LEITFADEN-UNTERSUCHUNG-VERSTOESSEN-GEGEN-DATENSCHUTZVORSCHRIFTEN-DURCH-ANALYSE-ART",
+      "quelle": "kuratiert",
+      "konfidenz": "regex-niedrig",
+      "stand": "2024-10-01",
+      "fundstellen": []
+    },
+    {
+      "dok": "EDOEB-LEITFADEN-WAHLEN-ABSTIMMUNGEN-VERSION-2022",
+      "quelle": "kuratiert",
+      "konfidenz": "regex-niedrig",
+      "stand": "2022-12-15",
+      "fundstellen": []
+    },
+    {
+      "dok": "EDOEB-MERKBLATT-ANMELDEFORMULARE-MIETWOHNUNGEN",
+      "quelle": "kuratiert",
+      "konfidenz": "regex-niedrig",
+      "stand": "2025-07-15",
+      "fundstellen": []
+    },
+    {
+      "dok": "EDOEB-MERKBLATT-ERLAEUTERUNGEN-PATIENTENFORMULAREN-AERZTLICHE-THERAPEUTISCHE-KONSULTATIONEN",
+      "quelle": "kuratiert",
+      "konfidenz": "regex-niedrig",
+      "stand": "2025-09-30",
+      "fundstellen": []
+    },
+    {
+      "dok": "EDOEB-MERKBLATT-PLANUNG-BEGRUENDUNG-ONLINEZUGANGS-PERSONENDATEN",
+      "quelle": "kuratiert",
+      "konfidenz": "regex-niedrig",
+      "stand": "2024-06-18",
+      "fundstellen": []
+    },
+    {
+      "dok": "EDOEB-MERKBLATT-UNTERSUCHUNG-VERSTOESSEN-GEGEN-DATENSCHUTZVORSCHRIFTEN-DURCH",
+      "quelle": "kuratiert",
+      "konfidenz": "regex-niedrig",
+      "stand": "2024-10-01",
+      "fundstellen": []
+    },
+    {
+      "dok": "EDOEB-MERKBLATT-VERWENDUNG-COOKIES-TECHNOLOGIEN-ZUSAMMENHANG-ONLINE-TRACKING",
+      "quelle": "kuratiert",
+      "konfidenz": "regex-niedrig",
+      "stand": "2026-03-31",
+      "fundstellen": []
+    },
+    {
+      "dok": "EDOEB-MERKBLATT-WHITE-HAT-HACKER-INNEN-WHH-IHRE",
+      "quelle": "kuratiert",
+      "konfidenz": "regex-niedrig",
+      "stand": "2023-06-27",
+      "fundstellen": []
+    }
+  ]
+}

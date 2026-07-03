@@ -1,0 +1,30 @@
+{
+  "erzeugt": "2026-07-04",
+  "erlass": "BGOE",
+  "dokumente": {
+    "EDOEB-LEITFADEN-FRAGEN-ANTWORTENKATALOG-GSK-28-10-2022": {
+      "urlBasis": "https://www.edoeb.admin.ch/dam/de/sd-web/o4T25OIdcHR2/Fragen-%20und%20Antwortenkatalog%20f%C3%BCr%20die%20GSK%20vom%2028.10.2022.pdf",
+      "stand": "2023-05-10"
+    },
+    "EDOEB-LEITFADEN-GESUCHSBEURTEILUNG": {
+      "urlBasis": "https://www.edoeb.admin.ch/dam/de/sd-web/ekyplFed8PKu/Leitfaden%20Gesuchsbeurteilung.pdf",
+      "stand": "2023-05-10"
+    }
+  },
+  "kanten": [
+    {
+      "dok": "EDOEB-LEITFADEN-FRAGEN-ANTWORTENKATALOG-GSK-28-10-2022",
+      "quelle": "kuratiert",
+      "konfidenz": "regex-niedrig",
+      "stand": "2023-05-10",
+      "fundstellen": []
+    },
+    {
+      "dok": "EDOEB-LEITFADEN-GESUCHSBEURTEILUNG",
+      "quelle": "kuratiert",
+      "konfidenz": "regex-niedrig",
+      "stand": "2023-05-10",
+      "fundstellen": []
+    }
+  ]
+}
