@@ -1,10 +1,11 @@
-import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
+import { useCallback, useEffect, useRef, useState, type CSSProperties } from 'react';
 import { createPortal } from 'react-dom';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { EntscheidBody } from '../components/rechtsprechung/EntscheidBody';
 import { Tabs } from '../components/ui/Tabs';
-import { ABSCHNITT_TITEL, abschnittAnker, fundstellenFuerNormen, ersteFundstelle } from '../lib/rechtsprechung/abschnitte';
+import { ABSCHNITT_TITEL, abschnittAnker, ersteFundstelle } from '../lib/rechtsprechung/abschnitte';
 import { StatusBadge } from '../components/verzahnung/StatusBadge';
+import { ZitierteNormenGruppe, ZitiertGruppe } from '../components/rechtsprechung/EntscheidVerzahnung';
 import { NormText } from '../components/NormText';
 import { KontextPanel } from '../components/kontext/KontextPanel';
 import { ladeEntscheidEintrag, ladeEntscheid } from '../lib/rechtsprechung/browse';
@@ -106,61 +107,6 @@ function SprungNavigation({ ziele }: { ziele: { anker: string; label: string }[]
         ))}
       </div>
     </nav>
-  );
-}
-
-// ── Zitierte-Normen-Chips im Kopf → Sprung zur Fundstelle ────────────────────
-// Verweis-Präzision Teil 2 (Auftrag David 3.7.2026): jede vom Entscheid
-// angewandte Norm als Chip; Klick springt zur ERSTEN Erwägung, die sie im Text
-// zitiert (deterministische Suche über `fundstellenFuerNormen`, dieselbe Ketten-/
-// Normalisierungs-Logik wie die Inline-Verlinkung). Keine Text-Fundstelle (Chip
-// stammt nur aus der Regeste) → Sprung zur Regeste. Reine Darstellung (§3).
-function ZitierteNormenChips({ abschnitte, zitierteNormen, regesteAnker }: {
-  abschnitte: EntscheidSnapshot['abschnitte'];
-  zitierteNormen: string[];
-  /** Anker der Regeste-Box, falls sichtbar — sonst null (kein Fallback-Ziel). */
-  regesteAnker: string | null;
-}) {
-  // Fundstellen-Map (memoisiert auf die aktive Fassung): Norm → Erwägungs-Anker | null.
-  const fundstellen = useMemo(
-    () => fundstellenFuerNormen(abschnitte, zitierteNormen),
-    [abschnitte, zitierteNormen],
-  );
-  const [ziel, setZiel] = useState('');
-  if (zitierteNormen.length === 0) return null;
-
-  const springe = (norm: string) => {
-    const anker = fundstellen.get(norm) ?? null;
-    const gesprungen = anker ? springeZuAnker(anker) : (regesteAnker ? springeZuAnker(regesteAnker) : false);
-    setZiel(gesprungen
-      ? (anker ? `${norm}: zur Fundstelle gesprungen` : `${norm}: keine Textstelle — zur Regeste gesprungen`)
-      : `${norm}: keine Fundstelle im Text`);
-  };
-
-  return (
-    <section aria-label="Zitierte Normen" className="space-y-1.5 max-w-reading">
-      <p className="lc-overline text-brass-700">Zitierte Normen</p>
-      <div className="flex flex-wrap gap-2">
-        {zitierteNormen.map((norm) => {
-          const hatFundstelle = !!fundstellen.get(norm);
-          return (
-            <button key={norm} type="button" onClick={() => springe(norm)}
-              className="lc-chip num no-underline hover:border-brass-400 hover:text-brass-700 transition-colors"
-              title={hatFundstelle
-                ? `Zur Fundstelle von ${norm} im Urteilstext springen`
-                : `${norm} — keine Textstelle in den Erwägungen; springt zur Regeste`}>
-              {norm}
-              {!hatFundstelle && <span aria-hidden className="ml-1 text-ink-400">·</span>}
-            </button>
-          );
-        })}
-      </div>
-      {/* §8: die zitierten Normen sind maschinell aus der Quelle übernommen, nicht geprüft. */}
-      <p className="text-micro text-ink-500">
-        Aus der Quelle übernommen (nicht fachlich geprüft) — Klick springt zur Fundstelle im Text.
-      </p>
-      <p aria-live="polite" className="sr-only">{ziel}</p>
-    </section>
   );
 }
 
@@ -478,14 +424,6 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam }: { schlues
         </div>
       )}
 
-      {/* Zitierte-Normen-Chips → Sprung zur Fundstelle (Verweis-Präzision Teil 2).
-          Über der aktiven Fassung, damit die Fundstellen zur sichtbaren Ansicht passen. */}
-      <ZitierteNormenChips
-        abschnitte={aktiveAbschnitte}
-        zitierteNormen={snap.zitierteNormen}
-        regesteAnker={zeigeRegeste ? 'abschnitt-regeste' : null}
-      />
-
       {/* Einordnung der gewählten Fassung (nicht sticky), gekoppelt an die Ansicht. */}
       {switcherSichtbar && (
         <p className="text-micro text-ink-500 max-w-reading">
@@ -546,10 +484,28 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam }: { schlues
         <NormTextHinweis />
       </footer>
 
-      {/* Einheitliches Kontext-Panel (B3): vom Entscheid zu den angewandten
-          Normen, der Behördenpraxis (Materialien) und den passenden Werkzeugen —
-          über die angewandten normKeys des Entscheids. */}
-      <KontextPanel typ="entscheid" normKeys={snap.normKeys} />
+      {/* Einheitliches Kontext-Panel (B3) — V1.3 (W2·7-VZUI §2.2): beide
+          Verzahnungs-Richtungen am Dokumentfuss. «Zitierte Normen» (artikelscharf,
+          Sprung zur Erwägungs-Fundstelle) ERSETZT die grobe Erlass-Gruppe (keine
+          Doppel-Darstellung); «Zitierte Entscheide» löst die maschinell gelesenen
+          Zitate gegen das kuratierte Manifest auf. Die Regeste bleibt oben
+          ungestört (§0-1d). Fundstellen folgen der sichtbaren Ansicht. */}
+      <KontextPanel typ="entscheid" normKeys={snap.normKeys}
+        ohneNormen={snap.zitierteNormen.length > 0}
+        zusatzGruppen={(snap.zitierteNormen.length > 0 || snap.zitierteEntscheide.length > 0) ? (
+          <>
+            <ZitierteNormenGruppe
+              abschnitte={aktiveAbschnitte}
+              zitierteNormen={snap.zitierteNormen}
+              regesteAnker={zeigeRegeste ? 'abschnitt-regeste' : null}
+            />
+            <ZitiertGruppe
+              zitierteEntscheide={snap.zitierteEntscheide}
+              abschnitte={aktiveAbschnitte}
+              selbstKey={schluessel}
+            />
+          </>
+        ) : undefined} />
 
       <nav className="border-t border-line pt-5 text-body-s" aria-label="Weitere Entscheide">
         <Link to="/rechtsprechung" className="text-ink-500 hover:text-brass-700">‹ Zur Übersicht</Link>

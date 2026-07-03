@@ -107,6 +107,30 @@ export function ersteFundstelle(abschnitte: EntscheidAbschnitt[], zielArtikel: s
 }
 
 /**
+ * Anker der ERSTEN Erwägung, deren Text den Suchtext wörtlich enthält
+ * (whitespace-normalisiert) — für den in-Text-Sprung der «Zitierte Entscheide»-
+ * Gruppe (V1.3, W2·7-VZUI): «BGE 144 II 486» → die Erwägung, die das Zitat
+ * trägt. Dieselbe Gruppier-/Anker-Wahrheit wie ersteFundstelle (§5); reine,
+ * deterministische Textsuche (§2). null = kein Vorkommen in den Erwägungen.
+ */
+export function ersteTextFundstelle(abschnitte: EntscheidAbschnitt[], suchtext: string): string | null {
+  const norm = (s: string) => s.replace(/\s+/g, ' ');
+  const ziel = norm(suchtext).trim();
+  if (!ziel) return null;
+  const erw = abschnitte.find((a) => a.typ === 'erwaegung');
+  if (!erw) return null;
+  for (const g of gruppiereErwaegungen(erw.bloecke)) {
+    const eintraege: { text: string; anker: string }[] = [];
+    if (g.kopf && g.kopfAnker) eintraege.push({ text: g.kopf.text, anker: g.kopfAnker });
+    for (const s of g.subs) if (s.anker) eintraege.push({ text: s.block.text, anker: s.anker });
+    for (const e of eintraege) {
+      if (norm(e.text).includes(ziel)) return e.anker;
+    }
+  }
+  return null;
+}
+
+/**
  * Map «zitierteNorm → Fundstellen-Anker | null» für alle genannten Normen eines
  * Entscheids. `null` = keine Erwägungs-Fundstelle (Chip springt zur Regeste).
  * Rein/deterministisch — im Reader memoisiert.

@@ -239,6 +239,7 @@ Datum («Fassung gemäss … , in Kraft seit 1. Jan. 2017 (AS …)»; OR allein:
 ### V2 — mit E3-Serving/VPS (Masse über Edge)
 
 - Registry-Refactor `KONTEXT_GRUPPEN` (jetzt gerechtfertigt: fünfter, asynchroner Gruppentyp) + «Wird zitiert von»-Eintrag mit Edge-Query auf `zitat_kanten` (Rückwärtsindex `ix_zitat_nach`).
+- **Fundstellen-Spalte in der Kanten-Lieferung (Davids DB-Hinweis 3.7.):** `zitat_kanten`/`norm_referenzen` liefern die Erwägungs-Fundstelle (E.-Marke bzw. Anker) als Spalte mit aus — der Fundstellen-Sprung (V1a: client-seitige `ersteFundstelle`/`ersteTextFundstelle`-Auflösung über die geladenen Schaufenster-Snapshots) funktioniert damit auch für Long-Tail-Entscheide ohne Client-Parse.
 - `MehrKante`-Online-Zustand bauen (LeitfallZeile + «Wird zitiert von»), §8-Satz «Anfrage verlässt dafür den Browser».
 - `StatusBadge masse` auf Long-Tail-Treffern; Long-Tail-Route rendert denselben EntscheidLeser.
 - `konfidenz`-Marker am KantenChip aktivieren (`regex-niedrig`/`unresolved` sichtbar; `bge_pincite`-Kanten wegen 0,02-Auflösung gar nicht ausspielen).

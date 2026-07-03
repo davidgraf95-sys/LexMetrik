@@ -30,7 +30,10 @@ import { StatusBadge } from '../verzahnung/StatusBadge';
 
 const MAX_ENTSCHEIDE = 8;
 
-function Gruppe({ titel, richtung, anzahl, children, hinweis }: {
+// Exportiert (V1.3): der EntscheidLeser rendert seine beiden Richtungs-Gruppen
+// («Zitierte Normen» / «Zitierte Entscheide») mit DERSELBEN Hülle im Panel —
+// eine Anatomie, keine zweite Gruppen-Optik (§5).
+export function KontextGruppe({ titel, richtung, anzahl, children, hinweis }: {
   titel: string;
   /** Beziehungstyp als Text (juris/EUR-Lex-Muster): «Wendet an» u. a.; nie Farbe. */
   richtung?: string;
@@ -65,7 +68,16 @@ function DanebenKnopf({ ziel, label, oeffneDaneben, className = 'ml-1' }: {
   );
 }
 
-export function KontextPanel({ typ, normKeys }: { typ: KontextTyp; normKeys: readonly string[] }) {
+export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false }: {
+  typ: KontextTyp;
+  normKeys: readonly string[];
+  /** Reader-eigene Gruppen (KontextGruppe), VOR den Standard-Gruppen gerendert —
+   *  V1.3: «Zitierte Normen»/«Zitierte Entscheide» des EntscheidLesers. */
+  zusatzGruppen?: ReactNode;
+  /** true: die Erlass-Gruppe entfällt (der Reader ersetzt sie artikelscharf —
+   *  keine Doppel-Darstellung, FAHRPLAN-VERZAHNUNG-UI §2.2). */
+  ohneNormen?: boolean;
+}) {
   // Synchron (in-Bundle) — billig + deterministisch, daher pro Render berechnet
   // statt memoisiert (kleine Register, kein O(n²); §6.4).
   const { normen, materialien, werkzeuge } = kontextSync(typ, normKeys);
@@ -121,7 +133,7 @@ export function KontextPanel({ typ, normKeys }: { typ: KontextTyp; normKeys: rea
     : '/rechtsprechung';
 
   const hatSync = normen.length > 0 || materialien.length > 0 || werkzeuge.length > 0;
-  const istLeer = !hatSync && !entscheideLaden && (entscheide?.length ?? 0) === 0;
+  const istLeer = !zusatzGruppen && !hatSync && !entscheideLaden && (entscheide?.length ?? 0) === 0;
 
   return (
     <section aria-labelledby="kontext-titel" className="mt-12 border-t border-line pt-6 space-y-5 max-w-reading">
@@ -136,9 +148,12 @@ export function KontextPanel({ typ, normKeys }: { typ: KontextTyp; normKeys: rea
         </p>
       ) : (
         <div className="space-y-5">
+          {/* Reader-eigene Gruppen zuerst (V1.3: Entscheid-Richtungen am Fuss). */}
+          {zusatzGruppen}
+
           {/* Normen (für Entscheid- und Material-Reader). */}
-          {normen.length > 0 && (
-            <Gruppe titel="Erlasse" richtung="Wendet an" anzahl={normen.length}
+          {!ohneNormen && normen.length > 0 && (
+            <KontextGruppe titel="Erlasse" richtung="Wendet an" anzahl={normen.length}
               hinweis={<><span className="num">{normen.length}</span> erfasste Erlasse — aus den zitierten Normen der Quelle abgeleitet.</>}>
               <ul className="flex flex-wrap gap-2">
                 {normen.map((n) => (
@@ -150,12 +165,12 @@ export function KontextPanel({ typ, normKeys }: { typ: KontextTyp; normKeys: rea
                   </li>
                 ))}
               </ul>
-            </Gruppe>
+            </KontextGruppe>
           )}
 
           {/* Entscheide (für Norm- und Material-Reader). */}
           {(entscheideLaden || (entscheide && entscheide.length > 0)) && (
-            <Gruppe titel="Bundesgerichtsentscheide" richtung="Wird zitiert von"
+            <KontextGruppe titel="Bundesgerichtsentscheide" richtung="Wird zitiert von"
               anzahl={entscheide?.length ?? 0}
               hinweis={entscheideLaden ? undefined : typ === 'material'
                 ? <><span className="num">{entscheide?.length ?? 0}</span> erfasste Entscheide — über die gemeinsam zitierten Erlasse zugeordnet: zwei Schritte entfernt, entsprechend unschärfer. Entscheide beziehen sich auf die im Entscheidzeitpunkt geltende Fassung.</>
@@ -198,12 +213,12 @@ export function KontextPanel({ typ, normKeys }: { typ: KontextTyp; normKeys: rea
                   )}
                 </>
               )}
-            </Gruppe>
+            </KontextGruppe>
           )}
 
           {/* Materialien (für Norm- und Entscheid-Reader). */}
           {materialien.length > 0 && (
-            <Gruppe titel="Amtliche Materialien" richtung="Legt aus" anzahl={materialien.length}
+            <KontextGruppe titel="Amtliche Materialien" richtung="Legt aus" anzahl={materialien.length}
               hinweis={<><span className="num">{materialien.length}</span> erfasste Behördenpublikationen (Kreisschreiben, Wegleitungen u. a.) — kein Gesetzesrang.</>}>
               <ul className="flex flex-col gap-1.5">
                 {materialien.map((m) => (
@@ -218,13 +233,13 @@ export function KontextPanel({ typ, normKeys }: { typ: KontextTyp; normKeys: rea
                   </li>
                 ))}
               </ul>
-            </Gruppe>
+            </KontextGruppe>
           )}
 
           {/* Werkzeuge (für alle drei Reader) — kein Zitat-Beziehungstyp, darum
               bewusst ohne Richtungs-Label. */}
           {werkzeuge.length > 0 && (
-            <Gruppe titel="Passende Werkzeuge" anzahl={werkzeuge.length}
+            <KontextGruppe titel="Passende Werkzeuge" anzahl={werkzeuge.length}
               hinweis="Aus den verknüpften Normen abgeleitet (grobe Zuordnung, keine kuratierte Empfehlung).">
               {/* Mobil eine scrollbare Chip-Reihe, ab sm normaler Umbruch. */}
               <ul className="flex gap-2 overflow-x-auto pb-1 -mb-1 sm:flex-wrap sm:overflow-visible sm:pb-0 sm:mb-0 [scrollbar-width:thin]">
@@ -242,7 +257,7 @@ export function KontextPanel({ typ, normKeys }: { typ: KontextTyp; normKeys: rea
                   </li>
                 ))}
               </ul>
-            </Gruppe>
+            </KontextGruppe>
           )}
         </div>
       )}
