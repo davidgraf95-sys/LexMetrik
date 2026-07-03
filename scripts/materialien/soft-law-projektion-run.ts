@@ -11,14 +11,15 @@ import {
   projiziereRegister,
   projiziereShards,
   baueKorpusInfo,
-  ladeAusDb,
+  ladeKantenAusDb,
+  dbDokAusZustand,
   schreibeShardsUndBereinige,
   REGISTER_PFAD,
   SOFT_LAW_DB,
   type NormRefRow,
   type DokMeta,
 } from './soft-law-projektion.ts';
-import type { BrowseMaterial } from '../../src/lib/materialien/typen.ts';
+import { ladeZustand } from './soft-law-zustand.ts';
 
 const datumArg = process.argv.find((a) => a.startsWith('--datum='));
 const datum = datumArg?.slice('--datum='.length);
@@ -27,15 +28,16 @@ if (!datum || !/^\d{4}-\d{2}-\d{2}$/.test(datum)) {
   process.exit(1);
 }
 
-let dbDocs: BrowseMaterial[] = [];
+// dbDocs IMMER aus dem committeten Zustands-Manifest (§0/B2) — nie aus der DB (keine Divergenz).
+const dbDocs = dbDokAusZustand(ladeZustand());
 let kanten: NormRefRow[] = [];
 let dokMeta = new Map<string, DokMeta>();
 if (existsSync(SOFT_LAW_DB)) {
   const db = new DatabaseSync(SOFT_LAW_DB);
-  ({ dbDocs, kanten, dokMeta } = ladeAusDb(db));
+  ({ kanten, dokMeta } = ladeKantenAusDb(db));
   db.close();
 } else {
-  console.log(`soft-law-projektion: ${SOFT_LAW_DB} fehlt — nur kuratierte Register-Einträge projiziert (§8).`);
+  console.log(`soft-law-projektion: ${SOFT_LAW_DB} fehlt — Kanten-Shards aus DB entfallen (register.json aus Zustands-Manifest, §8).`);
 }
 
 // (1) register.json (mit Trailing-Newline wie bisher)

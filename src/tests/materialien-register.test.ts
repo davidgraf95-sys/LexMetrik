@@ -4,6 +4,8 @@ import {
   MATERIAL_REGISTER, BEHOERDEN, DOKTYPEN, DOKTYP_LABEL, behoerdeVon,
 } from '../lib/materialien/register';
 import { baueMaterialManifest } from '../../scripts/materialien/material-manifest';
+import { projiziereRegister, dbDokAusZustand } from '../../scripts/materialien/soft-law-projektion';
+import { ladeZustand } from '../../scripts/materialien/soft-law-zustand';
 import { ERLASS_REGISTER } from '../lib/normtext/register';
 import { NAVIGATION } from '../lib/navigation';
 import { materialienFuerNorm } from '../lib/normtext/werkzeuge';
@@ -57,13 +59,20 @@ describe('Tor 1 — Register-Integrität', () => {
   });
 });
 
-describe('Tor 2 — committetes Manifest == frischer Build (Determinismus §2)', () => {
-  it('register.json existiert und entspricht dem Generator-Output', () => {
+describe('Tor 2 — committetes Manifest == frischer Build (Merge-Modell §2.7, Determinismus §2)', () => {
+  it('register.json existiert und entspricht der Projektion (kuratiert + DB aus Zustands-Manifest)', () => {
     expect(existsSync(REGISTER_PFAD), `${REGISTER_PFAD} fehlt`).toBe(true);
     const committet = JSON.parse(readFileSync(REGISTER_PFAD, 'utf8')) as MaterialManifest;
-    const frisch = baueMaterialManifest(committet.erzeugt);
+    // Merge-Modell (M2): register.json = kuratiertes MATERIAL_REGISTER + gelistete DB-Dokumente
+    // aus dem committeten Zustands-Manifest, deterministisch sortiert (byte-Beweis: check:materialien).
+    const dbDocs = dbDokAusZustand(ladeZustand());
+    const frisch = projiziereRegister(committet.erzeugt, dbDocs);
     expect(committet.materialien).toEqual(frisch.materialien);
-    expect(committet.materialien.length).toBe(MATERIAL_REGISTER.length);
+    // register.json ist Superset des kuratierten Registers (kein kuratierter Eintrag geht verloren).
+    const kuratiertKeys = new Set(MATERIAL_REGISTER.map((m) => m.key));
+    const registerKeys = new Set(committet.materialien.map((m) => m.key));
+    for (const k of kuratiertKeys) expect(registerKeys.has(k)).toBe(true);
+    expect(committet.materialien.length).toBe(MATERIAL_REGISTER.length + dbDocs.length);
   });
 
   it('jeder Manifest-Eintrag löst Behörde-/Doktyp-Labels auf', () => {

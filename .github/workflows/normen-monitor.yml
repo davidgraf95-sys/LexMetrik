@@ -39,6 +39,9 @@ jobs:
       - name: PDF-Erreichbarkeit (Kanton)
         if: always()
         run: npm run check:pdf-netz
+      - name: Materialien-Drift (SECO-Hubs vs. Zustands-Manifest)
+        if: always()
+        run: npm run check:materialien-netz
       - name: Verfallsregister (Termine)
         if: always()
         run: npm run check:verfall
