@@ -16,8 +16,10 @@ test('MaterialLeser einer neuen SECO-DB-Karte zeigt den sichtbaren amtlichen Liv
   const fehler = fehlerSammeln(page)
   await page.goto('/materialien/SECO-WL-ARG-ART-3A')
 
-  // Titel verbatim aus der amtlichen Download-Bezeichnung.
-  await expect(page.getByText('ArG Artikel 3a', { exact: false })).toBeVisible()
+  // Titel verbatim aus der amtlichen Download-Bezeichnung. Strikter Locator
+  // (Test-Präzisierung, keine fachliche Änderung): der Titel steht doppelt —
+  // Breadcrumb + h1 — getByText allein ist eine strict-mode-violation.
+  await expect(page.getByRole('heading', { name: /ArG Artikel 3a/ })).toBeVisible()
 
   // Prominenter, sichtbarer Live-Link zur amtlichen Fassung (§7c) mit der DAM-PDF-URL.
   const link = page.getByRole('link', { name: /Zur amtlichen Fassung/ })

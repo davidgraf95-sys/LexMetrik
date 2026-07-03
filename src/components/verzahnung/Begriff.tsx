@@ -9,9 +9,11 @@ import { GLOSSAR, type GlossarSchluessel } from '../../lib/verzahnung/glossar';
 // Darstellung (§3). Nur existierende Tokens (§13). Wird von StatusBadge-Erklärungen
 // und Gruppen-Overlines konsumiert.
 
-export function Begriff({ schluessel, children, className = '' }: {
+export function Begriff({ schluessel, children, ariaLabel, className = '' }: {
   schluessel: GlossarSchluessel;
   children?: ReactNode;
+  /** Accessible Name des Auslöse-Buttons (Default: sichtbarer Text). */
+  ariaLabel?: string;
   className?: string;
 }) {
   const eintrag = GLOSSAR[schluessel];
@@ -39,6 +41,7 @@ export function Begriff({ schluessel, children, className = '' }: {
     <span ref={wrapRef} className="relative inline-block">
       <button
         type="button"
+        aria-label={ariaLabel}
         aria-describedby={offen ? id : undefined}
         aria-expanded={offen}
         onClick={() => setOffen((v) => !v)}

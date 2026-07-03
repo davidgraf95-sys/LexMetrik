@@ -270,11 +270,19 @@ export function NormPopoverOverlay({ children, onClose, triggerRef }: {
       setPos({ top, left });
     };
     berechne();
+    // Scroll-Nachführung rAF-gedrosselt (Review 3.7.): das capture-Event feuert
+    // auch beim Scrollen IM Popover — ungedrosselt wäre jeder Tick ein Re-Render.
+    let raf = 0;
+    const beiScroll = () => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => { raf = 0; berechne(); });
+    };
     window.addEventListener('resize', berechne);
-    window.addEventListener('scroll', berechne, true);
+    window.addEventListener('scroll', beiScroll, true);
     return () => {
       window.removeEventListener('resize', berechne);
-      window.removeEventListener('scroll', berechne, true);
+      window.removeEventListener('scroll', beiScroll, true);
+      if (raf) cancelAnimationFrame(raf);
     };
   }, [triggerRef, children]);
 

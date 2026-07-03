@@ -19,6 +19,8 @@ import type { BrowseErlass, BrowseManifest } from '../../lib/normtext/browse-typ
 import type { NormSnapshot } from '../../lib/normtext/typen';
 import { formatiereDatum, passtAufSuche, pfadZu } from './helpers';
 import { ArtikelLeser, SektionKopf, SektionBaumTOC, ErlassKopfBlock } from './parts';
+import { beiLeerlauf } from '../../lib/leerlauf';
+import { ladeLeitfallShard, normArtikelToken, type LeitfallShard } from '../../lib/rechtsprechung/norm-index';
 
 // ─── Pane-Scoping-Helfer (B-2.5) — MODUL-Ebene = referenzstabil ────────────
 // Bewusst KEIN React Compiler im Projekt → in-Komponente definierte Funktionen
@@ -46,6 +48,11 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   const [struktur, setStruktur] = useState<StrukturMap | null>(null);
   const [kopf, setKopf] = useState<ErlassKopf | null>(null);
   const [manifest, setManifest] = useState<BrowseManifest | null>(null);
+  // Leitfall-Shard des Erlasses: GENAU EIN idle-Fetch auf Reader-Ebene (V1a-
+  // Endzustand nach CI-Befund W2·7-VZUI) — die ~1000 LeitfallZeilen grosser
+  // Erlasse sind reine Renderer und erhalten ihre Treffer als Prop. Ergebnis an
+  // den Erlass-Key gebunden (Pane-/Erlass-Wechsel liefert nie fremde Chips).
+  const [leitfallShard, setLeitfallShard] = useState<{ key: string; shard: LeitfallShard | null } | null>(null);
   const [fehler, setFehler] = useState(false);
   const [suche, setSuche] = useState('');
   // Rank 9 (QS-PERF, §15/3): entprellter Suchwert. Das Eingabefeld bleibt sofort
@@ -72,6 +79,22 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // (renderSektion mit defOpen=true) — Fedlex-treu der ganze Erlass lesbar; jede
   // Stufe ist per SektionKopf-Toggle einzeln einklappbar. Eigener State, vom TOC
   // entkoppelt (D, Auftrag David 26.6.2026).
+  useEffect(() => {
+    const key = erlass?.key;
+    if (!key) return;
+    let lebt = true;
+    const abbrechen = beiLeerlauf(() => {
+      void ladeLeitfallShard(key).then((shard) => { if (lebt) setLeitfallShard({ key, shard }); });
+    });
+    return () => { lebt = false; abbrechen(); };
+  }, [erlass?.key]);
+  // Artikel-Token → Leitfälle des AKTUELLEN Erlasses (sonst undefined = keine Zeile).
+  const leitfaelleFuer = useCallback((artikel: string) => (
+    erlass && leitfallShard?.key === erlass.key
+      ? leitfallShard.shard?.proArtikel[normArtikelToken(artikel)]
+      : undefined
+  ), [erlass, leitfallShard]);
+
   const [offen, setOffen] = useState<Record<string, boolean>>({});
   // Eigener Auf-/Zu-Zustand NUR für den TOC-Baum (entkoppelt vom Fliesstext).
   // Default ZU (SektionBaumTOC: `?? false`); beim Scrollen klappt der Spy die
@@ -814,7 +837,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
           ...s.kinder.map((k) => ({ pos: sekPos.get(k.id) ?? Infinity, el: renderSektion(k, true, tiefe + 1) })),
           ...s.artikel.map((e) => ({
             pos: artIndex.get(e.artikel) ?? 0,
-            el: <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} marg={margAnzeige.get(e.artikel)?.teile} margBasis={margAnzeige.get(e.artikel)?.ab} />,
+            el: <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} marg={margAnzeige.get(e.artikel)?.teile} margBasis={margAnzeige.get(e.artikel)?.ab} leitfaelle={leitfaelleFuer(e.artikel)} />,
           })),
         ].sort((a, b) => a.pos - b.pos)
       : [];
@@ -1021,14 +1044,14 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
           {treffer ? (
             <div className="space-y-4">
               <p className="text-body-s text-ink-500"><span className="num">{treffer.length}</span> Treffer für «{sucheDebounced.trim()}»</p>
-              {treffer.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} marg={struktur?.[e.artikel]?.marginalie} imTreffer onSpringe={springeZuArtikel} />)}
+              {treffer.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} marg={struktur?.[e.artikel]?.marginalie} imTreffer onSpringe={springeZuArtikel} leitfaelle={leitfaelleFuer(e.artikel)} />)}
               {treffer.length === 0 && <p className="text-body-s text-ink-500">Kein Artikel gefunden.</p>}
             </div>
           ) : (
             <div className="space-y-2">
               {ohneGliederung.length > 0 && (
                 <div className="space-y-5 mb-6">
-                  {ohneGliederung.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} marg={margAnzeige.get(e.artikel)?.teile} margBasis={margAnzeige.get(e.artikel)?.ab} />)}
+                  {ohneGliederung.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} marg={margAnzeige.get(e.artikel)?.teile} margBasis={margAnzeige.get(e.artikel)?.ab} leitfaelle={leitfaelleFuer(e.artikel)} />)}
                 </div>
               )}
               {sektionen.map((s) => renderSektion(s, true, 0))}

@@ -155,6 +155,7 @@ export function ZitiertGruppe({ zitierteEntscheide, abschnitte, selbstKey }: {
                 {k.fundstelleAnker && (
                   <button type="button" onClick={() => springeZuAnker(k.fundstelleAnker!)}
                     title={`Zur zitierenden Stelle ${ankerLabel(k.fundstelleAnker)} springen`}
+                    aria-label={`Zur zitierenden Stelle ${ankerLabel(k.fundstelleAnker)} springen`}
                     className="ml-1 text-micro num text-ink-500 hover:text-brass-700">
                     ↳ {ankerLabel(k.fundstelleAnker)}
                   </button>

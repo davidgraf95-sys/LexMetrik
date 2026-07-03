@@ -71,13 +71,22 @@ export function StatusBadge({ praedikat, variant = 'voll', interaktiv = false, c
   // Volltext-Variante: ausgeschriebenes Badge. `interaktiv` macht das Label zu
   // einem Begriff (fokussier- + tap-bedienbarer Erklär-Tooltip, §1.7) — nur wo ein
   // Glossar-Eintrag existiert; sonst trägt `title` die Erklärung.
+  // a11y (Review 3.7.): `aria-label` NIE auf einem role-losen Span
+  // (axe aria-prohibited-attr) — statisch trägt es der role="img"-Span, im
+  // interaktiven Fall der Begriff-Button (accessible name des Auslösers).
+  if (interaktiv && r.glossar) {
+    return (
+      <span className={`lc-badge ${r.ton} ${className}`}>
+        {r.glyph && <span aria-hidden className="mr-1">{r.glyph}</span>}
+        <Begriff schluessel={r.glossar} ariaLabel={r.ariaLabel}>{r.label}</Begriff>
+      </span>
+    );
+  }
   return (
-    <span className={`lc-badge ${r.ton} ${className}`} aria-label={r.ariaLabel}
-      title={interaktiv && r.glossar ? undefined : r.erklaerung}>
+    <span role="img" className={`lc-badge ${r.ton} ${className}`} aria-label={r.ariaLabel}
+      title={r.erklaerung}>
       {r.glyph && <span aria-hidden className="mr-1">{r.glyph}</span>}
-      {interaktiv && r.glossar
-        ? <Begriff schluessel={r.glossar}>{r.label}</Begriff>
-        : r.label}
+      {r.label}
     </span>
   );
 }
