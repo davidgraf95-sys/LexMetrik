@@ -21,7 +21,10 @@ import type { PresetIndexEintrag } from './presetIndex';
 import type { BrowseMaterial } from './materialien/typen';
 import { filtere as filtereMaterialien, vergleicheGlobal } from './materialien/browse';
 
-export type GruppenId = 'katalog' | 'preset' | 'gesetz' | 'artikel' | 'entscheid' | 'material';
+// 'online' = zusätzliche Edge-Volltextgruppe (QS-DATA E2), von der Komponente
+// hinter die statischen Gruppen gehängt; sie entsteht in lib/suche/onlineVolltext.ts,
+// nicht im synchronen Aggregator unten (deshalb kein sucheAlles-Zweig dafür).
+export type GruppenId = 'katalog' | 'preset' | 'gesetz' | 'artikel' | 'entscheid' | 'material' | 'online';
 
 export interface SuchTreffer {
   id: string;
@@ -42,6 +45,8 @@ export interface SuchGruppe {
   mehrHref?: string;
   /** true, solange die zugrundeliegenden Daten noch nicht geladen sind. */
   laedt?: boolean;
+  /** Einmalige, dezente §8-Offenlegung unter dem Gruppentitel (z. B. Online-Suche). */
+  hinweis?: string;
 }
 
 const KAPPUNG = 6;

@@ -542,8 +542,23 @@ OR/ZGB-Renumerierungen, bis/ter). Darum bei jedem neuen `erlass_fassungen`-Eintr
     nur id/titel/snippet/fundstelle) + Unit-Tests inkl. Payload-Grenz-Test (Antwort << 4,5 MB).
     (3) **`api/suche.ts`** — read-only Edge-Funktion, dependency-frei (Turso-HTTP `/v2/pipeline`),
     ohne Env-Vars **ehrlicher 503** (Client-Index bleibt Fallback, §8); Query-Logik mit (2) GETEILT
-    (§5). **Offen bleibt NUR:** Turso provisionieren (2 Env-Vars in Vercel, David-Handschritt) +
-    Anbindung als zusätzliche Treffergruppe in der bestehenden `universalSuche` (§11.3 b).
+    (§5).
+  - **E2-Anbindung ✅ (W2·6-DATA, 3.7.2026).** Die Edge-Suche hängt als zusätzliche §8-markierte
+    Treffergruppe **«Volltext-Suche (online)»** im EINEN Suchweg (`universalSuche`), nicht als
+    zweites Silo (§11.3 b): neues Modul `src/lib/suche/onlineVolltext.ts` (debounced Fetch auf
+    `/api/suche?q=…&limit=10`, AbortController ~4 s, Antwort→SuchTreffer, interne URL-Bildung aus
+    der Fundstelle — Artikel `/gesetze/bund/<key>#art-<artikel>` wie `artikelVolltext.ts`,
+    Entscheid `/rechtsprechung/<id>` wie `entscheidGruppe`); eingebunden im geteilten Hook
+    `useUniversalSuche` (fliesst dadurch in BEIDE Wrapper — Header + Hero — ohne die Wrapper
+    anzufassen), §8-Offenlegung «Suchbegriffe verlassen dafür den Browser» einmalig unter dem
+    Gruppentitel (`SuchResultate`). **Ehrliches Degradieren (§8):** 503/502/Netz/Timeout **und**
+    200-mit-leerer-Antwort → Gruppe erscheint GAR NICHT; Feature-Detection-Cache (nach Ausfall
+    ~5 min nicht erneut hämmern, dann wieder). Unit-Tests: 200/503/Netz/Timeout/<3-Zeichen +
+    URL-Bildung. Manueller Beweis gegen die Prod-Edge 3.7.2026: `api/suche?q=verjaehrung` liefert
+    **HTTP 200 mit leerer Antwort** (Turso provisioniert, Hot-Daten-Sync ausstehend) → die
+    Degradation macht die Gruppe unsichtbar, statischer Index trägt weiter. **E2 damit KOMPLETT,
+    sobald die Turso-Hot-Daten geladen/synchronisiert sind** (Perf-budget/Payload-Grenz-Test bleiben
+    E2-DoD, greifen erst mit geladenen Daten).
 - **E3 · BGer-Massen-Import (26×-Slot!).** voilaj-Parquet konsumieren (bger ~191k), Dedup
   `make_canonical_key`, `kuratierung:'maschinell'`, amtlicher bger.ch-Link je Zeile; DB-only
   (nicht nach `public/` projiziert); Long-Tail-Route `/rechtsprechung/:key` fällt bei

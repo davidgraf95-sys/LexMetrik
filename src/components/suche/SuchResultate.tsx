@@ -86,6 +86,8 @@ function Gruppe({ g, index, onAuswahl, onNavigate, listboxId, aktivId }: {
           </Link>
         )}
       </div>
+      {/* Einmalige, dezente §8-Offenlegung (z. B. «Suchbegriffe verlassen den Browser»). */}
+      {g.hinweis && <p className="px-4 pb-1 text-body-s text-ink-500">{g.hinweis}</p>}
       {g.laedt
         ? <p className="px-4 pb-3 text-body-s text-ink-500">wird durchsucht …</p>
         : <ul role={listboxId ? 'none' : undefined} className="pb-1.5">
