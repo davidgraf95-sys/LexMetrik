@@ -1,9 +1,9 @@
 {
- "erzeugt": "2026-06-30",
+ "erzeugt": "2026-07-03",
  "kopf": {
   "srNummer": "748.131.1",
   "titel": "Verordnung über die Infrastruktur der Luftfahrt",
-  "erlassdatum": "vom 23. November 1994 (Stand am 1. Januar 2024)",
+  "erlassdatum": "vom 23. November 1994 (Stand am 1. Juli 2026)",
   "praeambel": [
    {
     "rolle": "autor",
@@ -25,7 +25,7 @@
     "links": [
      {
       "label": "SR <b>748.0</b>",
-      "url": "https://fedlex.data.admin.ch/eli/cc/1950/471_491_479"
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9033"
      }
     ],
     "absatz": null,
@@ -63,7 +63,7 @@
      "links": [
       {
        "label": "SR <b>748.132.3</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2014/286"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9082"
       }
      ],
      "absatz": null,
@@ -124,7 +124,7 @@
      "links": [
       {
        "label": "SR <b>700</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1979/1573_1573_1573"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8351"
       }
      ],
      "absatz": null,
@@ -160,7 +160,7 @@
      "links": [
       {
        "label": "SR <b>0.748.0</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/63/1377_1378_1381"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/3110"
       }
      ],
      "absatz": null,
@@ -221,7 +221,7 @@
      "links": [
       {
        "label": "SR <b>0.748.0</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/63/1377_1378_1381"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/3110"
       }
      ],
      "absatz": "2",
@@ -393,8 +393,13 @@
     },
     {
      "nr": "23",
-     "text": "Diese Dokumente können bei Skyguide (aipversand@skyguide.ch) gegen Bezahlung bezogen und beim Bundesamt für Zivilluftfahrt (BAZL), 3003 Bern kostenlos eingesehen werden. AIP-Services, 8602 Wangen b. Dübendorf; www.skyguide.ch > Dienstleistungen > Luftfahrtinformationsdienste.",
-     "links": [],
+     "text": "Diese Dokumente können bei Skyguide ( aipversand@skyguide.ch ) gegen Bezahlung bezogen und beim Bundesamt für Zivilluftfahrt (BAZL), 3003 Bern kostenlos eingesehen werden. AIP-Services, 8602 Wangen b. Dübendorf; www.skyguide.ch > Dienstleistungen > Luftfahrtinformationsdienste.",
+     "links": [
+      {
+       "label": "www.skyguide.ch",
+       "url": "http://www.skyguide.ch"
+      }
+     ],
      "absatz": "2",
      "item": null
     },
@@ -821,7 +826,7 @@
      "links": [
       {
        "label": "SR <b>814.41</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1987/338_338_338"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9523"
       }
      ],
      "absatz": null,
@@ -986,7 +991,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "61",
+     "nr": "64",
      "text": "Fassung gemäss Ziff. I 2 der V vom 4. März 2011, in Kraft seit 1. April 2011 (AS <b>2011</b> 1139).",
      "links": [
       {
@@ -998,7 +1003,7 @@
      "item": "b"
     },
     {
-     "nr": "62",
+     "nr": "65",
      "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008, in Kraft seit 15. März 2008 (AS <b>2008</b> 595).",
      "links": [
       {
@@ -1010,7 +1015,7 @@
      "item": null
     },
     {
-     "nr": "63",
+     "nr": "66",
      "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008 (AS <b>2008</b> 595). Fassung gemäss Ziff. I 2 der V vom 4. März 2011, in Kraft seit 1. April 2011 (AS <b>2011</b> 1139).",
      "links": [
       {
@@ -1026,7 +1031,7 @@
      "item": null
     },
     {
-     "nr": "64",
+     "nr": "67",
      "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008, in Kraft seit 15. März 2008 (AS <b>2008</b> 595).",
      "links": [
       {
@@ -1038,7 +1043,7 @@
      "item": null
     },
     {
-     "nr": "65",
+     "nr": "68",
      "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008, in Kraft seit 15. März 2008 (AS <b>2008</b> 595).",
      "links": [
       {
@@ -1071,7 +1076,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "66",
+     "nr": "69",
      "text": "Fassung gemäss Ziff. I der V vom 13. Febr. 2008, in Kraft seit 15. März 2008 (AS <b>2008</b> 595).",
      "links": [
       {
@@ -1083,7 +1088,7 @@
      "item": null
     },
     {
-     "nr": "67",
+     "nr": "70",
      "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
@@ -1112,7 +1117,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "79",
+     "nr": "82",
      "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
@@ -1124,7 +1129,7 @@
      "item": null
     },
     {
-     "nr": "80",
+     "nr": "83",
      "text": "Dritter Satz eingefügt durch Ziff. I der V vom 26. April 2023, in Kraft seit 1. Juni 2023 (AS <b>2023</b> 207).",
      "links": [
       {
@@ -1136,7 +1141,7 @@
      "item": null
     },
     {
-     "nr": "78",
+     "nr": "81",
      "text": "Fassung gemäss Ziff. II 6 der V zum Bundesgesetz über die Koordination und Verein- fachung von Entscheidverfahren vom 2. Febr. 2000, in Kraft seit 1. März 2000 (AS <b>2000</b> 703). Ursprünglich vor Art. 29.",
      "links": [
       {
@@ -1166,7 +1171,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "84",
+     "nr": "87",
      "text": "Fassung gemäss Ziff. I 2 der V vom 4. März 2011, in Kraft seit 1. April 2011 (AS <b>2011</b> 1139).",
      "links": [
       {
@@ -1256,7 +1261,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "86",
+     "nr": "89",
      "text": "Fassung gemäss Ziff. I der V vom 13. Febr. 2008, in Kraft seit 1. Mai 2008 (AS <b>2008</b> 595).",
      "links": [
       {
@@ -1281,7 +1286,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "97",
+     "nr": "100",
      "text": "Fassung gemäss Anhang Ziff. 5 der Aussenlandeverordnung vom 14. Mai 2014, in Kraft seit 1. Sept. 2014 (AS <b>2014</b> 1339).",
      "links": [
       {
@@ -1293,12 +1298,12 @@
      "item": null
     },
     {
-     "nr": "98",
+     "nr": "101",
      "text": "SR <b>748.132.3</b>",
      "links": [
       {
        "label": "SR <b>748.132.3</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2014/286"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9082"
       }
      ],
      "absatz": null,
@@ -1318,7 +1323,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "100",
+     "nr": "103",
      "text": "Fassung gemäss Anhang Ziff. 5 der Aussenlandeverordnung vom 14. Mai 2014, in Kraft seit 1. Sept. 2014 (AS <b>2014</b> 1339).",
      "links": [
       {
@@ -1330,7 +1335,7 @@
      "item": null
     },
     {
-     "nr": "101",
+     "nr": "104",
      "text": "Fassung gemäss Ziff. II 6 der V vom 2. Febr. 2000 zum Bundesgesetz über die Koordination und Vereinfachung von Entscheidverfahren, in Kraft seit 1. März 2000 (AS <b>2000</b> 703).",
      "links": [
       {
@@ -1342,7 +1347,7 @@
      "item": null
     },
     {
-     "nr": "102",
+     "nr": "105",
      "text": "Fassung gemäss Ziff. I der V vom 21. Okt. 2015, in Kraft seit 1. Dez. 2015 (AS <b>2015</b> 4423). Siehe auch die ÜeB dieser Änd. am Schluss des Textes (Art. 74<i>d</i>).",
      "links": [
       {
@@ -1365,7 +1370,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "103",
+     "nr": "106",
      "text": "Aufgehoben durch Anhang Ziff. 5 der Aussenlandeverordnung vom 14. Mai 2014, mit Wirkung seit 1. Sept. 2014 (AS <b>2014</b> 1339).",
      "links": [
       {
@@ -1390,7 +1395,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "104",
+     "nr": "107",
      "text": "Fassung gemäss Anhang Ziff. 5 der Aussenlandeverordnung vom 14. Mai 2014, in Kraft seit 1. Sept. 2014 (AS <b>2014</b> 1339).",
      "links": [
       {
@@ -1419,7 +1424,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "109",
+     "nr": "112",
      "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
@@ -1463,7 +1468,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "111",
+     "nr": "114",
      "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
@@ -1492,7 +1497,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "112",
+     "nr": "115",
      "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
@@ -1525,7 +1530,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "117",
+     "nr": "120",
      "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
@@ -1558,7 +1563,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "118",
+     "nr": "121",
      "text": "Fassung gemäss Ziff. I 2 der V vom 4. März 2011, in Kraft seit 1. April 2011 (AS <b>2011</b> 1139).",
      "links": [
       {
@@ -1570,7 +1575,7 @@
      "item": null
     },
     {
-     "nr": "119",
+     "nr": "122",
      "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
@@ -1603,7 +1608,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "120",
+     "nr": "123",
      "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
@@ -1632,7 +1637,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "123",
+     "nr": "126",
      "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
@@ -1644,7 +1649,7 @@
      "item": null
     },
     {
-     "nr": "122",
+     "nr": "125",
      "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
@@ -1674,7 +1679,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "125",
+     "nr": "128",
      "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
@@ -1703,7 +1708,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "126",
+     "nr": "129",
      "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
@@ -1732,7 +1737,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "127",
+     "nr": "130",
      "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
@@ -1761,7 +1766,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "128",
+     "nr": "131",
      "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
@@ -1790,7 +1795,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "129",
+     "nr": "132",
      "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
@@ -1819,7 +1824,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "130",
+     "nr": "133",
      "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
@@ -1848,7 +1853,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "131",
+     "nr": "134",
      "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
@@ -1873,7 +1878,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "134",
+     "nr": "137",
      "text": "Die Änderung kann unter AS <b>1994</b> 3050 konsultiert werden.",
      "links": [
       {
@@ -1938,7 +1943,7 @@
      "links": [
       {
        "label": "SR <b>0.748.127.192.68</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2002/258"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/3158"
       }
      ],
      "absatz": "1",
@@ -1997,7 +2002,7 @@
      "links": [
       {
        "label": "SR <b>0.748.0</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/63/1377_1378_1381"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/3110"
       }
      ],
      "absatz": "1",
@@ -2143,7 +2148,7 @@
      "links": [
       {
        "label": "SR <b>814.41</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1987/338_338_338"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9523"
       }
      ],
      "absatz": "1",
@@ -2151,6 +2156,30 @@
     },
     {
      "nr": "54",
+     "text": "Eingefügt durch Anhang Ziff. 12 der V vom 15. Okt. 2025, in Kraft seit 1. Juli 2026 (AS <b>2025</b> 659).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 659",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/659"
+      }
+     ],
+     "absatz": "1",
+     "item": "l"
+    },
+    {
+     "nr": "55",
+     "text": "SR <b>700.1</b>",
+     "links": [
+      {
+       "label": "SR <b>700.1</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8353"
+      }
+     ],
+     "absatz": "1",
+     "item": "l"
+    },
+    {
+     "nr": "56",
      "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
@@ -2159,22 +2188,22 @@
       }
      ],
      "absatz": "1",
-     "item": "k"
+     "item": "l"
     },
     {
-     "nr": "55",
+     "nr": "57",
      "text": "SR <b>711</b>",
      "links": [
       {
        "label": "SR <b>711</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/47/689_701_723"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8369"
       }
      ],
      "absatz": "2",
      "item": null
     },
     {
-     "nr": "56",
+     "nr": "58",
      "text": "Fassung gemäss Ziff. I 6 der V vom 19. Aug. 2020 über die Anpassung des Verordnungsrechts infolge der Änderung des Bundesgesetzes über die Enteignung, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 3995).",
      "links": [
       {
@@ -2207,7 +2236,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "57",
+     "nr": "59",
      "text": "Eingefügt durch Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
@@ -2239,7 +2268,7 @@
     "Aussteckung"
    ]
   },
-  "27_b_bis": {
+  "27_bbis": {
    "gliederung": [
     {
      "ebene": 1,
@@ -2255,19 +2284,35 @@
     }
    ],
    "marginalie": [
-    "Meldungen an die kantonale Vermessungsaufsicht"
+    "Meldepflichten"
    ],
    "fussnoten": [
     {
-     "nr": "58",
-     "text": "Eingefügt durch Anhang Ziff. 16 der V vom 23. Aug. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 529).",
+     "nr": "60",
+     "text": "Eingefügt durch Anhang Ziff. 16 der V vom 23. Aug. 2023 (AS <b>2023</b> 529). Fassung gemäss Anhang Ziff. 12 der V vom 15. Okt. 2025, in Kraft seit 1. Juli 2026 (AS <b>2025</b> 659).",
      "links": [
       {
        "label": "AS <b>2023</b> 529",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/529"
+      },
+      {
+       "label": "AS <b>2025</b> 659",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/659"
       }
      ],
      "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "61",
+     "text": "SR <b>700</b>",
+     "links": [
+      {
+       "label": "SR <b>700</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8351"
+      }
+     ],
+     "absatz": "3",
      "item": null
     }
    ]
@@ -2311,7 +2356,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "59",
+     "nr": "62",
      "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
@@ -2363,7 +2408,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "60",
+     "nr": "63",
      "text": "Die Berichtigung vom 12. Mai 2021 betrifft nur den italienischen Text (AS <b>2021</b> 269).",
      "links": [
       {
@@ -2434,7 +2479,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "69",
+     "nr": "72",
      "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
@@ -2446,19 +2491,19 @@
      "item": null
     },
     {
-     "nr": "70",
+     "nr": "73",
      "text": "Richtlinie 96/67/EG vom 15. Oktober 1996 über den Zugang zum Markt der Bodenabfertigungsdienste auf den Flughäfen der Gemeinschaft, in der für die Schweiz gemäss Ziff. 1 des Anhangs zum Luftverkehrsabkommen (SR <b>0.748.127.192.68</b>) jeweils verbindlichen Fassung.",
      "links": [
       {
        "label": "SR <b>0.748.127.192.68</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2002/258"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/3158"
       }
      ],
      "absatz": null,
      "item": null
     },
     {
-     "nr": "68",
+     "nr": "71",
      "text": "Eingefügt durch Ziff. I der V vom 30. Jan. 2002, in Kraft seit 1. Juni 2002 (AS <b>2002</b> 1186).",
      "links": [
       {
@@ -2492,14 +2537,14 @@
    ],
    "fussnoten": [
     {
-     "nr": "71",
+     "nr": "74",
      "text": "Siehe Fussnote zur Art. 29<i>a.</i>",
      "links": [],
      "absatz": "1",
      "item": null
     },
     {
-     "nr": "72",
+     "nr": "75",
      "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
@@ -2532,7 +2577,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "74",
+     "nr": "77",
      "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
@@ -2544,7 +2589,7 @@
      "item": null
     },
     {
-     "nr": "73",
+     "nr": "76",
      "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008, in Kraft seit 15. März 2008 (AS <b>2008</b> 595).",
      "links": [
       {
@@ -2635,19 +2680,19 @@
    ],
    "fussnoten": [
     {
-     "nr": "75",
+     "nr": "78",
      "text": "SR<b> 748.01</b>",
      "links": [
       {
        "label": "SR<b> 748.01</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1973/1856_1856_1856"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9034"
       }
      ],
      "absatz": null,
      "item": null
     },
     {
-     "nr": "76",
+     "nr": "79",
      "text": "Fassung gemäss Ziff. II der vom 16. Febr. 2022, in Kraft seit 1. Mai 2022 (AS <b>2022</b> 230).",
      "links": [
       {
@@ -2699,12 +2744,12 @@
    ],
    "fussnoten": [
     {
-     "nr": "77",
+     "nr": "80",
      "text": "SR <b>748.112.11</b>",
      "links": [
       {
        "label": "SR <b>748.112.11</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2007/720"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9040"
       }
      ],
      "absatz": "2",
@@ -2728,7 +2773,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "81",
+     "nr": "84",
      "text": "Eingefügt durch Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
@@ -2757,7 +2802,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "82",
+     "nr": "85",
      "text": "Eingefügt durch Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
@@ -2786,7 +2831,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "83",
+     "nr": "86",
      "text": "Eingefügt durch Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
@@ -2813,7 +2858,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "85",
+     "nr": "88",
      "text": "Aufgehoben durch Art. 50 der V vom 25. April 2012 über die Flughafengebühren, mit Wirkung seit 1. Juni 2012 (AS <b>2012</b> 2753).",
      "links": [
       {
@@ -2846,7 +2891,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "87",
+     "nr": "90",
      "text": "Eingefügt durch Beilage Ziff. 2 der V vom 12. April 2000 , in Kraft seit 1. März 2000 (AS <b>2000 </b>1388).",
      "links": [
       {
@@ -2879,7 +2924,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "88",
+     "nr": "91",
      "text": "Eingefügt durch Beilage Ziff. 2 der V vom 12. April 2000, in Kraft seit 1. Mai 2008 (AS <b>2000 </b>1388).",
      "links": [
       {
@@ -2912,7 +2957,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "89",
+     "nr": "92",
      "text": "Eingefügt durch Beilage Ziff. 2 der V vom 12. April 2000, in Kraft seit 1. Mai 2008 (AS <b>2000 </b>1388).",
      "links": [
       {
@@ -2924,7 +2969,7 @@
      "item": null
     },
     {
-     "nr": "90",
+     "nr": "93",
      "text": "Bezugsquelle: Bundesamt für Zivilluftfahrt, 3003 Bern.",
      "links": [],
      "absatz": null,
@@ -2952,7 +2997,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "91",
+     "nr": "94",
      "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008, in Kraft seit 15. März 2008 (AS <b>2008</b> 595).",
      "links": [
       {
@@ -2964,7 +3009,7 @@
      "item": null
     },
     {
-     "nr": "92",
+     "nr": "95",
      "text": "Eingefügt durch Ziff. I der V vom 22. April 2020, in Kraft vom 23. April 2020 bis zum 22. Okt. 2020 (AS <b>2020</b> 1331).",
      "links": [
       {
@@ -2976,7 +3021,7 @@
      "item": null
     },
     {
-     "nr": "93",
+     "nr": "96",
      "text": "Fassung gemäss Ziff. I 2 der V vom 4. März 2011, in Kraft seit 1. April 2011 (AS <b>2011</b> 1139).",
      "links": [
       {
@@ -2988,7 +3033,7 @@
      "item": "b"
     },
     {
-     "nr": "94",
+     "nr": "97",
      "text": "Eingefügt durch Ziff. I 2 der V vom 4. März 2011, in Kraft seit 1. April 2011 (AS <b>2011</b> 1139).",
      "links": [
       {
@@ -3099,7 +3144,7 @@
       },
       {
        "label": "SR <b>748.112.11</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2007/720"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9040"
       }
      ],
      "absatz": "3",
@@ -3125,7 +3170,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "95",
+     "nr": "98",
      "text": "Aufgehoben durch Beilage Ziff. 2 der V vom 12. April 2000, mit Wirkung seit 1. Mai 2000 (AS <b>2000 </b>1388).",
      "links": [
       {
@@ -3148,7 +3193,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "96",
+     "nr": "99",
      "text": "Aufgehoben durch Ziff. II 6 der V vom 2. Febr. 2000 zum Bundesgesetz über die Koordination und Vereinfachung von Entscheidverfahren, mit Wirkung seit 1. März 2000 (AS <b>2000</b> 703).",
      "links": [
       {
@@ -3171,7 +3216,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "99",
+     "nr": "102",
      "text": "Aufgehoben durch Anhang Ziff. 5 der Aussenlandeverordnung vom 14. Mai 2014, mit Wirkung seit 1. Sept. 2014 (AS <b>2014</b> 1339).",
      "links": [
       {
@@ -3194,7 +3239,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "105",
+     "nr": "108",
      "text": "Aufgehoben durch Anhang Ziff. 5 der Aussenlandeverordnung vom 14. Mai 2014, mit Wirkung seit 1. Sept. 2014 (AS <b>2014</b> 1339).",
      "links": [
       {
@@ -3223,7 +3268,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "106",
+     "nr": "109",
      "text": "Ursprünglich vor Art. 59. Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
@@ -3236,7 +3281,7 @@
      "sektion": "5. Titel: Luftfahrthindernisse und Sicherheitszonen"
     },
     {
-     "nr": "107",
+     "nr": "110",
      "text": "Fassung gemäss Ziff. I der V vom 13. Febr. 2008, in Kraft seit 15. März 2008 (AS <b>2008</b> 595).",
      "links": [
       {
@@ -3266,7 +3311,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "108",
+     "nr": "111",
      "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
@@ -3295,7 +3340,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "110",
+     "nr": "113",
      "text": "Eingefügt durch Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
@@ -3322,7 +3367,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "113",
+     "nr": "116",
      "text": "Aufgehoben durch Ziff. I der V vom 17. Okt. 2018, mit Wirkung seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
@@ -3353,7 +3398,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "116",
+     "nr": "119",
      "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008 (AS <b>2008</b> 595). Aufgehoben durch Ziff. I der V vom 17. Okt. 2018, mit Wirkung seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
@@ -3369,7 +3414,7 @@
      "item": null
     },
     {
-     "nr": "114",
+     "nr": "117",
      "text": "Ursprünglich vor Art. 63. Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
@@ -3382,7 +3427,7 @@
      "sektion": "2. Kapitel: Bewilligungs- und Meldepflichten"
     },
     {
-     "nr": "115",
+     "nr": "118",
      "text": "Eingefügt durch Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
@@ -3416,7 +3461,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "121",
+     "nr": "124",
      "text": "Eingefügt durch Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
@@ -3482,7 +3527,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "124",
+     "nr": "127",
      "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008 (AS <b>2008</b> 595). Aufgehoben durch Ziff. I der V vom 17. Okt. 2018, mit Wirkung seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
@@ -3509,7 +3554,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "133",
+     "nr": "136",
      "text": "Fassung gemäss Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {
@@ -3521,7 +3566,7 @@
      "item": "a"
     },
     {
-     "nr": "132",
+     "nr": "135",
      "text": "Eingefügt durch Ziff. I 2 der V vom 4. März 2011, in Kraft seit 1. April 2011 (AS <b>2011</b> 1139).",
      "links": [
       {
@@ -3547,7 +3592,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "135",
+     "nr": "138",
      "text": "Eingefügt durch Ziff. II 6 der V vom 2. Febr. 2000 zum Bundesgesetz über die Koordination und Vereinfachung von Entscheidverfahren, in Kraft seit 1. März 2000 (AS <b>2000</b> 703).",
      "links": [
       {
@@ -3572,7 +3617,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "136",
+     "nr": "139",
      "text": "Eingefügt durch Ziff. I der V vom 13. Febr. 2008, in Kraft seit 15. März 2008 (AS <b>2008</b> 595).",
      "links": [
       {
@@ -3584,12 +3629,12 @@
      "item": null
     },
     {
-     "nr": "137",
+     "nr": "140",
      "text": "SR <b>0.748.0</b>",
      "links": [
       {
        "label": "SR <b>0.748.0</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/63/1377_1378_1381"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/3110"
       }
      ],
      "absatz": "1",
@@ -3609,7 +3654,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "138",
+     "nr": "141",
      "text": "Eingefügt durch Ziff. I 2 der V vom 4. März 2011, in Kraft seit 1. April 2011 (AS <b>2011</b> 1139).",
      "links": [
       {
@@ -3634,7 +3679,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "139",
+     "nr": "142",
      "text": "Eingefügt durch Ziff. I der V vom 21. Okt. 2015, in Kraft seit 1. Dez. 2015 (AS <b>2015</b> 4423).",
      "links": [
       {
@@ -3659,7 +3704,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "140",
+     "nr": "143",
      "text": "Eingefügt durch Ziff. I der V vom 17. Okt. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 3849).",
      "links": [
       {

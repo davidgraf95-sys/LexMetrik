@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-30",
+  "erzeugt": "2026-07-03",
   "eintraege": [
     {
       "id": "bund/ASYLV3/art_1",
@@ -18,10 +18,10 @@
           "text": "Die Dublin-Assoziierungsabkommen sind in Anhang 4 aufgeführt."
         }
       ],
-      "stand": "2024-06-01",
+      "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20240601",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
       "sha": "a96936fbcb7e7a285026ef7e1b3c2968991f31cd23f4abb71b28e7adfa520afe"
     },
     {
@@ -34,7 +34,7 @@
       "grundlage": "(Art. 96 und 99a–102 AsylG; Art. 2 BGIAA)",
       "bloecke": [
         {
-          "absatz": null,
+          "absatz": "1",
           "text": "Das Staatssekretariat für Migration (SEM) betreibt zur Erfüllung seiner gesetzlichen Aufgaben folgende Informationssysteme:",
           "items": [
             {
@@ -51,48 +51,44 @@
             },
             {
               "marke": "d",
-              "text": "…"
-            },
-            {
-              "marke": "e",
               "text": "Datenbank Finanzierung, Statistik und Controlling (FiSCo);"
             },
             {
-              "marke": "f",
+              "marke": "e",
               "text": "Datenbank Medizinalfälle;"
             },
             {
-              "marke": "g",
+              "marke": "f",
               "text": "Datenbank individuelle Rückkehrhilfe;"
             },
             {
-              "marke": "h",
-              "text": "…"
-            },
-            {
-              "marke": "i",
+              "marke": "g",
               "text": "Informationssystem der Zentren des Bundes und der Unterkünfte an den Flughäfen (MIDES);"
             },
             {
-              "marke": "j",
-              "text": "Informationssystem AURORA nach Artikel 12 der Verordnung vom 11. August 1999 über den Vollzug der Weg- und Ausweisung sowie der Landesverweisung von ausländischen Personen;"
+              "marke": "h",
+              "text": "Informationssystem eRetour nach Artikel 12 der Verordnung vom 11. August 1999 über den Vollzug der Weg- und Ausweisung sowie der Landesverweisung von ausländischen Personen;"
             },
             {
-              "marke": "k",
+              "marke": "i",
               "text": "Datenbank Dolmetscher Pool (DOPO);"
             },
             {
-              "marke": "l",
-              "text": "das Fristenmanagementtool (FM-Tool)."
+              "marke": "j",
+              "text": "Fristenmanagementtool (FM-Tool)."
             }
           ]
+        },
+        {
+          "absatz": "2",
+          "text": "Es beteiligt sich im Rahmen seiner Aufgaben im Ausländer- und Asylbereich an der Verwaltung von Eurodac."
         }
       ],
-      "stand": "2024-06-01",
+      "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1_a",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20240601",
-      "sha": "e0d1ba4e6d6f51b6d65f3092d6a02dfd2560a8c9b62d151c7517a5d2bbce6106"
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
+      "sha": "52e7e7c3a8b7ef8b13718989756c85311b7f327c08730f881cf9dcea2508dee7"
     },
     {
       "id": "bund/ASYLV3/art_1_b",
@@ -133,10 +129,10 @@
           ]
         }
       ],
-      "stand": "2024-06-01",
+      "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1_b",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20240601",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
       "sha": "d832cd56b4588755eeef2e0b3f0525e4dde0a64534f3737e0afe38dd3e84e3be"
     },
     {
@@ -156,10 +152,10 @@
           "text": "Zugriff auf die Daten haben die Mitarbeiterinnen und Mitarbeiter des SEM, die mit der Darlehensverwaltung befasst sind."
         }
       ],
-      "stand": "2024-06-01",
+      "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1_c",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20240601",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
       "sha": "a2284eb27eb47ff6c8ae8ecacf219e8bd4aaf3dd781dc619d270a13f75862ce1"
     },
     {
@@ -175,10 +171,10 @@
           "text": "…"
         }
       ],
-      "stand": "2024-06-01",
+      "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1_d",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20240601",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
@@ -210,10 +206,10 @@
           "text": "Alle Personen, die Schreib- und Leserechte in FiSCo haben, können in FiSCo zu einzelnen Personen zusätzliche Bemerkungen zur Finanzierung eines Einzelfalls erfassen."
         }
       ],
-      "stand": "2024-06-01",
+      "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1_e",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20240601",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
       "sha": "87546d73218aa2f622a18dd33bae96411e1bc53455bed72009e8c675946eeaf6"
     },
     {
@@ -233,10 +229,10 @@
           "text": "Zugriff auf die Daten haben die Mitarbeiterinnen und Mitarbeiter des SEM, die mit Medizinalfällen befasst sind."
         }
       ],
-      "stand": "2024-06-01",
+      "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1_f",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20240601",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
       "sha": "404b035b0b2ec86e0e1f62803323835be86ac3476e4889bf1a755de05e0b4585"
     },
     {
@@ -256,10 +252,10 @@
           "text": "Zugriff auf die Daten haben die Mitarbeiterinnen und Mitarbeiter des SEM, die mit der Kontrolle und der Auswertung der individuellen Rückkehrhilfe befasst sind."
         }
       ],
-      "stand": "2024-06-01",
+      "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1_g",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20240601",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
       "sha": "c9fec986bf68dde48df49a064a8f2aa4ddcf8b7f5e800a0997b39100e60d3812"
     },
     {
@@ -275,10 +271,10 @@
           "text": "…"
         }
       ],
-      "stand": "2024-06-01",
+      "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1_h",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20240601",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
@@ -303,10 +299,10 @@
           "text": "Das SEM legt in einem Bearbeitungsreglement insbesondere die organisatorischen und technischen Massnahmen gegen unbefugtes Bearbeiten der Daten fest und regelt die automatische Protokollierung der Datenbearbeitung und die Datensicherheit."
         }
       ],
-      "stand": "2024-06-01",
+      "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1_i",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20240601",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
       "sha": "00d7fb8e4164dc29a66661ee5f5d9df0e59ae720d62772840ee57c89bad5642e"
     },
     {
@@ -453,10 +449,10 @@
           ]
         }
       ],
-      "stand": "2024-06-01",
+      "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1_j",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20240601",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
       "sha": "3da10faf8def77972b0a30300d083c87738450abd316d364b5e0003795d47141"
     },
     {
@@ -488,11 +484,60 @@
           "text": "Das SEM legt in einem Bearbeitungsreglement insbesondere die organisatorischen und technischen Massnahmen gegen unbefugtes Bearbeiten der Daten fest und regelt die automatische Protokollierung der Datenbearbeitung und die Datensicherheit."
         }
       ],
-      "stand": "2024-06-01",
+      "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1_k",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20240601",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
       "sha": "a44542cd4a2ab38fe4ab1ccfda714b799ced8483603737a0e44d97ed53f8ba67"
+    },
+    {
+      "id": "bund/ASYLV3/art_1_l",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "1_l",
+      "artikelLabel": "Art. 1l",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In Eurodac werden die Daten nach Anhang 1 erfasst."
+        },
+        {
+          "absatz": "2",
+          "text": "Ab der Übermittlung der biometrischen Daten an Eurodac beträgt die Aufbewahrungsfrist der Eurodac-Daten von:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Asylsuchenden: zehn Jahre;"
+            },
+            {
+              "marke": "b",
+              "text": "Personen, die in ein Programm zur Aufnahme von Flüchtlingsgruppen aufgenommen werden: fünf Jahre;"
+            },
+            {
+              "marke": "c",
+              "text": "Personen, denen die Aufnahme in eine Flüchtlingsgruppe verweigert oder deren Aufnahmeverfahren eingestellt wurde: drei Jahre;"
+            },
+            {
+              "marke": "d",
+              "text": "Personen, denen im Rahmen der Bestimmung einer Flüchtlingsgruppe Schutz gewährt wurde: fünf Jahre;"
+            },
+            {
+              "marke": "e",
+              "text": "Personen, die nach einem Such- und Rettungseinsatz ausgeschifft wurden: fünf Jahre."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die biometrischen Daten, die zum Zweck der Durchführung eines Verfahrens zur Aufnahme von Flüchtlingsgruppen erfasst werden, werden nicht an Eurodac übermittelt."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1_l",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
+      "sha": "535a9856c29313b6e1afb7ee41e8471ae287b3ced1db52e04fec69d691d69e3b"
     },
     {
       "id": "bund/ASYLV3/art_2",
@@ -508,10 +553,10 @@
           "text": "Behörden des Bundes und der Kantone, die Daten von sich in der Schweiz befindenden Asylsuchenden, anerkannten Flüchtlingen und Schutzbedürftigen an deren Heimat- oder Herkunftsstaat bekannt zu geben beabsichtigen, haben sich vorgängig beim SEM zu vergewissern, dass in erster Instanz das Asylgesuch abgelehnt oder ein Nichteintretensentscheid verfügt wurde oder dass durch die Bekanntgabe weder die betroffene Person noch deren Angehörige gefährdet werden."
         }
       ],
-      "stand": "2024-06-01",
+      "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_2",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20240601",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
       "sha": "faaf79d8ce6ebafeac1aa41b5ff7f6d2fd7cef9e96d82bf9cae3e96292644259"
     },
     {
@@ -528,10 +573,10 @@
           "text": "Ist es für den Vollzug einer Wegweisung notwendig, dem Heimat- oder Herkunftsstaat die Fingerabdrücke der betroffenen Person weiterzugeben, so darf aus dieser Weitergabe nicht erkenntlich sein, dass die betroffene Person in der Schweiz ein Asylgesuch eingereicht hat."
         }
       ],
-      "stand": "2024-06-01",
+      "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_3",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20240601",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
       "sha": "5bfe98ed4475f2855705902674f2ddfcccf82b9b532bb48552b38f14487ceaec"
     },
     {
@@ -548,10 +593,10 @@
           "text": "Das SEM übermittelt den zuständigen Strafverfolgungsbehörden Informationen und Beweismittel, wenn ernsthafte Gründe für den Verdacht auf ein Verbrechen nach Artikel 1 Abschnitt F Buchstaben a und c des Abkommens vom 28. Juli 1951 über die Rechtsstellung der Flüchtlinge bestehen."
         }
       ],
-      "stand": "2024-06-01",
+      "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_4",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20240601",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
       "sha": "dfb386e5bf36f34265acecf112bd3630232fba6fb78b77014eee63342fa907bb"
     },
     {
@@ -573,7 +618,7 @@
             },
             {
               "marke": "b",
-              "text": "Fotos."
+              "text": "Gesichtsbilder."
             }
           ]
         },
@@ -582,11 +627,11 @@
           "text": "Der Zugriff auf die Daten nach Absatz 1 ist in Anhang 1 der Verordnung vom 12. April 2006 über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung) geregelt. Die biometrischen Daten sind im AFIS-System gespeichert. Dieses enthält keine Angaben zur Person der Betroffenen."
         }
       ],
-      "stand": "2024-06-01",
+      "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_5",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20240601",
-      "sha": "3f6cc5eb0b1112291baa3e1671df8b29c3c359843bd267cfce96c395b11eaca9"
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
+      "sha": "dc27bbf52c8696829efe9ffe97102a059ab3ef3298e883fbf0590c43247d692c"
     },
     {
       "id": "bund/ASYLV3/art_6",
@@ -599,11 +644,11 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Von Kindern unter 14 Jahren in Begleitung eines Elternteils werden keine biometrischen Daten erhoben."
+          "text": "Von Kindern unter sechs Jahren in Begleitung eines Elternteils werden keine biometrischen Daten erhoben."
         },
         {
           "absatz": "2",
-          "text": "Von unbegleiteten Kindern unter 14 Jahren werden nur biometrische Daten erhoben, wenn deren Auswertung Rückschlüsse auf ihre Identität zulässt."
+          "text": "…"
         },
         {
           "absatz": "3",
@@ -626,11 +671,11 @@
           "text": "Stimmen die biometrischen Daten ausländischer Polizeistellen (INTERPOL) mit denjenigen des SEM überein, so entscheidet dieses nach Artikel 97 Absatz 1 des AsylG, ob die Weiterleitung der Ergebnisse an ausländische Behörden zulässig ist."
         }
       ],
-      "stand": "2024-06-01",
+      "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_6",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20240601",
-      "sha": "81391143d85968ec49d128c81403ee36d048d39719eff87c69c4323fa7377155"
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
+      "sha": "a0655717cbec2a923cdb0cf0e13ea0e15e38a491dfea74cef1617e30afb47d57"
     },
     {
       "id": "bund/ASYLV3/art_6_a",
@@ -646,10 +691,10 @@
           "text": "Ein geeigneter Datenschutz der betroffenen Person im Sinne von Artikel 102c Absatz 3 AsylG liegt vor, wenn die geeigneten Garantien die Anforderungen der Artikel 9–12 der Datenschutzverordnung vom 31. August 2022 (DSV) erfüllen."
         }
       ],
-      "stand": "2024-06-01",
+      "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_6_a",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20240601",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
       "sha": "e74d490b0d6999a83ffc9e4e5fbd89560dcd687cd983f195b72d7a37be5d6e0f"
     },
     {
@@ -662,32 +707,167 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das SEM hat im Rahmen der Anwendung der Dublin-Assoziierungsabkommen vor der Überstellung einer asylsuchenden Person in den zuständigen Staat, der durch eines der Dublin-Assoziierungsabkommen gebunden ist (Dublin-Staat), die folgenden Daten zu übermitteln:",
+          "text": "Vor der Überstellung einer asylsuchenden Person in den zuständigen Dublin-Staat übermittelt das SEM die Personendaten gemäss Anhang V der Durchführungsverordnung (EU) 2025/2055 über das elektronische Kommunikationsnetz nach Artikel 1 der genannten Durchführungsverordnung."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Fall von Personen, die medizinischer Versorgung oder Behandlung bedürfen, übermittelt es zudem Informationen über ihren körperlichen und psychischen Gesundheitszustand gemäss Anhang VIII der Durchführungsverordnung (EU) 2025/2055."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Verfahren der Datenübermittlung richtet sich nach den Artikeln 48 und 50 der Verordnung (EU) 2024/1351 sowie nach den Artikeln 3–5 und Kapitel V der Durchführungsverordnung (EU) 2025/2055."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_6_b",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
+      "sha": "989686c7c4ba535f25369346ceae553e5f1bccc1494576683f891ccfcf3b9e16"
+    },
+    {
+      "id": "bund/ASYLV3/art_6_c",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "6_c",
+      "artikelLabel": "Art. 6c",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Daten nach Artikel 6b Absatz 1 Buchstabe b werden im Informationssystem eRetour gespeichert. Sie sind spätestens zwölf Monate, nachdem die Person die Schweiz verlassen hat oder nachdem ihr Untertauchen festgestellt worden ist, zu löschen."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_6_c",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
+      "sha": "58283fa60e5e01b83ad51547dfd2622c45c833e37927f578f51508176589bfd7"
+    },
+    {
+      "id": "bund/ASYLV3/art_6_d",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "6_d",
+      "artikelLabel": "Art. 6d",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die im Eurodac bearbeiteten Daten dürfen Nicht-Dublin-Staaten, internationalen Organisationen, privaten Stellen und natürlichen Personen nicht bekanntgegeben werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Zum Nachweis der Identität von Drittstaatsangehörigen zwecks Rückführung dürfen ausnahmsweise personenbezogene Daten des Eurodac an einen Nicht-Dublin-Staat bekanntgegeben werden, sofern:",
           "items": [
             {
               "marke": "a",
-              "text": "die Personendaten gemäss Anhang VI der Verordnung (EG) Nr. 1560/ 2003; und"
+              "text": "die Bedingungen nach Artikel 50 Absätze 3 und 5 der Verordnung (EU) 2024/1358 erfüllt sind; und"
             },
             {
               "marke": "b",
-              "text": "die Informationen über den körperlichen und geistigen Gesundheitszustand der betroffenen Person gemäss Anhang IX der Verordnung (EG) Nr. 1560/ 2003, wenn diese Informationen für die medizinische Versorgung oder Behandlung erforderlich sind."
+              "text": "der Staat, der die Daten erfasst hat, der Datenbekanntgabe zustimmt."
             }
           ]
         },
         {
-          "absatz": "2",
-          "text": "Die Informationen gemäss Absatz 1 Buchstabe b dürfen nur zwischen Angehörigen der Gesundheitsberufe oder Personen, die einem entsprechenden Berufsgeheimnis unterliegen, und nur mit ausdrücklicher Einwilligung der betroffenen Person oder ihres Vertreters oder ihrer Vertreterin übermittelt werden. Ist die betroffene Person aus physischen oder rechtlichen Gründen ausserstande, ihre Einwilligung zu geben, so können Informationen ausnahmsweise auch ohne ausdrückliche Einwilligung übermittelt werden, wenn es der Schutz lebenswichtiger Interessen der betroffenen Person oder einer Drittperson erfordert."
+          "absatz": "3",
+          "text": "Folgende Daten dürfen bekanntgegeben werden, wenn sie im Hinblick auf die Prüfung eines Asylgesuchs, die Feststellung der Identität von Drittstaatsangehöriger mit illegalem Aufenthalt oder von Staatenlosen mit illegalem Aufenthalt oder die Anwendung der Kriterien der Verordnung (EU) 2024/1351 erhoben wurden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Vorname, Nachname, Geburtsname, frühere Namen und Aliasnamen;"
+            },
+            {
+              "marke": "b",
+              "text": "Geschlecht;"
+            },
+            {
+              "marke": "c",
+              "text": "Datum, Ort und Land der Geburt;"
+            },
+            {
+              "marke": "d",
+              "text": "Staatsangehörigkeiten;"
+            },
+            {
+              "marke": "e",
+              "text": "folgende Angaben zum Reisedokument:"
+            },
+            {
+              "marke": "1",
+              "text": "Art und Nummer des Reisedokuments,",
+              "tiefe": 1
+            },
+            {
+              "marke": "2",
+              "text": "Ablaufdatum,",
+              "tiefe": 1
+            },
+            {
+              "marke": "3",
+              "text": "ausstellende Behörde,",
+              "tiefe": 1
+            },
+            {
+              "marke": "4",
+              "text": "ausstellender Staat;",
+              "tiefe": 1
+            },
+            {
+              "marke": "f",
+              "text": "biometrische Daten von Personen, die internationalen Schutz beantragen, von Personen mit Schutzgewährung, von Personen, die im Rahmen eines Programms zur Aufnahme von Flüchtlingsgruppen aufgenommen wurden, von Personen mit illegalem Aufenthalt oder von Personen, die als nach einem Such- und Rettungseinsatz ausgeschiffte Person registriert sind."
+            }
+          ]
         },
         {
-          "absatz": "3",
-          "text": "Das Verfahren der Datenübermittlung richtet sich nach den Artikeln 31 und 32 der Verordnung (EU) Nr. 604/2013 und nach den Artikeln 8 Absatz 3 und 15a der Verordnung (EG) Nr. 1560/2003."
+          "absatz": "4",
+          "text": "Gleichzeitig mit den biometrischen Daten nach Absatz 3 Buchstabe f dürfen bekanntgegeben werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "folgende Metadaten zu den biometrischen Daten:"
+            },
+            {
+              "marke": "1",
+              "text": "Datum der Erfassung,",
+              "tiefe": 1
+            },
+            {
+              "marke": "2",
+              "text": "Datum der Übermittlung an Eurodac;",
+              "tiefe": 1
+            },
+            {
+              "marke": "b",
+              "text": "folgende Daten zu den betroffenen Personen:"
+            },
+            {
+              "marke": "1",
+              "text": "Herkunftsmitgliedstaat, Ort und Datum der Registrierung, vom Herkunftsmitgliedstaat verwendete Kennnummer,",
+              "tiefe": 1
+            },
+            {
+              "marke": "2",
+              "text": "eingescannte Farbkopie eines Identitäts- oder Reisedokuments oder eines anderen Dokuments, das die Identifizierung erleichtert, zusammen mit einer Angabe zu dessen Echtheit,",
+              "tiefe": 1
+            },
+            {
+              "marke": "3",
+              "text": "Ort und Datum der allfälligen Ausschiffung;",
+              "tiefe": 1
+            },
+            {
+              "marke": "c",
+              "text": "das Benutzerkennwort."
+            }
+          ]
         }
       ],
-      "stand": "2024-06-01",
-      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_6_b",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20240601",
-      "sha": "bfd4dbeca1fc0bc896601c7b37152b914deaecd7d6e8a69403196c2c355e9d22"
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_6_d",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
+      "sha": "da2406a975cba521145342c67f776a951a424796532c148f9f16d2fbdd7e3e45"
     },
     {
       "id": "bund/ASYLV3/art_7_8",
@@ -702,10 +882,10 @@
           "text": "…"
         }
       ],
-      "stand": "2024-06-01",
+      "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_7_8",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20240601",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
@@ -725,10 +905,10 @@
           "text": "Privatpersonen werden in der Regel keine Personendaten bekannt gegeben. Ausnahmsweise kann die Adresse bekannt gegeben werden, wenn die um Auskunft ersuchende Person nachweist, dass sie diese zur Durchsetzung von bestehenden Rechtsansprüchen oder zur Wahrnehmung anderer schutzwürdiger Interessen benötigt."
         }
       ],
-      "stand": "2024-06-01",
+      "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_9",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20240601",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
       "sha": "0c5e6606e3f638bfb502d9a9307367d47b38bdf242a6b3a0fb102f0518eb9418"
     },
     {
@@ -748,11 +928,324 @@
           "text": "Die Abgabe von Listen mit Personendaten an Privatpersonen ist nicht zulässig."
         }
       ],
-      "stand": "2024-06-01",
+      "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_10",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20240601",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
       "sha": "2336154d992f1e2bdbf6d56b50d5a444d66265522327bf71702f6cb432c7f03d"
+    },
+    {
+      "id": "bund/ASYLV3/art_10_a",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "10_a",
+      "artikelLabel": "Art. 10a",
+      "grundlage": "(Art. 8a Abs. 1 und 10 und Art. 47 Abs. 3 AsylG)",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Aus elektronischen Datenträgern dürfen die folgenden Personendaten, einschliesslich besonders schützenswerter Personendaten nach Artikel 5 Buchstabe c des Datenschutzgesetzes vom 25. September 2020 (DSG), ausgewertet werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Angaben zur Identität und Nationalität der betroffenen Person; dazu zählen insbesondere Adressen, Telefonnummern, Ton- und Bildaufnahmen sowie Urkunden;"
+            },
+            {
+              "marke": "b",
+              "text": "Angaben zum Reiseweg der betroffenen Person; dazu zählen insbesondere Navigationsdaten, Ton- und Bildaufnahmen sowie Urkunden."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Personendaten, die in den Schutzbereich eines Berufsgeheimnisses nach Artikel 321 des Strafgesetzbuchs fallen, dem die betroffene Person selbst untersteht, dürfen nicht ausgewertet werden."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_10_a",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
+      "sha": "fd47ac9bda16d4b6a9d69e29c08f1099c5e05fa0dc01e3b8e03e126baaeddf1f"
+    },
+    {
+      "id": "bund/ASYLV3/art_10_b",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "10_b",
+      "artikelLabel": "Art. 10b",
+      "grundlage": "(Art. 8a Abs. 10 und Art. 47 Abs. 2 AsylG)",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Personendaten aus elektronischen Datenträgern dürfen nur von Mitarbeitenden des SEM bearbeitet werden, die:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Aufgaben im Rahmen der Abklärung der Identität und Nationalität Asylsuchender wahrnehmen;"
+            },
+            {
+              "marke": "b",
+              "text": "für die Durchführung des Asylverfahrens zuständig sind;"
+            },
+            {
+              "marke": "c",
+              "text": "Aufgaben im Rahmen der Unterstützung der Kantone beim Vollzug von Wegweisungen im Asylbereich wahrnehmen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Das SEM stellt sicher, dass die Mitarbeitenden nach Absatz 1 die für ihre Tätigkeit notwendige Ausbildung im Bereich Datenschutz erhalten."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_10_b",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
+      "sha": "dd696efd0d395be741fc8951b17405f8f300666e9a4ab5c920667f611c3bed6d"
+    },
+    {
+      "id": "bund/ASYLV3/art_10_c",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "10_c",
+      "artikelLabel": "Art. 10c",
+      "grundlage": "(Art. 8 Abs. 1 Bst. g und Art. 8a Abs. 4 AsylG)",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zwecks Wahrung der Verhältnismässigkeit sind Informationen und Äusserungen der betroffenen Person sowie amtliche Dokumente wie Geburtsurkunden oder Führerscheine zu berücksichtigen, welche eindeutige Rückschlüsse auf die Identität, die Nationalität oder den Reiseweg zulassen. Das SEM prüft, ob die gewünschten Informationen durch weitere geeignete Massnahmen, insbesondere Massnahmen nach Artikel 26 Absatz 2 oder Absatz 3 AsylG, beschafft werden können."
+        },
+        {
+          "absatz": "2",
+          "text": "Die geeigneten Massnahmen erfolgen, soweit sie einen geringeren Eingriff in die Grundrechte der asylsuchenden Person darstellen."
+        },
+        {
+          "absatz": "3",
+          "text": "Das SEM regelt die Einzelheiten des Vorgehens in einer Weisung."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_10_c",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
+      "sha": "d6e66955a9387f38b975dbb582b831dbe807d980e9d994d73bdbf6ef86ba123c"
+    },
+    {
+      "id": "bund/ASYLV3/art_10_d",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "10_d",
+      "artikelLabel": "Art. 10d",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das SEM kann zur Vorbereitung der Auswertung der Personendaten mittels einer Software Personendaten aus elektronischen Datenträgern bearbeiten. Die eingesetzte Software muss einem forensischen Standard entsprechen."
+        },
+        {
+          "absatz": "2",
+          "text": "Wird eine Software eingesetzt, so fordert das SEM die betroffene Person auf, ihm ihre elektronischen Datenträger für die Dauer des Einsatzes dieser Software auszuhändigen und freizugeben. Die betroffene Person kann während des Einsatzes der Software auf ausdrücklichen Wunsch anwesend sein."
+        },
+        {
+          "absatz": "3",
+          "text": "Das SEM stellt sicher, dass die Personendaten durch den Einsatz der Software nicht geändert werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Unmittelbar nach dem Einsatz der Software zur Bearbeitung der Personendaten sind die elektronischen Datenträger der betroffenen Person wieder auszuhändigen."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_10_d",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
+      "sha": "1628fbf60b1251514fc582a3eabe385f027d272a358d1f78ffe25001b764d3aa"
+    },
+    {
+      "id": "bund/ASYLV3/art_10_e",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "10_e",
+      "artikelLabel": "Art. 10e",
+      "grundlage": "(Art. 8a Abs. 5, 7 und 10 und Art. 47 Abs. 2 AsylG)",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sieht das SEM eine Zwischenspeicherung der Personendaten nach Artikel 8a Absatz 5 AsylG bis zur späteren Auswertung vor, so fordert es die betroffene Person auf, ihm ihre elektronischen Datenträger für die Dauer der Durchführung der Zwischenspeicherung auszuhändigen und freizugeben. Die betroffene Person kann auf ausdrücklichen Wunsch während des gesamten Vorgangs der Speicherung ihrer Personendaten anwesend sein."
+        },
+        {
+          "absatz": "2",
+          "text": "Unmittelbar nach der Zwischenspeicherung der Personendaten sind die elektronischen Datenträger der betroffenen Person wieder auszuhändigen."
+        },
+        {
+          "absatz": "3",
+          "text": "Während der Zwischenspeicherung bis zur Auswertung der Personendaten dürfen diese nicht anderweitig bearbeitet werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Eine Zwischenspeicherung der Personendaten kann frühestens dann erfolgen, wenn die Prüfung der Verhältnismässigkeit abgeschlossen ist. Die Auswertung erfolgt so rasch wie möglich nach der Zwischenspeicherung."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_10_e",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
+      "sha": "9dc8d6d29e464ee231a318a82d7dadd98f4e22ae16c18ede689fa3e2c683ee9f"
+    },
+    {
+      "id": "bund/ASYLV3/art_10_f",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "10_f",
+      "artikelLabel": "Art. 10f",
+      "grundlage": "(Art. 8a Abs. 7 AsylG)",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Werden die Personendaten aus elektronischen Datenträgern insbesondere aus technischen Gründen nicht zwischengespeichert und kommt keine Software zum Einsatz, so werden die Personendaten nach Artikel 10a direkt aus dem Datenträger der betroffenen Person gesichtet und ausgewertet."
+        },
+        {
+          "absatz": "2",
+          "text": "Unmittelbar nach der Auswertung der Personendaten sind die elektronischen Datenträger der betroffenen Person wieder auszuhändigen."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_10_f",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
+      "sha": "b5b1fe6f074be1a3289486e71662fc7f95fb41c24290a4c2e8c2441f22b9a3bb"
+    },
+    {
+      "id": "bund/ASYLV3/art_10_g",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "10_g",
+      "artikelLabel": "Art. 10g",
+      "grundlage": "(Art. 8a Abs. 7 und 9 und Art. 47 Abs. 3 AsylG)",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Jede Auswertung der Personendaten aus elektronischen Datenträgern erfolgt in Anwesenheit der betroffenen Person."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie darf ohne die Anwesenheit der betroffenen Person folgen, wenn diese vorher eine schriftliche Verzichtserklärung abgegeben oder eine Teilnahme verweigert hat. Das SEM dokumentiert die Verweigerung der Teilnahme und deren Gründe schriftlich."
+        },
+        {
+          "absatz": "3",
+          "text": "Der betroffenen Person ist nach der Auswertung ihrer Personendaten in jedem Fall die Gelegenheit zu geben, sich zu den Ergebnissen zu äussern."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_10_g",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
+      "sha": "6f1df535002a2a0603cd67b1a6048d3fff5ed22c6d1cc8082a770615ad80563d"
+    },
+    {
+      "id": "bund/ASYLV3/art_10_h",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "10_h",
+      "artikelLabel": "Art. 10h",
+      "grundlage": "(Art. 8a Abs. 6 und Art. 26 Abs. 3 AsylG)",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das SEM orientiert die betroffenen Personen bei ihrer Ankunft in einem Zentrum des Bundes oder einer Unterkunft am Flughafen über ihre Rechte und Pflichten im Zusammenhang mit der Bearbeitung von Personendaten aus elektronischen Datenträgern."
+        },
+        {
+          "absatz": "2",
+          "text": "Zusammen mit der Aufforderung zur Aushändigung ihrer elektronischen Datenträger informiert das SEM die betroffene Person ausführlich über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Zweck der Aushändigung der elektronischen Datenträger;"
+            },
+            {
+              "marke": "b",
+              "text": "die Personendaten, die bearbeitet werden;"
+            },
+            {
+              "marke": "c",
+              "text": "die mögliche Bearbeitung von Personendaten Dritter auf dem elektronischen Datenträger der betroffenen Person nach Artikel 8a Absatz 2 AsylG;"
+            },
+            {
+              "marke": "d",
+              "text": "das Verfahren und die Dauer der Zwischenspeicherung;"
+            },
+            {
+              "marke": "e",
+              "text": "den Einsatz der Software zur Datenbearbeitung;"
+            },
+            {
+              "marke": "f",
+              "text": "die Löschung der zwischengespeicherten Personendaten;"
+            },
+            {
+              "marke": "g",
+              "text": "die Kategorien der Personen, die zur Bearbeitung der Personendaten berechtigt sind;"
+            },
+            {
+              "marke": "h",
+              "text": "den Umfang der Mitwirkungspflicht, die Folgen einer Verletzung der Mitwirkungspflicht sowie die Beschwerdemöglichkeiten nach dem Asylgesetz;"
+            },
+            {
+              "marke": "i",
+              "text": "das Bestehen des Auskunfts-, des Berichtigungs- und des Löschungsrechts sowie die Verfahren zur Geltendmachung dieser Rechte;"
+            },
+            {
+              "marke": "j",
+              "text": "ihr Anwesenheitsrecht bei der Datenbearbeitung nach den Artikeln 10d Absatz 2 und 10e Absatz 1, bei der Auswertung nach Artikel 10g sowie über das Anwesenheitsrecht der Rechtsvertretung nach Artikel 10i Absatz 1;"
+            },
+            {
+              "marke": "k",
+              "text": "das Recht eine Feststellungsverfügung nach Artikel 25a des Verwaltungsverfahrensgesetzes vom 20. Dezember 1968 zu verlangen."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Information nach Absatz 2 erfolgt schriftlich und in einer der betroffenen Person verständlichen Sprache. Diese bestätigt den Erhalt der Informationen nach Absatz 2 schriftlich."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_10_h",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
+      "sha": "d6f1ff672fd0d40ca6775d6644e3241eda6d089603dccd6fb1e8af679757ef51"
+    },
+    {
+      "id": "bund/ASYLV3/art_10_i",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "10_i",
+      "artikelLabel": "Art. 10i",
+      "grundlage": "(Art. 102f ff. AsylG)",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Rechtsvertretung kann bei der Bearbeitung der Personendaten anwesend sein. Das SEM informiert den Leistungserbringer oder die Rechtsvertretung über die vorgesehene Bearbeitung von Personendaten aus elektronischen Datenträgern und alle Termine."
+        },
+        {
+          "absatz": "2",
+          "text": "Das SEM zieht im Rahmen der Bearbeitung der Personendaten nötigenfalls eine Dolmetscherin oder einen Dolmetscher bei."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_10_i",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
+      "sha": "396cec53394f6c2bebb05eaea557493fa5b6e9e18d49a8d5168e743d60abc51c"
     },
     {
       "id": "bund/ASYLV3/art_11",
@@ -761,31 +1254,41 @@
       "erlass": "AsylV 3",
       "artikel": "11",
       "artikelLabel": "Art. 11",
-      "grundlage": "(Art. 102ater AsylG)",
+      "grundlage": "(Art. 102aquinquies AsylG)",
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Für die Überprüfung von Treffern bei Eurodac-Abfragen werden Fingerabdruckspezialinnen und -spezialisten der AFIS/DNA-Services des Bundesamtes für Polizei (fedpol) eingesetzt."
+          "text": "Für die Überprüfung der Ergebnisse des automatischen Abgleichs von Eurodac-Daten nach Artikel 102ater Absatz 5 AsylG werden Fingerabdruckexpertinnen und -experten der für die biometrische Identifikation zuständigen Dienste des Bundesamtes für Polizei (fedpol) eingesetzt."
         },
         {
           "absatz": "2",
-          "text": "Bei Treffern macht das SEM den AFIS/DNA-Services die Resultate der Eurodac-Abfragen zugänglich. Die Spezialistinnen und -spezialisten nehmen die Überprüfung so rasch wie möglich vor und übermitteln das Resultat der Überprüfung unverzüglich dem SEM."
+          "text": "Hat der automatische Eurodac-Abgleich einen Treffer ergeben, so macht das SEM in den vorgesehenen Fällen den für die biometrische Identifikation zuständigen Diensten die Ergebnisse zugänglich. Die Fingerabdruckexpertinnen und -experten nehmen die Überprüfung so rasch wie möglich vor und übermitteln das Ergebnis der Überprüfung unverzüglich dem SEM."
         },
         {
           "absatz": "3",
-          "text": "Ergibt die Überprüfung, dass die Fingerabdrücke nicht übereinstimmen, so löscht das SEM unverzüglich das Resultat der Abfrage."
-        },
-        {
-          "absatz": "4",
-          "text": "Das SEM informiert die Europäische Kommission und die Agentur EU-LISA so bald wie möglich, spätestens jedoch innerhalb von drei Arbeitstagen, über die Nicht-Übereinstimmung der Fingerabdrücke."
-        },
-        {
-          "absatz": "5",
-          "text": "Die AFIS/DNA-Services müssen die Fingerabdrücke ebenfalls überprüfen, wenn:",
+          "text": "Ergibt die Überprüfung, dass die Fingerabdrücke nicht übereinstimmen, so:",
           "items": [
             {
               "marke": "a",
-              "text": "nach der Gewährung internationalen Schutzes durch einen Dublin-Staat und die entsprechende Markierung der Daten im Eurodac das SEM informiert wird, dass es die Daten dieser Person bereits erfasst hat und die Fingerabdrücke vom Zentralsystem zur Markierung erhält; oder"
+              "text": "löscht das SEM unverzüglich das Resultat der Abfrage;"
+            },
+            {
+              "marke": "b",
+              "text": "informiert das SEM die Europäische Kommission und die Agentur eu-LISA so bald wie möglich darüber, spätestens jedoch innerhalb von drei Arbeitstagen."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Ergibt die Überprüfung, dass die Fingerabdrücke übereinstimmen, so informiert das SEM die Agentur eu-LISA über den Treffer."
+        },
+        {
+          "absatz": "5",
+          "text": "Die für die biometrische Identifikation zuständigen Dienste überprüfen die Fingerabdrücke zudem, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "nach der Gewährung internationalen Schutzes oder der Erteilung eines Aufenthaltstitels durch einen Dublin-Staat und der entsprechenden Markierung der Daten im Eurodac das SEM informiert wird, dass es die Daten dieser Person bereits erfasst hat und die Fingerabdrücke vom Zentralsystem zur Markierung erhält; oder"
             },
             {
               "marke": "b",
@@ -794,11 +1297,11 @@
           ]
         }
       ],
-      "stand": "2024-06-01",
+      "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_11",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20240601",
-      "sha": "fd064565a2956b8cad953f7034e04a63b01edc1a2f8bada1407bc040991fe174"
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
+      "sha": "0ade7959c1d4bc19b1a069f33c281bc4b0aae1385771f4eaf69c4209114772e2"
     },
     {
       "id": "bund/ASYLV3/art_11_a",
@@ -807,41 +1310,58 @@
       "erlass": "AsylV 3",
       "artikel": "11_a",
       "artikelLabel": "Art. 11a",
+      "grundlage": "(Art. 102aquinquies AsylG)",
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Macht eine Person ihr Recht auf Auskunft oder ihr Recht auf Berichtigung oder Löschung von Daten im Eurodac geltend, so muss sie die zu ihrer Identifizierung erforderlichen Angaben einschliesslich der Fingerabdrücke und ein schriftliches Gesuch beim SEM einreichen."
+          "text": "Für die Überprüfung der Ergebnisse des automatischen Abgleichs von Eurodac-Daten nach Artikel 102ater Absatz 5 AsylG werden Gesichtsbildexpertinnen und -experten der für die biometrische Identifikation zuständigen Dienste des fedpol eingesetzt."
         },
         {
           "absatz": "2",
-          "text": "Das SEM bearbeitet Auskunftsgesuche im Einvernehmen mit der Behörde, die die Daten erfasst hat, oder mit dem Staat, der die Daten an die Zentraleinheit übermittelt hat."
+          "text": "Hat der automatische Eurodac-Abgleich einen Treffer ergeben, so macht das SEM in den vorgesehenen Fällen den für die biometrische Identifikation zuständigen Diensten die Ergebnisse zugänglich. Die Gesichtsbildexpertinnen und -experten nehmen die Überprüfung so rasch wie möglich vor und übermitteln das Ergebnis der Überprüfung unverzüglich dem SEM."
         },
         {
           "absatz": "3",
-          "text": "Es registriert die Auskunftsgesuche und übermittelt sie an den Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB). Es informiert diesen darüber, wie es die Gesuche behandelt hat."
+          "text": "Ergibt die Überprüfung, dass die Gesichtsbilder nicht übereinstimmen, so:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "löscht das SEM unverzüglich das Ergebnis der Abfrage;"
+            },
+            {
+              "marke": "b",
+              "text": "informiert das SEM die Europäische Kommission und die Agentur eu-LISA so bald wie möglich darüber, spätestens jedoch innerhalb von drei Arbeitstagen."
+            }
+          ]
         },
         {
           "absatz": "4",
-          "text": "Macht eine Person ihr Recht auf Berichtigung oder Löschung von Daten im Eurodac geltend, die nicht von schweizerischen Behörden erfasst wurden, so nimmt das SEM mit den Staaten, die die Daten erfasst haben, innert einer angemessenen Frist Kontakt auf und übermittelt ihnen das Gesuch. Das SEM unterrichtet die betroffene Person über die Übermittlung des Gesuchs."
+          "text": "Ergibt die Überprüfung, dass die Gesichtsbilder übereinstimmen, so informiert das SEM die Agentur eu-LISA über den Treffer."
         },
         {
           "absatz": "5",
-          "text": "Das SEM bearbeitet Auskunfts-, Berichtigungs- und Löschungsgesuche unverzüglich."
+          "text": "Die für die biometrische Identifikation zuständigen Dienste überprüfen die Gesichtsbilder zudem, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "nach der Gewährung internationalen Schutzes oder der Erteilung eines Aufenthaltstitels durch einen Dublin-Staat und der entsprechenden Markierung der Daten im Eurodac das SEM informiert wird, dass es die Daten dieser Person bereits erfasst hat und die Fingerabdrücke vom Zentralsystem zur Markierung erhält; oder"
+            },
+            {
+              "marke": "b",
+              "text": "bei der vorzeitigen Löschung der Daten einer Person im Eurodac das SEM informiert wird, dass es die Daten dieser Person bereits erfasst hat und die Fingerabdrücke der Zentraleinheit zur Löschung erhält."
+            }
+          ]
         },
         {
           "absatz": "6",
-          "text": "Es bestätigt der betroffenen Person unverzüglich schriftlich, dass es die Daten berichtigt oder gelöscht hat. Ist es nicht bereit, die Daten zu berichtigen oder zu löschen, so gibt es die Gründe dafür an."
-        },
-        {
-          "absatz": "7",
-          "text": "Die zur Identifizierung erforderlichen Angaben einschliesslich der Fingerabdrücke gemäss Absatz 1 werden nach der Bearbeitung des Gesuchs unverzüglich gelöscht."
+          "text": "Hat die automatische Eurodac-Abfrage sowohl in Bezug auf die Fingerabdrücke als auch auf das Gesichtsbild einen Treffer ergeben, so kann das Ergebnis von einer Gesichtsbildexpertin oder einem Gesichtsbildexperten überprüft werden."
         }
       ],
-      "stand": "2024-06-01",
+      "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_11_a",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20240601",
-      "sha": "2c302a813b9cdc0c46002e1bd9dbc73a9182409dac1fb58ba759b39ed5c05dd5"
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
+      "sha": "634b33ae494b8d019c2dfed5ba20718f42abb71632223f7b0d1702cac85411bf"
     },
     {
       "id": "bund/ASYLV3/art_11_b",
@@ -852,15 +1372,19 @@
       "artikelLabel": "Art. 11b",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Die Haftung für Schäden im Zusammenhang mit dem Betrieb des Eurodac richtet sich nach dem Verantwortlichkeitsgesetz vom 14. März 1958, insbesondere nach dessen Artikeln 19a–19c, die sinngemäss anwendbar sind."
+          "absatz": "1",
+          "text": "Das Auskunftsrecht richtet sich nach dem Datenschutzgesetz vom 25. September 2020."
+        },
+        {
+          "absatz": "2",
+          "text": "Das SEM bearbeitet die Auskunftsgesuche."
         }
       ],
-      "stand": "2024-06-01",
+      "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_11_b",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20240601",
-      "sha": "e9589556f9a0c163a36034f4f293d2ba58be4461c71ec95808bf1c0a2223b1f0"
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
+      "sha": "a0d2592002dba17d4476eff8d6e53c509b04773dc574c5dc42e8f41aaf491c1e"
     },
     {
       "id": "bund/ASYLV3/art_11_c",
@@ -872,18 +1396,115 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Der EDÖB arbeitet bei der Wahrnehmung seiner Aufgaben mit dem Europäischen Datenschutzbeauftragten zusammen; für diesen ist er nationale Ansprechstelle."
+          "text": "Das Verfahren zur Ausübung des Rechts auf Berichtigung, Ergänzung oder Löschung von Eurodac-Daten richtet sich nach Artikel 43 der Verordnung (EU) 2024/1358."
         },
         {
           "absatz": "2",
-          "text": "Der EDÖB ist die nationale Behörde nach den Artikeln 29 Absätze 11–13 und 30 der Verordnung (EU) Nr. 603/2013. Er ist für die Wahrnehmung der in diesen Artikeln festgelegten Aufgaben verantwortlich."
+          "text": "Das SEM bearbeitet die Gesuche zur Berichtigung, Ergänzung oder Löschung der Daten."
         }
       ],
-      "stand": "2024-06-01",
+      "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_11_c",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20240601",
-      "sha": "9f57049daa131deecabfb4109d700cd6ea397b9c3ad2fd335793129efc42da83"
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
+      "sha": "317963662a74ad6ae5c93330a0da36bfb6014380f3252bfb84fa5da70f94fed7"
+    },
+    {
+      "id": "bund/ASYLV3/art_11_d",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "11_d",
+      "artikelLabel": "Art. 11d",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der EDÖB arbeitet bei der Wahrnehmung seiner Aufgaben mit dem Europäischen Datenschutzbeauftragten zusammen. Für diesen ist er die nationale Ansprechstelle."
+        },
+        {
+          "absatz": "2",
+          "text": "Der EDÖB ist die nationale Aufsichtsbehörde nach den Artikeln 43 Absatz 9, 44, 47 Absatz 1 und 50 Absatz 4 der Verordnung (EU) 2024/1358. Er ist für die Wahrnehmung der in diesen Artikeln festgelegten Aufgaben zuständig."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_11_d",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
+      "sha": "7291cec259908efa95e3d5644dfc86513d561244070bece386c5ce1ed6a621f7"
+    },
+    {
+      "id": "bund/ASYLV3/art_11_e",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "11_e",
+      "artikelLabel": "Art. 11e",
+      "grundlage": "(Art. 26 Abs. 3quater AsylG)",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Tonaufnahme der Befragung nach Artikel 22 der Verordnung (EU) 2024/1351 dient:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "als Beweismittel im Dublin-Verfahren bei Zweifeln an den Aussagen, welche die asylsuchende Person während der Befragung gemacht hat;"
+            },
+            {
+              "marke": "b",
+              "text": "zur Durchführung einer Qualitätskontrolle der Befragungsberichte durch das SEM."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Tonaufnahme wird als digitale Datei auf einem gesicherten Server des Eidgenössischen Justiz- und Polizeidepartements (EJPD) zwischengespeichert."
+        },
+        {
+          "absatz": "3",
+          "text": "Zur Bearbeitung von Personendaten aus einer Tonaufnahme berechtigt sind nur Mitarbeitende:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "des SEM, die für Aufgaben im Rahmen des Dublin-Verfahrens oder die Qualitätskontrolle nach Absatz 1 Buchstabe b zuständig sind;"
+            },
+            {
+              "marke": "b",
+              "text": "des Bundesverwaltungsgerichts (BVGer), die mit dem Beschwerdeverfahren gegen einen Asylentscheid befasst sind."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Das SEM gewährt dem BVGer auf dessen Begehren einen gesicherten Zugang zu den auf dem Server des EJPD zwischengespeicherten Tonaufnahmen. Sind die Aufnahmen während mehrerer Tage nicht zugänglich, so kann das BVGer bei Bedarf eine manuelle Transkription anfordern."
+        },
+        {
+          "absatz": "5",
+          "text": "Die asylsuchende Person kann darum ersuchen, die Tonaufnahme vor Ort anzuhören. Macht sie von diesem Recht Gebrauch, teilt ihr das SEM den Ort, das Datum und die Uhrzeit mit. Die Übermittlung der digitalen Datei in jedweder Form zur Erfüllung dieses Ersuchens ist ausgeschlossen."
+        },
+        {
+          "absatz": "6",
+          "text": "Ist die Tonaufnahme unvollständig oder mangelhaft, kann die asylsuchende Person nach Kenntnisnahme der Unvollständigkeit oder Mangelhaftigkeit eine neue Befragung verlangen. Wird nicht unmittelbar eine neue Befragung verlangt, so ist der Befragungsbericht massgebend."
+        },
+        {
+          "absatz": "7",
+          "text": "Die Tonaufnahme wird vom Server des EJPD gelöscht:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "nach Ablauf von sechs Monaten nach Eintritt der Rechtskraft des Nichteintretensentscheides nach Artikel 31a Absatz 1 Buchstabe b AsylG;"
+            },
+            {
+              "marke": "b",
+              "text": "im Zeitpunkt, in dem das Verfahren zur Bestimmung des zuständigen Dublin-Staats aufgrund der Eröffnung eines Asylverfahrens in der Schweiz beendet wird."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_11_e",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
+      "sha": "b0ae1c3ebe756d7b75f1f5a36601a69b35b450693baf783e35dfe7cca5d9d9dc"
     },
     {
       "id": "bund/ASYLV3/art_12",
@@ -903,7 +1524,7 @@
             },
             {
               "marke": "b",
-              "text": "der Informationssicherheitsverordnung vom 8. November 2023 ;"
+              "text": "der Informationssicherheitsverordnung vom 8. November 2023;"
             },
             {
               "marke": "c",
@@ -912,11 +1533,11 @@
           ]
         }
       ],
-      "stand": "2024-06-01",
+      "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_12",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20240601",
-      "sha": "dc7b0146fc1167e7e98e9070396cd3369312904572d3f03d76fc51124ed56051"
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
+      "sha": "6edddd8694727ff83363da8926d62d9f14ec5904c224d534bbdfad8965669b91"
     },
     {
       "id": "bund/ASYLV3/art_13",
@@ -931,10 +1552,10 @@
           "text": "Daten, die nicht mehr benötigt werden, müssen archiviert oder vernichtet werden. Die Archivierung oder Löschung der Daten erfolgt in Zusammenarbeit mit dem Schweizerischen Bundesarchiv."
         }
       ],
-      "stand": "2024-06-01",
+      "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_13",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20240601",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
       "sha": "d19cb1e96202249506b9cbe7abf20ac6f8e637d6d5e8a63e4cf52a90848e6400"
     },
     {
@@ -954,11 +1575,30 @@
           "text": "Das SEM kann Personendaten zu Forschungs- oder Planungszwecken Behörden, Universitäten und deren Instituten sowie privaten Organisationen bekannt geben. Die Daten müssen anonymisiert werden, soweit der Zweck des Bearbeitens es erlaubt. Die Ergebnisse sind so zu veröffentlichen, dass die betroffenen Personen nicht bestimmbar sind. Die Weiterleitung dieser Daten ist nur mit Zustimmung des SEM zulässig."
         }
       ],
-      "stand": "2024-06-01",
+      "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_14",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20240601",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
       "sha": "f7880a3300365207dc94b72cba45c697f80354acbdf3fa9d1750baa74cb4ccfc"
+    },
+    {
+      "id": "bund/ASYLV3/art_14_a",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "14_a",
+      "artikelLabel": "Art. 14a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das SEM ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von Durchführungsrechtsakten der Europäischen Kommission, welche den Inhalt der monatlichen systemübergreifenden Statistiken festlegen und gestützt auf Artikel 12 Absatz 3 der Verordnung (EU) 2024/1358 erlassen wurden, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7a des Regierungs- und Verwaltungsorganisationsgesetzes vom 21. März 1997 darstellen."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_14_a",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
+      "sha": "7764b77385f39cb34edd17837d8a9a1a028c2f80b6c5a822da989e144e4dd786"
     },
     {
       "id": "bund/ASYLV3/art_15",
@@ -973,11 +1613,514 @@
           "text": "Diese Verordnung tritt am 1. Oktober 1999 in Kraft."
         }
       ],
-      "stand": "2024-06-01",
+      "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_15",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20240601",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
       "sha": "d87fdab272de6acd082d49c6120f109556485adb44a1e19d3c243eaa8b33576a"
+    },
+    {
+      "id": "bund/ASYLV3/annex_1",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "annex_1",
+      "artikelLabel": "Anhang 1",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "(Art. 1l Abs. 1)"
+        },
+        {
+          "absatz": null,
+          "text": "Daten des Eurodac-Systems",
+          "titel": 2
+        },
+        {
+          "absatz": null,
+          "text": "1. Daten des Asylbereichs",
+          "titel": 3
+        },
+        {
+          "absatz": null,
+          "text": "Antrag auf internationalen Schutz (KAT 1)",
+          "titel": 4
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": ""
+              }
+            ],
+            "zeilen": [
+              [
+                "Fingerabdruckdaten"
+              ],
+              [
+                "Gesichtsbild"
+              ],
+              [
+                "Nachname(n) und Vorname(n), Geburtsname(n) und zu einem früheren Zeitpunkt verwendete Namen und Aliasnamen, die separat eingegeben werden können"
+              ],
+              [
+                "Staatsangehörigkeit(en)"
+              ],
+              [
+                "Geburtsdatum"
+              ],
+              [
+                "Geburtsort"
+              ],
+              [
+                "Herkunftsmitgliedstaat sowie Ort und Datum, an dem der Antrag auf internationalen Schutz gestellt wurde; in den Fällen nach Artikel 16 Absatz 2 Buchstabe a der Verordnung (EU) 2024/1358 ist als Datum der Antragstellung das Datum anzugeben, das der Mitgliedstaat, der den Antragsteller überstellt hat, eingegeben hat"
+              ],
+              [
+                "Geschlecht"
+              ],
+              [
+                "Art und Nummer des Identitäts- oder Reisedokuments, soweit bekannt; aus drei Buchstaben bestehender Code des ausstellenden Staates und Ablaufdatum des Dokuments"
+              ],
+              [
+                "eine eingescannte Farbkopie eines Identitäts- oder Reisedokuments zusammen mit einer Angabe zu dessen Echtheit oder, falls nicht verfügbar, eines anderen Dokuments, das die Identifizierung des Drittstaatsangehörigen oder Staatenlosen erleichtert, zusammen mit einer Angabe zu dessen Echtheit"
+              ],
+              [
+                "vom Herkunftsmitgliedstaat verwendete Kennnummer"
+              ],
+              [
+                "Datum der Erfassung der biometrischen Daten"
+              ],
+              [
+                "Datum der Übermittlung der Daten an Eurodac"
+              ],
+              [
+                "Benutzerkennwort"
+              ],
+              [
+                "zuständiger Mitgliedstaat in den Fällen nach Artikel 16 Absatz 1, 2 oder 3 der Verordnung (EU) 2024/1358"
+              ],
+              [
+                "Übernahmemitgliedstaat gemäss Artikel 25 Absatz 1 der Verordnung (EU) 2024/1358"
+              ],
+              [
+                "in den in Artikel 16 Absatz 2 Buchstabe a der Verordnung (EU) 2024/1358 genannten Fällen: das Datum der Ankunft der betreffenden Person nach einer erfolgreichen Überstellung"
+              ],
+              [
+                "in den in Artikel 16 Absatz 2 Buchstabe b der Verordnung (EU) 2024/1358 genannten Fällen: das Datum der Ankunft der betreffenden Person nach einer erfolgreichen Überstellung"
+              ],
+              [
+                "in den in Artikel 16 Absatz 2 Buchstabe c der Verordnung (EU) 2024/1358 genannten Fällen: das Datum, an dem die betreffende Person das Hoheitsgebiet der Mitgliedstaaten verlassen hat"
+              ],
+              [
+                "in den in Artikel 16 Absatz 2 Buchstabe d der Verordnung (EU) 2024/1358 genannten Fällen: das Datum, an dem die betreffende Person aus dem Hoheitsgebiet der Mitgliedstaaten abgeschoben wurde oder dieses verlassen hat"
+              ],
+              [
+                "in den in Artikel 25 Absatz 2 der Verordnung (EU) 2024/1358 genannten Fällen: das Datum der Ankunft der betreffenden Person nach einer erfolgreichen Überstellung"
+              ],
+              [
+                "die Tatsache, dass dem betreffenden Antragsteller ein Visum erteilt wurde, der Mitgliedstaat, der das Visum erteilt oder verlängert hat oder in dessen Namen das Visum erteilt wurde, sowie die Nummer des betreffenden Visumantrags"
+              ],
+              [
+                "die Tatsache, dass die Person als Ergebnis der in der Verordnung (EU) 2024/1356 des Europäischen Parlaments und des Rates genannten Sicherheitskontrolle oder einer Prüfung nach Artikel 16 Absatz 4 der Verordnung (EU) 2024/1351 eine Gefahr für die innere Sicherheit darstellen könnte, wenn einer der folgenden Umstände vorliegt: – die betreffende Person ist bewaffnet; – die betreffende Person ist gewalttätig; – es liegen Hinweise darauf vor, dass die betreffende Person an einer terroristischen Straftat gemäss Ziffer 22 von Anhang 3 des Schengen-Informationsaustauschgesetzes vom 21. März 2025 (SIAG) beteiligt ist; – es liegen Hinweise darauf vor, dass die betreffende Person an einer anderen Straftat gemäss Anhang 3 SIAG beteiligt ist"
+              ],
+              [
+                "wenn der betreffende Antragsteller kein Recht auf Verbleib in dem betreffenden Mitgliedstaat hat und ihm der Verbleib nicht gestattet wurde: die Tatsache, dass der Antrag auf internationalen Schutz abgelehnt wurde"
+              ],
+              [
+                "die Tatsache, dass infolge einer Prüfung eines Antrags im Verfahren an der Grenze eine Entscheidung rechtskräftig geworden ist, mit der ein Antrag auf internationalen Schutz als unzulässig, unbegründet oder offensichtlich unbegründet abgelehnt wird, oder eine Entscheidung, mit der ein Antrag als stillschweigend oder ausdrücklich zurückgenommen erklärt wird, rechtskräftig geworden ist"
+              ],
+              [
+                "die Tatsache, dass Unterstützung für die freiwillige Rückkehr und Wiedereingliederung gewährt wurde"
+              ]
+            ]
+          }
+        },
+        {
+          "absatz": null,
+          "text": "Gesuch um Teilnahme an einem Programm zur Aufnahme von Flüchtlingsgruppen (KAT 7)",
+          "titel": 4
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": ""
+              }
+            ],
+            "zeilen": [
+              [
+                "Fingerabdruckdaten"
+              ],
+              [
+                "Gesichtsbild"
+              ],
+              [
+                "Nachname(n) und Vorname(n), Geburtsname(n) und zu einem früheren Zeitpunkt verwendete Namen und Aliasnamen, die separat eingegeben werden können"
+              ],
+              [
+                "Staatsangehörigkeit(en)"
+              ],
+              [
+                "Geburtsdatum"
+              ],
+              [
+                "Geburtsort"
+              ],
+              [
+                "Herkunftsmitgliedstaat, Ort und Datum der Registrierung"
+              ],
+              [
+                "Geschlecht"
+              ],
+              [
+                "Art und Nummer des Identitäts- oder Reisedokuments, soweit bekannt; aus drei Buchstaben bestehender Code des ausstellenden Staates und Ablaufdatum des Dokuments"
+              ],
+              [
+                "eine eingescannte Farbkopie eines Identitäts- oder Reisedokuments zusammen mit einer Angabe zu dessen Echtheit oder, falls nicht verfügbar, eines anderen Dokuments, das die Identifizierung des Drittstaatsangehörigen oder Staatenlosen erleichtert, zusammen mit einer Angabe zu dessen Echtheit"
+              ],
+              [
+                "vom Herkunftsmitgliedstaat verwendete Kennnummer"
+              ],
+              [
+                "Datum der Erfassung der biometrischen Daten"
+              ],
+              [
+                "Datum der Übermittlung der Daten an Eurodac"
+              ],
+              [
+                "Benutzerkennwort"
+              ],
+              [
+                "gegebenenfalls das Datum der Entscheidung, internationalen Schutz zu gewähren oder einen humanitären Status nach nationalem Recht zuzuerkennen"
+              ],
+              [
+                "gegebenenfalls das Datum der Ablehnung der Aufnahme und die Gründe für die Ablehnung der Aufnahme"
+              ],
+              [
+                "gegebenenfalls das Datum der Einstellung des Aufnahmeverfahrens"
+              ]
+            ]
+          }
+        },
+        {
+          "absatz": null,
+          "text": "Erfasste Daten von im Rahmen eines Programms zur Aufnahme von Flüchtlingsgruppen aufgenommenen Personen (KAT 8)",
+          "titel": 4
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": ""
+              }
+            ],
+            "zeilen": [
+              [
+                "Fingerabdruckdaten"
+              ],
+              [
+                "Gesichtsbild"
+              ],
+              [
+                "Nachname(n) und Vorname(n), Geburtsname(n) und zu einem früheren Zeitpunkt verwendete Namen und Aliasnamen, die separat eingegeben werden können"
+              ],
+              [
+                "Staatsangehörigkeit(en)"
+              ],
+              [
+                "Geburtsdatum"
+              ],
+              [
+                "Geburtsort"
+              ],
+              [
+                "Herkunftsmitgliedstaat, Ort und Datum der Registrierung"
+              ],
+              [
+                "Geschlecht"
+              ],
+              [
+                "Art und Nummer des Identitäts- oder Reisedokuments, soweit bekannt; aus drei Buchstaben bestehender Code des ausstellenden Staates und Ablaufdatum des Dokuments"
+              ],
+              [
+                "eine eingescannte Farbkopie eines Identitäts- oder Reisedokuments zusammen mit einer Angabe zu dessen Echtheit oder, falls nicht verfügbar, eines anderen Dokuments, das die Identifizierung des Drittstaatsangehörigen oder Staatenlosen erleichtert, zusammen mit einer Angabe zu dessen Echtheit"
+              ],
+              [
+                "vom Herkunftsmitgliedstaat verwendete Kennnummer"
+              ],
+              [
+                "Datum der Erfassung der biometrischen Daten"
+              ],
+              [
+                "Datum der Übermittlung der Daten an Eurodac"
+              ],
+              [
+                "Benutzerkennwort"
+              ],
+              [
+                "Datum der Gewährung des internationalen Schutzes oder der Zuerkennung eines humanitären Status nach nationalem Recht"
+              ]
+            ]
+          }
+        },
+        {
+          "absatz": null,
+          "text": "2. Erfasste und verfügbare Daten des Ausländerbereichs",
+          "titel": 3
+        },
+        {
+          "absatz": null,
+          "text": "Illegales Überschreiten der Schengen-Aussengrenze (KAT 2)",
+          "titel": 4
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": ""
+              }
+            ],
+            "zeilen": [
+              [
+                "Fingerabdruckdaten"
+              ],
+              [
+                "Gesichtsbild"
+              ],
+              [
+                "Nachname(n) und Vorname(n), Geburtsname(n) und zu einem früheren Zeitpunkt verwendete Namen und Aliasnamen, die separat eingegeben werden können"
+              ],
+              [
+                "Staatsangehörigkeit(en)"
+              ],
+              [
+                "Geburtsdatum"
+              ],
+              [
+                "Geburtsort"
+              ],
+              [
+                "Herkunftsmitgliedstaat sowie Ort und Datum, an dem die Person aufgegriffen wurde"
+              ],
+              [
+                "Geschlecht"
+              ],
+              [
+                "Art und Nummer des Identitäts- oder Reisedokuments, soweit bekannt; aus drei Buchstaben bestehender Code des ausstellenden Staates und Ablaufdatum des Dokuments"
+              ],
+              [
+                "eine eingescannte Farbkopie eines Identitäts- oder Reisedokuments zusammen mit einer Angabe zu dessen Echtheit oder, falls nicht verfügbar, eines anderen Dokuments, das die Identifizierung des Drittstaatsangehörigen oder Staatenlosen erleichtert, zusammen mit einer Angabe zu dessen Echtheit"
+              ],
+              [
+                "vom Herkunftsmitgliedstaat verwendete Kennnummer"
+              ],
+              [
+                "Datum der Erfassung der biometrischen Daten"
+              ],
+              [
+                "Datum der Übermittlung der Daten an Eurodac"
+              ],
+              [
+                "Benutzerkennwort"
+              ],
+              [
+                "das Datum, an dem die betreffende Person das Hoheitsgebiet der Mitgliedstaaten verlassen hat oder abgeschoben wurde"
+              ],
+              [
+                "der Übernahmemitgliedstaat gemäss Artikel 25 Absatz 1 der Verordnung (EU) 2024/1358"
+              ],
+              [
+                "die Tatsache, dass Unterstützung für die freiwillige Rückkehr und Wiedereingliederung gewährt wurde"
+              ],
+              [
+                "die Tatsache, dass die Person als Ergebnis der in der Verordnung (EU) 2024/1356 genannten Überprüfung eine Gefahr für die innere Sicherheit darstellen könnte, wenn einer der folgenden Umstände zutrifft: – die betreffende Person ist bewaffnet; – die betreffende Person ist gewalttätig; – es liegen Hinweise darauf vor, dass die betreffende Person an einer terroristischen Straftat gemäss Ziffer 22 von Anhang 3 SIAG beteiligt ist; – es liegen Hinweise darauf vor, dass die betreffende Person an einer anderen Straftat gemäss Anhang 3 SIAG beteiligt ist"
+              ]
+            ]
+          }
+        },
+        {
+          "absatz": null,
+          "text": "Aufgegriffene Personen mit irregulärem Aufenthalt (KAT 3)",
+          "titel": 4
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": ""
+              }
+            ],
+            "zeilen": [
+              [
+                "Fingerabdruckdaten"
+              ],
+              [
+                "Gesichtsbild"
+              ],
+              [
+                "Nachname(n) und Vorname(n), Geburtsname(n) und zu einem früheren Zeitpunkt verwendete Namen und Aliasnamen, die separat eingegeben werden können"
+              ],
+              [
+                "Staatsangehörigkeit(en)"
+              ],
+              [
+                "Geburtsdatum"
+              ],
+              [
+                "Geburtsort"
+              ],
+              [
+                "Herkunftsmitgliedstaat sowie Ort und Datum, an dem die Person aufgegriffen wurde"
+              ],
+              [
+                "Geschlecht"
+              ],
+              [
+                "Art und Nummer des Identitäts- oder Reisedokuments, soweit bekannt; aus drei Buchstaben bestehender Code des ausstellenden Staates und Ablaufdatum des Dokuments"
+              ],
+              [
+                "eine eingescannte Farbkopie eines Identitäts- oder Reisedokuments zusammen mit einer Angabe zu dessen Echtheit oder, falls nicht verfügbar, eines anderen Dokuments, das die Identifizierung des Drittstaatsangehörigen oder Staatenlosen erleichtert, zusammen mit einer Angabe zu dessen Echtheit"
+              ],
+              [
+                "vom Herkunftsmitgliedstaat verwendete Kennnummer"
+              ],
+              [
+                "Datum der Erfassung der biometrischen Daten"
+              ],
+              [
+                "Datum der Übermittlung der Daten an Eurodac"
+              ],
+              [
+                "Benutzerkennwort"
+              ],
+              [
+                "das Datum, an dem die betreffende Person das Hoheitsgebiet der Mitgliedstaaten verlassen hat oder abgeschoben wurde"
+              ],
+              [
+                "Gegebenenfalls in den Fällen nach Artikel 25 Absatz 2: das Datum der Ankunft der betroffenen Person nach einer erfolgreichen Überstellung"
+              ],
+              [
+                "die Tatsache, dass Unterstützung für die freiwillige Rückkehr und Wiedereingliederung gewährt wurde"
+              ],
+              [
+                "die Tatsache, dass die Person, als Ergebnis einer Überprüfung nach der Verordnung (EU) 2024/1356 oder einer zum Zeitpunkt der Erfassung der biometrischen Daten nach Artikel 23 Absatz 1 der Verordnung (EU) 2024/1358 durchgeführten Sicherheitskontrolle, eine Gefahr für die innere Sicherheit darstellen könnte, wenn einer der folgenden Umstände zutrifft: – die betreffende Person ist bewaffnet; – die betreffende Person ist gewalttätig; – es liegen Hinweise darauf vor, dass die betreffende Person an einer terroristischen Straftat gemäss Ziffer 22 von Anhang 3 SIAG beteiligt ist; – es liegen Hinweise darauf vor, dass die betreffende Person an einer anderen Straftat gemäss Anhang 3 SIAG beteiligt ist"
+              ]
+            ]
+          }
+        },
+        {
+          "absatz": null,
+          "text": "Nach einem Such- und Rettungseinsatz ausgeschiffte Personen (KAT 9)",
+          "titel": 4
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": ""
+              }
+            ],
+            "zeilen": [
+              [
+                "Fingerabdruckdaten"
+              ],
+              [
+                "Gesichtsbild"
+              ],
+              [
+                "Nachname(n) und Vorname(n), Geburtsname(n) und zu einem früheren Zeitpunkt verwendete Namen und Aliasnamen, die separat eingegeben werden können"
+              ],
+              [
+                "Staatsangehörigkeit(en)"
+              ],
+              [
+                "Geburtsdatum"
+              ],
+              [
+                "Geburtsort"
+              ],
+              [
+                "Herkunftsmitgliedstaat, Ort und Datum der Ausschiffung"
+              ],
+              [
+                "Geschlecht"
+              ],
+              [
+                "Art und Nummer des Identitäts- oder Reisedokuments, soweit bekannt; aus drei Buchstaben bestehender Code des ausstellenden Staates und Ablaufdatum des Dokuments"
+              ],
+              [
+                "eine eingescannte Farbkopie eines Identitäts- oder Reisedokuments zusammen mit einer Angabe zu dessen Echtheit oder, falls nicht verfügbar, eines anderen Dokuments, das die Identifizierung des Drittstaatsangehörigen oder Staatenlosen erleichtert, zusammen mit einer Angabe zu dessen Echtheit"
+              ],
+              [
+                "vom Herkunftsmitgliedstaat verwendete Kennnummer"
+              ],
+              [
+                "Datum der Erfassung der biometrischen Daten"
+              ],
+              [
+                "Datum der Übermittlung der Daten an Eurodac"
+              ],
+              [
+                "Benutzerkennwort"
+              ],
+              [
+                "das Datum, an dem die betreffende Person das Hoheitsgebiet der Mitgliedstaaten verlassen hat oder abgeschoben wurde"
+              ],
+              [
+                "der Übernahmemitgliedstaat gemäss Artikel 25 Absatz 1 der Verordnung (EU) 2024/1358"
+              ],
+              [
+                "die Tatsache, dass Unterstützung für die freiwillige Rückkehr und Wiedereingliederung gewährt wurde"
+              ],
+              [
+                "die Tatsache, dass die Person als Ergebnis der in der Verordnung (EU) 2024/1356 genannten Überprüfung eine Gefahr für die innere Sicherheit darstellen könnte, wenn einer der folgenden Umstände zutrifft: – die betreffende Person ist bewaffnet; – die betreffende Person ist gewalttätig; – es liegen Hinweise darauf vor, dass die betreffende Person an einer terroristischen Straftat gemäss Ziffer 22 von Anhang 3 SIAG beteiligt ist; – es liegen Hinweise darauf vor, dass die betreffende Person an einer anderen Straftat gemäss Anhang 3 SIAG beteiligt ist"
+              ]
+            ]
+          }
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#annex_1",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
+      "sha": "79687234daf759bf0ea4a2197bd403e9e6d2596cdb15e26a9a7469fe57a40dd4"
+    },
+    {
+      "id": "bund/ASYLV3/annex_2",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "annex_2",
+      "artikelLabel": "Anhang 2",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#annex_2",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/ASYLV3/annex_3",
@@ -997,10 +2140,10 @@
           "text": "…"
         }
       ],
-      "stand": "2024-06-01",
+      "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#annex_3",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20240601",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
       "sha": "27e516ae5422e8c61a5c5c0270aa0732e1da77bf965d2b6767a860fd1a218fe7"
     },
     {
@@ -1026,28 +2169,32 @@
           "items": [
             {
               "marke": "a",
-              "text": "Abkommen vom 26. Oktober 2004 zwischen der Schweizerischen Eidgenossenschaft und der Europäischen Gemeinschaft über die Kriterien und Verfahren zur Bestimmung des zuständigen Staates für die Prüfung eines in einem Mitgliedstaat oder in der Schweiz gestellten Asylantrags (DAA);"
+              "text": "das Abkommen vom 26. Oktober 2004 zwischen der Schweizerischen Eidgenossenschaft und der Europäischen Gemeinschaft über die Kriterien und Verfahren zur Bestimmung des zuständigen Staates für die Prüfung eines in einem Mitgliedstaat oder in der Schweiz gestellten Asylantrags;"
             },
             {
               "marke": "b",
-              "text": "Übereinkommen vom 17. Dezember 2004 zwischen der Schweizerischen Eidgenossenschaft, der Republik Island und dem Königreich Norwegen über die Umsetzung, Anwendung und Entwicklung des Schengen-Besitzstands und über die Kriterien und Verfahren zur Bestimmung des zuständigen Staates für die Prüfung eines in der Schweiz, in Island oder in Norwegen gestellten Asylantrags;"
+              "text": "das Übereinkommen vom 17. Dezember 2004 zwischen der Schweizerischen Eidgenossenschaft, der Republik Island und dem Königreich Norwegen über die Umsetzung, Anwendung und Entwicklung des Schengen-Besitzstands und über die Kriterien und Verfahren zur Bestimmung des zuständigen Staates für die Prüfung eines in der Schweiz, in Island oder in Norwegen gestellten Asylantrags;"
             },
             {
               "marke": "c",
-              "text": "Protokoll vom 28. Februar 2008 zwischen der Schweizerischen Eidgenossenschaft, der Europäischen Gemeinschaft und dem Fürstentum Liechtenstein zu dem Abkommen zwischen der Schweizerischen Eidgenossenschaft und der Europäischen Gemeinschaft über die Kriterien und Verfahren zur Bestimmung des zuständigen Staates für die Prüfung eines in einem Mitgliedstaat oder in der Schweiz gestellten Asylantrags;"
+              "text": "das Protokoll vom 28. Februar 2008 zwischen der Schweizerischen Eidgenossenschaft, der Europäischen Gemeinschaft und dem Fürstentum Liechtenstein zum Abkommen zwischen der Schweizerischen Eidgenossenschaft und der Europäischen Gemeinschaft über die Kriterien und Verfahren zur Bestimmung des zuständigen Staates für die Prüfung eines in einem Mitgliedstaat oder in der Schweiz gestellten Asylantrags;"
             },
             {
               "marke": "d",
-              "text": "Protokoll vom 28. Februar 2008 zwischen der Schweizerischen Eidgenossenschaft, der Europäischen Gemeinschaft und dem Fürstentum Liechtenstein über den Beitritt des Fürstentums Liechtenstein zu dem Abkommen zwischen der Schweizerischen Eidgenossenschaft und der Europäischen Gemeinschaft über die Kriterien und Verfahren zur Bestimmung des zuständigen Staates für die Prüfung eines in einem Mitgliedstaat oder in der Schweiz gestellten Asylantrags."
+              "text": "das Protokoll vom 28. Februar 2008 zwischen der Schweizerischen Eidgenossenschaft, der Europäischen Gemeinschaft und dem Fürstentum Liechtenstein über den Beitritt des Fürstentums Liechtenstein zum Abkommen zwischen der Schweizerischen Eidgenossenschaft und der Europäischen Gemeinschaft über die Kriterien und Verfahren zur Bestimmung des zuständigen Staates für die Prüfung eines in einem Mitgliedstaat oder in der Schweiz gestellten Asylantrags;"
+            },
+            {
+              "marke": "e",
+              "text": "das Protokoll vom 27. Juni 2019 zwischen der Schweizerischen Eidgenossenschaft, der Europäischen Union und dem Fürstentum Liechtenstein zum Abkommen zwischen der Schweizerischen Eidgenossenschaft und der Europäischen Gemeinschaft über die Kriterien und Verfahren zur Bestimmung des zuständigen Staates für die Prüfung eines in einem Mitgliedstaat oder in der Schweiz gestellten Asylantrags betreffend den Zugang zu Eurodac für Gefahrenabwehr- und Strafverfolgungszwecke."
             }
           ]
         }
       ],
-      "stand": "2024-06-01",
+      "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#annex_4",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20240601",
-      "sha": "377f9c9061076f913b5c2efb57c6b8f38a8aa2e9497782d348433bfec0131097"
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
+      "sha": "98e729a094c4c413860b7f64edfe866df061c2f95ccd83b813fc2f356ffa2885"
     },
     {
       "id": "bund/ASYLV3/annex_5",
@@ -3534,10 +4681,10 @@
           }
         }
       ],
-      "stand": "2024-06-01",
+      "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#annex_5",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20240601",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
       "sha": "18b7e8437f47336ca7d659a38c9604af80c582ab1a2f136ed413f61de73af9a1"
     },
     {
@@ -3800,10 +4947,10 @@
           }
         }
       ],
-      "stand": "2024-06-01",
+      "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#annex_6",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20240601",
+      "abgerufen": "2026-07-03",
+      "fassungsToken": "20260612",
       "sha": "1586ad5f7eccc35252969012150fa36edce0d6186a0aa7822d238d549b7e4811"
     }
   ]
