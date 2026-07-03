@@ -452,6 +452,26 @@ OR/ZGB-Renumerierungen, bis/ter). Darum bei jedem neuen `erlass_fassungen`-Eintr
     ohne public-Änderung) alt==neu==committet byte-gleich über 218 Erlasse / 24858 Artikel, Gesamt-sha
     stabil. `check:paritaet` unverändert 1796, golden byte-gleich, `check:gegenpruefung` bestanden.
     **Kanton-Normtext + Rechtsprechung/Materialien bleiben (noch) Blob-Weg** (nicht in diesem Slot).
+  - **[x] ERLEDIGT 3.7.2026 — E1-Rest A (alter Direkt-Schreibpfad entfernt, §6-Schritt) + Nebendateien-
+    Ingest, Branch `feat/qs-data-e1-rest`.** Vorbedingung «≥3 grüne Doppelläufe» war erfüllt (E1-Karte).
+    (A) Der Bund-Loop (`normtext-snapshot.ts`) schreibt `public/normtext/bund/*.json` jetzt
+    AUSSCHLIESSLICH aus der DB-Projektion (`projiziereErlass`); der `stabelesJson`-Direktweg für diese
+    Dateien und der inline-`projJson≠direktJson`-Abbruch sind entfernt (die DB ist die EINE Wahrheit,
+    §5/§7 Build-Regel 6). `doppellauf.ts` auf den load-bearing Vergleich **«Projektion == committet»**
+    umgebaut; die frühere «alter Direktpfad»-Referenz ist ehrlich als historisch dokumentiert (mit einer
+    billigen Zweitkontrolle «committet ist bereits kanonisch»). Verhaltensneutral: der Generator erzeugt
+    byte-gleiche Dateien (der non-empty-Zweig schrieb schon vorher `projJson`; entfernt wurde nur der
+    Abbruch-Wächter, nie ein Schreibweg). **Byte-Beweis ohne `public/**`-Diff:** 3 Doppelläufe
+    Projektion==committet über 218 Erlasse / 24858 Artikel, Gesamt-sha `62d7e4f0…` stabil. (B)
+    **Nebendateien-Ingest (Paritäts-Vollabdeckung):** `confidence.json` · `kanton-systematik.json` ·
+    `pdf-index.json` (3) + `struktur/**` (1135, Bund+Kanton) neu im `dokument`-Byte-Roundtrip → jede
+    committete `public/normtext/**/*.json` hat jetzt eine Paritäts-Klasse (`public/rechtsprechung/**`
+    war schon vollständig). `check:paritaet` **1796 → 2934** (neue Klassen `Normtext-Seitendateien 3` ·
+    `Normtext-Struktur 1135`); `daten-manifest.json` regeneriert (normtext.db `dokument` 2→1140). Alle
+    Tore grün (golden byte-gleich 201, `check:datenhaltung`, tsc/lint/test 3040/build 57 Routen,
+    `check:plan`); **adversariale Gegenprüfung bestanden** (unabhängiger Opus-Durchgang: keine
+    Schreibpfad-Divergenz in irgendeinem Pfad, Paritäts-Vollabdeckung enumeriert). **Offen bleibt
+    E1-Rest B** (Kanton-Normtext-Flip; späterer Schritt) + `scripts/materialien/**`-Globs (mit E6b).
 - **E2 · POC-Scheibe + Edge-Suche.** Scheibe = **alle amtlichen BGE (Volltext in DB; committete
   Projektion bleibt nur das kuratierte Schaufenster) + alle 218 Bund-Gesetze**. Turso-Replika +
   Read-only-Edge-Funktion `api/suche` (Drosselung, kein Write-Token im Client, §8-Offenlegung
