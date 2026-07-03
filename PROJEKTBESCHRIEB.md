@@ -33,7 +33,7 @@ kantonale Stammdaten wo nötig). Sie beantwortet zwei Arten von Fragen:
    begründet, einer werkgetreuen Live-Vorschau und Export als PDF/DOCX
    (soweit die Formvorschrift es erlaubt).
 
-**Das zentrale Produktversprechen: Berechnung statt KI.** LexMetrik nutzt
+**Das zentrale Produktversprechen: deterministisch gerechnet statt KI-geschätzt.** LexMetrik nutzt
 kein Sprachmodell und keine Wahrscheinlichkeiten. Gleiche Eingaben ergeben
 immer dasselbe Ergebnis; jeder Rechenschritt und jeder Baustein ist
 offengelegt und jede fest verdrahtete Norm artikelgenau auf den
