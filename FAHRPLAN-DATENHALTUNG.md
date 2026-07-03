@@ -784,6 +784,21 @@ bestehenden «Verweise»-Zeile, mit «⧉ daneben öffnen». §15-Pflicht: lazy 
 kein Eager-Korpus-Fetch. Für Kanten aus dem Umzugs-Report (§3.3) trägt der Chip den Fassungs-Hinweis.
 Timing hängt an Weiche B (§10 (6)); als früher Sichtbarkeits-Beweis der Verzahnung hoch-ROI.
 
+**✅ GEBAUT 3.7.2026 (Branch `feat/leitfaelle-chips`, W2·6-DATA — Schaufenster-Anteil live).**
+Der Schaufenster-Teil von Weiche B ist umgesetzt: (1) der Generator (`entscheide-schreiben.ts`
+`baueShards`) projiziert `proNormArtikel` **zusätzlich je Erlass** nach
+`public/rechtsprechung/norm-index/<ERLASS>.json` (19 Shards, nur Erlasse mit Artikel-Treffern; Token
+als Schlüssel, `REGISTERKEY/`-Präfix im Dateinamen) — EINE Quelle, das grosse `norm-index.json` bleibt
+unverändert. Neue Paritäts-Klasse **Leitfall-Shards** (`ingest.ts` Dokument-Roundtrip + `check:paritaet`-
+Zähler + `daten-manifest.json` neu gepinnt); `check:entscheide` beweist zusätzlich Shard-Vereinigung ==
+`proNormArtikel`. (2) `norm-index.ts` `ladeLeitfallShard`/`leitfaelleFuerArtikel` laden den Shard des
+Erlasses **lazy, Promise-cachend** (nie das 536-KB-Gesamt-JSON eager, §15.3). (3) `ArtikelLeser`
+zeigt die Chip-Zeile (Top 5 nach `gewicht` + «+n weitere», Chip → `/rechtsprechung/:key` + «⧉ daneben
+öffnen» aus dem Split-View-Muster), idle-geladen am Artikel-Fuss; ohne Treffer **keine leere Zeile**
+(Verweise-Muster, dokumentiert). **Offen (Masse-Anteil):** der `«+n weitere (online)»`-Edge-Anteil
+kommt erst mit **E2-live** (Turso provisioniert) — Erweiterungspunkt in `LeitfallZeile` markiert, NICHT
+gebaut. Der Umzugs-Report-Fassungs-Hinweis (§3.3) folgt mit den entsprechenden Kanten.
+
 ### 11.3 Auffindbarkeit für Nicht-Juristen (Nordstern-Zielgruppe)
 
 Der Nordstern-Nutzer (Amt, Studierende: «Kreisschreiben zu Art. 8 ZGB») hat heute keinen EINEN Einstieg.

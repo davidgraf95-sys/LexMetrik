@@ -9,7 +9,7 @@ import { join } from 'node:path';
 import { kuerzeRegeste, normalisiereRegeste } from '../../src/lib/rechtsprechung/register';
 import type { EntscheidSnapshot, EntscheidSnapshotDatei } from '../../src/lib/rechtsprechung/typen';
 import type { BrowseEntscheid, EntscheidManifest } from '../../src/lib/rechtsprechung/register';
-import type { EntscheidRef, LeitfallRef } from '../../src/lib/rechtsprechung/norm-index';
+import type { EntscheidRef, LeitfallRef, LeitfallShard } from '../../src/lib/rechtsprechung/norm-index';
 import { extrahiereStatutRefs } from '../../src/lib/rechtsprechung/zitat-extraktion';
 import { minteEcliFuerSnapshot } from '../../src/lib/rechtsprechung/ecli';
 import { normKeyFuerAbk } from './entscheide-mapping';
@@ -170,7 +170,33 @@ export function baueArtikelIndex(auswahl: EntscheidSnapshot[]): Record<string, L
   return out;
 }
 
-export function schreibeKorpus(auswahl: EntscheidSnapshot[], datum: string, root = process.cwd()): { anzahl: number; normBuckets: number; artikelBuckets: number } {
+/**
+ * Schaufenster-Shards (Weiche B, §10(6)/§11.2): proNormArtikel je Erlass in eine
+ * eigene Projektion splitten. EINE Quelle (proNormArtikel), Shards = zusätzliche
+ * Projektion — das grosse norm-index.json bleibt unverändert (kein Bruch bestehender
+ * Konsumenten). Nur Erlasse MIT Artikel-Treffern bekommen einen Shard. Der Schlüssel
+ * im Shard ist das blosse Artikel-Token (der 'REGISTERKEY/'-Präfix steckt im Dateinamen).
+ * Deterministisch (§2): Token-Schlüssel sortiert, refs unverändert aus baueArtikelIndex.
+ */
+export function baueShards(proNormArtikel: Record<string, LeitfallRef[]>, datum: string): Map<string, LeitfallShard> {
+  const proErlass = new Map<string, Record<string, LeitfallRef[]>>();
+  for (const [ak, refs] of Object.entries(proNormArtikel)) {
+    const schraeg = ak.indexOf('/');           // 'OR/41' → erlass 'OR', token '41'
+    const erlass = ak.slice(0, schraeg);
+    const token = ak.slice(schraeg + 1);
+    (proErlass.get(erlass) ?? (proErlass.set(erlass, {}), proErlass.get(erlass)!))[token] = refs;
+  }
+  const out = new Map<string, LeitfallShard>();
+  for (const erlass of [...proErlass.keys()].sort()) {
+    const roh = proErlass.get(erlass)!;
+    const proArtikel: Record<string, LeitfallRef[]> = {};
+    for (const t of Object.keys(roh).sort()) proArtikel[t] = roh[t];   // stabile Token-Folge
+    out.set(erlass, { erzeugt: datum, erlass, proArtikel });
+  }
+  return out;
+}
+
+export function schreibeKorpus(auswahl: EntscheidSnapshot[], datum: string, root = process.cwd()): { anzahl: number; normBuckets: number; artikelBuckets: number; shards: number } {
   const PUB = join(root, 'public', 'rechtsprechung');
   const GENKEYS = join(root, 'src', 'lib', 'rechtsprechung', 'erfasste-keys.generated.ts');
 
@@ -264,6 +290,15 @@ export function schreibeKorpus(auswahl: EntscheidSnapshot[], datum: string, root
   // Artikel-Ebene (W3) zusätzlich zur Erlass-Ebene — proNorm bleibt unverändert.
   const proNormArtikel = baueArtikelIndex(auswahl);
   writeFileSync(join(PUB, 'norm-index.json'), JSON.stringify({ erzeugt: datum, proNorm, proNormArtikel }, null, 2) + '\n', 'utf8');
+  // Schaufenster-Shards je Erlass (Weiche B): zusätzliche Projektion, damit der
+  // ArtikelLeser nur den Shard seines Erlasses lädt (§15.3). Trailing-Newline +
+  // 2-Space wie norm-index.json/register.json (Rechtsprechungs-Serialisierung).
+  const shards = baueShards(proNormArtikel, datum);
+  const shardDir = join(PUB, 'norm-index');
+  mkdirSync(shardDir, { recursive: true });
+  for (const [erlass, shard] of shards) {
+    writeFileSync(join(shardDir, `${erlass}.json`), JSON.stringify(shard, null, 2) + '\n', 'utf8');
+  }
 
   const keys = manifest.map((m) => m.key).sort();
   writeFileSync(
@@ -277,7 +312,7 @@ export function schreibeKorpus(auswahl: EntscheidSnapshot[], datum: string, root
     'utf8',
   );
 
-  return { anzahl: manifest.length, normBuckets: Object.keys(proNorm).length, artikelBuckets: Object.keys(proNormArtikel).length };
+  return { anzahl: manifest.length, normBuckets: Object.keys(proNorm).length, artikelBuckets: Object.keys(proNormArtikel).length, shards: shards.size };
 }
 
 /**

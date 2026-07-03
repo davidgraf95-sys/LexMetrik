@@ -41,6 +41,22 @@ export interface NormEntscheidIndex {
   proNormArtikel?: Record<string, LeitfallRef[]>;
 }
 
+/**
+ * Schaufenster-Shard je Erlass (Weiche B, FAHRPLAN-DATENHALTUNG §10(6)/§11.2):
+ * `public/rechtsprechung/norm-index/<REGISTERKEY>.json`. Enthält NUR die Artikel-
+ * Ebene DIESES Erlasses (Schlüssel = blosses Artikel-Token, der 'REGISTERKEY/'-
+ * Präfix ist in den Dateinamen gewandert). Zusätzliche Projektion aus derselben
+ * Quelle (proNormArtikel) — das grosse norm-index.json bleibt unverändert. Der
+ * ArtikelLeser lädt so nur den Shard SEINES Erlasses, nie das Gesamt-JSON (§15.3).
+ */
+export interface LeitfallShard {
+  erzeugt: string;
+  /** Register-key des Erlasses (= Dateiname ohne .json). */
+  erlass: string;
+  /** Artikel-Token ('41', '52bis') → Leitfälle, absteigend nach `gewicht`. */
+  proArtikel: Record<string, LeitfallRef[]>;
+}
+
 let indexPromise: Promise<NormEntscheidIndex | null> | null = null;
 
 export async function ladeNormIndex(): Promise<NormEntscheidIndex | null> {
@@ -73,9 +89,52 @@ export function normArtikelToken(artikel: string): string {
  * Leitfälle zu genau EINEM Artikel: Register-key + Artikel-Token ('OR', '41').
  * Absteigend nach topischer In-degree (`gewicht`) vorsortiert. [] wenn unbekannt
  * oder wenn der Index (Alt-Fassung) keine Artikel-Ebene trägt.
+ *
+ * Liest das GESAMT-JSON (536 KB) — bewusst nur für Tests / server-seitige
+ * Gegenprüfung. Die UI nimmt den erlass-lokalen Shard (`leitfaelleFuerArtikel`).
  */
 export async function rechtsprechungFuerArtikel(registerKey: string, artikel: string): Promise<LeitfallRef[]> {
   const idx = await ladeNormIndex();
   if (!idx?.proNormArtikel) return [];
   return idx.proNormArtikel[`${registerKey}/${normArtikelToken(artikel)}`] ?? [];
+}
+
+// ─── Schaufenster-Shards (Weiche B) — erlass-lokal, für den ArtikelLeser ──────
+//
+// Promise-Cache je Erlass (Repo-Muster wie `indexPromise` oben): der erste Artikel
+// eines Erlasses stösst EINEN fetch an, alle weiteren Artikel desselben Erlasses
+// teilen ihn. So lädt der Reader nie das Gesamt-JSON eager (§15.3), sondern nur den
+// Shard des gerade offenen Erlasses.
+const shardPromises = new Map<string, Promise<LeitfallShard | null>>();
+
+export async function ladeLeitfallShard(registerKey: string): Promise<LeitfallShard | null> {
+  let p = shardPromises.get(registerKey);
+  if (!p) {
+    p = (async () => {
+      try {
+        const res = await fetch(`/rechtsprechung/norm-index/${encodeURIComponent(registerKey)}.json`);
+        if (!res.ok) return null; // kein Shard = Erlass ohne Artikel-Treffer (kein Fehler)
+        return (await res.json()) as LeitfallShard;
+      } catch {
+        return null;
+      }
+    })();
+    shardPromises.set(registerKey, p);
+  }
+  return p;
+}
+
+/**
+ * Leitfälle zu EINEM Artikel aus dem erlass-lokalen Shard. Ergebnis MUSS zeichen-
+ * gleich zu `rechtsprechungFuerArtikel(registerKey, artikel)` sein (dieselbe Quelle
+ * proNormArtikel, nur je Erlass gesplittet — Zweitbeweis in artikel-index.test.ts).
+ */
+export async function leitfaelleFuerArtikel(registerKey: string, artikel: string): Promise<LeitfallRef[]> {
+  const shard = await ladeLeitfallShard(registerKey);
+  return shard?.proArtikel[normArtikelToken(artikel)] ?? [];
+}
+
+/** Nur für Tests: den Shard-Promise-Cache leeren (sonst leckt er über Testfälle). */
+export function _leereShardCache(): void {
+  shardPromises.clear();
 }
