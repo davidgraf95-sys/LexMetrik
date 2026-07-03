@@ -112,6 +112,21 @@ Wiederverwenden statt neu bauen (§1 CLAUDE.md: lieber Duplikat behalten als fal
 
 ## Paket 1 — Gesetze-Currency & Coverage (P0)
 
+> **✅ P1-a + P1-b AUSGEFÜHRT 3.7.2026 (Opus-Bau-Session, David-Freigabe 3.7.; Branch `feat/fedlex-paket1-currency`):**
+> Frischer Ist-Befund 3.7. == Gap-Report (18 stale Pins + EMRK/NYÜ). **P1-b:** Regex-Fix `fedlex-pins.ts` `[a-z0-9_]+`
+> (207→**218** überwachte Pins; die 11 «ohne Pin» waren in Wahrheit parser-blinde Ziffern-Pins — Kritik-Korrektur bestätigt)
+> + Parser-Selbsttest `src/tests/fedlex-pins.test.ts` + **Pin-Coverage-Assertion** in `check:normtext` (negativ rot-getestet)
+> + **`check:pdf-netz`-Fix** (notation-Join × LIMIT 300 = Partial-Result-Falle; EMRK-Pin 20050323 bestand fälschlich grün —
+> jetzt ELI-Abstract-Query) + Gegenprüfungs-Glob `scripts/fedlex-*` + Tests. **P1-a:** alle 18 Snapshots + 2 PDF-Embeds
+> (EMRK→20220916 **pdf-a-Suffix `-2` kanonisch**, NYÜ→20260506) auf die geltende Konsolidierung; html-N je Erlass via
+> `jolux:isExemplifiedBy` (klv=8/vrv=8/**ssv=14** ausserhalb Fallback -1..-5!); Artikel-Diff je Erlass **ohne Verlust**
+> (+81 neue Artikel, eId-Reshuffles asylv2/svg/vil/vrv/rpv dokumentiert); 54/54 Wortlaut-Stichproben; alle Tore grün,
+> golden byte-gleich; Gegenprüfung 3+1 Opus-Agents. **Bonus aus der Gegenprüfung (F2):** Extraktor-Ordinalia auf
+> sexies…decies erweitert — heilt 2 STILL GEDROPPTE Absätze VSTG art_5 (1sexies/1septies) + BPV/ELG/VZAE-Labels +
+> HMG/FINMA_GEBV-Marker (5 Zusatz-Erlasse, quell-verifiziert). Beleg: `bibliothek/register/fedlex-currency-2026-07-03.md`.
+> **OFFEN: P1-c** (Wiedervorlage-Generator für die 56 künftigen Fassungen) **+ P1-d** (Currency-Chips/`currency.json`) —
+> beide unten spezifiziert, nächste Session.
+
 **Ziel:** Kein Erlass wird veraltet ausgeliefert, und keine Currency-Lücke bleibt strukturell unsichtbar. **Nicht-Ziel:** neue Erlasse aufnehmen (Coverage ist laut Report vollständig — 218/229 Volltext, 11 bewusste Stubs).
 
 **Grundlage:** `bibliothek/register/fedlex-gap-report-2026-07-02.md` (bereits erhoben). Drei Befund-Klassen → drei Arbeitsschritte:
