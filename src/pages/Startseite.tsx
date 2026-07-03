@@ -49,7 +49,7 @@ export function Startseite() {
       <GesetzeRubrik />
 
       {/* News aus dem Bundesgericht — weiter unten (rendert nichts in SSR/bei
-          leerem Register; bringt eigenen Kopf «Neu aus dem Bundesgericht» mit) */}
+          leerem Register; bringt eigenen Kopf «Neues vom Bundesgericht» mit) */}
       <div className="mt-9">
         <NewsHeader />
       </div>

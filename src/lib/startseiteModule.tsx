@@ -44,6 +44,12 @@ export const START_MODULE: readonly StartModul[] = [
   { id: 'schnellrechner', titel: 'Schnell rechnen', Komponente: Schnellrechner },
   // S4: { id: 'rubriken', titel: 'Alle Bereiche', Komponente: RubrikKacheln },
   { id: 'zuletzt', titel: 'Zuletzt verwendet', Komponente: ZuletztVerwendet, minHoeheKlasse: 'min-h-modul-zuletzt' },
-  { id: 'news', titel: 'Neues vom Bundesgericht', Komponente: NewsHeader, minHoeheKlasse: 'min-h-modul-news' },
+  // News trägt bewusst KEIN `titel`/`minHoeheKlasse`: Sektionstitel, Ladehöhen-
+  // Reservierung UND Vollkollaps bei leerem Register liegen INS Modul verlagert
+  // (S3-Fix Leerzustand-Doppelpfad, §3 #6). So mappt S4 das Registry 1:1 ohne
+  // externes Seclabel — nie eine Überschrift über Leerraum. Wie Hero (kein Rubrik-
+  // trenner) selbst-verwaltend; anders als Zuletzt, dessen `minHoeheKlasse` die
+  // KONTINGENTE Fallback-Reservierung (§3 #5) bleibt.
+  { id: 'news', Komponente: NewsHeader },
   // S4: { id: 'vertrauen', Komponente: VertrauensFuss },
 ];

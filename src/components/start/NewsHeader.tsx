@@ -54,20 +54,25 @@ export function NewsHeader() {
     return () => { lebt = false; };
   }, []);
 
-  // Rank 3 (QS-PERF, §15/2): CLS-Reservierung. Der Streifen lädt async aus dem
-  // Register nach; ohne reservierten Platz wächst er ein und schiebt die ganze
-  // Startseite nach unten (gemessener Startseiten-CLS-Anteil 0,57). Während des
-  // Ladens (news===null) dieselbe Mindesthöhe halten, die der geladene Streifen
-  // belegt → nahezu 0 Shift. Reserviert nur Platz, kürzt keinen Inhalt (§15/2).
+  // Leerzustand-Invariante (S3-Fix, §3 #6): das Modul verwaltet Titel, Höhen-
+  // Reservierung und Kollaps selbst — nie eine Überschrift über Leerraum. Drei
+  // Zustände, sauber getrennt (kein Doppelpfad; das Registry mappt titellos, S4).
+  //
+  // (1) LADEN (news===null): der Streifen lädt async aus dem Register nach; ohne
+  //     reservierten Platz wächst er ein und schiebt die Startseite nach unten
+  //     (gemessener CLS-Anteil 0,57). Während des Ladens dieselbe Mindesthöhe
+  //     halten, die der geladene Streifen belegt → nahezu 0 Shift, KEIN Titel
+  //     über der Reservierung. Reserviert nur Platz, kürzt keinen Inhalt (§15/2).
   if (news === null) return <div className="min-h-modul-news" aria-hidden />;
-  // Echter Leerfall (leeres Register, SSR/Prerender — in Prod nie, 272 BGE): nichts
-  // anzeigen, kein leerer Kopf (§8). Kollabiert bewusst (kommt in Prod nicht vor).
+  // (2) DEFINITIV LEER (leeres Register, SSR/Prerender — in Prod nie, 272 BGE):
+  //     KOMPLETT nichts — kein Titel, KEINE Höhen-Reservierung (§8). Vollkollaps.
   if (news.length === 0) return null;
+  // (3) GEFÜLLT: Titel + Reservierung + Streifen, alles im Modul (s. <section>).
 
   return (
     <section aria-label="Neue Bundesgerichtsentscheide" className="space-y-2 min-h-modul-news">
       <div className="flex items-center justify-between gap-3">
-        <span className="lc-overline text-ink-500">Neu aus dem Bundesgericht</span>
+        <span className="lc-overline text-ink-500">Neues vom Bundesgericht</span>
         <div className="flex items-center gap-2">
           {/* Durchblättern per Klick (#9) — auf Touch/schmal ist zudem Wischen möglich. */}
           <div className="hidden sm:flex items-center gap-1" role="group" aria-label="Entscheide durchblättern">
