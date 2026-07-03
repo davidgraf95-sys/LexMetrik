@@ -19,12 +19,14 @@ import { createHash } from 'node:crypto';
 import { gzipSync } from 'node:zlib';
 import { DatabaseSync } from 'node:sqlite';
 import { frischesSchema } from '../datenhaltung/schema.ts';
-import { baueKorpusInfo, SOFT_LAW_DB } from './soft-law-projektion.ts';
+import { baueKorpusInfo, seedSoftLawDb, SOFT_LAW_DB } from './soft-law-projektion.ts';
 import {
   ladeZustand, serialisiereLauf, serialisiereDok, ZUSTAND_PFAD,
   type DokZeile, type SoftLawQuelle,
 } from './soft-law-zustand.ts';
-import { crawleSeco, SECO_QUELLEN, type SoftLawDok, type SecoKante } from './adapter-seco.ts';
+import { crawleSeco, SECO_QUELLEN } from './adapter-seco.ts';
+import { crawleEdoeb, EDOEB_ID_PREFIX } from './adapter-edoeb.ts';
+import type { SoftLawDok, NormRefKante, AdapterErgebnis } from './adapter-typen.ts';
 
 // ── CLI ────────────────────────────────────────────────────────────────────────
 function arg(name: string): string | undefined {
@@ -36,34 +38,39 @@ if (!datum || !/^\d{4}-\d{2}-\d{2}$/.test(datum)) {
   console.error('soft-law-snapshot: --datum=YYYY-MM-DD erforderlich (§2, kein Date.now).');
   process.exit(1);
 }
-if (quelleArg !== 'seco') {
-  console.error(`soft-law-snapshot: --quelle=seco erforderlich (M2). Andere Quellen: M1/M3/M4. (erhalten: ${quelleArg ?? '—'})`);
+const UNTERSTUETZT = new Set<SoftLawQuelle>(['seco', 'edoeb']); // M1/M4 docken hier an.
+if (!quelleArg || !UNTERSTUETZT.has(quelleArg as SoftLawQuelle)) {
+  console.error(`soft-law-snapshot: --quelle=${[...UNTERSTUETZT].join('|')} erforderlich. (erhalten: ${quelleArg ?? '—'})`);
   process.exit(1);
 }
-const quelle: SoftLawQuelle = 'seco';
+const quelle: SoftLawQuelle = quelleArg as SoftLawQuelle;
 
 // ── ID-Präfixe je Quelle (Entlistungs-Scope) ───────────────────────────────────
 const SECO_PREFIXE = SECO_QUELLEN.map((q) => q.idPrefix);
 function gehoertZurQuelle(id: string): boolean {
+  if (quelle === 'edoeb') return id.startsWith(EDOEB_ID_PREFIX);
   return SECO_PREFIXE.some((p) => id.startsWith(p));
 }
 
-async function main(): Promise<void> {
-  // 1) Korpus-Token-Provider (für das Vollständigkeits-/Existenz-Gate im Adapter).
+/** Fährt den Adapter der gewählten Quelle (Count-/Vollständigkeits-Gate werfen bei ROT → §8). */
+async function crawle(substrate: { tag: string; html: string }[]): Promise<AdapterErgebnis> {
+  if (quelle === 'edoeb') {
+    return crawleEdoeb({ abgerufen: datum!, substrat: (tag, html) => substrate.push({ tag, html }) });
+  }
   const korpus = baueKorpusInfo();
   const korpusFuer = (erlassKey: string): Iterable<string> => {
     const set = korpus.artikelSet(erlassKey);
     if (set === null) throw new Error(`soft-law-snapshot: kein Normtext-Korpus für ${erlassKey} (public/normtext/bund/${erlassKey}.json fehlt).`);
     return set;
   };
+  return crawleSeco(korpusFuer, { abgerufen: datum!, substrat: (tag, html) => substrate.push({ tag, html }) });
+}
 
-  // 2) Höflicher Crawl (Count-/Vollständigkeits-Gate werfen bei ROT → kein Teil-Snapshot, §8).
-  const substrate: { quelle: string; html: string }[] = [];
-  console.log(`soft-law-snapshot (seco, --datum=${datum}): Crawl der Hub-Seiten …`);
-  const ergebnis = await crawleSeco(korpusFuer, {
-    abgerufen: datum,
-    substrat: (erlassKey, html) => substrate.push({ quelle: erlassKey, html }),
-  });
+async function main(): Promise<void> {
+  // Höflicher Crawl der gewählten Quelle.
+  const substrate: { tag: string; html: string }[] = [];
+  console.log(`soft-law-snapshot (${quelle}, --datum=${datum}): Crawl der Hub-Seiten …`);
+  const ergebnis = await crawle(substrate);
   console.log(`  Adapter: ${ergebnis.dokumente.length} Dokumente · ${ergebnis.kanten.length} Kanten · indexSha ${ergebnis.indexSha}.`);
 
   // 3) Lokale DB frisch aufbauen (wegwerfbar; frisches Schema je Lauf, §2.2).
@@ -91,12 +98,25 @@ async function main(): Promise<void> {
 }
 
 // ── DB-Aufbau (lokal) ───────────────────────────────────────────────────────────
-function baueDb(dokumente: SoftLawDok[], kanten: SecoKante[], substrate: { quelle: string; html: string }[], abgerufen: string): void {
+function baueDb(dokumente: SoftLawDok[], kanten: NormRefKante[], substrate: { tag: string; html: string }[], abgerufen: string): void {
   mkdirSync(dirname(SOFT_LAW_DB), { recursive: true });
   if (existsSync(SOFT_LAW_DB)) unlinkSync(SOFT_LAW_DB);
   const db = new DatabaseSync(SOFT_LAW_DB);
   db.exec('PRAGMA journal_mode = MEMORY;');
   frischesSchema(db, 'soft-law');
+
+  // Weiche C (§2.3): DB zuerst aus den committeten Trägern seeden (alle Quellen), dann die Rows der
+  // AKTUELLEN Quelle löschen und frisch überlagern — so gehen die Kanten der übrigen Quellen nicht
+  // verloren (sonst orphant die Projektion deren committete Shards).
+  seedSoftLawDb(db);
+  loescheAktuelleQuelle(db);
+  function loescheAktuelleQuelle(dbi: typeof db): void {
+    const ids = (dbi.prepare('SELECT id FROM soft_law').all() as unknown as { id: string }[])
+      .map((r) => r.id).filter(gehoertZurQuelle);
+    const delDok = dbi.prepare('DELETE FROM soft_law WHERE id = ?');
+    const delKante = dbi.prepare('DELETE FROM norm_referenzen WHERE quelldok_id = ?');
+    for (const id of ids) { delDok.run(id); delKante.run(id); }
+  }
 
   const insDok = db.prepare(
     `INSERT INTO soft_law (id, kategorie, doktyp, behoerde, titel, fundstelle, stand, quelle_url, abgerufen, sha, status, entlistet_am, drift_token, quell_ids, stand_quelle)
@@ -118,7 +138,7 @@ function baueDb(dokumente: SoftLawDok[], kanten: SecoKante[], substrate: { quell
   const insSnap = db.prepare('INSERT INTO quell_snapshot (quelle, abgerufen, sha, inhalt) VALUES (?,?,?,?)');
   for (const s of substrate) {
     const sha = createHash('sha256').update(s.html, 'utf8').digest('hex');
-    insSnap.run(`seco:${s.quelle}`, abgerufen, sha, gzipSync(Buffer.from(s.html, 'utf8')));
+    insSnap.run(`${quelle}:${s.tag}`, abgerufen, sha, gzipSync(Buffer.from(s.html, 'utf8')));
   }
   db.close();
 }

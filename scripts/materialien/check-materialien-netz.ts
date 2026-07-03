@@ -14,6 +14,7 @@
 import { ladeZustand, type DokZeile } from './soft-law-zustand.ts';
 import { baueKorpusInfo } from './soft-law-projektion.ts';
 import { crawleSeco, SECO_QUELLEN } from './adapter-seco.ts';
+import { crawleEdoeb, EDOEB_ID_PREFIX } from './adapter-edoeb.ts';
 
 interface QuelleArbiter {
   quelle: string;
@@ -61,7 +62,45 @@ const secoArbiter: QuelleArbiter = {
   },
 };
 
-const ARBITER: QuelleArbiter[] = [secoArbiter];
+// ── EDÖB (M3) ────────────────────────────────────────────────────────────────
+function istEdoebId(id: string): boolean {
+  return id.startsWith(EDOEB_ID_PREFIX);
+}
+
+const edoebArbiter: QuelleArbiter = {
+  quelle: 'edoeb',
+  async pruefe(gelistet) {
+    const fehler: string[] = [];
+    const heute = new Date().toISOString().slice(0, 10); // nur abgerufen-Etikett des Live-Laufs
+
+    let ergebnis;
+    try {
+      ergebnis = await crawleEdoeb({ abgerufen: heute });
+    } catch (e) {
+      // Count-Gate rot ODER Soft-404 / fehlende Sektion ⇒ Drift-Signal (Snapshot neu ziehen).
+      return [`EDÖB: Live-Crawl ROT — ${(e as Error).message}`];
+    }
+
+    const live = new Map(ergebnis.dokumente.map((d) => [d.id, d.drift_token]));
+    const manifestEdoeb = new Map<string, DokZeile>();
+    for (const [id, z] of gelistet) if (istEdoebId(id)) manifestEdoeb.set(id, z);
+
+    for (const [id, z] of manifestEdoeb) {
+      const lt = live.get(id);
+      if (lt === undefined) {
+        fehler.push(`EDÖB: Dokument '${id}' im Manifest, aber live nicht mehr auffindbar (entlistet/umbenannt?) — Snapshot neu ziehen.`);
+      } else if (lt !== z.drift_token) {
+        fehler.push(`EDÖB: drift_token '${id}' abweichend (Manifest ${z.drift_token} ≠ live ${lt}: Titel/Datum/DAM-URL geändert) — Snapshot neu ziehen.`);
+      }
+    }
+    for (const id of live.keys()) {
+      if (!manifestEdoeb.has(id)) fehler.push(`EDÖB: neues Dokument '${id}' live, fehlt im Manifest — Snapshot neu ziehen.`);
+    }
+    return fehler;
+  },
+};
+
+const ARBITER: QuelleArbiter[] = [secoArbiter, edoebArbiter];
 
 async function main(): Promise<void> {
   const zustand = ladeZustand();
@@ -82,8 +121,9 @@ async function main(): Promise<void> {
     console.error(`\ncheck:materialien-netz — ${fehler.length} Drift-Befund(e). Snapshot neu ziehen (nie Auto-Fix).`);
     process.exit(1);
   }
-  const n = [...gelistet.keys()].filter(istSecoId).length;
-  console.log(`check:materialien-netz OK — ${n} SECO-Dokumente drift-frei gegen die Hub-Seiten.`);
+  const nSeco = [...gelistet.keys()].filter(istSecoId).length;
+  const nEdoeb = [...gelistet.keys()].filter(istEdoebId).length;
+  console.log(`check:materialien-netz OK — ${nSeco} SECO- + ${nEdoeb} EDÖB-Dokumente drift-frei gegen die Hub-Seiten.`);
 }
 
 main().catch((e) => {
