@@ -440,9 +440,17 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
     in `extrahiere-fedlex.ts` ablösen, «buggigste Stelle, fachlich wertvollster Umbau»): POC an einem
     komplexen Artikel gegen golden, zeitlich **VOR dem Normtext-Freeze** (Phase 1, `FAHRPLAN-GESAMTAUFBAU.md`);
     nur bei bestandenem POC umstellen — sonst bauen E0/E1 auf dem alten Parser.
-- [ ] **5c · Startseite V3 + Branding I2** *(STARTSEITE-V3, `[OF]`, eigener Worktree; Auftrag David
-  <!-- @meta id: W2·5c · status: ready · of: ja · blocker: null · dep: [] · kollision: [src/pages/Startseite.tsx, src/components/start, src/lib/navigation.ts, src/lib/seo.ts, index.html, tailwind.config.js, src/components/layout/Topbar.tsx, scripts/prerender.ts] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-STARTSEITE-V3.md -->
-  3.7.2026)*. Neubau der Einstiegsseite: **modular** (Modul-Registry als FUNDAMENT-Vorleistung),
+- [x] **5c · Startseite V3 + Branding I2** *(STARTSEITE-V3, `[OF]`, eigener Worktree; Auftrag David
+  <!-- @meta id: W2·5c · status: done · of: ja · blocker: null · dep: [] · kollision: [src/pages/Startseite.tsx, src/components/start, src/lib/navigation.ts, src/lib/seo.ts, index.html, tailwind.config.js, src/components/layout/Topbar.tsx, scripts/prerender.ts] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-STARTSEITE-V3.md -->
+  3.7.2026)*. **✅ GEBAUT 3.7.2026 — Bausequenz S1–S5 komplett** (PRs #106 Messaging-SSoT ·
+  #107 Plumbing · #108 Bugfixes · #111 Neukomposition · S5 Brass-Hero; je Schritt Tore grün,
+  golden 201 byte-gleich, S4 e2e VOLL 89 passed, S5 Kontrast GEMESSEN hell+dunkel mit 2×
+  ink-500→ink-600-Ausweich [axe fing den zweiten] + dokumentierter Input-Ruhe-Grenze
+  [nicht-regressiv]; **Abnahme-Mappe `abnahme/startseite-v3/`** für Davids spätere Sichtung —
+  kein Druck, Zeitsperre). **Rest offen (kein Blocker):** Gesetz-/Entscheid-Titel im
+  Zuletzt-Tracker (~½ Session, Schreibzeit-Auflösung via lazy Manifeste) · Doks-Wording
+  «deterministisch statt KI-geschätzt» nachziehen · Wash-Ton-Veto = Ein-Klassen-Fallback
+  `bg-surface` in `Hero.tsx`. *Ursprünglicher Auftrag:* Neubau der Einstiegsseite: **modular** (Modul-Registry als FUNDAMENT-Vorleistung),
   einfacher Einstieg in alle Funktionen, willkommend + modern OHNE Startup-Look. **Design-Richtung
   durch DMAD-Council BINDEND entschieden** (Delegation David): Hybrid «A-Basis + Brass-Hero» als
   Schalter-Liste — `bg-brass-100`-Hero mit integrierter Suche als einzige Wärme-Dosis (Fallback
