@@ -58,3 +58,6 @@ bibliothek/.gegenpruefung-pending
 # QS-DATA: DB-Artefakt (Werk-Zwischenprodukt, aus JSON reproduzierbar)
 daten/
 .env*
+
+# Startseite-V3 Baseline/Abnahme-Screenshots (PNGs nie committen)
+abnahme/startseite-v3/

@@ -78,7 +78,9 @@ describe('metaFuerPfad()', () => {
   });
 
   it('Startseite behält den kuratierten og-Text (Bug-Check 11.6.2026); Karten-Routen haben keinen eigenen', () => {
-    expect(metaFuerPfad('/')!.ogBeschreibung).toContain('Feste Regeln statt Sprachmodell');
+    // I2-Messaging (W2·5c): og-Text bewusst auf den gescopten Rechen-Satz
+    // umgestellt; stabiler Kern «nach festen Regeln» (FAHRPLAN §6, Auflage 6).
+    expect(metaFuerPfad('/')!.ogBeschreibung).toContain('nach festen Regeln');
     expect(metaFuerPfad('/rechner/verzugszins')!.ogBeschreibung).toBeUndefined();
   });
 });

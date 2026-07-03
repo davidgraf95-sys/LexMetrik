@@ -13,13 +13,14 @@
 import { chromium } from '@playwright/test';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { HERO_SUBLINE, SITE_KURZFORM } from '../src/lib/seo';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const ZIEL = join(ROOT, 'public', 'og.png');
 
-// Quelle der Texte: index.html (og:title kurz / og:description). Hier als
-// Card-Komposition; bei Textänderung dort UND hier nachführen (§5-Hinweis:
-// der maßgebliche Social-Text bleibt index.html, dies ist die Bild-Spiegelung).
+// Quelle der Texte: src/lib/seo.ts (SSoT, §6) — Tagline = HERO_SUBLINE,
+// Claim = SITE_KURZFORM. Bei Textänderung nur seo.ts pflegen und dieses Skript
+// neu laufen lassen (npm run og:bild); die Card ist reine Bild-Spiegelung.
 const HTML = `<!doctype html><html lang="de-CH"><head><meta charset="utf-8" /><style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html, body { width: 1200px; height: 630px; }
@@ -39,9 +40,9 @@ const HTML = `<!doctype html><html lang="de-CH"><head><meta charset="utf-8" /><s
   <div class="frame">
     <div class="overline">Schweizer Recht · regelbasiert</div>
     <div class="wordmark">Lex<span class="metrik">Metrik</span></div>
-    <div class="tagline">Fristen, Beträge und Zuständigkeiten berechnen — Rechtsdokumente aus geprüften Bausteinen erstellen. Jede Norm direkt mit dem Gesetzestext verlinkt.</div>
+    <div class="tagline">${HERO_SUBLINE}</div>
     <div class="rule"></div>
-    <div class="foot"><div class="url">lexmetrik.vercel.app</div><div class="claim">Feste Regeln statt Sprachmodell</div></div>
+    <div class="foot"><div class="url">lexmetrik.vercel.app</div><div class="claim">${SITE_KURZFORM}</div></div>
   </div>
 </body></html>`;
 
