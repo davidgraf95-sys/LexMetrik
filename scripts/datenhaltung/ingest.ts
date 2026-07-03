@@ -39,7 +39,15 @@ export const RECHTSPRECHUNG_MANIFESTE = [
 // norm-index (nur Erlasse mit Artikel-Treffern). Variable Datei-Menge → über den
 // Verzeichnis-Sammler, reiner Dokument-Byte-Roundtrip (Pfad → exakter Inhalt).
 export const RECHTSPRECHUNG_SHARD_DIR = 'public/rechtsprechung/norm-index';
-export const MATERIALIEN_MANIFESTE = ['public/materialien/register.json'];
+// Soft-Law (E6a Stufe 1, FAHRPLAN-MATERIALIEN-VERZAHNUNG §2.3): committete Träger.
+//   register.json     — Browse-Projektion (nur gelistete, schlank).
+//   soft-law-zustand  — append-only Zustands-Manifest (der Rebuild-/Historie-Anker, §0/B2).
+//   kanten/**/*.json  — Norm-Referenz-Shards + Bucket-Dateien (variable Menge, in M0 evtl. keine).
+export const MATERIALIEN_MANIFESTE = [
+  'public/materialien/register.json',
+  'bibliothek/register/soft-law-zustand.jsonl',
+];
+export const MATERIALIEN_KANTEN_DIR = 'public/materialien/kanten';
 
 export interface Eintrag {
   id?: string;
@@ -229,8 +237,21 @@ export function ingestRechtsprechung(db: DatabaseSync): Zaehler {
   };
 }
 
-/** Soft-Law-DB: Materialien-Manifest (Byte-Roundtrip). */
+/**
+ * Soft-Law-DB (E6a Stufe 1, §2.3): committete Träger als reiner Byte-Roundtrip.
+ *   - register.json + soft-law-zustand.jsonl (feste Menge).
+ *   - alle public/materialien/kanten/**\/*.json rekursiv (variable Menge — Shard-Köpfe +
+ *     Bucket-Dateien; in M0 evtl. keine, darum existsSync-Guard).
+ * Der Zustands-Manifest-Byte-Roundtrip schliesst die check:paritaet-Kette über den
+ * committeten Historie-Träger (§2.3).
+ */
 export function ingestSoftLaw(db: DatabaseSync): Zaehler {
   ingestDokumente(db, MATERIALIEN_MANIFESTE, 'materialien-manifest');
-  return { Materialien: MATERIALIEN_MANIFESTE.length };
+  const kanten = existsSync(MATERIALIEN_KANTEN_DIR) ? jsonRekursiv(MATERIALIEN_KANTEN_DIR) : [];
+  ingestDokumente(db, kanten, 'materialien-kanten');
+  return {
+    Materialien: 1,
+    'Soft-Law-Zustand': 1,
+    'Materialien-Kanten': kanten.length,
+  };
 }

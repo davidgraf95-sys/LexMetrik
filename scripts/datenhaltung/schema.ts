@@ -150,18 +150,64 @@ CREATE INDEX ix_zitat_unresolved ON zitat_kanten(ziel_key) WHERE nach_id IS NULL
 `;
 
 // ── (2) Ziel-Tabellen §3 — Soft-Law (Materialien + Verwaltungsverordnungen in EINER Tabelle) ──
+// E6a Stufe 1 (FAHRPLAN-MATERIALIEN-VERZAHNUNG §2.1): die Stufe-1-Zusatzspalten stehen
+// DIREKT im CREATE TABLE — die Tabelle ist in E0+ leer (frisches Schema je Lauf), also ist
+// das äquivalent zu den §2.1-`ALTER TABLE`-Anweisungen, ohne Migrations-Turnerei.
+//   status/entlistet_am/drift_token/quell_ids/stand_quelle: §2.1.
+//   drift_token trägt BEWUSST KEINEN Default (§0/A8): ein leerer Default würde das
+//   Nicht-leer-Tor (check:materialien) unterlaufen — jeder Insert muss den Wert liefern.
 const SCHEMA_ZIEL_SOFTLAW = `
 CREATE TABLE soft_law (
-  id         TEXT PRIMARY KEY,
-  kategorie  TEXT NOT NULL,              -- 'material' | 'verwaltungsverordnung'
-  doktyp     TEXT NOT NULL,              -- 'botschaft' | 'kreisschreiben' | 'vernehmlassung' | …
-  behoerde   TEXT NOT NULL,
-  titel      TEXT NOT NULL,
-  fundstelle TEXT,
-  stand      TEXT NOT NULL,
-  quelle_url TEXT NOT NULL,
-  abgerufen  TEXT NOT NULL,
-  sha        TEXT
+  id           TEXT PRIMARY KEY,
+  kategorie    TEXT NOT NULL,              -- 'material' | 'verwaltungsverordnung'
+  doktyp       TEXT NOT NULL,              -- 'botschaft' | 'kreisschreiben' | 'vernehmlassung' | …
+  behoerde     TEXT NOT NULL,
+  titel        TEXT NOT NULL,
+  fundstelle   TEXT,
+  stand        TEXT NOT NULL,
+  quelle_url   TEXT NOT NULL,
+  abgerufen    TEXT NOT NULL,
+  sha          TEXT,
+  status       TEXT NOT NULL DEFAULT 'gelistet',  -- 'gelistet' | 'entlistet' (§2.1)
+  entlistet_am TEXT,                               -- ISO; gesetzt gdw. status='entlistet'
+  drift_token  TEXT NOT NULL,                      -- KEIN Default (§0/A8): Insert muss liefern
+  quell_ids    TEXT,                               -- JSON: volatile IDs + url_basis (Q1) — NIE Teil der ID
+  stand_quelle TEXT                                -- 'hub-label'|'pdf-text'|'pdf-meta'|'payload'|'toc' (§8)
+);
+-- Kanten: §3.2-Schema VOLLSTÄNDIG (Nordstern «EIN Query über alle Doktypen», §0/B7),
+-- additive Stufe-1-Spalten (fundstelle/fundstelle_url/stand/abgerufen) am Ende.
+--   artikel/fundstelle = TEXT NOT NULL DEFAULT '' → '' = Erlass-Ebene bzw. keine Ziffer;
+--   KEIN COALESCE im UNIQUE-Key (§0/A2 — node:sqlite verbietet Ausdrücke im Key).
+--   Die Projektion normalisiert '' zu einem weggelassenen Feld (§2.1-Kommentar).
+--   quelle = 'amtlich' | 'kuratiert' | 'maschinell' — Enum-ERWEITERUNG um 'amtlich'
+--   (§0/A3+B7; Nachtrag in FAHRPLAN-DATENHALTUNG §3.2 = M0-Posten). Mappt 1:1 auf
+--   VerzahnungsKante.herkunft.
+CREATE TABLE norm_referenzen (
+  id             INTEGER PRIMARY KEY,
+  quelldok_typ   TEXT NOT NULL,             -- 'soft_law'
+  quelldok_id    TEXT NOT NULL,
+  erlass_key     TEXT NOT NULL,             -- Register-Key, kanonisch, VERSIONSLOS
+  artikel        TEXT NOT NULL DEFAULT '',  -- '' = Erlass-Ebene
+  zitat_key      TEXT NOT NULL,             -- normalisierter Match-Key (normalisiere-zitat.ts)
+  roh_zitat      TEXT NOT NULL,             -- Fedlex-Anker-Href | Dateiname | Titel-String (Audit)
+  konfidenz      TEXT NOT NULL,             -- 'regex-hoch' | 'regex-niedrig' | 'unresolved'
+  quelle         TEXT NOT NULL,             -- 'amtlich' | 'kuratiert' | 'maschinell'
+  fundstelle     TEXT NOT NULL DEFAULT '',  -- 'Ziff. 6.10' | ''
+  fundstelle_url TEXT,                       -- RELATIV zur url_basis des Dokuments (Churn-Dämpfung §0/A11)
+  stand          TEXT NOT NULL,             -- Stand der Quell-Seite/Version (§7 a)
+  abgerufen      TEXT NOT NULL,
+  UNIQUE (quelldok_typ, quelldok_id, erlass_key, artikel, zitat_key, fundstelle)
+);
+CREATE INDEX ix_normref_erlass ON norm_referenzen(erlass_key, artikel);
+-- Snapshots (§2.2): inhalt = NUR das extrahierte Substrat (<main>/Nuxt-Payload/ToC-XHTML),
+-- gzip-komprimiert (§0/A13). Lokal (DB gitignored); der committete Beleg ist das
+-- Zustands-Manifest bibliothek/register/soft-law-zustand.jsonl (§2.3). DB-Grössenbudget
+-- 50 MB im Offline-Tor.
+CREATE TABLE quell_snapshot (
+  quelle    TEXT NOT NULL,
+  abgerufen TEXT NOT NULL,
+  sha       TEXT NOT NULL,
+  inhalt    BLOB
 );
 `;
 

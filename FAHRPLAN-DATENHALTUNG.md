@@ -277,7 +277,7 @@ CREATE TABLE norm_referenzen (
   zitat_key    TEXT NOT NULL,            -- normalisierter Match-Key (normalisiere-zitat.ts)
   roh_zitat    TEXT NOT NULL,            -- Originalstring, Nebenspalte (Audit + Re-Resolve)
   konfidenz    TEXT NOT NULL,            -- 'regex-hoch' | 'regex-niedrig' | 'unresolved'
-  quelle       TEXT NOT NULL,            -- 'maschinell' | 'kuratiert' (§8)
+  quelle       TEXT NOT NULL,            -- 'maschinell' | 'kuratiert' | 'amtlich' (§8)
   UNIQUE (quelldok_typ, quelldok_id, erlass_key, artikel, zitat_key)
 );
 CREATE INDEX ix_normref_norm ON norm_referenzen(erlass_key, artikel);   -- «was betrifft Art. X»
@@ -309,6 +309,8 @@ CREATE TABLE norm_rangliste (
   PRIMARY KEY (erlass_key, artikel, entscheid_id)
 );
 ```
+
+> **Enum-Nachtrag (E6a·M0, FAHRPLAN-MATERIALIEN-VERZAHNUNG §2.1):** `'amtlich'` ergänzt durch E6a (serverseitige amtliche Anker/Systematik — z. B. Fedlex-`#art_N`-Anker in ESTV-MWST-Ziffern, amtliche SECO-Dateinamen-Systematik), zusätzlich zu `'maschinell' | 'kuratiert'`.
 
 **Drei festgezogene Kanten-Regeln:**
 

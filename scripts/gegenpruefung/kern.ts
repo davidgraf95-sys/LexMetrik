@@ -72,6 +72,12 @@ export function istRisikoPfad(p: string): boolean {
   if (p === 'daten-manifest.json') return true;
   // rekursiv (nicht nur die 4 Top-Level-Index-JSONs) — Blocker Linse 2:
   if (p.startsWith('public/normtext/') && p.endsWith('.json')) return true;
+  // Materialien (E6a Stufe 1, FAHRPLAN-MATERIALIEN-VERZAHNUNG §4): Adapter/Projektion +
+  // die committeten Projektionen (register.json eine Ebene + Kanten-Shards rekursiv) =
+  // Extraktions-/Projektions-Risiko. check-*-Basenames sind über istPruefLogik ausgenommen.
+  if (p.startsWith('scripts/materialien/')) return true;
+  if (/^public\/materialien\/[^/]+\.json$/.test(p)) return true;
+  if (p.startsWith('public/materialien/kanten/')) return true;
   // Rechnen
   if (/^src\/lib\/[^/]+\.ts$/.test(p) && RECHNEN_RE.test(basename(p))) return true;
   if (p.startsWith('src/lib/tarif/')) return true;

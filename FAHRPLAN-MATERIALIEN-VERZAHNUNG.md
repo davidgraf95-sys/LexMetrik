@@ -284,6 +284,21 @@ Delta (M5, ~½–1 Tag):
 Auto-Merge bei grüner CI); M5 asynchron am V1a-Gate. Eigener Worktree (§12); Push/Deploy §9
 (`deploy-check`-Skill).
 
+**Ausführungsvermerk M0 (3.7.2026):** M0 gebaut und gemergt (Gegenprüfung bestanden — unabhängiger
+Opus-Adversarial, 2 Linsen: alle 10 Cutoff-Norm-Fakten gegen Fedlex-SPARQL/ELI verifiziert, 0
+Abweichungen; Logik-Adversarial ohne Drop/Leak/Fail-open, NUL-Delimiter-Kollisionshypothese
+widerlegt). **Aus der Gegenprüfung in die ERSTE Adapter-Etappe (M1 ODER M2, je nachdem was zuerst
+baut) übernommen:**
+- **CI-Reproduzierbarkeit (Blocker der ersten Adapter-Etappe):** `check:materialien` überspringt
+  die DB bei Abwesenheit — sobald das erste DB-Dokument gelistet ist, ginge die CI-Byte-Gleichheit
+  rot. Fix: den «Zustands-Manifest ⇒ DB-Teil»-Wiederaufbau in den Tor-Pfad verdrahten (dbDocs aus
+  soft-law-zustand.jsonl rekonstruieren; Kanten-Invarianten laufen weiter direkt auf den
+  committeten Shards) ODER den DB-Teil der Byte-Gleichheit CI-fähig aus committeten Trägern speisen.
+- **Härtungen bei erster DB-Anbindung:** (1) Shard-Sortierungen von `localeCompare` auf
+  Code-Unit-Vergleich umstellen (ICU-Versions-Drift Dev↔CI); (2) `KEY_UNSICHER`-Check auch auf
+  DB-/Zustands-Manifest-IDs erzwingen (Pfad-Sicherheit der Shard-Dateien); (3) ISO-Validierung
+  `entlistet_am` + Plausibilität `stand` (Monat ≤ 12, Tag ≤ 31).
+
 ---
 
 ## §7 · Bewusst NICHT (Stufe 1)
