@@ -175,6 +175,21 @@ uebergabe: nur per explizitem `plan:set <id> slot=inhaber`-Commit; check:plan er
     öffnet **keinen** 26×-Slot; ein daraus folgender Daten-Bulklauf (Korpus neu ziehen) ist ein
     26×-Asset → nur bei freiem Slot, nie zwei parallel (Leitprinzip 4). Korrekturen aus der Kampagne
     sind verhaltensändernd → golden-gegated (§6) + Push/Deploy nur auf Davids Ja (§9).
+- **Gesetze-Currency & Coverage** *(QS-CURRENCY, neu 3.7.2026 — Fedlex-Portfolio Paket 1, P0)*.
+  <!-- @meta id: QS-CURRENCY · status: wip · of: ja · blocker: null · dep: [] · kollision: [scripts/fedlex-cache.sh, public/normtext/register.json] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-FEDLEX-PORTFOLIO.md -->
+  Kein Bund-Erlass wird veraltet ausgeliefert; keine Currency-Lücke bleibt strukturell unsichtbar.
+  **Stand 3.7.2026: P1-a + P1-b GEBAUT** — 18 stale Snapshots + 2 PDF-Embeds (EMRK/NYÜ) auf die
+  geltende Konsolidierung nachgezogen (kein Artikel-Verlust, Artikel-Diff je Erlass);
+  Pin-Parser-Regex-Fix `[a-z0-9_]+` (11 Ziffern-Pins waren parser-blind) + Selbsttest
+  (`src/tests/fedlex-pins.test.ts`) + **Pin-Coverage-Assertion** in `check:normtext` (jeder
+  Bund-Volltext braucht einen Pin, positiv rot-getestet) + `check:pdf-netz`-Currency-Query-Fix
+  (LIMIT-300-Truncation liess stale EMRK-Pin fälschlich grün) + Gegenprüfungs-Glob um
+  `scripts/fedlex-*`; **F2-Bonus:** Extraktor-Ordinalia bis «decies» (heilt still gedroppte Absätze
+  VSTG art_5 1sexies/1septies + Marker/Labels in BPV/ELG/VZAE/HMG/FINMA_GEBV).
+  Beleg: `bibliothek/register/fedlex-currency-2026-07-03.md`.
+  **Offen: P1-c** (56 künftige Fassungen als datiertes Verfallsregister/Wiedervorlage-Generator)
+  **+ P1-d** (Currency-Chips «geltend geprüft am …» in der Reader-Meta-Leiste, `currency.json`).
+  Detail: `FAHRPLAN-FEDLEX-PORTFOLIO.md` §Paket 1. Trailer `Roadmap: QS-CURRENCY`.
 - **Plan-Hygiene-Wächter** *(QS-PH, `[OF]`)*. Mechanischer Check nach Vorbild des SessionStart-Hooks
   <!-- @meta id: QS-PH · status: wip · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein · fahrplan: FAHRPLAN-PLAN-STEUERUNG.md -->
   `.claude/hooks/struktur-aktuell.py`: meldet **rot**, sobald eine neu hinzugefügte `FAHRPLAN-*.md`
@@ -455,7 +470,8 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
       (LexWork-Kantons-API · Fedlex-SPARQL-Eigenheiten · Zitat-Regexes/ECLI · Verifikations-Rails →
       Gegenprüfung). Leit-Doktrin: OCL nie load-bearing, nur Seed/Diff-Orakel + Endpunkt-Wissen selbst
       gegen amtliche Quelle nachbauen. **Detailquelle:** `FAHRPLAN-OPENCASELAW-QUELLEN.md`.
-    - [D] **Fedlex-Datenarten-Portfolio** *(Plan 2.7.2026, §14-Intake je Paket pending David-Freigabe)* — 6 verwertbare
+    - [~] **Fedlex-Datenarten-Portfolio** *(Plan 2.7.2026; **Paket 1 Currency P1-a/P1-b GEBAUT 3.7.2026**
+      auf David-Freigabe → Querschnitt `QS-CURRENCY`; Pakete 2/5/3/4 + P1-c/P1-d pending Freigabe)* — 6 verwertbare
       Fedlex-Datenarten (Erlasse/Materialien/Verfahren/Staatsverträge u.a.), ausschliesslich amtliche Fedlex-Stelle
       (SPARQL + Filestore, nie Dritt-Repo). **Detailquelle:** `FAHRPLAN-FEDLEX-PORTFOLIO.md`.
     - [~] **Datenhaltung-Bau: DB-Artefakt + Massen-Korpus + Edge-Suche** *(W2·6-DATA; Council 2.7.2026 — löst die drei OCL-Abbau-„DAVID-ENTSCHEID"-Punkte auf)*.
