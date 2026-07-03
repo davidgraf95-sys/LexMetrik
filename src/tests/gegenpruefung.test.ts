@@ -166,6 +166,11 @@ describe('Risiko-/Prüflogik-Prädikate', () => {
     expect(istRisikoPfad('src/lib/vorlagen/arbeitsvertrag.ts')).toBe(true);
     expect(istRisikoPfad('scripts/normtext/pdf-fetch.ts')).toBe(true);
     expect(istRisikoPfad('src/lib/normtext/adapter.ts')).toBe(true);
+    // QS-DATA E1: Datenhaltungs-Schicht + DB-Artefakt-Manifest = Risiko-Pfad.
+    expect(istRisikoPfad('scripts/datenhaltung/erlass-rows.ts')).toBe(true);
+    expect(istRisikoPfad('scripts/normtext-snapshot.ts')).toBe(true);
+    expect(istRisikoPfad('daten/normtext.db')).toBe(true);
+    expect(istRisikoPfad('daten-manifest.json')).toBe(true);
   });
 
   it('Prüflogik-Ausnahme sticht das Risiko (Set-Subtraktion)', () => {
@@ -177,6 +182,10 @@ describe('Risiko-/Prüflogik-Prädikate', () => {
     expect(behalten('scripts/normtext/check-drift.ts')).toBe(false); // Risiko, aber Check
     expect(behalten('scripts/normtext/pdf-fetch.ts')).toBe(true); // echter Extraktions-Generator
     expect(behalten('src/lib/tarif/x.test.ts')).toBe(false);
+    // QS-DATA: check-*.ts der Datenhaltung = Prüflogik (raus); die Bau-/Projektions-Module bleiben.
+    expect(istPruefLogik('scripts/datenhaltung/check-datenhaltung.ts')).toBe(true);
+    expect(behalten('scripts/datenhaltung/check-datenhaltung.ts')).toBe(false);
+    expect(behalten('scripts/datenhaltung/erlass-rows.ts')).toBe(true);
   });
 });
 

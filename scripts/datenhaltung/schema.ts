@@ -72,11 +72,15 @@ CREATE TABLE erlass_fassungen (
 CREATE TABLE artikel (
   erlass_key     TEXT NOT NULL,
   fassungs_token TEXT NOT NULL,
-  art_id         TEXT NOT NULL,
-  artikel        TEXT NOT NULL,
-  marg           TEXT,
+  art_id         TEXT NOT NULL,          -- 'art_41', 'disp_u1_art_1', 'annex_…'
+  ord            INTEGER NOT NULL,       -- Emissions-Reihenfolge im Erlass (Byte-Parität der Datei-Sequenz)
+  artikel        TEXT NOT NULL,          -- Anzeige-Nummer/Token '41', '52bis'
+  artikel_label  TEXT NOT NULL,          -- NormSnapshot.artikelLabel ('Art. 41', '§ 4') — Spalten-Weg (E1)
+  grundlage      TEXT,                   -- NormSnapshot.grundlage? (Delegationsnorm-Verweis); NULL = weggelassen
+  marg           TEXT,                   -- Randtitel (NormSnapshot.titel; Kanton). Bund E1 = NULL
+  quelle_url     TEXT NOT NULL,          -- NormSnapshot.quelleUrl (mit Artikel-Anker) — §7(b)/(c)
   bloecke_json   TEXT NOT NULL,
-  sha            TEXT NOT NULL,
+  sha            TEXT NOT NULL,          -- trägt auch die Umzugs-Erkennung (§3.3)
   PRIMARY KEY (erlass_key, fassungs_token, art_id),
   FOREIGN KEY (erlass_key, fassungs_token) REFERENCES erlass_fassungen(erlass_key, fassungs_token)
 );

@@ -1059,6 +1059,14 @@ async function main(): Promise<void> {
   const reportZeilen: string[] = [];
   let totalSnapshots = 0;
 
+  // ── E1-Flip (QS-DATA, FAHRPLAN-DATENHALTUNG §5): public/*.json entsteht ab hier
+  // aus der DB-PROJEKTION (Spalten-Weg: Zeilen in erlasse/erlass_fassungen/artikel →
+  // byte-gleiche Projektion), nicht mehr direkt aus dem Blob. Der alte Direktpfad
+  // (stabelesJson) bleibt als Doppellauf-Referenz stehen (Entfernen = eigener §6-Schritt).
+  // Dynamischer Import, damit der vitest-Import dieser Datei nie node:sqlite lädt.
+  const { erstelleFlipDb, flipBundErlass } = await import('./datenhaltung/generator-flip.ts');
+  const flipDb = erstelleFlipDb();
+
   for (const eintrag of eintraege) {
     const { name, eli, konsolidierung } = eintrag;
     const gesetzKey = name.toUpperCase();
@@ -1191,13 +1199,30 @@ async function main(): Promise<void> {
       goldenIndex[id] = snapshot.sha;
     }
 
-    // JSON schreiben
+    // JSON schreiben — E1-Flip: über die DB-Projektion (Spalten-Weg), mit dem
+    // alten Direktpfad als Doppellauf-Wächter (weicht die Projektion ab, wird hart
+    // abgebrochen; nie falsche Bytes nach public schreiben).
     const datei: NormSnapshotDatei = {
       erzeugt: abgerufen,
       eintraege: snapshotListe,
     };
+    const direktJson = stabelesJson(datei);
     const ausgabePfad = `${ausgangsDir}/${gesetzKey}.json`;
-    writeFileSync(ausgabePfad, stabelesJson(datei), 'utf8');
+    if (snapshotListe.length > 0) {
+      const projJson = flipBundErlass(
+        flipDb,
+        { key: gesetzKey, sr: null, titel: erlass, rechtsgebiet: '', status: 'snapshot' },
+        snapshotListe,
+      );
+      if (projJson !== direktJson) {
+        throw new Error(
+          `E1-Flip-Doppellauf-Bruch (alt≠neu) für ${gesetzKey}: die DB-Projektion weicht vom Direktpfad ab.`,
+        );
+      }
+      writeFileSync(ausgabePfad, projJson, 'utf8');
+    } else {
+      writeFileSync(ausgabePfad, direktJson, 'utf8');
+    }
 
     totalSnapshots += snapshotListe.length;
     reportZeilen.push(`  ${gesetzKey.padEnd(12)} ${snapshotListe.length} Snapshots → ${ausgabePfad}`);
