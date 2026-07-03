@@ -184,6 +184,51 @@ V2 refactored auf die Registry (dann gerechtfertigt); V3 fügt `verwaltungsveror
 - e2e (Playwright via Bash, nie MCP): die 5 Leit-Testfälle (§4).
 - §9 vor Push/Deploy (deploy-check-Skill).
 
+### V1c — Normrevisions-Ehrlichkeit (David-Input 3.7.2026, §1-Korrektheitsthema)
+
+**Problem (O-Ton David):** «da gesetze immer wieder revision haben kann ein alter entscheid
+nicht unbesehen an die norm angehängt werden sofern sich die norm revidiert hat.» Ein
+Entscheid von 1995 legt die *damals* geltende Fassung aus — hängt er kommentarlos am
+heutigen Artikel, ist das eine stille Falschaussage (§1/§8).
+
+**Datenlage (verifiziert 3.7.):** Die Struktur-Sidecars (`public/normtext/struktur/bund/*.json`)
+tragen je Artikel die amtlichen Revisions-Fussnoten mit `absatz`-Zuordnung und maschinenlesbarem
+Datum («Fassung gemäss … , in Kraft seit 1. Jan. 2017 (AS …)»; OR allein: 692 ×). Daraus ist
+**je Artikel das Datum der letzten Textänderung deterministisch ableitbar** — quell-belegt
+(AS-Zitat), ohne Heuristik.
+
+**Klassifikations-Modell (deterministisch):** je Kante (Entscheid-Datum `d`, Artikel `a`):
+`r(a)` = max «in Kraft seit»-Datum der Fussnoten von `a` (keine Fussnote → Urfassung).
+- `d < r(a)` ⇒ **`fassungsBezug: 'revidiert'`** — beweisbar, Badge gerechtfertigt.
+- `d ≥ r(a)` ⇒ `'gleich'` — Artikeltext heute == Fassung im Entscheidzeitpunkt. **Kein**
+  positives «noch aktuell»-Siegel daraus machen (R16/Scheinautorität — Kontextnormen können
+  sich geändert haben); `'gleich'` bleibt UI-still.
+- Q1-Bandjahr: nur `'revidiert'`, wenn Revisions-**Jahr** > Bandjahr (strikt); sonst `'unbekannt'`.
+- Kantonal/ohne Sidecar/aufgehoben: `'unbekannt'` → nur der Gruppen-Hinweissatz.
+
+**Typ-Slot (V1.1 sofort):** `VerzahnungsKante` erhält
+`fassungsBezug?: 'gleich' | 'revidiert' | 'unbekannt';  // V1c-Slot, quelle: struktur-Fussnoten`.
+
+**Etappen:**
+- **In V1a (billig, sofort):** ehrlicher Gruppen-Hinweissatz an Leitfall-/Zitiert-Gruppen
+  («Entscheide beziehen sich auf die im Entscheidzeitpunkt geltende Fassung») + der Typ-Slot.
+  Keine toten UI-Zweige.
+- **V1c-Bau (eigener PR nach V1a, ~1 Tag, VOR VPS machbar):** (1) Build-time-Extrakt
+  `artikel-revisionen` je Erlass (Parser über Sidecar-Fussnoten, max-Datum je Artikel;
+  deutsches Datumsformat deterministisch, mehrere Fussnoten → max). (2) Klassifikation an
+  den Kanten in Panel/EntscheidLeser/LeitfallZeile. (3) `StatusBadge`-Variante `revidiert`
+  («Norm revidiert seit Entscheid», Tooltip: Revisionsdatum + AS-Fundstelle + Link zur
+  Fussnote). **Extraktions-Risikopfad ⇒ `check:gegenpruefung` PFLICHT** + Stichproben-Tor
+  gegen Fedlex (10 Artikel handverglichen) + Negativ-Test (Artikel ohne Fussnote).
+- **V2/DB:** `fassungs_bezug`/`artikel_revisionsdatum` als Spalte der Kanten-Lieferung
+  (`norm_referenzen`/`zitat_kanten`), damit Long-Tail ohne Client-Parse klassifiziert;
+  Fedlex-Portfolio **Paket 5** (AS-Änderungshistorie) liefert später die volle
+  Versions-Timeline → Artikel-Fassungs-Intervalle + Anzeige der *damaligen* Fassung
+  (Historie-Nordstern). eId-Renummerierungen (Reshuffle-Fälle asylv2/svg/…) löst erst
+  diese Timeline; bis dahin deckt `'revidiert'`/`'unbekannt'` ehrlich ab.
+- **Rangliste/V1b unberührt:** `gewicht` bleibt historische Zitier-Tatsache; die
+  Offenlegung geschieht an der Kante, nicht durch Um-Gewichtung.
+
 ### V1b — Rangliste einbacken (SEPARAT, gated — §0/2c/4b)
 
 - **Gate:** law-code-Kanonisierung der betroffenen Erlasse fertig (Branch-Umfeld `feat/qs-data-e4-lokal`). Kein Teil-Plan-B mit gemischter Provenienz: pro Erlass-Shard wird das `gewicht` ENTWEDER vollständig aus `norm_rangliste` ersetzt ODER vollständig beim Alt-Gewicht belassen (Shard-Feld `gewichtQuelle: 'alt' | 'e4'`, Renderer-neutral, aber auditierbar).
