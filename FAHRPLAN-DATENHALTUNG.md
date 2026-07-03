@@ -384,7 +384,9 @@ OR/ZGB-Renumerierungen, bis/ter). Darum bei jedem neuen `erlass_fassungen`-Eintr
   `daten/**`-Manifest erweitern (Extraktion/Projektion = Risiko-Pfad, QS-GP Pflicht), sowie
   **`scripts/materialien/**` + `public/materialien/*.json`** (E6b-Adapter = derselbe Risikotyp
   Extraktion; Lücke live gegen `kern.ts` Risiko-Prädikat verifiziert 3.7.2026). **Stand 3.7.:
-  angekündigt, noch NICHT umgesetzt** — Umsetzung spätestens mit E1.
+  `scripts/datenhaltung/**` + `daten/**` + `daten-manifest.json` + `scripts/normtext-snapshot.ts`
+  ERLEDIGT mit E1 (`kern.ts`, Test in `gegenpruefung.test.ts`); `scripts/materialien/**` +
+  `public/materialien/*.json` bleibt offen (kommt mit E6b).**
 
 ## 5. Etappen (jede mit Tor; nie Big-Bang)
 
@@ -432,6 +434,24 @@ OR/ZGB-Renumerierungen, bis/ter). Darum bei jedem neuen `erlass_fassungen`-Eintr
     Stufe 3) läuft als Report mit** (Anteil `art_id`s stabil/verändert/verschwunden über die
     letzten N OR/ZGB/StGB-Revisionen). **TOR/DoD:** ≥3 Doppelläufe byte-gleich; `check:datenhaltung`
     (Dump-Manifest) neu grün; Stabilitäts-Report liegt vor; `check:gegenpruefung` bestanden.
+  - **[x] ERLEDIGT 3.7.2026 (Bund-Erlasse) — PR `feat/qs-data-e1-flip`. VORBEHALT: der alte
+    Direkt-Schreibpfad (`stabelesJson`) bleibt bestehen — er läuft als Doppellauf-Wächter
+    parallel zur Projektion; sein Entfernen ist ein eigener §6-Schritt (nächster Bau).**
+    Umgesetzt: (1) `scripts/datenhaltung/erlass-rows.ts` — EINE Wahrheit `schreibeErlass()`
+    (NormSnapshot[] → Zeilen in `erlasse`/`erlass_fassungen`/`artikel`, Spalten-Weg) +
+    `projiziereErlass()` (Zeilen → byte-gleiche `public/*.json`-Form). Schema-Zusatz an `artikel`:
+    `ord`/`artikel_label`/`grundlage`/`quelle_url` (die Anzeige-Spalten, die §3-Skizze auf die
+    Projektion hin ergänzt — sonst keine Byte-Parität). (2) Generator-Flip `normtext-snapshot.ts`
+    (Bund-Loop): schreibt Zeilen in eine in-memory-Ziel-DB, `public` kommt aus der **Projektion**,
+    ein Wächter bricht bei `projektion ≠ direktpfad` hart ab. (3) Reverse-Ingest `ingestNormtextZiel`
+    füllt `daten/normtext.db` (durabel) + speist Dump-Manifest. (4) Tor **`check:datenhaltung`**
+    (Manifest-Determinismus + Drift gegen committetes `daten-manifest.json` + Invarianten: keine
+    Orphans, §7-Spalten non-null, «ATTACH nur im Läufer»). (5) Stabilitäts-Report
+    `bibliothek/register/stabilitaets-report-2026-07-03.md` (ehrliche Grenze: EINE Fassung je Erlass
+    → nur Struktur-Basis messbar). **Byte-Beweis:** 3 Doppelläufe (Reverse-Ingest-Weg, ohne Netz,
+    ohne public-Änderung) alt==neu==committet byte-gleich über 218 Erlasse / 24858 Artikel, Gesamt-sha
+    stabil. `check:paritaet` unverändert 1796, golden byte-gleich, `check:gegenpruefung` bestanden.
+    **Kanton-Normtext + Rechtsprechung/Materialien bleiben (noch) Blob-Weg** (nicht in diesem Slot).
 - **E2 · POC-Scheibe + Edge-Suche.** Scheibe = **alle amtlichen BGE (Volltext in DB; committete
   Projektion bleibt nur das kuratierte Schaufenster) + alle 218 Bund-Gesetze**. Turso-Replika +
   Read-only-Edge-Funktion `api/suche` (Drosselung, kein Write-Token im Client, §8-Offenlegung
