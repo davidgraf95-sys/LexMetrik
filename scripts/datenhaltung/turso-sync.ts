@@ -19,6 +19,7 @@
 // Aufruf: npm run datenhaltung:turso-sync   (vorher: npm run datenhaltung:build)
 import { readFileSync, existsSync } from 'node:fs';
 import { DatabaseSync } from 'node:sqlite';
+import { bloeckeText } from './suche-kern';
 
 const URL_STD = 'libsql://lexmetrik-ravedave.aws-eu-west-1.turso.io';
 const TOKEN_DATEI = 'daten/turso-token.txt';
@@ -141,8 +142,11 @@ async function main(): Promise<void> {
   const normtext = new DatabaseSync('daten/normtext.db');
   const rspr = new DatabaseSync('daten/rechtsprechung.db');
 
-  console.log('turso-sync: VOLL-REBUILD der Hot-Replika beginnt (Weiche C).');
+  const nurFts = process.argv.includes('--nur-fts');
+  console.log(nurFts ? 'turso-sync: NUR-FTS-Neubau (Basistabellen bleiben).' : 'turso-sync: VOLL-REBUILD der Hot-Replika beginnt (Weiche C).');
 
+  let nErlasse = 0, nFassungen = 0, nArtikel = 0;
+  if (!nurFts) {
   // 1) Alles fallen lassen (atomarer Neuaufbau; Reihenfolge: FTS vor Basistabellen).
   await pipeline(url, token, [
     { sql: 'DROP TABLE IF EXISTS fts_entscheide_schaufenster' },
@@ -174,31 +178,38 @@ async function main(): Promise<void> {
   ]);
 
   // 3) Daten (Spaltenlisten == lokale Zieltabellen; ladeTabelle liest sie 1:1).
-  const nErlasse = await ladeTabelle(url, token, normtext, 'erlasse', [
+  nErlasse = await ladeTabelle(url, token, normtext, 'erlasse', [
     'key', 'ebene', 'kanton', 'sr', 'abkuerzung', 'titel', 'rechtsgebiet', 'status',
   ]);
-  const nFassungen = await ladeTabelle(url, token, normtext, 'erlass_fassungen', [
+  nFassungen = await ladeTabelle(url, token, normtext, 'erlass_fassungen', [
     'erlass_key', 'fassungs_token', 'gueltig_von', 'gueltig_bis', 'stand', 'quelle_url',
     'as_fundstelle', 'abgerufen', 'sha',
   ]);
-  const nArtikel = await ladeTabelle(url, token, normtext, 'artikel', [
+  nArtikel = await ladeTabelle(url, token, normtext, 'artikel', [
     'erlass_key', 'fassungs_token', 'art_id', 'ord', 'artikel', 'artikel_label', 'marg',
     'grundlage', 'quelle_url', 'bloecke_json', 'sha',
   ], 80);
 
-  // 4) FTS: artikel als external content + rebuild (kein zweiter Text über den Draht);
+  } else {
+    await pipeline(url, token, [
+      { sql: 'DROP TABLE IF EXISTS fts_entscheide_schaufenster' },
+      { sql: 'DROP TABLE IF EXISTS fts_artikel' },
+    ]);
+  }
+
+  // 4) FTS: artikel (remote contentless) + rebuild (kein zweiter Text über den Draht);
   //    Schaufenster-Entscheide standalone (Text physisch, 342 Zeilen — direkt laden).
   await pipeline(url, token, [
     {
-      sql: `CREATE VIRTUAL TABLE fts_artikel USING fts5(text, content='artikel',
-            content_rowid='rowid', tokenize='${TOKENIZER}')`,
+      sql: `CREATE VIRTUAL TABLE fts_artikel USING fts5(text, content='', tokenize='${TOKENIZER}')`,
     },
   ]);
   // external content: der Index braucht die extrahierten Texte einmalig — lokal berechnet,
   // batched als (rowid, text) eingespielt (identisch zu fts.ts/baueFtsArtikel).
-  const artikelTexte = normtext
-    .prepare('SELECT a.rowid AS rowid, f.text AS text FROM artikel a JOIN fts_artikel f ON f.rowid = a.rowid ORDER BY a.rowid')
-    .all() as Array<{ rowid: number; text: string }>;
+  // Text direkt aus bloecke_json berechnen (external-content-FTS liefert lokal keinen Text zurueck)
+  const artikelTexte = (normtext
+    .prepare('SELECT rowid AS rowid, bloecke_json AS bj FROM artikel ORDER BY rowid')
+    .all() as Array<{ rowid: number; bj: string }>).map((r) => ({ rowid: r.rowid, text: bloeckeText(r.bj) }));
   for (let i = 0; i < artikelTexte.length; i += 150) {
     const stueck = artikelTexte.slice(i, i + 150);
     await pipeline(
@@ -233,10 +244,13 @@ async function main(): Promise<void> {
   console.log(`  fts_entscheide_schaufenster: ${entscheide.length}/${entscheide.length}`);
 
   // 5) Verifikation (doppelt): Zeilenzahlen remote == lokal + MATCH-Smoke beider Indizes.
+  const sollErlasse = nurFts ? Number(await abfrage(url, token, 'SELECT count(*) FROM erlasse')) : nErlasse;
+  const sollFassungen = nurFts ? Number(await abfrage(url, token, 'SELECT count(*) FROM erlass_fassungen')) : nFassungen;
+  const sollArtikel = nurFts ? Number(await abfrage(url, token, 'SELECT count(*) FROM artikel')) : nArtikel;
   const checks: Array<[string, string, number]> = [
-    ['erlasse', 'SELECT count(*) FROM erlasse', nErlasse],
-    ['erlass_fassungen', 'SELECT count(*) FROM erlass_fassungen', nFassungen],
-    ['artikel', 'SELECT count(*) FROM artikel', nArtikel],
+    ['erlasse', 'SELECT count(*) FROM erlasse', sollErlasse],
+    ['erlass_fassungen', 'SELECT count(*) FROM erlass_fassungen', sollFassungen],
+    ['artikel', 'SELECT count(*) FROM artikel', sollArtikel],
     ['fts_artikel', "SELECT count(*) FROM fts_artikel WHERE fts_artikel MATCH '\"und\"'", -1],
     ['fts_entscheide', 'SELECT count(*) FROM fts_entscheide_schaufenster', entscheide.length],
   ];
