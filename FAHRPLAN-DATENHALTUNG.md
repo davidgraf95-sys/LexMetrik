@@ -717,7 +717,7 @@ Prinzip: strukturiert/homogen/klein zuerst; PDF-lastig/heterogen/gross zuletzt; 
 5. **E4 Zitat-Graph** = erster voller Enrichment-Pass + `norm_rangliste` + Panels + Oracle-Tor.
 6. **E5 Kantons-Gerichte** (Quelle offen: Parquet dünn → evtl. zweiter Adapter-Typ; erst nach E4-
    Erfahrung, Messung vor Migration).
-7. **E6 Soft-Law** (Materialien via Fedlex-SPARQL ab E1 andockbar, VerwVO via Ämter-Adapter nach Quell-
+7. **E6 Soft-Law** — **E6a VORGEZOGEN (David 3.7.2026)**: Quell-Inventar (Kreisschreiben ESTV/BSV/FINMA/SEM — Ämter/Formate/Endpunkte nach §7 Quell-Wahl) startet SOFORT parallel; Adapter-Bau als Bahn-A-Nebengleis nach dem E3/E4-Aufbau, kein 26×-Slot. (Materialien via Fedlex-SPARQL ab E1 andockbar, VerwVO via Ämter-Adapter nach Quell-
    Inventar) — kann ab E1 parallel zu 4–6 laufen (eigene Quellen, eigene DB-Datei).
 
 ## 7. Sicherheits-/Rollback-Konzept
