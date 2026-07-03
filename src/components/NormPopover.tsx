@@ -3,6 +3,7 @@ import type { NormSnapshot } from '../lib/normtext/typen';
 import { textFragment } from '../lib/normtext/passus';
 import { istSchliessTaste } from '../lib/normtext/tasten';
 import { bestimmePassusZiel } from '../lib/normtext/passusZiel';
+import { usePaneSteuerung } from './layout/usePaneLayout';
 import { ArtikelBody } from './normtext/ArtikelBody';
 
 // Norm-Vorschau-Popover (§7 Zitat-Ausnahme): zeigt den Volltext des zitierten
@@ -30,6 +31,10 @@ export function NormPopover({ snapshot, passus, onClose }: {
 }) {
   const dialogRef = useRef<HTMLDivElement>(null);
   const schliessRef = useRef<HTMLButtonElement>(null);
+  // Split-View-Brücke (V1.2, W2·7-VZUI §1.1): «Entscheid lesen, Norm daneben
+  // aufschlagen» ist der häufigste Verzahnungsmoment — der ⧉ öffnet den Erlass
+  // im Pane, unter dem bestehenden Gating (kannOeffnen: ≥lg + freie Kapazität).
+  const { oeffneDaneben, kannOeffnen, istOffen } = usePaneSteuerung();
   // Ref auf die markierte Stelle (Item oder Block) — für Scroll-ins-Sichtfeld.
   // Nur gesetzt, wenn ein Treffer vorhanden ist; sonst null → kein Scrollen.
   const passusRef = useRef<HTMLElement>(null);
@@ -136,10 +141,22 @@ export function NormPopover({ snapshot, passus, onClose }: {
           </a>
         </div>
         {/* Brücke in die Lesesicht (Rubrik V): voller Erlass im Gesetzes-Reader,
-            an der zitierten Stelle. Interner Pfad → normale Navigation. */}
-        <a href={readerLink} className="inline-block text-xs text-brass-700 hover:underline">
-          Im Gesetz öffnen ›
-        </a>
+            an der zitierten Stelle. Interner Pfad → normale Navigation. Daneben
+            der ⧉ (Split-View): Norm im Pane aufschlagen, das gelesene Dokument
+            bleibt offen — nur unter dem Pane-Gating sichtbar (nie auf Mobile). */}
+        <span className="inline-flex items-center gap-2">
+          <a href={readerLink} className="inline-block text-xs text-brass-700 hover:underline">
+            Im Gesetz öffnen ›
+          </a>
+          {kannOeffnen && !istOffen(readerLink) && (
+            <button type="button"
+              onClick={() => { oeffneDaneben(readerLink); onClose(); }}
+              title={`${titel} nebeneinander öffnen`} aria-label={`${titel} nebeneinander öffnen`}
+              className="inline-flex h-6 w-6 items-center justify-center rounded-md border border-line text-ink-500 hover:text-brass-700 hover:border-brass-400 transition-colors">
+              <span aria-hidden className="text-base leading-none">⧉</span>
+            </button>
+          )}
+        </span>
         <p className="text-micro text-ink-500">
           Snapshot — massgeblich ist die amtliche Fassung (Live-Link oben).
         </p>

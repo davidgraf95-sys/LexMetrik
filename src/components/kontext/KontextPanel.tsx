@@ -1,10 +1,13 @@
 import { useEffect, useState, type ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import {
-  kontextSync, kontextEntscheide,
+  kontextSync, kontextEntscheide, normenFuer,
   type KontextTyp, type EntscheidRef,
 } from '../../lib/kontext';
+import { ladeLeitfallShard, artikelProEntscheid } from '../../lib/rechtsprechung/norm-index';
 import { usePaneSteuerung } from '../layout/usePaneLayout';
+import { KantenChip } from '../verzahnung/KantenChip';
+import { StatusBadge } from '../verzahnung/StatusBadge';
 
 // ─── Einheitliches «Kontext»-Panel (B3) ─────────────────────────────────────
 //
@@ -13,22 +16,52 @@ import { usePaneSteuerung } from '../layout/usePaneLayout';
 // verknüpft sind: Norm → Entscheide/Materialien/Werkzeuge; Entscheid →
 // Normen/Materialien/Werkzeuge; Material → Normen/Entscheide/Werkzeuge. Reine
 // Darstellung (§3) — Auflösung liegt in lib/kontext.ts. Verknüpfungen sind
-// maschinell über zitierte Normen (§8 ehrlich gekennzeichnet, keine geprüfte
-// Auswahl). Voller Zustands-Bogen inkl. ruhigem Leerzustand (§13/F4).
+// maschinell über zitierte Normen — §8 ehrlich gekennzeichnet, keine
+// redaktionelle Auswahl. Voller Zustands-Bogen inkl. ruhigem Leerzustand (§13/F4).
+//
+// V1.2 (W2·7-VZUI, FAHRPLAN-VERZAHNUNG-UI §1.4): die bestehende `Gruppe`-Hülle
+// trägt drei Pflicht-Props — Richtungs-Label als lc-overline (Beziehungstyp als
+// TEXT, nie Farbe: «Wendet an» / «Wird zitiert von» / «Legt aus»), Zähler und
+// kontexttyp-spezifischen Hinweis (Zähler-Formel «n erfasste …», Grammatik-Regel
+// 6). BEWUSST kein Registry-Refactor (§0-3a): die vier JSX-Blöcke bleiben; die
+// Registry kommt in V2 mit dem fünften (asynchronen) Gruppentyp.
+// Erweiterungspunkt V2: Gruppe «Wird zitiert von» am Entscheid (Edge-Query auf
+// zitat_kanten) dockt hier als weiterer JSX-Block an.
 
 const MAX_ENTSCHEIDE = 8;
 
-function Gruppe({ titel, anzahl, children, hinweis }: {
-  titel: string; anzahl: number; children: ReactNode; hinweis?: ReactNode;
+function Gruppe({ titel, richtung, anzahl, children, hinweis }: {
+  titel: string;
+  /** Beziehungstyp als Text (juris/EUR-Lex-Muster): «Wendet an» u. a.; nie Farbe. */
+  richtung?: string;
+  anzahl: number;
+  children: ReactNode;
+  hinweis?: ReactNode;
 }) {
   return (
     <div className="space-y-2">
       <h3 className="lc-overline text-ink-600">
+        {richtung && <span className="text-brass-700">{richtung} · </span>}
         {titel} <span className="num text-ink-500">{anzahl}</span>
       </h3>
       {children}
       {hinweis && <p className="text-micro text-ink-500">{hinweis}</p>}
     </div>
+  );
+}
+
+// Geteilter «⧉ daneben öffnen»-Knopf (Split-View B-2) — EINE Anatomie für alle
+// Panel-Zeilen; Sichtbarkeit steuert der Aufrufer über das bestehende Gating
+// `kannOeffnen && !istOffen` (≥lg + freie Kapazität, pane-sicher).
+function DanebenKnopf({ ziel, label, oeffneDaneben, className = 'ml-1' }: {
+  ziel: string; label: string; oeffneDaneben: (pfad: string) => void; className?: string;
+}) {
+  return (
+    <button type="button" onClick={() => oeffneDaneben(ziel)}
+      title={`${label} nebeneinander öffnen`} aria-label={`${label} nebeneinander öffnen`}
+      className={`${className} inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-md border border-line text-ink-500 hover:text-brass-700 hover:border-brass-400 transition-colors`}>
+      <span aria-hidden className="text-base leading-none">⧉</span>
+    </button>
   );
 }
 
@@ -53,6 +86,26 @@ export function KontextPanel({ typ, normKeys }: { typ: KontextTyp; normKeys: rea
     kontextEntscheide(typ, keys).then((r) => { if (lebt) setGeladen({ key: normKeysKey, refs: r }); });
     return () => { lebt = false; };
   }, [typ, normKeysKey]);
+
+  // «via Art. N»-Sublabels (V1.2, Magic Moment 5): nur im Gesetz-Reader (genau
+  // EIN normKey) aus dem erlass-lokalen Shard invertiert — kein neuer Datenpfad,
+  // derselbe Promise-Cache wie die LeitfallZeile (§5/§15.3). Kein Shard = keine
+  // Sublabels (stiller, ehrlicher Ausfall).
+  const einzelErlass = typ === 'norm' && normKeys.length === 1;
+  const [artikelMap, setArtikelMap] = useState<{ key: string; map: Map<string, string> } | null>(null);
+  useEffect(() => {
+    if (!einzelErlass) return;
+    let lebt = true;
+    ladeLeitfallShard(normKeysKey).then((shard) => {
+      if (lebt && shard) setArtikelMap({ key: normKeysKey, map: artikelProEntscheid(shard) });
+    });
+    return () => { lebt = false; };
+  }, [einzelErlass, normKeysKey]);
+  const viaArtikel: Map<string, string> | null =
+    einzelErlass && artikelMap?.key === normKeysKey ? artikelMap.map : null;
+  // Kürzel des EINEN Erlasses — für den ?norm=-Fundstellen-Sprung im Ziel-Entscheid
+  // (Auftrag David 3.7.2026: eingehende Entscheid-Links landen an der Erwägung).
+  const eigenKuerzel = einzelErlass ? normenFuer(normKeys)[0]?.kuerzel ?? null : null;
 
   // Entscheid-Reader: leer (Selbst-Korpus). Sonst nur das zum AKTUELLEN Key
   // gehörende Resultat zeigen; ein veralteter/fehlender Treffer = «lädt».
@@ -85,20 +138,14 @@ export function KontextPanel({ typ, normKeys }: { typ: KontextTyp; normKeys: rea
         <div className="space-y-5">
           {/* Normen (für Entscheid- und Material-Reader). */}
           {normen.length > 0 && (
-            <Gruppe titel="Angewandte Erlasse" anzahl={normen.length}>
+            <Gruppe titel="Erlasse" richtung="Wendet an" anzahl={normen.length}
+              hinweis={<><span className="num">{normen.length}</span> erfasste Erlasse — aus den zitierten Normen der Quelle abgeleitet.</>}>
               <ul className="flex flex-wrap gap-2">
                 {normen.map((n) => (
                   <li key={n.key} className="inline-flex items-center">
-                    <Link to={n.pfad} title={n.titel}
-                      className="lc-chip no-underline hover:text-brass-700 hover:border-brass-400">
-                      {n.kuerzel}
-                    </Link>
+                    <KantenChip to={n.pfad} label={n.kuerzel} titel={n.titel} />
                     {kannOeffnen && !istOffen(n.pfad) && (
-                      <button type="button" onClick={() => oeffneDaneben(n.pfad)}
-                        title={`${n.kuerzel} nebeneinander öffnen`} aria-label={`${n.kuerzel} nebeneinander öffnen`}
-                        className="ml-1 inline-flex h-6 w-6 items-center justify-center rounded-md border border-line text-ink-500 hover:text-brass-700 hover:border-brass-400 transition-colors">
-                        <span aria-hidden className="text-base leading-none">⧉</span>
-                      </button>
+                      <DanebenKnopf ziel={n.pfad} label={n.kuerzel} oeffneDaneben={oeffneDaneben} />
                     )}
                   </li>
                 ))}
@@ -108,29 +155,45 @@ export function KontextPanel({ typ, normKeys }: { typ: KontextTyp; normKeys: rea
 
           {/* Entscheide (für Norm- und Material-Reader). */}
           {(entscheideLaden || (entscheide && entscheide.length > 0)) && (
-            <Gruppe titel="Bundesgerichtsentscheide" anzahl={entscheide?.length ?? 0}
-              hinweis="Maschinell aus den zitierten Normen zugeordnet — keine geprüfte Präjudizienliste.">
+            <Gruppe titel="Bundesgerichtsentscheide" richtung="Wird zitiert von"
+              anzahl={entscheide?.length ?? 0}
+              hinweis={entscheideLaden ? undefined : typ === 'material'
+                ? <><span className="num">{entscheide?.length ?? 0}</span> erfasste Entscheide — über die gemeinsam zitierten Erlasse zugeordnet: zwei Schritte entfernt, entsprechend unschärfer. Entscheide beziehen sich auf die im Entscheidzeitpunkt geltende Fassung.</>
+                : <><span className="num">{entscheide?.length ?? 0}</span> erfasste Entscheide — maschinell aus den zitierten Normen zugeordnet, keine redaktionelle Präjudizienauswahl. Entscheide beziehen sich auf die im Entscheidzeitpunkt geltende Fassung.</>}>
               {entscheideLaden ? (
                 <p className="text-body-s text-ink-500">Entscheide werden geladen …</p>
               ) : (
                 <>
                   <ul className="flex flex-col gap-1.5">
-                    {sichtbareEntscheide.map((r) => (
-                      <li key={r.key} className="text-body-s">
-                        <Link to={`/rechtsprechung/${encodeURIComponent(r.key)}`}
-                          className="no-underline hover:text-brass-700">
-                          <span className="font-medium">{r.zitierung}</span>
-                          {r.leitcharakter === 'leitentscheid' && (
-                            <span className="lc-chip ml-2 align-middle text-micro">Leitentscheid</span>
+                    {sichtbareEntscheide.map((r) => {
+                      // Artikel-Sublabel + Fundstellen-Sprung (nur Gesetz-Reader,
+                      // Shard vorhanden): «via Art. N» als EIN Zusatz am Eintrag,
+                      // ?norm= lässt das Ziel zur Erwägungs-Fundstelle springen.
+                      const artikel = viaArtikel?.get(r.key) ?? null;
+                      const normZitat = artikel && eigenKuerzel ? `Art. ${artikel} ${eigenKuerzel}` : null;
+                      const ziel = `/rechtsprechung/${encodeURIComponent(r.key)}${normZitat ? `?norm=${encodeURIComponent(normZitat)}` : ''}`;
+                      return (
+                        <li key={r.key} className="text-body-s">
+                          <Link to={ziel} className="no-underline hover:text-brass-700">
+                            <span className="font-medium">{r.zitierung}</span>
+                            {r.leitcharakter === 'leitentscheid' && (
+                              <StatusBadge praedikat="leitentscheid" variant="glyph" className="ml-1.5" />
+                            )}
+                            {artikel && (
+                              <span className="num text-micro text-ink-500"> · via Art. {artikel}</span>
+                            )}
+                            {r.regesteKurz && <span className="text-ink-500"> — {r.regesteKurz}</span>}
+                          </Link>
+                          {kannOeffnen && !istOffen(ziel) && (
+                            <DanebenKnopf ziel={ziel} label={r.zitierung} oeffneDaneben={oeffneDaneben} className="ml-1 align-middle" />
                           )}
-                          {r.regesteKurz && <span className="text-ink-500"> — {r.regesteKurz}</span>}
-                        </Link>
-                      </li>
-                    ))}
+                        </li>
+                      );
+                    })}
                   </ul>
                   {restEntscheide > 0 && (
                     <Link to={alleEntscheideZiel} className="text-body-s text-brass-700 hover:underline">
-                      Alle <span className="num">{entscheide?.length}</span> Entscheide ansehen →
+                      Alle <span className="num">{entscheide?.length}</span> erfassten Entscheide ansehen →
                     </Link>
                   )}
                 </>
@@ -140,8 +203,8 @@ export function KontextPanel({ typ, normKeys }: { typ: KontextTyp; normKeys: rea
 
           {/* Materialien (für Norm- und Entscheid-Reader). */}
           {materialien.length > 0 && (
-            <Gruppe titel="Amtliche Materialien" anzahl={materialien.length}
-              hinweis="Behördenpublikationen (Kreisschreiben, Wegleitungen u. a.) — kein Gesetzesrang.">
+            <Gruppe titel="Amtliche Materialien" richtung="Legt aus" anzahl={materialien.length}
+              hinweis={<><span className="num">{materialien.length}</span> erfasste Behördenpublikationen (Kreisschreiben, Wegleitungen u. a.) — kein Gesetzesrang.</>}>
               <ul className="flex flex-col gap-1.5">
                 {materialien.map((m) => (
                   <li key={m.key} className="text-body-s">
@@ -149,13 +212,17 @@ export function KontextPanel({ typ, normKeys }: { typ: KontextTyp; normKeys: rea
                       <span className="text-ink-500">{m.behoerdeKuerzel} · {m.doktypLabel}{m.nummer ? ` ${m.nummer}` : ''}</span>
                       {' — '}<span className="font-medium">{m.titel}</span>
                     </Link>
+                    {kannOeffnen && !istOffen(m.pfad) && (
+                      <DanebenKnopf ziel={m.pfad} label={`${m.behoerdeKuerzel} ${m.doktypLabel}`} oeffneDaneben={oeffneDaneben} className="ml-1 align-middle" />
+                    )}
                   </li>
                 ))}
               </ul>
             </Gruppe>
           )}
 
-          {/* Werkzeuge (für alle drei Reader). */}
+          {/* Werkzeuge (für alle drei Reader) — kein Zitat-Beziehungstyp, darum
+              bewusst ohne Richtungs-Label. */}
           {werkzeuge.length > 0 && (
             <Gruppe titel="Passende Werkzeuge" anzahl={werkzeuge.length}
               hinweis="Aus den verknüpften Normen abgeleitet (grobe Zuordnung, keine kuratierte Empfehlung).">
@@ -170,11 +237,7 @@ export function KontextPanel({ typ, normKeys }: { typ: KontextTyp; normKeys: rea
                     {/* «daneben öffnen»: Norm bleibt links, Werkzeug erscheint
                         rechts im Split-View (B-2). Nur ab lg + freier Kapazität. */}
                     {kannOeffnen && !istOffen(w.href) && (
-                      <button type="button" onClick={() => oeffneDaneben(w.href)}
-                        title={`${w.titel} nebeneinander öffnen`} aria-label={`${w.titel} nebeneinander öffnen`}
-                        className="ml-1 inline-flex h-6 w-6 items-center justify-center rounded-md border border-line text-ink-500 hover:text-brass-700 hover:border-brass-400 transition-colors">
-                        <span aria-hidden className="text-base leading-none">⧉</span>
-                      </button>
+                      <DanebenKnopf ziel={w.href} label={w.titel} oeffneDaneben={oeffneDaneben} />
                     )}
                   </li>
                 ))}

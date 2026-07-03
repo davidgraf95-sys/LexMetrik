@@ -239,6 +239,17 @@ export function NormPopoverOverlay({ children, onClose, triggerRef }: {
   // Position aus dem Trigger-Rect ableiten: bevorzugt UNTER dem Trigger, sonst
   // darüber; horizontal an den Viewport geklemmt. useLayoutEffect misst die
   // gerenderte Kartenhöhe und setzt die Position VOR dem Paint (kein Springen).
+  //
+  // Befund David 3.7.2026 («Popover soll dort aufgehen, wo der Link ist»):
+  // Die Horizontal-Klemmung kollabierte auf left=8, weil der Container `w-full`
+  // trug und der Inline-Style `maxWidth: calc(100vw - 16px)` das `max-w-xl` der
+  // Klasse ÜBERSCHRIEB → offsetWidth = voller Viewport, `vw - kw - m` ≈ 8. Das
+  // Popover öffnete darum bei jedem Link rechts der Mitte am LINKEN Fensterrand.
+  // Fix: der verankerte Container erhält seine Breite als EINEN Inline-Wert
+  // (min(36rem = max-w-xl, 100vw − 16px)) — die Messung stimmt, die Klemmung
+  // platziert am Link. Zusätzlich folgt die Position dem Trigger beim Scrollen
+  // (capture-Listener fängt auch innere Scroll-Container, z. B. Split-View-
+  // Panes, die der Body-Scroll-Lock nicht sperrt).
   useLayoutEffect(() => {
     const trigger = triggerRef?.current;
     const karte = dialogContainerRef.current;
@@ -260,7 +271,11 @@ export function NormPopoverOverlay({ children, onClose, triggerRef }: {
     };
     berechne();
     window.addEventListener('resize', berechne);
-    return () => window.removeEventListener('resize', berechne);
+    window.addEventListener('scroll', berechne, true);
+    return () => {
+      window.removeEventListener('resize', berechne);
+      window.removeEventListener('scroll', berechne, true);
+    };
   }, [triggerRef, children]);
 
   // Fokus-Falle: hält Tab/Shift+Tab innerhalb des Dialogs (zyklisch). Die reine
@@ -309,7 +324,11 @@ export function NormPopoverOverlay({ children, onClose, triggerRef }: {
       <div
         ref={dialogContainerRef}
         onClick={(e) => e.stopPropagation()}
-        style={verankert ? { position: 'fixed', top: pos?.top ?? 0, left: pos?.left ?? 0, maxWidth: 'calc(100vw - 16px)', visibility: pos ? 'visible' : 'hidden' } : undefined}
+        style={verankert
+          // Breite als EIN Inline-Wert (36rem = max-w-xl), damit offsetWidth die
+          // echte Kartenbreite misst — s. Befund oben (sonst Klemmung auf left=8).
+          ? { position: 'fixed', top: pos?.top ?? 0, left: pos?.left ?? 0, width: 'min(36rem, calc(100vw - 16px))', visibility: pos ? 'visible' : 'hidden' }
+          : undefined}
         className="w-full max-w-xl"
       >
         {children}

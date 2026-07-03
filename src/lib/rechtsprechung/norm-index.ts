@@ -134,6 +134,25 @@ export async function leitfaelleFuerArtikel(registerKey: string, artikel: string
   return shard?.proArtikel[normArtikelToken(artikel)] ?? [];
 }
 
+/**
+ * Shard-Inversion (V1.2, W2·7-VZUI): Entscheid-key → Artikel-Token des Artikels,
+ * für den der Entscheid in DIESEM Erlass das höchste topische Gewicht trägt.
+ * Speist die «via Art. N»-Sublabels der KontextPanel-Entscheid-Chips (Magic
+ * Moment 5: Top-Entscheide am Erlass-Ende MIT Artikelbezug) — aus dem ohnehin
+ * geladenen Shard, keine neuen Daten. Rein/deterministisch (§2): bei Gewichts-
+ * Gleichstand gewinnt das zuerst gesehene Artikel-Token (stabile Shard-Ordnung).
+ */
+export function artikelProEntscheid(shard: LeitfallShard): Map<string, string> {
+  const best = new Map<string, { artikel: string; gewicht: number }>();
+  for (const [artikel, refs] of Object.entries(shard.proArtikel)) {
+    for (const r of refs) {
+      const b = best.get(r.key);
+      if (!b || r.gewicht > b.gewicht) best.set(r.key, { artikel, gewicht: r.gewicht });
+    }
+  }
+  return new Map([...best].map(([key, v]) => [key, v.artikel]));
+}
+
 /** Nur für Tests: den Shard-Promise-Cache leeren (sonst leckt er über Testfälle). */
 export function _leereShardCache(): void {
   shardPromises.clear();
