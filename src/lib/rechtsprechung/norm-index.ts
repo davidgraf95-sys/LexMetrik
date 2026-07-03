@@ -113,9 +113,14 @@ export async function ladeLeitfallShard(registerKey: string): Promise<LeitfallSh
     p = (async () => {
       try {
         const res = await fetch(`/rechtsprechung/norm-index/${encodeURIComponent(registerKey)}.json`);
-        if (!res.ok) return null; // kein Shard = Erlass ohne Artikel-Treffer (kein Fehler)
+        if (res.status === 404) return null; // kein Shard = Erlass ohne Artikel-Treffer (kein Fehler)
+        if (!res.ok) { shardPromises.delete(registerKey); return null; }
         return (await res.json()) as LeitfallShard;
       } catch {
+        // Transienter Netz-/Parse-Fehler (W2·7-VZUI-Härtung): NICHT dauerhaft als
+        // null cachen — sonst bleiben die Leitfall-Chips bis zum Reload tot, ein
+        // späterer Aufrufer (nächster Artikel) darf es erneut versuchen (§8).
+        shardPromises.delete(registerKey);
         return null;
       }
     })();

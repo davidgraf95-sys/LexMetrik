@@ -115,11 +115,13 @@ test('MM4: ★-aria-label textgleich in Reader, Panel, Leitfall-Zeile und Suche;
   await kontext.scrollIntoViewIfNeeded()
   await expect(kontext.locator(`[role="img"][aria-label="${LEIT_ARIA}"]`).first()).toBeVisible({ timeout: 10_000 })
 
-  // (c) Leitfall-Zeile am Artikel (Glyph im KantenChip). Auf dem langsamen
-  // CI-Runner racet der Hash-Sprung mit content-visibility — explizit zum
-  // Artikel scrollen (erzwingt Render + idle-Shard-Load), wie im
-  // Fundstellen-Test A; Assertion unverändert.
+  // (c) Leitfall-Zeile am Artikel (Glyph im KantenChip). reload(): von (b) aus
+  // wäre das eine Fragment-Navigation OHNE Neuladen — die Zeile erbte dann den
+  // Seitenzustand aus (b) (auf dem gedrosselten CI-Runner deterministisch rot).
+  // Frisch geladen prüft (c) dieselbe Produkt-Wahrheit wie ein direkter
+  // Deep-Link-Aufruf; Assertion unverändert.
   await page.goto('/gesetze/bund/ZGB#art-684')
+  await page.reload()
   const art = page.locator('#art-684')
   await art.scrollIntoViewIfNeeded()
   await expect(art.locator(`[role="img"][aria-label="${LEIT_ARIA}"]`).first()).toBeVisible({ timeout: 15_000 })
@@ -187,6 +189,12 @@ test('Popover öffnet AM Link (tief im Dokument), Seite scrollt nicht', async ({
   await link.click()
   const karte = page.locator('[role="dialog"]')
   await expect(karte).toBeVisible()
+  // Erst der GELADENE Volltext-Zustand ist der Messgegenstand: die Lade-Hülle
+  // wird beim Snapshot-Eintreffen durch ein NEUES role=dialog ersetzt — ein
+  // boundingBox() im Swap-Moment liefert null (CI-Race). Der Fuss-Link
+  // existiert nur im Volltext-Popover.
+  await expect(karte.getByText('Im Gesetz öffnen')).toBeVisible()
+  await expect.poll(async () => (await karte.boundingBox()) !== null).toBe(true)
   const kBox = (await karte.boundingBox())!
   // Kein Seiten-Sprung beim Öffnen.
   expect(await page.evaluate(() => window.scrollY)).toBe(scrollVor)
