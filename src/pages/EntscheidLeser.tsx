@@ -1,9 +1,9 @@
-import { useCallback, useEffect, useRef, useState, type CSSProperties } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 import { createPortal } from 'react-dom';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { EntscheidBody } from '../components/rechtsprechung/EntscheidBody';
 import { Tabs } from '../components/ui/Tabs';
-import { ABSCHNITT_TITEL, abschnittAnker } from '../lib/rechtsprechung/abschnitte';
+import { ABSCHNITT_TITEL, abschnittAnker, fundstellenFuerNormen } from '../lib/rechtsprechung/abschnitte';
 import { NormText } from '../components/NormText';
 import { KontextPanel } from '../components/kontext/KontextPanel';
 import { ladeEntscheidEintrag, ladeEntscheid } from '../lib/rechtsprechung/browse';
@@ -22,6 +22,21 @@ import type { EntscheidSnapshot, EntscheidSprache, Abschnittstyp } from '../lib/
 function formatiereDatum(iso: string): string {
   const m = iso.match(/^(\d{4})-(\d{2})-(\d{2})$/);
   return m ? `${m[3]}.${m[2]}.${m[1]}` : iso;
+}
+
+// Sprung zu einem Anker im Body + kurzes Ziel-Blinken (bestehendes lc-ziel-blink
+// aus dem Gesetz-Leser; §13-Token, keine neue Optik). Respektiert reduced-motion.
+// Rein clientseitig (nur aus Klick-/Effekt-Handlern) — kein SSR-Pfad.
+function springeZuAnker(id: string): boolean {
+  if (typeof document === 'undefined') return false;
+  const el = document.getElementById(id);
+  if (!el) return false;
+  const reduziert = typeof window !== 'undefined'
+    && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+  el.scrollIntoView({ block: 'start', behavior: reduziert ? 'auto' : 'smooth' });
+  el.classList.add('lc-ziel-blink');
+  window.setTimeout(() => el.classList.remove('lc-ziel-blink'), 2400);
+  return true;
 }
 
 // Manche BGE tragen nur das Bandjahr-Platzhalterdatum (YYYY-01-01) statt eines echten
@@ -90,6 +105,61 @@ function SprungNavigation({ ziele }: { ziele: { anker: string; label: string }[]
         ))}
       </div>
     </nav>
+  );
+}
+
+// ── Zitierte-Normen-Chips im Kopf → Sprung zur Fundstelle ────────────────────
+// Verweis-Präzision Teil 2 (Auftrag David 3.7.2026): jede vom Entscheid
+// angewandte Norm als Chip; Klick springt zur ERSTEN Erwägung, die sie im Text
+// zitiert (deterministische Suche über `fundstellenFuerNormen`, dieselbe Ketten-/
+// Normalisierungs-Logik wie die Inline-Verlinkung). Keine Text-Fundstelle (Chip
+// stammt nur aus der Regeste) → Sprung zur Regeste. Reine Darstellung (§3).
+function ZitierteNormenChips({ abschnitte, zitierteNormen, regesteAnker }: {
+  abschnitte: EntscheidSnapshot['abschnitte'];
+  zitierteNormen: string[];
+  /** Anker der Regeste-Box, falls sichtbar — sonst null (kein Fallback-Ziel). */
+  regesteAnker: string | null;
+}) {
+  // Fundstellen-Map (memoisiert auf die aktive Fassung): Norm → Erwägungs-Anker | null.
+  const fundstellen = useMemo(
+    () => fundstellenFuerNormen(abschnitte, zitierteNormen),
+    [abschnitte, zitierteNormen],
+  );
+  const [ziel, setZiel] = useState('');
+  if (zitierteNormen.length === 0) return null;
+
+  const springe = (norm: string) => {
+    const anker = fundstellen.get(norm) ?? null;
+    const gesprungen = anker ? springeZuAnker(anker) : (regesteAnker ? springeZuAnker(regesteAnker) : false);
+    setZiel(gesprungen
+      ? (anker ? `${norm}: zur Fundstelle gesprungen` : `${norm}: keine Textstelle — zur Regeste gesprungen`)
+      : `${norm}: keine Fundstelle im Text`);
+  };
+
+  return (
+    <section aria-label="Zitierte Normen" className="space-y-1.5 max-w-reading">
+      <p className="lc-overline text-brass-700">Zitierte Normen</p>
+      <div className="flex flex-wrap gap-2">
+        {zitierteNormen.map((norm) => {
+          const hatFundstelle = !!fundstellen.get(norm);
+          return (
+            <button key={norm} type="button" onClick={() => springe(norm)}
+              className="lc-chip num no-underline hover:border-brass-400 hover:text-brass-700 transition-colors"
+              title={hatFundstelle
+                ? `Zur Fundstelle von ${norm} im Urteilstext springen`
+                : `${norm} — keine Textstelle in den Erwägungen; springt zur Regeste`}>
+              {norm}
+              {!hatFundstelle && <span aria-hidden className="ml-1 text-ink-400">·</span>}
+            </button>
+          );
+        })}
+      </div>
+      {/* §8: die zitierten Normen sind maschinell aus der Quelle übernommen, nicht geprüft. */}
+      <p className="text-micro text-ink-500">
+        Aus der Quelle übernommen (nicht fachlich geprüft) — Klick springt zur Fundstelle im Text.
+      </p>
+      <p aria-live="polite" className="sr-only">{ziel}</p>
+    </section>
   );
 }
 
@@ -165,6 +235,27 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam }: { schluessel: string
     if (!snap || typeof document === 'undefined') return;
     document.title = `${snap.zitierung} — LexMetrik`;
   }, [snap]);
+
+  // Deep-Link auf eine Erwägung (#e-2-4 aus «Fundstelle kopieren»): der Entscheid
+  // lädt on-demand (fetch), das Ziel-Element existiert beim Routen-Hash-Sprung
+  // (App.tsx:ScrollZuHash, 30 Frames) oft noch nicht. Nach dem Snapshot-Render
+  // hier erneut versuchen — §15-konform (nur scrollIntoView nach Mount, kein
+  // CLS-Hack). Einmalig pro geladenem Entscheid (ref-Wächter), damit späteres
+  // manuelles Scrollen nicht überschrieben wird.
+  const hashGesprungen = useRef<string | null>(null);
+  useEffect(() => {
+    if (zustand !== 'da' || typeof window === 'undefined') return;
+    const roh = window.location.hash.slice(1);
+    if (!roh) return;
+    const id = decodeURIComponent(roh);
+    if (hashGesprungen.current === `${schluessel}#${id}`) return;
+    let frames = 0;
+    let raf = requestAnimationFrame(function versuche() {
+      if (springeZuAnker(id)) { hashGesprungen.current = `${schluessel}#${id}`; return; }
+      if (frames++ < 60) raf = requestAnimationFrame(versuche);
+    });
+    return () => cancelAnimationFrame(raf);
+  }, [zustand, schluessel]);
 
   if (zustand === 'fehlt') {
     return (
@@ -354,6 +445,14 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam }: { schluessel: string
           <SprungNavigation ziele={navZiele} />
         </div>
       )}
+
+      {/* Zitierte-Normen-Chips → Sprung zur Fundstelle (Verweis-Präzision Teil 2).
+          Über der aktiven Fassung, damit die Fundstellen zur sichtbaren Ansicht passen. */}
+      <ZitierteNormenChips
+        abschnitte={aktiveAbschnitte}
+        zitierteNormen={snap.zitierteNormen}
+        regesteAnker={zeigeRegeste ? 'abschnitt-regeste' : null}
+      />
 
       {/* Einordnung der gewählten Fassung (nicht sticky), gekoppelt an die Ansicht. */}
       {switcherSichtbar && (

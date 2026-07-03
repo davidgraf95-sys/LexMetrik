@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { renderToString } from 'react-dom/server';
-import { NORM_IM_TEXT } from '../lib/fedlex';
+import { NORM_IM_TEXT, FEDLEX } from '../lib/fedlex';
 import { NormText, type InternRefs } from '../components/NormText';
 import { LocaleProvider } from '../components/locale';
 
@@ -83,6 +83,42 @@ describe('NormText — Inline-Render (SSR/Prerender)', () => {
     expect(out).toMatch(/#art_19/);
     expect(out).toMatch(/#art_131/);
     expect(out).toContain('nicht § 3, aber ');
+  });
+});
+
+// i.V.m.-Ketten-Verlinkung (Bug David 3.7.2026, Referenz BGE 151 III 377): das
+// Kürzel am Ketten-Ende wird auf vorangehende bare Glieder propagiert; jedes
+// Glied wird EINZELN verlinkt, die Anzeige bleibt zeichenidentisch.
+describe('NormText — i.V.m.-Ketten (Verweis-Präzision)', () => {
+  it('«Art. 684 i.V.m. Art. 679 ZGB»: BEIDE Glieder verlinkt (684 → #art_684, 679 → #art_679)', () => {
+    const out = ssr(<NormText text="klagen (Art. 684 i.V.m. Art. 679 ZGB)." />);
+    expect(out).toMatch(/href="[^"]*#art_684"/);   // vorher unverlinkt (Bug)
+    expect(out).toMatch(/href="[^"]*#art_679"/);
+    // Anzeige zeichenidentisch: das bare Glied zeigt genau «Art. 684» (kein «ZGB» dazu).
+    expect(out).toContain('>Art. 684<');
+    expect(out).toContain('i.V.m. ');
+  });
+
+  it('umgekehrte Richtung «Art. 679 i.V.m. Art. 684 ZGB»: 679 (bare) wird verlinkt', () => {
+    const out = ssr(<NormText text="nach Art. 679 i.V.m. Art. 684 ZGB vorzugehen." />);
+    expect(out).toMatch(/href="[^"]*#art_679"/);
+    expect(out).toMatch(/href="[^"]*#art_684"/);
+    expect(out).toContain('>Art. 679<');
+  });
+
+  it('fremdes Kürzel dazwischen wird NICHT umgehängt (§1): «Art. 5 OR und Art. 6 ZGB»', () => {
+    const out = ssr(<NormText text="Art. 5 OR und Art. 6 ZGB gelten." />);
+    // Art. 5 bleibt OR (die OR-eli-Basis vor #art_5), Art. 6 bleibt ZGB — nie ZGB auf Art. 5.
+    const orId = FEDLEX.OR.match(/eli\/cc\/([^/]+)/)![1];
+    const zgbId = FEDLEX.ZGB.match(/eli\/cc\/([^/]+)/)![1];
+    expect(out).toMatch(new RegExp(`href="[^"]*${orId}[^"]*#art_5"`));
+    expect(out).toMatch(new RegExp(`href="[^"]*${zgbId}[^"]*#art_6"`));
+  });
+
+  it('Negativfall bleibt Text: «Art. 5 der Verordnung» erzeugt keinen Link', () => {
+    const out = ssr(<NormText text="Art. 5 der Verordnung gilt hier." />);
+    expect(out).not.toContain('<a');
+    expect(out).toContain('Art. 5 der Verordnung');
   });
 });
 

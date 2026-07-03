@@ -452,3 +452,105 @@ export function fremdgesetzNachArtikel(restNachArtikel: string): FedlexGesetz | 
   const m = FREMDGESETZ_NACH_ARTIKEL.exec(restNachArtikel);
   return m ? erkenneFedlexGesetz(m[1]) : null;
 }
+
+// ─── Ketten-Verweise: «Art. A i.V.m. Art. B GESETZ» ──────────────────────────
+//
+// PROBLEM (Referenz BGE 151 III 377, Auftrag David 3.7.2026): In einer
+// Verweis-Kette trägt nur das LETZTE Glied das Gesetzeskürzel («Art. 684 i.V.m.
+// Art. 679 ZGB»). NORM_IM_TEXT findet nur dieses letzte, voll zitierte Glied;
+// die vorangehenden bare «Art. N» blieben unverlinkt, obwohl sie DASSELBE
+// Gesetz meinen (juristische Drafting-Konvention: das Kürzel am Ketten-Ende gilt
+// für alle Glieder).
+//
+// FIX: Das Kürzel des Ketten-Endes wird auf die vorangehenden bare Glieder
+// PROPAGIERT und jedes Glied einzeln verlinkt. §1-Vorsicht (lieber ein Glied
+// unverlinkt als falsch verlinkt):
+//   · Propagiert wird NUR über echte Ketten-Konnektoren (i.V.m. / in Verbindung
+//     mit / und / sowie / Komma) und nur auf BARE «Art. N»-Glieder OHNE eigenes
+//     Kürzel. Trägt ein Glied ein EIGENES Kürzel («Art. 5 OR und Art. 6 ZGB»),
+//     ist es ein separates Zitat und wird NICHT umgehängt.
+//   · Die Kette bricht an allem, was kein Konnektor+Glied ist: Semikolon,
+//     BGE-/Urteil-Zitate, Satzgrenzen, Präpositionen («der Verordnung»),
+//     fremdes Kürzel dazwischen.
+//   · «f./ff.» und Abs./lit./Ziff.-Zusätze brechen die Kette NICHT (Teil des
+//     Glieds).
+// Die Anzeige bleibt zeichenidentisch (§1): das Glied zeigt genau seinen
+// Quelltext, nur das AUFLÖSUNGS-Ziel erhält das propagierte Kürzel.
+
+/** Ein aufgelöster Norm-Verweis im Fliesstext (Anker ODER propagiertes Ketten-Glied). */
+export interface NormVerweisSpan {
+  /** Start-Offset im Quelltext. */
+  start: number;
+  /** End-Offset im Quelltext (exklusiv). */
+  end: number;
+  /** Anzeigetext = exakter Quelltext-Ausschnitt (zeichenidentisch, §1). */
+  anzeige: string;
+  /** Auflösbarer Verweis-Text (mit Kürzel), z. B. 'Art. 684 ZGB' — Ziel der Auflösung. */
+  artikel: string;
+  /** true = Kürzel aus dem Ketten-Ende propagiert (nicht im Quelltext des Glieds). */
+  propagiert: boolean;
+}
+
+// Ketten-Glied (bare «Art. N [Abs./lit./Ziff./Satz …] [f./ff.]») OHNE Kürzel.
+const KETTE_ART = 'Art\\.\\s*\\d+[a-z]?(?:bis|ter|quater|quinquies|sexies)?';
+const KETTE_PASSUS =
+  '(?:\\s+(?:Abs\\.|lit\\.|Bst\\.|Ziff\\.|Ziffer|Satz)\\s*(?:\\d+[a-z]?(?:bis|ter|quater|quinquies|sexies)?|[a-z]))*';
+const KETTE_FOLGE = '(?:\\s+ff?\\.)?';
+const KETTE_GLIED = `${KETTE_ART}${KETTE_PASSUS}${KETTE_FOLGE}`;
+// Ketten-Konnektoren (NICHT Semikolon — der bricht die Kette bewusst).
+const KETTE_KONNEKTOR = '(?:i\\.\\s?V\\.\\s?m\\.|in Verbindung mit|und|sowie|,)';
+// Ein bare Glied UNMITTELBAR vor dem Anker: «GLIED <KONNEKTOR>» am Text-Ende.
+const GLIED_VOR_KONNEKTOR = new RegExp(`(${KETTE_GLIED})\\s*(?:${KETTE_KONNEKTOR})\\s*$`);
+
+/**
+ * Alle auflösbaren Bund-Norm-Verweise eines Fliesstexts — die von NORM_IM_TEXT
+ * gefundenen voll zitierten Anker PLUS die per Ketten-Regel propagierten bare
+ * Glieder. Reine, deterministische Funktion (§2): EINE Wahrheit der Ketten-Regel
+ * für Renderer (NormText) und Fundstellen-Suche (Rechtsprechung).
+ *
+ * Die zurückgegebenen Spans sind nach `start` sortiert und überschneidungsfrei.
+ * Für Nicht-Ketten-Text ist die Anker-Menge identisch zu `matchAll(NORM_IM_TEXT)`
+ * (gleicher Filter `fedlexLinkFuerArtikel != null`) — additiv, kein Verhalt-Bruch.
+ */
+export function normVerweiseImText(text: string): NormVerweisSpan[] {
+  const spans: NormVerweisSpan[] = [];
+  for (const m of text.matchAll(NORM_IM_TEXT)) {
+    const roh = m[0];
+    // Nur verlinken, was der eine Resolver wirklich auflöst (kein toter Link, §8).
+    if (fedlexLinkFuerArtikel(roh) == null) continue;
+    const start = m.index;
+    spans.push({ start, end: start + roh.length, anzeige: roh, artikel: roh, propagiert: false });
+    // Kürzel des Anker-Endes → auf vorangehende bare Glieder propagieren.
+    const kuerzel = erkenneFedlexGesetz(roh);
+    if (!kuerzel) continue;
+    let grenze = start;
+    for (;;) {
+      const mm = GLIED_VOR_KONNEKTOR.exec(text.slice(0, grenze));
+      if (!mm) break;
+      const gliedStart = mm.index;
+      const gliedText = mm[1];
+      // Synthese: Glied-Text + propagiertes Kürzel = auflösbarer Verweis. Die
+      // Anzeige bleibt der reine Glied-Text (zeichenidentisch, §1).
+      spans.push({
+        start: gliedStart,
+        end: gliedStart + gliedText.length,
+        anzeige: gliedText,
+        artikel: `${gliedText} ${kuerzel}`,
+        propagiert: true,
+      });
+      grenze = gliedStart;
+    }
+  }
+  // Sortieren + defensiv überschneidungsfrei halten (Anker/Glieder aus mehreren
+  // matchAll-Runden). Bei einer (theoretischen) Überschneidung gewinnt der frühere
+  // Span; überlappende werden verworfen — nie doppelt oder verschachtelt verlinken.
+  spans.sort((a, b) => a.start - b.start || b.end - a.end);
+  const rein: NormVerweisSpan[] = [];
+  let letztesEnde = -1;
+  for (const s of spans) {
+    if (s.start < letztesEnde) continue;
+    rein.push(s);
+    letztesEnde = s.end;
+  }
+  return rein;
+}
