@@ -8,6 +8,10 @@ import { ladeLeitfallShard, artikelProEntscheid } from '../../lib/rechtsprechung
 import { usePaneSteuerung } from '../layout/usePaneLayout';
 import { KantenChip } from '../verzahnung/KantenChip';
 import { StatusBadge } from '../verzahnung/StatusBadge';
+import {
+  ladeRevisionShard, revisionFuerToken, klassifiziereFassungsBezug, entscheidDatum,
+  revisionDetailText, type RevisionShard,
+} from '../../lib/verzahnung/artikel-revisionen';
 
 // ─── Einheitliches «Kontext»-Panel (B3) ─────────────────────────────────────
 //
@@ -115,6 +119,19 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false 
   }, [einzelErlass, normKeysKey]);
   const viaArtikel: Map<string, string> | null =
     einzelErlass && artikelMap?.key === normKeysKey ? artikelMap.map : null;
+  // §V1c: Revisions-Shard des EINEN Erlasses (Normrevisions-Ehrlichkeit) — lazy,
+  // derselbe idle-Slot wie der Leitfall-Shard. Klassifiziert je Entscheid-Chip über
+  // das «via Art. N»-Sublabel + das Entscheiddatum, ob die Norm SEIT dem Entscheid
+  // revidiert wurde. Kein Sublabel = keine Klassifikation (still).
+  const [revShard, setRevShard] = useState<{ key: string; shard: RevisionShard | null } | null>(null);
+  useEffect(() => {
+    if (!einzelErlass) return;
+    let lebt = true;
+    ladeRevisionShard(normKeysKey).then((shard) => { if (lebt) setRevShard({ key: normKeysKey, shard }); });
+    return () => { lebt = false; };
+  }, [einzelErlass, normKeysKey]);
+  const revShardAktuell: RevisionShard | null =
+    einzelErlass && revShard?.key === normKeysKey ? revShard.shard : null;
   // Kürzel des EINEN Erlasses — für den ?norm=-Fundstellen-Sprung im Ziel-Entscheid
   // (Auftrag David 3.7.2026: eingehende Entscheid-Links landen an der Erwägung).
   const eigenKuerzel = einzelErlass ? normenFuer(normKeys)[0]?.kuerzel ?? null : null;
@@ -187,12 +204,22 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false 
                       const artikel = viaArtikel?.get(r.key) ?? null;
                       const normZitat = artikel && eigenKuerzel ? `Art. ${artikel} ${eigenKuerzel}` : null;
                       const ziel = `/rechtsprechung/${encodeURIComponent(r.key)}${normZitat ? `?norm=${encodeURIComponent(normZitat)}` : ''}`;
+                      // §V1c: revidiert nur, wenn ein «via Art. N» vorliegt (sonst
+                      // kein Artikelbezug zum Klassifizieren) und der Entscheid VOR
+                      // der letzten Textänderung dieses Artikels liegt.
+                      const rev = artikel ? revisionFuerToken(revShardAktuell, artikel) : undefined;
+                      const revidiert = artikel
+                        && klassifiziereFassungsBezug(entscheidDatum(r.datum, r.gericht), rev) === 'revidiert'
+                        ? (rev ?? null) : null;
                       return (
                         <li key={r.key} className="text-body-s">
                           <Link to={ziel} className="no-underline hover:text-brass-700">
                             <span className="font-medium">{r.zitierung}</span>
                             {r.leitcharakter === 'leitentscheid' && (
                               <StatusBadge praedikat="leitentscheid" variant="glyph" className="ml-1.5" />
+                            )}
+                            {revidiert && (
+                              <StatusBadge praedikat="revidiert" variant="glyph" detail={revisionDetailText(revidiert)} className="ml-1.5" />
                             )}
                             {artikel && (
                               <span className="num text-micro text-ink-500"> · via Art. {artikel}</span>

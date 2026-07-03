@@ -1,6 +1,7 @@
 import { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { StatusBadge } from './StatusBadge';
+import { revisionDetailText, type ArtikelRevision } from '../../lib/verzahnung/artikel-revisionen';
 
 // ─── KantenChip — der EINE Chip für Dokument-Referenzen (§1.2) ───────────────
 //
@@ -17,13 +18,18 @@ import { StatusBadge } from './StatusBadge';
 // Erweiterungspunkt V2: `konfidenz`-Marker (dezenter Punkt `text-warn-700` bei
 // 'niedrig', Text-Tooltip, Farbe nie allein tragend). NICHT bauen.
 
-export const KantenChip = memo(function KantenChip({ to, label, sublabel, leitentscheid = false, titel }: {
+export const KantenChip = memo(function KantenChip({ to, label, sublabel, leitentscheid = false, revidiert, titel }: {
   to: string;
   /** Doktyp-Kürzel oder Zitierung, z. B. «OR» oder «BGE 147 III 209». */
   label: string;
   /** Fundstellen-Sublabel, z. B. «via Art. 257d» — schliesst den ★-Suffix aus. */
   sublabel?: string;
   leitentscheid?: boolean;
+  /** V1c: die zitierte Norm wurde seit dem Entscheid revidiert → ↻-Glyph mit
+   *  Revisionsdatum + AS-Fundstelle (aria-label/Tooltip). null/undefined = kein
+   *  Zusatz (Dichte-Regel: der ↻ ist ein blosser 1-Zeichen-Suffix-Glyph wie der
+   *  ★, kein Volltext-Badge — er verdrängt weder Sublabel noch ★). */
+  revidiert?: ArtikelRevision | null;
   /** Hover-/Screenreader-Titel des Chips (Default: `label`). */
   titel?: string;
 }) {
@@ -37,6 +43,7 @@ export const KantenChip = memo(function KantenChip({ to, label, sublabel, leiten
       {label}
       {sublabel && <span className="ml-1 text-micro font-normal normal-case text-ink-500">{sublabel}</span>}
       {sternSuffix && <StatusBadge praedikat="leitentscheid" variant="glyph" className="ml-1" />}
+      {revidiert && <StatusBadge praedikat="revidiert" variant="glyph" detail={revisionDetailText(revidiert)} className="ml-1" />}
     </Link>
   );
 });

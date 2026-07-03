@@ -1,9 +1,15 @@
 import { useEffect, useMemo, useState } from 'react';
 import { KontextGruppe } from '../kontext/KontextPanel';
 import { KantenChip } from '../verzahnung/KantenChip';
+import { StatusBadge } from '../verzahnung/StatusBadge';
 import { usePaneSteuerung } from '../layout/usePaneLayout';
 import { fundstellenFuerNormen } from '../../lib/rechtsprechung/abschnitte';
 import { aufloeseZitierteEntscheide } from '../../lib/verzahnung/entscheid-kanten';
+import {
+  klassifiziereFassungsBezug, revisionFuerToken, revisionDetailText, ladeRevisionShards,
+  type RevisionShard, type ArtikelRevision,
+} from '../../lib/verzahnung/artikel-revisionen';
+import type { Datumspraezision } from '../../lib/verzahnung/typen';
 import { ladeEntscheidManifest } from '../../lib/rechtsprechung/browse';
 import { bundSnapshotRef } from '../../lib/normtext/bundRef';
 import type { BrowseEntscheid } from '../../lib/rechtsprechung/register';
@@ -46,11 +52,14 @@ function springeZuAnker(id: string): boolean {
 // Ketten-/Normalisierungs-Logik wie die Inline-Verlinkung, `ersteFundstelle`);
 // ohne Text-Fundstelle zur Regeste. ⧉ öffnet den Erlass am zitierten Artikel im
 // Split-View-Pane (nur wo ein Bund-Snapshot auflösbar ist; Pane-Gating).
-export function ZitierteNormenGruppe({ abschnitte, zitierteNormen, regesteAnker }: {
+export function ZitierteNormenGruppe({ abschnitte, zitierteNormen, regesteAnker, entscheidDatum }: {
   abschnitte: EntscheidSnapshot['abschnitte'];
   zitierteNormen: string[];
   /** Anker der Regeste-Box, falls sichtbar — sonst null (kein Fallback-Ziel). */
   regesteAnker: string | null;
+  /** Datum + Präzision DIESES Entscheids (§V1c): hat sich eine zitierte Norm SEIT
+   *  dem Entscheid revidiert? Q1-sicher (Bandjahr-Platzhalter ⇒ strikter Jahresvergleich). */
+  entscheidDatum: { iso: string; praezision: Datumspraezision };
 }) {
   const fundstellen = useMemo(
     () => fundstellenFuerNormen(abschnitte, zitierteNormen),
@@ -58,6 +67,39 @@ export function ZitierteNormenGruppe({ abschnitte, zitierteNormen, regesteAnker 
   );
   const { oeffneDaneben, kannOeffnen, istOffen } = usePaneSteuerung();
   const [ziel, setZiel] = useState('');
+
+  // §V1c: Revisions-Shards der zitierten Erlasse lazy laden (Muster wie ZitiertGruppe:
+  // still einwachsend am Dokumentfuss, kein reservierter Leerraum §15.2). Die
+  // zitierten Normen streuen über mehrere Erlasse (bundSnapshotRef → quelle/token).
+  const erlassKeys = useMemo(() => {
+    const s = new Set<string>();
+    for (const norm of zitierteNormen) {
+      const ref = bundSnapshotRef(norm);
+      if (ref) s.add(ref.quelle);
+    }
+    return [...s];
+  }, [zitierteNormen]);
+  const erlassSignatur = erlassKeys.join(',');
+  const [revShards, setRevShards] = useState<Map<string, RevisionShard | null>>(new Map());
+  useEffect(() => {
+    if (erlassKeys.length === 0) return;
+    let lebt = true;
+    void ladeRevisionShards(erlassKeys).then((m) => { if (lebt) setRevShards(m); });
+    return () => { lebt = false; };
+    // erlassSignatur ist der stabile Schlüssel über die Erlass-Menge (Array-Identität
+    // wechselt sonst je Render); erlassKeys wird daraus abgeleitet.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [erlassSignatur]);
+
+  // Revision r(a) einer zitierten Norm (undefined = Erlass nicht abgedeckt/lädt ⇒
+  // 'unbekannt'; null = Urfassung ⇒ 'gleich'; Objekt = letzte Textänderung).
+  const revidiertFuer = (norm: string): ArtikelRevision | null => {
+    const ref = bundSnapshotRef(norm);
+    if (!ref) return null;
+    const rev = revisionFuerToken(revShards.get(ref.quelle), ref.token);
+    return klassifiziereFassungsBezug(entscheidDatum, rev) === 'revidiert' ? (rev ?? null) : null;
+  };
+
   if (zitierteNormen.length === 0) return null;
 
   const springe = (norm: string) => {
@@ -78,6 +120,7 @@ export function ZitierteNormenGruppe({ abschnitte, zitierteNormen, regesteAnker 
           // Link, §8) — öffnet den Artikel im Pane, der Entscheid bleibt offen.
           const ref = bundSnapshotRef(norm);
           const readerLink = ref ? `/gesetze/bund/${encodeURIComponent(ref.quelle)}#art-${ref.token}` : null;
+          const revidiert = revidiertFuer(norm);
           return (
             <span key={norm} className="inline-flex items-center">
               <button type="button" onClick={() => springe(norm)}
@@ -87,6 +130,7 @@ export function ZitierteNormenGruppe({ abschnitte, zitierteNormen, regesteAnker 
                   : `${norm} — keine Textstelle in den Erwägungen; springt zur Regeste`}>
                 {norm}
                 {!hatFundstelle && <span aria-hidden className="ml-1 text-ink-400">·</span>}
+                {revidiert && <StatusBadge praedikat="revidiert" variant="glyph" detail={revisionDetailText(revidiert)} className="ml-1" />}
               </button>
               {readerLink && kannOeffnen && !istOffen(readerLink) && (
                 <button type="button" onClick={() => oeffneDaneben(readerLink)}

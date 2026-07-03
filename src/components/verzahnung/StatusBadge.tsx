@@ -40,28 +40,44 @@ const REZEPT: Partial<Record<StatusPraedikat, Rezept>> = {
     erklaerung: 'Automatisch aus dem Text zugeordnet — keine redaktionell erfasste Angabe.',
     ton: 'lc-badge-soft',
   },
+  // V1c (Normrevisions-Ehrlichkeit, §V1c): die zitierte Norm wurde SEIT dem
+  // Entscheid revidiert — beweisbar aus den amtlichen Revisions-Fussnoten. Das
+  // konkrete Revisionsdatum + die AS-Fundstelle liefert die `detail`-Prop je
+  // Vorkommen (dynamisch, quell-belegt §7). KEINE Ampelfarbe (R16): `lc-badge-soft`.
+  revidiert: {
+    glyph: '↻',
+    label: 'Norm revidiert seit Entscheid',
+    ariaLabel: 'Norm seit dem Entscheid revidiert',
+    erklaerung: 'Die zitierte Bestimmung wurde nach diesem Entscheid geändert — der Entscheid legt die damals geltende Fassung aus.',
+    ton: 'lc-badge-soft',
+  },
   // Erweiterungspunkt V2: 'masse' → Masse-Kennzeichnung aus den automatisch
   //   erfassten 195'000 Urteilen (lc-badge-soft, gestrichelt).
   // Erweiterungspunkt V3: 'nur-verweis' → «nur PDF-Verweis» (lc-badge-soft).
 };
 
-export function StatusBadge({ praedikat, variant = 'voll', interaktiv = false, className = '' }: {
+export function StatusBadge({ praedikat, variant = 'voll', interaktiv = false, detail, className = '' }: {
   praedikat: StatusPraedikat;
   /** 'voll' = ausgeschriebenes Badge (Reader-Kopf/Suche); 'glyph' = blanker ★ mit aria-label (Chip-Reihen). */
   variant?: 'voll' | 'glyph';
   /** Nur 'voll': Label als touch-/tastaturtauglicher Begriff-Tooltip (Reader-Kopf). */
   interaktiv?: boolean;
+  /** Instanz-spezifischer Zusatz (V1c: Revisionsdatum + AS-Fundstelle) — fliesst
+   *  quell-belegt (§7) in aria-label UND Tooltip, ohne das feste Vokabular zu ändern. */
+  detail?: string;
   className?: string;
 }) {
   const r = REZEPT[praedikat];
   if (!r) return null;                       // V2/V3-Slot ohne Darstellung
+  const ariaLabel = detail ? `${r.ariaLabel} — ${detail}` : r.ariaLabel;
+  const titel = detail ? `${r.erklaerung} (${detail})` : r.erklaerung;
 
   // Glyph-Variante: blanker ★ (nur wo einer definiert ist), Text trägt das
   // aria-label (role=img → Screenreader liest das Label, nicht die Rohglyphe).
   if (variant === 'glyph') {
     if (!r.glyph) return null;
     return (
-      <span role="img" aria-label={r.ariaLabel} title={r.erklaerung}
+      <span role="img" aria-label={ariaLabel} title={titel}
         className={`text-brass-700 ${className}`}>
         {r.glyph}
       </span>
@@ -83,8 +99,8 @@ export function StatusBadge({ praedikat, variant = 'voll', interaktiv = false, c
     );
   }
   return (
-    <span role="img" className={`lc-badge ${r.ton} ${className}`} aria-label={r.ariaLabel}
-      title={r.erklaerung}>
+    <span role="img" className={`lc-badge ${r.ton} ${className}`} aria-label={ariaLabel}
+      title={titel}>
       {r.glyph && <span aria-hidden className="mr-1">{r.glyph}</span>}
       {r.label}
     </span>

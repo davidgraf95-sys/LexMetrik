@@ -41,7 +41,11 @@ export type VerzahnungsKante = {
 // Der Normalfall (kuratiert erfasst) trägt KEIN Prädikat (§1.3/§0-1a). `masse`
 // und `nur-verweis` sind Enum-Slots für V2/V3 — die Rendering-Schicht bespielt
 // heute nur `leitentscheid` und `maschinell` (StatusBadge.tsx).
-export type StatusPraedikat = 'leitentscheid' | 'maschinell' | 'masse' | 'nur-verweis';
+// `revidiert` ist die V1c-Abweichung (Normrevisions-Ehrlichkeit): die zitierte
+// Norm hat sich SEIT dem Entscheid revidiert — der alte Entscheid legt eine andere
+// Fassung aus (§1/§8). Der Gegenpol `gleich` trägt bewusst KEIN Badge (kein
+// positives «noch aktuell»-Siegel, R16/Scheinautorität).
+export type StatusPraedikat = 'leitentscheid' | 'maschinell' | 'masse' | 'nur-verweis' | 'revidiert';
 
 /**
  * Q1-sichere Datums-Anzeige (§1.0): ein `praezision:'bandjahr'`-Datum ergibt NIE

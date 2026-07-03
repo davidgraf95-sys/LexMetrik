@@ -5,6 +5,7 @@ import { EntscheidBody } from '../components/rechtsprechung/EntscheidBody';
 import { Tabs } from '../components/ui/Tabs';
 import { ABSCHNITT_TITEL, abschnittAnker, ersteFundstelle } from '../lib/rechtsprechung/abschnitte';
 import { StatusBadge } from '../components/verzahnung/StatusBadge';
+import { entscheidDatum } from '../lib/verzahnung/artikel-revisionen';
 import { ZitierteNormenGruppe, ZitiertGruppe } from '../components/rechtsprechung/EntscheidVerzahnung';
 import { NormText } from '../components/NormText';
 import { KontextPanel } from '../components/kontext/KontextPanel';
@@ -503,6 +504,7 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam }: { schlues
               abschnitte={aktiveAbschnitte}
               zitierteNormen={snap.zitierteNormen}
               regesteAnker={zeigeRegeste ? 'abschnitt-regeste' : null}
+              entscheidDatum={entscheidDatum(snap.datum, snap.gericht)}
             />
             <ZitiertGruppe
               zitierteEntscheide={snap.zitierteEntscheide}
