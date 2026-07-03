@@ -1061,8 +1061,9 @@ async function main(): Promise<void> {
 
   // ── E1-Flip (QS-DATA, FAHRPLAN-DATENHALTUNG §5): public/*.json entsteht ab hier
   // aus der DB-PROJEKTION (Spalten-Weg: Zeilen in erlasse/erlass_fassungen/artikel →
-  // byte-gleiche Projektion), nicht mehr direkt aus dem Blob. Der alte Direktpfad
-  // (stabelesJson) bleibt als Doppellauf-Referenz stehen (Entfernen = eigener §6-Schritt).
+  // byte-gleiche Projektion), nicht mehr direkt aus dem Blob. Der alte stabelesJson-
+  // Direktpfad für die Bund-Dateien ist ENTFERNT (E1-Rest, eigener §6-Schritt 3.7.2026);
+  // der stehende Byte-Beweis läuft über `npm run datenhaltung:doppellauf`.
   // Dynamischer Import, damit der vitest-Import dieser Datei nie node:sqlite lädt.
   const { erstelleFlipDb, flipBundErlass } = await import('./datenhaltung/generator-flip.ts');
   const flipDb = erstelleFlipDb();
@@ -1199,14 +1200,14 @@ async function main(): Promise<void> {
       goldenIndex[id] = snapshot.sha;
     }
 
-    // JSON schreiben — E1-Flip: über die DB-Projektion (Spalten-Weg), mit dem
-    // alten Direktpfad als Doppellauf-Wächter (weicht die Projektion ab, wird hart
-    // abgebrochen; nie falsche Bytes nach public schreiben).
-    const datei: NormSnapshotDatei = {
-      erzeugt: abgerufen,
-      eintraege: snapshotListe,
-    };
-    const direktJson = stabelesJson(datei);
+    // JSON schreiben — E1-Rest (§6-Schritt, FAHRPLAN-DATENHALTUNG §5): die
+    // Bund-Dateien public/normtext/bund/*.json entstehen AUSSCHLIESSLICH aus der
+    // DB-Projektion (Spalten-Weg: Zeilen in erlasse/erlass_fassungen/artikel →
+    // byte-gleiche Projektion). Der frühere stabelesJson-Direktschreibweg für diese
+    // Dateien ist ENTFERNT — die DB ist die EINE Wahrheit (§5, §7 Build-Regel 6);
+    // ≥3 grüne Doppelläufe haben die Byte-Gleichheit vorher belegt. Der stehende
+    // Byte-Beweis (Projektion == committet) läuft ohne public-Diff über
+    // `npm run datenhaltung:doppellauf`.
     const ausgabePfad = `${ausgangsDir}/${gesetzKey}.json`;
     if (snapshotListe.length > 0) {
       const projJson = flipBundErlass(
@@ -1214,14 +1215,16 @@ async function main(): Promise<void> {
         { key: gesetzKey, sr: null, titel: erlass, rechtsgebiet: '', status: 'snapshot' },
         snapshotListe,
       );
-      if (projJson !== direktJson) {
-        throw new Error(
-          `E1-Flip-Doppellauf-Bruch (alt≠neu) für ${gesetzKey}: die DB-Projektion weicht vom Direktpfad ab.`,
-        );
-      }
       writeFileSync(ausgabePfad, projJson, 'utf8');
     } else {
-      writeFileSync(ausgabePfad, direktJson, 'utf8');
+      // Degenerierter Fall: Erlass ohne einen einzigen extrahierbaren Artikel →
+      // keine DB-Zeilen, also nicht projizierbar. Dann eine leere
+      // {erzeugt, eintraege:[]}-Datei direkt serialisieren. Kommt im gepinnten
+      // Bund-Korpus nicht vor (alle 218 Dateien tragen Einträge; ein leeres Bund-
+      // File risse ohnehin den Doppellauf); der Zweig ist reiner §8-Schutz gegen
+      // ein stilles Loch, kein konkurrierender Schreibweg zur Projektion.
+      const datei: NormSnapshotDatei = { erzeugt: abgerufen, eintraege: snapshotListe };
+      writeFileSync(ausgabePfad, stabelesJson(datei), 'utf8');
     }
 
     totalSnapshots += snapshotListe.length;
