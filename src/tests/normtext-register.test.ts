@@ -2,7 +2,8 @@ import { describe, it, expect } from 'vitest';
 import { readdirSync, readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { FEDLEX } from '../lib/fedlex';
-import { ERLASS_REGISTER, GEBIETE, type Rechtsgebiet } from '../lib/normtext/register';
+import { ERLASS_REGISTER, GEBIETE, type Grundart, type Rechtsgebiet } from '../lib/normtext/register';
+import { GRUNDART_SEED } from '../lib/normtext/grundart.generated';
 import {
   baueBrowseManifest, identitaetAusErlass, istKuerzelFragment, spracheAusStamm,
 } from '../../scripts/normtext/browse-manifest';
@@ -129,6 +130,101 @@ describe('Tor 7 — committetes register.json ist aktuell (kein stiller Drift)',
     const committed = JSON.parse(readFileSync(join(NORMTEXT, 'register.json'), 'utf8')) as BrowseManifest;
     const frisch = baueBrowseManifest(committed.erzeugt);
     expect(JSON.stringify(committed.erlasse)).toBe(JSON.stringify(frisch.erlasse));
+  });
+});
+
+// ── Tor 8 — check:grundart (W2·5d/G0): Präsenz + Konsistenz der Grundart-
+//    Klassifikation im Register. Prüft NICHT die inhaltliche Richtigkeit des
+//    kantonalen bestimmungsEtiketts (K6/§8) — das bleibt entwurf bis Kanton-
+//    Verifikation. Reine Prüflogik (§5.2), golden byte-gleich. ────────────────
+describe('Tor 8 — Grundart (check:grundart): Präsenz + Konsistenz', () => {
+  const GRUNDARTEN = new Set<Grundart>([
+    'KODIFIKATION', 'STANDARD_ERLASS', 'ERLASS_MIT_ANHANG', 'FLACHER_KURZERLASS',
+    'STAATSVERTRAG', 'KANTON', 'PDF_EMBED', 'LIVE_VERWEIS',
+  ]);
+  // status → grundart-Werte, die dieser Status AUSSCHLIESST (Konsistenz-Arbiter).
+  const AUSGESCHLOSSEN: Record<string, ReadonlySet<Grundart>> = {
+    'snapshot': new Set(['LIVE_VERWEIS', 'PDF_EMBED']),
+    'pdf-embed': new Set(['KODIFIKATION', 'STANDARD_ERLASS', 'ERLASS_MIT_ANHANG',
+      'FLACHER_KURZERLASS', 'STAATSVERTRAG', 'KANTON', 'LIVE_VERWEIS']),
+    'nur-live-link': new Set(['KODIFIKATION', 'STANDARD_ERLASS', 'ERLASS_MIT_ANHANG',
+      'FLACHER_KURZERLASS', 'STAATSVERTRAG', 'KANTON', 'PDF_EMBED']),
+  };
+
+  it('Präsenz: jeder Register-Eintrag trägt eine grundart', () => {
+    const ohne = ERLASS_REGISTER.filter((r) => !r.grundart);
+    expect(ohne.map((r) => `${r.key} (${r.status})`)).toEqual([]);
+  });
+
+  it('Präsenz: jeder snapshot/pdf-embed-Eintrag ist im GRUNDART_SEED (Match per key)', () => {
+    const fehlend = ERLASS_REGISTER
+      .filter((r) => r.status === 'snapshot' || r.status === 'pdf-embed')
+      .filter((r) => !GRUNDART_SEED[r.key]);
+    expect(fehlend.map((r) => r.key)).toEqual([]);
+  });
+
+  it('grundart ist ein gültiger Wert', () => {
+    const ungueltig = ERLASS_REGISTER.filter((r) => r.grundart && !GRUNDARTEN.has(r.grundart));
+    expect(ungueltig.map((r) => `${r.key}: ${r.grundart}`)).toEqual([]);
+  });
+
+  it('Konsistenz: grundart passt zum status (kein LIVE_VERWEIS mit Snapshot etc.)', () => {
+    const inkonsistent = ERLASS_REGISTER.filter(
+      (r) => r.grundart && AUSGESCHLOSSEN[r.status]?.has(r.grundart),
+    );
+    expect(inkonsistent.map((r) => `${r.key}: ${r.status} ↔ ${r.grundart}`)).toEqual([]);
+  });
+
+  it('erlassTyp konsistent: STAATSVERTRAG-Grundart trägt keinen Gesetz/Verordnung-Typ', () => {
+    const bad = ERLASS_REGISTER.filter(
+      (r) => r.grundart === 'STAATSVERTRAG' && r.erlassTyp && r.erlassTyp !== 'staatsvertrag',
+    );
+    expect(bad.map((r) => `${r.key}: ${r.erlassTyp}`)).toEqual([]);
+  });
+
+  it('bestimmungsEtikett nur an KANTON, immer entwurf (K6/§8)', () => {
+    // Register führt keine Kanton-Einträge; das Etikett lebt im Seed für G3a. Wir
+    // prüfen die Seed-Konsistenz: bestimmungsEtikett ⇒ grundart KANTON + entwurf.
+    const seedBad = Object.entries(GRUNDART_SEED).filter(
+      ([, s]) => s.bestimmungsEtikett &&
+        (s.grundart !== 'KANTON' || s.bestimmungsEtikettStatus !== 'entwurf'),
+    );
+    expect(seedBad.map(([k, s]) => `${k}: ${s.grundart}/${s.bestimmungsEtikettStatus}`)).toEqual([]);
+    // …und jeder KANTON-Seed trägt ein Etikett (art|paragraf).
+    const kantonOhneEtikett = Object.entries(GRUNDART_SEED).filter(
+      ([, s]) => s.grundart === 'KANTON' &&
+        s.bestimmungsEtikett !== 'art' && s.bestimmungsEtikett !== 'paragraf',
+    );
+    expect(kantonOhneEtikett.map(([k]) => k)).toEqual([]);
+  });
+
+  // Gegenprüfungs-Befund 4.7.2026 (ZH-243): das Audit-Signal paragrafZaehlung
+  // verzählte sich an «Anhang Ziff.»-Einträgen. Arbiter ist die GESPEICHERTE
+  // amtliche Fassung: die Mehrheit der Dispositiv-artikelLabel («§ N» vs
+  // «Art. N») je Kanton-Snapshot muss zum Seed-Etikett passen. (Konsistenz
+  // gegen unsere Snapshots — die inhaltliche Kanton-Verifikation gegen die
+  // amtliche Quelle bleibt entwurf/K6 und ist NICHT Gegenstand dieses Tors.)
+  it('bestimmungsEtikett stimmt mit der Label-Mehrheit des Kanton-Snapshots überein', () => {
+    const falsch: string[] = [];
+    for (const stamm of kantonStems) {
+      const seed = GRUNDART_SEED[stamm];
+      if (!seed?.bestimmungsEtikett) continue;
+      const daten = JSON.parse(readFileSync(join(NORMTEXT, 'kanton', `${stamm}.json`), 'utf8')) as {
+        eintraege?: Array<{ artikelLabel?: string }>;
+      };
+      let par = 0; let art = 0;
+      for (const e of daten.eintraege ?? []) {
+        const label = typeof e.artikelLabel === 'string' ? e.artikelLabel : '';
+        if (/^§/.test(label)) par += 1;
+        else if (/^Art\.?\s/i.test(label) || /^Art\.?$/i.test(label)) art += 1;
+      }
+      if (par === 0 && art === 0) continue; // kein Dispositiv-Label → keine Aussage
+      const erwartet = par > art ? 'paragraf' : 'art';
+      if (seed.bestimmungsEtikett !== erwartet) {
+        falsch.push(`${stamm}: seed=${seed.bestimmungsEtikett}, Snapshot §${par}/Art.${art} → ${erwartet}`);
+      }
+    }
+    expect(falsch).toEqual([]);
   });
 });
 
