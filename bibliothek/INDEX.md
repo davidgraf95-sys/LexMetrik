@@ -20,6 +20,8 @@ maschinell durchgesetzt via `bash scripts/bibliothek-check.sh` (Teil des
 3. **Unsicherheiten bleiben sichtbar** (§8) — nie weggeglättet.
 4. **Datiertes datiert halten** → [Parameter-Verfallsregister](register/parameter-verfall.md).
 
+- [register/e6a-quell-inventar-2026-07-03.md](register/e6a-quell-inventar-2026-07-03.md) — E6a-Quell-Inventar Verwaltungsverordnungen (9 Behörden, Probe-Fetches, Ranking: ESTV-MWST-HTML > ESTV-KS-PDF > BSV; VPB tot, Fallen dokumentiert)
+
 ## Gliederung
 
 ```
