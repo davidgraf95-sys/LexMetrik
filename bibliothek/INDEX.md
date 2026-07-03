@@ -21,6 +21,7 @@ maschinell durchgesetzt via `bash scripts/bibliothek-check.sh` (Teil des
 4. **Datiertes datiert halten** → [Parameter-Verfallsregister](register/parameter-verfall.md).
 
 - [register/e6a-quell-inventar-2026-07-03.md](register/e6a-quell-inventar-2026-07-03.md) — E6a-Quell-Inventar Verwaltungsverordnungen (9 Behörden, Probe-Fetches, Ranking: ESTV-MWST-HTML > ESTV-KS-PDF > BSV; VPB tot, Fallen dokumentiert)
+- [register/e4-lokal-2026-07-03.md](register/e4-lokal-2026-07-03.md) — **QS-DATA E4-Lokal** (Zitat-Graph → `norm_rangliste` + Oracle-Tor): Q4-law-code-Kanonisierung (DE/FR/IT→erlasse.key, SR-belegt, Abdeckung 35,2 %→78,4 %) · materialisierte topische In-degree (1 387 680 Zeilen, max gewicht 12 413 = BGE 133 II 249 @ BGG/106, idempotent) · **Oracle-Tor GRÜN 0 UNERKLÄRT** (462 identisch/284 erhöht/178 vintage-absent/7 erklärt-delta; Snapshot max BGE-Band 151)
 
 ## Gliederung
 

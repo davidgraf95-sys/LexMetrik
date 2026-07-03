@@ -601,7 +601,15 @@ OR/ZGB-Renumerierungen, bis/ter). Darum bei jedem neuen `erlass_fassungen`-Eintr
     Bericht `bibliothek/register/e3-lokal-2026-07-03.md`. **OFFEN (VPS-Schritt):** Datei-rsync +
     cold-FTS `fts_entscheide_masse` (58-GB-Klasse, NICHT lokal) + Read-API + Long-Tail-Route
     `/rechtsprechung/:key` (on-demand-Edge-Fallback, §15.6) + VPS-Angebot (Vorbedingung 2).
-- **E4 · Zitat-Graph.** 8,7M+11,9M Kanten in `zitat_kanten`/`norm_kanten`; topisches
+- **E4 · Zitat-Graph.** ✅ **LOKAL FERTIG (3.7.2026, Bericht `bibliothek/register/e4-lokal-2026-07-03.md`).**
+  Q4-law-code-Kanonisierung (`erlass-kanon.ts`, DE/FR/IT→`erlasse.key`, SR-belegt, Abdeckung 35,2 %→78,4 %) +
+  `baue-rangliste.ts` (materialisierte topische In-degree, 1 387 680 Zeilen, max gewicht 12 413 = BGE 133 II
+  249 @ BGG/106, idempotent byte-stabil, ~18 s) + **Oracle-Tor GRÜN 0 UNERKLÄRT**
+  (`check-rangliste-oracle.ts`: 462 identisch/284 korrekt-erhöht/178 vintage-absent/7 erklärt-delta — jede
+  Abweichung belegt). **OFFEN (nachgelagert):** UI-Panels für die Masse (braucht Edge/VPS, §15/`check:perf-budget`)
+  + Läufer-Integration (`norm_rangliste`-Rebuild nach jedem `resolve-zitate`, VPS-Checkliste §9(5)). Doku unten
+  bleibt als Konzept-Referenz.
+- **E4 · Zitat-Graph (Konzept-Referenz).** 8,7M+11,9M Kanten in `zitat_kanten`/`norm_kanten`; topisches
   in-degree-Ranking (W3-Muster); Plausibilitäts-Checks als DB-Invarianten; UI-Panels
   (erfasst = build-time-Projektion, Masse = Edge). Ersetzt „Leitfall-Gewichte aus 342".
   - **Vertiefung — vom Einmal-Schritt zum wiederholbaren Enrichment-Pass (TOR/DoD explizit):**
