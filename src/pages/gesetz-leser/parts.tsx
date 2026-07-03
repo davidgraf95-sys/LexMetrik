@@ -1,13 +1,107 @@
-import { useState, memo, type ReactNode } from 'react';
+import { useState, useEffect, memo, type ReactNode } from 'react';
+import { Link } from 'react-router-dom';
 import { ArtikelBody, FnRef } from '../../components/normtext/ArtikelBody';
 import type { InternRefs } from '../../components/NormText';
 import { trenneAenderungshistorie, labelMitBereich, artikelGanzAufgehoben } from '../../lib/normtext/darstellung';
 import type { Sektion, Fussnote, ErlassKopf } from '../../lib/normtext/browse';
 import { NORM_IM_TEXT, fedlexLinkFuerArtikel } from '../../lib/fedlex';
 import { NormChip } from '../../components/vorlagen/ui';
+import { usePaneSteuerung } from '../../components/layout/usePaneLayout';
+import { leitfaelleFuerArtikel, type LeitfallRef } from '../../lib/rechtsprechung/norm-index';
 import type { BrowseErlass } from '../../lib/normtext/browse-typen';
 import type { NormSnapshot } from '../../lib/normtext/typen';
 import { margStufeStil, fnTextMitLinks, romanFrei } from './helpers';
+
+// Schaufenster-Chips: nur die wenigen zentralen Leitfälle direkt zeigen (Reihenfolge
+// = `gewicht` aus dem Shard), Rest hinter «+n weitere». Bewusst klein, kein Panel.
+const LEITFAELLE_SICHTBAR = 5;
+
+// requestIdleCallback mit garantiert feuerndem setTimeout-Fallback (§15.3) — hält den
+// Shard-Fetch vom Erstpaint fern; identisches Muster wie App.tsx-Prefetch.
+function beiLeerlauf(cb: () => void): () => void {
+  if (typeof window === 'undefined') return () => {};
+  const w = window as typeof window & {
+    requestIdleCallback?: (cb: () => void) => number;
+    cancelIdleCallback?: (id: number) => void;
+  };
+  if (w.requestIdleCallback) {
+    const id = w.requestIdleCallback(cb);
+    return () => w.cancelIdleCallback?.(id);
+  }
+  const id = window.setTimeout(cb, 1200);
+  return () => window.clearTimeout(id);
+}
+
+// «Leitfälle zu diesem Artikel» (FAHRPLAN-DATENHALTUNG §11.2, Weiche B): Chip-Zeile
+// analog «Verweise», gespeist LAZY aus dem erlass-lokalen Shard (nie das 536-KB-
+// Gesamt-JSON eager). Jeder Chip → Entscheid + «⧉ daneben öffnen» (Split-View-Muster
+// aus dem KontextPanel). Maschinelle Zuordnung, §8 offengelegt. Eigene memo-Komponente,
+// damit der Fetch/State jedes Artikels isoliert bleibt (§15.4).
+const LeitfallZeile = memo(function LeitfallZeile({ registerKey, artikel }: { registerKey: string; artikel: string }) {
+  // Ladezustand aus dem Ergebnis-Key ABGELEITET (kein synchrones setState im Effekt-
+  // Body — react-hooks-Regel, gleiches Muster wie KontextPanel §6.4). Der Schlüssel
+  // bindet das Resultat an den (Erlass,Artikel)-Fetch, der es erzeugt hat.
+  const artKey = `${registerKey}/${artikel}`;
+  const [geladen, setGeladen] = useState<{ key: string; refs: LeitfallRef[] } | null>(null);
+  const [alleAuf, setAlleAuf] = useState(false);
+  const { oeffneDaneben, kannOeffnen, istOffen } = usePaneSteuerung();
+
+  useEffect(() => {
+    let lebt = true;
+    const abbrechen = beiLeerlauf(() => {
+      leitfaelleFuerArtikel(registerKey, artikel).then((r) => { if (lebt) setGeladen({ key: artKey, refs: r }); });
+    });
+    return () => { lebt = false; abbrechen(); };
+  }, [registerKey, artikel, artKey]);
+
+  // Nur das zum AKTUELLEN Artikel gehörende Resultat zeigen; ein veralteter Treffer = «lädt».
+  const leitfaelle: LeitfallRef[] | null = geladen && geladen.key === artKey ? geladen.refs : null;
+
+  // Wie die «Verweise»-Zeile: bei nichts vorhanden GAR KEINE Zeile rendern (kein
+  // reservierter Leerraum). Bewusst KEINE Mindesthöhe je Artikel — die grosse Mehrheit
+  // der Artikel hat keine Leitfälle; eine Reservierung würde in fast jeden Artikel
+  // Weissraum einziehen (Anti-Ziel §15.2 „Reservierung darf keinen Inhalt verstecken",
+  // schadete der Lesedichte). Die Chips wachsen idle am Artikel-FUSS ein (unterhalb
+  // von Body + Verweisen, meist below-fold) — dieselbe async-Klasse wie die
+  // KontextPanel-Entscheide; der prerenderte Normtext (LCP/Ctrl+F) bleibt unberührt (§15.1/3).
+  if (!leitfaelle || leitfaelle.length === 0) return null;
+
+  const sichtbar = alleAuf ? leitfaelle : leitfaelle.slice(0, LEITFAELLE_SICHTBAR);
+  const rest = leitfaelle.length - sichtbar.length;
+  return (
+    <div className="mt-4 flex flex-wrap items-center gap-2">
+      <span className="lc-overline mr-1" title="Maschinell aus den zitierten Normen zugeordnet — keine geprüfte Präjudizienliste.">Leitfälle</span>
+      {sichtbar.map((r) => {
+        const ziel = `/rechtsprechung/${encodeURIComponent(r.key)}`;
+        return (
+          <span key={r.key} className="inline-flex items-center">
+            <Link to={ziel} title={r.regesteKurz ?? r.zitierung}
+              className="lc-chip no-underline hover:text-brass-700 hover:border-brass-400">
+              {r.zitierung}
+              {r.leitcharakter === 'leitentscheid' && <span className="ml-1 text-micro text-brass-700" aria-hidden>★</span>}
+            </Link>
+            {kannOeffnen && !istOffen(ziel) && (
+              <button type="button" onClick={() => oeffneDaneben(ziel)}
+                title={`${r.zitierung} nebeneinander öffnen`} aria-label={`${r.zitierung} nebeneinander öffnen`}
+                className="ml-1 inline-flex h-6 w-6 items-center justify-center rounded-md border border-line text-ink-500 hover:text-brass-700 hover:border-brass-400 transition-colors">
+                <span aria-hidden className="text-base leading-none">⧉</span>
+              </button>
+            )}
+          </span>
+        );
+      })}
+      {rest > 0 && !alleAuf && (
+        <button type="button" onClick={() => setAlleAuf(true)}
+          className="lc-chip no-underline hover:text-brass-700 hover:border-brass-400 text-ink-500">
+          +{rest} weitere
+        </button>
+      )}
+      {/* Weiche-B-Erweiterungspunkt (§10(6)): der Massen-Anteil «+n weitere (online)»
+          aus der Edge-Query kommt HIER dazu, sobald E2 live ist — heute nur der
+          geshardete Schaufenster-Anteil, kein Edge-Fetch. NICHT bauen. */}
+    </div>
+  );
+});
 
 // Ein Artikel im Lesefluss (Richtung A): zweispaltig wie die amtliche Druckfassung —
 // links «Art. N» als ruhiger Anker mit den Randtiteln darunter (rechtsbündig, nur die
@@ -208,6 +302,10 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
               {verweise.map((v) => <NormChip key={v} artikel={v} />)}
             </div>
           )}
+          {/* LEITFÄLLE (§11.2): Bundesgerichtsentscheide zu genau diesem Artikel, lazy
+              aus dem erlass-lokalen Shard. Verdrahtet das bisher tote proNormArtikel-
+              Modell (norm-index.ts) sichtbar — vom Artikel direkt zur Rechtsprechung. */}
+          <LeitfallZeile registerKey={erlass.key} artikel={e.artikel} />
           {/* Fussnoten (Änderungs-/Quellenhistorie, AS/BBl klickbar): nur auf Wunsch
               (globaler Schalter in der Suchleiste). */}
           {fussnotenAuf && fussAnzeige.length > 0 && (
