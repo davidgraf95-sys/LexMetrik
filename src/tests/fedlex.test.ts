@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { FEDLEX, fedlexUrl, fedlexLinkFuerArtikel, erkenneFedlexGesetz, fremdgesetzNachArtikel } from '../lib/fedlex';
+import { FEDLEX, fedlexUrl, fedlexLinkFuerArtikel, erkenneFedlexGesetz, fremdgesetzNachArtikel, normVerweiseImText } from '../lib/fedlex';
 
 describe('fedlexUrl', () => {
   it('Zahl-Artikel', () => {
@@ -131,5 +131,104 @@ describe('fremdgesetzNachArtikel (N2 — Fremdgesetz-Verweis-Erkennung)', () => 
     expect(fremdgesetzNachArtikel(' Absatz 2 und die Bestimmungen des OR')).toBeNull();
     expect(fremdgesetzNachArtikel(' Absatz 2 hier')).toBeNull();
     expect(fremdgesetzNachArtikel(' gilt sinngemäss für die OR-Berechnung')).toBeNull();
+  });
+});
+
+// ─── normVerweiseImText — i.V.m.-Ketten-Propagation (Referenz BGE 151 III 377) ──
+//
+// Kompakte Sicht auf die reine Span-Liste: `anzeige` = Quelltext (zeichenidentisch),
+// `artikel` = Auflösungsziel (mit propagiertem Kürzel), `propagiert` = Ketten-Glied.
+describe('normVerweiseImText — Ketten-Propagation', () => {
+  // Handliche Projektion: «Anzeige → Auflösungsziel» je Span, in Textreihenfolge.
+  const spanZiele = (t: string) =>
+    normVerweiseImText(t).map((s) => ({ anzeige: s.anzeige, artikel: s.artikel, propagiert: s.propagiert }));
+  // Nur die aufgelösten Ziel-URLs (Artikel-Anker) — für Gleichheits-Prüfungen.
+  const zielUrls = (t: string) => normVerweiseImText(t).map((s) => fedlexLinkFuerArtikel(s.artikel));
+
+  it('Referenzfall E. 2.3.1: «Art. 684 i.V.m. Art. 679 ZGB» — beide Glieder ZGB', () => {
+    expect(spanZiele('klagen (Art. 684 i.V.m. Art. 679 ZGB; BGE 132 III 9 E. 3.6)')).toEqual([
+      { anzeige: 'Art. 684', artikel: 'Art. 684 ZGB', propagiert: true },
+      { anzeige: 'Art. 679 ZGB', artikel: 'Art. 679 ZGB', propagiert: false },
+    ]);
+    // Ziel-Anker: 684 → #art_684, 679 → #art_679 (beide ZGB).
+    expect(zielUrls('Art. 684 i.V.m. Art. 679 ZGB')).toEqual([`${FEDLEX.ZGB}#art_684`, `${FEDLEX.ZGB}#art_679`]);
+  });
+
+  it('Referenzfall E. 2.4: «Art. 679 i.V.m. Art. 684 ZGB» (umgekehrte Richtung) — 679 wird verlinkt', () => {
+    expect(spanZiele('nach Art. 679 i.V.m. Art. 684 ZGB vorzugehen')).toEqual([
+      { anzeige: 'Art. 679', artikel: 'Art. 679 ZGB', propagiert: true },
+      { anzeige: 'Art. 684 ZGB', artikel: 'Art. 684 ZGB', propagiert: false },
+    ]);
+  });
+
+  it('«in Verbindung mit» als ausgeschriebener Konnektor', () => {
+    expect(spanZiele('Art. 90 in Verbindung mit Art. 100 BGG')).toEqual([
+      { anzeige: 'Art. 90', artikel: 'Art. 90 BGG', propagiert: true },
+      { anzeige: 'Art. 100 BGG', artikel: 'Art. 100 BGG', propagiert: false },
+    ]);
+  });
+
+  it('«und»-Aufzählung mit mehreren bare Gliedern', () => {
+    expect(spanZiele('Art. 5, Art. 6 und Art. 7 ZGB')).toEqual([
+      { anzeige: 'Art. 5', artikel: 'Art. 5 ZGB', propagiert: true },
+      { anzeige: 'Art. 6', artikel: 'Art. 6 ZGB', propagiert: true },
+      { anzeige: 'Art. 7 ZGB', artikel: 'Art. 7 ZGB', propagiert: false },
+    ]);
+  });
+
+  it('Abs./lit.-Zwischenstücke brechen die Kette nicht', () => {
+    // BGE 151 III 377 E. 1: «Art. 100 Abs. 1 i.V.m. Art. 46 Abs. 1 Bst. c BGG».
+    expect(spanZiele('(Art. 100 Abs. 1 i.V.m. Art. 46 Abs. 1 Bst. c BGG)')).toEqual([
+      { anzeige: 'Art. 100 Abs. 1', artikel: 'Art. 100 Abs. 1 BGG', propagiert: true },
+      { anzeige: 'Art. 46 Abs. 1 Bst. c BGG', artikel: 'Art. 46 Abs. 1 Bst. c BGG', propagiert: false },
+    ]);
+  });
+
+  it('«f./ff.» bricht die Kette nicht (Folge-Marker im Glied)', () => {
+    expect(spanZiele('Art. 46 ff. i.V.m. Art. 90 BGG')).toEqual([
+      { anzeige: 'Art. 46 ff.', artikel: 'Art. 46 ff. BGG', propagiert: true },
+      { anzeige: 'Art. 90 BGG', artikel: 'Art. 90 BGG', propagiert: false },
+    ]);
+    // Folge-Marker ändert den Auflösungs-Anker nicht (führender Artikel 46).
+    expect(fedlexLinkFuerArtikel('Art. 46 ff. BGG')).toBe(`${FEDLEX.BGG}#art_46`);
+  });
+
+  // ── Negativfälle (§1: lieber kein Link als ein falscher) ───────────────────
+  it('Negativ: «Art. 5 der Verordnung» — kein Kürzel, kein Link', () => {
+    expect(normVerweiseImText('Art. 5 der Verordnung gilt')).toEqual([]);
+  });
+
+  it('Negativ: Semikolon bricht die Kette — Glied davor bleibt fremd', () => {
+    // «Art. 3 StGB; Art. 5 i.V.m. Art. 6 ZGB»: Art. 3 gehört zu StGB (eigener
+    // Anker), NICHT zur ZGB-Kette; Art. 5 propagiert ZGB, Art. 3 bleibt StGB.
+    expect(spanZiele('Art. 3 StGB; Art. 5 i.V.m. Art. 6 ZGB')).toEqual([
+      { anzeige: 'Art. 3 StGB', artikel: 'Art. 3 StGB', propagiert: false },
+      { anzeige: 'Art. 5', artikel: 'Art. 5 ZGB', propagiert: true },
+      { anzeige: 'Art. 6 ZGB', artikel: 'Art. 6 ZGB', propagiert: false },
+    ]);
+  });
+
+  it('Negativ: fremdes Kürzel dazwischen — «Art. 5 OR und Art. 6 ZGB» bleibt getrennt', () => {
+    // Art. 5 trägt EIGENES Kürzel (OR) → kein bare Glied, wird NICHT auf ZGB umgehängt.
+    expect(spanZiele('Art. 5 OR und Art. 6 ZGB')).toEqual([
+      { anzeige: 'Art. 5 OR', artikel: 'Art. 5 OR', propagiert: false },
+      { anzeige: 'Art. 6 ZGB', artikel: 'Art. 6 ZGB', propagiert: false },
+    ]);
+    expect(zielUrls('Art. 5 OR und Art. 6 ZGB')).toEqual([`${FEDLEX.OR}#art_5`, `${FEDLEX.ZGB}#art_6`]);
+  });
+
+  it('Negativ: BGE-Zitat nach dem Anker zieht kein Glied nach', () => {
+    // Kein bare «Art.» vor dem Anker → keine Propagation; BGE-Zitat unberührt.
+    expect(spanZiele('vgl. Art. 679 ZGB; BGE 132 III 9')).toEqual([
+      { anzeige: 'Art. 679 ZGB', artikel: 'Art. 679 ZGB', propagiert: false },
+    ]);
+  });
+
+  it('Nicht-Ketten-Text: Anker-Menge identisch zu NORM_IM_TEXT (additiv)', () => {
+    // Einzelverweis + zweiter Verweis, keine Kette → nur die zwei Anker, kein Glied.
+    expect(spanZiele('Art. 335c OR und die Regel; separat Art. 131 ZPO')).toEqual([
+      { anzeige: 'Art. 335c OR', artikel: 'Art. 335c OR', propagiert: false },
+      { anzeige: 'Art. 131 ZPO', artikel: 'Art. 131 ZPO', propagiert: false },
+    ]);
   });
 });

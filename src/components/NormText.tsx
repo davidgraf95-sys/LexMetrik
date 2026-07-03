@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import { NORM_IM_TEXT, fedlexLinkFuerArtikel, fremdgesetzNachArtikel } from '../lib/fedlex';
+import { normVerweiseImText, fremdgesetzNachArtikel } from '../lib/fedlex';
 import { NormChip } from './vorlagen/ui';
 import { RechtsprechungText } from './RechtsprechungLink';
 
@@ -113,22 +113,27 @@ function restMitIntern(s: string, key: string, intern?: InternRefs): React.React
  *  zeichenidentisch (nur Anker-Hüllen kommen hinzu). `intern` (nur Lesesicht)
  *  macht bare Artikelverweise auf denselben Erlass zu Sprung-Links. */
 export function NormText({ text, intern }: { text: string; intern?: InternRefs }) {
-  const teile: React.ReactNode[] = [];
-  let zuletzt = 0;
-  for (const treffer of text.matchAll(NORM_IM_TEXT)) {
-    const start = treffer.index;
-    const roh = treffer[0];
-    // Defensiv (§5): nur verlinken, was der eine Resolver wirklich auflöst.
-    // Nicht auflösbare Treffer bleiben im noch offenen Text-Stück (kein
-    // Vorschub von `zuletzt`), werden also als reiner Text mit ausgegeben.
-    if (fedlexLinkFuerArtikel(roh) == null) continue;
-    if (start > zuletzt) teile.push(restMitIntern(text.slice(zuletzt, start), `r${zuletzt}`, intern));
-    teile.push(<NormChip key={`${start}-${roh}`} artikel={roh} linkClass={INLINE_CLASS} />);
-    zuletzt = start + roh.length;
-  }
+  // EINE Wahrheit der Verweis-/Ketten-Regel: normVerweiseImText (fedlex.ts)
+  // liefert die voll zitierten Anker UND die per «i.V.m.»-Kette propagierten
+  // bare Glieder. Für Nicht-Ketten-Text ist die Anker-Menge identisch zum
+  // früheren matchAll(NORM_IM_TEXT)-Lauf (additiv, §6).
+  const spans = normVerweiseImText(text);
   // Kein Norm-Treffer → ganzer Text durch die Rest-Pipeline (ohne intern reiner
   // Pass-Through durch RechtsprechungText, zeichenidentisch wie bisher).
-  if (teile.length === 0) return intern ? <>{restMitIntern(text, 'r0', intern)}</> : <RechtsprechungText text={text} />;
+  if (spans.length === 0) return intern ? <>{restMitIntern(text, 'r0', intern)}</> : <RechtsprechungText text={text} />;
+  const teile: React.ReactNode[] = [];
+  let zuletzt = 0;
+  for (const s of spans) {
+    if (s.start > zuletzt) teile.push(restMitIntern(text.slice(zuletzt, s.start), `r${zuletzt}`, intern));
+    // Anker: anzeige === artikel → `anzeige` weglassen (SSR-byte-identisch zum
+    // früheren <NormChip artikel={roh}>). Propagiertes Glied: Anzeige = reiner
+    // Glied-Text (zeichenidentisch, §1), Auflösung über das synthetisierte Ziel.
+    teile.push(
+      <NormChip key={`${s.start}-${s.artikel}`} artikel={s.artikel}
+        anzeige={s.propagiert ? s.anzeige : undefined} linkClass={INLINE_CLASS} />,
+    );
+    zuletzt = s.end;
+  }
   if (zuletzt < text.length) teile.push(restMitIntern(text.slice(zuletzt), `r${zuletzt}`, intern));
   return <>{teile}</>;
 }
