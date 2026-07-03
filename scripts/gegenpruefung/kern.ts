@@ -63,7 +63,13 @@ const RECHNEN_RE =
 export function istRisikoPfad(p: string): boolean {
   // Extraktion
   if (p.startsWith('scripts/normtext/')) return true;
+  if (p === 'scripts/normtext-snapshot.ts' || p === 'scripts/normtext-entscheide.ts') return true;
   if (p.startsWith('src/lib/normtext/')) return true;
+  // QS-DATA (FAHRPLAN-DATENHALTUNG §4/§5 E1): Datenhaltungs-Schicht = Extraktion/Projektion
+  // = Risiko-Pfad. Das Dump-Manifest bindet den DB-Zustand mit (Drift-Anker).
+  if (p.startsWith('scripts/datenhaltung/')) return true;
+  if (p.startsWith('daten/')) return true;
+  if (p === 'daten-manifest.json') return true;
   // rekursiv (nicht nur die 4 Top-Level-Index-JSONs) — Blocker Linse 2:
   if (p.startsWith('public/normtext/') && p.endsWith('.json')) return true;
   // Rechnen
