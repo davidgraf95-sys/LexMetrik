@@ -67,4 +67,14 @@ describe('zuletztVerwendet.ts', () => {
     localStorage.setItem('lexmetrik-zuletzt', JSON.stringify([{ route: '/ok', titel: 'OK', zeit: 1 }, { route: 5 }]));
     expect(holeZuletzt().map((e) => e.route)).toEqual(['/ok']);
   });
+
+  it('Migration: Alt-Eintrag OHNE titel wird still verworfen (kein Crash)', () => {
+    // Frühere Fassungen konnten theoretisch title-lose Einträge hinterlassen;
+    // der Typ-Guard verlangt titel:string → solche Zeilen fallen weg statt zu crashen.
+    localStorage.setItem('lexmetrik-zuletzt', JSON.stringify([
+      { route: '/gesetze/bund/OR', titel: 'OR', zeit: 2 },
+      { route: '/rechtsprechung/alt', zeit: 1 },
+    ]));
+    expect(holeZuletzt().map((e) => e.route)).toEqual(['/gesetze/bund/OR']);
+  });
 });
