@@ -10,20 +10,18 @@
 // (FAHRPLAN-FUNDAMENT-UMBAU), kein Selbstzweck — NICHT weiter abstrahieren
 // (keine Sichtbarkeits-/Layout-Logik ins Registry ziehen).
 //
-// Stand Bausequenz-Schritt 2 (Plumbing): Registry angelegt, aber noch NICHT von
-// Startseite.tsx importiert (toter, tsc-geprüfter Code). Aktiv sind nur die
-// bereits existierenden Module (Schnellrechner/ZuletztVerwendet/NewsHeader); die
-// erst in Schritt 4 entstehenden Module (Hero/Rubrik-Kacheln/Vertrauens-Fuss)
-// sind mit `// S4:` auskommentiert — Schritt 4 legt die Komponenten an und
-// aktiviert die Zeilen.
+// Stand Bausequenz-Schritt 4 (Layout & Module): Startseite.tsx ist auf diese
+// Registry umgestellt; alle sechs Module sind aktiv. Hero liegt in S4 bewusst
+// noch auf bg-surface — der Brass-Wash kommt in S5 (nur der HERO_FLAECHE-Tausch,
+// s. Hero.tsx).
 
 import type React from 'react';
+import { Hero } from '../components/start/Hero';
 import { Schnellrechner } from '../components/start/Schnellrechner';
+import { RubrikKacheln } from '../components/start/RubrikKacheln';
 import { ZuletztVerwendet } from '../components/start/ZuletztVerwendet';
 import { NewsHeader } from '../components/start/NewsHeader';
-// S4: import { Hero } from '../components/start/Hero';
-// S4: import { RubrikKacheln } from '../components/start/RubrikKacheln';
-// S4: import { VertrauensFuss } from '../components/start/VertrauensFuss';
+import { VertrauensFuss } from '../components/start/VertrauensFuss';
 
 export type StartModulId =
   | 'hero' | 'schnellrechner' | 'rubriken' | 'zuletzt' | 'news' | 'vertrauen';
@@ -40,16 +38,17 @@ export interface StartModul {
 
 // Reihenfolge = §2 (Hero → Schnellrechner → Rubriken → Zuletzt → News → Vertrauen).
 export const START_MODULE: readonly StartModul[] = [
-  // S4: { id: 'hero', Komponente: Hero },
-  { id: 'schnellrechner', titel: 'Schnell rechnen', Komponente: Schnellrechner },
-  // S4: { id: 'rubriken', titel: 'Alle Bereiche', Komponente: RubrikKacheln },
-  { id: 'zuletzt', titel: 'Zuletzt verwendet', Komponente: ZuletztVerwendet, minHoeheKlasse: 'min-h-modul-zuletzt' },
-  // News trägt bewusst KEIN `titel`/`minHoeheKlasse`: Sektionstitel, Ladehöhen-
-  // Reservierung UND Vollkollaps bei leerem Register liegen INS Modul verlagert
-  // (S3-Fix Leerzustand-Doppelpfad, §3 #6). So mappt S4 das Registry 1:1 ohne
-  // externes Seclabel — nie eine Überschrift über Leerraum. Wie Hero (kein Rubrik-
-  // trenner) selbst-verwaltend; anders als Zuletzt, dessen `minHoeheKlasse` die
-  // KONTINGENTE Fallback-Reservierung (§3 #5) bleibt.
+  // Hero: kein Rubriktrenner (self-verwaltend, eigene H1); liegt in S4 auf
+  // bg-surface (S5 → Brass-Wash).
+  { id: 'hero', Komponente: Hero },
+  { id: 'schnellrechner', titel: 'Schnellrechner', Komponente: Schnellrechner },
+  { id: 'rubriken', titel: 'Alle Bereiche', Komponente: RubrikKacheln },
+  // Zuletzt trägt bewusst KEIN `titel`/`minHoeheKlasse`: Sektionstitel («Zuletzt
+  // verwendet»), Höhen-Reservierung UND Vollkollaps bei leerem Speicher liegen INS
+  // Modul verlagert (S4, Council «nie Titel über Leerraum», wie NewsHeader in S3).
+  { id: 'zuletzt', Komponente: ZuletztVerwendet },
+  // News ebenso selbst-verwaltend (S3-Fix Leerzustand-Doppelpfad, §3 #6) — titellos.
   { id: 'news', Komponente: NewsHeader },
-  // S4: { id: 'vertrauen', Komponente: VertrauensFuss },
+  // Vertrauens-Fuss: kein Rubriktrenner, kein async-Zustand → titellos, statisch.
+  { id: 'vertrauen', Komponente: VertrauensFuss },
 ];

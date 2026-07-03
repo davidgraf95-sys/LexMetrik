@@ -8,6 +8,7 @@ import { VorlagenUebersicht } from '../pages/VorlagenUebersicht';
 import { HeaderSuche } from '../components/layout/HeaderSuche';
 import { RechnerKarte } from '../components/RechnerKarte';
 import { ALLE_KARTEN, istVerfuegbar } from '../lib/startseiteConfig';
+import { HERO_TITEL } from '../lib/seo';
 
 // Akzeptanztests Katalog/Rubriken. Stand UI-Welle (deklarierte Anpassung
 // §6 Ziff. 3): /recherche ist aufgelöst — die Rechner-/Vorlagen-Register leben
@@ -164,27 +165,32 @@ describe('Globale Suche im Top-Streifen (UI-Welle: Dropdown überall, §6.3)', (
   });
 });
 
-describe('Startseite V2 — «Rechner-zuerst»-Cockpit (19.6.2026, deklarierte Anpassung §6 Ziff. 3)', () => {
-  it('zeigt Begrüssung, Schnellrechner und Gesetze-Rubrik — KEIN Katalog-Deckblatt', () => {
+describe('Startseite V3 — Hero + Kachel-Landkarte (Schritt 4, deklarierte Anpassung §6.3)', () => {
+  it('zeigt Hero-H1, Schnellrechner und Rubrik-Kacheln — KEIN Katalog-Deckblatt', () => {
     const html = startHtml('/');
-    // Begrüssung (zufällig, tageszeitpassend → kein fixer Text) + Datum/Uhr-Zeile.
-    // Das «Berechnung statt KI»-Badge wurde 26.6.2026 entfernt (Auftrag David) —
-    // der ehrliche KI-/Determinismus-Hinweis trägt jetzt allein der §8-Disclaimer.
-    expect(html).toMatch(/·\s\d{2}:\d{2}:\d{2}/); // Datum · HH:MM:SS
+    // Startseite V3 · Schritt 4 (deklarierte Änderung §6.3): der Hero ersetzt die
+    // Begrüssung — Value-Proposition-H1 (aus seo.ts) statt zufälligem Gruss, und
+    // eine ruhige Datums-Overline «Wochentag, T. Monat JJJJ» OHNE tickende Uhr
+    // (Scherzpool/Uhr gestrichen, §0). Das «Berechnung statt KI»-Badge bleibt weg.
+    expect(html).toContain(HERO_TITEL);
+    expect(html).toMatch(/\d{1,2}\.\s(Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\s\d{4}/);
     expect(html).not.toContain('Berechnung statt KI');
-    // Sektionen des Cockpits
+    // Sektionen des Cockpits: Schnellrechner + die neue Rubrik-Landkarte.
     expect(html).toContain('Schnellrechner');
-    // Startseite V3 · Schritt 2 (deklarierte Änderung §6.3): Favoriten gestrichen,
-    // Zeiterfassung auf /rechner verschoben — beide nicht mehr auf «/».
+    expect(html).toContain('Alle Bereiche');
+    // Direktzugriff-Chips (aus der früheren GesetzeRubrik gezogen, deren eigenes
+    // Suchfeld entfällt — §5-Doppelung zur UniversalSuche).
+    expect(html).toContain('href="/gesetze/bund/OR"');
+    expect(html).toContain('Alle Gesetze');
+    // Favoriten (5.6.) + Zeiterfassung (→ /rechner) sind nicht mehr auf «/».
     expect(html).not.toContain('Favoriten');
     expect(html).not.toContain('Zeiterfassung');
     // Schnellrechner rechnet live (der «live hergeleitet»-Badge wurde 25.6.2026
-    // auf Wunsch David als redundant entfernt — der Live-Hinweis im Ergebnisblock
-    // genügt; §6 Ziff. 3 deklarierte fachliche Änderung).
+    // als redundant entfernt — der Live-Hinweis im Ergebnisblock genügt).
     expect(html).toContain('Live-Berechnung');
-    // Pflichthinweis (§8) bleibt
+    // Vertrauens-Fuss trägt den Pflichthinweis (§8).
     expect(html).toContain('Rechtlicher Hinweis');
-    // Der Katalog (vier Oberkategorien) ist NICHT mehr auf der Startseite
+    // Der Katalog (vier Oberkategorien) ist NICHT mehr auf der Startseite.
     expect(html).not.toContain('aria-label="Oberkategorien"');
   });
 
