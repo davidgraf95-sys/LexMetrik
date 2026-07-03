@@ -78,7 +78,14 @@ const LeitfallZeile = memo(function LeitfallZeile({ registerKey, artikel }: { re
             <Link to={ziel} title={r.regesteKurz ?? r.zitierung}
               className="lc-chip no-underline hover:text-brass-700 hover:border-brass-400">
               {r.zitierung}
-              {r.leitcharakter === 'leitentscheid' && <span className="ml-1 text-micro text-brass-700" aria-hidden>★</span>}
+              {r.leitcharakter === 'leitentscheid' && (
+                <span
+                  className="ml-1 text-micro text-brass-700"
+                  title="Leitentscheid — in der amtlichen Sammlung (BGE) publiziert"
+                  aria-label="Leitentscheid, amtlich publiziert">
+                  ★
+                </span>
+              )}
             </Link>
             {kannOeffnen && !istOffen(ziel) && (
               <button type="button" onClick={() => oeffneDaneben(ziel)}
