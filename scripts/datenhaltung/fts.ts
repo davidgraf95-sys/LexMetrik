@@ -1,0 +1,128 @@
+// scripts/datenhaltung/fts.ts
+// QS-DATA E2-Vorarbeiten (W2·6-DATA): baut die HOT-FTS5-Tabellen build-time
+// (FAHRPLAN-DATENHALTUNG §3 DDL + §11.5 hot/cold-Grenze).
+//
+// HOT (edge-replika-fähig, < 1 GB, das IST der E2-POC-Zuschnitt):
+//   - fts_artikel                    (external content über `artikel`, alle 218 Bund-Erlasse)
+//   - fts_entscheide_schaufenster    (standalone, die 342 kuratierten Schaufenster-Entscheide)
+//
+// COLD (server-only, NIE embedded): fts_entscheide_masse — der 58-GB-Vollkorpus-Index
+// entsteht erst mit E3 auf dem Self-Host-VPS (§11.5). Wird hier BEWUSST NICHT gebaut,
+// nur als Schema-Kommentar dokumentiert (siehe MASSE_SCHEMA_DOKU unten).
+//
+// Tokenizer exakt `unicode61 remove_diacritics 2` (§3): diakritik-insensitiv für DE/FR/IT
+// (empirisch verifiziert: «verjahrung» trifft «Verjährung», «rechtsoffnung» → «Rechtsöffnung»).
+//
+// Die FTS-Tabellen werden NUR im on-disk-Build (build.ts) angelegt — NICHT in
+// frischesSchema()/berechneManifest(). Grund: das Dump-Manifest (check:datenhaltung)
+// beweist Determinismus über die QUELL-Tabellen; der FTS-Index ist eine reine Ableitung
+// daraus (rebuildbar) und wird aus dem Manifest ausgeklammert (manifest.ts → tabellen()).
+import type { DatabaseSync } from 'node:sqlite';
+
+/** Tokenizer-Spezifikation (§3, nicht verhandelbar): diakritik-insensitiv DE/FR/IT. */
+export const TOKENIZER = 'unicode61 remove_diacritics 2';
+
+/**
+ * Durchsuchbarer Plaintext EINES Artikels aus `bloecke_json`: alle `text`-Felder
+ * konkateniert (Absatz-Einleitung + lit./Ziff.-Aufzählungspunkte), Whitespace normalisiert.
+ * Bewusst dieselbe Extraktion wie der bestehende Client-Suchindex
+ * (`scripts/such-index-generieren.ts` → artikelText), damit hot-FTS und statischer
+ * Fallback-Index denselben durchsuchbaren Text tragen (§5). NICHT indexiert (kein
+ * `text`-Feld, client-index-konform; Gegenprüfungs-Notiz 3.7.2026): Tarif-/Tabellen-
+ * Zellen (`tabelle` beschreibung/betrag sowie `mehrspaltig` spalten[].titel + zeilen)
+ * und Bild-Metadaten — der Volltext bleibt im prerenderten DOM durchsuchbar (§15);
+ * eine Recall-Erweiterung wäre ein bewusster Folge-Schritt für BEIDE Indizes gemeinsam.
+ */
+interface Block {
+  text?: string;
+  items?: Array<{ text?: string }>;
+}
+export function bloeckeText(bloeckeJson: string): string {
+  const bloecke = JSON.parse(bloeckeJson) as Block[];
+  const teile: string[] = [];
+  for (const b of bloecke) {
+    if (b.text) teile.push(b.text);
+    for (const it of b.items ?? []) if (it.text) teile.push(it.text);
+  }
+  return teile.join(' ').replace(/\s+/g, ' ').trim();
+}
+
+/** Durchsuchbarer Plaintext der Entscheid-Abschnitte: alle `bloecke[].text`, normalisiert. */
+interface Abschnitt {
+  bloecke?: Array<{ text?: string }>;
+}
+export function abschnitteText(abschnitte: Abschnitt[] | undefined): string {
+  const teile: string[] = [];
+  for (const a of abschnitte ?? []) for (const b of a.bloecke ?? []) if (b.text) teile.push(b.text);
+  return teile.join(' ').replace(/\s+/g, ' ').trim();
+}
+
+/**
+ * fts_artikel — external content über `artikel` (§3 DDL). Der FTS-Index speichert
+ * KEINE zweite Textkopie (Grösse!); der indexierte `text` wird beim Bau aus
+ * `bloecke_json` extrahiert. MATCH + bm25 laufen rein über den Index; das Listen-
+ * Snippet baut das Such-Modul deterministisch aus `bloecke_json` der Trefferzeile
+ * (native FTS-`snippet()` ist bei external content ohne physische `text`-Spalte
+ * nicht verfügbar — `artikel` trägt strukturiertes `bloecke_json`, keinen Plaintext).
+ * Insert-Reihenfolge = artikel.rowid → deterministischer Segment-Aufbau.
+ * @returns Zeilenzahl (== artikel-Zeilen).
+ */
+export function baueFtsArtikel(db: DatabaseSync): number {
+  db.exec(
+    `CREATE VIRTUAL TABLE fts_artikel USING fts5(text, content='artikel', content_rowid='rowid', tokenize='${TOKENIZER}');`,
+  );
+  const rows = db.prepare('SELECT rowid AS rowid, bloecke_json FROM artikel ORDER BY rowid').all() as Array<{
+    rowid: number;
+    bloecke_json: string;
+  }>;
+  const ins = db.prepare('INSERT INTO fts_artikel(rowid, text) VALUES (?, ?)');
+  for (const r of rows) ins.run(r.rowid, bloeckeText(r.bloecke_json));
+  return rows.length;
+}
+
+/**
+ * fts_entscheide_schaufenster — STANDALONE (self-contained) FTS5. Die Ziel-Tabelle
+ * `entscheide` ist in E0+/E1/E2-Vorarbeiten LEER (befüllt erst E3), darum external
+ * content unmöglich → die 342 Schaufenster-Entscheide werden aus ihren Blob-Einträgen
+ * (`eintrag`-Tabelle der rechtsprechung.db) gespeist. Spalten: id/quelle_url UNINDEXED
+ * (Rückgabe/Join ohne Index), titel/regeste/text indexiert. Native `snippet()` ist hier
+ * verfügbar (Text physisch gespeichert). Insert-Reihenfolge = (pfad, idx) → deterministisch.
+ * @returns Zeilenzahl (== 342 Schaufenster).
+ */
+export function baueFtsEntscheideSchaufenster(db: DatabaseSync): number {
+  db.exec(
+    `CREATE VIRTUAL TABLE fts_entscheide_schaufenster USING fts5(id UNINDEXED, titel, regeste, text, quelle_url UNINDEXED, tokenize='${TOKENIZER}');`,
+  );
+  const rows = db.prepare('SELECT blob FROM eintrag ORDER BY pfad, idx').all() as Array<{ blob: string }>;
+  const ins = db.prepare(
+    'INSERT INTO fts_entscheide_schaufenster(id, titel, regeste, text, quelle_url) VALUES (?, ?, ?, ?, ?)',
+  );
+  for (const r of rows) {
+    const e = JSON.parse(r.blob) as {
+      id: string;
+      zitierung?: string;
+      nummer?: string;
+      regeste?: { text?: string };
+      abschnitte?: Abschnitt[];
+      quelleUrl?: string;
+    };
+    ins.run(
+      e.id,
+      e.zitierung ?? e.nummer ?? '',
+      e.regeste?.text ?? '',
+      abschnitteText(e.abschnitte),
+      e.quelleUrl ?? '',
+    );
+  }
+  return rows.length;
+}
+
+// ── COLD (E3, NICHT hier bauen) — nur Schema-Dokumentation (§11.5) ────────────────
+// fts_entscheide_masse entsteht mit dem BGer-Massen-Import (E3) auf dem Self-Host-VPS,
+// als STANDALONE FTS5 über den 191k+-Vollkorpus. Bleibt server-only, nie in die
+// Edge-Replika eingebettet (58-GB-Index sprengt jedes Edge-Budget). Ziel-DDL:
+//   CREATE VIRTUAL TABLE fts_entscheide_masse USING fts5(
+//     id UNINDEXED, titel, regeste, text, quelle_url UNINDEXED,
+//     tokenize='unicode61 remove_diacritics 2');
+export const MASSE_SCHEMA_DOKU =
+  "fts_entscheide_masse: cold, server-only, entsteht mit E3 (nicht build-time gebaut, §11.5).";
