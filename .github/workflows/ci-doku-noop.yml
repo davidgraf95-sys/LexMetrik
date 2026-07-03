@@ -1,0 +1,19 @@
+# ─── «Tore»-Zwilling für reine Doku-Änderungen ────────────────────────────────
+# ci.yml ignoriert **.md (paths-ignore) — seit «Tore …» ein Required-Check ist
+# (3.7.2026), wären reine .md-PRs sonst PERMANENT unmergbar (Check wird nie
+# gemeldet). Dieser Zwilling triggert INVERS (nur **.md) und meldet denselben
+# Job-Namen als No-op-Erfolg. GitHub-Standardmuster für required checks + paths.
+name: CI (Doku-No-op)
+
+on:
+  pull_request:
+    paths:
+      - '**.md'
+
+jobs:
+  tore:
+    # Job-Name MUSS exakt dem Required-Check-Kontext aus ci.yml entsprechen:
+    name: Tore (tsc · Tests · Lint · Build · Checks)
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Reine Doku-Änderung — Code-Tore nicht betroffen (Zwilling meldet grün)."
