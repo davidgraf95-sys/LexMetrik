@@ -9,6 +9,9 @@ import { KantenChip } from '../../components/verzahnung/KantenChip';
 import { MehrKante } from '../../components/verzahnung/MehrKante';
 import { usePaneSteuerung } from '../../components/layout/usePaneLayout';
 import type { LeitfallRef } from '../../lib/rechtsprechung/norm-index';
+import {
+  klassifiziereFassungsBezug, entscheidDatum, type ArtikelRevision,
+} from '../../lib/verzahnung/artikel-revisionen';
 import type { BrowseErlass } from '../../lib/normtext/browse-typen';
 import type { NormSnapshot } from '../../lib/normtext/typen';
 import { margStufeStil, fnTextMitLinks, romanFrei } from './helpers';
@@ -31,11 +34,15 @@ const LEITFAELLE_SICHTBAR = 5;
 // («Art. 957 OR») wandert als ?norm= an den Entscheid-Link — der EntscheidLeser
 // springt zur ERSTEN Erwägung, die den Artikel zitiert (Auftrag David 3.7.2026;
 // keine Fundstelle ableitbar → ehrlicher Seitenanfang, §8).
-const LeitfallZeile = memo(function LeitfallZeile({ refs, normZitat }: {
+const LeitfallZeile = memo(function LeitfallZeile({ refs, normZitat, revision }: {
   /** Leitfälle dieses Artikels aus dem erlass-lokalen Shard (Reader lädt einmal). */
   refs?: LeitfallRef[];
   /** Voll zitierfähige Norm («Art. 957 OR») für den Fundstellen-Sprung im Ziel. */
   normZitat: string;
+  /** Revision r(a) dieses Artikels (§V1c): undefined = unbekannt (⇒ still),
+   *  null = Urfassung (⇒ still), Objekt = letzte Textänderung. Ein Leitfall,
+   *  dessen Entscheiddatum VOR r(a) liegt, legt eine ältere Fassung aus → ↻-Glyph. */
+  revision?: ArtikelRevision | null;
 }) {
   const [alleAuf, setAlleAuf] = useState(false);
   const { oeffneDaneben, kannOeffnen, istOffen } = usePaneSteuerung();
@@ -56,10 +63,15 @@ const LeitfallZeile = memo(function LeitfallZeile({ refs, normZitat }: {
         // ?norm= trägt die Fundstellen-Absicht: das Ziel springt zur ersten
         // Erwägung, die diese Norm zitiert (Auflösung im EntscheidLeser, §5).
         const ziel = `/rechtsprechung/${encodeURIComponent(r.key)}?norm=${encodeURIComponent(normZitat)}`;
+        // §V1c: hat sich die Norm SEIT diesem Entscheid revidiert? Q1-sicher über
+        // die Entscheid-Präzision (BGE-Bandjahr-Platzhalter ⇒ strikter Jahresvergleich).
+        const revidiert = klassifiziereFassungsBezug(entscheidDatum(r.datum, r.gericht), revision) === 'revidiert'
+          ? (revision ?? null) : null;
         return (
           <span key={r.key} className="inline-flex items-center">
             <KantenChip to={ziel} label={r.zitierung}
               leitentscheid={r.leitcharakter === 'leitentscheid'}
+              revidiert={revidiert}
               titel={r.regesteKurz ?? r.zitierung} />
             {kannOeffnen && !istOffen(ziel) && (
               <button type="button" onClick={() => oeffneDaneben(ziel)}
@@ -83,11 +95,13 @@ const LeitfallZeile = memo(function LeitfallZeile({ refs, normZitat }: {
 // links «Art. N» als ruhiger Anker mit den Randtiteln darunter (rechtsbündig, nur die
 // gegenüber dem Vorartikel GEÄNDERTEN Stufen, `marg`), rechts der Serif-
 // Bestimmungstext. Ersetzt den früheren fliegenden Standort-Tracker. Reine Darstellung.
-export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, marg, margBasis, imTreffer, onSpringe, leitfaelle }: {
+export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, marg, margBasis, imTreffer, onSpringe, leitfaelle, revision }: {
   e: NormSnapshot; erlass: BrowseErlass; basisPfad: string; fussnoten?: Fussnote[]; fussnotenAuf: boolean; intern?: InternRefs;
   marg?: string[];
   /** Leitfälle dieses Artikels (Reader lädt den erlass-lokalen Shard einmal). */
   leitfaelle?: LeitfallRef[];
+  /** Revision r(a) dieses Artikels (§V1c) — an die LeitfallZeile durchgereicht. */
+  revision?: ArtikelRevision | null;
   // Absolute Tiefe der ERSTEN gezeigten Randtitel-Stufe (Delta-Offset). Damit
   // wird die Stufe einheitlich je absoluter Tiefe formatiert, auch wenn nur
   // die geänderten Stufen gezeigt werden. 0 (Default) = volle Kette (Suchsicht).
@@ -283,7 +297,7 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
           {/* LEITFÄLLE (§11.2): Bundesgerichtsentscheide zu genau diesem Artikel, lazy
               aus dem erlass-lokalen Shard. Verdrahtet das bisher tote proNormArtikel-
               Modell (norm-index.ts) sichtbar — vom Artikel direkt zur Rechtsprechung. */}
-          <LeitfallZeile refs={leitfaelle} normZitat={zitat} />
+          <LeitfallZeile refs={leitfaelle} normZitat={zitat} revision={revision} />
           {/* Fussnoten (Änderungs-/Quellenhistorie, AS/BBl klickbar): nur auf Wunsch
               (globaler Schalter in der Suchleiste). */}
           {fussnotenAuf && fussAnzeige.length > 0 && (

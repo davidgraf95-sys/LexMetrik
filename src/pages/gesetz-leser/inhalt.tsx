@@ -21,6 +21,7 @@ import { formatiereDatum, passtAufSuche, pfadZu } from './helpers';
 import { ArtikelLeser, SektionKopf, SektionBaumTOC, ErlassKopfBlock } from './parts';
 import { beiLeerlauf } from '../../lib/leerlauf';
 import { ladeLeitfallShard, normArtikelToken, type LeitfallShard } from '../../lib/rechtsprechung/norm-index';
+import { ladeRevisionShard, revisionFuerToken, type RevisionShard } from '../../lib/verzahnung/artikel-revisionen';
 
 // ─── Pane-Scoping-Helfer (B-2.5) — MODUL-Ebene = referenzstabil ────────────
 // Bewusst KEIN React Compiler im Projekt → in-Komponente definierte Funktionen
@@ -53,6 +54,11 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // Erlasse sind reine Renderer und erhalten ihre Treffer als Prop. Ergebnis an
   // den Erlass-Key gebunden (Pane-/Erlass-Wechsel liefert nie fremde Chips).
   const [leitfallShard, setLeitfallShard] = useState<{ key: string; shard: LeitfallShard | null } | null>(null);
+  // Revisions-Shard des Erlasses (V1c): Artikel-Token → Datum der letzten Text-
+  // änderung + AS-Fundstelle. EIN idle-Fetch auf Reader-Ebene wie der Leitfall-
+  // Shard; klassifiziert je Leitfall-Kante, ob sich die Norm SEIT dem Entscheid
+  // revidiert hat (Normrevisions-Ehrlichkeit, §V1c).
+  const [revisionShard, setRevisionShard] = useState<{ key: string; shard: RevisionShard | null } | null>(null);
   const [fehler, setFehler] = useState(false);
   const [suche, setSuche] = useState('');
   // Rank 9 (QS-PERF, §15/3): entprellter Suchwert. Das Eingabefeld bleibt sofort
@@ -85,6 +91,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     let lebt = true;
     const abbrechen = beiLeerlauf(() => {
       void ladeLeitfallShard(key).then((shard) => { if (lebt) setLeitfallShard({ key, shard }); });
+      void ladeRevisionShard(key).then((shard) => { if (lebt) setRevisionShard({ key, shard }); });
     });
     return () => { lebt = false; abbrechen(); };
   }, [erlass?.key]);
@@ -94,6 +101,14 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
       ? leitfallShard.shard?.proArtikel[normArtikelToken(artikel)]
       : undefined
   ), [erlass, leitfallShard]);
+  // Revision r(a) des AKTUELLEN Erlass-Artikels (§V1c): undefined = Shard
+  // fehlt/lädt/Erlass nicht abgedeckt (⇒ 'unbekannt'); null = Urfassung (⇒ 'gleich');
+  // Objekt = letzte Textänderung. Stabile Referenz aus dem Shard → memo-freundlich.
+  const revisionFuer = useCallback((artikel: string) => (
+    erlass && revisionShard?.key === erlass.key
+      ? revisionFuerToken(revisionShard.shard, artikel)
+      : undefined
+  ), [erlass, revisionShard]);
 
   const [offen, setOffen] = useState<Record<string, boolean>>({});
   // Eigener Auf-/Zu-Zustand NUR für den TOC-Baum (entkoppelt vom Fliesstext).
@@ -837,7 +852,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
           ...s.kinder.map((k) => ({ pos: sekPos.get(k.id) ?? Infinity, el: renderSektion(k, true, tiefe + 1) })),
           ...s.artikel.map((e) => ({
             pos: artIndex.get(e.artikel) ?? 0,
-            el: <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} marg={margAnzeige.get(e.artikel)?.teile} margBasis={margAnzeige.get(e.artikel)?.ab} leitfaelle={leitfaelleFuer(e.artikel)} />,
+            el: <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} marg={margAnzeige.get(e.artikel)?.teile} margBasis={margAnzeige.get(e.artikel)?.ab} leitfaelle={leitfaelleFuer(e.artikel)} revision={revisionFuer(e.artikel)} />,
           })),
         ].sort((a, b) => a.pos - b.pos)
       : [];
@@ -1044,14 +1059,14 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
           {treffer ? (
             <div className="space-y-4">
               <p className="text-body-s text-ink-500"><span className="num">{treffer.length}</span> Treffer für «{sucheDebounced.trim()}»</p>
-              {treffer.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} marg={struktur?.[e.artikel]?.marginalie} imTreffer onSpringe={springeZuArtikel} leitfaelle={leitfaelleFuer(e.artikel)} />)}
+              {treffer.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} marg={struktur?.[e.artikel]?.marginalie} imTreffer onSpringe={springeZuArtikel} leitfaelle={leitfaelleFuer(e.artikel)} revision={revisionFuer(e.artikel)} />)}
               {treffer.length === 0 && <p className="text-body-s text-ink-500">Kein Artikel gefunden.</p>}
             </div>
           ) : (
             <div className="space-y-2">
               {ohneGliederung.length > 0 && (
                 <div className="space-y-5 mb-6">
-                  {ohneGliederung.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} marg={margAnzeige.get(e.artikel)?.teile} margBasis={margAnzeige.get(e.artikel)?.ab} leitfaelle={leitfaelleFuer(e.artikel)} />)}
+                  {ohneGliederung.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} marg={margAnzeige.get(e.artikel)?.teile} margBasis={margAnzeige.get(e.artikel)?.ab} leitfaelle={leitfaelleFuer(e.artikel)} revision={revisionFuer(e.artikel)} />)}
                 </div>
               )}
               {sektionen.map((s) => renderSektion(s, true, 0))}

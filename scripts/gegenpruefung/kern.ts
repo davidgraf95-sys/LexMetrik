@@ -78,6 +78,14 @@ export function istRisikoPfad(p: string): boolean {
   if (p.startsWith('scripts/materialien/')) return true;
   if (/^public\/materialien\/[^/]+\.json$/.test(p)) return true;
   if (p.startsWith('public/materialien/kanten/')) return true;
+  // Verzahnung V1c (FAHRPLAN-VERZAHNUNG-UI §V1c): der Normrevisions-Extrakt liest die
+  // amtlichen Struktur-Fussnoten und leitet je Artikel das Revisionsdatum + AS ab =
+  // Extraktions-Risiko. Der Generator, die reine Parser-Logik und die committete
+  // Projektion (Shards) sind gebunden; die UI-Ladeschicht (artikel-revisionen.ts) ist
+  // Darstellung und bleibt aussen vor. check-Basenames sind über istPruefLogik ausgenommen.
+  if (p.startsWith('scripts/verzahnung/')) return true;
+  if (p === 'src/lib/verzahnung/revisionen-extrakt.ts') return true;
+  if (p.startsWith('public/verzahnung/artikel-revisionen/')) return true;
   // Rechnen
   if (/^src\/lib\/[^/]+\.ts$/.test(p) && RECHNEN_RE.test(basename(p))) return true;
   if (p.startsWith('src/lib/tarif/')) return true;
