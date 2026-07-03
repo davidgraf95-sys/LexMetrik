@@ -299,6 +299,24 @@ baut) übernommen:**
   DB-/Zustands-Manifest-IDs erzwingen (Pfad-Sicherheit der Shard-Dateien); (3) ISO-Validierung
   `entlistet_am` + Plausibilität `stand` (Monat ≤ 12, Tag ≤ 31).
 
+**Ausführungsvermerk M3 (4.7.2026):** M3 gebaut (Adapter `adapter-edoeb.ts`; DS-Hub Sektion
+«Leitfäden und Merkblätter» → 8 neue DSG-Dokumente, BGÖ-Hub Sektion «Öffentlichkeitsprinzip
+allgemein» → 2 neue BGOE-Dokumente; 10 Kanten Erlass-Ebene `quelle='kuratiert'`). Die M0-Vermerk-
+Posten (CI-Rebuild aus JSONL, Code-Unit-Sort, KEY_UNSICHER auf DB-IDs, ISO-Validierung) waren
+mit M2 (#127) bereits gelandet — verifiziert, nichts nachzutragen. **Eine offengelegte Abweichung
+von §2.6/§3 Q3 (Begründung §15 Funktions-Treue):** die vier bereits KURATIERTEN Dokumente der
+DS-Sektion (COOKIES/DATABREACH/TOM/DSFA) werden per Slug-Tabelle `KURIERT_BEKANNT` ÜBERSPRUNGEN
+statt in die DB migriert — «bestehender Key gewinnt» wörtlich: der kuratierte Eintrag bleibt
+massgeblich. Grund: die Norm-Kontext-Brücke (`materialienFuerNorm`) liest bis M5 NUR das
+in-Bundle-`MATERIAL_REGISTER`; eine Migration hätte die vier bis zum M5-Async-Loader aus dem
+Norm-Kontext-Panel entfernt (Prod-Regression). **Folge-Posten für M5:** Migration der vier in die
+DB nachziehen (dann artikelscharf DATABREACH → Art. 24 DSG; DSFA → Art. 22/23 DSG mit
+revDSG-Cutoff-Downgrade §2.4) — die Extraktions-/Downgrade-Mechanik ist gebaut und getestet,
+sie greift ab Migration bzw. für künftige neue Dokumente mit Artikel im Titel. Zusätzlich M3:
+Weiche-C-Seed `seedSoftLawDb` (DB-Rekonstruktion aus JSONL + committeten Shards vor dem Overlay
+der gecrawlten Quelle — ein Ein-Quellen-Snapshot verliert die Kanten der übrigen Quellen nicht
+mehr); EDÖB-Arbiter in `check:materialien-netz`; e2e `materialien-m3-edoeb.e2e.ts` (§7c-Beweis).
+
 ---
 
 ## §7 · Bewusst NICHT (Stufe 1)
