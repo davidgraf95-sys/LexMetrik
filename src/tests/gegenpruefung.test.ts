@@ -171,6 +171,13 @@ describe('Risiko-/Prüflogik-Prädikate', () => {
     expect(istRisikoPfad('scripts/normtext-snapshot.ts')).toBe(true);
     expect(istRisikoPfad('daten/normtext.db')).toBe(true);
     expect(istRisikoPfad('daten-manifest.json')).toBe(true);
+    // E6a Stufe 1: Materialien-Adapter/Projektion + committete Projektionen = Risiko-Pfad.
+    expect(istRisikoPfad('scripts/materialien/soft-law-projektion.ts')).toBe(true);
+    expect(istRisikoPfad('public/materialien/register.json')).toBe(true);
+    expect(istRisikoPfad('public/materialien/kanten/MWSTG.json')).toBe(true);
+    expect(istRisikoPfad('public/materialien/kanten/MWSTG/1.json')).toBe(true);
+    // public/materialien nur EINE Ebene für nackte *.json (kanten/** separat als Präfix)
+    expect(istRisikoPfad('public/materialien/liesmich.md')).toBe(false);
   });
 
   it('Prüflogik-Ausnahme sticht das Risiko (Set-Subtraktion)', () => {
@@ -186,6 +193,12 @@ describe('Risiko-/Prüflogik-Prädikate', () => {
     expect(istPruefLogik('scripts/datenhaltung/check-datenhaltung.ts')).toBe(true);
     expect(behalten('scripts/datenhaltung/check-datenhaltung.ts')).toBe(false);
     expect(behalten('scripts/datenhaltung/erlass-rows.ts')).toBe(true);
+    // E6a Stufe 1: check-materialien = Prüflogik (raus); Projektion/Register bleiben.
+    expect(istPruefLogik('scripts/materialien/check-materialien.ts')).toBe(true);
+    expect(behalten('scripts/materialien/check-materialien.ts')).toBe(false);
+    expect(behalten('scripts/materialien/soft-law-projektion.ts')).toBe(true);
+    expect(behalten('public/materialien/register.json')).toBe(true);
+    expect(behalten('public/materialien/kanten/MWSTG/1.json')).toBe(true);
   });
 });
 

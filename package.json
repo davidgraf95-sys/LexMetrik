@@ -41,7 +41,7 @@
     "check:bilder": "vite-node scripts/normtext/check-bilder.ts",
     "check:entscheide": "vite-node scripts/normtext/check-entscheide.ts",
     "check:materialien": "vite-node scripts/materialien/check-materialien.ts",
-    "materialien": "vite-node scripts/materialien/material-manifest-run.ts --",
+    "materialien": "vite-node scripts/materialien/soft-law-projektion-run.ts --",
     "check:normtext-netz": "vite-node scripts/normtext/check-drift.ts -- --netz",
     "entscheide": "vite-node scripts/normtext-entscheide.ts --",
     "entscheide:seed": "vite-node scripts/normtext/seed-aus-cache.ts --",
