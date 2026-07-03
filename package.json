@@ -68,6 +68,7 @@
     "datenhaltung:build": "vite-node scripts/datenhaltung/build.ts",
     "datenhaltung:manifest": "vite-node scripts/datenhaltung/check-datenhaltung.ts -- --schreibe",
     "datenhaltung:doppellauf": "vite-node scripts/datenhaltung/doppellauf.ts",
+    "datenhaltung:turso-sync": "vite-node scripts/datenhaltung/turso-sync.ts",
     "datenhaltung:stabilitaet": "vite-node scripts/datenhaltung/stabilitaets-report.ts",
     "check:gegenpruefung": "vite-node scripts/check-gegenpruefung.ts",
     "gegenpruefung:ok": "vite-node scripts/gegenpruefung-ok.ts --"
