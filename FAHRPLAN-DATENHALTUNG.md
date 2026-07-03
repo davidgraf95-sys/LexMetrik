@@ -475,11 +475,10 @@ OR/ZGB-Renumerierungen, bis/ter). Darum bei jedem neuen `erlass_fassungen`-Eintr
   nicht-erfassten Keys auf on-demand-Edge-Fetch zurück (§15.6). **Konkurriert um den freien
   26×-Slot mit W3·12 — Reihenfolge = Davids Entscheid.** = PLAN-OCL-ABBAU W12/F2.
   - **Vorbedingungen (harte Gates VOR Bau):**
-    1. **B2-POC inkl. Resolve-Pass-Messung (§6.2, Audit-1-B2)** — DuckDB vs. TS-Baseline (`hyparquet`
-       + `better-sqlite3`) an echten voilaj-Parquet; **zwei Aufgaben** (Bulk-Schreiben + voller
-       `resolve-zitate.ts`-Pass über 8,7M×991k via Match-Keys); Entscheidungsregel vorab fixiert
-       (DuckDB nur ≥ 3× schneller ODER TS scheitert an RAM/Robustheit). **Abgrenzung:** betrifft NUR
-       den Ingest-Transform-Weg; das §2-Artefakt-Verdikt (libSQL, kein DuckDB) bleibt entschieden.
+    1. **[x] B2-POC inkl. Resolve-Pass-Messung (§6.2, Audit-1-B2) — ERLEDIGT 3.7.2026, VERDIKT TS**
+       (`hyparquet` + `better-sqlite3`; DuckDB verworfen: Bulk 1,55× / Pipeline 1,92× < 3×, TS
+       scheitert nicht — Detail §6.2 + `bibliothek/register/B2-POC-2026-07-03.md`; dort auch die
+       bewährte E3-Mechanik: Row-Group-Streaming, PRAGMAs, Indizes nach Bulk, key_map-Resolve).
     2. **VPS-Angebot gegen die Posten-Tabelle (§6.3)** — reales Anbieter-Angebot (≥ 350 GB NVMe /
        ≥ 32 GB RAM), Kosten-POC, kein Bauchgefühl.
   - **Vertiefung:** `norm_referenzen` läuft MIT dem Import (entscheid-lokal, Regex schon im Adapter);
@@ -574,6 +573,22 @@ Dump-Manifest). TS-Baseline = `hyparquet` + `better-sqlite3`. **Entscheidungsreg
 nur, wenn ≥ 3× schneller ODER TS an RAM/Robustheit scheitert** — sonst gewinnt «eine Sprache im Ops-Pfad».
 Gegenindiz: voilaj selbst nutzt SQLite+FTS5, kein DuckDB. **Messfrage, kein Council-Thema.** Abgrenzung:
 betrifft NUR den Ingest-Transform-Weg; das §2-Artefakt-Verdikt (libSQL) bleibt entschieden.
+
+**[x] POC DURCHGEFÜHRT 3.7.2026 — VERDIKT: TS** (Detail + Mess-Tabelle:
+**`bibliothek/register/B2-POC-2026-07-03.md`**). Voll-massstäblich gemessen (voilaj-Revision
+`e2a0b95b…`: 195 342 Bundes-Entscheide + der KOMPLETTE Graph 8,7M Zitat- + 11,9M Norm-Kanten;
+je Arm 2 Läufe, beide Arme bitgleich-deterministisch): Bulk DuckDB **1,55×**, Pipeline gesamt
+**1,92×** schneller — unter der 3×-Schwelle; die Resolve-Teilaufgabe isoliert 3,65× (ehrlich
+ausgewiesen), trägt den Ein-Pfad-Entscheid nicht (Else-Zweig der Regel: DuckDB-nur-für-Resolve
+= per Konstruktion zwei Sprachen). TS scheitert NICHT an RAM/Robustheit — im Gegenteil:
+Peak-RSS TS 2,1 GB vs. DuckDB 5,5 GB; der DuckDB-Arm brauchte better-sqlite3 ohnehin
+(sqlite-Extension kann keine Indizes auf attached SQLite bauen) und eine SQL-Zweitimplementierung
+der Kanonisierung, die empirisch divergierte (NBSP: JS-`\s` matcht U+00A0, RE2-`\s` nicht —
+1/8,7M Kanten; Beleg für §3.1 «EINE Kanonisierung, nie zweitimplementieren»). **Zielrahmen klar
+erfüllt: TS-Resolve 32–38 SEKUNDEN.** Auflösungsquoten-Baseline Bund-Zuschnitt **0,823**
+(bge_bare 1,000 · bge_norm 0,992 · docket_norm 0,808 · bge_pincite 0,038 — Binnenseiten-Zitate,
+E4-Option Seitenbereich-Lookup). E3-Vorbedingung 1 damit erfüllt; vor E3 offen nur noch
+Vorbedingung 2 (VPS-Angebot, §6.3). Parquet-Arbeitskopie liegt als E3-Rohstoff in `daten/poc/`.
 
 ### 6.3 Selbst-Hosting-Dimensionierung + Kosten (Posten einzeln — vertieft §9)
 
