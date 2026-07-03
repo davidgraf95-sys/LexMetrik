@@ -39,9 +39,12 @@ test.describe('Verweis-Präzision — BGE 151 III 377', () => {
   test('Teil 2b: «Art. 679 ZGB»-Chip springt zur Immissions-Passage E. 2.3.1', async ({ page }) => {
     const fehler = fehlerSammeln(page)
     await page.goto(FALL)
-    const chips = page.locator('section[aria-label="Zitierte Normen"]')
-    await expect(chips).toBeVisible()
-    const chip = chips.getByRole('button', { name: /^Art\.\s*679 ZGB$/ })
+    // V1.3 (W2·7-VZUI §2.2, deklarierte Änderung): die «Zitierte Normen»-Gruppe
+    // lebt jetzt am Dokumentfuss im Kontext-Panel (§0-1d — Regeste bleibt oben);
+    // der Fundstellen-Sprung selbst ist unverändert.
+    const kontext = page.locator('section[aria-labelledby="kontext-titel"]')
+    const chip = kontext.getByRole('button', { name: /^Art\.\s*679 ZGB$/ })
+    await chip.scrollIntoViewIfNeeded()
     await expect(chip).toBeVisible()
     await chip.click()
     // E. 2.3.1 (erste Nennung von Art. 679, via «Art. 684 i.V.m. Art. 679 ZGB»)
