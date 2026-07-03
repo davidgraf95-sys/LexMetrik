@@ -175,6 +175,7 @@ Doktrin «Quell-Wahl zuerst»: strukturiert (JSON/API/Sitemap/RSS) > server-gere
 | 9 | BAG Kreisschreiben KV | tief (nur 18 Dok.) | hoch | Mini-Ergänzung zu BSV |
 | 10 | BJ Gutachten | tief | tief (keine Taxonomie) | später, einzelfallweise |
 | — | VPB | — | — | tot; höchstens Archiv-Korpus via Bundesarchiv |
+| **3½** *(Nachtrag 3.7., David-Input)* | **EDÖB Leitfäden/Merkblätter (DSG/BGÖ)** | hoch (DSG = Querschnittsmaterie für ALLE Zielgruppen; Kanzlei-Dauerthema) | **hoch** — statisches HTML, `sitemap.xml` de/fr/it, Hubs `dokumentation-datenschutz`/`-bgoe`; Leitfäden teils HTML-Volltext (TOM, Cookies, DSFA, Vereine), Rest PDF | live sondiert 3.7.2026 (200er, kein Akamai-Block); Norm-Anker DSG/DSV/BGÖ in den Leitfäden explizit → Norm-Mapping machbar; einsortiert zwischen Rang 3 und 4 |
 
 ## (b) Empfohlene Andockpunkte der Top 3
 
