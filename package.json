@@ -74,6 +74,8 @@
     "datenhaltung:turso-sync": "vite-node scripts/datenhaltung/turso-sync.ts",
     "datenhaltung:masse-ingest": "vite-node scripts/datenhaltung/masse-ingest.ts",
     "datenhaltung:resolve-zitate": "vite-node scripts/datenhaltung/resolve-zitate.ts",
+    "datenhaltung:baue-rangliste": "vite-node scripts/datenhaltung/baue-rangliste.ts",
+    "datenhaltung:rangliste-oracle": "vite-node scripts/datenhaltung/check-rangliste-oracle.ts",
     "datenhaltung:masse-invarianten": "vite-node scripts/datenhaltung/masse-invarianten.ts",
     "datenhaltung:stabilitaet": "vite-node scripts/datenhaltung/stabilitaets-report.ts",
     "check:gegenpruefung": "vite-node scripts/check-gegenpruefung.ts",
