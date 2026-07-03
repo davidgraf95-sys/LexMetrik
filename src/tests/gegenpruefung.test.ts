@@ -171,6 +171,15 @@ describe('Risiko-/Prüflogik-Prädikate', () => {
     expect(istRisikoPfad('scripts/normtext-snapshot.ts')).toBe(true);
     expect(istRisikoPfad('daten/normtext.db')).toBe(true);
     expect(istRisikoPfad('daten-manifest.json')).toBe(true);
+    // QS-CURRENCY (3.7.2026): Fedlex-Pin-Mechanik im scripts/-Root = Risiko-Pfad
+    // (Loch-Schliessung: cache.sh-/Pin-Parser-Edits triggerten das Tor vorher NICHT).
+    expect(istRisikoPfad('scripts/fedlex-cache.sh')).toBe(true);
+    expect(istRisikoPfad('scripts/fedlex-pins.ts')).toBe(true);
+    expect(istRisikoPfad('scripts/fedlex-eli-aufloesen.ts')).toBe(true);
+    expect(istRisikoPfad('scripts/fedlex-versionen-pruefen.ts')).toBe(true);
+    // istPruefLogik sticht bewusst NICHT (Basename ohne «check»):
+    expect(istPruefLogik('scripts/fedlex-versionen-pruefen.ts')).toBe(false);
+    expect(istPruefLogik('scripts/fedlex-cache.sh')).toBe(false);
   });
 
   it('Prüflogik-Ausnahme sticht das Risiko (Set-Subtraktion)', () => {

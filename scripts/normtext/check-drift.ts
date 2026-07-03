@@ -31,6 +31,7 @@ import { holePdf, PDF_PROFILE } from './adapter-pdf.ts';
 import { pdfLawIdSafe } from './lawid-safe.ts';
 import { pruefeBundFassung, pruefeBundVollstaendigkeit } from './drift-logik.ts';
 import type { NormSnapshot } from './drift-logik.ts';
+import { ERLASS_REGISTER } from '../../src/lib/normtext/register.ts';
 
 // lawIdSafe für HTM-Quellen (kongruent zu normtext-snapshot.ts).
 function htmLawIdSafe(url: string): string {
@@ -150,6 +151,24 @@ async function main(): Promise<void> {
     console.error('\nFEHLER Bund-Vollständigkeit: Pflicht-Anker ohne Snapshot:');
     for (const id of fehlend) {
       console.error(`  ${id}`);
+    }
+    exitCode = 1;
+  }
+
+  // ─── Prüfung 2b: Pin-Coverage (offline, QS-CURRENCY 3.7.2026) ──────────────
+  // Jeder Bund-Volltext-Erlass (status 'snapshot') MUSS einen fedlex-cache.sh-Pin
+  // tragen — sonst ist er für den Currency-Arbiter check:fedlex-versionen
+  // strukturell unsichtbar (Befund Gap-Report 2.7.2026: 11 Volltexte sahen
+  // gepinnt aus, waren aber durch die alte Parser-Regex [a-z_]+ blind).
+  // Dauerhafter Wächter statt Einmal-Lauf; pdf-embed/nur-live-link sind
+  // ausgenommen (pdf-embed-Currency prüft check:pdf-netz über PDF_EMBED_QUELLEN).
+  const ohnePin = ERLASS_REGISTER.filter(
+    (e) => e.ebene === 'bund' && e.status === 'snapshot' && !cacheMap.has(e.key.toLowerCase()),
+  );
+  if (ohnePin.length > 0) {
+    console.error('\nFEHLER Pin-Coverage: Bund-Volltext ohne fedlex-cache.sh-Pin (Currency-blind):');
+    for (const e of ohnePin) {
+      console.error(`  ${e.key} (SR ${e.sr ?? '?'}) — Zeile in scripts/fedlex-cache.sh ergänzen`);
     }
     exitCode = 1;
   }

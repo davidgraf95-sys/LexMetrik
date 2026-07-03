@@ -50,10 +50,14 @@ const ENTITY_RE = /&[a-z]+;|&#\d+;/i;
 // nicht, aber jede NEUE Stelle / jede Zunahme in einem bekannten Artikel schlägt an.
 const ARTEFAKT_RE = /\[tab\]|data-message/i;
 // Artikel-Schlüssel (`gesetz|id`) → erwartete Artefakt-Trefferzahl (Bestand 2.7.2026,
-// 23 Stellen / 13 Artikel; HTML-seitiger Alt-Bug, kontrollierte Sanierung = eigener
-// Folge-Batch). Artikel-Ebene statt Block-Index = robust gegen Index-Verschiebung.
+// 23 Stellen / 13 Artikel + 1 Stelle ASYLV2 art_41 [QS-CURRENCY-Re-Pin 3.7.2026,
+// Fedlex-Quelle trägt das `<span data-message="E40S10-TAB">[tab]</span>`-Artefakt
+// vor der Pauschalbeitrags-Formel selbst]; HTML-seitiger Alt-Bug, kontrollierte
+// Sanierung = eigener Folge-Batch). Artikel-Ebene statt Block-Index = robust gegen
+// Index-Verschiebung.
 export const ARTEFAKT_ERWARTET: ReadonlyMap<string, number> = new Map([
   ['AHVG|bund/AHVG/art_3', 1],
+  ['ASYLV2|bund/ASYLV2/art_41', 1],
   ['AHVV|bund/AHVV/art_6', 1],
   ['AVO|bund/AVO/art_216', 2],
   ['BPV|bund/BPV/art_116', 1],
@@ -70,7 +74,7 @@ export const ARTEFAKT_ERWARTET: ReadonlyMap<string, number> = new Map([
 // Text, der mit einem freistehenden lat. Zähl-Suffix + Trenner beginnt (der
 // N1-Leak «a bis .» → Text «bis . …»). Nur am ANFANG, gefolgt von Punkt/Klammer,
 // damit legitime Sätze mit «bis» («… bis zum Ende …») nicht getroffen werden.
-const SUFFIX_LEAK_RE = /^(?:bis|ter|quater|quinquies|sexies)\s*[.)]/i;
+const SUFFIX_LEAK_RE = /^(?:bis|ter|quater|quinquies|sexies|septies|octies|novies|decies)\s*[.)]/i;
 
 function pruefeText(
   gesetz: string,

@@ -64,6 +64,13 @@ export function istRisikoPfad(p: string): boolean {
   // Extraktion
   if (p.startsWith('scripts/normtext/')) return true;
   if (p === 'scripts/normtext-snapshot.ts' || p === 'scripts/normtext-entscheide.ts') return true;
+  // Fedlex-Pin-Mechanik (QS-CURRENCY 3.7.2026): cache.sh-Pins + Pin-Parser sind
+  // Currency-Wahrheit für den ganzen Bund-Korpus — ein Pin-/Regex-Fehler liefert
+  // still veraltetes Recht aus (Befund: parser-blinde Ziffern-Pins waren
+  // unüberwacht). Die Root-Dateien scripts/fedlex-* waren vorher NICHT erfasst.
+  // Bewusst auch fedlex-versionen-pruefen.ts (Basename ohne «check»): ein
+  // stiller Monitoring-Bug = stilles Veralten, kein reiner Prüflogik-Fall.
+  if (p.startsWith('scripts/fedlex-')) return true;
   if (p.startsWith('src/lib/normtext/')) return true;
   // QS-DATA (FAHRPLAN-DATENHALTUNG §4/§5 E1): Datenhaltungs-Schicht = Extraktion/Projektion
   // = Risiko-Pfad. Das Dump-Manifest bindet den DB-Zustand mit (Drift-Anker).

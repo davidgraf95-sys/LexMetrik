@@ -167,7 +167,7 @@ export function extrahiereArtikelAusAnker(html: string, ankerRoh: string): Artik
   // INNEREN — </dl> und verlor lit-Ebene + Einleitung (Bug 25.6.2026, §1).
   const bloeckeUndListenRe = new RegExp(
     '<p[^>]*\\bclass="[^"]*\\babsatz\\b[^"]*"[^>]*>([\\s\\S]*?)</p>' +
-      `|<p[^>]*>((?:\\s|&nbsp;|<\\/?inl>)*<sup\\b[^>]*>\\d+(?:bis|ter|quater|quinquies)?[a-z]?</sup>${NICHT_P})</p>` +
+      `|<p[^>]*>((?:\\s|&nbsp;|<\\/?inl>)*<sup\\b[^>]*>\\d+(?:bis|ter|quater|quinquies|sexies|septies|octies|novies|decies)?[a-z]?</sup>${NICHT_P})</p>` +
       `|<p[^>]*>(${NICHT_P})</p>(?=\\s*<dl)` +
       '|(<dl[^>]*>)' +
       '|<table[^>]*>([\\s\\S]*?)</table>' +
@@ -222,7 +222,7 @@ export function extrahiereArtikelAusAnker(html: string, ankerRoh: string): Artik
       // Regex, die die erkannte Absatz-Nummer (ein ODER — bei gespaltenem Suffix —
       // zwei <sup>) vom Roh-Text abtrennt. Default deckt den Ein-<sup>-Fall.
       let absatzNrStrip =
-        /^(?:\s|&nbsp;|<\/?inl>)*<sup[^>]*>\d+(?:bis|ter|quater|quinquies)?[a-z]?<\/sup>(?:&nbsp;|\s|<\/?inl>)*/i;
+        /^(?:\s|&nbsp;|<\/?inl>)*<sup[^>]*>\d+(?:bis|ter|quater|quinquies|sexies|septies|octies|novies|decies)?[a-z]?<\/sup>(?:&nbsp;|\s|<\/?inl>)*/i;
       if (supMatch && !/<a[\s>]/i.test(supMatch[1])) {
         const supInhalt = supMatch[1].trim();
         // GESPALTENES Suffix ZUERST prüfen: Fedlex trennt Ziffer und lat. Suffix in
@@ -254,12 +254,12 @@ export function extrahiereArtikelAusAnker(html: string, ankerRoh: string): Artik
           split &&
           !istBereich &&
           !/<a[\s>]/i.test(split[2]) &&
-          /^(?:bis|ter|quater|quinquies|[a-z])$/i.test(split[2].trim())
+          /^(?:bis|ter|quater|quinquies|sexies|septies|octies|novies|decies|[a-z])$/i.test(split[2].trim())
         ) {
           absatz = split[1] + split[2].trim();
           absatzNrStrip =
-            /^(?:\s|&nbsp;|<\/?inl>)*<sup[^>]*>\s*\d+\s*<\/sup>(?:&nbsp;|\s|<\/?inl>)*<sup[^>]*>\s*(?:bis|ter|quater|quinquies|[a-z])\s*<\/sup>(?:&nbsp;|\s|<\/?inl>)*/i;
-        } else if (/^\d+(?:bis|ter|quater|quinquies)?[a-z]?$/.test(supInhalt)) {
+            /^(?:\s|&nbsp;|<\/?inl>)*<sup[^>]*>\s*\d+\s*<\/sup>(?:&nbsp;|\s|<\/?inl>)*<sup[^>]*>\s*(?:bis|ter|quater|quinquies|sexies|septies|octies|novies|decies|[a-z])\s*<\/sup>(?:&nbsp;|\s|<\/?inl>)*/i;
+        } else if (/^\d+(?:bis|ter|quater|quinquies|sexies|septies|octies|novies|decies)?[a-z]?$/.test(supInhalt)) {
           // Ein-<sup>-Fall (unverändert): «<sup>1bis</sup>» / «<sup>2</sup>».
           absatz = supInhalt;
         }
@@ -427,6 +427,8 @@ function parseDefinitionsListe(
     const markeRoh = dekodiereEntities(dtOhneFn.replace(/<[^>]+>/g, '')).trim();
     // «a.» / «17.» / «a)» → nackte Marke ohne Punkt/Klammer.
     // Bug-Audit 19.6.2026: lat. Suffix bis/ter/quater/quinquies erhalten (sonst
+    // QS-CURRENCY 3.7.2026: Vokabular bis decies erweitert (F2-Befund Gegenprüfung:
+    // BPV art_116_m Abs. 3sexies/3septies leakten als absatz:null in den Text).
     // «cbis»→«c», «1bis»→«1b»). Suffix VOR optionalem Buchstaben (wie ABS-Regex).
     // M13-Annex (Gegenprüfung), NUR im Anhang-Pfad (anhang): (a) MEHRTEILIGE Ziffern
     // «1.1.1»/«211.1» (Anhänge nummerieren tief gepunktet) komplett erfassen —
@@ -436,8 +438,8 @@ function parseDefinitionsListe(
     // («Flupo:», «SEM:») auf den ersten Buchstaben und kollabierte Legenden-Schlüssel.
     // Der Haupttext-/Schlusstitel-Pfad nutzt die ALTE Regex → byte-gleich (§6).
     const markeMatch = anhang
-      ? markeRoh.match(/^([0-9]+(?:\.[0-9]+)*(?:bis|ter|quater|quinquies)?[a-z]?|[a-z](?:bis|ter|quater|quinquies)?(?=[.)\s]|$))\s*[.)]?/i)
-      : markeRoh.match(/^([0-9]+(?:bis|ter|quater|quinquies)?[a-z]?|[a-z](?:bis|ter|quater|quinquies)?)\s*[.)]?/i);
+      ? markeRoh.match(/^([0-9]+(?:\.[0-9]+)*(?:bis|ter|quater|quinquies|sexies|septies|octies|novies|decies)?[a-z]?|[a-z](?:bis|ter|quater|quinquies|sexies|septies|octies|novies|decies)?(?=[.)\s]|$))\s*[.)]?/i)
+      : markeRoh.match(/^([0-9]+(?:bis|ter|quater|quinquies|sexies|septies|octies|novies|decies)?[a-z]?|[a-z](?:bis|ter|quater|quinquies|sexies|septies|octies|novies|decies)?)\s*[.)]?/i);
     const marke = markeMatch ? markeMatch[1].toLowerCase() : markeRoh.replace(anhang ? /[.):]\s*$/ : /[.)]\s*$/, '');
 
     const ddVorListe = subDlIdx >= 0 ? ddRoh.slice(0, subDlIdx) : ddRoh;
@@ -458,7 +460,7 @@ function parseDefinitionsListe(
       // (Inline-Tags leerzeichenlos) — «14<i>a</i>» im <dt>-Text bleibt «14a».
       const dtTextRoh = entferneTags(dtOhneFn);
       const nachMarke = dtTextRoh.replace(
-        /^[0-9]+(?:bis|ter|quater|quinquies)?[a-z]?\s*[.)]?\s*|^[a-z](?:bis|ter|quater|quinquies)?\s*[.)]?\s*/i,
+        /^[0-9]+(?:bis|ter|quater|quinquies|sexies|septies|octies|novies|decies)?[a-z]?\s*[.)]?\s*|^[a-z](?:bis|ter|quater|quinquies|sexies|septies|octies|novies|decies)?\s*[.)]?\s*/i,
         '',
       ).trim();
       if (nachMarke) text = nachMarke;
@@ -1192,12 +1194,12 @@ export function extrahiereAnhang(html: string, ankerRoh: string): AnhangText | n
       // Absatznummer: führendes nacktes <sup>N</sup> (ohne <a>-Kind).
       const supMatch = roh.match(/^(?:\s|&nbsp;|<\/?inl>)*<sup(?:[^>]*)>([\s\S]*?)<\/sup>/i);
       let absatz: string | null = null;
-      if (supMatch && !/<a[\s>]/i.test(supMatch[1]) && /^\d+(?:bis|ter|quater|quinquies)?[a-z]?$/.test(supMatch[1].trim())) {
+      if (supMatch && !/<a[\s>]/i.test(supMatch[1]) && /^\d+(?:bis|ter|quater|quinquies|sexies|septies|octies|novies|decies)?[a-z]?$/.test(supMatch[1].trim())) {
         absatz = supMatch[1].trim();
       }
       const ohneFootnotes = entferneFussnotenSups(roh);
       const ohneAbsatzNr = absatz
-        ? ohneFootnotes.replace(/^(?:\s|&nbsp;|<\/?inl>)*<sup[^>]*>\d+(?:bis|ter|quater|quinquies)?[a-z]?<\/sup>(?:&nbsp;|\s|<\/?inl>)*/i, '')
+        ? ohneFootnotes.replace(/^(?:\s|&nbsp;|<\/?inl>)*<sup[^>]*>\d+(?:bis|ter|quater|quinquies|sexies|septies|octies|novies|decies)?[a-z]?<\/sup>(?:&nbsp;|\s|<\/?inl>)*/i, '')
         : ohneFootnotes;
       const text = entferneTags(ohneAbsatzNr).replace(/\s+([.,;:])/g, '$1').trim();
       if (text) bloecke.push({ absatz, text });

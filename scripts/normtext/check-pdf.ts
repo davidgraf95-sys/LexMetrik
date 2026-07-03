@@ -48,7 +48,7 @@ if (netz && fehler.length === 0) {
     const idx = index[q.key];
     // (a) Live-PDF-sha == hinterlegt (15s-Timeout — kein stilles Hängen, §8)
     try {
-      const res = await fetch(pdfaUrl(q.eli, q.kons), { signal: AbortSignal.timeout(15_000) });
+      const res = await fetch(pdfaUrl(q.eli, q.kons, q.pdfN), { signal: AbortSignal.timeout(15_000) });
       if (!res.ok) { fehler.push(`${q.key}: Live-pdf-a HTTP ${res.status}`); }
       else {
         const sha = createHash('sha256').update(Buffer.from(await res.arrayBuffer())).digest('hex');
@@ -57,8 +57,14 @@ if (netz && fehler.length === 0) {
     } catch (e) { fehler.push(`${q.key}: Live-Fetch ${e instanceof Error ? e.message : e}`); }
     // (b) gepinnte Konsolidierung == geltende (SPARQL, Currency-Arbiter). LEERES
     //     Resultat = ROT (Currency nicht verifizierbar) — kein stilles Bestehen (§8).
+    //     FIX 3.7.2026 (QS-CURRENCY): Die alte notation-Join-Query lieferte ein
+    //     kartesisches Produkt (mehrere Taxonomie-Entries × Konsolidierungen) und
+    //     wurde vom LIMIT 300 STILL abgeschnitten — die neuesten Daten fehlten,
+    //     EMRK-Pin 20050323 bestand fälschlich GRÜN (Partial-Result-Falle).
+    //     Neu: direkt über das ELI-Abstract (wie fedlex-versionen-pruefen.ts),
+    //     DISTINCT, ohne Join — wenige Dutzend Zeilen, kein Truncation-Risiko.
     try {
-      const body = `query=${encodeURIComponent(`PREFIX jolux:<http://data.legilux.public.lu/resource/ontology/jolux#> PREFIX skos:<http://www.w3.org/2004/02/skos/core#> SELECT ?date WHERE { ?cc a jolux:ConsolidationAbstract ; jolux:classifiedByTaxonomyEntry ?e . ?e skos:notation ?sr . FILTER(str(?sr)="${q.sr}") OPTIONAL { ?c jolux:isMemberOf ?cc ; jolux:dateApplicability ?date . } } LIMIT 300`)}`;
+      const body = `query=${encodeURIComponent(`PREFIX jolux:<http://data.legilux.public.lu/resource/ontology/jolux#> SELECT DISTINCT ?date WHERE { ?c jolux:isMemberOf <https://fedlex.data.admin.ch/eli/${q.eli}> ; jolux:dateApplicability ?date . }`)}`;
       const r = await fetch(ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded', Accept: 'application/sparql-results+json' }, body, signal: AbortSignal.timeout(15_000) });
       const bnd = ((await r.json()) as { results: { bindings: Array<{ date?: { value: string } }> } }).results.bindings;
       const daten = [...new Set(bnd.filter((b) => b.date).map((b) => b.date!.value.slice(0, 10)))].sort();

@@ -13,6 +13,21 @@ set -u
 BASIS="https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli"
 
 # gesetz|eli|konsolidierung|html-N|pflicht-anker (kommagetrennt)
+#
+# ── Currency-Batch QS-CURRENCY 3.7.2026 (Fedlex-Portfolio Paket 1): 18 Re-Pins ──
+# kvg/kvv/svg/rpg/klv/vrv/ssv/rpv/vts/mepv/bpv/vil/fdv → 20260701 · argv2 → 20260201 ·
+# asylv1/2/3 → 20260612 · icao → 20260612. Je Erlass: geltende Konsolidierung via SPARQL
+# (dateApplicability ≤ heute) UND kanonisches html-N via jolux:isExemplifiedBy aufgelöst
+# (OR-Falle: gleiche Kons kann mehrere HTML-Varianten tragen; kanonisch belegt sind
+# kvv=1, rpg=2, klv=8, vrv=8, ssv=14 [!], rpv=2, mepv=1, icao=1 — ssv/klv/vrv liegen
+# AUSSERHALB des Fallback-Bereichs -1..-5, das N-Feld ist dort load-bearing).
+# Artikel-Diff alt→neu je Erlass: KEIN Artikel-Verlust; nur Ergänzungen (Revisionen
+# per 1.7.2026, u. a. kvg +46a/54a-c/56a, kvv +59c bis-quater/75a-f, rpg +5a/8c/8d/18bis/
+# 24f/38b/38c, ssv +54b/54c/72b/87a/87b/89a/89b/103a/117e, svg +25a-h) und
+# eId-Reshuffles ohne Textverlust (asylv2 disp_N→disp_uN + Merge-Schreibweisen
+# art_13__15_→art_13_15; svg disp_u2/art_108→art_108; vil art_27_b_bis→art_27_bbis;
+# vrv annex_I_I→annex_II; asylv3/rpv annex_u1→annex_N). Beleg: bibliothek/register/
+# fedlex-currency-2026-07-03.md (Stichproben-Wortlaute + Inventare).
 EINTRAEGE=(
   "or|cc/27/317_321_377|20260101|4|art_11,art_32,art_77,art_104,art_216,art_324_a,art_335_c,art_336_c,art_396,art_493|220"
   # Re-Pin 20260101→20260701 (§7-Nachverifikation 1.7.2026, AS 2026 94 gewaltfreie
@@ -99,10 +114,10 @@ EINTRAEGE=(
   # Wechsel des Versicherers, Art. 64a Abs. 6 Ausstands-Sperre; 20260101 =
   # neuste echte Konsolidierung, 202602–202606 liefern nur die SPA-Shell;
   # Datei OHNE -N-Suffix. Dossier kvg-grundversicherung-kuendigung.md).
-  "kvg|cc/1995/1328_1328_1328|20260101|0|art_7,art_62,art_64_a|832.10"
+  "kvg|cc/1995/1328_1328_1328|20260701|0|art_7,art_62,art_64_a|832.10"
   # KVV: gepinnt 11.6.2026 (besondere Versicherungsformen: Art. 94 Abs. 2 /
   # Art. 100 Abs. 3 — Wechsel nur auf Jahresende, Fassung AS 2024 697).
-  "kvv|cc/1995/3867_3867_3867|20260101|0|art_94,art_99,art_100|832.102"
+  "kvv|cc/1995/3867_3867_3867|20260701|1|art_94,art_99,art_100|832.102"
   # ── Erweiterung 17.6.2026 (jedes zitierte Bundesgesetz mit Volltext-Snapshot,
   # Auftrag David). ELI + geltende Konsolidierung via Fedlex-SPARQL ermittelt,
   # SR-Nr. + Pflicht-Anker am Filestore-HTML empirisch verifiziert (§7). Alle n=0.
@@ -110,7 +125,7 @@ EINTRAEGE=(
   "urg|cc/1993/1798_1798_1798|20250701|0|art_17|231.1"
   "bewg|cc/1984/1148_1148_1148|20230701|0|art_2,art_5,art_18|211.412.41"
   "eog|cc/1952/1021_1046_1050|20260601|0|art_16_c|834.1"
-  "svg|cc/1959/679_705_685|20250401|0|art_65|741.01"
+  "svg|cc/1959/679_705_685|20260701|0|art_65|741.01"
   "dsg|cc/2022/491|20250707|0|art_25|235.1"
   "bbg|cc/2003/674|20250301|0|art_14|412.10"
   # GBV/JStPO ergänzt 17.6.2026. GBV: neuste Konsolidierung MIT Filestore-HTML
@@ -143,7 +158,7 @@ EINTRAEGE=(
   "bvg|cc/1983/797_797_797|20250101|0|art_1|831.40"
   "uvg|cc/1982/1676_1676_1676|20260101|0|art_1|832.20"
   "avig|cc/1982/2184_2184_2184|20260101|0|art_1|837.0"
-  "rpg|cc/1979/1573_1573_1573|20260401|0|art_1|700"
+  "rpg|cc/1979/1573_1573_1573|20260701|2|art_1|700"
   "usg|cc/1984/1122_1122_1122|20260401|0|art_1|814.01"
   "vgg|cc/2006/352|20260612|0|art_1|173.32"
   "bgfa|cc/2002/153|20250701|0|art_1|935.61"
@@ -204,20 +219,20 @@ EINTRAEGE=(
   "uvv|cc/1983/38_38_38|20260101|0|art_1|832.202"
   "aviv|cc/1983/1205_1205_1205|20260101|0|art_1|837.02"
   "atsv|cc/2002/569|20240101|0|art_1|830.11"
-  "klv|cc/1995/4964_4964_4964|20260511|0|art_1|832.112.31"
+  "klv|cc/1995/4964_4964_4964|20260701|8|art_1|832.112.31"
   "mwstv|cc/2009/828|20250101|0|art_1|641.201"
   "vstv|cc/1966/1585_1641_1624|20250101|0|art_1|642.211"
   "vzae|cc/2007/759|20260612|0|art_1|142.201"
-  "vrv|cc/1962/1364_1409_1420|20260401|0|art_1|741.11"
+  "vrv|cc/1962/1364_1409_1420|20260701|8|art_1|741.11"
   "vzv|cc/1976/2423_2423_2423|20260101|0|art_1|741.51"
-  "ssv|cc/1979/1961_1961_1961|20250701|0|art_1|741.21"
+  "ssv|cc/1979/1961_1961_1961|20260701|14|art_1|741.21"
   "dsv|cc/2022/568|20251201|0|art_1|235.11"
   "argv1|cc/2000/243|20240901|0|art_1|822.111"
   "bewv|cc/1984/1164_1164_1164|20240301|0|art_1|211.412.411"
   "buev|cc/2016/405|20190709|0|art_1|141.01"
   "fzv|cc/1994/2399_2399_2399|20240301|0|art_1|831.425"
   "kov|cc/27/751_749_771|20210801|0|art_1|281.32"
-  "rpv|cc/2000/310|20260520|0|art_1|700.1"
+  "rpv|cc/2000/310|20260701|2|art_1|700.1"
   "vbb|cc/1996/2877_2877_2877|20160101|0|art_1|281.31"
   "voeb|cc/2020/127|20230901|0|art_1|172.056.11"
   "vzg|cc/36/425_433_469|20120101|0|art_1|281.42"
@@ -225,14 +240,14 @@ EINTRAEGE=(
   "mvv|cc/1993/3080_3080_3080|20260101|0|art_1|833.11"
   "eov|cc/2005/187|20260601|0|art_1|834.11"
   "famzv|cc/2008/52|20250101|0|art_1|836.21"
-  "argv2|cc/2000/244|20251201|0|art_1|822.112"
+  "argv2|cc/2000/244|20260201|0|art_1|822.112"
   "argv3|cc/1993/2553_2553_2553|20240901|0|art_1|822.113"
   "argv4|cc/1993/2564_2564_2564|20150501|0|art_1|822.114"
   "vev|cc/2018/493|20260612|0|art_1|142.204"
   "vinta|cc/2018/511|20251201|0|art_1|142.205"
-  "asylv1|cc/1999/359|20260101|0|art_1|142.311"
-  "asylv2|cc/1999/360|20220101|0|art_1|142.312"
-  "asylv3|cc/1999/361|20240601|0|art_1|142.314"
+  "asylv1|cc/1999/359|20260612|0|art_1|142.311"
+  "asylv2|cc/1999/360|20260612|0|art_1|142.312"
+  "asylv3|cc/1999/361|20260612|0|art_1|142.314"
   "gschv|cc/1998/2863_2863_2863|20251201|0|art_1|814.201"
   "lrv|cc/1986/208_208_208|20260101|0|art_1|814.318.142.1"
   "lsv|cc/1987/338_338_338|20260401|0|art_1|814.41"
@@ -240,7 +255,7 @@ EINTRAEGE=(
   "chemv|cc/2015/366|20260424|0|art_1|813.11"
   "nhv|cc/1991/249_249_249|20250801|0|art_1|451.1"
   "wav|cc/1992/2538_2538_2538|20250801|0|art_1|921.01"
-  "vts|cc/1995/4425_4425_4425|20260430|0|art_1|741.41"
+  "vts|cc/1995/4425_4425_4425|20260701|0|art_1|741.41"
   "bankv|cc/2014/273|20250101|0|art_1|952.02"
   "kkv|cc/2006/859|20251125|0|art_1|951.311"
   "erv|cc/2012/629|20250124|0|art_1|952.03"
@@ -251,9 +266,9 @@ EINTRAEGE=(
   "gwv_finma|cc/2015/390|20230101|0|art_1|955.033.0"
   "vam|cc/2018/588|20260101|0|art_1|812.212.21"
   "ambv|cc/2018/786|20250315|0|art_1|812.212.1"
-  "mepv|cc/2020/552|20231101|0|art_1|812.213"
+  "mepv|cc/2020/552|20260701|1|art_1|812.213"
   "epv|cc/2015/298|20250101|0|art_1|818.101.1"
-  "bpv|cc/2001/319|20260101|0|art_1|172.220.111.3"
+  "bpv|cc/2001/319|20260701|0|art_1|172.220.111.3"
   "rvov|cc/1999/170|20260301|0|art_1|172.010.1"
   "vgke|cc/2008/321|20100401|0|art_1|173.320.2"
   "betmkv|cc/2011/362|20230123|0|art_1|812.121.1"
@@ -309,8 +324,8 @@ EINTRAEGE=(
   "vgr|cc/2008/320|20230601|0|art_1|173.320.1"
   "skv|cc/2007/296|20260101|0|art_1|741.013"
   "vvv|cc/1959/1271_1321_1317|20260101|0|art_1|741.31"
-  "vil|cc/1994/3050_3050_3050|20240101|0|art_1|748.131.1"
-  "fdv|cc/2007/166|20260301|0|art_1|784.101.1"
+  "vil|cc/1994/3050_3050_3050|20260701|0|art_1|748.131.1"
+  "fdv|cc/2007/166|20260701|0|art_1|784.101.1"
   "fav|cc/2016/24|20240815|0|art_1|784.101.2"
   "uvpv|cc/1988/1931_1931_1931|20250101|0|art_1|814.011"
   "chemrrv|cc/2005/478|20260101|0|art_1|814.81"
@@ -335,7 +350,7 @@ EINTRAEGE=(
   "heue|cc/2009/381|20230509|0|art_1|0.211.232.1"
   "haue|cc/2003/99|20250507|0|art_1|0.211.221.311"
   "pvue|cc/1970/620_620_620|20240109|0|art_1|0.232.04"
-  "icao|cc/63/1377_1378_1381|20251127|0|art_1|0.748.0"
+  "icao|cc/63/1377_1378_1381|20260612|1|art_1|0.748.0"
   "staatenlose|cc/1972/2320_2374_2150|20260522|0|art_1|0.142.40"
   "gfk|cc/1955/443_461_469|20120614|0|art_1|0.142.30"
 )

@@ -26,6 +26,14 @@ export interface PdfEmbedQuelle {
   eli: string;
   /** Geltende Konsolidierung YYYYMMDD (via check:pdf-netz/SPARQL als geltend bestätigt). */
   kons: string;
+  /**
+   * Revisions-Suffix «-N» der REGISTRIERTEN pdf-a-Manifestation (SPARQL
+   * jolux:isExemplifiedBy), analog html-N in fedlex-cache.sh. Weggelassen =
+   * kein Suffix. Falle (EMRK 20220916): die suffixlose URL liefert ebenfalls
+   * HTTP 200 mit einem ÄLTEREN Re-Issue (540 kB PDF 1.4) — kanonisch ist
+   * «-2» (445 kB PDF 1.7); nie allein am Status-Code festmachen.
+   */
+  pdfN?: number;
 }
 
 export const PDF_EMBED_QUELLEN: PdfEmbedQuelle[] = [
@@ -33,13 +41,17 @@ export const PDF_EMBED_QUELLEN: PdfEmbedQuelle[] = [
     key: 'EMRK', kuerzel: 'EMRK',
     titel: 'Konvention vom 4. November 1950 zum Schutze der Menschenrechte und Grundfreiheiten (EMRK)',
     sr: '0.101', rechtsgebiet: 'international', rang: 89,
-    eli: 'cc/1974/2151_2151_2151', kons: '20050323',
+    // Re-Pin 20050323→20220916 (QS-CURRENCY 3.7.2026; geltend via SPARQL
+    // dateApplicability, Prot. Nr. 15 in Kraft seit 1.8.2021/Fassung 16.9.2022).
+    eli: 'cc/1974/2151_2151_2151', kons: '20220916', pdfN: 2,
   },
   {
     key: 'NYUE', kuerzel: 'NYÜ',
     titel: 'Übereinkommen vom 10. Juni 1958 über die Anerkennung und Vollstreckung ausländischer Schiedssprüche (New Yorker Übereinkommen)',
     sr: '0.277.12', rechtsgebiet: 'international', rang: 109,
-    eli: 'cc/1965/795_799_793', kons: '20200207',
+    // Re-Pin 20200207→20260506 (QS-CURRENCY 3.7.2026; Geltungsbereichs-Update,
+    // suffixlose pdf-a-Manifestation SPARQL-kanonisch).
+    eli: 'cc/1965/795_799_793', kons: '20260506',
   },
 ];
 
@@ -48,10 +60,11 @@ function konsIso(k: string): string {
   return `${k.slice(0, 4)}-${k.slice(4, 6)}-${k.slice(6, 8)}`;
 }
 
-/** Fedlex-Filestore-URL des amtlichen PDF/A (aus eli/kons abgeleitet). */
-export function pdfaUrl(eli: string, kons: string): string {
+/** Fedlex-Filestore-URL des amtlichen PDF/A (aus eli/kons/pdfN abgeleitet). */
+export function pdfaUrl(eli: string, kons: string, pdfN?: number): string {
   const pfad = eli.replace(/\//g, '-');
-  return `https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/${eli}/${kons}/de/pdf-a/fedlex-data-admin-ch-eli-${pfad}-${kons}-de-pdf-a.pdf`;
+  const suffix = pdfN ? `-${pdfN}` : '';
+  return `https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/${eli}/${kons}/de/pdf-a/fedlex-data-admin-ch-eli-${pfad}-${kons}-de-pdf-a${suffix}.pdf`;
 }
 
 /** Register-Einträge (status 'pdf-embed') — abgeleitet aus PDF_EMBED_QUELLEN. */

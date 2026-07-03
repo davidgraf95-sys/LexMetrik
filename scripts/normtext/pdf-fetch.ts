@@ -26,7 +26,7 @@ const index: Record<string, IndexEintrag> = {};
 const fehler: string[] = [];
 
 for (const q of PDF_EMBED_QUELLEN) {
-  const url = pdfaUrl(q.eli, q.kons);
+  const url = pdfaUrl(q.eli, q.kons, q.pdfN);
   try {
     const res = await fetch(url);
     if (!res.ok) { fehler.push(`${q.key}: HTTP ${res.status} (${url})`); continue; }

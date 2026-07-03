@@ -16,7 +16,11 @@ export type Pin = { name: string; eli: string; kons: string }; // kons als ISO �
 export function lesePins(shText?: string): Pin[] {
   const sh = shText ?? readFileSync(CACHE_SH, 'utf8');
   const pins: Pin[] = [];
-  for (const m of sh.matchAll(/^\s*"([a-z_]+)\|([a-z0-9/_]+)\|(\d{8})\|/gm)) {
+  // Namensgruppe MIT Ziffern ([a-z0-9_]+): Pins wie asylv1/argv2/bvv3/co2_gesetz
+  // waren mit ([a-z_]+) parser-blind = unüberwachtes Currency-Loch (Befund
+  // fedlex-gap-report-2026-07-02.md §4; Fix Paket 1 QS-CURRENCY 3.7.2026).
+  // Selbsttest: src/tests/fedlex-pins.test.ts (geparste Pins == cache.sh-Zeilen).
+  for (const m of sh.matchAll(/^\s*"([a-z0-9_]+)\|([a-z0-9/_]+)\|(\d{8})\|/gm)) {
     pins.push({
       name: m[1],
       eli: m[2],
