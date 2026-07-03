@@ -16,15 +16,38 @@ import { ALLE_KARTEN, istVerfuegbar, type CatalogItem } from './startseiteConfig
  *  Ziff. 6) — Canonical, og:url und sitemap.xml leiten alle hieraus ab. */
 export const SITE_URL = 'https://lexmetrik.vercel.app';
 
-/** Globaler Titel/Description (wörtlich aus index.html, dort gepflegt seit
- *  der Einführung; index.html bleibt die Quelle für die Startseite). */
-export const SITE_TITEL = 'LexMetrik — Schweizer Recht: berechnen und erstellen';
+// ─── I2-Messaging: die EINE Wortlaut-Quelle (FAHRPLAN-STARTSEITE-V3 §6) ──────
+// Ab W2·5c ist seo.ts die SSoT für das Startseiten-/Marken-Messaging; index.html,
+// KatalogHinweis, Methodik und scripts/og-bild.ts sind Projektionen (Build
+// injiziert bzw. importiert). Das Tor check:seo-index erzwingt die Parität
+// seo.ts ↔ index.html. Wortlaut VERBINDLICH aus §6; Council-Auflagen 1/2: kein
+// Absolutum, der Status-Terminus «geprüft» ist für Inhalte reserviert (nie
+// «geprüfte Bausteine»), «Ohne KI» nie als Siegel — nur der gescopte Satz.
+
+/** H1 der Startseite (Value Proposition, §6). */
+export const HERO_TITEL = 'Schweizer Recht nachschlagen, Fristen und Kosten berechnen';
+/** Subline unter der H1 (§6). */
+export const HERO_SUBLINE =
+  'Gesetze, Bundesgerichtsentscheide und amtliche Materialien in einem Werkzeug, dazu Rechner und Vorlagen — mit Norm, Link und Stand.';
+/** Vertrauens-Fuss, erster Satz — gescopter Anti-KI-Satz (§6, Auflage 1). */
+export const VERTRAUENS_SATZ =
+  'Kein Sprachmodell schätzt Ergebnisse: gerechnet wird nach festen Regeln, der Rechenweg ist offengelegt, Normen sind mit der amtlichen Sammlung verlinkt.';
+/** Vertrauens-Fuss, zweiter Satz — ehrlicher Status ohne «geprüft»-Absolutum (§6). */
+export const STATUS_SATZ =
+  'Der Prüfstand jedes Eintrags ist ausgewiesen; noch nicht fachlich Abgenommenes ist als Entwurf gekennzeichnet.';
+/** Kompakte, gescopte Methodik-Zeile (KatalogHinweis, og-Claim) — enthält den
+ *  stabilen Kern «nach festen Regeln». */
+export const SITE_KURZFORM = 'Gerechnet wird nach festen Regeln, mit offengelegtem Rechenweg.';
+
+/** Globaler Titel/Description — aus dem I2-Material (§6) abgeleitet; index.html
+ *  spiegelt genau diese Werte (Tor check:seo-index). */
+export const SITE_TITEL = `LexMetrik — ${HERO_TITEL}`;
 export const SITE_DESCRIPTION =
-  'LexMetrik rechnet Fristen, Beträge und Quoten nach Schweizer Recht und stellt Rechtsdokumente aus geprüften Textbausteinen zusammen — regelbasiert, nachvollziehbar, jede Norm direkt mit dem Gesetzestext verlinkt. Keine Rechtsberatung.';
-/** Kuratierter Social-Share-Text der Startseite (wörtlich aus index.html
- *  og:description — dort bewusst kürzer als die meta description). */
+  'Schweizer Recht nachschlagen und berechnen: Gesetze, Bundesgerichtsentscheide und Materialien, dazu Rechner und Vorlagen — mit Norm, Link und Stand.';
+/** Kuratierter Social-Share-Text der Startseite (og:description) — bewusst mit
+ *  dem gescopten Rechen-Satz statt Marketing-Claim. */
 export const SITE_OG_DESCRIPTION =
-  'Fristen, Beträge und Zuständigkeiten transparent berechnet; Rechtsdokumente aus geprüften Bausteinen zusammengestellt. Feste Regeln statt Sprachmodell.';
+  'Gesetze, Bundesgerichtsentscheide und Materialien in einem Werkzeug, dazu Rechner und Vorlagen. Gerechnet wird nach festen Regeln, mit Norm, Link und Stand.';
 
 export interface RouteMetadaten {
   pfad: string;          // z. B. '/rechner/verzugszins'
@@ -54,12 +77,12 @@ const DOPPELKARTEN_OVERRIDE: Record<string, string> = {
 const STATISCHE_SEITEN: Record<string, { titel: string; beschreibung: string; ogBeschreibung?: string }> = {
   '/': { titel: SITE_TITEL, beschreibung: SITE_DESCRIPTION, ogBeschreibung: SITE_OG_DESCRIPTION },
   '/rechner': { titel: 'Rechner & Werkzeuge — LexMetrik', beschreibung: 'Alle Rechner von LexMetrik nach Aufgabe gegliedert — Zuständigkeiten, Fristen und Gebühren. Feste Rechenregeln, jede Norm direkt verlinkt, Ergebnisse sofort im Browser.' },
-  '/vorlagen': { titel: 'Vorlagen & Dokumente — LexMetrik', beschreibung: 'Rechtsdokumente von LexMetrik aus geprüften Textbausteinen — Verträge, Eingaben, Erklärungen und Dokumentmappen, regelbasiert aufgesetzt mit ehrlichen Form-Grenzen.' },
+  '/vorlagen': { titel: 'Vorlagen & Dokumente — LexMetrik', beschreibung: 'Rechtsdokumente von LexMetrik aus festen Textbausteinen mit Normbezug — Verträge, Eingaben, Erklärungen und Dokumentmappen, regelbasiert aufgesetzt mit ehrlichen Form-Grenzen.' },
   '/gesetze': { titel: 'Schweizer Gesetzessammlung — LexMetrik', beschreibung: 'Volltext der in LexMetrik verwendeten Bundesgesetze und kantonalen Erlasse — geltende Fassung, mit Stand und amtlichem Live-Link. Schnelle Navigation zwischen und innerhalb der Gesetze.' },
   '/rechtsprechung': { titel: 'Rechtsprechung — LexMetrik', beschreibung: 'Ausgewählte Bundesgerichtsentscheide im Volltext, nach Sachgebiet erschlossen und mit den Gesetzen verzahnt. Daten: OpenCaseLaw — massgeblich bleibt die amtliche Fassung. Keine Rechtsberatung.' },
   '/international': { titel: 'International / Staatsverträge — LexMetrik', beschreibung: 'Für die Schweiz massgebliche Staatsverträge und internationales Recht — EMRK, CISG, Lugano-Übereinkommen, Haager Übereinkommen, Freizügigkeitsabkommen und DSGVO. Jeder Eintrag mit Live-Link zur amtlichen Fassung (Fedlex bzw. EUR-Lex), keine Snapshots.' },
   '/materialien': { titel: 'Amtliche Ressourcen / Materialien — LexMetrik', beschreibung: 'Praxisleitende Publikationen der Bundesbehörden — ESTV-Kreisschreiben, EDÖB-Leitfäden, SECO- und BSV-Wegleitungen, EHRA-Praxismitteilungen, FINMA-Rundschreiben, IGE-Richtlinien. Faktisches Soft-Law ohne Gesetzesrang, je mit Live-Link zur amtlichen Fassung und mit den Gesetzen verzahnt.' },
-  '/methodik': { titel: 'Wie LexMetrik rechnet — LexMetrik', beschreibung: 'Wie LexMetrik Fristen, Beträge und Quoten herleitet: feste Regeln statt Sprachmodell, jeder Schritt nachvollziehbar, jede Norm mit der amtlichen Sammlung verlinkt.' },
+  '/methodik': { titel: 'Wie LexMetrik rechnet — LexMetrik', beschreibung: 'Wie LexMetrik Fristen, Beträge und Quoten herleitet: gerechnet wird nach festen Regeln, jeder Schritt nachvollziehbar, jede Norm mit der amtlichen Sammlung verlinkt.' },
   '/ueber': { titel: 'Über — LexMetrik', beschreibung: 'Warum es LexMetrik gibt — entstanden bei der Vorbereitung auf die Anwaltsprüfung: überprüfbare, normtreue Rechtsberechnung statt Black Box.' },
   '/kontakt': { titel: 'Kontakt aufnehmen — LexMetrik', beschreibung: 'Fragen, Korrekturen zu einer Berechnung oder einem Baustein, Vorschläge für neue Rechner und Vorlagen — Hinweise auf Fehler sind besonders willkommen.' },
   '/datenschutz': { titel: 'Datenschutzerklärung — LexMetrik', beschreibung: 'Datenschutzerklärung von LexMetrik (Entwurf). Die Eingaben verlassen den Browser nicht — Berechnung und Dokumenterstellung laufen lokal im Gerät.' },

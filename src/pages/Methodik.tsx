@@ -5,7 +5,7 @@ import { VerfallUebersicht } from '../components/VerfallUebersicht';
 
 const ABSCHNITTE: { titel: string; text: string }[] = [
   {
-    titel: 'Berechnung statt KI',
+    titel: 'Feste Regeln statt Sprachmodell',
     text:
       'LexMetrik ist kein Chatbot und kein Sprachmodell. Hinter jedem Rechner stehen fest ' +
       'programmierte Regeln, die direkt aus Gesetz und Rechtsprechung abgeleitet sind. Daraus folgt ' +

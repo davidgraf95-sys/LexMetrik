@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { SITE_KURZFORM } from '../lib/seo';
 
 // Gemeinsamer Fuss der Rechner-/Vorlagen-Übersicht (vormals inline in
 // Recherche.tsx): Methodik-Zeile + Pflichthinweis (§8). Reine Darstellung;
@@ -9,7 +10,7 @@ export function KatalogHinweis() {
       <section className="lc-notice flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
         <p className="text-body-s text-ink-600">
           <span className="font-medium text-ink-900">So rechnet LexMetrik:</span>{' '}
-          Berechnung statt KI · verifizierte Normverweise · offengelegter Rechenweg.
+          {SITE_KURZFORM}
         </p>
         <Link to="/methodik" className="text-body-s font-medium text-brass-700 hover:text-brass-600 no-underline whitespace-nowrap">
           Zur Methodik →
