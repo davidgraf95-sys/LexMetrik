@@ -8,6 +8,8 @@
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import type { DatabaseSync } from 'node:sqlite';
+import type { NormSnapshot } from '../../src/lib/normtext/typen.ts';
+import { schreibeErlass, type ErlasseMeta } from './erlass-rows';
 
 // ── Datei-Klassen (Quell-Pfade) ────────────────────────────────────────────────
 export const BUND_DIR = 'public/normtext/bund';
@@ -101,6 +103,58 @@ export function ingestNormtext(db: DatabaseSync): Zaehler {
     'Kanton-Normtext': kanton.length,
     'Normtext-Manifeste': NORMTEXT_MANIFESTE.length,
   };
+}
+
+// ── (2) Ziel-Tabellen (E1-Flip, Spalten-Weg) ────────────────────────────────────
+// Reverse-Befüllung der ECHTEN Ziel-Tabellen (erlasse/erlass_fassungen/artikel) aus
+// den committeten Bund-Snapshots — derselbe Schreibpfad (erlass-rows.ts), den der
+// Generator-Flip nutzt. Erlass-Identität (titel/rechtsgebiet/sr/status) kommt aus dem
+// committeten Browse-Register (SSoT §5); die byte-tragende `abkuerzung` = NormSnapshot.erlass.
+interface RegisterErlass {
+  key: string;
+  ebene: 'bund' | 'kanton';
+  kanton: string | null;
+  sr: string | null;
+  titel: string;
+  rechtsgebiet: string;
+  status: string;
+}
+
+function ladeBundRegister(): Map<string, RegisterErlass> {
+  const reg = JSON.parse(readFileSync('public/normtext/register.json', 'utf8')) as {
+    erlasse: RegisterErlass[];
+  };
+  const m = new Map<string, RegisterErlass>();
+  for (const e of reg.erlasse) if (e.ebene === 'bund') m.set(e.key, e);
+  return m;
+}
+
+/** Ziel-Zeilen der 218 committeten Bund-Erlasse (E1). Byte-Parität separat über check:paritaet-Doppellauf. */
+export function ingestNormtextZiel(db: DatabaseSync): Zaehler {
+  const register = ladeBundRegister();
+  let erlasse = 0;
+  let artikel = 0;
+  for (const pfad of jsonFlach(BUND_DIR)) {
+    const datei = JSON.parse(readFileSync(pfad, 'utf8')) as { eintraege: NormSnapshot[] };
+    if (datei.eintraege.length === 0) continue;
+    const key = datei.eintraege[0].quelle;
+    const reg = register.get(key);
+    if (!reg) throw new Error(`ingestNormtextZiel: Bund-Erlass '${key}' fehlt im Register`);
+    const meta: ErlasseMeta = {
+      key,
+      ebene: 'bund',
+      kanton: null,
+      sr: reg.sr,
+      abkuerzung: datei.eintraege[0].erlass, // byte-tragend (= NormSnapshot.erlass)
+      titel: reg.titel,
+      rechtsgebiet: reg.rechtsgebiet,
+      status: reg.status,
+    };
+    schreibeErlass(db, meta, datei.eintraege);
+    erlasse += 1;
+    artikel += datei.eintraege.length;
+  }
+  return { 'Ziel-Erlasse (Bund)': erlasse, 'Ziel-Artikel (Bund)': artikel };
 }
 
 /** Rechtsprechungs-DB: Bund + Kanton ({erzeugt, eintraege} MIT Trailing-Newline) + Manifeste. */

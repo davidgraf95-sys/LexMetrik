@@ -5,12 +5,23 @@
 // Artefakte sind Werk-Zwischenprodukt; massgeblich bleibt die amtliche Quelle (CLAUDE.md §7/6).
 import { mkdirSync, rmSync, existsSync } from 'node:fs';
 import { oeffneDb, frischesSchema, type Doktyp } from './schema';
-import { ingestNormtext, ingestRechtsprechung, ingestSoftLaw, type Zaehler } from './ingest';
+import {
+  ingestNormtext,
+  ingestNormtextZiel,
+  ingestRechtsprechung,
+  ingestSoftLaw,
+  type Zaehler,
+} from './ingest';
 import type { DatabaseSync } from 'node:sqlite';
+
+// Normtext: Blob-Tabellen (Paritäts-Beweis) + ab E1 die ECHTEN Ziel-Tabellen (Spalten-Weg).
+function ingestNormtextVoll(db: DatabaseSync): Zaehler {
+  return { ...ingestNormtext(db), ...ingestNormtextZiel(db) };
+}
 
 const ALT_ARTEFAKT = 'daten/lexmetrik.db';
 const ARTEFAKTE: { pfad: string; doktyp: Doktyp; ingest: (db: DatabaseSync) => Zaehler }[] = [
-  { pfad: 'daten/normtext.db', doktyp: 'normtext', ingest: ingestNormtext },
+  { pfad: 'daten/normtext.db', doktyp: 'normtext', ingest: ingestNormtextVoll },
   { pfad: 'daten/rechtsprechung.db', doktyp: 'rechtsprechung', ingest: ingestRechtsprechung },
   { pfad: 'daten/soft-law.db', doktyp: 'soft-law', ingest: ingestSoftLaw },
 ];

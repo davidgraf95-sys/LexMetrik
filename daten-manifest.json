@@ -1,0 +1,76 @@
+{
+  "normtext.db": {
+    "artikel": {
+      "zeilen": 24858,
+      "sha": "bc9c4183c65604dd4bfa8cc218a638fc40682caa0c8d481ca9977baa9ed6a32d"
+    },
+    "datei": {
+      "zeilen": 1449,
+      "sha": "627657789a7a1ffeb265ead6359d60279e93ba4b6f40373264a3ce9a819a4402"
+    },
+    "dokument": {
+      "zeilen": 2,
+      "sha": "3f39037083dc4b42cdaf79a331bd3c001a33975193df9882ed981951a39cec5a"
+    },
+    "eintrag": {
+      "zeilen": 55244,
+      "sha": "c3412615a89817ab1a79ed1f9765624fbef924fe3ccb1822dfe982f37e71b7cc"
+    },
+    "erlass_fassungen": {
+      "zeilen": 218,
+      "sha": "ccf526b36c3c6770f27ba8de79daf207e8b72e37bf3f087711245c37ba8b39bb"
+    },
+    "erlasse": {
+      "zeilen": 218,
+      "sha": "2b28fff6806df8446876708783ff8c9b8a6617363cb674deb19778a8ef9bae57"
+    },
+    "norm_rangliste": {
+      "zeilen": 0,
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "norm_referenzen": {
+      "zeilen": 0,
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "rechtsprechung.db": {
+    "datei": {
+      "zeilen": 342,
+      "sha": "2097c0d6894f9a14e830f5acf8b65978ede8443341e449c198ab0b48c638a3c0"
+    },
+    "dokument": {
+      "zeilen": 2,
+      "sha": "65dbf317aae95d0e2bbc093d825446b54d92e0b4eeba980edaf633582adddec2"
+    },
+    "eintrag": {
+      "zeilen": 342,
+      "sha": "62255a5edfd1506d6dd5a03263cdfa1bb23dbbb5018d637651b4e3f16d2a3bd6"
+    },
+    "entscheide": {
+      "zeilen": 0,
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "zitat_kanten": {
+      "zeilen": 0,
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "soft-law.db": {
+    "datei": {
+      "zeilen": 0,
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "dokument": {
+      "zeilen": 1,
+      "sha": "ea4796715187e1c79aca78ee3661a6d93477cbb1e210c9a784f58d1905c7d0ab"
+    },
+    "eintrag": {
+      "zeilen": 0,
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "soft_law": {
+      "zeilen": 0,
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}
