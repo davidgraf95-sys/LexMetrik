@@ -46,6 +46,9 @@
 
 ---
 
+## Neu gefundene Härtungs-Punkte (3.7.)
+- [ ] **tsconfig-Lücke :** `tsc -b` prüft scripts/ NICHT (tsconfig.node.json umfasst nur vite.config.ts) — Scope-Bug in turso-sync wäre unsichtbar geblieben. Eigener Schritt: scripts/ in ein tsconfig-Projekt heben (erwartbar viele Alt-Findings → separat budgetieren).
+
 ## DB-Strang (QS-DATA) — Ist-Stand
 - [x] **E0** DB-Fundament + Byte-Paritäts-Tor (218 Bund-Normtext byte-gleich, doppelt verifiziert) — auf main.
 - [x] **E0+ (E0-Ausdehnung)** ✅ 3.7.2026 (Branch `feat/qs-data-e0-plus`): kanton-Normtext (1231) + rechtsprechung (342) + Manifeste (`register.json`/`kanton-index.json`/rsp-`register.json`/`norm-index.json`, Trailing-Newline nachgebildet) + Materialien (1) — `check:paritaet` byte-gleich über **1796 Dateien**; Ziel-Schema §3 angelegt (leere Kanten-Tabellen), Partitionierung je Doktyp (`daten/{normtext,rechtsprechung,soft-law}.db`; `lexmetrik.db` entfällt), `normalisiere-zitat.ts` + Unit-Tests. Doppelt verifiziert (unabhängiger Zweitbeweis-Roundtrip), golden-neutral.
