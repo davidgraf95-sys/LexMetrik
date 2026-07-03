@@ -18,34 +18,15 @@
 // beweist Determinismus über die QUELL-Tabellen; der FTS-Index ist eine reine Ableitung
 // daraus (rebuildbar) und wird aus dem Manifest ausgeklammert (manifest.ts → tabellen()).
 import type { DatabaseSync } from 'node:sqlite';
+import { bloeckeText } from './suche-kern';
+
+// Vercel-Fix 3.7.2026: `bloeckeText` (+ Doku) ist in das IMPORT-FREIE ./suche-kern.ts
+// gewandert — api/suche.ts braucht es (Snippet-Bau) und darf keine node:sqlite-Kette
+// ziehen (Vercels Function-Compile). Re-Export für bestehende Konsumenten:
+export { bloeckeText };
 
 /** Tokenizer-Spezifikation (§3, nicht verhandelbar): diakritik-insensitiv DE/FR/IT. */
 export const TOKENIZER = 'unicode61 remove_diacritics 2';
-
-/**
- * Durchsuchbarer Plaintext EINES Artikels aus `bloecke_json`: alle `text`-Felder
- * konkateniert (Absatz-Einleitung + lit./Ziff.-Aufzählungspunkte), Whitespace normalisiert.
- * Bewusst dieselbe Extraktion wie der bestehende Client-Suchindex
- * (`scripts/such-index-generieren.ts` → artikelText), damit hot-FTS und statischer
- * Fallback-Index denselben durchsuchbaren Text tragen (§5). NICHT indexiert (kein
- * `text`-Feld, client-index-konform; Gegenprüfungs-Notiz 3.7.2026): Tarif-/Tabellen-
- * Zellen (`tabelle` beschreibung/betrag sowie `mehrspaltig` spalten[].titel + zeilen)
- * und Bild-Metadaten — der Volltext bleibt im prerenderten DOM durchsuchbar (§15);
- * eine Recall-Erweiterung wäre ein bewusster Folge-Schritt für BEIDE Indizes gemeinsam.
- */
-interface Block {
-  text?: string;
-  items?: Array<{ text?: string }>;
-}
-export function bloeckeText(bloeckeJson: string): string {
-  const bloecke = JSON.parse(bloeckeJson) as Block[];
-  const teile: string[] = [];
-  for (const b of bloecke) {
-    if (b.text) teile.push(b.text);
-    for (const it of b.items ?? []) if (it.text) teile.push(it.text);
-  }
-  return teile.join(' ').replace(/\s+/g, ' ').trim();
-}
 
 /** Durchsuchbarer Plaintext der Entscheid-Abschnitte: alle `bloecke[].text`, normalisiert. */
 interface Abschnitt {

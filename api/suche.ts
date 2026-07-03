@@ -9,7 +9,11 @@
 // (/v2/pipeline) über das globale fetch. KEIN Import aus src/ (Client bleibt unberührt);
 // KEIN Cross-DB-Zugriff (die check:datenhaltung-Invariante über api/** bleibt grün). Die
 // Query-Logik (Match-Bau, Pagination by design, SQL, Zeilen-Formung) ist mit dem Build-Zeit-
-// Modul scripts/datenhaltung/suche.ts GETEILT (§5) — dort laufen die Unit-Tests dagegen.
+// Modul GETEILT (§5) — sie lebt IMPORT-FREI in scripts/datenhaltung/suche-kern.ts (Unit-Tests
+// laufen via suche.ts dagegen). Vercel-Fix 3.7.2026: NUR das Kern-Modul importieren — Vercel
+// kompiliert api/** mit eigener nodenext-tsconfig ohne Node-Typen; eine node:sqlite-Import-
+// Kette (suche.ts → fts.ts) bricht den Function-Build. `.js`-Spezifizierer, weil nodenext
+// explizite Endungen verlangt und sie auf die .ts-Quelle mappt.
 import {
   baueFtsMatch,
   klemmeFenster,
@@ -25,9 +29,13 @@ import {
   type ArtikelTreffer,
   type EntscheidTreffer,
   type SucheAntwort,
-} from '../scripts/datenhaltung/suche.ts';
+} from '../scripts/datenhaltung/suche-kern.js';
 
 export const config = { runtime: 'edge' };
+
+// Edge-Runtime stellt process.env bereit; lokale Deklaration statt @types/node, damit
+// Vercels Function-Compile (ohne Node-Typen) sauber bleibt (TS2591-Fix 3.7.2026).
+declare const process: { env: Record<string, string | undefined> };
 
 type Wert = string | number | null;
 
