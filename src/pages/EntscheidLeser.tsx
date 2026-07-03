@@ -139,7 +139,10 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam }: { schlues
       // Snapshot, datei=null): auf das Ziel-BGE mit voraktivierter Ansicht weiterleiten
       // statt «nicht verfügbar» zu zeigen — das Ziel ist im Manifest bekannt (§8).
       if (eintrag.verweis && !eintrag.datei) {
-        navigate(`/rechtsprechung/${encodeURIComponent(eintrag.verweis.zielKey)}?ansicht=${eintrag.verweis.ansicht}`, { replace: true });
+        // ?norm= mitschleppen (Review 3.7.): der Fundstellen-Sprung überlebt den
+        // Verweis-Redirect auf das Ziel-BGE.
+        const normSuffix = normParam ? `&norm=${encodeURIComponent(normParam)}` : '';
+        navigate(`/rechtsprechung/${encodeURIComponent(eintrag.verweis.zielKey)}?ansicht=${eintrag.verweis.ansicht}${normSuffix}`, { replace: true });
         return;
       }
       if (!eintrag.datei) { setZustand('fehlt'); return; }
@@ -160,7 +163,9 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam }: { schlues
       setBodyTab(init);
     });
     return () => { lebt = false; };
-  }, [schluessel, ansichtParam, navigate]);
+    // normParam: nur vom Verweis-Redirect gelesen; Lade-Pfade sind Promise-
+    // gecacht → ein Re-Run bei ?norm-Wechsel ist idempotent und billig.
+  }, [schluessel, ansichtParam, normParam, navigate]);
 
   // Parität zum Gesetz-Leser: Kopfdaten (Breadcrumb Rechtsprechung › Ebene › Nr)
   // melden — der nächste Provider fängt sie (Einzelansicht → Inhalts-Kopf, Pane →

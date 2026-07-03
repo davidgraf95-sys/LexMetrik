@@ -98,11 +98,12 @@ test('MM3 (Mobile): kein ⧉ im NormPopover unter lg', async ({ page }) => {
 
 // ── MM4: Studentin am ★ — EIN aria-label an allen vier Fundorten ─────────────
 test('MM4: ★-aria-label textgleich in Reader, Panel, Leitfall-Zeile und Suche; Tooltip fokussier-/klickbar', async ({ page }) => {
-  // (a) Reader-Kopf (Volltext-Badge, interaktiv über Begriff-Tooltip).
+  // (a) Reader-Kopf (Volltext-Badge, interaktiv): das aria-label trägt der
+  // fokussierbare Begriff-Button selbst (accessible name, kein aria-label auf
+  // role-losem Span — axe aria-prohibited-attr).
   await page.goto('/rechtsprechung/bge_151_III_377')
-  const readerBadge = page.locator(`header [aria-label="${LEIT_ARIA}"]`)
-  await expect(readerBadge).toBeVisible()
-  const begriff = readerBadge.getByRole('button')
+  const begriff = page.locator('header').getByRole('button', { name: LEIT_ARIA })
+  await expect(begriff).toBeVisible()
   await begriff.click()
   await expect(page.getByRole('tooltip')).toBeVisible()
   await page.keyboard.press('Escape')
