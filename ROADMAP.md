@@ -420,7 +420,12 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
     **[ ] P3** Drop-Klasse laut (OR 361/362) **deferiert** = eigener Schritt (korpusweite `<p>`-Klassen-Kalibrierung,
     Keim §4-Quell-Containment). Detail STRUKTUR-Karte 2.7. + Spec §7.
   - [ ] **+ Audit-Andockung 3.7.2026 (Audit 1, `BACKLOG-AUDIT-WERKZEUGE-2026-07.md`):** **N3 · `he` statt
-    Handtabelle** (`scripts/normtext/html-entities.ts`, 2231 vs. ~90 Entities; `&ge;`/`&le;` haben real
+    Handtabelle ✅ 3.7.2026** (Branch `feat/nulltarif-werkzeuge`: Ergebnis BESSER als erwartet — Bund-Regen aus
+    gepinnten Caches **0-Byte-Diff** (golden-neutral; die `&ge;`/`&le;`-Klasse sitzt in Kanton-Quellen und
+    greift bei deren nächstem Regen); einzige Divergenzen der Alt-Tabelle: `&nbsp;`/`&mu;` als dokumentierte
+    Sonderfälle BEHALTEN, `&ldquo;`/`&rdquo;`-ASCII-Abflachung als deklarierte Korrektur auf WHATWG (Korpus-Impact
+    heute null); Beleg `bibliothek/register/he-entity-korrekturen-2026-07-03.md`, QS-GP-Quittung). **OFFEN in
+    diesem Punkt nur noch B1:** **N3-Alt-Wortlaut:** `he` statt Handtabelle (`scripts/normtext/html-entities.ts`, 2231 vs. ~90 Entities; `&ge;`/`&le;` haben real
     Tarif-Schwellen verfälscht). **Das ist eine KORREKTUR, kein No-op — golden kann an den bisher falsch
     dekodierten Stellen NICHT byte-gleich bleiben.** Verfahren: (i) Umstellung, Regenerat, `golden:diff`;
     (ii) **erwartete Diffs AUSSCHLIESSLICH an Entity-Stellen** — jede Abweichung einzeln als bewusstes

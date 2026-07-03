@@ -33,10 +33,19 @@ import {
 } from './normtext/inventar-kanton.ts';
 import { enumeriereKanton } from './normtext/lexfind-discovery.ts';
 import { discoveryZuInventar } from './normtext/kanton-discovery-quellen.ts';
+import pLimit from 'p-limit';
 import { holeLexWork } from './normtext/adapter-lexwork.ts';
 import { holeHtm } from './normtext/adapter-htm.ts';
 import { holeZhPdf } from './normtext/adapter-zh-pdf.ts';
 import { holePdf, PDF_PROFILE } from './normtext/adapter-pdf.ts';
+
+// Höfliche Nebenläufigkeit gegen Amtsserver (Werkzeug-Audit §Audit-1): die
+// Kantons-/HTM-/ZH-/PDF-Fetch-Schleifen holen bis zu FETCH_CONCURRENCY Quellen
+// gleichzeitig. DETERMINISMUS: nur die (reinen, seiteneffektfreien) FETCHES
+// laufen parallel; die Ergebnisse werden danach in UNVERÄNDERTER Inventar-
+// Reihenfolge verarbeitet (Reports, Dateinamen, goldenIndex, §8-Fehlerpfade
+// byte-identisch). Der Bund-Loop bleibt seriell (DB-Flip). */
+const FETCH_CONCURRENCY = 4;
 import { pdfLawIdSafe } from './normtext/lawid-safe.ts';
 import { baueManifest } from './normtext/kanton-manifest.ts';
 import { baueBrowseManifest } from './normtext/browse-manifest.ts';
@@ -475,16 +484,30 @@ async function erzeugeKantonsSnapshots(
   const lawSchluessel = (g: { kanton: string; lawId: string; lang: 'de' | 'fr' }): string =>
     mehrsprachig(g) ? `${lawIdSafe(g.lawId)}-${g.lang}` : lawIdSafe(g.lawId);
 
-  for (const g of inventar) {
-    let ergebnis;
-    try {
-      ergebnis = await holeLexWork(g.host, g.lang, g.lawId);
-    } catch (e) {
+  // Fetch-Phase (parallel, Concurrency 4) — nur die reinen Abrufe; die
+  // Verarbeitung unten bleibt seriell in Inventar-Reihenfolge (Determinismus).
+  const limit = pLimit(FETCH_CONCURRENCY);
+  const abrufe = await Promise.all(
+    inventar.map((g) =>
+      limit(async (): Promise<{ ok: true; ergebnis: Awaited<ReturnType<typeof holeLexWork>> } | { ok: false; fehler: string }> => {
+        try {
+          return { ok: true, ergebnis: await holeLexWork(g.host, g.lang, g.lawId) };
+        } catch (e) {
+          return { ok: false, fehler: e instanceof Error ? e.message : String(e) };
+        }
+      }),
+    ),
+  );
+
+  for (let idx = 0; idx < inventar.length; idx++) {
+    const g = inventar[idx];
+    const abruf = abrufe[idx];
+    if (!abruf.ok) {
       // §8: Netzfehler pro Gruppe abfangen, nicht crashen, weiter zur nächsten.
-      const fehler = e instanceof Error ? e.message : String(e);
-      cov.fetchFehler.push({ kanton: g.kanton, lawId: g.lawId, fehler });
+      cov.fetchFehler.push({ kanton: g.kanton, lawId: g.lawId, fehler: abruf.fehler });
       continue;
     }
+    const ergebnis = abruf.ergebnis;
 
     if (ergebnis.meta.nurPdf) {
       cov.nurPdf.push({
@@ -608,16 +631,28 @@ async function erzeugeHtmSnapshots(
     fetchFehler: [],
   };
 
-  for (const g of inventar) {
+  const limit = pLimit(FETCH_CONCURRENCY);
+  const abrufe = await Promise.all(
+    inventar.map((g) =>
+      limit(async (): Promise<{ ok: true; ergebnis: Awaited<ReturnType<typeof holeHtm>> } | { ok: false; fehler: string }> => {
+        try {
+          return { ok: true, ergebnis: await holeHtm(g.quelleUrl, g.profil) };
+        } catch (e) {
+          return { ok: false, fehler: e instanceof Error ? e.message : String(e) };
+        }
+      }),
+    ),
+  );
+
+  for (let idx = 0; idx < inventar.length; idx++) {
+    const g = inventar[idx];
     const safe = htmLawIdSafe(g.quelleUrl);
-    let ergebnis;
-    try {
-      ergebnis = await holeHtm(g.quelleUrl, g.profil);
-    } catch (e) {
-      const fehler = e instanceof Error ? e.message : String(e);
-      cov.fetchFehler.push({ kanton: g.kanton, url: g.quelleUrl, fehler });
+    const abruf = abrufe[idx];
+    if (!abruf.ok) {
+      cov.fetchFehler.push({ kanton: g.kanton, url: g.quelleUrl, fehler: abruf.fehler });
       continue;
     }
+    const ergebnis = abruf.ergebnis;
 
     const erlass = erlassBezeichnung(g.erlassName, '', g.erlassNr);
     const snapshotListe: NormSnapshot[] = [];
@@ -704,16 +739,28 @@ async function erzeugeZhPdfSnapshots(
 
   const cov: HtmCoverage = { totalSnapshots: 0, reportZeilen: [], tokenFehlt: [], fetchFehler: [] };
 
-  for (const g of inventar) {
+  const limit = pLimit(FETCH_CONCURRENCY);
+  const abrufe = await Promise.all(
+    inventar.map((g) =>
+      limit(async (): Promise<{ ok: true; ergebnis: Awaited<ReturnType<typeof holeZhPdf>> } | { ok: false; fehler: string }> => {
+        try {
+          return { ok: true, ergebnis: await holeZhPdf(g.quelleUrl) };
+        } catch (e) {
+          return { ok: false, fehler: e instanceof Error ? e.message : String(e) };
+        }
+      }),
+    ),
+  );
+
+  for (let idx = 0; idx < inventar.length; idx++) {
+    const g = inventar[idx];
     const safe = zhLawIdSafe(g.quelleUrl);
-    let ergebnis;
-    try {
-      ergebnis = await holeZhPdf(g.quelleUrl);
-    } catch (e) {
-      const fehler = e instanceof Error ? e.message : String(e);
-      cov.fetchFehler.push({ kanton: g.kanton, url: g.quelleUrl, fehler });
+    const abruf = abrufe[idx];
+    if (!abruf.ok) {
+      cov.fetchFehler.push({ kanton: g.kanton, url: g.quelleUrl, fehler: abruf.fehler });
       continue;
     }
+    const ergebnis = abruf.ergebnis;
 
     const erlass = erlassBezeichnung(g.erlassName, '', g.erlassNr);
     const snapshotListe: NormSnapshot[] = [];
@@ -800,6 +847,25 @@ async function erzeugePdfSnapshots(
     liste.push(g);
   }
 
+  // Fetch-Phase (parallel, Concurrency 4) über ALLE Gruppen; die verschachtelte
+  // Verarbeitung unten bleibt in unveränderter (nachDatei × gruppen)-Reihenfolge.
+  // Schlüssel = Gruppen-Objektreferenz (jede Gruppe kommt genau einmal vor).
+  const alleGruppen = [...nachDatei.values()].flat();
+  type PdfAbruf = { ok: true; ergebnis: Awaited<ReturnType<typeof holePdf>> } | { ok: false; fehler: string };
+  const pdfLimit = pLimit(FETCH_CONCURRENCY);
+  const pdfAbrufe = new Map<(typeof alleGruppen)[number], PdfAbruf>();
+  await Promise.all(
+    alleGruppen.map((g) =>
+      pdfLimit(async () => {
+        try {
+          pdfAbrufe.set(g, { ok: true, ergebnis: await holePdf(g.quelleUrl, PDF_PROFILE[g.profil]) });
+        } catch (e) {
+          pdfAbrufe.set(g, { ok: false, fehler: e instanceof Error ? e.message : String(e) });
+        }
+      }),
+    ),
+  );
+
   for (const [dateiBasis, gruppen] of nachDatei) {
     const safe = dateiBasis.replace(/^[A-Z]{2}-/, '');
     const kanton = gruppen[0].kanton;
@@ -807,14 +873,12 @@ async function erzeugePdfSnapshots(
     const gesehenTokens = new Set<string>();
 
     for (const g of gruppen) {
-      let ergebnis;
-      try {
-        ergebnis = await holePdf(g.quelleUrl, PDF_PROFILE[g.profil]);
-      } catch (e) {
-        const fehler = e instanceof Error ? e.message : String(e);
-        cov.fetchFehler.push({ kanton: g.kanton, url: g.quelleUrl, fehler });
+      const abruf = pdfAbrufe.get(g)!;
+      if (!abruf.ok) {
+        cov.fetchFehler.push({ kanton: g.kanton, url: g.quelleUrl, fehler: abruf.fehler });
         continue;
       }
+      const ergebnis = abruf.ergebnis;
       const erlass = erlassBezeichnung(g.erlassName, '', g.erlassNr);
       // Vollabdeckung: ALLE Artikel der Quelle; Label einheitlich aus dem Profil-
       // Marker (ergebnis.labels). Pro (Datei, token, quelleUrl) genau ein Eintrag:

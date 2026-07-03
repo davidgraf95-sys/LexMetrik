@@ -16,6 +16,7 @@
  */
 
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
+import pLimit from 'p-limit';
 import { parseFedlexCacheEintraege } from './inventar-bund.ts';
 import {
   sammleKantonInventar,
@@ -105,6 +106,12 @@ function ladeKantonFassungsTokens(): Map<string, string> {
 
 // ─── Hauptprogramm ────────────────────────────────────────────────────────────
 
+// Höfliche Nebenläufigkeit (Werkzeug-Audit §Audit-1): die Netz-Drift-Schleifen
+// holen bis zu FETCH_CONCURRENCY Quellen gleichzeitig. DETERMINISMUS: nur die
+// (reinen) Re-Fetches laufen parallel; die Verarbeitung (Console-Ausgabe,
+// Zähler, exitCode) bleibt danach seriell in unveränderter Inventar-Reihenfolge.
+const FETCH_CONCURRENCY = 4;
+
 async function main(): Promise<void> {
   const mitNetz = process.argv.includes('--netz');
 
@@ -165,39 +172,50 @@ async function main(): Promise<void> {
     let kantonDrift = 0;
     let kantonWarnungen = 0;
 
-    for (const gruppe of gruppen) {
-      const key = `${gruppe.kanton}/${gruppe.lawId}`;
-      const snapshotToken = kantonTokens.get(key);
+    const kantonLimit = pLimit(FETCH_CONCURRENCY);
+    const kantonAbrufe = await Promise.all(
+      gruppen.map((gruppe) =>
+        kantonLimit(async (): Promise<{ skip: true } | { ok: true; ergebnis: Awaited<ReturnType<typeof holeLexWork>> } | { ok: false; msg: string }> => {
+          // Gruppen ohne Snapshot NICHT über das Netz holen (wie seriell).
+          if (kantonTokens.get(`${gruppe.kanton}/${gruppe.lawId}`) === undefined) return { skip: true };
+          try {
+            return { ok: true, ergebnis: await holeLexWork(gruppe.host, gruppe.lang, gruppe.lawId) };
+          } catch (err) {
+            return { ok: false, msg: err instanceof Error ? err.message : String(err) };
+          }
+        }),
+      ),
+    );
 
-      if (snapshotToken === undefined) {
-        // Kein Snapshot für diese Gruppe → überspringen
+    for (let i = 0; i < gruppen.length; i++) {
+      const gruppe = gruppen[i];
+      const abruf = kantonAbrufe[i];
+      if ('skip' in abruf) continue; // kein Snapshot → überspringen
+      const key = `${gruppe.kanton}/${gruppe.lawId}`;
+      const snapshotToken = kantonTokens.get(key)!;
+
+      if (!abruf.ok) {
+        // Netzfehler → Warnung, kein harter Fehler (§8: transparent machen)
+        console.warn(`WARNUNG Kanton-Netz: ${gruppe.kanton} ${gruppe.lawId}: ${abruf.msg}`);
+        kantonWarnungen++;
+        continue;
+      }
+      const ergebnis = abruf.ergebnis;
+
+      if (ergebnis.meta.nurPdf) {
+        // nurPdf-Erlass → überspringen
         continue;
       }
 
-      try {
-        // Nur Meta benötigt; leere Token-Liste reicht
-        const ergebnis = await holeLexWork(gruppe.host, gruppe.lang, gruppe.lawId);
+      kantonGeprüft++;
+      const neueUid = ergebnis.meta.versionUid;
 
-        if (ergebnis.meta.nurPdf) {
-          // nurPdf-Erlass → überspringen
-          continue;
-        }
-
-        kantonGeprüft++;
-        const neueUid = ergebnis.meta.versionUid;
-
-        if (neueUid && neueUid !== snapshotToken) {
-          console.error(
-            `FEHLER Kanton-Drift: ${gruppe.kanton} ${gruppe.lawId}: version_uid "${neueUid}" ≠ Snapshot "${snapshotToken}" — Snapshot neu erzeugen`,
-          );
-          kantonDrift++;
-          exitCode = 1;
-        }
-      } catch (err) {
-        // Netzfehler → Warnung, kein harter Fehler (§8: transparent machen)
-        const msg = err instanceof Error ? err.message : String(err);
-        console.warn(`WARNUNG Kanton-Netz: ${gruppe.kanton} ${gruppe.lawId}: ${msg}`);
-        kantonWarnungen++;
+      if (neueUid && neueUid !== snapshotToken) {
+        console.error(
+          `FEHLER Kanton-Drift: ${gruppe.kanton} ${gruppe.lawId}: version_uid "${neueUid}" ≠ Snapshot "${snapshotToken}" — Snapshot neu erzeugen`,
+        );
+        kantonDrift++;
+        exitCode = 1;
       }
     }
 
@@ -215,26 +233,40 @@ async function main(): Promise<void> {
     let htmDrift = 0;
     let htmWarnungen = 0;
 
-    for (const g of htmGruppen) {
-      const key = `${g.kanton}/${htmLawIdSafe(g.quelleUrl)}`;
-      const snapshotToken = kantonTokens.get(key);
-      if (snapshotToken === undefined) continue; // kein Snapshot → überspringen
+    const htmLimit = pLimit(FETCH_CONCURRENCY);
+    const htmAbrufe = await Promise.all(
+      htmGruppen.map((g) =>
+        htmLimit(async (): Promise<{ skip: true } | { ok: true; ergebnis: Awaited<ReturnType<typeof holeHtm>> } | { ok: false; msg: string }> => {
+          if (kantonTokens.get(`${g.kanton}/${htmLawIdSafe(g.quelleUrl)}`) === undefined) return { skip: true };
+          try {
+            return { ok: true, ergebnis: await holeHtm(g.quelleUrl, g.profil) };
+          } catch (err) {
+            return { ok: false, msg: err instanceof Error ? err.message : String(err) };
+          }
+        }),
+      ),
+    );
 
-      try {
-        const ergebnis = await holeHtm(g.quelleUrl, g.profil);
-        htmGeprüft++;
-        const neuerHash = ergebnis.meta.quelleHash;
-        if (neuerHash && neuerHash !== snapshotToken) {
-          console.error(
-            `FEHLER HTM-Drift: ${g.kanton} ${htmLawIdSafe(g.quelleUrl)}: quelleHash "${neuerHash.slice(0, 12)}…" ≠ Snapshot "${snapshotToken.slice(0, 12)}…" — Snapshot neu erzeugen`,
-          );
-          htmDrift++;
-          exitCode = 1;
-        }
-      } catch (err) {
-        const msg = err instanceof Error ? err.message : String(err);
-        console.warn(`WARNUNG HTM-Netz: ${g.kanton} ${g.quelleUrl}: ${msg}`);
+    for (let i = 0; i < htmGruppen.length; i++) {
+      const g = htmGruppen[i];
+      const abruf = htmAbrufe[i];
+      if ('skip' in abruf) continue; // kein Snapshot → überspringen
+      const snapshotToken = kantonTokens.get(`${g.kanton}/${htmLawIdSafe(g.quelleUrl)}`)!;
+
+      if (!abruf.ok) {
+        console.warn(`WARNUNG HTM-Netz: ${g.kanton} ${g.quelleUrl}: ${abruf.msg}`);
         htmWarnungen++;
+        continue;
+      }
+      const ergebnis = abruf.ergebnis;
+      htmGeprüft++;
+      const neuerHash = ergebnis.meta.quelleHash;
+      if (neuerHash && neuerHash !== snapshotToken) {
+        console.error(
+          `FEHLER HTM-Drift: ${g.kanton} ${htmLawIdSafe(g.quelleUrl)}: quelleHash "${neuerHash.slice(0, 12)}…" ≠ Snapshot "${snapshotToken.slice(0, 12)}…" — Snapshot neu erzeugen`,
+        );
+        htmDrift++;
+        exitCode = 1;
       }
     }
 
@@ -251,25 +283,39 @@ async function main(): Promise<void> {
     let zhDrift = 0;
     let zhWarnungen = 0;
 
-    for (const g of zhGruppen) {
-      const key = `${g.kanton}/${zhLawIdSafe(g.quelleUrl)}`;
-      const snapshotToken = kantonTokens.get(key);
-      if (snapshotToken === undefined) continue;
-      try {
-        const ergebnis = await holeZhPdf(g.quelleUrl);
-        zhGeprüft++;
-        const neuerHash = ergebnis.meta.quelleHash;
-        if (neuerHash && neuerHash !== snapshotToken) {
-          console.error(
-            `FEHLER ZH-Drift: ${g.kanton} ${zhLawIdSafe(g.quelleUrl)}: quelleHash "${neuerHash.slice(0, 12)}…" ≠ Snapshot "${snapshotToken.slice(0, 12)}…" — Snapshot neu erzeugen`,
-          );
-          zhDrift++;
-          exitCode = 1;
-        }
-      } catch (err) {
-        const msg = err instanceof Error ? err.message : String(err);
-        console.warn(`WARNUNG ZH-Netz: ${g.kanton} ${g.quelleUrl}: ${msg}`);
+    const zhLimit = pLimit(FETCH_CONCURRENCY);
+    const zhAbrufe = await Promise.all(
+      zhGruppen.map((g) =>
+        zhLimit(async (): Promise<{ skip: true } | { ok: true; ergebnis: Awaited<ReturnType<typeof holeZhPdf>> } | { ok: false; msg: string }> => {
+          if (kantonTokens.get(`${g.kanton}/${zhLawIdSafe(g.quelleUrl)}`) === undefined) return { skip: true };
+          try {
+            return { ok: true, ergebnis: await holeZhPdf(g.quelleUrl) };
+          } catch (err) {
+            return { ok: false, msg: err instanceof Error ? err.message : String(err) };
+          }
+        }),
+      ),
+    );
+
+    for (let i = 0; i < zhGruppen.length; i++) {
+      const g = zhGruppen[i];
+      const abruf = zhAbrufe[i];
+      if ('skip' in abruf) continue;
+      const snapshotToken = kantonTokens.get(`${g.kanton}/${zhLawIdSafe(g.quelleUrl)}`)!;
+      if (!abruf.ok) {
+        console.warn(`WARNUNG ZH-Netz: ${g.kanton} ${g.quelleUrl}: ${abruf.msg}`);
         zhWarnungen++;
+        continue;
+      }
+      const ergebnis = abruf.ergebnis;
+      zhGeprüft++;
+      const neuerHash = ergebnis.meta.quelleHash;
+      if (neuerHash && neuerHash !== snapshotToken) {
+        console.error(
+          `FEHLER ZH-Drift: ${g.kanton} ${zhLawIdSafe(g.quelleUrl)}: quelleHash "${neuerHash.slice(0, 12)}…" ≠ Snapshot "${snapshotToken.slice(0, 12)}…" — Snapshot neu erzeugen`,
+        );
+        zhDrift++;
+        exitCode = 1;
       }
     }
 
@@ -291,25 +337,40 @@ async function main(): Promise<void> {
     // Schlüssel-Drift (wie der olex-Bug) fällt so sofort in der Gate-Ausgabe auf.
     const pdfOhneSnapshot: string[] = [];
 
-    for (const g of pdfGruppen) {
+    const pdfLimit = pLimit(FETCH_CONCURRENCY);
+    const pdfAbrufe = await Promise.all(
+      pdfGruppen.map((g) =>
+        pdfLimit(async (): Promise<{ skip: true } | { ok: true; ergebnis: Awaited<ReturnType<typeof holePdf>> } | { ok: false; msg: string }> => {
+          if (kantonTokens.get(`${g.kanton}/${pdfLawIdSafe(g.profil, g.quelleUrl)}`) === undefined) return { skip: true };
+          try {
+            return { ok: true, ergebnis: await holePdf(g.quelleUrl, PDF_PROFILE[g.profil]) };
+          } catch (err) {
+            return { ok: false, msg: err instanceof Error ? err.message : String(err) };
+          }
+        }),
+      ),
+    );
+
+    for (let i = 0; i < pdfGruppen.length; i++) {
+      const g = pdfGruppen[i];
+      const abruf = pdfAbrufe[i];
       const key = `${g.kanton}/${pdfLawIdSafe(g.profil, g.quelleUrl)}`;
       const snapshotToken = kantonTokens.get(key);
-      if (snapshotToken === undefined) { pdfOhneSnapshot.push(`${g.kanton}/${g.profil} ${key}`); continue; }
-      try {
-        const ergebnis = await holePdf(g.quelleUrl, PDF_PROFILE[g.profil]);
-        pdfGeprüft++;
-        const neuerHash = ergebnis.meta.quelleHash;
-        if (neuerHash && neuerHash !== snapshotToken) {
-          console.error(
-            `FEHLER PDF-Drift: ${g.kanton} ${pdfLawIdSafe(g.profil, g.quelleUrl)}: quelleHash "${neuerHash.slice(0, 12)}…" ≠ Snapshot "${snapshotToken.slice(0, 12)}…" — Snapshot neu erzeugen`,
-          );
-          pdfDrift++;
-          exitCode = 1;
-        }
-      } catch (err) {
-        const msg = err instanceof Error ? err.message : String(err);
-        console.warn(`WARNUNG PDF-Netz: ${g.kanton} ${g.quelleUrl}: ${msg}`);
+      if ('skip' in abruf || snapshotToken === undefined) { pdfOhneSnapshot.push(`${g.kanton}/${g.profil} ${key}`); continue; }
+      if (!abruf.ok) {
+        console.warn(`WARNUNG PDF-Netz: ${g.kanton} ${g.quelleUrl}: ${abruf.msg}`);
         pdfWarnungen++;
+        continue;
+      }
+      const ergebnis = abruf.ergebnis;
+      pdfGeprüft++;
+      const neuerHash = ergebnis.meta.quelleHash;
+      if (neuerHash && neuerHash !== snapshotToken) {
+        console.error(
+          `FEHLER PDF-Drift: ${g.kanton} ${pdfLawIdSafe(g.profil, g.quelleUrl)}: quelleHash "${neuerHash.slice(0, 12)}…" ≠ Snapshot "${snapshotToken.slice(0, 12)}…" — Snapshot neu erzeugen`,
+        );
+        pdfDrift++;
+        exitCode = 1;
       }
     }
 

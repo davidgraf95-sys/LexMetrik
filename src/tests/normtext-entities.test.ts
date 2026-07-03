@@ -67,8 +67,15 @@ describe('dekodiereEntities', () => {
   });
 
   it('dekodiert &bdquo; und &ldquo; und &rdquo;', () => {
-    expect(dekodiereEntities('&bdquo;Hallo&rdquo;')).toBe('„Hallo"');
-    expect(dekodiereEntities('&ldquo;Welt&rdquo;')).toBe('"Welt"');
+    // DEKLARIERTE fachliche Korrektur (he-Umstellung 3.7.2026, §6.3): die alte
+    // Hand-Tabelle flachte &ldquo;/&rdquo; auf ASCII-" (U+22) ab — undokumentiert
+    // und WHATWG-widrig (&ldquo; = U+201C “, &rdquo; = U+201D ”; so rendert es
+    // auch der Browser der amtlichen Quelle). Korpus-Impact heute: NULL — kein
+    // &ldquo;/&rdquo; in gepinnten Fedlex-Caches noch im committeten public/**
+    // (Bund-Regen aus Caches 0-Byte-Diff). Beleg:
+    // bibliothek/register/he-entity-korrekturen-2026-07-03.md
+    expect(dekodiereEntities('&bdquo;Hallo&rdquo;')).toBe('„Hallo”');
+    expect(dekodiereEntities('&ldquo;Welt&rdquo;')).toBe('“Welt”');
   });
 
   it('dekodiert &lsquo; und &rsquo;', () => {
