@@ -10,7 +10,7 @@ import { join } from 'node:path';
 import { sha256EntscheidBloecke } from './sha-entscheide';
 import type { EntscheidSnapshotDatei } from '../../src/lib/rechtsprechung/typen';
 import type { EntscheidManifest } from '../../src/lib/rechtsprechung/register';
-import type { NormEntscheidIndex } from '../../src/lib/rechtsprechung/norm-index';
+import type { NormEntscheidIndex, LeitfallShard } from '../../src/lib/rechtsprechung/norm-index';
 
 const ROOT = process.cwd();
 const PUB = join(ROOT, 'public', 'rechtsprechung');
@@ -158,6 +158,32 @@ function main() {
     }
     const niMb = statSync(niPfad).size / (1024 * 1024);
     if (niMb > NORM_INDEX_BUDGET_MB) fehler.push(`norm-index.json-Budget überschritten: ${niMb.toFixed(2)} MB > ${NORM_INDEX_BUDGET_MB} MB (Artikel-Fan-out?)`);
+
+    // Schaufenster-Shards (Weiche B): die Vereinigung aller Shards MUSS die Artikel-
+    // Ebene des Gesamt-JSON exakt (zeichengleich) reproduzieren — sonst zeigt der
+    // ArtikelLeser andere Leitfälle als rechtsprechungFuerArtikel() (Datenspaltung, §5).
+    const shardDir = join(PUB, 'norm-index');
+    if (existsSync(shardDir)) {
+      const proArtikelSoll = idx.proNormArtikel ?? {};
+      const erlasseSoll = new Set(Object.keys(proArtikelSoll).map((k) => k.slice(0, k.indexOf('/'))));
+      const shardDateien = readdirSync(shardDir).filter((f) => f.endsWith('.json')).sort();
+      const erlasseIst = new Set(shardDateien.map((f) => f.slice(0, -5)));
+      for (const e of erlasseSoll) if (!erlasseIst.has(e)) fehler.push(`Shard fehlt für Erlass '${e}' (hat Artikel-Treffer im norm-index)`);
+      for (const e of erlasseIst) if (!erlasseSoll.has(e)) fehler.push(`Shard '${e}.json' ohne Artikel-Treffer im norm-index (verwaist)`);
+      const vereinigung: Record<string, unknown> = {};
+      for (const f of shardDateien) {
+        const s = JSON.parse(readFileSync(join(shardDir, f), 'utf8')) as LeitfallShard;
+        const erlass = f.slice(0, -5);
+        if (s.erlass !== erlass) fehler.push(`Shard '${f}': erlass-Feld '${s.erlass}' ≠ Dateiname '${erlass}'`);
+        for (const [tok, refs] of Object.entries(s.proArtikel)) vereinigung[`${erlass}/${tok}`] = refs;
+      }
+      const kanon = (o: Record<string, unknown>): string => {
+        const sortiert: Record<string, unknown> = {};
+        for (const k of Object.keys(o).sort()) sortiert[k] = o[k];
+        return JSON.stringify(sortiert);
+      };
+      if (kanon(proArtikelSoll) !== kanon(vereinigung)) fehler.push(`Shard-Vereinigung ≠ proNormArtikel (Weiche-B-Projektion driftet vom Gesamt-JSON ab)`);
+    }
   }
 
   // ERFASST == Manifest-Keys

@@ -5,7 +5,7 @@
 //     Der `blob` je Eintrag speichert die exakte Struktur → byte-gleiche Rekonstruktion.
 //   - Dokument-Manifeste (Nicht-eintraege-Form): register/index/norm-index als reiner
 //     Byte-Roundtrip (Pfad → exakter Inhalt), ohne Struktur-Zerlegung.
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import type { DatabaseSync } from 'node:sqlite';
 import type { NormSnapshot } from '../../src/lib/normtext/typen.ts';
@@ -35,6 +35,10 @@ export const RECHTSPRECHUNG_MANIFESTE = [
   'public/rechtsprechung/register.json',
   'public/rechtsprechung/norm-index.json',
 ];
+// Schaufenster-Shards (Weiche B, §11.2): je Erlass eine committete Projektion des
+// norm-index (nur Erlasse mit Artikel-Treffern). Variable Datei-Menge → über den
+// Verzeichnis-Sammler, reiner Dokument-Byte-Roundtrip (Pfad → exakter Inhalt).
+export const RECHTSPRECHUNG_SHARD_DIR = 'public/rechtsprechung/norm-index';
 export const MATERIALIEN_MANIFESTE = ['public/materialien/register.json'];
 
 export interface Eintrag {
@@ -177,11 +181,14 @@ export function ingestNormtextZiel(db: DatabaseSync): Zaehler {
 /** Rechtsprechungs-DB: Bund + Kanton ({erzeugt, eintraege} MIT Trailing-Newline) + Manifeste. */
 export function ingestRechtsprechung(db: DatabaseSync): Zaehler {
   const dateien = RECHTSPRECHUNG_DIRS.flatMap(jsonRekursiv).sort();
+  const shards = existsSync(RECHTSPRECHUNG_SHARD_DIR) ? jsonFlach(RECHTSPRECHUNG_SHARD_DIR) : [];
   ingestEintragDateien(db, dateien, 'rechtsprechung', true);
   ingestDokumente(db, RECHTSPRECHUNG_MANIFESTE, 'rechtsprechung-manifest');
+  ingestDokumente(db, shards, 'rechtsprechung-shard');
   return {
     Rechtsprechung: dateien.length,
     'Rechtsprechung-Manifeste': RECHTSPRECHUNG_MANIFESTE.length,
+    'Leitfall-Shards': shards.length,
   };
 }
 
