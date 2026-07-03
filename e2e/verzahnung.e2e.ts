@@ -115,9 +115,13 @@ test('MM4: ★-aria-label textgleich in Reader, Panel, Leitfall-Zeile und Suche;
   await kontext.scrollIntoViewIfNeeded()
   await expect(kontext.locator(`[role="img"][aria-label="${LEIT_ARIA}"]`).first()).toBeVisible({ timeout: 10_000 })
 
-  // (c) Leitfall-Zeile am Artikel (Glyph im KantenChip).
+  // (c) Leitfall-Zeile am Artikel (Glyph im KantenChip). Auf dem langsamen
+  // CI-Runner racet der Hash-Sprung mit content-visibility — explizit zum
+  // Artikel scrollen (erzwingt Render + idle-Shard-Load), wie im
+  // Fundstellen-Test A; Assertion unverändert.
   await page.goto('/gesetze/bund/ZGB#art-684')
   const art = page.locator('#art-684')
+  await art.scrollIntoViewIfNeeded()
   await expect(art.locator(`[role="img"][aria-label="${LEIT_ARIA}"]`).first()).toBeVisible({ timeout: 15_000 })
 
   // (d) Universal-Suche (Volltext-Badge im Treffer).
