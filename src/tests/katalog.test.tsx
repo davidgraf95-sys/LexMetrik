@@ -14,7 +14,9 @@ import { ALLE_KARTEN, istVerfuegbar } from '../lib/startseiteConfig';
 // auf eigenen Übersichtsseiten (/rechner, /vorlagen), die die bestehende
 // KategorieSektion wiederverwenden; die Suche liegt im Header-Dropdown. Die
 // Startseite «/» ist das Suche-zuerst-Cockpit (Begrüssung, News, Schnellrechner,
-// Zeiterfassung, Favoriten).
+// Gesetze-Rubrik). Startseite V3 · Schritt 2 (deklarierte Änderung §6.3):
+// Favoriten gestrichen (Anweisung David 5.6.), Zeiterfassung auf /rechner
+// verschoben — beide nicht mehr auf «/».
 
 // Minimaler localStorage-Mock (Node hat keinen)
 beforeEach(() => {
@@ -163,7 +165,7 @@ describe('Globale Suche im Top-Streifen (UI-Welle: Dropdown überall, §6.3)', (
 });
 
 describe('Startseite V2 — «Rechner-zuerst»-Cockpit (19.6.2026, deklarierte Anpassung §6 Ziff. 3)', () => {
-  it('zeigt Begrüssung, Schnellrechner, Zeiterfassung und Favoriten — KEIN Katalog-Deckblatt', () => {
+  it('zeigt Begrüssung, Schnellrechner und Gesetze-Rubrik — KEIN Katalog-Deckblatt', () => {
     const html = startHtml('/');
     // Begrüssung (zufällig, tageszeitpassend → kein fixer Text) + Datum/Uhr-Zeile.
     // Das «Berechnung statt KI»-Badge wurde 26.6.2026 entfernt (Auftrag David) —
@@ -172,8 +174,10 @@ describe('Startseite V2 — «Rechner-zuerst»-Cockpit (19.6.2026, deklarierte A
     expect(html).not.toContain('Berechnung statt KI');
     // Sektionen des Cockpits
     expect(html).toContain('Schnellrechner');
-    expect(html).toContain('Zeiterfassung');
-    expect(html).toContain('Favoriten');
+    // Startseite V3 · Schritt 2 (deklarierte Änderung §6.3): Favoriten gestrichen,
+    // Zeiterfassung auf /rechner verschoben — beide nicht mehr auf «/».
+    expect(html).not.toContain('Favoriten');
+    expect(html).not.toContain('Zeiterfassung');
     // Schnellrechner rechnet live (der «live hergeleitet»-Badge wurde 25.6.2026
     // auf Wunsch David als redundant entfernt — der Live-Hinweis im Ergebnisblock
     // genügt; §6 Ziff. 3 deklarierte fachliche Änderung).
