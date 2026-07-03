@@ -556,9 +556,12 @@ OR/ZGB-Renumerierungen, bis/ter). Darum bei jedem neuen `erlass_fassungen`-Eintr
     ~5 min nicht erneut hämmern, dann wieder). Unit-Tests: 200/503/Netz/Timeout/<3-Zeichen +
     URL-Bildung. Manueller Beweis gegen die Prod-Edge 3.7.2026: `api/suche?q=verjaehrung` liefert
     **HTTP 200 mit leerer Antwort** (Turso provisioniert, Hot-Daten-Sync ausstehend) → die
-    Degradation macht die Gruppe unsichtbar, statischer Index trägt weiter. **E2 damit KOMPLETT,
-    sobald die Turso-Hot-Daten geladen/synchronisiert sind** (Perf-budget/Payload-Grenz-Test bleiben
-    E2-DoD, greifen erst mit geladenen Daten).
+    Degradation macht die Gruppe unsichtbar, statischer Index trägt weiter. **E2 KOMPLETT ✅
+    3.7.2026 — Hot-Daten geladen + LIVE-Beweis:** Prod-`api/suche` liefert Treffer über 55 244
+    Artikel (Bund+Kanton, Fedlex-Anker-Links) + 342 BGE (bger.ch-Links, Highlight-Snippets),
+    Diakritik live (FTS-Smoke «verjahrung» = 158). Sync-Läufer `datenhaltung:turso-sync`
+    (Voll-Rebuild Weiche C, remote contentless-FTS). *Residuum (nicht blockierend):
+    `check:perf-budget`-Lauf mit aktiver Online-Gruppe + Payload-Grenz-Test gegen die echte Edge.*
 - **E3 · BGer-Massen-Import (26×-Slot!).** voilaj-Parquet konsumieren (bger ~191k), Dedup
   `make_canonical_key`, `kuratierung:'maschinell'`, amtlicher bger.ch-Link je Zeile; DB-only
   (nicht nach `public/` projiziert); Long-Tail-Route `/rechtsprechung/:key` fällt bei
