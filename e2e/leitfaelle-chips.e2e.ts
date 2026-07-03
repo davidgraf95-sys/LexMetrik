@@ -17,10 +17,14 @@ test.describe('Leitfälle-Chips im ArtikelLeser (OR)', () => {
     const fehler = fehlerSammeln(page)
     await page.goto('/gesetze/bund/OR')
     const art41 = page.locator('#art-41')
-    await art41.scrollIntoViewIfNeeded()
-    // Chips wachsen idle ein (requestIdleCallback). Die Zeile trägt die Overline
-    // «Leitfälle» und einen Chip-Link auf den einschlägigen BGE (aus dem OR-Shard).
-    await expect(art41.getByText('Leitfälle', { exact: true })).toBeVisible()
+    // Chips laden in Viewport-Nähe (Sichtbarkeits-Laden, W2·7-VZUI). Während der
+    // Hydration DRIFTET der Artikel (Nachbarn wachsen von Platzhalter- auf
+    // Realhöhe) — ein einzelner programmatischer Scroll kann ihn verlieren, ein
+    // Leser hält ihn im Blick: Scroll+Sichtprüfung als Poll bis zum Settle.
+    await expect(async () => {
+      await art41.scrollIntoViewIfNeeded()
+      await expect(art41.getByText('Leitfälle', { exact: true })).toBeVisible({ timeout: 2000 })
+    }).toPass({ timeout: 20_000 })
     await expect(art41.getByRole('link', { name: /BGE 152 III 7/ })).toBeVisible()
     // Der Chip führt in die Rechtsprechungs-Detailseite.
     await expect(art41.getByRole('link', { name: /BGE 152 III 7/ })).toHaveAttribute('href', /\/rechtsprechung\/bge_152_III_7/)
@@ -29,11 +33,18 @@ test.describe('Leitfälle-Chips im ArtikelLeser (OR)', () => {
 
   test('(b) Artikel OHNE Leitfälle rendert KEINE leere Zeile', async ({ page }) => {
     await page.goto('/gesetze/bund/OR')
+    // Chips laden in Viewport-Nähe (Sichtbarkeits-Laden, W2·7-VZUI): erst den
+    // Anker-Artikel MIT Treffern ansteuern (beweist Shard geladen + Zeile da) …
+    const art41 = page.locator('#art-41')
+    await expect(async () => {
+      await art41.scrollIntoViewIfNeeded()
+      await expect(art41.getByText('Leitfälle', { exact: true })).toBeVisible({ timeout: 2000 })
+    }).toPass({ timeout: 20_000 })
+    // … dann Art. 2 (ohne Treffer im Shard): in Sicht bringen, kurz laden lassen,
+    // KEINE «Leitfälle»-Overline (keine leere Zeile, §15.2).
     const art2 = page.locator('#art-2')
     await art2.scrollIntoViewIfNeeded()
-    // Warten bis die Chips generell geladen sind (art-41 als Anker), dann prüfen,
-    // dass Art. 2 (ohne Treffer im Shard) KEINE «Leitfälle»-Overline trägt.
-    await expect(page.locator('#art-41').getByText('Leitfälle', { exact: true })).toBeVisible()
+    await page.waitForTimeout(1500)
     await expect(art2.getByText('Leitfälle', { exact: true })).toHaveCount(0)
   })
 

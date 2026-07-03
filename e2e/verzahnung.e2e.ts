@@ -123,10 +123,13 @@ test('MM4: ★-aria-label textgleich in Reader, Panel, Leitfall-Zeile und Suche;
   await page.goto('/gesetze/bund/ZGB#art-684')
   await page.reload()
   const art = page.locator('#art-684')
-  await art.scrollIntoViewIfNeeded()
-  // Erst der Zeilen-Container (klareres Fehlersignal: Zeile fehlt vs. ★ fehlt),
-  // dann der ★-Glyph mit dem geteilten aria-label.
-  await expect(art.getByText('Leitfälle', { exact: true })).toBeVisible({ timeout: 15_000 })
+  // Scroll+Sicht als Poll (Hydrations-Drift, s. leitfaelle-chips.e2e.ts) — erst
+  // der Zeilen-Container (klareres Fehlersignal), dann der ★-Glyph mit dem
+  // geteilten aria-label.
+  await expect(async () => {
+    await art.scrollIntoViewIfNeeded()
+    await expect(art.getByText('Leitfälle', { exact: true })).toBeVisible({ timeout: 2000 })
+  }).toPass({ timeout: 20_000 })
   await expect(art.locator(`[role="img"][aria-label="${LEIT_ARIA}"]`).first()).toBeVisible({ timeout: 15_000 })
 
   // (d) Universal-Suche (Volltext-Badge im Treffer).
@@ -154,8 +157,11 @@ test('Fundstelle A (Gesetz-Chip): ZGB Art. 684 → BGE 151 III 377 landet auf de
   await page.goto('/gesetze/bund/ZGB#art-684')
   const art = page.locator('#art-684')
   const chip = art.locator('a[href*="bge_151_III_377"]').first()
-  await chip.scrollIntoViewIfNeeded()
-  await expect(chip).toBeVisible({ timeout: 15_000 })
+  // Scroll+Sicht als Poll (Hydrations-Drift; Chips laden in Viewport-Nähe).
+  await expect(async () => {
+    await art.scrollIntoViewIfNeeded()
+    await expect(chip).toBeVisible({ timeout: 2000 })
+  }).toPass({ timeout: 20_000 })
   await expect(chip).toHaveAttribute('href', /norm=Art\.(%20|\+| )684(%20|\+| )ZGB/)
   await chip.click()
   // Referenzfall (David): die massgebliche Erwägung E. 2.3.1 («Art. 684 i.V.m.

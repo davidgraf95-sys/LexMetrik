@@ -1,4 +1,4 @@
-import { useState, useEffect, memo, type ReactNode } from 'react';
+import { useState, useEffect, useRef, memo, type ReactNode } from 'react';
 import { ArtikelBody, FnRef } from '../../components/normtext/ArtikelBody';
 import type { InternRefs } from '../../components/NormText';
 import { trenneAenderungshistorie, labelMitBereich, artikelGanzAufgehoben } from '../../lib/normtext/darstellung';
@@ -60,27 +60,57 @@ const LeitfallZeile = memo(function LeitfallZeile({ registerKey, artikel, normZi
   const artKey = `${registerKey}/${artikel}`;
   const [geladen, setGeladen] = useState<{ key: string; refs: LeitfallRef[] } | null>(null);
   const [alleAuf, setAlleAuf] = useState(false);
+  // SICHTBARKEITS-Laden statt Idle-Herde (§15-CI-Befund W2·7-VZUI): grosse Erlasse
+  // (ZGB ~1000 Artikel) mounten ~1000 LeitfallZeilen — liefen ALLE zugleich über
+  // requestIdleCallback, jammten Fetch-Resolves + setState-Bursts den Main-Thread
+  // (gemessen 20×-Throttle: >13 s Long-Tasks, ★ erst nach ~15 s). Jetzt lädt eine
+  // Zeile erst, wenn ihr Artikel in Viewport-Nähe kommt (Sentinel + rootMargin
+  // 600 px) — nur die tatsächlich gelesenen Artikel arbeiten; der Shard-Fetch
+  // bleibt über den Promise-Cache geteilt. Ohne IO (alte Browser): von Anfang an
+  // «nah» (Lazy-Initializer, kein setState im Effekt-Body — react-hooks-Regel).
+  const [nah, setNah] = useState(() => typeof IntersectionObserver === 'undefined');
+  const sentinelRef = useRef<HTMLSpanElement>(null);
   const { oeffneDaneben, kannOeffnen, istOffen } = usePaneSteuerung();
 
   useEffect(() => {
+    const el = sentinelRef.current;
+    if (!el || nah) return;
+    // Beobachtet wird der TRAGENDE Artikel (nicht der 0×0-Sentinel): der Artikel
+    // hat auch bei übersprungener content-visibility eine Platzhalter-Box, und
+    // Layout-Drift während der Hydration (Artikel wandern beim Einrendern) kann
+    // einen punktförmigen Sentinel zwischen zwei Observer-Ticks aus dem Fenster
+    // schieben (empirisch: art-41 top 240→−64 in <1 s). Der Sentinel dient nur
+    // als React-Anker, um das Artikel-Element zu finden.
+    const ziel = el.closest('article') ?? el;
+    const io = new IntersectionObserver((eintraege) => {
+      if (eintraege.some((e) => e.isIntersecting)) { setNah(true); io.disconnect(); }
+    }, { rootMargin: '600px 0px' });
+    io.observe(ziel);
+    return () => io.disconnect();
+  }, [nah]);
+
+  useEffect(() => {
+    if (!nah) return;
     let lebt = true;
     const abbrechen = beiLeerlauf(() => {
       leitfaelleFuerArtikel(registerKey, artikel).then((r) => { if (lebt) setGeladen({ key: artKey, refs: r }); });
     });
     return () => { lebt = false; abbrechen(); };
-  }, [registerKey, artikel, artKey]);
+  }, [nah, registerKey, artikel, artKey]);
 
   // Nur das zum AKTUELLEN Artikel gehörende Resultat zeigen; ein veralteter Treffer = «lädt».
   const leitfaelle: LeitfallRef[] | null = geladen && geladen.key === artKey ? geladen.refs : null;
 
   // Wie die «Verweise»-Zeile: bei nichts vorhanden GAR KEINE Zeile rendern (kein
-  // reservierter Leerraum). Bewusst KEINE Mindesthöhe je Artikel — die grosse Mehrheit
-  // der Artikel hat keine Leitfälle; eine Reservierung würde in fast jeden Artikel
-  // Weissraum einziehen (Anti-Ziel §15.2 „Reservierung darf keinen Inhalt verstecken",
-  // schadete der Lesedichte). Die Chips wachsen idle am Artikel-FUSS ein (unterhalb
-  // von Body + Verweisen, meist below-fold) — dieselbe async-Klasse wie die
-  // KontextPanel-Entscheide; der prerenderte Normtext (LCP/Ctrl+F) bleibt unberührt (§15.1/3).
-  if (!leitfaelle || leitfaelle.length === 0) return null;
+  // reservierter Leerraum) — nur der unsichtbare 0×0-Sentinel bleibt als Beobachtungs-
+  // Anker stehen, bis geladen ist. Bewusst KEINE Mindesthöhe je Artikel — die grosse
+  // Mehrheit der Artikel hat keine Leitfälle; eine Reservierung würde in fast jeden
+  // Artikel Weissraum einziehen (Anti-Ziel §15.2 „Reservierung darf keinen Inhalt
+  // verstecken", schadete der Lesedichte). Die Chips wachsen in Viewport-Nähe am
+  // Artikel-FUSS ein (unterhalb von Body + Verweisen, meist below-fold); der
+  // prerenderte Normtext (LCP/Ctrl+F) bleibt unberührt (§15.1/3).
+  if (!leitfaelle) return <span ref={sentinelRef} aria-hidden />;
+  if (leitfaelle.length === 0) return null;
 
   const sichtbar = alleAuf ? leitfaelle : leitfaelle.slice(0, LEITFAELLE_SICHTBAR);
   const rest = leitfaelle.length - sichtbar.length;
