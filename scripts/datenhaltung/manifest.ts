@@ -20,12 +20,31 @@ export interface TabellenManifest {
 export type DbManifest = Record<string, TabellenManifest>;
 export type Manifest = Record<string, DbManifest>;
 
-/** Benutzer-Tabellen (ohne interne/FTS-Schatten), alphabetisch. */
+/**
+ * Benutzer-/Quell-Tabellen (alphabetisch) — OHNE FTS5-Virtual-Tables und deren Schatten.
+ *
+ * FTS-Ausklammerung (E2-Vorarbeiten, bewusst): Der Determinismus-Beweis (§2) liegt auf den
+ * QUELL-Tabellen (artikel/eintrag/…); die FTS5-Indizes (fts_artikel, fts_entscheide_schaufenster
+ * + ihre Schatten *_data/_idx/_docsize/_config/_content) sind reine Ableitungen daraus und aus
+ * denselben Zeilen jederzeit rebuildbar. Ihr interner Segment-Blob ist SQLite-Versions-/
+ * plattformabhängig (das Manifest ist explizit plattform-unabhängig gedacht, s. Kopf) — er
+ * gehört nicht in den portablen Byte-Beweis. Empirisch sind die Schatten bei fixer Insert-
+ * Reihenfolge zwar bit-stabil (zwei Builds → identische sha), doch der Manifest-Contract bleibt:
+ * NUR Quell-Tabellen tragen ihn. berechneManifest() baut die FTS ohnehin nicht (nur build.ts) —
+ * dieser Filter ist die zusätzliche, dokumentierte Absicherung.
+ */
 function tabellen(db: DatabaseSync): string[] {
-  const rows = db
+  const alle = db
     .prepare("SELECT name FROM sqlite_master WHERE type = 'table' AND name NOT LIKE 'sqlite_%' ORDER BY name")
     .all() as Array<{ name: string }>;
-  return rows.map((r) => r.name);
+  const virtuelle = (
+    db
+      .prepare("SELECT name FROM sqlite_master WHERE type = 'table' AND sql LIKE 'CREATE VIRTUAL TABLE%'")
+      .all() as Array<{ name: string }>
+  ).map((r) => r.name);
+  const istFts = (name: string): boolean =>
+    virtuelle.some((vt) => name === vt || name.startsWith(vt + '_'));
+  return alle.map((r) => r.name).filter((n) => !istFts(n));
 }
 
 function spalten(db: DatabaseSync, tabelle: string): string[] {
