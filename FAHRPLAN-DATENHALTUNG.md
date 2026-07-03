@@ -657,6 +657,13 @@ OR/ZGB-Renumerierungen, bis/ter). Darum bei jedem neuen `erlass_fassungen`-Eintr
     Nordstern-Satz «ein Kreisschreiben zeigt, welche Norm es auslegt» hängt an dieser einen Erweiterung).
     **TOR/DoD:** Doktyp-eigenes `check:*`-Dreieck; `check:paritaet` für die kuratierte Projektion;
     Kanten-Invarianten (`check:datenhaltung`).
+  - **E6a Stufe 1 vorgezogen (David 3.7.2026) — Detailquelle `FAHRPLAN-MATERIALIEN-VERZAHNUNG.md`**
+    (ROADMAP-Schritt `W2·6a-MAT`): baut genau dieses Fundament auf Verweis-/Register-Ebene (4
+    POC-bewiesene Quellen ESTV-MWST/SECO/EDÖB/ESTV-KS, `soft_law` §3.1 + `norm_referenzen` §3.2 mit
+    `quelle`-Enum +`'amtlich'`, committeter Zustandsträger `bibliothek/register/soft-law-zustand.jsonl`,
+    Revisions-Cutoff-Invariante, `check:materialien`-Neubau). Die dortige Etappierung (M0 Fundament →
+    M1–M4 Adapter → M5 UI-Delta) und die §0-Kritik-Einarbeitung sind massgeblich; hier nur der
+    Andockpunkt.
 
 **Querlaufend ab E1:** Import-Läufer (§6.1) schrittweise scharf schalten (erst Alarm→Hand, ab E3
 Auto-PR für Maschinelles). Der Fassungs-Diff-Check (§3.3) hängt am Läufer, nicht an einer Etappe.
