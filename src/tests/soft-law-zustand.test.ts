@@ -17,10 +17,15 @@ function schreibeTmp(inhalt: string): string {
 afterAll(() => { for (const d of angelegt) rmSync(d, { recursive: true, force: true }); });
 
 const LAUF = { typ: 'lauf', quelle: 'estv-mwst', abgerufen: '2026-07-03', indexSha: 'abc' };
+// M2-Erweiterung: DokZeile trägt zusätzlich die Karten-Felder (titel/behoerde/doktyp/…),
+// damit CI die Browse-Projektion ohne lokale DB deterministisch rekonstruieren kann
+// (CI-Rebuild-Fix, FAHRPLAN-MATERIALIEN-VERZAHNUNG §6 Ausführungsvermerk M0).
 const DOK = {
   typ: 'dok', id: 'ESTV-MWST-MI-04', status: 'gelistet', entlistet_am: null,
   drift_token: 'sha1', quell_ids: { url_basis: 'https://x/1' }, sha: 'sha2',
   stand: '2025-10-31', stand_quelle: 'toc', quelle_url: 'https://x', abgerufen: '2026-07-03',
+  titel: 'MWST-Info 04', behoerde: 'ESTV', doktyp: 'mwst-info', nummer: null,
+  rechtsgebiet: 'sozial-abgaben', sprache: 'de', rang: 999, normKeys: ['MWSTG'], hinweis: null,
 };
 
 describe('soft-law-zustand: ladeZustand', () => {

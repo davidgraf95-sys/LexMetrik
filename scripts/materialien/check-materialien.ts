@@ -36,7 +36,8 @@ import {
   projiziereRegister,
   projiziereShards,
   baueKorpusInfo,
-  ladeAusDb,
+  ladeKantenAusDb,
+  dbDokAusZustand,
   REGISTER_PFAD,
   KANTEN_DIR,
   SOFT_LAW_DB,
@@ -106,20 +107,25 @@ function main(): void {
   const gelistet = new Map<string, DokZeile>();
   const entlistetIds = new Set<string>();
   for (const [id, z] of zustand.letzterZustand) {
+    // KEY_UNSICHER-Check auch auf JSONL-/DB-IDs (§0-Härtung 4b, Pfad-Sicherheit der Shard-Dateien).
+    if (KEY_UNSICHER.test(id)) fehler.push(`Zustands-Manifest: id pfad-/URL-unsicher: ${JSON.stringify(id)}.`);
     if (z.status === 'gelistet') gelistet.set(id, z);
     else entlistetIds.add(id);
   }
 
-  // ── 3. DB laden (nur falls vorhanden; M0/CI: übersprungen) ────────────────────
+  // ── 3. dbDocs IMMER aus dem Zustands-Manifest (CI-Rebuild-Fix, §0/B2) ──────────
+  // register.json-Byte-Gleichheit läuft so auch in CI (keine DB nötig). Die DB dient NUR der
+  // lokalen Shard-Reprojektion (kanten/dokMeta); in CI werden die committeten Shards direkt
+  // validiert (pruefeShardDatei + Dok-Mitgliedschaft + Plausibilität), nicht byte-reprojiziert.
+  const dbDocs: BrowseMaterial[] = dbDokAusZustand(zustand);
   const dbExists = existsSync(SOFT_LAW_DB);
-  let dbDocs: BrowseMaterial[] = [];
   let kanten: NormRefRow[] = [];
   let dokMeta = new Map<string, DokMeta>();
   if (dbExists) {
     const mb = statSync(SOFT_LAW_DB).size / (1024 * 1024);
     if (mb > DB_BUDGET_MB) warn.push(`${SOFT_LAW_DB} ist ${mb.toFixed(1)} MB (> ${DB_BUDGET_MB} MB Warnschwelle, §2.2).`);
     const db = new DatabaseSync(SOFT_LAW_DB);
-    ({ dbDocs, kanten, dokMeta } = ladeAusDb(db));
+    ({ kanten, dokMeta } = ladeKantenAusDb(db));
     db.close();
   }
 
@@ -140,10 +146,17 @@ function main(): void {
     fehler.push(`${REGISTER_PFAD} weicht von der frischen Projektion ab — nur über den Generator pflegen (§2). 'npm run materialien -- --datum=$(date +%F)'.`);
   }
 
-  const shard1 = projiziereShards(register.erzeugt, kanten, dokMeta, korpus);
-  const shard2 = projiziereShards(register.erzeugt, kanten, dokMeta, korpus);
-  if (JSON.stringify(shard1.dateien) !== JSON.stringify(shard2.dateien)) fehler.push('Shard-Projektion nicht deterministisch (2-Lauf-Diff).');
-  pruefeShardDrift(shard1.dateien);
+  // Shard-Byte-Reprojektion nur lokal-mit-DB; in CI (keine DB) direkt validieren (§0/M0-Vermerk).
+  let downgradesN = 0;
+  if (dbExists) {
+    const shard1 = projiziereShards(register.erzeugt, kanten, dokMeta, korpus);
+    const shard2 = projiziereShards(register.erzeugt, kanten, dokMeta, korpus);
+    if (JSON.stringify(shard1.dateien) !== JSON.stringify(shard2.dateien)) fehler.push('Shard-Projektion nicht deterministisch (2-Lauf-Diff).');
+    downgradesN = shard1.downgrades.length;
+    pruefeShardDrift(shard1.dateien, gelistet);
+  } else {
+    pruefeCommittedShards(gelistet);
+  }
 
   // ── 5. Merge-Modell: jedes register-Element kuratiert ODER gelistetes DB-Dok ──
   for (const m of register.materialien) {
@@ -206,20 +219,19 @@ function main(): void {
     }
   }
 
-  // ── 9. optionaler DB↔Projektion-Abgleich (nur lokal mit DB) ───────────────────
-  if (dbExists) {
-    const registerDbKeys = new Set(register.materialien.filter((m) => !kuratiertKeys.has(m.key)).map((m) => m.key));
-    const dbKeys = new Set(dbDocs.map((d) => d.key));
-    for (const k of dbKeys) if (!registerDbKeys.has(k)) fehler.push(`DB-Dokument '${k}' fehlt im register.json-DB-Teil.`);
-    for (const k of registerDbKeys) if (!dbKeys.has(k)) fehler.push(`register.json-DB-Eintrag '${k}' ohne DB-Zeile.`);
-  }
+  // ── 9. Zustands-Manifest ↔ register.json-DB-Teil deckungsgleich (immer, CI-fähig) ──
+  const registerDbKeys = new Set(register.materialien.filter((m) => !kuratiertKeys.has(m.key)).map((m) => m.key));
+  const dbKeys = new Set(dbDocs.map((d) => d.key));
+  for (const k of dbKeys) if (!registerDbKeys.has(k)) fehler.push(`Zustands-Dokument '${k}' fehlt im register.json-DB-Teil.`);
+  for (const k of registerDbKeys) if (!dbKeys.has(k)) fehler.push(`register.json-DB-Eintrag '${k}' ohne Zustands-Zeile.`);
 
   const shards = existsSync(KANTEN_DIR) ? collectFiles(KANTEN_DIR, (p) => p.endsWith('.json')).length : 0;
-  ausgabe(register.materialien.length, dbDocs.length, kanten.length, shards, shard1.downgrades.length);
+  ausgabe(register.materialien.length, dbDocs.length, kanten.length, shards, downgradesN);
 }
 
 // ── Shard-/Bucket-Prüfung gegen die committeten Dateien (byte + Invarianten) ────
-function pruefeShardDrift(emittiertDateien: ShardDatei[]): void {
+// Lokal (mit DB): Byte-Reprojektion + Orphan-Erkennung + direkte Invarianten.
+function pruefeShardDrift(emittiertDateien: ShardDatei[], gelistet: Map<string, DokZeile>): void {
   const emittiert = new Map(emittiertDateien.map((d) => [join(KANTEN_DIR, d.pfad), d.inhalt]));
   const vorhanden = existsSync(KANTEN_DIR) ? collectFiles(KANTEN_DIR, (p) => p.endsWith('.json')) : [];
   for (const [p, inhalt] of emittiert) {
@@ -228,13 +240,20 @@ function pruefeShardDrift(emittiertDateien: ShardDatei[]): void {
   }
   for (const p of vorhanden) if (!emittiert.has(p)) fehler.push(`Orphan-Shard (nicht mehr projiziert): ${p}.`);
   // Direkte Invarianten auf den committeten Dateien (Defense-in-depth über die Byte-Gleichheit hinaus).
-  for (const p of vorhanden) pruefeShardDatei(p);
+  for (const p of vorhanden) pruefeShardDatei(p, gelistet);
+}
+
+// CI (ohne DB): keine Byte-Reprojektion möglich → committete Shards DIREKT validieren
+// (Invarianten + Dok-Mitgliedschaft im JSONL + Plausibilität), §0/M0-Vermerk.
+function pruefeCommittedShards(gelistet: Map<string, DokZeile>): void {
+  const vorhanden = existsSync(KANTEN_DIR) ? collectFiles(KANTEN_DIR, (p) => p.endsWith('.json')) : [];
+  for (const p of vorhanden) pruefeShardDatei(p, gelistet);
 }
 
 interface ShardKanteRaw { dok: string; artikel?: string; quelle: string; konfidenz: string; stand: string; fundstellen?: unknown[] }
 interface ShardRaw { erzeugt: string; erlass: string; dokumente?: Record<string, unknown>; kanten?: ShardKanteRaw[]; buckets?: string[] }
 
-function pruefeShardDatei(pfad: string): void {
+function pruefeShardDatei(pfad: string, gelistet: Map<string, DokZeile>): void {
   const bytes = Buffer.byteLength(readFileSync(pfad), 'utf8');
   if (bytes > SHARD_BYTE_LIMIT) fehler.push(`Shard ${pfad} ${bytes} B > ${SHARD_BYTE_LIMIT} B Budget (§0/B5).`);
   let obj: ShardRaw;
@@ -260,9 +279,13 @@ function pruefeShardDatei(pfad: string): void {
       }
     }
   }
+  const dokInShard = new Set<string>();
   for (const k of obj.kanten ?? []) {
+    dokInShard.add(k.dok);
     if (!QUELLEN_ENUM.has(k.quelle)) fehler.push(`Shard ${pfad}: kante.quelle '${k.quelle}' ∉ {amtlich,kuratiert,maschinell}.`);
     if (!registerKeys.has(k.dok)) fehler.push(`Shard ${pfad}: dok-Verweis '${k.dok}' existiert nicht in register.json.`);
+    // NEU (§0/M0-Vermerk): jede Shard-Kante dok MUSS im Zustands-Manifest gelistet sein.
+    if (!gelistet.has(k.dok)) fehler.push(`Shard ${pfad}: dok-Verweis '${k.dok}' nicht als 'gelistet' im Zustands-Manifest.`);
     if (k.artikel !== undefined && k.artikel !== '') {
       if (!erlassSet.has(obj.erlass)) continue; // schon oben gemeldet
       const set = korpus.artikelSet(obj.erlass);
@@ -272,6 +295,11 @@ function pruefeShardDatei(pfad: string): void {
         fehler.push(`Shard ${pfad}: artikelscharfe Kante Art. ${k.artikel} mit Stand ${k.stand} < Cutoff ${obj.erlass} (Revisions-Regel §2.4 verletzt).`);
       }
     }
+  }
+  // NEU: aggregierte Kanten-Zahl plausibel — nie mehr distinkte Dokumente in EINEM Shard als im
+  // ganzen Manifest gelistet sind (Tripwire gegen aufgeblähte/korrupte Shards, §0/M0-Vermerk).
+  if (dokInShard.size > gelistet.size) {
+    fehler.push(`Shard ${pfad}: ${dokInShard.size} distinkte Dokumente > ${gelistet.size} gelistete im Manifest — unplausibel.`);
   }
 }
 

@@ -1,0 +1,956 @@
+{
+  "erzeugt": "2026-07-03",
+  "erlass": "ARGV1",
+  "dokumente": {
+    "SECO-WL-ARGV1-ART-1": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/8fIKPLr6MdEP/ArGV1-Artikel-01-SECO-AB-2012-DE.pdf",
+      "stand": "2007-04-02"
+    },
+    "SECO-WL-ARGV1-ART-10": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/azwAp1CrjYxf/ArGV1_art10_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-11": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/lOY4wiUudzOA/ArGV1_art11_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-12": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/yQTLKIcZ1-6u/ArGV1_art12_de.pdf",
+      "stand": "2023-07-27"
+    },
+    "SECO-WL-ARGV1-ART-13": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/mHoYBtoivFLS/ArGV1_art13_de.pdf",
+      "stand": "2020-12-08"
+    },
+    "SECO-WL-ARGV1-ART-14": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/C5OKzZEAt-8u/ArGV1_art14_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-15": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/ZqJBJGvuOqOO/ArGV1-Artikel-15-SECO-AB-2012-DE.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-16": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/ej713XxcOsv9/ArGV1_art16_de.pdf",
+      "stand": "2020-12-08"
+    },
+    "SECO-WL-ARGV1-ART-17": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/oYiQLaRYSGGy/ArGV1_art17_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-18": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/jXQQUhVJHpN6/ArGV1_art18_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-19": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/zIZJQFKb8bcu/ArGV1_art19_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-2": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/30Sa1zigPDiq/ArGV1_art02_de.pdf",
+      "stand": "2012-03-02"
+    },
+    "SECO-WL-ARGV1-ART-20": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/aohC4AU-Lfj6/ArGV1_art20_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-21": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/mWZmGhGm-1lp/ArGV1_art21_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-22": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/ySTPxuG4zTIQ/ArGV1_art22_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-23": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/Vk5CdWJls9Fa/ArGV1_art23_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-24": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/GRLt60De0E7c/ArGV1_art24_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-25": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/0hKh7jNXBnEe/ArGV1_art25_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-26": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/6Ki9YBB7mMRq/ArGV1_art26_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-27": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/myKn5AK6ru6D/ArGV1_art27_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-28": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/PpzhDxHjtJ0i/ArGV1_art28_de.pdf",
+      "stand": "2022-04-01"
+    },
+    "SECO-WL-ARGV1-ART-29": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/ccqYFGBU8ShM/ArGV1_art29_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-30": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/wyjkKR5TaAEt/ArGV1_art30_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-31": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/gtW0B9sHMzCO/ArGV1_art31_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-32": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/vl2kU2Xgp3ty/ArGV1_art32_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-32A": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/Ua0vd64wCqBq/ArGV1_Art32a_de.pdf",
+      "stand": "2020-12-08"
+    },
+    "SECO-WL-ARGV1-ART-33": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/ZpIlpt9rudZS/ArGV1_art33_de.pdf",
+      "stand": "2017-02-15"
+    },
+    "SECO-WL-ARGV1-ART-34": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/TKmAL8c931ng/ArGV1_art34_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-35": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/tSzAK1g6F2l1/ArGV1_art35_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-36": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/rPbfZNMHdHah/ArGV1_art36_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-37": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/kvoQDEBEwnTy/ArGV1_art37_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-38": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/Wn2eEXaVLvu4/ArGV1_art38_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-39": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/QA6g4uGuMCKn/ArGV1_art39_de.pdf",
+      "stand": "2020-12-08"
+    },
+    "SECO-WL-ARGV1-ART-4": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/p50xUIj3BelO/ArGV1_art04_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-40": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/IoaHJjGZgBUt/ArGV1-Artikel-40-SECO-AB-2022-DE.pdf",
+      "stand": "2022-04-01"
+    },
+    "SECO-WL-ARGV1-ART-41": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/QcrIQtjiP4Db/ArGV1_art41_de.pdf",
+      "stand": "2022-04-01"
+    },
+    "SECO-WL-ARGV1-ART-42": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/cgBigf93DffX/ArGV1_art42_de.pdf",
+      "stand": "2022-12-08"
+    },
+    "SECO-WL-ARGV1-ART-43": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/mLdNN5Tg5EPe/ArGV1_art43_de.pdf",
+      "stand": "2013-04-26"
+    },
+    "SECO-WL-ARGV1-ART-44": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/rfkJjCC6451q/ArGV1_art44_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-45": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/sARNO5Zl-ax4/ArGV1_art45_de.pdf",
+      "stand": "2023-01-04"
+    },
+    "SECO-WL-ARGV1-ART-46": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/tvAfZGKuXHqa/ArGV1_art46_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-4A": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/QRWNqyduTB8I/ArGV1_art04a_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-5": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/ovS9ppH8lY4J/ArGV1_art05_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-6": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/NUajGDLLNvo6/ArGV1-Artikel-06-SECO-AB-2008-DE.pdf",
+      "stand": "2008-02-03"
+    },
+    "SECO-WL-ARGV1-ART-60": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/QLaU4QNaOBUs/ArGV1-Art60-SECO-AB-2025-DE.pdf",
+      "stand": "2025-11-18"
+    },
+    "SECO-WL-ARGV1-ART-61": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/r2zeffPCB-PL/ArGV1_art61_de.pdf",
+      "stand": "2025-11-18"
+    },
+    "SECO-WL-ARGV1-ART-62": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/R3YFg8Rxj3Wj/ArGV1_art62_de.pdf",
+      "stand": "2025-11-18"
+    },
+    "SECO-WL-ARGV1-ART-63": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/xe6mgUQy5Uwt/ArGV1-Art63-SECO-AB-2025-DE.pdf",
+      "stand": "2025-11-18"
+    },
+    "SECO-WL-ARGV1-ART-64": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/fKs9Ipdz5vRM/ArGV1_art64_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-65": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/4U4cBM9v3C9S/ArGV1_art65_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-66": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/f6tMRoOb76IZ/ArGV1_art66_de.pdf",
+      "stand": "2014-05-30"
+    },
+    "SECO-WL-ARGV1-ART-67": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/HD0hEqfUCN3L/ArGV1_art67_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-68": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/sjTfQa-HHmO3/ArGV1_art68_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-69": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/uV9Q2mYI2YE7/ArGV1_art69_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-7": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/ssbyxW52C0sP/ArGV1_art07_de.pdf",
+      "stand": "2006-11-03"
+    },
+    "SECO-WL-ARGV1-ART-70": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/PRZtw8jmshDL/ArGV1_art70_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-71": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/EFlF6Wk04QLx/ArGV1_art71_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-72": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/LlWcgfRpIfPn/ArGV1_art72_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-73": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/KYcyETv05vIg/ArGV1_art73_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-73A": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/tb2y04nc5qdU/ArGV1_art73a_de.pdf",
+      "stand": "2016-03-30"
+    },
+    "SECO-WL-ARGV1-ART-73B": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/eusH7p61bF8V/ArGV1-Artikel-73b-SECO-AB-2016-DE.pdf",
+      "stand": "2016-03-30"
+    },
+    "SECO-WL-ARGV1-ART-74": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/hUg0vittChdN/ArGV1_art74_de.pdf",
+      "stand": "2016-07-20"
+    },
+    "SECO-WL-ARGV1-ART-75": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/ecEHV2hJIaV5/ArGV1_art75_de.pdf",
+      "stand": "2013-04-26"
+    },
+    "SECO-WL-ARGV1-ART-77": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/Ke1w4r1Hvlwm/ArGV1_art77_de.pdf",
+      "stand": "2013-04-26"
+    },
+    "SECO-WL-ARGV1-ART-78": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/WBrAIozIOO1f/ArGV1_art78_de.pdf",
+      "stand": "2013-04-26"
+    },
+    "SECO-WL-ARGV1-ART-79": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/mkAd6zatttqm/ArGV1_art79_de.pdf",
+      "stand": "2013-04-26"
+    },
+    "SECO-WL-ARGV1-ART-8": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/Zg1P--nS1E2X/ArGV1_art08_de.pdf",
+      "stand": "2017-06-27"
+    },
+    "SECO-WL-ARGV1-ART-80": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/isuYP0WmMr25/ArGV1_art80_de.pdf",
+      "stand": "2013-04-26"
+    },
+    "SECO-WL-ARGV1-ART-81": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/0VK41j-uppXE/ArGV1_art81_de.pdf",
+      "stand": "2013-04-26"
+    },
+    "SECO-WL-ARGV1-ART-82": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/A8zTfZPQwZvv/ArGV1_art82_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-83": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/V-uqvCbmDuja/ArGV1_art83_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-84": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/9B44kQSxw7en/ArGV1_art84_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-85": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/5TRkwOsWpai8/ArGV1_art85_de.pdf",
+      "stand": "2024-08-16"
+    },
+    "SECO-WL-ARGV1-ART-86": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/hatWCjglqwsD/ArGV1_art86_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-87": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/I09GGrYHOy1M/ArGV1_art87_de.pdf",
+      "stand": "2013-04-26"
+    },
+    "SECO-WL-ARGV1-ART-88": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/wYqwrhORJzgq/ArGV1_art88_de.pdf",
+      "stand": "2013-04-26"
+    },
+    "SECO-WL-ARGV1-ART-89": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/EWsvYdhlAvAu/ArGV1_art89_de.pdf",
+      "stand": "2025-11-18"
+    },
+    "SECO-WL-ARGV1-ART-9": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/mqjmRvv9r92c/ArGV1_art09_de.pdf",
+      "stand": "2012-02-03"
+    },
+    "SECO-WL-ARGV1-ART-90": {
+      "urlBasis": "https://www.seco.admin.ch/dam/de/sd-web/glJmTcyDAU8q/ArGV1_art90_de.pdf",
+      "stand": "2012-02-03"
+    }
+  },
+  "kanten": [
+    {
+      "dok": "SECO-WL-ARGV1-ART-1",
+      "artikel": "1",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2007-04-02",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-10",
+      "artikel": "10",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-11",
+      "artikel": "11",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-12",
+      "artikel": "12",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2023-07-27",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-13",
+      "artikel": "13",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2020-12-08",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-14",
+      "artikel": "14",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-15",
+      "artikel": "15",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-16",
+      "artikel": "16",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2020-12-08",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-17",
+      "artikel": "17",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-18",
+      "artikel": "18",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-19",
+      "artikel": "19",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-2",
+      "artikel": "2",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-03-02",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-20",
+      "artikel": "20",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-21",
+      "artikel": "21",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-22",
+      "artikel": "22",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-23",
+      "artikel": "23",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-24",
+      "artikel": "24",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-25",
+      "artikel": "25",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-26",
+      "artikel": "26",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-27",
+      "artikel": "27",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-28",
+      "artikel": "28",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2022-04-01",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-29",
+      "artikel": "29",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-30",
+      "artikel": "30",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-31",
+      "artikel": "31",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-32",
+      "artikel": "32",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-32A",
+      "artikel": "32_a",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2020-12-08",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-33",
+      "artikel": "33",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2017-02-15",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-34",
+      "artikel": "34",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-35",
+      "artikel": "35",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-36",
+      "artikel": "36",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-37",
+      "artikel": "37",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-38",
+      "artikel": "38",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-39",
+      "artikel": "39",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2020-12-08",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-4",
+      "artikel": "4",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-40",
+      "artikel": "40",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2022-04-01",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-41",
+      "artikel": "41",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2022-04-01",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-42",
+      "artikel": "42",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2022-12-08",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-43",
+      "artikel": "43",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2013-04-26",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-44",
+      "artikel": "44",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-45",
+      "artikel": "45",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2023-01-04",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-46",
+      "artikel": "46",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-4A",
+      "artikel": "4_a",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-5",
+      "artikel": "5",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-6",
+      "artikel": "6",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2008-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-60",
+      "artikel": "60",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2025-11-18",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-61",
+      "artikel": "61",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2025-11-18",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-62",
+      "artikel": "62",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2025-11-18",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-63",
+      "artikel": "63",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2025-11-18",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-64",
+      "artikel": "64",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-65",
+      "artikel": "65",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-66",
+      "artikel": "66",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2014-05-30",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-67",
+      "artikel": "67",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-68",
+      "artikel": "68",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-69",
+      "artikel": "69",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-7",
+      "artikel": "7",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2006-11-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-70",
+      "artikel": "70",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-71",
+      "artikel": "71",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-72",
+      "artikel": "72",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-73",
+      "artikel": "73",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-73A",
+      "artikel": "73_a",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2016-03-30",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-73B",
+      "artikel": "73_b",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2016-03-30",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-74",
+      "artikel": "74",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2016-07-20",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-75",
+      "artikel": "75",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2013-04-26",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-77",
+      "artikel": "77",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2013-04-26",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-78",
+      "artikel": "78",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2013-04-26",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-79",
+      "artikel": "79",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2013-04-26",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-8",
+      "artikel": "8",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2017-06-27",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-80",
+      "artikel": "80",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2013-04-26",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-81",
+      "artikel": "81",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2013-04-26",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-82",
+      "artikel": "82",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-83",
+      "artikel": "83",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-84",
+      "artikel": "84",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-85",
+      "artikel": "85",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2024-08-16",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-86",
+      "artikel": "86",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-87",
+      "artikel": "87",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2013-04-26",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-88",
+      "artikel": "88",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2013-04-26",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-89",
+      "artikel": "89",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2025-11-18",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-9",
+      "artikel": "9",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    },
+    {
+      "dok": "SECO-WL-ARGV1-ART-90",
+      "artikel": "90",
+      "quelle": "amtlich",
+      "konfidenz": "regex-hoch",
+      "stand": "2012-02-03",
+      "fundstellen": []
+    }
+  ]
+}
