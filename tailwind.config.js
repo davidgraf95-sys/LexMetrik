@@ -57,6 +57,12 @@ export default {
       transitionTimingFunction: { DEFAULT: 'var(--ease)' },
       boxShadow: { sm: 'var(--shadow-sm)', md: 'var(--shadow-md)', lg: 'var(--shadow-lg)' },
       maxWidth: { content: '70rem', reading: '40rem' }, // content ≈ 1120px (Iteration 3: einheitlich schmalere Spalte)
+      // CLS-Reservierungs-Tokens der Startseite (Startseite V3, §5): benannte
+      // Mindesthöhen für die async-/localStorage-Module — Masse, keine Farben
+      // (hell = dunkel). `modul-news` benennt den bisherigen Arbitrary-Wert der
+      // News-Streifen-Reservierung; `modul-zuletzt` reserviert die Chip-Zeile
+      // von «Zuletzt verwendet» (Fallback-Reservierung, FAHRPLAN §3 #5).
+      minHeight: { 'modul-news': '12.5rem', 'modul-zuletzt': '4.5rem' },
     },
   },
   // Container-Queries (Split-View B-0b, Entscheid David 29.6.2026): erlaubt

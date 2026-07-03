@@ -167,12 +167,17 @@ const MATERIALIEN_KINDER: NavKnoten[] = [
 export const NAVIGATION: NavAbschnitt[] = [
   // «Recherche» bewusst entfernt (Auftrag David 19.6.2026): das Browsen läuft
   // über die Kategorie-Drilldowns (Fristen · Gebühren & Beträge · Vorlagen).
+  //
+  // Reihenfolge (Startseite V3, I1 — FAHRPLAN §7): Nachschlagen zuerst
+  // (Gesetze · Rechtsprechung · Materialien), dann die aktiven Werkzeuge
+  // (Rechner · Vorlagen). Rubrik-Kacheln der Startseite iterieren über dasselbe
+  // Array (ohne «Start») — eine Landkarte, eine Ordnung.
   { titel: null, kinder: [link('Start', '/')] },
-  { titel: 'Rechner', ziel: '/rechner', kinder: RECHNER_KINDER },
-  { titel: 'Vorlagen', ziel: '/vorlagen', kinder: VORLAGEN_KINDER },
   { titel: 'Gesetze', ziel: '/gesetze', kinder: GESETZE_KINDER },
   { titel: 'Rechtsprechung', ziel: '/rechtsprechung', kinder: RECHTSPRECHUNG_KINDER },
   { titel: 'Materialien', ziel: '/materialien', kinder: MATERIALIEN_KINDER },
+  { titel: 'Rechner', ziel: '/rechner', kinder: RECHNER_KINDER },
+  { titel: 'Vorlagen', ziel: '/vorlagen', kinder: VORLAGEN_KINDER },
 ];
 
 // Utility/Meta unten in der Seitenleiste — echte, indexierbare Routen.

@@ -3,17 +3,19 @@ import { NewsHeader } from '../components/start/NewsHeader';
 import { UniversalSuche } from '../components/start/UniversalSuche';
 import { Schnellrechner } from '../components/start/Schnellrechner';
 import { GesetzeRubrik } from '../components/start/GesetzeRubrik';
-import { Zeiterfassung } from '../components/start/Zeiterfassung';
-import { Favoriten } from '../components/start/Favoriten';
 
 // ─── Startseite — «Suche-zuerst»-Cockpit (Überarbeitung, Auftrag David) ──────
 //
 // Reihenfolge (Auftrag David, #5): Kopf (Gruss/Datum) · Universal-Suche (zuoberst
 // schnell suchen) · Schnellrechner (schnell rechnen) · Gesetze-Rubrik (#6: Suchfeld
-// + Top-Erlasse) · News aus dem Bundesgericht · Werkzeuge (Favoriten +
-// Zeiterfassung) · Rechtlicher Hinweis (§8). Reine Darstellung (§3); jede Sektion
-// ist eine eigene, schlanke Komponente (§6.6). Der «Weiter wo du warst»-Verlauf
-// entfällt (#10) — die In-App-Tableiste deckt das ab.
+// + Top-Erlasse) · News aus dem Bundesgericht · Rechtlicher Hinweis (§8). Reine
+// Darstellung (§3); jede Sektion ist eine eigene, schlanke Komponente (§6.6). Der
+// «Weiter wo du warst»-Verlauf entfällt (#10) — die In-App-Tableiste deckt das ab.
+//
+// Startseite V3 · Bausequenz-Schritt 2 (Plumbing): Favoriten gestrichen (Anweisung
+// David 5.6.), Zeiterfassung auf die /rechner-Übersicht verschoben → die
+// «Werkzeuge»-Sektion entfällt; Container auf `max-w-content`-Token. Die
+// vollständige Neukomposition (Hero/Kacheln/Chips/Zuletzt) folgt in Schritt 4.
 
 function Seclabel({ children }: { children: React.ReactNode }) {
   return (
@@ -26,7 +28,7 @@ function Seclabel({ children }: { children: React.ReactNode }) {
 
 export function Startseite() {
   return (
-    <div className="max-w-[58rem]">
+    <div className="max-w-content">
       {/* Kopf: Gruss (zufällig, tageszeitpassend) + Datum/Uhr */}
       <section className="space-y-3">
         <Begruessung />
@@ -50,18 +52,6 @@ export function Startseite() {
           leerem Register; bringt eigenen Kopf «Neu aus dem Bundesgericht» mit) */}
       <div className="mt-9">
         <NewsHeader />
-      </div>
-
-      <Seclabel>Werkzeuge</Seclabel>
-      <div className="grid grid-cols-1 gap-x-4 gap-y-5 md:grid-cols-2 md:items-start">
-        <div className="space-y-2.5">
-          <span className="lc-overline text-ink-500">Favoriten</span>
-          <div className="lc-card p-4"><Favoriten /></div>
-        </div>
-        <div className="space-y-2.5">
-          <span className="lc-overline text-ink-500">Zeiterfassung</span>
-          <Zeiterfassung />
-        </div>
       </div>
 
       {/* Rechtlicher Hinweis (Pflicht, §8) */}

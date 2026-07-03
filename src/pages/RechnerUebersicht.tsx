@@ -6,6 +6,7 @@ import { KatalogHinweis } from '../components/KatalogHinweis';
 import { MassgebendeGesetze } from '../components/normtext/MassgebendeGesetze';
 import { SeitenKopf } from '../components/layout/SeitenKopf';
 import { ZweiachsigerEinstieg } from '../components/ZweiachsigerEinstieg';
+import { Zeiterfassung } from '../components/start/Zeiterfassung';
 
 // ─── Rechner-Übersicht (/rechner) — UI-Welle, Ersatz für /recherche ─────────
 //
@@ -30,6 +31,14 @@ export function RechnerUebersicht() {
       {RECHNER_KATEGORIEN.map((kat) => (
         <KategorieSektion key={kat.id} kat={kat} karten={kartenDerKategorie(KATALOG_KARTEN, kat.id)} />
       ))}
+
+      {/* Werkzeuge: die Zeiterfassung wohnt seit Startseite V3 (§3) hier unten
+          statt auf der Startseite — Komponente unverändert, gleiche Selbst-
+          Höhe wie zuvor (CLS-neutral). */}
+      <section className="space-y-2.5" aria-labelledby="werkzeuge-titel">
+        <h2 id="werkzeuge-titel" className="lc-overline text-ink-500">Werkzeuge</h2>
+        <Zeiterfassung />
+      </section>
 
       <MassgebendeGesetze modus="rechner" />
       <KatalogHinweis />

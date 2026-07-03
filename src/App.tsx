@@ -5,6 +5,7 @@ import { LocaleProvider } from './components/locale';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { RouteMeta } from './components/RouteMeta';
 import { TabTracker } from './components/TabTracker';
+import { ZuletztTracker } from './components/ZuletztTracker';
 import { RouteSwitch } from './RouteSwitch';
 import { prefetchLeser } from './leserPrefetch';
 import { tabSchluessel } from './lib/tabs';
@@ -162,6 +163,8 @@ export default function App() {
       <RouteMeta />
       {/* Öffnet je Inhalts-Route einen Reiter im In-App-Tab-Streifen */}
       <TabTracker />
+      {/* Merkt je konkreter Inhalts-Route den «Zuletzt verwendet»-Chip (Startseite) */}
+      <ZuletztTracker />
       {/* key={pathname}: ein aufgefangener Fehler (z. B. einmal fehlgeschlagener
           Lazy-Chunk) setzt sich beim nächsten Seitenwechsel von selbst zurück —
           sonst bliebe die Fehlanzeige bis zum manuellen Neuladen stehen. */}
