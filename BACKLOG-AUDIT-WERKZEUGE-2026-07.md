@@ -12,6 +12,7 @@
 **JETZT (Code-seitig, dieser Branch `feat/betriebs-sofortgewinne`):**
 - [x] **A2 · Normen-Monitor-Alarm** — bei Rot GitHub-Issue anlegen/aktualisieren + `check:normtext-netz` + `check:pdf-netz` mitlaufen (normen-monitor.yml). *(Kernfund: 15.6./29.6. real rot, unbemerkt.)* **(nachgetragen 3.7.2026: gemergt `c6f030f9`/`075574bb`, PR #83.)**
 - [x] **A6 · CI-Playwright-Browser-Cache** (ci.yml) — Prüfläufe Minuten schneller. **(nachgetragen 3.7.2026: gemergt `c6f030f9`/`075574bb`, PR #83.)**
+- [x] **A7 · E2E-Flake `gesetze-ux-9punkte`** — 3 Tests (Einklappen · Reiter-Übersicht · Screenshots hell/dunkel) auf dem 1-Kern-CI-Runner wiederholt «Test timeout of 30000ms exceeded» (PR #90/#93/#94), lokal grün. Ursache: reine Timing-Contention auf der schwersten Leser-Seite (OR ~1,9 MB → ~1700 Artikel, render-then-replace §15.5) übersteigt das 30-s-Default-Budget. Fix: Per-Test-Timeout dieser Spec auf 90 s (`test.describe.configure`), Assertions unverändert (§6.3). **(Branch `fix/e2e-gesetze-ux-flake`, QS-PH.)**
 - [x] **A4 · Kontaktformular aktivieren** — Empfänger-Mail ist „leer" → stumm. **Braucht Davids Entscheid:** welche Adresse + möglichst via Env-Var (Personen-Mail nicht ins öffentliche Repo hardcoden). **✅ gemergt (`075574bb`, Env-Var-Empfänger).**
 - [x] **A5 · „Fehler melden"-Link** auf der Absturz-Seite (`src/components/ErrorBoundary.tsx`) — vorausgefüllte Mail; UI → golden/Gate-sorgfältig, doppelt prüfen. **✅ gemergt (`075574bb`).**
 

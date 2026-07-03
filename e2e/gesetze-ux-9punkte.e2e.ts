@@ -11,6 +11,27 @@ const SHOT = 'test-results/ux9';
 mkdirSync(SHOT, { recursive: true });
 
 test.describe('Gesetze-UX 9 Punkte', () => {
+  // Test-Stabilität (QS-PH, §6.3 — KEINE Substanz-Änderung, Behauptungen identisch):
+  // Diese Spec fährt ausnahmslos die schwerste Leser-Seite (/gesetze/bund/OR:
+  // OR.json ~1.9 MB → ~1700 Artikel). Die Detailseite liefert nur PRERENDERTES
+  // Volltext-HTML (erlassVolltextHtml: <article> OHNE id="art-1", OHNE Klapp-Knopf);
+  // React ersetzt es clientseitig NACH dem Fetch+Parse (render-then-replace, §15.5,
+  // kein hydrateRoot). #art-1, der «Artikel einklappen»-Knopf und die Reiter-
+  // Registrierung entstehen also erst nach dem Client-Takeover. Die auto-wartenden
+  // Locators (locator.click ohne actionTimeout → an das TEST-Timeout gebunden)
+  // warten korrekt genau darauf. Auf dem 1-Kern-CI-Runner (workers:1) übersteigt die
+  // KUMULATIVE Zeit (Screenshot-Test lädt OR zweimal: goto + reload; Interaktions-
+  // Tests: schwerer Load + Client-Render + Klick) das Default-Budget von 30 s →
+  // «Test timeout of 30000ms exceeded» (PR #90/#93/#94). Lokal < 1 s, 0 Konsolen-
+  // fehler → reine Timing-Contention, kein Code-Defekt. Die anderen Flake-Schichten
+  // stehen bereits (playwright.config: workers:1, retries:2, expect.timeout:10 s);
+  // die individuellen 10-s-Web-First-Assertions bestehen (sonst läse der Fehler
+  // «Timeout 10000ms»), es bindet allein das WHOLE-TEST-Budget. Darum hier — und nur
+  // hier, spec-lokal — das Per-Test-Budget grosszügig auf 90 s heben; das lässt die
+  // bereits vorhandenen, semantisch korrekten Auto-Waits fertiglaufen. Greift nur bei
+  // Überschreitung, verlangsamt grüne Tests nicht. Assertions unverändert (§6.3).
+  test.describe.configure({ timeout: 90_000 });
+
   test('P4: Gliederung/Randtitel steht VOR der Artikelnummer (Fedlex-Reihenfolge)', async ({ page }) => {
     await page.goto('/gesetze/bund/OR');
     await expect(page.locator('#art-1')).toBeVisible();
