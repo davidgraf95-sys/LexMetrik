@@ -29,6 +29,7 @@ export const NORMTEXT_SEITENDATEIEN = [
   'public/normtext/confidence.json',
   'public/normtext/kanton-systematik.json',
   'public/normtext/pdf-index.json',
+  'public/normtext/currency.json', // P1-d Currency-Sidecar (byte-genaue Paritäts-Klasse)
 ];
 export const NORMTEXT_STRUKTUR_DIR = 'public/normtext/struktur'; // rekursiv: bund/ + kanton/
 export const RECHTSPRECHUNG_MANIFESTE = [

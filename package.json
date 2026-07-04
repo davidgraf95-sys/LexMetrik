@@ -62,6 +62,7 @@
     "normtext:struktur-kanton": "vite-node scripts/normtext/struktur-kanton-run.ts --",
     "normtext:bund-stubs": "vite-node scripts/normtext/bund-stubs-generieren.ts --",
     "fedlex:eli": "vite-node scripts/fedlex-eli-aufloesen.ts --",
+    "gen:fedlex-wiedervorlage": "vite-node scripts/fedlex-wiedervorlage-generieren.ts",
     "normtext:pdf": "vite-node scripts/normtext/pdf-fetch.ts --",
     "check:pdf": "vite-node scripts/normtext/check-pdf.ts",
     "check:pdf-netz": "vite-node scripts/normtext/check-pdf.ts -- --netz",
