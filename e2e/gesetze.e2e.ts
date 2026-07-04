@@ -13,26 +13,29 @@ function fehlerSammeln(page: Page): string[] {
 }
 
 test.describe('/gesetze — Übersicht', () => {
-  test('rendert, lädt das Register, zeigt Erlass-Karten ohne Fehler', async ({ page }) => {
+  test('Landeplatz zeigt drei Einstiegskacheln (kein stiller Bund-Default), Bund öffnet die Systematik', async ({ page }) => {
     const fehler = fehlerSammeln(page)
     await page.goto('/gesetze')
     await expect(page.getByRole('heading', { name: 'Schweizer Gesetzessammlung' })).toBeVisible()
-    // Auf den Hauptinhalt scopen: die Seitenleiste trägt dieselben Begriffe, ist
-    // aber je nach Breakpoint ausgeblendet → ein ungescoptes .first() träfe ein
-    // hidden-Element.
     const inhalt = page.getByRole('main')
-    // Kategorie-Überschriften sind auch eingeklappt sichtbar (details/summary).
+    // G4 · §4.1: der Landeplatz zeigt die drei gleichwertigen Kacheln — und NICHT
+    // still die Bund-Systematik (kein «Alle aufklappen» vor Säulen-Wahl).
+    await expect(inhalt.getByRole('button', { name: /Bundesrecht/ })).toBeVisible()
+    await expect(inhalt.getByRole('button', { name: /Kantone/ })).toBeVisible()
+    await expect(inhalt.getByRole('button', { name: /International/ })).toBeVisible()
+    await expect(inhalt.getByRole('button', { name: 'Alle aufklappen' })).toHaveCount(0)
+    // Bund-Kachel wählen → Systematik (default eingeklappt) erscheint.
+    await inhalt.getByRole('button', { name: /Bundesrecht/ }).click()
+    await expect(page).toHaveURL(/ebene=bund/)
     await expect(inhalt.getByText('Privatrecht', { exact: false }).first()).toBeVisible()
-    // Bund-Systematik ist seit 25.6.2026 default EINGEKLAPPT (Kategorien-Überblick
-    // zuerst, Auftrag David) → erst aufklappen, dann ist der OR-Volltitel sichtbar.
     await inhalt.getByRole('button', { name: 'Alle aufklappen' }).click()
     await expect(inhalt.getByRole('link', { name: /Obligationenrecht/ }).first()).toBeVisible()
     expect(fehler).toEqual([])
   })
 
-  test('Kantone-Tab zeigt das Kantonsraster', async ({ page }) => {
+  test('Kantone-Kachel zeigt das Kantonsraster', async ({ page }) => {
     await page.goto('/gesetze')
-    await page.getByRole('tab', { name: 'Kantone' }).click()
+    await page.getByRole('main').getByRole('button', { name: /Kantone/ }).click()
     // Das Auswahlraster zeigt je Kanton eine Karte (Wappen + Vollname + Zähler);
     // der frühere reine «BE»-Code-Knopf existiert in dieser Form nicht mehr.
     await expect(page.getByRole('main').getByRole('button', { name: /Bern/ })).toBeVisible()
@@ -54,8 +57,9 @@ test.describe('Lesesicht (über Klick aus der Übersicht)', () => {
   test('OR öffnet mit Volltext, TOC und funktionierender In-Gesetz-Suche', async ({ page }) => {
     const fehler = fehlerSammeln(page)
     await page.goto('/gesetze')
-    // Bund-Systematik default eingeklappt (25.6.2026) → erst aufklappen, dann
-    // ist der OR-Link in der Kategorie klickbar.
+    // G4: erst die Bund-Kachel wählen (kein stiller Default), dann die Systematik
+    // aufklappen (default eingeklappt seit 25.6.2026), dann ist der OR-Link klickbar.
+    await page.getByRole('main').getByRole('button', { name: /Bundesrecht/ }).click()
     await page.getByRole('main').getByRole('button', { name: 'Alle aufklappen' }).click()
     await page.getByRole('main').getByRole('link', { name: /Obligationenrecht/ }).first().click()
     await expect(page).toHaveURL(/\/gesetze\/bund\/OR/)
