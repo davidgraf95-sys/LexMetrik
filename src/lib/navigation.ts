@@ -22,7 +22,7 @@ import { kategorieFuer } from './oberkategorien';
 import { istVorlage } from './vorlagenKategorie';
 import { SYSTEMATIK } from './normtext/systematik';
 import { GEBIETE } from './normtext/register';
-import { KANTONE } from '../data/tarif/typen';
+import { KANTONE, KANTON_NAMEN } from '../data/tarif/typen';
 import { BEHOERDEN } from './materialien/register';
 
 /** Blatt: ein Navigationsziel (Route, ggf. mit Query/Hash für eine Teilsicht). */
@@ -110,7 +110,14 @@ const GESETZE_KINDER: NavKnoten[] = [
     ziel: '/gesetze?ebene=kanton',
     aufklappbar: true,
     standardOffen: false,
-    kinder: KANTONE.map((kt) => link(kt, `/gesetze?ebene=kanton&kt=${kt}`)),
+    // Ordnung vereinheitlichen (Gesetzes-UX G5 · §4.3.4): die Kantone erscheinen
+    // ALPHABETISCH nach Vollnamen — dieselbe Ordnung wie das Kantonsraster der
+    // Übersicht, statt der früheren föderalen Standesordnung (BV Art. 1), die der
+    // alphabetischen Raster-/Pill-Ordnung widersprach. Vollname statt Code, damit
+    // die Liste scannbar ist (David: «sehr unübersichtlich»).
+    kinder: [...KANTONE]
+      .sort((a, b) => KANTON_NAMEN[a].localeCompare(KANTON_NAMEN[b], 'de'))
+      .map((kt) => link(KANTON_NAMEN[kt], `/gesetze?ebene=kanton&kt=${kt}`)),
   },
   // International unter «Gesetze» subsumiert (Auftrag David 25.6.2026) — eigene
   // einklappbare Gruppe wie Bund/Kantone; Ziel = die /international-Übersichtsseite,
