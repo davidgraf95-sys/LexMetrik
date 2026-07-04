@@ -47,6 +47,8 @@ export function behoerdeVon(id: BehoerdeId): Behoerde {
 // ── Dokumenttypen ────────────────────────────────────────────────────────────
 export const DOKTYPEN: ReadonlyArray<Doktyp> = [
   { id: 'kreisschreiben', label: 'Kreisschreiben' },
+  { id: 'ks-anhang', label: 'KS-Anhang' },
+  { id: 'weisung', label: 'Weisung' },
   { id: 'rundschreiben', label: 'Rundschreiben' },
   { id: 'mwst-info', label: 'MWST-Info' },
   { id: 'wegleitung', label: 'Wegleitung' },

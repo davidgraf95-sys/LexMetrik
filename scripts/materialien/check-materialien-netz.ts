@@ -15,6 +15,7 @@ import { ladeZustand, type DokZeile } from './soft-law-zustand.ts';
 import { baueKorpusInfo } from './soft-law-projektion.ts';
 import { crawleSeco, SECO_QUELLEN } from './adapter-seco.ts';
 import { crawleEdoeb, EDOEB_ID_PREFIX } from './adapter-edoeb.ts';
+import { crawleEstvKs, ESTV_KS_ID_PREFIXE } from './adapter-estv-ks.ts';
 
 interface QuelleArbiter {
   quelle: string;
@@ -100,7 +101,45 @@ const edoebArbiter: QuelleArbiter = {
   },
 };
 
-const ARBITER: QuelleArbiter[] = [secoArbiter, edoebArbiter];
+// ── ESTV-KS (M4) ─────────────────────────────────────────────────────────────
+function istEstvKsId(id: string): boolean {
+  return ESTV_KS_ID_PREFIXE.some((p) => id.startsWith(p));
+}
+
+const estvKsArbiter: QuelleArbiter = {
+  quelle: 'estv-ks',
+  async pruefe(gelistet) {
+    const fehler: string[] = [];
+    const heute = new Date().toISOString().slice(0, 10); // nur abgerufen-Etikett des Live-Laufs
+
+    let ergebnis;
+    try {
+      ergebnis = await crawleEstvKs({ abgerufen: heute });
+    } catch (e) {
+      // Count-Gate rot ODER Soft-404 / Struktur-Bruch ⇒ Drift-Signal (Snapshot neu ziehen).
+      return [`ESTV-KS: Live-Crawl ROT — ${(e as Error).message}`];
+    }
+
+    const live = new Map(ergebnis.dokumente.map((d) => [d.id, d.drift_token]));
+    const manifestEstv = new Map<string, DokZeile>();
+    for (const [id, z] of gelistet) if (istEstvKsId(id)) manifestEstv.set(id, z);
+
+    for (const [id, z] of manifestEstv) {
+      const lt = live.get(id);
+      if (lt === undefined) {
+        fehler.push(`ESTV-KS: Dokument '${id}' im Manifest, aber live nicht mehr auffindbar (entlistet?) — Snapshot neu ziehen.`);
+      } else if (lt !== z.drift_token) {
+        fehler.push(`ESTV-KS: drift_token '${id}' abweichend (Manifest ${z.drift_token} ≠ live ${lt}: Titel/Datum/DAM-URL geändert) — Snapshot neu ziehen.`);
+      }
+    }
+    for (const id of live.keys()) {
+      if (!manifestEstv.has(id)) fehler.push(`ESTV-KS: neues Dokument '${id}' live, fehlt im Manifest — Snapshot neu ziehen.`);
+    }
+    return fehler;
+  },
+};
+
+const ARBITER: QuelleArbiter[] = [secoArbiter, edoebArbiter, estvKsArbiter];
 
 async function main(): Promise<void> {
   const zustand = ladeZustand();
@@ -123,7 +162,8 @@ async function main(): Promise<void> {
   }
   const nSeco = [...gelistet.keys()].filter(istSecoId).length;
   const nEdoeb = [...gelistet.keys()].filter(istEdoebId).length;
-  console.log(`check:materialien-netz OK — ${nSeco} SECO- + ${nEdoeb} EDÖB-Dokumente drift-frei gegen die Hub-Seiten.`);
+  const nEstv = [...gelistet.keys()].filter(istEstvKsId).length;
+  console.log(`check:materialien-netz OK — ${nSeco} SECO- + ${nEdoeb} EDÖB- + ${nEstv} ESTV-KS-Dokumente drift-frei gegen die Hub-/Indexseiten.`);
 }
 
 main().catch((e) => {

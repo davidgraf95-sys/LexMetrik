@@ -26,6 +26,7 @@ import {
 } from './soft-law-zustand.ts';
 import { crawleSeco, SECO_QUELLEN } from './adapter-seco.ts';
 import { crawleEdoeb, EDOEB_ID_PREFIX } from './adapter-edoeb.ts';
+import { crawleEstvKs, ESTV_KS_ID_PREFIXE } from './adapter-estv-ks.ts';
 import type { SoftLawDok, NormRefKante, AdapterErgebnis } from './adapter-typen.ts';
 
 // ── CLI ────────────────────────────────────────────────────────────────────────
@@ -38,7 +39,7 @@ if (!datum || !/^\d{4}-\d{2}-\d{2}$/.test(datum)) {
   console.error('soft-law-snapshot: --datum=YYYY-MM-DD erforderlich (§2, kein Date.now).');
   process.exit(1);
 }
-const UNTERSTUETZT = new Set<SoftLawQuelle>(['seco', 'edoeb']); // M1/M4 docken hier an.
+const UNTERSTUETZT = new Set<SoftLawQuelle>(['seco', 'edoeb', 'estv-ks']); // M1 dockt hier an.
 if (!quelleArg || !UNTERSTUETZT.has(quelleArg as SoftLawQuelle)) {
   console.error(`soft-law-snapshot: --quelle=${[...UNTERSTUETZT].join('|')} erforderlich. (erhalten: ${quelleArg ?? '—'})`);
   process.exit(1);
@@ -49,6 +50,7 @@ const quelle: SoftLawQuelle = quelleArg as SoftLawQuelle;
 const SECO_PREFIXE = SECO_QUELLEN.map((q) => q.idPrefix);
 function gehoertZurQuelle(id: string): boolean {
   if (quelle === 'edoeb') return id.startsWith(EDOEB_ID_PREFIX);
+  if (quelle === 'estv-ks') return ESTV_KS_ID_PREFIXE.some((p) => id.startsWith(p));
   return SECO_PREFIXE.some((p) => id.startsWith(p));
 }
 
@@ -56,6 +58,9 @@ function gehoertZurQuelle(id: string): boolean {
 async function crawle(substrate: { tag: string; html: string }[]): Promise<AdapterErgebnis> {
   if (quelle === 'edoeb') {
     return crawleEdoeb({ abgerufen: datum!, substrat: (tag, html) => substrate.push({ tag, html }) });
+  }
+  if (quelle === 'estv-ks') {
+    return crawleEstvKs({ abgerufen: datum!, substrat: (tag, html) => substrate.push({ tag, html }) });
   }
   const korpus = baueKorpusInfo();
   const korpusFuer = (erlassKey: string): Iterable<string> => {

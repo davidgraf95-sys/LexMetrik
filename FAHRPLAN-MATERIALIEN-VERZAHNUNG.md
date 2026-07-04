@@ -317,6 +317,31 @@ Weiche-C-Seed `seedSoftLawDb` (DB-Rekonstruktion aus JSONL + committeten Shards 
 der gecrawlten Quelle — ein Ein-Quellen-Snapshot verliert die Kanten der übrigen Quellen nicht
 mehr); EDÖB-Arbiter in `check:materialien-netz`; e2e `materialien-m3-edoeb.e2e.ts` (§7c-Beweis).
 
+**Ausführungsvermerk M4 (4.7.2026):** M4 gebaut (Adapter `adapter-estv-ks.ts`; 3 Indexseiten
+live 4.7.: dbst 77 / vst 32 / stempel 14 PDF-Anker → 95 distinkte URLs → **90 DB-Dokumente**
+nach 4 kuratiert-Skips; **121 Kanten**: 108 `amtlich` [Suffix-Kaskade Stufe 1+2] · 13
+`maschinell` [W-Serie/Merkblatt-Sonderfall via Seiten-Kontext, ehrlich §0/A3] · 0 artikelscharf).
+Abweichungen/Deltas gegen die POC-Spec, offengelegt:
+- **Live-Drift seit POC 3.7.:** 123 Anker/95 URLs statt 120/94 (ESTV hat zugelegt: neue
+  KS-11a-Systematik `1-011a[-Anhang]-D-2026`); Kaskade live 79 Dateinamen-Suffix →
+  1 Beschreibung → 15 Seiten-Kontext. Der spec-seitige Ein-Hash über die sortierte URL-Liste
+  (Baseline `6c362ffffd781641`) ist durch den Manifest-Diff-Arbiter ERSETZT (jede URL-/Titel-/
+  Datums-Änderung kippt den drift_token des einzelnen Dokuments — feiner als der Summen-Hash).
+- **Artikelscharf live = 0 statt 7/94:** das einzige aktuelle Dokument mit Artikel im Titel
+  (KS 6a «… Art. 65 DBG …») ist kuratiert-bekannt → übersprungen (§2.6 «bestehender Key
+  gewinnt», gleiche M3-Begründung: Norm-Kontext-Brücke liest bis M5 nur das in-Bundle-Register).
+  Die Titel-Artikel-Extraktion ist gebaut + getestet und greift ab M5-Migration/neuen Dokumenten.
+- **ID-Systematik verfeinert (live erzwungen):** ESTV co-listet KS Nr. 26 doppelt (2009-Original
+  + «Version vom 6.2.2024») → Versions-Titel bekommen `-V<JAHR>`-Suffix; KS-Beilagen tragen die
+  Beilage in der Anzeige-Nummer («Nr. 45 · Anhang 1-1»), sonst risse das Dubletten-Tor
+  (behoerde+nummer) am Haupt-KS (live gefangen bei KS 37 Anhang 1–5).
+- **DoktypId-Union erweitert** (§0/B6): `ks-anhang` («KS-Anhang») + `weisung` («Weisung»,
+  alte W-Serie) in `typen.ts`/`register.ts`; W-Datei mit «Kreisschreiben»-Titel (revidierte
+  Version) → kreisschreiben. `stand` der W-Serie/Mitteilungen = Titel-Datum («vom DD.MM.YYYY»),
+  nicht das Upload-Label. ESTV-KS-Arbiter in `check:materialien-netz`; e2e
+  `materialien-m4-estv-ks.e2e.ts` (§7c-Beweis). **M5-Folge-Posten ergänzt:** Migration der 4
+  kuratierten KS (analog EDÖB-Vierer) → dann artikelscharf KS 6a → Art. 65 DBG.
+
 ---
 
 ## §7 · Bewusst NICHT (Stufe 1)

@@ -49,6 +49,8 @@ export interface Behoerde {
 // ── Dokumenttyp ──────────────────────────────────────────────────────────────
 export type DoktypId =
   | 'kreisschreiben'
+  | 'ks-anhang' // Beilage zu einem Kreisschreiben (Anhang/FAQ/Schema/Fragebogen) — M4/ESTV-KS
+  | 'weisung' // alte ESTV-W-Serie (W95-002 …) — M4/ESTV-KS
   | 'rundschreiben'
   | 'mwst-info'
   | 'wegleitung'
