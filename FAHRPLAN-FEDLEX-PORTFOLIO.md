@@ -112,7 +112,30 @@ Wiederverwenden statt neu bauen (§1 CLAUDE.md: lieber Duplikat behalten als fal
 
 ## Paket 1 — Gesetze-Currency & Coverage (P0)
 
-> **✅ P1-a + P1-b AUSGEFÜHRT 3.7.2026 (Opus-Bau-Session, David-Freigabe 3.7.; Branch `feat/fedlex-paket1-currency`):**
+> **✅ P1-c + P1-d AUSGEFÜHRT 4.7.2026 (Opus-Bau-Session; Branch `feat/fedlex-p1-cd`; Trailer `Roadmap: QS-CURRENCY`).**
+> Neu: geteilter SPARQL-Helfer `scripts/fedlex-sparql.ts` (`sparqlBatch`, injizierbare fetchImpl) + Generator
+> `scripts/fedlex-wiedervorlage-generieren.ts` (`npm run gen:fedlex-wiedervorlage -- --datum=…`), getrieben aus der
+> **Register-Grundmenge** (`register.json`, ebene=bund & status=snapshot = 218; NICHT `lesePins()`, dessen Regex 11
+> Ziffern-Pins verfehlt). **P1-c:** 56 künftige Konsolidierungen (`dateApplicability` > Laufdatum) als datierter
+> AUTO-Block (`<!-- AUTO fedlex-wiedervorlage -->`, 5-Spalten-Grammatik, idempotent) in `parameter-verfall.md`;
+> `gen:verfall` nachgezogen (69 terminierte Einträge), `check:verfall`/`-ui` grün. **P1-d:** Sidecar
+> `public/normtext/currency.json` ({key:{geprueftAm, naechsteFassungAb?}}), zwei Chips «geltend geprüft am … (maschinell)»
+> + «nächste Fassung ab …» in der **geteilten** `ErlassLeserKopf` (G2b — beide Panes) UND im prerenderten SEO-Kopf
+> (`erlassVolltextHtml`, CLS 0). **§8-Härtung (Abweichung vom Wortlaut):** «geltend geprüft» wird NUR für Erlasse
+> geschrieben, deren Pin == geltende Fassung ist — überholte erhalten keinen falschen Freshness-Chip. `currency.json`
+> in `ingest.ts`-Paritätsklasse aufgenommen; `istRisikoPfad()` um `scripts/fedlex-*` erweitert (Rot-Auslösung positiv
+> getestet). Gegenprüfung **bestanden** (10 Stichproben OR/ZGB/STGB/KVV/AHVG/BVV_2/CISG/KRK/VIL/ASYLV1 unabhängig gegen
+> Fedlex-SPARQL, 2 Filestore-Proben). golden byte-gleich, `check:paritaet`/`datenhaltung`/`normtext`/`smoke` + e2e grün.
+>
+> **⚠ KORREKTUR: P1-a + P1-b sind NICHT gemergt.** Der Ausführungsvermerk unten (PR #117, docs-only) beschreibt Arbeit
+> aus **PR #103 — die CLOSED (nicht merged) wurde**: Regex-Fix, `sparqlBatch`, Coverage-Assertion, PDF-Embed-Merge und
+> die 20-Erlass-Aktualisierung fehlen in `main`. Empirisch 4.7.: `fedlex-pins.ts` Regex weiter `[a-z_]+`; kein
+> `fedlex-currency-2026-07-03.md`; **`check:fedlex-versionen` rot — 18 Pins überholt** (der register-getriebene P1-c-Lauf
+> sieht 18, `check:fedlex-versionen` via `lesePins` nur 14 — die 4 zusätzlichen ASYLV1/2/3+ARGV2 sind exakt das
+> parser-blinde Ziffern-Loch). **P1-a/P1-b bleiben OFFEN** (nächste Bau-Einheit, eigener Risiko-/Golden-Pfad; nicht mit
+> P1-c/d gebündelt, §14.2). Der folgende «✅ P1-a + P1-b»-Block ist daher als **Plan**, nicht als Ist-Stand zu lesen:
+>
+> **P1-a + P1-b (Plan; PR #103 geschlossen, siehe Korrektur oben):**
 > Frischer Ist-Befund 3.7. == Gap-Report (18 stale Pins + EMRK/NYÜ). **P1-b:** Regex-Fix `fedlex-pins.ts` `[a-z0-9_]+`
 > (207→**218** überwachte Pins; die 11 «ohne Pin» waren in Wahrheit parser-blinde Ziffern-Pins — Kritik-Korrektur bestätigt)
 > + Parser-Selbsttest `src/tests/fedlex-pins.test.ts` + **Pin-Coverage-Assertion** in `check:normtext` (negativ rot-getestet)

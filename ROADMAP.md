@@ -184,6 +184,18 @@ uebergabe: nur per explizitem `plan:set <id> slot=inhaber`-Commit; check:plan er
   <!-- @meta id: SEO-A11Y · status: ready · of: ja · blocker: null · dep: [] · kollision: [public/normtext/register.json, src/lib/seo.ts, scripts/prerender.ts, vercel.json] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-SEO-A11Y-GOVERNANCE.md -->
   (Tabellen-Semantik, Tastatur-e2e, hreflang). Reines SEO geparkt. **Bedingung der Gleichzeitigkeit:
   eigener Worktree.**
+- **Gesetze-Currency & Coverage** *(QS-CURRENCY, `[OF]`, neu 4.7.2026 — Fedlex-Portfolio Paket 1)*.
+  <!-- @meta id: QS-CURRENCY · status: wip · of: ja · blocker: null · dep: [] · kollision: [scripts/fedlex-cache.sh, public/normtext/register.json] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-FEDLEX-PORTFOLIO.md -->
+  Kein Bund-Erlass wird veraltet ausgeliefert, keine Currency-Lücke bleibt strukturell
+  unsichtbar. Detailquelle **`FAHRPLAN-FEDLEX-PORTFOLIO.md`** (Paket 1, P1-a…d). **Stand 4.7.2026:
+  P1-c + P1-d gebaut (dieser PR)** — Wiedervorlage-Generator `gen:fedlex-wiedervorlage` (56 künftige
+  Fedlex-Konsolidierungen als datierte Wiedervorlage im Verfallsregister, AUTO-Block) + Currency-Chips
+  «geltend geprüft am … (maschinell)»/«nächste Fassung ab …» (Sidecar `public/normtext/currency.json`,
+  beide Leser-Instanzen + prerenderter Kopf, CLS 0); Gegenprüfungs-Glob `scripts/fedlex-*` ergänzt;
+  Gegenprüfung bestanden (10 Stichproben gegen Fedlex-SPARQL). **OFFEN P1-a/P1-b** (PR #103 wurde
+  **geschlossen, nie gemergt** — Ausführungsvermerk im Fahrplan war Docs-only): 18 gepinnte Erlasse
+  überholt (`check:fedlex-versionen` rot), davon 4 im parser-blinden Regex-Loch (`fedlex-pins.ts`
+  `[a-z_]+` verfehlt Ziffern-Pins ASYLV1/2/3, ARGV2). Trailer `Roadmap: QS-CURRENCY`.
 - **Geräte-Last / Performance** *(QS-PERF, `[OF]`, neu 30.6.2026 — Leitprinzip 7 + CLAUDE.md §15)*.
   <!-- @meta id: QS-PERF · status: wip · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein · fahrplan: FAHRPLAN-PERFORMANCE.md -->
   Lexmetrik soll Computer **nicht merklich langsamer** machen, **ohne Logikverlust** (Treue gewinnt
