@@ -17,8 +17,8 @@ import { GEBIET_LABEL } from '../../lib/normtext/register';
 import { KontextPanel } from '../../components/kontext/KontextPanel';
 import type { BrowseErlass, BrowseManifest } from '../../lib/normtext/browse-typen';
 import type { NormSnapshot } from '../../lib/normtext/typen';
-import { formatiereDatum, passtAufSuche, pfadZu } from './helpers';
-import { ArtikelLeser, SektionKopf, SektionBaumTOC, ErlassKopfBlock } from './parts';
+import { formatiereDatum, passtAufSuche, pfadZu, romanFrei, baueZitat } from './helpers';
+import { ArtikelLeser, SektionKopf, SektionBaumTOC, ErlassKopfBlock, ErlassLeserKopf, SektionKontextKopf } from './parts';
 import { LeserOptionenLeiste } from './LeserOptionenLeiste';
 import { beiLeerlauf } from '../../lib/leerlauf';
 import { ladeLeitfallShard, normArtikelToken, type LeitfallShard } from '../../lib/rechtsprechung/norm-index';
@@ -205,7 +205,11 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // NUR ein SEKUNDÄRES Pane unterdrückt globale URL-/Reiter-Writes — das primäre
   // Pane IST die URL und pflegt sie wie heute. Ausserhalb eines Panes alles wie bisher.
   const istSekundaer = rolle === 'sekundaer';
-  const [fussnotenAuf, setFussnotenAuf] = useState(false); // Fussnoten nur auf Wunsch
+  // W2·5d G2b (Fussnoten-Unifizierung): der frühere `fussnotenAuf`-React-Schalter
+  // (Such-Leiste, Default AUS) entfällt — die Fussnoten-Bedienung ist jetzt EINE
+  // (der data-fussnoten-Toggle der Options-Leiste, Default AN). Marker + Apparat
+  // liegen IMMER im DOM (R9/§8, Ctrl+F/Print/Screenreader); «AUS» dämpft rein per
+  // CSS (index.css), versteckt nie. Kein React-State-Zweig mehr im Artikel-Baum.
   // W2·5d G2a: Die Gruppierungs-/Gliederungslinien werden nicht mehr per
   // component-local useState geschaltet (das rendert die Artikelliste neu, §15),
   // sondern über den globalen data-linien-Toggle der Options-Leiste
@@ -358,6 +362,21 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     (eintraege ?? []).forEach((e) => map.set(e.artikel, labelMitBereich(e.artikelLabel, e.artikel)));
     return map;
   }, [eintraege]);
+
+  // W2·5d G2b (Sticky Section-Kontextkopf): Sektions-ID → kompaktes Anzeige-Label
+  // (der beschreibende Teil ohne «Erster Titel:»-Aufzähler, wie im TOC). EINMAL
+  // bottom-up aus dem Gliederungsbaum; die Kopf-Zeile mappt aktivIds darüber (keine
+  // neue Scroll-Infra). Reine Darstellung (§3).
+  const sekLabelById = useMemo(() => {
+    const map = new Map<string, string>();
+    const walk = (s: Sektion) => {
+      const { rest } = romanFrei(s.label);
+      map.set(s.id, rest || s.label);
+      s.kinder.forEach(walk);
+    };
+    sektionen.forEach(walk);
+    return map;
+  }, [sektionen]);
 
   // Ueberschrift je Artikel im FLIESSTEXT: nur noch die artikel-EIGENE
   // Sachueberschrift (das Randtitel-Blatt). Die uebergeordneten, von mehreren
@@ -713,28 +732,21 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // Massgeblich bleibt die amtliche Quelle (sichtbarer Live-Link, §7/§8); Drift-
   // Tor: check:pdf (offline Integrität + netz Drift & geltende Konsolidierung).
   if (erlass && erlass.status === 'pdf-embed' && erlass.pdfPfad) {
-    const titelOhneSuffixP = erlass.titel.replace(/\s*\([^)]*\)\s*$/, '').trim();
-    const titelRedundantP = titelOhneSuffixP.toLowerCase() === erlass.kuerzel.trim().toLowerCase();
     return (
       <div className="space-y-5">
-        {/* Breadcrumb trägt der Kopf (Inhalts-Kopf bzw. PaneKopf) — kein Inline-Dup. */}
-        <header className="space-y-2.5 border-b border-line pb-5">
-          <p className="lc-overline">{erlass.ebene === 'bund' ? 'Staatsvertrag' : `Kanton ${erlass.kanton}`} · amtliches PDF</p>
-          <h1 className="text-h2 sm:text-h1 font-display font-semibold text-ink-900 [overflow-wrap:anywhere] hyphens-auto">
-            {erlass.kuerzel}{!titelRedundantP && <span className="text-ink-500 font-normal"> — {erlass.titel}</span>}
-          </h1>
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs text-ink-500">
-            {erlass.sr && <span>SR <span className="num">{erlass.sr}</span></span>}
-            {erlass.sr && <span className="text-ink-300" aria-hidden>·</span>}
-            {erlass.stand && <span>Stand <span className="num">{formatiereDatum(erlass.stand)}</span></span>}
-            {erlass.quelleUrl && <a href={erlass.quelleUrl} target="_blank" rel="noopener noreferrer" className="lc-chip no-underline hover:text-brass-700">↗ geltende Fassung</a>}
+        {/* Breadcrumb trägt der Kopf (Inhalts-Kopf bzw. PaneKopf) — kein Inline-Dup.
+            G2b: EINE Kopf-Komponente (ErlassLeserKopf) — hier ohne Options-Leiste,
+            da am eingebetteten PDF Linien/Fussnoten/Verweise wirkungslos wären
+            (keine toten Steuerelemente, §13 F4). */}
+        <ErlassLeserKopf erlass={erlass} artikelAnzahl={null}
+          overline={`${erlass.ebene === 'bund' ? 'Staatsvertrag' : `Kanton ${erlass.kanton}`} · amtliches PDF`}
+          hinweis="Amtliches PDF — massgeblich ist die amtliche Fassung"
+          aktionen={
             <a href={`/normtext/${erlass.pdfPfad}`} download={`${erlass.kuerzel}.pdf`} className="lc-chip no-underline hover:text-brass-700" title="Amtliches PDF herunterladen">⬇ PDF herunterladen</a>
-            <span className="basis-full sm:basis-auto sm:ml-auto text-micro text-ink-500">Amtliches PDF — massgeblich ist die amtliche Fassung</span>
-          </div>
-        </header>
+          } />
         {/* M5: Erlass-Kopf-Slot auch im pdf-embed-Pfad (für PDF-Erlasse ohne
             Struktur-Sidecar bleibt kopf=null → nichts gerendert). */}
-        {kopf && <ErlassKopfBlock kopf={kopf} fussnotenAuf={false} />}
+        {kopf && <ErlassKopfBlock kopf={kopf} />}
         {/* Eingebettetes amtliches PDF (same-origin → Browser-Viewer mit nativer
             Suche/Zoom/Druck). iframe ist für Inline-PDF am zuverlässigsten; darunter
             ein sichtbarer Fallback-Link für Browser ohne PDF-Viewer. */}
@@ -854,7 +866,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
           ...s.kinder.map((k) => ({ pos: sekPos.get(k.id) ?? Infinity, el: renderSektion(k, true, tiefe + 1) })),
           ...s.artikel.map((e) => ({
             pos: artIndex.get(e.artikel) ?? 0,
-            el: <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} marg={margAnzeige.get(e.artikel)?.teile} margBasis={margAnzeige.get(e.artikel)?.ab} leitfaelle={leitfaelleFuer(e.artikel)} revision={revisionFuer(e.artikel)} />,
+            el: <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} intern={internRefs} marg={margAnzeige.get(e.artikel)?.teile} margBasis={margAnzeige.get(e.artikel)?.ab} leitfaelle={leitfaelleFuer(e.artikel)} revision={revisionFuer(e.artikel)} />,
           })),
         ].sort((a, b) => a.pos - b.pos)
       : [];
@@ -875,24 +887,20 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     const einzugCls = eingerueckt ? (guide ? 'pl-3 sm:pl-einzug' : 'pl-0 sm:pl-einzug') : '';
     return (
       <section key={s.id} data-normtext-linie className={`space-y-3 ${guide ? 'border-l border-guide' : ''} ${einzugCls}`}>
-        <SektionKopf s={s} refCb={regRef(s.id)} offen={auf} onToggle={() => toggle(s.id, defOpen)} bereich={sektionMeta.get(s.id)?.bereich} bereichEinzel={sektionMeta.get(s.id)?.einzel ?? false} fussnotenAuf={fussnotenAuf} />
+        <SektionKopf s={s} refCb={regRef(s.id)} offen={auf} onToggle={() => toggle(s.id, defOpen)} bereich={sektionMeta.get(s.id)?.bereich} bereichEinzel={sektionMeta.get(s.id)?.einzel ?? false} />
         {auf && <div className="space-y-5">{inhalt.map((x) => x.el)}</div>}
       </section>
     );
   };
 
-  // Geteilte Such-Steuerung (Eingabe + Fussnoten-Schalter). Wird an ZWEI Orten
-  // gerendert: in der Gliederungs-Spalte (2-Spalten-Fall, oberhalb der TOC) ODER
-  // als volle Breite (kein Gliederungs-Spalt: keine Sektionen oder eingeklappt).
+  // Geteilte Such-Steuerung (nur noch die Eingabe — der frühere Fussnoten-Schalter
+  // ist in die Options-Leiste unifiziert, G2b). Wird an ZWEI Orten gerendert: in der
+  // Gliederungs-Spalte (2-Spalten-Fall, oberhalb der TOC) ODER als volle Breite
+  // (kein Gliederungs-Spalt: keine Sektionen oder eingeklappt).
   const sucheEingabe = (
-    <>
-      <input type="search" value={suche} onChange={(e) => setSuche(e.target.value)}
-        placeholder="Im Gesetz suchen …" aria-label="Im Gesetz suchen"
-        className="lc-input h-9 py-0 text-body-s flex-1 min-w-0" />
-      <button type="button" onClick={() => setFussnotenAuf((v) => !v)} aria-pressed={fussnotenAuf}
-        className={`shrink-0 text-micro ${fussnotenAuf ? 'text-brass-700' : 'text-ink-500 hover:text-brass-700'}`}
-        title="Fussnoten ein-/ausblenden">{fussnotenAuf ? '✓ Fussnoten' : 'Fussnoten'}</button>
-    </>
+    <input type="search" value={suche} onChange={(e) => setSuche(e.target.value)}
+      placeholder="Im Gesetz suchen …" aria-label="Im Gesetz suchen"
+      className="lc-input h-9 py-0 text-body-s flex-1 min-w-0" />
   );
   // 2-Spalten aktiv ⇒ die Suche lebt in der Gliederungs-Spalte (oberhalb der TOC),
   // NICHT als Vollbreite über dem Gesetzestext (Auftrag David).
@@ -914,43 +922,37 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     // Norm-Popover der Rechner o. Ä.
     <div className="lc-leser space-y-5">
       {/* Breadcrumb trägt seit A/F der Kopf: Einzelansicht → Inhalts-Kopf, Split-View
-          → PaneKopf. Kein zweiter Inline-Breadcrumb mehr (sonst Dopplung im Pane). */}
-      <header className="space-y-2.5 border-b border-line pb-5">
-        <p className="lc-overline">{erlass.rechtsgebiet === 'international'
+          → PaneKopf. Kein zweiter Inline-Breadcrumb mehr (sonst Dopplung im Pane).
+          G2b: EINE Kopf-Komponente (ErlassLeserKopf) — dieselbe wie im pdf-embed-
+          Pfad; sie trägt die Options-Leiste (Linien/Fussnoten/Verweise). */}
+      <ErlassLeserKopf erlass={erlass} artikelAnzahl={eintraege.length}
+        overline={erlass.rechtsgebiet === 'international'
           ? (overlineGebiet ?? 'Staatsvertrag')
-          : `${erlass.ebene === 'bund' ? 'Bundesgesetz' : `Kanton ${erlass.kanton}`}${overlineGebiet ? ` · ${overlineGebiet}` : ''}`}</p>
-        <h1 className="text-h2 sm:text-h1 font-display font-semibold text-ink-900">
-          {erlass.kuerzel}{!titelRedundant && <span className="text-ink-500 font-normal"> — {erlass.titel}</span>}
-        </h1>
-        <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs text-ink-500">
-          {erlass.sr && <span>SR <span className="num">{erlass.sr}</span></span>}
-          {erlass.sr && <span className="text-ink-300" aria-hidden>·</span>}
-          <span><span className="num">{eintraege.length}</span> Artikel</span>
-          {erlass.stand && <span className="text-ink-300" aria-hidden>·</span>}
-          {erlass.stand && <span>Stand <span className="num">{formatiereDatum(erlass.stand)}</span></span>}
-          {erlass.quelleUrl && <a href={erlass.quelleUrl} target="_blank" rel="noopener noreferrer" className="lc-chip no-underline hover:text-brass-700">↗ geltende Fassung</a>}
-          <button type="button" onClick={herunterladen} className="lc-chip hover:text-brass-700" title="Ganzen Erlass als Textdatei herunterladen">⬇ Herunterladen</button>
-          {/* Dasselbe Gesetz zusätzlich in einem zweiten Reiter öffnen (Auftrag
-              David) — zum Vergleich zweier Stellen; die Reiter unterscheiden sich
-              im Label über den Artikel («OR – Art. 41» / «OR – Art. 97»). */}
-          <button type="button"
-            onClick={() => {
-              const ziel = naechsteInstanz(window.location.pathname + window.location.hash);
-              merkeTab(ziel, erlass.kuerzel);
-              navigate(ziel);
-            }}
-            className="lc-chip hover:text-brass-700" title="Diesen Erlass zusätzlich in einem neuen Reiter öffnen">⧉ In neuem Reiter</button>
-          {/* W2·5d G2a: Options-Leiste (Linien/Fussnoten/Verweise) — reine data-*-
-              /CSS-Toggles (leserOptionen.tsx), global, jede Instanz synchron.
-              Linien-Schalter nur bei geschachteltem Gesetz (sonst wirkungslos). */}
-          <LeserOptionenLeiste zeigeLinien={sektionen.length > 0} />
-          <span className="basis-full sm:basis-auto sm:ml-auto text-micro text-ink-500">Snapshot — massgeblich ist die amtliche Fassung</span>
-        </div>
-      </header>
+          : `${erlass.ebene === 'bund' ? 'Bundesgesetz' : `Kanton ${erlass.kanton}`}${overlineGebiet ? ` · ${overlineGebiet}` : ''}`}
+        hinweis="Snapshot — massgeblich ist die amtliche Fassung"
+        aktionen={
+          <>
+            <button type="button" onClick={herunterladen} className="lc-chip hover:text-brass-700" title="Ganzen Erlass als Textdatei herunterladen">⬇ Herunterladen</button>
+            {/* Dasselbe Gesetz zusätzlich in einem zweiten Reiter öffnen (Auftrag
+                David) — zum Vergleich zweier Stellen; die Reiter unterscheiden sich
+                im Label über den Artikel («OR – Art. 41» / «OR – Art. 97»). */}
+            <button type="button"
+              onClick={() => {
+                const ziel = naechsteInstanz(window.location.pathname + window.location.hash);
+                merkeTab(ziel, erlass.kuerzel);
+                navigate(ziel);
+              }}
+              className="lc-chip hover:text-brass-700" title="Diesen Erlass zusätzlich in einem neuen Reiter öffnen">⧉ In neuem Reiter</button>
+            {/* W2·5d G2a/G2b: Options-Leiste (Linien/Fussnoten/Verweise) — reine
+                data-*-/CSS-Toggles (leserOptionen.ts), global, jede Instanz synchron.
+                Linien-Schalter nur bei geschachteltem Gesetz (sonst wirkungslos). */}
+            <LeserOptionenLeiste zeigeLinien={sektionen.length > 0} />
+          </>
+        } />
 
       {/* M5: Erlass-Kopf (Ingress/Erlassformel bzw. materielle Präambel + Erlass-
           datum + Kopf-Fussnoten) — Fedlex-Fundiertheits-Floor (§2), bisher verworfen. */}
-      {kopf && <ErlassKopfBlock kopf={kopf} fussnotenAuf={fussnotenAuf} />}
+      {kopf && <ErlassKopfBlock kopf={kopf} />}
 
       {/* Suche als Vollbreite NUR ohne 2-Spalten (keine Sektionen ODER Gliederung
           eingeklappt) — dann trägt sie auch den «☰ Gliederung»-Wiedereinblender.
@@ -1068,17 +1070,30 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
             Spalte (parts.tsx, ebenfalls max-w-reading) die Begrenzung; darunter
             zentriert die ganze Spalte auf max-w-reading. */}
         <div className={`group/lese ${sektionen.length > 0 && tocOffen ? (istXl ? 'w-full' : 'mx-auto w-full max-w-reading') : 'mx-auto w-full max-w-reading'}`}>
+          {/* W2·5d G2b (K12a+K12b): Sticky Section-Kontextkopf «Titel › … › Art. N»
+              + «Zitat kopieren». Nur im 2-Spalten-Lesemodus (zweiSpalten: die Suche
+              lebt dann in der TOC-Spalte, die Lesespalten-Oberkante ist frei — kein
+              Stapeln mit der Vollbreiten-Suchleiste) und nicht in der Trefferliste.
+              Speist sich aus der VORHANDENEN Scroll-Spy-State (aktivIds/aktArtikel)
+              — kein neuer Observer, keine Scroll-Listener-Kaskade (§15). */}
+          {zweiSpalten && !treffer && (
+            <SektionKontextKopf
+              pfad={aktivIds.map((id) => sekLabelById.get(id)).filter((l): l is string => !!l)}
+              artikelLabel={aktArtikel ? `${aktArtikel} ${erlass.kuerzel}` : null}
+              zitat={baueZitat(erlass, aktArtikel ?? '')}
+              top={imPane ? '0.5rem' : 'calc(4rem + 2.25rem)'} />
+          )}
           {treffer ? (
             <div className="space-y-4">
               <p className="text-body-s text-ink-500"><span className="num">{treffer.length}</span> Treffer für «{sucheDebounced.trim()}»</p>
-              {treffer.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} marg={struktur?.[e.artikel]?.marginalie} imTreffer onSpringe={springeZuArtikel} leitfaelle={leitfaelleFuer(e.artikel)} revision={revisionFuer(e.artikel)} />)}
+              {treffer.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} intern={internRefs} marg={struktur?.[e.artikel]?.marginalie} imTreffer onSpringe={springeZuArtikel} leitfaelle={leitfaelleFuer(e.artikel)} revision={revisionFuer(e.artikel)} />)}
               {treffer.length === 0 && <p className="text-body-s text-ink-500">Kein Artikel gefunden.</p>}
             </div>
           ) : (
             <div className="space-y-2">
               {ohneGliederung.length > 0 && (
                 <div className="space-y-5 mb-6">
-                  {ohneGliederung.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} marg={margAnzeige.get(e.artikel)?.teile} margBasis={margAnzeige.get(e.artikel)?.ab} leitfaelle={leitfaelleFuer(e.artikel)} revision={revisionFuer(e.artikel)} />)}
+                  {ohneGliederung.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} intern={internRefs} marg={margAnzeige.get(e.artikel)?.teile} margBasis={margAnzeige.get(e.artikel)?.ab} leitfaelle={leitfaelleFuer(e.artikel)} revision={revisionFuer(e.artikel)} />)}
                 </div>
               )}
               {sektionen.map((s) => renderSektion(s, true, 0))}

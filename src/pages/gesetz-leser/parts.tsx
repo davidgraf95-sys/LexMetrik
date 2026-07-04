@@ -14,7 +14,7 @@ import {
 } from '../../lib/verzahnung/artikel-revisionen';
 import type { BrowseErlass } from '../../lib/normtext/browse-typen';
 import type { NormSnapshot } from '../../lib/normtext/typen';
-import { margStufeStil, fnTextMitLinks, romanFrei } from './helpers';
+import { margStufeStil, fnTextMitLinks, romanFrei, formatiereDatum, baueZitat } from './helpers';
 
 // Schaufenster-Chips: nur die wenigen zentralen Leitfälle direkt zeigen (Reihenfolge
 // = `gewicht` aus dem Shard), Rest hinter «+n weitere». Bewusst klein, kein Panel.
@@ -95,8 +95,8 @@ const LeitfallZeile = memo(function LeitfallZeile({ refs, normZitat, revision }:
 // links «Art. N» als ruhiger Anker mit den Randtiteln darunter (rechtsbündig, nur die
 // gegenüber dem Vorartikel GEÄNDERTEN Stufen, `marg`), rechts der Serif-
 // Bestimmungstext. Ersetzt den früheren fliegenden Standort-Tracker. Reine Darstellung.
-export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, marg, margBasis, imTreffer, onSpringe, leitfaelle, revision }: {
-  e: NormSnapshot; erlass: BrowseErlass; basisPfad: string; fussnoten?: Fussnote[]; fussnotenAuf: boolean; intern?: InternRefs;
+export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, fussnoten, intern, marg, margBasis, imTreffer, onSpringe, leitfaelle, revision }: {
+  e: NormSnapshot; erlass: BrowseErlass; basisPfad: string; fussnoten?: Fussnote[]; intern?: InternRefs;
   marg?: string[];
   /** Leitfälle dieses Artikels (Reader lädt den erlass-lokalen Shard einmal). */
   leitfaelle?: LeitfallRef[];
@@ -113,7 +113,12 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
 }) {
   const [kopiert, setKopiert] = useState<'' | 'zitat' | 'link'>('');
   const label = labelMitBereich(e.artikelLabel, e.artikel);
+  // KURZ-Zitat («Art. 957 OR») — Fundstellen-Signal für den Entscheid-Sprung
+  // (LeitfallZeile `normZitat` → ?norm=). MUSS knapp bleiben, sonst matcht der
+  // EntscheidLeser die zitierende Erwägung nicht mehr.
   const zitat = `${label} ${erlass.kuerzel}`;
+  // VOLL-Zitat (W2·5d G2b) für die Kopier-Aktion: Fundstelle + SR + Stand (§7 a–d).
+  const zitatVoll = baueZitat(erlass, label);
   // Vollständig aufgehobener Artikel → dezent + standardmässig eingeklappt
   // (Auftrag David: «nicht so präsent», aufklappbar über den ▾/▸-Toggle).
   const ganzAufgehoben = artikelGanzAufgehoben(e.bloecke);
@@ -155,7 +160,12 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
   // Marker nur, wenn der Artikel offen ist (Ziel <p id=fn-…> lebt im artOffen-Block):
   // sonst öffnete der sichtbare Marker am eingeklappten Artikel ein leeres Popover
   // (toter Bedienpfad — typisch bei aufgehobenen Artikeln, Default eingeklappt).
-  const fnMarker = artOffen && fussnotenAuf && fnArtikelEbene.length > 0
+  // W2·5d G2b (Fussnoten-Unifizierung): der Marker rendert jetzt IMMER (nur an
+  // `artOffen` gebunden, nicht mehr am alten `fussnotenAuf`-React-Schalter) —
+  // amtliche Substanz bleibt im DOM (R9/§8, Ctrl+F/Print/Screenreader). Die
+  // Prominenz steuert allein der data-fussnoten-CSS-Toggle (index.css): «AUS»
+  // DÄMPFT, versteckt nie. So gibt es EINE Fussnoten-Bedienung statt zweier.
+  const fnMarker = artOffen && fnArtikelEbene.length > 0
     ? <span className="ml-0.5">{fnArtikelEbene.map((nr, i) => (
         <span key={nr}>{i > 0 && <span className="align-super text-[0.62em] text-ink-500">,</span>}<FnRef artikel={e.artikel} nr={nr} /></span>
       ))}</span>
@@ -178,7 +188,7 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
     return out;
   })();
   const kopiere = (was: 'zitat' | 'link') => {
-    const text = was === 'zitat' ? zitat
+    const text = was === 'zitat' ? zitatVoll
       : `${typeof window !== 'undefined' ? window.location.origin : ''}${basisPfad}#art-${e.artikel}`;
     void navigator.clipboard?.writeText(text).then(() => {
       setKopiert(was); window.setTimeout(() => setKopiert(''), 1500);
@@ -186,10 +196,10 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
   };
   // Aufhebungsnotiz (G16/#3): die amtliche «Aufgehoben durch … (AS …)»-Notiz eines
   // voll aufgehobenen Artikels liegt als artikel-Ebene-Fussnote im Snapshot
-  // (absatz/item = null). M2 (David 29.6.2026): sie wird wie JEDE Fussnote erst auf
-  // Klick gezeigt — einheitlich hinter dem Fussnoten-Schalter (`fussnotenAuf`); die
-  // Statuszeile «· aufgehoben» (Artikelzustand) bleibt davon unberührt immer sichtbar.
-  // Wortlaut nie erfunden (§1).
+  // (absatz/item = null). M2 (David 29.6.2026) / G2b: sie ist eine Fussnote und liegt
+  // wie jede Fussnote IMMER im DOM (data-fn-apparat, per data-fussnoten-CSS dämpfbar,
+  // R9); die Statuszeile «· aufgehoben» (Artikelzustand) bleibt davon unberührt
+  // immer sichtbar. Wortlaut nie erfunden (§1).
   const aufhebungNotiz: Fussnote[] = ganzAufgehoben
     ? fussAnzeige.filter((f) => f.absatz == null && f.item == null)
     : [];
@@ -215,8 +225,9 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
                 <div key={i} className={margStufeStil((margBasis ?? 0) + i, i === marg.length - 1)}>
                   {m}
                   {/* G11: section-heading-Fussnoten-Marker an der passenden Randtitel-
-                      Zeile (blatt im Volltext, ganze Kette in der Suchsicht). */}
-                  {artOffen && fussnotenAuf && fnProSektion[m]?.map((nr, j) => (
+                      Zeile (blatt im Volltext, ganze Kette in der Suchsicht). G2b:
+                      immer (an artOffen gebunden), Prominenz via data-fussnoten-CSS. */}
+                  {artOffen && fnProSektion[m]?.map((nr, j) => (
                     <span key={nr}>{j > 0 && <span className="align-super text-[0.62em] text-ink-500">,</span>}<FnRef artikel={e.artikel} nr={nr} /></span>
                   ))}
                 </div>
@@ -253,15 +264,15 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
             {ganzAufgehoben && <span className="text-xs italic text-ink-500">· aufgehoben</span>}
             {artOffen && (
               <span className="ml-auto flex shrink-0 gap-3 opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100 [@media(hover:none)]:opacity-100">
-                <button type="button" onClick={() => kopiere('zitat')} className="text-micro text-ink-500 hover:text-brass-700" aria-label={`${zitat} kopieren`}>{kopiert === 'zitat' ? '✓ kopiert' : 'Zitat'}</button>
+                <button type="button" onClick={() => kopiere('zitat')} className="text-micro text-ink-500 hover:text-brass-700" aria-label={`Zitat kopieren: ${zitatVoll}`}>{kopiert === 'zitat' ? '✓ kopiert' : 'Zitat'}</button>
                 <button type="button" onClick={() => kopiere('link')} className="text-micro text-ink-500 hover:text-brass-700" aria-label="Permalink kopieren">{kopiert === 'link' ? '✓' : 'Link'}</button>
               </span>
             )}
             {/* Amtliche Aufhebungsnotiz (eigene Zeile, dezent eingerückt) — M2: erst
                 auf Klick (hinter dem Fussnoten-Schalter), wie jede andere Fussnote.
                 Die Statuszeile «· aufgehoben» oben bleibt unabhängig immer sichtbar. */}
-            {ganzAufgehoben && fussnotenAuf && aufhebungNotiz.length > 0 && (
-              <span className="basis-full pl-6 text-xs leading-snug text-ink-500">
+            {ganzAufgehoben && aufhebungNotiz.length > 0 && (
+              <span data-fn-apparat className="basis-full pl-6 text-xs leading-snug text-ink-500">
                 {aufhebungNotiz.map((fn, i) => (
                   <span key={i}>{i > 0 && '; '}{fnTextMitLinks(fn)}</span>
                 ))}
@@ -284,7 +295,7 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
         <div className="max-w-reading min-w-0 overflow-x-clip">
           <ArtikelBody bloecke={e.bloecke} artikel={e.artikel} passus={{ absatz: null }} autolink
             zitierKontext={{ artikelLabel: label, kuerzel: erlass.kuerzel }}
-            fnProAbsatz={fussnotenAuf ? fnProAbsatz : undefined} fnProItem={fussnotenAuf ? fnProItem : undefined}
+            fnProAbsatz={fnProAbsatz} fnProItem={fnProItem}
             intern={intern}
             className="space-y-3.5 font-serif text-body-l leading-[1.65] text-ink-800" />
           {/* VERWEISE: auflösbare Normverweise des Artikels als Chips (Referenz David). */}
@@ -298,10 +309,12 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
               aus dem erlass-lokalen Shard. Verdrahtet das bisher tote proNormArtikel-
               Modell (norm-index.ts) sichtbar — vom Artikel direkt zur Rechtsprechung. */}
           <LeitfallZeile refs={leitfaelle} normZitat={zitat} revision={revision} />
-          {/* Fussnoten (Änderungs-/Quellenhistorie, AS/BBl klickbar): nur auf Wunsch
-              (globaler Schalter in der Suchleiste). */}
-          {fussnotenAuf && fussAnzeige.length > 0 && (
-            <div className="mt-3 border-t border-rule-artikel pt-2 space-y-1">
+          {/* Fussnoten (Änderungs-/Quellenhistorie, AS/BBl klickbar). W2·5d G2b:
+              der Apparat liegt IMMER im DOM (Ctrl+F/Print/Screenreader, R9/§8);
+              der data-fussnoten-CSS-Toggle dämpft ihn bei «AUS» (data-fn-apparat),
+              versteckt ihn nie. Marker + Apparat = EINE Bedienung (Options-Leiste). */}
+          {fussAnzeige.length > 0 && (
+            <div data-fn-apparat className="mt-3 border-t border-rule-artikel pt-2 space-y-1">
               {fussAnzeige.map((fn, i) => (
                 <p key={i} id={fn.nr ? `fn-${e.artikel}-${fn.nr}` : undefined} className="nt-anker text-xs leading-normal text-ink-500 target:bg-brass-100">
                   {fn.nr && <span className="num mr-1 text-ink-300">{fn.nr}</span>}
@@ -322,7 +335,7 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
 // uns war es zu 100 % verworfen (Extraktor startete erst beim ersten <article>).
 // Reine Darstellung aus dem Sidecar (§3) — Wortlaut unangetastet (§1). Die Kopf-
 // Fussnoten (Provenienz) liegen wie der Änderungs-Apparat hinter dem Schalter (§4).
-export function ErlassKopfBlock({ kopf, fussnotenAuf }: { kopf: ErlassKopf; fussnotenAuf: boolean }) {
+export function ErlassKopfBlock({ kopf }: { kopf: ErlassKopf }) {
   const hatPraeambel = !!kopf.praeambel?.length;
   if (!kopf.erlassdatum && !hatPraeambel) return null;
   const zeilenStil = (rolle: string): string => {
@@ -346,8 +359,8 @@ export function ErlassKopfBlock({ kopf, fussnotenAuf }: { kopf: ErlassKopf; fuss
           ))}
         </div>
       )}
-      {fussnotenAuf && kopf.fussnoten && kopf.fussnoten.length > 0 && (
-        <div className="mt-3 border-t border-rule-artikel pt-2 space-y-1">
+      {kopf.fussnoten && kopf.fussnoten.length > 0 && (
+        <div data-fn-apparat className="mt-3 border-t border-rule-artikel pt-2 space-y-1">
           {kopf.fussnoten.map((fn, i) => (
             <p key={i} className="text-xs leading-normal text-ink-500">
               {fn.nr && <span className="num mr-1 text-ink-300">{fn.nr}</span>}
@@ -360,13 +373,105 @@ export function ErlassKopfBlock({ kopf, fussnotenAuf }: { kopf: ErlassKopf; fuss
   );
 }
 
+// W2·5d G2b — EINE Leser-Kopf-Komponente für ALLE Grundarten (Kopf-Zusammen-
+// führung, §3.3): Overline + Titel (Kürzel «— Volltitel», Doppel-Suffix entfernt)
+// + Meta-Zeile (SR · [N Artikel] · Stand · geltende Fassung) + grundart-spezifische
+// Aktionen. Ersetzt die zwei früher duplizierten <header>-Blöcke (Snapshot vs.
+// pdf-embed) durch EINE Quelle (§5) — die Options-Leiste trägt sie einheitlich.
+// Reine Darstellung (§3); Kopf-Label bleibt heutige Herleitung (erlassTyp-Label
+// ist G3a). Der overflow-wrap/hyphens am Titel deckt Langtitel (mobil, §3.3).
+export function ErlassLeserKopf({ erlass, overline, artikelAnzahl, aktionen, hinweis }: {
+  erlass: BrowseErlass;
+  overline: ReactNode;
+  /** Artikelzahl (Snapshot); null = keine Zählung (pdf-embed). */
+  artikelAnzahl: number | null;
+  /** Grundart-spezifische Aktionen (Herunterladen/Reiter/Options bzw. PDF-Download). */
+  aktionen?: ReactNode;
+  hinweis: string;
+}) {
+  const titelOhneSuffix = erlass.titel.replace(/\s*\([^)]*\)\s*$/, '').trim();
+  const titelRedundant = titelOhneSuffix.toLowerCase() === erlass.kuerzel.trim().toLowerCase();
+  return (
+    <header className="space-y-2.5 border-b border-line pb-5">
+      <p className="lc-overline">{overline}</p>
+      <h1 className="text-h2 sm:text-h1 font-display font-semibold text-ink-900 [overflow-wrap:anywhere] hyphens-auto">
+        {erlass.kuerzel}{!titelRedundant && <span className="text-ink-500 font-normal"> — {erlass.titel}</span>}
+      </h1>
+      <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs text-ink-500">
+        {erlass.sr && <span>SR <span className="num">{erlass.sr}</span></span>}
+        {artikelAnzahl != null && (
+          <>
+            {erlass.sr && <span className="text-ink-300" aria-hidden>·</span>}
+            <span><span className="num">{artikelAnzahl}</span> Artikel</span>
+          </>
+        )}
+        {erlass.stand && (erlass.sr || artikelAnzahl != null) && <span className="text-ink-300" aria-hidden>·</span>}
+        {erlass.stand && <span>Stand <span className="num">{formatiereDatum(erlass.stand)}</span></span>}
+        {erlass.quelleUrl && <a href={erlass.quelleUrl} target="_blank" rel="noopener noreferrer" className="lc-chip no-underline hover:text-brass-700">↗ geltende Fassung</a>}
+        {aktionen}
+        <span className="basis-full sm:basis-auto sm:ml-auto text-micro text-ink-500">{hinweis}</span>
+      </div>
+    </header>
+  );
+}
+
+// W2·5d G2b / K12a+K12b — Sticky Section-Kontextkopf: zeigt beim Scrollen die
+// aktuelle Verortung IM Erlass («Titel › Abschnitt › Art. N») aus der vorhandenen
+// Scroll-Spy-Infra (aktivIds/aktArtikel — KEIN neuer IntersectionObserver, keine
+// Scroll-Listener-Kaskade, §15). Trägt «Zitat kopieren» (deterministisch, §7 a–d,
+// aria-live-Bestätigung). Opak (bg-paper — kein Durchscheinen des Normtexts),
+// CLS-neutral (feste Zeilenhöhe; der Inhalt wechselt beim Scrollen, die Box nicht).
+export function SektionKontextKopf({ pfad, artikelLabel, zitat, top }: {
+  /** Aktive Gliederungs-Labels Wurzel→Blatt (aus aktivIds); leer = Erlass-Wurzel. */
+  pfad: string[];
+  /** Aktueller Artikel inkl. Kürzel («Art. 7 OR») oder null (noch keiner sichtbar). */
+  artikelLabel: string | null;
+  /** Voll-Zitat des aktuellen Artikels für die Kopier-Aktion (§7 a–d). */
+  zitat: string;
+  /** Sticky-Offset (Einzelansicht unter dem Inhalts-Kopf; Pane knapp unter Kante). */
+  top: string;
+}) {
+  const [kopiert, setKopiert] = useState(false);
+  const kopiere = () => {
+    void navigator.clipboard?.writeText(zitat).then(() => {
+      setKopiert(true);
+      window.setTimeout(() => setKopiert(false), 1800);
+    });
+  };
+  return (
+    <div data-kontext-kopf
+      className="sticky z-[15] mb-3 flex items-center gap-2 rounded-md border border-line bg-paper px-3 py-1.5 shadow-sm"
+      style={{ top }}>
+      <nav aria-label="Standort im Erlass" className="flex min-w-0 flex-1 items-center gap-1 overflow-hidden text-xs text-ink-500">
+        {pfad.map((p, i) => (
+          <span key={i} className="inline-flex min-w-0 items-center gap-1">
+            {i > 0 && <span aria-hidden className="text-ink-300">›</span>}
+            <span className="truncate">{p}</span>
+          </span>
+        ))}
+        {artikelLabel && (
+          <>
+            {pfad.length > 0 && <span aria-hidden className="text-ink-300">›</span>}
+            <span className="num shrink-0 font-medium text-ink-700">{artikelLabel}</span>
+          </>
+        )}
+      </nav>
+      <button type="button" onClick={kopiere}
+        className="shrink-0 lc-chip hover:text-brass-700"
+        aria-label={`Zitat kopieren: ${zitat}`} title="Deterministisches Zitat dieses Artikels kopieren">
+        {kopiert ? '✓ kopiert' : '⧉ Zitat'}
+      </button>
+      <span aria-live="polite" className="sr-only">{kopiert ? `${zitat} kopiert` : ''}</span>
+    </div>
+  );
+}
+
 // Gliederungs-Überschrift im Fliesstext: klappbar (Fedlex-analog), volle
 // Bezeichnung, nach Ebene abgestuft.
-export function SektionKopf({ s, refCb, offen, onToggle, bereich, bereichEinzel, fussnotenAuf }: {
+export function SektionKopf({ s, refCb, offen, onToggle, bereich, bereichEinzel }: {
   s: Sektion; refCb: (el: HTMLElement | null) => void; offen: boolean; onToggle: () => void; bereich?: string;
   /** Die Sektion umfasst genau EINEN Artikel (Bereich = «Art. N», keine Spanne). */
   bereichEinzel?: boolean;
-  fussnotenAuf?: boolean;
 }) {
   const { pre, rest } = romanFrei(s.label);
   // Vollwertige Abschnitts-Überschrift im Fliesstext: feine Overline mit dem
@@ -397,7 +502,9 @@ export function SektionKopf({ s, refCb, offen, onToggle, bereich, bereichEinzel,
   // (#fn-<artikel>-<nr>) lebt im {auf && …}-Block des Trägerartikels und ist bei
   // eingeklappter Sektion ungemountet → sonst toter Bedienpfad (§13 F4, analog zum
   // artOffen-Gate der Artikel-Marker).
-  const sekFn = offen && fussnotenAuf && s.fussnoten && s.fussnoten.length > 0 ? s.fussnoten : null;
+  // W2·5d G2b: an `offen` gebunden (Popover-Ziel lebt im offenen Block), nicht mehr
+  // am alten fussnotenAuf-Schalter; Prominenz via data-fussnoten-CSS (R9).
+  const sekFn = offen && s.fussnoten && s.fussnoten.length > 0 ? s.fussnoten : null;
   return (
     <div ref={refCb} data-sek={s.id} data-normtext-linie className={`nt-anker ${mt} ${regel}`}>
       {pre && (
