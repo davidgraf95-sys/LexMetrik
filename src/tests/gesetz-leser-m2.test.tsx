@@ -1,8 +1,13 @@
 /**
- * M2 (David 29.6.2026) — Aufhebungs-Zitatzeile «Aufgehoben durch … (AS …)» wird
- * wie jede Fussnote erst auf Klick gezeigt (hinter dem Fussnoten-Schalter
- * `fussnotenAuf`); die Statuszeile «· aufgehoben» (Artikelzustand) bleibt
- * unabhängig davon IMMER sichtbar.
+ * M2 (David 29.6.2026) — Aufhebungs-Zitatzeile «Aufgehoben durch … (AS …)» ist
+ * eine Fussnote; die Statuszeile «· aufgehoben» (Artikelzustand) bleibt IMMER
+ * sichtbar.
+ *
+ * W2·5d G2b (Fussnoten-Unifizierung, 4.7.2026): der alte `fussnotenAuf`-React-
+ * Schalter entfällt — Fussnoten (inkl. Aufhebungsnotiz) liegen jetzt IMMER im
+ * DOM (R9/§8: Ctrl+F/Print/Screenreader), die Prominenz steuert allein der
+ * data-fussnoten-CSS-Toggle. Darum: die Aufhebungsnotiz wird nun IMMER gerendert
+ * (im `data-fn-apparat`-Block, den «AUS» per CSS dämpft), nicht mehr React-gated.
  */
 import { describe, it, expect } from 'vitest';
 import { renderToString } from 'react-dom/server';
@@ -29,23 +34,22 @@ const aufhebung: Fussnote[] = [
   { nr: '1', text: 'Aufgehoben durch Ziff. I des BG vom 1. Jan. 2013 (AS 2012 1234).', links: [] },
 ];
 
-const render = (fussnotenAuf: boolean) =>
+const render = () =>
   renderToString(
-    <ArtikelLeser e={aufgehoben} erlass={erlass} basisPfad="/gesetze/ZGB" fussnoten={aufhebung} fussnotenAuf={fussnotenAuf} />,
+    <ArtikelLeser e={aufgehoben} erlass={erlass} basisPfad="/gesetze/ZGB" fussnoten={aufhebung} />,
   );
 
-describe('M2 — Aufhebungs-Zitatzeile click-to-reveal, Status bleibt', () => {
-  it('Status «· aufgehoben» ist IMMER sichtbar (auch ohne Fussnoten-Schalter)', () => {
-    expect(render(false)).toContain('· aufgehoben');
-    expect(render(true)).toContain('· aufgehoben');
+describe('M2 — Aufhebungs-Zitatzeile immer im DOM (G2b), Status bleibt', () => {
+  it('Status «· aufgehoben» ist IMMER sichtbar', () => {
+    expect(render()).toContain('· aufgehoben');
   });
 
-  it('«Aufgehoben durch …» ist OHNE Fussnoten-Schalter verborgen', () => {
-    expect(render(false)).not.toContain('Aufgehoben durch');
+  it('«Aufgehoben durch …» liegt IMMER im DOM (R9 — Ctrl+F/Print/Screenreader)', () => {
+    expect(render()).toContain('Aufgehoben durch Ziff. I des BG');
   });
 
-  it('«Aufgehoben durch …» erscheint MIT Fussnoten-Schalter', () => {
-    expect(render(true)).toContain('Aufgehoben durch Ziff. I des BG');
+  it('Aufhebungsnotiz sitzt im dämpfbaren data-fn-apparat-Block (CSS-Toggle statt Unmount)', () => {
+    expect(render()).toContain('data-fn-apparat');
   });
 });
 
@@ -58,7 +62,7 @@ const aktiv: NormSnapshot = {
 
 describe('M9 — aufgehobene und aktive Artikel fluchten bündig (gleiche w-4-Leitspalte)', () => {
   const renderArt = (e: NormSnapshot) =>
-    renderToString(<ArtikelLeser e={e} erlass={erlass} basisPfad="/gesetze/ZGB" fussnotenAuf={false} />);
+    renderToString(<ArtikelLeser e={e} erlass={erlass} basisPfad="/gesetze/ZGB" />);
   it('aktiver Artikel: Chevron-Knopf trägt die feste w-4-Leitspalte', () => {
     const out = renderArt(aktiv);
     expect(out).toMatch(/class="[^"]*\binline-flex\b[^"]*\bw-4\b[^"]*justify-center/);
