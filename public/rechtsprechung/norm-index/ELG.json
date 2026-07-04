@@ -1,6 +1,7 @@
 {
   "erzeugt": "2026-07-02",
   "erlass": "ELG",
+  "gewichtQuelle": "e4",
   "proArtikel": {
     "10": [
       {
@@ -43,7 +44,7 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 0
+        "gewicht": 2
       }
     ],
     "12": [
@@ -89,7 +90,7 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 0
+        "gewicht": 1
       }
     ],
     "16a": [
@@ -101,7 +102,7 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 0
+        "gewicht": 1
       }
     ]
   }

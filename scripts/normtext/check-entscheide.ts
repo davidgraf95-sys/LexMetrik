@@ -8,9 +8,10 @@
 import { readFileSync, existsSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { sha256EntscheidBloecke } from './sha-entscheide';
+import { vergleicheLeitfaelle } from './entscheide-schreiben';
 import type { EntscheidSnapshotDatei } from '../../src/lib/rechtsprechung/typen';
 import type { EntscheidManifest } from '../../src/lib/rechtsprechung/register';
-import type { NormEntscheidIndex, LeitfallShard } from '../../src/lib/rechtsprechung/norm-index';
+import type { LeitfallRef, NormEntscheidIndex, LeitfallShard } from '../../src/lib/rechtsprechung/norm-index';
 
 const ROOT = process.cwd();
 const PUB = join(ROOT, 'public', 'rechtsprechung');
@@ -159,9 +160,14 @@ function main() {
     const niMb = statSync(niPfad).size / (1024 * 1024);
     if (niMb > NORM_INDEX_BUDGET_MB) fehler.push(`norm-index.json-Budget überschritten: ${niMb.toFixed(2)} MB > ${NORM_INDEX_BUDGET_MB} MB (Artikel-Fan-out?)`);
 
-    // Schaufenster-Shards (Weiche B): die Vereinigung aller Shards MUSS die Artikel-
-    // Ebene des Gesamt-JSON exakt (zeichengleich) reproduzieren — sonst zeigt der
-    // ArtikelLeser andere Leitfälle als rechtsprechungFuerArtikel() (Datenspaltung, §5).
+    // Schaufenster-Shards (Weiche B): jeder Shard MUSS die Artikel-Ebene des Gesamt-JSON
+    // reproduzieren — MEMBERSHIP (welche Leitfälle je Artikel) zeichengleich, damit der
+    // ArtikelLeser dieselben Chips zeigt wie rechtsprechungFuerArtikel() (keine Daten-
+    // spaltung, §5). Das `gewicht` darf V1b-provenienziert abweichen (§3): ein 'alt'-Shard
+    // ist byte-gleich zur Alt-In-degree; ein 'e4'-Shard trägt die Massen-Rangliste, dann
+    // gilt gewicht ≥ Alt (monoton, grösserer Korpus) + Neusortierung nach vergleicheLeitfaelle.
+    // masse.db-frei (committet-vs-committet) — der volle Vintage/Recall-Beweis ist das
+    // lokale Oracle-Tor `datenhaltung:rangliste-oracle`.
     const shardDir = join(PUB, 'norm-index');
     if (existsSync(shardDir)) {
       const proArtikelSoll = idx.proNormArtikel ?? {};
@@ -170,19 +176,34 @@ function main() {
       const erlasseIst = new Set(shardDateien.map((f) => f.slice(0, -5)));
       for (const e of erlasseSoll) if (!erlasseIst.has(e)) fehler.push(`Shard fehlt für Erlass '${e}' (hat Artikel-Treffer im norm-index)`);
       for (const e of erlasseIst) if (!erlasseSoll.has(e)) fehler.push(`Shard '${e}.json' ohne Artikel-Treffer im norm-index (verwaist)`);
-      const vereinigung: Record<string, unknown> = {};
+      // Ein Leitfall ist bis auf `gewicht` (V1b) identisch — alle übrigen Felder byte-gleich.
+      const ohneGewicht = (r: LeitfallRef): string => JSON.stringify({ ...r, gewicht: 0 });
+      const gesehen = new Set<string>();
       for (const f of shardDateien) {
         const s = JSON.parse(readFileSync(join(shardDir, f), 'utf8')) as LeitfallShard;
         const erlass = f.slice(0, -5);
         if (s.erlass !== erlass) fehler.push(`Shard '${f}': erlass-Feld '${s.erlass}' ≠ Dateiname '${erlass}'`);
-        for (const [tok, refs] of Object.entries(s.proArtikel)) vereinigung[`${erlass}/${tok}`] = refs;
+        if (s.gewichtQuelle !== 'alt' && s.gewichtQuelle !== 'e4') fehler.push(`Shard '${f}': gewichtQuelle '${String(s.gewichtQuelle)}' ∉ {alt,e4}`);
+        for (const [tok, refs] of Object.entries(s.proArtikel)) {
+          const ak = `${erlass}/${tok}`;
+          gesehen.add(ak);
+          const soll = proArtikelSoll[ak];
+          if (!soll) { fehler.push(`Shard '${f}': Artikel '${tok}' fehlt in proNormArtikel (verwaiste Membership)`); continue; }
+          // Membership + Nicht-gewicht-Felder zeichengleich (Reihenfolge darf V1b-sortiert abweichen).
+          const sollByKey = new Map(soll.map((r) => [r.key, r]));
+          if (refs.length !== soll.length) fehler.push(`Shard '${f}' [${tok}]: ${refs.length} Leitfälle ≠ ${soll.length} im norm-index (Membership-Drift)`);
+          for (const r of refs) {
+            const sr = sollByKey.get(r.key);
+            if (!sr) { fehler.push(`Shard '${f}' [${tok}]: Leitfall '${r.key}' nicht im norm-index (Membership-Drift)`); continue; }
+            if (ohneGewicht(r) !== ohneGewicht(sr)) fehler.push(`Shard '${f}' [${tok}] ${r.key}: Nicht-gewicht-Feld weicht vom norm-index ab`);
+            if (s.gewichtQuelle === 'alt' && r.gewicht !== sr.gewicht) fehler.push(`Shard '${f}' [${tok}] ${r.key}: 'alt' aber gewicht ${r.gewicht} ≠ ${sr.gewicht}`);
+            if (s.gewichtQuelle === 'e4' && r.gewicht < sr.gewicht) fehler.push(`Shard '${f}' [${tok}] ${r.key}: 'e4' aber gewicht ${r.gewicht} < Alt ${sr.gewicht} (nicht monoton)`);
+          }
+          // Sortierung: absteigend nach der EINEN Ordnung (gewicht ↓, Leitentscheid, Datum ↓, key).
+          for (let i = 1; i < refs.length; i++) if (vergleicheLeitfaelle(refs[i - 1], refs[i]) > 0) fehler.push(`Shard '${f}' [${tok}]: Leitfälle nicht nach vergleicheLeitfaelle sortiert (Position ${i})`);
+        }
       }
-      const kanon = (o: Record<string, unknown>): string => {
-        const sortiert: Record<string, unknown> = {};
-        for (const k of Object.keys(o).sort()) sortiert[k] = o[k];
-        return JSON.stringify(sortiert);
-      };
-      if (kanon(proArtikelSoll) !== kanon(vereinigung)) fehler.push(`Shard-Vereinigung ≠ proNormArtikel (Weiche-B-Projektion driftet vom Gesamt-JSON ab)`);
+      for (const ak of Object.keys(proArtikelSoll)) if (!gesehen.has(ak)) fehler.push(`proNormArtikel '${ak}' fehlt in den Shards (Projektion unvollständig)`);
     }
   }
 

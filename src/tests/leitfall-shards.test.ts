@@ -87,9 +87,12 @@ describe('schreibeKorpus — Shards als committete Dateien', () => {
 describe('leitfaelleFuerArtikel — erlass-lokale Lade-Funktion (Promise-Cache)', () => {
   let fetchMock: ReturnType<typeof vi.fn>;
   const shard: LeitfallShard = {
-    erzeugt: '2026-07-02', erlass: 'OR',
+    erzeugt: '2026-07-02', erlass: 'OR', gewichtQuelle: 'alt',
     proArtikel: {
       '41': [{ key: 'bge_150_III_3', zitierung: 'BGE 150 III 3', regesteKurz: null, datum: '2026-01-01', leitcharakter: 'leitentscheid', gericht: 'bge', kanton: 'CH', gewicht: 1 }],
+      // Buchstaben-Artikel: das Shard-Token ist whitespace-/unterstrich-frei ('727a'),
+      // der Reader reicht aber die eId-Form '727_a' durch (Regression W2·7-VZUI/V1b).
+      '727a': [{ key: 'bge_140_III_206', zitierung: 'BGE 140 III 206', regesteKurz: null, datum: '2014-01-01', leitcharakter: 'leitentscheid', gericht: 'bge', kanton: 'CH', gewicht: 2 }],
     },
   };
 
@@ -108,9 +111,22 @@ describe('leitfaelleFuerArtikel — erlass-lokale Lade-Funktion (Promise-Cache)'
     expect(fetchMock).toHaveBeenCalledWith('/rechtsprechung/norm-index/OR.json');
   });
 
-  it('normalisiert das Artikel-Token wie der Build (whitespace-frei, klein)', async () => {
-    // normArtikelToken: nur lower + whitespace-frei (identisch zu rechtsprechungFuerArtikel).
+  it('normalisiert das Artikel-Token wie der Build (whitespace- UND unterstrich-frei, klein)', async () => {
+    // normArtikelToken: lower + whitespace-/unterstrich-frei (identisch zu rechtsprechungFuerArtikel).
     expect(await leitfaelleFuerArtikel('OR', ' 41 ')).toEqual(shard.proArtikel['41']);
+  });
+
+  it('Buchstaben-Artikel: eId-Form 727_a matcht das Shard-Token 727a (V1b-Bugfix)', async () => {
+    // Der Reader reicht `e.artikel` = '727_a' (Fedlex-eId-Form) durch; das Shard-Token
+    // ist '727a'. Ohne den Unterstrich-Strip fiele die Leitfall-Zeile für JEDEN
+    // Buchstaben-Artikel aus (z. B. OR Art. 727a). Beide gebräuchlichen Formen matchen:
+    expect(await leitfaelleFuerArtikel('OR', '727_a')).toEqual(shard.proArtikel['727a']);
+    expect(await leitfaelleFuerArtikel('OR', '727a')).toEqual(shard.proArtikel['727a']);
+  });
+
+  it('727 matcht NICHT fälschlich 727a (Gegenrichtung — kein Über-Match)', async () => {
+    // Der Zahl-Artikel 727 darf den Buchstaben-Artikel 727a nicht einsammeln.
+    expect(await leitfaelleFuerArtikel('OR', '727')).toEqual([]);
   });
 
   it('EIN fetch je Erlass — alle Artikel desselben Erlasses teilen den Promise', async () => {

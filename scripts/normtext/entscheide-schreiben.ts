@@ -39,6 +39,20 @@ function refVon(snap: EntscheidSnapshot): EntscheidRef {
 const LEITFAELLE_PRO_ARTIKEL = 8;
 
 /**
+ * Totale Ordnung der Leitfälle je Artikel (§2-deterministisch): gewicht ↓, dann
+ * Leitentscheid vor Routine, dann Datum ↓, dann key (totaler Tiebreaker) — build-
+ * pfad-unabhängig stabil. EINE Quelle (§5): sowohl baueArtikelIndex als auch die
+ * V1b-Shard-Regeneration (backe-rangliste-shards.ts) sortieren damit, sonst driftete
+ * die E4-Neusortierung von der Ur-Ordnung ab.
+ */
+export function vergleicheLeitfaelle(a: LeitfallRef, b: LeitfallRef): number {
+  return b.gewicht - a.gewicht
+    || (a.leitcharakter === 'leitentscheid' ? 0 : 1) - (b.leitcharakter === 'leitentscheid' ? 0 : 1)
+    || (a.datum < b.datum ? 1 : a.datum > b.datum ? -1 : 0)
+    || (a.key < b.key ? -1 : a.key > b.key ? 1 : 0);
+}
+
+/**
  * Kanonisches Zitat-Token für den Zitier-Abgleich (Entscheid ↔ Entscheid), §2.
  * Vereinheitlicht BEIDE Seiten (Selbst-Identität eines Snapshots UND ein rohes
  * `zitierteEntscheide`-Element) auf dieselbe Normalform, damit «BGE 150 I 17»,
@@ -160,11 +174,7 @@ export function baueArtikelIndex(auswahl: EntscheidSnapshot[]): Record<string, L
       }
     }
     const refs: LeitfallRef[] = keys.map((k) => ({ ...refByKey.get(k)!, gewicht: gewicht.get(k) ?? 0 }));
-    refs.sort((a, b) =>
-      b.gewicht - a.gewicht
-      || (a.leitcharakter === 'leitentscheid' ? 0 : 1) - (b.leitcharakter === 'leitentscheid' ? 0 : 1)
-      || (a.datum < b.datum ? 1 : a.datum > b.datum ? -1 : 0)
-      || (a.key < b.key ? -1 : a.key > b.key ? 1 : 0));
+    refs.sort(vergleicheLeitfaelle);
     out[artikel] = refs.slice(0, LEITFAELLE_PRO_ARTIKEL);
   }
   return out;
@@ -191,7 +201,10 @@ export function baueShards(proNormArtikel: Record<string, LeitfallRef[]>, datum:
     const roh = proErlass.get(erlass)!;
     const proArtikel: Record<string, LeitfallRef[]> = {};
     for (const t of Object.keys(roh).sort()) proArtikel[t] = roh[t];   // stabile Token-Folge
-    out.set(erlass, { erzeugt: datum, erlass, proArtikel });
+    // gewichtQuelle:'alt' = un-gebackene, kuratierte In-degree. Die V1b-Regeneration
+    // (backe-rangliste-shards.ts, braucht masse.db) hebt qualifizierende Erlasse auf
+    // 'e4' — nach einem norm-index-Vollbau daher erneut fahren (wie V1c-Revisionen).
+    out.set(erlass, { erzeugt: datum, erlass, gewichtQuelle: 'alt', proArtikel });
   }
   return out;
 }
