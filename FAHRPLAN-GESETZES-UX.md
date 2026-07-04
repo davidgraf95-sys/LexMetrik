@@ -488,7 +488,33 @@ export interface ErlassRegistereintrag {
 | PR | Inhalt | Dateien (Kollision) | Aufwand | Golden/Gegenprüfung |
 |---|---|---|---|---|
 | **G0** | Klassifikation → Register-Felder `grundart`/`erlassTyp`/`bestimmungsEtikett`; Seed-Skript; Tor `check:grundart`. | `register.ts`, `scripts/normtext/seed-grundart.mjs`, `normtext-register.test.ts` — **keine** parts.tsx | ½–1 Session | golden byte-gleich (Daten, kein Render); `gegenpruefung: n/a` |
-| **G1** | Linien-Sprache (3 Rollen-Tokens), `max-w-reading`-Fix, Einzug-Skala, Typo/hyphens-Fix, Randtitel-Einzug. Reglement-Falt ins DESIGN-REGLEMENT-NORMTEXT.md. Tore R1 (marker-scoped)/R2/R4/R5. | `index.css`, `tailwind.config.js`, **`parts.tsx`**, **`inhalt.tsx`**, `ArtikelBody.tsx`, `helpers.tsx` | 1–1½ Session | **Golden ändert** (Klassen) → neu abnehmen; `gegenpruefung: n/a — reine Darstellung §3`; Visual-Review Desktop+Mobil |
+| **G1** ✅ | Linien-Sprache (3 Rollen-Tokens), `max-w-reading`-Fix, Einzug-Skala, Typo/hyphens-Fix, Randtitel-Einzug. Reglement-Falt ins DESIGN-REGLEMENT-NORMTEXT.md. Tore R1 (marker-scoped)/R2/R4/R5. | `index.css`, `tailwind.config.js`, **`parts.tsx`**, **`inhalt.tsx`**, `ArtikelBody.tsx`, `helpers.tsx` | 1–1½ Session | **Golden ändert** (Klassen) → neu abnehmen; `gegenpruefung: n/a — reine Darstellung §3`; Visual-Review Desktop+Mobil |
+
+> **Ausführungsvermerk G1 (4.7.2026, Opus, PR feat/gesetzes-ux-g1):** Gebaut wie
+> spezifiziert. **Korrektur zur Golden-Erwartung:** der Reader liegt NICHT in der
+> Engine-Golden-Matrix (`scripts/golden-outputs.ts` rendert keine
+> Normtext-Komponenten) → `golden:vergleich` blieb **IDENTISCH** (byte-gleich,
+> keine Re-Segnung nötig, stärker als «neu abnehmen»). Die Wortlaut-Invarianz
+> wurde stattdessen **empirisch** belegt: gerenderte Prosa (p/li/Sektion/Randtitel)
+> auf ZGB/OR/VMWG vorher (origin/main) vs. nachher **byte-gleich** (1 041 006 /
+> 1 618 181 / 34 543 Zeichen identisch) — nur Klassen/Attribute geändert.
+> **Entscheidungen im Ermessensspielraum:** (a) Struktur-Trenner nur ebene ≤ 1;
+> die frühere feine ebene-2-Linie (`border-line/50`) **entfernt** (numerierte
+> Regel 2 «innere Sektionen keine Horizontal-Linie» schlägt die Tabellen-
+> Annotation). (b) Guide nur bei tiefe === 1 (max 1), Einzug trägt die Tiefe;
+> Umschalter steuert Guide+Einzug gemeinsam (aus = flach, wie bisher). (c)
+> «Kopf-voll»-Header-Borders + Weitere-Erlasse-Nav bleiben Chrome `border-line`
+> (Rahmen, nicht Hierarchie). **Offengelegte §7/§8-Abweichung R5:** «≥ 40 ch @ 390»
+> ist mit der amtstreuen Absatznummer-Rinne (`pl-9`) + 18px-Serife am 390px-
+> Viewport physikalisch nicht erreichbar (nach Shell-Steg px-5 + pl-9 bleiben
+> ~314px Text → ~32–34 ch; 40 ch bräuchten ~392px, breiter als der Viewport, oder
+> Schrift < 16px / Schrumpfen der Absatznummer-Rinne — alles ausserhalb G1). Der
+> gemessene Ist ist ~32–34 ch (2× der ~16-ch-Basis, Barcode 5→1 Linien behoben);
+> R5-Mobil-Floor daher auf ≥ 30 ch gesetzt + strikt kein H-Overflow @ 390. Alle
+> Tore R1/R2/R4/R5 positiv UND negativ (Rot-Auslösung) bewiesen; voller `npm run
+> gate` grün, `npm run test:e2e` 123/123. **Bewusst NICHT** (§7-Scope): keine
+> Options-Leiste (G2a), kein Kopf-Umbau (G2b), keine Grundart-Verzweigung (G3a),
+> keine Anhang-/Tarif-Extraktion (G3b).
 | **G2a** | Options-Leiste (Linien/Fussnoten/Verweise) als reine `data-*`-Toggles, localStorage + Pre-Paint; R6/R9. | **`inhalt.tsx`**, `index.html`-Head | 1 Session | **golden byte-gleich** (R6, Toggles = CSS); Reader-Smoke (Ctrl+F/Anker/Print/Fussnote) |
 | **G2b** | Kopf-Zusammenführung (2 Blöcke → 1), Fussnoten-Render-Fix (nach Selektor-Prüfung), Sticky-Kopf opak, Sticky-Section-Kontextkopf, «Zitat kopieren». | **`inhalt.tsx`**, **`parts.tsx`**, evtl. `KontextPanel` | 1 Session | **Golden ändert** → neu abnehmen; Reader-Smoke |
 | **G3a** | Per-Grundart-**Darstellung**: §-Label (KANTON, Anker bleibt `#art-`/R8), Präambel/Protokolle (⑤), PDF-Rahmen (⑦), Live-Verweiskarte (⑧), Kurzerlass-Lesespalte (④). | **`parts.tsx`**, **`inhalt.tsx`**, `register.ts` | 1½ Session | **Golden ändert** → neu; `gegenpruefung: n/a — reine Darstellung` |
