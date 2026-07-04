@@ -226,9 +226,18 @@ Verbindliche Bau-Regeln:
    sichtbarer Fokus über die globale `:focus-visible`-Outline.
 
 **Gegated:** e2e `leser-optionen` (R6/R9 positiv+negativ + Persistenz/Reload) +
-`golden:vergleich` byte-gleich. **G2b-Grenze (bewusst offen):** grundart-abhängiger
-Linien-Default und die Unifizierung mit dem bestehenden Fussnoten-Apparat-Schalter
-laufen mit der Kopf-Zusammenführung (G2b), nicht hier.
+`golden:vergleich` byte-gleich.
+
+**G2b-Ergänzung (4.7.2026) — Fussnoten-Unifizierung umgesetzt:** Es gibt jetzt
+**EINE** Fussnoten-Bedienung: der `data-fussnoten`-Options-Toggle. Der frühere
+`fussnotenAuf`-React-Schalter (Such-Leiste) ist **entfernt**. Marker UND Apparat
+(Artikelfuss-/Kopf-/Sektions-Fussnoten, Aufhebungsnotiz) liegen **IMMER im DOM**
+(nur an `artOffen` gebunden) — «AUS» dämpft rein per CSS (`[data-fn-apparat]`),
+versteckt nie (R9). **Default AN**, weil R9 «immer im DOM» (Ctrl+F/Print/Screen-
+reader, §15-Funktions-Treue) mit «Default aus = nicht gerendert» unvereinbar ist
+und §3.1 die amtliche Substanz auf sichtbar setzt — die frühere Regel «Apparat per
+Default aus» ist damit für den options-getriebenen Reader abgelöst (siehe unten).
+Der grundart-abhängige **Linien**-Default bleibt für G3a offen.
 
 ## §5 · Verzahnung (der Burggraben, Fedlex-Übertreffer)
 
@@ -277,7 +286,10 @@ Bild), bleiben Bild — kein erfundenes OCR/LaTeX, ehrlich dokumentiert.
 
 Diese im Audit geprüften Punkte sind **kein** Defizit und werden **nicht**
 gebaut: Titel-`<br>`-Plättung, Absatz-`<p>`-in-`<table>`-Verschlucken, «Fussnoten-
-Apparat per Default aus» (ist korrekt), volle `rowspan`-Logik (rowspan/verschachtelte
+Apparat per Default aus» (galt bis W2·5d — **abgelöst durch die G2b-Fussnoten-
+Unifizierung §4c: Marker/Apparat liegen jetzt immer im DOM, Default AN, «AUS»
+dämpft nur; R9-Funktions-Treue schlägt die alte Default-aus-Regel**), volle
+`rowspan`-Logik (rowspan/verschachtelte
 Tabelle → ehrlicher Text-Fallback), «N.—»-Spacing,
 `art-`-vs-`art_`-Anker, «Deeplink vom Renderer verworfen» (wird genutzt). Details:
 `AUDIT-FEDLEX-DARSTELLUNG-2026-06-28.md`, Abschnitt «Widerlegt».

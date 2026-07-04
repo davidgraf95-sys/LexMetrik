@@ -2,6 +2,7 @@ import { Fragment, type ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import type { Sektion, Fussnote } from '../../lib/normtext/browse';
 import type { NormSnapshot } from '../../lib/normtext/typen';
+import type { BrowseErlass } from '../../lib/normtext/browse-typen';
 import { ERLASS_REGISTER } from '../../lib/normtext/register';
 
 // M11 (§5 Verzahnung): Reverse-Resolver SR-Nummer → interner Erlass, ABGELEITET
@@ -17,6 +18,23 @@ const SR_INTERN: ReadonlyMap<string, { key: string; ebene: 'bund' | 'kanton' }> 
 export function formatiereDatum(iso: string): string {
   const m = iso.match(/^(\d{4})-(\d{2})-(\d{2})$/);
   return m ? `${m[3]}.${m[2]}.${m[1]}` : iso;
+}
+
+// «Zitat kopieren» (W2·5d G2b, FAHRPLAN §3.3/K12b): EIN deterministisches Zitat-
+// Format aus der vorliegenden Provenienz (§7 a–d): Fundstelle (Art./§ + Kürzel) +
+// amtliche SR-Nummer (wo vorhanden) + Stand. Rein deterministisch (§2), keine
+// Heuristik — `artikelLabel` trägt bereits «Art. 7» bzw. «§ 7» (labelMitBereich),
+// die Abs./lit. bleibt bewusst weg (am Kopf/Artikel nicht eindeutig bestimmbar,
+// §8 «nichts Erfundenes»). Beispiel: «Art. 7 OR, SR 220 (Stand 01.01.2025)».
+export function baueZitat(
+  erlass: Pick<BrowseErlass, 'kuerzel' | 'sr' | 'stand'>,
+  artikelLabel: string,
+): string {
+  const teile = [`${artikelLabel} ${erlass.kuerzel}`.trim()];
+  if (erlass.sr) teile.push(`SR ${erlass.sr}`);
+  let s = teile.join(', ');
+  if (erlass.stand) s += ` (Stand ${formatiereDatum(erlass.stand)})`;
+  return s;
 }
 
 export function passtAufSuche(e: NormSnapshot, s: string): boolean {

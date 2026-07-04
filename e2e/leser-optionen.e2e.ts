@@ -14,7 +14,16 @@ import { test, expect, type Page } from '@playwright/test';
 // 1686-Artikel-OR: dessen Voll-Re-Render (Apparat-Toggle) + Ganzseiten-Style-
 // Recalc starvten den gedrosselten CI-Runner ins 30s-Test-Timeout (CI-Befund
 // 4.7.2026, Run 28711156193 — lokal auch mit 20×-CPU-Throttle nicht
-// reproduzierbar). Der Tiefen-Fall ZGB bleibt beim Linien-Toggle (R4-Referenz).
+// reproduzierbar).
+//
+// W2·5d G2b (Flake-Härtung): der Linien-Toggle lief bisher auf dem grossen ZGB
+// (~1277 Art., #art-684 tief) und war am gedrosselten Runner nahe dem Timeout.
+// Er zieht auf den kleinen, ABER geschachtelten Erlass BV (~232 Art., #art-8 mit
+// Guide über tiefe===1) um — @6×-CPU-Throttle-Probe: BV ready≈1,0 s / toggle≈1,3 s
+// vs. ZGB ready≈2,5 s / toggle≈4,1 s (≈3× schneller), Assertions unverändert
+// scharf (Guide sichtbar → transparent, Element bleibt, Einzug kollabiert). Die
+// R4-TIEFEN-Referenz (≤1 Guide-Stapel, ZGB Art. 684) bleibt CI-fest in
+// `leser-linien-kanon.e2e.ts`.
 
 async function warteReader(page: Page, url: string, artId: string): Promise<void> {
   await page.goto(url);
@@ -58,10 +67,10 @@ test('Options-Leiste: drei role=switch, Grundzustand aria-checked=true + data-*=
 });
 
 test('Linien-Toggle: AN sichtbar → AUS transparent (Guide bleibt im DOM), persistiert über Reload', async ({ page }) => {
-  await warteReader(page, '/gesetze/bund/ZGB#art-684', 'art-684');
+  await warteReader(page, '/gesetze/bund/BV#art-8', 'art-8');
 
   // POSITIV: Grundzustand zeigt die Guide-Linie (nicht transparent).
-  const an = await guide(page, 'art-684');
+  const an = await guide(page, 'art-8');
   expect(an, 'Guide-Kante im Grundzustand vorhanden').not.toBeNull();
   expect(an!.color).not.toBe('rgba(0, 0, 0, 0)');
 
@@ -69,7 +78,7 @@ test('Linien-Toggle: AN sichtbar → AUS transparent (Guide bleibt im DOM), pers
   // (border-Breite > 0) BLEIBT — kein Textknoten bewegt, kein display-Wechsel.
   await page.getByRole('switch', { name: 'Linien' }).click();
   await expect(page.locator('html')).toHaveAttribute('data-linien', 'aus');
-  const aus = await guide(page, 'art-684');
+  const aus = await guide(page, 'art-8');
   expect(aus, 'Guide-Container bleibt strukturell erhalten').not.toBeNull();
   expect(parseFloat(aus!.width)).toBeGreaterThan(0);
   expect(aus!.color).toBe('rgba(0, 0, 0, 0)'); // transparent
@@ -80,17 +89,18 @@ test('Linien-Toggle: AN sichtbar → AUS transparent (Guide bleibt im DOM), pers
   expect(ls).toContain('"linien":"aus"');
   await page.reload();
   await expect(page.locator('html')).toHaveAttribute('data-linien', 'aus');
-  await expect(page.locator('#art-684')).toBeVisible();
-  const nachReload = await guide(page, 'art-684');
+  await expect(page.locator('#art-8')).toBeVisible();
+  const nachReload = await guide(page, 'art-8');
   expect(nachReload!.color).toBe('rgba(0, 0, 0, 0)'); // kein Flash: bleibt aus
 });
 
-test('Fussnoten-Toggle: AUS DÄMPFT die Marker, versteckt sie NIE (R9 — Ctrl+F/Screenreader)', async ({ page }) => {
+test('Fussnoten-Toggle: Marker liegen IMMER im DOM (G2b), AUS DÄMPFT sie NIE display:none (R9)', async ({ page }) => {
   await warteReader(page, '/gesetze/bund/BGBM', 'art-1');
 
-  // Fussnoten-Apparat einschalten, damit die amtlichen Marker rendern (Apparat
-  // ist Fedlex-treu default aus — DESIGN-REGLEMENT-NORMTEXT §4).
-  await page.locator('button[title="Fussnoten ein-/ausblenden"]').first().click();
+  // W2·5d G2b (Fussnoten-Unifizierung): der alte «Fussnoten ein-/ausblenden»-
+  // Apparat-Schalter ist entfallen — die Marker rendern jetzt IMMER (amtliche
+  // Substanz bleibt im DOM, Ctrl+F/Print/Screenreader). EINE Bedienung = der
+  // Options-Toggle unten; er DÄMPFT nur (R9), rendert/entfernt nichts.
   const marker = page.locator('.lc-leser button[aria-label^="Fussnote"]').first();
   await expect(marker).toBeVisible({ timeout: 15000 });
   await marker.scrollIntoViewIfNeeded();

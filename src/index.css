@@ -241,6 +241,14 @@
     opacity: 0.6;
   }
 
+  /* Fussnoten AUS: auch die Apparat-BLÖCKE (Fussnoten-Texte am Artikelfuss,
+     Kopf-Fussnoten, Aufhebungsnotiz) werden gedämpft — G2b: sie liegen jetzt
+     IMMER im DOM (Marker + Apparat = EINE Bedienung), «AUS» reduziert nur die
+     Prominenz, versteckt nie (R9/§8 — Ctrl+F/Print/Screenreader unberührt). */
+  html[data-fussnoten="aus"] .lc-leser [data-fn-apparat] {
+    opacity: 0.55;
+  }
+
   /* Verweise AUS: die Unterstreichung der Verweis-Links (dotted, heute nur bei
      :hover) wird unterdrückt — Farbe und Anker/Funktion bleiben (§3.1: «schaltet
      nur die Unterstreichung»). Ctrl+F/Klick unberührt. */

@@ -556,7 +556,64 @@ export interface ErlassRegistereintrag {
 > Mobil 390: Leiste konsistent (lc-chip), kein H-Overflow @390, Linien/Fussnoten/
 > Verweise sichtbar schaltend. **Bewusst NICHT** (G2a-Scope): kein Kopf-Umbau, kein
 > Marker-Render-Fix, keine Grundart-Verzweigung (alles G2b/G3a).
-| **G2b** | Kopf-Zusammenführung (2 Blöcke → 1), Fussnoten-Render-Fix (nach Selektor-Prüfung), Sticky-Kopf opak, Sticky-Section-Kontextkopf, «Zitat kopieren». | **`inhalt.tsx`**, **`parts.tsx`**, evtl. `KontextPanel` | 1 Session | **Golden ändert** → neu abnehmen; Reader-Smoke |
+| **G2b** ✅ | Kopf-Zusammenführung (2 Blöcke → 1), Fussnoten-Render-Fix (nach Selektor-Prüfung), Sticky-Kopf opak, Sticky-Section-Kontextkopf, «Zitat kopieren». | **`inhalt.tsx`**, **`parts.tsx`**, evtl. `KontextPanel` | 1 Session | **Golden ändert** → neu abnehmen; Reader-Smoke |
+
+> **Ausführungsvermerk G2b (4.7.2026, Opus, Worktree `feat/gesetzes-ux-g2b`):**
+> Gebaut nach §3.3. **Kopf-Zusammenführung:** die zwei duplizierten `<header>`-Blöcke
+> (Snapshot `inhalt.tsx` + pdf-embed) sind zu EINER Komponente `ErlassLeserKopf`
+> (`parts.tsx`) zusammengeführt — Overline + Titel (Doppel-Suffix-Entschärfung + neu
+> `overflow-wrap/hyphens` am Titel für Langtitel/mobil) + Meta-Zeile (SR · [N Artikel]
+> · Stand · geltende Fassung) + grundart-spezifische Aktionen als `aktionen`-Slot. Der
+> Snapshot-Kopf trägt die Options-Leiste; der pdf-embed-Kopf NICHT (Linien/Fussnoten/
+> Verweise wären am eingebetteten PDF tote Steuerelemente, §13 F4). **Kopf-Label bleibt
+> heutige Herleitung** — der `erlassTyp`-Label-Wechsel (`Staatsvertrag`/`Kanton XX ·
+> Gesetz`) ist G3a und `erlassTyp` liegt nicht auf der Laufzeit-`BrowseErlass`.
+> **Fussnoten-Befund (K4, empirisch bestätigt):** die Marker existieren als
+> `<button class="num align-super" aria-label="Fussnote N">` (`ArtikelBody.tsx` FnRef) —
+> KEIN «sup-count=0»-Bug. Der reale Befund war die **Doppel-Bedienung**: alter
+> `fussnotenAuf`-React-Schalter (Such-Leiste, Default AUS, gatete das *Rendern*) neben
+> dem G2a-`data-fussnoten`-CSS-Toggle (Default AN, *dämpfte* nur). **Fussnoten-
+> Unifizierungs-Entscheid (der bewusst offen gelassene G2a-Punkt):** aufgelöst zu
+> **EINER** Bedienung. Marker + Apparat (Artikelfuss-Fussnoten, Kopf-Fussnoten,
+> Sektions-Fussnoten, Aufhebungsnotiz) rendern jetzt **IMMER im DOM** (nur an `artOffen`
+> gebunden), der alte `fussnotenAuf`-State + sein Such-Leisten-Knopf sind **entfernt**;
+> die Prominenz steuert allein der `data-fussnoten`-CSS-Toggle der Options-Leiste
+> (`[data-fn-apparat]` dämpft die Apparat-Blöcke mit). **Default = AN.** *Begründung:*
+> R9 verlangt «Marker/Text IMMER im DOM» (Ctrl+F/Print/Screenreader, §15-Funktions-
+> Treue) — das ist mit «Default AUS = nicht gerendert» (Alt-Zustand) unvereinbar; das
+> reglementarische Ziel `§4c` (DESIGN-REGLEMENT-NORMTEXT: «Default = an für alle drei»,
+> «AUS dämpft, versteckt nie») UND §3.1 («Fussnoten sind amtliche Substanz → Default
+> sichtbar») setzen die Default-Frage klar auf **AN**. Die historische Notiz «Fussnoten-
+> Apparat per Default aus (ist korrekt)» ist damit **abgelöst** — sie entstand vor dem
+> Options-/Always-in-DOM-Modell; sie beizubehalten würde R9 wieder brechen (Text nicht
+> Ctrl+F-bar). **Sticky-Section-Kontextkopf (K12a):** neue Komponente `SektionKontextKopf`
+> zeigt «Titel › Abschnitt › Art. N» aus der VORHANDENEN Scroll-Spy-State (`aktivIds`/
+> `aktArtikel` — KEIN neuer IntersectionObserver, keine Scroll-Listener-Kaskade); nur im
+> 2-Spalten-Lesemodus (Suche lebt dann in der TOC-Spalte → kein Sticky-Stapel), opak
+> (`bg-paper`), CLS-neutral (feste Zeilenhöhe). **«Zitat kopieren» (K12b):** deterministisch
+> `baueZitat()` (helpers, §5) = Fundstelle + SR + Stand, z. B. «Art. 8 BV, SR 101 (Stand
+> 01.01.2000)»; Clipboard-API + aria-live-Bestätigung. Sitzt im Kontextkopf (aktueller
+> Artikel) UND treibt die per-Artikel «Zitat»-Taste (die knappe `normZitat`-Form bleibt
+> fürs Entscheid-Fundstellen-Matching unangetastet). **Sticky-Kopf opak:** die Reader-
+> Sticky-Chrome (Inhalts-Kopf, Suchleiste, neuer Kontextkopf) ist durchgehend `bg-paper`
+> (opak, kein Durchscheinen); die einzige Rest-Transluzenz ist die **globale Topbar**
+> (`lc-glass` 96 %, Startseite-V3-App-Shell) — bewusst NICHT angefasst (site-weit, ausser
+> Datei-/PR-Scope). **Golden-Behandlung:** wie G1 liegt der Reader NICHT in der Engine-
+> Golden-Matrix → `golden:vergleich` blieb **IDENTISCH** (201 Fälle); die Wortlaut-
+> Invarianz ist empirisch belegt (Prosa footnote-gestrippt ZGB/OR/VMWG vorher/nachher
+> byte-gleich — G2b ändert nur ADDITIV Fussnoten-Sichtbarkeit + Kopf-/Kontext-Chrome, kein
+> Wortlaut; Diff berührt weder `public/normtext` noch Extraktion/Prerender/`ArtikelBody`-
+> Textlogik). **Flake-Härtung:** der Linien-Toggle-e2e zog von ZGB (~1277 Art., #684) auf
+> BV (~232 Art., #8 mit Guide) um — @6×-CPU-Probe BV toggle≈1,3 s vs. ZGB≈4,1 s, Assertions
+> unverändert scharf; R4-Tiefen-Referenz bleibt auf ZGB (`leser-linien-kanon`). **Tore:**
+> voller `npm run gate` GRÜN (inkl. `check:plan` — stale W2·6a-MAT-Marker `status: ready`→
+> `done` nachgezogen, M0–M5 gemergt), `golden:vergleich` IDENTISCH, `test:e2e` gegen dist
+> 1 Worker grün (leser-optionen 4 + neu `leser-kopf-g2b` 3 + linien-kanon + lesemass).
+> Visual-Review Desktop 1440 + Mobil 390 (ZGB Randtitel/Sticky/Kontextkopf, OR 319, VMWG
+> Kurzerlass, MWSTG M5-Materialien intakt, EMRK pdf-embed): 0 H-Overflow. **Bewusst NICHT**
+> (G2b-Scope): kein Mobil-«Ansicht»-Popover (die gewrappte Chip-Leiste ist @390 sauber +
+> overflow-frei — empirisch, keine Not); keine Grundart-Verzweigung (G3a); keine globale
+> Topbar-Opazität.
 | **G3a** | Per-Grundart-**Darstellung**: §-Label (KANTON, Anker bleibt `#art-`/R8), Präambel/Protokolle (⑤), PDF-Rahmen (⑦), Live-Verweiskarte (⑧), Kurzerlass-Lesespalte (④). | **`parts.tsx`**, **`inhalt.tsx`**, `register.ts` | 1½ Session | **Golden ändert** → neu; `gegenpruefung: n/a — reine Darstellung` |
 | **G3b** | **Risiko-Pfad:** Anhang-Block (③/⑤) + Tarif-Anhang → echte Tabelle. Gekoppelt an `FAHRPLAN-TARIF-TABELLEN-STUFE2.md` + `annex_*`-Plan. | `ArtikelBody.tsx`, Extraktions-Skripte, `register.ts` | **mehrere Sessions** | **`check:gegenpruefung` zwingend** (Extraktion!); golden neu |
 | **G4** | Einstieg /gesetze (3 Kacheln, Dopplung raus) + Cmd/Ctrl-K-Rahmen + Norm-Query-Parser (KEIN Neu-Index). | `src/pages/gesetze/*` (nicht Leser) | 1–1½ Session | kein Normtext; UI-Test + Parser-Akzeptanz |
