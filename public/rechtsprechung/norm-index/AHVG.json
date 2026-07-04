@@ -1,6 +1,7 @@
 {
   "erzeugt": "2026-07-02",
   "erlass": "AHVG",
+  "gewichtQuelle": "e4",
   "proArtikel": {
     "9": [
       {
@@ -47,7 +48,7 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 0
+        "gewicht": 1
       }
     ],
     "24": [
@@ -59,7 +60,7 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 0
+        "gewicht": 1
       }
     ],
     "1a": [

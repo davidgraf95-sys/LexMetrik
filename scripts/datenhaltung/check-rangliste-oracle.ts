@@ -25,8 +25,7 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { DatabaseSync } from 'node:sqlite';
-import { bgeMatchKey } from './normalisiere-zitat';
-import { docketKey } from './masse-mapping';
+import { baueMasseKorpusBruecke } from './masse-korpus-bruecke';
 import { normKeyFuerAbk } from '../normtext/entscheide-mapping';
 import { extrahiereStatutRefs } from '../../src/lib/rechtsprechung/zitat-extraktion';
 import { ladeBestandSnapshots, kanonZitat } from '../normtext/entscheide-schreiben';
@@ -75,53 +74,9 @@ function main(): number {
   const db = new DatabaseSync(MASSE_DB);
   db.exec('PRAGMA cache_size = -524288');
 
-  // masse-Match-Keys → id + Snapshot-Grenzen (für den Vintage-Beweis).
-  const idByBge = new Map<string, string>();
-  const idByDocket = new Map<string, string>();
-  const maxSeiteByVolAbt = new Map<string, number>(); // '151-III' → 521 (Snapshot-Frontier je Band/Abteilung)
-  let maxVol = 0;
-  let maxDatum = '';
-  for (const r of db.prepare('SELECT id, bge_key, docket_key, datum FROM entscheide').iterate() as Iterable<{ id: string; bge_key: string | null; docket_key: string | null; datum: string | null }>) {
-    if (r.bge_key && !idByBge.has(r.bge_key)) idByBge.set(r.bge_key, r.id);
-    if (r.docket_key && !idByDocket.has(r.docket_key)) idByDocket.set(r.docket_key, r.id);
-    const mb = /^(\d+)-([IVXAB]+)-(\d+)$/.exec(r.bge_key ?? '');
-    if (mb) {
-      maxVol = Math.max(maxVol, +mb[1]);
-      const va = `${mb[1]}-${mb[2]}`;
-      maxSeiteByVolAbt.set(va, Math.max(maxSeiteByVolAbt.get(va) ?? 0, +mb[3]));
-    }
-    if (r.datum && r.datum > maxDatum && /^\d{4}-/.test(r.datum)) maxDatum = r.datum;
-  }
-  function masseId(corpusKey: string): string | null {
-    const reg = regByKey.get(corpusKey);
-    if (!reg) return null;
-    const bge = bgeMatchKey(reg.bgeReferenz ?? '') ?? bgeMatchKey(reg.nummer);
-    if (bge && idByBge.has(bge)) return idByBge.get(bge)!;
-    const dk = docketKey(reg.nummer);
-    if (dk && idByDocket.has(dk)) return idByDocket.get(dk)!;
-    return null;
-  }
-  /**
-   * Ist der corpus-Entscheid NEUER als der gepinnte voilaj-Snapshot? Beweis, nicht Behauptung:
-   *  • BGE-Band > max-Band in masse (z.B. Band 152), ODER
-   *  • BGE-Band == max, aber Seite > der in masse vorhandenen Frontier je (Band, Abteilung) — der
-   *    Band-Schwanz (die amtliche BGE-Sammlung wird nachträglich befüllt; die spätesten Seiten eines
-   *    Bandes fehlen im früher gescrapten Parquet), ODER
-   *  • Entscheiddatum > max-Datum in masse.
-   */
-  function istNeuerAlsSnapshot(corpusKey: string): boolean {
-    const reg = regByKey.get(corpusKey);
-    if (!reg) return false;
-    const bge = bgeMatchKey(reg.bgeReferenz ?? '') ?? bgeMatchKey(reg.nummer);
-    const mb = bge ? /^(\d+)-([IVXAB]+)-(\d+)$/.exec(bge) : null;
-    if (mb) {
-      const vol = +mb[1];
-      if (vol > maxVol) return true;
-      const front = maxSeiteByVolAbt.get(`${mb[1]}-${mb[2]}`);
-      if (front !== undefined && +mb[3] > front) return true; // Band-Schwanz nach Scrape
-    }
-    return !!reg.datum && reg.datum > maxDatum;
-  }
+  // masse-Match-Keys → id + Snapshot-Grenzen (Vintage-Beweis) — geteilte Brücke (§5,
+  // dieselbe masseId nutzt die V1b-Shard-Regeneration, sonst driftete «e4» vom Oracle).
+  const { masseId, istNeuerAlsSnapshot, maxVol, maxDatum } = baueMasseKorpusBruecke(db, regByKey);
   const gewichtStmt = db.prepare('SELECT gewicht FROM norm_rangliste WHERE erlass_key = ? AND artikel = ? AND entscheid_id = ?');
   const edgeStmt = db.prepare('SELECT 1 AS x FROM zitat_kanten WHERE von_id = ? AND nach_id = ? LIMIT 1');
 

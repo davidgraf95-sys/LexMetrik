@@ -53,6 +53,16 @@ export interface LeitfallShard {
   erzeugt: string;
   /** Register-key des Erlasses (= Dateiname ohne .json). */
   erlass: string;
+  /**
+   * Provenienz des `gewicht` in DIESEM Shard (V1b, FAHRPLAN-VERZAHNUNG-UI §3):
+   * `'alt'` = kuratierte topische In-degree aus norm-index.json (342er-Korpus, byte-
+   * gleiche Weiche-B-Projektion); `'e4'` = aus der Massen-Rangliste `norm_rangliste`
+   * (195 342er-Korpus) ersetzt. **Nie gemischt** (§1.7/§3): der ganze Erlass-Shard ist
+   * entweder vollständig `'e4'` (jeder Leitfall monoton auflösbar: masse-id vorhanden UND
+   * gewicht ≥ alt) oder vollständig `'alt'` (mind. ein Leitfall vintage-absent/recall-lückig).
+   * Renderer-neutral (nur Reihenfolge/Tooltip-Herkunft), aber auditierbar (Oracle-Tor).
+   */
+  gewichtQuelle: 'alt' | 'e4';
   /** Artikel-Token ('41', '52bis') → Leitfälle, absteigend nach `gewicht`. */
   proArtikel: Record<string, LeitfallRef[]>;
 }
@@ -80,9 +90,17 @@ export async function rechtsprechungFuerErlass(registerKey: string): Promise<Ent
   return idx?.proNorm[registerKey] ?? [];
 }
 
-/** Artikel-Token normalisieren wie im Build (`zitat-extraktion.ts`): klein, whitespace-frei. */
+/**
+ * Artikel-Token normalisieren auf die SHARD-Form (`zitat-extraktion.ts`): klein,
+ * whitespace- UND unterstrich-frei. Der Reader reicht die eId-nahe Unterstrich-Form
+ * durch (`e.artikel` = '727_a', '663_b_bis'), die Shard-Tokens sind aber whitespace-
+ * los aus dem Zitat-Text extrahiert ('727a', '663bbis'). Ohne den `_`-Strip fiele
+ * die Leitfall-Zeile für JEDEN Buchstaben-Artikel aus (Bug W2·7-VZUI/V1b, z. B. OR
+ * Art. 727a). Identisch zu `kanonArtikelToken` im V1c-Revisions-Pfad (revisionen-
+ * extrakt.ts) — beide Query-Pfade normalisieren die eId-Form gleich (§5).
+ */
 export function normArtikelToken(artikel: string): string {
-  return String(artikel).toLowerCase().replace(/\s+/g, '');
+  return String(artikel).toLowerCase().replace(/[\s_]+/g, '');
 }
 
 /**
