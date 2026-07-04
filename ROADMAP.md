@@ -564,8 +564,26 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   aufgedeckt). Reine Darstellung (§3) → **`gegenpruefung: n/a`**; `golden:vergleich`
   IDENTISCH (201) + Prosa-Byte-Beweis ZGB/OR/VMWG/BV/AG-Kanton gegen `origin/main`;
   `check:grundart`/`check:linien-kanon`/`check:normtext`/`check:struktur-konsistenz`
-  grün; neuer e2e `gesetze-ux-g3a` (6) + a11y/leser-Specs grün. Nächste Etappe
-  **G3b** (Anhang/Tabellen-Risiko-Pfad) · **G6** (Rechtsgebiets-Sicht).
+  grün; neuer e2e `gesetze-ux-g3a` (6) + a11y/leser-Specs grün.
+  **G6** (Rechtsgebiets-Sicht «Gerüst», Worktree `feat/gesetzes-ux-g6`,
+  kollisionsarm) **gebaut (5.7.2026):** zweite, achsen-orthogonale Gliederung über
+  eine vierte Landeplatz-Tür (`?ansicht=rechtsgebiet`) in `src/pages/Gesetze.tsx` —
+  (a) **Auto-Grundgerüst** aus der vorhandenen `rechtsgebiet`-Achse (7 GEBIETE,
+  aufklappbar, deckt JEDEN Bund-Erlass) + (b) **Querschnitts-Delta**: 8 kuratierte
+  Praxisfelder (Arbeit / Miete & Pacht / Vertrag & Haftung / Gesellschaft & Handel /
+  Familie & Erbrecht / Sachenrecht & Grundeigentum / Zwangsvollstreckung / Steuern &
+  Abgaben) in `src/lib/normtext/rechtsgebiet-thema.ts` (SSoT — **kein** dupliziertes
+  Register-Feld `rechtsgebietThema`, Abweichung von Spec §5.1 offengelegt, §5), enge
+  Norm-Verankerung mit funktionierendem Deep-Link (OR Art. 319–362 → `#art-319`,
+  Anker bleibt `art-<token>`, K2/R8) + je Thema **Verzahnung** (Rechner-Slug +
+  `/rechtsprechung?rg=`) + `status: entwurf` (§8, K8). **Tolerantes Tor**
+  `src/tests/rechtsgebiet-thema.test.ts`: Mitglieder-/Werkzeug-Slugs müssen
+  existieren, 6–8 Themen, §7-Beleg je Zeile; Abdeckung wird beziffert (40/229
+  Bund-Erlasse thematisiert), «unzugeordnet» ist zulässig (nie rot). Reine
+  Darstellung/Klassifikation (§3); `golden:vergleich` IDENTISCH (201); neuer e2e
+  `gesetze-rechtsgebiet-g6` (2) + Landeplatz-/Kanton-Regressionen grün; Visual-Review
+  Desktop 1440 + Mobil 390 (0 Overflow). **Vollkuration bleibt späterer Strang**
+  (nach Abnahme-Zeitsperre). Nächste Etappe **G3b** (Anhang/Tabellen-Risiko-Pfad).
 - [ ] **6 · Konsultieren-Klingen** *(`[OF]`, amtlich)*:
   <!-- @meta id: W2·6 · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->
   - **Mehrsprachiger Normvergleich DE/FR/IT** (Auslegungswerkzeug, Art. 14 PublG — alle drei
