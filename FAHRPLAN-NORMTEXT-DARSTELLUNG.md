@@ -241,6 +241,23 @@ bringt ein Quell-Wechsel HTML→XML das? Entschieden per Council (DMAD, 5 Opus-A
 > erfüllt** (aufgehoben-Statuszeile + Einklappen vorhanden; noch-nicht-in-Kraft kommt bei
 > current-consolidation-Pinning nicht vor) → dokumentiert, kein Neubau.
 
+> **✅ N2b GEBAUT (4.7.2026, Live-Report David — AIG Art. 5 Abs. 1 lit. d).** Erster
+> Schritt von Phase-0-Punkt 4 (Suppression → **aktives Fremd-Routing**), aber NUR für
+> das deterministisch belegte Signal: **ausgeschriebener Gesetzesname + Klammer-Kürzel**
+> «des Strafgesetzbuchs (StGB)» (Datums-Einschub «vom 13. Juni 1927» toleriert). Der
+> reine Resolver `fremdRoutingFormB` (`fedlex.ts`) routet JEDE genannte Nummer — die
+> erste UND jedes Aufzählungs-Glied — einzeln auf das Fremdgesetz (NormChip: In-Reader-
+> Popover bei Korpus-Erlass, sonst Fedlex-Deep-Link; Kürzel ∉ FEDLEX → reiner Text).
+> Der Bug: «Artikel 49a … (MStG)» self-verlinkte zuvor ZUFÄLLIG AIG art_49_a. Behoben +
+> unabhängig gegen die amtliche Fedlex-Konsolidierung anker-verifiziert (StGB 66a/66abis,
+> MStG 49a/49abis, OR/ZGB-Stichproben). **Bewusste Grenzen (Rest von Punkt 4, offen):**
+> (a) die bare-Kürzel-Form ohne Klammer («des IVG») bleibt Suppression (N2, unverändert);
+> (b) Fedlex-**zusammengeführte** Artikel-Paare (StGB 275bis+275ter = ein Anker
+> `art_275_bis_275_ter`) erzeugen bei Aufzählung einen nicht-scrollenden Einzel-Anker —
+> §1-sicher (nie Falsch-Gesetz, degradiert auf Erlass-Ebene + «nicht verfügbar»-Popover);
+> (c) Render-Zeit-«kein Link bei fehlendem Ziel-Token» braucht ein synchrones Fremd-Token-
+> Register (Seam `zielTokenExistiert` steht, Prod optimistisch wie alle Fremdverweise).
+
 - **Phase 0 — jetzt, `[OF]`, variantenunabhängig** (= die Arbeit aus Bündel N, deckt sich mit QS-GP/LERNPHASE-B):
   1. Asymmetrisches **Verifikations-Tor**: **Containment** (jedes Quell-Wort verbucht → fängt stille Drops) +
      **Struktur-Invarianten** (Absätze lückenlos 1→2→3, jeder interne Verweis löst auf, kein Fussnoten-Markup

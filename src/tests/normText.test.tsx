@@ -218,3 +218,69 @@ describe('NormText — interne Artikel-Sprünge (intern)', () => {
     expect(out).toContain('#art-5"');
   });
 });
+
+// N2b (Bug David 4.7.2026): AUSGESCHRIEBENER Fremdgesetz-Name mit Klammer-Kürzel
+// («des Strafgesetzbuchs (StGB)») wird auf JENES Gesetz geroutet — die erste
+// Nummer UND jedes Aufzählungs-Glied einzeln (Fedlex-Deep-Link/In-Reader-Popover).
+// Reproduziert den Live-Report an AIG Art. 5 Abs. 1 lit. d.
+describe('NormText — N2b ausgeschriebenes Fremdgesetz-Routing (AIG Art. 5)', () => {
+  // AIG als Lese-Erlass; AIG hat art_49_a (Falle des alten Self-Linkers!), aber
+  // kein art_66_a. tokenMap wie im Reader (nur der eigene Erlass).
+  const aigTokens = new Map<string, string>([['49a', '49_a'], ['5', '5']]);
+  const internAig: InternRefs = { tokenMap: aigTokens, basisPfad: '/gesetze/bund/AIG', springeZu: () => {} };
+  const eliId = (k: keyof typeof FEDLEX) => FEDLEX[k].match(/eli\/cc\/([^/]+)/)![1];
+
+  const AIG5 = 'dürfen nicht von einer Fernhaltemassnahme oder einer Landesverweisung nach Artikel 66a oder 66abis des Strafgesetzbuchs (StGB) oder Artikel 49a oder 49abis des Militärstrafgesetzes vom 13. Juni 1927 (MStG) betroffen sein.';
+
+  it('alle 4 Nummern zeigen auf StGB/MStG — NIE ein AIG-Self-Link', () => {
+    const out = ssr(<NormText text={AIG5} intern={internAig} />);
+    const stgb = eliId('StGB'), mstg = eliId('MStG');
+    // 66a → StGB art_66_a, 66abis → StGB art_66_a_bis
+    expect(out).toMatch(new RegExp(`href="[^"]*${stgb}[^"]*#art_66_a"`));
+    expect(out).toMatch(new RegExp(`href="[^"]*${stgb}[^"]*#art_66_a_bis"`));
+    // 49a → MStG art_49_a, 49abis → MStG art_49_a_bis
+    expect(out).toMatch(new RegExp(`href="[^"]*${mstg}[^"]*#art_49_a"`));
+    expect(out).toMatch(new RegExp(`href="[^"]*${mstg}[^"]*#art_49_a_bis"`));
+    // Der alte Bug: «Artikel 49a» self-verlinkte AIG art_49_a (Unterstrich-Anker
+    // #art-49_a) bzw. der Fedlex-Deep-Link zeigte auf die AIG-ELI. Beides ausgeschlossen.
+    expect(out).not.toContain('#art-49_a"');
+    expect(out).not.toContain('#art-49a"');
+    expect(out).not.toMatch(new RegExp(`href="[^"]*${eliId('AIG')}[^"]*#art_49`));
+    // Anzeige zeichenidentisch: die erste Nummer trägt «Artikel», das Glied nur «66abis».
+    expect(out).toContain('>Artikel 66a<');
+    expect(out).toContain('>66abis<');
+    expect(out).toContain('des Strafgesetzbuchs (StGB)');
+  });
+
+  it('Kommentar-Fall AHVV → AHVG: «Artikel 1a Absatz 1 Buchstabe c AHVG» kein AHVV-Self-Link', () => {
+    // Bare Kürzel (Form A, ohne Klammer) → Unterdrückung des falschen Self-Links.
+    const ahvvTokens = new Map<string, string>([['1a', '1_a']]);
+    const internAhvv: InternRefs = { tokenMap: ahvvTokens, basisPfad: '/gesetze/bund/AHVV', springeZu: () => {} };
+    const out = ssr(<NormText text="richtet sich nach Artikel 1a Absatz 1 Buchstabe c AHVG weiter" intern={internAhvv} />);
+    expect(out).not.toContain('#art-1_a"'); // kein AHVV-Self-Sprung
+    expect(out).toContain('Artikel 1a Absatz 1 Buchstabe c AHVG');
+  });
+
+  it('Einzel-Nummer: «Artikel 63 des Obligationenrechts (OR)» → OR art_63', () => {
+    const internSchkg: InternRefs = { tokenMap: new Map([['63', '63']]), basisPfad: '/gesetze/bund/SCHKG', springeZu: () => {} };
+    const out = ssr(<NormText text="Vorbehalten bleibt Artikel 63 des Obligationenrechts (OR) hier." intern={internSchkg} />);
+    expect(out).toMatch(new RegExp(`href="[^"]*${eliId('OR')}[^"]*#art_63"`));
+    expect(out).not.toContain('#art-63"'); // kein SchKG-Self-Sprung
+  });
+
+  it('Negativ: «Artikel 6 Absatz 2 und die Bestimmungen des OR» bleibt Self-Link (kein Bracket)', () => {
+    const internX: InternRefs = { tokenMap: new Map([['6', '6']]), basisPfad: '/gesetze/bund/XYZ', springeZu: () => {} };
+    const out = ssr(<NormText text="gemäss Artikel 6 Absatz 2 und die Bestimmungen des OR" intern={internX} />);
+    expect(out).toContain('#art-6"'); // Self-Link bleibt (N2b traf nicht, N2 traf nicht)
+  });
+
+  it('Negativ: unbekanntes Klammer-Kürzel «(Code civil)» → KEIN Fremdgesetz-Routing', () => {
+    // «Code civil» ∉ FEDLEX → N2b feuert NICHT (kein Fedlex-Deep-Link auf ein
+    // falsches Gesetz). tokenMap ohne «14» → auch kein Self-Link: reiner Text (§1).
+    const internY: InternRefs = { tokenMap: new Map(), basisPfad: '/gesetze/bund/LUGUE', springeZu: () => {} };
+    const out = ssr(<NormText text="Artikel 14 und 15 des Zivilgesetzbuches (Code civil) gilt" intern={internY} />);
+    expect(out).not.toContain('#art_'); // kein Fedlex-Deep-Link (Kürzel ∉ FEDLEX)
+    expect(out).not.toContain('<a'); // keinerlei Link
+    expect(out).toContain('Artikel 14 und 15 des Zivilgesetzbuches (Code civil)');
+  });
+});

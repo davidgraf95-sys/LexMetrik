@@ -333,10 +333,18 @@ export type FedlexGesetz = keyof typeof FEDLEX;
 // im OR real: 329gbis/663bbis/697hbis → art_329_g_bis (Form n_b_suffix).
 const SUFFIX = /^(\d+)([a-z])?(bis|ter|quater|quinquies|sexies)?$/;
 
-export function fedlexUrl(gesetz: FedlexGesetz, artikel: string | number): string {
-  const token = String(artikel).toLowerCase().replace(/\s+/g, '')
+// Artikelnummer → Fedlex-Anker-Token («335c»→«335_c», «334bis»→«334_bis»,
+// «49abis»→«49_a_bis», «329gbis»→«329_g_bis»). EINE Ableitung (§5), von fedlexUrl
+// UND der Fremdgesetz-Aufzählungs-Verlinkung (fremdRoutingFormB) genutzt — die
+// Buchstabe+«bis»-Zerlegung wird nicht dupliziert (die bekannte \b-Backtracking-
+// Falle «[a-z]? frisst das b von bis» ist hier über die SUFFIX-Alternation gebannt).
+export function artikelToken(nummer: string | number): string {
+  return String(nummer).toLowerCase().replace(/\s+/g, '')
     .replace(SUFFIX, (_, n, b, suf) => [n, b, suf].filter(Boolean).join('_'));
-  return `${FEDLEX[gesetz]}#art_${token}`;
+}
+
+export function fedlexUrl(gesetz: FedlexGesetz, artikel: string | number): string {
+  return `${FEDLEX[gesetz]}#art_${artikelToken(artikel)}`;
 }
 
 // Mehrwort-Gesetzesnamen → Registry-Key. Nötig, weil der generische Matcher
@@ -428,7 +436,13 @@ export const NORM_IM_TEXT = new RegExp(
 // Buchstabe/Bereich), läuft also NIE über Fliesstext oder ein zweites «Artikel»
 // hinaus — «Artikel 6 Absatz 2 und die Bestimmungen des OR» matcht NICHT (nach
 // «Absatz 2» folgt «und …», kein Gesetz-Kürzel) und bleibt ein Self-Link.
-const N2_ARTNR = '\\d+[a-z]?(?:bis|ter|quater|quinquies|sexies)?';
+// Artikelnummer im Fliesstext. Suffix-Alternation ZUERST (bis|ter|…) VOR dem
+// blossen Buchstaben — sonst frisst das greedy `[a-z]?` in einem UNGEANKERTEN
+// Scan (matchAll) das «b» von «bis» und «266bis» zerfällt zu «266b» (die \b-
+// Backtracking-Falle; ein `(?![0-9a-z])`-Anker wie in ART_INTERN würde sie zwar
+// heilen, die alternationsbasierte Form ist aber auch ohne Anker korrekt und wird
+// hier global gescannt).
+const N2_ARTNR = '\\d+(?:bis|ter|quater|quinquies|sexies|[a-z](?:bis|ter|quater|quinquies|sexies)?)?';
 const N2_PASSUS = '(?:Abs(?:atz|ätze|\\.)|Buchstaben?|Bst\\.|lit\\.|Ziff(?:ern?|\\.)|Satz|Sätze)';
 const N2_WERT = '(?:' + N2_ARTNR + '|[a-z]|[ivxl]+)';
 const N2_KONN = '(?:[–-]|und|oder|bis|,|sowie)';
@@ -451,6 +465,105 @@ const FREMDGESETZ_NACH_ARTIKEL = new RegExp(
 export function fremdgesetzNachArtikel(restNachArtikel: string): FedlexGesetz | null {
   const m = FREMDGESETZ_NACH_ARTIKEL.exec(restNachArtikel);
   return m ? erkenneFedlexGesetz(m[1]) : null;
+}
+
+// ─── N2b (Bündel N): AUSGESCHRIEBENER Fremdgesetz-Name mit Klammer-Kürzel ─────
+//
+// PROBLEM (Bug David 4.7.2026, AIG Art. 5 Abs. 1 lit. d): «… nach Artikel 66a
+// oder 66abis des Strafgesetzbuchs (StGB) oder Artikel 49a oder 49abis des
+// Militärstrafgesetzes vom 13. Juni 1927 (MStG) …». fremdgesetzNachArtikel (N2)
+// erkennt das Fremdgesetz nur am KÜRZEL aus der NORM_NAMEN-Liste («… Buchstabe c
+// AHVG»), NICHT an der ausgeschriebenen Genitiv-Form mit Klammer-Kürzel. Folge:
+// «Artikel 49a» fiel auf den Self-Linker zurück und verlinkte ZUFÄLLIG AIG art_49_a
+// (existiert), «Artikel 66a» blieb link-los (AIG hat kein art_66_a), die
+// Aufzählungs-Glieder «66abis»/«49abis» nie verlinkt.
+//
+// FIX: Das DETERMINISTISCHE Signal ist das Klammer-Kürzel «(KÜRZEL)» mit
+// KÜRZEL ∈ FEDLEX, unmittelbar hinter dem ausgeschriebenen Gesetzesnamen (Datums-
+// Einschub «vom 13. Juni 1927» toleriert). KEIN Fuzzy-Matching ausgeschriebener
+// Namen OHNE Klammer-Kürzel (§1: lieber kein Link als ein plausibel-falscher) —
+// das Kürzel in der Klammer IST das genannte Ziel, kein Raten. Erkannt wird die
+// GANZE «Artikel N [oder M …] des <Name> (KÜRZEL)»-Einheit; jede Artikelnummer
+// (auch die Aufzählungs-Glieder) wird EINZELN auf das Fremdgesetz geroutet — analog
+// zur Ketten-Propagierung (normVerweiseImText).
+//
+// Bewusste Grenze: die ABGEKÜRZTE Genitiv-Form OHNE Klammer («… des IVG») bleibt
+// die Domäne von fremdgesetzNachArtikel (N2, Unterdrückung des Self-Links) — hier
+// unverändert. N2b greift nur additiv bei vorhandenem Klammer-Kürzel.
+
+// Ein Wort des ausgeschriebenen Gesetzesnamens: grossgeschriebenes Wort, Datums-
+// Zahl («13.», «1927») oder amtliche Namens-Bindewörter (kleingeschrieben, aber
+// Teil offizieller Titel: «über», «vom», «für» …). Der Name muss mit einem GROSS-
+// geschriebenen Wort BEGINNEN und wird zwingend vom «(KÜRZEL)» abgeschlossen —
+// ohne diese Klammer matcht die Einheit NICHT (deterministischer Anker).
+const N2_NAME_WORT = '(?:[A-ZÄÖÜ][A-Za-zÄÖÜäöüß.\\-]*|\\d{1,4}\\.?|vom|von|über|und|der|die|das|des|für|zur|zum|im|in|zu|den|betreffend)';
+const N2_NAME_RUN = '[A-ZÄÖÜ][A-Za-zÄÖÜäöüß.\\-]*(?:\\s+' + N2_NAME_WORT + '){0,14}';
+const FREMD_FORM_B = new RegExp(
+  '^(\\s*)' +
+    // 2: Aufzählungs-Schwanz (weitere Artikelnummern «oder 66abis», «25–31»)
+    '((?:' + N2_KONN + '\\s*' + N2_ARTNR + '\\s*)*)' +
+    // Passus-Kette (Absatz/Buchstabe/Ziffer/Satz) — Werte werden NICHT verlinkt
+    '(?:' + N2_PASSUS + '\\s+' + N2_WERT + '(?:\\s*' + N2_KONN + '\\s*' + N2_WERT + ')*\\s+)*' +
+    // Präposition + ausgeschriebener Name + 3: Klammer-Kürzel (∈ FEDLEX)
+    '(?:des|der|über|vom)\\s+' + N2_NAME_RUN + '\\s*\\((' + NORM_NAMEN_ESC.join('|') + ')\\)',
+);
+const N2_ARTNR_RE = new RegExp(N2_ARTNR, 'g');
+
+/** Ein auf ein Fremdgesetz geroutetes Aufzählungs-Glied. */
+export interface FremdRoutingGlied {
+  /** true = erstes Glied; Anzeige = «Artikel N» aus dem Aufrufer-Kontext (m[0]),
+   *  Offsets sind dann −1 (nicht im `rest`-Text). */
+  erst: boolean;
+  /** rohe Artikelnummer («66a», «66abis») — Anzeige der Aufzählungs-Glieder. */
+  roh: string;
+  /** Start-/End-Offset im `rest`-Text (erst: −1). */
+  start: number;
+  end: number;
+  /** Auflösbarer Verweis-Text mit Kürzel, z. B. «Art. 66abis StGB». */
+  artikel: string;
+  /** false ⇒ als reiner Text darstellen (Ziel-Token existiert nicht → kein Link). */
+  linkbar: boolean;
+}
+
+/**
+ * Erkennt UNMITTELBAR nach einem bare «Artikel N» die ausgeschriebene Fremdgesetz-
+ * Form mit Klammer-Kürzel und routet JEDE genannte Artikelnummer (die erste +
+ * alle Aufzählungs-Glieder) auf das Fremdgesetz. Rein deterministisch (§2): das
+ * Kürzel stammt aus der FEDLEX-Liste, die Token-Ableitung aus artikelToken.
+ *
+ * @param rest        Text NACH «Artikel N» (beginnt i. d. R. mit Whitespace).
+ * @param ersteNummer die Nummer des vorangehenden «Artikel N» (m[1]), z. B. «66a».
+ * @param zielTokenExistiert optionales Prädikat: existiert das Ziel-Token im
+ *        Fremd-Erlass? Fehlt es (false), wird das Glied NICHT verlinkt (§1, nie
+ *        raten). Ohne Prädikat linken alle erkannten Glieder (Fedlex-Deep-Link /
+ *        In-Reader-Popover über NormChip — die etablierte Fremdverweis-Darstellung).
+ * @returns {gesetz, glieder, regionEnd} oder null (kein Klammer-Kürzel-Signal).
+ *          `regionEnd` = Offset in `rest` hinter dem «(KÜRZEL)» (Aufrufer setzt
+ *          den Cursor hinter die ganze Einheit).
+ */
+export function fremdRoutingFormB(
+  rest: string,
+  ersteNummer: string,
+  zielTokenExistiert?: (gesetz: FedlexGesetz, token: string) => boolean,
+): { gesetz: FedlexGesetz; glieder: FremdRoutingGlied[]; regionEnd: number } | null {
+  const m = FREMD_FORM_B.exec(rest);
+  if (!m) return null;
+  const gesetz = erkenneFedlexGesetz(m[3]);
+  if (!gesetz) return null; // Klammer-Inhalt kein bekanntes FEDLEX-Kürzel → kein Link
+  const linkbar = (roh: string): boolean =>
+    zielTokenExistiert ? zielTokenExistiert(gesetz, artikelToken(roh)) : true;
+  const gliedFuer = (erst: boolean, roh: string, start: number, end: number): FremdRoutingGlied => ({
+    erst, roh, start, end, artikel: `Art. ${roh} ${gesetz}`, linkbar: linkbar(roh),
+  });
+  const glieder: FremdRoutingGlied[] = [gliedFuer(true, ersteNummer, -1, -1)];
+  // Aufzählungs-Glieder aus dem Schwanz (Gruppe 2) — mit Offset im `rest`-Text.
+  const schwanz = m[2];
+  const schwanzStart = m[1].length; // führender Whitespace (Gruppe 1)
+  for (const am of schwanz.matchAll(N2_ARTNR_RE)) {
+    const start = schwanzStart + am.index;
+    glieder.push(gliedFuer(false, am[0], start, start + am[0].length));
+  }
+  return { gesetz, glieder, regionEnd: m[0].length };
 }
 
 // ─── Ketten-Verweise: «Art. A i.V.m. Art. B GESETZ» ──────────────────────────

@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import { normVerweiseImText, fremdgesetzNachArtikel } from '../lib/fedlex';
+import { normVerweiseImText, fremdgesetzNachArtikel, fremdRoutingFormB } from '../lib/fedlex';
 import { NormChip } from './vorlagen/ui';
 import { RechtsprechungText } from './RechtsprechungLink';
 
@@ -52,8 +52,13 @@ const normRef = (s: string): string => s.toLowerCase().replace(/[^a-z0-9]/g, '')
 // damit «329gbis»/«10bis» VOLLSTÄNDIG erfasst werden — nicht «329g»/«10b»; analog
 // fedlex.ts). `(?![0-9a-z])` verhindert das `\d+`/Suffix-Backtracking, das sonst
 // «Art. 20 des OR» auf «Art. 2» und «Art. 119bis …» auf «Art. 119b» verkürzte.
-// Der `des/der/über/vom`-Lookahead schliesst benannte Fremderlasse aus.
-const ART_INTERN = /\bArt(?:\.|ikel)\s+(\d+(?:[a-z])?(?:bis|ter|quater|quinquies|sexies)?)(?![0-9a-z])(?!\s+(?:des|der|über|vom)\b)/g;
+// Der frühere `(?!\s+(?:des|der|über|vom))`-Lookahead ist ENTFERNT (N2b, 4.7.2026):
+// er blockierte das MATCHING von «Artikel 63 des Obligationenrechts (OR)» und
+// verhinderte damit das Fremdgesetz-Routing der ausgeschriebenen Form. Die
+// Fremd-/Verordnungs-Unterdrückung (bare «des/der …» ohne Klammer-Kürzel) läuft
+// jetzt im Schleifenkörper NACH der N2b-Routing-Prüfung (identisches Ergebnis für
+// die bare-«des»-Fälle, aber die «(KÜRZEL)»-Form wird nicht mehr verschluckt).
+const ART_INTERN = /\bArt(?:\.|ikel)\s+(\d+(?:[a-z])?(?:bis|ter|quater|quinquies|sexies)?)(?![0-9a-z])/g;
 
 function restMitIntern(s: string, key: string, intern?: InternRefs): React.ReactNode {
   if (!intern || !s) return s ? <RechtsprechungText key={key} text={s} /> : null;
@@ -69,15 +74,53 @@ function restMitIntern(s: string, key: string, intern?: InternRefs): React.React
   const out: React.ReactNode[] = [];
   let last = 0;
   for (const m of s.matchAll(ART_INTERN)) {
-    const rest = s.slice(m.index + m[0].length);
-    // N2: Nennt der Verweis ein ANDERES Bundesgesetz — aus- ODER abgeschrieben
-    // («Artikel 1a Absatz 1 Buchstabe c AHVG» in der AHVV → AHVG) —, zeigt
-    // «Artikel N» auf JENES Gesetz; der interne Self-Link wäre falsch (§1) →
-    // unterdrücken. Deterministisch aus der FEDLEX-Kürzelliste (§5). Das genaue
-    // Fremdgesetz-Routing (Verweis-Chip auf den anderen Erlass) bleibt eine
-    // eigene, verifizierte Datenaufgabe (David-Entscheid 28.6.: kein Link >
-    // falscher Link). Ergänzt die alte Sofort-Kürzel-Regel unten (die auch
-    // Nicht-FEDLEX-Kürzel fängt), fängt aber die ausgeschriebene Passus-Form.
+    // Von einer bereits verbrauchten Fremd-Region übersprungen (N2b konsumiert die
+    // ganze «Artikel N … (KÜRZEL)»-Einheit; ein späterer Treffer darin entfällt).
+    if (m.index < last) continue;
+    const start = m.index;
+    const rest = s.slice(start + m[0].length);
+    // N2b (Bug David 4.7.2026): AUSGESCHRIEBENES Fremdgesetz mit Klammer-Kürzel
+    // («Artikel 66a oder 66abis des Strafgesetzbuchs (StGB) …»). Jede genannte
+    // Nummer — die erste UND jedes Aufzählungs-Glied — wird EINZELN auf das
+    // Fremdgesetz geroutet (NormChip: In-Reader-Popover, wenn der Erlass im Korpus
+    // ist, sonst Fedlex-Deep-Link; unbekanntes Kürzel → reiner Text). Das
+    // deterministische Signal ist das «(KÜRZEL)» in der Klammer (§1, kein Raten).
+    // Kein Prädikat hier → optimistische Verlinkung (etablierte Fremdverweis-
+    // Darstellung, wie NORM_IM_TEXT-Treffer); die Existenz gegen den Ziel-Erlass
+    // prüft das Popover beim Öffnen. Läuft VOR der Self-Link-Logik, damit «Artikel
+    // 49a … (MStG)» nie fälschlich auf den eigenen Erlass (AIG art_49_a) zeigt.
+    const routing = fremdRoutingFormB(rest, m[1]);
+    if (routing) {
+      if (start > last) out.push(<RechtsprechungText key={`${key}-r${last}`} text={s.slice(last, start)} />);
+      let cur = 0; // Cursor im rest-Text
+      for (const g of routing.glieder) {
+        const anzeige = g.erst ? m[0] : g.roh;
+        const gk = g.erst ? `${key}-f${start}` : `${key}-f${start}-${g.start}`;
+        if (!g.erst && g.start > cur) out.push(<RechtsprechungText key={`${key}-rg${start}-${cur}`} text={rest.slice(cur, g.start)} />);
+        out.push(g.linkbar
+          ? <NormChip key={gk} artikel={g.artikel} anzeige={anzeige} linkClass={INLINE_CLASS} />
+          : <RechtsprechungText key={`${gk}-t`} text={anzeige} />);
+        if (!g.erst) cur = g.end;
+      }
+      if (cur < routing.regionEnd) out.push(<RechtsprechungText key={`${key}-rt${start}`} text={rest.slice(cur, routing.regionEnd)} />);
+      last = start + m[0].length + routing.regionEnd;
+      continue;
+    }
+    // Bare «Art. N des/der/über/vom …» OHNE Klammer-Kürzel (N2b traf nicht): ein
+    // benannter Fremderlass oder eine «des vorliegenden …»-Wendung — NIE ein Self-
+    // Sprung (§1). Ersetzt den früheren ART_INTERN-Lookahead an Ort und Stelle,
+    // aber ERST nach der N2b-Routing-Prüfung (sonst würde «Artikel 63 des OR (…)»
+    // fälschlich unterdrückt statt geroutet). Fedlex-Kürzel-Fälle fängt zusätzlich
+    // die N2-Prüfung unten; dieser Check deckt auch Nicht-FEDLEX-Namen («der
+    // Verordnung») ab, die tokenMap sonst fälschlich self-verlinken würde.
+    if (/^\s+(?:des|der|über|vom)\b/.test(rest)) continue;
+    // N2 (Form A, ABGEKÜRZTE Kürzel-Form): Nennt der Verweis ein ANDERES
+    // Bundesgesetz («Artikel 1a Absatz 1 Buchstabe c AHVG» in der AHVV → AHVG),
+    // zeigt «Artikel N» auf JENES Gesetz; der interne Self-Link wäre falsch (§1) →
+    // unterdrücken. Deterministisch aus der FEDLEX-Kürzelliste (§5). Ergänzt die
+    // alte Sofort-Kürzel-Regel unten (die auch Nicht-FEDLEX-Kürzel fängt), fängt
+    // aber die ausgeschriebene Passus-Form. (Aktives Routing der bare-Kürzel-Form
+    // bleibt bewusst zurückgestellt — der Kontrakt hier ist Unterdrückung.)
     const fremd = fremdgesetzNachArtikel(rest);
     if (fremd && kuerzelKanon(fremd) !== eigenesKuerzel) continue;
     // M12 (§1/§6): Folgt dem bare «Art./Artikel N» ein Gesetzes-KÜRZEL (≥2 Gross-
@@ -93,7 +136,6 @@ function restMitIntern(s: string, key: string, intern?: InternRefs): React.React
     if (/^\s+(?:[A-ZÄÖÜ]{2,}|[A-ZÄÖÜ][a-zäöü]*[A-ZÄÖÜ]\w*)/.test(rest)) continue;
     const token = intern.tokenMap.get(normRef(m[1]));
     if (!token) continue; // kein Artikel dieses Erlasses → als Text belassen
-    const start = m.index;
     if (start > last) out.push(<RechtsprechungText key={`${key}-r${last}`} text={s.slice(last, start)} />);
     out.push(
       <a key={`${key}-a${start}`} href={`${intern.basisPfad}#art-${token}`}
