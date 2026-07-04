@@ -2,7 +2,7 @@ import { useState, memo, type ReactNode } from 'react';
 import { ArtikelBody, FnRef } from '../../components/normtext/ArtikelBody';
 import type { InternRefs } from '../../components/NormText';
 import { trenneAenderungshistorie, labelMitBereich, artikelGanzAufgehoben } from '../../lib/normtext/darstellung';
-import type { Sektion, Fussnote, ErlassKopf } from '../../lib/normtext/browse';
+import type { Sektion, Fussnote, ErlassKopf, CurrencyEintrag } from '../../lib/normtext/browse';
 import { NORM_IM_TEXT, fedlexLinkFuerArtikel } from '../../lib/fedlex';
 import { NormChip } from '../../components/vorlagen/ui';
 import { KantenChip } from '../../components/verzahnung/KantenChip';
@@ -380,7 +380,7 @@ export function ErlassKopfBlock({ kopf }: { kopf: ErlassKopf }) {
 // pdf-embed) durch EINE Quelle (§5) — die Options-Leiste trägt sie einheitlich.
 // Reine Darstellung (§3); Kopf-Label bleibt heutige Herleitung (erlassTyp-Label
 // ist G3a). Der overflow-wrap/hyphens am Titel deckt Langtitel (mobil, §3.3).
-export function ErlassLeserKopf({ erlass, overline, artikelAnzahl, aktionen, hinweis }: {
+export function ErlassLeserKopf({ erlass, overline, artikelAnzahl, aktionen, hinweis, currency }: {
   erlass: BrowseErlass;
   overline: ReactNode;
   /** Artikelzahl (Snapshot); null = keine Zählung (pdf-embed). */
@@ -388,6 +388,8 @@ export function ErlassLeserKopf({ erlass, overline, artikelAnzahl, aktionen, hin
   /** Grundart-spezifische Aktionen (Herunterladen/Reiter/Options bzw. PDF-Download). */
   aktionen?: ReactNode;
   hinweis: string;
+  /** P1-d: maschineller Fedlex-Currency-Beweis (geltend geprüft / künftige Fassung). */
+  currency?: CurrencyEintrag;
 }) {
   const titelOhneSuffix = erlass.titel.replace(/\s*\([^)]*\)\s*$/, '').trim();
   const titelRedundant = titelOhneSuffix.toLowerCase() === erlass.kuerzel.trim().toLowerCase();
@@ -408,6 +410,19 @@ export function ErlassLeserKopf({ erlass, overline, artikelAnzahl, aktionen, hin
         {erlass.stand && (erlass.sr || artikelAnzahl != null) && <span className="text-ink-300" aria-hidden>·</span>}
         {erlass.stand && <span>Stand <span className="num">{formatiereDatum(erlass.stand)}</span></span>}
         {erlass.quelleUrl && <a href={erlass.quelleUrl} target="_blank" rel="noopener noreferrer" className="lc-chip no-underline hover:text-brass-700">↗ geltende Fassung</a>}
+        {/* P1-d Currency-Chips (Moat-Hebel 3): maschineller Freshness-Beweis + angekündigte
+            Fassung. Prerender-stabil (Sidecar zur Bauzeit erhoben, keine Client-Datums-Logik,
+            §15/2 CLS=0). Wortfeld «geltend geprüft am … (maschinell)» ist die zugelassene Formel. */}
+        {currency?.geprueftAm && (
+          <span className="lc-chip whitespace-nowrap" title="Maschinell gegen den amtlichen Fedlex-Konsolidierungsgraphen (dateApplicability) geprüft; massgeblich bleibt stets die amtliche Quelle.">
+            {`geltend geprüft am ${formatiereDatum(currency.geprueftAm)} (maschinell)`}
+          </span>
+        )}
+        {currency?.naechsteFassungAb && (
+          <span className="lc-chip whitespace-nowrap" title="Fedlex hat eine künftige Konsolidierung angekündigt; sie ist noch nicht in Kraft und wird erst zum Stichtag massgeblich.">
+            {`nächste Fassung ab ${formatiereDatum(currency.naechsteFassungAb)}`}
+          </span>
+        )}
         {aktionen}
         <span className="basis-full sm:basis-auto sm:ml-auto text-micro text-ink-500">{hinweis}</span>
       </div>

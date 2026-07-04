@@ -30,6 +30,36 @@ test('Sticky Section-Kontextkopf: zeigt Standort + «Zitat kopieren» (Desktop 2
   await expect(zitatBtn).toBeVisible();
 });
 
+// P1-d — Currency-Chips im Leser-Kopf (Moat-Hebel 3). Der Chip steht schon im
+// prerenderten Kopf (CLS=0) UND im React-Kopf (geteilte Komponente ErlassLeserKopf,
+// beide Leser-Instanzen). BV ist aktuell + hat eine künftige Fassung → beide Chips;
+// BKV ist aktuell ohne künftige Fassung → nur der geprüft-Chip.
+test('Currency-Chips: «geltend geprüft am … (maschinell)» + «nächste Fassung ab …» (BV)', async ({ page }) => {
+  await warteReader(page, '/gesetze/bund/BV');
+  const header = page.locator('.lc-leser > header');
+  await expect(header.getByText(/geltend geprüft am \d{2}\.\d{2}\.\d{4} \(maschinell\)/)).toBeVisible();
+  await expect(header.getByText(/nächste Fassung ab \d{2}\.\d{2}\.\d{4}/)).toBeVisible();
+  // §8: kein «gültig»/«verifiziert» als eigenes Wort ausserhalb der zugelassenen Formel.
+  await expect(header.getByText(/\bgültig\b/)).toHaveCount(0);
+  await expect(header.getByText(/\bverifiziert\b/)).toHaveCount(0);
+});
+
+test('Currency-Chip: nur geprüft-Chip ohne künftige Fassung (BKV)', async ({ page }) => {
+  await warteReader(page, '/gesetze/bund/BKV');
+  const header = page.locator('.lc-leser > header');
+  await expect(header.getByText(/geltend geprüft am \d{2}\.\d{2}\.\d{4} \(maschinell\)/)).toBeVisible();
+  await expect(header.getByText(/nächste Fassung ab/)).toHaveCount(0);
+});
+
+test('Currency-Chips brechen mobil @390 um — kein horizontaler Seiten-Overflow', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await warteReader(page, '/gesetze/bund/BV');
+  await expect(page.locator('.lc-leser > header').getByText(/geltend geprüft am/)).toBeVisible();
+  const overflow = await page.evaluate(() =>
+    document.documentElement.scrollWidth > document.documentElement.clientWidth + 1);
+  expect(overflow).toBe(false);
+});
+
 test('«Zitat kopieren»: deterministisches Zitat (Kürzel + SR + Stand) in die Zwischenablage', async ({ page, context }) => {
   await context.grantPermissions(['clipboard-read', 'clipboard-write']);
   await page.setViewportSize({ width: 1440, height: 900 });

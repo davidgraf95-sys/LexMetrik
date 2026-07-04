@@ -65,6 +65,11 @@ export function istRisikoPfad(p: string): boolean {
   if (p.startsWith('scripts/normtext/')) return true;
   if (p === 'scripts/normtext-snapshot.ts' || p === 'scripts/normtext-entscheide.ts') return true;
   if (p.startsWith('src/lib/normtext/')) return true;
+  // Fedlex-Portfolio (FAHRPLAN-FEDLEX-PORTFOLIO Paket 1): die Wurzel-Skripte
+  // scripts/fedlex-*.{sh,ts} (cache.sh-Pins, versionen-pruefen, wiedervorlage-
+  // generieren, sparql-Helfer) steuern Currency/Extraktion = Risiko-Pfad. Ohne
+  // diesen Glob triggern reine cache.sh/pins-Edits das Gegenprüfungs-Tor NICHT.
+  if (p.startsWith('scripts/fedlex-')) return true;
   // QS-DATA (FAHRPLAN-DATENHALTUNG §4/§5 E1): Datenhaltungs-Schicht = Extraktion/Projektion
   // = Risiko-Pfad. Das Dump-Manifest bindet den DB-Zustand mit (Drift-Anker).
   if (p.startsWith('scripts/datenhaltung/')) return true;

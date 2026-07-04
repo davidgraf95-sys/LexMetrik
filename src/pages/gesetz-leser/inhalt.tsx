@@ -9,8 +9,8 @@ import { useMeldeInhaltsKopf } from '../../components/layout/InhaltsKopfKontext'
 import type { InternRefs } from '../../components/NormText';
 import { trenneAenderungshistorie, labelMitBereich, randtitelKnoten } from '../../lib/normtext/darstellung';
 import {
-  ladeBrowseManifest, ladeErlass, ladeErlassDatei, ladeStruktur, ladeErlassKopf, ladeKantonSystematik,
-  baueGliederungsbaum, type Sektion, type StrukturMap, type ErlassKopf,
+  ladeBrowseManifest, ladeErlass, ladeErlassDatei, ladeStruktur, ladeErlassKopf, ladeKantonSystematik, ladeCurrency,
+  baueGliederungsbaum, type Sektion, type StrukturMap, type ErlassKopf, type CurrencyMap,
 } from '../../lib/normtext/browse';
 import { sachgruppe, topTitel, type KantonSystematik } from '../../lib/normtext/systematik';
 import { GEBIET_LABEL } from '../../lib/normtext/register';
@@ -50,6 +50,8 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   const [struktur, setStruktur] = useState<StrukturMap | null>(null);
   const [kopf, setKopf] = useState<ErlassKopf | null>(null);
   const [manifest, setManifest] = useState<BrowseManifest | null>(null);
+  // P1-d: Currency-Sidecar (geltend-geprüft-Datum + angekündigte Fassung je Erlass-Key).
+  const [currency, setCurrency] = useState<CurrencyMap | null>(null);
   // Leitfall-Shard des Erlasses: GENAU EIN idle-Fetch auf Reader-Ebene (V1a-
   // Endzustand nach CI-Befund W2·7-VZUI) — die ~1000 LeitfallZeilen grosser
   // Erlasse sind reine Renderer und erhalten ihre Treffer als Prop. Ergebnis an
@@ -237,6 +239,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   useEffect(() => {
     let lebt = true;
     void ladeBrowseManifest().then((m) => { if (lebt) setManifest(m); });
+    void ladeCurrency().then((c) => { if (lebt) setCurrency(c); });
     void ladeStruktur(ebene, schluessel).then((s) => { if (lebt) setStruktur(s); });
     void ladeErlassKopf(ebene, schluessel).then((k) => { if (lebt) setKopf(k); });
     // N13: Systematik-Bäume nur für die Kanton-Lesesicht laden; fehlen sie, bleibt
@@ -738,7 +741,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
             G2b: EINE Kopf-Komponente (ErlassLeserKopf) — hier ohne Options-Leiste,
             da am eingebetteten PDF Linien/Fussnoten/Verweise wirkungslos wären
             (keine toten Steuerelemente, §13 F4). */}
-        <ErlassLeserKopf erlass={erlass} artikelAnzahl={null}
+        <ErlassLeserKopf erlass={erlass} artikelAnzahl={null} currency={currency?.[erlass.key]}
           overline={`${erlass.ebene === 'bund' ? 'Staatsvertrag' : `Kanton ${erlass.kanton}`} · amtliches PDF`}
           hinweis="Amtliches PDF — massgeblich ist die amtliche Fassung"
           aktionen={
@@ -925,7 +928,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
           → PaneKopf. Kein zweiter Inline-Breadcrumb mehr (sonst Dopplung im Pane).
           G2b: EINE Kopf-Komponente (ErlassLeserKopf) — dieselbe wie im pdf-embed-
           Pfad; sie trägt die Options-Leiste (Linien/Fussnoten/Verweise). */}
-      <ErlassLeserKopf erlass={erlass} artikelAnzahl={eintraege.length}
+      <ErlassLeserKopf erlass={erlass} artikelAnzahl={eintraege.length} currency={currency?.[erlass.key]}
         overline={erlass.rechtsgebiet === 'international'
           ? (overlineGebiet ?? 'Staatsvertrag')
           : `${erlass.ebene === 'bund' ? 'Bundesgesetz' : `Kanton ${erlass.kanton}`}${overlineGebiet ? ` · ${overlineGebiet}` : ''}`}

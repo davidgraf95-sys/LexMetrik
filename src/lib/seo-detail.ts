@@ -258,14 +258,23 @@ function bloeckeHtml(
 
 /** Volltext-HTML eines Erlasses: Kopf (Identität + Live-Link) + alle Artikel.
  *  Eine <h1>; Artikel als <article><h2>. */
-export function erlassVolltextHtml(e: BrowseErlass, datei: NormSnapshotDatei): string {
+export function erlassVolltextHtml(
+  e: BrowseErlass,
+  datei: NormSnapshotDatei,
+  currency?: { geprueftAm?: string; naechsteFassungAb?: string },
+): string {
   const srZeile = e.sr ? ` · SR ${esc(e.sr)}` : '';
+  // P1-d: Currency-Chips schon im prerenderten Kopf (CLS=0, kein async-Einwachsen;
+  // §15/2). Wortfeld «geltend geprüft am … (maschinell)» = zugelassene Formel.
+  const geprueft = currency?.geprueftAm ? ` · geltend geprüft am ${esc(currency.geprueftAm)} (maschinell)` : '';
+  const kuenftig = currency?.naechsteFassungAb ? ` · nächste Fassung ab ${esc(currency.naechsteFassungAb)}` : '';
   const kopf =
     `<header><nav aria-label="Brotkrumen"><a href="/gesetze">Gesetze</a> › ` +
     `<a href="/gesetze">${esc(gebietLabel(e.rechtsgebiet))}</a> › ${esc(e.kuerzel)}</nav>` +
     `<h1>${esc(e.kuerzel)} — ${esc(e.titel)}</h1>` +
     `<p>${esc(e.kuerzel)}${srZeile} · Stand ${esc(e.stand)} · ` +
-    `<a href="${esc(e.quelleUrl)}" rel="nofollow noopener" target="_blank">amtliche Fassung (geltend)</a></p>` +
+    `<a href="${esc(e.quelleUrl)}" rel="nofollow noopener" target="_blank">amtliche Fassung (geltend)</a>` +
+    `${geprueft}${kuenftig}</p>` +
     `</header>`;
   const artikel = datei.eintraege
     .map((a) => {

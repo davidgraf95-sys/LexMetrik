@@ -186,6 +186,14 @@ const entscheidManifest = (
 const materialManifest = (
   JSON.parse(readFileSync(join(PUBLIC, 'materialien', 'register.json'), 'utf8')) as { materialien: BrowseMaterial[] }
 ).materialien;
+// P1-d: Currency-Sidecar für die prerenderten Kopf-Chips (fehlt sie, kein Chip).
+const currencyMap = ((): Record<string, { geprueftAm?: string; naechsteFassungAb?: string }> => {
+  try {
+    return JSON.parse(readFileSync(join(PUBLIC, 'normtext', 'currency.json'), 'utf8'));
+  } catch {
+    return {};
+  }
+})();
 
 const snapshotErlasse = erlassManifest.filter((e) => e.status === 'snapshot');
 // Verweis-Einträge (vollständiges Urteil zu einem BGE) haben kein eigenes File —
@@ -253,7 +261,7 @@ for (const e of snapshotErlasse) {
       erlassUebersprungen++;
       continue;
     }
-    const inhalt = erlassVolltextHtml(e, datei);
+    const inhalt = erlassVolltextHtml(e, datei, currencyMap[e.key]);
     if (inhalt.includes('<script')) throw new Error('Inline-Script im Erlass-Volltext — Builder prüfen');
     const meta = metaFuerErlass(e);
     const html = rendereTemplate(meta, jsonLdFuerErlass(e), inhalt, meta.pfad);

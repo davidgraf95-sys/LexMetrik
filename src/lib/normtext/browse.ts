@@ -29,6 +29,34 @@ export async function ladeKantonSystematik(): Promise<Record<string, KantonSyste
   return systematikPromise;
 }
 
+// ── Currency-Sidecar (P1-d): geltend-geprüft-Datum + angekündigte Fassung ────
+/** Ein Currency-Eintrag je Erlass-Key (public/normtext/currency.json). */
+export interface CurrencyEintrag {
+  /** Laufdatum des letzten maschinellen Fedlex-Currency-Abgleichs (ISO). */
+  geprueftAm: string;
+  /** Falls Fedlex eine künftige Konsolidierung angekündigt hat (ISO). */
+  naechsteFassungAb?: string;
+}
+export type CurrencyMap = Record<string, CurrencyEintrag>;
+
+let currencyPromise: Promise<CurrencyMap> | null = null;
+
+/** Lädt currency.json einmal (gecacht). Fehlt sie, ist die Map leer (kein Chip). */
+export async function ladeCurrency(): Promise<CurrencyMap> {
+  if (!currencyPromise) {
+    currencyPromise = (async () => {
+      try {
+        const res = await fetch('/normtext/currency.json');
+        if (!res.ok) return {};
+        return (await res.json()) as CurrencyMap;
+      } catch {
+        return {};
+      }
+    })();
+  }
+  return currencyPromise;
+}
+
 export async function ladeBrowseManifest(): Promise<BrowseManifest | null> {
   if (!manifestPromise) {
     manifestPromise = (async () => {
