@@ -29,8 +29,9 @@ import { holeHtm } from './adapter-htm.ts';
 import { holeZhPdf } from './adapter-zh-pdf.ts';
 import { holePdf, PDF_PROFILE } from './adapter-pdf.ts';
 import { pdfLawIdSafe } from './lawid-safe.ts';
-import { pruefeBundFassung, pruefeBundVollstaendigkeit } from './drift-logik.ts';
-import type { NormSnapshot } from './drift-logik.ts';
+import { pruefeBundFassung, pruefeBundVollstaendigkeit, pruefeCoverage } from './drift-logik.ts';
+import type { NormSnapshot, RegisterEintragLite } from './drift-logik.ts';
+import { PDF_EMBED_QUELLEN } from '../../src/lib/normtext/pdf-embed.ts';
 
 // lawIdSafe für HTM-Quellen (kongruent zu normtext-snapshot.ts).
 function htmLawIdSafe(url: string): string {
@@ -154,12 +155,33 @@ async function main(): Promise<void> {
     exitCode = 1;
   }
 
+  // ─── Prüfung 2b: Coverage-Assertion (offline, P1-b) ────────────────────────
+  // Kein gehosteter Bund-Volltext ohne Currency-Überwachung. Register-SSoT.
+  let coverageStatus = 'ok';
+  const registerPfad = 'public/normtext/register.json';
+  if (existsSync(registerPfad)) {
+    const register = JSON.parse(readFileSync(registerPfad, 'utf8')) as {
+      erlasse: RegisterEintragLite[];
+    };
+    const pinEliSet = new Set(cacheEintraege.map((e) => e.eli));
+    const pdfEmbedKeys = new Set(PDF_EMBED_QUELLEN.map((q) => q.key));
+    const luecken = pruefeCoverage(register.erlasse ?? [], pinEliSet, pdfEmbedKeys);
+    if (luecken.length > 0) {
+      console.error('\nFEHLER Coverage: gehosteter Bund-Volltext ohne Currency-Pin:');
+      for (const l of luecken) console.error(`  ${l.key}: ${l.grund}`);
+      coverageStatus = `${luecken.length} ungepinnt`;
+      exitCode = 1;
+    }
+  } else {
+    coverageStatus = 'übersprungen (register.json fehlt)';
+  }
+
   // ─── Report Prüfung 1+2 ────────────────────────────────────────────────────
   const gepruefte = snapshots.filter((s) => s.id.startsWith('bund/')).length;
   const driftStatus = mismatches.length === 0 ? 'ok' : `${mismatches.length} Mismatch(es)`;
   const fehlendStatus = fehlend.length === 0 ? 'ok' : `${fehlend.length} fehlend`;
   console.log(
-    `check:normtext (offline): ${gepruefte} Bund-Snapshots geprüft — Drift: ${driftStatus}, Fehlend: ${fehlendStatus}`,
+    `check:normtext (offline): ${gepruefte} Bund-Snapshots geprüft — Drift: ${driftStatus}, Fehlend: ${fehlendStatus}, Coverage: ${coverageStatus}`,
   );
 
   // ─── Prüfung 3: Kanton-Drift (NETZ) ────────────────────────────────────────

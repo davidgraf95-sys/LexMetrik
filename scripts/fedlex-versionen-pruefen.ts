@@ -22,8 +22,23 @@
 // SSoT §5: die Pin-Liste wird aus scripts/fedlex-cache.sh geparst — die
 // Parse-Logik liegt einmal in scripts/fedlex-pins.ts (auch vom Gegenprüfungs-Tor genutzt).
 import { lesePins, type Pin } from './fedlex-pins';
+import { PDF_EMBED_QUELLEN } from '../src/lib/normtext/pdf-embed.ts';
 
 const ENDPOINT = 'https://fedlex.data.admin.ch/sparqlendpoint';
+
+// P1-b (QS-CURRENCY): die 'pdf-embed'-Erlasse (EMRK, NYÜ) waren im Versions-
+// Monitoring strukturell blind — check:fedlex-versionen sah nur lesePins()
+// (cache.sh). Zweite Quelle additiv aus PDF_EMBED_QUELLEN (trägt eli+kons als
+// YYYYMMDD) in dieselbe SPARQL-Currency-Prüfung mergen; die Filestore-Integrität
+// bleibt zusätzlich in check:pdf(-netz). lesePins()-Signatur unverändert
+// (auch vom Gegenprüfungs-Tor genutzt).
+function lesePdfEmbedPins(): Pin[] {
+  return PDF_EMBED_QUELLEN.map((q) => ({
+    name: `${q.key.toLowerCase()} [pdf-embed]`,
+    eli: q.eli,
+    kons: `${q.kons.slice(0, 4)}-${q.kons.slice(4, 6)}-${q.kons.slice(6, 8)}`,
+  }));
+}
 
 async function frageKonsolidierungen(pins: Pin[]): Promise<Map<string, string[]>> {
   const werte = pins.map((p) => `<https://fedlex.data.admin.ch/eli/${p.eli}>`).join(' ');
@@ -57,11 +72,13 @@ SELECT ?abstract ?date WHERE {
 }
 
 // ─── Lauf ────────────────────────────────────────────────────────────────────
-const pins = lesePins();
-if (pins.length === 0) {
+const cachePins = lesePins();
+if (cachePins.length === 0) {
   console.error('FEHLER: keine EINTRAEGE in scripts/fedlex-cache.sh gefunden (Format geändert?).');
   process.exit(2);
 }
+// cache.sh-Pins UND PDF-Embed-Pins gemeinsam prüfen (DoD: beide Pin-Quellen).
+const pins = [...cachePins, ...lesePdfEmbedPins()];
 
 const jetzt = new Date();
 const heute = `${jetzt.getFullYear()}-${String(jetzt.getMonth() + 1).padStart(2, '0')}-${String(jetzt.getDate()).padStart(2, '0')}`;
@@ -77,7 +94,7 @@ try {
 let ueberholt = 0;
 let angekuendigt = 0;
 
-console.log(`Fedlex-Versions-Monitoring: ${pins.length} gepinnte Gesetze (heute: ${heute})\n`);
+console.log(`Fedlex-Versions-Monitoring: ${pins.length} gepinnte Gesetze (${cachePins.length} cache.sh + ${pins.length - cachePins.length} pdf-embed; heute: ${heute})\n`);
 for (const pin of pins) {
   const daten = konsolidierungen.get(pin.eli);
   if (!daten || daten.length === 0) {
