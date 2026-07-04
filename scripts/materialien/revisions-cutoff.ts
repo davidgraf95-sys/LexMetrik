@@ -63,24 +63,41 @@ export const REVISIONS_CUTOFF: Readonly<Record<string, CutoffEintrag>> = {
     eli: 'https://www.fedlex.admin.ch/eli/cc/2022/568/de',
     begruendung: 'In Kraft mit revDSG am 1.9.2023 (AS 2022 568); Korpus-Stand 2025-12-01.',
   },
-  // ── MWST-Teilrevision: in Kraft 1.1.2025 (AS 2024 438) — konservativ (Liste = M1) ──
+  // ── MWST-Teilrevision: in Kraft 1.1.2025 (AS 2024 438 / AS 2024 485) ──
+  // Kuratierte Revisions-Artikel-Listen (M1-Posten, erhoben 4.7.2026, DOPPELT verifiziert über zwei
+  // unabhängige Routen: (A) mod-Ziele der AS-Änderungserlasse [eli/oc/2024/438 bzw. /485, AKN-XML]
+  // × (B) Fussnoten «in Kraft/mit Wirkung seit 1. Jan. 2025» der gepinnten Konsolidierungen
+  // [cc/2009/615@20250331 bzw. cc/2009/828@20250101]. MWSTG: A == B (34 Artikel). MWSTV: B ⊂ A;
+  // Liste = UNION (konservativ, §1 — A-Zusätze 76a–d/111b/112 sind mod-Ziele mit abweichendem/
+  // gestaffeltem Inkrafttreten; ein Downgrade zu viel ist sicher, einer zu wenig nicht).
+  // Token-Format = Korpus-Token (20a → '20_a').
   MWSTG: {
     art: 'cutoff',
     datum: '2025-01-01',
-    artikelListe: null, // konservativ: Cutoff für ALLE Artikel, bis die Revisions-Liste erhoben ist (M1).
-    norm: 'MWSTG (Teilrevision 2025)',
+    artikelListe: [
+      '1', '3', '5', '8', '10', '13', '15', '18', '20_a', '21', '23', '24', '25', '29', '35',
+      '35_a', '40', '45', '53', '63', '67', '73', '74', '79_a', '86', '86_a', '87', '88', '93',
+      '93_a', '94', '107', '108', '115_b',
+    ],
+    norm: 'MWSTG (Teilrevision vom 16. Juni 2023)',
     sr: '641.20',
     eli: 'https://www.fedlex.admin.ch/eli/cc/2009/615/de',
-    begruendung: 'Teilrevision in Kraft 1.1.2025 (AS 2024 438); Korpus-Stand 2025-03-31. Konservativ (§1).',
+    begruendung: 'Teilrevision in Kraft 1.1.2025 (AS 2024 438, https://www.fedlex.admin.ch/eli/oc/2024/438/de); Korpus-Stand 2025-03-31. Artikel-Liste doppelt erhoben 4.7.2026 (AS-Mods × Konsolidierungs-Fussnoten, deckungsgleich).',
   },
   MWSTV: {
     art: 'cutoff',
     datum: '2025-01-01',
-    artikelListe: null, // analog konservativ.
-    norm: 'MWSTV (Teilrevision 2025)',
+    artikelListe: [
+      '4_a', '17_a', '18', '19', '20', '29', '35', '38', '43_a', '44', '48_e', '61', '63', '75',
+      '76_a', '76_b', '76_c', '76_d', '77', '78', '79', '81', '82', '83', '84', '85', '86', '87',
+      '88', '89', '90', '91', '92', '93', '94', '95', '97', '98', '99', '99_a', '107', '111_a',
+      '111_b', '112', '113', '118', '120', '121_a', '123', '127', '140', '140_a', '150', '151',
+      '153', '155', '166_d', '166_e',
+    ],
+    norm: 'MWSTV (Änderung vom 21. August 2024)',
     sr: '641.201',
     eli: 'https://www.fedlex.admin.ch/eli/cc/2009/828/de',
-    begruendung: 'Teilrevision in Kraft 1.1.2025 analog MWSTG; Korpus-Stand 2025-01-01. Konservativ (§1).',
+    begruendung: 'Änderung in Kraft 1.1.2025 (AS 2024 485, https://www.fedlex.admin.ch/eli/oc/2024/485/de); Korpus-Stand 2025-01-01. Artikel-Liste doppelt erhoben 4.7.2026 (AS-Mods × Konsolidierungs-Fussnoten, Union — konservativ §1).',
   },
   // ── Kein Gesamtrevisions-Cutoff (artikelscharfe Kanten zulässig) ──
   ARG: { art: 'kein-cutoff', norm: 'ArG', sr: '822.11', eli: 'https://www.fedlex.admin.ch/eli/cc/1966/57_57_57/de', begruendung: KEIN_CUTOFF_GRUND },

@@ -51,9 +51,17 @@ describe('mwstDoktyp / mwstAnzeigeNummer', () => {
     expect(DOKTYP_LABEL['mwst-info']).toBeTruthy();
     expect(DOKTYP_LABEL['mwst-branchen-info']).toBeTruthy();
   });
-  it('Anzeige-Nummer verbatim-nah, ohne Null-Polsterung', () => {
-    expect(mwstAnzeigeNummer('MI', 9)).toBe('MWST-Info 9');
-    expect(mwstAnzeigeNummer('MI', '09')).toBe('MWST-Info 9');
-    expect(mwstAnzeigeNummer('BI', 27)).toBe('MWST-Branchen-Info 27');
+  it('Anzeige-Nummer «Nr. NN» (Art steckt im doktypLabel — keine Overline-Doppelung)', () => {
+    expect(mwstAnzeigeNummer('MI', 9)).toBe('Nr. 09');
+    expect(mwstAnzeigeNummer('MI', '09')).toBe('Nr. 09');
+    expect(mwstAnzeigeNummer('BI', 27)).toBe('Nr. 27');
+  });
+  it('keine Kollision mit kuratierten ESTV-Nummern (Dubletten-Tor §2.6)', () => {
+    const kuratierteEstvNummern = new Set(
+      MATERIAL_REGISTER.filter((r) => r.behoerde === 'ESTV' && r.nummer).map((r) => r.nummer as string),
+    );
+    for (let n = 1; n <= 27; n++) {
+      expect(kuratierteEstvNummern.has(mwstAnzeigeNummer('BI', String(n).padStart(2, '0')))).toBe(false);
+    }
   });
 });

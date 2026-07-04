@@ -50,11 +50,12 @@ export function mwstDoktyp(art: MwstPubArt): DoktypId {
   return art === 'MI' ? 'mwst-info' : 'mwst-branchen-info';
 }
 
-/** Anzeige-Nummer je Publikationsart («MWST-Info 09» | «MWST-Branchen-Info 27»). Verbatim-nah zur
- *  amtlichen Bezeichnung; der Nummernblock hier OHNE Null-Polsterung (Anzeige, nicht Key). */
+/** Anzeige-Nummer = «Nr. <amtlicher zweistelliger Block>» («Nr. 02», «Nr. 27»). Die Publikationsart
+ *  steckt schon im doktypLabel («MWST-Info»/«MWST-Branchen-Info») — ein Art-Präfix in der Nummer
+ *  würde die Overline doppeln («MWST-Info MWST-Info 2», live gesehen 4.7.2026, Lesbarkeit). */
 export function mwstAnzeigeNummer(art: MwstPubArt, nummer: number | string): string {
-  const n = String(nummer).trim().replace(/^0+(?=\d)/, '');
-  return art === 'MI' ? `MWST-Info ${n}` : `MWST-Branchen-Info ${n}`;
+  void art; // Art fliesst bewusst NICHT in die Anzeige-Nummer (siehe oben)
+  return `Nr. ${nrBlock(nummer)}`;
 }
 
 /** true, wenn die Publikation bereits kuratiert im MATERIAL_REGISTER liegt (⇒ Adapter überspringt sie). */
