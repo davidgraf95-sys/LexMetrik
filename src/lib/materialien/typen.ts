@@ -53,6 +53,7 @@ export type DoktypId =
   | 'weisung' // alte ESTV-W-Serie (W95-002 …) — M4/ESTV-KS
   | 'rundschreiben'
   | 'mwst-info'
+  | 'mwst-branchen-info' // ESTV MWST-Branchen-Info (branchenspezifische MWST-Praxis) — M1/ESTV-MWST
   | 'wegleitung'
   | 'merkblatt'
   | 'leitfaden'
