@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-30",
+  "erzeugt": "2026-07-05",
   "eintraege": [
     {
       "id": "bund/RPG/art_1",
@@ -34,6 +34,14 @@
               "text": "die räumlichen Voraussetzungen für die Wirtschaft zu schaffen und zu erhalten;"
             },
             {
+              "marke": "bter",
+              "text": "die Zahl der Gebäude im Nichtbaugebiet zu stabilisieren;"
+            },
+            {
+              "marke": "bquater",
+              "text": "die Bodenversiegelung in den ganzjährig bewirtschafteten Landwirtschaftszonen nach Artikel 16 zu stabilisieren, soweit sie nicht landwirtschaftlich oder zur Ausübung touristischer Aktivitäten bedingt ist;"
+            },
+            {
               "marke": "c",
               "text": "das soziale, wirtschaftliche und kulturelle Leben in den einzelnen Landesteilen zu fördern und auf eine angemessene Dezentralisation der Besiedlung und der Wirtschaft hinzuwirken;"
             },
@@ -52,11 +60,11 @@
           ]
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_1",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
-      "sha": "4153a25bc47a4cce470434da5b0c5435d0dec722ff054370f72798a2576ec911"
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
+      "sha": "a474eb1caaaf28f3ecb6c15b778a450208c9846257d9a10223612005b9da9d61"
     },
     {
       "id": "bund/RPG/art_2",
@@ -79,10 +87,10 @@
           "text": "Die mit Planungsaufgaben betrauten Behörden achten darauf, den ihnen nachgeordneten Behörden den zur Erfüllung ihrer Aufgaben nötigen Ermessensspielraum zu lassen."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_2",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "485935075e078c6b950324bebb819da6263fedfff4ef3ce3e01e49cf14f2ecbc"
     },
     {
@@ -176,10 +184,10 @@
           "text": "Die Nutzungen des Untergrundes, insbesondere die Nutzungen von Grundwasser, Rohstoffen, Energie und baulich nutzbaren Räumen, sind frühzeitig aufeinander sowie auf die oberirdischen Nutzungen und die entgegenstehenden Interessen abzustimmen."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_3",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "2b0cdb8f2221474fdbc881763d024e28d5c16872dd42f62fd216277f4fd54b72"
     },
     {
@@ -203,10 +211,10 @@
           "text": "Die Pläne nach diesem Gesetz sind öffentlich."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_4",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "b3e8377c2d3266bd95f730f7e3c909da75c66e09c14dfe3b44db97ce0f6c64bc"
     },
     {
@@ -260,11 +268,38 @@
           "text": "Die Kantone können vorschreiben, dass die Auszahlung von Entschädigungen bei Eigentumsbeschränkungen im Grundbuch anzumerken ist."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_5",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "c47e283d59c91a9e850194c9aa2f0cc3aab1fdfe67f2fc901150f97f19d5a700"
+    },
+    {
+      "id": "bund/RPG/art_5_a",
+      "ebene": "bund",
+      "quelle": "RPG",
+      "erlass": "RPG",
+      "artikel": "5_a",
+      "artikelLabel": "Art. 5a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eigentümer von Bauten und Anlagen, die ausserhalb der Bauzonen liegen, erhalten bei deren Abbruch eine Abbruchprämie in der Höhe der Abbruchkosten unter Ausschluss allfälliger Aufwendungen für die Entsorgung von Spezialabfällen oder Altlasten, ausser wenn eine anderweitige gesetzliche Pflicht zur Tragung der Beseitigungskosten besteht. Bei der Beseitigung von Bauten und Anlagen ohne landwirtschaftliche oder touristische Nutzung wird die Abbruchprämie nur ausgerichtet, wenn kein Ersatzneubau erstellt wird."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kantone finanzieren die Abbruchprämie primär mit den Erträgen aus der Abgabe gemäss Artikel 5 Absatz 1, darüber hinaus mit allgemeinen Finanzmitteln."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bund kann Beiträge an die Aufwendungen der Kantone leisten. Der Bundesrat regelt die Einzelheiten. Er berücksichtigt dabei die unterschiedlichen Voraussetzungen der Kantone, insbesondere die Ergiebigkeit der Mehrwertabgabe."
+        }
+      ],
+      "stand": "2026-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_5_a",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
+      "sha": "6764eaf45f799c7f06aa56baceaf2be60e7c5e4f2b200d41efbb62456cf3625e"
     },
     {
       "id": "bund/RPG/art_6",
@@ -322,20 +357,28 @@
             },
             {
               "marke": "c",
-              "text": "ihres Kulturlandes."
+              "text": "ihres Kulturlandes;"
+            },
+            {
+              "marke": "d",
+              "text": "der Anzahl Gebäude ausserhalb der Bauzonen;"
+            },
+            {
+              "marke": "e",
+              "text": "der Bodenversiegelung in der ganzjährig bewirtschafteten Landwirtschaftszone nach Artikel 16, soweit sie nicht landwirtschaftlich oder zur Ausübung touristischer Aktivitäten bedingt ist."
             }
           ]
         },
         {
           "absatz": "4",
-          "text": "Sie berücksichtigen die Konzepte und Sachpläne des Bundes, die Richtpläne der Nachbarkantone sowie regionale Entwicklungskonzepte und Pläne."
+          "text": "Sie berücksichtigen insbesondere die Konzepte und Sachpläne des Bundes, die Richtpläne der Nachbarkantone, die Bundesinventare sowie regionale Entwicklungskonzepte und Pläne nach Massgabe ihrer Verbindlichkeit."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_6",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
-      "sha": "bd412dfc6f5004598d8970e1e25b3c369f671c867589588dc098ebc5ad0bdfda"
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
+      "sha": "4f043b1cdf6e785d3d970a1b0b1ad48f442b868b3099a60a168139318840b136"
     },
     {
       "id": "bund/RPG/art_7",
@@ -358,10 +401,10 @@
           "text": "Die Grenzkantone suchen die Zusammenarbeit mit den regionalen Behörden des benachbarten Auslandes, soweit sich ihre Massnahmen über die Grenzen auswirken können."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_7",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "f8c6ea399f2fc50555a052ff91634e1b2d4e65d921ae3da07e1fac22153ddcd9"
     },
     {
@@ -399,10 +442,10 @@
           "text": "Vorhaben für die Nutzung erneuerbarer Energien können unabhängig von der Festlegung eines Gebiets oder einer Gewässerstrecke nach Artikel 8b des vorliegenden Gesetzes und nach Artikel 10 Absatz 1 EnG geplant und bewilligt werden."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_8",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "3c9c53bf7a5c16ce832d71741e17734ae1761479d0faf42dc72b2c8ebd639601"
     },
     {
@@ -444,10 +487,10 @@
           "text": "und 3 …"
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_8_a",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "f275d88246205e56030ed9f134d59c6c7815f49c32497425cd9ed7082d158a56"
     },
     {
@@ -463,11 +506,89 @@
           "text": "Der Richtplan bezeichnet die für die Nutzung erneuerbarer Energien geeigneten Gebiete und Gewässerstrecken."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_8_b",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "513b84b8f8d9827e19faebf91eb53d38a2e2e402ddeb5f6db41ac038ded6f763"
+    },
+    {
+      "id": "bund/RPG/art_8_c",
+      "ebene": "bund",
+      "quelle": "RPG",
+      "erlass": "RPG",
+      "artikel": "8_c",
+      "artikelLabel": "Art. 8c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kantone können im Richtplan bestimmte Gebiete bezeichnen, in denen aufgrund einer räumlichen Gesamtkonzeption ausserhalb der Bauzonen Zonen nach Artikel 18bis mit zu kompensierenden Nutzungen zulässig sind, sofern:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Ausscheidung solcher Zonen im Hinblick auf die Ziele und Grundsätze der Raumplanung zu einer Verbesserung der Gesamtsituation im betreffenden Gebiet führt; und"
+            },
+            {
+              "marke": "b",
+              "text": "Aufträge für die Nutzungsplanung erteilt werden, die erforderlichen Kompensations- und Aufwertungsmassnahmen vorzusehen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Unter Berücksichtigung der Grundsätze nach Absatz 1 können die Kantone in ihrem Richtplan besondere Gebiete bestimmen, in welchen sie die Umnutzung nicht mehr benötigter landwirtschaftlicher Bauten zur Wohnnutzung vorsehen."
+        },
+        {
+          "absatz": "3",
+          "text": "Im Richtplan ist mindestens festzulegen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "welche Verbesserung der Gesamtsituation mit der Ausscheidung solcher Zonen erreicht und welche übergeordneten Ziele damit konkret verfolgt werden sollen und die Gründe dafür;"
+            },
+            {
+              "marke": "b",
+              "text": "wie im jeweiligen Gebiet die Gesamtkonzeption in der Nutzungsplanung konkret umgesetzt wird."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_8_c",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
+      "sha": "0365bfd0adcc34e4cb14c29d8b5b5e83c9a9d3f5e471838fef6691b535ac05ed"
+    },
+    {
+      "id": "bund/RPG/art_8_d",
+      "ebene": "bund",
+      "quelle": "RPG",
+      "erlass": "RPG",
+      "artikel": "8_d",
+      "artikelLabel": "Art. 8d",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kantone legen in ihrem Richtplan ein Gesamtkonzept zur Erreichung der Stabilisierungsziele nach Artikel 1 Absatz 2 Buchstaben bter und bquater fest und erteilen die entsprechenden Aufträge, insbesondere zur Ausrichtung und Finanzierung der Abbruchprämien gemäss Artikel 5a Absatz 1. Massgebend für die Beurteilung der Zielerreichung ist der Vergleich mit dem Stand am 29. September 2023."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei der Beurteilung der Erreichung des Ziels nach Artikel 1 Absatz 2 Buchstabe bter sind die geschützten Gebäude und die Gebäude, die nach dem 29. September 2023 einer Bauzone zugewiesen worden sind, nicht zu berücksichtigen. Bei der Beurteilung der Erreichung des Ziels nach Artikel 1 Absatz 2 Buchstabe bquater ist die Bodenversiegelung, die durch Energieanlagen oder kantonale oder nationale Verkehrsanlagen bedingt ist, nicht zu berücksichtigen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Erreichung der Stabilisierungsziele nach Artikel 1 Absatz 2 Buchstaben bter und bquater ist periodisch zu überprüfen und die Richtplaninhalte gemäss Absatz 1 gegebenenfalls anzupassen."
+        },
+        {
+          "absatz": "4",
+          "text": "Ergibt die Überprüfung eine Verfehlung der Stabilisierungsziele, ordnet der Bundesrat die sinngemässe Anwendung von Artikel 38b an."
+        }
+      ],
+      "stand": "2026-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_8_d",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
+      "sha": "314d9da0ffc0ed66bb465830acd78432cb28bf0c62440e3699409c7be19ff7c8"
     },
     {
       "id": "bund/RPG/art_9",
@@ -490,10 +611,10 @@
           "text": "Richtpläne werden in der Regel alle zehn Jahre gesamthaft überprüft und nötigenfalls überarbeitet."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_9",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "0b02cba862fdd8c0af77741f5e1957a88627ecf1e148f639bb55ea891c02a867"
     },
     {
@@ -513,10 +634,10 @@
           "text": "Sie regeln, wie die Gemeinden, andere Träger raumwirksamer Aufgaben sowie die beschwerdeberechtigten Umwelt-, Natur- und Heimatschutzorganisationen nach Artikel 55 des Umweltschutzgesetzes vom 7. Oktober 1983 und nach Artikel 12 des Bundesgesetzes vom 1. Juli 1966 über den Natur- und Heimatschutz beim Erarbeiten der Richtpläne mitwirken."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_10",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "ed9a34cc70e83a6b00e00e6a7527729d7119cbf80bdeb42dcbf225a2c005b7f0"
     },
     {
@@ -536,10 +657,10 @@
           "text": "Für den Bund und die Nachbarkantone werden Richtpläne erst mit der Genehmigung durch den Bundesrat verbindlich."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_11",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "0b2159f7341bd0e1171ebccebfa81cb4b394fca2db80691e6175d5a000ff6995"
     },
     {
@@ -563,10 +684,10 @@
           "text": "Kommt keine Einigung zustande, so entscheidet der Bundesrat, spätestens drei Jahre nachdem er die Einigungsverhandlung angeordnet hat."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_12",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "6d46011c517c7b40309770fa02ac9786fc36dfe359b2032942f8cc6de3e6879c"
     },
     {
@@ -586,10 +707,10 @@
           "text": "Er arbeitet mit den Kantonen zusammen und gibt ihnen seine Konzepte, Sachpläne und Bauvorhaben rechtzeitig bekannt."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_13",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "d5989ec8ebada270750d543d992912188b4ab23236f8013143d93076ad2ff592"
     },
     {
@@ -609,10 +730,10 @@
           "text": "Sie unterscheiden vorab Bau-, Landwirtschafts- und Schutzzonen."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_14",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "640176de7557e42ec3e728149fc563f8a51a04ca89b9efd58df1b1186d3af47f"
     },
     {
@@ -670,10 +791,10 @@
           "text": "Bund und Kantone erarbeiten zusammen technische Richtlinien für die Zuweisung von Land zu den Bauzonen, namentlich die Berechnung des Bedarfs an Bauzonen."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_15",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "607a7894f575fb6b30b8702600d4a9df7b99d717c7cf7d2d9cabf27c9b03fa9e"
     },
     {
@@ -693,10 +814,10 @@
           "text": "Das kantonale Recht sieht vor, dass, wenn das öffentliche Interesse es rechtfertigt, die zuständige Behörde eine Frist für die Überbauung eines Grundstücks setzen und, wenn die Frist unbenützt verstreicht, bestimmte Massnahmen anordnen kann."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_15_a",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "f4dde5185b7d77964c94f95f523b287a7e7b323233008bb6be366ef7d5ef745a"
     },
     {
@@ -738,10 +859,10 @@
           "text": "Der Bundesrat legt fest, in welchen Fällen ausserhalb der Bauzonen bezüglich Geruchs- und Lärmimmissionen aus der Landwirtschaft Erleichterungen von den Bestimmungen des Umweltschutzgesetzes vom 7. Oktober 1983 zulässig sind, um den Vorrang der Landwirtschaft zu gewährleisten."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_16",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "c5b98d4d4e1b6f1b74a065ee7f1738d76cd733cb2b6aebf00c03b1e6c58bc1bf"
     },
     {
@@ -783,10 +904,10 @@
           "text": "Bauten und Anlagen, die über eine innere Aufstockung hinausgehen, können als zonenkonform bewilligt werden, wenn sie in einem Gebiet der Landwirtschaftszone erstellt werden sollen, das vom Kanton in einem Planungsverfahren dafür freigegeben wird."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_16_a",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "81a8017be8d8f4ba37212b22f60cd1f5c745889482685dfcbf54505042ef6cde"
     },
     {
@@ -814,10 +935,10 @@
           "text": "Der Bundesrat regelt die Einzelheiten."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_16_a_bis",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "c075bb85e2822399f868864af2aac1c205d969d24b37ae45785bc67cd297d9d8"
     },
     {
@@ -837,10 +958,10 @@
           "text": "Wurde die Bewilligung befristet oder mit einer auflösenden Bedingung erteilt, so sind die Bauten und Anlagen bei Wegfall der Bewilligung zu beseitigen, und der frühere Zustand ist wiederherzustellen."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_16_b",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "edce92f205ed0a1f76a2c790e1d418a48508c84dfe852f2bac8bf37d186fab8c"
     },
     {
@@ -878,10 +999,10 @@
           "text": "Statt Schutzzonen festzulegen, kann das kantonale Recht andere geeignete Massnahmen vorsehen."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_17",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "d1db8af99bbf6d002f10a49ac63b5c9a5046fc91ba678224b8fa843c505be616"
     },
     {
@@ -894,22 +1015,67 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das kantonale Recht kann weitere Nutzungszonen vorsehen."
+          "text": "Das kantonale Recht unterscheidet verschiedene Arten von Bauzonen und kann weitere Nutzungszonen ausserhalb der Bauzonen vorsehen."
+        },
+        {
+          "absatz": "1bis",
+          "text": "In solchen Nutzungszonen ausserhalb der Bauzonen können Bauten oder Anlagen für standortgebundene Nutzungen sowie andere Bauten und Anlagen, die in einem funktionellen Zusammenhang mit der Hauptnutzung stehen, zugelassen werden. Die Zulassung erlischt für sämtliche Bauten und Anlagen bei Wegfall der Hauptnutzung."
         },
         {
           "absatz": "2",
-          "text": "Es kann Vorschriften enthalten über Gebiete, deren Nutzung noch nicht bestimmt ist oder in denen eine bestimmte Nutzung erst später zugelassen wird."
+          "text": "Das kantonale Recht kann Vorschriften enthalten über Gebiete, deren Nutzung noch nicht bestimmt ist oder in denen eine bestimmte Nutzung erst später zugelassen wird."
         },
         {
           "absatz": "3",
           "text": "Das Waldareal ist durch die Forstgesetzgebung umschrieben und geschützt."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_18",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
-      "sha": "c9b852b557075a8acc87df305eaa2fa8745957a1a92f2bdc580df067e8827621"
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
+      "sha": "cffeb1455d581405ea3f7405a881442d0b9b4c024d6c67184ad42e0aefd51a43"
+    },
+    {
+      "id": "bund/RPG/art_18_bis",
+      "ebene": "bund",
+      "quelle": "RPG",
+      "erlass": "RPG",
+      "artikel": "18_bis",
+      "artikelLabel": "Art. 18bis",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Werden gestützt auf Artikel 8c Nichtbauzonen für nicht standortgebundene Nutzungen ausgeschieden, so sind die Voraussetzungen zu schaffen, dass diese Nutzungen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "mit den erforderlichen Kompensations- und Aufwertungsmassnahmen verbunden werden; und"
+            },
+            {
+              "marke": "b",
+              "text": "in der Summe zu einer Verbesserung der Gesamtsituation von Siedlungsstruktur, Landschaft, Baukultur, Kulturland und Biodiversität führen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Keine Kompensations- oder Aufwertungsmassnahmen sind erforderlich, wenn nach geltendem Recht ausserhalb solcher Zonen eine Bewilligung erteilt werden könnte."
+        },
+        {
+          "absatz": "3",
+          "text": "In Kleinsiedlungen sind innerhalb von Zonen nach diesem Artikel Bewilligungen von Umnutzungen und Nutzungserweiterungen ohne Kompensations- und Aufwertungsmassnahmen zugelassen."
+        },
+        {
+          "absatz": "4",
+          "text": "Im Bewilligungsverfahren ist zu überprüfen und sicherzustellen, dass die Voraussetzungen nach Absatz 1 erfüllt sind."
+        }
+      ],
+      "stand": "2026-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_18_bis",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
+      "sha": "1e5b3d55b36cc55120e0804a2a3814532913e9b441638fbcd83b41ff6fcb4a5f"
     },
     {
       "id": "bund/RPG/art_18_a",
@@ -950,10 +1116,10 @@
           "text": "Ansonsten gehen die Interessen an der Nutzung der Solarenergie auf bestehenden oder neuen Bauten den ästhetischen Anliegen grundsätzlich vor."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_18_a",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "9b1147da463d39e53e7ea6683666f4beacb3cd60b6707114af2a5423ae54726a"
     },
     {
@@ -973,10 +1139,10 @@
           "text": "Wasserkraftwerke und ihre Erschliessungsanlagen bedürfen keiner Grundlage in einem Nutzungsplan."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_18_b",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "6c487bb36b07ad036ae8c15ba39b3bfc9f73eaa0725c7656fc812c664bbac667"
     },
     {
@@ -1000,10 +1166,10 @@
           "text": "Erschliesst das Gemeinwesen Bauzonen nicht fristgerecht, so ist den Grundeigentümern zu gestatten, ihr Land nach den vom Gemeinwesen genehmigten Plänen selber zu erschliessen oder die Erschliessung durch das Gemeinwesen nach den Bestimmungen des kantonalen Rechts zu bevorschussen."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_19",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "0b496b4a8ae546d8659c8f82e5c6ad703603bde15cf4e1f224ca3f4211350ef0"
     },
     {
@@ -1019,10 +1185,10 @@
           "text": "Die Landumlegung kann von Amtes wegen angeordnet und auch durchgeführt werden, wenn Nutzungspläne dies erfordern."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_20",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "85ff18ea86380cc878ee62ba33c8f332bcbabac0020a62e9ede61053aa1b54e1"
     },
     {
@@ -1042,10 +1208,10 @@
           "text": "Haben sich die Verhältnisse erheblich geändert, so werden die Nutzungspläne überprüft und nötigenfalls angepasst."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_21",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "c4bff8e173ab92694f5e948953224aa6b5e48e908903c25839642e4add2e3527"
     },
     {
@@ -1079,10 +1245,10 @@
           "text": "Die übrigen Voraussetzungen des Bundesrechts und des kantonalen Rechts bleiben vorbehalten."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_22",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "85e3db99e124a0246ce60279e4e9165197a85d387c6051ac5afbb46b6f509b64"
     },
     {
@@ -1098,10 +1264,10 @@
           "text": "Ausnahmen innerhalb der Bauzonen regelt das kantonale Recht."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_23",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "91cae7bf52f43ee24148b6c1901d80164c22f475db658a89700d099d486b3de5"
     },
     {
@@ -1131,10 +1297,10 @@
           "text": "Der Bundesrat kann energetische Sanierungen für zulässig erklären, die keine Grundlage in einer anderen Bestimmung finden."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_24",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "d6ec423a62712a5d8363b5b5726dc70accc8a5a9ba14e287670efa50ccf493d2"
     },
     {
@@ -1158,10 +1324,10 @@
           "text": "Anpassungen, Erneuerungen und Erweiterungen bestehender Mobilfunkanlagen ausserhalb der Bauzone gelten als standortgebunden."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_24_bis",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "caa7990d45fc84dd99380b36a081678096a6f5bbfab22e2003e51ece6e2b13b5"
     },
     {
@@ -1209,10 +1375,10 @@
           "text": "Der Bundesrat regelt unter Berücksichtigung des Zubaubedarfs nach Artikel 2 des Energiegesetzes vom 30. September 2016 die Einzelheiten, insbesondere auch zur finanziellen Sicherstellung der Massnahmen nach Absatz 3."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_24_ter",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "39967e6e8c36918cd3c486c8bcb55d3b085a5e24135ffbd7c578b3c89bbe6f0d"
     },
     {
@@ -1246,10 +1412,10 @@
           "text": "Er kann festlegen, ab welcher Grösse und Bedeutung für die Bauten und Anlagen eine Planungspflicht besteht."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_24_quater",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "d7e4aafaf39f5c709bc372119d5fcdcde5fee29477f123e9acde6a9518f1f235"
     },
     {
@@ -1265,10 +1431,10 @@
           "text": "Thermische Netze, die für die Reduktion des Verbrauchs nicht erneuerbarer Energien einen Beitrag erbringen, können wenn nötig ausserhalb der Bauzonen bewilligt werden. Der Bundesrat regelt die Einzelheiten."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_24_quinquies",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "c42acae14953438a39beda8c1f6d77a2db7edb9eade8d17a23ddfce3766d76d5"
     },
     {
@@ -1298,10 +1464,10 @@
           "text": "Die Ausnahmebewilligung ist unter dem Vorbehalt zu erteilen, dass bei veränderten Verhältnissen von Amtes wegen neu verfügt wird."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_24_a",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "98848329cc4f26c3f2d394b6bab9d7990a3f725b5255916b3d5090886cc1a688"
     },
     {
@@ -1345,10 +1511,10 @@
           "text": "Die Bestimmungen des Bundesgesetzes vom 4. Oktober 1991 über das bäuerliche Bodenrecht betreffend die nichtlandwirtschaftlichen Nebengewerbe finden auf die Nebenbetriebe keine Anwendung."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_24_b",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "399be9333f54cbb0b9ceb85156ef32da05af1ce264bda41e035d2a0e90669604"
     },
     {
@@ -1380,10 +1546,10 @@
           "text": "In jedem Fall bleibt die Vereinbarkeit mit den wichtigen Anliegen der Raumplanung vorbehalten."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_24_c",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "a49d621639594f11ac1aa2c6aa70d6bb6a6f606d32394d3ec49ac819634cc3f1"
     },
     {
@@ -1443,10 +1609,10 @@
           "text": "Für Bauten, die am 1. Januar 1980 ganzjährig bewohnt waren und die nach Artikel 24c in ihrem Bestand geschützt sind, kann in Streusiedlungsgebieten nach Absatz 1 eine Zufahrt bewilligt werden, sofern sie ganzjährig bewohnt werden. Die Zufahrt ist baulich auf das Minimum zu beschränken und darf den Boden nicht versiegeln. In steilen Lagen kann aus Sicherheitsgründen auf der ganzen Strecke oder auf Teilabschnitten ein versiegelter Bodenbelag bewilligt werden."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_24_c_bis",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "5bec9a14e00187fb387014f8e14e804f3d07e4e16836fa6803b982a568fbcbae"
     },
     {
@@ -1506,10 +1672,10 @@
           ]
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_24_d",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "502899aade3255acc933bd465ca08f927a89f75a5e820efd857dc2fc86600af2"
     },
     {
@@ -1545,11 +1711,38 @@
           "text": "Der Bundesrat regelt die Einzelheiten. Er legt namentlich fest, in welchem Verhältnis die Änderungsmöglichkeiten nach diesem Artikel zu denjenigen nach Artikel 24c stehen. Er kann vorsehen, dass die hobbymässige Kleintierhaltung nicht als Erweiterung der Wohnnutzung gilt und dass kleine Nebenbauten, die durch höhere Gewalt zerstört worden sind, wiederaufgebaut werden dürfen."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_24_e",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "1da5b4936bdf3b0a1d51c54dc15f5417f905f3a98d75c43c5b31e45bfb304aa6"
+    },
+    {
+      "id": "bund/RPG/art_24_f",
+      "ebene": "bund",
+      "quelle": "RPG",
+      "erlass": "RPG",
+      "artikel": "24_f",
+      "artikelLabel": "Art. 24f",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kantone erstatten dem Bund periodisch Bericht über die Ausrichtung und Finanzierung der Abbruchprämien nach Artikel 5a Absätze 1 und 2."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat erstattet dem Parlament periodisch Bericht über die Erreichung der Stabilisierungsziele nach Artikel 1 Absatz 2 Buchstaben bter und bquater und nimmt dabei eine Beurteilung der Wirkung der massgebenden Bestimmungen vor."
+        },
+        {
+          "absatz": "3",
+          "text": "Er unterbreitet im Bericht Vorschläge für mögliche Verbesserungen."
+        }
+      ],
+      "stand": "2026-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_24_f",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
+      "sha": "830df9bbb8a28aa3c89e468f87a7dae69415d8109be7f92f2ec90c4f57c27ed7"
     },
     {
       "id": "bund/RPG/art_25",
@@ -1573,18 +1766,22 @@
         },
         {
           "absatz": "3",
-          "text": "und 4 ..."
+          "text": "Sie stellt sicher, dass unbewilligte Nutzungen innert nützlicher Frist festgestellt und anschliessend sofort untersagt und unterbunden werden; Rückbauten zur Wiederherstellung des rechtmässigen Zustands sind ohne Verzug anzuordnen und zu vollziehen."
+        },
+        {
+          "absatz": "4",
+          "text": "Nur die zuständige kantonale Behörde kann gültig den ausnahmsweisen Verzicht auf die Wiederherstellung des rechtmässigen Zustandes beschliessen."
         },
         {
           "absatz": "5",
           "text": "Der Anspruch auf Wiederherstellung des rechtmässigen Zustands verjährt nach 30 Jahren. Die Frist ist gewahrt, wenn die zuständige Behörde vor Ablauf der Frist erstmals einschreitet. Keine Verjährung tritt ein, wenn Polizeigüter, insbesondere die öffentliche Ordnung, Ruhe, Sicherheit oder Gesundheit, gefährdet sind."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_25",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
-      "sha": "a80947271a08d90d7396e1029473d12691ca56a3c73620374db0817a4d46fabf"
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
+      "sha": "ddfee57cc494da3888d6a1d2fb19e7b6b8f142b4856f8bf99edeb745889bcd7f"
     },
     {
       "id": "bund/RPG/art_25_a",
@@ -1629,10 +1826,10 @@
           "text": "Diese Grundsätze sind auf das Nutzungsplanverfahren sinngemäss anwendbar."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_25_a",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "ecfde8d871e5b7f0b073027eea2eebaa4a694308cbf147d771435195905ccef6"
     },
     {
@@ -1656,10 +1853,10 @@
           "text": "Mit der Genehmigung durch die kantonale Behörde werden die Nutzungspläne verbindlich."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_26",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "2911bc94f2c670b06aaec180ee6fecc9a0f87d9ab08c12aa105233429ab4dbc7"
     },
     {
@@ -1679,10 +1876,10 @@
           "text": "Planungszonen dürfen für längstens fünf Jahre bestimmt werden; das kantonale Recht kann eine Verlängerung vorsehen."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_27",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "303980b5e371e4a2fa00569fa3c04b1dc632747ba51c3a795185dce1986ad316"
     },
     {
@@ -1698,10 +1895,10 @@
           "text": "Das kantonale Recht kann einschränkende Bestimmungen zu den Artikeln 16a Absatz 2, 24b, 24c, 24d und 24e vorsehen."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_27_a",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "95478c69fd2aca3e2f4e0ca9f41d6336862d1f4929d2bbc6c68b82e14bbb7c58"
     },
     {
@@ -1717,10 +1914,10 @@
           "text": "…"
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_28",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
@@ -1736,10 +1933,10 @@
           "text": "Der Bund kann an Entschädigungen für besonders bedeutsame Schutzmassnahmen nach Artikel 17 Beiträge leisten."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_29",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "7a7a879181a192c6ed33630d0fc861a80822558236196c5dbc579793988dd514"
     },
     {
@@ -1759,10 +1956,10 @@
           "text": "Das Bundesamt für Raumentwicklung koordiniert diese Förderung mit den betroffenen Bundesstellen und stellt eine systematische Auswertung der Erfahrungen sicher."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_29_a",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "eff1c670a59557575c9a367287ae6ae59948383cec047323168cc351436d2042"
     },
     {
@@ -1778,10 +1975,10 @@
           "text": "Der Bund macht die Leistung von Beiträgen an raumwirksame Massnahmen nach andern Bundesgesetzen davon abhängig, dass diese den genehmigten Richtplänen entsprechen."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_30",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "992103d8a40daf6d6f4794515d7fef58c4f8727dfb0a9ce29ba82edc13c1e64c"
     },
     {
@@ -1797,10 +1994,10 @@
           "text": "Die Kantone bezeichnen eine Fachstelle für Raumplanung."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_31",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "8bd9899aa94251b344eec7be0660b55b38c2464a5ef67cbf641c8c227c96c1af"
     },
     {
@@ -1816,10 +2013,10 @@
           "text": "Fachstelle des Bundes ist das Bundesamt für Raumentwicklung."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_32",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "abf662870eeb762a717c1baf19357196b664ad1456115becea0d615f5fb3153f"
     },
     {
@@ -1857,10 +2054,10 @@
           "text": "Für die Anfechtung von Verfügungen kantonaler Behörden, auf welche Artikel 25a Absatz 1 Anwendung findet, sind einheitliche Rechtsmittelinstanzen vorzusehen."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_33",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "00d92a62438d7612757f13d97e657d08a0c4f299fa6b22b85381504f3671f64e"
     },
     {
@@ -1889,7 +2086,7 @@
             },
             {
               "marke": "c",
-              "text": "Bewilligungen im Sinne der Artikel 24–24d und 37a."
+              "text": "Bewilligungen im Sinne der Artikel 24–24e und 37a."
             }
           ]
         },
@@ -1898,11 +2095,11 @@
           "text": "Das Bundesamt für Landwirtschaft ist zur Beschwerde berechtigt gegen Entscheide über Vorhaben, die Fruchtfolgeflächen beanspruchen."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_34",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
-      "sha": "6146caec3d3e194900a06f41fbe77c36aed10fa7f6ed88bdcfc7275e9f7a3484"
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
+      "sha": "8ee511b72be05b6eb2e0a9ea55ff6312a9f03fb3d9a31e024a03ba5580127856"
     },
     {
       "id": "bund/RPG/art_35",
@@ -1935,10 +2132,10 @@
           "text": "Nutzungspläne, die beim Inkrafttreten dieses Gesetzes gültig sind, bleiben nach kantonalem Recht in Kraft bis zur Genehmigung durch die zuständige Behörde."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_35",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "d0cfdf3b4adb87a2263d9822a75653edaa7d74635f1b38ae030e9fe00bc1d950"
     },
     {
@@ -1962,10 +2159,10 @@
           "text": "Solange keine Bauzonen bestehen und das kantonale Recht nichts anderes vorsieht, gilt das weitgehend überbaute Gebiet als vorläufige Bauzone."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_36",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "fc07c6d7cd51db5ebe69b06eb9539e75b4c44eaf3f7f085e528558ccf82bf5c3"
     },
     {
@@ -1985,10 +2182,10 @@
           "text": "Sobald Nutzungspläne vorliegen, hebt der Bundesrat vorübergehende Nutzungszonen auf."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_37",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "8f6b67076932b84c482d97d14bb974c1a125464371d6d9e05af295833caa6447"
     },
     {
@@ -2000,15 +2197,19 @@
       "artikelLabel": "Art. 37a",
       "bloecke": [
         {
-          "absatz": null,
+          "absatz": "1",
           "text": "Der Bundesrat regelt, unter welchen Voraussetzungen Zweckänderungen gewerblich genutzter Bauten und Anlagen zulässig sind, die vor dem 1. Januar 1980 erstellt wurden oder seither als Folge von Änderungen der Nutzungspläne zonenwidrig geworden sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Er legt fest, unter welchen Voraussetzungen altrechtliche Gast- und Beherbergungsbetriebe ausserhalb der Bauzonen zudem abgerissen und wieder aufgebaut werden können und in welchem Ausmass dabei betriebliche Erweiterungen zulässig sind. Er regelt zudem, unter welchen Voraussetzungen gewerbliche Bauten und Anlagen, die andernorts in der gleichen Geländekammer beseitigt werden, zu zusätzlichen Erweiterungen des Betriebs berechtigen."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_37_a",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
-      "sha": "d5faeafc0711c156377033b482d7982192b531d27363fead89c6a74439ca48b0"
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
+      "sha": "cdce43bf000c1b5a5f44abf2f646cc5359202193042a0ecabad7fe078a84b41b"
     },
     {
       "id": "bund/RPG/art_38",
@@ -2019,19 +2220,15 @@
       "artikelLabel": "Art. 38",
       "bloecke": [
         {
-          "absatz": "1",
-          "text": "Die betroffenen Kantone passen ihre Richtpläne innerhalb einer Frist von drei Jahren nach dem Inkrafttreten dieser Änderung an deren Anforderungen an und sorgen dafür, dass die betroffenen Gemeinden innerhalb der gleichen Frist geeignete Massnahmen treffen, insbesondere die Festlegung jährlicher Kontingente, die Festlegung von Erstwohnanteilen, die Ausscheidung spezieller Nutzungszonen oder die Erhebung von Lenkungsabgaben."
-        },
-        {
-          "absatz": "2",
-          "text": "Nach Ablauf dieser Frist dürfen so lange keine Zweitwohnungen bewilligt werden, bis die Kantone und Gemeinden die nötigen Vorkehrungen getroffen haben."
+          "absatz": null,
+          "text": "…"
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_38",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
-      "sha": "b11cb49185a2390e68530f0076d7a0654795749f2a82c80733a89f58ea2b3b60"
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/RPG/art_38_a",
@@ -2062,11 +2259,61 @@
           "text": "Nach Ablauf der Frist von Absatz 4 ist die Ausscheidung neuer Bauzonen unzulässig, solange der betreffende Kanton nicht über einen angemessenen Ausgleich nach den Anforderungen von Artikel 5 verfügt. Der Bundesrat bezeichnet nach Anhörung diese Kantone."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_38_a",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "158256dc86ec399dc0897fe9f8c7a872b7d8bf945c75e7b6ae92321ee9c229b9"
+    },
+    {
+      "id": "bund/RPG/art_38_b",
+      "ebene": "bund",
+      "quelle": "RPG",
+      "erlass": "RPG",
+      "artikel": "38_b",
+      "artikelLabel": "Art. 38b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kantone passen innert fünf Jahren nach Inkrafttreten der Änderung vom 29. September 2023 ihre Richtpläne an die Anforderungen von Artikel 8d an."
+        },
+        {
+          "absatz": "2",
+          "text": "Voraussetzung für eine Genehmigung von Richtplanänderungen gemäss den Artikeln 8c und 18bis ist eine Richtplanänderung gemäss Artikel 8d, die vorgängig oder gleichzeitig vorgenommen werden kann."
+        },
+        {
+          "absatz": "3",
+          "text": "Nach Ablauf der Frist nach Absatz 1 ist im betreffenden Kanton jedes weitere neue Gebäude ausserhalb der Bauzone bis zum Vorliegen der Genehmigung kompensationspflichtig."
+        },
+        {
+          "absatz": "4",
+          "text": "Bereits bewilligte Gebäude können ohne Kompensation, während einer nicht verlängerbaren Frist von drei Jahren nach Ablauf der Frist nach Absatz 1 weiterhin errichtet werden."
+        }
+      ],
+      "stand": "2026-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_38_b",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
+      "sha": "ebb0f97cc41de7f4257f394938c6d5b14d17a474291bd37b9afcdddb044c3d67"
+    },
+    {
+      "id": "bund/RPG/art_38_c",
+      "ebene": "bund",
+      "quelle": "RPG",
+      "erlass": "RPG",
+      "artikel": "38_c",
+      "artikelLabel": "Art. 38c",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Bei den erstmaligen Darlegungen über die Anzahl Gebäude ausserhalb der Bauzonen und über die Bodenversiegelung in der ganzjährig bewirtschafteten Landwirtschaftszone nach Artikel 16, soweit sie nicht landwirtschaftlich bedingt ist, im Sinne der Grundlagen nach Artikel 6 Absatz 3 Buchstaben d und e, können die Ausführungen über die bisherige Entwicklung skizzenhaft bleiben."
+        }
+      ],
+      "stand": "2026-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_38_c",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
+      "sha": "0331341b2870d2d175e4b1d14b8c3acc9993e8a1fe5414b873bddbd28545492e"
     },
     {
       "id": "bund/RPG/art_39",
@@ -2085,10 +2332,10 @@
           "text": "Der Bundesrat bestimmt das Inkrafttreten."
         }
       ],
-      "stand": "2026-04-01",
+      "stand": "2026-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de#art_39",
-      "abgerufen": "2026-06-30",
-      "fassungsToken": "20260401",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "20260701",
       "sha": "917f2b9dc0ea8d81aa43538af7c6943f35d4219aa1a845ffaf8965b1017bf238"
     }
   ]

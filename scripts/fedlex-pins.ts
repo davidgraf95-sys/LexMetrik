@@ -16,7 +16,13 @@ export type Pin = { name: string; eli: string; kons: string }; // kons als ISO �
 export function lesePins(shText?: string): Pin[] {
   const sh = shText ?? readFileSync(CACHE_SH, 'utf8');
   const pins: Pin[] = [];
-  for (const m of sh.matchAll(/^\s*"([a-z_]+)\|([a-z0-9/_]+)\|(\d{8})\|/gm)) {
+  // P1-b (QS-CURRENCY): Namensgruppe MUSS Ziffern zulassen (`[a-z0-9_]+`) —
+  // die alte Gruppe `[a-z_]+` matchte die 11 Ziffern-Namen-Pins (asylv1/2/3,
+  // argv1..5, bvv_2, bvv3, co2_gesetz) NICHT: sie sahen überwacht aus, waren es
+  // aber nicht (parser-blindes Monitoring-Loch, schlimmer als ungepinnt). Der
+  // Parser-Selbsttest (src/tests/fedlex-pins.test.ts) verankert, dass die Zahl
+  // geparster Pins == Zahl der Datenzeilen in cache.sh bleibt.
+  for (const m of sh.matchAll(/^\s*"([a-z0-9_]+)\|([a-z0-9/_]+)\|(\d{8})\|/gm)) {
     pins.push({
       name: m[1],
       eli: m[2],

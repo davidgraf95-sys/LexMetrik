@@ -1,8 +1,9 @@
 {
- "erzeugt": "2026-06-30",
+ "erzeugt": "2026-07-05",
  "kopf": {
   "srNummer": "142.312",
   "titel": "Asylverordnung 2 über Finanzierungsfragen",
+  "erlassdatum": "vom 11. August 1999 (Stand am 12. Juni 2026)",
   "praeambel": [
    {
     "rolle": "autor",
@@ -19,12 +20,12 @@
   ],
   "fussnoten": [
    {
-    "nr": "",
+    "nr": "1",
     "text": "SR <b>142.31</b>",
     "links": [
      {
       "label": "SR <b>142.31</b>",
-      "url": "https://fedlex.data.admin.ch/eli/cc/1999/358"
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4878"
      }
     ],
     "absatz": null,
@@ -50,7 +51,7 @@
     },
     {
      "ebene": 2,
-     "label": "1. Kapitel: Ausrichtung der Sozialhilfeleistungen und der Nothilfe"
+     "label": "1. Kapitel: Festsetzung und Ausrichtung der Sozialhilfe, der Nothilfe und der entsprechenden Bundesbeiträge"
     },
     {
      "ebene": 3,
@@ -58,64 +59,70 @@
     }
    ],
    "marginalie": [
-    "Definition der vergütbaren Sozialhilfe- und Nothilfeleistungen"
+    "Definition der durch Bundesbeiträge vergütbaren Sozialhilfe- und Nothilfeleistungen"
    ],
    "fussnoten": [
     {
-     "nr": "",
-     "text": "Fassung gemäss Ziff. I der V vom 13. Dez. 2013, in Kraft seit 1. Febr. 2014 (AS <b>2013</b> 5359).",
+     "nr": "4",
+     "text": "Fassung gemäss Ziff. I der V vom 30. März 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 233).",
      "links": [
       {
-       "label": "AS <b>2013</b> 5359",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2013/856"
+       "label": "AS <b>2022</b> 233",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/233"
       }
      ],
      "absatz": null,
      "item": null
     },
     {
-     "nr": "",
+     "nr": "5",
      "text": "SR <b>851.1</b>",
      "links": [
       {
        "label": "SR <b>851.1</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1978/221_221_221"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10359"
       }
      ],
      "absatz": null,
      "item": null
     },
     {
-     "nr": "",
-     "text": "[AS <b>2007 </b>5551; <b>2013 </b>5351; <b>2017 </b>6543; <b>2018 </b>745. AS <b>2018</b> 3189 Art. 30]. Siehe heute: die V vom 15. Aug. 2018 (SR <b>142.205</b>).",
+     "nr": "6",
+     "text": "SR <b>142.205</b>",
      "links": [
       {
-       "label": "AS <b>2007 </b>5551",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2007/762"
-      },
-      {
-       "label": "<b>2013 </b>5351",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2013/854"
-      },
-      {
-       "label": "<b>2017 </b>6543",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2017/720"
-      },
-      {
-       "label": "<b>2018 </b>745",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2018/95"
-      },
-      {
-       "label": "AS <b>2018</b> 3189",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2018/511"
-      },
-      {
        "label": "SR <b>142.205</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2018/511"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4857"
       }
      ],
      "absatz": null,
      "item": null
+    },
+    {
+     "nr": "2",
+     "text": "Fassung gemäss Ziff. I der V vom 24. Okt. 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5585).",
+     "links": [
+      {
+       "label": "AS <b>2007</b> 5585",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/768"
+      }
+     ],
+     "absatz": null,
+     "item": null,
+     "sektion": "2. Titel: Sozialhilfe und Nothilfe"
+    },
+    {
+     "nr": "3",
+     "text": "Fassung gemäss Ziff. I der V vom 30. März 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 233).",
+     "links": [
+      {
+       "label": "AS <b>2022</b> 233",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/233"
+      }
+     ],
+     "absatz": null,
+     "item": null,
+     "sektion": "1. Kapitel: Festsetzung und Ausrichtung der Sozialhilfe, der Nothilfe und der entsprechenden Bundesbeiträge"
     }
    ]
   },
@@ -127,7 +134,7 @@
     },
     {
      "ebene": 2,
-     "label": "1. Kapitel: Ausrichtung der Sozialhilfeleistungen und der Nothilfe"
+     "label": "1. Kapitel: Festsetzung und Ausrichtung der Sozialhilfe, der Nothilfe und der entsprechenden Bundesbeiträge"
     },
     {
      "ebene": 3,
@@ -139,7 +146,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "7",
      "text": "Fassung gemäss Ziff. I der V vom 24. Okt. 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5585).",
      "links": [
       {
@@ -151,7 +158,7 @@
      "item": null
     },
     {
-     "nr": "",
+     "nr": "8",
      "text": "Fassung gemäss Ziff. I der V vom 13. Dez. 2013, in Kraft seit 1. Febr. 2014 (AS <b>2013</b> 5359).",
      "links": [
       {
@@ -159,11 +166,71 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/856"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "",
+     "nr": "9",
+     "text": "Fassung des zweiten Satzes gemäss Ziff. I der V vom 30. März 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 233).",
+     "links": [
+      {
+       "label": "AS <b>2022</b> 233",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/233"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "Fassung gemäss Ziff. I der V vom 30. März 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 233).",
+     "links": [
+      {
+       "label": "AS <b>2022</b> 233",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/233"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "Fassung gemäss Ziff. I der V vom 28. Mai 2025, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 404).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 404",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/404"
+      }
+     ],
+     "absatz": "3",
+     "item": "c"
+    },
+    {
+     "nr": "12",
+     "text": "Eingefügt durch Ziff. I der V vom 28. Mai 2025, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 404).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 404",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/404"
+      }
+     ],
+     "absatz": "3",
+     "item": "d"
+    },
+    {
+     "nr": "13",
+     "text": "Eingefügt durch Ziff. I der V vom 28. Mai 2025, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 404).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 404",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/404"
+      }
+     ],
+     "absatz": "3",
+     "item": "e"
+    },
+    {
+     "nr": "14",
      "text": "Fassung gemäss Ziff. I der V vom 13. Dez. 2013, in Kraft seit 1. Febr. 2014 (AS <b>2013</b> 5359).",
      "links": [
       {
@@ -171,8 +238,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/856"
       }
      ],
-     "absatz": null,
-     "item": "c"
+     "absatz": "3",
+     "item": "e"
     }
    ]
   },
@@ -184,7 +251,7 @@
     },
     {
      "ebene": 2,
-     "label": "1. Kapitel: Ausrichtung der Sozialhilfeleistungen und der Nothilfe"
+     "label": "1. Kapitel: Festsetzung und Ausrichtung der Sozialhilfe, der Nothilfe und der entsprechenden Bundesbeiträge"
     },
     {
      "ebene": 3,
@@ -196,7 +263,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "15",
      "text": "Aufgehoben durch Ziff. I der V vom 24. Okt. 2007, mit Wirkung seit 1. Jan. 2008 (AS <b>2007</b> 5585).",
      "links": [
       {
@@ -204,7 +271,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/768"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -217,7 +284,7 @@
     },
     {
      "ebene": 2,
-     "label": "1. Kapitel: Ausrichtung der Sozialhilfeleistungen und der Nothilfe"
+     "label": "1. Kapitel: Festsetzung und Ausrichtung der Sozialhilfe, der Nothilfe und der entsprechenden Bundesbeiträge"
     },
     {
      "ebene": 3,
@@ -229,7 +296,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "16",
      "text": "Fassung gemäss Ziff. I der V vom 24. Okt. 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5585).",
      "links": [
       {
@@ -241,31 +308,31 @@
      "item": null
     },
     {
-     "nr": "",
+     "nr": "17",
      "text": "SR <b>142.20</b>",
      "links": [
       {
        "label": "SR <b>142.20</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2007/758"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4851"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "",
+     "nr": "18",
      "text": "Der Titel wurde in Anwendung von Art. 12 Abs. 2 des Publikationsgesetzes vom 18. Juni 2004 (SR <b>170.512</b>) auf den 1. Jan. 2019 angepasst. Diese Anpassung wurde im ganzen Text vorgenommen.",
      "links": [
       {
        "label": "SR <b>170.512</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2004/745"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4975"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "",
+     "nr": "19",
      "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 16 Abs. 3 der Publikationsverordnung vom 17. Nov. 2004 (AS <b>2004 </b>4937) auf den 1. Jan. 2015 angepasst. Diese Anpassung wurde im ganzen Text vorgenommen.",
      "links": [
       {
@@ -273,11 +340,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/746"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "",
+     "nr": "20",
      "text": "Aufgehoben durch Ziff. I der V vom 7. Dez. 2012, mit Wirkung seit 1. April 2013 (AS <b>2012</b> 6951).",
      "links": [
       {
@@ -285,11 +352,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/842"
       }
      ],
-     "absatz": null,
+     "absatz": "5",
      "item": null
     },
     {
-     "nr": "",
+     "nr": "21",
      "text": "Fassung gemäss Ziff. I der V vom 13. Dez. 2013, in Kraft seit 1. Febr. 2014 (AS <b>2013</b> 5359).",
      "links": [
       {
@@ -297,7 +364,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/856"
       }
      ],
-     "absatz": null,
+     "absatz": "6",
      "item": null
     }
    ]
@@ -310,7 +377,7 @@
     },
     {
      "ebene": 2,
-     "label": "1. Kapitel: Ausrichtung der Sozialhilfeleistungen und der Nothilfe"
+     "label": "1. Kapitel: Festsetzung und Ausrichtung der Sozialhilfe, der Nothilfe und der entsprechenden Bundesbeiträge"
     },
     {
      "ebene": 3,
@@ -322,7 +389,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "25",
      "text": "Ausdruck gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875). Diese Änd. wurde in den in der AS genannten Bestimmungen berücksichtigt.",
      "links": [
       {
@@ -330,7 +397,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/440"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -343,7 +410,7 @@
     },
     {
      "ebene": 2,
-     "label": "1. Kapitel: Ausrichtung der Sozialhilfeleistungen und der Nothilfe"
+     "label": "1. Kapitel: Festsetzung und Ausrichtung der Sozialhilfe, der Nothilfe und der entsprechenden Bundesbeiträge"
     },
     {
      "ebene": 3,
@@ -355,7 +422,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "26",
      "text": "Fassung gemäss Ziff. I der V vom 24. Okt. 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5585).",
      "links": [
       {
@@ -363,47 +430,20 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/768"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "b"
     },
     {
-     "nr": "",
+     "nr": "27",
      "text": "SR <b>142.20</b>",
      "links": [
       {
        "label": "SR <b>142.20</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2007/758"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4851"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "b"
-    }
-   ]
-  },
-  "8": {
-   "gliederung": [
-    {
-     "ebene": 1,
-     "label": "2. Titel: Sozialhilfe und Nothilfe"
-    },
-    {
-     "ebene": 2,
-     "label": "2. Kapitel: Sonderabgabe auf Vermögenswerten"
-    }
-   ],
-   "marginalie": [],
-   "fussnoten": [
-    {
-     "nr": "",
-     "text": "Aufgehoben durch Ziff. I der V vom 15. Nov. 2017, mit Wirkung seit 1. Jan. 2018 (AS <b>2017</b> 6545).",
-     "links": [
-      {
-       "label": "AS <b>2017</b> 6545",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2017/721"
-      }
-     ],
-     "absatz": null,
-     "item": null
     }
    ]
   },
@@ -423,7 +463,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "31",
      "text": "Fassung gemäss Ziff. I der V vom 15. Nov. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6545). Siehe auch die UeB dieser Änd. am Schluss des Textes.",
      "links": [
       {
@@ -433,6 +473,18 @@
      ],
      "absatz": null,
      "item": null
+    },
+    {
+     "nr": "32",
+     "text": "Fassung gemäss Ziff. I der V vom 30. März 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 233).",
+     "links": [
+      {
+       "label": "AS <b>2022</b> 233",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/233"
+      }
+     ],
+     "absatz": "1",
+     "item": "d"
     }
    ]
   },
@@ -452,7 +504,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "33",
      "text": "Fassung gemäss Ziff. I der V vom 15. Nov. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6545).",
      "links": [
       {
@@ -481,7 +533,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "34",
      "text": "Fassung gemäss Ziff. I der V vom 15. Nov. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6545).",
      "links": [
       {
@@ -493,12 +545,12 @@
      "item": null
     },
     {
-     "nr": "",
-     "text": "Bundesgesetz vom 20. Juni 2003 über das Informationssystem für den Ausländer- und den Asyl­bereich (SR <b>142.51</b>).",
+     "nr": "35",
+     "text": "Bundesgesetz vom 20. Juni 2003 über das Informationssystem für den Ausländer- und den Asylbereich (SR <b>142.51</b>).",
      "links": [
       {
        "label": "SR <b>142.51</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2006/301"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4898"
       }
      ],
      "absatz": null,
@@ -522,7 +574,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "37",
      "text": "Fassung gemäss Ziff. I der V vom 15. Nov. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6545).",
      "links": [
       {
@@ -530,11 +582,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/721"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "",
+     "nr": "38",
      "text": "Fassung gemäss Ziff. I der V vom 15. Nov. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6545).",
      "links": [
       {
@@ -542,11 +594,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/721"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     },
     {
-     "nr": "",
+     "nr": "39",
      "text": "Fassung gemäss Ziff. I der V vom 15. Nov. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6545).",
      "links": [
       {
@@ -554,7 +606,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/721"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     }
    ]
@@ -573,7 +625,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "40",
      "text": "Aufgehoben durch Ziff. I der V vom 15. Nov. 2017, mit Wirkung seit 1. Jan. 2018 (AS <b>2017</b> 6545).",
      "links": [
       {
@@ -602,7 +654,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "41",
      "text": "Fassung gemäss Ziff. I der V vom 15. Nov. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6545).",
      "links": [
       {
@@ -610,11 +662,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/721"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "",
+     "nr": "42",
      "text": "Aufgehoben durch Ziff. I der V vom 15. Nov. 2017, mit Wirkung seit 1. Jan. 2018 (AS <b>2017</b> 6545).",
      "links": [
       {
@@ -622,7 +674,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/721"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     }
    ]
@@ -660,51 +712,156 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
-     "text": "Siehe auch die UeB Änd. 7.12.2012 am Ende dieses Textes.",
+     "nr": "44",
+     "text": "Siehe auch die UeB Änd. 7.12.2012 und 30.3.2022 am Ende dieses Textes.",
      "links": [],
      "absatz": null,
      "item": null
     },
     {
-     "nr": "",
-     "text": "Fassung gemäss Ziff. I der V vom 13. Dez. 2013, in Kraft seit 1. Febr. 2014 (AS <b>2013</b> 5359).",
+     "nr": "45",
+     "text": "Fassung gemäss Ziff. I der V vom 28. Mai 2025, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 404).",
      "links": [
       {
-       "label": "AS <b>2013</b> 5359",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2013/856"
+       "label": "AS <b>2025</b> 404",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/404"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "",
-     "text": "Fassung gemäss Ziff. I der V vom 13. Dez. 2013, in Kraft seit 1. Febr. 2014 (AS <b>2013</b> 5359). Die Berichtigung vom 2. Okt. 2018 betrifft nur den italienischen Text (AS <b>2018</b> 3311).",
+     "nr": "46",
+     "text": "Fassung gemäss Ziff. I der V vom 28. Mai 2025, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 404).",
      "links": [
       {
-       "label": "AS <b>2013</b> 5359",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2013/856"
-      },
-      {
-       "label": "AS <b>2018</b> 3311",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2018/533"
+       "label": "AS <b>2025</b> 404",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/404"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
+     "item": "a"
+    },
+    {
+     "nr": "47",
+     "text": "Fassung gemäss Ziff. I der V vom 28. Mai 2025, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 404).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 404",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/404"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    },
+    {
+     "nr": "48",
+     "text": "Fassung gemäss Ziff. I der V vom 30. März 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 233).",
+     "links": [
+      {
+       "label": "AS <b>2022</b> 233",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/233"
+      }
+     ],
+     "absatz": "1",
+     "item": "d"
+    },
+    {
+     "nr": "49",
+     "text": "Fassung gemäss Ziff. I der V vom 28. Mai 2025, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 404).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 404",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/404"
+      }
+     ],
+     "absatz": "1",
+     "item": "e"
+    },
+    {
+     "nr": "50",
+     "text": "Fassung gemäss Ziff. I der V vom 30. März 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 233).",
+     "links": [
+      {
+       "label": "AS <b>2022</b> 233",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/233"
+      }
+     ],
+     "absatz": "1",
      "item": "f"
     },
     {
-     "nr": "",
+     "nr": "51",
      "text": "SR <b>142.20</b>",
      "links": [
       {
        "label": "SR <b>142.20</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2007/758"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4851"
+      }
+     ],
+     "absatz": "1",
+     "item": "f"
+    },
+    {
+     "nr": "52",
+     "text": "SR <b>0.142.112.681</b>",
+     "links": [
+      {
+       "label": "SR <b>0.142.112.681</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/211"
+      }
+     ],
+     "absatz": "1",
+     "item": "f"
+    },
+    {
+     "nr": "53",
+     "text": "SR <b>0.632.31</b>",
+     "links": [
+      {
+       "label": "SR <b>0.632.31</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/2314"
+      }
+     ],
+     "absatz": "1",
+     "item": "f"
+    },
+    {
+     "nr": "54",
+     "text": "Eingefügt durch Ziff. I der V vom 28. Mai 2025, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 404).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 404",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/404"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "55",
+     "text": "Eingefügt durch Ziff. I der V vom 28. Mai 2025, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 404).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 404",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/404"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "43",
+     "text": "Fassung gemäss Ziff. I der V vom 24. Okt. 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5585).",
+     "links": [
+      {
+       "label": "AS <b>2007</b> 5585",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/768"
       }
      ],
      "absatz": null,
-     "item": "f"
+     "item": null,
+     "sektion": "1. Kapitel: Sozial- und Nothilfe"
     }
    ]
   },
@@ -728,8 +885,8 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
-     "text": "Siehe auch die UeB Änd. 7.12.2012 am Ende dieses Textes.",
+     "nr": "56",
+     "text": "Siehe auch die UeB Änd. 7.12.2012 und 30.3.2022 am Ende dieses Textes.",
      "links": [],
      "absatz": null,
      "item": null
@@ -756,26 +913,26 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
-     "text": "Siehe auch die UeB Änd. 24.10.2007, <i>12.12.2008</i>, <i>7.12.2012</i>, <i>8.6.2018 </i>und <i>10.4.2019 </i>am Ende dieses Textes.",
+     "nr": "57",
+     "text": "Siehe auch die UeB Änd. 24.10.2007, 12.12.2008, 7.12.2012, 8.6.2018, 10.4.2019 und 30.3.2022 am Ende dieses Textes.",
      "links": [],
      "absatz": null,
      "item": null
     },
     {
-     "nr": "",
-     "text": "Fassung des zweiten Satzes gemäss Ziff. I der V vom 10. April 2019, in Kraft seit 1. Mai 2019 (AS <b>2019</b> 1233).",
+     "nr": "58",
+     "text": "Fassung gemäss Ziff. I der V vom 30. März 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 233).",
      "links": [
       {
-       "label": "AS <b>2019</b> 1233",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2019/235"
+       "label": "AS <b>2022</b> 233",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/233"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "",
+     "nr": "59",
      "text": "Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -787,43 +944,31 @@
      "item": null
     },
     {
-     "nr": "",
-     "text": "Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
-     "links": [
-      {
-       "label": "AS <b>2018</b> 2875",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2018/440"
-      }
-     ],
-     "absatz": null,
-     "item": null
-    },
-    {
-     "nr": "",
+     "nr": "60",
      "text": "V des EDI vom 28. Okt. 2016 über die Durchschnittsprämien der Krankenpflegeversicherung für die Berechnung der Ergänzungsleistungen (SR <b>831.309.1</b>)",
      "links": [
       {
        "label": "SR <b>831.309.1</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2021/374"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10091"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     },
     {
-     "nr": "",
+     "nr": "61",
      "text": "SR <b>832.10</b>",
      "links": [
       {
        "label": "SR <b>832.10</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1995/1328_1328_1328"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     },
     {
-     "nr": "",
+     "nr": "62",
      "text": "Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -831,23 +976,23 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/440"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     },
     {
-     "nr": "",
-     "text": "Fassung gemäss Ziff. I der V vom 10. April 2019, in Kraft seit 1. Mai 2019 (AS <b>2019</b> 1233).",
+     "nr": "63",
+     "text": "Fassung gemäss Ziff. I der V vom 30. März 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 233).",
      "links": [
       {
-       "label": "AS <b>2019</b> 1233",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2019/235"
+       "label": "AS <b>2022</b> 233",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/233"
       }
      ],
      "absatz": null,
      "item": null
     },
     {
-     "nr": "",
+     "nr": "64",
      "text": "Eingefügt durch Ziff. I der V vom 10. April 2019, in Kraft seit 1. Mai 2019 (AS <b>2019</b> 1233).",
      "links": [
       {
@@ -880,8 +1025,8 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
-     "text": "Fassung gemäss Ziff. I der V vom 7. Dez. 2012, in Kraft seit 1. April 2013 (AS <b>2012</b> 6951). Siehe auch die UeB Änd. 7.12.2012 am Ende dieses Textes.",
+     "nr": "65",
+     "text": "Fassung gemäss Ziff. I der V vom 7. Dez. 2012, in Kraft seit 1. April 2013 (AS <b>2012</b> 6951). Siehe auch die UeB Änd. 7.12.2012, 8.6.2018 und 30.3.2022 am Ende dieses Textes.",
      "links": [
       {
        "label": "AS <b>2012</b> 6951",
@@ -892,16 +1037,76 @@
      "item": null
     },
     {
-     "nr": "",
-     "text": "Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875). Siehe auch die UeB dieser Änd. am Ende dieses Textes.",
+     "nr": "66",
+     "text": "Fassung gemäss Ziff. I der V vom 30. März 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 233).",
+     "links": [
+      {
+       "label": "AS <b>2022</b> 233",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/233"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    },
+    {
+     "nr": "67",
+     "text": "Fassung gemäss Ziff. I der V vom 30. März 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 233).",
+     "links": [
+      {
+       "label": "AS <b>2022</b> 233",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/233"
+      }
+     ],
+     "absatz": null,
+     "item": "e"
+    },
+    {
+     "nr": "68",
+     "text": "Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
        "label": "AS <b>2018</b> 2875",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/440"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
+    },
+    {
+     "nr": "69",
+     "text": "Eingefügt durch Ziff. I der V vom 30. März 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 233).",
+     "links": [
+      {
+       "label": "AS <b>2022</b> 233",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/233"
+      }
+     ],
+     "absatz": "4",
+     "item": "b"
+    },
+    {
+     "nr": "70",
+     "text": "SR <b>831.10</b>",
+     "links": [
+      {
+       "label": "SR <b>831.10</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10002"
+      }
+     ],
+     "absatz": null,
+     "item": "n"
+    },
+    {
+     "nr": "71",
+     "text": "Eingefügt durch Ziff. I der V vom 30. März 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 233).",
+     "links": [
+      {
+       "label": "AS <b>2022</b> 233",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/233"
+      }
+     ],
+     "absatz": null,
+     "item": "n"
     }
    ]
   },
@@ -925,158 +1130,142 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
-     "text": "Siehe auch die UeB Änd. 7.12.2012 am Ende dieses Textes.",
+     "nr": "73",
+     "text": "Siehe auch die UeB Änd. 7.12.2012 und 30.3.2022 am Ende dieses Textes.",
      "links": [],
      "absatz": null,
      "item": null
     },
     {
-     "nr": "",
-     "text": "Fassung gemäss Ziff. I der V vom 7. Dez. 2012, in Kraft seit 1. April 2013 (AS <b>2012</b> 6951).",
-     "links": [
-      {
-       "label": "AS <b>2012</b> 6951",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2012/842"
-      }
-     ],
-     "absatz": null,
-     "item": null
-    },
-    {
-     "nr": "",
-     "text": "Fassung gemäss Ziff. I der V vom 13. Dez. 2013, in Kraft seit 1. Febr. 2014 (AS <b>2013</b> 5359).",
-     "links": [
-      {
-       "label": "AS <b>2013</b> 5359",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2013/856"
-      }
-     ],
-     "absatz": null,
-     "item": "a"
-    },
-    {
-     "nr": "",
+     "nr": "74",
      "text": "SR <b>142.20</b>",
      "links": [
       {
        "label": "SR <b>142.20</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2007/758"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4851"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "a"
     },
     {
-     "nr": "",
-     "text": "Fassung gemäss Ziff. I der V vom 13. Dez. 2013, in Kraft seit 1. Febr. 2014 (AS <b>2013</b> 5359).",
+     "nr": "75",
+     "text": "SR <b>0.142.112.681</b>",
      "links": [
       {
-       "label": "AS <b>2013</b> 5359",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2013/856"
+       "label": "SR <b>0.142.112.681</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/211"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "b"
     },
     {
-     "nr": "",
-     "text": "Eingefügt durch Ziff. I 5 der V vom 1. Febr. 2017 über die Einführung der Landesverweisung, in Kraft seit 1. März 2017 (AS <b>2017</b> 563).",
+     "nr": "76",
+     "text": "SR <b>0.632.31</b>",
      "links": [
       {
-       "label": "AS <b>2017</b> 563",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2017/100"
+       "label": "SR <b>0.632.31</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/2314"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
+     "item": "b"
+    },
+    {
+     "nr": "77",
+     "text": "Fassung gemäss Ziff. I 3 der V vom 4. Mai 2022 über polizeiliche Massnahmen zur Bekämpfung von Terrorismus, in Kraft seit 1. Juni 2022 (AS <b>2022</b> 301).",
+     "links": [
+      {
+       "label": "AS <b>2022</b> 301",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/301"
+      }
+     ],
+     "absatz": "1",
      "item": "bbis"
     },
     {
-     "nr": "",
+     "nr": "78",
      "text": "SR <b>311.0</b>",
      "links": [
       {
        "label": "SR <b>311.0</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6196"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "bbis"
     },
     {
-     "nr": "",
+     "nr": "79",
      "text": "SR <b>321.0</b>",
      "links": [
       {
        "label": "SR <b>321.0</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/43/359_375_369"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6242"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "bbis"
     },
     {
-     "nr": "",
-     "text": "Fassung gemäss Ziff. I der V vom 25. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6173).",
+     "nr": "80",
+     "text": "Fassung gemäss Ziff. I 3 der V vom 4. Mai 2022 über polizeiliche Massnahmen zur Bekämpfung von Terrorismus, in Kraft seit 1. Juni 2022 (AS <b>2022</b> 301).",
      "links": [
       {
-       "label": "AS <b>2017</b> 6173",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2017/686"
+       "label": "AS <b>2022</b> 301",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/301"
       }
      ],
-     "absatz": null,
-     "item": "c"
-    },
-    {
-     "nr": "",
-     "text": "Fassung gemäss Ziff. I der V vom 13. Dez. 2013, in Kraft seit 1. Febr. 2014 (AS <b>2013</b> 5359).",
-     "links": [
-      {
-       "label": "AS <b>2013</b> 5359",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2013/856"
-      }
-     ],
-     "absatz": null,
-     "item": "d"
-    },
-    {
-     "nr": "",
-     "text": "Eingefügt durch Ziff. I 5 der V vom 1. Febr. 2017 über die Einführung der Landes­verweisung (AS <b>2017</b> 563). Fassung gemäss Ziff. I der V vom 25. Okt. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6173).",
-     "links": [
-      {
-       "label": "AS <b>2017</b> 563",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2017/100"
-      },
-      {
-       "label": "AS <b>2017</b> 6173",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2017/686"
-      }
-     ],
-     "absatz": null,
+     "absatz": "1",
      "item": "dbis"
     },
     {
-     "nr": "",
-     "text": "Eingefügt durch Ziff. I der V vom 13. Dez. 2013, in Kraft seit 1. Febr. 2014 (AS <b>2013</b> 5359).",
+     "nr": "81",
+     "text": "Fassung gemäss Ziff. I der V vom 30. März 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 233).",
      "links": [
       {
-       "label": "AS <b>2013</b> 5359",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2013/856"
+       "label": "AS <b>2022</b> 233",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/233"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "f"
     },
     {
-     "nr": "",
-     "text": "Aufgehoben durch Ziff. I der V vom 8. Juni 2018, mit Wirkung seit 1. März 2019 (AS <b>2018</b> 2875).",
+     "nr": "82",
+     "text": "Fassung gemäss Ziff. I der V vom 28. Mai 2025, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 404).",
      "links": [
       {
-       "label": "AS <b>2018</b> 2875",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2018/440"
+       "label": "AS <b>2025</b> 404",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/404"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "83",
+     "text": "Fassung gemäss Ziff. I der V vom 28. Mai 2025, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 404).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 404",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/404"
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    },
+    {
+     "nr": "84",
+     "text": "Eingefügt durch Ziff. I der V vom 28. Mai 2025, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 404).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 404",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/404"
+      }
+     ],
+     "absatz": "6",
      "item": null
     }
    ]
@@ -1101,8 +1290,8 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
-     "text": "Siehe auch die UeB Änd. 7.12.2012 am Ende dieses Textes.",
+     "nr": "86",
+     "text": "Siehe auch die UeB Änd. 7.12.2012 und 30.3.2022 am Ende dieses Textes.",
      "links": [],
      "absatz": null,
      "item": null
@@ -1129,38 +1318,26 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
-     "text": "Siehe auch die UeB Änd. 24.10.2007, <i>7.12.2012</i>, <i>8.6.2018 </i>und <i>10.4.2019 </i>am Ende dieses Textes.",
+     "nr": "87",
+     "text": "Siehe auch die UeB Änd. 24.10.2007, 7.12.2012, 8.6.2018, 10.4.2019 und 30.3.2022 am Ende dieses Textes.",
      "links": [],
      "absatz": null,
      "item": null
     },
     {
-     "nr": "",
-     "text": "Fassung des zweiten Satzes gemäss Ziff. I der V vom 10. April 2019, in Kraft seit 1. Mai 2019 (AS <b>2019</b> 1233).",
+     "nr": "88",
+     "text": "Fassung gemäss Ziff. I der V vom 30. März 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 233).",
      "links": [
       {
-       "label": "AS <b>2019</b> 1233",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2019/235"
+       "label": "AS <b>2022</b> 233",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/233"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "",
-     "text": "Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
-     "links": [
-      {
-       "label": "AS <b>2018</b> 2875",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2018/440"
-      }
-     ],
-     "absatz": null,
-     "item": null
-    },
-    {
-     "nr": "",
+     "nr": "89",
      "text": "Die Berichtigung vom 13. Febr. 2018 betrifft nur den italienischen Text (AS <b>2018</b> 731).",
      "links": [
       {
@@ -1168,11 +1345,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/92"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
-     "nr": "",
+     "nr": "90",
      "text": "Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -1184,19 +1361,19 @@
      "item": null
     },
     {
-     "nr": "",
+     "nr": "91",
      "text": "SR <b>832.10</b>",
      "links": [
       {
        "label": "SR <b>832.10</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1995/1328_1328_1328"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     },
     {
-     "nr": "",
+     "nr": "92",
      "text": "Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -1204,23 +1381,23 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/440"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     },
     {
-     "nr": "",
-     "text": "Fassung gemäss Ziff. I der V vom 10. April 2019, in Kraft seit 1. Mai 2019 (AS <b>2019</b> 1233).",
+     "nr": "93",
+     "text": "Fassung gemäss Ziff. I der V vom 30. März 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 233).",
      "links": [
       {
-       "label": "AS <b>2019</b> 1233",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2019/235"
+       "label": "AS <b>2022</b> 233",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/233"
       }
      ],
-     "absatz": null,
+     "absatz": "5",
      "item": null
     },
     {
-     "nr": "",
+     "nr": "94",
      "text": "Eingefügt durch Ziff. I der V vom 10. April 2019, in Kraft seit 1. Mai 2019 (AS <b>2019</b> 1233).",
      "links": [
       {
@@ -1253,16 +1430,28 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
-     "text": "Fassung gemäss Ziff. I der V vom 7. Dez. 2012, in Kraft seit 1. April 2013 (AS <b>2012</b> 6951). Siehe auch die UeB Änd. 7.12.2012 am Ende dieses Textes.",
+     "nr": "95",
+     "text": "Fassung gemäss Ziff. I der V vom 30. März 2022, in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 233). Siehe auch die UeB Änd. 30.3.2022 am Ende dieses Textes.",
      "links": [
       {
-       "label": "AS <b>2012</b> 6951",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2012/842"
+       "label": "AS <b>2022</b> 233",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/233"
       }
      ],
      "absatz": null,
      "item": null
+    },
+    {
+     "nr": "96",
+     "text": "SR <b>831.10</b>",
+     "links": [
+      {
+       "label": "SR <b>831.10</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10002"
+      }
+     ],
+     "absatz": null,
+     "item": "n"
     }
    ]
   },
@@ -1286,12 +1475,12 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
-     "text": "Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
+     "nr": "98",
+     "text": "Fassung gemäss Ziff. I der V vom 28. Mai 2025, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 404).",
      "links": [
       {
-       "label": "AS <b>2018</b> 2875",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2018/440"
+       "label": "AS <b>2025</b> 404",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/404"
       }
      ],
      "absatz": null,
@@ -1319,7 +1508,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "99",
      "text": "Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -1328,6 +1517,30 @@
       }
      ],
      "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "100",
+     "text": "Fassung gemäss Ziff. I der V vom 28. Mai 2025, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 404).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 404",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/404"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "101",
+     "text": "Fassung gemäss Ziff. I der V vom 28. Mai 2025, in Kraft seit 1. Juli 2025 (AS <b>2025</b> 404).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 404",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/404"
+      }
+     ],
+     "absatz": "3",
      "item": null
     }
    ]
@@ -1352,7 +1565,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "102",
      "text": "Aufgehoben durch Ziff. I der V vom 8. Juni 2018, mit Wirkung seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -1360,7 +1573,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/440"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -1381,7 +1594,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "105",
      "text": "Fassung gemäss Ziff. I der V vom 24. Okt. 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5585).",
      "links": [
       {
@@ -1393,19 +1606,19 @@
      "item": null
     },
     {
-     "nr": "",
+     "nr": "106",
      "text": "SR <b>142.311</b>",
      "links": [
       {
        "label": "SR <b>142.311</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1999/359"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4880"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "y"
     },
     {
-     "nr": "",
+     "nr": "107",
      "text": "Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -1413,11 +1626,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/440"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "y"
     },
     {
-     "nr": "",
+     "nr": "108",
      "text": "Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -1425,8 +1638,21 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/440"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
+    },
+    {
+     "nr": "104",
+     "text": "Ursprünglich vor Art. 29. Fassung gemäss Ziff. I der V vom 24. Okt. 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5585).",
+     "links": [
+      {
+       "label": "AS <b>2007</b> 5585",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/768"
+      }
+     ],
+     "absatz": null,
+     "item": null,
+     "sektion": "2. Kapitel: Verwaltungskosten"
     }
    ]
   },
@@ -1598,7 +1824,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "109",
      "text": "Fassung gemäss Ziff. I der V vom 24. Okt. 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5585).",
      "links": [
       {
@@ -1606,7 +1832,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/768"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -1629,7 +1855,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "111",
      "text": "Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875). Siehe auch die UeB dieser Änd. am Schluss dieses Textes.",
      "links": [
       {
@@ -1641,7 +1867,7 @@
      "item": null
     },
     {
-     "nr": "",
+     "nr": "112",
      "text": "Die Berichtigung vom 21. Juli 2020 betrifft nur den italienischen Text (AS <b>2020</b> 3343).",
      "links": [
       {
@@ -1649,11 +1875,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/570"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     },
     {
-     "nr": "",
+     "nr": "113",
      "text": "Eingefügt durch Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5869). Siehe auch die UeB dieser Änd. am Schluss dieses Textes.",
      "links": [
       {
@@ -1661,11 +1887,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/987"
       }
      ],
-     "absatz": null,
+     "absatz": "5",
      "item": null
     },
     {
-     "nr": "",
+     "nr": "114",
      "text": "Eingefügt durch Ziff. I der V vom 18. Nov. 2020, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5869).",
      "links": [
       {
@@ -1673,39 +1899,21 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/987"
       }
      ],
-     "absatz": null,
+     "absatz": "6",
      "item": null
-    }
-   ]
-  },
-  "42": {
-   "gliederung": [
-    {
-     "ebene": 1,
-     "label": "3. Titel: Bundesbeiträge"
     },
     {
-     "ebene": 2,
-     "label": "4. Kapitel: Weitere Beiträge"
-    },
-    {
-     "ebene": 3,
-     "label": "1. Abschnitt: Sicherheitskosten"
-    }
-   ],
-   "marginalie": [],
-   "fussnoten": [
-    {
-     "nr": "",
-     "text": "Aufgehoben durch Ziff. I der V vom 24. Okt. 2007, mit Wirkung seit 1. Jan. 2008 (AS <b>2007</b> 5585).",
+     "nr": "110",
+     "text": "Eingefügt durch Anhang der V vom 4. Sept. 2013, in Kraft vom 1. Okt. 2013 bis zum 28. Sept. 2015 (AS <b>2013</b> 3065).",
      "links": [
       {
-       "label": "AS <b>2007</b> 5585",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2007/768"
+       "label": "AS <b>2013</b> 3065",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/595"
       }
      ],
      "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "1. Abschnitt: Sicherheitskosten"
     }
    ]
   },
@@ -1727,7 +1935,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "117",
      "text": "Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -1735,8 +1943,21 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/440"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
+    },
+    {
+     "nr": "116",
+     "text": "Fassung gemäss Anhang der V vom 4. Sept. 2013, in Kraft vom 1. Okt. 2013 bis zum 28. Sept. 2015 (AS <b>2013</b> 3065).",
+     "links": [
+      {
+       "label": "AS <b>2013</b> 3065",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2013/595"
+      }
+     ],
+     "absatz": null,
+     "item": null,
+     "sektion": "1a. Abschnitt: Einrichtungen für traumatisierte Personen"
     }
    ]
   },
@@ -1758,7 +1979,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "118",
      "text": "Aufgehoben durch Ziff. I der V vom 24. Okt. 2007, mit Wirkung seit 1. Jan. 2008 (AS <b>2007</b> 5585).",
      "links": [
       {
@@ -1791,7 +2012,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "120",
      "text": "Fassung gemäss Ziff. I der V vom 19. Febr. 2020, in Kraft seit 1. April 2020 (AS <b>2020</b> 915).",
      "links": [
       {
@@ -1801,6 +2022,19 @@
      ],
      "absatz": null,
      "item": null
+    },
+    {
+     "nr": "119",
+     "text": "Fassung gemäss Ziff. I der V vom 24. Okt. 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5585).",
+     "links": [
+      {
+       "label": "AS <b>2007</b> 5585",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/768"
+      }
+     ],
+     "absatz": null,
+     "item": null,
+     "sektion": "2. Abschnitt: Entscheidvorbereitung durch die Kantone"
     }
    ]
   },
@@ -1824,7 +2058,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "121",
      "text": "Ausdruck gemäss Ziff. I der V vom 24. Okt. 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5585). Diese Änd. ist im ganzen Erlass berücksichtigt.",
      "links": [
       {
@@ -1832,7 +2066,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/768"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     }
    ]
@@ -1914,7 +2148,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "123",
      "text": "Aufgehoben durch Ziff. I der V vom 24. Okt. 2007, mit Wirkung seit 1. Jan. 2008 (AS <b>2007</b> 5585).",
      "links": [
       {
@@ -1922,11 +2156,71 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/768"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "",
+     "nr": "124",
+     "text": "Fassung gemäss Ziff. I der V vom 18. Sept 2020, in Kraft seit 1. Nov. 2020 (AS <b>2020</b> 3991).",
+     "links": [
+      {
+       "label": "AS <b>2020</b> 3991",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/743"
+      }
+     ],
+     "absatz": "2",
+     "item": "b"
+    },
+    {
+     "nr": "125",
+     "text": "Eingefügt durch Ziff. I der V vom 18. Sept 2020, in Kraft seit 1. Nov. 2020 (AS <b>2020</b> 3991).",
+     "links": [
+      {
+       "label": "AS <b>2020</b> 3991",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/743"
+      }
+     ],
+     "absatz": "2",
+     "item": "c"
+    },
+    {
+     "nr": "126",
+     "text": "Eingefügt durch Ziff. I der V vom 18. Sept 2020, in Kraft seit 1. Nov. 2020 (AS <b>2020</b> 3991).",
+     "links": [
+      {
+       "label": "AS <b>2020</b> 3991",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/743"
+      }
+     ],
+     "absatz": "2",
+     "item": "d"
+    },
+    {
+     "nr": "127",
+     "text": "Eingefügt durch Ziff. I der V vom 18. Sept 2020, in Kraft seit 1. Nov. 2020 (AS <b>2020</b> 3991).",
+     "links": [
+      {
+       "label": "AS <b>2020</b> 3991",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/743"
+      }
+     ],
+     "absatz": "2",
+     "item": "e"
+    },
+    {
+     "nr": "128",
+     "text": "Aufgehoben durch Ziff. I der V vom 18. Sept 2020, mit Wirkung seit 1. Nov. 2020 (AS <b>2020</b> 3991).",
+     "links": [
+      {
+       "label": "AS <b>2020</b> 3991",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/743"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "122",
      "text": "Fassung gemäss Ziff. I der V vom 18. Sept 2020, in Kraft seit 1. Nov. 2020 (AS <b>2020</b> 3991).",
      "links": [
       {
@@ -1935,55 +2229,8 @@
       }
      ],
      "absatz": null,
-     "item": "b"
-    },
-    {
-     "nr": "",
-     "text": "Eingefügt durch Ziff. I der V vom 18. Sept 2020, in Kraft seit 1. Nov. 2020 (AS <b>2020</b> 3991).",
-     "links": [
-      {
-       "label": "AS <b>2020</b> 3991",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2020/743"
-      }
-     ],
-     "absatz": null,
-     "item": "c"
-    },
-    {
-     "nr": "",
-     "text": "Eingefügt durch Ziff. I der V vom 18. Sept 2020, in Kraft seit 1. Nov. 2020 (AS <b>2020</b> 3991).",
-     "links": [
-      {
-       "label": "AS <b>2020</b> 3991",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2020/743"
-      }
-     ],
-     "absatz": null,
-     "item": "d"
-    },
-    {
-     "nr": "",
-     "text": "Eingefügt durch Ziff. I der V vom 18. Sept 2020, in Kraft seit 1. Nov. 2020 (AS <b>2020</b> 3991).",
-     "links": [
-      {
-       "label": "AS <b>2020</b> 3991",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2020/743"
-      }
-     ],
-     "absatz": null,
-     "item": "e"
-    },
-    {
-     "nr": "",
-     "text": "Aufgehoben durch Ziff. I der V vom 18. Sept 2020, mit Wirkung seit 1. Nov. 2020 (AS <b>2020</b> 3991).",
-     "links": [
-      {
-       "label": "AS <b>2020</b> 3991",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2020/743"
-      }
-     ],
-     "absatz": null,
-     "item": null
+     "item": null,
+     "sektion": "3. Abschnitt: Internationale Zusammenarbeit: Grundsätze"
     }
    ]
   },
@@ -2007,7 +2254,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "130",
      "text": "Fassung gemäss Ziff. I der V vom 18. Sept 2020, in Kraft seit 1. Nov. 2020 (AS <b>2020</b> 3991).",
      "links": [
       {
@@ -2040,7 +2287,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "134",
      "text": "Eingefügt durch Ziff. I der V vom 24. Okt. 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5585).",
      "links": [
       {
@@ -2052,35 +2299,35 @@
      "item": null
     },
     {
-     "nr": "",
-     "text": "Eingefügt durch Ziff. I der V vom 24. Okt. 2007 (AS <b>2007</b> 5585). Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
+     "nr": "135",
+     "text": "Die Berichtigung vom 26. Juni 2024 betrifft nur den französichen Text (AS <b>2024</b> 315).",
+     "links": [
+      {
+       "label": "AS <b>2024</b> 315",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/315"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "136",
+     "text": "Eingefügt durch Ziff. I der V vom 24. Okt. 2007 (AS <b>2007</b> 5585). Fassung gemäss Ziff. I der V vom 1. Mai 2024, in Kraft seit 1. Juni 2024 (AS <b>2024</b> 192).",
      "links": [
       {
        "label": "AS <b>2007</b> 5585",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/768"
       },
       {
-       "label": "AS <b>2018</b> 2875",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2018/440"
+       "label": "AS <b>2024</b> 192",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/192"
       }
      ],
      "absatz": null,
      "item": "d"
     },
     {
-     "nr": "",
-     "text": "SR <b>142.20</b>",
-     "links": [
-      {
-       "label": "SR <b>142.20</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2007/758"
-      }
-     ],
-     "absatz": null,
-     "item": "d"
-    },
-    {
-     "nr": "",
+     "nr": "137",
      "text": "Eingefügt durch Ziff. II der V vom 4. Sept. 2013 (AS <b>2013</b> 3065). Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -2117,7 +2364,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "139",
      "text": "Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -2125,7 +2372,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/440"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -2150,7 +2397,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "140",
      "text": "Fassung gemäss Ziff. I der V vom 7. Dez. 2012, in Kraft seit 1. April 2013 (AS <b>2012</b> 6951).",
      "links": [
       {
@@ -2158,7 +2405,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/842"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -2183,7 +2430,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "141",
      "text": "Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -2191,7 +2438,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/440"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -2216,7 +2463,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "142",
      "text": "Fassung gemäss Ziff. I der V vom 1. März 2006, in Kraft seit 1. April 2006 (AS <b>2006</b> 933).",
      "links": [
       {
@@ -2249,7 +2496,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "143",
      "text": "Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -2261,15 +2508,15 @@
      "item": null
     },
     {
-     "nr": "",
+     "nr": "144",
      "text": "SR <b>364.3</b>",
      "links": [
       {
        "label": "SR <b>364.3</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2008/760"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6324"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "c"
     }
    ]
@@ -2294,7 +2541,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "150",
      "text": "Fassung gemäss Ziff. I der V vom 1. März 2006, in Kraft seit 1. April 2006 (AS <b>2006</b> 933).",
      "links": [
       {
@@ -2306,7 +2553,7 @@
      "item": null
     },
     {
-     "nr": "",
+     "nr": "151",
      "text": "Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -2318,7 +2565,7 @@
      "item": null
     },
     {
-     "nr": "",
+     "nr": "152",
      "text": "Aufgehoben durch Ziff. I der V vom 24. Okt. 2007, mit Wirkung seit 1. Jan. 2008 (AS <b>2007</b> 5585).",
      "links": [
       {
@@ -2326,11 +2573,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/768"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "b"
     },
     {
-     "nr": "",
+     "nr": "153",
      "text": "Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -2338,11 +2585,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/440"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "c"
     },
     {
-     "nr": "",
+     "nr": "154",
      "text": "Fassung gemäss Ziff. I 5 der V vom 1. Febr. 2017 über die Einführung der Landesverweisung, in Kraft seit 1. März 2017 (AS <b>2017</b> 563).",
      "links": [
       {
@@ -2350,23 +2597,23 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/100"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "d"
     },
     {
-     "nr": "",
+     "nr": "155",
      "text": "SR <b>142.281</b>",
      "links": [
       {
        "label": "SR <b>142.281</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1999/357"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4867"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "d"
     },
     {
-     "nr": "",
+     "nr": "156",
      "text": "Aufgehoben durch Ziff. I der V vom 7. Dez. 2012, mit Wirkung seit 1. Jan. 2013 (AS <b>2012</b> 6951).",
      "links": [
       {
@@ -2374,11 +2621,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/842"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "e"
     },
     {
-     "nr": "",
+     "nr": "157",
      "text": "Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -2386,11 +2633,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/440"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     },
     {
-     "nr": "",
+     "nr": "158",
      "text": "Aufgehoben durch Ziff. I der V vom 24. Okt. 2007, mit Wirkung seit 1. Jan. 2008 (AS <b>2007</b> 5585).",
      "links": [
       {
@@ -2398,7 +2645,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/768"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     }
    ]
@@ -2421,7 +2668,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "175",
      "text": "Aufgehoben durch Ziff. I der V vom 1. März 2006, mit Wirkung seit 1. April 2006 (AS <b>2006</b> 933).",
      "links": [
       {
@@ -2473,7 +2720,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "177",
      "text": "Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -2506,7 +2753,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "178",
      "text": "Fassung gemäss Ziff. I der V vom 24. Okt. 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5585).",
      "links": [
       {
@@ -2518,12 +2765,12 @@
      "item": null
     },
     {
-     "nr": "",
+     "nr": "179",
      "text": "SR<b> 142.20</b>",
      "links": [
       {
        "label": "SR<b> 142.20</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2007/758"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4851"
       }
      ],
      "absatz": null,
@@ -2551,7 +2798,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "180",
      "text": "Fassung gemäss Ziff. I der V vom 1. März 2006, in Kraft seit 1. April 2006 (AS <b>2006</b> 933).",
      "links": [
       {
@@ -2559,11 +2806,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/166"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "",
+     "nr": "181",
      "text": "Aufgehoben durch Ziff. I der V vom 24. Okt. 2007, mit Wirkung seit 1. Jan. 2008 (AS <b>2007</b> 5585).",
      "links": [
       {
@@ -2571,11 +2818,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/768"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "a"
     },
     {
-     "nr": "",
+     "nr": "182",
      "text": "Eingefügt durch Ziff. I der V vom 1. März 2006, in Kraft seit 1. April 2006 (AS <b>2006</b> 933).",
      "links": [
       {
@@ -2583,11 +2830,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/166"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "d"
     },
     {
-     "nr": "",
+     "nr": "183",
      "text": "Aufgehoben durch Ziff. I der V vom 1. März 2006, mit Wirkung seit 1. April 2006 (AS <b>2006</b> 933).",
      "links": [
       {
@@ -2595,11 +2842,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/166"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
-     "nr": "",
+     "nr": "184",
      "text": "Aufgehoben durch Ziff. I der V vom 1. März 2006, mit Wirkung seit 1. April 2006 (AS <b>2006</b> 933).",
      "links": [
       {
@@ -2607,11 +2854,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/166"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     },
     {
-     "nr": "",
+     "nr": "185",
      "text": "Eingefügt durch Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -2619,7 +2866,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/440"
       }
      ],
-     "absatz": null,
+     "absatz": "5",
      "item": null
     }
    ]
@@ -2642,7 +2889,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "186",
      "text": "Fassung gemäss Ziff. I der V vom 24. Okt. 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5585).",
      "links": [
       {
@@ -2676,7 +2923,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "188",
      "text": "Ausdruck gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -2688,12 +2935,12 @@
      "item": null
     },
     {
-     "nr": "",
+     "nr": "189",
      "text": "SR <b>142.20</b>",
      "links": [
       {
        "label": "SR <b>142.20</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2007/758"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4851"
       }
      ],
      "absatz": null,
@@ -2721,7 +2968,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "190",
      "text": "Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -2729,7 +2976,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/440"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -2754,7 +3001,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "191",
      "text": "Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. Jan. 2020 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -2766,7 +3013,7 @@
      "item": null
     },
     {
-     "nr": "",
+     "nr": "192",
      "text": "Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. Jan. 2020 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -2774,39 +3021,22 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/440"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     },
     {
-     "nr": "",
+     "nr": "193",
      "text": "SR <b>616.1</b>",
      "links": [
       {
        "label": "SR <b>616.1</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1991/857_857_857"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7794"
       }
      ],
-     "absatz": null,
+     "absatz": "5",
      "item": null
     }
    ]
-  },
-  "69": {
-   "gliederung": [
-    {
-     "ebene": 1,
-     "label": "3. Titel: Bundesbeiträge"
-    },
-    {
-     "ebene": 2,
-     "label": "6. Kapitel: Rückkehrhilfe und Wiedereingliederung"
-    },
-    {
-     "ebene": 3,
-     "label": "2. Abschnitt: Rückkehrberatung"
-    }
-   ],
-   "marginalie": []
   },
   "71": {
    "gliederung": [
@@ -2828,7 +3058,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "197",
      "text": "Fassung gemäss Ziff. I der V vom 18. Sept 2020, in Kraft seit 1. Nov. 2020 (AS <b>2020</b> 3991).",
      "links": [
       {
@@ -2836,11 +3066,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/743"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "",
+     "nr": "198",
      "text": "Fassung gemäss Ziff. I der V vom 18. Sept 2020, in Kraft seit 1. Nov. 2020 (AS <b>2020</b> 3991).",
      "links": [
       {
@@ -2848,8 +3078,21 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/743"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": "c"
+    },
+    {
+     "nr": "195",
+     "text": "Fassung gemäss Ziff. I der V vom 24. Okt. 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5585).",
+     "links": [
+      {
+       "label": "AS <b>2007</b> 5585",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/768"
+      }
+     ],
+     "absatz": null,
+     "item": null,
+     "sektion": "3. Abschnitt: Programme im Ausland"
     }
    ]
   },
@@ -2873,7 +3116,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "199",
      "text": "Fassung gemäss Ziff. I der V vom 18. Sept 2020, in Kraft seit 1. Nov. 2020 (AS <b>2020</b> 3991).",
      "links": [
       {
@@ -2881,7 +3124,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/743"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -2906,7 +3149,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "200",
      "text": "Fassung gemäss Ziff. I der V vom 24. Okt. 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5585).",
      "links": [
       {
@@ -2940,7 +3183,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "201",
      "text": "Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -2948,11 +3191,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/440"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
-     "nr": "",
+     "nr": "202",
      "text": "Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -2960,11 +3203,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/440"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     },
     {
-     "nr": "",
+     "nr": "203",
      "text": "Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -2972,11 +3215,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/440"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     },
     {
-     "nr": "",
+     "nr": "204",
      "text": "Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -2984,7 +3227,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/440"
       }
      ],
-     "absatz": null,
+     "absatz": "5",
      "item": null
     }
    ]
@@ -3028,7 +3271,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "206",
      "text": "Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -3061,7 +3304,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "209",
      "text": "Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -3094,35 +3337,8 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "210",
      "text": "Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
-     "links": [
-      {
-       "label": "AS <b>2018</b> 2875",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2018/440"
-      }
-     ],
-     "absatz": null,
-     "item": null
-    }
-   ]
-  },
-  "79": {
-   "gliederung": [
-    {
-     "ebene": 1,
-     "label": "3. Titel: Bundesbeiträge"
-    },
-    {
-     "ebene": 2,
-     "label": "7. Kapitel: …"
-    }
-   ],
-   "marginalie": [],
-   "fussnoten": [
-    {
-     "nr": "",
-     "text": "Aufgehoben durch Ziff. I der V vom 8. Juni 2018, mit Wirkung seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
        "label": "AS <b>2018</b> 2875",
@@ -3146,8 +3362,8 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
-     "text": "[AS <b>1991</b> 1166, <b>1993</b> 3281, <b>1994</b> 2494, <b>1995</b> 5045, <b>1996</b> 3253]",
+     "nr": "212",
+     "text": "[AS <b>1991</b> 1166; <b>1993</b> 3281; <b>1994</b> 2494; <b>1995</b> 5045; <b>1996</b> 3253]",
      "links": [
       {
        "label": "AS <b>1991</b> 1166",
@@ -3198,7 +3414,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "213",
      "text": "Fassung gemäss Ziff. I der V vom 5. Juni 2015, in Kraft seit 29. Sept. 2015 (AS <b>2015</b> 2053).",
      "links": [
       {
@@ -3210,7 +3426,7 @@
      "item": null
     },
     {
-     "nr": "",
+     "nr": "214",
      "text": "AS <b>2013</b> 3065",
      "links": [
       {
@@ -3218,11 +3434,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/595"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     },
     {
-     "nr": "",
+     "nr": "215",
      "text": "Eingefügt durch Ziff. I der V vom 5. Juni 2015, in Kraft seit 29. Sept. 2015 (AS <b>2015</b> 2053).",
      "links": [
       {
@@ -3230,12 +3446,12 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/382"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
   },
-  "13__15_": {
+  "13_15": {
    "gliederung": [
     {
      "ebene": 1,
@@ -3249,7 +3465,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "36",
      "text": "Aufgehoben durch Ziff. I der V vom 15. Nov. 2017, mit Wirkung seit 1. Jan. 2018 (AS <b>2017</b> 6545).",
      "links": [
       {
@@ -3280,7 +3496,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "72",
      "text": "Eingefügt durch Ziff. I der V vom 12. Dez. 2008 (AS <b>2009</b> 235). Aufgehoben durch Ziff. I der V vom 7. Dez. 2012, mit Wirkung seit 1. April 2013 (AS <b>2012</b> 6951).",
      "links": [
       {
@@ -3317,8 +3533,8 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
-     "text": "Eingefügt durch Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875). Siehe auch die UeB dieser Änd. am Ende dieses Textes.",
+     "nr": "85",
+     "text": "Eingefügt durch Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875). Siehe auch die UeB Änd. 8.6.2018 und 30.3.2022 am Ende dieses Textes.",
      "links": [
       {
        "label": "AS <b>2018</b> 2875",
@@ -3350,8 +3566,8 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
-     "text": "Eingefügt durch Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
+     "nr": "97",
+     "text": "Eingefügt durch Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875). Siehe auch die UeB Änd. 30.3.2022 am Ende dieses Textes.",
      "links": [
       {
        "label": "AS <b>2018</b> 2875",
@@ -3383,12 +3599,43 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "103",
      "text": "Eingefügt durch Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
        "label": "AS <b>2018</b> 2875",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/440"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "42_43": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Bundesbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "4. Kapitel: Weitere Beiträge"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Sicherheitskosten"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "115",
+     "text": "Aufgehoben durch Ziff. I der V vom 24. Okt. 2007, mit Wirkung seit 1. Jan. 2008 (AS <b>2007</b> 5585).",
+     "links": [
+      {
+       "label": "AS <b>2007</b> 5585",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/768"
       }
      ],
      "absatz": null,
@@ -3416,7 +3663,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "129",
      "text": "Eingefügt durch Ziff. I der V vom 18. Sept 2020, in Kraft seit 1. Nov. 2020 (AS <b>2020</b> 3991).",
      "links": [
       {
@@ -3449,7 +3696,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "131",
      "text": "Eingefügt durch Ziff. I der V vom 18. Sept 2020, in Kraft seit 1. Nov. 2020 (AS <b>2020</b> 3991).",
      "links": [
       {
@@ -3499,6 +3746,20 @@
    ],
    "marginalie": [
     "Finanzkompetenzen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "133",
+     "text": "Fassung gemäss Ziff. I der V vom 20. Mai 2026, in Kraft seit 12. Juni 2026 (AS <b>2026</b> 265).",
+     "links": [
+      {
+       "label": "AS <b>2026</b> 265",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2026/265"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "52_d": {
@@ -3597,7 +3858,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "138",
      "text": "Eingefügt durch Ziff. I der V vom 24. Okt. 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5585).",
      "links": [
       {
@@ -3630,7 +3891,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "145",
      "text": "Eingefügt durch Ziff. I der V vom 1. März 2006, in Kraft seit 1. April 2006 (AS <b>2006</b> 933).",
      "links": [
       {
@@ -3642,19 +3903,19 @@
      "item": null
     },
     {
-     "nr": "",
+     "nr": "146",
      "text": "SR<b> 142.281</b>",
      "links": [
       {
        "label": "SR<b> 142.281</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1999/357"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4867"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
-     "nr": "",
+     "nr": "147",
      "text": "Fassung gemäss Ziff. I 5 der V vom 1. Febr. 2017 über die Einführung der Landesverweisung, in Kraft seit 1. März 2017 (AS <b>2017</b> 563).",
      "links": [
       {
@@ -3662,7 +3923,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/100"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -3687,7 +3948,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "148",
      "text": "Eingefügt durch Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -3699,15 +3960,15 @@
      "item": null
     },
     {
-     "nr": "",
+     "nr": "149",
      "text": "SR <b>364</b>",
      "links": [
       {
        "label": "SR <b>364</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2008/759"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6323"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -3732,7 +3993,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "159",
      "text": "Eingefügt durch Ziff. I der V vom 24. Okt. 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5585).",
      "links": [
       {
@@ -3744,7 +4005,7 @@
      "item": null
     },
     {
-     "nr": "",
+     "nr": "160",
      "text": "Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -3752,11 +4013,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/440"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "",
+     "nr": "161",
      "text": "Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -3764,35 +4025,35 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/440"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
-     "nr": "",
+     "nr": "162",
      "text": "SR <b>142.20</b>",
      "links": [
       {
        "label": "SR <b>142.20</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2007/758"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4851"
       }
      ],
-     "absatz": null,
+     "absatz": "2bis",
      "item": null
     },
     {
-     "nr": "",
+     "nr": "163",
      "text": "SR <b>142.281</b>",
      "links": [
       {
        "label": "SR <b>142.281</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1999/357"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4867"
       }
      ],
-     "absatz": null,
+     "absatz": "2bis",
      "item": null
     },
     {
-     "nr": "",
+     "nr": "164",
      "text": "Eingefügt durch Ziff. I der V vom 7. Dez. 2012 (AS <b>2012</b> 6951). Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -3804,11 +4065,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/440"
       }
      ],
-     "absatz": null,
+     "absatz": "2bis",
      "item": null
     },
     {
-     "nr": "",
+     "nr": "165",
      "text": "Fassung gemäss Ziff. I der V vom 7. Dez. 2012, in Kraft seit 1. April 2013 (AS <b>2012</b> 6951).",
      "links": [
       {
@@ -3816,7 +4077,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/842"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -3841,7 +4102,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "166",
      "text": "Eingefügt durch Ziff. I der V vom 7. Dez. 2012, in Kraft seit 1. April 2013 (AS <b>2012</b> 6951).",
      "links": [
       {
@@ -3853,7 +4114,7 @@
      "item": null
     },
     {
-     "nr": "",
+     "nr": "167",
      "text": "Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -3861,35 +4122,35 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/440"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": "a"
     },
     {
-     "nr": "",
+     "nr": "168",
      "text": "SR <b>142.20</b>",
      "links": [
       {
        "label": "SR <b>142.20</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2007/758"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4851"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": "a"
     },
     {
-     "nr": "",
+     "nr": "169",
      "text": "SR <b>142.281</b>",
      "links": [
       {
        "label": "SR <b>142.281</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1999/357"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4867"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": "a"
     },
     {
-     "nr": "",
+     "nr": "170",
      "text": "Eingefügt durch Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -3897,11 +4158,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/440"
       }
      ],
-     "absatz": null,
+     "absatz": "3bis",
      "item": null
     },
     {
-     "nr": "",
+     "nr": "171",
      "text": "Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -3909,7 +4170,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/440"
       }
      ],
-     "absatz": null,
+     "absatz": "5",
      "item": null
     }
    ]
@@ -3932,7 +4193,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "172",
      "text": "Eingefügt durch Ziff. I der V vom 7. Dez. 2012, in Kraft seit 1. April 2013 (AS <b>2012</b> 6951).",
      "links": [
       {
@@ -3965,7 +4226,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "173",
      "text": "Eingefügt durch Ziff. I der V vom 24. Okt. 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5585).",
      "links": [
       {
@@ -3977,7 +4238,7 @@
      "item": null
     },
     {
-     "nr": "",
+     "nr": "174",
      "text": "Fassung gemäss Ziff. I der V vom 30. Nov. 2011 (AS <b>2011</b> 6087). Aufgehoben durch Ziff. I der V vom 8. Juni 2018, mit Wirkung seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -3989,7 +4250,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/440"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -4002,7 +4263,7 @@
     },
     {
      "ebene": 2,
-     "label": "1. Kapitel: Ausrichtung der Sozialhilfeleistungen und der Nothilfe"
+     "label": "1. Kapitel: Festsetzung und Ausrichtung der Sozialhilfe, der Nothilfe und der entsprechenden Bundesbeiträge"
     },
     {
      "ebene": 3,
@@ -4014,7 +4275,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "22",
      "text": "Eingefügt durch Ziff. I der V vom 24. Okt. 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5585).",
      "links": [
       {
@@ -4035,7 +4296,7 @@
     },
     {
      "ebene": 2,
-     "label": "1. Kapitel: Ausrichtung der Sozialhilfeleistungen und der Nothilfe"
+     "label": "1. Kapitel: Festsetzung und Ausrichtung der Sozialhilfe, der Nothilfe und der entsprechenden Bundesbeiträge"
     },
     {
      "ebene": 3,
@@ -4047,7 +4308,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "23",
      "text": "Eingefügt durch Ziff. I der V vom 24. Okt. 2007 (AS <b>2007</b> 5585). Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
@@ -4063,12 +4324,12 @@
      "item": null
     },
     {
-     "nr": "",
+     "nr": "24",
      "text": "SR <b>832.10</b>",
      "links": [
       {
        "label": "SR <b>832.10</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1995/1328_1328_1328"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
       }
      ],
      "absatz": null,
@@ -4096,7 +4357,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "194",
      "text": "Fassung gemäss Ziff. I der V vom 7. Dez. 2012, in Kraft seit 1. April 2013 (AS <b>2012</b> 6951).",
      "links": [
       {
@@ -4108,6 +4369,23 @@
      "item": null
     }
    ]
+  },
+  "69_70": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Bundesbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "6. Kapitel: Rückkehrhilfe und Wiedereingliederung"
+    },
+    {
+     "ebene": 3,
+     "label": "2. Abschnitt: Rückkehrberatung"
+    }
+   ],
+   "marginalie": []
   },
   "74_a": {
    "gliederung": [
@@ -4129,7 +4407,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "205",
      "text": "Aufgehoben durch Ziff. I der V vom 7. Dez. 2012, mit Wirkung seit 1.April 2013 (AS <b>2012</b> 6951).",
      "links": [
       {
@@ -4137,7 +4415,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/842"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -4162,7 +4440,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "207",
      "text": "Eingefügt durch Ziff. I der V vom 7. Dez. 2012, in Kraft seit 1. April 2013 (AS <b>2012</b> 6951).",
      "links": [
       {
@@ -4174,8 +4452,35 @@
      "item": null
     },
     {
-     "nr": "",
+     "nr": "208",
      "text": "Fassung gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2875).",
+     "links": [
+      {
+       "label": "AS <b>2018</b> 2875",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/440"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "79_80": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Titel: Bundesbeiträge"
+    },
+    {
+     "ebene": 2,
+     "label": "7. Kapitel: …"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "211",
+     "text": "Aufgehoben durch Ziff. I der V vom 8. Juni 2018, mit Wirkung seit 1. März 2019 (AS <b>2018</b> 2875).",
      "links": [
       {
        "label": "AS <b>2018</b> 2875",
@@ -4184,6 +4489,59 @@
      ],
      "absatz": null,
      "item": null
+    }
+   ]
+  },
+  "8_9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Sozialhilfe und Nothilfe"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Kapitel: Sonderabgabe auf Vermögenswerten"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "30",
+     "text": "Aufgehoben durch Ziff. I der V vom 15. Nov. 2017, mit Wirkung seit 1. Jan. 2018 (AS <b>2017</b> 6545).",
+     "links": [
+      {
+       "label": "AS <b>2017</b> 6545",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/721"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "28",
+     "text": "Fassung gemäss Ziff. I der V vom 24. Okt. 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5585).",
+     "links": [
+      {
+       "label": "AS <b>2007</b> 5585",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/768"
+      }
+     ],
+     "absatz": null,
+     "item": null,
+     "sektion": "2. Kapitel: Sonderabgabe auf Vermögenswerten"
+    },
+    {
+     "nr": "29",
+     "text": "Fassung gemäss Ziff. I der V vom 15. Nov. 2017, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6545).",
+     "links": [
+      {
+       "label": "AS <b>2017</b> 6545",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/721"
+      }
+     ],
+     "absatz": null,
+     "item": null,
+     "sektion": "2. Kapitel: Sonderabgabe auf Vermögenswerten"
     }
    ]
   }

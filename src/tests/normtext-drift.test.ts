@@ -5,8 +5,13 @@
  */
 
 import { describe, it, expect } from 'vitest';
-import { pruefeBundFassung, pruefeBundVollstaendigkeit } from '../../scripts/normtext/drift-logik.ts';
-import type { NormSnapshot } from '../../scripts/normtext/drift-logik.ts';
+import {
+  pruefeBundFassung,
+  pruefeBundVollstaendigkeit,
+  pruefeCoverage,
+  fedlexEliAusUrl,
+} from '../../scripts/normtext/drift-logik.ts';
+import type { NormSnapshot, RegisterEintragLite } from '../../scripts/normtext/drift-logik.ts';
 
 // ─── pruefeBundFassung ────────────────────────────────────────────────────────
 
@@ -124,5 +129,74 @@ describe('pruefeBundVollstaendigkeit', () => {
     const ankerMap = new Map<string, string[]>();
     const fehlend = pruefeBundVollstaendigkeit(snapshotIds, ankerMap);
     expect(fehlend).toHaveLength(0);
+  });
+});
+
+// ─── fedlexEliAusUrl (P1-b Coverage) ──────────────────────────────────────────
+
+describe('fedlexEliAusUrl', () => {
+  it('strippt Domain, /de-Suffix und Anker', () => {
+    expect(fedlexEliAusUrl('https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de')).toBe('cc/24/233_245_233');
+    expect(fedlexEliAusUrl('https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_4')).toBe('cc/2010/262');
+    expect(fedlexEliAusUrl('https://www.fedlex.admin.ch/eli/cc/1999/359/fr')).toBe('cc/1999/359');
+  });
+  it('gibt null für Nicht-Fedlex-URLs', () => {
+    expect(fedlexEliAusUrl('https://eur-lex.europa.eu/eli/reg/2016/679/oj')).toBeNull();
+    expect(fedlexEliAusUrl(null)).toBeNull();
+    expect(fedlexEliAusUrl('')).toBeNull();
+  });
+});
+
+// ─── pruefeCoverage (P1-b) ────────────────────────────────────────────────────
+
+describe('pruefeCoverage', () => {
+  const pinEliSet = new Set(['cc/24/233_245_233', 'cc/1999/359']);
+  const pdfEmbedKeys = new Set(['EMRK', 'NYUE']);
+  const reg = (p: Partial<RegisterEintragLite>): RegisterEintragLite => ({
+    key: 'X', ebene: 'bund', status: 'snapshot', quelleUrl: null, ...p,
+  });
+
+  it('grün, wenn jeder Bund-Volltext einen Pin und jedes pdf-embed eine Quelle hat', () => {
+    const luecken = pruefeCoverage(
+      [
+        reg({ key: 'ZGB', quelleUrl: 'https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de' }),
+        reg({ key: 'ASYLV1', quelleUrl: 'https://www.fedlex.admin.ch/eli/cc/1999/359/de' }),
+        reg({ key: 'EMRK', status: 'pdf-embed', quelleUrl: 'https://www.fedlex.admin.ch/eli/cc/1974/2151_2151_2151/de' }),
+      ],
+      pinEliSet,
+      pdfEmbedKeys,
+    );
+    expect(luecken).toHaveLength(0);
+  });
+
+  it('rot, wenn ein Fedlex-Bund-Volltext keinen Pin hat (parser-blindes Loch)', () => {
+    const luecken = pruefeCoverage(
+      [reg({ key: 'GEHEIM', quelleUrl: 'https://www.fedlex.admin.ch/eli/cc/9/9/de' })],
+      pinEliSet,
+      pdfEmbedKeys,
+    );
+    expect(luecken).toEqual([{ key: 'GEHEIM', grund: expect.stringContaining('ohne cache.sh-Pin') }]);
+  });
+
+  it('rot, wenn ein pdf-embed keine PDF_EMBED_QUELLE hat', () => {
+    const luecken = pruefeCoverage(
+      [reg({ key: 'FREMD', status: 'pdf-embed', quelleUrl: 'https://www.fedlex.admin.ch/eli/cc/9/9/de' })],
+      pinEliSet,
+      pdfEmbedKeys,
+    );
+    expect(luecken).toEqual([{ key: 'FREMD', grund: 'pdf-embed ohne PDF_EMBED_QUELLE' }]);
+  });
+
+  it('nimmt Kanton, nur-live-link und Nicht-Fedlex-Bund aus', () => {
+    const luecken = pruefeCoverage(
+      [
+        reg({ key: 'KAN', ebene: 'kanton', quelleUrl: 'https://www.lexfind.ch/x' }),
+        reg({ key: 'STUB', status: 'nur-live-link', quelleUrl: 'https://www.fedlex.admin.ch/eli/cc/9/9/de' }),
+        reg({ key: 'EUVO', quelleUrl: 'https://eur-lex.europa.eu/eli/reg/2016/679/oj' }),
+      ],
+      pinEliSet,
+      pdfEmbedKeys,
+    );
+    expect(luecken).toHaveLength(0);
   });
 });

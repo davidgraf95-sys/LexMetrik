@@ -1,9 +1,9 @@
 {
- "erzeugt": "2026-06-30",
+ "erzeugt": "2026-07-05",
  "kopf": {
   "srNummer": "812.213",
   "titel": "Medizinprodukteverordnung",
-  "erlassdatum": "vom 1. Juli 2020 (Stand am 1. November 2023)",
+  "erlassdatum": "vom 1. Juli 2020 (Stand am 1. Juli 2026)",
   "praeambel": [
    {
     "rolle": "autor",
@@ -25,7 +25,7 @@
     "links": [
      {
       "label": "SR <b>812.21</b>",
-      "url": "https://fedlex.data.admin.ch/eli/cc/2001/422"
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9354"
      }
     ],
     "absatz": null,
@@ -37,7 +37,7 @@
     "links": [
      {
       "label": "SR <b>734.0</b>",
-      "url": "https://fedlex.data.admin.ch/eli/cc/19/259_252_257"
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8570"
      }
     ],
     "absatz": null,
@@ -49,7 +49,7 @@
     "links": [
      {
       "label": "SR <b>941.20</b>",
-      "url": "https://fedlex.data.admin.ch/eli/cc/2012/734"
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11170"
      }
     ],
     "absatz": null,
@@ -61,7 +61,7 @@
     "links": [
      {
       "label": "SR <b>930.11</b>",
-      "url": "https://fedlex.data.admin.ch/eli/cc/2010/347"
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11020"
      }
     ],
     "absatz": null,
@@ -73,7 +73,7 @@
     "links": [
      {
       "label": "SR <b>814.50</b>",
-      "url": "https://fedlex.data.admin.ch/eli/cc/1994/1933_1933_1933"
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9533"
      }
     ],
     "absatz": null,
@@ -85,7 +85,7 @@
     "links": [
      {
       "label": "SR <b>946.51</b>",
-      "url": "https://fedlex.data.admin.ch/eli/cc/1996/1725_1725_1725"
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11467"
      }
     ],
     "absatz": null,
@@ -208,11 +208,11 @@
    "fussnoten": [
     {
      "nr": "11",
-     "text": "Fassung gemäss Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS <b>2023</b> 576).",
+     "text": "Fassung gemäss Anhang der V vom 20. Nov. 2024 (Produkteregistrierungspflicht), in Kraft seit 1. Juli 2026 (AS <b>2024</b> 742).",
      "links": [
       {
-       "label": "AS <b>2023</b> 576",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2023/576"
+       "label": "AS <b>2024</b> 742",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/742"
       }
      ],
      "absatz": "1",
@@ -220,7 +220,7 @@
     },
     {
      "nr": "12",
-     "text": "Verordnung (EU) 2017/745 des Europäischen Parlaments und des Rates vom 5. April 2017 über Medizinprodukte, zur Änderung der Richtlinie 2001/83/EG, der Verordnung (EG) Nr. 178/2002 und der Verordnung (EG) Nr. 1223/2009 und zur Aufhebung der Richtlinien 90/385/EWG und 93/42/EWG des Rates, ABl. L 117 vom 5.5.2017, S. 1; zuletzt geändert durch Verordnung (EU) 2023/607, ABl. L 80 vom 20.3.2023, S. 24.",
+     "text": "Verordnung (EU) 2017/745 des Europäischen Parlaments und des Rates vom 5. April 2017 über Medizinprodukte, zur Änderung der Richtlinie 2001/83/EG, der Verordnung (EG) Nr. 178/2002 und der Verordnung (EG) Nr. 1223/2009 und zur Aufhebung der Richtlinien 90/385/EWG und 93/42/EWG des Rates, ABl. L 117 vom 5.5.2017, S. 1; zuletzt geändert durch Verordnung (EU) 2024/1860, ABl. L, 2024/1860, 9.7.2024.",
      "links": [],
      "absatz": "1",
      "item": "f"
@@ -310,7 +310,7 @@
      "links": [
       {
        "label": "SR <b>812.211</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2001/442"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9355"
       }
      ],
      "absatz": "4",
@@ -440,7 +440,7 @@
      "links": [
       {
        "label": "SR <b>819.14</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2008/263"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9850"
       }
      ],
      "absatz": "3",
@@ -582,7 +582,7 @@
      "links": [
       {
        "label": "SR <b>810.306</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2020/553"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9251"
       }
      ],
      "absatz": "2",
@@ -804,8 +804,13 @@
     },
     {
      "nr": "49",
-     "text": "Tritt zu einem späteren Zeitpunkt in Kraft (Art. 110 Abs. 2).",
-     "links": [],
+     "text": "Fassung gemäss Anhang der V vom 20. Nov. 2024 (Produkteregistrierungspflicht), in Kraft seit 1. Juli 2026 (AS <b>2024</b> 742).",
+     "links": [
+      {
+       "label": "AS <b>2024</b> 742",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/742"
+      }
+     ],
      "absatz": "5",
      "item": null
     }
@@ -1234,7 +1239,7 @@
      "links": [
       {
        "label": "SR <b>812.212.1</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2018/786"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9361"
       }
      ],
      "absatz": "4",
@@ -1259,7 +1264,7 @@
      "links": [
       {
        "label": "SR <b>810.21</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2007/279"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9239"
       }
      ],
      "absatz": "1",
@@ -1271,7 +1276,7 @@
      "links": [
       {
        "label": "SR <b>810.211</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2007/280"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9240"
       }
      ],
      "absatz": "1",
@@ -1296,7 +1301,7 @@
      "links": [
       {
        "label": "SR <b>812.212.1</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2018/786"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9361"
       }
      ],
      "absatz": "1",
@@ -1308,7 +1313,7 @@
      "links": [
       {
        "label": "SR <b>810.21</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2007/279"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9239"
       }
      ],
      "absatz": "2",
@@ -1830,6 +1835,18 @@
     },
     {
      "nr": "97",
+     "text": "Fassung gemäss Anhang der V vom 20. Nov. 2024 (Produkteregistrierungspflicht), in Kraft seit 1. Juli 2026 (AS <b>2024</b> 742).",
+     "links": [
+      {
+       "label": "AS <b>2024</b> 742",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/742"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "98",
      "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
@@ -1838,6 +1855,18 @@
       }
      ],
      "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "99",
+     "text": "Fassung gemäss Anhang der V vom 20. Nov. 2024 (Produkteregistrierungspflicht), in Kraft seit 1. Juli 2026 (AS <b>2024</b> 742).",
+     "links": [
+      {
+       "label": "AS <b>2024</b> 742",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/742"
+      }
+     ],
+     "absatz": "5",
      "item": null
     },
     {
@@ -1871,7 +1900,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "98",
+     "nr": "100",
      "text": "Siehe Fussnote zu Art. 4 Abs. 1 Bst. f.",
      "links": [],
      "absatz": "3",
@@ -1910,7 +1939,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "99",
+     "nr": "101",
      "text": "Siehe Fussnote zu Art. 4 Abs. 1 Bst. f.",
      "links": [],
      "absatz": null,
@@ -1934,7 +1963,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "100",
+     "nr": "102",
      "text": "Siehe Fussnote zu Art. 4 Abs. 1 Bst. f.",
      "links": [],
      "absatz": "3",
@@ -1973,7 +2002,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "101",
+     "nr": "103",
      "text": "Siehe Fussnote zu Art. 4 Abs. 1 Bst. f.",
      "links": [],
      "absatz": "3",
@@ -1997,7 +2026,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "102",
+     "nr": "104",
      "text": "Fassung gemäss Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS <b>2021</b> 281).",
      "links": [
       {
@@ -2024,14 +2053,14 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "103",
+     "nr": "105",
      "text": "Siehe Fussnote zu Art. 4 Abs. 1 Bst. f.",
      "links": [],
      "absatz": "3",
      "item": null
     },
     {
-     "nr": "104",
+     "nr": "106",
      "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
@@ -2043,7 +2072,7 @@
      "item": null
     },
     {
-     "nr": "105",
+     "nr": "107",
      "text": "Fassung gemäss Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS <b>2021</b> 281).",
      "links": [
       {
@@ -2072,7 +2101,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "106",
+     "nr": "108",
      "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
@@ -2101,7 +2130,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "107",
+     "nr": "109",
      "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
@@ -2130,14 +2159,14 @@
    ],
    "fussnoten": [
     {
-     "nr": "108",
+     "nr": "110",
      "text": "Siehe Fussnote zu Art. 4 Abs. 1 Bst. f.",
      "links": [],
      "absatz": "1",
      "item": null
     },
     {
-     "nr": "109",
+     "nr": "111",
      "text": "Fassung gemäss Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS <b>2021</b> 281).",
      "links": [
       {
@@ -2149,7 +2178,7 @@
      "item": "b"
     },
     {
-     "nr": "110",
+     "nr": "112",
      "text": "Eingefügt durch Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS <b>2021</b> 281).",
      "links": [
       {
@@ -2161,7 +2190,7 @@
      "item": null
     },
     {
-     "nr": "111",
+     "nr": "113",
      "text": "Aufgehoben durch Ziff. I der V vom 19. Mai 2021, mit Wirkung seit 26. Mai 2021 (AS <b>2021</b> 281).",
      "links": [
       {
@@ -2212,7 +2241,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "112",
+     "nr": "114",
      "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
@@ -2237,7 +2266,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "113",
+     "nr": "115",
      "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
@@ -2249,7 +2278,7 @@
      "item": null
     },
     {
-     "nr": "114",
+     "nr": "116",
      "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
@@ -2274,12 +2303,12 @@
    ],
    "fussnoten": [
     {
-     "nr": "115",
+     "nr": "117",
      "text": "SR <b>941.210</b>",
      "links": [
       {
        "label": "SR <b>941.210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2006/245"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11180"
       }
      ],
      "absatz": "3",
@@ -2310,7 +2339,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "116",
+     "nr": "118",
      "text": "Siehe Fussnote zu Art. 4 Abs. 1 Bst. f.",
      "links": [],
      "absatz": "2",
@@ -2341,14 +2370,14 @@
    ],
    "fussnoten": [
     {
-     "nr": "117",
+     "nr": "119",
      "text": "Siehe Fussnote zu Art. 4 Abs. 1 Bst. f.",
      "links": [],
      "absatz": "2",
      "item": null
     },
     {
-     "nr": "118",
+     "nr": "120",
      "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
@@ -2384,14 +2413,14 @@
    ],
    "fussnoten": [
     {
-     "nr": "121",
+     "nr": "123",
      "text": "Siehe Fussnote zu Art. 4 Abs. 1 Bst. f.",
      "links": [],
      "absatz": "2",
      "item": null
     },
     {
-     "nr": "122",
+     "nr": "124",
      "text": "Eingefügt durch Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS <b>2021</b> 281).",
      "links": [
       {
@@ -2416,7 +2445,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "123",
+     "nr": "125",
      "text": "Eingefügt durch Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
@@ -2520,19 +2549,19 @@
    ],
    "fussnoten": [
     {
-     "nr": "124",
+     "nr": "126",
      "text": "SR <b>235.11</b>",
      "links": [
       {
        "label": "SR <b>235.11</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2022/568"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5994"
       }
      ],
      "absatz": "1",
      "item": null
     },
     {
-     "nr": "125",
+     "nr": "127",
      "text": "Fassung gemäss Anhang 2 Ziff. II 101 der Datenschutzverordnung vom 31. Aug. 2022, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 568).",
      "links": [
       {
@@ -2544,7 +2573,7 @@
      "item": null
     },
     {
-     "nr": "126",
+     "nr": "128",
      "text": "Fassung gemäss Anhang 2 Ziff. II 101 der Datenschutzverordnung vom 31. Aug. 2022, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 568).",
      "links": [
       {
@@ -2588,7 +2617,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "127",
+     "nr": "129",
      "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
@@ -2662,7 +2691,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "128",
+     "nr": "130",
      "text": "Siehe Fussnote zu Art. 4 Abs. 1 Bst. f.",
      "links": [],
      "absatz": null,
@@ -2701,7 +2730,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "129",
+     "nr": "131",
      "text": "Fassung gemäss Anhang 2 Ziff. II 101 der Datenschutzverordnung vom 31. Aug. 2022, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 568).",
      "links": [
       {
@@ -2713,12 +2742,12 @@
      "item": null
     },
     {
-     "nr": "130",
+     "nr": "132",
      "text": "SR <b>235.1</b>",
      "links": [
       {
        "label": "SR <b>235.1</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2022/491"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5993"
       }
      ],
      "absatz": null,
@@ -2742,7 +2771,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "131",
+     "nr": "133",
      "text": "Fassung gemäss Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS <b>2023</b> 576).",
      "links": [
       {
@@ -2786,21 +2815,21 @@
    ],
    "fussnoten": [
     {
-     "nr": "132",
+     "nr": "134",
      "text": "Siehe Fussnote zu Art. 4 Abs. 1 Bst. f.",
      "links": [],
      "absatz": "1",
      "item": null
     },
     {
-     "nr": "133",
+     "nr": "135",
      "text": "Verordnung (EU) Nr. 207/2012 der Kommission vom 9. März 2012 über elektronische Gebrauchsanweisungen für Medizinprodukte, Fassung gemäss ABl. L 72 vom 10.3.2012, S. 28.",
      "links": [],
      "absatz": "2",
      "item": null
     },
     {
-     "nr": "134",
+     "nr": "136",
      "text": "Verordnung (EU) Nr. 722/2012 der Kommission vom 8. August 2012 über besondere Anforderungen betreffend die in der Richtlinie 90/385/EWG bzw. 93/42/EWG des Rates festgelegten Anforderungen an unter Verwendung von Gewebe tierischen Ursprungs hergestellte aktive implantierbare medizinische Geräte und Medizinprodukte, Fassung gemäss ABl. L 212 vom 9.8.2012, S. 3.",
      "links": [],
      "absatz": "2",
@@ -2824,7 +2853,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "135",
+     "nr": "137",
      "text": "Fassung gemäss Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
@@ -2853,7 +2882,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "136",
+     "nr": "138",
      "text": "Eingefügt durch Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
@@ -2882,14 +2911,14 @@
    ],
    "fussnoten": [
     {
-     "nr": "137",
+     "nr": "139",
      "text": "Siehe Fussnote zu Art. 4 Abs. 1 Bst. f.",
      "links": [],
      "absatz": "1",
      "item": null
     },
     {
-     "nr": "138",
+     "nr": "140",
      "text": "Siehe Anhang 4.",
      "links": [],
      "absatz": "2",
@@ -2913,7 +2942,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "139",
+     "nr": "141",
      "text": "[AS <b>2001</b> 3487;<b>2004 </b>4037 Ziff. I 5, II Abs. 2; <b>2008 </b>4377 Anhang 5 Ziff. 2; <b>2010 </b>1215, 2749 Ziff. I 7; <b>2015</b> 999; <b>2017</b> 5935; <b>2019</b> 999 Art. 28 Abs. 2; <b>2020</b> 2975]",
      "links": [
       {
@@ -2957,7 +2986,7 @@
      "item": "1"
     },
     {
-     "nr": "140",
+     "nr": "142",
      "text": "[AS <b>2006</b> 3679]",
      "links": [
       {
@@ -2986,7 +3015,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "141",
+     "nr": "143",
      "text": "Fassung gemäss Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS <b>2023</b> 576).",
      "links": [
       {
@@ -2998,14 +3027,14 @@
      "item": null
     },
     {
-     "nr": "142",
+     "nr": "144",
      "text": "Siehe Fussnote zu Art. 4 Abs. 1 Bst. f.",
      "links": [],
      "absatz": "3",
      "item": "a"
     },
     {
-     "nr": "143",
+     "nr": "145",
      "text": "Eingefügt durch Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS <b>2023</b> 576).",
      "links": [
       {
@@ -3034,7 +3063,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "144",
+     "nr": "146",
      "text": "Fassung gemäss Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS <b>2023</b> 576).",
      "links": [
       {
@@ -3046,7 +3075,7 @@
      "item": null
     },
     {
-     "nr": "145",
+     "nr": "147",
      "text": "Siehe Fussnote zu Art. 4 Abs. 1 Bst. f.",
      "links": [],
      "absatz": "1bis",
@@ -3070,7 +3099,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "146",
+     "nr": "148",
      "text": "Siehe Fussnote zu Art. 99 Ziff. 1.",
      "links": [],
      "absatz": null,
@@ -3094,7 +3123,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "147",
+     "nr": "149",
      "text": "Siehe Fussnote zu Art. 99 Ziff. 1.",
      "links": [],
      "absatz": "2",
@@ -3131,7 +3160,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "152",
+     "nr": "154",
      "text": "Aufgehoben durch Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, mit Wirkung seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
@@ -3160,7 +3189,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "153",
+     "nr": "155",
      "text": "Fassung gemäss Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS <b>2023</b> 576).",
      "links": [
       {
@@ -3172,19 +3201,19 @@
      "item": null
     },
     {
-     "nr": "154",
+     "nr": "156",
      "text": "Siehe Fussnote zu Art. 4 Abs. 1 Bst. f.",
      "links": [],
      "absatz": "2",
      "item": null
     },
     {
-     "nr": "155",
+     "nr": "157",
      "text": "SR <b>810.306</b>",
      "links": [
       {
        "label": "SR <b>810.306</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2020/553"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9251"
       }
      ],
      "absatz": "3",
@@ -3208,21 +3237,21 @@
    ],
    "fussnoten": [
     {
-     "nr": "156",
+     "nr": "158",
      "text": "Siehe Fussnote zu Art. 99 Ziff. 1.",
      "links": [],
      "absatz": "1",
      "item": null
     },
     {
-     "nr": "157",
+     "nr": "159",
      "text": "Siehe Fussnote zu Art. 4 Abs. 1 Bst. f.",
      "links": [],
      "absatz": "2",
      "item": null
     },
     {
-     "nr": "158",
+     "nr": "160",
      "text": "Fassung gemäss Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS <b>2023</b> 576).",
      "links": [
       {
@@ -3234,7 +3263,7 @@
      "item": null
     },
     {
-     "nr": "159",
+     "nr": "161",
      "text": "Eingefügt durch Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS <b>2023</b> 576).",
      "links": [
       {
@@ -3246,7 +3275,7 @@
      "item": null
     },
     {
-     "nr": "160",
+     "nr": "162",
      "text": "Eingefügt durch Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS <b>2023</b> 576).",
      "links": [
       {
@@ -3258,7 +3287,7 @@
      "item": null
     },
     {
-     "nr": "161",
+     "nr": "163",
      "text": "Eingefügt durch Ziff. I der V vom 29. Sept. 2023, in Kraft seit 1. Nov. 2023 (AS <b>2023</b> 576).",
      "links": [
       {
@@ -3270,7 +3299,7 @@
      "item": null
     },
     {
-     "nr": "162",
+     "nr": "164",
      "text": "Aufgehoben durch Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, mit Wirkung seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
@@ -3295,11 +3324,11 @@
     }
    ],
    "marginalie": [
-    "Meldung von Produkten, Systemen und Behandlungseinheiten"
+    "Meldung und Registrierung von Produkten, Systemen und Behandlungseinheiten"
    ],
    "fussnoten": [
     {
-     "nr": "163",
+     "nr": "165",
      "text": "Fassung gemäss Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS <b>2021</b> 281).",
      "links": [
       {
@@ -3311,24 +3340,65 @@
      "item": null
     },
     {
-     "nr": "164",
+     "nr": "166",
+     "text": "Fassung gemäss Anhang der V vom 20. Nov. 2024 (Produkteregistrierungspflicht), in Kraft seit 1. Juli 2026 (AS <b>2024</b> 742).",
+     "links": [
+      {
+       "label": "AS <b>2024</b> 742",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/742"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "167",
      "text": "Siehe Fussnote zu Art. 4 Abs. 1 Bst. f.",
      "links": [],
      "absatz": "1",
      "item": "a"
     },
     {
-     "nr": "165",
+     "nr": "168",
      "text": "Siehe Fussnote zu Art. 99 Ziff. 1.",
      "links": [],
      "absatz": "1",
      "item": "a"
     },
     {
-     "nr": "166",
-     "text": "Tritt zu einem späteren Zeitpunkt in Kraft (Art. 110 Abs. 2).",
-     "links": [],
+     "nr": "169",
+     "text": "Fassung gemäss Anhang der V vom 20. Nov. 2024 (Produkteregistrierungspflicht), in Kraft seit 1. Juli 2026 (AS <b>2024</b> 742).",
+     "links": [
+      {
+       "label": "AS <b>2024</b> 742",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/742"
+      }
+     ],
      "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "170",
+     "text": "AS <b>2017</b> 5935",
+     "links": [
+      {
+       "label": "AS <b>2017</b> 5935",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/650"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "171",
+     "text": "Eingefügt durch Anhang der V vom 20. Nov. 2024 (Produkteregistrierungspflicht), in Kraft seit 1. Juli 2026 (AS <b>2024</b> 742).",
+     "links": [
+      {
+       "label": "AS <b>2024</b> 742",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/742"
+      }
+     ],
+     "absatz": "3",
      "item": null
     }
    ]
@@ -3347,7 +3417,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "167",
+     "nr": "172",
      "text": "Aufgehoben durch Ziff. I der V vom 19. Mai 2021, mit Wirkung seit 26. Mai 2021 (AS <b>2021</b> 281).",
      "links": [
       {
@@ -3376,12 +3446,12 @@
    ],
    "fussnoten": [
     {
-     "nr": "168",
-     "text": "Fassung gemäss Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS <b>2021</b> 281).",
+     "nr": "173",
+     "text": "Aufgehoben durch Anhang der V vom 20. Nov. 2024 (Produkteregistrierungspflicht), mit Wirkung seit 1. Juli 2026 (AS <b>2024</b> 742).",
      "links": [
       {
-       "label": "AS <b>2021</b> 281",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2021/281"
+       "label": "AS <b>2024</b> 742",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/742"
       }
      ],
      "absatz": "2",
@@ -3405,7 +3475,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "148",
+     "nr": "150",
      "text": "Eingefügt durch Ziff. I der V vom 19. Mai 2021, in Kraft seit 26. Mai 2021 (AS <b>2021</b> 281).",
      "links": [
       {
@@ -3434,7 +3504,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "149",
+     "nr": "151",
      "text": "Eingefügt durch Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
@@ -3446,7 +3516,7 @@
      "item": null
     },
     {
-     "nr": "150",
+     "nr": "152",
      "text": "Siehe Fussnote zu Art. 4 Abs. 1 Bst. f.",
      "links": [],
      "absatz": null,
@@ -3468,7 +3538,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "151",
+     "nr": "153",
      "text": "Eingefügt durch Ziff. I der V vom 19. Mai 2021 (AS <b>2021</b> 281). Aufgehoben durch Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, mit Wirkung seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
@@ -3497,7 +3567,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "119",
+     "nr": "121",
      "text": "Eingefügt durch Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {
@@ -3522,7 +3592,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "120",
+     "nr": "122",
      "text": "Eingefügt durch Anhang 5 Ziff. 1 der V vom 4. Mai 2022 über In-vitro-Diagnostika, in Kraft seit 26. Mai 2022 (AS <b>2022</b> 291).",
      "links": [
       {

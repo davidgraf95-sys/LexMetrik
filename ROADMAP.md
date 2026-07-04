@@ -187,15 +187,16 @@ uebergabe: nur per explizitem `plan:set <id> slot=inhaber`-Commit; check:plan er
 - **Gesetze-Currency & Coverage** *(QS-CURRENCY, `[OF]`, neu 4.7.2026 — Fedlex-Portfolio Paket 1)*.
   <!-- @meta id: QS-CURRENCY · status: wip · of: ja · blocker: null · dep: [] · kollision: [scripts/fedlex-cache.sh, public/normtext/register.json] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-FEDLEX-PORTFOLIO.md -->
   Kein Bund-Erlass wird veraltet ausgeliefert, keine Currency-Lücke bleibt strukturell
-  unsichtbar. Detailquelle **`FAHRPLAN-FEDLEX-PORTFOLIO.md`** (Paket 1, P1-a…d). **Stand 4.7.2026:
-  P1-c + P1-d gebaut (dieser PR)** — Wiedervorlage-Generator `gen:fedlex-wiedervorlage` (56 künftige
-  Fedlex-Konsolidierungen als datierte Wiedervorlage im Verfallsregister, AUTO-Block) + Currency-Chips
-  «geltend geprüft am … (maschinell)»/«nächste Fassung ab …» (Sidecar `public/normtext/currency.json`,
-  beide Leser-Instanzen + prerenderter Kopf, CLS 0); Gegenprüfungs-Glob `scripts/fedlex-*` ergänzt;
-  Gegenprüfung bestanden (10 Stichproben gegen Fedlex-SPARQL). **OFFEN P1-a/P1-b** (PR #103 wurde
-  **geschlossen, nie gemergt** — Ausführungsvermerk im Fahrplan war Docs-only): 18 gepinnte Erlasse
-  überholt (`check:fedlex-versionen` rot), davon 4 im parser-blinden Regex-Loch (`fedlex-pins.ts`
-  `[a-z_]+` verfehlt Ziffern-Pins ASYLV1/2/3, ARGV2). Trailer `Roadmap: QS-CURRENCY`.
+  unsichtbar. Detailquelle **`FAHRPLAN-FEDLEX-PORTFOLIO.md`** (Paket 1, P1-a…d). **Stand 5.7.2026:
+  P1-a + P1-b gebaut (dieser PR) — Paket 1 damit komplett (P1-c/d schon in main, PR #142).**
+  **P1-b (Monitoring dicht):** Regex-Fix `fedlex-pins.ts` `[a-z_]+`→`[a-z0-9_]+` (11 parser-blinde
+  Ziffern-Pins jetzt überwacht, 207→218) + Parser-Selbsttest + Coverage-Assertion (kein gehosteter
+  Bund-Volltext ohne Pin, rot bei Verstoss) + PDF-Embed-Pins (EMRK/NYÜ) ins `check:fedlex-versionen`.
+  **P1-a (Datenlauf):** 18 überholte Snapshots + 2 PDF-Embeds auf die geltende Fassung gehoben
+  (html-N SPARQL-kanonisch via isExemplifiedBy; klv/vrv=8, ssv=14; Artikel-Diff +85, 9 eId-Renames
+  1:1, 0 Verlust); `check:fedlex-versionen` **Exit 0 (0 stale)**. Nebenbei zwei Mechanik-Bugs gefixt
+  (Golden-`--erlass`-Merge behielt Phantom-Keys; check:pdf-netz notation-Join-Partial-Result).
+  Gegenprüfung bestanden. Trailer `Roadmap: QS-CURRENCY`. **Status: `[✓]` (Paket 1 abgeschlossen).**
 - **Geräte-Last / Performance** *(QS-PERF, `[OF]`, neu 30.6.2026 — Leitprinzip 7 + CLAUDE.md §15)*.
   <!-- @meta id: QS-PERF · status: wip · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein · fahrplan: FAHRPLAN-PERFORMANCE.md -->
   Lexmetrik soll Computer **nicht merklich langsamer** machen, **ohne Logikverlust** (Treue gewinnt
