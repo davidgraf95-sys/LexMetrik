@@ -504,7 +504,21 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   mit dem bestehenden Apparat-Schalter (Unifizierung = G2b Kopf-Zusammenführung).
   Nächste Etappe **G2b** (Kopf-Merge/Fussnoten-Render-Fix/Sticky-Kontextkopf).
   R5-Mobil offengelegt auf ~30ch statt aspirativ 40ch (physikalisch gedeckelt
-  @390, s. FAHRPLAN + Spec-Kommentar).
+  @390, s. FAHRPLAN + Spec-Kommentar). **G4** (Einstieg /gesetze + Cmd/Ctrl-K,
+  eigener Worktree, kollisionsarm) **gebaut**: (a) Landeplatz löst die Dreifach-
+  Redundanz auf — drei gleichwertige Einstiegskacheln mit Live-Statistik statt
+  stillem Bund-Default, neutrale Overline, Segment/Tab-Panel erst NACH Säulen-Wahl
+  (`?ebene=`); alte Deep-Links (`?ebene=`/`?kt=`/`#sys-`/`?q=`) bleiben erreichbar.
+  (b) Globale **Befehls-/Sprung-Palette** (`Cmd/Ctrl-K` + Mobil-Knopf in der Topbar)
+  mit deterministischem **Norm-Query-Parser** (`src/lib/suche/normQuery.ts`):
+  «OR 257d»/«Art. 5 AIG»/«ZGB 684 II»/«VMWG»/Kanton mit Code «StG AI 5» →
+  `#art-<token>`-Deep-Link in ≤2 Interaktionen; Token-Ableitung kongruent
+  passus.ts (257d→257_d, 49abis→49_a_bis), KEIN neuer Index (sitzt auf dem
+  Browse-Manifest), Freitext → normale Suche (kein Fehl-Sprung). Lazy (§15, kein
+  Eager-Load im Erst-Paint), a11y role="dialog"/Fokus-Falle/Esc via `useDialogFokus`.
+  29 Unit-Akzeptanztests (`normQuery.test.ts`), 6 e2e (`befehlspalette.e2e.ts`);
+  golden byte-gleich (kein Normtext/Engine); `gegenpruefung: n/a — reine UI`.
+  Nächste Etappe **G2b** (Kopf-Merge/Sticky-Kontextkopf) bzw. **G5/G6**.
 - [ ] **6 · Konsultieren-Klingen** *(`[OF]`, amtlich)*:
   <!-- @meta id: W2·6 · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->
   - **Mehrsprachiger Normvergleich DE/FR/IT** (Auslegungswerkzeug, Art. 14 PublG — alle drei

@@ -320,6 +320,61 @@ function KantonSystematik({ erlasse, sys }: { erlasse: BrowseErlass[]; sys?: Kan
   );
 }
 
+// Neutraler Landeplatz /gesetze (G4 · §4.1): prominenter Sprung-/Such-Einstieg
+// (öffnet die Cmd/Ctrl-K-Palette, §4.2) + drei gleichwertige Einstiegskacheln mit
+// Kurz-Statistik. Löst die frühere Dreifach-Redundanz (Overline + Tab-Leiste +
+// Sidebar) auf: EINE Steuerung, kein stiller Bund-Default. Reine Darstellung (§3).
+function Einstieg({ bund, bundArtikel, kantone, kantonErlasse, international, onWahl, onBefehl }: {
+  bund: number; bundArtikel: number; kantone: number; kantonErlasse: number; international: number;
+  onWahl: (e: Ebene) => void; onBefehl: () => void;
+}) {
+  const pk = usePaneKlasse();
+  const kacheln: { id: Ebene; titel: string; zahl: number; einheit: string; sub: string }[] = [
+    { id: 'bund', titel: 'Bundesrecht', zahl: bund, einheit: 'Erlasse', sub: `Gesetze & Verordnungen · ${bundArtikel.toLocaleString('de-CH')} Artikel im Volltext` },
+    { id: 'kanton', titel: 'Kantone', zahl: kantone, einheit: 'Kantone', sub: `${kantonErlasse.toLocaleString('de-CH')} kantonale Erlasse` },
+    { id: 'international', titel: 'International', zahl: international, einheit: 'Erlasse', sub: 'Staatsverträge & EU-Recht' },
+  ];
+  return (
+    <div className="space-y-6">
+      {/* Prominenter Artikel-Sprung / Suche (§4.2): öffnet die Befehlspalette. */}
+      <button
+        type="button"
+        onClick={onBefehl}
+        className="group flex w-full items-center gap-3 rounded-lg border border-line bg-paper-sunken/40 px-4 py-3.5 text-left transition-colors hover:border-brass-400 hover:bg-brass-100/30"
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden className="shrink-0 text-ink-500 group-hover:text-brass-700">
+          <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="1.7" />
+          <path d="M20 20l-3.6-3.6" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+        </svg>
+        <span className="min-w-0 flex-1">
+          <span className="block text-body-l text-ink-700">Direkt zum Artikel springen — z. B. «OR 257d», «Art. 5 AIG»</span>
+          <span className="block text-body-s text-ink-500">oder Stichwort suchen über Gesetze, Rechtsprechung und Werkzeuge</span>
+        </span>
+        <kbd className="hidden sm:inline num shrink-0 rounded border border-line bg-paper px-1.5 py-0.5 text-micro font-medium text-ink-500">⌘K</kbd>
+      </button>
+
+      <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-3', 'grid grid-cols-1 @2xl/pane:grid-cols-3 gap-3')}>
+        {kacheln.map((k) => (
+          <button
+            type="button"
+            key={k.id}
+            onClick={() => onWahl(k.id)}
+            className="lc-card group flex flex-col gap-1.5 p-5 text-left transition-colors hover:border-brass-400"
+          >
+            <span className="flex items-baseline gap-2">
+              <span className="num font-display text-h1 leading-none text-brass-700">{k.zahl}</span>
+              <span className="lc-overline text-ink-500">{k.einheit}</span>
+            </span>
+            <span className="font-sans font-semibold text-ink-900 text-h3 tracking-tight group-hover:text-brass-700 transition-colors">{k.titel}</span>
+            <span className="text-body-s text-ink-500">{k.sub}</span>
+            <span aria-hidden className="mt-1 text-body-s font-medium text-brass-700">Öffnen →</span>
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export function Gesetze() {
   const pk = usePaneKlasse();
   const [erlasse, setErlasse] = useState<BrowseErlass[] | null>(null);
@@ -342,12 +397,25 @@ export function Gesetze() {
   // Systematik; key= an BundSystematik mountet bei Hash-Wechsel frisch.
   const { hash } = useLocation();
   const hashSys = hash.startsWith('#sys-') ? hash.slice(5) : null;
-  const ebene: Ebene = params.get('ebene') === 'kanton' ? 'kanton'
-    : params.get('ebene') === 'international' ? 'international' : 'bund';
-  const kanton = ebene === 'kanton' ? params.get('kt') : null;
+  // Einstiegs-Auflösung (G4 · §4.1): OHNE explizites ?ebene= landet man NICHT
+  // still auf «Bund», sondern auf dem neutralen Landeplatz (drei Einstiegskacheln).
+  // Eine Säule ist erst gewählt, wenn ?ebene= gesetzt ist (Deep-Links bleiben
+  // erreichbar). `ebene` (Fallback 'bund') trägt nur die abgeleiteten Listen.
+  const ebeneParam = params.get('ebene');
+  const gewaehlt: Ebene | null = ebeneParam === 'kanton' ? 'kanton'
+    : ebeneParam === 'international' ? 'international'
+    : ebeneParam === 'bund' ? 'bund' : null;
+  const ebene: Ebene = gewaehlt ?? 'bund';
+  const kanton = gewaehlt === 'kanton' ? params.get('kt') : null;
   const setzeEbene = (e: Ebene) => {
     const p = new URLSearchParams(params);
-    if (e === 'bund') p.delete('ebene'); else p.set('ebene', e);
+    p.set('ebene', e);
+    p.delete('kt');
+    setParams(p, { replace: true });
+  };
+  const zurUebersicht = () => {
+    const p = new URLSearchParams(params);
+    p.delete('ebene');
     p.delete('kt');
     setParams(p, { replace: true });
   };
@@ -398,7 +466,7 @@ export function Gesetze() {
   return (
     <div className="space-y-8">
       <SeitenKopf
-        overline="Bund · Kantone · International"
+        overline="Rechtssammlung Schweiz"
         titel="Schweizer Gesetzessammlung"
         intro="Volltext der in LexMetrik verwendeten Bundesgesetze und kantonalen Erlasse — geltende Fassung, mit Stand und amtlichem Live-Link — sowie die für die Schweiz massgeblichen Staatsverträge und EU-Verordnungen (International). Massgeblich bleibt stets die amtliche Quelle."
       />
@@ -421,7 +489,17 @@ export function Gesetze() {
       {erlasse && (
         <>
           <div className="flex flex-wrap items-center justify-between gap-3">
-            {!suche.trim() && <Segment aktiv={ebene} onWahl={setzeEbene} />}
+            {/* Steuerung nur NACH Säulen-Wahl (G4 · §4.1): auf dem Landeplatz
+                tragen die drei Kacheln die Steuerung, kein Tab-/Overline-Dopplung. */}
+            {!suche.trim() && gewaehlt !== null ? (
+              <div className="flex flex-wrap items-center gap-3">
+                <button type="button" onClick={zurUebersicht}
+                  className="text-body-s font-medium text-brass-700 hover:text-brass-600 transition-colors">
+                  ← Übersicht
+                </button>
+                <Segment aktiv={ebene} onWahl={setzeEbene} />
+              </div>
+            ) : <span />}
             <input
               type="search"
               value={suche}
@@ -431,6 +509,21 @@ export function Gesetze() {
               className="lc-input h-9 py-0 text-body-s w-full max-w-sm"
             />
           </div>
+
+          {/* Landeplatz (G4 · §4.1): drei gleichwertige Einstiegskacheln mit
+              Kurz-Statistik statt stillem Bund-Default. Prominenter Sprung-/
+              Such-Hinweis (Cmd/Ctrl-K, §4.2) darüber. */}
+          {!suche.trim() && gewaehlt === null && (
+            <Einstieg
+              bund={gefiltert.length}
+              bundArtikel={gefiltert.reduce((a, e) => a + e.artikelAnzahl, 0)}
+              kantone={kantone.length}
+              kantonErlasse={erlasse.filter((e) => e.ebene === 'kanton').length}
+              international={international.length}
+              onWahl={setzeEbene}
+              onBefehl={() => { if (typeof window !== 'undefined') window.dispatchEvent(new CustomEvent('lm:befehlspalette')); }}
+            />
+          )}
 
           {/* Suche: global über Bund UND Kantone — oder (N6) auf den gewählten
               Kanton eingegrenzt, wenn ein Kanton aktiv ist und «Nur …» gewählt ist. */}
@@ -482,8 +575,9 @@ export function Gesetze() {
           })()}
 
           {/* Ein Tab-Panel pro Ebene (nur das aktive rendert); id/aria-labelledby
-              folgen der aktiven Ebene und verbinden es mit dem gewählten Tab. */}
-          {!suche.trim() && (
+              folgen der aktiven Ebene und verbinden es mit dem gewählten Tab.
+              Erst NACH Säulen-Wahl (gewaehlt !== null) — davor trägt der Landeplatz. */}
+          {!suche.trim() && gewaehlt !== null && (
           <div role="tabpanel" id={`ebene-panel-${ebene}`} aria-labelledby={`ebene-tab-${ebene}`}>
           {ebene === 'bund' && (
             gefiltert.length === 0
