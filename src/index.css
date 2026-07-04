@@ -218,6 +218,36 @@
   html { -webkit-tap-highlight-color: transparent; }
   :focus:not(:focus-visible) { outline: none; }
 
+  /* ── W2·5d G2a: Leser-Options-Leiste (Linien/Fussnoten/Verweise) ───────────
+     Rein visuelle Darstellungs-Toggles (leserOptionen.tsx) — data-*-Attribute am
+     <html>, hier per CSS ausgewertet. Default 'an' = KEINE Regel greift = heutige
+     Darstellung byte-gleich (R6). Alle Regeln auf `.lc-leser` gescopt, damit NUR
+     der Gesetzes-Reader betroffen ist (nicht das Norm-Popover der Rechner). */
+
+  /* Linien AUS: Gliederungs-Guide unsichtbar (border-Breite BLEIBT 1px reserviert
+     → das Ausblenden der Linie bewegt keinen Textknoten, CLS-freundlich) und der
+     Einzug kollabiert (flache Textkante) — reproduziert den früheren Zustand
+     «Gruppierungslinien aus». Ctrl+F/Anker/Print unberührt (nur border+padding). */
+  html[data-linien="aus"] .lc-leser [data-normtext-linie] {
+    border-left-color: transparent;
+    padding-left: 0;
+  }
+
+  /* Fussnoten AUS: die Fussnoten-Marker (¹²³) werden GEDÄMPFT, NIE display:none
+     (R9 / §8 — amtliche Substanz bleibt im DOM, per Ctrl+F/Print/Screenreader
+     erreichbar, klickbar). Nur Farbe/Deckkraft ändern sich. */
+  html[data-fussnoten="aus"] .lc-leser button[aria-label^="Fussnote"] {
+    color: var(--ink-400);
+    opacity: 0.6;
+  }
+
+  /* Verweise AUS: die Unterstreichung der Verweis-Links (dotted, heute nur bei
+     :hover) wird unterdrückt — Farbe und Anker/Funktion bleiben (§3.1: «schaltet
+     nur die Unterstreichung»). Ctrl+F/Klick unberührt. */
+  html[data-verweise="aus"] .lc-leser .decoration-dotted {
+    text-decoration-line: none;
+  }
+
   /* W2.8: lange Erlasse (OR/ZGB ~1099 Art.) — off-screen-Artikel überspringen
      Layout/Paint. Inhalt bleibt im DOM (Suche/Anker/Screenreader/Crawler
      unberührt), nur der Render-ZEITPUNKT ändert (§6.4). contain-intrinsic-size
