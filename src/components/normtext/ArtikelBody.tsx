@@ -199,7 +199,7 @@ function StaffelTabelle({ zeilen }: { zeilen: string[] }) {
       {zeilen.map((z, j) => (
         <span key={j}
           className={`block px-3 py-1.5 leading-snug ${
-            j === 0 ? 'font-medium text-ink-800 bg-paper-sunken/40' : 'border-t border-line/60'
+            j === 0 ? 'font-medium text-ink-800 bg-paper-sunken/40' : 'border-t border-rule-artikel'
           }`}>
           {z}
         </span>
@@ -295,7 +295,7 @@ function KanonischeTabelle({ spalten, zeilen }: { spalten: TabSpalte[]; zeilen: 
               <span
                 key={ci}
                 role="cell"
-                className={`${zelleCls(spalten[ci].typ, false)}${ri > 0 || hatKopf ? ' border-t border-line/60' : ''}`}
+                className={`${zelleCls(spalten[ci].typ, false)}${ri > 0 || hatKopf ? ' border-t border-rule-artikel' : ''}`}
               >
                 {gruppieren(spalten[ci].typ) ? gruppiereTausender(cell) : cell}
               </span>
@@ -340,7 +340,7 @@ function LegacyMehrspaltigeTabelle({ kopf, zeilen }: { kopf?: string[]; zeilen: 
               <span
                 key={ci}
                 role="cell"
-                className={`${zelleCls(ci, false)}${ri > 0 || (kopf && kopf.length) ? ' border-t border-line/60' : ''}`}
+                className={`${zelleCls(ci, false)}${ri > 0 || (kopf && kopf.length) ? ' border-t border-rule-artikel' : ''}`}
               >
                 {gruppiereTausender(cell)}
               </span>
@@ -358,7 +358,7 @@ function TarifTabelle({ zeilen }: { zeilen: Array<{ beschreibung: string; betrag
   return (
     <span role="table" aria-label="Tarif-Tabelle" className="mt-1.5 block rounded-md border border-line overflow-hidden [text-indent:0] [font-variant-numeric:tabular-nums]">
       {zeilen.map((z, j) => (
-        <span key={j} role="row" className={`flex items-baseline justify-between gap-4 px-3 py-1.5 leading-snug ${j > 0 ? 'border-t border-line/60' : ''}`}>
+        <span key={j} role="row" className={`flex items-baseline justify-between gap-4 px-3 py-1.5 leading-snug ${j > 0 ? 'border-t border-rule-artikel' : ''}`}>
           <span role="cell" className="text-ink-700">{z.beschreibung}</span>
           <span role="cell" className="shrink-0 text-right font-medium text-ink-800">{gruppiereTausender(z.betrag)}</span>
         </span>
@@ -488,7 +488,7 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                 erste UND Folgezeile beginnen ebenfalls bei pl-9 — identische linke
                 Textkante wie bei nummerierten Absätzen (Auftrag David 28.6.2026: der
                 Einzug sprang sonst zwischen Artikeln mit/ohne Absatznummer). */}
-            <p className={zk ? `[overflow-wrap:anywhere] hyphens-auto pl-9 rounded transition hover:bg-brass-100/50 hover:-translate-y-0.5 ${absMarke != null ? '-indent-9' : '[text-indent:0]'}` : undefined}>
+            <p className={zk ? `[overflow-wrap:anywhere] hyphens-manual pl-9 rounded transition hover:bg-brass-100/50 hover:-translate-y-0.5 ${absMarke != null ? '-indent-9' : '[text-indent:0]'}` : undefined}>
               {absMarke != null && (
                 zk
                   ? <ZitierMarke klasse="text-body-s inline-block w-9 text-left !font-medium !text-ink-500" zitat={`${zk.artikelLabel} Abs. ${absMarke} ${zk.kuerzel}`}>{absMarke}</ZitierMarke>
@@ -613,7 +613,7 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                         : zk
                           ? <ZitierMarke klasse="shrink-0 w-6 text-right !font-medium !text-ink-500 text-body-s" zitat={itemZitat}>{markeAnzeige}</ZitierMarke>
                           : <span className="num shrink-0 font-semibold text-ink-500">{markeAnzeige}</span>}
-                      <span className="min-w-0 [overflow-wrap:anywhere] hyphens-auto">
+                      <span className="min-w-0 [overflow-wrap:anywhere] hyphens-manual">
                         {/* S13 (BS-Audit 23.6.2026): lange Komposita in Aufzählungen
                             sprengten auf schmalem Viewport (~390px) den Reader (≈25px
                             H-Overflow im Steuergesetz). min-w-0 lässt das Text-Span im

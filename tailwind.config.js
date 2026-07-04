@@ -11,6 +11,12 @@ export default {
           500: 'var(--ink-500)', 400: 'var(--ink-400)', 300: 'var(--ink-300)',
         },
         line: { DEFAULT: 'var(--line)', strong: 'var(--line-strong)' },
+        // Gesetzes-Reader Linien-Kanon (W2·5d G1): drei benannte Rollen der EINEN
+        // Linien-Sprache — vertikaler Gliederungs-Guide, Artikel-Trenner (fein),
+        // Struktur-Trenner (oberste Sektionen, eine Spur kräftiger). Nur im
+        // Normtext-Reader verwendet; Chrome-Borders bleiben `border-line`.
+        guide: 'var(--guide-gliederung)',
+        rule: { artikel: 'var(--rule-artikel)', struktur: 'var(--rule-struktur)' },
         // raised/sunken ergänzt 7.6.2026: bg-paper-raised wurde in
         // FristenKalender/wizard bereits verwendet, war aber nie generiert
         // (stiller No-op — die Kreise/Flächen blieben transparent).
@@ -57,6 +63,11 @@ export default {
       transitionTimingFunction: { DEFAULT: 'var(--ease)' },
       boxShadow: { sm: 'var(--shadow-sm)', md: 'var(--shadow-md)', lg: 'var(--shadow-lg)' },
       maxWidth: { content: '70rem', reading: '40rem' }, // content ≈ 1120px (Iteration 3: einheitlich schmalere Spalte)
+      // Einzug-Skala des Gesetzes-Readers (W2·5d G1 / DESIGN-REGLEMENT-NORMTEXT
+      // §Weissraum-Rhythmus): EINE Stufe = 20px. Tiefe wird über Einzug getragen
+      // (gedeckelt bei 3 Stufen), nicht über gestapelte Linien; mobil kollabiert
+      // der Einzug (`pl-0 sm:pl-einzug`), die eine Guide bleibt am Spaltenrand.
+      spacing: { einzug: '1.25rem' },
       // CLS-Reservierungs-Tokens der Startseite (Startseite V3, §5): benannte
       // Mindesthöhen für die async-/localStorage-Module — Masse, keine Farben
       // (hell = dunkel). `modul-news` benennt den bisherigen Arbitrary-Wert der

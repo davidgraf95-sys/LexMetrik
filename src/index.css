@@ -48,6 +48,14 @@
     /* Haarlinien */
     --line:color-mix(in srgb, var(--ink-900) 10%, transparent);
     --line-strong:color-mix(in srgb, var(--ink-900) 18%, transparent);
+    /* Gesetzes-Reader — EINE Linien-Sprache (W2·5d G1, DESIGN-REGLEMENT-NORMTEXT
+       §Linien-Kanon): genau DREI benannte Rollen ersetzen die früher frei
+       gewählten Ad-hoc-Opazitäten von --line (Artikel /70, Sektion voll|/50,
+       Guide /60, Tabellenzeile/Fussnoten). Werte am bestehenden --line gemessen
+       (10 %); nur der oberste Struktur-Trenner eine Spur kräftiger (14 %). */
+    --guide-gliederung:color-mix(in srgb, var(--ink-900) 10%, transparent);
+    --rule-artikel:color-mix(in srgb, var(--ink-900) 10%, transparent);
+    --rule-struktur:color-mix(in srgb, var(--ink-900) 14%, transparent);
     /* Messing – der eine Akzent (= gravierte Skala) */
     --brass-800:#654C1E; /* a11y: ≥4.5 Kontrast auf brass-100 (12px) */
     /* brass-700 a11y-kalibriert (Entscheid David 26.6.2026): WCAG 4.5:1 für
@@ -156,6 +164,11 @@
     /* Haarlinien etwas kräftiger (helle Tinte auf Dunkel wirkt sonst zu fein) */
     --line:color-mix(in srgb, var(--ink-900) 14%, transparent);
     --line-strong:color-mix(in srgb, var(--ink-900) 24%, transparent);
+    /* Linien-Kanon dunkel: helle Tinte auf Dunkel wirkt feiner → eine Spur
+       kräftiger als hell (Guide/Artikel 14 %, Struktur 20 %). */
+    --guide-gliederung:color-mix(in srgb, var(--ink-900) 14%, transparent);
+    --rule-artikel:color-mix(in srgb, var(--ink-900) 14%, transparent);
+    --rule-struktur:color-mix(in srgb, var(--ink-900) 20%, transparent);
     /* Messing: Text-Töne (800–600) hell, Flächen-Töne (100/200) dunkel,
        Linien/Skala (500/400/300) bleiben Gold. */
     --brass-800:#EAD6A4; --brass-700:#D8BD78; --brass-600:#E6CD8C;

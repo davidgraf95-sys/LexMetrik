@@ -1,11 +1,13 @@
 # Design-Reglement Normtext — die Gesetzesdarstellung von LexMetrik
 
-Stand: 28.6.2026 (Auftrag David: «baue ein fundiertes Regelwerk für die
-Darstellung von Bundesgesetzen und Verordnungen; es soll mindestens die
-Qualitätserfordernisse von Fedlex haben»). Geltungsbereich: **die Anzeige von
+Stand: 28.6.2026, erweitert 4.7.2026 (W2·5d G1). Auftrag David: «baue ein
+fundiertes Regelwerk für die Darstellung von Bundesgesetzen und Verordnungen; es
+soll mindestens die Qualitätserfordernisse von Fedlex haben». Geltungsbereich
+**erweitert auf alle Gesetze (Bund + Kanton + International)**: **die Anzeige von
 Gesetzes-/Normtext** im Gesetzleser (`src/pages/gesetz-leser/*`,
 `src/components/normtext/*`, `src/lib/normtext/*`) und die Extraktion, die ihn
-speist (`scripts/normtext*`).
+speist (`scripts/normtext*`). Detail-/Bau-Spec der UX-Reform:
+`FAHRPLAN-GESETZES-UX.md`.
 
 Dieses Reglement hängt unter `DESIGN-REGLEMENT.md` (Dach) und konkretisiert es
 für den Normtext — parallel zu `-RECHNER`, `-RECHTSPRECHUNG`, `-VORLAGEN`. Bei
@@ -133,6 +135,67 @@ Detailplan: `FAHRPLAN-GESETZESDARSTELLUNG-BUND.md` (M4/M5/M7/M8/M10).
   500»), keine Phantom-Leerspalte. Mobil seitlich scrollbar (Zahlen brechen nicht um),
   ARIA-Tabellensemantik vollständig (Kopf↔Zelle), Kontrast/Fokus über Tokens (§13/F).
   Tausender-Apostroph/Währung sind **Anzeige**, nie im Snapshot (§7).
+
+### §4b · Linien-Kanon & Lese-Typografie (W2·5d G1, 4.7.2026)
+
+Leitprinzip (aus Fedlex-Messung + SotA doppelt belegt): **Ruhe durch Reduktion.
+Hierarchie über Typo-Abstufung + Einzug, NICHT über Linien.** Der Fliesstext ist
+der Held; die Struktur flüstert (Gegen-Lehre zu Fedlex, wo «die Struktur schreit,
+der Rechtstext flüstert»). Rangfolge verbindlich: **Typo (Gewicht/Grösse) >
+Einzug > eine dezente Guide-Linie. Farbe/Boxen nie.**
+
+**EINE Linien-Sprache — genau DREI benannte Rollen, sonst keine.** Vorher wurden
+für strukturgleiche Trenner 4–6 Ad-hoc-Opazitäten desselben `--line` frei gewählt
+(Artikel `/70`, Sektion voll|`/50`, Guide `/60`, Tabellenzeile/Fussnoten `/50–60`)
+und bis zu ~6 parallele 1px-Linien stapelten sich («Barcode/Gleisbett», ZGB
+Art. 684 / OR Art. 319). Neu (Tokens in `src/index.css` `:root` **und**
+`html.dark`, abgebildet in `tailwind.config.js`):
+
+| Rolle | Klasse | CSS-Var (hell / dunkel) | Wo (strukturell) |
+|---|---|---|---|
+| **Gliederungs-Guide** (vertikale Tiefen-Linie) | `border-l border-guide` | `--guide-gliederung` (10 % / 14 %) | `renderSektion` (nur tiefe === 1) |
+| **Artikel-Trenner** (fein) | `border-t border-rule-artikel` | `--rule-artikel` (10 % / 14 %) | Artikel-Kopf, Tabellenzeilen, Fussnoten-Trenner |
+| **Struktur-Trenner** (oberste Sektionen Teil/Titel/Abschnitt, eine Spur kräftiger) | `border-t/-b border-rule-struktur` | `--rule-struktur` (14 % / 20 %) | Sektionskopf ebene ≤ 1, Ingress |
+
+Harte Regeln:
+1. **Höchstens EINE vertikale Guide-Linie gleichzeitig** — nur die erste
+   Schachtelungsebene trägt den Guide; grössere Tiefe wird über **Einzug**
+   getragen, nie über eine zweite parallele Linie.
+2. **Innere Sektionen (ebene ≥ 2) und randtitel-promotete Knoten** («A.», «II.»)
+   tragen **keine** Horizontal-Linie (die frühere feine ebene-2-Linie entfällt);
+   ihre Tiefe trägt Typo + Einzug.
+3. **Marker-Scope + Chrome-Ausnahme:** die drei Rollen gelten NUR an den mit
+   `data-normtext-linie` markierten strukturellen Containern. Chrome-Borders
+   (Such-Boxen, Buttons, Drawer, Nav, Fussnoten-Popover, Tabellen-**Aussenbox**)
+   und die **Brass**-Sprache (Ziel-/Zitat-Kanten, Fussnoten-Links) sind eine
+   eigene, ausdrücklich ausgenommene Sprache — sie bleiben `border-line` bzw.
+   Brass, nie mit der Linien-Sprache vermischt.
+
+**Einzug-Skala & Weissraum-Rhythmus.** Token `einzug` (`tailwind.config.js
+spacing`, 20px/Stufe): Desktop Tiefe *n* → `n × einzug`, gedeckelt bei 3 Stufen;
+**mobil kollabiert der Einzug** (`pl-0 sm:pl-einzug`), die eine Guide bleibt als
+einzelne 1px-Linie am Spaltenrand (statt ~5 Linien × ~24px). **CLS 0:** Einzug =
+`padding`, Guide = `border` darauf → Umschalten/Kollabieren bewegt keinen
+Textknoten.
+
+**Lese-Typografie.** Lesespalte **hart auf `max-w-reading` (40rem ≈ 66–71 ch)**,
+nie arbitrary `max-w-[…rem]` (R2). Fliesstext 18px Serif (über Fedlex 14px),
+gedämpft `text-ink-800`, Flatterrand (nie Blocksatz). **`hyphens: manual`** (nicht
+`auto`) auf dem Normtext-Body — die deutsche Auto-Silbentrennung an schmalen
+Spalten war der sichtbare «Ge-werbes»-Treiber; `[overflow-wrap:anywhere]` bleibt
+der Overflow-Schutz für lange Komposita. **Randtitel-Hierarchie:** Blatt/Sach-
+überschrift `font-semibold text-ink-800`, oberste Marginalie `uppercase
+tracking-wide text-ink-500`, dazwischen `text-ink-600`; mehrzeilige Randtitel mit
+**Hänge-Einzug-Schutz** (`text-indent:-1em` + `pl-[1em]`) gegen den Fedlex-AVOID
+«1. Im / Allgemeinen».
+
+**Maschinell gegated:** R1 `check:linien-kanon` (marker-scoped, in `npm run gate`),
+R2 eslint (`no-restricted-syntax` gegen arbitrary `max-w-[…rem]` im Reader), R4/R5
+als Playwright-e2e (≤ 1 Guide je Artikel; Lesemass ≤ 75 ch @ 1440 / kein
+horizontaler Overflow @ 390). **`golden/lexmetrik-golden.json` bleibt byte-gleich**
+(der Reader liegt nicht in der Engine-Golden-Matrix); der amtliche **Wortlaut ist
+unangetastet** (§1, Text-Extraktion vorher/nachher byte-gleich) — geändert sind
+ausschliesslich Klassen/Attribute.
 
 ## §5 · Verzahnung (der Burggraben, Fedlex-Übertreffer)
 
