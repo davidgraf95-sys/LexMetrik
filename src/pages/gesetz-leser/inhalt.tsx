@@ -856,14 +856,22 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
           })),
         ].sort((a, b) => a.pos - b.pos)
       : [];
-    // M3: Gruppierungslinie aus der Section-Schachtelung — vertikale Linie + Einzug
-    // für JEDE geschachtelte Sektion (tiefe > 0), unabhängig vom Typ (offizielle
-    // Teil/Titel/Abschnitt-Gliederung UND Randtitel-Gruppen). Die WURZEL (tiefe 0)
-    // bleibt bündig (kein Voll-Dokument-Einzug). An/Aus über den Umschalter; aus =
-    // flach (nur die horizontalen Sektions-Trennlinien in SektionKopf bleiben).
-    const linie = gruppierungslinienAn && tiefe > 0;
+    // Linien-Kanon (W2·5d G1, DESIGN-REGLEMENT-NORMTEXT §Linien-Kanon Regel 1 +
+    // §Weissraum-Rhythmus): HÖCHSTENS EINE vertikale Guide-Linie gleichzeitig —
+    // nur die erste Schachtelungsebene (tiefe === 1) trägt den Guide; tiefere
+    // Ebenen werden allein über den EINZUG getragen (kein gestapelter «Barcode»
+    // aus border-l pro Ebene, der ZGB Art. 684 / OR Art. 319 mit ~6 Linien
+    // zupflasterte). Einzug-Skala: Tiefe 1–3 → je eine `einzug`-Stufe (20px),
+    // gedeckelt bei 3. MOBIL kollabiert der Einzug (`pl-0 sm:pl-einzug`), die
+    // eine Guide bleibt am Spaltenrand → behebt den ~16-ch-Mobil-Fall. CLS 0:
+    // Einzug = padding, Guide = border darauf; Umschalten/Kollabieren bewegt
+    // keinen Textknoten. Der Umschalter (gruppierungslinienAn) steuert Guide UND
+    // Einzug gemeinsam (aus = flach, wie bisher).
+    const guide = gruppierungslinienAn && tiefe === 1;
+    const eingerueckt = gruppierungslinienAn && tiefe > 0 && tiefe <= 3;
+    const einzugCls = eingerueckt ? (guide ? 'pl-3 sm:pl-einzug' : 'pl-0 sm:pl-einzug') : '';
     return (
-      <section key={s.id} className={`space-y-3 ${linie ? 'border-l border-line/60 pl-3' : ''}`}>
+      <section key={s.id} data-normtext-linie className={`space-y-3 ${guide ? 'border-l border-guide' : ''} ${einzugCls}`}>
         <SektionKopf s={s} refCb={regRef(s.id)} offen={auf} onToggle={() => toggle(s.id, defOpen)} bereich={sektionMeta.get(s.id)?.bereich} bereichEinzel={sektionMeta.get(s.id)?.einzel ?? false} fussnotenAuf={fussnotenAuf} />
         {auf && <div className="space-y-5">{inhalt.map((x) => x.el)}</div>}
       </section>
@@ -1051,11 +1059,13 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
           </aside>
         )}
 
-        {/* Lesespalte: ohne 2-Spalten-Sidebar zentriert + auf ~56rem begrenzt.
-            Im 2-Spalten-Fall greift die Begrenzung ab lg über das Grid (R2: 1024px);
-            darunter (mobil/schmal) bleibt der Text zentriert + auf eine komfortable
-            Lesebreite begrenzt, statt die volle Inhaltsbreite zu füllen. */}
-        <div className={`group/lese ${sektionen.length > 0 && tocOffen ? (istXl ? 'w-full' : 'mx-auto w-full max-w-[52rem]') : 'mx-auto w-full max-w-[56rem]'}`}>
+        {/* Lesespalte: hart auf die Lese-Token-Breite `max-w-reading` (40rem ≈
+            66–71 ch) begrenzt — die EINE Lesespalte gilt für alle Grundarten
+            (W2·5d G1 / DESIGN-REGLEMENT-NORMTEXT §Typo-Skala, R2: keine arbitrary
+            max-w mehr). Im 2-Spalten-Fall (istXl) trägt die innere ArtikelBody-
+            Spalte (parts.tsx, ebenfalls max-w-reading) die Begrenzung; darunter
+            zentriert die ganze Spalte auf max-w-reading. */}
+        <div className={`group/lese ${sektionen.length > 0 && tocOffen ? (istXl ? 'w-full' : 'mx-auto w-full max-w-reading') : 'mx-auto w-full max-w-reading'}`}>
           {treffer ? (
             <div className="space-y-4">
               <p className="text-body-s text-ink-500"><span className="num">{treffer.length}</span> Treffer für «{sucheDebounced.trim()}»</p>

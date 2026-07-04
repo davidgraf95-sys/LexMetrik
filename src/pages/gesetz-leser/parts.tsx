@@ -194,8 +194,8 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
     ? fussAnzeige.filter((f) => f.absatz == null && f.item == null)
     : [];
   return (
-    <article id={`art-${e.artikel}`}
-      className="nt-art-cv group relative z-0 nt-anker border-t border-line/70 pt-7 mt-7 first:border-t-0 first:mt-0 first:pt-0 transition duration-200 group-has-[[data-lese]:hover]/lese:opacity-80 has-[[data-lese]:hover]:!opacity-100 has-[[data-lese]:hover]:z-[5]">
+    <article id={`art-${e.artikel}`} data-normtext-linie
+      className="nt-art-cv group relative z-0 nt-anker border-t border-rule-artikel pt-7 mt-7 first:border-t-0 first:mt-0 first:pt-0 transition duration-200 group-has-[[data-lese]:hover]/lese:opacity-80 has-[[data-lese]:hover]:!opacity-100 has-[[data-lese]:hover]:z-[5]">
       {/* Fedlex-Stil (Auftrag David): «Art. N» + Randtitel/Sachüberschrift stehen
           IMMER OBERHALB des Absatztextes (keine seitliche Randspalte mehr), damit
           der Normtext die volle Lesespaltenbreite bekommt. Reine Darstellung (§3). */}
@@ -281,7 +281,7 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
             Spalte hinausragen → sonst wurde Text rechts abgeschnitten (Befund David
             25.6.2026). Der Wortumbruch im Absatz (overflow-wrap:anywhere) bleibt. */}
         {artOffen && (
-        <div className="max-w-[52rem] min-w-0 overflow-x-clip">
+        <div className="max-w-reading min-w-0 overflow-x-clip">
           <ArtikelBody bloecke={e.bloecke} artikel={e.artikel} passus={{ absatz: null }} autolink
             zitierKontext={{ artikelLabel: label, kuerzel: erlass.kuerzel }}
             fnProAbsatz={fussnotenAuf ? fnProAbsatz : undefined} fnProItem={fussnotenAuf ? fnProItem : undefined}
@@ -301,7 +301,7 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
           {/* Fussnoten (Änderungs-/Quellenhistorie, AS/BBl klickbar): nur auf Wunsch
               (globaler Schalter in der Suchleiste). */}
           {fussnotenAuf && fussAnzeige.length > 0 && (
-            <div className="mt-3 border-t border-line/50 pt-2 space-y-1">
+            <div className="mt-3 border-t border-rule-artikel pt-2 space-y-1">
               {fussAnzeige.map((fn, i) => (
                 <p key={i} id={fn.nr ? `fn-${e.artikel}-${fn.nr}` : undefined} className="nt-anker text-xs leading-normal text-ink-500 target:bg-brass-100">
                   {fn.nr && <span className="num mr-1 text-ink-300">{fn.nr}</span>}
@@ -332,7 +332,7 @@ export function ErlassKopfBlock({ kopf, fussnotenAuf }: { kopf: ErlassKopf; fuss
     return 'font-serif text-body-l leading-[1.65] text-ink-700';
   };
   return (
-    <section aria-label="Ingress" className="max-w-reading space-y-3 border-b border-line pb-5">
+    <section aria-label="Ingress" className="max-w-reading space-y-3 border-b border-rule-struktur pb-5">
       {kopf.erlassdatum && (
         <p className="font-serif text-body-s text-ink-500">{kopf.erlassdatum}</p>
       )}
@@ -347,7 +347,7 @@ export function ErlassKopfBlock({ kopf, fussnotenAuf }: { kopf: ErlassKopf; fuss
         </div>
       )}
       {fussnotenAuf && kopf.fussnoten && kopf.fussnoten.length > 0 && (
-        <div className="mt-3 border-t border-line/50 pt-2 space-y-1">
+        <div className="mt-3 border-t border-rule-artikel pt-2 space-y-1">
           {kopf.fussnoten.map((fn, i) => (
             <p key={i} className="text-xs leading-normal text-ink-500">
               {fn.nr && <span className="num mr-1 text-ink-300">{fn.nr}</span>}
@@ -378,7 +378,13 @@ export function SektionKopf({ s, refCb, offen, onToggle, bereich, bereichEinzel,
   // unabhängig von der Roh-Ebene. Die Verschachtelung trägt der Einzug-Strich
   // (renderSektion). Reine Darstellung (§3/§13, nur vorhandene Tokens).
   const mt = s.randtitel ? 'mt-4' : s.ebene <= 1 ? 'mt-8 first:mt-0' : s.ebene === 2 ? 'mt-6' : s.ebene === 3 ? 'mt-5' : 'mt-4';
-  const regel = s.randtitel ? '' : s.ebene <= 1 ? 'border-t border-line pt-4' : s.ebene === 2 ? 'border-t border-line/50 pt-3' : '';
+  // Linien-Kanon (W2·5d G1): NUR die obersten Sektionen (Teil/Titel/Abschnitt,
+  // ebene ≤ 1) tragen einen horizontalen Struktur-Trenner. Innere Sektionen
+  // (ebene ≥ 2) und randtitel-promotete Knoten tragen KEINE Horizontal-Linie —
+  // ihre Tiefe trägt Typo (titelStil) + Einzug (renderSektion), nicht eine
+  // zweite Linie (Gegen-Lehre «Barcode/Gleisbett», DESIGN-REGLEMENT §Linien-Kanon
+  // Regel 2). Die frühere feine ebene-2-Linie (`border-line/50`) entfällt.
+  const regel = s.randtitel ? '' : s.ebene <= 1 ? 'border-t border-rule-struktur pt-4' : '';
   // Titelgrösse nach Tiefe (E, Auftrag David 26.6.2026): Fedlex-artig abgestuft —
   // oberste Stufe prominent (h2), dann h3, body-l, sonst base. font-semibold liegt
   // am Titel-Span (unten). Nur existierende Tokens (§13).
@@ -393,7 +399,7 @@ export function SektionKopf({ s, refCb, offen, onToggle, bereich, bereichEinzel,
   // artOffen-Gate der Artikel-Marker).
   const sekFn = offen && fussnotenAuf && s.fussnoten && s.fussnoten.length > 0 ? s.fussnoten : null;
   return (
-    <div ref={refCb} data-sek={s.id} className={`nt-anker ${mt} ${regel}`}>
+    <div ref={refCb} data-sek={s.id} data-normtext-linie className={`nt-anker ${mt} ${regel}`}>
       {pre && (
         <button type="button" onClick={onToggle} aria-expanded={offen} className="group/sek block text-left">
           <span className="lc-overline group-hover/sek:text-brass-700">{pre}</span>

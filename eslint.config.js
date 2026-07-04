@@ -42,4 +42,19 @@ export default defineConfig([
       ],
     },
   },
+  // R2 (W2·5d G1 / DESIGN-REGLEMENT-NORMTEXT §Typo-Skala): der Normtext-Reader
+  // verwendet KEINE arbitrary rem-basierte `max-w-[…rem]` mehr — die Lesespalte
+  // kommt ausschliesslich aus den Tokens `max-w-reading` (40rem) bzw.
+  // `max-w-content`. So kann keine Ad-hoc-Lesebreite (52rem/56rem) wieder
+  // einschleichen. Nicht-rem-Werte (vw/%/px, z. B. Popover `max-w-[78vw]`,
+  // Scale-Rule `max-w-[200px]`) bleiben zulässig (Chrome, kein Lesemass).
+  {
+    files: ['src/pages/gesetz-leser/**/*.{ts,tsx}', 'src/components/normtext/**/*.{ts,tsx}'],
+    rules: {
+      'no-restricted-syntax': ['error',
+        { selector: 'Literal[value=/max-w-\\[[0-9.]+rem\\]/]', message: 'R2 (Linien-/Typo-Kanon): keine arbitrary max-w-[…rem] im Normtext-Reader — nur max-w-reading / max-w-content (Token).' },
+        { selector: 'TemplateElement[value.raw=/max-w-\\[[0-9.]+rem\\]/]', message: 'R2 (Linien-/Typo-Kanon): keine arbitrary max-w-[…rem] im Normtext-Reader — nur max-w-reading / max-w-content (Token).' },
+      ],
+    },
+  },
 ])
