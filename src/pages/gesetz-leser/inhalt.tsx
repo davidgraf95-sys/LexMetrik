@@ -17,7 +17,7 @@ import { GEBIET_LABEL } from '../../lib/normtext/register';
 import { KontextPanel } from '../../components/kontext/KontextPanel';
 import type { BrowseErlass, BrowseManifest } from '../../lib/normtext/browse-typen';
 import type { NormSnapshot } from '../../lib/normtext/typen';
-import { formatiereDatum, passtAufSuche, pfadZu, romanFrei, baueZitat } from './helpers';
+import { formatiereDatum, passtAufSuche, pfadZu, romanFrei, baueZitat, kopfOverline, grundartMeta } from './helpers';
 import { ArtikelLeser, SektionKopf, SektionBaumTOC, ErlassKopfBlock, ErlassLeserKopf, SektionKontextKopf } from './parts';
 import { LeserOptionenLeiste } from './LeserOptionenLeiste';
 import { beiLeerlauf } from '../../lib/leerlauf';
@@ -251,6 +251,10 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
       // pdf-embed: kein Snapshot-JSON — Erlass setzen, der Reader rendert das
       // eingebettete amtliche PDF (eintraege bleibt null).
       if (e.status === 'pdf-embed') { setErlass(e); return; }
+      // LIVE_VERWEIS (⑧, W2·5d G3a): kein In-App-Volltext gehostet — Erlass setzen,
+      // der Reader zeigt eine ehrliche Verweiskarte (amtlicher Live-Link + Stand,
+      // §8) statt der «nicht verfügbar»-Fehlerseite. eintraege bleibt null.
+      if (e.status === 'nur-live-link') { setErlass(e); return; }
       if (!e.datei) { setFehler(true); return; }
       setErlass(e);
       const datei = await ladeErlassDatei(e.datei);
@@ -753,8 +757,11 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
         {/* Eingebettetes amtliches PDF (same-origin → Browser-Viewer mit nativer
             Suche/Zoom/Druck). iframe ist für Inline-PDF am zuverlässigsten; darunter
             ein sichtbarer Fallback-Link für Browser ohne PDF-Viewer. */}
+        {/* ⑦ PDF-Rahmen (W2·5d G3a): der iframe-Rahmen nutzt die benannte Struktur-
+            Linie (border-rule-struktur) statt der Ad-hoc border-line — konsistent mit
+            dem Linien-Kanon (§2.2⑦). Das PDF IST die amtliche Fassung (§7/§8). */}
         <iframe src={`/normtext/${erlass.pdfPfad}#view=FitH`} title={`${erlass.kuerzel} — amtliches PDF`}
-          className="w-full rounded-lg border border-line bg-paper-sunken/30"
+          className="w-full rounded-lg border border-rule-struktur bg-paper-sunken/30"
           style={{ height: 'min(82vh, 1100px)' }} />
         {/* Einheitliches Kontext-Panel (B3): Entscheide/Materialien/Werkzeuge zu
             diesem Erlass am Leseende (Single Source mit dem Volltext-Reader). */}
@@ -762,6 +769,43 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
         <nav className="mt-4 border-t border-line pt-5 flex flex-wrap justify-between gap-3 text-body-s" aria-label="Weitere Erlasse">
           <Link to="/gesetze" className="text-ink-500 hover:text-brass-700">‹ Übersicht</Link>
           <a href={`/normtext/${erlass.pdfPfad}`} target="_blank" rel="noopener noreferrer" className="text-brass-700 hover:underline">Amtliches PDF in neuem Tab öffnen ↗</a>
+        </nav>
+      </div>
+    );
+  }
+  // ── ⑧ LIVE_VERWEIS: kein In-App-Volltext — ehrliche Verweiskarte (§8) ────────
+  // Statt der «nicht verfügbar»-Fehlerseite: prominenter amtlicher Live-Link +
+  // Stand + ehrlicher Hinweis «nicht als In-App-Volltext gehostet» (FAHRPLAN
+  // §2.2⑧, Referenz DSGVO). Massgeblich bleibt die amtliche Quelle (§7/§8). Reine
+  // Darstellung; eintraege bleibt null (darum VOR dem Lade-Guard unten).
+  if (erlass && erlass.status === 'nur-live-link') {
+    const verweisOverline = `${erlass.rechtsgebiet === 'international' ? 'International' : erlass.ebene === 'bund' ? 'Bund' : `Kanton ${erlass.kanton}`} · amtlicher Verweis`;
+    return (
+      <div className="space-y-5">
+        <ErlassLeserKopf erlass={erlass} artikelAnzahl={null} currency={currency?.[erlass.key]}
+          overline={verweisOverline}
+          hinweis="Verweis — massgeblich ist die amtliche Fassung" />
+        <section className="max-w-reading space-y-4 rounded-lg border border-rule-struktur bg-paper-sunken/20 p-5">
+          <p className="font-serif text-body-l leading-[1.65] text-ink-700">
+            Dieser Erlass wird in LexMetrik <strong className="font-semibold">nicht als In-App-Volltext gehostet</strong>.
+            Massgeblich und vollständig ist die amtliche Fassung bei der Quelle.
+          </p>
+          {erlass.quelleUrl && (
+            <a href={erlass.quelleUrl} target="_blank" rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-md border border-brass-400 px-3 py-2 text-body-s font-medium text-brass-700 no-underline hover:border-brass-500 hover:bg-brass-100/40 transition-colors">
+              <span aria-hidden>↗</span> Amtliche Fassung öffnen
+            </a>
+          )}
+          {erlass.stand && (
+            <p className="text-micro text-ink-500">Stand der zuletzt erfassten Referenz: <span className="num">{formatiereDatum(erlass.stand)}</span></p>
+          )}
+        </section>
+        {/* Einheitliches Kontext-Panel (B3) auch hier: Entscheide/Materialien/
+            Werkzeuge zu diesem Erlass (Single Source, §5). */}
+        <KontextPanel typ="norm" normKeys={[erlass.key]} />
+        <nav className="mt-4 border-t border-line pt-5 flex flex-wrap justify-between gap-3 text-body-s" aria-label="Weitere Erlasse">
+          <Link to="/gesetze" className="text-ink-500 hover:text-brass-700">‹ Übersicht</Link>
+          {erlass.quelleUrl && <a href={erlass.quelleUrl} target="_blank" rel="noopener noreferrer" className="text-brass-700 hover:underline">Amtliche Fassung in neuem Tab öffnen ↗</a>}
         </nav>
       </div>
     );
@@ -807,6 +851,13 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     const name = topTitel(sys, top);
     return /^Bereich /.test(name) ? null : name;
   })();
+
+  // W2·5d G3a: Grundart-Metadaten zur Laufzeit aus dem Register (SSoT, §5) per
+  // key — die BrowseErlass trägt sie bewusst nicht. Steuert Kopf-Label (erlassTyp),
+  // §-Zähl-Substantiv (bestimmungsEtikett, ⑥) und den grundart-abhängigen Linien-
+  // Default (data-grundart am .lc-leser-Root, K11).
+  const meta = grundartMeta(erlass.key);
+  const bestimmungsWort = meta.bestimmungsEtikett === 'paragraf' ? 'Paragraphen' : 'Artikel';
 
   // Artikel-Bereich «Art. 1–10» + Einzelartikel-Flag je Sektion kommen aus dem
   // `sektionMeta`-useMemo (Rank 4) — einmal bottom-up berechnet statt je Render.
@@ -922,16 +973,16 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   return (
     // `lc-leser`: Scope-Anker für die G2a-Options-CSS (index.css) — die
     // data-linien/-fussnoten/-verweise-Regeln greifen NUR im Reader, nie im
-    // Norm-Popover der Rechner o. Ä.
-    <div className="lc-leser space-y-5">
+    // Norm-Popover der Rechner o. Ä. `data-grundart` (G3a/K11): der grundart-
+    // abhängige Linien-Default 'auto' wertet CSS hieran aus (nur KODIFIKATION
+    // zeigt den Guide). Reine Darstellung (§3/§5, Grundart aus dem Register).
+    <div className="lc-leser space-y-5" data-grundart={meta.grundart ?? undefined}>
       {/* Breadcrumb trägt seit A/F der Kopf: Einzelansicht → Inhalts-Kopf, Split-View
           → PaneKopf. Kein zweiter Inline-Breadcrumb mehr (sonst Dopplung im Pane).
           G2b: EINE Kopf-Komponente (ErlassLeserKopf) — dieselbe wie im pdf-embed-
           Pfad; sie trägt die Options-Leiste (Linien/Fussnoten/Verweise). */}
-      <ErlassLeserKopf erlass={erlass} artikelAnzahl={eintraege.length} currency={currency?.[erlass.key]}
-        overline={erlass.rechtsgebiet === 'international'
-          ? (overlineGebiet ?? 'Staatsvertrag')
-          : `${erlass.ebene === 'bund' ? 'Bundesgesetz' : `Kanton ${erlass.kanton}`}${overlineGebiet ? ` · ${overlineGebiet}` : ''}`}
+      <ErlassLeserKopf erlass={erlass} artikelAnzahl={eintraege.length} bestimmungsWort={bestimmungsWort} currency={currency?.[erlass.key]}
+        overline={kopfOverline(erlass, meta.erlassTyp, overlineGebiet)}
         hinweis="Snapshot — massgeblich ist die amtliche Fassung"
         aktionen={
           <>
@@ -949,7 +1000,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
             {/* W2·5d G2a/G2b: Options-Leiste (Linien/Fussnoten/Verweise) — reine
                 data-*-/CSS-Toggles (leserOptionen.ts), global, jede Instanz synchron.
                 Linien-Schalter nur bei geschachteltem Gesetz (sonst wirkungslos). */}
-            <LeserOptionenLeiste zeigeLinien={sektionen.length > 0} />
+            <LeserOptionenLeiste zeigeLinien={sektionen.length > 0} linienAutoAn={meta.grundart === 'KODIFIKATION'} />
           </>
         } />
 

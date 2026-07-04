@@ -52,26 +52,39 @@ async function guide(page: Page, artId: string) {
   }, artId);
 }
 
-test('Options-Leiste: drei role=switch, Grundzustand aria-checked=true + data-*=an', async ({ page }) => {
+test('Options-Leiste: drei role=switch; Fussnoten/Verweise an, Linien-Default grundart-abhängig (auto, K11)', async ({ page }) => {
   await warteReader(page, '/gesetze/bund/BGBM', 'art-1');
   const gruppe = page.locator('[aria-label="Darstellungsoptionen"]').first();
   await expect(gruppe).toBeVisible();
   await expect(gruppe.getByRole('switch')).toHaveCount(3); // BGBM geschachtelt → Linien sichtbar
-  for (const name of ['Linien', 'Fussnoten', 'Verweise']) {
+  // W2·5d G3a/K11: Linien-Default ist 'auto' — grundart-abhängig. BGBM ist KEINE
+  // KODIFIKATION → der Guide bleibt im Auto-Default ruhig aus, der Schalter zeigt
+  // ehrlich «aus» (§8). Fussnoten/Verweise bleiben unverändert an (R6-No-op).
+  await expect(gruppe.getByRole('switch', { name: 'Linien' })).toHaveAttribute('aria-checked', 'false');
+  for (const name of ['Fussnoten', 'Verweise']) {
     await expect(gruppe.getByRole('switch', { name })).toHaveAttribute('aria-checked', 'true');
   }
   const html = page.locator('html');
-  await expect(html).toHaveAttribute('data-linien', 'an');
+  await expect(html).toHaveAttribute('data-linien', 'auto');
   await expect(html).toHaveAttribute('data-fussnoten', 'an');
   await expect(html).toHaveAttribute('data-verweise', 'an');
 });
 
-test('Linien-Toggle: AN sichtbar → AUS transparent (Guide bleibt im DOM), persistiert über Reload', async ({ page }) => {
+test('Linien-Toggle: explizit AN sichtbar → AUS transparent (Guide bleibt im DOM), persistiert über Reload', async ({ page }) => {
+  // BV ist STANDARD_ERLASS → im Auto-Default (K11) ist der Guide ruhig aus; der
+  // Container mit border-Breite BLEIBT aber im DOM. Ein expliziter Klick setzt
+  // den globalen Zustand und übersteuert die Grundart.
   await warteReader(page, '/gesetze/bund/BV#art-8', 'art-8');
+  await expect(page.locator('html')).toHaveAttribute('data-linien', 'auto');
+  const autoAus = await guide(page, 'art-8');
+  expect(autoAus, 'Guide-Container existiert (auch im Auto-Default)').not.toBeNull();
+  expect(parseFloat(autoAus!.width)).toBeGreaterThan(0);
+  expect(autoAus!.color).toBe('rgba(0, 0, 0, 0)'); // auto + non-KODIFIKATION → transparent
 
-  // POSITIV: Grundzustand zeigt die Guide-Linie (nicht transparent).
+  // POSITIV: «Linien» explizit AN → Kante sichtbar (nicht transparent).
+  await page.getByRole('switch', { name: 'Linien' }).click();
+  await expect(page.locator('html')).toHaveAttribute('data-linien', 'an');
   const an = await guide(page, 'art-8');
-  expect(an, 'Guide-Kante im Grundzustand vorhanden').not.toBeNull();
   expect(an!.color).not.toBe('rgba(0, 0, 0, 0)');
 
   // NEGATIV: «Linien» AUS → Attribut gesetzt, Kante transparent, aber Element

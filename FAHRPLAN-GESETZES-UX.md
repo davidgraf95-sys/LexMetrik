@@ -614,6 +614,74 @@ export interface ErlassRegistereintrag {
 > (G2b-Scope): kein Mobil-«Ansicht»-Popover (die gewrappte Chip-Leiste ist @390 sauber +
 > overflow-frei — empirisch, keine Not); keine Grundart-Verzweigung (G3a); keine globale
 > Topbar-Opazität.
+>
+> **Ausführungsvermerk G3a (5.7.2026, Opus, Worktree `feat/gesetzes-ux-g3a`):**
+> Gebaut nach §2.2. Reine Darstellung (§3) — **`gegenpruefung: n/a`**, und zwar
+> literal: der Diff berührt **KEINEN** Risiko-Pfad (kein `src/lib/normtext/`, kein
+> `public/normtext`, keine Extraktion/Engine), nur `src/pages/gesetz-leser/**` +
+> `src/index.css` + e2e. **Laufzeit-Grundart-Anbindung (§5, die im G2a/G2b-Vermerk
+> offene Frage):** die Grundart liegt bewusst NICHT auf der Laufzeit-`BrowseErlass`
+> (byte-gleiche Snapshot-Projektion). Sie kommt zur Laufzeit aus der Klassifikation
+> `GRUNDART_SEED` (`grundart.generated.ts`, SSoT §5) via neuem Read-Accessor
+> `grundartMeta(key)` — bewusst in der **Darstellungsschicht** (`helpers.tsx`, neben
+> `kopfOverline`), NICHT in `register.ts`: (a) kantonale Erlasse stehen gar nicht im
+> `ERLASS_REGISTER` (nur der Seed deckt Bund UND Kanton ab — ein `ERLASS_BY_KEY`-
+> Lookup über das Register hätte alle 1231 Kantone verfehlt, empirisch im e2e
+> aufgefallen), (b) es bleibt ein reiner Label-Wähler ohne Rechtsinhalt, darum
+> gehört er NICHT in den gegenpruefungs-pflichtigen `src/lib/normtext`-Layer — so
+> bleibt der `check:gegenpruefung`-Arbiter für echte Rechtsinhalts-Diffs scharf.
+> **①④ FLACHER_KURZERLASS (VMWG):** Lesespalte lag durch G1 bereits hart auf
+> `max-w-reading`; der Linien-Toggle ist bei fehlender Gliederung sauber
+> ausgeblendet (`zeigeLinien`). Kein weiterer Eingriff nötig — empirisch bestätigt.
+> **⑤ STAATSVERTRAG (LugÜ):** Präambel rendert bereits über `ErlassKopfBlock`
+> (`kopf.praeambel`); Kopf-Label jetzt «Staatsvertrag» statt «International /
+> Staatsverträge» (erlassTyp). **⑥ KANTON §-Label:** Befund (§7 «verifizieren»):
+> das sichtbare «§ N» steht **schon im Snapshot-`artikelLabel`** (Extraktion) — Body/
+> Marke/Print/Zitat rendern es also bereits. Der register-`bestimmungsEtikett`-Wert
+> steuert damit nur noch das **synthetische Zähl-Substantiv im Kopf**: «N Paragraphen»
+> statt «N Artikel» (775 §-Kantone). Anker-`id` bleibt **überall** `art-<token>`
+> (R8, e2e-belegt) — kein `par-`. **⑦ PDF_EMBED (EMRK):** iframe-Rahmen
+> `border-line`→`border-rule-struktur` (Linien-Kanon). **⑧ LIVE_VERWEIS (DSGVO):**
+> die 9 `nur-live-link`-Erlasse zeigten bisher die «nicht verfügbar»-Fehlerseite →
+> jetzt eine ehrliche **Verweiskarte** (§8: prominenter amtlicher Live-Link + Stand +
+> «nicht als In-App-Volltext gehostet»), + `KontextPanel`. **erlassTyp-Kopf-Label
+> (der aus G2b hierher übergebene Punkt, §5.1):** `kopfOverline()` leitet die Overline
+> aus `erlassTyp` ab statt aus der «ebene»-Heuristik, die JEDE Bund-Norm «Bundesgesetz»
+> nannte — **103 Verordnungen** (VMWG/GBV/VZV …) heissen jetzt korrekt «Verordnung»,
+> BV «Bundesverfassung», 18 Staatsverträge «Staatsvertrag»; Kanton «Kanton XX ·
+> Gesetz|Verordnung» (Sachgebiet-Fallback bei neutralem Typ, N13 erhalten).
+> **K11-Entscheid (grundart-abhängiger Linien-Default, der aus G2a hierher vertagte
+> Punkt) — DATENBASIERT UMGESETZT:** §3.1 spezifiziert ihn (KODIFIKATION AN, sonst
+> AUS). Realisiert als **Tri-State `data-linien`** mit neuem Default **`auto`**
+> (`leserOptionen.ts`): im Auto-Zustand wertet CSS die **Grundart** aus (`data-grundart`
+> am `.lc-leser`-Root, §5) — nur `:not([data-grundart="KODIFIKATION"])` blendet den
+> EINEN Guide + Einzug aus; ein expliziter Nutzer-Klick setzt global `an`/`aus` und
+> übersteuert. *Warum tri-state statt Default-Flip:* der binäre G2a-Toggle ist global
+> persistiert und wird VOR der Grundart-Kenntnis am `<html>` gesetzt; ein echter
+> **Per-Erlass-Default MIT Nutzer-Override** braucht zwingend drei Zustände. Der
+> Schalter zeigt den **effektiven** Zustand ehrlich (§8, `linienAutoAn`-Prop). CLS 0
+> (nur border/padding), Prosa unberührt. Der 80 %-Flachfall war ohnehin guide-frei
+> (keine Sektionen); der Effekt greift genau bei den strukturierten Nicht-Kodifikationen
+> (BV etc. → Guide-Default aus). **Golden/Wortlaut:** Reader nicht in der Engine-Matrix
+> → `golden:vergleich` **IDENTISCH (201)**; `check:normtext`/`check:struktur-konsistenz`
+> grün; **empirischer Prosa-Byte-Beweis** gegen einen frischen `origin/main`-Build:
+> die `<article>`-Prosa von ZGB (1277)/OR (1686)/VMWG (32)/BV (232)/AG-291.150 (19,
+> Kanton) ist byte-identisch (sha16 gleich). **Tore:** 24/25 gate-Sub-Checks GRÜN
+> inkl. `check:gegenpruefung` (kein Risiko-Pfad) / `check:grundart` / `check:linien-kanon`
+> / golden / normtext / struktur-konsistenz; einziger roter Sub-Check
+> `check:vollstaendigkeit` ist **environment-/netz-bedingt und identisch rot auf
+> `origin/main`** (Live-`quelleUrl`-Auflösung offline). `test:e2e` gegen dist 1 Worker:
+> neuer Spec `gesetze-ux-g3a` (6) grün + `leser-optionen`/`leser-kopf-g2b`/
+> `leser-linien-kanon` angepasst/grün. Visual-Review Desktop 1440 + Mobil 390 je
+> Grundart (ZGB Guide AN, VMWG «Verordnung», AG «19 Paragraphen»/«§ 6», LugÜ
+> «Staatsvertrag»+Präambel, EMRK PDF-Rahmen, DSGVO Verweiskarte) — Currency-Chips/
+> Sticky/Optionen intakt, **0 H-Overflow ausser LugÜ mobil**: dessen Vertragsstaaten-
+> Ratifikations-**Tabelle** läuft @390 über — **pre-existing** (baseline `origin/main`
+> byte-/pixel-identisch, scrollW 790 beide), aus `ArtikelBody` (unberührt) und
+> **G3b-Scope** (Anhang/Tabellen-Risiko-Pfad), NICHT G3a. **Bewusst NICHT (G3a-Scope):**
+> Anhang-Block/Tabellen-Scroll (③/⑤ → G3b); Staatsvertrag-Langtitel-Collapse (mobil
+> ⑤; die 8-Zeilen-Titel wrappen ohne H-Overflow, kein Blocker) offen für einen
+> späteren Feinschliff.
 | **G3a** | Per-Grundart-**Darstellung**: §-Label (KANTON, Anker bleibt `#art-`/R8), Präambel/Protokolle (⑤), PDF-Rahmen (⑦), Live-Verweiskarte (⑧), Kurzerlass-Lesespalte (④). | **`parts.tsx`**, **`inhalt.tsx`**, `register.ts` | 1½ Session | **Golden ändert** → neu; `gegenpruefung: n/a — reine Darstellung` |
 | **G3b** | **Risiko-Pfad:** Anhang-Block (③/⑤) + Tarif-Anhang → echte Tabelle. Gekoppelt an `FAHRPLAN-TARIF-TABELLEN-STUFE2.md` + `annex_*`-Plan. | `ArtikelBody.tsx`, Extraktions-Skripte, `register.ts` | **mehrere Sessions** | **`check:gegenpruefung` zwingend** (Extraktion!); golden neu |
 | **G4** | Einstieg /gesetze (3 Kacheln, Dopplung raus) + Cmd/Ctrl-K-Rahmen + Norm-Query-Parser (KEIN Neu-Index). | `src/pages/gesetze/*` (nicht Leser) | 1–1½ Session | kein Normtext; UI-Test + Parser-Akzeptanz |

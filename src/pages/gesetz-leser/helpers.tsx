@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import type { Sektion, Fussnote } from '../../lib/normtext/browse';
 import type { NormSnapshot } from '../../lib/normtext/typen';
 import type { BrowseErlass } from '../../lib/normtext/browse-typen';
-import { ERLASS_REGISTER } from '../../lib/normtext/register';
+import { ERLASS_REGISTER, type ErlassTyp, type Grundart } from '../../lib/normtext/register';
+import { GRUNDART_SEED } from '../../lib/normtext/grundart.generated';
 
 // M11 (§5 Verzahnung): Reverse-Resolver SR-Nummer → interner Erlass, ABGELEITET
 // aus dem Register (keine Handtabelle, §3/§5 eine Quelle). Nur Bund-Erlasse, die
@@ -35,6 +36,68 @@ export function baueZitat(
   let s = teile.join(', ');
   if (erlass.stand) s += ` (Stand ${formatiereDatum(erlass.stand)})`;
   return s;
+}
+
+// Laufzeit-Anbindung der Grundart an den Reader (W2·5d G3a, §5): die Laufzeit-
+// `BrowseErlass` trägt BEWUSST keine Grundart (byte-gleiche Snapshot-Projektion,
+// register.json). SSoT ist die Klassifikation GRUNDART_SEED (grundart.generated.ts):
+// `mitGrundart` merged sie in die BUND-Register-Einträge, kantonale Erlasse stehen
+// aber NICHT im ERLASS_REGISTER (ihre Identität leitet der Generator aus dem
+// Snapshot ab) — darum schlägt der Reader zur Laufzeit DIREKT im Seed nach, die
+// EINE Quelle für Bund UND Kanton (keine zweite Wahrheit, keine Daten-
+// Regeneration). Reiner Read-Accessor in der Darstellungsschicht (§3): er wählt
+// nur, welche Grundart die Designvorschrift (§2.2) steuert — kein Rechtsinhalt.
+export function grundartMeta(key: string): {
+  grundart?: Grundart;
+  erlassTyp?: ErlassTyp;
+  bestimmungsEtikett?: 'art' | 'paragraf';
+  bestimmungsEtikettStatus?: 'entwurf';
+} {
+  const s = GRUNDART_SEED[key];
+  if (!s) return {};
+  return {
+    grundart: s.grundart,
+    erlassTyp: s.erlassTyp,
+    bestimmungsEtikett: s.bestimmungsEtikett,
+    bestimmungsEtikettStatus: s.bestimmungsEtikettStatus,
+  };
+}
+
+// Kopf-Overline JE GRUNDART (W2·5d G3a, FAHRPLAN §2.2 + §5.1): das Kopf-Label
+// leitet sich aus `erlassTyp` (Register, SSoT) ab statt aus der früheren
+// «ebene»-Heuristik, die JEDE Bund-Norm «Bundesgesetz» nannte — auch die 103
+// Verordnungen (VMWG/GBV/VZV …). Reine Darstellung (§3), deterministisch (§2).
+//   • International → «Staatsvertrag» (⑤; erlassTyp Arbiter, Gebiet als Fallback).
+//   • Bund → Bundesverfassung / Bundesgesetz / Verordnung / Staatsvertrag
+//     (undefined/sonstiges → «Bundesgesetz» = heutiger Default, byte-verträglich),
+//     das amtliche Sachgebiet bleibt als « · Gebiet»-Zusatz (N13).
+//   • Kanton → «Kanton XX · Gesetz|Verordnung» (⑥); wo erlassTyp neutral ist
+//     (sonstiges), das amtliche Sachgebiet als Zusatz behalten (N13).
+export function kopfOverline(
+  erlass: Pick<BrowseErlass, 'ebene' | 'kanton' | 'rechtsgebiet'>,
+  erlassTyp: ErlassTyp | undefined,
+  overlineGebiet: string | null,
+): string {
+  if (erlass.rechtsgebiet === 'international') {
+    if (erlassTyp === 'staatsvertrag') return 'Staatsvertrag';
+    return overlineGebiet ?? 'Staatsvertrag';
+  }
+  if (erlass.ebene === 'bund') {
+    const typ =
+      erlassTyp === 'verfassung' ? 'Bundesverfassung'
+      : erlassTyp === 'verordnung' ? 'Verordnung'
+      : erlassTyp === 'staatsvertrag' ? 'Staatsvertrag'
+      : 'Bundesgesetz';
+    return overlineGebiet ? `${typ} · ${overlineGebiet}` : typ;
+  }
+  const basis = `Kanton ${erlass.kanton}`;
+  const typ =
+    erlassTyp === 'gesetz' ? 'Gesetz'
+    : erlassTyp === 'verordnung' ? 'Verordnung'
+    : erlassTyp === 'verfassung' ? 'Verfassung'
+    : null;
+  const zusatz = typ ?? overlineGebiet;
+  return zusatz ? `${basis} · ${zusatz}` : basis;
 }
 
 export function passtAufSuche(e: NormSnapshot, s: string): boolean {
