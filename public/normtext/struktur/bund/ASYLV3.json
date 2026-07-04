@@ -1,9 +1,9 @@
 {
- "erzeugt": "2026-06-30",
+ "erzeugt": "2026-07-05",
  "kopf": {
   "srNummer": "142.314",
   "titel": "Asylverordnung 3 über die Bearbeitung von Personendaten",
-  "erlassdatum": "vom 11. August 1999 (Stand am 1. Juni 2024)",
+  "erlassdatum": "vom 11. August 1999 (Stand am 12. Juni 2026)",
   "praeambel": [
    {
     "rolle": "autor",
@@ -25,7 +25,7 @@
     "links": [
      {
       "label": "SR <b>142.31</b>",
-      "url": "https://fedlex.data.admin.ch/eli/cc/1999/358"
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4878"
      }
     ],
     "absatz": null,
@@ -61,7 +61,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "42",
+     "nr": "34",
      "text": "Fassung gemäss Ziff. I der V vom 24. Okt. 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007 </b>5611).",
      "links": [
       {
@@ -87,7 +87,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "43",
+     "nr": "35",
      "text": "Fassung gemäss Ziff. I der V vom 24. Okt. 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007 </b>5611).",
      "links": [
       {
@@ -99,12 +99,12 @@
      "item": null
     },
     {
-     "nr": "44",
+     "nr": "36",
      "text": "SR <b>0.142.30</b>",
      "links": [
       {
        "label": "SR <b>0.142.30</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1955/443_461_469"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/432"
       }
      ],
      "absatz": null,
@@ -119,7 +119,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "45",
+     "nr": "37",
      "text": "Fassung gemäss Ziff. I der V vom 24. Okt. 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007 </b>5611).",
      "links": [
       {
@@ -131,12 +131,24 @@
      "item": null
     },
     {
-     "nr": "46",
+     "nr": "38",
+     "text": "Fassung gemäss Ziff. I der V vom 20. Mai 2026, in Kraft seit 12. Juni 2026 (AS <b>2026</b> 266).",
+     "links": [
+      {
+       "label": "AS <b>2026</b> 266",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2026/266"
+      }
+     ],
+     "absatz": "1",
+     "item": "b"
+    },
+    {
+     "nr": "39",
      "text": "SR <b>142.513</b>",
      "links": [
       {
        "label": "SR <b>142.513</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2006/303"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4900"
       }
      ],
      "absatz": "2",
@@ -151,7 +163,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "47",
+     "nr": "40",
      "text": "Fassung gemäss Ziff. I der V vom 24. Okt. 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007 </b>5611).",
      "links": [
       {
@@ -163,15 +175,39 @@
      "item": null
     },
     {
-     "nr": "48",
+     "nr": "41",
      "text": "SR <b>142.51</b>",
      "links": [
       {
        "label": "SR <b>142.51</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2006/301"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4898"
       }
      ],
      "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "42",
+     "text": "Fassung gemäss Ziff. I der V vom 20. Mai 2026, in Kraft seit 12. Juni 2026 (AS <b>2026</b> 266).",
+     "links": [
+      {
+       "label": "AS <b>2026</b> 266",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2026/266"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "43",
+     "text": "Aufgehoben durch Ziff. I der V vom 20. Mai 2026, mit Wirkung seit 12. Juni 2026 (AS <b>2026</b> 266).",
+     "links": [
+      {
+       "label": "AS <b>2026</b> 266",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2026/266"
+      }
+     ],
+     "absatz": "2",
      "item": null
     }
    ]
@@ -191,16 +227,16 @@
   "11": {
    "gliederung": [],
    "marginalie": [
-    "Fingerabdruckspezialistinnen und -spezialisten"
+    "Fingerabdruckexpertinnen und -experten"
    ],
    "fussnoten": [
     {
-     "nr": "56",
-     "text": "Fassung gemäss Ziff. I 4 der V vom 12. Juni 2015 über die Anpassung von Verordnungen aufgrund von Neuerungen bezüglich des Dublin/Eurodac-Besitzstands, in Kraft seit 20. Juli 2015 (AS <b>2015</b> 1849).",
+     "nr": "67",
+     "text": "Fassung gemäss Ziff. I der V vom 20. Mai 2026, in Kraft seit 12. Juni 2026 (AS <b>2026</b> 266).",
      "links": [
       {
-       "label": "AS <b>2015</b> 1849",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2015/358"
+       "label": "AS <b>2026</b> 266",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2026/266"
       }
      ],
      "absatz": null,
@@ -215,7 +251,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "62",
+     "nr": "77",
      "text": "Fassung gemäss Ziff. I 4 der V vom 12. Juni 2015 über die Anpassung von Verordnungen aufgrund von Neuerungen bezüglich des Dublin/Eurodac-Besitzstands, in Kraft seit 20. Juli 2015 (AS <b>2015</b> 1849).",
      "links": [
       {
@@ -227,7 +263,7 @@
      "item": null
     },
     {
-     "nr": "63",
+     "nr": "78",
      "text": "Fassung gemäss Anhang 2 Ziff. II 6 der Datenschutzverordnung vom 31. Aug. 2022, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 568).",
      "links": [
       {
@@ -239,19 +275,19 @@
      "item": "a"
     },
     {
-     "nr": "64",
+     "nr": "79",
      "text": "SR <b>235.11</b>",
      "links": [
       {
        "label": "SR <b>235.11</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2022/568"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5994"
       }
      ],
      "absatz": null,
      "item": "a"
     },
     {
-     "nr": "65",
+     "nr": "80",
      "text": "Fassung gemäss Anhang 2 Ziff. II 4 der Informationssicherheitsverordnung vom 8. Nov. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 735).",
      "links": [
       {
@@ -263,19 +299,19 @@
      "item": "b"
     },
     {
-     "nr": "66",
+     "nr": "81",
      "text": "SR <b>128.1</b>",
      "links": [
       {
        "label": "SR <b>128.1</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2023/735"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/40166"
       }
      ],
      "absatz": null,
      "item": "b"
     },
     {
-     "nr": "67",
+     "nr": "82",
      "text": "Aufgehoben durch Anhang Ziff. 3 der V vom 24. Febr. 2021, mit Wirkung seit 1. April 2021 (AS <b>2021</b> 132).",
      "links": [
       {
@@ -301,7 +337,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "68",
+     "nr": "83",
      "text": "Aufgehoben durch Anhang 3 Ziff. 5 der V vom 12. April 2006 über das Zentrale Migrationsinformationssystem, mit Wirkung seit 29. Mai 2006 (AS <b>2006</b> 1945).",
      "links": [
       {
@@ -320,23 +356,239 @@
     "Inkrafttreten"
    ]
   },
-  "11_a": {
+  "10_a": {
    "gliederung": [],
    "marginalie": [
-    "Recht auf Auskunft und Recht auf Berichtigung oder Löschung von Daten im Eurodac"
+    "Auswertung von Personendaten aus elektronischen Datenträgern"
    ],
    "fussnoten": [
     {
+     "nr": "55",
+     "text": "Eingefügt durch Ziff. I der V vom 1. Mai 2024, in Kraft seit 1. April 2025 (AS <b>2024</b> 208).",
+     "links": [
+      {
+       "label": "AS <b>2024</b> 208",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/208"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "56",
+     "text": "SR <b>235.1</b>",
+     "links": [
+      {
+       "label": "SR <b>235.1</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5993"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
      "nr": "57",
-     "text": "Eingefügt durch Ziff. I 4 der V vom 12. Juni 2015 über die Anpassung von Verordnungen aufgrund von Neuerungen bezüglich des Dublin/Eurodac-Besitzstands, in Kraft seit 20. Juli 2015 (AS <b>2015</b> 1849). Die Berichtigung vom 7. Juli 2015 betrifft nur den italienischen Text (AS <b>2015</b> 2237).",
+     "text": "SR <b>311.0</b>",
+     "links": [
+      {
+       "label": "SR <b>311.0</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6196"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "10_b": {
+   "gliederung": [],
+   "marginalie": [
+    "Berechtigung zur Bearbeitung von Personendaten aus elektronischen Datenträgern"
+   ],
+   "fussnoten": [
+    {
+     "nr": "58",
+     "text": "Eingefügt durch Ziff. I der V vom 1. Mai 2024, in Kraft seit 1. April 2025 (AS <b>2024</b> 208).",
+     "links": [
+      {
+       "label": "AS <b>2024</b> 208",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/208"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "10_c": {
+   "gliederung": [],
+   "marginalie": [
+    "Prüfung der Verhältnismässigkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "59",
+     "text": "Eingefügt durch Ziff. I der V vom 1. Mai 2024, in Kraft seit 1. April 2025 (AS <b>2024</b> 208).",
+     "links": [
+      {
+       "label": "AS <b>2024</b> 208",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/208"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "10_d": {
+   "gliederung": [],
+   "marginalie": [
+    "Einsatz von Software zur Bearbeitung der Personendaten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "60",
+     "text": "Eingefügt durch Ziff. I der V vom 1. Mai 2024, in Kraft seit 1. April 2025 (AS <b>2024</b> 208).",
+     "links": [
+      {
+       "label": "AS <b>2024</b> 208",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/208"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "10_e": {
+   "gliederung": [],
+   "marginalie": [
+    "Zwischenspeicherung der Personendaten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "61",
+     "text": "Eingefügt durch Ziff. I der V vom 1. Mai 2024, in Kraft seit 1. April 2025 (AS <b>2024</b> 208).",
+     "links": [
+      {
+       "label": "AS <b>2024</b> 208",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/208"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "10_f": {
+   "gliederung": [],
+   "marginalie": [
+    "Direkte Sichtung und Auswertung der Personendaten aus elektronischen Datenträgern"
+   ],
+   "fussnoten": [
+    {
+     "nr": "62",
+     "text": "Eingefügt durch Ziff. I der V vom 1. Mai 2024, in Kraft seit 1. April 2025 (AS <b>2024</b> 208).",
+     "links": [
+      {
+       "label": "AS <b>2024</b> 208",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/208"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "10_g": {
+   "gliederung": [],
+   "marginalie": [
+    "g Anwesenheit der betroffenen Person und rechtliches Gehör"
+   ],
+   "fussnoten": [
+    {
+     "nr": "63",
+     "text": "Eingefügt durch Ziff. I der V vom 1. Mai 2024, in Kraft seit 1. April 2025 (AS <b>2024</b> 208).",
+     "links": [
+      {
+       "label": "AS <b>2024</b> 208",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/208"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "10_h": {
+   "gliederung": [],
+   "marginalie": [
+    "Information"
+   ],
+   "fussnoten": [
+    {
+     "nr": "64",
+     "text": "Eingefügt durch Ziff. I der V vom 1. Mai 2024, in Kraft seit 1. April 2025 (AS <b>2024</b> 208).",
+     "links": [
+      {
+       "label": "AS <b>2024</b> 208",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/208"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "65",
+     "text": "SR <b>172.021</b>",
+     "links": [
+      {
+       "label": "SR <b>172.021</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5059"
+      }
+     ],
+     "absatz": "2",
+     "item": "k"
+    }
+   ]
+  },
+  "10_i": {
+   "gliederung": [],
+   "marginalie": [
+    "Anwesenheitsrecht der Rechtsvertretung und Einsatz von Dolmetscherinnen und Dolmetschern"
+   ],
+   "fussnoten": [
+    {
+     "nr": "66",
+     "text": "Eingefügt durch Ziff. I der V vom 1. Mai 2024, in Kraft seit 1. April 2025 (AS <b>2024</b> 208).",
+     "links": [
+      {
+       "label": "AS <b>2024</b> 208",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/208"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "11_a": {
+   "gliederung": [],
+   "marginalie": [
+    "Gesichtsbildexpertinnen und -experten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "68",
+     "text": "Eingefügt durch Ziff. I 4 der V vom 12. Juni 2015 über die Anpassung von Verordnungen aufgrund von Neuerungen bezüglich des Dublin/Eurodac-Besitzstands (AS <b>2015</b> 1849). Fassung gemäss Ziff. I der V vom 20. Mai 2026, in Kraft seit 12. Juni 2026 (AS <b>2026</b> 266).",
      "links": [
       {
        "label": "AS <b>2015</b> 1849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/358"
       },
       {
-       "label": "AS <b>2015</b> 2237",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2015/414"
+       "label": "AS <b>2026</b> 266",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2026/266"
       }
      ],
      "absatz": null,
@@ -347,35 +599,35 @@
   "11_b": {
    "gliederung": [],
    "marginalie": [
-    "Haftung in Zusammenhang mit dem Betrieb des Eurodac"
+    "Auskunftsrecht"
    ],
    "fussnoten": [
     {
-     "nr": "58",
-     "text": "Eingefügt durch Ziff. I 4 der V vom 12. Juni 2015 über die Anpassung von Verordnungen aufgrund von Neuerungen bezüglich des Dublin/Eurodac-Besitzstands, in Kraft seit 20. Juli 2015 (AS <b>2015</b> 1849). Die Berichtigung vom 7. Juli 2015 betrifft nur den italienischen Text (AS <b>2015</b> 2237).",
+     "nr": "69",
+     "text": "Eingefügt durch Ziff. I 4 der V vom 12. Juni 2015 über die Anpassung von Verordnungen aufgrund von Neuerungen bezüglich des Dublin/Eurodac-Besitzstands (AS <b>2015</b> 1849). Fassung gemäss Ziff. I der V vom 20. Mai 2026, in Kraft seit 12. Juni 2026 (AS <b>2026</b> 266)..",
      "links": [
       {
        "label": "AS <b>2015</b> 1849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/358"
       },
       {
-       "label": "AS <b>2015</b> 2237",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2015/414"
+       "label": "AS <b>2026</b> 266",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2026/266"
       }
      ],
      "absatz": null,
      "item": null
     },
     {
-     "nr": "59",
-     "text": "SR <b>170.32</b>",
+     "nr": "70",
+     "text": "SR <b>235.1</b>",
      "links": [
       {
-       "label": "SR <b>170.32</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1958/1413_1483_1489"
+       "label": "SR <b>235.1</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5993"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -383,30 +635,123 @@
   "11_c": {
    "gliederung": [],
    "marginalie": [
-    "Aufsicht über die Bearbeitung von Daten im Eurodac"
+    "Recht auf Berichtigung, Ergänzung oder Löschung der Daten"
    ],
    "fussnoten": [
     {
-     "nr": "60",
-     "text": "Eingefügt durch Ziff. I 4 der V vom 12. Juni 2015 über die Anpassung von Verordnungen aufgrund von Neuerungen bezüglich des Dublin/Eurodac-Besitzstands, in Kraft seit 20. Juli 2015 (AS <b>2015</b> 1849). Die Berichtigung vom 7. Juli 2015 betrifft nur den italienischen Text (AS <b>2015</b> 2237).",
+     "nr": "71",
+     "text": "Eingefügt durch Ziff. I 4 der V vom 12. Juni 2015 über die Anpassung von Verordnungen aufgrund von Neuerungen bezüglich des Dublin/Eurodac-Besitzstands (AS <b>2015</b> 1849). Fassung gemäss Ziff. I der V vom 20. Mai 2026, in Kraft seit 12. Juni 2026 (AS <b>2026</b> 266).",
      "links": [
       {
        "label": "AS <b>2015</b> 1849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/358"
       },
       {
-       "label": "AS <b>2015</b> 2237",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2015/414"
+       "label": "AS <b>2026</b> 266",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2026/266"
       }
      ],
      "absatz": null,
      "item": null
     },
     {
-     "nr": "61",
-     "text": "Verordnung (EU) Nr. 603/2013 des Europäischen Parlaments und des Rates über die Einrichtung von Eurodac für den Abgleich von Fingerabdruckdaten zum Zwecke der effektiven Anwendung der Verordnung (EU) Nr. 604/2013 zur Festlegung der Kriterien und Verfahren zur Bestimmung des Mitgliedstaats, der für die Prüfung eines von einem Drittstaatsangehörigen oder Staatenlosen in einem Mitgliedstaat gestellten Antrags auf internationalen Schutz zuständig ist und über die Gefahrenabwehr und Strafverfolgung dienende Anträge der Gefahrenabwehr- und Strafverfolgungsbehörden der Mitgliedstaaten und Europols auf den Abgleich mit Eurodac-Daten sowie zur Änderung der Verordnung (EU) Nr. 1077/2011 zur Einreichung einer Europäischen Agentur für das Betriebsmanagement von IT-Grosssystemen im Raum der Freiheit, der Sicherheit und des Rechts (Neufassung), Fassung gemäss ABl. L 180 vom 29.6.2013, S. 1.",
+     "nr": "72",
+     "text": "Siehe Fussnote zu Art. 6<i>d</i> Abs. 2 Bst. a.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "11_d": {
+   "gliederung": [],
+   "marginalie": [
+    "Aufsicht über die Bearbeitung von Daten im Eurodac"
+   ],
+   "fussnoten": [
+    {
+     "nr": "73",
+     "text": "Eingefügt durch Ziff. I der V vom 20. Mai 2026, in Kraft seit 12. Juni 2026 (AS <b>2026</b> 266).",
+     "links": [
+      {
+       "label": "AS <b>2026</b> 266",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2026/266"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "74",
+     "text": "Siehe Fussnote zu Art. 6<i>d</i> Abs. 2 Bst. a.",
      "links": [],
      "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "11_e": {
+   "gliederung": [],
+   "marginalie": [
+    "Tonaufnahme im Dublin-Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "75",
+     "text": "Eingefügt durch Ziff. I der V vom 20. Mai 2026, in Kraft seit 12. Juni 2026 (AS <b>2026</b> 266).",
+     "links": [
+      {
+       "label": "AS <b>2026</b> 266",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2026/266"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "76",
+     "text": "Siehe Fussnote zu Art. 6<i>b </i>Abs. 3.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "14_a": {
+   "gliederung": [],
+   "marginalie": [
+    "Abschluss internationaler Verträge im Zusammenhang mit Eurodac"
+   ],
+   "fussnoten": [
+    {
+     "nr": "84",
+     "text": "Eingefügt durch Ziff. I der V vom 26. Febr. 2025, in Kraft seit 1. April 2025 (AS <b>2025</b> 165).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 165",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/165"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "85",
+     "text": "Verordnung (EU) 2024/1358 des Europäischen Parlaments und des Rates vom 14. Mai 2024 über die Einrichtung von Eurodac für den Abgleich biometrischer Daten zur effektiven Anwendung der Verordnungen (EU) 2024/1351 und (EU) 2024/1350 des Europäischen Parlaments und des Rates und der Richtlinie 2001/55/EG sowie zur Feststellung der Identität illegal aufhältiger Drittstaatsangehöriger oder Staatenloser und über der Gefahrenabwehr und Strafverfolgung dienende Anträge der Gefahrenabwehr- und Strafverfolgungsbehörden der Mitgliedstaaten und Europols auf den Abgleich mit Eurodac-Daten, zur Änderung der Verordnungen (EU) 2018/1240 und (EU) 2019/818 des Europäischen Parlaments und des Rates und zur Aufhebung der Verordnung (EU) Nr. 603/2013 des Europäischen Parlaments und des Rates, Fassung gemäss ABl. L, 2024/1358, 22.5.2024.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "86",
+     "text": "SR <b>172.010</b>",
+     "links": [
+      {
+       "label": "SR <b>172.010</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5015"
+      }
+     ],
+     "absatz": null,
      "item": null
     }
    ]
@@ -419,15 +764,15 @@
    "fussnoten": [
     {
      "nr": "3",
-     "text": "Eingefügt durch Ziff. I 5 der V vom 22. Okt. 2008 (Schengen und Dublin) (AS <b>2008</b> 5421). Fassung gemäss Ziff. I der V vom 24. Nov. 2010, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 5775).",
+     "text": "Eingefügt durch Ziff. I 5 der V vom 22. Okt. 2008 (Schengen und Dublin) (AS <b>2008</b> 5421). Fassung gemäss Ziff. I der V vom 20. Mai 2026, in Kraft seit 12. Juni 2026 (AS <b>2026</b> 266).",
      "links": [
       {
        "label": "AS <b>2008</b> 5421",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/757"
       },
       {
-       "label": "AS <b>2010</b> 5775",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2010/819"
+       "label": "AS <b>2026</b> 266",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2026/266"
       }
      ],
      "absatz": null,
@@ -435,11 +780,11 @@
     },
     {
      "nr": "4",
-     "text": "BG vom 20. Juni 2003 über das Informationssystem für den Ausländer- und den Asylbereich (SR <b>142.51</b>)",
+     "text": "BG vom 20. Juni 2003 über das Informationssystem für den Ausländer- und den Asylbereich (SR <b>142.51</b>).",
      "links": [
       {
        "label": "SR <b>142.51</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2006/301"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4898"
       }
      ],
      "absatz": null,
@@ -447,135 +792,27 @@
     },
     {
      "nr": "5",
-     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 16 Abs. 3 der Publikationsverordnung vom 17. Nov. 2004 (AS <b>2004</b> 4937) auf den 1. Jan. 2015 angepasst. Diese Anpassung wurde im ganzen Text vorgenommen.",
-     "links": [
-      {
-       "label": "AS <b>2004</b> 4937",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2004/746"
-      }
-     ],
-     "absatz": null,
-     "item": null
-    },
-    {
-     "nr": "6",
      "text": "SR <b>142.513</b>",
      "links": [
       {
        "label": "SR <b>142.513</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2006/303"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4900"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "a"
     },
     {
-     "nr": "7",
-     "text": "Fassung gemäss Ziff. I der V vom 22. März 2017, in Kraft seit 15. April 2017 (AS <b>2017</b> 2175).",
-     "links": [
-      {
-       "label": "AS <b>2017</b> 2175",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2017/200"
-      }
-     ],
-     "absatz": null,
-     "item": "b"
-    },
-    {
-     "nr": "8",
-     "text": "Aufgehoben durch Ziff. I der V vom 22. März 2017, mit Wirkung seit 15. April 2017 (AS <b>2017</b> 2175).",
-     "links": [
-      {
-       "label": "AS <b>2017</b> 2175",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2017/200"
-      }
-     ],
-     "absatz": null,
-     "item": "d"
-    },
-    {
-     "nr": "9",
-     "text": "Fassung gemäss Ziff. I der V vom 15. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 550).",
-     "links": [
-      {
-       "label": "AS <b>2023</b> 550",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2023/550"
-      }
-     ],
-     "absatz": null,
-     "item": "e"
-    },
-    {
-     "nr": "10",
-     "text": "Aufgehoben durch Ziff. I der V vom 18. Sept. 2015, mit Wirkung seit 15. Okt. 2015 (AS <b>2015</b> 3729).",
-     "links": [
-      {
-       "label": "AS <b>2015</b> 3729",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2015/627"
-      }
-     ],
-     "absatz": null,
-     "item": "h"
-    },
-    {
-     "nr": "11",
-     "text": "Ausdruck gemäss Ziff. I der V vom 8. Juni 2018, in Kraft seit 1. März 2019 (AS <b>2018</b> 2889). Die Änd. wurde im ganzen Text berücksichtigt.",
-     "links": [
-      {
-       "label": "AS <b>2018</b> 2889",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2018/441"
-      }
-     ],
-     "absatz": null,
-     "item": "i"
-    },
-    {
-     "nr": "12",
-     "text": "Fassung gemäss Ziff. I 6 der V vom 1. Febr. 2017 über die Einführung der Landesverweisung, in Kraft seit 1. März 2017 (AS <b>2017</b> 563).",
-     "links": [
-      {
-       "label": "AS <b>2017</b> 563",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2017/100"
-      }
-     ],
-     "absatz": null,
-     "item": "j"
-    },
-    {
-     "nr": "13",
+     "nr": "6",
      "text": "SR <b>142.281</b>",
      "links": [
       {
        "label": "SR <b>142.281</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1999/357"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4867"
       }
      ],
-     "absatz": null,
-     "item": "j"
-    },
-    {
-     "nr": "14",
-     "text": "Eingefügt durch Ziff. I der V vom 9. Mai 2012, in Kraft seit 13. Juni 2012 (AS <b>2012 </b>2903).",
-     "links": [
-      {
-       "label": "AS <b>2012 </b>2903",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2012/347"
-      }
-     ],
-     "absatz": null,
-     "item": "k"
-    },
-    {
-     "nr": "15",
-     "text": "Eingefügt durch Ziff. I der V vom 1. Mai 2019, in Kraft seit 1. Juni 2019 (AS <b>2019</b> 1437).",
-     "links": [
-      {
-       "label": "AS <b>2019</b> 1437",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2019/281"
-      }
-     ],
-     "absatz": null,
-     "item": "l"
+     "absatz": "1",
+     "item": "h"
     }
    ]
   },
@@ -586,7 +823,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "16",
+     "nr": "7",
      "text": "Eingefügt durch Ziff. I 5 der V vom 22. Okt. 2008 (Schengen und Dublin), in Kraft seit 12. Dez. 2008 (AS <b>2008</b> 5421).",
      "links": [
       {
@@ -598,7 +835,7 @@
      "item": null
     },
     {
-     "nr": "17",
+     "nr": "8",
      "text": "Fassung gemäss Ziff. I der V vom 22. März 2017, in Kraft seit 15. April 2017 (AS <b>2017</b> 2175).",
      "links": [
       {
@@ -610,7 +847,7 @@
      "item": null
     },
     {
-     "nr": "18",
+     "nr": "9",
      "text": "Fassung gemäss Ziff. I der V vom 22. März 2017, in Kraft seit 15. April 2017 (AS <b>2017</b> 2175).",
      "links": [
       {
@@ -622,7 +859,7 @@
      "item": null
     },
     {
-     "nr": "19",
+     "nr": "10",
      "text": "Fassung gemäss Anhang 2 Ziff. II 6 der Datenschutzverordnung vom 31. Aug. 2022, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 568).",
      "links": [
       {
@@ -634,7 +871,7 @@
      "item": null
     },
     {
-     "nr": "20",
+     "nr": "11",
      "text": "Fassung gemäss Ziff. I der V vom 22. März 2017, in Kraft seit 15. April 2017 (AS <b>2017</b> 2175).",
      "links": [
       {
@@ -654,7 +891,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "21",
+     "nr": "12",
      "text": "Eingefügt durch Ziff. I 5 der V vom 22. Okt. 2008 (Schengen und Dublin), in Kraft seit 12. Dez. 2008 (AS <b>2008</b> 5421).",
      "links": [
       {
@@ -672,7 +909,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "22",
+     "nr": "13",
      "text": "Eingefügt durch Ziff. I 5 der V vom 22. Okt. 2008 (Schengen und Dublin) (AS <b>2008</b> 5421). Aufgehoben durch Ziff. I der V vom 22. März 2017, mit Wirkung seit 15. April 2017 (AS <b>2017</b> 2175).",
      "links": [
       {
@@ -696,7 +933,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "23",
+     "nr": "14",
      "text": "Eingefügt durch Ziff. I 5 der V vom 22. Okt. 2008 (Schengen und Dublin) (AS <b>2008</b> 5421). Fassung gemäss Ziff. I der V vom 1. Mai 2019, in Kraft seit 1. Juni 2019 (AS <b>2019</b> 1437).",
      "links": [
       {
@@ -712,31 +949,31 @@
      "item": null
     },
     {
-     "nr": "24",
+     "nr": "15",
      "text": "SR <b>142.312</b>",
      "links": [
       {
        "label": "SR <b>142.312</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1999/360"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4882"
       }
      ],
      "absatz": "1",
      "item": null
     },
     {
-     "nr": "25",
+     "nr": "16",
      "text": "SR <b>142.205</b>",
      "links": [
       {
        "label": "SR <b>142.205</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2018/511"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4857"
       }
      ],
      "absatz": "1",
      "item": null
     },
     {
-     "nr": "26",
+     "nr": "17",
      "text": "Fassung gemäss Ziff. I der V vom 15. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 550).",
      "links": [
       {
@@ -748,7 +985,7 @@
      "item": null
     },
     {
-     "nr": "27",
+     "nr": "18",
      "text": "Fassung gemäss Ziff. I der V vom 15. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 550).",
      "links": [
       {
@@ -760,7 +997,7 @@
      "item": null
     },
     {
-     "nr": "28",
+     "nr": "19",
      "text": "Eingefügt durch Ziff. I der V vom 15. Sept. 2023, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 550).",
      "links": [
       {
@@ -780,7 +1017,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "29",
+     "nr": "20",
      "text": "Eingefügt durch Ziff. I 5 der V vom 22. Okt. 2008 (Schengen und Dublin), in Kraft seit 12. Dez. 2008 (AS <b>2008</b> 5421).",
      "links": [
       {
@@ -800,7 +1037,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "30",
+     "nr": "21",
      "text": "Eingefügt durch Ziff. I 5 der V vom 22. Okt. 2008 (Schengen und Dublin), in Kraft seit 12. Dez. 2008 (AS <b>2008</b> 5421).",
      "links": [
       {
@@ -818,7 +1055,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "31",
+     "nr": "22",
      "text": "Eingefügt durch Ziff. I 5 der V vom 22. Okt. 2008 (Schengen und Dublin) (AS <b>2008</b> 5421). Aufgehoben durch Ziff. I der V vom 18. Sept. 2015, mit Wirkung seit 15. Okt. 2015 (AS <b>2015</b> 3729).",
      "links": [
       {
@@ -842,7 +1079,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "32",
+     "nr": "23",
      "text": "Eingefügt durch Ziff. I der V vom 24. Nov. 2010, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 5775).",
      "links": [
       {
@@ -862,7 +1099,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "33",
+     "nr": "24",
      "text": "Eingefügt durch Ziff. I der V vom 9. Mai 2012, in Kraft seit 13. Juni 2012 (AS <b>2012 </b>2903).",
      "links": [
       {
@@ -874,7 +1111,7 @@
      "item": null
     },
     {
-     "nr": "34",
+     "nr": "25",
      "text": "Eingefügt durch Ziff. I der V vom 18. Sept. 2015, in Kraft seit 15. Okt. 2015 (AS <b>2015</b> 3729).",
      "links": [
       {
@@ -886,7 +1123,7 @@
      "item": "6"
     },
     {
-     "nr": "35",
+     "nr": "26",
      "text": "Eingefügt durch Ziff. I der V vom 22. März 2017, in Kraft seit 15. April 2017 (AS <b>2017</b> 2175).",
      "links": [
       {
@@ -898,7 +1135,7 @@
      "item": "7"
     },
     {
-     "nr": "36",
+     "nr": "27",
      "text": "Eingefügt durch Ziff. I der V vom 1. Mai 2019, in Kraft seit 1. Juni 2019 (AS <b>2019</b> 1437).",
      "links": [
       {
@@ -910,7 +1147,7 @@
      "item": "d"
     },
     {
-     "nr": "37",
+     "nr": "28",
      "text": "Eingefügt durch Ziff. I der V vom 18. Sept. 2015, in Kraft seit 15. Okt. 2015 (AS <b>2015</b> 3729).",
      "links": [
       {
@@ -922,7 +1159,7 @@
      "item": "f"
     },
     {
-     "nr": "38",
+     "nr": "29",
      "text": "Eingefügt durch Ziff. I der V vom 22. März 2017, in Kraft seit 15. April 2017 (AS <b>2017</b> 2175).",
      "links": [
       {
@@ -934,7 +1171,7 @@
      "item": "g"
     },
     {
-     "nr": "39",
+     "nr": "30",
      "text": "Eingefügt durch Ziff. I der V vom 22. März 2017, in Kraft seit 15. April 2017 (AS <b>2017</b> 2175).",
      "links": [
       {
@@ -946,7 +1183,7 @@
      "item": "h"
     },
     {
-     "nr": "40",
+     "nr": "31",
      "text": "Eingefügt durch Ziff. I der V vom 2. Febr. 2022, in Kraft seit 1. März 2022 (AS <b>2022</b> 72).",
      "links": [
       {
@@ -966,7 +1203,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "41",
+     "nr": "32",
      "text": "Eingefügt durch Ziff. I der V vom 1. Mai 2019, in Kraft seit 1. Juni 2019 (AS <b>2019</b> 1437).",
      "links": [
       {
@@ -979,14 +1216,34 @@
     }
    ]
   },
-  "6_a": {
+  "1_l": {
    "gliederung": [],
    "marginalie": [
-    "Bekanntgabe von Personendaten an einen Staat, der durch keines der Dublin-Assoziierungsabkommen gebunden ist"
+    "Eurodac"
    ],
    "fussnoten": [
     {
-     "nr": "49",
+     "nr": "33",
+     "text": "Eingefügt durch Ziff. I der V vom 20. Mai 2026, in Kraft seit 12. Juni 2026 (AS <b>2026</b> 266).",
+     "links": [
+      {
+       "label": "AS <b>2026</b> 266",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2026/266"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "6_a": {
+   "gliederung": [],
+   "marginalie": [
+    "Bekanntgabe von Personendaten an einen Nicht-Dublin-Staat"
+   ],
+   "fussnoten": [
+    {
+     "nr": "44",
      "text": "Eingefügt durch Ziff. I 5 der V vom 22. Okt. 2008 (Schengen und Dublin) (AS <b>2008</b> 5421). Fassung gemäss Anhang 2 Ziff. II 6 der Datenschutzverordnung vom 31. Aug. 2022, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 568).",
      "links": [
       {
@@ -1002,12 +1259,24 @@
      "item": null
     },
     {
-     "nr": "50",
+     "nr": "45",
+     "text": "Fassung gemäss Ziff. I der V vom 20. Mai 2026, in Kraft seit 12. Juni 2026 (AS <b>2026</b> 266).",
+     "links": [
+      {
+       "label": "AS <b>2026</b> 266",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2026/266"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "46",
      "text": "SR <b>235.11</b>",
      "links": [
       {
        "label": "SR <b>235.11</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2022/568"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5994"
       }
      ],
      "absatz": null,
@@ -1018,16 +1287,74 @@
   "6_b": {
    "gliederung": [],
    "marginalie": [
-    "Bekanntgabe von Daten an einen Dublin-Staat"
+    "Bekanntgabe von Daten vor der Überstellung in den zuständigen Dublin-Staat"
    ],
    "fussnoten": [
     {
-     "nr": "51",
-     "text": "Eingefügt durch Ziff. I 4 der V vom 12. Juni 2015 über die Anpassung von Verordnungen aufgrund von Neuerungen bezüglich des Dublin/Eurodac-Besitzstands, in Kraft seit 1. Juli 2015 (AS <b>2015</b> 1849).",
+     "nr": "47",
+     "text": "Eingefügt durch Ziff. I 4 der V vom 12. Juni 2015 über die Anpassung von Verordnungen aufgrund von Neuerungen bezüglich des Dublin/Eurodac-Besitzstands (AS <b>2015</b> 1849). Fassung gemäss Ziff. I der V vom 20. Mai 2026, in Kraft seit 12. Juni 2026 (AS <b>2026</b> 266).",
      "links": [
       {
        "label": "AS <b>2015</b> 1849",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/358"
+      },
+      {
+       "label": "AS <b>2026</b> 266",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2026/266"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "48",
+     "text": "Durchführungsverordnung (EU) 2025/2055 der Kommission vom 2. Oktober 2025 mit Durchführungsbestimmungen zur Verordnung (EU) 2024/1351 des europäischen Parlaments und des Rates über Asyl- und Migrationsmanagement und zur Aufhebung der Verordnung (EG) Nr. 1560/2003 der Kommission, Fassung gemäss ABl. L, 2025/2055, 12.11.2025.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "49",
+     "text": "Verordnung (EU) Nr. 2024/1351 des Europäischen Parlaments und des Rates vom 14. Mai 2024 über Asyl- und Migrationsmanagement, zur Änderung der Verordnungen (EU) 2021/1147 und (EU) 2021/1060 und zur Aufhebung der Verordnung (EU) Nr. 604/2013, Fassung gemäss ABl. L, 2024/1351, 22.5.2024.",
+     "links": [],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "6_c": {
+   "gliederung": [],
+   "marginalie": [
+    "Speicherung der Daten, die vor der Überstellung in den zuständigen Dublin-Staat übermittelt werden"
+   ],
+   "fussnoten": [
+    {
+     "nr": "50",
+     "text": "Eingefügt durch Ziff. I der V vom 20. Mai 2026, in Kraft seit 12. Juni 2026 (AS <b>2026</b> 266).",
+     "links": [
+      {
+       "label": "AS <b>2026</b> 266",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2026/266"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "6_d": {
+   "gliederung": [],
+   "marginalie": [
+    "Bekanntgabe von Eurodac-Daten an einen Nicht-Dublin-Staat"
+   ],
+   "fussnoten": [
+    {
+     "nr": "51",
+     "text": "Eingefügt durch Ziff. I der V vom 20. Mai 2026, in Kraft seit 12. Juni 2026 (AS <b>2026</b> 266).",
+     "links": [
+      {
+       "label": "AS <b>2026</b> 266",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2026/266"
       }
      ],
      "absatz": null,
@@ -1035,21 +1362,14 @@
     },
     {
      "nr": "52",
-     "text": "Die Dublin-Assoziierungsabkommen sind in Anhang 4 aufgeführt.",
+     "text": "Verordnung (EU) 2024/1358 des Europäischen Parlaments und des Rates vom 14. Mai 2024 über die Einrichtung von Eurodac für den Abgleich biometrischer Daten zur effektiven Anwendung der Verordnungen (EU) 2024/1351 und (EU) 2024/1350 des Europäischen Parlaments und des Rates und der Richtlinie 2001/55/EG sowie zur Feststellung der Identität illegal aufhältiger Drittstaatsangehöriger oder Staatenloser und über der Gefahrenabwehr und Strafverfolgung dienende Anträge der Gefahrenabwehr- und Strafverfolgungsbehörden der Mitgliedstaaten und Europols auf den Abgleich mit Eurodac-Daten, zur Änderung der Verordnungen (EU) 2018/1240 und (EU) 2019/818 des Europäischen Parlaments und des Rates und zur Aufhebung der Verordnung (EU) Nr. 603/2013 des Europäischen Parlaments und des Rates, Fassung gemäss ABl. L, 2024/1358, 22.5.2024.",
      "links": [],
-     "absatz": "1",
-     "item": null
-    },
-    {
-     "nr": "53",
-     "text": "Verordnung (EG) Nr. 1560/2003 der Kommission vom 2. Sept. 2003 mit Durchführungsbestimmungen zur Verordnung (EG) Nr. 343/2003 des Rates zur Festlegung der Kriterien und Verfahren zur Bestimmung des Mitgliedstaats, der für die Prüfung eines von einem Drittstaatsangehörigen in einem Mitgliedstaat gestellten Asylantrags zuständig ist, ABl. L 222 vom 5.9.2003, S. 3; zuletzt geändert durch Verordnung (EU) Nr. 118/2014, ABl. L 39 vom 8.2.2014, S. 1.",
-     "links": [],
-     "absatz": "1",
+     "absatz": "2",
      "item": "a"
     },
     {
-     "nr": "54",
-     "text": "Verordnung (EU) Nr. 604/2013 des Europäischen Parlaments und des Rates vom 26. Juni 2013 zur Festlegung der Kriterien und Verfahren zur Bestimmung des Mitgliedstaats, der für die Prüfung eines von einem Drittstaatsangehörigen oder Staatenlosen in einem Mitgliedstaat gestellten Antrags auf internationalen Schutz zuständig ist (Neufassung), Fassung gemäss ABl. L 180 vom 29.6.2013, S. 31.",
+     "nr": "53",
+     "text": "Siehe Fussnote zu Art. 6<i>b</i> Abs. 3.",
      "links": [],
      "absatz": "3",
      "item": null
@@ -1061,7 +1381,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "55",
+     "nr": "54",
      "text": "Aufgehoben durch Anhang 3 Ziff. 5 der V vom 12. April 2006 über das Zentrale Migrationsinformationssystem, mit Wirkung seit 29. Mai 2006 (AS <b>2006</b> 1945).",
      "links": [
       {
@@ -1073,6 +1393,24 @@
      "item": null
     }
    ]
+  },
+  "annex_1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Anhänge"
+    }
+   ],
+   "marginalie": []
+  },
+  "annex_2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Anhänge"
+    }
+   ],
+   "marginalie": []
   },
   "annex_3": {
    "gliederung": [

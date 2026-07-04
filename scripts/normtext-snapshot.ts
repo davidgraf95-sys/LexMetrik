@@ -1346,14 +1346,20 @@ async function main(): Promise<void> {
       );
     }
     const gemischt: Record<string, string> = {};
-    // Bei --erlass-Filter: ALLE bestehenden Keys behalten (nur die regenerierten
-    // Erlasse werden überschrieben) — sonst gingen die nicht-regenerierten bund/*
-    // verloren. Ohne Filter (Voll-Bund): alle bund/* verwerfen + frisch ersetzen
-    // (fängt gelöschte Artikel).
+    // Die REGENERIERTEN Erlasse (bei --erlass nur der Filter, sonst alle Bund-
+    // Erlasse) werden vollständig verworfen und aus goldenIndex frisch ersetzt —
+    // so werden GELÖSCHTE/umbenannte Artikel-Keys (eId-Rename, Annex-Reorg,
+    // Bereichs-Zusammenfassung) korrekt purgiert. Alle übrigen Keys (Kanton +
+    // nicht-regenerierte Bund-Erlasse) bleiben unangetastet. FALLE (5.7.2026):
+    // die alte `erlassFilter ? true`-Regel behielt die alten Keys der gefilterten
+    // Erlasse → 9 Phantom-Keys (disp_u2_art_108, annex_I_I, art_27_b_bis, …).
+    const regenerierteGesetze = new Set(eintraege.map((e) => e.name.toUpperCase()));
     for (const k of Object.keys(bestand)) {
-      if (erlassFilter ? true : !k.startsWith('bund/')) gemischt[k] = bestand[k];
+      const m = k.match(/^bund\/([^/]+)\//);
+      const istRegeneriert = m !== null && regenerierteGesetze.has(m[1]);
+      if (!istRegeneriert) gemischt[k] = bestand[k];
     }
-    // frische bund/*-Einträge ergänzen/überschreiben
+    // frische bund/*-Einträge der regenerierten Erlasse ergänzen
     for (const k of Object.keys(goldenIndex)) gemischt[k] = goldenIndex[k];
     const sortiert: Record<string, string> = {};
     for (const k of Object.keys(gemischt).sort()) sortiert[k] = gemischt[k];

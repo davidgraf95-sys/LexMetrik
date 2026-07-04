@@ -1,9 +1,9 @@
 {
- "erzeugt": "2026-06-30",
+ "erzeugt": "2026-07-05",
  "kopf": {
   "srNummer": "700",
   "titel": "Bundesgesetz über die Raumplanung",
-  "erlassdatum": "vom 22. Juni 1979 (Stand am 1. April 2026)",
+  "erlassdatum": "vom 22. Juni 1979 (Stand am 1. Juli 2026)",
   "praeambel": [
    {
     "rolle": "autor",
@@ -11,7 +11,7 @@
    },
    {
     "rolle": "ingress",
-    "text": "gestützt auf die Artikel 22 und 34 der Bundesverfassung, nach Einsicht in eine Botschaft des Bundesrates vom 27. Februar 1978,"
+    "text": "gestützt auf die Artikel 75, 104a und 108 der Bundesverfassung, nach Einsicht in eine Botschaft des Bundesrates vom 27. Februar 1978,"
    },
    {
     "rolle": "verb",
@@ -37,16 +37,8 @@
    },
    {
     "nr": "2",
-    "text": "[AS <b>1969</b> 1249; <b>1972</b> 1481]. Den genannten Bestimmungen entsprechen heute die Art. 41, 75, 108 und 147 der BV vom 18. April 1999 (SR <b>101</b>).",
+    "text": "SR <b>101</b>",
     "links": [
-     {
-      "label": "AS <b>1969</b> 1249",
-      "url": "https://fedlex.data.admin.ch/eli/oc/1969/1249_1265_1267"
-     },
-     {
-      "label": "<b>1972</b> 1481",
-      "url": "https://fedlex.data.admin.ch/eli/oc/1972/1481_1509_1681"
-     },
      {
       "label": "SR <b>101</b>",
       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4715"
@@ -57,15 +49,15 @@
    },
    {
     "nr": "3",
-    "text": "Fassung gemäss Ziff. I des BG vom 6. Okt. 1995, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 965; BBl <b>1994</b> III 1075).",
+    "text": "Fassung gemäss Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Juli 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
     "links": [
      {
-      "label": "AS <b>1996</b> 965",
-      "url": "https://fedlex.data.admin.ch/eli/oc/1996/965_965_965"
+      "label": "AS <b>2025</b> 640",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
      },
      {
-      "label": "BBl <b>1994</b> III 1075",
-      "url": "https://fedlex.data.admin.ch/eli/fga/1994/3_1075_1059_971"
+      "label": "BBl <b>2018</b> 7443",
+      "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
      }
     ],
     "absatz": null,
@@ -163,6 +155,38 @@
     },
     {
      "nr": "9",
+     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Juli 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 640",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
+      },
+      {
+       "label": "BBl <b>2018</b> 7443",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
+      }
+     ],
+     "absatz": "2",
+     "item": "bter"
+    },
+    {
+     "nr": "10",
+     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Juli 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 640",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
+      },
+      {
+       "label": "BBl <b>2018</b> 7443",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
+      }
+     ],
+     "absatz": "2",
+     "item": "bquater"
+    },
+    {
+     "nr": "11",
      "text": "Eingefügt durch Anhang Ziff. 3 des BG vom 16. Dez. 2016 (Integration), in Kraft seit 1. Jan. 2019 (AS <b>2017</b> 6521; <b>2018</b> 3171; BBl <b>2013</b> 2397; <b>2016</b> 2821).",
      "links": [
       {
@@ -210,7 +234,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "10",
+     "nr": "12",
      "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
@@ -226,7 +250,7 @@
      "item": "a"
     },
     {
-     "nr": "11",
+     "nr": "13",
      "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
@@ -242,7 +266,7 @@
      "item": "a"
     },
     {
-     "nr": "12",
+     "nr": "14",
      "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
@@ -258,7 +282,7 @@
      "item": "abis"
     },
     {
-     "nr": "13",
+     "nr": "15",
      "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
@@ -298,7 +322,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "14",
+     "nr": "16",
      "text": "Zweiter Satz eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
@@ -314,7 +338,7 @@
      "item": null
     },
     {
-     "nr": "15",
+     "nr": "17",
      "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2012 (AS <b>2014</b> 899; BBl <b>2010</b> 1049). Fassung gemäss Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
@@ -338,7 +362,7 @@
      "item": null
     },
     {
-     "nr": "16",
+     "nr": "18",
      "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
@@ -354,7 +378,7 @@
      "item": null
     },
     {
-     "nr": "17",
+     "nr": "19",
      "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
@@ -370,7 +394,7 @@
      "item": null
     },
     {
-     "nr": "18",
+     "nr": "20",
      "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
@@ -386,7 +410,7 @@
      "item": "b"
     },
     {
-     "nr": "19",
+     "nr": "21",
      "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
@@ -419,7 +443,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "20",
+     "nr": "23",
      "text": "Aufgehoben durch Ziff. I des BG vom 15. Juni 2012, mit Wirkung seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
@@ -435,7 +459,7 @@
      "item": null
     },
     {
-     "nr": "21",
+     "nr": "24",
      "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
@@ -451,7 +475,7 @@
      "item": null
     },
     {
-     "nr": "22",
+     "nr": "25",
      "text": "Eingefügt durch Anhang Ziff. II 5 des Energiegesetzes vom 30. Sept. 2016, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6839; BBl <b>2013</b> 7561).",
      "links": [
       {
@@ -467,7 +491,7 @@
      "item": "bbis"
     },
     {
-     "nr": "23",
+     "nr": "26",
      "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
@@ -483,7 +507,7 @@
      "item": null
     },
     {
-     "nr": "24",
+     "nr": "27",
      "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
@@ -499,7 +523,7 @@
      "item": "a"
     },
     {
-     "nr": "25",
+     "nr": "28",
      "text": "Fassung gemäss Anhang Ziff. II 5 des Energiegesetzes vom 30. Sept. 2016, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6839; BBl <b>2013</b> 7561).",
      "links": [
       {
@@ -515,7 +539,7 @@
      "item": "b"
     },
     {
-     "nr": "26",
+     "nr": "29",
      "text": "Eingefügt durch Anhang Ziff. II 5 des Energiegesetzes vom 30. Sept. 2016, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6839; BBl <b>2013</b> 7561).",
      "links": [
       {
@@ -531,7 +555,7 @@
      "item": "bbis"
     },
     {
-     "nr": "27",
+     "nr": "30",
      "text": "Eingefügt durch Anhang Ziff. II 5 des Energiegesetzes vom 30. Sept. 2016, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6839; BBl <b>2013</b> 7561).",
      "links": [
       {
@@ -547,7 +571,7 @@
      "item": "bter"
     },
     {
-     "nr": "28",
+     "nr": "31",
      "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
@@ -561,6 +585,54 @@
      ],
      "absatz": "3",
      "item": "c"
+    },
+    {
+     "nr": "32",
+     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Juli 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 640",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
+      },
+      {
+       "label": "BBl <b>2018</b> 7443",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
+      }
+     ],
+     "absatz": "3",
+     "item": "d"
+    },
+    {
+     "nr": "33",
+     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Juli 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 640",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
+      },
+      {
+       "label": "BBl <b>2018</b> 7443",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
+      }
+     ],
+     "absatz": "3",
+     "item": "e"
+    },
+    {
+     "nr": "34",
+     "text": "Fassung gemäss Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Juli 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 640",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
+      },
+      {
+       "label": "BBl <b>2018</b> 7443",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
+      }
+     ],
+     "absatz": "4",
+     "item": null
     }
    ]
   },
@@ -595,7 +667,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "29",
+     "nr": "35",
      "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
@@ -611,7 +683,7 @@
      "item": null
     },
     {
-     "nr": "30",
+     "nr": "36",
      "text": "SR <b>730.0</b>",
      "links": [
       {
@@ -623,7 +695,7 @@
      "item": null
     },
     {
-     "nr": "31",
+     "nr": "37",
      "text": "Zweiter Satz eingefügt durch Anhang Ziff. 2 des BG vom 26. Sept. 2025, in Kraft seit 1. April 2026 (AS <b>2026</b> 99; BBl <b>2023</b> 1602).",
      "links": [
       {
@@ -639,7 +711,7 @@
      "item": null
     },
     {
-     "nr": "32",
+     "nr": "38",
      "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 26. Sept. 2025, in Kraft seit 1. April 2026 (AS <b>2026</b> 99; BBl <b>2023</b> 1602).",
      "links": [
       {
@@ -687,7 +759,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "36",
+     "nr": "44",
      "text": "SR <b>814.01</b>",
      "links": [
       {
@@ -699,7 +771,7 @@
      "item": null
     },
     {
-     "nr": "37",
+     "nr": "45",
      "text": "SR <b>451</b>",
      "links": [
       {
@@ -711,7 +783,7 @@
      "item": null
     },
     {
-     "nr": "38",
+     "nr": "46",
      "text": "Fassung gemäss Ziff. II 2 des BG vom 20. Dez. 2006, in Kraft seit 1. Juli 2007 (AS <b>2007</b> 2701; BBl <b>2005 </b>5351, 5391)",
      "links": [
       {
@@ -816,7 +888,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "39",
+     "nr": "47",
      "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
@@ -832,7 +904,7 @@
      "item": null
     },
     {
-     "nr": "40",
+     "nr": "48",
      "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
@@ -869,7 +941,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "42",
+     "nr": "50",
      "text": "Fassung gemäss Ziff. I des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS <b>2000</b> 2042; BBl <b>1996</b> III 513).",
      "links": [
       {
@@ -885,7 +957,7 @@
      "item": null
     },
     {
-     "nr": "43",
+     "nr": "51",
      "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
@@ -901,7 +973,7 @@
      "item": null
     },
     {
-     "nr": "44",
+     "nr": "52",
      "text": "SR <b>814.01</b>",
      "links": [
       {
@@ -913,7 +985,7 @@
      "item": null
     },
     {
-     "nr": "45",
+     "nr": "53",
      "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
@@ -966,6 +1038,56 @@
    ],
    "marginalie": [
     "Weitere Zonen und Gebiete"
+   ],
+   "fussnoten": [
+    {
+     "nr": "64",
+     "text": "Fassung gemäss Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Juli 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 640",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
+      },
+      {
+       "label": "BBl <b>2018</b> 7443",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "65",
+     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Juli 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 640",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
+      },
+      {
+       "label": "BBl <b>2018</b> 7443",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
+      }
+     ],
+     "absatz": "1bis",
+     "item": null
+    },
+    {
+     "nr": "66",
+     "text": "Fassung gemäss Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Juli 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 640",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
+      },
+      {
+       "label": "BBl <b>2018</b> 7443",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "19": {
@@ -988,7 +1110,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "62",
+     "nr": "74",
      "text": "Fassung gemäss Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
@@ -1004,7 +1126,7 @@
      "item": null
     },
     {
-     "nr": "63",
+     "nr": "75",
      "text": "Fassung gemäss Ziff. I des BG vom 6. Okt. 1995, in Kraft seit 1. April 1996 (AS <b>1996</b> 965; BBl <b>1994</b> III 1075).",
      "links": [
       {
@@ -1060,7 +1182,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "64",
+     "nr": "76",
      "text": "Fassung gemäss Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
@@ -1136,7 +1258,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "66",
+     "nr": "78",
      "text": "Fassung gemäss Ziff. I des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS <b>2000</b> 2042; BBl <b>1996</b> III 513).",
      "links": [
       {
@@ -1152,7 +1274,7 @@
      "item": null
     },
     {
-     "nr": "67",
+     "nr": "79",
      "text": "Fassung gemäss Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
@@ -1168,7 +1290,7 @@
      "item": null
     },
     {
-     "nr": "68",
+     "nr": "80",
      "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
@@ -1184,7 +1306,7 @@
      "item": null
     },
     {
-     "nr": "65",
+     "nr": "77",
      "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
@@ -1222,7 +1344,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "98",
+     "nr": "111",
      "text": "Eingefügt durch Ziff. I des BG vom 6. Okt. 1995 (AS <b>1996</b> 965; BBl <b>1994</b> III 1075). Fassung gemäss Ziff. I des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS <b>2000</b> 2042; BBl <b>1996</b> III 513).",
      "links": [
       {
@@ -1246,7 +1368,7 @@
      "item": null
     },
     {
-     "nr": "99",
+     "nr": "112",
      "text": "Fassung gemäss Ziff. I des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS <b>2000</b> 2042; BBl <b>1996</b> III 513).",
      "links": [
       {
@@ -1262,8 +1384,8 @@
      "item": null
     },
     {
-     "nr": "100",
-     "text": "Treten am 1. Juli 2026 in Kraft (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
+     "nr": "113",
+     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Juli 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
        "label": "AS <b>2025</b> 640",
@@ -1278,7 +1400,23 @@
      "item": null
     },
     {
-     "nr": "101",
+     "nr": "114",
+     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Juli 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 640",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
+      },
+      {
+       "label": "BBl <b>2018</b> 7443",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "115",
      "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
@@ -1343,7 +1481,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "104",
+     "nr": "118",
      "text": "Aufgehoben durch Ziff. I des BG vom 13. Dez. 2002, mit Wirkung seit 1. Juni 2003 (AS <b>2003</b> 1021; BBl <b>2002</b> 6965).",
      "links": [
       {
@@ -1405,7 +1543,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "106",
+     "nr": "120",
      "text": "Bezeichnung gemäss nicht veröffentlichtem BRB vom 17. Mai 2000.",
      "links": [],
      "absatz": null,
@@ -1425,7 +1563,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "107",
+     "nr": "121",
      "text": "Fassung gemäss Anhang Ziff. 64 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 2197, 1069; BBl <b>2001</b> 4202).",
      "links": [
       {
@@ -1445,7 +1583,7 @@
      "item": "a"
     },
     {
-     "nr": "108",
+     "nr": "122",
      "text": "Eingefügt durch Ziff. I des BG vom 6. Okt. 1995, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 965; BBl <b>1994</b> III 1075).",
      "links": [
       {
@@ -1474,7 +1612,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "109",
+     "nr": "123",
      "text": "Fassung gemäss Anhang Ziff. 64 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 2197 1069; BBl <b>2001</b> 4202).",
      "links": [
       {
@@ -1494,14 +1632,23 @@
      "item": null
     },
     {
-     "nr": "110",
-     "text": "Heute: Art. 24–24<i>e</i>.",
-     "links": [],
+     "nr": "124",
+     "text": "Fassung gemäss Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Juli 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 640",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
+      },
+      {
+       "label": "BBl <b>2018</b> 7443",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
+      }
+     ],
      "absatz": "2",
      "item": "c"
     },
     {
-     "nr": "111",
+     "nr": "125",
      "text": "Fassung gemäss Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS<b> 2007</b> 3637; BBl <b>2005</b> 7097).",
      "links": [
       {
@@ -1517,7 +1664,7 @@
      "item": "c"
     },
     {
-     "nr": "112",
+     "nr": "126",
      "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 22. März 2013, in Kraft seit 1. Jan. 2014 (AS <b>2013</b> 3463, 3863; BBl <b>2012</b> 2075).",
      "links": [
       {
@@ -1550,7 +1697,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "113",
+     "nr": "127",
      "text": "Fassung gemäss Ziff. II 27 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, in Kraft seit 1. Aug. 2008 (AS <b>2008</b> 3437; BBl <b>2007</b> 6121).",
      "links": [
       {
@@ -1566,7 +1713,7 @@
      "item": null
     },
     {
-     "nr": "114",
+     "nr": "128",
      "text": "Aufgehoben durch Ziff. II 27 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Aug. 2008 (AS <b>2008</b> 3437; BBl <b>2007</b> 6121).",
      "links": [
       {
@@ -1582,7 +1729,7 @@
      "item": "a"
     },
     {
-     "nr": "115",
+     "nr": "129",
      "text": "Aufgehoben durch Ziff. II 27 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Aug. 2008 (AS <b>2008</b> 3437; BBl <b>2007</b> 6121).",
      "links": [
       {
@@ -1598,7 +1745,7 @@
      "item": null
     },
     {
-     "nr": "116",
+     "nr": "130",
      "text": "Fassung gemäss Ziff. II 27 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, in Kraft seit 1. Aug. 2008 (AS <b>2008</b> 3437; BBl <b>2007</b> 6121).",
      "links": [
       {
@@ -1627,7 +1774,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "117",
+     "nr": "131",
      "text": "Fassung gemäss Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS<b> 2007</b> 3637; BBl <b>2005</b> 7097).",
      "links": [
       {
@@ -1662,29 +1809,19 @@
      "label": "6. Titel: Schlussbestimmungen"
     }
    ],
-   "marginalie": [
-    "Übergangsbestimmung der Änderung vom 17. Dezember 2010"
-   ],
+   "marginalie": [],
    "fussnoten": [
     {
-     "nr": "119",
-     "text": "AS <b>2011</b> 2913; BBl <b>2007</b> 5765. Fassung gemäss Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
+     "nr": "134",
+     "text": "Aufgehoben durch Ziff. I des BG vom 29. Sept. 2023, mit Wirkung seit 1. Juli 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
-       "label": "AS <b>2011</b> 2913",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2011/377"
+       "label": "AS <b>2025</b> 640",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
       },
       {
-       "label": "BBl <b>2007</b> 5765",
-       "url": "https://fedlex.data.admin.ch/eli/fga/2007/793"
-      },
-      {
-       "label": "AS <b>2014</b> 899",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2014/197"
-      },
-      {
-       "label": "BBl <b>2010</b> 1049",
-       "url": "https://fedlex.data.admin.ch/eli/fga/2010/186"
+       "label": "BBl <b>2018</b> 7443",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
       }
      ],
      "absatz": null,
@@ -1704,7 +1841,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "121",
+     "nr": "138",
      "text": "BRB vom 14. Nov. 1979",
      "links": [],
      "absatz": null,
@@ -1732,7 +1869,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "41",
+     "nr": "49",
      "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
@@ -1769,7 +1906,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "46",
+     "nr": "54",
      "text": "Eingefügt durch Ziff. I des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS <b>2000</b> 2042; BBl <b>1996</b> III 513).",
      "links": [
       {
@@ -1785,7 +1922,7 @@
      "item": null
     },
     {
-     "nr": "47",
+     "nr": "55",
      "text": "Eingefügt durch Ziff. I des BG vom 23. März 2007 (AS<b> 2007</b> 3637; BBl <b>2005</b> 7097). Fassung gemäss Ziff. III des BG vom 29. Sept. 2023 über eine sichere Stromversorgung mit erneuerbaren Energien, in Kraft seit 1. Jan. 2026 (AS <b>2024</b> 679; <b>2025</b> 636; BBl <b>2021</b> 1666).",
      "links": [
       {
@@ -1813,7 +1950,7 @@
      "item": "c"
     },
     {
-     "nr": "48",
+     "nr": "56",
      "text": "Zweiter Satz eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
@@ -1829,7 +1966,7 @@
      "item": null
     },
     {
-     "nr": "49",
+     "nr": "57",
      "text": "Fassung gemäss Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS<b> 2007</b> 3637; BBl <b>2005</b> 7097).",
      "links": [
       {
@@ -1866,7 +2003,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "50",
+     "nr": "58",
      "text": "Eingefügt durch Ziff. I des BG vom 22. März 2013, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 905; BBl <b>2012</b> 6589, 6607).",
      "links": [
       {
@@ -1886,7 +2023,7 @@
      "item": null
     },
     {
-     "nr": "51",
+     "nr": "59",
      "text": "SR <b>211.412.11</b>",
      "links": [
       {
@@ -1919,7 +2056,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "52",
+     "nr": "60",
      "text": "Eingefügt durch Ziff. I des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS <b>2000</b> 2042; BBl <b>1996</b> III 513).",
      "links": [
       {
@@ -1935,7 +2072,7 @@
      "item": null
     },
     {
-     "nr": "53",
+     "nr": "61",
      "text": "Fassung gemäss Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS<b> 2007</b> 3637; BBl <b>2005</b> 7097).",
      "links": [
       {
@@ -1951,7 +2088,7 @@
      "item": null
     },
     {
-     "nr": "54",
+     "nr": "62",
      "text": "Fassung gemäss Ziff. I des BG vom 22. März 2013, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 905; BBl <b>2012</b> 6589, 6607).",
      "links": [
       {
@@ -1971,7 +2108,7 @@
      "item": null
     },
     {
-     "nr": "55",
+     "nr": "63",
      "text": "Eingefügt durch Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS<b> 2007</b> 3637; BBl <b>2005</b> 7097).",
      "links": [
       {
@@ -2008,7 +2145,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "56",
+     "nr": "68",
      "text": "Eingefügt durch Ziff. II des BG vom 22. Juni 2007 (AS <b>2007 </b>6095; BBl <b>2006</b> 6337). Fassung gemäss Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
@@ -2032,7 +2169,7 @@
      "item": null
     },
     {
-     "nr": "57",
+     "nr": "69",
      "text": "Fassung gemäss Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
@@ -2048,7 +2185,7 @@
      "item": null
     },
     {
-     "nr": "58",
+     "nr": "70",
      "text": "Fassung gemäss Ziff. III des BG vom 29. Sept. 2023 über eine sichere Stromversorgung mit erneuerbaren Energien, in Kraft seit 1. Jan. 2026 (AS <b>2024</b> 679; <b>2025</b> 636; BBl <b>2021</b> 1666).",
      "links": [
       {
@@ -2068,7 +2205,7 @@
      "item": null
     },
     {
-     "nr": "59",
+     "nr": "71",
      "text": "Fassung gemäss Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
@@ -2084,7 +2221,7 @@
      "item": "a"
     },
     {
-     "nr": "60",
+     "nr": "72",
      "text": "Eingefügt durch Ziff. III des BG vom 29. Sept. 2023 über eine sichere Stromversorgung mit erneuerbaren Energien, in Kraft seit 1. Jan. 2026 (AS <b>2024</b> 679; <b>2025</b> 636; BBl <b>2021</b> 1666).",
      "links": [
       {
@@ -2125,7 +2262,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "61",
+     "nr": "73",
      "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 26. Sept. 2025, in Kraft seit 1. April 2026 (AS <b>2026</b> 99; BBl <b>2023</b> 1602).",
      "links": [
       {
@@ -2135,6 +2272,43 @@
       {
        "label": "BBl <b>2023</b> 1602",
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/1602"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "18_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Massnahmen der Raumplanung"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Nutzungspläne"
+    },
+    {
+     "ebene": 3,
+     "label": "1. Abschnitt: Zweck und Inhalt"
+    }
+   ],
+   "marginalie": [
+    "Nichtbauzonen mit zu kompensierenden Nutzungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "67",
+     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Juli 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 640",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
+      },
+      {
+       "label": "BBl <b>2018</b> 7443",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
       }
      ],
      "absatz": null,
@@ -2162,7 +2336,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "74",
+     "nr": "86",
      "text": "Eingefügt durch Ziff. I des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS <b>2000</b> 2042; BBl <b>1996</b> III 513).",
      "links": [
       {
@@ -2199,7 +2373,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "75",
+     "nr": "87",
      "text": "Eingefügt durch Ziff. I des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS <b>2000</b> 2042; BBl <b>1996</b> III 513).",
      "links": [
       {
@@ -2215,7 +2389,7 @@
      "item": null
     },
     {
-     "nr": "76",
+     "nr": "88",
      "text": "SR <b>211.412.11</b>",
      "links": [
       {
@@ -2227,7 +2401,7 @@
      "item": null
     },
     {
-     "nr": "77",
+     "nr": "89",
      "text": "Fassung gemäss Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS<b> 2007</b> 3637; BBl <b>2005</b> 7097).",
      "links": [
       {
@@ -2243,7 +2417,7 @@
      "item": null
     },
     {
-     "nr": "78",
+     "nr": "90",
      "text": "Eingefügt durch Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS<b> 2007</b> 3637; BBl <b>2005</b> 7097).",
      "links": [
       {
@@ -2259,7 +2433,7 @@
      "item": null
     },
     {
-     "nr": "79",
+     "nr": "91",
      "text": "Eingefügt durch Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS<b> 2007</b> 3637; BBl <b>2005</b> 7097).",
      "links": [
       {
@@ -2275,7 +2449,7 @@
      "item": null
     },
     {
-     "nr": "80",
+     "nr": "92",
      "text": "Eingefügt durch Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS<b> 2007</b> 3637; BBl <b>2005</b> 7097).",
      "links": [
       {
@@ -2291,7 +2465,7 @@
      "item": null
     },
     {
-     "nr": "81",
+     "nr": "93",
      "text": "Fassung gemäss Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS<b> 2007</b> 3637; BBl <b>2005</b> 7097).",
      "links": [
       {
@@ -2328,7 +2502,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "69",
+     "nr": "81",
      "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
@@ -2365,7 +2539,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "82",
+     "nr": "94",
      "text": "Eingefügt durch Ziff. I des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS <b>2000</b> 2042; BBl <b>1996</b> III 513).",
      "links": [
       {
@@ -2381,7 +2555,7 @@
      "item": null
     },
     {
-     "nr": "83",
+     "nr": "95",
      "text": "Fassung gemäss Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
@@ -2397,7 +2571,7 @@
      "item": null
     },
     {
-     "nr": "84",
+     "nr": "96",
      "text": "Fassung gemäss Ziff. I des BG vom 23. Dez. 2011, in Kraft seit 1. Nov. 2012 (AS <b>2012</b> 5535; BBl <b>2011</b> 7083, 7097).",
      "links": [
       {
@@ -2417,7 +2591,7 @@
      "item": null
     },
     {
-     "nr": "85",
+     "nr": "97",
      "text": "Eingefügt durch Ziff. I des BG vom 23. Dez. 2011, in Kraft seit 1. Nov. 2012 (AS <b>2012</b> 5535; BBl <b>2011</b> 7083, 7097).",
      "links": [
       {
@@ -2437,7 +2611,7 @@
      "item": null
     },
     {
-     "nr": "86",
+     "nr": "98",
      "text": "Eingefügt durch Ziff. I des BG vom 23. Dez. 2011, in Kraft seit 1. Nov. 2012 (AS <b>2012</b> 5535; BBl <b>2011</b> 7083, 7097).",
      "links": [
       {
@@ -2457,7 +2631,7 @@
      "item": null
     },
     {
-     "nr": "87",
+     "nr": "99",
      "text": "Eingefügt durch Ziff. I des BG vom 23. Dez. 2011, in Kraft seit 1. Nov. 2012 (AS <b>2012</b> 5535; BBl <b>2011</b> 7083, 7097).",
      "links": [
       {
@@ -2498,7 +2672,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "88",
+     "nr": "100",
      "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
@@ -2535,7 +2709,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "89",
+     "nr": "101",
      "text": "Eingefügt durch Ziff. I des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS <b>2000</b> 2042; BBl <b>1996</b> III 513).",
      "links": [
       {
@@ -2551,7 +2725,7 @@
      "item": null
     },
     {
-     "nr": "90",
+     "nr": "102",
      "text": "Fassung gemäss Ziff. I des BG vom 22. März 2013, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 905; BBl <b>2012</b> 6589, 6607).",
      "links": [
       {
@@ -2571,7 +2745,7 @@
      "item": null
     },
     {
-     "nr": "91",
+     "nr": "103",
      "text": "Fassung gemäss Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS<b> 2007</b> 3637; BBl <b>2005</b> 7097).",
      "links": [
       {
@@ -2587,7 +2761,7 @@
      "item": null
     },
     {
-     "nr": "92",
+     "nr": "104",
      "text": "Eingefügt durch Ziff. I des BG vom 23. März 2007 (AS<b> 2007</b> 3637; BBl <b>2005</b> 7097). Aufgehoben durch Ziff. I des BG vom 22. März 2013, mit Wirkung seit 1. Mai 2014 (AS <b>2014</b> 905; BBl <b>2012</b> 6589, 6607).",
      "links": [
       {
@@ -2615,7 +2789,7 @@
      "item": null
     },
     {
-     "nr": "93",
+     "nr": "105",
      "text": "Fassung gemäss Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS<b> 2007</b> 3637; BBl <b>2005</b> 7097).",
      "links": [
       {
@@ -2631,7 +2805,7 @@
      "item": null
     },
     {
-     "nr": "94",
+     "nr": "106",
      "text": "Fassung gemäss Ziff. I des BG vom 23. März 2007, in Kraft seit 1. Sept. 2007 (AS<b> 2007</b> 3637; BBl <b>2005</b> 7097).",
      "links": [
       {
@@ -2647,7 +2821,7 @@
      "item": null
     },
     {
-     "nr": "95",
+     "nr": "107",
      "text": "Fassung gemäss Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
@@ -2684,7 +2858,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "96",
+     "nr": "108",
      "text": "Eingefügt durch Ziff. I des BG vom 22. März 2013, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 905; BBl <b>2012</b> 6589, 6607).",
      "links": [
       {
@@ -2704,7 +2878,7 @@
      "item": null
     },
     {
-     "nr": "97",
+     "nr": "109",
      "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
@@ -2718,6 +2892,42 @@
      ],
      "absatz": "6",
      "item": null
+    }
+   ]
+  },
+  "24_f": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Massnahmen der Raumplanung"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Kapitel: Nutzungspläne"
+    },
+    {
+     "ebene": 3,
+     "label": "2b. Abschnitt: Berichterstattung"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "110",
+     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Juli 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 640",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
+      },
+      {
+       "label": "BBl <b>2018</b> 7443",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
+      }
+     ],
+     "absatz": null,
+     "item": null,
+     "sektion": "2b. Abschnitt: Berichterstattung"
     }
    ]
   },
@@ -2741,7 +2951,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "72",
+     "nr": "84",
      "text": "Ursprünglich Art. 24. Eingefügt durch Ziff. III des BG vom 29. Sept. 2023 über eine sichere Stromversorgung mit erneuerbaren Energien, in Kraft seit 1. Jan. 2026 (AS <b>2024</b> 679; <b>2025</b> 636; BBl <b>2021</b> 1666).",
      "links": [
       {
@@ -2782,7 +2992,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "73",
+     "nr": "85",
      "text": "Eingefügt durch Ziff. I und II des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
@@ -2819,7 +3029,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "70",
+     "nr": "82",
      "text": "Ursprünglich Art. 24. Eingefügt durch Ziff. III des BG vom 29. Sept. 2023 über eine sichere Stromversorgung mit erneuerbaren Energien, in Kraft seit 1. Jan. 2026 (AS <b>2024</b> 679; <b>2025</b> 636; BBl <b>2021</b> 1666).",
      "links": [
       {
@@ -2839,7 +3049,7 @@
      "item": null
     },
     {
-     "nr": "71",
+     "nr": "83",
      "text": "SR <b>730.0</b>",
      "links": [
       {
@@ -2872,7 +3082,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "102",
+     "nr": "116",
      "text": "Eingefügt durch Ziff. I des BG vom 6. Okt. 1995, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 965; BBl <b>1994</b> III 1075).",
      "links": [
       {
@@ -2909,7 +3119,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "103",
+     "nr": "117",
      "text": "Eingefügt durch Ziff. I des BG vom 23. März 2007 (AS<b> 2007</b> 3637; BBl <b>2005</b> 7097). Fassung gemäss Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Jan. 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
      "links": [
       {
@@ -2946,7 +3156,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "105",
+     "nr": "119",
      "text": "Eingefügt durch Anhang Ziff. 3 des BG vom 16. Dez. 2016 (Integration), in Kraft seit 1. Jan. 2019 (AS <b>2017</b> 6521; <b>2018</b> 3171; BBl <b>2013</b> 2397; <b>2016</b> 2821).",
      "links": [
       {
@@ -2983,7 +3193,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "118",
+     "nr": "132",
      "text": "Eingefügt durch Ziff. I des BG vom 20. März 1998, in Kraft seit 1. Sept. 2000 (AS <b>2000</b> 2042; BBl <b>1996</b> III 513).",
      "links": [
       {
@@ -2996,6 +3206,22 @@
       }
      ],
      "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "133",
+     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Juli 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 640",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
+      },
+      {
+       "label": "BBl <b>2018</b> 7443",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
+      }
+     ],
+     "absatz": "2",
      "item": null
     }
    ]
@@ -3012,7 +3238,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "120",
+     "nr": "135",
      "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
@@ -3022,6 +3248,93 @@
       {
        "label": "BBl <b>2010</b> 1049",
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/186"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "38_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Titel: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Übergangsbestimmung zur Änderung vom 29. September 2023"
+   ],
+   "fussnoten": [
+    {
+     "nr": "136",
+     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Juli 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 640",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
+      },
+      {
+       "label": "BBl <b>2018</b> 7443",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "38_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "6. Titel: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Erstmalige Erarbeitung von Richtplangrundlagen zu den Zielen nach Artikel 1 Absatz 2 Buchstaben b und b"
+   ],
+   "fussnoten": [
+    {
+     "nr": "137",
+     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Juli 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 640",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
+      },
+      {
+       "label": "BBl <b>2018</b> 7443",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "5_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Titel: Einleitung"
+    }
+   ],
+   "marginalie": [
+    "Abbruchprämie"
+   ],
+   "fussnoten": [
+    {
+     "nr": "22",
+     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Juli 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 640",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
+      },
+      {
+       "label": "BBl <b>2018</b> 7443",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
       }
      ],
      "absatz": null,
@@ -3045,7 +3358,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "33",
+     "nr": "39",
      "text": "Eingefügt durch Ziff. I des BG vom 15. Juni 2012, in Kraft seit 1. Mai 2014 (AS <b>2014</b> 899; BBl <b>2010</b> 1049).",
      "links": [
       {
@@ -3061,7 +3374,7 @@
      "item": null
     },
     {
-     "nr": "34",
+     "nr": "40",
      "text": "Urspünglich Art. 8 Abs. 2 und 3. Eingefügt durch Ziff. I des BG vom 17. Dez. 2010 (AS <b>2011</b> 2913; BBl <b>2007</b> 5765). Aufgehoben durch Art. 24 Ziff. 2 des Zweitwohnungsgesetzes vom 20. März 2015, mit Wirkung seit 1. Jan. 2016 (AS <b>2015</b> 5657; BBl <b>2014</b> 2287).",
      "links": [
       {
@@ -3102,7 +3415,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "35",
+     "nr": "41",
      "text": "Eingefügt durch Anhang Ziff. II 5 des Energiegesetzes vom 30. Sept. 2016, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6839; BBl <b>2013</b> 7561).",
      "links": [
       {
@@ -3112,6 +3425,72 @@
       {
        "label": "BBl <b>2013</b> 7561",
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1476"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "8_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Massnahmen der Raumplanung"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Richtpläne der Kantone"
+    }
+   ],
+   "marginalie": [
+    "Richtplaninhalt im Bereich von Zonen nach Artikel 18"
+   ],
+   "fussnoten": [
+    {
+     "nr": "42",
+     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Juli 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 640",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
+      },
+      {
+       "label": "BBl <b>2018</b> 7443",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "8_d": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Titel: Massnahmen der Raumplanung"
+    },
+    {
+     "ebene": 2,
+     "label": "1. Kapitel: Richtpläne der Kantone"
+    }
+   ],
+   "marginalie": [
+    "Richtplaninhalt zum Stabilisierungsziel im Nichtbaugebiet"
+   ],
+   "fussnoten": [
+    {
+     "nr": "43",
+     "text": "Eingefügt durch Ziff. I des BG vom 29. Sept. 2023, in Kraft seit 1. Juli 2026 (AS <b>2025</b> 640; BBl <b>2018</b> 7443).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 640",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/640"
+      },
+      {
+       "label": "BBl <b>2018</b> 7443",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/2625"
       }
      ],
      "absatz": null,

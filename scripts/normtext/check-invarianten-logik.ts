@@ -49,12 +49,17 @@ const ENTITY_RE = /&[a-z]+;|&#\d+;/i;
 // stellen sind als Expected-Fail registriert (ARTEFAKT_ERWARTET) — sie blockieren
 // nicht, aber jede NEUE Stelle / jede Zunahme in einem bekannten Artikel schlägt an.
 const ARTEFAKT_RE = /\[tab\]|data-message/i;
-// Artikel-Schlüssel (`gesetz|id`) → erwartete Artefakt-Trefferzahl (Bestand 2.7.2026,
-// 23 Stellen / 13 Artikel; HTML-seitiger Alt-Bug, kontrollierte Sanierung = eigener
+// Artikel-Schlüssel (`gesetz|id`) → erwartete Artefakt-Trefferzahl (Bestand 5.7.2026,
+// 24 Stellen / 14 Artikel; HTML-seitiger Alt-Bug, kontrollierte Sanierung = eigener
 // Folge-Batch). Artikel-Ebene statt Block-Index = robust gegen Index-Verschiebung.
 export const ARTEFAKT_ERWARTET: ReadonlyMap<string, number> = new Map([
   ['AHVG|bund/AHVG/art_3', 1],
   ['AHVV|bund/AHVV/art_6', 1],
+  // ASYLV2 art_41 Abs. 2: Formel (PB = …) im geltenden Stand 20260612 als
+  // <dl>-Spacer serialisiert (marke «[tab]»); Formeltext im Item-Text erhalten.
+  // Alt-Stand hatte marke «p». Expected-Fail (QS-CURRENCY P1-a 5.7.2026),
+  // Sanierung = eigener [tab]-Batch.
+  ['ASYLV2|bund/ASYLV2/art_41', 1],
   ['AVO|bund/AVO/art_216', 2],
   ['BPV|bund/BPV/art_116', 1],
   ['CHEMV|bund/CHEMV/art_2', 2],
