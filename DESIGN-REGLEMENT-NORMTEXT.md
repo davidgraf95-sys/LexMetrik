@@ -197,6 +197,39 @@ horizontaler Overflow @ 390). **`golden/lexmetrik-golden.json` bleibt byte-gleic
 unangetastet** (§1, Text-Extraktion vorher/nachher byte-gleich) — geändert sind
 ausschliesslich Klassen/Attribute.
 
+### §4c · Leser-Options-Leiste (W2·5d G2a, 4.7.2026)
+
+Drei persistente, **rein visuelle** Lese-Umschalter im Reader-Kopf (genau drei,
+keine Wucherung, Auftrag David): **Linien** (Gliederungs-Guide + Einzug),
+**Fussnoten** (Marker-Prominenz), **Verweise** (Verweis-Link-Unterstreichung).
+Verbindliche Bau-Regeln:
+
+1. **Mechanik = `data-*`-Attribut am `<html>` + CSS, kein React-State im
+   Artikel-Baum.** Store `src/pages/gesetz-leser/leserOptionen.ts` setzt
+   `data-linien/-fussnoten/-verweise` **imperativ** (Vorbild `components/thema.ts`);
+   Umschalten rendert nur die Switch-Buttons neu, nie die Artikelliste (§15). Die
+   CSS-Regeln stehen in `src/index.css`, **auf `.lc-leser` gescopt** (nur der
+   Reader, nicht das Norm-Popover der Rechner).
+2. **Pre-Paint CSP-konform.** Angewandt in `main.tsx` VOR `createRoot` (analog
+   Thema/Schriftskala) — **kein Inline-Script** (`script-src 'self'`, vercel.json
+   verbietet es). Persistenz in localStorage `lm.leser.optionen`.
+3. **Default = 'an' für alle drei = heutige Darstellung** ⇒ `data-*="an"` ist ein
+   CSS-No-op ⇒ Grundzustand **byte-gleich** (R6, `golden:vergleich` IDENTISCH). Die
+   Guide-/Einzug-Klassen werden IMMER emittiert; `data-linien="aus"` blendet sie
+   per CSS aus (der frühere React-State-Umschalter entfällt).
+4. **Fussnoten-«AUS» DÄMPFT, versteckt NIE** (R9/§8): nur `color`/`opacity`, nie
+   `display:none` — der Marker + der Fussnotentext bleiben im DOM, per Ctrl+F/
+   Print/Screenreader erreichbar. **Verweise-«AUS»** unterdrückt nur die
+   Unterstreichung; Farbe und Anker/Funktion bleiben.
+5. **Global ⇒ beide Reader-Instanzen** (Einzelansicht + jedes Split-View-Pane)
+   folgen einer Wahl ohne Re-Render. a11y: echte `role="switch" aria-checked`,
+   sichtbarer Fokus über die globale `:focus-visible`-Outline.
+
+**Gegated:** e2e `leser-optionen` (R6/R9 positiv+negativ + Persistenz/Reload) +
+`golden:vergleich` byte-gleich. **G2b-Grenze (bewusst offen):** grundart-abhängiger
+Linien-Default und die Unifizierung mit dem bestehenden Fussnoten-Apparat-Schalter
+laufen mit der Kopf-Zusammenführung (G2b), nicht hier.
+
 ## §5 · Verzahnung (der Burggraben, Fedlex-Übertreffer)
 
 - **Norm → Norm intern.** Ein SR-Verweis in Fussnote/Fliesstext, dessen
