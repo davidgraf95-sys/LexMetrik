@@ -112,6 +112,30 @@ Wiederverwenden statt neu bauen (§1 CLAUDE.md: lieber Duplikat behalten als fal
 
 ## Paket 1 — Gesetze-Currency & Coverage (P0)
 
+> **✅ P1-a + P1-b AUSGEFÜHRT 5.7.2026 (Opus-Bau-Session; Branch `feat/fedlex-p1-ab`; Trailer `Roadmap: QS-CURRENCY`). PAKET 1 DAMIT KOMPLETT.**
+> **P1-b (Monitoring dicht, zuerst):** Regex-Fix `fedlex-pins.ts` `[a-z_]+`→`[a-z0-9_]+` (die 11 Ziffern-Namen-Pins
+> asylv1/2/3, argv1..5, bvv_2, bvv3, co2_gesetz waren parser-blind → jetzt 207→218 überwacht) + Parser-Selbsttest
+> `src/tests/fedlex-pins.test.ts` (geparste Pins == cache.sh-Datenzeilen, Gegen-Regex). **Coverage-Assertion** in
+> `check:normtext` (offline, `drift-logik.ts` `pruefeCoverage`/`fedlexEliAusUrl`): jeder Register-Eintrag bund/snapshot
+> mit Fedlex-ELI braucht einen cache.sh-Pin, jedes pdf-embed einen PDF_EMBED_QUELLEN-Eintrag — rot bei jedem künftigen
+> ungepinnten Volltext. **PDF-Embed-Pins ins Monitoring:** `fedlex-versionen-pruefen.ts` merged `lesePdfEmbedPins()`
+> (EMRK/NYÜ) in dieselbe SPARQL-Currency-Prüfung; `lesePins()`-Signatur unverändert.
+> **P1-a (Datenlauf):** die echten 18 überholten Snapshots (Stand 5.7.: kvg kvv svg rpg klv vrv ssv rpv vts mepv bpv vil
+> fdv → 20260701; argv2 → 20260201; asylv1/2/3 icao → 20260612) neu gepinnt (html-N SPARQL-kanonisch via
+> `jolux:isExemplifiedBy` — klv/vrv=8, **ssv=14** ausserhalb der 1–5-Fallback-Heuristik; Filestore-Inhalts-Sonde
+> Anker+SR + SPARQL deckungsgleich) und gezielt re-extrahiert (`--nur=bund --erlass=…`). Artikel-Diff: **+85 neue
+> Artikel, 9 eId-Renames/Bereichs-Regroups 1:1 belegt, 0 echter Verlust** (SVG disp_u2_art_108→108; VRV/RPV Annex-Reorg;
+> ASYLV2-Bereiche; VIL 27bbis = reale swisstopo-Änderung). VRV-«99 geändert» ≈ Soft-Hyphen-Bereinigung der N=8-Fassung
+> (kein Sachinhalt). **2 PDF-Embeds:** EMRK 20050323→20220916 (kanonische pdf-a trägt Suffix `-2`; suffixlos = ÄLTERER
+> Re-Issue → neues Feld `pdfSuffix` in `pdf-embed.ts`), NYÜ 20200207→20260506. `check:fedlex-versionen` **Exit 0 (0 stale,
+> beide Pin-Quellen)**. **Zwei Mechanik-Bugs, die der Lauf aufdeckte:** (1) Golden-`--erlass`-Merge behielt die ALTEN
+> Keys der regenerierten Erlasse → 9 Phantom-Golden-Keys; jetzt werden nur die regenerierten Erlasse verworfen + frisch
+> ersetzt. (2) `check:pdf --netz`-Currency: notation-Join × `LIMIT 300` = Partial-Result-Falle (EMRK geltend fälschlich
+> 20050323) → ELI-ConsolidationAbstract-Query. ASYLV2 art_41 Formel-`<dl>` («[tab]», Content erhalten) als Expected-Fail
+> registriert. **P1-d-Refresh:** `gen:fedlex-wiedervorlage` neu gelaufen → die 18 tragen jetzt den geprüft-Chip
+> (currency.json 200→218). Alle Tore grün, engine golden 201 byte-gleich. Gegenprüfung **bestanden** (unabhängiger
+> Opus-Adversarial gegen Fedlex-SPARQL+Filestore). Beleg: `bibliothek/register/fedlex-currency-2026-07-05.md`.
+>
 > **✅ P1-c + P1-d AUSGEFÜHRT 4.7.2026 (Opus-Bau-Session; Branch `feat/fedlex-p1-cd`; Trailer `Roadmap: QS-CURRENCY`).**
 > Neu: geteilter SPARQL-Helfer `scripts/fedlex-sparql.ts` (`sparqlBatch`, injizierbare fetchImpl) + Generator
 > `scripts/fedlex-wiedervorlage-generieren.ts` (`npm run gen:fedlex-wiedervorlage -- --datum=…`), getrieben aus der
