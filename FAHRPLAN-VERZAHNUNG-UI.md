@@ -250,7 +250,14 @@ Datum («Fassung gemäss … , in Kraft seit 1. Jan. 2017 (AS …)»; OR allein:
 
 ### V3 — mit E6a (Soft-Law/KS, Historie)
 
-- `KontextTyp` + Registry um `'verwaltungsverordnung'` erweitern; KS-Seite auf MaterialLeser-Basis; `StatusBadge nur-verweis`; ESTV-MWST-`legalBasis` als erste artikelscharfe Material-Kante (hebt Materialien vom Erlass- aufs Artikel-Niveau — derselbe `KantenChip`, nur bessere `fundstelle`).
+**Nachtrag (4.7.2026): `StatusBadge nur-verweis` VORGEZOGEN durch E6a·M5.** Die V3-Enum-Variante
+`'nur-verweis'` («nur Verweis — kein aufbereiteter Volltext, nur amtlicher Live-Link», lc-badge-soft, kein
+Glyph, R16-konform) wurde im M5-UI-Delta (`FAHRPLAN-MATERIALIEN-VERZAHNUNG §5.3`) gebaut und rendert auf
+der **MaterialLeser-Karte** (nicht am Chip, Dichte-Regel §1.2). Ebenfalls in M5 vorgezogen: die async
+Material-Kanten heben Materialien bereits jetzt vom Erlass- aufs **Artikel-Niveau** («via Art. N», derselbe
+Sublabel-Mechanismus wie im KantenChip) — ohne die vierte `KontextTyp`-Ausprägung/Registry (die bleibt V3).
+
+- `KontextTyp` + Registry um `'verwaltungsverordnung'` erweitern; KS-Seite auf MaterialLeser-Basis; `StatusBadge nur-verweis` (**bereits gebaut, s. o.**); ESTV-MWST-`legalBasis` als erste artikelscharfe Material-Kante (hebt Materialien vom Erlass- aufs Artikel-Niveau — derselbe `KantenChip`, nur bessere `fundstelle`).
 - Historie als eigenes, letztes Grammatik-Element `VersionsLeiste` — NUR wo echte Versionsdaten (BSV) bzw. eigene Snapshots existieren; `erlass_fassungen`-Stand-Chip am Artikel («Fassung galt von–bis») dockt hier an.
 - Aufwand ~2–3 Tage nach Datenlage.
 

@@ -60,9 +60,15 @@ describe('StatusBadge — geschlossenes Vokabular, nur Abweichungen', () => {
     expect(out).not.toContain('★');
     expect(out).not.toMatch(VERBOTEN);
   });
-  it('V2/V3-Slots (masse, nur-verweis) tragen keine Darstellung', () => {
+  it('V2-Slot masse trägt (noch) keine Darstellung', () => {
     expect(ssr(<StatusBadge praedikat="masse" />)).toBe('');
-    expect(ssr(<StatusBadge praedikat="nur-verweis" />)).toBe('');
+  });
+  it('nur-verweis (V3 vorgezogen E6a·M5): Label «nur Verweis», kein ★, soft-Ton', () => {
+    const out = ssr(<StatusBadge praedikat="nur-verweis" />);
+    expect(out).toContain('nur Verweis');
+    expect(out).toContain('lc-badge-soft');
+    expect(out).not.toContain('★');
+    expect(out).not.toMatch(VERBOTEN);
   });
   it('Magic Moment 4: aria-label textgleich in voll- und glyph-Variante', () => {
     const holeAria = (html: string) => html.match(/aria-label="([^"]+)"/)?.[1];

@@ -17,6 +17,10 @@ import {
 } from './normtext/werkzeuge';
 import { ERLASS_REGISTER } from './normtext/register';
 import { rechtsprechungFuerErlass, type EntscheidRef } from './rechtsprechung/norm-index';
+import { ladeMaterialManifest } from './materialien/browse';
+import { ladeKantenShard } from './materialien/kanten-shard';
+import type { BrowseMaterial } from './materialien/typen';
+import type { Herkunft } from './verzahnung/typen';
 
 export type { Werkzeug, MaterialBezug, EntscheidRef };
 
@@ -86,6 +90,112 @@ export function kontextSync(typ: KontextTyp, normKeys: readonly string[]): Konte
     // Werkzeuge sind für alle drei Korpora fremd → immer auflösen.
     werkzeuge: werkzeugeFuerEntscheid([...normKeys]),
   };
+}
+
+// ─── Amtliche Materialien (asynchron: Kanten-Shards, E6a·M5) ─────────────────
+//
+// Die im Bundle liegenden kuratierten Materialien (materialienFuer, sync) decken
+// nur die ~26 Alt-Einträge des MATERIAL_REGISTER. Die per Adapter erfassten
+// Behördenpublikationen (MWSTG/MWSTV/DBG/VStG/StG/DSG/… — 300+ Dokumente, tausende
+// artikelscharfe Kanten) liegen als erlass-lokale Shards (§15, nie im Bundle) und
+// werden HIER lazy nachgeladen. herkunft = DB-`quelle` (amtlich/kuratiert/
+// maschinell); der Badge markiert die Abweichung ('maschinell', §1.2/§1.3 — der
+// kuratierte/amtliche Normalfall bleibt nackt). Rein projizierend (§3).
+
+/** Anzeige-Form eines Artikel-Tokens: Korpus-Unterstrich weg ('20_a' → '20a'). */
+function anzeigeArtikel(token: string): string {
+  return token.replace(/_/g, '');
+}
+
+/** §8-Herkunft je Dokument aggregiert. Doc-uniform in der Praxis; bei
+ *  Misch-Provenienz gewinnt die schwächste (maschinell > kuratiert > amtlich),
+ *  damit die UI nie eine Heuristik als 'amtlich' ausgibt. */
+function aggregiereHerkunft(quellen: ReadonlySet<string>): Herkunft {
+  if (quellen.has('maschinell')) return 'maschinell';
+  if (quellen.has('kuratiert')) return 'kuratiert';
+  return 'amtlich';
+}
+
+/** Natürlicher Vergleich zweier Artikel-Token ('2' < '11'; '20' < '20_a'). */
+function vergleicheArtikel(a: string, b: string): number {
+  const na = parseInt(a, 10), nb = parseInt(b, 10);
+  if (Number.isFinite(na) && Number.isFinite(nb) && na !== nb) return na - nb;
+  return a < b ? -1 : a > b ? 1 : 0;
+}
+
+interface DokSammler {
+  quellen: Set<string>;
+  artikel: Set<string>;
+  ziffern: Set<string>;
+}
+
+/**
+ * Amtliche Materialien zu den normKeys aus den Kanten-Shards (asynchron, lazy).
+ * Je Shard-Dokument EIN Eintrag (aggregiert über alle seine Kanten): repräsentativer
+ * Artikel (kleinster Token) + «u. a.» bei mehreren; reine Erlass-Ebene ohne
+ * Fundstelle bleibt ohne Sublabel. Dokument-Metadaten (Titel/Behörde/Doktyp/Stand)
+ * aus dem Browse-Register (register.json). Der Material-Reader IST das Material →
+ * leer (kein Selbstverweis). Dedupliziert über alle normKeys.
+ */
+export async function kontextSoftLaw(typ: KontextTyp, normKeys: readonly string[]): Promise<MaterialBezug[]> {
+  if (typ === 'material') return [];
+  const manifest = await ladeMaterialManifest();
+  if (!manifest) return [];
+  const regByKey = new Map<string, BrowseMaterial>(manifest.materialien.map((m) => [m.key, m]));
+
+  const proDok = new Map<string, DokSammler>();
+  const reihenfolge: string[] = [];
+  for (const k of new Set(normKeys)) {
+    const shard = await ladeKantenShard(k);
+    if (!shard) continue;
+    for (const kante of shard.kanten) {
+      let s = proDok.get(kante.dok);
+      if (!s) { s = { quellen: new Set(), artikel: new Set(), ziffern: new Set() }; proDok.set(kante.dok, s); reihenfolge.push(kante.dok); }
+      s.quellen.add(kante.quelle);
+      if (kante.artikel) s.artikel.add(kante.artikel);
+      else for (const f of kante.fundstellen) if (f.z) s.ziffern.add(f.z);
+    }
+  }
+
+  const out: MaterialBezug[] = [];
+  for (const dok of reihenfolge) {
+    const reg = regByKey.get(dok);
+    if (!reg) continue; // nicht (mehr) gelistet → still auslassen (§8, kein toter Link)
+    const s = proDok.get(dok)!;
+    const artikelSort = [...s.artikel].sort(vergleicheArtikel);
+    const repArtikel = artikelSort[0];
+    let artikel: string | undefined;
+    let sublabel: string | undefined;
+    if (repArtikel) {
+      artikel = repArtikel;
+      sublabel = artikelSort.length > 1
+        ? `via Art. ${anzeigeArtikel(repArtikel)} u. a.`
+        : `via Art. ${anzeigeArtikel(repArtikel)}`;
+    } else if (s.ziffern.size === 1) {
+      sublabel = [...s.ziffern][0]; // «Ziff. 6.10» — nur wenn eindeutig (sonst kein arbiträrer Griff)
+    }
+    out.push({
+      key: reg.key, titel: reg.titel, behoerdeKuerzel: reg.behoerdeKuerzel,
+      doktypLabel: reg.doktypLabel, nummer: reg.nummer,
+      pfad: `/materialien/${encodeURIComponent(reg.key)}`,
+      herkunft: aggregiereHerkunft(s.quellen), stand: reg.stand, artikel, sublabel,
+    });
+  }
+  return out.sort((a, b) => a.behoerdeKuerzel.localeCompare(b.behoerdeKuerzel) || a.key.localeCompare(b.key));
+}
+
+/**
+ * Vereinigt die synchronen (in-Bundle kuratierten) Materialien mit den asynchron
+ * geladenen Soft-Law-Kanten. Dedupliziert per key (der bestehende kuratierte
+ * Eintrag gewinnt, §2.6 «bestehender Key gewinnt»); die Mengen sind in der Praxis
+ * disjunkt (kuratierte vs. DB-Dokumente), die Dedupe ist Absicherung. Sortierung
+ * = Behörde-Kürzel → key (wie beide Quellen).
+ */
+export function mischeMaterialien(sync: readonly MaterialBezug[], softLaw: readonly MaterialBezug[]): MaterialBezug[] {
+  const seen = new Set(sync.map((m) => m.key));
+  const out = [...sync];
+  for (const m of softLaw) if (!seen.has(m.key)) { seen.add(m.key); out.push(m); }
+  return out.sort((a, b) => a.behoerdeKuerzel.localeCompare(b.behoerdeKuerzel) || a.key.localeCompare(b.key));
 }
 
 /**

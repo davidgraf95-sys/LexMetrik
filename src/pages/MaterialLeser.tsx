@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { SeitenKopf } from '../components/layout/SeitenKopf';
 import { ladeMaterial } from '../lib/materialien/browse';
 import { KontextPanel } from '../components/kontext/KontextPanel';
+import { StatusBadge } from '../components/verzahnung/StatusBadge';
 import { GEBIET_LABEL } from '../lib/normtext/register';
 import { usePaneKontext } from '../components/layout/PaneKontext';
 import { useMeldeInhaltsKopf } from '../components/layout/InhaltsKopfKontext';
@@ -90,6 +91,8 @@ export function MaterialLeser() {
           <span>{SPRACH_LABEL[m.sprache] ?? m.sprache}</span>
           <span aria-hidden>·</span>
           <span>{GEBIET_LABEL[m.rechtsgebiet] ?? m.rechtsgebiet}</span>
+          {/* V3-Vorzug (E6a·M5): kein gehosteter Volltext — nur Verweis + Live-Link. */}
+          <StatusBadge praedikat="nur-verweis" />
         </div>
       </SeitenKopf>
 

@@ -94,6 +94,16 @@ export interface MaterialRegistereintrag {
   normKeys?: string[];
   /** Optionaler Ehrlichkeits-/Pflege-Hinweis (z. B. «Hash unbestätigt»). */
   hinweis?: string;
+  /**
+   * Kuratierte artikelscharfe Bezüge (E6a·M5, quelle='kuratiert'): der Artikel,
+   * den das Dokument im amtlichen TITEL nennt, als Korpus-Token je Erlass
+   * (§7-konform — Stand/URL trägt der Eintrag selbst; Artikel gegen den
+   * Normtext-Korpus verifiziert). NUR setzen, wenn der Dokument-`stand` ≥
+   * Revisions-Cutoff des Erlasses (§2.4) — sonst bliebe die Zuordnung auf
+   * Erlass-Ebene (Downgrade). Reine Anzeige-/Verzahnungs-Daten; fliesst NICHT
+   * in register.json (in-Bundle-Sync-Pfad, kein Interna-Leak §15).
+   */
+  artikelBezuege?: ReadonlyArray<{ erlass: string; artikel: string }>;
 }
 
 // ── Browse-Manifest-Schema (generiert → public/materialien/register.json) ────

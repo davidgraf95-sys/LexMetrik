@@ -51,9 +51,19 @@ const REZEPT: Partial<Record<StatusPraedikat, Rezept>> = {
     erklaerung: 'Die zitierte Bestimmung wurde nach diesem Entscheid geändert — der Entscheid legt die damals geltende Fassung aus.',
     ton: 'lc-badge-soft',
   },
+  // V3 vorgezogen durch E6a·M5 (FAHRPLAN-VERZAHNUNG-UI §V3): der Material-Reader
+  // hostet KEINEN Volltext — nur bibliografische Angaben + amtlichen Live-Link
+  // (§7/§8). Auf der MaterialLeser-Karte, NICHT am Chip (Dichte-Regel §1.2). Kein
+  // Glyph, lc-badge-soft (R16: keine Ampelfarbe). Kein Glossar-Eintrag nötig.
+  'nur-verweis': {
+    glyph: null,
+    label: 'nur Verweis',
+    ariaLabel: 'nur Verweis — kein aufbereiteter Volltext, nur amtlicher Live-Link',
+    erklaerung: 'Nur Fundstelle und amtlicher Live-Link — kein in LexMetrik aufbereiteter Volltext. Massgeblich ist die amtliche Quelle.',
+    ton: 'lc-badge-soft',
+  },
   // Erweiterungspunkt V2: 'masse' → Masse-Kennzeichnung aus den automatisch
   //   erfassten 195'000 Urteilen (lc-badge-soft, gestrichelt).
-  // Erweiterungspunkt V3: 'nur-verweis' → «nur PDF-Verweis» (lc-badge-soft).
 };
 
 export function StatusBadge({ praedikat, variant = 'voll', interaktiv = false, detail, className = '' }: {

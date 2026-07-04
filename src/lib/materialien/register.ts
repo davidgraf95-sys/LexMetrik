@@ -75,6 +75,7 @@ function liveLink(
     nummer?: string; rechtsgebiet: MaterialRegistereintrag['rechtsgebiet'];
     sprache?: MaterialRegistereintrag['sprache']; quelleUrl: string; stand: string;
     rang: number; normKeys?: string[]; hinweis?: string;
+    artikelBezuege?: MaterialRegistereintrag['artikelBezuege'];
   },
 ): MaterialRegistereintrag {
   return {
@@ -88,6 +89,7 @@ function liveLink(
     rang: opts.rang,
     normKeys: opts.normKeys,
     hinweis: opts.hinweis,
+    artikelBezuege: opts.artikelBezuege,
   };
 }
 
@@ -111,6 +113,9 @@ export const MATERIAL_REGISTER: ReadonlyArray<MaterialRegistereintrag> = [
   liveLink('ESTV-KS-DBG-6A', 'ESTV', 'kreisschreiben', 'Verdecktes Eigenkapital (Art. 65 DBG)', {
     nummer: 'Nr. 6a', rechtsgebiet: 'sozial-abgaben', quelleUrl: ESTV_KS_DBST,
     stand: '2024-10-10', rang: 3, normKeys: ['DBG'], hinweis: ESTV_VZ_HINWEIS,
+    // M5-Nachtrag (§2.4/§7): Artikel aus amtlichem Titel; DBG ohne Revisions-Cutoff
+    // → artikelscharf zulässig. Art. 65 DBG gegen public/normtext/bund/DBG.json verifiziert.
+    artikelBezuege: [{ erlass: 'DBG', artikel: '65' }],
   }),
   liveLink('ESTV-KS-DBG-32A', 'ESTV', 'kreisschreiben', 'Sanierung von Kapitalgesellschaften und Genossenschaften', {
     nummer: 'Nr. 32a', rechtsgebiet: 'sozial-abgaben', quelleUrl: ESTV_KS_DBST,
@@ -148,10 +153,17 @@ export const MATERIAL_REGISTER: ReadonlyArray<MaterialRegistereintrag> = [
   liveLink('EDOEB-MERKBLATT-DSFA', 'EDOEB', 'merkblatt', 'Merkblatt zur Datenschutz-Folgenabschätzung (DSFA)', {
     rechtsgebiet: 'oeffentlich', quelleUrl: 'https://www.edoeb.admin.ch/de/datenschutz-folgenabschaetzung',
     stand: '2023-08-04', rang: 5, normKeys: ['DSG'],
+    // M5-Nachtrag (§2.4): Titel nennt Art. 22/23 DSG, ABER Dokument-Stand 2023-08-04
+    // liegt VOR dem revDSG-Cutoff 2023-09-01 → deterministischer Downgrade auf
+    // Erlass-Ebene (kein artikelBezuege). Bewusst kein artikelscharfer Bezug (§1 Treue).
   }),
   liveLink('EDOEB-LEITFADEN-DATABREACH', 'EDOEB', 'leitfaden', 'Leitfaden betreffend Meldung von Datensicherheitsverletzungen (Art. 24 DSG)', {
     rechtsgebiet: 'oeffentlich', quelleUrl: 'https://www.edoeb.admin.ch/de/dokumentation-datenschutz',
     stand: '2025-04-23', rang: 6, normKeys: ['DSG'],
+    // M5-Nachtrag (§2.4/§7): Artikel aus amtlichem Titel; Dokument-Stand 2025-04-23
+    // ≥ revDSG-Cutoff 2023-09-01 → artikelscharf zulässig. Art. 24 DSG gegen
+    // public/normtext/bund/DSG.json verifiziert.
+    artikelBezuege: [{ erlass: 'DSG', artikel: '24' }],
   }),
   liveLink('EDOEB-LEITFADEN-COOKIES', 'EDOEB', 'leitfaden', 'Leitfaden betreffend Datenbearbeitungen mittels Cookies und ähnlichen Technologien', {
     rechtsgebiet: 'oeffentlich', quelleUrl: 'https://www.edoeb.admin.ch/de/dokumentation-datenschutz',

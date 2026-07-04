@@ -391,6 +391,45 @@ ergänzt:** Migration ESTV-MWST-INFO-09 (analog EDÖB/KS) — dann artikelscharf
 MI 09; MWSTV-Konsolidierung 2027-01-01 ist bereits publiziert (künftige Fassung) → bei
 Inkrafttreten Cutoff-Tabelle prüfen (Staleness-TTL-Vermerk aus Gegenprüfung Durchgang 1).
 
+**Ausführungsvermerk M5 (4.7.2026):** UI-Delta gebaut (Worktree `feat/materialien-m5-ui`), nach V1a/V1b/
+V1c-Merge. **Posten 1–4:** Async-Loader `kontextSoftLaw(typ, normKeys)` in `src/lib/kontext.ts` + reiner
+Shard-Loader `src/lib/materialien/kanten-shard.ts` (Promise-Cache je Erlass, Bucket-Vereinigung, 404 =
+kein Shard) — liefert je Shard-Dokument EINEN aggregierten Eintrag (repräsentativer = kleinster
+Artikel-Token + «u. a.» bei mehreren; Herkunft aggregiert schwächste-gewinnt maschinell>kuratiert>amtlich;
+Register-Join für Titel/Behörde/Stand). Die BESTEHENDE Gruppe «Amtliche Materialien» im `KontextPanel`
+erweitert (KEIN fünfter Block, KEIN Registry-Refactor): `mischeMaterialien(sync, async)` dedupe per key
+(bestehender kuratierter Eintrag gewinnt); Fundstellen-Sublabel «via Art. N [u. a.]»/«Ziff.», Dokument-
+Stand am Eintrag, **Staleness-Hinweis §2.4** («Dokument-Stand vor der letzten Änderung von Art. N» — reuse
+`klassifiziereFassungsBezug` + Revisions-Shard, nur Einzel-Erlass-Reader), «maschinell»-Badge nur bei
+Heuristik-Herkunft (amtlich/kuratiert bleiben nackt, §1.3); max. 8 + «Noch n weitere · alle Materialien
+ansehen». `StatusBadge`-Variante **`'nur-verweis'`** gebaut (V3-Vorzug, §V3-Nachtragszeile in
+FAHRPLAN-VERZAHNUNG-UI) — auf der MaterialLeser-Karte, NICHT am Chip (Dichte). Keine vierte KontextTyp-
+Ausprägung (Materialien laufen im MaterialLeser, typ 'material' → Loader liefert dort []).
+**Posten 5:** `gen:zaehler` um `materialien` (326) + `standMaterialien` erweitert; Startseiten-Kachel
+`/materialien` trägt jetzt «326 amtliche Materialien erfasst» (§8 «erfasst», nie «Volltext» — alle
+nur-live-link). CLS: neutral auf den gate-relevanten Seiten (OR/Startseite haben keine Material-Shards →
+`check:perf-budget` unberührt; gemessen 0,0005–0,07 auf DBG/DSG/MWSTG, Muster wie die bestehende async
+Entscheide-Gruppe, kein Reservier-Leerraum §15.2/MehrKante).
+- **Abweichung vom M3/M4/M1-Migrations-Vermerk, offengelegt (§7/§8):** Die 8–9 kuratiert-bekannten
+  Dokumente wurden NICHT in die DB migriert. Grund: die `check:materialien`-Invariante fordert für jede
+  Shard-Kante ein im Zustands-Manifest **gelistetes** DB-Dokument — eine Migration hätte für nicht frisch
+  gecrawlte Dokumente `drift_token`/`sha`/`stand_quelle` **fabrizieren** müssen, was §2.3/§8 (ehrliche
+  Crawl-Provenienz) verletzt. Stattdessen tragen die kuratierten Einträge im `MATERIAL_REGISTER` ein neues
+  additives Feld `artikelBezuege` (nur in-Bundle-Sync-Pfad, fliesst NICHT in register.json — kein Interna-
+  Leak §15); der Sync-Pfad `materialienFuerNorm` surft sie mit «via Art. N». §2.4 am Autoren-Ort angewandt:
+  **DATABREACH → Art. 24 DSG** (Stand 2025-04-23 ≥ revDSG-Cutoff) und **KS 6a → Art. 65 DBG** (DBG ohne
+  Cutoff) sind artikelscharf; **DSFA (Art. 22/23 DSG)** bleibt Erlass-Ebene (Stand 2023-08-04 < Cutoff
+  2023-09-01 → Downgrade); TOM/COOKIES/übrige KS nennen keinen Artikel im amtlichen Titel → Erlass-Ebene
+  (§7, keine Heuristik). Die volle DB-Migration bleibt Stufe-2-Option (mit echtem Re-Crawl).
+- **Gegenprüfung (Risikopfad `werkzeuge.ts`, Verdikt bestanden):** unabhängiger Opus-Adversarial gegen
+  Live-Fedlex-AKN-XML — Art. 24 DSG = «Meldung von Verletzungen der Datensicherheit» (CONFIRMED); Art. 65
+  DBG = «Zinsen auf verdecktem Eigenkapital» (CONFIRMED, Label-Nuance geflaggt); revDSG in Kraft 1.9.2023
+  (CONFIRMED via SPARQL beide Richtungen). 0 Widerlegungen. Korpus-Anker (DSG/DBG.json) vorab verifiziert.
+- **Tore:** voller `npm run gate` grün · 3473 Unit (10 neu `materialien-m5-kontext.test.ts` + verzahnung-Test
+  auf gebaute `nur-verweis`-Variante angepasst, §6-3 deklarierte Verhaltensänderung) · 30 e2e grün (3 neu
+  `materialien-m5-verzahnung.e2e.ts`, leser-optionen/BGBM + verzahnung-CLS/a11y unberührt) · Visual-Review
+  Desktop+Mobil (DSG/DBG/MWSTG-Fuss + MaterialLeser-Karte, kein Overflow @390).
+
 ---
 
 ## §7 · Bewusst NICHT (Stufe 1)
