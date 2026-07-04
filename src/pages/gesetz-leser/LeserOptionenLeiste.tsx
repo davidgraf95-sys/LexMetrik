@@ -22,7 +22,7 @@ function OptSwitch({ feld, an, label, titel }: {
       title={titel}
       onClick={() => setzeOption(feld, an ? 'aus' : 'an')}
       className={`lc-chip inline-flex items-center gap-1 hover:text-brass-700 ${
-        an ? 'text-brass-700' : 'text-ink-500'
+        an ? 'text-brass-700' : 'text-ink-600'
       }`}
     >
       <span aria-hidden>{an ? '✓' : '○'}</span>
@@ -33,9 +33,15 @@ function OptSwitch({ feld, an, label, titel }: {
 
 /** Die Options-Leiste. `zeigeLinien` blendet den Linien-Schalter aus, wo es
  *  keine Gliederung gibt (flacher Kurzerlass) — er wäre sonst wirkungslos
- *  (§2.2④). Fussnoten/Verweise gelten immer. */
-export function LeserOptionenLeiste({ zeigeLinien }: { zeigeLinien: boolean }) {
+ *  (§2.2④). `linienAutoAn` = ob im grundart-abhängigen Default-Zustand ('auto',
+ *  K11) der Guide für DIESEN Erlass sichtbar ist (nur KODIFIKATION) — so zeigt
+ *  der Schalter den EFFEKTIVEN Zustand ehrlich (§8) und ein Klick setzt das
+ *  passende explizite 'an'/'aus'. Fussnoten/Verweise gelten immer. */
+export function LeserOptionenLeiste({ zeigeLinien, linienAutoAn = false }: { zeigeLinien: boolean; linienAutoAn?: boolean }) {
   const opt = useLeserOptionen();
+  // Effektiver Linien-Zustand: expliziter Nutzer-Wunsch schlägt die Grundart;
+  // im Default 'auto' folgt er der Grundart (KODIFIKATION → an).
+  const linienEffektivAn = opt.linien === 'an' || (opt.linien === 'auto' && linienAutoAn);
   return (
     <div
       role="group"
@@ -45,7 +51,7 @@ export function LeserOptionenLeiste({ zeigeLinien }: { zeigeLinien: boolean }) {
       {zeigeLinien && (
         <OptSwitch
           feld="linien"
-          an={opt.linien === 'an'}
+          an={linienEffektivAn}
           label="Linien"
           titel="Gliederungslinien und Einzug ein- oder ausblenden"
         />

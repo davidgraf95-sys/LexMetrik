@@ -380,11 +380,15 @@ export function ErlassKopfBlock({ kopf }: { kopf: ErlassKopf }) {
 // pdf-embed) durch EINE Quelle (§5) — die Options-Leiste trägt sie einheitlich.
 // Reine Darstellung (§3); Kopf-Label bleibt heutige Herleitung (erlassTyp-Label
 // ist G3a). Der overflow-wrap/hyphens am Titel deckt Langtitel (mobil, §3.3).
-export function ErlassLeserKopf({ erlass, overline, artikelAnzahl, aktionen, hinweis, currency }: {
+export function ErlassLeserKopf({ erlass, overline, artikelAnzahl, bestimmungsWort = 'Artikel', aktionen, hinweis, currency }: {
   erlass: BrowseErlass;
   overline: ReactNode;
   /** Artikelzahl (Snapshot); null = keine Zählung (pdf-embed). */
   artikelAnzahl: number | null;
+  /** Zähl-Substantiv (W2·5d G3a/⑥): «Artikel» bzw. «Paragraphen» für §-Kantone
+   *  (bestimmungsEtikett='paragraf'). NUR sichtbares Label — der Anker bleibt
+   *  überall art-<token> (K2/R8). Entwurf-Etikett (K6), darum kein Zitat-Label. */
+  bestimmungsWort?: 'Artikel' | 'Paragraphen';
   /** Grundart-spezifische Aktionen (Herunterladen/Reiter/Options bzw. PDF-Download). */
   aktionen?: ReactNode;
   hinweis: string;
@@ -404,7 +408,7 @@ export function ErlassLeserKopf({ erlass, overline, artikelAnzahl, aktionen, hin
         {artikelAnzahl != null && (
           <>
             {erlass.sr && <span className="text-ink-300" aria-hidden>·</span>}
-            <span><span className="num">{artikelAnzahl}</span> Artikel</span>
+            <span><span className="num">{artikelAnzahl}</span> {bestimmungsWort}</span>
           </>
         )}
         {erlass.stand && (erlass.sr || artikelAnzahl != null) && <span className="text-ink-300" aria-hidden>·</span>}

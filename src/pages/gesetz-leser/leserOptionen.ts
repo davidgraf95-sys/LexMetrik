@@ -20,20 +20,26 @@
 // Global (ein Attributsatz am <html>) ⇒ beide Reader-Instanzen (Einzelansicht
 // UND jedes Split-View-Pane) folgen derselben Wahl ohne Re-Render.
 //
-// Default für ALLE drei = 'an' = die heutige Darstellung → data-*="an" ist ein
-// CSS-No-op (R6: Grundzustand byte-gleich). Die CSS-Regeln greifen nur bei
-// "aus" und sind auf `.lc-leser` gescopt (index.css), damit sie NUR den Reader
-// treffen (nicht das Norm-Popover der Rechner o. Ä.).
+// Fussnoten/Verweise: Default 'an' = heutige Darstellung → data-*="an" ist ein
+// CSS-No-op (R6: Grundzustand byte-gleich). Linien: Default 'auto' (W2·5d G3a/
+// K11) = grundart-abhängig — im Reader zeigt CSS den EINEN Guide nur bei
+// KODIFIKATION (tiefer Kodex braucht Orientierung), flachere Grundarten bleiben
+// ruhig ohne Guide. Ein expliziter Klick setzt 'an'/'aus' und übersteuert die
+// Grundart global. Alle CSS-Regeln sind auf `.lc-leser` gescopt (index.css),
+// damit sie NUR den Reader treffen (nicht das Norm-Popover der Rechner o. Ä.);
+// die Grundart kommt als data-grundart am `.lc-leser`-Root (inhalt.tsx, §5).
 
 import { useSyncExternalStore } from 'react';
 
 export type OptFeld = 'linien' | 'fussnoten' | 'verweise';
-export type OptWert = 'an' | 'aus';
+// 'auto' nur für 'linien' sinnvoll (grundart-abhängiger Default, K11); Fussnoten/
+// Verweise nutzen nur 'an'/'aus'. Die Union bleibt gemeinsam (ein Store).
+export type OptWert = 'an' | 'aus' | 'auto';
 export type LeserOptionen = Record<OptFeld, OptWert>;
 
 const KEY = 'lm.leser.optionen';
 const FELDER: readonly OptFeld[] = ['linien', 'fussnoten', 'verweise'];
-const DEFAULT: LeserOptionen = { linien: 'an', fussnoten: 'an', verweise: 'an' };
+const DEFAULT: LeserOptionen = { linien: 'auto', fussnoten: 'an', verweise: 'an' };
 
 function lade(): LeserOptionen {
   try {
@@ -41,7 +47,7 @@ function lade(): LeserOptionen {
     if (!roh) return { ...DEFAULT };
     const o = JSON.parse(roh) as Partial<Record<OptFeld, unknown>>;
     const r: LeserOptionen = { ...DEFAULT };
-    for (const f of FELDER) if (o[f] === 'an' || o[f] === 'aus') r[f] = o[f];
+    for (const f of FELDER) if (o[f] === 'an' || o[f] === 'aus' || o[f] === 'auto') r[f] = o[f] as OptWert;
     return r;
   } catch {
     // localStorage gesperrt (privater Modus) ODER kaputtes JSON → Default.

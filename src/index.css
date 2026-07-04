@@ -227,8 +227,14 @@
   /* Linien AUS: Gliederungs-Guide unsichtbar (border-Breite BLEIBT 1px reserviert
      → das Ausblenden der Linie bewegt keinen Textknoten, CLS-freundlich) und der
      Einzug kollabiert (flache Textkante) — reproduziert den früheren Zustand
-     «Gruppierungslinien aus». Ctrl+F/Anker/Print unberührt (nur border+padding). */
-  html[data-linien="aus"] .lc-leser [data-normtext-linie] {
+     «Gruppierungslinien aus». Ctrl+F/Anker/Print unberührt (nur border+padding).
+     W2·5d G3a/K11: der Default 'auto' folgt der GRUNDART (data-grundart am
+     .lc-leser-Root, §5): nur KODIFIKATION zeigt den EINEN Guide, alle flacheren
+     Grundarten blenden ihn im Auto-Zustand aus (ruhiger 80%-Fall). Ein
+     expliziter Nutzer-Klick ('an'/'aus') übersteuert das global. Nur border/
+     padding → CLS 0, Prosa/Ctrl+F/Anker byte-gleich (reine Darstellung). */
+  html[data-linien="aus"] .lc-leser [data-normtext-linie],
+  html[data-linien="auto"] .lc-leser:not([data-grundart="KODIFIKATION"]) [data-normtext-linie] {
     border-left-color: transparent;
     padding-left: 0;
   }
