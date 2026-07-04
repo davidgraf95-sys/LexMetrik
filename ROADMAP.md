@@ -518,7 +518,18 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   Eager-Load im Erst-Paint), a11y role="dialog"/Fokus-Falle/Esc via `useDialogFokus`.
   29 Unit-Akzeptanztests (`normQuery.test.ts`), 6 e2e (`befehlspalette.e2e.ts`);
   golden byte-gleich (kein Normtext/Engine); `gegenpruefung: n/a — reine UI`.
-  Nächste Etappe **G2b** (Kopf-Merge/Sticky-Kontextkopf) bzw. **G5/G6**.
+  **G5** (Kantons-Seite entrümpelt, eigener Worktree, kollisionsarm) **gebaut**:
+  Kontext-Zeile Mengen-Asymmetrie (§8) · Sicht-Umschalter **Karte | Liste**
+  (Karte default sichtbar statt zugeklapptem `<details>`) · Sortierung
+  **Alphabet/Erlass-Zahl/Region** (Region = BFS-Grossregionen `grossregionen.ts`) ·
+  Ordnung vereinheitlicht (Sidebar-Kantone alphabetisch nach Vollname statt föderal,
+  `navigation.ts`) · Roh-Code→Klartext (Sammlungs-Kürzel-Buckets «LS»/«bGS» → ein
+  ehrlicher «Nicht systematisiert»-Block statt «Bereich LS», Roh-Code bleibt je
+  Erlass an der Nummer) · Mobil-Vollnamen (kein `truncate`, wrap). Reine Darstellung
+  (§3), kein Risiko-Pfad im Diff → `gegenpruefung: n/a`; golden `golden:vergleich`
+  IDENTISCH; 8 Unit (`grossregionen`/`navigation`) + 6 e2e (`gesetze-kanton-g5`),
+  volle Suite 139 grün. Nächste Etappe **G2b** (Kopf-Merge/Sticky-Kontextkopf) →
+  G3a/G3b · **G6** (Rechtsgebiets-Sicht).
 - [ ] **6 · Konsultieren-Klingen** *(`[OF]`, amtlich)*:
   <!-- @meta id: W2·6 · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->
   - **Mehrsprachiger Normvergleich DE/FR/IT** (Auslegungswerkzeug, Art. 14 PublG — alle drei
