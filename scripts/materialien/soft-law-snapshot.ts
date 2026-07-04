@@ -27,6 +27,8 @@ import {
 import { crawleSeco, SECO_QUELLEN } from './adapter-seco.ts';
 import { crawleEdoeb, EDOEB_ID_PREFIX } from './adapter-edoeb.ts';
 import { crawleEstvKs, ESTV_KS_ID_PREFIXE } from './adapter-estv-ks.ts';
+import { crawleEstvMwst } from './adapter-estv-mwst.ts';
+import { ESTV_MWST_ID_PREFIX } from './estv-mwst-ids.ts';
 import type { SoftLawDok, NormRefKante, AdapterErgebnis } from './adapter-typen.ts';
 
 // ── CLI ────────────────────────────────────────────────────────────────────────
@@ -39,7 +41,7 @@ if (!datum || !/^\d{4}-\d{2}-\d{2}$/.test(datum)) {
   console.error('soft-law-snapshot: --datum=YYYY-MM-DD erforderlich (§2, kein Date.now).');
   process.exit(1);
 }
-const UNTERSTUETZT = new Set<SoftLawQuelle>(['seco', 'edoeb', 'estv-ks']); // M1 dockt hier an.
+const UNTERSTUETZT = new Set<SoftLawQuelle>(['seco', 'edoeb', 'estv-ks', 'estv-mwst']);
 if (!quelleArg || !UNTERSTUETZT.has(quelleArg as SoftLawQuelle)) {
   console.error(`soft-law-snapshot: --quelle=${[...UNTERSTUETZT].join('|')} erforderlich. (erhalten: ${quelleArg ?? '—'})`);
   process.exit(1);
@@ -51,6 +53,8 @@ const SECO_PREFIXE = SECO_QUELLEN.map((q) => q.idPrefix);
 function gehoertZurQuelle(id: string): boolean {
   if (quelle === 'edoeb') return id.startsWith(EDOEB_ID_PREFIX);
   if (quelle === 'estv-ks') return ESTV_KS_ID_PREFIXE.some((p) => id.startsWith(p));
+  // 'ESTV-MWST-' ist disjunkt zu den ESTV-KS-Präfixen (ESTV-KS-/ESTV-MITTEILUNG-/ESTV-MB-).
+  if (quelle === 'estv-mwst') return id.startsWith(ESTV_MWST_ID_PREFIX);
   return SECO_PREFIXE.some((p) => id.startsWith(p));
 }
 
@@ -62,6 +66,14 @@ async function crawle(substrate: { tag: string; html: string }[]): Promise<Adapt
   if (quelle === 'estv-ks') {
     return crawleEstvKs({ abgerufen: datum!, substrat: (tag, html) => substrate.push({ tag, html }) });
   }
+  if (quelle === 'estv-mwst') {
+    // robots-Freigabe David 4.7.2026 (§8): Concurrency 1, Delay, identifizierender UA — im Adapter fest.
+    return crawleEstvMwst({
+      abgerufen: datum!,
+      substrat: (tag, html) => substrate.push({ tag, html }),
+      log: (z) => console.log(z),
+    });
+  }
   const korpus = baueKorpusInfo();
   const korpusFuer = (erlassKey: string): Iterable<string> => {
     const set = korpus.artikelSet(erlassKey);
@@ -71,11 +83,35 @@ async function crawle(substrate: { tag: string; html: string }[]): Promise<Adapt
   return crawleSeco(korpusFuer, { abgerufen: datum!, substrat: (tag, html) => substrate.push({ tag, html }) });
 }
 
+/** Lokale Ablage des rohen Adapter-Ergebnisses (store-raw VOR load): ein Ingest-/Load-Bug darf
+ *  nie wieder einen (langen, höflichen) Crawl kosten — Re-Ingest via --aus-ergebnis. gitignored
+ *  (unter daten/), wegwerfbar wie die DB. Live-Lektion 4.7.2026 (ESTV-MWST: UNIQUE-Kollision im
+ *  Load NACH 3118-Request-Crawl, Parse-Ergebnis war weg). */
+function ergebnisPfad(): string {
+  return `daten/soft-law-ergebnis-${quelle}.json`;
+}
+
 async function main(): Promise<void> {
-  // Höflicher Crawl der gewählten Quelle.
-  const substrate: { tag: string; html: string }[] = [];
-  console.log(`soft-law-snapshot (${quelle}, --datum=${datum}): Crawl der Hub-Seiten …`);
-  const ergebnis = await crawle(substrate);
+  // Höflicher Crawl der gewählten Quelle — oder Re-Ingest aus der persistierten Roh-Ablage.
+  let substrate: { tag: string; html: string }[] = [];
+  let ergebnis: AdapterErgebnis;
+  if (process.argv.includes('--aus-ergebnis')) {
+    if (!existsSync(ergebnisPfad())) {
+      console.error(`soft-law-snapshot: --aus-ergebnis, aber ${ergebnisPfad()} fehlt (zuerst ein Crawl-Lauf).`);
+      process.exit(1);
+    }
+    const roh = JSON.parse(readFileSync(ergebnisPfad(), 'utf8')) as { ergebnis: AdapterErgebnis; substrate: { tag: string; html: string }[] };
+    ergebnis = roh.ergebnis;
+    substrate = roh.substrate;
+    console.log(`soft-law-snapshot (${quelle}, --datum=${datum}): Re-Ingest aus ${ergebnisPfad()} (KEIN Crawl).`);
+  } else {
+    console.log(`soft-law-snapshot (${quelle}, --datum=${datum}): Crawl der Hub-Seiten …`);
+    ergebnis = await crawle(substrate);
+    // store-raw VOR load: Parse-Ergebnis + Substrat zuerst auf Platte.
+    mkdirSync(dirname(ergebnisPfad()), { recursive: true });
+    writeFileSync(ergebnisPfad(), JSON.stringify({ ergebnis, substrate }), 'utf8');
+    console.log(`  Roh-Ablage: ${ergebnisPfad()} geschrieben (Re-Ingest via --aus-ergebnis).`);
+  }
   console.log(`  Adapter: ${ergebnis.dokumente.length} Dokumente · ${ergebnis.kanten.length} Kanten · indexSha ${ergebnis.indexSha}.`);
 
   // 3) Lokale DB frisch aufbauen (wegwerfbar; frisches Schema je Lauf, §2.2).
@@ -116,11 +152,16 @@ function baueDb(dokumente: SoftLawDok[], kanten: NormRefKante[], substrate: { ta
   seedSoftLawDb(db);
   loescheAktuelleQuelle(db);
   function loescheAktuelleQuelle(dbi: typeof db): void {
-    const ids = (dbi.prepare('SELECT id FROM soft_law').all() as unknown as { id: string }[])
+    // Scope über BEIDE Tabellen unabhängig (Härtung 4.7.2026): der Seed speist norm_referenzen aus
+    // den committeten Shards — eine Kante ohne soft_law-Zeile (inkonsistenter Zwischenstand) würde
+    // sonst überleben und beim frischen Insert die UNIQUE-Constraint reissen.
+    const dokIds = (dbi.prepare('SELECT id FROM soft_law').all() as unknown as { id: string }[])
+      .map((r) => r.id).filter(gehoertZurQuelle);
+    const kantenIds = (dbi.prepare('SELECT DISTINCT quelldok_id AS id FROM norm_referenzen').all() as unknown as { id: string }[])
       .map((r) => r.id).filter(gehoertZurQuelle);
     const delDok = dbi.prepare('DELETE FROM soft_law WHERE id = ?');
     const delKante = dbi.prepare('DELETE FROM norm_referenzen WHERE quelldok_id = ?');
-    for (const id of ids) { delDok.run(id); delKante.run(id); }
+    for (const id of new Set([...dokIds, ...kantenIds])) { delDok.run(id); delKante.run(id); }
   }
 
   const insDok = db.prepare(

@@ -51,6 +51,7 @@ export const DOKTYPEN: ReadonlyArray<Doktyp> = [
   { id: 'weisung', label: 'Weisung' },
   { id: 'rundschreiben', label: 'Rundschreiben' },
   { id: 'mwst-info', label: 'MWST-Info' },
+  { id: 'mwst-branchen-info', label: 'MWST-Branchen-Info' },
   { id: 'wegleitung', label: 'Wegleitung' },
   { id: 'leitfaden', label: 'Leitfaden' },
   { id: 'merkblatt', label: 'Merkblatt' },

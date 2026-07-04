@@ -342,6 +342,55 @@ Abweichungen/Deltas gegen die POC-Spec, offengelegt:
   `materialien-m4-estv-ks.e2e.ts` (§7c-Beweis). **M5-Folge-Posten ergänzt:** Migration der 4
   kuratierten KS (analog EDÖB-Vierer) → dann artikelscharf KS 6a → Art. 65 DBG.
 
+**Ausführungsvermerk M1 (4.7.2026):** M1 gebaut — **robots-Freigabe für www.gate.estv.admin.ch
+durch David am 4.7.2026 im Chat ERTEILT und bestätigt** (§8-Governance-Punkt geschlossen); Betrieb
+wie zugesagt: Concurrency 1–2, Delay zwischen allen Requests, identifizierender User-Agent.
+Adapter `adapter-estv-mwst.ts` + reines Anker-Modul `fedlex-anker.ts` + ID-Systematik
+`estv-mwst-ids.ts`. **Live-Empirie 4.7.:** Inventar = die ZWEI ToC-Menüs (taxInfos 22 MI +
+sectorInfos 27 MBI; `changedCiphers.xhtml` ist POST/ViewState-getrieben und als GET-Inventar
+unbrauchbar — Abweichung von §3 Q1 offengelegt); Kurz-URL-Systematik live bestätigt `MI/NN` UND
+`MBI/NN` (302 → aktuelle publicationId; Zweitsignal + stabile `quelle_url` §7c); Glossar-Publikation
+«Abkürzungen und Akronyme» (je Bereich 1, nummernlos) bewusst übersprungen. **Drift-Arbiter:**
+Hash über das komplette ToC-XHTML je Publikation, ViewState-NORMALISIERT (volatil je Request —
+zwei Fetches nach Normalisierung live byte-gleich; Roh-Hash wäre Dauer-Drift); die
+Fahrplan-Formulierung «inkl. aller cipherKeyDates» ist live gegenstandslos (ToC trägt KEINE
+cipherKeyDates, 0 Treffer) — Deckung über componentId-Wechsel im Baum, «Publiziert am»-Ziffer-
+Stichprobe bleibt Zweitsignal im Netz-Tor. **Zahlen:** Voll-Crawl 3118 Requests/~2h10 (+71 GETs
+MI-06-Nachcrawl, s. u.) → 48 Dokumente (22 MI − MI-09 kuratiert-übersprungen §2.6 + 27 MBI) ·
+3375 Roh-Kanten (3373 amtlich via serverseitige Fedlex-Anker · 2 kuratiert = Publikationen ohne
+Anker, Portal-Kontext→MWSTG) · projiziert 1739 aggregierte Kanten (1417 artikelscharf · 322
+Erlass-Ebene · 3075 Ziffer-Fundstellen mit Deep-Link-Suffix) · **1186 Cutoff-Downgrades §2.4** ·
+**MWSTG-Bucket-Split REAL** (Kopf + 2 Buckets ≤ 300 KB). **§2.4-Posten erledigt:**
+Revisions-Artikel-Listen MWSTG (34 Artikel, AS 2024 438) + MWSTV (58, AS 2024 485) kuratiert,
+DOPPELT erhoben (AS-`<mod>`-Ziele × Konsolidierungs-Fussnoten «in Kraft/mit Wirkung seit
+1.1.2025»; MWSTV = Union, konservativ §1); die unabhängige Gegenprüfungs-Re-Derivation bestätigte
+MWSTG exakt (34=34) und MWSTV mit `121_a` als einzigem (zulässig konservativem) Überschuss.
+**Gegenprüfungs-Geschichte (2 Durchgänge, ehrlich):** Durchgang 1 (unabhängiger Opus-Adversarial
+gegen Live-Quelle + Fedlex) **widerlegte** die Erstfassung — echter Anker-Drop in MI-06:
+Publikationen mit Teil-Gliederung zählen Ziffern JE TEIL neu; der Kollisions-Merge («ältester
+Stand gewinnt») zog Anker der 2025er-«Ziff. 1» (Teil I) in die gleichnamige ältere Ziffer, wo der
+Cutoff sie wegdowngradete (Art. 45/21, componentId 1016932). Fix: Fundstellen tragen
+**Teil-Kontext** («Teil I · Ziff. 1»), Rest-Kollisionen werden per « (n)»-Suffix UNTERSCHIEDEN,
+nie gemergt (kein Verlust by construction); MI-06 einzeln neu gecrawlt (+71 GETs), 47 übrige
+Dokumente offline aus den gespeicherten ToC-Substraten migriert; Durchgang 2 verifizierte den Fix.
+**Weitere live erzwungene Fixes, offengelegt:** (1) undici-Pool-Hänger durch unkonsumierten
+302-Body in der Kurz-URL-Prüfung → Body-Cancel; (2) **Pipeline-Härtung store-raw-VOR-load:**
+Adapter-Ergebnis wird als `daten/soft-law-ergebnis-<quelle>.json` persistiert (Re-Ingest
+`--aus-ergebnis` OHNE Crawl — ein Load-Bug kostete live einen kompletten 3118-Request-Crawl, nie
+wieder; genau diese Ablage machte auch den Gegenprüfungs-Fix ohne Voll-Re-Crawl möglich);
+(3) Quell-Lösch-Scope des Orchestrators über BEIDE Tabellen (verwaiste Seed-Kanten);
+(4) **latenter M3-Seed-Bug gefixt:** `seedSoftLawDb` kollabierte Shard-Fundstellen auf
+`zitat_key=''` — gleiche Ziffer-Labels verschiedener URLs/Stände rissen die UNIQUE-Constraint
+(erst an der MWST-Dichte sichtbar); jetzt eindeutige `seed:<n>`-Keys (fliessen nicht in
+Shard-Bytes, Re-Projektion bleibt byte-identisch — Tor beweist es). `stand_quelle`-Enum
++`'ziffer-datum'` (Dokument-Stand = jüngstes «Publiziert am»). ESTV-MWST-Arbiter in
+`check:materialien-netz` (leichtes Inventar 1 GET/Publikation + Kurz-URL- +
+Ziffer-Deep-Link-Stichprobe mit Publiziert-am-Abgleich). Tore grün (2-Lauf-Byte-Beweis,
+Seed-Roundtrip, 116 e2e, §7c-Playwright-Beweis + Suche/Browse-Stichprobe). **M5-Folge-Posten
+ergänzt:** Migration ESTV-MWST-INFO-09 (analog EDÖB/KS) — dann artikelscharfe Kanten auch für
+MI 09; MWSTV-Konsolidierung 2027-01-01 ist bereits publiziert (künftige Fassung) → bei
+Inkrafttreten Cutoff-Tabelle prüfen (Staleness-TTL-Vermerk aus Gegenprüfung Durchgang 1).
+
 ---
 
 ## §7 · Bewusst NICHT (Stufe 1)
