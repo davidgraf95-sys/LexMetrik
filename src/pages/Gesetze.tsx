@@ -3,6 +3,7 @@ import { useSearchParams, useLocation, Link } from 'react-router-dom';
 import { SeitenKopf } from '../components/layout/SeitenKopf';
 import { ErlassKarte, ErlassZeile } from '../components/normtext/ErlassKarte';
 import { InternationalRubriken } from '../components/normtext/InternationalRubriken';
+import { RechtsgebietSicht, RechtsgebietEinstieg } from '../components/normtext/RechtsgebietSicht';
 import {
   ladeBrowseManifest, ladeKantonSystematik, gruppiereNachKanton, filtern,
   type KantonGruppe,
@@ -565,9 +566,21 @@ export function Gesetze() {
     : ebeneParam === 'bund' ? 'bund' : null;
   const ebene: Ebene = gewaehlt ?? 'bund';
   const kanton = gewaehlt === 'kanton' ? params.get('kt') : null;
+  // Rechtsgebiets-Sicht (G6 · §4.4): zweite, achsen-orthogonale Gliederung. Eigener
+  // Zustand `?ansicht=rechtsgebiet` (nicht Teil der Ebene) — vom Landeplatz
+  // erreichbar, mit «← Übersicht» wieder verlassen.
+  const themenSicht = params.get('ansicht') === 'rechtsgebiet';
   const setzeEbene = (e: Ebene) => {
     const p = new URLSearchParams(params);
     p.set('ebene', e);
+    p.delete('kt');
+    p.delete('ansicht');
+    setParams(p, { replace: true });
+  };
+  const setzeThemen = () => {
+    const p = new URLSearchParams(params);
+    p.set('ansicht', 'rechtsgebiet');
+    p.delete('ebene');
     p.delete('kt');
     setParams(p, { replace: true });
   };
@@ -575,6 +588,7 @@ export function Gesetze() {
     const p = new URLSearchParams(params);
     p.delete('ebene');
     p.delete('kt');
+    p.delete('ansicht');
     setParams(p, { replace: true });
   };
   const setzeKanton = (k: string | null) => {
@@ -649,13 +663,13 @@ export function Gesetze() {
           <div className="flex flex-wrap items-center justify-between gap-3">
             {/* Steuerung nur NACH Säulen-Wahl (G4 · §4.1): auf dem Landeplatz
                 tragen die drei Kacheln die Steuerung, kein Tab-/Overline-Dopplung. */}
-            {!suche.trim() && gewaehlt !== null ? (
+            {!suche.trim() && (gewaehlt !== null || themenSicht) ? (
               <div className="flex flex-wrap items-center gap-3">
                 <button type="button" onClick={zurUebersicht}
                   className="text-body-s font-medium text-brass-700 hover:text-brass-600 transition-colors">
                   ← Übersicht
                 </button>
-                <Segment aktiv={ebene} onWahl={setzeEbene} />
+                {gewaehlt !== null && <Segment aktiv={ebene} onWahl={setzeEbene} />}
               </div>
             ) : <span />}
             <input
@@ -671,16 +685,26 @@ export function Gesetze() {
           {/* Landeplatz (G4 · §4.1): drei gleichwertige Einstiegskacheln mit
               Kurz-Statistik statt stillem Bund-Default. Prominenter Sprung-/
               Such-Hinweis (Cmd/Ctrl-K, §4.2) darüber. */}
-          {!suche.trim() && gewaehlt === null && (
-            <Einstieg
-              bund={gefiltert.length}
-              bundArtikel={gefiltert.reduce((a, e) => a + e.artikelAnzahl, 0)}
-              kantone={kantone.length}
-              kantonErlasse={erlasse.filter((e) => e.ebene === 'kanton').length}
-              international={international.length}
-              onWahl={setzeEbene}
-              onBefehl={() => { if (typeof window !== 'undefined') window.dispatchEvent(new CustomEvent('lm:befehlspalette')); }}
-            />
+          {!suche.trim() && gewaehlt === null && !themenSicht && (
+            <div className="space-y-4">
+              <Einstieg
+                bund={gefiltert.length}
+                bundArtikel={gefiltert.reduce((a, e) => a + e.artikelAnzahl, 0)}
+                kantone={kantone.length}
+                kantonErlasse={erlasse.filter((e) => e.ebene === 'kanton').length}
+                international={international.length}
+                onWahl={setzeEbene}
+                onBefehl={() => { if (typeof window !== 'undefined') window.dispatchEvent(new CustomEvent('lm:befehlspalette')); }}
+              />
+              {/* G6 · §4.4 — vierte Tür: die zweite Gliederung nach Rechtsgebiet/Thema. */}
+              <RechtsgebietEinstieg onWahl={setzeThemen} />
+            </div>
+          )}
+
+          {/* Rechtsgebiets-Sicht (G6 · §4.4): zweite Gliederung, Querschnitts-Themen
+              + Auto-Grundgerüst. Reine Darstellung (§3); tolerant (unzugeordnet ok). */}
+          {!suche.trim() && themenSicht && (
+            <RechtsgebietSicht erlasse={erlasse} />
           )}
 
           {/* Suche: global über Bund UND Kantone — oder (N6) auf den gewählten
@@ -735,7 +759,7 @@ export function Gesetze() {
           {/* Ein Tab-Panel pro Ebene (nur das aktive rendert); id/aria-labelledby
               folgen der aktiven Ebene und verbinden es mit dem gewählten Tab.
               Erst NACH Säulen-Wahl (gewaehlt !== null) — davor trägt der Landeplatz. */}
-          {!suche.trim() && gewaehlt !== null && (
+          {!suche.trim() && gewaehlt !== null && !themenSicht && (
           <div role="tabpanel" id={`ebene-panel-${ebene}`} aria-labelledby={`ebene-tab-${ebene}`}>
           {ebene === 'bund' && (
             gefiltert.length === 0
