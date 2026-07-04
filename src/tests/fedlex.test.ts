@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { FEDLEX, fedlexUrl, fedlexLinkFuerArtikel, erkenneFedlexGesetz, fremdgesetzNachArtikel, normVerweiseImText } from '../lib/fedlex';
+import { FEDLEX, fedlexUrl, fedlexLinkFuerArtikel, erkenneFedlexGesetz, fremdgesetzNachArtikel, normVerweiseImText, artikelToken, fremdRoutingFormB } from '../lib/fedlex';
 
 describe('fedlexUrl', () => {
   it('Zahl-Artikel', () => {
@@ -104,6 +104,88 @@ describe('Audit 5.6.2026 – Kombi-Anker Buchstabe+Suffix', () => {
     expect(fedlexUrl('OR', '335c')).toContain('#art_335_c');
     expect(fedlexUrl('ZGB', '334bis')).toContain('#art_334_bis');
     expect(fedlexUrl('OR', '77')).toContain('#art_77');
+  });
+});
+
+// artikelToken (EINE Token-Ableitung, §5): Buchstabe+lat. Suffix ohne die bekannte
+// \b-Backtracking-Falle («[a-z]? frisst das b von bis» → art_49_abis statt _a_bis).
+describe('artikelToken — Nummer → Fedlex-Anker-Token', () => {
+  it('Zahl / Buchstabe / lat. Suffix', () => {
+    expect(artikelToken('104')).toBe('104');
+    expect(artikelToken('335c')).toBe('335_c');
+    expect(artikelToken('334bis')).toBe('334_bis');
+    expect(artikelToken('4ter')).toBe('4_ter');
+  });
+  it('Buchstabe + lat. Suffix (49abis → 49_a_bis, NICHT 49_abis)', () => {
+    expect(artikelToken('49abis')).toBe('49_a_bis');
+    expect(artikelToken('66abis')).toBe('66_a_bis');
+    expect(artikelToken('329gbis')).toBe('329_g_bis');
+    expect(artikelToken('66a')).toBe('66_a');
+    expect(artikelToken('49a')).toBe('49_a');
+  });
+});
+
+// N2b (Bug David 4.7.2026, AIG Art. 5): ausgeschriebener Fremdgesetz-Name mit
+// Klammer-Kürzel. Eingabe = Text NACH «Artikel N», plus die erste Nummer.
+describe('fremdRoutingFormB — ausgeschriebener Name + Klammer-Kürzel', () => {
+  it('AIG-Fall StGB: «Artikel 66a oder 66abis des Strafgesetzbuchs (StGB)»', () => {
+    const r = fremdRoutingFormB(' oder 66abis des Strafgesetzbuchs (StGB) betroffen', '66a');
+    expect(r).not.toBeNull();
+    expect(r!.gesetz).toBe('StGB');
+    // erstes Glied (66a) + Aufzählungs-Glied (66abis), beide auf StGB.
+    expect(r!.glieder.map((g) => [g.erst, g.roh, g.artikel])).toEqual([
+      [true, '66a', 'Art. 66a StGB'],
+      [false, '66abis', 'Art. 66abis StGB'],
+    ]);
+    // Ziel-Anker: 66a → #art_66_a, 66abis → #art_66_a_bis (beide StGB).
+    expect(fedlexLinkFuerArtikel(r!.glieder[0].artikel)).toBe(`${FEDLEX.StGB}#art_66_a`);
+    expect(fedlexLinkFuerArtikel(r!.glieder[1].artikel)).toBe(`${FEDLEX.StGB}#art_66_a_bis`);
+    // regionEnd zeigt hinter «(StGB)» (der Rest « betroffen» bleibt aussen vor).
+    expect(' oder 66abis des Strafgesetzbuchs (StGB) betroffen'.slice(0, r!.regionEnd))
+      .toBe(' oder 66abis des Strafgesetzbuchs (StGB)');
+  });
+
+  it('AIG-Fall MStG mit Datums-Einschub «vom 13. Juni 1927 (MStG)»', () => {
+    const r = fremdRoutingFormB(' oder 49abis des Militärstrafgesetzes vom 13. Juni 1927 (MStG) betroffen sein.', '49a');
+    expect(r!.gesetz).toBe('MStG');
+    expect(fedlexLinkFuerArtikel(r!.glieder[0].artikel)).toBe(`${FEDLEX.MStG}#art_49_a`);
+    expect(fedlexLinkFuerArtikel(r!.glieder[1].artikel)).toBe(`${FEDLEX.MStG}#art_49_a_bis`);
+  });
+
+  it('Einzel-Nummer unmittelbar vor «des …(OR)»: «Artikel 63 des Obligationenrechts (OR)»', () => {
+    const r = fremdRoutingFormB(' des Obligationenrechts (OR)', '63');
+    expect(r!.gesetz).toBe('OR');
+    expect(r!.glieder).toHaveLength(1);
+    expect(fedlexLinkFuerArtikel(r!.glieder[0].artikel)).toBe(`${FEDLEX.OR}#art_63`);
+  });
+
+  it('Passus-Kette vor dem Namen: «Artikel 323 Absatz 1 des Zivilgesetzbuches (ZGB)»', () => {
+    const r = fremdRoutingFormB(' Absatz 1 des Zivilgesetzbuches (ZGB)', '323');
+    expect(r!.gesetz).toBe('ZGB');
+    expect(fedlexLinkFuerArtikel(r!.glieder[0].artikel)).toBe(`${FEDLEX.ZGB}#art_323`);
+  });
+
+  it('Negativ: unbekanntes Klammer-Kürzel «(Code civil)» / «(EU)» → kein Routing', () => {
+    expect(fremdRoutingFormB(' und 15 des Zivilgesetzbuches (Code civil)', '14')).toBeNull();
+    expect(fremdRoutingFormB(' der Verordnung (EU) 2016/679', '5')).toBeNull();
+  });
+
+  it('Negativ: ausgeschriebener Name OHNE Klammer-Kürzel → kein Routing (§1)', () => {
+    expect(fremdRoutingFormB(' Absatz 2 und die Bestimmungen des OR', '6')).toBeNull();
+    expect(fremdRoutingFormB(' Absatz 1 Buchstabe c AHVG', '1a')).toBeNull();
+  });
+
+  it('Ziel-Token-Prädikat: fehlt das Token im Fremd-Erlass → Glied nicht linkbar (§1, nie raten)', () => {
+    // Prädikat verneint art_66_a_bis (existiert angeblich nicht) → nur 66a linkbar.
+    const nurGrundform = (_g: unknown, token: string) => token === '66_a';
+    const r = fremdRoutingFormB(' oder 66abis des Strafgesetzbuchs (StGB)', '66a', nurGrundform);
+    expect(r!.glieder.map((g) => [g.roh, g.linkbar])).toEqual([
+      ['66a', true],
+      ['66abis', false],
+    ]);
+    // Verneint das Prädikat ALLES → kein Glied linkbar (reiner Text).
+    const keins = fremdRoutingFormB(' des Strafgesetzbuchs (StGB)', '999', () => false);
+    expect(keins!.glieder.every((g) => !g.linkbar)).toBe(true);
   });
 });
 
