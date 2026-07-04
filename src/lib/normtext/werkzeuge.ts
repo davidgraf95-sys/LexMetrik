@@ -11,6 +11,7 @@
 import { ALLE_KARTEN, istVerfuegbar } from '../startseiteConfig';
 import { ERLASS_REGISTER } from './register';
 import { MATERIAL_REGISTER, behoerdeVon, DOKTYP_LABEL } from '../materialien/register';
+import type { Herkunft } from '../verzahnung/typen';
 
 // Exportiert für das Konsistenz-Tor (werkzeuge.test.ts): jede Karten-ID muss auf
 // eine existierende Katalog-Karte zeigen — sonst verschluckt `werkzeugeFuerNorm`
@@ -98,12 +99,26 @@ export function massgebendeErlasse(modus: 'rechner' | 'vorlage'): MassgebenderEr
 // Norm + Behördenpraxis an einer Stelle). Reine Daten-Projektion aus dem
 // MATERIAL_REGISTER (§3); Reihenfolge = Behörde-rang → eigener rang.
 
-export interface MaterialBezug { key: string; titel: string; behoerdeKuerzel: string; doktypLabel: string; nummer: string | null; pfad: string }
+export interface MaterialBezug {
+  key: string; titel: string; behoerdeKuerzel: string; doktypLabel: string;
+  nummer: string | null; pfad: string;
+  /** §8-Herkunft. In-Bundle-kuratierte Materialien sind 'kuratiert'; die asynchron
+   *  geladenen Soft-Law-Kanten (kontextSoftLaw) tragen die Adapter-quelle. */
+  herkunft: Herkunft;
+  /** Stand der Dokument-Fassung (ISO) — Chip-Anzeige + Staleness-Klassifikation (§2.4). */
+  stand: string;
+  /** Repräsentativer Korpus-Artikel-Token für DIESEN Erlass (Staleness §2.4). */
+  artikel?: string;
+  /** Fundstellen-Sublabel («via Art. 24») oder undefined (Erlass-Ebene). */
+  sublabel?: string;
+}
 
 export function materialienFuerNorm(normKey: string): MaterialBezug[] {
   const out: MaterialBezug[] = [];
   for (const m of MATERIAL_REGISTER) {
     if (!(m.normKeys ?? []).includes(normKey)) continue;
+    // Kuratierter artikelscharfer Bezug für DIESEN Erlass (E6a·M5, §2.4/§7).
+    const bezug = m.artikelBezuege?.find((b) => b.erlass === normKey);
     out.push({
       key: m.key,
       titel: m.titel,
@@ -111,6 +126,10 @@ export function materialienFuerNorm(normKey: string): MaterialBezug[] {
       doktypLabel: DOKTYP_LABEL[m.doktyp],
       nummer: m.nummer ?? null,
       pfad: `/materialien/${encodeURIComponent(m.key)}`,
+      herkunft: 'kuratiert',
+      stand: m.stand,
+      artikel: bezug?.artikel,
+      sublabel: bezug ? `via Art. ${bezug.artikel.replace(/_/g, '')}` : undefined,
     });
   }
   return out.sort((a, b) => a.behoerdeKuerzel.localeCompare(b.behoerdeKuerzel) || a.key.localeCompare(b.key));
