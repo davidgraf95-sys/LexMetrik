@@ -15,7 +15,7 @@ import { VORLAGE_SEKTIONEN, KATALOG_KARTEN, istVerfuegbar } from '../lib/startse
 import { istVorlage } from '../lib/vorlagenKategorie';
 import { SYSTEMATIK, SYSTEMATIK_VON_KEY } from '../lib/normtext/systematik';
 import { ERLASS_REGISTER } from '../lib/normtext/register';
-import { KANTONE } from '../data/tarif/typen';
+import { KANTONE, KANTON_NAMEN } from '../data/tarif/typen';
 import { ROUTEN_MANIFEST } from '../routesManifest';
 
 const abschnitt = (titel: string) => NAVIGATION.find((a) => a.titel === titel)!;
@@ -60,12 +60,18 @@ describe('Navigations-SSoT', () => {
     expect(bund.kinder.map((k) => (k.art === 'link' ? { label: k.label, ziel: k.ziel } : null)))
       .toEqual(SYSTEMATIK.map((s) => ({ label: s.titel, ziel: `/gesetze?ebene=bund#sys-${s.id}` })));
     // Kantone gleich wie Bund: aufklappbare Gruppe mit den 26 Kantonen (Auftrag David 20.6.2026).
+    // Gesetzes-UX G5 · §4.3.4: ALPHABETISCH nach Vollnamen (nicht mehr föderal),
+    // Vollname als Label — dieselbe Ordnung wie das Kantonsraster der Übersicht.
     const kantone = gesetze[1] as NavGruppe;
     expect(kantone.art).toBe('gruppe');
     expect(kantone.aufklappbar).toBe(true);
     expect(kantone.standardOffen).toBe(false);
     expect(kantone.kinder.map((k) => (k.art === 'link' ? { label: k.label, ziel: k.ziel } : null)))
-      .toEqual(KANTONE.map((kt) => ({ label: kt, ziel: `/gesetze?ebene=kanton&kt=${kt}` })));
+      .toEqual(
+        [...KANTONE]
+          .sort((a, b) => KANTON_NAMEN[a].localeCompare(KANTON_NAMEN[b], 'de'))
+          .map((kt) => ({ label: KANTON_NAMEN[kt], ziel: `/gesetze?ebene=kanton&kt=${kt}` })),
+      );
   });
 
   // Soft-Vollständigkeits-Tor (Review-Befund 25.6.2026): jeder Bund-Volltext-

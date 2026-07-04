@@ -96,10 +96,9 @@ test('«/» fokussiert die Suche (Tastatur-Shortcut)', async ({ page }) => {
 
 test('SchweizKarte: Kanton-Fläche ist tastatur-fokussierbar und mit Enter wählbar (W1.6)', async ({ page }) => {
   await page.goto('/gesetze?ebene=kanton')
-  // Karten-<details> öffnen (Default zu) — das <summary> ist eindeutig (der
-  // gleiche Text steht zusätzlich als Span in der Karte selbst).
-  const summary = page.locator('summary').filter({ hasText: 'Kanton auf der Karte wählen' })
-  await summary.click()
+  // Gesetzes-UX G5 · §4.3.3: die Karte ist der Default-Einstieg der Kantons-
+  // Übersicht (direkt sichtbar, kein zugeklapptes <details> mehr).
+  await expect(page.getByRole('group', { name: /Karte der Schweizer Kantone/ })).toBeVisible()
   // Eine wählbare Fläche ist tastatur-fokussierbar (tabindex=0 + role=button —
   // die Fokus-SICHTBARKEIT selbst ist in W1.6 per Screenshot belegt) und reagiert
   // auf Enter (onKeyDown → Auswahl). Wir prüfen den Tastatur-Vertrag deterministisch
@@ -114,7 +113,8 @@ test('SchweizKarte: Kanton-Fläche ist tastatur-fokussierbar und mit Enter wähl
     return true
   })
   expect(ausgeloest).toBe(true)
-  // Nach der Wahl ist die «Karte wählen»-Auswahl weg (ein Kanton ist gewählt → Karte unmountet).
-  await expect(summary).toHaveCount(0)
+  // Nach der Wahl ist ein Kanton gewählt → die Einzelkanton-Sicht mit der
+  // «← Alle Kantone»-Zurückleiste erscheint (Karten-Übersicht unmountet).
+  await expect(page.getByRole('button', { name: /Alle Kantone/ })).toBeVisible()
   expect(kanton, 'wählbare Fläche trägt einen Kantonsnamen').toBeTruthy()
 })

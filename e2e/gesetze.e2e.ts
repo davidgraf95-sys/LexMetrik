@@ -33,12 +33,16 @@ test.describe('/gesetze — Übersicht', () => {
     expect(fehler).toEqual([])
   })
 
-  test('Kantone-Kachel zeigt das Kantonsraster', async ({ page }) => {
+  test('Kantone-Kachel: Karte default, Liste zeigt das Kantonsraster', async ({ page }) => {
     await page.goto('/gesetze')
-    await page.getByRole('main').getByRole('button', { name: /Kantone/ }).click()
-    // Das Auswahlraster zeigt je Kanton eine Karte (Wappen + Vollname + Zähler);
+    const main = page.getByRole('main')
+    await main.getByRole('button', { name: /Kantone/ }).click()
+    // G5 · §4.3.3: die Karte ist der Default-Einstieg (gleichwertig neben der Liste).
+    await expect(main.getByRole('group', { name: /Karte der Schweizer Kantone/ })).toBeVisible()
+    // Auf «Liste» wechseln → das Auswahlraster (Wappen + Vollname + Zähler) je Kanton;
     // der frühere reine «BE»-Code-Knopf existiert in dieser Form nicht mehr.
-    await expect(page.getByRole('main').getByRole('button', { name: /Bern/ })).toBeVisible()
+    await main.getByRole('group', { name: 'Ansicht' }).getByRole('button', { name: 'Liste' }).click()
+    await expect(main.getByRole('button', { name: /Bern/ })).toBeVisible()
   })
 
   test('kein horizontaler Overflow bei 390px', async ({ page }) => {
