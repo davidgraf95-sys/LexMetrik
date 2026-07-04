@@ -13,6 +13,8 @@ export interface StartseiteZaehler {
   gesetzeVolltext: number;
   /** Gerichtsentscheide im Volltext (Nicht-Verweise). */
   rechtsprechungVolltext: number;
+  /** Erfasste amtliche Materialien (Behördenpublikationen, nur-live-link). */
+  materialien: number;
   /** Verfügbare Rechner (eigene Seite). */
   rechner: number;
   /** Verfügbare Vorlagen (eigene Seite). */
@@ -21,6 +23,8 @@ export interface StartseiteZaehler {
   standGesetze: string;
   /** Stand der Rechtsprechungs-Register-Erzeugung (ISO). */
   standRechtsprechung: string;
+  /** Stand der Materialien-Register-Erzeugung (ISO). */
+  standMaterialien: string;
 }
 
 export const STARTSEITE_ZAEHLER: StartseiteZaehler = {
@@ -28,8 +32,10 @@ export const STARTSEITE_ZAEHLER: StartseiteZaehler = {
   "gesetzeKantonVolltext": 1231,
   "gesetzeVolltext": 1449,
   "rechtsprechungVolltext": 342,
+  "materialien": 326,
   "rechner": 20,
   "vorlagen": 25,
   "standGesetze": "2026-07-01",
-  "standRechtsprechung": "2026-07-02"
+  "standRechtsprechung": "2026-07-02",
+  "standMaterialien": "2026-07-04"
 };

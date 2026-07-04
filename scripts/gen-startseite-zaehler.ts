@@ -23,10 +23,12 @@ import { istVorlage } from '../src/lib/vorlagenKategorie.ts';
 const wurzel = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const GESETZE_REGISTER = resolve(wurzel, 'public/normtext/register.json');
 const RSPR_REGISTER = resolve(wurzel, 'public/rechtsprechung/register.json');
+const MATERIALIEN_REGISTER = resolve(wurzel, 'public/materialien/register.json');
 const ZIEL = resolve(wurzel, 'src/data/startseiteZaehler.generated.ts');
 
 interface ErlassEintrag { ebene: 'bund' | 'kanton'; status: string }
 interface EntscheidEintrag { verweis?: unknown }
+interface MaterialEintrag { key: string }
 
 function zaehle() {
   // Gesetze: nur echter Volltext (status 'snapshot'); nach Ebene getrennt, damit
@@ -45,15 +47,23 @@ function zaehle() {
   const rechner = KATALOG_KARTEN.filter((k) => istVerfuegbar(k) && !!k.href && !istVorlage(k)).length;
   const vorlagen = KATALOG_KARTEN.filter((k) => istVerfuegbar(k) && !!k.href && istVorlage(k)).length;
 
+  // Materialien (E6a·M5, §0/B10a): erfasste amtliche Behördenpublikationen aus dem
+  // Browse-Manifest (kuratiert + gelistete DB-Dokumente). Alle sind bibliografische
+  // Verweise (nur-live-link) — der Zähler nennt ehrlich «erfasste», nie Volltext.
+  const m = JSON.parse(readFileSync(MATERIALIEN_REGISTER, 'utf8')) as { erzeugt: string; materialien: MaterialEintrag[] };
+  const materialien = m.materialien.length;
+
   return {
     gesetzeBundVolltext: bund,
     gesetzeKantonVolltext: kanton,
     gesetzeVolltext: bund + kanton,
     rechtsprechungVolltext: entscheide,
+    materialien,
     rechner,
     vorlagen,
     standGesetze: g.erzeugt,
     standRechtsprechung: r.erzeugt,
+    standMaterialien: m.erzeugt,
   };
 }
 
@@ -74,6 +84,8 @@ function baue(): string {
     '  gesetzeVolltext: number;\n' +
     '  /** Gerichtsentscheide im Volltext (Nicht-Verweise). */\n' +
     '  rechtsprechungVolltext: number;\n' +
+    '  /** Erfasste amtliche Materialien (Behördenpublikationen, nur-live-link). */\n' +
+    '  materialien: number;\n' +
     '  /** Verfügbare Rechner (eigene Seite). */\n' +
     '  rechner: number;\n' +
     '  /** Verfügbare Vorlagen (eigene Seite). */\n' +
@@ -82,6 +94,8 @@ function baue(): string {
     '  standGesetze: string;\n' +
     '  /** Stand der Rechtsprechungs-Register-Erzeugung (ISO). */\n' +
     '  standRechtsprechung: string;\n' +
+    '  /** Stand der Materialien-Register-Erzeugung (ISO). */\n' +
+    '  standMaterialien: string;\n' +
     '}\n\n' +
     'export const STARTSEITE_ZAEHLER: StartseiteZaehler = ' + JSON.stringify(z, null, 2) + ';\n'
   );
@@ -106,5 +120,5 @@ if (istCheck) {
 } else {
   writeFileSync(ZIEL, neu, 'utf8');
   const z = zaehle();
-  console.log(`gen:zaehler: Gesetze ${z.gesetzeVolltext} (Bund ${z.gesetzeBundVolltext}/Kanton ${z.gesetzeKantonVolltext}) · Entscheide ${z.rechtsprechungVolltext} · Rechner ${z.rechner} · Vorlagen ${z.vorlagen} → src/data/startseiteZaehler.generated.ts`);
+  console.log(`gen:zaehler: Gesetze ${z.gesetzeVolltext} (Bund ${z.gesetzeBundVolltext}/Kanton ${z.gesetzeKantonVolltext}) · Entscheide ${z.rechtsprechungVolltext} · Materialien ${z.materialien} · Rechner ${z.rechner} · Vorlagen ${z.vorlagen} → src/data/startseiteZaehler.generated.ts`);
 }

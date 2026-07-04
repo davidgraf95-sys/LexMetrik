@@ -1,8 +1,8 @@
 import { useEffect, useState, type ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import {
-  kontextSync, kontextEntscheide, normenFuer,
-  type KontextTyp, type EntscheidRef,
+  kontextSync, kontextEntscheide, kontextSoftLaw, mischeMaterialien, normenFuer,
+  type KontextTyp, type EntscheidRef, type MaterialBezug,
 } from '../../lib/kontext';
 import { ladeLeitfallShard, artikelProEntscheid } from '../../lib/rechtsprechung/norm-index';
 import { usePaneSteuerung } from '../layout/usePaneLayout';
@@ -33,6 +33,18 @@ import {
 // zitat_kanten) dockt hier als weiterer JSX-Block an.
 
 const MAX_ENTSCHEIDE = 8;
+const MAX_MATERIALIEN = 8;
+
+/** Korpus-Artikel-Token → Anzeige ('20_a' → '20a'). */
+function anzeigeArtikel(token: string): string {
+  return token.replace(/_/g, '');
+}
+
+/** ISO → DD.MM.YYYY (rein, kein new Date). */
+function kurzDatum(iso: string): string {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
+  return m ? `${m[3]}.${m[2]}.${m[1]}` : iso;
+}
 
 // Exportiert (V1.3): der EntscheidLeser rendert seine beiden Richtungs-Gruppen
 // («Zitierte Normen» / «Zitierte Entscheide») mit DERSELBEN Hülle im Panel —
@@ -103,6 +115,22 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false 
     return () => { lebt = false; };
   }, [typ, normKeysKey]);
 
+  // Amtliche Materialien lazy aus den Kanten-Shards (E6a·M5): die kuratierten
+  // In-Bundle-Materialien (kontextSync) decken nur die Alt-Einträge; die per
+  // Adapter erfassten Behördenpublikationen (300+ Dokumente, artikelscharf) liegen
+  // als erlass-lokale Shards und werden hier nachgeladen. Ergebnis trägt seinen
+  // eigenen Key → Ladezustand abgeleitet (kein synchrones setState im Effekt-Body).
+  const [softLawGeladen, setSoftLawGeladen] = useState<{ key: string; refs: MaterialBezug[] } | null>(null);
+  useEffect(() => {
+    if (typ === 'material') return; // Material-Reader IST das Material
+    const keys = normKeysKey ? normKeysKey.split(',') : [];
+    let lebt = true;
+    kontextSoftLaw(typ, keys).then((r) => { if (lebt) setSoftLawGeladen({ key: normKeysKey, refs: r }); });
+    return () => { lebt = false; };
+  }, [typ, normKeysKey]);
+  const softLaw: MaterialBezug[] =
+    softLawGeladen && softLawGeladen.key === normKeysKey ? softLawGeladen.refs : [];
+
   // «via Art. N»-Sublabels (V1.2, Magic Moment 5): nur im Gesetz-Reader (genau
   // EIN normKey) aus dem erlass-lokalen Shard invertiert — kein neuer Datenpfad,
   // derselbe Promise-Cache wie die LeitfallZeile (§5/§15.3). Kein Shard = keine
@@ -149,8 +177,17 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false 
     ? `/rechtsprechung?norm=${encodeURIComponent(normKeys[0])}`
     : '/rechtsprechung';
 
-  const hatSync = normen.length > 0 || materialien.length > 0 || werkzeuge.length > 0;
-  const istLeer = !zusatzGruppen && !hatSync && !entscheideLaden && (entscheide?.length ?? 0) === 0;
+  // Sync-kuratierte + async-Soft-Law-Materialien zu EINER Gruppe gemerged, dedupe
+  // per key (bestehender kuratierter Eintrag gewinnt, §2.6). Max. 8 sichtbar.
+  const alleMaterialien = mischeMaterialien(materialien, softLaw);
+  const sichtbareMaterialien = alleMaterialien.slice(0, MAX_MATERIALIEN);
+  const restMaterialien = Math.max(0, alleMaterialien.length - MAX_MATERIALIEN);
+  // Solange die async-Materialien für den aktuellen Key noch laden, gilt das Panel
+  // NICHT als leer (kein vorzeitiges Leerbild → kein Flash/CLS).
+  const softLawLaden = typ !== 'material' && (!softLawGeladen || softLawGeladen.key !== normKeysKey);
+
+  const hatSync = normen.length > 0 || alleMaterialien.length > 0 || werkzeuge.length > 0;
+  const istLeer = !zusatzGruppen && !hatSync && !entscheideLaden && !softLawLaden && (entscheide?.length ?? 0) === 0;
 
   return (
     <section aria-labelledby="kontext-titel" className="mt-12 border-t border-line pt-6 space-y-5 max-w-reading">
@@ -243,23 +280,49 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false 
             </KontextGruppe>
           )}
 
-          {/* Materialien (für Norm- und Entscheid-Reader). */}
-          {materialien.length > 0 && (
-            <KontextGruppe titel="Amtliche Materialien" richtung="Legt aus" anzahl={materialien.length}
-              hinweis={<><span className="num">{materialien.length}</span> erfasste Behördenpublikationen (Kreisschreiben, Wegleitungen u. a.) — kein Gesetzesrang.</>}>
+          {/* Amtliche Materialien (Norm- + Entscheid-Reader): kuratierte In-Bundle-
+              Einträge + async Soft-Law-Kanten (E6a·M5), EINE Gruppe, dedupe per key.
+              Fundstellen-Sublabel (via Art. / Ziff.), Dokument-Stand am Eintrag,
+              Staleness-Hinweis §2.4, «maschinell»-Badge nur bei Heuristik-Herkunft. */}
+          {alleMaterialien.length > 0 && (
+            <KontextGruppe titel="Amtliche Materialien" richtung="Legt aus" anzahl={alleMaterialien.length}
+              hinweis={<><span className="num">{alleMaterialien.length}</span> erfasste Behördenpublikationen (Kreisschreiben, Wegleitungen, Leitfäden u. a.) — kein Gesetzesrang.</>}>
               <ul className="flex flex-col gap-1.5">
-                {materialien.map((m) => (
-                  <li key={m.key} className="text-body-s">
-                    <Link to={m.pfad} className="no-underline hover:text-brass-700">
-                      <span className="text-ink-500">{m.behoerdeKuerzel} · {m.doktypLabel}{m.nummer ? ` ${m.nummer}` : ''}</span>
-                      {' — '}<span className="font-medium">{m.titel}</span>
-                    </Link>
-                    {kannOeffnen && !istOffen(m.pfad) && (
-                      <DanebenKnopf ziel={m.pfad} label={`${m.behoerdeKuerzel} ${m.doktypLabel}`} oeffneDaneben={oeffneDaneben} className="ml-1 align-middle" />
-                    )}
-                  </li>
-                ))}
+                {sichtbareMaterialien.map((m) => {
+                  // Staleness (§2.4): nur im Einzel-Erlass-Reader (Revisions-Shard geladen)
+                  // und nur bei artikelscharfem Bezug — Dokument-Stand vor der letzten
+                  // Textänderung des Artikels ⇒ Hinweis, nie ein «aktuell»-Siegel (R16).
+                  const rev = m.artikel ? revisionFuerToken(revShardAktuell, m.artikel) : undefined;
+                  const veraltet = !!m.artikel
+                    && klassifiziereFassungsBezug({ iso: m.stand, praezision: 'tag' }, rev) === 'revidiert';
+                  return (
+                    <li key={m.key} className="text-body-s">
+                      <Link to={m.pfad} className="no-underline hover:text-brass-700">
+                        <span className="text-ink-500">{m.behoerdeKuerzel} · {m.doktypLabel}{m.nummer ? ` ${m.nummer}` : ''}</span>
+                        {' — '}<span className="font-medium">{m.titel}</span>
+                        {m.sublabel && <span className="num text-micro font-normal text-ink-500"> · {m.sublabel}</span>}
+                        <span className="num text-micro text-ink-500"> · Stand {kurzDatum(m.stand)}</span>
+                        {m.herkunft === 'maschinell' && (
+                          <StatusBadge praedikat="maschinell" className="ml-1.5 align-middle" />
+                        )}
+                      </Link>
+                      {kannOeffnen && !istOffen(m.pfad) && (
+                        <DanebenKnopf ziel={m.pfad} label={`${m.behoerdeKuerzel} ${m.doktypLabel}`} oeffneDaneben={oeffneDaneben} className="ml-1 align-middle" />
+                      )}
+                      {veraltet && m.artikel && (
+                        <span className="block text-micro text-warn-700">
+                          Dokument-Stand vor der letzten Änderung von Art. {anzeigeArtikel(m.artikel)}.
+                        </span>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
+              {restMaterialien > 0 && (
+                <Link to="/materialien" className="text-body-s text-brass-700 hover:underline">
+                  Noch <span className="num">{restMaterialien}</span> weitere · alle Materialien ansehen →
+                </Link>
+              )}
             </KontextGruppe>
           )}
 

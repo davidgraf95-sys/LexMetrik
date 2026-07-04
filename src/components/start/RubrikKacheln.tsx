@@ -15,7 +15,8 @@ import { GesetzeChips } from './GesetzeChips';
 // KEIN Register-Import in den Startseiten-Chunk, kein Client-Fetch.
 //
 // Wortlaut-Regeln (§6): konkreter Nutzen, kein «geprüft», keine Floskeln; Zähler
-// nur mit Scope, nur echter Volltext, dünne Bestände (Materialien) ohne Zahl.
+// nur mit Scope. Gesetze/Entscheide zählen echten Volltext; Materialien sind
+// bibliografische Verweise → «erfasst», nie «Volltext» (§8, E6a·M5).
 
 const z = STARTSEITE_ZAEHLER;
 const nf = (n: number) => n.toLocaleString('de-CH');
@@ -35,7 +36,8 @@ const RUBRIK: Record<string, { icon: string; nutzen: string; zaehler?: string }>
   '/materialien': {
     icon: 'clipboard',
     nutzen: 'Kreisschreiben, Leitfäden und Wegleitungen der Bundesbehörden, je mit Link zur amtlichen Fassung.',
-    // Dünner Bestand → bewusst OHNE Zähler (§3 #4).
+    // Zähler «erfasste» (§8, nie «Volltext» — alle sind nur-live-link/Verweis; E6a·M5, §0/B10a).
+    zaehler: `${nf(z.materialien)} amtliche Materialien erfasst`,
   },
   '/rechner': {
     icon: 'calculator',
