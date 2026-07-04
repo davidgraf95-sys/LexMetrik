@@ -516,6 +516,46 @@ export interface ErlassRegistereintrag {
 > Options-Leiste (G2a), kein Kopf-Umbau (G2b), keine Grundart-Verzweigung (G3a),
 > keine Anhang-/Tarif-Extraktion (G3b).
 | **G2a** | Options-Leiste (Linien/Fussnoten/Verweise) als reine `data-*`-Toggles, localStorage + Pre-Paint; R6/R9. | **`inhalt.tsx`**, `index.html`-Head | 1 Session | **golden byte-gleich** (R6, Toggles = CSS); Reader-Smoke (Ctrl+F/Anker/Print/Fussnote) |
+
+> **Ausführungsvermerk G2a (4.7.2026, Opus, PR feat/gesetzes-ux-g2a):** Gebaut.
+> Store + Leiste in `src/pages/gesetz-leser/leserOptionen.ts` (+ `LeserOptionenLeiste.tsx`),
+> CSS-Toggles in `src/index.css` (auf `.lc-leser` gescopt), verdrahtet in `inhalt.tsx`
+> (Kopf) + `main.tsx` (Pre-Paint). **Pre-Paint CSP-konform:** das `index.html`-Head-
+> Inline-Script aus §3.2 ist an der Prod-CSP (`script-src 'self'`, vercel.json) NICHT
+> möglich — die Repo-Mechanik wendet Thema/Schriftskala imperativ in `main.tsx` an
+> (kein Inline-Script); G2a folgt exakt diesem Muster (`wendeLeserOptionenAn()` vor
+> `createRoot`), setzt `data-linien/-fussnoten/-verweise` ans `<html>`. Kein Flash: die
+> data-* sind vor dem ersten React-Paint gesetzt; das prerenderte Crawler-HTML
+> (`erlassVolltextHtml`, seo-detail.ts) trägt ohnehin weder Guide noch Marker/Chips.
+> **Pane-Scope:** Attribute **global** am `<html>` ⇒ Haupt-Reader UND jedes Split-View-
+> Pane folgen einer Wahl; Umschalten = imperatives Attribut-Update + nur die
+> Switch-Buttons rendern neu (useSyncExternalStore), der Artikelbaum NIE (§15). **R6
+> byte-gleich:** `golden:vergleich` IDENTISCH (201 Fälle); der Linien-Toggle ersetzt
+> die frühere `gruppierungslinienAn`-React-State-Verzweigung durch IMMER-emittierte
+> Guide-/Einzug-Klassen (Markup byte-gleich zum bisherigen Default AN) + CSS-Ausblenden.
+> **R9 (Fussnoten):** `data-fussnoten="aus"` DÄMPFT die Marker (`opacity`/`color`), NIE
+> `display:none` — e2e prüft `display≠none` + `opacity<1` + Marker-Text erhalten
+> (Ctrl+F). **Entscheidungen im Ermessensspielraum:** (a) **Linien-Default global AN**
+> statt grundart-abhängig (K11) — `grundart` liegt NICHT auf der Laufzeit-`BrowseErlass`
+> (nur Register/`GRUNDART_SEED`); es ins Browse-Manifest zu ziehen ist eine G0-nahe
+> Datenänderung ausserhalb der byte-gleichen G2a-UI, und §3.1 markiert den grundart-
+> Default selbst als unverifizierte «messbare Annahme». AN-für-alle = heutige
+> Darstellung exakt = byte-gleich. **→ grundart-abhängiger Default vertagt (G2b/G3a,
+> wo grundart ohnehin in den Kopf einzieht).** (b) **Fussnoten-Options-Toggle koexistiert
+> mit dem bestehenden Apparat-Schalter** (Such-Leiste, `fussnotenAuf`, Default AUS): die
+> §3.1-Fassung «Marker immer im DOM, Default AN» erfordert die Marker-Render-Fix, die
+> §3.3 explizit **G2b** zuweist (und widerspricht der autoritativen DESIGN-REGLEMENT-
+> Regel «Fussnoten-Apparat default aus ist korrekt»). G2a liefert darum den byte-
+> gleichen CSS-Dämpf-Toggle; die Unifizierung der zwei Fussnoten-Bedienungen läuft mit
+> der G2b-Kopf-Zusammenführung. (c) **Verweise-«AUS»** unterdrückt die (heute nur
+> auf `:hover` sichtbare) dotted-Unterstreichung der `.decoration-dotted`-Verweis-Links;
+> Farbe/Anker/Funktion bleiben (§3.1). Alle Tore grün (`npm run gate` GRÜN,
+> `golden:vergleich` IDENTISCH, `check:linien-kanon` grün); e2e `leser-optionen`
+> (4 Fälle, R6/R9 positiv+negativ + Persistenz/Reload) + 8 bestehende Leser-/9-Punkte-
+> Specs regressionsfrei (55 e2e grün gesamt geprüft). Visual-Review Desktop 1280 +
+> Mobil 390: Leiste konsistent (lc-chip), kein H-Overflow @390, Linien/Fussnoten/
+> Verweise sichtbar schaltend. **Bewusst NICHT** (G2a-Scope): kein Kopf-Umbau, kein
+> Marker-Render-Fix, keine Grundart-Verzweigung (alles G2b/G3a).
 | **G2b** | Kopf-Zusammenführung (2 Blöcke → 1), Fussnoten-Render-Fix (nach Selektor-Prüfung), Sticky-Kopf opak, Sticky-Section-Kontextkopf, «Zitat kopieren». | **`inhalt.tsx`**, **`parts.tsx`**, evtl. `KontextPanel` | 1 Session | **Golden ändert** → neu abnehmen; Reader-Smoke |
 | **G3a** | Per-Grundart-**Darstellung**: §-Label (KANTON, Anker bleibt `#art-`/R8), Präambel/Protokolle (⑤), PDF-Rahmen (⑦), Live-Verweiskarte (⑧), Kurzerlass-Lesespalte (④). | **`parts.tsx`**, **`inhalt.tsx`**, `register.ts` | 1½ Session | **Golden ändert** → neu; `gegenpruefung: n/a — reine Darstellung` |
 | **G3b** | **Risiko-Pfad:** Anhang-Block (③/⑤) + Tarif-Anhang → echte Tabelle. Gekoppelt an `FAHRPLAN-TARIF-TABELLEN-STUFE2.md` + `annex_*`-Plan. | `ArtikelBody.tsx`, Extraktions-Skripte, `register.ts` | **mehrere Sessions** | **`check:gegenpruefung` zwingend** (Extraktion!); golden neu |

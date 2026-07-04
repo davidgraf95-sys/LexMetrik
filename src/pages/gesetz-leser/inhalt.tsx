@@ -19,6 +19,7 @@ import type { BrowseErlass, BrowseManifest } from '../../lib/normtext/browse-typ
 import type { NormSnapshot } from '../../lib/normtext/typen';
 import { formatiereDatum, passtAufSuche, pfadZu } from './helpers';
 import { ArtikelLeser, SektionKopf, SektionBaumTOC, ErlassKopfBlock } from './parts';
+import { LeserOptionenLeiste } from './LeserOptionenLeiste';
 import { beiLeerlauf } from '../../lib/leerlauf';
 import { ladeLeitfallShard, normArtikelToken, type LeitfallShard } from '../../lib/rechtsprechung/norm-index';
 import { ladeRevisionShard, revisionFuerToken, type RevisionShard } from '../../lib/verzahnung/artikel-revisionen';
@@ -205,11 +206,12 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // Pane IST die URL und pflegt sie wie heute. Ausserhalb eines Panes alles wie bisher.
   const istSekundaer = rolle === 'sekundaer';
   const [fussnotenAuf, setFussnotenAuf] = useState(false); // Fussnoten nur auf Wunsch
-  // M3: Gruppierungslinien (vertikale Schachtelungslinie je Sektion) — pro Gesetz
-  // an/aus, zustandslos (component-local useState wie fussnotenAuf; jeder Pane
-  // eigener Zustand). Default AN, damit jedes Gesetz seine Section-Schachtelung
-  // sichtbar nestet (Parität ZGB/OR ↔ Teil/Titel/Abschnitt-Gesetze).
-  const [gruppierungslinienAn, setGruppierungslinienAn] = useState(true);
+  // W2·5d G2a: Die Gruppierungs-/Gliederungslinien werden nicht mehr per
+  // component-local useState geschaltet (das rendert die Artikelliste neu, §15),
+  // sondern über den globalen data-linien-Toggle der Options-Leiste
+  // (leserOptionen.tsx) rein per CSS. renderSektion emittiert Guide + Einzug
+  // darum IMMER (wie der frühere Default AN → Markup byte-gleich); `[data-linien
+  // ="aus"]` blendet Guide + Einzug per CSS aus (index.css, gescopt auf .lc-leser).
   // N13: amtliche Kanton-Systematik (lazy) — liefert das echte Sachgebiet eines
   // kantonalen Erlasses für die Reader-Overline (statt Einheits-«Öffentliches Recht»).
   const [kantonSys, setKantonSys] = useState<Record<string, KantonSystematik>>({});
@@ -865,10 +867,11 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     // gedeckelt bei 3. MOBIL kollabiert der Einzug (`pl-0 sm:pl-einzug`), die
     // eine Guide bleibt am Spaltenrand → behebt den ~16-ch-Mobil-Fall. CLS 0:
     // Einzug = padding, Guide = border darauf; Umschalten/Kollabieren bewegt
-    // keinen Textknoten. Der Umschalter (gruppierungslinienAn) steuert Guide UND
-    // Einzug gemeinsam (aus = flach, wie bisher).
-    const guide = gruppierungslinienAn && tiefe === 1;
-    const eingerueckt = gruppierungslinienAn && tiefe > 0 && tiefe <= 3;
+    // keinen Textknoten. G2a: Guide + Einzug werden IMMER emittiert; der
+    // Options-Toggle `data-linien="aus"` blendet sie rein per CSS aus (kein
+    // Artikel-Re-Render, §15). Markup byte-gleich zum früheren Default AN (R6).
+    const guide = tiefe === 1;
+    const eingerueckt = tiefe > 0 && tiefe <= 3;
     const einzugCls = eingerueckt ? (guide ? 'pl-3 sm:pl-einzug' : 'pl-0 sm:pl-einzug') : '';
     return (
       <section key={s.id} data-normtext-linie className={`space-y-3 ${guide ? 'border-l border-guide' : ''} ${einzugCls}`}>
@@ -906,7 +909,10 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   );
 
   return (
-    <div className="space-y-5">
+    // `lc-leser`: Scope-Anker für die G2a-Options-CSS (index.css) — die
+    // data-linien/-fussnoten/-verweise-Regeln greifen NUR im Reader, nie im
+    // Norm-Popover der Rechner o. Ä.
+    <div className="lc-leser space-y-5">
       {/* Breadcrumb trägt seit A/F der Kopf: Einzelansicht → Inhalts-Kopf, Split-View
           → PaneKopf. Kein zweiter Inline-Breadcrumb mehr (sonst Dopplung im Pane). */}
       <header className="space-y-2.5 border-b border-line pb-5">
@@ -934,14 +940,10 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
               navigate(ziel);
             }}
             className="lc-chip hover:text-brass-700" title="Diesen Erlass zusätzlich in einem neuen Reiter öffnen">⧉ In neuem Reiter</button>
-          {/* M3 (Auftrag David): Gruppierungslinien-Umschalter oben AM GESETZ (nicht
-              bei der Suche/Fussnoten). Zustandslos (je Pane eigen), nur wenn das
-              Gesetz überhaupt geschachtelt ist. */}
-          {sektionen.length > 0 && (
-            <button type="button" onClick={() => setGruppierungslinienAn((v) => !v)} aria-pressed={gruppierungslinienAn}
-              className={`lc-chip hover:text-brass-700 ${gruppierungslinienAn ? 'text-brass-700' : ''}`}
-              title="Gliederungs-/Gruppierungslinien ein- oder ausblenden" aria-label="Gruppierungslinien ein- oder ausblenden">{gruppierungslinienAn ? '✓ Linien' : '⊟ Linien'}</button>
-          )}
+          {/* W2·5d G2a: Options-Leiste (Linien/Fussnoten/Verweise) — reine data-*-
+              /CSS-Toggles (leserOptionen.tsx), global, jede Instanz synchron.
+              Linien-Schalter nur bei geschachteltem Gesetz (sonst wirkungslos). */}
+          <LeserOptionenLeiste zeigeLinien={sektionen.length > 0} />
           <span className="basis-full sm:basis-auto sm:ml-auto text-micro text-ink-500">Snapshot — massgeblich ist die amtliche Fassung</span>
         </div>
       </header>

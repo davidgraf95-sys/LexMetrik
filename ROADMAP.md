@@ -493,9 +493,18 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   (Linien-Kanon 3 Rollen-Tokens + `max-w-reading` + Einzug-Skala/Mobil-Kollaps +
   `hyphens:manual` + Randtitel-Hänge-Einzug; Tore R1 `check:linien-kanon` /
   R2 eslint / R4·R5 e2e; Reglement-Falt in `DESIGN-REGLEMENT-NORMTEXT.md §4b`;
-  Wortlaut + Engine-Golden byte-gleich) **gebaut**. Nächste Etappe **G2a**
-  (Options-Leiste). R5-Mobil offengelegt auf ~30ch statt aspirativ 40ch
-  (physikalisch gedeckelt @390, s. FAHRPLAN + Spec-Kommentar).
+  Wortlaut + Engine-Golden byte-gleich) **gebaut**. **G2a** (Leser-Options-Leiste
+  Linien/Fussnoten/Verweise als reine `data-*`/CSS-Toggles am `<html>`,
+  localStorage + Pre-Paint via `main.tsx` CSP-konform ohne Inline-Script;
+  `leserOptionen.ts` + `LeserOptionenLeiste.tsx`; R6 golden byte-gleich bewiesen
+  [`golden:vergleich` IDENTISCH 201], R9 Fussnoten-«AUS» dämpft/versteckt nie
+  [e2e]; global = beide Reader-Instanzen synchron ohne Re-Render §15) **gebaut**.
+  Bewusste G2a-Grenze: Linien-Default global AN (grundart-abhängiger Default =
+  G2b, `grundart` nicht auf `BrowseErlass`); Fussnoten-Options-Toggle koexistiert
+  mit dem bestehenden Apparat-Schalter (Unifizierung = G2b Kopf-Zusammenführung).
+  Nächste Etappe **G2b** (Kopf-Merge/Fussnoten-Render-Fix/Sticky-Kontextkopf).
+  R5-Mobil offengelegt auf ~30ch statt aspirativ 40ch (physikalisch gedeckelt
+  @390, s. FAHRPLAN + Spec-Kommentar).
 - [ ] **6 · Konsultieren-Klingen** *(`[OF]`, amtlich)*:
   <!-- @meta id: W2·6 · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->
   - **Mehrsprachiger Normvergleich DE/FR/IT** (Auslegungswerkzeug, Art. 14 PublG — alle drei

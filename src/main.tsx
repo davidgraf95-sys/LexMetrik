@@ -13,6 +13,7 @@ import './index.css'
 import App from './App.tsx'
 import { effektivesThema, wendeThemaAn } from './components/thema'
 import { wendeSchriftskalaAn } from './components/layout/useSchriftskala'
+import { wendeLeserOptionenAn } from './pages/gesetz-leser/leserOptionen'
 
 // Thema so früh wie möglich anwenden (vor dem ersten App-Render) — ohne
 // CSP-verbotenes Inline-Script bleibt für Dunkel-Nutzer ein kurzes Aufblitzen
@@ -21,6 +22,10 @@ wendeThemaAn(effektivesThema())
 // Ebenso die gespeicherte Schriftskala (R3) vor dem ersten Render anwenden —
 // kein Aufblitzen der Default-Grösse für Nutzer mit eigener Wahl.
 wendeSchriftskalaAn()
+// Und die gespeicherten Leser-Optionen (W2·5d G2a: Linien/Fussnoten/Verweise)
+// als data-*-Attribute ans <html> — CSP-konform ohne Inline-Script, analog
+// Thema/Schriftskala. Default 'an' ⇒ CSS-No-op ⇒ heutige Darstellung byte-gleich.
+wendeLeserOptionenAn()
 
 // Veralteter Chunk nach einem Deploy: Vite feuert 'vite:preloadError', wenn ein
 // vorab geladener Modul-Chunk fehlt (offener Tab zeigt auf alte Hashes). Einmal
