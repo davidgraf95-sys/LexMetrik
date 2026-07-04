@@ -54,7 +54,7 @@ export const VERFALL_TERMINE: VerfallTermin[] = [
     "datum": "2026-08-01",
     "quelle": "Tabelle",
     "fundstelle": "`scripts/fedlex-cache.sh` (KLV)",
-    "wert": "gepinnt 11.5.2026",
+    "wert": "gepinnt 1.7.2026",
     "rhythmus": "einmalig — Fedlex-Konsolidierung, dann re-pinnen (§7)"
   },
   {
@@ -62,7 +62,7 @@ export const VERFALL_TERMINE: VerfallTermin[] = [
     "datum": "2026-08-01",
     "quelle": "Tabelle",
     "fundstelle": "`scripts/fedlex-cache.sh` (KVV)",
-    "wert": "gepinnt 1.1.2026",
+    "wert": "gepinnt 1.7.2026",
     "rhythmus": "einmalig — Fedlex-Konsolidierung, dann re-pinnen (§7)"
   },
   {
@@ -264,7 +264,7 @@ export const VERFALL_TERMINE: VerfallTermin[] = [
     "datum": "2027-01-01",
     "quelle": "Tabelle",
     "fundstelle": "`scripts/fedlex-cache.sh` (BPV)",
-    "wert": "gepinnt 1.1.2026",
+    "wert": "gepinnt 1.7.2026",
     "rhythmus": "einmalig — Fedlex-Konsolidierung, dann re-pinnen (§7)"
   },
   {
@@ -456,7 +456,7 @@ export const VERFALL_TERMINE: VerfallTermin[] = [
     "datum": "2028-01-01",
     "quelle": "Tabelle",
     "fundstelle": "`scripts/fedlex-cache.sh` (KVG)",
-    "wert": "gepinnt 1.1.2026",
+    "wert": "gepinnt 1.7.2026",
     "rhythmus": "einmalig — Fedlex-Konsolidierung, dann re-pinnen (§7)"
   },
   {
@@ -520,7 +520,7 @@ export const VERFALL_TERMINE: VerfallTermin[] = [
     "datum": "2031-01-01",
     "quelle": "Tabelle",
     "fundstelle": "`scripts/fedlex-cache.sh` (VRV)",
-    "wert": "gepinnt 1.4.2026",
+    "wert": "gepinnt 1.7.2026",
     "rhythmus": "einmalig — Fedlex-Konsolidierung, dann re-pinnen (§7)"
   },
   {
@@ -528,7 +528,7 @@ export const VERFALL_TERMINE: VerfallTermin[] = [
     "datum": "2031-01-01",
     "quelle": "Tabelle",
     "fundstelle": "`scripts/fedlex-cache.sh` (VTS)",
-    "wert": "gepinnt 30.4.2026",
+    "wert": "gepinnt 1.7.2026",
     "rhythmus": "einmalig — Fedlex-Konsolidierung, dann re-pinnen (§7)"
   },
   {
