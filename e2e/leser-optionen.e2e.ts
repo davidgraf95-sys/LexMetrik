@@ -6,12 +6,22 @@ import { test, expect, type Page } from '@playwright/test';
 // Toggle rein CSS) und R9 (Fussnoten-«AUS» DÄMPFT, versteckt NIE — Ctrl+F/
 // Screenreader/Print bleiben). Positiv UND negativ (AN sichtbar ↔ AUS reduziert).
 //
-// Der Reader liefert prerendertes Crawler-HTML → auf den Client-Takeover
-// (#art-…) warten, bevor gemessen wird.
+// Der Reader liefert prerendertes Crawler-HTML → auf den Client-Takeover warten
+// (die Options-Leiste existiert NUR im React-DOM = App-Ready-Marker), bevor
+// geklickt wird. Erlass-Wahl: die Toggle-Semantik ist seitengrössen-unabhängig
+// (Attribut + CSS) — Fussnoten/Verweise laufen darum auf dem KLEINEN BGBM
+// (~22 KB Snapshot, 25 Fussnoten-Marker, 62 Verweis-Links), NICHT auf dem
+// 1686-Artikel-OR: dessen Voll-Re-Render (Apparat-Toggle) + Ganzseiten-Style-
+// Recalc starvten den gedrosselten CI-Runner ins 30s-Test-Timeout (CI-Befund
+// 4.7.2026, Run 28711156193 — lokal auch mit 20×-CPU-Throttle nicht
+// reproduzierbar). Der Tiefen-Fall ZGB bleibt beim Linien-Toggle (R4-Referenz).
 
 async function warteReader(page: Page, url: string, artId: string): Promise<void> {
   await page.goto(url);
-  await expect(page.locator(`#${artId}`)).toBeVisible();
+  // App-Ready: die Leiste rendert nur der Client (nicht im Crawler-HTML) —
+  // erst danach hängen die React-Handler an den Switches.
+  await expect(page.locator('[aria-label="Darstellungsoptionen"]').first()).toBeVisible({ timeout: 20000 });
+  await expect(page.locator(`#${artId}`)).toBeVisible({ timeout: 20000 });
   await page.evaluate(() => document.fonts?.ready);
   await page.waitForTimeout(200);
 }
@@ -34,10 +44,10 @@ async function guide(page: Page, artId: string) {
 }
 
 test('Options-Leiste: drei role=switch, Grundzustand aria-checked=true + data-*=an', async ({ page }) => {
-  await warteReader(page, '/gesetze/bund/ZGB#art-684', 'art-684');
+  await warteReader(page, '/gesetze/bund/BGBM', 'art-1');
   const gruppe = page.locator('[aria-label="Darstellungsoptionen"]').first();
   await expect(gruppe).toBeVisible();
-  await expect(gruppe.getByRole('switch')).toHaveCount(3); // ZGB geschachtelt → Linien sichtbar
+  await expect(gruppe.getByRole('switch')).toHaveCount(3); // BGBM geschachtelt → Linien sichtbar
   for (const name of ['Linien', 'Fussnoten', 'Verweise']) {
     await expect(gruppe.getByRole('switch', { name })).toHaveAttribute('aria-checked', 'true');
   }
@@ -76,13 +86,13 @@ test('Linien-Toggle: AN sichtbar → AUS transparent (Guide bleibt im DOM), pers
 });
 
 test('Fussnoten-Toggle: AUS DÄMPFT die Marker, versteckt sie NIE (R9 — Ctrl+F/Screenreader)', async ({ page }) => {
-  await warteReader(page, '/gesetze/bund/OR#art-1', 'art-1');
+  await warteReader(page, '/gesetze/bund/BGBM', 'art-1');
 
   // Fussnoten-Apparat einschalten, damit die amtlichen Marker rendern (Apparat
   // ist Fedlex-treu default aus — DESIGN-REGLEMENT-NORMTEXT §4).
   await page.locator('button[title="Fussnoten ein-/ausblenden"]').first().click();
   const marker = page.locator('.lc-leser button[aria-label^="Fussnote"]').first();
-  await expect(marker).toHaveCount(1);
+  await expect(marker).toBeVisible({ timeout: 15000 });
   await marker.scrollIntoViewIfNeeded();
 
   // POSITIV: Grundzustand (data-fussnoten=an) → Marker voll sichtbar.
@@ -100,7 +110,7 @@ test('Fussnoten-Toggle: AUS DÄMPFT die Marker, versteckt sie NIE (R9 — Ctrl+F
 });
 
 test('Verweise-Toggle: AUS unterdrückt die (dotted) Link-Unterstreichung, der Link bleibt', async ({ page }) => {
-  await warteReader(page, '/gesetze/bund/OR#art-1', 'art-1');
+  await warteReader(page, '/gesetze/bund/BGBM', 'art-1');
   const link = page.locator('.lc-leser .decoration-dotted').first();
   const anzahl = await page.locator('.lc-leser .decoration-dotted').count();
   test.skip(anzahl === 0, 'kein Verweis-Link auf dieser Seite');
