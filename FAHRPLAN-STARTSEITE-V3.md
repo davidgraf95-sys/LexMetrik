@@ -179,9 +179,13 @@ Dreierfigur pro Absatz, keine Gedankenstrich-Flut, kein «Entdecken Sie»):
   denselben Regeln (Verbot «geprüfte Bausteine» → z. B. «Verträge und Eingaben aus Bausteinen
   mit Normbezug»).
 - `seo.test.ts:81` («Feste Regeln statt Sprachmodell») wird **bewusst** auf den neuen Satz
-  umgestellt — im PR als fachliche Änderung deklarieren (§6.3).
+  umgestellt — im PR als fachliche Änderung deklarieren (§6.3). **✅ erledigt (S1, PR #106,
+  3.7.2026):** Erwartung prüft seit dieser Fassung `og-Text ... 'nach festen Regeln'`.
 - Doku-Wording (ROADMAP/PROJEKTBESCHRIEB «deterministisch statt KI-geschätzt») separat
-  nachziehen (kein Blocker).
+  nachziehen (kein Blocker). **✅ erledigt (5.7.2026, W2·5c-Rest):** ROADMAP/STRUKTUR-Marker
+  aufgelöst, `Methodik.tsx`-Abschnittstitel «Feste Regeln statt Sprachmodell» (dort noch
+  hartkodiert, keine SSoT-Anbindung) auf «Deterministisch gerechnet statt KI-geschätzt»
+  umgestellt.
 
 ## §7 · Einstiegs-Navigation
 
