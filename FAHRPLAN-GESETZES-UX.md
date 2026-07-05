@@ -1117,3 +1117,51 @@ Voller `npm run gate` grün (golden byte-gleich, `check:*` inkl. `gegenpruefung`
   Desktop 1440 + Mobil 390 visuell + per computed-style verifiziert. Wortlaut +
   Engine-Golden byte-gleich (nur Klassen/Attribute). `data-grundart` bleibt als
   semantischer Marker. K11-Nutzer-Override (global an/aus) unberührt.
+
+- **U-KOPF (A1 + A3 + A4) — GEBAUT (5.7.2026, Opus), PR `feat/u-kopf-a1-a3-a4`,
+  Trailer `Roadmap: W2·5d`.** Worktree `lm-u-kopf`, kollisionsarm nach der
+  Reader-Kette (U-LINIEN gemergt, QS-PERF-Fläche `ArtikelBody.tsx` nicht berührt).
+  `Gegenpruefung: n/a — reine Darstellung` (keine `public/normtext`-Änderung; nur
+  Komponenten + CSS). Commits A1 → A3 → A4 → Reglement → Doku.
+  - **A1 — Fussnoten bei AUS VERSCHWINDEN (überstimmt R9/K5, David-Entscheid).**
+    `index.css`: `data-fussnoten="aus"` schaltet Marker-Buttons
+    (`button[aria-label^="Fussnote"]`), Marker-Cluster (`[data-fn-marker]`, neu an
+    den drei Cluster-Wrappern in `parts.tsx` inkl. Komma-Trenner) und Apparat
+    (`[data-fn-apparat]`) auf `display:none` statt `opacity/color`. Der
+    Fussnotentext bleibt im DOM (`#fn-…`); Normtext nie betroffen (stets
+    durchsuchbar); «AN» stellt alles wieder her. **Print folgt dem Toggle**;
+    **CLS 0** (nutzer-initiierter Reflow, input-exkludiert — e2e-belegt via
+    PerformanceObserver). Default AN = kein Regel-Match = byte-gleich (R6).
+    R9-Tor = e2e `leser-optionen` (Assertions scharf: AUS ⇒ nicht sichtbar +
+    display:none + Text bleibt im DOM, AN ⇒ wieder sichtbar).
+    DESIGN-REGLEMENT §4c-Regel 4 + U-KOPF-Nachtrag nachgezogen.
+  - **A3 — Positions-Leiste = echte Breadcrumbs.** `SektionKontextKopf` nimmt jetzt
+    `glieder:{id,label}[]` + `onSpringe` statt `pfad:string[]`: `nav[aria-label]` >
+    `ol`/`li`, jedes Glied ein Button → `springeZuSektion` (Klick-Ziel = Anfang der
+    Gliederungsebene, konsistent mit dem TOC-Klick), letztes Glied
+    `aria-current="location"`, tastaturbedienbar. Datenquelle bleibt die vorhandene
+    Scroll-Spy-State (kein neuer Observer, §15). Mobil-/Overflow-Kürzung rein per
+    CSS (`truncate` + `overflow-hidden` + mittlere Glieder `hidden sm:inline-flex`
+    + «…»). Der Sticky-Positions-Kopf bleibt ein ≥ 1024px-2-Spalten-Feature.
+  - **A4 — «Ansicht»-Dropdown im Kopf (Chip-Leiste entfällt).** Neue
+    `LeserAnsichtMenu.tsx` (ersetzt `LeserOptionenLeiste.tsx`): ehrliche Disclosure
+    (KEIN `role=menu` — Switches sind Formular-Steuerelemente), Trigger «Ansicht»
+    mit `aria-expanded` + `aria-controls`, Panel = `role="group"
+    aria-label="Darstellungsoptionen"` mit den drei `role="switch"`-Reihen.
+    Fokus-Falle + Escape + Fokus-Rückgabe via `useDialogFokus`;
+    pointerdown-ausserhalb schliesst; Panel absolut positioniert ⇒ kein
+    Layout-Shift. Persistenz-/Pre-Paint-Mechanik (`leserOptionen.ts`, data-* am
+    `<html>`) unverändert darunter. **pdf-embed** bleibt bewusst ohne
+    Ansicht-Controls (keine toten Steuerelemente, G2b). Beide Reader-Instanzen
+    (Einzel + Pane) teilen die Komponente.
+  - **P1-Ergebnis (Golden-Klasse):** golden-**ändernd** wie vorhergesagt — das
+    Kopf-Markup ändert sich (Dropdown-Umbau + Breadcrumb-`ol`/`li`), aber die
+    Artikel-PROSA ist byte-gleich (kein `public/normtext`-Eingriff;
+    `golden:vergleich` GRÜN = Engine/Vorlagen-Golden unberührt; alle
+    `normtext`-Struktur-/Vollständigkeits-Tore grün). Die reinen CSS-Toggle-Pfade
+    (A1-Verschwinden) sind rein visuell.
+  - **Tore:** voller `npm run gate` GRÜN (tsc · vitest · golden · lint · check).
+    `test:e2e` gegen dist (1 Worker, eigener Port): `leser-optionen`,
+    `leser-kopf-g2b` (inkl. A4-a11y-Probe + A3-Breadcrumbs), neuer
+    `leser-kopf-a9` (A9-Throttle CI?4:6, CLS 0, 0 Konsolenfehler), `a11y` (axe),
+    `gesetze-ux-g3a/g3b`, `verzahnung` (Split-View) grün.
