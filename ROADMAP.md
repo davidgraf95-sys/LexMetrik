@@ -490,7 +490,7 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   golden byte-gleich, e2e-Anker erhalten, §12-Koordination (tailwind↔W3·14, seo/prerender↔SEO-A11Y,
   Topbar/UniversalSuche↔E2-Suche), Pflicht-Screenshot-Serie + Abnahme-Mappe. Trailer `Roadmap: W2·5c`.
 - [ ] **5d · Gesetzes-UX & Darstellungs-Reglement** *(GESETZES-UX, `[OF]`, eigener Worktree; Auftrag David 4.7.)*:
-  <!-- @meta id: W2·5d · status: ready · of: ja · blocker: null · dep: [W2·5c] · kollision: [src/pages/gesetz-leser/parts.tsx, src/pages/gesetz-leser/inhalt.tsx, src/components/normtext/ArtikelBody.tsx, src/lib/normtext/register.ts] · seq-hart: [W2·7-VZUI(parts.tsx)] · seq-weich: [W2·6a-MAT/M5(KontextPanel, nur G2)] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-GESETZES-UX.md -->
+  <!-- @meta id: W2·5d · status: ready · of: ja · blocker: null · dep: [W2·5c] · kollision: [src/pages/gesetz-leser/parts.tsx, src/pages/gesetz-leser/inhalt.tsx, src/components/normtext/ArtikelBody.tsx, src/lib/normtext/register.ts, src/components/suche, scripts/normtext] · seq-hart: [QS-PERF(ArtikelBody.tsx)] · seq-weich: [W2·5b-L0(scripts/normtext, nur U-PDF)] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-GESETZES-UX.md -->
   UX/Lesbarkeit des Gesetz-Lesers auf State-of-the-Art heben (Fedlex =
   Mindestlatte). **EINE Linien-Sprache** (3 benannte Rollen `--guide-gliederung`/
   `--rule-artikel`/`--rule-struktur` statt 4 Ad-hoc-Opazitäten; max 1 Guide,
@@ -638,6 +638,28 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   scrollt im Container, 0 Page-Overflow @390, Tausender-Apostroph korrekt).
   **Offen (G3b-Rest): nur noch Klasse C** (SG-Füllpunkt-Rest, Extraktion). Detail:
   `FAHRPLAN-TARIF-TABELLEN-STUFE2.md`.
+  **Stand 5.7.: G0–G6 ✅ gemergt** (#132/#135/#136/#141/#143/#145/#147/#148/#149,
+  golden byte-gleich). **Anmerkungs-Welle A1–A18 (David 5.7., Go erteilt im Chat
+  «run till dry»; Wortlaut-Quelle `docs/ux-audit-2026-07/ANMERKUNGEN-DAVID-2026-07-05.md`,
+  Bau-Spec `FAHRPLAN-GESETZES-UX.md` §10):** revidiert die GEMERGTEN Etappen —
+  U-LINIEN (überarbeitet G1+A8: Linien-Regeln aus dem TATSÄCHLICHEN Gesetzes-Aufbau,
+  Struktur-Sidecar, neues Tor) → U-KOPF (umbaut G2a/G2b+A1/A3/A4: Fussnoten-AUS =
+  verschwinden [überstimmt R9, David-Entscheid; heute dämpft CSS nur], Breadcrumbs,
+  «Ansicht»-Dropdown; Golden-Klasse per P1-Beweis) → U-VERWEIS (A7/A10/A11/A13:
+  Plural-Linker «in den Artikeln…», Präambel-Verweise, strukturiertes Verweis-Popover
+  Artikel→Entscheide→Materialien — Risiko-Pfad, `check:gegenpruefung`) → U-POSITION
+  (A2/A16/A17: Scrollbalken-Proportionalität, exakte Zurück-Restoration,
+  Split-View-Fundstellen-Sprung — hart NACH QS-PERF). Parallel kollisionsarm:
+  U-SUCHE (A5/A6: normQuery aus der `BefehlsPalette` in die NORMALE Suchleiste,
+  Palette entfällt als eigenes UI, ⌘K fokussiert; Relevanz-Gruppierung; KEIN
+  Zweit-Index) · U-UEBERSICHT (A14/A15: Titel umbrechen statt kappen,
+  Relevanz-Sortierung dokumentiert-deterministisch, Gliederungs-Umschalter
+  Relevanz/Systematisch/Rechtsgebiet auf allen 3 Säulen; G6 = Modus statt vierte
+  Tür) · U-PDF (A12: Download = amtliches PDF der gepinnten Fassung, SPARQL
+  build-time, Pin-Überwachung). A18 (BGE-Regeste nach Sprachen) → W2·6-B B2.
+  A9 = DoD-Querschnitt (CPU-Throttle-Beweis) in jedem Bau-Prompt. **Kollisions-
+  Precheck gegen laufende Worktrees (lm-qsperf/lm-l0) vor jeder Einheit; W2·7-Klingen
+  #154 und W2·6a-MAT sind gemergt — nicht mehr live.** Trailer `Roadmap: W2·5d`.
 - [ ] **6 · Konsultieren-Klingen** *(`[OF]`, amtlich)*:
   <!-- @meta id: W2·6 · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->
   - **Mehrsprachiger Normvergleich DE/FR/IT** (Auslegungswerkzeug, Art. 14 PublG — alle drei
@@ -675,7 +697,11 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
     - [ ] **+ Auftrags-Eingang 30.6.: Bündel B** — **B1** BGE ohne «vollständiges Urteil» (12/272,
       <!-- @meta id: W2·6-B · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->
       `azaUrteil:null`+kein Auszug → AZA-Resolver, *Daten/`QS-GP`*) · **B2** Regeste amtlich = Absätze +
-      massgebliche Artikel fett (Quelle nachextrahieren, *Daten/`QS-GP`*, Geschwister von B1) · **B3**
+      massgebliche Artikel fett (Quelle nachextrahieren, *Daten/`QS-GP`*, Geschwister von B1) —
+      **inkl. A18** (David 5.7., `FAHRPLAN-GESETZES-UX.md` §10/U-REGESTE): Regeste der amtlichen
+      BGE nach Sprachen strukturiert (DE→FR→IT, Struktur-/Marker-basiert, keine Wortraten-Heuristik,
+      im Zweifel unverändert §1) — EIN Regeste-Pass Extraktion+Darstellung, Risiko-Pfad
+      `check:gegenpruefung` · **B3**
       Sticky-Kopf überdeckt Body in `EntscheidLeser.tsx` (*reine UI, eigener Commit*). Details im Eingangsblock oben.
     - [x] **Verweis-Präzision im Entscheid-Leser (Referenz BGE 151 III 377)** *(W2·6, `QS-GP`, 3.7.2026)*.
       **Teil 1 (Bug, §1-nah):** i.V.m.-Ketten-Verlinkung. Nur das letzte Glied trägt das Kürzel

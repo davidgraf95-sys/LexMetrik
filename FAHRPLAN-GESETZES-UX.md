@@ -812,3 +812,174 @@ Trailer `Roadmap: W2·5d`, `Gegenpruefung: n/a — reine Prüflogik`). Belege: d
 Klassifikation + Grenzfälle in `docs/ux-audit-2026-07/erlass-klassifikation.json`
 und `docs/ux-audit-2026-07/klassifiziere-erlasse.mjs`; die Anker-Invariante ist
 am Code verifiziert (`parts.tsx:183`, `inhalt.tsx:453/510/571`).
+
+---
+---
+
+## 10 · Anmerkungs-Welle A1–A18 (David, 5.7.2026) — revidierte Bau-Spec
+
+**Quelle (WÖRTLICH massgeblich):** Davids Anmerkungen zur Gesetzesdarstellung,
+Sammlung 5.7.2026 — im Repo persistiert als
+[`docs/ux-audit-2026-07/ANMERKUNGEN-DAVID-2026-07-05.md`](docs/ux-audit-2026-07/ANMERKUNGEN-DAVID-2026-07-05.md)
+(per Pathspec committet, §12 Ziff. 2; die ursprüngliche Job-tmp-Ablage ist flüchtig
+und zählt nicht als Quelle §14). Die Datei endet mit «(weitere Anmerkungen folgen)»
+→ **dieser Abschnitt fixiert den Stand A1–A18 (5.7. 13:02)**; Nachzügler erhalten
+neue A-Nummern und werden additiv eingeordnet, nie stillschweigend hier eingefaltet.
+
+**Status:** **David-Go erteilt 5.7.2026 im Chat** («führe es gleich aus. run till
+dry») — Bau freigegeben; A3/A5-Defaults = primäre Lesart, von David nicht
+widersprochen (die 10.6-Go-Fragen sind damit BEANTWORTET, s. u.). Ausführung als
+Opus-Einheiten (Daueranweisung Modellwahl); Fable orchestriert nur.
+
+**Basis-Stand (Orchestrator verifiziert 5.7. am Code + an den Ausführungs­vermerken
+in §6):** Plan-Einbau #130 + **G0–G6 sind GEMERGT** auf `origin/main` (Stand
+`19fdf311`): G0 #132, **G1 #135**, **G2a #136**, **G2b #141**, **G3a #143**, G3b
+Schritt 1 #147 / Schritt 2 #148+#149, G4 #137, G5 #138, G6 #145 — je mit
+Ausführungsvermerk in §6 dieses Fahrplans (G1 Z.493, G2a Z.520, G2b Z.561, G3a
+Z.618, G4 Z.738, G5 Z.740, G6 Z.744, G3b Z.609/625) und golden byte-gleich
+(`golden:vergleich` IDENTISCH 201). Das ROADMAP-@meta `status: ready` ist insofern
+stale (alle Etappen-Zeilen G0–G6 in §6 gelten als ✅). **→ Die §10-Einheiten
+ÜBERARBEITEN gemergte Etappen, sie bauen sie nicht neu (Detail KO1).**
+
+### 10.0 · Kritik-Einarbeitung (Ultracode-Runde 5.7., Verdikt je Befund)
+
+Drei adversariale Linsen (david-treue, repo-realitaet, kollision-risiko) auf den
+Synthese-Entwurf, plus die Orchestrator-Korrektur der stale Entwurfs-Basis (KO1).
+Jeder Befund mit Verdikt; Verworfenes explizit.
+
+| # | Linse | Befund (verkürzt) | Verdikt | Konsequenz in diesem Abschnitt |
+|---|---|---|---|---|
+| **KO1** | **Orchestrator-Korrektur** | **Entwurfs-Basis war stale.** Der Synthese-Entwurf las einen VERALTETEN Checkout und behauptete teils, G1/G2a/G2b/G3a seien «noch nicht gebaut» (U-LINIEN «G1 einfalten, kein Nachbau»; KB3 beschreibt `fussnotenAuf` als React-Conditional-Rendering mit DOM-Entfernung). Am echten `origin/main` (`19fdf311`) sind **G0–G6 GEMERGT** (#132/#135/#136/#141/#143/#145/#147/#148/#149; Ausführungsvermerke §6). | **berechtigt — richtiggestellt** | Basis-Stand oben korrigiert. **U-LINIEN = ÜBERARBEITUNG des gemergten G1-Kanons + K11** (nicht «einfalten»). **U-KOPF = UMBAU des gemergten G2a/G2b-Stands.** KB1/KB3-Verdikte unten entsprechend nachgezogen; P1 (10.2) neu gefasst. Bündelung + Davids Wortlaut bleiben unverändert. |
+| **KA1** | david-treue | Die A1–A18-Sammlung EXISTIERT (`~/.claude/jobs/f331de94/tmp/…`, 5.7. 13:02) — die frühere «existiert nirgends»-Behauptung beruhte auf einer Suche ohne `~/.claude/jobs/`. | **berechtigt — Blocker aufgelöst** | Dieser Abschnitt ist auf Davids **tatsächlichem Wortlaut** gebaut (jedes A-Zitat aus der Datei). |
+| **KA2** | david-treue | Root-Cause war der args-Übergabe-Bug des Workflow-Skripts (JSON-String statt Objekt) — NICHT «Datei nie geschrieben, David muss neu liefern». | **berechtigt** | Kein Zutun Davids nötig. Anmerkungen als **Repo-Datei** persistiert (erledigt) und hier als Quelle verankert. |
+| **KA3** | david-treue | Die Lieferverweigerung war bei fehlender «WÖRTLICH massgeblich»-Quelle korrekt. | **bestätigend** | Prinzip bleibt: ohne Quelle kein Scope (§14.2/§7). |
+| **KA4** | david-treue | A5 ist entscheidbar: normQuery in die NORMALE Suchleiste, Palette entfällt als eigenes UI (primäre Lesart). Restspannung: e2e `befehlspalette`-Spec, «/»-Shortcut-Koexistenz, Startseite-V3-Satz «HeaderSuche bleibt UNVERÄNDERT». | **berechtigt** | In **U-SUCHE** als Akzeptanzpunkte (10.2 P3); `FAHRPLAN-STARTSEITE-V3.md`-Vermerk wird beim Bau nachgezogen (deklarierte Spec-Änderung, David-Entscheid 5.7.). |
+| **KA5** | david-treue | Datei endet offen («weitere Anmerkungen folgen») — «18» nicht blind hartkodieren. | **berechtigt** | Kopfzeile fixiert Stand 5.7. 13:02; Nachzügler = neue A-Nummern. |
+| **KB1** | repo-realitaet | **Nicht nur G0**, sondern **G0–G6 sind gebaut + gemergt** (KO1); der Entwurf behandelte nur G0 als erledigt. ROADMAP-@meta `ready` ist stale. | **berechtigt — durch KO1 erweitert** | §6-Zeilen G0–G6 gelten als ✅. **A8 baut auf dem gemergten G1-Kanon + G0-grundart auf; A14/A15 auf G5/G6.** Keine Etappe wird neu geplant. |
+| **KB2** | repo-realitaet | Transkript-/Job-Suche fehlte im Entwurf als Such-Ort. | **Hinweis — gegenstandslos** | Durch KA1 (Fund) erledigt; als Such-Protokoll-Lektion notiert. |
+| **KB3** | repo-realitaet | Entwurf: `fussnotenAuf` sei React-Conditional-Rendering (Marker bei AUS aus dem DOM ENTFERNT). **Das ist der PRE-G2b-Stand — heute überholt.** Nach G2b (#141) sind Marker **+ Apparat IMMER im DOM** (nur an `artOffen` gebunden), der alte `fussnotenAuf`-React-Schalter ist **entfernt**; Prominenz steuert allein der `data-fussnoten`-CSS-Toggle: **AUS dämpft** (`opacity`/`color`), **NIE `display:none`** (`index.css:242–256`, R9/§8). | **stale — richtiggestellt (KO1)** | Für **U-KOPF** heisst das: A1 dreht den heutigen **CSS-Dämpfungs-Pfad** auf **verstecken** (Marker-`button[aria-label^="Fussnote"]` → aus dem visuellen Fluss; Apparat-Blöcke `[data-fn-apparat]` gemäss Entscheid), NICHT einen Conditional-Render umbauen. Die byte-gleich-Frage ist neu zu stellen (P1): sie hängt am **A4-Dropdown-Umbau** (Chip-Leiste → «Ansicht»-Dropdown = Markup-Änderung, mutmasslich G2b-Klasse), nicht an einem nicht mehr existenten Render-Zweig. |
+| **KC1** | kollision-risiko | Live-Kollision W2·5d ↔ **laufende QS-PERF-Einheit** (`ArtikelBody.tsx`, Worktree `lm-qsperf`, #152). (W2·7-Klingen ist inzwischen GEMERGT #154 — nicht mehr live; s. KO1.) | **berechtigt** | **Kollisions-Precheck als Pflicht-Zeile jeder Einheit** (10.3): vor jedem Bau `git worktree list` + Datei-Abgleich; ArtikelBody-berührende Einheiten hart NACH QS-PERF; eigener Worktree zwingend. A2 baut fachlich auf QS-PERF auf (so Davids A2-Text). |
+| **KC2** | kollision-risiko | `register.ts`/`src/lib/normtext`/`scripts/normtext` sind **Risiko-Pfade** (`check:gegenpruefung`-Liste) — register-berührende Etappen sind nicht «reine Darstellung». | **berechtigt** | Gegenprüfungs-Spalte in 10.2 pro Einheit explizit: Linker/Extraktion/Generator/Registerfeld ⇒ **gegenpruefung-pflichtig** (U-VERWEIS, U-PDF, U-REGESTE); reine CSS-/UI-Einheiten ⇒ `n/a` mit Begründung. `public/normtext`/`scripts/normtext`-berührende Läufe gegen die laufende **L0-Einheit** (`lm-l0`, extrahiere-fedlex) sequenzieren. |
+| **KC3** | kollision-risiko | «Keine Datei seit …»-Suchbehauptung veraltet stündlich (Parallel-Sessions). | **Hinweis — gegenstandslos** | Durch KA1 ohne Handlungsbedarf; Lektion wie KB2. |
+| **KC4** | kollision-risiko | Persistenz-Vorschlag `docs/ux-audit-2026-07/…` ist §12-verträglich, aber per **Pathspec committen**. | **berechtigt** | Erledigt: Datei liegt im Repo, per Pathspec committet. |
+| **KC5** | kollision-risiko + repo-realitaet | Bestätigungen: Verweigerung §14-konform; zitierte Repo-Fakten (K10, Startseite-V3-Zeilen, Audit-Belege) stimmen; G0-Aufwand real belegt. | **bestätigend** | Keine Änderung. |
+
+**Explizit VERWORFEN:**
+- Die Entwurfs-Diagnose «Sammel-Datei wurde nie geschrieben; David muss sie erneut
+  übergeben» — **falsch** (KA1/KA2): Datei existierte, der Bug lag in der
+  args-Übergabe des Orchestrierungs-Skripts. Davids Zeit wird nicht beansprucht.
+- Die Entwurfs-Prämisse «G1/G2a/G2b/G3a noch nicht gebaut» und die daraus
+  abgeleiteten Formeln «G1 einfalten, kein Nachbau» / «`fussnotenAuf` =
+  Conditional-Render mit DOM-Entfernung» — **stale/falsch** (KO1/KB1/KB3): alle
+  Etappen sind gemergt; die §10-Einheiten überarbeiten sie.
+- KB2/KC3 als **Handlungsbedarf** — durch den Fund gegenstandslos (nur als
+  Such-Protokoll-Lektion behalten). Kein weiterer Befund verworfen.
+
+### 10.1 · Bündelung A1–A18 → Bau-Einheiten (§14 Ziff. 2)
+
+Bündelung nach Bau-Fläche + Risiko-Klasse (nie Rechtsinhalt/Extraktion mit reinem
+UI in einer Einheit). Davids eigene Bündel-Hinweise («EINE Kopf-Einheit», «EINE
+Such-Einheit», «EINE Übersichten-Einheit») sind übernommen.
+
+| Einheit | Anmerkungen | Kern (Wortlaut-Anker) | Verhältnis zu §2–§7 |
+|---|---|---|---|
+| **U-LINIEN** | **A8** | Linien-Gliederung «komplett überarbeiten», Regeln **nach tatsächlichem Gesetzes-Aufbau** (Struktur-Sidecar: Tiefe/Ebenen/Artikel-Dichte), nicht nach grundart-Kategorie («zgb sehr viele, arg fast keine») | **ÜBERARBEITET den GEMERGTEN G1-Linien-Kanon (#135) + K11/G3a-Default (KO1)** — G1 (3 Rollen-Tokens, Einzug-Skala, `check:linien-kanon`) IST gebaut; A8 revidiert das *Regelwerk* «wann welche Linie» weg vom grundart-Kategorie-Default hin zu aufbau-basierten, deterministischen Regeln (Struktur-Sidecar). K11-Tri-State (Nutzer-Override) bleibt. Tor = Nachfolger von R4/`check:linien-kanon`; Regeln ins DESIGN-REGLEMENT-NORMTEXT §4b. Referenzfälle visuell beweisen: ZGB, OR, ArG, VMWG, kurzer Erlass, Kanton-§, Staatsvertrag. |
+| **U-KOPF** | **A1 + A3 + A4** | A1 Fussnoten bei AUS **verschwinden statt abdunkeln** · A3 Positions-Leiste → **echte klickbare Breadcrumbs** (primäre Lesart, nav/aria, Mobil-Kürzung) · A4 Darstellungsoptionen als **«Ansicht»-Dropdown im Kopf** (Chip-Leiste entfällt) | **BAUT AUF dem GEMERGTEN G2a/G2b-Stand AUF (KO1).** Heute (nach G2b #141): EIN `ErlassLeserKopf` (`parts.tsx`), Fussnoten-Marker **+ Apparat IMMER im DOM**, `data-fussnoten`-CSS-Toggle **dämpft** (`index.css:242–256`); Sticky-`SektionKontextKopf` zeigt den Pfad als Textzeile (`parts.tsx:461`). **A1 überstimmt R9/K5** («dämpft nur») — deklarierte fachliche Änderung, David 5.7.: Marker bei AUS visuell **weg** (CSS von `opacity` → verstecken; Trade-off Ctrl-F/Screenreader betrifft NUR die Marker-Ziffern, Fussnotentext bleibt im DOM `[data-fn-apparat]`/`#fn-…`) + Print-Verhalten dokumentieren; R9-Tor + DESIGN-REGLEMENT-NORMTEXT §4c anpassen; e2e `leser-optionen` nachziehen. **A3** löst den `SektionKontextKopf` in klickbare Breadcrumbs auf. **A4** ersetzt die G2a-Chip-Leiste durch das in §3.3 vertagte «Ansicht»-Popover (jetzt Hauptbedienung; Persistenz-/Pre-Paint-Mechanik §3.2 bleibt darunter). Golden-Klasse per P1-Beweis. |
+| **U-SUCHE** | **A5 + A6** | A5 normQuery-Parser **in die normale Suchleiste** (HeaderSuche/useUniversalSuche); Norm erkannt ⇒ Direkt-Sprung als oberster Treffer; **Palette entfällt als eigenes UI, ⌘K/Ctrl-K fokussiert die Suchleiste** (primäre Lesart) · A6 Treffer-Gruppierung nach Typ mit Relevanz-Rangfolge (Norm-Sprung → Gesetze/Artikel → Entscheide → Materialien → Werkzeuge) | **baut auf dem GEMERGTEN G4 auf (#137)** und ersetzt dessen §4.2-Palette-Teil: der deterministische Parser `src/lib/suche/normQuery.ts` existiert bereits; A5 verlagert ihn aus der `BefehlsPalette.tsx` (global in Shell) in die normale Suchleiste. K10 bleibt voll gültig: **kein Zweit-Index**, Parser sitzt auf `artikelVolltext` (E2-Edge-Suche = api/suche, abgegrenzt). Akzeptanzpunkte (KA4): e2e `befehlspalette`-Spec umbauen · Koexistenz mit geschütztem «/»-Shortcut (`tastatur.e2e`) · Startseite-V3-Satz «HeaderSuche bleibt UNVERÄNDERT» als überholte Spec-Zeile in `FAHRPLAN-STARTSEITE-V3.md` deklariert nachziehen. |
+| **U-VERWEIS** | **A7 + A10 + A11 + A13** | A10 Plural-Linker «in den Artikeln A, B … und K» (MWSTG Art. 5 = 5 Links, Dativ/Fremdgesetz-Signal) · A11 Verweise in **Präambel/Ingress** (Genitiv-Map «der Bundesverfassung»→BV, kuratiert/deterministisch) · A7 Verweis-Popover strukturiert: Artikel-Wortlaut → massgebliche Entscheide → klar abgetrennt Materialien (bestehende Verzahnungs-Grammatik wiederverwenden) · A13 Materialien-Kanten klarer, artikelscharf zuerst, Erlass-Ebene dezenter | **neue Einheit nach G3a** (Linker-Fläche wie #134/N2b: `fedlex.ts`/NormText). **Risiko-Pfad** (Linker = Extraktions-Klasse): Regressionstest MWSTG Art. 5 verbatim + Negativfälle + Korpus-grep «Artikeln \d» in die Gegenprüfung. Darstellung (A7/A13): lazy, CLS 0, Popover kompakt (Top-n + Zähler), Wortfeld-Tor, Visual-Review-Pflicht (DSG 24 / DBG 65 / MWSTG). |
+| **U-POSITION** | **A2 + A16 + A17** | A2 Scrollbalken-Proportionalität (Wurzel-Verdacht `content-visibility:auto` + zu kleine `contain-intrinsic-size: auto 320px`, `index.css:270`; Fix-Kandidaten: per-Artikel-Höhenschätzung aus Struktur-Sidecar / Höhen-Cache / Deaktivierung auf langen Gesetzen — §15: Funktions-Treue schlägt Tempo) · A16 Zurück landet **exakt** am Ausgangsort (anker-basiert: letzter sichtbarer Artikel + Offset; inkl. Split-View-Wechsel/Pane-Schliessen) · A17 Split-View öffnet **direkt an der Fundstelle** (Norm ⇒ Artikel+Passus; Entscheid ⇒ Erwägung via `ersteFundstelle`; Materialien ⇒ Ziffer; nie stumm falsch) | **neue Einheit**, eng verwandt (alle drei hängen an der Höhen-/Anker-Mechanik). **Hart NACH QS-PERF** (KC1; `ArtikelBody.tsx`/content-visibility-Fläche, Davids A2-Text verlangt das selbst). Kein Markup-Ziel → golden byte-gleich anstreben, empirisch prüfen; Split-View-e2e (Pane-History) grün halten. Testfälle: OR/ZGB Daumen-ans-Ende ⇒ letzter Artikel; OR Art. 5 → Verweis → Zurück = Art. 5 im Viewport; Cross-Erlass; jeder ⧉-Öffnungsweg. |
+| **U-UEBERSICHT** | **A14 + A15** | A14 Kanton-Übersicht: lange Titel **umbrechen statt kappen** (@390 besonders) + **Relevanz-Sortierung** mit dokumentiertem deterministischem Kriterium (keine geratene Wichtigkeit; G5-Umschalter Alphabet/Erlass-Zahl/Region bleiben) · A15 **Gliederungs-Umschalter auf allen drei Säulen** Bund/Kantone/International: Relevanz · Systematisch · **Rechtsgebiet** (G6-Gerüst wird Gliederungs-Modus in JEDER Säule statt eigener vierter Tür); Wahl persistent, Deep-Links `?gliederung=` stabil | **erweitert den GEMERGTEN G5 (#138) + G6 (#145)** (G6-Grundgerüst `rechtsgebiet-thema.ts` bleibt wie in §4.4 begrenzt — K8-Zeitsperre unberührt; heute ist G6 «vierte Tür» `?ansicht=rechtsgebiet`, A15 macht daraus einen Modus je Säule). Kollisionsarm (Übersicht-Komponenten `src/pages/Gesetze.tsx`, nicht Leser); Bedien-Vokabular konsistent mit A4-Dropdown. Visual-Review ZH gross/AI klein, Desktop+Mobil. |
+| **U-PDF** | **A12** | Download-Aktion lädt das **AMTLICHE PDF** der gepinnten Fassung — Bund: Fedlex-Manifestation via SPARQL `isExemplifiedBy` **build-time** (Suffix-Falle `-2` aus P1-a/b!), Kanton: LexWork-PDF, Staatsverträge: hinterlegte Quelle; Beschriftung ehrlich «Amtliches PDF (Fassung vom …)»; ohne amtliches PDF ⇒ Aktion weglassen (nie Schein-Amtlichkeit, §8) | **neue kleine Einheit.** Generator-/Registerfeld-Anteil ⇒ Risiko-Pfad-nah (KC2): PDF-URL in Pin-/Currency-Überwachung (`check:fedlex-versionen` deckt pdf-Pins seit P1-b), URL-Ermittlung mit Stichproben-Gegenprüfung. `scripts/normtext`-Berührung gegen laufende **L0-Einheit** (`lm-l0`) sequenzieren. Ist-Stand des heutigen Download/Print-Knopfs zuerst erheben. |
+| **U-REGESTE** | **A18** | Amtliche BGE (272): Regeste **nach Sprachen sortiert** (DE→FR→IT, Struktur-/Marker-basiert, keine Wortraten-Heuristik; im Zweifel unverändert §1) | **NICHT W2·5d** — gehört in **W2·6-B B2** («Regeste amtlich nachextrahieren»): EIN Regeste-Pass Extraktion + Sprach-Struktur + Darstellung. Risiko-Pfad Extraktion ⇒ `check:gegenpruefung`. Im ROADMAP-Einbau dort vermerkt. |
+| **A9** | Querschnitt | «gut bedienbar und flüssig … auch auf schwächeren geräten» | **Kein Feature — DoD-Zeile in JEDEM Bau-Prompt** (10.4). |
+
+### 10.2 · Verbindliche Prüf-/Beweispunkte je Einheit
+
+- **P1 (U-KOPF, neu gefasst nach KO1/KB3):** Es gibt **keinen** `fussnotenAuf`-
+  Conditional-Render-Pfad mehr — Marker + Apparat liegen seit G2b immer im DOM,
+  AUS dämpft nur per CSS (`index.css:242–256`). Die Golden-Frage ist daher **nicht**
+  «bleibt der Default-Render byte-gleich», sondern: **ändert der A4-Dropdown-Umbau
+  (Chip-Leiste → «Ansicht»-Dropdown im `ErlassLeserKopf`) das Markup?** Vermutlich
+  **ja** ⇒ die Einheit ist golden-**ändernd** (Neu-Abnahme wie G2b), das
+  R6-Byte-Gleich-Versprechen gilt dann NUR für die reinen CSS-Toggle-Pfade
+  (Linien/Verweise/Fussnoten-Sichtbarkeit). Die A1-CSS-Änderung selbst
+  (Dämpfen → Verstecken) ist rein visuell; sie ist am Wortlaut-Byte-Vergleich
+  (footnote-gestrippt) zu beweisen, nicht zu behaupten.
+- **P2 (U-VERWEIS):** MWSTG Art. 5 verbatim = 5 Links (art_31/35/37/38/45 im
+  Snapshot verifizieren); bounded Kette, nie über den Fliesstext hinaus;
+  Fremdgesetz-Signal («…Artikeln 4 und 5 des StGB») korrekt geroutet;
+  Präambel-Test an einem BV-zitierenden Ingress.
+- **P3 (U-SUCHE):** Norm-Query «OR 257d» ⇒ oberster Treffer + Enter springt;
+  Freitext unverändert; ⌘K fokussiert Suchleiste; «/»-Shortcut koexistiert;
+  e2e-Suite (befehlspalette umgebaut, tastatur, HeaderSuche) voll grün.
+- **P4 (U-POSITION):** OR/ZGB: Scroll-Daumen ans Ende ⇒ letzter Artikel sichtbar,
+  Daumen-Position stabil; Zurück-Restoration exakt; ⧉-Fundstellen-Sprung je
+  Öffnungsweg; Split-View-e2e grün.
+- **P5 (U-PDF):** Stichprobe ≥10 Erlasse (Bund/Kanton/Staatsvertrag): geladenes
+  PDF = amtliche gepinnte Fassung (Fassungsdatum im PDF gegen `stand` geprüft);
+  Suffix-`-2`-Fall dabei.
+- **P6 (U-LINIEN):** Referenzfälle aus 10.1 als Vorher/Nachher-Screenshots gegen
+  den **gemergten G1-Kanon**; Regel-Tabelle («ab Tiefe ≥N ⇒ Guide», …) im
+  Reglement + maschinelles Tor (Nachfolger `check:linien-kanon`).
+
+### 10.3 · Reihenfolge + Kollisions-Sequenzierung (§12/§14, KC1)
+
+**Pflicht-Precheck vor JEDER Einheit:** `git worktree list` + Datei-Abgleich gegen
+die eigenen Kollisions-Dateien. Laufende Einheiten (Stand 5.7.): `lm-qsperf`
+(QS-PERF #152: **ArtikelBody.tsx**, ArtikelLeser, vite.config) · `lm-l0` (W2·5b
+L0: **scripts/normtext**, public/normtext/bund) · SG-Tarif (#155). **W2·7-Klingen
+(#154) und W2·6a-MAT sind GEMERGT — nicht mehr live** (KO1). Eigener Worktree
+zwingend (`worktree: ja`); nie zwei Sessions in derselben Datei.
+
+**Harte Reader-Kette** (parts.tsx/inhalt.tsx/ArtikelBody.tsx — sequenziell, je eine
+Einheit; Start erst nach Rebase auf den QS-PERF-Merge):
+
+1. **U-LINIEN** (= Überarbeitung des gemergten G1-Kanons inkl. A8)
+2. **U-KOPF** (= Umbau des gemergten G2a/G2b inkl. A1/A3/A4; P1 entscheidet Golden-Klasse)
+3. **U-VERWEIS** (Risiko-Pfad, `check:gegenpruefung`)
+4. **U-POSITION** (hart nach QS-PERF; fachlich auf dessen Stand aufbauend)
+
+**Kollisionsarm parallel/dazwischen** (keine Leser-Dateien): **U-SUCHE**
+(Suche-Komponenten; nach W2·5c-Stand) · **U-UEBERSICHT** (G5/G6-Fläche
+`src/pages/Gesetze.tsx`) · **U-PDF** (Generator/Registerfeld; gegen `lm-l0`
+sequenzieren). **U-REGESTE** läuft NICHT hier, sondern als Teil von W2·6-B B2.
+
+**Aufwand (kalibriert an G0 = real 1 Session):** U-LINIEN 1–1½ · U-KOPF 1–1½ ·
+U-SUCHE 1 · U-VERWEIS 1½ (inkl. Gegenprüfung) · U-POSITION 1–1½ · U-UEBERSICHT
+1–1½ · U-PDF ½–1 · U-REGESTE in W2·6-B budgetiert.
+
+### 10.4 · Querschnitt A9 — DoD-Zeile für jeden Bau-Prompt (wörtlich übernehmen)
+
+> «Beweise Bedienbarkeit (Tastatur/Touch/aria, Tap-Ziele) und Flüssigkeit unter
+> CPU-Throttle (Playwright `setCPUThrottlingRate 6`): Toggle-/Scroll-/Such-
+> Interaktionen ohne spürbaren Lag, keine Long-Tasks-Kaskade, CLS 0;
+> `check:perf-budget` bleibt grün — Schwellen dürfen nicht gerissen werden
+> (§15; Tempo zählt nur bei grüner Treue).»
+
+### 10.5 · Deklarierte Änderungen an §0–§7 dieses Fahrplans (David-Entscheide 5.7.)
+
+- **R9/K5 überstimmt (A1):** Fussnoten-AUS **versteckt** die Marker (statt dämpfen).
+  R9 wird zu: «AUS entfernt die Marker visuell; der Fussnotentext bleibt im DOM
+  (`[data-fn-apparat]`/`#fn-…`); Print-Verhalten definiert; Trade-off im Reglement
+  §4c dokumentiert.» Der heutige CSS-Dämpfungs-Pfad (`index.css:245`) wird umgestellt.
+- **§3-Chip-Leiste ersetzt (A4):** Bedienung = «Ansicht»-Dropdown im Kopf; das in
+  §3.3 vertagte Popover ist jetzt die Hauptbedienung. §3.1-Umfang (genau 3 Toggles,
+  keine Wucherung) bleibt.
+- **§4.2-Palette ersetzt (A5):** kein eigenes Palette-UI; Parser `normQuery.ts` in
+  der HeaderSuche, ⌘K fokussiert sie. K10 (kein Zweit-Index) bleibt verbindlich.
+- **G1-Linien-Regelwerk überarbeitet (A8):** aufbau-basierte Regeln statt
+  grundart-Kategorie-Default; der gemergte G1-Kanon + K11-Tri-State bleiben Basis.
+- **§7 Bewusst-NICHT ergänzt:** Kein eigenes Palette-UI mehr · kein Render-eigenes
+  PDF als Download (nur amtliche PDFs, sonst keine Aktion) · Fussnoten-TEXT bleibt
+  immer im DOM (nur Marker-Sichtbarkeit ist schaltbar) · Sprach-Heuristik über
+  Wortraten für Regesten verboten (A18: nur Struktur/Marker, im Zweifel unverändert).
+
+### 10.6 · Go-Status (5.7.2026 — BEANTWORTET)
+
+1. **Go zur Anmerkungs-Welle:** **ERTEILT** (David im Chat 5.7.: «führe es gleich
+   aus. run till dry»). Reihenfolge 10.3; Teil-Go je Einheit möglich (kollisionsarme
+   Einheiten zuerst, während die Reader-Kette auf QS-PERF wartet).
+2. **A3-Lesart:** Breadcrumbs = klickbare Auflösung der Positions-Leiste (primäre
+   Lesart) — **gilt** (von David nicht widersprochen; Default = gebaut).
+3. **A5-Lesart:** Palette entfällt als eigenes UI, ⌘K fokussiert die Suchleiste
+   (primäre Lesart) — **gilt** (von David nicht widersprochen; Default = gebaut).
