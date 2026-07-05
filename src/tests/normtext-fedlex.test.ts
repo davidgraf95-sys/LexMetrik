@@ -244,6 +244,66 @@ describe('extrahiereArtikel', () => {
     });
   });
 
+  // ── Formel-/Bild-Adjazenz (Härtung 5.7.2026) ────────────────────────────────
+  // Drei Adjazenz-Klassen, in denen der Haupttext-Pfad Normtext NEBEN einem <img>
+  // oder in einem markenlosen Folge-<dd> stumm verlor. Fixtures = reale Fedlex-
+  // Ausschnitte (VTS art_123, SSV art_24, Konsolidierung 20260701).
+  describe('Formel-/Bild-Adjazenz — Text neben <img> / markenloses Folge-<dd> (§1)', () => {
+    // Klasse A: <p class="bild"> mit <img> GEFOLGT von echtem Normtext. Vor dem Fix
+    // erfasste der match[6]-Zweig NUR das Bild → der Nach-Text fiel weg (VTS 123/3).
+    const VTS_ART_123 = `<article id="art_123"><a name="a123"></a><h6 class="heading" role="heading"><a href="#art_123"><b>Art. 123</b> Türen, Notausstiege</a></h6><div class="collapseable"><p class="absatz man-space-before-4"><sup>3</sup>&nbsp;Gesellschaftswagen und Kleinbusse benötigen Notausstiege mit einer lichten Weite von mindestens 0,60&nbsp;m auf 0,43&nbsp;m. Die Anzahl (n) richtet sich nach folgender Formel:</p><p class="bild"><img data-scaled-width="108" data-scaled-height="8" src="image/image1.png">Türen zählen ebenfalls als Notausstiege. Die Notausstiege sind deutlich zu kennzeichnen und möglichst gleichmässig auf beiden Fahrzeugseiten anzuordnen.<sup><a href="#fn-x" id="fnbck-x">593</a></sup></p></div></article>`;
+
+    it('Klasse A: Text NACH einer Formel(-als-Bild) bleibt als eigener Block erhalten', () => {
+      const r = extrahiereArtikel(VTS_ART_123, '123')!;
+      const idxBild = r.bloecke.findIndex((b) => b.bild);
+      expect(idxBild).toBeGreaterThan(-1);
+      // Der Nach-Text steht als eigener Block DIREKT nach dem Bild (Dokumentreihenfolge).
+      const nach = r.bloecke[idxBild + 1];
+      expect(nach.text).toMatch(/^Türen zählen ebenfalls als Notausstiege\./);
+      expect(nach.text).toMatch(/gleichmässig auf beiden Fahrzeugseiten anzuordnen\.$/);
+      // Fussnoten-Ziffer «593» leakt NICHT in den Text (§ Footnote-Leak).
+      expect(nach.text).not.toMatch(/593/);
+      // Abs. 3 (der Formel-Einleitungssatz) bleibt unverändert VOR dem Bild.
+      expect(r.bloecke[idxBild - 1].text).toMatch(/richtet sich nach folgender Formel:$/);
+    });
+
+    it('Klasse B: Text VOR dem <img> im selben <p class="bild"> bleibt erhalten', () => {
+      // Reale VTS-Anhang-Variante «<p class="bild"><sup>N = A +</sup><img></p>»:
+      // der Formel-Präfixtext steht VOR dem Bild.
+      const HTML = `<article id="art_x"><div class="collapseable"><p class="bild">N = A + <img src="image/image27.png"></p></div></article>`;
+      const r = extrahiereArtikel(HTML, 'x')!;
+      const idxBild = r.bloecke.findIndex((b) => b.bild);
+      expect(idxBild).toBeGreaterThan(0);
+      expect(r.bloecke[idxBild - 1].text).toBe('N = A +');
+    });
+
+    it('Regel-Fall byte-gleich: reines <p class="bild"> mit nur <img> erzeugt NUR den Bild-Block', () => {
+      const HTML = `<article id="art_x"><div class="collapseable"><p class="bild"><img src="image/image9.png"></p></div></article>`;
+      const r = extrahiereArtikel(HTML, 'x')!;
+      const nichtLeer = r.bloecke.filter((b) => b.bild || b.text);
+      expect(nichtLeer).toHaveLength(1);
+      expect(nichtLeer[0].bild?.datei).toBe('image/image9.png');
+      expect(nichtLeer[0].text).toBe('');
+    });
+
+    // Klasse C: markenloses Folge-<dd> als Fortsetzung des vorausgehenden lit.-Items.
+    // Reale SSV art_24-Struktur: «<dt>a.</dt><dd>Signalnamen:</dd><dt></dt><dd>Beschreibung</dd>».
+    const SSV_ART_24 = `<article id="art_24"><a name="a24"></a><h6 class="heading" role="heading"><a href="#art_24"><b>Art. 24</b> Vorgeschriebene Fahrtrichtung</a></h6><div class="collapseable"><p class="absatz man-space-before-4"><sup>1</sup>&nbsp;Um dem Führer die vorgeschriebene Fahrtrichtung anzuzeigen, werden folgende Signale verwendet:</p><dl class="man-space-after-0"><dt class="man-space-before-4">a. </dt><dd class="man-space-before-4">«Fahrtrichtung rechts» (2.32), «Fahrtrichtung links» (2.33):</dd><dt class="man-space-before-4"></dt><dd class="man-space-before-4">Der Führer muss vor dem Signal nach rechts bzw. links abbiegen;</dd><dt class="man-space-before-4">b. </dt><dd class="man-space-before-4">«Hindernis rechts umfahren» (2.34):</dd><dt class="man-space-before-4"></dt><dd class="man-space-before-4">Der Führer muss das Hindernis rechts umfahren.</dd></dl></div></article>`;
+
+    it('Klasse C: markenloses Folge-<dd> wird an das vorausgehende lit.-Item angehängt (keine leere Marke)', () => {
+      const b = extrahiereArtikel(SSV_ART_24, '24')!.bloecke[0];
+      // Genau zwei Items a/b — KEINE markenlose («») Kachel.
+      expect(b.items!.map((i) => i.marke)).toEqual(['a', 'b']);
+      // Signalname UND verbindliche Beschreibung stehen im selben Item, mit Space getrennt.
+      expect(b.items![0].text).toBe(
+        '«Fahrtrichtung rechts» (2.32), «Fahrtrichtung links» (2.33): Der Führer muss vor dem Signal nach rechts bzw. links abbiegen;',
+      );
+      expect(b.items![1].text).toBe(
+        '«Hindernis rechts umfahren» (2.34): Der Führer muss das Hindernis rechts umfahren.',
+      );
+    });
+  });
+
   describe('Verschachtelte <dl> — lit. → nummerierte Unterpunkte (Bug 25.6.2026)', () => {
     // Reale Fedlex-Struktur MStG art_42 (verkürzt): ein lit-<dd> enthält eine
     // verschachtelte <dl> mit nummerierten Unterpunkten; danach folgen weitere
@@ -721,6 +781,26 @@ describe('extrahiereAnhang (M13-Annex)', () => {
     );
     const ex = extrahiereAnhang(html, 'annex_5')!;
     expect(ex.bloecke).toEqual([{ absatz: null, text: '…' }]);
+  });
+
+  // Adjazenz-Härtung 5.7.2026 (§6-Regressionsschutz): der Anhang-Pfad erfasst
+  // markenlose <dd>-Chapeaus SCHON via markeloseNotizen() als Prosa-Block. Die
+  // Haupttext-Fortsetzungslogik (parseDefinitionsListe, !anhang) darf hier NICHT
+  // zusätzlich greifen — sonst DOPPELT sich der Chapeau (VTS-Anhang-Mess-Tabellen).
+  it('markenloser <dd>-Chapeau im Anhang erscheint GENAU EINMAL (keine Dublette)', () => {
+    const html = wrap(
+      sektion('annex_6',
+        '<h1 class="heading"><a href="#annex_6">Anhang 6</a></h1><div class="collapseable">' +
+        '<dl><dt></dt><dd>Alle Fahrzeuge müssen folgende Bedingungen erfüllen:</dd>' +
+        '<dt>151 </dt><dd>Erste Bedingung.</dd><dt>152 </dt><dd>Zweite Bedingung.</dd></dl></div>'),
+    );
+    const ex = extrahiereAnhang(html, 'annex_6')!;
+    // Chapeau als Prosa-Block, danach die nummerierten Items — Chapeau NICHT als Item.
+    const chapeauBloecke = ex.bloecke.filter((b) => /Alle Fahrzeuge müssen/.test(b.text));
+    expect(chapeauBloecke).toHaveLength(1);
+    const mitItems = ex.bloecke.find((b) => b.items);
+    expect(mitItems!.items!.map((i) => i.marke)).toEqual(['151', '152']);
+    expect(mitItems!.items!.some((i) => i.marke === '')).toBe(false);
   });
 
   it('fehlende Sektion → null', () => {
