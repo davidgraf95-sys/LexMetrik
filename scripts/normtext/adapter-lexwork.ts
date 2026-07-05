@@ -37,8 +37,13 @@ export interface LexArtikel {
     absatz: string | null;
     text: string;
     items?: Array<{ marke: string; text: string }>;
-    /** Stufe 2: Mehrspalten-Tabelle (NW/BS/SO/VS/ZG/TG ·/—-Text). */
-    mehrspaltig?: { kopf?: string[]; zeilen: string[][] };
+    /** Stufe 2: Mehrspalten-Tabelle (NW/BS/SO/VS/ZG/TG ·/—-Text). Kanonisch
+     * `spalten` (typisiert, T-B1); `kopf` bleibt als Legacy-Feld im Typ. */
+    mehrspaltig?: {
+      kopf?: string[];
+      spalten?: Array<{ typ: 'bereich' | 'zahl' | 'text' | 'betrag'; titel: string }>;
+      zeilen: string[][];
+    };
   }>;
   /**
    * N1 — amtlicher Randtitel (Sachtitel) des Artikels aus

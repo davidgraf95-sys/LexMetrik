@@ -3,9 +3,13 @@
  *
  * Prüft:
  * 1. NW art 3: Einleitungssatz «… wie folgt zu berechnen:» bleibt im text-Feld;
- *    mehrspaltig.kopf=['Leistungslohnband','Stundenansatz']; erste Zeile=['1','Fr. 50.00'].
+ *    mehrspaltig.spalten=[text 'Leistungslohnband', betrag 'Stundenansatz'];
+ *    erste Zeile=['1','Fr. 50.00'].
  * 2. SO art 44: Einleitungssatz «Die Einkommenssteuer für ein Jahr beträgt» bleibt;
- *    mehrspaltig.kopf=['Steuer','Einkommen'].
+ *    mehrspaltig.spalten=[zahl 'Steuer', text 'Einkommen'].
+ *
+ * Kanton-Nachzug 5.7.2026: reichereMehrspaltig emittiert das kanonische typisierte
+ * `spalten`-Modell (T-B1/T-B4), nicht mehr Legacy-`kopf`.
  * 3. Block ohne ·/—-Marker → unverändert (kein mehrspaltig gesetzt).
  * 4. Block mit ·/—-Marker, aber nicht parsebar (ambige Zelle) → unverändert (§1).
  * 5. BS-Stil: führende bare Tarif-Nr. → kein Intro (Label gleich am Anfang).
@@ -18,7 +22,11 @@ type TestBlock = {
   absatz: string | null;
   text: string;
   items?: Array<{ marke: string; text: string }>;
-  mehrspaltig?: { kopf?: string[]; zeilen: string[][] };
+  mehrspaltig?: {
+    kopf?: string[];
+    spalten?: Array<{ typ: 'bereich' | 'zahl' | 'text' | 'betrag'; titel: string }>;
+    zeilen: string[][];
+  };
 };
 
 // ── NW art 3: Leistungslohnband / Stundenansatz mit Einleitungssatz ──────────
@@ -44,10 +52,15 @@ describe('NW art 3: Einleitungssatz + mehrspaltig', () => {
     expect(bloecke[0].mehrspaltig).toBeDefined();
   });
 
-  it('kopf = [Leistungslohnband, Stundenansatz]', () => {
+  it('spalten = [text Leistungslohnband, betrag Stundenansatz]', () => {
     const bloecke: TestBlock[] = [{ absatz: '1', text: nwText }];
     reichereMehrspaltig(bloecke);
-    expect(bloecke[0].mehrspaltig!.kopf).toEqual(['Leistungslohnband', 'Stundenansatz']);
+    expect(bloecke[0].mehrspaltig!.spalten).toEqual([
+      { typ: 'text', titel: 'Leistungslohnband' },
+      { typ: 'betrag', titel: 'Stundenansatz' },
+    ]);
+    // Legacy-kopf ist ersetzt, nicht zusätzlich getragen (§5 eine Quelle).
+    expect(bloecke[0].mehrspaltig!.kopf).toBeUndefined();
   });
 
   it('erste Zeile = [1, Fr. 50.00]', () => {
@@ -77,10 +90,15 @@ describe('SO art 44: Einleitungssatz + mehrspaltig', () => {
     expect(bloecke[0].text).toBe('Die Einkommenssteuer für ein Jahr beträgt');
   });
 
-  it('kopf = [Steuer, Einkommen]', () => {
+  it('spalten = [zahl Steuer, text Einkommen]', () => {
     const bloecke: TestBlock[] = [{ absatz: null, text: soText }];
     reichereMehrspaltig(bloecke);
-    expect(bloecke[0].mehrspaltig!.kopf).toEqual(['Steuer', 'Einkommen']);
+    // «0.00%» → Satz-Spalte (zahl, rechts/gruppiert); «von den ersten 12'000
+    // Franken» ist Prosa → text (NIE gruppiert; §7 kein Jahr wird zum Betrag).
+    expect(bloecke[0].mehrspaltig!.spalten).toEqual([
+      { typ: 'zahl', titel: 'Steuer' },
+      { typ: 'text', titel: 'Einkommen' },
+    ]);
   });
 
   it('erste Zeile korrekt', () => {
@@ -128,7 +146,11 @@ describe('BS-Stil: kein Einleitungssatz, Tabelle startet gleich', () => {
     // Der Label «Tarif-Nr.» erscheint nicht im bsText als «Tarif-Nr.: »,
     // daher idx=0 (kein Intro) → text='' Fallback
     expect(bloecke[0].mehrspaltig).toBeDefined();
-    expect(bloecke[0].mehrspaltig!.kopf).toEqual(['Tarif-Nr.', 'Verfahren', 'Gebühr']);
+    expect(bloecke[0].mehrspaltig!.spalten).toEqual([
+      { typ: 'text', titel: 'Tarif-Nr.' },
+      { typ: 'text', titel: 'Verfahren' },
+      { typ: 'bereich', titel: 'Gebühr' },
+    ]);
   });
 
   it('erste Zeile korrekt', () => {
