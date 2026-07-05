@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-26",
+  "erzeugt": "2026-07-05",
   "eintraege": [
     {
       "id": "bund/bge/152_V_2",
@@ -7,7 +7,7 @@
       "gerichtName": "Bundesgericht",
       "gerichtstyp": "bundesgericht",
       "kanton": "CH",
-      "abteilung": null,
+      "abteilung": "V",
       "nummer": "152 V 2",
       "bgeReferenz": "152 V 2",
       "zitierung": "BGE 152 V 2",
@@ -24,7 +24,33 @@
       },
       "regeste": {
         "text": "Art. 56 Abs. 2, Art. 61 lit. a und f bis ATSG und Art. 69 Abs. 1 bis IVG (beide in der seit 1. Januar 2021 geltenden Fassung); Gerichtskosten im kantonalen Verfahren bei Rechtsverweigerungs- oder Rechtsverzögerungsbeschwerden auf dem Gebiet der Invalidenversicherung. Eine Rechtsverweigerungs- oder Rechtsverzögerungsbeschwerde, welche im Rahmen eines invalidenversicherungsrechtlichen Verfahrens beim kantonalen Versicherungsgericht eingereicht wird, führt nicht direkt zur Gewährung oder Ablehnung von Leistungen und ist daher keine Leistungsstreitigkeit im Sinne von Art. 61 lit. f bis ATSG, die gemäss Art. 69 Abs. 1 bis IVG kostenpflichtig ist. Mangels kantonaler gesetzlicher Grundlage durfte das Versicherungsgericht des Kantons Tessin keine Verfahrenskosten erheben (E. 4.3.2).",
-        "quelle": "opencaselaw"
+        "quelle": "opencaselaw",
+        "sprachfassungen": [
+          {
+            "sprache": "de",
+            "kopf": "Art. 56 Abs. 2, Art. 61 lit. a und fbis ATSG und Art. 69 Abs. 1bis IVG (beide in der seit 1. Januar 2021 geltenden Fassung); Gerichtskosten im kantonalen Verfahren bei Rechtsverweigerungs- oder Rechtsverzögerungsbeschwerden auf dem Gebiet der Invalidenversicherung.",
+            "absaetze": [
+              "Eine Rechtsverweigerungs- oder Rechtsverzögerungsbeschwerde, welche im Rahmen eines invalidenversicherungsrechtlichen Verfahrens beim kantonalen Versicherungsgericht eingereicht wird, führt nicht direkt zur Gewährung oder Ablehnung von Leistungen und ist daher keine Leistungsstreitigkeit im Sinne von Art. 61 lit. fbis ATSG, die gemäss Art. 69 Abs. 1bis IVG kostenpflichtig ist. Mangels kantonaler gesetzlicher Grundlage durfte das Versicherungsgericht des Kantons Tessin keine Verfahrenskosten erheben (E. 4.3.2)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F152-V-2%3Ade&lang=de&type=show_document"
+          },
+          {
+            "sprache": "fr",
+            "kopf": "Art. 56 al. 2, art. 61 let. a et fbis LPGA et art. 69 al. 1bis LAI (tous deux dans leur version en vigueur depuis le 1er janvier 2021); frais de justice dans la procédure cantonale en cas de recours pour déni de justice ou retard injustifié dans le cadre d'une procédure en matière d'assurance-invalidité.",
+            "absaetze": [
+              "Un recours pour déni de justice ou retard injustifié formé devant le tribunal cantonal des assurances dans le domaine de l'assurance-invalidité ne porte pas directement sur l'octroi ou le refus de prestations et ne constitue donc pas un litige en matière de prestations au sens de l'art. 61 let. fbis LPGA, soumis à des frais en vertu de l'art. 69 al. 1bis LAI. En l'absence de base légale en droit cantonal, le Tribunal des assurances du canton du Tessin ne pouvait pas percevoir de frais de procédure (consid. 4.3.2)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F152-V-2%3Afr&lang=fr&type=show_document"
+          },
+          {
+            "sprache": "it",
+            "kopf": "Art. 56 cpv. 2, art. 61 lett. a e fbis LPGA e art. 69 cpv. 1bis LAI (entrambi nel tenore in vigore dal 1° gennaio 2021); spese giudiziarie in procedura cantonale in caso di ricorso per denegata/ritardata giustizia nell'ambito di una procedura in materia di assicurazione per l'invalidità.",
+            "absaetze": [
+              "Un ricorso per denegata/ritardata giustizia inoltrato dinanzi al tribunale cantonale delle assicurazioni in ambito AI non porta direttamente sulla concessione o sul rifiuto di prestazioni e dunque non è una controversia relativa a prestazioni nel senso dell'art. 61 lett. fbis LPGA, soggetta a spese in virtù dell'art. 69 cpv. 1bis LAI. In assenza di una base legale di diritto cantonale, il Tribunale delle assicurazioni del Cantone Ticino non poteva prelevare le spese di procedura (consid. 4.3.2)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F152-V-2%3Ait&lang=it&type=show_document"
+          }
+        ]
       },
       "regesteAmtlich": true,
       "abschnitte": [
@@ -255,7 +281,7 @@
       "kuratierung": "maschinell",
       "quelle": "opencaselaw",
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F152-V-2%3Ade&lang=de&zoom=&type=show_document",
-      "abgerufen": "2026-06-26",
+      "abgerufen": "2026-07-05",
       "fassungsToken": "b7080eb0c05048547609579409dbff8ffe046f265160d65992852f4c26ce727a",
       "sha": "ebfe03a564840e437d1c13126a56ca6be15bff332276493d144aae62d59c7f01",
       "azaUrteil": null,

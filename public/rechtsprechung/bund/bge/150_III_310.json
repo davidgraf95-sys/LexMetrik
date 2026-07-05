@@ -24,7 +24,33 @@
       },
       "regeste": {
         "text": "Art. 47 Abs. 2 BGBB; Art. 216c OR; Vorkaufsrecht des Pächters. Rechtliche Grundlagen (E. 3.3). Zur Frage, ob ein Vorkaufsfall allein deshalb ausgeschlossen ist, weil zwischen Verkäufer und Käufer eine freundschaftliche Beziehung besteht (E. 3.5).\nRegeste\n Art. 47 al. 2 LDFR; art. 216c CO; droit de préemption du fermier. Bases légales (consid. 3.3). Question de savoir si un cas de préemption est exclu du seul fait de l'existence d'une relation amicale entre le vendeur et l'acheteur (consid. 3.5).\nRegesto\n Art. 47 cpv. 2 LDFR; art. 216c CO; diritto di prelazione dell'affittuario. Basi legali (consid. 3.3). Esame della questione volta a determinare se un caso di prelazione sia escluso solo perché esiste un rapporto di amicizia tra il venditore e l'acquirente (consid. 3.5).",
-        "quelle": "opencaselaw"
+        "quelle": "opencaselaw",
+        "sprachfassungen": [
+          {
+            "sprache": "de",
+            "kopf": "Art. 47 Abs. 2 BGBB; Art. 216c OR; Vorkaufsrecht des Pächters.",
+            "absaetze": [
+              "Rechtliche Grundlagen (E. 3.3). Zur Frage, ob ein Vorkaufsfall allein deshalb ausgeschlossen ist, weil zwischen Verkäufer und Käufer eine freundschaftliche Beziehung besteht (E. 3.5)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-III-310%3Ade&lang=de&type=show_document"
+          },
+          {
+            "sprache": "fr",
+            "kopf": "Art. 47 al. 2 LDFR; art. 216c CO; droit de préemption du fermier.",
+            "absaetze": [
+              "Bases légales (consid. 3.3). Question de savoir si un cas de préemption est exclu du seul fait de l'existence d'une relation amicale entre le vendeur et l'acheteur (consid. 3.5)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-III-310%3Afr&lang=fr&type=show_document"
+          },
+          {
+            "sprache": "it",
+            "kopf": "Art. 47 cpv. 2 LDFR; art. 216c CO; diritto di prelazione dell'affittuario.",
+            "absaetze": [
+              "Basi legali (consid. 3.3). Esame della questione volta a determinare se un caso di prelazione sia escluso solo perché esiste un rapporto di amicizia tra il venditore e l'acquirente (consid. 3.5)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-III-310%3Ait&lang=it&type=show_document"
+          }
+        ]
       },
       "regesteAmtlich": true,
       "abschnitte": [

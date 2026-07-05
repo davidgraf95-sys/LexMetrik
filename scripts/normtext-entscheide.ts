@@ -15,8 +15,10 @@ import {
 } from './normtext/adapter-entscheide';
 import { schreibeKorpus, ladeBestandSnapshots } from './normtext/entscheide-schreiben';
 import { sha256EntscheidBloecke } from './normtext/sha-entscheide';
+import { holeRegesteSprachfassungen } from './normtext/clir-regeste';
 import type { EntscheidSnapshot } from '../src/lib/rechtsprechung/typen';
 import type { Rechtsgebiet } from '../src/lib/normtext/register';
+import * as path from 'node:path';
 
 /** Stuft einen BGE auf Auszug-only zurück (Body = Sammlungstext, kein azaUrteil/Volltext,
  *  Bandjahr-Platzhalterdatum). Für die Kollisions-Quarantäne (§8): unsichere aza-Zuordnung. */
@@ -54,6 +56,13 @@ const additiv = process.argv.includes('--additiv');
 // aktuell mitten im Wort (U+2026) gekappt ist (W2·6-BGE), und überschreibt sie by id —
 // kein Vollbau, Bund/Kanton/eidg bleiben unberührt. Selbstheilend nach Adapter-Härtung.
 const bgeRefresh = process.argv.includes('--bge-refresh');
+// --regeste-refresh (nur additiv, W2·6-B B1+B2+A18): reichert die BESTEHENDEN
+// amtlichen BGE an — (B2/A18) strukturierte, dreisprachige Regeste aus bger.ch clir
+// (kopf+absaetze je Sprache, sortiert DE→FR→IT) + (B1) aza-Voll-Resolution der BGE
+// ohne `azaUrteil`. Bund/Kanton/eidg + die restlichen BGE bleiben byte-treu (§6).
+const regesteRefresh = process.argv.includes('--regeste-refresh');
+// Cache-Verzeichnis der rohen clir-HTML (gitignored; Re-Parse ohne Re-Crawl).
+const CLIR_CACHE = path.join(process.cwd(), 'daten', 'cache', 'clir-regeste');
 // Court-spezifischer Sachgebiets-Hint (deterministisch, deklariert): Patentstreit =
 // Immaterialgüterrecht → privat (OCL legal_area der BPatGer-Fälle ist oft nur eine
 // Kosten-/Verfahrens-Notiz und mappt sonst auf den groben Default 'oeffentlich').
@@ -186,6 +195,62 @@ const docketSlug = (d: string) => d.replace(/\s+/g, '').replace(/[^A-Za-z0-9]/g,
 
 async function main() {
   console.log(`[entscheide] Build ${datum} · BGE ${bgeVon ?? '–'} · Bund-Limit ${bundLimit} · Kantone [${kantCourts.join(',') || '–'}] je ${kantonPro}${additiv ? ` · ADDITIV eidg [${eidgCourts.join(',') || '–'}] je ${eidgPro}` : ''}`);
+
+  // ── Regeste-Refresh (W2·6-B B1+B2+A18): amtliche BGE anreichern ──────────────
+  if (regesteRefresh) {
+    const basis = ladeBestandSnapshots();
+    const bge = basis.filter((s) => s.gericht === 'bge');
+    console.log(`[regeste-refresh] Bestand ${basis.length}, davon ${bge.length} BGE.`);
+
+    // ── B1: BGE ohne Vollurteil (azaUrteil:null) via aza-Resolver nachladen ──
+    const b1 = bge.filter((s) => !s.azaUrteil);
+    console.log(`[b1] ${b1.length} BGE ohne Vollurteil → aza-Resolver (bger.ch/OCL)`);
+    const b1neu = await mapLimit(b1, 3, async (s) => {
+      const neu = await holeBgeLeitentscheid(s.id.replace(/^bund\/bge\//, ''), datum);
+      process.stdout.write(neu?.azaUrteil ? '.' : neu ? '·' : 'x');
+      return { id: s.id, neu };
+    });
+    process.stdout.write('\n');
+    if (b1.length && b1neu.every((x) => !x.neu)) {
+      console.log('[b1] 0 Ergebnisse (OCL nicht erreichbar?) — Korpus unberührt.'); return;
+    }
+    const byId = new Map<string, EntscheidSnapshot>();
+    for (const { neu } of b1neu) if (neu?.azaUrteil) byId.set(neu.id, neu);
+    for (let i = 0; i < basis.length; i++) { const r = byId.get(basis[i].id); if (r) basis[i] = r; }
+    // Kollisions-Quarantäne (§8) über ALLE BGE: teilt sich ein aza-key auf mehrere
+    // BGE (OCL-Konflation, z.B. «152 V 2»↔«152 V 20»), ist ≥1 Zuordnung falsch → die
+    // FRISCH aufgelösten mit kollidierendem key auf Auszug zurückstufen (die 260
+    // Bestands-Auflösungen wurden beim Bau validiert; nie ein frischer Fehl-Body).
+    const azaN: Record<string, number> = {};
+    for (const s of basis) if (s.gericht === 'bge' && s.azaUrteil) azaN[s.azaUrteil.key] = (azaN[s.azaUrteil.key] ?? 0) + 1;
+    let quar = 0;
+    for (const s of basis) if (s.gericht === 'bge' && byId.has(s.id) && s.azaUrteil && azaN[s.azaUrteil.key] > 1) { aufAuszugZurueck(s); quar++; }
+    const geloest = [...byId.values()].filter((s) => s.azaUrteil && azaN[s.azaUrteil.key] === 1).length;
+    console.log(`[b1] aufgelöst: ${geloest} · Kollisions-Quarantäne: ${quar} · weiterhin Auszug: ${b1.length - geloest}`);
+
+    // ── B2 + A18: strukturierte, dreisprachige Regeste (bger.ch clir) an alle amtl. BGE ──
+    const amtlich = basis.filter((s) => s.gericht === 'bge' && s.regeste && s.regesteAmtlich && s.bgeReferenz);
+    const fassungenAlle = await mapLimit(amtlich, 2, async (s) => {
+      const f = await holeRegesteSprachfassungen(s.bgeReferenz!, CLIR_CACHE, 300);
+      process.stdout.write(f.length === 3 ? '.' : f.length ? '+' : 'x');
+      return { s, f };
+    });
+    process.stdout.write('\n');
+    let mitFassung = 0, ohne = 0; const luecken: string[] = [];
+    for (const { s, f } of fassungenAlle) {
+      if (f.length && f.some((x) => x.sprache === 'de')) {
+        s.regeste = { ...s.regeste!, sprachfassungen: f };
+        mitFassung++;
+        if (f.length < 3) luecken.push(`${s.bgeReferenz} [${f.map((x) => x.sprache).join('/')}]`);
+      } else { ohne++; luecken.push(`${s.bgeReferenz} [KEINE — §1 unverändert]`); }
+    }
+    console.log(`[b2/a18] ${mitFassung}/${amtlich.length} BGE mit strukturierter Regeste; ${ohne} ohne.`);
+    if (luecken.length) console.log(`[b2/a18] Nicht vollständig dreisprachig/leer (${luecken.length}): ${luecken.join(', ')}`);
+
+    const res = schreibeKorpus(basis, datum);
+    console.log(`[regeste-refresh] geschrieben: ${res.anzahl} Manifest-Einträge, ${res.normBuckets} Norm-Buckets.`);
+    return;
+  }
 
   // ── Additiver Lauf (Batch 3): Bestand von der Platte + neue eidg. Gerichte ──
   // Zieht den committeten Korpus (272 BGE/Bund/Kanton) NICHT über die Live-API neu

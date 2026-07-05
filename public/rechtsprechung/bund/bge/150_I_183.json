@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-26",
+  "erzeugt": "2026-07-05",
   "eintraege": [
     {
       "id": "bund/bge/150_I_183",
@@ -7,7 +7,7 @@
       "gerichtName": "Bundesgericht",
       "gerichtstyp": "bundesgericht",
       "kanton": "CH",
-      "abteilung": null,
+      "abteilung": "I",
       "nummer": "150 I 183",
       "bgeReferenz": "150 I 183",
       "zitierung": "BGE 150 I 183",
@@ -16,13 +16,313 @@
       "leitcharakter": "leitentscheid",
       "sachgebiet": "oeffentlich",
       "legalArea": "public",
-      "rubrum": null,
+      "rubrum": {
+        "besetzung": "Bundesrichterin Aubry Girardin, Präsidentin, Bundesrichter Donzallaz, Bundesrichterinnen Hänni, Ryter, Bundesrichter Kradolfer, Gerichtsschreiber Zollinger",
+        "parteien": "ARGE A._______, bestehend aus: 1. B.________ AG, 2. C.________ AG, Beschwerdeführerinnen, beide vertreten durch Rechtsanwalt Jon Andri Moder, und dieser substituiert durch Rechtsanwalt Dr. Matthias Kuster, gegen Baudirektion Kanton Zürich, Tiefbauamt, Projektieren und Realisieren, Walcheplatz 2, 8090 Zürich, Vergabebehörde, ARGE D.________, c/o E.________ AG, Beschwerdegegnerin",
+        "gegenstand": "Submission; Strassenbauarbeiten (Vierspurausbau Hardwald)",
+        "vorinstanz": "Verwaltungsgerichts des Kantons Zürich, 1. Abteilung, vom 7. September 2023"
+      },
       "regeste": {
         "text": "Art. 29 Abs. 1 BV; Art. 13 lit. h sowie Art. 15 Abs. 1 bis und 2 IVöB 2001; Art. 51 Abs. 1 und 2 sowie Art. 56 Abs. 1 IVöB 2019; Verfügungsbegriff; Lauf der Beschwerdefrist; Verhältnis zwischen der individuellen Zustellung und der nachträglichen SIMAP-Publikation der Zuschlagsverfügung. Rügen der Beschwerdeführerinnen (E. 3.1). Erwägungen der Vorinstanz (E. 3.2). Streitgegenstand (E. 3.3). Massgeblichkeit des materiellen Verfügungsbegriffs (E. 3.4). Die Beschwerdefrist beginnt grundsätzlich mit der individuellen Zustellung der Zuschlagsverfügung zu laufen, zumal vorliegend auch die Rechtsmittelbelehrung entsprechend formuliert ist. Die nachträgliche Publikation der Zuschlagsverfügung auf der elektronischen Plattform SIMAP zeitigt im Grundsatz keinen Einfluss auf den Lauf der Beschwerdefrist, auch wenn die individuell zugestellte Verfügung allenfalls ungenügend (summarisch) begründet ist (E. 3.5).\nRegeste\n Art. 29 al. 1 Cst.; art. 13 let. h et art. 15 al. 1 bis et 2 AIMP 2001; art. 51 al. 1 et 2 et art. 56 al. 1 AIMP 2019; notion de décision; point de départ du délai de recours; relation entre la notification individuelle et la publication SIMAP ultérieure de la décision d'adjudication. Griefs des recourantes (consid. 3.1). Position de l'autorité précédente (consid. 3.2). Objet du litige (consid. 3.3). Caractère déterminant de la notion de décision matérielle (consid. 3.4). Le délai de recours commence à courir en principe avec la notification individuelle de la décision d'adjudication, d'autant plus qu'en l'espèce la voie de droit est formulée de cette manière dans la décision. La publication ultérieure de la décision d'adjudication sur la plateforme électronique SIMAP n'a en principe pas d'incidence sur le délai de recours, même si la décision individuelle qui a été notifiée est motivée de manière insuffisante (sommaire) (consid. 3.5).\nRegesto\n Art. 29 cpv. 1 Cost.; art. 13 lett. h e art. 15 cpv. 1 bis e 2 CIAP 2001; art. 51 cpv. 1 e 2 e art. 56 cpv. 1 CIAP 2019; nozione di decisione; decorso del termine per ricorrere; relazione tra la notifica individuale della decisione di aggiudicazione e la sua successiva pubblicazione su SIMAP. Censure delle ricorrenti (consid. 3.1). Ragionamenti dell'istanza precedente (consid. 3.2). Oggetto della vertenza (consid. 3.3). Carattere determinante della nozione di decisione di merito (consid. 3.4). Il termine di ricorso comincia a decorrere, in principio, con la notifica individuale della decisione di aggiudicazione, tanto più che nel caso di specie l'indicazione dei rimedi di diritto è formulata in tal modo nella decisione. La successiva pubblicazione della decisione d'aggiudicazione sulla piattaforma elettronica SIMAP non ha, in principio, alcuna incidenza sul decorso del termine per ricorrere, anche se la decisione individuale che è stata notificata è motivata in maniera insufficiente (sommaria) (consid. 3.5).",
-        "quelle": "opencaselaw"
+        "quelle": "opencaselaw",
+        "sprachfassungen": [
+          {
+            "sprache": "de",
+            "kopf": "Art. 29 Abs. 1 BV; Art. 13 lit. h sowie Art. 15 Abs. 1bis und 2 IVöB 2001; Art. 51 Abs. 1 und 2 sowie Art. 56 Abs. 1 IVöB 2019; Verfügungsbegriff; Lauf der Beschwerdefrist; Verhältnis zwischen der individuellen Zustellung und der nachträglichen SIMAP-Publikation der Zuschlagsverfügung.",
+            "absaetze": [
+              "Rügen der Beschwerdeführerinnen (E. 3.1). Erwägungen der Vorinstanz (E. 3.2). Streitgegenstand (E. 3.3). Massgeblichkeit des materiellen Verfügungsbegriffs (E. 3.4). Die Beschwerdefrist beginnt grundsätzlich mit der individuellen Zustellung der Zuschlagsverfügung zu laufen, zumal vorliegend auch die Rechtsmittelbelehrung entsprechend formuliert ist. Die nachträgliche Publikation der Zuschlagsverfügung auf der elektronischen Plattform SIMAP zeitigt im Grundsatz keinen Einfluss auf den Lauf der Beschwerdefrist, auch wenn die individuell zugestellte Verfügung allenfalls ungenügend (summarisch) begründet ist (E. 3.5)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-I-183%3Ade&lang=de&type=show_document"
+          },
+          {
+            "sprache": "fr",
+            "kopf": "Art. 29 al. 1 Cst.; art. 13 let. h et art. 15 al. 1bis et 2 AIMP 2001; art. 51 al. 1 et 2 et art. 56 al. 1 AIMP 2019; notion de décision; point de départ du délai de recours; relation entre la notification individuelle et la publication SIMAP ultérieure de la décision d'adjudication.",
+            "absaetze": [
+              "Griefs des recourantes (consid. 3.1). Position de l'autorité précédente (consid. 3.2). Objet du litige (consid. 3.3). Caractère déterminant de la notion de décision matérielle (consid. 3.4). Le délai de recours commence à courir en principe avec la notification individuelle de la décision d'adjudication, d'autant plus qu'en l'espèce la voie de droit est formulée de cette manière dans la décision. La publication ultérieure de la décision d'adjudication sur la plateforme électronique SIMAP n'a en principe pas d'incidence sur le délai de recours, même si la décision individuelle qui a été notifiée est motivée de manière insuffisante (sommaire) (consid. 3.5)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-I-183%3Afr&lang=fr&type=show_document"
+          },
+          {
+            "sprache": "it",
+            "kopf": "Art. 29 cpv. 1 Cost.; art. 13 lett. h e art. 15 cpv. 1bis e 2 CIAP 2001; art. 51 cpv. 1 e 2 e art. 56 cpv. 1 CIAP 2019; nozione di decisione; decorso del termine per ricorrere; relazione tra la notifica individuale della decisione di aggiudicazione e la sua successiva pubblicazione su SIMAP.",
+            "absaetze": [
+              "Censure delle ricorrenti (consid. 3.1). Ragionamenti dell'istanza precedente (consid. 3.2). Oggetto della vertenza (consid. 3.3). Carattere determinante della nozione di decisione di merito (consid. 3.4). Il termine di ricorso comincia a decorrere, in principio, con la notifica individuale della decisione di aggiudicazione, tanto più che nel caso di specie l'indicazione dei rimedi di diritto è formulata in tal modo nella decisione. La successiva pubblicazione della decisione d'aggiudicazione sulla piattaforma elettronica SIMAP non ha, in principio, alcuna incidenza sul decorso del termine per ricorrere, anche se la decisione individuale che è stata notificata è motivata in maniera insufficiente (sommaria) (consid. 3.5)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-I-183%3Ait&lang=it&type=show_document"
+          }
+        ]
       },
       "regesteAmtlich": true,
       "abschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "Mit Ausschreibung vom 21. Oktober 2022 eröffnete das Tiefbauamt des Kantons Zürich (nachfolgend: Vergabebehörde) ein offenes Submissionsverfahren betreffend die Strassenbauarbeiten für den Vierspurausbau Hardwald. Am 19. April 2023 erging der Zuschlag an die Arbeitsgemeinschaft \"D.________\" (nachfolgend: ARGE D.________) für deren Angebot im Betrag von Fr. 54'693'910.10. Mit Schreiben vom 26. April 2023 teilte die Vergabebehörde den anderen Anbieterinnen die Zuschlagserteilung an die ARGE D.________ mit. Am 2. Mai 2023 erfolgte die SIMAP-Publikation des Zuschlags."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Mit Beschwerde vom 12. Mai 2023 gelangte die Arbeitsgemeinschaft \"A.________\", bestehend aus der B.________ AG und der C.________ AG (nachfolgend: ARGE A.________) an das Verwaltungsgericht des Kantons Zürich. Sie beantragten, es sei der Zuschlag aufzuheben und an sie zu erteilen. B.a. Mit Präsidialverfügung vom 15. Mai 2023 wurde der ARGE A.________ Frist angesetzt, um dem Verwaltungsgericht eine Stellungnahme zur Frage der Rechtzeitigkeit der Beschwerde einzureichen. Die ARGE A.________ nahm am 26. Mai 2023 Stellung, woraufhin sich auch die Vergabebehörde vernehmen liess und die ARGE A.________ duplizierte. Die ARGE D.________ liess sich nicht vernehmen. B.b. Mit Beschluss vom 7. September 2023 trat das Verwaltungsgericht auf die Beschwerde nicht ein. Es erwog im Wesentlichen, die zehntägige Beschwerdefrist errechne sich ab der individuellen Eröffnung des Zuschlags mit Schreiben vom 26. April 2023. Da die ARGE A.________ ihre Beschwerde vom 12. Mai 2023 erst zehn Tage nach der SIMAP-Publikation am 2. Mai 2023 beim Verwaltungsgericht eingereicht habe, sei auf diese nicht einzutreten."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Mit Beschwerde in öffentlich-rechtlichen Angelegenheiten und subsidiärer Verfassungsbeschwerde vom 19. September 2023 gelangt die ARGE A.________, bestehend aus der B.________ AG und der C.________ AG, an das Bundesgericht. Sie beantragen die Aufhebung des Beschlusses vom 7. September 2023. Es sei das Verfahren zur Beurteilung an die Vorinstanz zurückzuweisen. C.a. Mit Verfügung vom 9. Oktober 2023 hat die Abteilungspräsidentin das Gesuch um Erteilung der aufschiebenden Wirkung abgewiesen. C.b. Die Vorinstanz schliesst auf Abweisung der Beschwerde, soweit darauf eingetreten werde. Die Vergabebehörde beantragt, es sei auf die Beschwerde nicht einzutreten. Eventualiter sei sie abzuweisen. Die ARGE D.________ (nachfolgend: Beschwerdegegnerin) lässt sich, wie bereits im vorinstanzlichen Verfahren, nicht vernehmen. C.c. Am 14. Dezember 2023 hat die Vergabebehörde das Bundesgericht über den Vertragsschluss vom 5. Dezember 2023 mit der Beschwerdegegnerin informiert."
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 1",
+              "tiefe": 1,
+              "text": "Das Bundesgericht prüft seine Zuständigkeit und die weiteren Eintretensvoraussetzungen von Amtes wegen (Art. 29 Abs. 1 BGG) und mit freier Kognition (vgl. BGE 147 I 89 E. 1; 146 II 276 E. 1)."
+            },
+            {
+              "marke": "E. 1.1",
+              "tiefe": 2,
+              "text": "Die frist- (Art. 100 Abs. 1 BGG) und formgerecht (Art. 42 BGG) eingereichte Eingabe betrifft eine Angelegenheit des öffentlichen Rechts (Art. 82 lit. a BGG) auf dem Gebiet der öffentlichen Beschaffungen (Art. 83 lit. f BGG) und richtet sich gegen den kantonal letztinstanzlichen (Art. 86 Abs. 1 lit. d BGG), verfahrensabschliessenden (Art. 90 BGG) Nichteintretensentscheid eines oberen Gerichts (Art. 86 Abs. 2 BGG).\n\nNach dem Grundsatz der Einheit des Prozesses gilt der in Art. 83 BGG für bestimmte Sachgebiete statuierte Ausschluss der Beschwerde in öffentlich-rechtlichen Angelegenheiten auch für prozessuale Entscheide. Damit ist gegen einen Nichteintretensentscheid die Beschwerde in öffentlich-rechtlichen Angelegenheiten nur zulässig, wenn auch ein Entscheid in der Sache mit diesem Rechtsmittel anfechtbar wäre (vgl. BGE 137 I 371 E. 1.1; Urteil 2C_941/2022 vom 25. November 2022 E. 1.1)."
+            },
+            {
+              "marke": "E. 1.2",
+              "tiefe": 2,
+              "text": "Gemäss Art. 83 lit. f BGG in der Fassung vom 1. Januar 2021 (vgl. AS 2020 641 ff., S. 686) ist gegen Entscheide auf dem Gebiet der öffentlichen Beschaffungen die Beschwerde unzulässig, wenn sich keine Rechtsfrage von grundsätzlicher Bedeutung stellt (Ziff. 1) oder der geschätzte Wert des zu vergebenden Auftrags den massgebenden Schwellenwert nach Art. 52 Abs. 1 in Verbindung mit Anhang 4 Ziffer 2 des Bundesgesetzes vom 21. Juni 2019 über das öffentliche Beschaffungswesen (BöB; SR 172.056.1) nicht erreicht (Ziff. 2). Die beiden Voraussetzungen gelten kumulativ (vgl. BGE 146 II 276 E. 1.2 i.f.; 143 II 120 E. 2.2)."
+            },
+            {
+              "marke": "E. 1.2.1",
+              "tiefe": 3,
+              "text": "Bei der Rechtsfrage von grundsätzlicher Bedeutung gemäss Art. 83 lit. f Ziff. 1 BGG muss es sich um eine Rechtsfrage aus dem Gebiet des öffentlichen Beschaffungsrechts handeln. Die Anwendung rechtsprechungsgemässer Prinzipien auf einen Einzelfall stellt keine Grundsatzfrage dar. Der blosse Umstand, dass die aufgeworfene Rechtsfrage noch nie entschieden worden ist, genügt nicht. Es muss sich um eine Rechtsfrage handeln, deren Entscheid für die Praxis wegleitend sein kann und die von ihrem Gewicht her nach einer höchstrichterlichen Klärung ruft (vgl. BGE 143 II 425 E. 1.3.2; 141 II 14 E. 1.2.2.1).\n\nZudem muss es sich bei den Rechtsfragen von grundsätzlicher Bedeutung um Fragen handeln, die für die Lösung des konkreten Falls erheblich sind (vgl. BGE 139 III 209 E. 1.2; 139 III 182 E. 1.2). Eine Frage, die zwar an sich von grundsätzlicher Bedeutung wäre, aber den Ausgang des Verfahrens nicht zu beeinflussen vermag, führt nicht zum Eintreten, denn an der abstrakten Erörterung einer Rechtsfrage besteht kein Rechtsschutzinteresse (vgl. BGE 146 II 276 E. 1.3; Urteil 2C_1055/2022 vom 21. Juli 2023 E. 1.2). Im Rahmen ihrer Begründungspflicht nach Art. 42 Abs. 2 BGG haben die Beschwerdeführerinnen darzutun, dass die Voraussetzung erfüllt ist (vgl. BGE 146 II 276 E. 1.2.1; 143 II 425 E. 1.3.2)."
+            },
+            {
+              "marke": "E. 1.2.2",
+              "tiefe": 3,
+              "text": "Die Beschwerdeführerinnen werfen die Frage auf, ob und unter welchen Umständen sich eine Partei in einem Vergabeverfahren auf die Beschwerdefrist berufen kann, die in einer öffentlichen Publikation auf SIMAP angegeben werde, wenn sie vorab bereits eine schriftliche Mitteilung mit einer Rechtsmittelbelehrung samt Hinweis auf die geltende zehntägige Frist erhalten habe.\n\nDas Bundesgericht hat sich mit dieser Thematik bis anhin nicht eingehend befasst (vgl. aber Urteile 2D_42/2018 vom 11. März 2019 E. 3.3 f.; 2C_1014/2015 vom 21. Juli 2016 E. 4.1.1-4.1.3). In Anbetracht der kurzen Beschwerdefrist von zehn Tagen nach Art. 15 Abs. 2 der vorliegend noch anwendbaren Interkantonalen Vereinbarung über das öffentliche Beschaffungswesen vom 25. November 1994 / 15. März 2001 (IVöB 2001; SR 172.056.5; AS 2003 196 ff.; vgl. auch § 1 des Gesetzes des Kantons Zürich vom 15. September 2003 über den Beitritt zur revidierten Interkantonalen Vereinbarung über das öffentliche Beschaffungswesen vom 15. März 2001 [aufgehoben am 1. Oktober 2023; LS 720.1]) ist die Klärung der Frage, wann der Fristenlauf beginnt, von grosser Bedeutung. Daran ändert sich im Übrigen auch unter der Geltung der neuen Interkantonalen Vereinbarung über das öffentliche Beschaffungswesen vom 15. November 2019 (IVöB 2019; vgl. auch § 1 des Gesetzes des Kantons Zürich vom 20. März 2023 über den Beitritt zur Interkantonalen Vereinbarung über das öffentliche Beschaffungswesen vom 15. November 2019 [in Kraft getreten am 1. Oktober 2023; LS 720.1]) nichts, auch wenn die Beschwerdefrist auf 20 Tage verlängert wurde (vgl. Art. 56 Abs. 1 IVöB 2019). Art. 51 Abs. 1 IVöB 2019 räumt den Vergabebehörden ausdrücklich die Möglichkeit ein, Verfügungen den Anbieterinnen durch Veröffentlichung oder durch individuelle Zustellung zu eröffnen. Die vorliegend zu beurteilende Konstellation ist folglich auch in Zukunft denkbar."
+            },
+            {
+              "marke": "E. 1.2.3",
+              "tiefe": 3,
+              "text": "Nach dem Gesagten liegt eine Rechtsfrage von grundsätzlicher Bedeutung im Sinne von Art. 83 lit. f Ziff. 1 BGG vor. Die Beschwerdeführerinnen stellen noch weitere Rechtsfragen, denen sie grundsätzliche Bedeutung beimessen. Ob bei mehreren dem Bundesgericht unterbreiteten Rechtsfragen alle das Erfordernis der grundsätzlichen Bedeutung erfüllen, ist nicht massgebend. Es genügt, dass eine solche Frage vorliegt. Diesfalls tritt das Bundesgericht auf die Beschwerde ein. Es prüft diese nach Massgabe des Bundesgerichtsgesetzes umfassend (vgl. E. 2 hiernach) und nicht nur in Bezug auf diejenigen Fragen, welche von grundsätzlicher Bedeutung sind (vgl. BGE 141 II 14 E. 1.2.2.4)."
+            },
+            {
+              "marke": "E. 1.2.4",
+              "tiefe": 3,
+              "text": "Da auch der massgebende Schwellenwert im Sinne von Art. 83 lit. f Ziff. 2 BGG ohne Weiteres überschritten ist (vgl. Bst. A hiervor), erweist sich die Beschwerde in öffentlich-rechtlichen Angelegenheiten unter dem Blickwinkel von Art. 83 lit. f BGG als zulässig, was die eventualiter erhobene subsidiäre Verfassungsbeschwerde ausschliesst (Art. 113 BGG). Auf Letztere ist demzufolge nicht einzutreten."
+            },
+            {
+              "marke": "E. 1.3",
+              "tiefe": 2,
+              "text": "Die Beschwerdeführerinnen sind bereits im kantonalen Verfahren als Parteien beteiligt gewesen und dort mit ihren Anträgen nicht durchgedrungen. Ausserdem sind sie durch den angefochtenen Nichteintretensentscheid in ihren schutzwürdigen Interessen besonders berührt. Am schutzwürdigen Interesse ändert auch der Vertragsschluss vom 5. Dezember 2023 zwischen der Vergabebehörde und der Beschwerdegegnerin nichts. Im Rahmen einer allfälligen materiellen Beurteilung kann die Vorinstanz immer noch feststellen, dass der Zuschlag an die Beschwerdegegnerin rechtswidrig ist (vgl. Art. 18 Abs. 2 IVöB 2001; Art. 9 Abs. 3 des Bundesgesetzes vom 6. Oktober 1995 über den Binnenmarkt [Binnenmarktgesetz, BGBM; SR 943.02]). Die Beschwerdeführerinnen sind somit zur Erhebung des Rechtsmittels legitimiert (Art. 89 Abs. 1 BGG; vgl. auch BGE 131 I 153 E. 5)."
+            },
+            {
+              "marke": "E. 1.4",
+              "tiefe": 2,
+              "text": "Auf die Beschwerde in öffentlich-rechtlichen Angelegenheiten ist einzutreten."
+            },
+            {
+              "marke": "E. 2",
+              "tiefe": 1,
+              "text": "Mit der Beschwerde kann namentlich die Verletzung von Bundesrecht und interkantonalem Recht gerügt werden (Art. 95 lit. a und lit. e BGG). Das Bundesgericht wendet das Recht von Amtes wegen an (Art. 106 Abs. 1 BGG), wobei es - unter Berücksichtigung der allgemeinen Rüge- und Begründungspflicht (Art. 42 Abs. 2 BGG) - grundsätzlich nur die geltend gemachten Vorbringen prüft, sofern allfällige weitere rechtliche Mängel nicht geradezu offensichtlich sind (vgl. BGE 142 I 135 E. 1.5; 133 II 249 E. 1.4.1). Der Verletzung von kantonalem und interkantonalem Recht geht das Bundesgericht nur nach, falls eine solche Rüge in der Beschwerde vorgebracht und ausreichend begründet worden ist (Art. 106 Abs. 2 BGG; vgl. BGE 147 II 44 E. 1.2; 143 II 283 E. 1.2.2). Die Anwendung des kantonalen Rechts an sich wird vom Bundesgericht abgesehen von den Fällen von Art. 95 lit. c und lit. d BGG nicht überprüft. Möglich ist nur die Rüge, die Anwendung des kantonalen Rechts widerspreche dem Bundes-, Völker- oder interkantonalen Recht (Art. 95 lit. a, lit. b und lit. e BGG). Dies ist der Fall, wenn das angewendete kantonale Recht als solches dem übergeordneten Recht widerspricht, aber auch dann, wenn das an sich rechtskonforme kantonale Recht auf eine willkürliche Weise angewendet worden ist, weil dadurch Art. 9 BV verletzt wird (vgl. BGE 142 II 369 E. 2.1; 138 I 143 E. 2). Seinem Urteil legt das Bundesgericht den Sachverhalt zugrunde, den die Vorinstanz festgestellt hat (Art. 105 Abs. 1 BGG)."
+            },
+            {
+              "marke": "E. 3",
+              "tiefe": 1,
+              "text": "Die Beschwerdeführerinnen beanstanden das vorinstanzliche Nichteintreten auf die - ihrer Auffassung nach - fristgerecht eingereichte Beschwerde vom 12. Mai 2023."
+            },
+            {
+              "marke": "E. 3.1",
+              "tiefe": 2,
+              "text": "Die Beschwerdeführerinnen machen geltend, die Vorinstanz begehe mit ihrem Nichteintretensentscheid eine Rechtsverweigerung und verletze Art. 29 BV. Die Vergabebehörde habe mit ihrem Schreiben vom 26. April 2023 keinen Verfügungswillen gehabt. Im Übrigen sei das Beiblatt zum Schreiben vom 26. April 2023 mit dem Titel \"Submissionsergebnis / Verfügung\" nicht ausreichend begründet, enthalte keinen Adressaten sowie keine Unterschrift und sei lediglich per A-Post zugestellt worden. Die Vorinstanz gehe zu Unrecht davon aus, dass dem Beiblatt, das mit \"Submissionsergebnis / Verfügung\" betitelt sei, Verfügungscharakter zukomme. Entsprechend läge keine fristauslösende Verfügung vor. Selbst wenn aber eine Verfügung vorläge, hätte die Vorinstanz diese aufgrund der vier kumulierten Mängel als nichtig betrachten müssen. Die blosse Zustellung per A-Post stelle eine rechtsfehlerhafte Eröffnung dar."
+            },
+            {
+              "marke": "E. 3.2",
+              "tiefe": 2,
+              "text": "Die Vorinstanz erwägt, der Verfügungscharakter des Schreibens vom 26. April 2023 zusammen mit dem als \"Submissionsergebnis / Verfügung\" betitelten Beiblatt sei aus der Kombination der beiden Dokumente ohne Weiteres erkennbar (vgl. E. 3.3 des angefochtenen Beschlusses). Das Schreiben vom 26. April 2023 sei unbestrittenermassen am 28. April 2023 bei den Beschwerdeführerinnen eingegangen. Die Frist zur Anfechtung von Verfügungen im Beschaffungswesen, so die Vorinstanz weiter, betrage gemäss Art. 15 Abs. 2 IVöB 2001 zehn Tage ab Eröffnung. Die Vorinstanz führt sodann aus, dass im Zürcher Submissionsrecht das \"Primat der individuellen Zustellung\" gelte. Eine beteiligte Person, der der Vergabeentscheid individuell zugestellt werde, dürfe sich auf diese Eröffnung verlassen und sei nicht gehalten, zusätzlich amtliche Publikationsorgane zu konsultieren. Demnach beginne die Beschwerdefrist grundsätzlich mit der Zustellung des Vergabeentscheids nach § 38 Abs. 1 der Submissionsverordnung des Kantons Zürich vom 23. Juli 2003 (SubmV/ZH; LS 720.11; aufgehoben per 1. Oktober 2023) zu laufen, was allerdings voraussetze, dass die Rechtsmittelbelehrung in diesem Sinn abgefasst worden sei. Dies sei vorliegend der Fall. Enthalte jedoch die individuelle Zustellung einen Hinweis auf die Publikation, so könne Letztere fristauslösend sein. Vorliegend finde sich kein solcher Hinweis in der individuell zugestellten Verfügung. Die Frist habe daher mit der Zustellung des Schreibens vom 26. April 2023 am 28. April 2023 zu laufen begonnen (vgl. E. 2 des angefochtenen Beschlusses)."
+            },
+            {
+              "marke": "E. 3.3",
+              "tiefe": 2,
+              "text": "Wird ein Nichteintretensentscheid angefochten, beschränkt sich der Streitgegenstand des Rechtsmittelverfahrens grundsätzlich auf die Eintretensfrage (vgl. Urteile 2C_1060/2022 vom 18. Oktober 2023 E. 1.3.3; 2C_358/2022 vom 22. August 2022 E. 1.3; 2C_887/2017 vom 23. März 2021 E. 3). Im vorliegenden bundesgerichtlichen Verfahren ist daher zu klären, ob die Vorinstanz mit Beschluss vom 7. September 2023 zu Recht auf die (kantonale) Beschwerde vom 12. Mai 2023 nicht eintrat."
+            },
+            {
+              "marke": "E. 3.4",
+              "tiefe": 2,
+              "text": "Hierzu ist in einem ersten Schritt zu beurteilen, ob die Vorinstanz das Schreiben der Vergabebehörde vom 26. April 2023 zu Recht als Verfügung betrachtet, oder ob es sich dabei, so die Auffassung der Beschwerdeführerinnen, um einen nichtigen Verwaltungsakt der Vergabebehörde handelt."
+            },
+            {
+              "marke": "E. 3.4.1",
+              "tiefe": 3,
+              "text": "Es ist zunächst davon auszugehen, dass der Begriff der Verfügung im kantonalen Recht demjenigen des Bundesrechts entspricht (vgl. Urteile 2D_42/2018 vom 11. März 2019 E. 3.3 f.; 2C_339/2017 vom 24. Mai 2018 E. 4.3; 2C_444/2015 vom 4. November 2015 E. 3.2.1). Sodann sind die durch Beschwerde selbstständig anfechtbaren Verfügungen für die kantonalen Vergabeverfahren im interkantonalen Recht geregelt (vgl. Art. 15 Abs. 1bis IVöB 2001). Als Verfügungen gelten autoritative, einseitige, individuell-konkrete Anordnungen der Behörde, die in Anwendung von Verwaltungsrecht ergangen, auf Rechtswirkungen ausgerichtet sowie verbindlich und erzwingbar sind (vgl. BGE 141 II 233 E. 3.1; 135 II 38 E. 4.3; 131 II 13 E. 2.2). Das Verfahrensstadium, in dem ein Verwaltungsakt ergeht, präjudiziert dessen rechtliche Einordnung nicht (vgl. Urteile 2C_167/2016 vom 17. März 2017 E. 3.1; 2C_1097/2014 vom 6. Oktober 2015 E. 3.1; 2C_1184/2013 vom 17. Juli 2014 E. 3.3). Ausschlaggebend für die Qualifikation eines Verwaltungsaktes als Verfügung sind aufgrund der Massgeblichkeit des materiellen Verfügungsbegriffs deren Strukturmerkmale (vgl. Urteile 2C_339/2017 vom 24. Mai 2018 E. 4.3; 2C_444/2015 vom 4. November 2015 E. 3.2.4)."
+            },
+            {
+              "marke": "E. 3.4.2",
+              "tiefe": 3,
+              "text": "Das Schreiben vom 26. April 2023 besteht in tatsächlicher Hinsicht unbestrittenermassen aus zwei Seiten, wobei die erste Seite an die Beschwerdeführerinnen adressiert und vom zuständigen Projektleiter der Vergabebehörde unterzeichnet ist sowie das Submissionsergebnis als beigelegte zweite Seite erwähnt. Die zweite Seite trägt den Titel \"Submissionsergebnis / Verfügung\", ist mit 19. August 2023 datiert, nennt die Zuschlagsempfängerin (Beschwerdegegnerin) samt Zuschlagspreis und enthält eine Rechtsmittelbelehrung. Letzterer zufolge kann gegen die Verfügung innert zehn Tagen \"von der Zustellung an die Anbietenden\" an gerechnet schriftlich Beschwerde beim Verwaltungsgericht des Kantons Zürich eingereicht werden (vgl. Art. 105 Abs. 1 BGG). Im Weiteren enthält die zweite Seite folgende kurze Begründung des Zuschlags: \"Beste Erfüllung der Zuschlagskriterien\" (vgl. Art. 105 Abs. 2 BGG)."
+            },
+            {
+              "marke": "E. 3.4.3",
+              "tiefe": 3,
+              "text": "Es ist nicht zu beanstanden, dass die Vorinstanz dem adressierten und unterzeichneten Brief (erste Seite) sowie der als \"Submissionsergebnis / Verfügung\" betitelten Beilage (zweite Seite) mit der Rechtsmittelbelehrung als Einheit Verfügungscharakter zuspricht. Die von den Beschwerdeführerinnen angeführten, angeblichen Mängel vermögen daran nichts zu ändern, zumal sie ihren Vorbringen - entgegen der bundesgerichtlichen Rechtsprechung - im Wesentlichen ein formelles Verständnis des Verfügungsbegriffs zugrunde legt. Im Übrigen ist das Schreiben vom 26. April 2023 nach dem Gesagten sowohl adressiert als auch unterzeichnet, womit die Sachverhaltsrügen der Beschwerdeführerinnen nicht zutreffen. Unzutreffend ist ebenso die Auffassung der Beschwerdeführerinnen, wonach eine Verfügung lediglich eingeschrieben, nicht aber per A-Post zugestellt werden könne (zum Ganzen siehe BGE 142 III 599 E. 2.4.1).\n\nSoweit im Lichte des materiellen Verfügungsbegriffs überhaupt massgebend, legen die Beschwerdeführerinnen im Übrigen nicht nachvollziehbar dar, weshalb die Vergabebehörde keinen Verfügungswillen gehabt habe, obschon das von der Vergabebehörde stammende Dokument als Verfügung bezeichnet und mit einer Rechtsmittelbelehrung versehen ist. Vielmehr ergibt sich aus einer Gesamtbetrachtung des Schreibens vom 26. April 2023, dass die Mitteilung des Submissionsergebnisses auf Rechtswirkungen ausgerichtet und verbindlich ist."
+            },
+            {
+              "marke": "E. 3.4.4",
+              "tiefe": 3,
+              "text": "Dass die als \"Submissionsergebnis / Verfügung\" betitelte Beilage nach Auffassung der Beschwerdeführerinnen eine unzureichende (summarische) Begründung enthält, ist angesichts der verbindlichen Bekanntgabe des Submissionsergebnisses für die Qualifikation des Schreibens vom 26. April 2023 als Verfügung nicht ausschlaggebend. Soweit die Begründung - im Lichte der beschaffungsrechtlichen Vorgaben und der vergabespezifischen (Ermessens-) Praxis (vgl. E. 3.5.3 hiernach) - unzureichend wäre, wird die Verfügung dadurch lediglich anfechtbar (vgl. Häfelin/Müller/Uhlmann, Allgemeines Verwaltungsrecht, 8. Aufl. 2020, N. 1078; vgl. auch Galli/Moser/Lang/Steiner, Praxis des öffentlichen Beschaffungsrechts, 3. Aufl. 2013, N. 1243 und N. 1246; Tschannen/Müller/Kern, Allgemeines Verwaltungsrecht, 5. Aufl. 2022, N. 754; zum Eröffnungsmangel im Allgemeinen siehe auch Urteil 2C_848/2012 vom 8. März 2013 E. 4.1). Die Vorinstanz geht daher zu Recht davon aus, dass es sich beim Schreiben vom 26. April 2023 um eine Verfügung handelt. Mangels Vorliegens eines besonders schwerwiegenden Verfahrensfehlers ist den Beschwerdeführerinnen im Übrigen nicht zu folgen, wenn sie vortragen, die Verfügung vom 26. April 2023 sei nichtig (zur Nichtigkeit von Entscheiden siehe BGE 147 IV 93 E. 1.4.4; 139 II 243 E. 11.2; Urteile 2D_53/2020 und 2D_25/2021 vom 31. März 2023 E. 5, nicht publ. in: BGE 149 I 146)."
+            },
+            {
+              "marke": "E. 3.5",
+              "tiefe": 2,
+              "text": "Die Beschwerdeführerinnen halten die Verfügung vom 26. April 2023 im Weiteren für nicht fristauslösend, da der Vergabeentscheid auf der Internetplattform SIMAP nach der individuellen Zustellung zusätzlich publiziert worden sei. In einem zweiten Schritt ist daher zu prüfen, ob mit der Zustellung der Verfügung vom 26. April 2023 die Beschwerdefrist von 10 Tagen zu laufen begann, oder ob die Publikation vom 2. Mai 2023 auf den Lauf der Beschwerdefrist einen Einfluss zeitigte."
+            },
+            {
+              "marke": "E. 3.5.1",
+              "tiefe": 3,
+              "text": "Die Vorinstanz hält fest, das kantonale Recht sehe in § 38 Abs. 1 SubmV/ZH vor, dass die Vergabebehörde Verfügungen durch Zustellung und soweit erforderlich durch Veröffentlichung eröffne. Weiter erwägt die Vorinstanz, Art. 15 Abs. 2 IVöB 2001 bestimme unmissverständlich, dass Beschwerden innert zehn Tagen seit Eröffnung der Verfügungen einzureichen seien. In Anwendung des kantonalen und interkantonalen Rechts gelangt die Vorinstanz alsdann zum Schluss, dass die Beschwerdefrist am 28. April 2023 mit Zustellung der Verfügung vom 26. April 2023 zu laufen begonnen habe (vgl. E. 2.2 und E. 3.4 des angefochtenen Beschlusses). Die Zustellung der Verfügung am 28. April 2023 ist unter den Verfahrensbeteiligten unbestritten. Den Beschwerdeführerinnen war das Ergebnis des Vergabeverfahrens somit am 28. April 2023 und nicht erst mit Publikation vom 2. Mai 2023 bekannt. Vor diesem Hintergrund ist nicht zu beanstanden, dass die Vorinstanz davon ausgeht, dass die Beschwerdefrist mit der individuellen Zustellung der Verfügung am 28. April 2023 ausgelöst wurde."
+            },
+            {
+              "marke": "E. 3.5.2",
+              "tiefe": 3,
+              "text": "Daran vermag nichts zu ändern, dass das Ergebnis des Vergabeverfahrens am 2. Mai 2023 zusätzlich noch auf der Internetplattform SIMAP publiziert wurde. Die Rechtsmittelbelehrung in der Verfügung vom 26. April 2023 weist darauf hin, dass gegen die Verfügung innert zehn Tagen, von der Zustellung an die Anbietenden an gerechnet, Beschwerde eingereicht werden kann (vgl. E. 3.4.2 hiervor). Diese Formulierung ist unmissverständlich und korrespondiert mit dem Grundsatz von Art. 15 Abs. 2 IVöB 2001, wonach Beschwerden innert zehn Tagen seit Eröffnung der Verfügungen einzureichen sind. Somit besteht kein Raum, dass sich die Beschwerdeführerinnen auf einen späteren, fristauslösenden Zeitpunkt berufen können (vgl. auch E. 5.2 hiernach). Dies muss insbesondere für die beiden Beschwerdeführerinnen gelten, die nach den unbestrittenen vorinstanzlichen Feststellungen erfahrene Bauunternehmerinnen sind und regelmässig an Vergabeverfahren teilnehmen (vgl. Art. 105 Abs. 1 BGG). Nach dem Gesagten ist das \"Primat der individuellen Zustellung\", wie es nach den vorinstanzlichen Erwägungen im Kanton Zürich gelte (vgl. E. 3.2 hiervor; vgl. auch Galli/Moser/Lang/Steiner, a.a.O., N. 1275; Poltier, Droit des marchés publics, 2. Aufl. 2023, N. 796), nicht zu beanstanden."
+            },
+            {
+              "marke": "E. 3.5.3",
+              "tiefe": 3,
+              "text": "Im Übrigen zeitigte die Publikation auf der Internetplattform SIMAP auch in Anbetracht der bloss summarischen Begründung der Verfügung vom 26. April 2023, wie die Beschwerdeführerinnen weiter monieren, keine Wirkung auf den Lauf der Beschwerdefrist. Das kantonale Recht verlangt in § 38 Abs. 2 SubmV/ZH in Ausführung des vorliegend noch anwendbaren Art. 13 lit. h IVöB 2001 (\"kurze Begründung des Zuschlags\"), dass die Verfügungen summarisch begründet werden (vgl. auch Art. 51 Abs. 2 IVöB 2019). Die Beschwerdeinstanz darf bei den Anforderungen an die Begründung der Beschwerde daher nicht streng sein (vgl. Galli/Moser/Lang/Steiner, a.a.O., N. 1246; Poltier, a.a.O., N. 852). Die Praxis geht weitgehend davon aus, dass einer unzureichend begründeten Verfügung im nachfolgenden (Beschwerde-) Verfahren Rechnung getragen werden kann (vgl. Galli/Moser/Lang/Steiner, a.a.O., N. 1247 ff.; Poltier, a.a.O., N. 800; z.B. Akteneinsicht, Beschwerdeantwort der Vergabebehörde als nachträgliche Begründung etc.). Diese Ansicht ist zu bestätigen und entspricht dem Grundgedanken des Verfahrens im öffentlichen Beschaffungswesen, wonach Streitigkeiten so schnell wie möglich entschieden werden sollten, weshalb mit 10 Tagen (vgl. Art. 15 Abs. 2 IVöB 2001) respektive 20 Tagen (vgl. Art. 56 Abs. 1 IVöB 2019) auch kurze Beschwerdefristen vorgesehen sind. Folglich hat der Umstand, dass die Begründung der Verfügung vom 26. April 2023 möglicherweise nicht den Anforderungen von § 38 Abs. 2 SubmV/ZH genügt, keinen Einfluss auf den Lauf der Beschwerdefrist (vgl. Poltier, a.a.O., N. 800, der darauf hinweist, dass die nicht berücksichtigte Anbieterin häufig eine Beschwerde einreichen müsse, obwohl die verfügbaren Informationen noch weitgehend unvollständig seien)."
+            },
+            {
+              "marke": "E. 3.5.4",
+              "tiefe": 3,
+              "text": "Die Vorinstanz kommt daher zu Recht zum Schluss, dass die Beschwerdefrist am 28. April 2023 mit der Zustellung der Verfügung vom 26. April 2023 zu laufen begann. Als die Beschwerdeführerinnen die vorinstanzliche Beschwerde am 12. Mai 2023 einreichten, war die zehntägige Beschwerdefrist somit abgelaufen gewesen. Eine formelle Rechtsverweigerung liegt lediglich vor, wenn eine Behörde auf eine ihr frist- und formgerecht unterbreitete Sache nicht eintritt (vgl. BGE 144 II 184 E. 3). Da die Beschwerdeführerinnen die Beschwerde vom 12. Mai 2023 erst nach Ablauf der Beschwerdefrist einreichten, verletzt der vorinstanzliche Nichteintretensentscheid weder Art. 29 Abs. 1 BV noch Art. 15 IVöB 2001."
+            },
+            {
+              "marke": "E. 4",
+              "tiefe": 1,
+              "text": "Soweit die Beschwerdeführerinnen unter Bezugnahme auf Art. 8 Abs. 1 BV vortragen, in einer anderen kantonalen Angelegenheit sei die Publikation des Submissionsergebnisses beschwerdefristauslösend gewesen, fehlt es an vergleichbaren Sachverhalten (vgl. BGE 144 I 113 E. 5.1.1; vgl. auch Urteile 2C_838/2021 vom 9. März 2023 E. 5.3.4; 2C_506/2019 vom 14. Mai 2020 E. 6.1). Die Beschwerdeführerinnen weisen selbst darauf hin, dass die Vergabebehörde in dieser anderen Angelegenheit im Begleitschreiben ausdrücklich auf die noch folgende Publikation des Submissionsergebnisses auf der Internetplattform SIMAP hinwies. An einem solchen Hinweis mangelt es demgegenüber in der vorliegenden Angelegenheit, weshalb sich die Beschwerdeführerinnen nicht erfolgreich auf das Gleichbehandlungsgebot berufen können. Daran ändert nichts, dass die Vorinstanz die kantonale Praxis zum Fristenlauf unter Referenzierung dieser Angelegenheit begründet (vgl. E. 2.2 des angefochtenen Beschlusses mit Verweisung auf das Urteil des Verwaltungsgerichts des Kantons Zürich VB.2011.00322 vom 28. September 2011 E. 2)."
+            },
+            {
+              "marke": "E. 5",
+              "tiefe": 1,
+              "text": "Die Beschwerdeführerinnen berufen sich ferner auf den Vertrauensschutz nach Art. 9 BV und tragen vor, der Projektleiter der Vergabebehörde habe ihnen mitgeteilt, dass die Beschwerdefrist erst mit der Publikation auf der Internetplattform SIMAP zu laufen beginne."
+            },
+            {
+              "marke": "E. 5.1",
+              "tiefe": 2,
+              "text": "Der in Art. 9 BV verankerte Grundsatz von Treu und Glauben verleiht einer Person Anspruch auf den Schutz des berechtigten Vertrauens in behördliche Zusicherungen oder sonstiges, bestimmte Erwartungen begründendes Verhalten der Behörden, sofern sich dieses auf eine konkrete, die betreffende Person berührende Angelegenheit bezieht. Vorausgesetzt ist im Weiteren, dass die Person, die sich auf den Vertrauensschutz beruft, berechtigterweise auf diese Grundlage hat vertrauen dürfen und gestützt darauf nachteilige Dispositionen getroffen hat, die sie nicht mehr rückgängig machen kann. Ausserdem scheitert die Berufung auf den Grundsatz von Treu und Glauben dann, wenn ihr überwiegende öffentliche Interessen gegenüberstehen (vgl. BGE 137 I 69 E. 2.5.1; 129 I 161 E. 4.1)."
+            },
+            {
+              "marke": "E. 5.2",
+              "tiefe": 2,
+              "text": "Die Beschwerdeführerinnen berufen sich auf eine mündliche, durch den Projektleiter der Vergabebehörde gesetzte Vertrauensgrundlage. Zwischen den Verfahrensbeteiligten ist deren Inhalt strittig. Die Vorinstanz durfte von weiteren Abklärungen zum Gesprächsinhalt absehen, weil die Berufung auf den Vertrauensschutz bereits daran scheitert, dass der Projektleiter unter Vertrauensgesichtspunkten nicht als zuständige Auskunftsperson betrachtet werden kann (vgl. BGE 132 II 21 E. 8.1; 101 la 92 E. 3b). Die Beschwerdeführerinnen sind im Baugewerbe tätige Unternehmen (vgl. E. 3.5.2 i.f. hiervor). Für ihre Organe musste klar sein, dass allfällige Aussagen des Projektleiters zu juristischen Fragen - wie den Fristenlauf - kein Vertrauen begründen können."
+            },
+            {
+              "marke": "E. 5.3",
+              "tiefe": 2,
+              "text": "Nach dem Dargelegten liegt keine Verletzung des Grundsatzes von Treu und Glauben nach Art. 9 BV vor. Ebenso verletzte die Vorinstanz nicht den Anspruch auf rechtliches Gehör, indem sie auf die beantragten Befragungen zur erteilten Auskunft verzichtete."
+            },
+            {
+              "marke": "E. 6",
+              "tiefe": 1,
+              "text": "Im Ergebnis erweist sich die Beschwerde in öffentlich-rechtlichen Angelegenheiten als unbegründet, weshalb sie abzuweisen ist. Auf die subsidiäre Verfassungsbeschwerde ist nicht einzutreten.\n\nBei diesem Verfahrensausgang tragen die Beschwerdeführerinnen die Gerichtskosten zu gleichen Teilen und unter solidarischer Haftung (Art. 66 Abs. 1 und Abs. 5 BGG). Parteientschädigungen sind nicht geschuldet, da der Beschwerdegegnerin vorliegend kein Aufwand entstanden (Art. 68 Abs. 1 BGG) und die Vergabebehörde in ihrem amtlichen Wirkungskreis tätig ist (Art. 68 Abs. 3 BGG)."
+            }
+          ]
+        },
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": "1.",
+              "text": "Die Beschwerde in öffentlich-rechtlichen Angelegenheiten wird abgewiesen."
+            },
+            {
+              "marke": "2.",
+              "text": "Auf die subsidiäre Verfassungsbeschwerde wird nicht eingetreten."
+            },
+            {
+              "marke": "3.",
+              "text": "Die Gerichtskosten von Fr. 12'500.-- werden den Beschwerdeführerinnen zu gleichen Teilen und unter solidarischer Haftung auferlegt."
+            },
+            {
+              "marke": "4.",
+              "text": "Dieses Urteil wird den Verfahrensbeteiligten und dem Verwaltungsgericht des Kantons Zürich, 1. Abteilung, mitgeteilt."
+            },
+            {
+              "marke": null,
+              "text": "Lausanne, 5. Juni 2024\n\nIm Namen der II. öffentlich-rechtlichen Abteilung\n\ndes Schweizerischen Bundesgerichts\n\nDie Präsidentin: F. Aubry Girardin\n\nDer Gerichtsschreiber: M. Zollinger"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Die Beschwerde in öffentlich-rechtlichen Angelegenheiten wird abgewiesen.",
+        "Auf die subsidiäre Verfassungsbeschwerde wird nicht eingetreten.",
+        "Die Gerichtskosten von Fr. 12'500.-- werden den Beschwerdeführerinnen zu gleichen Teilen und unter solidarischer Haftung auferlegt.",
+        "Dieses Urteil wird den Verfahrensbeteiligten und dem Verwaltungsgericht des Kantons Zürich, 1. Abteilung, mitgeteilt."
+      ],
+      "zitierteNormen": [
+        "Art. 105 Abs. 1 BGG",
+        "Art. 105 Abs. 2 BGG",
+        "Art. 29 Abs. 1 BV",
+        "Art. 29 Abs. 1 CST",
+        "Art. 29 BV",
+        "Art. 56 Abs. 1 AIMP",
+        "Art. 56 Abs. 1 CIAP"
+      ],
+      "normKeys": [
+        "BGG",
+        "BV"
+      ],
+      "zitierteEntscheide": [
+        "2C_1014/2015",
+        "2C_1055/2022",
+        "2C_1060/2022",
+        "2C_1097/2014",
+        "2C_1184/2013",
+        "2C_167/2016",
+        "2C_339/2017",
+        "2C_358/2022",
+        "2C_444/2015",
+        "2C_506/2019",
+        "2C_512/2023",
+        "2C_838/2021",
+        "2C_848/2012",
+        "2C_887/2017",
+        "2C_941/2022",
+        "2D_25/2021",
+        "2D_42/2018",
+        "2D_53/2020",
+        "BGE 131 I 153",
+        "BGE 132 II 21",
+        "BGE 137 I 371",
+        "BGE 137 I 69",
+        "BGE 139 III 209",
+        "BGE 141 II 14",
+        "BGE 141 II 233",
+        "BGE 142 I 135",
+        "BGE 142 II 369",
+        "BGE 142 III 599",
+        "BGE 143 II 425",
+        "BGE 144 I 113",
+        "BGE 144 II 184",
+        "BGE 146 II 276",
+        "BGE 147 I 89",
+        "BGE 147 II 44",
+        "BGE 147 IV 93",
+        "BGE 149 I 146",
+        "VB.2011.00322",
+        "VB.2023.00260"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=8&from_date=&to_date=&from_year=2024&to_year=2024&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=71&highlight_docid=atf%3A%2F%2F150-I-183%3Ade&number_of_ranks=177&azaclir=clir",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "12c402318e223361fb9b41cab5900f3bdfae09b91ac014ed1b3b105f7957e429",
+      "sha": "6a6a002ff14a3877e466058c06033ae7193ee6f331fa9e6984cc5fea99092461",
+      "auszugAbschnitte": [
         {
           "typ": "sachverhalt",
           "vollstaendig": true,
@@ -120,29 +420,11 @@
           ]
         }
       ],
-      "dispositivOrders": [],
-      "zitierteNormen": [
-        "Art. 105 Abs. 1 BGG",
-        "Art. 105 Abs. 2 BGG",
-        "Art. 29 Abs. 1 BV",
-        "Art. 29 Abs. 1 CST",
-        "Art. 29 BV",
-        "Art. 56 Abs. 1 AIMP",
-        "Art. 56 Abs. 1 CIAP"
-      ],
-      "normKeys": [
-        "BGG",
-        "BV"
-      ],
-      "zitierteEntscheide": [],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "quelle": "opencaselaw",
-      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=8&from_date=&to_date=&from_year=2024&to_year=2024&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=71&highlight_docid=atf%3A%2F%2F150-I-183%3Ade&number_of_ranks=177&azaclir=clir",
-      "abgerufen": "2026-06-26",
-      "fassungsToken": "12c402318e223361fb9b41cab5900f3bdfae09b91ac014ed1b3b105f7957e429",
-      "sha": "7dea6e564b3a82c3077e2760a85ac2ac6c45c1f0edfcd20bddf657ee22b19ef7",
-      "azaUrteil": null,
+      "azaUrteil": {
+        "aktenzeichen": "2C_512/2023",
+        "key": "bger_2C_512_2023",
+        "quelleUrl": "http://relevancy.bger.ch/cgi-bin/JumpCGI?id=05.06.2024_2C_512/2023"
+      },
       "ecli": "ECLI:CH:BGE:2024:150.I.183"
     }
   ]

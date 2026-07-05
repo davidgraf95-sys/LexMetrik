@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-26",
+  "erzeugt": "2026-07-05",
   "eintraege": [
     {
       "id": "bund/bge/150_II_334",
@@ -7,22 +7,331 @@
       "gerichtName": "Bundesgericht",
       "gerichtstyp": "bundesgericht",
       "kanton": "CH",
-      "abteilung": null,
+      "abteilung": "II",
       "nummer": "150 II 334",
       "bgeReferenz": "150 II 334",
       "zitierung": "BGE 150 II 334",
       "datum": "2024-03-22",
       "sprache": "de",
       "leitcharakter": "leitentscheid",
-      "sachgebiet": "oeffentlich",
+      "sachgebiet": "sozial-abgaben",
       "legalArea": "public",
-      "rubrum": null,
+      "rubrum": {
+        "besetzung": "Bundesrichterin Aubry Girardin, Präsidentin, Bundesrichter Donzallaz, Bundesrichterin Hänni, Bundesrichterin Ryter, Bundesrichter Kradolfer, Gerichtsschreiber Zollinger",
+        "parteien": "Eidgenössisches Departement für Umwelt, Verkehr, Energie und Kommunikation (UVEK), Generalsekretariat, Rechtsdienst, 3003 Bern, handelnd durch das Bundesamt für Energie, Mühlestrasse 4, 3063 Ittigen, gegen A.________ AG, Beschwerdegegnerin, vertreten durch Rechtsanwalt Thomas Baumberger",
+        "gegenstand": "Feststellungsverfügung betreffend Biogasanlage",
+        "vorinstanz": "Bundesverwaltungsgerichts, Abteilung I, vom 10. Februar 2023 (A-4807/2021)"
+      },
       "regeste": {
         "text": "Art. 19 Abs. 1 lit. e, Art. 19 Abs. 4 lit. d und Art. 72 Abs. 1 EnG; Art. 2 lit. a, Art. 16 Abs. 2 und Anhang 1.5 Ziff. 2.1.2 lit. g EnFV; Unterscheidung zwischen \"Mischanlagen\" und Hybridanlagen; Klärgas als nicht förderungsberechtigter erneuerbarer Energieträger; Berechnung des Vergütungssatzes für Hybridanlagen im Einspeisevergütungssystem. Streitgegenstand (E. 3). Anwendbares Recht und rechtliche Grundlagen (E. 4). Rügen des Departements (E. 5.1). Vorinstanzliche Erwägungen (E. 5.2). Vorbringen der Beschwerdegegnerin (E. 5.3). Im Gegensatz zu \"Mischanlagen\", die sowohl erneuerbare als auch fossile Energieträger zur Produktion von Elektrizität verwenden, nutzen Hybridanlagen mehrere erneuerbare Energieträger zur Elektrizitätsproduktion. Anlagen, die nicht förderungsberechtigte erneuerbare Energieträger, wie Klärgas, und zugleich andere, aber vergütungsberechtigte erneuerbare Energieträger zur Elektrizitätsproduktion nutzen, stellen Hybridanlagen im Sinne von Art. 2 lit. a EnFV dar (E. 5.4). Der Vergütungssatz für solche Anlagen ist unter Anwendung von Art. 16 Abs. 2 EnFV zu berechnen (E. 5.5 und 5.6).\nRegeste\n Art. 19 al. 1 let. e, art. 19 al. 4 let. d et art. 72 al. 1 LEne; Art. 2 let. a, art. 16 al. 2 et Annexe 1.5 ch. 2.1.2 let. g OEneR; distinction entre \"installations mixtes\" et installations hybrides; gaz d'épuration en tant qu'agent énergétique renouvelable ne donnant pas droit à un encouragement; calcul du taux de rétribution pour les installations hybrides dans le système de rétribution de l'injection. Objet du litige (consid. 3). Droit applicable et bases légales (consid. 4). Griefs du Département (consid. 5.1). Considérations de l'instance précédente (consid. 5.2). Arguments de l'intimée (consid. 5.3). Contrairement aux \"installations mixtes\", qui emploient tant des agents énergétiques renouvelables que fossiles pour la production d'énergie, les installations hybrides utilisent plusieurs agents énergétiques renouvelables pour produire de l'électricité. Les installations qui utilisent, pour la production d'électricité, à la fois des agents énergétiques renouvelables qui ne donnent pas droit à un encouragement, comme le gaz d'épuration, et des agents énergétiques renouvelables donnant droit à une rétribution, constituent des installations hybrides au sens de l'art. 2 let. a OEneR (consid. 5.4). Le taux de rétribution pour de telles installations doit être calculé en application de l'art. 16 al. 2 OEneR (consid. 5.5 et 5.6).\nRegesto\n Art. 19 cpv. 1 lett. e, art. 19 cpv. 4 lett. d e art. 72 cpv. 1 LEne; art. 2 lett. a, art. 16 cpv. 2 e Allegato 1.5 cifra 2.1.2 lett. g OPEn; differenza tra \"impianti misti\" e impianti ibridi; gas di depurazione quale fonte di energia rinnovabile che non dà luogo a una promozione; calcolo del tasso di rimunerazione per gli impianti ibridi nel sistema di rimunerazione per l'immissione di elettricità. Oggetto del litigio (consid. 3). Diritto applicabile e basi legali (consid. 4). Censure del dipartimento (consid. 5.1). Considerandi dell'istanza precedente (consid. 5.2). Argomenti della controparte (consid. 5.3). Contrariamente agli \"impianti misti\" che sfruttano vettori energetici sia rinnovabili che fossili per produrre dell'elettricità, gli impianti ibridi sfruttano più vettori di energia rinnovabile per la produzione di elettricità. Gli impianti che utilizzano, per produrre dell'elettricità, sia dei vettori di energia che non danno luogo a una promozione, quale il gas di depurazione, che dei vettori energetici rinnovabili che ricevono una rimunerazione sono degli impianti ibridi ai sensi dell'art. 2 lett. a OPEn (consid. 5.4). Il tasso di rimunerazione per questi impianti dev'essere calcolato in applicazione dell'art. 16 cpv. 2 OPEn (consid. 5.5 e 5.6).",
-        "quelle": "opencaselaw"
+        "quelle": "opencaselaw",
+        "sprachfassungen": [
+          {
+            "sprache": "de",
+            "kopf": "Art. 19 Abs. 1 lit. e, Art. 19 Abs. 4 lit. d und Art. 72 Abs. 1 EnG; Art. 2 lit. a, Art. 16 Abs. 2 und Anhang 1.5 Ziff. 2.1.2 lit. g EnFV; Unterscheidung zwischen \"Mischanlagen\" und Hybridanlagen; Klärgas als nicht förderungsberechtigter erneuerbarer Energieträger; Berechnung des Vergütungssatzes für Hybridanlagen im Einspeisevergütungssystem.",
+            "absaetze": [
+              "Streitgegenstand (E. 3). Anwendbares Recht und rechtliche Grundlagen (E. 4).",
+              "Rügen des Departements (E. 5.1). Vorinstanzliche Erwägungen (E. 5.2). Vorbringen der Beschwerdegegnerin (E. 5.3). Im Gegensatz zu \"Mischanlagen\", die sowohl erneuerbare als auch fossile Energieträger zur Produktion von Elektrizität verwenden, nutzen Hybridanlagen mehrere erneuerbare Energieträger zur Elektrizitätsproduktion. Anlagen, die nicht förderungsberechtigte erneuerbare Energieträger, wie Klärgas, und zugleich andere, aber vergütungsberechtigte erneuerbare Energieträger zur Elektrizitätsproduktion nutzen, stellen Hybridanlagen im Sinne von Art. 2 lit. a EnFV dar (E. 5.4). Der Vergütungssatz für solche Anlagen ist unter Anwendung von Art. 16 Abs. 2 EnFV zu berechnen (E. 5.5 und 5.6)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-II-334%3Ade&lang=de&type=show_document"
+          },
+          {
+            "sprache": "fr",
+            "kopf": "Art. 19 al. 1 let. e, art. 19 al. 4 let. d et art. 72 al. 1 LEne; Art. 2 let. a, art. 16 al. 2 et Annexe 1.5 ch. 2.1.2 let. g OEneR; distinction entre \"installations mixtes\" et installations hybrides; gaz d'épuration en tant qu'agent énergétique renouvelable ne donnant pas droit à un encouragement; calcul du taux de rétribution pour les installations hybrides dans le système de rétribution de l'injection.",
+            "absaetze": [
+              "Objet du litige (consid. 3). Droit applicable et bases légales (consid. 4).",
+              "Griefs du Département (consid. 5.1). Considérations de l'instance précédente (consid. 5.2). Arguments de l'intimée (consid. 5.3). Contrairement aux \"installations mixtes\", qui emploient tant des agents énergétiques renouvelables que fossiles pour la production d'énergie, les installations hybrides utilisent plusieurs agents énergétiques renouvelables pour produire de l'électricité. Les installations qui utilisent, pour la production d'électricité, à la fois des agents énergétiques renouvelables qui ne donnent pas droit à un encouragement, comme le gaz d'épuration, et des agents énergétiques renouvelables donnant droit à une rétribution, constituent des installations hybrides au sens de l'art. 2 let. a OEneR (consid. 5.4). Le taux de rétribution pour de telles installations doit être calculé en application de l'art. 16 al. 2 OEneR (consid. 5.5 et 5.6)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-II-334%3Afr&lang=fr&type=show_document"
+          },
+          {
+            "sprache": "it",
+            "kopf": "Art. 19 cpv. 1 lett. e, art. 19 cpv. 4 lett. d e art. 72 cpv. 1 LEne; art. 2 lett. a, art. 16 cpv. 2 e Allegato 1.5 cifra 2.1.2 lett. g OPEn; differenza tra \"impianti misti\" e impianti ibridi; gas di depurazione quale fonte di energia rinnovabile che non dà luogo a una promozione; calcolo del tasso di rimunerazione per gli impianti ibridi nel sistema di rimunerazione per l'immissione di elettricità.",
+            "absaetze": [
+              "Oggetto del litigio (consid. 3). Diritto applicabile e basi legali (consid. 4).",
+              "Censure del dipartimento (consid. 5.1). Considerandi dell'istanza precedente (consid. 5.2). Argomenti della controparte (consid. 5.3). Contrariamente agli \"impianti misti\" che sfruttano vettori energetici sia rinnovabili che fossili per produrre dell'elettricità, gli impianti ibridi sfruttano più vettori di energia rinnovabile per la produzione di elettricità. Gli impianti che utilizzano, per produrre dell'elettricità, sia dei vettori di energia che non danno luogo a una promozione, quale il gas di depurazione, che dei vettori energetici rinnovabili che ricevono una rimunerazione sono degli impianti ibridi ai sensi dell'art. 2 lett. a OPEn (consid. 5.4). Il tasso di rimunerazione per questi impianti dev'essere calcolato in applicazione dell'art. 16 cpv. 2 OPEn (consid. 5.5 e 5.6)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-II-334%3Ait&lang=it&type=show_document"
+          }
+        ]
       },
       "regesteAmtlich": true,
       "abschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "Die A.________ AG mit Sitz in U.________ betreibt ein Blockheizkraftwerk zur Produktion von Elektrizität sowie Fernwärme aus Biogas, das durch die Vergärung von landwirtschaftlichen Biomasseabfällen gewonnen wird. Die Anlage wurde mit Bescheid der B.________ AG vom 15. Oktober 2008 als grundsätzlich förderungswürdig eingestuft, am 19. Mai 2009 in Betrieb genommen und in die kostendeckende Einspeisevergütung (KEV) aufgenommen. Im Hinblick auf das Inkrafttreten des neuen Energiegesetzes am 1. Januar 2018 wechselte die A.________ AG in die Direktvermarktung, was ihr mit Schreiben vom 4. Januar 2018 bestätigt wurde. Am 16. September 2019 erkundigte sich die A.________ AG bei der ab dem 30. September 2016 für den Vollzug der kostendeckenden Einspeisevergütung zuständigen Pronovo AG, wie mit zugekauftem Klärgas bei der jährlichen Energiedatenlieferung und Beglaubigung umgegangen werden müsse, wie dieses Klärgas angerechnet werden könne und wie dieses vergütet würde. Am 18. September 2019 beantwortete die Pronovo AG diese Anfrage sinngemäss dahingehend, dass Klärgas laut der geltenden Verordnung eine nicht zugelassene Biomasse sei. Im Weiteren teilte sie mit, dass die Anlage der A.________ AG durch die energetische Verwendung von Klärgas im bereits bestehenden Blockheizkraftwerk die Förderungswürdigkeit verlieren würde."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Mit Eingabe vom 10. Juli 2020 ersuchte die A.________ AG um den Erlass einer entsprechenden Feststellungsverfügung. B.a. Mit Feststellungsverfügung vom 7. Dezember 2020 entschied die Pronovo AG, es werde festgestellt, dass die A.________ AG in ihrer Biogasanlage auch Klärgas verstromen könne, ohne dass deshalb die Förderungswürdigkeit entfalle, dass sie aber mit geeigneten Messvorrichtungen sicherzustellen habe, dass nur die mit erneuerbaren Energieträgern produzierte Elektrizität vergütet werde. Im Weiteren verfügte die Pronovo AG eine Reduktion des KEV-Tarifs ab der ersten Verstromung von Klärgas mittels eines Synergieabzugs von 15 % und dass der Eigenverbrauch der Anlage entsprechend der Produktion \"anteilsmässig aus erneuerbarer und nichterneuerbarer Energie\" zu decken sei. B.b. Am 25. Januar 2021 erhob die A.________ AG gegen die Feststellungsverfügung vom 7. Dezember 2020 Einsprache bei der Pronovo AG und machte im Wesentlichen geltend, es handle sich bei ihrer Anlage weder um eine \"Mischanlage\" mit teils fossilen Energieträgern noch um eine Hybridanlage. Vielmehr handle es sich um eine Biogasanlage mit einem Blockheizkraftwerk, in dem künftig nebst landwirtschaftlichem Biogas auch Klärgas verstromt werden solle, wobei sich an der Biogasanlage nichts ändere. Ausserdem erfolge der Synergieabzug von 15 % ohne gesetzliche Grundlage. B.c. Mit Einspracheentscheid vom 30. September 2021 wies die Pronovo AG die Einsprache weitgehend ab. Gutgeheissen wurde die Einsprache hingegen in Bezug auf die Feststellung der Berechtigung der A.________ AG, im Rahmen der Elektrizitätsproduktion aus Klärgas selbst produzierte, nicht förderungsberechtigte, Elektrizität am Ort der Produktion selber zu verbrauchen, sofern sie mit geeigneten Messvorrichtungen sicherstellt, dass die Energieströme getrennt gemessen und separat ausgewiesen werden können. Zur Begründung führt die Pronovo AG im Wesentlichen aus, die gesetzliche Grundlage schliesse die Verwendung von Klärgas als Biomasse explizit von der kostendeckenden Einspeisevergütung aus. Zwar werde in der Feststellungsverfügung vom 7. Dezember 2020 die Förderungswürdigkeit der Anlage anerkannt, solange die Energieströme gemessen werden könnten, doch sei ein Synergieabzug von pauschal 15 % gerechtfertigt. B.d. Am 1. November 2021 reichte die A.________ AG gegen den Einspracheentscheid vom 30. September 2021 Beschwerde beim Bundesverwaltungsgericht ein. Sie beantragte im Wesentlichen, der angefochtene Entscheid sei insofern aufzuheben, als er einen Synergieabzug von 15 % ab der ersten Verstromung von Klärgas vorsehe, und er die Vergütung der Nettoproduktion betreffe. Zur Begründung führt die A.________ AG aus, es handle sich bei dem von ihr zur Verstromung beabsichtigten Klärgas nicht um einen fossilen, sondern um einen erneuerbaren Energieträger, welchen sie von der benachbarten Abwasserreinigungsanlage zu kaufen beabsichtige. Eine Synergie der beiden Anlagen sei nicht ersichtlich, vielmehr diene das zugekaufte Klärgas dazu, ihre Anlage besser auszulasten. Sie sei bereit, mit geeigneten Messvorrichtungen die verschiedenen Energieströme zu messen, sodass der Berechnung der kostendeckenden Einspeisevergütung die genaue Menge der verstromten entschädigungsfähigen Biomasse zugrunde gelegt werden könne und eine Berechnung der Nettoproduktion zulasse. B.e. Mit Urteil vom 10. Februar 2023 hiess das Bundesverwaltungsgericht die Beschwerde gut, soweit es darauf eintrat. Es beurteilte die Anlage der A.________ AG in Abweichung von der Einschätzung der Pronovo AG nicht als \"Mischanlage\", sondern als Hybridanlage. Im Weiteren hielt es den Synergieabzug von 15 % für unzulässig und bestätigte den bisher gültigen Vergütungssatz."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Mit Beschwerde in öffentlich-rechtlichen Angelegenheiten vom 16. März 2023 gelangt das Eidgenössische Departement für Umwelt, Verkehr, Energie und Kommunikation (UVEK; nachfolgend: Departement), handelnd durch das Bundesamt für Energie, an das Bundesgericht. Das Departement beantragt die Aufhebung des Urteils vom 10. Februar 2023. Die Angelegenheit sei zur Ergänzung des Sachverhalts und zur Neubeurteilung an die Vorinstanz zurückzuweisen. Mit Verfügung vom 14. April 2023 hat die Abteilungspräsidentin das Gesuch um aufschiebende Wirkung abgewiesen. Während die Vorinstanz auf eine Vernehmlassung verzichtet, schliesst die A.________ AG (nachfolgend: Beschwerdegegnerin) auf Abweisung der Beschwerde, soweit darauf eingetreten werde. Die Pronovo AG beantragt, die Angelegenheit sei in Gutheissung der Beschwerde zur Neubeurteilung an die Vorinstanz zurückzuweisen. Die Beschwerdegegnerin nimmt am 15. Mai 2023 nochmals Stellung und hält an ihrem Antrag fest."
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 1",
+              "tiefe": 1,
+              "text": "Das Bundesgericht prüft seine Zuständigkeit und die weiteren Eintretensvoraussetzungen von Amtes wegen (Art. 29 Abs. 1 BGG) und mit freier Kognition (vgl. BGE 146 II 276 E. 1; 141 II 113 E. 1)."
+            },
+            {
+              "marke": "E. 1.1",
+              "tiefe": 2,
+              "text": "Die frist- (Art. 100 Abs. 1 BGG) und formgerecht (Art. 42 BGG) eingereichte Eingabe betrifft eine Angelegenheit des öffentlichen Rechts (Art. 82 lit. a BGG) und richtet sich gegen ein verfahrensabschliessendes (Art. 90 BGG) Urteil des Bundesverwaltungsgerichts (Art. 86 Abs. 1 lit. a BGG). Das Rechtsmittel ist als Beschwerde in öffentlich-rechtlichen Angelegenheiten zulässig, da kein Ausschlussgrund vorliegt (Art. 83 BGG)."
+            },
+            {
+              "marke": "E. 1.2",
+              "tiefe": 2,
+              "text": "Gemäss Art. 89 Abs. 2 lit. a BGG sind die Departemente des Bundes zur Beschwerde an das Bundesgericht berechtigt, wenn der angefochtene Akt die Bundesgesetzgebung in ihrem Aufgabenbereich verletzen kann."
+            },
+            {
+              "marke": "E. 1.2.1",
+              "tiefe": 3,
+              "text": "Das Beschwerderecht der Bundesbehörden dient dazu, den Vollzug des Bundesrechts in den Kantonen und in der Bundesverwaltung zu überwachen und dessen richtige und einheitliche Anwendung - wenn nötig letztinstanzlich durch das Bundesgericht - sicherzustellen. Ein darüber hinausgehendes spezifisches schutzwürdiges (öffentliches) Interesse setzt das Beschwerderecht der Bundesbehörden nicht voraus (vgl. BGE 142 II 324 E. 1.3.1; 136 II 359 E. 1.2; Urteil 2C_116/2022 vom 3. Mai 2023 E. 1.2.1)."
+            },
+            {
+              "marke": "E. 1.2.2",
+              "tiefe": 3,
+              "text": "Die Bundesgesetzgebung im Stromversorgungs- und Energierecht zählt zum Aufgabenbereich des Eidgenössischen Departements für Umwelt, Verkehr, Energie und Kommunikation (vgl. Urteile 2C_116/2022 vom 3. Mai 2023 E. 1.2.2; 2C_109/2020 und 2C_115/2020 vom 7. Oktober 2022 E. 1.3.1). Das Departement ist daher zur Beschwerdeerhebung an das Bundesgericht gemäss Art. 89 Abs. 2 lit. a BGG befugt. Hierfür hat es in rechtsgenüglicher Form das Bundesamt für Energie bevollmächtigt."
+            },
+            {
+              "marke": "E. 1.3",
+              "tiefe": 2,
+              "text": "Das Departement stellt einen kassatorischen Antrag um Aufhebung des angefochtenen Urteils und Rückweisung der Angelegenheit an die Vorinstanz. Soweit das Bundesgericht reformatorisch entscheiden kann, darf sich die beschwerdeführende Partei wegen der reformatorischen Natur der Rechtsmittel grundsätzlich nicht darauf beschränken, die Aufhebung des angefochtenen Urteils und die Rückweisung der Angelegenheit zu beantragen. Sie muss vielmehr einen Antrag in der Sache stellen (Art. 107 Abs. 2 BGG; vgl. BGE 133 III 489 E. 3.1).\n\nDie Rechtsmittelbegehren sind indes nach Treu und Glauben unter Beizug der Beschwerdebegründung auszulegen. Geht aus der Beschwerdebegründung zweifelsfrei hervor, was die beschwerdeführende Partei anstrebt, und wie nach erfolgter Rückweisung vorzugehen wäre, liegt ein Antrag in der Sache vor (vgl. BGE 137 II 313 E. 1.3; 133 II 409 E. 1.4.1). Unter diesem Blickwinkel verlangt das Departement die Neuberechnung des Vergütungssatzes oder eventualiter die Bestätigung des Einspracheentscheids der Pronovo AG vom 30. September 2021 (vgl. E. 5.1 hiernach). Bei dieser Ausgangslage liegt ein zulässiges Rechtsbegehren vor."
+            },
+            {
+              "marke": "E. 1.4",
+              "tiefe": 2,
+              "text": "Auf die Beschwerde in öffentlich-rechtlichen Angelegenheiten ist einzutreten."
+            },
+            {
+              "marke": "E. 2",
+              "tiefe": 1,
+              "text": "Mit der Beschwerde kann namentlich die Verletzung von Bundesrecht gerügt werden (Art. 95 lit. a und lit. b BGG). Das Bundesgericht wendet das Recht von Amtes wegen an (Art. 106 Abs. 1 BGG), wobei es - unter Berücksichtigung der allgemeinen Rüge- und Begründungspflicht (Art. 42 Abs. 2 BGG) - grundsätzlich nur die geltend gemachten Vorbringen prüft, sofern allfällige weitere rechtliche Mängel nicht geradezu offensichtlich sind (vgl. BGE 142 I 135 E. 1.5; 133 II 249 E. 1.4.1).\n\nSeinem Urteil legt das Bundesgericht den Sachverhalt zugrunde, den die Vorinstanz festgestellt hat (Art. 105 Abs. 1 BGG). Der festgestellte Sachverhalt kann nur erfolgreich gerügt sowie berichtigt oder ergänzt werden, wenn er offensichtlich unrichtig ist oder auf einer Rechtsverletzung im Sinne von Art. 95 BGG beruht und die Behebung des Mangels für den Ausgang des Verfahrens entscheidend sein kann (Art. 97 Abs. 1 BGG; Art. 105 Abs. 2 BGG; vgl. BGE 142 I 135 E. 1.6; 140 III 16 E. 1.3.1). Rügt die beschwerdeführende Partei eine offensichtlich unrichtige Sachverhaltsfeststellung, haben ihre Vorbringen den Anforderungen von Art. 106 Abs. 2 BGG zu genügen (vgl. BGE 139 I 72 E. 9.2.3.6; 133 II 249 E. 1.4.3)."
+            },
+            {
+              "marke": "E. 3",
+              "tiefe": 1,
+              "text": "Gegenstand der vorliegenden Angelegenheit ist die Frage, ob und in welchem Umfang die Einspeisevergütung, die die Beschwerdegegnerin für die Produktion von Elektrizität aus Biogas erhält, anzupassen ist, da sie beabsichtigt, in Zukunft in dem von ihr betriebenen Blockheizkraftwerk auch Klärgas zu verstromen. Während das beschwerdeführende Departement aufgrund der gleichzeitigen Verstromung von Biogas und Klärgas eine \"Mischanlage\" erkennen will und einen pauschalen Abzug von 15 % für die Nutzung von Synergien für gerechtfertigt hält, hat die Vorinstanz die Anlage der Beschwerdegegnerin als \"Hybridanlage\" eingestuft, den bisher gültigen Vergütungssatz bestätigt und den Synergieabzug als ungerechtfertigt beurteilt. Demgegenüber ist der Bestand der Förderungswürdigkeit der Anlage der Beschwerdegegnerin an sich, selbst unter Verwendung von Klärgas zur Produktion von Elektrizität, unbestritten (vgl. E. 4 des angefochtenen Urteils). Darüber hinaus sind sich die Verfahrensbeteiligten einig, dass es sich bei Klärgas nicht um einen fossilen Energieträger handelt (vgl. E. 4.3 f. hiernach; vgl. auch E. 4.6 des angefochtenen Urteils)."
+            },
+            {
+              "marke": "E. 4",
+              "tiefe": 1,
+              "text": "Vorbehältlich besonderer übergangsrechtlicher Regelungen sind in zeitlicher Hinsicht grundsätzlich diejenigen Rechtssätze massgeblich, die bei der Erfüllung des rechtlich zu ordnenden oder zu Rechtsfolgen führenden Tatbestands Geltung haben (vgl. BGE 149 II 187 E. 4.4; 139 II 263 E. 6)."
+            },
+            {
+              "marke": "E. 4.1",
+              "tiefe": 2,
+              "text": "Am 1. Januar 2018 sind das neue Energiegesetz vom 30. September 2016 (EnG; SR 730.0), die neue Energieverordnung vom 1. November 2017 (EnV; SR 730.01) sowie die Verordnung vom 1. November 2017 über die Förderung der Produktion von Elektrizität aus erneuerbaren Energien (Energieförderungsverordnung, EnFV; SR 730.03) in Kraft getreten (vgl. AS 2017 6839 ff., S. 6871; 2017 6889 ff., S. 6918; 2017 7031 ff., S. 7064). Das Einspeisevergütungssystem löste die bisherige kostendeckende Einspeisevergütung ab. Letztere deckte die Differenz zwischen einer garantierten Vergütung und dem Marktpreis (vgl. Botschaft vom 4. September 2013 zum ersten Massnahmenpaket der Energiestrategie 2050 [Revision des Energierechts] und zur Volksinitiative \"Für den geordneten Ausstieg aus der Atomenergie [Atomausstiegsinitiative]\", BBl 2013 7561 ff. [nachfolgend: Botschaft EnG], S. 7623 f.). Demgegenüber soll das Einspeisevergütungssystem nicht mehr zwingend kostendeckend sein. Vielmehr orientiert sich die Vergütung an den bei der Inbetriebnahme einer Anlage massgeblichen Gestehungskosten von Referenzanlagen (vgl. Art. 22 Abs. 1 EnG; Botschaft EnG, S. 7625 f.; vgl. auch Urteile 2C_634/2021 vom 16. März 2022 E. 3.1; 2C_254/2021 vom 27. September 2021 E. 3.1; 2C_821/2019 vom 11. Februar 2020 E. 3.3.2)."
+            },
+            {
+              "marke": "E. 4.2",
+              "tiefe": 2,
+              "text": "Gemäss Art. 72 Abs. 1 EnG steht den Betreiberinnen von Anlagen, die beim Inkrafttreten des Energiegesetzes vom 30. September 2016 bereits eine Vergütung nach bisherigem Recht erhalten (vgl. Art. 7a des Energiegesetzes vom 26. Juni 1998 [aEnG; AS 1999 197 ff.; in Kraft bis zum 31. Dezember 2017]), diese zwar weiterhin zu, während für den laufenden Betrieb das neue Recht gilt. Die Beschwerdegegnerin erhält seit dem Jahr 2009 eine Vergütung für die Produktion von Elektrizität aus Biogas, das durch die Vergärung von landwirtschaftlichen Biomasseabfällen gewonnen wird (vgl. Bst. A hiervor). Dieser Umstand ist für die Frage, welches Recht anzuwenden ist, allerdings nicht massgebend, da die Beschwerdegegnerin erst nach Inkrafttreten des neuen Rechts, zusätzlich zum Biogas auch Klärgas verstromen möchte. Es ist demnach ein Sachverhalt zu beurteilen, der sich unter der Geltung des neuen Rechts ereignet hat, weshalb unter den Verfahrensbeteiligten zu Recht unbestritten ist, dass die Bestimmungen der Energieförderungsverordnung vorliegend einschlägig sind."
+            },
+            {
+              "marke": "E. 4.3",
+              "tiefe": 2,
+              "text": "Gemäss Art. 1 EnFV regelt die Energieförderungsverordnung die Förderung der Produktion von Elektrizität aus erneuerbaren Energien, die aus dem Netzzuschlag nach Art. 35 EnG finanziert wird. Das zweite Kapitel der Verordnung regelt das Einspeisevergütungssystem (vgl. Art. 11 ff. EnFV), wobei Art. 19 Abs. 1 lit. a-e EnG als Vorgabe vorsieht, dass am Einspeisevergütungssystem nur die Betreiberinnen teilnehmen können, die Elektrizität aus den erneuerbaren Energien Wasserkraft, Sonnenenergie, Windenergie, Geothermie und Biomasse erzeugen. Demgegenüber können die Betreiberinnen von Schlammverbrennungs-, Klärgas- und Deponiegasanlagen nicht am Einspeisevergütungssystem teilnehmen (vgl. Art. 19 Abs. 4 lit. d EnG). Grund für die Ausnahme dieser Infrastrukturanlagen vom Einspeisevergütungssystem ist der Umstand, dass diese häufig im Besitz der öffentlichen Hand sind und den Auftrag haben, über verursachergerechte Entsorgungsgebühren kostendeckend zu wirtschaften (vgl. Botschaft EnG, S. 7626)."
+            },
+            {
+              "marke": "E. 4.4",
+              "tiefe": 2,
+              "text": "Eine Anlage, die mehrere erneuerbare Energieträger zur Elektrizitätsproduktion nutzt, gilt laut Art. 2 lit. a EnFV als Hybridanlage. Der Vergütungssatz für Hybridanlagen berechnet sich nach den Vergütungssätzen der eingesetzten Energieträger, gewichtet nach deren anteilsmässigen Energieinhalten (vgl. Art. 16 Abs. 2 Satz 1 EnFV). Zur Bestimmung der äquivalenten Leistungen wird gemäss Art. 16 Abs. 2 Satz 2 EnFV die gesamte Produktion verwendet. Die Vergütungssätze je Erzeugungstechnologie, Kategorie und Leistungsklasse sind in den Anhängen 1.1-1.5 EnFV festgelegt (vgl. Art. 16 Abs. 1 EnFV). Anhang 1.5 der Energieförderungsverordnung regelt die Biomasseanlagen im Einspeisevergütungssystem. Eine Biomasseanlage ist jede selbstständige technische Einrichtung zur Produktion von Elektrizität aus Biomasse (vgl. Anhang 1.5 Ziff. 1 EnFV). Als Biomasse gilt sämtliches durch Photosynthese direkt oder indirekt erzeugtes organisches Material, das nicht über geologische Prozesse verändert wurde, wobei auch sämtliche Folge- und Nebenprodukte, Rückstände und Abfälle, deren Energiegehalt aus der Biomasse stammt, dazu gehören (vgl. Art. 2 lit. b EnFV). Als Biomasse zugelassen sind jene nach Art. 2 lit. b EnFV, sofern nicht Stoffe nach Anhang 1.5 Ziff. 2.1.2 EnFV verwendet werden. Zu der nicht zugelassenen Biomasse gehört unter anderem Klärgas sowie Rohschlamm aus ARA (vgl. Anhang 1.5 Ziff. 2.1.2 lit. g EnFV)."
+            },
+            {
+              "marke": "E. 5",
+              "tiefe": 1,
+              "text": "Das Departement kritisiert sinngemäss die vorinstanzliche Qualifikation der Anlage der Beschwerdegegnerin als Hybridanlage und rügt zudem die Missachtung von Art. 16 Abs. 2 EnFV bei der Berechnung des Vergütungssatzes für Hybridanlagen."
+            },
+            {
+              "marke": "E. 5.1",
+              "tiefe": 2,
+              "text": "Das Departement trägt vor, die Vorinstanz weiche von der rechtlichen Würdigung des Einspracheentscheids der Pronovo AG vom 30. September 2021 ab und betrachte die Anlage der Beschwerdegegnerin nicht mehr als \"Mischanlage\", sondern als Hybridanlage im Sinne von Art. 2 lit. a EnFV. In der Folge erwäge die Vorinstanz, so das Departement weiter, dass die Beschwerdegegnerin ohne Synergieabzug auch künftig mit dem bisherigen Vergütungssatz zu entschädigen sei. Diese Schlussfolgerung verletze Bundesrecht, da die Vorinstanz ausser Acht lasse, dass auf Hybridanlagen im Sinne von Art. 2 lit. a EnFV zur Berechnung des Vergütungssatzes Art. 16 Abs. 2 EnFV anzuwenden sei. Nach Auffassung des Departements sei der Vergütungssatz entweder nach Art. 16 Abs. 2 EnFV neu zu berechnen oder es sei aufgrund der vorliegenden Umstände an der ursprünglichen und sachgerechten Beurteilung der Pronovo AG festzuhalten, wonach das Blockheizkraftwerk der Beschwerdegegnerin infolge der Verstromung von Klärgas zu einer \"Mischanlage\" werde. Diesfalls rechtfertige sich ein Synergieabzug von 15 %."
+            },
+            {
+              "marke": "E. 5.2",
+              "tiefe": 2,
+              "text": "Die Vorinstanz verwirft die Auffassung der Pronovo AG, wonach die Anlage der Beschwerdegegnerin eine \"Mischanlage\" darstelle. Die \"Mischanlage\" sei nicht positivrechtlich geregelt, sondern liege nach der Praxis lediglich vor, wenn zugleich erneuerbare und fossile Energieträger zur Stromproduktion eingesetzt würden (vgl. E. 4.4 des angefochtenen Urteils). Bei der Anlage der Beschwerdegegnerin, so die Vorinstanz weiter, spielten fossile Brennstoffe unbestrittenermassen keine Rolle, da auch mit der künftigen Produktion von Elektrizität aus Klärgas ausschliesslich erneuerbare Energieträger verstromt würden. Deshalb könne der Pronovo AG hinsichtlich ihrer Qualifikation der Anlage als \"Mischanlage\" nicht gefolgt werden. Vielmehr handle es sich angesichts der Nutzung mehrerer erneuerbaren Energieträger um eine Hybridanlage im Sinne von Art. 2 lit. a EnFV (vgl. E. 4.5 des angefochtenen Urteils). Die Vorinstanz erwägt weiter, es sei nicht ersichtlich, weshalb die Beschwerdegegnerin durch den Zukauf von Klärgas von einer Synergie profitieren sollte. Deshalb erweise sich ein Synergieabzug als ungerechtfertigt und die Vergütung habe zum bisher gültigen Ansatz zu erfolgen (vgl. E. 4.6 des angefochtenen Urteils)."
+            },
+            {
+              "marke": "E. 5.3",
+              "tiefe": 2,
+              "text": "Die Beschwerdegegnerin macht geltend, sie habe bereits im vorinstanzlichen Verfahren dargelegt, dass ihre Anlage weder eine \"Mischanlage\" noch eine Hybridanlage darstelle. Vielmehr handelt es sich nach Auffassung der Beschwerdegegnerin um eine Anlage, in deren Blockheizkraftwerk nebst bisher Biogas neu auch zugekauftes Klärgas \"mitverstromt\" werde. Die Pronovo AG habe ihr bereits zugesagt, dass, wie bisher, die mit zugelassener Biomasse produzierte Elektrizität - d.h. die Verstromung aus Biogas, nicht aber aus Klärgas - im Rahmen des Einspeisevergütungssystems entschädigt werde. Im Übrigen erziele sie keine Synergien aus der Verstromung des Klärgases. Sie laste lediglich ihre Anlage besser aus, indem sie von der benachbarten Abwasserreinigungsanlage Klärgas käuflich erwerbe."
+            },
+            {
+              "marke": "E. 5.4",
+              "tiefe": 2,
+              "text": "Zunächst ist zu prüfen, ob die Vorinstanz in Abweichung vom Einspracheentscheid der Pronovo AG vom 30. September 2021 zu Recht zum Schluss gelangte, die Beschwerdegegnerin betreibe nicht eine \"Mischanlage\", sondern eine Hybridanlage im Sinne von Art. 2 lit. a EnFV."
+            },
+            {
+              "marke": "E. 5.4.1",
+              "tiefe": 3,
+              "text": "Der Verordnungsgeber regelte bereits die vormalige kostendeckende Einspeisevergütung nicht nur für Anlagen, die mit einem einzigen Energieträger betrieben werden können, sondern auch für Hybridanlagen - d.h. Anlagen, welche mehrere erneuerbare Energieträger zur Stromproduktion nutzen (vgl. Art. 1 lit. o der Energieverordnung vom 7. Dezember 1998 [aEnV; AS 2008 1223 ff., S. 1239; in Kraft vom 1. Januar 2009 bis zum 31. Dezember 2017]). Allerdings stellte weder der Gesetz- noch der Verordnungsgeber eine Regelung auf, wie mit Anlagen zu verfahren ist, die sowohl erneuerbare als auch fossile Energieträger zur Produktion von Elektrizität verwenden. Vor diesem Hintergrund führte das Bundesverwaltungsgericht im Sinne einer rechtsanwendenden Lückenfüllung den Begriff der \"Mischanlage\" ein. Der Begriff erfasst Anlagen, die sowohl erneuerbare als auch fossile Energieträger zur Produktion von Elektrizität verwenden (vgl. E. 4.4 des angefochtenen Urteils mit Hinweis auf das Urteil des BVGer A-4065/2011 vom 15. Mai 2012)."
+            },
+            {
+              "marke": "E. 5.4.2",
+              "tiefe": 3,
+              "text": "Vorliegend ist indes unbestritten, dass die Beschwerdegegnerin nicht beabsichtigt, in ihrer Anlage fossile Energieträger für die Produktion von Elektrizität einzusetzen. Vielmehr sind sich die Verfahrensbeteiligten zu Recht einig, dass es sich bei Klärgas um eine Form von Biomasse handelt und Klärgas damit grundsätzlich als erneuerbarer Energieträger im Sinne der Energiegesetzgebung gilt (vgl. E. 3 i.f. und E. 4.3 f. hiervor). Der blosse Umstand, dass Klärgas eine nicht zugelassene Biomasse im Sinne von Anhang 1.5 Ziff. 2.1.2 lit. g EnFV darstellt, führt nicht dazu, dass es den fossilen Energieträgern gleichzusetzen und als solcher zu behandeln ist. Wie die Vorinstanz zutreffend anführt, wird mit der abweichenden Behandlung von Klärgas im Rahmen des Einspeisevergütungssystems lediglich beabsichtigt, keine Vergütung an die Gemeinwesen zu entrichten (vgl. E. 4.3 hiervor). Angesichts der expliziten Regelung des Verordnungsgebers in Art. 2 lit. a EnFV für Anlagen, die mehrere erneuerbare Energieträger zur Elektrizitätsproduktion nutzen, besteht in der vorliegenden Angelegenheit von vornherein kein Raum für eine Lückenfüllung in der Rechtsanwendung. Mangels Produktion von Elektrizität aus erneuerbaren und fossilen Energieträgern erwägt die Vorinstanz daher zu Recht, die Anlage der Beschwerdegegnerin könne nicht als \"Mischanlage\" behandelt werden."
+            },
+            {
+              "marke": "E. 5.4.3",
+              "tiefe": 3,
+              "text": "Damit ist allerdings noch nicht geklärt, ob die Vorinstanz zutreffend zum Schluss gelangte, die Anlage der Beschwerdegegnerin stelle eine Hybridanlage dar, obschon Klärgas gemäss Anhang 1.5 Ziff. 2.1.2 lit. g EnFV im Rahmen des Einspeisevergütungssystems nicht förderungsberechtigt ist."
+            },
+            {
+              "marke": "E. 5.4.3.1",
+              "tiefe": 4,
+              "text": "In diesem Zusammenhang ist festzuhalten, dass der Bundesrat Anhang 1.5 Ziff. 2.1.2 lit. g EnFV gestützt auf Art. 19 Abs. 7 EnG sowie Art. 22 Abs. 3 EnG erlassen hat. Im Lichte des Regelungsgehalts von Anhang 1.5 Ziff. 2.1.2 lit. g EnFV liegt eine Verordnungsbestimmung vor, mit der der Verordnungsgeber das Gesetzesrecht ergänzt (zur Abgrenzung von vollziehenden und gesetzesvertretenden Verordnungsnormen siehe Urteile 2C_854/2021 und 2C_855/2021 vom 29. November 2022 E. 5.2). Unter den Verfahrensbeteiligten ist zu Recht unbestritten, dass sich Anhang 1.5 Ziff. 2.1.2 lit. g EnFV als gesetzesvertretende Verordnungsbestimmung auf eine hinreichende gesetzliche Delegationsnorm stützt und in formeller Hinsicht dem Grundsatz der Gesetzmässigkeit standhält (vgl. Art. 5 Abs. 1 BV; Art. 164 BV; zur vorfrageweisen Normenkontrolle siehe z.B. Urteile 2C_1034/2022 und 2C_1035/2022 vom 23. Mai 2023 E. 5)."
+            },
+            {
+              "marke": "E. 5.4.3.2",
+              "tiefe": 4,
+              "text": "Auch in materieller Hinsicht ist die Verordnungsbestimmung nicht zu beanstanden: Art. 19 Abs. 4 lit. d EnG bestimmt zwar, dass die Betreiberinnen von Schlammverbrennungs-, Klärgas- und Deponiegasanlagen nicht am Einspeisevergütungssystem teilnehmen können. Damit macht das Energiegesetz aber keine Vorgaben für das Klärgas an sich, sofern es in anderen Anlagen verwendet wird. Entsprechend besteht mit Blick auf das Klärgas als solches Raum für eine gesetzesvertretende Regelung auf Verordnungsstufe. Indem der Bundesrat Klärgas zur nicht zugelassenen Biomasse erklärt, hat er im Lichte von Art. 19 Abs. 4 lit. d EnG und angesichts des gesetzgeberischen Willens beim Erlass dieser Gesetzesnorm (vgl. E. 4.3 hiervor) seine Bindung an die Delegationsnormen mit Rücksicht auf ihren Wortlaut, ihre Tragweite sowie den Sinn und Zweck gewahrt. Anhang 1.5 Ziff. 2.1.2 lit. g EnFV ist somit auch in materieller Hinsicht mit dem Grundsatz der Gesetzmässigkeit vereinbar."
+            },
+            {
+              "marke": "E. 5.4.4",
+              "tiefe": 3,
+              "text": "Nach dem Gesagten können zwar die Betreiberinnen von blossen Klärgasanlagen von Gesetzes wegen nicht am Einspeisevergütungssystem teilnehmen (vgl. Art. 19 Abs. 4 lit. d EnG). Dieser Ausschluss gilt indes nicht für andere Anlagen, die Klärgas nebst weiteren Energieträgern zur Produktion von Elektrizität verwenden. Somit kann Art. 2 lit. a EnFV auch Anlagen erfassen, die nicht förderungsberechtigte erneuerbare Energieträger, wie Klärgas, und zugleich andere, aber vergütungsberechtigte erneuerbare Energieträger zur Elektrizitätsproduktion nutzen (vgl. auch E. 4.4 hiervor). Die Vorinstanz stuft das Blockheizkraftwerk der Beschwerdegegnerin folglich zu Recht als eine Hybridanlage im Sinne von Art. 2 lit. a EnFV ein, sobald es zusätzlich Klärgas zur Produktion von Elektrizität verwendet."
+            },
+            {
+              "marke": "E. 5.5",
+              "tiefe": 2,
+              "text": "Im Weiteren bleibt zu überprüfen, ob die vorinstanzliche Auffassung, wonach die Beschwerdegegnerin auch künftig zum bisher gültigen Vergütungssatz zu entschädigen sei, mit dem Bundesrecht vereinbar ist. Das Departement bemängelt, die Vorinstanz hätte, nachdem sie die Anlage der Beschwerdegegnerin als Hybridanlage beurteilt habe, Art. 16 Abs. 2 EnFV zur Anwendung bringen müssen."
+            },
+            {
+              "marke": "E. 5.5.1",
+              "tiefe": 3,
+              "text": "Die Vorinstanz scheint, ohne dies aber ausdrücklich zu erwägen, davon auszugehen, dass die Höhe des Vergütungssatzes nicht Streitgegenstand des vorinstanzlichen Verfahrens gewesen sei, da die Beschwerdegegnerin nur den pauschalen Synergieabzug von 15 % angefochten habe und die Pronovo AG der Beschwerdegegnerin zugesagt habe, dass der durch landwirtschaftliches Biogas gewonnene Anteil der erzeugten Elektrizität vergütungsberechtigt bleibe (vgl. E. 4 des angefochtenen Urteils)."
+            },
+            {
+              "marke": "E. 5.5.1.1",
+              "tiefe": 4,
+              "text": "Die Vorinstanz lässt diesbezüglich ausser Acht, dass die im nichtstreitigen Verfahren ergangene Verfügung grundsätzlich den äussersten Rahmen des daran anschliessenden Verwaltungsrechtsstreits bildet. Streitgegenstand im Beschwerdeverfahren kann nur sein, was bereits Gegenstand des erstinstanzlichen Verfahrens war oder allenfalls hätte sein sollen und was gemäss der Dispositionsmaxime zwischen den Parteien noch strittig ist (vgl. Urteile 2C_33/2021 vom 29. Juni 2021 E. 4.3; 2C_1127/2018 vom 30. September 2019 E. 3.2). Im Übrigen hat die Vorinstanz im Rahmen des Streitgegenstands gemäss Art. 110 BGG den Sachverhalt frei zu prüfen und das Recht von Amtes wegen anzuwenden (vgl. BGE 142 I 99 E. 1.7.1)."
+            },
+            {
+              "marke": "E. 5.5.1.2",
+              "tiefe": 4,
+              "text": "Mit Feststellungsverfügung vom 7. Dezember 2020 entschied die Pronovo AG, dass die Beschwerdegegnerin in ihrer Biogasanlage auch Klärgas verstromen könne, ohne dass deshalb die Förderungswürdigkeit entfalle. Im Weiteren verfügte die Pronovo AG eine Reduktion des Tarifs ab der ersten Verstromung von Klärgas (vgl. Bst. B.a hiervor). Folglich war die Höhe der Vergütung Hauptgegenstand des Verfahrens. Dass die Pronovo AG die Vergütung nicht über eine Anpassung des Vergütungssatzes, sondern über einen pauschalen Synergieabzug von 15 % reduzierte, vermag daran nichts zu ändern. Vor diesem Hintergrund wäre die Vorinstanz gehalten gewesen, zu überprüfen, ob ihre von der Pronovo AG abweichende Auffassung, wonach eine Hybridanlage vorliege, einen Einfluss auf den massgebenden Vergütungssatz hat."
+            },
+            {
+              "marke": "E. 5.5.2",
+              "tiefe": 3,
+              "text": "Das beschwerdeführende Departement macht nach dem Gesagten zu Recht geltend, die Vorinstanz hätte Art. 16 Abs. 2 EnFV anwenden müssen. Gemäss Art. 16 Abs. 2 Satz 1 EnFV berechnet sich der Vergütungssatz für Hybridanlagen nach den Vergütungssätzen der eingesetzten Energieträger, gewichtet nach deren anteilsmässigen Energieinhalten. Im Lichte dieser positivrechtlichen Regelung durfte die Vorinstanz zwar zum Schluss kommen, dass für die Anwendung eines Synergieabzugs von 15 % kein Raum besteht. Jedoch ist die vorinstanzliche Schlussfolgerung, dass die Beschwerdegegnerin zum bisher gültigen Vergütungssatz zu entschädigen sei, bundesrechtswidrig.\n\nWie das Departement im Übrigen zutreffend darlegt, ist der Vergütungssatz für Hybridanlagen nach den Vergütungssätzen der eingesetzten Energieträger, gewichtet nach deren anteilsmässigen Energieinhalten, zu berechnen. Dies bedeutet, dass für das eingesetzte Klärgas, das gemäss Anhang 1.5 Ziff. 2.1.2 lit. g EnFV zu den nicht zugelassenen Biomassen zählt, ein Vergütungssatz von Fr. 0.-- pro kWh einzusetzen ist (zum Vergütungssatz von Biomasseanlagen im Einspeisevergütungssystem siehe auch Anhang 1.5 Ziff. 3 EnFV)."
+            },
+            {
+              "marke": "E. 5.5.3",
+              "tiefe": 3,
+              "text": "Art. 16 Abs. 2 Satz 2 EnFV hält zudem fest, dass zur Bestimmung der äquivalenten Leistungen bei Hybridanlagen die gesamte Produktion verwendet wird. Entsprechend macht das Departement zu Recht geltend, es sei nicht massgebend, dass die Beschwerdegegnerin bereit sei, mit geeigneten Messvorrichtungen die verschiedenen Energieströme zu messen, sodass der Berechnung der Einspeisevergütung die genaue Menge der verstromten entschädigungsfähigen Biomasse zugrunde gelegt werden könne. Vielmehr ist zur Bestimmung der äquivalenten Leistungen gemäss Art. 16 Abs. 2 Satz 2 EnFV die gesamte Produktion massgebend. Diese Regelung steht der separaten Messung der Gasströme folglich entgegen.\n\nDaran vermag nichts zu ändern, dass die Pronovo AG in der Verfügung vom 7. Dezember 2020 feststellte, die Beschwerdegegnerin könne in ihrer Biogasanlage auch Klärgas verstromen, ohne dass deshalb die Förderungswürdigkeit entfalle, dass sie aber mit geeigneten Messvorrichtungen sicherzustellen habe, dass nur die mit erneuerbaren Energieträgern produzierte Elektrizität vergütet werde (vgl. Bst. B.a hiervor). Die Pronovo AG verfügte die Auflage, wonach die Beschwerdegegnerin mit geeigneten Messvorrichtungen sicherzustellen habe, dass die Energieströme getrennt gemessen und separat ausgewiesen werden können, unter der Annahme, es liege eine \"Mischanlage\" vor. Nachdem die Vorinstanz zu einer anderen Auffassung gelangte, hätte sie auch diesbezüglich das einschlägige Verordnungsrecht anwenden müssen."
+            },
+            {
+              "marke": "E. 5.6",
+              "tiefe": 2,
+              "text": "Die Vorinstanz verletzte nach dem Dargelegten Art. 16 Abs. 2 EnFV, indem sie, nachdem sie zum Schluss kam, es liege eine Hybridanlage im Sinne von Art. 2 lit. a EnFV vor, festhielt, die Beschwerdegegnerin sei auch künftig zum bisher gültigen Vergütungssatz zu entschädigen. In Anbetracht dieses Ergebnisses, das zur Gutheissung der Beschwerde und zur vollständigen Aufhebung des angefochtenen Urteils führt, kann dahingestellt bleiben, ob die Vorinstanz dem Begründungsanspruch von Art. 29 Abs. 2 BV hinreichend Rechnung trug."
+            },
+            {
+              "marke": "E. 6",
+              "tiefe": 1,
+              "text": "Im Ergebnis erweist sich die Beschwerde als begründet, weshalb sie gutzuheissen ist. Das Urteil vom 10. Februar 2023 ist aufzuheben. Die Angelegenheit ist zur Neuberechnung des Vergütungssatzes anhand von Art. 16 Abs. 2 EnFV an die Pronovo AG und zur Neuverlegung der Kosten- und Entschädigungsfolgen des vorinstanzlichen Verfahrens an die Vorinstanz zurückzuweisen.\n\nDiesem Verfahrensausgang entsprechend trägt die Beschwerdegegnerin die Gerichtskosten (Art. 66 Abs. 1 BGG). Parteientschädigungen sind nicht geschuldet (Art. 68 Abs. 1 und Abs. 3 BGG)."
+            }
+          ]
+        },
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": "1.",
+              "text": "Die Beschwerde wird gutgeheissen. Das Urteil des Bundesverwaltungsgerichts vom 10. Februar 2023 wird aufgehoben."
+            },
+            {
+              "marke": "2.",
+              "text": "Die Angelegenheit wird zur Neuberechnung des Vergütungssatzes im Sinne der Erwägungen an die Pronovo AG zurückgewiesen."
+            },
+            {
+              "marke": "3.",
+              "text": "Die Angelegenheit wird zur Neuverlegung der Kosten- und Entschädigungsfolgen des vorinstanzlichen Verfahrens an das Bundesverwaltungsgericht zurückgewiesen."
+            },
+            {
+              "marke": "4.",
+              "text": "Die Gerichtskosten von Fr. 2'000.-- werden der Beschwerdegegnerin auferlegt."
+            },
+            {
+              "marke": "5.",
+              "text": "Dieses Urteil wird den Verfahrensbeteiligten, dem Bundesverwaltungsgericht, Abteilung I, und der Pronovo AG, mitgeteilt."
+            },
+            {
+              "marke": null,
+              "text": "Lausanne, 22. März 2024\n\nIm Namen der II. öffentlich-rechtlichen Abteilung\n\ndes Schweizerischen Bundesgerichts\n\nDie Präsidentin: F. Aubry Girardin\n\nDer Gerichtsschreiber: M. Zollinger"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Die Beschwerde wird gutgeheissen. Das Urteil des Bundesverwaltungsgerichts vom 10. Februar 2023 wird aufgehoben.",
+        "Die Angelegenheit wird zur Neuberechnung des Vergütungssatzes im Sinne der Erwägungen an die Pronovo AG zurückgewiesen.",
+        "Die Angelegenheit wird zur Neuverlegung der Kosten- und Entschädigungsfolgen des vorinstanzlichen Verfahrens an das Bundesverwaltungsgericht zurückgewiesen.",
+        "Die Gerichtskosten von Fr. 2'000.-- werden der Beschwerdegegnerin auferlegt.",
+        "Dieses Urteil wird den Verfahrensbeteiligten, dem Bundesverwaltungsgericht, Abteilung I, und der Pronovo AG, mitgeteilt."
+      ],
+      "zitierteNormen": [
+        "Art. 1 ENFV",
+        "Art. 11 ENFV",
+        "Art. 110 BGG",
+        "Art. 16 Abs. 1 ENFV",
+        "Art. 16 Abs. 2 ENFV",
+        "Art. 16 Abs. 2 OENER",
+        "Art. 16 Abs. 2 OPEN",
+        "Art. 164 BV"
+      ],
+      "normKeys": [
+        "BGG",
+        "BV"
+      ],
+      "zitierteEntscheide": [
+        "2C_1034/2022",
+        "2C_1035/2022",
+        "2C_109/2020",
+        "2C_1127/2018",
+        "2C_115/2020",
+        "2C_116/2022",
+        "2C_174/2023",
+        "2C_254/2021",
+        "2C_33/2021",
+        "2C_634/2021",
+        "2C_821/2019",
+        "2C_854/2021",
+        "2C_855/2021",
+        "A-4065/2011",
+        "A-4807/2021",
+        "BGE 133 III 489",
+        "BGE 137 II 313",
+        "BGE 139 I 72",
+        "BGE 142 I 135",
+        "BGE 142 I 99",
+        "BGE 142 II 324",
+        "BGE 146 II 276",
+        "BGE 149 II 187"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=13&from_date=&to_date=&from_year=2024&to_year=2024&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=127&highlight_docid=atf%3A%2F%2F150-II-334%3Ade&number_of_ranks=177&azaclir=clir",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "dc4fc9b0964bc8f35b007bbd57dc01bf3a58b6d413cfdf9d8c042082b9653a0a",
+      "sha": "1e0c653d617fad7195e282badfec875c2647a5916b9947c73b627823db979178",
+      "auszugAbschnitte": [
         {
           "typ": "sachverhalt",
           "vollstaendig": true,
@@ -184,30 +493,11 @@
           ]
         }
       ],
-      "dispositivOrders": [],
-      "zitierteNormen": [
-        "Art. 1 ENFV",
-        "Art. 11 ENFV",
-        "Art. 110 BGG",
-        "Art. 16 Abs. 1 ENFV",
-        "Art. 16 Abs. 2 ENFV",
-        "Art. 16 Abs. 2 OENER",
-        "Art. 16 Abs. 2 OPEN",
-        "Art. 164 BV"
-      ],
-      "normKeys": [
-        "BGG",
-        "BV"
-      ],
-      "zitierteEntscheide": [],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "quelle": "opencaselaw",
-      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=13&from_date=&to_date=&from_year=2024&to_year=2024&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=127&highlight_docid=atf%3A%2F%2F150-II-334%3Ade&number_of_ranks=177&azaclir=clir",
-      "abgerufen": "2026-06-26",
-      "fassungsToken": "dc4fc9b0964bc8f35b007bbd57dc01bf3a58b6d413cfdf9d8c042082b9653a0a",
-      "sha": "bbd24073e1897f88c876a8ae0ea6f999f635d36ef59479cec3ff440c44c25696",
-      "azaUrteil": null,
+      "azaUrteil": {
+        "aktenzeichen": "2C_174/2023",
+        "key": "bger_2C_174_2023",
+        "quelleUrl": "http://relevancy.bger.ch/cgi-bin/JumpCGI?id=22.03.2024_2C_174/2023"
+      },
       "ecli": "ECLI:CH:BGE:2024:150.II.334"
     }
   ]

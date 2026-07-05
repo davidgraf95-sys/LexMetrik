@@ -24,7 +24,33 @@
       },
       "regeste": {
         "text": "Art. 295b SchKG; Verlängerung der Stundung. Nur der Sachwalter ist berechtigt, beim Nachlassgericht einen Antrag gemäss Art. 295b SchKG zur Verlängerung der definitiven Stundung zu stellen. Wird vor Ablauf der bewilligten Stundungsdauer kein Verlängerungsantrag gestellt, zieht dies die Konkurseröffnung nach sich (E. 3 und 4).\nRegeste\n Art. 295b LP; prolongation du sursis. Seul le commissaire est en droit de déposer auprès du juge du concordat une demande fondée sur l'art. 295b LP en prolongation du sursis définitif. Si aucune demande de prolongation n'a été déposée avant l'expiration du sursis accordé, la faillite est prononcée (consid. 3 et 4).\nRegesto\n Art. 295b LEF; proroga della moratoria. Soltanto il commissario è legittimato a presentare al giudice del concordato una domanda secondo l'art. 295b LEF di proroga della moratoria definitiva. Se nessuna domanda di proroga è presentata prima della scadenza della durata accordata, ciò conduce alla dichiarazione di fallimento (consid. 3 e 4).",
-        "quelle": "opencaselaw"
+        "quelle": "opencaselaw",
+        "sprachfassungen": [
+          {
+            "sprache": "de",
+            "kopf": "Art. 295b SchKG; Verlängerung der Stundung.",
+            "absaetze": [
+              "Nur der Sachwalter ist berechtigt, beim Nachlassgericht einen Antrag gemäss Art. 295b SchKG zur Verlängerung der definitiven Stundung zu stellen. Wird vor Ablauf der bewilligten Stundungsdauer kein Verlängerungsantrag gestellt, zieht dies die Konkurseröffnung nach sich (E. 3 und 4)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-III-137%3Ade&lang=de&type=show_document"
+          },
+          {
+            "sprache": "fr",
+            "kopf": "Art. 295b LP; prolongation du sursis.",
+            "absaetze": [
+              "Seul le commissaire est en droit de déposer auprès du juge du concordat une demande fondée sur l'art. 295b LP en prolongation du sursis définitif. Si aucune demande de prolongation n'a été déposée avant l'expiration du sursis accordé, la faillite est prononcée (consid. 3 et 4)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-III-137%3Afr&lang=fr&type=show_document"
+          },
+          {
+            "sprache": "it",
+            "kopf": "Art. 295b LEF; proroga della moratoria.",
+            "absaetze": [
+              "Soltanto il commissario è legittimato a presentare al giudice del concordato una domanda secondo l'art. 295b LEF di proroga della moratoria definitiva. Se nessuna domanda di proroga è presentata prima della scadenza della durata accordata, ciò conduce alla dichiarazione di fallimento (consid. 3 e 4)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-III-137%3Ait&lang=it&type=show_document"
+          }
+        ]
       },
       "regesteAmtlich": true,
       "abschnitte": [

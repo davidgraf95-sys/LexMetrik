@@ -24,7 +24,33 @@
       },
       "regeste": {
         "text": "Art. 174 SchKG; Tilgung der Kosten des Konkursgerichts innert der zehntägigen Frist zur Weiterziehung des Konkurserkenntnisses; Erfordernis der Glaubhaftmachung der Zahlungsfähigkeit. Hat der Schuldner die Kosten des Konkursgerichts erst im Beschwerdeverfahren getilgt, hat er mit seiner Beschwerde zusätzlich seine Zahlungsfähigkeit glaubhaft zu machen, auch wenn die Schuldtilgung im Übrigen ganz vor der Konkurseröffnung erfolgt ist (E. 3).",
-        "quelle": "opencaselaw"
+        "quelle": "opencaselaw",
+        "sprachfassungen": [
+          {
+            "sprache": "de",
+            "kopf": "Art. 174 SchKG; Tilgung der Kosten des Konkursgerichts innert der zehntägigen Frist zur Weiterziehung des Konkurserkenntnisses; Erfordernis der Glaubhaftmachung der Zahlungsfähigkeit.",
+            "absaetze": [
+              "Hat der Schuldner die Kosten des Konkursgerichts erst im Beschwerdeverfahren getilgt, hat er mit seiner Beschwerde zusätzlich seine Zahlungsfähigkeit glaubhaft zu machen, auch wenn die Schuldtilgung im Übrigen ganz vor der Konkurseröffnung erfolgt ist (E. 3)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-III-574%3Ade&lang=de&type=show_document"
+          },
+          {
+            "sprache": "fr",
+            "kopf": "Art. 174 LP; paiement des frais de justice du juge de la faillite dans le délai de dix jours fixé par la loi pour recourir contre le jugement de faillite; obligation de rendre vraisemblable la solvabilité.",
+            "absaetze": [
+              "Si le débiteur a payé les frais judiciaires du juge de la faillite seulement au cours de la procédure de recours, il doit en outre rendre vraisemblable sa solvabilité dans son recours, même lorsque la totalité de la dette à l'origine de la faillite a été acquittée avant l'ouverture de la faillite (consid. 3)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-III-574%3Afr&lang=fr&type=show_document"
+          },
+          {
+            "sprache": "it",
+            "kopf": "Art. 174 LEF; pagamento delle spese relative al procedimento del giudice del fallimento nel termine di dieci giorni per presentare reclamo contro la dichiarazione di fallimento; esigenza della verosimiglianza della solvibilità.",
+            "absaetze": [
+              "Se il debitore ha pagato le spese relative al procedimento del giudice del fallimento soltanto durante la procedura di reclamo, nel suo rimedio egli deve pure rendere verosimile la sua solvibilità, anche se per il resto il debito è stato integralmente estinto prima dell'apertura del fallimento (consid. 3)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-III-574%3Ait&lang=it&type=show_document"
+          }
+        ]
       },
       "regesteAmtlich": true,
       "abschnitte": [
