@@ -686,9 +686,12 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   Artikel→Entscheide→Materialien — Risiko-Pfad, `check:gegenpruefung`) → U-POSITION
   (A2/A16/A17: Scrollbalken-Proportionalität, exakte Zurück-Restoration,
   Split-View-Fundstellen-Sprung — hart NACH QS-PERF). Parallel kollisionsarm:
-  U-SUCHE (A5/A6: normQuery aus der `BefehlsPalette` in die NORMALE Suchleiste,
-  Palette entfällt als eigenes UI, ⌘K fokussiert; Relevanz-Gruppierung; KEIN
-  Zweit-Index) · U-UEBERSICHT (A14/A15: Titel umbrechen statt kappen,
+  **U-SUCHE ✅ AUSGEFÜHRT (5.7., PR feat/u-suche-a5-a6, Auto-Merge armiert;
+  Ausführungsvermerk `FAHRPLAN-GESETZES-UX.md` §10.7):** normQuery aus der
+  gelöschten `BefehlsPalette` in die NORMALE Suchleiste (Sprung = oberster
+  Treffer, Enter springt), Palette entfällt, ⌘K/«/» fokussieren die HeaderSuche;
+  A6-Relevanz-Gruppierung (Rechtsinhalte vor Werkzeugen); KEIN Zweit-Index; Gate
+  + e2e grün, `Gegenpruefung: n/a` · U-UEBERSICHT (A14/A15: Titel umbrechen statt kappen,
   Relevanz-Sortierung dokumentiert-deterministisch, Gliederungs-Umschalter
   Relevanz/Systematisch/Rechtsgebiet auf allen 3 Säulen; G6 = Modus statt vierte
   Tür) · U-PDF (A12: Download = amtliches PDF der gepinnten Fassung, SPARQL

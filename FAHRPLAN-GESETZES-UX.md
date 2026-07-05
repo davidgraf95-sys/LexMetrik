@@ -1047,3 +1047,54 @@ gebaut.
   U-POSITION getrennt) · keine neue Kuration im G6-Grundgerüst (K8-Zeitsperre
   unberührt) · `?ansicht=rechtsgebiet`-Tür bleibt bestehen (nicht entfernt, nur
   zusätzlich als Modus).
+
+**Ausführungsvermerk U-SUCHE (A5 + A6) — AUSGEFÜHRT 5.7.2026.**
+
+**Status: gebaut, Tore grün, PR mit armiertem Auto-Merge.** Worktree `lm-u-suche`
+(`feat/u-suche-a5-a6`), Trailer `Roadmap: W2·5d`. `Gegenpruefung: n/a — reine
+UI/Suche` (kein Risiko-Pfad berührt; `normQuery.ts` unverändert, kein Parser-
+Eingriff nötig — die bestehende Auflösung deckt P3 vollständig).
+
+**A5 — Norm-Sprung in der normalen Suchleiste (Integrations-Design):**
+- Der Parser `src/lib/suche/normQuery.ts` bleibt UNVERÄNDERT. Er wird jetzt aus
+  dem geteilten Hook `useUniversalSuche` gefahren: der Index (`baueNormIndex`)
+  wird **einmal pro geladenem Gesetzes-Manifest** über die **schon geladenen**
+  `gesetze` gebaut (K10 — **kein Zweit-Index**; keine zusätzliche Fetch-Quelle),
+  `parseNormQuery(q, index)` läuft pro Query.
+- Der Treffer wird als **erste Gruppe `sprung`** (`sprungGruppe()` in
+  `src/lib/universalSuche.ts`) VOR die statischen Gruppen gehängt — dadurch ist er
+  automatisch der oberste Eintrag der flachen Tastatur-Liste, **Enter springt**
+  (ohne Sonderpfad; er ist `flach[0]`). Marke «Sprung» (`lc-badge-ok`) + amtlicher
+  Titel als Untertitel + ↵-Affordanz (`SuchResultate`, `id==='sprung'`).
+- **Palette entfernt:** `src/components/suche/BefehlsPalette.tsx` gelöscht; Shell
+  ohne Palette-Zustand/Lazy-Mount; Topbar-Palette-Knopf entfernt. **⌘K/Ctrl-K UND
+  «/» fokussieren die HeaderSuche** (Handler in `HeaderSuche.tsx` mit Feld-Ref,
+  liest den Feldwert direkt vom DOM → kein stale-closure). Der /gesetze-Landeplatz-
+  CTA fokussiert das Feld über `lm:suche-fokus` (vormals `lm:befehlspalette`).
+  Mobil (kein ⌘K): das Feld reicht; das Dropdown ist auf < sm viewport-verankert
+  (`fixed inset-x-2`) → lesbare Breite ohne Overflow (Verbesserung ggü. dem
+  feldschmalen Header-Dropdown).
+
+**A6 — Gruppierung nach Typ + Relevanz-Rangfolge (dokumentierte Regeln):**
+- Reihenfolge in `sucheAlles` neu (fachliche Änderung, `universalSuche.test.ts`
+  nachgezogen): **Norm-Sprung → Gesetze → Gesetzestext/Artikel → Rechtsprechung →
+  Materialien → Rechner & Vorlagen → Fristen-Vorlagen** (Rechtsinhalte vor
+  Werkzeugen; Online-Edge-Gruppe bleibt CLS-sicher zuunterst).
+- **Innerhalb** jeder Gruppe unverändert die bestehende, je eigene Relevanz-
+  Sortierung der Filter-Funktionen (K10 — keine neue Ranking-Logik): Gesetze/Artikel
+  Titel- vor Volltext-Match, Rechtsprechung neueste zuerst, Materialien
+  `vergleicheGlobal`. Je Gruppe Overline + Zähler (ausser Sprung), «alle n ansehen»
+  via `mehrHref` (bestand). Tastatur-Navigation über alle Gruppen (flache Liste,
+  `aria-activedescendant`); Enter = Primäraktion (Navigieren/Springen). **Keine
+  Sekundär-Buttons (⧉/Kopieren) je Zeile** — sie wären nested-interactive in
+  `role=option` (axe serious); bewusst weggelassen (David «ggf.»), a11y-sauber.
+
+**P3-Beweis** (`e2e/norm-sprung.e2e.ts`, umgebaut aus `befehlspalette.e2e.ts` —
+Kontrakt = Sprung-Funktion, nicht Palette-UI): «OR 257d» ⇒ Sprung ist oberster
+Treffer, Enter → `/gesetze/bund/OR#art-257_d` (Anker im DOM); Kanton «ABRG 3» →
+`/gesetze/kanton/AR-621.12#art-3`; Freitext «Kündigung» → kein Sprung, gruppierte
+Suche. **A9** (`setCPUThrottlingRate 6`): Tippen/Navigieren flüssig (gebundene
+web-first-Auflösung ohne Test-Timeout-Nähe), **CLS < 0.05**. **«/»-Koexistenz**
+(`tastatur.e2e.ts`): ⌘K und «/» fokussieren dieselbe HeaderSuche, kein Overlay.
+Voller `npm run gate` grün (golden byte-gleich, `check:*` inkl. `gegenpruefung`);
+`test:e2e` gegen dist (1 Worker) grün.
