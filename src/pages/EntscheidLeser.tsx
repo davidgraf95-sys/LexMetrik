@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState, type CSSProperties } from 're
 import { createPortal } from 'react-dom';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { EntscheidBody } from '../components/rechtsprechung/EntscheidBody';
+import RegesteBlock from '../components/rechtsprechung/RegesteBlock';
 import { Tabs } from '../components/ui/Tabs';
 import { ABSCHNITT_TITEL, abschnittAnker, ersteFundstelle } from '../lib/rechtsprechung/abschnitte';
 import { StatusBadge } from '../components/verzahnung/StatusBadge';
@@ -450,17 +451,7 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam }: { schlues
           publizierten BGE «Regeste», sonst maschinelle «Zusammenfassung» — ehrlich
           gekennzeichnet (Abnahme-Kritik: kein Etikettenschwindel). */}
       {zeigeRegeste && snap.regeste && (
-        <section id="abschnitt-regeste" className="scroll-mt-[var(--rsp-stick,7rem)] lc-highlight space-y-2">
-          <p className="lc-overline text-brass-700">{snap.regesteAmtlich ? 'Regeste' : 'Zusammenfassung'}</p>
-          <p className="font-serif text-body-l leading-[1.7] text-ink-900 whitespace-pre-line">{regesteText}</p>
-          {/* ink-600 (nicht ink-500): die Regeste-Box (lc-highlight) hat brass-100-
-              Grund — ink-500 = 4.23:1 bei 11px (axe serious), ink-600 ≥ 6:1. */}
-          <p className="text-micro text-ink-600">
-            {snap.regesteAmtlich
-              ? 'Amtliche Regeste der Sammlung · Quelle: OpenCaseLaw'
-              : 'Quelle: OpenCaseLaw — automatisch übernommen; Herkunft (amtliche Regeste oder maschinelle Zusammenfassung) nicht abschliessend geprüft'}
-          </p>
-        </section>
+        <RegesteBlock regeste={snap.regeste} amtlich={snap.regesteAmtlich} />
       )}
 
       {/* Lesespalte 60–75 Zeichen (Reglement R1). Bei offenem Lesemodus NICHT rendern —
@@ -612,10 +603,9 @@ function LesemodusOverlay({ snap, abschnitte, regesteText, massgeblicheUrl, mass
         </p>
 
         {regesteText && snap.regeste && (
-          <section className="lc-highlight mt-7 space-y-2">
-            <p className="lc-overline text-brass-700">{snap.regesteAmtlich ? 'Regeste' : 'Zusammenfassung'}</p>
-            <p className="font-serif text-body-l leading-[1.7] text-ink-900 whitespace-pre-line">{regesteText}</p>
-          </section>
+          <div className="mt-7">
+            <RegesteBlock regeste={snap.regeste} amtlich={snap.regesteAmtlich} mitAnker={false} />
+          </div>
         )}
 
         <div className="mt-9">
