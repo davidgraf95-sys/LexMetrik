@@ -40,6 +40,9 @@ const WERKZEUG_KATEGORIE: Record<string, OberkategorieId> = {
   'kostenblatt-export': 'gebuehren',
   checklisten: 'vorlagen',
   mandatsaufnahme: 'vorlagen',
+  // Gerichts-Baustein-Set (ROADMAP W2·7): der amtliche Zitierer ist ein
+  // Text-/Schriftsatz-Baustein, Geschwister der Rubrum-Vorlage.
+  gerichtszitat: 'vorlagen',
 };
 
 export function kategorieFuer(karte: CalculatorCard): OberkategorieId | null {

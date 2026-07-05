@@ -11711,6 +11711,230 @@
   },
   "zinsAb": null
  },
+ "vorl:rubrum": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Rubrum (Entscheidkopf)",
+    "format": "verfuegung",
+    "ausgabeArt": "entwurf",
+    "absaetze": [
+     {
+      "bausteinId": "RU_gericht",
+      "text": "Bezirksgericht Zürich\nEinzelgericht\nGeschäfts-Nr. CG26 12345",
+      "rolle": "rubrum"
+     },
+     {
+      "bausteinId": "RU_parteien",
+      "text": "A. Muster\nvertreten durch Rechtsanwältin X\n\ngegen\n\nB. Beispiel AG\nvertreten durch Rechtsanwalt Y",
+      "rolle": "parteien"
+     },
+     {
+      "bausteinId": "RU_gegenstand",
+      "text": "betreffend Forderung"
+     },
+     {
+      "bausteinId": "RU_ortdatum",
+      "text": "Zürich, 11.06.2026",
+      "rolle": "datumzeile"
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Das Rubrum ist ein Gerüst für den Kopf eines Gerichtsentscheids (Art. 238 ZPO; beim Weiterzug Art. 112 BGG); massgebend sind die Verfahrensordnung und die Angaben des Gerichts. Der Entscheid ist von der zuständigen Person zu vervollständigen.",
+    "version": "1.0.0 (Art. 238 ZPO / Art. 112 BGG live verifiziert 2026-07-05)"
+   },
+   "aufgenommen": [
+    "RU_gericht",
+    "RU_parteien",
+    "RU_gegenstand",
+    "RU_ortdatum"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "RU_gericht",
+     "begruendung": "Bezeichnung und Zusammensetzung des entscheidenden Gerichts (Art. 238 lit. a ZPO; für die beschwerdefähige Ausfertigung Art. 112 Abs. 1 BGG).",
+     "norm": "Art. 238 ZPO"
+    },
+    {
+     "bausteinId": "RU_parteien",
+     "begruendung": "Bezeichnung der Parteien und ihrer Vertretung (Art. 238 lit. c ZPO).",
+     "norm": "Art. 238 ZPO"
+    },
+    {
+     "bausteinId": "RU_gegenstand",
+     "begruendung": "Streitgegenstand als Betreff des Rubrums (Bezugspunkt des Dispositivs)."
+    },
+    {
+     "bausteinId": "RU_ortdatum",
+     "begruendung": "Ort und Datum des Entscheids (Art. 238 lit. b ZPO).",
+     "norm": "Art. 238 ZPO"
+    }
+   ]
+  }
+ },
+ "vorl:rubrum-bger": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Rubrum (Urteil des Bundesgerichts)",
+    "format": "verfuegung",
+    "ausgabeArt": "entwurf",
+    "absaetze": [
+     {
+      "bausteinId": "RU_gericht",
+      "text": "Bundesgericht\nEinzelgericht\nGeschäfts-Nr. CG26 12345",
+      "rolle": "rubrum"
+     },
+     {
+      "bausteinId": "RU_parteien",
+      "text": "A. Muster\n\ngegen\n\nB. Beispiel AG",
+      "rolle": "parteien"
+     },
+     {
+      "bausteinId": "RU_gegenstand",
+      "text": "betreffend Forderung"
+     },
+     {
+      "bausteinId": "RU_ortdatum",
+      "text": "Zürich, 11.06.2026",
+      "rolle": "datumzeile"
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Das Rubrum ist ein Gerüst für den Kopf eines Gerichtsentscheids (Art. 238 ZPO; beim Weiterzug Art. 112 BGG); massgebend sind die Verfahrensordnung und die Angaben des Gerichts. Der Entscheid ist von der zuständigen Person zu vervollständigen.",
+    "version": "1.0.0 (Art. 238 ZPO / Art. 112 BGG live verifiziert 2026-07-05)"
+   },
+   "aufgenommen": [
+    "RU_gericht",
+    "RU_parteien",
+    "RU_gegenstand",
+    "RU_ortdatum"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "RU_gericht",
+     "begruendung": "Bezeichnung und Zusammensetzung des entscheidenden Gerichts (Art. 238 lit. a ZPO; für die beschwerdefähige Ausfertigung Art. 112 Abs. 1 BGG).",
+     "norm": "Art. 238 ZPO"
+    },
+    {
+     "bausteinId": "RU_parteien",
+     "begruendung": "Bezeichnung der Parteien und ihrer Vertretung (Art. 238 lit. c ZPO).",
+     "norm": "Art. 238 ZPO"
+    },
+    {
+     "bausteinId": "RU_gegenstand",
+     "begruendung": "Streitgegenstand als Betreff des Rubrums (Bezugspunkt des Dispositivs)."
+    },
+    {
+     "bausteinId": "RU_ortdatum",
+     "begruendung": "Ort und Datum des Entscheids (Art. 238 lit. b ZPO).",
+     "norm": "Art. 238 ZPO"
+    }
+   ]
+  }
+ },
+ "vorl:rubrum-blanko": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Rubrum (Entscheidkopf)",
+    "format": "verfuegung",
+    "ausgabeArt": "entwurf",
+    "absaetze": [
+     {
+      "bausteinId": "RU_gericht",
+      "text": "________",
+      "rolle": "rubrum"
+     },
+     {
+      "bausteinId": "RU_parteien",
+      "text": "________\n\ngegen\n\n________",
+      "rolle": "parteien"
+     },
+     {
+      "bausteinId": "RU_gegenstand",
+      "text": "betreffend ________"
+     },
+     {
+      "bausteinId": "RU_ortdatum",
+      "text": "________, ________",
+      "rolle": "datumzeile"
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Das Rubrum ist ein Gerüst für den Kopf eines Gerichtsentscheids (Art. 238 ZPO; beim Weiterzug Art. 112 BGG); massgebend sind die Verfahrensordnung und die Angaben des Gerichts. Der Entscheid ist von der zuständigen Person zu vervollständigen.",
+    "version": "1.0.0 (Art. 238 ZPO / Art. 112 BGG live verifiziert 2026-07-05)"
+   },
+   "aufgenommen": [
+    "RU_gericht",
+    "RU_parteien",
+    "RU_gegenstand",
+    "RU_ortdatum"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "RU_gericht",
+     "begruendung": "Bezeichnung und Zusammensetzung des entscheidenden Gerichts (Art. 238 lit. a ZPO; für die beschwerdefähige Ausfertigung Art. 112 Abs. 1 BGG).",
+     "norm": "Art. 238 ZPO"
+    },
+    {
+     "bausteinId": "RU_parteien",
+     "begruendung": "Bezeichnung der Parteien und ihrer Vertretung (Art. 238 lit. c ZPO).",
+     "norm": "Art. 238 ZPO"
+    },
+    {
+     "bausteinId": "RU_gegenstand",
+     "begruendung": "Streitgegenstand als Betreff des Rubrums (Bezugspunkt des Dispositivs)."
+    },
+    {
+     "bausteinId": "RU_ortdatum",
+     "begruendung": "Ort und Datum des Entscheids (Art. 238 lit. b ZPO).",
+     "norm": "Art. 238 ZPO"
+    }
+   ]
+  }
+ },
+ "vorl:rubrum-gates": {
+  "blocker": [],
+  "warnungen": [],
+  "hinweise": [
+   "Das Rubrum bildet nur den KOPF des Entscheids ab. Ein vollständiger Zivilentscheid enthält nach Art. 238 ZPO zusätzlich: das Dispositiv (lit. d), die Angabe der Personen und Behörden, denen der Entscheid mitzuteilen ist (lit. e), eine Rechtsmittelbelehrung, sofern nicht darauf verzichtet wurde (lit. f), gegebenenfalls die wesentlichen Entscheidgründe (lit. g) und die Unterschrift des Gerichts (lit. h).",
+   "Beim Weiterzug ans Bundesgericht muss der angefochtene kantonale Entscheid nach Art. 112 Abs. 1 BGG enthalten: die Begehren, Begründung, Beweisvorbringen und Prozesserklärungen der Parteien (lit. a), die massgebenden Gründe tatsächlicher und rechtlicher Art mit Angabe der angewendeten Gesetzesbestimmungen (lit. b), das Dispositiv (lit. c) und eine Rechtsmittelbelehrung mit Angabe des Streitwerts, soweit das Gesetz eine Streitwertgrenze vorsieht (lit. d). Ein Entscheid, der diesen Anforderungen nicht genügt, kann zur Verbesserung zurückgewiesen werden (Art. 112 Abs. 3 BGG).",
+   "LexMetrik füllt nur die eingegebenen Angaben ein und prüft sie nicht auf inhaltliche Richtigkeit. Massgebend sind die Verfahrensordnung und die Angaben des Gerichts; das Dokument ist ein Entwurf und von der zuständigen Person zu vervollständigen."
+  ]
+ },
+ "zitat:bge": {
+  "status": "ok",
+  "zitat": "BGE 140 III 409 E. 4.3",
+  "fehler": [],
+  "hinweise": [
+   "Der Zitierer formatiert nur die eingegebene Fundstelle; er prüft nicht, ob der Entscheid existiert oder was er entscheidet. Fundstelle und Aussage sind an der amtlichen Quelle zu prüfen.",
+   "BGE zitieren nur die Amtliche Sammlung der Leitentscheide; nicht publizierte Entscheide werden als «BGer …» mit Geschäftsnummer und Datum zitiert."
+  ]
+ },
+ "zitat:bge-ohne-erw": {
+  "status": "ok",
+  "zitat": "BGE 147 III 419",
+  "fehler": [],
+  "hinweise": [
+   "Der Zitierer formatiert nur die eingegebene Fundstelle; er prüft nicht, ob der Entscheid existiert oder was er entscheidet. Fundstelle und Aussage sind an der amtlichen Quelle zu prüfen.",
+   "BGE zitieren nur die Amtliche Sammlung der Leitentscheide; nicht publizierte Entscheide werden als «BGer …» mit Geschäftsnummer und Datum zitiert."
+  ]
+ },
+ "zitat:bger": {
+  "status": "ok",
+  "zitat": "BGer 5A_691/2023 vom 13. August 2024 E. 2.1",
+  "langform": "Urteil des Bundesgerichts 5A_691/2023 vom 13. August 2024 E. 2.1",
+  "fehler": [],
+  "hinweise": [
+   "Der Zitierer formatiert nur die eingegebene Fundstelle; er prüft nicht, ob der Entscheid existiert oder was er entscheidet. Fundstelle und Aussage sind an der amtlichen Quelle zu prüfen.",
+   "Eine erst später zugeteilte BGE-Nummer ersetzt die Geschäftsnummer nicht – bei amtlicher Publikation zusätzlich als «BGE …» zitieren."
+  ]
+ },
+ "zitat:unzulaessig": {
+  "status": "unzulaessig",
+  "zitat": null,
+  "fehler": [
+   "Die Geschäftsnummer ist ungültig – erwartet wird das Muster «5A_691/2023» (Abteilungscode · Nummer · Jahr)."
+  ],
+  "hinweise": [
+   "Der Zitierer formatiert nur die eingegebene Fundstelle; er prüft nicht, ob der Entscheid existiert oder was er entscheidet. Fundstelle und Aussage sind an der amtlichen Quelle zu prüfen."
+  ]
+ },
  "vorl:vv-standard": {
   "ergebnis": {
    "dokument": {

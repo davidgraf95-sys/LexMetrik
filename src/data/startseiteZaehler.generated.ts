@@ -33,8 +33,8 @@ export const STARTSEITE_ZAEHLER: StartseiteZaehler = {
   "gesetzeVolltext": 1449,
   "rechtsprechungVolltext": 342,
   "materialien": 326,
-  "rechner": 20,
-  "vorlagen": 25,
+  "rechner": 23,
+  "vorlagen": 26,
   "standGesetze": "2026-07-05",
   "standRechtsprechung": "2026-07-02",
   "standMaterialien": "2026-07-04"

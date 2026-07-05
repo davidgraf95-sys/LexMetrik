@@ -37,6 +37,8 @@ import { haZusammenstellen, HA_DEFAULTS, pruefeHaGates } from '../src/lib/vorlag
 import { agDokumentmappe, AG_DOK_DEFAULTS, type AgDokAntworten } from '../src/lib/vorlagen/gruendungAgDokumente';
 import { mvZusammenstellen, MV_DEFAULTS, pruefeMvGates } from '../src/lib/vorlagen/mietvertrag';
 import { maZusammenstellen, MA_DEFAULTS, pruefeMaGates, type MaAntworten } from '../src/lib/vorlagen/mahnung';
+import { rubrumZusammenstellen, RUBRUM_DEFAULTS, pruefeRubrumGates } from '../src/lib/vorlagen/rubrum';
+import { formatiereGerichtszitat } from '../src/lib/gerichtszitat';
 import { vvZusammenstellen, VV_DEFAULTS, pruefeVvGates } from '../src/lib/vorlagen/verjaehrungsverzicht';
 import { faZusammenstellen, FA_DEFAULTS, pruefeFaGates } from '../src/lib/vorlagen/forderungsabtretung';
 import { afZusammenstellen, AF_DEFAULTS, pruefeAfGates } from '../src/lib/vorlagen/auftrag';
@@ -283,6 +285,25 @@ f('vorl:ma-zahlung', () => maZusammenstellen({ ...maBasis }));
 f('vorl:ma-verfalltag', () => maZusammenstellen({ ...maBasis, verfalltagVereinbart: true, verfalltag: '2026-05-31', zinsVertraglich: true, zinssatzProzent: '8' }));
 f('vorl:ma-mahngebuehr', () => maZusammenstellen({ ...maBasis, mahngebuehrErfassen: true, mahngebuehr: '20', mahngebuehrVertraglich: true, betreibungAndrohen: false }));
 f('vorl:ma-nachfrist', () => maZusammenstellen({ ...maBasis, variante: 'nachfrist' }));
+
+// Rubrum (Gerichts-Baustein-Set, ROADMAP W2·7): Maximalkombi (alle optionalen
+// Bausteine), BGer-Variante, Blanko + Gates. Reiner Nutzer-Eingabe-Builder;
+// Norm-Anker Art. 238 ZPO / Art. 112 BGG live verifiziert 2026-07-05.
+const ruBasis = {
+  ...RUBRUM_DEFAULTS, gericht: 'Bezirksgericht Zürich', besetzung: 'Einzelgericht',
+  verfahrenNr: 'CG26 12345', klaeger: 'A. Muster', beklagte: 'B. Beispiel AG',
+  streitgegenstand: 'Forderung', ort: 'Zürich', datum: '2026-06-11',
+};
+f('vorl:rubrum', () => rubrumZusammenstellen({ ...ruBasis, klaegerVertretung: 'Rechtsanwältin X', beklagteVertretung: 'Rechtsanwalt Y' }));
+f('vorl:rubrum-bger', () => rubrumZusammenstellen({ ...ruBasis, instanz: 'bger', gericht: 'Bundesgericht' }));
+f('vorl:rubrum-blanko', () => rubrumZusammenstellen({ ...RUBRUM_DEFAULTS }));
+f('vorl:rubrum-gates', () => pruefeRubrumGates(ruBasis));
+
+// Amtlicher Gerichts-Zitierer (BGE/BGer): deterministischer Formatierer.
+f('zitat:bge', () => formatiereGerichtszitat({ typ: 'bge', band: '140', teil: 'III', seite: '409', erwaegung: '4.3' }));
+f('zitat:bge-ohne-erw', () => formatiereGerichtszitat({ typ: 'bge', band: '147', teil: 'III', seite: '419' }));
+f('zitat:bger', () => formatiereGerichtszitat({ typ: 'bger', aktenzeichen: '5A_691/2023', datum: '2024-08-13', erwaegung: '2.1' }));
+f('zitat:unzulaessig', () => formatiereGerichtszitat({ typ: 'bger', aktenzeichen: '5A-691-2023', datum: '2024-08-13' }));
 
 // Verjährungsverzicht (Art. 141 OR; FAHRPLAN-VORLAGEN-AUSBAU V2, 12.6.2026)
 const vvBasis = {
