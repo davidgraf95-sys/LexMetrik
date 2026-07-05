@@ -250,12 +250,14 @@ e2e `leser-linien-kanon`/`gesetze-ux-g3a`/`leser-optionen` beweisen das gerender
 Ergebnis (ZGB ruhig, ArG sichtbar, ≤ 1 Guide-Stapel). **Wortlaut byte-gleich** (nur
 Klassen/Attribute), Engine-Golden byte-gleich.
 
-### §4c · Leser-Options-Leiste (W2·5d G2a, 4.7.2026)
+### §4c · Leser-Darstellungsoptionen (W2·5d G2a, 4.7.2026; U-KOPF/A1+A4, 5.7.2026)
 
-Drei persistente, **rein visuelle** Lese-Umschalter im Reader-Kopf (genau drei,
-keine Wucherung, Auftrag David): **Linien** (Gliederungs-Guide + Einzug),
-**Fussnoten** (Marker-Prominenz), **Verweise** (Verweis-Link-Unterstreichung).
-Verbindliche Bau-Regeln:
+Drei persistente, **rein visuelle** Lese-Umschalter (genau drei, keine Wucherung,
+Auftrag David): **Linien** (Gliederungs-Guide + Einzug), **Fussnoten** (Marker +
+Apparat sichtbar/verschwunden), **Verweise** (Verweis-Link-Unterstreichung). Sie
+liegen seit U-KOPF/A4 (David 5.7.2026) in **einem «Ansicht»-Dropdown im aktionen-
+Slot des `ErlassLeserKopf`** (die frühere G2a-Chip-Leiste entfällt; Details im
+U-KOPF-Nachtrag unten). Verbindliche Bau-Regeln:
 
 1. **Mechanik = `data-*`-Attribut am `<html>` + CSS, kein React-State im
    Artikel-Baum.** Store `src/pages/gesetz-leser/leserOptionen.ts` setzt
@@ -270,28 +272,63 @@ Verbindliche Bau-Regeln:
    CSS-No-op ⇒ Grundzustand **byte-gleich** (R6, `golden:vergleich` IDENTISCH). Die
    Guide-/Einzug-Klassen werden IMMER emittiert; `data-linien="aus"` blendet sie
    per CSS aus (der frühere React-State-Umschalter entfällt).
-4. **Fussnoten-«AUS» DÄMPFT, versteckt NIE** (R9/§8): nur `color`/`opacity`, nie
-   `display:none` — der Marker + der Fussnotentext bleiben im DOM, per Ctrl+F/
-   Print/Screenreader erreichbar. **Verweise-«AUS»** unterdrückt nur die
+4. **Fussnoten-«AUS» lässt Marker + Apparat VERSCHWINDEN** (U-KOPF/A1, David
+   5.7.2026 — überstimmt die frühere R9-Dämpfungs-Regel; s. U-KOPF-Nachtrag).
+   `display:none` am Marker-Cluster (`button[aria-label^="Fussnote"]`,
+   `[data-fn-marker]`) und am Apparat (`[data-fn-apparat]`); der Fussnotentext
+   bleibt im DOM (`#fn-…`), «AN» stellt alles wieder her. Der **Normtext** ist NIE
+   betroffen und bleibt stets durchsuchbar. **Verweise-«AUS»** unterdrückt nur die
    Unterstreichung; Farbe und Anker/Funktion bleiben.
 5. **Global ⇒ beide Reader-Instanzen** (Einzelansicht + jedes Split-View-Pane)
    folgen einer Wahl ohne Re-Render. a11y: echte `role="switch" aria-checked`,
    sichtbarer Fokus über die globale `:focus-visible`-Outline.
 
-**Gegated:** e2e `leser-optionen` (R6/R9 positiv+negativ + Persistenz/Reload) +
-`golden:vergleich` byte-gleich.
+**Gegated:** e2e `leser-optionen` (R6 + A1-Verschwinden positiv+negativ + CLS 0 +
+Persistenz/Reload) + `leser-kopf-a9` (A9-Throttle) + `golden:vergleich` byte-gleich.
 
 **G2b-Ergänzung (4.7.2026) — Fussnoten-Unifizierung umgesetzt:** Es gibt jetzt
 **EINE** Fussnoten-Bedienung: der `data-fussnoten`-Options-Toggle. Der frühere
 `fussnotenAuf`-React-Schalter (Such-Leiste) ist **entfernt**. Marker UND Apparat
 (Artikelfuss-/Kopf-/Sektions-Fussnoten, Aufhebungsnotiz) liegen **IMMER im DOM**
-(nur an `artOffen` gebunden) — «AUS» dämpft rein per CSS (`[data-fn-apparat]`),
-versteckt nie (R9). **Default AN**, weil R9 «immer im DOM» (Ctrl+F/Print/Screen-
-reader, §15-Funktions-Treue) mit «Default aus = nicht gerendert» unvereinbar ist
-und §3.1 die amtliche Substanz auf sichtbar setzt — die frühere Regel «Apparat per
-Default aus» ist damit für den options-getriebenen Reader abgelöst (siehe unten).
-Der **Linien**-Default ist mit U-LINIEN/A8 aufbau-basiert festgelegt (§4b-A) — er löst
-den zwischenzeitlich grundart-abhängigen G3a/K11-Default ab.
+(nur an `artOffen` gebunden). **Default AN.** Der **Linien**-Default ist mit
+U-LINIEN/A8 aufbau-basiert festgelegt (§4b-A) — er löst den zwischenzeitlich
+grundart-abhängigen G3a/K11-Default ab.
+
+**U-KOPF-Nachtrag (5.7.2026, David-Entscheide) — deklarierte fachliche Änderungen:**
+
+- **A1 — Fussnoten-«AUS» = VERSCHWINDEN (überstimmt R9/K5).** Davids Entscheid
+  («die fussnoten sollen nicht abdunkeln wenn nicht angewählt sondern
+  verschwinden») ersetzt die frühere Regel «AUS dämpft nur, versteckt nie». Neue
+  R9: **«AUS» entfernt Marker + Apparat visuell** (`display:none` an
+  `button[aria-label^="Fussnote"]`, `[data-fn-marker]`, `[data-fn-apparat]`); der
+  **Fussnotentext bleibt im DOM** (`#fn-…`-Quellblöcke), «AN» stellt Sicht + Ctrl+F
+  vollständig wieder her. **Trade-off** (bewusst, David): die Marker-Ziffern +
+  Apparat-Texte verlassen bei AUS Ctrl+F/Screenreader — **NUR sie, nie der
+  Normtext** (die amtliche Substanz des Artikels ist unberührt und stets
+  durchsuchbar). **Print-Verhalten: folgt dem Toggle** — bei AUS wird der Apparat
+  auch im Ausdruck weggelassen (`display:none` wirkt in `@media print`
+  gleichermassen); bei AN wird er gedruckt. **CLS:** der Toggle ist
+  nutzer-initiiert ⇒ der Reflow liegt binnen 500 ms nach dem Klick
+  (input-exkludiert) ⇒ kein CLS-Beitrag (e2e-belegt). Default AN emittiert keine
+  Regel ⇒ byte-gleich (R6).
+- **A4 — «Ansicht»-Dropdown statt Chip-Leiste.** Die drei Switches liegen in einem
+  Dropdown im aktionen-Slot des `ErlassLeserKopf` (`LeserAnsichtMenu.tsx`). **A11y:
+  ehrliche Disclosure, KEIN `role=menu`** (Switches sind Formular-Steuerelemente —
+  ein Menü verspräche eine Pfeiltasten-Bedienung, die es nicht gibt; gleiche Lehre
+  wie `SprachUmschalter`): Trigger «Ansicht» mit `aria-expanded` + `aria-controls`,
+  Panel = `role="group" aria-label="Darstellungsoptionen"`. **Fokus-Falle + Escape +
+  Fokus-Rückgabe** an den Auslöser via `useDialogFokus`; pointerdown-ausserhalb
+  schliesst. Panel **absolut positioniert ⇒ kein Layout-Shift der Seite**.
+  Persistenz-/Pre-Paint-Mechanik unverändert darunter. **pdf-embed** trägt bewusst
+  KEIN Ansicht-Dropdown (keine toten Steuerelemente, G2b/§13 F4).
+- **A3 — Positions-Leiste = echte Breadcrumbs.** Der Sticky-`SektionKontextKopf`
+  ist zu klickbaren Breadcrumbs aufgelöst (`nav[aria-label]` > `ol`/`li`, jedes
+  Glied ein Button → `springeZuSektion`, letztes Glied `aria-current="location"`).
+  Datenquelle bleibt die vorhandene Scroll-Spy-State (kein neuer Observer, §15).
+  Overflow-/Mobil-Kürzung rein per CSS (Label `truncate`, `nav` `overflow-hidden`,
+  mittlere Glieder `hidden sm:inline-flex` + «…»-Platzhalter). Der Sticky-Positions-
+  Kopf bleibt — wie bisher — ein **≥ 1024px-2-Spalten-Feature** (mobil keine
+  Positionsleiste).
 
 ## §5 · Verzahnung (der Burggraben, Fedlex-Übertreffer)
 
@@ -341,8 +378,9 @@ Bild), bleiben Bild — kein erfundenes OCR/LaTeX, ehrlich dokumentiert.
 Diese im Audit geprüften Punkte sind **kein** Defizit und werden **nicht**
 gebaut: Titel-`<br>`-Plättung, Absatz-`<p>`-in-`<table>`-Verschlucken, «Fussnoten-
 Apparat per Default aus» (galt bis W2·5d — **abgelöst durch die G2b-Fussnoten-
-Unifizierung §4c: Marker/Apparat liegen jetzt immer im DOM, Default AN, «AUS»
-dämpft nur; R9-Funktions-Treue schlägt die alte Default-aus-Regel**), volle
+Unifizierung §4c: Marker/Apparat liegen jetzt immer im DOM, Default AN; «AUS»
+lässt sie seit U-KOPF/A1 VERSCHWINDEN (display:none), der Normtext bleibt stets
+durchsuchbar**), volle
 `rowspan`-Logik (rowspan/verschachtelte
 Tabelle → ehrlicher Text-Fallback), «N.—»-Spacing,
 `art-`-vs-`art_`-Anker, «Deeplink vom Renderer verworfen» (wird genutzt). Details:
