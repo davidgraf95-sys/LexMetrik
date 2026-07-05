@@ -13,10 +13,8 @@ import type { Schriftskala } from './useSchriftskala';
 // Mobil zusätzlich der ☰-Schalter, der die Seitenleisten-Schublade öffnet
 // (onMenu, von Shell); auf Desktop ein Schalter, der die persistente
 // Seitenleiste ein-/ausklappt.
-export function Topbar({ onMenu, onBefehlsPalette, seitenleisteEingeklappt, onSeitenleisteUmschalten, schrift }: {
+export function Topbar({ onMenu, seitenleisteEingeklappt, onSeitenleisteUmschalten, schrift }: {
   onMenu: () => void;
-  /** Öffnet die Befehls-/Sprung-Palette (Cmd/Ctrl-K); Klick-Zugang v. a. mobil. */
-  onBefehlsPalette: () => void;
   seitenleisteEingeklappt: boolean;
   onSeitenleisteUmschalten: () => void;
   /** Globale Schriftskala (A−/A+), R3 — ersetzt den früheren Breiten-Umschalter. */
@@ -95,22 +93,9 @@ export function Topbar({ onMenu, onBefehlsPalette, seitenleisteEingeklappt, onSe
         </div>
 
         <div className="shrink-0 flex items-center gap-1.5 sm:gap-2">
-          {/* Befehls-/Sprung-Palette (Cmd/Ctrl-K): Tastatur-Einstieg zum Artikel
-              in ≤2 Interaktionen. Der Knopf trägt den Klick-Zugang (v. a. mobil,
-              wo es kein physisches Cmd-K gibt); auf Desktop zusätzlich der ⌘K-Hinweis. */}
-          <button
-            type="button"
-            onClick={onBefehlsPalette}
-            aria-label="Befehle und Sprung zum Artikel öffnen"
-            aria-keyshortcuts="Meta+K Control+K"
-            className="lc-btn lc-btn-ghost lc-btn-sm shrink-0 gap-1.5"
-          >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
-              <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="1.7" />
-              <path d="M20 20l-3.6-3.6" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
-            </svg>
-            <kbd className="hidden lg:inline num text-micro font-medium tracking-tight text-ink-500">⌘K</kbd>
-          </button>
+          {/* A5 (David 5.7.2026): kein eigener Palette-Knopf mehr — die
+              HeaderSuche trägt den Norm-Sprung selbst; ⌘K/Ctrl-K und «/»
+              fokussieren ihr Feld (Hinweis-kbd sitzt im Feld). */}
           <ReiterUebersicht />
           <ThemaUmschalter />
           <SprachUmschalter />
