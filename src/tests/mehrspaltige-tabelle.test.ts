@@ -5,7 +5,7 @@
  * Jeder Testfall ist load-bearing: per-Kanton-Spaltensets + interner `: ` + null-Pfad.
  */
 import { describe, it, expect } from 'vitest';
-import { extrahiereMehrspaltig } from '../../scripts/normtext/mehrspaltige-tabelle.ts';
+import { extrahiereMehrspaltig, typisiereSpalten } from '../../scripts/normtext/mehrspaltige-tabelle.ts';
 
 // NW-265.51: Tarif-Nr./Bezeichnung/Betrag (Betrag fehlt in Zeile 1)
 describe('NW-265.51: Tarif-Nr./Bezeichnung/Betrag', () => {
@@ -378,5 +378,85 @@ describe('T3 — Tarif-Nr. mit Buchstaben-Suffix («4.a)», GerGebV §29)', () =
     expect(r).not.toBeNull();
     expect(r!.kopf![0]).toBe('Tarif-Nr.');
     expect(r!.zeilen[1][0]).toBe('4.a)');
+  });
+});
+
+// ─── typisiereSpalten — kanonisches typisiertes spalten-Modell (T-B1/T-B4) ───
+// Kanton-Nachzug 5.7.2026. Der Typ steuert Ausrichtung + Tausender-Gruppierung;
+// Prosa-/Positions-Spalten sind `text` (NIE gruppiert → §7-Faithfulness).
+describe('typisiereSpalten — Spaltentypisierung', () => {
+  it('Tarif-Nr.-Spalte ist immer text (Hierarchie-Label, nie gruppiert)', () => {
+    const s = typisiereSpalten(['Tarif-Nr.', 'Bezeichnung', 'Betrag'], [
+      ['0.1', 'Spruchgebühr', ''],
+      ['0.1.1', 'für die Behandlung', "100.– bis 3'000.–"],
+    ]);
+    expect(s.map((x) => x.typ)).toEqual(['text', 'text', 'bereich']);
+  });
+
+  it('Betrags-Spalte (Fr.-Einzelbeträge) → betrag (rechts, gruppiert)', () => {
+    const s = typisiereSpalten(['Leistungslohnband', 'Stundenansatz'], [
+      ['1', 'Fr. 50.00'],
+      ['2', 'Fr. 55.00'],
+    ]);
+    // «1»,«2» sind Positions-/Bandnummern → text; Fr.-Beträge → betrag.
+    expect(s).toEqual([
+      { typ: 'text', titel: 'Leistungslohnband' },
+      { typ: 'betrag', titel: 'Stundenansatz' },
+    ]);
+  });
+
+  it('Staffel-Spanne (bis/über/de…à) → bereich (links, gruppiert)', () => {
+    const s = typisiereSpalten(['Streitwert (Fr.)', 'Grundhonorar (Fr.)'], [
+      ['bis 1000', '100 bis 500'],
+      ["über 1000 bis 5'000", "500 bis 1'000"],
+    ]);
+    expect(s.map((x) => x.typ)).toEqual(['bereich', 'bereich']);
+  });
+
+  it('Prozent-/Promille-Sätze → zahl (rechts, gruppiert)', () => {
+    const s = typisiereSpalten(['Steuer', 'Steuer2'], [
+      ['0.00%', '0,75 Promille'],
+      ['4.50%', '1,0 Promille'],
+    ]);
+    expect(s.map((x) => x.typ)).toEqual(['zahl', 'zahl']);
+  });
+
+  it('§7-BUGFIX: Prosa-Zelle mit Zitat-Jahr → text (Jahr NIE als Betrag gruppiert)', () => {
+    // Genau der «1937→1'937»-Fehler des Legacy-Pfads (globales gruppiereTausender).
+    const s = typisiereSpalten(['Tarif-Nr.', 'Verfahren'], [
+      ['1', 'gemäss Art. 36 StGB vom 21. Dezember 1937'],
+      ['2', 'gemäss Art. 363 StPO vom 5. Oktober 2007'],
+    ]);
+    expect(s[1].typ).toBe('text');
+  });
+
+  it('Spalte mit EINER Prosa-/Regelzelle wird ganz text (§1-konservativ)', () => {
+    // «mind. aber» / «des Streitwerts» sind Regel-Prosa → keine Betrags-Spalte.
+    const s = typisiereSpalten(['Gebühr'], [
+      ["Fr. 300 bis Fr. 2'000"],
+      ['0.5 % bis 1.5 % mind. 60’000'],
+    ]);
+    expect(s[0].typ).toBe('text');
+  });
+
+  it('einzelnes ziffernloses Wort («gebührenfrei») kippt Betrags-Spalte NICHT zu text', () => {
+    const s = typisiereSpalten(['Betrag'], [['gebührenfrei'], ['20.–'], ['10.–']]);
+    expect(s[0].typ).toBe('betrag'); // Wort ist betrags-kompatibel (kein Zahl-Risiko)
+  });
+
+  it('reine Vokabel-Spalte (nur Einzelwörter, keine Zahl) → text', () => {
+    const s = typisiereSpalten(['Bezeichnung'], [['Spruchgebühr'], ['Abschreibungsentscheid']]);
+    expect(s[0].typ).toBe('text');
+  });
+
+  it('kopf-lose Positionstabelle → alle Titel leer, Typ aus Inhalt', () => {
+    const s = typisiereSpalten([], [
+      ['25%', 'bei einem Empfange', "CHF 100'000"],
+      ['30%', 'bei Zuwendung', "CHF 200'000"],
+    ]);
+    expect(s.map((x) => x.titel)).toEqual(['', '', '']);
+    expect(s[0].typ).toBe('zahl'); // %-Satz
+    expect(s[1].typ).toBe('text'); // Prosa
+    expect(s[2].typ).toBe('betrag'); // CHF-Betrag
   });
 });

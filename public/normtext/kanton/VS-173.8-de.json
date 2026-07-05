@@ -456,9 +456,15 @@
           "absatz": "1",
           "text": "Für geldwerte Streitigkeiten des Zivilrechts, die im ordentlichen oder vereinfachten Verfahren vor erster oder einziger Instanz entschieden werden, wird die Gebühr gemäss folgender Tabelle festgesetzt:",
           "mehrspaltig": {
-            "kopf": [
-              "Für den Streitwert",
-              "Wird die Gebühr wie folgt festgesetzt"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Für den Streitwert"
+              },
+              {
+                "typ": "bereich",
+                "titel": "Wird die Gebühr wie folgt festgesetzt"
+              }
             ],
             "zeilen": [
               [
@@ -513,7 +519,7 @@
       "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
       "abgerufen": "2026-06-22",
       "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
-      "sha": "635cfe9403b86ac61ebc42d39ba2a97ea5b662ad7db3fa02d05506ee793e53cb"
+      "sha": "b8d494e0ce55f893b13a93857b44a20bd9008063ae999c7c20fe4b612aad65f7"
     },
     {
       "id": "kanton/VS/173.8-de/art_17",
@@ -972,9 +978,15 @@
           "absatz": "1",
           "text": "Bei Streitigkeiten und Zivilsachen geldwerter Natur im ordentlichen oder vereinfachten Verfahren, das in erster oder einziger Instanz entschieden wird, ist das Honorar wie folgt festgesetzt:",
           "mehrspaltig": {
-            "kopf": [
-              "Für den Streitwert",
-              "Wird die Gebühr wie folgt festgesetzt"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Für den Streitwert"
+              },
+              {
+                "typ": "text",
+                "titel": "Wird die Gebühr wie folgt festgesetzt"
+              }
             ],
             "zeilen": [
               [
@@ -1093,7 +1105,7 @@
       "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
       "abgerufen": "2026-06-22",
       "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
-      "sha": "644be53bb7d10d200adf32c89d5f3a4e5ff6e7e925bee37a53b308493d107629"
+      "sha": "f7891bc2ef9eeaff78943976998afbf559b86c362c5a2c20f7941f450c6a08f5"
     },
     {
       "id": "kanton/VS/173.8-de/art_33",

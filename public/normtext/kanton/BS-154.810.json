@@ -178,9 +178,15 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Streitwert (Fr.)",
-              "Grundgebühr (Fr.)"
+            "spalten": [
+              {
+                "typ": "bereich",
+                "titel": "Streitwert (Fr.)"
+              },
+              {
+                "typ": "text",
+                "titel": "Grundgebühr (Fr.)"
+              }
             ],
             "zeilen": [
               [
@@ -227,7 +233,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
       "abgerufen": "2026-06-23",
       "fassungsToken": "bf950ab89533e58cc1c974931d913313",
-      "sha": "bfc15b6f4ee354c2269b8eac2cd0ca1931bd7eeaa069acabe10cba831fcb7b48"
+      "sha": "4753e948caabb834279148d254f212606732c15dfd41861727e30f5670c8d5d5"
     },
     {
       "id": "kanton/BS/154.810/art_6",
@@ -370,10 +376,19 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Tarif-Nr.",
-              "Verfahren",
-              "Gebühr"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Tarif-Nr."
+              },
+              {
+                "typ": "text",
+                "titel": "Verfahren"
+              },
+              {
+                "typ": "betrag",
+                "titel": "Gebühr"
+              }
             ],
             "zeilen": [
               [
@@ -484,7 +499,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
       "abgerufen": "2026-06-23",
       "fassungsToken": "bf950ab89533e58cc1c974931d913313",
-      "sha": "e0e9db96613fe6421e0fff575eff523614328decded1dd3131f9cbd943703e08"
+      "sha": "ac823f6e3ba51dc600a87e9d1ab471d0a6ec6748ad3b8ea8bb9c2c67b2623ae5"
     },
     {
       "id": "kanton/BS/154.810/art_11",
@@ -699,10 +714,19 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Tarif-Nr.",
-              "Gegenstand",
-              "Gebühr"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Tarif-Nr."
+              },
+              {
+                "typ": "text",
+                "titel": "Gegenstand"
+              },
+              {
+                "typ": "text",
+                "titel": "Gebühr"
+              }
             ],
             "zeilen": [
               [
@@ -762,7 +786,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
       "abgerufen": "2026-06-23",
       "fassungsToken": "bf950ab89533e58cc1c974931d913313",
-      "sha": "3dd19b723b69ac7911fc0f138af24d96509fabe87d6b3e360bafa771cf66e90f"
+      "sha": "b157ee97aedbcae8f2a52741e6662ca83d7baf9c8d04da0ac3e1b197226f68e3"
     },
     {
       "id": "kanton/BS/154.810/art_19",
@@ -781,10 +805,19 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Tarif-Nr.",
-              "Verfahren",
-              "Gebühr"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Tarif-Nr."
+              },
+              {
+                "typ": "text",
+                "titel": "Verfahren"
+              },
+              {
+                "typ": "bereich",
+                "titel": "Gebühr"
+              }
             ],
             "zeilen": [
               [
@@ -875,7 +908,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
       "abgerufen": "2026-06-23",
       "fassungsToken": "bf950ab89533e58cc1c974931d913313",
-      "sha": "bfd709cfd3e4ca2d1d549c6fdbc1c6cef39ea4b76d0fb2379a6ca095842918c8"
+      "sha": "1509dea62e2b8de0a5a84825ef817709da76aff96a2d566f1cd5dec16aa10315"
     },
     {
       "id": "kanton/BS/154.810/art_20",
@@ -894,10 +927,19 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Tarif-Nr.",
-              "Verfahren",
-              "Gebühr"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Tarif-Nr."
+              },
+              {
+                "typ": "text",
+                "titel": "Verfahren"
+              },
+              {
+                "typ": "bereich",
+                "titel": "Gebühr"
+              }
             ],
             "zeilen": [
               [
@@ -1003,7 +1045,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
       "abgerufen": "2026-06-23",
       "fassungsToken": "bf950ab89533e58cc1c974931d913313",
-      "sha": "fd120cac5225d763f66c822fb3d3dd93753c2fcebefbb40d8aff1956ebf82c60"
+      "sha": "0ce08dacdc347c0e6fa72e72f5bb0bfefb5beb03737f67ce8a24e52139d86a8c"
     },
     {
       "id": "kanton/BS/154.810/art_21",
@@ -1218,10 +1260,19 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Tarif-Nr.",
-              "Gegenstand",
-              "Gebühren"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Tarif-Nr."
+              },
+              {
+                "typ": "text",
+                "titel": "Gegenstand"
+              },
+              {
+                "typ": "text",
+                "titel": "Gebühren"
+              }
             ],
             "zeilen": [
               [
@@ -1494,7 +1545,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
       "abgerufen": "2026-06-23",
       "fassungsToken": "bf950ab89533e58cc1c974931d913313",
-      "sha": "8f6b7ed62e9663e4340f40a969ceb31c98ed160a0d347c127bb91eda8cb7c3f7"
+      "sha": "1e61c9e836d9c3957f81c3194a76c8fe8ed366ba5c034e05545f841d918a8556"
     },
     {
       "id": "kanton/BS/154.810/art_30",

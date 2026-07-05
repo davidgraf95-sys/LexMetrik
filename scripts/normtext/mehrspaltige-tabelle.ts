@@ -27,6 +27,129 @@ const TARIF_NR_RE =
 /** Spaltenname für führende bare Tarif-Nummern. */
 export const TARIF_NR_LABEL = 'Tarif-Nr.';
 
+// ── Kanonisches Spalten-Modell (T-B1/T-B4, Kanton-Nachzug 5.7.2026) ───────────
+// Spiegelt scripts/normtext/tabelle-normalisieren.ts (Bund) + src/lib/normtext/
+// typen.ts. Der Renderer (KanonischeTabelle) steuert Ausrichtung + Tausender-
+// Gruppierung AUSSCHLIESSLICH über `typ` (T-C2/T-C5): text=links/keine Gruppierung;
+// zahl/betrag=rechts/gruppiert; bereich=links/gruppiert (Staffel-Spanne).
+export type Spaltentyp = 'bereich' | 'zahl' | 'text' | 'betrag';
+export interface Spalte {
+  typ: Spaltentyp;
+  titel: string;
+}
+
+// Wörter, die in einer reinen Betrags-/Staffel-/Satz-Zelle vorkommen dürfen, ohne
+// sie zu Prosa zu machen: Bindewörter der Spanne + Währungs-/Einheiten-Marken.
+// JEDES andere Wort (der/die/für/Verfahren/Einkommen/gemäss …) ⇒ die Zelle ist
+// Prosa ⇒ die Spalte wird `text` (nie gruppiert; §1/§7: kein Jahr/Aktenzeichen
+// wird zum Betrag umgeformt — genau der «1937→1'937»-Fehler des Legacy-Pfads).
+const ATOM_WORT = new Set([
+  'bis', 'über', 'ueber', 'ab', 'von', 'und',
+  'de', 'à', 'jusqu', 'jusqu’à', "jusqu'à", 'et',
+  'inférieure', 'supérieure', 'inferieure', 'superieure',
+  'fr', 'chf', 'franken', 'francs', 'franc', 'promille', 'prozent',
+]);
+// Teilmenge: Bindewörter, die eine Spanne signalisieren (⇒ `bereich`).
+const SPANNE_WORT = new Set([
+  'bis', 'über', 'ueber', 'ab', 'von', 'und',
+  'de', 'à', 'jusqu', 'jusqu’à', "jusqu'à", 'et',
+  'inférieure', 'supérieure', 'inferieure', 'superieure',
+]);
+const WAEHRUNG_WORT = new Set(['fr', 'chf', 'franken', 'francs', 'franc']);
+const SATZ_WORT = new Set(['promille', 'prozent']);
+
+// 'wort' = eine einzelne ziffernlose Nicht-Atom-Vokabel (z.B. «gebührenfrei»,
+// «gratis»). Sie trägt KEIN mis-gruppierbares Zahl-Risiko (im Gegensatz zu einem
+// Zitat-Jahr) — steht sie mit echten Beträgen in EINER Spalte, bleibt diese eine
+// Betrags-Spalte (rechts/nowrap), statt wegen des einen Worts zu `text` zu kippen.
+type ZellArt = 'leer' | 'position' | 'prosa' | 'wort' | 'spanne' | 'betrag' | 'satz' | 'zahl';
+
+/**
+ * Klassifiziert eine EINZELNE Zelle deterministisch (rein, §2). Reihenfolge der
+ * Prüfungen ist bedeutungstragend (Prosa/Position vor Zahl).
+ */
+function klassifiziereZelle(roh: string): ZellArt {
+  const z = roh.trim();
+  if (z === '') return 'leer';
+  // Hierarchische Positions-/Tarif-Nummer («0.1», «1.1.1», «4.a)», «2.») bleibt
+  // ein Label — NIE gruppieren/rechtsbündig (deckt sich mit istNumerischeZelle).
+  if (TARIF_NR_RE.test(z)) return 'position';
+  // Wörter (inkl. Apostroph-Kontraktionen «jusqu’à») extrahieren + kleinschreiben.
+  const woerter = (z.match(/[A-Za-zÀ-ÿ]+(?:['’][A-Za-zÀ-ÿ]+)?/g) ?? []).map((w) => w.toLowerCase());
+  const hatZiffer = /\d/.test(z) || /[½¼¾⅓⅔⅛⅜⅝⅞]/.test(z);
+  const fremd = woerter.filter((w) => !ATOM_WORT.has(w));
+  if (fremd.length > 0) {
+    // Prosa = mehrere Fremdwörter ODER ein Fremdwort MIT Ziffer (Zitat-Jahr wie
+    // «Dezember 1937» → NIE als Betrag gruppieren, §7). Ein einzelnes ziffernloses
+    // Wort ist bloss ein Vokabel-Eintrag (gebührenfrei) → 'wort'.
+    return fremd.length >= 2 || hatZiffer ? 'prosa' : 'wort';
+  }
+  if (!hatZiffer) return 'prosa';
+  const hatSpanne =
+    woerter.some((w) => SPANNE_WORT.has(w)) || /\d\s*[–—]\s*\d/.test(z) || /\d\s*[–—-]\s*(?:Fr|CHF)/i.test(z);
+  if (hatSpanne) return 'spanne';
+  const hatWaehrung = woerter.some((w) => WAEHRUNG_WORT.has(w)) || /\d[.,][—–-]/.test(z);
+  if (hatWaehrung) return 'betrag';
+  const hatSatz = /[%‰]/.test(z) || woerter.some((w) => SATZ_WORT.has(w)) || /[½¼¾⅓⅔⅛⅜⅝⅞]/.test(z);
+  if (hatSatz) return 'satz';
+  if (/^[\d'’‘.,\s]+$/.test(z)) return 'zahl';
+  // Atom-Wörter + Ziffer, aber ohne klare Marke → konservativ Betrag (rechts).
+  return 'betrag';
+}
+
+/** Spaltentyp aus den Zell-Arten einer Spalte (leer wird ignoriert, T-C7). */
+function inferiereSpaltentyp(arten: ZellArt[]): Spaltentyp {
+  const echt = arten.filter((a) => a !== 'leer');
+  if (echt.length === 0) return 'text';
+  // §1-konservativ: sobald IRGENDEINE Prosa- oder Positions-Zelle dabei ist,
+  // ist die Spalte `text` (nie gruppiert, nie rechtsbündig).
+  if (echt.some((a) => a === 'prosa' || a === 'position')) return 'text';
+  // Reine Vokabel-Spalte (nur ziffernlose Einzelwörter, z.B. Bezeichnung) → text.
+  if (echt.every((a) => a === 'wort')) return 'text';
+  // Ab hier: mind. eine zahl-artige Zelle, keine Prosa/Position. Ein einzelnes
+  // ziffernloses Wort («gebührenfrei») zählt als betrags-kompatibel und kippt die
+  // Spalte NICHT zu text (es trägt kein mis-gruppierbares Zahl-Risiko).
+  const zahl = echt.filter((a) => a !== 'wort');
+  if (zahl.every((a) => a === 'spanne')) return 'bereich';
+  if (zahl.every((a) => a === 'spanne' || a === 'betrag')) return 'betrag';
+  if (zahl.every((a) => a === 'satz' || a === 'zahl')) return 'zahl';
+  // Restmischung: enthält sie eine Betrags-/Spannen-Zelle ⇒ betrag.
+  if (zahl.some((a) => a === 'betrag' || a === 'spanne')) return 'betrag';
+  return 'zahl';
+}
+
+/**
+ * Leitet aus dem Legacy-`{kopf, zeilen}` das kanonische typisierte `spalten`-
+ * Modell ab (rein, deterministisch, §2/§3). N = Spaltenzahl aus dem KOPF (bzw.
+ * bei kopf-losen Positionstabellen aus der ersten Zeile — die einzige Quelle,
+ * T-B1). Werte in `zeilen` bleiben BYTE-GLEICH (nur Typ-Metadaten kommen hinzu;
+ * Tausender/Währung sind reine Anzeige, T-C4/T-E3). Voraussetzung: rechteckig
+ * (garantiert die Aufrufer extrahiereMehrspaltig/extrahierePositional).
+ */
+export function typisiereSpalten(kopf: string[], zeilen: string[][]): Spalte[] {
+  const N = kopf.length > 0 ? kopf.length : (zeilen[0]?.length ?? 0);
+  const spalten: Spalte[] = [];
+  for (let ci = 0; ci < N; ci++) {
+    const titel = (kopf[ci] ?? '').trim();
+    // Explizite Tarif-Nr.-Spalte ist immer `text` (Hierarchie-Label, T-B4).
+    if (titel === TARIF_NR_LABEL) {
+      spalten.push({ typ: 'text', titel: kopf[ci] ?? '' });
+      continue;
+    }
+    const arten = zeilen.map((z) => klassifiziereZelle(z[ci] ?? ''));
+    spalten.push({ typ: inferiereSpaltentyp(arten), titel: kopf[ci] ?? '' });
+  }
+  return spalten;
+}
+
+/** Legacy-`{kopf,zeilen}` → kanonisch `{spalten,zeilen}` (Werte unverändert). */
+function zuKanonisch(t: { kopf: string[]; zeilen: string[][] }): {
+  spalten: Spalte[];
+  zeilen: string[][];
+} {
+  return { spalten: typisiereSpalten(t.kopf, t.zeilen), zeilen: t.zeilen };
+}
+
 /**
  * Zerlegt eine einzelne Zelle «Label: Wert» am ERSTEN `: ` (nur erstes Vorkommen).
  * Gibt { label, wert } zurück, oder null wenn kein `: ` enthalten und auch keine
@@ -229,7 +352,7 @@ export function reichereMehrspaltig(
     absatz: string | null;
     text: string;
     items?: Array<{ marke: string; text: string }>;
-    mehrspaltig?: { kopf?: string[]; zeilen: string[][] };
+    mehrspaltig?: { kopf?: string[]; spalten?: Spalte[]; zeilen: string[][] };
   }>,
 ): void {
   for (const block of bloecke) {
@@ -276,7 +399,7 @@ export function reichereMehrspaltig(
         // Kein Intro-Split nötig: die Tabelle beginnt mit einer Nummer.
         // Fallback: Text leer, ganz als mehrspaltig
         block.text = '';
-        block.mehrspaltig = ganz;
+        block.mehrspaltig = zuKanonisch(ganz);
         continue;
       }
     }
@@ -306,11 +429,11 @@ export function reichereMehrspaltig(
     if (parsed === null || parsed.zeilen.length < 2) {
       // Fallback: ganzen Text als Tabelle (kein Intro-Split)
       block.text = '';
-      block.mehrspaltig = ganz;
+      block.mehrspaltig = zuKanonisch(ganz);
       continue;
     }
 
     block.text = intro;
-    block.mehrspaltig = parsed;
+    block.mehrspaltig = zuKanonisch(parsed);
   }
 }

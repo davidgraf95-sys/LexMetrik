@@ -268,11 +268,14 @@ describe('TABELLEN — enumeration_tabular → Stufe 2 mehrspaltig (Task 5)', ()
     const tab = a!.bloecke[1];
     expect(tab.text).toBe('');
     expect(tab.mehrspaltig).toBeDefined();
-    expect(tab.mehrspaltig!.kopf).toEqual([
+    // Kanonisch `spalten` (T-B1): Titel bleiben; Streitwert/Gebühr = Staffel-
+    // Spannen (bereich), die %-Spalte trägt bare Positions-/Zahlwerte.
+    expect(tab.mehrspaltig!.spalten!.map((s) => s.titel)).toEqual([
       'Streitwert in Franken',
       'Gebühr in Franken',
       'jedoch höchstens % des Streitwerts',
     ]);
+    expect(tab.mehrspaltig!.spalten!.slice(0, 2).map((s) => s.typ)).toEqual(['bereich', 'bereich']);
     // Erste Zeile: bis 1000, von 100 bis 200, leere 3. Spalte
     expect(tab.mehrspaltig!.zeilen[0]).toEqual(['bis 1000', 'von 100 bis 200', '']);
     // Zweite Zeile: über 1000 bis 3000, von 220 bis 540, 22

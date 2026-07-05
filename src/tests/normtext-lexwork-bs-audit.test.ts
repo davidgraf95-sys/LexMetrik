@@ -162,7 +162,8 @@ describe('T3 — label-lose Tarif-Tabellen positionsbasiert (StG §50/§131)', (
     expect(b[0].mehrspaltig).toBeUndefined();
     // Block 1: reine positions-basierte Tabelle (kein kopf, label-los).
     expect(b[1].mehrspaltig).toBeDefined();
-    expect(b[1].mehrspaltig!.kopf).toEqual([]); // label-los: keine Kopfzeile
+    // label-los: keine Kopfzeile → kanonisch alle Titel leer (T-D6).
+    expect(b[1].mehrspaltig!.spalten!.map((s) => s.titel)).toEqual(['', '', '']);
     expect(b[1].mehrspaltig!.zeilen[0]).toEqual([
       'Von Fr. 0', "bis Fr. 250'000:", "Fr. 4.50 je Fr. 1'000",
     ]);
@@ -176,7 +177,8 @@ describe('T3 — label-lose Tarif-Tabellen positionsbasiert (StG §50/§131)', (
     const { artikel } = extrahiereAlleLexWorkArtikel(LEXWORK_BS_640100_S131_XHTML);
     const b = artikel['131'].bloecke;
     const tab = b.find((x) => x.mehrspaltig)!;
-    expect(tab.mehrspaltig!.kopf).toEqual([]); // label-los: keine Kopfzeile
+    // label-los: keine Kopfzeile → kanonisch alle Titel leer (T-D6).
+    expect(tab.mehrspaltig!.spalten!.map((s) => s.titel)).toEqual(['', '', '', '']);
     expect(tab.mehrspaltig!.zeilen[0]).toEqual([
       '25%', 'bei einem Empfange', 'bis zu', "CHF 100'000",
     ]);
@@ -195,7 +197,7 @@ describe('S4 — IWB §3: Tarif-Nr. in Spalte 0, keine Phantom-Spalte', () => {
     expect(b[0].mehrspaltig).toBeUndefined();
     const tab = b.find((x) => x.mehrspaltig)!;
     // Kopf: leere erste <th> → «Tarif-Nr.» in Spalte 0; Caption ist KEINE Spalte.
-    expect(tab.mehrspaltig!.kopf).toEqual(['Tarif-Nr.', 'Segment', 'Zuordnungskriterium']);
+    expect(tab.mehrspaltig!.spalten!.map((s) => s.titel)).toEqual(['Tarif-Nr.', 'Segment', 'Zuordnungskriterium']);
     expect(tab.mehrspaltig!.zeilen[0][0]).toBe('1'); // Tarif-Nr. korrekt in Spalte 0
     expect(tab.mehrspaltig!.zeilen[1][0]).toBe('2'); // KEIN Versatz mehr
     // T1: &ge;/&lt; sind inhaltliche Schwellen — müssen aufgelöst sein.
@@ -209,7 +211,7 @@ describe('T3 — buchstaben-suffigierte Positions-Nr. «4.a)» (GerGebV §29)', 
   it('«4.a)» wird als Tarif-Nr. in Spalte 0 erkannt (nicht als Wert verworfen)', () => {
     const { artikel } = extrahiereAlleLexWorkArtikel(LEXWORK_BS_154810_S29_XHTML);
     const tab = artikel['29'].bloecke.find((x) => x.mehrspaltig)!;
-    expect(tab.mehrspaltig!.kopf).toEqual(['Tarif-Nr.', 'Gegenstand', 'Gebühren']);
+    expect(tab.mehrspaltig!.spalten!.map((s) => s.titel)).toEqual(['Tarif-Nr.', 'Gegenstand', 'Gebühren']);
     const spalte0 = tab.mehrspaltig!.zeilen.map((z) => z[0]);
     expect(spalte0).toContain('4.a)');
     // Reihenfolge der Positions-Nrn. bleibt erhalten.
