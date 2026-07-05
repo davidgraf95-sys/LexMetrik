@@ -682,6 +682,46 @@ export interface ErlassRegistereintrag {
 > Anhang-Block/Tabellen-Scroll (③/⑤ → G3b); Staatsvertrag-Langtitel-Collapse (mobil
 > ⑤; die 8-Zeilen-Titel wrappen ohne H-Overflow, kein Blocker) offen für einen
 > späteren Feinschliff.
+
+> **AUSGEFÜHRT 5.7.2026 — G3b Schritt 2 · Anhang-Block-Rendering ③/⑤ (reine
+> Darstellung, Worktree `feat/g3b-anhang-rendering`).** Die annex-EXTRAKTION lief
+> in M13; DIESE Einheit stellt die vorhandenen `annex_*`/`lvl_*`-Daten dar —
+> **`gegenpruefung: n/a` literal** (keine Risiko-Datei geändert: nur
+> `src/pages/gesetz-leser/**` + `src/components/normtext/ArtikelBody.tsx` +
+> e2e; `check:gegenpruefung` grün «keine Risiko-Datei»). **③ ERLASS_MIT_ANHANG:**
+> Anhänge (`annex_*`) rendern jetzt als **eigenständig erkennbare, klar abgesetzte
+> Blöcke** — Struktur-Trenner (`border-rule-struktur` + mehr Weissraum statt des
+> feinen Artikel-Trenners) und «Anhang N» als **Struktur-Überschrift** (font-display
+> `text-h3` statt `num`/Artikelnummer); `data-anhang`-Marker; Anker bleibt `#art-`
+> (R8). Ziffer-Zwischentitel via bestehendem `titel`-Block (M13). Delimitation über
+> **Typo + Struktur-Trenner** (Linien-Kanon «Ruhe durch Reduktion» — bewusst KEINE
+> Farb-/Box-Sprache; «echte `<table>`» aus der Spec bleibt zurückgestellt, weil die
+> Tabellen im shared `<p>`-Kontext liegen und der Umbau die Popover-Golden bräche —
+> stattdessen overflow-x-Container erfüllt, s. u.). **⑤ STAATSVERTRAG (LugÜ):**
+> Protokolle (`lvl_*`) rendern über denselben `istAnhang`-Pfad als abgesetzte
+> Blöcke («Protokoll 1 über …» als Struktur-Überschrift); Präambel bleibt via
+> `ErlassKopfBlock` (G3a). **LugÜ-Mobil-Overflow (scrollW 790 @390) GEFIXT —
+> Ursache empirisch anders als im G3a-Report vermutet:** NICHT die Tabelle (die
+> scrollt in ihrem `overflow-x-auto`-Container), sondern der **Bereich-Badge der
+> Anhang-Sektion** in `SektionKopf` — er setzte sich aus Anhang-/Protokoll-Lang-
+> Labels («Protokoll 1 über … – Vorbehalte und Erklärungen», 770px) zusammen und
+> war `shrink-0` → sprengte @390 die Seite. Fix: reine Anhang-Sektionen unterdrücken
+> den (sinnlosen) Bereich-Badge; generisch trägt der Badge jetzt `min-w-0` +
+> Umbruch statt `shrink-0`. **Tabellen im overflow-x-Container** (③): die beiden
+> Mehrspalten-Renderer (`KanonischeTabelle`/`LegacyMehrspaltigeTabelle`) tragen
+> `lc-scroll-x` und die innere `table` wächst auf `min-w-full w-max` → breite
+> Tabellen SCROLLEN seitlich statt Zellen vertikal Zeichen-für-Zeichen zu
+> zerquetschen (Ratifikations-Tabelle + Kanton-Tarife strikt besser; baseline
+> zerquetschte «V-e-r-t-r-a-g-s-…»). **Wortlaut-Byte-Beweis:** gerenderte Prosa
+> (Artikel + Anhänge) GSchV/ChemRRV/LugÜ/ZGB byte-identisch gegen `origin/main`-
+> Build (nur Klassen/Markup geändert). **Tore:** voller `npm run gate` GRÜN (inkl.
+> golden/`check:linien-kanon`/`check:tabellen`/`check:struktur-konsistenz`/
+> `check:gegenpruefung`); `test:e2e` gegen dist (1 Worker) grün + neuer Spec
+> `gesetze-ux-g3b-anhang` (5). **Visual-Review Desktop 1440 + Mobil 390:** GSchV-
+> Anhang (Tabellen), ChemRRV (tiefe `lvl_`-Stufen), LugÜ (Protokolle +
+> Ratifikations-Tabelle) — 0 H-Overflow @390. **Offen (G3b):** Tarif-Anhang→echte-
+> Tabelle-Klasse B/C (Extraktion, `FAHRPLAN-TARIF-TABELLEN-STUFE2.md`).
+
 | **G3a** | Per-Grundart-**Darstellung**: §-Label (KANTON, Anker bleibt `#art-`/R8), Präambel/Protokolle (⑤), PDF-Rahmen (⑦), Live-Verweiskarte (⑧), Kurzerlass-Lesespalte (④). | **`parts.tsx`**, **`inhalt.tsx`**, `register.ts` | 1½ Session | **Golden ändert** → neu; `gegenpruefung: n/a — reine Darstellung` |
 | **G3b** | **Risiko-Pfad:** Anhang-Block (③/⑤) + Tarif-Anhang → echte Tabelle. Gekoppelt an `FAHRPLAN-TARIF-TABELLEN-STUFE2.md` + `annex_*`-Plan. | `ArtikelBody.tsx`, Extraktions-Skripte, `register.ts` | **mehrere Sessions** | **`check:gegenpruefung` zwingend** (Extraktion!); golden neu |
 | **G4** | Einstieg /gesetze (3 Kacheln, Dopplung raus) + Cmd/Ctrl-K-Rahmen + Norm-Query-Parser (KEIN Neu-Index). | `src/pages/gesetze/*` (nicht Leser) | 1–1½ Session | kein Normtext; UI-Test + Parser-Akzeptanz |
