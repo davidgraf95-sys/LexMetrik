@@ -550,7 +550,16 @@ export function azaAusBgeKopf(fullText: string | undefined): string | null {
   // abrufbar). Tag-Punkt optional (fr/it «du 14 août», kein Punkt). Anker bleibt die
   // Eigenfall-Datums-Signatur im Kopf-Fenster (R8/§8) — kein zitiertes Präjudiz.
   const m = /(\d[A-Z][_ ]\d+\/\d{4})(?:\s*\/\s*\d[A-Z][_ ]\d+\/\d{4})*(?:\s+(?:und\s+andere|et\s+autres?|e\s+altri|und\s+[^\n]{0,40}))?\s+(?:vom|du|del|dell['’])\s+\d{1,2}\.?\s*\S+\s+\d{4}/.exec(fenster);
-  return m ? m[1].replace(/\s+/, '_') : null;
+  if (m) return m[1].replace(/\s+/, '_');
+  // Fallback (W2·6-B B1, additiv — greift NUR wenn die «… vom <Datum>»-Signatur
+  // fehlt, ändert daher die bereits aufgelösten BGE nicht): ein zweites OCL-
+  // Kopfformat listet das eigene aza-Az. in KLAMMERN direkt hinter der eigenen
+  // BGE-Fundstelle: «Bundesgericht (BGE) Band I 05.06.2024 BGE 150 I 183
+  // (2C_512/2023)». Das ist strukturell das Eigenfall-Az. (nicht ein zitiertes
+  // Präjudiz — diese stehen erst in den Erwägungen). Anker: unmittelbar nach
+  // «BGE <Band> <röm> <Nr>» im Kopffenster. Nur die ERSTE solche Klammer.
+  const k = /\bBGE\s+\d+\s+[IVXLC]+[a-z]?\s+\d+\s*\(\s*(\d[A-Z][_ ]\d+\/\d{4})\s*\)/.exec(fenster);
+  return k ? k[1].replace(/\s+/, '_') : null;
 }
 
 /** BGE-Band (römisch) → Sachgebiet: I/II öffentl., III Zivil→privat, IV straf, V Sozialvers. */
@@ -592,7 +601,14 @@ export async function holeBgeLeitentscheid(bgeId: string, abgerufen: string): Pr
 
   const azaAz = azaAusBgeKopf(det.full_text);
   const azaKey = azaAz ? citedRefZuId(azaAz) : null;
-  const bandJahr = Number(String(det.decision_date ?? '').slice(0, 4)) || null;
+  // Referenzjahr für die aza-Plausibilität = der BGE-BAND (ein Band je Jahrgang
+  // seit 1875 ⇒ Jahr = Band + 1874), NICHT das OCL-`decision_date`: dieses ist bei
+  // etlichen BGE ein Platzhalter/Fehlwert (z.B. «1999»/«2006» für Band 151/2025 —
+  // W2·6-B B1-Befund) und liess plausible Volltexte fälschlich durchfallen. Der Band
+  // ist die kanonische, deterministische Jahresquelle (§2). Fallback: decision_date.
+  const band = parseInt(String(det.docket_number ?? det.bge_reference ?? '').trim(), 10);
+  const bandJahr = (Number.isFinite(band) && band > 0 ? band + 1874 : null)
+    ?? (Number(String(det.decision_date ?? '').slice(0, 4)) || null);
 
   // aza-Volltext nur bei plausibler Confidence übernehmen (Jahr-Fenster, §8/R8).
   let azaSnap: EntscheidSnapshot | null = null;
@@ -603,7 +619,11 @@ export async function holeBgeLeitentscheid(bgeId: string, abgerufen: string): Pr
     const cand = await holeEntscheidOCL(azaKey, abgerufen, { sprache: null });
     if (cand) {
       const azaJahr = Number(String(cand.datum).slice(0, 4)) || null;
-      const plausibel = !bandJahr || !azaJahr || (azaJahr <= bandJahr && azaJahr >= bandJahr - 3);
+      // Fenster [Band-Jahr − 5 … Band-Jahr]: das unterliegende Urteil datiert nie
+      // NACH dem Bandjahr und praktisch nie mehr als ~5 Jahre davor (Publikations-
+      // verzug). Grenze auf −5 gelockert (war −3), da das Referenzjahr jetzt das
+      // korrekte Bandjahr ist statt des z.T. fehlerhaften decision_date (B1).
+      const plausibel = !bandJahr || !azaJahr || (azaJahr <= bandJahr && azaJahr >= bandJahr - 5);
       if (plausibel) azaSnap = cand;
     }
   }

@@ -38,10 +38,32 @@ export interface EntscheidAbschnitt {
   bloecke: EntscheidBlock[];
 }
 
+/**
+ * Eine Sprachfassung der amtlich publizierten BGE-Regeste (W2·6-B B2 + A18).
+ * Amtlich dreisprachig (DE/FR/IT); die Fassungen werden aus der bger.ch-clir-
+ * Struktur (`<div id="regeste" lang="…">`) getrennt — strukturbasiert, keine
+ * Wortraten-Heuristik (§2). `kopf` = Regestenkopf (massgebliche Artikel +
+ * Regestentitel; in der amtlichen Sammlung fett). `absaetze` = die Textabsätze.
+ */
+export interface RegesteSprachfassung {
+  sprache: EntscheidSprache;   // 'de' | 'fr' | 'it'
+  kopf: string;
+  absaetze: string[];
+  quelleUrl: string;           // amtliche clir-URL DIESER Sprachfassung (§7)
+}
+
 /** Regeste/Leitsatz — redaktioneller Teil (Lizenz-Graustufe Art. 5 URG), getrennt. */
 export interface EntscheidRegeste {
+  /** Flacher Text (Entscheidsprache) — Rückwärtskompat, Suche, SEO, Fallback. */
   text: string;
   quelle: Entscheidquelle;
+  /**
+   * Amtlich nachextrahierte, strukturierte Regeste je Sprache, sortiert DE→FR→IT
+   * (A18). NUR amtliche BGE (Quelle bger.ch clir). Fehlt eine Sprachfassung in der
+   * Quelle, ist sie NICHT enthalten — nie geraten (§1). Fehlt das Feld ganz, gibt
+   * es keine strukturierte Fassung → die UI zeigt `text`.
+   */
+  sprachfassungen?: RegesteSprachfassung[];
 }
 
 /**

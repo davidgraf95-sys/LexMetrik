@@ -97,6 +97,25 @@ function main() {
     if (snap.sha !== erwartet) fehler.push(`${e.key}: sha-Drift (Datei ${snap.sha?.slice(0, 8)} ≠ erwartet ${erwartet.slice(0, 8)})`);
     const volltext = snap.abschnitte.flatMap((a) => a.bloecke.map((b) => b.text)).join('\n');
     if (AHV.test(volltext) || AHV.test(snap.regeste?.text ?? '')) warn.push(`${e.key}: mögliche AHV-Nummer im Text (Anonymisierung prüfen)`);
+    // W2·6-B B2+A18: strukturierte, dreisprachige Regeste (bger.ch clir). Invarianten
+    // (§1/§2, hart): nur amtliche BGE tragen sie · Reihenfolge STRIKT DE→FR→IT · jede
+    // Fassung hat einen nicht-leeren Kopf + amtliche clir-quelleUrl · keine Sprach-
+    // Dublette. So ist «nach Sprachen sortiert» (A18) maschinell garantiert.
+    const sf = snap.regeste?.sprachfassungen;
+    if (sf?.length) {
+      if (!snap.regesteAmtlich) fehler.push(`${e.key}: sprachfassungen an nicht-amtlicher Regeste (§8)`);
+      const RANG: Record<string, number> = { de: 0, fr: 1, it: 2, rm: 3 };
+      for (let i = 0; i < sf.length; i++) {
+        const f = sf[i];
+        if (!f.kopf?.trim()) fehler.push(`${e.key}: sprachfassung[${f.sprache}] ohne Kopf`);
+        if (!/^https?:\/\/(?:www|search)\.bger\.ch\//.test(f.quelleUrl ?? '')) {
+          fehler.push(`${e.key}: sprachfassung[${f.sprache}] ohne amtliche clir-quelleUrl`);
+        }
+        if (i > 0 && RANG[sf[i - 1].sprache] >= RANG[f.sprache]) {
+          fehler.push(`${e.key}: sprachfassungen nicht DE→FR→IT sortiert (${sf.map((x) => x.sprache).join('→')})`);
+        }
+      }
+    }
     // BGE-Umschalter-Integrität (§8, Bug-Check 26.6.): auszugAbschnitte ⟹ azaUrteil; und
     // der Volltext darf nicht deutlich kürzer sein als der Auszug (Inversion = falscher aza).
     if (snap.auszugAbschnitte?.length && !snap.azaUrteil) {
