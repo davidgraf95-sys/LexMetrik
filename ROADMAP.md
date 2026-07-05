@@ -584,7 +584,27 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   Darstellung/Klassifikation (§3); `golden:vergleich` IDENTISCH (201); neuer e2e
   `gesetze-rechtsgebiet-g6` (2) + Landeplatz-/Kanton-Regressionen grün; Visual-Review
   Desktop 1440 + Mobil 390 (0 Overflow). **Vollkuration bleibt späterer Strang**
-  (nach Abnahme-Zeitsperre). Nächste Etappe **G3b** (Anhang/Tabellen-Risiko-Pfad).
+  (nach Abnahme-Zeitsperre). **G3b Schritt 1 · Kanton-Tarif-Tabellen Stufe 2, Klasse A+D
+  (Risiko-Pfad, 5.7.2026) gebaut:** die bereits extrahierten ·/—-Kanton-Tabellen
+  (NW-265.51, BS-154.810, BS-291.400, SO-614.11, VS-173.8-de+fr; 32 Blöcke) vom
+  Legacy-`{kopf,zeilen}` aufs kanonische typisierte `{spalten:[{typ,titel}],zeilen}`-
+  Modell (T-B1/T-B4) nachgezogen → typgesteuerte Ausrichtung + Klasse-D-Tausender-
+  gruppierung NUR in betrag/zahl/bereich (T-C5). Behebt einen §7-Faithfulness-Bug
+  des Legacy-Renderers (globales `gruppiereTausender` verunstaltete Zitat-Jahre:
+  «1937»→«1'937» in BS-154.810 Verfahrens-Spalten). Deterministischer Spalten-Typer
+  `typisiereSpalten` (Prosa/Position→text, Staffel→bereich, Betrag→betrag, Satz/%→zahl,
+  ziffernloses Einzelwort «gebührenfrei»→betrags-kompatibel); Werte (`zeilen`)
+  byte-gleich (nur Typ-Metadaten+`sha` neu). Offline-Re-Projektion über den
+  generator-eigenen Typer+`sha256Bloecke` (kein LexWork-Refetch → 0 Fremd-Drift).
+  `check:gegenpruefung` **bestanden** (unabhängiger Opus-Pass gegen LexWork-APIs
+  NW/BS/SO/VS, alle Stichproben byte-exakt, 0 Zeile verloren). Tore
+  golden/tsc/vitest/lint/check:tabellen/paritaet/normtext grün, e2e 12/12; Visual
+  Desktop+Mobil (0 Overflow @390). **Offen: Klasse B** (verklebte Zahlen ZH/ZG/TG),
+  **Klasse C** (SG-Füllpunkt-Rest) — eigene Folge-Schritte. Detail:
+  `FAHRPLAN-TARIF-TABELLEN-STUFE2.md`. Zusatz: e2e-Flake `gesetze.e2e.ts` (OR
+  fill-Timeout) gehärtet (Scroll-Spy/Suche-Kontrakt auf VGKE seitengrössen-
+  unabhängig, App-Ready-Wait; 6× CPU-Throttle-Probe 5/5). Nächste Etappe
+  **G3b Schritt 2** (Anhang-Block-Rendering ③/⑤ + Klasse B/C).
 - [ ] **6 · Konsultieren-Klingen** *(`[OF]`, amtlich)*:
   <!-- @meta id: W2·6 · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->
   - **Mehrsprachiger Normvergleich DE/FR/IT** (Auslegungswerkzeug, Art. 14 PublG — alle drei

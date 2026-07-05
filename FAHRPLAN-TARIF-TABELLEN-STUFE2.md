@@ -68,3 +68,71 @@ Daueranweisung David) → Regenerieren → Gate → UI-Sicht → Deploy nach Dav
 - = EIGENE distinkte Struktur (hierarchischer Ziffer-Tarif mit Ansatz-Spalte + Querverweis-Spalte), schwieriger als ZH-215.3 §4. Braucht eigene x-aware Mehrspalten-Extraktion (Spalten: Ziffer | Beschreibung | (Querverweis) | Ansatz/Fr.). Eigener Task/Spec.
 - NICHT von aktueller Stufe 2 abgedeckt (die fixte nur ZH-215.3 §4 + LexWork-·/—-Kantone). Prod zeigt es unverändert.
 - Vermutlich weitere ZH-Tarif-PDFs ähnlich betroffen (ZH-211.11 u.a.) → ZH-Tarif-Tabellen sind ein eigener, grösserer Strang.
+
+---
+
+## Ausführungsvermerk — Schritt 1 · Klasse A + D (5.7.2026, Opus, Worktree `feat/tarif-tabellen-stufe2-a`)
+
+**Erkenntnis (§7 — Realität gewinnt):** Die ·/—-Zellentrenner-**Extraktion** (Klasse A)
+war bereits gebaut (Commit `bb7bc26b`, `reichereMehrspaltig`). NW-265.51/BS-154.810/
+BS-291.400/SO-614.11/VS-173.8-de+fr trugen schon `mehrspaltig`, aber im **Legacy-
+`{kopf,zeilen}`**-Modell. Gerendert wurde das über `LegacyMehrspaltigeTabelle`
+(`ArtikelBody.tsx`) mit einer Inhalts-Heuristik (`istNumerischeZelle`) **und globalem
+`gruppiereTausender` auf ALLEN Zellen** — ein echter **§7-Faithfulness-Bug:**
+Zitat-Jahre in Prosa-Zellen wurden verunstaltet (BS-154.810 §19/§20: «1937»→«1'937»,
+«2007»→«2'007», «2010»→«2'010»).
+
+**Gebaut = der Kanton-Nachzug aufs kanonische `spalten`-Modell** (Zeile 11 dieses
+Fahrplans; ruleset-konform K1/T-A1/T-B3: Typisierung im Generator, nie im Renderer):
+
+- **Klasse A → kanonisch:** deterministischer Typer `typisiereSpalten(kopf,zeilen)`
+  in `scripts/normtext/mehrspaltige-tabelle.ts`, verdrahtet in `reichereMehrspaltig`
+  (emittiert `{spalten:[{typ,titel}],zeilen}` statt `{kopf,zeilen}`). Zell-Klassen:
+  Prosa/Position (hierarchische Tarif-Nr.) → `text`; Staffel-Spanne (bis/über/ab/
+  von…bis/de…à/jusqu’à) → `bereich`; CHF-Betrag (Fr./CHF/.–) → `betrag`; Satz
+  (%/‰/Promille/Prozent) → `zahl`; ein einzelnes **ziffernloses** Nicht-Atom-Wort
+  («gebührenfrei») bleibt betrags-kompatibel (kein Zahl-Risiko) und kippt eine
+  Amount-Spalte NICHT zu text.
+- **Klasse D → typisiert:** die Tausender-Gruppierung (`gruppiereTausender`, existierte
+  aus Bund-M10) greift in `KanonischeTabelle` nur noch in betrag/zahl/bereich (T-C5) —
+  Prosa-Spalten (Jahre/§-Nummern) bleiben unberührt. **Kein Renderer-Umbau** nötig
+  (der Bund-M10-Renderer war bereits kanonisch; `ArtikelBody.tsx` unverändert).
+
+**Regeneration ohne Drift:** committeter Generator-Tool `scripts/normtext/
+kanton-spalten-nachzug.ts` re-projiziert die 6 Snapshots **offline** über denselben
+`typisiereSpalten` + das geteilte `sha256Bloecke` (neu extrahiert nach
+`scripts/normtext/sha-bloecke.ts`, §5) und zieht die Golden-sha-Map nach — **kein
+LexWork-Refetch → 0 Fremd-Drift** (honoriert «je Erlass einzeln, nie Voll-Lauf»).
+
+**Tabellen-/Zeilen-Statistik (32 Blöcke / 30 Einträge / 6 Dateien):**
+- NW-265.51: 11 Tabellen (Klasse `text/betrag/bereich` + 5-Spalter a1-1 Gemeinde/
+  Kanton=betrag; Betrag-Catch-all=text wegen «gebührenfrei»/per-Seite-Prosa).
+- BS-154.810: 6 Tabellen (Streitwert=bereich, Verfahren/Gegenstand=**text** →
+  Jahr-Bugfix; gemischte Gebühr-Spalten mit Regel-Prosa «mind./aber/½ %»=text).
+- BS-291.400: 3 (Streitwert=bereich, Grundhonorar=bereich, «des Streitwerts»-Rest=text).
+- SO-614.11: 7 (Sätze %/Promille=zahl, 6-Spalten-Klassenmatrix §232=zahl,
+  Einkommen/Vermögen-Prosa=text).
+- VS-173.8-de/-fr: je 2 (Streitwert-/émolument-Spannen=bereich/text bilingual).
+- **Als Text belassen (konservativ, §1):** jede Spalte mit ≥1 Regel-/Beschreibungs-
+  Prosa-Zelle (Bezeichnung, «mind. aber Fr. …», «X % des Streitwerts»,
+  «von den ersten … Franken») — verlustfrei, nur nicht rechts/gruppiert.
+- **Werte (`zeilen`) byte-gleich zu HEAD** (sha1 je Datei bewiesen); Render-Delta =
+  genau **6 Zellen** (3 BS-Jahre, 3 SO-Tageseinkünfte) + typkorrekte Ausrichtung.
+
+**Gegenprüfung BESTANDEN** (unabhängiger Opus-Adversarial gegen LexWork-APIs
+NW/BS/SO/VS, 20260705): alle Stichproben byte-exakt, 0 Zeile verloren/erfunden,
+Typ-Calls faithful (BS §19/§20 Verfahren=text bestätigt), keine Staleness.
+**Amtlicher Quell-Quirk notiert:** VS-173.8 §32 trägt in DE vs. FR abweichende
+Honorar-Obergrenzen (24'000/24'900, 33'100/33'300) — das steht so in der amtlichen
+zweisprachigen Fassung; beide Sprachfassungen treu reproduziert (kein Extraktions-
+fehler). Register-Zeile: `bibliothek/register/gegenpruefung-register.md`.
+
+**Zusatz e2e-Flake-Härtung:** `gesetze.e2e.ts` (OR-fill-Timeout PR #145) — der
+Scroll-Spy-/In-Gesetz-Such-Kontrakt zog auf den kleinen Erlass **VGKE** um
+(seitengrössen-unabhängig, App-Ready-Waits), Assertions unverändert scharf;
+**6× CPU-Throttle-Probe 5/5 PASS**, e2e 12/12.
+
+**Offen (eigene Folge-Schritte):** **Klasse B** (verklebte Zahlen ZH-215.3/ZH-211.11/
+ZG-163.4/TG-176.31 — Spaltenrekonstruktion, eigener Spec), **Klasse C** (SG-Füllpunkt-
+Rest, warum nicht erfasst → nachziehen). Der Typer + das Nachzug-Tool sind für diese
+wiederverwendbar (Typisierung ist erlassunabhängig).
