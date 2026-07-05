@@ -136,3 +136,81 @@ Scroll-Spy-/In-Gesetz-Such-Kontrakt zog auf den kleinen Erlass **VGKE** um
 ZG-163.4/TG-176.31 — Spaltenrekonstruktion, eigener Spec), **Klasse C** (SG-Füllpunkt-
 Rest, warum nicht erfasst → nachziehen). Der Typer + das Nachzug-Tool sind für diese
 wiederverwendbar (Typisierung ist erlassunabhängig).
+
+---
+
+## Ausführungsvermerk — Schritt 2 · Klasse B (5.7.2026, Opus, Worktree `feat/tarif-tabellen-stufe2-b`)
+
+**Erkenntnis (§7 — Realität gewinnt, wie Schritt 1):** Die im Spec geplante
+«x-koordinatenbasierte Spaltenrekonstruktion VOR der Typisierung» war für die ZH-
+Erlasse **bereits gebaut und committet** (`adapter-zh-pdf.ts` `extrahiereZhStreitwert-
+Staffel`, Commits `e17793e8`/`7971fd81`/`559b1d9a`): die Streitwert-Staffeln lesen die
+§-Region x-bewusst (TABLE_MAX_H-Filter, threshold1/2 aus den Kopf-Stück-x) und teilen
+`100001250` deterministisch in `10 000`|`1 250`. **ZG-163.4/TG-176.31** kommen gar nicht
+aus einem PDF, sondern aus **LexWork-`·`/`—`-Zellen** (`adapter-lexwork.ts` →
+`reichereMehrspaltig`) und sind damit **schon vor-gespalten**. Es gab also KEIN neues
+Verkleben aufzulösen — die 4 Erlasse trugen `mehrspaltig`, aber noch im **Legacy-
+`{kopf,zeilen}`**-Modell (nie auf `spalten` nachgezogen, weil sie nicht in der
+Schritt-1-Klasse-A-Liste standen).
+
+**Gebaut = zwei Dinge:**
+1. **Generator-Emit kanonisch (ZH):** `adapter-zh-pdf.ts` wickelt die beiden Staffel-
+   Zuweisungen jetzt in `zuKanonisch()` (→ `typisiereSpalten`), analog zu
+   `reichereMehrspaltig` (Klasse A). So produziert ein **frischer Generatorlauf** dasselbe
+   kanonische `{spalten,zeilen}` wie der committete Snapshot (kein Legacy-Regress).
+   `extrahiereZhStreitwertStaffel` selbst unverändert (Rückgabe `{kopf,zeilen}`, Tests intakt).
+2. **Offline-Nachzug der 4 Snapshots:** `kanton-spalten-nachzug.ts -- ZH-215.3 ZH-211.11
+   ZG-163.4 TG-176.31` (kein LexWork-/zhlex-Refetch → **0 Fremd-Drift**). `zeilen`
+   **byte-gleich zu HEAD** bewiesen; nur Spalten-Typ + `sha` + Golden-Map (5 Keys) +
+   `daten-manifest.json`-Rollup neu.
+
+**Tabellen-/Zeilen-Statistik (5 Tabellen / 44 Datenzeilen / 4 Dateien):**
+- **ZH-215.3 §4** (AnwGebV): 12 Zeilen — `[text Streitwert, zahl Grundgebühr, text Zuschlag]`.
+  Grundgebühr rechtsbündig + Tausender-Apostroph (`1'250`…`106'400`). Streitwert=text,
+  weil die erste Zeile (`bis 5 000 25% des Streitwertes, mind. aber Fr. 100`) Prosa ist (§1).
+- **ZH-211.11 §3** (GebV OG): 4 Zeilen — `[bereich Streitwert, bereich Gebühr]` (beide
+  gruppiert; Gebühr-Spannen `65–250`…`615–1'240`).
+- **ZH-211.11 §4** (GebV OG): 8 Zeilen — `[text, text, text]`. **Bewusst konservativ:**
+  die erste Grundgebühr-Zelle `250` ist ein **bare Integer** und in Isolation nicht von
+  einer Positions-/Tarif-Nr. unterscheidbar (`TARIF_NR_RE`) → sobald eine Positions-Zelle
+  in der Spalte steht, bleibt die Spalte `text` (nie mis-gruppiert; §1 «im Zweifel als Text
+  belassen»). Verlustfrei — die Werte stehen unverändert im DOM, nur ohne Rechtsbündigkeit/
+  Apostroph. (Kein Jahr-/Position-Bug wie bei Klasse A, da diese 4 Tabellen keine Prosa-Jahre
+  in Amount-Spalten haben.)
+- **ZG-163.4 §3**: 12 Zeilen — `[text, text]` (die Honorar-Formel «1250 zzgl. 23 % …» ist Prosa).
+- **TG-176.31 §5**: 8 Zeilen — `[bereich Streitwert, text Grundhonorar]`.
+
+**Konkatenations-Invariante:** die x-getrennten Zellen ergeben aneinandergefügt die Roh-
+Textfolge der Quelle (Test: Ziffern von Streitwert-Obergrenze + Grundgebühr = `100001250`
+bzw. `5000250`). Als Unit-Test in `klasse-b-kanonisch.test.ts` fixiert (11 Fälle: kanonische
+Form + Rechteckigkeit + Typer-Regression-Lock + beide Verkleben-Befunde).
+
+**Gegenprüfung BESTANDEN** (unabhängiger Opus-Adversarial, frischer Kontext, 20260705):
+44 Zeilen zeichenweise gegen die amtliche Quelle — **ZH via `pdfplumber`** (bewusst ein
+anderes Werkzeug als das produktive pdfjs → echte Unabhängigkeit), **ZG/TG via `xhtml_tol`**.
+Alle Zellen deckungsgleich, beide Verkleben-Befunde korrekt getrennt, Konkatenation==Roh,
+0 Zeile verloren/erfunden, 0 Ziffernwert geändert, keine Staleness. Register-Zeile:
+`bibliothek/register/gegenpruefung-register.md`.
+
+**Tore:** golden `IDENTISCH` (Engine unberührt, TABU) · tsc/vitest/lint/`check:tabellen`
+(Kanton-Report: die 4 jetzt kanonisch)/`check:paritaet`(2966)/voller `npm run gate` grün ·
+`test:e2e` 158/158 (1 Worker, dist). **Visual-Review** ZH-215.3 §4 + ZH-211.11 §4
+Desktop 1200 + Mobil 390: Tabelle scrollt im `overflow-x-auto`-Container, **0 Page-Overflow
+@390**, Tausender-Apostroph korrekt (Grundgebühr `1'250`…`106'400` rechtsbündig).
+
+**Tabu respektiert:** `src/components/normtext/**` + `src/pages/gesetz-leser/**`
+(Anhang-Rendering-Einheit) und `scripts/normtext/extrahiere-fedlex*` + `public/normtext/bund/**`
+(Bund-Extraktor-Einheit) nicht angefasst; `ArtikelBody.tsx`/`KanonischeTabelle` unverändert
+(Renderer war schon kanonisch, #147).
+
+**Offen:** **Klasse C** (SG-Füllpunkt-Rest) + Anhang-Block-Rendering ③/⑤ = G3b Schritt 3.
+
+**Lehren für Klasse C:** (a) Der Typer + der Nachzug sind erneut wiederverwendbar — kein
+neuer Extraktions-Code, wenn die Rohextraktion schon rechteckig ist. (b) Die `bare-Integer`-
+Falle (`250`→Position→`text`) ist die einzige typer-seitige Unschärfe bei Klasse B; sie ist
+§1-sicher (nie falsch), aber wer für eine Amount-Spalte volle Rechtsbündigkeit will, müsste
+`inferiereSpaltentyp` semantisch erweitern (Position-in-Amount-Spalte → betrag) — bewusst
+NICHT gemacht (Blast-Radius auf die Klasse-A-Snapshots + Tarif-Nr.-Spalten; §1 > Kosmetik).
+(c) Für SG (Klasse C) zuerst prüfen, ob die Blöcke schon `mehrspaltig`/rechteckig sind
+(dann Nachzug) oder ob der Füllpunkt-Parser sie gar nicht erfasst (dann `extrahiereTarif-
+Tabelle`-Block-Grenzen debuggen — echter Extraktions-Schritt).
