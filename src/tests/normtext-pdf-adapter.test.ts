@@ -15,12 +15,14 @@ import {
   bandSchwellen,
   baueZeile,
   istAnhangZifferLinks,
+  istZifferKopfZeile,
   leseSzStand,
   leseTiStand,
   leseVdStand,
   leseJuStand,
   PDF_PROFILE,
 } from '../../scripts/normtext/adapter-pdf.ts';
+import { segmentiereAnhangZiffern } from '../../scripts/normtext/anhang-segmenter.ts';
 import {
   SZ_GEBO_TEXT,
   SZ_GEBO_RANDTEXT,
@@ -344,5 +346,87 @@ describe('baueZeile — explizite Wort-Trenner-Fragmente (SG-2935-Verkleb-Bug)',
     );
     expect(r.absatz).toBe('2');
     expect(r.text).toBe('Der Absatztext');
+  });
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Gegenprüfungs-Befund D1–D3 (SG-2935, 5.7.2026) — umgebrochene Querverweis-
+// Zeilen dürfen KEINE neue Anhang-Position öffnen (x-Geometrie-Orakel)
+// ─────────────────────────────────────────────────────────────────────────────
+
+describe('istZifferKopfZeile — Positions-Kopf nur in der Nr.-Spalte (reale SG-2935-Geometrie)', () => {
+  it('echter Kopf: Ziffer-Fragment am linken Body-Rand (25.10 @ x=119, bodyMinX=119)', () => {
+    expect(
+      istZifferKopfZeile(
+        [{ x: 119, s: '25.10' }, { x: 169, s: 'Anmerkung Verwaltungsbeschlüsse, Gerichts-' }],
+        119,
+      ),
+    ).toBe(true);
+  });
+  it('Querverweis-Wrap: Ziffer im Beschreibungs-Fluss (25.10 @ x=211, bodyMinX=162) → KEIN Kopf', () => {
+    expect(
+      istZifferKopfZeile(
+        [{ x: 211, s: '25.10 dieses Erlasses' }, { x: 292, s: '. . . . . . .' }, { x: 460, s: '50.–' }],
+        162,
+      ),
+    ).toBe(false);
+  });
+  it('Querverweis-Wrap 20.02 (@ x=211, bodyMinX=162) → KEIN Kopf', () => {
+    expect(
+      istZifferKopfZeile([{ x: 211, s: '20.02 dieses Erlasses bei Änderung der Beteili-' }], 162),
+    ).toBe(false);
+  });
+  it('führendes Leerraum-Fragment wird übersprungen (Kopf @ Rand bleibt Kopf)', () => {
+    expect(
+      istZifferKopfZeile(
+        [{ x: 118, s: ' ' }, { x: 119, s: '21.03' }, { x: 169, s: 'Neuausfertigung' }],
+        119,
+      ),
+    ).toBe(true);
+  });
+  it('gerettete Marginalien-Ziffer knapp links des Body-Rands (AR 8.1) zählt als Kopf', () => {
+    expect(istZifferKopfZeile([{ x: 44, s: '8.1 Eigentum:' }, { x: 66, s: 'Text' }], 66)).toBe(true);
+  });
+  it('Nicht-Ziffer-Zeile ist nie Kopf', () => {
+    expect(istZifferKopfZeile([{ x: 119, s: 'Anmerkung Reglement' }], 119)).toBe(false);
+  });
+});
+
+describe('segmentiereAnhangZiffern mit Geometrie-Orakel — D1–D3-Regression', () => {
+  // Reale SG-2935-Zeilenfolge (verdichtet): 24.02 mit umgebrochenem Querverweis
+  // «… Nrn. 25.07 bis ⏎ 25.10 dieses Erlasses … 50.–», danach die ECHTE 25.10.
+  // MIN_ZIFFERN=8 → 8 Füll-Positionen davor.
+  const fuellung = ['1.01 A', '1.02 B', '1.03 C', '1.04 D', '1.05 E', '1.06 F', '1.07 G', '1.08 H'];
+  const zeilen = [
+    ...fuellung,
+    '24.02 andere Anmerkungen oder Änderung einer',
+    'Anmerkung, ausgenommen Nrn. 25.07 bis',
+    '25.10 dieses Erlasses . . . 50.–',
+    '25.10 Anmerkung Verwaltungsbeschlüsse, Gerichts-',
+    'urteile und Verfügungen nach Art. 649a ZGB 100.–',
+  ];
+  const text = zeilen.join('\n');
+  // Orakel: alle Zeilen sind Köpfe AUSSER der Wrap-Zeile (Index fuellung.length+2).
+  const wrapIdx = fuellung.length + 2;
+  const orakel = (i: number): boolean => i !== wrapIdx;
+
+  it('D2/D3-Klasse: Wrap-Zeile fliesst als Fortsetzung — 24.02 behält Querverweis UND Betrag', () => {
+    const erg = segmentiereAnhangZiffern(text, orakel);
+    expect(erg['24.02'].bloecke[0].text).toBe(
+      'andere Anmerkungen oder Änderung einer Anmerkung, ausgenommen Nrn. 25.07 bis 25.10 dieses Erlasses . . . 50.–',
+    );
+  });
+  it('D1: die ECHTE 25.10 wird nicht von einem Phantom-Eintrag verdrängt (100.–, nicht 50.–)', () => {
+    const erg = segmentiereAnhangZiffern(text, orakel);
+    expect(erg['25.10'].bloecke[0].text).toBe(
+      'Anmerkung Verwaltungsbeschlüsse, Gerichts- urteile und Verfügungen nach Art. 649a ZGB 100.–',
+    );
+  });
+  it('OHNE Orakel (Alt-Verhalten dokumentiert): Wrap öffnet Phantom-25.10 und trunkiert 24.02', () => {
+    const erg = segmentiereAnhangZiffern(text);
+    expect(erg['24.02'].bloecke[0].text).toBe(
+      'andere Anmerkungen oder Änderung einer Anmerkung, ausgenommen Nrn. 25.07 bis',
+    );
+    expect(erg['25.10'].bloecke[0].text).toBe('dieses Erlasses . . . 50.–');
   });
 });

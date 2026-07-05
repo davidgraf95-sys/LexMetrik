@@ -281,12 +281,56 @@ export function istAnhangZifferLinks(x: number, bodyMinX: number, text: string):
   return m != null && Number(m[1]) <= 99;
 }
 
+/**
+ * GEOMETRISCH belegter Anhang-Positions-Kopf (§1: Trennung nur, wo die Geometrie
+ * sie beweist — Gegenprüfungs-Befund D1–D3, SG-2935).
+ *
+ * Ein echter Tarif-Positions-Kopf («21.03 Neuausfertigung …») trägt seine
+ * hierarchische Ziffer in der Nr.-SPALTE = am linken Body-Rand der Seite
+ * (SG: x=119 gerade / x=162 ungerade Seite ⇒ x ≤ bodyMinX+8; die
+ * AR-Marginalien-Rettung istAnhangZifferLinks liegt KNAPP LINKS davon und zählt
+ * ebenfalls). Eine UMGEBROCHENE Querverweis-Zeile («25.10 dieses Erlasses …»,
+ * «20.02 dieses Erlasses bei Änderung der Beteili-») beginnt dagegen im
+ * BESCHREIBUNGS-Fluss (SG: x=169/211 ≈ bodyMinX+50) — sie ist KEIN Kopf.
+ * Ohne diese Unterscheidung öffnete der Ziffer-Segmentierer dort fälschlich
+ * eine neue Position: 20.05/24.02 wurden trunkiert (Betrag verloren) und der
+ * Phantom-Eintrag «25.10 dieses Erlasses … 50.–» verdrängte per First-wins-Dedup
+ * die ECHTE Position 25.10 («Anmerkung Verwaltungsbeschlüsse … 100.–») —
+ * ein falscher Gebührenwert im Snapshot.
+ *
+ * Erwartet die x-sortierten Stücke einer Zeile; Leerraum-Fragmente (str=' ')
+ * werden übersprungen. Rein/deterministisch (§2), testbar ohne pdfjs.
+ */
+export function istZifferKopfZeile(
+  stuecke: Array<{ x: number; s: string }>,
+  bodyMinX: number,
+): boolean {
+  for (const st of stuecke) {
+    if (!st.s.trim()) continue; // Leerraum-Fragment (Wort-Trenner) überspringen
+    const m = st.s.trim().match(/^(\d+)(?:\.\d+)+(?:\s|$)/);
+    if (m == null || Number(m[1]) > 99) return false;
+    // Nr.-Spalte: am linken Body-Rand (x ≤ bodyMinX+8) ODER als gerettete
+    // Marginalien-Ziffer knapp links davon (AR bGS 153.2).
+    return st.x <= bodyMinX + 8 || istAnhangZifferLinks(st.x, bodyMinX, st.s);
+  }
+  return false;
+}
+
 /** Eine zusammengefügte Body-Textzeile. */
 export interface PdfTextZeile {
   /** Führende Absatznummer (hochgestellte Ziffer am Zeilenanfang) oder null. */
   absatz: string | null;
   /** Der bereinigte Zeilentext. */
   text: string;
+  /** GEOMETRISCH belegter Anhang-Positions-Kopf: die Zeile beginnt mit einer
+   *  hierarchischen Ziffer «N.NN[.…]» UND deren Fragment sitzt in der
+   *  Nr.-SPALTE (= linker Body-Rand der Seite), nicht im Beschreibungs-Fluss.
+   *  Unterscheidet echte Tarif-Positions-Köpfe von umgebrochenen
+   *  Querverweis-Zeilen («25.10 dieses Erlasses …» bei x=Beschreibungs-Spalte),
+   *  die sonst fälschlich eine neue Position öffnen (SG-2935: 20.05/24.02
+   *  trunkiert, 25.10 mit falschem Betrag). §1: Trennung nur, wo die Geometrie
+   *  sie beweist. */
+  zifferKopf?: boolean;
 }
 
 export interface PdfExtrakt {
@@ -521,7 +565,8 @@ export async function extrahierePdfZeilen(
       if (maxLineH < bodyHoehe - 0.4 && !istLoneAbsatz) continue;
       const { absatz, text } = baueZeile(stueckeDerZeile, bodyHoehe, marker, bodyMinX);
       if (text === '' && absatz === null) continue;
-      zeilen.push({ absatz, text });
+      const zifferKopf = istZifferKopfZeile(stueckeDerZeile, bodyMinX);
+      zeilen.push(zifferKopf ? { absatz, text, zifferKopf } : { absatz, text });
     }
   }
 
@@ -982,7 +1027,12 @@ export async function holePdf(
   // den Anhang sonst fallen. Konservativ: der Segmentierer liefert nur bei einem
   // echten Ziffer-Anhang (≥ Schwelle) Einträge, sonst leer (reine Artikel-Erlasse
   // bleiben unberührt). §7: Live-Link bleibt massgeblich.
-  const anhang = segmentiereAnhangZiffern(textbasis);
+  // Geometrie-Orakel: die serialisierten Textbasis-Zeilen entsprechen 1:1 den
+  // extrahierten PdfTextZeilen (serialisierePdfZeilen = join('\n')). Eine
+  // Ziffer-Zeile öffnet nur dann eine neue Anhang-Position, wenn ihre Ziffer
+  // in der Nr.-Spalte sitzt (zifferKopf, istZifferKopfZeile) — umgebrochene
+  // Querverweis-Zeilen fliessen als Fortsetzung (Gegenprüfungs-Befund D1–D3).
+  const anhang = segmentiereAnhangZiffern(textbasis, (i) => zeilen[i]?.zifferKopf === true);
   for (const [ziff, e] of Object.entries(anhang)) {
     if (!(ziff in artikel)) artikel[ziff] = e;
   }

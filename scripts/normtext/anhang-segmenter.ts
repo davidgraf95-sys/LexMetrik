@@ -26,12 +26,37 @@ export interface AnhangEintrag {
 const ZIFFER_KOPF = /^(\d+(?:\.\d+)+)\s*(.*)$/;
 const MIN_ZIFFERN = 8;
 
-/** Erlass-Text → { «1.1.1» → {bloecke}, … }. Leer, wenn kein Ziffer-Anhang. */
-export function segmentiereAnhangZiffern(text: string): Record<string, AnhangEintrag> {
+/**
+ * Erlass-Text → { «1.1.1» → {bloecke}, … }. Leer, wenn kein Ziffer-Anhang.
+ *
+ * `istKopfZeile` (optional): GEOMETRIE-Orakel je Zeilenindex (Gegenprüfungs-
+ * Befund D1–D3, SG-2935). Ohne Orakel öffnet JEDE Zeile, die mit einer
+ * mehrstufigen Ziffer beginnt, eine neue Position — auch eine UMGEBROCHENE
+ * Querverweis-Zeile («… ausgenommen Nrn. 25.07 bis ⏎ 25.10 dieses Erlasses …»),
+ * wodurch (a) die laufende Position trunkiert wird (Betrag verloren) und
+ * (b) ein Phantom-Eintrag per First-wins-Dedup die ECHTE spätere Position
+ * verdrängt (SG-2935: 25.10 zeigte 50.– statt amtlich 100.–). Mit Orakel
+ * (PDF-Pfad: `istZifferKopfZeile`, Ziffer sitzt in der Nr.-Spalte am linken
+ * Body-Rand) öffnet nur eine geometrisch belegte Kopf-Zeile; nicht belegte
+ * Ziffer-Zeilen fliessen als Fortsetzung in die laufende Position (§1: kein
+ * Zeichen verloren, keine Trennung ohne Geometrie-Beweis).
+ */
+export function segmentiereAnhangZiffern(
+  text: string,
+  istKopfZeile?: (zeilenIndex: number) => boolean,
+): Record<string, AnhangEintrag> {
   const zeilen = text.split('\n');
-  // Anhang-Start: erste Zeile mit mehrstufiger Ziffer am Anfang. Davor (Artikel-
-  // Body, Präambel) wird ignoriert — die werden vom §/Art.-Extraktor erfasst.
-  const start = zeilen.findIndex((z) => ZIFFER_KOPF.test(z.trim()));
+  const istKopf = (i: number): boolean =>
+    ZIFFER_KOPF.test(zeilen[i].trim()) && (istKopfZeile ? istKopfZeile(i) : true);
+  // Anhang-Start: erste Kopf-Zeile mit mehrstufiger Ziffer am Anfang. Davor
+  // (Artikel-Body, Präambel) wird ignoriert — die erfasst der §/Art.-Extraktor.
+  let start = -1;
+  for (let i = 0; i < zeilen.length; i++) {
+    if (istKopf(i)) {
+      start = i;
+      break;
+    }
+  }
   if (start < 0) return {};
 
   const eintraege: Record<string, AnhangEintrag> = {};
@@ -53,7 +78,7 @@ export function segmentiereAnhangZiffern(text: string): Record<string, AnhangEin
 
   for (let i = start; i < zeilen.length; i++) {
     const zeile = zeilen[i].trim();
-    const m = zeile.match(ZIFFER_KOPF);
+    const m = istKopf(i) ? zeile.match(ZIFFER_KOPF) : null;
     if (m) {
       speichere();
       aktivToken = m[1];
