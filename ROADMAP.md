@@ -599,9 +599,7 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   `check:gegenpruefung` **bestanden** (unabhängiger Opus-Pass gegen LexWork-APIs
   NW/BS/SO/VS, alle Stichproben byte-exakt, 0 Zeile verloren). Tore
   golden/tsc/vitest/lint/check:tabellen/paritaet/normtext grün, e2e 12/12; Visual
-  Desktop+Mobil (0 Overflow @390). **Offen: Klasse B** (verklebte Zahlen ZH/ZG/TG),
-  **Klasse C** (SG-Füllpunkt-Rest) — eigene Folge-Schritte. Detail:
-  `FAHRPLAN-TARIF-TABELLEN-STUFE2.md`. Zusatz: e2e-Flake `gesetze.e2e.ts` (OR
+  Desktop+Mobil (0 Overflow @390). Zusatz: e2e-Flake `gesetze.e2e.ts` (OR
   fill-Timeout) gehärtet (Scroll-Spy/Suche-Kontrakt auf VGKE seitengrössen-
   unabhängig, App-Ready-Wait; 6× CPU-Throttle-Probe 5/5). **G3b Schritt 2 ·
   Anhang-Block-Rendering ③/⑤ (reine Darstellung, 5.7.2026) gebaut:** Anhänge
@@ -618,8 +616,23 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   Risiko-Datei). Wortlaut-Byte-Beweis GSchV/ChemRRV/LugÜ/ZGB byte-identisch gegen
   `origin/main`; voller `gate` grün; e2e 1 Worker grün + neuer Spec
   `gesetze-ux-g3b-anhang` (5); Visual Desktop 1440 + Mobil 390 (0 Overflow @390).
-  **Offen: G3b Tarif-Anhang→echte-Tabelle Klasse B/C** (Extraktion,
-  `FAHRPLAN-TARIF-TABELLEN-STUFE2.md`). Trailer `Roadmap: W2·5d`.
+  Trailer `Roadmap: W2·5d`.
+  **G3b Schritt 2 (Tarif-Strang) · Klasse B (verklebte Zahlen, 5.7.2026,
+  parallel zur Anhang-Einheit) fertig:** die x-koordinaten-rekonstruierten
+  Streitwert-Staffeln ZH-215.3 §4, ZH-211.11 §3+§4 (zhlex-PDF) sowie ZG-163.4 §3,
+  TG-176.31 §5 (LexWork-·/—) aufs kanonische `spalten`-Modell nachgezogen (5
+  Tabellen / 44 Zeilen; `zeilen` byte-gleich). **Befund (§7, wie Schritt 1):** die
+  x-Spaltenrekonstruktion war für ZH bereits committet (Commits e17793e8/559b1d9a),
+  ZG/TG kommen vor-gespalten aus den LexWork-Zellen — kein NEUer Extraktions-Code
+  nötig; der ZH-Adapter emittiert die Staffel jetzt kanonisch (kein Legacy-Regress).
+  Verkleben-Befunde `100001250`=`10 000`|`1'250` und `5000250`=`5 000`|`250`
+  x-getrennt verifiziert. `check:gegenpruefung` **bestanden** (unabhängiger Opus,
+  44 Zeilen gegen zhlex-PDF via pdfplumber + LexWork-xhtml; Konkatenation==Roh,
+  0 verloren/erfunden/geändert). Tore golden/tsc/vitest/lint/check:tabellen/
+  paritaet grün, e2e 158; Visual ZH-215.3 §4 + ZH-211.11 §4 Desktop+Mobil (Tabelle
+  scrollt im Container, 0 Page-Overflow @390, Tausender-Apostroph korrekt).
+  **Offen (G3b-Rest): nur noch Klasse C** (SG-Füllpunkt-Rest, Extraktion). Detail:
+  `FAHRPLAN-TARIF-TABELLEN-STUFE2.md`.
 - [ ] **6 · Konsultieren-Klingen** *(`[OF]`, amtlich)*:
   <!-- @meta id: W2·6 · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->
   - **Mehrsprachiger Normvergleich DE/FR/IT** (Auslegungswerkzeug, Art. 14 PublG — alle drei

@@ -159,9 +159,15 @@
           "absatz": "1",
           "text": "Für die Führung eines Zivilprozesses im ordentlichen und vereinfachten Verfahren vor erster oder einziger Instanz beträgt das Grundhonorar bei einem Streitwert von",
           "mehrspaltig": {
-            "kopf": [
-              "Streitwert",
-              "Grundhonorar"
+            "spalten": [
+              {
+                "typ": "bereich",
+                "titel": "Streitwert"
+              },
+              {
+                "typ": "text",
+                "titel": "Grundhonorar"
+              }
             ],
             "zeilen": [
               [
@@ -216,7 +222,7 @@
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/176.31",
       "abgerufen": "2026-06-22",
       "fassungsToken": "347f5cccf1c4ef09aa51b9de116a5574",
-      "sha": "c43b3104f117073e2000c4a1680cc87f04498fbe0469f3fc8837c4a8d06caae1"
+      "sha": "3d268bb93b86af9bc6ea49d20ccc6401e62c853ea98501553e7861be5346191b"
     },
     {
       "id": "kanton/TG/176.31/art_6",

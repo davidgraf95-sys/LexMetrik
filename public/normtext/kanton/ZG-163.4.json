@@ -65,9 +65,15 @@
           "absatz": "1",
           "text": "Für die Führung eines Zivilprozesses im ordentlichen oder vereinfachten Verfahren vor erster oder einziger Instanz richtet sich das Grundhonorar der Rechtsanwälte und Rechtsanwältinnen nach folgendem Tarif:",
           "mehrspaltig": {
-            "kopf": [
-              "Streitwert (in Franken)",
-              "Honorar (in Franken)"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Streitwert (in Franken)"
+              },
+              {
+                "typ": "text",
+                "titel": "Honorar (in Franken)"
+              }
             ],
             "zeilen": [
               [
@@ -142,7 +148,7 @@
       "quelleUrl": "https://bgs.zg.ch/app/de/texts_of_law/163.4",
       "abgerufen": "2026-06-22",
       "fassungsToken": "4e025783f8615446db76c3b3feed0b57",
-      "sha": "d337672c9c8bffc352cca1a3c8a67e4abf77a777b5f3d74daeea83b751b546d5"
+      "sha": "c248c8a915766c3618d75e22442c977dac8a551e18729517ff2f455fc89a391b"
     },
     {
       "id": "kanton/ZG/163.4/art_4",

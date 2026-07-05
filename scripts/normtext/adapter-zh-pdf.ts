@@ -46,9 +46,23 @@
  */
 
 import { createHash } from 'node:crypto';
+import { typisiereSpalten, type Spalte } from './mehrspaltige-tabelle.ts';
 // (segmentiereAnhangZiffern wird für ZH NICHT mehr genutzt — der Anhang wird
 //  spaltenbewusst über extrahiereZhAnhangSpalten gelesen; generischer
 //  Segmentierer bleibt für SG/LU im adapter-pdf.)
+
+// Kanton-Nachzug aufs kanonische `spalten`-Modell (G3b Schritt 2, Klasse B,
+// 5.7.2026): die x-koordinaten-rekonstruierten Streitwert-Staffeln (ZH-215.3 §4,
+// ZH-211.11 §3+§4) werden — wie die ·/—-Klasse-A-Tabellen in reichereMehrspaltig —
+// beim Emittieren typisiert (T-B1/T-B4). Werte (zeilen) bleiben BYTE-GLEICH; nur
+// die Spalten-Typ-Metadaten kommen hinzu. So produziert ein frischer Generatorlauf
+// dasselbe kanonische Modell wie der committete Snapshot (kein Legacy-Regress).
+function zuKanonisch(t: { kopf: string[]; zeilen: string[][] }): {
+  spalten: Spalte[];
+  zeilen: string[][];
+} {
+  return { spalten: typisiereSpalten(t.kopf, t.zeilen), zeilen: t.zeilen };
+}
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Typen
@@ -58,8 +72,10 @@ export interface ZhBlock {
   absatz: string | null;
   text: string;
   items?: Array<{ marke: string; text: string }>;
-  /** Stufe 2: Mehrspalten-Tabelle (Streitwert/Grundgebühr/Zuschlag u.ä.). */
-  mehrspaltig?: { kopf?: string[]; zeilen: string[][] };
+  /** Stufe 2: Mehrspalten-Tabelle (Streitwert/Grundgebühr/Zuschlag u.ä.).
+   *  Kanton-Nachzug (G3b Schritt 2): kanonisches `spalten`-Modell (typisiert);
+   *  `kopf` bleibt für Abwärtskompat, ist aber im ZH-Pfad ersetzt (zuKanonisch). */
+  mehrspaltig?: { spalten?: Spalte[]; kopf?: string[]; zeilen: string[][] };
 }
 
 export interface ZhArtikel {
@@ -1359,7 +1375,7 @@ export async function holeZhPdf(
     const staffel3 = extrahiereZhStreitwertStaffel(par3Stuecke);
     if (staffel3 !== null) {
       const block0 = artikel['3'].bloecke[0];
-      artikel['3'].bloecke[0] = { ...block0, text: '', mehrspaltig: staffel3 };
+      artikel['3'].bloecke[0] = { ...block0, text: '', mehrspaltig: zuKanonisch(staffel3) };
     }
   }
 
@@ -1369,7 +1385,7 @@ export async function holeZhPdf(
     const staffel = extrahiereZhStreitwertStaffel(par4Stuecke);
     if (staffel !== null) {
       const block0 = artikel['4'].bloecke[0];
-      artikel['4'].bloecke[0] = { ...block0, text: '', mehrspaltig: staffel };
+      artikel['4'].bloecke[0] = { ...block0, text: '', mehrspaltig: zuKanonisch(staffel) };
     }
   }
 
