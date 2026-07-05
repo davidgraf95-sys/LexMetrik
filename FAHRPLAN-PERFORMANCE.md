@@ -35,6 +35,25 @@ und den Doppel-React-Schutz (react-dom darf nur im vendor-Chunk liegen). Negativ
 Offen am Tor: die **Lighthouse-Metrik-Schranken** (CLS/LCP/TBT unter 4× CPU) — bleiben vorerst
 manueller Mess-Schritt im Deploy-Ritual (CI-Chrome noch nicht verdrahtet).
 
+**5.7.2026 — Lighthouse-Metrik-Schranken verdrahtet** (Branch `feat/qs-perf-a-b`, Gate grün +
+163 e2e grün): neues `check:perf-lighthouse` (`scripts/perf/lighthouse-budget.ts`) misst
+CLS/LCP/TBT/TTI/Score auf `/gesetze/bund/OR` + Startseite im **Lighthouse-Mobil-Preset
+(4× CPU + langsames 4G)** — startet `vite preview` selbst, nutzt Playwright-Chromium (in CI
+ohnehin installiert; `CHROME_PATH`-Override). **Verdrahtung:** als **letzte CI-Stufe** in
+`.github/workflows/ci.yml` nach Build + allen Treue-Toren (golden/smoke/struktur-konsistenz/e2e)
+→ die §15-Gegenkopplung ist über die Schritt-Reihenfolge erzwungen (Treue rot ⇒ Job bricht vor der
+Messung). Bewusst **nicht** im schnellen `gate` (der nicht baut). **Median aus 3 Läufen** je Seite
+(CI; lokal 1, `PERF_RUNS`-Override) — der Lighthouse-Standard gegen Ausreisser-Flake auf dem geteilten
+Runner. **Schwellen an der CI-Baseline kalibriert** (dort läuft das Tor): der erste CI-Lauf zeigte
+OR CLS ~0,098 / TBT ~2,3 s / Score ~38 (lokal war OR CLS 0,005 / TBT 0,5 s / Score 56 — der langsame
+2-Kern-Runner legt unter 4×-CPU echten Spät-Shift + Blocking-Time offen). Schwellen = beobachtetes CI-Ist +
+Kopffreiheit: **CLS OR ≤ 0,15** (fängt die alte 0,64 mit Marge; FAHRPLAN-Eintritt war 0,25 → Ziel 0,10 →
+0,15 = erster ehrlicher Staffel-Schritt), **Start CLS ≤ 0,10** (dort stabil 0,000); LCP/TBT/TTI/Score
+grosszügige Deckel (OR LCP ≤ 12 s / TBT ≤ 4 s / TTI ≤ 14 s / Score ≥ 25; Start LCP ≤ 11 s / TBT ≤ 1,5 s /
+Score ≥ 40). CI-Impact ~2 Min. **Verschärfung** der Deckel = dokumentierter Folgeschritt nach breiterer
+CI-Baseline. Logikverlust: KEINER (reines Mess-Tooling, kein Produkt-Code/Output). Damit ist **QS-PERF a+b
+komplett** (b lag schon in `main`, hier nur verifiziert + durch das Tor abgesichert).
+
 **1.7.2026 — Quick-Win-Batch 2 gebaut** (Branch `feat/perf-batch2-render-cls-fonts`,
 Gate grün: 2870 Tests + golden 201 byte-gleich + `check:struktur-konsistenz` + `check:perf-budget`,
 plus 49 Reader/Startseiten/Rechtsprechungs-e2e grün; §9-Bug-Check + gemessen):
