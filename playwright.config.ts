@@ -4,6 +4,11 @@
 // Specs heissen *.e2e.ts, damit Vitest sie nicht aufsammelt.
 import { defineConfig } from '@playwright/test'
 
+// Port env-konfigurierbar (Default 4317, CI unverändert): erlaubt parallelen
+// Worktree-Sessions (§12) je einen eigenen preview-Port ohne Kollision, ohne den
+// Standard zu ändern.
+const E2E_PORT = process.env.E2E_PORT ?? '4317'
+
 export default defineConfig({
   testDir: './e2e',
   testMatch: '**/*.e2e.ts',
@@ -24,12 +29,12 @@ export default defineConfig({
   // verlangsamt grüne Tests nicht) — Assertions inhaltlich unverändert (§6.3).
   expect: { timeout: 10_000 },
   use: {
-    baseURL: 'http://localhost:4317',
+    baseURL: `http://localhost:${E2E_PORT}`,
     trace: 'retain-on-failure',
   },
   webServer: {
-    command: 'npm run preview -- --port 4317 --strictPort',
-    url: 'http://localhost:4317',
+    command: `npm run preview -- --port ${E2E_PORT} --strictPort`,
+    url: `http://localhost:${E2E_PORT}`,
     reuseExistingServer: !process.env.CI,
     timeout: 30_000,
   },
