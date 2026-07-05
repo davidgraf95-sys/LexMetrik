@@ -6,18 +6,47 @@ import { test, expect, type Page } from '@playwright/test';
 // kleiner, ABER geschachtelter Erlass (Guide + 2-Spalten-Lesemodus) — CI-fest.
 async function warteReader(page: Page, url: string): Promise<void> {
   await page.goto(url);
-  await expect(page.locator('[aria-label="Darstellungsoptionen"]').first()).toBeVisible({ timeout: 20000 });
+  await expect(page.getByRole('button', { name: 'Ansicht' }).first()).toBeVisible({ timeout: 20000 });
   await expect(page.locator('#art-1').first()).toBeVisible({ timeout: 20000 });
 }
 
-test('Kopf-Zusammenführung: EIN <header> trägt Overline + Titel + Options-Leiste', async ({ page }) => {
+test('Kopf-Zusammenführung: EIN <header> trägt Overline + Titel + «Ansicht»-Dropdown', async ({ page }) => {
   await warteReader(page, '/gesetze/bund/BV');
   // Genau EIN Leser-Kopf (kein duplizierter Block): der <header> mit der Overline.
   const header = page.locator('.lc-leser > header');
   await expect(header).toHaveCount(1);
   await expect(header.getByText('Bundesverfassung', { exact: false }).first()).toBeTruthy();
-  // Die Options-Leiste sitzt IM Kopf (Kopf trägt sie für alle Grundarten gleich).
+  // Das «Ansicht»-Dropdown (U-KOPF/A4) sitzt IM Kopf; geöffnet zeigt es die
+  // Darstellungsoptionen-Gruppe mit den drei Switches.
+  const ansicht = header.getByRole('button', { name: 'Ansicht' });
+  await expect(ansicht).toBeVisible();
+  await expect(ansicht).toHaveAttribute('aria-expanded', 'false');
+  await ansicht.click();
+  await expect(ansicht).toHaveAttribute('aria-expanded', 'true');
   await expect(header.locator('[aria-label="Darstellungsoptionen"]')).toBeVisible();
+});
+
+// U-KOPF/A4 a11y: das «Ansicht»-Dropdown ist eine ehrliche Disclosure (kein
+// role=menu) mit Fokus-Falle, Escape-Schliessen und Fokus-Rückgabe an den
+// Auslöser (useDialogFokus). Der Trigger trägt aria-expanded + aria-controls.
+test('A4 «Ansicht»-Dropdown: Öffnen fokussiert den Inhalt, Escape schliesst + gibt Fokus zurück', async ({ page }) => {
+  await warteReader(page, '/gesetze/bund/BV');
+  const trigger = page.getByRole('button', { name: 'Ansicht' }).first();
+  await expect(trigger).toHaveAttribute('aria-controls', /.+/);
+  await trigger.click();
+  const gruppe = page.locator('[aria-label="Darstellungsoptionen"]').first();
+  await expect(gruppe).toBeVisible();
+  // Fokus ist beim Öffnen in das Panel gewandert (erstes fokussierbares Element).
+  const fokusImPanel = await page.evaluate(() => {
+    const g = document.querySelector('[aria-label="Darstellungsoptionen"]');
+    return g != null && g.contains(document.activeElement);
+  });
+  expect(fokusImPanel).toBe(true);
+  // Escape schliesst und gibt den Fokus an den Auslöser zurück.
+  await page.keyboard.press('Escape');
+  await expect(gruppe).toBeHidden();
+  await expect(trigger).toHaveAttribute('aria-expanded', 'false');
+  expect(await trigger.evaluate((el) => el === document.activeElement)).toBe(true);
 });
 
 test('Sticky Section-Kontextkopf: zeigt Standort + «Zitat kopieren» (Desktop 2-Spalten)', async ({ page }) => {

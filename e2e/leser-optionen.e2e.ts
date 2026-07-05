@@ -27,12 +27,20 @@ import { test, expect, type Page } from '@playwright/test';
 
 async function warteReader(page: Page, url: string, artId: string): Promise<void> {
   await page.goto(url);
-  // App-Ready: die Leiste rendert nur der Client (nicht im Crawler-HTML) —
-  // erst danach hängen die React-Handler an den Switches.
-  await expect(page.locator('[aria-label="Darstellungsoptionen"]').first()).toBeVisible({ timeout: 20000 });
+  // App-Ready: der «Ansicht»-Trigger (U-KOPF/A4) rendert nur der Client (nicht im
+  // Crawler-HTML) — erst danach hängen die React-Handler.
+  await expect(page.getByRole('button', { name: 'Ansicht' }).first()).toBeVisible({ timeout: 20000 });
   await expect(page.locator(`#${artId}`)).toBeVisible({ timeout: 20000 });
   await page.evaluate(() => document.fonts?.ready);
   await page.waitForTimeout(200);
+}
+
+// W2·5d U-KOPF/A4: die Switches liegen jetzt im «Ansicht»-Dropdown — vor jedem
+// Switch-Zugriff öffnen. Das Panel (role=group) ist absolut positioniert (kein
+// Layout-Shift der Seite) und trägt aria-label="Darstellungsoptionen".
+async function ansichtOeffnen(page: Page): Promise<void> {
+  await page.getByRole('button', { name: 'Ansicht' }).first().click();
+  await expect(page.locator('[aria-label="Darstellungsoptionen"]').first()).toBeVisible();
 }
 
 /** Farbe/Breite/Padding der ersten gerenderten Guide-Kante über einem Artikel. */
@@ -54,6 +62,7 @@ async function guide(page: Page, artId: string) {
 
 test('Options-Leiste: drei role=switch; Fussnoten/Verweise an, Linien-Default aufbau-basiert (auto, U-LINIEN/A8)', async ({ page }) => {
   await warteReader(page, '/gesetze/bund/BGBM', 'art-1');
+  await ansichtOeffnen(page);
   const gruppe = page.locator('[aria-label="Darstellungsoptionen"]').first();
   await expect(gruppe).toBeVisible();
   await expect(gruppe.getByRole('switch')).toHaveCount(3); // BGBM geschachtelt → Linien sichtbar
@@ -85,6 +94,8 @@ test('Linien-Toggle: explizit AN sichtbar → AUS transparent (Guide bleibt im D
   expect(parseFloat(autoAus!.width)).toBeGreaterThan(0);
   expect(autoAus!.color).toBe('rgba(0, 0, 0, 0)'); // auto + tiefe Kodifikation → transparent (ruhig)
 
+  // A4: Switches liegen im «Ansicht»-Dropdown — öffnen (bleibt über beide Klicks offen).
+  await ansichtOeffnen(page);
   // POSITIV: «Linien» explizit AN → Kante sichtbar (nicht transparent).
   await page.getByRole('switch', { name: 'Linien' }).click();
   await expect(page.locator('html')).toHaveAttribute('data-linien', 'an');
@@ -121,9 +132,12 @@ test('Fussnoten-Toggle: AN sichtbar → AUS VERSCHWINDEN (A1, David 5.7.2026), T
   // Fussnotentext bleibt im DOM (`#fn-…`) und «Fussnoten AN» stellt alles wieder her.
   const marker = page.locator('.lc-leser button[aria-label^="Fussnote"]').first();
   await expect(marker).toBeVisible({ timeout: 15000 });
-  await marker.scrollIntoViewIfNeeded();
   const nrText = (await marker.textContent())?.trim() ?? '';
   expect(nrText.length).toBeGreaterThan(0);
+
+  // A4: Switches liegen im «Ansicht»-Dropdown — öffnen (absolut positioniert,
+  // kein Layout-Shift der Seite), dann den CLS-Beobachter installieren.
+  await ansichtOeffnen(page);
 
   // CLS-Beobachter INSTALLIEREN (NUR künftige Shifts, kein `buffered` — die
   // Lade-Shifts sind nicht Gegenstand des Toggle-Beweises), dann togglen: ein
@@ -170,7 +184,9 @@ test('Verweise-Toggle: AUS unterdrückt die (dotted) Link-Unterstreichung, der L
   await link.hover();
   expect(await link.evaluate((el) => getComputedStyle(el).textDecorationLine)).toContain('underline');
 
-  // NEGATIV: «Verweise» AUS → keine Unterstreichung, aber Link (href/Klick) bleibt.
+  // NEGATIV: «Verweise» AUS (im «Ansicht»-Dropdown) → keine Unterstreichung, aber
+  // Link (href/Klick) bleibt.
+  await ansichtOeffnen(page);
   await page.getByRole('switch', { name: 'Verweise' }).click();
   await expect(page.locator('html')).toHaveAttribute('data-verweise', 'aus');
   await link.hover();

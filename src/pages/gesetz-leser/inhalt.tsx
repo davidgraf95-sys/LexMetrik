@@ -20,7 +20,7 @@ import type { BrowseErlass, BrowseManifest } from '../../lib/normtext/browse-typ
 import type { NormSnapshot } from '../../lib/normtext/typen';
 import { formatiereDatum, passtAufSuche, pfadZu, romanFrei, baueZitat, kopfOverline, grundartMeta } from './helpers';
 import { ArtikelLeser, SektionKopf, SektionBaumTOC, ErlassKopfBlock, ErlassLeserKopf, SektionKontextKopf } from './parts';
-import { LeserOptionenLeiste } from './LeserOptionenLeiste';
+import { LeserAnsichtMenu } from './LeserAnsichtMenu';
 import { beiLeerlauf } from '../../lib/leerlauf';
 import { ladeLeitfallShard, normArtikelToken, type LeitfallShard } from '../../lib/rechtsprechung/norm-index';
 import { ladeRevisionShard, revisionFuerToken, type RevisionShard } from '../../lib/verzahnung/artikel-revisionen';
@@ -1021,10 +1021,11 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
                 navigate(ziel);
               }}
               className="lc-chip hover:text-brass-700" title="Diesen Erlass zusätzlich in einem neuen Reiter öffnen">⧉ In neuem Reiter</button>
-            {/* W2·5d G2a/G2b: Options-Leiste (Linien/Fussnoten/Verweise) — reine
-                data-*-/CSS-Toggles (leserOptionen.ts), global, jede Instanz synchron.
+            {/* W2·5d U-KOPF/A4: «Ansicht»-Dropdown (Linien/Fussnoten/Verweise) —
+                reine data-*-/CSS-Toggles (leserOptionen.ts), global, jede Instanz
+                synchron. Ersetzt die frühere G2a-Chip-Leiste (David 5.7.2026).
                 Linien-Schalter nur bei geschachteltem Gesetz (sonst wirkungslos). */}
-            <LeserOptionenLeiste zeigeLinien={linien.guideEbene !== null} linienAutoAn={linien.autoGuide} />
+            <LeserAnsichtMenu zeigeLinien={linien.guideEbene !== null} linienAutoAn={linien.autoGuide} />
           </>
         } />
 

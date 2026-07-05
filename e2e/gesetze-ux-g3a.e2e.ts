@@ -12,7 +12,7 @@ async function warteKopf(page: Page, url: string): Promise<void> {
 }
 async function warteReader(page: Page, url: string): Promise<void> {
   await page.goto(url);
-  await expect(page.locator('[aria-label="Darstellungsoptionen"]').first()).toBeVisible({ timeout: 20000 });
+  await expect(page.getByRole('button', { name: 'Ansicht' }).first()).toBeVisible({ timeout: 20000 });
 }
 
 /** Border-Left-Farbe der ersten Guide-Kante über einem Artikel (oder null). */
