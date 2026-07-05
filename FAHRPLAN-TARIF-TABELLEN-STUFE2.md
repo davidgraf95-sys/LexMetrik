@@ -214,3 +214,89 @@ NICHT gemacht (Blast-Radius auf die Klasse-A-Snapshots + Tarif-Nr.-Spalten; §1 
 (c) Für SG (Klasse C) zuerst prüfen, ob die Blöcke schon `mehrspaltig`/rechteckig sind
 (dann Nachzug) oder ob der Füllpunkt-Parser sie gar nicht erfasst (dann `extrahiereTarif-
 Tabelle`-Block-Grenzen debuggen — echter Extraktions-Schritt).
+
+---
+
+## Ausführungsvermerk — Schritt 3 · Klasse C (SG-Füllpunkt-Rest) — G3b KOMPLETT (5.7.2026, Opus, Worktree `feat/tarif-tabellen-stufe2-c`)
+
+**Diagnose ZUERST (§7, empirisch am committeten Snapshot + real-Parser):** Die 159
+nicht erfassten SG-Blöcke (SG-3849 135 · SG-2935 20 · SG-2808 4) sind **kein**
+Block-Grenzen- oder Payload-Problem — es war der **DEFECT-1-Guard** aus dem 22.6.-Parser:
+`extrahiereTarifTabelle` liess einen ganzen Block als Plaintext (`return null`), sobald das
+LETZTE Leader-Segment nach dem Betrag noch Text trug. Rejection-Breakdown der 159 (real-
+Parser instrumentiert): **156× DEFECT-1** (140 «letztes Segment = Betrag + angeklebter Rest»,
+16 «letztes Segment ohne Betrag») + **3× INCOMPLETE_SPLIT**. Der angeklebte Rest ist der von
+der PDF-Extraktion an das Blockende geklebte **Folge-Inhalt**: nächste Tarif-Position, eine
+Überschrift («3. Behörden der Zivilgerichtsbarkeit»), ein ganzer Folge-Artikel («Art. 25
+Übergangsbestimmung …», SG-2935 art_5.05) oder eine Seitenzahl. DEFECT-1 schützte diesen Rest
+vor stillem Verlust — droppte aber auch die vielen SAUBEREN Leader-Zeilen davor.
+
+**Fix (§1-konservativ, belegte Ursache):** DEFECT-1 durch **`nachtext`** ersetzt. Die sauberen
+Leader-Zeilen werden tableisiert; der trailing Rest wird VERLUSTFREI als `nachtext` bewahrt und
+im Renderer (unverändert!) als eigener Text-Block hinter der Tabelle gezeigt. Zentraler §1-Beweis
+= **Konkatenations-Invariante**: leader-freier Originaltext == (alle Zeilen-Beschreibung+Betrag)
++ nachtext, zeichenweise (als Unit-Test fixiert). Mehrdeutige Fälle bleiben §1-konservativ Text:
+**mittleres** Segment ohne Betrag → `null`; `INCOMPLETE_SPLIT`/`RESIDUAL_LEADER` (eingebetteter
+No-Leader-Betrag in einer Zeilen-Beschreibung) → `null`; Betrag ohne Dash → `null`. Neu-`items`-
+Guard in `reichereTabellen`: ein Block mit lit./Ziff.-`items` wird NIE tableisiert (der Renderer
+verbärge die items sonst) — aktuell 0 Fälle, latenter §1-Schutz.
+
+**Blast-Radius bewiesen SG-only:** der Füllpunkt-Parser ist über `reichereTabellen` von ALLEN
+PDF-Kantonen geteilt, aber ein Dry-Run des erweiterten Parsers über alle 26 Kanton-Snapshots
+tableisiert **0** Blöcke ausserhalb SG (AR/BL/BS/FR/LU/OW/TG/VD-Leaderblöcke fallen weiter durch
+No-Dash-/mittleres-No-Betrag-Guards). Insbesondere die **AUSSCHLUSS**-Erlasse BL-211.71/FR-635.1.1/
+FR-214.5.16 (Änderungsplatzhalter «wird wie folgt geändert: …») bleiben unberührt.
+
+**Regeneration ohne Drift:** committetes Tool `scripts/normtext/kanton-fuellpunkt-nachzug.ts`
+re-projiziert NUR SG-3849/SG-2935/SG-2808 **offline** über die EXAKTE produktive `reichereTabellen`
+(reexportiert, kein Re-Implement) + geteiltes `sha256Bloecke` — **kein PDF-Refetch → 0 Fremd-Drift**.
+Das ist deterministisch identisch zu einem frischen Generatorlauf (die 159 Blöcke gingen im
+Alt-Parser als `null` zurück → ihr `text` blieb roh = die Extraktionsausgabe vor Tableisierung).
+
+**Statistik (erfasst / als-Text-belassen):**
+- **127 Einträge → +127 Tarif-Tabellen + 127 Nachtext-Blöcke** (SG-3849 110 · SG-2935 15 · SG-2808 2).
+- **32 bleiben §1-konservativ Plaintext** (unverändert zu HEAD): **14×** eingebetteter No-Leader-Betrag
+  in einer Zeilen-Beschreibung (INCOMPLETE_SPLIT — echte, mehrdeutig verschmolzene Zeile), **18×**
+  Füllpunkte in Nicht-Tarif-Kontext (Leader von Prosa gefolgt, keine gültige CHF-Zeile). Beispiel
+  SG-3849 art_2: eine Zeile trägt `900.— 22.80.03 Teil…` (No-Leader-Betrag) → ganzer Block Text.
+- **Klasse D (Tausendertrenner) für SG-`tabelle`:** durch den bestehenden `TarifTabelle`-Renderer
+  gedeckt — `gruppiereTausender` greift auf die Betrag-Spalte (Visual verifiziert: `150.— bis 4'000.—`,
+  `500.– bis 15'000.–`). Der #147-Klasse-D-Fix betraf `KanonischeTabelle` (mehrspaltig); der `tabelle`-
+  Zweig gruppierte schon immer. Kein zusätzlicher Fix nötig.
+- **Werte verlustfrei:** leader-freier Inhalt aller **728** SG-Einträge byte-identisch HEAD↔regeneriert
+  (maschinell bewiesen); geänderte Struktur (+Tabelle/+Nachtext-Block) → nur `sha` + Golden-Map (127 Keys)
+  + `daten-manifest.json`-Rollup neu.
+
+**Gegenprüfung BESTANDEN** (unabhängiger Opus-Adversarial, frischer Kontext, 20260705): die neuen
+Tabellen zeichenweise gegen die amtlichen SG-PDFs (gesetzessammlung.sg.ch, unabhängiges Werkzeug
+`pdfplumber`/`pdftotext` statt produktivem pdfjs). Register-Zeile:
+`bibliothek/register/gegenpruefung-register.md`.
+
+**Tore:** golden `IDENTISCH` (Engine unberührt, TABU) · tsc/vitest (parser-Tests 26, inkl.
+Konkatenations-Invariante + nachtext-Fälle)/lint/`check:tabellen`/`check:paritaet`(2966)/
+`check:normtext`/`check:struktur-konsistenz`/voller `npm run gate` grün · `test:e2e` 163/163 (1 Worker,
+dist). **Visual-Review** SG-3849/SG-2808/SG-2935 Desktop 1200 + Mobil 390: neue Tabellen bordiert,
+Beträge rechtsbündig + Tausender-Apostroph, Nachtext als Folge-Textblock, **0 Page-Overflow @390**.
+
+**Tabu respektiert:** `ArtikelBody.tsx`/`TarifTabelle` (Reader/QS-PERF) unverändert; `extrahiere-fedlex*`
++ `public/normtext/bund/**` (L0-Einheit) nicht angefasst; Fläche = `tarif-tabelle.ts`/`adapter-pdf.ts`
+(reichereTabellen) + `public/normtext/kanton/SG*` + neues Nachzug-Tool + Tests.
+
+**→ G3b (Kanton-Tarif-Tabellen Stufe 2) ist damit KOMPLETT: A (·/—-Zellentrenner) + B (verklebte
+Zahlen) + C (Füllpunkt-Rest) + D (Tausendertrenner) alle gebaut/verifiziert.** Bewusst NICHT erfasst
+(dokumentiert, §1): die 32 mehrdeutigen SG-Restblöcke (bleiben faithful Plaintext) und die eigenen
+ZH-PDF-Stränge ZH-243 NotGebV §17 / hierarchische Ziffer-Tarife (eigene Risiko-Klasse, oben notiert).
+
+**NEUER Vorbefund aus der Gegenprüfung (NICHT von dieser Änderung verursacht — Backlog, andere
+Risiko-Klasse):** Der zugrunde liegende **Rohtext von SG-2935** (und potenziell SG-3849-Anhänge) ist
+stellenweise durch die URSPRÜNGLICHE pdfjs-Extraktion der **zweispaltigen Anhang-Tabellen** verstümmelt
+— real existierende, aktive Gebührenpositionen fehlen VOLLSTÄNDIG im Snapshot UND im gerenderten HTML
+(grep=0 Treffer): **21.03/21.04/21.05/21.06** (Papier-Schuldbrief-Neuausfertigung/Pfandsummen-Herabsetzung/
+Nebenbestimmungs-Änderung/Forderungs-Auswechslung), **3.04–3.07** (elektronische Auskunft u.a.), **24.01**
+(Veräusserungsbeschränkung BVG). Beweis, dass es NICHT diese Änderung ist: die Konkatenations-/Byte-Invariante
+zeigt reine byte-identische Re-Partition (fehlende Daten können nicht wiederhergestellt werden) — die Lücke
+war schon im committeten Rohtext. Die unabhängige `pdfplumber -layout`-Extraktion des Prüfers holt alle
+Positionen sauber. **Backlog-Item:** SG-2935/SG-3849-**Anhang-Tabellen** mit layout-bewusstem Extraktor
+(x-Spalten, wie ZH-Anhang) neu extrahieren — eigener Extraktions-Schritt, NICHT der Füllpunkt-Parser.
+Nebenbefund (kosmetisch, kein Verlust): SG-2935 `art_17` schiebt eine Prosa-Notiz zwischen 26.01/26.02,
+wodurch 26.02 samt intaktem «50.–» in den nachtext statt in die Tabelle wandert — Gebühr bleibt lesbar.
