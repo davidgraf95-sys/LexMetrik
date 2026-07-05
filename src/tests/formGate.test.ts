@@ -14,6 +14,7 @@ import { SG_SCHEMA } from '../lib/vorlagen/schlichtungsgesuchBs';
 import { TESTAMENT_SCHEMA } from '../lib/vorlagen/testament';
 import { VA_SCHEMA } from '../lib/vorlagen/vorsorgeauftrag';
 import { VOLLMACHT_SCHEMA } from '../lib/vorlagen/vollmacht';
+import { RUBRUM_SCHEMA } from '../lib/vorlagen/rubrum';
 import { MA_SCHEMA } from '../lib/vorlagen/mahnung';
 import { VV_SCHEMA } from '../lib/vorlagen/verjaehrungsverzicht';
 import { FA_SCHEMA } from '../lib/vorlagen/forderungsabtretung';
@@ -59,6 +60,7 @@ const EINZEL: [string, VorlageSchema][] = [
   ['eigenhaendiges-testament', TESTAMENT_SCHEMA],
   ['vorsorgeauftrag', VA_SCHEMA],
   ['vollmacht', VOLLMACHT_SCHEMA],
+  ['rubrum', RUBRUM_SCHEMA],
   ['mahnung', MA_SCHEMA],
   ['verjaehrungsverzicht', VV_SCHEMA],
   ['forderungsabtretung', FA_SCHEMA],

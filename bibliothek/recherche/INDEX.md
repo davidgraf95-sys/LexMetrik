@@ -17,6 +17,7 @@ Verifikations-TODOs stehen aus. Nichts davon ist umgesetzt.
 
 | Dossier | Inhalt (Rechner · Vorlagen) | Top-Empfehlung |
 |---|---|---|
+| [verzahnungs-klingen-w27](verzahnungs-klingen-w27.md) | **GEBAUT (W2·7)** · Verjährungs-/Gewährleistungs-Board · Inkasso-Strecke · Gerichts-Baustein-Set (Zitierer BGE/BGer + Rubrum Art. 238 ZPO/112 BGG) | Norm-Anker live verifiziert + gegengeprüft bestanden; fachliche Abnahme David offen |
 | [zpo-kosten-streitwert](zpo-kosten-streitwert.md) | Streitwert · Kostenvorschuss (½-Regel 2025) · Sicherheit · BGer-Gebühren · BGer-Fristen · Fristwiederherstellung · kantonale Prozesskosten | Streitwert zuerst; kantonale Kosten erst nach Teil-B-Doppelcheck |
 | [schkg-existenzminimum-vorlagen](schkg-existenzminimum-vorlagen.md) | Existenzminimum (Art. 93) · GebV-Kostenrechner · Rechtsvorschlag · Rechtsöffnung · Arrest/Aberkennung/Beschwerde [Gerüst] | GebV-Kostenrechner (Staffeln liegen vor); **AS-2025-630-Vorbehalt aufgelöst: keine Betragsänderung** |
 | [arbeitsrecht-rechner](arbeitsrecht-rechner.md) | Ferienanspruch/-kürzung · 13. ML · Mehrarbeit · Entschädigungen (als Min/Max-Rahmen) · 336b-Fristen · Massenentlassung | 336b-Fristen (S) → Ferien |

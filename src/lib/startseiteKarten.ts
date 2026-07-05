@@ -209,6 +209,26 @@ export const KARTEN: Record<string, CalculatorCard> = {
     related: ['verjaehrung', 'kaufvertrag'],
     icon: 'house',
   },
+  // Verjährungs-/Gewährleistungs-Board (Verzahnungs-Klinge, ROADMAP W2·7):
+  // Regime-Matrix (verjaehrung.ts) + Gewährleistungs-Sonderfall + AT-Brücke;
+  // CISG nur Link. Reine Darstellung auf bestehenden Engines.
+  'verjaehrung-board': {
+    id: 'verjaehrung-board', modus: 'rechner', art: 'frist', rechtsgebiet: 'Vertrag & Forderung (OR)',
+    rechtsbereich: 'privat',
+    title: 'Verjährungs- & Gewährleistungs-Board',
+    description: 'Die sechs Verjährungs-Regime auf einen Blick, der Gewährleistungs-Sonderfall (Rüge- und Verjährungsfristen bei Kauf/Werkvertrag) und die Brücke zur AT-Mechanik – internationaler Warenkauf (CISG) verlinkt.',
+    status: 'entwurf',
+    norms: [
+      { label: 'Art. 127 OR', url: fedlexUrl('OR', '127'), verified: false },
+      { label: 'Art. 128 OR', url: fedlexUrl('OR', '128'), verified: false },
+      { label: 'Art. 210 OR', url: fedlexUrl('OR', '210'), verified: false },
+      { label: 'Art. 371 OR', url: fedlexUrl('OR', '371'), verified: false },
+    ],
+    href: '/rechner/verjaehrung-board',
+    keywords: ['Verjährung', 'Gewährleistung', 'Board', 'Regime', 'Frist', 'Mängelrüge', 'CISG', 'Verwirkung'],
+    related: ['verjaehrung', 'gewaehrleistung'],
+    icon: 'clock',
+  },
   'erbrecht-fristen': {
     id: 'erbrecht-fristen', modus: 'rechner', art: 'frist', rechtsgebiet: 'Erbrecht',
     rechtsbereich: 'privat',
@@ -288,6 +308,24 @@ export const KARTEN: Record<string, CalculatorCard> = {
     keywords: ['Rechnung', 'Verzug', 'Zins', 'Mahnung', 'offene Forderung', '5 Prozent'],
     related: ['schkg-fristen', 'darlehensvertrag'],
     icon: 'percent',
+  },
+  // Forderungs-/Inkasso-Strecke (Verzahnungs-Klinge, ROADMAP W2·7): stateless
+  // Reverse-Reader Verzug → Verzugszins → Mahnung → Betreibung → Fristen.
+  'inkasso-strecke': {
+    id: 'inkasso-strecke', modus: 'rechner', art: 'betrag', rechtsgebiet: 'Vertrag & Forderung (OR)',
+    rechtsbereich: 'privat',
+    title: 'Forderungs- & Inkasso-Strecke',
+    description: 'Die Schritte der Geldforderungs-Durchsetzung als stateless Strecke: Verzug (Art. 102 OR), Verzugszins (Art. 104 OR), Mahnung, Betreibung und Fristen – jeder Schritt mit dem zuständigen Werkzeug.',
+    status: 'entwurf',
+    norms: [
+      { label: 'Art. 102 OR', url: fedlexUrl('OR', '102'), verified: false },
+      { label: 'Art. 104 OR', url: fedlexUrl('OR', '104'), verified: false },
+      { label: 'Art. 67 SchKG', url: fedlexUrl('SchKG', '67'), verified: false },
+    ],
+    href: '/rechner/inkasso-strecke',
+    keywords: ['Inkasso', 'Forderung', 'Verzug', 'Verzugszins', 'Mahnung', 'Betreibung', 'Strecke', 'Durchsetzung'],
+    related: ['verzugszins', 'mahnung', 'betreibungskosten'],
+    icon: 'clipboard',
   },
   lohnfortzahlung: {
     id: 'lohnfortzahlung', modus: 'rechner', art: 'betrag', rechtsgebiet: 'Arbeit',
@@ -548,6 +586,23 @@ export const KARTEN: Record<string, CalculatorCard> = {
     related: ['mietzinsanpassung', 'verzugszins'],
     keywords: ['Teuerung', 'LIK', 'Index', 'Indexmiete', 'Unterhalt', 'Indexierung', 'BFS'],
     icon: 'percent',
+  },
+  // Amtlicher Gerichts-Zitierer (Gerichts-Baustein-Set, ROADMAP W2·7):
+  // Fundstellen-Formatierer BGE/BGer nach der Plattform-Zitierkonvention.
+  // Art. 112 BGG live gegen Fedlex verifiziert 2026-07-05 (eli/cc/2006/218).
+  gerichtszitat: {
+    id: 'gerichtszitat', modus: 'rechner', art: 'werkzeug', rechtsgebiet: 'Übergreifende Werkzeuge',
+    rechtsbereich: 'uebergreifend',
+    title: 'Amtlicher Zitierer (BGE/BGer)',
+    description: 'Fundstellen bundesgerichtlicher Entscheide nach der Zitierkonvention formatieren: BGE (Band · Teil · Seite) und nicht publizierte Urteile (Geschäftsnummer · Datum), mit Erwägungsangabe. Reine Zitierhilfe – prüft nicht, ob der Entscheid existiert.',
+    status: 'entwurf',
+    norms: [
+      { label: 'Art. 112 BGG', url: fedlexUrl('BGG', '112'), verified: false },
+    ],
+    href: '/rechner/gerichtszitat',
+    related: ['rubrum'],
+    keywords: ['Zitat', 'Zitierweise', 'BGE', 'BGer', 'Fundstelle', 'Erwägung', 'Aktenzeichen', 'Bundesgericht'],
+    icon: 'court',
   },
   'ferien-assistent': {
     id: 'ferien-assistent', modus: 'rechner', art: 'werkzeug', rechtsgebiet: 'Übergreifende Werkzeuge',

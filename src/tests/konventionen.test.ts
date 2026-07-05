@@ -110,6 +110,21 @@ describe('Formulierungskonvention – Linter über die echte Textausgabe', () =>
       ['ma-gates-nachfrist', pruefeMaGates({ ...maBasis, variante: 'nachfrist' })],
     );
 
+    // Rubrum (Gerichts-Baustein-Set W2·7): Maximalkombi (alle optionalen
+    // Bausteine — Besetzung, Geschäftsnummer, beide Vertretungen) + Gates
+    // (Art. 238 ZPO / Art. 112 BGG) durch den Linter.
+    const { rubrumZusammenstellen, pruefeRubrumGates, RUBRUM_DEFAULTS } = await import('../lib/vorlagen/rubrum');
+    const ruBasis = {
+      ...RUBRUM_DEFAULTS, gericht: 'Bezirksgericht Zürich', besetzung: 'Einzelgericht',
+      verfahrenNr: 'CG26 12345', klaeger: 'A. Muster', beklagte: 'B. Beispiel AG',
+      streitgegenstand: 'Forderung', ort: 'Zürich', datum: '2026-06-11',
+    } as const;
+    faelle.push(
+      ['rubrum', rubrumZusammenstellen({ ...ruBasis, klaegerVertretung: 'Rechtsanwältin X', beklagteVertretung: 'Rechtsanwalt Y' }).ergebnis.dokument],
+      ['rubrum-bger', rubrumZusammenstellen({ ...ruBasis, instanz: 'bger', gericht: 'Bundesgericht' }).ergebnis.dokument],
+      ['rubrum-gates', pruefeRubrumGates(ruBasis)],
+    );
+
     // GmbH-Dokumentmappe (9b, 7.6.2026): Maximal-Konfiguration → alle Schemas
     // und alle bedingten Bausteine laufen durch den Linter.
     const { gmbhDokumentmappe, GMBH_DOK_DEFAULTS } = await import('../lib/vorlagen/gruendungGmbhDokumente');

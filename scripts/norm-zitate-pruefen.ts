@@ -23,6 +23,9 @@ const QUELLEN = [
   'src/lib/vorlagen/mahnung.ts',
   'src/lib/vorlagen/verjaehrungsverzicht.ts',
   'src/lib/vorlagen/forderungsabtretung.ts',
+  // Rubrum (Gerichts-Baustein-Set W2·7) — Art. 238 ZPO (lit. a–h) + Art. 112 BGG
+  // (Abs. 1 lit. a–d), live gegen Fedlex verifiziert 2026-07-05.
+  'src/lib/vorlagen/rubrum.ts',
   // Arbeitsvertrag (Detailgrad-Vollausbau P1a, 14.6.2026) — Art. 319 ff. OR,
   // neu Art. 332 OR (Arbeitsergebnisse) + Art. 34 ZPO (Gerichtsstand).
   'src/lib/vorlagen/arbeitsvertrag.ts',

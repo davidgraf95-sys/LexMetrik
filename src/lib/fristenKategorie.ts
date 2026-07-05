@@ -64,6 +64,8 @@ export const FRISTEN_MATERIELL: FristenRegimeZeile[] = [
     warum: 'zwei getrennte Uhren am selben Mangel: Rügeobliegenheit (Verwirkung – keine Hemmung) und Verjährung (Art. 197 ff., 367 ff. OR)' },
   { id: 'erbrecht-fristen',
     warum: 'eigener Fristen-Katalog je Tatbestand (Ausschlagung, Inventar, Klagefristen – Art. 521, 533, 567 ff. ZGB), je mit eigenem Fristauslöser' },
+  { id: 'verjaehrung-board',
+    warum: 'Verzahnungs-Board: die sechs Verjährungs-Regime (Art. 127/128/60/67 OR) im Überblick plus der Gewährleistungs-Sonderfall und die Brücke zur AT-Mechanik' },
 ];
 
 /** Einstiegstyp einer Karte der Fristen-Kategorie — null heisst: noch nicht

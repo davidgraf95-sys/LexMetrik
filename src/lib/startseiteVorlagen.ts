@@ -892,6 +892,28 @@ export const VORLAGEN: Record<string, VorlageCard> = {
     related: ['verzugszins', 'betreibungskosten'],
     keywords: ['Mahnung', 'Zahlungsverzug', 'Frist', 'Inverzugsetzung', 'Nachfrist', 'Verzugszins', 'Art. 102', 'Art. 107'],
   },
+  // Rubrum (Gerichts-Baustein-Set, ROADMAP W2·7): Kopf eines Entscheids.
+  // Norm-Anker LIVE gegen Fedlex verifiziert 2026-07-05 (Art. 238 ZPO Stand
+  // 1.7.2026 eli/cc/2010/262; Art. 112 BGG Stand 1.4.2026 eli/cc/2006/218).
+  rubrum: {
+    id: 'rubrum', modus: 'vorlage', art: 'eingabe', eingabeRubrik: 'gesuch_sonstige',
+    rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
+    formGate: 'entwurf',
+    rechtsbereich: 'privat',
+    title: 'Rubrum (Entscheidkopf)',
+    description: 'Gerüst für den Kopf eines Gerichtsentscheids – Gericht und Besetzung, Parteien und ihre Vertretung, Streitgegenstand (Art. 238 ZPO; beim Weiterzug ans Bundesgericht Art. 112 BGG).',
+    status: 'entwurf',
+    norms: [
+      { label: 'Art. 238 ZPO', url: fedlexUrl('ZPO', '238'), verified: false },
+      { label: 'Art. 112 BGG', url: fedlexUrl('BGG', '112'), verified: false },
+    ],
+    href: '/vorlagen/rubrum',
+    schemaId: 'rubrum',
+    formvorschrift: 'Entwurfsvorlage – vom Gericht zu vervollständigen (Dispositiv, Begründung, Rechtsmittelbelehrung, Unterschrift).',
+    output: ['pdf', 'docx'],
+    related: ['gerichtszitat'],
+    keywords: ['Rubrum', 'Entscheid', 'Urteil', 'Gericht', 'Parteien', 'Dispositiv', 'Art. 238', 'Art. 112'],
+  },
   verjaehrungsverzicht: {
     id: 'verjaehrungsverzicht', modus: 'vorlage', art: 'erklaerung', rechtsgebiet: 'Vertrag & Forderung (OR)',
     formGate: 'fertig',

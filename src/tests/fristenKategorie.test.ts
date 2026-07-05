@@ -52,19 +52,21 @@ describe('S-5b: prozessual/materiell-Klassifikation der Fristen-Kategorie', () =
 
   // Deklarierte Anpassung 11.6.2026 (Auftrag David, FAHRPLAN-BGER-RECHTSWEG):
   // + bgg-fristen als drittes prozessuales Regime (eigener BGG-Stillstand).
-  it('prozessual = ZPO + SchKG + BGG (eigene Stillstands-Regimes); materiell = 5 Regimes — je mit Begründungs-Satz', () => {
+  // Deklarierte Anpassung 5.7.2026 (ROADMAP W2·7): + verjaehrung-board als
+  // sechstes materielles Regime (Verjährungs-/Gewährleistungs-Board).
+  it('prozessual = ZPO + SchKG + BGG (eigene Stillstands-Regimes); materiell = 6 Regimes — je mit Begründungs-Satz', () => {
     expect(FRISTEN_PROZESSUAL.map((r) => r.id)).toEqual(['zpo-fristen', 'schkg-fristen', 'bgg-fristen']);
     expect(FRISTEN_MATERIELL.map((r) => r.id)).toEqual(
-      ['verjaehrung', 'kuendigung-sperrfristen', 'mietrecht', 'gewaehrleistung', 'erbrecht-fristen']);
+      ['verjaehrung', 'kuendigung-sperrfristen', 'mietrecht', 'gewaehrleistung', 'erbrecht-fristen', 'verjaehrung-board']);
     for (const r of [...FRISTEN_PROZESSUAL, ...FRISTEN_MATERIELL]) {
       expect(r.warum.length, r.id).toBeGreaterThan(20);
     }
   });
 
-  it('Inventur-Zähler: 1 Haupt + 3 prozessual + 5 materiell = 9 verfügbare Einstiege (bewusste Zahlen)', () => {
+  it('Inventur-Zähler: 1 Haupt + 3 prozessual + 6 materiell = 10 verfügbare Einstiege (bewusste Zahlen)', () => {
     expect(FRISTEN_HAUPTEINSTIEGE.length).toBe(1);
     expect(FRISTEN_PROZESSUAL.length).toBe(3);
-    expect(FRISTEN_MATERIELL.length).toBe(5);
-    expect(verfuegbar.length).toBe(9);
+    expect(FRISTEN_MATERIELL.length).toBe(6);
+    expect(verfuegbar.length).toBe(10);
   });
 });

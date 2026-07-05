@@ -43,6 +43,7 @@ import { SG_SCHEMA, sgZusammenstellen, SG_DEFAULTS } from './schlichtungsgesuchB
 import { TESTAMENT_SCHEMA, testamentZusammenstellen, TESTAMENT_DEFAULTS, pruefeGates as pruefeTestamentGates } from './testament';
 import { VV_SCHEMA, vvZusammenstellen, VV_DEFAULTS, pruefeVvGates } from './verjaehrungsverzicht';
 import { VOLLMACHT_SCHEMA, vollmachtZusammenstellen, VOLLMACHT_DEFAULTS, pruefeVollmachtGates } from './vollmacht';
+import { RUBRUM_SCHEMA, rubrumZusammenstellen, RUBRUM_DEFAULTS, pruefeRubrumGates } from './rubrum';
 import { VA_SCHEMA, vaZusammenstellen, VA_DEFAULTS, pruefeVaGates } from './vorsorgeauftrag';
 import { WV_SCHEMA, wvZusammenstellen, WV_DEFAULTS, pruefeWvGates } from './werkvertrag';
 
@@ -119,6 +120,7 @@ export const VORLAGEN_REGISTRY: VorlagenEintrag[] = [
   einzel(VV_SCHEMA, vvZusammenstellen, VV_DEFAULTS, pruefeVvGates),
   einzel(FA_SCHEMA, faZusammenstellen, FA_DEFAULTS, pruefeFaGates),
   einzel(VOLLMACHT_SCHEMA, vollmachtZusammenstellen, VOLLMACHT_DEFAULTS, pruefeVollmachtGates),
+  einzel(RUBRUM_SCHEMA, rubrumZusammenstellen, RUBRUM_DEFAULTS, pruefeRubrumGates),
   // ── Gesellschaftsrecht (Dokumentmappen) ──
   mappe('ag-gruendungsmappe', agDokumentmappe, AG_DOK_DEFAULTS, pruefeAgDokGates),
   mappe('gmbh-gruendungsmappe', gmbhDokumentmappe, GMBH_DOK_DEFAULTS, pruefeGmbhDokGates),
