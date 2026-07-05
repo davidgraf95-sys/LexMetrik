@@ -67,3 +67,13 @@ jobs:
         run: npx playwright install --with-deps chromium
       - name: Browser-Smoke (Playwright, e2e/ gegen dist)
         run: npm run test:e2e
+      # ── QS-PERF-Tor (CLAUDE.md §15) ──────────────────────────────────────
+      # Läuft ABSICHTLICH als letzte Stufe: alle Treue-Tore (golden, smoke,
+      # struktur-konsistenz, e2e/Reader) sind hier bereits grün → die §15-
+      # Gegenkopplung «Tempo zählt nur, wenn die Treue grün bleibt» wird durch
+      # die Schritt-Reihenfolge erzwungen (Treue rot ⇒ Job bricht, bevor die
+      # Perf-Messung startet). Chromium ist durch den e2e-Schritt schon da.
+      - name: Perf-Budget — Bundle-Topologie (Chrome-frei)
+        run: npm run check:perf-budget
+      - name: Perf-Budget — Lighthouse-Metriken (4× CPU + langsames 4G)
+        run: npm run check:perf-lighthouse
