@@ -249,7 +249,7 @@ export const PDF_PROFILE: Record<PdfProfilName, PdfProfil> = {
 // PDF-Layout-Extraktion (pdfjs, BUILD-time, NUR in scripts/)
 // ─────────────────────────────────────────────────────────────────────────────
 
-interface PdfStueck {
+export interface PdfStueck {
   x: number;
   y: number;
   h: number;
@@ -281,12 +281,56 @@ export function istAnhangZifferLinks(x: number, bodyMinX: number, text: string):
   return m != null && Number(m[1]) <= 99;
 }
 
+/**
+ * GEOMETRISCH belegter Anhang-Positions-Kopf (§1: Trennung nur, wo die Geometrie
+ * sie beweist — Gegenprüfungs-Befund D1–D3, SG-2935).
+ *
+ * Ein echter Tarif-Positions-Kopf («21.03 Neuausfertigung …») trägt seine
+ * hierarchische Ziffer in der Nr.-SPALTE = am linken Body-Rand der Seite
+ * (SG: x=119 gerade / x=162 ungerade Seite ⇒ x ≤ bodyMinX+8; die
+ * AR-Marginalien-Rettung istAnhangZifferLinks liegt KNAPP LINKS davon und zählt
+ * ebenfalls). Eine UMGEBROCHENE Querverweis-Zeile («25.10 dieses Erlasses …»,
+ * «20.02 dieses Erlasses bei Änderung der Beteili-») beginnt dagegen im
+ * BESCHREIBUNGS-Fluss (SG: x=169/211 ≈ bodyMinX+50) — sie ist KEIN Kopf.
+ * Ohne diese Unterscheidung öffnete der Ziffer-Segmentierer dort fälschlich
+ * eine neue Position: 20.05/24.02 wurden trunkiert (Betrag verloren) und der
+ * Phantom-Eintrag «25.10 dieses Erlasses … 50.–» verdrängte per First-wins-Dedup
+ * die ECHTE Position 25.10 («Anmerkung Verwaltungsbeschlüsse … 100.–») —
+ * ein falscher Gebührenwert im Snapshot.
+ *
+ * Erwartet die x-sortierten Stücke einer Zeile; Leerraum-Fragmente (str=' ')
+ * werden übersprungen. Rein/deterministisch (§2), testbar ohne pdfjs.
+ */
+export function istZifferKopfZeile(
+  stuecke: Array<{ x: number; s: string }>,
+  bodyMinX: number,
+): boolean {
+  for (const st of stuecke) {
+    if (!st.s.trim()) continue; // Leerraum-Fragment (Wort-Trenner) überspringen
+    const m = st.s.trim().match(/^(\d+)(?:\.\d+)+(?:\s|$)/);
+    if (m == null || Number(m[1]) > 99) return false;
+    // Nr.-Spalte: am linken Body-Rand (x ≤ bodyMinX+8) ODER als gerettete
+    // Marginalien-Ziffer knapp links davon (AR bGS 153.2).
+    return st.x <= bodyMinX + 8 || istAnhangZifferLinks(st.x, bodyMinX, st.s);
+  }
+  return false;
+}
+
 /** Eine zusammengefügte Body-Textzeile. */
 export interface PdfTextZeile {
   /** Führende Absatznummer (hochgestellte Ziffer am Zeilenanfang) oder null. */
   absatz: string | null;
   /** Der bereinigte Zeilentext. */
   text: string;
+  /** GEOMETRISCH belegter Anhang-Positions-Kopf: die Zeile beginnt mit einer
+   *  hierarchischen Ziffer «N.NN[.…]» UND deren Fragment sitzt in der
+   *  Nr.-SPALTE (= linker Body-Rand der Seite), nicht im Beschreibungs-Fluss.
+   *  Unterscheidet echte Tarif-Positions-Köpfe von umgebrochenen
+   *  Querverweis-Zeilen («25.10 dieses Erlasses …» bei x=Beschreibungs-Spalte),
+   *  die sonst fälschlich eine neue Position öffnen (SG-2935: 20.05/24.02
+   *  trunkiert, 25.10 mit falschem Betrag). §1: Trennung nur, wo die Geometrie
+   *  sie beweist. */
+  zifferKopf?: boolean;
 }
 
 export interface PdfExtrakt {
@@ -299,6 +343,28 @@ export interface PdfExtrakt {
    *  Konsolidierungsstempel mitten auf der SZ-Titelseite (als Marginalie verworfen). */
   rohText: string;
   titel: string;
+}
+
+/**
+ * Kopf-/Fussband-Schwellen im ROHEN pdfjs-Koordinatenraum (PDF-User-Space).
+ *
+ * Die Stück-y (`item.transform[5]`) liegen INNERHALB der MediaBox `[y0…y1]`, NICHT
+ * im viewport-Raum `[0…height]`. Bei einer MediaBox mit Ursprung ≠ 0 (SG
+ * gesetzessammlung.sg.ch: `view=[87.9, 123.3, 507.1, 718.7]`, y0≈123) liegt der
+ * echte Seiten-Oberrand bei y≈719, nicht bei height≈595. Die frühere Schwelle
+ * `viewport.height * 0.9 ≈ 535` verwarf darum ~123 pt ECHTEN Body am Seitenkopf:
+ * auf den Anhang-Tarif-Seiten fielen die OBERSTEN Positionszeilen (die nicht mit
+ * «Art.» beginnen — z. B. «21.03 Neuausfertigung …») ins Schein-Kopfband und
+ * gingen komplett verloren (SG-2935: 21.03–21.07, 3.04–3.07, 24.01 u. a.).
+ *
+ * Fix: Band relativ zur MediaBox messen. Für eine MediaBox mit Ursprung 0 ist
+ * mbY0=0, mbY1=height → die Schwellen sind BYTE-IDENTISCH zur alten Formel
+ * (`height*0.9` / `height*0.07`), also kein Fremd-Drift für origin-0-PDFs (§6).
+ * §2: rein/deterministisch.
+ */
+export function bandSchwellen(mbY0: number, mbY1: number): { kopf: number; fuss: number } {
+  const bezug = mbY1 - mbY0; // MediaBox-Höhe (== viewport.height)
+  return { kopf: mbY1 - bezug * 0.1, fuss: mbY0 + bezug * 0.07 };
 }
 
 /**
@@ -327,8 +393,6 @@ export async function extrahierePdfZeilen(
   for (let p = 1; p <= doc.numPages; p++) {
     const seite = await doc.getPage(p);
     const inhalt = await seite.getTextContent();
-    const view = seite.getViewport({ scale: 1 });
-    const seitenHoehe = view.height;
 
     const alle: PdfStueck[] = [];
     for (const it of inhalt.items) {
@@ -338,7 +402,18 @@ export async function extrahierePdfZeilen(
         height?: number;
         width?: number;
       };
-      if (!item.str || !item.str.replace(/\s/g, '')) continue;
+      if (!item.str) continue;
+      // Leerraum-Fragmente (str === ' ') NICHT verwerfen: die SG-Anhang-PDF
+      // (und andere) tragen die Wort-Trenner als EIGENE, teils NULL-breite
+      // Fragmente (`str=" "`, height≈0) zwischen zwei Wort-Fragmenten. Die alte
+      // Verwerf-Regel liess die Trennung allein an der `width`-Heuristik hängen —
+      // die bei null-breiten Trenner-Fragmenten versagt und die Wörter verklebt
+      // («AuswechslungderForderung» statt «Auswechslung der Forderung»). Als
+      // eigenes Stück behalten sind sie ein EXPLIZITES Wortgrenz-Signal (§1:
+      // treuer Wortlaut). height≈0 → aus allen h-basierten Filtern (bodyHoehe,
+      // bodyXs) ohnehin ausgeschlossen; baueZeile fügt daraus genau EIN
+      // Leerzeichen ein (mit /\s+/→' '-Kollaps am Zeilenende byte-neutral, wo die
+      // width-Heuristik den Trenner schon setzte).
       rohStuecke.push(item.str);
       alle.push({
         x: item.transform[4],
@@ -357,8 +432,9 @@ export async function extrahierePdfZeilen(
     // im obersten Band. Darum verwerfen wir aus den Rand-Bändern NUR Zeilen, die
     // wie ein laufender Kopf/Fuss aussehen (reine Gesetzes-Nr./Seitenzahl/kurzer
     // Fuss-Stand) — nicht pauschal das ganze Band (sonst ginge VD-Body verloren).
-    const kopfSchwelle = seitenHoehe * 0.9;
-    const fussSchwelle = seitenHoehe * 0.07;
+    // Kopf-/Fussband-Schwellen relativ zur MediaBox (`seite.view`), s. bandSchwellen.
+    const [, mbY0, , mbY1] = (seite as { view: number[] }).view;
+    const { kopf: kopfSchwelle, fuss: fussSchwelle } = bandSchwellen(mbY0, mbY1);
 
     // Pro y-Zeile entscheiden, ob sie ein laufender Kopf/Fuss ist.
     const nachYAlle = new Map<number, PdfStueck[]>();
@@ -489,7 +565,8 @@ export async function extrahierePdfZeilen(
       if (maxLineH < bodyHoehe - 0.4 && !istLoneAbsatz) continue;
       const { absatz, text } = baueZeile(stueckeDerZeile, bodyHoehe, marker, bodyMinX);
       if (text === '' && absatz === null) continue;
-      zeilen.push({ absatz, text });
+      const zifferKopf = istZifferKopfZeile(stueckeDerZeile, bodyMinX);
+      zeilen.push(zifferKopf ? { absatz, text, zifferKopf } : { absatz, text });
     }
   }
 
@@ -537,7 +614,7 @@ function linkerSpaltenRand(xs: number[]): number {
 
 /** Setzt eine Zeile aus ihren x-sortierten Stücken zusammen; erkennt führende
  *  Absatz-Hochzahl; verwirft Fussnoten-Verweise («1)», «[A]», mitten-Hochzahl). */
-function baueZeile(
+export function baueZeile(
   stuecke: PdfStueck[],
   bodyHoehe: number,
   marker: '§' | 'Art.',
@@ -554,26 +631,39 @@ function baueZeile(
   // signalisiert eine Wortgrenze).
   let letzteKante: number | null = null;
   const lueckenSchwelle = bodyHoehe * 0.22;
+  // Ob schon ein REALES (nicht-leeres) Fragment übernommen wurde. Ersetzt das
+  // frühere `k === 0`: seit die Leerraum-Fragmente (explizite Wort-Trenner)
+  // erhalten bleiben, kann Index 0 ein Leerzeichen sein — die führende
+  // Absatz-Hochzahl ist das erste REALE Stück, nicht zwingend Stück 0.
+  let sahReal = false;
 
   for (let k = 0; k < stuecke.length; k++) {
     const st = stuecke[k];
-    const istHoch = st.h < hochSchwelle;
     const roh = st.s.trim();
+    // Explizites Leerraum-Fragment (Wort-Trenner der Quelle) → genau EIN
+    // Leerzeichen einfügen (kein Zeichen erfunden, §1). Vor dem ersten realen
+    // Stück und nach bereits vorhandenem Leerzeichen unterdrückt (Kollaps).
+    if (roh === '') {
+      if (sahReal && !/\s$/.test(text)) text += ' ';
+      continue;
+    }
+    const istHoch = st.h < hochSchwelle;
     if (istHoch) {
       // Führende reine Ziffer am Zeilenanfang = Absatznummer (nicht «1)» = Fussn.,
-      // nicht «[A]»). Nur am allerersten Stück, NUR wenn die Hochzahl an/nahe der
+      // nicht «[A]»). Nur am ersten REALEN Stück, NUR wenn die Hochzahl an/nahe der
       // linken Body-Spalte (x ≤ bodyMinX+8) steht — ein Fussnoten-Verweis «5»
       // steht mitten/rechts in der Zeile (VD: x≈140 über dem Sachtitel) und ist
       // KEINE Absatznummer —, und nur wenn der Marker NICHT in dieser Zeile
       // beginnt (sonst stünde «Art. 1» mit Hochzahl-1 = Fussnote).
       if (
-        k === 0 &&
+        !sahReal &&
         absatz === null &&
         st.x <= bodyMinX + 8 &&
         /^\d+(?:bis|ter)?$/.test(roh) &&
         !zeileBeginntMitMarker(stuecke, marker)
       ) {
         absatz = roh.toLowerCase();
+        sahReal = true;
         continue;
       }
       // Fussnoten-Verweis «1)», «2)», «[A]», «er» (ordinal-Hochstellung in fr) →
@@ -598,6 +688,7 @@ function baueZeile(
     }
     text += st.s;
     letzteKante = st.x + st.w;
+    sahReal = true;
   }
   return { absatz, text: text.replace(/\s+/g, ' ').trim() };
 }
@@ -936,7 +1027,12 @@ export async function holePdf(
   // den Anhang sonst fallen. Konservativ: der Segmentierer liefert nur bei einem
   // echten Ziffer-Anhang (≥ Schwelle) Einträge, sonst leer (reine Artikel-Erlasse
   // bleiben unberührt). §7: Live-Link bleibt massgeblich.
-  const anhang = segmentiereAnhangZiffern(textbasis);
+  // Geometrie-Orakel: die serialisierten Textbasis-Zeilen entsprechen 1:1 den
+  // extrahierten PdfTextZeilen (serialisierePdfZeilen = join('\n')). Eine
+  // Ziffer-Zeile öffnet nur dann eine neue Anhang-Position, wenn ihre Ziffer
+  // in der Nr.-Spalte sitzt (zifferKopf, istZifferKopfZeile) — umgebrochene
+  // Querverweis-Zeilen fliessen als Fortsetzung (Gegenprüfungs-Befund D1–D3).
+  const anhang = segmentiereAnhangZiffern(textbasis, (i) => zeilen[i]?.zifferKopf === true);
   for (const [ziff, e] of Object.entries(anhang)) {
     if (!(ziff in artikel)) artikel[ziff] = e;
   }

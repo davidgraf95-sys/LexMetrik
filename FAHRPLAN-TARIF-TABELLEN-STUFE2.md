@@ -300,3 +300,62 @@ Positionen sauber. **Backlog-Item:** SG-2935/SG-3849-**Anhang-Tabellen** mit lay
 (x-Spalten, wie ZH-Anhang) neu extrahieren — eigener Extraktions-Schritt, NICHT der Füllpunkt-Parser.
 Nebenbefund (kosmetisch, kein Verlust): SG-2935 `art_17` schiebt eine Prosa-Notiz zwischen 26.01/26.02,
 wodurch 26.02 samt intaktem «50.–» in den nachtext statt in die Tabelle wandert — Gebühr bleibt lesbar.
+
+## Ausführungsvermerk — SG-2935-Rohtext-Reparatur (5.7.2026, Branch `fix/sg2935-x-spalten`)
+
+**Der Vorbefund oben ist BEHOBEN.** Empirische Defekt-Mechanik (Reproduktion am amtlichen PDF,
+`versions/2935/pdf_file_with_annexes`): die Anhänge sind KEIN Zweispalten-Merge-Problem —
+das PDF ist ein Spiegelrand-Layout (Body ungerade Seiten x≈162, gerade x≈119) mit **versetzter
+MediaBox** (`view=[87.9, 123.3, 507.1, 718.7]`, Ursprung y0≈123). Zwei Wurzel-Fehler im geteilten
+Extraktor `scripts/normtext/adapter-pdf.ts`:
+
+1. **Kopf-/Fussband im falschen Koordinatenraum:** Schwelle `viewport.height*0.9 ≈ 535` wurde gegen
+   die ROHEN `transform[5]`-y-Werte (123…719) verglichen → die obersten ~123 pt jeder Seite galten
+   als Kopfband; jede Zeile dort, die nicht mit «Art.» beginnt (= genau die Tarif-Positionszeilen
+   «21.03 Neuausfertigung …»), wurde KOMPLETT verworfen. Fix: `bandSchwellen(mbY0, mbY1)`
+   MediaBox-relativ; für origin-0-PDFs byte-identisch zur alten Formel (§6-Neutralität).
+2. **Verworfene Wort-Trenner:** die Quelle setzt Leerzeichen als eigene, teils ~0-breite Fragmente
+   (`str=" "`, h≈0); die alte Verwerf-Regel `!str.replace(/\s/g,'')` liess die Worttrennung an der
+   width-Heuristik hängen, die bei ~0-Breite versagt («AuswechslungderForderung»,
+   «Schuldübernahmeanzeige(Art.834Abs.1ZGB)»). Fix: Trenner-Fragmente als explizites
+   Wortgrenz-Signal behalten → genau EIN Leerzeichen (§1, kein Zeichen erfunden; auch die
+   amtlichen Tausendertrenner «Fr. 2 000 000.–» sind reale Quell-Fragmente).
+
+**Dritter Wurzel-Fehler (Befund der ERSTEN adversarialen Gegenprüfung dieser Einheit — Verdikt
+«widerlegt», D1–D3, dann gefixt):** eine UMGEBROCHENE Querverweis-Zeile, die mit einer
+Positions-Nummer beginnt («… ausgenommen Nrn. 25.07 bis ⏎ 25.10 dieses Erlasses … 50.–»),
+öffnete im Ziffer-Segmentierer fälschlich eine neue Position → 20.05/24.02 trunkiert (Betrag
+verloren) und der Phantom-Eintrag «25.10 dieses Erlasses … 50.–» verdrängte per First-wins-Dedup
+die ECHTE Position 25.10 («Anmerkung Verwaltungsbeschlüsse … Art. 649a ZGB» = **100.–**) — ein
+falscher Gebührenwert. Fix: **Geometrie-Orakel `istZifferKopfZeile`** (Kopf nur, wenn die Ziffer
+in der Nr.-SPALTE am linken Body-Rand sitzt, x ≤ bodyMinX+8; Wrap-Zeilen beginnen in der
+Beschreibungs-Spalte ≈ bodyMinX+50) + `segmentiereAnhangZiffern(text, istKopfZeile?)`; nicht
+belegte Ziffer-Zeilen fliessen als Fortsetzung (§1). 9 Regressions-Tests (D1–D3 + reale Geometrie).
+
+**Daten:** SG-2935 **83→112 Positionen** (+29: 21.03–21.07 · 3.04–3.08/3.14/3.15 · 24.01/24.02 ·
+5.01/5.02 · 20.02+20.02.01–03 · 20.04/20.05 · 22.01 · 23.01/23.02 · 25.08/25.09 · 27.01/27.02;
+0 entfernt; 20.05/24.02/25.10 inhaltlich korrigiert per D1–D3-Fix). SG-2808 (34→34): reine
+Wortlaut-Treue, **bewiesen verlustfrei** (whitespace-bereinigte Zeichenkette Subsequenz-identisch
+zu HEAD). SG-3849 (**611→607**): Wortlaut-Treue + **4 Phantom-«Positionen» entfernt**
+(141.81/146.11/552.11/672.51 = sGS-Nummern aus der Nachtrags-Historie im ERLASS-KOPF, vom alten
+Segmentierer als Tarif-Positionen fehlgedeutet; deren Apparat-Prosa ist Editions-Beiwerk vor der
+ersten echten Position, kein Tarif-Normtext — Live-Link bleibt massgeblich §7). SG-811.1/963.75
+unberührt (Probe MATCH).
+
+**Gegenprüfung (2 unabhängige adversariale Durchgänge, pdfplumber ≠ produktives pdfjs):**
+Durchgang 1 = «widerlegt» (D1–D3, oben) → gefixt; Durchgang 2 (frischer Kontext) über das
+GANZE Inventar: 87=87 Anhang-Positionen beidseitig (x-bewusste Enumeration), 0 erfunden,
+0 verloren, 20.05/24.02/25.10 amtlich korrekt (25.10 = 100.–), wiederhergestellte Positionen
+wortlaut-genau; Rest-Deltas = pdfplumber-Artefakte (Fussnoten-Hochzahlen «ZGB18», Absatz-Ziffern,
+Seiten-Furnitur, Leader-Punkte) — der Snapshot ist je die treue Seite. 24.01 «vom 25. Juni 1982»
+= korrektes BVG-Datum.
+
+**Korpus-Probe (alle 27 committeten PDF-Kanton-Snapshots re-extrahiert):** 13 DIFF / 14 MATCH.
+Nur SG-2935 (y0≈123) und **SZ-280.411 (y0≈204)** tragen die MediaBox-Band-Klasse; die übrigen
+11 DIFF (FR-8428, LU-3870, SG-2808/3849 ✓mitgefixt, SZ-173.111/213.512/82040, VD-105539/106879/
+210344, VS-1413) sind reine Wortlaut-Verbesserungen durch den Trenner-Fix (origin-0, kein
+Positions-Verlust). **Ehrliches Residuum (Backlog):** die 10 Nicht-SG-Dateien wurden NICHT in
+diesem Schritt regeneriert (Blast-Radius klein halten; SG war die Bau-Fläche) — der
+`normen-monitor`-Drift-Check (`check:pdf-netz`) wird für sie ROT und quittiert den Nachzug je
+Kanton (`npm run normtext -- --nur=kanton --kanton=XX`); SZ-280.411 dabei priorisieren
+(Band-Klasse = potenziell fehlende Zeilen, gleiche Prüfschablone wie hier).
