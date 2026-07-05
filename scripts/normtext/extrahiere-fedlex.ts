@@ -137,7 +137,15 @@ export function extrahiereArtikelAusAnker(html: string, ankerRoh: string): Artik
   // stumm verloren (~7100 Verordnungs-Bestimmungen). Als artikel-level `grundlage`
   // erhalten (amtlicher Inhalt, §2/§8) und aus dem Body entfernen, damit er nicht
   // in den Fallback-Text leakt. Die Marke trägt vereinzelt einen Fussnoten-<sup>.
-  const refRe = /<p\b[^>]*\bclass="[^"]*\bman-template-referenz\b[^"]*"[^>]*>([\s\S]*?)<\/p>/i;
+  //
+  // P3 (W2·5b): 6 Verordnungen (ATSV/FZV/BankV/FINIV/FinfraV/ArGV5) tragen
+  // DENSELBEN Trägernorm-Verweis unter der SCHLANKEN Klasse `class="referenz"`
+  // statt `man-template-referenz` — 347 Bestimmungen, die die alte, eng
+  // wortgebundene Regex still verwarf (korpusweite Klassen-Inventur 5.7.2026,
+  // Beleg bibliothek/register/p3-drop-klassen-inventar-2026-07-05.md). Beide
+  // Formen sind derselbe amtliche Inhalt → EIN word-gebundenes `referenz`
+  // matcht beide (auch innerhalb «…-referenz» greift die \b-Grenze).
+  const refRe = /<p\b[^>]*\bclass="[^"]*\breferenz\b[^"]*"[^>]*>([\s\S]*?)<\/p>/i;
   const refMatch = innerRoh.match(refRe);
   const grundlage = refMatch ? entferneTags(entferneFussnotenSups(refMatch[1])) || undefined : undefined;
   const inner = innerRoh.replace(new RegExp(refRe.source, 'gi'), '');
@@ -174,7 +182,16 @@ export function extrahiereArtikelAusAnker(html: string, ankerRoh: string): Artik
       // Bild-Absatz (Formel/Piktogramm als Standalone-<p> mit <img>) — bisher von
       // keiner Alternative erfasst → stumm verworfen. Kommt NACH den obigen, damit
       // Absatz/Tabelle Vorrang behalten (1.7.2026).
-      '|<p[^>]*>((?:(?!</p>)[\\s\\S])*?<img\\b[^>]*>(?:(?!</p>)[\\s\\S])*?)</p>',
+      '|<p[^>]*>((?:(?!</p>)[\\s\\S])*?<img\\b[^>]*>(?:(?!</p>)[\\s\\S])*?)</p>' +
+      // P3 (W2·5b): STANDALONE <p class="…man-template-tab-krpr…"> — eine
+      // tabellen-artige Zeile, die NICHT in einem <table> steckt. Fedlex rendert
+      // damit Aufzählungen ausserhalb echter Tabellen: OR art_361/362 listen so
+      // die (un)abdingbaren Vorschriften («Artikel 321c: Absatz 1 …»), VRV führt
+      // damit redaktionelle Verweis-Noten («* Vgl. Art. 18.»). Beides war stiller
+      // Normtext-Verlust (89 Zeilen OR + 8 VRV; korpusweite Inventur 5.7.2026).
+      // Steht ZULETZT: echte Tabellen (Alt 5) konsumieren ihre Zellen-<p> vorher,
+      // Absatz/Bild behalten Vorrang. Beleg: p3-drop-klassen-inventar-2026-07-05.md.
+      '|<p[^>]*\\bclass="[^"]*man-template-tab-krpr[^"]*"[^>]*>((?:(?!</p>)[\\s\\S])*?)</p>',
     'gi',
   );
   const bloecke: ArtikelText['bloecke'] = [];
@@ -328,6 +345,14 @@ export function extrahiereArtikelAusAnker(html: string, ankerRoh: string): Artik
       }
       const nach = entferneTags(innerBild.slice(letzteAdj)).trim();
       if (nach) bloecke.push({ absatz: null, text: nach });
+    } else if (match[7] !== undefined) {
+      // ── Standalone-tab-krpr-Zeile (P3, W2·5b) ────────────────────────────
+      // Nicht-Tabellen-<p class="…man-template-tab-krpr…"> = eine tabellen-artige
+      // Aufzählungs-/Verweis-Zeile ausserhalb eines <table>. Verbatim als eigener
+      // Text-Block (absatz:null) — faithful, kein Marke-Erfinden (§1/§8). Fussnoten
+      // vor entferneTags tilgen (sonst leakt die Ziffer, vgl. Absatz-Pfad).
+      const txt = entferneTags(entferneFussnotenSups(match[7])).trim();
+      if (txt) bloecke.push({ absatz: null, text: txt });
     }
   }
 
