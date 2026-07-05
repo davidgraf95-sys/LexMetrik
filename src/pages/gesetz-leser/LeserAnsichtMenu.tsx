@@ -98,7 +98,7 @@ export function LeserAnsichtMenu({ zeigeLinien, linienAutoAn = false }: { zeigeL
           tabIndex={-1}
           role="group"
           aria-label="Darstellungsoptionen"
-          className="absolute right-0 top-full z-40 mt-1.5 flex min-w-[13rem] flex-col gap-0.5 rounded-lg border border-line bg-paper-raised p-1.5 shadow-lg"
+          className="absolute left-0 top-full z-40 mt-1.5 flex w-[13rem] max-w-[calc(100vw-2rem)] flex-col gap-0.5 rounded-lg border border-line bg-paper-raised p-1.5 shadow-lg"
         >
           <p className="lc-overline px-2.5 pb-1 pt-0.5">Darstellung</p>
           {zeigeLinien && (
