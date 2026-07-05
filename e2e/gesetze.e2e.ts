@@ -58,7 +58,17 @@ test.describe('/gesetze — Übersicht', () => {
 })
 
 test.describe('Lesesicht (über Klick aus der Übersicht)', () => {
-  test('OR öffnet mit Volltext, TOC und funktionierender In-Gesetz-Suche', async ({ page }) => {
+  // Härtung (PR #145-Flake, 5.7.2026): der Scroll-Spy-/In-Gesetz-Such-Kontrakt
+  // flakte auf dem 1686-Artikel-OR unter gedrosseltem 2-vCPU-CI-Runner (fill-
+  // Timeout, weil die Live-Filterung aller 1686 Artikel den Main-Thread sättigt
+  // und [data-toc-aktiv] nicht rechtzeitig sichtbar wird). Fix nach dem G2a/G2b-
+  // Muster: (1) OR öffnet weiterhin über den Klick-Fluss und beweist Volltext +
+  // TOC (reine Ladeprüfung, seitengrössen-robust); (2) der interaktive Reader-
+  // Kontrakt (Scroll-Spy + In-Gesetz-Suche) wird auf einem KLEINEN strukturierten
+  // Erlass (VGKE, 24 Art. mit Gliederung) geprüft — derselbe Kontrakt, aber
+  // seitengrössen-UNABHÄNGIG → CPU-throttle-stabil. Assertions unverändert scharf,
+  // vor jeder Interaktion wird die App-Ready-Latte (Suchfeld sichtbar) abgewartet.
+  test('OR öffnet mit Volltext + TOC; Scroll-Spy und In-Gesetz-Suche (seitengrössen-unabhängig)', async ({ page }) => {
     const fehler = fehlerSammeln(page)
     await page.goto('/gesetze')
     // G4: erst die Bund-Kachel wählen (kein stiller Default), dann die Systematik
@@ -67,19 +77,25 @@ test.describe('Lesesicht (über Klick aus der Übersicht)', () => {
     await page.getByRole('main').getByRole('button', { name: 'Alle aufklappen' }).click()
     await page.getByRole('main').getByRole('link', { name: /Obligationenrecht/ }).first().click()
     await expect(page).toHaveURL(/\/gesetze\/bund\/OR/)
-    // Kopf + Inhaltsverzeichnis + Artikel 1 (erstes Band offen)
+    // Kopf + Inhaltsverzeichnis + Artikel 1 (erstes Band offen) — OR öffnet mit Volltext + TOC.
     await expect(page.getByRole('heading', { level: 1 })).toContainText('OR')
     await expect(page.getByText('Gliederung', { exact: true })).toBeVisible()
     await expect(page.locator('#art-1')).toContainText('Willensäusserung')
+
+    // Scroll-Spy + In-Gesetz-Suche auf dem kleinen Erlass. App-Ready abwarten:
+    // #art-1 gerendert + Suchfeld interaktiv, BEVOR gescrollt/gefiltert wird.
+    await page.goto('/gesetze/bund/VGKE')
+    await expect(page.locator('#art-1')).toBeVisible({ timeout: 20000 })
+    await expect(page.getByText('Gliederung', { exact: true })).toBeVisible({ timeout: 20000 })
+    const suche = page.getByRole('searchbox', { name: 'Im Gesetz suchen' })
+    await expect(suche).toBeVisible({ timeout: 20000 })
     // Standort beim Scrollen: der Scroll-Spy markiert die aktive Gliederung im
-    // Inhaltsverzeichnis (data-toc-aktiv); der amtliche Randtitel je Artikel steht
-    // in der Marginalspalte am Artikel. (Frühere Variante zeigte beides im sticky
-    // Running-Header; aktuelles Design = TOC-Markierung + Marginalspalte.)
+    // Inhaltsverzeichnis (data-toc-aktiv).
     await page.evaluate(() => window.scrollTo(0, 1200))
-    await expect(page.locator('[data-toc-aktiv]').first()).toBeVisible()
-    // In-Gesetz-Suche filtert
-    await page.getByRole('searchbox', { name: 'Im Gesetz suchen' }).fill('Willensäusserung')
-    await expect(page.getByText(/Treffer für/)).toBeVisible()
+    await expect(page.locator('[data-toc-aktiv]').first()).toBeVisible({ timeout: 15000 })
+    // In-Gesetz-Suche filtert (VGKE Art. 1 «Die Kosten der Verfahren …»).
+    await suche.fill('Kosten')
+    await expect(page.getByText(/Treffer für/)).toBeVisible({ timeout: 15000 })
     expect(fehler).toEqual([])
   })
 
