@@ -38,12 +38,13 @@ describe('extrahiereTarifTabelle', () => {
     expect(r).toEqual({
       vortext: '',
       tabelle: [{ beschreibung: 'Aufsichtsrechtliche Genehmigung', betrag: '150.— bis 2000.—' }],
+      nachtext: '',
     });
   });
 
   it('Rappen-Betrag «—.50»', () => {
     const r = extrahiereTarifTabelle('für jede weitere Kopie . . . . . . . . . . —.50');
-    expect(r).toEqual({ vortext: '', tabelle: [{ beschreibung: 'für jede weitere Kopie', betrag: '—.50' }] });
+    expect(r).toEqual({ vortext: '', tabelle: [{ beschreibung: 'für jede weitere Kopie', betrag: '—.50' }], nachtext: '' });
   });
 
   it('Multi-Leader: mehrere verschmolzene Zeilen werden getrennt', () => {
@@ -56,6 +57,7 @@ describe('extrahiereTarifTabelle', () => {
         { beschreibung: 'Einvernahme', betrag: '30.— bis 250.—' },
         { beschreibung: 'Augenschein', betrag: '150.— bis 3000.—' },
       ],
+      nachtext: '',
     });
   });
 
@@ -76,6 +78,7 @@ describe('extrahiereTarifTabelle', () => {
         { beschreibung: 'Die Gebühren betragen: Vorladung', betrag: '6.—' },
         { beschreibung: 'Mahnung', betrag: '10.— bis 50.—' },
       ],
+      nachtext: '',
     });
   });
 
@@ -87,15 +90,55 @@ describe('extrahiereTarifTabelle', () => {
     expect(extrahiereTarifTabelle('Siehe Anhang . . . . . . folgende Bestimmungen')).toBeNull();
   });
 
-  // FIX DEFECT 1 (trailing prose, 22.6.2026): Letztes Segment muss reiner Betrag sein.
-  // Blocks mit Tarif-Zeilen GEFOLGT VON weiterem Prosatext werden nicht tableisiert
-  // (return null) — verhindert stillen Inhaltsverlust (§1).
-  it('trailing prose nach letztem Betrag → null (kein stiller Inhaltsverlust)', () => {
-    // Realitätsnahes Beispiel: Tarif-Zeile, dann Übergangsbestimmung / nächster Artikel
+  // DELIBERATE SPEC CHANGE (G3b Klasse C, 5.7.2026): ersetzt den 22.6.-DEFECT-1-Guard.
+  // Früher liess ein letztes Segment mit angeklebtem Folgetext den GANZEN Block als
+  // Plaintext (return null) — Verlust-Schutz, aber auf Kosten der sauberen Leader-
+  // Zeilen davor. Diagnose G3b·C (159 SG-Blöcke nicht erfasst) zeigte: die trailing-
+  // Prosa (Folge-Artikel/Überschrift/Seitenzahl) lässt sich VERLUSTFREI als `nachtext`
+  // bewahren, während die sauberen Zeilen tableisiert werden. Konkatenations-Invariante:
+  // leader-freier Originaltext == Zeilen + nachtext (kein Inhalt verloren/erfunden, §1).
+  it('trailing prose nach letztem Betrag → tableisiert + nachtext (verlustfrei)', () => {
+    const r = extrahiereTarifTabelle(
+      'Einvernahme . . . . . . 30.— Art. 7 Grundsätze Der Erwerbspreis bestimmt sich nach …',
+    );
+    expect(r).toEqual({
+      vortext: '',
+      tabelle: [{ beschreibung: 'Einvernahme', betrag: '30.—' }],
+      nachtext: 'Art. 7 Grundsätze Der Erwerbspreis bestimmt sich nach …',
+    });
+  });
+
+  // Letztes Segment OHNE Betrag (Leader gefolgt von Prosa statt Preis) → die offene
+  // Beschreibung ist keine Tarifzeile; sie + das Rest-Segment werden zum nachtext.
+  it('letztes Segment ohne Betrag → offene Beschreibung wandert verlustfrei in nachtext', () => {
+    const r = extrahiereTarifTabelle(
+      'Vorladung . . . 6.— Mahnung . . . Der Erlass tritt am 1. Januar in Kraft.',
+    );
+    expect(r).toEqual({
+      vortext: '',
+      tabelle: [{ beschreibung: 'Vorladung', betrag: '6.—' }],
+      nachtext: 'Mahnung Der Erlass tritt am 1. Januar in Kraft.',
+    });
+  });
+
+  // Konkatenations-Invariante (der zentrale §1-Beweis): jedes Nicht-Leader-Zeichen
+  // des Originals erscheint genau einmal in einer Tarifzelle ODER im nachtext.
+  it('Konkatenations-Invariante: Zeilen + nachtext == leader-freier Originaltext', () => {
+    const orig = 'Einvernahme . . . . . . 30.— bis 250.— Augenschein . . . 150.— Art. 9 Schlussbestimmung tritt in Kraft.';
+    const r = extrahiereTarifTabelle(orig);
+    expect(r).not.toBeNull();
+    const recon = [
+      ...r!.tabelle.flatMap((z) => [z.beschreibung, z.betrag]),
+      r!.nachtext,
+    ].join(' ').replace(/\s+/g, ' ').trim();
+    const leaderfrei = orig.replace(/\.(?:\s?\.){2,}/g, ' ').replace(/\s+/g, ' ').trim();
+    expect(recon).toBe(leaderfrei);
+  });
+
+  // MITTLERES Segment ohne Betrag bleibt mehrdeutig → ganzer Block Plaintext (§1).
+  it('mittleres Segment ohne Betrag → null (nicht splitten)', () => {
     expect(
-      extrahiereTarifTabelle(
-        'Einvernahme . . . . . . 30.— Art. 7 Grundsätze Der Erwerbspreis bestimmt sich nach …',
-      ),
+      extrahiereTarifTabelle('Vorladung . . . Zwischenüberschrift ohne Preis . . . Mahnung . . . 10.—'),
     ).toBeNull();
   });
 
@@ -106,6 +149,7 @@ describe('extrahiereTarifTabelle', () => {
     expect(r).toEqual({
       vortext: '',
       tabelle: [{ beschreibung: 'Polizeibeamter: je Stunde', betrag: '90.—' }],
+      nachtext: '',
     });
   });
 
@@ -117,6 +161,7 @@ describe('extrahiereTarifTabelle', () => {
     expect(r).toEqual({
       vortext: '',
       tabelle: [{ beschreibung: 'Vorladung', betrag: '6.—' }],
+      nachtext: '',
     });
   });
 
@@ -158,6 +203,7 @@ describe('extrahiereTarifTabelle', () => {
           betrag: '200.—',
         },
       ],
+      nachtext: '',
     });
   });
 
@@ -174,6 +220,7 @@ describe('extrahiereTarifTabelle', () => {
           betrag: '500.—',
         },
       ],
+      nachtext: '',
     });
   });
 
@@ -197,6 +244,7 @@ describe('extrahiereTarifTabelle', () => {
     expect(r).toEqual({
       vortext: '',
       tabelle: [{ beschreibung: 'Vorladung', betrag: '6.—' }],
+      nachtext: '',
     });
   });
 });

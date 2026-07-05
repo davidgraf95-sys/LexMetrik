@@ -209,14 +209,68 @@
         },
         {
           "absatz": "1",
-          "text": "Die Entscheidgebühren betragen: 1 Verwaltungsrekurskommission und Versicherungsgericht 11 Einzelrichterin oder Einzelrichter; Präsidentin oder Präsident 111 Zwischenentscheid, verfahrensleitende Verfügung, Abschreibungsverfügung und Ähnliches . . . . . . . . . 200.– bis 2000.– 112 Endentscheid . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 400.– bis 4000.– 12 Abteilung oder Kammer 121 Zwischenentscheid, verfahrensleitende Verfügungen und Ähnliches . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 300.– bis 3000.– 122 Endentscheid . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 500.– bis 15000.– 2 Verwaltungsgericht 21 Einzelrichterin oder Einzelrichter; Präsidentin oder Präsident 211 Zwischenentscheid, verfahrensleitende Verfügung, Abschreibungsverfügung und Ähnliches . . . . . . . . . 200.– bis 2000.– 212 Endentscheid . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 400.– bis 4000.– 22 Gericht 221 Zwischenentscheid, verfahrensleitende Verfügung und Ähnliches . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 300.– bis 3000.– 222 Endentscheid . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 500.– bis 15000.– 3 Anwaltskammer 31 Präsidentin oder Präsident 311 Zwischenentscheid, verfahrensleitende Verfügung und Ähnliches . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 200.– bis 2000.– 312 Endentscheid . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 400.– bis 4000.– 32 Kammer 321 Zwischenentscheid, verfahrensleitende Verfügung und Ähnliches . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 300.– bis 3000.– 322 Endentscheid . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 500.– bis 6000.– 3. Behörden der Zivilgerichtsbarkeit"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Die Entscheidgebühren betragen: 1 Verwaltungsrekurskommission und Versicherungsgericht 11 Einzelrichterin oder Einzelrichter; Präsidentin oder Präsident 111 Zwischenentscheid, verfahrensleitende Verfügung, Abschreibungsverfügung und Ähnliches",
+              "betrag": "200.– bis 2000.–"
+            },
+            {
+              "beschreibung": "112 Endentscheid",
+              "betrag": "400.– bis 4000.–"
+            },
+            {
+              "beschreibung": "12 Abteilung oder Kammer 121 Zwischenentscheid, verfahrensleitende Verfügungen und Ähnliches",
+              "betrag": "300.– bis 3000.–"
+            },
+            {
+              "beschreibung": "122 Endentscheid",
+              "betrag": "500.– bis 15000.–"
+            },
+            {
+              "beschreibung": "2 Verwaltungsgericht 21 Einzelrichterin oder Einzelrichter; Präsidentin oder Präsident 211 Zwischenentscheid, verfahrensleitende Verfügung, Abschreibungsverfügung und Ähnliches",
+              "betrag": "200.– bis 2000.–"
+            },
+            {
+              "beschreibung": "212 Endentscheid",
+              "betrag": "400.– bis 4000.–"
+            },
+            {
+              "beschreibung": "22 Gericht 221 Zwischenentscheid, verfahrensleitende Verfügung und Ähnliches",
+              "betrag": "300.– bis 3000.–"
+            },
+            {
+              "beschreibung": "222 Endentscheid",
+              "betrag": "500.– bis 15000.–"
+            },
+            {
+              "beschreibung": "3 Anwaltskammer 31 Präsidentin oder Präsident 311 Zwischenentscheid, verfahrensleitende Verfügung und Ähnliches",
+              "betrag": "200.– bis 2000.–"
+            },
+            {
+              "beschreibung": "312 Endentscheid",
+              "betrag": "400.– bis 4000.–"
+            },
+            {
+              "beschreibung": "32 Kammer 321 Zwischenentscheid, verfahrensleitende Verfügung und Ähnliches",
+              "betrag": "300.– bis 3000.–"
+            },
+            {
+              "beschreibung": "322 Endentscheid",
+              "betrag": "500.– bis 6000.–"
+            }
+          ]
+        },
+        {
+          "absatz": null,
+          "text": "3. Behörden der Zivilgerichtsbarkeit"
         }
       ],
       "stand": "2012-03-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2808/pdf_file",
       "abgerufen": "2026-06-22",
       "fassungsToken": "856df8da4031f34d0fb6aad2e36c1cb9306182d97cff14cd2331264d28659def",
-      "sha": "61f097e88c5c8bc190a0e7cd65f9a60f81b401f8d432f34900275138fd80354b"
+      "sha": "a66c307c60953c3fed959e6049318cdc69fea5c6fdcdecf8c9567050bd6562ae"
     },
     {
       "id": "kanton/SG/2808/art_8",
@@ -758,14 +812,64 @@
         },
         {
           "absatz": "1",
-          "text": "Die Gebühren in der Jugendstrafrechtspflege betragen: 1 Verfügung, Entscheid oder Antrag, wenn keine andere Gebühr festgesetzt ist . . . . . . . . . . . . . . . . . . 50.– bis 1000.– 2 Ausstandsentscheid . . . . . . . . . . . . . . . . . . . . . . . . . . 100.– bis 3000.– 3 Nichtanhandnahmeverfügung . . . . . . . . . . . . . . . . . 50.– bis 1000.– 4 Sistierungsverfügung . . . . . . . . . . . . . . . . . . . . . . . . . 50.– bis 1000.– 5 Einstellungsverfügung . . . . . . . . . . . . . . . . . . . . . . . . 50.– bis 3000.– 6 Strafbefehl . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 50.– bis 3000.– 7 Anklage oder Schlussbericht . . . . . . . . . . . . . . . . . . . 100.– bis 3000.– 8 Schlussbericht . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 100.– bis 3000.– 9 Vertretung der Anklage vor Gericht . . . . . . . . . . . . . 100.– bis 6000.– 10 Schriftlicher Antrag im Gerichtsverfahren . . . . . . . 100.– bis 500.– 11 Antrag im Rechtsmittelverfahren . . . . . . . . . . . . . . . 100.– bis 500.– IV. Zusätzliche Gerichts- und Untersuchungskosten"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Die Gebühren in der Jugendstrafrechtspflege betragen: 1 Verfügung, Entscheid oder Antrag, wenn keine andere Gebühr festgesetzt ist",
+              "betrag": "50.– bis 1000.–"
+            },
+            {
+              "beschreibung": "2 Ausstandsentscheid",
+              "betrag": "100.– bis 3000.–"
+            },
+            {
+              "beschreibung": "3 Nichtanhandnahmeverfügung",
+              "betrag": "50.– bis 1000.–"
+            },
+            {
+              "beschreibung": "4 Sistierungsverfügung",
+              "betrag": "50.– bis 1000.–"
+            },
+            {
+              "beschreibung": "5 Einstellungsverfügung",
+              "betrag": "50.– bis 3000.–"
+            },
+            {
+              "beschreibung": "6 Strafbefehl",
+              "betrag": "50.– bis 3000.–"
+            },
+            {
+              "beschreibung": "7 Anklage oder Schlussbericht",
+              "betrag": "100.– bis 3000.–"
+            },
+            {
+              "beschreibung": "8 Schlussbericht",
+              "betrag": "100.– bis 3000.–"
+            },
+            {
+              "beschreibung": "9 Vertretung der Anklage vor Gericht",
+              "betrag": "100.– bis 6000.–"
+            },
+            {
+              "beschreibung": "10 Schriftlicher Antrag im Gerichtsverfahren",
+              "betrag": "100.– bis 500.–"
+            },
+            {
+              "beschreibung": "11 Antrag im Rechtsmittelverfahren",
+              "betrag": "100.– bis 500.–"
+            }
+          ]
+        },
+        {
+          "absatz": null,
+          "text": "IV. Zusätzliche Gerichts- und Untersuchungskosten"
         }
       ],
       "stand": "2012-03-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2808/pdf_file",
       "abgerufen": "2026-06-22",
       "fassungsToken": "856df8da4031f34d0fb6aad2e36c1cb9306182d97cff14cd2331264d28659def",
-      "sha": "a6344c08e371b801eaaee9a7bbf7e6af3d5c6da541ee70e6e112b561ca845e6b"
+      "sha": "a33b55f35f576fea1c5c22e90dc3538e7c98457a68bc811a02abbacbae64e432"
     },
     {
       "id": "kanton/SG/2808/art_21",

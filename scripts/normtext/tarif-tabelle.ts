@@ -44,21 +44,12 @@ const INCOMPLETE_SPLIT = new RegExp(`(?:${GELD_ATOM})\\s+\\d`);
 
 export function extrahiereTarifTabelle(
   text: string,
-): { vortext: string; tabelle: TarifZeile[] } | null {
+): { vortext: string; tabelle: TarifZeile[]; nachtext: string } | null {
   // In Segmente an den Leadern zerlegen: [desc0, nach1, nach2, …]. Jedes
   // «nachK» beginnt mit dem Betrag der K-ten Zeile, gefolgt von der
   // Beschreibung der (K+1)-ten Zeile.
   const segmente = text.split(LEADER);
   if (segmente.length < 2) return null; // kein Leader
-
-  // FIX DEFECT 1 (trailing prose, 22.6.2026): Konservatives Tableisieren.
-  // Das letzte Segment MUSS ein reiner Betrag sein (betragAmAnfang + leerer rest).
-  // Hat es Folgetext → den ganzen Block als Plaintext lassen (return null).
-  // Dies verhindert den stillen Verlust von Übergangsbestimmungen, nächsten
-  // Artikelabsätzen oder anderen Nicht-Tarif-Prosa am Ende eines PDF-Blocks.
-  const letztes = segmente[segmente.length - 1].trim();
-  const letzterBetrag = betragAmAnfang(letztes);
-  if (!letzterBetrag || letzterBetrag.rest.length > 0) return null;
 
   const tabelle: TarifZeile[] = [];
   let offeneBeschreibung = segmente[0].trim();
@@ -76,11 +67,38 @@ export function extrahiereTarifTabelle(
   // verlustfrei (kein Inhalt geht verloren) und verhindert jeden Fehlschnitt.
   const vortext = '';
 
+  // FIX DEFECT 1 → nachtext (G3b Klasse C, 5.7.2026, ersetzt den 22.6.-Verlust-Schutz):
+  // Früher liess ein letztes Segment mit Folgetext (Betrag + angeklebter Rest ODER
+  // gar kein Betrag) den GANZEN Block als Plaintext (return null) — Verlust-Schutz
+  // gegen still verschluckte Übergangsbestimmungen/Folge-Artikel/Überschriften am
+  // Blockende. Diagnose G3b·C (159 SG-Blöcke): das droppt auch die vielen SAUBEREN
+  // Leader-Zeilen davor. Neu: die sauberen Leader-Zeilen werden tableisiert, der
+  // trailing Rest wird als `nachtext` VERLUSTFREI bewahrt (Konkatenations-Invariante:
+  // leader-freier Originaltext == Zeilen + nachtext). Kein Inhalt erfunden/verloren (§1);
+  // die Anzeige rendert `nachtext` als eigenen Text-Block hinter der Tabelle (§3).
+  let nachtext = '';
+
   for (let k = 1; k < segmente.length; k++) {
+    const istLetztes = k === segmente.length - 1;
     const b = betragAmAnfang(segmente[k]);
-    if (!b) return null; // Leader ohne Betrag → kein Tarif → nicht splitten (§1)
+    if (!b) {
+      // Segment ohne führenden Betrag.
+      if (istLetztes) {
+        // Letztes Segment: reiner Nach-Text (kein weiterer Tarif-Betrag). Die noch
+        // offene Beschreibung trug zwar einen Leader, aber KEINEN Betrag → sie ist
+        // keine Tarifzeile, sondern gehört zum Nach-Text (verlustfrei erhalten).
+        nachtext = `${offeneBeschreibung} ${segmente[k].trim()}`.trim();
+        break;
+      }
+      return null; // MITTLERES Segment ohne Betrag → mehrdeutig → nicht splitten (§1)
+    }
     tabelle.push({ beschreibung: offeneBeschreibung, betrag: b.betrag });
     offeneBeschreibung = b.rest; // Beschreibung der nächsten Zeile
+    if (istLetztes) {
+      // Rest hinter dem letzten Betrag = Nach-Text (angeklebter Folge-Artikel,
+      // Überschrift, Seitenzahl o.Ä.) → verlustfrei als nachtext bewahren.
+      nachtext = offeneBeschreibung;
+    }
   }
   if (tabelle.length === 0) return null;
 
@@ -102,5 +120,5 @@ export function extrahiereTarifTabelle(
   // Tritt auch nur ein solcher Wert auf → ganzen Block als Plaintext belassen.
   if (tabelle.some(zeile => !/[—–-]/.test(zeile.betrag))) return null;
 
-  return { vortext, tabelle };
+  return { vortext, tabelle, nachtext };
 }

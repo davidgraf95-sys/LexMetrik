@@ -687,13 +687,27 @@ function fuegeZeilen(roh: string[]): string {
  */
 // Idempotent: bereits tableisierte Blöcke haben text==='' und werden durch
 // «if (!b.text) continue» übersprungen — mehrfacher Aufruf ist sicher.
-function reichereTabellen(bloecke: PdfBlock[]): void {
-  for (const b of bloecke) {
+// Index-basierte Iteration, weil ein Block mit `nachtext` (G3b Klasse C) einen
+// Geschwister-Text-Block NACH sich einfügt; der eingefügte Block wird selbst
+// mitverarbeitet (Kaskade, falls der Nach-Text seinerseits Leader-Zeilen trägt).
+export function reichereTabellen(bloecke: PdfBlock[]): void {
+  for (let i = 0; i < bloecke.length; i++) {
+    const b = bloecke[i];
     if (!b.text) continue;
+    // §1-Guard: einen Block mit lit./Ziff.-`items` NIE tableisieren — der Renderer
+    // gibt bei vorhandener `tabelle` früh zurück und würde die items verbergen
+    // (Inhaltsverlust). Solche Blöcke bleiben Plaintext. (Aktuell 0 Fälle; Schutz
+    // gegen künftige Regressionen.)
+    if (b.items && b.items.length > 0) continue;
     const t = extrahiereTarifTabelle(b.text);
-    if (t) {
-      b.text = t.vortext;
-      b.tabelle = t.tabelle;
+    if (!t) continue;
+    b.text = t.vortext;
+    b.tabelle = t.tabelle;
+    if (t.nachtext) {
+      // Trailing-Prosa (angeklebter Folge-Artikel/Überschrift/Seitenzahl) verlustfrei
+      // als eigenen Text-Block hinter der Tabelle bewahren (§1/§3). absatz=null: es ist
+      // keine nummerierte Absatzeinheit, sondern Fortsetzungs-/Restinhalt.
+      bloecke.splice(i + 1, 0, { absatz: null, text: t.nachtext });
     }
   }
 }
