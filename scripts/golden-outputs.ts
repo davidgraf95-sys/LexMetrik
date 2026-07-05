@@ -8,6 +8,7 @@
 //   npm run golden:vergleich  # Gate: aktueller Code vs. committete Basis
 import { writeFileSync, readFileSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
+import { diffArrays } from 'diff';
 
 import { berechneFrist } from '../src/lib/zpoFristen';
 import { berechneSchkgFrist } from '../src/lib/schkgFristen';
@@ -605,6 +606,44 @@ f('absatz:erbfrist:ausschlagung', () => begruendungsAbsatz(berechneErbFrist({ ke
 // liefert prozent-kodierte Pfade (Leerzeichen/Umlaute/Windows-Laufwerke).
 const PFAD = fileURLToPath(new URL('../golden/lexmetrik-golden.json', import.meta.url));
 const json = JSON.stringify(faelle, null, 1);
+
+/** Myers-Diff-Diagnose (B6, Werkzeug-Audit 3.7.2026). Richtet Basis/Neu
+ *  Zeile-für-Zeile korrekt aus, statt naivem Index-Vergleich, der bei EINER
+ *  eingefügten/entfernten Zeile alles darunter fälschlich als «geändert» meldet
+ *  (die Zeilen verschieben sich um 1, jeder Folge-Index wich ab). `diffArrays`
+ *  löst die kürzeste Editierfolge — nur die real geänderten Zeilen erscheinen
+ *  als − / +, verschobene Kontextzeilen bleiben als Kontext. REINE DIAGNOSE:
+ *  das Gate bleibt der Byte-Vergleich (`golden:vergleich`), diese Ausgabe fällt
+ *  in kein Tor-Verdikt ein. Lange unveränderte Läufe werden auf `kontext` Zeilen
+ *  je Seite gekürzt; die Gesamtausgabe auf `maxZeilen` gedeckelt. */
+function druckeMyersDiff(altZeilen: string[], neuZeilen: string[], kontext = 3, maxZeilen = 200): void {
+  const teile = diffArrays(altZeilen, neuZeilen);
+  const zeilen: string[] = [];
+  teile.forEach((teil, idx) => {
+    if (teil.added || teil.removed) {
+      const zeichen = teil.added ? '+' : '−';
+      for (const l of teil.value) zeilen.push(`${zeichen} ${l}`);
+      return;
+    }
+    // Unveränderter Block: nur bis zu `kontext` Zeilen zu benachbarten
+    // Änderungen zeigen, den Rest zusammenfassen (unified-diff-Kontext).
+    const v = teil.value;
+    const vorAenderung = idx > 0;
+    const nachAenderung = idx < teile.length - 1;
+    if (v.length <= kontext * 2 || (!vorAenderung && !nachAenderung)) {
+      for (const l of v) zeilen.push(`  ${l}`);
+      return;
+    }
+    const kopf = vorAenderung ? v.slice(0, kontext) : [];
+    const fuss = nachAenderung ? v.slice(v.length - kontext) : [];
+    for (const l of kopf) zeilen.push(`  ${l}`);
+    const versteckt = v.length - kopf.length - fuss.length;
+    if (versteckt > 0) zeilen.push(`  … ${versteckt} unveränderte Zeile${versteckt === 1 ? '' : 'n'} …`);
+    for (const l of fuss) zeilen.push(`  ${l}`);
+  });
+  for (let i = 0; i < zeilen.length && i < maxZeilen; i++) console.log(zeilen[i]);
+  if (zeilen.length > maxZeilen) console.log(`… gekürzt (${zeilen.length - maxZeilen} weitere Diff-Zeilen; Fall stark verändert).`);
+}
 if (process.argv[2] === 'vergleich') {
   if (!existsSync(PFAD)) { console.error('Kein Golden-Stand vorhanden — zuerst ohne Argument laufen lassen.'); process.exit(2); }
   const alt = readFileSync(PFAD, 'utf-8');
@@ -652,18 +691,7 @@ if (process.argv[2] === 'vergleich') {
       console.log(`IDENTISCH — Fall ${id} byte-gleich.`);
     } else {
       console.log(`DIFF ${id} (− Basis ${PFAD} / + aktueller Code):`);
-      // naiver Zeilenvergleich (genügt für Textänderungen; bei Einfügungen
-      // verschiebt sich der Index — Ausgabe gedeckelt, Hinweis am Ende)
-      const max = Math.max(altZeilen.length, neuZeilen.length);
-      let ausgegeben = 0;
-      for (let i = 0; i < max && ausgegeben < 80; i++) {
-        const a = altZeilen[i];
-        const n = neuZeilen[i];
-        if (a === n) continue;
-        if (a !== undefined) { console.log(`− ${a}`); ausgegeben++; }
-        if (n !== undefined) { console.log(`+ ${n}`); ausgegeben++; }
-      }
-      if (ausgegeben >= 80) console.log(`… gekürzt (Fall stark verändert; Zeilen alt ${altZeilen.length} / neu ${neuZeilen.length}).`);
+      druckeMyersDiff(altZeilen, neuZeilen);
     }
   }
 } else if (process.argv[2] === undefined) {
