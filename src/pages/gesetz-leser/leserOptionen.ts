@@ -21,13 +21,15 @@
 // UND jedes Split-View-Pane) folgen derselben Wahl ohne Re-Render.
 //
 // Fussnoten/Verweise: Default 'an' = heutige Darstellung → data-*="an" ist ein
-// CSS-No-op (R6: Grundzustand byte-gleich). Linien: Default 'auto' (W2·5d G3a/
-// K11) = grundart-abhängig — im Reader zeigt CSS den EINEN Guide nur bei
-// KODIFIKATION (tiefer Kodex braucht Orientierung), flachere Grundarten bleiben
-// ruhig ohne Guide. Ein expliziter Klick setzt 'an'/'aus' und übersteuert die
-// Grundart global. Alle CSS-Regeln sind auf `.lc-leser` gescopt (index.css),
-// damit sie NUR den Reader treffen (nicht das Norm-Popover der Rechner o. Ä.);
-// die Grundart kommt als data-grundart am `.lc-leser`-Root (inhalt.tsx, §5).
+// CSS-No-op (R6: Grundzustand byte-gleich). Linien: Default 'auto' (W2·5d
+// U-LINIEN/A8) = AUFBAU-abhängig — nicht mehr die grundart-Schublade (K11)
+// entscheidet, sondern der tatsächliche Aufbau des Erlasses (linienAufbau.ts:
+// Gliederungstiefe + Artikel-Dichte). Der Reader schreibt das Ergebnis als
+// data-guide-auto="an|aus" an den `.lc-leser`-Root; CSS zeigt den EINEN Guide bei
+// 'an' (flaches/mittleres Gesetz — seine Ebene wird sichtbar) und blendet ihn bei
+// 'aus' (tiefe Kodifikation — bleibt ruhig, Einzug bleibt). Ein expliziter Klick
+// setzt 'an'/'aus' und übersteuert das global. Alle CSS-Regeln sind auf
+// `.lc-leser` gescopt (index.css), damit sie NUR den Reader treffen.
 
 import { useSyncExternalStore } from 'react';
 

@@ -13,6 +13,7 @@ import {
   baueGliederungsbaum, type Sektion, type StrukturMap, type ErlassKopf, type CurrencyMap,
 } from '../../lib/normtext/browse';
 import { sachgruppe, topTitel, type KantonSystematik } from '../../lib/normtext/systematik';
+import { linienProfil } from './linienAufbau';
 import { GEBIET_LABEL } from '../../lib/normtext/register';
 import { KontextPanel } from '../../components/kontext/KontextPanel';
 import type { BrowseErlass, BrowseManifest } from '../../lib/normtext/browse-typen';
@@ -309,6 +310,15 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     () => (eintraege ? baueGliederungsbaum(eintraege, struktur) : { sektionen: [], ohneGliederung: [] }),
     [eintraege, struktur],
   );
+
+  // W2·5d U-LINIEN (A8): das Linien-Regelwerk «wann welche Linie» leitet der Reader
+  // aus dem TATSÄCHLICHEN Aufbau des Erlasses ab (Struktur-Sidecar: Gliederungstiefe
+  // + Artikel-Dichte je Ebene), NICHT mehr aus der grundart-Schublade (der frühere
+  // K11-Default «nur KODIFIKATION»). `guideEbene` sagt renderSektion, welche Sektions-
+  // tiefe den EINEN vertikalen Guide trägt; `autoGuide` steuert den Auto-Default
+  // (data-guide-auto am .lc-leser → index.css). Reine Darstellung (§3, SSoT
+  // linienAufbau.ts, im Tor `check:linien-kanon` korpusweit gegated).
+  const linien = useMemo(() => linienProfil(struktur), [struktur]);
 
   // Dokument-Position (Index des ersten enthaltenen Artikels) je Sektion — EINMAL
   // bottom-up berechnet, damit renderSektion die Kinder + direkten Artikel eines
@@ -936,19 +946,19 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
           })),
         ].sort((a, b) => a.pos - b.pos)
       : [];
-    // Linien-Kanon (W2·5d G1, DESIGN-REGLEMENT-NORMTEXT §Linien-Kanon Regel 1 +
-    // §Weissraum-Rhythmus): HÖCHSTENS EINE vertikale Guide-Linie gleichzeitig —
-    // nur die erste Schachtelungsebene (tiefe === 1) trägt den Guide; tiefere
-    // Ebenen werden allein über den EINZUG getragen (kein gestapelter «Barcode»
-    // aus border-l pro Ebene, der ZGB Art. 684 / OR Art. 319 mit ~6 Linien
-    // zupflasterte). Einzug-Skala: Tiefe 1–3 → je eine `einzug`-Stufe (20px),
-    // gedeckelt bei 3. MOBIL kollabiert der Einzug (`pl-0 sm:pl-einzug`), die
-    // eine Guide bleibt am Spaltenrand → behebt den ~16-ch-Mobil-Fall. CLS 0:
-    // Einzug = padding, Guide = border darauf; Umschalten/Kollabieren bewegt
-    // keinen Textknoten. G2a: Guide + Einzug werden IMMER emittiert; der
-    // Options-Toggle `data-linien="aus"` blendet sie rein per CSS aus (kein
-    // Artikel-Re-Render, §15). Markup byte-gleich zum früheren Default AN (R6).
-    const guide = tiefe === 1;
+    // Linien-Kanon (W2·5d G1 + U-LINIEN/A8, DESIGN-REGLEMENT-NORMTEXT §4b Regel 1 +
+    // §Weissraum-Rhythmus): HÖCHSTENS EINE vertikale Guide-Linie gleichzeitig — genau
+    // die aufbau-abhängige `linien.guideEbene` trägt den Guide (Ebene 0 bei einer
+    // einzigen Gliederungsebene → «flache Ebene sichtbar», sonst Ebene 1); tiefere
+    // Ebenen tragen ihre Tiefe allein über den EINZUG (kein gestapelter «Barcode» aus
+    // border-l pro Ebene, der ZGB Art. 684 / OR Art. 319 zupflasterte). `guideEbene
+    // === null` (flache Artikelliste) ⇒ gar kein Guide. Einzug-Skala: Tiefe 1–3 → je
+    // eine `einzug`-Stufe (20px), gedeckelt bei 3. MOBIL kollabiert der Einzug
+    // (`pl-0 sm:pl-einzug`), die eine Guide bleibt am Spaltenrand. CLS 0: Einzug =
+    // padding, Guide = border darauf. Der Guide wird bei jedem Erlass mit Gliederung
+    // emittiert; ob er im Auto-Default SICHTBAR ist, entscheidet der aufbau-basierte
+    // `data-guide-auto`-Toggle rein per CSS (kein Artikel-Re-Render, §15).
+    const guide = linien.guideEbene !== null && tiefe === linien.guideEbene;
     const eingerueckt = tiefe > 0 && tiefe <= 3;
     const einzugCls = eingerueckt ? (guide ? 'pl-3 sm:pl-einzug' : 'pl-0 sm:pl-einzug') : '';
     return (
@@ -985,10 +995,12 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   return (
     // `lc-leser`: Scope-Anker für die G2a-Options-CSS (index.css) — die
     // data-linien/-fussnoten/-verweise-Regeln greifen NUR im Reader, nie im
-    // Norm-Popover der Rechner o. Ä. `data-grundart` (G3a/K11): der grundart-
-    // abhängige Linien-Default 'auto' wertet CSS hieran aus (nur KODIFIKATION
-    // zeigt den Guide). Reine Darstellung (§3/§5, Grundart aus dem Register).
-    <div className="lc-leser space-y-5" data-grundart={meta.grundart ?? undefined}>
+    // Norm-Popover der Rechner o. Ä. `data-guide-auto` (U-LINIEN/A8): der
+    // AUFBAU-abhängige Linien-Default 'auto' wertet CSS hieran aus — 'aus' = tiefe
+    // Kodifikation bleibt ruhig (Guide unsichtbar, Einzug bleibt), 'an' = flaches/
+    // mittleres Gesetz zeigt seine EINE Guide-Ebene. Löst den grundart-Kategorie-
+    // Default (K11) ab. `data-grundart` bleibt als semantischer Marker (§5).
+    <div className="lc-leser space-y-5" data-grundart={meta.grundart ?? undefined} data-guide-auto={linien.autoGuide ? 'an' : 'aus'}>
       {/* Breadcrumb trägt seit A/F der Kopf: Einzelansicht → Inhalts-Kopf, Split-View
           → PaneKopf. Kein zweiter Inline-Breadcrumb mehr (sonst Dopplung im Pane).
           G2b: EINE Kopf-Komponente (ErlassLeserKopf) — dieselbe wie im pdf-embed-
@@ -1012,7 +1024,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
             {/* W2·5d G2a/G2b: Options-Leiste (Linien/Fussnoten/Verweise) — reine
                 data-*-/CSS-Toggles (leserOptionen.ts), global, jede Instanz synchron.
                 Linien-Schalter nur bei geschachteltem Gesetz (sonst wirkungslos). */}
-            <LeserOptionenLeiste zeigeLinien={sektionen.length > 0} linienAutoAn={meta.grundart === 'KODIFIKATION'} />
+            <LeserOptionenLeiste zeigeLinien={linien.guideEbene !== null} linienAutoAn={linien.autoGuide} />
           </>
         } />
 

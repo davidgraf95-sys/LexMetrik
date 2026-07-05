@@ -224,19 +224,27 @@
      Darstellung byte-gleich (R6). Alle Regeln auf `.lc-leser` gescopt, damit NUR
      der Gesetzes-Reader betroffen ist (nicht das Norm-Popover der Rechner). */
 
-  /* Linien AUS: Gliederungs-Guide unsichtbar (border-Breite BLEIBT 1px reserviert
-     → das Ausblenden der Linie bewegt keinen Textknoten, CLS-freundlich) und der
-     Einzug kollabiert (flache Textkante) — reproduziert den früheren Zustand
-     «Gruppierungslinien aus». Ctrl+F/Anker/Print unberührt (nur border+padding).
-     W2·5d G3a/K11: der Default 'auto' folgt der GRUNDART (data-grundart am
-     .lc-leser-Root, §5): nur KODIFIKATION zeigt den EINEN Guide, alle flacheren
-     Grundarten blenden ihn im Auto-Zustand aus (ruhiger 80%-Fall). Ein
-     expliziter Nutzer-Klick ('an'/'aus') übersteuert das global. Nur border/
-     padding → CLS 0, Prosa/Ctrl+F/Anker byte-gleich (reine Darstellung). */
-  html[data-linien="aus"] .lc-leser [data-normtext-linie],
-  html[data-linien="auto"] .lc-leser:not([data-grundart="KODIFIKATION"]) [data-normtext-linie] {
+  /* Linien AUS (expliziter Nutzerwunsch, K11-Override): Gliederungs-Guide unsichtbar
+     (border-Breite BLEIBT 1px reserviert → das Ausblenden der Linie bewegt keinen
+     Textknoten, CLS-freundlich) UND der Einzug kollabiert (flache Textkante) —
+     reproduziert den Zustand «Gruppierungslinien aus». Ctrl+F/Anker/Print unberührt
+     (nur border+padding). */
+  html[data-linien="aus"] .lc-leser [data-normtext-linie] {
     border-left-color: transparent;
     padding-left: 0;
+  }
+
+  /* Linien AUTO = AUFBAU-basierter Default (W2·5d U-LINIEN/A8, löst den grundart-
+     Kategorie-Default K11 ab): `data-guide-auto` am .lc-leser-Root kommt aus
+     linienAufbau.ts (Gliederungstiefe + Artikel-Dichte je Ebene). 'aus' = tiefe
+     Kodifikation (ZGB/OR, Tiefe ≥ 3): der vertikale Guide wird ausgeblendet, damit
+     die vielen Ebenen nicht in Linien ERTRINKEN — der EINZUG bleibt aber stehen
+     (Rangfolge §4b: Typo > Einzug > Guide), die Tiefe flüstert weiter. 'an' =
+     flaches/mittleres Gesetz (ArG, Kurzerlass, Staatsvertrag): der Guide zeigt
+     seine EINE Ebene sichtbar. Ein expliziter Klick ('an'/'aus') übersteuert das
+     global. Nur border-Farbe → CLS 0, Prosa/Ctrl+F/Anker byte-gleich. */
+  html[data-linien="auto"] .lc-leser[data-guide-auto="aus"] [data-normtext-linie] {
+    border-left-color: transparent;
   }
 
   /* Fussnoten AUS: die Fussnoten-Marker (¹²³) werden GEDÄMPFT, NIE display:none
