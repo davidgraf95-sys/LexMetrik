@@ -1156,7 +1156,10 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
               — kein neuer Observer, keine Scroll-Listener-Kaskade (§15). */}
           {zweiSpalten && !treffer && (
             <SektionKontextKopf
-              pfad={aktivIds.map((id) => sekLabelById.get(id)).filter((l): l is string => !!l)}
+              glieder={aktivIds
+                .map((id) => ({ id, label: sekLabelById.get(id) ?? '' }))
+                .filter((g) => g.label !== '')}
+              onSpringe={springeZuSektion}
               artikelLabel={aktArtikel ? `${aktArtikel} ${erlass.kuerzel}` : null}
               zitat={baueZitat(erlass, aktArtikel ?? '')}
               top={imPane ? '0.5rem' : 'calc(4rem + 2.25rem)'} />

@@ -30,6 +30,48 @@ test('Sticky Section-Kontextkopf: zeigt Standort + «Zitat kopieren» (Desktop 2
   await expect(zitatBtn).toBeVisible();
 });
 
+// W2·5d U-KOPF/A3 (David 5.7.2026): die Positions-Zeile ist zu ECHTEN,
+// klickbaren Breadcrumbs aufgelöst — nav > ol/li, jedes Glied ein Button, das
+// letzte Glied trägt aria-current="location", ein Klick springt zur Ebene.
+test('A3 Breadcrumbs: klickbare nav mit aria-current; Klick auf oberstes Glied springt zur Ebene', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await warteReader(page, '/gesetze/bund/BV#art-8');
+  await page.locator('#art-8').scrollIntoViewIfNeeded();
+  await page.waitForTimeout(500); // Scroll-Spy den aktiven Pfad/Artikel setzen lassen
+  const nav = page.locator('[data-kontext-kopf] nav[aria-label="Standort im Erlass"]');
+  await expect(nav).toBeVisible();
+  // Breadcrumb-Glieder sind echte Buttons (klickbar UND tastaturbedienbar).
+  const glieder = nav.getByRole('button');
+  await expect(glieder.first()).toBeVisible();
+  await glieder.first().focus();
+  expect(await glieder.first().evaluate((el) => el === document.activeElement)).toBe(true);
+  // Genau EIN Glied trägt aria-current="location" (die aktuelle Position = Artikel).
+  await expect(nav.locator('li[aria-current="location"]')).toHaveCount(1);
+  // Klick auf das oberste Breadcrumb-Glied springt zu dessen Sektion → die Seite
+  // scrollt nach oben (art-8 liegt tiefer als die oberste Gliederungsebene).
+  const vorher = await page.evaluate(() => window.scrollY);
+  await glieder.first().click();
+  await page.waitForTimeout(600);
+  const nachher = await page.evaluate(() => window.scrollY);
+  expect(nachher).toBeLessThan(vorher);
+});
+
+// A3 Overflow-Schutz: der Sticky-Positions-Kopf ist ein ≥1024px-2-Spalten-Feature
+// (mobil gibt es — wie bisher — keine Sticky-Positionsleiste). An seiner schmalsten
+// Render-Breite (1024) darf der Breadcrumb-Pfad nie horizontal überlaufen: die
+// Label truncaten, die nav ist overflow-hidden, mittlere Glieder kollabieren
+// defensiv per `hidden sm:inline-flex`.
+test('A3 Breadcrumbs @1024: Pfad läuft nicht über (truncate + overflow-hidden)', async ({ page }) => {
+  await page.setViewportSize({ width: 1024, height: 900 });
+  await warteReader(page, '/gesetze/bund/BV#art-8');
+  await page.locator('#art-8').scrollIntoViewIfNeeded();
+  await page.waitForTimeout(500);
+  await expect(page.locator('[data-kontext-kopf] nav[aria-label="Standort im Erlass"]')).toBeVisible();
+  const overflow = await page.evaluate(() =>
+    document.documentElement.scrollWidth > document.documentElement.clientWidth + 1);
+  expect(overflow).toBe(false);
+});
+
 // P1-d — Currency-Chips im Leser-Kopf (Moat-Hebel 3). Der Chip steht schon im
 // prerenderten Kopf (CLS=0) UND im React-Kopf (geteilte Komponente ErlassLeserKopf,
 // beide Leser-Instanzen). BV ist aktuell + hat eine künftige Fassung → beide Chips;
