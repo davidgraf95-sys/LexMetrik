@@ -132,3 +132,14 @@ Branch↔`origin/main`, 64 Risiko-Dateien): `00868867ab0d96b5…`.
 - **VRV `annex_I`/`annex_II`**: «…»-Platzhalter (VRV-Anhänge nie befüllt, vorbestehend).
 Diese sind NICHT durch den Currency-Lauf verursacht; Fix = eigener Extraktor-Batch
 (Formel-/Signalbild-/Randtitel-Adjazenz).
+
+**Nachtrag 5.7.2026 — Härtungs-Batch AUSGEFÜHRT** (Branch `fix/fedlex-extraktor-adjazenz`):
+alle 3 Punkte abgearbeitet. (1) VTS art_123/3: `match[6]`-Bild-Absatz-Zweig erfasste
+NUR das `<img>` — Text-Läufe vor/nach dem Bild werden jetzt als eigene Blöcke geführt
+(+36 Wörter, zeichengenau amtlich). (2) SSV art_24: Ursache war NICHT das Bild, sondern
+markenlose Folge-`<dd>` (leeres `<dt></dt>`) — `parseDefinitionsListe` hängt sie jetzt
+im Haupttext-Pfad an das vorausgehende Item an (+35 Wörter; Anhang-Pfad bewusst
+ausgenommen, dort deckt `markeloseNotizen` schon ab). (3) VRV annex_I/II: amtlich
+AUFGEHOBEN (leerer `collapseable`-Body, nur Aufhebungs-Fussnoten 426/427) — «…» ist
+faithful, KEIN Verlust, keine Änderung nötig. Gegenprüfung bestanden (Register-Zeile
+5.7., Hash `c6639e0d9623…`); Beleg-Detail im gegenpruefung-register.
