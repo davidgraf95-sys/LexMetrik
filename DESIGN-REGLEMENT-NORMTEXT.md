@@ -153,14 +153,14 @@ Art. 684 / OR Art. 319). Neu (Tokens in `src/index.css` `:root` **und**
 
 | Rolle | Klasse | CSS-Var (hell / dunkel) | Wo (strukturell) |
 |---|---|---|---|
-| **Gliederungs-Guide** (vertikale Tiefen-Linie) | `border-l border-guide` | `--guide-gliederung` (10 % / 14 %) | `renderSektion` (nur tiefe === 1) |
+| **Gliederungs-Guide** (vertikale Tiefen-Linie) | `border-l border-guide` | `--guide-gliederung` (10 % / 14 %) | `renderSektion` (nur `linien.guideEbene`, aufbau-basiert — §4b-A) |
 | **Artikel-Trenner** (fein) | `border-t border-rule-artikel` | `--rule-artikel` (10 % / 14 %) | Artikel-Kopf, Tabellenzeilen, Fussnoten-Trenner |
 | **Struktur-Trenner** (oberste Sektionen Teil/Titel/Abschnitt, eine Spur kräftiger) | `border-t/-b border-rule-struktur` | `--rule-struktur` (14 % / 20 %) | Sektionskopf ebene ≤ 1, Ingress |
 
 Harte Regeln:
-1. **Höchstens EINE vertikale Guide-Linie gleichzeitig** — nur die erste
-   Schachtelungsebene trägt den Guide; grössere Tiefe wird über **Einzug**
-   getragen, nie über eine zweite parallele Linie.
+1. **Höchstens EINE vertikale Guide-Linie gleichzeitig** — genau die aufbau-
+   abhängige Ebene (`linien.guideEbene`, §4b-A) trägt den Guide; grössere Tiefe
+   wird über **Einzug** getragen, nie über eine zweite parallele Linie.
 2. **Innere Sektionen (ebene ≥ 2) und randtitel-promotete Knoten** («A.», «II.»)
    tragen **keine** Horizontal-Linie (die frühere feine ebene-2-Linie entfällt);
    ihre Tiefe trägt Typo + Einzug.
@@ -196,6 +196,59 @@ horizontaler Overflow @ 390). **`golden/lexmetrik-golden.json` bleibt byte-gleic
 (der Reader liegt nicht in der Engine-Golden-Matrix); der amtliche **Wortlaut ist
 unangetastet** (§1, Text-Extraktion vorher/nachher byte-gleich) — geändert sind
 ausschliesslich Klassen/Attribute.
+
+### §4b-A · Linien-Aufbau-Regelwerk (W2·5d U-LINIEN / A8, 5.7.2026)
+
+**Wann zeigt der Reader den vertikalen Gliederungs-Guide? — nach dem TATSÄCHLICHEN
+Aufbau des Erlasses, NICHT nach seiner grundart-Kategorie.** Davids Anmerkung A8:
+«Liniengliederungsdarstellung … regeln festlegen wie es wann angezeigt wird JE NACH
+AUFBAU GESETZ. zgb bspw. sehr viele aber arg fast keine aktuell.» Der frühere
+G3a/K11-Default war kategorie-basiert (nur `grundart==='KODIFIKATION'` zeigte den
+Guide) — genau die gerügte Inkonsistenz: das tiefe **ZGB** ertrank in Linien, das
+flache **ArG** bekam gar keine. Neu leitet **SSoT `src/pages/gesetz-leser/linienAufbau.ts`
+(`linienProfil`)** den Default aus dem Struktur-Sidecar ab (Gliederungstiefe +
+Artikel-Dichte je Ebene). Der K11-Tri-State-**Nutzer-Override** (`data-linien`
+an/aus, global) bleibt unangetastet — hier geht es allein um den AUTO-Default.
+
+**Profil je Erlass** (`linienProfil`): `strukturTiefe` = max. Gliederungs-
+Verschachtelung; `guideEbene` = Sektions-tiefe, die den EINEN Guide trägt (`null` =
+flache Artikelliste); `dichteAmGuide` = Median Artikel je Sektion auf `guideEbene`;
+`autoGuide` = zeigt der Guide im Auto-Default? Der Reader schreibt `autoGuide` als
+`data-guide-auto="an|aus"` an den `.lc-leser`-Root; CSS wertet es aus.
+
+| Aufbau (`strukturTiefe`) | `guideEbene` | Auto-Default | Wirkung |
+|---|---|---|---|
+| **0** (flache Artikelliste, z. B. VMWG, Kanton-§) | `null` | — | Kein Guide; Artikel trennt der feine Artikel-Trenner. |
+| **1** (eine Gliederungsebene, z. B. Kurzerlass, Staatsvertrag) | 0 | **AN** (Dichte ≥ 2) | Die EINE Ebene wird sichtbar («flache Ebene sichtbar»). |
+| **2** (zwei Ebenen, z. B. ArG) | 1 | **AN** (Dichte ≥ 2) | Guide auf der inneren Gruppierung; die äussere trägt Typo + Struktur-Trenner. |
+| **≥ 3** (tiefe Kodifikation, z. B. BV, OR, ZGB) | 1 | **AUS** | Guide unsichtbar, **Einzug bleibt** — die vielen Ebenen ertrinken nicht (Rangfolge §4b: Typo > Einzug > Guide). |
+
+**Zusatz-Boden:** bei `dichteAmGuide ≤ 1` (Median 1 Artikel je geführter Sektion)
+bleibt `autoGuide` **AUS** — der Guide wäre sonst ein Per-Artikel-Barcode statt
+einer Gruppierung.
+
+**Empirische Schwellen-Herleitung** (`node scripts/linien-korpus-verteilung.mjs`,
+1135 Sidecar-Erlasse). Gliederungstiefe-Verteilung: `Tiefe 0: 900 (79 %) · 1: 64 ·
+2: 98 · 3: 58 · 4: 12 · 5: 3`. Der Bruch liegt sichtbar zwischen «flach/mittel»
+(≤ 2 Ebenen) und «tiefe Kodifikation» (≥ 3): ab drei gleichzeitig sichtbaren
+Überschriften-Ebenen trägt die Typo-Staffel + der horizontale Struktur-Trenner + der
+Einzug die Hierarchie bereits vollständig — ein zusätzlicher vertikaler Strich je
+Sektion wird zum «Barcode» (ZGB Art. 684 / OR Art. 319, der Ur-Befund von R4).
+Daraus die Schwellen `TIEF_AB = 3`, `DICHTE_MIN = 2` (`LINIEN_SCHWELLEN`). Ergebnis:
+153 Erlasse zeigen den Guide im Auto-Default (flache/mittlere Gesetze); die 73 tiefen
+Kodifikationen bleiben ruhig.
+
+**Referenz-Verdikte** (im Tor gegated, positiv+negativ): ZGB (Tiefe 5) → **ruhig** ·
+OR (Tiefe 4) → **ruhig** · ArG (Tiefe 2) → **Guide auf Ebene 1 sichtbar** · VMWG
+(Tiefe 0) → **kein Guide** · Kurzerlass/Staatsvertrag (Tiefe 1) → **Guide auf
+Ebene 0 sichtbar**.
+
+**Maschinell gegated:** `check:linien-kanon` (Nachfolger von R1/R4, in `npm run
+gate`) importiert dieselbe `linienProfil`-Funktion, beweist die korpusweiten
+Invarianten + die Referenz-Verdikte + die Reader-/CSS-Verdrahtung (kein Drift);
+e2e `leser-linien-kanon`/`gesetze-ux-g3a`/`leser-optionen` beweisen das gerenderte
+Ergebnis (ZGB ruhig, ArG sichtbar, ≤ 1 Guide-Stapel). **Wortlaut byte-gleich** (nur
+Klassen/Attribute), Engine-Golden byte-gleich.
 
 ### §4c · Leser-Options-Leiste (W2·5d G2a, 4.7.2026)
 
@@ -237,7 +290,8 @@ versteckt nie (R9). **Default AN**, weil R9 «immer im DOM» (Ctrl+F/Print/Scree
 reader, §15-Funktions-Treue) mit «Default aus = nicht gerendert» unvereinbar ist
 und §3.1 die amtliche Substanz auf sichtbar setzt — die frühere Regel «Apparat per
 Default aus» ist damit für den options-getriebenen Reader abgelöst (siehe unten).
-Der grundart-abhängige **Linien**-Default bleibt für G3a offen.
+Der **Linien**-Default ist mit U-LINIEN/A8 aufbau-basiert festgelegt (§4b-A) — er löst
+den zwischenzeitlich grundart-abhängigen G3a/K11-Default ab.
 
 ## §5 · Verzahnung (der Burggraben, Fedlex-Übertreffer)
 

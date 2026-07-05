@@ -1,7 +1,7 @@
 import { test, expect, type Page } from '@playwright/test';
 
 // W2·5d G3a — Per-Grundart-Darstellung im Gesetzes-Reader (FAHRPLAN §2.2):
-// erlassTyp-Kopf-Label, grundart-abhängiger Linien-Default (K11, data-grundart),
+// erlassTyp-Kopf-Label, aufbau-abhängiger Linien-Default (U-LINIEN/A8, data-guide-auto),
 // KANTON §-Label (⑥, Anker bleibt #art-/R8), LIVE_VERWEIS-Verweiskarte (⑧).
 // Reine Darstellung (§3) — die Grundart kommt zur Laufzeit aus dem Register
 // (SSoT, §5), NICHT aus der BrowseErlass. Reader = prerendertes Crawler-HTML →
@@ -44,24 +44,27 @@ test('Kopf-Label: Gesetz bleibt «Bundesgesetz» (OR)', async ({ page }) => {
   await expect(page.locator('.lc-leser > header .lc-overline').first()).toContainText('Bundesgesetz');
 });
 
-// ── K11: grundart-abhängiger Linien-Default (data-grundart am .lc-leser) ───────
-test('K11: KODIFIKATION zeigt den Guide im Auto-Default (ZGB)', async ({ page }) => {
+// ── U-LINIEN/A8: AUFBAU-abhängiger Linien-Default (data-guide-auto am .lc-leser) ─
+// Davids A8-Befund («zgb sehr viele, arg fast keine») geheilt: der Auto-Default
+// folgt dem TATSÄCHLICHEN Aufbau, nicht der grundart-Schublade. NEGATIV: die tiefe
+// Kodifikation bleibt ruhig; POSITIV: das flache Gesetz zeigt seine Ebene.
+test('U-LINIEN: tiefe Kodifikation ZGB bleibt im Auto-Default RUHIG (Guide transparent)', async ({ page }) => {
   await warteReader(page, '/gesetze/bund/ZGB#art-684');
-  await expect(page.locator('.lc-leser')).toHaveAttribute('data-grundart', 'KODIFIKATION');
+  await expect(page.locator('.lc-leser')).toHaveAttribute('data-guide-auto', 'aus');
   await expect(page.locator('html')).toHaveAttribute('data-linien', 'auto');
   await expect(page.locator('#art-684')).toBeVisible({ timeout: 20000 });
   const farbe = await guideFarbe(page, 'art-684');
-  expect(farbe, 'KODIFIKATION-Guide vorhanden').not.toBeNull();
-  expect(farbe).not.toBe('rgba(0, 0, 0, 0)'); // sichtbar (nicht transparent)
+  expect(farbe, 'Guide-Container bleibt strukturell im DOM').not.toBeNull();
+  expect(farbe).toBe('rgba(0, 0, 0, 0)'); // tiefe Kodifikation → ruhig, Guide unsichtbar
 });
 
-test('K11: flachere Grundart blendet den Guide im Auto-Default aus (BV, STANDARD_ERLASS)', async ({ page }) => {
-  await warteReader(page, '/gesetze/bund/BV#art-8');
-  await expect(page.locator('.lc-leser')).toHaveAttribute('data-grundart', 'STANDARD_ERLASS');
-  await expect(page.locator('#art-8')).toBeVisible({ timeout: 20000 });
-  const farbe = await guideFarbe(page, 'art-8');
-  expect(farbe, 'Guide-Container existiert (border-Breite bleibt)').not.toBeNull();
-  expect(farbe).toBe('rgba(0, 0, 0, 0)'); // auto + non-KODIFIKATION → transparent
+test('U-LINIEN: flaches Gesetz ArG zeigt seine Ebene im Auto-Default (Guide sichtbar)', async ({ page }) => {
+  await warteReader(page, '/gesetze/bund/ARG#art-9');
+  await expect(page.locator('.lc-leser')).toHaveAttribute('data-guide-auto', 'an');
+  await expect(page.locator('#art-9')).toBeVisible({ timeout: 20000 });
+  const farbe = await guideFarbe(page, 'art-9');
+  expect(farbe, 'ArG-Guide vorhanden').not.toBeNull();
+  expect(farbe).not.toBe('rgba(0, 0, 0, 0)'); // flaches Gesetz → Ebene sichtbar
 });
 
 // ── ⑥ KANTON §-Label: sichtbares «§ N», Anker bleibt #art- (R8) ────────────────

@@ -31,12 +31,13 @@ function OptSwitch({ feld, an, label, titel }: {
   );
 }
 
-/** Die Options-Leiste. `zeigeLinien` blendet den Linien-Schalter aus, wo es
- *  keine Gliederung gibt (flacher Kurzerlass) — er wäre sonst wirkungslos
- *  (§2.2④). `linienAutoAn` = ob im grundart-abhängigen Default-Zustand ('auto',
- *  K11) der Guide für DIESEN Erlass sichtbar ist (nur KODIFIKATION) — so zeigt
- *  der Schalter den EFFEKTIVEN Zustand ehrlich (§8) und ein Klick setzt das
- *  passende explizite 'an'/'aus'. Fussnoten/Verweise gelten immer. */
+/** Die Options-Leiste. `zeigeLinien` blendet den Linien-Schalter aus, wo es keine
+ *  Gliederungs-Sektion mit Guide gibt (flache Artikelliste) — er wäre sonst
+ *  wirkungslos (§2.2④). `linienAutoAn` = ob im AUFBAU-abhängigen Default-Zustand
+ *  ('auto', U-LINIEN/A8) der Guide für DIESEN Erlass sichtbar ist (flaches/mittleres
+ *  Gesetz ⇒ an, tiefe Kodifikation ⇒ aus) — so zeigt der Schalter den EFFEKTIVEN
+ *  Zustand ehrlich (§8) und ein Klick setzt das passende explizite 'an'/'aus'.
+ *  Fussnoten/Verweise gelten immer. */
 export function LeserOptionenLeiste({ zeigeLinien, linienAutoAn = false }: { zeigeLinien: boolean; linienAutoAn?: boolean }) {
   const opt = useLeserOptionen();
   // Effektiver Linien-Zustand: expliziter Nutzer-Wunsch schlägt die Grundart;

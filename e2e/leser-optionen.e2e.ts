@@ -52,15 +52,17 @@ async function guide(page: Page, artId: string) {
   }, artId);
 }
 
-test('Options-Leiste: drei role=switch; Fussnoten/Verweise an, Linien-Default grundart-abhängig (auto, K11)', async ({ page }) => {
+test('Options-Leiste: drei role=switch; Fussnoten/Verweise an, Linien-Default aufbau-basiert (auto, U-LINIEN/A8)', async ({ page }) => {
   await warteReader(page, '/gesetze/bund/BGBM', 'art-1');
   const gruppe = page.locator('[aria-label="Darstellungsoptionen"]').first();
   await expect(gruppe).toBeVisible();
   await expect(gruppe.getByRole('switch')).toHaveCount(3); // BGBM geschachtelt → Linien sichtbar
-  // W2·5d G3a/K11: Linien-Default ist 'auto' — grundart-abhängig. BGBM ist KEINE
-  // KODIFIKATION → der Guide bleibt im Auto-Default ruhig aus, der Schalter zeigt
-  // ehrlich «aus» (§8). Fussnoten/Verweise bleiben unverändert an (R6-No-op).
-  await expect(gruppe.getByRole('switch', { name: 'Linien' })).toHaveAttribute('aria-checked', 'false');
+  // W2·5d U-LINIEN/A8: Linien-Default ist 'auto' — AUFBAU-basiert (nicht mehr die
+  // grundart-Schublade K11). BGBM ist ein flacher Kurzerlass mit EINER Gliederungs-
+  // ebene → der Guide macht diese Ebene sichtbar (autoGuide), der Schalter zeigt
+  // ehrlich «an» (§8). Fussnoten/Verweise bleiben unverändert an (R6-No-op).
+  await expect(page.locator('.lc-leser').first()).toHaveAttribute('data-guide-auto', 'an');
+  await expect(gruppe.getByRole('switch', { name: 'Linien' })).toHaveAttribute('aria-checked', 'true');
   for (const name of ['Fussnoten', 'Verweise']) {
     await expect(gruppe.getByRole('switch', { name })).toHaveAttribute('aria-checked', 'true');
   }
@@ -71,15 +73,17 @@ test('Options-Leiste: drei role=switch; Fussnoten/Verweise an, Linien-Default gr
 });
 
 test('Linien-Toggle: explizit AN sichtbar → AUS transparent (Guide bleibt im DOM), persistiert über Reload', async ({ page }) => {
-  // BV ist STANDARD_ERLASS → im Auto-Default (K11) ist der Guide ruhig aus; der
-  // Container mit border-Breite BLEIBT aber im DOM. Ein expliziter Klick setzt
-  // den globalen Zustand und übersteuert die Grundart.
+  // BV ist eine tiefe Struktur (Gliederungstiefe 3) → im Auto-Default (U-LINIEN/A8)
+  // bleibt der Guide ruhig aus (data-guide-auto="aus"); der Container mit border-
+  // Breite BLEIBT aber im DOM. Ein expliziter Klick setzt den globalen Zustand und
+  // übersteuert den Aufbau-Default.
   await warteReader(page, '/gesetze/bund/BV#art-8', 'art-8');
   await expect(page.locator('html')).toHaveAttribute('data-linien', 'auto');
+  await expect(page.locator('.lc-leser').first()).toHaveAttribute('data-guide-auto', 'aus');
   const autoAus = await guide(page, 'art-8');
   expect(autoAus, 'Guide-Container existiert (auch im Auto-Default)').not.toBeNull();
   expect(parseFloat(autoAus!.width)).toBeGreaterThan(0);
-  expect(autoAus!.color).toBe('rgba(0, 0, 0, 0)'); // auto + non-KODIFIKATION → transparent
+  expect(autoAus!.color).toBe('rgba(0, 0, 0, 0)'); // auto + tiefe Kodifikation → transparent (ruhig)
 
   // POSITIV: «Linien» explizit AN → Kante sichtbar (nicht transparent).
   await page.getByRole('switch', { name: 'Linien' }).click();

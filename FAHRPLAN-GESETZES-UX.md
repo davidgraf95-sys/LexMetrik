@@ -1098,3 +1098,22 @@ web-first-Auflösung ohne Test-Timeout-Nähe), **CLS < 0.05**. **«/»-Koexisten
 (`tastatur.e2e.ts`): ⌘K und «/» fokussieren dieselbe HeaderSuche, kein Overlay.
 Voller `npm run gate` grün (golden byte-gleich, `check:*` inkl. `gegenpruefung`);
 `test:e2e` gegen dist (1 Worker) grün.
+
+- **U-LINIEN (A8) — GEBAUT (5.7.2026), PR `feat/u-linien-a8`.** Der Linien-Default
+  ist von der grundart-Schublade (G3a/K11 «nur KODIFIKATION») auf ein AUFBAU-
+  basiertes Regelwerk umgestellt: SSoT `src/pages/gesetz-leser/linienAufbau.ts`
+  (`linienProfil`) leitet aus dem Struktur-Sidecar (Gliederungstiefe + Artikel-
+  Dichte je Ebene) ab, ob und wo der EINE Guide erscheint. Regeln + empirische
+  Schwellen (`TIEF_AB=3`, `DICHTE_MIN=2`; Korpus-Verteilung 1135 Sidecars via
+  `scripts/linien-korpus-verteilung.mjs`) im **DESIGN-REGLEMENT-NORMTEXT
+  §4b-A**. Reader: `renderSektion` nutzt `linien.guideEbene`, `.lc-leser` trägt
+  `data-guide-auto`, `index.css` blendet den Guide bei tiefen Kodifikationen aus
+  (Einzug bleibt, Rangfolge §4b). Tor `check:linien-kanon` zum Nachfolger von
+  R1/R4 umgebaut (vite-node, importiert `linienProfil` → kein Drift; korpusweite
+  Invarianten + Referenz-Verdikte positiv+negativ + Reader/CSS-Verdrahtung). e2e
+  `leser-linien-kanon`/`gesetze-ux-g3a`/`leser-optionen` nachgezogen (ZGB ruhig,
+  ArG sichtbar). **Davids A8-Befund geheilt:** ZGB (Tiefe 5) bleibt ruhig, ArG
+  (Tiefe 2) bekommt seine Ebene sichtbar — P6-Referenzfälle Vorher/Nachher
+  Desktop 1440 + Mobil 390 visuell + per computed-style verifiziert. Wortlaut +
+  Engine-Golden byte-gleich (nur Klassen/Attribute). `data-grundart` bleibt als
+  semantischer Marker. K11-Nutzer-Override (global an/aus) unberührt.
