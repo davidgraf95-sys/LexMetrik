@@ -95,9 +95,16 @@ const LeitfallZeile = memo(function LeitfallZeile({ refs, normZitat, revision }:
 // links «Art. N» als ruhiger Anker mit den Randtiteln darunter (rechtsbündig, nur die
 // gegenüber dem Vorartikel GEÄNDERTEN Stufen, `marg`), rechts der Serif-
 // Bestimmungstext. Ersetzt den früheren fliegenden Standort-Tracker. Reine Darstellung.
-export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, fussnoten, intern, marg, margBasis, imTreffer, onSpringe, leitfaelle, revision }: {
+export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, fussnoten, intern, marg, margBasis, imTreffer, onSpringe, leitfaelle, revision, istAnhang = false }: {
   e: NormSnapshot; erlass: BrowseErlass; basisPfad: string; fussnoten?: Fussnote[]; intern?: InternRefs;
   marg?: string[];
+  /** W2·5d G3b (③/⑤): der Eintrag ist ein Anhang (`annex_*`) bzw. Staatsvertrags-
+   *  Protokoll (`lvl_*`) — als eigenständig erkennbarer, klar abgesetzter Block
+   *  rendern (Struktur-Trenner statt Artikel-Trenner, «Anhang N»/«Protokoll N» als
+   *  Struktur-Überschrift statt Artikelnummer). Reine Darstellung (§3); Prosa
+   *  byte-gleich, nur Markup/Klassen. Delimitation über Typo + Struktur-Trenner
+   *  (Linien-Kanon «Ruhe durch Reduktion» — keine Farb-/Box-Sprache). */
+  istAnhang?: boolean;
   /** Leitfälle dieses Artikels (Reader lädt den erlass-lokalen Shard einmal). */
   leitfaelle?: LeitfallRef[];
   /** Revision r(a) dieses Artikels (§V1c) — an die LeitfallZeile durchgereicht. */
@@ -203,9 +210,13 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
   const aufhebungNotiz: Fussnote[] = ganzAufgehoben
     ? fussAnzeige.filter((f) => f.absatz == null && f.item == null)
     : [];
+  // W2·5d G3b (③/⑤): Anhang/Protokoll tragen einen kräftigeren Struktur-Trenner
+  // (rule-struktur statt rule-artikel) + mehr Weissraum — so hebt sich jeder
+  // Anhang-Block klar vom Normtext und vom Vor-Anhang ab (Linien-Kanon-Rolle
+  // «Struktur-Trenner», wie oberste Sektionen/Ingress). Reine Darstellung (§3).
   return (
-    <article id={`art-${e.artikel}`} data-normtext-linie
-      className="nt-art-cv group relative z-0 nt-anker border-t border-rule-artikel pt-7 mt-7 first:border-t-0 first:mt-0 first:pt-0 transition duration-200 group-has-[[data-lese]:hover]/lese:opacity-80 has-[[data-lese]:hover]:!opacity-100 has-[[data-lese]:hover]:z-[5]">
+    <article id={`art-${e.artikel}`} data-normtext-linie data-anhang={istAnhang ? '' : undefined}
+      className={`nt-art-cv group relative z-0 nt-anker border-t ${istAnhang ? 'border-rule-struktur pt-9 mt-9' : 'border-rule-artikel pt-7 mt-7'} first:border-t-0 first:mt-0 first:pt-0 transition duration-200 group-has-[[data-lese]:hover]/lese:opacity-80 has-[[data-lese]:hover]:!opacity-100 has-[[data-lese]:hover]:z-[5]`}>
       {/* Fedlex-Stil (Auftrag David): «Art. N» + Randtitel/Sachüberschrift stehen
           IMMER OBERHALB des Absatztextes (keine seitliche Randspalte mehr), damit
           der Normtext die volle Lesespaltenbreite bekommt. Reine Darstellung (§3). */}
@@ -252,12 +263,19 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
               : <button type="button" onClick={() => setArtOffen((v) => !v)} aria-expanded={artOffen}
                   aria-label={artOffen ? 'Artikel einklappen' : 'Artikel ausklappen'}
                   className="inline-flex w-4 shrink-0 justify-center text-micro text-ink-300 hover:text-brass-700">{artOffen ? '▾' : '▸'}</button>}
+            {/* Anhang/Protokoll (③/⑤): «Anhang N»/«Protokoll N …» als Struktur-
+                Überschrift (font-display, Titel-Grösse) statt als Artikelnummer
+                (num/bold) — es ist ein Block-Titel, keine zitierbare Bestimmung. */}
             {imTreffer && onSpringe ? (
               <button type="button" onClick={() => onSpringe(e.artikel)}
                 title="Im Volltext zu diesem Artikel springen"
-                className={`num text-base font-bold tracking-wide hover:text-brass-700 text-left ${ganzAufgehoben ? 'text-ink-500 font-normal' : 'text-ink-900'}`}>{label}</button>
+                className={istAnhang
+                  ? 'font-display text-h3 font-semibold text-ink-900 hover:text-brass-700 text-left'
+                  : `num text-base font-bold tracking-wide hover:text-brass-700 text-left ${ganzAufgehoben ? 'text-ink-500 font-normal' : 'text-ink-900'}`}>{label}</button>
             ) : (
-              <a href={`#art-${e.artikel}`} className={`num text-base font-bold tracking-wide hover:text-brass-700 no-underline ${ganzAufgehoben ? 'text-ink-500 font-normal' : 'text-ink-900'}`}>{label}</a>
+              <a href={`#art-${e.artikel}`} className={istAnhang
+                ? 'font-display text-h3 font-semibold text-ink-900 hover:text-brass-700 no-underline'
+                : `num text-base font-bold tracking-wide hover:text-brass-700 no-underline ${ganzAufgehoben ? 'text-ink-500 font-normal' : 'text-ink-900'}`}>{label}</a>
             )}{fnMarker}
             {/* aufgehoben gedämpft, aber ink-500 (WCAG 4.5:1 hell+dunkel) statt
                 ink-400 (3.2–3.6:1) — essentieller Link-Text, kein incidental. */}
@@ -551,8 +569,16 @@ export function SektionKopf({ s, refCb, offen, onToggle, bereich, bereichEinzel 
             redundant, sobald die Sektion OFFEN ist (der Artikel steht direkt
             darunter mit voller Kopfzeile, Auftrag David) → nur im eingeklappten
             Zustand zeigen. Echte Spannen («Art. 1–10») bleiben immer sichtbar. */}
+        {/* Bereich-Badge («Art. 1–10»). W2·5d G3b-Overflow-Fix: NICHT mehr
+            `shrink-0` — bei Anhang-/Protokoll-Sektionen setzte sich der Bereich aus
+            Lang-Labels zusammen («Protokoll 1 über … – Vorbehalte und Erklärungen»)
+            und sprengte als un-schrumpfbares Element @390 den Reader (scrollW 790,
+            H-Overflow). `min-w-0` + Umbruch lässt ein langes Label brechen statt
+            überlaufen; «Art. 1–10» bleibt kurz auf einer Zeile. Für reine Anhang-
+            Sektionen wird der Bereich ohnehin unterdrückt (inhalt.tsx). Reine
+            Darstellung (§3) — gleicher Text, nur umbruchfähig. */}
         {bereich && !(bereichEinzel && offen) && (
-          <span className="num shrink-0 text-xs font-normal text-ink-500">{bereich}</span>
+          <span className="num min-w-0 [overflow-wrap:anywhere] text-xs font-normal text-ink-500">{bereich}</span>
         )}
       </span>
     </div>
