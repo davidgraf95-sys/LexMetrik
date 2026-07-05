@@ -35,6 +35,9 @@ const PROZESSUAL: ReadonlySet<string> = new Set([
 const HILFSMITTEL: ReadonlySet<string> = new Set([
   'teuerungsrechner',
   'kostenblatt-export',
+  // Verzahnungs-Strecke (W2·7): rechtsgebietsübergreifend (OR-Verzugszins
+  // materiell → SchKG-Betreibung prozessual), darum Hilfsmittel.
+  'inkasso-strecke',
 ]);
 
 // Bug-Check §9 10.6.2026 (fachliche Lupe, MITTEL): MATERIELL ebenfalls als
