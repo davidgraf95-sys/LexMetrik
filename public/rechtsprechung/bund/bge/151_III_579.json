@@ -24,7 +24,33 @@
       },
       "regeste": {
         "text": "Art. 495 ff. ZGB; Art. 285 ff., 288 SchKG; Erbverzicht; paulianische Anfechtung. Der Erbverzicht nach Art. 495 ff. ZGB ist keine Rechtshandlung, die der Absichtsanfechtung nach Art. 288 SchKG untersteht (E. 4).",
-        "quelle": "opencaselaw"
+        "quelle": "opencaselaw",
+        "sprachfassungen": [
+          {
+            "sprache": "de",
+            "kopf": "Art. 495 ff. ZGB; Art. 285 ff., 288 SchKG; Erbverzicht; paulianische Anfechtung.",
+            "absaetze": [
+              "Der Erbverzicht nach Art. 495 ff. ZGB ist keine Rechtshandlung, die der Absichtsanfechtung nach Art. 288 SchKG untersteht (E. 4)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-III-579%3Ade&lang=de&type=show_document"
+          },
+          {
+            "sprache": "fr",
+            "kopf": "Art. 495 ss CC; art. 285 ss, 288 LP; pacte de renonciation; action paulienne.",
+            "absaetze": [
+              "Le pacte de renonciation selon les art. 495 ss CC n'est pas un acte juridique soumis à la révocation pour dol selon l'art. 288 LP (consid. 4)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-III-579%3Afr&lang=fr&type=show_document"
+          },
+          {
+            "sprache": "it",
+            "kopf": "Art. 495 segg. CC; art. 285 segg., 288 LEF; rinuncia d'eredità; azione revocatoria.",
+            "absaetze": [
+              "La rinuncia d'eredità secondo gli art. 495 segg. CC non è un atto soggetto alla revocazione per dolo ai sensi dell'art. 288 LEF (consid. 4)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-III-579%3Ait&lang=it&type=show_document"
+          }
+        ]
       },
       "regesteAmtlich": true,
       "abschnitte": [

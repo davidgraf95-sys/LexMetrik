@@ -24,7 +24,33 @@
       },
       "regeste": {
         "text": "Art. 86 Abs. 3 BGG; § 44 Abs. 1 lit. e VRG/ZH; Verbundangebot im öffentlichen Personenverkehr; Entscheide mit vorwiegend politischem Charakter; Ausschluss des Gerichtszugangs. Die Anordnungen des Verkehrsrats über die Ausgestaltung der Grundversorgung und die Festlegung der übrigen Verkehrsangebote des öffentlichen Personenverkehrs sind keine Entscheide mit vorwiegend politischem Charakter. Der kantonalrechtlich vorgesehene Ausschluss der Beschwerde an das kantonale Verwaltungsgericht ist bundesrechtswidrig.\nRegeste\n Art. 86 al. 3 LTF; § 44 al. 1 let. e de la loi zurichoise sur la procédure et la juridiction administratives (VRG/ZH); offre du réseau de transport public de personnes; décision à caractère politique prépondérant; exclusion de l'accès à la justice. Les mesures prises par le Conseil des transports relatives à l'organisation des services de base et à la définition des autres offres de transport public ne sont pas des décisions à caractère politique prépondérant. L'exclusion du recours devant le tribunal administratif de première instance prévue par le droit cantonal est contraire au droit fédéral.\nRegesto\n Art. 86 cpv. 3 LTF; § 44 cpv. 1 lett. e della legge zurighese sulla procedura amministrativa (VRG/ZH); offerta relativa alla rete di trasporto pubblico di viaggiatori; decisioni di carattere prevalentemente politico; esclusione dell'accesso alla giustizia. Le misure prese dal Consiglio dei trasporti concernenti l'organizzazione dei servizi di base e la definizione delle altre offerte di trasporto pubblico di viaggiatori non sono delle decisioni di carattere prevalentemente politico. L'esclusione del ricorso dinanzi il Tribunale amministrativo cantonale prevista dal diritto cantonale è contraria al diritto federale.",
-        "quelle": "opencaselaw"
+        "quelle": "opencaselaw",
+        "sprachfassungen": [
+          {
+            "sprache": "de",
+            "kopf": "Art. 86 Abs. 3 BGG; § 44 Abs. 1 lit. e VRG/ZH; Verbundangebot im öffentlichen Personenverkehr; Entscheide mit vorwiegend politischem Charakter; Ausschluss des Gerichtszugangs.",
+            "absaetze": [
+              "Die Anordnungen des Verkehrsrats über die Ausgestaltung der Grundversorgung und die Festlegung der übrigen Verkehrsangebote des öffentlichen Personenverkehrs sind keine Entscheide mit vorwiegend politischem Charakter. Der kantonalrechtlich vorgesehene Ausschluss der Beschwerde an das kantonale Verwaltungsgericht ist bundesrechtswidrig."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-I-187%3Ade&lang=de&type=show_document"
+          },
+          {
+            "sprache": "fr",
+            "kopf": "Art. 86 al. 3 LTF; § 44 al. 1 let. e de la loi zurichoise sur la procédure et la juridiction administratives (VRG/ZH); offre du réseau de transport public de personnes; décision à caractère politique prépondérant; exclusion de l'accès à la justice.",
+            "absaetze": [
+              "Les mesures prises par le Conseil des transports relatives à l'organisation des services de base et à la définition des autres offres de transport public ne sont pas des décisions à caractère politique prépondérant. L'exclusion du recours devant le tribunal administratif de première instance prévue par le droit cantonal est contraire au droit fédéral."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-I-187%3Afr&lang=fr&type=show_document"
+          },
+          {
+            "sprache": "it",
+            "kopf": "Art. 86 cpv. 3 LTF; § 44 cpv. 1 lett. e della legge zurighese sulla procedura amministrativa (VRG/ZH); offerta relativa alla rete di trasporto pubblico di viaggiatori; decisioni di carattere prevalentemente politico; esclusione dell'accesso alla giustizia.",
+            "absaetze": [
+              "Le misure prese dal Consiglio dei trasporti concernenti l'organizzazione dei servizi di base e la definizione delle altre offerte di trasporto pubblico di viaggiatori non sono delle decisioni di carattere prevalentemente politico. L'esclusione del ricorso dinanzi il Tribunale amministrativo cantonale prevista dal diritto cantonale è contraria al diritto federale."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-I-187%3Ait&lang=it&type=show_document"
+          }
+        ]
       },
       "regesteAmtlich": true,
       "abschnitte": [

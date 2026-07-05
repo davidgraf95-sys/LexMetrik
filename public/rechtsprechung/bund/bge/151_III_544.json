@@ -24,7 +24,36 @@
       },
       "regeste": {
         "text": "Art. 340, 340a-c OR; Arbeitsvertrag; Konkurrenzverbot; Karenzentschädigung. Ohne anderslautende Abrede kann die Arbeitgeberin ein entgeltliches Konkurrenzverbot nicht einseitig kündigen (Bestätigung der Rechtsprechung; E. 4). Tatsächliche oder hypothetische Ersatzeinkünfte des Arbeitnehmers sind nicht auf die Karenzentschädigung anzurechnen, wenn nichts anderes vereinbart wurde (E. 5.3).",
-        "quelle": "opencaselaw"
+        "quelle": "opencaselaw",
+        "sprachfassungen": [
+          {
+            "sprache": "de",
+            "kopf": "Art. 340, 340a-c OR; Arbeitsvertrag; Konkurrenzverbot; Karenzentschädigung.",
+            "absaetze": [
+              "Ohne anderslautende Abrede kann die Arbeitgeberin ein entgeltliches Konkurrenzverbot nicht einseitig kündigen (Bestätigung der Rechtsprechung; E. 4).",
+              "Tatsächliche oder hypothetische Ersatzeinkünfte des Arbeitnehmers sind nicht auf die Karenzentschädigung anzurechnen, wenn nichts anderes vereinbart wurde (E. 5.3)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-III-544%3Ade&lang=de&type=show_document"
+          },
+          {
+            "sprache": "fr",
+            "kopf": "Art. 340, 340a-c CO; contrat de travail; prohibition de faire concurrence; indemnité de carence.",
+            "absaetze": [
+              "Sans accord différent, l'employeuse ne peut pas résilier unilatéralement une prohibition onéreuse de faire concurrence (confirmation de jurisprudence; consid. 4).",
+              "Les revenus de remplacement effectifs ou hypothétiques du travailleur ne doivent pas être imputés sur l'indemnité de carence, sauf convention contraire (consid. 5.3)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-III-544%3Afr&lang=fr&type=show_document"
+          },
+          {
+            "sprache": "it",
+            "kopf": "Art. 340, 340a-c CO; contratto di lavoro; divieto di concorrenza; indennità di carenza.",
+            "absaetze": [
+              "Salvo diverso accordo, la datrice di lavoro non può disdire unilateralmente un divieto di concorrenza oneroso (conferma della giurisprudenza; consid. 4).",
+              "Se non è stato convenuto diversamente, i redditi sostitutivi, reali o ipotetici, del lavoratore non sono da imputare all'indennità di carenza, (consid. 5.3)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-III-544%3Ait&lang=it&type=show_document"
+          }
+        ]
       },
       "regesteAmtlich": true,
       "abschnitte": [

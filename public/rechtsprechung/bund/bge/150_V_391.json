@@ -24,7 +24,33 @@
       },
       "regeste": {
         "text": "Art. 8 Abs. 1 UVG; Nichtberufsunfälle. Die Nichtberufsunfalldeckung gemäss UVG erstreckt sich auch auf Unfälle einer obligatorisch UVG-versicherten teilzeitlich angestellten Person in ihrer nicht freiwillig versicherten selbstständigen Erwerbstätigkeit (E. 7).\nRegeste\n Art. 8 al. 1 LAA; accidents non professionnels. La couverture des accidents non professionnels selon la LAA s'étend également aux accidents subis par une personne employée à temps partiel - et à ce titre assurée obligatoirement en vertu de la LAA - dans le cadre de son activité indépendante non assurée facultativement (consid. 7).\nRegesto\n Art. 8 cpv. 1 LAINF; infortuni non professionali. La copertura per infortuni non professionali secondo la LAINF si estende anche agli infortuni di una persona impiegata a tempo parziale, obbligatoriamente assicurata in virtù della LAINF, che si verificano durante la sua attività indipendente non assicurata facoltativamente (consid. 7).",
-        "quelle": "opencaselaw"
+        "quelle": "opencaselaw",
+        "sprachfassungen": [
+          {
+            "sprache": "de",
+            "kopf": "Art. 8 Abs. 1 UVG; Nichtberufsunfälle.",
+            "absaetze": [
+              "Die Nichtberufsunfalldeckung gemäss UVG erstreckt sich auch auf Unfälle einer obligatorisch UVG-versicherten teilzeitlich angestellten Person in ihrer nicht freiwillig versicherten selbstständigen Erwerbstätigkeit (E. 7)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-V-391%3Ade&lang=de&type=show_document"
+          },
+          {
+            "sprache": "fr",
+            "kopf": "Art. 8 al. 1 LAA; accidents non professionnels.",
+            "absaetze": [
+              "La couverture des accidents non professionnels selon la LAA s'étend également aux accidents subis par une personne employée à temps partiel - et à ce titre assurée obligatoirement en vertu de la LAA - dans le cadre de son activité indépendante non assurée facultativement (consid. 7)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-V-391%3Afr&lang=fr&type=show_document"
+          },
+          {
+            "sprache": "it",
+            "kopf": "Art. 8 cpv. 1 LAINF; infortuni non professionali.",
+            "absaetze": [
+              "La copertura per infortuni non professionali secondo la LAINF si estende anche agli infortuni di una persona impiegata a tempo parziale, obbligatoriamente assicurata in virtù della LAINF, che si verificano durante la sua attività indipendente non assicurata facoltativamente (consid. 7)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-V-391%3Ait&lang=it&type=show_document"
+          }
+        ]
       },
       "regesteAmtlich": true,
       "abschnitte": [

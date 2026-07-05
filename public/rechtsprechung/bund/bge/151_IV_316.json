@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-26",
+  "erzeugt": "2026-07-05",
   "eintraege": [
     {
       "id": "bund/bge/151_IV_316",
@@ -7,22 +7,199 @@
       "gerichtName": "Bundesgericht",
       "gerichtstyp": "bundesgericht",
       "kanton": "CH",
-      "abteilung": null,
+      "abteilung": "IV",
       "nummer": "151 IV 316",
       "bgeReferenz": "151 IV 316",
       "zitierung": "BGE 151 IV 316",
-      "datum": "2024-08-15",
+      "datum": "2025-03-19",
       "sprache": "de",
       "leitcharakter": "leitentscheid",
-      "sachgebiet": "straf",
+      "sachgebiet": "prozess",
       "legalArea": "public",
-      "rubrum": null,
+      "rubrum": {
+        "besetzung": "Bundesrichter Abrecht, Präsident, Bundesrichterinnen van de Graaf, Koch, Bundesrichter Kölz, Hofmann, Gerichtsschreiber Schurtenberger",
+        "parteien": "A.________, vertreten durch Rechtsanwältin Kathrin Gruber, Beschwerdeführer, gegen Generalstaatsanwaltschaft des Kantons Bern, Nordring 8, Postfach, 3001 Bern, Beschwerdegegnerin",
+        "gegenstand": "Telefonischer Verkehr mit der Verteidigung",
+        "vorinstanz": "Obergerichts des Kantons Bern, Beschwerdekammer in Strafsachen, vom 28. Oktober 2024 (BK 24 351)"
+      },
       "regeste": {
         "text": "Art. 235 Abs. 4 StPO; Vollzug der Haft; telefonischer Verkehr mit der Verteidigung. Die konkrete Ausgestaltung des Verkehrs der inhaftierten Person mit ihrer Verteidigung richtet sich nach kantonalem Vollzugsrecht, wobei die bundesrechtlichen Vorgaben gewahrt werden müssen (E. 4). Die inhaftierte Person verfügt nur dann über gleichwertige Verteidigungsrechte wie eine in Freiheit befindliche beschuldigte Person, wenn sie wie eine solche über die Möglichkeit verfügt, niederschwellig, kurzfristig und kostengünstig mit ihrer Verteidigung zu kommunizieren. Aus dem bundesrechtlich garantierten Anspruch auf freien Verkehr mit der Verteidigung gemäss Art. 235 Abs. 4 Satz 1 StPO ergibt sich daher ein zumindest grundsätzlicher Anspruch der inhaftierten Person auf telefonischen Verkehr mit ihrer Verteidigung (E. 6).",
-        "quelle": "opencaselaw"
+        "quelle": "opencaselaw",
+        "sprachfassungen": [
+          {
+            "sprache": "de",
+            "kopf": "Art. 235 Abs. 4 StPO; Vollzug der Haft; telefonischer Verkehr mit der Verteidigung.",
+            "absaetze": [
+              "Die konkrete Ausgestaltung des Verkehrs der inhaftierten Person mit ihrer Verteidigung richtet sich nach kantonalem Vollzugsrecht, wobei die bundesrechtlichen Vorgaben gewahrt werden müssen (E. 4).",
+              "Die inhaftierte Person verfügt nur dann über gleichwertige Verteidigungsrechte wie eine in Freiheit befindliche beschuldigte Person, wenn sie wie eine solche über die Möglichkeit verfügt, niederschwellig, kurzfristig und kostengünstig mit ihrer Verteidigung zu kommunizieren. Aus dem bundesrechtlich garantierten Anspruch auf freien Verkehr mit der Verteidigung gemäss Art. 235 Abs. 4 Satz 1 StPO ergibt sich daher ein zumindest grundsätzlicher Anspruch der inhaftierten Person auf telefonischen Verkehr mit ihrer Verteidigung (E. 6)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-IV-316%3Ade&lang=de&type=show_document"
+          },
+          {
+            "sprache": "fr",
+            "kopf": "Art. 235 al. 4 CPP; exécution de la détention; communication téléphonique avec le défenseur.",
+            "absaetze": [
+              "Les modalités concrètes de la communication entre le prévenu en détention et son défenseur sont déterminées par le droit cantonal d'exécution; elles doivent cependant respecter les prescriptions du droit fédéral (consid. 4).",
+              "Le prévenu en détention ne jouit de droits de la défense équivalents à ceux d'un prévenu en liberté que s'il peut également bénéficier de la possibilité de communiquer avec son défenseur de manière simple, rapide et peu coûteuse. Le droit à la libre communication avec le défenseur garanti par le droit fédéral en vertu de l'art. 235 al. 4, 1re phrase, CPP confère donc au prévenu en détention un droit au moins de principe à communiquer par téléphone avec son défenseur (consid. 6)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-IV-316%3Afr&lang=fr&type=show_document"
+          },
+          {
+            "sprache": "it",
+            "kopf": "Art. 235 cpv. 4 CPP; esecuzione della carcerazione; contatti telefonici con il difensore.",
+            "absaetze": [
+              "Le modalità concrete dei contatti tra l'incarcerato e il suo difensore sono disciplinate dal diritto cantonale di esecuzione, fermo restando il rispetto delle prescrizioni di diritto federale (consid. 4).",
+              "L'incarcerato gode di diritti di difesa equivalenti a quelli di un imputato in libertà solo se ha la possibilità, come quest'ultimo, di comunicare con il proprio difensore in modo semplice, rapido ed economico. Il diritto ai contatti liberi con il difensore garantito dal diritto federale ai sensi dell'art. 235 cpv. 4 prima frase CPP conferisce quindi all'incarcerato il diritto, almeno in linea di principio, di comunicare per telefono con il proprio difensore (consid. 6)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-IV-316%3Ait&lang=it&type=show_document"
+          }
+        ]
       },
       "regesteAmtlich": true,
       "abschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "Die Regionale Staatsanwaltschaft Bern-Mittelland führt gegen A.________ ein Strafverfahren wegen versuchter schwerer Körperverletzung, Gewalt und Drohungen gegen Behörden und Beamte sowie weiterer Delikte. A.________ wurde am 19. Oktober 2023 festgenommen und befindet sich seither in Haft."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Mit Verfügung vom 15. August 2024 wies die Staatsanwaltschaft zwei Gesuche von A.________ vom 23. April 2024 und 13. August 2024 um Erteilung einer \"Dauertelefonbewilligung\" für Telefonate mit seiner Verteidigung ab. Die dagegen erhobene Beschwerde von A.________ wies das Obergericht des Kantons Bern, Beschwerdekammer in Strafsachen, mit Beschluss vom 28. Oktober 2024 ab."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Mit Eingabe vom 4. Dezember 2024 erhob A.________ beim Bundesgericht Beschwerde in Strafsachen. Er beantragt, der angefochtene Entscheid sei aufzuheben und es sei festzustellen, dass die Staatsanwaltschaft nicht zuständig sei, die telefonischen Kontakte zwischen ihm und seinem Verteidiger einzuschränken. Eventualiter sei der angefochtene Entscheid insoweit abzuändern, als ihm die beantragte \"Dauertelefonbewilligung\" zu erteilen sei, auf die er sich im Rahmen der Möglichkeiten der Haftanstalt berufen könne (\"autorisation permanente de téléphoner à son défenseur [...] dans les limites des possibilités de l'établissement pénitentiaire\"). Weiter beantragt er die Gewährung der unentgeltlichen Rechtspflege und Rechtsverbeiständung für das bundesgerichtliche Beschwerdeverfahren. Die Vorinstanz hat auf eine Vernehmlassung verzichtet. Die Staatsanwaltschaft hat sich nicht vernehmen lassen."
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 1",
+              "tiefe": 1,
+              "text": "Gemäss Art. 54 Abs. 1 BGG wird das bundesgerichtliche Verfahren in einer der Amtssprachen geführt, in der Regel in der Sprache des angefochtenen Entscheids. Von dieser Regel abzuweichen besteht hier kein Grund. Das Urteil des Bundesgerichts ergeht deshalb in deutscher Sprache, auch wenn der Beschwerdeführer die Beschwerde in französischer Sprache eingereicht hat, wie es Art. 42 Abs. 1 BGG zulässt."
+            },
+            {
+              "marke": "E. 2",
+              "tiefe": 1,
+              "text": "Mit dem angefochtenen Beschluss hat die Vorinstanz als letzte kantonale Instanz die Beschwerde gegen die angeordneten Haftmodalitäten abgewiesen. Dagegen steht grundsätzlich die Beschwerde in Strafsachen an das Bundesgericht offen (vgl. Art. 78 Abs. 1, Art. 80 Abs. 1 und 2 und Art. 93 Abs. 1 lit. a BGG; vgl. BGE 143 I 241 E. 1). Der Beschwerdeführer befindet sich nach wie vor in Haft und an den beanstandeten Haftmodalitäten hat sich - soweit aus den Akten ersichtlich - in der Zwischenzeit nichts geändert. Er ist deshalb nach Art. 81 Abs. 1 BGG zur Beschwerde berechtigt. Die weiteren Sachurteilsvoraussetzungen sind erfüllt, weshalb auf die Beschwerde einzutreten ist."
+            },
+            {
+              "marke": "E. 3",
+              "tiefe": 1,
+              "text": "Die Staatsanwaltschaft wies den Antrag des Beschwerdeführers um Erteilung einer Dauertelefonbewilligung mit seiner Rechtsanwältin im Wesentlichen mit der Begründung ab, Telefonate seien in der Untersuchungshaft grundsätzlich nicht oder nur ausgesprochen restriktiv zulässig, was insbesondere für Beschuldigte mit Kollusionsgefahr gelte. Der beantragte freie Telefonverkehr zwischen dem Beschwerdeführer und seiner Verteidigung sei des Weiteren nicht umsetzbar, da dies den Gefängnisalltag erheblich behindern würde.\n\nDie Vorinstanz schützt diesen Entscheid im Ergebnis und erwägt zusammengefasst, es bestehe lediglich ein Anspruch auf freien Verkehr mit der Verteidigung, nicht auch auf freie Wahl des Kommunikationsmittels. Daraus folge, dass dem Beschwerdeführer nicht jederzeit und ungehindert die Möglichkeit offenstehen müsse, mit der Verteidigung telefonisch kommunizieren zu können. Vielmehr sei \"mit Blick auf die Gewährleistung der Haftzwecke und der Aufrechterhaltung eines ordnungsgemässen Gefängnisbetriebs\" nicht zu beanstanden, dass gemäss Regelung der Hausordnung \"Regionalgefängnisse des Kantons Bern\" vom 22. Februar 2019 eingewiesene Personen in Untersuchungs- und Sicherheitshaft in den Räumlichkeiten der Vollzugseinrichtungen grundsätzlich nicht telefonieren dürften und für die Erteilung von allfälligen (Ausnahme-) Bewilligungen die Verfahrensleitung zuständig sei. Es verbleibe daher einzig zu prüfen, ob Gründe bestünden, die ausnahmsweise eine \"Dauertelefonbewilligung\" mit der Verteidigung erfordern würden, was im vorliegenden Fall ebenfalls zu verneinen sei."
+            },
+            {
+              "marke": "E. 4",
+              "tiefe": 1,
+              "text": "Jede Person gilt bis zur rechtskräftigen Verurteilung als unschuldig (Art. 32 Abs. 1 BV; Art. 6 Ziff. 2 EMRK; Art. 10 Abs. 1 StPO). Dementsprechend darf die strafprozessual inhaftierte beschuldigte Person in ihrer persönlichen Freiheit nicht stärker eingeschränkt werden, als es der Haftzweck sowie die Ordnung und Sicherheit in der Haftanstalt erfordern (Art. 235 Abs. 1 StPO). Die Kontakte zwischen der inhaftierten Person und anderen Personen bedürfen der Bewilligung der Verfahrensleitung. Besuche finden wenn nötig unter Aufsicht statt (Art. 235 Abs. 2 StPO).\n\nDie inhaftierte Person kann indessen nach Art. 235 Abs. 4 Satz 1 StPO frei und ohne inhaltliche Kontrolle mit der Verteidigung verkehren. Bei der Verteidigung handelt es sich demnach nicht um eine \"andere Person\" im Sinne von Art. 235 Abs. 2 StPO, deren Kontakt mit der inhaftierten Person durch die Verfahrensleitung zu bewilligen ist (ADRIAN BERLINGER, in: Basler Kommentar StPO, 3. Aufl. 2023, N. 31 zu Art. 235 StPO; vgl. auch BAPTISTE VIREDAZ, in: Commentaire romand, Code de procédure pénale, 2. Aufl. 2019, N. 14 zu Art. 235 StPO). Eine (befristete) Einschränkung dieses freien Verkehrs zwischen der inhaftierten Person und ihrer Verteidigung durch die Verfahrensleitung ist nach Art. 235 Abs. 4 Satz 2 StPO nur bei begründetem Verdacht auf Missbrauch und mit Genehmigung des Zwangsmassnahmengerichts zulässig.\n\nVon einer eigentlichen Einschränkung des freien Verkehrs im Sinne von Art. 235 Abs. 4 Satz 2 StPO zu unterscheiden sind administrative und organisatorische Schutzvorkehren zur Gewährleistung der Ordnung und Sicherheit in der Haftanstalt, welche lediglich die\n\nModalitäten des Verkehrs mit der Verteidigung beschlagen (vgl. FREI/ZUBERBÜHLER ELSÄSSER, in: Zürcher Kommentar StPO, 3. Aufl. 2020, N. 12 zu Art. 235 StPO). Die konkrete Ausgestaltung des Verkehrs der inhaftierten Person mit ihrer Verteidigung richtet sich nach kantonalem Vollzugsrecht (vgl. Art. 235 Abs. 5 StPO), wobei aber die bundesrechtlichen Vorgaben gewahrt werden müssen (siehe FREI/ZUBERBÜHLER ELSÄSSER, a.a.O., N. 18 zu Art. 235 StPO; vgl. auch BERLINGER, a.a.O., N. 60 zu Art. 235 StPO)."
+            },
+            {
+              "marke": "E. 5",
+              "tiefe": 1,
+              "text": "Der Beschwerdeführer rügt zunächst, die Verfahrensleitung (d.h. die Staatsanwaltschaft) sei nicht zuständig, um seinen telefonischen Kontakt mit der Verteidigung zu beschränken; eine solche Zuständigkeit komme - wenn überhaupt - einzig der Gefängnisleitung zu."
+            },
+            {
+              "marke": "E. 5.1",
+              "tiefe": 2,
+              "text": "Mit Beschwerde in Strafsachen können Rechtsverletzungen nach Art. 95 und Art. 96 BGG gerügt werden. Soweit sich der angefochtene Entscheid auf kantonales Recht stützt, kommt als Beschwerdegrund die Verletzung von Bundesrecht, insbesondere von verfassungsmässigen Rechten, in Frage (Art. 95 lit. a BGG). Im Vordergrund steht dabei das Willkürverbot von Art. 9 BV. Die unrichtige Anwendung des kantonalen Gesetzesrechts stellt demgegenüber keine zulässige Rüge dar (BGE 141 IV 305 E. 1.2 mit Hinweisen; 137 V 57 E. 1.3; 134 II 349 E. 3). Hinsichtlich der Verletzung von Grundrechten und von kantonalem Recht gilt sodann eine qualifizierte Rügepflicht. Das Bundesgericht prüft Rügen nur insofern, als sie in der Beschwerde präzise vorgebracht und begründet worden sind (Art. 106 Abs. 2 BGG)."
+            },
+            {
+              "marke": "E. 5.2",
+              "tiefe": 2,
+              "text": "Aus dem von der Vorinstanz für das Bundesgericht grundsätzlich verbindlich festgestellten Sachverhalt (vgl. Art. 105 BGG) ergibt sich weder ein begründeter Verdacht auf Missbrauch des Verkehrs des Beschwerdeführers mit seiner Verteidigung, noch dass das Zwangsmassnahmengericht die Verweigerung der Telefonbewilligung durch die Staatsanwaltschaft bewilligt hat. Art. 235 Abs. 4 Satz 2 StPO fällt demnach als Rechtsgrundlage für die Verfügung der Staatsanwaltschaft vom 15. August 2024 von vornherein ausser Betracht.\n\nDer Beschwerdeführer bringt sodann zu Recht vor, der telefonische Kontakt zwischen ihm und seiner Rechtsvertretung könne vorliegend einzig gestützt auf kantonales Vollzugsrecht, zur Gewährleistung der Ordnung und Sicherheit in der Haftanstalt, eingeschränkt werden. Er übersieht jedoch, dass es (ebenfalls) Sache des kantonalen Rechts ist, die hierfür zuständigen Stellen zu bezeichnen (Art. 235 Abs. 5 StPO; vgl. Urteil 1B_142/2023 und 1B_162/2023 vom 19. April 2023 E. 3.2 mit Hinweisen)."
+            },
+            {
+              "marke": "E. 5.3",
+              "tiefe": 2,
+              "text": "Die Vorinstanz bejaht die Zuständigkeit der Staatsanwaltschaft gestützt auf Ziff. 9.6.3 der Hausordnung der Regionalgefängnisse des Kantons Bern, gemäss der Personen in Untersuchungs- und Sicherheitshaft \"grundsätzlich nicht telefonieren\" dürfen und für die Telefonie \"die Verfahrensleitung nach StPO/JStPO\" zuständig ist. Ziff. 9.6.3 der Hausordnung trägt dem Umstand Rechnung, dass nach Art. 235 Abs. 2 StPO Kontakte zwischen der inhaftierten Person und anderen Personen - und damit auch die Telefonie - durch die Verfahrensleitung zu bewilligen sind. Demgegenüber obliegt die Gewährleistung der Ordnung und Sicherheit in der Haftanstalt und damit auch die konkrete Ausgestaltung des Verkehrs mit der Verteidigung grundsätzlich der Leitung der Vollzugseinrichtung (vgl. Art. 29 des Gesetzes über den Justizvollzug des Kantons Bern vom 23. Januar 2018 [Justizvollzugsgesetz, JVG; BSG 341.1; vgl. KÜNZLI/FREI/SCHULTHEISS, Menschenrechtliche Standards der Haftbedingungen in der Untersuchungshaft und ihre Umsetzung in der Schweiz, in: Jusletter 5. Oktober 2015, Rz. 36 f.). Ob es zweckmässig ist, wenn das kantonale Recht die Verfahrensleitung auch für die Bewilligung des Telefonverkehrs\n\nmit der Verteidigung für zuständig erklärt, kann mit Blick auf das Dargelegte sowie die Ausführungen in der nachfolgenden Erwägung 6 offenbleiben. Aufgrund der durch Art. 235 Abs. 5 StPO gewährten kantonalen Autonomie im Haftvollzugsrecht ist ein solcher Kompetenzvorbehalt jedenfalls nicht bundesrechtswidrig. Die Beschwerde erweist sich insoweit als unbegründet."
+            },
+            {
+              "marke": "E. 6",
+              "tiefe": 1,
+              "text": "Der Beschwerdeführer rügt weiter, die Verweigerung der beantragten Dauertelefonbewilligung sei inhaltlich nicht gerechtfertigt und beschneide sein Recht auf freien Verkehr mit der Verteidigung gemäss Art. 235 Abs. 4 StPO in unzulässiger Weise."
+            },
+            {
+              "marke": "E. 6.1",
+              "tiefe": 2,
+              "text": "Der Vorinstanz ist darin zuzustimmen, dass hinsichtlich des Verkehrs mit der Verteidigung kein absoluter Anspruch der inhaftierten Person auf freie Wahl des Kommunikationsmittels besteht (BERLINGER, a.a.O., N. 53 zu Art. 235 StPO; FREI/ZUBERBÜHLER ELSÄSSER, a.a.O., N. 12 zu Art. 235 StPO). Indessen hat die inhaftierte Person Anspruch darauf, dass sie - wenn sie es als notwendig erachtet - Kontakt mit ihrer Verteidigung aufnehmen kann und insoweit ihre Verteidigungsrechte gegenüber einer sich in Freiheit befindenden beschuldigten Person nicht eingeschränkt werden (vgl. BERLINGER, a.a.O., N. 53 zu Art. 235 StPO). Dieser verfassungs- und konventionsrechtlich garantierte Anspruch auf eine effektive Verteidigung (Art. 32 Abs. 2 BV und Art. 6 Ziff. 3 lit. c EMRK) darf nicht faktisch durch eine (zu) restriktive Ausgestaltung der konkreten Modalitäten des freien Verkehrs unterlaufen werden (vgl. KÜNZLI/FREI/SCHULTHEISS, a.a.O., Rz. 73, mit Beispielen)."
+            },
+            {
+              "marke": "E. 6.2",
+              "tiefe": 2,
+              "text": "Die inhaftierte Person verfügt nur dann über gleichwertige Verteidigungsrechte wie eine in Freiheit befindliche beschuldigte Person, wenn sie wie eine solche über die Möglichkeit verfügt, niederschwellig, kurzfristig und - was insbesondere beim Vorliegen einer Wahlverteidigung von Bedeutung ist - kostengünstig mit ihrer Verteidigung zu kommunizieren (vgl. DAMIAN BOLL, \"Verteidigung der ersten Stunde\" gemäss schweizerischer StPO, 2020, S. 152). Aufgrund des mit Gefängnisbesuchen verbundenen (allenfalls erheblichen) Zeitaufwands der Verteidigung vermag ein Besuchsrecht für sich alleine keine gleichwertige Verteidigung zu garantieren. Der Anspruch auf freie (briefliche) Korrespondenz mit der Verteidigung vermag die mit Gefängnisbesuchen verbundenen Limitationen des Anspruchs auf freien Verkehr mit der Verteidigung zwar bis zu einem gewissen Grad zu kompensieren (vgl. S TEPHAN SCHLEGEL, Die Verwirklichung des Rechts auf Wahlverteidigung, 2010, S. 340). Indessen gewährleistet einzig die Möglichkeit des telefonischen Verkehrs mit der Verteidigung, dass die inhaftierte Person ohne die mit einem Besuch oder dem postalischen Verkehr verbundenen Wartezeiten und Schwierigkeiten rechtlichen Beistand erhalten kann (vgl. DAMIAN BOLL, a.a.O., S. 152).\n\nAus dem bundesrechtlich garantierten Anspruch auf freien Verkehr mit der Verteidigung gemäss Art. 235 Abs. 4 StPO ergibt sich somit auch ein zumindest grundsätzlicher Anspruch der inhaftierten Person auf telefonischen Verkehr mit ihrer Verteidigung (DAMIAN BOLL, a.a.O., S. 152; GFELLER/BIGLER/BONIN, Untersuchungshaft, Ein Leitfaden für die Praxis, 2017, Rz. 902; vgl. BAPTISTE VIREDAZ, a.a.O., N. 14 zu Art. 235 StPO; anders etwa SCHMID/JOSITSCH, Schweizerische Strafprozessordnung, Praxiskommentar, 4. Aufl. 2023, N. 6 zu Art. 235 StPO).\n\nDer telefonische Verkehr zwischen der inhaftierten Person und ihrer Verteidigung darf indessen immerhin insoweit beschränkt werden, als dies für die Gewährleistung der Ordnung und Sicherheit in der Haftanstalt notwendig erscheint (Art. 235 Abs. 1 StPO; vgl. FREI/ZUBERBÜHLER ELSÄSSER, a.a.O., N. 12 zu Art. 235 StPO; anders wohl GFELLER/BIGLER/BONIN, a.a.O., Rz. 902, wonach der jederzeitige telefonische Kontakt zur Verteidigung zwingend zu garantieren sei). So muss es grundsätzlich zulässig sein, betriebsbedingt bestimmte Telefonzeiten festzulegen oder die Zahl und Dauer der Anrufe zu beschränken."
+            },
+            {
+              "marke": "E. 6.3",
+              "tiefe": 2,
+              "text": "Die Vorinstanz führt aus, zwar könnten dem Beschwerdeführer mangels gegenteiliger Hinweise nicht generell wegen Kollusionsgefahr die Telefonate mit seiner Verteidigung verweigert werden. Doch sei nicht von der Hand zu weisen, \"dass angesichts des Verbots der inhaltlichen Kontrolle der Gespräche zwischen inhaftierter Person und deren Verteidigung auf andere Weise sichergestellt werden müsste, dass die inhaftierte Person das von ihr - mutmasslich für das Gespräch mit der Verteidigung - genutzte Telefon nicht anderweitig verwendet\". Die Umsetzung einer Dauertelefonbewilligung für mandatierte Anwälte dürfte mit Blick auf die Vermeidung der genannten Missbrauchsgefahr \"mit nicht unerheblichem Aufwand\" verbunden sein, weshalb der Einwand der Staatsanwaltschaft, wonach eine \"Dauertelefonbewilligung\" den Gefängnisalltag erheblich behindern würde, \"zumindest aktuell nicht kritisiert werden\" könne. \"Darüber hinaus\" sei indessen \"durchaus denkbar, dass künftig - aufgrund technischer Möglichkeiten und geänderter Bedürfnisse - ein gesteigertes Verlangen nach Dauertelefonbewilligungen für Telefonate mit der Verteidigung\" aufkommen könnte.\n\nDiese Erwägungen vermögen nicht zu überzeugen, zumal die Vorinstanz selbst ausdrücklich eingesteht, ihr sei \"nicht bekannt, wie (ausnahmsweise bewilligte) Telefongespräche mit der Verteidigung im Einzelfall praktisch umgesetzt werden\". In der Lehre wird überzeugend darauf hingewiesen, dass allfälligem Missbrauchspotential ohne grösseren Aufwand hinreichend begegnet werden kann, nämlich mittels behördlicher Vermittlung des Telefonanrufs der inhaftierten Person an die von der Verteidigung angegebene Rufnummer und durch - bereits heute ohne weiteres vornehmbare - technische Beschränkung der Möglichkeit der inhaftierten Person, selbständig eine (andere) Rufnummer zu wählen (ausführlich BOLL, a.a.O., S. 153; ebenso WOLFGANG WOHLERS, in: SK-StPO, Systematischer Kommentar zur Strafprozessordnung, Bd. III, 5. Aufl. 2016, N 36 zu § 148 StPO [DE]; vgl. auch Beschluss 2 BvR 988/10 des deutschen Bundesverfassungsgerichts vom 7. März 2012 E. 2/b/bb). Entsprechend lassen mehrere Kantone bzw. Haftvollzugsanstalten den telefonischen Verkehr zwischen der strafprozessual inhaftierten beschuldigten Person und ihrer Verteidigung grundsätzlich zu (siehe z.B. ausdrücklich Art. 63 Abs. 1 und 2 Règlement du 28.11.2018 sur le statut des personnes détenues placées en établissement de détention avant jugement du Canton de Vaud [RSDAJ; BLV 340.02.5]; § 65 Abs. 4 der Hausordnung für das Kantonalgefängnis Frauenfeld und das regionale Untersuchungsgefängnis Kreuzlingen vom 1.1.2022).\n\nIm Übrigen ist der mit Telefonaten verbundene Aufwand für die Vollzugsbehörden zwingend in Relation zum Aufwand der Vollzugsbehörden zu setzen, der mit Gefängnisbesuchen der Verteidigung - als einzige verbleibende mündliche Kontaktmöglichkeit - verbunden ist (vgl. BOLL, a.a.O., S. 151 f.). Aufschlussreich sind in diesem Zusammenhang auch die Erwägungen der Vorinstanz, wonach es sich ihr nicht erschliesse, weshalb \"regelmässige wöchentliche Telefonate mit der Verteidigung im konkreten Fall für die Wahrnehmung der in Bezug auf das Strafverfahren bestehenden Interessen des Beschwerdeführers nötig sein sollen\". Ob der durch Art. 235 Abs. 4 StPO garantierte freie Verkehr mit der Verteidigung konkret als notwendig erscheint, liegt im alleinigen Ermessen der inhaftierten Person (und ihrer Verteidigung) und ist - missbräuchliches Verhalten vorbehalten - nicht von den Strafverfolgungsbehörden zu beurteilen (vgl. BERLINGER, a.a.O., N. 53 zu Art. 235 StPO). Dies gilt ungeachtet des Umstands, ob eine Wahlverteidigung oder amtliche Verteidigung vorliegt, wobei Letztere aber naturgemäss nur für den objektiv gerechtfertigten Aufwand entschädigt wird (statt vieler BGE 141 I 124 E. 3.1 mit Hinweisen)."
+            },
+            {
+              "marke": "E. 6.4",
+              "tiefe": 2,
+              "text": "Zusammengefasst erweist sich die Beschwerde als begründet. Die Abweisung des Gesuchs des Beschwerdeführers um Erteilung einer \"Dauertelefonbewilligung\" durch die Staatsanwaltschaft bzw. die Abweisung der dagegen gerichteten Beschwerde durch die Vorinstanz ist bundesrechtswidrig. Der Beschwerdeführer verfügt gestützt auf Art. 235 Abs. 4 StPO über einen grundsätzlichen Anspruch auf telefonischen Verkehr mit seiner Verteidigung, weshalb sein Antrag auf Erteilung einer \"Dauertelefonbewilligung\" mit seiner Verteidigung gutzuheissen ist (vgl. Art. 107 Abs. 2 BGG). Die konkrete Ausgestaltung der Modalitäten des telefonischen Kontakts mit der Verteidigung obliegt den nach Massgabe des kantonalen Rechts zuständigen Vollzugsbehörden (Art. 235 Abs. 5 StPO)."
+            },
+            {
+              "marke": "E. 7",
+              "tiefe": 1,
+              "text": "Nach dem Gesagten ist die Beschwerde teilweise gutzuheissen. Der angefochtene Entscheid ist aufzuheben und dem Beschwerdeführer ist die von ihm beantragte \"Dauertelefonbewilligung\" mit seiner Verteidigung zu erteilen. Die Vorinstanz wird über die Kosten- und Entschädigungsfolgen ihres Verfahrens neu zu befinden haben (Art. 67 und Art. 68 Abs. 5 BGG). Im Übrigen ist die Beschwerde abzuweisen.\n\nBei diesem Ausgang des Verfahrens sind keine Gerichtskosten zu erheben (Art. 66 Abs. 1 und 4 BGG). Der Kanton Bern hat dem Beschwerdeführer eine angemessene Entschädigung zu bezahlen (Art. 68 BGG). Da der Beschwerdeführer um unentgeltliche Rechtspflege ersucht, ist die Entschädigung praxisgemäss seiner Rechtsvertreterin zuzusprechen. Sein Gesuch um unentgeltliche Rechtspflege und Verbeiständung wird damit gegenstandslos."
+            }
+          ]
+        },
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": null,
+              "text": "1.\n\n1.1. Die Beschwerde wird teilweise gutgeheissen.\n\n1.2. Der Beschluss des Obergerichts des Kantons Bern vom 28. Oktober 2024 wird aufgehoben.\n\n1.3. Der Antrag des Beschwerdeführers um Erteilung einer \"Dauertelefonbewilligung\" mit seiner Verteidigung wird gutgeheissen.\n\n1.4. Die Sache wird zur Neuverlegung der Kosten- und Entschädigungsfolgen des vorinstanzlichen Verfahrens an das Obergericht des Kantons Bern zurückgewiesen.\n\n1.5. Im Übrigen wird die Beschwerde abgewiesen.\n\n2.\n\nEs werden keine Gerichtskosten erhoben.\n\n3.\n\nDer Kanton Bern hat die Rechtsvertreterin des Beschwerdeführers, Rechtsanwältin Kathrin Gruber, für das bundesgerichtliche Verfahren mit Fr. 1'500.-- zu entschädigen.\n\n4.\n\nDieses Urteil wird den Parteien und dem Obergericht des Kantons Bern, Beschwerdekammer in Strafsachen, schriftlich mitgeteilt.\n\nLausanne, 19. März 2025\n\nIm Namen der II. strafrechtlichen Abteilung\n\ndes Schweizerischen Bundesgerichts\n\nDer Präsident: Abrecht\n\nDer Gerichtsschreiber: Schurtenberger"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "1.1.\nDie Beschwerde wird teilweise gutgeheissen.\n\n1.2.\nDer Beschluss des Obergerichts des Kantons Bern vom 28. Oktober 2024 wird aufgehoben.\n\n1.3.\nDer Antrag des Beschwerdeführers um Erteilung einer \"Dauertelefonbewilligung\" mit seiner Verteidigung wird gutgeheissen.\n\n1.4.\nDie Sache wird zur Neuverlegung der Kosten- und Entschädigungsfolgen des vorinstanzlichen Verfahrens an das Obergericht des Kantons Bern zurückgewiesen.\n\n1.5.\nIm Übrigen wird die Beschwerde abgewiesen.",
+        "Es werden keine Gerichtskosten erhoben.",
+        "Der Kanton Bern hat die Rechtsvertreterin des Beschwerdeführers, Rechtsanwältin Kathrin Gruber, für das bundesgerichtliche Verfahren mit Fr. 1'500.-- zu entschädigen.",
+        "Dieses Urteil wird den Parteien und dem Obergericht des Kantons Bern, Beschwerdekammer in Strafsachen, schriftlich mitgeteilt."
+      ],
+      "zitierteNormen": [
+        "Art. 10 Abs. 1 STPO",
+        "Art. 107 Abs. 2 BGG",
+        "Art. 235 Abs. 1 STPO",
+        "Art. 235 Abs. 2 STPO",
+        "Art. 235 Abs. 4 STPO",
+        "Art. 235 Abs. 5 STPO",
+        "Art. 235 STPO",
+        "Art. 32 Abs. 1 BV"
+      ],
+      "normKeys": [
+        "STPO",
+        "BGG",
+        "BV"
+      ],
+      "zitierteEntscheide": [
+        "1B_142/2023",
+        "1B_162/2023",
+        "7B_1295/2024",
+        "BGE 141 I 124",
+        "BGE 141 IV 305",
+        "BGE 143 I 241"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-IV-316%3Ade&lang=de&zoom=&type=show_document",
+      "abgerufen": "2026-07-05",
+      "fassungsToken": "7ad244ef0751515a560ae438afc14b49be4111464fbf55870fc8aad23e3cb251",
+      "sha": "63a8b4e42bb5b184d42fc00182b85123d1008d976f493439195db36662b4efaf",
+      "auszugAbschnitte": [
         {
           "typ": "sachverhalt",
           "vollstaendig": true,
@@ -80,36 +257,12 @@
           ]
         }
       ],
-      "dispositivOrders": [],
-      "zitierteNormen": [
-        "Art. 10 Abs. 1 STPO",
-        "Art. 107 Abs. 2 BGG",
-        "Art. 235 Abs. 1 STPO",
-        "Art. 235 Abs. 2 STPO",
-        "Art. 235 Abs. 4 STPO",
-        "Art. 235 Abs. 5 STPO",
-        "Art. 235 STPO",
-        "Art. 32 Abs. 1 BV"
-      ],
-      "normKeys": [
-        "STPO",
-        "BGG",
-        "BV"
-      ],
-      "zitierteEntscheide": [
-        "7B_1295/2024",
-        "BGE 141 I 124",
-        "BGE 151 IV 316"
-      ],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "quelle": "opencaselaw",
-      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-IV-316%3Ade&lang=de&zoom=&type=show_document",
-      "abgerufen": "2026-06-26",
-      "fassungsToken": "7ad244ef0751515a560ae438afc14b49be4111464fbf55870fc8aad23e3cb251",
-      "sha": "72e8e9cfff948281cb2f058af8473fe8de2348cf11dc6d5409844c465e1a4181",
-      "azaUrteil": null,
-      "ecli": "ECLI:CH:BGE:2024:151.IV.316"
+      "azaUrteil": {
+        "aktenzeichen": "7B_1295/2024",
+        "key": "bger_7B_1295_2024",
+        "quelleUrl": "http://relevancy.bger.ch/cgi-bin/JumpCGI?id=19.03.2025_7B_1295/2024"
+      },
+      "ecli": "ECLI:CH:BGE:2025:151.IV.316"
     }
   ]
 }

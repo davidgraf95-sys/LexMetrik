@@ -24,7 +24,33 @@
       },
       "regeste": {
         "text": "Art. 3 Abs. 2, 3 und 5, Art. 77 UVG; Art. 7 Abs. 1 lit. b, Art. 100 Abs. 1 UVV; mehrere Unfallereignisse; Ende der Versicherungsdeckung bei rückwirkender Leistungseinstellung. Durch die rückwirkende Einstellung der vorübergehenden Leistungen wird der Anspruch auf die bereits ausbezahlten Leistungen nicht nachträglich hinfällig, wenn kein Rückkommenstitel vorliegt. Ein durch Taggeldzahlungen aufrechterhaltener Unfallversicherungsschutz bleibt somit trotz rückwirkender Leistungseinstellung bestehen (E. 7.3.5).\nRegeste\n Art. 3 al. 2, 3 et 5, art. 77 LAA; art. 7 al. 1 let. b, art. 100 al. 1 OLAA; pluralité d'événements accidentels; fin de la couverture d'assurance en cas de suspension rétroactive des prestations. La suspension rétroactive de prestations temporaires n'a pas pour effet d'annuler le droit aux prestations déjà versées lorsqu'il n'y a pas de titre de révocation. Par conséquent, la couverture d'assurance, maintenue par le versement des indemnités journalières, subsiste malgré la suspension rétroactive des prestations (consid. 7.3.5).\nRegesto\n Art. 3 cpv. 2, 3 e 5, art. 77 LAINF; art. 7 cpv. 1 lett. b, art. 100 cpv. 1 OAINF; reiterato infortunio; termine della copertura assicurativa in caso di sospensione retroattiva delle prestazioni. La sospensione retroattiva delle prestazioni provvisorie non fa decadere il diritto alle prestazioni già corrisposte, in assenza di un titolo di riesame. Di conseguenza, la copertura assicurativa contro gli infortuni mantenuta attraverso i pagamenti delle indennità giornaliere permane nonostante la sospensione retroattiva delle prestazioni (consid. 7.3.5).",
-        "quelle": "opencaselaw"
+        "quelle": "opencaselaw",
+        "sprachfassungen": [
+          {
+            "sprache": "de",
+            "kopf": "Art. 3 Abs. 2, 3 und 5, Art. 77 UVG; Art. 7 Abs. 1 lit. b, Art. 100 Abs. 1 UVV; mehrere Unfallereignisse; Ende der Versicherungsdeckung bei rückwirkender Leistungseinstellung.",
+            "absaetze": [
+              "Durch die rückwirkende Einstellung der vorübergehenden Leistungen wird der Anspruch auf die bereits ausbezahlten Leistungen nicht nachträglich hinfällig, wenn kein Rückkommenstitel vorliegt. Ein durch Taggeldzahlungen aufrechterhaltener Unfallversicherungsschutz bleibt somit trotz rückwirkender Leistungseinstellung bestehen (E. 7.3.5)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-V-188%3Ade&lang=de&type=show_document"
+          },
+          {
+            "sprache": "fr",
+            "kopf": "Art. 3 al. 2, 3 et 5, art. 77 LAA; art. 7 al. 1 let. b, art. 100 al. 1 OLAA; pluralité d'événements accidentels; fin de la couverture d'assurance en cas de suspension rétroactive des prestations.",
+            "absaetze": [
+              "La suspension rétroactive de prestations temporaires n'a pas pour effet d'annuler le droit aux prestations déjà versées lorsqu'il n'y a pas de titre de révocation. Par conséquent, la couverture d'assurance, maintenue par le versement des indemnités journalières, subsiste malgré la suspension rétroactive des prestations (consid. 7.3.5)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-V-188%3Afr&lang=fr&type=show_document"
+          },
+          {
+            "sprache": "it",
+            "kopf": "Art. 3 cpv. 2, 3 e 5, art. 77 LAINF; art. 7 cpv. 1 lett. b, art. 100 cpv. 1 OAINF; reiterato infortunio; termine della copertura assicurativa in caso di sospensione retroattiva delle prestazioni.",
+            "absaetze": [
+              "La sospensione retroattiva delle prestazioni provvisorie non fa decadere il diritto alle prestazioni già corrisposte, in assenza di un titolo di riesame. Di conseguenza, la copertura assicurativa contro gli infortuni mantenuta attraverso i pagamenti delle indennità giornaliere permane nonostante la sospensione retroattiva delle prestazioni (consid. 7.3.5)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-V-188%3Ait&lang=it&type=show_document"
+          }
+        ]
       },
       "regesteAmtlich": true,
       "abschnitte": [

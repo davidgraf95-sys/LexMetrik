@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-07-02",
+  "erzeugt": "2026-07-05",
   "entscheide": [
     {
       "key": "gr_gerichte_ZR12024196",
@@ -5063,6 +5063,61 @@
         "zielKey": "bge_151_II_615",
         "ansicht": "voll",
         "bgeReferenz": "151 II 615"
+      }
+    },
+    {
+      "key": "bge_151_IV_316",
+      "gericht": "bge",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "151 IV 316",
+      "bgeReferenz": "151 IV 316",
+      "datum": "2025-03-19",
+      "zitierung": "BGE 151 IV 316",
+      "leitcharakter": "leitentscheid",
+      "regesteVorhanden": true,
+      "regesteKurz": "Art. 235 Abs. 4 StPO; Vollzug der Haft; telefonischer Verkehr mit der Verteidigung. Die konkrete Ausgestaltung des Verkehrs der inhaftierten Person mit ihrer Verteidigung richtet sich nach kantonalem Vollzugsrecht, wobei die bundesrechtlic…",
+      "sachgebiet": "prozess",
+      "sprache": "de",
+      "normKeys": [
+        "STPO",
+        "BGG",
+        "BV"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": "bund/bge/151_IV_316.json",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-IV-316%3Ade&lang=de&zoom=&type=show_document",
+      "fassungsToken": "7ad244ef0751515a560ae438afc14b49be4111464fbf55870fc8aad23e3cb251"
+    },
+    {
+      "key": "bge_151_IV_316__voll",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "7B_1295/2024",
+      "bgeReferenz": null,
+      "datum": "2025-03-19",
+      "zitierung": "BGer 7B_1295/2024",
+      "leitcharakter": "routine",
+      "regesteVorhanden": false,
+      "regesteKurz": null,
+      "sachgebiet": "prozess",
+      "sprache": "de",
+      "normKeys": [],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": null,
+      "quelle": "opencaselaw",
+      "quelleUrl": "http://relevancy.bger.ch/cgi-bin/JumpCGI?id=19.03.2025_7B_1295/2024",
+      "fassungsToken": "7ad244ef0751515a560ae438afc14b49be4111464fbf55870fc8aad23e3cb251",
+      "verweis": {
+        "zielKey": "bge_151_IV_316",
+        "ansicht": "voll",
+        "bgeReferenz": "151 IV 316"
       }
     },
     {
@@ -10195,13 +10250,44 @@
       "regesteKurz": "Art. 32 Abs. 1, Art. 42 Abs. 3, 3 bis , 4 und 5, Art. 56 Abs. 1 und 2, Art. 57, Art. 59 Abs. 1 lit. b und Abs. 3 lit. a, Art. 59a Abs. 1 und 3, Art. 84 Abs. 1 und 2, Art. 84a Abs. 1 lit. a KVG; Art. 30-30c, Art. 59 Abs. 1, Art. 59a bis und…",
       "sachgebiet": "sozial-abgaben",
       "sprache": "de",
-      "normKeys": [],
+      "normKeys": [
+        "ATSG",
+        "BGG"
+      ],
       "bestand": "snapshot",
       "kuratierung": "maschinell",
       "datei": "bund/bge/151_V_30.json",
       "quelle": "opencaselaw",
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=2&from_date=&to_date=&from_year=2024&to_year=2024&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=17&highlight_docid=atf%3A%2F%2F151-V-30%3Ade&number_of_ranks=177&azaclir=clir",
       "fassungsToken": "d5724973d9b52d3996078c5ea27e2ddeb3cd0eb9b5021429f2513bdcaaebd75d"
+    },
+    {
+      "key": "bge_151_V_30__voll",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "9C_125/2022",
+      "bgeReferenz": null,
+      "datum": "2024-09-10",
+      "zitierung": "BGer 9C_125/2022",
+      "leitcharakter": "routine",
+      "regesteVorhanden": false,
+      "regesteKurz": null,
+      "sachgebiet": "sozial-abgaben",
+      "sprache": "de",
+      "normKeys": [],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": null,
+      "quelle": "opencaselaw",
+      "quelleUrl": "http://relevancy.bger.ch/cgi-bin/JumpCGI?id=10.09.2024_9C_125/2022",
+      "fassungsToken": "d5724973d9b52d3996078c5ea27e2ddeb3cd0eb9b5021429f2513bdcaaebd75d",
+      "verweis": {
+        "zielKey": "bge_151_V_30",
+        "ansicht": "voll",
+        "bgeReferenz": "151 V 30"
+      }
     },
     {
       "key": "bge_150_IV_447",
@@ -10809,33 +10895,6 @@
         "ansicht": "voll",
         "bgeReferenz": "150 III 310"
       }
-    },
-    {
-      "key": "bge_151_IV_316",
-      "gericht": "bge",
-      "gerichtName": "Bundesgericht",
-      "gerichtstyp": "bundesgericht",
-      "kanton": "CH",
-      "nummer": "151 IV 316",
-      "bgeReferenz": "151 IV 316",
-      "datum": "2024-08-15",
-      "zitierung": "BGE 151 IV 316",
-      "leitcharakter": "leitentscheid",
-      "regesteVorhanden": true,
-      "regesteKurz": "Art. 235 Abs. 4 StPO; Vollzug der Haft; telefonischer Verkehr mit der Verteidigung. Die konkrete Ausgestaltung des Verkehrs der inhaftierten Person mit ihrer Verteidigung richtet sich nach kantonalem Vollzugsrecht, wobei die bundesrechtlic…",
-      "sachgebiet": "straf",
-      "sprache": "de",
-      "normKeys": [
-        "STPO",
-        "BGG",
-        "BV"
-      ],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "datei": "bund/bge/151_IV_316.json",
-      "quelle": "opencaselaw",
-      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-IV-316%3Ade&lang=de&zoom=&type=show_document",
-      "fassungsToken": "7ad244ef0751515a560ae438afc14b49be4111464fbf55870fc8aad23e3cb251"
     },
     {
       "key": "bge_151_III_28",
@@ -12125,6 +12184,34 @@
       "fassungsToken": "12c402318e223361fb9b41cab5900f3bdfae09b91ac014ed1b3b105f7957e429"
     },
     {
+      "key": "bge_150_I_183__voll",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "2C_512/2023",
+      "bgeReferenz": null,
+      "datum": "2024-06-05",
+      "zitierung": "BGer 2C_512/2023",
+      "leitcharakter": "routine",
+      "regesteVorhanden": false,
+      "regesteKurz": null,
+      "sachgebiet": "oeffentlich",
+      "sprache": "de",
+      "normKeys": [],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": null,
+      "quelle": "opencaselaw",
+      "quelleUrl": "http://relevancy.bger.ch/cgi-bin/JumpCGI?id=05.06.2024_2C_512/2023",
+      "fassungsToken": "12c402318e223361fb9b41cab5900f3bdfae09b91ac014ed1b3b105f7957e429",
+      "verweis": {
+        "zielKey": "bge_150_I_183",
+        "ansicht": "voll",
+        "bgeReferenz": "150 I 183"
+      }
+    },
+    {
       "key": "bge_150_IV_345",
       "gericht": "bge",
       "gerichtName": "Bundesgericht",
@@ -12745,6 +12832,34 @@
       "quelle": "opencaselaw",
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=9&from_date=&to_date=&from_year=2024&to_year=2024&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=87&highlight_docid=atf%3A%2F%2F151-I-41%3Ade&number_of_ranks=177&azaclir=clir",
       "fassungsToken": "1d5403a36ce2df5b7e35b9e90505cf2a9e4458f0daf4b36413affc2001f435a2"
+    },
+    {
+      "key": "bge_151_I_41__voll",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "1C_223/2023",
+      "bgeReferenz": null,
+      "datum": "2024-05-22",
+      "zitierung": "BGer 1C_223/2023",
+      "leitcharakter": "routine",
+      "regesteVorhanden": false,
+      "regesteKurz": null,
+      "sachgebiet": "oeffentlich",
+      "sprache": "de",
+      "normKeys": [],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": null,
+      "quelle": "opencaselaw",
+      "quelleUrl": "http://relevancy.bger.ch/cgi-bin/JumpCGI?id=22.05.2024_1C_223/2023",
+      "fassungsToken": "1d5403a36ce2df5b7e35b9e90505cf2a9e4458f0daf4b36413affc2001f435a2",
+      "verweis": {
+        "zielKey": "bge_151_I_41",
+        "ansicht": "voll",
+        "bgeReferenz": "151 I 41"
+      }
     },
     {
       "key": "bge_150_V_297",
@@ -14313,7 +14428,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Art. 19 Abs. 1 lit. e, Art. 19 Abs. 4 lit. d und Art. 72 Abs. 1 EnG; Art. 2 lit. a, Art. 16 Abs. 2 und Anhang 1.5 Ziff. 2.1.2 lit. g EnFV; Unterscheidung zwischen \"Mischanlagen\" und Hybridanlagen; Klärgas als nicht förderungsberechtigter e…",
-      "sachgebiet": "oeffentlich",
+      "sachgebiet": "sozial-abgaben",
       "sprache": "de",
       "normKeys": [
         "BGG",
@@ -14325,6 +14440,34 @@
       "quelle": "opencaselaw",
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=13&from_date=&to_date=&from_year=2024&to_year=2024&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=127&highlight_docid=atf%3A%2F%2F150-II-334%3Ade&number_of_ranks=177&azaclir=clir",
       "fassungsToken": "dc4fc9b0964bc8f35b007bbd57dc01bf3a58b6d413cfdf9d8c042082b9653a0a"
+    },
+    {
+      "key": "bge_150_II_334__voll",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "2C_174/2023",
+      "bgeReferenz": null,
+      "datum": "2024-03-22",
+      "zitierung": "BGer 2C_174/2023",
+      "leitcharakter": "routine",
+      "regesteVorhanden": false,
+      "regesteKurz": null,
+      "sachgebiet": "sozial-abgaben",
+      "sprache": "de",
+      "normKeys": [],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": null,
+      "quelle": "opencaselaw",
+      "quelleUrl": "http://relevancy.bger.ch/cgi-bin/JumpCGI?id=22.03.2024_2C_174/2023",
+      "fassungsToken": "dc4fc9b0964bc8f35b007bbd57dc01bf3a58b6d413cfdf9d8c042082b9653a0a",
+      "verweis": {
+        "zielKey": "bge_150_II_334",
+        "ansicht": "voll",
+        "bgeReferenz": "150 II 334"
+      }
     },
     {
       "key": "bge_150_II_390",

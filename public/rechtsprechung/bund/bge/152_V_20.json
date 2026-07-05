@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-26",
+  "erzeugt": "2026-07-05",
   "eintraege": [
     {
       "id": "bund/bge/152_V_20",
@@ -7,7 +7,7 @@
       "gerichtName": "Bundesgericht",
       "gerichtstyp": "bundesgericht",
       "kanton": "CH",
-      "abteilung": null,
+      "abteilung": "V",
       "nummer": "152 V 20",
       "bgeReferenz": "152 V 20",
       "zitierung": "BGE 152 V 20",
@@ -24,7 +24,36 @@
       },
       "regeste": {
         "text": "Art. 24 Abs. 1 KVG; Ziff. 1.2 Anhang 1 KLV; Art. 14 Abs. 2 lit. b Transplantationsgesetz; Ersatz von Erwerbsausfall bei Organspende. Der vom Organspender direkt gegenüber dem obligatorischen Krankenpflegeversicherer der Organempfängerin geltend gemachte Anspruch auf Ersatz von Erwerbsausfall findet im KVG und im entsprechenden Verordnungsrecht keine Grundlage (E. 5.5 und 5.6). Der vom Organspender gestützt auf Art. 14 Abs. 2 lit. b Transplantationsgesetz gegenüber dem Sozialversicherer der Organempfängerin geltend gemachte Entschädigungsanspruch ist nicht privatrechtlicher, sondern öffentlich-rechtlicher Natur. Er hat indessen auch nicht sozialversicherungsrechtlichen Charakter; vielmehr zählt er zum übrigen Verwaltungsrecht resp. zum Gesundheitsrecht des Bundes (E. 6.6).",
-        "quelle": "opencaselaw"
+        "quelle": "opencaselaw",
+        "sprachfassungen": [
+          {
+            "sprache": "de",
+            "kopf": "Art. 24 Abs. 1 KVG; Ziff. 1.2 Anhang 1 KLV; Art. 14 Abs. 2 lit. b Transplantationsgesetz; Ersatz von Erwerbsausfall bei Organspende.",
+            "absaetze": [
+              "Der vom Organspender direkt gegenüber dem obligatorischen Krankenpflegeversicherer der Organempfängerin geltend gemachte Anspruch auf Ersatz von Erwerbsausfall findet im KVG und im entsprechenden Verordnungsrecht keine Grundlage (E. 5.5 und 5.6).",
+              "Der vom Organspender gestützt auf Art. 14 Abs. 2 lit. b Transplantationsgesetz gegenüber dem Sozialversicherer der Organempfängerin geltend gemachte Entschädigungsanspruch ist nicht privatrechtlicher, sondern öffentlich-rechtlicher Natur. Er hat indessen auch nicht sozialversicherungsrechtlichen Charakter; vielmehr zählt er zum übrigen Verwaltungsrecht resp. zum Gesundheitsrecht des Bundes (E. 6.6)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F152-V-20%3Ade&lang=de&type=show_document"
+          },
+          {
+            "sprache": "fr",
+            "kopf": "Art. 24 al. 1 LAMal; ch. 1.2 annexe 1 OPAS; art. 14 al. 2 let. b de la loi sur la transplantation; compensation de la perte de gain en cas de don d'organes.",
+            "absaetze": [
+              "Le droit à la compensation de la perte de gain invoqué par le donneur d'organes directement à l'encontre de l'assureur obligatoire des soins de la receveuse de l'organe ne trouve aucun fondement dans la LAMal ni dans le droit d'exécution correspondant (consid. 5.5 et 5.6).",
+              "Le droit à une indemnisation invoqué par le donneur d'organes à l'encontre de l'assureur social de la receveuse de l'organe en application de l'art. 14 al. 2 let. b de la loi sur la transplantation n'est pas de nature privée, mais publique. Il ne relève toutefois pas du droit des assurances sociales, mais bien plutôt du droit administratif général, respectivement du droit fédéral de la santé publique (consid. 6.6)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F152-V-20%3Afr&lang=fr&type=show_document"
+          },
+          {
+            "sprache": "it",
+            "kopf": "Art. 24 cpv. 1 LAMal; n. 1.2 Allegato 1 OPre; art. 14 cpv. 2 lett. b della legge sui trapianti; risarcimento della perdita di guadagno in caso di donazione di organi.",
+            "absaetze": [
+              "Il diritto al risarcimento della perdita di guadagno che il donatore di organi ha fatto valere direttamente nei confronti dell'assicurazione obbligatoria delle cure medico-sanitarie della ricevente dell'organo, non trova alcun fondamento nella LAMal e nemmeno nel corrispondente diritto d'esecuzione (consid. 5.5 e 5.6).",
+              "Il diritto al risarcimento che il donatore di organi ha fatto valere nei confronti dell'assicuratore sociale della ricevente dell'organo in virtù dell'art. 14 cpv. 2 lett. b della legge sui trapianti non è di natura privata, ma pubblica. Esso non rientra tuttavia nel diritto delle assicurazioni sociali ma piuttosto nel diritto amministrativo generale, rispettivamente nel diritto sanitario federale (consid. 6.6)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F152-V-20%3Ait&lang=it&type=show_document"
+          }
+        ]
       },
       "regesteAmtlich": true,
       "abschnitte": [
@@ -255,7 +284,7 @@
       "kuratierung": "maschinell",
       "quelle": "opencaselaw",
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F152-V-20%3Ade&lang=de&zoom=&type=show_document",
-      "abgerufen": "2026-06-26",
+      "abgerufen": "2026-07-05",
       "fassungsToken": "524239bfc404545832fad499d2c99cb17d4c4e752b86c4e120362ea81d4d281f",
       "sha": "ebfe03a564840e437d1c13126a56ca6be15bff332276493d144aae62d59c7f01",
       "azaUrteil": null,

@@ -24,7 +24,33 @@
       },
       "regeste": {
         "text": "Art. 21 Abs. 2 Ziff. 19 lit. e MWSTG; von der Steuer ausgenommene Leistungen; Vermittlung von Kapitaleinlagen. Vermittlungsleistungen im Zusammenhang mit der Ausgabe von Gesellschaftsanteilen sind gemäss Art. 21 Abs. 2 Ziff. 19 lit. e MWSTG von der Mehrwertsteuer ausgenommen (E. 4).\nRegeste\n Art. 21 al. 2 ch. 19 let. e LTVA; prestations exclues du champ de l'impôt; négociation d'apports de capital. Les prestations de négociation liées à l'émission de parts sociales sont, conformément à l'art. 21 al. 2 ch. 19 let. e LTVA, exclues du champ de la taxe sur la valeur ajoutée (consid. 4).\nRegesto\n Art. 21 cpv. 2 n. 19 lett. e LIVA; prestazioni escluse dall'imposta; negoziazione di quote di capitale. Le prestazioni di negoziazione in relazione all'emissione di quote societarie sono esenti dall'imposta sul valore aggiunto nel senso dell'art. 21 cpv. 2 n. 19 lett. e LIVA (consid. 4).",
-        "quelle": "opencaselaw"
+        "quelle": "opencaselaw",
+        "sprachfassungen": [
+          {
+            "sprache": "de",
+            "kopf": "Art. 21 Abs. 2 Ziff. 19 lit. e MWSTG; von der Steuer ausgenommene Leistungen; Vermittlung von Kapitaleinlagen.",
+            "absaetze": [
+              "Vermittlungsleistungen im Zusammenhang mit der Ausgabe von Gesellschaftsanteilen sind gemäss Art. 21 Abs. 2 Ziff. 19 lit. e MWSTG von der Mehrwertsteuer ausgenommen (E. 4)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-II-2%3Ade&lang=de&type=show_document"
+          },
+          {
+            "sprache": "fr",
+            "kopf": "Art. 21 al. 2 ch. 19 let. e LTVA; prestations exclues du champ de l'impôt; négociation d'apports de capital.",
+            "absaetze": [
+              "Les prestations de négociation liées à l'émission de parts sociales sont, conformément à l'art. 21 al. 2 ch. 19 let. e LTVA, exclues du champ de la taxe sur la valeur ajoutée (consid. 4)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-II-2%3Afr&lang=fr&type=show_document"
+          },
+          {
+            "sprache": "it",
+            "kopf": "Art. 21 cpv. 2 n. 19 lett. e LIVA; prestazioni escluse dall'imposta; negoziazione di quote di capitale.",
+            "absaetze": [
+              "Le prestazioni di negoziazione in relazione all'emissione di quote societarie sono esenti dall'imposta sul valore aggiunto nel senso dell'art. 21 cpv. 2 n. 19 lett. e LIVA (consid. 4)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-II-2%3Ait&lang=it&type=show_document"
+          }
+        ]
       },
       "regesteAmtlich": true,
       "abschnitte": [

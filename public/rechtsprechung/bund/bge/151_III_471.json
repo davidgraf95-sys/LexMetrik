@@ -24,7 +24,33 @@
       },
       "regeste": {
         "text": "Art. 190a Abs. 1 lit. a IPRG; internationale Schiedsgerichtsbarkeit, Revision, nachträglich gefundene Beweismittel. Eine Revision gestützt auf ein nach dem zu revidierenden Schiedsentscheid entstandenes Beweismittel ist ausgeschlossen (E. 6).\nRegeste\n Art. 190a al. 1 let. a LDIP; arbitrage international, révision, moyens de preuve découverts après coup. Une révision fondée sur un moyen de preuve postérieur à la sentence à réviser est exclue (consid. 6).\nRegesto\n Art. 190a cpv. 1 lett. a LDIP; arbitrato internazionale, revisione, mezzi di prova trovati successivamente. Una revisione, basata su un mezzo di prova posteriore al lodo di cui è richiesta la revisione, è esclusa (consid. 6).",
-        "quelle": "opencaselaw"
+        "quelle": "opencaselaw",
+        "sprachfassungen": [
+          {
+            "sprache": "de",
+            "kopf": "Art. 190a Abs. 1 lit. a IPRG; internationale Schiedsgerichtsbarkeit, Revision, nachträglich gefundene Beweismittel.",
+            "absaetze": [
+              "Eine Revision gestützt auf ein nach dem zu revidierenden Schiedsentscheid entstandenes Beweismittel ist ausgeschlossen (E. 6)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-III-471%3Ade&lang=de&type=show_document"
+          },
+          {
+            "sprache": "fr",
+            "kopf": "Art. 190a al. 1 let. a LDIP; arbitrage international, révision, moyens de preuve découverts après coup.",
+            "absaetze": [
+              "Une révision fondée sur un moyen de preuve postérieur à la sentence à réviser est exclue (consid. 6)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-III-471%3Afr&lang=fr&type=show_document"
+          },
+          {
+            "sprache": "it",
+            "kopf": "Art. 190a cpv. 1 lett. a LDIP; arbitrato internazionale, revisione, mezzi di prova trovati successivamente.",
+            "absaetze": [
+              "Una revisione, basata su un mezzo di prova posteriore al lodo di cui è richiesta la revisione, è esclusa (consid. 6)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-III-471%3Ait&lang=it&type=show_document"
+          }
+        ]
       },
       "regesteAmtlich": true,
       "abschnitte": [

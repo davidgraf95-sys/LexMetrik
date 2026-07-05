@@ -24,7 +24,33 @@
       },
       "regeste": {
         "text": "Art. 273 SchKG; Art. 170 DBG; Art. 78 StHG; Haftung für Arrestschaden; Steuerarrest. Die Steuerbehörden haften wie jeder andere Gläubiger nach Art. 273 Abs. 1 SchKG für den aus einem ungerechtfertigten Steuerarrest entstandenen Schaden (E. 2-2.6). Die Schadenersatzklage kann beim Richter des Arrestortes eingereicht werden (E. 2.7).\nRegeste\n Art. 273 LP; art. 170 LIFD; art. 78 LHID; responsabilité en cas de séquestre injustifié; séquestre fiscal. Conformément à l'art. 273 al. 1 LP, les autorités fiscales répondent, comme tout autre créancier, du dommage que peut causer un séquestre fiscal injustifié (consid. 2-2.6). L'action en dommages-intérêts peut être intentée au for du séquestre (consid. 2.7).\nRegesto\n Art. 273 LEF; art. 170 LIFD; art. 78 LAID; responsabilità per sequestro infondato; sequestro fiscale. Le autorità fiscali sono responsabili ai sensi dell'art. 273 cpv. 1 LEF, come qualsiasi altro creditore, dei danni cagionati con un sequestro fiscale infondato (consid. 2-2.6). L'azione di risarcimento può essere promossa avanti al giudice del luogo del sequestro (consid. 2.7).",
-        "quelle": "opencaselaw"
+        "quelle": "opencaselaw",
+        "sprachfassungen": [
+          {
+            "sprache": "de",
+            "kopf": "Art. 273 SchKG; Art. 170 DBG; Art. 78 StHG; Haftung für Arrestschaden; Steuerarrest.",
+            "absaetze": [
+              "Die Steuerbehörden haften wie jeder andere Gläubiger nach Art. 273 Abs. 1 SchKG für den aus einem ungerechtfertigten Steuerarrest entstandenen Schaden (E. 2-2.6). Die Schadenersatzklage kann beim Richter des Arrestortes eingereicht werden (E. 2.7)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-III-332%3Ade&lang=de&type=show_document"
+          },
+          {
+            "sprache": "fr",
+            "kopf": "Art. 273 LP; art. 170 LIFD; art. 78 LHID; responsabilité en cas de séquestre injustifié; séquestre fiscal.",
+            "absaetze": [
+              "Conformément à l'art. 273 al. 1 LP, les autorités fiscales répondent, comme tout autre créancier, du dommage que peut causer un séquestre fiscal injustifié (consid. 2-2.6). L'action en dommages-intérêts peut être intentée au for du séquestre (consid. 2.7)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-III-332%3Afr&lang=fr&type=show_document"
+          },
+          {
+            "sprache": "it",
+            "kopf": "Art. 273 LEF; art. 170 LIFD; art. 78 LAID; responsabilità per sequestro infondato; sequestro fiscale.",
+            "absaetze": [
+              "Le autorità fiscali sono responsabili ai sensi dell'art. 273 cpv. 1 LEF, come qualsiasi altro creditore, dei danni cagionati con un sequestro fiscale infondato (consid. 2-2.6). L'azione di risarcimento può essere promossa avanti al giudice del luogo del sequestro (consid. 2.7)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F150-III-332%3Ait&lang=it&type=show_document"
+          }
+        ]
       },
       "regesteAmtlich": true,
       "abschnitte": [

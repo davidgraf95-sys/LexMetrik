@@ -24,7 +24,33 @@
       },
       "regeste": {
         "text": "a\n Art. 17 Abs. 1 und Art. 21 Abs. 2 BZP i.V.m. Art. 71 BGG; Art. 261 Abs. 1 OR; Art. 83 Abs. 4 ZPO; Art. 17 Abs. 3 BZP. Wechsel des Eigentümers des Mietobjekts während hängigem Verfahren; prozessuale Konsequenzen (E. 1 und 5).\nRegeste b\n Art. 266a Abs. 1 OR; Art. 271 Abs. 1 OR. Ordentliche Kündigung des Mietverhältnisses von Wohn- und Geschäftsräumen, im Allgemeinen (E. 3.1-3.4), betreffend die Sanierungs- oder Umbaukündigung (E. 3.5) und betreffend die Abbruchkündigung (E. 3.6).",
-        "quelle": "opencaselaw"
+        "quelle": "opencaselaw",
+        "sprachfassungen": [
+          {
+            "sprache": "de",
+            "kopf": "Art. 17 Abs. 1 und Art. 21 Abs. 2 BZP i.V.m. Art. 71 BGG; Art. 261 Abs. 1 OR; Art. 83 Abs. 4 ZPO; Art. 17 Abs. 3 BZP.",
+            "absaetze": [
+              "Wechsel des Eigentümers des Mietobjekts während hängigem Verfahren; prozessuale Konsequenzen (E. 1 und 5)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-III-481%3Ade&lang=de&type=show_document"
+          },
+          {
+            "sprache": "fr",
+            "kopf": "Art. 17 al. 1 et art. 21 al. 2 PCF en relation avec l'art. 71 LTF; art. 261 al. 1 CO; art. 83 al. 4 CPC; art. 17 al. 3 PCF.",
+            "absaetze": [
+              "Changement de propriétaire de la chose louée en cours d'instance; conséquences procédurales (consid. 1 et 5)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-III-481%3Afr&lang=fr&type=show_document"
+          },
+          {
+            "sprache": "it",
+            "kopf": "Art. 17 cpv. 1 e art. 21 cpv. 2 PC in relazione con l'art. 71 LTF; art. 261 cpv. 1 CO; art. 83 cpv. 4 CPC; art. 17 cpv. 3 PC.",
+            "absaetze": [
+              "Cambiamento del proprietario dell'ente locato in pendenza di procedura; conseguenze processuali (consid. 1 e 5)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-III-481%3Ait&lang=it&type=show_document"
+          }
+        ]
       },
       "regesteAmtlich": true,
       "abschnitte": [
