@@ -1,4 +1,4 @@
-import { Fragment, Suspense, lazy, useCallback, useEffect, useRef, useState, type KeyboardEvent as ReactKeyboardEvent, type PointerEvent as ReactPointerEvent, type ReactNode } from 'react';
+import { Fragment, useCallback, useEffect, useRef, useState, type KeyboardEvent as ReactKeyboardEvent, type PointerEvent as ReactPointerEvent, type ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Topbar } from './Topbar';
@@ -20,10 +20,6 @@ import { useDialogFokus } from './useDialogFokus';
 
 // Neutraler Pane-Kontext für den 1-Pane-Fall (DOM-/verhaltensneutral, stabil).
 const KEIN_PANE = { imPane: false, rolle: 'primaer' as const, wurzel: null, overlayWurzel: null };
-
-// Befehls-/Sprung-Palette (Cmd/Ctrl-K, W2·5d G4): lazy — der Parser + die schweren
-// Such-Chunks bleiben aus dem Erst-Paint (§15 Regel 3), erst beim Öffnen geladen.
-const BefehlsPalette = lazy(() => import('../suche/BefehlsPalette').then((m) => ({ default: m.BefehlsPalette })));
 
 // Ziehgriff am rechten Rand der Desktop-Seitenleiste: Breite per Maus/Touch
 // ziehen ODER per Tastatur (Pfeil ←/→) verstellen. role="separator" mit
@@ -305,28 +301,11 @@ export function Shell({ children }: { children: ReactNode }) {
   // Schliessen kehrt der Fokus auf den ☰-Knopf zurück statt an <body>.
   useDialogFokus(schubladeOffen, schubladeRef, () => setSchubladeOffen(false));
 
-  // Cmd/Ctrl-K öffnet (bzw. schliesst) die globale Befehls-/Sprung-Palette
-  // (W2·5d G4). Bewusst der spezifizierte Shortcut; überschreibt die Browser-
-  // Default-Belegung von Cmd/Ctrl-K (Kollisionsfreiheit zu «/» der HeaderSuche
-  // und F6 der Panes ist gewahrt — verschiedene Tasten).
-  const [paletteOffen, setPaletteOffen] = useState(false);
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if ((e.metaKey || e.ctrlKey) && !e.altKey && (e.key === 'k' || e.key === 'K')) {
-        e.preventDefault();
-        setPaletteOffen((o) => !o);
-      }
-    };
-    // Klick-Öffner aus dem Inhalt (z. B. der Landeplatz-CTA auf /gesetze) über
-    // ein entkoppeltes Event — der Palette-Zustand lebt hier in der Shell.
-    const onOeffnen = () => setPaletteOffen(true);
-    window.addEventListener('keydown', onKey);
-    window.addEventListener('lm:befehlspalette', onOeffnen);
-    return () => {
-      window.removeEventListener('keydown', onKey);
-      window.removeEventListener('lm:befehlspalette', onOeffnen);
-    };
-  }, []);
+  // A5 (David 5.7.2026): die frühere Befehls-/Sprung-Palette ist entfallen. Der
+  // Norm-Sprung sitzt in der normalen HeaderSuche; ⌘K/Ctrl-K und «/» fokussieren
+  // dort das Feld (Handler in HeaderSuche, samt Feld-Ref). Der Landeplatz-CTA auf
+  // /gesetze fokussiert es über das Event «lm:suche-fokus». Die Shell trägt keinen
+  // Palette-Zustand mehr.
 
   return (
     <div className="min-h-screen bg-paper">
@@ -359,7 +338,6 @@ export function Shell({ children }: { children: ReactNode }) {
           <PaneSteuerungProvider value={paneSteuerung}>
           <Topbar
             onMenu={() => setSchubladeOffen(true)}
-            onBefehlsPalette={() => setPaletteOffen(true)}
             seitenleisteEingeklappt={seitenleiste.eingeklappt}
             onSeitenleisteUmschalten={seitenleiste.umschalten}
             schrift={schriftskala}
@@ -471,14 +449,6 @@ export function Shell({ children }: { children: ReactNode }) {
           </div>
         </div>,
         document.body,
-      )}
-
-      {/* Globale Befehls-/Sprung-Palette (Cmd/Ctrl-K, W2·5d G4). Lazy: erst beim
-          ersten Öffnen geladen (der Chunk bleibt aus dem Erst-Paint, §15). */}
-      {paletteOffen && (
-        <Suspense fallback={null}>
-          <BefehlsPalette offen onSchliessen={() => setPaletteOffen(false)} />
-        </Suspense>
       )}
     </div>
   );

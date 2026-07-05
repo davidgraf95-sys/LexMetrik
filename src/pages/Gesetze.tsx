@@ -439,7 +439,8 @@ function KantonAuswahl({ gruppen, alleKantone, onWaehle }: {
 }
 
 // Neutraler Landeplatz /gesetze (G4 · §4.1): prominenter Sprung-/Such-Einstieg
-// (öffnet die Cmd/Ctrl-K-Palette, §4.2) + drei gleichwertige Einstiegskacheln mit
+// (fokussiert die normale HeaderSuche, in der der Norm-Sprung sitzt — A5, David
+// 5.7.2026, keine eigene Palette mehr) + drei gleichwertige Einstiegskacheln mit
 // Kurz-Statistik. Löst die frühere Dreifach-Redundanz (Overline + Tab-Leiste +
 // Sidebar) auf: EINE Steuerung, kein stiller Bund-Default. Reine Darstellung (§3).
 function Einstieg({ bund, bundArtikel, kantone, kantonErlasse, international, onWahl, onBefehl }: {
@@ -454,7 +455,7 @@ function Einstieg({ bund, bundArtikel, kantone, kantonErlasse, international, on
   ];
   return (
     <div className="space-y-6">
-      {/* Prominenter Artikel-Sprung / Suche (§4.2): öffnet die Befehlspalette. */}
+      {/* Prominenter Artikel-Sprung / Suche (§4.2 · A5): fokussiert die HeaderSuche. */}
       <button
         type="button"
         onClick={onBefehl}
@@ -665,7 +666,7 @@ export function Gesetze() {
                 kantonErlasse={erlasse.filter((e) => e.ebene === 'kanton').length}
                 international={international.length}
                 onWahl={setzeEbene}
-                onBefehl={() => { if (typeof window !== 'undefined') window.dispatchEvent(new CustomEvent('lm:befehlspalette')); }}
+                onBefehl={() => { if (typeof window !== 'undefined') window.dispatchEvent(new CustomEvent('lm:suche-fokus')); }}
               />
               {/* G6 · §4.4 — vierte Tür: die zweite Gliederung nach Rechtsgebiet/Thema. */}
               <RechtsgebietEinstieg onWahl={setzeThemen} />

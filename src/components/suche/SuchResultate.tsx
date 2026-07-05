@@ -28,7 +28,7 @@ function Marke({ text, ton }: NonNullable<SuchTreffer['marke']>) {
 
 const ZEILE_CLS = 'group/z flex items-center gap-3 px-4 py-2 no-underline transition-colors hover:bg-brass-100/40';
 
-function ZeileInhalt({ t }: { t: SuchTreffer }) {
+function ZeileInhalt({ t, sprung }: { t: SuchTreffer; sprung?: boolean }) {
   return (
     <>
       <span className="min-w-0 flex-1">
@@ -36,18 +36,23 @@ function ZeileInhalt({ t }: { t: SuchTreffer }) {
         {t.untertitel && <span className="block truncate text-body-s text-ink-500">{t.untertitel}</span>}
       </span>
       {t.marke && <Marke {...t.marke} />}
-      <span aria-hidden className="text-ink-300 transition-all group-hover/z:translate-x-0.5 group-hover/z:text-brass-500">→</span>
+      {/* Norm-Sprung (A5): ↵ signalisiert die Primäraktion «Enter springt».
+          Alle anderen Treffer öffnen mit «→». */}
+      <span aria-hidden className={sprung
+        ? 'text-brass-500'
+        : 'text-ink-300 transition-all group-hover/z:translate-x-0.5 group-hover/z:text-brass-500'}>{sprung ? '↵' : '→'}</span>
     </>
   );
 }
 
-function Zeile({ t, onAuswahl, onNavigate, optionId, aktiv, alsOption }: {
+function Zeile({ t, onAuswahl, onNavigate, optionId, aktiv, alsOption, sprung }: {
   t: SuchTreffer;
   onAuswahl?: () => void;
   onNavigate?: (href: string) => void;
   optionId?: string;
   aktiv?: boolean;
   alsOption?: boolean;
+  sprung?: boolean;
 }) {
   // Listbox-Option: KEIN inneres <a> (ein fokussierbarer Link in role=option ist
   // nested-interactive, axe serious — Entscheid David 26.6.2026). Maus/Touch
@@ -58,14 +63,14 @@ function Zeile({ t, onAuswahl, onNavigate, optionId, aktiv, alsOption }: {
       <li role="option" id={optionId} aria-selected={!!aktiv}
         onClick={() => { onAuswahl?.(); onNavigate?.(t.href); }}
         className={`${ZEILE_CLS} cursor-pointer${aktiv ? ' bg-brass-100/40' : ''}`}>
-        <ZeileInhalt t={t} />
+        <ZeileInhalt t={t} sprung={sprung} />
       </li>
     );
   }
   return (
     <li>
       <Link to={t.href} onClick={onAuswahl} className={ZEILE_CLS}>
-        <ZeileInhalt t={t} />
+        <ZeileInhalt t={t} sprung={sprung} />
       </Link>
     </li>
   );
@@ -84,7 +89,8 @@ function Gruppe({ g, index, onAuswahl, onNavigate, listboxId, aktivId }: {
       className="lc-reveal border-t border-line first:border-t-0" style={{ animationDelay: `${index * 55}ms` }}>
       <div className="flex items-baseline gap-2 px-4 pt-3 pb-1">
         <span className="lc-overline text-ink-500">{g.titel}</span>
-        {!g.laedt && <span className="num text-xs text-ink-500">{g.gesamt}</span>}
+        {/* Zähler je Gruppe (A6) — ausser beim einzeiligen Norm-Sprung («1» wäre Lärm). */}
+        {!g.laedt && g.id !== 'sprung' && <span className="num text-xs text-ink-500">{g.gesamt}</span>}
         {g.mehrHref && (
           <Link to={g.mehrHref} onClick={onAuswahl} className="ml-auto text-body-s text-brass-700 no-underline hover:text-brass-600">
             alle {g.gesamt} →
@@ -99,7 +105,7 @@ function Gruppe({ g, index, onAuswahl, onNavigate, listboxId, aktivId }: {
             {g.treffer.map((t) => {
               const oid = listboxId ? suchOptionId(listboxId, g.id, t.id) : undefined;
               return <Zeile key={`${g.id}:${t.id}`} t={t} onAuswahl={onAuswahl} onNavigate={onNavigate}
-                optionId={oid} aktiv={!!oid && oid === aktivId} alsOption={!!listboxId} />;
+                optionId={oid} aktiv={!!oid && oid === aktivId} alsOption={!!listboxId} sprung={g.id === 'sprung'} />;
             })}
           </ul>}
     </div>

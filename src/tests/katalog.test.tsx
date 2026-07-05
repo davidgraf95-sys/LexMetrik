@@ -148,12 +148,14 @@ describe('Globale Suche im Top-Streifen (UI-Welle: Dropdown überall, §6.3)', (
   // dem Feld — auf JEDER Seite gleich. Beim ersten Render (SSR, leeres Feld) ist
   // genau ein leeres Suchfeld da; das Dropdown erscheint erst clientseitig beim
   // Tippen (Lazy-Daten).
-  it('rendert genau ein leeres Suchfeld mit «/»-Kürzel — unabhängig vom Pfad', () => {
+  it('rendert genau ein leeres Suchfeld mit «/»- UND ⌘K-Kürzel — unabhängig vom Pfad', () => {
     for (const url of ['/', '/rechner/verzugszins', '/gesetze', '/rechtsprechung']) {
       const html = sucheHtml(url);
       expect(html.match(/type="search"/g)?.length, url).toBe(1);
       expect(html, url).toContain('value=""');
-      expect(html, url).toContain('aria-keyshortcuts="/"');
+      // A5 (David 5.7.2026): das Feld trägt jetzt auch ⌘K/Ctrl-K (frühere Palette
+      // entfallen, Shortcut fokussiert das Feld). «/» bleibt Bestandteil des Kürzels.
+      expect(html, url).toContain('aria-keyshortcuts="/ Meta+K Control+K"');
     }
   });
 

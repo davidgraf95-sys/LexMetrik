@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { sucheAlles, type SuchGruppe, type SuchTreffer } from '../../lib/universalSuche';
+import { sucheAlles, sprungGruppe, type SuchGruppe, type SuchTreffer } from '../../lib/universalSuche';
 import { holeOnlineTreffer, MIN_ZEICHEN } from '../../lib/suche/onlineVolltext';
+import { baueNormIndex, parseNormQuery } from '../../lib/suche/normQuery';
 import type { PresetIndexEintrag } from '../../lib/presetIndex';
 import type { BrowseErlass } from '../../lib/normtext/browse-typen';
 import type { BrowseEntscheid } from '../../lib/rechtsprechung/register';
@@ -62,12 +63,23 @@ export function useUniversalSuche(q: string): UniversalSucheErgebnis {
     return () => { abgebrochen = true; clearTimeout(id); };
   }, [q]);
 
+  // Norm-Sprung-Parser (A5, W2·5d): baut den Auflösungs-Index EINMAL pro geladenem
+  // Gesetzes-Manifest (KEIN Zweit-Index, K10 — der Parser sitzt auf denselben
+  // `gesetze`, die die Gruppen-Suche ohnehin lädt). Deterministisch (§2): erkennt
+  // die Eingabe eine eindeutige Norm («OR 257d», «Art. 5 AIG»), liefert er den
+  // Deep-Link; Freitext → null → nur die normale Suche.
+  const normIndex = useMemo(() => (gesetze ? baueNormIndex(gesetze) : null), [gesetze]);
+  const direkt = useMemo(() => (normIndex ? parseNormQuery(q, normIndex) : null), [normIndex, q]);
+
   const gruppen = useMemo(
     // Presets ungekappt holen (limit 999) — `gesamt` soll die ECHTE Trefferzahl
     // sein, nicht das Default-Suchlimit (§8). Die Anzeige kappt in der Gruppe.
-    // Die Online-Gruppe (E2) hängt IMMER hinter den statischen Gruppen (§11.3 b:
-    // Edge als Ergänzung, statischer Index bleibt Fallback/oben) — CLS-sicher, weil
-    // sie nur unten anwächst und nichts darüber verschiebt (§15.2).
+    // Reihenfolge (A6): Norm-Sprung (A5) ZUOBERST → statische Relevanz-Gruppen →
+    // Online-Edge-Gruppe (E2) UNTEN. Die Online-Gruppe hängt IMMER hinter den
+    // statischen Gruppen (§11.3 b: Edge als Ergänzung, statischer Index bleibt
+    // Fallback/oben) — CLS-sicher, weil sie nur unten anwächst und nichts darüber
+    // verschiebt (§15.2). Der Sprung oben ist ein einzelner deterministischer
+    // Treffer, der ebenfalls nichts verdrängt (er ersetzt keine Freitext-Gruppe).
     () => {
       const statisch = sucheAlles(q, {
         presets: presetSucheFn ? presetSucheFn(q, 999) : null,
@@ -76,9 +88,14 @@ export function useUniversalSuche(q: string): UniversalSucheErgebnis {
         entscheide,
         materialien,
       });
-      return onlineGruppe ? [...statisch, onlineGruppe] : statisch;
+      const sprung = sprungGruppe(direkt);
+      return [
+        ...(sprung ? [sprung] : []),
+        ...statisch,
+        ...(onlineGruppe ? [onlineGruppe] : []),
+      ];
     },
-    [q, presetSucheFn, artikelSucheFn, gesetze, entscheide, materialien, onlineGruppe],
+    [q, direkt, presetSucheFn, artikelSucheFn, gesetze, entscheide, materialien, onlineGruppe],
   );
   const allesGeladen = presetSucheFn !== null && artikelSucheFn !== null && gesetze !== null && entscheide !== null && materialien !== null;
   return { gruppen, allesGeladen };

@@ -60,7 +60,7 @@ Präzision plus die eine warme Geste liest sich als «willkommend und modern», 
 tokenlosen `max-w-[58rem]`; Sektionsabstand `--space-16`):
 
 ```
-┌ Topbar: Logo · HeaderSuche (UNVERÄNDERT, «/»-Shortcut) · Theme ┐
+┌ Topbar: Logo · HeaderSuche («/»- UND ⌘K-Shortcut, Norm-Sprung) · Theme ┐
 │ Sidebar: Start·Gesetze·Rechtsprechung·Materialien·Rechner·Vorlagen │
 ├────────────────────────── main ──────────────────────────┤
 │ ╔══ HERO: bg-brass-100 rounded-2xl, Innenraum p-6/p-8 ══╗ │
@@ -194,8 +194,15 @@ Dreierfigur pro Absatz, keine Gedankenstrich-Flut, kein «Entdecken Sie»):
   Nebenwirkungen: `navigation.test.ts`, Prerender-/Sitemap-Reihenfolge — nachziehen.
 - **Konsistenz:** Rubrik-Kacheln iterieren über dasselbe `NAVIGATION`-Array (ohne «Start») —
   eine Landkarte, eine Ordnung.
-- **Topbar:** `HeaderSuche` bleibt UNVERÄNDERT inkl. «/»-Shortcut (tastatur.e2e). Zwei sichtbare
-  Suchfelder auf «/» sind akzeptiert (gleicher Hook, ein Suchweg). **KEINE ⌘K-Palette.**
+- **Topbar:** `HeaderSuche` trägt den «/»-Shortcut (tastatur.e2e). Zwei sichtbare
+  Suchfelder auf «/» sind akzeptiert (gleicher Hook, ein Suchweg).
+  > **DEKLARIERTE SPEC-ÄNDERUNG (U-SUCHE / A5, David-Entscheid 5.7.2026 — ausgeführt
+  > W2·5d):** Der ursprüngliche Satz «`HeaderSuche` bleibt UNVERÄNDERT … **KEINE
+  > ⌘K-Palette**» ist überholt. Die frühere ⌘K-Befehls-/Sprung-Palette ist
+  > **entfallen**; ihr Norm-Sprung-Parser (`normQuery.ts`) sitzt jetzt IN der
+  > `HeaderSuche` (Norm erkannt ⇒ Direkt-Sprung als oberster Treffer, Enter springt).
+  > **⌘K/Ctrl-K fokussiert nun die HeaderSuche** (die «/»-Koexistenz bleibt,
+  > `tastatur.e2e` grün). Details: `FAHRPLAN-GESETZES-UX.md` §10 U-SUCHE.
 
 ## §8 · A11y & Kontrast (Nachweis VOR Merge, nicht Behauptung)
 
