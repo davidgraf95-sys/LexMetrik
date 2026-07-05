@@ -305,12 +305,29 @@ export function extrahiereArtikelAusAnker(html: string, ankerRoh: string): Artik
       }
     } else if (match[6] !== undefined) {
       // ── Bild-Absatz (Formel/Piktogramm als Standalone-<p> mit <img>) ─────────
-      const img = match[6].match(/<img\b[^>]*>/i)?.[0];
-      if (img) {
-        const b = bildAusImg(img);
+      // Der <p> kann NEBEN dem <img> echten Normtext tragen (Formel-/Bild-
+      // Adjazenz): z.B. VTS art_123 Abs. 3 «…richtet sich nach folgender Formel:»
+      // <img> gefolgt von «Türen zählen ebenfalls als Notausstiege. …». Bisher
+      // wurde NUR das <img> erfasst und der (nach-/vor-)stehende Text stumm
+      // verworfen (§1). Jetzt werden Text-Läufe und Bilder in Dokumentreihenfolge
+      // als eigene Blöcke geführt. Für den Regelfall (reiner <p class="bild"> mit
+      // nur einem <img>) bleibt das Ergebnis byte-gleich: leere Läufe erzeugen
+      // keinen Block (§6). Fussnoten-<sup><a>…</a></sup> VOR entferneTags tilgen,
+      // sonst leakt die Fussnoten-Ziffer in den Text.
+      const innerBild = entferneFussnotenSups(match[6]);
+      const imgReAdj = /<img\b[^>]*>/gi;
+      let letzteAdj = 0;
+      let imgM: RegExpExecArray | null;
+      while ((imgM = imgReAdj.exec(innerBild)) !== null) {
+        const vor = entferneTags(innerBild.slice(letzteAdj, imgM.index)).trim();
+        if (vor) bloecke.push({ absatz: null, text: vor });
+        const b = bildAusImg(imgM[0]);
         b.alt = 'Amtliche Abbildung';
         bloecke.push({ absatz: null, text: '', bild: b });
+        letzteAdj = imgReAdj.lastIndex;
       }
+      const nach = entferneTags(innerBild.slice(letzteAdj)).trim();
+      if (nach) bloecke.push({ absatz: null, text: nach });
     }
   }
 
@@ -464,10 +481,27 @@ function parseDefinitionsListe(
       if (nachMarke) text = nachMarke;
     }
 
-    // Eltern-Item: auch ohne eigenen Text aufnehmen, WENN eine Unterliste folgt
-    // (sonst ginge die lit-Ebene verloren — der eigentliche Bug). Andernfalls
-    // wie bisher nur bei Text (leere Items werden verworfen).
-    if (marke && (text || subDlIdx >= 0)) {
+    // LEERES <dt> + Text-<dd> = Fortsetzungszeile des vorausgehenden Items
+    // (Fedlex-Sonderform «<dt>a.</dt><dd>Label:</dd><dt></dt><dd>Beschreibung</dd>»,
+    // z.B. SSV art_24: Signal-Namen im ersten <dd>, die verbindliche Beschreibung
+    // im markenlosen Folge-<dd>). Ohne dies ging die Beschreibung stumm verloren,
+    // weil ein markenloses Item unten verworfen wird (§1, Text-Adjazenz). An den
+    // Text des letzten Items DIESER Ebene anhängen (Dokumentreihenfolge).
+    // NUR im Haupttext-Pfad (!anhang): der Anhang-Pfad (extrahiereAnhang) erfasst
+    // markenlose <dd>-Notizen bereits SEPARAT via markeloseNotizen() als eigene
+    // Prosa-Blöcke VOR der Liste — dort würde ein zweites Anhängen die Notiz
+    // DOPPELN (VTS-Anhang-Mess-Tabellen). Nur bei vorhandenem Vorgänger-Item
+    // anhängen: ein FÜHRENDES markenloses <dd> (ohne Vorgänger) tritt im Haupttext
+    // empirisch nicht auf (alle Haupt-Artikel-<dl> der betroffenen Erlasse starten
+    // lettered/nummeriert; Fedlex-Chapeaus stehen als eigenes <p> vor der <dl>).
+    // §6: greift nur bei zuvor VERLORENEM Text — additiv, keine Marke fabriziert.
+    if (!anhang && !marke && text && subDlIdx < 0 && items.length > 0) {
+      const vorheriges = items[items.length - 1];
+      vorheriges.text = vorheriges.text ? `${vorheriges.text} ${text}` : text;
+    } else if (marke && (text || subDlIdx >= 0)) {
+      // Eltern-Item: auch ohne eigenen Text aufnehmen, WENN eine Unterliste folgt
+      // (sonst ginge die lit-Ebene verloren — der eigentliche Bug). Andernfalls
+      // wie bisher nur bei Text (leere Items werden verworfen).
       // tiefe NUR setzen, wenn verschachtelt (>0) → Top-Level byte-gleich (§7).
       items.push(tiefe > 0 ? { marke, text, tiefe } : { marke, text });
     }
