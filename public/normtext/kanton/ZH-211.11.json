@@ -87,9 +87,15 @@
           "absatz": "1",
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Streitwert",
-              "Gebühr"
+            "spalten": [
+              {
+                "typ": "bereich",
+                "titel": "Streitwert"
+              },
+              {
+                "typ": "bereich",
+                "titel": "Gebühr"
+              }
             ],
             "zeilen": [
               [
@@ -124,7 +130,7 @@
       "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html",
       "abgerufen": "2026-06-22",
       "fassungsToken": "468d07823867f09427e0d20de4919d3e1aa2706c3972ef904a6c113cf7a9a002",
-      "sha": "a09d74ac10b0a59fd3244ca2f0d348e886082f9dcee0de111cecdd357b38d6c6"
+      "sha": "bb44f4f0bcc93d7174e0f7597d1efe4075833296a62bb74a862ee2ab8999b4ed"
     },
     {
       "id": "kanton/ZH/211.11/art_4",
@@ -138,10 +144,19 @@
           "absatz": "1",
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Streitwert",
-              "Grundgebühr",
-              "Zuschlag"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Streitwert"
+              },
+              {
+                "typ": "text",
+                "titel": "Grundgebühr"
+              },
+              {
+                "typ": "text",
+                "titel": "Zuschlag"
+              }
             ],
             "zeilen": [
               [
@@ -200,7 +215,7 @@
       "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html",
       "abgerufen": "2026-06-22",
       "fassungsToken": "468d07823867f09427e0d20de4919d3e1aa2706c3972ef904a6c113cf7a9a002",
-      "sha": "54a7085663d959d3b8838ea793d2bb77ce0fc99e9283cbf4ee30d02c3343b66d"
+      "sha": "7c1eddb352663a90b3d524b5395e5c725308fdecab750653f87901f3a636eebc"
     },
     {
       "id": "kanton/ZH/211.11/art_5",
