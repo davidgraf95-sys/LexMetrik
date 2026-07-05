@@ -974,15 +974,15 @@
           "items": [
             {
               "marke": "a",
-              "text": "«Fahrtrichtung rechts» (2.32), «Fahrtrichtung links» (2.33):"
+              "text": "«Fahrtrichtung rechts» (2.32), «Fahrtrichtung links» (2.33): Der Führer muss vor dem Signal nach rechts bzw. links abbiegen;"
             },
             {
               "marke": "b",
-              "text": "«Hindernis rechts umfahren» (2.34), «Hindernis links umfahren» (2.35):"
+              "text": "«Hindernis rechts umfahren» (2.34), «Hindernis links umfahren» (2.35): Der Führer muss das Hindernis, bei dem das Signal steht, rechts bzw. links umfahren;"
             },
             {
               "marke": "c",
-              "text": "«Geradeausfahren» (2.36):"
+              "text": "«Geradeausfahren» (2.36): Der Führer darf weder nach rechts noch nach links abbiegen."
             }
           ]
         },
@@ -1007,7 +1007,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1979/1961_1961_1961/de#art_24",
       "abgerufen": "2026-07-05",
       "fassungsToken": "20260701",
-      "sha": "df8192da2d3dff8a49e09f536e09f55768f17b2a48cfd1ef6bf36c993c43edfc"
+      "sha": "f6de32282cd45a1230e1285e1ad5c0e83d548eca8f93f0f91d5fe22195731bdc"
     },
     {
       "id": "bund/SSV/art_25",
