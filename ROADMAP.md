@@ -681,9 +681,15 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   **U-LINIEN ✅ gebaut** (PR `feat/u-linien-a8`: Linien-Default aufbau-basiert statt
   grundart-Kategorie — SSoT `linienAufbau.ts`, Schwellen empirisch aus 1135 Sidecars,
   Reglement §4b-A, Tor `check:linien-kanon` = R1/R4-Nachfolger; ZGB ruhig, ArG
-  sichtbar; Wortlaut/Golden byte-gleich) → U-KOPF (umbaut G2a/G2b+A1/A3/A4: Fussnoten-AUS =
-  verschwinden [überstimmt R9, David-Entscheid; heute dämpft CSS nur], Breadcrumbs,
-  «Ansicht»-Dropdown; Golden-Klasse per P1-Beweis) → U-VERWEIS (A7/A10/A11/A13:
+  sichtbar; Wortlaut/Golden byte-gleich) → **U-KOPF ✅ gebaut** (PR
+  `feat/u-kopf-a1-a3-a4`, Auto-Merge armiert; Ausführungsvermerk §10.7): A1
+  Fussnoten-AUS = VERSCHWINDEN (display:none, überstimmt R9 — David-Entscheid;
+  Normtext bleibt durchsuchbar, Print folgt Toggle, CLS 0) · A3 Positions-Leiste =
+  echte klickbare Breadcrumbs (nav/ol/li, aria-current, springeZuSektion) · A4
+  «Ansicht»-Dropdown im Kopf (`LeserAnsichtMenu`, ehrliche Disclosure + useDialog-
+  Fokus; Chip-Leiste entfällt); P1 golden-ändernd (Kopf-Markup), Artikel-Prosa
+  byte-gleich; Gate + e2e (inkl. neuer A9-Throttle `leser-kopf-a9`) grün →
+  U-VERWEIS (A7/A10/A11/A13:
   Plural-Linker «in den Artikeln…», Präambel-Verweise, strukturiertes Verweis-Popover
   Artikel→Entscheide→Materialien — Risiko-Pfad, `check:gegenpruefung`) → U-POSITION
   (A2/A16/A17: Scrollbalken-Proportionalität, exakte Zurück-Restoration,
