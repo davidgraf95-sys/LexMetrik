@@ -768,11 +768,17 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   Startseiten-Kachel; kuratierter Nachtrag als in-Bundle-Artikel-Anker STATT DB-Migration [DATABREACH→
   Art. 24 DSG, KS 6a→Art. 65 DBG, DSFA §2.4-Downgrade — 3/3 gegen Live-Fedlex CONFIRMED]; 10 Unit + 3
   e2e grün, CLS 0 auf OR/Startseite). **6a-MAT komplett (M0–M5).**
-- [ ] **7 · Verzahnungs-Klingen** *(`[OF]`, amtlich)*: **Verjährungs-/Gewährleistungs-Board**
-  <!-- @meta id: W2·7 · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->
-  (`verjaehrung.ts`-Matrix; CISG nur Link); **Verzugszins-/Forderungs-/Inkasso-Strecke**
-  (`verzugszins.ts`, Reverse-Reader strukturiert, stateless); **Gerichts-Baustein-Set** (amtlicher
-  Zitierer BGE/BGer + Rubrum-Vorlage Art. 112 BGG/238 ZPO; reiner User-Input-Builder).
+- [x] **7 · Verzahnungs-Klingen** *(`[OF]`, amtlich)* — **GEBAUT 5.7.2026** (Worktree
+  <!-- @meta id: W2·7 · status: done · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->
+  `feat/w27-verzahnungs-klingen`, Dossier `bibliothek/recherche/verzahnungs-klingen-w27.md`,
+  STRUKTUR-Karte 5.7.). **(a) Verjährungs-/Gewährleistungs-Board** (`/rechner/verjaehrung-board`):
+  `verjaehrung.ts`-Regime-Matrix + Gewährleistungs-Sonderfall + AT-Brücke; CISG nur Link.
+  **(b) Verzugszins-/Forderungs-/Inkasso-Strecke** (`/rechner/inkasso-strecke`): stateless
+  Reverse-Reader Verzug→Verzugszins→Mahnung→Betreibung→Fristen. **(c) Gerichts-Baustein-Set**:
+  amtlicher Zitierer BGE/BGer (`/rechner/gerichtszitat`, `gerichtszitat.ts`) + Rubrum-Vorlage
+  (`/vorlagen/rubrum`, Art. 238 ZPO/112 BGG live verifiziert + gegengeprüft bestanden).
+  Reine Darstellung auf bestehenden Engines (§3); Golden 201 unverändert (+8 additiv),
+  Gate grün, e2e 163, Gegenprüfung bestanden.
 - [ ] **8 · Schriften-Baukasten** *(VORLAGEN, Worktree)* — Berufung/BGG-Beschwerde/Sistierung/
   <!-- @meta id: W2·8 · status: ready · of: ja · blocker: null · dep: [] · kollision: [src/lib/vorlagen] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-VORLAGEN-AUSBAU.md -->
   Beweisverzeichnis über `vorlagen/engine.ts`; Zulässigkeit nur Hinweis, Status «entwurf».
