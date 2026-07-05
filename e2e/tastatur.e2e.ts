@@ -91,7 +91,24 @@ test('«/» fokussiert die Suche (Tastatur-Shortcut)', async ({ page }) => {
   await page.keyboard.press('/')
   // Die Header-Suche ist eine ARIA-Combobox (Vorschlags-Listbox), kein reiner
   // searchbox — der «/»-Shortcut fokussiert sie weiterhin.
-  await expect(page.getByRole('combobox', { name: 'LexMetrik durchsuchen' })).toBeFocused()
+  await expect(page.getByRole('combobox', { name: /LexMetrik durchsuchen/ })).toBeFocused()
+})
+
+// A5 (David 5.7.2026): ⌘K/Ctrl-K fokussiert dieselbe HeaderSuche (die frühere
+// Palette ist entfallen). Koexistenz zu «/» — beide fokussieren dasselbe Feld,
+// keiner öffnet ein Overlay. Sichert den KA4-Akzeptanzpunkt («/»-Koexistenz).
+test('⌘K/Ctrl-K und «/» koexistieren: beide fokussieren die HeaderSuche, kein Overlay', async ({ page }) => {
+  await page.goto('/')
+  const feld = page.getByRole('combobox', { name: /LexMetrik durchsuchen/ })
+  // Ctrl-K fokussiert das Feld.
+  await page.keyboard.press('Control+k')
+  await expect(feld).toBeFocused()
+  // Kein Dialog/Overlay entstanden (keine ⌘K-Palette mehr).
+  await expect(page.getByRole('dialog', { name: /Sprung zum Artikel/ })).toHaveCount(0)
+  // Feld verlassen, dann «/» fokussiert es erneut (Koexistenz).
+  await page.getByRole('link', { name: 'Zum Inhalt springen' }).focus()
+  await page.keyboard.press('/')
+  await expect(feld).toBeFocused()
 })
 
 test('SchweizKarte: Kanton-Fläche ist tastatur-fokussierbar und mit Enter wählbar (W1.6)', async ({ page }) => {

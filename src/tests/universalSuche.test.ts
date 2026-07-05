@@ -1,10 +1,11 @@
 import { describe, it, expect } from 'vitest';
 import {
-  katalogGruppe, presetGruppe, gesetzGruppe, entscheidGruppe, artikelGruppe, sucheAlles, type SuchTreffer,
+  katalogGruppe, presetGruppe, gesetzGruppe, entscheidGruppe, artikelGruppe, sprungGruppe, sucheAlles, type SuchTreffer,
 } from '../lib/universalSuche';
 import type { PresetIndexEintrag } from '../lib/presetIndex';
 import type { BrowseErlass } from '../lib/normtext/browse-typen';
 import type { BrowseEntscheid } from '../lib/rechtsprechung/register';
+import type { NormQueryTreffer } from '../lib/suche/normQuery';
 
 // Der Aggregator ist reine Abbildung über bestehende Such-/Filter-Funktionen
 // (§3/§5). Diese Tests sichern: korrekte href-Bildung je Inhaltsart, Kappung,
@@ -126,6 +127,34 @@ describe('universalSuche: Artikel-Volltext-Gruppe', () => {
   });
 });
 
+describe('universalSuche: Norm-Sprung-Gruppe (A5)', () => {
+  const treffer: NormQueryTreffer = {
+    erlass: { key: 'OR', ebene: 'bund', kanton: null, kuerzel: 'OR', titel: 'Obligationenrecht', status: 'snapshot' },
+    artikelToken: '257_d', artikelAnzeige: '257d', href: '/gesetze/bund/OR#art-257_d',
+  };
+
+  it('null → keine Gruppe (Freitext fällt in die normale Suche)', () => {
+    expect(sprungGruppe(null)).toBeNull();
+  });
+
+  it('baut EINE Sprung-Gruppe: Marke «Sprung», Kürzel + Artikel im Label, amtlicher Titel als Untertitel, Deep-Link', () => {
+    const g = sprungGruppe(treffer)!;
+    expect(g.id).toBe('sprung');
+    expect(g.gesamt).toBe(1);
+    expect(g.treffer).toHaveLength(1);
+    expect(g.treffer[0].marke).toEqual({ text: 'Sprung', ton: 'ok' });
+    expect(g.treffer[0].label).toBe('OR · Art. 257d');
+    expect(g.treffer[0].untertitel).toBe('Obligationenrecht');
+    expect(g.treffer[0].href).toBe('/gesetze/bund/OR#art-257_d');
+  });
+
+  it('reiner Erlass-Sprung (ohne Artikel) → Label ohne «Art.»', () => {
+    const g = sprungGruppe({ ...treffer, artikelToken: null, artikelAnzeige: null, href: '/gesetze/bund/OR' })!;
+    expect(g.treffer[0].label).toBe('OR');
+    expect(g.treffer[0].href).toBe('/gesetze/bund/OR');
+  });
+});
+
 describe('universalSuche: Aggregation', () => {
   it('leere Suche → keine Gruppen', () => {
     expect(sucheAlles('', { presets: null, gesetze: null, artikel: null, entscheide: null, materialien: null })).toEqual([]);
@@ -133,8 +162,24 @@ describe('universalSuche: Aggregation', () => {
 
   it('lässt geladene leere Gruppen weg, behält ladende als Platzhalter', () => {
     const g = sucheAlles('zzzznogibtsnicht', { presets: [], gesetze: [], artikel: [], entscheide: null, materialien: [] });
-    // Katalog/Preset/Gesetz/Material geladen+leer → raus; Entscheid lädt noch → bleibt.
+    // Gesetz/Artikel/Material/Katalog/Preset geladen+leer → raus; Entscheid lädt noch → bleibt.
     expect(g.map((x) => x.id)).toEqual(['entscheid']);
     expect(g[0].laedt).toBe(true);
+  });
+
+  it('Relevanz-Reihenfolge (A6): Rechtsinhalte vor Werkzeugen — Gesetz → Artikel → Entscheid → Material → Katalog → Preset', () => {
+    const erlasse = [{ key: 'OR', ebene: 'bund', kanton: null, kuerzel: 'OR', titel: 'Frist Obligationenrecht', sr: '220', rechtsgebiet: 'or', sprache: 'de', rang: 1, status: 'snapshot', datei: 'x', artikelAnzahl: 1, stand: '2026', quelleUrl: 'x', fassungsToken: 't' }] as unknown as BrowseErlass[];
+    const artikel: SuchTreffer[] = [{ id: 'a', label: 'Art. 1 OR', href: '/gesetze/bund/OR#art-1' }];
+    const entscheide = [{ key: 'e', gericht: 'bger', gerichtName: 'BGer', kanton: 'CH', nummer: '1', bgeReferenz: null, datum: '2024-01-01', zitierung: 'Frist BGE', leitcharakter: 'normal', regesteVorhanden: false, regesteKurz: null, sachgebiet: 'x', sprache: 'de', normKeys: [], bestand: 'snapshot', kuratierung: 'maschinell', datei: 'x', quelle: 'ocl', quelleUrl: 'x', fassungsToken: 't' }] as unknown as BrowseEntscheid[];
+    const presets: PresetIndexEintrag[] = [{ key: 'p', regime: 'allgemein', regimeLabel: 'Allgemein', label: 'Frist', norm: '', query: '?fp=x', hash: '' }];
+    // «Frist» trifft Gesetz (Titel), Entscheid (Zitierung), Preset (Label) und den
+    // Katalog (mind. eine Karte); Artikel wird direkt übergeben.
+    const g = sucheAlles('frist', { presets, gesetze: erlasse, artikel, entscheide, materialien: [] });
+    const ids = g.map((x) => x.id);
+    // Rechtsinhalte kommen vor den Werkzeugen (katalog/preset).
+    expect(ids.indexOf('gesetz')).toBeLessThan(ids.indexOf('artikel'));
+    expect(ids.indexOf('artikel')).toBeLessThan(ids.indexOf('entscheid'));
+    if (ids.includes('katalog')) expect(ids.indexOf('entscheid')).toBeLessThan(ids.indexOf('katalog'));
+    expect(ids.indexOf('preset')).toBe(ids.length - 1);
   });
 });
