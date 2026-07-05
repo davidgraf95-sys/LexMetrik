@@ -1,14 +1,19 @@
 import { useEffect, useMemo, useState } from 'react';
-import { useSearchParams, useLocation, Link } from 'react-router-dom';
+import { useSearchParams, useLocation } from 'react-router-dom';
 import { SeitenKopf } from '../components/layout/SeitenKopf';
-import { ErlassKarte, ErlassZeile } from '../components/normtext/ErlassKarte';
+import { ErlassKarte, ErlassZeile, SysZeile } from '../components/normtext/ErlassKarte';
 import { InternationalRubriken } from '../components/normtext/InternationalRubriken';
 import { RechtsgebietSicht, RechtsgebietEinstieg } from '../components/normtext/RechtsgebietSicht';
+import {
+  GliederungUmschalter, RelevanzGitter, KantonRelevanzListe,
+  KantonGebietGruppen, IntlRechtsgebietSicht,
+} from '../components/normtext/GesetzeGliederung';
+import { loeseGliederung, speichereGliederung, type Gliederung } from '../lib/normtext/gliederung';
 import {
   ladeBrowseManifest, ladeKantonSystematik, gruppiereNachKanton, filtern,
   type KantonGruppe,
 } from '../lib/normtext/browse';
-import { istLesbar, type BrowseErlass } from '../lib/normtext/browse-typen';
+import { type BrowseErlass } from '../lib/normtext/browse-typen';
 import { SYSTEMATIK, sachgruppe, topTitel, subTitel, sachgebietRang, untergruppeRang, srVergleich, type KantonSystematik } from '../lib/normtext/systematik';
 import { GROSSREGIONEN } from '../data/grossregionen';
 // Kanton-Vollnamen: EINE Quelle (§5) — dieselbe Tabelle wie die Tarif-Domäne.
@@ -18,7 +23,6 @@ import { KANTON_NAMEN as KANTON_NAMEN_TYP } from '../data/tarif/typen';
 const KANTON_NAMEN: Record<string, string> = KANTON_NAMEN_TYP;
 import { KantonWappen } from '../components/KantonWappen';
 import { SchweizKarte } from '../components/SchweizKarte';
-import { useErlassOeffnen, istErlassOffen } from '../lib/useErlassOeffnen';
 import { usePaneKlasse } from '../components/layout/PaneKontext';
 
 type Ebene = 'bund' | 'kanton' | 'international';
@@ -187,55 +191,9 @@ function BundSystematik({ erlasse, hashOffen }: { erlasse: BrowseErlass[]; hashO
   );
 }
 
-// Kompakte, überlaufsichere Erlass-Zeile für die Kanton-Systematik: SR-Nr fix
-// links (tabellarisch), Titel einzeilig gekürzt. Bewusst NICHT ErlassZeile —
-// kantonale «kuerzel» sind oft der ganze (bis 276 Z.) Titel und würden als
-// shrink-0 die Zeile sprengen (Auftrag David: «überschnitten» bei BS).
-// Stand-Jahr (ISO «YYYY-…») — reine Anzeige. Sehr alte Stände (vor 1990) werden
-// dezent markiert: BS mischt Erlasse von 1826 bis 2026, ein sehr alter Stand ist
-// für die Anwältin ein nützliches Signal, soll aber nicht so laut wie ein
-// frischer wirken. Fixe Schwelle (kein Date.now(), §2 — reine Darstellung).
-const standJahr = (stand: string): string | null => stand.slice(0, 4).match(/^\d{4}$/)?.[0] ?? null;
-
-function SysZeile({ e }: { e: BrowseErlass }) {
-  const jahr = standJahr(e.stand);
-  const altDezent = jahr != null && Number(jahr) < 1990;
-  const inhalt = (
-    <>
-      <span className="num text-xs text-ink-500 shrink-0 w-20 tabular-nums truncate">{e.sr}</span>
-      <span className="text-ink-700 truncate group-hover/z:text-brass-700">{e.titel}</span>
-      {istLesbar(e) ? (
-        <span className="ml-auto shrink-0 flex items-baseline gap-2 num text-xs tabular-nums">
-          {e.artikelAnzahl > 0 && <span className="text-ink-500">{e.artikelAnzahl} Art.</span>}
-          {/* Sehr alte Stände dezent (italic) statt blass — Kontrast (S10/WCAG) bleibt gewahrt. */}
-          {jahr && <span className={`hidden sm:inline text-ink-500${altDezent ? ' italic' : ''}`}>{jahr}</span>}
-        </span>
-      ) : (
-        <span aria-hidden className="text-xs text-brass-700 shrink-0 ml-auto">↗</span>
-      )}
-    </>
-  );
-  const cls = 'group/z flex items-baseline gap-3 text-body-s no-underline rounded px-2 py-1 hover:bg-brass-100/30 transition-colors min-w-0';
-  // Punkt G: erneutes Öffnen eines bereits offenen Erlasses → neue Instanz (?r).
-  // <Link> behält den nackten Basispfad (SEO/Mittelklick/Cmd-Klick/Copy-Link);
-  // nur der einfache Linksklick auf ein schon offenes Gesetz wird abgefangen.
-  const oeffne = useErlassOeffnen();
-  const basePath = `/gesetze/${e.ebene}/${encodeURIComponent(e.key)}`;
-  return !istLesbar(e)
-    ? <a href={e.quelleUrl} target="_blank" rel="noopener noreferrer" className={cls}>{inhalt}</a>
-    : (
-      <Link
-        to={basePath}
-        onClick={(ev) => {
-          if (ev.defaultPrevented || ev.button !== 0 || ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey) return;
-          if (!istErlassOffen(basePath)) return;
-          ev.preventDefault();
-          oeffne(e.ebene, e.key, e.kuerzel);
-        }}
-        className={cls}
-      >{inhalt}</Link>
-    );
-}
+// SysZeile (kompakte, überlaufsichere Kanton-Erlass-Zeile) + standJahr leben
+// jetzt in ErlassKarte.tsx (geteilt mit den Relevanz-/Rechtsgebiet-Sichten,
+// GesetzeGliederung.tsx) — A14-Titelumbruch dort. Hier nur importiert.
 
 // Ein gewählter Kanton, gegliedert nach der OFFIZIELLEN Systematik (systematik.ts:
 // Top-Sachgebiet + Untergruppe aus dem amtlichen clex-Baum). Übersicht zuerst:
@@ -570,6 +528,19 @@ export function Gesetze() {
   // Zustand `?ansicht=rechtsgebiet` (nicht Teil der Ebene) — vom Landeplatz
   // erreichbar, mit «← Übersicht» wieder verlassen.
   const themenSicht = params.get('ansicht') === 'rechtsgebiet';
+  // Gliederung (A15): EINE Wahl für alle drei Säulen (Relevanz/Systematisch/
+  // Rechtsgebiet). URL `?gliederung=` gewinnt (teilbarer Deep-Link), sonst die
+  // persistente Wahl (localStorage), sonst Default 'systematisch' — das hält die
+  // prerenderte Sicht + bestehende e2e-/Golden-Kontrakte byte-gleich. Die
+  // Store-Lesung ist synchron (Pre-Paint-Muster, §15/G2a): kein Flash, weil der
+  // Inhalt ohnehin erst nach dem async Manifest paintet.
+  const gliederung = loeseGliederung(params.get('gliederung'));
+  const setzeGliederung = (g: Gliederung) => {
+    const p = new URLSearchParams(params);
+    p.set('gliederung', g);
+    setParams(p, { replace: true });
+    speichereGliederung(g);
+  };
   const setzeEbene = (e: Ebene) => {
     const p = new URLSearchParams(params);
     p.set('ebene', e);
@@ -764,18 +735,38 @@ export function Gesetze() {
           {ebene === 'bund' && (
             gefiltert.length === 0
               ? <p className="text-body-s text-ink-500">Kein Erlass gefunden.</p>
-              : <BundSystematik key={hashSys ?? 'base'} erlasse={gefiltert} hashOffen={hashSys} />
+              : (
+                <div className="space-y-4">
+                  {/* A15 — Gliederungs-Umschalter (dieselbe Bedienung auf allen Säulen). */}
+                  <div className="flex justify-end">
+                    <GliederungUmschalter wert={gliederung} onWahl={setzeGliederung} />
+                  </div>
+                  {gliederung === 'relevanz'
+                    ? <RelevanzGitter erlasse={gefiltert} />
+                    : gliederung === 'rechtsgebiet'
+                      ? <RechtsgebietSicht erlasse={gefiltert} />
+                      : <BundSystematik key={hashSys ?? 'base'} erlasse={gefiltert} hashOffen={hashSys} />}
+                </div>
+              )
           )}
 
           {/* International-Tab (Auftrag David 25.6.2026): gleichwertige Säule neben
               Bund/Kantone — Staatsverträge SR 0.* + EU-Verordnungen, geteilte
               Rubriken-Darstellung (§5, identisch zu /international). */}
           {!suche.trim() && ebene === 'international' && (
-            <div className="space-y-3">
+            <div className="space-y-4">
               <p className="text-body-s text-ink-500 max-w-reading">
                 Für die Schweiz massgebliche Staatsverträge und internationales Recht — je mit Live-Link zur amtlichen Fassung (Fedlex SR 0.* bzw. EUR-Lex). Einzelne Erlasse (z. B. EMRK) werden als amtliches PDF in-app angezeigt; massgeblich bleibt stets die amtliche Quelle.
               </p>
-              <InternationalRubriken erlasse={international} />
+              {/* A15 — Gliederungs-Umschalter (dieselbe Bedienung auf allen Säulen). */}
+              <div className="flex justify-end">
+                <GliederungUmschalter wert={gliederung} onWahl={setzeGliederung} />
+              </div>
+              {gliederung === 'relevanz'
+                ? <RelevanzGitter erlasse={international} />
+                : gliederung === 'rechtsgebiet'
+                  ? <IntlRechtsgebietSicht erlasse={international} />
+                  : <InternationalRubriken erlasse={international} />}
             </div>
           )}
 
@@ -816,7 +807,21 @@ export function Gesetze() {
                       </span>
                       <span className="num text-body-s text-ink-500 ml-auto self-end">{kantGefiltert.filter((e) => e.kanton === kanton).length}</span>
                     </div>
-                    <KantonSystematik erlasse={kantGefiltert.filter((e) => e.kanton === kanton)} sys={systematik[kanton]} />
+                    {/* A14/A15 — Gliederungs-Umschalter für die Erlasse dieses Kantons
+                        (die G5-Umschalter Alphabet/Erlass-Zahl/Region auf dem 26er-
+                        Raster bleiben davon unberührt — sie ordnen die KANTONE). */}
+                    <div className="flex justify-end">
+                      <GliederungUmschalter wert={gliederung} onWahl={setzeGliederung} />
+                    </div>
+                    {(() => {
+                      const eig = kantGefiltert.filter((e) => e.kanton === kanton);
+                      const sys = systematik[kanton];
+                      return gliederung === 'relevanz'
+                        ? <KantonRelevanzListe erlasse={eig} sys={sys} />
+                        : gliederung === 'rechtsgebiet'
+                          ? <KantonGebietGruppen erlasse={eig} />
+                          : <KantonSystematik erlasse={eig} sys={sys} />;
+                    })()}
                   </section>
                 </>
               ) : (

@@ -983,3 +983,67 @@ U-SUCHE 1 · U-VERWEIS 1½ (inkl. Gegenprüfung) · U-POSITION 1–1½ · U-UEBE
    Lesart) — **gilt** (von David nicht widersprochen; Default = gebaut).
 3. **A5-Lesart:** Palette entfällt als eigenes UI, ⌘K fokussiert die Suchleiste
    (primäre Lesart) — **gilt** (von David nicht widersprochen; Default = gebaut).
+
+### 10.7 · Ausführungsvermerke der §10-Einheiten
+
+**Ausführungsvermerk U-UEBERSICHT (A14 + A15, 5.7.2026, Opus, Worktree
+`feat/u-uebersicht-a14-a15`, kollisionsarm — nur Übersicht-Fläche
+`src/pages/Gesetze.tsx`, KEIN `parts.tsx`/`inhalt.tsx`/`ArtikelBody.tsx`;
+`register.ts` unangetastet):** Beide Anmerkungen auf der gemergten G5/G6-Fläche
+gebaut.
+
+- **A14 Kanton-Übersicht.** (1) **Titel umbrechen statt kappen:** `SysZeile` (aus
+  `Gesetze.tsx` nach `ErlassKarte.tsx` gezogen, geteilt) auf ein Drei-Spalten-Grid
+  `grid-cols-[auto_minmax(0,1fr)_auto]` mit `break-words` umgestellt — der lange
+  amtliche Titel läuft mehrzeilig, SR-Nr. und Meta bleiben auf der ersten
+  Grundlinie; kein `truncate`, kein H-Overflow (@390 e2e-belegt, BS mit bis 521 Z.
+  langen Vertrags-Titeln). (2) **Relevanz-Sortierung**, dokumentiert-deterministisch
+  (§8, KEINE geratene Wichtigkeit): `src/lib/normtext/relevanz.ts`,
+  **Kanton-Kriterium = «Kern-Erlass-Kategorie, dann Systematik»** — der
+  Manifest-`rang` ist für Kantone einheitlich 0 (browse-manifest.ts) und darum
+  unbrauchbar; an seine Stelle tritt eine dokumentierte, anker-feste Titel-/Kürzel-
+  Klassifikation, die genau Davids genannte Kern-Erlasse zuerst zieht (Kantons­-
+  verfassung → Einführungsgesetze → Gerichts-/Behördenorganisation → Steuer-/
+  Gebührenrecht), danach die amtliche Systematik (Sachgebiets-Rang · SR-Vergleich).
+  Die G5-Umschalter (Alphabet/Erlass-Zahl/Region) auf dem 26er-Kanton-Raster
+  bleiben unberührt (sie ordnen die KANTONE, nicht die Erlasse).
+- **A15 Gliederungs-Umschalter auf ALLEN drei Säulen** (Relevanz · Systematisch ·
+  Rechtsgebiet), gemeinsamer `GliederungUmschalter` (role=group/aria-pressed,
+  `src/components/normtext/GesetzeGliederung.tsx`). **Bund:** Relevanz =
+  kuratierter Leitgesetz-`rang` (BV, Kern-Kodifikationen zuerst) · Systematisch =
+  bestehende `BundSystematik` (Default, byte-gleich) · Rechtsgebiet = bestehende
+  `RechtsgebietSicht` als **Modus** (nicht mehr nur die vierte Tür). **Kantone**
+  (je gewähltem Kanton): Relevanz (A14) · Systematisch (`KantonSystematik`) ·
+  Rechtsgebiet (nach Register-`rechtsgebiet`, §8-ehrlich, da kantonal meist
+  Default). **International:** Relevanz · Systematisch (`InternationalRubriken`) ·
+  Rechtsgebiet = **SR-0.*-Sachklassen** (amtliche Völkerrechts-Achse 0.1–0.9,
+  EU-Recht als eigene Gruppe). **Persistenz:** `src/lib/normtext/gliederung.ts`,
+  EINE Wahl für alle Säulen, Rangfolge URL `?gliederung=` → localStorage
+  (`lm.gesetze.gliederung`) → Default `systematisch` (hält Prerender/Golden/e2e
+  byte-gleich); Pre-Paint-Muster (synchrone Store-Lesung, kein Inline-Script).
+- **URL-Kompatibilität (alle bestehenden Deep-Links erreichbar):** `?ebene=`,
+  `?kt=`, `#sys-`, `?ansicht=rechtsgebiet` (G6-Tür bleibt unverändert, nur neu
+  ALS Modus zusätzlich erreichbar), Default = Systematisch → `?ebene=kanton&kt=ZH`
+  zeigt weiter «Nicht systematisiert», `?ebene=bund` weiter «Alle aufklappen»
+  (e2e-belegt).
+- **Gegenprüfung (KC2 — `src/lib/normtext/` ist Risiko-Pfad):** die SR-0.*-Klassen-
+  Labels wurden per **unabhängiger Gegenprüfung** (Opus, frischer Kontext, gegen
+  die amtliche Fedlex-SR-Systematik via SPARQL `legal-taxonomy id-systematique`,
+  2026-07-05) geprüft. **Die Erstfassung wurde WIDERLEGT:** `0.5` war fälschlich
+  «Landesverteidigung» (das ist die nationalrechtliche SR-Hauptklasse 5) →
+  **gefixt auf «Krieg und Neutralität»** (belegt über 0.51/0.52); zusätzlich `0.2`
+  «Zwangsvollstreckung»→«Vollstreckung» und `0.1`→«im Allgemeinen». Nachverifikation
+  bestanden → `check:gegenpruefung` quittiert (Diff-Hash-gebunden). Sortier-/
+  Persistenz-Logik selbst = reine Darstellung (§3), kein Rechtswert.
+- **Tore:** voller `npm run gate` **GRÜN (25/25)**, `golden:vergleich` **IDENTISCH**,
+  neue Unit `src/tests/relevanz.test.ts` (7) + neuer e2e `gesetze-uebersicht-u`
+  (10, inkl. **A9 CPU-Throttle 6×**: Umschalten flüssig, keine Fehler), volle
+  e2e-Suite **173/173** (Regressionen `gesetze`/`gesetze-kanton-g5`/
+  `gesetze-rechtsgebiet-g6` grün, Kontrakte gewahrt). Visual-Review Desktop 1440 +
+  Mobil 390 (Bund/International + Kantone ZH/AI/BS, 0 Overflow, Titel-Umbruch
+  belegt). `playwright.config.ts` additiv env-`E2E_PORT` (Default 4317
+  unverändert) für kollisionsfreie Parallel-Worktrees (§12).
+- **Bewusst NICHT (U-UEBERSICHT-Scope):** keine Reader-Berührung (U-KOPF/U-LINIEN/
+  U-POSITION getrennt) · keine neue Kuration im G6-Grundgerüst (K8-Zeitsperre
+  unberührt) · `?ansicht=rechtsgebiet`-Tür bleibt bestehen (nicht entfernt, nur
+  zusätzlich als Modus).

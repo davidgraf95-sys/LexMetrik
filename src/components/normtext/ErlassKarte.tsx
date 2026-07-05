@@ -87,6 +87,56 @@ export function ErlassZeile({ e }: { e: BrowseErlass }) {
     : <a href={e.quelleUrl} target="_blank" rel="noopener noreferrer" className={cls}>{inhalt}</a>;
 }
 
+// Stand-Jahr (ISO «YYYY-…») — reine Anzeige. Sehr alte Stände (vor 1990) werden
+// dezent markiert: ein sehr alter Stand ist für die Anwältin ein nützliches
+// Signal, soll aber nicht so laut wie ein frischer wirken. Fixe Schwelle (kein
+// Date.now(), §2 — reine Darstellung).
+const standJahr = (stand: string): string | null =>
+  stand.slice(0, 4).match(/^\d{4}$/)?.[0] ?? null;
+
+// Kompakte, überlaufsichere Erlass-Zeile für die Kanton-Sichten (Systematik +
+// Relevanz + Rechtsgebiet): SR-Nr fix links (tabellarisch), dann der Titel, dann
+// die Meta (Artikelzahl · Stand-Jahr) rechts. Bewusst NICHT ErlassZeile —
+// kantonale «kuerzel» sind oft der ganze (bis 276 Z.) Titel.
+//
+// A14 (David 5.7.2026): der lange amtliche Titel wird NICHT MEHR abgeschnitten
+// (kein `truncate` → «aktuell viel abgeschnitten»). Drei-Spalten-Grid
+// (SR · Titel · Meta) mit `items-baseline`: der Titel umbricht in der mittleren
+// Spalte auf beliebig viele Zeilen (`break-words`, `minmax(0,1fr)` gegen
+// Overflow), SR und Meta bleiben auf der ersten Grundlinie. So bleibt der ganze
+// Titel lesbar — auch @390 — ohne H-Overflow.
+export function SysZeile({ e }: { e: BrowseErlass }) {
+  const jahr = standJahr(e.stand);
+  const altDezent = jahr != null && Number(jahr) < 1990;
+  const inhalt = (
+    <>
+      <span className="num text-xs text-ink-500 shrink-0 w-20 tabular-nums truncate">{e.sr}</span>
+      <span className="text-ink-700 break-words group-hover/z:text-brass-700 min-w-0">{e.titel}</span>
+      {istLesbar(e) ? (
+        <span className="shrink-0 flex items-baseline gap-2 num text-xs tabular-nums">
+          {e.artikelAnzahl > 0 && <span className="text-ink-500">{e.artikelAnzahl} Art.</span>}
+          {/* Sehr alte Stände dezent (italic) statt blass — Kontrast (S10/WCAG) bleibt gewahrt. */}
+          {jahr && <span className={`hidden sm:inline text-ink-500${altDezent ? ' italic' : ''}`}>{jahr}</span>}
+        </span>
+      ) : (
+        <span aria-hidden className="text-xs text-brass-700 shrink-0">↗</span>
+      )}
+    </>
+  );
+  const cls = 'group/z grid grid-cols-[auto_minmax(0,1fr)_auto] items-baseline gap-3 text-body-s no-underline rounded px-2 py-1 hover:bg-brass-100/30 transition-colors';
+  const oeffne = useErlassOeffnen();
+  const basePath = `/gesetze/${e.ebene}/${encodeURIComponent(e.key)}`;
+  return !istLesbar(e)
+    ? <a href={e.quelleUrl} target="_blank" rel="noopener noreferrer" className={cls}>{inhalt}</a>
+    : (
+      <Link
+        to={basePath}
+        onClick={macheOeffnenHandler(e, basePath, oeffne)}
+        className={cls}
+      >{inhalt}</Link>
+    );
+}
+
 export function ErlassKarte({ e }: { e: BrowseErlass }) {
   // Hook vor jeder Verzweigung (Rules of Hooks) — auch wenn der nur-live-link-
   // Pfad ihn nicht braucht.
