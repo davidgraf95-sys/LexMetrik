@@ -20,11 +20,15 @@ import { filterEntscheide, nachDatum } from './rechtsprechung/browse';
 import type { PresetIndexEintrag } from './presetIndex';
 import type { BrowseMaterial } from './materialien/typen';
 import { filtere as filtereMaterialien, vergleicheGlobal } from './materialien/browse';
+import type { NormQueryTreffer } from './suche/normQuery';
 
+// 'sprung' = deterministischer Norm-Direktsprung (A5), von der Komponente VOR die
+// statischen Gruppen gehängt; er entsteht aus dem Parser normQuery.ts, nicht im
+// synchronen Aggregator unten (deshalb kein sucheAlles-Zweig dafür).
 // 'online' = zusätzliche Edge-Volltextgruppe (QS-DATA E2), von der Komponente
 // hinter die statischen Gruppen gehängt; sie entsteht in lib/suche/onlineVolltext.ts,
 // nicht im synchronen Aggregator unten (deshalb kein sucheAlles-Zweig dafür).
-export type GruppenId = 'katalog' | 'preset' | 'gesetz' | 'artikel' | 'entscheid' | 'material' | 'online';
+export type GruppenId = 'sprung' | 'katalog' | 'preset' | 'gesetz' | 'artikel' | 'entscheid' | 'material' | 'online';
 
 export interface SuchTreffer {
   id: string;
@@ -51,6 +55,31 @@ export interface SuchGruppe {
 }
 
 const KAPPUNG = 6;
+
+// ── Norm-Sprung (A5) ─────────────────────────────────────────────────────────
+
+/** Baut die eine Sprung-Gruppe aus dem Parser-Treffer (oder null, wenn die
+ *  Eingabe keine eindeutige Norm ist → nur Freitext-Suche). Reine Abbildung
+ *  (§3): der Parser normQuery.ts hat die Norm bereits deterministisch aufgelöst;
+ *  hier wird sie nur als oberster, gruppierter Treffer angezeigt. Der Direkt-
+ *  Sprung ist die Primäraktion (Enter springt), Marke «Sprung» + amtlicher
+ *  Titel (A5-Wortlaut David). */
+export function sprungGruppe(direkt: NormQueryTreffer | null): SuchGruppe | null {
+  if (!direkt) return null;
+  const artikel = direkt.artikelAnzeige ? ` · Art. ${direkt.artikelAnzeige}` : '';
+  return {
+    id: 'sprung',
+    titel: 'Norm-Sprung',
+    gesamt: 1,
+    treffer: [{
+      id: `${direkt.erlass.key}${direkt.artikelToken ? `-${direkt.artikelToken}` : ''}`,
+      label: `${direkt.erlass.kuerzel}${artikel}`,
+      untertitel: direkt.erlass.titel,
+      marke: { text: 'Sprung', ton: 'ok' as const },
+      href: direkt.href,
+    }],
+  };
+}
 
 // ── Einzelgruppen (rein) ─────────────────────────────────────────────────────
 
@@ -157,17 +186,22 @@ export interface SuchDaten {
   materialien: BrowseMaterial[] | null;
 }
 
-/** Alle Gruppen in fester Reihenfolge; leere (aber geladene) Gruppen entfallen,
- *  noch ladende Gruppen bleiben als Platzhalter sichtbar. */
+/** Alle Gruppen in fester Reihenfolge nach RELEVANZ (A6, David 5.7.2026): erst
+ *  die Rechtsinhalte (Gesetze → Gesetzestext/Artikel → Rechtsprechung →
+ *  Materialien), dann die Werkzeuge (Rechner & Vorlagen → Fristen-Vorlagen). Der
+ *  Norm-Sprung (A5) wird von der Komponente noch DAVOR gehängt (sprungGruppe),
+ *  die Online-Edge-Gruppe DAHINTER — beides ausserhalb dieses synchronen
+ *  Aggregators. Leere (aber geladene) Gruppen entfallen, noch ladende Gruppen
+ *  bleiben als Platzhalter sichtbar. */
 export function sucheAlles(q: string, daten: SuchDaten, kappung = KAPPUNG): SuchGruppe[] {
   if (q.trim() === '') return [];
   const gruppen = [
-    katalogGruppe(q, kappung),
-    presetGruppe(daten.presets, kappung),
     gesetzGruppe(daten.gesetze, q, kappung),
     artikelGruppe(daten.artikel, kappung),
     entscheidGruppe(daten.entscheide, q, kappung),
     materialGruppe(daten.materialien, q, kappung),
+    katalogGruppe(q, kappung),
+    presetGruppe(daten.presets, kappung),
   ];
   return gruppen.filter((g) => g.laedt || g.treffer.length > 0);
 }
