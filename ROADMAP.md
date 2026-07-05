@@ -214,10 +214,12 @@ uebergabe: nur per explizitem `plan:set <id> slot=inhaber`-Commit; check:plan er
     Lighthouse-**Mobil-Preset (4× CPU + langsames 4G)** und ist als **letzte CI-Stufe** nach Build + allen
     Treue-Toren (golden/smoke/struktur-konsistenz/e2e) verdrahtet → §15-**Gegenkopplung** über die
     Schritt-Reihenfolge (Treue rot ⇒ Job bricht vor der Messung; nicht im schnellen `gate`, der nicht baut).
-    Schwellen = ehrliche Kopffreiheit über dem Ist (CLS eng **0,10** als Regressions-Fänger — geräteunabhängig;
-    LCP/TBT/TTI/Score grosszügige Deckel, weil der 2-Kern-CI-Runner langsamer ist als die Messmaschine).
-    **Ist (Mobil-Preset, 5.7.):** OR Score 56 / **CLS 0,005** / LCP 8,2 s; Startseite Score 74 / **CLS 0,000**
-    (war 0,64 / 0,57). CI-Impact ~1 Min. Verschärfung = dokumentierter Folgeschritt nach stabiler CI-Baseline.
+    **Median aus 3 Läufen** (CI; lokal 1) gegen Ausreisser-Flake. Schwellen an der **CI-Baseline**
+    kalibriert (dort läuft das Tor — der 2-Kern-Runner legt unter 4×-CPU echten Spät-Shift/Blocking offen,
+    stärker als lokal): CLS OR ≤ **0,15** / Start ≤ 0,10 (Regressions-Fänger, kappt die alte 0,64/0,57 mit
+    Marge; FAHRPLAN-Eintritt war 0,25 → Ziel 0,10); LCP/TBT/TTI/Score grosszügige Deckel. **Ist Mobil-Preset:**
+    OR CLS lokal 0,005 / CI ~0,10, Score CI ~38–56; Startseite CLS **0,000**. CI-Impact ~2 Min. Verschärfung =
+    dokumentierter Folgeschritt nach breiterer CI-Baseline.
   - **b · Billig & verlustfrei zuerst** — **`[✓]` bereits in `main`** (Quick-Win-Batches 30.6./1.7., hier
     nur verifiziert + durch das Tor abgesichert): `React.memo(ArtikelLeser)` + `SektionBaumTOC` (`parts.tsx`),
     token-Mindesthöhen (`min-h-screen` Suspense-Fallback `App.tsx` + Reader-Ladezustand `inhalt.tsx`,
