@@ -743,9 +743,18 @@ const INLINE_STRIP_TAGS = new Set([
 // Dublette: Notiz + Item aus demselben <dt>[tab]</dt>) (Bündel Bilder&Formeln, 1.7.2026).
 const TAB_PLATZHALTER = /<span\b[^>]*\bdata-message="[^"]*"[^>]*>\s*\[[a-z]+\]\s*<\/span>/gi;
 
+// SVG-/Style-Leak-Strip (Backlog PR #150, W2·5b): Fedlex bettet Piktogramme im
+// SSV-Signalkatalog als INLINE-<svg> ein; deren <style>-Blöcke tragen CSS-Text
+// («.cls-1 { fill: #010101; }»). Der reine Tag-Strip unten entfernt nur die
+// <style>/<svg>-TAGS, nicht den CSS-TEXT dazwischen → er leckte als sichtbarer
+// Quelltext in den Normtext. <style>/<script>-Elemente tragen NIE sichtbaren
+// Dokumenttext, darum GANZ (inkl. Inhalt) entfernen, bevor gestrippt wird.
+const NICHT_TEXT_ELEMENTE = /<(style|script)\b[^>]*>[\s\S]*?<\/\1>/gi;
+
 function entferneTags(s: string): string {
   return dekodiereEntities(
     s
+      .replace(NICHT_TEXT_ELEMENTE, '')
       .replace(TAB_PLATZHALTER, '')
       // Reine Ziffern-<sup>/<sub> (Exponent «m²», typografischer Bruch «133¹⁄₃»,
       // Absatz-Hochzahl «72³» im BV-Register, Tabellen-Fussnote «47/50¹») tragen
