@@ -603,8 +603,23 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   **Klasse C** (SG-Füllpunkt-Rest) — eigene Folge-Schritte. Detail:
   `FAHRPLAN-TARIF-TABELLEN-STUFE2.md`. Zusatz: e2e-Flake `gesetze.e2e.ts` (OR
   fill-Timeout) gehärtet (Scroll-Spy/Suche-Kontrakt auf VGKE seitengrössen-
-  unabhängig, App-Ready-Wait; 6× CPU-Throttle-Probe 5/5). Nächste Etappe
-  **G3b Schritt 2** (Anhang-Block-Rendering ③/⑤ + Klasse B/C).
+  unabhängig, App-Ready-Wait; 6× CPU-Throttle-Probe 5/5). **G3b Schritt 2 ·
+  Anhang-Block-Rendering ③/⑤ (reine Darstellung, 5.7.2026) gebaut:** Anhänge
+  (`annex_*`) + Staatsvertrags-Protokolle (`lvl_*`, LugÜ) rendern jetzt als
+  eigenständig erkennbare, klar abgesetzte Blöcke (Struktur-Trenner + «Anhang N»/
+  «Protokoll N» als Struktur-Überschrift, `data-anhang`; Anker bleibt `#art-`/R8;
+  Ziffer-Zwischentitel via bestehendem `titel`-Block/M13). **LugÜ-Mobil-Overflow
+  (scrollW 790 @390) gefixt** — Ursache war empirisch NICHT die Tabelle (die
+  scrollt im `overflow-x-auto`-Container), sondern der `shrink-0`-Bereich-Badge der
+  Anhang-Sektion (Lang-Labels 770px) → für Anhang-Sektionen unterdrückt + generisch
+  umbruchfähig. Mehrspalten-Tabellen: `lc-scroll-x` + `min-w-full w-max` → breite
+  Tabellen scrollen seitlich statt Zellen zu zerquetschen. **`gegenpruefung: n/a`
+  literal** (nur `src/pages/gesetz-leser/**` + `ArtikelBody.tsx` + e2e — keine
+  Risiko-Datei). Wortlaut-Byte-Beweis GSchV/ChemRRV/LugÜ/ZGB byte-identisch gegen
+  `origin/main`; voller `gate` grün; e2e 1 Worker grün + neuer Spec
+  `gesetze-ux-g3b-anhang` (5); Visual Desktop 1440 + Mobil 390 (0 Overflow @390).
+  **Offen: G3b Tarif-Anhang→echte-Tabelle Klasse B/C** (Extraktion,
+  `FAHRPLAN-TARIF-TABELLEN-STUFE2.md`). Trailer `Roadmap: W2·5d`.
 - [ ] **6 · Konsultieren-Klingen** *(`[OF]`, amtlich)*:
   <!-- @meta id: W2·6 · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->
   - **Mehrsprachiger Normvergleich DE/FR/IT** (Auslegungswerkzeug, Art. 14 PublG — alle drei

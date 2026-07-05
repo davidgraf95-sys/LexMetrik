@@ -33,6 +33,13 @@ import { ladeRevisionShard, revisionFuerToken, type RevisionShard } from '../../
 function paneRoot(imPane: boolean, wurzel: RefObject<HTMLElement | null> | null): HTMLElement | null {
   return imPane ? wurzel?.current ?? null : null;
 }
+// W2·5d G3b (③/⑤): Anhang- (`annex_*`) bzw. Staatsvertrags-Protokoll-Token
+// (`lvl_*`, LugÜ) — steuert die abgesetzte Anhang-Block-Darstellung (ArtikelLeser
+// istAnhang) und das Unterdrücken des «Bereich»-Badges reiner Anhang-Sektionen.
+// Modul-Ebene (referenzstabil, §15/4). Namespaces aus M13 (annex-Extraktion).
+function istAnhangToken(token: string): boolean {
+  return /^(annex|lvl)_/i.test(token);
+}
 function findeArt(root: HTMLElement | null, token: string): HTMLElement | null {
   if (!root) return document.getElementById(`art-${token}`);
   // CSS.escape: ein präparierter #hash-Token (z. B. mit «"]») darf den Selektor
@@ -338,11 +345,16 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // Gliederungs-/Index-Wechsel neu. Die Label-Logik ist byte-identisch zur früheren
   // sekBereich/sammleArtikel (golden/struktur-konsistenz grün). Reine Darstellung (§3).
   const sektionMeta = useMemo(() => {
-    const meta = new Map<string, { bereich: string | undefined; einzel: boolean }>();
+    const meta = new Map<string, { bereich: string | undefined; einzel: boolean; anhang: boolean }>();
     const sammle = (s: Sektion): NormSnapshot[] => {
       const arts = [...s.artikel, ...s.kinder.flatMap(sammle)];
+      // W2·5d G3b (③/⑤): reine Anhang-/Protokoll-Sektion (alle Einträge sind
+      // `annex_*`/`lvl_*`). Für sie ist ein «Bereich»-Badge sinnlos (die Labels
+      // sind Anhang-/Protokoll-Titel, keine Artikel-Spanne) → unterdrückt; die
+      // Einträge rendern als abgesetzte Anhang-Blöcke (istAnhang).
+      const anhang = arts.length > 0 && arts.every((a) => istAnhangToken(a.artikel));
       let bereich: string | undefined;
-      if (arts.length > 0) {
+      if (arts.length > 0 && !anhang) {
         let erst = arts[0], letzt = arts[0];
         for (const a of arts) {
           const idx = artIndex.get(a.artikel) ?? 0;
@@ -353,7 +365,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
           ? erst.artikelLabel
           : `${erst.artikelLabel}–${letzt.artikelLabel.replace(/^(Art\.|§)\s*/, '')}`;
       }
-      meta.set(s.id, { bereich, einzel: arts.length === 1 });
+      meta.set(s.id, { bereich, einzel: arts.length === 1, anhang });
       return arts;
     };
     sektionen.forEach(sammle);
@@ -920,7 +932,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
           ...s.kinder.map((k) => ({ pos: sekPos.get(k.id) ?? Infinity, el: renderSektion(k, true, tiefe + 1) })),
           ...s.artikel.map((e) => ({
             pos: artIndex.get(e.artikel) ?? 0,
-            el: <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} intern={internRefs} marg={margAnzeige.get(e.artikel)?.teile} margBasis={margAnzeige.get(e.artikel)?.ab} leitfaelle={leitfaelleFuer(e.artikel)} revision={revisionFuer(e.artikel)} />,
+            el: <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} intern={internRefs} marg={margAnzeige.get(e.artikel)?.teile} margBasis={margAnzeige.get(e.artikel)?.ab} leitfaelle={leitfaelleFuer(e.artikel)} revision={revisionFuer(e.artikel)} istAnhang={istAnhangToken(e.artikel)} />,
           })),
         ].sort((a, b) => a.pos - b.pos)
       : [];
@@ -1140,14 +1152,14 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
           {treffer ? (
             <div className="space-y-4">
               <p className="text-body-s text-ink-500"><span className="num">{treffer.length}</span> Treffer für «{sucheDebounced.trim()}»</p>
-              {treffer.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} intern={internRefs} marg={struktur?.[e.artikel]?.marginalie} imTreffer onSpringe={springeZuArtikel} leitfaelle={leitfaelleFuer(e.artikel)} revision={revisionFuer(e.artikel)} />)}
+              {treffer.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} intern={internRefs} marg={struktur?.[e.artikel]?.marginalie} imTreffer onSpringe={springeZuArtikel} leitfaelle={leitfaelleFuer(e.artikel)} revision={revisionFuer(e.artikel)} istAnhang={istAnhangToken(e.artikel)} />)}
               {treffer.length === 0 && <p className="text-body-s text-ink-500">Kein Artikel gefunden.</p>}
             </div>
           ) : (
             <div className="space-y-2">
               {ohneGliederung.length > 0 && (
                 <div className="space-y-5 mb-6">
-                  {ohneGliederung.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} intern={internRefs} marg={margAnzeige.get(e.artikel)?.teile} margBasis={margAnzeige.get(e.artikel)?.ab} leitfaelle={leitfaelleFuer(e.artikel)} revision={revisionFuer(e.artikel)} />)}
+                  {ohneGliederung.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} intern={internRefs} marg={margAnzeige.get(e.artikel)?.teile} margBasis={margAnzeige.get(e.artikel)?.ab} leitfaelle={leitfaelleFuer(e.artikel)} revision={revisionFuer(e.artikel)} istAnhang={istAnhangToken(e.artikel)} />)}
                 </div>
               )}
               {sektionen.map((s) => renderSektion(s, true, 0))}

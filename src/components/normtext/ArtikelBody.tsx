@@ -277,11 +277,11 @@ function KanonischeTabelle({ spalten, zeilen }: { spalten: TabSpalte[]; zeilen: 
       kopfZeile || rechts(typ) ? ' font-medium text-ink-800' : ' text-ink-700'
     }`;
   return (
-    <span data-mehrspaltig="" tabIndex={0} role="group" aria-label="Tabelle, seitlich scrollbar" className="mt-1.5 block overflow-x-auto rounded-md border border-line [text-indent:0]">
+    <span data-mehrspaltig="" tabIndex={0} role="group" aria-label="Tabelle, seitlich scrollbar" className="lc-scroll-x mt-1.5 block overflow-x-auto rounded-md border border-line [text-indent:0]">
       {/* ARIA-Tabellen-Semantik auf den display:table-Spans; je Datenzeile genau
           N cell zu N columnheader (folgt aus T-B2). Echtes <table> ist im
           Phrasing-/<p>-Kontext nicht möglich. */}
-      <span role="table" aria-label="Tarif-Tabelle" className="table w-full">
+      <span role="table" aria-label="Tarif-Tabelle" className="table min-w-full w-max">
         {hatKopf && (
           <span role="row" className="table-row bg-paper-sunken/40">
             {spalten.map((s, ci) => (
@@ -325,8 +325,8 @@ function LegacyMehrspaltigeTabelle({ kopf, zeilen }: { kopf?: string[]; zeilen: 
       kopfZeile ? ' font-medium text-ink-800' : spalteNumerisch[ci] ? ' font-medium text-ink-800' : ' text-ink-700'
     }`;
   return (
-    <span data-mehrspaltig="" tabIndex={0} role="group" aria-label="Tabelle, seitlich scrollbar" className="mt-1.5 block overflow-x-auto rounded-md border border-line [text-indent:0] [font-variant-numeric:tabular-nums]">
-      <span role="table" aria-label="Tarif-Tabelle" className="table w-full">
+    <span data-mehrspaltig="" tabIndex={0} role="group" aria-label="Tabelle, seitlich scrollbar" className="lc-scroll-x mt-1.5 block overflow-x-auto rounded-md border border-line [text-indent:0] [font-variant-numeric:tabular-nums]">
+      <span role="table" aria-label="Tarif-Tabelle" className="table min-w-full w-max">
         {kopf && kopf.length > 0 && (
           <span role="row" className="table-row bg-paper-sunken/40">
             {padZeile(kopf).map((h, ci) => (
