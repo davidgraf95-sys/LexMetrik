@@ -2079,9 +2079,15 @@
           "absatz": "1",
           "text": "Die Einkommenssteuer für ein Jahr beträgt",
           "mehrspaltig": {
-            "kopf": [
-              "Steuer",
-              "Einkommen"
+            "spalten": [
+              {
+                "typ": "zahl",
+                "titel": "Steuer"
+              },
+              {
+                "typ": "text",
+                "titel": "Einkommen"
+              }
             ],
             "zeilen": [
               [
@@ -2158,7 +2164,7 @@
       "quelleUrl": "https://bgs.so.ch/app/de/texts_of_law/614.11",
       "abgerufen": "2026-06-22",
       "fassungsToken": "35fb3529fa3ae5dfc4df984b19e18caa",
-      "sha": "e21f0f5eb82db39e21e563e9af8bb56f6bb2e3be026d973e6c9b3b5c2043c471"
+      "sha": "fa8088a2eeefc8edc9054206d43cec72581e764a6010a197221a5e5f1f490a85"
     },
     {
       "id": "kanton/SO/614.11/art_45",
@@ -3162,9 +3168,15 @@
           "absatz": "1",
           "text": "Die Vermögenssteuer für ein Jahr beträgt",
           "mehrspaltig": {
-            "kopf": [
-              "Steuer",
-              "Vermögen"
+            "spalten": [
+              {
+                "typ": "zahl",
+                "titel": "Steuer"
+              },
+              {
+                "typ": "text",
+                "titel": "Vermögen"
+              }
             ],
             "zeilen": [
               [
@@ -3199,7 +3211,7 @@
       "quelleUrl": "https://bgs.so.ch/app/de/texts_of_law/614.11",
       "abgerufen": "2026-06-22",
       "fassungsToken": "35fb3529fa3ae5dfc4df984b19e18caa",
-      "sha": "bbcb2968afa5eea3347840a87369f40bbb85ddadc40838f575df1940c4495da8"
+      "sha": "c5192c03f826498eca125a4de29d026bb8bd1626fd2b07e7ba1dc664a44cc555"
     },
     {
       "id": "kanton/SO/614.11/art_73",
@@ -4828,9 +4840,15 @@
           "absatz": "2",
           "text": "Die Steuer beträgt mit Einschluss der direkten Bundessteuer",
           "mehrspaltig": {
-            "kopf": [
-              "Tageseinkünfte",
-              "Steuer"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Tageseinkünfte"
+              },
+              {
+                "typ": "zahl",
+                "titel": "Steuer"
+              }
             ],
             "zeilen": [
               [
@@ -4883,7 +4901,7 @@
       "quelleUrl": "https://bgs.so.ch/app/de/texts_of_law/614.11",
       "abgerufen": "2026-06-22",
       "fassungsToken": "35fb3529fa3ae5dfc4df984b19e18caa",
-      "sha": "84369a9a80adbbf33e953ef732f1a13dfee58471dccdd22e2d8919e1e94bfccd"
+      "sha": "1466acd1e061db543eed6cd7244a5c862e834f6bbebd32ddb06d5a41a3d636a6"
     },
     {
       "id": "kanton/SO/614.11/art_115_quater",
@@ -8589,9 +8607,15 @@
           "absatz": "1",
           "text": "Die Nachlasstaxe beträgt",
           "mehrspaltig": {
-            "kopf": [
-              "Nachlasstaxe",
-              "Nachlass"
+            "spalten": [
+              {
+                "typ": "zahl",
+                "titel": "Nachlasstaxe"
+              },
+              {
+                "typ": "text",
+                "titel": "Nachlass"
+              }
             ],
             "zeilen": [
               [
@@ -8618,7 +8642,7 @@
       "quelleUrl": "https://bgs.so.ch/app/de/texts_of_law/614.11",
       "abgerufen": "2026-06-22",
       "fassungsToken": "35fb3529fa3ae5dfc4df984b19e18caa",
-      "sha": "41506083ba2505505f828fb46b5be5b25ba1eab045285331703b4bf3100a9059"
+      "sha": "4c15d0d06fc4f6354dca3840579ae2fa838fa0c14821e5c5bcf0cc3080c1ce4e"
     },
     {
       "id": "kanton/SO/614.11/art_223",
@@ -8917,13 +8941,31 @@
           "absatz": "1",
           "text": "Die Steuer beträgt (Klassen 1-5):",
           "mehrspaltig": {
-            "kopf": [
-              "Steuer nach Klassen",
-              "1",
-              "2",
-              "3",
-              "4",
-              "5"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Steuer nach Klassen"
+              },
+              {
+                "typ": "zahl",
+                "titel": "1"
+              },
+              {
+                "typ": "zahl",
+                "titel": "2"
+              },
+              {
+                "typ": "zahl",
+                "titel": "3"
+              },
+              {
+                "typ": "zahl",
+                "titel": "4"
+              },
+              {
+                "typ": "zahl",
+                "titel": "5"
+              }
             ],
             "zeilen": [
               [
@@ -8970,7 +9012,7 @@
       "quelleUrl": "https://bgs.so.ch/app/de/texts_of_law/614.11",
       "abgerufen": "2026-06-22",
       "fassungsToken": "35fb3529fa3ae5dfc4df984b19e18caa",
-      "sha": "e0364b8df8c5065ba3882dc8107ddb6e872641c0ab8c035c3710a5cdfd55c669"
+      "sha": "5a5d785d7f96f14dc3e89dfb51dedb2a3fd00e5b833cf2766b9ff98b66948043"
     },
     {
       "id": "kanton/SO/614.11/art_233",
@@ -10381,9 +10423,15 @@
           "absatz": "1",
           "text": "In der ersten Steuerperiode nach dem Inkrafttreten dieser Gesetzesänderung beträgt die Einkommenssteuer für die Verheirateten und die ihnen Gleichgestellten gemäss § 44 Absatz 1 (Tarif A)",
           "mehrspaltig": {
-            "kopf": [
-              "Steuer",
-              "Einkommen"
+            "spalten": [
+              {
+                "typ": "zahl",
+                "titel": "Steuer"
+              },
+              {
+                "typ": "text",
+                "titel": "Einkommen"
+              }
             ],
             "zeilen": [
               [
@@ -10433,9 +10481,15 @@
           "absatz": "2",
           "text": "In der ersten Steuerperiode nach dem Inkrafttreten dieser Gesetzesänderung beträgt die Einkommenssteuer für die andern Steuerpflichtigen gemäss§ 44 Absatz 2 (Tarif B)",
           "mehrspaltig": {
-            "kopf": [
-              "Steuer",
-              "Einkommen"
+            "spalten": [
+              {
+                "typ": "zahl",
+                "titel": "Steuer"
+              },
+              {
+                "typ": "text",
+                "titel": "Einkommen"
+              }
             ],
             "zeilen": [
               [
@@ -10498,7 +10552,7 @@
       "quelleUrl": "https://bgs.so.ch/app/de/texts_of_law/614.11",
       "abgerufen": "2026-06-22",
       "fassungsToken": "35fb3529fa3ae5dfc4df984b19e18caa",
-      "sha": "5617695dd5460431ae4ae418cc2940d0a21eca25716f4933f4bb03657dfe3bd4"
+      "sha": "3fa4cbb33ce58589573990144af33bb96d25897b432ec98d994bb7d04601f16a"
     },
     {
       "id": "kanton/SO/614.11/art_283",

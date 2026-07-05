@@ -166,9 +166,15 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Streitwert (Fr.)",
-              "Grundhonorar (Fr.)"
+            "spalten": [
+              {
+                "typ": "bereich",
+                "titel": "Streitwert (Fr.)"
+              },
+              {
+                "typ": "text",
+                "titel": "Grundhonorar (Fr.)"
+              }
             ],
             "zeilen": [
               [
@@ -219,7 +225,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/291.400",
       "abgerufen": "2026-06-23",
       "fassungsToken": "5f4c782c2e3c33d62c3381fe76268178",
-      "sha": "bb84a1d7c4c8756111bdef0ec1405bb86a23cc61deace26141348ba977e762fd"
+      "sha": "225d1c47645ba0867aa4b8e9f3185e0d6684c898e1df0c62c5bdc2d7e6d678b4"
     },
     {
       "id": "kanton/BS/291.400/art_6",
@@ -238,9 +244,15 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Streitwert (Fr.)",
-              "Grundhonorar (Fr.)"
+            "spalten": [
+              {
+                "typ": "bereich",
+                "titel": "Streitwert (Fr.)"
+              },
+              {
+                "typ": "bereich",
+                "titel": "Grundhonorar (Fr.)"
+              }
             ],
             "zeilen": [
               [
@@ -275,7 +287,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/291.400",
       "abgerufen": "2026-06-23",
       "fassungsToken": "5f4c782c2e3c33d62c3381fe76268178",
-      "sha": "f3b8709ffa99051904c2401b17030178737e8942680dd58ab0064942b7ffb846"
+      "sha": "f34b2d29f8e3f73b4871cd270717e959c1e20b77f61f7de574f11bdf5a9e605d"
     },
     {
       "id": "kanton/BS/291.400/art_7",
@@ -298,9 +310,15 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Streitwert (Fr.)",
-              "Grundhonorar (Fr.)"
+            "spalten": [
+              {
+                "typ": "bereich",
+                "titel": "Streitwert (Fr.)"
+              },
+              {
+                "typ": "bereich",
+                "titel": "Grundhonorar (Fr.)"
+              }
             ],
             "zeilen": [
               [
@@ -330,9 +348,15 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Streitwert (Fr.)",
-              "Grundhonorar (Fr.)"
+            "spalten": [
+              {
+                "typ": "bereich",
+                "titel": "Streitwert (Fr.)"
+              },
+              {
+                "typ": "bereich",
+                "titel": "Grundhonorar (Fr.)"
+              }
             ],
             "zeilen": [
               [
@@ -351,7 +375,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/291.400",
       "abgerufen": "2026-06-23",
       "fassungsToken": "5f4c782c2e3c33d62c3381fe76268178",
-      "sha": "ec847b8be9c46d1afef518f1fc09009e2becf10d2f90c7697b417010db768ca7"
+      "sha": "c82add114220d876533741d3fe3ea6b348f69fd37a7ade5609a845e5b5ccb961"
     },
     {
       "id": "kanton/BS/291.400/art_8",

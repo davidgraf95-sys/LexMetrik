@@ -63,9 +63,15 @@
           "absatz": "1",
           "text": "Die Gebühr nach Zeitaufwand ist gestützt auf das Leistungslohnband des die Amtshandlung ausführenden Personals wie folgt zu berechnen:",
           "mehrspaltig": {
-            "kopf": [
-              "Leistungslohnband",
-              "Stundenansatz"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Leistungslohnband"
+              },
+              {
+                "typ": "betrag",
+                "titel": "Stundenansatz"
+              }
             ],
             "zeilen": [
               [
@@ -128,7 +134,7 @@
       "quelleUrl": "https://gesetze.nw.ch/app/de/texts_of_law/265.51",
       "abgerufen": "2026-06-22",
       "fassungsToken": "805bb196e8d81d4cb0168376fb4975b6",
-      "sha": "4b04ba5d0b18cd1a5d36d2902d159d99de9ba0ae235b12156c53f0101a3b06bb"
+      "sha": "92e7a713f997c5be7b84926298abae81b90b513a4b652a00eef1a7f1783579b5"
     },
     {
       "id": "kanton/NW/265.51/art_4",
@@ -165,10 +171,19 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Tarif-Nr.",
-              "Bezeichnung",
-              "Betrag"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Tarif-Nr."
+              },
+              {
+                "typ": "text",
+                "titel": "Bezeichnung"
+              },
+              {
+                "typ": "text",
+                "titel": "Betrag"
+              }
             ],
             "zeilen": [
               [
@@ -689,7 +704,7 @@
       "quelleUrl": "https://gesetze.nw.ch/app/de/texts_of_law/265.51",
       "abgerufen": "2026-06-22",
       "fassungsToken": "805bb196e8d81d4cb0168376fb4975b6",
-      "sha": "e8c4f65dbfcab8eb31c105c87da16f070fdf1c64adb0230359d70a645447249d"
+      "sha": "53f28c848c62095aae6601a541f208a0698bd0d15debc2d2f084bfd97d4dfe95"
     },
     {
       "id": "kanton/NW/265.51/art_a1-1",
@@ -703,12 +718,27 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Tarif-Nr.",
-              "Bezeichnung",
-              "Gemeinde",
-              "Kanton",
-              "Betrag"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Tarif-Nr."
+              },
+              {
+                "typ": "text",
+                "titel": "Bezeichnung"
+              },
+              {
+                "typ": "betrag",
+                "titel": "Gemeinde"
+              },
+              {
+                "typ": "betrag",
+                "titel": "Kanton"
+              },
+              {
+                "typ": "text",
+                "titel": "Betrag"
+              }
             ],
             "zeilen": [
               [
@@ -1118,7 +1148,7 @@
       "quelleUrl": "https://gesetze.nw.ch/app/de/texts_of_law/265.51",
       "abgerufen": "2026-06-22",
       "fassungsToken": "805bb196e8d81d4cb0168376fb4975b6",
-      "sha": "2c8a6c6b6f43dde72c02c4dbb3b90318a15ca2a46e1f5bada56585336255079e"
+      "sha": "aba9b90ff69408eb921b4c86881a2df43fc67be6513d674867c82411c78e7211"
     },
     {
       "id": "kanton/NW/265.51/art_a1-2",
@@ -1132,10 +1162,19 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Tarif-Nr.",
-              "Bezeichnung",
-              "Betrag"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Tarif-Nr."
+              },
+              {
+                "typ": "text",
+                "titel": "Bezeichnung"
+              },
+              {
+                "typ": "text",
+                "titel": "Betrag"
+              }
             ],
             "zeilen": [
               [
@@ -1676,7 +1715,7 @@
       "quelleUrl": "https://gesetze.nw.ch/app/de/texts_of_law/265.51",
       "abgerufen": "2026-06-22",
       "fassungsToken": "805bb196e8d81d4cb0168376fb4975b6",
-      "sha": "929e366ac7445477f454d8d0ba0cbd7c0104d695023a61aaf5e71db4e0d271aa"
+      "sha": "06522df6c416f7abc1f3f62a135ada32984ae3ee5018129b7a4232cbe0c2f47e"
     },
     {
       "id": "kanton/NW/265.51/art_a1-3",
@@ -1690,10 +1729,19 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Tarif-Nr.",
-              "Bezeichnung",
-              "Betrag"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Tarif-Nr."
+              },
+              {
+                "typ": "text",
+                "titel": "Bezeichnung"
+              },
+              {
+                "typ": "text",
+                "titel": "Betrag"
+              }
             ],
             "zeilen": [
               [
@@ -1884,7 +1932,7 @@
       "quelleUrl": "https://gesetze.nw.ch/app/de/texts_of_law/265.51",
       "abgerufen": "2026-06-22",
       "fassungsToken": "805bb196e8d81d4cb0168376fb4975b6",
-      "sha": "b6f726d4bc4fb146237bd38da2b445ab1a35e80185ab94ee37e59201e2fb94be"
+      "sha": "77335c3cc63a9418660d202d2efe39b37c1ee8bc7fc6bfce789ef41ec0b074de"
     },
     {
       "id": "kanton/NW/265.51/art_a1-4",
@@ -1898,10 +1946,19 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Tarif-Nr.",
-              "Bezeichnung",
-              "Betrag"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Tarif-Nr."
+              },
+              {
+                "typ": "text",
+                "titel": "Bezeichnung"
+              },
+              {
+                "typ": "text",
+                "titel": "Betrag"
+              }
             ],
             "zeilen": [
               [
@@ -2047,7 +2104,7 @@
       "quelleUrl": "https://gesetze.nw.ch/app/de/texts_of_law/265.51",
       "abgerufen": "2026-06-22",
       "fassungsToken": "805bb196e8d81d4cb0168376fb4975b6",
-      "sha": "c4f05c093880f0e9864be1afcc1b8b871cf1c218bd2849356d614fd6a256e5f0"
+      "sha": "131e3662a40cd3870ac15e262621d1d0382df467be6776e4d64b06cf12759dd9"
     },
     {
       "id": "kanton/NW/265.51/art_a1-5",
@@ -2061,10 +2118,19 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Tarif-Nr.",
-              "Bezeichnung",
-              "Betrag"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Tarif-Nr."
+              },
+              {
+                "typ": "text",
+                "titel": "Bezeichnung"
+              },
+              {
+                "typ": "bereich",
+                "titel": "Betrag"
+              }
             ],
             "zeilen": [
               [
@@ -2125,7 +2191,7 @@
       "quelleUrl": "https://gesetze.nw.ch/app/de/texts_of_law/265.51",
       "abgerufen": "2026-06-22",
       "fassungsToken": "805bb196e8d81d4cb0168376fb4975b6",
-      "sha": "b12c8ae392ccca6d46c43617f80dd2e17a635268a356b060b5de84f8ac5cf26b"
+      "sha": "a39ea5f0d09f628df35205f4161a1cb0f049c7244c7b6c9ca509ab51de8b8939"
     },
     {
       "id": "kanton/NW/265.51/art_a1-6",
@@ -2139,10 +2205,19 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Tarif-Nr.",
-              "Bezeichnung",
-              "Betrag"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Tarif-Nr."
+              },
+              {
+                "typ": "text",
+                "titel": "Bezeichnung"
+              },
+              {
+                "typ": "bereich",
+                "titel": "Betrag"
+              }
             ],
             "zeilen": [
               [
@@ -2268,7 +2343,7 @@
       "quelleUrl": "https://gesetze.nw.ch/app/de/texts_of_law/265.51",
       "abgerufen": "2026-06-22",
       "fassungsToken": "805bb196e8d81d4cb0168376fb4975b6",
-      "sha": "6ec18c190da50f58fbaefd5399c7ce91ee7fbcccbc2fd2a6a0f9f3ea7896b009"
+      "sha": "522620738fed47edc356c42274f12da9f998a83d630595d45157d049f95993ff"
     },
     {
       "id": "kanton/NW/265.51/art_a1-7",
@@ -2282,10 +2357,19 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Tarif-Nr.",
-              "Bezeichnung",
-              "Betrag"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Tarif-Nr."
+              },
+              {
+                "typ": "text",
+                "titel": "Bezeichnung"
+              },
+              {
+                "typ": "text",
+                "titel": "Betrag"
+              }
             ],
             "zeilen": [
               [
@@ -2476,7 +2560,7 @@
       "quelleUrl": "https://gesetze.nw.ch/app/de/texts_of_law/265.51",
       "abgerufen": "2026-06-22",
       "fassungsToken": "805bb196e8d81d4cb0168376fb4975b6",
-      "sha": "113a68e27c34a71ed0eac47e35a2dde6a9680f42ddf305fcc776b37f207510b2"
+      "sha": "87967de846451ce4c31c8c15028f8e6ce0a1b4c5264c8d774e666528b163cc67"
     },
     {
       "id": "kanton/NW/265.51/art_a1-8",
@@ -2490,10 +2574,19 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Tarif-Nr.",
-              "Bezeichnung",
-              "Betrag"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Tarif-Nr."
+              },
+              {
+                "typ": "text",
+                "titel": "Bezeichnung"
+              },
+              {
+                "typ": "text",
+                "titel": "Betrag"
+              }
             ],
             "zeilen": [
               [
@@ -2689,7 +2782,7 @@
       "quelleUrl": "https://gesetze.nw.ch/app/de/texts_of_law/265.51",
       "abgerufen": "2026-06-22",
       "fassungsToken": "805bb196e8d81d4cb0168376fb4975b6",
-      "sha": "4e57ec7d776cb7f10c06bf8b6be8296b817e9413f7dda4b3f39c1846278a212e"
+      "sha": "61d2f706e78cfd135bb06048e4b13f116a2694e999f7c7e64b050c42b1baeebf"
     },
     {
       "id": "kanton/NW/265.51/art_a1-9",
@@ -2703,10 +2796,19 @@
           "absatz": null,
           "text": "",
           "mehrspaltig": {
-            "kopf": [
-              "Tarif-Nr.",
-              "Bezeichnung",
-              "Betrag"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Tarif-Nr."
+              },
+              {
+                "typ": "text",
+                "titel": "Bezeichnung"
+              },
+              {
+                "typ": "text",
+                "titel": "Betrag"
+              }
             ],
             "zeilen": [
               [
@@ -3152,7 +3254,7 @@
       "quelleUrl": "https://gesetze.nw.ch/app/de/texts_of_law/265.51",
       "abgerufen": "2026-06-22",
       "fassungsToken": "805bb196e8d81d4cb0168376fb4975b6",
-      "sha": "eaea16e23807ff525eb3013add1cc68f967cf069af32317255b37d316583ce08"
+      "sha": "7d331a88f818a68404f87e7f79b7dd9751ec2aae99d09b73f15f7006cf13aadb"
     }
   ]
 }

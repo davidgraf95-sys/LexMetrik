@@ -456,9 +456,15 @@
           "absatz": "1",
           "text": "Pour les contestations civiles de nature pécuniaire, soumises à la procédure ordinaire ou simplifiée, et tranchées en première ou unique instance, l'émolument est calculé d'après le barème suivant:",
           "mehrspaltig": {
-            "kopf": [
-              "Pour une valeur litigieuse",
-              "L'émolument est fixé dans les limites"
+            "spalten": [
+              {
+                "typ": "text",
+                "titel": "Pour une valeur litigieuse"
+              },
+              {
+                "typ": "bereich",
+                "titel": "L'émolument est fixé dans les limites"
+              }
             ],
             "zeilen": [
               [
@@ -513,7 +519,7 @@
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
       "abgerufen": "2026-06-22",
       "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
-      "sha": "6e41f64526156a868a4c00faee68ff57707d3ba9bfa1883358f260ca211aa066"
+      "sha": "ed8d30177a7d86e764edab9b26af5ec5ac672540756051645d299ec0f03e2b41"
     },
     {
       "id": "kanton/VS/173.8-fr/art_17",
@@ -972,9 +978,15 @@
           "absatz": "1",
           "text": "Pour les contestations et affaires civiles de nature pécuniaire, soumises à la procédure ordinaire ou simplifiée, et tranchées en première ou unique instance, les honoraires sont fixés comme il suit:",
           "mehrspaltig": {
-            "kopf": [
-              "Pour une valeur litigieuse",
-              "Les honoraires sont fixés dans les limites"
+            "spalten": [
+              {
+                "typ": "bereich",
+                "titel": "Pour une valeur litigieuse"
+              },
+              {
+                "typ": "text",
+                "titel": "Les honoraires sont fixés dans les limites"
+              }
             ],
             "zeilen": [
               [
@@ -1093,7 +1105,7 @@
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
       "abgerufen": "2026-06-22",
       "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
-      "sha": "9d1645a2fc7900694fabb346f56244731155444a59242dc462414df35525390b"
+      "sha": "1dc55fb6139f37b2a2bc595f0316b28482875a562fd1d5fdd85abaa04dc9a53d"
     },
     {
       "id": "kanton/VS/173.8-fr/art_33",
