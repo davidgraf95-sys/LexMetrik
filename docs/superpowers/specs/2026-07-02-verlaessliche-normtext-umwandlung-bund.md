@@ -163,6 +163,13 @@ Bestehende Tore bleiben: `check:invarianten`, `check:vollstaendigkeit`, `check:t
 1. **sha-Blindstelle schliessen:** `sha256Bloecke` (`scripts/normtext-snapshot.ts:322-344`) um `mehrspaltig.spalten` erweitern. Kontrollierte sha-Re-Baseline; Inhalte byte-ident belegt (nur sha-Feld ändert).
 2. **Split-sup-Merge im HTML-Extraktor** (`scripts/normtext/extrahiere-fedlex.ts:220-228`): Folge-sups verkleben, wenn sup₁ = Ziffern ∧ sup₂ ∈ Whitelist {bis,ter,quater,quinquies}∪[a-z] → `absatz` = Konkatenation. Fixt **GEBV_SCHKG art_9 Abs. 1bis** (heute: zwei Blöcke `absatz:'1'`, «bis Erfordert…»-Leak), **HMG art_9/art_67, KLV art_7, CO2_GESETZ art_16, VRV art_67** — 6 Blöcke / 5 Snapshots. Exponenten-Schutz (`:662-665`) unangetastet: rein numerische sup₂ («72³», «133¹⁄₃») werden NIE verklebt.
 3. **Drop-Klasse laut machen:** ungematchtes `<p>` in einem Artikel mit Treffern = check-Fehler statt Silent-Drop (heute rettet der Fallback `:288-298` nur bei `bloecke.length===0`). Macht **OR art_361/362** als dokumentierten **Expected-Fail** sichtbar; der inhaltliche Fix folgt via OR-Cutover (Schritt 2, §5), nicht hier — §6-Split.
+   **✅ UMGESETZT 5.7.2026 (W2·5b, ÜBER die Spec hinaus):** statt Expected-Fail wurde die Klasse
+   INHALTLICH gefixt — korpusweite Inventur (`p3-drop-inventar.ts`, 218 Erlasse), OR art_361/362
+   (89 Vorschriften-Zeilen, 28+61) + VRV-Noten als neue Block-Alternative extrahiert, bare
+   `class="referenz"`→`grundlage` (347 VO-Bestimmungen); Tor **`check:p-klassen`** friert das
+   entschiedene Klassen-Vokabular ein (neue Fedlex-Drop-Klasse ⇒ rot). Verdikte + Rest-Lücken
+   (absatz-pt-Varianten, GBV-34i): `bibliothek/register/p3-drop-klassen-inventar-2026-07-05.md`.
+   Der XML-Containment-Punkt (§4 Ziff. 2) bleibt davon unberührt (strukturelle Umkehrung folgt in Phase 1).
 4. **Kachel-Pfad-Fussnoten-Leak fixen:** `parseBildKacheln`-Fallback (`extrahiere-fedlex.ts:714-716`) ruft `entferneFussnotenSups` vor `entferneTags` (wie der Absatz-Pfad `:232`). Fixt SSV 4.77.1 «…(Art. 59)379» inkl. sha-Korrektur.
 5. **[tab]-Negativ-Lexikon als Tor-Invariante** (aus Design-Gegenprüfung L2/L3): `check:invarianten` um die Prüfung «kein Snapshot-Feld enthält `[tab]` / Placeholder-Literale» erweitern — zunächst als **Expected-Fail-Liste** der 23 bekannten Prod-Stellen (11 Goldens), damit die Klasse sichtbar und der spätere Fix-Batch gegated ist; kein stiller Bestands-Fix in diesem Batch (§6-Split, eigene Re-Baseline).
 

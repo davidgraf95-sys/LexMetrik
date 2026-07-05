@@ -194,6 +194,13 @@ B3 = M15 (FR/IT G29) + M16 (Versionierung #2, G28/G30-33) — eigene Initiativen
 > HTML-Arbiter»** (pro Erlass genau eine Quelle `source=akn|html`); neues Tor `check:akn-containment`;
 > Nordstern = einwandfreie Tabellen + zielgenaue Links, besser als Fedlex (§0 der Spec). Erster
 > Bau-Schritt ist rein HTML-seitig (fixt 6 Prod-Blöcke, §7 der Spec).
+>
+> **W2·5b-Nachtrag 5.7.2026:** (a) Spec-§7-Punkt 3 «Drop-Klasse laut» ist ÜBER die Spec hinaus
+> inhaltlich umgesetzt (OR 361/362 extrahiert statt Expected-Fail; Tor `check:p-klassen`; Register
+> `p3-drop-klassen-inventar-2026-07-05.md`). (b) **linkedom-POC gemessen:** die Regex-Tiefenzähler
+> `findeDlEnde`/`findeDdEnde` sind über den GANZEN Korpus (44 740 `<dl>`/`<dd>`-Grenzen) **DOM-äquivalent
+> (0 Abweichungen)** → keine Migration, Regex bleibt (Beleg `poc-linkedom-tiefenzaehler-2026-07-05.md`);
+> die «buggigste Stelle» ist damit BEWIESEN korrekt — E0/E1/Phase 1 bauen auf gemessenem Fundament.
 
 **Frage (David, 30.6.):** Wie senken wir die Fehleranfälligkeit der Gesetzesdarstellung *grundsätzlich* —
 bringt ein Quell-Wechsel HTML→XML das? Entschieden per Council (DMAD, 5 Opus-Advisor + Devil's-Advocate).
