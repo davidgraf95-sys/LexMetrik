@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-19",
+  "erzeugt": "2026-07-06",
   "eintraege": [
     {
       "id": "kanton/SZ/280.411/art_1",
@@ -10,15 +10,23 @@
       "artikelLabel": "§ 1",
       "bloecke": [
         {
+          "absatz": "1",
+          "text": "Die Vergütung an die Rechtsanwälte für die Parteivertretung vor den Gerichts-, Untersuchungs- und Anklagebehörden sowie den Verwaltungsbehörden in Rechtsmittelverfahren des Kantons Schwyz umfasst das Honorar und die Auslagen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Vergütung wird gegenüber der kostenpflichtigen Gegenpartei nach den Vorschriften dieses Tarifes bemessen."
+        },
+        {
           "absatz": "3",
           "text": "Für das Verhältnis des Anwaltes zu seinem Auftraggeber sind die privatrechtlichen Vereinbarungen massgebend."
         }
       ],
       "stand": "2015-01-01",
       "quelleUrl": "https://www.sz.ch/public/upload/assets/5862/280_411.pdf",
-      "abgerufen": "2026-06-19",
-      "fassungsToken": "2435ceb82c92310515a6f80479075c82b36066d93605aaa0c872476119f3be72",
-      "sha": "2c31cae2c9278aa6062768f63fae6a026e29c82952c79dcffed51ffded51ebdc"
+      "abgerufen": "2026-07-06",
+      "fassungsToken": "636a5c6903868d5b67afa6b2587945f84597f06656b0012ae963150ec5eaafc4",
+      "sha": "e24cfe29a62e8226022caeae64515d30aa1ba88e2c0bec6c03dac107386c6b65"
     },
     {
       "id": "kanton/SZ/280.411/art_2",
@@ -39,8 +47,8 @@
       ],
       "stand": "2015-01-01",
       "quelleUrl": "https://www.sz.ch/public/upload/assets/5862/280_411.pdf",
-      "abgerufen": "2026-06-19",
-      "fassungsToken": "2435ceb82c92310515a6f80479075c82b36066d93605aaa0c872476119f3be72",
+      "abgerufen": "2026-07-06",
+      "fassungsToken": "636a5c6903868d5b67afa6b2587945f84597f06656b0012ae963150ec5eaafc4",
       "sha": "bdf2fe360f05609416a89f0be800706f9d5670a36002a4daa09fe2c181b998ad"
     },
     {
@@ -58,8 +66,8 @@
       ],
       "stand": "2015-01-01",
       "quelleUrl": "https://www.sz.ch/public/upload/assets/5862/280_411.pdf",
-      "abgerufen": "2026-06-19",
-      "fassungsToken": "2435ceb82c92310515a6f80479075c82b36066d93605aaa0c872476119f3be72",
+      "abgerufen": "2026-07-06",
+      "fassungsToken": "636a5c6903868d5b67afa6b2587945f84597f06656b0012ae963150ec5eaafc4",
       "sha": "aaf70e09bfd58e48d42548c7b47ed9d932cd83fa75533a2f9ced0f6dc22d3b08"
     },
     {
@@ -81,9 +89,36 @@
       ],
       "stand": "2015-01-01",
       "quelleUrl": "https://www.sz.ch/public/upload/assets/5862/280_411.pdf",
-      "abgerufen": "2026-06-19",
-      "fassungsToken": "2435ceb82c92310515a6f80479075c82b36066d93605aaa0c872476119f3be72",
+      "abgerufen": "2026-07-06",
+      "fassungsToken": "636a5c6903868d5b67afa6b2587945f84597f06656b0012ae963150ec5eaafc4",
       "sha": "822ffa90b71b7a6386b58d4dc8765a23d5204e10dbc10b2486f7d02a7e211c36"
+    },
+    {
+      "id": "kanton/SZ/280.411/art_5",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührentarif für Rechtsanwälte (SRSZ 280.411)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ist der Anwalt als amtlicher Verteidiger oder unentgeltlicher Rechtsvertreter von der öffentlichen Hand zu entschädigen, sobeträgt der Stundenansatz nach Massgabe von § 2 Abs. 1 Fr. 180.- bis Fr. 220.-. Die Auslagen werden zusätzlich vergütet."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Trägerschaft der zuständigen Justizbehörde garantiert dem Anwalt der ersten Stunde für seinen ersten Einsatz die Vergütung gemäss Abs. 1."
+        },
+        {
+          "absatz": "3",
+          "text": "In begründeten Fällen können Akontozahlungen ausgerichtet werden."
+        }
+      ],
+      "stand": "2015-01-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/5862/280_411.pdf",
+      "abgerufen": "2026-07-06",
+      "fassungsToken": "636a5c6903868d5b67afa6b2587945f84597f06656b0012ae963150ec5eaafc4",
+      "sha": "2cc43f8a7313afa34aed88dfb19b53ab108d57fa1a6b3b284b8a96735b9aebaf"
     },
     {
       "id": "kanton/SZ/280.411/art_6",
@@ -94,9 +129,21 @@
       "artikelLabel": "§ 6",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Eine Partei kann eine spezifizierte Kostennote über ihre Tätigkeit und ihre Auslagen einreichen. Erscheint sie angemessen,ist sie der Festsetzung der Vergütung zugrunde zu legen. Andernfalls wird die Vergütung nach pflichtgemässem Ermessen festgesetzt."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Rechnungsstellung darf kein Honorar verlangt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Über die Angemessenheit der Kostennote nach diesem Tarif ist zu befinden:",
           "items": [
+            {
+              "marke": "a",
+              "text": "wenn die Anwaltskosten ganz oder teilweise der Gegenpartei überbunden werden;"
+            },
             {
               "marke": "b",
               "text": "wenn der Anwalt als amtlicher Verteidiger, unentgeltlicher Rechtsvertreter oder Anwalt der ersten Stunde tätig ist."
@@ -106,9 +153,9 @@
       ],
       "stand": "2015-01-01",
       "quelleUrl": "https://www.sz.ch/public/upload/assets/5862/280_411.pdf",
-      "abgerufen": "2026-06-19",
-      "fassungsToken": "2435ceb82c92310515a6f80479075c82b36066d93605aaa0c872476119f3be72",
-      "sha": "71b2dffc8b1befeaec9915038dc474b01218cfa0f33a79f2275ca0113d48399a"
+      "abgerufen": "2026-07-06",
+      "fassungsToken": "636a5c6903868d5b67afa6b2587945f84597f06656b0012ae963150ec5eaafc4",
+      "sha": "a3843141a2bf9a73119abbd324ac122324011e36ee2b50dc6212758321cd605f"
     },
     {
       "id": "kanton/SZ/280.411/art_7",
@@ -141,8 +188,8 @@
       ],
       "stand": "2015-01-01",
       "quelleUrl": "https://www.sz.ch/public/upload/assets/5862/280_411.pdf",
-      "abgerufen": "2026-06-19",
-      "fassungsToken": "2435ceb82c92310515a6f80479075c82b36066d93605aaa0c872476119f3be72",
+      "abgerufen": "2026-07-06",
+      "fassungsToken": "636a5c6903868d5b67afa6b2587945f84597f06656b0012ae963150ec5eaafc4",
       "sha": "fe644c5519f4358ca835c437b378d77055fb0fe91eb9efc24c91085ab2356d78"
     },
     {
@@ -155,14 +202,41 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Für die Führung von Zivilprozessen vor erster oder einziger Instanz ist das Honorar bei einem Streitwert von weniger als Fr. 2 000.- in der Regel nach dem"
+          "text": "Für die Führung von Zivilprozessen vor erster oder einziger Instanz ist das Honorar bei einem Streitwert von weniger als Fr. 2 000.- in der Regel nach dem notwendigen Zeitaufwand zu bemessen. Der Stundenansatz beträgt je nach der Bedeutung der Sache Fr. 180.- bis Fr. 220.-, das Gesamthonorar höchstens Fr. 1 500.-."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei einem Streitwert von mehr als Fr. 2 000.- beträgt das Grundhonorar: von Fr. 2 000.- bis Fr. 4 000.- : Fr. 440.- bis Fr. 1 650.- von Fr. 4 001.- bis Fr. 10 000.- : Fr. 500.- bis Fr. 2 000.- von Fr. 10 001.- bis Fr. 20 000.- : Fr. 1 100.- bis Fr. 3 300.- von Fr. 20 001.- bis Fr. 50 000.- : Fr. 1 650.- bis Fr. 6 600.- von Fr. 50 001.- bis Fr. 100 000.- : Fr. 3 300.- bis Fr. 9 250.- von Fr. 100 001.- bis Fr. 1 000 000.- : Fr. 5 500.- bis Fr. 39 600.- über Fr. 1 000 000.- 1 - 3.5 % des Streitwertes"
         }
       ],
       "stand": "2015-01-01",
       "quelleUrl": "https://www.sz.ch/public/upload/assets/5862/280_411.pdf",
-      "abgerufen": "2026-06-19",
-      "fassungsToken": "2435ceb82c92310515a6f80479075c82b36066d93605aaa0c872476119f3be72",
-      "sha": "dd5fd829de6b2c8a63ef6cff6dd7cc83825ade00471daef5be49ca095c82a813"
+      "abgerufen": "2026-07-06",
+      "fassungsToken": "636a5c6903868d5b67afa6b2587945f84597f06656b0012ae963150ec5eaafc4",
+      "sha": "b6e9d368f6a6cdf1bb073743a5b3d9ecf3359b2bc9735f6d775046db31f3218a"
+    },
+    {
+      "id": "kanton/SZ/280.411/art_9",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührentarif für Rechtsanwälte (SRSZ 280.411)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Ehe- und Vaterschaftssachen beträgt das Honorar Fr. 1 - 000.bis Fr. 10 000.-. Sofern in Ehesachen gleichzeitig güterrechtliche Ansprüche über Fr. 100 000.- streitig sind, sind die Ansätze des § 8 massgebend."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die übrigen Streitigkeiten ohne bestimmten Streitwert ist die Vergütung nach den Gesichtspunkten der §§ 1 und 2 frei zu bestimmen."
+        }
+      ],
+      "stand": "2015-01-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/5862/280_411.pdf",
+      "abgerufen": "2026-07-06",
+      "fassungsToken": "636a5c6903868d5b67afa6b2587945f84597f06656b0012ae963150ec5eaafc4",
+      "sha": "3adf727580ee3b0924258010ec79b518e1d490019e3520904125b35fe6b96f3b"
     },
     {
       "id": "kanton/SZ/280.411/art_10",
@@ -179,8 +253,8 @@
       ],
       "stand": "2015-01-01",
       "quelleUrl": "https://www.sz.ch/public/upload/assets/5862/280_411.pdf",
-      "abgerufen": "2026-06-19",
-      "fassungsToken": "2435ceb82c92310515a6f80479075c82b36066d93605aaa0c872476119f3be72",
+      "abgerufen": "2026-07-06",
+      "fassungsToken": "636a5c6903868d5b67afa6b2587945f84597f06656b0012ae963150ec5eaafc4",
       "sha": "d313037abe3e52942fad450c738112aadc8afc69f0bc72255edff816c0712487"
     },
     {
@@ -193,14 +267,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Im Berufungs- und im Revisionsverfahren beträgt das Honorar 20 bis 60 % der in den §§ 8 und 9 festgesetzten Ansätze,wobei der noch vor der Berufungs- und Revisionsinstanz in Frage kommende Streitwert massgebend ist."
+          "text": "Im Berufungs- und im Revisionsverfahren beträgt das Honorar 20 bis 60 % der in den §§ 8 und 9 festgesetzten Ansätze, wobei der noch vor der Berufungs- und Revisionsinstanz in Frage kommende Streitwert massgebend ist."
         }
       ],
       "stand": "2015-01-01",
       "quelleUrl": "https://www.sz.ch/public/upload/assets/5862/280_411.pdf",
-      "abgerufen": "2026-06-19",
-      "fassungsToken": "2435ceb82c92310515a6f80479075c82b36066d93605aaa0c872476119f3be72",
-      "sha": "02f3d8b928ceb974f1f1856d6f2b0d4489640189eef1c3269a3d4a0a4a21bdff"
+      "abgerufen": "2026-07-06",
+      "fassungsToken": "636a5c6903868d5b67afa6b2587945f84597f06656b0012ae963150ec5eaafc4",
+      "sha": "471e1340d8167693535a9c8d4c283ab6d0b858fff52c4f7d7b929655ed0ef43a"
     },
     {
       "id": "kanton/SZ/280.411/art_12",
@@ -217,8 +291,8 @@
       ],
       "stand": "2015-01-01",
       "quelleUrl": "https://www.sz.ch/public/upload/assets/5862/280_411.pdf",
-      "abgerufen": "2026-06-19",
-      "fassungsToken": "2435ceb82c92310515a6f80479075c82b36066d93605aaa0c872476119f3be72",
+      "abgerufen": "2026-07-06",
+      "fassungsToken": "636a5c6903868d5b67afa6b2587945f84597f06656b0012ae963150ec5eaafc4",
       "sha": "9157da2fd50b71b266024dc0f2a628a64c34c46513ad8fe0f16ebc05678f0954"
     },
     {
@@ -244,15 +318,57 @@
             {
               "marke": "c",
               "text": "vor dem Kantonsgericht als Berufungs- und Revisionsinstanz Fr. 300.- bis Fr. 12 000.-;"
+            },
+            {
+              "marke": "d",
+              "text": "für Beschwerden sowie Erläuterungs- und Berichtigungsbegehren Fr. 180.- bis Fr. 5000.-. IV. Honorar im Verwaltungsstreitverfahren"
             }
           ]
         }
       ],
       "stand": "2015-01-01",
       "quelleUrl": "https://www.sz.ch/public/upload/assets/5862/280_411.pdf",
-      "abgerufen": "2026-06-19",
-      "fassungsToken": "2435ceb82c92310515a6f80479075c82b36066d93605aaa0c872476119f3be72",
-      "sha": "896c3a3ea6617697f3184456cc046b9eb5604482486cd890945c7ae351f66e84"
+      "abgerufen": "2026-07-06",
+      "fassungsToken": "636a5c6903868d5b67afa6b2587945f84597f06656b0012ae963150ec5eaafc4",
+      "sha": "d03f6a9cd72b1b3bd05a848771d1a7d195a75ba3a6084df2622900203cfed690"
+    },
+    {
+      "id": "kanton/SZ/280.411/art_14",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührentarif für Rechtsanwälte (SRSZ 280.411)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Im Verfahren vor Verwaltungsgericht und vor den selbständigen Rekurskommissionen beträgt das Honorar Fr. 300.- bis Fr. 8 400.-."
+        }
+      ],
+      "stand": "2015-01-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/5862/280_411.pdf",
+      "abgerufen": "2026-07-06",
+      "fassungsToken": "636a5c6903868d5b67afa6b2587945f84597f06656b0012ae963150ec5eaafc4",
+      "sha": "e1cc1d17415649a758a5f8bd807ffd9a7f451766dcbe5c304ad86472d2066075"
+    },
+    {
+      "id": "kanton/SZ/280.411/art_14_a",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührentarif für Rechtsanwälte (SRSZ 280.411)",
+      "artikel": "14_a",
+      "artikelLabel": "§ 14a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Im Verfahren vor dem Zwangsmassnahmengericht beträgt das Honorar Fr. 180.- bis Fr. 5 000.-."
+        }
+      ],
+      "stand": "2015-01-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/5862/280_411.pdf",
+      "abgerufen": "2026-07-06",
+      "fassungsToken": "636a5c6903868d5b67afa6b2587945f84597f06656b0012ae963150ec5eaafc4",
+      "sha": "2f36db471ffb7555cf7637a873e2d3b0f064be4922ca1ab7b14293f7b7f84966"
     },
     {
       "id": "kanton/SZ/280.411/art_15",
@@ -264,14 +380,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Honorar Fr. 200.- bis Fr. 4 800.-. V. Ausnahmen"
+          "text": "Für die Vertretung in Rechtsmittelverfahren vor Verwaltungsbehörden beträgt das Honorar Fr. 200.- bis Fr. 4 800.-. V. Ausnahmen"
         }
       ],
       "stand": "2015-01-01",
       "quelleUrl": "https://www.sz.ch/public/upload/assets/5862/280_411.pdf",
-      "abgerufen": "2026-06-19",
-      "fassungsToken": "2435ceb82c92310515a6f80479075c82b36066d93605aaa0c872476119f3be72",
-      "sha": "f0cb7a259c0ed9f1f2d60a247e0adf7765f9f2c57501cc5ce72ac42ea3bd4daf"
+      "abgerufen": "2026-07-06",
+      "fassungsToken": "636a5c6903868d5b67afa6b2587945f84597f06656b0012ae963150ec5eaafc4",
+      "sha": "becc42fbb577c4c7e8f483e931119528eb6291c6447e1f6c702be07fe45fe198"
     },
     {
       "id": "kanton/SZ/280.411/art_16",
@@ -292,8 +408,8 @@
       ],
       "stand": "2015-01-01",
       "quelleUrl": "https://www.sz.ch/public/upload/assets/5862/280_411.pdf",
-      "abgerufen": "2026-06-19",
-      "fassungsToken": "2435ceb82c92310515a6f80479075c82b36066d93605aaa0c872476119f3be72",
+      "abgerufen": "2026-07-06",
+      "fassungsToken": "636a5c6903868d5b67afa6b2587945f84597f06656b0012ae963150ec5eaafc4",
       "sha": "bc835f870b29cbcd75dc7d883f9fb32043b34d316bf6e38db4f1e95809292873"
     },
     {
@@ -311,13 +427,17 @@
         {
           "absatz": "2",
           "text": "Für die Benützung eines Autos beträgt die Kilometer-Entschädigung 70 Rappen."
+        },
+        {
+          "absatz": "3",
+          "text": "Kopien von Akten, welche zur Prozessführung notwendig sind, wie von Urkunden und Rechtsschriften, welche der Anwalt für sich, seine Klienten oder das Gericht anfertigt, können mit maximal Fr. 1.- je Seite in Rechnung gestellt werden. VII. Schlussbestimmung"
         }
       ],
       "stand": "2015-01-01",
       "quelleUrl": "https://www.sz.ch/public/upload/assets/5862/280_411.pdf",
-      "abgerufen": "2026-06-19",
-      "fassungsToken": "2435ceb82c92310515a6f80479075c82b36066d93605aaa0c872476119f3be72",
-      "sha": "721d45d1a9c585129c1d97d2981ef7b3e75a4ab0c6142aefc0dd72e8611ee98c"
+      "abgerufen": "2026-07-06",
+      "fassungsToken": "636a5c6903868d5b67afa6b2587945f84597f06656b0012ae963150ec5eaafc4",
+      "sha": "0cd52bf72b935dc1f4123cf70b3e05d9bac2a004d87457ac6162d093762cc28c"
     },
     {
       "id": "kanton/SZ/280.411/art_18",
@@ -328,15 +448,19 @@
       "artikelLabel": "§ 18",
       "bloecke": [
         {
-          "absatz": "4",
-          "text": "wird die Vergütung nach bisherigem Recht bemessen."
+          "absatz": "1",
+          "text": "Dieser Tarif wird im Amtsblatt veröffentlicht und in die Gesetzsammlung aufgenommen. Er tritt mit der Veröffentlichung in Kraft."
+        },
+        {
+          "absatz": "3",
+          "text": "Mit dem Inkrafttreten wird die Gebührenordnung für Rechtsanwälte vom 20. November 1967 aufgehoben. Übergangsbestimmung zur Änderung vom 11. März 2008 Für den Aufwand, den der Anwalt vor Inkrafttreten dieser Änderung geleistet hat, wird die Vergütung nach bisherigem Recht bemessen."
         }
       ],
       "stand": "2015-01-01",
       "quelleUrl": "https://www.sz.ch/public/upload/assets/5862/280_411.pdf",
-      "abgerufen": "2026-06-19",
-      "fassungsToken": "2435ceb82c92310515a6f80479075c82b36066d93605aaa0c872476119f3be72",
-      "sha": "147f14ce987318039b959e3fb6704014bd550cbd0da7a5c3b13f4b68c30faba6"
+      "abgerufen": "2026-07-06",
+      "fassungsToken": "636a5c6903868d5b67afa6b2587945f84597f06656b0012ae963150ec5eaafc4",
+      "sha": "0b79bf075b6a07e818be1e5f5e6792d408f6b88083768ac2843401f95a6fec75"
     }
   ]
 }
