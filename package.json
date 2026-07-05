@@ -38,7 +38,7 @@
     "check:vollstaendigkeit": "vite-node scripts/normtext/check-vollstaendigkeit.ts",
     "check:struktur-konsistenz": "vite-node scripts/normtext/check-struktur-konsistenz.ts",
     "check:grundart": "vitest run src/tests/normtext-register.test.ts",
-    "check:linien-kanon": "node scripts/check-linien-kanon.mjs",
+    "check:linien-kanon": "vite-node scripts/check-linien-kanon.ts",
     "check:normtext": "vite-node scripts/normtext/check-drift.ts",
     "check:tabellen": "vite-node scripts/normtext/check-tabellen.ts",
     "check:invarianten": "vite-node scripts/normtext/check-invarianten.ts",
