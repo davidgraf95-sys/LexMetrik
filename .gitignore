@@ -61,3 +61,7 @@ daten/
 
 # Startseite-V3 Baseline/Abnahme-Screenshots (PNGs nie committen)
 abnahme/startseite-v3/
+
+# W3·14 Responsive-Audit: Screenshot-Mappe (PNGs regenerierbar via abnahme/responsive-audit/sweep.ts,
+# Anleitung in abnahme/responsive-audit/BERICHT.md) — nie committen (Repo-Gewicht + Deploy-Upload-Risiko)
+abnahme/responsive-audit/shots-*/
