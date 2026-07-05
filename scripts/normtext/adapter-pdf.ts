@@ -249,7 +249,7 @@ export const PDF_PROFILE: Record<PdfProfilName, PdfProfil> = {
 // PDF-Layout-Extraktion (pdfjs, BUILD-time, NUR in scripts/)
 // ─────────────────────────────────────────────────────────────────────────────
 
-interface PdfStueck {
+export interface PdfStueck {
   x: number;
   y: number;
   h: number;
@@ -302,6 +302,28 @@ export interface PdfExtrakt {
 }
 
 /**
+ * Kopf-/Fussband-Schwellen im ROHEN pdfjs-Koordinatenraum (PDF-User-Space).
+ *
+ * Die Stück-y (`item.transform[5]`) liegen INNERHALB der MediaBox `[y0…y1]`, NICHT
+ * im viewport-Raum `[0…height]`. Bei einer MediaBox mit Ursprung ≠ 0 (SG
+ * gesetzessammlung.sg.ch: `view=[87.9, 123.3, 507.1, 718.7]`, y0≈123) liegt der
+ * echte Seiten-Oberrand bei y≈719, nicht bei height≈595. Die frühere Schwelle
+ * `viewport.height * 0.9 ≈ 535` verwarf darum ~123 pt ECHTEN Body am Seitenkopf:
+ * auf den Anhang-Tarif-Seiten fielen die OBERSTEN Positionszeilen (die nicht mit
+ * «Art.» beginnen — z. B. «21.03 Neuausfertigung …») ins Schein-Kopfband und
+ * gingen komplett verloren (SG-2935: 21.03–21.07, 3.04–3.07, 24.01 u. a.).
+ *
+ * Fix: Band relativ zur MediaBox messen. Für eine MediaBox mit Ursprung 0 ist
+ * mbY0=0, mbY1=height → die Schwellen sind BYTE-IDENTISCH zur alten Formel
+ * (`height*0.9` / `height*0.07`), also kein Fremd-Drift für origin-0-PDFs (§6).
+ * §2: rein/deterministisch.
+ */
+export function bandSchwellen(mbY0: number, mbY1: number): { kopf: number; fuss: number } {
+  const bezug = mbY1 - mbY0; // MediaBox-Höhe (== viewport.height)
+  return { kopf: mbY1 - bezug * 0.1, fuss: mbY0 + bezug * 0.07 };
+}
+
+/**
  * Extrahiert die Body-Textzeilen aus den PDF-Bytes (pdfjs), einspaltig.
  *
  * Heuristik (für alle vier Profile gemeinsam, parametriert über `marker`):
@@ -327,8 +349,6 @@ export async function extrahierePdfZeilen(
   for (let p = 1; p <= doc.numPages; p++) {
     const seite = await doc.getPage(p);
     const inhalt = await seite.getTextContent();
-    const view = seite.getViewport({ scale: 1 });
-    const seitenHoehe = view.height;
 
     const alle: PdfStueck[] = [];
     for (const it of inhalt.items) {
@@ -338,7 +358,18 @@ export async function extrahierePdfZeilen(
         height?: number;
         width?: number;
       };
-      if (!item.str || !item.str.replace(/\s/g, '')) continue;
+      if (!item.str) continue;
+      // Leerraum-Fragmente (str === ' ') NICHT verwerfen: die SG-Anhang-PDF
+      // (und andere) tragen die Wort-Trenner als EIGENE, teils NULL-breite
+      // Fragmente (`str=" "`, height≈0) zwischen zwei Wort-Fragmenten. Die alte
+      // Verwerf-Regel liess die Trennung allein an der `width`-Heuristik hängen —
+      // die bei null-breiten Trenner-Fragmenten versagt und die Wörter verklebt
+      // («AuswechslungderForderung» statt «Auswechslung der Forderung»). Als
+      // eigenes Stück behalten sind sie ein EXPLIZITES Wortgrenz-Signal (§1:
+      // treuer Wortlaut). height≈0 → aus allen h-basierten Filtern (bodyHoehe,
+      // bodyXs) ohnehin ausgeschlossen; baueZeile fügt daraus genau EIN
+      // Leerzeichen ein (mit /\s+/→' '-Kollaps am Zeilenende byte-neutral, wo die
+      // width-Heuristik den Trenner schon setzte).
       rohStuecke.push(item.str);
       alle.push({
         x: item.transform[4],
@@ -357,8 +388,9 @@ export async function extrahierePdfZeilen(
     // im obersten Band. Darum verwerfen wir aus den Rand-Bändern NUR Zeilen, die
     // wie ein laufender Kopf/Fuss aussehen (reine Gesetzes-Nr./Seitenzahl/kurzer
     // Fuss-Stand) — nicht pauschal das ganze Band (sonst ginge VD-Body verloren).
-    const kopfSchwelle = seitenHoehe * 0.9;
-    const fussSchwelle = seitenHoehe * 0.07;
+    // Kopf-/Fussband-Schwellen relativ zur MediaBox (`seite.view`), s. bandSchwellen.
+    const [, mbY0, , mbY1] = (seite as { view: number[] }).view;
+    const { kopf: kopfSchwelle, fuss: fussSchwelle } = bandSchwellen(mbY0, mbY1);
 
     // Pro y-Zeile entscheiden, ob sie ein laufender Kopf/Fuss ist.
     const nachYAlle = new Map<number, PdfStueck[]>();
@@ -537,7 +569,7 @@ function linkerSpaltenRand(xs: number[]): number {
 
 /** Setzt eine Zeile aus ihren x-sortierten Stücken zusammen; erkennt führende
  *  Absatz-Hochzahl; verwirft Fussnoten-Verweise («1)», «[A]», mitten-Hochzahl). */
-function baueZeile(
+export function baueZeile(
   stuecke: PdfStueck[],
   bodyHoehe: number,
   marker: '§' | 'Art.',
@@ -554,26 +586,39 @@ function baueZeile(
   // signalisiert eine Wortgrenze).
   let letzteKante: number | null = null;
   const lueckenSchwelle = bodyHoehe * 0.22;
+  // Ob schon ein REALES (nicht-leeres) Fragment übernommen wurde. Ersetzt das
+  // frühere `k === 0`: seit die Leerraum-Fragmente (explizite Wort-Trenner)
+  // erhalten bleiben, kann Index 0 ein Leerzeichen sein — die führende
+  // Absatz-Hochzahl ist das erste REALE Stück, nicht zwingend Stück 0.
+  let sahReal = false;
 
   for (let k = 0; k < stuecke.length; k++) {
     const st = stuecke[k];
-    const istHoch = st.h < hochSchwelle;
     const roh = st.s.trim();
+    // Explizites Leerraum-Fragment (Wort-Trenner der Quelle) → genau EIN
+    // Leerzeichen einfügen (kein Zeichen erfunden, §1). Vor dem ersten realen
+    // Stück und nach bereits vorhandenem Leerzeichen unterdrückt (Kollaps).
+    if (roh === '') {
+      if (sahReal && !/\s$/.test(text)) text += ' ';
+      continue;
+    }
+    const istHoch = st.h < hochSchwelle;
     if (istHoch) {
       // Führende reine Ziffer am Zeilenanfang = Absatznummer (nicht «1)» = Fussn.,
-      // nicht «[A]»). Nur am allerersten Stück, NUR wenn die Hochzahl an/nahe der
+      // nicht «[A]»). Nur am ersten REALEN Stück, NUR wenn die Hochzahl an/nahe der
       // linken Body-Spalte (x ≤ bodyMinX+8) steht — ein Fussnoten-Verweis «5»
       // steht mitten/rechts in der Zeile (VD: x≈140 über dem Sachtitel) und ist
       // KEINE Absatznummer —, und nur wenn der Marker NICHT in dieser Zeile
       // beginnt (sonst stünde «Art. 1» mit Hochzahl-1 = Fussnote).
       if (
-        k === 0 &&
+        !sahReal &&
         absatz === null &&
         st.x <= bodyMinX + 8 &&
         /^\d+(?:bis|ter)?$/.test(roh) &&
         !zeileBeginntMitMarker(stuecke, marker)
       ) {
         absatz = roh.toLowerCase();
+        sahReal = true;
         continue;
       }
       // Fussnoten-Verweis «1)», «2)», «[A]», «er» (ordinal-Hochstellung in fr) →
@@ -598,6 +643,7 @@ function baueZeile(
     }
     text += st.s;
     letzteKante = st.x + st.w;
+    sahReal = true;
   }
   return { absatz, text: text.replace(/\s+/g, ' ').trim() };
 }

@@ -12,6 +12,8 @@ import {
   extrahiereAllePdfArtikel,
   extrahierePdfArtikel,
   berechnePdfQuelleHash,
+  bandSchwellen,
+  baueZeile,
   istAnhangZifferLinks,
   leseSzStand,
   leseTiStand,
@@ -262,5 +264,85 @@ describe('PDF-Adapter — quelleHash (Drift-Token)', () => {
       '999': { bloecke: [{ absatz: null, text: 'Neu' }] },
     });
     expect(veraendert).not.toBe(orig);
+  });
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// SG-2935-Reparatur (5.7.2026) — MediaBox-Band + explizite Wort-Trenner
+// ─────────────────────────────────────────────────────────────────────────────
+
+describe('bandSchwellen — Kopf-/Fussband relativ zur MediaBox (SG-2935-Band-Bug)', () => {
+  // origin-0-MediaBox: BYTE-IDENTISCH zur alten Formel (height*0.9 / height*0.07)
+  // → kein Fremd-Drift für alle bisher korrekten PDFs (§6).
+  it('origin-0-MediaBox reproduziert die alte Schwelle (0.9 / 0.07 der Höhe)', () => {
+    const { kopf, fuss } = bandSchwellen(0, 595);
+    expect(kopf).toBeCloseTo(595 * 0.9, 6);
+    expect(fuss).toBeCloseTo(595 * 0.07, 6);
+  });
+  // Versetzte MediaBox (SG gesetzessammlung.sg.ch: y0≈123, y1≈719): die Schwelle
+  // MUSS im rohen y-Raum liegen, sonst fällt der obere Body (y bis ~671) ins
+  // Schein-Kopfband. kopf ≈ 719 − 59.5 ≈ 659 > 671? Nein: 671 liegt knapp unter
+  // 659? Prüfen: die dropped Positionszeilen lagen bei y≥513; mit dem Fix ist
+  // kopf ≈ 659 → nur die echte Kopfzeile (y≈671 «914.5») fällt ins Band.
+  it('versetzte MediaBox verschiebt die Kopf-Schwelle in den echten Oberrand', () => {
+    const { kopf, fuss } = bandSchwellen(123.307, 718.693);
+    // Kopf-Schwelle deutlich über den alten 535 (sonst Body-Verlust am Seitenkopf).
+    expect(kopf).toBeGreaterThan(650);
+    expect(kopf).toBeCloseTo(718.693 - (718.693 - 123.307) * 0.1, 3);
+    // Eine Tarif-Positionszeile bei y=632 liegt jetzt UNTER der Kopf-Schwelle
+    // (wird also als Body behalten) — vorher (535) war sie darüber (verworfen).
+    expect(632).toBeLessThan(kopf);
+    // Fuss-Schwelle im echten Unterrand (≈ 123 + 41.7 ≈ 165), nicht bei 41.
+    expect(fuss).toBeGreaterThan(150);
+  });
+});
+
+describe('baueZeile — explizite Wort-Trenner-Fragmente (SG-2935-Verkleb-Bug)', () => {
+  const S = (x: number, w: number, s: string, h = 9.5) => ({ x, y: 500, h, w, s });
+
+  it('fügt an einem NULL-breiten Leerraum-Fragment genau ein Leerzeichen ein', () => {
+    // Reale SG-2935-Geometrie (Ziff. 21.06): «Auswechslung»·« »·«der»·« »·«Forderung»
+    // — die Trenner sind eigene, ~0-breite Fragmente. Ohne sie verklebt die
+    // width-Heuristik (Lücke 0.9 pt < Schwelle) zu «Auswechslungder…».
+    const r = baueZeile(
+      [
+        S(169, 54.5, 'Auswechslung'),
+        S(223.3, 0.1, ' '),
+        S(224.2, 12.5, 'der'),
+        S(236.8, 0.1, ' '),
+        S(237.7, 40.5, 'Forderung'),
+      ],
+      9.5,
+      'Art.',
+      169,
+    );
+    expect(r.text).toBe('Auswechslung der Forderung');
+  });
+
+  it('erfindet KEIN Leerzeichen zwischen dicht gesetzten Fragmenten OHNE Trenner', () => {
+    // «Fr. 2»·«000» ohne Leerraum-Fragment, Lücke ~0.1 pt → bleibt geklebt
+    // (§1: kein fabrizierter Tausender-Trenner; Trenner kommen NUR aus der Quelle).
+    const r = baueZeile([S(200, 50, 'Fr. 2'), S(250.1, 14, '000')], 9.5, 'Art.', 200);
+    expect(r.text).toBe('Fr. 2000');
+  });
+
+  it('behält die width-Heuristik: grosse x-Lücke OHNE Trenner-Fragment → Leerzeichen', () => {
+    // Fragmentierte Quelle (JU): «Les»·«termes» mit grosser Lücke, kein Trenner-
+    // Fragment → die x-Abstands-Heuristik setzt weiterhin ein Leerzeichen.
+    const r = baueZeile([S(100, 18, 'Les'), S(130, 40, 'termes')], 9.5, 'Art.', 100);
+    expect(r.text).toBe('Les termes');
+  });
+
+  it('führendes Leerraum-Fragment verschluckt die Absatz-Hochzahl NICHT', () => {
+    // Seit die Trenner erhalten bleiben, kann Stück 0 ein Leerzeichen sein — die
+    // Absatznummer ist das erste REALE Stück (sahReal statt k===0).
+    const r = baueZeile(
+      [S(118, 0.5, ' '), S(119, 4, '2', 5.7), S(126, 60, 'Der Absatztext')],
+      9.5,
+      'Art.',
+      119,
+    );
+    expect(r.absatz).toBe('2');
+    expect(r.text).toBe('Der Absatztext');
   });
 });
