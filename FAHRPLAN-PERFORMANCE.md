@@ -35,6 +35,23 @@ und den Doppel-React-Schutz (react-dom darf nur im vendor-Chunk liegen). Negativ
 Offen am Tor: die **Lighthouse-Metrik-Schranken** (CLS/LCP/TBT unter 4× CPU) — bleiben vorerst
 manueller Mess-Schritt im Deploy-Ritual (CI-Chrome noch nicht verdrahtet).
 
+**5.7.2026 — Lighthouse-Metrik-Schranken verdrahtet** (Branch `feat/qs-perf-a-b`, Gate grün +
+163 e2e grün): neues `check:perf-lighthouse` (`scripts/perf/lighthouse-budget.ts`) misst
+CLS/LCP/TBT/TTI/Score auf `/gesetze/bund/OR` + Startseite im **Lighthouse-Mobil-Preset
+(4× CPU + langsames 4G)** — startet `vite preview` selbst, nutzt Playwright-Chromium (in CI
+ohnehin installiert; `CHROME_PATH`-Override). **Verdrahtung:** als **letzte CI-Stufe** in
+`.github/workflows/ci.yml` nach Build + allen Treue-Toren (golden/smoke/struktur-konsistenz/e2e)
+→ die §15-Gegenkopplung ist über die Schritt-Reihenfolge erzwungen (Treue rot ⇒ Job bricht vor der
+Messung). Bewusst **nicht** im schnellen `gate` (der nicht baut). **Schwellen** = ehrliche Kopffreiheit
+über dem lokal gemessenen Ist (Mobil-Preset, 5.7.): OR Score 56 / CLS 0,005 / LCP 8,2 s / TBT 492 ms;
+Startseite Score 74 / CLS 0,000 / LCP 6,3 s. CLS **eng 0,10** (geräteunabhängig → der eigentliche
+Regressions-Fänger, kappt die alte 0,64/0,57-Regression); LCP/TBT/TTI/Score **grosszügige Deckel**
+(OR LCP ≤ 12 s / Score ≥ 35; Start LCP ≤ 10 s / Score ≥ 45), weil der 2-Kern-CI-Runner langsamer ist
+als die Messmaschine — fangen grobe Rückschritte ohne Runner-Flake. CI-Impact ~1 Min (2 Seiten, ein
+Lauf). **Verschärfung** der CPU-Deckel = dokumentierter Folgeschritt nach einer stabilen CI-Runner-Baseline.
+Logikverlust: KEINER (reines Mess-Tooling, kein Produkt-Code/Output). Damit ist **QS-PERF a+b komplett**
+(b lag schon in `main`, hier nur verifiziert + durch das Tor abgesichert).
+
 **1.7.2026 — Quick-Win-Batch 2 gebaut** (Branch `feat/perf-batch2-render-cls-fonts`,
 Gate grün: 2870 Tests + golden 201 byte-gleich + `check:struktur-konsistenz` + `check:perf-budget`,
 plus 49 Reader/Startseiten/Rechtsprechungs-e2e grün; §9-Bug-Check + gemessen):

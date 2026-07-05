@@ -208,13 +208,20 @@ uebergabe: nur per explizitem `plan:set <id> slot=inhaber`-Commit; check:plan er
   immer). Detailquelle: **`FAHRPLAN-PERFORMANCE.md`** (ultracode-Audit 30.6.2026, 25 verifizierte,
   logik-sichere Befunde; adversarial gegen Logikverlust geprüft). Gemessener Anlass: `/gesetze/bund/OR`
   unter 4× CPU Score **42**, **CLS 0,64**; Startseite CLS 0,57. **Empfohlene Reihenfolge:**
-  - **a · Tor `check:perf-budget`** — Lighthouse-CI auf `/gesetze/bund/OR` + Startseite (mobil, 4× CPU),
-    gestaffelte CLS/LCP/TBT/Bundle-Schwellen, in die `gate`-Kette. **Gegengekoppelt** an
-    `golden:vergleich`/`check:normtext`/`check:struktur-konsistenz`/`check:suchindex` + Reader-Smoke
-    (Ctrl+F/Anker/Print/Fussnote) — Tempo zählt nur, wenn die Treue grün bleibt.
-  - **b · Billig & verlustfrei zuerst** *(hoch/S, kein Logikrisiko)*: `React.memo` um `ArtikelLeser`
-    (kappt Scroll-Spy-Kaskade über ~1000 Artikel) · token-Mindesthöhen gegen CLS (Reader-Ladezustand,
-    Suspense-Fallback, `NewsHeader`) + Reader-Chunk vorladen · `vendor-react`-manualChunks.
+  - **a · Tor `check:perf-budget`** — **`[✓]` KOMPLETT (5.7.2026, PR feat/qs-perf-a-b).** Bundle-Teil
+    (Chrome-frei, `scripts/check-perf-budget.ts`) war seit 30.6. da; jetzt ergänzt: **`check:perf-lighthouse`**
+    (`scripts/perf/lighthouse-budget.ts`) misst CLS/LCP/TBT/TTI/Score auf `/gesetze/bund/OR` + Startseite im
+    Lighthouse-**Mobil-Preset (4× CPU + langsames 4G)** und ist als **letzte CI-Stufe** nach Build + allen
+    Treue-Toren (golden/smoke/struktur-konsistenz/e2e) verdrahtet → §15-**Gegenkopplung** über die
+    Schritt-Reihenfolge (Treue rot ⇒ Job bricht vor der Messung; nicht im schnellen `gate`, der nicht baut).
+    Schwellen = ehrliche Kopffreiheit über dem Ist (CLS eng **0,10** als Regressions-Fänger — geräteunabhängig;
+    LCP/TBT/TTI/Score grosszügige Deckel, weil der 2-Kern-CI-Runner langsamer ist als die Messmaschine).
+    **Ist (Mobil-Preset, 5.7.):** OR Score 56 / **CLS 0,005** / LCP 8,2 s; Startseite Score 74 / **CLS 0,000**
+    (war 0,64 / 0,57). CI-Impact ~1 Min. Verschärfung = dokumentierter Folgeschritt nach stabiler CI-Baseline.
+  - **b · Billig & verlustfrei zuerst** — **`[✓]` bereits in `main`** (Quick-Win-Batches 30.6./1.7., hier
+    nur verifiziert + durch das Tor abgesichert): `React.memo(ArtikelLeser)` + `SektionBaumTOC` (`parts.tsx`),
+    token-Mindesthöhen (`min-h-screen` Suspense-Fallback `App.tsx` + Reader-Ladezustand `inhalt.tsx`,
+    `min-h-modul-news` `NewsHeader`), Reader-Chunk-Vorladen, `vendor-react`-manualChunks (`vite.config.ts`).
   - **c · M-Daten-Pfad** *(adopt-with-care, golden-gegated)*: OR-Fetch/Struktur-Parse per
     `requestIdleCallback` defern (vollen Parse behalten) · Suchindex (16 MiB) in Web-Worker (bzw. **FlexSearch `export()`/`import()`** — Index build-time serialisieren statt Client-Rebuild, Audit-1-B4; entfällt evtl. via E2-Edge-Suche, `FAHRPLAN-DATENHALTUNG.md` §8) ·
     `register.json` in Bund/Kanton sharden · Snapshot-Format verschlanken (Provenienz-Header-Hoist).
