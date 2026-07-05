@@ -359,3 +359,64 @@ diesem Schritt regeneriert (Blast-Radius klein halten; SG war die Bau-Fläche) �
 `normen-monitor`-Drift-Check (`check:pdf-netz`) wird für sie ROT und quittiert den Nachzug je
 Kanton (`npm run normtext -- --nur=kanton --kanton=XX`); SZ-280.411 dabei priorisieren
 (Band-Klasse = potenziell fehlende Zeilen, gleiche Prüfschablone wie hier).
+
+## Ausführungsvermerk — Nachzug SZ-280.411 + Nicht-SG-Snapshots (6.7.2026, Branch `fix/sz-nichtsg-nachzug`)
+
+**Das Backlog-Residuum oben ist ABGEARBEITET — 6 von 11 Dateien regeneriert, 4 mit Begründung
+NICHT (Einzelfälle unten), SG war schon in #162 gefixt.** Kein Code-Diff (der gemergte
+#162-Extraktor reicht); reiner Daten-Nachzug via `--nur=kanton --kanton=SZ|LU|VD|FR|VS`,
+Sibling-Erlasse derselben Kantone (LexWork-Quellen, out-of-scope-Drift) je auf HEAD zurückgesetzt.
+
+**SZ-280.411 (Band-Klasse, y0≈204 — priorisiert): 15→19 §§.** VORHER fehlte im Live-Snapshot
+komplett: **§5** (Entschädigung amtliche Verteidigung, 3 Abs.), **§9** (Ehe-/Vaterschaftssachen,
+2 Abs.), **§14** (Verwaltungsgericht Fr. 300.- bis Fr. 8 400.-), **§14a** (Zwangsmassnahmengericht
+Fr. 180.- bis Fr. 5 000.-); dazu fehlende Absätze wiederhergestellt in §1 (Abs 1+2), §6 (Abs 1–3
+statt leerem Block), §8 (**Abs 2 = die ganze Grundhonorar-Staffel** von Fr. 2 000.- bis
+>Fr. 1 000 000.-), §15 (erste Satzhälfte «Für die Vertretung in Rechtsmittelverfahren …»),
+§17 (Abs 3 Kopien), §18 (Abs 1+3 statt nur Schlussfragment). Wortlaut gegen das amtliche
+LexWork-PDF (sz.ch 280_411.pdf, SRSZ 1.1.2015) via pdfplumber verifiziert. **Dokumentierte
+Residuen (NICHT bereinigt, pdfjs-Glyph-Umordnung / Absatz-Merge):** §9 Abs 1 zeigt
+«Fr. 1 - 000.bis» statt «Fr. 1 000.- bis» (das «-»-Glyph liegt im pdfjs-Stream bei x=427.7 LINKS
+von «000.» x=433.5 — pdfplumber liest dieselbe Zeile korrekt; Klassen-Geschwister pre-existing
+byte-identisch in HEAD: §7 Abs 3 «zua- m chen», §13 lit. a «e-B zirksgericht»); §18 Abs 2 in
+Abs 1 verklebt + Übergangsbestimmungs-Titel in Abs 3; Abschnitts-Überschriften («V. Ausnahmen» …)
+kleben an Absatz-Enden (Klasse, pre-existing). §8-Schlusszeile «1 - 3.5 %» ist amtliche
+Rendering-Form (kein Defekt).
+
+**Trenner-Klasse regeneriert (je Diff klassifiziert, amtlich gegengeprüft):**
+- **SZ-173.111** (40=40 §§): 4 §§ whitespace-only entklebt (§26/33/34/36); Stand SRSZ 1.2.2026 ✓.
+- **SZ-213.512** (7=7 §§): §5 **amtlich korrigiert** «Fr. 50000.-- … 45.--» → «Fr. 50’000.- … 45.-»
+  (PDF-Wortlaut exakt); §6 Fussnoten-Superscript «11» entfernt (Furniture-Leak); **Stand-Korrektur
+  2021-02-01 → 2027-02-01** (PDF-Fusszeile «SRSZ 1.2.2027» — der Band-Fix macht den echten
+  Konsolidierungsstempel erst lesbar).
+- **SZ-82040** (24=24 §§): §23 whitespace-only.
+- **LU-3870** (56=56): reine Trenner-Entklebung; §48 «Fr. 100.– bis Fr. 1000. –.» = amtliche
+  Quell-Spationierung (verifiziert).
+- **VD-vd-105539** (118=118): reine Whitespace-Verbesserung; die 51 «xx - yy»-Muster sind ECHTE
+  Quell-Bindestriche (Emolument-Staffeln), Anzahl identisch vor/nach.
+
+**NICHT regeneriert (4 Einzelfälle, Diff unklar/regressiv — auf HEAD belassen):**
+- **FR-8428 + VS-1413:** der aktuelle Extraktor REGRESSIERT Silbentrennungs-Joins — HEAD hat
+  «secondaire»/«imprimé»/«notariat» korrekt zusammengefügt, das Regenerat zerreisst sie zu
+  «se - condaire»/«im - primé»/«no - tariat» (amtlich stehen die Wörter mit Trennstrich am
+  Zeilenumbruch; pdfplumber-dehyphenation bestätigt). Der Trenner-Fix aus #162 behandelt das
+  ~0-breite Leerraum-Fragment jetzt als Wortgrenze — auch dort, wo die Quelle einen
+  Trennstrich-Umbruch hat. **Backlog: Dehyphenation-Regel im Trenner-Pfad (Zeilenend-«-» +
+  Kleinbuchstaben-Fortsetzung → join), erst dann FR-8428/VS-1413 nachziehen.**
+- **VD-vd-106879:** §81 hängt ein zerschossenes Zahlen-Barème (Anhang) an; das Regenerat
+  verliert dort lesbare Furniture («valable dès le 1er janvier 2005», «BAREME SPECIAL …»-Titel)
+  gegen andere Zahlenfenster — Diff nicht als reine Verbesserung klassifizierbar. **Backlog:
+  Barème-Anhang braucht layout-bewusste Extraktion (wie SG-Anhänge), erst dann nachziehen.**
+- **VD-vd-210344:** Gegenprüfungs-Befund — das Regenerat setzt die Randtitel von **Art. 4/5/6**
+  («Actes non instrumentés»/«Intervention facultative du notaire»/«Base de l'émolument») in den
+  Fliesstext von Art. 3; Art. 4–6 fehlen als eigene Einträge (pre-existing Kollaps, HEAD wie
+  Regenerat: Sprung Art. 3 → Art. 7). Netto additiv, aber strukturell fehlplatziert → §1
+  konservativ NICHT übernommen. **Backlog: VD-Profil-Artikelkopf-Erkennung fixen (Art. 4–6
+  wiederherstellen), dann regenerieren.**
+
+**Gegenprüfung (2 unabhängige adversariale Durchgänge, pdfplumber ≠ pdfjs, frischer Kontext):**
+Durchgang 1 «widerlegt» → VD-210344 zurückgesetzt + Residuen-Claim präzisiert (2 der 4 Befunde
+waren Prüf-Artefakte: §13 lit. a–d und §6 Abs 3 lit. a/b liegen vollständig in den `items`-Arrays);
+Durchgang 2 über den korrigierten 6-Dateien-Diff (Verdikt s. gegenpruefung-register 6.7.).
+#162-Lektion aktiv geprüft: keine Phantom-§§ durch nummern-beginnende Wrap-Zeilen (§-Set exakt
+= amtliches Inventar §1–§18+§14a; §8-Staffelzeilen/«20 000.-;»-Umbrüche öffnen nichts).
