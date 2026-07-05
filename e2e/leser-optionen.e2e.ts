@@ -111,29 +111,52 @@ test('Linien-Toggle: explizit AN sichtbar → AUS transparent (Guide bleibt im D
   expect(nachReload!.color).toBe('rgba(0, 0, 0, 0)'); // kein Flash: bleibt aus
 });
 
-test('Fussnoten-Toggle: Marker liegen IMMER im DOM (G2b), AUS DÄMPFT sie NIE display:none (R9)', async ({ page }) => {
+test('Fussnoten-Toggle: AN sichtbar → AUS VERSCHWINDEN (A1, David 5.7.2026), Text bleibt im DOM, kein CLS beim Toggle', async ({ page }) => {
   await warteReader(page, '/gesetze/bund/BGBM', 'art-1');
 
-  // W2·5d G2b (Fussnoten-Unifizierung): der alte «Fussnoten ein-/ausblenden»-
-  // Apparat-Schalter ist entfallen — die Marker rendern jetzt IMMER (amtliche
-  // Substanz bleibt im DOM, Ctrl+F/Print/Screenreader). EINE Bedienung = der
-  // Options-Toggle unten; er DÄMPFT nur (R9), rendert/entfernt nichts.
+  // A1 (David 5.7.2026, überstimmt die frühere R9-Dämpfungs-Regel): Fussnoten bei
+  // AUS VERSCHWINDEN visuell (display:none am `[data-fn-marker]`-Cluster und am
+  // `[data-fn-apparat]`), statt nur gedämpft zu werden. Trade-off: die Marker-
+  // Ziffern + Apparat-Texte verlassen Ctrl+F — NUR sie, nie der Normtext; der
+  // Fussnotentext bleibt im DOM (`#fn-…`) und «Fussnoten AN» stellt alles wieder her.
   const marker = page.locator('.lc-leser button[aria-label^="Fussnote"]').first();
   await expect(marker).toBeVisible({ timeout: 15000 });
   await marker.scrollIntoViewIfNeeded();
+  const nrText = (await marker.textContent())?.trim() ?? '';
+  expect(nrText.length).toBeGreaterThan(0);
 
-  // POSITIV: Grundzustand (data-fussnoten=an) → Marker voll sichtbar.
-  expect(parseFloat(await marker.evaluate((el) => getComputedStyle(el).opacity))).toBeGreaterThan(0.9);
+  // CLS-Beobachter INSTALLIEREN (NUR künftige Shifts, kein `buffered` — die
+  // Lade-Shifts sind nicht Gegenstand des Toggle-Beweises), dann togglen: ein
+  // toggle-getriebener Reflow liegt binnen 500 ms nach dem Klick (input-exkludiert)
+  // und darf KEINEN CLS beitragen.
+  await page.evaluate(() => {
+    (window as unknown as { __cls: number }).__cls = 0;
+    new PerformanceObserver((l) => {
+      for (const e of l.getEntries() as PerformanceEntry[]) {
+        const s = e as unknown as { value: number; hadRecentInput: boolean };
+        if (!s.hadRecentInput) (window as unknown as { __cls: number }).__cls += s.value;
+      }
+    }).observe({ type: 'layout-shift' });
+  });
 
-  // NEGATIV: «Fussnoten» AUS → gedämpft, ABER niemals display:none (R9).
+  // NEGATIV: «Fussnoten» AUS → Marker + Apparat visuell WEG (display:none), aber
+  // der Marker bleibt im DOM (Text abfragbar), niemals gelöscht.
   await page.getByRole('switch', { name: 'Fussnoten' }).click();
   await expect(page.locator('html')).toHaveAttribute('data-fussnoten', 'aus');
-  await marker.scrollIntoViewIfNeeded();
-  expect(await marker.evaluate((el) => getComputedStyle(el).display)).not.toBe('none');
-  expect(await marker.evaluate((el) => getComputedStyle(el).visibility)).not.toBe('hidden');
-  expect(parseFloat(await marker.evaluate((el) => getComputedStyle(el).opacity))).toBeLessThan(1);
-  // Der Marker-Text (die Fussnoten-Nummer) bleibt für Ctrl+F erhalten.
-  expect((await marker.textContent())?.trim().length ?? 0).toBeGreaterThan(0);
+  await expect(marker).toBeHidden();
+  expect(await marker.evaluate((el) => getComputedStyle(el).display)).toBe('none');
+  // Text bleibt im DOM (Element existiert, Inhalt unverändert) — nur visuell weg.
+  expect((await marker.textContent())?.trim()).toBe(nrText);
+  await expect(page.locator('.lc-leser [data-fn-apparat]').first()).toBeHidden();
+
+  // POSITIV zurück: «Fussnoten» AN → Marker wieder sichtbar (Wiederherstellung).
+  await page.getByRole('switch', { name: 'Fussnoten' }).click();
+  await expect(page.locator('html')).toHaveAttribute('data-fussnoten', 'an');
+  await expect(marker).toBeVisible();
+
+  // CLS über beide Toggles == 0 (input-exkludiert): kein Layout-Sprung.
+  const cls = await page.evaluate(() => (window as unknown as { __cls: number }).__cls);
+  expect(cls).toBe(0);
 });
 
 test('Verweise-Toggle: AUS unterdrückt die (dotted) Link-Unterstreichung, der Link bleibt', async ({ page }) => {

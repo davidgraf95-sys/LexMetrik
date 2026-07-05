@@ -173,7 +173,7 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
   // Prominenz steuert allein der data-fussnoten-CSS-Toggle (index.css): «AUS»
   // DÄMPFT, versteckt nie. So gibt es EINE Fussnoten-Bedienung statt zweier.
   const fnMarker = artOffen && fnArtikelEbene.length > 0
-    ? <span className="ml-0.5">{fnArtikelEbene.map((nr, i) => (
+    ? <span className="ml-0.5" data-fn-marker>{fnArtikelEbene.map((nr, i) => (
         <span key={nr}>{i > 0 && <span className="align-super text-[0.62em] text-ink-500">,</span>}<FnRef artikel={e.artikel} nr={nr} /></span>
       ))}</span>
     : null;
@@ -239,7 +239,7 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
                       Zeile (blatt im Volltext, ganze Kette in der Suchsicht). G2b:
                       immer (an artOffen gebunden), Prominenz via data-fussnoten-CSS. */}
                   {artOffen && fnProSektion[m]?.map((nr, j) => (
-                    <span key={nr}>{j > 0 && <span className="align-super text-[0.62em] text-ink-500">,</span>}<FnRef artikel={e.artikel} nr={nr} /></span>
+                    <span key={nr} data-fn-marker>{j > 0 && <span className="align-super text-[0.62em] text-ink-500">,</span>}<FnRef artikel={e.artikel} nr={nr} /></span>
                   ))}
                 </div>
               ))}
@@ -559,7 +559,7 @@ export function SektionKopf({ s, refCb, offen, onToggle, bereich, bereichEinzel 
           <span className={`${titelFont} ${titelStil} group-hover/sek:text-brass-700`}>{rest || s.label}</span>
         </button>
         {sekFn && (
-          <span className="shrink-0">
+          <span className="shrink-0" data-fn-marker>
             {sekFn.map((f, i) => (
               <span key={`${f.artikel}-${f.nr}`}>{i > 0 && <span className="align-super text-[0.62em] text-ink-500">,</span>}<FnRef artikel={f.artikel} nr={f.nr} /></span>
             ))}

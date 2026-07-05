@@ -247,20 +247,21 @@
     border-left-color: transparent;
   }
 
-  /* Fussnoten AUS: die Fussnoten-Marker (¹²³) werden GEDÄMPFT, NIE display:none
-     (R9 / §8 — amtliche Substanz bleibt im DOM, per Ctrl+F/Print/Screenreader
-     erreichbar, klickbar). Nur Farbe/Deckkraft ändern sich. */
-  html[data-fussnoten="aus"] .lc-leser button[aria-label^="Fussnote"] {
-    color: var(--ink-400);
-    opacity: 0.6;
-  }
-
-  /* Fussnoten AUS: auch die Apparat-BLÖCKE (Fussnoten-Texte am Artikelfuss,
-     Kopf-Fussnoten, Aufhebungsnotiz) werden gedämpft — G2b: sie liegen jetzt
-     IMMER im DOM (Marker + Apparat = EINE Bedienung), «AUS» reduziert nur die
-     Prominenz, versteckt nie (R9/§8 — Ctrl+F/Print/Screenreader unberührt). */
+  /* Fussnoten AUS: die Fussnoten-Marker (¹²³) und der ganze Apparat VERSCHWINDEN
+     visuell (David-Entscheid 5.7.2026, überstimmt die frühere R9-Dämpfungs-Regel —
+     deklarierte fachliche Änderung, DESIGN-REGLEMENT §4c). `display:none` nimmt NUR
+     die Marker-Ziffern + Apparat-Texte aus dem visuellen Fluss und aus Ctrl+F/
+     Screenreader — der NORMTEXT (amtliche Substanz) ist NIE betroffen und bleibt
+     stets durchsuchbar; der Fussnotentext bleibt im DOM (`#fn-…`-Quellblöcke +
+     `data-fn-apparat`), ein Klick auf «Fussnoten AN» stellt beides vollständig
+     wieder her. Toggle-getrieben ⇒ die Reflow-Verschiebung liegt binnen 500 ms nach
+     dem Klick (input-exkludiert) → kein CLS-Beitrag; der Default AN emittiert keine
+     Regel (byte-gleich, R6). Druck folgt dem Toggle: bei AUS wird der Apparat auch
+     im Ausdruck weggelassen (display:none wirkt in @media print gleichermassen). */
+  html[data-fussnoten="aus"] .lc-leser button[aria-label^="Fussnote"],
+  html[data-fussnoten="aus"] .lc-leser [data-fn-marker],
   html[data-fussnoten="aus"] .lc-leser [data-fn-apparat] {
-    opacity: 0.55;
+    display: none;
   }
 
   /* Verweise AUS: die Unterstreichung der Verweis-Links (dotted, heute nur bei
