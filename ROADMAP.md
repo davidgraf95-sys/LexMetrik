@@ -701,9 +701,12 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   ausstehend):** eingeordnet in `FAHRPLAN-GESETZES-UX.md` §10.8; Spec-Heimat
   `FAHRPLAN-GESETZESDARSTELLUNG-V2.md`; Wortlaut
   `docs/ux-audit-2026-07/ANMERKUNGEN-DAVID-2026-07-10.md`. Offene Schritte:
-  - [ ] **A19** (FN-1+FN-2 +Drop-Fix `disp_*`): VZG-Fussnoten im Text verklinken +
-    Präambel-Extraktor-Marker (Risiko-Pfad `scripts/normtext`, `check:gegenpruefung`;
-    sofort/kollisionsfrei; abh. Fedlex-P1-a/b). V2 §2 F1. **Bau-Go David ausstehend.**
+  - [x] **A19** (FN-1+FN-2 +Drop-Fix `disp_*`): **✅ GEBAUT 10.7.2026 (Bau-Go David «go
+    zu allem», `feat/v2-fn1-fn2`).** VZG-Alt-Form-Fussnoten erhalten nr (873 nr='' → echt,
+    22 Erlasse), Präambel-`fnNrs` erfasst. **Abweichung (§7): Drop-Fix breiter als geplant** —
+    recovert die verworfenen Schlusstitel-Fussnoten (`disp_uN/art_*`) korpusweit (227 recovert,
+    u.a. OR/ZGB); «OR/ZGB byte-gleich» galt NICHT, stattdessen strukturell nicht-regressions-
+    bewiesen (nur additiv, 0 Verlust). Gegenprüfung gegen Fedlex bestanden; Detail V2 §2 F1. V2 §2 F1.
   - [ ] **A20** (FN-3): Präambel-Fussnoten inline (nach U-VERWEIS-Merge). V2 §2 F1.
     **Bau-Go David ausstehend.**
   - [ ] **A21** (FN-4): Absatz-Zuordnung Alt-Form (bündelt mit A19-Regen). V2 §2 F1.
