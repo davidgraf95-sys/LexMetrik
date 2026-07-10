@@ -1,5 +1,8 @@
 import { Fragment } from 'react';
-import { normVerweiseImText, fremdgesetzNachArtikel, fremdRoutingFormB } from '../lib/fedlex';
+import {
+  normVerweiseImText, fremdgesetzNachArtikel, fremdRoutingFormB,
+  artikelnPluralVerweise,
+} from '../lib/fedlex';
 import { NormChip } from './vorlagen/ui';
 import { RechtsprechungText } from './RechtsprechungLink';
 
@@ -71,12 +74,67 @@ function restMitIntern(s: string, key: string, intern?: InternRefs): React.React
   // 1.7.: FinfraV-FINMA art_50a, betrifft alle 6 getrennt-benannten Kind-Erlasse).
   const kuerzelKanon = (s: string) => s.toUpperCase().replace(/[^A-Z0-9]/g, '');
   const eigenesKuerzel = kuerzelKanon(intern.basisPfad.split('/').pop() ?? '');
+  // A10 (Plural-Linker, David 5.7.2026): «in den Artikeln 31 …, 35 … und 45 …» —
+  // jedes Glied EINZELN verlinken. Die Regionen werden VOR dem Singular-Lauf
+  // erhoben; ART_INTERN-Treffer, die in eine Region fallen (der Öffner «die
+  // Artikel 22» enthält ein Singular-Match), werden übersprungen. Auflösung je
+  // Glied: fremd (Gesetz-Signal am Ende, inkl. Genitiv-Map) → NormChip aufs
+  // Fremdgesetz; eigenes Kürzel oder kein Signal → Self-Sprung über die tokenMap
+  // (nur existierende Token, §8); unterdrückte Regionen bleiben reiner Text (§1).
+  const pluralRegionen = artikelnPluralVerweise(s);
+  const inPluralRegion = (idx: number) =>
+    pluralRegionen.some((r) => idx >= r.oeffnerStart && idx < r.end);
   const out: React.ReactNode[] = [];
   let last = 0;
+  // Verlinkbare Spans (Singular + Plural-Glieder) einsammeln, dann in Text-
+  // Reihenfolge mit Zwischenstücken emittieren.
+  const linkSpans: { start: number; end: number; node: React.ReactNode }[] = [];
+  for (const r of pluralRegionen) {
+    if (r.unterdruecken) continue;
+    // Fremd-Ziel = eigener Erlass ⇒ Self-Pfad (wie N2: eigenes Kürzel ist kein
+    // Fremdgesetz — der In-Reader-Sprung ist die etablierte Self-Darstellung).
+    const fremdEffektiv = r.fremd && kuerzelKanon(r.fremd) !== eigenesKuerzel ? r.fremd : null;
+    for (const g of r.glieder) {
+      const gk = `${key}-p${g.start}`;
+      if (fremdEffektiv) {
+        linkSpans.push({
+          start: g.start, end: g.end,
+          node: <NormChip key={gk} artikel={`Art. ${g.roh} ${fremdEffektiv}`} anzeige={g.roh} linkClass={INLINE_CLASS} />,
+        });
+      } else {
+        const token = intern.tokenMap.get(normRef(g.roh));
+        if (!token) continue; // kein Artikel dieses Erlasses → Text belassen (§8)
+        linkSpans.push({
+          start: g.start, end: g.end,
+          node: (
+            <a key={gk} href={`${intern.basisPfad}#art-${token}`}
+              onClick={(e) => { e.preventDefault(); intern.springeZu(token); }}
+              className={INLINE_CLASS}>{g.roh}</a>
+          ),
+        });
+      }
+    }
+  }
+  // Plural-Glieder-Spans in Text-Reihenfolge VOR der jeweils nächsten Singular-
+  // Emission ausgeben (ein Cursor über linkSpans; Spans in schon konsumierten
+  // N2b-Regionen werden verworfen).
+  let pq = 0;
+  const emitPluralBis = (pos: number) => {
+    while (pq < linkSpans.length && linkSpans[pq].start < pos) {
+      const sp = linkSpans[pq++];
+      if (sp.start < last) continue; // von einer N2b-Region konsumiert
+      if (sp.start > last) out.push(<RechtsprechungText key={`${key}-r${last}`} text={s.slice(last, sp.start)} />);
+      out.push(sp.node);
+      last = sp.end;
+    }
+  };
   for (const m of s.matchAll(ART_INTERN)) {
     // Von einer bereits verbrauchten Fremd-Region übersprungen (N2b konsumiert die
     // ganze «Artikel N … (KÜRZEL)»-Einheit; ein späterer Treffer darin entfällt).
     if (m.index < last) continue;
+    // In einer Plural-Region (A10): die Glieder-Spans oben decken sie ab.
+    if (inPluralRegion(m.index)) continue;
+    emitPluralBis(m.index);
     const start = m.index;
     const rest = s.slice(start + m[0].length);
     // N2b (Bug David 4.7.2026): AUSGESCHRIEBENES Fremdgesetz mit Klammer-Kürzel
@@ -144,6 +202,7 @@ function restMitIntern(s: string, key: string, intern?: InternRefs): React.React
     );
     last = start + m[0].length;
   }
+  emitPluralBis(s.length);
   if (last === 0) return <RechtsprechungText key={key} text={s} />;
   if (last < s.length) out.push(<RechtsprechungText key={`${key}-r${last}`} text={s.slice(last)} />);
   // key-tragendes Fragment: restMitIntern-Ergebnisse landen in NormTexts `teile`-

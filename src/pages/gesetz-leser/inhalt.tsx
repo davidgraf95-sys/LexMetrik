@@ -775,7 +775,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
           } />
         {/* M5: Erlass-Kopf-Slot auch im pdf-embed-Pfad (für PDF-Erlasse ohne
             Struktur-Sidecar bleibt kopf=null → nichts gerendert). */}
-        {kopf && <ErlassKopfBlock kopf={kopf} />}
+        {kopf && <ErlassKopfBlock kopf={kopf} intern={internRefs} />}
         {/* Eingebettetes amtliches PDF (same-origin → Browser-Viewer mit nativer
             Suche/Zoom/Druck). iframe ist für Inline-PDF am zuverlässigsten; darunter
             ein sichtbarer Fallback-Link für Browser ohne PDF-Viewer. */}
@@ -1031,7 +1031,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
 
       {/* M5: Erlass-Kopf (Ingress/Erlassformel bzw. materielle Präambel + Erlass-
           datum + Kopf-Fussnoten) — Fedlex-Fundiertheits-Floor (§2), bisher verworfen. */}
-      {kopf && <ErlassKopfBlock kopf={kopf} />}
+      {kopf && <ErlassKopfBlock kopf={kopf} intern={internRefs} />}
 
       {/* Suche als Vollbreite NUR ohne 2-Spalten (keine Sektionen ODER Gliederung
           eingeklappt) — dann trägt sie auch den «☰ Gliederung»-Wiedereinblender.
