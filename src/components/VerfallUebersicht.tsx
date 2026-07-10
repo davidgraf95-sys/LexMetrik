@@ -67,7 +67,7 @@ export function VerfallUebersicht() {
       <h2 className="text-h3 font-display font-semibold text-ink-900">
         Aktualität &amp; Pflege der Parameter
       </h2>
-      <p className="text-body-s text-ink-600 leading-relaxed">
+      <p className="text-body-s text-ink-600 leading-relaxed max-w-reading">
         Einzelne Werte – etwa kantonale Tarife, der hypothekarische Referenzzinssatz oder
         Gebührenordnungen – ändern sich ausserhalb dieser Anwendung und müssen zu einem festen
         Termin neu geprüft werden. Diese Übersicht führt die {VERFALL_TERMINE.length} datierten
@@ -77,7 +77,11 @@ export function VerfallUebersicht() {
         kein stiller Weiterbetrieb.
       </p>
 
-      <ul className="space-y-2">
+      {/* Responsive-Audit D3: mehrspaltig ab Tablet, damit die lange Pflege-
+          Liste bei viel Breite nicht als extrem hohe Einzelspalte läuft. Jede
+          Kachel ist in sich geschlossen (Datum · Status · Label · Wert) — die
+          Spaltenzahl ändert nur das Layout, nie Inhalt/Reihenfolge. */}
+      <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3">
         {VERFALL_TERMINE.map((t) => {
           const s = status(t.datum);
           return (

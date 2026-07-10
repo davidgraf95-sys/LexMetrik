@@ -60,15 +60,21 @@ const ABSCHNITTE: { titel: string; text: string }[] = [
 ];
 
 export function Methodik() {
+  // Responsive-Audit D3: die Seite lief bei 2560 als eine schmale max-w-reading-
+  // Einzelspalte → mit der 69-zeiligen Pflege-Liste (VerfallUebersicht) wurde sie
+  // ~10 470 px hoch bei viel totem Rechtsraum. Jetzt trägt der Fliesstext weiter
+  // die Lesespalte (max-w-reading, §13.2), aber die Daten-Kachelliste darf die
+  // Inhaltsbreite in mehreren Spalten nutzen (siehe VerfallUebersicht) — die
+  // Höhe sinkt deutlich, der Prosa-Lesekomfort bleibt.
   return (
-    <div className="space-y-10 max-w-reading">
+    <div className="space-y-10">
       <SeitenKopf overline="Methodik" titel="Wie LexMetrik rechnet" />
 
       <div className="space-y-8">
         {ABSCHNITTE.map((a) => (
           <section key={a.titel} className="space-y-2 border-t border-line pt-6">
             <h2 className="text-h3 font-display font-semibold text-ink-900">{a.titel}</h2>
-            <p className="text-body-s text-ink-600 leading-relaxed">{a.text}</p>
+            <p className="text-body-s text-ink-600 leading-relaxed max-w-reading">{a.text}</p>
           </section>
         ))}
 
@@ -76,7 +82,7 @@ export function Methodik() {
 
         <section className="lc-notice">
           <p className="lc-overline mb-1">Grenzen</p>
-          <p className="text-body-s text-ink-600">
+          <p className="text-body-s text-ink-600 max-w-reading">
             LexMetrik liefert automatisierte Orientierungsberechnungen und Dokument-Entwürfe,
             keine Rechtsberatung. Massgeblich sind Gesetz, GAV, Vertrag und der konkrete
             Sachverhalt. Für die Wahrung einer Frist und die Einhaltung von Formvorschriften
