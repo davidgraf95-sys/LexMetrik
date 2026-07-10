@@ -361,11 +361,26 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
 // A10-Plural («die Artikel 26, 31 Absatz 2, 34 und 114 der Bundesverfassung»).
 // Ohne Reader-InternRefs (pdf-embed) linkt der Fallback nur Fremdziele — eine
 // leere tokenMap erzeugt nie einen Self-Sprung (§8, kein toter Link).
+//
+// §1-GRENZE «alte Bundesverfassung» (Gegenprüfungs-Befund 10.7.2026): der Ingress
+// ist HISTORISCH (wird nie nachgeführt) — Erlasse mit Erlassdatum VOR 2000 zitieren
+// dort die BV von 1874 (aBV). «Artikel 26 der Bundesverfassung» im ArG-Ingress
+// (1964) meint aBV 26 (Gewerbefreiheit-Kontext), NICHT die heutige Eigentums-
+// garantie — ein Link auf SR 101 wäre plausibel-falsch. Deterministisches Tor:
+// Ingress-Verlinkung NUR bei Erlassdatum ≥ 2000 (neue BV in Kraft 1.1.2000);
+// unparsebares Datum ⇒ keine Links (lieber kein Link als ein falscher, §1).
+// Artikel-FLIESSTEXT ist nicht betroffen: dort werden BV-Zitate bei Revisionen
+// amtlich nachgeführt (Korpus-Belege ASYLG 121a, RVOG 184 → heutige BV).
 const PRAEAMBEL_INTERN_FALLBACK: InternRefs = { tokenMap: new Map(), basisPfad: '', springeZu: () => {} };
+function ingressVerlinkbar(erlassdatum: string | undefined): boolean {
+  const m = erlassdatum?.match(/vom\s+\d{1,2}\.\s*\S+\s+(\d{4})/);
+  return !!m && Number(m[1]) >= 2000;
+}
 
 export function ErlassKopfBlock({ kopf, intern }: { kopf: ErlassKopf; intern?: InternRefs }) {
   const hatPraeambel = !!kopf.praeambel?.length;
   if (!kopf.erlassdatum && !hatPraeambel) return null;
+  const verlinkbar = ingressVerlinkbar(kopf.erlassdatum);
   const zeilenStil = (rolle: string): string => {
     if (rolle === 'verb') return 'font-serif text-body-l text-ink-800';
     if (rolle === 'autor') return 'font-serif text-body-l text-ink-800';
@@ -384,7 +399,9 @@ export function ErlassKopfBlock({ kopf, intern }: { kopf: ErlassKopf; intern?: I
         <div className="space-y-2">
           {kopf.praeambel!.map((z, i) => (
             <p key={i} className={zeilenStil(z.rolle)}>
-              <NormText text={z.text} intern={intern ?? PRAEAMBEL_INTERN_FALLBACK} />
+              {verlinkbar
+                ? <NormText text={z.text} intern={intern ?? PRAEAMBEL_INTERN_FALLBACK} />
+                : z.text}
             </p>
           ))}
         </div>

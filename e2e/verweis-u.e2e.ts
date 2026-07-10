@@ -4,7 +4,8 @@ import { test, expect, type Page } from '@playwright/test';
 // P2 (§10.2): (1) MWSTG Art. 5 verbatim = 5 Links (art_31/35/37/38/45);
 // (2) bounded — kein Link über den Fliesstext hinaus; (3) Fremdgesetz-Signal
 // geroutet; (4) Präambel-Test an BV-zitierenden Ingressen (Singular MWSTG +
-// Plural ArG). A7: strukturiertes Verweis-Popover (Wortlaut → massgebliche
+// Plural DSG; aBV-Schutz-Negativfall ArG). A7: strukturiertes Verweis-Popover
+// (Wortlaut → massgebliche
 // Entscheide → klar abgetrennte Materialien). A9: Flüssigkeit unter CPU-Throttle
 // (CI 4× / lokal 6×), CLS 0. Läuft gegen `vite preview` (dist).
 
@@ -58,16 +59,30 @@ test.describe('A11 — Verweise in Präambel/Ingress', () => {
     expect(fehler).toEqual([]);
   });
 
-  test('ArG-Ingress (Plural): «die Artikel 26, 31 Absatz 2, 34 … und 114 der Bundesverfassung» → BV-Glieder einzeln', async ({ page }) => {
+  test('DSG-Ingress (Plural, Erlass 2020): «die Artikel 95 Absatz 1, 97 Absatz 1, 122 Absatz 1 und 173 Absatz 2 der Bundesverfassung» → BV-Glieder einzeln', async ({ page }) => {
+    const fehler = fehlerSammeln(page);
+    await page.goto('/gesetze/bund/DSG');
+    const ingress = page.locator('section[aria-label="Ingress"]');
+    await expect(ingress).toBeVisible({ timeout: 15_000 });
+    // Alle 4 Glieder der Aufzählung zeigen auf die (heutige) BV.
+    for (const n of ['95', '97', '122', '173']) {
+      await expect(ingress.locator(`a[href*="${BV_ELI}"][href*="#art_${n}"]`).first()).toBeVisible({ timeout: 10_000 });
+    }
+    await page.screenshot({ path: 'e2e-shots/verweis-u-praeambel-dsg.png', fullPage: false });
+    expect(fehler).toEqual([]);
+  });
+
+  test('aBV-Schutz (§1): ArG-Ingress (1964, zitiert die BV von 1874) bleibt UNVERLINKT', async ({ page }) => {
     const fehler = fehlerSammeln(page);
     await page.goto('/gesetze/bund/ARG');
     const ingress = page.locator('section[aria-label="Ingress"]');
     await expect(ingress).toBeVisible({ timeout: 15_000 });
-    // Erste + letzte Glieder der Aufzählung zeigen auf die BV.
-    await expect(ingress.locator(`a[href*="${BV_ELI}"][href*="#art_26"]`).first()).toBeVisible({ timeout: 10_000 });
-    await expect(ingress.locator(`a[href*="${BV_ELI}"][href*="#art_114"]`).first()).toBeVisible();
-    // Der Öffner selbst («die Artikel») bleibt Text, nur die Nummern sind Anker.
-    await page.screenshot({ path: 'e2e-shots/verweis-u-praeambel-arg.png', fullPage: false });
+    // «Artikel 26 … der Bundesverfassung» meint aBV 26, NICHT die heutige
+    // Eigentumsgarantie — ein SR-101-Link wäre plausibel-falsch (§1).
+    await expect(ingress.getByText(/der Bundesverfassung/)).toBeVisible();
+    // Keine Inline-Verweis-Links in den PRÄAMBEL-Zeilen (font-serif); der
+    // Fussnoten-Apparat darunter (M11-«SR 101»-Link u. a.) ist davon unberührt.
+    await expect(ingress.locator('.font-serif a')).toHaveCount(0);
     expect(fehler).toEqual([]);
   });
 });
@@ -160,8 +175,12 @@ test.describe('A9 — Flüssigkeit unter CPU-Throttle + CLS 0', () => {
     // goto verloren), auf der zweiten Seite den Beobachter neu installieren.
     const cls1 = await page.evaluate(() => (window as unknown as { __cls: number }).__cls);
 
-    // Plural-Glied-Sprung im MWSTG gedrosselt.
+    // Plural-Glied-Sprung im MWSTG gedrosselt. Beobachter erst NACH dem
+    // eingeschwungenen Reader installieren — gemessen wird die INTERAKTION
+    // (A9), nicht der Erst-Load (den deckt check:perf-budget/Lighthouse ab).
     await page.goto('/gesetze/bund/MWSTG#art-5');
+    const glied = page.locator('#art-5').locator('a[href="/gesetze/bund/MWSTG#art-31"]').first();
+    await expect(glied).toBeVisible({ timeout: 20_000 });
     await page.evaluate(() => {
       (window as unknown as { __cls: number }).__cls = 0;
       new PerformanceObserver((l) => {
@@ -171,8 +190,6 @@ test.describe('A9 — Flüssigkeit unter CPU-Throttle + CLS 0', () => {
         }
       }).observe({ type: 'layout-shift' });
     });
-    const glied = page.locator('#art-5').locator('a[href="/gesetze/bund/MWSTG#art-31"]').first();
-    await expect(glied).toBeVisible({ timeout: 20_000 });
     t0 = Date.now();
     await glied.click();
     await expect(page.locator('#art-31')).toBeVisible({ timeout: 15_000 });

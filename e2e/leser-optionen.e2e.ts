@@ -175,8 +175,10 @@ test('Fussnoten-Toggle: AN sichtbar → AUS VERSCHWINDEN (A1, David 5.7.2026), T
 
 test('Verweise-Toggle: AUS unterdrückt die (dotted) Link-Unterstreichung, der Link bleibt', async ({ page }) => {
   await warteReader(page, '/gesetze/bund/BGBM', 'art-1');
-  const link = page.locator('.lc-leser .decoration-dotted').first();
-  const anzahl = await page.locator('.lc-leser .decoration-dotted').count();
+  // Artikel-Fliesstext-Verweis (U-VERWEIS/A11: auch der Ingress trägt jetzt
+  // dotted Links — der läge unter dem Sticky-Kopf und finge den Hover ab).
+  const link = page.locator('.lc-leser [id^="art-"] .decoration-dotted').first();
+  const anzahl = await page.locator('.lc-leser [id^="art-"] .decoration-dotted').count();
   test.skip(anzahl === 0, 'kein Verweis-Link auf dieser Seite');
 
   await link.scrollIntoViewIfNeeded();
