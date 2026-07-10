@@ -25,6 +25,11 @@ export type KopfRolle = 'autor' | 'ingress' | 'praeambel' | 'verb';
 export interface KopfZeile {
   rolle: KopfRolle;
   text: string;
+  /** FN-2: Nummern der Fussnoten-Marker, die in DIESER Präambel-/Ingress-Zeile
+   *  stehen (Dokumentreihenfolge), damit der Reader den Marker an der Zeile setzen
+   *  kann. Auflösung über `fnDefinitionen` (nach FN-1 auch für Alt-Form-Erlasse
+   *  ehrlich). Nur gesetzt, wenn die Zeile Marker trägt. */
+  fnNrs?: string[];
 }
 export interface ErlassKopf {
   /** SR-Nummer aus <p class="srnummer"> (z. B. «210», «0.103.2»). */
@@ -126,6 +131,8 @@ export function extrahiereKopf(html: string): ErlassKopf | null {
   const preface = divInhalt(html, 'preface');
   const preamble = divInhalt(html, 'preamble');
   const kopf: ErlassKopf = {};
+  // Einmal auflösen: für die Kopf-Fussnoten (unten) UND die FN-2-Marker je Zeile.
+  const defs = fnDefinitionen(html);
 
   if (preface) {
     const sr = preface.match(/<p[^>]*\bclass="[^"]*\bsrnummer\b[^"]*"[^>]*>([\s\S]*?)<\/p>/i);
@@ -165,11 +172,20 @@ export function extrahiereKopf(html: string): ErlassKopf | null {
       else if (/\bman-template-verb\b/.test(klasse)) rolle = 'verb';
       else if (/\babsatz\b/.test(klasse)) rolle = 'praeambel';
       else rolle = rolleAusText(text, zeilen.length === 0);
-      zeilen.push({ rolle, text });
+      // FN-2: Marker-Nummern dieser Zeile in Dokumentreihenfolge (dedupe je Zeile).
+      const seen = new Set<string>();
+      const fnNrs: string[] = [];
+      for (const mm of pm[2].matchAll(/href="#(fn-[^"]+)"/gi)) {
+        if (seen.has(mm[1])) continue;
+        seen.add(mm[1]);
+        const nr = defs.get(mm[1])?.nr;
+        if (nr) fnNrs.push(nr);
+      }
+      zeilen.push(fnNrs.length ? { rolle, text, fnNrs } : { rolle, text });
     }
     if (zeilen.length) kopf.praeambel = zeilen;
 
-    const fn = kopfFussnoten(preface ?? '', koerper)(fnDefinitionen(html));
+    const fn = kopfFussnoten(preface ?? '', koerper)(defs);
     if (fn.length) kopf.fussnoten = fn;
   }
 

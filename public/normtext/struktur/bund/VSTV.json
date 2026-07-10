@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-30",
+ "erzeugt": "2026-07-10",
  "kopf": {
   "srNummer": "642.211",
   "titel": "Verordnung über die Verrechnungssteuer",
@@ -11,7 +11,11 @@
    },
    {
     "rolle": "ingress",
-    "text": "gestützt auf Artikel 73 Absatz 1 des Verrechnungssteuergesetzes vom 13. Oktober 1965 (VStG),"
+    "text": "gestützt auf Artikel 73 Absatz 1 des Verrechnungssteuergesetzes vom 13. Oktober 1965 (VStG),",
+    "fnNrs": [
+     "2",
+     "3"
+    ]
    },
    {
     "rolle": "verb",

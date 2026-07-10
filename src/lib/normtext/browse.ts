@@ -179,7 +179,7 @@ export type StrukturMap = Record<string, ArtikelStruktur>;
 /** M5: Erlass-Kopf (Vorspann VOR dem ersten Artikel) — SR-Nr, amtlicher Titel,
  *  Erlassdatum, Ingress/Erlassformel bzw. materielle Präambel + Kopf-Fussnoten.
  *  Spiegelt das Schema aus scripts/normtext/kopf-extrahiere.ts (Sidecar). */
-export interface KopfZeile { rolle: 'autor' | 'ingress' | 'praeambel' | 'verb'; text: string }
+export interface KopfZeile { rolle: 'autor' | 'ingress' | 'praeambel' | 'verb'; text: string; fnNrs?: string[] }
 export interface ErlassKopf {
   srNummer?: string;
   titel?: string;

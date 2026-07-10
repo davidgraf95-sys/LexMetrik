@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-30",
+ "erzeugt": "2026-07-10",
  "kopf": {
   "srNummer": "950.11",
   "titel": "Verordnung über die Finanzdienstleistungen",
@@ -10,7 +10,10 @@
    },
    {
     "rolle": "ingress",
-    "text": "gestützt auf das Finanzdienstleistungsgesetz vom 15. Juni 2018 (FIDLEG),"
+    "text": "gestützt auf das Finanzdienstleistungsgesetz vom 15. Juni 2018 (FIDLEG),",
+    "fnNrs": [
+     "1"
+    ]
    },
    {
     "rolle": "verb",
@@ -19,7 +22,7 @@
   ],
   "fussnoten": [
    {
-    "nr": "",
+    "nr": "1",
     "text": "SR <b>950.1</b>",
     "links": [
      {
@@ -617,7 +620,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "2",
      "text": "SR <b>952.0</b>",
      "links": [
       {
@@ -745,7 +748,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "3",
      "text": "SR <b>956.122</b>",
      "links": [
       {
@@ -797,7 +800,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "4",
      "text": "SR <b>956.1</b>",
      "links": [
       {
@@ -809,7 +812,7 @@
      "item": "i"
     },
     {
-     "nr": "",
+     "nr": "5",
      "text": "SR <b>311.0</b>",
      "links": [
       {
@@ -842,7 +845,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "6",
      "text": "SR <b>172.041.1</b>",
      "links": [
       {
@@ -932,7 +935,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "7",
      "text": "SR <b>958.1</b>",
      "links": [
       {
@@ -965,7 +968,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "8",
      "text": "Fassung gemäss Ziff. I 4 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 400).",
      "links": [
       {
@@ -998,7 +1001,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "9",
      "text": "Ausdruck gemäss Ziff. I 4 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 400). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
      "links": [
       {
@@ -1540,7 +1543,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "10",
      "text": "SR <b>956.122</b>",
      "links": [
       {
@@ -1592,7 +1595,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "11",
      "text": "SR <b>172.041.1</b>",
      "links": [
       {
@@ -1758,7 +1761,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "12",
      "text": "SR <b>958.1</b>",
      "links": [
       {
@@ -2017,7 +2020,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "13",
      "text": "SR <b>955.0</b>",
      "links": [
       {
@@ -2029,7 +2032,7 @@
      "item": null
     },
     {
-     "nr": "",
+     "nr": "14",
      "text": "SR <b>954.1</b>",
      "links": [
       {
@@ -2073,7 +2076,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "15",
      "text": "AS <b>1997</b> 68",
      "links": [
       {
@@ -2085,7 +2088,7 @@
      "item": "a"
     },
     {
-     "nr": "",
+     "nr": "16",
      "text": "SR <b>951.31</b>",
      "links": [
       {
@@ -2097,7 +2100,7 @@
      "item": "b"
     },
     {
-     "nr": "",
+     "nr": "17",
      "text": "AS <b>2013</b> 585",
      "links": [
       {
@@ -2109,7 +2112,7 @@
      "item": "b"
     },
     {
-     "nr": "",
+     "nr": "18",
      "text": "AS <b>2013</b> 585",
      "links": [
       {
@@ -2121,7 +2124,7 @@
      "item": "d"
     },
     {
-     "nr": "",
+     "nr": "19",
      "text": "AS <b>2013</b> 585",
      "links": [
       {
@@ -2133,7 +2136,7 @@
      "item": "e"
     },
     {
-     "nr": "",
+     "nr": "20",
      "text": "SR <b>956.1</b>",
      "links": [
       {
@@ -2145,7 +2148,7 @@
      "item": "f"
     },
     {
-     "nr": "",
+     "nr": "21",
      "text": "AS <b>2013</b> 585",
      "links": [
       {
@@ -2157,7 +2160,7 @@
      "item": null
     },
     {
-     "nr": "",
+     "nr": "22",
      "text": "AS <b>2013</b> 585",
      "links": [
       {
@@ -2186,7 +2189,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "23",
      "text": "AS <b>1997</b> 68",
      "links": [
       {
@@ -2198,7 +2201,7 @@
      "item": "a"
     },
     {
-     "nr": "",
+     "nr": "24",
      "text": "SR <b>951.31</b>",
      "links": [
       {
@@ -2210,7 +2213,7 @@
      "item": "b"
     },
     {
-     "nr": "",
+     "nr": "25",
      "text": "AS <b>2013</b> 585",
      "links": [
       {
@@ -2222,7 +2225,7 @@
      "item": "b"
     },
     {
-     "nr": "",
+     "nr": "26",
      "text": "AS <b>2013</b> 585",
      "links": [
       {
@@ -2234,7 +2237,7 @@
      "item": "d"
     },
     {
-     "nr": "",
+     "nr": "27",
      "text": "AS <b>2013</b> 585",
      "links": [
       {
@@ -2246,7 +2249,7 @@
      "item": "e"
     },
     {
-     "nr": "",
+     "nr": "28",
      "text": "SR <b>956.1</b>",
      "links": [
       {
@@ -2258,7 +2261,7 @@
      "item": "f"
     },
     {
-     "nr": "",
+     "nr": "29",
      "text": "AS <b>2013</b> 585",
      "links": [
       {
@@ -2317,7 +2320,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "30",
      "text": "SR <b>220</b>",
      "links": [
       {
@@ -2329,7 +2332,7 @@
      "item": "a"
     },
     {
-     "nr": "",
+     "nr": "31",
      "text": "AS <b>2007</b> 4791",
      "links": [
       {
@@ -2341,7 +2344,7 @@
      "item": "a"
     },
     {
-     "nr": "",
+     "nr": "32",
      "text": "AS <b>27</b> 317",
      "links": [
       {
@@ -2370,7 +2373,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "33",
      "text": "Fassung gemäss Ziff. I der V vom 3. Dez. 2021, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 835).",
      "links": [
       {
@@ -2382,7 +2385,7 @@
      "item": null
     },
     {
-     "nr": "",
+     "nr": "34",
      "text": "SR <b>951.311</b>",
      "links": [
       {
@@ -2394,7 +2397,7 @@
      "item": "a"
     },
     {
-     "nr": "",
+     "nr": "35",
      "text": "AS <b>2013</b> 607",
      "links": [
       {
@@ -2406,7 +2409,7 @@
      "item": "a"
     },
     {
-     "nr": "",
+     "nr": "36",
      "text": "AS <b>2011</b> 3177",
      "links": [
       {
@@ -2435,7 +2438,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "37",
      "text": "Fassung gemäss Ziff. I der V vom 3. Dez. 2021, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 835).",
      "links": [
       {
@@ -2447,7 +2450,7 @@
      "item": null
     },
     {
-     "nr": "",
+     "nr": "38",
      "text": "SR <b>951.31</b>",
      "links": [
       {
@@ -2459,7 +2462,7 @@
      "item": null
     },
     {
-     "nr": "",
+     "nr": "39",
      "text": "AS <b>2013</b> 585",
      "links": [
       {

@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-30",
+ "erzeugt": "2026-07-10",
  "kopf": {
   "srNummer": "220",
   "titel": "Bundesgesetz betreffend die Ergänzung des Schweizerischen Zivilgesetzbuches (Fünfter Teil: Obligationenrecht)",
@@ -11,7 +11,10 @@
    },
    {
     "rolle": "ingress",
-    "text": "nach Einsicht in die Botschaften des Bundesrates vom 3. März 1905 und 1. Juni 1909,"
+    "text": "nach Einsicht in die Botschaften des Bundesrates vom 3. März 1905 und 1. Juni 1909,",
+    "fnNrs": [
+     "1"
+    ]
    },
    {
     "rolle": "verb",
@@ -49008,6 +49011,18 @@
    ],
    "fussnoten": [
     {
+     "nr": "893",
+     "text": "SR <b>210</b>",
+     "links": [
+      {
+       "label": "SR <b>210</b>",
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
      "nr": "892",
      "text": "AS <b>2020</b> 4005; <b>2021</b> 846 Ziff. III 1; <b>2022</b> 109; BBl <b>2017</b> 399",
      "links": [
@@ -49110,6 +49125,30 @@
    "marginalie": [],
    "fussnoten": [
     {
+     "nr": "896",
+     "text": "[AS <b>1972</b> 1502; <b>1977</b> 1269; <b>1982</b> 1234; <b>1987</b> 1189]",
+     "links": [
+      {
+       "label": "AS <b>1972</b> 1502",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1972/1502_1531_1703"
+      },
+      {
+       "label": "<b>1977</b> 1269",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1977/1269_1269_1269"
+      },
+      {
+       "label": "<b>1982</b> 1234",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1982/1234_1234_1234"
+      },
+      {
+       "label": "<b>1987</b> 1189",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1987/1189_1189_1189"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
      "nr": "895",
      "text": "Eingefügt durch Ziff. II des BG vom 15. Dez. 1989, in Kraft seit 1. Juli 1990 (AS <b>1990</b> 802; BBl <b>1985</b> I 1389).",
      "links": [
@@ -49135,7 +49174,21 @@
      "label": "Schlussbestimmungen zum VIII. Titel und zum VIIIbis. Titel"
     }
    ],
-   "marginalie": []
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "897",
+     "text": "Die Änderungen können unter AS <b>1990</b> 802 konsultiert werden.",
+     "links": [
+      {
+       "label": "AS <b>1990</b> 802",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1990/802_802_802"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
   },
   "disp_u12_art_5": {
    "gliederung": [
@@ -49167,6 +49220,18 @@
    ],
    "fussnoten": [
     {
+     "nr": "899",
+     "text": "Die Änderungen können unter AS <b>1971</b> 1465 konsultiert werden.",
+     "links": [
+      {
+       "label": "AS <b>1971</b> 1465",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1971/1465_1461_1461"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
      "nr": "898",
      "text": "Eingefügt durch Ziff. II des BG vom 25. Juni 1971, in Kraft seit 1. Jan. 1972 (AS <b>1971</b> 1465; BBl <b>1967</b> II 241).",
      "links": [
@@ -49194,6 +49259,20 @@
    ],
    "marginalie": [
     "Änderung des ZGB"
+   ],
+   "fussnoten": [
+    {
+     "nr": "900",
+     "text": "Die Änderungen können unter AS <b>1971</b> 1465 konsultiert werden.",
+     "links": [
+      {
+       "label": "AS <b>1971</b> 1465",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1971/1465_1461_1461"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u13_art_3": {
@@ -49205,6 +49284,20 @@
    ],
    "marginalie": [
     "Änderung des Versicherungsvertragsgesetzes"
+   ],
+   "fussnoten": [
+    {
+     "nr": "901",
+     "text": "Die Änderungen können unter AS <b>1971</b> 1465 konsultiert werden.",
+     "links": [
+      {
+       "label": "AS <b>1971</b> 1465",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1971/1465_1461_1461"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u13_art_4": {
@@ -49216,6 +49309,20 @@
    ],
    "marginalie": [
     "Änderung des Landwirtschaftsgesetzes"
+   ],
+   "fussnoten": [
+    {
+     "nr": "902",
+     "text": "Die Änderungen können unter AS <b>1971</b> 1465 konsultiert werden.",
+     "links": [
+      {
+       "label": "AS <b>1971</b> 1465",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1971/1465_1461_1461"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u13_art_5": {
@@ -49227,6 +49334,20 @@
    ],
    "marginalie": [
     "Änderung des Arbeitsgesetzes"
+   ],
+   "fussnoten": [
+    {
+     "nr": "903",
+     "text": "Die Änderungen können unter AS <b>1971</b> 1465 konsultiert werden.",
+     "links": [
+      {
+       "label": "AS <b>1971</b> 1465",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1971/1465_1461_1461"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u13_art_6": {
@@ -49238,6 +49359,402 @@
    ],
    "marginalie": [
     "Aufhebung eidgenössischer Vorschriften"
+   ],
+   "fussnoten": [
+    {
+     "nr": "904",
+     "text": "[BS <b>8</b> 281; AS <b>1959</b> 858; <b>1964</b> 965 Ziff. I-III, <b>1968</b> 64; <b>1977</b> 2249 Ziff. I 611; <b>1978</b> 1836 Anhang Ziff. 4; <b>1982</b> 196, 1676 Anhang Ziff. 1, 2184 Art. 114; <b>1990</b> 1091; <b>1991</b> 362 Ziff. II 412; <b>1992</b> 288 Anhang Ziff. 37, 2350; <b>1995</b> 511. AS <b>1995</b> 1328 Anhang Ziff. 1]",
+     "links": [
+      {
+       "label": "AS <b>1959</b> 858",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1959/858_888_876"
+      },
+      {
+       "label": "<b>1964</b> 965",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1964/965_961_981"
+      },
+      {
+       "label": "<b>1968</b> 64",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1968/64_66_65"
+      },
+      {
+       "label": "<b>1977</b> 2249",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1977/2249_2249_2249"
+      },
+      {
+       "label": "<b>1978</b> 1836",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1978/1836_1836_1836"
+      },
+      {
+       "label": "<b>1982</b> 196",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1982/196_196_196"
+      },
+      {
+       "label": "1676",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1982/1676_1676_1676"
+      },
+      {
+       "label": "2184",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1982/2184_2184_2184"
+      },
+      {
+       "label": "<b>1990</b> 1091",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1990/1091_1091_1091"
+      },
+      {
+       "label": "<b>1991</b> 362",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1991/362_362_362"
+      },
+      {
+       "label": "<b>1992</b> 288",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1992/288_288_288"
+      },
+      {
+       "label": "2350",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1992/2350_2350_2350"
+      },
+      {
+       "label": "<b>1995</b> 511",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1995/511_511_511"
+      },
+      {
+       "label": "AS <b>1995</b> 1328",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1995/1328_1328_1328"
+      }
+     ],
+     "absatz": null,
+     "item": "2"
+    },
+    {
+     "nr": "905",
+     "text": "SR <b>821.41</b>",
+     "links": [
+      {
+       "label": "SR <b>821.41</b>",
+       "url": "https://fedlex.data.admin.ch/eli/cc/30/535_539_517"
+      }
+     ],
+     "absatz": null,
+     "item": "3"
+    },
+    {
+     "nr": "906",
+     "text": "[BS <b>8</b> 229; AS <b>1951</b> 1231 Art. 14 Abs. 2; <b>1966 </b>57 Art. 68. AS <b>1983 </b>108 Art. 21 Ziff. 3]",
+     "links": [
+      {
+       "label": "AS <b>1951</b> 1231",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1951/1231_1239_1273"
+      },
+      {
+       "label": "<b>1966 </b>57",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1966/57_57_57"
+      },
+      {
+       "label": "AS <b>1983 </b>108",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1983/108_108_108"
+      }
+     ],
+     "absatz": null,
+     "item": "4"
+    },
+    {
+     "nr": "907",
+     "text": "[BS <b>2</b> 776; AS <b>1966</b> 57 Art. 69]",
+     "links": [
+      {
+       "label": "AS <b>1966</b> 57",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1966/57_57_57"
+      }
+     ],
+     "absatz": null,
+     "item": "5"
+    },
+    {
+     "nr": "908",
+     "text": "[AS <b>1949</b> II 1293]",
+     "links": [],
+     "absatz": null,
+     "item": "6"
+    },
+    {
+     "nr": "909",
+     "text": "[AS <b>1953</b> 1073; <b>1954</b> 1364 Art. 1; <b>1958</b> 659; <b>1959</b> 588; <b>1960</b> 1279; <b>1962</b> 203, 1144 Art. 14, 1412; <b>1967</b> 722; <b>1968</b> 92; <b>1974</b> 763; <b>1975</b> 1088; <b>1977</b> 2249 Ziff. I, <i>921</i>, <i>942</i>, 931; <b>1979</b> 2058; <b>1982</b> 1676 Anhang Ziff. 6; <b>1988</b> 640; <b>1989</b> 504 Art. 33 Bst. c; <b>1991</b> 362 Ziff. II 51; 857 Anhang Ziff. 25; 2611; <b>1992</b> 1860 Art. 75 Ziff. 5, 1986 Art. 36 Abs. 1; <b>1993</b> 1410 Art. 92 Ziff. 4, 1571, 2080 Anhang Ziff. 11; <b>1994</b> 28; <b>1995</b> 1469 Art. 59 Ziff. 3, 1837, 3517 Ziff. I 2; <b>1996</b> 2588 Anhang Ziff. 2, 2783; <b>1997</b> 1187, 1190; <b>1998</b> 1822. AS <b>1998</b> 3033 Anhang Bst. c]",
+     "links": [
+      {
+       "label": "AS <b>1953</b> 1073",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1953/1073_1095_1133"
+      },
+      {
+       "label": "<b>1954</b> 1364",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1954/1364_1399_1426"
+      },
+      {
+       "label": "<b>1958</b> 659",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1958/659_688_688"
+      },
+      {
+       "label": "<b>1959</b> 588",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1959/588_610_590"
+      },
+      {
+       "label": "<b>1960</b> 1279",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1960/1279_1334_1335"
+      },
+      {
+       "label": "<b>1962</b> 203",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1962/203_205_207"
+      },
+      {
+       "label": "1144",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1962/1144_1185_1191"
+      },
+      {
+       "label": "1412",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1962/1412_1463_1472"
+      },
+      {
+       "label": "<b>1967</b> 722",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1967/722_766_760"
+      },
+      {
+       "label": "<b>1968</b> 92",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1968/92_92_95"
+      },
+      {
+       "label": "<b>1974</b> 763",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1974/763_763_763"
+      },
+      {
+       "label": "<b>1975</b> 1088",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1975/1088_1088_1088"
+      },
+      {
+       "label": "<b>1977</b> 2249",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1977/2249_2249_2249"
+      },
+      {
+       "label": "931",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1977/931_931_931"
+      },
+      {
+       "label": "<b>1979</b> 2058",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1979/2058_2060_2060"
+      },
+      {
+       "label": "<b>1982</b> 1676",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1982/1676_1676_1676"
+      },
+      {
+       "label": "<b>1988</b> 640",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1988/640_640_640"
+      },
+      {
+       "label": "<b>1989</b> 504",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1989/504_504_504"
+      },
+      {
+       "label": "<b>1991</b> 362",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1991/362_362_362"
+      },
+      {
+       "label": "857",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1991/857_857_857"
+      },
+      {
+       "label": "2611",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1991/2611_2611_2611"
+      },
+      {
+       "label": "<b>1992</b> 1860",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1992/1860_1860_1860"
+      },
+      {
+       "label": "1986",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1992/1986_1986_1986"
+      },
+      {
+       "label": "<b>1993</b> 1410",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1993/1410_1410_1410"
+      },
+      {
+       "label": "1571",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1993/1571_1571_1571"
+      },
+      {
+       "label": "2080",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1993/2080_2080_2080"
+      },
+      {
+       "label": "<b>1994</b> 28",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/28_28_28"
+      },
+      {
+       "label": "<b>1995</b> 1469",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1995/1469_1469_1469"
+      },
+      {
+       "label": "1837",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1995/1837_1837_1837"
+      },
+      {
+       "label": "3517",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1995/3517_3517_3517"
+      },
+      {
+       "label": "<b>1996</b> 2588",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2588_2588_2588"
+      },
+      {
+       "label": "2783",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2783_2783_2783"
+      },
+      {
+       "label": "<b>1997</b> 1187",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1997/1187_1187_1187"
+      },
+      {
+       "label": "1190",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1997/1190_1190_1190"
+      },
+      {
+       "label": "<b>1998</b> 1822",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1998/1822_1822_1822"
+      },
+      {
+       "label": "AS <b>1998</b> 3033",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1998/3033_3033_3033"
+      }
+     ],
+     "absatz": null,
+     "item": "7"
+    },
+    {
+     "nr": "910",
+     "text": "SR <b>834.1</b>. Heute: BG über den Erwerbsersatz für Dienstleistende und bei Mutterschaft (Erwerbsersatzgesetz, EOG).",
+     "links": [
+      {
+       "label": "SR <b>834.1</b>",
+       "url": "https://fedlex.data.admin.ch/eli/cc/1952/1021_1046_1050"
+      }
+     ],
+     "absatz": null,
+     "item": "8"
+    },
+    {
+     "nr": "911",
+     "text": "SR <b>221.215.311</b>",
+     "links": [
+      {
+       "label": "SR <b>221.215.311</b>",
+       "url": "https://fedlex.data.admin.ch/eli/cc/1956/1543_1645_1658"
+      }
+     ],
+     "absatz": null,
+     "item": "9"
+    },
+    {
+     "nr": "912",
+     "text": "[AS <b>1962</b> 1089; <b>1964</b> 487 Art. 22 Abs. 2 Bst. b;<b>1968</b> 1025 Art. 35; <b>1969</b> 310 Ziff. III; <i><b>1971</b> 751</i>; <b>1978</b> 50, 570; <b>1985</b> 1649; <b>1990</b> 1882 Anhang Ziff. 7; <b>1992</b> 288 Anhang Ziff. 22; <i><b>1993</b> 2043 </i>Anhang Ziff. 3; <b>1994</b> 2626 Art. 71]",
+     "links": [
+      {
+       "label": "AS <b>1962</b> 1089",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1962/1089_1127_1131"
+      },
+      {
+       "label": "<b>1964</b> 487",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1964/487_483_485"
+      },
+      {
+       "label": "<b>1968</b> 1025",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1968/1025_1065_981"
+      },
+      {
+       "label": "<b>1969</b> 310",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1969/310_318_319"
+      },
+      {
+       "label": "<b>1978</b> 50",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1978/50_50_50"
+      },
+      {
+       "label": "570",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1978/570_570_"
+      },
+      {
+       "label": "<b>1985</b> 1649",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1985/1649_1649_1649"
+      },
+      {
+       "label": "<b>1990</b> 1882",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1990/1882_1882_1882"
+      },
+      {
+       "label": "<b>1992</b> 288",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1992/288_288_288"
+      },
+      {
+       "label": "<b>1994</b> 2626",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1994/2626_2626_2626"
+      }
+     ],
+     "absatz": null,
+     "item": "10"
+    },
+    {
+     "nr": "913",
+     "text": "[AS <b>1965</b> 321, 428; <b>1968</b> 86; <b>1972</b> 1681; <b>1975</b> 1078 Ziff. III; <b>1977</b> 2249 Ziff. I 331. AS <b>1979 </b>1687 Art. 75]",
+     "links": [
+      {
+       "label": "AS <b>1965</b> 321",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1965/321_325_321"
+      },
+      {
+       "label": "428",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1965/428__"
+      },
+      {
+       "label": "<b>1968</b> 86",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1968/86_87_89"
+      },
+      {
+       "label": "<b>1972</b> 1681",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1972/1681_1709_1885"
+      },
+      {
+       "label": "<b>1975</b> 1078",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1975/1078_1078_1078"
+      },
+      {
+       "label": "<b>1977</b> 2249",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1977/2249_2249_2249"
+      },
+      {
+       "label": "AS <b>1979 </b>1687",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1979/1687_1687_1687"
+      }
+     ],
+     "absatz": null,
+     "item": "11"
+    },
+    {
+     "nr": "914",
+     "text": "Dieser Art. ist heute aufgehoben.",
+     "links": [],
+     "absatz": null,
+     "item": "12"
+    },
+    {
+     "nr": "915",
+     "text": "SR <b>822.11</b>",
+     "links": [
+      {
+       "label": "SR <b>822.11</b>",
+       "url": "https://fedlex.data.admin.ch/eli/cc/1966/57_57_57"
+      }
+     ],
+     "absatz": null,
+     "item": "12"
+    }
    ]
   },
   "disp_u13_art_7": {
@@ -49249,6 +49766,31 @@
    ],
    "marginalie": [
     "Anpassung altrechtlicher Verhältnisse"
+   ],
+   "fussnoten": [
+    {
+     "nr": "916",
+     "text": "1. Jan. 1972",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "917",
+     "text": "Fassung gemäss Ziff. I des BG vom 25. Juni 1976, in Kraft seit 1. Jan. 1977 (AS <b>1976</b> 1972 <i>1974</i>; BBl <b>1976</b> I 1269).",
+     "links": [
+      {
+       "label": "AS <b>1976</b> 1972",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1976/1972_1972_1972"
+      },
+      {
+       "label": "BBl <b>1976</b> I 1269",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1976/1_1269_1273_1245"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "disp_u13_art_8": {
@@ -49297,6 +49839,15 @@
    ],
    "marginalie": [
     "B. Konkursprivileg"
+   ],
+   "fussnoten": [
+    {
+     "nr": "919",
+     "text": "Die Änderungen können unter AS <b>1949</b> I 802 konsultiert werden.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u14_art_3": {
@@ -49321,6 +49872,18 @@
     "A. Anwendbarkeit des Schlusstitels"
    ],
    "fussnoten": [
+    {
+     "nr": "924",
+     "text": "SR <b>210</b>",
+     "links": [
+      {
+       "label": "SR <b>210</b>",
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
     {
      "nr": "923",
      "text": "Eingefügt durch das BG vom 18. Dez. 1936, in Kraft seit 1. Juli 1937 (AS <b>53</b> 185; BBl <b>1928</b> I 205, <b>1932</b> I 217).",
@@ -49391,6 +49954,60 @@
    ],
    "marginalie": [
     "G. Gläubigergemeinschaft"
+   ],
+   "fussnoten": [
+    {
+     "nr": "930",
+     "text": "[AS <b>34</b> 231; <b>35</b> 297; <b>36</b> 623 893]",
+     "links": [
+      {
+       "label": "AS <b>34</b> 231",
+       "url": "https://fedlex.data.admin.ch/eli/oc/34/231_231_249"
+      },
+      {
+       "label": "<b>35</b> 297",
+       "url": "https://fedlex.data.admin.ch/eli/oc/35/297_301_396"
+      },
+      {
+       "label": "<b>36</b> 623",
+       "url": "https://fedlex.data.admin.ch/eli/oc/36/623_637_599"
+      },
+      {
+       "label": "893",
+       "url": "https://fedlex.data.admin.ch/eli/oc/36/893_913_933"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "931",
+     "text": "[AS <b>51</b> 673; <b>53</b> 454; <b>57</b> 1514; <b>58</b> 934; <i><b>62</b> 1088</i>; <b>63</b> 1342]",
+     "links": [
+      {
+       "label": "AS <b>51</b> 673",
+       "url": "https://fedlex.data.admin.ch/eli/oc/51/673_684_779"
+      },
+      {
+       "label": "<b>53</b> 454",
+       "url": "https://fedlex.data.admin.ch/eli/oc/53/454_454_459"
+      },
+      {
+       "label": "<b>57</b> 1514",
+       "url": "https://fedlex.data.admin.ch/eli/oc/57/1514_1549_1595"
+      },
+      {
+       "label": "<b>58</b> 934",
+       "url": "https://fedlex.data.admin.ch/eli/oc/58/934_936_978"
+      },
+      {
+       "label": "<b>63</b> 1342",
+       "url": "https://fedlex.data.admin.ch/eli/oc/63/1342_1343_1348"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u16_art_14": {
@@ -49402,6 +50019,24 @@
    ],
    "marginalie": [
     "H. …"
+   ],
+   "fussnoten": [
+    {
+     "nr": "932",
+     "text": "Aufgehoben durch Ziff. I Bst. <i>c</i> des Anhangs zum IPRG vom 18. Dez. 1987, mit Wirkung seit 1. Jan. 1989 (AS <b>1988</b> 1776; BBl <b>1983</b> I 263).",
+     "links": [
+      {
+       "label": "AS <b>1988</b> 1776",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1988/1776_1776_1776"
+      },
+      {
+       "label": "BBl <b>1983</b> I 263",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1983/1_263_255_239"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u16_art_15": {
@@ -49413,6 +50048,20 @@
    ],
    "marginalie": [
     "J. Abänderung des Schuldbetreibungs- und Konkursgesetzes"
+   ],
+   "fussnoten": [
+    {
+     "nr": "933",
+     "text": "Die Änderungen können unter AS <b>53</b> 185 konsultiert werden.",
+     "links": [
+      {
+       "label": "AS <b>53</b> 185",
+       "url": "https://fedlex.data.admin.ch/eli/oc/53/185_185_189"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u16_art_16": {
@@ -49425,6 +50074,20 @@
    "marginalie": [
     "K. Verhältnis zum Bankengesetz",
     "I. Allgemeiner Vorbehalt"
+   ],
+   "fussnoten": [
+    {
+     "nr": "934",
+     "text": "SR <b>952.0</b>",
+     "links": [
+      {
+       "label": "SR <b>952.0</b>",
+       "url": "https://fedlex.data.admin.ch/eli/cc/51/117_121_129"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u16_art_17": {
@@ -49437,6 +50100,20 @@
    "marginalie": [
     "K. Verhältnis zum Bankengesetz",
     "II. Abänderung einzelner Vorschriften"
+   ],
+   "fussnoten": [
+    {
+     "nr": "935",
+     "text": "Die Änderungen können unter AS <b>53</b> 185 konsultiert werden.",
+     "links": [
+      {
+       "label": "AS <b>53</b> 185",
+       "url": "https://fedlex.data.admin.ch/eli/oc/53/185_185_189"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u16_art_18": {
@@ -49448,6 +50125,20 @@
    ],
    "marginalie": [
     "L. Aufhebung von Bundeszivilrecht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "936",
+     "text": "[AS <b>5</b> 635, <i><b>11</b> 490</i>; BS <b>2</b> 784 Art. 103 Abs. 1. BS <b>2</b> 3 SchlT Art. 60 Abs. 2]",
+     "links": [
+      {
+       "label": "AS <b>5</b> 635",
+       "url": "https://fedlex.data.admin.ch/eli/oc/5/635_577_577"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u16_art_19": {
@@ -49459,6 +50150,20 @@
    ],
    "marginalie": [
     "M. Inkrafttreten dieses Gesetzes"
+   ],
+   "fussnoten": [
+    {
+     "nr": "937",
+     "text": "Dieser Abschnitt ist in der Fassung des BG vom 1. April 1949 in Kraft gesetzt worden. Für den Text in der ursprünglichen Fassung siehe AS <b>53</b> 185.",
+     "links": [
+      {
+       "label": "AS <b>53</b> 185",
+       "url": "https://fedlex.data.admin.ch/eli/oc/53/185_185_189"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "disp_u16_art_2": {
@@ -49483,6 +50188,22 @@
    "marginalie": [
     "B. Anpassung alter Gesellschaften an das neue Recht",
     "II. Wohlfahrtsfonds"
+   ],
+   "fussnoten": [
+    {
+     "nr": "925",
+     "text": "Dieser Art. hat heute eine neue Fassung.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "926",
+     "text": "Dieser Art. hat heute eine neue Fassung.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u16_art_4": {
@@ -49495,6 +50216,24 @@
    "marginalie": [
     "B. Anpassung alter Gesellschaften an das neue Recht",
     "II. Wohlfahrtsfonds"
+   ],
+   "fussnoten": [
+    {
+     "nr": "927",
+     "text": "Aufgehoben durch Anhang Ziff. 2 des Fusionsgesetzes vom 3. Okt. 2003, mit Wirkung seit 1. Juli 2004 (AS <b>2004</b> 2617; BBl <b>2000</b> 4337).",
+     "links": [
+      {
+       "label": "AS <b>2004</b> 2617",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2004/320"
+      },
+      {
+       "label": "BBl <b>2000</b> 4337",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2000/921"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u16_art_5": {
@@ -49519,6 +50258,15 @@
    "marginalie": [
     "C. Bilanzvorschriften",
     "II. …"
+   ],
+   "fussnoten": [
+    {
+     "nr": "928",
+     "text": "Gegenstandslos.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u16_art_7": {
@@ -49530,6 +50278,20 @@
    ],
    "marginalie": [
     "D. Haftungsverhältnisse der Genossenschafter"
+   ],
+   "fussnoten": [
+    {
+     "nr": "929",
+     "text": "AS <b>27</b> 317",
+     "links": [
+      {
+       "label": "AS <b>27</b> 317",
+       "url": "https://fedlex.data.admin.ch/eli/oc/27/317_321_377"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "disp_u16_art_8": {
@@ -49566,6 +50328,18 @@
     "A. Schlusstitel des Zivilgesetzbuches"
    ],
    "fussnoten": [
+    {
+     "nr": "939",
+     "text": "SR <b>210</b>",
+     "links": [
+      {
+       "label": "SR <b>210</b>",
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
     {
      "nr": "938",
      "text": "Eingefügt durch Ziff. III des BG vom 4. Okt. 1991, in Kraft seit 1. Juli 1992 (AS <b>1992</b> 733; BBl <b>1983</b> II 745).",
@@ -49634,6 +50408,15 @@
     "B. Anpassung an das neue Recht",
     "II. Einzelne Bestimmungen",
     "3. Stimmrechtsaktien"
+   ],
+   "fussnoten": [
+    {
+     "nr": "940",
+     "text": "Siehe hiervor.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u17_art_6": {
@@ -49658,6 +50441,20 @@
    ],
    "marginalie": [
     "C. Änderung von Bundesgesetzen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "941",
+     "text": "Die Änderungen können unter AS <b>1992</b> 733 konsultiert werden.",
+     "links": [
+      {
+       "label": "AS <b>1992</b> 733",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1992/733_733_733"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u17_art_8": {
@@ -49694,6 +50491,18 @@
    ],
    "fussnoten": [
     {
+     "nr": "875",
+     "text": "Die Änderungen können unter AS <b>1962</b> 1047 konsultiert werden.",
+     "links": [
+      {
+       "label": "AS <b>1962</b> 1047",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1962/1047_1082_1085"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
      "nr": "874",
      "text": "AS <b>1962</b> 1047; BBl <b>1960</b> I 523",
      "links": [
@@ -49721,6 +50530,20 @@
    ],
    "marginalie": [
     "B. Unlauterer Wettbewerb"
+   ],
+   "fussnoten": [
+    {
+     "nr": "876",
+     "text": "Die Änderungen können unter AS <b>1962</b> 1047 konsultiert werden.",
+     "links": [
+      {
+       "label": "AS <b>1962</b> 1047",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1962/1047_1082_1085"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u2_art_3": {
@@ -49732,6 +50555,15 @@
    ],
    "marginalie": [
     "C. Übergangsrecht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "877",
+     "text": "Diese Art. sind heute aufgehoben.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "disp_u2_art_4": {
@@ -49799,6 +50631,20 @@
    ],
    "marginalie": [
     "L. Ausschliesslichkeit eingetragener Firmen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "880",
+     "text": "AS <b>53 </b>185",
+     "links": [
+      {
+       "label": "AS <b>53 </b>185",
+       "url": "https://fedlex.data.admin.ch/eli/oc/53/185_185_189"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u3_art_2": {
@@ -49821,6 +50667,20 @@
    ],
    "marginalie": [
     "C. Leistung der Einlagen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "879",
+     "text": "AS <b>53</b> 185",
+     "links": [
+      {
+       "label": "AS <b>53</b> 185",
+       "url": "https://fedlex.data.admin.ch/eli/oc/53/185_185_189"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "disp_u3_art_4": {
@@ -49901,6 +50761,18 @@
    ],
    "fussnoten": [
     {
+     "nr": "883",
+     "text": "SR <b>210</b>",
+     "links": [
+      {
+       "label": "SR <b>210</b>",
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
      "nr": "882",
      "text": "AS <b>2012</b> 6679; BBl <b>2008</b> 1589",
      "links": [
@@ -49941,6 +50813,18 @@
     "A. Allgemeine Regel"
    ],
    "fussnoten": [
+    {
+     "nr": "885",
+     "text": "SR <b>210</b>",
+     "links": [
+      {
+       "label": "SR <b>210</b>",
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
     {
      "nr": "884",
      "text": "AS <b>2015 </b>1389; BBl <b>2014</b> 605",
@@ -49994,6 +50878,18 @@
    ],
    "fussnoten": [
     {
+     "nr": "887",
+     "text": "SR <b>210</b>",
+     "links": [
+      {
+       "label": "SR <b>210</b>",
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
      "nr": "886",
      "text": "AS <b>2016</b> 1507; BBl <b>2014</b> 9305",
      "links": [
@@ -50046,6 +50942,18 @@
    ],
    "fussnoten": [
     {
+     "nr": "889",
+     "text": "SR <b>210</b>",
+     "links": [
+      {
+       "label": "SR <b>210</b>",
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
      "nr": "888",
      "text": "AS <b>2020</b> 957; BBl <b>2015</b> 3617",
      "links": [
@@ -50086,6 +50994,18 @@
     "A. Allgemeine Bestimmungen"
    ],
    "fussnoten": [
+    {
+     "nr": "891",
+     "text": "SR <b>210</b>",
+     "links": [
+      {
+       "label": "SR <b>210</b>",
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
     {
      "nr": "890",
      "text": "AS <b>2019</b> 3161; BBl <b>2019</b> 279",

@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-30",
+ "erzeugt": "2026-07-10",
  "kopf": {
   "srNummer": "321.0",
   "titel": "Militärstrafgesetz",
@@ -11,7 +11,12 @@
    },
    {
     "rolle": "ingress",
-    "text": "gestützt auf die Artikel 60 Absatz 1 und 123 Absätze 1 und 3 der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 26. November 1918,"
+    "text": "gestützt auf die Artikel 60 Absatz 1 und 123 Absätze 1 und 3 der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 26. November 1918,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
    },
    {
     "rolle": "verb",

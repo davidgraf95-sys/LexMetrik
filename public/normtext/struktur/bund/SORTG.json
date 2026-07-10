@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-30",
+ "erzeugt": "2026-07-10",
  "kopf": {
   "srNummer": "232.16",
   "titel": "Bundesgesetz über den Schutz von Pflanzenzüchtungen",
@@ -10,7 +10,12 @@
    },
    {
     "rolle": "ingress",
-    "text": "gestützt auf die Artikel 64 und 64 der Bundesverfassung, nach Einsicht in eine Botschaft des Bundesrates vom 15. Mai 1974,"
+    "text": "gestützt auf die Artikel 64 und 64 der Bundesverfassung, nach Einsicht in eine Botschaft des Bundesrates vom 15. Mai 1974,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
    },
    {
     "rolle": "verb",
@@ -19,7 +24,7 @@
   ],
   "fussnoten": [
    {
-    "nr": "",
+    "nr": "1",
     "text": "[BS <b>1</b> 3]. Den genannten Bestimmungen entsprechen heute Art. 122 und <i>123 </i>der BV vom 18. April 1999 (SR <b>101</b>).",
     "links": [
      {
@@ -31,7 +36,7 @@
     "item": null
    },
    {
-    "nr": "",
+    "nr": "2",
     "text": "Fassung gemäss Anhang Ziff. 12 des Gerichtsstandsgesetzes vom 24. März 2000, in Kraft seit 1. Jan. 2001 (AS <b>2000</b> 2355; <i>BBl <b>1999</b> 2829</i>).",
     "links": [
      {
@@ -43,7 +48,7 @@
     "item": null
    },
    {
-    "nr": "",
+    "nr": "3",
     "text": "BBl <b>1974</b> I 1469",
     "links": [
      {
@@ -73,7 +78,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "5",
      "text": "Fassung gemäss Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004 </b>4155).",
      "links": [
       {
@@ -89,7 +94,7 @@
      "item": null
     },
     {
-     "nr": "",
+     "nr": "6",
      "text": "SR <b>0.232.161</b><b>/.163</b>",
      "links": [
       {
@@ -99,6 +104,23 @@
      ],
      "absatz": null,
      "item": null
+    },
+    {
+     "nr": "4",
+     "text": "Gliederungstitel aufgehoben durch Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, mit Wirkung seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004 </b>4155).",
+     "links": [
+      {
+       "label": "AS <b>2008</b> 3897",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/526"
+      },
+      {
+       "label": "BBl <b>2004 </b>4155",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2004/683"
+      }
+     ],
+     "absatz": null,
+     "item": null,
+     "sektion": "…"
     }
    ]
   },
@@ -118,7 +140,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "7",
      "text": "Fassung gemäss Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004 </b>4155).",
      "links": [
       {
@@ -151,7 +173,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "8",
      "text": "Fassung gemäss Anhang 1 Ziff. II 13 der Zivilprozessordnung vom 19. Dez. 2008, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 1739; BBl <b>2006</b> 7221).",
      "links": [
       {
@@ -199,7 +221,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "9",
      "text": "Eingefügt durch Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004 </b>4155).",
      "links": [
       {
@@ -216,7 +238,7 @@
      "sektion": "1a. Kapitel: Sortenschutz"
     },
     {
-     "nr": "",
+     "nr": "10",
      "text": "Ursprünglich 2. Abschn. des 1. Kap. Fassung gemäss Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004 </b>4155).",
      "links": [
       {
@@ -295,7 +317,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "12",
      "text": "SR <b>220</b>",
      "links": [
       {
@@ -307,7 +329,7 @@
      "item": null
     },
     {
-     "nr": "",
+     "nr": "13",
      "text": "Fassung gemäss Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004 </b>4155).",
      "links": [
       {
@@ -355,7 +377,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "14",
      "text": "Fassung gemäss Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004 </b>4155).",
      "links": [
       {
@@ -388,7 +410,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "15",
      "text": "Fassung gemäss Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004 </b>4155).",
      "links": [
       {
@@ -437,7 +459,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "16",
      "text": "Fassung gemäss Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004 </b>4155).",
      "links": [
       {
@@ -470,7 +492,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "17",
      "text": "Fassung gemäss Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004 </b>4155).",
      "links": [
       {
@@ -503,7 +525,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "18",
      "text": "Fassung gemäss Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004 </b>4155).",
      "links": [
       {
@@ -519,7 +541,7 @@
      "item": "c"
     },
     {
-     "nr": "",
+     "nr": "19",
      "text": "Aufgehoben durch Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, mit Wirkung seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004 </b>4155).",
      "links": [
       {
@@ -552,7 +574,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "20",
      "text": "Fassung gemäss Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004 </b>4155).",
      "links": [
       {
@@ -615,7 +637,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "21",
      "text": "SR <b>711</b>",
      "links": [
       {
@@ -644,7 +666,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "22",
      "text": "Fassung gemäss Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004 </b>4155).",
      "links": [
       {
@@ -677,7 +699,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "23",
      "text": "Fassung gemäss Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004 </b>4155).",
      "links": [
       {
@@ -710,7 +732,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "26",
      "text": "Fassung gemäss Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004 </b>4155).",
      "links": [
       {
@@ -743,7 +765,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "27",
      "text": "Fassung gemäss Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004 </b>4155).",
      "links": [
       {
@@ -774,7 +796,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "28",
      "text": "Aufgehoben durch Anhang Ziff. 24 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, mit Wirkung seit 1. Jan. 2007 (AS <b>2006</b> 2197; BBl <b>2001</b> 4202).",
      "links": [
       {
@@ -807,7 +829,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "29",
      "text": "Fassung gemäss Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004 </b>4155).",
      "links": [
       {
@@ -871,7 +893,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "30",
      "text": "Fassung gemäss Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004 </b>4155).",
      "links": [
       {
@@ -904,7 +926,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "31",
      "text": "Fassung gemäss Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004 </b>4155).",
      "links": [
       {
@@ -1027,7 +1049,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "34",
      "text": "Fassung gemäss Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004 </b>4155).",
      "links": [
       {
@@ -1043,7 +1065,7 @@
      "item": null
     },
     {
-     "nr": "",
+     "nr": "35",
      "text": "Aufgehoben durch Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, mit Wirkung seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004 </b>4155).",
      "links": [
       {
@@ -1057,6 +1079,23 @@
      ],
      "absatz": null,
      "item": null
+    },
+    {
+     "nr": "33",
+     "text": "Gliederungstitel aufgehoben durch Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, mit Wirkung seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004 </b>4155).",
+     "links": [
+      {
+       "label": "AS <b>2008</b> 3897",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/526"
+      },
+      {
+       "label": "BBl <b>2004 </b>4155",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2004/683"
+      }
+     ],
+     "absatz": null,
+     "item": null,
+     "sektion": "…"
     }
    ]
   },
@@ -1089,7 +1128,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "36",
      "text": "Aufgehoben durch Anhang 1 Ziff. II 13 der Zivilprozessordnung vom 19. Dez. 2008, mit Wirkung seit 1. Jan. 2011 (AS <b>2010</b> 1739; BBl <b>2006</b> 7221).",
      "links": [
       {
@@ -1120,7 +1159,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "37",
      "text": "Aufgehoben durch Anhang Ziff. 12 des Gerichtsstandsgesetzes vom 24. März 2000 (AS <b>2000</b> 2355; <i>BBl <b>1999</b> 2829</i>).",
      "links": [
       {
@@ -1147,7 +1186,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "38",
      "text": "Aufgehoben durch Anhang 1 Ziff. II 13 der Zivilprozessordnung vom 19. Dez. 2008, mit Wirkung seit 1. Jan. 2011 (AS <b>2010</b> 1739; BBl <b>2006</b> 7221).",
      "links": [
       {
@@ -1180,7 +1219,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "40",
      "text": "Fassung gemäss Anhang 1 Ziff. II 13 der Zivilprozessordnung vom 19. Dez. 2008, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 1739; BBl <b>2006</b> 7221).",
      "links": [
       {
@@ -1194,6 +1233,23 @@
      ],
      "absatz": null,
      "item": null
+    },
+    {
+     "nr": "39",
+     "text": "Gliederungstitel aufgehoben durch Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, mit Wirkung seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004 </b>4155).",
+     "links": [
+      {
+       "label": "AS <b>2008</b> 3897",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/526"
+      },
+      {
+       "label": "BBl <b>2004 </b>4155",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2004/683"
+      }
+     ],
+     "absatz": null,
+     "item": null,
+     "sektion": "…"
     }
    ]
   },
@@ -1211,7 +1267,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "42",
      "text": "Aufgehoben durch Anhang Ziff. 12 des Gerichtsstandsgesetzes vom 24. März 2000 (AS <b>2000</b> 2355; <i>BBl <b>1999</b> 2829</i>).",
      "links": [
       {
@@ -1236,7 +1292,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "43",
      "text": "Fassung gemäss Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004 </b>4155).",
      "links": [
       {
@@ -1298,7 +1354,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "44",
      "text": "Die Änderungen können unter AS <b>1977</b> 862 konsultiert werden.",
      "links": [
       {
@@ -1323,7 +1379,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "45",
      "text": "Fassung gemäss Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004 </b>4155).",
      "links": [
       {
@@ -1361,7 +1417,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "46",
      "text": "Aufgehoben durch Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, mit Wirkung seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004 </b>4155).",
      "links": [
       {
@@ -1390,7 +1446,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "47",
      "text": "Abs. 2 des BRB vom 11. Mai 1977",
      "links": [],
      "absatz": null,
@@ -1444,7 +1500,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "24",
      "text": "Eingefügt durch Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004 </b>4155).",
      "links": [
       {
@@ -1477,7 +1533,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "25",
      "text": "Eingefügt durch Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004 </b>4155).",
      "links": [
       {
@@ -1510,7 +1566,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "32",
      "text": "Eingefügt durch Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004 </b>4155).",
      "links": [
       {
@@ -1556,7 +1612,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "11",
      "text": "Eingefügt durch Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004 </b>4155).",
      "links": [
       {

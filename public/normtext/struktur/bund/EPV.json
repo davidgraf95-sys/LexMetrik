@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-30",
+ "erzeugt": "2026-07-10",
  "kopf": {
   "srNummer": "818.101.1",
   "titel": "Verordnung über die Bekämpfung übertragbarer Krankheiten des Menschen",
@@ -11,7 +11,10 @@
    },
    {
     "rolle": "ingress",
-    "text": "gestützt auf das Epidemiengesetz vom 28. September 2012 (EpG),"
+    "text": "gestützt auf das Epidemiengesetz vom 28. September 2012 (EpG),",
+    "fnNrs": [
+     "1"
+    ]
    },
    {
     "rolle": "verb",

@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-30",
+ "erzeugt": "2026-07-10",
  "kopf": {
   "srNummer": "412.10",
   "titel": "Bundesgesetz über die Berufsbildung",
@@ -11,7 +11,11 @@
    },
    {
     "rolle": "ingress",
-    "text": "gestützt auf Artikel 63 der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 6. September 2000,"
+    "text": "gestützt auf Artikel 63 der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 6. September 2000,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
    },
    {
     "rolle": "verb",

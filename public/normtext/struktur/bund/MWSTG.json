@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-30",
+ "erzeugt": "2026-07-10",
  "kopf": {
   "srNummer": "641.20",
   "titel": "Bundesgesetz über die Mehrwertsteuer",
@@ -11,7 +11,11 @@
    },
    {
     "rolle": "ingress",
-    "text": "gestützt auf Artikel 130 der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 25. Juni 2008,"
+    "text": "gestützt auf Artikel 130 der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 25. Juni 2008,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
    },
    {
     "rolle": "verb",
