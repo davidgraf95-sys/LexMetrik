@@ -131,6 +131,16 @@ gegen Pfad (a) ab 2000 (1942 Marker). Sidecar `public/normtext/revisionen/<KEY>.
 bis E1→`erlass_fassungen`); im Norm-Kontext-Bus «Änderungen / Revisionen» neben der Entstehungsgeschichte
 (Bridge B1). Tore `check:revisionen`(-netz). Gegenprüfung bestanden; fachliche Abnahme David offen.
 
+**Vernehmlassungen / Gesetzgebung in Arbeit (Fedlex-Portfolio Paket 3, W3·11):** [materialien/vernehmlassungen-2026-07-10.md](materialien/vernehmlassungen-2026-07-10.md) —
+**POC MACHBAR** (deterministisch · Füllraten status/Titel 100 % / Frist 96,6 % · amtlich · Join 173/218).
+822 Vernehmlassungsverfahren über die 218 Bund-Volltext-Erlasse, automatisch über den Fedlex-
+Gesetzgebungs-Graphen (**direkte** `foreseenImpactToLegalResource`-Kante — einfacher als Paket 2).
+Behörde `BUND`, Doktyp `vernehmlassung`, `nur-live-link`; amtliches Status-Vokabular 0–6 (laufend/
+abgeschlossen/zurückgezogen), Frist aus `ConsultationPhase`; Reichweite ~2000–2026. Im Norm-Kontext-Bus
+«Gesetzgebung in Arbeit» (laufend zuerst, «läuft bis {Frist}»). Currency: Netz-Tor
+`check:vernehmlassungen-netz` + Offline-Assertion `laufend && fristEnde<heute ⇒ rot`. Maschinell
+zugeordnet (grob bei Mantelvorlagen, §8); fachliche Abnahme David offen.
+
 ## register/ — fortlaufend gepflegt
 
 | Dokument | Inhalt |

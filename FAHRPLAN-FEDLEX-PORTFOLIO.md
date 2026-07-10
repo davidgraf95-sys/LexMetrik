@@ -557,6 +557,32 @@ Fallen: `skos:notation` typisiert; `resource-family/oc` filtert `cc`-Dubletten, 
 
 ## Paket 3 — Vernehmlassungen (P2)
 
+> **✅ AUSGEFÜHRT 10.7.2026 (Opus-Bau-Session; Branch `feat/fedlex-p3-vernehmlassungen`; Go David «go zu allem»; Trailer `Roadmap: W2·6`).**
+> **POC MACHBAR (Phase 1, VOR Bau — §7 Quell-Wahl):** direkte `foreseenImpactToLegalResource`-Kante (einfacher als Paket 2,
+> kein oc-Umweg) live über alle 218 SR — **822 Consultations**, 173/218 Erlasse mit ≥1 Verfahren, Voll-Lauf **1,6 s** (Batch 55).
+> Füllraten status 100 % · Titel DE/FR/IT je 100 % · Frist 96,6 % · projEli 100 % (aus cons-URI). Reichweite **2000–2026** (besser
+> als Plan-Annahme «~ab 2006»). Referenzfälle live: **OR→33 · DSG→3 · MWSTG→14** (Plan nannte MWSTG→4 — überholt/vertippt;
+> live zweifach reproduziert = 14). Rest-POC a–d erledigt: (a) Voll-Lauf gemessen; (b) 18 «geplant» ohne Frist → kein leerer
+> String; (c) **`institutionInChargeOfTheEvent` korpusweit LEER** → eröffnende-Stelle-Hinweis fallen gelassen, generische
+> Behörde `BUND` statt `BR`; (d) Reichweite/Legacy-6xxx-Kodierung bestätigt.
+> **Datenmodell:** `MaterialRegistereintrag` additiv `vernehmlassung: { status, fristStart?, fristEnde?, projEli }`; Status-Enum
+> 1:1 vom Vokabular `consultation-status/0–6`; `key`=`VERN-{jahr}-{nr}` (Legacy `VERN-6006-36` erhalten); `stand`=Abfragedatum
+> (Status mutabel), aber NICHT im `sha`-Drift-Token (kein Tages-Churn). Determinismus 2 Läufe byte-identisch.
+> **Ingest:** über den bestehenden Merge-Pfad `ALLE_MATERIALIEN` (Paket 2 hat den generierten-Materialien-Pfad schon gebaut →
+> kein eigener `ingestMaterialien()` nötig); `register.json` byte-parität-gegated. **UI (Bridge B1):** «Gesetzgebung in Arbeit»
+> IM `KontextPanel` (Norm-Kontext-Bus), laufend zuerst, «läuft bis {Frist}», DE/FR/IT, §8-Marker, Fehler≠Leer.
+> **Currency:** Netz-Tor `check:vernehmlassungen-netz` (Currency-Arbiter, in `check:netz`) + **Offline-Assertion**
+> `laufend && fristEnde<heute ⇒ rot` in `check:materialien` (gegen echten heutigen Tag — belastbarer Schutz ohne Cron).
+> **Neu/erweitert:** `scripts/materialien/vernehmlassungen-generieren(.ts/-run.ts)`, `check-vernehmlassungen-netz.ts`,
+> `src/lib/materialien/{vernehmlassungen.generated.ts,vernehmlassungen.ts,typen.ts,register.ts}` (BehoerdeId `BUND`, DoktypId
+> `vernehmlassung`, `VernehmlassungStatus`), `material-manifest.ts`/`check-materialien.ts` (BUND-Integrität + Frist-/Status-
+> Assertionen), `KontextPanel.tsx`, 1 Test-Datei. **Tore grün:** tsc · lint (0 Fehler eigen) · vitest · build (1549 Material-
+> Seiten) · check:materialien · check:vernehmlassungen-netz (OR:33·DSG:3·MWSTG:14) · check:paritaet · golden byte-gleich.
+> Gegenprüfungs-Glob deckt `scripts/materialien/**`+`public/materialien/*.json`. **Gegenprüfung bestanden** (unabhängiger
+> Opus-Adversarial gegen Fedlex-SPARQL). Beleg: `bibliothek/materialien/vernehmlassungen-2026-07-10.md`.
+> **BEWUSST OFFEN:** Laufend-Badge im Reader-Kopf (`src/pages/gesetz-leser/parts.tsx`) nicht gebaut — Datei in dieser
+> Bau-Einheit TABU (§12 Parallel-Session-Kollision); nachzuziehen, wenn der gesetz-leser frei ist. Kein Text-Snapshot (P1-Nicht-Ziel).
+
 **Wert:** «was kommt»-Vorschau (Anhörungen vor dem Parlament) — komplettiert die Konsultieren-Klinge **W3·11** (Gesetzgebungs-Tracking).
 
 **Machbarkeit (teilweise offen — ehrlich):** Vernehmlassungen liegen unter `eli/dl/proj` (~2000). Die Projekt-Graph-Verknüpfung zum Gesetz ist **plausibel dieselbe** wie bei Botschaften (der `?proj`-Knoten trägt beide als `legislativeTask`-Ereignisse), **aber nicht end-to-end getestet**. **Vor Bau:** POC (§7 Quell-Wahl) — SPARQL-Probe, ob ein Vernehmlassungs-`event` am selben `?proj` hängt und sich per SR rückwärts auflöst. Erst wenn belegt bauen, sonst als Grenze dokumentieren.

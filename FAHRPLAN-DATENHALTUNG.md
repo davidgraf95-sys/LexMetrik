@@ -245,6 +245,11 @@ CREATE TABLE soft_law (
   quelle_url TEXT NOT NULL,
   abgerufen  TEXT NOT NULL,
   sha        TEXT
+  -- E6b-Rückkopplung (Fedlex-Portfolio Paket 3, W3·11, gebaut 10.7.2026): Vernehmlassungen
+  -- (doktyp='vernehmlassung', behoerde='BUND') tragen additiv den mutablen Verfahrens-Zustand.
+  -- Vor E1 als Datei-Feld MaterialRegistereintrag.vernehmlassung{status,fristStart,fristEnde,projEli};
+  -- ab E6b als Spalten: vern_status TEXT, frist_start TEXT, frist_ende TEXT, proj_eli TEXT.
+  -- Currency-Arbiter bleibt check:vernehmlassungen-netz + Offline-Assertion laufend&&fristEnde<heute.
 );
 
 -- FTS5 (external content, unicode61 remove_diacritics 2) — hot/cold-Split §11.5:
