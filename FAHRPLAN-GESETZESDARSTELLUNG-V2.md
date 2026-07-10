@@ -1,0 +1,98 @@
+# FAHRPLAN-GESETZESDARSTELLUNG-V2 — Nützlicher, fehlerfreier, farbiger
+
+**Recherche 10.7.2026 (Ultracode, 17 Agenten, strikt read-only; kritische Verifikationen durch Fable).
+NUR PLAN — Einbau erst mit Davids Go.** Auftrag Davids (wörtlich, 10.7.): VZG-Fussnoten nicht verklinkt · Kopf nützlicher + Fussnoten-Anwahl · BGE-Abwahl + «wie lange zurück»-Filter in Rubrik Ansicht · Liniengliederung «funktioniert praktisch nicht» · Präambel-Fussnoten unverlinkt · mehr Farben · generell nützlicher/fehlerfreier.
+
+Methode-Hinweis: Die Phase-1-Erhebung «Farbsystem» lieferte einen Stub (bekannte Input-Schwäche); das Farb-Design F5 wurde dennoch eigenständig am Code belegt und adversarial verifiziert. Alle übrigen Zahlen/file:line-Angaben sind doppelt geprüft (Design-Agent + Fable-Verifikation am Code, an Prod und live gegen Fedlex).
+
+---
+
+## §1 Befund-Kern (Root-Causes, alle belegt)
+
+| Achse | Wurzel | Beleg |
+|---|---|---|
+| **Fussnoten VZG** | Extraktor liest die Fussnoten-Nummer NUR aus `#fnbck`-Back-Links (`fussnoten-extrahiere.ts:52`); 22 ältere Erlasse (VZG, ENTG, KOV, BGBB, KKV_FINMA, FZA, LUGUE, VRK …) nutzen die alte Definition-Form `<p id="fn-…"><sup>1</sup>TEXT` OHNE fnbck → `nr=''` für ~922 Fussnoten; Renderer überspringt nummernlose (`parts.tsx:157 if (!f.nr) continue`) → keine Marker, anonymer Apparat. Zusätzlich echter zweiter Drop: 17 VZG-Noten fehlen ganz, weil die Artikel-Regex (`:77 id="art_…"`) die Schlussbestimmungs-IDs `disp_*/art_*` verfehlt. | VZG-Roh-HTML: 0× fnbck, 226 Inline-Marker; Sidecar 207/207 `nr=''`; Arithmetik 226−(203+4+2)=17 geht exakt auf |
+| **Präambel-Fussnoten** | Strukturell nie inline verlinkt — bei ALLEN Erlassen (auch OR): `kopf-extrahiere.ts:88-102` speichert keine Position (absatz:null), `ErlassKopfBlock` (parts.tsx:373-389) rendert reinen Text ohne Marker, Apparat ohne Anker. | Code + Prod |
+| **BGE-Steuerung** | Weder Ab-/Anwahl noch Zeitfilter; fix 5 sichtbar nach Gewicht. ABER: alle 931 Kanten in 19 Shards tragen ein valides ISO-`datum` (1999–2026, 13 Bandjahr-Platzhalter) → Zeitfilter OHNE Datenarbeit machbar. | `norm-index/<KEY>.json`, LeitfallZeile parts.tsx:37-92 |
+| **Liniengliederung** | Dreifach: (1) Auto-Default schaltet Guide auf strukturTiefe≥3 GANZ aus — trifft genau ZGB/OR (bewusste #161-Politik, David re-meldet als kaputt); (2) der eine Guide ist mit ~1.2:1 Kontrast praktisch unsichtbar (`--guide-gliederung` 10 %/14 %); (3) Einzug-Staffelung existiert (20/40/60 px rekursiv), deckelt aber bei Ebene 3 und kollabiert mobil. Datenbasis/Golden gesund, rein client-seitig. | linienAufbau.ts:101-104, index.css:56/169, inhalt.tsx:961-965 |
+| **Farben** | Reader faktisch bichromatisch (Tinte+Messing): Norm-Verweis-Chip und BGE-Chip optisch identisch; ★ Leitentscheid und ↻ Revisions-WARNUNG derselbe Ton (StatusBadge.tsx:91); Currency-Chips ohne Status-Semantik; Apparat undifferenziert. Vier fertig kalibrierte Token-Familien (sage/slate/warn/danger, hell+dunkel) liegen im Reader UNGENUTZT. | index.css:73-96/180-187, KantenChip.tsx:41, ui.tsx:109 |
+| **Kopf** | Nach #165 schon datenreich (SR·Stand·geltende Fassung·Currency·Ansicht-Dropdown). Lücken: kein Inkrafttreten; Fussnoten-Anwahl im Dropdown vergraben, kein Kopf-Signal/Apparat-Sprung; 54 Sidecars ohne Erlassdatum — NICHT Code-Lücke, sondern **überholte Pins** (html-0 liefert Soft-404-Angular-Shell; html-4 + heutiger Extraktor liefern korrekt). | parts.tsx:418-452; Verdikt-Empirie mit npx tsx |
+
+**Querschnitts-Wurzel (eigener Slot nötig):** `fedlex-cache.sh` dockt bei 198 n=0-Pins an die nicht-kanonische Alias-URL an → Alt-Generations-Dumps (22 Fussnoten-Erlasse) + Soft-404-Shells (54 Erlassdatum-Lücken). Gehört zur offenen **Fedlex-P1-a/b-Einheit** («18 Pins überholt») — der Plan hängt F2-Datenteile daran auf; zudem gilt: /tmp-Caches sind aktuell LEER, `struktur-run` überspringt fehlende Caches STILL → vor jeder Regeneration `bash scripts/fedlex-cache.sh` + Kontrolle «0 übersprungen», sonst grüner No-op-Lauf.
+
+---
+
+## §2 Massnahmen (alle Fable-verifiziert, Korrekturen eingearbeitet)
+
+### F1 · Fussnoten verlinkt im Text + Präambel (Aufwand L, Kern-MVP)
+- **FN-1 (M, SOFORT startbar, kollisionsfrei):** Extraktor-Fallback in `fnDefinitionen()`: wenn fnbck-Regex leer, nr aus führendem `<sup>N</sup>` der Definition (`^\s*<sup[^>]*>(\d+[a-z]?)</sup>`; matcht 226/226 VZG). KEIN Zusatz-Strip (clean() strippt sup bereits — Verdikt). PLUS belegter Drop-Fix: Artikel-Regex um `disp_*/art_*`-IDs erweitern. Vorbedingung: fedlex-cache.sh + «0 übersprungen»-Kontrolle. Danach Regeneration: 22 Erlasse Sidecar-Diff deklariert, OR/ZGB/StGB/BV **byte-gleich als Nicht-Regressions-Beweis**. Reader-Code: NULL Änderung (Marker-Mechanik greift von selbst). Risikopfad scripts/normtext ⇒ Gegenprüfung Pflicht; Quell-Verifikation an VZG+FZA gegen Fedlex-HTML (kontinuierliche 1..N).
+- **FN-2 (S-M, kollisionsfrei):** `kopf-extrahiere.ts`: Marker-Nummern je Präambel-Zeile erfassen (neues Feld `KopfZeile.fnNrs`; Reader-Typ in `src/lib/normtext/browse.ts:182-190` nachziehen).
+- **FN-3 (M, NACH U-VERWEIS-Merge, harte Kollision belegt):** `ErlassKopfBlock`: FnRef-Marker je Präambel-Zeile (HINTER dem neuen A11-NormText-Element) + Anker `fn-kopf-${nr}` am Kopf-Apparat. Wirkt für OR sofort, für VZG nach FN-1. VRK (nur 3 Kopf-fn) als Testfall.
+- **FN-4 (M):** Absatz-Zuordnung für Alt-Form (VZG absatz=null → Marker am Absatz statt Artikelebene).
+- **FN-5 (XL, DEFERIERT = M14/G14, David-Go):** wortgenaue Inline-Position (Offset/Platzhalter im Haupt-Snapshot) — einziger Pfad mit grossem golden-Haupt-Diff; hinter QS-PERF/U-POSITION. Bis dahin bleibt der Marker am Absatz-/Item-Ende (bewusste Rest-Ungenauigkeit ggü. Fedlex, auch bei OR/ZGB — gegenüber David ausgewiesen).
+- Nachlauf je Regeneration: check:paritaet greift automatisch; `datenhaltung:turso-sync` nachziehen.
+
+### F2 · Kopf nützlicher + Fussnoten-Anwahl (Aufwand M)
+- **K-1 Daten (S-M):** NUR Inkrafttreten ist neu — Erlassdatum wird seit 29.6. extrahiert UND gerendert («vom … (Stand am …)», parts.tsx:367-369); die 54 Lücken sind Pin-Staleness → mit P1-a/b-Pin-Refresh regenerieren, KEIN neuer Code. Inkrafttreten-Quelle nach §7 empirisch proben: **SPARQL-Route empfohlen** (fedlex-sparql.ts, `jolux:dateEntryInForce`, Anbau an Currency-Pipeline) statt neuem AKN-XML-Cache-Plumbing (würde Aufwand → L treiben). Konservativ bei Teil-Inkrafttreten (§7), Gegenprüfung Pflicht. Meta-Zeile: nur «in Kraft seit …» ergänzen — «vom …» NICHT doppeln (§5).
+- **K-2 UI (S-M, NACH U-VERWEIS-Merge):** Fussnoten-Chip neben ◧Ansicht: Zähler N aus Sidecar (erst nach FN-1 voll ehrlich — vorher ohne N oder ehrlich beschriftet, §8). Semantik festlegen (Entscheid David): echter Toggle (aria-pressed korrekt) ODER reine Sprung-Abkürzung (dann kein aria-pressed; bei Zustand «aus» erst einschalten — nie in ein display:none-Ziel scrollen). CLS 0 per Platzreservierung MESSEN (Chip mountet async), nicht behaupten.
+- Kopf-Umbauten in **EINEM koordinierten Kopf-PR-Schnitt** mit F3-Dropdown und U-PDF-Slot-Layout (Reihenfolge Ansicht·Fussnoten·Download) — der Slot darf nicht dreimal umgebaut werden.
+
+### F3 · BGE: Ab-/Anwahl + Zeitraum (Aufwand M, kein Datenbedarf, golden-neutral — Leitfall-Zeile ist client-only, nicht prerendert)
+- **B-1 (S):** 4. Switch «Entscheide» (Default AN) im Ansicht-Dropdown; Mechanik rein CSS (`data-leitfaelle` am html, Blaupause der Fussnoten-Regel; `data-leitfall-zeile`-Marker an LeitfallZeile). Kein Re-Render (§15).
+- **B-2 (M):** Zeitraum-Selektor «alle · 20 J. · 10 J. · 5 J.» (Default **alle**, §8-sicher), Filter über `r.datum` VOR der Sichtbarkeits-Kappung; Kappung gemäss David-Entscheid 10.7. von 5 auf **10** anheben (`LEITFAELLE_SICHTBAR`, §3 Ziff. 5); Bandjahr-BGE jahr-genau korrekt vergleichbar. **Pflicht-Korrekturen aus dem Verdikt:** Store-Abo als Primitiv-Selektor (useSyncExternalStore, nur der Zeitraum-String — sonst re-rendern alle bis 66 Zeilen bei jedem beliebigen Toggle und die §15-Zusage wäre falsch); §8-Härtung: komplett weggefilterte Zeile zeigt «Leitfälle · n ältere ausgeblendet» (klickbar → ‹alle›) statt kommentarlos zu verschwinden; aktiver Zeitraum sichtbar am Zeilen-Label.
+- **Spec-/Test-Nachführung (Pflichtteil des PRs):** e2e/leser-optionen.e2e.ts:68 `toHaveCount(3)`→4 deklariert ändern; FAHRPLAN-GESETZES-UX §3.1/§10.5 («genau 3 Toggles») per neuer A-Nummer (A19+) als durch David 10.7. überstimmt deklarieren; Trigger-title des Menüs erweitern.
+- Persistenz/Cross-Tab/Split-View erben die vorhandene Store-Mechanik. Kein Gegenprüfungs-Risikopfad (reine Darstellung).
+
+### F4 · Liniengliederung reparieren (Aufwand M, kein Datenbedarf, golden-neutral)
+- **L-1 (XS):** Einzug-Cap 3→5 (`inhalt.tsx:962 tiefe<=3` → `<=5`) + Mobil-Token `--einzug-mobil` (~0.75rem) statt Kollaps; Kommentarblock nachziehen; `data-linien=aus`-Override muss weiterhin ALLE Ebenen kollabieren (index.css:243-245).
+- **L-2 (S):** Guide-Ton moderat anheben auf ~`--line-strong`-Niveau (18 %/24 %) — NICHT hart 3:1 (das machte die Deko-Linie zur dunkelsten Linie des Systems; DESIGN-REGLEMENT F2 nimmt Deko von 3:1 aus); Vorher/Nachher-Screenshots hell+dunkel als Gate.
+- **L-3 (M, ✅ von David 10.7. FREIGEGEBEN, nach L-1):** Auto-Default-Umkehr: tiefe Kodifikationen (ZGB/OR) erhalten ihren EINEN Guide auf guideEbene (Umkehr der #161-Politik = **der eigentliche Hebel für Davids Befund**). Referenz-Verdikte + Invariante Z.126/127 in check-linien-kanon.ts deklariert umstellen (§6.3), DESIGN-REGLEMENT-NORMTEXT §4b + linienAufbau-Kopf-Rationale nachziehen. Vorher/Nachher-Screenshots hell/dunkel/mobil im PR.
+- **L-4: ✗ ENTFÄLLT** (David 10.7.: Farbe nur Referenzschicht, Normtext-Körper farbfrei — Ton-Bänder im Lesefluss damit vom Tisch).
+- Kollision: U-VERWEIS ändert inhalt.tsx (ErlassKopfBlock-Aufrufe) → «Harte Reader-Kette» §10: NACH U-VERWEIS-Merge (Design-Behauptung «parallel baubar» war widerlegt).
+
+### F5 · Farbkonzept Referenzschicht (Aufwand M, CSS/Token-only, golden-neutral)
+Doktrin: Farbe NUR auf der Referenz-/Verzahnungsschicht (Chips/Badges/Kopf); Normtext-Körper bleibt farbfrei (§4b) — Reglement-Ergänzung ist Pflichtteil der ersten Einheit.
+- **C-1 (S-M, SOFORT startbar, kollisionsfrei):** KantenChip erhält **kategorie-Prop** (`'norm'|'entscheid'`, Default 'norm'=brass byte-identisch) — NICHT wholesale umfärben (KontextPanel nutzt denselben Chip für zitierte NORMEN, wäre Fehlcode); Call-Sites: LeitfallZeile + EntscheidVerzahnung → 'entscheid'/slate. Hover-Utilities am Chip mit-tauschen (sonst slate-Tick mit Brass-Hover). StatusBadge: Revisions-↻ → warn-700 via per-Prädikat-Ton im Rezept (★ bleibt brass; beide laufen heute durch dieselbe Zeile :91). Kontrast bereits gemessen: slate-500 auf well 4.81 hell/3.47 dunkel ✓ (auf paper dunkel 3.31 — knapp, Messung als Gate behalten; --slate-500 wird in html.dark bewusst nicht überschrieben).
+- **C-2 (S, NACH U-VERWEIS, im koordinierten Kopf-PR):** Overline-Farbpunkte Leitfälle/Verweise + Currency-Chip-Tonung («geltend geprüft» / «nächste Fassung ab»). §7-Nuance: sage darf keine fachliche Abnahme suggerieren — «(maschinell)»-Wording tragend ODER neutral slate (Entscheid David).
+- **C-3 (DEFER, nach U-VERWEIS):** NormChip-Verweisfarbe + Materialien-Familie — Deferral-Grund ist die U-VERWEIS-Kollision (NormText speist NormChip), NICHT Prerender (kein React-SSR; prod-verifiziert 0 lc-chip im prerenderten HTML).
+- Offener Konflikt: slate ist heute auch «ungeprüft/in Vorbereitung»-Status — Farb-Wörterbuch als EIN Entscheid festlegen (§3-Liste).
+
+---
+
+## §3 Entscheidungsliste — Davids Entscheide 10.7.2026 (Chat) eingearbeitet
+
+1. **Linien-Default (L-3): ✅ ENTSCHIEDEN «deine Empfehlung» = JA** — ZGB/OR zeigen im Auto-Default wieder ihre EINE Gliederungslinie (Umkehr #161). L-3 ist damit freigegeben, Council entfällt (David hat entschieden); Referenz-Verdikte/Invarianten/Reglement wie in §2 deklariert nachziehen.
+2. **Farb-Grundsatz: ✅ ENTSCHIEDEN «deine Empfehlung»** — Farbe NUR auf der Referenzschicht (Chips/Badges/Kopf), Normtext-Körper bleibt farbfrei. Konsequenz: L-4/Ton-Bänder im Lesefluss ENTFALLEN (kein Ownership-Konflikt mehr); F5-Doktrin ist gesetzt.
+3. **Farb-Wörterbuch (offen, Empfehlungen gelten mangels Einwand):** Rechtsprechung=slate, Materialien=sage (erst mit C-3), Revisions-↻=warn, Currency «geltend geprüft» mit «(maschinell)»-Wording. slate-Doppelbelegung («ungeprüft»-Status) beim Bau von C-1 auflösen und im §4b-Nachtrag dokumentieren.
+4. **BGE-Details (Empfehlungen gelten mangels Einwand):** Label «Entscheide» (Davids Wort), Stufen alle/20/10/5, Default «alle», Wirkung global, leer-gefilterte Zeile mit Hinweis «n ältere ausgeblendet».
+5. **BGE-Menge: ✅ ENTSCHIEDEN «auch mehr als fünf»** — Sichtbarkeits-Kappung anheben: `LEITFAELLE_SICHTBAR` 5 → **10** (Rest weiter hinter «+n weitere»/MehrKante); gehört in die B-1/B-2-Einheit (gleiche Datei). Perf-Wächter: below-fold, kein Normtext-Re-Render (§15); falls 10 auf dichten Artikeln zu laut wirkt, Rückmeldung an David statt still senken.
+6. **Fussnoten-Nummerierung (Empfehlung gilt):** erlassweit kontinuierlich 1..N wie Fedlex (ergibt sich aus FN-1 von selbst).
+7. **FN-5/M14 (wortgenaue Marker): ✅ ENTSCHIEDEN «später»** — deferiert bleibt deferiert (hinter QS-PERF/U-POSITION, separates David-Go vor Bau).
+8. **Kopf (Empfehlungen gelten mangels Einwand):** «in Kraft seit» in die Meta-Zeile; Fussnoten-Chip als echter Toggle (aria-pressed korrekt) mit Apparat-Sprung bei Zustand AN; Kopf-/Ingress-Fussnoten folgen demselben «Fussnoten aus»-Toggle.
+9. **Restposten (weiter offen, nicht blockierend):** Sprachumschalter DE/FR/IT · Änderungshistorie-/AS-Einstieg im Kopf — als Nicht-Scope geführt, bis David sie anfordert.
+
+---
+
+## §4 Reihenfolge, Kollisionen, Prozess
+
+**Live-Stand 10.7.:** einziger aktiver Worktree ist `lm-u-verweis` (feat/u-verweis-a7-a10-a11-a13, ungemergt; ändert NormText.tsx, fedlex.ts, **parts.tsx** (ErlassKopfBlock intern-Prop), **inhalt.tsx**, kontext.ts, VerweisKontext.tsx). B3-Sticky (#168) und STRUKTUR-Rotation (#167) sind bereits auf main.
+
+**Harte Regel (dreifach von Fable erzwungen — F3/F4/F5 behaupteten ihre Kollisionsfreiheit ursprünglich falsch):** KEINE Einheit, die parts.tsx oder inhalt.tsx berührt, vor dem U-VERWEIS-Merge. Precheck vor JEDER Einheit: `git worktree list` + `git diff main...<branch> --name-only` (committeter Stand!) + `git diff HEAD` (uncommitted) — genau der HEAD-only-Fehler erzeugte die falsche F5-Aussage.
+
+**Sequenz:**
+1. **Sofort, parallel zu U-VERWEIS (belegt kollisionsfrei):** FN-1+Drop-Fix+FN-2 (scripts/normtext+Sidecars) ‖ C-1 (KantenChip/StatusBadge/index.css). → liefert Davids Hauptbefund (VZG-Marker) am schnellsten.
+2. **Nach U-VERWEIS-Merge:** EIN koordinierter Kopf-PR (K-2 + F3-Dropdown B-1/B-2 + U-PDF-Slot-Layout) → FN-3 (Präambel-Marker auf dem A11-NormText-Unterbau) → L-1/L-2 (+ L-3 nach David/Council) → C-2, danach C-3.
+3. **Daten-Regenerationen bündeln:** FN-1-Regeneration (22 Erlasse) und K-1/Erlassdatum-Refresh (54 Sidecars) hängen beide an frischen Pins → EIN Regenerationslauf nach P1-a/b-Pin-Refresh, EIN Diff-Audit (Regen zieht auch Extraktor-Drift seit 30.6. nach — Stichproben VZG/OR/ZGB), Marker-Zählungs-Wächter vorab.
+4. **Deferiert:** FN-5/M14 und U-POSITION hart nach QS-PERF; L-4/Farb-Ausbau nach Entscheid 2.
+
+**Verifikationspunkt nach U-VERWEIS-Merge:** Präambel-NORMVERWEISE (toter «Artikel 15 des BG…»-Text) baut A11 mit kuratierter Genitiv-Map — nachprüfen, ob VZG-/ArG-Ingress-Formen wirklich abgedeckt sind; sonst ist dieser Live-Defekt verwaist.
+
+**Prozess-Pflichten vor Baustart:** Davids Wortlaut 10.7. wortgetreu persistieren (docs/ux-audit-2026-07/, Muster A-Wellen) und als A19+ additiv in FAHRPLAN-GESETZES-UX §10 einordnen, inkl. deklarierter Überstimmung §3.1/§10.5 und Nachführung des U-LINIEN-Vermerks (#161 «geheilt» vs. Re-Meldung). Risikopfade (scripts/normtext, kopf-extrahiere, src/lib/normtext) ⇒ Gegenprüfungs-Skill + Quittung je Commit. Je Einheit A9-DoD (CPU-Throttle-Beweis, CLS 0, a11y), Doku-Commit separat, Trailer `Roadmap: W2·5d`/A19+.
+
+---
+
+## §5 Restposten (bewusst ausserhalb der 5 Massnahmen)
+- Sprachumschalter + Änderungshistorie-Einstieg im Kopf (Entscheid 9).
+- Fedlex-Pin/Alias-Wurzel: gehört als eigener Slot in die offene Fedlex-P1-a/b-Einheit (198 n=0-Pins auf Alias-URL statt isExemplifiedBy) — ohne sie bleibt FN-1 ein Symptom-Fix auf alten Dumps und K-1 regeneriert aus Soft-404-Shells.
+- Fussnoten-Apparat als eigene visuelle Kategorie (F5 optional slate-Trenner): fest zuweisen oder bewusst offen lassen.
+- Marker-Granularität bei intakten Erlassen (Absatz-Ende statt Wortstelle): bekannt, erst mit FN-5 behoben.
