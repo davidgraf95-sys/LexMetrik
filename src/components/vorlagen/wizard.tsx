@@ -176,8 +176,15 @@ export function VorlagenWizardRahmen({
       {/* Mobile: Sprung zur Live-Vorschau — der Kernnutzen («was du siehst,
           kommt raus») soll auch beim Tippen erreichbar sein, nicht erst im
           letzten Schritt. */}
+      {/* Schwebender Sprung-Knopf zur Live-Vorschau (mobil). Solide, pillen-
+          förmig und mit kräftigem Schatten — bewusst KEIN Messing-Rahmen auf
+          bg-surface mehr: die frühere lc-btn-outline-Optik glich exakt einer
+          (selektierten) Vertragstyp-Kachel und las sich beim initialen Scroll,
+          wo der Knopf über dem Vertragstyp-Raster schwebt, wie eine defekte
+          Untertyp-Kachel (Responsive-Audit D1). Als gefülltes Pill ist er
+          eindeutig ein schwebender Aktions-Knopf, keine Karte. */}
       <button type="button" onClick={zurVorschau}
-        className={`${pk('md:hidden', '@3xl/pane:hidden')} fixed bottom-4 right-4 z-30 lc-btn-outline lc-btn-sm shadow-md bg-surface`}>
+        className={`${pk('md:hidden', '@3xl/pane:hidden')} fixed bottom-4 right-4 z-30 lc-btn-primary lc-btn-sm rounded-full px-4 shadow-lg`}>
         Vorschau ↓
       </button>
     </div>

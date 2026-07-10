@@ -21,6 +21,7 @@ export function SachgebietKacheln({ zaehler, gesamt, aktiv, onWaehle }: {
   return (
     <nav aria-label="Sachgebiete" className="lg:sticky lg:top-20">
       {/* Desktop: vertikale Rail. Mobil/Tablet: scrollbares Chip-Band. */}
+      <div className="relative">
       <ul className="flex gap-2 overflow-x-auto pb-2 lg:flex-col lg:gap-1 lg:overflow-visible lg:pb-0">
         {eintraege.map((e) => {
           const an = aktiv === e.id;
@@ -47,6 +48,13 @@ export function SachgebietKacheln({ zaehler, gesamt, aktiv, onWaehle }: {
           );
         })}
       </ul>
+      {/* Scroll-Affordance (Responsive-Audit D10): auf dem mobilen Chip-Band
+          war das seitliche Scrollen unsichtbar — das letzte Sachgebiet wirkte
+          mitten im Wort abgeschnitten («Strafr…»). Ein rechter Verlauf über den
+          Seitengrund signalisiert «hier geht es weiter». Ab lg ist die Rail
+          vertikal (kein Seitwärts-Scroll) → ausgeblendet. */}
+      <div aria-hidden className="pointer-events-none absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-paper to-transparent lg:hidden" />
+      </div>
     </nav>
   );
 }

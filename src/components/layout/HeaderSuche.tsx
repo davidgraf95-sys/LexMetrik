@@ -127,7 +127,7 @@ export function HeaderSuche() {
         onFocus={() => { if (wert.trim()) setOffen(true); }}
         onKeyDown={aufTaste}
         placeholder="Suchen oder Norm springen (z. B. «OR 257d») …"
-        className="lc-input h-9 py-0 text-body-s w-full pr-14"
+        className="lc-input h-11 py-0 text-body-s w-full pr-3 lg:pr-14"
         aria-label="LexMetrik durchsuchen oder zur Norm springen"
         aria-keyshortcuts="/ Meta+K Control+K"
         autoComplete="off"

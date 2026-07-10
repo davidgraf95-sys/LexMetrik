@@ -141,7 +141,7 @@ export function ReiterUebersicht() {
       <button
         ref={triggerRef}
         type="button"
-        className="lc-btn lc-btn-ghost lc-btn-sm shrink-0"
+        className="lc-btn lc-btn-ghost lc-btn-sm shrink-0 min-h-11 min-w-11"
         aria-haspopup="dialog"
         aria-expanded={panelOffen}
         aria-label="Alle geöffneten Reiter"

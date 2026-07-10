@@ -34,7 +34,7 @@ export function SprachUmschalter() {
     <div ref={ref} className="relative">
       <button ref={triggerRef} type="button" onClick={() => setOffen((o) => !o)}
         aria-expanded={offen} aria-label="Sprache wählen"
-        className="inline-flex items-center gap-1 h-9 px-2.5 rounded-lg border border-line bg-surface num text-xs text-ink-600 hover:text-ink-900 hover:border-brass-400 transition-colors uppercase">
+        className="inline-flex items-center gap-1 h-11 min-w-11 justify-center px-2.5 rounded-lg border border-line bg-surface num text-xs text-ink-600 hover:text-ink-900 hover:border-brass-400 transition-colors uppercase">
         {locale}
         <span aria-hidden className={`text-ink-500 transition-transform ${offen ? 'rotate-180' : ''}`}>▾</span>
       </button>

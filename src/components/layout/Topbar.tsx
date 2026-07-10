@@ -28,7 +28,7 @@ export function Topbar({ onMenu, seitenleisteEingeklappt, onSeitenleisteUmschalt
         {/* Mobil: Schublade öffnen — auf Desktop trägt die persistente Leiste. */}
         <button
           type="button"
-          className="lc-btn lc-btn-ghost lc-btn-sm lg:hidden shrink-0"
+          className="lc-btn lc-btn-ghost lc-btn-sm lg:hidden shrink-0 min-h-11 min-w-11"
           aria-label="Navigation öffnen"
           aria-controls="seitenleisten-schublade"
           onClick={onMenu}
@@ -39,7 +39,7 @@ export function Topbar({ onMenu, seitenleisteEingeklappt, onSeitenleisteUmschalt
         {/* Desktop: persistente Seitenleiste ein-/ausklappen. */}
         <button
           type="button"
-          className="lc-btn lc-btn-ghost lc-btn-sm hidden lg:inline-flex shrink-0"
+          className="lc-btn lc-btn-ghost lc-btn-sm hidden lg:inline-flex shrink-0 min-h-11 min-w-11"
           aria-label={seitenleisteEingeklappt ? 'Seitenleiste einblenden' : 'Seitenleiste ausblenden'}
           aria-pressed={!seitenleisteEingeklappt}
           onClick={onSeitenleisteUmschalten}
@@ -82,7 +82,7 @@ export function Topbar({ onMenu, seitenleisteEingeklappt, onSeitenleisteUmschalt
         </div>
 
         {/* Logo nur unterhalb lg — ab lg trägt die Seitenleiste die Marke. */}
-        <Link to="/" className="lg:hidden inline-flex items-center gap-2 no-underline shrink-0" aria-label="LexMetrik – Startseite">
+        <Link to="/" className="lg:hidden inline-flex items-center gap-2 no-underline shrink-0 min-h-11 px-1" aria-label="LexMetrik – Startseite">
           <LexMetrikSiegel size={30} />
           {/* Wortmarke ab sm — auf schmalen Schirmen trägt die Suche die Mitte. */}
           <LexMetrikWortmarke className="hidden sm:block text-h3" />
