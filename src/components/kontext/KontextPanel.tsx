@@ -7,6 +7,7 @@ import {
 import { ladeLeitfallShard, artikelProEntscheid } from '../../lib/rechtsprechung/norm-index';
 import { botschaftenFuer, type BotschaftBezug } from '../../lib/materialien/botschaften';
 import { revisionenFuerNorm, revisionTitel, type RevisionAnsicht, type RevisionBezug } from '../../lib/normtext/revisionen';
+import { vernehmlassungenFuer, VERNEHMLASSUNG_STATUS_LABEL, type VernehmlassungBezug } from '../../lib/materialien/vernehmlassungen';
 import { useLocale, fedlexLokalisiert } from '../locale';
 import { usePaneSteuerung } from '../layout/usePaneLayout';
 import { KantenChip } from '../verzahnung/KantenChip';
@@ -39,6 +40,7 @@ const MAX_ENTSCHEIDE = 8;
 const MAX_MATERIALIEN = 8;
 const MAX_BOTSCHAFTEN = 8;
 const MAX_REVISIONEN = 10;
+const MAX_VERNEHMLASSUNGEN = 8;
 
 /** Korpus-Artikel-Token → Anzeige ('20_a' → '20a'). */
 function anzeigeArtikel(token: string): string {
@@ -177,6 +179,22 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false 
   const revAenderungen = alleRevisionen.filter((r) => r.art === 'aenderung');
   const revMarker = alleRevisionen.filter((r) => r.art === 'sammelerlass-marker');
 
+  // Gesetzgebung in Arbeit (Paket 3, W3·11, Moat-Hebel 1): laufende/abgeschlossene Vernehmlassungen
+  // zur Norm — «was ändert sich», semantisch die Zukunft der Zeitachse (Botschaft=Genese →
+  // AS=Änderung → Vernehmlassung=Ausblick). Nur Gesetz-Reader. `null` = Manifest-Ladefehler (§8).
+  const [vernGeladen, setVernGeladen] = useState<{ key: string; refs: VernehmlassungBezug[] | null } | null>(null);
+  useEffect(() => {
+    if (typ !== 'norm') return;
+    const keys = normKeysKey ? normKeysKey.split(',') : [];
+    let lebt = true;
+    vernehmlassungenFuer(keys).then((r) => { if (lebt) setVernGeladen({ key: normKeysKey, refs: r }); });
+    return () => { lebt = false; };
+  }, [typ, normKeysKey]);
+  const vernAktuell = typ === 'norm' && vernGeladen?.key === normKeysKey ? vernGeladen : null;
+  const vernehmlassungenLaden = typ === 'norm' && !vernAktuell;
+  const vernehmlassungenFehler = vernAktuell?.refs === null;
+  const vernehmlassungen: VernehmlassungBezug[] = vernAktuell?.refs ?? [];
+
   // «via Art. N»-Sublabels (V1.2, Magic Moment 5): nur im Gesetz-Reader (genau
   // EIN normKey) aus dem erlass-lokalen Shard invertiert — kein neuer Datenpfad,
   // derselbe Promise-Cache wie die LeitfallZeile (§5/§15.3). Kein Shard = keine
@@ -234,6 +252,7 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false 
   const istLeer = !zusatzGruppen && !hatSync && !entscheideLaden && !softLawLaden
     && !botschaftenLaden && !botschaftenFehler && botschaften.length === 0
     && !revLaden && !revFehler && alleRevisionen.length === 0
+    && !vernehmlassungenLaden && !vernehmlassungenFehler && vernehmlassungen.length === 0
     && (entscheide?.length ?? 0) === 0;
 
   return (
@@ -371,6 +390,51 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false 
                         ))}
                       </ul>
                     </details>
+                  )}
+                </>
+              )}
+            </KontextGruppe>
+          )}
+
+          {/* Gesetzgebung in Arbeit — Vernehmlassungen (Paket 3, W3·11, Moat-Hebel 1).
+              Der proaktive Teil der Zeitachse: was in diesem Rechtsgebiet gerade angehört
+              wird / abgeschlossen ist. Nur Gesetz-Reader. §8: maschinell aus dem amtlichen
+              Fedlex-Graphen zugeordnet (grob bei Mantelvorlagen), massgeblich bleibt die
+              amtliche Quelle. Reichweite ~ab 2006. */}
+          {(vernehmlassungenFehler || vernehmlassungen.length > 0) && (
+            <KontextGruppe titel="Gesetzgebung in Arbeit" richtung="Vernehmlassung"
+              anzahl={vernehmlassungen.length}
+              hinweis={vernehmlassungenFehler
+                ? undefined
+                : <><span className="num">{vernehmlassungen.length}</span> Vernehmlassungsverfahren — maschinell über den amtlichen Fedlex-Gesetzgebungs-Graphen zugeordnet (Reichweite ab ~2006), fachlich nicht geprüft; die Zuordnung kann bei Mantelvorlagen grob sein, massgeblich bleibt die amtliche Quelle.</>}>
+              {vernehmlassungenFehler ? (
+                <p className="text-body-s text-warn-700">
+                  Gesetzgebung in Arbeit konnte nicht geladen werden. Amtliche Quelle:{' '}
+                  <a href="https://www.fedlex.admin.ch" target="_blank" rel="noopener noreferrer" className="text-brass-700 hover:underline">Fedlex</a>.
+                </p>
+              ) : (
+                <>
+                  <ul className="flex flex-col gap-1.5">
+                    {vernehmlassungen.slice(0, MAX_VERNEHMLASSUNGEN).map((v) => {
+                      const titel = (locale === 'fr' && v.titelFr) || (locale === 'it' && v.titelIt) || v.titel;
+                      const laeuft = v.status === 'laufend';
+                      return (
+                        <li key={v.key} className="text-body-s">
+                          <a href={fedlexLokalisiert(v.quelleUrl, locale)} target="_blank" rel="noopener noreferrer"
+                            className="no-underline hover:text-brass-700">
+                            <span className={`lc-overline ${laeuft ? 'text-brass-700' : 'text-ink-500'}`}>
+                              {laeuft && v.fristEnde ? `läuft bis ${kurzDatum(v.fristEnde)}` : VERNEHMLASSUNG_STATUS_LABEL[v.status]}
+                            </span>
+                            {' — '}<span className="font-medium">{titel}</span>
+                          </a>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                  {vernehmlassungen.length > MAX_VERNEHMLASSUNGEN && (
+                    <p className="text-micro text-ink-500">
+                      … und <span className="num">{vernehmlassungen.length - MAX_VERNEHMLASSUNGEN}</span> weitere. Vollständige Liste über die amtliche Quelle (Fedlex).
+                    </p>
                   )}
                 </>
               )}
