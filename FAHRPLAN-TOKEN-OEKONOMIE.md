@@ -21,6 +21,20 @@ token verbrauch zu minimieren.»** Damit P0–P5 freigegeben; Start = **P0/T2 To
 Tok ≈ Bytes÷4; Zahlen = Schätzung bis T2 misst; Umsetzung Opus, gate-grün, je PR.
 Notation: M Mechanik · E Ersparnis+Herleitung · R Risiko→Gegenmittel · **K adversariale Korrektur (Spec-Pflicht)** · DoD messbar.
 
+### Stand P3 — Dispatch+Prozess gebaut (10.7.2026, PR QS-TOK/P3)
+
+`docs/token-oekonomie/dispatch-template.md` angelegt und aus `CLAUDE.md` §14.6 referenziert;
+umgesetzt **T4** (Dispatch-Kopf: Whitelist+Erweiterungs-Klausel · TABU je Auftragsklasse ·
+§-Slice · Pflicht-Rückgabe-Schema ≤2k, Gegenprüfung/Bug-Checks/golden unangetastet IM Agenten),
+**T15** (Modell-/Effort-Routing-Tabelle; `model`+`effort` je Task-Call explizit; Risikopfad+
+Gegenprüfung fix Opus/high; Synthese nie unter Sonnet — kalibriert an T2-Baseline), **T18**
+(Screenshot-Diät-Positivliste: DOM nur für Existenz/Text/Attribut/Klasse-Fakten, Geometrie/
+Überdeckung/Kontrast bleiben Bild), **T11** (Gegenprüfungs-Beschaffung als Skill-Zusatz in
+»gegenpruefung« + Template §5: gepinnter Filestore-HTML + Scope-Anker übergeben, Currency-Check
++ Re-Derivation bleiben beim Prüf-Agenten). **DoD:** Template + 10-Dispatch-Stichprobe (Anhang A)
+100 % `model`/`effort`-explizit. **Offen T19:** Warn-Injektions-Entfernung hängt an T1/#176
+(nicht auf ungemergtem Stand gebaut); Cache-Hygiene-Regeln bereits im Template §6 dokumentiert.
+
 ## §1 Ist-Befund
 
 | Posten | Befund |
