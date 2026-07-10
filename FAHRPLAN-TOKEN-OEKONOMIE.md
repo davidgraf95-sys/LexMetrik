@@ -21,6 +21,34 @@ token verbrauch zu minimieren.»** Damit P0–P5 freigegeben; Start = **P0/T2 To
 Tok ≈ Bytes÷4; Zahlen = Schätzung bis T2 misst; Umsetzung Opus, gate-grün, je PR.
 Notation: M Mechanik · E Ersparnis+Herleitung · R Risiko→Gegenmittel · **K adversariale Korrektur (Spec-Pflicht)** · DoD messbar.
 
+### Stand P4 — Werkzeuge+Output gebaut (10.7.2026, PR QS-TOK/P4)
+
+Umgesetzt **T8** (`npm run map` = `scripts/repo-map.ts`: deterministische Repo-/Symbol-Map
+Modul→Pfad→Exporte→**Tor** (package.json-Rückbezug) über `src/`+`scripts/`, 864 Module; Default
+stdout, `--out` → `.repo-map.generated.md` **gitignored/nie committen**, `--dir <teilbaum>`; **kein
+Gate** — DIRTY-Kaskaden-frei), **T12 Stufe 1** (`npm run ci:log` = `scripts/ci-log-diaet.sh`:
+ent-präfixt `gh run view --log-failed`, entfernt nur `Job⇥Step⇥Zeitstempel`-Rauschen + ANSI +
+BOM, gruppiert nach Job/Step, `##[error]`-Zeiger; **Fails vollständig** — belegt an rotem Run
+`29107143646`: **54 273 B → 21 164 B / −61 %**, gegenüber `--log` 271 883 B sogar −92 %; die 6
+Fail-Assertions bleiben restlos erhalten), **T17** (`test:kurz` = Vitest-dot, `test:e2e:kurz` =
+Playwright-dot; `npm test`/`test:e2e`/CI unverändert = volle Rot-Diagnose), **T9** (Muster-Query-
+Satz `docs/token-oekonomie/ast-grep-queries.md`, verifiziert gegen den Baum; im Template §1
+bevorzugt; `npx --package @ast-grep/cli ast-grep` = 0-Fixkosten-CLI), **T10** (Machbarkeits-Notiz
+`docs/token-oekonomie/fixkosten-audit-t10.md`: **kein projektseitiger MCP-Hebel** — alle ~250
+deferred Namen sind Davids Konto-Konnektoren; Schemas bereits deferred → real ~4–7k Fensterplatz;
+Deaktivierung Account-Ebene/David-Go, hier dokumentiert nicht ausgeführt).
+
+**Job-Split (T12 Stufe 2) begründet WEGGELASSEN:** Die Spec-Bedingung (Risiko-Asymmetrie K:
+Job-Split nur bei materiellen Rest-Kosten) ist **nicht erfüllt** — T2-Baseline zeigt cacheRead
+95,8 % dominierend, Output nur 0,54 %; der Umbau am Required-Gefüge (Aggregat-Job/No-op-Zwilling/
+needs-Reihenfolge) trüge sein Blockade-Risiko ohne materielle Ersparnis. **Bleibt offen** für ein
+separates David-Go, falls eine spätere T2-Messung materielle Log-Rest-Kosten zeigt.
+
+**Offen (nicht selbst gefixt):** `check:plan` auf `origin/main` rot (QS-TOK-@meta verwaist) bis
+#176 mergt — **vorbestehend**, P1b-Fläche. **T9-`allow`-Permission** (`.claude/settings.json`)
+= Config/Account-Ebene → **David-Freigabe** (Self-Modification-Schutz); Vorschlag steht in
+`ast-grep-queries.md`. Gegenprüfung **n/a** (Werkzeug-Infrastruktur, keine Inhalts-/Rechenfläche).
+
 ### Stand P3 — Dispatch+Prozess gebaut (10.7.2026, PR QS-TOK/P3)
 
 `docs/token-oekonomie/dispatch-template.md` angelegt und aus `CLAUDE.md` §14.6 referenziert;

@@ -34,7 +34,10 @@ Whitelist:    <Arbeitsflächen, an denen der Agent schreiben darf>
               + Erweiterungs-Klausel: darüber hinaus nur mit kurzer Begründung in der Rückgabe.
 TABU:         <Flächen, die NICHT berührt werden — je Auftragsklasse, siehe §1.2>
 Daten-Sonde:  npm run zeige -- <Erlass> <Artikel>  (T6, statt Voll-Read der normtext-JSONs)
-Navigation:   ast-grep / LSP bevorzugt, Grep/Read = Fallback (T9); Beweis-Reads unangetastet.
+Navigation:   ast-grep / LSP bevorzugt, Grep/Read = Fallback (T9; Muster-Query-Satz in
+              docs/token-oekonomie/ast-grep-queries.md); Beweis-Reads unangetastet.
+Repo-Map:     npm run map [-- --dir <teilbaum>]  (T8, Modul→Pfad→Exporte→Tor statt Voll-Grep;
+              NICHT committen, on-demand; auf Risikopfaden ersetzt sie nie die echte Datei)
 Qualität:     Gegenprüfung/Bug-Checks/golden wie immer IM Agenten (Leitplanke — nie kürzen).
 Rückgabe:     Pflicht-Schema §3 (Status/Pfade/Gates/offene Punkte/Architektur-Entscheide);
               Details in den PR-Body, nicht in die Rückgabe.
@@ -224,8 +227,8 @@ explizit (DoD T15: Stichprobe 10/10 = 100 % explizit) und hält das Schema aus �
    `model=sonnet effort=medium` (mind. Sonnet, steuert Folge-Sessions) · Whitelist `STRUKTUR.md` ·
    Rückgabe: Karte-Kern + Pointer, kein Detailspeicher (§14.6).
 7. **Log-Diät** — roten CI-Run extrahieren.
-   `model=haiku effort=low` · nur Fehlerblock+Kontext, Fails vollständig (T12) · read-only ·
-   Rückgabe: Fail-Block + Job-Name.
+   `model=haiku effort=low` · `npm run ci:log [-- <run-id>]` (T12 Stufe 1: ent-präfixt +
+   gruppiert, Fails vollständig) · read-only · Rückgabe: Fail-Block + Job-Name.
 8. **Perf-Bau** — CLS-Mindesthöhe an einer Komponente.
    `model=opus effort=medium` · §-Slice `fahrplan -- FAHRPLAN-PERFORMANCE §…` · Whitelist die
    eine Komponente · golden + `check:perf-budget` IM Agenten · Rückgabe §3.

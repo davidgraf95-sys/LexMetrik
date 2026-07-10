@@ -68,3 +68,7 @@ abnahme/responsive-audit/shots-*/
 
 # lokaler PDF-Cache für SG-2935-Reparatur (nie committen)
 .pdf-cache/
+
+# QS-TOK/T8: generierte Repo-/Symbol-Map (on-demand via `npm run map -- --out`,
+# nie committen — kollidiert sonst bei jedem Parallel-PR, DIRTY-Kaskade)
+.repo-map.generated.md
