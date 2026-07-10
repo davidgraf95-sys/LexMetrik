@@ -37,7 +37,7 @@ export function Footer() {
           <p className="lc-overline mb-3">Navigation</p>
           {NAVIGATION.map((n) => (
             <Link key={n.label} to={n.to}
-              className="block py-1.5 text-body-s text-ink-600 hover:text-brass-700 no-underline transition-colors">
+              className="flex items-center min-h-11 text-body-s text-ink-600 hover:text-brass-700 no-underline transition-colors">
               {n.label}
             </Link>
           ))}
