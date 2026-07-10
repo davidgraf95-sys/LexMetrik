@@ -1,0 +1,539 @@
+{
+  "sr": "831.42",
+  "korpusStand": "2024-01-01",
+  "bBindings": [
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.42"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1994/2386_2386_2386"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1995-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1993-12-17"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 17. Dezember 1993 über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 17 décembre 1993 sur le libre passage dans la prévoyance professionnelle vieillesse, survivants et invalidité (Loi sur le libre passage, LFLP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 17 dicembre 1993 sul libero passaggio nella  previdenza professionale per la vecchiaia, i superstiti e l'invalidità (Legge sul libero passaggio, LFLP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.42"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1994/2386_2386_2386"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1995-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1993-12-17"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 17. Dezember 1993 über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 17 décembre 1993 sur le libre passage dans la prévoyance professionnelle vieillesse, survivants et invalidité (Loi sur le libre passage, LFLP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 17 dicembre 1993 sul libero passaggio nella  previdenza professionale per la vecchiaia, i superstiti e l'invalidità (Legge sul libero passaggio, LFLP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.42"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1994/2386_2386_2386"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1995-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1993-12-17"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 17. Dezember 1993 über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 17 décembre 1993 sur le libre passage dans la prévoyance professionnelle vieillesse, survivants et invalidité (Loi sur le libre passage, LFLP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 17 dicembre 1993 sul libero passaggio nella  previdenza professionale per la vecchiaia, i superstiti e l'invalidità (Legge sul libero passaggio, LFLP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.42"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1994/2386_2386_2386"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1995-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1993-12-17"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 17. Dezember 1993 über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 17 décembre 1993 sur le libre passage dans la prévoyance professionnelle vieillesse, survivants et invalidité (Loi sur le libre passage, LFLP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 17 dicembre 1993 sul libero passaggio nella  previdenza professionale per la vecchiaia, i superstiti e l'invalidità (Legge sul libero passaggio, LFLP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.42"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/199"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-05-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-12-18"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur le libre passage dans la prévoyance professionnelle vieillesse, survivants et invalidité (loi sur le libre passage, LFLP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sul libero passaggio nella previdenza professionale per la vecchiaia, i superstiti e l'invalidità (Legge sul libero passaggio, LFLP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.42"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/199"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-05-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-12-18"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur le libre passage dans la prévoyance professionnelle vieillesse, survivants et invalidité (loi sur le libre passage, LFLP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sul libero passaggio nella previdenza professionale per la vecchiaia, i superstiti e l'invalidità (Legge sul libero passaggio, LFLP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.42"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/199"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-05-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-12-18"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur le libre passage dans la prévoyance professionnelle vieillesse, survivants et invalidité (loi sur le libre passage, LFLP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sul libero passaggio nella previdenza professionale per la vecchiaia, i superstiti e l'invalidità (Legge sul libero passaggio, LFLP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.42"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/443"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-06-23"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur le libre passage dans la  prévoyance professionnelle vieillesse, survivants et invalidité (Loi sur le libre passage, LFLP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sul libero passaggio nella previdenza professionale per la vecchiaia, i superstiti e l'invalidità (Legge sul libero passaggio, LFLP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.42"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/443"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-06-23"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur le libre passage dans la  prévoyance professionnelle vieillesse, survivants et invalidité (Loi sur le libre passage, LFLP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sul libero passaggio nella previdenza professionale per la vecchiaia, i superstiti e l'invalidità (Legge sul libero passaggio, LFLP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.42"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/443"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-06-23"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur le libre passage dans la  prévoyance professionnelle vieillesse, survivants et invalidité (Loi sur le libre passage, LFLP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sul libero passaggio nella previdenza professionale per la vecchiaia, i superstiti e l'invalidità (Legge sul libero passaggio, LFLP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.42"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/609"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-06-12"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur le libre passage dans la prévoyance professionnelle vieillesse, survivants et invalidité (Loi sur le libre passage, LFLP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sul libero passaggio nella previdenza professionale per la vecchiaia, i superstiti e l'invalidità (Legge sul libero passaggio, LFLP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.42"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/609"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-06-12"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur le libre passage dans la prévoyance professionnelle vieillesse, survivants et invalidité (Loi sur le libre passage, LFLP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sul libero passaggio nella previdenza professionale per la vecchiaia, i superstiti e l'invalidità (Legge sul libero passaggio, LFLP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.42"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/609"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-06-12"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur le libre passage dans la prévoyance professionnelle vieillesse, survivants et invalidité (Loi sur le libre passage, LFLP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sul libero passaggio nella previdenza professionale per la vecchiaia, i superstiti e l'invalidità (Legge sul libero passaggio, LFLP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.42"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2017/542"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-12-18"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur le libre passage dans la prévoyance professionnelle vieillesse, survivants et invalidité (Loi sur le libre passage, LFLP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sul libero passaggio nella previdenza professionale per la vecchiaia, i superstiti e l'invalidità (Legge sul libero passaggio, LFLP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.42"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2017/542"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-12-18"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur le libre passage dans la prévoyance professionnelle vieillesse, survivants et invalidité (Loi sur le libre passage, LFLP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sul libero passaggio nella previdenza professionale per la vecchiaia, i superstiti e l'invalidità (Legge sul libero passaggio, LFLP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.42"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2017/542"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-12-18"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur le libre passage dans la prévoyance professionnelle vieillesse, survivants et invalidité (Loi sur le libre passage, LFLP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sul libero passaggio nella previdenza professionale per la vecchiaia, i superstiti e l'invalidità (Legge sul libero passaggio, LFLP)"
+      }
+    }
+  ],
+  "aStaende": [
+    "1995-01-01",
+    "1999-05-01",
+    "2000-01-01",
+    "2001-01-01",
+    "2002-06-01",
+    "2005-01-01",
+    "2006-04-01",
+    "2007-01-01",
+    "2007-12-01",
+    "2008-08-01",
+    "2009-06-01",
+    "2010-01-01",
+    "2011-01-01",
+    "2012-01-01",
+    "2017-01-01",
+    "2017-10-01",
+    "2021-01-01",
+    "2022-01-01",
+    "2024-01-01"
+  ]
+}

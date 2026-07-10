@@ -1,0 +1,345 @@
+{
+  "erlassKey": "ZSTV",
+  "sr": "211.112.2",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2025-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/211.112.2",
+      "sha": "6f12749e27681c59625782959c8bd768a603427179e105761d7a9ca3a469ccf9"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/211.112.2",
+      "sha": "5db05dd4b7024d911376cdae2d383f298d58e2fb4d8fd62191d9a14c271cbaa0"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2024-11-18",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2024/651",
+      "dateDocument": "2024-11-18",
+      "roFundstelle": "AS 2024 651",
+      "titelDe": "Zivilstandsverordnung (ZStV). Berichtigung (Betrifft nur den italienischen Text)",
+      "titelFr": "Ordonnance sur l’état civil (OEC). Erratum (Ne concerne que le texte italien)",
+      "titelIt": "Ordinanza sullo stato civile (OSC). Correzione",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2024/651/de",
+      "sha": "e3e7d34f690bf433bf16c180a3909a60fd6eab75616baba7f878dd52c6debbef"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2024-11-11",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2024/335",
+      "dateDocument": "2024-06-26",
+      "roFundstelle": "AS 2024 335",
+      "titelDe": "Zivilstandsverordnung (ZStV)",
+      "titelFr": "Ordonnance sur l’état civil (OEC)",
+      "titelIt": "Ordinanza sullo stato civile (OSC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2024/335/de",
+      "sha": "b164eeca0d81d5afb2da1ca78146eafa92e6cf2f782babf1bcd63c1453e880c0"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/211.112.2",
+      "sha": "f7268dd0298485d57393413e5904e823f9e3269b1126500a3dc65fe726089708"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/211.112.2",
+      "sha": "c64b1c8729671895b07f35bc97a40b934f649a15c0c3d3b75a5effdb189eeb5f"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2022-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2022/243",
+      "dateDocument": "2022-03-30",
+      "roFundstelle": "AS 2022 243",
+      "titelDe": "Zivilstandsverordnung (ZStV)",
+      "titelFr": "Ordonnance sur l’état civil (OEC)",
+      "titelIt": "Ordinanza sullo stato civile (OSC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2022/243/de",
+      "sha": "66105ca623a79cfe3bb63f055a1ed8343f0a75fd59c833e8edcf5d8d7adc44ea"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2022-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2021/666",
+      "dateDocument": "2021-10-27",
+      "roFundstelle": "AS 2021 666",
+      "titelDe": "Zivilstandsverordnung (ZStV)",
+      "titelFr": "Ordonnance sur l'état civil (OEC)",
+      "titelIt": "Ordinanza sullo stato civile (OSC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2021/666/de",
+      "sha": "4216ea0d82e93b1936b63f3b9068fd9a22ab2aa55905744fc290ad1017feb655"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2021-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/211.112.2",
+      "sha": "3b795a735a47c5b16470cd933c219936f0891ee072c233dc2c5c56f9e754087d"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2020-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/696",
+      "dateDocument": "2019-11-20",
+      "roFundstelle": "AS 2019 696",
+      "titelDe": "Zivilstandsverordnung (ZStV)",
+      "titelFr": "Ordonnance sur l'état civil (OEC)",
+      "titelIt": "Ordinanza sullo stato civile (OSC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/696/de",
+      "sha": "6879d58d07c34a962a351f5b6bfa7e4341f9616afec7368f3a032a425566f370"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2019-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/211.112.2",
+      "sha": "66d6fe29fb193c1a37622e32b162be5f4567a0f733496d100f11448b4c098e64"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2019-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/693",
+      "dateDocument": "2018-10-31",
+      "roFundstelle": "AS 2018 693",
+      "titelDe": "Zivilstandsverordnung (ZStV)",
+      "titelFr": "Ordonnance sur l'état civil (OEC)",
+      "titelIt": "Ordinanza sullo stato civile (OSC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/693/de",
+      "sha": "aa6fa70d8d56f351921974b18f0ea3834d67ce87be492a63df8a272dee0799ee"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2019-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/823",
+      "dateDocument": "2018-12-28",
+      "roFundstelle": "AS 2018 823",
+      "titelDe": "Zivilstandsverordnung (ZStV)",
+      "titelFr": "Ordonnance sur l'état civil (OEC)",
+      "titelIt": "Ordinanza sullo stato civile (OSC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/823/de",
+      "sha": "70e043676fa7232205d139cae003a95c0c5fb6c19c3a4da11bd8dccfcae2be4b"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2018-02-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/211.112.2",
+      "sha": "956f9bf06e1408b730261dd370b67788446a7f75acea2b1cb86c6cb7c7583c75"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2018-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/211.112.2",
+      "sha": "aa442e2fce574e4b4cc8283ec65475f404a864427c5006bdd121b578b61a9e29"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2017-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/664",
+      "dateDocument": "2016-10-26",
+      "roFundstelle": "AS 2016 664",
+      "titelDe": "Zivilstandsverordnung (ZStV)",
+      "titelFr": "Ordonnance sur l'état civil (OEC)",
+      "titelIt": "Ordinanza sullo stato civile (OSC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/664/de",
+      "sha": "46e1a141d3a06ec4fbe7d9d33735d44f94e04cc9ca02c944a4fe1709461b1bc5"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2017-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/811",
+      "dateDocument": "2016-12-20",
+      "roFundstelle": "AS 2016 811",
+      "titelDe": "Zivilstandsverordnung (ZStV)",
+      "titelFr": "Ordonnance sur l'état civil (OEC)",
+      "titelIt": "Ordinanza sullo stato civile (OSC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/811/de",
+      "sha": "0ead1bada3e87bd176bd608ab6d6e92c4cd2833e5c62d3f75e686a9b6d491216"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2015-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/211.112.2",
+      "sha": "edd08a79219e68b3fcd99154dc839dda05b694036e71ad8302f7f2f3b1b637da"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2014-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/282",
+      "dateDocument": "2014-05-14",
+      "roFundstelle": "AS 2014 282",
+      "titelDe": "Zivilstandsverordnung (ZStV)",
+      "titelFr": "Ordonnance sur l'état civil (OEC)",
+      "titelIt": "Ordinanza sullo stato civile (OSC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/282/de",
+      "sha": "578c57ad343f2a3895e98b26a59e0751f21fed2228f96d234b0a81c2a0047c4d"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2014-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/353",
+      "dateDocument": "2014-07-01",
+      "roFundstelle": "AS 2014 353",
+      "titelDe": "Zivilstandsverordnung (ZStV) (Betrifft nur den französischen Text)",
+      "titelFr": "Ordonnance sur l'état civil (OEC)",
+      "titelIt": "Ordinanza sullo stato civile (OSC) (Concerne soltanto il testo francese)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/353/de",
+      "sha": "3d1aaf6cd4bd2182815b5ff04aed5aacd7efde2e872f10999567b7d68ec5c199"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2014-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/211.112.2",
+      "sha": "9721b44664c9c3558514cb4c365e79adf654585881479654b5ebbf68d9b2e4a4"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2013-09-10",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/587",
+      "dateDocument": "2013-09-10",
+      "roFundstelle": "AS 2013 587",
+      "titelDe": "Zivilstandsverordnung (ZStV)",
+      "titelFr": "Ordonnance sur l'état civil (OEC)",
+      "titelIt": "Ordinanza sullo stato civile (OSC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/587/de",
+      "sha": "3bfc1a8a59e18b52839934111ac3a4825eaa993f380fd55ceb3089b57dd0c92f"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2013-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/229",
+      "dateDocument": "2013-03-27",
+      "roFundstelle": "AS 2013 229",
+      "titelDe": "Zivilstandsverordnung (ZStV)",
+      "titelFr": "Ordonnance sur l'état civil (OEC)",
+      "titelIt": "Ordinanza sullo stato civile (OSC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/229/de",
+      "sha": "c378304162b8b12fe95df992d381748de2511c34b997c0d55ba8cb78c6ed9241"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2013-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/772",
+      "dateDocument": "2012-11-07",
+      "roFundstelle": "AS 2012 772",
+      "titelDe": "Zivilstandsverordnung (ZStV)",
+      "titelFr": "Ordonnance sur l'état civil (OEC)",
+      "titelIt": "Ordinanza sullo stato civile (OSC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/772/de",
+      "sha": "dfaa7ad758b9b7db54eab3fa74cb02ab544aa3fcd0d988f567b0a911717dc670"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2011-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/412",
+      "dateDocument": "2010-06-04",
+      "roFundstelle": "AS 2010 412",
+      "titelDe": "Zivilstandsverordnung (ZStV)",
+      "titelFr": "Ordonnance sur l'état civil (OEC)",
+      "titelIt": "Ordinanza sullo stato civile (OSC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/412/de",
+      "sha": "68232401e3aeb1c6a79ecdf957849ea95666634300d33a1085719b4fb0a18f47"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2008-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/211.112.2",
+      "sha": "f1a5035a64bec6c08ad6331d3165a6e7752a8ce3b608faf3af7d8ca72443f2b2"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2008-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/637",
+      "dateDocument": "2007-09-12",
+      "roFundstelle": "AS 2007 637",
+      "titelDe": "Verordnung über die Aufhebung und Anpassung von Verordnungen im Rahmen der Neuordnung der ausserparlamentarischen Kommissionen",
+      "titelFr": "Ordonnance concernant l'abrogation et l'adaptation d'ordonnances dans le cadre de la réorganisation des commissions extraparlementaires",
+      "titelIt": "Ordinanza concernente l'abrogazione e l'adeguamento di ordinanze nell'ambito del riordinamento delle commissioni extraparlamentari",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/637/de",
+      "sha": "7871e41c9b84907984e3361729938dbee563c50c55b8764cde38180e411e0e11"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2008-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/772",
+      "dateDocument": "2007-10-24",
+      "roFundstelle": "AS 2007 772",
+      "titelDe": "Zivilstandsverordnung (ZStV)",
+      "titelFr": "Ordonnance sur l'état civil (OEC)",
+      "titelIt": "Ordinanza sullo stato civile (OSC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/772/de",
+      "sha": "4b4995c796d75fa1f548324272e63736f56e430feea26ed1a3e3eb346dcc55b0"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2007-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/446",
+      "dateDocument": "2006-06-28",
+      "roFundstelle": "AS 2006 446",
+      "titelDe": "Zivilstandsverordnung (ZStV)",
+      "titelFr": "Ordonnance sur l'état civil (OEC)",
+      "titelIt": "Ordinanza sullo stato civile (OSC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/446/de",
+      "sha": "01c233c91f230577788388f0ec29413bcd0f836ca4861bcbffdc69542b42551a"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2006-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/781",
+      "dateDocument": "2005-12-09",
+      "roFundstelle": "AS 2005 781",
+      "titelDe": "Zivilstandsverordnung (ZStV)",
+      "titelFr": "Ordonnance sur l'état civil (OEC)",
+      "titelIt": "Ordinanza sullo stato civile (OSC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/781/de",
+      "sha": "a2b076f0ddda692093cd158e8680bf8a448ec77af3925cea79a2585bd93e59f9"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2005-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/300",
+      "dateDocument": "2005-04-11",
+      "roFundstelle": "AS 2005 300",
+      "titelDe": "Verordnung über die vollständige Inkraftsetzung der Zivilstandsverordnung vom 28. April 2004",
+      "titelFr": "Ordonnance sur la mise en vigueur complète de l'ordonnance du 28 avril 2004 sur l'état civil",
+      "titelIt": "Ordinanza relativa all'entrata in vigore completa dell'ordinanza del 28 aprile 2004 sullo stato civile",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/300/de",
+      "sha": "925737a42b1a4b8d40d27bb5d10bb9f3d273774bfc657a30f1f95a38f9c4a434"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2005-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/211.112.2",
+      "sha": "aafa1d925e614ec24fad43556390af158394cefedec41b7ec75cdbd63cae5e1c"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2004-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/362",
+      "dateDocument": "2004-04-28",
+      "roFundstelle": "AS 2004 362",
+      "titelDe": "Zivilstandsverordnung (ZStV)",
+      "titelFr": "Ordonnance sur l'état civil (OEC)",
+      "titelIt": "Ordinanza sullo stato civile (OSC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/362/de",
+      "sha": "c98e6d268ca3ca48ca8e79e980c5531df5e2779a3650c7b3c97449b8fa9c76a9"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2004-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/761",
+      "dateDocument": "2005-12-13",
+      "roFundstelle": "AS 2005 761",
+      "titelDe": "Zivilstandsverordnung (ZStV) (Betrifft nur den französischen Text)",
+      "titelFr": "Ordonnance sur l'état civil (OEC)",
+      "titelIt": "Ordinanza sullo stato civile (OSC) (Concerne solo il testo francese)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/761/de",
+      "sha": "a0396f71aa7e50014d9ea69d55bda00648d623ae7fadeadcb4370db254ca5099"
+    }
+  ],
+  "sha": "c5c5f6a4c4455907eda1344ad8f4c5897dcd193ca95a37b4a265c7f27353edaf"
+}

@@ -1,0 +1,99 @@
+{
+  "erlassKey": "ATSV",
+  "sr": "830.11",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/830.11",
+      "sha": "3835f9155cb34bc11f676d00b10cf426e4282fd8e200341aaebbc860a1b8659f"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/830.11",
+      "sha": "67fbbd083aa6d935701ec4ddf811d43296765fc8db64a329d2fae5b763bdacf5"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/830.11",
+      "sha": "ba1a2c784c45f92d615f0bd91787b29c7dd535537176baf37e0a00f6f562b0ff"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2022-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/830.11",
+      "sha": "3e0349250eac70af35a7f8d4dec455f22bf6da928f95f0ee9f2a3e335feda240"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2021-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/893",
+      "dateDocument": "2020-11-18",
+      "roFundstelle": "AS 2020 893",
+      "titelDe": "Verordnung über den Allgemeinen Teil des Sozialversicherungsrechts",
+      "titelFr": "Ordonnance sur la partie générale du droit des assurances sociales",
+      "titelIt": "Ordinanza sulla parte generale del diritto delle assicurazioni sociali",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/893/de",
+      "sha": "e0756f55995e5cf30571aaea33ebcef1acff73e61c2a9423c4a1fe941e86bd78"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2019-10-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/520",
+      "dateDocument": "2019-06-07",
+      "roFundstelle": "AS 2019 520",
+      "titelDe": "Verordnung über den Allgemeinen Teil des Sozialversicherungsrechts (ATSV)",
+      "titelFr": "Ordonnance sur la partie générale du droit des assurances sociales (OPGA)",
+      "titelIt": "Ordinanza sulla parte generale del diritto delle assicurazioni sociali (OPGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/520/de",
+      "sha": "87f795bff99e21a4cd4fb6b17b206d00b8cbd7c12ec970c66909b989d1b483c1"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2015-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/830.11",
+      "sha": "2a09342b863cc1408223800e67d3cb8355aeb08c34cd6eafe8832431098d5655"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2008-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/830.11",
+      "sha": "21205ef59d02c65f59ed5a36216e147558d8719768be7a8e21ae2a556b6be57d"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2007-05-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/830.11",
+      "sha": "f771e64488052a0bd7a8a480c958ea9f6697e4b7facd00ac9680ed5be743c6e6"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2007-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/609",
+      "dateDocument": "2006-09-22",
+      "roFundstelle": "AS 2006 609",
+      "titelDe": "Verordnung über den Allgemeinen Teil des Sozialversicherungsrechts (ATSV)",
+      "titelFr": "Ordonnance sur la partie générale du droit des assurances sociales (OPGA)",
+      "titelIt": "Ordinanza sulla parte generale del diritto delle assicurazioni sociali (OPGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/609/de",
+      "sha": "c3b2472f19b90fb0f2eba1360220648694c94f0526c7475675d1b299ebeb9f7e"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2003-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/569",
+      "dateDocument": "2002-09-11",
+      "roFundstelle": "AS 2002 569",
+      "titelDe": "Verordnung über den Allgemeinen Teil des Sozialversicherungsrechts (ATSV)",
+      "titelFr": "Ordonnance sur la partie générale du droit des assurances sociales (OPGA)",
+      "titelIt": "Ordinanza sulla parte generale del diritto delle assicurazioni sociali (OPGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/569/de",
+      "sha": "75f2808fd1246ee6ed5ca67abc59f03bdc4076c3dec47d1d0d02790329021dd9"
+    }
+  ],
+  "sha": "dfadb49426c8eddac3309b42d0ebf924aa4a4698dbe6f0ca45967149e7d95b11"
+}

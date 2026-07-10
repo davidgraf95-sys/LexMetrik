@@ -1,0 +1,58 @@
+{
+  "erlassKey": "SORTG",
+  "sr": "232.16",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/232.16",
+      "sha": "21141b26272dd1131e739a3830c3bae0cf59f9e1b6bcfe80a9d0d6af0a02bd26"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2008-09-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/526",
+      "dateDocument": "2007-10-05",
+      "roFundstelle": "AS 2008 526",
+      "titelDe": "Bundesbeschluss über die Genehmigung des revidierten internationalen Übereinkommens zum Schutz von Pflanzenzüchtungen und die Änderung des Sortenschutzgesetzes und des Patentgesetzes",
+      "titelFr": "Arrêté fédéral relatif à l'approbation de la Convention internationale révisée pour la protection des obtentions végétales et à la modification de la loi sur la protection des variétés et de la loi sur les brevets d'invention",
+      "titelIt": "Decreto federale che approva la Convenzione internazionale riveduta per la protezione delle novità vegetali e modifica la legge federale sulla protezione delle novità vegetali e la legge sui brevetti d'invenzione",
+      "botschaftKey": "BOTSCHAFT-2004-683",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/526/de",
+      "sha": "84d52a7fa82f096cd47aefec16ab3f5c92043f71abad283a3fdccc2cd01cb1cc"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2008-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/232.16",
+      "sha": "6b1c6274e778fb3de495dcb65237092b593cddbfaa62d4a2f588fd0568083a70"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2007-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/232.16",
+      "sha": "2841d449341a031e0afbf94c41bb923b01d01f8f59f287c08d0376483a62b4f2"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2001-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/232.16",
+      "sha": "5e8fa69c5ba00e71d65f4fb0ba4a39835ed040bce6c2f7cb11a71c8ec0618377"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1977-06-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1977/862_862_862",
+      "dateDocument": "1975-03-20",
+      "roFundstelle": "AS 1977 862",
+      "titelDe": "Bundesgesetz vom 20. März 1975 über den Schutz von Pflanzenzüchtungen (Sortenschutzgesetz)",
+      "titelFr": "Loi fédérale du 20 mars 1975 sur la protection des obtentions végétales",
+      "titelIt": "Legge federale del 20 marzo 1975 sulla protezione delle novità vegetali",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1977/862_862_862/de",
+      "sha": "eef7df40a4e801ce654ef1c85d515abf8530349e3f3bb01dab87647bb6b21618"
+    }
+  ],
+  "sha": "4f3449c016225239e05d91ca7c979c4e5920c9f6745d2f3ff89f8ec263883fcf"
+}

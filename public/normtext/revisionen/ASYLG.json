@@ -1,0 +1,398 @@
+{
+  "erlassKey": "ASYLG",
+  "sr": "142.31",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2027-01-01",
+      "nichtKonsolidiert": true,
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.31",
+      "sha": "54ce080e0b425171c2a37959f5a5a31255f594b9e22236c76ebd4c2b2fa075c9"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.31",
+      "sha": "10313f7e706fd5c86685d26782747c7d0073e55e90d113e27822158f6e776720"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2026-06-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2026/192",
+      "dateDocument": "2025-03-21",
+      "roFundstelle": "AS 2026 192",
+      "titelDe": "Asylgesetz (AsylG) (Sicherheit und Betrieb in den Zentren des Bundes)",
+      "titelFr": "Loi sur l’asile (LAsi) (Sécurité et fonctionnement des centres de la Confédération)",
+      "titelIt": "Legge sull’asilo (LAsi) (Sicurezza ed esercizio dei centri della Confederazione)",
+      "botschaftKey": "BOTSCHAFT-2024-1107",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2026/192/de",
+      "sha": "0313ad40edbb961101cd215dfd836d7b59b7d3ef315e76fa625ea0198b3508f4"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2025-04-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2024/189",
+      "dateDocument": "2021-10-01",
+      "roFundstelle": "AS 2024 189",
+      "titelDe": "Asylgesetz (AsylG)",
+      "titelFr": "Loi sur l’asile (LAsi)",
+      "titelIt": "Legge sull’asilo (LAsi)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2024/189/de",
+      "sha": "07110bcc46cdd0c151bca9e4f1b5f3f3dff18eb1e3fdbc2d00d21b39ca3e442e"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.31",
+      "sha": "cc7fb9bf3322fba08f6d845594db58ea16ca3b682ef07f3b9992178bdca78b36"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2024-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.31",
+      "sha": "4f23100f9480b1a73efe5cc3a2c96a3c0da57b6b571e14f9426671cc7989ee00"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.31",
+      "sha": "fe24404f0f68850344ff440453cd820ec33cf4942b104b2a486b09415879f11f"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.31",
+      "sha": "bd79f2076ad9ce4106d928bb252d589127a106f83ce3dcff5d584ac0aae1f560"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2022-11-22",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2023/16",
+      "dateDocument": "2023-01-18",
+      "roFundstelle": "AS 2023 16",
+      "titelDe": "Mitteilung über die Inkraftsetzung der Änderung des Asylgesetzes und des Bundesgesetzes über das Informationssystem für den Ausländer- und den Asylbereich",
+      "titelFr": "Communication concernant la mise en vigueur de la modification de la loi sur l’asile et de la loi fédérale sur le système d’information commun aux domaines des étrangers et de l’asile",
+      "titelIt": "Comunicazione sull’entrata in vigore della modifica della legge sull’asilo e della legge federale sul sistema d’informazione per il settore degli stranieri e dell’asilo",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2023/16/de",
+      "sha": "8ca6d61ca66473166ff008c03ea83ca43766211e5e4e4ee4745a457104defc8c"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2022-09-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2022/459",
+      "dateDocument": "2021-10-01",
+      "roFundstelle": "AS 2022 459",
+      "titelDe": "Asylgesetz (AsylG)",
+      "titelFr": "Loi sur l’asile (LAsi)",
+      "titelIt": "Legge sull’asilo (LAsi)",
+      "botschaftKey": "BOTSCHAFT-2020-1902",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2022/459/de",
+      "sha": "dd39e83fd7fe151282aeb57557e93aaf1a78921c1a136fdb983a677f45d8b421"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2022-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.31",
+      "sha": "39c8ee1b395b747dcb0b21517fa4e73fa102a552b2ebdbe43f58f4dca5760a66"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.31",
+      "sha": "518db0e32d1a64fef9ad4d8201be9f1826024911cf9067fe3853b74a93b22f1d"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2020-11-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/742",
+      "dateDocument": "2019-12-20",
+      "roFundstelle": "AS 2020 742",
+      "titelDe": "Asylgesetz (AsylG)",
+      "titelFr": "Loi sur l'asile (LAsi)",
+      "titelIt": "Legge sull'asilo (LAsi)",
+      "botschaftKey": "BOTSCHAFT-2018-2305",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/742/de",
+      "sha": "a28b1858355eee4a0a66c17873066d078daefab6f1b9cf15e5e78eb15489d7b8"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2020-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.31",
+      "sha": "c09b9488bf5814e09a8857392d1eae53c0d6456fdeed40535b067d3820e167cf"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2020-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.31",
+      "sha": "e5dbbb9df73a56f7f15a2e2e078df146a6c1bce200067aeafcc4c103a87a76ec"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2019-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.31",
+      "sha": "bfa571bfff7b21d738094c5a0218093a18edcb0fe64e68d67f1757ffdb19fcf4"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2019-03-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/438",
+      "dateDocument": "2018-06-08",
+      "roFundstelle": "AS 2018 438",
+      "titelDe": "Verordnung über die abschliessende Inkraftsetzung der Änderung vom 25. September 2015 des Asylgesetzes",
+      "titelFr": "Ordonnance portant dernière mise en vigueur de la modification du 25 septembre 2015 de la loi sur l'asile",
+      "titelIt": "Ordinanza sull'entrata in vigore integrale della modifica del 25 settembre 2015 della legge sull'asilo",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/438/de",
+      "sha": "3e360319d45eb5369a1c01aa11a6fd65389526784fac1734c7563bcf9a3bf180"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2019-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.31",
+      "sha": "e8a895600077dfd68be37e30acb36fe703b80de06dda071df854199a7d87ee90"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2018-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/685",
+      "dateDocument": "2017-10-25",
+      "roFundstelle": "AS 2017 685",
+      "titelDe": "Verordnung über eine Teilinkraftsetzung der Änderung vom 25. September 2015 des Asylgesetzes",
+      "titelFr": "Ordonnance portant mise en vigueur partielle de la modification du 25 septembre 2015 de la loi sur l'asile",
+      "titelIt": "Ordinanza concernente l'entrata in vigore parziale della modifica del 25 settembre 2015 della legge sull'asilo",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/685/de",
+      "sha": "37d1c82b04e07605574f943d3f0616cbbf4684c446c98551a2468721b4c72a96"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2016-10-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/521",
+      "dateDocument": "2015-09-25",
+      "roFundstelle": "AS 2016 521",
+      "titelDe": "Asylgesetz (AsylG)",
+      "titelFr": "Loi sur l'asile (LAsi)",
+      "titelIt": "Legge sull'asilo (LAsi)",
+      "botschaftKey": "BOTSCHAFT-2014-1715",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/521/de",
+      "sha": "1c1b2f0ec3eb446d6ba78ea55089cd00249ec6aaf52a9647882458e8a8e071c4"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2016-09-29",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.31",
+      "sha": "c3c007d9c5a4a9c1b4f9f6b9b5a2e67b402c8c191e1897feca4831d251d46a22"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2015-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.31",
+      "sha": "0d281b58d4895ddc3c5eae526ed5d9d91b43dd9ef142fd97e3f6a782ac9dccd6"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2015-09-29",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/379",
+      "dateDocument": "2014-09-26",
+      "roFundstelle": "AS 2015 379",
+      "titelDe": "Asylgesetz (AsylG) (Verlängerung der dringlichen Änderungen des Asylgesetzes)",
+      "titelFr": "Loi sur l'asile (LAsi) (Prorogation des modifications urgentes de la loi sur l'asile)",
+      "titelIt": "Legge sull'asilo (LAsi) (Proroga delle modifiche urgenti della legge sull'asilo)",
+      "botschaftKey": "BOTSCHAFT-2014-405",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/379/de",
+      "sha": "4004a9324f350517fe9fa705f1794807f9ec80b6276d6481fd2a16446a55b846"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2015-07-20",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.31",
+      "sha": "3616e04f82d4d31f85ec591c6bdd58c77ef096325acd6b7c470844f8179ab4b3"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2015-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/360",
+      "dateDocument": "2014-09-26",
+      "roFundstelle": "AS 2015 360",
+      "titelDe": "Asylgesetz (AsylG)",
+      "titelFr": "Loi sur l'asile (LAsi)",
+      "titelIt": "Legge sull'asilo (LAsi)",
+      "botschaftKey": "BOTSCHAFT-2014-708",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/360/de",
+      "sha": "0350aeebd7999e254c1facaf73973d594736fc6d727ab022c05b454faeb5f2b9"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2014-02-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.31",
+      "sha": "a764ac660f51c360d708a51a0f4203714e26b0898a9070bfdde9d27031ae7f5e"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2014-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/778",
+      "dateDocument": "2012-12-14",
+      "roFundstelle": "AS 2013 778",
+      "titelDe": "Asylgesetz (AsylG)",
+      "titelFr": "Loi sur l'asile (LAsi)",
+      "titelIt": "Legge sull'asilo (LAsi)",
+      "botschaftKey": "BOTSCHAFT-2011-1209",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/778/de",
+      "sha": "6b8977a74bb619a2c9e3f371a2afc9161e72c64bc471fac4382a1556ca865d21"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2014-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/855",
+      "dateDocument": "2013-12-13",
+      "roFundstelle": "AS 2013 855",
+      "titelDe": "Verordnung über eine Teilinkraftsetzung der Änderung vom 14. Dezember 2012 des Asylgesetzes",
+      "titelFr": "Ordonnance sur la mise en vigueur partielle de la modification du 14 décembre 2012 de la loi sur l'asile",
+      "titelIt": "Ordinanza concernente un'entrata in vigore parziale della modifica del 14 dicembre 2012 della legge sull'asilo",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/855/de",
+      "sha": "c51d7f2416c216beb8e012ae9c7b5c2b3c6c88448d09205fd74b06bff8d2dfcd"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2013-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.31",
+      "sha": "f17fcfce9e94e684392ba42dd39febc78ab6552e915e21e473a9cf7395be2c06"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2013-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/419",
+      "dateDocument": "2012-06-15",
+      "roFundstelle": "AS 2012 419",
+      "titelDe": "Verordnung über die Anpassung von Gesetzen infolge der Neugliederung der Departemente",
+      "titelFr": "Ordonnance portant adaptation de lois par suite de la réorganisation des départements",
+      "titelIt": "Ordinanza sull'adeguamento di disposizioni di legge a seguito della riorganizzazione dei dipartimenti",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/419/de",
+      "sha": "9f6f098bf252161a2a40619d87e3507e07b5725204bccb2fc1a29c1acb035a87"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2012-09-29",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/612",
+      "dateDocument": "2012-09-28",
+      "roFundstelle": "AS 2012 612",
+      "titelDe": "Asylgesetz (AsylG)",
+      "titelFr": "Loi sur l'asile (LAsi)",
+      "titelIt": "Legge sull'asilo (LAsi)",
+      "botschaftKey": "BOTSCHAFT-2010-794",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/612/de",
+      "sha": "e6c6b6c21eb5425c2e4e50db961e2ce2310ae8af24cefda417d4546288a46324"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2011-04-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/137",
+      "dateDocument": "2010-10-01",
+      "roFundstelle": "AS 2011 137",
+      "titelDe": "Bundesgesetz über die Koordination des Asyl- und des Auslieferungsverfahrens",
+      "titelFr": "Loi fédérale sur la coordination entre la procédure d'asile et la procédure d'extradition",
+      "titelIt": "Legge federale sul coordinamento tra la procedura d'asilo e la procedura d'estradizione",
+      "botschaftKey": "BOTSCHAFT-2010-264",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/137/de",
+      "sha": "e99c0df4d2bc316b0398f7ac901584c42966c0b2488288b7046bc932b6fd547e"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.31",
+      "sha": "f0c7821164d995821a53714e3ec688ab028e820da7afd6e58f937094908a8da2"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2010-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.31",
+      "sha": "053fd9abd2c3c1e8d4f4e434f3770f6f2154b6b52bbe79652a73a35fa7025218"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2008-12-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.31",
+      "sha": "ae589e001c319d31a701c14f50a471fafc902acfdf2c27ae2d1b6cdf2f922892"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2008-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/765",
+      "dateDocument": "2007-10-24",
+      "roFundstelle": "AS 2007 765",
+      "titelDe": "Verordnung über die vollständige Inkraftsetzung der Änderung vom 16. Dezember 2005 des Asylgesetzes",
+      "titelFr": "Ordonnance concernant la mise en vigueur totale de la modification du 16 décembre 2005 de la loi sur l'asile",
+      "titelIt": "Ordinanza sull'entrata in vigore completa della modifica del 16 dicembre 2005 della legge sull'asilo",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/765/de",
+      "sha": "9349c510e54ed53a883325133aef7285714427bfee714953362ffa9af1b66601"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2008-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/766",
+      "dateDocument": "2007-10-24",
+      "roFundstelle": "AS 2007 766",
+      "titelDe": "Verordnung über die vollständige Inkraftsetzung der Änderung des Bundesgesetzes vom 16. Dezember 2005 über die Krankenversicherung",
+      "titelFr": "Ordonnance concernant la mise en vigueur totale de la modification du 16 décembre 2005 de la loi fédérale sur l'assurance-maladie (LAMal)",
+      "titelIt": "Ordinanza sull'entrata in vigore completa della modifica del 16 dicembre 2005 della legge federale sull'assicurazione malattie",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/766/de",
+      "sha": "ff4d69bad0c32a5c5a239f12d657e5001783ffea09402ab058357d4a6c11cc49"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2007-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/727",
+      "dateDocument": "2005-12-16",
+      "roFundstelle": "AS 2006 727",
+      "titelDe": "Asylgesetz (AsylG)",
+      "titelFr": "Loi sur l'asile (LAsi)",
+      "titelIt": "Legge sull'asilo (LAsi)",
+      "botschaftKey": "BOTSCHAFT-2002-1106",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/727/de",
+      "sha": "779d45b246bd7431a4062be84d369c5e32d226ff324edb84d3b3b3b204968572"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2006-05-29",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.31",
+      "sha": "0a7d5abf57fe9b7be7287028be49b3a5e7bea93ebea0ae0289c1cfc2fb7dd9db"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2005-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.31",
+      "sha": "f107855df5d063db496f0fe888f3cbc829e878ab38daf12532a821167ad243e7"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2004-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.31",
+      "sha": "50d856fed86a06e1af4f55fcad5639514dd53bc1bdaa032047d81809f5c3a637"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1999-10-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/358",
+      "dateDocument": "1998-06-26",
+      "roFundstelle": "AS 1999 358",
+      "titelDe": "Asylgesetz (AsylG)",
+      "titelFr": "Loi sur l'asile (LAsi)",
+      "titelIt": "Legge sull'asilo (LAsi)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/358/de",
+      "sha": "9c5735f3abab327800ed60880bb824dad7f768d512e4d8230d96a2a2b85d718e"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1981-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1980/1718_1718_1718",
+      "dateDocument": "1979-10-05",
+      "roFundstelle": "AS 1980 1718",
+      "titelDe": "Asylgesetz vom 5. Oktober 1979",
+      "titelFr": "Loi du 5 octobre 1979 sur l'asile",
+      "titelIt": "Legge del 5 ottobre 1979 sull'asilo",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1980/1718_1718_1718/de",
+      "sha": "055fb7408f04ea0ffb3a219e96a8cb11c56a0f4567c9779c39999f9a50076cc3"
+    }
+  ],
+  "sha": "717cfa6be21f14f8eb901a1456459557815f2aee0ce07f295ff455adb7a8a294"
+}

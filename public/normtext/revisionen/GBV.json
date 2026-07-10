@@ -1,0 +1,99 @@
+{
+  "erlassKey": "GBV",
+  "sr": "211.432.1",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/211.432.1",
+      "sha": "3e772670ca6b1f4eef8af2036c35bcef1a5b050486741b25b1fb0c0d9bad1447"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2023-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2021/918",
+      "dateDocument": "2021-12-10",
+      "roFundstelle": "AS 2021 918",
+      "titelDe": "Grundbuchverordnung (GBV)",
+      "titelFr": "Ordonnance sur le registre foncier (ORF)",
+      "titelIt": "Ordinanza sul registro fondiario (ORF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2021/918/de",
+      "sha": "58c3db2ecd0a350b094b17303f0565e14fc3db5ff27d29b8e8499000c89b397a"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2023-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2022/148",
+      "dateDocument": "2022-03-03",
+      "roFundstelle": "AS 2022 148",
+      "titelDe": "Grundbuchverordnung (GBV). Berichtigung (Betrifft nur den französischen Text)",
+      "titelFr": "Ordonnance sur le registre foncier (ORF). Erratum",
+      "titelIt": "Ordinanza sul registro fondiario (ORF). Correzione (Concerne soltanto il testo francese)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2022/148/de",
+      "sha": "db079661e120375f407f79526a6eccf92d5642244a0b727778930a58ffa540c2"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2020-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/556",
+      "dateDocument": "2019-09-20",
+      "roFundstelle": "AS 2019 556",
+      "titelDe": "Grundbuchverordnung (GBV)",
+      "titelFr": "Ordonnance sur le registre foncier (ORF)",
+      "titelIt": "Ordinanza sul registro fondiario (ORF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/556/de",
+      "sha": "958089b2c2e46b25940007e593904fb238ec67648af050e1e045055ca22a01f5"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2018-02-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/211.432.1",
+      "sha": "24edc9cf55e08b4fa39cffe6ed5ccfd9baad6ddd6c18f3aaf30c33843d69966c"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2017-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/211.432.1",
+      "sha": "31167d4c4fc9166a47cd756acb9bc70eadd4a368bb44430da964d565fbe2ad30"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2012-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/667",
+      "dateDocument": "2011-09-23",
+      "roFundstelle": "AS 2011 667",
+      "titelDe": "Grundbuchverordnung (GBV)",
+      "titelFr": "Ordonnance sur le registre foncier (ORF)",
+      "titelIt": "Ordinanza sul registro fondiario (ORF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/667/de",
+      "sha": "ba2c536df0c3ca289d2007bad9b8513d2d562550e18b0102c127ef75e71269fa"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2005-04-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/206",
+      "dateDocument": "2005-03-11",
+      "roFundstelle": "AS 2005 206",
+      "titelDe": "Verordnung betreffend das Grundbuch (GBV)",
+      "titelFr": "Ordonnance sur le registre foncier (ORF)",
+      "titelIt": "Regolamento per il registro fondiario (RRF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/206/de",
+      "sha": "e5e17f632134d4a40bf08367ec22bac411a73e99fd8643e01794d4ab5890c23c"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1912-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/26/167_163_163",
+      "dateDocument": "1910-02-22",
+      "roFundstelle": "AS 26 167",
+      "titelDe": "Verordnung vom 22. Februar 1910 betreffend das Grundbuch (GBV)",
+      "titelFr": "Ordonnance du 22 février 1910 sur le registre foncier (ORF)",
+      "titelIt": "Regolamento del 22 febbraio 1910 per il registro fondiario (RRF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/26/167_163_163/de",
+      "sha": "9172ebb28ab8d4e131db38f9eec5bcd01c0bf52eb7eb5c53afb6c0c94d53b2f0"
+    }
+  ],
+  "sha": "57df98b61e424604ef54284708f0a7c11a95589c44aef66299ec213aa98141e8"
+}

@@ -1,0 +1,81 @@
+{
+  "erlassKey": "VKKG",
+  "sr": "221.214.11",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2021-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2021/319",
+      "dateDocument": "2021-05-19",
+      "roFundstelle": "AS 2021 319",
+      "titelDe": "Verordnung zum Konsumkreditgesetz (VKKG)",
+      "titelFr": "Ordonnance relative à la loi fédérale sur le crédit à la consommation (OLCC)",
+      "titelIt": "Ordinanza concernente la legge sul credito al consumo (OLCC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2021/319/de",
+      "sha": "44969b78ad865b9b710f1c4dd20a41e627fa7e4994d9ae05393c0af395a6c77b"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2019-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/221.214.11",
+      "sha": "0050c625c12449938ed898479e95943c75c0319dd26a75760b542aaf75d3c172"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2019-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/221.214.11",
+      "sha": "99658d03b4f318c55d0f9bd234f018cb930d90856f23e46f79d1f31194667ccd"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2018-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/221.214.11",
+      "sha": "215757ea015f8551870b02f3bcfe9630db48871765963052095abd8f6344333b"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2017-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/221.214.11",
+      "sha": "c49bdda0a52e581bbde7116d294ef32d7d2f48ab98d65675a53b64cdad2cbd96"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2016-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/37",
+      "dateDocument": "2015-12-11",
+      "roFundstelle": "AS 2016 37",
+      "titelDe": "Verordnung zum Konsumkreditgesetz (VKKG)",
+      "titelFr": "Ordonnance relative à la loi fédérale sur le crédit à la consommation (OLCC)",
+      "titelIt": "Ordinanza concernente la legge sul credito al consumo (OLCC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/37/de",
+      "sha": "d9a5f95846347445a1b6f0e18ae9c09d32e11636c18d142d292ea61dadda3529"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2006-03-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/26",
+      "dateDocument": "2005-11-23",
+      "roFundstelle": "AS 2006 26",
+      "titelDe": "Verordnung zum Konsumkreditgesetz (VKKG)",
+      "titelFr": "Ordonnance relative à la loi fédérale sur le crédit à la consommation (OLCC)",
+      "titelIt": "Ordinanza concernente la legge sul credito al consumo (OLCC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/26/de",
+      "sha": "31b615b3d108c8da6e547b2ef756fc1caff8d17f80d04093743f323cdf5eb18d"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2003-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/594",
+      "dateDocument": "2002-11-06",
+      "roFundstelle": "AS 2002 594",
+      "titelDe": "Verordnung zum Konsumkreditgesetz (VKKG)",
+      "titelFr": "Ordonnance relative à la loi fédérale sur le crédit à la consommation (OLCC)",
+      "titelIt": "Ordinanza concernente la legge sul credito al consumo (OLCC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/594/de",
+      "sha": "7ac5260ba72cba11eb45ea7a0e1dc805bb8dfa3314bfce6b1ade2e0b2576485e"
+    }
+  ],
+  "sha": "72ee59f206bdb5d2d93a2f327b7f0f629c84a4eff351c5390f6fa13848308441"
+}

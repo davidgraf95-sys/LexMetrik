@@ -1,0 +1,70 @@
+{
+  "erlassKey": "FUSG",
+  "sr": "221.301",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/221.301",
+      "sha": "aca64ffa9d1cdf4d935709008030536cf21055e855a0dc63e1630ad18f0aebb5"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2014-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/221.301",
+      "sha": "b24550c24300a2a99e1eee1e85c8389e9e3a50f7af84478f41cca7a87d22303a"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2013-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/221.301",
+      "sha": "206981eb284f5e33765394446b987d9405262d5b70694d0f646ca1f3cd6f6519"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2012-09-11",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/563",
+      "dateDocument": "2012-08-29",
+      "roFundstelle": "AS 2012 563",
+      "titelDe": "Bundesgesetz über Fusion, Spaltung, Umwandlung und Vermögensübertragung (Fusionsgesetz, FusG) (Betrifft nur den italienischen Text)",
+      "titelFr": "Loi fédérale sur la fusion, la scission, la transformation et le transfert de patrimoine (Loi sur la fusion, LFus) (Ne concerne que le texte italien)",
+      "titelIt": "Legge federale sulla fusione, la scissione, la trasformazione e il trasferimento di patrimonio (Legge sulla fusione, LFus)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/563/de",
+      "sha": "32c416cf8a47664ea9a76ce3ad7229b08cfa901526f07f0c99e971bc95f9cabb"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2010-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/221.301",
+      "sha": "cb1aa155fde18b95a7784ab6dc89c523b9d5d3877c6a1331fc0147d17a05d44a"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2008-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/221.301",
+      "sha": "5aeb02405b49d33caccfdfd6d84bbddc113df41fc55527e964fd59b9bd50d777"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2007-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/221.301",
+      "sha": "1cd3d9c44d60998d820c8567f581febe389b12730202490d73d406d0d57d48ca"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2004-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/320",
+      "dateDocument": "2003-10-03",
+      "roFundstelle": "AS 2004 320",
+      "titelDe": "Bundesgesetz über Fusion, Spaltung, Umwandlung und Vermögensübertragung (Fusionsgesetz, FusG)",
+      "titelFr": "Loi fédérale sur la fusion, la scission, la transformation et le transfert de patrimoine (Loi sur la fusion, LFus)",
+      "titelIt": "Legge federale sulla fusione, la scissione, la trasformazione e il trasferimento di patrimonio (Legge sulla fusione, LFus)",
+      "botschaftKey": "BOTSCHAFT-2000-921",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/320/de",
+      "sha": "1df108b317e2943f5294d4876c2d85fa3191bc00b0723758c122510ab7608459"
+    }
+  ],
+  "sha": "44ae3586e7d48ec3342c17b9acd8a2cacfed805767dba4414aa0a10f1d49b7a9"
+}

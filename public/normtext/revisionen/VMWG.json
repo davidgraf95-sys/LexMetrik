@@ -1,0 +1,117 @@
+{
+  "erlassKey": "VMWG",
+  "sr": "221.213.11",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2025-10-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2025/191",
+      "dateDocument": "2025-03-21",
+      "roFundstelle": "AS 2025 191",
+      "titelDe": "Verordnung über die Miete und Pacht von Wohn- und Geschäftsräumen (VMWG)",
+      "titelFr": "Ordonnance sur le bail à loyer et le bail à ferme d’habitations et de locaux commerciaux (OBLF)",
+      "titelIt": "Ordinanza concernente la locazione e l’affitto di locali d’abitazione o commerciali (OLAL)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2025/191/de",
+      "sha": "c93ca19ac456242f3e308d8a3dbb7160348e15b8a2fcf86f7f9d057beb513b16"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/221.213.11",
+      "sha": "727b67247e09f99a3f32ef15873e172472bf7f7d86e7136f92df81dc78e5c465"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2020-06-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/302",
+      "dateDocument": "2020-04-29",
+      "roFundstelle": "AS 2020 302",
+      "titelDe": "Verordnung über die Miete und Pacht von Wohn- und Geschäftsräumen (VMWG)",
+      "titelFr": "Ordonnance sur le bail à loyer et le bail à ferme d'habitations et de locaux commerciaux (OBLF)",
+      "titelIt": "Ordinanza concernente la locazione e l'affitto di locali d'abitazione o commerciali (OLAL)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/302/de",
+      "sha": "ff2d8954b4f503a07312338bb240c379bc92055faecf0618562d2fa90da5a5b2"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2018-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/221.213.11",
+      "sha": "40016ad60f3a1bd49ed5e12b16496a790f2798ef39dae2c7743e38237631ca8c"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2014-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/68",
+      "dateDocument": "2014-01-15",
+      "roFundstelle": "AS 2014 68",
+      "titelDe": "Verordnung über die Miete und Pacht von Wohn- und Geschäftsräumen (VMWG)",
+      "titelFr": "Ordonnance sur le bail à loyer et le bail à ferme d'habitations et de locaux commerciaux (OBFL)",
+      "titelIt": "Ordinanza concernente la locazione e l'affitto di locali d'abitazione o commerciali (OLAL)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/68/de",
+      "sha": "b7a44d2ddd57dccc58b097e68a517c33837fbdf8d8a5978e90db22426b30dbcf"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2013-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/221.213.11",
+      "sha": "b93a9a6a6c3b1d83a38263b29eeca31732005f614a7ad9b0b7f6dfa889080792"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2011-12-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/702",
+      "dateDocument": "2011-10-26",
+      "roFundstelle": "AS 2011 702",
+      "titelDe": "Verordnung über die Miete und Pacht von Wohn- und Geschäftsräumen (VMWG)",
+      "titelFr": "Ordonnance sur le bail à loyer et le bail à ferme d'habitations et de locaux commerciaux (OBLF)",
+      "titelIt": "Ordinanza concernente la locazione e l'affitto di locali d'abitazione o commerciali (OLAL)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/702/de",
+      "sha": "56d2b3b2ee24f66011769531b1270b1086e9c283bb9ff8133fee06aef30a44c1"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/221.213.11",
+      "sha": "3d9c5184db2e1d9613ed40e4c37ebbca4c13c8fbadd1129ab7473f5131f28da4"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2008-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/909",
+      "dateDocument": "2007-11-28",
+      "roFundstelle": "AS 2007 909",
+      "titelDe": "Verordnung über die Miete und Pacht von Wohn- und Geschäftsräumen (VMWG)",
+      "titelFr": "Ordonnance sur le bail à loyer et le bail à ferme d'habitations et de locaux commerciaux (OBLF)",
+      "titelIt": "Ordinanza concernente la locazione e l'affitto di locali d'abitazione o commerciali (OLAL)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/909/de",
+      "sha": "10867e25ae1deb7bd2bbb6780525dbdc31454502a3536d81220e7bc7d8035b71"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1990-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1990/835_835_835",
+      "dateDocument": "1990-05-09",
+      "roFundstelle": "AS 1990 835",
+      "titelDe": "Verordnung vom 9. Mai 1990 über die Miete und Pacht von Wohn- und Geschäftsräumen (VMWG)",
+      "titelFr": "Ordonnance du 9 mai 1990 sur le bail à loyer et le bail à ferme d'habitations et de locaux commerciaux (OBLF)",
+      "titelIt": "Ordinanza del 9 maggio 1990 concernente la locazione e l'affitto di locali d'abitazione o commerciali (OLAL)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1990/835_835_835/de",
+      "sha": "ee4f520d97dcbcf14f8f286f79d9e17fb397cb0fdb84881dfccb2efe64ca7f30"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1972-07-14",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1972/1559_1590_1762",
+      "dateDocument": "1972-07-10",
+      "roFundstelle": "AS 1972 1559",
+      "titelDe": "Verordnung vom 10. Juli 1972 über Massnahmen gegen Missbräuche im Mietwesen",
+      "titelFr": "Ordonnance du 10 juillet 1972 concernant des mesures contre les abus dans le secteur locatif",
+      "titelIt": "Ordinanza del 10 luglio 1972 concernente provvedimenti contro gli abusi in materia di locazione",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1972/1559_1590_1762/de",
+      "sha": "ca1007d631ea0d3eabe3600f6ef39a651070eb4bd6bc2650318302ead80d34c1"
+    }
+  ],
+  "sha": "c1bcaa6bcd8cb5bb7edab21683d4c3a40dbcb461dec340522555187ec1868261"
+}

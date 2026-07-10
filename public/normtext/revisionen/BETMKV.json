@@ -1,0 +1,135 @@
+{
+  "erlassKey": "BETMKV",
+  "sr": "812.121.1",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/812.121.1",
+      "sha": "7214c1ef661da642525877591d5c441593e2b68efcbc1e5341e70e1463019be4"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2022-08-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2022/386",
+      "dateDocument": "2022-06-22",
+      "roFundstelle": "AS 2022 386",
+      "titelDe": "Verordnung über die Betäubungsmittelkontrolle (Betäubungsmittelkontrollverordnung, BetmKV)",
+      "titelFr": "Ordonnance sur le contrôle des stupéfiants (OCStup)",
+      "titelIt": "Ordinanza sul controllo degli stupefacenti (OCStup)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2022/386/de",
+      "sha": "355c3b198a62e0ad7e048b598ca6cda50e1b5025c1c66068847688c632a681c6"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2022-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/812.121.1",
+      "sha": "d31dfa31e11e181909dbf9b89726751f339381851ba421471542c91d1b966692"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2013-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/812.121.1",
+      "sha": "7bc4d851c5c3630c5e0ae01d5ac36a86eb6923551ccd36e83081ff9ffed06c04"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2011-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/362",
+      "dateDocument": "2011-05-25",
+      "roFundstelle": "AS 2011 362",
+      "titelDe": "Verordnung über die Betäubungsmittelkontrolle (Betäubungsmittelkontrollverordnung, BetmKV)",
+      "titelFr": "Ordonnance sur le contrôle des stupéfiants (OCStup)",
+      "titelIt": "Ordinanza sul controllo degli stupefacenti (OCStup)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/362/de",
+      "sha": "58c01291b288c8c2b04568caa6b88d8e36dd62fd07aeb84a579901102c535f2d"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2011-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/520",
+      "dateDocument": "2011-08-09",
+      "roFundstelle": "AS 2011 520",
+      "titelDe": "Verordnung über die Betäubungsmittelkontrolle (Betäubungsmittelkontrollverordnung, BetmKV)",
+      "titelFr": "Ordonnance sur le contrôle des stupéfiants (OCStup)",
+      "titelIt": "Ordinanza sul controllo degli stupefacenti (OCStup)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/520/de",
+      "sha": "ff02890e8c04e3d4db69235b91db3f6edf669c5e2c1fb57d648beb35647e3c4d"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2008-12-12",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/772",
+      "dateDocument": "2007-01-31",
+      "roFundstelle": "AS 2008 772",
+      "titelDe": "Verordnung über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelverordnung, BetmV)",
+      "titelFr": "Ordonnance sur les stupéfiants et les substances psychotropes (Ordonnance sur les stupéfiants, OStup)",
+      "titelIt": "Ordinanza sugli stupefacenti e le sostanze psicotrope (Ordinanza sugli stupefacenti, OStup)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/772/de",
+      "sha": "b20f59e820e75e87ef4cc617cc43dd545dd9cbe72fe1d3541cbf615dcd5bf7f6"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2008-12-12",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/773",
+      "dateDocument": "2008-11-26",
+      "roFundstelle": "AS 2008 773",
+      "titelDe": "Verordnung über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelverordnung, BetmV)",
+      "titelFr": "Ordonnance sur les stupéfiants et les substances psychotropes (Ordonnance sur les stupéfiants, OStup)",
+      "titelIt": "Ordinanza sugli stupefacenti e le sostanze psicotrope (Ordinanza sugli stupefacenti, OStup)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/773/de",
+      "sha": "746802ea9c23966a78c8a23ae8750c581d9a6abe430d95077c4aa23f94ba98f1"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2004-09-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/591",
+      "dateDocument": "2004-08-18",
+      "roFundstelle": "AS 2004 591",
+      "titelDe": "Verordnung über die Änderung von Erlassen in der Heilmittelgesetzgebung",
+      "titelFr": "Ordonnance concernant la modification d'actes relevant de la législation sur les produits thérapeutiques",
+      "titelIt": "Ordinanza che modifica atti legislativi nel settore della legislazione per gli agenti terapeutici",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/591/de",
+      "sha": "add601ca7d4f579ebc60cb1bb524faebfbf84b5196b674ce74291a96db10ab0c"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2002-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/470",
+      "dateDocument": "2001-10-17",
+      "roFundstelle": "AS 2001 470",
+      "titelDe": "Verordnung über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelverordnung, BetmV)",
+      "titelFr": "Ordonnance sur les stupéfiants et les substances psychotropes (Ordonnance sur les stupéfiants, OStup)",
+      "titelIt": "Ordinanza sugli stupefacenti e le sostanze psicotrope (Ordinanza sugli stupefacenti, OStup)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/470/de",
+      "sha": "8e808b9fce02449b5b6a5f83c18a9b5ed86b42f0fe4b9202a29baefebf0c4024"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1996-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1996/1679_1679_1679",
+      "dateDocument": "1996-05-29",
+      "roFundstelle": "AS 1996 1679",
+      "titelDe": "Verordnung vom 29. Mai 1996 über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelverordnung, BetmV)",
+      "titelFr": "Ordonnance du 29 mai 1996 sur les stupéfiants et les substances psychotropes (Ordonnance sur les stupéfiants, Ostup)",
+      "titelIt": "Ordinanza del 29 maggio 1996 sugli stupefacenti e le sostanze psicotrope (Ordinanza sugli stupefacenti, O Stup)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1996/1679_1679_1679/de",
+      "sha": "ccfd02acceadb7bb619c09b8042119da5cf809fb89c2d309ea71e00215c910d1"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1952-06-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1952/252_252_256",
+      "dateDocument": "1952-03-04",
+      "roFundstelle": "AS 1952 252",
+      "titelDe": "Verordnung vom 4. März 1952 über die Betäubungsmittel (BetmV)",
+      "titelFr": "Ordonnance du 4 mars 1952 sur les stupéfiants (O Stup.)",
+      "titelIt": "Ordinanza del 4 marzo 1952 sugli stupefacenti (Ostup.)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1952/252_252_256/de",
+      "sha": "07f898817f07cc395c64b8d02c9637b4a1da5971229f0ab3637e4d6359e92feb"
+    }
+  ],
+  "sha": "a166c58653e93f25c45f7991e8ea52b41de78ddd7b0bb2642d532a36bcb57a20"
+}

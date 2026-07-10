@@ -1,0 +1,90 @@
+{
+  "erlassKey": "FINFRAG",
+  "sr": "958.1",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2029-01-01",
+      "nichtKonsolidiert": true,
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/958.1",
+      "sha": "e86335c00d293157cfa31c464466283fcaf18dff4957474954ab3eb519c6ce6e"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2024-02-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2024/33",
+      "dateDocument": "2023-09-29",
+      "roFundstelle": "AS 2024 33",
+      "titelDe": "Bundesgesetz über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (Finanzmarktinfrastrukturgesetz, FinfraG)",
+      "titelFr": "Loi fédérale sur les infrastructures des marchés financiers et le comportement sur le marché en matière de négociation de valeurs mobilières et de dérivés (Loi sur l’infrastructure des marchés financiers, LIMF)",
+      "titelIt": "Legge federale sulle infrastrutture del mercato finanziario e il comportamento sul mercato nel commercio di valori mobiliari e derivati (Legge sull’infrastruttura finanziaria, LInFi)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2024/33/de",
+      "sha": "e4b6a7fc1bd1952d165f30adab62b195133d007a5fb3ea623d5b992a2481cb06"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2024-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2023/731",
+      "dateDocument": "2023-03-17",
+      "roFundstelle": "AS 2023 731",
+      "titelDe": "Bundesgesetz über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (Finanzmarktinfrastrukturgesetz, FinfraG) (Anerkennung ausländischer Handelsplätze für den Handel mit Beteiligungspapieren von Gesellschaften mit Sitz in der Schweiz)",
+      "titelFr": "Loi fédérale sur les infrastructures des marchés financiers et le comportement sur le marché en matière de négociation de valeurs mobilières et de dérivés (Loi sur l’infrastructure des marchés financiers, LIMF) (Reconnaissance de plates-formes étrangères pour la négociation de titres de participation de sociétés ayant leur siège en Suisse)",
+      "titelIt": "Legge federale sulle infrastrutture del mercato finanziario e il comportamento sul mercato nel commercio di valori mobiliari e derivati (Legge sull’infrastruttura finanziaria, LInFi) (Riconoscimento di sedi di negoziazione estere per il commercio di titoli di partecipazione di società con sede in Svizzera)",
+      "botschaftKey": "BOTSCHAFT-2022-1673",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2023/731/de",
+      "sha": "3fcbc476dd3386be6c9c870d0b8bd506342c917132ec5a91e5287dbdd9228b87"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/958.1",
+      "sha": "47c190bb2c59f72428e55ed573ba016eeb961cd49f9f1b8ee0dedeef47f68581"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2021-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/958.1",
+      "sha": "947b92abebd9ea050bd7d7fb9d44e5c05a17571312cf1673f0d9aa49f9e49564"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2020-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/958.1",
+      "sha": "b12de80fdca703579cd75c8bf0a57dd6933c6480c07a4220ff2db7eaf776b0b2"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2019-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/958.1",
+      "sha": "5ef5f7d4a23595b74f3182e49470de22cc73a513d0624865625dc46714701104"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2017-08-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/428",
+      "dateDocument": "2017-07-05",
+      "roFundstelle": "AS 2017 428",
+      "titelDe": "Verordnung über die abschliessende Inkraftsetzung des Finanzmarktinfrastrukturgesetzes",
+      "titelFr": "Ordonnance portant dernière mise en vigueur partielle de la loi sur l'infrastructure des marchés financiers",
+      "titelIt": "Ordinanza sull'entrata in vigore integrale della legge sull'infrastruttura finanziaria",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/428/de",
+      "sha": "e7185ae63478d9d888f3221f687e71f88e12708a4a02752dedee0db6e0a479d5"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2016-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/853",
+      "dateDocument": "2015-06-19",
+      "roFundstelle": "AS 2015 853",
+      "titelDe": "Bundesgesetz über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (Finanzmarktinfrastrukturgesetz, FinfraG)",
+      "titelFr": "Loi fédérale sur les infrastructures des marchés financiers et le comportement sur le marché en matière de négociation de valeurs mobilières et de dérivés (Loi sur l'infrastructure des marchés financiers, LIMF)",
+      "titelIt": "Legge federale sulle infrastrutture del mercato finanziario e il comportamento sul mercato nel commercio di valori mobiliari e derivati (Legge sull'infrastruttura finanziaria, LInFi)",
+      "botschaftKey": "BOTSCHAFT-2014-1633",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/853/de",
+      "sha": "6322dadf20a640f0614b1bcd7843d6dc0262cbd4db741d4f2fbcd7587bea7ca5"
+    }
+  ],
+  "sha": "da3d11fa4dd3d11dbbf167dae850b45f2131a6e68828b016742f2f86103614ee"
+}

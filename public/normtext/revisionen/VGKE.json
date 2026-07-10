@@ -1,0 +1,45 @@
+{
+  "erlassKey": "VGKE",
+  "sr": "173.320.2",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2010-04-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/150",
+      "dateDocument": "2009-08-20",
+      "roFundstelle": "AS 2010 150",
+      "titelDe": "Reglement über die Kosten und Entschädigungen vor dem Bundesverwaltungsgericht (VGKE)",
+      "titelFr": "Règlement concernant les frais, dépens et indemnités fixés par le Tribunal administratif fédéral (FITAF)",
+      "titelIt": "Regolamento sulle tasse e sulle spese ripetibili nelle cause dinanzi al Tribunale amministrativo federale (TS-TAF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/150/de",
+      "sha": "c6bfaf00af2dd5d2db64aaa3f825cdfc97042bd5d24c5704de2e7bb18ed8e98a"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2008-06-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/321",
+      "dateDocument": "2008-02-21",
+      "roFundstelle": "AS 2008 321",
+      "titelDe": "Reglement über die Kosten und Entschädigungen vor dem Bundesverwaltungsgericht (VGKE)",
+      "titelFr": "Règlement concernant les frais, dépens et indemnités fixés par le Tribunal administratif fédéral (FITAF)",
+      "titelIt": "Regolamento sulle tasse e sulle spese ripetibili nelle cause dinanzi al Tribunale amministrativo federale (TS-TAF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/321/de",
+      "sha": "962fe8e886e0956f271a49f6043206474f4145157eaa8f2292f6a2b29c3d4abb"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2007-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/800",
+      "dateDocument": "2006-12-11",
+      "roFundstelle": "AS 2006 800",
+      "titelDe": "Reglement über die Kosten und Entschädigungen vor dem Bundesverwaltungsgericht (VGKE)",
+      "titelFr": "Règlement concernant les frais, dépens et indemnités fixés par le Tribunal administratif fédéral (FITAF)",
+      "titelIt": "Regolamento sulle tasse e sulle spese ripetibili nelle cause dinanzi al Tribunale amministrativo federale (TS-TAF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/800/de",
+      "sha": "d68209917a45a7126737a5b81b10fa07576c4314e7f91ce913fabc139ce7d28f"
+    }
+  ],
+  "sha": "5b8c819c6023cf835e18732c36b5bfd13694bba5afcee12364ac030a8a68725d"
+}

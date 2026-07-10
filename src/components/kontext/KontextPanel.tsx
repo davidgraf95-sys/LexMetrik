@@ -6,6 +6,7 @@ import {
 } from '../../lib/kontext';
 import { ladeLeitfallShard, artikelProEntscheid } from '../../lib/rechtsprechung/norm-index';
 import { botschaftenFuer, type BotschaftBezug } from '../../lib/materialien/botschaften';
+import { revisionenFuerNorm, revisionTitel, type RevisionAnsicht, type RevisionBezug } from '../../lib/normtext/revisionen';
 import { useLocale, fedlexLokalisiert } from '../locale';
 import { usePaneSteuerung } from '../layout/usePaneLayout';
 import { KantenChip } from '../verzahnung/KantenChip';
@@ -37,6 +38,7 @@ import {
 const MAX_ENTSCHEIDE = 8;
 const MAX_MATERIALIEN = 8;
 const MAX_BOTSCHAFTEN = 8;
+const MAX_REVISIONEN = 10;
 
 /** Korpus-Artikel-Token → Anzeige ('20_a' → '20a'). */
 function anzeigeArtikel(token: string): string {
@@ -152,6 +154,28 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false 
   const botschaftenLaden = typ === 'norm' && !botAktuell;
   const botschaftenFehler = botAktuell?.refs === null;
   const botschaften: BotschaftBezug[] = botAktuell?.refs ?? [];
+  // botschaftKey → Botschaft (aus den ohnehin geladenen Botschaften): der Revisions-
+  // Verweis «Botschaft ansehen» ohne zweiten Fetch (§15, Moat-Hebel 1: ein Bus).
+  const botschaftNachKey = new Map(botschaften.map((b) => [b.key, b]));
+
+  // Änderungen / Revisionen (Paket 5, W2·6-REV, Moat-Hebel 1): die AS/RO-Änderungs-
+  // erlasse zur Norm — die *tatsächliche* Änderung neben der *Absicht* (Botschaft),
+  // an DERSELBEN norm-verankerten Stelle. Nur Gesetz-Reader. Lazy aus dem Sidecar.
+  // `null` = Sidecar-Ladefehler (Fetch-Fehler ≠ leer, Finding 15).
+  const [revGeladen, setRevGeladen] = useState<{ key: string; ans: RevisionAnsicht | null } | null>(null);
+  useEffect(() => {
+    if (typ !== 'norm') return;
+    const keys = normKeysKey ? normKeysKey.split(',') : [];
+    let lebt = true;
+    revisionenFuerNorm(keys).then((ans) => { if (lebt) setRevGeladen({ key: normKeysKey, ans }); });
+    return () => { lebt = false; };
+  }, [typ, normKeysKey]);
+  const revAktuell = typ === 'norm' && revGeladen?.key === normKeysKey ? revGeladen : null;
+  const revLaden = typ === 'norm' && !revAktuell;
+  const revFehler = revAktuell?.ans === null;
+  const alleRevisionen: RevisionBezug[] = revAktuell?.ans?.revisionen ?? [];
+  const revAenderungen = alleRevisionen.filter((r) => r.art === 'aenderung');
+  const revMarker = alleRevisionen.filter((r) => r.art === 'sammelerlass-marker');
 
   // «via Art. N»-Sublabels (V1.2, Magic Moment 5): nur im Gesetz-Reader (genau
   // EIN normKey) aus dem erlass-lokalen Shard invertiert — kein neuer Datenpfad,
@@ -209,6 +233,7 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false 
   const hatSync = normen.length > 0 || alleMaterialien.length > 0 || werkzeuge.length > 0;
   const istLeer = !zusatzGruppen && !hatSync && !entscheideLaden && !softLawLaden
     && !botschaftenLaden && !botschaftenFehler && botschaften.length === 0
+    && !revLaden && !revFehler && alleRevisionen.length === 0
     && (entscheide?.length ?? 0) === 0;
 
   return (
@@ -272,6 +297,80 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false 
                     <p className="text-micro text-ink-500">
                       … und <span className="num">{botschaften.length - MAX_BOTSCHAFTEN}</span> weitere. Vollständige Liste über die amtliche Quelle (Fedlex).
                     </p>
+                  )}
+                </>
+              )}
+            </KontextGruppe>
+          )}
+
+          {/* Änderungen / Revisionen — AS/RO-Änderungserlasse (Paket 5, W2·6-REV,
+              Moat-Hebel 1). Die tatsächliche Änderung neben der Absicht (Botschaft),
+              an derselben Stelle. §8: maschinell aus dem amtlichen Fedlex-Graphen;
+              massgeblich bleibt die amtliche Sammlung. */}
+          {(revFehler || alleRevisionen.length > 0) && (
+            <KontextGruppe titel="Änderungen / Revisionen" richtung="Amtliche Sammlung"
+              anzahl={revAenderungen.length}
+              hinweis={revFehler
+                ? undefined
+                : <><span className="num">{revAenderungen.length}</span> Änderungs­erlass{revAenderungen.length === 1 ? '' : 'e'} (AS/RO) — maschinell über den amtlichen Fedlex-Graphen zusammengestellt (verlässlich ab ~2000); massgeblich bleibt die amtliche Sammlung.</>}>
+              {revFehler ? (
+                <p className="text-body-s text-warn-700">
+                  Änderungsverlauf konnte nicht geladen werden. Amtliche Quelle:{' '}
+                  <a href="https://www.fedlex.admin.ch" target="_blank" rel="noopener noreferrer" className="text-brass-700 hover:underline">Fedlex</a>.
+                </p>
+              ) : (
+                <>
+                  <ul className="flex flex-col gap-1.5">
+                    {revAenderungen.slice(0, MAX_REVISIONEN).map((r) => {
+                      const titel = revisionTitel(r, locale as 'de' | 'fr' | 'it');
+                      const bot = r.botschaftKey ? botschaftNachKey.get(r.botschaftKey) : undefined;
+                      return (
+                        <li key={r.ocUri} className="text-body-s">
+                          <a href={fedlexLokalisiert(r.quelleUrl, locale)} target="_blank" rel="noopener noreferrer"
+                            className="no-underline hover:text-brass-700">
+                            <span className="num text-ink-500">{kurzDatum(r.dateEntryInForce)}</span>
+                            {titel && <>{' — '}<span className="font-medium">{titel}</span></>}
+                          </a>
+                          {r.roFundstelle && <span className="num text-micro text-ink-500"> · {r.roFundstelle}</span>}
+                          {bot && (
+                            <>
+                              {' '}
+                              <a href={fedlexLokalisiert(bot.quelleUrl, locale)} target="_blank" rel="noopener noreferrer"
+                                title="Zugehörige Botschaft des Bundesrates"
+                                className="text-micro text-ink-500 hover:text-brass-700">· Botschaft ↗</a>
+                            </>
+                          )}
+                          {r.nichtKonsolidiert && (
+                            <span className="block text-micro text-warn-700">
+                              In Kraft, aber noch nicht in den geltenden Text konsolidiert.
+                            </span>
+                          )}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                  {revAenderungen.length > MAX_REVISIONEN && (
+                    <p className="text-micro text-ink-500">
+                      … und <span className="num">{revAenderungen.length - MAX_REVISIONEN}</span> weitere. Vollständige Liste über die amtliche Sammlung (Fedlex).
+                    </p>
+                  )}
+                  {revMarker.length > 0 && (
+                    <details className="group">
+                      <summary className="cursor-pointer list-none text-body-s text-ink-500 hover:text-brass-700 [&::-webkit-details-marker]:hidden">
+                        <span aria-hidden className="mr-1 inline-block transition-transform group-open:rotate-90">›</span>
+                        <span className="num">{revMarker.length}</span> weitere Änderung{revMarker.length === 1 ? '' : 'en'} über Sammelerlasse anderer Erlasse
+                      </summary>
+                      <ul className="mt-1.5 flex flex-col gap-1.5 border-l border-line pl-3">
+                        {revMarker.map((r) => (
+                          <li key={`${r.art}:${r.dateEntryInForce}`} className="text-body-s text-ink-500">
+                            <span className="num">{kurzDatum(r.dateEntryInForce)}</span>
+                            {' — '}Änderung über einen Sammelerlass ·{' '}
+                            <a href={r.quelleUrl} target="_blank" rel="noopener noreferrer" className="hover:text-brass-700">amtliche Sammlung ↗</a>
+                            {r.nichtKonsolidiert && <span className="text-warn-700"> · noch nicht konsolidiert</span>}
+                          </li>
+                        ))}
+                      </ul>
+                    </details>
                   )}
                 </>
               )}

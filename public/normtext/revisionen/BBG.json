@@ -1,0 +1,181 @@
+{
+  "erlassKey": "BBG",
+  "sr": "412.10",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2026-10-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2026/342",
+      "dateDocument": "2025-12-19",
+      "roFundstelle": "AS 2026 342",
+      "titelDe": "Bundesgesetz über die Berufsbildung (Berufsbildungsgesetz, BBG)",
+      "titelFr": "Loi fédérale sur la formation professionnelle (LFPr)",
+      "titelIt": "Legge federale sulla formazione professionale (Legge sulla formazione professionale, LFPr)",
+      "nichtKonsolidiert": true,
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2026/342/de",
+      "sha": "171392a79bd554803584b7a6c845256a9bb1e932585d1cae6d56e1ac25f9a1f5"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2025-03-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2025/75",
+      "dateDocument": "2024-09-27",
+      "roFundstelle": "AS 2025 75",
+      "titelDe": "Bundesgesetz über die Berufsbildung (Berufsbildungsgesetz, BBG)",
+      "titelFr": "Loi fédérale sur la formation professionnelle (LFPr)",
+      "titelIt": "Legge federale sulla formazione professionale (Legge sulla formazione professionale, LFPr)",
+      "botschaftKey": "BOTSCHAFT-2024-900",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2025/75/de",
+      "sha": "ba060ab6017b51a34d0f6214bffe414edcce187d20163c34f65112ca7220f50a"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/412.10",
+      "sha": "af1144124b5ac1cb0af139912e22cf3c60d68e97c1e003079bfb67addd0c4a5b"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2022-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/412.10",
+      "sha": "620e2597deb0cbb25c4a550b5926f4aa10934b0d4aa60e677385621917a8e2f3"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2022-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/412.10",
+      "sha": "bd7b0892740f5f260ea9bb413c617e7eaaa8662b39fcd39e67033280c89f8f9f"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2021-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/412.10",
+      "sha": "4144829227568e72a3f36d01a86b7f4285bd4982afd8a9e6a6563e485f93a7da"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2019-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/412.10",
+      "sha": "e84150e684fd305b37bcc793ff51e8542786db67f5170229111352853e6dd2a0"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2018-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/564",
+      "dateDocument": "2016-12-16",
+      "roFundstelle": "AS 2017 564",
+      "titelDe": "Bundesgesetz über die Berufsbildung (Berufsbildungsgesetz, BBG)",
+      "titelFr": "Loi fédérale sur la formation professionnelle (LFPr)",
+      "titelIt": "Legge federale sulla formazione professionale (Legge sulla formazione professionale, LFPr)",
+      "botschaftKey": "BOTSCHAFT-2016-576",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/564/de",
+      "sha": "3e300dce204b01278505f77e737f4504ba0425966e7396117096e3838e7ff1d4"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2017-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/412.10",
+      "sha": "582e742c3665560ee92159a70b605457f5828ed00896aa365847c65c38dd3614"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2016-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/412.10",
+      "sha": "224e73624baa6f2eaeacd2cee0a2c4565fa3be4ad047530f45440acd52fb5428"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2015-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/412.10",
+      "sha": "18210eda3b377b36c10b2d56f03c3436a5c2b5e93233eb6e661770bdbdb5ab4c"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2013-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/412.10",
+      "sha": "be53c041c57c7d27b0eb5751aa03854bba2bb92781ae32dba40c86e1142eb7b9"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2012-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/412.10",
+      "sha": "fc6d2d7fb359f98a10c284b594e918eafb672c913d3980dcaf23898a00ad1f7b"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2012-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/412.10",
+      "sha": "eebae4f85e46c81cad72903e47b56ff065cf9c5967b99511dfceb185a9cc3509"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/412.10",
+      "sha": "a3431b3ed90f1dea7847214928a841b808fdb961ba77da28bc01de6a995bf5c0"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2008-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/412.10",
+      "sha": "e4b74a3510de810eaee0c0d426e83df23e0945f9e97ac81487f377ca9cfd9265"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2007-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/412.10",
+      "sha": "e3528f17bbefa82d7e0c266f99fa1de8bb33f9b6fc0e07b05f0c1f8ad5928845"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2005-10-05",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/412.10",
+      "sha": "59cd062a413343fbdd70f637f7422f5c226b0856c887d34ea403ad1341d53225"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2005-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/412.10",
+      "sha": "3f8fecada38013a0aada4f0820830a70f2db7c1f1bff80b18ac2864723234346"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2004-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/674",
+      "dateDocument": "2002-12-13",
+      "roFundstelle": "AS 2003 674",
+      "titelDe": "Bundesgesetz über die Berufsbildung (Berufsbildungsgesetz, BBG)",
+      "titelFr": "Loi fédérale sur la formation professionnelle (LFPr)",
+      "titelIt": "Legge federale sulla formazione professionale (Legge sulla formazione professionale, LFPr)",
+      "botschaftKey": "BOTSCHAFT-2000-1232",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/674/de",
+      "sha": "61e5bc53cb5ad847e91662facfa86ec299f8125c8eaceedb50ba1e0c9e9dad72"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1980-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1979/1687_1687_1687",
+      "dateDocument": "1978-04-19",
+      "roFundstelle": "AS 1979 1687",
+      "titelDe": "Bundesgesetz vom 19. April 1978 über die Berufsbildung (BBG)",
+      "titelFr": "Loi fédérale du 19 avril 1978 sur la formation professionnelle (LFPr)",
+      "titelIt": "Legge federale del 19 aprile 1978 sulla formazione professionale (LFPr)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1979/1687_1687_1687/de",
+      "sha": "803e460f0bef3a735f105115b82597ddc6f48590a2072cc76355d5591a4b8a93"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1965-04-15",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1965/321_325_321",
+      "dateDocument": "1963-09-20",
+      "roFundstelle": "AS 1965 321",
+      "titelDe": "Bundesgesetz vom 20. September 1963 über die Berufsbildung",
+      "titelFr": "Loi fédérale du 20 septembre 1963 sur la formation professionnelle",
+      "titelIt": "Legge federale del 20 settembre 1963 sulla formazione professionale",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1965/321_325_321/de",
+      "sha": "3a378561d6fb932e2c2e198349e2a90487366898675e886fb3bbd6ff0fcbfb53"
+    }
+  ],
+  "sha": "9685a2da3516c7ea0b463ac1d150271d41cea89d4de60630a06935a958908f6b"
+}

@@ -1,0 +1,100 @@
+{
+  "erlassKey": "PUBLG",
+  "sr": "170.512",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/170.512",
+      "sha": "0b8e77efbfde98cb00b1da09735f305cad147a88aabc90543dba6f3da77b1556"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2022-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2021/693",
+      "dateDocument": "2021-11-10",
+      "roFundstelle": "AS 2021 693",
+      "titelDe": "Verordnung vom 10. November 2021 über die abschliessende Inkraftsetzung der Änderung vom 26. September 2014 des Publikationsgesetzes",
+      "titelFr": "Ordonnance du 10 novembre 2021 portant dernière mise en œuvre partielle de la modification du 26 septembre 2014 de la loi sur les publications officielles",
+      "titelIt": "Ordinanza del 10 novembre 2021 concernente l’entrata in vigore integrale della modifica del 26 settembre 2014 della legge sulle pubblicazioni ufficiali",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2021/693/de",
+      "sha": "75a1b340fe98b357a8a3916d7e56164bb56d1890534b4abe161078a545d3b363"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2018-11-26",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/170.512",
+      "sha": "1a7f302208792187edae560f795b45b368339a0db1720e7b2ab65f10f0fbc5f6"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2018-06-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/170.512",
+      "sha": "6eb30e7a483004fb6d2002a0fa8916d7a0fa9c848863e2e0c05229dc48144a81"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2016-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/170.512",
+      "sha": "93c3bcc107573d299a26d6e6b5a6087e3d07a14368a013ddbdd5ddd0bb625f99"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2016-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/669",
+      "dateDocument": "2014-09-26",
+      "roFundstelle": "AS 2015 669",
+      "titelDe": "Bundesgesetz über die Sammlungen des Bundesrechts und das Bundesblatt (Publikationsgesetz, PublG)",
+      "titelFr": "Loi fédérale sur les recueils du droit fédéral et la Feuille fédérale (Loi sur les publications officielles, LPubl)",
+      "titelIt": "Legge federale sulle raccolte del diritto federale e sul Foglio federale (Legge sulle pubblicazioni ufficiali, LPubl)",
+      "botschaftKey": "BOTSCHAFT-2013-1331",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/669/de",
+      "sha": "a618c91db3fb5b71372ff8093e22e81db9694eb7b7993b5a98f68fa0f883a323"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2010-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/170.512",
+      "sha": "c594ee9644841cdffb5983533f9018506696605fbde2df1690bf72679fd8fd5b"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2005-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/745",
+      "dateDocument": "2004-06-18",
+      "roFundstelle": "AS 2004 745",
+      "titelDe": "Bundesgesetz über die Sammlungen des Bundesrechts und das Bundesblatt (Publikationsgesetz, PublG)",
+      "titelFr": "Loi fédérale sur les recueils du droit fédéral et la Feuille fédérale (Loi sur les publications officielles, LPubl)",
+      "titelIt": "Legge federale sulle raccolte del diritto federale e sul Foglio federale (Legge sulle pubblicazioni ufficiali, LPubb)",
+      "botschaftKey": "BOTSCHAFT-2003-1274",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/745/de",
+      "sha": "a33d0903d20c75aa7a823a3583a5f308d20e68834a0b33ce887623f43090f407"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1987-05-15",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1987/600_600_600",
+      "dateDocument": "1986-03-21",
+      "roFundstelle": "AS 1987 600",
+      "titelDe": "Bundesgesetz vom 21. März 1986 über die Gesetzessammlungen und das Bundesblatt (Publikationsgesetz)",
+      "titelFr": "Loi fédérale du 21 mars 1986 sur les recueils de lois et la Feuille fédérale (Loi sur les publications officielles)",
+      "titelIt": "Legge federale del 21 marzo 1986 sulle raccolte delle leggi e sul Foglio federale (Legge sulle pubblicazioni ufficiali)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1987/600_600_600/de",
+      "sha": "afc278889ac207ac4cdde888615296f7cf7a4e62a58369f95fd8d9d741370b81"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1849-03-05",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/I/275_275_439",
+      "dateDocument": "1849-03-05",
+      "titelDe": "Verordnung vom 5. März 1849 betreffend die Herausgabe eines Bundesblattes",
+      "titelFr": "Ordonnance du 5 mars 1849 relative à la publication d'une Feuille fédérale",
+      "titelIt": "Ordinanza del 5 marzo 1849 sulla pubblicazione di un foglio federale",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/I/275_275_439/de",
+      "sha": "a6ab3c5bc96dd839a0b686f54cf1e54e871c45868dcc54563bd79364b58b5783"
+    }
+  ],
+  "sha": "0b9a1c04ba9b61cb6bdd94504a076bc1c783206f7f48c09b9fd2750d66e6562d"
+}

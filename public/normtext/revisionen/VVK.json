@@ -1,0 +1,63 @@
+{
+  "erlassKey": "VVK",
+  "sr": "832.105",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/832.105",
+      "sha": "a6f214d46e846959c1ba72d1e7ced2f8304ad698bfde4a87e0e0a2eac99851ea"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2022-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/832.105",
+      "sha": "a244f45372658fe6f911e117fd0475b76b7e7b712699867317932326e08fa4eb"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2009-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/844",
+      "dateDocument": "2008-11-26",
+      "roFundstelle": "AS 2008 844",
+      "titelDe": "Verordnung über die Versichertenkarte für die obligatorische Krankenpflegeversicherung (VVK)",
+      "titelFr": "Ordonnance sur la carte d'assuré pour l'assurance obligatoire des soins (OCA)",
+      "titelIt": "Ordinanza sulla tessera d'assicurato per l'assicurazione obbligatoria delle cure medico-sanitarie (OTeA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/844/de",
+      "sha": "27521ed8876e027a3992eb9912034ea02b336f8ee68deaddc9d1ae217bd89234"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2007-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/832.105",
+      "sha": "fcf649446cd837e7a40f5a2c5f2ab91dfbc5879cd5401411206ad05decef4d95"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2007-03-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/101",
+      "dateDocument": "2007-02-14",
+      "roFundstelle": "AS 2007 101",
+      "titelDe": "Verordnung über die Versichertenkarte für die obligatorische Krankenpflegeversicherung (VVK)",
+      "titelFr": "Ordonnance sur la carte d'assuré pour l'assurance obligatoire des soins (OCA)",
+      "titelIt": "Ordinanza sulla tessera d'assicurato per l'assicurazione obbligatoria delle cure medico-sanitarie (OTeA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/101/de",
+      "sha": "edbfe2db7aeabe2c16e5fe11de991fc1fea58a240d66308c4d4713847467538d"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2007-03-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/181",
+      "dateDocument": "2007-03-27",
+      "roFundstelle": "AS 2007 181",
+      "titelDe": "Verordnung über die Versichertenkarte für die obligatorische Krankenpflegeversicherung (VVK) (Betrifft nur den italienischen Text)",
+      "titelFr": "Ordonnance sur la carte d'assuré pour l'assurance obligatoire des soins (OCA) (Ne concerne que le texte italien)",
+      "titelIt": "Ordinanza sulla tessera d'assicurato per l'assicurazione obbligatoria delle cure medico-sanitarie (OTA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/181/de",
+      "sha": "e33dccb47be9defec63bf02d31dc8da0e5d761e79c5ddc54fb74054913d0b57b"
+    }
+  ],
+  "sha": "3d9c50cf8f5968cc7a19a654f663dcedda136f6872dbf6f5491b02efcf073acb"
+}

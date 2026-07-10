@@ -1,0 +1,119 @@
+{
+  "erlassKey": "FINMAG",
+  "sr": "956.1",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2027-01-01",
+      "nichtKonsolidiert": true,
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/956.1",
+      "sha": "5cb83e45971f40a7fd4472fa9f9a8c52fed2c3e62b709f36f4f0b35cdc9c1abc"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2025-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/956.1",
+      "sha": "e4cb1c79621860484956f1e94a37daac609e9aa5dacb889dd9e993a5b66e986f"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/956.1",
+      "sha": "8e46937994e5ca494ece1a004453505669bf1ba6fc95e01ed0dea76d29b9b5eb"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/956.1",
+      "sha": "7b0f692453e828994849f973c741eb3a3c5b980b7979a9e88277ba99f0887c9d"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/956.1",
+      "sha": "e2e9f74a00934f418805311364618fb88c1aa84fc5ae6dd6c5036453b959e5d5"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2022-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/956.1",
+      "sha": "c34b9495e498e79f011e33ed8e48d7e21317817c68fc84358f89eebbe8c409ad"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2020-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/956.1",
+      "sha": "e4102088bb990b17190d7fc34bf1aa10f3ea6dc6e118c54739526759ee79f5a4"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2019-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/956.1",
+      "sha": "32f9c3ce936c3ed55e1378dc73ee7185d0e64122e546bbdb37a3000e3838d5e8"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2016-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/956.1",
+      "sha": "180e3167fee5e0c48f49df50b6877213066027bd69a4208928ef7c82f6ba0361"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2015-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/956.1",
+      "sha": "fcab242c4166ad818d52a28b305c2675ad9a9fb61baae3808e8c380d32e20193"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2013-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/956.1",
+      "sha": "999f235ddcb2b617bfc29e83d06a18723c48417c4fff47b4561114fa505c8822"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2012-12-20",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/956.1",
+      "sha": "08b4171f812eedd88ba367e9f6a40da10a72708e022f898390dace66af7251a1"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2009-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/735",
+      "dateDocument": "2008-10-15",
+      "roFundstelle": "AS 2008 735",
+      "titelDe": "Verordnung über die vollständige Inkraftsetzung des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007",
+      "titelFr": "Ordonnance sur la mise en vigueur intégrale de la loi du 22 juin 2007 sur la surveillance des marchés financiers",
+      "titelIt": "Ordinanza concernente l'entrata in vigore integrale della legge del 22 giugno 2007 sulla vigilanza dei mercati finanziari",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/735/de",
+      "sha": "0eb27eb6f08679ecd26d7a3617677a30625d73c4ff1b27382355e2d6564d3e20"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2009-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/736",
+      "dateDocument": "2007-06-22",
+      "roFundstelle": "AS 2008 736",
+      "titelDe": "Bundesgesetz über die Eidgenössische Finanzmarktaufsicht (Finanzmarktaufsichtsgesetz, FINMAG)",
+      "titelFr": "Loi sur l'Autorité fédérale de surveillance des marchés financiers (Loi sur la surveillance des marchés financiers, LFINMA)",
+      "titelIt": "Legge federale concernente l'Autorità federale di vigilanza sui mercati finanziari (Legge sulla vigilanza dei mercati finanziari, LFINMA)",
+      "botschaftKey": "BOTSCHAFT-2006-303",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/736/de",
+      "sha": "59d859510885ebd0a90e2d51c381b54ec3144f31e25943e31e72ae45651da4e5"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2008-02-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/68",
+      "dateDocument": "2008-01-16",
+      "roFundstelle": "AS 2008 68",
+      "titelDe": "Verordnung über die vorzeitige Inkraftsetzung von organisatorischen Bestimmungen des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007",
+      "titelFr": "Ordonnance sur la mise en vigueur anticipée de dispositions organisationnelles de la loi du 22 juin 2007 sur la surveillance des marchés financiers",
+      "titelIt": "Ordinanza concernente l'entrata in vigore anticipata di disposizioni organizzative della legge del 22 giugno 2007 sulla vigilanza dei mercati finanziari",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/68/de",
+      "sha": "4da7e54817f48ee3b709e7e0c20b1702fb893830d3f958de0b47921b2ba165f1"
+    }
+  ],
+  "sha": "5039c5daf59ca96501dbf4aaa06aa5d1bc9fe51a40f1a5a5ed00aa1acc212227"
+}

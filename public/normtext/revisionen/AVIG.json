@@ -1,0 +1,391 @@
+{
+  "erlassKey": "AVIG",
+  "sr": "837.0",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2026-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2025/764",
+      "dateDocument": "2024-06-14",
+      "roFundstelle": "AS 2025 764",
+      "titelDe": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG) (Entschädigungssystem der Arbeitslosenkassen)",
+      "titelFr": "Loi fédérale sur l’assurance-chômage obligatoire et l’indemnité en cas d’insolvabilité (Loi sur l’assurance-chômage, LACI) (Système d’indemnisation des caisses de chômage)",
+      "titelIt": "Legge federale sull’assicurazione obbligatoria contro la disoccupazione e l’indennità per insolvenza (Legge sull’assicurazione contro la disoccupazione, LADI) (Sistema di rimborso delle casse di disoccupazione)",
+      "botschaftKey": "BOTSCHAFT-2023-2862",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2025/764/de",
+      "sha": "3f508b18c3e50e926854be5ea067f1a5b641bf0dd0f9bb465ae5ba3dda6bf8e5"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2025-09-27",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2025/592",
+      "dateDocument": "2025-09-26",
+      "roFundstelle": "AS 2025 592",
+      "titelDe": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG) (Höchstbezugsdauer bei Kurzarbeit)",
+      "titelFr": "Loi fédérale sur l’assurance-chômage obligatoire et l’indemnité en cas d’insolvabilité (Loi sur l’assurance-chômage, LACI) (Durée maximale d’indemnisation en matière de réduction de l’horaire de travail)",
+      "titelIt": "Legge federale sull’assicurazione obbligatoria contro la disoccupazione e l’indennità per insolvenza (Legge sull’assicurazione contro la disoccupazione, LADI) (Durata massima delle prestazioni in caso di lavoro ridotto)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2025/592/de",
+      "sha": "0fa688689a0d01b93bd5b001f5609781fbadbc2b0192b75faa8276faa362c952"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2025-05-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/837.0",
+      "sha": "2e2bbdbae5f8e736a1f479d08f6c57e135a6d5b3ee97c7e8825d8b9f74a73cd5"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2024-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2024/38",
+      "dateDocument": "2023-09-29",
+      "roFundstelle": "AS 2024 38",
+      "titelDe": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG) (Kurzarbeitsentschädigung für Berufsbildnerinnen und Berufsbildner)",
+      "titelFr": "Loi fédérale sur l’assurance-chômage obligatoire et l’indemnité en cas d’insolvabilité (Loi sur l’assurance-chômage, LACI) (Indemnité en cas de réduction de l’horaire de travail pour les formateurs)",
+      "titelIt": "Legge federale sull’assicurazione obbligatoria contro la disoccupazione e l’indennità per insolvenza (Legge sull’assicurazione contro la disoccupazione, LADI) (Indennità per lavoro ridotto per i formatori)",
+      "botschaftKey": "BOTSCHAFT-2023-577",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2024/38/de",
+      "sha": "864c1895ed9c0e5530ac8b67949acfcdb020c1fc3a7351c6127e16dbc3668f3e"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/837.0",
+      "sha": "6da0409bfe597a057e7c3edd359e07063a3fe9f92e16df099154e96ffbc4c463"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/837.0",
+      "sha": "d994c3ee28f5531c4c62c924aa826c3c833dc55f5bc92ecc093d8cff0036a021"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2022-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/837.0",
+      "sha": "a6a46ee54a11c6b2d9550681b9f2b83c14659403e026f40421c096c6005ae155"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2021-12-18",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/837.0",
+      "sha": "dbdc8bfe519ffa42f076a70a7a3dedf092772a359ac337f355b672cdf0ffca77"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2021-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2021/338",
+      "dateDocument": "2020-06-19",
+      "roFundstelle": "AS 2021 338",
+      "titelDe": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)",
+      "titelFr": "Loi fédérale sur l’assurance-chômage obligatoire et l’indemnité en cas d’insolvabilité (Loi sur l’assurance-chômage, LACI)",
+      "titelIt": "Legge federale sull’assicurazione obbligatoria contro la disoccupazione e l’indennità per insolvenza (Legge sull’assicurazione contro la disoccupazione, LADI)",
+      "botschaftKey": "BOTSCHAFT-2019-1581",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2021/338/de",
+      "sha": "1dbb0cfc6ca7e0c808df21d1bb21f73dfbc07f47e85248cc483b3a630b8b3376"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2021-03-20",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2021/154",
+      "dateDocument": "2021-03-19",
+      "roFundstelle": "AS 2021 154",
+      "titelDe": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG) (Ausserordentlicher Beitrag 2021 an den Ausgleichsfonds)",
+      "titelFr": "Loi fédérale sur l’assurance-chômage obligatoire et l’indemnité en cas d’insolvabilité (Loi sur l’assurance-chômage, LACI) (Participation extraordinaire 2021 au fonds de compensation)",
+      "titelIt": "Legge federale sull’assicurazione obbligatoria contro la disoccupazione e l’indennità per insolvenza (Legge sull’assicurazione contro la disoccupazione, LADI) (Contributo straordinario 2021 al fondo di compensazione)",
+      "botschaftKey": "BOTSCHAFT-2021-285",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2021/154/de",
+      "sha": "583517475c22cd81584acb067341d60c7fa3767b0df73c025f27fe29f2e1f04b"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/837.0",
+      "sha": "85ef5ea50ef7d8139a4057987166e8a4f64cab780eb8a7ea238a2f4877300b3a"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2020-09-26",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/713",
+      "dateDocument": "2020-09-25",
+      "roFundstelle": "AS 2020 713",
+      "titelDe": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG) (Zusatzfinanzierung Arbeitslosenversicherung)",
+      "titelFr": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance-chômage, LACI) (Financement additionnel de l'assurance-chômage)",
+      "titelIt": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI) (Finanziamento supplementare dell'assicurazione contro la disoccupazione)",
+      "botschaftKey": "BOTSCHAFT-2020-1729",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/713/de",
+      "sha": "88ac856504a1c1f5724361b30cc27603edee89df7dca1b807bfb15fa9ecf8dea"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2020-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/837.0",
+      "sha": "9641a5105282b17df349996b4f5a5e7201a73b1479084e4cec5e4fd9422965ed"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2019-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/837.0",
+      "sha": "c1e91c4736b451b91d5e84cc85c563ace26e2eb6bd80e85620d7b430ce596935"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2018-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/837.0",
+      "sha": "d4b214a6f6635ede84586033b3dcb8d605450a64b3c0bbdafd2775e6199b3efb"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2018-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/837.0",
+      "sha": "6f851f2e9cf71df547eb270bcb47de823c0959763e532dad34bda24fed14f290"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2017-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/837.0",
+      "sha": "99f51e3a42d0eec6e02813017df7e71e2a45959ba6652b0cf4a05c2751d0d1b0"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2017-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/837.0",
+      "sha": "d4707ce95d5a79bfc6217d4b4d80c861eec3b22cb77a0cc3246f59107400054e"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2014-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/654",
+      "dateDocument": "2013-06-21",
+      "roFundstelle": "AS 2013 654",
+      "titelDe": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)",
+      "titelFr": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance-chômage, LACI)",
+      "titelIt": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)",
+      "botschaftKey": "BOTSCHAFT-2013-328",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/654/de",
+      "sha": "fd259a0040815d8069cb652eeeacd2543f9a264a04e71626b30079f0a363b5a7"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2013-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/837.0",
+      "sha": "799bc14feaa76e2b4a1b3c41e282945628893e79d304011a1acd17a0160b64fb"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2012-07-16",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/837.0",
+      "sha": "f05536194c0ced7aa76f95710e56d58509b19d8bf5e640300e26fbe3b8b3b859"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2012-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/73",
+      "dateDocument": "2011-09-30",
+      "roFundstelle": "AS 2012 73",
+      "titelDe": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)",
+      "titelFr": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance-chômage, LACI)",
+      "titelIt": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/73/de",
+      "sha": "5de6c9e23a9f53b0546c30a89fc6dcad8f9a0f57c3425b40380fed7ad5b2469f"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2011-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/837.0",
+      "sha": "33c8a2a390aa6a68d38ba925a15da59245105eda23ec87fff469c9fa634bc385"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2011-04-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/171",
+      "dateDocument": "2010-03-19",
+      "roFundstelle": "AS 2011 171",
+      "titelDe": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)",
+      "titelFr": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance-chômage, LACI)",
+      "titelIt": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)",
+      "botschaftKey": "BOTSCHAFT-2008-1319",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/171/de",
+      "sha": "940102102e507de835b85888afe55c4ef4300cb9bc897a85e47fee36283164f7"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/837.0",
+      "sha": "492b434a9afa20d73acbf1562b91a0a50ab2131302efaf69a4edd1f94b98067b"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2010-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/837.0",
+      "sha": "0a7404054b174696a1b2ca6aa0d3dd86fbc58166246af5d3dc820f905377ec53"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2009-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/837.0",
+      "sha": "fcd6d3018e98695a524b1d13ada06f36c2522a4d12043307cea2b33148149b17"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2009-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/837.0",
+      "sha": "73ca7674dd87413c1c475e8e726df84ab60b7fb56ce2034ae003892aff97f96e"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2008-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/837.0",
+      "sha": "342b5787b4bb34421092001348cba173ec663ac4896bdacb2f5262720ba7083a"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2008-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/837.0",
+      "sha": "d21f5f9a5e5a157471a9611d1bc85d4d1708bbd867a470b1ff2878379d0d3c02"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2007-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/837.0",
+      "sha": "178d75df739fdfe00c84ca5ba567980503b23dbe221a1277dffc831e110e8cb6"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2007-07-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/837.0",
+      "sha": "3a4917e4051a59611a1c98fd34cd7b204368690745df291bfb181278a253dac5"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2007-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/837.0",
+      "sha": "d591297fbda6fa8ca34b6b736bcfc86fa5520608970a033228c5aff00e01d741"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2006-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/837.0",
+      "sha": "d3d4cb5e9eeec4fba5658486fdf3246380fa9aaa987c096f2302f9c611444f29"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2006-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/837.0",
+      "sha": "4375c73e6f7c0455a591ec3aa4d9595991d7e95c1b4cd155b71d80935e7feff4"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2005-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/837.0",
+      "sha": "6692905c848b123f43aeea63750faca429065abf49ab5038b5630e3214651a29"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2003-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/260",
+      "dateDocument": "2002-03-22",
+      "roFundstelle": "AS 2003 260",
+      "titelDe": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)",
+      "titelFr": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance-chômage, LACI)",
+      "titelIt": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)",
+      "botschaftKey": "BOTSCHAFT-2001-493",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/260/de",
+      "sha": "909f98aee5f57c2684dde670f70bad78028c5fec07e2aeb46c69fd8300ec201e"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2003-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/261",
+      "dateDocument": "2003-05-28",
+      "roFundstelle": "AS 2003 261",
+      "titelDe": "Verordnung über die vollständige Inkraftsetzung der Änderung vom 22. März 2002 des Arbeitslosenversicherungsgesetzes",
+      "titelFr": "Ordonnance concernant l'entrée en vigueur complète de la modification du 22 mars 2002 de la loi sur l'assurance-chômage",
+      "titelIt": "Ordinanza che mette integralmente in vigore la modifica del 22 marzo 2002 della legge sull'assicurazione contro la disoccupazione",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/261/de",
+      "sha": "d6cdeb1ca5a7da1d18fa8da502eca98f49f5054354102507527a30f18b7c4da6"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2003-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/693",
+      "dateDocument": "2002-11-29",
+      "roFundstelle": "AS 2002 693",
+      "titelDe": "Verordnung über die vorzeitige Inkraftsetzung von Absatz 3 der Übergangsbestimmung zur Änderung vom 22. März 2002 des Arbeitslosenversicherungsgesetzes",
+      "titelFr": "Ordonnance sur la mise en vigueur anticipée de l'al. 3 des dispositions transitoires de la modification du 22 mars 2002 de la loi sur l'assurance-chômage",
+      "titelIt": "Ordinanza concernente la messa in vigore anticipata del capoverso 3 della disposizione transitoria della modifica del 22 marzo 2002 della legge sull'assicurazione contro la disoccupazione",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/693/de",
+      "sha": "eccd90e392dda94439398da85234688ef4395939631686c9b23b66d4533a54a8"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2002-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/837.0",
+      "sha": "d1d3c667b52778c29774c2540fdfe8ab58253433173cdefe969995f4ab65a978"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2001-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/467",
+      "dateDocument": "2000-06-23",
+      "roFundstelle": "AS 2000 467",
+      "titelDe": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)",
+      "titelFr": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance chômage, LACI)",
+      "titelIt": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)",
+      "botschaftKey": "BOTSCHAFT-2000-99",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/467/de",
+      "sha": "8cbdb038bea2928a27a364b1467a96bc21710ebb4b3aeabedd08c554e1e6e065"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2001-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/562",
+      "dateDocument": "2000-06-23",
+      "roFundstelle": "AS 2000 562",
+      "titelDe": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)",
+      "titelFr": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance chômage, LACI)",
+      "titelIt": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)",
+      "botschaftKey": "BOTSCHAFT-2000-339",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/562/de",
+      "sha": "0f77f4d2d42d45d1ab8662d9de1fb579ce36556fa3af5d4d59ded6dda3c44e17"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2000-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/522",
+      "dateDocument": "1999-11-24",
+      "roFundstelle": "AS 1999 522",
+      "titelDe": "Verordnung über die Aufhebung des Bundesbeschlusses über die Finanzierung der Arbeitslosenversicherung",
+      "titelFr": "Ordonnance concernant l'abrogation de l'arrêté fédéral sur le financement de l'assurance-chômage",
+      "titelIt": "Ordinanza che abroga il decreto federale sul finanziamento dell'assicurazione contro la disoccupazione",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/522/de",
+      "sha": "9a735bd4a746e945d4c56d09ba308ce58e9b9a537b6121f97c9000214f69dddc"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1999-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/172",
+      "dateDocument": "1999-03-19",
+      "roFundstelle": "AS 1999 172",
+      "titelDe": "Bundesbeschluss über die Finanzierung der Arbeitslosenversicherung",
+      "titelFr": "Arrêté fédéral sur le financement de l'assurance-chômage",
+      "titelIt": "Decreto federale sul finanziamento dell'assicurazione contro la disoccupazione",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/172/de",
+      "sha": "20c6079a3f4dd1c7fab4448e22a056ceeeffc3eddd79e3ff63bfd0265371ff6c"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1983-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1982/2184_2184_2184",
+      "dateDocument": "1982-06-25",
+      "roFundstelle": "AS 1982 2184",
+      "titelDe": "Bundesgesetz vom 25. Juni 1982 über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)",
+      "titelFr": "Loi fédérale du 25 juin 1982 sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance-chômage, LACI)",
+      "titelIt": "Legge federale del 25 giugno 1982 sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1982/2184_2184_2184/de",
+      "sha": "9e08426a0a808cbc76e5fa023cb24e93141069443416c17958e1652e799d7848"
+    }
+  ],
+  "sha": "6e2945a2ecf0f98a60737dfc9e96a00bae25aab2cf10305440148614792b95fe"
+}

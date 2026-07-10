@@ -1,0 +1,558 @@
+{
+  "sr": "211.432.1",
+  "korpusStand": "2024-01-01",
+  "bBindings": [
+    {
+      "sr": {
+        "type": "literal",
+        "value": "211.432.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/206"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-03-11"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung betreffend das Grundbuch (GBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le registre foncier (ORF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Regolamento per il registro fondiario (RRF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "211.432.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/206"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-03-11"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung betreffend das Grundbuch (GBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le registre foncier (ORF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Regolamento per il registro fondiario (RRF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "211.432.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/206"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-03-11"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung betreffend das Grundbuch (GBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le registre foncier (ORF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Regolamento per il registro fondiario (RRF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "211.432.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/667"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-09-23"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Grundbuchverordnung (GBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le registre foncier (ORF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul registro fondiario (ORF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "211.432.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/667"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-09-23"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Grundbuchverordnung (GBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le registre foncier (ORF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul registro fondiario (ORF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "211.432.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/667"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-09-23"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Grundbuchverordnung (GBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le registre foncier (ORF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul registro fondiario (ORF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "211.432.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/667"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-09-23"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Grundbuchverordnung (GBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le registre foncier (ORF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul registro fondiario (ORF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "211.432.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2019/556"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-09-20"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Grundbuchverordnung (GBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le registre foncier (ORF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul registro fondiario (ORF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "211.432.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2019/556"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-09-20"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Grundbuchverordnung (GBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le registre foncier (ORF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul registro fondiario (ORF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "211.432.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2019/556"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-09-20"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Grundbuchverordnung (GBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le registre foncier (ORF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul registro fondiario (ORF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "211.432.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2021/918"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2023-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-12-10"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Grundbuchverordnung (GBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le registre foncier (ORF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul registro fondiario (ORF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "211.432.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2021/918"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2023-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-12-10"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Grundbuchverordnung (GBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le registre foncier (ORF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul registro fondiario (ORF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "211.432.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2022/148"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2023-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2022-03-03"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Grundbuchverordnung (GBV). Berichtigung (Betrifft nur den französischen Text)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le registre foncier (ORF). Erratum"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul registro fondiario (ORF). Correzione (Concerne soltanto il testo francese)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "211.432.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/26/167_163_163"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1912-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1910-02-22"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 22. Februar 1910 betreffend das Grundbuch (GBV) "
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 22 février 1910 sur le registre foncier (ORF) "
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Regolamento del 22 febbraio 1910 per il registro fondiario (RRF) "
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "211.432.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/26/167_163_163"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1912-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1910-02-22"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 22. Februar 1910 betreffend das Grundbuch (GBV) "
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 22 février 1910 sur le registre foncier (ORF) "
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Regolamento del 22 febbraio 1910 per il registro fondiario (RRF) "
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "211.432.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/26/167_163_163"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1912-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1910-02-22"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 22. Februar 1910 betreffend das Grundbuch (GBV) "
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 22 février 1910 sur le registre foncier (ORF) "
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Regolamento del 22 febbraio 1910 per il registro fondiario (RRF) "
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "211.432.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/26/167_163_163"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1912-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1910-02-22"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 22. Februar 1910 betreffend das Grundbuch (GBV) "
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 22 février 1910 sur le registre foncier (ORF) "
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Regolamento del 22 febbraio 1910 per il registro fondiario (RRF) "
+      }
+    }
+  ],
+  "aStaende": [
+    "2012-01-01",
+    "2017-01-01",
+    "2018-02-01",
+    "2020-07-01",
+    "2023-01-01",
+    "2024-01-01"
+  ]
+}

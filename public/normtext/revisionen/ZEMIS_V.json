@@ -1,0 +1,395 @@
+{
+  "erlassKey": "ZEMIS_V",
+  "sr": "142.513",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2026-10-01",
+      "nichtKonsolidiert": true,
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.513",
+      "sha": "c2e8450ff5c17d2c7ffc8a0cace6d4b6b0e1b803c537482da75147315933e314"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2026-08-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2026/341",
+      "dateDocument": "2026-06-12",
+      "roFundstelle": "AS 2026 341",
+      "titelDe": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)",
+      "titelFr": "Ordonnance sur le système d’information central sur la migration (Ordonnance SYMIC)",
+      "titelIt": "Ordinanza concernente il sistema d’informazione centrale sulla migrazione (Ordinanza SIMIC)",
+      "nichtKonsolidiert": true,
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2026/341/de",
+      "sha": "dceac5373fd2ec90e3bc7be1feb0634d49585b40a5b47f332c8622b924a97d66"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2026-06-12",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2026/242",
+      "dateDocument": "2026-05-06",
+      "roFundstelle": "AS 2026 242",
+      "titelDe": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)",
+      "titelFr": "Ordonnance sur le système d’information central sur la migration (Ordonnance SYMIC)",
+      "titelIt": "Ordinanza concernente il sistema d’informazione centrale sulla migrazione (Ordinanza SIMIC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2026/242/de",
+      "sha": "17d7ad2393a27b261b44ee6146aff86221fd1ac2fce5b13feb7e34a0c54ca622"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2026-06-12",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2026/268",
+      "dateDocument": "2026-05-20",
+      "roFundstelle": "AS 2026 268",
+      "titelDe": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)",
+      "titelFr": "Ordonnance sur le système d’information central sur la migration (Ordonnance SYMIC)",
+      "titelIt": "Ordinanza concernente il sistema d’informazione centrale sulla migrazione (Ordinanza SIMIC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2026/268/de",
+      "sha": "24168477d82d9db14d363f4ea622e4e894c438d77ddadbe04e4ffefd7a7c455a"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2025-06-15",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2025/344",
+      "dateDocument": "2025-05-14",
+      "roFundstelle": "AS 2025 344",
+      "titelDe": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)",
+      "titelFr": "Ordonnance sur le système d’information central sur la migration (Ordonnance SYMIC)",
+      "titelIt": "Ordinanza concernente il sistema d’informazione centrale sulla migrazione (Ordinanza SIMIC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2025/344/de",
+      "sha": "c4078ed5b08f54899cd9f9f788993c73dbc9c62ffb1d12e1387feeac2c54217d"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2025-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.513",
+      "sha": "cf6ee712521b419f8273cc4daaab6aae44668b5275ff96676c66ae4905d1d32f"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2025-04-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2024/716",
+      "dateDocument": "2024-11-27",
+      "roFundstelle": "AS 2024 716",
+      "titelDe": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)",
+      "titelFr": "Ordonnance sur le système d’information central sur la migration (Ordonnance SYMIC)",
+      "titelIt": "Ordinanza concernente il sistema d’informazione centrale sulla migrazione (Ordinanza SIMIC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2024/716/de",
+      "sha": "d7da6dec36cb93257b60d2b61b685a0a9a5fe0aa7bfcb073a8a024dcf70a6f05"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.513",
+      "sha": "6b287283a8b8805d39fb5d1ef732f6e3ff72c209638684d5534a2562b28c2377"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.513",
+      "sha": "2edab906896203fbf76c95a6ab667af4d8931821a6e64bebb5150e23fcfac141"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-10-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.513",
+      "sha": "23f11e7807a0d0e1cd11fcf63e4628d30b481452e834f32fdcad78b3d8b6e87b"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.513",
+      "sha": "bf4e1f41e9a7db850919a0dda9b9208e2350807e64da08440e52ecb1c29434d7"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2023-06-15",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2023/247",
+      "dateDocument": "2023-05-10",
+      "roFundstelle": "AS 2023 247",
+      "titelDe": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)",
+      "titelFr": "Ordonnance sur le système d’information central sur la migration (Ordonnance SYMIC)",
+      "titelIt": "Ordinanza concernente il sistema d’informazione centrale sulla migrazione (Ordinanza SIMIC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2023/247/de",
+      "sha": "5219e242996f6bd1f6e02e4b24b80bd2e88e1f3e2dc12148d32742c53e5ec4bd"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.513",
+      "sha": "5b68e751f56197c295ea88ca4b4a52047f75c92d60aafe98e11a46d9753ca5b1"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2022-11-22",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2022/647",
+      "dateDocument": "2022-10-19",
+      "roFundstelle": "AS 2022 647",
+      "titelDe": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)",
+      "titelFr": "Ordonnance sur le système d’information central sur la migration (Ordonnance SYMIC)",
+      "titelIt": "Ordinanza concernente il sistema d’informazione centrale sulla migrazione (Ordinanza SIMIC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2022/647/de",
+      "sha": "d6fe90847f48ea17301d9da2c986f65df738c384ec371d762b7707b6412b242b"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2022-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.513",
+      "sha": "982d6cb91f58a6d6d4def7f18798e0f1a50f9dbfb56895195b15240485cfee22"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2022-03-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2022/73",
+      "dateDocument": "2022-02-02",
+      "roFundstelle": "AS 2022 73",
+      "titelDe": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)",
+      "titelFr": "Ordonnance sur le système d’information central sur la migration (Ordonnance SYMIC)",
+      "titelIt": "Ordinanza concernente il sistema d’informazione centrale sulla migrazione (Ordinanza SIMIC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2022/73/de",
+      "sha": "71e2c3759010f3dc616f19f02ac51703bfa66a27b473f57270edee6ab95b22a5"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2022-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.513",
+      "sha": "e7cdfaa47b51083771489f3a1dd4ebfae2459331602c08bd9a71b606a7896e33"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2021-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.513",
+      "sha": "41b6300bc2f8a5b0c5fa0c7f86342cc91fee75e58eba1690b2acccb5785ded17"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.513",
+      "sha": "5151f1ccbeb462c130332d648571b38f980e6f98811aa92d7f57d35a038470ef"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2020-04-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/176",
+      "dateDocument": "2020-02-19",
+      "roFundstelle": "AS 2020 176",
+      "titelDe": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)",
+      "titelFr": "Ordonnance sur le système d'information central sur la migration (Ordonnance SYMIC)",
+      "titelIt": "Ordinanza concernente il sistema d'informazione centrale sulla migrazione (Ordinanza SIMIC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/176/de",
+      "sha": "36a66de4b479580077214fe9c87d93d66cb6bd1e781bffd089a4cf70a44fbd1c"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2019-06-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/282",
+      "dateDocument": "2019-05-01",
+      "roFundstelle": "AS 2019 282",
+      "titelDe": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)",
+      "titelFr": "Ordonnance sur le système d'information central sur la migration (Ordonnance SYMIC)",
+      "titelIt": "Ordinanza concernente il sistema d'informazione centrale sulla migrazione (Ordinanza SIMIC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/282/de",
+      "sha": "3bfa88a4a1010036f5d9786109b8f01781952ed31de71d98e071dc0e0456bd4e"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2019-05-06",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/241",
+      "dateDocument": "2019-04-03",
+      "roFundstelle": "AS 2019 241",
+      "titelDe": "Verordnung über die Lieferung von biometrischen Daten an und Zugriffe im Migrationsbereich auf das N-SIS",
+      "titelFr": "Ordonnance sur la livraison de données biométriques et sur les accès dans le domaine migratoire au N-SIS",
+      "titelIt": "Ordinanza sulla fornitura di dati biometrici e sugli accessi in ambito migratorio al N-SIS",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/241/de",
+      "sha": "f4608d4c9f7e855e6ca466b9730cd6851599fbf242a04a5da9c354f7e4d36c30"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2019-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/716",
+      "dateDocument": "2018-11-21",
+      "roFundstelle": "AS 2018 716",
+      "titelDe": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)",
+      "titelFr": "Ordonnance sur le système d'information central sur la migration (Ordonnance SYMIC)",
+      "titelIt": "Ordinanza concernente il sistema d'informazione centrale sulla migrazione (Ordinanza SIMIC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/716/de",
+      "sha": "f208cb4895668bb820cc8ff48a4c48ae435557686a6be360b64ae07c3a65138f"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2018-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.513",
+      "sha": "1fb27adb24e9bdc94c47d90bc6e6211ab9535089055e6444f7b578842862bb64"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2017-04-15",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/201",
+      "dateDocument": "2017-03-22",
+      "roFundstelle": "AS 2017 201",
+      "titelDe": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)",
+      "titelFr": "Ordonnance sur le système d'information central sur la migration (Ordonnance SYMIC)",
+      "titelIt": "Ordinanza concernente il sistema d'informazione centrale sulla migrazione (Ordinanza SIMIC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/201/de",
+      "sha": "0692dc029aa9251b3655e0529a8d5c4e29afb7cf991f854bc82782cc1e979188"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2015-10-15",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/628",
+      "dateDocument": "2015-09-18",
+      "roFundstelle": "AS 2015 628",
+      "titelDe": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)",
+      "titelFr": "Ordonnance sur le système d'information central sur la migration (Ordonnance SYMIC)",
+      "titelIt": "Ordinanza concernente il sistema d'informazione centrale sulla migrazione (Ordinanza SIMIC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/628/de",
+      "sha": "41b324e8d3ca277a0afecacc1f882bd84afd6608fba3e921ef35f12a949d253a"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2015-10-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/573",
+      "dateDocument": "2015-09-02",
+      "roFundstelle": "AS 2015 573",
+      "titelDe": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)",
+      "titelFr": "Ordonnance sur le système d'information central sur la migration (Ordonnance SYMIC)",
+      "titelIt": "Ordinanza concernente il sistema d'informazione centrale sulla migrazione (Ordinanza SIMIC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/573/de",
+      "sha": "727da03b1dcc07bf91b0e7a1543fefce36f8bba1898a9389628fdc5f66d35cc1"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2014-06-15",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/268",
+      "dateDocument": "2014-05-21",
+      "roFundstelle": "AS 2014 268",
+      "titelDe": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS Verordnung)",
+      "titelFr": "Ordonnance sur le système d'information central sur la migration (Ordonnance SYMIC)",
+      "titelIt": "Ordinanza concernente il sistema d'informazione centrale sulla migrazione (Ordinanza SIMIC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/268/de",
+      "sha": "e03a98e0dc3133274fb1bf42ef173c463e78ce08c4618d722f035a530e6d6056"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2014-01-20",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.513",
+      "sha": "d9a2a53ae7267ca5eb448dadda3639fdc8908975b3e4875248bd00ab96534a71"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2013-05-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.513",
+      "sha": "7568382ab6c4eab0f70cd0899b8743816503371be25c6189c257ebf60136c171"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2013-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.513",
+      "sha": "d16cfb8347549efe88e1ad4dfc70c6e4353a544dee08dae223deb3c3a7a854b4"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2011-12-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/750",
+      "dateDocument": "2011-11-16",
+      "roFundstelle": "AS 2011 750",
+      "titelDe": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)",
+      "titelFr": "Ordonnance sur le système d'information central sur la migration (Ordonnance SYMIC)",
+      "titelIt": "Ordinanza concernente il sistema d'informazione centrale sulla migrazione (Ordinanza SIMIC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/750/de",
+      "sha": "f74d61bde8f5455719d2530c5761ef01c3aae8f2968b8f01621398c1b3bb3af6"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2011-12-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/242",
+      "dateDocument": "2012-04-11",
+      "roFundstelle": "AS 2012 242",
+      "titelDe": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)",
+      "titelFr": "Ordonnance sur le système d'information central sur la migration (Ordonnance SYMIC)",
+      "titelIt": "Ordinanza concernente il sistema d'informazione centrale sulla migrazione (Ordinanza SIMIC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/242/de",
+      "sha": "f848eaf2eceed1f88428fa92288597c3f8bbc904a5602f769e9e0e1f16d93b6b"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2011-10-11",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.513",
+      "sha": "af32583938b8c6a8d982cf766b67d9ced0ca888ae5294687e6b7d20363d87132"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2011-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.513",
+      "sha": "53a1d37264038406d7f96ab8d41336d98de7f33eecf87157f8e151fe1925e805"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2011-01-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.513",
+      "sha": "7f314c3648826041f9f2c56d711ae744b505aaccf54945412895b47474bd4704"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.513",
+      "sha": "d3f338503ce76a08cbb9304c9962a55bad14c6bacb7e9bed991d2f03d8d3f603"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2010-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.513",
+      "sha": "3f69ba8223fe139e6d46bd687a08df8f66b9f2284041aeed4583d24250686483"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2009-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.513",
+      "sha": "88d83a5fe6f1e1fcc1c064a254f4116d3b55ee67e2e6509aa3a9e58589b2265f"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2008-12-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.513",
+      "sha": "d459b7871d0950c3f7c16e0b81c3ab631f61d4d51c0d36640db4735f90f8acbf"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2008-12-05",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.513",
+      "sha": "6ec81ee9e4c58e03427fbcdd6ddc9e51ad588ee797ea2c34c79b30a550eb6664"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2008-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/770",
+      "dateDocument": "2007-10-24",
+      "roFundstelle": "AS 2007 770",
+      "titelDe": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)",
+      "titelFr": "Ordonnance sur le système d'information central sur la migration (Ordonnance SYMIC)",
+      "titelIt": "Ordinanza concernente il sistema d'informazione centrale sulla migrazione (Ordinanza SIMIC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/770/de",
+      "sha": "c058e54b5f3236584fe0ef5d3b31cc459359b9a7c215aa345699edc29e15eca5"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2007-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/142.513",
+      "sha": "5145115fb2db22ac15f225fd7fc8aabf90b9a299daa5d8cf97454352e961f712"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2006-05-29",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/303",
+      "dateDocument": "2006-04-12",
+      "roFundstelle": "AS 2006 303",
+      "titelDe": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)",
+      "titelFr": "Ordonnance sur le système d'information central sur la migration (Ordonnance SYMIC)",
+      "titelIt": "Ordinanza concernente il sistema d'informazione centrale sulla migrazione (Ordinanza SIMIC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/303/de",
+      "sha": "4bfb6e66fc89839fa13c5d9d205b0bc503d450d2510bf4487f0cef15eba6bc56"
+    }
+  ],
+  "sha": "b0cfb390b4c88e73113a817896297e62a903c6b439532a55e6dd4ae564f70afa"
+}

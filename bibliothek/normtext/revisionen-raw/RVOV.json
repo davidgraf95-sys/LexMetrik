@@ -1,0 +1,4123 @@
+{
+  "sr": "172.010.1",
+  "korpusStand": "2026-03-01",
+  "bBindings": [
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/170"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-11-25"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/170"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-11-25"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/170"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-11-25"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/170"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-11-25"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/416"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-08-21"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/416"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-08-21"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/416"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-08-21"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/611"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-12-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-11-19"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/611"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-12-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-11-19"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/611"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-12-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-11-19"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/805"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-12-10"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/805"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-12-10"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/805"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-12-10"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/225"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-04-05"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/225"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-04-05"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/225"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-04-05"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/59"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-01-16"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/59"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-01-16"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/59"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-01-16"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/819"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-11-26"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/819"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-11-26"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/819"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-11-26"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/751"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-11-27"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/751"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-11-27"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/751"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-11-27"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/427"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-06-30"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/427"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-06-30"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/427"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-06-30"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/703"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-12-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-10-20"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/703"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-12-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-10-20"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/703"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-12-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-10-20"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/721"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-10-27"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/721"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-10-27"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/721"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-10-27"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/285"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-04-20"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/285"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-04-20"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/285"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-04-20"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/447"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-06-10"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/447"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-06-10"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/447"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-06-10"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/752"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-11-09"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Anpassung rechtlicher Bestimmungen infolge der Überprüfung der ausserparlamentarischen Kommissionen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'adaptation de dispositions juridiques à la suite du réexamen des commissions extraparlementaires"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza che adegua le disposizioni legali in seguito alla verifica delle commissioni extraparlamentari"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/752"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-11-09"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Anpassung rechtlicher Bestimmungen infolge der Überprüfung der ausserparlamentarischen Kommissionen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'adaptation de dispositions juridiques à la suite du réexamen des commissions extraparlementaires"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza che adegua le disposizioni legali in seguito alla verifica delle commissioni extraparlamentari"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/752"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-11-09"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Anpassung rechtlicher Bestimmungen infolge der Überprüfung der ausserparlamentarischen Kommissionen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'adaptation de dispositions juridiques à la suite du réexamen des commissions extraparlementaires"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza che adegua le disposizioni legali in seguito alla verifica delle commissioni extraparlamentari"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/842"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-11-30"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/842"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-11-30"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/842"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-11-30"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/843"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-11-30"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/843"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-11-30"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/843"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-11-30"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/250"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-05-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-04-18"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/250"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-05-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-04-18"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/250"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-05-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-04-18"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/445"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-06-27"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/445"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-06-27"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/445"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-06-27"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/843"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-11-21"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/843"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-11-21"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/843"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-11-21"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/844"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-11-30"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/844"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-11-30"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/844"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-11-30"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/900"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-12-28"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Anpassung von Verordnungen infolge der Neugliederung der Departemente"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance portant adaptation d'ordonnances par suite de la réorganisation des départements"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'adeguamento di ordinanze a seguito della riorganizzazione dei dipartimenti"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/900"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-12-28"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Anpassung von Verordnungen infolge der Neugliederung der Departemente"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance portant adaptation d'ordonnances par suite de la réorganisation des départements"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'adeguamento di ordinanze a seguito della riorganizzazione dei dipartimenti"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/900"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-12-28"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Anpassung von Verordnungen infolge der Neugliederung der Departemente"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance portant adaptation d'ordonnances par suite de la réorganisation des départements"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'adeguamento di ordinanze a seguito della riorganizzazione dei dipartimenti"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/2"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-12-19"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/2"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-12-19"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/2"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-12-19"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/22"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-01-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-01-15"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Anpassung von Verordnungen infolge der Neugliederung der Departemente"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance portant adaptation d'ordonnances par suite de la réorganisation des départements"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'adeguamento di ordinanze a seguito della riorganizzazione dei dipartimenti"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/22"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-01-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-01-15"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Anpassung von Verordnungen infolge der Neugliederung der Departemente"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance portant adaptation d'ordonnances par suite de la réorganisation des départements"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'adeguamento di ordinanze a seguito della riorganizzazione dei dipartimenti"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/22"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-01-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-01-15"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Anpassung von Verordnungen infolge der Neugliederung der Departemente"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance portant adaptation d'ordonnances par suite de la réorganisation des départements"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'adeguamento di ordinanze a seguito della riorganizzazione dei dipartimenti"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/25"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-12-19"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/25"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-12-19"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/25"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-12-19"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/692"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-10-23"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/692"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-10-23"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/692"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-10-23"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/80"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-02-05"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-02-05"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Anpassung von Verordnungen infolge der Neugliederung der Departemente"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance portant adaptation d'ordonnances par suite de la réorganisation des départements"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'adeguamento di ordinanze a seguito della riorganizzazione dei dipartimenti"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/80"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-02-05"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-02-05"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Anpassung von Verordnungen infolge der Neugliederung der Departemente"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance portant adaptation d'ordonnances par suite de la réorganisation des départements"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'adeguamento di ordinanze a seguito della riorganizzazione dei dipartimenti"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/80"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-02-05"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-02-05"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Anpassung von Verordnungen infolge der Neugliederung der Departemente"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance portant adaptation d'ordonnances par suite de la réorganisation des départements"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'adeguamento di ordinanze a seguito della riorganizzazione dei dipartimenti"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/81"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-02-05"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/81"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-02-05"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/81"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-02-05"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/739"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-12-05"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/739"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-12-05"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/739"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-12-05"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/415"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-07-01"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/415"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-07-01"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/415"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-07-01"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/823"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-11-25"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über eine Karenzfrist für Leitungsfunktionen der Bundesverwaltung, für Mitglieder von Leitungsorganen von Anstalten des Bundes sowie für Mitglieder usserparlamentarischer Kommissionen (Karenzfristverordnung)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le délai de carence applicable aux cadres du plus haut niveau hiérarchique de l'administration fédérale, aux membres des organes de direction des établissements de la Confédération et aux membres des commissions extraparlementaires (Ordonnance sur le délai de carence) "
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente un periodo di attesa per le funzioni direttive dell'Amministrazione federale, per i membri di organi direttivi di stabilimenti della Confederazione e per i membri di commissioni extraparlamentari (Ordinanza sul periodo di attesa)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/823"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-11-25"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über eine Karenzfrist für Leitungsfunktionen der Bundesverwaltung, für Mitglieder von Leitungsorganen von Anstalten des Bundes sowie für Mitglieder usserparlamentarischer Kommissionen (Karenzfristverordnung)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le délai de carence applicable aux cadres du plus haut niveau hiérarchique de l'administration fédérale, aux membres des organes de direction des établissements de la Confédération et aux membres des commissions extraparlementaires (Ordonnance sur le délai de carence) "
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente un periodo di attesa per le funzioni direttive dell'Amministrazione federale, per i membri di organi direttivi di stabilimenti della Confederazione e per i membri di commissioni extraparlamentari (Ordinanza sul periodo di attesa)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/823"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-11-25"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über eine Karenzfrist für Leitungsfunktionen der Bundesverwaltung, für Mitglieder von Leitungsorganen von Anstalten des Bundes sowie für Mitglieder usserparlamentarischer Kommissionen (Karenzfristverordnung)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le délai de carence applicable aux cadres du plus haut niveau hiérarchique de l'administration fédérale, aux membres des organes de direction des établissements de la Confédération et aux membres des commissions extraparlementaires (Ordonnance sur le délai de carence) "
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente un periodo di attesa per le funzioni direttive dell'Amministrazione federale, per i membri di organi direttivi di stabilimenti della Confederazione e per i membri di commissioni extraparlamentari (Ordinanza sul periodo di attesa)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/421"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-07-06"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/421"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-07-06"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/421"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-07-06"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/767"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-12-09"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/767"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-12-09"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/767"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-12-09"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2017/340"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-05-17"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2017/340"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-05-17"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2017/340"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-05-17"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/565"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-11-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-09-21"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/565"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-11-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-09-21"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/565"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-11-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-09-21"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/751"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-11-30"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/751"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-11-30"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/751"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-11-30"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2019/23"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-12-14"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2019/23"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-12-14"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2019/23"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-12-14"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2020/394"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-05-13"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Organisation der Bahninfrastruktur (OBI-Verordnung)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation de l'infrastructure ferroviaire"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione dell'infrastruttura ferroviaria"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2020/394"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-05-13"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Organisation der Bahninfrastruktur (OBI-Verordnung)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation de l'infrastructure ferroviaire"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione dell'infrastruttura ferroviaria"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2020/394"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-05-13"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Organisation der Bahninfrastruktur (OBI-Verordnung)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'organisation de l'infrastructure ferroviaire"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'organizzazione dell'infrastruttura ferroviaria"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2021/429"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-07-09"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-07-09"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Organisationsverordnung für das Eidgenössische Departement für auswärtige Angelegenheiten (OV-EDA). Berichtigung"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l’organisation du Département fédéral des affaires étrangères (Org DFAE). Erratum"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull’organizzazione del Dipartimento federale degli affari esteri (OOrg-DFAE). Correzione"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2021/776"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2022-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-11-24"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l’organisation du gouvernement et de l’administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull’organizzazione del Governo e dell’Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2021/776"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2022-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-11-24"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l’organisation du gouvernement et de l’administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull’organizzazione del Governo e dell’Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2022/179"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2022-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2022-03-11"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l’organisation du gouvernement et de l’administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull’organizzazione del Governo e dell’Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2022/179"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2022-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2022-03-11"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l’organisation du gouvernement et de l’administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull’organizzazione del Governo e dell’Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2022/842"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2023-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2022-12-09"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Anpassung von Verordnungen infolge der Überprüfung 2022 der ausserparlamentarischen Kommissionen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance portant adaptation d’ordonnances à la suite du réexamen de 2022 des commissions extraparlementaires"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull’adeguamento di ordinanze in seguito alla verifica del 2022 delle commissioni extraparlamentari"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2022/842"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2023-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2022-12-09"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Anpassung von Verordnungen infolge der Überprüfung 2022 der ausserparlamentarischen Kommissionen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance portant adaptation d’ordonnances à la suite du réexamen de 2022 des commissions extraparlementaires"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull’adeguamento di ordinanze in seguito alla verifica del 2022 delle commissioni extraparlamentari"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2023/249"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2023-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2023-05-17"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l’organisation du gouvernement et de l’administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull’organizzazione del Governo e dell’Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2023/249"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2023-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2023-05-17"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l’organisation du gouvernement et de l’administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull’organizzazione del Governo e dell’Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2023/729"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2024-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2023-11-29"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l’organisation du gouvernement et de l’administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull’organizzazione del Governo e dell’Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2023/729"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2024-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2023-11-29"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l’organisation du gouvernement et de l’administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull’organizzazione del Governo e dell’Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2024/313"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2024-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2024-06-19"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l’organisation du gouvernement et de l’administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull’organizzazione del Governo e dell’Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2025/206"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2025-05-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2025-03-21"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l’organisation du gouvernement et de l’administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull’organizzazione del Governo e dell’Amministrazione (OLOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2025/411"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2025-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2025-06-20"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l’organisation du gouvernement et de l’administration (OLOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull’organizzazione del Governo e dell’Amministrazione (OLOGA)"
+      }
+    }
+  ],
+  "aStaende": [
+    "1999-01-01",
+    "1999-07-01",
+    "2000-01-01",
+    "2000-04-01",
+    "2000-07-01",
+    "2000-08-01",
+    "2000-11-15",
+    "2001-01-01",
+    "2001-02-01",
+    "2002-01-01",
+    "2002-05-15",
+    "2002-06-01",
+    "2002-10-01",
+    "2003-06-01",
+    "2003-07-01",
+    "2003-12-01",
+    "2004-01-01",
+    "2004-02-01",
+    "2005-01-01",
+    "2005-07-01",
+    "2006-01-01",
+    "2006-04-01",
+    "2006-05-01",
+    "2006-06-01",
+    "2006-07-01",
+    "2007-09-01",
+    "2008-01-01",
+    "2008-02-01",
+    "2009-01-01",
+    "2009-07-01",
+    "2010-01-01",
+    "2010-03-01",
+    "2010-07-01",
+    "2010-08-01",
+    "2010-12-01",
+    "2011-01-01",
+    "2011-05-15",
+    "2011-06-01",
+    "2011-08-01",
+    "2011-09-01",
+    "2011-11-01",
+    "2012-01-01",
+    "2012-05-01",
+    "2012-08-01",
+    "2012-10-01",
+    "2013-01-01",
+    "2013-01-15",
+    "2013-02-01",
+    "2013-02-05",
+    "2013-06-01",
+    "2014-01-01",
+    "2015-01-01",
+    "2015-02-01",
+    "2015-03-01",
+    "2016-01-01",
+    "2016-04-01",
+    "2016-08-01",
+    "2017-01-01",
+    "2017-07-01",
+    "2017-09-01",
+    "2018-01-01",
+    "2018-11-01",
+    "2019-01-01",
+    "2019-02-01",
+    "2020-01-01",
+    "2020-04-01",
+    "2020-07-01",
+    "2021-01-01",
+    "2021-04-01",
+    "2021-07-08",
+    "2022-01-01",
+    "2022-07-01",
+    "2023-01-01",
+    "2023-07-01",
+    "2023-09-01",
+    "2024-01-01",
+    "2024-02-01",
+    "2024-08-01",
+    "2025-05-01",
+    "2025-07-01",
+    "2026-01-01",
+    "2026-03-01",
+    "2027-01-01"
+  ]
+}

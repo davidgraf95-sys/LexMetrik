@@ -1,0 +1,258 @@
+{
+  "erlassKey": "EOG",
+  "sr": "834.1",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/834.1",
+      "sha": "110cdd36472b6e28c0444371e7bf3c5b3f4f8466b0393c388c218f5c18d1e7b2"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2025-01-28",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2025/72",
+      "dateDocument": "2025-01-28",
+      "roFundstelle": "AS 2025 72",
+      "titelDe": "Bundesgesetz über den Erwerbsersatz (Erwerbsersatzgesetz, EOG). Berichtigung (Betrifft nur den italienischen Text)",
+      "titelFr": "Loi fédérale sur les allocations pour perte de gain (LAPG). Erratum (Ne concerne que le texte italien)",
+      "titelIt": "Legge federale sulle indennità di perdita di guadagno (Legge sulle indennità di perdita di guadagno, LIPG). Correzione",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2025/72/de",
+      "sha": "3c1e4836b0755e8cb1ab71a2639f98bec884180ee5380e7bf5927e4c08bf736a"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2025-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2024/681",
+      "dateDocument": "2024-06-14",
+      "roFundstelle": "AS 2024 681",
+      "titelDe": "Bundesgesetz über den Erwerbsersatz (Erwerbsersatzgesetz, EOG) (Digitalisierung in der Erwerbsersatzordnung)",
+      "titelFr": "Loi fédérale sur les allocations pour perte de gain (LAPG) (Numérisation dans le régime des APG)",
+      "titelIt": "Legge federale sulle indennità di perdita di guadagno (Legge sulle indennità di perdita di guadagno, LIPG) (Digitalizzazione nell’ordinamento delle indennità di perdita di guadagno)",
+      "botschaftKey": "BOTSCHAFT-2023-2245",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2024/681/de",
+      "sha": "f036973255bc97c63ea28e85898ee9b59fe90ec8939ea58f1b5b29e40011ccf3"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2024-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2024/151",
+      "dateDocument": "2023-09-29",
+      "roFundstelle": "AS 2024 151",
+      "titelDe": "Bundesgesetz über den Erwerbsersatz (Erwerbsersatzgesetz, EOG) (Mutterschaftsentschädigung von Parlamentarierinnen)",
+      "titelFr": "Loi fédérale sur les allocations pour perte de gain (LAPG) (Allocation de maternité pour les députées)",
+      "titelIt": "Legge federale sulle indennità di perdita di guadagno (Legge sulle indennità di perdita di guadagno, LIPG) (Indennità di maternità per le parlamentari)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2024/151/de",
+      "sha": "a9473ca69b6d3e5b8f216c6ae6cd0e10ecca59a68dbef792516b63fd2fcf4df0"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2024-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2023/680",
+      "dateDocument": "2023-03-17",
+      "roFundstelle": "AS 2023 680",
+      "titelDe": "Bundesgesetz über den Erwerbsersatz (Erwerbsersatzgesetz, EOG) (Taggelder für den hinterlassenen Elternteil)",
+      "titelFr": "Loi fédérale sur les allocations pour perte de gain (LAPG) (Indemnités journalières pour le parent survivant)",
+      "titelIt": "Legge federale sulle indennità di perdita di guadagno (Legge sulle indennità di perdita di guadagno, LIPG) (Indennità giornaliere per il genitore superstite)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2023/680/de",
+      "sha": "ad28dcb0676fdf64b7d81d889d8daacfcb233eca3c0db731c6cfa78fa1effebf"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2023-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2022/468",
+      "dateDocument": "2021-10-01",
+      "roFundstelle": "AS 2022 468",
+      "titelDe": "Bundesgesetz über den Erwerbsersatz (Erwerbsersatzgesetz, EOG)",
+      "titelFr": "Loi fédérale sur les allocations pour perte de gain (LAPG)",
+      "titelIt": "Legge federale sulle indennità di perdita di guadagno (Legge sulle indennità di perdita di guadagno, LIPG)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2022/468/de",
+      "sha": "ac3bf20520853800eb4d892e80ba8ecd0b778a5c15acbf8f4b50632080d3efb3"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2022-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/834.1",
+      "sha": "b0780af8fc99d107beb35cbd4109f80fdff4f17ca5ba2847d1949b244bd3e344"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2021-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2021/288",
+      "dateDocument": "2020-12-18",
+      "roFundstelle": "AS 2021 288",
+      "titelDe": "Bundesgesetz über den Erwerbsersatz für Dienstleistende und bei Mutterschaft (Erwerbsersatzgesetz, EOG)",
+      "titelFr": "Loi fédérale sur les allocations pour perte de gain en cas de service et de maternité (Loi sur les allocations pour perte de gain, LAPG)",
+      "titelIt": "Legge federale sulle indennità di perdita di guadagno per chi presta servizio e in caso di maternità (Legge sulle indennità di perdita di guadagno, LIPG)",
+      "botschaftKey": "BOTSCHAFT-2019-9",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2021/288/de",
+      "sha": "8acdf64056ed68f656ecec497a1e01a846d52dadcc4007cb304a465317e6f28f"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2021-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/844",
+      "dateDocument": "2019-09-27",
+      "roFundstelle": "AS 2020 844",
+      "titelDe": "Bundesgesetz über den Erwerbsersatz für Dienstleistende und bei Mutterschaft (Erwerbsersatzgesetz, EOG)",
+      "titelFr": "Loi fédérale sur les allocations pour perte de gain en cas de service et de maternité (Loi sur les allocations pour perte de gain, LAPG)",
+      "titelIt": "Legge federale sulle indennità di perdita di guadagno per chi presta servizio e in caso di maternità (Legge sulle indennità di perdita di guadagno, LIPG)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/844/de",
+      "sha": "e9ffeeef5437781f986ae1257fce5b9e95fd89ba2aee442196b5bf84a4b384f8"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2020-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/834.1",
+      "sha": "0b45f3138171d57f668e3af5dcf854fc5b7e463504b3e3c092e85826987dff8a"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2019-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/834.1",
+      "sha": "4d0e4cc753be347cd8948f47832dd0cbe89c712479855a5336c4bd1eecc8d8d8"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2018-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/834.1",
+      "sha": "8896a290c771c0b10a9f2deb4d919067972cce1ec3ee31dc016687d5b602f330"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2017-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/834.1",
+      "sha": "61a815ed81753ce6df15848dd72d3ce7f65f7c19a14bf9bd50e6750929c08863"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2016-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/834.1",
+      "sha": "2d176f587c26f6bf97212e6f65cf9c1a5c21059993de12b61d1d291a589f4136"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2015-02-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/834.1",
+      "sha": "7360e6e66d3cc624ea33d9c4f3178584a213d765c47807b163fb7053c1aba2d2"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2015-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/834.1",
+      "sha": "38343dcb438109f086f00a682f47a45dabaf98a2cfdfb4a8a22e4851b29adfd5"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2012-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/834.1",
+      "sha": "26a4bff4257f96df251df46bebf08146d6d11d30a90f81fa52ec8c38d4182521"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2012-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/834.1",
+      "sha": "0e84f2f91b0854ea915b8d63360b9e333be40eb72ead0af2ce66c37ed64b49a5"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/834.1",
+      "sha": "8691f50527978692914c08ad5d4aa9644cdb617ee958eb203375d3f3d5419523"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2009-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/834.1",
+      "sha": "4cdc8b7dd705253cb2e24f6c7d13de5465065c2c484036910b0392d4d29499b8"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2009-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/834.1",
+      "sha": "8416224c670ba97020c325cb2ab291ab12581cce19c9eaf2c9a524d317db012a"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2009-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/834.1",
+      "sha": "e8655f4ab61f79f1ad854c9ba141b8833793832a11b95b58f2ff62731ba5b504"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2008-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/834.1",
+      "sha": "bb1c871587d21d8824a305ceff1870b838a1a9bd26f4b1c8742a020f200a0751"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2007-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/834.1",
+      "sha": "bbbf97c885a86d666b6bab7059b980cdb5814d1d8619b4332eb3936ab6119e48"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2006-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/834.1",
+      "sha": "60bed692900bbadc2f6e19c9095240d94d0bedbac336cea5e509a8285a1a3dcd"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2005-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/217",
+      "dateDocument": "2003-10-03",
+      "roFundstelle": "AS 2005 217",
+      "titelDe": "Bundesgesetz über die Erwerbsersatzordnung für Dienstleistende in Armee, Zivildienst und Zivilschutz (Erwerbsersatzgesetz, EOG)",
+      "titelFr": "Loi fédérale du 25 septembre 1952 sur le régime des allocations pour perte de gain en faveur des personnes servant dans l'armée, dans le service civil ou dans la protection civile (Loi sur les allocations pour perte de gain, LAPG)",
+      "titelIt": "Legge federale sulle indennità di perdita di guadagno in caso di servizio militare, servizio civile o servizio di protezione civile (Legge sulle indennità di perdita di guadagno, LIPG)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/217/de",
+      "sha": "b15a073daeec551d9c5c7ae92a67fd41d438f851d5b3b5b0aefe193f95ec8c84"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2003-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/834.1",
+      "sha": "85b863dfc0000d790792dd926b0e122a41fbaeeb34e15036a91cd1a2d0b094d7"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2001-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/466",
+      "dateDocument": "2000-06-23",
+      "roFundstelle": "AS 2000 466",
+      "titelDe": "Bundesgesetz über die Erwerbsersatzordnung für Dienstleistende in Armee, Zivildienst und Zivilschutz (Erwerbsersatzgesetz, EOG)",
+      "titelFr": "Loi fédérale sur le régime des allocations pour perte de gain en faveur des personnes servant dans l'armée, dans le service civil ou dans la protection civile (LAPG)",
+      "titelIt": "Legge federale sulle indennità di perdita di guadagno in caso di servizio militare, servizio civile o servizio di protezione civile (LIPG)",
+      "botschaftKey": "BOTSCHAFT-2000-99",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/466/de",
+      "sha": "9718f13be51c733e6c1ee531ededc61511b8816f87cce0ed06ceda99da2c29b2"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1999-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/237",
+      "dateDocument": "1998-12-18",
+      "roFundstelle": "AS 1999 237",
+      "titelDe": "Bundesgesetz über die Erwerbsersatzordnung für Dienstleistende in Armee, Zivildienst und Zivilschutz (Erwerbsersatzgesetz, EOG)",
+      "titelFr": "Loi fédérale sur le régime des allocations pour perte de gain en faveur des personnes servant dans l'armée, dans le service civil ou dans la protection civile (Loi sur les allocations pour perte de gain, LAPG)",
+      "titelIt": "Legge federale sulle indennità di perdita di guadagno in caso di servizio militare, servizio civile o servizio di protezione civile (LIPG)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/237/de",
+      "sha": "23eb44cbf11d74ee3a6e81d5c1748f3345356050726ec643cca5f1983162206a"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1953-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1952/1021_1046_1050",
+      "dateDocument": "1952-09-25",
+      "roFundstelle": "AS 1952 1021",
+      "titelDe": "Bundesgesetz vom 25. September 1952 über den Erwerbsersatz (Erwerbsersatzgesetz, EOG)",
+      "titelFr": "Loi fédérale du 25 septembre 1952 sur les allocations pour perte de gain (Loi sur les allocations pour perte de gain, LAPG)",
+      "titelIt": "Legge federale del 25 settembre 1952 sulle indennità di perdita di guadagno (Legge sulle indennità di perdita di guadagno, LIPG)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1952/1021_1046_1050/de",
+      "sha": "208ca5dd5a457a2cfe07a3862be62e0b33ac94363f21530b45fc909895d0f616"
+    }
+  ],
+  "sha": "5a3603e5a20991356b354b197366c03b988b79ec9514f1b11992dc7700101c3a"
+}

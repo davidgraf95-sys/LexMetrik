@@ -1,0 +1,63 @@
+{
+  "erlassKey": "ARGV5",
+  "sr": "822.115",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2024-04-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2024/93",
+      "dateDocument": "2024-02-14",
+      "roFundstelle": "AS 2024 93",
+      "titelDe": "Verordnung 5 zum Arbeitsgesetz (Jugendarbeitsschutzverordnung, ArGV 5)",
+      "titelFr": "Ordonnance 5 relative à la loi sur le travail (Ordonnance sur la protection des jeunes travailleurs, OLT 5)",
+      "titelIt": "Ordinanza 5 concernente la legge sul lavoro (Ordinanza sulla protezione dei giovani lavoratori, OLL 5)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2024/93/de",
+      "sha": "dca93a4c658df08be7910f5a34c9a400ec496415f19fecca6d64147658b71323"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2018-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/275",
+      "dateDocument": "2018-04-25",
+      "roFundstelle": "AS 2018 275",
+      "titelDe": "Verordnung 5 zum Arbeitsgesetz (Jugendarbeitsschutzverordnung, ArGV 5)",
+      "titelFr": "Ordonnance 5 relative à la loi sur le travail (Ordonnance sur la protection des jeunes travailleurs, OLT 5)",
+      "titelIt": "Ordinanza 5 concernente la legge sul lavoro (Ordinanza sulla protezione dei giovani lavoratori, OLL 5)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/275/de",
+      "sha": "0eaa5ef9938f49110ce28a5e6f8a27bd653a64092e0fbe864f913426d16c96be"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2014-08-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/375",
+      "dateDocument": "2014-06-25",
+      "roFundstelle": "AS 2014 375",
+      "titelDe": "Verordnung 5 zum Arbeitsgesetz (Jugendarbeitsschutzverordnung, ArGV 5)",
+      "titelFr": "Ordonnance 5 relative à la loi sur le travail (Ordonnance sur la protection des jeunes travailleurs, OLT 5)",
+      "titelIt": "Ordinanza 5 concernente la legge sul lavoro (Ordinanza sulla protezione dei giovani lavoratori, OLL 5)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/375/de",
+      "sha": "ff9455d65e8093931bbbbc9386a0f33f5dfda4195455b6c5b66193dc5d8fa9e7"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2013-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/822.115",
+      "sha": "34419d14a4afa097bd6e5dc29fc40e4798b85fa4c6700a06228f306b208e95ac"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2008-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/692",
+      "dateDocument": "2007-09-28",
+      "roFundstelle": "AS 2007 692",
+      "titelDe": "Verordnung 5 zum Arbeitsgesetz (Jugendarbeitsschutzverordnung, ArGV 5)",
+      "titelFr": "Ordonnance 5 relative à la loi sur le travail (Ordonnance sur la protection des jeunes travailleurs, OLT 5)",
+      "titelIt": "Ordinanza 5 concernente la legge sul lavoro (Ordinanza sulla protezione dei giovani lavoratori, OLL 5)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/692/de",
+      "sha": "ad79e45d4b1c55384f126ca9f6013147357599f0240b3c614aff479318b99fd3"
+    }
+  ],
+  "sha": "18d0ee4ef12b3ef2faab4631ad85d67a75f1953191efedaea03fef92f7843013"
+}

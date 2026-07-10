@@ -1,0 +1,158 @@
+{
+  "erlassKey": "FINIG",
+  "sr": "954.1",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2026-10-01",
+      "nichtKonsolidiert": true,
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/954.1",
+      "sha": "a3147ceb1415bcc209d951fd426f6af72c5feb2735b777aa7ed79746b9f6de52"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/954.1",
+      "sha": "2f76ee7c9ee8218682b269f021d594a9886c09f8dc9a7e5cef422b7b336f3d27"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2021-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/954.1",
+      "sha": "d8f2f16d60a3c80e59ebabf36cf90014209aa4310d8517644efa7f27df8d5923"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2021-02-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/954.1",
+      "sha": "9fa68bab0912dea8718ae317a76cb84103d8c31f5f25582e5808f3886e5d1f0c"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2020-02-18",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/91",
+      "dateDocument": "2020-01-31",
+      "roFundstelle": "AS 2020 91",
+      "titelDe": "Bundesgesetz über die Finanzinstitute (Finanzinstitutsgesetz, FINIG)",
+      "titelFr": "Loi fédérale sur les établissements financiers (LEFin)",
+      "titelIt": "Legge federale sugli istituti finanziari (Legge sugli istituti finanziari, LIsFi)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/91/de",
+      "sha": "538c226ee0b2e75d75d8af6bb6e86422423d2ddfa40816e3f8530bfbf007e59c"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2020-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/762",
+      "dateDocument": "2019-11-06",
+      "roFundstelle": "AS 2019 762",
+      "titelDe": "Verordnung über die abschliessende Inkraftsetzung des Finanzinstitutsgesetzes",
+      "titelFr": "Ordonnance portant dernière mise en vigueur partielle de la loi fédérale sur les établissements financiers",
+      "titelIt": "Ordinanza concernente l'entrata in vigore integrale della legge sugli istituti finanziari",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/762/de",
+      "sha": "dc8baee95eb0a1dff96ff68a67e4012ca4f905842ea05a8d474996171a88c71d"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2020-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/803",
+      "dateDocument": "2019-12-31",
+      "roFundstelle": "AS 2019 803",
+      "titelDe": "Bundesgesetz über die Finanzinstitute (Finanzinstitutsgesetz, FINIG)",
+      "titelFr": "Loi fédérale sur les établissements financiers (LEFin)",
+      "titelIt": "Legge federale sugli istituti finanziari (Legge sugli istituti finanziari, LIsFi)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/803/de",
+      "sha": "cb5034e5f8958d3b06203ab60c4ea4a6a2b1f5764742dcb641604e0b737a668f"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2019-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/801",
+      "dateDocument": "2018-06-15",
+      "roFundstelle": "AS 2018 801",
+      "titelDe": "Bundesgesetz über die Finanzinstitute (Finanzinstitutsgesetz, FINIG)",
+      "titelFr": "Loi fédérale sur les établissements financiers (LEFin)",
+      "titelIt": "Legge federale sugli istituti finanziari (Legge sugli istituti finanziari, LIsFi)",
+      "botschaftKey": "BOTSCHAFT-2015-2141",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/801/de",
+      "sha": "f4bedae81d7363a614c22c2f87cdeaacd4d142316c2cea30a55fef107c74e754"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2013-05-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/250",
+      "dateDocument": "2012-09-28",
+      "roFundstelle": "AS 2013 250",
+      "titelDe": "Bundesgesetz über die Börsen und den Effektenhandel (Börsengesetz, BEHG)",
+      "titelFr": "Loi fédérale sur les bourses et le commerce des valeurs mobilières (Loi sur les bourses, LBVM)",
+      "titelIt": "Legge federale sulle borse e il commercio di valori mobiliari (Legge sulle borse, LBVM)",
+      "botschaftKey": "BOTSCHAFT-2011-1111",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/250/de",
+      "sha": "b8a3f5ebc17fd1718d83b1bad3410cb791e8fa906f78a6f87f807a871a1ea8ed"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2007-12-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/752",
+      "dateDocument": "2007-06-22",
+      "roFundstelle": "AS 2007 752",
+      "titelDe": "Bundesgesetz über die Börsen und den Effektenhandel",
+      "titelFr": "Loi fédérale sur les bourses et le commerce des valeurs mobilières",
+      "titelIt": "Legge federale sulle borse e il commercio di valori mobiliari",
+      "botschaftKey": "BOTSCHAFT-2006-303",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/752/de",
+      "sha": "d4b19780746c9aa78433fd2d1797815f638a4601464b3a721b17a8790477a238"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2006-02-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/34",
+      "dateDocument": "2005-10-07",
+      "roFundstelle": "AS 2006 34",
+      "titelDe": "Bundesgesetz über die Börsen und den Effektenhandel (Börsengesetz, BEHG)",
+      "titelFr": "Loi fédérale sur les bourses et le commerce des valeurs mobilières (Loi sur les bourses, LBVM)",
+      "titelIt": "Legge federale sulle borse e il commercio di valori mobiliari (Legge sulle borse, LBVM)",
+      "botschaftKey": "BOTSCHAFT-2004-1175",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/34/de",
+      "sha": "7129f4147a51ef65ced92f91eb6e368717871276048442ea2eac7074db57c386"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1997-02-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1997/68_68_68",
+      "dateDocument": "1995-03-24",
+      "roFundstelle": "AS 1997 68",
+      "titelDe": "Bundesgesetz vom 24. März 1995 über die Börsen und den Effektenhandel (Börsengesetz, BEHG)",
+      "titelFr": "Loi fédérale du 24 mars 1995 sur les bourses et le commerce des valeurs mobilières (Loi sur les bourses, LBVM)",
+      "titelIt": "Legge federale del 24 marzo 1995 sulle borse e il commercio di valori mobiliari (Legge sulle borse, LBVM)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1997/68_68_68/de",
+      "sha": "bf6916e7740a1884d8e6b37df157d7ad992ecddc722321fed5f48e4c4c5a6120"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1997-02-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/851",
+      "dateDocument": "2008-12-16",
+      "roFundstelle": "AS 2008 851",
+      "titelDe": "Börsengesetz (BEHG) (Betrifft nur den französischen Text)",
+      "titelFr": "Loi sur les bourses (LBVM)",
+      "titelIt": "Legge sulle borse (LBVM) (Concerne solo il testo francese)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/851/de",
+      "sha": "673f77433f6c2e645e00b6edc70243ec0719b149e7cee4338a7bb1015c525943"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1997-02-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/199",
+      "dateDocument": "2009-03-31",
+      "roFundstelle": "AS 2009 199",
+      "titelDe": "Bundesgesetz über die Börsen und den Effektenhandel (Börsengesetz, BEHG) (Betrifft nur den italienischen Text)",
+      "titelFr": "Loi fédérale sur les bourses et le commerce des valeurs mobilières (Loi sur les bourses, LBVM) (Ne concerne que le texte italien)",
+      "titelIt": "Legge federale sulle borse e il commercio di valori mobiliari (Legge sulle borse, LBVM)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/199/de",
+      "sha": "7e83243619e4dbdc6bfcc694415c0c4221da76c6027524a0131b2a6f72ce5126"
+    }
+  ],
+  "sha": "4078d8b919627a50cd5b7454ad02aad19315e2090ea000098d46351b4c18875b"
+}

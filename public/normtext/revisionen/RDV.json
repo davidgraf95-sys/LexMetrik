@@ -1,0 +1,243 @@
+{
+  "erlassKey": "RDV",
+  "sr": "143.5",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2025-11-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2025/625",
+      "dateDocument": "2025-10-08",
+      "roFundstelle": "AS 2025 625",
+      "titelDe": "Verordnung über die Ausstellung von Reisedokumenten für ausländische Personen (RDV)",
+      "titelFr": "Ordonnance sur l’établissement de documents de voyage pour étrangers (ODV)",
+      "titelIt": "Ordinanza concernente il rilascio di documenti di viaggio per stranieri (ODV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2025/625/de",
+      "sha": "dc9c20914684a3c774d95e0e9405b1516b3210ba9bb4e82dfb428dc7db02c092"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2023-10-15",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2023/248",
+      "dateDocument": "2023-05-10",
+      "roFundstelle": "AS 2023 248",
+      "titelDe": "Verordnung über die Ausstellung von Reisedokumenten für ausländische Personen (RDV)",
+      "titelFr": "Ordonnance sur l’établissement de documents de voyage pour étrangers (ODV)",
+      "titelIt": "Ordinanza concernente il rilascio di documenti di viaggio per stranieri (ODV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2023/248/de",
+      "sha": "f4a1b12ba59e3fc3fc1a1afa9e53cfad579a92740b07a1547dc0958d9da76710"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2023-10-15",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2023/552",
+      "dateDocument": "2023-09-15",
+      "roFundstelle": "AS 2023 552",
+      "titelDe": "Verordnung über die Ausstellung von Reisedokumenten für ausländische Personen (RDV)",
+      "titelFr": "Ordonnance sur l’établissement de documents de voyage pour étrangers (ODV)",
+      "titelIt": "Ordinanza concernente il rilascio di documenti di viaggio per stranieri (ODV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2023/552/de",
+      "sha": "d1638297e22d6c09279bd35b072acc905cbffb241094ecf3d3f7634835c2ef16"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/143.5",
+      "sha": "806a29a5be531bd57fff3f337fa9280aceb1f1c30b230761fcd09e80912a4a28"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2023-02-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2022/785",
+      "dateDocument": "2022-12-02",
+      "roFundstelle": "AS 2022 785",
+      "titelDe": "Verordnung über die Ausstellung von Reisedokumenten für ausländische Personen (RDV)",
+      "titelFr": "Ordonnance sur l’établissement de documents de voyage pour étrangers (ODV)",
+      "titelIt": "Ordinanza concernente il rilascio di documenti di viaggio per stranieri (ODV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2022/785/de",
+      "sha": "d2e9b0874b302f31743face11767c5d76de88db8de5d54c386ea164acd54e00d"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2022-03-12",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2022/168",
+      "dateDocument": "2022-03-11",
+      "roFundstelle": "AS 2022 168",
+      "titelDe": "Verordnung über die Ausstellung von Reisedokumenten für ausländische Personen (RDV)",
+      "titelFr": "Ordonnance sur l’établissement de documents de voyage pour étrangers (ODV)",
+      "titelIt": "Ordinanza concernente il rilascio di documenti di viaggio per stranieri (ODV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2022/168/de",
+      "sha": "e1bb09f286cf36fadbc7e8b1d9b5118f9e48c0436269d2d61ba365b083d17c9b"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2020-04-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/177",
+      "dateDocument": "2020-02-19",
+      "roFundstelle": "AS 2020 177",
+      "titelDe": "Verordnung über die Ausstellung von Reisedokumenten für ausländische Personen (RDV)",
+      "titelFr": "Ordonnance sur l'établissement de documents de voyage pour étrangers (ODV)",
+      "titelIt": "Ordinanza concernente il rilascio di documenti di viaggio per stranieri (ODV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/177/de",
+      "sha": "8a15ccc289e23a32890ad3b3b6b693d8af338e5a75a4847799ec96b6c07a37e0"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2020-02-02",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/143.5",
+      "sha": "1e485757a6bbc69569fe0a9130ab05390b13b269f917e6b78a1cd903f3cccf0f"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2019-06-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/283",
+      "dateDocument": "2019-05-01",
+      "roFundstelle": "AS 2019 283",
+      "titelDe": "Verordnung über die Ausstellung von Reisedokumenten für ausländische Personen (RDV)",
+      "titelFr": "Ordonnance sur l'établissement de documents de voyage pour étrangers (ODV)",
+      "titelIt": "Ordinanza concernente il rilascio di documenti di viaggio per stranieri (ODV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/283/de",
+      "sha": "1ef7becc5c2196da23064d545210e4104cf559ba3d2a4db2bcf2db90f507d631"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2018-09-15",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/495",
+      "dateDocument": "2018-08-15",
+      "roFundstelle": "AS 2018 495",
+      "titelDe": "Verordnung über die Ausstellung von Reisedokumenten für ausländische Personen (RDV)",
+      "titelFr": "Ordonnance sur l'établissement de documents de voyage pour étrangers (ODV)",
+      "titelIt": "Ordinanza concernente il rilascio di documenti di viaggio per stranieri (ODV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/495/de",
+      "sha": "5fdd293e308fde4a8f0272234f4d4777f57ae720855a26a86c82f6a6d2686a46"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2017-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/143.5",
+      "sha": "567675a6f80955517dd28aa169397ff8c691da8069f208c098043ac76de1566c"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2016-08-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/420",
+      "dateDocument": "2016-07-07",
+      "roFundstelle": "AS 2016 420",
+      "titelDe": "Verordnung über die Ausstellung von Reisedokumenten für ausländische Personen (RDV)",
+      "titelFr": "Ordonnance sur l'établissement des documents de voyage pour étrangers (ODV)",
+      "titelIt": "Ordinanza concernente il rilascio di documenti di viaggio per stranieri (ODV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/420/de",
+      "sha": "e35201a2fddacd56432b7bc6cbaa5edb9daed4fdb6bc819df649aa5893741b8a"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2015-11-20",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/709",
+      "dateDocument": "2015-10-28",
+      "roFundstelle": "AS 2015 709",
+      "titelDe": "Verordnung über die Ausstellung von Reisedokumenten für ausländische Personen (RDV)",
+      "titelFr": "Ordonnance sur l'établissement de documents de voyage pour étrangers (ODV)",
+      "titelIt": "Ordinanza concernente il rilascio di documenti di viaggio per stranieri (ODV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/709/de",
+      "sha": "f88e43b8ce1c4eaecafa63b622e46a2f327a2148c4a0cf5b5b24ea6d991623c1"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2012-12-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/713",
+      "dateDocument": "2012-11-14",
+      "roFundstelle": "AS 2012 713",
+      "titelDe": "Verordnung über die Ausstellung von Reisedokumenten für ausländische Personen (RDV)",
+      "titelFr": "Ordonnance sur l'établissement de documents de voyage pour étrangers (ODV)",
+      "titelIt": "Ordinanza concernente il rilascio di documenti di viaggio per stranieri (ODV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/713/de",
+      "sha": "d2c36959c90c21eb6a8d1e5e5664029d536fc3156c68c09519d7f6919bbc0aa5"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2010-03-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/97",
+      "dateDocument": "2010-01-20",
+      "roFundstelle": "AS 2010 97",
+      "titelDe": "Verordnung über die Ausstellung von Reisedokumenten für ausländische Personen (RDV)",
+      "titelFr": "Ordonnance sur l'établissement de documents de voyage pour étrangers (ODV)",
+      "titelIt": "Ordinanza concernente il rilascio di documenti di viaggio per stranieri (ODV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/97/de",
+      "sha": "7711e15e1644ce83f20622e8308fbd2c5957961831fe293eedabbfb8c93dce28"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2008-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/771",
+      "dateDocument": "2007-10-24",
+      "roFundstelle": "AS 2007 771",
+      "titelDe": "Verordnung über die Ausstellung von Reisedokumenten für ausländische Personen (RDV)",
+      "titelFr": "Ordonnance sur l'établissement de documents de voyage pour étrangers (ODV)",
+      "titelIt": "Ordinanza concernente il rilascio di documenti di viaggio per stranieri (ODV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/771/de",
+      "sha": "a51e39aaae5a882ae4f9e24c223c634e1ed7de3781a7f8868674a9110f17f8b5"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2007-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/532",
+      "dateDocument": "2006-07-05",
+      "roFundstelle": "AS 2006 532",
+      "titelDe": "Verordnung über die Ausstellung von Reisedokumenten für ausländische Personen (RDV)",
+      "titelFr": "Ordonnance sur l'établissement de documents de voyage pour étrangers (ODV)",
+      "titelIt": "Ordinanza concernente il rilascio di documenti di viaggio per stranieri (ODV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/532/de",
+      "sha": "ab3f359df43563c9d1c40bfe4316c4b57be947800e7ee251af9ee58a80b86165"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2004-12-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/701",
+      "dateDocument": "2004-10-27",
+      "roFundstelle": "AS 2004 701",
+      "titelDe": "Verordnung über die Ausstellung von Reisedokumenten für ausländische Personen (RDV)",
+      "titelFr": "Ordonnance sur l'établissement de documents de voyage pour étrangers (ODV)",
+      "titelIt": "Ordinanza concernente il rilascio di documenti di viaggio per stranieri (ODV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/701/de",
+      "sha": "50f2eac3ac4efc6003898accb74f1138fb0b396feec9a575e8fa0e9a87d04f54"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1999-10-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/362",
+      "dateDocument": "1999-08-11",
+      "roFundstelle": "AS 1999 362",
+      "titelDe": "Verordnung über die Abgabe von Reisepapieren an ausländische Personen (RPAV)",
+      "titelFr": "Ordonnance sur la remise de documents de voyage à des étrangers (ODV)",
+      "titelIt": "Ordinanza concernente il rilascio di documenti di viaggio a stranieri (ODV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/362/de",
+      "sha": "ad51a7a40a1e6c591a55c6e3f0a029c5adb909f8e29af9f16c8c5c2ab14a9dbc"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1987-04-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1987/538_538_538",
+      "dateDocument": "1987-03-09",
+      "roFundstelle": "AS 1987 538",
+      "titelDe": "Verordnung vom 9. März 1987 über Reisepapiere für schriftenlose Ausländer",
+      "titelFr": "Ordonnance du 9 mars 1987 sur les documents de voyage pour les étrangers sans papiers",
+      "titelIt": "Ordinanza del 9 marzo 1987 sui documenti di viaggio per gli stranieri sprovvisti di documenti",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1987/538_538_538/de",
+      "sha": "9e51cd44df3461d3a650972479eb90c4425bb0140f1e6f2aa030fa9275103ded"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1960-11-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1960/1233_1289_1285",
+      "dateDocument": "1960-11-01",
+      "roFundstelle": "AS 1960 1233",
+      "titelDe": "Bundesratsbeschluss vom 1. November 1960 über Reisepapiere für schriftenlose Ausländer",
+      "titelFr": "Arrêté du Conseil fédéral du 1er novembre 1960 concernant les documents de voyage pour les étrangers sans papiers",
+      "titelIt": "Decreto del Consiglio federale del 1o novembre 1960 concernente i documenti di viaggio per stranieri sprovvisti di documenti nazionali",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1960/1233_1289_1285/de",
+      "sha": "6a43e408a4019ad3fa664bb9e3d525a2aec31600f2ee3e16cc5c29370d1c4a8d"
+    }
+  ],
+  "sha": "94233e7b000d2760624022b56afb9eb058c86a69c798fe8763386a7f76e83c47"
+}

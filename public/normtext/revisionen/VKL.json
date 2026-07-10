@@ -1,0 +1,52 @@
+{
+  "erlassKey": "VKL",
+  "sr": "832.104",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2032-07-01",
+      "nichtKonsolidiert": true,
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/832.104",
+      "sha": "39908e7c161a29523e5d1e1c460baaa8f16288e18495ed47e00e1495ae6c78ec"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2025-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/832.104",
+      "sha": "d0644d248b06510bb8cadf7a14e0b7d083f92c0343b986d9694409a2749db29f"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/832.104",
+      "sha": "620a15461be7e876048b7730f8b87b746a93f3f2ae2f791d1b66dc14c60975eb"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2009-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/709",
+      "dateDocument": "2008-10-22",
+      "roFundstelle": "AS 2008 709",
+      "titelDe": "Verordnung über die Kostenermittlung und die Leistungserfassung durch Spitäler und Pflegeheime in der Krankenversicherung (VKL)",
+      "titelFr": "Ordonnance sur le calcul des coûts et le classement des prestations par les hôpitaux et les établissements médico-sociaux dans l'assurance-maladie (OCP)",
+      "titelIt": "Ordinanza sul calcolo dei costi e la registrazione delle prestazioni da parte degli ospedali e delle case di cura nell'assicurazione malattie (OCPre)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/709/de",
+      "sha": "55d511c5c652dcfdaa00e244271b2dd979b735601b62366d8e14a215b1cbbd35"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2003-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/418",
+      "dateDocument": "2002-07-03",
+      "roFundstelle": "AS 2002 418",
+      "titelDe": "Verordnung über die Kostenermittlung und die Leistungserfassung durch Spitäler, Geburtshäuser und Pflegeheime in der Krankenversicherung (VKL)",
+      "titelFr": "Ordonnance sur le calcul des coûts et le classement des prestations par les hôpitaux, les maisons de naissance et les établissements médico-sociaux dans l'assurance-maladie (OCP)",
+      "titelIt": "Ordinanza sul calcolo dei costi e la registrazione delle prestazioni da parte degli ospedali, delle case per partorienti e delle case di cura nell'assicurazione malattie (OCPre)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/418/de",
+      "sha": "6011026e6dfc217ff4d09f8e3654c8f6c39623c9e37f78c3082422153b501da4"
+    }
+  ],
+  "sha": "bed23c212d8a903ec2b159c8f1e2e196faa99bad25b1a2923c3faf3bcb62a81d"
+}

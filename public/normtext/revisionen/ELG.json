@@ -1,0 +1,169 @@
+{
+  "erlassKey": "ELG",
+  "sr": "831.30",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2029-01-01",
+      "nichtKonsolidiert": true,
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.30",
+      "sha": "d8becd9e4b317a2908b984864d0e685beb1033b8b73c92cac2aeec4130bc9165"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.30",
+      "sha": "778e33dad107ba9d55650699cd278ca89d4a256c544b65114c0616e2dbe8bcb9"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.30",
+      "sha": "e1bde77c5ccea47275cc15de5e8866dd83a0707d05f9a7b1df2b7c10398ca9a4"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.30",
+      "sha": "1c762fa75b0f958056d12807f9fea8db15f6da4c44a3148abe53fee485600374"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.30",
+      "sha": "7cef68597e4f070564d66a9a6e0ea8f904065f44f6b1039e3d5434e740a1fef5"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2022-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.30",
+      "sha": "4984d19bf9bc8c7543f7d8adc00e1ed8084dc08bd5186c6247467c9f35e87661"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2021-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/111",
+      "dateDocument": "2019-03-22",
+      "roFundstelle": "AS 2020 111",
+      "titelDe": "Bundesgesetz über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELG) (EL-Reform)",
+      "titelFr": "Loi fédérale sur les prestations complémentaires à l'AVS et à l'AI (Loi sur les prestations complémentaires, LPC) (Réforme des PC)",
+      "titelIt": "Legge federale sulle prestazioni complementari all'assicurazione per la vecchiaia, i superstiti e l'invalidità (LPC) (Riforma delle PC)",
+      "botschaftKey": "BOTSCHAFT-2016-1620",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/111/de",
+      "sha": "3b8e8b7a4c4f9839a73ecb0cb8dd29c11930616c350764013a725e1fa281361e"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2021-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/513",
+      "dateDocument": "2020-06-30",
+      "roFundstelle": "AS 2020 513",
+      "titelDe": "Bundesgesetz über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELG) (EL-Reform) (Betrifft nur den italienischen Text)",
+      "titelFr": "Loi fédérale sur les prestations complémentaires à l'AVS et à l'AI (Loi sur les prestations complémentaires, LPC) (Réforme des PC) (Ne concerne que le texte italien)",
+      "titelIt": "Legge federale sulle prestazioni complementari all'assicurazione per la vecchiaia, i superstiti e l'invalidità (LPC) (Riforma delle PC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/513/de",
+      "sha": "d6fda50a7e53c765614d36e10c822d9eee374d754166716320a3f4e8c6c847f9"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2019-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.30",
+      "sha": "085cb243d52205812959318a56df5499b039360732ca3e74d7061b3a576e5eb8"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2018-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.30",
+      "sha": "f6027bbd3277da45d51aecb9b5563a7ab9335595f660192d51a0ba7806706361"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2017-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.30",
+      "sha": "2ff839e10f64a96ecc496c6292a6adeb532982bf17dbc835c407284c3159e71a"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2015-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.30",
+      "sha": "5c7a4b42f793c90c626f4cf28204792bf5001cd0aa92732a44728cffd86e6b0f"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2013-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.30",
+      "sha": "0a88cc9479df067ab49e7e74bb0faa9b179f43c6445ca6e6ca9a5c8eb4b4b933"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2012-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.30",
+      "sha": "5ae2a29375078c8f52e7ec6bf35c71ccf6cf296f06823476e26bb3f45f73bedf"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.30",
+      "sha": "a2f6035f4227cb371ead44e940377dd614f5ae9013258db799dfe40e5822c183"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2010-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.30",
+      "sha": "dfeadbd12d4f5bc97982e59699c29fc6d9e12f66fc4c85abd1cff2857963b925"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2009-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.30",
+      "sha": "3c2452dc5b27d13b9c139e0fe9687467bc979466444030d1e460fabc39c3709d"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2009-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.30",
+      "sha": "28e78623acdc1f252bcb7654b9de1f7c7f7725738e92203ff63bc67d8be508b4"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2008-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/804",
+      "dateDocument": "2006-10-06",
+      "roFundstelle": "AS 2007 804",
+      "titelDe": "Bundesgesetz über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELG)",
+      "titelFr": "Loi fédérale sur les prestations complémentaires à l'AVS et à l'AI (Loi sur les prestations complémentaires, LPC)",
+      "titelIt": "Legge federale sulle prestazioni complementari all'assicurazione per la vecchiaia, i superstiti e l'invalidità (LPC)",
+      "botschaftKey": "BOTSCHAFT-2005-976",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/804/de",
+      "sha": "bf652ce4cd23a6f4a9a851a333a7a1b3e97f0c15e542048228b7df94d9e41613"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2001-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/441",
+      "dateDocument": "2000-06-23",
+      "roFundstelle": "AS 2000 441",
+      "titelDe": "Bundesgesetz über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELG)",
+      "titelFr": "Loi fédérale sur les prestations complémentaires à l'assurance-vieillesse, survivants et invalidité (LPC)",
+      "titelIt": "Legge federale sulle prestazioni complementari al l'assicurazione per la vecchiaia, i superstiti e l'invalidità (LPC)",
+      "botschaftKey": "BOTSCHAFT-2000-99",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/441/de",
+      "sha": "b38960b5f7c89bfeeeecca9244e3e1c7f803512e9b883140d019e1af3c077669"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1966-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1965/537_541_535",
+      "dateDocument": "1965-03-19",
+      "roFundstelle": "AS 1965 537",
+      "titelDe": "Bundesgesetz vom 19. März 1965 über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELG)",
+      "titelFr": "Loi fédérale du 19 mars 1965 sur les prestations complémentaires à l'assurance-vieillesse, survivants et invalidité (LPC)",
+      "titelIt": "Legge federale del 19 marzo 1965 sulle prestazioni complementari all'assicurazione per la vecchiaia, i superstiti e l'invalidità (LPC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1965/537_541_535/de",
+      "sha": "1ec623b9c28354e4facb3b50d90060bd4413a8fc934a1c90be21cc64b63643e5"
+    }
+  ],
+  "sha": "c77ce63b3ca76d628093ceb6ae2ae70a84606e674c085cc50f683ff30bc09b56"
+}

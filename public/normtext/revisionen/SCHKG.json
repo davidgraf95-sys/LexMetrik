@@ -1,0 +1,312 @@
+{
+  "erlassKey": "SCHKG",
+  "sr": "281.1",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2026-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2025/522",
+      "dateDocument": "2025-03-21",
+      "roFundstelle": "AS 2025 522",
+      "titelDe": "Bundesgesetz über Schuldbetreibung und Konkurs (SchKG) (Nichtbekanntgabe von Betreibungseinträgen)",
+      "titelFr": "Loi fédérale sur la poursuite pour dettes et la faillite (LP) (Possibilité de ne pas communiquer les inscriptions dans le registre des poursuites)",
+      "titelIt": "Legge federale sulla esecuzione e sul fallimento (LEF) (Possibilità di non comunicare le iscrizioni presenti nei registri delle esecuzioni)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2025/522/de",
+      "sha": "0e00203f86836c65c24a468784028aa3fea55502a7f11b66000bf4e45aec5414"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/281.1",
+      "sha": "2d4b2e03618558e36b8af4f0a837341f48ade0f0ca4dc4c6ab3681956a1b6bd3"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/281.1",
+      "sha": "eb1f9784307b580d2f30350bd6f24eb987d74690ec8bee99d71d88829a2d96c4"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/281.1",
+      "sha": "5085b85abc65b7541967270c6daf04b2c6690f7383e138c790f4f610c664efad"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2021-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/281.1",
+      "sha": "a44cbcc698654f9698762cf27d493cf0bbf334cdc03a1f660403fbe6ebe6c47d"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2020-10-20",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/758",
+      "dateDocument": "2020-10-14",
+      "roFundstelle": "AS 2020 758",
+      "titelDe": "Verordnung über eine Teilinkraftsetzung der Änderung vom 19. Juni 2020 des Obligationenrechts (Aktienrecht) (Art. 293a des Bundesgesetzes über Schuldbetreibung und Konkurs)",
+      "titelFr": "Ordonnance portant mise en vigueur partielle de la modification du 19 juin 2020 du code des obligations (Droit de la société anonyme) (Art. 293a de la loi fédérale sur la poursuite pour dettes et la faillite)",
+      "titelIt": "Ordinanza concernente un'entrata in vigore parziale della modifica del 19 giugno 2020 del Codice delle obbligazioni (Diritto della società anonima) (Art. 293a della legge federale sulla esecuzione e sul fallimento)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/758/de",
+      "sha": "093f084cc96fd38eae153e752e9b248756d0aef7ea1b27076f866dda1ba2e24c"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2020-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/281.1",
+      "sha": "d1b8a870c250ca01d6fe9b5c3fdf93ab9a694e39de7e54d25cb57435eeaee6a8"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2019-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/721",
+      "dateDocument": "2016-12-16",
+      "roFundstelle": "AS 2018 721",
+      "titelDe": "Bundesgesetz über Schuldbetreibung und Konkurs (SchKG)",
+      "titelFr": "Loi fédérale sur la poursuite pour dettes et la faillite (LP)",
+      "titelIt": "Legge federale sulla esecuzione e sul fallimento (LEF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/721/de",
+      "sha": "471f1e35c5162b16571d9f09a820e9ddf52cbecb1379f5d1219c39b76f31544d"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2018-03-16",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/281.1",
+      "sha": "895309afc63fa4b81dbc291aa49a2c0b48b7573a97b4a632015183bdf4da9e8e"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2018-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/612",
+      "dateDocument": "2015-09-25",
+      "roFundstelle": "AS 2016 612",
+      "titelDe": "Bundesgesetz über Schuldbetreibung und Konkurs (SchKG) (Gewerbsmässige Vertretung im Zwangsvollstreckungsverfahren)",
+      "titelFr": "Loi fédérale sur la poursuite pour dettes et la faillite (LP) (Représentation professionnelle dans une procédure d'exécution forcée)",
+      "titelIt": "Legge federale sulla esecuzione e sul fallimento (LEF) (Rappresentanza professionale nel procedimento esecutivo)",
+      "botschaftKey": "BOTSCHAFT-2014-1878",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/612/de",
+      "sha": "121025dfb4c287fb22951cf284ace86773600f450a99f6951f53df140695f2f0"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2017-03-28",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/196",
+      "dateDocument": "2017-03-14",
+      "roFundstelle": "AS 2017 196",
+      "titelDe": "Bundesgesetz über Schuldbetreibung und Konkurs (SchKG) (Betrifft nur den italienischen Text)",
+      "titelFr": "Loi fédérale sur la poursuite pour dettes et la faillite (LP) (Ne concerne que le texte italien)",
+      "titelIt": "Legge federale sulla esecuzione e sul fallimento (LEF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/196/de",
+      "sha": "3a9355c50d7ed2d54d5e70f5d50c5995e3aa43dcfc817b0604664f8bb051ce5d"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2017-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/281.1",
+      "sha": "5e9a576c1a8d964eeb88d2ada62bfbd936d641ca81cc9ca6971ac8779e2ee99b"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2016-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/281.1",
+      "sha": "becde9bc2cdebf5cd7002e4822ab05899a95bb84085b1932330c48c51cc38b65"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2016-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/281.1",
+      "sha": "0b9d036d73db3294a6d26796f28c8a0dde59da5190eb47e0c1531ae940efa1f8"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2014-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/757",
+      "dateDocument": "2013-06-21",
+      "roFundstelle": "AS 2013 757",
+      "titelDe": "Bundesgesetz über Schuldbetreibung und Konkurs (SchKG)",
+      "titelFr": "Loi fédérale sur la poursuite pour dettes et la faillite (LP)",
+      "titelIt": "Legge federale sulla esecuzione e sul fallimento (LEF)",
+      "botschaftKey": "BOTSCHAFT-2010-1144",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/757/de",
+      "sha": "a4bd713568d717ceab4be285e69a10bd296148db30207762fbaddcfaaa7e5db1"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2013-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/281.1",
+      "sha": "2a1343dbd0f6831ac96327938730ab9be5cf95b4b28c0f2af07b682b8f68af17"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2012-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/281.1",
+      "sha": "67ed464f3c5a02a33ff4882a8fad75f32efa590bbae8b2fef8e01f0020d8a62f"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2011-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/281.1",
+      "sha": "de9e02efa371e7ace00c805f56ab037fe7fd2f028aff3add51ec230a071f5049"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2011-02-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/281.1",
+      "sha": "11419424fe0d2187381d7de198c3e756513b122641725a11350673346271baea"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/281.1",
+      "sha": "16571fa2212382faea8d2a9dc1d5504b53375c12498c51ba668217af5f27f027"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2010-12-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/688",
+      "dateDocument": "2010-06-18",
+      "roFundstelle": "AS 2010 688",
+      "titelDe": "Bundesgesetz über Schuldbetreibung und Konkurs (SchKG)",
+      "titelFr": "Loi fédérale sur la poursuite pour dettes et la faillite (LP)",
+      "titelIt": "Legge federale sulla esecuzione e sul fallimento (LEF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/688/de",
+      "sha": "fd232770c4c62e2655a92813ec0d8c84d4dfbe2ee2f0770d7f97acb7e9f57ab1"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2010-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/281.1",
+      "sha": "75922701136e5d1510181af7833a88273abb4157ed30c376a8aae9633902e5d6"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2008-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/281.1",
+      "sha": "e2faa4f0ab0379aed167c838132c5f4d81312bbd6ee5487eb607489ff21d7d90"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2007-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/374",
+      "dateDocument": "2006-12-20",
+      "roFundstelle": "AS 2007 374",
+      "titelDe": "Bundesbeschluss über die Genehmigung und Umsetzung des Haager Übereinkommens über das auf Trusts anzuwendende Recht und über ihre Anerkennung",
+      "titelFr": "Arrêté fédéral portant approbation et mise en uvre de la Convention de La Haye relative à la loi applicable au trust et à sa reconnaissance",
+      "titelIt": "Decreto federale che approva e traspone nel diritto svizzero la Convenzione dell'Aia relativa alla legge applicabile ai trust ed al loro riconoscimento",
+      "botschaftKey": "BOTSCHAFT-2006-54",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/374/de",
+      "sha": "78446fe2dcf9e7ab3ed7d2a79b7387c169571e1c597540367c5263addbe38ac9"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2007-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/281.1",
+      "sha": "d98fc241b0fb8d8f8a73e12ac8654dc96a131be92d0e1ce92d319f6c41cf4e53"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2005-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/588",
+      "dateDocument": "2003-12-19",
+      "roFundstelle": "AS 2004 588",
+      "titelDe": "Bundesgesetz über Schuldbetreibung und Konkurs (Arbeitnehmerforderungen)",
+      "titelFr": "Loi fédérale sur la poursuite pour dettes et la faillite (Créances salariales)",
+      "titelIt": "Legge federale sull'esecuzione e sul fallimento (Crediti dei lavoratori)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/588/de",
+      "sha": "97cd2275a1f373b06b8d123fea573e64b5e5faf9e6f36f5a41109741baf4832a"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2005-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/589",
+      "dateDocument": "2004-03-19",
+      "roFundstelle": "AS 2004 589",
+      "titelDe": "Bundesgesetz über Schuldbetreibung und Konkurs (Anmerkung des Konkurses im Grundbuch)",
+      "titelFr": "Loi fédérale sur la poursuite pour dettes et la faillite (Mention de la faillite au registre foncier)",
+      "titelIt": "Legge federale sulla esecuzione e sul fallimento (Menzione del fallimento nel registro fondiario)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/589/de",
+      "sha": "6b99760f3ca5cf22334ca1d2a998bad2a87e88e2400c43d7e54b485f9a9f62f9"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2004-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/336",
+      "dateDocument": "2003-10-03",
+      "roFundstelle": "AS 2004 336",
+      "titelDe": "Bundesgesetz über Schuldbetreibung und Konkurs (SchKG) (Ausnahmen von der Konkursbetreibung)",
+      "titelFr": "Loi fédérale sur la poursuite pour dettes et la faillite (LP) (Exceptions à la poursuite par voie de faillite)",
+      "titelIt": "Legge federale sull'esecuzione e sul fallimento (LEF) (Eccezioni all'esecuzione in via di fallimento)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/336/de",
+      "sha": "f19d473efb085794eb5745f9251b1626171b70cf1bcf817ccbe6939b290791e6"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2003-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/281.1",
+      "sha": "a91347efab212ff992ccf2f6ca0d8d3b184ef722ae2c174aca01ead845c03e6b"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2001-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/401",
+      "dateDocument": "2000-03-24",
+      "roFundstelle": "AS 2000 401",
+      "titelDe": "Bundesgesetz über Schuldbetreibung und Konkurs (SchKG)",
+      "titelFr": "Loi fédérale sur la poursuite pour dettes et la faillite (LP)",
+      "titelIt": "Legge federale sulla esecuzione e sul fallimento (LEF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/401/de",
+      "sha": "480fa5b10eb25da81c56753308fba0c1752e1d166f9172742799ec07d1b4255f"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1997-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/161",
+      "dateDocument": "2004-03-09",
+      "roFundstelle": "AS 2004 161",
+      "titelDe": "Bundesgesetz über Schuldbetreibung und Konkurs (SchKG) (Betrifft nur den italienischen Text)",
+      "titelFr": "Loi fédérale du 11 avril 1889 sur la poursuite pour dettes et la faillite (LP) (Ne concerne que le texte italien)",
+      "titelIt": "Legge federale sulla esecuzione e sul fallimento",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/161/de",
+      "sha": "eecd727b29193433ffb3afa0a9633b22d3a413b4eee94adc4226cedaf1fb8105"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1997-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/15",
+      "dateDocument": "2004-12-20",
+      "roFundstelle": "AS 2005 15",
+      "titelDe": "Bundesgesetz über Schuldbetreibung und Konkurs",
+      "titelFr": "Loi fédérale sur la poursuite pour dettes et la faillite",
+      "titelIt": "Legge federale sulla esecuzione e sul fallimento",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/15/de",
+      "sha": "a369e4df3932f2d6fa57994527cb85582bb59c9b872b5e94372b0b5ea78d4c3a"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1997-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/40",
+      "dateDocument": "2011-11-28",
+      "roFundstelle": "AS 2012 40",
+      "titelDe": "Bundesgesetz über Schuldbetreibung und Konkurs (SchKG) (Betrifft nur den italienischen Text)",
+      "titelFr": "Loi fédérale sur la poursuite pour dettes et la faillite (LP) (Ne concerne que le texte italien)",
+      "titelIt": "Legge federale sulla esecuzione e sul fallimento (LEF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/40/de",
+      "sha": "a8237a444978e8a02ed5d619836f3c903a03cf36831e1a27199af42627a284b8"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1892-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/11/529_488_529",
+      "dateDocument": "1889-04-11",
+      "roFundstelle": "AS 11 529",
+      "titelDe": "Bundesgesetz vom 11. April 1889 über Schuldbetreibung und Konkurs (SchKG)",
+      "titelFr": "Loi fédérale du 11 avril 1889 sur la poursuite pour dettes et la faillite (LP)",
+      "titelIt": "Legge federale dell'11 aprile 1889 sulla esecuzione e sul fallimento (LEF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/11/529_488_529/de",
+      "sha": "a98adc9840b38edbe7fd02436ad0df5dc221e4633ab8f59f1b3c47b859e6aa19"
+    }
+  ],
+  "sha": "580cb39ed84e79720f88ef4bce93928dcf2823d3ff993f79fd051fc7756ed15c"
+}

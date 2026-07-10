@@ -1,0 +1,431 @@
+{
+  "erlassKey": "MWSTG",
+  "sr": "641.20",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2025-03-31",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2025/215",
+      "dateDocument": "2025-03-19",
+      "roFundstelle": "AS 2025 215",
+      "titelDe": "Bundesgesetz über die Mehrwertsteuer(Mehrwertsteuergesetz, MWSTG). Berichtigung (Betrifft nur den italienischen Text)",
+      "titelFr": "Loi fédérale régissant la taxe sur la valeur ajoutée (Loi sur la TVA, LTVA). Erratum (Ne concerne que le texte italien)",
+      "titelIt": "Legge federale concernente l’imposta sul valore aggiunto (Legge sull’IVA, LIVA). Correzione",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2025/215/de",
+      "sha": "9300655b058f273c12e2b7763aa5761f7e84712cbddd6c5d878504115ac7db80"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2025-03-31",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2025/216",
+      "dateDocument": "2025-03-19",
+      "roFundstelle": "AS 2025 216",
+      "titelDe": "Bundesgesetz über die Mehrwertsteuer(Mehrwertsteuergesetz, MWSTG). Berichtigung (Betrifft nur den italienischen Text)",
+      "titelFr": "Loi fédérale régissant la taxe sur la valeur ajoutée (Loi sur la TVA, LTVA). Erratum (Ne concerne que le texte italien)",
+      "titelIt": "Legge federale concernente l’imposta sul valore aggiunto (Legge sull’IVA, LIVA). Correzione",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2025/216/de",
+      "sha": "c5e369da0028cb3a03886d6bc202cca710c38bbaa408e009f35259c15dbe3cd7"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2025-02-27",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2025/135",
+      "dateDocument": "2025-02-19",
+      "roFundstelle": "AS 2025 135",
+      "titelDe": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG). Berichtigung (Betrifft nur den italienischen Text)",
+      "titelFr": "Loi fédérale régissant la taxe sur la valeur ajoutée (Loi sur la TVA, LTVA). Erratum (Ne concerne que le texte italien)",
+      "titelIt": "Legge federale concernente l’imposta sul valore aggiunto (Legge sull’IVA, LIVA). Correzione",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2025/135/de",
+      "sha": "31f94d13e722704902835255436f525e51e7d36e21303a1a404d13fcb4941011"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2025-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2024/438",
+      "dateDocument": "2023-06-16",
+      "roFundstelle": "AS 2024 438",
+      "titelDe": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG)",
+      "titelFr": "Loi fédérale régissant la taxe sur la valeur ajoutée (Loi sur la TVA, LTVA)",
+      "titelIt": "Legge federale concernente l’imposta sul valore aggiunto (Legge sull’IVA, LIVA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2024/438/de",
+      "sha": "68613af75af36778f9a380ec5530b69a189260c788e266ea2bc95d0b362e7d2b"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2024-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2022/863",
+      "dateDocument": "2022-12-09",
+      "roFundstelle": "AS 2022 863",
+      "titelDe": "Verordnung über die Anhebung der Mehrwertsteuersätze zur Zusatzfinanzierung der AHV",
+      "titelFr": "Ordonnance concernant le relèvement des taux de la taxe sur la valeur ajoutée pour le financement additionnel de l’AVS",
+      "titelIt": "Ordinanza sull’aumento delle aliquote dell’imposta sul valore aggiunto per il finanziamento supplementare dell’AVS",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2022/863/de",
+      "sha": "9b117b488450f0367fae8cbf8fe0ecc7a278ece23ec45d6883d2a35b14abbef2"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/641.20",
+      "sha": "1e744adfd313929c7d6ca912037582d2a86e7c815291fa4f89a83b994ebaf8af"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2023-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2022/228",
+      "dateDocument": "2021-12-17",
+      "roFundstelle": "AS 2022 228",
+      "titelDe": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG)",
+      "titelFr": "Loi fédérale régissant la taxe sur la valeur ajoutée (Loi sur la TVA, LTVA)",
+      "titelIt": "Legge federale concernente l’imposta sul valore aggiunto (Legge sull’IVA, LIVA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2022/228/de",
+      "sha": "5b1996fe90647fcf5f129dfa6acf2507b8a16786ce92c9b2d70d343addbe534b"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2022-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/641.20",
+      "sha": "1b8b93671d46a82c28d20d8ae72a2c47f9cf4d6ce8a24387f622ad92509cf955"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2020-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/641.20",
+      "sha": "e773fdd1797c4a50e00fdf13b83b06002fc86e086eaa46b4bbf188993184819f"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2019-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/641.20",
+      "sha": "2049d4aebbab313a06afbf3368817e726e7eedbf65922cd2e0a316c54a12eb53"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2018-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/396",
+      "dateDocument": "2016-09-30",
+      "roFundstelle": "AS 2017 396",
+      "titelDe": "Bundesgesetzes über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG)",
+      "titelFr": "Loi fédérale régissant la taxe sur la valeur ajoutée (Loi sur la TVA, LTVA)",
+      "titelIt": "Legge federale concernente l'imposta sul valore aggiunto (Legge sull'IVA, LIVA)",
+      "botschaftKey": "BOTSCHAFT-2015-540",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/396/de",
+      "sha": "e0d1205a77cc922b07c65a8fa0a277edbd9bba2984512bb71529b5bd007d5f2e"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2018-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/526",
+      "dateDocument": "2017-08-31",
+      "roFundstelle": "AS 2017 526",
+      "titelDe": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG) (Betrifft nur den französischen Text)",
+      "titelFr": "Loi fédérale régissant la taxe sur la valeur ajoutée (Loi sur la TVA, LTVA)",
+      "titelIt": "Legge federale concernente l'imposta sul valore aggiunto (Legge sull'IVA, LIVA) (Concerne soltanto il testo francese)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/526/de",
+      "sha": "531280ab868d2bd57f79df85d834ffcb2c871c6eec86cf8d0867c8ed4f6030b6"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2018-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/550",
+      "dateDocument": "2017-08-30",
+      "roFundstelle": "AS 2017 550",
+      "titelDe": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG) (Betrifft nur den italienischen Text)",
+      "titelFr": "Loi fédérale régissant la taxe sur la valeur ajoutée (Loi sur la TVA, LTVA) (Ne concerne que le texte italien)",
+      "titelIt": "Legge federale concernente l'imposta sul valore aggiunto (Legge sull'IVA, LIVA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/550/de",
+      "sha": "677612fe6e0b7c46d64c9d844e6b5b3e17b6a2ca4c54c48fd67c137757e8b094"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2018-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/695",
+      "dateDocument": "2017-11-08",
+      "roFundstelle": "AS 2017 695",
+      "titelDe": "Verordnung über die befristete Anhebung der Mehrwertsteuersätze zur Finanzierung des Ausbaus der Eisenbahninfrastruktur",
+      "titelFr": "Ordonnance concernant le relèvement temporaire des taux de la taxe sur la valeur ajoutée pour le financement de l'aménagement de l'infrastructure ferroviaire",
+      "titelIt": "Ordinanza sull'aumento temporaneo delle aliquote dell'imposta sul valore aggiunto per finanziare l'ampliamento dell'infrastruttura ferroviaria",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/695/de",
+      "sha": "ce243e7bf4e020baae8ca9e7748331280c61a00a3f6deaf7593e68ad888c67c1"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2018-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/838",
+      "dateDocument": "2017-06-16",
+      "roFundstelle": "AS 2017 838",
+      "titelDe": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG)",
+      "titelFr": "Loi fédérale régissant la taxe sur la valeur ajoutée (Loi sur la TVA, LTVA)",
+      "titelIt": "Legge federale concernente l'imposta sul valore aggiunto (Legge sull'IVA, LIVA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/838/de",
+      "sha": "240b40786b50c81bbaf3d9c4e5dd5b946c55562f5f39cbba78feba06c892993d"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2017-05-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/641.20",
+      "sha": "ac7654db5ba77eeebde295b9f3e8066984e76303ab50416c8d4ad0de78048e66"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2016-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/641.20",
+      "sha": "9b63e65b2d055fa6281d3e950ee886a9db07edacbdf8467219a857da1471f061"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2016-05-10",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/266",
+      "dateDocument": "2016-04-28",
+      "roFundstelle": "AS 2016 266",
+      "titelDe": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG) (Betrifft nur den französischen Text)",
+      "titelFr": "Loi fédérale régissant la taxe sur la valeur ajoutée (Loi sur la TVA, LTVA)",
+      "titelIt": "Legge federale concernente l'imposta sul valore aggiunto (Legge sull'IVA, LIVA) (Concerne soltanto il testo francese)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/266/de",
+      "sha": "b76a007570432525c65ef869f674ef6ba116e57cd62041dddde5c96b1ab73255"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2016-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/641.20",
+      "sha": "ef50ada91e372e92b0eaf4d5575a5ce8dbaf4db37284c097713c711c9407710b"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2014-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/651",
+      "dateDocument": "2013-06-21",
+      "roFundstelle": "AS 2013 651",
+      "titelDe": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG)",
+      "titelFr": "Loi fédérale régissant la taxe sur la valeur ajoutée (Loi sur la TVA, LTVA)",
+      "titelIt": "Legge federale concernente l'imposta sul valore aggiunto (Legge sull'IVA, LIVA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/651/de",
+      "sha": "4692c1f137fdd8429e1557af44d7d0cac61c5eec4e333f3e64bae489a7668dc6"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2013-03-12",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/165",
+      "dateDocument": "2013-02-20",
+      "roFundstelle": "AS 2013 165",
+      "titelDe": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG) (Betrifft nur den italienischen Text)",
+      "titelFr": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance-chômage, LACI) (Ne concerne que le texte italien)",
+      "titelIt": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/165/de",
+      "sha": "e4f97990a3a7754c01e6ee55195a5a779ccf1b7bd3cb25012e18489cdf34ab5c"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2013-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/641.20",
+      "sha": "784e7ea33e0e314f217b335a3055c205388ae08d6ccb417c3fbb5bcf71e44107"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2013-02-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/641.20",
+      "sha": "e209b717ff6d688a3bb724eef23ab5f6d3d19708a9ff2c87687d14094d1da8a2"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2013-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/399",
+      "dateDocument": "2012-06-26",
+      "roFundstelle": "AS 2012 399",
+      "titelDe": "Mitteilung über die Auswirkung einer Gemeindefusion auf ein Gesetz",
+      "titelFr": "Communication concernant la répercussion d'une fusion de communes sur une loi",
+      "titelIt": "Comunicazione concernente la ripercussione di una fusione comunale su una legge",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/399/de",
+      "sha": "08c6f085c33bbaadfe29d9eda6131d937fc6d1d3b284af841d6b39bcd2be126a"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2012-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/641.20",
+      "sha": "08815673c0949b9c8a6098e5617cac7f59799a8bd68ff6e6b47904b3b7cca0c5"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2012-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/670",
+      "dateDocument": "2011-10-12",
+      "roFundstelle": "AS 2011 670",
+      "titelDe": "Verordnung über eine weitere Teilinkraftsetzung des Mehrwertsteuergesetzes",
+      "titelFr": "Ordonnance portant nouvelle mise en vigueur partielle de la loi sur la TVA",
+      "titelIt": "Ordinanza su un'ulteriore entrata in vigore parziale della legge sull'IVA",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/670/de",
+      "sha": "31d09b42c9e81a93b55e69b3473c94015e2f56960c97784a39ad72df026e403f"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2011-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/641.20",
+      "sha": "7f73be9abb41cd9f388a3135cf554e8deb9db363464640b5232fc469375b1fdf"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2011-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/641.20",
+      "sha": "c0e46807ee8b6662b1b94c98d4b2c96e7729a4b6e47ac539a4db353351f949a7"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2011-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/269",
+      "dateDocument": "2010-04-21",
+      "roFundstelle": "AS 2010 269",
+      "titelDe": "Verordnung über die Anhebung der Mehrwertsteuersätze zur befristeten Zusatzfinanzierung der Invalidenversicherung",
+      "titelFr": "Ordonnance concernant le relèvement temporaire des taux de la taxe sur la valeur ajoutée pour le financement additionnel de l'assurance-invalidité",
+      "titelIt": "Ordinanza sull'aumento delle aliquote dell'imposta sul valore aggiunto ai fini del finanziamento aggiuntivo temporaneo dell'assicurazione invalidità",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/269/de",
+      "sha": "e844c33344712deebf8d4de24fa4cd4552dbbc7e4b804d72f026e1c04d44cd46"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2010-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/615",
+      "dateDocument": "2009-06-12",
+      "roFundstelle": "AS 2009 615",
+      "titelDe": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG)",
+      "titelFr": "Loi fédérale régissant la taxe sur la valeur ajoutée (Loi sur la TVA, LTVA)",
+      "titelIt": "Legge federale concernente l'imposta sul valore aggiunto (Legge sull'IVA, LIVA)",
+      "botschaftKey": "BOTSCHAFT-2008-1202",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/615/de",
+      "sha": "6c4eb150cb2dc7712d4b6ce47bf1583154104a0120ae82ba452b7724df278536"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2010-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/864",
+      "dateDocument": "2009-12-02",
+      "roFundstelle": "AS 2009 864",
+      "titelDe": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG) (Betrifft nur den italienischen Text)",
+      "titelFr": "Loi fédérale régissant la taxe sur la valeur ajoutée (Loi sur la TVA, LTVA) (Ne concerne que le texte italien)",
+      "titelIt": "Legge federale concernente l'imposta sul valore aggiunto (Legge sull'IVA, LIVA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/864/de",
+      "sha": "b0a50c1ca9a91bfff1539d2b8ebcf1fe17064cac48deaaedb8c9729bf6bf79bb"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2010-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/203",
+      "dateDocument": "2010-04-13",
+      "roFundstelle": "AS 2010 203",
+      "titelDe": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG) (Betrifft nur den italienischen Text)",
+      "titelFr": "Loi fédérale régissant la taxe sur la valeur ajoutée (Loi sur la TVA, LTVA) (Ne concerne que le texte italien)",
+      "titelIt": "Legge federale concernente l'imposta sul valore aggiunto (Legge sull'IVA, LIVA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/203/de",
+      "sha": "fadb8cd1296c66615a9cbecc0c96f2aab32d7437519e8ccae244f7e38571084a"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2010-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/355",
+      "dateDocument": "2011-06-15",
+      "roFundstelle": "AS 2011 355",
+      "titelDe": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG) (Betrifft nur den italienischen Text)",
+      "titelFr": "Loi fédérale régissant la taxe sur la valeur ajoutée (Loi sur la TVA, LTVA) (Ne concerne que le texte italien)",
+      "titelIt": "Legge federale concernente l'imposta sul valore aggiunto (Legge sull'IVA, LIVA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/355/de",
+      "sha": "2c63e55311c7feb8b3966969c504068e7431545233054cf8c1d1976eaa4c04cf"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2007-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/408",
+      "dateDocument": "2005-12-16",
+      "roFundstelle": "AS 2006 408",
+      "titelDe": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG)",
+      "titelFr": "Loi fédérale régissant la taxe sur la valeur ajoutée (Loi sur la TVA, LTVA)",
+      "titelIt": "Legge federale concernente l'imposta sul valore aggiunto (Legge sull'IVA, LIVA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/408/de",
+      "sha": "d4b126e06a37ea8f521526d7ec979ef2d01047d057c131463cf5ef4da4be1684"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2006-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/489",
+      "dateDocument": "2006-08-08",
+      "roFundstelle": "AS 2006 489",
+      "titelDe": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG) (Betrifft nur den französischen Text)",
+      "titelFr": "Loi fédérale régissant la taxe sur la valeur ajoutée (Loi sur la TVA, LTVA)",
+      "titelIt": "Legge federale concernente l'imposta sul valore aggiunto (Legge sull'IVA, LIVA) (Concerne solo il testo francese)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/489/de",
+      "sha": "bf2baec572a0db13223b341ce9aae99144713b4fc65f82b40d46e056a0ec1243"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2004-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/653",
+      "dateDocument": "2003-06-20",
+      "roFundstelle": "AS 2003 653",
+      "titelDe": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG)",
+      "titelFr": "Loi fédérale régissant la taxe sur la valeur ajoutée (Loi sur la TVA, LTVA)",
+      "titelIt": "Legge federale concernente l'imposta sul valore aggiunto (Legge sull'IVA, LIVA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/653/de",
+      "sha": "6319955e26d7f102536b5d52abbfce86a0b4d10a1d636c6a0abb04a149600dcf"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2002-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/232",
+      "dateDocument": "2001-12-14",
+      "roFundstelle": "AS 2002 232",
+      "titelDe": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG)",
+      "titelFr": "Loi fédérale régissant la taxe sur la valeur ajoutée (Loi sur la TVA, LTVA)",
+      "titelIt": "Legge federale concernente l'imposta sul valore aggiunto (Legge sull'IVA, LIVA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/232/de",
+      "sha": "2c5427d61d4c2697d2c7cd525b5a7c6e73b975da7797f1611a0351d519f300a6"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2002-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/462",
+      "dateDocument": "2001-06-22",
+      "roFundstelle": "AS 2001 462",
+      "titelDe": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG)",
+      "titelFr": "Loi fédérale régissant la taxe sur la valeur ajoutée (Loi sur la TVA, LTVA)",
+      "titelIt": "Legge federale concernente l'imposta sul valore aggiunto (Legge sull'IVA, LIVA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/462/de",
+      "sha": "e6766ed5576b919f78ce9ce87e10664e62b788609ca4eff9fbfeae85dc80b57a"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2001-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/183",
+      "dateDocument": "1999-12-23",
+      "roFundstelle": "AS 2000 183",
+      "titelDe": "Verordnung über die Anhebung der Mehrwertsteuersätze zur Finanzierung der Eisenbahngrossprojekte",
+      "titelFr": "Ordonnance sur le relèvement des taux de la taxe sur la valeur ajoutée en faveur du financement des grands projets ferroviaires",
+      "titelIt": "Ordinanza sull'aumento delle aliquote dell'imposta sul valore aggiunto per finanziare i grandi progetti ferroviari",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/183/de",
+      "sha": "618880df86b9f33267db7628d37750da3ee09396b7198fbb4bef5ac7c25c796c"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2001-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/212",
+      "dateDocument": "1999-09-02",
+      "roFundstelle": "AS 2000 212",
+      "titelDe": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG)",
+      "titelFr": "Loi fédérale régissant la taxe sur la valeur ajoutée (Loi sur la TVA, LTVA)",
+      "titelIt": "Legge federale concernente l'imposta sul valore aggiunto (Legge sull'IVA, LIVA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/212/de",
+      "sha": "60d99b1231ce10b9609255bdded36b7d2bf30be56fa5e478415b730c413ca546"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1941-07-31",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/57/793_821_845",
+      "dateDocument": "1941-07-29",
+      "roFundstelle": "AS 57 793",
+      "titelDe": "Bundesratsbeschluss vom 29. Juli 1941 über die Warenumsatzsteuer",
+      "titelFr": "Arrêté du Conseil fédéral du 29 juillet 1941 instituant un impôt sur le chiffre d'affaires",
+      "titelIt": "Decreto del Consiglio federale del 29 luglio 1941 che istituisce un'imposta sulla cifra d'affari",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/57/793_821_845/de",
+      "sha": "24f58e988739a0a718b58e8e15ab9415d57088b0e4e01c24b01ef9268f5a0022"
+    }
+  ],
+  "sha": "c1fec945c4d0da18b1f3cdd9e57b6b6815a6c59e707e9fcf601975b2ad1b61db"
+}

@@ -1,0 +1,39 @@
+{
+  "erlassKey": "JSTPO",
+  "sr": "312.1",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/312.1",
+      "sha": "0cb91fbe1744267d7769591f699a26ae94f38cf65cb22a8a2cc75411bec0fdcc"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/312.1",
+      "sha": "9db16f7670f9068c34d693c6943053682d3b8b00e1d104caebc8e8807df9819e"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2015-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/312.1",
+      "sha": "34c24f5b2816f68a4620fa8c3ce930022f2c37448fad49452482615f6a1f37e1"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2011-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/226",
+      "dateDocument": "2009-03-20",
+      "roFundstelle": "AS 2010 226",
+      "titelDe": "Schweizerische Jugendstrafprozessordnung (Jugendstrafprozessordnung, JStPO)",
+      "titelFr": "Loi fédérale sur la procédure pénale applicable aux mineurs (Procédure pénale applicable aux mineurs, PPMin)",
+      "titelIt": "Legge federale di diritto processuale penale minorile (Procedura penale minorile, PPMin)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/226/de",
+      "sha": "a3ba15937a0578225b97359f6cf7c0b3512e21986dad42318946af6f4232ddf9"
+    }
+  ],
+  "sha": "b5beaffc3f2f98c409ebbc2af013530f5327cd7f8c156a3e526cba3fdc9138fd"
+}

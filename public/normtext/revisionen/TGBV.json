@@ -1,0 +1,57 @@
+{
+  "erlassKey": "TGBV",
+  "sr": "211.432.11",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2024-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2023/528",
+      "dateDocument": "2023-08-29",
+      "roFundstelle": "AS 2023 528",
+      "titelDe": "Technische Verordnung des EJPD und des VBS über das Grundbuch (TGBV)",
+      "titelFr": "Ordonnance technique du DFJP et du DDPS concernant le registre foncier (OTRF)",
+      "titelIt": "Ordinanza tecnica del DFGP e del DDPS sul registro fondiario (OTRF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2023/528/de",
+      "sha": "04ca543d640a51102473291e170b3cc06a012348cef711cd96d6b016d862c848"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2023-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2021/919",
+      "dateDocument": "2021-12-10",
+      "roFundstelle": "AS 2021 919",
+      "titelDe": "Technische Verordnung des EJPD und des VBS über das Grundbuch (TGBV)",
+      "titelFr": "Ordonnance technique du DFJP et du DDPS concernant le registre foncier (OTRF)",
+      "titelIt": "Ordinanza tecnica del DFGP e del DDPS sul registro fondiario (OTRF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2021/919/de",
+      "sha": "41fcef76415dd2b50a177361c8c2024245b747dbe41e622449d3410dab6ac67b"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2013-02-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/3",
+      "dateDocument": "2012-12-28",
+      "roFundstelle": "AS 2013 3",
+      "titelDe": "Technische Verordnung des EJPD und des VBS über das Grundbuch (TGBV)",
+      "titelFr": "Ordonnance technique du DFJP et du DDPS concernant le registre foncier (OTRF)",
+      "titelIt": "Ordinanza tecnica del DFGP e del DDPS sul registro fondiario (OTRF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/3/de",
+      "sha": "18793434e570e2cedeaf3b23d6b0fbd57a31ca6b5f39323235c12404fea2036a"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2007-08-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/408",
+      "dateDocument": "2007-06-06",
+      "roFundstelle": "AS 2007 408",
+      "titelDe": "Technische Verordnung des EJPD und des VBS über das Grundbuch (TGBV)",
+      "titelFr": "Ordonnance technique du DFJP et du DDPS concernant le registre foncier (OTRF)",
+      "titelIt": "Ordinanza tecnica del DFGP e del DDPS sul registro fondiario (OTRF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/408/de",
+      "sha": "3a86d0e0beb2c81335e81e1e1f35ddde11191bbd03e94cd1b79febc45a1506f6"
+    }
+  ],
+  "sha": "d4489e2405bad3f5b4be08a33295ad970303c33d3de0d79421e721006c716733"
+}

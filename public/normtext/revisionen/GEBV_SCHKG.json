@@ -1,0 +1,105 @@
+{
+  "erlassKey": "GEBV_SCHKG",
+  "sr": "281.35",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2026-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2025/630",
+      "dateDocument": "2025-10-15",
+      "roFundstelle": "AS 2025 630",
+      "titelDe": "Gebührenverordnung zum Bundesgesetz über Schuldbetreibung und Konkurs (GebV SchKG)",
+      "titelFr": "Ordonnance sur les émoluments perçus en application de la loi fédérale sur la poursuite pour dettes et la faillite (OELP)",
+      "titelIt": "Ordinanza sulle tasse riscosse in applicazione della legge federale sulla esecuzione e sul fallimento (OTLEF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2025/630/de",
+      "sha": "df4f66d0bf064785271774a506c1186fdf2098ca5c9252706e878bcf03e5039e"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2022-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2021/259",
+      "dateDocument": "2021-04-28",
+      "roFundstelle": "AS 2021 259",
+      "titelDe": "Gebührenverordnung zum Bundesgesetz über Schuldbetreibung und Konkurs (GebV SchKG)",
+      "titelFr": "Ordonnance sur les émoluments perçus en application de la loi fédérale sur la poursuite pour dettes et faillite (OELP)",
+      "titelIt": "Ordinanza sulle tasse riscosse in applicazione della legge federale sulla esecuzione e sul fallimento (OTLEF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2021/259/de",
+      "sha": "9370192c5962578a7691bc1856ed3e8576ecbdfc9fe4bc81b0b4e9569a63491f"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2019-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/722",
+      "dateDocument": "2018-11-30",
+      "roFundstelle": "AS 2018 722",
+      "titelDe": "Gebührenverordnung zum Bundesgesetz über Schuldbetreibung und Konkurs (GebV SchKG)",
+      "titelFr": "Ordonnance sur les émoluments perçus en application de la loi fédérale sur la poursuite pour dettes et faillite (OELP)",
+      "titelIt": "Ordinanza sulle tasse riscosse in applicazione della legge federale sulla esecuzione e sul fallimento (OTLEF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/722/de",
+      "sha": "31ab213c2e31b4b6b860dc8f2f7a1b7a20163bd60a4cddaa658035aa319ac8b3"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2016-02-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/38",
+      "dateDocument": "2016-01-20",
+      "roFundstelle": "AS 2016 38",
+      "titelDe": "Gebührenverordnung zum Bundesgesetz über Schuldbetreibung und Konkurs",
+      "titelFr": "Ordonnance sur les émoluments perçus en application de la loi fédérale sur la poursuite pour dettes et la faillite (OELP)",
+      "titelIt": "Ordinanza sulle tasse riscosse in applicazione della legge federale sulla esecuzione e sul fallimento",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/38/de",
+      "sha": "96e5e188972772779c041429f5160803ad3e40bc17858c6411f509ac045c272e"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2016-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/281.35",
+      "sha": "7ba5a5edc90ba5b8ec6c4c85c0901d3a5dc5d9dabb2c30a132c07820f673dc0e"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/281.35",
+      "sha": "bf5c1974069b1466ddb85c7bacbe46f903dfd660ef35cb85825e33390505c118"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1997-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1996/2937_2937_2937",
+      "dateDocument": "1996-09-23",
+      "roFundstelle": "AS 1996 2937",
+      "titelDe": "Gebührenverordnung vom 23. September 1996 zum Bundesgesetz über Schuldbetreibung und Konkurs (GebV SchKG)",
+      "titelFr": "Ordonnance du 23 septembre 1996 sur les émoluments perçus en application de la loi fédérale sur la poursuite pour dettes et la faillite (OELP)",
+      "titelIt": "Ordinanza del 23 settembre 1996 sulle tasse riscosse in applicazione della legge federale sulla esecuzione e sul fallimento (OTLEF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1996/2937_2937_2937/de",
+      "sha": "0f8128748fa54a3c42dc6a63af68ab4fcf1957f906acb3081feaa6a73503b369"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1971-08-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1971/1080_1080_1081",
+      "dateDocument": "1971-07-07",
+      "roFundstelle": "AS 1971 1080",
+      "titelDe": "Gebührenordnung vom 7. Juli 1971 zum Bundesgesetz über Schuldbetreibung und Konkurs (GebV SchKG)",
+      "titelFr": "Ordonnance du 7 juillet 1971 sur les frais exigibles en vertu de la loi fédérale sur la poursuite pour dettes et la faillite (OFLP)",
+      "titelIt": "Ordinanza del 7 luglio 1971 sulle tasse previste dalla legge federale sulla esecuzione e sul fallimento (OTLEF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1971/1080_1080_1081/de",
+      "sha": "e2ac9bb864374050ed6b0475df25126dc361fdc2f4a0885b3cea7fd8f50f1e1e"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1958-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1957/663_669_689",
+      "dateDocument": "1957-09-06",
+      "roFundstelle": "AS 1957 663",
+      "titelDe": "Gebührentarif vom 6. September 1957 zum Bundesgesetz über Schuldbetreibung und Konkurs",
+      "titelFr": "Tarif des frais du 6 septembre 1957 applicable à la loi fédéral sur la poursuite pour dettes et la faillite",
+      "titelIt": "Tariffa del 6 settembre 1957 applicabile alla legge federale sulla esecuzione e sul fallimento",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1957/663_669_689/de",
+      "sha": "3543cdebfb7af4efdffe858ce6910a4553268a18aaa70617b1230c1542564e28"
+    }
+  ],
+  "sha": "acd6044dbb0e8d9efbd36c177a20cfeb71a53b1cfca83ba7ce273c152c81a447"
+}

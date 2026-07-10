@@ -1,0 +1,886 @@
+{
+  "sr": "742.101",
+  "korpusStand": "2026-01-01",
+  "bBindings": [
+    {
+      "sr": {
+        "type": "literal",
+        "value": "742.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1958/335_341_347"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1958-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1957-12-20"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Eisenbahngesetz vom 20. Dezember 1957 (EBG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 20 décembre 1957 sur les chemins de fer (LCdF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 20 dicembre 1957 sulle ferrovie (Lferr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "742.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1958/335_341_347"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1958-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1957-12-20"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Eisenbahngesetz vom 20. Dezember 1957 (EBG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 20 décembre 1957 sur les chemins de fer (LCdF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 20 dicembre 1957 sulle ferrovie (Lferr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "742.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1958/335_341_347"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1958-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1957-12-20"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Eisenbahngesetz vom 20. Dezember 1957 (EBG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 20 décembre 1957 sur les chemins de fer (LCdF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 20 dicembre 1957 sulle ferrovie (Lferr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "742.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1958/335_341_347"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1958-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1957-12-20"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Eisenbahngesetz vom 20. Dezember 1957 (EBG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 20 décembre 1957 sur les chemins de fer (LCdF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 20 dicembre 1957 sulle ferrovie (Lferr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "742.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1998/2835_2835_2835"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-03-20"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Eisenbahngesetz"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les chemins de fer"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle ferrovie"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "742.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1998/2835_2835_2835"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-03-20"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Eisenbahngesetz"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les chemins de fer"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle ferrovie"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "742.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1998/2835_2835_2835"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-03-20"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Eisenbahngesetz"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les chemins de fer"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle ferrovie"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "742.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/25"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-12-13"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Änderung des Bundesratsbeschlusses betreffend die Inkraftsetzung der Änderung vom 20. März 1998 des Eisenbahngesetzes"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la modification de l'arrêté du Conseil fédéral concernant l'entrée en vigueur de la modification du 20 mars 1998 de la loi sur les chemins de fer"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza che modifica la decisione del Consiglio federale concernente l'entrata in vigore della modifica del 20 marzo 1998 della legge sulle ferrovie"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "742.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/25"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-12-13"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Änderung des Bundesratsbeschlusses betreffend die Inkraftsetzung der Änderung vom 20. März 1998 des Eisenbahngesetzes"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la modification de l'arrêté du Conseil fédéral concernant l'entrée en vigueur de la modification du 20 mars 1998 de la loi sur les chemins de fer"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza che modifica la decisione del Consiglio federale concernente l'entrata in vigore della modifica del 20 marzo 1998 della legge sulle ferrovie"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "742.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/25"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-12-13"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Änderung des Bundesratsbeschlusses betreffend die Inkraftsetzung der Änderung vom 20. März 1998 des Eisenbahngesetzes"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la modification de l'arrêté du Conseil fédéral concernant l'entrée en vigueur de la modification du 20 mars 1998 de la loi sur les chemins de fer"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza che modifica la decisione del Consiglio federale concernente l'entrata in vigore della modifica del 20 marzo 1998 della legge sulle ferrovie"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "742.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/636"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-06-17"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Eisenbahngesetz (EBG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les chemins de fer (LCdF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle ferrovie (Lferr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "742.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/636"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-06-17"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Eisenbahngesetz (EBG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les chemins de fer (LCdF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle ferrovie (Lferr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "742.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/636"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-06-17"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Eisenbahngesetz (EBG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les chemins de fer (LCdF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle ferrovie (Lferr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "742.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/679"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-03-20"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Bahnreform 2 (Revision der Erlasse über den öffentlichen Verkehr)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi sur la réforme des chemins de fer 2 (Révision des actes normatifs relatifs aux transports publics)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla Riforma delle ferrovie 2 (Revisione della disciplina sui trasporti pubblici)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "742.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/679"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-03-20"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Bahnreform 2 (Revision der Erlasse über den öffentlichen Verkehr)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi sur la réforme des chemins de fer 2 (Révision des actes normatifs relatifs aux transports publics)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla Riforma delle ferrovie 2 (Revisione della disciplina sui trasporti pubblici)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "742.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/679"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-03-20"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Bahnreform 2 (Revision der Erlasse über den öffentlichen Verkehr)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi sur la réforme des chemins de fer 2 (Révision des actes normatifs relatifs aux transports publics)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla Riforma delle ferrovie 2 (Revisione della disciplina sui trasporti pubblici)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "742.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/731"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-12-19"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über Änderungen des Transportrechts"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les modifications du droit des transports"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale concernente modifiche del diritto dei trasporti"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "742.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/731"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-12-19"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über Änderungen des Transportrechts"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les modifications du droit des transports"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale concernente modifiche del diritto dei trasporti"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "742.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/731"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-12-19"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über Änderungen des Transportrechts"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les modifications du droit des transports"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale concernente modifiche del diritto dei trasporti"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "742.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/648"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-11-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-10-12"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über eine Teilinkraftsetzung der Änderung vom 1. Oktober 2010 des Luftfahrtgesetzes und über die Inkraftsetzung von Verordnungen im Bereich der Unfalluntersuchung"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance portant première mise en vigueur partielle de la modification du 1<sup>er</sup> octobre 2010 de la loi fédérale sur l'aviation et mise en vigueur d'autres ordonnances relatives aux enquêtes sur les accidents"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente la messa in vigore parziale della modifica del 1<sup>o</sup> ottobre 2010 della legge federale sulla navigazione aerea e la messa in vigore di altre ordinanze relative alle inchieste sugli infortuni"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "742.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/648"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-11-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-10-12"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über eine Teilinkraftsetzung der Änderung vom 1. Oktober 2010 des Luftfahrtgesetzes und über die Inkraftsetzung von Verordnungen im Bereich der Unfalluntersuchung"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance portant première mise en vigueur partielle de la modification du 1<sup>er</sup> octobre 2010 de la loi fédérale sur l'aviation et mise en vigueur d'autres ordonnances relatives aux enquêtes sur les accidents"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente la messa in vigore parziale della modifica del 1<sup>o</sup> ottobre 2010 della legge federale sulla navigazione aerea e la messa in vigore di altre ordinanze relative alle inchieste sugli infortuni"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "742.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/648"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-11-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-10-12"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über eine Teilinkraftsetzung der Änderung vom 1. Oktober 2010 des Luftfahrtgesetzes und über die Inkraftsetzung von Verordnungen im Bereich der Unfalluntersuchung"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance portant première mise en vigueur partielle de la modification du 1<sup>er</sup> octobre 2010 de la loi fédérale sur l'aviation et mise en vigueur d'autres ordonnances relatives aux enquêtes sur les accidents"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente la messa in vigore parziale della modifica del 1<sup>o</sup> ottobre 2010 della legge federale sulla navigazione aerea e la messa in vigore di altre ordinanze relative alle inchieste sugli infortuni"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "742.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/20"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-01-14"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-11-13"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über den zweiten Schritt der Bahnreform 2 (Betrifft nur den französischen Text)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur la deuxième partie de la réforme des chemins de fer 2"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla seconda fase della Riforma delle ferrovie 2 (Concerne solo il testo francese)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "742.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/20"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-01-14"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-11-13"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über den zweiten Schritt der Bahnreform 2 (Betrifft nur den französischen Text)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur la deuxième partie de la réforme des chemins de fer 2"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla seconda fase della Riforma delle ferrovie 2 (Concerne solo il testo francese)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "742.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/20"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-01-14"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-11-13"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über den zweiten Schritt der Bahnreform 2 (Betrifft nur den französischen Text)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur la deuxième partie de la réforme des chemins de fer 2"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla seconda fase della Riforma delle ferrovie 2 (Concerne solo il testo francese)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "742.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2024/152"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2024-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2023-09-29"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Eisenbahngesetz (EBG) (Umsetzung der technischen Säule des 4. EU-Eisenbahnpakets)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les chemins de fer (LCdF) (Mise en œuvre du volet technique du 4e paquet ferroviaire de l’UE)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle ferrovie (Lferr) (Attuazione del pilastro tecnico del 4° pacchetto ferroviario dell’UE)"
+      }
+    }
+  ],
+  "aStaende": [
+    "1958-07-01",
+    "1959-10-01",
+    "1968-01-01",
+    "1972-01-01",
+    "1975-01-01",
+    "1975-04-30",
+    "1975-12-19",
+    "1976-01-01",
+    "1977-01-01",
+    "1978-01-01",
+    "1978-06-28",
+    "1985-01-01",
+    "1986-01-01",
+    "1987-01-01",
+    "1991-04-01",
+    "1993-01-01",
+    "1994-01-01",
+    "1996-01-01",
+    "1998-01-01",
+    "1999-01-01",
+    "2000-01-01",
+    "2000-10-01",
+    "2001-01-01",
+    "2003-02-01",
+    "2005-01-01",
+    "2007-01-01",
+    "2007-05-01",
+    "2008-01-01",
+    "2010-01-01",
+    "2011-01-01",
+    "2011-04-01",
+    "2011-11-01",
+    "2012-12-01",
+    "2013-07-01",
+    "2014-01-14",
+    "2016-01-01",
+    "2016-07-01",
+    "2017-01-01",
+    "2018-01-01",
+    "2020-07-01",
+    "2021-01-01",
+    "2022-01-01",
+    "2023-09-01",
+    "2024-07-01",
+    "2026-01-01",
+    "2027-01-01"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "erlassKey": "KKG",
+  "sr": "221.214.1",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/221.214.1",
+      "sha": "7cdadc945fc8dfc69af5b39603cd65d187d14b3b1d625215b01458f20376f521"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2019-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/221.214.1",
+      "sha": "b174d6b59b9b0f40c92482247d9bed4b3f0cd31a4dc5f8d2d4537036dcc39da4"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2016-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/690",
+      "dateDocument": "2015-03-20",
+      "roFundstelle": "AS 2015 690",
+      "titelDe": "Bundesgesetz über den Konsumkredit (KKG)",
+      "titelFr": "Loi fédérale sur le crédit à la consommation (LCC)",
+      "titelIt": "Legge federale sul credito al consumo (LCC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/690/de",
+      "sha": "7396f7e44ef3412d8664662d04576616e60d03a119720b90351d2c5e58c97820"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2003-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/593",
+      "dateDocument": "2001-03-23",
+      "roFundstelle": "AS 2002 593",
+      "titelDe": "Bundesgesetz über den Konsumkredit (KKG)",
+      "titelFr": "Loi fédérale sur le crédit à la consommation (LCC)",
+      "titelIt": "Legge federale sul credito al consumo (LCC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/593/de",
+      "sha": "43f5d2d93f5a11ae212a7f8fcbe8358f6f80c4cbc10723fac305023b66b685f4"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1994-04-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1994/367_367_367",
+      "dateDocument": "1993-10-08",
+      "roFundstelle": "AS 1994 367",
+      "titelDe": "Bundesgesetz vom 8. Oktober 1993 über den Konsumkredit (KKG)",
+      "titelFr": "Loi fédérale du 8 octobre 1993 sur le crédit à la consommation (LCC)",
+      "titelIt": "Legge federale dell'8 ottobre 1993 sul credito al consumo (LCC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1994/367_367_367/de",
+      "sha": "2efdfa03d9df578eac19a884af68c4f342da9c28d812c077d6ff76e0e5041064"
+    }
+  ],
+  "sha": "cd9b560d91f69a0b7187db1d359d5682e7ae78916553fe0061ed8e5d2bb6288b"
+}

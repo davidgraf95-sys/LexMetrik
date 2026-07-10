@@ -1,0 +1,27 @@
+{
+  "erlassKey": "KOV",
+  "sr": "281.32",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2021-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/281.32",
+      "sha": "6380b33f106b5e9dbd18d9b7c78a166da72dad015946339dca4c68f88524c069"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1912-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/27/751_749_771",
+      "dateDocument": "1911-07-13",
+      "roFundstelle": "AS 27 751",
+      "titelDe": "Verordnung vom 13. Juli 1911 über die Geschäftsführung der Konkursämter (KOV)",
+      "titelFr": "Ordonnance du 13 juillet 1911 sur l'administration des offices de faillite (OAOF)",
+      "titelIt": "Regolamento del 13 luglio 1911 concernente l'amministrazione degli uffici dei fallimenti (RUF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/27/751_749_771/de",
+      "sha": "5900b64aa0fe68367690fa032af474e587230f9c8c5fe9cdb10e2d168962647a"
+    }
+  ],
+  "sha": "dd54612e556f2ee3a9e0ca9a15b62b670ed652725a9d0d159fefffc7af7686ca"
+}

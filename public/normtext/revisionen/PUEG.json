@@ -1,0 +1,81 @@
+{
+  "erlassKey": "PUEG",
+  "sr": "942.20",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2026-05-08",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2026/206",
+      "dateDocument": "2026-05-07",
+      "roFundstelle": "AS 2026 206",
+      "titelDe": "Preisüberwachungsgesetz. Berichtigung (Betrifft nur den italienischen Text)",
+      "titelFr": "Loi fédérale concernant la surveillance des prix. Erratum (Ne concerne que le texte italien)",
+      "titelIt": "Legge federale sulla sorveglianza dei prezzi. Correzione",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2026/206/de",
+      "sha": "ed4262eb89a8acbe5404f5858f933436b3b1b52ed4f7dc7c8471778c3872e9d0"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2013-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/942.20",
+      "sha": "a5cbe5c232f688d55753ee56be2995ab7c2066390632de7d64e6a00d254e967f"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2007-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/942.20",
+      "sha": "9141a4a483f3119e90925b515a8c600747798a055b5d538823c9d2eacc914827"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1986-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1986/895_895_895",
+      "dateDocument": "1985-12-20",
+      "roFundstelle": "AS 1986 895",
+      "titelDe": "Preisüberwachungsgesetz vom 20. Dezember 1985 (PüG)",
+      "titelFr": "Loi fédérale du 20 décembre 1985 concernant la surveillance des prix (LSPr)",
+      "titelIt": "Legge federale del 20 dicembre 1985 sulla sorveglianza dei prezzi (LSPr)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1986/895_895_895/de",
+      "sha": "b49b560e03c6b15c362dee5f4e32f6c3868a9b5f01b2559f0efef3259aa4e3f5"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1976-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1975/2552_2552_2552",
+      "dateDocument": "1975-12-19",
+      "roFundstelle": "AS 1975 2552",
+      "titelDe": "Bundesbeschluss vom 19. Dezember 1975 über die Preisüberwachung",
+      "titelFr": "Arrêté fédéral du 19 décembre 1975 sur la surveillance des prix",
+      "titelIt": "Decreto federale del 19 dicembre 1975 concernente la vigilanza sui prezzi",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1975/2552_2552_2552/de",
+      "sha": "98b660ae3fc389b0b2e482a70e42b6ab51fb77e5f5a3a7fb99fc2b01ae9417e1"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1972-12-20",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1972/3059_3112_2893",
+      "dateDocument": "1972-12-20",
+      "roFundstelle": "AS 1972 3059",
+      "titelDe": "Bundesbeschluss vom 20. Dezember 1972 betreffend Überwachung der Preise, Löhne und Gewinne",
+      "titelFr": "Arrêté fédéral du 20 décembre 1972 sur la surveillance des prix, des salaires et des bénéfices",
+      "titelIt": "Decreto federale del 20 dicembre 1972 concernente la vigilanza su i prezzi, i salari e i profitti",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1972/3059_3112_2893/de",
+      "sha": "af88d6f22107c3a0be35b4d84b853aaeced274197165e78f2c26974fcbc36aed"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1966-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1965/1209_1221_1209",
+      "dateDocument": "1965-09-30",
+      "roFundstelle": "AS 1965 1209",
+      "titelDe": "Bundesbeschluss vom 30. September 1965 über Mietzinse für Immobilien",
+      "titelFr": "Arrêté fédéral du 30 septembre 1965 sur les loyers des biens immobiliers",
+      "titelIt": "Decreto federale del 30 settembre 1965 concernente le pigioni di immobili",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1965/1209_1221_1209/de",
+      "sha": "ec84bbd3a1430a7e880ee42dadabc6c8345909659eb3d214a89d09005d4499da"
+    }
+  ],
+  "sha": "1fdfd12d5accaae4431513b85f9ab3073e308cf1817c55915cc28d7c82128e66"
+}

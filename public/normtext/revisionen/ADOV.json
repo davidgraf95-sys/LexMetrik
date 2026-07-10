@@ -1,0 +1,63 @@
+{
+  "erlassKey": "ADOV",
+  "sr": "211.221.36",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/211.221.36",
+      "sha": "2ad4033696b6f5959f5b3ea855041252c005e2ecc987d947737a79c5e3e10909"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2012-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/505",
+      "dateDocument": "2011-06-29",
+      "roFundstelle": "AS 2011 505",
+      "titelDe": "Verordnung über die Adoption (Adoptionsverordnung, AdoV)",
+      "titelFr": "Ordonnance sur l'adoption (OAdo)",
+      "titelIt": "Ordinanza sull'adozione (OAdoz)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/505/de",
+      "sha": "94c7abbf746d59b0ec4a6ad35f260b28e7c66b8a75167454ad1e5a679fbe6944"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2012-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/601",
+      "dateDocument": "2011-09-20",
+      "roFundstelle": "AS 2011 601",
+      "titelDe": "Verordnung über die Adoption (Adoptionsverordnung, AdoV) (Betrifft nur den italienischen Text)",
+      "titelFr": "Ordonnance sur l'adoption (OAdo) (Ne concerne que le texte italien)",
+      "titelIt": "Ordinanza sull'adozione (OAdoz)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/601/de",
+      "sha": "e5d6beb6840f388e6dccc2477219e243f32992b127c614471808e5b54af97946"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2003-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/671",
+      "dateDocument": "2002-11-29",
+      "roFundstelle": "AS 2002 671",
+      "titelDe": "Verordnung über die Adoptionsvermittlung (VAdoV)",
+      "titelFr": "Ordonnance sur l'activité d'intermédiaire en vue de l'adoption (Oaiad)",
+      "titelIt": "Ordinanza sul collocamento in vista d'adozione (OCAdo)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/671/de",
+      "sha": "436419c884d1ae4c38aa69937fa0f53a5ae267e20446dfbb684574232b7a22fe"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1973-04-16",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1973/628_628_628",
+      "dateDocument": "1973-03-28",
+      "roFundstelle": "AS 1973 628",
+      "titelDe": "Verordnung vom 28. März 1973 über die Adoptionsvermittlung",
+      "titelFr": "Ordonnance du 28 mars 1973 sur l'activité d'intermédiaire en vue de l'adoption",
+      "titelIt": "Ordinanza del 28 marzo 1973 sul collocamento in vista d'adozione",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1973/628_628_628/de",
+      "sha": "7690dfb86aafdb50b16ef66967197b4008cbac326322952fdea24723c7e3b672"
+    }
+  ],
+  "sha": "507e78cd79be61b1363f66eab0d91e2cf8498f3cfd2c31d8f7c0a472f09986b4"
+}

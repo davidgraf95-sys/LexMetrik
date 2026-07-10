@@ -1,0 +1,45 @@
+{
+  "erlassKey": "GEBV_HREG",
+  "sr": "221.411.1",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2021-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/180",
+      "dateDocument": "2020-03-06",
+      "roFundstelle": "AS 2020 180",
+      "titelDe": "Verordnung über die Gebühren für das Handelsregister (GebV-HReg)",
+      "titelFr": "Ordonnance sur les émoluments en matière de registre du commerce (OEmol-RC)",
+      "titelIt": "Ordinanza sugli emolumenti in materia di registro di commercio (OEmol-RC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/180/de",
+      "sha": "e6ba8c06983a2ecb25f10ede213f97c2812ddbda6aaa16e3e5c76f9ba7808254"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2007-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/537",
+      "dateDocument": "2006-07-05",
+      "roFundstelle": "AS 2006 537",
+      "titelDe": "Verordnung über die Gebühren für das Handelsregister",
+      "titelFr": "Ordonnance sur les émoluments en matière de registre du commerce",
+      "titelIt": "Ordinanza sulle tasse in materia di registro di commercio",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/537/de",
+      "sha": "8318e247c7b97e8fccfeb650769891b2803fa919d9daf6f9d6c0bbbb0b9c96b5"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1955-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1954/1165_1189_1090",
+      "dateDocument": "1954-12-03",
+      "roFundstelle": "AS 1954 1165",
+      "titelDe": "Verordnung vom 3. Dezember 1954 über die Gebühren für das Handelsregister",
+      "titelFr": "Ordonnance du 3 décembre 1954 sur les émoluments en matière de registre du commerce",
+      "titelIt": "Ordinanza del 3 dicembre 1954 sulle tasse in materia di registro di commercio",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1954/1165_1189_1090/de",
+      "sha": "17a6da509e90e89c09d52c2dc6a65be999c8f3a24bd30ff5da335320106dce43"
+    }
+  ],
+  "sha": "f686eed612c4ffe1c1b4c5efdf97072f68b63bf311bcaffe9076a430619f1097"
+}

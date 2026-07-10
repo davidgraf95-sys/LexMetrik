@@ -1,0 +1,63 @@
+{
+  "erlassKey": "ARGV3",
+  "sr": "822.113",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2024-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/822.113",
+      "sha": "b1bfcb14c750afd244db086c1a24114ef85a18c00865f43413cc15018a0483c3"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2015-10-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/214",
+      "dateDocument": "2015-04-01",
+      "roFundstelle": "AS 2015 214",
+      "titelDe": "Verordnung 3 zum Arbeitsgesetz (Gesundheitsvorsorge, ArGV 3)",
+      "titelFr": "Ordonnance 3 relative à la loi sur le travail (Hygiène, OLT 3)",
+      "titelIt": "Ordinanza 3 concernente la legge sul lavoro (Igiene, OLL 3)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/214/de",
+      "sha": "5380c5742d3e215372036d54ce0ab5c82fcff6770cbc371b8d116c5db423d461"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2010-05-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/822.113",
+      "sha": "0f4da5971c6b9d25407f70f3b651ce4bfd6409efc85e41aed94dc1347ad09e36"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2008-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/822.113",
+      "sha": "c530b94764830d411d22ec0bc692034faa3bfa1f2b7a3a5ebb9b5060cea15acb"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1993-10-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1993/2553_2553_2553",
+      "dateDocument": "1993-08-18",
+      "roFundstelle": "AS 1993 2553",
+      "titelDe": "Verordnung 3 vom 18. August 1993 zum Arbeitsgesetz (ArGV 3) (Gesundheitsschutz)",
+      "titelFr": "Ordonnance 3 du 18 août 1993 relative à la loi sur le travail (OLT 3) (Protection de la santé)",
+      "titelIt": "Ordinanza 3 del 18 agosto 1993 concernente la legge sul lavoro (OLL 3) (Tutela della salute)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1993/2553_2553_2553/de",
+      "sha": "dcdb9fc9812bfee211fd091c5d386d618ec74e22473be3bad523138f348eb12e"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1969-09-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1969/561_569_567",
+      "dateDocument": "1969-03-26",
+      "roFundstelle": "AS 1969 561",
+      "titelDe": "Verordnung III vom 26. März 1969 zum Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz) (Gesundheitsvorsorge und Unfallverhütung in industriellen Betrieben)",
+      "titelFr": "Ordonnance III du 26 mars 1969 concernant l'exécution de la loi fédérale sur le travail dans l'industrie, l'artisanat et le commerce (Loi sur le travail) (Hygiène et prévention des accidents dans les entreprises industrielles)",
+      "titelIt": "Ordinanza III del 26 marzo 1969 per l'esecuzione della legge federale sul lavoro nell'industria, nell'artigianato e nel commercio (Legge sul lavoro) (Igiene e prevenzione degli infortuni nelle aziene industriali)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1969/561_569_567/de",
+      "sha": "8d34ee22028eac75dcb7f4009fa9e24e6a47a4b420724215b8a149d96e704246"
+    }
+  ],
+  "sha": "48a54bdd77fe2f8723c64d8669c2684f493819e0260a8c954b5800bdec7421a7"
+}

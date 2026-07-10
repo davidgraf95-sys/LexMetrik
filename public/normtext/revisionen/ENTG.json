@@ -1,0 +1,58 @@
+{
+  "erlassKey": "ENTG",
+  "sr": "711",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2021-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/748",
+      "dateDocument": "2020-06-19",
+      "roFundstelle": "AS 2020 748",
+      "titelDe": "Bundesgesetz über die Enteignung (EntG)",
+      "titelFr": "Loi fédérale sur l'expropriation (LEx)",
+      "titelIt": "Legge federale sull'espropriazione (LEspr)",
+      "botschaftKey": "BOTSCHAFT-2018-1660",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/748/de",
+      "sha": "791a07c63e9c99ae39e488e8d3e51697b5a2a4841dab83851222217cdcbf0b5c"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2012-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/711",
+      "sha": "d6aaa02a15f488679c8c406a224302272f590518d2d647b52f5844bdb7e1f5a7"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2008-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/711",
+      "sha": "05f52d216b40dc403799ca9f35e5c97243f47a7ee83fcd8a0929576144b4d10e"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2007-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/711",
+      "sha": "2ed48e3777449b0eb222fe338c50fa2e57084cdb43d7f71aff0d4418861a8be1"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2000-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/711",
+      "sha": "013b2112915b487995947a40e3e97b28023a681acc68717b073f38d46714ac3b"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1932-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/47/689_701_723",
+      "dateDocument": "1930-06-20",
+      "roFundstelle": "AS 47 689",
+      "titelDe": "Bundesgesetz vom 20. Juni 1930 über die Enteignung (EntG)",
+      "titelFr": "Loi fédérale du 20 juin 1930 sur l'expropriation (LEx)",
+      "titelIt": "Legge federale del 20 giugno 1930 sull'espropriazione (LEspr)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/47/689_701_723/de",
+      "sha": "a21a2dcd4efd1731a7e24a2a1a1044ccd6d1f50ab3037688c544e8976b9e1b89"
+    }
+  ],
+  "sha": "88edca24c2320a9c30edcc05572c66b1281699d8bcf1e0035397b7f3482b4da0"
+}

@@ -1,0 +1,577 @@
+{
+  "erlassKey": "OR",
+  "sr": "220",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2026-10-01",
+      "nichtKonsolidiert": true,
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/220",
+      "sha": "f44e975c1b78a862746bf547c4d3ef5fa7b0f86eab05b8a95330f8d5114dc9a9"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2026-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2025/270",
+      "dateDocument": "2024-12-20",
+      "roFundstelle": "AS 2025 270",
+      "titelDe": "Obligationenrecht (Baumängel)",
+      "titelFr": "Code des obligations (Défauts de construction)",
+      "titelIt": "Codice delle obbligazioni (Difetti di costruzione)",
+      "botschaftKey": "BOTSCHAFT-2022-2743",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2025/270/de",
+      "sha": "d02c4ba7c13e6a2b5a51bdc6ff8a2cdf00c2ddbabe72b7b3a11317c65c381cdf"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2025-10-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2025/197",
+      "dateDocument": "2023-09-29",
+      "roFundstelle": "AS 2025 197",
+      "titelDe": "Obligationenrecht (Mietrecht: Formvorschriften)",
+      "titelFr": "Code des obligations (Droit du bail: règles de forme)",
+      "titelIt": "Codice delle obbligazioni (Diritto di locazione: prescrizioni formali)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2025/197/de",
+      "sha": "f9c308ce838246437c1de3d52a16010bf1b2567f14a505875703de67181c7a31"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2025-07-08",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2025/447",
+      "dateDocument": "2025-07-02",
+      "roFundstelle": "AS 2025 447",
+      "titelDe": "Obligationenrecht (Aktienrecht). Berichtigung (Betrifft nur den italienischen Text)",
+      "titelFr": "Code des obligations (Droit de la société anonyme). Erratum (Ne concerne que le texte italien)",
+      "titelIt": "Codice delle obbligazioni (Diritto della società anonima). Correzione",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2025/447/de",
+      "sha": "560d8b56972f766964c3dc1d1dca783209226241d358a6e87d100d4885b362b7"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2025-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2023/628",
+      "dateDocument": "2022-03-18",
+      "roFundstelle": "AS 2023 628",
+      "titelDe": "Bundesgesetz über die Bekämpfung des missbräuchlichen Konkurses (Änderung des Obligationenrechts, des Bundesgesetzes über Schuldbetreibung und Konkurs, des Strafgesetzbuches, des Militärstrafgesetzes, des Strafregistergesetzes und des Bundesgesetzes über die direkte Bundessteuer)",
+      "titelFr": "Loi fédérale sur la lutte contre l’usage abusif de la faillite (Modification du code des obligations, de la loi fédérale sur la poursuite pour dettes et la faillite, du code pénal, du code pénal militaire, de la loi sur le casier judiciaire et de la loi fédérale sur l’impôt fédéral direct)",
+      "titelIt": "Legge federale sulla lotta contro l’abuso del fallimento (Modifica del Codice delle obbligazioni, della legge federale sulla esecuzione e sul fallimento, del Codice penale, del Codice penale militare, della legge sul casellario giudiziale e della legge federale sull’imposta federale diretta)",
+      "botschaftKey": "BOTSCHAFT-2019-1847",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2023/628/de",
+      "sha": "3c2cf3006f92c4b3bd240f153a4884ec4980ae1bdd8864968b34c30f7be66611"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/220",
+      "sha": "e694f38ed39d4d81e7e203d921cc6053bb43daaa12f866148ea74585137b2e9b"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/220",
+      "sha": "a0d8711a027783e57623d383efd46630d9b62eda3c33a2a9983a0abca219618b"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2023-02-09",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2023/62",
+      "dateDocument": "2022-11-21",
+      "roFundstelle": "AS 2023 62",
+      "titelDe": "Obligationenrecht (Aktienrecht). Berichtigung (Betrifft nur den französischen Text)",
+      "titelFr": "Code des obligations (Droit de la société anonyme). Erratum",
+      "titelIt": "Codice delle obbligazioni (Diritto della società anonima). Correzione (Concerne soltanto il testo francese)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2023/62/de",
+      "sha": "85ddbdd66949352d13b91c3b6b20a3e37de72f3c1744cb843369911aed2bfa3e"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2023-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2022/109",
+      "dateDocument": "2022-02-02",
+      "roFundstelle": "AS 2022 109",
+      "titelDe": "Verordnung vom 2. Februar 2022 über die abschliessende Inkraftsetzung der Änderung vom 19. Juni 2020 des Obligationenrechts (Aktienrecht)",
+      "titelFr": "Ordonnance du 2 février 2022 portant dernière mise en vigueur partielle de la modification du 19 juin 2020 du code des obligations (Droit de la société anonyme)",
+      "titelIt": "Ordinanza del 2 febbraio 2022 sull’entrata in vigore integrale della modifica del 19 giugno 2020 del Codice delle obbligazioni (Diritto della società anonima)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2022/109/de",
+      "sha": "70f568e49512f03c80757825c5faf85f24db84bc3c8bddd239d671851c8c59da"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2023-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2022/111",
+      "dateDocument": "2021-09-02",
+      "roFundstelle": "AS 2022 111",
+      "titelDe": "Obligationenrecht (Aktienrecht). Berichtigung",
+      "titelFr": "Code des obligations (Droit de la société anonyme). Erratum",
+      "titelIt": "Codice delle obbligazioni (Diritto della società anonima). Correzione",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2022/111/de",
+      "sha": "d7f2e70be1fe6cc5aea8af0d47cef6f2776b3678c5b87095a225dec08c900623"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2022-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2021/846",
+      "dateDocument": "2020-06-19",
+      "roFundstelle": "AS 2021 846",
+      "titelDe": "Obligationenrecht (Indirekter Gegenvorschlag zur Volksinitiative «Für verantwortungsvolle Unternehmen – zum Schutz von Mensch und Umwelt»)",
+      "titelFr": "Code des obligations (Contre-projet indirect à l’initiative populaire «Entreprises responsables – pour protéger l’être humain et l’environnement»)",
+      "titelIt": "Codice delle obbligazioni (controprogetto indiretto all’iniziativa popolare «Per imprese responsabili – a tutela dell’essere umano e dell’ambiente»)",
+      "botschaftKey": "BOTSCHAFT-2017-112",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2021/846/de",
+      "sha": "e0eee8bcea200a7bd9927a8b2ab1789039c6dc19270986d39bfffbcf06a4ca77"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2021-08-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2021/399",
+      "dateDocument": "2021-06-18",
+      "roFundstelle": "AS 2021 399",
+      "titelDe": "Verordnung vom 18. Juni 2021 über die abschliessende Inkraftsetzung des Bundesgesetzes zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register",
+      "titelFr": "Ordonnance du 18 juin 2021 portant dernière mise en vigueur partielle de la loi fédérale sur l’adaptation du droit fédéral aux développements de la technologie des registres électroniques distribués",
+      "titelIt": "Ordinanza del 18 giugno 2021 concernente l’entrata in vigore integrale della legge federale sull’adeguamento del diritto federale agli sviluppi della tecnologia di registro distribuito",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2021/399/de",
+      "sha": "160f4024bb5e71e0c1eea89fc1d500321f687019c0b52441384996a2098a9e46"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2021-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/220",
+      "sha": "7f1d79472f64652415655ce8ff663af59ad3a5286508c849fe8818bfa8b7df8a"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2021-05-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/220",
+      "sha": "f8ac4a9010404b7a9a9c2fb4b3bfdd9f7b02518f8af8b01be9e9d25acdf5b8ee"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2021-02-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2021/33",
+      "dateDocument": "2020-09-25",
+      "roFundstelle": "AS 2021 33",
+      "titelDe": "Bundesgesetz zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register",
+      "titelFr": "Loi fédérale sur l’adaptation du droit fédéral aux développements de la technologie des registres électroniques distribués",
+      "titelIt": "Legge federale sull’adeguamento del diritto federale agli sviluppi della tecnologia di registro distribuito",
+      "botschaftKey": "BOTSCHAFT-2020-16",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2021/33/de",
+      "sha": "08184d02848c1004c9b9bda51a41f64cc95368440294829c9274a0045e6cd885"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2021-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/746",
+      "dateDocument": "2020-06-19",
+      "roFundstelle": "AS 2020 746",
+      "titelDe": "Obligationenrecht (Aktienrecht)",
+      "titelFr": "Code des obligations (Droit de la société anonyme)",
+      "titelIt": "Codice delle obbligazioni (Diritto della società anonima)",
+      "botschaftKey": "BOTSCHAFT-2017-112",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/746/de",
+      "sha": "5911a134a23278b0f552b5727edfee0dc170d3c44f2178455fe4efc9ad6e0c55"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2021-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/799",
+      "dateDocument": "2019-12-20",
+      "roFundstelle": "AS 2020 799",
+      "titelDe": "Bundesgesetz über die Verbesserung der Vereinbarkeit von Erwerbstätigkeit und Angehörigenbetreuung",
+      "titelFr": "Loi fédérale sur l'amélioration de la conciliation entre activité professionnelle et prise en charge de proches",
+      "titelIt": "Legge federale concernente il miglioramento della conciliabilità tra attività lucrativa e assistenza ai familiari",
+      "botschaftKey": "BOTSCHAFT-2019-1504",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/799/de",
+      "sha": "4a1a88770487eae20448059af936cd44e99fa8a7850e5ae69e9d411d95c9bf99"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2020-04-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/178",
+      "dateDocument": "2017-03-17",
+      "roFundstelle": "AS 2020 178",
+      "titelDe": "Obligationenrecht (Handelsregisterrecht)",
+      "titelFr": "Code des obligations (Droit du registre du commerce)",
+      "titelIt": "Codice delle obbligazioni (Diritto del registro di commercio)",
+      "botschaftKey": "BOTSCHAFT-2015-956",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/178/de",
+      "sha": "87badf19661b329ce3426dd2cf5c76521ecd7b4d45a12a07b03d0b43850e0748"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2020-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/807",
+      "dateDocument": "2018-06-15",
+      "roFundstelle": "AS 2018 807",
+      "titelDe": "Obligationenrecht (Revision des Verjährungsrechts)",
+      "titelFr": "Code des obligations (Révision du droit de la prescription)",
+      "titelIt": "Codice delle obbligazioni (Revisione della disciplina della prescrizione)",
+      "botschaftKey": "BOTSCHAFT-2014-65",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/807/de",
+      "sha": "c0b51fb9a6df2908d673f4c5695af896b1324dfb762dad69716598d4938a605f"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2020-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/389",
+      "dateDocument": "2019-07-09",
+      "roFundstelle": "AS 2019 389",
+      "titelDe": "Obligationenrecht (Revision des Verjährungsrechts) (Betrifft nur den italienischen Text)",
+      "titelFr": "Code des obligations (Révision du droit de la prescription) (Ne concerne que le texte italien)",
+      "titelIt": "Codice delle obbligazioni (Revisione della disciplina della prescrizione)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/389/de",
+      "sha": "2cb89c8f1dc9f2a7a44621fa184956538728c62929aa5f5ca85a763d4b16b7d1"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2019-11-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/583",
+      "dateDocument": "2019-06-21",
+      "roFundstelle": "AS 2019 583",
+      "titelDe": "Bundesgesetz zur Umsetzung von Empfehlungen des Globalen Forums über Transparenz und Informationsaustausch für Steuerzwecke",
+      "titelFr": "Loi fédérale sur la mise en uvre des recommandations du Forum mondial sur la transparence et l'échange de renseignements à des fins fiscales",
+      "titelIt": "Legge federale che attua le raccomandazioni del Forum globale sulla trasparenza e sullo scambio di informazioni a fini fiscali",
+      "botschaftKey": "BOTSCHAFT-2019-18",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/583/de",
+      "sha": "51e3b3faf1b00a4929153b646b6f26352dc98d030858f4625f5e20ef026bd82c"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2017-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/220",
+      "sha": "7060b01b15d9f020d58b113d510f5c67806602375f4af301589dfd41e7d8f441"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2017-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/220",
+      "sha": "cdea766f25f57bbb09521e0c0932905ef638de6cc4f2b0178bc0d7acb64aefa0"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2016-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/289",
+      "dateDocument": "2015-09-25",
+      "roFundstelle": "AS 2016 289",
+      "titelDe": "Obligationenrecht (Firmenrecht)",
+      "titelFr": "Code des obligations (Droit des raisons de commerce)",
+      "titelIt": "Codice delle obbligazioni (Diritto delle ditte commerciali)",
+      "botschaftKey": "BOTSCHAFT-2014-2039",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/289/de",
+      "sha": "ad073ea2a4ce6422fe5fc0df3003ea9a63703f8105c03165298c56dd8f30e797"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2016-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/689",
+      "dateDocument": "2015-06-19",
+      "roFundstelle": "AS 2015 689",
+      "titelDe": "Obligationenrecht (Revision des Widerrufsrechts)",
+      "titelFr": "Code des obligations (Révision du droit de révocation)",
+      "titelIt": "Codice delle obbligazioni (Revisione del diritto di revoca)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/689/de",
+      "sha": "4c5eb43ca0d0648b9ddda9229b055ef05651a8ffde9da8066c9985c2b1641618"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2015-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/220",
+      "sha": "7ee60488c2dca5ec45154cc0387f5ae267449ad57f89cb0dae515c2b3d7d1d7c"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2014-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/184",
+      "dateDocument": "2013-12-13",
+      "roFundstelle": "AS 2014 184",
+      "titelDe": "Obligationenrecht (Aufhebung der Bestimmungen zum Vorauszahlungsvertrag)",
+      "titelFr": "Code des obligations (Abrogation des dispositions sur la vente avec paiements préalables)",
+      "titelIt": "Codice delle obbligazioni (Abrogazione delle disposizioni concernenti il contratto di vendita a rate anticipate)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/184/de",
+      "sha": "446004b33cbcbca1eda19822e1595c410adbb55558796b328ddc223cdf1c5e58"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2014-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/220",
+      "sha": "5ea4b7c0072dfdcb57a36784d570df87a689401996b912f6db8db8656260a9e1"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2013-05-28",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/350",
+      "dateDocument": "2013-05-28",
+      "roFundstelle": "AS 2013 350",
+      "titelDe": "Obligationenrecht (Rechnungslegungsrecht) (Betrifft nur den französischen Text)",
+      "titelFr": "Code des obligations (Droit comptable)",
+      "titelIt": "Codice delle obbligazioni (Diritto contabile) (Concerne solo il testo francese)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/350/de",
+      "sha": "43dce97f6bb0ef7dad28a6a3417fca7ab9d91786ee47320cf1b1562326bce0c0"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2013-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/621",
+      "dateDocument": "2012-03-16",
+      "roFundstelle": "AS 2012 621",
+      "titelDe": "Obligationenrecht (Verjährungsfristen der Gewährleistungsansprüche im Kauf- und Werkvertrag. Verlängerung und Koordination)",
+      "titelFr": "Code des obligations (Délais de prescription de la garantie pour défauts dans le contrat de vente et le contrat d'entreprise. Prolongation et coordination)",
+      "titelIt": "Codice delle obbligazioni (Termini di prescrizione della garanzia per i difetti nel contratto di compravendita e nel contratto di appalto. Prolungamento e coordinamento)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/621/de",
+      "sha": "b696f1b8079c17795ecfc49f4b72ded06432293cb9c0826bb878130004f03175"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2013-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/810",
+      "dateDocument": "2011-12-23",
+      "roFundstelle": "AS 2012 810",
+      "titelDe": "Obligationenrecht (Rechnungslegungsrecht)",
+      "titelFr": "Code des obligations (Droit comptable)",
+      "titelIt": "Codice delle obbligazioni (Diritto contabile)",
+      "botschaftKey": "BOTSCHAFT-2008-416",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/810/de",
+      "sha": "113f8abeef5e16ea2f71956ecb04899c85d7b80a056548f53543875d0b9e9434"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2012-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/220",
+      "sha": "e5369c48633d2883806f25f8941be47c09115703bd95988440b857141eb3af81"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2012-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/220",
+      "sha": "f6573d3f2bf1e538ee89c3931b889ff5b8753f8a8c93b7147ca53685020ea698"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2012-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/808",
+      "dateDocument": "2011-06-17",
+      "roFundstelle": "AS 2011 808",
+      "titelDe": "Obligationenrecht (Revisionsrecht)",
+      "titelFr": "Code des obligations (Droit de la révision)",
+      "titelIt": "Codice delle obbligazioni (Norme sulla revisione)",
+      "botschaftKey": "BOTSCHAFT-2008-416",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/808/de",
+      "sha": "3ac199360cc4e70ee8879aedb2db602a3758b69440fda6016631b7269ad8e8d6"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/220",
+      "sha": "ee88f928cddb7130be4de992a8429394b470d998da86635ca902c67239b20794"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2010-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/220",
+      "sha": "8a16dcce83000dbac5ec2c4e81218e49ec8871d6ab780faf12dfdcb8aaebd8dd"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2009-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/220",
+      "sha": "ae180e17ea3fa85dde509e26acd4224addea281e83b2fab734bcf274db4e67ae"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2008-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/220",
+      "sha": "4ff3ae0cfd80f1664b42d1bf5a8ab6ae5165e2cda7e3eab698025eabe0eeb99a"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2008-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/685",
+      "dateDocument": "2005-12-16",
+      "roFundstelle": "AS 2007 685",
+      "titelDe": "Obligationenrecht (GmbH-Recht sowie Anpassungen im Aktien-, Genossenschafts-, Handelsregister- und Firmenrecht) (OR)",
+      "titelFr": "Code des obligations (Droit de la société à responsabilité limitée; adaptation des droits de la société anonyme, de la société coopérative, du registre du commerce et des raisons de commerce) (CO)",
+      "titelIt": "Codice delle obbligazioni (Diritto della società a garanzia limitata; adeguamento del diritto della società anonima, della società cooperativa, del registro di commercio e delle ditte commerciali) (CO)",
+      "botschaftKey": "BOTSCHAFT-2002-443",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/685/de",
+      "sha": "7574188358b3ed0ff8f2bce7b3b592539f58e01329d678103fd25c7ce80a87a8"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2007-05-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/220",
+      "sha": "b6ccdb30984910d757947f77e18dad56e3bd81e2bc4108b48415270f43ef6eb3"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2007-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/401",
+      "dateDocument": "2005-10-07",
+      "roFundstelle": "AS 2006 401",
+      "titelDe": "Obligationenrecht (OR) (Transparenz betreffend Vergütungen an Mitglieder der Verwaltungsrates und der Geschäftsleitung)",
+      "titelFr": "Code des obligations (CO) (Transparence des indemnités versées aux membres du conseil d'administration et de la direction)",
+      "titelIt": "Codice delle obbligazioni (CO) (Trasparenza delle retribuzioni corrisposte ai membri del consiglio d'amministrazione e della direzione)",
+      "botschaftKey": "BOTSCHAFT-2004-731",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/401/de",
+      "sha": "54c3553316b6519d00e7ccb95c7ae01514fcf483a108a010bb90069806f4be92"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2006-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/220",
+      "sha": "127ad472e4dbc690c5d98b3f0e4ae568c0f7fa78c8ffbe9731397e46021a56c7"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2006-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/220",
+      "sha": "a99e9e0f188c0d18cd83d5bec59c41469363384d4659ccb0a9d235d1dd00ea19"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2005-12-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/708",
+      "dateDocument": "2005-06-17",
+      "roFundstelle": "AS 2005 708",
+      "titelDe": "Obligationenrecht (Bürgschaften. Zustimmung des Ehegatten)",
+      "titelFr": "Code des obligations (Cautionnement. Consentement du conjoint)",
+      "titelIt": "Codice delle obbligazioni (Fideiussione. Consenso del coniuge)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/708/de",
+      "sha": "a60b8fe30599a9074c4b64a22986e9bca67ab0b1963a04d9d7d9597caf4f7186"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2005-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/220",
+      "sha": "278fd5763fa6faff9b0ad3652bc59caa86f0273a9f727350bf0710bc9dddde6a"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2005-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/220",
+      "sha": "a7fa4abaabd57ce8056d2917d098016a875629cf975382d99e42f560fadb2547"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2005-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/220",
+      "sha": "e877681ab142730ebad9897c6e2594c8e0b211bd0fd0859130b87d2f88c7d6ee"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2004-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/220",
+      "sha": "6f8f831fa46ce43b68d037700ec3bf1417130ffaf1326a29f540a23cba42f6d6"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2004-05-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/220",
+      "sha": "6a3b74d1cf74f6c933a166bca057c9eca2d597aee554fdc1bc72601308883957"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2004-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/220",
+      "sha": "949496d9361c17294b758911314618dc037ee44d1c4fab5df53dcd05b13dd0db"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2003-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/220",
+      "sha": "c9fc02e5e96286bfae162d6263b6fdb9a03bc8d0c3d817cf3b8a7c9b18d1d64c"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2003-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/220",
+      "sha": "2b06930ec29333c42819fa446ad193f986fd874a7721635f9ea65865581f53e5"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2003-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/220",
+      "sha": "30fa566f7bf9aee1e286ed31ffe0a462e8982b305d277f1666d46a14f8aba3a9"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2002-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/220",
+      "sha": "50aae680c7d787b701de0814d4af0605733bc8a29734ba1dac19fe5e933d89d5"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2002-06-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/170",
+      "dateDocument": "1999-12-22",
+      "roFundstelle": "AS 2002 170",
+      "titelDe": "Obligationenrecht (Die kaufmännische Buchführung)",
+      "titelFr": "Code des obligations (De la comptabilité commerciale)",
+      "titelIt": "Codice delle obbligazioni (Della contabilità commerciale)",
+      "botschaftKey": "BOTSCHAFT-1999-1_5149_4753_4457",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/170/de",
+      "sha": "f0af7d0a6a0ef6ba72be8b630b1d2a6207ce45743e2bd2cff38f78718168f0ee"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2001-06-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/154",
+      "dateDocument": "2000-12-15",
+      "roFundstelle": "AS 2001 154",
+      "titelDe": "Obligationenrecht (OR) (Streitwertgrenze bei Streitigkeiten aus dem Arbeitsverhältnis)",
+      "titelFr": "Code des obligations (CO) (Valeur litigieuse dans les litiges résultant de contrats de travail)",
+      "titelIt": "Codice delle obbligazioni (CO) (Limite del valore kitigioso in controversie derivanti dal rapporto di lavoro)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/154/de",
+      "sha": "ff3fb39e6913b21abd01b72a9536451983820cbd97f0042a8989f492ba8233d9"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2001-05-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/153",
+      "dateDocument": "2000-12-15",
+      "roFundstelle": "AS 2001 153",
+      "titelDe": "Obligationenrecht (OR) (Mindestnennwert von Aktien)",
+      "titelFr": "Code des obligations (CO) (Valeur nominale de l'action)",
+      "titelIt": "Codice delle obbligazioni (CO) (Valore naminale minimo delle azioni)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/153/de",
+      "sha": "4738c7bbf1b38e19e61d15a08c22f98180a28cc18e12143a49b700ddfd4d55d0"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2001-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/220",
+      "sha": "04fc5d803511596d83c460669056bc504585f4d755b6d2e8d35c245e2e1ac51d"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2000-05-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/220",
+      "sha": "fa356cae805f8a445772be422207d098513ac90d359ff09209668437897820a7"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2000-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/220",
+      "sha": "8883ffcea89639dc6f1ec4f6bb2e419707989ff543e54693b4b6d41e2974a8bd"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2000-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/220",
+      "sha": "c3aecf183a9dad340b11b21175c063f30beaf2dfbba66b72c675191b7cfb9156"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1912-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/27/317_321_377",
+      "dateDocument": "1911-03-30",
+      "roFundstelle": "AS 27 317",
+      "titelDe": "Bundesgesetz vom 30. März 1911 betreffend die Ergänzung des Schweizerischen Zivilgesetzbuches (Fünfter Teil: Obligationenrecht)",
+      "titelFr": "Loi fédérale du 30 mars 1911 complétant le Code civil suisse (Livre cinquième: Droit des obligations)",
+      "titelIt": "Legge federale del 30 marzo 1911 di complemento del Codice civile svizzero (Libro quinto: Diritto delle obbligazioni)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/27/317_321_377/de",
+      "sha": "13052e9f0b3ae33e38b144b1192f130fa732645edfc44db5b4211c5e75acebd2"
+    }
+  ],
+  "sha": "5559c28c59c13d4ed166dd64375c500a21c8578af2d275656d474ced69a81c7c"
+}
