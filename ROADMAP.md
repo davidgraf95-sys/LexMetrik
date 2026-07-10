@@ -323,6 +323,14 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
 >   Pipeline → `QS-GP`; Geschwister von B1 (gemeinsamer Korpus-Re-Lauf denkbar).*
 > - **B3 Sticky-Kopf überdeckt Body** im Entscheid-Leser (Screenshot BGE 152 I 65): Hintergrund nicht
 >   deckend / z-index / scroll-margin in `EntscheidLeser.tsx`. *Reine UI (§13-F) — eigener Commit, NICHT mit B1/B2.*
+>   ✅ **10.7.2026 — bereits behoben, empirisch verifiziert** (kein neuer Code nötig): Der U-KOPF/Split-
+>   View-Refactor (Commit `60988318`) hat alle drei Kandidaten geschlossen — Block zu **EINEM** sticky-
+>   Element konsolidiert, `top`-Offset von `top-16`→`calc(4rem + 2.25rem)` (sitzt jetzt UNTER dem
+>   InhaltsKopf-Breadcrumb statt ihn zu überdecken), opaker `bg-paper`, `z-[15]` (< Topbar `z-20`,
+>   > Breadcrumb `z-10`), `scroll-margin-top:var(--rsp-stick)` = 12.75rem. Playwright-Beweis 152 I 65
+>   (Desktop 1280 + Mobil 390, Light+Dark, 3 Scroll-Stände, alle 3 Sprung-Chips, beide Tab-Fassungen):
+>   **0 Overpaint**, Sprung-Ziele landen sichtbar unter dem 185/193px-Kopf; die alte `top-16`-Fassung
+>   reproduziert den Überdeckungs-Defekt (Breadcrumb verschwindet). Golden byte-gleich (Doku-only).
 >
 > **Bündel S · Split-View → Schritt 14** *(SPLIT-VIEW, eigener Worktree):*
 > - **S1 Breadcrumbs in der Pane:** `InhaltsKopf.tsx` Z.30 nutzt globalen Router-`<Link to>` → zielt
