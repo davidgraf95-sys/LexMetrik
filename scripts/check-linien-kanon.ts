@@ -31,7 +31,19 @@ const lies = (p: string) => readFileSync(resolve(wurzel, p), 'utf8');
 const fehler: string[] = [];
 
 // ─── Teil A · Linien-Kanon (marker-scoped) ───────────────────────────────────
-const READER = ['src/pages/gesetz-leser/parts.tsx', 'src/pages/gesetz-leser/inhalt.tsx'];
+// QS-TOK/P5: parts.tsx ist ein Barrel — die markierten Struktur-Elemente
+// (data-normtext-linie) leben in den Geschwister-Dateien unter parts/. Alle
+// Marker-Träger müssen gescannt werden, sonst prüft das Tor sie nicht mehr.
+const READER = [
+  'src/pages/gesetz-leser/parts.tsx',
+  'src/pages/gesetz-leser/parts/ArtikelLeser.tsx',
+  'src/pages/gesetz-leser/parts/ErlassKopfBlock.tsx',
+  'src/pages/gesetz-leser/parts/ErlassLeserKopf.tsx',
+  'src/pages/gesetz-leser/parts/SektionKontextKopf.tsx',
+  'src/pages/gesetz-leser/parts/SektionKopf.tsx',
+  'src/pages/gesetz-leser/parts/SektionBaumTOC.tsx',
+  'src/pages/gesetz-leser/inhalt.tsx',
+];
 const MARKER = 'data-normtext-linie';
 const VERBOTEN = /border-line(\/\d+)?\b/;
 const KANON = ['border-rule-artikel', 'border-rule-struktur', 'border-guide'];
