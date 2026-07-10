@@ -234,6 +234,16 @@ uebergabe: nur per explizitem `plan:set <id> slot=inhaber`-Commit; check:plan er
     `register.json` in Bund/Kanton sharden · Snapshot-Format verschlanken (Provenienz-Header-Hoist).
   - **d · Render-/Split-View-Feinschliff** *(zuletzt — nach den Memos marginal)*: TOC stabilisieren,
     `aktArtikel`-Tracker auslagern, Pane-Open-Guard + Such-Debounce, Fallback-Font-Metriken.
+  - **e · CLS-Race-Härtung Reader-e2e** — **`[✓]` KOMPLETT (10.7.2026, `fix/cls-race-haertung`).**
+    Drei byte-identische, nur unter CI-Parallel-Last reproduzierbare e2e-Rotfälle mit LayoutShift-
+    Attribution auf die Wurzel gefixt (§15.2/§15.3), 12-s/CLS-Schwellen UNVERÄNDERT: (1) `verweis-u`
+    0,49-CLS = `istXlVp`-Post-Mount-Flip 1→2-Spalten (`inhalt.tsx`, jetzt lazy-`useState` = Client-
+    Initialstate gepinnt); (2) `leser-kopf-a9` 0,0001-Mikro-Shift = TOC-Akkordeon-Höhen-ANIMATION +
+    spät committende `springeZuSektion`-Zweigöffnung (`parts.tsx` Akkordeon sofort statt animiert;
+    `flushSync` + jumpLock 500 ms in `inhalt.tsx`); (3) `norm-sprung` Sprung >12 s = teure 4-MB-
+    Artikelsuche blockierte den Sprung-Aufbau (`useUniversalSuche` `useDeferredValue` entkoppelt).
+    Golden byte-gleich (nur React-Reader/Such-Hook); 10× lokal grün unter 6× Drossel. Detail:
+    STRUKTUR-Karte 10.7.
   - **Constraints:** alles `[OF]`/zeitsperre-konform (Darstellungs-/Lade-/Build-Schicht); **kein**
     DOM-entfernendes Virtualisieren/`hydrateRoot`/Teilparse (Treue-Verlust, verworfen); Snapshot-
     Regenerierung (c) öffnet **keinen** 26×-Slot (nur Format, Union byte-gleich); Worktree-Isolation

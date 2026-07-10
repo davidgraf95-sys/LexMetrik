@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
-import { createPortal } from 'react-dom';
+import { createPortal, flushSync } from 'react-dom';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { naechsteInstanz, merkeTab, aktualisiereTabArtikel } from '../../lib/tabs';
 import { aktiverArtikel } from '../../lib/normtext/aktuellerArtikel';
@@ -158,7 +158,21 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // läuft der Fliesstext (max-w-reading 40rem) nie unter ~26rem. SSR-Default false =
   // mobil-Layout (byte-gleich). Ohne diese Erkennung behandelte der Code «tocOffen»
   // fälschlich als 2-Spalten-aktiv → der Gliederungs-Zugang verschwand beim Scrollen.
-  const [istXlVp, setIstXlVp] = useState(false);
+  // §15.2 «Client-Initialstate auf den Server-Zustand pinnen»: den WAHREN
+  // Viewport-Stand schon im ERSTEN Client-Render lesen (lazy Initializer),
+  // nicht erst per useEffect nach dem Mount. Sonst rendert der Client (der per
+  // createRoot frisch mountet, kein hydrateRoot — §15.5) zuerst mit `false`
+  // = 1-Spalten-Layout und flippt danach auf `true` = 2-Spalten-Grid
+  // (`grid-cols-[16rem_…]`) → die gesamte Lesespalte reflowt = grosser Layout-
+  // Shift. Unter CPU-Last (CI: 6 parallele Tore-Jobs) verlor dieser useEffect
+  // das Rennen gegen den Snapshot-Fetch: die Artikel rendern 1-spaltig, DANN
+  // flippt der Effekt → byte-identischer 0,49-CLS (verweis-u «Plural-Sprung»).
+  // SSR/Prerender: `window` ist undefiniert → `false` (Mobil-Layout,
+  // renderToString byte-gleich; die Erlass-Detailseiten kommen ohnehin aus dem
+  // separaten String-Builder `erlassVolltextHtml`, nicht aus dieser Komponente).
+  const [istXlVp, setIstXlVp] = useState(() =>
+    typeof window !== 'undefined' && typeof window.matchMedia === 'function'
+      && window.matchMedia('(min-width: 1024px)').matches);
   useEffect(() => {
     const mq = window.matchMedia('(min-width: 1024px)');
     const upd = () => setIstXlVp(mq.matches);
@@ -425,17 +439,32 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   const springeZuSektion = useCallback((id: string) => {
     const ids = pfadZu(sektionen, (s) => s.id === id) ?? [id];
     jumpLock.current = true;
-    setAktivIds(ids);
     // Sprung-Ziel als MANUELL behandeln (K): in manuellOffenRef aufnehmen und aus
     // dem Auto-Set nehmen, damit der Scroll-Spy den angesprungenen Zweig nicht
     // gleich wieder zuklappt.
     for (const x of ids) { autoOffenRef.current.delete(x); manuellOffenRef.current.add(x); manuellZuRef.current.delete(x); }
-    setTocBaum((o) => ({ ...o, ...Object.fromEntries(ids.map((x) => [x, true])) }));
-    setOffen((o) => ({ ...o, ...Object.fromEntries(ids.map((x) => [x, true])) }));
-    setTocAuf(false); // mobilen Drawer schliessen
+    // §15.2: der Klick öffnet den TOC-Zweig — diese Höhenänderung SYNCHRON im
+    // Klick-Task committen (flushSync), damit der Layout-Shift des einwachsenden
+    // Gliederungs-Zweigs dem Input zugerechnet wird (hadRecentInput ⇒ CLS-frei).
+    // Ohne flushSync verzögert React unter CPU-Last (CI: 6 parallele Tore-Jobs)
+    // den Commit über das 500-ms-Input-Fenster hinaus → der Shift zählt als
+    // unerwartet (leser-kopf-a9 «Breadcrumb-Fluss» Mikro-CLS).
+    flushSync(() => {
+      setAktivIds(ids);
+      setTocBaum((o) => ({ ...o, ...Object.fromEntries(ids.map((x) => [x, true])) }));
+      setOffen((o) => ({ ...o, ...Object.fromEntries(ids.map((x) => [x, true])) }));
+      setTocAuf(false); // mobilen Drawer schliessen
+    });
     requestAnimationFrame(() => requestAnimationFrame(() => {
       sekRefs.current.get(id)?.scrollIntoView({ block: 'start', behavior: 'auto' });
-      requestAnimationFrame(() => { jumpLock.current = false; });
+      // §15.2: den Scroll-Spy bis NACH dem Einschwingen des programmatischen Scrolls
+      // gesperrt halten (jumpLock). Sonst feuert der IntersectionObserver, sobald der
+      // Sprung-Scroll einläuft, und klappt den aktiven TOC-Zweig auf/zu — eine
+      // Höhenänderung im Sticky-Gliederungsbaum, die (nicht input-nah) als
+      // unerwarteter CLS zählt. Unter CPU-Last läuft der Scroll spät ein, darum ein
+      // Zeit- statt rAF-Fenster (wie springeZuArtikel); der Spy nimmt die Endposition
+      // danach normal auf. Reine Timing-Steuerung (kein setState) → kein Re-Render.
+      window.setTimeout(() => { jumpLock.current = false; }, 500);
     }));
   }, [sektionen]);
 
