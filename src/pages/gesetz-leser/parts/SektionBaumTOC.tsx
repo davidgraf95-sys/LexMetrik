@@ -33,9 +33,16 @@ export const SektionBaumTOC = memo(function SektionBaumTOC({ sektionen, aktivPfa
             {pre ? <><span className="font-medium text-ink-700">{pre}:</span> {rest}</> : s.label}
           </button>
         </div>
-        {/* Sanftes Auf-/Zuklappen via grid-rows (0fr↔1fr) — Kinder bleiben gemountet. */}
+        {/* Auf-/Zuklappen via grid-rows (0fr↔1fr) — Kinder bleiben gemountet.
+            §15.2: KEINE Höhen-ANIMATION (früher `transition-[grid-template-rows]
+            duration-300`). Eine animierte Höhenänderung reflowt Frame für Frame die
+            Geschwister-Zeilen = fortlaufender Layout-Shift; läuft der Auf-/Zuklapp
+            durch den Scroll-Spy (kein Input) oder unter CPU-Last über das 500-ms-
+            Input-Fenster hinaus, zählt jeder Frame als unerwarteter CLS (leser-kopf-a9).
+            Sofortiges Umschalten = EIN input-zugerechneter Reflow (flushSync im
+            Reader), CLS-frei. Reine Darstellung (§3); der Baum bleibt vollständig. */}
         {hatKinder && (
-          <div className={`grid transition-[grid-template-rows] duration-300 ease-out ${auf ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
+          <div className={`grid ${auf ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
             <div className="overflow-hidden min-h-0">
               <ul className="space-y-0.5 mt-0.5">{s.kinder.map((k) => zeile(k, tiefe + 1))}</ul>
             </div>

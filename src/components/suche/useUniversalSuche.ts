@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
 import { sucheAlles, sprungGruppe, type SuchGruppe, type SuchTreffer } from '../../lib/universalSuche';
 import { holeOnlineTreffer, MIN_ZEICHEN } from '../../lib/suche/onlineVolltext';
 import { baueNormIndex, parseNormQuery } from '../../lib/suche/normQuery';
@@ -71,6 +71,22 @@ export function useUniversalSuche(q: string): UniversalSucheErgebnis {
   const normIndex = useMemo(() => (gesetze ? baueNormIndex(gesetze) : null), [gesetze]);
   const direkt = useMemo(() => (normIndex ? parseNormQuery(q, normIndex) : null), [normIndex, q]);
 
+  // §15.3/A9: die TEURE Artikel-Volltextsuche (~4 MB-Index, 40 Treffer) vom
+  // reaktiven Pfad ENTKOPPELN. Sie lief bislang synchron IN der `gruppen`-Memo
+  // und blockierte damit den GESAMTEN Trefferaufbau — inkl. des billigen,
+  // deterministischen Norm-Sprungs (A5) — bis der 4-MB-Scan durch war. Unter
+  // CPU-Drossel überschritt das das A9-Budget (norm-sprung «Sprung» >12 s). Mit
+  // `useDeferredValue` rechnet React die Artikelgruppe mit NIEDRIGER Priorität
+  // auf einem nachlaufenden Query: der Sprung + die günstigen Gruppen rendern
+  // sofort am Live-Query, die Artikelgruppe holt einen Tick später auf.
+  // `artikelGruppe` nimmt die Treffer nur ENTGEGEN (kein Re-Ranking über q,
+  // universalSuche.ts) → das Entkoppeln ändert nur das WANN, nicht das WAS (§6.4).
+  const qArtikel = useDeferredValue(q);
+  const artikelTreffer = useMemo(
+    () => (artikelSucheFn ? artikelSucheFn(qArtikel, 40) : null),
+    [artikelSucheFn, qArtikel],
+  );
+
   const gruppen = useMemo(
     // Presets ungekappt holen (limit 999) — `gesamt` soll die ECHTE Trefferzahl
     // sein, nicht das Default-Suchlimit (§8). Die Anzeige kappt in der Gruppe.
@@ -84,7 +100,7 @@ export function useUniversalSuche(q: string): UniversalSucheErgebnis {
       const statisch = sucheAlles(q, {
         presets: presetSucheFn ? presetSucheFn(q, 999) : null,
         gesetze,
-        artikel: artikelSucheFn ? artikelSucheFn(q, 40) : null,
+        artikel: artikelTreffer,
         entscheide,
         materialien,
       });
@@ -95,7 +111,7 @@ export function useUniversalSuche(q: string): UniversalSucheErgebnis {
         ...(onlineGruppe ? [onlineGruppe] : []),
       ];
     },
-    [q, direkt, presetSucheFn, artikelSucheFn, gesetze, entscheide, materialien, onlineGruppe],
+    [q, direkt, presetSucheFn, artikelTreffer, gesetze, entscheide, materialien, onlineGruppe],
   );
   const allesGeladen = presetSucheFn !== null && artikelSucheFn !== null && gesetze !== null && entscheide !== null && materialien !== null;
   return { gruppen, allesGeladen };
