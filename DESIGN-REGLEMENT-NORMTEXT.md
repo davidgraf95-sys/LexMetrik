@@ -250,6 +250,38 @@ e2e `leser-linien-kanon`/`gesetze-ux-g3a`/`leser-optionen` beweisen das gerender
 Ergebnis (ZGB ruhig, ArG sichtbar, ≤ 1 Guide-Stapel). **Wortlaut byte-gleich** (nur
 Klassen/Attribute), Engine-Golden byte-gleich.
 
+### §4b-B · Farb-Wörterbuch der Referenzschicht (W2·5d V2·C-1, 10.7.2026, David «go zu allem»)
+
+Grundsatz (David 10.7.2026): **Farbe NUR auf der Referenz-/Verzahnungsschicht**
+(Chips, Badges, Kopf) — der **Normtext-Körper bleibt farbfrei** (Rangfolge §4b:
+Typo > Einzug > Guide; kein Ton im Lesefluss). Das Wörterbuch ist EIN Entscheid je
+Farbe — kein Ton trägt zwei Bedeutungen:
+
+| Ton | Bedeutung (die EINE) | Trägt sie |
+| --- | --- | --- |
+| **brass** (Messing) | Marke / Hervorhebung / Wortlaut-Referenz. Kein Rechtsstatus-Urteil. | Norm-KantenChip-Tick (`kategorie='norm'`, Default), ★-Leitentscheid-Glyph, Verweis-Links |
+| **slate** | **Neutraler Referenz-/Sekundärton** — maschinell/prozedural, ohne Wertung. Kein Rechtsstatus-Urteil, insbesondere **NICHT** «ungeprüft/in Vorbereitung». | Rechtsprechungs-KantenChip-Tick (`kategorie='entscheid'`: Leitfälle + zitierte Entscheide), soft-Badges «maschinell»/«nur Verweis» (`lc-badge-soft`) |
+| **warn** | Echter Fassungs-/Sachvorbehalt (eine Warnung, keine Ampel-Wertung des Entscheids). | Revisions-↻-Glyph (`glyphTon: text-warn-700`) |
+| **sage** | Currency «geltend geprüft (maschinell)» — erst mit C-2/C-3. | (noch nicht bespielt) |
+
+**slate-Doppelbelegung aufgelöst (David-Entscheid §3 Ziff. 3):** slate war latent
+sowohl «Rechtsprechungs-Kante» als auch «ungeprüft/in-Vorbereitung-Status». Fixiert:
+slate bedeutet ausschliesslich **neutrale, maschinell-prozedurale Referenzinformation
+ohne Wertung** — beide Vorkommen (Entscheid-Chip UND soft-Badge) teilen genau diese
+eine Semantik. Der einzige quasi-Status-Gebrauch (Revision) wandert nach **warn** und
+verlässt damit slate. brass bleibt die Marke/Hervorhebung, nie ein Rechtsstatus (R16).
+
+**Anatomie unverändert (§6/R6):** Die `kategorie`-Prop am `KantenChip` tauscht NUR
+den Tick (`border-left-color`) und die Hover-Utilities; Form/Token/Grösse bleiben →
+**CLS 0**, keine Layout-Verschiebung. Der Default `'norm'` emittiert die unveränderte
+brass-Klassenzeile ⇒ Grundzustand **byte-gleich** (`golden:vergleich` IDENTISCH; die
+zitierten Normen im KontextPanel bleiben brass). Kontrast als Gate gemessen
+(WCAG 1.4.11 ≥ 3:1 für den Tick, 1.4.3 ≥ 4.5:1 für Glyphen): slate-500-Tick **4.81**
+hell / **3.47** dunkel; warn-700-↻ **5.24** / **9.43**; brass-700-★ **4.91** / **10.48**.
+`--slate-500` wird in `html.dark` bewusst NICHT überschrieben (Tick-Kontrast bleibt
+gehalten). **Gegated:** `verzahnung.test` (Default byte-identisch, Entscheid-Slate,
+↻-warn), Golden byte-gleich.
+
 ### §4c · Leser-Darstellungsoptionen (W2·5d G2a, 4.7.2026; U-KOPF/A1+A4, 5.7.2026)
 
 Drei persistente, **rein visuelle** Lese-Umschalter (genau drei, keine Wucherung,

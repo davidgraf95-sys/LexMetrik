@@ -82,6 +82,18 @@ describe('StatusBadge — geschlossenes Vokabular, nur Abweichungen', () => {
     expect(out).toContain('role="img"');
     expect(out).toContain('★');
   });
+  // Farb-Wörterbuch V2·C-1 (§4b-B): ★ bleibt brass, ↻ trägt warn (echter Vorbehalt).
+  it('★-Glyph bleibt brass (Marke/Hervorhebung)', () => {
+    const out = ssr(<StatusBadge praedikat="leitentscheid" variant="glyph" />);
+    expect(out).toContain('text-brass-700');
+    expect(out).not.toContain('text-warn-700');
+  });
+  it('Revisions-↻-Glyph trägt warn-700, nicht brass', () => {
+    const out = ssr(<StatusBadge praedikat="revidiert" variant="glyph" />);
+    expect(out).toContain('↻');
+    expect(out).toContain('text-warn-700');
+    expect(out).not.toContain('text-brass-700');
+  });
 });
 
 describe('KantenChip — Dichte-Regel (EIN Zusatz)', () => {
@@ -107,6 +119,27 @@ describe('KantenChip — Dichte-Regel (EIN Zusatz)', () => {
     const out = ssr(<KantenChip to="/gesetze/bund/OR" label="OR" />);
     expect(ster(out)).toBe(0);
     expect(out).toContain('href="/gesetze/bund/OR"');
+  });
+  // Farb-Wörterbuch V2·C-1 (§4b-B): Kategorie-Prop steuert die Chip-Farbfamilie.
+  it('Default kategorie=norm: brass-Klassenzeile, kein slate (byte-identisch)', () => {
+    const out = ssr(<KantenChip to="/x" label="OR" />);
+    expect(out).toContain('hover:text-brass-700');
+    expect(out).toContain('hover:border-brass-400');
+    expect(out).not.toContain('lc-chip-entscheid');
+    expect(out).not.toContain('slate');
+  });
+  it('explizit kategorie=norm ist byte-identisch zum Default', () => {
+    const def = ssr(<KantenChip to="/x" label="OR" />);
+    const norm = ssr(<KantenChip to="/x" label="OR" kategorie="norm" />);
+    expect(norm).toBe(def);
+  });
+  it('kategorie=entscheid: slate-Tick + slate-Hover, kein brass-Hover', () => {
+    const out = ssr(<KantenChip to="/x" label="BGE 145 III 63" kategorie="entscheid" />);
+    expect(out).toContain('lc-chip-entscheid');
+    expect(out).toContain('hover:text-slate-700');
+    expect(out).toContain('hover:border-slate-700');
+    expect(out).not.toContain('hover:text-brass-700');
+    expect(out).not.toContain('hover:border-brass-400');
   });
 });
 

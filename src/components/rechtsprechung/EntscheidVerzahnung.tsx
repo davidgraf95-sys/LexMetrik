@@ -192,7 +192,7 @@ export function ZitiertGruppe({ zitierteEntscheide, abschnitte, selbstKey }: {
             const ziel = `/rechtsprechung/${encodeURIComponent(k.ziel!.key)}`;
             return (
               <li key={k.zitat} className="inline-flex items-center">
-                <KantenChip to={ziel} label={k.zitat}
+                <KantenChip to={ziel} label={k.zitat} kategorie="entscheid"
                   leitentscheid={k.ziel!.leitcharakter === 'leitentscheid'}
                   titel={k.ziel!.zitierung} />
                 {/* Fundstelle des Zitats im AKTUELLEN Text (in-Text-Sprung). */}

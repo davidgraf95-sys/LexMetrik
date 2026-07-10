@@ -705,9 +705,14 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
     V2 §2 F3. **Bau-Go David ausstehend.**
   - [ ] **A24** (L-1+L-2+L-3): Linien-Reparatur, Auto-Default-Umkehr ZGB/OR (Umkehr
     #161, David freigegeben); L-4 entfällt. V2 §2 F4. **Bau-Go David ausstehend.**
-  - [ ] **A25** (C-1+C-2+C-3): Farbe nur Referenzschicht (Chips/Badges/Kopf),
-    Normtext-Körper farbfrei; C-1 sofort/kollisionsfrei. V2 §2 F5. **Bau-Go David
-    ausstehend.**
+  - **A25** (C-1+C-2+C-3): Farbe nur Referenzschicht (Chips/Badges/Kopf),
+    Normtext-Körper farbfrei. V2 §2 F5. Bau-Go David 10.7. «go zu allem».
+    - [x] **C-1 ✅ (10.7.2026, feat/v2-c1-kantenchip):** KantenChip `kategorie`-Prop
+      (Norm=brass byte-identisch / Entscheid=slate-Tick+Hover), ↻ Revision→warn-700
+      (★ bleibt brass), slate-Doppelbelegung aufgelöst → DESIGN-REGLEMENT-NORMTEXT
+      §4b-B (Farb-Wörterbuch). Golden byte-gleich, Kontrast als Gate gemessen, CLS 0.
+    - [ ] **C-2/C-3** nach U-VERWEIS/im Kopf-PR (Overline-Punkte, Currency-Tonung,
+      NormChip-Verweisfarbe + Materialien-Familie). **Bau-Go erteilt, seq. deferiert.**
   - [ ] **DEFER FN-5/M14** wortgenaue Marker: hinter QS-PERF/U-POSITION, separates
     David-Go (Entscheid 10.7.). V2 §2 F1.
 - [ ] **6 · Konsultieren-Klingen** *(`[OF]`, amtlich)*:
