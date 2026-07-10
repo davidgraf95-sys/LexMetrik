@@ -190,6 +190,15 @@ uebergabe: nur per explizitem `plan:set <id> slot=inhaber`-Commit; check:plan er
   `.claude/hooks/struktur-aktuell.py`: meldet **rot**, sobald eine neu hinzugefügte `FAHRPLAN-*.md`
   **nicht aus `ROADMAP.md` verlinkt** ist — setzt die Plan-Hygiene-Regel durch (jede `FAHRPLAN-*.md`
   muss aus der ROADMAP referenziert sein, sonst steuert sie unsichtbar; CLAUDE.md §14 Ziff. 1). Detail + Etikett-System: **`FAHRPLAN-PLAN-STEUERUNG.md`** (Tor `check:plan` = Etikett-Konsistenz + FAHRPLAN-Verlinkung der referenzierten Dateien).
+- **Wissens-/Werkzeug-Infrastruktur** *(QS-WISSEN, `[OF]`, neu 10.7.2026)*.
+  <!-- @meta id: QS-WISSEN · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein · fahrplan: FAHRPLAN-NOTEBOOKLM-EINSATZ.md -->
+  NotebookLM als **menschen-seitige** Recall-/Recherche-Oberfläche über den stabilen
+  LexMetrik-Doku-Korpus (David lädt FAHRPLÄNE/ROADMAP/Register/Dossiers hoch; Quellenzitat je
+  Antwort, Audio-Overview). **Kein** Ersatz für die `STRUKTUR.md`-Navigation und **kein**
+  In-Session-Query des Assistenten — kein ToS-konformer Consumer-API zum programmatischen
+  Abfragen/Bespielen. Schwester zu `[[werkzeuge-zuerst-pruefen]]`. Detailquelle:
+  **`FAHRPLAN-NOTEBOOKLM-EINSATZ.md`** (Machbarkeits-Matrix, 6.7.2026). **Status: bereitgestellt**
+  — die Notebook-Befüllung selbst ist Davids Handschritt, kein Bau-Auftrag.
 - **SEO/A11y** *(SEO-A11Y-GOVERNANCE)*. A11y zahlt auf Bedienbarkeit ein → begleitendes Tor
   <!-- @meta id: SEO-A11Y · status: ready · of: ja · blocker: null · dep: [] · kollision: [public/normtext/register.json, src/lib/seo.ts, scripts/prerender.ts, vercel.json] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-SEO-A11Y-GOVERNANCE.md -->
   (Tabellen-Semantik, Tastatur-e2e, hreflang). Reines SEO geparkt. **Bedingung der Gleichzeitigkeit:
