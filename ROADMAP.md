@@ -697,9 +697,17 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   «Ansicht»-Dropdown im Kopf (`LeserAnsichtMenu`, ehrliche Disclosure + useDialog-
   Fokus; Chip-Leiste entfällt); P1 golden-ändernd (Kopf-Markup), Artikel-Prosa
   byte-gleich; Gate + e2e (inkl. neuer A9-Throttle `leser-kopf-a9`) grün →
-  U-VERWEIS (A7/A10/A11/A13:
-  Plural-Linker «in den Artikeln…», Präambel-Verweise, strukturiertes Verweis-Popover
-  Artikel→Entscheide→Materialien — Risiko-Pfad, `check:gegenpruefung`) → U-POSITION
+  **U-VERWEIS ✅ gebaut (10.7., PR `feat/u-verweis-a7-a10-a11-a13`;
+  Ausführungsvermerk §10.7):** A10 Plural-Linker `artikelnPluralVerweise`
+  (MWSTG Art. 5 = GENAU 5 Links art_31/35/37/38/45; bounded, §1-Unterdrückungs-
+  Regeln BGSA/Code-civil/42octies; Korpus 2091 Regionen/5187 Glieder) · A11
+  Präambel-Verweise (kuratierte Genitiv-Map «der Bundesverfassung»→BV, 26 belegte
+  Einträge + **aBV-Schutz**: Ingress-Linkung nur Erlassdatum ≥ 2000) · A7
+  Verweis-Popover strukturiert (Wortlaut → Provenienz → Massgebliche Entscheide →
+  abgetrennt Amtliche Materialien; `VerweisKontext`, geteilte Shards, Top-3+Zähler,
+  CLS 0 by construction) · A13 Materialien-Kanten klarer (artikelscharf prominent,
+  Erlass-Ebene hinter `<details>`-Zähler). Reglement §5a; Gate voll grün, Engine-
+  Golden byte-gleich, e2e 188/188 inkl. `verweis-u` (A9-Throttle) →** U-POSITION
   (A2/A16/A17: Scrollbalken-Proportionalität, exakte Zurück-Restoration,
   Split-View-Fundstellen-Sprung — hart NACH QS-PERF). Parallel kollisionsarm:
   **U-SUCHE ✅ AUSGEFÜHRT (5.7., PR feat/u-suche-a5-a6, Auto-Merge armiert;

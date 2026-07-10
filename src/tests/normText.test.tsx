@@ -284,3 +284,105 @@ describe('NormText — N2b ausgeschriebenes Fremdgesetz-Routing (AIG Art. 5)', (
     expect(out).toContain('Artikel 14 und 15 des Zivilgesetzbuches (Code civil)');
   });
 });
+
+// A10 (U-VERWEIS, David 5.7.2026 — Fund MWSTG Art. 5): Plural-Aufzählung «in den
+// Artikeln A, B … und K» — jedes Glied wird EINZELN verlinkt (Self über tokenMap,
+// Fremd über das Gesetz-Signal am Ende inkl. Genitiv-Map). P2-Beweispunkt.
+describe('NormText — A10 Plural-Linker («in den Artikeln …»)', () => {
+  const MWSTG5 = 'Der Bundesrat beschliesst die Anpassung der in den Artikeln 31 Absatz 2 Buchstabe c, 35 Absatz 1bis Buchstabe b, 37 Absatz 1, 38 Absatz 1 und 45 Absatz 2 Buchstabe b genannten Frankenbeträge, sobald sich der Landesindex der Konsumentenpreise seit der letzten Festlegung um mehr als 30 Prozent erhöht hat.';
+  const mwstgTokens = new Map<string, string>([
+    ['31', '31'], ['35', '35'], ['37', '37'], ['38', '38'], ['45', '45'], ['5', '5'],
+  ]);
+  const internMwstg: InternRefs = { tokenMap: mwstgTokens, basisPfad: '/gesetze/bund/MWSTG', springeZu: () => {} };
+  const eliId = (k: keyof typeof FEDLEX) => FEDLEX[k].match(/eli\/cc\/([^/]+)/)![1];
+
+  it('MWSTG Art. 5 verbatim ⇒ GENAU 5 Self-Links (art-31/35/37/38/45)', () => {
+    const out = ssr(<NormText text={MWSTG5} intern={internMwstg} />);
+    for (const n of ['31', '35', '37', '38', '45']) {
+      expect(out).toContain(`href="/gesetze/bund/MWSTG#art-${n}"`);
+    }
+    // Genau 5 Links, keiner mehr (bounded: «30 Prozent» etc. bleiben Text).
+    expect(out.match(/<a\s/g)).toHaveLength(5);
+    // Text bleibt zeichenidentisch: Passus-Ketten sind reiner Text.
+    expect(out).toContain('Absatz 2 Buchstabe c');
+    expect(out).toContain('genannten Frankenbeträge');
+  });
+
+  it('Fremdgesetz-Signal: «…Artikeln 4 und 5 des StGB» → beide auf StGB, nie Self', () => {
+    const out = ssr(<NormText text="Massnahmen nach den Artikeln 4 und 5 des StGB bleiben vorbehalten." intern={internMwstg} />);
+    expect(out).toMatch(new RegExp(`href="[^"]*${eliId('StGB')}[^"]*#art_4"`));
+    expect(out).toMatch(new RegExp(`href="[^"]*${eliId('StGB')}[^"]*#art_5"`));
+    expect(out).not.toContain('/gesetze/bund/MWSTG#art-'); // kein Self-Link
+  });
+
+  it('unauflösbarer Fremdname unterdrückt (§1): «…Artikeln 91, 163 und 222 des Bundesgesetzes vom …» bleibt Text', () => {
+    const tokens91 = new Map<string, string>([['91', '91'], ['163', '163'], ['222', '222']]);
+    const internX: InternRefs = { tokenMap: tokens91, basisPfad: '/gesetze/bund/AHVG', springeZu: () => {} };
+    const out = ssr(<NormText text="Konkursverwaltungen nach den Artikeln 91, 163 und 222 des Bundesgesetzes vom 11. April 1889 über Schuldbetreibung und Konkurs" intern={internX} />);
+    expect(out).not.toContain('<a'); // NIE ein geratener Self-Link auf ein Fremdgesetz
+  });
+
+  it('Glied ohne eigenes Token bleibt Text (§8, kein toter Link)', () => {
+    const nur31 = new Map<string, string>([['31', '31']]);
+    const internTeil: InternRefs = { tokenMap: nur31, basisPfad: '/gesetze/bund/MWSTG', springeZu: () => {} };
+    const out = ssr(<NormText text="nach den Artikeln 31 und 999 gilt" intern={internTeil} />);
+    expect(out).toContain('#art-31"');
+    expect(out).not.toContain('#art-999');
+    expect(out).toContain('999');
+  });
+
+  it('eigenes Kürzel als Signal ⇒ Self-Pfad: «den Artikeln 5 und 31 MWSTG» im MWSTG-Reader', () => {
+    const out = ssr(<NormText text="nach den Artikeln 5 und 31 MWSTG richtet sich" intern={internMwstg} />);
+    expect(out).toContain('href="/gesetze/bund/MWSTG#art-5"');
+    expect(out).toContain('href="/gesetze/bund/MWSTG#art-31"');
+  });
+
+  it('ohne intern-Prop keine Plural-Links (Nicht-Reader-Aufrufer unverändert, §6)', () => {
+    const out = ssr(<NormText text={MWSTG5} />);
+    expect(out).not.toContain('<a');
+  });
+});
+
+// A11 (U-VERWEIS): Verweise in Präambeln/Ingress — die BV wird ausgeschrieben
+// OHNE Klammer-Kürzel zitiert («der Bundesverfassung») → kuratierte Genitiv-Map.
+describe('NormText — A11 Präambel/Ingress-Verweise (Genitiv-Map)', () => {
+  const eliId = (k: keyof typeof FEDLEX) => FEDLEX[k].match(/eli\/cc\/([^/]+)/)![1];
+  const internMwstg: InternRefs = { tokenMap: new Map([['130', '130']]), basisPfad: '/gesetze/bund/MWSTG', springeZu: () => {} };
+
+  it('MWSTG-Ingress: «gestützt auf Artikel 130 der Bundesverfassung» → BV art_130 (Singular)', () => {
+    const out = ssr(<NormText text="gestützt auf Artikel 130 der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 25. Juni 2008," intern={internMwstg} />);
+    expect(out).toMatch(new RegExp(`href="[^"]*${eliId('BV')}[^"]*#art_130"`));
+    expect(out).not.toContain('#art-130"'); // NIE ein Self-Link auf den eigenen Erlass
+    expect(out).toContain('der Bundesverfassung');
+  });
+
+  it('ArG-Ingress (Plural): «die Artikel 26, 31 Absatz 2, 34 und 114 der Bundesverfassung» → 4 BV-Links', () => {
+    const internArg: InternRefs = { tokenMap: new Map(), basisPfad: '/gesetze/bund/ARG', springeZu: () => {} };
+    const out = ssr(<NormText text="gestützt auf die Artikel 26, 31 Absatz 2, 34 und 114 der Bundesverfassung, nach Einsicht in eine Botschaft" intern={internArg} />);
+    for (const n of ['26', '31', '34', '114']) {
+      expect(out).toMatch(new RegExp(`href="[^"]*${eliId('BV')}[^"]*#art_${n}"`));
+    }
+    expect(out.match(/<a\s/g)).toHaveLength(4);
+  });
+
+  it('AdoV-Ingress: «die Artikel 269c Absatz 3 und 316 Absatz 2 des Zivilgesetzbuchs (ZGB)» → 2 ZGB-Links', () => {
+    const internAdov: InternRefs = { tokenMap: new Map(), basisPfad: '/gesetze/bund/ADOV', springeZu: () => {} };
+    const out = ssr(<NormText text="gestützt auf die Artikel 269c Absatz 3 und 316 Absatz 2 des Zivilgesetzbuchs (ZGB) und die Verordnung" intern={internAdov} />);
+    expect(out).toMatch(new RegExp(`href="[^"]*${eliId('ZGB')}[^"]*#art_269_c"`));
+    expect(out).toMatch(new RegExp(`href="[^"]*${eliId('ZGB')}[^"]*#art_316"`));
+  });
+
+  it('AHVV-Ingress (N2b-Klammer-Form): «Artikel 81 des Bundesgesetzes … (ATSG)» → ATSG art_81, nie Self', () => {
+    const internAhvv: InternRefs = { tokenMap: new Map([['81', '81']]), basisPfad: '/gesetze/bund/AHVV', springeZu: () => {} };
+    const out = ssr(<NormText text="gestützt auf Artikel 81 des Bundesgesetzes vom 6. Oktober 2000 über den Allgemeinen Teil des Sozialversicherungsrechts (ATSG)," intern={internAhvv} />);
+    // Das Klammer-Kürzel «(ATSG)» ∈ FEDLEX ist das autoritative Signal (N2b).
+    expect(out).toMatch(new RegExp(`href="[^"]*${eliId('ATSG')}[^"]*#art_81"`));
+    expect(out).not.toContain('#art-81"'); // NIE ein AHVV-Self-Link (§1)
+  });
+
+  it('generischer Genitiv OHNE Klammer bleibt unverlinkt: «Artikel 81 des Bundesgesetzes vom …»', () => {
+    const internAhvv: InternRefs = { tokenMap: new Map([['81', '81']]), basisPfad: '/gesetze/bund/AHVV', springeZu: () => {} };
+    const out = ssr(<NormText text="gestützt auf Artikel 81 des Bundesgesetzes vom 6. Oktober 2000 über die Invalidenversicherung," intern={internAhvv} />);
+    expect(out).not.toContain('<a'); // weder Deep-Link (kein Signal) noch Self-Link (§1)
+  });
+});

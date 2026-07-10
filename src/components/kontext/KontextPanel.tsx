@@ -180,8 +180,6 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false 
   // Sync-kuratierte + async-Soft-Law-Materialien zu EINER Gruppe gemerged, dedupe
   // per key (bestehender kuratierter Eintrag gewinnt, §2.6). Max. 8 sichtbar.
   const alleMaterialien = mischeMaterialien(materialien, softLaw);
-  const sichtbareMaterialien = alleMaterialien.slice(0, MAX_MATERIALIEN);
-  const restMaterialien = Math.max(0, alleMaterialien.length - MAX_MATERIALIEN);
   // Solange die async-Materialien für den aktuellen Key noch laden, gilt das Panel
   // NICHT als leer (kein vorzeitiges Leerbild → kein Flash/CLS).
   const softLawLaden = typ !== 'material' && (!softLawGeladen || softLawGeladen.key !== normKeysKey);
@@ -282,49 +280,72 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false 
 
           {/* Amtliche Materialien (Norm- + Entscheid-Reader): kuratierte In-Bundle-
               Einträge + async Soft-Law-Kanten (E6a·M5), EINE Gruppe, dedupe per key.
-              Fundstellen-Sublabel (via Art. / Ziff.), Dokument-Stand am Eintrag,
-              Staleness-Hinweis §2.4, «maschinell»-Badge nur bei Heuristik-Herkunft. */}
-          {alleMaterialien.length > 0 && (
-            <KontextGruppe titel="Amtliche Materialien" richtung="Legt aus" anzahl={alleMaterialien.length}
-              hinweis={<><span className="num">{alleMaterialien.length}</span> erfasste Behördenpublikationen (Kreisschreiben, Wegleitungen, Leitfäden u. a.) — kein Gesetzesrang.</>}>
-              <ul className="flex flex-col gap-1.5">
-                {sichtbareMaterialien.map((m) => {
-                  // Staleness (§2.4): nur im Einzel-Erlass-Reader (Revisions-Shard geladen)
-                  // und nur bei artikelscharfem Bezug — Dokument-Stand vor der letzten
-                  // Textänderung des Artikels ⇒ Hinweis, nie ein «aktuell»-Siegel (R16).
-                  const rev = m.artikel ? revisionFuerToken(revShardAktuell, m.artikel) : undefined;
-                  const veraltet = !!m.artikel
-                    && klassifiziereFassungsBezug({ iso: m.stand, praezision: 'tag' }, rev) === 'revidiert';
-                  return (
-                    <li key={m.key} className="text-body-s">
-                      <Link to={m.pfad} className="no-underline hover:text-brass-700">
-                        <span className="text-ink-500">{m.behoerdeKuerzel} · {m.doktypLabel}{m.nummer ? ` ${m.nummer}` : ''}</span>
-                        {' — '}<span className="font-medium">{m.titel}</span>
-                        {m.sublabel && <span className="num text-micro font-normal text-ink-500"> · {m.sublabel}</span>}
-                        <span className="num text-micro text-ink-500"> · Stand {kurzDatum(m.stand)}</span>
-                        {m.herkunft === 'maschinell' && (
-                          <StatusBadge praedikat="maschinell" className="ml-1.5 align-middle" />
-                        )}
-                      </Link>
-                      {kannOeffnen && !istOffen(m.pfad) && (
-                        <DanebenKnopf ziel={m.pfad} label={`${m.behoerdeKuerzel} ${m.doktypLabel}`} oeffneDaneben={oeffneDaneben} className="ml-1 align-middle" />
-                      )}
-                      {veraltet && m.artikel && (
-                        <span className="block text-micro text-warn-700">
-                          Dokument-Stand vor der letzten Änderung von Art. {anzeigeArtikel(m.artikel)}.
-                        </span>
-                      )}
-                    </li>
-                  );
-                })}
-              </ul>
-              {restMaterialien > 0 && (
-                <Link to="/materialien" className="text-body-s text-brass-700 hover:underline">
-                  Noch <span className="num">{restMaterialien}</span> weitere · alle Materialien ansehen →
-                </Link>
-              )}
-            </KontextGruppe>
-          )}
+              W2·5d U-VERWEIS/A13 (David 5.7.2026, «klarere verweise zu den
+              materialien sofern relevant»): ARTIKELSCHARFE Kanten prominent zuerst
+              (Fundstellen-Sublabel «via Art. 21», Behörden-Kürzel, Dokument-Stand);
+              reine ERLASS-EBENE-Kanten dezenter HINTER dem Zähler (<details>,
+              tastatur-/CLS-fest wie RegesteBlock) — keine Chip-Wüste, Dichte-Regel
+              bleibt. Staleness-Hinweis §2.4, «maschinell»-Badge nur bei Heuristik. */}
+          {alleMaterialien.length > 0 && (() => {
+            const artikelScharf = alleMaterialien.filter((m) => m.artikel || m.sublabel);
+            const erlassEbene = alleMaterialien.filter((m) => !m.artikel && !m.sublabel);
+            const sichtbarScharf = artikelScharf.slice(0, MAX_MATERIALIEN);
+            const restScharf = artikelScharf.length - sichtbarScharf.length;
+            const zeile = (m: MaterialBezug) => {
+              // Staleness (§2.4): nur im Einzel-Erlass-Reader (Revisions-Shard geladen)
+              // und nur bei artikelscharfem Bezug — Dokument-Stand vor der letzten
+              // Textänderung des Artikels ⇒ Hinweis, nie ein «aktuell»-Siegel (R16).
+              const rev = m.artikel ? revisionFuerToken(revShardAktuell, m.artikel) : undefined;
+              const veraltet = !!m.artikel
+                && klassifiziereFassungsBezug({ iso: m.stand, praezision: 'tag' }, rev) === 'revidiert';
+              return (
+                <li key={m.key} className="text-body-s">
+                  <Link to={m.pfad} className="no-underline hover:text-brass-700">
+                    <span className="text-ink-500">{m.behoerdeKuerzel} · {m.doktypLabel}{m.nummer ? ` ${m.nummer}` : ''}</span>
+                    {' — '}<span className="font-medium">{m.titel}</span>
+                    {m.sublabel && <span className="num text-micro font-normal text-ink-500"> · {m.sublabel}</span>}
+                    <span className="num text-micro text-ink-500"> · Stand {kurzDatum(m.stand)}</span>
+                    {m.herkunft === 'maschinell' && (
+                      <StatusBadge praedikat="maschinell" className="ml-1.5 align-middle" />
+                    )}
+                  </Link>
+                  {kannOeffnen && !istOffen(m.pfad) && (
+                    <DanebenKnopf ziel={m.pfad} label={`${m.behoerdeKuerzel} ${m.doktypLabel}`} oeffneDaneben={oeffneDaneben} className="ml-1 align-middle" />
+                  )}
+                  {veraltet && m.artikel && (
+                    <span className="block text-micro text-warn-700">
+                      Dokument-Stand vor der letzten Änderung von Art. {anzeigeArtikel(m.artikel)}.
+                    </span>
+                  )}
+                </li>
+              );
+            };
+            return (
+              <KontextGruppe titel="Amtliche Materialien" richtung="Legt aus" anzahl={alleMaterialien.length}
+                hinweis={<><span className="num">{alleMaterialien.length}</span> erfasste Behördenpublikationen (Kreisschreiben, Wegleitungen, Leitfäden u. a.) — kein Gesetzesrang.</>}>
+                {artikelScharf.length > 0 && (
+                  <ul className="flex flex-col gap-1.5">{sichtbarScharf.map(zeile)}</ul>
+                )}
+                {restScharf > 0 && (
+                  <Link to="/materialien" className="text-body-s text-brass-700 hover:underline">
+                    Noch <span className="num">{restScharf}</span> weitere mit Artikel-Bezug · alle Materialien ansehen →
+                  </Link>
+                )}
+                {erlassEbene.length > 0 && (
+                  <details className="group">
+                    <summary className="cursor-pointer list-none text-body-s text-ink-500 hover:text-brass-700 [&::-webkit-details-marker]:hidden">
+                      <span aria-hidden className="mr-1 inline-block transition-transform group-open:rotate-90">›</span>
+                      <span className="num">{erlassEbene.length}</span>
+                      {erlassEbene.length === 1 ? ' Dokument' : ' Dokumente'} auf Erlass-Ebene (ohne Artikel-Bezug)
+                    </summary>
+                    <ul className="mt-1.5 flex flex-col gap-1.5 border-l border-line pl-3">
+                      {erlassEbene.map(zeile)}
+                    </ul>
+                  </details>
+                )}
+              </KontextGruppe>
+            );
+          })()}
 
           {/* Werkzeuge (für alle drei Reader) — kein Zitat-Beziehungstyp, darum
               bewusst ohne Richtungs-Label. */}

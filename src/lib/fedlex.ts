@@ -370,6 +370,59 @@ export function erkenneFedlexGesetz(text: string): FedlexGesetz | null {
     ?? null;
 }
 
+// ─── Kuratierte Genitiv-Namen → Fedlex-Kürzel (A10/A11, David 5.7.2026) ──────
+//
+// Präambeln/Ingresse UND Fliesstext nennen Fremdgesetze oft mit AUSGESCHRIEBENEM
+// Namen OHNE Klammer-Kürzel («gestützt auf Artikel 130 der Bundesverfassung»;
+// «nach den Artikeln 4 und 5 des Strafgesetzbuches»). N2b erkennt nur die
+// «(KÜRZEL)»-Form; diese DETERMINISTISCHE, kuratierte Genitiv-Map ergänzt die
+// ausgeschriebene Kurztitel-Form. §1-Grenze: NUR eindeutige amtliche Kurztitel-
+// Genitive — generische Wendungen («des Bundesgesetzes über …», «der Verordnung»)
+// bleiben bewusst OHNE Eintrag (⇒ Link-Unterdrückung, nie ein geratenes Ziel).
+// Jeder Eintrag ist gegen den amtlichen Kurztitel des Ziel-Erlasses (struktur-
+// Sidecar `kopf.titel`) belegt (Verifikation 2026-07-10, §7).
+const GENITIV_GESETZ: ReadonlyArray<readonly [string, FedlexGesetz]> = [
+  ['Bundesverfassung', 'BV'],
+  ['Strafgesetzbuches', 'StGB'], ['Strafgesetzbuchs', 'StGB'],
+  ['Militärstrafgesetzes', 'MStG'],
+  ['Zivilgesetzbuches', 'ZGB'], ['Zivilgesetzbuchs', 'ZGB'],
+  ['Obligationenrechts', 'OR'],
+  ['Strafprozessordnung', 'StPO'],
+  ['Zivilprozessordnung', 'ZPO'],
+  ['Bundesgerichtsgesetzes', 'BGG'],
+  ['Verwaltungsgerichtsgesetzes', 'VGG'],
+  ['Umweltschutzgesetzes', 'USG'],
+  ['Gewässerschutzgesetzes', 'GSCHG'],
+  ['Asylgesetzes', 'ASYLG'],
+  ['Strassenverkehrsgesetzes', 'SVG'],
+  ['Arbeitsgesetzes', 'ArG'],
+  ['Datenschutzgesetzes', 'DSG'],
+  ['Berufsbildungsgesetzes', 'BBG'],
+  ['Versicherungsvertragsgesetzes', 'VVG'],
+  ['Freizügigkeitsgesetzes', 'FZG'],
+  ['Lebensmittelgesetzes', 'LMG'],
+  ['Fusionsgesetzes', 'FusG'],
+  ['Bundespersonalgesetzes', 'BPG'],
+  ['Unfallversicherungsgesetzes', 'UVG'],
+  ['Mehrwertsteuergesetzes', 'MWSTG'],
+  ['Kartellgesetzes', 'KG'],
+];
+const GENITIV_BY_NAME = new Map<string, FedlexGesetz>(GENITIV_GESETZ);
+// Für die Regex-Alternation: längste zuerst (kein Präfix frisst einen längeren
+// Namen), escaped. Fedlex-HTML trägt in langen Wörtern SOFT HYPHENS (U+00AD,
+// z. B. «Zivilgesetz­bu­ches») — zwischen den Buchstaben wird darum
+// optional ­ toleriert (reine Anzeige-Trennstelle, kein Inhalt).
+const GENITIV_NAMEN_ESC = [...GENITIV_GESETZ]
+  .map(([n]) => n)
+  .sort((a, b) => b.length - a.length)
+  .map((n) => n.split('').map((c) => c.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('­?'));
+
+/** Kuratierter ausgeschriebener Genitiv-Name → Fedlex-Kürzel (exakter Treffer;
+ *  Soft-Hyphens U+00AD werden vor dem Lookup entfernt — reine Trennstellen). */
+export function erkenneGenitivGesetz(name: string): FedlexGesetz | null {
+  return GENITIV_BY_NAME.get(name.replace(/­/g, '').trim()) ?? null;
+}
+
 // Direktlink aus einem Normverweis-Text, z. B. 'Art. 335c Abs. 1 OR' →
 // OR-Basis + #art_335_c. Absatz-/Ziffer-Angaben ändern den Anker nicht;
 // massgeblich ist der führende Artikel.
@@ -504,8 +557,16 @@ const FREMD_FORM_B = new RegExp(
     '((?:' + N2_KONN + '\\s*' + N2_ARTNR + '\\s*)*)' +
     // Passus-Kette (Absatz/Buchstabe/Ziffer/Satz) — Werte werden NICHT verlinkt
     '(?:' + N2_PASSUS + '\\s+' + N2_WERT + '(?:\\s*' + N2_KONN + '\\s*' + N2_WERT + ')*\\s+)*' +
-    // Präposition + ausgeschriebener Name + 3: Klammer-Kürzel (∈ FEDLEX)
-    '(?:des|der|über|vom)\\s+' + N2_NAME_RUN + '\\s*\\((' + NORM_NAMEN_ESC.join('|') + ')\\)',
+    // Präposition + Gesetzes-Signal, zwei Formen:
+    '(?:des|der|über|vom)\\s+(?:' +
+      // 3: ausgeschriebener Name + Klammer-Kürzel (∈ FEDLEX) — die Klammer ist
+      //    das autoritative Signal (auch ein UNBEKANNTES «(Code civil)» bindet
+      //    hier und unterdrückt jeden Link, §1).
+      N2_NAME_RUN + '\\s*\\((' + NORM_NAMEN_ESC.join('|') + ')\\)' +
+      // 4: kuratierter Genitiv-Kurztitel OHNE Klammer («der Bundesverfassung»);
+      //    greift NUR, wenn KEINE Klammer folgt (sonst gilt die Klammer, s. o.).
+      '|(' + GENITIV_NAMEN_ESC.join('|') + ')\\b(?!\\s*\\()' +
+    ')',
 );
 const N2_ARTNR_RE = new RegExp(N2_ARTNR, 'g');
 
@@ -548,8 +609,9 @@ export function fremdRoutingFormB(
 ): { gesetz: FedlexGesetz; glieder: FremdRoutingGlied[]; regionEnd: number } | null {
   const m = FREMD_FORM_B.exec(rest);
   if (!m) return null;
-  const gesetz = erkenneFedlexGesetz(m[3]);
-  if (!gesetz) return null; // Klammer-Inhalt kein bekanntes FEDLEX-Kürzel → kein Link
+  // m[3] = Klammer-Kürzel (∈ FEDLEX), m[4] = kuratierter Genitiv-Kurztitel.
+  const gesetz = m[3] ? erkenneFedlexGesetz(m[3]) : m[4] ? erkenneGenitivGesetz(m[4]) : null;
+  if (!gesetz) return null; // Kein auflösbares Signal → kein Link (§1)
   const linkbar = (roh: string): boolean =>
     zielTokenExistiert ? zielTokenExistiert(gesetz, artikelToken(roh)) : true;
   const gliedFuer = (erst: boolean, roh: string, start: number, end: number): FremdRoutingGlied => ({
@@ -666,4 +728,202 @@ export function normVerweiseImText(text: string): NormVerweisSpan[] {
     letztesEnde = s.end;
   }
   return rein;
+}
+
+// ─── A10 (Bug David 5.7.2026, MWSTG Art. 5): PLURAL-Aufzählung «in den Artikeln
+//     N, M … und K» ────────────────────────────────────────────────────────────
+//
+// PROBLEM: MWSTG art_5 = «… die Anpassung der in den Artikeln 31 Absatz 2
+// Buchstabe c, 35 Absatz 1bis Buchstabe b, 37 Absatz 1, 38 Absatz 1 und 45 Absatz
+// 2 Buchstabe b genannten Frankenbeträge …». Der bare Inline-Linker matcht nur das
+// SINGULAR «Artikel N» (ART_INTERN) — die Dativ-Plural-Form «Artikeln» + die
+// Aufzählungsglieder blieben allesamt link-los (0 Links, obwohl alle 5 Ziele
+// Self-Artikel sind).
+//
+// FIX: Diese reine, deterministische Funktion (§2) erkennt die Plural-Öffner
+// «Artikeln» / «die|der Artikel» und zerlegt die anschliessende Aufzählung in ihre
+// einzelnen Artikel-Glieder. Sie löst NICHT selbst auf (das braucht den Erlass-
+// Kontext), sondern liefert je Region:
+//   · `glieder`  — die einzelnen Artikelnummern mit Offset (Anzeige = Quelltext);
+//   · `fremd`    — endet die Aufzählung auf ein auflösbares Gesetz-Signal
+//                  («… des StGB», «… (ZGB)», «… der Bundesverfassung»), zeigen ALLE
+//                  Glieder auf JENES Gesetz;
+//   · `unterdruecken` — endet sie auf einen NICHT auflösbaren Fremdnamen
+//                  («… des Bundesgesetzes über …»), wird NICHT verlinkt (§1, nie
+//                  ein geratener Self-Link auf ein fremdes Gesetz);
+//   · sonst (kein Gesetz-Signal, «… genannten Frankenbeträge») ⇒ Self (der Aufrufer
+//     verlinkt jedes Glied, dessen Token im eigenen Erlass existiert).
+//
+// §1-Vorsicht (bounded, nie über den Fliesstext hinaus): ein Glied-Kopf ist nur
+// eine Zahl, die am Aufzählungs-Anfang steht ODER einem Konnektor folgt; die
+// Passus-Kette konsumiert typ-treue Werte (Buchstabe→Buchstaben, Absatz/Ziffer/
+// Satz→Zahlen) und gibt eine Zahl frei, sobald ihr ein Passus-Wort folgt (= nächster
+// Glied-Kopf). Die Kette bricht an allem, was kein «Konnektor + Zahl» ist.
+
+/** Ein Glied einer Plural-Aufzählung (Offsets in den übergebenen Gesamttext). */
+export interface PluralGlied {
+  /** rohe Artikelnummer («31», «45», «66abis»). */
+  roh: string;
+  start: number;
+  end: number;
+}
+
+/** Eine erkannte «Artikeln …»-Region mit Auflösungs-Modus. */
+export interface PluralRegion {
+  /** Start-Offset des ÖFFNERS («Artikeln» / «die Artikel») — für Überlapp-Schutz
+   *  gegen den Singular-Linker (ART_INTERN matcht «Artikel 22» im Öffner). */
+  oeffnerStart: number;
+  /** Start-Offset des ersten Glieds im Gesamttext. */
+  start: number;
+  /** End-Offset der ganzen Einheit (hinter dem Gesetz-Signal, falls vorhanden). */
+  end: number;
+  glieder: PluralGlied[];
+  /** Aufgelöstes Fremdgesetz (alle Glieder zeigen dorthin) oder null (Self/Unterdr.). */
+  fremd: FedlexGesetz | null;
+  /** true ⇒ NICHT verlinken (unauflösbarer Fremdname am Ende, §1). */
+  unterdruecken: boolean;
+}
+
+// Öffner: die unzweideutige Dativ-Plural-Form «Artikeln» (immer), sowie «die|der
+// Artikel» (nur wenn ≥2 Glieder ODER ein Gesetz-Signal folgen — sonst überlässt
+// die Region das einzelne «Artikel N» dem bewährten Singular-Pfad).
+const PLURAL_OEFFNER = /\b(Artikeln|(?:die|der)\s+Artikel)\s+(?=\d)/g;
+// Glied-Nummer mit Wort-Ende-Anker: ein Suffix ausserhalb der bekannten Liste
+// («42octies») darf NICHT als «42o» an-gematcht werden — dann lieber gar kein
+// Glied (die Region wird unten §1-unterdrückt), nie ein falsches Ziel.
+const P_ARTNR_RE = /^\d+(?:bis|ter|quater|quinquies|sexies|[a-z](?:bis|ter|quater|quinquies|sexies)?)?(?![0-9a-zäöü])/;
+// Passus-Schlüsselwörter, getrennt nach Wert-Typ (Zahl vs. Buchstabe) UND nach
+// Numerus: die SINGULAR-Form («Absatz 2») nimmt nach amtlicher Drafting-Konvention
+// genau EINEN Wert — eine folgende Zahl ist der nächste Glied-Kopf («… 31 Absatz 2,
+// 34 und 114 der Bundesverfassung» = Artikel 34/114, nicht Absätze). Nur die
+// PLURAL-Form («Absätze 1 und 2») und die numerus-ambigen Abkürzungen (Abs./Ziff.)
+// nehmen eine Wertliste — dort schützt der (?!\s+KW)-Guard den nächsten Glied-Kopf.
+const P_KW_NUM_SG = '(?:Absatz|Ziffer|Satz)';
+const P_KW_NUM_PL = '(?:Absätze|Ziffern|Sätze|Abs\\.|Ziff\\.)';
+const P_KW_LET_SG = '(?:Buchstabe)';
+const P_KW_LET_PL = '(?:Buchstaben|Bst\\.|lit\\.)';
+const P_KW_ANY = '(?:Abs(?:atz|ätze|\\.)|Ziff(?:ern?|\\.)|Sätze|Satz|Buchstaben?|Bst\\.|lit\\.)';
+// Werte MIT Wort-Ende-Anker: ohne ihn degradiert «38» im Backtracking zu «3»
+// (der (?!\s+KW)-Guard weist «38 Absatz» ab, die Engine kürzt dann den \d+-Match) —
+// ein voll geankertes «38» kann nicht partiell matchen, der Guard bricht sauber ab.
+const P_NUM = '\\d+(?:bis|ter|quater|quinquies|sexies)?(?![0-9a-zäöü])';
+const P_LET = '[a-z](?:bis|ter|quater|quinquies|sexies)?(?![0-9a-zäöü])';
+const P_KONN = '(?:,|und|oder|sowie|bis|[–-])';
+const PASSUS_GRUPPE_RE = new RegExp(
+  '^\\s+(?:' +
+    P_KW_NUM_PL + '\\s+' + P_NUM + '(?:\\s*' + P_KONN + '\\s*' + P_NUM + '(?!\\s+' + P_KW_ANY + '))*' +
+    '|' + P_KW_NUM_SG + '\\s+' + P_NUM +
+    '|' + P_KW_LET_PL + '\\s+' + P_LET + '(?:\\s*' + P_KONN + '\\s*' + P_LET + ')*' +
+    '|' + P_KW_LET_SG + '\\s+' + P_LET +
+  ')',
+);
+// Konnektor zwischen zwei Gliedern, gefolgt von einer Zahl (nächster Glied-Kopf).
+const P_KONN_ZAHL_RE = new RegExp('^\\s*' + P_KONN + '\\s*(?=\\d)');
+// Gesetz-Signal am Ende der Aufzählung. g1 = Klammer-Kürzel (∈ FEDLEX, autoritativ),
+// g2 = kuratierter Genitiv-Kurztitel (nur ohne folgende Klammer), g3 = bare Kürzel
+// (∈ FEDLEX, mit/ohne «des/der»).
+const P_SIGNAL_RE = new RegExp(
+  '^\\s*(?:' +
+    '(?:(?:des|der|über|vom)\\s+' + N2_NAME_RUN + '\\s*)?\\((' + NORM_NAMEN_ESC.join('|') + ')\\)' +
+    '|(?:des|der|über|vom)\\s+(' + GENITIV_NAMEN_ESC.join('|') + ')\\b(?!\\s*\\()' +
+    '|(?:des|der|über|vom)\\s+(' + NORM_NAMEN_ESC.join('|') + ')\\b' +
+    '|(' + NORM_NAMEN_ESC.join('|') + ')\\b' +
+  ')',
+);
+// Unauflösbarer Fremdname am Aufzählungs-Ende («des Bundesgesetzes über …», «der
+// Verordnung …») → §1-Unterdrückung (kein geratener Self-Link).
+const P_FREMD_UNAUFL_RE = /^\s*(?:des|der|über|vom)\s+[A-ZÄÖÜ]/;
+// Unbekanntes bare KÜRZEL direkt nach der Aufzählung («… Artikeln 2 und 3 BGSA»,
+// BGSA ∉ FEDLEX): Fremdgesetz-Signal, das wir nicht auflösen können → §1-
+// Unterdrückung, nie ein falscher Self-Link (Korpus-Fund AHVV art 34; dieselbe
+// Muster-Regel wie M12 im Singular-Linker: ≥2 Grossbuchstaben oder Binnen-
+// Grossbuchstabe). Gewöhnliche grossgeschriebene Substantive («… Beiträge»)
+// matchen NICHT (nur EIN führender Grossbuchstabe).
+const P_FREMD_KUERZEL_RE = /^\s*(?:[A-ZÄÖÜ]{2,}|[A-ZÄÖÜ][a-zäöü]*[A-ZÄÖÜ]\w*)/;
+
+// Erkennt, ob die NÄCHSTE Passus-Gruppe mit einem PLURAL-Zahl-Schlüsselwort
+// («Absätze/Ziffern/Sätze/Abs./Ziff.») beginnt — die Alternation in
+// PASSUS_GRUPPE_RE probiert die Plural-Branch zuerst, der Präfix-Test ist also
+// äquivalent zur Frage «hat die Plural-Branch gematcht».
+const P_KW_NUM_PL_RE = new RegExp('^\\s+' + P_KW_NUM_PL);
+// B1 (Gegenprüfungs-Befund 10.7.2026): Fortsetzungs-Wert einer UNTERBROCHENEN
+// Plural-Wertliste — «und|oder N» OHNE folgendes Passus-Wort.
+const P_PLURAL_FORTSATZ_RE = new RegExp('^\\s*(?:und|oder)\\s+' + P_NUM + '(?!\\s+' + P_KW_ANY + ')');
+
+function konsumierePassusKette(text: string, pos: number): { pos: number; pluralNum: boolean } {
+  let pluralNum = false;
+  for (;;) {
+    const rest = text.slice(pos);
+    const m = PASSUS_GRUPPE_RE.exec(rest);
+    if (!m) return { pos, pluralNum };
+    if (P_KW_NUM_PL_RE.test(rest)) pluralNum = true;
+    pos += m[0].length;
+  }
+}
+
+/**
+ * Alle Plural-Aufzählungs-Regionen eines Fliesstexts (A10). Rein/deterministisch
+ * (§2). Regionen sind nach `start` sortiert und überschneidungsfrei.
+ */
+export function artikelnPluralVerweise(text: string): PluralRegion[] {
+  const regionen: PluralRegion[] = [];
+  let grenze = -1; // Ende der zuletzt akzeptierten Region (Überschneidungs-Schutz)
+  for (const oeff of text.matchAll(PLURAL_OEFFNER)) {
+    const start = oeff.index + oeff[0].length; // erstes Glied (Lookahead \d)
+    if (start < grenze) continue;
+    const istArtikeln = oeff[1] === 'Artikeln';
+    // Glieder konsumieren.
+    const glieder: PluralGlied[] = [];
+    let pos = start;
+    for (;;) {
+      const am = P_ARTNR_RE.exec(text.slice(pos));
+      if (!am) break;
+      glieder.push({ roh: am[0], start: pos, end: pos + am[0].length });
+      pos += am[0].length;
+      const kette = konsumierePassusKette(text, pos);
+      pos = kette.pos;
+      // B1 (Gegenprüfungs-Befund 10.7.2026, BETMG 8a/FAV 44a/FinfraV 129): nach
+      // einer PLURAL-«Absätze/Ziffern»-Gruppe gehört ein «und|oder N» OHNE
+      // folgendes Passus-Wort weiter zur WERTLISTE — auch wenn eine «Buchstabe»-
+      // Gruppe dazwischen lag: «Artikeln 8 Absätze 1 Buchstabe d und 5, 11» =
+      // Art. 8 (Abs. 1 lit. d und Abs. 5), dann Art. 11. Ohne diese Regel würde
+      // «5» als Artikel-Glied verlinkt (Falsch-Ziel). Komma/sowie/Bereich bleiben
+      // Glied-Konnektoren (§1-sichere Seite: Under-Link statt Falsch-Link).
+      while (kette.pluralNum) {
+        const vm = P_PLURAL_FORTSATZ_RE.exec(text.slice(pos));
+        if (!vm) break;
+        pos += vm[0].length;
+        const k2 = konsumierePassusKette(text, pos);
+        pos = k2.pos;
+      }
+      const cm = P_KONN_ZAHL_RE.exec(text.slice(pos));
+      if (!cm) break;
+      pos += cm[0].length;
+    }
+    if (glieder.length === 0) continue;
+    // Gesetz-Signal am Ende.
+    const rest = text.slice(pos);
+    const sm = P_SIGNAL_RE.exec(rest);
+    let fremd: FedlexGesetz | null = null;
+    let unterdruecken = false;
+    let end = pos;
+    if (sm) {
+      const kuerzel = sm[1] ?? sm[3] ?? sm[4];
+      fremd = sm[2] ? erkenneGenitivGesetz(sm[2]) : kuerzel ? erkenneFedlexGesetz(kuerzel) : null;
+      if (fremd) end = pos + sm[0].length;
+      else unterdruecken = true; // Klammer-Kürzel ∉ FEDLEX → nie ein Falsch-Ziel (§1)
+    } else if (P_FREMD_UNAUFL_RE.test(rest) || P_FREMD_KUERZEL_RE.test(rest) || /^\d/.test(rest)) {
+      // «des <unbekannter Fremdname>», ein unbekanntes bare KÜRZEL («… BGSA»)
+      // ODER eine abgebrochene Aufzählung (nächstes Zeichen ist eine Zahl = ein
+      // nicht parsebares Glied wie «42octies») — das Ziel ist nicht sicher
+      // bestimmbar → kein Link (§1).
+      unterdruecken = true;
+    }
+    // «die|der Artikel»-Öffner nur bei echter Aufzählung ODER Gesetz-Signal
+    // übernehmen — ein einzelnes «Artikel N» bleibt sonst dem Singular-Pfad.
+    if (!istArtikeln && glieder.length < 2 && !fremd && !unterdruecken) continue;
+    regionen.push({ oeffnerStart: oeff.index, start, end, glieder, fremd, unterdruecken });
+    grenze = end;
+  }
+  return regionen;
 }

@@ -1166,6 +1166,98 @@ Voller `npm run gate` grün (golden byte-gleich, `check:*` inkl. `gegenpruefung`
     `leser-kopf-a9` (A9-Throttle CI?4:6, CLS 0, 0 Konsolenfehler), `a11y` (axe),
     `gesetze-ux-g3a/g3b`, `verzahnung` (Split-View) grün.
 
+**Ausführungsvermerk U-VERWEIS (A7 + A10 + A11 + A13) — AUSGEFÜHRT 10.7.2026.**
+
+**Status: gebaut, voller Gate GRÜN, Gegenprüfung in Runde 1 WIDERLEGT →
+B1-Fix → Runde 2 BESTANDEN, PR mit armiertem Auto-Merge.** Worktree
+`lm-u-verweis` (`feat/u-verweis-a7-a10-a11-a13`), Trailer `Roadmap: W2·5d`.
+Risiko-Pfad Linker (Extraktions-Klasse) ⇒ unabhängige Gegenprüfung (Opus,
+frischer Kontext, gegen amtliche Fedlex-Filestore-HTMLs + SPARQL).
+
+- **Gegenprüfung (2 Runden).** Runde 1 (Opus, unabhängige Lesarten VOR dem
+  Vergleich notiert; MWSTG 20250331 / BETMG 20230901 / ArG 20230901 amtlich
+  geöffnet; SPARQL-titleShort-Belege inkl. Ambiguitätssuche Schengen-DSG):
+  **WIDERLEGT** — Befund **B1**: eine durch «Buchstabe» unterbrochene
+  Plural-«Absätze»-Wertliste liess «und N» als Artikel-Glied lecken
+  (BETMG 8a ⇒ Falsch-Link «5»→Art. 5; FAV 44a; FinfraV 129 ×2 — 4 amtlich
+  belegte Instanzen). **Fix:** Plural-Kontext der Passus-Kette wird über die
+  Buchstabe-Gruppe hinweg gehalten; «und|oder N» ohne Passus-Wort ⇒ Wertliste
+  (Komma/sowie bleiben Glied-Konnektoren); Verbatim-Regressionstests. Notizen
+  ohne Widerlegungs-Rang: B2 Anaphern-Self («der Artikel 32 und 33» meint
+  ATSG — bewusst akzeptierte Self-Grenze, dokumentiert), B3 Under-Link FUSG
+  (erlassdatum im Sidecar fehlt ⇒ Ingress unverlinkt, §1-konservativ), B4
+  theoretischer Klein-Adjektiv-Bypass (0 Live-Stellen), B5 Sidecar verliert
+  bis/ter im ArG-Ingress-Kopf (Extraktor-Backlog, ausserhalb Diff). Runde 2
+  über den korrigierten Diff: **BESTANDEN** (voller Re-Lauf:
+  B1-Ziele amtlich verifiziert — BETMG 8a ⇒ [8, 11, 13, 19, 20], FAV 44a ⇒
+  [7, 19, 24a], FinfraV 129 ⇒ [36, 37]; alle Runde-1-Vorbefunde unverändert;
+  8 adversariale Angriffe gegen den Fix gescheitert; unabhängiger
+  Voll-Korpus-Diff: −4 Glieder = exakt die Leaks, keine neuen/verschluckten).
+
+- **A10 — Plural-Linker.** Neuer reiner Resolver `artikelnPluralVerweise`
+  (fedlex.ts): Öffner «Artikeln N» / «die|der Artikel N, M …» (Letzteres nur bei
+  ≥ 2 Gliedern oder Gesetz-Signal), Glieder einzeln verlinkt, Anzeige =
+  Quelltext (§1). Bounded: Passus-Kette typ-treu (Singular-Keyword = genau EIN
+  Wert — «Absatz 2, 34 und 114» lässt 34/114 Glieder sein; Plural/Abkürzung =
+  Wertliste mit Glied-Kopf-Guard), Wort-Ende-Anker gegen Backtracking
+  («38»→«3», «42octies»→«42o» gebannt). Auflösung: Gesetz-Signal am Ende
+  (Klammer-Kürzel > Genitiv-Map > bare Kürzel) ⇒ fremd; §1-Unterdrückung bei
+  unbekanntem Klammer-Kürzel/Fremdnamen/bare-Kürzel (BGSA-Korpus-Fund) /
+  unparsebarem Glied; sonst Self via tokenMap (nur existierende Token).
+  **P2-Beweis: MWSTG Art. 5 verbatim = GENAU 5 Links art_31/35/37/38/45**
+  (Unit + SSR + e2e-DOM + Screenshot). Korpus: 2091 Regionen / 5183 Glieder
+  (self 1304 · fremd 443 · unterdrückt 344).
+- **A11 — Präambel/Ingress-Verweise.** Kuratierte, belegte `GENITIV_GESETZ`-Map
+  (26 Einträge, «der Bundesverfassung»→BV …; generische Wendungen bewusst ohne
+  Eintrag); `fremdRoutingFormB` akzeptiert die Genitiv-Form zusätzlich zur
+  N2b-Klammer (Klammer autoritativ, hat Vorrang); Soft-Hyphen-Toleranz (U+00AD).
+  `ErlassKopfBlock` rendert Präambel-Zeilen durch NormText (beide
+  Reader-Instanzen; pdf-embed-Fallback linkt nur Fremdziele). **aBV-Schutz
+  (Gegenprüfungs-Vorbereitung, §1):** Ingress-Verlinkung NUR bei Erlassdatum ≥
+  2000 — Ingresse sind historisch, Erlasse vor 2000 zitieren die BV von 1874
+  (ArG-Beleg; Fliesstext ungegated, dort amtlich nachgeführt: ASYLG 121a,
+  RVOG 184).
+- **A7 — Verweis-Popover strukturiert.** `VerweisKontext.tsx` im NormPopover:
+  Wortlaut → Provenienz-Fuss → «Wird zitiert von · Massgebliche Entscheide» →
+  abgetrennt «Legt aus · Amtliche Materialien» (Behörde · Doktyp — Titel ·
+  Ziff. · Stand). Wiederverwendete Verzahnungs-Grammatik (KontextGruppe,
+  StatusBadge, Richtungs-Label als Text); Daten = DIESELBEN erlass-lokalen
+  Shards wie Artikel-Fuss/Kontext-Panel via neues `kontextFuerArtikel`/
+  `materialienFuerArtikel` (kontext.ts, geteilte Promise-Caches §15.3). Kompakt
+  Top-3 + Zähler + «Alle n»; ans ENDE des Popovers gehängt ⇒ CLS 0 by
+  construction.
+- **A13 — Materialien-Kanten klarer.** Kontext-Panel: artikelscharfe Kanten
+  prominent zuerst (Sublabel/Behörde/Stand — bestand), reine Erlass-Ebene
+  dezenter HINTER dem Zähler (`<details>` «n Dokumente auf Erlass-Ebene»);
+  e2e materialien-m5 auf den neuen Kontrakt nachgezogen (deklarierte fachliche
+  Änderung, Davids A13-Wortlaut). Visual-Review-Beweis DBG (KS 6a via Art. 65
+  prominent, 76 Erlass-Ebene-Dokumente eingeklappt).
+- **P2-Beweise einzeln:** MWSTG Art. 5 = 5 Links ✓ (e2e: GENAU 5, toHaveCount) ·
+  bounded ✓ (Negativtests + «genannten Frankenbeträge» ausserhalb der Region) ·
+  Fremdgesetz-Signal «…Artikeln 4 und 5 des StGB» ✓ (Unit + SSR) ·
+  Präambel-Test ✓ (MWSTG Art. 130 BV Singular + DSG 95/97/122/173 Plural;
+  aBV-Negativfall ArG) · Korpus-grep-Statistik ✓ (oben; in der Gegenprüfung
+  nachvollzogen).
+- **A9-DoD:** e2e `verweis-u` mit `setCPUThrottlingRate` (CI 4 / lokal 6) +
+  `test.slow()`: Popover-Öffnen + Plural-Glied-Sprung ohne Lag (< 8 s Budget
+  gedrosselt), CLS < 0.05 je Seite (input-frei, Interaktion gemessen); Esc
+  schliesst; Tap-Ziele = normale Links/Buttons; `check:perf-budget` grün (im
+  vollen `check`).
+- **Tore:** voller `npm run gate` GRÜN (tsc · vitest 3617 · golden:vergleich
+  IDENTISCH · lint · check 25er-Kette). **Golden-Klasse: Engine-Golden
+  byte-gleich; Reader-Markup deklariert-ändernd** (neue <a>-Hüllen im
+  prerenderten Artikel-/Ingress-Text — reine Anker-Hüllen, Wortlaut
+  zeichenidentisch; kein `public/normtext`-Eingriff, kein daten-manifest).
+  e2e-Vollsuite 188/188 (leser-kopf-a9-Flake einmal unter Parallel-Last,
+  standalone + Wiederholung grün — bekannte Throttle-Flake-Klasse).
+  Visual-Review Desktop 1440 + Mobil 390: MWSTG 5, MWSTG/DSG-Ingress, DBG-65-
+  Kontext, Popover MWSTG-18 (Materialien) + OR-20 (Entscheide), 0 Overflow.
+- **Bewusst NICHT (U-VERWEIS-Scope):** keine Scroll-/Anker-Mechanik (A16 =
+  U-POSITION) · kein Fuzzy-Matching ausgeschriebener Namen ohne kuratierten
+  Eintrag · keine aBV-Konkordanz-Map (Under-Link statt Rate-Link) · lat.
+  Suffixe > sexies (septies/octies …) bleiben unverlinkt-unterdrückt
+  (konsistent mit artikelToken; Extraktor-Backlog).
+
 ### 10.8 · Anmerkungs-Nachzug A19–A25 (David 10.7.2026) — Einordnung, Spec-Heimat V2
 
 **Quelle (WÖRTLICH massgeblich):** Davids Anmerkungen 10.7.2026, im Repo persistiert
