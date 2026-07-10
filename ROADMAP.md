@@ -724,6 +724,29 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   Neutralität»). Gate 25/25 grün, golden identisch, e2e 173/173 (inkl. A9
   6×-Throttle). Detail: `FAHRPLAN-GESETZES-UX.md` §10.7. Rest der Welle offen
   (U-LINIEN/U-KOPF/U-VERWEIS/U-POSITION Reader-Kette nach QS-PERF; U-SUCHE; U-PDF).
+  **Nachzug-Welle A19–A25 (David 10.7.2026 — Ultracode-Recherche, Bau-Go David
+  ausstehend):** eingeordnet in `FAHRPLAN-GESETZES-UX.md` §10.8; Spec-Heimat
+  `FAHRPLAN-GESETZESDARSTELLUNG-V2.md`; Wortlaut
+  `docs/ux-audit-2026-07/ANMERKUNGEN-DAVID-2026-07-10.md`. Offene Schritte:
+  - [ ] **A19** (FN-1+FN-2 +Drop-Fix `disp_*`): VZG-Fussnoten im Text verklinken +
+    Präambel-Extraktor-Marker (Risiko-Pfad `scripts/normtext`, `check:gegenpruefung`;
+    sofort/kollisionsfrei; abh. Fedlex-P1-a/b). V2 §2 F1. **Bau-Go David ausstehend.**
+  - [ ] **A20** (FN-3): Präambel-Fussnoten inline (nach U-VERWEIS-Merge). V2 §2 F1.
+    **Bau-Go David ausstehend.**
+  - [ ] **A21** (FN-4): Absatz-Zuordnung Alt-Form (bündelt mit A19-Regen). V2 §2 F1.
+    **Bau-Go David ausstehend.**
+  - [ ] **A22** (K-1+K-2): Kopf nützlicher + Fussnoten-Anwahl (koordinierter Kopf-PR
+    mit U-PDF, nach U-VERWEIS). V2 §2 F2. **Bau-Go David ausstehend.**
+  - [ ] **A23** (B-1+B-2): BGE Ab-/Anwahl + Zeitfilter in Rubrik-Ansicht, Kappung
+    `LEITFAELLE_SICHTBAR` 5→10 (überstimmt §3.1-«3 Toggles»; nach U-VERWEIS).
+    V2 §2 F3. **Bau-Go David ausstehend.**
+  - [ ] **A24** (L-1+L-2+L-3): Linien-Reparatur, Auto-Default-Umkehr ZGB/OR (Umkehr
+    #161, David freigegeben); L-4 entfällt. V2 §2 F4. **Bau-Go David ausstehend.**
+  - [ ] **A25** (C-1+C-2+C-3): Farbe nur Referenzschicht (Chips/Badges/Kopf),
+    Normtext-Körper farbfrei; C-1 sofort/kollisionsfrei. V2 §2 F5. **Bau-Go David
+    ausstehend.**
+  - [ ] **DEFER FN-5/M14** wortgenaue Marker: hinter QS-PERF/U-POSITION, separates
+    David-Go (Entscheid 10.7.). V2 §2 F1.
 - [ ] **6 · Konsultieren-Klingen** *(`[OF]`, amtlich)*:
   <!-- @meta id: W2·6 · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->
   - **Mehrsprachiger Normvergleich DE/FR/IT** (Auslegungswerkzeug, Art. 14 PublG — alle drei
