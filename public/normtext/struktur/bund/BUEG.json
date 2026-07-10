@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-30",
+ "erzeugt": "2026-07-10",
  "kopf": {
   "srNummer": "141.0",
   "titel": "Bundesgesetz über das Schweizer Bürgerrecht",
@@ -10,7 +10,11 @@
    },
    {
     "rolle": "ingress",
-    "text": "gestützt auf Artikel 38 der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 4. März 2011,"
+    "text": "gestützt auf Artikel 38 der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 4. März 2011,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
    },
    {
     "rolle": "verb",

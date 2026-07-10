@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-30",
+ "erzeugt": "2026-07-10",
  "kopf": {
   "srNummer": "955.033.0",
   "titel": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die Bekämpfung von Geldwäscherei und Terrorismusfinanzierung im Finanzsektor",
@@ -10,7 +10,11 @@
    },
    {
     "rolle": "ingress",
-    "text": "gestützt auf Artikel 17 des Geldwäschereigesetzes vom 10. Oktober 1997 (GwG),"
+    "text": "gestützt auf Artikel 17 des Geldwäschereigesetzes vom 10. Oktober 1997 (GwG),",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
    },
    {
     "rolle": "verb",

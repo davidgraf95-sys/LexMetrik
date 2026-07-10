@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-30",
+ "erzeugt": "2026-07-10",
  "kopf": {
   "srNummer": "412.101",
   "titel": "Verordnung über die Berufsbildung",
@@ -11,7 +11,10 @@
    },
    {
     "rolle": "ingress",
-    "text": "gestützt auf Artikel 65 Absatz 1 des Berufsbildungsgesetzes vom 13. Dezember 2002 (BBG),"
+    "text": "gestützt auf Artikel 65 Absatz 1 des Berufsbildungsgesetzes vom 13. Dezember 2002 (BBG),",
+    "fnNrs": [
+     "1"
+    ]
    },
    {
     "rolle": "verb",

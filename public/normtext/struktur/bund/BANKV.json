@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-30",
+ "erzeugt": "2026-07-10",
  "kopf": {
   "srNummer": "952.02",
   "titel": "Verordnung über die Banken und Sparkassen",
@@ -11,7 +11,10 @@
    },
    {
     "rolle": "ingress",
-    "text": "gestützt auf das Bankengesetz vom 8. November 1934 (BankG),"
+    "text": "gestützt auf das Bankengesetz vom 8. November 1934 (BankG),",
+    "fnNrs": [
+     "1"
+    ]
    },
    {
     "rolle": "verb",

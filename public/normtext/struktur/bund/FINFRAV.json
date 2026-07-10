@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-30",
+ "erzeugt": "2026-07-10",
  "kopf": {
   "srNummer": "958.11",
   "titel": "Verordnung über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel",
@@ -11,7 +11,10 @@
    },
    {
     "rolle": "ingress",
-    "text": "gestützt auf das Finanzmarktinfrastrukturgesetz vom 19. Juni 2015 (FinfraG),"
+    "text": "gestützt auf das Finanzmarktinfrastrukturgesetz vom 19. Juni 2015 (FinfraG),",
+    "fnNrs": [
+     "1"
+    ]
    },
    {
     "rolle": "verb",

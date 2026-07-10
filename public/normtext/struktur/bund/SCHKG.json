@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-30",
+ "erzeugt": "2026-07-10",
  "kopf": {
   "srNummer": "281.1",
   "titel": "Bundesgesetz über Schuldbetreibung und Konkurs",
@@ -11,7 +11,11 @@
    },
    {
     "rolle": "ingress",
-    "text": "gestützt auf Artikel 64 der Bundesverfassung (BV),"
+    "text": "gestützt auf Artikel 64 der Bundesverfassung (BV),",
+    "fnNrs": [
+     "2",
+     "3"
+    ]
    },
    {
     "rolle": "verb",
@@ -16024,6 +16028,20 @@
    ],
    "marginalie": [
     "B. Übergangsbestimmungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "586",
+     "text": "SR <b>210</b>",
+     "links": [
+      {
+       "label": "SR <b>210</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5703"
+      }
+     ],
+     "absatz": "4",
+     "item": "a"
+    }
    ]
   },
   "disp_u1_art_3": {

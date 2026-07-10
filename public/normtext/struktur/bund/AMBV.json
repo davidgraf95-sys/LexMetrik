@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-30",
+ "erzeugt": "2026-07-10",
  "kopf": {
   "srNummer": "812.212.1",
   "titel": "Verordnung über die Bewilligungen im Arzneimittelbereich",
@@ -11,7 +11,10 @@
    },
    {
     "rolle": "ingress",
-    "text": "gestützt auf das Heilmittelgesetz vom 15. Dezember 2000 (HMG),"
+    "text": "gestützt auf das Heilmittelgesetz vom 15. Dezember 2000 (HMG),",
+    "fnNrs": [
+     "1"
+    ]
    },
    {
     "rolle": "verb",

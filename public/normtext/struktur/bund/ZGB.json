@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-01",
+ "erzeugt": "2026-07-10",
  "kopf": {
   "srNummer": "210",
   "titel": "Schweizerisches Zivilgesetzbuch",
@@ -11,7 +11,12 @@
    },
    {
     "rolle": "ingress",
-    "text": "gestützt auf Artikel 64 der Bundesverfassung, nach Einsicht in eine Botschaft des Bundesrates vom 28. Mai 1904,"
+    "text": "gestützt auf Artikel 64 der Bundesverfassung, nach Einsicht in eine Botschaft des Bundesrates vom 28. Mai 1904,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
    },
    {
     "rolle": "verb",
@@ -39138,6 +39143,28 @@
     "IIbis. Güterrecht der nach 1. Januar 1912 geschlossenen Ehen",
     "5. Ehevertrag",
     "a. Im Allgemeinen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "769",
+     "text": "Fassung gemäss Ziff. I 2 des BG vom 5. Okt. 1984, in Kraft seit 1. Jan. 1988 (AS <b>1986</b> 122 153 Art. 1; BBl <b>1979</b> II 1191).",
+     "links": [
+      {
+       "label": "AS <b>1986</b> 122",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/122_122_122"
+      },
+      {
+       "label": "153",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/153_153_153"
+      },
+      {
+       "label": "BBl <b>1979</b> II 1191",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1979/2_1191_1179_1119"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_10_a": {
@@ -39156,6 +39183,28 @@
     "IIbis. Güterrecht der nach 1. Januar 1912 geschlossenen Ehen",
     "5. Ehevertrag",
     "b. Rechtskraft gegenüber Dritten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "770",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 5. Okt. 1984, in Kraft seit 1. Jan. 1988 (AS <b>1986</b> 122 153 Art. 1; BBl <b>1979</b> II 1191).",
+     "links": [
+      {
+       "label": "AS <b>1986</b> 122",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/122_122_122"
+      },
+      {
+       "label": "153",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/153_153_153"
+      },
+      {
+       "label": "BBl <b>1979</b> II 1191",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1979/2_1191_1179_1119"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_10_b": {
@@ -39174,6 +39223,28 @@
     "IIbis. Güterrecht der nach 1. Januar 1912 geschlossenen Ehen",
     "5. Ehevertrag",
     "c. Unterstellung unter das neue Recht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "771",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 5. Okt. 1984, in Kraft seit 1. Jan. 1988 (AS <b>1986</b> 122 153 Art. 1; BBl <b>1979</b> II 1191).",
+     "links": [
+      {
+       "label": "AS <b>1986</b> 122",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/122_122_122"
+      },
+      {
+       "label": "153",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/153_153_153"
+      },
+      {
+       "label": "BBl <b>1979</b> II 1191",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1979/2_1191_1179_1119"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_10_c": {
@@ -39192,6 +39263,28 @@
     "IIbis. Güterrecht der nach 1. Januar 1912 geschlossenen Ehen",
     "5. Ehevertrag",
     "d. Vertragliche Gütertrennung nach bisherigem Recht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "772",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 5. Okt. 1984, in Kraft seit 1. Jan. 1988 (AS <b>1986</b> 122 153 Art. 1; BBl <b>1979</b> II 1191).",
+     "links": [
+      {
+       "label": "AS <b>1986</b> 122",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/122_122_122"
+      },
+      {
+       "label": "153",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/153_153_153"
+      },
+      {
+       "label": "BBl <b>1979</b> II 1191",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1979/2_1191_1179_1119"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_10_d": {
@@ -39210,6 +39303,28 @@
     "IIbis. Güterrecht der nach 1. Januar 1912 geschlossenen Ehen",
     "5. Ehevertrag",
     "e. Im Hinblick auf das Inkrafttreten des neuen Rechts abgeschlossene Eheverträge"
+   ],
+   "fussnoten": [
+    {
+     "nr": "773",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 5. Okt. 1984, in Kraft seit 1. Jan. 1988 (AS <b>1986</b> 122 153 Art. 1; BBl <b>1979</b> II 1191).",
+     "links": [
+      {
+       "label": "AS <b>1986</b> 122",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/122_122_122"
+      },
+      {
+       "label": "153",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/153_153_153"
+      },
+      {
+       "label": "BBl <b>1979</b> II 1191",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1979/2_1191_1179_1119"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_10_e": {
@@ -39228,6 +39343,28 @@
     "IIbis. Güterrecht der nach 1. Januar 1912 geschlossenen Ehen",
     "5. Ehevertrag",
     "f. Güterrechtsregister"
+   ],
+   "fussnoten": [
+    {
+     "nr": "774",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 5. Okt. 1984, in Kraft seit 1. Jan. 1988 (AS <b>1986</b> 122 153 Art. 1; BBl <b>1979</b> II 1191).",
+     "links": [
+      {
+       "label": "AS <b>1986</b> 122",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/122_122_122"
+      },
+      {
+       "label": "153",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/153_153_153"
+      },
+      {
+       "label": "BBl <b>1979</b> II 1191",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1979/2_1191_1179_1119"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_11": {
@@ -39245,6 +39382,28 @@
     "C. Familienrecht",
     "IIbis. Güterrecht der nach 1. Januar 1912 geschlossenen Ehen",
     "6. Tilgung von Schulden bei der güterrechtlichen Auseinandersetzung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "775",
+     "text": "Fassung gemäss Ziff. I 2 des BG vom 5. Okt. 1984, in Kraft seit 1. Jan. 1988 (AS <b>1986</b> 122 153 Art. 1; BBl <b>1979</b> II 1191).",
+     "links": [
+      {
+       "label": "AS <b>1986</b> 122",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/122_122_122"
+      },
+      {
+       "label": "153",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/153_153_153"
+      },
+      {
+       "label": "BBl <b>1979</b> II 1191",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1979/2_1191_1179_1119"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_11_a": {
@@ -39262,6 +39421,28 @@
     "C. Familienrecht",
     "IIbis. Güterrecht der nach 1. Januar 1912 geschlossenen Ehen",
     "7. Schutz der Gläubiger"
+   ],
+   "fussnoten": [
+    {
+     "nr": "776",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 5. Okt. 1984, in Kraft seit 1. Jan. 1988 (AS <b>1986</b> 122 153 Art. 1; BBl <b>1979</b> II 1191).",
+     "links": [
+      {
+       "label": "AS <b>1986</b> 122",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/122_122_122"
+      },
+      {
+       "label": "153",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/153_153_153"
+      },
+      {
+       "label": "BBl <b>1979</b> II 1191",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1979/2_1191_1179_1119"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_12": {
@@ -39278,6 +39459,56 @@
    "marginalie": [
     "C. Familienrecht",
     "III. Das Kindesverhältnis im Allgemeinen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "777",
+     "text": "Fassung gemäss Ziff. I 2 des BG vom 25. Juni 1976, in Kraft seit 1. Jan. 1978 (AS <b>1977</b> 237; BBl <b>1974</b> II 1).",
+     "links": [
+      {
+       "label": "AS <b>1977</b> 237",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1977/237_237_237"
+      },
+      {
+       "label": "BBl <b>1974</b> II 1",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1974/2_1_1_1"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "778",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2013 (Elterliche Sorge), in Kraft seit 1. Juli 2014 (AS <b>2014</b> 357; BBl <b>2011</b> 9077).",
+     "links": [
+      {
+       "label": "AS <b>2014</b> 357",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2014/53"
+      },
+      {
+       "label": "BBl <b>2011</b> 9077",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2011/1580"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "779",
+     "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 2013 (Elterliche Sorge), in Kraft seit 1. Juli 2014 (AS <b>2014</b> 357; BBl <b>2011</b> 9077).",
+     "links": [
+      {
+       "label": "AS <b>2014</b> 357",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2014/53"
+      },
+      {
+       "label": "BBl <b>2011</b> 9077",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2011/1580"
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    }
    ]
   },
   "disp_u1_art_12_a": {
@@ -39295,6 +39526,47 @@
     "C. Familienrecht",
     "IIIbis. Adoption",
     "1. Fortdauer des bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "780",
+     "text": "Eingefügt durch Ziff. I 3 des BG vom 30. Juni 1972, in Kraft seit 1. April 1973 (AS <b>1972</b> 2819; BBl <b>1971</b> I 1200).",
+     "links": [
+      {
+       "label": "AS <b>1972</b> 2819",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1972/2819_2873_2653"
+      },
+      {
+       "label": "BBl <b>1971</b> I 1200",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1971/1_1200_1222_85"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "781",
+     "text": "Art. 465 ZGB in der Fassung vom 1. Jan. 1912: Das angenommene Kind und seine Nachkommen haben zum Annehmenden das gleiche Erbrecht wie die ehelichen Nachkommen. Der Annehmende und seine Blutsverwandten haben kein Erbrecht gegenüber dem angenommenen Kinde.",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "782",
+     "text": "Eingefügt durch Ziff. I des BG vom 7. Okt. 1994, in Kraft seit 1. Jan. 1996 (AS <b>1995</b> 1126; BBl <b>1993</b> I 1169).",
+     "links": [
+      {
+       "label": "AS <b>1995</b> 1126",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1995/1126_1126_1126"
+      },
+      {
+       "label": "BBl <b>1993</b> I 1169",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1993/1_1169_1093_921"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "disp_u1_art_12_b": {
@@ -39312,6 +39584,32 @@
     "C. Familienrecht",
     "IIIbis. Adoption",
     "2. Hängige Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "783",
+     "text": "Eingefügt durch Ziff. I 3 des BG vom 30. Juni 1972 (AS <b>1972</b> 2819; BBl <b>1971</b> I 1200). Fassung gemäss Ziff. I des BG vom 17. Juni 2016 (Adoption), in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 3699; BBl <b>2015</b> 877).",
+     "links": [
+      {
+       "label": "AS <b>1972</b> 2819",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1972/2819_2873_2653"
+      },
+      {
+       "label": "BBl <b>1971</b> I 1200",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1971/1_1200_1222_85"
+      },
+      {
+       "label": "AS <b>2017</b> 3699",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/425"
+      },
+      {
+       "label": "BBl <b>2015</b> 877",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2015/94"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_12_c": {
@@ -39329,6 +39627,32 @@
     "C. Familienrecht",
     "IIIbis. Adoption",
     "3. Unterstellung unter das neue Recht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "784",
+     "text": "Eingefügt durch Ziff. I 3 des BG vom 30. Juni 1972 (AS <b>1972</b> 2819; BBl <b>1971</b> I 1200). Fassung gemäss Ziff. I des BG vom 17. Juni 2016 (Adoption), in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 3699; BBl <b>2015</b> 877).",
+     "links": [
+      {
+       "label": "AS <b>1972</b> 2819",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1972/2819_2873_2653"
+      },
+      {
+       "label": "BBl <b>1971</b> I 1200",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1971/1_1200_1222_85"
+      },
+      {
+       "label": "AS <b>2017</b> 3699",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/425"
+      },
+      {
+       "label": "BBl <b>2015</b> 877",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2015/94"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_12_c_bis": {
@@ -39346,6 +39670,32 @@
     "C. Familienrecht",
     "IIIbis. Adoption",
     "3. Unterstellung unter das neue Recht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "785",
+     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 22. Juni 2001 zum Haager Adoptionsübereinkommen und über Massnahmen zum Schutz des Kindes bei internationalen Adoptionen (AS <b>2002</b> 3988; BBl <b>1999</b> 5795). Aufgehoben durch Ziff. I des BG vom 17. Juni 2016 (Adoption), mit Wirkung seit 1. Jan. 2018 (AS <b>2017</b> 3699; BBl <b>2015</b> 877).",
+     "links": [
+      {
+       "label": "AS <b>2002</b> 3988",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2002/639"
+      },
+      {
+       "label": "BBl <b>1999</b> 5795",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1999/1_5795_5129_4799"
+      },
+      {
+       "label": "AS <b>2017</b> 3699",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/425"
+      },
+      {
+       "label": "BBl <b>2015</b> 877",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2015/94"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_12_d": {
@@ -39362,6 +39712,24 @@
    "marginalie": [
     "C. Familienrecht",
     "IIIter. Anfechtung der Ehelicherklärung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "786",
+     "text": "Eingefügt durch Ziff. I 1 des BG vom 25. Juni 1976, in Kraft seit 1. Jan. 1978 (AS <b>1977</b> 237; BBl <b>1974</b> II 1).",
+     "links": [
+      {
+       "label": "AS <b>1977</b> 237",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1977/237_237_237"
+      },
+      {
+       "label": "BBl <b>1974</b> II 1",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1974/2_1_1_1"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_13": {
@@ -39379,6 +39747,24 @@
     "C. Familienrecht",
     "IV. Vaterschaftsklage",
     "1. Hängige Klagen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "787",
+     "text": "Fassung gemäss Ziff. I 1 des BG vom 25. Juni 1976, in Kraft seit 1. Jan. 1978 (AS <b>1977</b> 237; BBl <b>1974</b> II 1).",
+     "links": [
+      {
+       "label": "AS <b>1977</b> 237",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1977/237_237_237"
+      },
+      {
+       "label": "BBl <b>1974</b> II 1",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1974/2_1_1_1"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_13_a": {
@@ -39396,6 +39782,24 @@
     "C. Familienrecht",
     "IV. Vaterschaftsklage",
     "2. Neue Klagen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "788",
+     "text": "Eingefügt durch Ziff. I 1 des BG vom 25. Juni 1976, in Kraft seit 1. Jan. 1978 (AS <b>1977</b> 237; BBl <b>1974</b> II 1).",
+     "links": [
+      {
+       "label": "AS <b>1977</b> 237",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1977/237_237_237"
+      },
+      {
+       "label": "BBl <b>1974</b> II 1",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1974/2_1_1_1"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_13_b": {
@@ -39412,6 +39816,24 @@
    "marginalie": [
     "C. Familienrecht",
     "IVbis. Frist für die Feststellung und die Anfechtung des Kindesverhältnisses"
+   ],
+   "fussnoten": [
+    {
+     "nr": "789",
+     "text": "Eingefügt durch Ziff. I des BG vom 7. Okt. 1994, in Kraft seit 1. Jan. 1996 (AS <b>1995</b> 1126; BBl <b>1993</b> I 1169).",
+     "links": [
+      {
+       "label": "AS <b>1995</b> 1126",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1995/1126_1126_1126"
+      },
+      {
+       "label": "BBl <b>1993</b> I 1169",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1993/1_1169_1093_921"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_13_c": {
@@ -39429,6 +39851,32 @@
     "C. Familienrecht",
     "IVter. Unterhaltsbeiträge",
     "1. Bestehende Unterhaltstitel"
+   ],
+   "fussnoten": [
+    {
+     "nr": "790",
+     "text": "Eingefügt durch Ziff. I des BG vom 7. Okt. 1994 (AS <b>1995</b> 1126; BBl <b>1993</b> I 1169). Fassung gemäss Ziff. I des BG vom 20. März 2015 (Kindesunterhalt), in Kraft seit 1. Jan. 2017 (AS <b>2015</b> 4299; BBl <b>2014</b> 529).",
+     "links": [
+      {
+       "label": "AS <b>1995</b> 1126",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1995/1126_1126_1126"
+      },
+      {
+       "label": "BBl <b>1993</b> I 1169",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1993/1_1169_1093_921"
+      },
+      {
+       "label": "AS <b>2015</b> 4299",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/728"
+      },
+      {
+       "label": "BBl <b>2014</b> 529",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2014/98"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_13_c_bis": {
@@ -39446,6 +39894,24 @@
     "C. Familienrecht",
     "IVter. Unterhaltsbeiträge",
     "2. Rechtshängige Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "791",
+     "text": "Eingefügt durch Ziff. I des BG vom 20. März 2015 (Kindesunterhalt), in Kraft seit 1. Jan. 2017 (AS <b>2015</b> 4299; BBl <b>2014</b> 529).",
+     "links": [
+      {
+       "label": "AS <b>2015</b> 4299",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/728"
+      },
+      {
+       "label": "BBl <b>2014</b> 529",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2014/98"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_13_d": {
@@ -39462,6 +39928,28 @@
    "marginalie": [
     "C. Familienrecht",
     "IVquater. Name des Kindes"
+   ],
+   "fussnoten": [
+    {
+     "nr": "792",
+     "text": "Eingefügt durch Ziff. I des BG vom 30. Sept. 2011 (Name und Bürgerrecht), in Kraft seit 1. Jan. 2013 (AS <b>2012</b> 2569; BBl <b>2009 </b>7573 7581).",
+     "links": [
+      {
+       "label": "AS <b>2012</b> 2569",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2012/309"
+      },
+      {
+       "label": "BBl <b>2009 </b>7573",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/1347"
+      },
+      {
+       "label": "7581",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/1349"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_14": {
@@ -39479,6 +39967,48 @@
     "C. Familienrecht",
     "V. Erwachsenenschutz",
     "1. Bestehende Massnahmen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "793",
+     "text": "Fassung gemäss Ziff. I 2 des BG vom 19. Dez. 2008 (Erwachsenenschutz, Personenrecht und Kindesrecht), in Kraft seit 1. Jan. 2013 (AS <b>2011</b> 725; BBl <b>2006 </b>7001).",
+     "links": [
+      {
+       "label": "AS <b>2011</b> 725",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/114"
+      },
+      {
+       "label": "BBl <b>2006 </b>7001",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2006/899"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "794",
+     "text": "AS <b>2011</b> 725",
+     "links": [
+      {
+       "label": "AS <b>2011</b> 725",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/114"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "795",
+     "text": "AS <b>1980</b> 31",
+     "links": [
+      {
+       "label": "AS <b>1980</b> 31",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1980/31_31_31"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "disp_u1_art_14_a": {
@@ -39496,6 +40026,44 @@
     "C. Familienrecht",
     "V. Erwachsenenschutz",
     "2. Hängige Verfahren"
+   ],
+   "fussnoten": [
+    {
+     "nr": "796",
+     "text": "Eingefügt durch Ziff. II des BG vom 6. Okt. 1978 (AS <b>1980</b> 31; BBl <b>1977</b> III 1). Fassung gemäss Ziff. I 2 des BG vom 19. Dez. 2008 (Erwachsenenschutz, Personenrecht und Kindesrecht), in Kraft seit 1. Jan. 2013 (AS <b>2011</b> 725; BBl <b>2006 </b>7001).",
+     "links": [
+      {
+       "label": "AS <b>1980</b> 31",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1980/31_31_31"
+      },
+      {
+       "label": "BBl <b>1977</b> III 1",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1977/3_1_1_1"
+      },
+      {
+       "label": "AS <b>2011</b> 725",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/114"
+      },
+      {
+       "label": "BBl <b>2006 </b>7001",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2006/899"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "797",
+     "text": "AS <b>2011</b> 725",
+     "links": [
+      {
+       "label": "AS <b>2011</b> 725",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/114"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "disp_u1_art_15": {
@@ -39610,6 +40178,24 @@
     "E. Sachenrecht",
     "IV. Besondere Eigentumsrechte",
     "1. Bäume auf fremdem Boden"
+   ],
+   "fussnoten": [
+    {
+     "nr": "798",
+     "text": "Fassung gemäss Ziff. IV des BG vom 19. Dez. 1963, in Kraft seit 1. Jan. 1965 (AS <b>1964</b> 993; BBl <b>1962</b> II 1461).",
+     "links": [
+      {
+       "label": "AS <b>1964</b> 993",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1964/993_989_1009"
+      },
+      {
+       "label": "BBl <b>1962</b> II 1461",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1962/2_1461_1445_"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_20_bis": {
@@ -39628,6 +40214,24 @@
     "IV. Besondere Eigentumsrechte",
     "2. Stockwerkeigentum",
     "a. Ursprüngliches"
+   ],
+   "fussnoten": [
+    {
+     "nr": "799",
+     "text": "Eingefügt durch Ziff. IV des BG vom 19. Dez. 1963, in Kraft seit 1. Jan. 1965 (AS <b>1964</b> 993; BBl <b>1962</b> II 1461).",
+     "links": [
+      {
+       "label": "AS <b>1964</b> 993",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1964/993_989_1009"
+      },
+      {
+       "label": "BBl <b>1962</b> II 1461",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1962/2_1461_1445_"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_20_quater": {
@@ -39646,6 +40250,24 @@
     "IV. Besondere Eigentumsrechte",
     "2. Stockwerkeigentum",
     "c. Bereinigung der Grundbücher"
+   ],
+   "fussnoten": [
+    {
+     "nr": "801",
+     "text": "Eingefügt durch Ziff. IV des BG vom 19. Dez. 1963, in Kraft seit 1. Jan. 1965 (AS <b>1964</b> 993; BBl <b>1962</b> II 1461).",
+     "links": [
+      {
+       "label": "AS <b>1964</b> 993",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1964/993_989_1009"
+      },
+      {
+       "label": "BBl <b>1962</b> II 1461",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1962/2_1461_1445_"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_20_ter": {
@@ -39664,6 +40286,24 @@
     "IV. Besondere Eigentumsrechte",
     "2. Stockwerkeigentum",
     "b. Umgewandeltes"
+   ],
+   "fussnoten": [
+    {
+     "nr": "800",
+     "text": "Eingefügt durch Ziff. IV des BG vom 19. Dez. 1963, in Kraft seit 1. Jan. 1965 (AS <b>1964</b> 993; BBl <b>1962</b> II 1461).",
+     "links": [
+      {
+       "label": "AS <b>1964</b> 993",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1964/993_989_1009"
+      },
+      {
+       "label": "BBl <b>1962</b> II 1461",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1962/2_1461_1445_"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_21": {
@@ -39680,6 +40320,36 @@
    "marginalie": [
     "E. Sachenrecht",
     "V. Grunddienstbarkeiten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "802",
+     "text": "AS <b>2011</b> 4637",
+     "links": [
+      {
+       "label": "AS <b>2011</b> 4637",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/666"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "803",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 11. Dez. 2009 (Register-Schuldbrief und weitere Änderungen im Sachenrecht), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 4637; BBl <b>2007</b> 5283).",
+     "links": [
+      {
+       "label": "AS <b>2011</b> 4637",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/666"
+      },
+      {
+       "label": "BBl <b>2007</b> 5283",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2007/756"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "disp_u1_art_22": {
@@ -39853,6 +40523,24 @@
     "E. Sachenrecht",
     "VI. Grundpfandrechte",
     "7. Pfandstelle"
+   ],
+   "fussnoten": [
+    {
+     "nr": "804",
+     "text": "Fassung gemäss Ziff. II 21 des BG vom 15. Dez. 1989 über die Genehmigung kantonaler Erlasse durch den Bund, in Kraft seit 1. Febr. 1991 (AS <b>1991</b> 362; BBl <b>1988</b> II 1333).",
+     "links": [
+      {
+       "label": "AS <b>1991</b> 362",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1991/362_362_362"
+      },
+      {
+       "label": "BBl <b>1988</b> II 1333",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1988/2_1333_1293_1149"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "disp_u1_art_31_32": {
@@ -39870,6 +40558,24 @@
     "E. Sachenrecht",
     "VI. Grundpfandrechte",
     "8. …"
+   ],
+   "fussnoten": [
+    {
+     "nr": "805",
+     "text": "Aufgehoben durch Ziff. I 2 des BG vom 11. Dez. 2009 (Register-Schuldbrief und weitere Änderungen im Sachenrecht), mit Wirkung seit 1. Jan. 2012 (AS <b>2011</b> 4637; BBl <b>2007</b> 5283).",
+     "links": [
+      {
+       "label": "AS <b>2011</b> 4637",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/666"
+      },
+      {
+       "label": "BBl <b>2007</b> 5283",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2007/756"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_33": {
@@ -39887,6 +40593,24 @@
     "E. Sachenrecht",
     "VI. Grundpfandrechte",
     "9. Gleichstellung bisheriger Pfandarten mit solchen des neuen Rechtes"
+   ],
+   "fussnoten": [
+    {
+     "nr": "806",
+     "text": "Aufgehoben durch Ziff. II 21 des BG vom 15. Dez. 1989 über die Genehmigung kantonaler Erlasse durch den Bund, mit Wirkung seit 1. Febr. 1991 (AS <b>1991</b> 362; BBl <b>1988</b> II 1333).",
+     "links": [
+      {
+       "label": "AS <b>1991</b> 362",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1991/362_362_362"
+      },
+      {
+       "label": "BBl <b>1988</b> II 1333",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1988/2_1333_1293_1149"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "disp_u1_art_33_a": {
@@ -39904,6 +40628,24 @@
     "E. Sachenrecht",
     "VI. Grundpfandrechte",
     "10. Fortdauer des bisherigen Rechts für bisherige Pfandarten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "807",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 11. Dez. 2009 (Register-Schuldbrief und weitere Änderungen im Sachenrecht), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 4637; BBl <b>2007</b> 5283).",
+     "links": [
+      {
+       "label": "AS <b>2011</b> 4637",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/666"
+      },
+      {
+       "label": "BBl <b>2007</b> 5283",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2007/756"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_33_b": {
@@ -39921,6 +40663,36 @@
     "E. Sachenrecht",
     "VI. Grundpfandrechte",
     "11. Umwandlung der Art des Schuldbriefs"
+   ],
+   "fussnoten": [
+    {
+     "nr": "808",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 11. Dez. 2009 (Register-Schuldbrief und weitere Änderungen im Sachenrecht), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 4637; BBl <b>2007</b> 5283).",
+     "links": [
+      {
+       "label": "AS <b>2011</b> 4637",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/666"
+      },
+      {
+       "label": "BBl <b>2007</b> 5283",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2007/756"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "809",
+     "text": "AS <b>2011</b> 4637",
+     "links": [
+      {
+       "label": "AS <b>2011</b> 4637",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/666"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_34": {
@@ -40004,6 +40776,40 @@
     "E. Sachenrecht",
     "X. Grundbuch",
     "1. Anlegung des Grundbuches"
+   ],
+   "fussnoten": [
+    {
+     "nr": "810",
+     "text": "Fassung gemäss Anhang Ziff. II des BG vom 5. Okt. 2007 über Geoinformation, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2793; BBl <b>2006</b> 7817).",
+     "links": [
+      {
+       "label": "AS <b>2008</b> 2793",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/388"
+      },
+      {
+       "label": "BBl <b>2006</b> 7817",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2006/982"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "811",
+     "text": "Aufgehoben durch Anhang Ziff. II des BG vom 5. Okt. 2007 über Geoinformation, mit Wirkung seit 1. Juli 2008 (AS <b>2008</b> 2793; BBl <b>2006</b> 7817).",
+     "links": [
+      {
+       "label": "AS <b>2008</b> 2793",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/388"
+      },
+      {
+       "label": "BBl <b>2006</b> 7817",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2006/982"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "disp_u1_art_39": {
@@ -40022,6 +40828,24 @@
     "X. Grundbuch",
     "2. Amtliche Vermessung",
     "a. …"
+   ],
+   "fussnoten": [
+    {
+     "nr": "812",
+     "text": "Aufgehoben durch Anhang Ziff. II des BG vom 5. Okt. 2007 über Geoinformation, mit Wirkung seit 1. Juli 2008 (AS <b>2008</b> 2793; BBl <b>2006</b> 7817)",
+     "links": [
+      {
+       "label": "AS <b>2008</b> 2793",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/388"
+      },
+      {
+       "label": "BBl <b>2006</b> 7817",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2006/982"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_4": {
@@ -40075,6 +40899,24 @@
     "X. Grundbuch",
     "2. Amtliche Vermessung",
     "c. Zeit der Durchführung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "813",
+     "text": "Aufgehoben durch Anhang Ziff. II des BG vom 5. Oktober 2007 über Geoinformation, mit Wirkung seit 1. Juli 2008 (AS <b>2008</b> 2793; BBl <b>2006</b> 7817).",
+     "links": [
+      {
+       "label": "AS <b>2008</b> 2793",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/388"
+      },
+      {
+       "label": "BBl <b>2006</b> 7817",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2006/982"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "disp_u1_art_42": {
@@ -40093,6 +40935,24 @@
     "X. Grundbuch",
     "2. Amtliche Vermessung",
     "c. Zeit der Durchführung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "814",
+     "text": "Aufgehoben durch Anhang Ziff. II des BG vom 5. Oktober 2007 über Geoinformation, mit Wirkung seit 1. Juli 2008 (AS <b>2008</b> 2793; BBl <b>2006</b> 7817).",
+     "links": [
+      {
+       "label": "AS <b>2008</b> 2793",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/388"
+      },
+      {
+       "label": "BBl <b>2006</b> 7817",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2006/982"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_43": {
@@ -40129,6 +40989,36 @@
     "X. Grundbuch",
     "3. Eintragung der dinglichen Rechte",
     "b. Folge der Nichteintragung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "815",
+     "text": "AS <b>2011</b> 4637",
+     "links": [
+      {
+       "label": "AS <b>2011</b> 4637",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/666"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "816",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 11. Dez. 2009 (Register-Schuldbrief und weitere Änderungen im Sachenrecht), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 4637; BBl <b>2007</b> 5283).",
+     "links": [
+      {
+       "label": "AS <b>2011</b> 4637",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/666"
+      },
+      {
+       "label": "BBl <b>2007</b> 5283",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2007/756"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "disp_u1_art_45": {
@@ -40146,6 +41036,24 @@
     "E. Sachenrecht",
     "X. Grundbuch",
     "4. Behandlung aufgehobener Rechte"
+   ],
+   "fussnoten": [
+    {
+     "nr": "817",
+     "text": "Fassung gemäss Ziff. IV des BG vom 19. Dez. 1963, in Kraft seit 1. Jan. 1965 (AS <b>1964</b> 993; BBl <b>1962</b> II 1461).",
+     "links": [
+      {
+       "label": "AS <b>1964</b> 993",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1964/993_989_1009"
+      },
+      {
+       "label": "BBl <b>1962</b> II 1461",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1962/2_1461_1445_"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_46": {
@@ -40212,6 +41120,24 @@
    ],
    "marginalie": [
     "F. Verjährung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "818",
+     "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 15. Juni 2018 (Revision des Verjährungsrechts), in Kraft seit 1. Jan. 2020 (AS <b>2018</b> 5343; BBl <b>2014</b> 235).",
+     "links": [
+      {
+       "label": "AS <b>2018</b> 5343",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/807"
+      },
+      {
+       "label": "BBl <b>2014</b> 235",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2014/65"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_5": {
@@ -40274,6 +41200,71 @@
    "marginalie": [
     "B. Ergänzende kantonale Anordnungen",
     "I. Recht und Pflicht der Kantone"
+   ],
+   "fussnoten": [
+    {
+     "nr": "819",
+     "text": "Heute: Erwachsenenschutzbehörden (siehe Art. 440).",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "820",
+     "text": "Fassung gemäss Ziff. II 21 des BG vom 15. Dez. 1989 über die Genehmigung kantonaler Erlasse durch den Bund, in Kraft seit 1. Febr. 1991 (AS <b>1991</b> 362; BBl <b>1988</b> II 1333).",
+     "links": [
+      {
+       "label": "AS <b>1991</b> 362",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1991/362_362_362"
+      },
+      {
+       "label": "BBl <b>1988</b> II 1333",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1988/2_1333_1293_1149"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "821",
+     "text": "Fassung gemäss Ziff. I 2 des BG vom 19. Dez. 2008 (Erwachsenenschutz, Personenrecht und Kindesrecht), in Kraft seit 1. Jan. 2013 (AS <b>2011</b> 725; BBl <b>2006 </b>7001).",
+     "links": [
+      {
+       "label": "AS <b>2011</b> 725",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/114"
+      },
+      {
+       "label": "BBl <b>2006 </b>7001",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2006/899"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "822",
+     "text": "Eingefügt durch Ziff. II 21 des BG vom 15. Dez 1989 über die Genehmigung kantonaler Erlasse durch den Bund (AS <b>1991</b> 362; BBl <b>1988</b> II 1333). Fassung gemäss Ziff. I 2 des BG vom 19. Dez. 2008 (Erwachsenenschutz, Personenrecht und Kindesrecht), in Kraft seit 1. Jan. 2013 (AS <b>2011</b> 725; BBl <b>2006 </b>7001).",
+     "links": [
+      {
+       "label": "AS <b>1991</b> 362",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1991/362_362_362"
+      },
+      {
+       "label": "BBl <b>1988</b> II 1333",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1988/2_1333_1293_1149"
+      },
+      {
+       "label": "AS <b>2011</b> 725",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/114"
+      },
+      {
+       "label": "BBl <b>2006 </b>7001",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2006/899"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "disp_u1_art_53": {
@@ -40305,6 +41296,36 @@
    ],
    "marginalie": [
     "C. Bezeichnung der zuständigen Behörden"
+   ],
+   "fussnoten": [
+    {
+     "nr": "823",
+     "text": "SR <b>272</b>",
+     "links": [
+      {
+       "label": "SR <b>272</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6136"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "824",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 3 der Zivilprozessordnung vom 19. Dez. 2008, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 1739; BBl <b>2006</b> 7221).",
+     "links": [
+      {
+       "label": "AS <b>2010</b> 1739",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/262"
+      },
+      {
+       "label": "BBl <b>2006</b> 7221",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2006/914"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "disp_u1_art_55": {
@@ -40356,6 +41377,52 @@
    "marginalie": [
     "D. Öffentliche Beurkundung",
     "II. Elektronische Ausfertigungen und Beglaubigungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "826",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 11. Dez. 2009 (Register-Schuldbrief und weitere Änderungen im Sachenrecht), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 4637; BBl <b>2007</b> 5283).",
+     "links": [
+      {
+       "label": "AS <b>2011</b> 4637",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/666"
+      },
+      {
+       "label": "BBl <b>2007</b> 5283",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2007/756"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "827",
+     "text": "SR <b>943.03</b>",
+     "links": [
+      {
+       "label": "SR <b>943.03</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11301"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "828",
+     "text": "Fassung gemäss Anhang Ziff. II 3 des BG vom 18. März 2016 über die elektronische Signatur, in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 4651; BBl <b>2014</b> 1001).",
+     "links": [
+      {
+       "label": "AS <b>2016</b> 4651",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2016/752"
+      },
+      {
+       "label": "BBl <b>2014</b> 1001",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2014/171"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "disp_u1_art_56": {
@@ -40371,6 +41438,20 @@
    ],
    "marginalie": [
     "E. Wasserrechtsverleihungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "829",
+     "text": "Siehe heute Art. 59 des BG vom 22. Dez. 1916 über die Nutzbarmachung der Wasserkräfte (SR <b>721.80</b>).",
+     "links": [
+      {
+       "label": "SR <b>721.80</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8436"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_57": {
@@ -40386,6 +41467,24 @@
    ],
    "marginalie": [
     "F.–H. …"
+   ],
+   "fussnoten": [
+    {
+     "nr": "830",
+     "text": "Aufgehoben durch Art. 53 Abs. 1 Bst. b des BG vom 8. Nov. 1934 über die Banken und Sparkassen, mit Wirkung seit 1. März 1935 (AS <b>51</b> 117; BS <b>10</b> 337; BBl <b>1934</b> I 171).",
+     "links": [
+      {
+       "label": "AS <b>51</b> 117",
+       "url": "https://fedlex.data.admin.ch/eli/oc/51/117_121_129"
+      },
+      {
+       "label": "BBl <b>1934</b> I 171",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1934/1_171_172_"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_58": {
@@ -40401,6 +41500,56 @@
    ],
    "marginalie": [
     "J. Schuldbetreibung und Konkurs"
+   ],
+   "fussnoten": [
+    {
+     "nr": "831",
+     "text": "Neue Nummerierung der letzten vier Artikel als Folge der Aufhebung der ursprünglichen Art. 58 und 59, gemäss Ziff. I der UeB OR, in Kraft seit 1. Jan. 1912 (AS <b>27</b> 317; BS <b>2</b> 199; BBl <b>1905</b> II 1, <b>1909</b> III 725, <b>1911</b> I 845).",
+     "links": [
+      {
+       "label": "AS <b>27</b> 317",
+       "url": "https://fedlex.data.admin.ch/eli/oc/27/317_321_377"
+      },
+      {
+       "label": "BBl <b>1905</b> II 1",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1905/2_1_1_"
+      },
+      {
+       "label": "<b>1909</b> III 725",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1909/3_725__"
+      },
+      {
+       "label": "<b>1911</b> I 845",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1911/1_845__"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "832",
+     "text": "SR <b>281.1</b>",
+     "links": [
+      {
+       "label": "SR <b>281.1</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6149"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "833",
+     "text": "Text siehe im genannten BG. Für die Fassung der Art. 132, 141 Abs. 3 und 258 Abs. 4 siehe AS <b>24</b> 233 SchlT Art. 60.",
+     "links": [
+      {
+       "label": "AS <b>24</b> 233",
+       "url": "https://fedlex.data.admin.ch/eli/oc/24/233_245_233"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_59": {
@@ -40416,6 +41565,76 @@
    ],
    "marginalie": [
     "K. Anwendung schweizerischen und fremden Rechtes"
+   ],
+   "fussnoten": [
+    {
+     "nr": "834",
+     "text": "Neue Nummerierung der letzten vier Artikel als Folge der Aufhebung der ursprünglichen Art. 58 und 59, gemäss Ziff. I der UeB OR, in Kraft seit 1. Jan. 1912 (AS <b>27</b> 317; BS <b>2</b> 199; BBl <b>1905</b> II 1, <b>1909</b> III 725, <b>1911</b> I 845).",
+     "links": [
+      {
+       "label": "AS <b>27</b> 317",
+       "url": "https://fedlex.data.admin.ch/eli/oc/27/317_321_377"
+      },
+      {
+       "label": "BBl <b>1905</b> II 1",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1905/2_1_1_"
+      },
+      {
+       "label": "<b>1909</b> III 725",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1909/3_725__"
+      },
+      {
+       "label": "<b>1911</b> I 845",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1911/1_845__"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "835",
+     "text": "[BS <b>2</b> 737; AS <b>1972</b> 2819 II 1, <b>1977</b> 237 II 1, <b>1986</b> 122 II 1. AS <b>1988</b> 1776 Anhang Ziff. I Bst. a]. Siehe heute das IPRG vom 18. Dez. 1987 (SR <b>291</b>).",
+     "links": [
+      {
+       "label": "AS <b>1972</b> 2819",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1972/2819_2873_2653"
+      },
+      {
+       "label": "<b>1977</b> 237",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1977/237_237_237"
+      },
+      {
+       "label": "<b>1986</b> 122",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/122_122_122"
+      },
+      {
+       "label": "AS <b>1988</b> 1776",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1988/1776_1776_1776"
+      },
+      {
+       "label": "SR <b>291</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6186"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "836",
+     "text": "Aufgehoben durch Ziff. I 2 des BG vom 5. Okt. 1984, mit Wirkung seit 1. Jan. 1988 (AS <b>1986</b> 122; BBl <b>1979</b> II 1191).",
+     "links": [
+      {
+       "label": "AS <b>1986</b> 122",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/122_122_122"
+      },
+      {
+       "label": "BBl <b>1979</b> II 1191",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1979/2_1191_1179_1119"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "disp_u1_art_6": {
@@ -40447,6 +41666,58 @@
    ],
    "marginalie": [
     "L. Aufhebung von Bundeszivilrecht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "837",
+     "text": "Fassung gemäss Ziff. I der UeB OR, in Kraft seit 1. Jan. 1912 (AS <b>27</b> 317; BS <b>2</b> 199; BBl <b>1905</b> II 1, <b>1909</b> III 725, <b>1911</b> I 845).",
+     "links": [
+      {
+       "label": "AS <b>27</b> 317",
+       "url": "https://fedlex.data.admin.ch/eli/oc/27/317_321_377"
+      },
+      {
+       "label": "BBl <b>1905</b> II 1",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1905/2_1_1_"
+      },
+      {
+       "label": "<b>1909</b> III 725",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1909/3_725__"
+      },
+      {
+       "label": "<b>1911</b> I 845",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1911/1_845__"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "838",
+     "text": "[<i>AS <b>1</b> 506</i>]",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "839",
+     "text": "[<i>AS <b>5</b> 556</i>]",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "840",
+     "text": "[AS <b>5</b> 635, <i><b>11</b> 490</i>; BS <b>2 </b>784 Art. 103 Abs. 1]",
+     "links": [
+      {
+       "label": "AS <b>5</b> 635",
+       "url": "https://fedlex.data.admin.ch/eli/oc/5/635_577_577"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "disp_u1_art_61": {
@@ -40462,6 +41733,32 @@
    ],
    "marginalie": [
     "M. Schlussbestimmung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "841",
+     "text": "Neue Nummerierung der letzten vier Artikel als Folge der Aufhebung der ursprünglichen Art. 58 und 59, gemäss Ziff. I der UeB OR, in Kraft seit 1. Jan. 1912 (AS <b>27</b> 317; BS <b>2</b> 199; BBl <b>1905</b> II 1, <b>1909</b> III 725, <b>1911</b> I 845).",
+     "links": [
+      {
+       "label": "AS <b>27</b> 317",
+       "url": "https://fedlex.data.admin.ch/eli/oc/27/317_321_377"
+      },
+      {
+       "label": "BBl <b>1905</b> II 1",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1905/2_1_1_"
+      },
+      {
+       "label": "<b>1909</b> III 725",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1909/3_725__"
+      },
+      {
+       "label": "<b>1911</b> I 845",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1911/1_845__"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_6_a": {
@@ -40478,6 +41775,24 @@
    "marginalie": [
     "B. Personenrecht",
     "IIa. Zentrale Datenbank im Zivilstandswesen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "733",
+     "text": "Eingefügt durch Ziff. I des BG vom 5. Okt. 2001 (Elektronische Führung der Personenstandsregister), in Kraft seit 1. Juli 2004 (AS <b>2004 </b>2911; BBl <b>2001</b> 1639).",
+     "links": [
+      {
+       "label": "AS <b>2004 </b>2911",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2004/361"
+      },
+      {
+       "label": "BBl <b>2001</b> 1639",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2001/407"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_6_b": {
@@ -40497,6 +41812,29 @@
     "1. Im Allgemeinen"
    ],
    "fussnoten": [
+    {
+     "nr": "735",
+     "text": "Ursprünglich Art. 6a. Vorher Art. 7.",
+     "links": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "736",
+     "text": "Eingefügt durch Ziff. I 1 des BG vom 12. Dez. 2014 zur Umsetzung der 2012 revidierten Empfehlungen der Groupe d’action financière, in Kraft seit 1. Jan. 2016 (AS <b>2015 </b>1389; BBl <b>2014 </b>605).",
+     "links": [
+      {
+       "label": "AS <b>2015 </b>1389",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2015/289"
+      },
+      {
+       "label": "BBl <b>2014 </b>605",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2014/100"
+      }
+     ],
+     "absatz": "2bis",
+     "item": null
+    },
     {
      "nr": "734",
      "text": "Fassung gemäss Anhang Ziff. 1 des BG vom 16. Dez. 2005 (GmbH-Recht sowie Anpassungen im Aktien-, Genossenschafts-, Handelsregister- und Firmenrecht), in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 4791; BBl <b>2002</b> 3148, <b>2004</b> 3969).",
@@ -40535,6 +41873,28 @@
     "B. Personenrecht",
     "III. Juristische Personen",
     "1a. Zur Eintragung ins Handelsregister verpflichtete Vereine"
+   ],
+   "fussnoten": [
+    {
+     "nr": "737",
+     "text": "Eingefügt durch Anhang 1 Ziff. 1 des BG vom 19. März 2021, in Kraft seit 1. Jan. 2023 (AS <b>2021</b> 656; <b>2022</b> 551; BBl <b>2019</b> 5451).",
+     "links": [
+      {
+       "label": "AS <b>2021</b> 656",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/656"
+      },
+      {
+       "label": "<b>2022</b> 551",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/551"
+      },
+      {
+       "label": "BBl <b>2019</b> 5451",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2019/1932"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_6_c": {
@@ -40552,6 +41912,48 @@
     "B. Personenrecht",
     "III. Juristische Personen",
     "2. Buchführung und Revisionsstelle"
+   ],
+   "fussnoten": [
+    {
+     "nr": "738",
+     "text": "Eingefügt durch Anhang Ziff. 1 des BG vom 16. Dez. 2005 (GmbH-Recht sowie Anpassungen im Aktien-, Genossenschafts-, Handelsregister- und Firmenrecht), in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 4791; BBl <b>2002</b> 3148, <b>2004</b> 3969).",
+     "links": [
+      {
+       "label": "AS <b>2007</b> 4791",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/685"
+      },
+      {
+       "label": "BBl <b>2002</b> 3148",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2002/443"
+      },
+      {
+       "label": "<b>2004</b> 3969",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2004/680"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "739",
+     "text": "AS <b>2007</b> 4791; BBl <b>2002 </b>3148, <b>2004 </b>3969",
+     "links": [
+      {
+       "label": "AS <b>2007</b> 4791",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/685"
+      },
+      {
+       "label": "BBl <b>2002 </b>3148",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2002/443"
+      },
+      {
+       "label": "<b>2004 </b>3969",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2004/680"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_6_c_bis": {
@@ -40569,6 +41971,28 @@
     "B. Personenrecht",
     "III. Juristische Personen",
     "3. Personalfürsorgestiftungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "740",
+     "text": "Eingefügt durch Ziff. I des BG vom 14. Juni 2024 (Leistungen von patronalen Wohlfahrtsfonds), in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 676; BBl <b>2023</b> 2077, 2481).",
+     "links": [
+      {
+       "label": "AS <b>2024</b> 676",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/676"
+      },
+      {
+       "label": "BBl <b>2023</b> 2077",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2023/2077"
+      },
+      {
+       "label": "2481",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2023/2481"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_6_d": {
@@ -40585,6 +42009,24 @@
    "marginalie": [
     "B. Personenrecht",
     "IV. Schutz der Persönlichkeit vor Gewalt, Drohungen oder Nachstellungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "741",
+     "text": "Eingefügt durch Ziff. I 1 des BG vom 14. Dez. 2018 über die Verbesserung des Schutzes gewaltbetroffener Personen, in Kraft seit 1. Juli 2020 (AS <b>2019</b> 2273; BBl <b>2017</b> 7307).",
+     "links": [
+      {
+       "label": "AS <b>2019</b> 2273",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/432"
+      },
+      {
+       "label": "BBl <b>2017</b> 7307",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2017/2095"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_7": {
@@ -40601,6 +42043,40 @@
    "marginalie": [
     "C. Familienrecht",
     "I. Eheschliessung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "742",
+     "text": "Eingefügt durch Ziff. I 4 des BG vom 26. Juni 1998, in Kraft seit 1. Jan. 2000 (AS <b>1999</b> 1118; BBl <b>1996</b> I 1).",
+     "links": [
+      {
+       "label": "AS <b>1999</b> 1118",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/149"
+      },
+      {
+       "label": "BBl <b>1996</b> I 1",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1996/1_1_1_1"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "743",
+     "text": "AS <b>1999</b> 1118; BBl <b>1996</b> I 1",
+     "links": [
+      {
+       "label": "AS <b>1999</b> 1118",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/149"
+      },
+      {
+       "label": "BBl <b>1996</b> I 1",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1996/1_1_1_1"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "disp_u1_art_7_a": {
@@ -40617,6 +42093,24 @@
    "marginalie": [
     "C. Familienrecht",
     "Ibis. Ungültigkeit von Ehen mit Minderjährigen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "744",
+     "text": "Eingefügt durch Ziff. I des BG vom 14. Juni 2024 (Massnahmen gegen Minderjährigenheiraten), in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 590; BBl <b>2023</b> 2127).",
+     "links": [
+      {
+       "label": "AS <b>2024</b> 590",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/590"
+      },
+      {
+       "label": "BBl <b>2023</b> 2127",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2023/2127"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_7_a_bis": {
@@ -40636,6 +42130,38 @@
     "1. Grundsatz"
    ],
    "fussnoten": [
+    {
+     "nr": "746",
+     "text": "Ursprünglich: Art. 7<i>a</i>. Eingefügt durch Ziff. I 4 des BG vom 26. Juni 1998, in Kraft seit 1. Jan. 2000 (AS <b>1999</b> 1118; BBl <b>1996</b> I 1).",
+     "links": [
+      {
+       "label": "AS <b>1999</b> 1118",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/149"
+      },
+      {
+       "label": "BBl <b>1996</b> I 1",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1996/1_1_1_1"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "747",
+     "text": "AS <b>1999</b> 1118; BBl <b>1996</b> I 1",
+     "links": [
+      {
+       "label": "AS <b>1999</b> 1118",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/149"
+      },
+      {
+       "label": "BBl <b>1996</b> I 1",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1996/1_1_1_1"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
     {
      "nr": "745",
      "text": "Fassung gemäss Ziff. I des BG vom 14. Juni 2024 (Massnahmen gegen Minderjährigenheiraten), in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 590; BBl <b>2023</b> 2127).",
@@ -40670,6 +42196,40 @@
     "C. Familienrecht",
     "Iter. Scheidung",
     "2. Rechtshängige Scheidungsprozesse"
+   ],
+   "fussnoten": [
+    {
+     "nr": "748",
+     "text": "Eingefügt durch Ziff. I 4 des BG vom 26. Juni 1998, in Kraft seit 1. Jan. 2000 (AS <b>1999</b> 1118; BBl <b>1996</b> I 1).",
+     "links": [
+      {
+       "label": "AS <b>1999</b> 1118",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/149"
+      },
+      {
+       "label": "BBl <b>1996</b> I 1",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1996/1_1_1_1"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "749",
+     "text": "AS <b>1999</b> 1118; BBl <b>1996</b> I 1",
+     "links": [
+      {
+       "label": "AS <b>1999</b> 1118",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/149"
+      },
+      {
+       "label": "BBl <b>1996</b> I 1",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1996/1_1_1_1"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "disp_u1_art_7_c": {
@@ -40687,6 +42247,40 @@
     "C. Familienrecht",
     "Iter. Scheidung",
     "3. Trennungsfrist bei rechtshängigen Scheidungsprozessen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "750",
+     "text": "Eingefügt durch Ziff. I des BG vom 19. Dez. 2003 (Trennungsfrist im Scheidungsrecht), in Kraft seit 1. Juni 2004 (AS <b>2004</b> 2161; BBl <b>2003</b> 3927, 5825).",
+     "links": [
+      {
+       "label": "AS <b>2004</b> 2161",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2004/254"
+      },
+      {
+       "label": "BBl <b>2003</b> 3927",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2003/581"
+      },
+      {
+       "label": "5825",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2003/893"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "751",
+     "text": "AS <b>2004 </b>2161",
+     "links": [
+      {
+       "label": "AS <b>2004 </b>2161",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2004/254"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_7_d": {
@@ -40704,6 +42298,24 @@
     "C. Familienrecht",
     "Iter. Scheidung",
     "4. Berufliche Vorsorge"
+   ],
+   "fussnoten": [
+    {
+     "nr": "752",
+     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2313; BBl <b>2013</b> 4887).",
+     "links": [
+      {
+       "label": "AS <b>2016</b> 2313",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2016/379"
+      },
+      {
+       "label": "BBl <b>2013</b> 4887",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2013/942"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_7_e": {
@@ -40721,6 +42333,36 @@
     "C. Familienrecht",
     "Iter. Scheidung",
     "5. Umwandlung bestehender Renten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "753",
+     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2313; BBl <b>2013</b> 4887).",
+     "links": [
+      {
+       "label": "AS <b>2016</b> 2313",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2016/379"
+      },
+      {
+       "label": "BBl <b>2013</b> 4887",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2013/942"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "754",
+     "text": "SR <b>291</b>",
+     "links": [
+      {
+       "label": "SR <b>291</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6186"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "disp_u1_art_8": {
@@ -40738,6 +42380,24 @@
     "C. Familienrecht",
     "Iter. Wirkungen der Ehe im Allgemeinen",
     "1. Grundsatz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "755",
+     "text": "Fassung gemäss Ziff. I 4 des BG vom 26. Juni 1998, in Kraft seit 1. Jan. 2000 (AS <b>1999</b> 1118; BBl <b>1996</b> I 1).",
+     "links": [
+      {
+       "label": "AS <b>1999</b> 1118",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/149"
+      },
+      {
+       "label": "BBl <b>1996</b> I 1",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1996/1_1_1_1"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_8_a": {
@@ -40755,6 +42415,40 @@
     "C. Familienrecht",
     "Iter. Wirkungen der Ehe im Allgemeinen",
     "2. Name"
+   ],
+   "fussnoten": [
+    {
+     "nr": "756",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 5. Okt. 1984 (AS <b>1986</b> 122 153 Art. 1; BBl <b>1979</b> II 1191). Fassung gemäss Ziff. I des BG vom 30. Sept. 2011 (Name und Bürgerrecht), in Kraft seit 1. Jan. 2013 (AS <b>2012</b> 2569; BBl <b>2009 </b>7573 7581).",
+     "links": [
+      {
+       "label": "AS <b>1986</b> 122",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/122_122_122"
+      },
+      {
+       "label": "153",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/153_153_153"
+      },
+      {
+       "label": "BBl <b>1979</b> II 1191",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1979/2_1191_1179_1119"
+      },
+      {
+       "label": "AS <b>2012</b> 2569",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2012/309"
+      },
+      {
+       "label": "BBl <b>2009 </b>7573",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/1347"
+      },
+      {
+       "label": "7581",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2009/1349"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_8_b": {
@@ -40772,6 +42466,28 @@
     "C. Familienrecht",
     "Iter. Wirkungen der Ehe im Allgemeinen",
     "3. Bürgerrecht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "757",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 5. Okt. 1984, in Kraft seit 1. Jan. 1988 (AS <b>1986</b> 122 153 Art. 1; BBl <b>1979</b> II 1191).",
+     "links": [
+      {
+       "label": "AS <b>1986</b> 122",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/122_122_122"
+      },
+      {
+       "label": "153",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/153_153_153"
+      },
+      {
+       "label": "BBl <b>1979</b> II 1191",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1979/2_1191_1179_1119"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_9": {
@@ -40790,6 +42506,26 @@
     "II. Güterrecht der vor 1. Januar 1912 geschlossenen Ehen"
    ],
    "fussnoten": [
+    {
+     "nr": "759",
+     "text": "Fassung gemäss Ziff. I 2 des BG vom 5. Okt. 1984, in Kraft seit 1. Jan. 1988 (AS <b>1986</b> 122 153 Art. 1; BBl <b>1979</b> II 1191).",
+     "links": [
+      {
+       "label": "AS <b>1986</b> 122",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/122_122_122"
+      },
+      {
+       "label": "153",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/153_153_153"
+      },
+      {
+       "label": "BBl <b>1979</b> II 1191",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1979/2_1191_1179_1119"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
     {
      "nr": "758",
      "text": "Für die Anwendung des Übergangsrechtes siehe auch die früheren Bestimmungen des sechsten Tit. am Schluss des ZGB.",
@@ -40818,6 +42554,26 @@
    ],
    "fussnoten": [
     {
+     "nr": "761",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 5. Okt. 1984, in Kraft seit 1. Jan. 1988 (AS <b>1986</b> 122 153 Art. 1; BBl <b>1979</b> II 1191).",
+     "links": [
+      {
+       "label": "AS <b>1986</b> 122",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/122_122_122"
+      },
+      {
+       "label": "153",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/153_153_153"
+      },
+      {
+       "label": "BBl <b>1979</b> II 1191",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1979/2_1191_1179_1119"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
      "nr": "760",
      "text": "Siehe die bis zum 31. Dez. 1987 gültigen Bestimmungen am Schluss des vorliegenden Textes.",
      "links": [],
@@ -40843,6 +42599,28 @@
     "IIbis. Güterrecht der nach 1. Januar 1912 geschlossenen Ehen",
     "2. Wechsel von der Güterverbindung zur Errungenschaftsbeteiligung",
     "a. Änderung der Vermögensmassen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "762",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 5. Okt. 1984, in Kraft seit 1. Jan. 1988 (AS <b>1986</b> 122 153 Art. 1; BBl <b>1979</b> II 1191).",
+     "links": [
+      {
+       "label": "AS <b>1986</b> 122",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/122_122_122"
+      },
+      {
+       "label": "153",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/153_153_153"
+      },
+      {
+       "label": "BBl <b>1979</b> II 1191",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1979/2_1191_1179_1119"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_9_c": {
@@ -40861,6 +42639,28 @@
     "IIbis. Güterrecht der nach 1. Januar 1912 geschlossenen Ehen",
     "2. Wechsel von der Güterverbindung zur Errungenschaftsbeteiligung",
     "b. Vorrecht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "763",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 5. Okt. 1984, in Kraft seit 1. Jan. 1988 (AS <b>1986</b> 122 153 Art. 1; BBl <b>1979</b> II 1191).",
+     "links": [
+      {
+       "label": "AS <b>1986</b> 122",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/122_122_122"
+      },
+      {
+       "label": "153",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/153_153_153"
+      },
+      {
+       "label": "BBl <b>1979</b> II 1191",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1979/2_1191_1179_1119"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_9_d": {
@@ -40879,6 +42679,28 @@
     "IIbis. Güterrecht der nach 1. Januar 1912 geschlossenen Ehen",
     "2. Wechsel von der Güterverbindung zur Errungenschaftsbeteiligung",
     "c. Güterrechtliche Auseinandersetzung unter dem neuen Recht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "764",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 5. Okt. 1984, in Kraft seit 1. Jan. 1988 (AS <b>1986</b> 122 153 Art. 1; BBl <b>1979</b> II 1191).",
+     "links": [
+      {
+       "label": "AS <b>1986</b> 122",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/122_122_122"
+      },
+      {
+       "label": "153",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/153_153_153"
+      },
+      {
+       "label": "BBl <b>1979</b> II 1191",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1979/2_1191_1179_1119"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_9_e": {
@@ -40896,6 +42718,28 @@
     "C. Familienrecht",
     "IIbis. Güterrecht der nach 1. Januar 1912 geschlossenen Ehen",
     "3. Beibehaltung der Güterverbindung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "765",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 5. Okt. 1984, in Kraft seit 1. Jan. 1988 (AS <b>1986</b> 122 153 Art. 1; BBl <b>1979</b> II 1191).",
+     "links": [
+      {
+       "label": "AS <b>1986</b> 122",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/122_122_122"
+      },
+      {
+       "label": "153",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/153_153_153"
+      },
+      {
+       "label": "BBl <b>1979</b> II 1191",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1979/2_1191_1179_1119"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_9_f": {
@@ -40913,6 +42757,28 @@
     "C. Familienrecht",
     "IIbis. Güterrecht der nach 1. Januar 1912 geschlossenen Ehen",
     "4. Beibehaltung der gesetzlichen oder gerichtlichen Gütertrennung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "766",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 5. Okt. 1984, in Kraft seit 1. Jan. 1988 (AS <b>1986</b> 122 153 Art. 1; BBl <b>1979</b> II 1191).",
+     "links": [
+      {
+       "label": "AS <b>1986</b> 122",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/122_122_122"
+      },
+      {
+       "label": "153",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1986/153_153_153"
+      },
+      {
+       "label": "BBl <b>1979</b> II 1191",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1979/2_1191_1179_1119"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_9_g": {
@@ -40930,6 +42796,40 @@
     "C. Familienrecht",
     "IIbis. Güterrecht der nach 1. Januar 1912 geschlossenen Ehen",
     "4a. Güterrecht der vor der abschliessenden Inkraftsetzung der Änderung vom 18. Dezember 2020 im Ausland geschlossenen Ehen zwischen Personen gleichen Geschlechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "767",
+     "text": "Eingefügt durch Ziff. I des BG vom 18. Dez. 2020 (Ehe für alle), in Kraft seit 1. Jan. 2022, Abs. 1, 3 und 4 in Kraft seit 1. Juli 2022 (AS <b>2021</b> 747; BBl <b>2019</b> 8595; <b>2020</b> 1273).",
+     "links": [
+      {
+       "label": "AS <b>2021</b> 747",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/747"
+      },
+      {
+       "label": "BBl <b>2019</b> 8595",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2019/2985"
+      },
+      {
+       "label": "<b>2020</b> 1273",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/273"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "768",
+     "text": "SR <b>211.231</b>",
+     "links": [
+      {
+       "label": "SR <b>211.231</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5750"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "disp_u2_art_178": {
@@ -41510,6 +43410,20 @@
    ],
    "marginalie": [
     "C. Sicherung der Ehefrau"
+   ],
+   "fussnoten": [
+    {
+     "nr": "843",
+     "text": "SR <b>281.1</b>",
+     "links": [
+      {
+       "label": "SR <b>281.1</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6149"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "disp_u2_art_206": {
@@ -41634,6 +43548,20 @@
     "E. Ersatzforderungen",
     "II. Konkurs des Ehemannes und Pfändung",
     "2. Vorrecht"
+   ],
+   "fussnoten": [
+    {
+     "nr": "844",
+     "text": "SR <b>281.1</b>",
+     "links": [
+      {
+       "label": "SR <b>281.1</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6149"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "disp_u2_art_212": {
@@ -41907,6 +43835,20 @@
     "A. Allgemeine Gütergemeinschaft",
     "IV. Ersatzforderungen",
     "2. Frauengutsforderung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "845",
+     "text": "SR <b>281.1</b>",
+     "links": [
+      {
+       "label": "SR <b>281.1</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6149"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "disp_u2_art_225": {

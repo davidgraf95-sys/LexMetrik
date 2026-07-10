@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-30",
+ "erzeugt": "2026-07-10",
  "kopf": {
   "srNummer": "173.110",
   "titel": "Bundesgesetz über das Bundesgericht",
@@ -11,7 +11,11 @@
    },
    {
     "rolle": "ingress",
-    "text": "gestützt auf die Artikel 188–191c der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 28. Februar 2001,"
+    "text": "gestützt auf die Artikel 188–191c der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 28. Februar 2001,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
    },
    {
     "rolle": "verb",

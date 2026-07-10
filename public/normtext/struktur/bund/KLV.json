@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-05",
+ "erzeugt": "2026-07-10",
  "kopf": {
   "srNummer": "832.112.31",
   "titel": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung",
@@ -11,7 +11,11 @@
    },
    {
     "rolle": "ingress",
-    "text": "gestützt auf die Artikel 33, 36 Absatz 1, 54 Absätze 2–4, 59a, 62, 65 Absatz 3, 65b Absatz 3, 65f Absatz 5, 65g Absatz 3, 70a, 75, 77 Absatz 4 und 104a der Verordnung vom 27. Juni 1995 über die Krankenversicherung (KVV),"
+    "text": "gestützt auf die Artikel 33, 36 Absatz 1, 54 Absätze 2–4, 59a, 62, 65 Absatz 3, 65b Absatz 3, 65f Absatz 5, 65g Absatz 3, 70a, 75, 77 Absatz 4 und 104a der Verordnung vom 27. Juni 1995 über die Krankenversicherung (KVV),",
+    "fnNrs": [
+     "2",
+     "3"
+    ]
    },
    {
     "rolle": "verb",

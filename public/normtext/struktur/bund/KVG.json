@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-05",
+ "erzeugt": "2026-07-10",
  "kopf": {
   "srNummer": "832.10",
   "titel": "Bundesgesetz über die Krankenversicherung",
@@ -11,7 +11,12 @@
    },
    {
     "rolle": "ingress",
-    "text": "gestützt auf Artikel 34 der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 6. November 1991,"
+    "text": "gestützt auf Artikel 34 der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 6. November 1991,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
    },
    {
     "rolle": "verb",

@@ -13,7 +13,7 @@
  *    (eli/oc = Amtliche Sammlung, eli/fga = Bundesblatt)
  */
 
-import { findeDlEnde, findeDdEnde } from './extrahiere-fedlex';
+import { findeDlEnde, findeDdEnde, ankerZuToken } from './extrahiere-fedlex';
 
 export interface FnLink { label: string; url: string }
 export interface Fussnote {
@@ -49,7 +49,14 @@ export function fnDefinitionen(html: string): Map<string, Fussnote> {
   for (const m of html.matchAll(/<p[^>]*\bid="(fn-[^"]+)"[^>]*>([\s\S]*?)<\/p>/gi)) {
     const id = m[1];
     const roh = m[2];
-    const nr = roh.match(/<a[^>]*href="#fnbck-[^"]*"[^>]*>(\d+[a-z]?)<\/a>/i)?.[1] ?? '';
+    // FN-1: Nummer primär aus dem #fnbck-Back-Link (neue Fedlex-Generation, z. B.
+    // OR/ZGB). 22 ältere Aspose-Dumps (VZG, ENTG, KOV, FZA, LugÜ …) tragen KEIN
+    // fnbck, sondern definieren die Note als «<p id="fn-…"><sup>N</sup>TEXT» —
+    // dann die führende <sup>-Ziffer als Fallback lesen (matcht 226/226 VZG). Der
+    // Marker-<sup> wird ohnehin von clean() aus dem Text gestrippt (kein Zusatz-Strip).
+    const nr = roh.match(/<a[^>]*href="#fnbck-[^"]*"[^>]*>(\d+[a-z]?)<\/a>/i)?.[1]
+      ?? roh.match(/^\s*<sup[^>]*>(\d+[a-z]?)<\/sup>/i)?.[1]
+      ?? '';
     // Links (AS/BBl etc.) vor dem Tag-Strippen sammeln.
     const links: FnLink[] = [];
     for (const a of roh.matchAll(/<a[^>]*\bhref="(https?:\/\/[^"]+)"[^>]*>([\s\S]*?)<\/a>/gi)) {
@@ -74,8 +81,13 @@ export function extrahiereFussnoten(html: string): Record<string, Fussnote[]> {
   //    Extraktor). Marker ausserhalb eines Absatz-<p> (Artikelkopf/Marginalie)
   //    → absatz: null (Artikelebene).
   const perArtikel: Record<string, Fussnote[]> = {};
-  for (const am of html.matchAll(/<article[^>]*\bid="art_([^"]+)"[^>]*>([\s\S]*?)<\/article>/gi)) {
-    const token = am[1];
+  // Drop-Fix (M13): Haupttext-Artikel «art_…» UND Schlussbestimmungs-/UeB-Artikel
+  // «disp_uN/art_…» (auch «disp_N/art_…» ohne «u», z. B. VZG). Die alte Regex
+  // «id="art_…"» verfehlte die disp-IDs → deren Fussnoten-Marker fielen ganz weg
+  // (17 VZG-Noten). ID-Schema + Token-Bildung IDENTISCH zu struktur-extrahiere.ts
+  // (ankerZuToken), damit der Join in struktur-run.ts greift.
+  for (const am of html.matchAll(/<article[^>]*\bid="((?:disp_u?\d+\/)?art_[^"]+)"[^>]*>([\s\S]*?)<\/article>/gi)) {
+    const token = ankerZuToken(am[1]);
     const body = am[2];
     // fn-id → Absatznummer (erstes Vorkommen). Absatz-<p> UND <dl>-Aufzählungen
     // in DOKUMENTREIHENFOLGE durchgehen (gleiche Logik wie der Snapshot-Extraktor,

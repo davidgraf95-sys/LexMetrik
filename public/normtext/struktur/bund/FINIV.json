@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-30",
+ "erzeugt": "2026-07-10",
  "kopf": {
   "srNummer": "954.11",
   "titel": "Verordnung über die Finanzinstitute",
@@ -11,7 +11,10 @@
    },
    {
     "rolle": "ingress",
-    "text": "gestützt auf das Finanzinstitutsgesetz vom 15. Juni 2018 (FINIG),"
+    "text": "gestützt auf das Finanzinstitutsgesetz vom 15. Juni 2018 (FINIG),",
+    "fnNrs": [
+     "1"
+    ]
    },
    {
     "rolle": "verb",

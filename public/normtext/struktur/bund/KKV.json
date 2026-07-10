@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-30",
+ "erzeugt": "2026-07-10",
  "kopf": {
   "srNummer": "951.311",
   "titel": "Verordnung über die kollektiven Kapitalanlagen",
@@ -11,7 +11,11 @@
    },
    {
     "rolle": "ingress",
-    "text": "gestützt auf das Kollektivanlagengesetz vom 23. Juni 2006 (KAG),"
+    "text": "gestützt auf das Kollektivanlagengesetz vom 23. Juni 2006 (KAG),",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
    },
    {
     "rolle": "verb",

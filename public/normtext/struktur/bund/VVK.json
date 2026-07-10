@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-30",
+ "erzeugt": "2026-07-10",
  "kopf": {
   "srNummer": "832.105",
   "titel": "Verordnung über die Versichertenkarte für die obligatorische Krankenpflegeversicherung",
@@ -10,7 +10,10 @@
    },
    {
     "rolle": "ingress",
-    "text": "gestützt auf Artikel 42a des Bundesgesetzes vom 18. März 1994 über die Krankenversicherung (KVG),"
+    "text": "gestützt auf Artikel 42a des Bundesgesetzes vom 18. März 1994 über die Krankenversicherung (KVG),",
+    "fnNrs": [
+     "1"
+    ]
    },
    {
     "rolle": "verb",

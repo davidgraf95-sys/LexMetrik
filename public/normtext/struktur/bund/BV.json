@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-30",
+ "erzeugt": "2026-07-10",
  "kopf": {
   "srNummer": "101",
   "titel": "Bundesverfassung der Schweizerischen Eidgenossenschaft",
@@ -36,7 +36,10 @@
    },
    {
     "rolle": "verb",
-    "text": "geben sich folgende Verfassung:"
+    "text": "geben sich folgende Verfassung:",
+    "fnNrs": [
+     "1"
+    ]
    }
   ],
   "fussnoten": [

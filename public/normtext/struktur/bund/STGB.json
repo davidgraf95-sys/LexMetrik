@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-30",
+ "erzeugt": "2026-07-10",
  "kopf": {
   "srNummer": "311.0",
   "titel": "Schweizerisches Strafgesetzbuch",
@@ -11,7 +11,12 @@
    },
    {
     "rolle": "ingress",
-    "text": "gestützt auf Artikel 123 Absätze 1 und 3 der Bundesverfassung, nach Einsicht in eine Botschaft des Bundesrates vom 23. Juli 1918,"
+    "text": "gestützt auf Artikel 123 Absätze 1 und 3 der Bundesverfassung, nach Einsicht in eine Botschaft des Bundesrates vom 23. Juli 1918,",
+    "fnNrs": [
+     "1",
+     "2",
+     "3"
+    ]
    },
    {
     "rolle": "verb",

@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-30",
+ "erzeugt": "2026-07-10",
  "kopf": {
   "srNummer": "232.14",
   "titel": "Bundesgesetz über die Erfindungspatente",
@@ -11,7 +11,13 @@
    },
    {
     "rolle": "ingress",
-    "text": "gestützt auf Artikel 122 der Bundesverfassung, nach Einsicht in eine Botschaft des Bundesrates vom 25. April 1950 sowie in eine Ergänzungsbotschaft vom 28. Dezember 1951,"
+    "text": "gestützt auf Artikel 122 der Bundesverfassung, nach Einsicht in eine Botschaft des Bundesrates vom 25. April 1950 sowie in eine Ergänzungsbotschaft vom 28. Dezember 1951,",
+    "fnNrs": [
+     "2",
+     "3",
+     "4",
+     "5"
+    ]
    },
    {
     "rolle": "verb",
@@ -8069,6 +8075,38 @@
    ],
    "fussnoten": [
     {
+     "nr": "287",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Dez. 1976, in Kraft seit 1. Jan. 1978 (AS <b>1977</b> 1997; BBl <b>1976</b> II 1).",
+     "links": [
+      {
+       "label": "AS <b>1977</b> 1997",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1977/1997_1997_1997"
+      },
+      {
+       "label": "BBl <b>1976</b> II 1",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1976/2_1_1_1"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "288",
+     "text": "Fassung gemäss Anhang Ziff. 23 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 (AS <b>2006 </b>2197; BBl <b>2001</b> 4202).",
+     "links": [
+      {
+       "label": "AS <b>2006 </b>2197",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2006/352"
+      },
+      {
+       "label": "BBl <b>2001</b> 4202",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
      "nr": "286",
      "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 1976, in Kraft seit 1. Jan. 1978 (AS <b>1977</b> 1997; BBl <b>1976</b> II 1).",
      "links": [
@@ -8097,6 +8135,48 @@
    "marginalie": [
     "B. Übergang vom alten zum neuen Recht",
     "I. Patente"
+   ],
+   "fussnoten": [
+    {
+     "nr": "289",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Dez. 1976 (AS <b>1977</b> 1997; BBl <b>1976</b> II 1). Fassung gemäss Ziff. I des BG vom 22. Juni 2007, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2551; BBl <b>2006</b> 1).",
+     "links": [
+      {
+       "label": "AS <b>1977</b> 1997",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1977/1997_1997_1997"
+      },
+      {
+       "label": "BBl <b>1976</b> II 1",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1976/2_1_1_1"
+      },
+      {
+       "label": "AS <b>2008</b> 2551",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/366"
+      },
+      {
+       "label": "BBl <b>2006</b> 1",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2006/1"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "290",
+     "text": "Zweiter Satz eingefügt durch Anhang Ziff. 3 des Patentanwaltsgesetzes vom 20. März 2009, in Kraft seit 1. Juli 2011 (AS <b>2011</b> 2259; BBl <b>2008 </b>407).",
+     "links": [
+      {
+       "label": "AS <b>2011</b> 2259",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2011/312"
+      },
+      {
+       "label": "BBl <b>2008 </b>407",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2008/143"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_143": {
@@ -8109,6 +8189,32 @@
    "marginalie": [
     "B. Übergang vom alten zum neuen Recht",
     "II. Patentgesuche"
+   ],
+   "fussnoten": [
+    {
+     "nr": "291",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Dez. 1976 (AS <b>1977</b> 1997; BBl <b>1976</b> II 1). Fassung gemäss Ziff. I des BG vom 22. Juni 2007, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2551; BBl <b>2006</b> 1).",
+     "links": [
+      {
+       "label": "AS <b>1977</b> 1997",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1977/1997_1997_1997"
+      },
+      {
+       "label": "BBl <b>1976</b> II 1",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1976/2_1_1_1"
+      },
+      {
+       "label": "AS <b>2008</b> 2551",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/366"
+      },
+      {
+       "label": "BBl <b>2006</b> 1",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2006/1"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_144": {
@@ -8121,6 +8227,32 @@
    "marginalie": [
     "B. Übergang vom alten zum neuen Recht",
     "II. Patentgesuche"
+   ],
+   "fussnoten": [
+    {
+     "nr": "292",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Dez. 1976 (AS <b>1977</b> 1997; BBl <b>1976</b> II 1). Aufgehoben durch Ziff. I des BG vom 22. Juni 2007, mit Wirkung seit 1. Juli 2008 (AS <b>2008</b> 2551; BBl <b>2006</b> 1).",
+     "links": [
+      {
+       "label": "AS <b>1977</b> 1997",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1977/1997_1997_1997"
+      },
+      {
+       "label": "BBl <b>1976</b> II 1",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1976/2_1_1_1"
+      },
+      {
+       "label": "AS <b>2008</b> 2551",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/366"
+      },
+      {
+       "label": "BBl <b>2006</b> 1",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2006/1"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "disp_u1_art_145": {
@@ -8133,6 +8265,40 @@
    "marginalie": [
     "B. Übergang vom alten zum neuen Recht",
     "III. Zivilrechtliche Verantwortlichkeit"
+   ],
+   "fussnoten": [
+    {
+     "nr": "293",
+     "text": "Eingefügt durch Ziff. I des BG vom 17. Dez. 1976, in Kraft seit 1. Jan. 1978 (AS <b>1977</b> 1997; BBl <b>1976</b> II 1).",
+     "links": [
+      {
+       "label": "AS <b>1977</b> 1997",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1977/1997_1997_1997"
+      },
+      {
+       "label": "BBl <b>1976</b> II 1",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1976/2_1_1_1"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "294",
+     "text": "Eingefügt durch Ziff. I des BG vom 22. Juni 2007, in Kraft seit 1. Juli 2008 (AS <b>2008</b> 2551; BBl <b>2006</b> 1).",
+     "links": [
+      {
+       "label": "AS <b>2008</b> 2551",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/366"
+      },
+      {
+       "label": "BBl <b>2006</b> 1",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2006/1"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "disp_u1_art_146": {
@@ -8145,6 +8311,40 @@
    "marginalie": [
     "C. Ergänzende Schutzzertifikate für Pflanzen-schutzmittel",
     "I. Genehmigung vor dem Inkrafttreten"
+   ],
+   "fussnoten": [
+    {
+     "nr": "295",
+     "text": "Eingefügt durch Ziff. I des BG vom 3. Febr. 1995 (AS <b>1995</b> 2879; BBl <b>1993</b> III 706). Fassung gemäss Ziff. I des BG vom 9. Okt. 1998, in Kraft seit 1. Mai 1999 (AS <b>1999</b> 1363; <i>BBl <b>1998</b> 1633</i>).",
+     "links": [
+      {
+       "label": "AS <b>1995</b> 2879",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1995/2879_2879_2879"
+      },
+      {
+       "label": "BBl <b>1993</b> III 706",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1993/3_706_666_522"
+      },
+      {
+       "label": "AS <b>1999</b> 1363",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/193"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "296",
+     "text": "AS <b>1999 </b>1363",
+     "links": [
+      {
+       "label": "AS <b>1999 </b>1363",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/193"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "disp_u1_art_147": {
@@ -8157,6 +8357,40 @@
    "marginalie": [
     "C. Ergänzende Schutzzertifikate für Pflanzen-schutzmittel",
     "II. Erloschene Patente"
+   ],
+   "fussnoten": [
+    {
+     "nr": "297",
+     "text": "Eingefügt durch Ziff. I des BG vom 3. Febr. 1995 (AS <b>1995</b> 2879; BBl <b>1993</b> III 706). Fassung gemäss Ziff. I des BG vom 9. Okt. 1998, in Kraft seit 1. Mai 1999 (AS <b>1999</b> 1363; <i>BBl <b>1998</b> 1633</i>).",
+     "links": [
+      {
+       "label": "AS <b>1995</b> 2879",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1995/2879_2879_2879"
+      },
+      {
+       "label": "BBl <b>1993</b> III 706",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1993/3_706_666_522"
+      },
+      {
+       "label": "AS <b>1999</b> 1363",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/193"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "298",
+     "text": "AS <b>1999 </b>1363; <i>BBl <b>1998</b> 1633</i>",
+     "links": [
+      {
+       "label": "AS <b>1999 </b>1363",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/193"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "disp_u1_art_148": {
@@ -8168,6 +8402,100 @@
    ],
    "marginalie": [
     "D. Übergangsbestimmung zur Änderung vom 16. Dezember 2005 des Patentgesetzes"
+   ],
+   "fussnoten": [
+    {
+     "nr": "299",
+     "text": "Eingefügt durch Art. 2 des BB vom 16. Dez. 2005 über die Genehmigung des Übereinkommens über die Anwendung des Artikels 65 des Europäischen Patentübereinkommens und über die Änderung des Patentgesetzes, in Kraft seit 1. Mai 2008 (AS <b>2008</b> 1739; BBl <b>2005 </b>3773).",
+     "links": [
+      {
+       "label": "AS <b>2008</b> 1739",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/251"
+      },
+      {
+       "label": "BBl <b>2005 </b>3773",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2005/556"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "300",
+     "text": "AS <b>1977</b> 1997",
+     "links": [
+      {
+       "label": "AS <b>1977</b> 1997",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1977/1997_1997_1997"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "301",
+     "text": "AS <b>1977</b> 1997, <b>1999</b> 1363",
+     "links": [
+      {
+       "label": "AS <b>1977</b> 1997",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1977/1997_1997_1997"
+      },
+      {
+       "label": "<b>1999</b> 1363",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/193"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "302",
+     "text": "AS <b>1977</b> 1997",
+     "links": [
+      {
+       "label": "AS <b>1977</b> 1997",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1977/1997_1997_1997"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "303",
+     "text": "AS <b>1977</b> 1997, <b>1999</b> 1363",
+     "links": [
+      {
+       "label": "AS <b>1977</b> 1997",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1977/1997_1997_1997"
+      },
+      {
+       "label": "<b>1999</b> 1363",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1999/193"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "304",
+     "text": "AS <b>1977</b> 1997, <b>1995</b> 2879, <b>2007</b> 6479",
+     "links": [
+      {
+       "label": "AS <b>1977</b> 1997",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1977/1997_1997_1997"
+      },
+      {
+       "label": "<b>1995</b> 2879",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1995/2879_2879_2879"
+      },
+      {
+       "label": "<b>2007</b> 6479",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2007/848"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "disp_u1_art_149": {
@@ -8179,6 +8507,71 @@
    ],
    "marginalie": [
     "E. Übergangsbestimmungen zur Änderung vom 18. März 2016 des Patentgesetzes"
+   ],
+   "fussnoten": [
+    {
+     "nr": "305",
+     "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 18. März 2016, in Kraft seit 1. Jan. 2019 (AS <b>2017</b> 2745, <b>2018</b> 3575; BBl <b>2013</b> 1).",
+     "links": [
+      {
+       "label": "AS <b>2017</b> 2745",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/280"
+      },
+      {
+       "label": "<b>2018</b> 3575",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2018/587"
+      },
+      {
+       "label": "BBl <b>2013</b> 1",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2013/1"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "306",
+     "text": "AS <b>2017</b> 2745",
+     "links": [
+      {
+       "label": "AS <b>2017</b> 2745",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2017/280"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "307",
+     "text": "SR <b>812.21</b>",
+     "links": [
+      {
+       "label": "SR <b>812.21</b>",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2001/422"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "308",
+     "text": "BRB vom 18. Okt. 1955",
+     "links": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "309",
+     "text": "BRB vom 8. Sept. 1959 (AS <b>1959</b> 861)",
+     "links": [
+      {
+       "label": "AS <b>1959</b> 861",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1959/861_891_879"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   }
  }

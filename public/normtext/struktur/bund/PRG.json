@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-30",
+ "erzeugt": "2026-07-10",
  "kopf": {
   "srNummer": "944.3",
   "titel": "Bundesgesetz über Pauschalreisen",
@@ -10,7 +10,11 @@
    },
    {
     "rolle": "ingress",
-    "text": "gestützt auf die Artikel 31 und 64 der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 24. Februar 1993,"
+    "text": "gestützt auf die Artikel 31 und 64 der Bundesverfassung, nach Einsicht in die Botschaft des Bundesrates vom 24. Februar 1993,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
    },
    {
     "rolle": "verb",
@@ -19,7 +23,7 @@
   ],
   "fussnoten": [
    {
-    "nr": "",
+    "nr": "1",
     "text": "SR <b>101</b>",
     "links": [
      {
@@ -31,7 +35,7 @@
     "item": null
    },
    {
-    "nr": "",
+    "nr": "2",
     "text": "BBl <b>1993 </b>I 805",
     "links": [
      {
@@ -68,21 +72,21 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "3",
      "text": "Da die durchgehende Verwendung von Paarformen die Lesbarkeit des vorliegenden Erlasses erschwert, wird im folgenden die männliche Personenbezeichnung als Ausdruck gewählt, der sich auf Personen beider Geschlechter bezieht.",
      "links": [],
      "absatz": null,
      "item": null
     },
     {
-     "nr": "",
+     "nr": "4",
      "text": "Da die durchgehende Verwendung von Paarformen die Lesbarkeit des vorliegenden Erlasses erschwert, wird im folgenden die männliche Personenbezeichnung als Ausdruck gewählt, der sich auf Personen beider Geschlechter bezieht.",
      "links": [],
      "absatz": null,
      "item": null
     },
     {
-     "nr": "",
+     "nr": "5",
      "text": "Da die durchgehende Verwendung von Paarformen die Lesbarkeit des vorliegenden Erlasses erschwert, wird im folgenden die männliche Personenbezeichnung als Ausdruck gewählt, der sich auf Personen beider Geschlechter bezieht.",
      "links": [],
      "absatz": null,
@@ -204,7 +208,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "6",
      "text": "Die Berichtigung der RedK der BVers vom 20. Aug. 2021 betrifft nur den italienischen Text (<i>AS <b>2021</b> 496</i>).",
      "links": [],
      "absatz": null,
@@ -282,7 +286,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "7",
      "text": "BRB vom 30. Nov. 1993",
      "links": [],
      "absatz": null,

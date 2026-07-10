@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-30",
+ "erzeugt": "2026-07-10",
  "kopf": {
   "srNummer": "0.142.30",
   "titel": "Abkommen über die Rechtsstellung der Flüchtlinge",
@@ -7,7 +7,10 @@
   "praeambel": [
    {
     "rolle": "autor",
-    "text": "In der Erwägung, dass die Charta der Vereinten Nationen und die am 10. Dezember 1948 von der Generalversammlung angenommene allgemeine Erklärung der Menschenrechte den Grundsatz bestätigt haben, dass die Menschen ohne Unterschied die Menschenrechte und Freiheitsrechte geniessen sollen,"
+    "text": "In der Erwägung, dass die Charta der Vereinten Nationen und die am 10. Dezember 1948 von der Generalversammlung angenommene allgemeine Erklärung der Menschenrechte den Grundsatz bestätigt haben, dass die Menschen ohne Unterschied die Menschenrechte und Freiheitsrechte geniessen sollen,",
+    "fnNrs": [
+     "3"
+    ]
    },
    {
     "rolle": "praeambel",
@@ -36,14 +39,14 @@
   ],
   "fussnoten": [
    {
-    "nr": "",
+    "nr": "1",
     "text": "Der französische Originaltext findet sich unter der gleichen Nummer in der französischen Ausgabe dieser Sammlung.",
     "links": [],
     "absatz": null,
     "item": null
    },
    {
-    "nr": "",
+    "nr": "2",
     "text": "AS <b>1955</b> 441",
     "links": [
      {
@@ -55,7 +58,7 @@
     "item": null
    },
    {
-    "nr": "",
+    "nr": "3",
     "text": "SR <b>0.120</b>",
     "links": [
      {
@@ -475,7 +478,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "",
+     "nr": "4",
      "text": "[BS <b>11</b> 786]. An den andern in diesem Art. erwähnten Abk. war die Schweiz nicht beteiligt.",
      "links": [],
      "absatz": null,
