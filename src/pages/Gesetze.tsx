@@ -648,9 +648,9 @@ export function Gesetze() {
               type="search"
               value={suche}
               onChange={(e) => setSuche(e.target.value)}
-              placeholder="Suchen — Bund, Kantone & International (Kürzel, Titel, SR-Nr.) …"
-              aria-label="Gesetze durchsuchen"
-              className="lc-input h-9 py-0 text-body-s w-full max-w-sm"
+              placeholder="Suchen — Kürzel, Titel, SR-Nr. …"
+              aria-label="Gesetze durchsuchen — Bund, Kantone & International (Kürzel, Titel, SR-Nr.)"
+              className="lc-input h-11 py-0 text-body-s w-full max-w-sm"
             />
           </div>
 
