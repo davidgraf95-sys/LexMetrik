@@ -76,6 +76,28 @@ Caveat, weil sie ein Headless-/Stitching-Artefakt sein könnten (D6, D9).
 | D11 | niedrig | `startseite` | 2560 | 4. «Neues vom Bundesgericht»-Karte am Container-Rand abgeschnitten. | **Bewusstes Karussell** (‹ ›-Pfeile) — die angeschnittene Karte ist die Scroll-Affordance, kein Bruch. | `startseite--2560.png` |
 | D12 | niedrig | `vorlagen-uebersicht` | 768 | Einspaltig, obwohl zweispaltig möglich wäre. | Evtl. gewollt (Lesbarkeit); nur als Kandidat notiert. | `vorlagen-uebersicht--768.png` |
 
+## Abarbeitung D1–D10 (Branch `fix/responsive-audit-defekte`, Go David 10.7.2026)
+
+Reine UI-Einheit, je Defekt ein Commit, golden byte-gleich (`golden:vergleich`
+grün), empirische Vorher/Nachher-Messung via Playwright-bash (@390/@2560,
+Hell+Dunkel). TABU: `src/pages/gesetz-leser/**` (parallele CI-Fläche).
+
+| # | Status | Beleg / Grund |
+|---|---|---|
+| **D1** | ✅ **gefixt** | `wizard.tsx`. BERICHT-Wurzel «grid-Kind» widerlegt (Knopf ist seit Audit unverändert ein `position:fixed`-FAB) — die Verwechslung entstand rein optisch durch die kartengleiche `lc-btn-outline`-Rahmen-Optik. Fix: solides `lc-btn-primary`-Pill (rounded-full, shadow-lg). @390 Hell+Dunkel bestätigt: eindeutig schwebender Knopf, keine Kachel. |
+| **D2** | ✅ **gefixt** | `Topbar/ThemaUmschalter/ReiterUebersicht/Footer/HeaderSuche/SprachUmschalter`. Alle Kopf-/Fuss-Controls auf 44px Höhe (min-h-11 / h-11). Empirisch @390: «Navigation öffnen» 38×36→44×44, «Farbschema» 36×36→44×44, Reiter 45×44, Sprache 48×44, Header-Suche h-11. |
+| **D3** | ✅ **gefixt** | `Methodik.tsx` + `VerfallUebersicht.tsx`. Prosa bleibt Lesespalte (max-w-reading), 69-Zeilen-Pflegeliste jetzt `sm:grid-cols-2 xl:grid-cols-3`. Empirisch @2560: Seitenhöhe 10 470→5 977 px (−43 %). |
+| **D4** | ⚠ **Caveat bestätigt — kein Code-Defekt** | Inline-PDF-Leerkasten ist ein Headless-Chromium-Artefakt (kein PDF-Plugin); die «PDF herunterladen»/«Amtliches PDF»-Fallbacks sind vorhanden/korrekt. Reader-Pfad zudem TABU (`gesetz-leser/**`). Kein Fix — im echten Browser abzunehmen. |
+| **D5** | ✅ **gefixt** | `EntscheidLeser.tsx`: Schlusszeile-Kontrollgruppe auf `flex-wrap`, «A− A+»-Segment `shrink-0`. Empirisch @390: scrollW 62 == clientW 62 (war 62 > 38). Header-Such-Enge («Suc») im D2-Commit über `pr-3 lg:pr-14` mitbehoben (⌘K-Reserve galt fälschlich auch mobil) → «S» → «Suchen oder No…». |
+| **D6** | ⚠ **Caveat bestätigt — kein Code-Defekt** | Vermutetes Sticky-Sidebar-/Viewport-Cap-Screenshot-Artefakt; Reader-Pfad TABU (`gesetz-leser/**`). Kein Fix — im echten Browser abzunehmen. |
+| **D7** | ✅ **bereits geheilt** | Empirisch @2560: `gesetze-landeplatz` und `gesetze-rechtsgebiet` teilen jetzt denselben `max-w-content`-Deckel (1120 px == 1120 px). Der Breiten-Unterschied wurde durch das A15-Refactor «Gliederungs-Umschalter auf allen 3 Säulen» (#908bf143, nach dem Audit) aufgelöst. Karten-Titel nutzen `line-clamp-2` (zwei Zeilen, kein hartes Truncate). Kein Fix nötig. |
+| **D8** | ✅ **bereits geheilt** | Empirisch @2560: der Ingress/Erlassformel-Block (`ErlassKopfBlock`) trägt jetzt `max-w-reading` (gemessen 640 px), nicht mehr volle Content-Breite — geheilt durch die W2·5d-U-VERWEIS-Arbeit (5.7.2026). Kein Fix nötig (und Pfad TABU). |
+| **D9** | ✅ **gefixt** | `Gesetze.tsx`: knapper Placeholder «Suchen — Kürzel, Titel, SR-Nr. …» (voller Kontext ins aria-label), Feld h-11. Empirisch @390: Feld 350 px, Placeholder vollständig. |
+| **D10** | ✅ **gefixt** | `SachgebietKacheln.tsx`: rechter Verlauf (`from-paper`) als Scroll-Affordance am mobilen Chip-Band, ab lg ausgeblendet. @390 Hell bestätigt (letztes Chip faded statt hart gekappt). |
+
+**D11/D12** bleiben wie im Audit als bewusst/gewollt eingestuft (Karussell-
+Affordance bzw. Lesbarkeits-Einspaltigkeit) — kein Handlungsbedarf.
+
 ## Systematik-Befunde (wiederkehrende Wurzeln)
 
 - **S-A · Header-Tap-Ziele (D2).** Eine Wurzel, ~13 Kopf-/Fusszeilen-Controls,
