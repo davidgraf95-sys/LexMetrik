@@ -69,7 +69,7 @@ const LeitfallZeile = memo(function LeitfallZeile({ refs, normZitat, revision }:
           ? (revision ?? null) : null;
         return (
           <span key={r.key} className="inline-flex items-center">
-            <KantenChip to={ziel} label={r.zitierung}
+            <KantenChip to={ziel} label={r.zitierung} kategorie="entscheid"
               leitentscheid={r.leitcharakter === 'leitentscheid'}
               revidiert={revidiert}
               titel={r.regesteKurz ?? r.zitierung} />
