@@ -28,6 +28,10 @@ import { readFileSync, existsSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { DatabaseSync } from 'node:sqlite';
 import { MATERIAL_REGISTER, BEHOERDEN, DOKTYPEN } from '../../src/lib/materialien/register.ts';
+// Botschaften (Paket 2, W2·6) sind kuratiert-äquivalent (generiert, nicht im in-Bundle
+// MATERIAL_REGISTER): ALLE_MATERIALIEN = MATERIAL_REGISTER + BOTSCHAFTEN. Sie durchlaufen
+// dieselben Register-Grundchecks + gelten im Merge-Modell als «kuratiert» (nicht DB-Dok).
+import { ALLE_MATERIALIEN } from './material-manifest.ts';
 import { ERLASS_REGISTER } from '../../src/lib/normtext/register.ts';
 import type { BrowseMaterial, MaterialManifest } from '../../src/lib/materialien/typen.ts';
 import { ladeZustand, type DokZeile, type SoftLawQuelle, type ZustandZeile } from './soft-law-zustand.ts';
@@ -72,15 +76,15 @@ function main(): void {
   const behoerdeIds = new Set(BEHOERDEN.map((b) => b.id));
   const doktypIds = new Set(DOKTYPEN.map((d) => d.id));
   const erlassKeys = new Set(ERLASS_REGISTER.map((e) => e.key));
-  const kuratiertKeys = new Set(MATERIAL_REGISTER.map((r) => r.key));
+  const kuratiertKeys = new Set(ALLE_MATERIALIEN.map((r) => r.key));
   const korpus = baueKorpusInfo();
 
   const datumArg = process.argv.find((a) => a.startsWith('--datum='));
   const heute = datumArg?.slice('--datum='.length);
 
-  // ── 1. Register-Grundchecks (wie bisher, auf dem SSoT MATERIAL_REGISTER) ──────
+  // ── 1. Register-Grundchecks (kuratiert + generierte Botschaften) ──────────────
   const gesehen = new Set<string>();
-  for (const r of MATERIAL_REGISTER) {
+  for (const r of ALLE_MATERIALIEN) {
     if (gesehen.has(r.key)) fehler.push(`Doppelter key: ${r.key}`);
     gesehen.add(r.key);
     if (KEY_UNSICHER.test(r.key)) fehler.push(`Key pfad-/URL-unsicher: ${JSON.stringify(r.key)}`);
@@ -92,6 +96,16 @@ function main(): void {
     }
     if (r.status !== 'nur-live-link') {
       warn.push(`${r.key}: status '${r.status}' — pdf-embed/volltext brauchen gehosteten Inhalt + Drift-Tor (§7).`);
+    }
+    // Botschaften (Paket 2): Paket-5-Join-Felder + Provenienz-Integrität (Finding 1, P0).
+    if (r.behoerde === 'BR') {
+      if (r.doktyp !== 'botschaft') fehler.push(`${r.key}: BR-Eintrag mit doktyp '${r.doktyp}' ≠ 'botschaft'.`);
+      if (!r.normKeys || r.normKeys.length === 0) fehler.push(`${r.key}: Botschaft ohne normKeys (verwaist, §8).`);
+      if (!r.projEli) fehler.push(`${r.key}: Botschaft ohne projEli — Paket-5-Join bräche (Finding 1).`);
+      if (r.botschaftDate !== r.stand) fehler.push(`${r.key}: botschaftDate (${r.botschaftDate}) ≠ stand (${r.stand}).`);
+      if (!/^https:\/\/www\.fedlex\.admin\.ch\/eli\/fga\//.test(r.quelleUrl)) {
+        fehler.push(`${r.key}: quelleUrl ist kein Fedlex-fga-Live-Link: ${r.quelleUrl}.`);
+      }
     }
   }
 
@@ -209,7 +223,10 @@ function main(): void {
 
   // ── 8. Wortfeld-Tor über die Quell-Dateien (§0/A7) ────────────────────────────
   const scope = [
-    ...collectFiles('src/lib/materialien', (p) => p.endsWith('.ts')),
+    // *.generated.ts ausgenommen: enthält amtliche Botschafts-TITEL (Zitat-Felder, §0/A7
+    // wie amtliche titel in register.json) + den negierten Provenienz-hinweis — kein
+    // hand-geschriebener Nutzertext.
+    ...collectFiles('src/lib/materialien', (p) => p.endsWith('.ts') && !p.endsWith('.generated.ts')),
     ...collectFiles('src/components/kontext', (p) => p.endsWith('.tsx')),
     ...collectFiles('src/pages', (p) => /\/Material[^/]*\.tsx$/.test(p)),
   ];

@@ -19,6 +19,17 @@ import {
 import type {
   BrowseMaterial, MaterialManifest, MaterialRegistereintrag,
 } from '../../src/lib/materialien/typen.ts';
+// Botschaften (Paket 2, W2·6): NICHT im in-Bundle MATERIAL_REGISTER (§15 Bundle-Kosten:
+// ~400 Einträge × 3 Titel), sondern nur als Build-Zeit-Quelle hier gemerged → sie fliessen
+// in die lazy register.json-Projektion (Browse + Kontext-Panel), ohne den App-Bundle zu
+// belasten. Diese Datei ist ein scripts/-Modul (kein src-Import → kein Bundling).
+import { BOTSCHAFTEN } from '../../src/lib/materialien/botschaften.generated.ts';
+
+/** Alle kuratierten + generierten Materialien-Register-Einträge (Build-Zeit-SSoT der
+ *  Projektion). Botschaften nur hier, nie im App-Bundle (§15). */
+export const ALLE_MATERIALIEN: ReadonlyArray<MaterialRegistereintrag> = [
+  ...MATERIAL_REGISTER, ...BOTSCHAFTEN,
+];
 
 export const REGISTER_PFAD = join('public', 'materialien', 'register.json');
 
@@ -30,12 +41,29 @@ export function shaEintrag(r: MaterialRegistereintrag): string {
     r.key, r.behoerde, r.doktyp, r.titel, r.nummer ?? '', r.rechtsgebiet,
     r.sprache, r.status, r.quelleUrl, r.stand, String(r.rang),
     (r.normKeys ?? []).join(','), r.hinweis ?? '',
+    // Botschaften-Zusatzfelder NUR für BR anhängen → bestehende Einträge byte-identisch
+    // (Drift-Token deckt titel_fr/it + Paket-5-Join-Felder mit ab).
+    ...(r.behoerde === 'BR'
+      ? [r.titelFr ?? '', r.titelIt ?? '', r.projEli ?? '', (r.ocUris ?? []).join(',')]
+      : []),
   ].join('');
   return createHash('sha256').update(norm, 'utf8').digest('hex');
 }
 
 function browseEintrag(r: MaterialRegistereintrag): BrowseMaterial {
   const b = behoerdeVon(r.behoerde);
+  // Botschaften-Zusatzfelder NUR für BR emittieren → bestehende Einträge byte-identisch
+  // (keine neuen null-Keys in den kuratierten register.json-Zeilen).
+  const botschaftsFelder = r.behoerde === 'BR'
+    ? {
+        ...(r.titelFr ? { titelFr: r.titelFr } : {}),
+        ...(r.titelIt ? { titelIt: r.titelIt } : {}),
+        ...(r.projEli ? { projEli: r.projEli } : {}),
+        ...(r.ocUris ? { ocUris: r.ocUris } : {}),
+        ...(r.botschaftDate ? { botschaftDate: r.botschaftDate } : {}),
+        ...(r.artAnker ? { artAnker: r.artAnker } : {}),
+      }
+    : {};
   return {
     key: r.key,
     behoerde: r.behoerde,
@@ -53,6 +81,7 @@ function browseEintrag(r: MaterialRegistereintrag): BrowseMaterial {
     rang: r.rang,
     normKeys: r.normKeys ?? [],
     hinweis: r.hinweis ?? null,
+    ...botschaftsFelder,
     sha: shaEintrag(r),
   };
 }
@@ -66,6 +95,6 @@ function vergleiche(a: BrowseMaterial, b: BrowseMaterial): number {
 
 /** Baut das Browse-Manifest aus dem Register (rein, testbar). */
 export function baueMaterialManifest(erzeugt: string): MaterialManifest {
-  const materialien = MATERIAL_REGISTER.map(browseEintrag).sort(vergleiche);
+  const materialien = ALLE_MATERIALIEN.map(browseEintrag).sort(vergleiche);
   return { erzeugt, materialien };
 }

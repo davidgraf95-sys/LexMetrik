@@ -34,7 +34,8 @@ export type BehoerdeId =
   | 'BJ'     // Bundesamt für Justiz / Eidg. Amt für das Handelsregister (EHRA)
   | 'FINMA'  // Eidg. Finanzmarktaufsicht
   | 'BSV'    // Bundesamt für Sozialversicherungen
-  | 'IGE';   // Eidg. Institut für Geistiges Eigentum
+  | 'IGE'    // Eidg. Institut für Geistiges Eigentum
+  | 'BR';    // Bundesrat (Botschaften / Bundesblatt — Paket 2, W2·6)
 
 export interface Behoerde {
   id: BehoerdeId;
@@ -61,6 +62,7 @@ export type DoktypId =
   | 'richtlinie'
   | 'taetigkeitsbericht'
   | 'anleitung'
+  | 'botschaft' // Botschaft des Bundesrates (Entstehungsgeschichte) — Paket 2, W2·6
   | 'mitteilung';
 
 export interface Doktyp {
@@ -94,6 +96,18 @@ export interface MaterialRegistereintrag {
   normKeys?: string[];
   /** Optionaler Ehrlichkeits-/Pflege-Hinweis (z. B. «Hash unbestätigt»). */
   hinweis?: string;
+  // ── Botschaften-Zusatzfelder (Paket 2, W2·6; sonst undefined) ──────────────
+  /** Amtlicher Titel FR/IT (i18n-Zusage; Botschaften tragen ihn, §1 nie umformulieren). */
+  titelFr?: string;
+  titelIt?: string;
+  /** Projekt-Knoten (Gesetzgebungs-Graph-Anker) — Paket-5-Join (Finding 1, P0). */
+  projEli?: string;
+  /** AS/oc-Erlasse dieses Projekts unter den normKeys-SR — direkter Paket-5-oc-Join. */
+  ocUris?: string[];
+  /** Botschafts-Datum (= stand, redundant benannt für den Paket-5-Join). */
+  botschaftDate?: string;
+  /** Grobe art_*-Zuordnung (Moat-Hebel 2, artikelweise Genese; heute meist leer). */
+  artAnker?: string[];
   /**
    * Kuratierte artikelscharfe Bezüge (E6a·M5, quelle='kuratiert'): der Artikel,
    * den das Dokument im amtlichen TITEL nennt, als Korpus-Token je Erlass
@@ -127,6 +141,13 @@ export interface BrowseMaterial {
   rang: number;
   normKeys: string[];
   hinweis: string | null;
+  // ── Botschaften-Zusatzfelder (Paket 2; nur bei doktyp==='botschaft' gesetzt) ──
+  titelFr?: string;
+  titelIt?: string;
+  projEli?: string;
+  ocUris?: string[];
+  botschaftDate?: string;
+  artAnker?: string[];
   /** sha-256 über die Identitätsfelder (Drift-/Provenienz-Token). */
   sha: string;
 }
