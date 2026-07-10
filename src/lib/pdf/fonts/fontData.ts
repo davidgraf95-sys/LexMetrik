@@ -1,3 +1,5 @@
+// AUTOGENERIERTER DATEN-BLOB — NICHT LESEN / NICHT VON HAND EDITIEREN (QS-TOK T5).
+// ~390 KB Base64 (kein sinnvoller Textdiff; .gitattributes: linguist-generated -diff).
 // Eingebettete Markenschriften für den PDF-Bericht (TTF, Base64).
 // Quelle: Google Fonts (Fraunces SemiBold opsz, Geist 400/600, Geist Mono 400).
 // Wird NUR im lazy geladenen PDF-Chunk gebündelt (nicht im Haupt-Bundle).

@@ -1,0 +1,18 @@
+# QS-TOK T5(c) — Daten-Guards (FAHRPLAN-TOKEN-OEKONOMIE §4).
+# `linguist-generated` klappt die Datei in der GitHub-PR-Ansicht ein und nimmt sie
+# aus der Sprach-Statistik — spart Review-Aufmerksamkeit/Token, OHNE den Diff zu
+# unterdrücken. `-diff` NUR wo ein textueller Diff sinnlos ist (Base64/Massendaten).
+
+# Normtext-Snapshots: generierte Projektionen — ABER textueller Diff MUSS bleiben.
+# Extraktions-PRs und die Gegenprüfung jagen Drop/Leak genau über den git-Diff (K).
+public/normtext/**/*.json linguist-generated
+
+# Golden-Basis: nie direkt gelesen (§6, via golden:diff/vergleich), aber diffbar.
+golden/*.json linguist-generated
+
+# Generierte Quellcode-Dateien: als generiert markiert (Banner tragen sie bereits).
+*.generated.ts linguist-generated
+
+# Reine Massendaten ohne sinnvollen Textdiff: einklappen UND Diff unterdrücken (K).
+src/lib/pdf/fonts/fontData.ts linguist-generated -diff
+src/lib/normtext/grundart.generated.ts linguist-generated -diff
