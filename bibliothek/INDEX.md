@@ -116,6 +116,13 @@ alle `nur-live-link` (Erreichbarkeit 27.6.2026 geprüft). Beschaffungs-Regel (st
 URL vs. Direkt-Link), Determinismus/Tor, normKeys-Verzahnung, Pflegebedarf, P1-Backlog (SEM/BAG).
 Maschinell kuratiert; fachliche Abnahme David offen (Zeitsperre bis 1.12.2026).
 
+**Botschaften / Entstehungsgeschichte (Fedlex-Portfolio Paket 2, W2·6):** [materialien/botschaften-2026-07-10.md](materialien/botschaften-2026-07-10.md) —
+401 Botschaften des Bundesrates über die 218 Bund-Volltext-Erlasse, automatisch über den
+Fedlex-Gesetzgebungs-Projekt-Graphen verknüpft (SPARQL-Reverse-Kette, `draftHasLegislativeTask`
+statt STRSTARTS = 260× schneller). Behörde `BR`, Doktyp `botschaft`, `nur-live-link`; Join-Felder
+`projEli/ocUris/botschaftDate` für Paket 5; im Norm-Kontext-Bus «Entstehungsgeschichte» (Bridge B1).
+Drift-Tor `check:botschaften-netz`. Maschinell zugeordnet; fachliche Abnahme David offen.
+
 ## register/ — fortlaufend gepflegt
 
 | Dokument | Inhalt |

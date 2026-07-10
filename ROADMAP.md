@@ -735,9 +735,12 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
       (LexWork-Kantons-API · Fedlex-SPARQL-Eigenheiten · Zitat-Regexes/ECLI · Verifikations-Rails →
       Gegenprüfung). Leit-Doktrin: OCL nie load-bearing, nur Seed/Diff-Orakel + Endpunkt-Wissen selbst
       gegen amtliche Quelle nachbauen. **Detailquelle:** `FAHRPLAN-OPENCASELAW-QUELLEN.md`.
-    - [D] **Fedlex-Datenarten-Portfolio** *(Plan 2.7.2026, §14-Intake je Paket pending David-Freigabe)* — 6 verwertbare
+    - [~] **Fedlex-Datenarten-Portfolio** *(Plan 2.7.2026; Go David 10.7.2026 «go zu allem», Reihenfolge 1→2→5→3→4)* — 6 verwertbare
       Fedlex-Datenarten (Erlasse/Materialien/Verfahren/Staatsverträge u.a.), ausschliesslich amtliche Fedlex-Stelle
       (SPARQL + Filestore, nie Dritt-Repo). **Detailquelle:** `FAHRPLAN-FEDLEX-PORTFOLIO.md`.
+      **Paket 1 (Gesetze-Currency, `QS-CURRENCY`) ✅.** **Paket 2 (Botschaften/«Entstehungsgeschichte», W2·6) ✅ 10.7.2026** —
+      401 Botschaften des Bundesrates über die 218 Volltext-Erlasse (Projekt-Graph, `nur-live-link`), im Norm-Kontext-Bus
+      (Bridge B1); Join-Felder `projEli/ocUris/botschaftDate` für Paket 5 persistiert. **Nächstes: Paket 5** (Änderungshistorie/AS, `dep: [W2·6-BOT]`).
     - [~] **Datenhaltung-Bau: DB-Artefakt + Massen-Korpus + Edge-Suche** *(W2·6-DATA; Council 2.7.2026 — löst die drei OCL-Abbau-„DAVID-ENTSCHEID"-Punkte auf)*.
       <!-- @meta id: W2·6-DATA · status: wip · of: ja · blocker: null · dep: [] · kollision: [scripts/normtext-snapshot.ts, scripts/prerender.ts, public/normtext/register.json] · worktree: ja · 26x: ja · fahrplan: FAHRPLAN-DATENHALTUNG.md · slot: inhaber -->
       Andockpunkt **eine Schicht UNTER dem heutigen Generator** — die bestehenden Adapter befüllen
