@@ -1,5 +1,7 @@
 import { describe, it, expect, vi } from 'vitest';
+import type { ReactElement } from 'react';
 import { renderToString } from 'react-dom/server';
+import { MemoryRouter } from 'react-router-dom';
 import { NormPopover } from '../components/NormPopover';
 import { istSchliessTaste } from '../lib/normtext/tasten';
 import type { NormSnapshot } from '../lib/normtext/typen';
@@ -30,8 +32,14 @@ const SNAP: NormSnapshot = {
   sha: 'abc',
 };
 
+// W2·5d U-POSITION/A16: «Im Gesetz öffnen» ist jetzt ein react-router <Link> (SPA
+// statt Vollseiten-<a>), damit die anker-basierte Scroll-Restoration den Zurück-Weg
+// überlebt. <Link> braucht einen Router-Kontext — der Popover läuft zur Laufzeit
+// IMMER im BrowserRouter/Pane-Router; hier im Test über `rp()` in einen MemoryRouter
+// gehüllt. Die href-Zusicherungen bleiben unverändert (<Link to=x> rendert href="x").
+const rp = (el: ReactElement) => renderToString(<MemoryRouter>{el}</MemoryRouter>);
 const html = (passus: { absatz: string | null; lit?: string; ziff?: string }) =>
-  renderToString(<NormPopover snapshot={SNAP} passus={passus} onClose={() => {}} />);
+  rp(<NormPopover snapshot={SNAP} passus={passus} onClose={() => {}} />);
 
 describe('NormPopover — Render', () => {
   it('zeigt artikelLabel und erlass im Kopf — ohne Mittelpunkt (David 16.6.2026)', () => {
@@ -134,7 +142,7 @@ describe('NormPopover — Absatz-Vergleich normalisiert (FIX 3)', () => {
   };
 
   it('Block-Absatz «1.» wird von passus.absatz «1» markiert (data-passus="true")', () => {
-    const out = renderToString(
+    const out = rp(
       <NormPopover snapshot={SNAP_PUNKT} passus={{ absatz: '1' }} onClose={() => {}} />,
     );
     expect(out.match(/data-passus="true"/g)!.length).toBe(1);
@@ -156,7 +164,7 @@ describe('NormPopover — aufgehobene Absätze (David 16.6.2026)', () => {
   };
 
   it('Block mit nur «…» rendert «aufgehoben», nicht das nackte «…»', () => {
-    const out = renderToString(
+    const out = rp(
       <NormPopover snapshot={SNAP_AUFGEHOBEN} passus={{ absatz: null }} onClose={() => {}} />,
     );
     expect(out).toContain('aufgehoben');
@@ -174,7 +182,7 @@ describe('NormPopover — aufgehobene Absätze (David 16.6.2026)', () => {
       ...SNAP,
       bloecke: [{ absatz: '1', text: 'Text mit … Auslassung im Satz.' }],
     };
-    const out = renderToString(
+    const out = rp(
       <NormPopover snapshot={SNAP_MIT_PUNKTEN} passus={{ absatz: null }} onClose={() => {}} />,
     );
     expect(out).toContain('Text mit … Auslassung im Satz.');
@@ -217,7 +225,7 @@ describe('NormPopover — Aufzählungs-Items (lit./Ziff., einheitlich Bund/Kanto
   };
 
   it('rendert alle Item-Marken + Texte (Bund lit.)', () => {
-    const out = renderToString(
+    const out = rp(
       <NormPopover snapshot={SNAP_LIT} passus={{ absatz: null }} onClose={() => {}} />,
     );
     for (const it of SNAP_LIT.bloecke[0].items!) {
@@ -229,7 +237,7 @@ describe('NormPopover — Aufzählungs-Items (lit./Ziff., einheitlich Bund/Kanto
   });
 
   it('passus.lit="b" → genau Item «b» trägt data-passus-item="true», andere nicht', () => {
-    const out = renderToString(
+    const out = rp(
       <NormPopover snapshot={SNAP_LIT} passus={{ absatz: '1', lit: 'b' }} onClose={() => {}} />,
     );
     expect(out.match(/data-passus-item="true"/g)!.length).toBe(1);
@@ -241,7 +249,7 @@ describe('NormPopover — Aufzählungs-Items (lit./Ziff., einheitlich Bund/Kanto
   });
 
   it('passus.ziff="17" → genau Item «17» trägt data-passus-item="true», andere nicht (Kanton)', () => {
-    const out = renderToString(
+    const out = rp(
       <NormPopover snapshot={SNAP_ZIFF} passus={{ absatz: null, ziff: '17' }} onClose={() => {}} />,
     );
     expect(out.match(/data-passus-item="true"/g)!.length).toBe(1);
@@ -253,7 +261,7 @@ describe('NormPopover — Aufzählungs-Items (lit./Ziff., einheitlich Bund/Kanto
   });
 
   it('ohne lit/ziff → Absatz-Markierung wie bisher (data-passus="true», kein Item-Mark)', () => {
-    const out = renderToString(
+    const out = rp(
       <NormPopover snapshot={SNAP_LIT} passus={{ absatz: '1' }} onClose={() => {}} />,
     );
     expect(out.match(/data-passus="true"/g)!.length).toBe(1);
@@ -286,7 +294,7 @@ describe('NormPopover — Aufzählungs-Items (lit./Ziff., einheitlich Bund/Kanto
         },
       ],
     };
-    const out = renderToString(
+    const out = rp(
       <NormPopover snapshot={SNAP_MARKE_DOPPELT} passus={{ absatz: null, ziff: '1' }} onClose={() => {}} />,
     );
     expect(out.match(/data-passus-item="true"/g)!.length).toBe(1);
@@ -296,7 +304,7 @@ describe('NormPopover — Aufzählungs-Items (lit./Ziff., einheitlich Bund/Kanto
   });
 
   it('Live-Link-Fragment springt auf den Item-Text, wenn ein Item zitiert ist', () => {
-    const out = renderToString(
+    const out = rp(
       <NormPopover snapshot={SNAP_ZIFF} passus={{ absatz: null, ziff: '17' }} onClose={() => {}} />,
     );
     const href = out.match(/href="([^"]*:~:text=[^"]*)"/)![1];
@@ -318,7 +326,7 @@ describe('NormPopover — Aufzählungs-Items (lit./Ziff., einheitlich Bund/Kanto
         },
       ],
     };
-    const out = renderToString(
+    const out = rp(
       <NormPopover snapshot={SNAP_ITEM_AUFGEHOBEN} passus={{ absatz: null }} onClose={() => {}} />,
     );
     expect(out).toContain('aufgehoben');
@@ -363,7 +371,7 @@ const STAFFEL: NormSnapshot = {
 
 describe('NormPopover — Tarif-Staffel lesbar in Zeilen', () => {
   it('zerlegt den Staffel-Blob in mehrere Band-Zeilen (span.block)', () => {
-    const out = renderToString(<NormPopover snapshot={STAFFEL} passus={{ absatz: null }} onClose={() => {}} />);
+    const out = rp(<NormPopover snapshot={STAFFEL} passus={{ absatz: null }} onClose={() => {}} />);
     const zeilen = (out.match(/class="block[^"]*"/g) ?? []).length;
     expect(zeilen).toBeGreaterThanOrEqual(3); // Kopf + ≥2 Bänder
     expect(out).toContain('bis 1000 25%');
@@ -371,7 +379,7 @@ describe('NormPopover — Tarif-Staffel lesbar in Zeilen', () => {
   });
 
   it('normaler Absatz wird NICHT zerschnitten', () => {
-    const out = renderToString(<NormPopover snapshot={STAFFEL} passus={{ absatz: '2' }} onClose={() => {}} />);
+    const out = rp(<NormPopover snapshot={STAFFEL} passus={{ absatz: '2' }} onClose={() => {}} />);
     // Der reine Absatz «Die Grundgebühr kann ermässigt werden.» bleibt am Stück.
     expect(out).toContain('Die Grundgebühr kann ermässigt werden.');
   });

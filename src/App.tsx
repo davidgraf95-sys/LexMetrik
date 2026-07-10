@@ -9,6 +9,7 @@ import { ZuletztTracker } from './components/ZuletztTracker';
 import { RouteSwitch } from './RouteSwitch';
 import { prefetchLeser } from './leserPrefetch';
 import { tabSchluessel } from './lib/tabs';
+import { leseAnker, aufloeseAnkerY } from './pages/gesetz-leser/scrollAnker';
 
 // SPA-Scroll-Reset: Beim Routenwechsel nach oben scrollen (sonst behält die
 // neue Seite die alte Scrollposition und man «landet unten»). Trägt die Route
@@ -67,16 +68,25 @@ function ScrollWiederherstellung() {
   useEffect(() => {
     if (hash) { wiederherstellend.current = false; return; } // Anker-Sprung übernimmt ScrollZuHash
     const gespeichert = positionen.current.get(schluessel);
-    const ziel = gespeichert ?? 0;
-    // Neu besuchter Pfad OHNE gespeicherte Position (Ziel = Anfang): EINMALIG nach
-    // oben, KEIN beharrlicher Loop. Der 360-Frame-Loop ist nur für das
+    // W2·5d U-POSITION/A16: bei einem Gesetz-Leser-Reiter ist die massgebliche
+    // Zielposition der ANKER (letzter sichtbarer Artikel + Offset), gegen das
+    // AKTUELLE DOM aufgelöst (element-basiert → robust gegen die content-visibility-
+    // Höhenschätzung, David 5.7.). Der absolute scrollY bleibt der Fallback, wenn
+    // der Anker (noch) nicht auflösbar ist (Lazy-Ladephase) oder fehlt (jede
+    // Nicht-Leser-Route). `zielJetzt()` wird IN der Konvergenz-Schleife je Frame
+    // neu berechnet — so zieht die Position nach, sobald die Artikel materialisieren.
+    const hatAnker = leseAnker(schluessel) !== undefined;
+    const zielJetzt = () => aufloeseAnkerY(schluessel) ?? gespeichert ?? 0;
+    const ziel = zielJetzt();
+    // Neu besuchter Pfad OHNE gespeicherte Position UND ohne Anker (Ziel = Anfang):
+    // EINMALIG nach oben, KEIN beharrlicher Loop. Der 360-Frame-Loop ist nur für das
     // Wiederherstellen einer NICHT-Null-Position durch die lazy Ladephase nötig;
     // für einen frischen Pfad reisst er die Seite nur sichtbar wiederholt an den
     // Anfang (Bug David: «beim Wechsel zwischen Gesetzen wird man an den Anfang
     // geschickt» — der Reader remountet ohnehin oben, das genügt). Ein zweiter
     // raf fängt den Fall, dass der lazy Chunk im selben Frame noch nicht montiert
     // ist und der Browser eine Rest-Scrollposition hält.
-    if (gespeichert === undefined || ziel === 0) {
+    if ((gespeichert === undefined && !hatAnker) || (ziel === 0 && aufloeseAnkerY(schluessel) == null)) {
       window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior });
       const raf = requestAnimationFrame(() => {
         if (window.scrollY > 0) window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior });
@@ -84,16 +94,17 @@ function ScrollWiederherstellung() {
       });
       return () => { cancelAnimationFrame(raf); wiederherstellend.current = false; };
     }
-    // Gespeicherte NICHT-Null-Position wiederherstellen (Tab verlassen → zurück):
-    // Lazy geladene Seiten (Reader-Chunk + Normtext-JSON erst nach dem Routenwechsel)
-    // sind anfangs zu kurz → erneut anpeilen, SOLANGE der Inhalt noch wächst — bis
-    // das Ziel erreicht ist oder die Höhe ~12 Frames stabil bleibt (Seite fertig,
-    // ggf. echt kürzer), höchstens ~360 Frames als Notbremse.
+    // Gespeicherte NICHT-Null-Position / Anker wiederherstellen (Tab verlassen →
+    // zurück): Lazy geladene Seiten (Reader-Chunk + Normtext-JSON erst nach dem
+    // Routenwechsel) sind anfangs zu kurz → erneut anpeilen, SOLANGE der Inhalt noch
+    // wächst — bis das Ziel erreicht ist oder die Höhe ~12 Frames stabil bleibt
+    // (Seite fertig, ggf. echt kürzer), höchstens ~360 Frames als Notbremse.
     wiederherstellend.current = true;
     let frames = 0;
     let stabil = 0;
     let letzteHoehe = -1;
     let raf = requestAnimationFrame(function versuche() {
+      const ziel = zielJetzt();
       window.scrollTo({ top: ziel, left: 0, behavior: 'instant' as ScrollBehavior });
       const erreicht = Math.abs(window.scrollY - ziel) <= 2;
       const hoehe = document.documentElement.scrollHeight;

@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { createPortal, flushSync } from 'react-dom';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { naechsteInstanz, merkeTab, aktualisiereTabArtikel } from '../../lib/tabs';
+import { naechsteInstanz, merkeTab, aktualisiereTabArtikel, tabSchluessel } from '../../lib/tabs';
+import { merkeAnker, bezugslinie } from './scrollAnker';
 import { aktiverArtikel } from '../../lib/normtext/aktuellerArtikel';
 import { useDialogFokus } from '../../components/layout/useDialogFokus';
 import { usePaneKontext } from '../../components/layout/PaneKontext';
@@ -524,8 +525,22 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     if (!eintraege) return undefined;
     const tokenMap = new Map<string, string>();
     for (const e of eintraege) tokenMap.set(e.artikel.toLowerCase().replace(/[^a-z0-9]/g, ''), e.artikel);
-    return { tokenMap, basisPfad, springeZu: springeZuArtikel };
-  }, [eintraege, basisPfad, springeZuArtikel]);
+    // W2·5d U-POSITION/A16: ein Klick auf einen Verweis IM Text ist nutzer-initiiert
+    // und soll einen echten History-Eintrag anlegen, damit Browser-/UI-Zurück exakt
+    // an den Ausgangs-Artikel zurückkehrt. In der PRIMÄR-/Einzelansicht darum über
+    // den Router navigieren (react-router besitzt die History; der letzteNavKey-
+    // Effekt führt den eigentlichen Sprung aus, ScrollWiederherstellung/ScrollZuHash
+    // stellt beim Zurück die Ausgangsstelle her — Anker bei hashlosem Ausgang,
+    // #art-Hash bei Hash-Ausgang). Ein MANUELLES pushState würde react-router
+    // desynchronisieren (Zurück löste dann keinen Location-Wechsel aus → kein
+    // Rück-Sprung). Im SEKUNDÄREN Pane bleibt der direkte Sprung (eigene Pane-
+    // History, scrollt den Pane-Container; kein globaler Router-Eingriff, B-2.5).
+    const springeZuRef = (t: string) => {
+      if (istSekundaer) { springeZuArtikel(t); return; }
+      navigate(`${basisPfad}${window.location.search}#art-${t}`);
+    };
+    return { tokenMap, basisPfad, springeZu: springeZuRef };
+  }, [eintraege, basisPfad, springeZuArtikel, istSekundaer, navigate]);
 
   // Offen-Zustand des FLIESSTEXTS (eigener State; der TOC-Baum hat seinen eigenen
   // `tocBaum`). renderSektion ruft mit defOpen=true → der ganze Erlass ist
@@ -711,6 +726,32 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
       cont.scrollTo({ top: cont.scrollTop + (er.top - cr.top) - cr.height / 2, behavior: 'smooth' });
     }
   }, [aktivIds, tocBaum, imPane, wurzel]);
+
+  // W2·5d U-POSITION/A16: laufend den Scroll-Anker dieses Reiters festhalten
+  // (oberster sichtbarer Artikel `letzterArtToken` + Offset in ihn hinein). Beim
+  // Zurück-/Reiter-Wechsel stellt App.tsx:ScrollWiederherstellung EXAKT diese Stelle
+  // wieder her — element-basiert und darum robust gegen die content-visibility-
+  // Höhenschätzung (David 5.7.: scrollTop allein ist unzuverlässig). Nur die
+  // Primär-/Einzelansicht (die Fenster-Restoration); das Pane hat eigene History.
+  // Passiver, rAF-entprellter Scroll-Listener (§15): eine getBoundingClientRect je
+  // Frame, kein setState (keine Render-Kaskade).
+  useEffect(() => {
+    if (istSekundaer || typeof window === 'undefined') return;
+    let raf = 0;
+    const erfasse = () => {
+      raf = 0;
+      const token = letzterArtToken.current;
+      if (!token) return;
+      const el = findeArt(null, token);
+      if (!el) return;
+      const remPx = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
+      const offset = Math.max(0, Math.round(bezugslinie(0, remPx) - el.getBoundingClientRect().top));
+      merkeAnker(tabSchluessel(basisPfad + window.location.search), { token, offset });
+    };
+    const onScroll = () => { if (!raf) raf = window.requestAnimationFrame(erfasse); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => { window.removeEventListener('scroll', onScroll); if (raf) window.cancelAnimationFrame(raf); };
+  }, [istSekundaer, basisPfad]);
 
   const sucheTrim = sucheDebounced.trim().toLowerCase(); // Rank 9: entprellt (nicht `suche`)
   // ═══ ABSCHNITT · In-Gesetz-Suche & Treffer ═══
