@@ -7,5 +7,5 @@ export const INVENTAR: readonly string[] = [
   'W3·10', 'W3·11', 'W3·12', 'W3·13', 'W3·14',
   'LERNPHASE-AB', 'QS-GP', 'QS-PH', 'SEO-A11Y', 'QS-PERF', 'QS-DATA', 'QS-CURRENCY', 'QS-TOK',
   'W2·6-B', 'W2·6-DATA', 'W2·6a-MAT', 'W2·7-VZUI',
-  'W3·14-Responsive-Audit', 'W3·14-S', 'W3·14-a11y',
+  'W3·14-Responsive-Audit', 'W3·14-Responsive-Defekte', 'W3·14-S', 'W3·14-a11y', 'QS-WISSEN',
 ];
