@@ -342,6 +342,55 @@ grundart-abhängigen G3a/K11-Default ab.
   Versionierung, B3), kann der intern gezeigte Stand vom zitierten abweichen →
   der Stand wird transparent markiert, nicht stillschweigend gleichgesetzt.
 
+### §5a · Inline-Verweis-Linker: Plural, Präambel, Popover-Struktur (W2·5d U-VERWEIS / A7+A10+A11+A13, 10.7.2026)
+
+1. **Plural-Aufzählungen werden gliedweise verlinkt (A10).** Die Öffner
+   «Artikeln N …» (Dativ-Plural) und «die|der Artikel N, M …» (Letzteres nur bei
+   ≥ 2 Gliedern oder Gesetz-Signal) zerlegt `artikelnPluralVerweise` (fedlex.ts)
+   deterministisch in Einzel-Glieder; jedes Glied ist ein eigener Link, die
+   Anzeige bleibt der exakte Quelltext (§1). **Bounded:** die Passus-Kette ist
+   typ-treu (SINGULAR-Schlüsselwort «Absatz/Buchstabe/Ziffer/Satz» = genau EIN
+   Wert; Plural-Form und Abkürzungen = Wertliste mit Glied-Kopf-Guard); die Kette
+   bricht an allem, was kein «Konnektor + Zahl» ist — nie über den Fliesstext
+   hinaus (Referenzfall MWSTG Art. 5 = genau 5 Links art_31/35/37/38/45).
+2. **Auflösungs-Modi mit §1-Vorrang.** Gesetz-Signal am Aufzählungs-Ende
+   (Rangfolge: Klammer-Kürzel ∈ FEDLEX > kuratierter Genitiv-Kurztitel > bare
+   Kürzel ∈ FEDLEX) ⇒ alle Glieder aufs Fremdgesetz. UNTERDRÜCKT (kein Link, nie
+   ein geratener) wird bei: unbekanntem Klammer-Kürzel («(Code civil)»),
+   unauflösbarem ausgeschriebenem Fremdnamen («des Bundesgesetzes vom …»),
+   unbekanntem bare Kürzel («BGSA»), nicht parsebarem Glied («42octies»). Ohne
+   Signal = Self; Self-Glieder linken nur, wenn das Token im eigenen Erlass
+   existiert (§8, kein toter Link).
+3. **Genitiv-Map ist KURATIERT, nie generisch (A11).** `GENITIV_GESETZ`
+   (fedlex.ts) enthält nur eindeutige amtliche Kurztitel-Genitive («der
+   Bundesverfassung»→BV, «des Strafgesetzbuches»→StGB …), jeder Eintrag gegen den
+   amtlichen Kurztitel belegt; generische Wendungen («des Bundesgesetzes», «der
+   Verordnung») bleiben BEWUSST ohne Eintrag. Soft-Hyphens (U+00AD) der
+   Fedlex-Texte werden toleriert.
+4. **aBV-Schutz im Ingress (A11, §1).** Der Ingress ist historisch (wird amtlich
+   nie nachgeführt): Erlasse vor 2000 zitieren dort die BV von 1874 — «Artikel 26
+   der Bundesverfassung» im ArG (1964) meint aBV 26, nicht die heutige
+   Eigentumsgarantie. Präambel-Zeilen laufen darum NUR bei parsebarem Erlassdatum
+   ≥ 2000 durch den Linker (`ingressVerlinkbar`, parts.tsx); sonst reiner Text.
+   Artikel-FLIESSTEXT ist ungegated (BV-Zitate werden dort bei Revisionen
+   amtlich nachgeführt; Belege ASYLG 121a, RVOG 184).
+5. **Verweis-Popover ist strukturiert (A7):** Artikel-Wortlaut → Provenienz-Fuss
+   (§7 a–d) → «Wird zitiert von · Massgebliche Entscheide» → klar abgetrennt
+   «Legt aus · Amtliche Materialien» (`VerweisKontext`, wiederverwendete
+   Verzahnungs-Grammatik: KontextGruppe-Hülle, Richtungs-Label als Text,
+   StatusBadge-Vokabular). Kompakt Top-3 + Zähler + «Alle n»-Link; lazy aus den
+   erlass-lokalen Shards (geteilte Promise-Caches, §15.3); ANS ENDE des Popovers
+   angehängt ⇒ CLS 0 by construction.
+6. **Materialien-Dichte-Regel (A13):** artikelscharfe Kanten prominent zuerst
+   (Fundstellen-Sublabel, Behörden-Kürzel, Dokument-Stand); reine
+   Erlass-Ebene-Kanten dezenter hinter dem Zähler («n Dokumente auf
+   Erlass-Ebene», `<details>` — tastatur-/CLS-fest). Keine Chip-Wüste.
+
+**Gegated:** Unit `fedlex.test.ts` (Plural-Grammatik + Negativfälle + Genitiv-Map)
++ `normText.test.tsx` (SSR-Linkmengen, MWSTG-Regressionsfall) + `verweis-kontext.test.ts`
++ e2e `verweis-u` (P2-Beweise, A9-Throttle, aBV-Negativfall) — Risiko-Pfad ⇒
+`check:gegenpruefung`.
+
 ## §6 · Verweis-Ziele werden nicht geraten
 
 Linkziele kommen aus dem, was Fedlex tatsächlich kodiert / aus dem Register —
