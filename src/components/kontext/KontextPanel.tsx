@@ -5,6 +5,8 @@ import {
   type KontextTyp, type EntscheidRef, type MaterialBezug,
 } from '../../lib/kontext';
 import { ladeLeitfallShard, artikelProEntscheid } from '../../lib/rechtsprechung/norm-index';
+import { botschaftenFuer, type BotschaftBezug } from '../../lib/materialien/botschaften';
+import { useLocale, fedlexLokalisiert } from '../locale';
 import { usePaneSteuerung } from '../layout/usePaneLayout';
 import { KantenChip } from '../verzahnung/KantenChip';
 import { StatusBadge } from '../verzahnung/StatusBadge';
@@ -34,6 +36,7 @@ import {
 
 const MAX_ENTSCHEIDE = 8;
 const MAX_MATERIALIEN = 8;
+const MAX_BOTSCHAFTEN = 8;
 
 /** Korpus-Artikel-Token → Anzeige ('20_a' → '20a'). */
 function anzeigeArtikel(token: string): string {
@@ -131,6 +134,25 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false 
   const softLaw: MaterialBezug[] =
     softLawGeladen && softLawGeladen.key === normKeysKey ? softLawGeladen.refs : [];
 
+  // Entstehungsgeschichte (Paket 2, W2·6, Moat-Hebel 1 «Norm-Kontext-Bus»): die
+  // Botschaften des Bundesrates zur Norm — Genese, semantisch VOR Anwendung/Auslegung.
+  // Nur im Gesetz-Reader (typ==='norm'); auf Entscheid-/Material-Seiten wäre die Genese
+  // zwei Schritte entfernt und würde die Sicht fluten. `null` = Manifest-Ladefehler
+  // (Fetch-Fehler ≠ leer, Finding 15) → ehrlicher Fehlerzustand statt stillem «keine».
+  const { locale } = useLocale();
+  const [botGeladen, setBotGeladen] = useState<{ key: string; refs: BotschaftBezug[] | null } | null>(null);
+  useEffect(() => {
+    if (typ !== 'norm') return;
+    const keys = normKeysKey ? normKeysKey.split(',') : [];
+    let lebt = true;
+    botschaftenFuer(keys).then((r) => { if (lebt) setBotGeladen({ key: normKeysKey, refs: r }); });
+    return () => { lebt = false; };
+  }, [typ, normKeysKey]);
+  const botAktuell = typ === 'norm' && botGeladen?.key === normKeysKey ? botGeladen : null;
+  const botschaftenLaden = typ === 'norm' && !botAktuell;
+  const botschaftenFehler = botAktuell?.refs === null;
+  const botschaften: BotschaftBezug[] = botAktuell?.refs ?? [];
+
   // «via Art. N»-Sublabels (V1.2, Magic Moment 5): nur im Gesetz-Reader (genau
   // EIN normKey) aus dem erlass-lokalen Shard invertiert — kein neuer Datenpfad,
   // derselbe Promise-Cache wie die LeitfallZeile (§5/§15.3). Kein Shard = keine
@@ -185,7 +207,9 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false 
   const softLawLaden = typ !== 'material' && (!softLawGeladen || softLawGeladen.key !== normKeysKey);
 
   const hatSync = normen.length > 0 || alleMaterialien.length > 0 || werkzeuge.length > 0;
-  const istLeer = !zusatzGruppen && !hatSync && !entscheideLaden && !softLawLaden && (entscheide?.length ?? 0) === 0;
+  const istLeer = !zusatzGruppen && !hatSync && !entscheideLaden && !softLawLaden
+    && !botschaftenLaden && !botschaftenFehler && botschaften.length === 0
+    && (entscheide?.length ?? 0) === 0;
 
   return (
     <section aria-labelledby="kontext-titel" className="mt-12 border-t border-line pt-6 space-y-5 max-w-reading">
@@ -202,6 +226,57 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false 
         <div className="space-y-5">
           {/* Reader-eigene Gruppen zuerst (V1.3: Entscheid-Richtungen am Fuss). */}
           {zusatzGruppen}
+
+          {/* Entstehungsgeschichte — Botschaften des Bundesrates (Paket 2, W2·6,
+              Moat-Hebel 1). Genese der Norm: semantisch VOR Anwendung (Entscheide) und
+              Auslegung (Materialien). Nur Gesetz-Reader. §8: maschinell aus dem amtlichen
+              Fedlex-Projekt-Graphen zugeordnet, massgeblich bleibt die amtliche Quelle. */}
+          {(botschaftenFehler || botschaften.length > 0) && (
+            <KontextGruppe titel="Entstehungsgeschichte" richtung="Botschaft des Bundesrates"
+              anzahl={botschaften.length}
+              hinweis={botschaftenFehler
+                ? undefined
+                : <><span className="num">{botschaften.length}</span> Botschaft{botschaften.length === 1 ? '' : 'en'} des Bundesrates — maschinell über den amtlichen Fedlex-Projekt-Graphen zugeordnet (ab ~2000), fachlich nicht geprüft; massgeblich bleibt die amtliche Quelle.</>}>
+              {botschaftenFehler ? (
+                <p className="text-body-s text-warn-700">
+                  Entstehungsgeschichte konnte nicht geladen werden. Amtliche Quelle:{' '}
+                  <a href="https://www.fedlex.admin.ch" target="_blank" rel="noopener noreferrer" className="text-brass-700 hover:underline">Fedlex</a>.
+                </p>
+              ) : (
+                <>
+                  <ul className="flex flex-col gap-1.5">
+                    {botschaften.slice(0, MAX_BOTSCHAFTEN).map((b) => {
+                      const titel = (locale === 'fr' && b.titelFr) || (locale === 'it' && b.titelIt) || b.titel;
+                      return (
+                        <li key={b.key} className="text-body-s">
+                          <a href={fedlexLokalisiert(b.quelleUrl, locale)} target="_blank" rel="noopener noreferrer"
+                            className="no-underline hover:text-brass-700">
+                            <span className="num text-ink-500">{kurzDatum(b.stand)}</span>
+                            {' — '}<span className="font-medium">{titel}</span>
+                          </a>
+                          {b.nummer && b.parlamentUrl && (
+                            <>
+                              {' '}
+                              <a href={b.parlamentUrl} target="_blank" rel="noopener noreferrer"
+                                title={`Geschäft ${b.nummer} auf parlament.ch (Curia Vista)`}
+                                className="num text-micro text-ink-500 hover:text-brass-700">
+                                · Nr. {b.nummer} ↗
+                              </a>
+                            </>
+                          )}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                  {botschaften.length > MAX_BOTSCHAFTEN && (
+                    <p className="text-micro text-ink-500">
+                      … und <span className="num">{botschaften.length - MAX_BOTSCHAFTEN}</span> weitere. Vollständige Liste über die amtliche Quelle (Fedlex).
+                    </p>
+                  )}
+                </>
+              )}
+            </KontextGruppe>
+          )}
 
           {/* Normen (für Entscheid- und Material-Reader). */}
           {!ohneNormen && normen.length > 0 && (
