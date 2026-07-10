@@ -75,6 +75,7 @@
     "plan:next": "vite-node scripts/plan/next.ts",
     "plan:set": "vite-node scripts/plan/set.ts",
     "check:plan": "vite-node scripts/plan/check.ts",
+    "struktur:rotieren": "python3 .claude/hooks/struktur-rotieren.py",
     "check:paritaet": "vite-node scripts/datenhaltung/check-paritaet.ts",
     "check:datenhaltung": "vite-node scripts/datenhaltung/check-datenhaltung.ts",
     "datenhaltung:build": "vite-node scripts/datenhaltung/build.ts",
