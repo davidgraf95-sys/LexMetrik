@@ -275,7 +275,11 @@
      Layout/Paint. Inhalt bleibt im DOM (Suche/Anker/Screenreader/Crawler
      unberührt), nur der Render-ZEITPUNKT ändert (§6.4). contain-intrinsic-size
      `auto` merkt die echte Höhe nach erstem Render → kein Scroll-Springen.
-     Ältere Browser ohne content-visibility rendern normal (sicherer Fallback). */
+     Ältere Browser ohne content-visibility rendern normal (sicherer Fallback).
+     W2·5d U-POSITION/A2: der flache 320px-Wert ist nur noch der FALLBACK — jeder
+     Artikel überschreibt `contain-intrinsic-size` inline mit einer inhalts-
+     proportionalen Schätzung (schaetzeArtikelHoehe, ArtikelLeser) → proportionaler
+     Scrollbalken bei langen Gesetzen, ohne Logikverlust (content-visibility bleibt). */
   .nt-art-cv { content-visibility: auto; contain-intrinsic-size: auto 320px; }
   /* Anker-Offset für #art-/#fn-/Sektions-Sprünge: folgt Header + Tab-Streifen
      dynamisch (C4-Konsistenz), statt der statischen Magic-Number 8.5rem — so

@@ -106,6 +106,55 @@ export function berechneSekLabelById(sektionen: Sektion[]): Map<string, string> 
   return map;
 }
 
+// ─── W2·5d U-POSITION (A2): per-Artikel-Höhenschätzung ──────────────────────
+//
+// Wurzel des Scrollbalken-Bugs (David 5.7.2026): die Artikel-Knoten tragen
+// `content-visibility:auto` mit EINEM flachen `contain-intrinsic-size: auto 320px`
+// (index.css) — ein 40-Absatz-Artikel (z. B. OR Art. 336c-Kontext) und ein
+// Einzeiler reservieren beide 320px Platzhalter-Höhe. Die Summe der Platzhalter
+// (= die Dokumenthöhe VOR dem Rendern) weicht dadurch stark von der echten Höhe
+// ab → der Scrollbalken ist nicht proportional («Daumen ganz nach unten = nur
+// Gesetzes-Mitte», und die Höhe wächst beim Durchscrollen nach).
+//
+// Fix (§15-treu, KEIN Logikverlust): jeder Artikel bekommt eine DETERMINISTISCH
+// aus seinem Snapshot geschätzte Platzhalter-Höhe (inline `contain-intrinsic-size`,
+// überschreibt den 320px-Default der `.nt-art-cv`-Klasse). `content-visibility:auto`
+// BLEIBT — Off-Screen-Artikel überspringen weiterhin Layout/Paint, jeder Knoten
+// bleibt im DOM (Ctrl+F/Anker/Screenreader/Druck unberührt). Nur der Platzhalter-
+// Schätzwert wird von einer Konstante auf eine inhalts-proportionale Zahl gehoben →
+// die Summe (Dokumenthöhe) trifft die Realität deutlich besser, der Scrollbalken
+// wird proportional. Sobald ein Artikel EINMAL gerendert wurde, merkt sich der
+// Browser über das `auto`-Schlüsselwort ohnehin die ECHTE Höhe (kein Springen).
+//
+// Reine Darstellung (§3) + rein deterministisch (§2): Funktion nur des Snapshots,
+// keine DOM-/Zeitzugriffe → unit-testbar. Golden/Prerender unberührt (der
+// String-Builder `erlassVolltextHtml` emittiert kein `nt-art-cv` — die
+// content-visibility-Optimierung existiert nur im Client-Reader).
+//
+// Kalibrierung: Lesespalte `max-w-reading` (≈ 40rem ≈ 640px), Serif-Body ~18px ×
+// 1.65 ≈ 30px/Zeile, ~68 Zeichen je Lesezeile. Die Konstanten müssen nicht
+// pixelgenau sein — für einen proportionalen Balken zählt das VERHÄLTNIS der
+// Artikel zueinander. Bewusst leicht grosszügig (echte Höhe ≤ Schätzung), damit
+// die Höhe beim Rendern eher schrumpft (Daumen kriecht hoch) als „wegläuft".
+export const A2_HOEHE_FALLBACK = 320; // = index.css-Default; Schätzung ohne Blöcke
+function textZeilen(text: string | undefined, proZeile = 68): number {
+  return Math.max(1, Math.ceil((text?.length ?? 0) / proZeile));
+}
+export function schaetzeArtikelHoehe(e: NormSnapshot): number {
+  const ZEILE = 30;        // px je Fliesstext-Zeile
+  let h = 104;             // Artikelkopf: «Art. N» + Trenner (border-t + pt-7 mt-7) + Basisabstand
+  if (e.titel) h += 30;    // amtlicher Randtitel/Sachüberschrift (eine Zeile)
+  for (const b of e.bloecke) {
+    // M13-Annex-Zwischenüberschrift (titel = Heading-Tiefe): kompakte Titelzeile.
+    if (b.titel) { h += 40; continue; }
+    h += textZeilen(b.text) * ZEILE + 10;       // Absatz + Abstand (space-y-5 ≈ 10px)
+    for (const it of b.items ?? []) h += textZeilen(it.text, 62) * (ZEILE - 2) + 4; // lit./Ziff.
+    if (b.tabelle) h += b.tabelle.length * 28 + 14;                                  // Füllpunkt-Tarif
+    if (b.mehrspaltig) h += (b.mehrspaltig.zeilen.length + 1) * 30 + 14;             // Mehrspalten-Tabelle inkl. Kopf
+  }
+  return Math.max(120, Math.round(h));
+}
+
 // Erlass als Gesamtheit herunterladen (client-seitig, reiner Text).
 export function baueErlassText(
   erlass: BrowseErlass,

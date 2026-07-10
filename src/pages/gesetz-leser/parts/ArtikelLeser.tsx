@@ -15,6 +15,7 @@ import {
 import type { BrowseErlass } from '../../../lib/normtext/browse-typen';
 import type { NormSnapshot } from '../../../lib/normtext/typen';
 import { margStufeStil, fnTextMitLinks, baueZitat } from '../helpers';
+import { schaetzeArtikelHoehe } from '../berechnungen';
 
 // Schaufenster-Chips: nur die wenigen zentralen Leitfälle direkt zeigen (Reihenfolge
 // = `gewicht` aus dem Shard), Rest hinter «+n weitere». Bewusst klein, kein Panel.
@@ -216,6 +217,11 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
   // «Struktur-Trenner», wie oberste Sektionen/Ingress). Reine Darstellung (§3).
   return (
     <article id={`art-${e.artikel}`} data-normtext-linie data-anhang={istAnhang ? '' : undefined}
+      // W2·5d U-POSITION/A2: inhalts-proportionale content-visibility-Platzhalter-
+      // höhe (überschreibt den flachen 320px-Default der .nt-art-cv-Klasse) → der
+      // Scrollbalken wird proportional. `content-visibility:auto` (Klasse) bleibt;
+      // reiner Platzhalter-Schätzwert, kein DOM-/Inhalts-Eingriff (§15/1).
+      style={{ containIntrinsicSize: `auto ${schaetzeArtikelHoehe(e)}px` }}
       className={`nt-art-cv group relative z-0 nt-anker border-t ${istAnhang ? 'border-rule-struktur pt-9 mt-9' : 'border-rule-artikel pt-7 mt-7'} first:border-t-0 first:mt-0 first:pt-0 transition duration-200 group-has-[[data-lese]:hover]/lese:opacity-80 has-[[data-lese]:hover]:!opacity-100 has-[[data-lese]:hover]:z-[5]`}>
       {/* Fedlex-Stil (Auftrag David): «Art. N» + Randtitel/Sachüberschrift stehen
           IMMER OBERHALB des Absatztextes (keine seitliche Randspalte mehr), damit
