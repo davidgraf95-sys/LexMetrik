@@ -1165,3 +1165,61 @@ Voller `npm run gate` grün (golden byte-gleich, `check:*` inkl. `gegenpruefung`
     `leser-kopf-g2b` (inkl. A4-a11y-Probe + A3-Breadcrumbs), neuer
     `leser-kopf-a9` (A9-Throttle CI?4:6, CLS 0, 0 Konsolenfehler), `a11y` (axe),
     `gesetze-ux-g3a/g3b`, `verzahnung` (Split-View) grün.
+
+### 10.8 · Anmerkungs-Nachzug A19–A25 (David 10.7.2026) — Einordnung, Spec-Heimat V2
+
+**Quelle (WÖRTLICH massgeblich):** Davids Anmerkungen 10.7.2026, im Repo persistiert
+als [`docs/ux-audit-2026-07/ANMERKUNGEN-DAVID-2026-07-10.md`](docs/ux-audit-2026-07/ANMERKUNGEN-DAVID-2026-07-10.md)
+(per Pathspec committet, §12 Ziff. 2, KA5-Muster). **Spec-Heimat = `FAHRPLAN-GESETZESDARSTELLUNG-V2.md`**
+(Ultracode-Recherche 10.7., 17 Agenten, read-only + Fable-Verifikation): dort stehen
+alle Befund-Root-Causes (§1), Massnahmen mit file:line-Belegen (§2), Entscheidungsliste
+(§3), Reihenfolge/Kollisionen (§4). Dieser Abschnitt DUPLIZIERT die Spec NICHT — er
+ordnet Davids Nachzug additiv als neue A-Nummern in das A1–A18-Muster ein (§14 Ziff. 2)
+und verweist je Einheit auf die V2-Massnahme. **NUR PLAN — Bau erst mit separatem
+David-Go** (anders als die A1–A18-Welle, deren Go am 5.7. erteilt wurde). Ausführung
+als Opus-Einheiten; Fable orchestriert nur.
+
+| Einheit | Anmerkungen | V2-Massnahme (Spec-Heimat) | Kern (Wortlaut-Anker) | Verhältnis zu §10 / Kollision |
+|---|---|---|---|---|
+| **A19** | Fussnoten VZG + Präambel-Extraktor | **FN-1 + FN-2 (+ Drop-Fix `disp_*`)**, V2 §2 F1 | «dort sind fussnoten nicht verklinkt im text» (VZG). Extraktor-Fallback: fnbck-leer ⇒ nr aus führendem `<sup>N</sup>` der Definition (matcht 226/226 VZG); Artikel-Regex um `disp_*/art_*` erweitern (17 verschluckte VZG-Noten); Präambel-Marker-Nummern je Kopf-Zeile erfassen (`KopfZeile.fnNrs`). | **Risiko-Pfad** (`scripts/normtext` + `kopf-extrahiere.ts` + Sidecars) ⇒ `check:gegenpruefung` Pflicht. **SOFORT startbar, kollisionsfrei** (kein `parts.tsx`/`inhalt.tsx`; Reader-Marker-Mechanik greift von selbst). Vorbedingung `fedlex-cache.sh` + «0 übersprungen»; abhängig von **Fedlex-P1-a/b**-Pin-Refresh. |
+| **A20** | Präambel-Fussnoten inline | **FN-3**, V2 §2 F1 | «präambeln haben auch keine verlinkten fussnoten». FnRef-Marker je Präambel-Zeile im `ErlassKopfBlock` (HINTER dem U-VERWEIS-A11-NormText-Element) + Anker `fn-kopf-${nr}`. Wirkt für OR sofort, für VZG nach A19. | **HART NACH U-VERWEIS-Merge** (belegte `parts.tsx`-Kollision; baut auf dem A11-NormText-Unterbau auf). Reine Darstellung. |
+| **A21** | Absatz-Zuordnung Alt-Form | **FN-4**, V2 §2 F1 | Absatz-Zuordnung für Alt-Form-Erlasse (VZG `absatz=null` ⇒ Marker am Absatz statt Artikelebene). | Bündelt mit A19-Regeneration; Risiko-Pfad-nah (Extraktions-Metadaten). |
+| **A22** | Kopf nützlicher + Fussnoten-Anwahl | **K-1 + K-2**, V2 §2 F2 | «der kopf des gesetzes nützlicher … fussnoten anwahl etc dort». K-1: «in Kraft seit …» in die Meta-Zeile (SPARQL `jolux:dateEntryInForce` an die Currency-Pipeline; 54 Erlassdatum-Lücken = Pin-Staleness, kein neuer Code). K-2: Fussnoten-Chip neben ◧Ansicht (Zähler N aus Sidecar; Toggle mit Apparat-Sprung, §8-ehrlich vor A19). | **NACH U-VERWEIS-Merge, in EINEM koordinierten Kopf-PR mit U-PDF** (Slot-Layout Ansicht·Fussnoten·Download nur einmal umbauen). K-1-Anteil (SPARQL/Currency) Risiko-Pfad-nah ⇒ Gegenprüfung. |
+| **A23** | BGE-Steuerung Rubrik-Ansicht | **B-1 + B-2 (Kappung 5→10)**, V2 §2 F3 | «bei bundesgerichtsentscheiden … abwahl möglich … in rubrik ansicht. mit möglichkeit auswahl wie lange zurück bge». B-1: 4. Switch «Entscheide» (Default AN, CSS `data-leitfaelle`). B-2: Zeitraum «alle·20·10·5 J.» (Default alle) über `r.datum`; **Kappung `LEITFAELLE_SICHTBAR` 5 → 10** (David-Entscheid 10.7.). Store-Abo als Primitiv-Selektor (§15). | Golden-neutral (Leitfall-Zeile client-only). **Kollision `parts.tsx`/`inhalt.tsx` ⇒ nach U-VERWEIS-Merge** (V2 §4). Kein Datenbedarf. |
+| **A24** | Liniengliederung reparieren | **L-1 + L-2 + L-3** (L-4 ✗), V2 §2 F4 | «funktioniert das mit der liniengliederung praktisch nicht». L-1: Einzug-Cap 3→5 + Mobil-Token. L-2: Guide-Kontrast moderat anheben (~18/24 %). **L-3: Auto-Default-Umkehr — ZGB/OR erhalten ihren EINEN Guide wieder (Umkehr #161), David 10.7. FREIGEGEBEN.** L-4 (Ton-Bänder) ENTFÄLLT (David-Entscheid Farbe-nur-Referenzschicht). | Golden-neutral, kein Datenbedarf, client-seitig. **Kollision `inhalt.tsx` ⇒ nach U-VERWEIS-Merge.** Referenz-Verdikte/Invarianten `check-linien-kanon.ts` + DESIGN-REGLEMENT §4b umstellen. |
+| **A25** | Mehr Farben (Referenzschicht) | **C-1 + C-2 + C-3**, V2 §2 F5 | «gerne auch noch mit mehr farben». **Doktrin: Farbe NUR Referenz-/Verzahnungsschicht (Chips/Badges/Kopf), Normtext-Körper farbfrei** (David-Entscheid). C-1: KantenChip `kategorie`-Prop (norm=brass byte-id / entscheid=slate), StatusBadge Revisions-↻ → warn. C-2: Overline-Farbpunkte + Currency-Tonung (nach U-VERWEIS, im Kopf-PR). C-3: NormChip/Materialien (DEFER, U-VERWEIS-Kollision). | Golden-neutral (CSS/Token-only). **C-1 SOFORT startbar, kollisionsfrei** (KantenChip/StatusBadge/index.css). C-2/C-3 nach U-VERWEIS. Kontrast-Messung als Gate (slate auf paper dunkel 3.31 knapp). |
+| **DEFER** | wortgenaue Marker | **FN-5 = M14/G14**, V2 §2 F1 | wortgenaue Inline-Position (Offset im Haupt-Snapshot) — einziger Pfad mit grossem golden-Haupt-Diff. | **Deferiert hinter QS-PERF/U-POSITION, separates David-Go** (Entscheid 10.7. Ziff. 4). |
+
+**Deklarierte Überstimmungen (an Ort, wie §10.5):**
+
+- **§3.1 / §10.5 «genau 3 Toggles» ist durch Davids Auftrag 10.7. ÜBERSTIMMT (A23):**
+  der BGE-«Entscheide»-Switch ist der VIERTE Toggle im «Ansicht»-Dropdown (plus
+  Zeitraum-Selektor). Der §3.1-Grundsatz «keine Wucherung» bleibt als Leitplanke; die
+  konkrete Zahl «3» gilt nicht mehr. e2e `leser-optionen.e2e.ts:68` `toHaveCount(3)`→4
+  ist deklarierter Teil des A23-PRs; Trigger-`title` des Menüs erweitern.
+- **U-LINIEN-Vermerk nachgeführt (#161 «geheilt» vs. Re-Meldung 10.7.):** der
+  A8/U-LINIEN-Ausführungsvermerk (§10.7, «Davids A8-Befund geheilt») bezog sich auf
+  die aufbau-basierte Regel (ZGB ruhig / ArG sichtbar). David re-meldet die Linien am
+  10.7. dennoch als «praktisch nicht funktionierend» — **das Delta ist kein Regress von
+  U-LINIEN, sondern (a) der bewusste Auto-Default, der bei tiefen Kodifikationen
+  (ZGB/OR, `strukturTiefe ≥3`) den Guide GANZ ausschaltet, und (b) der ~1.2:1-Kontrast
+  des einen Guides** (V2 §1). A24/L-3 kehrt (a) um (Umkehr #161, David 10.7.
+  freigegeben), L-2 hebt (b). Der «geheilt»-Vermerk bleibt für die Regel-Achse gültig,
+  wird durch A24 aber um Default-Umkehr + Kontrast ergänzt (nicht widerrufen).
+
+**Reihenfolge-/Kollisionsregeln (V2 §4, Kurzfassung — Detail in der Spec):**
+
+1. **Sofort, parallel zu U-VERWEIS (belegt kollisionsfrei):** A19 (FN-1+Drop-Fix+FN-2,
+   `scripts/normtext`+Sidecars) ‖ A25/C-1 (KantenChip/StatusBadge/index.css). Liefert
+   Davids Hauptbefund (VZG-Marker) am schnellsten.
+2. **Harte Regel:** KEINE Einheit, die `parts.tsx` oder `inhalt.tsx` berührt, vor dem
+   **U-VERWEIS-Merge** (A20/A22/A23/A24/A25-C2 warten). Precheck vor jeder Einheit:
+   `git worktree list` + `git diff main...<branch> --name-only` + `git diff HEAD`.
+3. **Nach U-VERWEIS:** EIN koordinierter Kopf-PR (A22 K-2 + A23 B-1/B-2 + U-PDF-Slot)
+   → A20/FN-3 → A24/L-1/L-2/L-3 → A25/C-2, danach C-3.
+4. **Daten-Regenerationen bündeln:** A19/FN-1-Regeneration (22 Erlasse) und
+   A22/K-1-Erlassdatum-Refresh (54 Sidecars) hängen BEIDE an frischen Pins ⇒ EIN
+   Regenerationslauf nach **Fedlex-P1-a/b-Pin-Refresh**, EIN Diff-Audit (OR/ZGB/StGB/BV
+   byte-gleich als Nicht-Regressions-Beweis). Vor jeder Regeneration `fedlex-cache.sh`
+   + «0 übersprungen»-Kontrolle (sonst grüner No-op-Lauf).
+5. **Deferiert:** FN-5/M14 hart nach QS-PERF (separates David-Go).
