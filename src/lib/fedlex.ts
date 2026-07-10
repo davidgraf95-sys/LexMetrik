@@ -880,7 +880,7 @@ export function artikelnPluralVerweise(text: string): PluralRegion[] {
       if (!am) break;
       glieder.push({ roh: am[0], start: pos, end: pos + am[0].length });
       pos += am[0].length;
-      let kette = konsumierePassusKette(text, pos);
+      const kette = konsumierePassusKette(text, pos);
       pos = kette.pos;
       // B1 (Gegenprüfungs-Befund 10.7.2026, BETMG 8a/FAV 44a/FinfraV 129): nach
       // einer PLURAL-«Absätze/Ziffern»-Gruppe gehört ein «und|oder N» OHNE
