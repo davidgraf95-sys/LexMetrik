@@ -20,6 +20,10 @@ type Rezept = {
   ariaLabel: string;
   erklaerung: string;
   ton: string;
+  /** Farbton der Glyph-Variante (Farb-Wörterbuch V2·C-1, §4b-B). Default
+   *  `text-brass-700` (★ = Marke/Hervorhebung). Der Revisions-↻ trägt `text-warn-700`,
+   *  weil er ein echter Fassungs-Vorbehalt ist — kein neutraler brass-Akzent. */
+  glyphTon?: string;
   /** Nur wenn ein Glossar-Eintrag existiert → `interaktiv` wird zum Begriff-Tooltip. */
   glossar?: GlossarSchluessel;
 };
@@ -50,6 +54,7 @@ const REZEPT: Partial<Record<StatusPraedikat, Rezept>> = {
     ariaLabel: 'Norm seit dem Entscheid revidiert',
     erklaerung: 'Die zitierte Bestimmung wurde nach diesem Entscheid geändert — der Entscheid legt die damals geltende Fassung aus.',
     ton: 'lc-badge-soft',
+    glyphTon: 'text-warn-700',
   },
   // V3 vorgezogen durch E6a·M5 (FAHRPLAN-VERZAHNUNG-UI §V3): der Material-Reader
   // hostet KEINEN Volltext — nur bibliografische Angaben + amtlichen Live-Link
@@ -88,7 +93,7 @@ export function StatusBadge({ praedikat, variant = 'voll', interaktiv = false, d
     if (!r.glyph) return null;
     return (
       <span role="img" aria-label={ariaLabel} title={titel}
-        className={`text-brass-700 ${className}`}>
+        className={`${r.glyphTon ?? 'text-brass-700'} ${className}`}>
         {r.glyph}
       </span>
     );

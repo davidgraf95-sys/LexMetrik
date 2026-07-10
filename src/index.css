@@ -455,6 +455,11 @@
     font-size: .75rem; font-weight: 500; padding: 2px 8px;
     min-height: 24px; /* WCAG 2.2 Target-Size (2.5.8): ≥24px Tap-Ziel (Auftrag David 26.6.2026) */
   }
+  /* Farb-Wörterbuch V2·C-1 (§4b-B): Rechtsprechungs-Kante = slate-Tick statt
+     brass. Nur die Tick-Farbe wechselt (Anatomie identisch); Hover trägt der Chip
+     via Utilities. slate-500 auf well = 4.81 hell / 3.47 dunkel (≥3:1 UI-Kontrast,
+     WCAG 1.4.11) — --slate-500 in html.dark bewusst NICHT überschrieben. */
+  .lc-chip-entscheid { border-left-color: var(--slate-500); }
 
   /* Glas-Effekt für sticky Chrome (Topbar/TabStreifen) — eine Quelle statt
      byte-identischem Inline-Style an zwei Stellen. */
