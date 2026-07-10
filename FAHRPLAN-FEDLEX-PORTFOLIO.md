@@ -250,6 +250,31 @@ Fedlex hat 56 future-dated Konsolidierungen im Triplestore (z. B. OR ab 2026-10-
 
 ## Paket 2 — Botschaften / Bundesblatt (P1, Vorzeige-Paket)
 
+> **✅ AUSGEFÜHRT 10.7.2026 (Opus-Bau-Session; Branch `feat/fedlex-p2-botschaften`; Go David «go zu allem»; Trailer `Roadmap: W2·6`).**
+> **POC live (Finding 5 erfüllt):** Reverse-Kette verifiziert, DSG→2 reproduziert (17.059+03.016); korpusweite Füllraten
+> gemessen VOR dem Bau — **401 Botschaften** über die 218 Volltext-Erlasse, Datum 100 % · Titel DE/FR/IT je 100 % ·
+> Curia 99,8 % · 27 Mantelerlasse · 97/218 Erlasse mit ≥1 Botschaft (Rest = Verordnungen ohne Botschaft, ehrlicher
+> Leerzustand). **Performance-Härtung:** STRSTARTS (lexikalischer Präfix-Join, ~1,5 s/SR) durch die direkte Graph-Kante
+> `?proj jolux:draftHasLegislativeTask ?event` ersetzt = **260× schneller** (Korpus 2,6 s), Ergebnismenge byte-gleich.
+> **Determinismus-Fix:** eine Botschaft kann mehreren Projekt-Knoten zugeordnet sein (`fga/2016/467`→2 projs) → projEli/Curia
+> deterministisch aus dem kleinsten proj (zwei Läufe byte-identisch).
+> **Join-Felder (Finding 1, P0):** `projEli`/`ocUris`/`botschaftDate` persistiert → Paket 5 kann joinen. **i18n (Finding 10):**
+> `titel_de/fr/it`. **Key (Finding 9):** `BOTSCHAFT-<jahr>-<fga-num>` (fga-intrinsisch, rebuild-fest, dedupe-korrekt — bewusste
+> Abweichung vom `<KÜRZEL>`-Format, weil Kürzel bei Mantelerlassen instabil wäre; disclosed).
+> **Speicher:** Botschaften NICHT im in-Bundle `MATERIAL_REGISTER` (§15), sondern build-zeitlich via `ALLE_MATERIALIEN` in die
+> lazy `register.json`-Projektion gemerged (727 Materialien); `check:paritaet` deckt register.json bereits (byte-Roundtrip),
+> `daten-manifest.json` nachgezogen. **Bridge B1 (Moat-Hebel 1):** «Entstehungsgeschichte»-Gruppe IM bestehenden `KontextPanel`
+> (Norm-Kontext-Bus, alle 3 Instanzen), kein Silo — Genese neben Anwendung/Auslegung/Werkzeug an einer Stelle. Locale-Titel
+> (Finding 10), fedlexLokalisiert-Link, Curia→parlament.ch (AffairId live verifiziert), Fetch-Fehler≠leer (Finding 15).
+> **Neu/erweitert:** `scripts/materialien/botschaften-generieren(.ts/-run.ts)`, `check-botschaften-netz.ts`,
+> `src/lib/materialien/{botschaften.generated.ts,botschaften.ts,typen.ts,register.ts}` (BehoerdeId `BR`, DoktypId `botschaft`),
+> `material-manifest.ts`/`check-materialien.ts` (Botschaften kuratiert-äquivalent + Join-Feld-Integrität), `KontextPanel.tsx`,
+> 2 Test-Dateien. **Tore grün:** tsc · lint (0 Fehler) · vitest (223 Dateien / 3636+14) · build (727 Material-Seiten) ·
+> check:materialien · check:botschaften-netz (DSG→2) · check:paritaet · check:datenhaltung. Gegenprüfung-Glob deckt
+> `scripts/materialien/**` + `public/materialien/*.json` bereits (Rot-Auslösung verifiziert). **Gegenprüfung bestanden**
+> (unabhängiger Opus-Adversarial gegen Fedlex-SPARQL/fedlex/parlament). Beleg: `bibliothek/materialien/botschaften-2026-07-10.md`.
+> **OFFEN (Nicht-Ziel P1):** kein Text-Snapshot (P2, geparkt bis nach 1.12.2026); Pre-2000 nur Live-Link.
+
 ### Ziel & Nicht-Ziel
 **Ziel:** Auf jeder Bund-Gesetzesseite ein Abschnitt **«Entstehungsgeschichte»** mit den zugehörigen Botschaften des Bundesrats — Datum, Titel, Fedlex-Volltext-Link, Parlaments-/Curia-Nummer (→ parlament.ch). Kernwert = **automatische Verknüpfung Gesetz→Botschaft** über den Gesetzgebungs-Projekt-Graphen (kein Anbieter verzahnt Norm + Gesetzesgeschichte + Rechner an einer Stelle).
 

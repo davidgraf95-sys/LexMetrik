@@ -32,6 +32,10 @@ export const BEHOERDEN: ReadonlyArray<Behoerde> = [
   { id: 'BJ', kuerzel: 'EHRA', name: 'Eidg. Amt für das Handelsregister (Bundesamt für Justiz)', rang: 5 },
   { id: 'FINMA', kuerzel: 'FINMA', name: 'Eidgenössische Finanzmarktaufsicht', rang: 6 },
   { id: 'IGE', kuerzel: 'IGE', name: 'Eidg. Institut für Geistiges Eigentum', rang: 7 },
+  // Bundesrat: Botschaften (Entstehungsgeschichte, Paket 2, W2·6). rang zuletzt →
+  // die ~400 generierten Botschaften stehen in der Browse-Rubrik hinter den
+  // kuratierten Behörden-Publikationen (Doktyp-Filter «Botschaft» trennt sie).
+  { id: 'BR', kuerzel: 'BR', name: 'Bundesrat (Botschaften)', rang: 8 },
 ];
 
 export const BEHOERDE_RANG: Record<BehoerdeId, number> = Object.fromEntries(
@@ -59,6 +63,7 @@ export const DOKTYPEN: ReadonlyArray<Doktyp> = [
   { id: 'richtlinie', label: 'Richtlinie' },
   { id: 'anleitung', label: 'Anleitung' },
   { id: 'taetigkeitsbericht', label: 'Tätigkeitsbericht' },
+  { id: 'botschaft', label: 'Botschaft' },
   { id: 'mitteilung', label: 'Praxismitteilung' },
 ];
 
