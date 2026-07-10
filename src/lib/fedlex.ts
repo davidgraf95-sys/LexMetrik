@@ -409,15 +409,18 @@ const GENITIV_GESETZ: ReadonlyArray<readonly [string, FedlexGesetz]> = [
 ];
 const GENITIV_BY_NAME = new Map<string, FedlexGesetz>(GENITIV_GESETZ);
 // Für die Regex-Alternation: längste zuerst (kein Präfix frisst einen längeren
-// Namen), escaped.
+// Namen), escaped. Fedlex-HTML trägt in langen Wörtern SOFT HYPHENS (U+00AD,
+// z. B. «Zivilgesetz­bu­ches») — zwischen den Buchstaben wird darum
+// optional ­ toleriert (reine Anzeige-Trennstelle, kein Inhalt).
 const GENITIV_NAMEN_ESC = [...GENITIV_GESETZ]
   .map(([n]) => n)
   .sort((a, b) => b.length - a.length)
-  .map((n) => n.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+  .map((n) => n.split('').map((c) => c.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('­?'));
 
-/** Kuratierter ausgeschriebener Genitiv-Name → Fedlex-Kürzel (exakter Treffer). */
+/** Kuratierter ausgeschriebener Genitiv-Name → Fedlex-Kürzel (exakter Treffer;
+ *  Soft-Hyphens U+00AD werden vor dem Lookup entfernt — reine Trennstellen). */
 export function erkenneGenitivGesetz(name: string): FedlexGesetz | null {
-  return GENITIV_BY_NAME.get(name.trim()) ?? null;
+  return GENITIV_BY_NAME.get(name.replace(/­/g, '').trim()) ?? null;
 }
 
 // Direktlink aus einem Normverweis-Text, z. B. 'Art. 335c Abs. 1 OR' →
@@ -830,6 +833,13 @@ const P_SIGNAL_RE = new RegExp(
 // Unauflösbarer Fremdname am Aufzählungs-Ende («des Bundesgesetzes über …», «der
 // Verordnung …») → §1-Unterdrückung (kein geratener Self-Link).
 const P_FREMD_UNAUFL_RE = /^\s*(?:des|der|über|vom)\s+[A-ZÄÖÜ]/;
+// Unbekanntes bare KÜRZEL direkt nach der Aufzählung («… Artikeln 2 und 3 BGSA»,
+// BGSA ∉ FEDLEX): Fremdgesetz-Signal, das wir nicht auflösen können → §1-
+// Unterdrückung, nie ein falscher Self-Link (Korpus-Fund AHVV art 34; dieselbe
+// Muster-Regel wie M12 im Singular-Linker: ≥2 Grossbuchstaben oder Binnen-
+// Grossbuchstabe). Gewöhnliche grossgeschriebene Substantive («… Beiträge»)
+// matchen NICHT (nur EIN führender Grossbuchstabe).
+const P_FREMD_KUERZEL_RE = /^\s*(?:[A-ZÄÖÜ]{2,}|[A-ZÄÖÜ][a-zäöü]*[A-ZÄÖÜ]\w*)/;
 
 function konsumierePassusKette(text: string, pos: number): number {
   for (;;) {
@@ -875,10 +885,11 @@ export function artikelnPluralVerweise(text: string): PluralRegion[] {
       fremd = sm[2] ? erkenneGenitivGesetz(sm[2]) : kuerzel ? erkenneFedlexGesetz(kuerzel) : null;
       if (fremd) end = pos + sm[0].length;
       else unterdruecken = true; // Klammer-Kürzel ∉ FEDLEX → nie ein Falsch-Ziel (§1)
-    } else if (P_FREMD_UNAUFL_RE.test(rest) || /^\d/.test(rest)) {
-      // «des <unbekannter Fremdname>» ODER abgebrochene Aufzählung (nächstes
-      // Zeichen ist eine Zahl = ein nicht parsebares Glied wie «42octies») —
-      // das Ziel ist nicht sicher bestimmbar → kein Link (§1).
+    } else if (P_FREMD_UNAUFL_RE.test(rest) || P_FREMD_KUERZEL_RE.test(rest) || /^\d/.test(rest)) {
+      // «des <unbekannter Fremdname>», ein unbekanntes bare KÜRZEL («… BGSA»)
+      // ODER eine abgebrochene Aufzählung (nächstes Zeichen ist eine Zahl = ein
+      // nicht parsebares Glied wie «42octies») — das Ziel ist nicht sicher
+      // bestimmbar → kein Link (§1).
       unterdruecken = true;
     }
     // «die|der Artikel»-Öffner nur bei echter Aufzählung ODER Gesetz-Signal

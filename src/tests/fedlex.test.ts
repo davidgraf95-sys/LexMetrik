@@ -450,3 +450,26 @@ describe('fremdRoutingFormB — Genitiv-Kurztitel OHNE Klammer (A11-Erweiterung)
     expect(fremdRoutingFormB(' des Bundesgesetzes über die Alters- und Hinterlassenenversicherung gilt', '5')).toBeNull();
   });
 });
+
+// Korpus-Funde 10.7.2026 (U-VERWEIS-Gegenprüfungsvorbereitung): zwei §1-Härtungen.
+describe('artikelnPluralVerweise — Korpus-Härtungen (§1)', () => {
+  it('unbekanntes bare KÜRZEL nach der Aufzählung ⇒ unterdrückt («Artikeln 2 und 3 BGSA», AHVV-Fund)', () => {
+    const rs = artikelnPluralVerweise('im vereinfachten Verfahren nach den Artikeln 2 und 3 BGSA haben die Arbeitgeber');
+    expect(rs).toHaveLength(1);
+    expect(rs[0].unterdruecken).toBe(true); // BGSA ∉ FEDLEX → nie ein falscher Self-Link
+  });
+
+  it('gewöhnliches grossgeschriebenes Substantiv unterdrückt NICHT («… Artikeln 5 und 6 Beiträge …» bleibt Self)', () => {
+    const rs = artikelnPluralVerweise('erheben nach den Artikeln 5 und 6 Beiträge auf dem Einkommen');
+    expect(rs).toHaveLength(1);
+    expect(rs[0].unterdruecken).toBe(false);
+    expect(rs[0].fremd).toBeNull();
+  });
+
+  it('Soft-Hyphens (U+00AD) im Genitiv-Namen werden toleriert («des Zivilgesetz­bu­ches» → ZGB)', () => {
+    const rs = artikelnPluralVerweise('im Sinne der Artikel 60–79 des Zivilgesetz­bu­ches aufweisen');
+    expect(rs).toHaveLength(1);
+    expect(rs[0].fremd).toBe('ZGB');
+    expect(erkenneGenitivGesetz('Zivilgesetz­bu­ches')).toBe('ZGB');
+  });
+});
