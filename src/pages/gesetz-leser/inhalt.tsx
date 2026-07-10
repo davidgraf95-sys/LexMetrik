@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode, type RefObject } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { naechsteInstanz, merkeTab, aktualisiereTabArtikel } from '../../lib/tabs';
@@ -7,7 +7,7 @@ import { useDialogFokus } from '../../components/layout/useDialogFokus';
 import { usePaneKontext } from '../../components/layout/PaneKontext';
 import { useMeldeInhaltsKopf } from '../../components/layout/InhaltsKopfKontext';
 import type { InternRefs } from '../../components/NormText';
-import { trenneAenderungshistorie, labelMitBereich, randtitelKnoten } from '../../lib/normtext/darstellung';
+import { labelMitBereich, randtitelKnoten } from '../../lib/normtext/darstellung';
 import {
   ladeBrowseManifest, ladeErlass, ladeErlassDatei, ladeStruktur, ladeErlassKopf, ladeKantonSystematik, ladeCurrency,
   baueGliederungsbaum, type Sektion, type StrukturMap, type ErlassKopf, type CurrencyMap,
@@ -18,37 +18,22 @@ import { GEBIET_LABEL } from '../../lib/normtext/register';
 import { KontextPanel } from '../../components/kontext/KontextPanel';
 import type { BrowseErlass, BrowseManifest } from '../../lib/normtext/browse-typen';
 import type { NormSnapshot } from '../../lib/normtext/typen';
-import { formatiereDatum, passtAufSuche, pfadZu, romanFrei, baueZitat, kopfOverline, grundartMeta } from './helpers';
+import { formatiereDatum, passtAufSuche, pfadZu, baueZitat, kopfOverline, grundartMeta } from './helpers';
 import { ArtikelLeser, SektionKopf, SektionBaumTOC, ErlassKopfBlock, ErlassLeserKopf, SektionKontextKopf } from './parts';
 import { LeserAnsichtMenu } from './LeserAnsichtMenu';
 import { beiLeerlauf } from '../../lib/leerlauf';
 import { ladeLeitfallShard, normArtikelToken, type LeitfallShard } from '../../lib/rechtsprechung/norm-index';
 import { ladeRevisionShard, revisionFuerToken, type RevisionShard } from '../../lib/verzahnung/artikel-revisionen';
+import {
+  paneRoot, istAnhangToken, findeArt,
+  berechneSekPos, berechneSektionMeta, berechneSekLabelById, baueErlassText,
+} from './berechnungen';
 
-// ─── Pane-Scoping-Helfer (B-2.5) — MODUL-Ebene = referenzstabil ────────────
-// Bewusst KEIN React Compiler im Projekt → in-Komponente definierte Funktionen
-// hätten je Render neue Identität und würden Effekte (IntersectionObserver,
-// Hash-Sprung) bei jedem Render neu auslösen (Re-Render-/Scroll-Schleife). Als
-// Modulfunktionen sind sie stabil und nicht Teil der Effect-Deps (nur die
-// Primitiven `imPane` + die Ref `wurzel` zählen).
-function paneRoot(imPane: boolean, wurzel: RefObject<HTMLElement | null> | null): HTMLElement | null {
-  return imPane ? wurzel?.current ?? null : null;
-}
-// W2·5d G3b (③/⑤): Anhang- (`annex_*`) bzw. Staatsvertrags-Protokoll-Token
-// (`lvl_*`, LugÜ) — steuert die abgesetzte Anhang-Block-Darstellung (ArtikelLeser
-// istAnhang) und das Unterdrücken des «Bereich»-Badges reiner Anhang-Sektionen.
-// Modul-Ebene (referenzstabil, §15/4). Namespaces aus M13 (annex-Extraktion).
-function istAnhangToken(token: string): boolean {
-  return /^(annex|lvl)_/i.test(token);
-}
-function findeArt(root: HTMLElement | null, token: string): HTMLElement | null {
-  if (!root) return document.getElementById(`art-${token}`);
-  // CSS.escape: ein präparierter #hash-Token (z. B. mit «"]») darf den Selektor
-  // nicht sprengen. getElementById (document-Pfad) ist ohnehin selektor-frei.
-  const id = `art-${token}`;
-  return root.querySelector(`#${typeof CSS !== 'undefined' && CSS.escape ? CSS.escape(id) : id}`);
-}
-
+// ═══ ABSCHNITT · Reine Rechenlogik ausgelagert (QS-TOK/P5, §6 Ziff. 6) ═══════
+// paneRoot/istAnhangToken/findeArt (Pane-Scoping, referenzstabil, KEIN React
+// Compiler → Modulfunktionen), sekPos/sektionMeta/sekLabelById-Ableitungen und
+// der Download-Text leben jetzt in ./berechnungen.ts. Ab hier NUR die
+// zustandsbehaftete Reader-Komponente (Hooks, Effekte, Rendering).
 export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: string }) {
   const basisPfad = `/gesetze/${ebene}/${encodeURIComponent(schluessel)}`;
   const navigate = useNavigate();
@@ -306,6 +291,8 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // Beim Verlassen den Kopf räumen (Shell setzt bei Routenwechsel ohnehin zurück).
   useEffect(() => () => meldeInhaltsKopf(null), [meldeInhaltsKopf]);
 
+  // ═══ ABSCHNITT · Abgeleitete Werte (Gliederungsbaum, Linien-Profil, Sektions-
+  // Positionen/-Meta/-Labels, Randtitel) — useMemo, Rechenkerne in ./berechnungen.ts ═══
   const { sektionen, ohneGliederung } = useMemo(
     () => (eintraege ? baueGliederungsbaum(eintraege, struktur) : { sektionen: [], ohneGliederung: [] }),
     [eintraege, struktur],
@@ -325,20 +312,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // Knotens in Dokument-Reihenfolge mischen kann, ohne pro Scroll-Render erneut den
   // Teilbaum zu durchlaufen (6b: Knoten tragen seit der Randtitel-Promotion oft
   // beides). Reine Darstellung (§3).
-  const sekPos = useMemo(() => {
-    const pos = new Map<string, number>();
-    const artPos = new Map<string, number>();
-    (eintraege ?? []).forEach((e, i) => artPos.set(e.artikel, i));
-    const walk = (s: Sektion): number => {
-      let min = Infinity;
-      for (const a of s.artikel) min = Math.min(min, artPos.get(a.artikel) ?? Infinity);
-      for (const k of s.kinder) min = Math.min(min, walk(k));
-      pos.set(s.id, min);
-      return min;
-    };
-    for (const s of sektionen) walk(s);
-    return pos;
-  }, [sektionen, eintraege]);
+  const sekPos = useMemo(() => berechneSekPos(sektionen, eintraege), [sektionen, eintraege]);
 
   // Dokument-Position je Artikel-Token (für den Artikel-Bereich «Art. 1–10» in den
   // Sektionsüberschriften).
@@ -354,33 +328,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // jeweils den Teilbaum sammelnd). Deps [sektionen, artIndex] → nur bei echtem
   // Gliederungs-/Index-Wechsel neu. Die Label-Logik ist byte-identisch zur früheren
   // sekBereich/sammleArtikel (golden/struktur-konsistenz grün). Reine Darstellung (§3).
-  const sektionMeta = useMemo(() => {
-    const meta = new Map<string, { bereich: string | undefined; einzel: boolean; anhang: boolean }>();
-    const sammle = (s: Sektion): NormSnapshot[] => {
-      const arts = [...s.artikel, ...s.kinder.flatMap(sammle)];
-      // W2·5d G3b (③/⑤): reine Anhang-/Protokoll-Sektion (alle Einträge sind
-      // `annex_*`/`lvl_*`). Für sie ist ein «Bereich»-Badge sinnlos (die Labels
-      // sind Anhang-/Protokoll-Titel, keine Artikel-Spanne) → unterdrückt; die
-      // Einträge rendern als abgesetzte Anhang-Blöcke (istAnhang).
-      const anhang = arts.length > 0 && arts.every((a) => istAnhangToken(a.artikel));
-      let bereich: string | undefined;
-      if (arts.length > 0 && !anhang) {
-        let erst = arts[0], letzt = arts[0];
-        for (const a of arts) {
-          const idx = artIndex.get(a.artikel) ?? 0;
-          if (idx < (artIndex.get(erst.artikel) ?? 0)) erst = a;
-          if (idx > (artIndex.get(letzt.artikel) ?? 0)) letzt = a;
-        }
-        bereich = erst === letzt
-          ? erst.artikelLabel
-          : `${erst.artikelLabel}–${letzt.artikelLabel.replace(/^(Art\.|§)\s*/, '')}`;
-      }
-      meta.set(s.id, { bereich, einzel: arts.length === 1, anhang });
-      return arts;
-    };
-    sektionen.forEach(sammle);
-    return meta;
-  }, [sektionen, artIndex]);
+  const sektionMeta = useMemo(() => berechneSektionMeta(sektionen, artIndex), [sektionen, artIndex]);
 
   // M13: Token → korrektes Anzeige-Label («Art. 3», «Art. 31–32») für den
   // Scroll-Spy-/Reiter-Kopf. Schlusstitel-Token («disp_u1_art_3») lassen sich
@@ -396,16 +344,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // (der beschreibende Teil ohne «Erster Titel:»-Aufzähler, wie im TOC). EINMAL
   // bottom-up aus dem Gliederungsbaum; die Kopf-Zeile mappt aktivIds darüber (keine
   // neue Scroll-Infra). Reine Darstellung (§3).
-  const sekLabelById = useMemo(() => {
-    const map = new Map<string, string>();
-    const walk = (s: Sektion) => {
-      const { rest } = romanFrei(s.label);
-      map.set(s.id, rest || s.label);
-      s.kinder.forEach(walk);
-    };
-    sektionen.forEach(walk);
-    return map;
-  }, [sektionen]);
+  const sekLabelById = useMemo(() => berechneSekLabelById(sektionen), [sektionen]);
 
   // Ueberschrift je Artikel im FLIESSTEXT: nur noch die artikel-EIGENE
   // Sachueberschrift (das Randtitel-Blatt). Die uebergeordneten, von mehreren
@@ -428,6 +367,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
 
   // Interner Artikel-Sprung (Querverweise im Wortlaut): Vorfahren öffnen, scrollen,
   // Permalink setzen — derselbe Mechanismus wie der Hash-Sprung.
+  // ═══ ABSCHNITT · Navigation & Sprünge (Artikel/Sektion, Hash, Permalink, Scroll-Spy) ═══
   const springeZuArtikel = useCallback((token: string) => {
     // Im Suchmodus erst die Suche verlassen, sonst ist das Ziel nicht im DOM
     // (nur Treffer gerendert) → Permalink änderte sich ohne Sprung. Kein Zurück
@@ -731,6 +671,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   }, [aktivIds, tocBaum, imPane, wurzel]);
 
   const sucheTrim = sucheDebounced.trim().toLowerCase(); // Rank 9: entprellt (nicht `suche`)
+  // ═══ ABSCHNITT · In-Gesetz-Suche & Treffer ═══
   const treffer = useMemo(
     () => (eintraege && sucheTrim ? eintraege.filter((e) => passtAufSuche(e, sucheTrim)) : null),
     [eintraege, sucheTrim],
@@ -884,42 +825,11 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // Artikel-Bereich «Art. 1–10» + Einzelartikel-Flag je Sektion kommen aus dem
   // `sektionMeta`-useMemo (Rank 4) — einmal bottom-up berechnet statt je Render.
 
-  // Erlass als Gesamtheit herunterladen (client-seitig, reiner Text).
-  const baueText = (): string => {
-    const L: string[] = [
-      titelRedundant ? erlass.kuerzel : `${erlass.kuerzel} — ${erlass.titel}`,
-      [erlass.sr ? `SR ${erlass.sr}` : '', erlass.stand ? `Stand ${formatiereDatum(erlass.stand)}` : ''].filter(Boolean).join(' · '),
-      `Quelle: ${erlass.quelleUrl}`,
-      'Heruntergeladen aus LexMetrik — massgeblich ist die amtliche Fassung (Live-Link).',
-      '',
-    ];
-    let prev: string[] = [];
-    for (const e of eintraege) {
-      const st = struktur?.[e.artikel];
-      const gl = st?.gliederung ?? [];
-      for (let i = 0; i < gl.length; i++) {
-        if (gl[i].label !== prev[i]) L.push('', `${'#'.repeat(Math.min(gl[i].ebene, 4))} ${gl[i].label}`);
-      }
-      prev = gl.map((g) => g.label);
-      const m = st?.marginalie ?? [];
-      L.push('', `${labelMitBereich(e.artikelLabel, e.artikel)}${m.length ? `  [${m.join(' · ')}]` : ''}`);
-      for (const b of e.bloecke) {
-        // Eingemischte Änderungshistorie (verdoppelte Fussnoten-Nr) abtrennen.
-        const { wortlaut, historie } = trenneAenderungshistorie(b.text);
-        const txt = wortlaut.trim() ? wortlaut : historie ? '[aufgehoben]' : b.text;
-        L.push(`${b.absatz ? `${b.absatz} ` : ''}${txt}`);
-        for (const it of b.items ?? []) L.push(`    ${it.marke}. ${it.text}`);
-        // Extrahierte Historie nur, wenn keine amtliche Sidecar-Fussnote da ist
-        // (sonst Doppelung mit der Fussnoten-Schleife unten).
-        if (historie && !(st?.fussnoten?.length)) L.push(`    — ${historie}`);
-      }
-      for (const f of st?.fussnoten ?? []) L.push(`  [${f.nr}] ${f.text}`);
-    }
-    return L.join('\n');
-  };
+  // Erlass als Gesamtheit herunterladen (client-seitig, reiner Text) —
+  // Text-Aufbau ausgelagert nach ./berechnungen.ts (baueErlassText).
   const herunterladen = () => {
     if (typeof document === 'undefined') return;
-    const blob = new Blob([baueText()], { type: 'text/plain;charset=utf-8' });
+    const blob = new Blob([baueErlassText(erlass, eintraege, struktur, titelRedundant)], { type: 'text/plain;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
@@ -934,6 +844,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // Ein Knoten kann seit 6b DIREKTE Artikel UND Unter-Knoten tragen (z. B.
   // «II. Handlungsfähigkeit» enthält Art. 12 direkt und die Untergruppe
   // «2. Voraussetzungen») — beide werden in Dokument-Reihenfolge gemischt.
+  // ═══ ABSCHNITT · Rendering (renderSektion, TOC-Baum, Options-Leiste, JSX-Return) ═══
   const renderSektion = (s: Sektion, defOpen: boolean, tiefe: number): ReactNode => {
     const auf = istOffen(s.id, defOpen);
     // Kinder + direkte Artikel in EINER nach Dokument-Position sortierten Liste.
