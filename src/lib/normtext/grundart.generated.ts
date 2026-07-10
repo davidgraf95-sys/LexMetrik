@@ -1,5 +1,5 @@
 // AUTO-GENERIERT von scripts/normtext/seed-grundart.mjs — NICHT von Hand editieren.
-// Grundart-Klassifikation (1460 Erlasse) aus der UX-Audit-Klassifikation
+// Grundart-Klassifikation (1469 Erlasse) aus der UX-Audit-Klassifikation
 // docs/ux-audit-2026-07/erlass-klassifikation.json (Methode: Datengetriebene Signal-Extraktion je Erlass, Grundart-Zuordnung per Prioritäts-Kaskade (Trägerformat → Systematik → Bund-Struktur).).
 // Datengrundlage für register.ts (grundart/erlassTyp) + die spätere Grundart-
 // Darstellung (bestimmungsEtikett, §/Art.-Label — NUR sichtbar, NIE Anker; K2/R8).
@@ -11,7 +11,7 @@
 //   ERLASS_MIT_ANHANG: 85
 //   STANDARD_ERLASS: 68
 //   FLACHER_KURZERLASS: 30
-//   STAATSVERTRAG: 18
+//   STAATSVERTRAG: 27
 //   KODIFIKATION: 17
 //   LIVE_VERWEIS: 9
 //   PDF_EMBED: 2
@@ -46,6 +46,7 @@ export const GRUNDART_SEED: Readonly<Record<string, GrundartSeed>> = {
   "AIG": {"grundart":"ERLASS_MIT_ANHANG","erlassTyp":"gesetz","hatAnhang":true},
   "AKKBV": {"grundart":"ERLASS_MIT_ANHANG","erlassTyp":"verordnung","hatAnhang":true},
   "AMBV": {"grundart":"ERLASS_MIT_ANHANG","erlassTyp":"verordnung","hatAnhang":true},
+  "APOSTILLE": {"grundart":"STAATSVERTRAG","erlassTyp":"staatsvertrag","hatAnhang":true},
   "AR-111.1": {"grundart":"KANTON","erlassTyp":"verfassung","bestimmungsEtikett":"art","bestimmungsEtikettStatus":"entwurf"},
   "AR-111.3": {"grundart":"KANTON","erlassTyp":"gesetz","bestimmungsEtikett":"art","bestimmungsEtikettStatus":"entwurf"},
   "AR-1203": {"grundart":"KANTON","erlassTyp":"sonstiges","bestimmungsEtikett":"art","bestimmungsEtikettStatus":"entwurf"},
@@ -1228,6 +1229,7 @@ export const GRUNDART_SEED: Readonly<Record<string, GrundartSeed>> = {
   "CHEMRRV": {"grundart":"ERLASS_MIT_ANHANG","erlassTyp":"verordnung","hatAnhang":true},
   "CHEMV": {"grundart":"ERLASS_MIT_ANHANG","erlassTyp":"verordnung","hatAnhang":true},
   "CISG": {"grundart":"STAATSVERTRAG","erlassTyp":"staatsvertrag"},
+  "CMR": {"grundart":"STAATSVERTRAG","erlassTyp":"staatsvertrag","hatAnhang":true},
   "CO2_GESETZ": {"grundart":"STANDARD_ERLASS","erlassTyp":"gesetz"},
   "DBG": {"grundart":"KODIFIKATION","erlassTyp":"gesetz"},
   "DESG": {"grundart":"ERLASS_MIT_ANHANG","erlassTyp":"gesetz","hatAnhang":true},
@@ -1237,6 +1239,7 @@ export const GRUNDART_SEED: Readonly<Record<string, GrundartSeed>> = {
   "DSG": {"grundart":"ERLASS_MIT_ANHANG","erlassTyp":"gesetz","hatAnhang":true},
   "DSGVO": {"grundart":"LIVE_VERWEIS","erlassTyp":"verordnung"},
   "DSV": {"grundart":"ERLASS_MIT_ANHANG","erlassTyp":"verordnung","hatAnhang":true},
+  "EAUE": {"grundart":"STAATSVERTRAG","erlassTyp":"staatsvertrag"},
   "EBG": {"grundart":"ERLASS_MIT_ANHANG","erlassTyp":"gesetz","hatAnhang":true},
   "ELG": {"grundart":"STANDARD_ERLASS","erlassTyp":"gesetz"},
   "ELV": {"grundart":"STANDARD_ERLASS","erlassTyp":"verordnung"},
@@ -1300,13 +1303,16 @@ export const GRUNDART_SEED: Readonly<Record<string, GrundartSeed>> = {
   "HAUE": {"grundart":"STAATSVERTRAG","erlassTyp":"staatsvertrag","hatAnhang":true},
   "HBEWUE": {"grundart":"STAATSVERTRAG","erlassTyp":"staatsvertrag"},
   "HEUE": {"grundart":"STAATSVERTRAG","erlassTyp":"staatsvertrag"},
+  "HKSUE96": {"grundart":"STAATSVERTRAG","erlassTyp":"staatsvertrag","hatAnhang":true},
   "HKUE": {"grundart":"STAATSVERTRAG","erlassTyp":"staatsvertrag","hatAnhang":true},
   "HMG": {"grundart":"ERLASS_MIT_ANHANG","erlassTyp":"gesetz","hatAnhang":true},
   "HREGV": {"grundart":"ERLASS_MIT_ANHANG","erlassTyp":"verordnung","hatAnhang":true},
+  "HUVUE": {"grundart":"STAATSVERTRAG","erlassTyp":"staatsvertrag"},
   "HZUE": {"grundart":"STAATSVERTRAG","erlassTyp":"staatsvertrag"},
   "ICAO": {"grundart":"STAATSVERTRAG","erlassTyp":"staatsvertrag","hatAnhang":true},
   "IPRG": {"grundart":"ERLASS_MIT_ANHANG","erlassTyp":"gesetz","hatAnhang":true},
   "IRSG": {"grundart":"STANDARD_ERLASS","erlassTyp":"gesetz"},
+  "ISTANBUL": {"grundart":"STAATSVERTRAG","erlassTyp":"staatsvertrag","hatAnhang":true},
   "IVG": {"grundart":"KODIFIKATION","erlassTyp":"gesetz","hatAnhang":true},
   "IVV": {"grundart":"STANDARD_ERLASS","erlassTyp":"verordnung"},
   "JSTG": {"grundart":"STANDARD_ERLASS","erlassTyp":"gesetz"},
@@ -1342,6 +1348,7 @@ export const GRUNDART_SEED: Readonly<Record<string, GrundartSeed>> = {
   "MEPV": {"grundart":"ERLASS_MIT_ANHANG","erlassTyp":"verordnung","hatAnhang":true},
   "MG": {"grundart":"ERLASS_MIT_ANHANG","erlassTyp":"gesetz","hatAnhang":true},
   "MICA": {"grundart":"LIVE_VERWEIS","erlassTyp":"verordnung"},
+  "MONTREAL": {"grundart":"STAATSVERTRAG","erlassTyp":"staatsvertrag"},
   "MSCHG": {"grundart":"STANDARD_ERLASS","erlassTyp":"gesetz"},
   "MSCHV": {"grundart":"STANDARD_ERLASS","erlassTyp":"verordnung"},
   "MSTG": {"grundart":"KODIFIKATION","erlassTyp":"gesetz"},
@@ -1378,6 +1385,7 @@ export const GRUNDART_SEED: Readonly<Record<string, GrundartSeed>> = {
   "PUEG": {"grundart":"FLACHER_KURZERLASS","erlassTyp":"gesetz"},
   "PVUE": {"grundart":"STAATSVERTRAG","erlassTyp":"staatsvertrag"},
   "QSTV": {"grundart":"ERLASS_MIT_ANHANG","erlassTyp":"verordnung","hatAnhang":true},
+  "RBUE": {"grundart":"STAATSVERTRAG","erlassTyp":"staatsvertrag","hatAnhang":true},
   "RDV": {"grundart":"ERLASS_MIT_ANHANG","erlassTyp":"verordnung","hatAnhang":true},
   "ROM_I": {"grundart":"LIVE_VERWEIS","erlassTyp":"verordnung"},
   "ROM_II": {"grundart":"LIVE_VERWEIS","erlassTyp":"verordnung"},
@@ -1423,6 +1431,7 @@ export const GRUNDART_SEED: Readonly<Record<string, GrundartSeed>> = {
   "TI-ti-181": {"grundart":"KANTON","erlassTyp":"sonstiges","bestimmungsEtikett":"art","bestimmungsEtikettStatus":"entwurf"},
   "TXG": {"grundart":"STANDARD_ERLASS","erlassTyp":"gesetz"},
   "UNO_ANTIFOLTER": {"grundart":"STAATSVERTRAG","erlassTyp":"staatsvertrag"},
+  "UNO_BRK": {"grundart":"STAATSVERTRAG","erlassTyp":"staatsvertrag"},
   "UNO_PAKT_I": {"grundart":"STAATSVERTRAG","erlassTyp":"staatsvertrag"},
   "UNO_PAKT_II": {"grundart":"STAATSVERTRAG","erlassTyp":"staatsvertrag"},
   "UR-2.3232": {"grundart":"KANTON","erlassTyp":"verordnung","bestimmungsEtikett":"art","bestimmungsEtikettStatus":"entwurf"},

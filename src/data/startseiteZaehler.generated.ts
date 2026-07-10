@@ -28,14 +28,14 @@ export interface StartseiteZaehler {
 }
 
 export const STARTSEITE_ZAEHLER: StartseiteZaehler = {
-  "gesetzeBundVolltext": 218,
+  "gesetzeBundVolltext": 227,
   "gesetzeKantonVolltext": 1231,
-  "gesetzeVolltext": 1449,
+  "gesetzeVolltext": 1458,
   "rechtsprechungVolltext": 342,
   "materialien": 727,
   "rechner": 23,
   "vorlagen": 26,
-  "standGesetze": "2026-07-06",
+  "standGesetze": "2026-07-10",
   "standRechtsprechung": "2026-07-05",
   "standMaterialien": "2026-07-10"
 };

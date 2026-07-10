@@ -49,6 +49,31 @@ in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
 <!-- KARTEN -->
 
+## Session 10.7.2026 — Fedlex-Portfolio Paket 4 (Staatsverträge, letztes Paket), Worktree `feat/fedlex-p4-staatsvertraege`
+
+**W2·6 · Trailer `Roadmap: W2·6`.** 9 kuratierte SR-0.*-Staatsverträge neu als Volltext
+über die **bestehende konsolidierte `eli/cc`-Pipeline** (kein `eli/treaty`-Extraktor, kein
+neues Format/Skript): HKsÜ 96, HUVÜ 1973, EAUe, CMR, Montreal, RBÜ, UNO-BRK, Istanbul,
+Apostille (rang 110–118). International-Volltext 18→**27**, Bund 226→**227**.
+**POC-Kern:** SPARQL-Graph trägt **keine** strukturierte Vertragsparteien-/Ratifikations-Kante
+→ «Geltungsbereich am …»-Anhang verbatim als `annex_*` (deterministisch, §8); **html-0 bei
+5/9 stale** (P1-a-Falle) → kanonische html-N via `isExemplifiedBy` gepinnt (HUVÜ=3/EAUe=5/CMR=3/
+RBÜ=2/Istanbul=1/Apostille=4); **Apostille geltend 2024-09-04** (Arbiter, nicht 2016er-Shell)
+→ Snapshot statt pdf-embed. **5 Kandidaten bewusst verworfen** (ESÜ/WÜD/WÜK/DBA-DE/EPÜ, dokumentiert).
+Testimonium «Zu Urkund dessen» (`schlussint`) bewusst als nicht-normative Boilerplate in
+`check:p-klassen` verankert. **Betroffen:** `src/lib/fedlex.ts`, `src/lib/normtext/register.ts`,
+`scripts/fedlex-cache.sh`, `scripts/normtext/check-p-klassen.ts`, 9 `public/normtext/bund/*.json` +
+Sidecars + `register.json`/`currency.json`/grundart-Seed/Klassifikations-JSON, `daten-manifest.json`.
+**Tore:** `npm run check` grün ausser vorbestehend-rot `check:plan` (W3·14 verwaist, aus PR #182) +
+`check:normtext-netz`-Rest (5 kant. PDFs AR/VD/FR/VS = vorbestehend, nicht dieser Diff); tsc/build grün.
+Adversariale **Gegenprüfung (Opus)**: Artikel + `annex_*`-Anhänge/Protokolle vollständig & wortlaut-treu;
+**Befund** = Extraktor lässt `<div id="scope">` (Geltungsbereich `scope_*` + Schweizer Vorbehalte `decl_*`)
+aus — **pre-existing korpusweit** (18 deployte Verträge droppen byte-identisch, an KRK verifiziert),
+kein P4-Regress; Fix = Kern-Extraktor-Ausbau über alle 27 (TABU diese Session) → **backlogged** in
+`FAHRPLAN-INTERNATIONAL-VOLLTEXT.md`, volle Fassung über amtlichen Live-Link erreichbar (L0/§8, nicht stumm).
+§11: `bibliothek/register/fedlex-staatsvertraege-2026-07-10.md`.
+Damit **alle 5 Fedlex-Portfolio-Pakete gebaut**. Push/Deploy = Davids §9-Ja.
+
 ## Session 10.7.2026 — QS-TOK P1-Rest: check:plan geheilt · T1 STRUKTUR-Rotation mechanisiert · T3 FAHRPLAN-§-Slice-CLI, Worktree `feat/qstok-p1-rest`
 
 **FAHRPLAN-TOKEN-OEKONOMIE.md §3 (T7 ✅ #173, T2 ✅ #172 vorab).** **check:plan-Fix:** `QS-TOK` fehlte in `scripts/plan/inventar.ts` (seit #171) → rötete die gate-Kette für alle Parallel-Agenten; registriert, grün (erster Commit, heilt main). **T1:** `.claude/hooks/struktur-rotieren.py` verschiebt `## Session`-Karten älter ~2 Arbeitstage byte-genau ins Archiv (Anker `<!-- KARTEN -->`; SessionStart nur im sauberen Haupt-Checkout, auto-Commit, sonst No-op — K §3 T1) inkl. **T7-K Teil 2 Re-Akkumulations-Wächter** (weiche SessionStart-Warnung + `--check`-Riegel, NICHT im Required-Gate). Dogfood: 34 Karten ≤6.7. rotiert, STRUKTUR.md 139.4→35.6 KB, Byte-Bilanz belegt (0 Verlust), idempotent; `npm run struktur:rotieren`. **T3:** `npm run fahrplan -- <Datei> <§>` druckt Kopf+§0+Ziel-§ + immer volles ##/###-ToC (9 Unit-Tests, Fixtures beider Stile); GESETZES-UX §10-Slice 60.6 vs. 119.5 KB. **Offen/deklariert:** T16 (CLAUDE.md, separates David-Go, §8.4) liegt bewusst; ROADMAP.md 93.6 KB > T7-DoD ≤~65 KB (Rest-Chronik-Split kollidiert mit Parallel-Schreibern). **Tore:** voller `npm run gate` GRÜN (tsc · vitest · golden · lint · check inkl. geheiltem check:plan). Gegenprüfung n/a (Prüf-/Doku-Infrastruktur). Trailer `Roadmap: QS-TOK`.

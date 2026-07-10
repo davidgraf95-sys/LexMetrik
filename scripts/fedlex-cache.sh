@@ -350,6 +350,26 @@ EINTRAEGE=(
   "icao|cc/63/1377_1378_1381|20260612|1|art_1|0.748.0"
   "staatenlose|cc/1972/2320_2374_2150|20260522|0|art_1|0.142.40"
   "gfk|cc/1955/443_461_469|20120614|0|art_1|0.142.30"
+  # ── Fedlex-Portfolio Paket 4 (10.7.2026): kuratierte Staatsverträge SR 0.*.
+  # Königsweg = konsolidierte eli/cc-Pipeline (kein eli/treaty-Extraktor). html-N
+  # SPARQL-KANONISCH via jolux:isExemplifiedBy — FALLE (wie P1-a): html-0 lädt für
+  # EAUe/CMR/RBÜ/Istanbul/HUVÜ ein STALES/nicht-kanonisches Manifest (das cache.sh-
+  # 1..5-Fallback hätte html-0 akzeptiert und nie das kanonische -N geholt), darum
+  # das kanonische N je Erlass explizit gepinnt: HUVÜ=3, EAUe=5, CMR=3, RBÜ=2,
+  # Istanbul=1; HKsÜ/Montreal/UNO-BRK=0. SR-Sonde + art_1 je Datei verifiziert.
+  # Beleg: bibliothek/register/fedlex-staatsvertraege-2026-07-10.md.
+  "hksue96|cc/2009/380|20260119|0|art_1|0.211.231.011"
+  "huvue|cc/1976/1559_1559_1559|20160915|3|art_1|0.211.213.02"
+  "eaue|cc/1967/814_854_850|20230628|5|art_1|0.353.1"
+  "cmr|cc/1970/851_851_851|20210210|3|art_1|0.741.611"
+  "montreal|cc/2005/566|20260407|0|art_1|0.748.411"
+  "rbue|cc/1993/2659_2659_2659|20240606|2|art_1|0.231.15"
+  "uno_brk|cc/2014/245|20260501|0|art_1|0.109"
+  "istanbul|cc/2018/168|20241220|1|art_1|0.311.35"
+  # Apostille SR 0.172.030.4: geltende Kons 20240904 (check:fedlex-versionen-Arbiter —
+  # NICHT 20160706, das ist eine ältere Fassung, deren HTML nur SPA-Shell ist). Unter
+  # 20240904 liefert Fedlex extrahierbares HTML; kanonisch html-4 (isExemplifiedBy).
+  "apostille|cc/1973/348_347_349|20240904|4|art_1|0.172.030.4"
 )
 
 fehler=0

@@ -375,6 +375,20 @@ export const ERLASS_REGISTER: ReadonlyArray<ErlassRegistereintrag> = ([
   bund('ICAO', 'ICAO-Übk.', 'Übereinkommen vom 7. Dezember 1944 über die internationale Zivilluftfahrt', '0.748.0', 'international', 106),
   bund('GFK', 'GFK', 'Abkommen vom 28. Juli 1951 über die Rechtsstellung der Flüchtlinge (Genfer Flüchtlingskonvention, GFK)', '0.142.30', 'international', 107),
   bund('STAATENLOSE', 'Staatenlose', 'Übereinkommen vom 28. September 1954 über die Rechtsstellung der Staatenlosen', '0.142.40', 'international', 108),
+  // ── International P4 (Fedlex-Portfolio Paket 4, 10.7.2026): kuratierte
+  //    Staatsverträge SR 0.* als Volltext. Königsweg = konsolidierte eli/cc-
+  //    Pipeline (nicht eli/treaty); html-N SPARQL-kanonisch (isExemplifiedBy)
+  //    gepinnt — html-0 war bei EAUe/CMR/RBÜ/Istanbul/HUVÜ stale (P1-a-Falle).
+  //    Beleg: bibliothek/register/fedlex-staatsvertraege-2026-07-10.md. ──
+  bund('HKSUE96', 'HKsÜ', 'Übereinkommen vom 19. Oktober 1996 über die Zuständigkeit, das anzuwendende Recht, die Anerkennung, Vollstreckung und Zusammenarbeit auf dem Gebiet der elterlichen Verantwortung und der Massnahmen zum Schutz von Kindern (Haager Kindesschutzübereinkommen, HKsÜ)', '0.211.231.011', 'international', 110),
+  bund('HUVUE', 'HUVÜ', 'Übereinkommen vom 2. Oktober 1973 über die Anerkennung und Vollstreckung von Unterhaltsentscheidungen', '0.211.213.02', 'international', 111),
+  bund('EAUE', 'EAUe', 'Europäisches Auslieferungsübereinkommen vom 13. Dezember 1957 (EAUe)', '0.353.1', 'international', 112),
+  bund('CMR', 'CMR', 'Übereinkommen vom 19. Mai 1956 über den Beförderungsvertrag im internationalen Strassengüterverkehr (CMR)', '0.741.611', 'international', 113),
+  bund('MONTREAL', 'Montrealer Übk.', 'Übereinkommen vom 28. Mai 1999 zur Vereinheitlichung bestimmter Vorschriften über die Beförderung im internationalen Luftverkehr (Montrealer Übereinkommen)', '0.748.411', 'international', 114),
+  bund('RBUE', 'RBÜ', 'Berner Übereinkunft zum Schutz von Werken der Literatur und Kunst (revidiert in Paris am 24. Juli 1971, RBÜ)', '0.231.15', 'international', 115),
+  bund('UNO_BRK', 'UNO-BRK', 'Übereinkommen vom 13. Dezember 2006 über die Rechte von Menschen mit Behinderungen (UNO-Behindertenrechtskonvention, BRK)', '0.109', 'international', 116),
+  bund('ISTANBUL', 'Istanbul-Konv.', 'Übereinkommen des Europarats vom 11. Mai 2011 zur Verhütung und Bekämpfung von Gewalt gegen Frauen und häuslicher Gewalt (Istanbul-Konvention)', '0.311.35', 'international', 117),
+  bund('APOSTILLE', 'Apostille-Übk.', 'Übereinkommen vom 5. Oktober 1961 zur Befreiung ausländischer öffentlicher Urkunden von der Beglaubigung (Apostille-Übereinkommen)', '0.172.030.4', 'international', 118),
   // ── Wichtige weitere Bundesgesetze als «nur-live-link»-Stubs (kein Volltext;
   //    Fedlex-Link), verifiziert via SPARQL — bund-stubs.generated.ts (§7). ──
   ...BUND_STUBS,

@@ -1,0 +1,1205 @@
+{
+ "erzeugt": "2026-07-10",
+ "kopf": {
+  "srNummer": "0.311.35",
+  "titel": "Übereinkommen des Europarats zur Verhütung und Bekämpfung von Gewalt gegen Frauen und häuslicher Gewalt",
+  "erlassdatum": "(Stand am 20. Dezember 2024)",
+  "praeambelTitel": "Präambel",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Mitgliedstaaten des Europarats und die anderen Unterzeichner dieses Übereinkommens,"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "eingedenk der Konvention zum Schutz der Menschenrechte und Grundfreiheiten (SEV Nr. 5, 1950) und ihrer Protokolle, der Europäischen Sozialcharta (SEV Nr. 35, 1961, geändert 1996, SEV Nr. 163), des Übereinkommens des Europarats zur Bekämpfung des Menschenhandels (SEV Nr. 197, 2005) und des Übereinkommens des Europarats zum Schutz von Kindern vor sexueller Ausbeutung und sexuellem Missbrauch (SEV Nr. 201, 2007);"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "eingedenk der folgenden Empfehlungen des Ministerkomitees an die Mitgliedstaaten des Europarats: Empfehlung Rec (2002)5 zum Schutz von Frauen vor Gewalt, Empfehlung CM/Rec (2007)17 zu Normen und Mechanismen zur Gleichstellung von Frauen und Männern, Empfehlung CM/Rec (2010)10 zur Rolle von Frauen und Männern in der Konfliktverhütung und -lösung sowie der Friedenskonsolidierung und sonstige einschlägige Empfehlungen;"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "unter Berücksichtigung der immer umfangreicheren Rechtsprechung des Europäischen Gerichtshofs für Menschenrechte, durch die wichtige Normen auf dem Gebiet der Gewalt gegen Frauen gesetzt werden;"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "in Anbetracht des Internationalen Pakts über bürgerliche und politische Rechte (1966), des Internationalen Pakts über wirtschaftliche, soziale und kulturelle Rechte (1966), des Übereinkommens der Vereinten Nationen zur Beseitigung jeder Form von Diskriminierung der Frau («CEDAW», 1979) und seines Fakultativprotokolls (1999) sowie der Allgemeinen Empfehlung Nr. 19 des CEDAW-Ausschusses für die Beseitigung der Diskriminierung der Frau zur Gewalt gegen Frauen, des Übereinkommens der Vereinten Nationen über die Rechte des Kindes (1989) und seiner Fakultativprotokolle (2000) und des Übereinkommens der Vereinten Nationen über die Rechte von Menschen mit Behinderungen (2006);"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "unter Berücksichtigung des Römer Statuts des Internationalen Strafgerichtshofs (2002);"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "eingedenk der Grundsätze des humanitären Völkerrechts und insbesondere des IV. Genfer Abkommens über den Schutz von Zivilpersonen in Kriegszeiten (1949) sowie der Zusatzprotokolle I und II (1977) hierzu;"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "unter Verurteilung aller Formen von Gewalt gegen Frauen und häuslicher Gewalt;"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "in Anerkennung der Tatsache, dass die Verwirklichung der rechtlichen und der tatsächlichen Gleichstellung von Frauen und Männern ein wesentliches Element der Verhütung von Gewalt gegen Frauen ist;"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "in Anerkennung der Tatsache, dass Gewalt gegen Frauen der Ausdruck historisch gewachsener ungleicher Machtverhältnisse zwischen Frauen und Männern ist, die zur Beherrschung und Diskriminierung der Frau durch den Mann und zur Verhinderung der vollständigen Gleichstellung der Frau geführt haben;"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "in Anerkennung der Tatsache, dass Gewalt gegen Frauen als geschlechtsspezifische Gewalt strukturellen Charakter hat, sowie der Tatsache, dass Gewalt gegen Frauen einer der entscheidenden sozialen Mechanismen ist, durch den Frauen in eine untergeordnete Position gegenüber Männern gezwungen werden;"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "mit grosser Sorge feststellend, dass Frauen und Mädchen häufig schweren Formen von Gewalt wie häuslicher Gewalt, sexueller Belästigung, Vergewaltigung, Zwangsverheiratung, im Namen der sogenannten «Ehre» begangener Verbrechen und Genitalverstümmelung ausgesetzt sind, die eine schwere Verletzung der Menschenrechte von Frauen und Mädchen sowie ein Haupthindernis für das Erreichen der Gleichstellung von Frauen und Männern darstellen;"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "in Anbetracht der fortdauernden Menschenrechtsverletzungen während bewaffneter Konflikte, welche die Zivilbevölkerung und insbesondere Frauen in Form von weit verbreiteter oder systematischer Vergewaltigung und sexueller Gewalt betreffen, sowie der höheren Wahrscheinlichkeit geschlechtsspezifischer Gewalt sowohl während als auch nach Konflikten;"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "in der Erkenntnis, dass Frauen und Mädchen einer grösseren Gefahr von geschlechtsspezifischer Gewalt ausgesetzt sind als Männer;"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "in der Erkenntnis, dass häusliche Gewalt Frauen unverhältnismässig stark betrifft und dass auch Männer Opfer häuslicher Gewalt sein können;"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "in der Erkenntnis, dass Kinder Opfer häuslicher Gewalt sind, auch als Zeuginnen und Zeugen von Gewalt in der Familie;"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "in dem Bestreben, ein Europa zu schaffen, das frei von Gewalt gegen Frauen und häuslicher Gewalt ist,"
+   },
+   {
+    "rolle": "verb",
+    "text": "sind wie folgt übereingekommen:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "AS <b>2018</b> 1117",
+    "links": [
+     {
+      "label": "AS <b>2018</b> 1117",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2018/167"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR <b>0.101</b>",
+    "links": [
+     {
+      "label": "SR <b>0.101</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1974/2151_2151_2151"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR <b>0.311.543</b>",
+    "links": [
+     {
+      "label": "SR <b>0.311.543</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2013/94"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "SR <b>0.311.40</b>",
+    "links": [
+     {
+      "label": "SR <b>0.311.40</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2014/249"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "5",
+    "text": "SR <b>0.103.2</b>",
+    "links": [
+     {
+      "label": "SR <b>0.103.2</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1993/750_750_750"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "6",
+    "text": "SR <b>0.103.1</b>",
+    "links": [
+     {
+      "label": "SR <b>0.103.1</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1993/725_725_725"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "7",
+    "text": "SR <b>0.108</b>",
+    "links": [
+     {
+      "label": "SR <b>0.108</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/239"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "8",
+    "text": "SR <b>0.108.1</b>",
+    "links": [
+     {
+      "label": "SR <b>0.108.1</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2009/44"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "9",
+    "text": "SR <b>0.107</b>",
+    "links": [
+     {
+      "label": "SR <b>0.107</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1998/2055_2055_2055"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "10",
+    "text": "SR <b>0.107.1</b>, SR <b>0.107.2</b>",
+    "links": [
+     {
+      "label": "SR <b>0.107.1</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2002/542"
+     },
+     {
+      "label": "SR <b>0.107.2</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2006/824"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "11",
+    "text": "SR <b>0.109</b>",
+    "links": [
+     {
+      "label": "SR <b>0.109</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2014/245"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "12",
+    "text": "SR <b>0.312.1</b>",
+    "links": [
+     {
+      "label": "SR <b>0.312.1</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/2002/586"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "13",
+    "text": "SR <b>0.518.51</b>",
+    "links": [
+     {
+      "label": "SR <b>0.518.51</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1951/300_302_297"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "14",
+    "text": "SR <b>0.518.521</b>, SR <b>0.518.522</b>",
+    "links": [
+     {
+      "label": "SR <b>0.518.521</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1982/1362_1362_1362"
+     },
+     {
+      "label": "SR <b>0.518.522</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1982/1432_1432_1432"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
+ "artikel": {
+  "1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel I: Zweck, Begriffsbestimmungen, Gleichstellung und Nichtdiskriminierung, allgemeine Verpflichtungen"
+    }
+   ],
+   "marginalie": [
+    "Zweck des Übereinkommens"
+   ]
+  },
+  "2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel I: Zweck, Begriffsbestimmungen, Gleichstellung und Nichtdiskriminierung, allgemeine Verpflichtungen"
+    }
+   ],
+   "marginalie": [
+    "Geltungsbereich des Übereinkommens"
+   ]
+  },
+  "3": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel I: Zweck, Begriffsbestimmungen, Gleichstellung und Nichtdiskriminierung, allgemeine Verpflichtungen"
+    }
+   ],
+   "marginalie": [
+    "Begriffsbestimmungen"
+   ]
+  },
+  "4": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel I: Zweck, Begriffsbestimmungen, Gleichstellung und Nichtdiskriminierung, allgemeine Verpflichtungen"
+    }
+   ],
+   "marginalie": [
+    "Grundrechte, Gleichstellung und Nichtdiskriminierung"
+   ]
+  },
+  "5": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel I: Zweck, Begriffsbestimmungen, Gleichstellung und Nichtdiskriminierung, allgemeine Verpflichtungen"
+    }
+   ],
+   "marginalie": [
+    "Verpflichtungen der Staaten und Sorgfaltspflicht"
+   ]
+  },
+  "6": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel I: Zweck, Begriffsbestimmungen, Gleichstellung und Nichtdiskriminierung, allgemeine Verpflichtungen"
+    }
+   ],
+   "marginalie": [
+    "Geschlechtersensible politische Massnahmen"
+   ]
+  },
+  "7": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel II: Ineinandergreifende politische Massnahmen und Datensammlung"
+    }
+   ],
+   "marginalie": [
+    "Umfassende und koordinierte politische Massnahmen"
+   ]
+  },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel II: Ineinandergreifende politische Massnahmen und Datensammlung"
+    }
+   ],
+   "marginalie": [
+    "Finanzielle Mittel"
+   ]
+  },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel II: Ineinandergreifende politische Massnahmen und Datensammlung"
+    }
+   ],
+   "marginalie": [
+    "Nichtstaatliche Organisationen und Zivilgesellschaft"
+   ]
+  },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel II: Ineinandergreifende politische Massnahmen und Datensammlung"
+    }
+   ],
+   "marginalie": [
+    "Koordinationsstelle"
+   ]
+  },
+  "11": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel II: Ineinandergreifende politische Massnahmen und Datensammlung"
+    }
+   ],
+   "marginalie": [
+    "Datensammlung und Forschung"
+   ]
+  },
+  "12": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel III: Prävention"
+    }
+   ],
+   "marginalie": [
+    "Allgemeine Verpflichtungen"
+   ]
+  },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel III: Prävention"
+    }
+   ],
+   "marginalie": [
+    "Bewusstseinsbildung"
+   ]
+  },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel III: Prävention"
+    }
+   ],
+   "marginalie": [
+    "Bildung"
+   ]
+  },
+  "15": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel III: Prävention"
+    }
+   ],
+   "marginalie": [
+    "Aus- und Fortbildung von Angehörigen bestimmter Berufsgruppen"
+   ]
+  },
+  "16": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel III: Prävention"
+    }
+   ],
+   "marginalie": [
+    "Vorbeugende Interventions- und Behandlungsprogramme"
+   ]
+  },
+  "17": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel III: Prävention"
+    }
+   ],
+   "marginalie": [
+    "Beteiligung des privaten Sektors und der Medien"
+   ]
+  },
+  "18": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel IV: Schutz und Unterstützung"
+    }
+   ],
+   "marginalie": [
+    "Allgemeine Verpflichtungen"
+   ]
+  },
+  "19": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel IV: Schutz und Unterstützung"
+    }
+   ],
+   "marginalie": [
+    "Informationen"
+   ]
+  },
+  "20": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel IV: Schutz und Unterstützung"
+    }
+   ],
+   "marginalie": [
+    "Allgemeine Hilfsdienste"
+   ]
+  },
+  "21": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel IV: Schutz und Unterstützung"
+    }
+   ],
+   "marginalie": [
+    "Unterstützung bei Einzel- oder Sammelklagen"
+   ]
+  },
+  "22": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel IV: Schutz und Unterstützung"
+    }
+   ],
+   "marginalie": [
+    "Spezialisierte Hilfsdienste"
+   ]
+  },
+  "23": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel IV: Schutz und Unterstützung"
+    }
+   ],
+   "marginalie": [
+    "Schutzunterkünfte"
+   ]
+  },
+  "24": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel IV: Schutz und Unterstützung"
+    }
+   ],
+   "marginalie": [
+    "Telefonberatung"
+   ]
+  },
+  "25": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel IV: Schutz und Unterstützung"
+    }
+   ],
+   "marginalie": [
+    "Unterstützung für Opfer sexueller Gewalt"
+   ]
+  },
+  "26": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel IV: Schutz und Unterstützung"
+    }
+   ],
+   "marginalie": [
+    "Schutz und Unterstützung für Zeuginnen und Zeugen, die Kinder sind"
+   ]
+  },
+  "27": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel IV: Schutz und Unterstützung"
+    }
+   ],
+   "marginalie": [
+    "Meldung"
+   ]
+  },
+  "28": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel IV: Schutz und Unterstützung"
+    }
+   ],
+   "marginalie": [
+    "Meldung durch Angehörige bestimmter Berufsgruppen"
+   ]
+  },
+  "29": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel V: Materielles Recht"
+    }
+   ],
+   "marginalie": [
+    "Zivilverfahren und Rechtsbehelfe"
+   ]
+  },
+  "30": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel V: Materielles Recht"
+    }
+   ],
+   "marginalie": [
+    "Schadenersatz und Entschädigung"
+   ]
+  },
+  "31": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel V: Materielles Recht"
+    }
+   ],
+   "marginalie": [
+    "Sorgerecht, Besuchsrecht und Sicherheit"
+   ]
+  },
+  "32": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel V: Materielles Recht"
+    }
+   ],
+   "marginalie": [
+    "Zivilrechtliche Folgen der Zwangsheirat"
+   ]
+  },
+  "33": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel V: Materielles Recht"
+    }
+   ],
+   "marginalie": [
+    "Psychische Gewalt"
+   ]
+  },
+  "34": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel V: Materielles Recht"
+    }
+   ],
+   "marginalie": [
+    "Nachstellung"
+   ]
+  },
+  "35": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel V: Materielles Recht"
+    }
+   ],
+   "marginalie": [
+    "Körperliche Gewalt"
+   ]
+  },
+  "36": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel V: Materielles Recht"
+    }
+   ],
+   "marginalie": [
+    "Sexuelle Gewalt, einschliesslich Vergewaltigung"
+   ]
+  },
+  "37": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel V: Materielles Recht"
+    }
+   ],
+   "marginalie": [
+    "Zwangsheirat"
+   ]
+  },
+  "38": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel V: Materielles Recht"
+    }
+   ],
+   "marginalie": [
+    "Verstümmelung weiblicher Genitalien"
+   ]
+  },
+  "39": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel V: Materielles Recht"
+    }
+   ],
+   "marginalie": [
+    "Zwangsabtreibung und Zwangssterilisierung"
+   ]
+  },
+  "40": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel V: Materielles Recht"
+    }
+   ],
+   "marginalie": [
+    "Sexuelle Belästigung"
+   ]
+  },
+  "41": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel V: Materielles Recht"
+    }
+   ],
+   "marginalie": [
+    "Beihilfe oder Anstiftung und Versuch"
+   ]
+  },
+  "42": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel V: Materielles Recht"
+    }
+   ],
+   "marginalie": [
+    "Inakzeptable Rechtfertigungen für Straftaten, einschliesslich der im Namen der sogenannten «Ehre» begangenen Straftaten"
+   ]
+  },
+  "43": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel V: Materielles Recht"
+    }
+   ],
+   "marginalie": [
+    "Anwendung der Straftatbestände"
+   ]
+  },
+  "44": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel V: Materielles Recht"
+    }
+   ],
+   "marginalie": [
+    "Gerichtsbarkeit"
+   ]
+  },
+  "45": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel V: Materielles Recht"
+    }
+   ],
+   "marginalie": [
+    "Sanktionen und Massnahmen"
+   ]
+  },
+  "46": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel V: Materielles Recht"
+    }
+   ],
+   "marginalie": [
+    "Strafverschärfungsgründe"
+   ]
+  },
+  "47": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel V: Materielles Recht"
+    }
+   ],
+   "marginalie": [
+    "Von einer anderen Vertragspartei erlassene Strafurteile"
+   ]
+  },
+  "48": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel V: Materielles Recht"
+    }
+   ],
+   "marginalie": [
+    "Verbot verpflichtender alternativer Streitbeilegungsverfahren oder Strafurteile"
+   ]
+  },
+  "49": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel VI: Ermittlungen, Strafverfolgung, Verfahrensrecht und Schutzmassnahmen"
+    }
+   ],
+   "marginalie": [
+    "Allgemeine Verpflichtungen"
+   ]
+  },
+  "50": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel VI: Ermittlungen, Strafverfolgung, Verfahrensrecht und Schutzmassnahmen"
+    }
+   ],
+   "marginalie": [
+    "Soforthilfe, Prävention und Schutz"
+   ]
+  },
+  "51": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel VI: Ermittlungen, Strafverfolgung, Verfahrensrecht und Schutzmassnahmen"
+    }
+   ],
+   "marginalie": [
+    "Gefährdungsanalyse und Gefahrenmanagement"
+   ]
+  },
+  "52": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel VI: Ermittlungen, Strafverfolgung, Verfahrensrecht und Schutzmassnahmen"
+    }
+   ],
+   "marginalie": [
+    "Eilschutzanordnungen"
+   ]
+  },
+  "53": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel VI: Ermittlungen, Strafverfolgung, Verfahrensrecht und Schutzmassnahmen"
+    }
+   ],
+   "marginalie": [
+    "Kontakt- und Näherungsverbote sowie Schutzanordnungen"
+   ]
+  },
+  "54": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel VI: Ermittlungen, Strafverfolgung, Verfahrensrecht und Schutzmassnahmen"
+    }
+   ],
+   "marginalie": [
+    "Ermittlungen und Beweise"
+   ]
+  },
+  "55": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel VI: Ermittlungen, Strafverfolgung, Verfahrensrecht und Schutzmassnahmen"
+    }
+   ],
+   "marginalie": [
+    "Verfahren auf Antrag und von Amts wegen"
+   ]
+  },
+  "56": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel VI: Ermittlungen, Strafverfolgung, Verfahrensrecht und Schutzmassnahmen"
+    }
+   ],
+   "marginalie": [
+    "Schutzmassnahmen"
+   ]
+  },
+  "57": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel VI: Ermittlungen, Strafverfolgung, Verfahrensrecht und Schutzmassnahmen"
+    }
+   ],
+   "marginalie": [
+    "Rechtsberatung"
+   ]
+  },
+  "58": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel VI: Ermittlungen, Strafverfolgung, Verfahrensrecht und Schutzmassnahmen"
+    }
+   ],
+   "marginalie": [
+    "Verjährungsfrist"
+   ]
+  },
+  "59": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel VII: Migration und Asyl"
+    }
+   ],
+   "marginalie": [
+    "Aufenthaltsstatus"
+   ]
+  },
+  "60": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel VII: Migration und Asyl"
+    }
+   ],
+   "marginalie": [
+    "Asylanträge aufgrund des Geschlechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "15",
+     "text": "SR <b>0.142.30</b>",
+     "links": [
+      {
+       "label": "SR <b>0.142.30</b>",
+       "url": "https://fedlex.data.admin.ch/eli/cc/1955/443_461_469"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "61": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel VII: Migration und Asyl"
+    }
+   ],
+   "marginalie": [
+    "Verbot der Zurückweisung"
+   ]
+  },
+  "62": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel VIII: Internationale Zusammenarbeit"
+    }
+   ],
+   "marginalie": [
+    "Allgemeine Grundsätze"
+   ]
+  },
+  "63": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel VIII: Internationale Zusammenarbeit"
+    }
+   ],
+   "marginalie": [
+    "Massnahmen in Bezug auf gefährdete Personen"
+   ]
+  },
+  "64": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel VIII: Internationale Zusammenarbeit"
+    }
+   ],
+   "marginalie": [
+    "Informationen"
+   ]
+  },
+  "65": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel VIII: Internationale Zusammenarbeit"
+    }
+   ],
+   "marginalie": [
+    "Datenschutz"
+   ],
+   "fussnoten": [
+    {
+     "nr": "16",
+     "text": "SR <b>0.235.1</b>",
+     "links": [
+      {
+       "label": "SR <b>0.235.1</b>",
+       "url": "https://fedlex.data.admin.ch/eli/cc/2002/422"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "66": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel IX: Überwachungsmechanismus"
+    }
+   ],
+   "marginalie": [
+    "Expertengruppe für die Bekämpfung von Gewalt gegen Frauen und häuslicher Gewalt"
+   ]
+  },
+  "67": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel IX: Überwachungsmechanismus"
+    }
+   ],
+   "marginalie": [
+    "Ausschuss der Vertragsparteien"
+   ]
+  },
+  "68": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel IX: Überwachungsmechanismus"
+    }
+   ],
+   "marginalie": [
+    "Verfahren"
+   ]
+  },
+  "69": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel IX: Überwachungsmechanismus"
+    }
+   ],
+   "marginalie": [
+    "Allgemeine Empfehlungen"
+   ]
+  },
+  "70": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel IX: Überwachungsmechanismus"
+    }
+   ],
+   "marginalie": [
+    "Beteiligung der Parlamente an der Überwachung"
+   ]
+  },
+  "71": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel X: Verhältnis zu anderen völkerrechtlichen Übereinkünften"
+    }
+   ],
+   "marginalie": [
+    "Verhältnis zu anderen völkerrechtlichen Übereinkünften"
+   ]
+  },
+  "72": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel XI: Änderungen des Übereinkommens"
+    }
+   ],
+   "marginalie": [
+    "Änderungen"
+   ]
+  },
+  "73": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel XII: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Auswirkungen dieses Übereinkommens"
+   ]
+  },
+  "74": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel XII: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Beilegung von Streitigkeiten"
+   ]
+  },
+  "75": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel XII: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Unterzeichnung und Inkrafttreten"
+   ]
+  },
+  "76": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel XII: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Beitritt zum Übereinkommen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "17",
+     "text": "SR <b>0.192.030</b>",
+     "links": [
+      {
+       "label": "SR <b>0.192.030</b>",
+       "url": "https://fedlex.data.admin.ch/eli/cc/1963/772_769_797"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "77": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel XII: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Räumlicher Geltungsbereich"
+   ]
+  },
+  "78": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel XII: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Vorbehalte"
+   ]
+  },
+  "79": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel XII: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Gültigkeit und Prüfung der Vorbehalte"
+   ]
+  },
+  "80": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel XII: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Kündigung"
+   ]
+  },
+  "81": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel XII: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Notifikation"
+   ]
+  },
+  "annex_u1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Anhänge"
+    }
+   ],
+   "marginalie": []
+  }
+ }
+}
