@@ -76,6 +76,8 @@ Ausreisser, nicht Volumentreiber (nur 2 Mega-Sessions). Nächste Messung: Mean/M
 - **T16 offen** — CLAUDE.md-§7-Detail in `paths`-Rule: §8 Ziff. 4 «nicht ohne separates Go David» (+ Probelauf-Vorbedingung); Leitplanke «CLAUDE.md im Zweifel nicht anfassen». Bleibt liegen.
 - Übrige §§4–§7 (T4/T5/T6/T8/T9/T11/T12/T13/T14/T15/T17/T18/T19/T10) unverändert offen, je Reihenfolge §8.
 
+**P2 (T5+T6) GEBAUT (10.7.2026, Worktree `feat/qstok-p2-guards`):** T5-Guards — Read/cat-Soft-Guard `.claude/hooks/lese-schutz.py` (>200 KB ohne offset/limit + §6-Nie-lesen-Dateien → Werkzeug-Verweis, Override via offset/limit/Sonde; feuert nur auf Agenten-Tools, Generatoren/Tore unberührt), `.gitattributes` (normtext+golden `linguist-generated` OHNE `-diff`, fontData/grundart `-diff`), fontData-Banner. T6-Sonde `npm run zeige` (`scripts/zeige.ts`, byte-treuer Roh-Slice via typen.ts-Deserialisierung; Bund/`--kanton`/`--struktur`/`--register`/`--sql` read-only) — OR Art. 1 byte-identisch bewiesen. Voller `gate` grün ausser `check:plan` (P1b-Inventar-Fix noch offen, nicht P2-verursacht). CLAUDE.md-Verankerung (T6-DoD) + T4-Template offen (T4 = P3).
+
 ## §1 Ist-Befund
 
 | Posten | Befund |
