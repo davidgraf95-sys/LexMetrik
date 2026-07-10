@@ -35,6 +35,38 @@ Gegenprüfung fix Opus/high; Synthese nie unter Sonnet — kalibriert an T2-Base
 100 % `model`/`effort`-explizit. **Offen T19:** Warn-Injektions-Entfernung hängt an T1/#176
 (nicht auf ungemergtem Stand gebaut); Cache-Hygiene-Regeln bereits im Template §6 dokumentiert.
 
+### Stand T2 — Token-Baseline gemessen (10.7.2026, PR QS-TOK/T2)
+
+Quelle `npx ccusage session --json`, Fenster **26.6.–10.7.2026**, read-only, 141 Sessions,
+5,95 Mrd Tok / ≈ $5 895. **K-Korrektur befolgt:** aggregiert über **Session-TYPEN**, nicht Wochen.
+Typologie deterministisch aus dem **Modell-Set** der Session (Davids Modell→Rolle-Direktive:
+Fable orchestriert, Opus baut, Haiku/Sonnet mechanisch/leicht) — *Wächter, kein Kausalbeweis;
+strukturelle Proxy, nicht semantische Bau/Recherche-Trennung (aus Token-Metadaten nicht ableitbar)*.
+Reproduktion: **`npm run token:baseline`** (Script `scripts/token-baseline.mjs`, Fenster via `--since/--until`).
+
+| Session-Typ | n | Tok gesamt | Mean/Sess | Median/Sess | cacheRead | cacheWrite | input | output | USD |
+|---|--:|--:|--:|--:|--:|--:|--:|--:|--:|
+| **O** Orchestriert (enthält Fable) | 27 | 2 675M | 99,1M | 10,0M | 95,9 % | 3,3 % | 0,34 % | 0,50 % | $3 042 |
+| **B** Solo-Bau (nur Opus) | 109 | 3 182M | 29,2M | 6,9M | 95,8 % | 2,9 % | 0,73 % | 0,56 % | $2 777 |
+| **M** Bau+mechanisch/leicht (opus+haiku, sonnet) | 5 | 98M | 19,5M | 6,3M | 96,8 % | 2,4 % | 0,21 % | 0,65 % | $76 |
+| **GESAMT** | 141 | 5 955M | 42,2M | 7,1M | 95,8 % | 3,1 % | 0,55 % | 0,54 % | $5 895 |
+
+Output-Generierung (der echte $-Hebel, Opus-Output ≈ 5× Input): O 494k · B 165k · M 127k Tok/Sess;
+$/Sess: O 112,7 · B 25,5 · M 15,2. **cacheRead dominiert das Volumen (95,8 %)** — jede Session liest
+den Präfix (Steuer-Doks + Kontext) turn-über-turn neu; **Median 7,1M ≪ Mean 42,2M**: zwei
+Orchestrier-Ausreisser (1 027M + 762M = 30 % allen Volumens) treiben den O-Mean, der Median ist der
+stabilere Wächter-Wert.
+
+**Bestätigte Top-Hebel (Priorisierung Folge-Einheiten):** (1) **P1 Steuer-Doku-Diät (T1/T3/T7)** —
+weil cacheRead = 95,8 % ist der immer-mitgelesene Präfix (STRUKTUR/ROADMAP/CLAUDE/FAHRPLÄNE) der
+grösste Volumen-Posten; Verkleinern wirkt auf jeden Turn jeder Session. (2) **T4-Dispatch +
+§14.6-Kontext-Hygiene (Delegieren)** — Typ O ist der Pro-Session-Grossverbraucher (99M Mean, $113,
+1B-Ausreisser); schwere Lese-/Prüfarbeit in Subagenten halten kappt genau diese Sessions.
+(3) **T15 Modell-/Effort-Routing** — Output (der Preis-Hebel) konzentriert in O (494k/Sess);
+effort-Senkung wirkt dort direkt (−48…−76 %). Typ B ist mit 53 % des Volumens der Mengen-Hebel
+(T6-Sonde/T9-ast-grep/T13-Anker senken Reads je Bau-Session). T5-Read-Guards = Versicherung gegen
+Ausreisser, nicht Volumentreiber (nur 2 Mega-Sessions). Nächste Messung: Mean/Median je Typ vergleichen.
+
 ## §1 Ist-Befund
 
 | Posten | Befund |
