@@ -538,13 +538,21 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   });
 
   // Hash-Sprung: alle Vorfahren des Ziel-Artikels öffnen + scrollen.
+  // W2·5d U-POSITION/A17: auch im SEKUNDÄREN Pane an die Fundstelle springen —
+  // der ⧉-Öffner legt den Pfad MIT `#art-token` ab (NormPopover readerLink), aber
+  // die Fundstelle stand bisher nur in `window.location.hash` (= die Haupt-URL,
+  // NICHT der Pane-Pfad) und der Effekt brach für Panes ab ⇒ das Pane öffnete oben
+  // statt an der Norm. Quelle des Hashs ist im Pane die PANE-LOKALE Location
+  // (`<Routes location={loc}>` → react-router `useLocation()` liefert den Pane-Pfad),
+  // sonst wie bisher die echte Fenster-URL (Primär/Einzelansicht byte-gleich).
   useEffect(() => {
     if (!eintraege || !sektionen.length || typeof window === 'undefined') return;
-    if (istSekundaer) return; // sekundäres Pane: kein eigener #hash (pfad ist anker-frei), nie Haupt-URL lesen
-    const m = window.location.hash.match(/^#art-(.+)$/);
+    const hashQuelle = istSekundaer ? location.hash : window.location.hash;
+    const m = hashQuelle.match(/^#art-(.+)$/);
     if (!m) return;
     // Deep-Link mit Artikel-Anker → aktiven Reiter darauf melden (Live-Label).
-    aktualisiereTabArtikel(window.location.pathname + window.location.search + window.location.hash);
+    // Sekundäres Pane treibt den globalen Reiter-Tracker NICHT (es ist nicht die URL).
+    if (!istSekundaer) aktualisiereTabArtikel(window.location.pathname + window.location.search + window.location.hash);
     const token = decodeURIComponent(m[1]);
     const ids = pfadZu(sektionen, (s) => s.artikel.some((e) => e.artikel === token)) ?? [];
     window.requestAnimationFrame(() => {
@@ -557,6 +565,11 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
         window.setTimeout(() => el?.classList.remove('lc-ziel-blink'), 2400);
       }, 110);
     });
+    // location.hash bewusst NICHT in den Deps: der Effekt springt EINMAL beim
+    // Erlass-Laden an die (Pane-lokale bzw. Fenster-)Fundstelle — die Primär-
+    // Instanz führt spätere Hash-Wechsel über den letzteNavKey-Effekt nach
+    // (kein Doppel-Sprung/-Blink), das Pane öffnet an seiner Seed-Fundstelle.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [eintraege, sektionen, istSekundaer, imPane, wurzel]);
 
   // Geteilter «aktueller-Artikel»-Beobachter (Auftrag David 26.6.2026): EIN

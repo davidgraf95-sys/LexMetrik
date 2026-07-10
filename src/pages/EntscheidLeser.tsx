@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState, type CSSProperties } from 'react';
 import { createPortal } from 'react-dom';
-import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
+import { Link, useLocation, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { EntscheidBody } from '../components/rechtsprechung/EntscheidBody';
 import RegesteBlock from '../components/rechtsprechung/RegesteBlock';
 import { Tabs } from '../components/ui/Tabs';
@@ -115,6 +115,14 @@ function SprungNavigation({ ziele }: { ziele: { anker: string; label: string }[]
 function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam }: { schluessel: string; ansichtParam: string | null; normParam: string | null }) {
   const navigate = useNavigate();
   const { imPane } = usePaneKontext();
+  // W2·5d U-POSITION/A17: im SEKUNDÄREN Pane ist die massgebliche Fundstelle-/
+  // Hash-Quelle die PANE-LOKALE Location (react-router `<Routes location>`), NICHT
+  // `window.location.hash` (= die Haupt-URL). Wird ein Entscheid via ⧉ aus einem
+  // Gesetz-Leser geöffnet, dessen Haupt-URL ein `#art-…` trägt, würde der
+  // `?norm=`-Fundstellen-Sprung sonst fälschlich als „Hash gewinnt" abgebrochen
+  // ⇒ das Pane öffnete oben statt an der Erwägung (stumm falsch, §8).
+  const paneLoc = useLocation();
+  const hashRoh = (imPane ? paneLoc.hash : typeof window !== 'undefined' ? window.location.hash : '').slice(1);
   const meldeInhaltsKopf = useMeldeInhaltsKopf();
   const [snap, setSnap] = useState<EntscheidSnapshot | null>(null);
   const [zustand, setZustand] = useState<'laden' | 'fehlt' | 'da'>('laden');
@@ -207,7 +215,7 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam }: { schlues
   const normGesprungen = useRef<string | null>(null);
   useEffect(() => {
     if (zustand !== 'da' || !snap || !normParam || typeof window === 'undefined') return;
-    if (window.location.hash.slice(1)) return;            // Hash gewinnt
+    if (hashRoh) return;                                   // expliziter #hash gewinnt (Pane-lokal bzw. Fenster)
     const merkKey = `${schluessel}?${normParam}`;
     if (normGesprungen.current === merkKey) return;
     // Fundstelle in der beim Laden AKTIVEN Fassung suchen (Auszug bevorzugt beim
@@ -229,9 +237,8 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam }: { schlues
   }, [zustand, snap, normParam, schluessel]);
   useEffect(() => {
     if (zustand !== 'da' || typeof window === 'undefined') return;
-    const roh = window.location.hash.slice(1);
-    if (!roh) return;
-    const id = decodeURIComponent(roh);
+    if (!hashRoh) return;
+    const id = decodeURIComponent(hashRoh);
     if (hashGesprungen.current === `${schluessel}#${id}`) return;
     let frames = 0;
     let raf = requestAnimationFrame(function versuche() {
@@ -239,7 +246,7 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam }: { schlues
       if (frames++ < 60) raf = requestAnimationFrame(versuche);
     });
     return () => cancelAnimationFrame(raf);
-  }, [zustand, schluessel]);
+  }, [zustand, schluessel, hashRoh]);
 
   if (zustand === 'fehlt') {
     return (
