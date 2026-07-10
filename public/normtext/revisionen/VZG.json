@@ -1,0 +1,27 @@
+{
+  "erlassKey": "VZG",
+  "sr": "281.42",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2012-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/281.42",
+      "sha": "737dd435b36817d02d4636e2cf667d39fe546bf3c054bd5acd93c361f3177e28"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1921-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/36/425_433_469",
+      "dateDocument": "1920-04-23",
+      "roFundstelle": "AS 36 425",
+      "titelDe": "Verordnung des Bundesgerichts vom 23. April 1920 über die Zwangsverwertung von Grundstücken (VZG)",
+      "titelFr": "Ordonnance du Tribunal fédéral du 23 avril 1920 sur la réalisation forcée des immeubles (ORFI)",
+      "titelIt": "Regolamento del Tribunale federale del 23 aprile 1920 concernente la realizzazione forzata dei fondi (RFF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/36/425_433_469/de",
+      "sha": "5c0e34e6dd164e585f366853fe7b276e3a4cc6e881f7462e8c764135abcab5fc"
+    }
+  ],
+  "sha": "9fa6c9f0bd10b5ec094d0c334e8e0a92c96d24901c657daaa5989e6c2cb1e5b6"
+}

@@ -1,0 +1,749 @@
+{
+  "sr": "955.033.0",
+  "korpusStand": "2023-01-01",
+  "bBindings": [
+    {
+      "sr": {
+        "type": "literal",
+        "value": "955.033.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/747"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-11-06"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die Verhinderung von Geldwäscherei und Terrorismusfinanzierung im übrigen Finanzsektor (Geldwäschereiverordnung-FINMA 3, GwV-FINMA 3)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance de l'Autorité fédérale de surveillance des marchés financiers sur la prévention du blanchiment d'argent et du financement du terrorisme dans les autres secteurs financiers (Ordonnance 3 de la FINMA sur le blanchiment d'argent, OBA-FINMA 3)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza dell'Autorità federale di vigilanza sui mercati finanziari sulla prevenzione del riciclaggio di denaro e del finanziamento del terrorismo negli altri settori finanziari (Ordinanza 3 FINMA sul riciclaggio di denaro, ORD-FINMA 3)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "955.033.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/747"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-11-06"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die Verhinderung von Geldwäscherei und Terrorismusfinanzierung im übrigen Finanzsektor (Geldwäschereiverordnung-FINMA 3, GwV-FINMA 3)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance de l'Autorité fédérale de surveillance des marchés financiers sur la prévention du blanchiment d'argent et du financement du terrorisme dans les autres secteurs financiers (Ordonnance 3 de la FINMA sur le blanchiment d'argent, OBA-FINMA 3)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza dell'Autorità federale di vigilanza sui mercati finanziari sulla prevenzione del riciclaggio di denaro e del finanziamento del terrorismo negli altri settori finanziari (Ordinanza 3 FINMA sul riciclaggio di denaro, ORD-FINMA 3)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "955.033.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/747"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-11-06"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die Verhinderung von Geldwäscherei und Terrorismusfinanzierung im übrigen Finanzsektor (Geldwäschereiverordnung-FINMA 3, GwV-FINMA 3)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance de l'Autorité fédérale de surveillance des marchés financiers sur la prévention du blanchiment d'argent et du financement du terrorisme dans les autres secteurs financiers (Ordonnance 3 de la FINMA sur le blanchiment d'argent, OBA-FINMA 3)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza dell'Autorità federale di vigilanza sui mercati finanziari sulla prevenzione del riciclaggio di denaro e del finanziamento del terrorismo negli altri settori finanziari (Ordinanza 3 FINMA sul riciclaggio di denaro, ORD-FINMA 3)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "955.033.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/747"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-11-06"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die Verhinderung von Geldwäscherei und Terrorismusfinanzierung im übrigen Finanzsektor (Geldwäschereiverordnung-FINMA 3, GwV-FINMA 3)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance de l'Autorité fédérale de surveillance des marchés financiers sur la prévention du blanchiment d'argent et du financement du terrorisme dans les autres secteurs financiers (Ordonnance 3 de la FINMA sur le blanchiment d'argent, OBA-FINMA 3)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza dell'Autorità federale di vigilanza sui mercati finanziari sulla prevenzione del riciclaggio di denaro e del finanziamento del terrorismo negli altri settori finanziari (Ordinanza 3 FINMA sul riciclaggio di denaro, ORD-FINMA 3)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "955.033.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/885"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-12-08"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die Verhinderung von Geldwäscherei und Terrorismusfinanzierung (Geldwäschereiverordnung-FINMA, GwV-FINMA)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance de l'Autorité fédérale de surveillance des marchés financiers sur la prévention du blanchiment d'argent et du financement du terrorisme (Ordonnance de la FINMA sur le blanchiment d'argent, OBA-FINMA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza dell'Autorità federale di vigilanza sui mercati finanziari sulla prevenzione del riciclaggio di denaro e del finanziamento del terrorismo (Ordinanza FINMA sul riciclaggio di denaro, ORD-FINMA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "955.033.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/885"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-12-08"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die Verhinderung von Geldwäscherei und Terrorismusfinanzierung (Geldwäschereiverordnung-FINMA, GwV-FINMA)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance de l'Autorité fédérale de surveillance des marchés financiers sur la prévention du blanchiment d'argent et du financement du terrorisme (Ordonnance de la FINMA sur le blanchiment d'argent, OBA-FINMA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza dell'Autorità federale di vigilanza sui mercati finanziari sulla prevenzione del riciclaggio di denaro e del finanziamento del terrorismo (Ordinanza FINMA sul riciclaggio di denaro, ORD-FINMA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "955.033.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/885"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-12-08"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die Verhinderung von Geldwäscherei und Terrorismusfinanzierung (Geldwäschereiverordnung-FINMA, GwV-FINMA)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance de l'Autorité fédérale de surveillance des marchés financiers sur la prévention du blanchiment d'argent et du financement du terrorisme (Ordonnance de la FINMA sur le blanchiment d'argent, OBA-FINMA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza dell'Autorità federale di vigilanza sui mercati finanziari sulla prevenzione del riciclaggio di denaro e del finanziamento del terrorismo (Ordinanza FINMA sul riciclaggio di denaro, ORD-FINMA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "955.033.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/885"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-12-08"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die Verhinderung von Geldwäscherei und Terrorismusfinanzierung (Geldwäschereiverordnung-FINMA, GwV-FINMA)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance de l'Autorité fédérale de surveillance des marchés financiers sur la prévention du blanchiment d'argent et du financement du terrorisme (Ordonnance de la FINMA sur le blanchiment d'argent, OBA-FINMA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza dell'Autorità federale di vigilanza sui mercati finanziari sulla prevenzione del riciclaggio di denaro e del finanziamento del terrorismo (Ordinanza FINMA sul riciclaggio di denaro, ORD-FINMA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "955.033.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/390"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-06-03"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die Bekämpfung von Geldwäscherei und Terrorismusfinanzierung im Finanzsektor (Geldwäschereiverordnung-FINMA, GwV-FINMA)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance de l'Autorité fédérale de surveillance des marchés financiers sur la lutte contre le blanchiment d'argent et le financement du terrorisme dans le secteur financier (Ordonnance de la FINMA sur le blanchiment d'argent, OBA-FINMA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza dell'Autorità federale di vigilanza sui mercati finanziari sulla lotta contro il riciclaggio di denaro e il finanziamento del terrorismo nel settore finanziario (Ordinanza FINMA sul riciclaggio di denaro, ORD-FINMA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "955.033.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/390"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-06-03"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die Bekämpfung von Geldwäscherei und Terrorismusfinanzierung im Finanzsektor (Geldwäschereiverordnung-FINMA, GwV-FINMA)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance de l'Autorité fédérale de surveillance des marchés financiers sur la lutte contre le blanchiment d'argent et le financement du terrorisme dans le secteur financier (Ordonnance de la FINMA sur le blanchiment d'argent, OBA-FINMA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza dell'Autorità federale di vigilanza sui mercati finanziari sulla lotta contro il riciclaggio di denaro e il finanziamento del terrorismo nel settore finanziario (Ordinanza FINMA sul riciclaggio di denaro, ORD-FINMA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "955.033.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/390"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-06-03"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die Bekämpfung von Geldwäscherei und Terrorismusfinanzierung im Finanzsektor (Geldwäschereiverordnung-FINMA, GwV-FINMA)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance de l'Autorité fédérale de surveillance des marchés financiers sur la lutte contre le blanchiment d'argent et le financement du terrorisme dans le secteur financier (Ordonnance de la FINMA sur le blanchiment d'argent, OBA-FINMA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza dell'Autorità federale di vigilanza sui mercati finanziari sulla lotta contro il riciclaggio di denaro e il finanziamento del terrorismo nel settore finanziario (Ordinanza FINMA sul riciclaggio di denaro, ORD-FINMA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "955.033.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/390"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-06-03"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die Bekämpfung von Geldwäscherei und Terrorismusfinanzierung im Finanzsektor (Geldwäschereiverordnung-FINMA, GwV-FINMA)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance de l'Autorité fédérale de surveillance des marchés financiers sur la lutte contre le blanchiment d'argent et le financement du terrorisme dans le secteur financier (Ordonnance de la FINMA sur le blanchiment d'argent, OBA-FINMA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza dell'Autorità federale di vigilanza sui mercati finanziari sulla lotta contro il riciclaggio di denaro e il finanziamento del terrorismo nel settore finanziario (Ordinanza FINMA sul riciclaggio di denaro, ORD-FINMA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "955.033.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/395"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-06-20"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die Bekämpfung von Geldwäscherei und Terrorismusfinanzierung im Finanzsektor (Geldwäschereiverordnung-FINMA, GwV-FINMA)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance de l'Autorité fédérale de surveillance des marchés financiers sur la lutte contre le blanchiment d'argent et le financement du terrorisme dans le secteur financier (Ordonnance de la FINMA sur le blanchiment d'argent, OBA-FINMA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza dell'Autorità federale di vigilanza sui mercati finanziari sulla lotta contro il riciclaggio di denaro e il finanziamento del terrorismo nel settore finanziario (Ordinanza FINMA sul riciclaggio di denaro, ORD-FINMA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "955.033.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/395"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-06-20"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die Bekämpfung von Geldwäscherei und Terrorismusfinanzierung im Finanzsektor (Geldwäschereiverordnung-FINMA, GwV-FINMA)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance de l'Autorité fédérale de surveillance des marchés financiers sur la lutte contre le blanchiment d'argent et le financement du terrorisme dans le secteur financier (Ordonnance de la FINMA sur le blanchiment d'argent, OBA-FINMA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza dell'Autorità federale di vigilanza sui mercati finanziari sulla lotta contro il riciclaggio di denaro e il finanziamento del terrorismo nel settore finanziario (Ordinanza FINMA sul riciclaggio di denaro, ORD-FINMA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "955.033.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/395"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-06-20"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die Bekämpfung von Geldwäscherei und Terrorismusfinanzierung im Finanzsektor (Geldwäschereiverordnung-FINMA, GwV-FINMA)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance de l'Autorité fédérale de surveillance des marchés financiers sur la lutte contre le blanchiment d'argent et le financement du terrorisme dans le secteur financier (Ordonnance de la FINMA sur le blanchiment d'argent, OBA-FINMA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza dell'Autorità federale di vigilanza sui mercati finanziari sulla lotta contro il riciclaggio di denaro e il finanziamento del terrorismo nel settore finanziario (Ordinanza FINMA sul riciclaggio di denaro, ORD-FINMA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "955.033.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/804"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-12-05"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die Bekämpfung von Geldwäscherei und Terrorismusfinanzierung im Finanzsektor (Geldwäschereiverordnung-FINMA, GwV-FINMA)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance de l'Autorité fédérale de surveillance des marchés financiers sur la lutte contre le blanchiment d'argent et le financement du terrorisme dans le secteur financier (Ordonnance de la FINMA sur le blanchiment d'argent, OBA-FINMA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza dell'Autorità federale di vigilanza sui mercati finanziari sulla lotta contro il riciclaggio di denaro e il finanziamento del terrorismo nel settore finanziario (Ordinanza FINMA sul riciclaggio di denaro, ORD-FINMA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "955.033.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/804"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-12-05"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die Bekämpfung von Geldwäscherei und Terrorismusfinanzierung im Finanzsektor (Geldwäschereiverordnung-FINMA, GwV-FINMA)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance de l'Autorité fédérale de surveillance des marchés financiers sur la lutte contre le blanchiment d'argent et le financement du terrorisme dans le secteur financier (Ordonnance de la FINMA sur le blanchiment d'argent, OBA-FINMA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza dell'Autorità federale di vigilanza sui mercati finanziari sulla lotta contro il riciclaggio di denaro e il finanziamento del terrorismo nel settore finanziario (Ordinanza FINMA sul riciclaggio di denaro, ORD-FINMA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "955.033.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/804"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-12-05"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die Bekämpfung von Geldwäscherei und Terrorismusfinanzierung im Finanzsektor (Geldwäschereiverordnung-FINMA, GwV-FINMA)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance de l'Autorité fédérale de surveillance des marchés financiers sur la lutte contre le blanchiment d'argent et le financement du terrorisme dans le secteur financier (Ordonnance de la FINMA sur le blanchiment d'argent, OBA-FINMA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza dell'Autorità federale di vigilanza sui mercati finanziari sulla lotta contro il riciclaggio di denaro e il finanziamento del terrorismo nel settore finanziario (Ordinanza FINMA sul riciclaggio di denaro, ORD-FINMA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "955.033.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2020/1040"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-12-10"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die Bekämpfung von Geldwäscherei und Terrorismusfinanzierung im Finanzsektor (Geldwäschereiverordnung-FINMA, GwV-FINMA)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance de l'Autorité fédérale de surveillance des marchés financiers sur la lutte contre le blanchiment d'argent et le financement du terrorisme dans le secteur financier (Ordonnance de la FINMA sur le blanchiment d'argent, OBA-FINMA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza dell'Autorità federale di vigilanza sui mercati finanziari sulla lotta contro il riciclaggio di denaro e il finanziamento del terrorismo nel settore finanziario (Ordinanza FINMA sul riciclaggio di denaro, ORD-FINMA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "955.033.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2020/1040"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-12-10"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die Bekämpfung von Geldwäscherei und Terrorismusfinanzierung im Finanzsektor (Geldwäschereiverordnung-FINMA, GwV-FINMA)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance de l'Autorité fédérale de surveillance des marchés financiers sur la lutte contre le blanchiment d'argent et le financement du terrorisme dans le secteur financier (Ordonnance de la FINMA sur le blanchiment d'argent, OBA-FINMA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza dell'Autorità federale di vigilanza sui mercati finanziari sulla lotta contro il riciclaggio di denaro e il finanziamento del terrorismo nel settore finanziario (Ordinanza FINMA sul riciclaggio di denaro, ORD-FINMA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "955.033.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2020/1040"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-12-10"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die Bekämpfung von Geldwäscherei und Terrorismusfinanzierung im Finanzsektor (Geldwäschereiverordnung-FINMA, GwV-FINMA)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance de l'Autorité fédérale de surveillance des marchés financiers sur la lutte contre le blanchiment d'argent et le financement du terrorisme dans le secteur financier (Ordonnance de la FINMA sur le blanchiment d'argent, OBA-FINMA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza dell'Autorità federale di vigilanza sui mercati finanziari sulla lotta contro il riciclaggio di denaro e il finanziamento del terrorismo nel settore finanziario (Ordinanza FINMA sul riciclaggio di denaro, ORD-FINMA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "955.033.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2022/703"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2023-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2022-10-27"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die Bekämpfung von Geldwäscherei und Terrorismusfinanzierung im Finanzsektor (Geldwäschereiverordnung-FINMA, GwV-FINMA)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance de l’Autorité fédérale de surveillance des marchés financiers sur la lutte contre le blanchiment d’argent et le financement du terrorisme dans le secteur financier (Ordonnance de la FINMA sur le blanchiment d’argent, OBA-FINMA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza dell’Autorità federale di vigilanza sui mercati finanziari sulla lotta contro il riciclaggio di denaro e il finanziamento del terrorismo nel settore finanziario (Ordinanza FINMA sul riciclaggio di denaro, ORD-FINMA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "955.033.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2022/703"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2023-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2022-10-27"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die Bekämpfung von Geldwäscherei und Terrorismusfinanzierung im Finanzsektor (Geldwäschereiverordnung-FINMA, GwV-FINMA)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance de l’Autorité fédérale de surveillance des marchés financiers sur la lutte contre le blanchiment d’argent et le financement du terrorisme dans le secteur financier (Ordonnance de la FINMA sur le blanchiment d’argent, OBA-FINMA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza dell’Autorità federale di vigilanza sui mercati finanziari sulla lotta contro il riciclaggio di denaro e il finanziamento del terrorismo nel settore finanziario (Ordinanza FINMA sul riciclaggio di denaro, ORD-FINMA)"
+      }
+    }
+  ],
+  "aStaende": [
+    "2016-01-01",
+    "2019-01-01",
+    "2020-01-01",
+    "2021-01-01",
+    "2023-01-01"
+  ]
+}

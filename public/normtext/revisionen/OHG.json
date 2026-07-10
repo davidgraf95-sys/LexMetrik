@@ -1,0 +1,88 @@
+{
+  "erlassKey": "OHG",
+  "sr": "312.5",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2025-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2024/163",
+      "dateDocument": "2024-04-10",
+      "roFundstelle": "AS 2024 163",
+      "titelDe": "Verordnung über die Anpassung der Entschädigungs- und Genugtuungsbeträge des Opferhilfegesetzes an die Teuerung",
+      "titelFr": "Ordonnance concernant l’adaptation au renchérissement des montants d’indemnisation et de réparation morale de la loi sur l’aide aux victimes",
+      "titelIt": "Ordinanza sull’adeguamento al rincaro degli importi di indennizzo e di riparazione morale della legge federale concernente l’aiuto alle vittime di reati",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2024/163/de",
+      "sha": "a87278ee41c1221f739dec41c24d14a3aba8a499db960ae4d648baa744296e98"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/312.5",
+      "sha": "03bfb1b1dd539166539718a5cf12f9efd3127d088b5343076514ff15dcf353cb"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2019-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/312.5",
+      "sha": "e3bbaaf57218e59f7ed04058a4ecb69e93230029e6fc2223ac16e4ec44e32791"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/312.5",
+      "sha": "39fb04a895e3193fa66d315b9a8a3536f92509f7cc895c8e331f9249c3d40b7d"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2009-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/232",
+      "dateDocument": "2007-03-23",
+      "roFundstelle": "AS 2008 232",
+      "titelDe": "Bundesgesetz über die Hilfe an Opfer von Straftaten (Opferhilfegesetz, OHG)",
+      "titelFr": "Loi fédérale sur l'aide aux victimes d'infractions (Loi sur l'aide aux victimes, LAVI)",
+      "titelIt": "Legge federale concernente l'aiuto alle vittime di reati (LAV)",
+      "botschaftKey": "BOTSCHAFT-2005-1167",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/232/de",
+      "sha": "43d7d2f3ec48806b3beb362a24b846d79dad165a4cf195217e6e1b04f95e23df"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2009-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/197",
+      "dateDocument": "2009-03-31",
+      "roFundstelle": "AS 2009 197",
+      "titelDe": "Bundesgesetz über die Hilfe an Opfer von Straftaten (Opferhilfegesetz, OHG) (Betrifft nur den italienischen Text)",
+      "titelFr": "Loi fédérale sur l'aide aux victimes d'infractions (Loi sur l'aide aux victimes, LAVI) (Ne concerne que le texte italien)",
+      "titelIt": "Legge federale concernente l'aiuto alle vittime di reati (LAV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/197/de",
+      "sha": "650e0147f316084d55724e1aaaf7f461005fce98657f68b50f3ab845396a9080"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2002-10-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/431",
+      "dateDocument": "2001-03-23",
+      "roFundstelle": "AS 2002 431",
+      "titelDe": "Bundesgesetz über die Hilfe an Opfer von Straftaten (Opferhilfegesetz) (Verbesserung des Schutzes von Kindern als Opfer)",
+      "titelFr": "Loi fédérale sur l'aide aux victimes d'infractions (Loi sur l'aide aux victimes) (Amélioration de la protection des enfants victimes)",
+      "titelIt": "Legge federale concernente l'aiuto alle vittime di reati (Miglioramento della protezione delle vittime minori di 18 anni)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/431/de",
+      "sha": "2bc79a73d6c8dca475a5a0655f2f4a3e837428fef75761cadf5a37b56badb0ee"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1993-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1992/2465_2465_2465",
+      "dateDocument": "1991-10-04",
+      "roFundstelle": "AS 1992 2465",
+      "titelDe": "Bundesgesetz vom 4. Oktober 1991 über die Hilfe an Opfer von Straftaten (Opferhilfegesetz, OHG)",
+      "titelFr": "Loi fédérale du 4 octobre 1991 sur l'aide aux victimes d'infractions (LAVI)",
+      "titelIt": "Legge federale del 4 ottobre 1991 concernente l'aiuto alle vittime di reati (LAV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1992/2465_2465_2465/de",
+      "sha": "0ec5d9dd5a028b6208d3f5f7d7fba3616e4ba4882197f51c0a7c85b36cfeb1b7"
+    }
+  ],
+  "sha": "ff51789bb8d3f0b682b350b29607c51067d994f7531673f614a4b42a02773e66"
+}

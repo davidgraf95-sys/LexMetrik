@@ -32,6 +32,10 @@ export const NORMTEXT_SEITENDATEIEN = [
   'public/normtext/currency.json', // P1-d Currency-Sidecar (byte-genaue Paritäts-Klasse)
 ];
 export const NORMTEXT_STRUKTUR_DIR = 'public/normtext/struktur'; // rekursiv: bund/ + kanton/
+// Paket 5 (W2·6-REV): Revisions-Timeline-Sidecars je Erlass. Neue public/normtext/**-
+// Dateiklasse → MUSS eine Paritäts-Klasse haben (§0b Regel 2: ungedeckte neue Datei =
+// rot, nie still-grün). Reiner Dokument-Byte-Roundtrip (Pfad → exakter Inhalt).
+export const NORMTEXT_REVISIONEN_DIR = 'public/normtext/revisionen';
 export const RECHTSPRECHUNG_MANIFESTE = [
   'public/rechtsprechung/register.json',
   'public/rechtsprechung/norm-index.json',
@@ -121,17 +125,20 @@ export function ingestNormtext(db: DatabaseSync): Zaehler {
   const bund = jsonFlach(BUND_DIR);
   const kanton = jsonFlach(KANTON_DIR, new Set(['index.json']));
   const struktur = jsonRekursiv(NORMTEXT_STRUKTUR_DIR);
+  const revisionen = existsSync(NORMTEXT_REVISIONEN_DIR) ? jsonRekursiv(NORMTEXT_REVISIONEN_DIR) : [];
   ingestEintragDateien(db, bund, 'normtext-bund', false);
   ingestEintragDateien(db, kanton, 'normtext-kanton', false);
   ingestDokumente(db, NORMTEXT_MANIFESTE, 'normtext-manifest');
   ingestDokumente(db, NORMTEXT_SEITENDATEIEN, 'normtext-seitendatei');
   ingestDokumente(db, struktur, 'normtext-struktur');
+  ingestDokumente(db, revisionen, 'normtext-revisionen');
   return {
     'Bund-Normtext': bund.length,
     'Kanton-Normtext': kanton.length,
     'Normtext-Manifeste': NORMTEXT_MANIFESTE.length,
     'Normtext-Seitendateien': NORMTEXT_SEITENDATEIEN.length,
     'Normtext-Struktur': struktur.length,
+    'Normtext-Revisionen': revisionen.length,
   };
 }
 

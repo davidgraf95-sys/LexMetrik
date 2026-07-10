@@ -1,0 +1,173 @@
+{
+  "sr": "814.621",
+  "korpusStand": "2022-01-01",
+  "bBindings": [
+    {
+      "sr": {
+        "type": "literal",
+        "value": "814.621"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/299"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-07-05"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Getränkeverpackungen (VGV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les emballages pour boissons (OEB)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sugli imballaggi per bevande (OIB)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "814.621"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/299"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-07-05"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Getränkeverpackungen (VGV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les emballages pour boissons (OEB)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sugli imballaggi per bevande (OIB)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "814.621"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/299"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-07-05"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Getränkeverpackungen (VGV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les emballages pour boissons (OEB)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sugli imballaggi per bevande (OIB)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "814.621"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/299"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-07-05"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Getränkeverpackungen (VGV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les emballages pour boissons (OEB)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sugli imballaggi per bevande (OIB)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "814.621"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2026/358"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2027-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2026-06-24"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 24. Juni 2026 über Verpackungen (Verpackungsverordnung, VerpV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 24 juin 2026 sur les emballages (OEmb)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 24 giugno 2026 sugli imballaggi (OI)"
+      }
+    }
+  ],
+  "aStaende": [
+    "2001-01-01",
+    "2002-01-01",
+    "2007-01-01",
+    "2008-01-01",
+    "2022-01-01"
+  ]
+}

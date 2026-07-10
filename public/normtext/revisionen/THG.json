@@ -1,0 +1,65 @@
+{
+  "erlassKey": "THG",
+  "sr": "946.51",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/946.51",
+      "sha": "3e3264dec3b04ac96ce105b050bb6d23b0cb50d18d5b6c182e60c9c9d6f155fe"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2017-05-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/946.51",
+      "sha": "1b633b4ec7a80d88db5ee0e2666d03a871f3a1a5d1e9bd8c21d94c92d23fba6b"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2010-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/349",
+      "dateDocument": "2009-06-12",
+      "roFundstelle": "AS 2010 349",
+      "titelDe": "Bundesgesetz über die technischen Handelshemmnisse (THG)",
+      "titelFr": "Loi fédérale sur les entraves techniques au commerce&#61482; (LETC)",
+      "titelIt": "Legge federale sugli ostacoli tecnici al commercio (LOTC)",
+      "botschaftKey": "BOTSCHAFT-2008-1231",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/349/de",
+      "sha": "69f57d2825b752af49f69eaf12fdb82484d9a443f1a1fbd39f4610b873c65941"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2007-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/946.51",
+      "sha": "e6dadddacac80994b3be8573af2a4b40cb420e0bf63faee2646eb901fb6cb5e1"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2002-06-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/155",
+      "dateDocument": "2001-12-14",
+      "roFundstelle": "AS 2002 155",
+      "titelDe": "Bundesgesetz über die technischen Handelshemmnisse (THG)",
+      "titelFr": "Loi fédérale sur les entraves techniques au commerce (LETC)",
+      "titelIt": "Legge federale sugli ostacoli tecnici al commercio (LOTC)",
+      "botschaftKey": "BOTSCHAFT-2001-845",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/155/de",
+      "sha": "47a6fa0708ee9fcfd3d5d55e75ebd901a294681ee2f03d9b7dbfdbb33e1e48e2"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1996-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1996/1725_1725_1725",
+      "dateDocument": "1995-10-06",
+      "roFundstelle": "AS 1996 1725",
+      "titelDe": "Bundesgesetz vom 6. Oktober 1995 über die technischen Handelshemmnisse (THG)",
+      "titelFr": "Loi fédérale du 6 octobre 1995 sur les entraves techniques au commerce (LETC)",
+      "titelIt": "Legge federale del 6 ottobre 1995 sugli ostacoli tecnici al commercio (LOTC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1996/1725_1725_1725/de",
+      "sha": "929bc494447599b6f8119bda91dd7c3949ce92ebd9c73a04a8ed6f59bb22f85a"
+    }
+  ],
+  "sha": "74e952adfdc8a59541603d608ca52b4ff7bc23c48134a4aae8705ee1db267ece"
+}

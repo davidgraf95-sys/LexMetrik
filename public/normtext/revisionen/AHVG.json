@@ -1,0 +1,366 @@
+{
+  "erlassKey": "AHVG",
+  "sr": "831.10",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2066-01-01",
+      "nichtKonsolidiert": true,
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.10",
+      "sha": "52f8ae78a41fe11dd46321ac52584b3eb59c85d3bbf41abf53460dab802d1403"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2034-01-01",
+      "nichtKonsolidiert": true,
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.10",
+      "sha": "efd4217553cf84351e1a88277f1384b219772fe27b40dd5ec4602c7debea5264"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2026-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2025/704",
+      "dateDocument": "2025-03-21",
+      "roFundstelle": "AS 2025 704",
+      "titelDe": "Bundesgesetz über die Alters- und Hinterlassenenversicherung (AHVG) (Umsetzung der 13. Altersrente)",
+      "titelFr": "Loi fédérale sur l’assurance-vieillesse et survivants (LAVS) (Mise en œuvre de la 13e rente de vieillesse)",
+      "titelIt": "Legge federale sull’assicurazione per la vecchiaia e per i superstiti (LAVS) (Attuazione della 13a mensilità della rendita di vecchiaia)",
+      "botschaftKey": "BOTSCHAFT-2024-2747",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2025/704/de",
+      "sha": "1bb9a3c2022e7703b16cecba074b3426420ba2a8aeb5a401d52235086bd710ea"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.10",
+      "sha": "059da271cd6cfd8ce3920f644fa168c79ea76c3b4625d236ba5e8fd5a434d2c6"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2024-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2023/688",
+      "dateDocument": "2022-06-17",
+      "roFundstelle": "AS 2023 688",
+      "titelDe": "Bundesgesetz über die Alters- und Hinterlassenenversicherung (AHVG) (Modernisierung der Aufsicht)",
+      "titelFr": "Loi fédérale sur l’assurance-vieillesse et survivants (LAVS) (Modernisation de la surveillance)",
+      "titelIt": "Legge federale su l’assicurazione per la vecchiaia e per i superstiti (LAVS) (Modernizzazione della vigilanza)",
+      "botschaftKey": "BOTSCHAFT-2020-1",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2023/688/de",
+      "sha": "313fd5be3d19fdb186dff6aad8832894228d240e808f1d7b92a0f9547a56e8ff"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2024-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2023/92",
+      "dateDocument": "2021-12-17",
+      "roFundstelle": "AS 2023 92",
+      "titelDe": "Bundesgesetz über die Alters- und Hinterlassenenversicherung (AHVG) (AHV 21)",
+      "titelFr": "Loi fédérale sur l’assurance-vieillesse et survivants (LAVS) (AVS 21)",
+      "titelIt": "Legge federale sull’assicurazione per la vecchiaia e per i superstiti (LAVS) (AVS 21)",
+      "botschaftKey": "BOTSCHAFT-2019-2267",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2023/92/de",
+      "sha": "14e5f6337a163a9fd370d7b602c3352c034be305ed786d69f9689c08b0e56d98"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.10",
+      "sha": "4d4c8ea661ee40c37cea2a19ac60db3f472c6fa93b7c4f50082d92d2cbfdc800"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.10",
+      "sha": "0b8b79bb7bdbee66d7897370f41445a1868d90b8f2e9e92338fb217dc5cb3bf4"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2022-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2021/758",
+      "dateDocument": "2020-12-18",
+      "roFundstelle": "AS 2021 758",
+      "titelDe": "Bundesgesetz über die Alters- und Hinterlassenenversicherung (AHVG) (Systematische Verwendung der AHV-Nummer durch Behörden)",
+      "titelFr": "Loi fédérale sur l’assurance-vieillesse et survivants (LAVS) (Utilisation systématique du numéro AVS par les autorités)",
+      "titelIt": "Legge federale sull’assicurazione per la vecchiaia e per i superstiti (LAVS) (Utilizzazione sistematica del numero AVS da parte delle autorità)",
+      "botschaftKey": "BOTSCHAFT-2019-2681",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2021/758/de",
+      "sha": "89421c09d0ea0c03dc79df084c197bc3928ab2ec9409b5a7c2f2e82c9121d282"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.10",
+      "sha": "59fdec5b35ea25e82d34be47ab91b67c8b5deed994216a826963957cacbedea1"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2020-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.10",
+      "sha": "84af3bbe030ab40499695866a4239ef697820988e2f46b4c9c172a61054d9cbb"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2019-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.10",
+      "sha": "cbddc1e04411d57c30f95a7955a1f215bad110fadba2651b8d5ff856608e5093"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2019-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.10",
+      "sha": "b3ea6d2e39031b13b612056f64342d010b922ca286a2dd2705ecd1a4f169a110"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2018-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.10",
+      "sha": "9a838f5eda7ab948ac2fcc0191b8645fb06e74a7341faee308f6f8c4d64826e2"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2017-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.10",
+      "sha": "9242b98367e323c24fdacd3ac53c4d01d444c5d16da8cc0f1e88891a27aae7fc"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2017-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/828",
+      "dateDocument": "2016-06-17",
+      "roFundstelle": "AS 2016 828",
+      "titelDe": "Bundesbeschluss über die Genehmigung und die Umsetzung des Protokolls zum Freizügigkeitsabkommen zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft sowie ihren Mitgliedstaaten andererseits betreffend die Ausdehnung auf die Republik Kroatien",
+      "titelFr": "Arrêté fédéral portant approbation et mise en uvre du protocole relatif à l'accord sur la libre circulation des personnes entre la Confédération suisse, d'une part, et la Communauté européenne et ses Etats membres, d'autre part, concernant l'extension à la République de Croatie",
+      "titelIt": "Decreto federale che approva e traspone nel diritto svizzero il Protocollo relativo all'estensione alla Croazia dell'Accordo tra la Confederazione Svizzera, da una parte, e la Comunità europea ed i suoi Stati membri, dall'altra, sulla libera circolazione delle persone",
+      "botschaftKey": "BOTSCHAFT-2016-467",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/828/de",
+      "sha": "c62b3fa92de60b32390f83a2b0c405e203e96a5581e5dfed88404e51f1f1475e"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2016-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.10",
+      "sha": "1f9ae712a0a56e2447fa7966256ad93776263cff139650022fa0fbaf3ad7dd5a"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2015-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.10",
+      "sha": "f1d6b7fa9dc1e58b0a614cf66f8abb0d8b1c27eb92dde97d7f8adcebd3b6f89c"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2013-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.10",
+      "sha": "62d16363dcecf364ef9d8980b51c27267aae0346a2d7a20cc52fdaffb27470d8"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2012-07-16",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.10",
+      "sha": "bfa0d4eb85a8f7dbc1686ce697d19f9acfaad0c1702a9b0f4fb6667efa73fabf"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2012-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/673",
+      "dateDocument": "2011-06-17",
+      "roFundstelle": "AS 2011 673",
+      "titelDe": "Bundesgesetz über die Alters- und Hinterlassenenversicherung (AHVG) (Verbesserung der Durchführung)",
+      "titelFr": "Loi fédérale sur l'assurance-vieillesse et survivants (LAVS) (Amélioration de la mise en uvre)",
+      "titelIt": "Legge federale sull'assicurazione per la vecchiaia e per i superstiti (LAVS) (Miglioramento dell'esecuzione)",
+      "botschaftKey": "BOTSCHAFT-2011-61",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/673/de",
+      "sha": "c845754617dcf20667e1f270a59e4e3595418c1917d8421ec2ea47c65c3d5f38"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2011-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/432",
+      "dateDocument": "2008-06-13",
+      "roFundstelle": "AS 2009 432",
+      "titelDe": "Bundesgesetz über die Neuordnung der Pflegefinanzierung",
+      "titelFr": "Loi fédérale sur le nouveau régime de financement des soins",
+      "titelIt": "Legge federale concernente il nuovo ordinamento del finanziamento delle cure",
+      "botschaftKey": "BOTSCHAFT-2005-237",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/432/de",
+      "sha": "ca67c14306b6d1ea12f86a096b8417be39ede8375439636dbe3f99507f0122c4"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2011-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/242",
+      "dateDocument": "2010-04-16",
+      "roFundstelle": "AS 2010 242",
+      "titelDe": "Bundesgesetz über die Neuordnung der Pflegefinanzierung (Betrifft nur den französischen Text)",
+      "titelFr": "Loi fédérale sur le nouveau régime de financement des soins",
+      "titelIt": "Legge federale concernente il nuovo ordinamento del finanziamento delle cure (Concerne solo il testo francese)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/242/de",
+      "sha": "d28d16314e7968a3199a49ba427bcbbc9320c7ec8e9cb0760c56f9efad585cf1"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2010-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.10",
+      "sha": "4a3a7212fc68ac4535db5044dec694d39140e0a323265e2f2028c1e7f33a6b89"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2009-06-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/296",
+      "dateDocument": "2008-06-13",
+      "roFundstelle": "AS 2009 296",
+      "titelDe": "Bundesbeschluss über die Genehmigung der Weiterführung des Freizügigkeitsabkommens zwischen der Schweiz und der Europäischen Gemeinschaft und ihren Mitgliedstaaten sowie über die Genehmigung und die Umsetzung des Protokolls über die Ausdehnung des Freizügigkeitsabkommens auf Bulgarien und Rumänien",
+      "titelFr": "Arrêté fédéral portant approbation de la reconduction de l'accord entre la Suisse et la Communauté européenne et ses Etats membres sur la libre circulation des personnes, ainsi qu'approbation et mise en uvre du protocole visant à étendre l'accord sur la libre circulation à la Bulgarie et à la Roumanie",
+      "titelIt": "Decreto federale che approva il rinnovo dell'Accordo tra la Svizzera e la Comunità europea ed i suoi Stati membri sulla libera circolazione delle persone e approva e traspone nel diritto svizzero il Protocollo relativo all'estensione alla Bulgaria e alla Romania dell'Accordo sulla libera circolazione delle persone",
+      "botschaftKey": "BOTSCHAFT-2008-472",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/296/de",
+      "sha": "3eb4b8a57373cc2b2c9d5fce6cbec78d5b1580a3030fc331fc79467b39b1e988"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2009-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.10",
+      "sha": "369aa28ede3afed740c90189c5e59f16676bd4560454a7cd60e86c707debb11d"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2008-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.10",
+      "sha": "837747bea1809fd6be4e18f75eccb266a172aa35e0aa26cfff9b211fee498855"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2008-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.10",
+      "sha": "f89d225a42cff8d134b7a1b557d4ab1b6200ce7774dd739a139e3c2f906c1d47"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2007-12-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/747",
+      "dateDocument": "2006-06-23",
+      "roFundstelle": "AS 2007 747",
+      "titelDe": "Bundesgesetz über die Alters- und Hinterlassenenversicherung (AHVG) (Neue AHV-Versichertennummer)",
+      "titelFr": "Loi fédérale sur l'assurance-vieillesse et survivants (LAVS) (Nouveau numéro d'assuré AVS)",
+      "titelIt": "Legge federale sull'assicurazione per la vecchiaia e per i superstiti (LAVS) (Nuovo numero d'assicurato dell'AVS)",
+      "botschaftKey": "BOTSCHAFT-2006-52",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/747/de",
+      "sha": "0004cf3efd5f4928df6d90177cae9da8dc3392d78a0f1193d1a831db872ba4b1"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2007-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/741",
+      "dateDocument": "2005-12-16",
+      "roFundstelle": "AS 2006 741",
+      "titelDe": "Bundesgesetz über die Alters- und Hinterlassenenversicherung (AHVG)",
+      "titelFr": "Loi fédérale sur l'assurance-vieillesse et survivants (LAVS)",
+      "titelIt": "Legge federale sull'assicurazione per la vecchiaia e per i superstiti (LAVS)",
+      "botschaftKey": "BOTSCHAFT-2002-1106",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/741/de",
+      "sha": "6f07866db3f480c5aadc5552df75b6d1f8dea0a878e142d9f3a1f30629f07dd2"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2006-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.10",
+      "sha": "99e6881fea3e6580b36af2e3c7b41986c3f9648ccc753c2d6a5260012fe42602"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2005-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.10",
+      "sha": "372590b20429a83b49784aa8afbb58534baea0e5e7722dfde7dd011d7c22527b"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2004-12-20",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.10",
+      "sha": "7a3e8cd0a96339af1b628cfb1e42e5161a04b89db314aa4ae58abafa874de717"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2004-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.10",
+      "sha": "7e095794ec2eab4fbc3d38888e8d485b41e93dd19d8cf49715fb58e82225f946"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2003-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.10",
+      "sha": "d6a3a8a0c213f34d672ca983b85280e5ea241544911467defe631c0f9f8eab30"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2002-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.10",
+      "sha": "2f520fd925018f353c3c97d251a65b07e10acf0e472eec0d9af2cb9ced3b5549"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2001-02-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/59",
+      "dateDocument": "2000-10-06",
+      "roFundstelle": "AS 2001 59",
+      "titelDe": "Bundesgesetz über die Alters- und Hinterlassenenversicherung (AHVG)",
+      "titelFr": "Loi fédérale sur l'assurance-vieillesse et survivants (LAVS)",
+      "titelIt": "Legge federale sull'assicurazione per la vecchiaia e per i superstiti (LAVS)",
+      "botschaftKey": "BOTSCHAFT-2000-849",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/59/de",
+      "sha": "33dbf0ed0294fd45d508d91013ade6601b995d19e28489adf6cc084ac2b7d68f"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2001-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/439",
+      "dateDocument": "2000-06-23",
+      "roFundstelle": "AS 2000 439",
+      "titelDe": "Bundesgesetz vom über die Alters- und Hinterlassenenversicherung (AHVG)",
+      "titelFr": "Loi fédérale sur l'assurance-vieillesse et survivants (LAVS)",
+      "titelIt": "Legge federale sull'assicurazione per la vecchiaia e per i superstiti (LAVS)",
+      "botschaftKey": "BOTSCHAFT-1999-1_4983_4601_4303",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/439/de",
+      "sha": "de1648beed45ce666066be244c0319f84bc788d1649226cba9f9ee10257c8992"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2001-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/461",
+      "dateDocument": "2000-06-23",
+      "roFundstelle": "AS 2000 461",
+      "titelDe": "Bundesgesetz über die Alters- und Hinterlassenenversicherung (AHVG)",
+      "titelFr": "Loi fédérale sur l'assurance-vieillesse et survivants (LAVS)",
+      "titelIt": "Legge federale sull'assicurazione per la vecchiaia e per i superstiti (LAVS)",
+      "botschaftKey": "BOTSCHAFT-2000-99",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/461/de",
+      "sha": "ee0893a487c886fe148a6a3afecbac3decea8ec80c5be6ebd2ce3d4dfbfbc263"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2000-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.10",
+      "sha": "47d4d3767a6942ef734bbff351bcf6b27058362d7ca3a5da935d108c9b1a003f"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2000-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/831.10",
+      "sha": "1bcfc8bcea7e92b86e17eb5a173e09ab695b39120c5aeef26a4e9ffaf7ce390c"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1948-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/63/837_843_843",
+      "dateDocument": "1946-12-20",
+      "roFundstelle": "AS 63 837",
+      "titelDe": "Bundesgesetz vom 20. Dezember 1946 über die Alters- und Hinterlassenenversicherung (AHVG)",
+      "titelFr": "Loi fédérale du 20 décembre 1946 sur l'assurance-vieillesse et survivants (LAVS)",
+      "titelIt": "Legge federale del 20 dicembre 1946 sull'assicurazione per la vecchiaia e per i superstiti (LAVS)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/63/837_843_843/de",
+      "sha": "cdf7e2d94d3d71ca886c9569cafbffdf6dfab2bfe903bc909737e3317538c15f"
+    }
+  ],
+  "sha": "21a7f8af18d3c3cad9a6645b24fe3ce69a0ecd9121a1c825e57376fe12d26010"
+}

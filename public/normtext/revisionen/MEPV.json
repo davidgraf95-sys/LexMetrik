@@ -1,0 +1,135 @@
+{
+  "erlassKey": "MEPV",
+  "sr": "812.213",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2026-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/812.213",
+      "sha": "ff684c7bd7c88c9817b1f41e6ecb5056a7401efeb11b9e01f8ab28c1f5260c3a"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2023-11-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2023/576",
+      "dateDocument": "2023-09-29",
+      "roFundstelle": "AS 2023 576",
+      "titelDe": "Medizinprodukteverordnung (MepV)",
+      "titelFr": "Ordonnance sur les dispositifs médicaux (ODim)",
+      "titelIt": "Ordinanza relativa ai dispositivi medici (ODmed)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2023/576/de",
+      "sha": "ddc5305f1234266824e6ffb5061a137bbc9f2ee55da8f36022d745d72f6f96ae"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/812.213",
+      "sha": "9dfec11e7260939e77c76baa79ed607bf801c27aee35c151e698f0175f44e307"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2022-05-26",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/812.213",
+      "sha": "7e100ad2b70877b4f97206e21d379db7cdf5e4d39342935bee1def0541ad1dc9"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2021-05-26",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/552",
+      "dateDocument": "2020-07-01",
+      "roFundstelle": "AS 2020 552",
+      "titelDe": "Medizinprodukteverordnung (MepV)",
+      "titelFr": "Ordonnance sur les dispositifs médicaux (ODim)",
+      "titelIt": "Ordinanza relativa ai dispositivi medici (ODmed)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/552/de",
+      "sha": "996494184a877fb548f0c50d1514643b7a7ac4530a7772cf552bd5535b305bfc"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2021-05-26",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2021/281",
+      "dateDocument": "2021-05-19",
+      "roFundstelle": "AS 2021 281",
+      "titelDe": "Medizinprodukteverordnung (MepV)",
+      "titelFr": "Ordonnance sur les dispositifs médicaux (ODim)",
+      "titelIt": "Ordinanza relativa ai dispositivi medici (ODmed)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2021/281/de",
+      "sha": "5695d7e5ea63ecd6f816d9999ec2659cf767f76d8480a283ad7d79e1a78d2ca7"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2021-05-04",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2021/260",
+      "dateDocument": "2021-05-04",
+      "roFundstelle": "AS 2021 260",
+      "titelDe": "Medizinprodukteverordnung (MepV). Berichtigung",
+      "titelFr": "Ordonnance sur les dispositifs médicaux (ODim). Erratum",
+      "titelIt": "Ordinanza relativa ai dispositivi medici (ODmed). Correzione",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2021/260/de",
+      "sha": "60c9e248b33b9c0110a57adb5636f619d06d2c1cbf04e882e02d1ffb050ded7a"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2020-08-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/551",
+      "dateDocument": "2020-07-01",
+      "roFundstelle": "AS 2020 551",
+      "titelDe": "Medizinprodukteverordnung (MepV)",
+      "titelFr": "Ordonnance sur les dispositifs médicaux (ODim)",
+      "titelIt": "Ordinanza relativa ai dispositivi medici (ODmed)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/551/de",
+      "sha": "b47cb16fd21951b566cef0b1dc93d8f49879ae21d5ffdabeea9f14973f0b08cc"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2017-11-26",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/650",
+      "dateDocument": "2017-10-25",
+      "roFundstelle": "AS 2017 650",
+      "titelDe": "Medizinprodukteverordnung (MepV)",
+      "titelFr": "Ordonnance sur les dispositifs médicaux (ODim)",
+      "titelIt": "Ordinanza relativa ai dispositivi medici (ODmed)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/650/de",
+      "sha": "b6050eb72981d72266c117c82cb546cadaf5d6c92053fed9914f22b98a523a43"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2015-04-15",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/189",
+      "dateDocument": "2015-04-01",
+      "roFundstelle": "AS 2015 189",
+      "titelDe": "Medizinprodukteverordnung (MepV)",
+      "titelFr": "Ordonnance sur les dispositifs médicaux (ODim)",
+      "titelIt": "Ordinanza relativa ai dispositivi medici (ODmed)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/189/de",
+      "sha": "3848819b2d3147133c17b829492c2b9a7df6c8f6a09c773e8bd781be014d6773"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2010-04-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/170",
+      "dateDocument": "2010-03-24",
+      "roFundstelle": "AS 2010 170",
+      "titelDe": "Medizinprodukteverordnung (MepV)",
+      "titelFr": "Ordonnance sur les dispositifs médicaux (ODim)",
+      "titelIt": "Ordinanza relativa ai dispositivi medici (ODmed)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/170/de",
+      "sha": "da002dc3a6a116bc57c87224f8d011d396777a5bfa784dbec1830fe0b5386a53"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2002-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/520",
+      "dateDocument": "2001-10-17",
+      "roFundstelle": "AS 2001 520",
+      "titelDe": "Medizinprodukteverordnung (MepV)",
+      "titelFr": "Ordonnance sur les dispositifs médicaux (ODim)",
+      "titelIt": "Ordinanza relativa ai dispositivi medici (ODmed)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/520/de",
+      "sha": "ab1c6790529a4014277633a7bbd7e51e5f447aa844ea637872a3462d4fec6bf9"
+    }
+  ],
+  "sha": "1d31260964bab278a0e260dc111305462119ce494ff10bc79143801fc236883b"
+}

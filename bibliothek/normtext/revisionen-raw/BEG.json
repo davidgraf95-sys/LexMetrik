@@ -1,0 +1,145 @@
+{
+  "sr": "957.1",
+  "korpusStand": "2023-01-01",
+  "bBindings": [
+    {
+      "sr": {
+        "type": "literal",
+        "value": "957.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/450"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-10-03"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über Bucheffekten (Bucheffektengesetz, BEG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les titres intermédiés (LTI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sui titoli contabili (Legge sui titoli contabili, LTCo)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "957.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/450"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-10-03"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über Bucheffekten (Bucheffektengesetz, BEG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les titres intermédiés (LTI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sui titoli contabili (Legge sui titoli contabili, LTCo)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "957.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/450"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-10-03"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über Bucheffekten (Bucheffektengesetz, BEG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les titres intermédiés (LTI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sui titoli contabili (Legge sui titoli contabili, LTCo)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "957.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/450"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-10-03"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über Bucheffekten (Bucheffektengesetz, BEG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les titres intermédiés (LTI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sui titoli contabili (Legge sui titoli contabili, LTCo)"
+      }
+    }
+  ],
+  "aStaende": [
+    "2009-10-01",
+    "2010-01-01",
+    "2015-07-01",
+    "2016-01-01",
+    "2019-11-01",
+    "2020-01-01",
+    "2021-02-01",
+    "2023-01-01",
+    "2026-10-01"
+  ]
+}

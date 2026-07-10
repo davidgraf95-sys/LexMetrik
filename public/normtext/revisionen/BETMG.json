@@ -1,0 +1,229 @@
+{
+  "erlassKey": "BETMG",
+  "sr": "812.121",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2029-08-01",
+      "nichtKonsolidiert": true,
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/812.121",
+      "sha": "05977334c5f2686405d1d91eeabc0118ae572b85f692769087dff8100a934243"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/812.121",
+      "sha": "da6c02cfdd8dbb6d6b9ac6231a8f567665b7fc0a37dd803481459de3a4f70f9c"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/812.121",
+      "sha": "ab460dbbb0cb9731ece370aa386ecc760f03f600cd9d2441a64a66cb611c62ff"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2022-08-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2022/385",
+      "dateDocument": "2021-03-19",
+      "roFundstelle": "AS 2022 385",
+      "titelDe": "Bundesgesetz über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelgesetz, BetmG)",
+      "titelFr": "Loi fédérale sur les stupéfiants et les substances psychotropes (Loi sur les stupéfiants, LStup)",
+      "titelIt": "Legge federale sugli stupefacenti e sulle sostanze psicotrope (Legge sugli stupefacenti, LStup)",
+      "botschaftKey": "BOTSCHAFT-2020-1492",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2022/385/de",
+      "sha": "2c38b394cc00a692584d5d73f331ad1600f70e7650ff70abd299df5fa72e9050"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2022-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/812.121",
+      "sha": "4abcbe974ddb334615e8912ed5e77ae5b616d4527fcac24a61723f5540e2796f"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2021-05-15",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2021/216",
+      "dateDocument": "2020-09-25",
+      "roFundstelle": "AS 2021 216",
+      "titelDe": "Bundesgesetz über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelgesetz, BetmG)",
+      "titelFr": "Loi fédérale sur les stupéfiants et les substances psychotropes (Loi sur les stupéfiants, LStup)",
+      "titelIt": "Legge federale sugli stupefacenti e sulle sostanze psicotrope (Legge sugli stupefacenti, LStup)",
+      "botschaftKey": "BOTSCHAFT-2019-721",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2021/216/de",
+      "sha": "80108097710d36f5826474c9e01c67d6561c48cedc1af68a040dc77b103e4f49"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2020-02-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/812.121",
+      "sha": "47d60a44fd24d25ef6c3da12ada8c3e9b949e196ed29e7c854ddfc24873f1c4a"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2020-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/812.121",
+      "sha": "acd5e838f7b5a60e731775eeaaa7e9326a118892806166baea95dd668a39d6ab"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2018-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/812.121",
+      "sha": "92987328684fb42ea18285e9f92c4fe573a6c320f5996a27792beee406519578"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2017-05-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/812.121",
+      "sha": "3130536fc634d76bc10ef304122f8253da6da895903cf74f6e0f6f113723cf20"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2013-10-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/334",
+      "dateDocument": "2012-09-28",
+      "roFundstelle": "AS 2013 334",
+      "titelDe": "Bundesgesetz über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelgesetz, BetmG)",
+      "titelFr": "Loi fédérale sur les stupéfiants et les substances psychotropes (Loi sur les stupéfiants, LStup)",
+      "titelIt": "Legge federale sugli stupefacenti e sulle sostanze psicotrope (Legge sugli stupefacenti, LStup)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/334/de",
+      "sha": "e3c79ea20b8fd0ac5b6a8926ee3785212ceaef0c493e661191545b524bbea95b"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2013-04-04",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/205",
+      "dateDocument": "2013-02-20",
+      "roFundstelle": "AS 2013 205",
+      "titelDe": "Bundesgesetz über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelgesetz, BetmG)",
+      "titelFr": "Loi fédérale sur les stupéfiants et les substances psychotropes (Loi sur les stupéfiants, LStup)",
+      "titelIt": "Legge federale sugli stupefacenti e sulle sostanze psicotrope (Legge sugli stupefacenti; LStup)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/205/de",
+      "sha": "5b3e0f13c4e05040f9a465c371303f9ece1bab36969e3ecfe75719f1d7434a14"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2013-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/812.121",
+      "sha": "0a24edfc8f997c8105239e3e3c8947c958a1d6971fee8b76ff3d04ef5b022182"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2012-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/812.121",
+      "sha": "df8ecc27df8a3b1a7024a82e2bc5cb9814e8dfe644565b7e63e0e4585e1e0a12"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2011-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/361",
+      "dateDocument": "2011-05-25",
+      "roFundstelle": "AS 2011 361",
+      "titelDe": "Verordnung über die abschliessende Inkraftsetzung der Änderung vom 20. März 2008 des Betäubungsmittelgesetzes vom 3. Oktober 1951",
+      "titelFr": "Ordonnance sur la mise en vigueur complète de la modification du 20 mars 2008 de la loi du 3 octobre 1951 sur les stupéfiants",
+      "titelIt": "Ordinanza sull'entrata in vigore integrale della modifica del 20 marzo 2008 della legge del 3 ottobre 1951 sugli stupefacenti",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/361/de",
+      "sha": "2a3e112380893c287111c77dbc0e3a093d7281cabf692f0d59891cd412a265c8"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2011-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/395",
+      "dateDocument": "2010-10-21",
+      "roFundstelle": "AS 2011 395",
+      "titelDe": "Bundesgesetz über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelgesetz, BetmG) (Betrifft nur den französischen Text)",
+      "titelFr": "Loi fédérale sur les stupéfiants et les substances psychotropes (Loi sur les stupéfiants, LStup)",
+      "titelIt": "Legge federale sugli stupefacenti e sulle sostanze psicotrope (Legge sugli stupefacenti, LStup) (Concerne solo il testo francese)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/395/de",
+      "sha": "783c347e767755ef717d7b68fae8041f8e4f3d17ce6190d8285af01d6ec12b21"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/812.121",
+      "sha": "e07c7583099ff2b60ed652b999e128fb897f5378af99def5c4d69eee68a3e0a3"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2010-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/812.121",
+      "sha": "4135d4053ab632ab4a02c0dd3ac9e9af4de2c1aea9dadaa599f187fcb6a6c8de"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2010-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/352",
+      "dateDocument": "2008-03-20",
+      "roFundstelle": "AS 2009 352",
+      "titelDe": "Bundesgesetz über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelgesetz, BetmG)",
+      "titelFr": "Loi fédérale sur les stupéfiants et les substances psychotropes (Loi sur les stupéfiants, LStup)",
+      "titelIt": "Legge federale sugli stupefacenti e sulle sostanze psicotrope (Legge sugli stupefacenti, LStup)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/352/de",
+      "sha": "0911f9c27b230c086d393c8a4d33eb0f1919b1fa4a7952dd11a51b5b82978efc"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2008-12-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/812.121",
+      "sha": "6e8cc37340749e7ec220fc877ae199df72a4441477abfc46b208ea8ca230f2ad"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2007-05-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/812.121",
+      "sha": "35a802a87f3bf34a2dc7eed9df1b3cee29b8788b90fb181dd4d7d6f0565b997a"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2007-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/812.121",
+      "sha": "6159189a96daf5b9dcf390e81b43862e080814733205bcbf8c06308e01e84b4c"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2005-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/670",
+      "dateDocument": "2003-06-20",
+      "roFundstelle": "AS 2004 670",
+      "titelDe": "Bundesgesetz über die Verlängerung des Bundesbeschlusses über die ärztliche Verschreibung von Heroin",
+      "titelFr": "Loi fédérale sur la prorogation de l'arrêté fédéral sur la prescription médicale d'héroïne",
+      "titelIt": "Legge federale che proroga il decreto federale concernente la prescrizione medica di eroina",
+      "botschaftKey": "BOTSCHAFT-2002-912",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/670/de",
+      "sha": "270a8ae5f2fed646573d41218eb9f8554c7aa2c46e5c62bc454aca35b0a5cb26"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2002-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/812.121",
+      "sha": "6aeaae3356dd7647742c1d90b0a6841e0f8f4223024ee564112710a8e8f62919"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1998-10-10",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1998/2293_2293_2293",
+      "dateDocument": "1998-10-09",
+      "roFundstelle": "AS 1998 2293",
+      "titelDe": "Bundesbeschluss über die ärztliche Verschreibung von Heroin",
+      "titelFr": "Arrêté fédéral sur la prescription médicale d'héroïne",
+      "titelIt": "Decreto federale concernente la prescrizione medica di eroina",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1998/2293_2293_2293/de",
+      "sha": "097e54c7f575a7331c58bf8b484fc1b2c9be27bdb8122f4c5d0c8e10e9af27f9"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1952-06-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1952/241_241_245",
+      "dateDocument": "1951-10-03",
+      "roFundstelle": "AS 1952 241",
+      "titelDe": "Bundesgesetz vom 3. Oktober 1951 über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelgesetz, BetmG)",
+      "titelFr": "Loi fédérale du 3 octobre 1951 sur les stupéfiants et les substances psychotropes (Loi sur les stupéfiants, LStup)",
+      "titelIt": "Legge federale del 3 ottobre 1951 sugli stupefacenti e sulle sostanze psicotrope (Legge sugli stupefacenti, LStup)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1952/241_241_245/de",
+      "sha": "567664606cb1e453ab10afbe860a682b7c202a1eeafeafb61619e9cbdab47819"
+    }
+  ],
+  "sha": "9409233059d60a837cc6a13dbf1d88f6f66a14c7b37616fa0ac61ece3ff84a8d"
+}

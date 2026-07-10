@@ -1,0 +1,244 @@
+{
+  "erlassKey": "FAV",
+  "sr": "784.101.2",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2028-07-01",
+      "nichtKonsolidiert": true,
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/784.101.2",
+      "sha": "bb8b22453ac15906d107a0571bdb15119776b2a3cea9b34237b161f726f95b6a"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2024-08-15",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2024/415",
+      "dateDocument": "2024-08-15",
+      "roFundstelle": "AS 2024 415",
+      "titelDe": "Verordnung über Fernmeldeanlagen (FAV). Berichtigung",
+      "titelFr": "Ordonnance sur les installations de télécommunication (OIT). Erratum",
+      "titelIt": "Ordinanza sugli impianti di telecomunicazione (OIT). Correzione",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2024/415/de",
+      "sha": "a9278a382ff55455cc2bf9d8ff277a644a7c42627ad5063949373c4abe85de0b"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2024-01-15",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2024/22",
+      "dateDocument": "2024-01-15",
+      "roFundstelle": "AS 2024 22",
+      "titelDe": "Verordnung über Fernmeldeanlagen (FAV). Berichtigung",
+      "titelFr": "Ordonnance sur les installations de télécommunication (OIT). Erratum",
+      "titelIt": "Ordinanza sugli impianti di telecomunicazione (OIT). Correzione",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2024/22/de",
+      "sha": "2f8c9f788c5465e715eaf350f34f4c502acb01d751beb317e9eadb5e22893bc8"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2024-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2023/720",
+      "dateDocument": "2023-11-22",
+      "roFundstelle": "AS 2023 720",
+      "titelDe": "Verordnung über Fernmeldeanlagen (FAV)",
+      "titelFr": "Ordonnance sur les installations de télécommunication (OIT)",
+      "titelIt": "Ordinanza sugli impianti di telecomunicazione (OIT)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2023/720/de",
+      "sha": "1a64211889209b9bddba05be5b3627c96f3df9535721bd31800eedc046b82e98"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2022-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/784.101.2",
+      "sha": "aed0948526cf9a45169f6214c25850d7a7ec6246b16b04e298ba98c6f2e06823"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2021-07-16",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/784.101.2",
+      "sha": "172a5c5108397711cee3925878f790bb5e45d306c7e40e384f871098435d3d97"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2021-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/1023",
+      "dateDocument": "2020-11-18",
+      "roFundstelle": "AS 2020 1023",
+      "titelDe": "Verordnung über Fernmeldeanlagen (FAV)",
+      "titelFr": "Ordonnance sur les installations de télécommunication (OIT)",
+      "titelIt": "Ordinanza sugli impianti di telecomunicazione (OIT)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/1023/de",
+      "sha": "f1ca60cb7463ed9ae2b8eeea0f0abd170ba55b8ce40ca691f52ecaa6da004d9c"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2018-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/784.101.2",
+      "sha": "51eef3d6ec9d2e6bc1f5ddd98c9609d99d9d6e2d9f5569cf4f8139f1962b6ef6"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2017-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/784.101.2",
+      "sha": "dff0510a42a9b7e3b493b125830b3ff37c15149bd3b9a78cf2aeb748cea504b1"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2016-06-13",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/24",
+      "dateDocument": "2015-11-25",
+      "roFundstelle": "AS 2016 24",
+      "titelDe": "Verordnung über Fernmeldeanlagen (FAV)",
+      "titelFr": "Ordonnance sur les installations de télécommunication (OIT)",
+      "titelIt": "Ordinanza sugli impianti di telecomunicazione (OIT)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/24/de",
+      "sha": "f38f4cf62fa1c4640c4d2d7089fb6b3ea44a27f5a517ab6e7943061b87a52cae"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2015-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/698",
+      "dateDocument": "2014-11-05",
+      "roFundstelle": "AS 2014 698",
+      "titelDe": "Verordnung über Fernmeldeanlagen (FAV)",
+      "titelFr": "Ordonnance sur les installations de télécommunication (OIT)",
+      "titelIt": "Ordinanza sugli impianti di telecomunicazione (OIT)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/698/de",
+      "sha": "6308dc296f2b464ec1d094e3a39339b5e4f6882b31f91bfa597acdd3acc6b8e6"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2013-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/788",
+      "dateDocument": "2012-10-31",
+      "roFundstelle": "AS 2012 788",
+      "titelDe": "Verordnung über Fernmeldeanlagen (FAV)",
+      "titelFr": "Ordonnance sur les installations de télécommunication (OIT)",
+      "titelIt": "Ordinanza sugli impianti di telecomunicazione (OIT)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/788/de",
+      "sha": "738df5e48307be1349f9c6ff0321d6b3b4c25290e2a05c5142ed0562ce4adafb"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2010-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/707",
+      "dateDocument": "2009-11-04",
+      "roFundstelle": "AS 2009 707",
+      "titelDe": "Verordnung über Fernmeldeanlagen (FAV)",
+      "titelFr": "Ordonnance sur les installations de télécommunication (OIT)",
+      "titelIt": "Ordinanza sugli impianti di telecomunicazione (OIT)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/707/de",
+      "sha": "a81b6ce761e736b3df97e0a8fb16f1839a72b7830d7b378bc40695b2b8da3eac"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2008-05-15",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/279",
+      "dateDocument": "2008-04-16",
+      "roFundstelle": "AS 2008 279",
+      "titelDe": "Verordnung über Fernmeldeanlagen (FAV)",
+      "titelFr": "Ordonnance sur les installations de télécommunication (OIT)",
+      "titelIt": "Ordinanza sugli impianti di telecomunicazione (OIT)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/279/de",
+      "sha": "9f53a81d92b2b5411b919c6c3ab27e147f6b64f1f7c39858c5a7642f4b774729"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2007-04-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/170",
+      "dateDocument": "2007-03-09",
+      "roFundstelle": "AS 2007 170",
+      "titelDe": "Verordnung über Fernmeldeanlagen (FAV)",
+      "titelFr": "Ordonnance sur les installations de télécommunication (OIT)",
+      "titelIt": "Ordinanza sugli impianti di telecomunicazione (OIT)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/170/de",
+      "sha": "1ec7408927ca29324d0ea7cdc7f03146f110f56c6c897260798be1e2f30a0801"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2005-02-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/72",
+      "dateDocument": "2005-01-19",
+      "roFundstelle": "AS 2005 72",
+      "titelDe": "Verordnung über Fernmeldeanlagen (FAV)",
+      "titelFr": "Ordonnance sur les installations de télécommunication (OIT)",
+      "titelIt": "Ordinanza sugli impianti di telecomunicazione (OIT)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/72/de",
+      "sha": "d2755f5dc267ad005de8c123517f27896a2753bf95c203748590d0f89be16034"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2004-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/695",
+      "dateDocument": "2003-12-05",
+      "roFundstelle": "AS 2003 695",
+      "titelDe": "Verordnung über Fernmeldeanlagen (FAV)",
+      "titelFr": "Ordonnance sur les installations de télécommunication (OIT)",
+      "titelIt": "Ordinanza sugli impianti di telecomunicazione (OIT)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/695/de",
+      "sha": "30002af4dfb5f5676875e5bd8b5003df7fa7ce63f32a78d0f64497208256faf6"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2002-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/310",
+      "dateDocument": "2002-06-14",
+      "roFundstelle": "AS 2002 310",
+      "titelDe": "Verordnung über Fernmeldeanlagen (FAV)",
+      "titelFr": "Ordonnance sur les installations de télécommunication (OIT)",
+      "titelIt": "Ordinanza sugli impianti di telecomunicazione (OIT)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/310/de",
+      "sha": "160f9a4ce8df49580bc0ab8cce1ffef70676c12f8d80a7221c63b544a41dd254"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2001-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/546",
+      "dateDocument": "2000-12-04",
+      "roFundstelle": "AS 2000 546",
+      "titelDe": "Verordnung über Fernmeldeanlagen (FAV)",
+      "titelFr": "Ordonnance sur les installations de télécommunication (OIT)",
+      "titelIt": "Ordinanza sugli impianti di telecomunicazione (OIT)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/546/de",
+      "sha": "f2e2758e5d9f8f7c5ed93cb2be69f6df54fbc0a542cef20a3a62950831ca97dc"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2000-05-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/167",
+      "dateDocument": "2000-04-05",
+      "roFundstelle": "AS 2000 167",
+      "titelDe": "Verordnung über Fernmeldeanlagen (FAV)",
+      "titelFr": "Ordonnance sur les installations de télécommunication (OIT)",
+      "titelIt": "Ordinanza sugli impianti di telecomunicazione (OIT)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/167/de",
+      "sha": "6917ec9e209e30ac76cb5053ac23473df633395d5faee36d90725c138a15e261"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1999-02-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/38",
+      "dateDocument": "1998-12-14",
+      "roFundstelle": "AS 1999 38",
+      "titelDe": "Verordnung über Fernmeldeanlagen (FAV)",
+      "titelFr": "Ordonnance sur les installations de télécommunication (OIT)",
+      "titelIt": "Ordinanza sugli impianti di telecomunicazione (OIT)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/38/de",
+      "sha": "77d0fe0edabf8223e9ff724d354a52e74933d934c30d73619040c8e32d0b5851"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1998-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1997/2853_2853_2853",
+      "dateDocument": "1997-10-06",
+      "roFundstelle": "AS 1997 2853",
+      "titelDe": "Verordnung vom 6. Oktober 1997 über Fernmeldeanlagen (FAV)",
+      "titelFr": "Ordonnance du 6 octobre 1997 sur les installations de télécommunication (OIT)",
+      "titelIt": "Ordinanza del 6 ottobre 1997 sugli impianti di telecomunicazione (OIT)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1997/2853_2853_2853/de",
+      "sha": "76f6a4e18266847b6d673fade1297ff3829246dad68a8893bf40c81eba54275f"
+    }
+  ],
+  "sha": "8d64e9412f8d39989f505b76696ebaa57236463c47a7e5ac1f80f31e0928d402"
+}

@@ -1,0 +1,72 @@
+{
+  "erlassKey": "GLG",
+  "sr": "151.1",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2032-07-01",
+      "nichtKonsolidiert": true,
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/151.1",
+      "sha": "1b839499e6cf7b82f1492aef0d2e86603b7125aa1aa08a1ba88b86c325600428"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2020-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/515",
+      "dateDocument": "2018-12-14",
+      "roFundstelle": "AS 2019 515",
+      "titelDe": "Bundesgesetz über die Gleichstellung von Frau und Mann (Gleichstellungsgesetz, GlG)",
+      "titelFr": "Loi fédérale sur l'égalité entre femmes et hommes (Loi sur l'égalité, LEg)",
+      "titelIt": "Legge federale sulla parità dei sessi (LPar)",
+      "botschaftKey": "BOTSCHAFT-2017-1455",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/515/de",
+      "sha": "f3d1ff6faf42cfd6bf63c4bd7361a9956d40386735eaa62ecf0037d4611da633"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2017-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/151.1",
+      "sha": "debfbfe0e08281f345663c248e6a7dfa967b9b93201e8b3f1f024a09569f1e99"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/151.1",
+      "sha": "8d69a96687e5fa6f47e611a3cf1acc5905c6ba85afda6402af373d8030f740f7"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2007-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/151.1",
+      "sha": "61f4de94129501bd9e08fcf1e980dcb24c52d4dcbadf0f0806722ebba634cc9f"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2005-03-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/123",
+      "dateDocument": "2004-10-08",
+      "roFundstelle": "AS 2005 123",
+      "titelDe": "Bundesgesetz über die Gleichstellung von Frau und Mann (Gleichstellungsgesetz, GlG)",
+      "titelFr": "Loi fédérale sur l'égalité entre femmes et hommes (Loi sur l'égalité, LEg)",
+      "titelIt": "Legge federale sulla parità dei sessi (LPar)",
+      "botschaftKey": "BOTSCHAFT-2003-1299",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/123/de",
+      "sha": "e982a9269e7a5adc88586111cb64b5d76df4a9eb17f2c59f7439e62e3907feb9"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1996-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1996/1498_1498_1498",
+      "dateDocument": "1995-03-24",
+      "roFundstelle": "AS 1996 1498",
+      "titelDe": "Bundesgesetz vom 24. März 1995 über die Gleichstellung von Frau und Mann (Gleichstellungsgesetz, GlG)",
+      "titelFr": "Loi fédérale du 24 mars 1995 sur l'égalité entre femmes et hommes (Loi sur l'égalité, LEg)",
+      "titelIt": "Legge federale del 24 marzo 1995 sulla parità dei sessi (LPar)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1996/1498_1498_1498/de",
+      "sha": "f1c357bc258c02940fb093c4778b041909c55ea1beb96b363b11684c6c0d1fd5"
+    }
+  ],
+  "sha": "62dd3abb3b5ae3204b32baa56ab78299ea21890c3ac4ef5700f744105fe31cc1"
+}

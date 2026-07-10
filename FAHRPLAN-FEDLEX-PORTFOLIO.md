@@ -421,6 +421,33 @@ Je Botschaft: Datum, Titel, Curia-/Geschäftsnummer, Datei-URLs via `jolux:isExe
 
 ## Paket 5 — Änderungshistorie / Amtliche Sammlung (P1.5)
 
+> **✅ AUSGEFÜHRT 10.7.2026 (Opus-Bau-Session; Branch `feat/fedlex-p5-historie`; Go David «go zu allem»; Trailer `Roadmap: W2·6`).**
+> **Füllraten-POC (Finding 6, VOR Aufwand-Freigabe korpusweit erhoben):** Pfad (b) live an DSG + 218 Erlassen —
+> **3108 Änderungs-Erlasse** über alle 218 Volltext-Erlasse (Erlasse mit ≥1 Änderung 218/218), dateDocument 100 % ·
+> Titel DE·FR·IT je 100 % · roFundstelle 100 %. **POC-Korrektur:** die Spec-OPTIONALs `jolux:historicalId`/`botschaftDate`
+> liefern am oc-Knoten NICHTS (0/7 DSG, korpusweit leer) → RO/AS-Fundstelle deterministisch aus der oc-URI abgeleitet
+> («AS <jahr> <num>», gegen `sequenceInTheYearOfPublication`+`publicationDate` gegengeprüft; Gegenprüfung bestätigte
+> == `jolux:historicalId` «RO 1993 1945»), Botschafts-Join über die von Paket 2 persistierten `ocUris` (477 Joins).
+> **Determinismus:** zwei Live-Läufe byte-identisch; Tor `check:revisionen` baut Sidecar aus store-raw neu == committet.
+> **Sammelerlass-Cross-Check (§8):** Pfad-(a)-Geltungsstände des gepinnten cc-Abstracts ohne (b)-Erlass ab 2000 →
+> 1942 «sammelerlass-marker» (nie stille Lücke). **nichtKonsolidiert-Marker (Finding 4):** 93 Einträge
+> `dateEntryInForce > Korpus-Stand` (in Kraft, noch nicht konsolidiert — löst den «geändert-am-X-neben-Vor-Fassung»-Widerspruch).
+> **DSG-Referenzfall:** Timeline spannt die Totalrevision (Alt-DSG oc/1993 + Neu-DSG oc/2022/491), Tor-Anker.
+> **Speicher:** File-Sidecar `public/normtext/revisionen/<KEY>.json` (218, lazy) — **Übergangslösung**, Zielsenke ab E1
+> `erlass_fassungen` (im Generator markiert, Schema-Rückkopplung in FAHRPLAN-DATENHALTUNG §3). Ingest erweitert
+> (`normtext-revisionen`) → `check:paritaet` deckt die 218 byte-genau; `daten-manifest.json` nachgezogen.
+> **Bridge B1 (Moat-Hebel 1):** «Änderungen / Revisionen»-Gruppe IM bestehenden `KontextPanel` neben der
+> «Entstehungsgeschichte» (Norm-Kontext-Bus, KEIN Silo, ohne `gesetz-leser`-Änderung); Botschafts-Verweis über den
+> ohnehin geladenen Bus (kein zweiter Fetch), Sammelerlass-Marker im `<details>`, locale-Titel, Fetch-Fehler≠leer.
+> **Neu:** `scripts/normtext/revisionen-generieren(.ts/-run.ts)`, `check-revisionen.ts`,
+> `src/lib/normtext/revisionen.ts`, `src/tests/normtext-revisionen.test.ts` (11), `bibliothek/normtext/revisionen-2026-07-10.md`;
+> **erweitert:** `scripts/datenhaltung/ingest.ts`, `src/components/kontext/KontextPanel.tsx`, `package.json`. **Tore grün:**
+> tsc · lint (0 F) · vitest 225/3661 · golden byte-gleich · build (61 Routen) · check:revisionen(-netz) · check:paritaet ·
+> check:datenhaltung. **Gegenprüfung (Risiko-Pfad Extraktion) BESTANDEN** (unabh. Opus, frischer Kontext, live gegen den
+> amtlichen Fedlex-SPARQL-Endpunkt: Drop-Check DSG7/MWSTG29/StGB58/BGBM2 deckungsgleich, DSG-Totalrevision, Marker
+> 2025-04-01 belegt, Joins bidirektional, Q1 Bandjahr + Titel verbatim; 0 Befunde). Beleg `bibliothek/normtext/revisionen-2026-07-10.md`.
+> **OFFEN (Nicht-Ziel P1):** kein AS-Volltext-Snapshot; keine Artikel-Diff-Darstellung (W3·10); Pre-2000-Marker bewusst nicht.
+
 **Ziel:** Auf der Gesetzesseite ein Abschnitt **«Änderungen / Revisionen»** — welche Änderungserlasse (AS/RO, `eli/oc`) haben dieses Gesetz wann geändert, mit In-Kraft-Datum, Titel, RO-Fundstelle und Link zum AS-Text. Das ist die **Schwester zur «Entstehungsgeschichte» (Paket 2)**: Botschaft = Genese-*Absicht*, AS-Erlass = die *tatsächliche* Änderung; zusammen = die volle Gesetzes-Geschichte an einer Stelle (Burggraben). **Nicht-Ziel (P1):** kein Volltext-Snapshot des Änderungserlasses (Live-Link auf den AS-Text genügt); keine Artikel-für-Artikel-Diff-Darstellung (das ist der intertemporale Fassungsvergleich, W3·10 «Normfassungs-/Geltungsstand-Prüfer», separat).
 
 ### Machbarkeit — belegt (live getestet an DSG SR 235.1)
@@ -479,7 +506,7 @@ Generator (Pfad b + Cross-Check, Paket-2-Pipeline geerbt) ~1 Session · Sidecar-
 
 ### §14-Intake
 ROADMAP **W2·6** (Konsultieren-Klingen, Schwester zu W2·6-BOT), Detailquelle `FAHRPLAN-FEDLEX-PORTFOLIO.md`. Kein 26×-Bezug, kein Worktree.
-`<!-- @meta id: W2·6-REV · status: ready · of: ja · blocker: null · dep: [W2·6-BOT] · kollision: [] · worktree: nein · 26x: nein · fahrplan: FAHRPLAN-FEDLEX-PORTFOLIO.md -->`
+`<!-- @meta id: W2·6-REV · status: done · of: ja · blocker: null · dep: [W2·6-BOT] · kollision: [] · worktree: nein · 26x: nein · fahrplan: FAHRPLAN-FEDLEX-PORTFOLIO.md -->` — **✅ 10.7.2026 ausgeführt (siehe Stand-Block oben).**
 **Trailer:** `Roadmap: W2·6` + `Gegenpruefung: …`.
 
 **Historie-Modell vereinheitlicht (Fundament-Plan §4.4/§7 Punkt 5, David 3.7.2026 — verbindlich):** Der hier vorgeschlagene File-Sidecar `public/normtext/revisionen/<KEY>.json` ist eine **Übergangslösung**. **Zielsenke ist die Tabelle `erlass_fassungen` ab E1** (`FAHRPLAN-DATENHALTUNG.md §3`; §5-Doktrin «nie zwei Wahrheiten»: `erlass_fassungen` ist DAS Historie-Modell, kein paralleler Revisions-Sidecar). Wird Paket 5 VOR E1 gebaut, bleibt der Sidecar zulässig, ist aber im Generator **explizit als Übergangslösung zu markieren** + Migrationsnotiz «schreibt ab E1 in `erlass_fassungen`, Sidecar wird dann Projektion». Fundstellen-Rohstoff (`jolux:dateEntryInForce`, AS-`historicalId`) ist deckungsgleich. **Zusatznutzen:** dieselben Historie-Daten speisen die Artikel-Stabilitäts-Messung (Fundament-Plan §3.2 — Anteil `art_id`s stabil/verändert/verschwunden über die letzten N Revisionen von OR/ZGB/StGB), die das versionslose Verzahnungs-Kanten-Modell empirisch absichert, statt es nur zu behaupten.

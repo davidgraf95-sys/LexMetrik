@@ -1,0 +1,1470 @@
+{
+  "sr": "837.0",
+  "korpusStand": "2026-01-01",
+  "bBindings": [
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1982/2184_2184_2184"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1983-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1982-06-25"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 25. Juni 1982 über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 25 juin 1982 sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance-chômage, LACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 25 giugno 1982 sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1982/2184_2184_2184"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1983-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1982-06-25"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 25. Juni 1982 über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 25 juin 1982 sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance-chômage, LACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 25 giugno 1982 sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1982/2184_2184_2184"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1983-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1982-06-25"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 25. Juni 1982 über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 25 juin 1982 sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance-chômage, LACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 25 giugno 1982 sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1982/2184_2184_2184"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1983-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1982-06-25"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 25. Juni 1982 über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 25 juin 1982 sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance-chômage, LACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 25 giugno 1982 sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/172"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-03-19"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesbeschluss über die Finanzierung der Arbeitslosenversicherung"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Arrêté fédéral sur le financement de l'assurance-chômage"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Decreto federale sul finanziamento dell'assicurazione contro la disoccupazione"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/172"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-03-19"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesbeschluss über die Finanzierung der Arbeitslosenversicherung"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Arrêté fédéral sur le financement de l'assurance-chômage"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Decreto federale sul finanziamento dell'assicurazione contro la disoccupazione"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/172"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-03-19"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesbeschluss über die Finanzierung der Arbeitslosenversicherung"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Arrêté fédéral sur le financement de l'assurance-chômage"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Decreto federale sul finanziamento dell'assicurazione contro la disoccupazione"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/522"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-11-24"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Aufhebung des Bundesbeschlusses über die Finanzierung der Arbeitslosenversicherung"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant l'abrogation de l'arrêté fédéral sur le financement de l'assurance-chômage"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza che abroga il decreto federale sul finanziamento dell'assicurazione contro la disoccupazione"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/522"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-11-24"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Aufhebung des Bundesbeschlusses über die Finanzierung der Arbeitslosenversicherung"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant l'abrogation de l'arrêté fédéral sur le financement de l'assurance-chômage"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza che abroga il decreto federale sul finanziamento dell'assicurazione contro la disoccupazione"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/467"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-06-23"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung  und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance chômage, LACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/467"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-06-23"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung  und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance chômage, LACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/467"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-06-23"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung  und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance chômage, LACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/562"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-06-23"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance chômage, LACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/562"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-06-23"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance chômage, LACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/562"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-06-23"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance chômage, LACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/693"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-11-29"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die vorzeitige Inkraftsetzung von Absatz 3 der Übergangsbestimmung zur Änderung vom 22. März 2002 des Arbeitslosenversicherungsgesetzes"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la mise en vigueur anticipée de l'al. 3 des dispositions transitoires de la modification du 22 mars 2002 de la loi sur l'assurance-chômage"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente la messa in vigore anticipata del capoverso 3 della disposizione transitoria della modifica del 22 marzo 2002 della legge sull'assicurazione contro la disoccupazione"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/693"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-11-29"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die vorzeitige Inkraftsetzung von Absatz 3 der Übergangsbestimmung zur Änderung vom 22. März 2002 des Arbeitslosenversicherungsgesetzes"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la mise en vigueur anticipée de l'al. 3 des dispositions transitoires de la modification du 22 mars 2002 de la loi sur l'assurance-chômage"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente la messa in vigore anticipata del capoverso 3 della disposizione transitoria della modifica del 22 marzo 2002 della legge sull'assicurazione contro la disoccupazione"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/693"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-11-29"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die vorzeitige Inkraftsetzung von Absatz 3 der Übergangsbestimmung zur Änderung vom 22. März 2002 des Arbeitslosenversicherungsgesetzes"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la mise en vigueur anticipée de l'al. 3 des dispositions transitoires de la modification du 22 mars 2002 de la loi sur l'assurance-chômage"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente la messa in vigore anticipata del capoverso 3 della disposizione transitoria della modifica del 22 marzo 2002 della legge sull'assicurazione contro la disoccupazione"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/260"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-03-22"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance-chômage, LACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/260"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-03-22"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance-chômage, LACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/260"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-03-22"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance-chômage, LACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/261"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-05-28"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die vollständige Inkraftsetzung der Änderung vom 22. März 2002 des Arbeitslosenversicherungsgesetzes"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant l'entrée en vigueur complète de la modification du 22 mars 2002 de la loi sur l'assurance-chômage"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza che mette integralmente in vigore la modifica del 22 marzo 2002 della legge sull'assicurazione contro la disoccupazione"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/261"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-05-28"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die vollständige Inkraftsetzung der Änderung vom 22. März 2002 des Arbeitslosenversicherungsgesetzes"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant l'entrée en vigueur complète de la modification du 22 mars 2002 de la loi sur l'assurance-chômage"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza che mette integralmente in vigore la modifica del 22 marzo 2002 della legge sull'assicurazione contro la disoccupazione"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/261"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-05-28"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die vollständige Inkraftsetzung der Änderung vom 22. März 2002 des Arbeitslosenversicherungsgesetzes"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant l'entrée en vigueur complète de la modification du 22 mars 2002 de la loi sur l'assurance-chômage"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza che mette integralmente in vigore la modifica del 22 marzo 2002 della legge sull'assicurazione contro la disoccupazione"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/171"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-03-19"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance-chômage, LACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/171"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-03-19"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance-chômage, LACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/171"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-03-19"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance-chômage, LACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/73"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-09-30"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance-chômage, LACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/73"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-09-30"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance-chômage, LACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/73"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-09-30"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance-chômage, LACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/654"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-06-21"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance-chômage, LACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/654"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-06-21"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance-chômage, LACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/654"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-06-21"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance-chômage, LACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2020/713"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-09-26"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-09-25"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG) (Zusatzfinanzierung Arbeitslosenversicherung)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance-chômage, LACI) (Financement additionnel de l'assurance-chômage)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI) (Finanziamento supplementare dell'assicurazione contro la disoccupazione)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2020/713"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-09-26"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-09-25"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG) (Zusatzfinanzierung Arbeitslosenversicherung)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance-chômage, LACI) (Financement additionnel de l'assurance-chômage)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI) (Finanziamento supplementare dell'assicurazione contro la disoccupazione)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2020/713"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-09-26"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-09-25"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG) (Zusatzfinanzierung Arbeitslosenversicherung)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance-chômage, LACI) (Financement additionnel de l'assurance-chômage)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI) (Finanziamento supplementare dell'assicurazione contro la disoccupazione)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2021/154"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-03-20"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-03-19"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG) (Ausserordentlicher Beitrag 2021 an den Ausgleichsfonds)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l’assurance-chômage obligatoire et l’indemnité en cas d’insolvabilité (Loi sur l’assurance-chômage, LACI) (Participation extraordinaire 2021 au fonds de compensation)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull’assicurazione obbligatoria contro la disoccupazione e l’indennità per insolvenza (Legge sull’assicurazione contro la disoccupazione, LADI) (Contributo straordinario 2021 al fondo di compensazione)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2021/154"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-03-20"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-03-19"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG) (Ausserordentlicher Beitrag 2021 an den Ausgleichsfonds)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l’assurance-chômage obligatoire et l’indemnité en cas d’insolvabilité (Loi sur l’assurance-chômage, LACI) (Participation extraordinaire 2021 au fonds de compensation)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull’assicurazione obbligatoria contro la disoccupazione e l’indennità per insolvenza (Legge sull’assicurazione contro la disoccupazione, LADI) (Contributo straordinario 2021 al fondo di compensazione)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2021/338"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-06-19"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l’assurance-chômage obligatoire et l’indemnité en cas d’insolvabilité (Loi sur l’assurance-chômage, LACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull’assicurazione obbligatoria contro la disoccupazione e l’indennità per insolvenza (Legge sull’assicurazione contro la disoccupazione, LADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2021/338"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-06-19"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l’assurance-chômage obligatoire et l’indemnité en cas d’insolvabilité (Loi sur l’assurance-chômage, LACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull’assicurazione obbligatoria contro la disoccupazione e l’indennità per insolvenza (Legge sull’assicurazione contro la disoccupazione, LADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2021/338"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-06-19"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l’assurance-chômage obligatoire et l’indemnité en cas d’insolvabilité (Loi sur l’assurance-chômage, LACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull’assicurazione obbligatoria contro la disoccupazione e l’indennità per insolvenza (Legge sull’assicurazione contro la disoccupazione, LADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2024/38"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2024-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2023-09-29"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG) (Kurzarbeitsentschädigung für Berufsbildnerinnen und Berufsbildner)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l’assurance-chômage obligatoire et l’indemnité en cas d’insolvabilité (Loi sur l’assurance-chômage, LACI) (Indemnité en cas de réduction de l’horaire de travail pour les formateurs)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull’assicurazione obbligatoria contro la disoccupazione e l’indennità per insolvenza (Legge sull’assicurazione contro la disoccupazione, LADI) (Indennità per lavoro ridotto per i formatori)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2025/592"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2025-09-27"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2025-09-26"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG) (Höchstbezugsdauer bei Kurzarbeit)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l’assurance-chômage obligatoire et l’indemnité en cas d’insolvabilité (Loi sur l’assurance-chômage, LACI) (Durée maximale d’indemnisation en matière de réduction de l’horaire de travail)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull’assicurazione obbligatoria contro la disoccupazione e l’indennità per insolvenza (Legge sull’assicurazione contro la disoccupazione, LADI) (Durata massima delle prestazioni in caso di lavoro ridotto)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2025/764"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2026-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2024-06-14"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG) (Entschädigungssystem der Arbeitslosenkassen)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l’assurance-chômage obligatoire et l’indemnité en cas d’insolvabilité (Loi sur l’assurance-chômage, LACI) (Système d’indemnisation des caisses de chômage)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull’assicurazione obbligatoria contro la disoccupazione e l’indennità per insolvenza (Legge sull’assicurazione contro la disoccupazione, LADI) (Sistema di rimborso delle casse di disoccupazione)"
+      }
+    }
+  ],
+  "aStaende": [
+    "1983-01-01",
+    "1984-01-01",
+    "1991-07-01",
+    "1992-01-01",
+    "1992-02-15",
+    "1993-04-01",
+    "1994-01-01",
+    "1995-01-01",
+    "1996-01-01",
+    "1996-10-01",
+    "1997-01-01",
+    "1998-08-01",
+    "1999-01-01",
+    "1999-07-01",
+    "2001-01-01",
+    "2002-06-01",
+    "2003-01-01",
+    "2003-07-01",
+    "2005-07-01",
+    "2006-01-01",
+    "2006-04-01",
+    "2007-01-01",
+    "2007-07-15",
+    "2007-12-01",
+    "2008-01-01",
+    "2008-08-01",
+    "2009-01-01",
+    "2009-06-01",
+    "2010-01-01",
+    "2011-01-01",
+    "2011-04-01",
+    "2011-10-01",
+    "2012-01-01",
+    "2012-07-16",
+    "2013-01-01",
+    "2014-01-01",
+    "2017-01-01",
+    "2017-09-01",
+    "2018-01-01",
+    "2018-07-01",
+    "2019-01-01",
+    "2020-01-01",
+    "2020-09-26",
+    "2021-01-01",
+    "2021-03-20",
+    "2021-07-01",
+    "2021-12-18",
+    "2022-01-01",
+    "2023-01-01",
+    "2023-09-01",
+    "2024-01-01",
+    "2025-05-01",
+    "2025-09-27",
+    "2026-01-01"
+  ]
+}

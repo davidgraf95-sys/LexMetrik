@@ -1,0 +1,33 @@
+{
+  "erlassKey": "PRG",
+  "sr": "944.3",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2021-08-20",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2021/496",
+      "dateDocument": "2021-08-20",
+      "roFundstelle": "AS 2021 496",
+      "titelDe": "Bundesgesetz über Pauschalreisen. Berichtigung (Betrifft nur den italienischen Text)",
+      "titelFr": "Loi fédérale sur les voyages à forfait. Erratum (Ne concerne que le texte italien)",
+      "titelIt": "Legge federale concernente i viaggi «tutto compreso». Correzione",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2021/496/de",
+      "sha": "12186a3be5af7ef874c9a024dcfec03aa1de3c1998a7613155892481d707a38a"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1994-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1993/3152_3152_3152",
+      "dateDocument": "1993-06-18",
+      "roFundstelle": "AS 1993 3152",
+      "titelDe": "Bundesgesetz vom 18. Juni 1993 über Pauschalreisen",
+      "titelFr": "Loi fédérale du 18 juin 1993 sur les voyages à forfait",
+      "titelIt": "Legge federale del 18 giugno 1993 concernente i viaggi «tutto compreso»",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1993/3152_3152_3152/de",
+      "sha": "1f409f93d7520047a11a6c5c5b615efec0367bf14f006b14dbb5a8716efeed47"
+    }
+  ],
+  "sha": "8da50d4b892209057fdb67beab81441b1f0211359c0fc3552b3bfe6503f0ab94"
+}

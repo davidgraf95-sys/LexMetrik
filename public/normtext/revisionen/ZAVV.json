@@ -1,0 +1,39 @@
+{
+  "erlassKey": "ZAVV",
+  "sr": "364.3",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/364.3",
+      "sha": "d64e38ebbb6b84077ddb0948e032775d693fb499e988ead9a69587f85cb0cec2"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2017-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/364.3",
+      "sha": "411c1a482f69a6faa65b5cf9dcb32e588a59ad722bbf3f2cbbc37c21cecac8b4"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2015-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/364.3",
+      "sha": "9e0dbfe2ec9d01f5423e12097b73aa5a79dac853252cf00e57346b6e023ffc36"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2009-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/760",
+      "dateDocument": "2008-11-12",
+      "roFundstelle": "AS 2008 760",
+      "titelDe": "Verordnung über die Anwendung polizeilichen Zwangs und polizeilicher Massnahmen im Zuständigkeitsbereich des Bundes (Zwangsanwendungsverordnung, ZAV)",
+      "titelFr": "Ordonnance relative à l'usage de la contrainte et de mesures policières dans les domaines relevant de la compétence de la Confédération (Ordonnance sur l'usage de la contrainte, OLUsC)",
+      "titelIt": "Ordinanza sulla coercizione di polizia e le misure di polizia negli ambiti di competenza della Confederazione (Ordinanza sulla coercizione, OCoe)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/760/de",
+      "sha": "c6a0858471e32b2db01f4461e26aa38b0e310a8844d7c42c85d7e98d99622204"
+    }
+  ],
+  "sha": "69505b57cc634170b4b929c7ea23b4232ceb11e85db7d511d3e8c68b115f4859"
+}

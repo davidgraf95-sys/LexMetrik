@@ -1,0 +1,47 @@
+{
+  "erlassKey": "FIDLEG",
+  "sr": "950.1",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2026-10-01",
+      "nichtKonsolidiert": true,
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/950.1",
+      "sha": "4835b3e6e0a69a3b3105409d37af01818658a787e640ecd8797e9ad56153dcbe"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/950.1",
+      "sha": "97b20e7c5acd7e216340ac02a04a0afa97f6d92c9ff04e54022943b76be1201d"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2021-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/950.1",
+      "sha": "26acceb62b802377eedaa8ac1fa466ecd0741fa7d2f97e8aad002e0e561656dc"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2021-02-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/950.1",
+      "sha": "47f72bffea26604b7ffcb302950c93142ef2d2c0d9a04a369bfa39535b0222ea"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2020-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/758",
+      "dateDocument": "2018-06-15",
+      "roFundstelle": "AS 2019 758",
+      "titelDe": "Bundesgesetz über die Finanzdienstleistungen (Finanzdienstleistungsgesetz, FIDLEG)",
+      "titelFr": "Loi fédérale sur les services financiers (LSFin)",
+      "titelIt": "Legge federale sui servizi finanziari (Legge sui servizi finanziari, LSerFi)",
+      "botschaftKey": "BOTSCHAFT-2015-2141",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/758/de",
+      "sha": "5d59569f853a8119644d042dea6dced5cd003ce5ef0b6cc19714596a8dd19ffe"
+    }
+  ],
+  "sha": "134b01ce625276c2da3ad37bab84dd1ce246a834e4dbe0ac6d2500c9d6832c89"
+}

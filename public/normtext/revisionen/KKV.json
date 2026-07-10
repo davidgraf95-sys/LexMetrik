@@ -1,0 +1,207 @@
+{
+  "erlassKey": "KKV",
+  "sr": "951.311",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2025-11-25",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2025/756",
+      "dateDocument": "2025-11-25",
+      "roFundstelle": "AS 2025 756",
+      "titelDe": "Verordnung über die kollektiven Kapitalanlagen (Kollektivanlagenverordnung, KKV). Berichtigung (Betrifft nur den französischen Text)",
+      "titelFr": "Ordonnance sur les placements collectifs de capitaux (Ordonnance sur les placements collectifs, OPCC). Erratum",
+      "titelIt": "Ordinanza sugli investimenti collettivi di capitale (Ordinanza sugli investimenti collettivi, OICol). Correzione (Concerne soltanto il testo francese)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2025/756/de",
+      "sha": "16b3df6d0dbe9a439f04d8ecc4b7b06c11ac0abd56d128e9713ee6e9a7205217"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2024-03-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2024/73",
+      "dateDocument": "2024-01-31",
+      "roFundstelle": "AS 2024 73",
+      "titelDe": "Verordnung über die kollektiven Kapitalanlagen (Kollektivanlagenverordnung, KKV)",
+      "titelFr": "Ordonnance sur les placements collectifs de capitaux (Ordonnance sur les placements collectifs, OPCC)",
+      "titelIt": "Ordinanza sugli investimenti collettivi di capitale (Ordinanza sugli investimenti collettivi, OICol)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2024/73/de",
+      "sha": "0ca265331886fd91ae3676d212ecd12e7114c450bb160116d321938c8da8b500"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2022-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/951.311",
+      "sha": "a63b2e04570af57dddf73b6c3a99a99b96ac938e1baf47aa3af44ca433515485"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2020-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/951.311",
+      "sha": "a029dc7dfd326615e9c95b5900700052019ee60599300a4771318959a94b09b7"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2015-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/951.311",
+      "sha": "fd30b1dfa8f7659dfc696288eff010ab480453fc00b33220d172caaa7fcc75f6"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2014-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/951.311",
+      "sha": "0e290f76a8554645de709cad949e3dcef920da89a77300a1188c6fdf09c60f10"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2013-03-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/117",
+      "dateDocument": "2013-02-13",
+      "roFundstelle": "AS 2013 117",
+      "titelDe": "Verordnung über die kollektiven Kapitalanlagen (Kollektivanlagenverordnung, KKV)",
+      "titelFr": "Ordonnance sur les placements collectifs de capitaux (Ordonnance sur les placements collectifs, OPCC)",
+      "titelIt": "Ordinanza sugli investimenti collettivi di capitale (Ordinanza sugli investimenti collettivi, OICol)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/117/de",
+      "sha": "f92d4b000250b956f1718635509818f6edf5aea65af8a8ca986cf7332307e18d"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2013-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/951.311",
+      "sha": "32d654770021db77d6d760e2908e237c676fd4fad174899b657d9d6233ca0689"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2011-07-15",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/401",
+      "dateDocument": "2011-06-29",
+      "roFundstelle": "AS 2011 401",
+      "titelDe": "Verordnung über die kollektiven Kapitalanlagen (Kollektivanlagenverordnung, KKV)",
+      "titelFr": "Ordonnance sur les placements collectifs de capitaux (Ordonnance sur les placements collectifs, OPCC)",
+      "titelIt": "Ordinanza sugli investimenti collettivi di capitale (Ordinanza sugli investimenti collettivi, OICol)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/401/de",
+      "sha": "889c81f43076a5e830e7ad73430382ae20864016994a27fe90c0311c9273daac"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2009-03-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/121",
+      "dateDocument": "2009-01-28",
+      "roFundstelle": "AS 2009 121",
+      "titelDe": "Verordnung über die kollektiven Kapitalanlagen (Kollektivanlagenverordnung, KKV)",
+      "titelFr": "Ordonnance sur les placements collectifs de capitaux (Ordonnance sur les placements collectifs, OPCC)",
+      "titelIt": "Ordinanza sugli investimenti collettivi di capitale (Ordinanza sugli investimenti collettivi, OICol)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/121/de",
+      "sha": "3666c5c25cf724f35ba0295fb769b48e89f682950cc92cfc884bfd91a1782c96"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2009-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/951.311",
+      "sha": "7da4380c9df6064eca6542ca8c9502d79851e218bf88b321636c54db4360b1ef"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2008-03-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/128",
+      "dateDocument": "2008-02-13",
+      "roFundstelle": "AS 2008 128",
+      "titelDe": "Verordnung über die kollektiven Kapitalanlagen (Kollektivanlagenverordnung; KKV)",
+      "titelFr": "Ordonnance sur les placements collectifs de capitaux (Ordonnance sur les placements collectifs, OPCC)",
+      "titelIt": "Ordinanza sugli investimenti collettivi di capitale (Ordinanza sugli investimenti collettivi, OICol)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/128/de",
+      "sha": "8ad46a2380666286e9544fc35d9b21054ba580284791f21042a5a35f85713c56"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2007-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/951.311",
+      "sha": "bb3a2241c239677708040178ff9de73eb20a83f3416afb046234eaabba4bfdbe"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2007-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/859",
+      "dateDocument": "2006-11-22",
+      "roFundstelle": "AS 2006 859",
+      "titelDe": "Verordnung über die kollektiven Kapitalanlagen (Kollektivanlagenverordnung, KKV)",
+      "titelFr": "Ordonnance sur les placements collectifs de capitaux (Ordonnance sur les placements collectifs, OPCC)",
+      "titelIt": "Ordinanza sugli investimenti collettivi di capitale (Ordinanza sugli investimenti collettivi, OICol)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/859/de",
+      "sha": "71d1dca6e79a0eca5c2370a85b2ee299003ffb36e5cc86f519a5bfdb6c113383"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2004-08-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/478",
+      "dateDocument": "2004-06-23",
+      "roFundstelle": "AS 2004 478",
+      "titelDe": "Verordnung über die Anlagefonds (Anlagefondsverordnung, AFV)",
+      "titelFr": "Ordonnance sur les fonds de placement (OFP)",
+      "titelIt": "Ordinanza sui fondi d'investimento (OFI)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/478/de",
+      "sha": "ea58e1ad7e206be956195c41911284168618f0633264b8ed3917ad38a26640b7"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2004-08-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/531",
+      "dateDocument": "2004-08-17",
+      "roFundstelle": "AS 2004 531",
+      "titelDe": "Verordnung über die Anlagefonds (Anlagefondsverordnung, AFV) (Betrifft nur den italienischen Text)",
+      "titelFr": "Ordonnance sur les fonds de placement (OFP) (Ne concerne que le texte italien)",
+      "titelIt": "Ordinanza sui fondi d'investimento (OFI)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/531/de",
+      "sha": "11cbf4acb956a9e8a36c112eb228d785d73db42849b455d887942786bcfe565a"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2004-05-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/234",
+      "dateDocument": "2004-03-24",
+      "roFundstelle": "AS 2004 234",
+      "titelDe": "Verordnung über die Anlagefonds (Anlagefondsverordnung, AFV)",
+      "titelFr": "Ordonnance sur les fonds de placement (OFP)",
+      "titelIt": "Ordinanza sui fondi d'investimento (OFI)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/234/de",
+      "sha": "e798329e14219185710820c6e71c6a5d07f438f3680d3ce824029f6872acad05"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2001-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/452",
+      "dateDocument": "2000-10-25",
+      "roFundstelle": "AS 2000 452",
+      "titelDe": "Verordnung über die Anlagefonds (Anlagefondsverordnung, AFV)",
+      "titelFr": "Ordonnance sur les fonds de placement (OFP)",
+      "titelIt": "Ordinanza sui fondi d'investimento (OFI)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/452/de",
+      "sha": "01973b70b0e7f57019e59697fb9c71a36c82eed39f2c1bc48656d4f965cc1a0d"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1995-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1994/2547_2547_2547",
+      "dateDocument": "1994-10-19",
+      "roFundstelle": "AS 1994 2547",
+      "titelDe": "Verordnung vom 19. Oktober 1994 über die Anlagefonds (Anlagefondsverordnung, AFV)",
+      "titelFr": "Ordonnance du 19 octobre 1994 sur les fonds de placement (OFP)",
+      "titelIt": "Ordinanza del 19 ottobre 1994 sui fondi d'investimento (OFI)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1994/2547_2547_2547/de",
+      "sha": "40cfd0b9707810aeea64309eb16ac8dbb528271122be16c62ad4f21abafa7994"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1967-02-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1967/135_145_139",
+      "dateDocument": "1967-01-20",
+      "roFundstelle": "AS 1967 135",
+      "titelDe": "Verordnung vom 20. Januar 1967 über die Anlagefonds (AFV)",
+      "titelFr": "Ordonnance du 20 janvier 1967 sur les fonds de placement (OFP)",
+      "titelIt": "Ordinanza del 20 gennaio 1967 sui fondi d'investimento (OFI)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1967/135_145_139/de",
+      "sha": "02114d5ecbf3ba927f6539460f4d2283f7ecd68af03ea7d6bbd2f66e0422f936"
+    }
+  ],
+  "sha": "e806013cbdcf75a93623142b2b1634c6ef38876fc2e73b18675d4fd318e5ee17"
+}

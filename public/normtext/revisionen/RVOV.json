@@ -1,0 +1,826 @@
+{
+  "erlassKey": "RVOV",
+  "sr": "172.010.1",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2027-01-01",
+      "nichtKonsolidiert": true,
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "64e6740a082a27a698eee0a7f2960dc72a2e0996620c0fdf664fca7fee37d59b"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2026-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "471d6d9e79e938ca20123a8a6a46ef117edbdcd2489d8a6249a2e3205a3cf427"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "dd3718837fc29eec30b28208aa28e987cbd55ea1a77e6dc87d18be210b7a323e"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2025-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2025/411",
+      "dateDocument": "2025-06-20",
+      "roFundstelle": "AS 2025 411",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l’organisation du gouvernement et de l’administration (OLOGA)",
+      "titelIt": "Ordinanza sull’organizzazione del Governo e dell’Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2025/411/de",
+      "sha": "7eecf9cd261e8235f0642734bed625723fc7c1f001b4835ca76bd996c753fad4"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2025-05-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2025/206",
+      "dateDocument": "2025-03-21",
+      "roFundstelle": "AS 2025 206",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l’organisation du gouvernement et de l’administration (OLOGA)",
+      "titelIt": "Ordinanza sull’organizzazione del Governo e dell’Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2025/206/de",
+      "sha": "17f7ac35111164815a13245b3eeea6188e64578f8a8080f1096acfb79b5243d8"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2024-08-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2024/313",
+      "dateDocument": "2024-06-19",
+      "roFundstelle": "AS 2024 313",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l’organisation du gouvernement et de l’administration (OLOGA)",
+      "titelIt": "Ordinanza sull’organizzazione del Governo e dell’Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2024/313/de",
+      "sha": "a52b938bff17cef5bc7983199d1bb17e5cc3f9626b392f434504505e4b94a466"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2024-02-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "ef2203c74f07df3eb764015911974ee24c7a6d777f45424321da4e533c0868c5"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2024-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2023/729",
+      "dateDocument": "2023-11-29",
+      "roFundstelle": "AS 2023 729",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l’organisation du gouvernement et de l’administration (OLOGA)",
+      "titelIt": "Ordinanza sull’organizzazione del Governo e dell’Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2023/729/de",
+      "sha": "b1f31687a585c527cd38e882b8ac4b15f4adce756e0c0d68b970b2d9ae509a42"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "c83364dd644516b72ac6e4dce70b1a2784a869a83605321a1cfaf62e32245b82"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2023-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2023/249",
+      "dateDocument": "2023-05-17",
+      "roFundstelle": "AS 2023 249",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l’organisation du gouvernement et de l’administration (OLOGA)",
+      "titelIt": "Ordinanza sull’organizzazione del Governo e dell’Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2023/249/de",
+      "sha": "f1df3b5595a482f2f9c032c7837c2110579e430bdc6604fc24cb24b97419a027"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2023-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2022/842",
+      "dateDocument": "2022-12-09",
+      "roFundstelle": "AS 2022 842",
+      "titelDe": "Verordnung über die Anpassung von Verordnungen infolge der Überprüfung 2022 der ausserparlamentarischen Kommissionen",
+      "titelFr": "Ordonnance portant adaptation d’ordonnances à la suite du réexamen de 2022 des commissions extraparlementaires",
+      "titelIt": "Ordinanza sull’adeguamento di ordinanze in seguito alla verifica del 2022 delle commissioni extraparlamentari",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2022/842/de",
+      "sha": "89075988bbe7b95ced9afe70aae4f220a2b83263af776be2d55986da98f69809"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2022-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2022/179",
+      "dateDocument": "2022-03-11",
+      "roFundstelle": "AS 2022 179",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l’organisation du gouvernement et de l’administration (OLOGA)",
+      "titelIt": "Ordinanza sull’organizzazione del Governo e dell’Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2022/179/de",
+      "sha": "cfc475492647705159dd389b7c28955b3a27e36c9d8bfab78385128458c084cc"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2022-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2021/776",
+      "dateDocument": "2021-11-24",
+      "roFundstelle": "AS 2021 776",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l’organisation du gouvernement et de l’administration (OLOGA)",
+      "titelIt": "Ordinanza sull’organizzazione del Governo e dell’Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2021/776/de",
+      "sha": "bd1a4d286fdc42a8972ef67cfbc5fb14b30941978af4fc7132075622930711ce"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2021-07-09",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2021/429",
+      "dateDocument": "2021-07-09",
+      "roFundstelle": "AS 2021 429",
+      "titelDe": "Organisationsverordnung für das Eidgenössische Departement für auswärtige Angelegenheiten (OV-EDA). Berichtigung",
+      "titelFr": "Ordonnance sur l’organisation du Département fédéral des affaires étrangères (Org DFAE). Erratum",
+      "titelIt": "Ordinanza sull’organizzazione del Dipartimento federale degli affari esteri (OOrg-DFAE). Correzione",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2021/429/de",
+      "sha": "c6800f328f67af1b97801256e93ba399e4c5995d7f8b4e4f539284fa8e5835b1"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2021-07-08",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "64a6794048498e32202147acafdb6e12e81f7350980836e1de1ca76f221e3012"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2021-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "a7e9e4edef8e303da174415b794e728fdbd9ec80596cead850ac4fdb696df0f2"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "db82d52edcd48553d5fe113f3edd568f61c9022d854c46b3bdee7b2731bc2e27"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2020-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/394",
+      "dateDocument": "2020-05-13",
+      "roFundstelle": "AS 2020 394",
+      "titelDe": "Verordnung über die Organisation der Bahninfrastruktur (OBI-Verordnung)",
+      "titelFr": "Ordonnance sur l'organisation de l'infrastructure ferroviaire",
+      "titelIt": "Ordinanza sull'organizzazione dell'infrastruttura ferroviaria",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/394/de",
+      "sha": "04f5183ea5ace10a4092f512850235457fbfef25fb55905a5ee5d1fc83383b3e"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2020-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "41b729e160b42f856b735555c4c276bb6d47a23d5f3f07d590326ace53fc2703"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2020-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "4de5861827b3c431ee5ad6718f827dfe9dfff7316d5f942635630fc6126e7c1c"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2019-02-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/23",
+      "dateDocument": "2018-12-14",
+      "roFundstelle": "AS 2019 23",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)",
+      "titelIt": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/23/de",
+      "sha": "2f8894bfd8c24faa50153a8e31615fab96cc05c9f646b3d15c94f5f3eeea68d5"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2019-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/751",
+      "dateDocument": "2018-11-30",
+      "roFundstelle": "AS 2018 751",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)",
+      "titelIt": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/751/de",
+      "sha": "41f67b2223bcec9dc6784f67fe220e6b5674c42af40e3a2a583c5d49d4b2c37a"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2018-11-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/565",
+      "dateDocument": "2018-09-21",
+      "roFundstelle": "AS 2018 565",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)",
+      "titelIt": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/565/de",
+      "sha": "116f0c2283837514a4fd964f9098be93d7cefedf1900408cd5f5441e68c69fdf"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2018-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "48c9f21be60faac8750f86d172425684dc2d45891d794e997f264349285a9b33"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2017-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "ab80664f268d67f95f561f766c904a1d9f86a4fedb2a331fd528be56912b2bc7"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2017-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/340",
+      "dateDocument": "2017-05-17",
+      "roFundstelle": "AS 2017 340",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)",
+      "titelIt": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/340/de",
+      "sha": "cee3d464f5d6791c6dcebdc4c7953acfa2ddd5956c7f2be1e77d04dc5728852b"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2017-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/767",
+      "dateDocument": "2016-12-09",
+      "roFundstelle": "AS 2016 767",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)",
+      "titelIt": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/767/de",
+      "sha": "15817c8255b3734cffb021c1d16186e939586263a4c45f06397f14eddd7b3e70"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2016-08-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/421",
+      "dateDocument": "2016-07-06",
+      "roFundstelle": "AS 2016 421",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)",
+      "titelIt": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/421/de",
+      "sha": "d9add44490cf6bf3d6c3f7eb89a18f8e583378590c48a5250baae6d09ae4c230"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2016-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "e18f72a4649d8dc024ba535c4dccc6fb31b0be57a460a85f845b8ef41131a2f6"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2016-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/415",
+      "dateDocument": "2015-07-01",
+      "roFundstelle": "AS 2015 415",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)",
+      "titelIt": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/415/de",
+      "sha": "22b2ab33b31f63c313c23a975743d2b39cec493767c2f12ae5dec4823d45bb90"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2016-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/823",
+      "dateDocument": "2015-11-25",
+      "roFundstelle": "AS 2015 823",
+      "titelDe": "Verordnung über eine Karenzfrist für Leitungsfunktionen der Bundesverwaltung, für Mitglieder von Leitungsorganen von Anstalten des Bundes sowie für Mitglieder usserparlamentarischer Kommissionen (Karenzfristverordnung)",
+      "titelFr": "Ordonnance sur le délai de carence applicable aux cadres du plus haut niveau hiérarchique de l'administration fédérale, aux membres des organes de direction des établissements de la Confédération et aux membres des commissions extraparlementaires (Ordonnance sur le délai de carence)",
+      "titelIt": "Ordinanza concernente un periodo di attesa per le funzioni direttive dell'Amministrazione federale, per i membri di organi direttivi di stabilimenti della Confederazione e per i membri di commissioni extraparlamentari (Ordinanza sul periodo di attesa)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/823/de",
+      "sha": "ad7ee9d316d3398f653eccb3986d32a3f3eaab98c7981f2961ae5533552ef983"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2015-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "1c9bc942367d0141e2b66de385305e7c657e1dd3d0d12ca7afcfc372973c8465"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2015-02-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "06792e2452864496fcce88639dd23ae7f406898c3a9de560e6d378977d8dfa67"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2015-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/739",
+      "dateDocument": "2014-12-05",
+      "roFundstelle": "AS 2014 739",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)",
+      "titelIt": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/739/de",
+      "sha": "6abe772b7dd6af74cbc493609c6d706687f9741b015977704ca249083864910f"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2014-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/692",
+      "dateDocument": "2013-10-23",
+      "roFundstelle": "AS 2013 692",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)",
+      "titelIt": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/692/de",
+      "sha": "69896d37ca66bd2bc6556901d61a63065764a7b5c866db720c33b5b227334b13"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2013-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "43ff37af2075f8918ce6a3826bb2a55b2715150a635500fc3a5ece88a5e1cdaf"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2013-02-05",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/80",
+      "dateDocument": "2013-02-05",
+      "roFundstelle": "AS 2013 80",
+      "titelDe": "Verordnung über die Anpassung von Verordnungen infolge der Neugliederung der Departemente",
+      "titelFr": "Ordonnance portant adaptation d'ordonnances par suite de la réorganisation des départements",
+      "titelIt": "Ordinanza sull'adeguamento di ordinanze a seguito della riorganizzazione dei dipartimenti",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/80/de",
+      "sha": "782a51ffc64955a80c84f3b546ee84c165297244839849952ea5cf2d134141a3"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2013-02-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/2",
+      "dateDocument": "2012-12-19",
+      "roFundstelle": "AS 2013 2",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)",
+      "titelIt": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/2/de",
+      "sha": "4191742a1e825e365883ad3546b46fc481c2cf1e8959ab3cddd744e71f5ef7c3"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2013-02-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/25",
+      "dateDocument": "2012-12-19",
+      "roFundstelle": "AS 2013 25",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)",
+      "titelIt": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/25/de",
+      "sha": "7dc034abfccaf19eee6872ac63f152e126c3d1286ccb4450abf0255f1ab45a60"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2013-02-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/81",
+      "dateDocument": "2013-02-05",
+      "roFundstelle": "AS 2013 81",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)",
+      "titelIt": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/81/de",
+      "sha": "ef491d8cfa0389a88a29b8630750c2e3584e033f1cafdf0f4e4afcbb5018ee41"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2013-01-15",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/22",
+      "dateDocument": "2013-01-15",
+      "roFundstelle": "AS 2013 22",
+      "titelDe": "Verordnung über die Anpassung von Verordnungen infolge der Neugliederung der Departemente",
+      "titelFr": "Ordonnance portant adaptation d'ordonnances par suite de la réorganisation des départements",
+      "titelIt": "Ordinanza sull'adeguamento di ordinanze a seguito della riorganizzazione dei dipartimenti",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/22/de",
+      "sha": "f8673606fd7e0d5376f42b9b71e2e4af76d0ebeef222e776b6382c1aab53d29a"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2013-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/843",
+      "dateDocument": "2012-11-21",
+      "roFundstelle": "AS 2012 843",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)",
+      "titelIt": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/843/de",
+      "sha": "44b8f59f06fb400a642534bf1a2bfa9a9cbd7bfb66ccc0f998c8cba923d797ee"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2013-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/844",
+      "dateDocument": "2012-11-30",
+      "roFundstelle": "AS 2012 844",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)",
+      "titelIt": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/844/de",
+      "sha": "2ef33093a2fe0e0e2a4c685b2382e7094a61d8f7be337f8b60624d5169f9dd5a"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2013-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/900",
+      "dateDocument": "2012-12-28",
+      "roFundstelle": "AS 2012 900",
+      "titelDe": "Verordnung über die Anpassung von Verordnungen infolge der Neugliederung der Departemente",
+      "titelFr": "Ordonnance portant adaptation d'ordonnances par suite de la réorganisation des départements",
+      "titelIt": "Ordinanza sull'adeguamento di ordinanze a seguito della riorganizzazione dei dipartimenti",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/900/de",
+      "sha": "1ab7ce75565922cffb42f8c34718d13fc17bf1110db446ef881fe6ff7a24f67f"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2012-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "a45f29658bab2fc5ee3fbf3f5ce66ee0057844032638227e3ecfd02f8eea4340"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2012-08-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/445",
+      "dateDocument": "2012-06-27",
+      "roFundstelle": "AS 2012 445",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)",
+      "titelIt": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/445/de",
+      "sha": "048cf3e8800b751734d0c02a331c782e275ba988f8e75ff6e10ca20e9401adee"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2012-05-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/250",
+      "dateDocument": "2012-04-18",
+      "roFundstelle": "AS 2012 250",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)",
+      "titelIt": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/250/de",
+      "sha": "40e228eb8c693c3f5701180d68c1452d57390a442a1b1374c3a13b6c21d3279d"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2012-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/752",
+      "dateDocument": "2011-11-09",
+      "roFundstelle": "AS 2011 752",
+      "titelDe": "Verordnung über die Anpassung rechtlicher Bestimmungen infolge der Überprüfung der ausserparlamentarischen Kommissionen",
+      "titelFr": "Ordonnance sur l'adaptation de dispositions juridiques à la suite du réexamen des commissions extraparlementaires",
+      "titelIt": "Ordinanza che adegua le disposizioni legali in seguito alla verifica delle commissioni extraparlamentari",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/752/de",
+      "sha": "67e659e9e4143635c2be5d3009460779ca85db8a30e2c2f67d1b701ec4472bb8"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2012-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/842",
+      "dateDocument": "2011-11-30",
+      "roFundstelle": "AS 2011 842",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)",
+      "titelIt": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/842/de",
+      "sha": "707743a297147eceb8b74b950dce9d065afe0c90bcbc5bb0ab0108be79b0d9bb"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2012-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/843",
+      "dateDocument": "2011-11-30",
+      "roFundstelle": "AS 2011 843",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)",
+      "titelIt": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/843/de",
+      "sha": "37f1164dd97d0b049e19c346f346fb448bf761687cc700ff4c23afbd0f84c053"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2011-11-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "4101e5f6bc7d03ab372eeac9a0fb933664e18d903cba6f3f633efb66b120feef"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2011-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "6bf38ed071118619bda2360e00069bc4765aad8fe268033c7c0977833bd218aa"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2011-08-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/447",
+      "dateDocument": "2011-06-10",
+      "roFundstelle": "AS 2011 447",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)",
+      "titelIt": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/447/de",
+      "sha": "9beb229fc2aeb88bc61e346584851e8674dbe03595ab20d9980df30027c326fd"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2011-06-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/285",
+      "dateDocument": "2011-04-20",
+      "roFundstelle": "AS 2011 285",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)",
+      "titelIt": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/285/de",
+      "sha": "d9ef11729d15191a3f74534e8e27a63c5ebf049eb7c1f865bc39f56237e2de30"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2011-05-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "84dcc4f21c1c1c2440d80bbf8c48fc2283ceabb3f4b18714549081022eee7c10"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2011-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/721",
+      "dateDocument": "2010-10-27",
+      "roFundstelle": "AS 2010 721",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)",
+      "titelIt": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/721/de",
+      "sha": "55762bc1187afc401face70312d0a420d678cbfcaba82fdc2d4e1940cabefbb4"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2010-12-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/703",
+      "dateDocument": "2010-10-20",
+      "roFundstelle": "AS 2010 703",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)",
+      "titelIt": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/703/de",
+      "sha": "dd971fdf397dc41d11ef89bfe9e0db168ca4e10ed5fead66faf364075ae0c67f"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2010-08-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/427",
+      "dateDocument": "2010-06-30",
+      "roFundstelle": "AS 2010 427",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)",
+      "titelIt": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/427/de",
+      "sha": "46c0f47256b7e06968ebf3dbc98345a67d15d40446cfd74f20a156f398c9c898"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2010-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "1162d3ed6836b81bd683beecbdf6cc7a840bdd6e91de92cddd6f7d78e5be4500"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2010-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "2a9c502b6fea26d0b543d9a6896838092c9ff47fbc2f017c15160af79257a90d"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2010-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/751",
+      "dateDocument": "2009-11-27",
+      "roFundstelle": "AS 2009 751",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)",
+      "titelIt": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/751/de",
+      "sha": "860eada0a3a331ae2b41e45757d452eee312940e54a2d03137a1c62afd944b4a"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2009-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "d4944cb1425ac716436d540155f09449053262e10ba68f4514da927ad55a02ea"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2009-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/819",
+      "dateDocument": "2008-11-26",
+      "roFundstelle": "AS 2008 819",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)",
+      "titelIt": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/819/de",
+      "sha": "bf623e81d7c0c02d5e1488983e408c37f6b6b07a2bd9ba0f3a4756d934d3156b"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2008-02-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/59",
+      "dateDocument": "2008-01-16",
+      "roFundstelle": "AS 2008 59",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)",
+      "titelIt": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/59/de",
+      "sha": "6269bbc81891351672a38d60da9316faaf781760ad5e0183f069e48d3aad93c3"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2008-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "654bfe46d72ac2cf8509d72ae7ccb728e20fbfccdc0e778d3929050eaf604972"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2007-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "ab01539797ce9d8ffc8ab61c6be5777db5143c21fad2198264386488b06fec71"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2006-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "08c726959663c2fec3ee9132ed9b5d913fd87f5a48349f93e0d2babe46afe3c9"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2006-06-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/225",
+      "dateDocument": "2006-04-05",
+      "roFundstelle": "AS 2006 225",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)",
+      "titelIt": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/225/de",
+      "sha": "ee203314853de39564ccc58d80f7afe032a4cb80f66ea0c42ee7545b31de9805"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2006-05-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "41f48e7a30dc8a129ff6cc8d9659700522a7d33b13f4a3496aea989549968269"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2006-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "357226ed8a0af3589efb819ccb95d62d4ce60a72f615884d36db21f455a6e633"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2006-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "f758a62b6856d92b769c4ff145cdcdd7b617420715fc05d5db7c03be629b344a"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2005-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "0cdb53c6af9ba1816ee333ea5dcb79b0f9f1b04cbb8cffe2cb2a81c4025e32c8"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2005-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/805",
+      "dateDocument": "2004-12-10",
+      "roFundstelle": "AS 2004 805",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)",
+      "titelIt": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/805/de",
+      "sha": "9262e4678ccbee33980a5b3d9f04402bb30fac9276014b8285b090f2055287c9"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2004-02-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "6deedaccf2891e63c26cf7015059a9be0923ecf00bee142f535e1cbe6b2c12f9"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2004-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "bffcce049634e0ffaf63575cd82570e808ec286b3f0aac3aa3c1a762e3a375a8"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2003-12-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/611",
+      "dateDocument": "2003-11-19",
+      "roFundstelle": "AS 2003 611",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)",
+      "titelIt": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/611/de",
+      "sha": "a02bb90fa1f8894f854c6a65609639118d97e9a64cccdcfadbe3b699594f2c00"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2003-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "6d2a9852995745f7e4016df8945ef0fec9f4fb8a8f537e944bfb39ca1aecccdd"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2003-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "46c3fbcbda01cf4da35dd251a822380c3ac7a6b2e427aae879ed9042491351f5"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2002-10-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/416",
+      "dateDocument": "2002-08-21",
+      "roFundstelle": "AS 2002 416",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)",
+      "titelIt": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/416/de",
+      "sha": "3194ba669046eb7c2825db1e1c7310953aaf756dd71653b9a3460b40476a72d7"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2002-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "2fc5c6e91d0a2fa210b09965d70ac0821a430b9e644c1f7d77de49563db0dd48"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2002-05-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "d138e080c7d6a74c7582c95564e89994f03b55ffda09e87622e35d25dfbf9bc2"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2002-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "f0fbb631e613661b7cc9796ee72608a33d33a0749da110b20964ac7a5dfb56d5"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2001-02-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "31b2c05297e98d89ec3fc5127bc86df3b9505c70e70cbbce46cbf314716b06a6"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2001-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "3afeb7b98a32973ea4d9e8cd60bea71b6dece8c28c1f369cad9abd7ffae2c6f8"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2000-11-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "f656b9176782cd921efdb98353d8059d3d7da8eb845970ea55279590bbad7239"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2000-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "e263770ab66f89136136dd104d3073c687593675a7085083e1f6c2bc441c3eac"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2000-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "14daf8ae77941b73ab80a5e3b0e466794e3aa67caceaa3a49c16688c5632a845"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2000-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "2ccc713ead6e909d99861d8a66204d0d6aa345b57ad9ad9b17f81dc334600bfb"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2000-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/172.010.1",
+      "sha": "3a6140812c2b6e63defc161d08f7a9a7b79773cdc6d94dcd49d485d8f2ff6632"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1999-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/170",
+      "dateDocument": "1998-11-25",
+      "roFundstelle": "AS 1999 170",
+      "titelDe": "Regierungs- und Verwaltungsorganisationsverordnung (RVOV)",
+      "titelFr": "Ordonnance sur l'organisation du gouvernement et de l'administration (OLOGA)",
+      "titelIt": "Ordinanza sull'organizzazione del Governo e dell'Amministrazione (OLOGA)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/170/de",
+      "sha": "8bae4e3622a2f1a44323e99576e394e47bb4a0468b3c6875034bfc1cb616f6d9"
+    }
+  ],
+  "sha": "fcf3d63bfba20665969fdede19d8c6b370c1bdfff8d2b36d8e81b7e7c396677f"
+}

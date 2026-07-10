@@ -1,0 +1,58 @@
+{
+  "erlassKey": "VGVP",
+  "sr": "814.621",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2027-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2026/358",
+      "dateDocument": "2026-06-24",
+      "roFundstelle": "AS 2026 358",
+      "titelDe": "Verordnung vom 24. Juni 2026 über Verpackungen (Verpackungsverordnung, VerpV)",
+      "titelFr": "Ordonnance du 24 juin 2026 sur les emballages (OEmb)",
+      "titelIt": "Ordinanza del 24 giugno 2026 sugli imballaggi (OI)",
+      "nichtKonsolidiert": true,
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2026/358/de",
+      "sha": "1a0ac463b2f9b5ff50b7cb162f56e2841f32afe01ea29b8c0487cfdd00c8c068"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2022-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/814.621",
+      "sha": "baa14782e7742cb66cc091b8c88a1c25da010d2ac4990877e73b6d64a287f948"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2008-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/814.621",
+      "sha": "74d5e7637b3a99abc02228782d2fb0c7a4eb5f06e9a618808e80157bde834ccc"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2007-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/814.621",
+      "sha": "a5fc279d3c3d081061b5ec4ebb2b42ae53016233dd0f93e93fe09c3f75204f95"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2002-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/814.621",
+      "sha": "9dc56f3f1af73d5fe8058a7c82230256209b08740c633dfbfad84fa3f44e3b83"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2001-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/299",
+      "dateDocument": "2000-07-05",
+      "roFundstelle": "AS 2000 299",
+      "titelDe": "Verordnung über Getränkeverpackungen (VGV)",
+      "titelFr": "Ordonnance sur les emballages pour boissons (OEB)",
+      "titelIt": "Ordinanza sugli imballaggi per bevande (OIB)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/299/de",
+      "sha": "7b3c162a0adf2936b05d0555410152587d8f32a7b9b02fd84f209918bc80f156"
+    }
+  ],
+  "sha": "7ef3282df4fa1345f26eb254af8be5a99fa6885b987c5e973e1d192d3377d23a"
+}

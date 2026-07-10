@@ -1,0 +1,71 @@
+{
+  "erlassKey": "BEG",
+  "sr": "957.1",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2026-10-01",
+      "nichtKonsolidiert": true,
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/957.1",
+      "sha": "0d0175017a3b1cca3073141fcc6e460ca82ce30a2038d92f84f475f1af64651e"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/957.1",
+      "sha": "d065d5e334e23bae445e509870cc839e73b911621d9f6716547e5d95637707f5"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2021-02-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/957.1",
+      "sha": "0081fff226f18697310c996080cef579263edf15fb0d72daf129fb187e56d4b5"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2020-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/957.1",
+      "sha": "c673c97ba272650f958191f3ad03283cf9917026c405987ce043601b861b2acc"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2019-11-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/957.1",
+      "sha": "9f7e1439ad204d3070c2ad112b98e180277b8bcc9704976173a0cb095245ff7d"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2016-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/957.1",
+      "sha": "d4e511785f8ec5de59690c631f7459c3f99bf7884158cea5bba036331d78d1be"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2015-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/957.1",
+      "sha": "75dac1954411502b77b272294e754cb77ebc9027f58af95b51634e2a2cdaa7da"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2010-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/957.1",
+      "sha": "e30fd78a609411bf82b9c60f55c50d3a1c40bf256e338c3068489b3e2187a731"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2009-10-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/450",
+      "dateDocument": "2008-10-03",
+      "roFundstelle": "AS 2009 450",
+      "titelDe": "Bundesgesetz über Bucheffekten (Bucheffektengesetz, BEG)",
+      "titelFr": "Loi fédérale sur les titres intermédiés (LTI)",
+      "titelIt": "Legge federale sui titoli contabili (Legge sui titoli contabili, LTCo)",
+      "botschaftKey": "BOTSCHAFT-2006-1228",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/450/de",
+      "sha": "43e1076731cb70f69df38ddfc7fb3823ed8495a3ac1b0e897dcb13249090851f"
+    }
+  ],
+  "sha": "23fee794b13ee54bd94120b9ffda71605a141416490604b1846e8b9e85343961"
+}

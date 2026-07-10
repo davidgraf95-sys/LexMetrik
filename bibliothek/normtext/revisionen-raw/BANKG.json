@@ -1,0 +1,905 @@
+{
+  "sr": "952.0",
+  "korpusStand": "2024-01-01",
+  "bBindings": [
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/368"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-04-22"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Banken und Sparkassen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les banques et les caisses d'épargne"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle banche e le casse di risparmio"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/368"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-04-22"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Banken und Sparkassen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les banques et les caisses d'épargne"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle banche e le casse di risparmio"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/368"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-04-22"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Banken und Sparkassen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les banques et les caisses d'épargne"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle banche e le casse di risparmio"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/340"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-10-03"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les banques et les caisses d'épargne (Loi sur les banques, LB)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle banche e le casse di risparmio (Legge sulle banche, LBCR)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/340"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-10-03"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les banques et les caisses d'épargne (Loi sur les banques, LB)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle banche e le casse di risparmio (Legge sulle banche, LBCR)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/340"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-10-03"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les banques et les caisses d'épargne (Loi sur les banques, LB)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle banche e le casse di risparmio (Legge sulle banche, LBCR)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/6"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-12-20"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-12-19"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG) (Verstärkung des Einlegerschutzes)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les banques et les caisses d'épargne (Loi sur les banques, LB) (Renforcement de la protection des déposants)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle banche e le casse di risparmio (Legge sulle banche, LBCR) (Rafforzamento della protezione dei depositanti)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/6"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-12-20"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-12-19"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG) (Verstärkung des Einlegerschutzes)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les banques et les caisses d'épargne (Loi sur les banques, LB) (Renforcement de la protection des déposants)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle banche e le casse di risparmio (Legge sulle banche, LBCR) (Rafforzamento della protezione dei depositanti)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/6"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-12-20"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-12-19"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG) (Verstärkung des Einlegerschutzes)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les banques et les caisses d'épargne (Loi sur les banques, LB) (Renforcement de la protection des déposants)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle banche e le casse di risparmio (Legge sulle banche, LBCR) (Rafforzamento della protezione dei depositanti)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/901"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-12-17"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG) (Verstärkung des Einlegerschutzes)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les banques et les caisses d'épargne (Loi sur les banques, LB) (Renforcement de la protection des déposants)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle banche e le casse di risparmio (Legge sulle banche, LBCR) (Rafforzamento della protezione dei depositanti)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/901"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-12-17"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG) (Verstärkung des Einlegerschutzes)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les banques et les caisses d'épargne (Loi sur les banques, LB) (Renforcement de la protection des déposants)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle banche e le casse di risparmio (Legge sulle banche, LBCR) (Rafforzamento della protezione dei depositanti)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/901"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-12-17"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG) (Verstärkung des Einlegerschutzes)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les banques et les caisses d'épargne (Loi sur les banques, LB) (Renforcement de la protection des déposants)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle banche e le casse di risparmio (Legge sulle banche, LBCR) (Rafforzamento della protezione dei depositanti)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/559"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-09-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-03-18"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG) (Sicherung der Einlagen)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les banques et les caisses d'épargne (Loi sur les banques, LB) (Garantie des dépôts)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle banche e le casse di risparmio (Legge sulle banche, LBCR) (Garanzia dei depositi)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/559"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-09-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-03-18"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG) (Sicherung der Einlagen)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les banques et les caisses d'épargne (Loi sur les banques, LB) (Garantie des dépôts)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle banche e le casse di risparmio (Legge sulle banche, LBCR) (Garanzia dei depositi)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/559"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-09-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-03-18"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG) (Sicherung der Einlagen)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les banques et les caisses d'épargne (Loi sur les banques, LB) (Garantie des dépôts)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle banche e le casse di risparmio (Legge sulle banche, LBCR) (Garanzia dei depositi)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/126"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-03-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-09-30"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG) (Stärkung der Stabilität im Finanzsektor; <i>too big to fail</i>)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les banques et les caisses d'épargne (Loi sur les banques, LB) (Renforcement de la stabilité dans le secteur financier; <i>too big to fail</i>)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle banche e le casse di risparmio (Legge sulle banche, LBCR) (Rafforzamento della stabilità nel settore finanziario; <i>too big to fail</i>)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/126"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-03-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-09-30"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG) (Stärkung der Stabilität im Finanzsektor; <i>too big to fail</i>)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les banques et les caisses d'épargne (Loi sur les banques, LB) (Renforcement de la stabilité dans le secteur financier; <i>too big to fail</i>)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle banche e le casse di risparmio (Legge sulle banche, LBCR) (Rafforzamento della stabilità nel settore finanziario; <i>too big to fail</i>)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/126"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-03-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-09-30"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG) (Stärkung der Stabilität im Finanzsektor; <i>too big to fail</i>)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les banques et les caisses d'épargne (Loi sur les banques, LB) (Renforcement de la stabilité dans le secteur financier; <i>too big to fail</i>)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle banche e le casse di risparmio (Legge sulle banche, LBCR) (Rafforzamento della stabilità nel settore finanziario; <i>too big to fail</i>)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/272"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-03-22"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG) (Nachrichtenlose Vermögenswerte)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les banques et les caisses d'épargne (Loi sur les banques, LB) (Avoirs en déshérence)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle banche e le casse di risparmio (Legge sulle banche, LBCR) (Averi non rivendicati)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/272"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-03-22"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG) (Nachrichtenlose Vermögenswerte)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les banques et les caisses d'épargne (Loi sur les banques, LB) (Avoirs en déshérence)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle banche e le casse di risparmio (Legge sulle banche, LBCR) (Averi non rivendicati)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/272"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-03-22"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG) (Nachrichtenlose Vermögenswerte)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les banques et les caisses d'épargne (Loi sur les banques, LB) (Avoirs en déshérence)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle banche e le casse di risparmio (Legge sulle banche, LBCR) (Averi non rivendicati)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2022/732"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2023-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-12-17"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG) (Insolvenz und Einlagensicherung)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les banques et les caisses d’épargne (Loi sur les banques, LB) (Insolvabilité et garantie des dépôts)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle banche e le casse di risparmio (Legge sulle banche, LBCR) (Insolvenza e garanzia dei depositi)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2022/732"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2023-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-12-17"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG) (Insolvenz und Einlagensicherung)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les banques et les caisses d’épargne (Loi sur les banques, LB) (Insolvabilité et garantie des dépôts)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle banche e le casse di risparmio (Legge sulle banche, LBCR) (Insolvenza e garanzia dei depositi)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/51/117_121_129"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1935-03-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1934-11-08"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 8. November 1934 über die Banken und Sparkassen (Bankengesetz, BankG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 8 novembre 1934 sur les banques et les caisses d'épargne (Loi sur les banques, LB)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale dell'8 novembre 1934 sulle banche e le casse di risparmio (Legge sulle banche, LBCR)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/51/117_121_129"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1935-03-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1934-11-08"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 8. November 1934 über die Banken und Sparkassen (Bankengesetz, BankG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 8 novembre 1934 sur les banques et les caisses d'épargne (Loi sur les banques, LB)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale dell'8 novembre 1934 sulle banche e le casse di risparmio (Legge sulle banche, LBCR)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/51/117_121_129"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1935-03-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1934-11-08"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 8. November 1934 über die Banken und Sparkassen (Bankengesetz, BankG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 8 novembre 1934 sur les banques et les caisses d'épargne (Loi sur les banques, LB)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale dell'8 novembre 1934 sulle banche e le casse di risparmio (Legge sulle banche, LBCR)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/51/117_121_129"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1935-03-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1934-11-08"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 8. November 1934 über die Banken und Sparkassen (Bankengesetz, BankG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 8 novembre 1934 sur les banques et les caisses d'épargne (Loi sur les banques, LB)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale dell'8 novembre 1934 sulle banche e le casse di risparmio (Legge sulle banche, LBCR)"
+      }
+    }
+  ],
+  "aStaende": [
+    "1935-03-01",
+    "1937-07-01",
+    "1971-07-01",
+    "1971-07-09",
+    "1971-12-31",
+    "1975-01-01",
+    "1991-02-01",
+    "1995-02-01",
+    "1995-07-01",
+    "1997-01-01",
+    "1997-02-01",
+    "1999-10-01",
+    "2004-05-01",
+    "2004-07-01",
+    "2005-01-01",
+    "2006-01-01",
+    "2007-01-01",
+    "2008-12-20",
+    "2009-01-01",
+    "2010-01-01",
+    "2011-01-01",
+    "2011-09-01",
+    "2012-03-01",
+    "2013-01-01",
+    "2015-01-01",
+    "2015-07-01",
+    "2016-01-01",
+    "2019-01-01",
+    "2020-01-01",
+    "2021-08-01",
+    "2023-01-01",
+    "2024-01-01",
+    "2026-10-01"
+  ]
+}

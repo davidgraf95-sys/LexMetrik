@@ -1,0 +1,327 @@
+{
+  "erlassKey": "STPO",
+  "sr": "312.0",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2025-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2024/490",
+      "dateDocument": "2024-09-04",
+      "roFundstelle": "AS 2024 490",
+      "titelDe": "Verordnung über die abschliessende Inkraftsetzung der Änderung vom 17. Juni 2022 der Strafprozessordnung",
+      "titelFr": "Ordonnance portant dernière mise en vigueur partielle de la modification du 17 juin 2022 du code de procédure pénale",
+      "titelIt": "Ordinanza sull’entrata in vigore integrale della modifica del 17 giugno 2022 del Codice di procedura penale",
+      "nichtKonsolidiert": true,
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2024/490/de",
+      "sha": "a22a1543f05cb5f42742790fa90b1900b5f8141e6bb37619cee3c4d90ad37c80"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2025-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/312.0",
+      "sha": "4afe83455a651430d3153523b5b5959857d596637cf2145d7c0610206c9d829e"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/312.0",
+      "sha": "aea0a0bbe92be10aea2927fa446ab16c8e35266fb3af3ce0d4cedf44b5bd35ba"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2024-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2023/468",
+      "dateDocument": "2022-06-17",
+      "roFundstelle": "AS 2023 468",
+      "titelDe": "Schweizerische Strafprozessordnung (Strafprozessordnung, StPO)",
+      "titelFr": "Code de procédure pénale suisse (Code de procédure pénale, CPP)",
+      "titelIt": "Codice di diritto processuale penale svizzero (Codice di procedura penale, CPP)",
+      "botschaftKey": "BOTSCHAFT-2019-2368",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2023/468/de",
+      "sha": "a274a1a3ddc1eaf5fb59e4278d2455dae8e6b4372a15931b862659968477d8d1"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/312.0",
+      "sha": "dc6b6806f6cef55b7610df06f6716937ec620deb603e194501e1579b2e2d42d2"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/312.0",
+      "sha": "0492b894a9f7106fabad36d97acb9f262c93e764f5723a52f3d6a8d0be2eea6d"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/312.0",
+      "sha": "e9bb7bcf84438fd45b2c780eebc7099d175dcf1690625cca7ca82ac4ba413f99"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/312.0",
+      "sha": "ede5b1bfd40ddf7236c401e892d019d781e11e2489f3c62a4a83861f175803b3"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2022-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/312.0",
+      "sha": "3edcc82c209f7822acca27a648d19d6d6783fd056fe3f23f56c1e58d00c926bc"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2021-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/312.0",
+      "sha": "205ac750f49afba4ff4004900ab2a03f309922f492d650953a3782eb6ea92308"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2021-03-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2021/75",
+      "dateDocument": "2020-09-25",
+      "roFundstelle": "AS 2021 75",
+      "titelDe": "Schweizerische Strafprozessordnung (Strafprozessordnung, StPO) (Sicherheitshaft im selbstständigen nachträglichen Verfahren)",
+      "titelFr": "Code de procédure pénale suisse (Code de procédure pénale, CPP) (Détention pour des motifs de sûreté dans le cadre d’une procédure ultérieure indépendante)",
+      "titelIt": "Codice di diritto processuale penale svizzero (Codice di procedura penale, CPP) (Carcerazione di sicurezza nel quadro di una procedura indipendente successiva)",
+      "botschaftKey": "BOTSCHAFT-2019-2368",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2021/75/de",
+      "sha": "746d2be1f04bdef5e8daac59b3b73bf2315ec07fb28c3f2929ef0e234b12aafd"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2020-02-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/312.0",
+      "sha": "1e02be85dbaa22eceb8eaace2f83c1ecb8b08170af0cd333b18fb82729b7c837"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2019-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/312.0",
+      "sha": "9182e3f7e7c73f32c8933978749e7adf03167ff094b48e5e4523128af8183b6c"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2019-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/765",
+      "dateDocument": "2017-09-29",
+      "roFundstelle": "AS 2018 765",
+      "titelDe": "Bundesbeschluss über die Genehmigung und die Umsetzung des Übereinkommens des Europarats über die Fälschung von Arzneimitteln und Medizinprodukten und über ähnliche die öffentliche Gesundheit gefährdende Straftaten (Medicrime-Konvention)",
+      "titelFr": "Arrêté fédéral portant approbation et mise en uvre de la convention du Conseil de l'Europe sur la contrefaçon des produits médicaux et les infractions similaires menaçant la santé publique (Convention Médicrime)",
+      "titelIt": "Decreto federale che approva e traspone nel diritto svizzero la Convenzione del Consiglio d'Europa sulla contraffazione di agenti terapeutici e reati simili che comportano una minaccia per la salute pubblica (Convenzione Medicrime)",
+      "botschaftKey": "BOTSCHAFT-2017-649",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/765/de",
+      "sha": "4312621927d5f1723c3214e7be8d23994fbbfd183d3f79c0e6dd23ea50a18482"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2018-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/312.0",
+      "sha": "5ecacf3eb352ba5a5a8d24f5825e838e02cf54ee1e4dcfa870ba6fe5d5710658"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2018-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/312.0",
+      "sha": "aedbedd2f5bc6fda4c095d9377f2f9a351b1797ed50fa46d6574a3be0c5db67c"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2017-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/312.0",
+      "sha": "8649f7d207a034a54c3053b3bf912ce2dcd9208a7f3ed696e4bb1ad09d7e4149"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2017-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/312.0",
+      "sha": "c09e9995a5bf0693aadd30213d4374951a02de7563528cc9625ff8c17beba032"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2016-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/312.0",
+      "sha": "9e4473f052305906746d26466aa1c62f6b287b96a296fef53fe4fe0b1fbdf28a"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2016-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/312.0",
+      "sha": "52703f0d35b08a81abeae8e8009268adb32faa45d973a35f00f9ca4ed71e3708"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2016-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/312.0",
+      "sha": "7b53a68bfd6df6404c143eee95e260972e2cf0bb03229728b88d4f472d1294f2"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2015-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/312.0",
+      "sha": "f756e8a851374f0ce0e3571475101bc067400b73a6030507b4ab37dd3f08083a"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2014-11-25",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/684",
+      "dateDocument": "2014-11-10",
+      "roFundstelle": "AS 2014 684",
+      "titelDe": "Schweizerische Strafprozessordnung (Strafprozessordnung, StPO) (Betrifft nur den französischen Text)",
+      "titelFr": "Code de procédure pénale suisse (Code de procédure pénale, CPP)",
+      "titelIt": "Codice di diritto processuale penale svizzero (Codice di procedura penale, CPP) (Concerne solo il testo francese)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/684/de",
+      "sha": "141459ec242c40bd13ac66b97094f1566c1d66b915a1a2feed1a675d7a9bee6b"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2014-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/312.0",
+      "sha": "c5e06250602d55a64240eda0dda6de7d5e920d755da80ae3d73d21bd4c8b5ec1"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2014-01-21",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/38",
+      "dateDocument": "2014-01-21",
+      "roFundstelle": "AS 2014 38",
+      "titelDe": "Schweizerische Strafprozessordnung (Strafprozessordnung, StPO) (Betrifft nur den italienischen Text)",
+      "titelFr": "Code de procédure pénale suisse (Code de procédure pénale, CPP) (Ne concerne que le texte italien)",
+      "titelIt": "Codice di diritto processuale penale svizzero (Codice di procedura penale, CPP)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/38/de",
+      "sha": "461e515d37221f9ef73397874afe5f3941b04c2a5c080c23cc2c4f4a7ce387d3"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2013-05-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/230",
+      "dateDocument": "2012-12-14",
+      "roFundstelle": "AS 2013 230",
+      "titelDe": "Bundesgesetz über die verdeckte Ermittlung und Fahndung (Änderung der Strafprozessordnung und des Militärstrafprozesses)",
+      "titelFr": "Loi fédérale sur l'investigation secrète et les recherches secrètes (Modification du code de procédure pénale et de la procédure pénale militaire)",
+      "titelIt": "Legge federale sull'inchiesta mascherata e l'indagine in incognito (Modifica del Codice di procedura penale e della Procedura penale militare)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/230/de",
+      "sha": "9b5341c678806cfbebcfcb4a0a43bf26b8716b23a074fc1a10ad96c2b41b9481"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2013-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/312.0",
+      "sha": "27752369b9daf106390d4a64e013d03f8aae3d175ef41b574af54ff755a627ef"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2013-03-12",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/164",
+      "dateDocument": "2013-02-20",
+      "roFundstelle": "AS 2013 164",
+      "titelDe": "Schweizerische Strafprozessordnung (Strafprozessordnung, StPO) (Betrifft nur den italienischen Text)",
+      "titelFr": "Code de procédure pénale suisse (Code de procédure pénale, CPP) (Ne concerne que le texte italien)",
+      "titelIt": "Codice di diritto processuale penale svizzero (Codice di procedura penale, CPP)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/164/de",
+      "sha": "a8346f87f9f08b9727358d6447ab9bdf5b82ac72a90aeda61b3da8c5cc9581f1"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2013-02-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/312.0",
+      "sha": "068ea00163891fb3d2d8090a195929348ac105eb7d00bebf616fa7331472df74"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2012-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/312.0",
+      "sha": "4b3a0f2b80f971ed9bd2ae7100346a80aea8cc15c8d7b5279426424fb352d89f"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2012-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/312.0",
+      "sha": "1c05697c5fa6ec1f792f1fbec8444058f00d1f105f22bcd32812b58dfbe7aada"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2011-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/312.0",
+      "sha": "d97a72d255903e7c91d1d72458d9cc66eecf5a85cf3a8e4637df201ada65ab7a"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2011-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/267",
+      "dateDocument": "2007-10-05",
+      "roFundstelle": "AS 2010 267",
+      "titelDe": "Schweizerische Strafprozessordnung (Strafprozessordnung, StPO)",
+      "titelFr": "Code de procédure pénale suisse (Code de procédure pénale, CPP)",
+      "titelIt": "Codice di diritto processuale penale svizzero (Codice di procedura penale, CPP)",
+      "botschaftKey": "BOTSCHAFT-2006-124",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/267/de",
+      "sha": "bfd6cc8fc761c4efd815bcad982a29f4d56f9a7d77eb1be76329a308254b53b9"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2011-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/619",
+      "dateDocument": "2011-09-19",
+      "roFundstelle": "AS 2011 619",
+      "titelDe": "Schweizerische Strafprozessordnung (Strafprozessordnung, StPO)",
+      "titelFr": "Code de procédure pénale suisse (Code de procédure pénale, CPP)",
+      "titelIt": "Codice di diritto processuale penale svizzero (Codice di procedura penale, CPP)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/619/de",
+      "sha": "2012f7205f0795d58f41fef57b5e38b397551859ed7e3cd099d1a41fed0a7ee4"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2008-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/811",
+      "dateDocument": "2007-03-23",
+      "roFundstelle": "AS 2007 811",
+      "titelDe": "Bundesgesetz über die Bundesstrafrechtspflege",
+      "titelFr": "Loi fédérale sur la procédure pénale",
+      "titelIt": "Legge federale sulla procedura penale",
+      "botschaftKey": "BOTSCHAFT-2006-525",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/811/de",
+      "sha": "ddec94651c713e741bc21813213d050f56dd3873cb5ddd4d0bd467d2a501aa4d"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2002-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/492",
+      "dateDocument": "1999-12-22",
+      "roFundstelle": "AS 2001 492",
+      "titelDe": "Bundesgesetz über die Bundesstrafrechtspflege",
+      "titelFr": "Loi fédérale sur la procédure pénale",
+      "titelIt": "Legge federale sulla procedura penale",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/492/de",
+      "sha": "d706f89881d9fd36891aae10498c496c59ba38128378f6a481e632dc84692ad5"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2002-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/493",
+      "dateDocument": "2001-12-28",
+      "roFundstelle": "AS 2001 493",
+      "titelDe": "Mitteilung über eine Inkraftsetzung",
+      "titelFr": "Communication d'entrée en vigeur",
+      "titelIt": "Comunicazione su un'entrata in vigore",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/493/de",
+      "sha": "527116ee2ff2540c011c7d9c0e49e17ae2e428d083d792c33390fea3377ed95c"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1935-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/50/685_709_769",
+      "dateDocument": "1934-06-15",
+      "roFundstelle": "AS 50 685",
+      "titelDe": "Bundesgesetz vom 15. Juni 1934 über die Bundesstrafrechtspflege",
+      "titelFr": "Loi fédérale du 15 juin 1934 sur la procédure pénale",
+      "titelIt": "Legge federale del 15 giugno 1934 sulla procedura penale",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/50/685_709_769/de",
+      "sha": "a2641e3d3d96ba31a49fda134517c273b7967e6d9a24d9081bb20ff1d20dc450"
+    }
+  ],
+  "sha": "b5713dee60527bd311161ab0ceede118190a0159d9e055317b5208fc84fbe80c"
+}

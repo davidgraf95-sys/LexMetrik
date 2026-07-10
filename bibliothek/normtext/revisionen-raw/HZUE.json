@@ -1,0 +1,946 @@
+{
+  "sr": "0.274.131",
+  "korpusStand": "2023-06-12",
+  "bBindings": [
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.274.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1994/2809_2809_2809"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1995-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1965-11-15"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 15. November 1965 über die Zustellung gerichtlicher und aussergerichtlicher Schriftstücke im Ausland in Zivil- oder Handelssachen (mit Anhang)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 15 novembre 1965 relative à la signification et la notification à l'étranger des actes judiciaires et extrajudiciaires en matière civile ou commerciale (avec annexe)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 15 novembre 1965 relativa alla notificazione e alla comunicazione all'estero degli atti giudiziari e extragiudiziari in materia civile o commerciale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.274.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1994/2809_2809_2809"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1995-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1965-11-15"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 15. November 1965 über die Zustellung gerichtlicher und aussergerichtlicher Schriftstücke im Ausland in Zivil- oder Handelssachen (mit Anhang)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 15 novembre 1965 relative à la signification et la notification à l'étranger des actes judiciaires et extrajudiciaires en matière civile ou commerciale (avec annexe)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 15 novembre 1965 relativa alla notificazione e alla comunicazione all'estero degli atti giudiziari e extragiudiziari in materia civile o commerciale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.274.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1994/2809_2809_2809"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1995-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1965-11-15"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 15. November 1965 über die Zustellung gerichtlicher und aussergerichtlicher Schriftstücke im Ausland in Zivil- oder Handelssachen (mit Anhang)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 15 novembre 1965 relative à la signification et la notification à l'étranger des actes judiciaires et extrajudiciaires en matière civile ou commerciale (avec annexe)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 15 novembre 1965 relativa alla notificazione e alla comunicazione all'estero degli atti giudiziari e extragiudiziari in materia civile o commerciale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.274.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1994/2809_2809_2809"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1995-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1965-11-15"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 15. November 1965 über die Zustellung gerichtlicher und aussergerichtlicher Schriftstücke im Ausland in Zivil- oder Handelssachen (mit Anhang)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 15 novembre 1965 relative à la signification et la notification à l'étranger des actes judiciaires et extrajudiciaires en matière civile ou commerciale (avec annexe)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 15 novembre 1965 relativa alla notificazione e alla comunicazione all'estero degli atti giudiziari e extragiudiziari in materia civile o commerciale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.274.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/143"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-12-05"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-12-05"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 15. November 1965 über die Zustellung gerichtlicher und aussergerichtlicher Schriftstücke im Ausland in Zivil- oder Handelssachen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 15 novembre 1965 relative à la signification et la notification à l'étranger des actes judiciaires et extrajudiciaires en matière civile ou commerciale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 15 novembre 1965 relativa alla notificazione e alla comunicazione all'estero degli atti giudiziari e extragiudiziari in materia civile o commerciale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.274.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/143"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-12-05"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-12-05"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 15. November 1965 über die Zustellung gerichtlicher und aussergerichtlicher Schriftstücke im Ausland in Zivil- oder Handelssachen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 15 novembre 1965 relative à la signification et la notification à l'étranger des actes judiciaires et extrajudiciaires en matière civile ou commerciale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 15 novembre 1965 relativa alla notificazione e alla comunicazione all'estero degli atti giudiziari e extragiudiziari in materia civile o commerciale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.274.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/143"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-12-05"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-12-05"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 15. November 1965 über die Zustellung gerichtlicher und aussergerichtlicher Schriftstücke im Ausland in Zivil- oder Handelssachen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 15 novembre 1965 relative à la signification et la notification à l'étranger des actes judiciaires et extrajudiciaires en matière civile ou commerciale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 15 novembre 1965 relativa alla notificazione e alla comunicazione all'estero degli atti giudiziari e extragiudiziari in materia civile o commerciale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.274.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/341"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-04-18"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-04-18"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 15. November 1965 über die Zustellung gerichtlicher und aussergerichtlicher Schriftstücke im Ausland in Zivil- oder Handelssachen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 15 novembre 1965 relative à la signification et la notification à l'étranger des actes judiciaires et extrajudiciaires en matière civile ou commerciale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 15 novembre 1965 relativa alla notificazione e alla comunicazione all'estero degli atti giudiziari e extragiudiziari in materia civile o commerciale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.274.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/341"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-04-18"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-04-18"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 15. November 1965 über die Zustellung gerichtlicher und aussergerichtlicher Schriftstücke im Ausland in Zivil- oder Handelssachen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 15 novembre 1965 relative à la signification et la notification à l'étranger des actes judiciaires et extrajudiciaires en matière civile ou commerciale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 15 novembre 1965 relativa alla notificazione e alla comunicazione all'estero degli atti giudiziari e extragiudiziari in materia civile o commerciale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.274.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/341"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-04-18"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-04-18"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 15. November 1965 über die Zustellung gerichtlicher und aussergerichtlicher Schriftstücke im Ausland in Zivil- oder Handelssachen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 15 novembre 1965 relative à la signification et la notification à l'étranger des actes judiciaires et extrajudiciaires en matière civile ou commerciale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 15 novembre 1965 relativa alla notificazione e alla comunicazione all'estero degli atti giudiziari e extragiudiziari in materia civile o commerciale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.274.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/455"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-06-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-06-15"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 15. November 1965 über die Zustellung gerichtlicher und aussergerichtlicher Schriftstücke im Ausland in Zivil- oder Handelssachen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 15 novembre 1965 relative à la signification et la notification à l'étranger des actes judiciaires et extrajudiciaires en matière civile ou commerciale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 15 novembre 1965 relativa alla notificazione e alla comunicazione all'estero degli atti giudiziari e extragiudiziari in materia civile o commerciale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.274.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/455"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-06-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-06-15"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 15. November 1965 über die Zustellung gerichtlicher und aussergerichtlicher Schriftstücke im Ausland in Zivil- oder Handelssachen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 15 novembre 1965 relative à la signification et la notification à l'étranger des actes judiciaires et extrajudiciaires en matière civile ou commerciale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 15 novembre 1965 relativa alla notificazione e alla comunicazione all'estero degli atti giudiziari e extragiudiziari in materia civile o commerciale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.274.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/455"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-06-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-06-15"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 15. November 1965 über die Zustellung gerichtlicher und aussergerichtlicher Schriftstücke im Ausland in Zivil- oder Handelssachen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 15 novembre 1965 relative à la signification et la notification à l'étranger des actes judiciaires et extrajudiciaires en matière civile ou commerciale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 15 novembre 1965 relativa alla notificazione e alla comunicazione all'estero degli atti giudiziari e extragiudiziari in materia civile o commerciale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.274.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/317"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-04-27"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-04-27"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 15. November 1965 über die Zustellung gerichtlicher und aussergerichtlicher Schriftstücke im Ausland in Zivil- oder Handelssachen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 15 novembre 1965 relative à la signification et la notification à l'étranger des actes judiciaires et extrajudiciaires en matière civile ou commerciale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 15 novembre 1965 relativa alla notificazione e alla comunicazione all'estero degli atti giudiziari e extragiudiziari in materia civile o commerciale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.274.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/317"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-04-27"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-04-27"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 15. November 1965 über die Zustellung gerichtlicher und aussergerichtlicher Schriftstücke im Ausland in Zivil- oder Handelssachen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 15 novembre 1965 relative à la signification et la notification à l'étranger des actes judiciaires et extrajudiciaires en matière civile ou commerciale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 15 novembre 1965 relativa alla notificazione e alla comunicazione all'estero degli atti giudiziari e extragiudiziari in materia civile o commerciale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.274.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/317"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-04-27"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-04-27"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 15. November 1965 über die Zustellung gerichtlicher und aussergerichtlicher Schriftstücke im Ausland in Zivil- oder Handelssachen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 15 novembre 1965 relative à la signification et la notification à l'étranger des actes judiciaires et extrajudiciaires en matière civile ou commerciale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 15 novembre 1965 relativa alla notificazione e alla comunicazione all'estero degli atti giudiziari e extragiudiziari in materia civile o commerciale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.274.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/123"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-02-20"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-02-20"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 15. November 1965 über die Zustellung gerichtlicher und aussergerichtlicher Schriftstücke im Ausland in Zivil- oder Handelssachen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 15 novembre 1965 relative à la signification et la notification à l'étranger des actes judiciaires et extrajudiciaires en matière civile ou commerciale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 15 novembre 1965 relativa alla notificazione e alla comunicazione all'estero degli atti giudiziari e extragiudiziari in materia civile o commerciale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.274.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/123"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-02-20"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-02-20"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 15. November 1965 über die Zustellung gerichtlicher und aussergerichtlicher Schriftstücke im Ausland in Zivil- oder Handelssachen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 15 novembre 1965 relative à la signification et la notification à l'étranger des actes judiciaires et extrajudiciaires en matière civile ou commerciale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 15 novembre 1965 relativa alla notificazione e alla comunicazione all'estero degli atti giudiziari e extragiudiziari in materia civile o commerciale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.274.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/123"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-02-20"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-02-20"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 15. November 1965 über die Zustellung gerichtlicher und aussergerichtlicher Schriftstücke im Ausland in Zivil- oder Handelssachen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 15 novembre 1965 relative à la signification et la notification à l'étranger des actes judiciaires et extrajudiciaires en matière civile ou commerciale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 15 novembre 1965 relativa alla notificazione e alla comunicazione all'estero degli atti giudiziari e extragiudiziari in materia civile o commerciale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.274.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/61"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-01-23"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-01-23"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 15. November 1965 über die Zustellung gerichtlicher und aussergerichtlicher Schriftstücke im Ausland in Zivil- oder Handelssachen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 15 novembre 1965 relative à la signification et la notification à l'étranger des actes judiciaires et extrajudiciaires en matière civile ou commerciale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 15 novembre 1965 relativa alla notificazione e alla comunicazione all'estero degli atti giudiziari e extragiudiziari in materia civile o commerciale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.274.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/61"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-01-23"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-01-23"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 15. November 1965 über die Zustellung gerichtlicher und aussergerichtlicher Schriftstücke im Ausland in Zivil- oder Handelssachen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 15 novembre 1965 relative à la signification et la notification à l'étranger des actes judiciaires et extrajudiciaires en matière civile ou commerciale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 15 novembre 1965 relativa alla notificazione e alla comunicazione all'estero degli atti giudiziari e extragiudiziari in materia civile o commerciale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.274.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/61"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-01-23"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-01-23"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 15. November 1965 über die Zustellung gerichtlicher und aussergerichtlicher Schriftstücke im Ausland in Zivil- oder Handelssachen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 15 novembre 1965 relative à la signification et la notification à l'étranger des actes judiciaires et extrajudiciaires en matière civile ou commerciale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 15 novembre 1965 relativa alla notificazione e alla comunicazione all'estero degli atti giudiziari e extragiudiziari in materia civile o commerciale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.274.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2019/216"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-03-18"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-03-18"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 15. November 1965 über die Zustellung gerichtlicher und aussergerichtlicher Schriftstücke im Ausland in Zivil- oder Handelssachen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 15 novembre 1965 relative à la signification et la notification à l'étranger des actes judiciaires et extrajudiciaires en matière civile ou commerciale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 15 novembre 1965 relativa alla notificazione e alla comunicazione all'estero degli atti giudiziari e extragiudiziari in materia civile o commerciale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.274.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2019/216"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-03-18"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-03-18"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 15. November 1965 über die Zustellung gerichtlicher und aussergerichtlicher Schriftstücke im Ausland in Zivil- oder Handelssachen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 15 novembre 1965 relative à la signification et la notification à l'étranger des actes judiciaires et extrajudiciaires en matière civile ou commerciale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 15 novembre 1965 relativa alla notificazione e alla comunicazione all'estero degli atti giudiziari e extragiudiziari in materia civile o commerciale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.274.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2019/216"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-03-18"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-03-18"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 15. November 1965 über die Zustellung gerichtlicher und aussergerichtlicher Schriftstücke im Ausland in Zivil- oder Handelssachen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 15 novembre 1965 relative à la signification et la notification à l'étranger des actes judiciaires et extrajudiciaires en matière civile ou commerciale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 15 novembre 1965 relativa alla notificazione e alla comunicazione all'estero degli atti giudiziari e extragiudiziari in materia civile o commerciale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.274.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2020/600"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-07-13"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-07-13"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 15. November 1965 über die Zustellung gerichtlicher und aussergerichtlicher Schriftstücke im Ausland in Zivil- oder Handelssachen "
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 15 novembre 1965 relative à la signification et la notification à l'étranger des actes judiciaires et extrajudiciaires en matière civile ou commerciale "
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 15 novembre 1965 relativa alla notificazione e alla comunicazione all'estero degli atti giudiziari e extragiudiziari in materia civile o commerciale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.274.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2020/600"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-07-13"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-07-13"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 15. November 1965 über die Zustellung gerichtlicher und aussergerichtlicher Schriftstücke im Ausland in Zivil- oder Handelssachen "
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 15 novembre 1965 relative à la signification et la notification à l'étranger des actes judiciaires et extrajudiciaires en matière civile ou commerciale "
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 15 novembre 1965 relativa alla notificazione e alla comunicazione all'estero degli atti giudiziari e extragiudiziari in materia civile o commerciale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.274.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2020/600"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-07-13"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-07-13"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 15. November 1965 über die Zustellung gerichtlicher und aussergerichtlicher Schriftstücke im Ausland in Zivil- oder Handelssachen "
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 15 novembre 1965 relative à la signification et la notification à l'étranger des actes judiciaires et extrajudiciaires en matière civile ou commerciale "
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 15 novembre 1965 relativa alla notificazione e alla comunicazione all'estero degli atti giudiziari e extragiudiziari in materia civile o commerciale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.274.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2023/295"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2023-06-12"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2023-06-12"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 15. November 1965 über die Zustellung gerichtlicher und aussergerichtlicher Schriftstücke im Ausland in Zivil- oder Handelssachen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 15 novembre 1965 relative à la signification et la notification à l’étranger des actes judiciaires et extrajudiciaires en matière civile ou commerciale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 15 novembre 1965 relativa alla notificazione e alla comunicazione all’estero degli atti giudiziari e extragiudiziari in materia civile o commerciale"
+      }
+    }
+  ],
+  "aStaende": [
+    "1995-01-01",
+    "2002-12-05",
+    "2006-04-18",
+    "2009-06-15",
+    "2011-04-27",
+    "2014-01-23",
+    "2014-02-20",
+    "2019-03-18",
+    "2020-07-13",
+    "2023-06-12"
+  ]
+}

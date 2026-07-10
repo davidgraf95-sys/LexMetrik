@@ -178,6 +178,16 @@ CREATE TABLE erlass_fassungen (
   sha            TEXT NOT NULL,
   PRIMARY KEY (erlass_key, fassungs_token)
 );
+-- Schema-Rückkopplung Paket 5 / W2·6-REV (§0b Regel 4, 10.7.2026): die «Änderungen /
+-- Revisionen»-Timeline (Fedlex Pfad (b): oc-Änderungserlasse je SR) ist die Vor-E1-
+-- Übergangsform als File-Sidecar public/normtext/revisionen/<KEY>.json. Zielsenke ist
+-- GENAU DIESE Tabelle `erlass_fassungen` (§5 «nie zwei Wahrheiten»; KEIN separates
+-- `erlass_revisionen`): je oc-Erlass eine Fassungs-Zeile mit gueltig_von=dateEntryInForce,
+-- as_fundstelle=«AS <jahr> <num>» (aus der oc-URI abgeleitet, da jolux:historicalId am
+-- oc-Knoten leer ist — POC 10.7.). Zusatz-Felder, die der Sidecar heute trägt und die E1
+-- ergänzen muss: `botschaft_key` (ocUri-Join zu materialien, Finding 1), `nicht_konsolidiert`
+-- (dateEntryInForce > Korpus-Stand, Finding 4), `art` ('aenderung'|'sammelerlass-marker' für
+-- Mantelerlass-Lücken aus dem Pfad-(a)-Cross-Check). Beim E1-Flip nur den Writer umhängen.
 
 -- ARTIKEL: hängt an einer Fassung. bloecke_json = exakt heutige NormSnapshot.bloecke-Form
 -- (Projektion = Re-Serialisierung, byte-gleich; kein Feld-Remapping).

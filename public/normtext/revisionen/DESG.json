@@ -1,0 +1,94 @@
+{
+  "erlassKey": "DESG",
+  "sr": "232.12",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/232.12",
+      "sha": "b87ce358e3d8199c3d6c5f58a85a5ddc1fb5a835576be3fe2138d2ec7f9cb2d8"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/232.12",
+      "sha": "e592e7cf8b7bb16d4c033076ae481c60296bbbf0e24f12ec4431caf61fc8df30"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2022-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/232.12",
+      "sha": "40f4dcf25124d831e4629c4456fb1b383d81b955053db6a643e0c7764afd8c97"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2019-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/232.12",
+      "sha": "56d267abe155da24de064941a82511863777fb04894c6d8600359f06fbd62ef4"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2017-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/232.12",
+      "sha": "634456c03f8e87c42ecfca3e33005b21e9b493d20dff9c5c3aaac711ace7031d"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2011-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/232.12",
+      "sha": "6b8b8c7c4e73fcd998f9d89fad9e55a22528706ae32605e35f7483a88375ad91"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/232.12",
+      "sha": "47ce3b06e31d78cc4de08dabde7ef995429f0c59c488b68eb1bb3af3502ffc60"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2008-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/232.12",
+      "sha": "5667bf94ea3cb95a5d639eb5010df7fa37e26bc37650fc339dd2c087a9f1801c"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2007-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/232.12",
+      "sha": "a56a2025b2016045ff2b5b3818f90c6386ef4ef5c96060b4a60ce09b8a179008"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2005-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/232.12",
+      "sha": "f88817f7a92f34b2a9fbdab13621d1caf88fc3315fa4f3d3a7a5ff25a458c527"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2002-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/226",
+      "dateDocument": "2001-10-05",
+      "roFundstelle": "AS 2002 226",
+      "titelDe": "Bundesgesetz über den Schutz von Design (Designgesetz, DesG)",
+      "titelFr": "Loi fédérale sur la protection des designs (Loi sur les designs, LDes)",
+      "titelIt": "Legge federale sulla protezione del design (Legge sul design, LDes)",
+      "botschaftKey": "BOTSCHAFT-2000-557",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/226/de",
+      "sha": "e8ea5c5c4d4cf2f4349794f02268192ba73595450f95e19279b7a40630a2e463"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1900-08-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/18/126_124_128",
+      "dateDocument": "1900-03-30",
+      "roFundstelle": "AS 18 126",
+      "titelDe": "Bundesgesetz vom 30. März 1900 betreffend die gewerblichen Muster und Modelle",
+      "titelFr": "Loi fédérale du 30 mars 1900 sur les dessins et modèles industriels",
+      "titelIt": "Legge federale del 30 marzo 1900 sui disegni e modelli industriali",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/18/126_124_128/de",
+      "sha": "57d49c04af06ff86b95d79251500b2a7c4ccc2bfbfb1a32726747a1e188b7b05"
+    }
+  ],
+  "sha": "066ec87c4afc1b7d979be81e560e6bd0d2a5a4d7f0010316e71dd0a80a7eeda1"
+}

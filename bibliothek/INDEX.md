@@ -123,6 +123,14 @@ statt STRSTARTS = 260× schneller). Behörde `BR`, Doktyp `botschaft`, `nur-live
 `projEli/ocUris/botschaftDate` für Paket 5; im Norm-Kontext-Bus «Entstehungsgeschichte» (Bridge B1).
 Drift-Tor `check:botschaften-netz`. Maschinell zugeordnet; fachliche Abnahme David offen.
 
+**Änderungshistorie / Amtliche Sammlung (Fedlex-Portfolio Paket 5, W2·6-REV):** [normtext/revisionen-2026-07-10.md](normtext/revisionen-2026-07-10.md) —
+je Bund-Volltext-Erlass eine «Änderungen / Revisionen»-Timeline (3108 AS/RO-Änderungs-Einträge über
+218 Erlasse; SPARQL Pfad (b) über die SR-Taxonomie). RO-Fundstelle aus der oc-URI abgeleitet (100 %),
+Botschafts-Join über `ocUris` (477), `nichtKonsolidiert`-Marker (Finding 4), Sammelerlass-Cross-Check
+gegen Pfad (a) ab 2000 (1942 Marker). Sidecar `public/normtext/revisionen/<KEY>.json` (Übergangslösung
+bis E1→`erlass_fassungen`); im Norm-Kontext-Bus «Änderungen / Revisionen» neben der Entstehungsgeschichte
+(Bridge B1). Tore `check:revisionen`(-netz). Gegenprüfung bestanden; fachliche Abnahme David offen.
+
 ## register/ — fortlaufend gepflegt
 
 | Dokument | Inhalt |

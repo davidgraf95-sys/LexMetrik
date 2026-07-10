@@ -1,0 +1,263 @@
+{
+  "erlassKey": "BANKV",
+  "sr": "952.02",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2027-01-01",
+      "nichtKonsolidiert": true,
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/952.02",
+      "sha": "fbd38e2050aea6ad8a997ef0a1da4a5575ae5554f79ffafb7d3e46f3e34eb049"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/952.02",
+      "sha": "2471958e1afc529dc581661b0f8324b060a388065160e0c6e5b8ca89fdfc90bb"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/952.02",
+      "sha": "9a44e04327a90a3f332acb1cda129897f9d652dc8c8e722c6121ccb87bd5bdda"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2023-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2022/804",
+      "dateDocument": "2022-11-23",
+      "roFundstelle": "AS 2022 804",
+      "titelDe": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)",
+      "titelFr": "Ordonnance sur les banques et les caisses d’épargne (Ordonnance sur les banques, OB)",
+      "titelIt": "Ordinanza sulle banche e le casse di risparmio (Ordinanza sulle banche, OBCR)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2022/804/de",
+      "sha": "0f5b87590eb0fd1ee267f8a64f55ac74ebc620a6576901517d8f22a2deac5e6c"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2021-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/952.02",
+      "sha": "7728f4bb35a8a3aa01160a311ddf726dedc4549ed3738a8107235c2fc854112c"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2020-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/952.02",
+      "sha": "0ba94004572e6313d037543ebbdf3c7dc9226bad90e88b5f43e1635b0ee3de1f"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2019-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/952.02",
+      "sha": "5a3602d7acc8a23578be25aff0ed855729cfcf7671b3982176576924e7f7ccff"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2019-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/799",
+      "dateDocument": "2018-11-30",
+      "roFundstelle": "AS 2018 799",
+      "titelDe": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)",
+      "titelFr": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)",
+      "titelIt": "Ordinanza sulle banche e le casse di risparmio (Ordinanza sulle banche, OBCR)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/799/de",
+      "sha": "97ab54e6d9e5f2e83cdd8ee9ef0510a46fdcf4ab1412d5734f2002802cbaa74b"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2017-08-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/454",
+      "dateDocument": "2017-07-05",
+      "roFundstelle": "AS 2017 454",
+      "titelDe": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)",
+      "titelFr": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)",
+      "titelIt": "Ordinanza sulle banche e le casse di risparmio (Ordinanza sulle banche, OBCR)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/454/de",
+      "sha": "9aa33cecfcd320ea0b930b59cc91ec117ee64f91d2f18f8faa6e5d591a9c101f"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2016-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/952.02",
+      "sha": "92480680cdafbf4de807994e7f4329df267cd92da2edc74c4432809180b1baba"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2016-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/952.02",
+      "sha": "b3c7cd9009f7a20a61c8388c7c7526982cf06404de87272896c2b05ad9954d1a"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2015-11-10",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/727",
+      "dateDocument": "2015-11-10",
+      "roFundstelle": "AS 2015 727",
+      "titelDe": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV) (Betrifft nur den französischen Text)",
+      "titelFr": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)",
+      "titelIt": "Ordinanza sulle banche e le casse di risparmio (Ordinanza sulle banche, OBCR) (Concerne soltanto il testo francese)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/727/de",
+      "sha": "7a277225f44d50140f8d53aaa5bb5965a2e9f9842feb5eedc879b635c3b0e609"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2015-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/273",
+      "dateDocument": "2014-04-30",
+      "roFundstelle": "AS 2014 273",
+      "titelDe": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)",
+      "titelFr": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)",
+      "titelIt": "Ordinanza sulle banche e le casse di risparmio (Ordinanza sulle banche, OBCR)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/273/de",
+      "sha": "b4908d342a2f5057bd4ae14e2e78e8cf4ce39f7ef346e1ab0a62bb8e44088f5e"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2013-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/628",
+      "dateDocument": "2012-06-01",
+      "roFundstelle": "AS 2012 628",
+      "titelDe": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)",
+      "titelFr": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)",
+      "titelIt": "Ordinanza sulle banche e le casse di risparmio (Ordinanza sulle banche, OBCR)",
+      "botschaftKey": "BOTSCHAFT-2012-993",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/628/de",
+      "sha": "ef5288e5ab7b6a65d0eec461ab7a9ab99e6af4476550e82ac4208b386d07fd7a"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2011-09-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/560",
+      "dateDocument": "2011-08-24",
+      "roFundstelle": "AS 2011 560",
+      "titelDe": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)",
+      "titelFr": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)",
+      "titelIt": "Ordinanza sulle banche e le casse di risparmio (Ordinanza sulle banche, OBCR)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/560/de",
+      "sha": "d1ed53ae5a6b4e94656e457661fdca60bd29745209fa8d8c70fb953756151241"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2010-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/623",
+      "dateDocument": "2009-10-14",
+      "roFundstelle": "AS 2009 623",
+      "titelDe": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)",
+      "titelFr": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)",
+      "titelIt": "Ordinanza su le banche e le casse di risparmio (Ordinanza sulle banche, OBCR)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/623/de",
+      "sha": "d06de6c54b22a1a680ba248bb7c028b7143e2f240f812991480fe2dd34a652fb"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2009-06-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/304",
+      "dateDocument": "2009-05-13",
+      "roFundstelle": "AS 2009 304",
+      "titelDe": "Verordnung über die Banken und Sparkassen (Bankenverordnung; BankV)",
+      "titelFr": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)",
+      "titelIt": "Ordinanza su le banche e le casse di risparmio (Ordinanza sulle banche; OBCR)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/304/de",
+      "sha": "faf3c769e7c41922f3ff44c2a00158ce948302db3f232ab6b38eafe005576837"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2008-04-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/215",
+      "dateDocument": "2008-03-14",
+      "roFundstelle": "AS 2008 215",
+      "titelDe": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)",
+      "titelFr": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)",
+      "titelIt": "Ordinanza sulle banche e le casse di risparmio (Ordinanza sulle banche, OBCR)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/215/de",
+      "sha": "d52c1e60a94d684a0b9daa2db2b9b9adfe5df4135380b905276d56d1d23df663"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2006-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/656",
+      "dateDocument": "2005-09-30",
+      "roFundstelle": "AS 2005 656",
+      "titelDe": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)",
+      "titelFr": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)",
+      "titelIt": "Ordinanza su le banche e le casse di risparmio (Ordinanza sulle banche, OBCR)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/656/de",
+      "sha": "b5303ff62b88ec850ff675fa46d08e051aa09e529bb78cf20285f548b4d4ad9d"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2005-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/355",
+      "dateDocument": "2004-03-24",
+      "roFundstelle": "AS 2004 355",
+      "titelDe": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)",
+      "titelFr": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)",
+      "titelIt": "Ordinanza su le banche e le casse di risparmio (Ordinanza sulle banche, OBCR)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/355/de",
+      "sha": "10d29711276457eb9bd4431415210165ab81c91da973a7908b0614b1439e2061"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2004-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/341",
+      "dateDocument": "2004-03-31",
+      "roFundstelle": "AS 2004 341",
+      "titelDe": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)",
+      "titelFr": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)",
+      "titelIt": "Ordinanza su le banche e le casse di risparmio (Ordinanza sulle banche, OBCR)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/341/de",
+      "sha": "22a22e1fad3469e5cfeaeb3df31c63747782c6b22ca13918340b3c0e6cf7922b"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2003-12-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/603",
+      "dateDocument": "2003-11-12",
+      "roFundstelle": "AS 2003 603",
+      "titelDe": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)",
+      "titelFr": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)",
+      "titelIt": "Ordinanza su le banche e le casse di risparmio (O sulle banche, OBCR)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/603/de",
+      "sha": "c78c26c9c76f117d0c75c9f83eaaf8b8932c4003a4dc17219798178a67afebb3"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1999-11-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/456",
+      "dateDocument": "1999-10-04",
+      "roFundstelle": "AS 1999 456",
+      "titelDe": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)",
+      "titelFr": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)",
+      "titelIt": "Ordinanza sulle banche e le casse di risparmio(Ordinanza sulle banche, OBCR)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/456/de",
+      "sha": "a8c0cb4402fc9be07410c3d39354b2d7cf771892f7e0da3ca9a9ef778cc31a35"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1998-12-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1998/2646_2646_2646",
+      "dateDocument": "1998-10-21",
+      "roFundstelle": "AS 1998 2646",
+      "titelDe": "Verordnung über Banken und Sparkassen (Bankenverordnung, BankV)",
+      "titelFr": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)",
+      "titelIt": "Ordinanza sulle banche e le casse di risparmio (Ordinanza sulle banche, OBCR)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1998/2646_2646_2646/de",
+      "sha": "3e3b6b223426df960a9a0acaf562168fb2d70c80854a14aea57bfd681347924e"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1972-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1972/821_832_752",
+      "dateDocument": "1972-05-17",
+      "roFundstelle": "AS 1972 821",
+      "titelDe": "Verordnung vom 17. Mai 1972 über die Banken und Sparkassen (Bankenverordnung, BankV)",
+      "titelFr": "Ordonnance du 17 mai 1972 sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)",
+      "titelIt": "Ordinanza del 17 maggio 1972 sulle banche e le casse di risparmio (Ordinanza sulle banche, OBCR)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1972/821_832_752/de",
+      "sha": "565b3729cbc5d91f72a3c81e25bb9b80bfa93d9f191c85c591fdb2c5815ba6eb"
+    }
+  ],
+  "sha": "cac612bdfc8c284ccc62605c6c36545121d7549d398a0b6b868ba4ac49eeaee2"
+}

@@ -1,0 +1,908 @@
+{
+  "sr": "817.0",
+  "korpusStand": "2024-10-01",
+  "bBindings": [
+    {
+      "sr": {
+        "type": "literal",
+        "value": "817.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1995/1469_1469_1469"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1995-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1992-10-09"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 9. Oktober 1992 über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 9 octobre 1992 sur les denrées alimentaires et les objets usuels (Loi sur les denrées alimentaires, LDAI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 9 ottobre 1992 sulle derrate alimentari e gli oggetti d'uso (Legge sulle derrate alimentari, LDerr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "817.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1995/1469_1469_1469"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1995-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1992-10-09"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 9. Oktober 1992 über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 9 octobre 1992 sur les denrées alimentaires et les objets usuels (Loi sur les denrées alimentaires, LDAI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 9 ottobre 1992 sulle derrate alimentari e gli oggetti d'uso (Legge sulle derrate alimentari, LDerr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "817.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1995/1469_1469_1469"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1995-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1992-10-09"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 9. Oktober 1992 über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 9 octobre 1992 sur les denrées alimentaires et les objets usuels (Loi sur les denrées alimentaires, LDAI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 9 ottobre 1992 sulle derrate alimentari e gli oggetti d'uso (Legge sulle derrate alimentari, LDerr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "817.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1995/1469_1469_1469"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1995-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1992-10-09"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 9. Oktober 1992 über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 9 octobre 1992 sur les denrées alimentaires et les objets usuels (Loi sur les denrées alimentaires, LDAI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 9 ottobre 1992 sulle derrate alimentari e gli oggetti d'uso (Legge sulle derrate alimentari, LDerr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "817.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/143"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-10-08"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les denrées alimentaires et les objets usuels (Loi sur les denrées alimentaires, LDAl)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle derrate alimentari e gli oggetti d'uso (Legge sulle derrate alimentari, LDerr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "817.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/143"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-10-08"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les denrées alimentaires et les objets usuels (Loi sur les denrées alimentaires, LDAl)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle derrate alimentari e gli oggetti d'uso (Legge sulle derrate alimentari, LDerr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "817.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/143"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-10-08"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les denrées alimentaires et les objets usuels (Loi sur les denrées alimentaires, LDAl)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle derrate alimentari e gli oggetti d'uso (Legge sulle derrate alimentari, LDerr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "817.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/106"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-03-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-06-18"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les denrées alimentaires et les objets usuels (Loi sur les denrées alimentaires, LDAI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle derrate alimentari e gli oggetti d'uso (Legge sulle derrate alimentari, LDerr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "817.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/106"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-03-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-06-18"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les denrées alimentaires et les objets usuels (Loi sur les denrées alimentaires, LDAI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle derrate alimentari e gli oggetti d'uso (Legge sulle derrate alimentari, LDerr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "817.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/106"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-03-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-06-18"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les denrées alimentaires et les objets usuels (Loi sur les denrées alimentaires, LDAI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle derrate alimentari e gli oggetti d'uso (Legge sulle derrate alimentari, LDerr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "817.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/745"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-11-23"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die vollständige Inkraftsetzung der Änderung vom 8. Oktober 1999 des Lebensmittelgesetzes"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant la mise en vigueur intégrale de la modification du 8 octobre 1999 de la loi sur les denrées alimentaires"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'entrata in vigore integrale della modifica dell'8 ottobre 1999 della legge sulle derrate alimentari"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "817.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/745"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-11-23"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die vollständige Inkraftsetzung der Änderung vom 8. Oktober 1999 des Lebensmittelgesetzes"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant la mise en vigueur intégrale de la modification du 8 octobre 1999 de la loi sur les denrées alimentaires"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'entrata in vigore integrale della modifica dell'8 ottobre 1999 della legge sulle derrate alimentari"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "817.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/745"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-11-23"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die vollständige Inkraftsetzung der Änderung vom 8. Oktober 1999 des Lebensmittelgesetzes"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant la mise en vigueur intégrale de la modification du 8 octobre 1999 de la loi sur les denrées alimentaires"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'entrata in vigore integrale della modifica dell'8 ottobre 1999 della legge sulle derrate alimentari"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "817.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/194"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-10-05"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les denrées alimentaires et les objets usuels (Loi sur les denrées alimentaires, LDAl)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle derrate alimentari e gli oggetti d'uso (Legge sulle derrate alimentari, LDerr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "817.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/194"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-10-05"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les denrées alimentaires et les objets usuels (Loi sur les denrées alimentaires, LDAl)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle derrate alimentari e gli oggetti d'uso (Legge sulle derrate alimentari, LDerr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "817.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/194"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-10-05"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les denrées alimentaires et les objets usuels (Loi sur les denrées alimentaires, LDAl)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle derrate alimentari e gli oggetti d'uso (Legge sulle derrate alimentari, LDerr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "817.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2017/62"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-05-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-06-20"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les denrées alimentaires et les objets usuels (Loi sur les denrées alimentaires, LDAl)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle derrate alimentari e gli oggetti d'uso (Legge sulle derrate alimentari, LDerr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "817.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2017/62"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-05-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-06-20"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les denrées alimentaires et les objets usuels (Loi sur les denrées alimentaires, LDAl)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle derrate alimentari e gli oggetti d'uso (Legge sulle derrate alimentari, LDerr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "817.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2017/62"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-05-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-06-20"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les denrées alimentaires et les objets usuels (Loi sur les denrées alimentaires, LDAl)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle derrate alimentari e gli oggetti d'uso (Legge sulle derrate alimentari, LDerr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "817.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2017/62"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-05-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-06-20"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les denrées alimentaires et les objets usuels (Loi sur les denrées alimentaires, LDAl)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle derrate alimentari e gli oggetti d'uso (Legge sulle derrate alimentari, LDerr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "817.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2021/240"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-05-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-12-18"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG) (Verlängerung der Übergangsregelung für Tabakprodukte)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les denrées alimentaires et les objets usuels (Loi sur les denrées alimentaires, LDAl) (Prolongation de la réglementation provisoire sur les produits du tabac)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle derrate alimentari e gli oggetti d’uso (Legge sulle derrate alimentari, LDerr) (Proroga della disposizione transitoria sui prodotti del tabacco)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "817.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2021/240"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-05-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-12-18"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG) (Verlängerung der Übergangsregelung für Tabakprodukte)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les denrées alimentaires et les objets usuels (Loi sur les denrées alimentaires, LDAl) (Prolongation de la réglementation provisoire sur les produits du tabac)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle derrate alimentari e gli oggetti d’uso (Legge sulle derrate alimentari, LDerr) (Proroga della disposizione transitoria sui prodotti del tabacco)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "817.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2021/240"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-05-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-12-18"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG) (Verlängerung der Übergangsregelung für Tabakprodukte)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les denrées alimentaires et les objets usuels (Loi sur les denrées alimentaires, LDAl) (Prolongation de la réglementation provisoire sur les produits du tabac)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle derrate alimentari e gli oggetti d’uso (Legge sulle derrate alimentari, LDerr) (Proroga della disposizione transitoria sui prodotti del tabacco)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "817.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2021/240"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-05-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-12-18"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG) (Verlängerung der Übergangsregelung für Tabakprodukte)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les denrées alimentaires et les objets usuels (Loi sur les denrées alimentaires, LDAl) (Prolongation de la réglementation provisoire sur les produits du tabac)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle derrate alimentari e gli oggetti d’uso (Legge sulle derrate alimentari, LDerr) (Proroga della disposizione transitoria sui prodotti del tabacco)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "817.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/22/337_301_369"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1909-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1905-12-08"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz betreffend den Verkehr mit Lebensmitteln und Gebrauchsgegenständen "
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur le commerce des denrées alimentaires et de divers objets usuels "
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sul commercio delle derrate alimentari e degli oggetti d'uso e consumo"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "817.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/22/337_301_369"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1909-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1905-12-08"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz betreffend den Verkehr mit Lebensmitteln und Gebrauchsgegenständen "
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur le commerce des denrées alimentaires et de divers objets usuels "
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sul commercio delle derrate alimentari e degli oggetti d'uso e consumo"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "817.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/22/337_301_369"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1909-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1905-12-08"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz betreffend den Verkehr mit Lebensmitteln und Gebrauchsgegenständen "
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur le commerce des denrées alimentaires et de divers objets usuels "
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sul commercio delle derrate alimentari e degli oggetti d'uso e consumo"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "817.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/22/337_301_369"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1909-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1905-12-08"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz betreffend den Verkehr mit Lebensmitteln und Gebrauchsgegenständen "
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur le commerce des denrées alimentaires et de divers objets usuels "
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sul commercio delle derrate alimentari e degli oggetti d'uso e consumo"
+      }
+    }
+  ],
+  "aStaende": [
+    "2017-05-01",
+    "2021-05-01",
+    "2022-01-01",
+    "2024-10-01"
+  ]
+}

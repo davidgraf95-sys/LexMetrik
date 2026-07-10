@@ -1,0 +1,225 @@
+{
+  "erlassKey": "LSV",
+  "sr": "814.41",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2026-04-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2026/114",
+      "dateDocument": "2026-02-25",
+      "roFundstelle": "AS 2026 114",
+      "titelDe": "Lärmschutz-Verordnung (LSV)",
+      "titelFr": "Ordonnance sur la protection contre le bruit (OPB)",
+      "titelIt": "Ordinanza contro l’inquinamento fonico (OIF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2026/114/de",
+      "sha": "fa3e8b88d54f5153f094d8b4488fab49be68ef713a08cbb192a5791475fc0341"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/814.41",
+      "sha": "ae0a5e7f81c04e4b048e719afc765bb0d3b410247be61021635c0fcf6b13a4b3"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2024-11-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/814.41",
+      "sha": "0b7ad0234c1be7fbc4e84a6457a433e935333c0185e8f6df9d15634ebaa06965"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2023-11-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2023/582",
+      "dateDocument": "2023-09-29",
+      "roFundstelle": "AS 2023 582",
+      "titelDe": "Lärmschutz-Verordnung (LSV)",
+      "titelFr": "Ordonnance sur la protection contre le bruit (OPB)",
+      "titelIt": "Ordinanza contro l’inquinamento fonico (OIF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2023/582/de",
+      "sha": "7b552557a96216addb01656435bb13400e69b6e4f91021cb13d65fbf0ba06798"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2021-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2021/293",
+      "dateDocument": "2021-05-12",
+      "roFundstelle": "AS 2021 293",
+      "titelDe": "Lärmschutz-Verordnung (LSV)",
+      "titelFr": "Ordonnance sur la protection contre le bruit (OPB)",
+      "titelIt": "Ordinanza contro l’inquinamento fonico (OIF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2021/293/de",
+      "sha": "2deb96bfbcecbf8e3eabdc7b046880e83673f16d48e67e3f4d135838a427bc34"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2019-05-07",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/259",
+      "dateDocument": "2019-05-07",
+      "roFundstelle": "AS 2019 259",
+      "titelDe": "Lärmschutz-Verordnung (LSV) (Betrifft nur den französischen Text)",
+      "titelFr": "Ordonnance sur la protection contre le bruit (OPB)",
+      "titelIt": "Ordinanza contro l'inquinamento fonico (OIF) (Concerne soltanto il testo francese)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/259/de",
+      "sha": "39c93f2a279d5539b42966632f3cc75cd68403a5cc136ac51d2869eb41317355"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2018-04-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/137",
+      "dateDocument": "2018-02-21",
+      "roFundstelle": "AS 2018 137",
+      "titelDe": "Lärmschutz-Verordnung (LSV)",
+      "titelFr": "Ordonnance sur la protection contre le bruit (OPB)",
+      "titelIt": "Ordinanza contro l'inquinamento fonico (OIF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/137/de",
+      "sha": "695bcdc95aef66dde33961f3c1eac745639d5af127237fc940c72544c8aaf37b"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2016-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/814.41",
+      "sha": "ddbaa23269bb368e6e703ad112111673040db59626c4b3eefdcb9c866280d9c7"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2015-02-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/751",
+      "dateDocument": "2014-11-28",
+      "roFundstelle": "AS 2014 751",
+      "titelDe": "Lärmschutz-Verordnung (LSV)",
+      "titelFr": "Ordonnance sur la protection contre le bruit (OPB)",
+      "titelIt": "Ordinanza contro l'inquinamento fonico (OIF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/751/de",
+      "sha": "fc5d0ef7b405d3362619cca031378ff8e67b9bfb598364213e18d47ef0e3f5a8"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2012-12-28",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/904",
+      "dateDocument": "2012-12-28",
+      "roFundstelle": "AS 2012 904",
+      "titelDe": "Lärmschutz-Verordnung vom 15. Dezember 1986 (LSV) (Betrifft nur den französischen Text)",
+      "titelFr": "Ordonnance sur la protection contre le bruit (OPB)",
+      "titelIt": "Ordinanza contro l'inquinamento fonico (OIF) (Concerne solo il testo francese)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/904/de",
+      "sha": "442f9f11ee871e4216f355499d75f17fef59ac8c95ff85cd70c30c370bbebd23"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2010-08-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/433",
+      "dateDocument": "2010-06-30",
+      "roFundstelle": "AS 2010 433",
+      "titelDe": "Lärmschutz-Verordnung (LSV)",
+      "titelFr": "Ordonnance sur la protection contre le bruit (OPB)",
+      "titelIt": "Ordinanza contro l'inquinamento fonico (OIF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/433/de",
+      "sha": "4f544b6246a7aa2266752526ad25971857715e8eea1cf947d6509681466cff09"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2008-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/814.41",
+      "sha": "f36002f7706e53db5b1ff81cbb1ca6ca0a79c494bc0cac957ba6101c3c03a7f1"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2008-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/814.41",
+      "sha": "86b0781ea461dc598a6ac9bf1a9c1cef02ba9f867fd62297e339d0129fd2020e"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2006-11-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/562",
+      "dateDocument": "2006-08-23",
+      "roFundstelle": "AS 2006 562",
+      "titelDe": "Lärmschutz-Verordnung (LSV)",
+      "titelFr": "Ordonnance sur la protection contre le bruit (OPB)",
+      "titelIt": "Ordinanza contro l'inquinamento fonico (OIF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/562/de",
+      "sha": "89b46406a09897054c66c2c6dfd15a44185cfe4b16fdec6b2199f12060216174"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2004-10-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/623",
+      "dateDocument": "2004-09-01",
+      "roFundstelle": "AS 2004 623",
+      "titelDe": "Lärmschutz-Verordnung (LSV)",
+      "titelFr": "Ordonnance sur la protection contre le bruit (OPB)",
+      "titelIt": "Ordinanza contro l'inquinamento fonico (OIF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/623/de",
+      "sha": "976b607d3ff886c7e8373b03598aced4392ac968fd52e0e7588cfbb5e00eb147"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2004-10-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/649",
+      "dateDocument": "2004-10-05",
+      "roFundstelle": "AS 2004 649",
+      "titelDe": "Lärmschutz-Verordnung vom 15. Dezember 1986 (LSV)",
+      "titelFr": "Ordonnance du 15 décembre 1986 sur la protection contre le bruit (OPB) (Ne concerne que les textes allemand et italien)",
+      "titelIt": "Ordinanza del 15 dicembre 1986 contro l'inquinamento fonico (OIF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/649/de",
+      "sha": "8c932fc48ac7c1da1efadab738024be0d7f4bc521070ea543f95381674c476ec"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2004-10-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/279",
+      "dateDocument": "2006-05-09",
+      "roFundstelle": "AS 2006 279",
+      "titelDe": "Lärmschutz-Verordnung (LSV) (Betrifft nur den italienischen Text)",
+      "titelFr": "Ordonnance sur la protection contre le bruit (OPB) (Ne concerne que le texte italien)",
+      "titelIt": "Ordinanza contro l'inquinamento fonico (OIF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/279/de",
+      "sha": "e6b30d0fc5fbb75e7f9749bc1937586de56d30a442280f2462d4053e9bddb850"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2001-06-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/237",
+      "dateDocument": "2001-05-30",
+      "roFundstelle": "AS 2001 237",
+      "titelDe": "Lärmschutz-Verordnung (LSV)",
+      "titelFr": "Ordonnance sur la protection contre le bruit (OPB)",
+      "titelIt": "Ordinanza contro l'inquinamento fonico (OIF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/237/de",
+      "sha": "132f998a9dbf47e02d491f207fe24599f408910e9ca62bdc3858ba011c8db1a6"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2000-05-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/218",
+      "dateDocument": "2000-04-12",
+      "roFundstelle": "AS 2000 218",
+      "titelDe": "Lärmschutz-Verordnung (LSV)",
+      "titelFr": "Ordonnance sur la protection contre le bruit (OPB)",
+      "titelIt": "Ordinanza contro l'inquinamento fonico (OIF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/218/de",
+      "sha": "a6f2c81e2f61a8fd526f5f56996653b854c442f4c244ccd113556e3d2817de22"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2000-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/814.41",
+      "sha": "fdeb8eb70d1cf81d69204b4d9188c8f11315d412330e3d6e9d701607afce8069"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1987-04-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1987/338_338_338",
+      "dateDocument": "1986-12-15",
+      "roFundstelle": "AS 1987 338",
+      "titelDe": "Lärmschutz-Verordnung vom 15. Dezember 1986 (LSV)",
+      "titelFr": "Ordonnance du 15 décembre 1986 sur la protection contre le bruit (OPB)",
+      "titelIt": "Ordinanza del 15 dicembre 1986 contro l'inquinamento fonico (OIF)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1987/338_338_338/de",
+      "sha": "92e814678cc0296324dcb388bea709e0445b42d97afd2cb876d99efebe1013fe"
+    }
+  ],
+  "sha": "7701e97d1aa9a21b588d4f2fe3e9eb8fa335fb786867d05730d12f82d9230ea1"
+}

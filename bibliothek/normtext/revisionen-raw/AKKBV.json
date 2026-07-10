@@ -1,0 +1,854 @@
+{
+  "sr": "946.512",
+  "korpusStand": "2025-01-01",
+  "bBindings": [
+    {
+      "sr": {
+        "type": "literal",
+        "value": "946.512"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1996/1904_1904_1904"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1996-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1996-06-17"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 17. Juni 1996 über das schweizerische Akkreditierungssystem und die Bezeichnung von Prüf-, Konformitätsbewertungs-, Anmelde- und Zulassungsstellen (Akkreditierungs- und Bezeichnungsverordnung, AkkBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 17 juin 1996 sur le système suisse d'accréditation et la désignation de laboratoires d'essais et d'organismes d'évaluation de la conformité, d'enregistrement et d'homologation (Ordonnance sur l'accréditation et la désignation, OAccD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 17 giugno 1996 sul sistema svizzero di accreditamento e la designazione di laboratori di prova e di organismi di valutazione della conformità, di registrazione e d'omologazione (Ordinanza sull'accreditamento e sulla designazione, OAccD)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "946.512"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1996/1904_1904_1904"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1996-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1996-06-17"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 17. Juni 1996 über das schweizerische Akkreditierungssystem und die Bezeichnung von Prüf-, Konformitätsbewertungs-, Anmelde- und Zulassungsstellen (Akkreditierungs- und Bezeichnungsverordnung, AkkBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 17 juin 1996 sur le système suisse d'accréditation et la désignation de laboratoires d'essais et d'organismes d'évaluation de la conformité, d'enregistrement et d'homologation (Ordonnance sur l'accréditation et la désignation, OAccD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 17 giugno 1996 sul sistema svizzero di accreditamento e la designazione di laboratori di prova e di organismi di valutazione della conformità, di registrazione e d'omologazione (Ordinanza sull'accreditamento e sulla designazione, OAccD)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "946.512"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1996/1904_1904_1904"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1996-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1996-06-17"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 17. Juni 1996 über das schweizerische Akkreditierungssystem und die Bezeichnung von Prüf-, Konformitätsbewertungs-, Anmelde- und Zulassungsstellen (Akkreditierungs- und Bezeichnungsverordnung, AkkBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 17 juin 1996 sur le système suisse d'accréditation et la désignation de laboratoires d'essais et d'organismes d'évaluation de la conformité, d'enregistrement et d'homologation (Ordonnance sur l'accréditation et la désignation, OAccD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 17 giugno 1996 sul sistema svizzero di accreditamento e la designazione di laboratori di prova e di organismi di valutazione della conformità, di registrazione e d'omologazione (Ordinanza sull'accreditamento e sulla designazione, OAccD)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "946.512"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1996/1904_1904_1904"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1996-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1996-06-17"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 17. Juni 1996 über das schweizerische Akkreditierungssystem und die Bezeichnung von Prüf-, Konformitätsbewertungs-, Anmelde- und Zulassungsstellen (Akkreditierungs- und Bezeichnungsverordnung, AkkBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 17 juin 1996 sur le système suisse d'accréditation et la désignation de laboratoires d'essais et d'organismes d'évaluation de la conformité, d'enregistrement et d'homologation (Ordonnance sur l'accréditation et la désignation, OAccD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 17 giugno 1996 sul sistema svizzero di accreditamento e la designazione di laboratori di prova e di organismi di valutazione della conformità, di registrazione e d'omologazione (Ordinanza sull'accreditamento e sulla designazione, OAccD)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "946.512"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/322"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-05-22"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über das schweizerische Akkreditierungssystem und die Bezeichnung von Prüf-, Konformitätsbewertungs-, Anmelde- und Zulassungsstellen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le sysème suisse d'accréditation et la désignation de laboratoires d'essais et d'organismes d'évaluation de la conformité, d'enregistremt et d'homologation"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul sistema svizzero di accreditamento e la designazione di laboratori di prova e di organismi di valutazione della conformità, di registrazione e d'omologazione"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "946.512"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/322"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-05-22"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über das schweizerische Akkreditierungssystem und die Bezeichnung von Prüf-, Konformitätsbewertungs-, Anmelde- und Zulassungsstellen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le sysème suisse d'accréditation et la désignation de laboratoires d'essais et d'organismes d'évaluation de la conformité, d'enregistremt et d'homologation"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul sistema svizzero di accreditamento e la designazione di laboratori di prova e di organismi di valutazione della conformità, di registrazione e d'omologazione"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "946.512"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/322"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-05-22"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über das schweizerische Akkreditierungssystem und die Bezeichnung von Prüf-, Konformitätsbewertungs-, Anmelde- und Zulassungsstellen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le sysème suisse d'accréditation et la désignation de laboratoires d'essais et d'organismes d'évaluation de la conformité, d'enregistremt et d'homologation"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul sistema svizzero di accreditamento e la designazione di laboratori di prova e di organismi di valutazione della conformità, di registrazione e d'omologazione"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "946.512"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/644"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-11-05"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über das schweizerische Akkreditierungssystem und die Bezeichnung von Prüf-, Konformitätsbewertungs-, Anmelde- und Zulassungsstellen (Akkreditierungs- und Bezeichnungsverordnung; AkkBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le système suisse d'accréditation et la désignation de laboratoires d'essais et d'organismes d'évaluation de la conformité, d'enregistrement et d'homologation (Ordonnance sur l'accréditation et la désignation; OAccD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul sistema svizzero di accreditamento e la designazione di laboratori di prova e di organismi di valutazione della conformità, di registrazione e d'omologazione (Ordinanza sull'accreditamento e sulla designazione; OAccD)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "946.512"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/644"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-11-05"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über das schweizerische Akkreditierungssystem und die Bezeichnung von Prüf-, Konformitätsbewertungs-, Anmelde- und Zulassungsstellen (Akkreditierungs- und Bezeichnungsverordnung; AkkBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le système suisse d'accréditation et la désignation de laboratoires d'essais et d'organismes d'évaluation de la conformité, d'enregistrement et d'homologation (Ordonnance sur l'accréditation et la désignation; OAccD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul sistema svizzero di accreditamento e la designazione di laboratori di prova e di organismi di valutazione della conformità, di registrazione e d'omologazione (Ordinanza sull'accreditamento e sulla designazione; OAccD)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "946.512"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/644"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-11-05"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über das schweizerische Akkreditierungssystem und die Bezeichnung von Prüf-, Konformitätsbewertungs-, Anmelde- und Zulassungsstellen (Akkreditierungs- und Bezeichnungsverordnung; AkkBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le système suisse d'accréditation et la désignation de laboratoires d'essais et d'organismes d'évaluation de la conformité, d'enregistrement et d'homologation (Ordonnance sur l'accréditation et la désignation; OAccD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul sistema svizzero di accreditamento e la designazione di laboratori di prova e di organismi di valutazione della conformità, di registrazione e d'omologazione (Ordinanza sull'accreditamento e sulla designazione; OAccD)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "946.512"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/194"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-03-10"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über das schweizerische Akkreditierungssystem und die Bezeichnung von Prüf-, Konformitätsbewertungs-, Anmelde- und Zulassungsstellen (Akkreditierungs- und Bezeichnungsverordnung, AkkBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le système suisse d'accréditation et la désignation de laboratoires d'essais et d'organismes d'évaluation de la conformité, d'enregistrement et d'homologation (Ordonnance sur l'accréditation et la désignation, OAccD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul sistema svizzero di accreditamento e la designazione di laboratori di prova e di organismi di valutazione della conformità, di registrazione e d'omologazione (Ordinanza sull'accreditamento e sulla designazione, OAccD)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "946.512"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/194"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-03-10"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über das schweizerische Akkreditierungssystem und die Bezeichnung von Prüf-, Konformitätsbewertungs-, Anmelde- und Zulassungsstellen (Akkreditierungs- und Bezeichnungsverordnung, AkkBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le système suisse d'accréditation et la désignation de laboratoires d'essais et d'organismes d'évaluation de la conformité, d'enregistrement et d'homologation (Ordonnance sur l'accréditation et la désignation, OAccD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul sistema svizzero di accreditamento e la designazione di laboratori di prova e di organismi di valutazione della conformità, di registrazione e d'omologazione (Ordinanza sull'accreditamento e sulla designazione, OAccD)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "946.512"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/194"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-03-10"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über das schweizerische Akkreditierungssystem und die Bezeichnung von Prüf-, Konformitätsbewertungs-, Anmelde- und Zulassungsstellen (Akkreditierungs- und Bezeichnungsverordnung, AkkBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le système suisse d'accréditation et la désignation de laboratoires d'essais et d'organismes d'évaluation de la conformité, d'enregistrement et d'homologation (Ordonnance sur l'accréditation et la désignation, OAccD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul sistema svizzero di accreditamento e la designazione di laboratori di prova e di organismi di valutazione della conformità, di registrazione e d'omologazione (Ordinanza sull'accreditamento e sulla designazione, OAccD)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "946.512"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/343"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-05-09"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über das schweizerische Akkreditierungssystem und die Bezeichnung von Prüf-, Konformitätsbewertungs-, Anmelde- und Zulassungsstellen (Akkreditierungs- und Bezeichnungsverordnung, AkkBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le système suisse d'accréditation et la désignation de laboratoires d'essais et d'organismes d'évaluation de la conformité, d'enregistrement et d'homologation (Ordonnance sur l'accréditation et la désignation, OAccD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul sistema svizzero di accreditamento e la designazione di laboratori di prova e di organismi di valutazione della conformità, di registrazione e d'omologazione (Ordinanza sull'accreditamento e sulla designazione, OAccD)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "946.512"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/343"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-05-09"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über das schweizerische Akkreditierungssystem und die Bezeichnung von Prüf-, Konformitätsbewertungs-, Anmelde- und Zulassungsstellen (Akkreditierungs- und Bezeichnungsverordnung, AkkBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le système suisse d'accréditation et la désignation de laboratoires d'essais et d'organismes d'évaluation de la conformité, d'enregistrement et d'homologation (Ordonnance sur l'accréditation et la désignation, OAccD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul sistema svizzero di accreditamento e la designazione di laboratori di prova e di organismi di valutazione della conformità, di registrazione e d'omologazione (Ordinanza sull'accreditamento e sulla designazione, OAccD)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "946.512"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/343"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-05-09"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über das schweizerische Akkreditierungssystem und die Bezeichnung von Prüf-, Konformitätsbewertungs-, Anmelde- und Zulassungsstellen (Akkreditierungs- und Bezeichnungsverordnung, AkkBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le système suisse d'accréditation et la désignation de laboratoires d'essais et d'organismes d'évaluation de la conformité, d'enregistrement et d'homologation (Ordonnance sur l'accréditation et la désignation, OAccD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul sistema svizzero di accreditamento e la designazione di laboratori di prova e di organismi di valutazione della conformità, di registrazione e d'omologazione (Ordinanza sull'accreditamento e sulla designazione, OAccD)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "946.512"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/301"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-05-05"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über das schweizerische Akkreditierungssystem und die Bezeichnung von Prüf-, Konformitätsbewertungs-, Anmelde- und Zulassungsstellen (Akkreditierungs- und Bezeichnungsverordnung, AkkBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le système suisse d'accréditation et la désignation de laboratoires d'essais et d'organismes d'évaluation de la conformité, d'enregistrement et d'homologation (Ordonnance sur l'accréditation et la désignation, OAccD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul sistema svizzero d'accreditamento e la designazione di laboratori di prova e di organismi di valutazione della conformità, di registrazione e d'omologazione (Ordinanza sull'accreditamento e sulla designazione, OAccD)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "946.512"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/301"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-05-05"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über das schweizerische Akkreditierungssystem und die Bezeichnung von Prüf-, Konformitätsbewertungs-, Anmelde- und Zulassungsstellen (Akkreditierungs- und Bezeichnungsverordnung, AkkBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le système suisse d'accréditation et la désignation de laboratoires d'essais et d'organismes d'évaluation de la conformité, d'enregistrement et d'homologation (Ordonnance sur l'accréditation et la désignation, OAccD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul sistema svizzero d'accreditamento e la designazione di laboratori di prova e di organismi di valutazione della conformità, di registrazione e d'omologazione (Ordinanza sull'accreditamento e sulla designazione, OAccD)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "946.512"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/301"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-05-05"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über das schweizerische Akkreditierungssystem und die Bezeichnung von Prüf-, Konformitätsbewertungs-, Anmelde- und Zulassungsstellen (Akkreditierungs- und Bezeichnungsverordnung, AkkBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le système suisse d'accréditation et la désignation de laboratoires d'essais et d'organismes d'évaluation de la conformité, d'enregistrement et d'homologation (Ordonnance sur l'accréditation et la désignation, OAccD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul sistema svizzero d'accreditamento e la designazione di laboratori di prova e di organismi di valutazione della conformità, di registrazione e d'omologazione (Ordinanza sull'accreditamento e sulla designazione, OAccD)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "946.512"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/32"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-04-20"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-11-25"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über das schweizerische Akkreditierungssystem und die Bezeichnung von Prüf-, Konformitätsbewertungs-, Anmelde- und Zulassungsstellen (Akkreditierungs- und Bezeichnungsverordnung, AkkBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le système suisse d'accréditation et la désignation de laboratoires d'essais et d'organismes d'évaluation de la conformité, d'enregistrement et d'homologation (Ordonnance sur l'accréditation et la désignation, OAccD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul sistema svizzero di accreditamento e la designazione di laboratori di prova e di organismi di valutazione della conformità, di registrazione e d'omologazione (Ordinanza sull'accreditamento e sulla designazione, OAccD)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "946.512"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/32"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-04-20"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-11-25"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über das schweizerische Akkreditierungssystem und die Bezeichnung von Prüf-, Konformitätsbewertungs-, Anmelde- und Zulassungsstellen (Akkreditierungs- und Bezeichnungsverordnung, AkkBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le système suisse d'accréditation et la désignation de laboratoires d'essais et d'organismes d'évaluation de la conformité, d'enregistrement et d'homologation (Ordonnance sur l'accréditation et la désignation, OAccD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul sistema svizzero di accreditamento e la designazione di laboratori di prova e di organismi di valutazione della conformità, di registrazione e d'omologazione (Ordinanza sull'accreditamento e sulla designazione, OAccD)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "946.512"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/32"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-04-20"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-11-25"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über das schweizerische Akkreditierungssystem und die Bezeichnung von Prüf-, Konformitätsbewertungs-, Anmelde- und Zulassungsstellen (Akkreditierungs- und Bezeichnungsverordnung, AkkBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le système suisse d'accréditation et la désignation de laboratoires d'essais et d'organismes d'évaluation de la conformité, d'enregistrement et d'homologation (Ordonnance sur l'accréditation et la désignation, OAccD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul sistema svizzero di accreditamento e la designazione di laboratori di prova e di organismi di valutazione della conformità, di registrazione e d'omologazione (Ordinanza sull'accreditamento e sulla designazione, OAccD)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "946.512"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2022/767"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2023-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2022-11-16"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über das schweizerische Akkreditierungssystem und die Bezeichnung von Prüf-, Konformitätsbewertungs-, Anmelde- und Zulassungsstellen (Akkreditierungs- und Bezeichnungsverordnung, AkkBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le système suisse d’accréditation et la désignation de laboratoires d’essais et d’organismes d’évaluation de la conformité, d’enregistrement et d’homologation (Ordonnance sur l’accréditation et la désignation, OAccD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul sistema svizzero di accreditamento e la designazione di laboratori di prova e di organismi di valutazione della conformità, di registrazione e d’omologazione (Ordinanza sull’accreditamento e sulla designazione, OAccD)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "946.512"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2022/767"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2023-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2022-11-16"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über das schweizerische Akkreditierungssystem und die Bezeichnung von Prüf-, Konformitätsbewertungs-, Anmelde- und Zulassungsstellen (Akkreditierungs- und Bezeichnungsverordnung, AkkBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le système suisse d’accréditation et la désignation de laboratoires d’essais et d’organismes d’évaluation de la conformité, d’enregistrement et d’homologation (Ordonnance sur l’accréditation et la désignation, OAccD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul sistema svizzero di accreditamento e la designazione di laboratori di prova e di organismi di valutazione della conformità, di registrazione e d’omologazione (Ordinanza sull’accreditamento e sulla designazione, OAccD)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "946.512"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2023/418"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2023-07-27"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2022-12-16"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über das schweizerische Akkreditierungssystem und die Bezeichnung von Prüf-, Konformitätsbewertungs-, Anmelde- und Zulassungsstellen (Akkreditierungs- und Bezeichnungsverordnung, AkkBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le système suisse d’accréditation et la désignation de laboratoires d’essais et d’organismes d’évaluation de la conformité, d’enregistrement et d’homologation (Ordonnance sur l’accréditation et la désignation, OAccD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul sistema svizzero di accreditamento e la designazione di laboratori di prova e di organismi di valutazione della conformità, di registrazione e d’omologazione (Ordinanza sull’accreditamento e sulla designazione, OAccD)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "946.512"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2023/418"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2023-07-27"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2022-12-16"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über das schweizerische Akkreditierungssystem und die Bezeichnung von Prüf-, Konformitätsbewertungs-, Anmelde- und Zulassungsstellen (Akkreditierungs- und Bezeichnungsverordnung, AkkBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le système suisse d’accréditation et la désignation de laboratoires d’essais et d’organismes d’évaluation de la conformité, d’enregistrement et d’homologation (Ordonnance sur l’accréditation et la désignation, OAccD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul sistema svizzero di accreditamento e la designazione di laboratori di prova e di organismi di valutazione della conformità, di registrazione e d’omologazione (Ordinanza sull’accreditamento e sulla designazione, OAccD)"
+      }
+    }
+  ],
+  "aStaende": [
+    "1996-07-01",
+    "1999-07-01",
+    "2002-06-01",
+    "2004-01-01",
+    "2006-04-01",
+    "2007-12-01",
+    "2012-01-01",
+    "2012-06-01",
+    "2013-01-01",
+    "2014-07-01",
+    "2016-04-20",
+    "2023-01-01",
+    "2023-07-27",
+    "2025-01-01"
+  ]
+}

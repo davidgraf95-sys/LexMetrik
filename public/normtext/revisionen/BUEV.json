@@ -1,0 +1,64 @@
+{
+  "erlassKey": "BUEV",
+  "sr": "141.01",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2026-08-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2026/344",
+      "dateDocument": "2026-06-12",
+      "roFundstelle": "AS 2026 344",
+      "titelDe": "Verordnung über das Schweizer Bürgerrecht (Bürgerrechtsverordnung, BüV)",
+      "titelFr": "Ordonnance sur la nationalité suisse (Ordonnance sur la nationalité, OLN)",
+      "titelIt": "Ordinanza sulla cittadinanza svizzera (Ordinanza sulla cittadinanza, OCit)",
+      "nichtKonsolidiert": true,
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2026/344/de",
+      "sha": "ab1278fe3db4351a276754788012b872e69a38184a6c03f6bd572b43fd697dfc"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2019-07-09",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/388",
+      "dateDocument": "2019-07-09",
+      "roFundstelle": "AS 2019 388",
+      "titelDe": "Verordnung über das Schweizer Bürgerrecht (Bürgerrechtsverordnung, BüV) (Betrifft nur den französischen Text)",
+      "titelFr": "Ordonnance sur la nationalité suisse (Ordonnance sur la nationalité, OLN)",
+      "titelIt": "Ordinanza sulla cittadinanza svizzera (Ordinanza sulla cittadinanza, OCit) (Concerne soltanto il testo francese)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/388/de",
+      "sha": "b02ce9356c65aea952c6f9e0b8030eaa81837e6dd02d5d2c9b054d21bef8354f"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2019-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/141.01",
+      "sha": "428e7dce517efcffac5b2f3a689a58f058ed72d703fa63dfc4984724c6427437"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2018-02-15",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/62",
+      "dateDocument": "2018-01-17",
+      "roFundstelle": "AS 2018 62",
+      "titelDe": "Verordnung über das Schweizer Bürgerrecht (Bürgerrechtsverordnung, BüV)",
+      "titelFr": "Ordonnance sur la nationalité suisse (Ordonnance sur la nationalité, OLN)",
+      "titelIt": "Ordinanza sulla cittadinanza svizzera (Ordinanza sulla cittadinanza, OCit)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/62/de",
+      "sha": "1e65d0acdfd0efd8bac8678128ec88fc21349dcec51d7b019cf912019a8caafd"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2018-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/405",
+      "dateDocument": "2016-06-17",
+      "roFundstelle": "AS 2016 405",
+      "titelDe": "Verordnung über das Schweizer Bürgerrecht (Bürgerrechtsverordnung, BüV)",
+      "titelFr": "Ordonnance sur la nationalité suisse (Ordonnance sur la nationalité, OLN)",
+      "titelIt": "Ordinanza sulla cittadinanza svizzera (Ordinanza sulla cittadinanza, OCit)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/405/de",
+      "sha": "f8f30576baa02d9566c8d970cb527164f64d751f892005138ae702593e296014"
+    }
+  ],
+  "sha": "2206b5485d61d7bb12a298f8bcc8a234a7cba7863d2c64150df1b7acf4dde71d"
+}

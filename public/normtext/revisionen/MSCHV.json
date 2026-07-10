@@ -1,0 +1,196 @@
+{
+  "erlassKey": "MSCHV",
+  "sr": "232.111",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2027-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2026/289",
+      "dateDocument": "2026-05-20",
+      "roFundstelle": "AS 2026 289",
+      "titelDe": "Verordnung über den Schutz von Marken und Herkunftsangaben (MSchV)",
+      "titelFr": "Ordonnance sur la protection des marques et des indications de provenance (OPM)",
+      "titelIt": "Ordinanza sulla protezione dei marchi e delle indicazioni di provenienza (OPM)",
+      "nichtKonsolidiert": true,
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2026/289/de",
+      "sha": "763b1d8f90ee93507d09d9f1c8faad5b697c2a5c30baddf87952d9b0d38fe8b8"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/232.111",
+      "sha": "841c5b35a62d57eea496b40177b1d2a6a532ca0c133a8c26ab38c4a94bd792e0"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2022-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/232.111",
+      "sha": "cb41636ff9b8090c964fdedd43422f065ae0576e846ce8397b7f03322cdf200d"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2021-12-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2021/510",
+      "dateDocument": "2021-08-18",
+      "roFundstelle": "AS 2021 510",
+      "titelDe": "Verordnung über den Schutz von Marken und Herkunftsangaben (MSchV)",
+      "titelFr": "Ordonnance sur la protection des marques et des indications de provenance (OPM)",
+      "titelIt": "Ordinanza sulla protezione dei marchi e delle indicazioni di provenienza (OPM)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2021/510/de",
+      "sha": "0ddd1687658b7ecf2ce8d19b625cb68bcf26e9e5b878ebceb9404a8dab94ee5c"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2017-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/610",
+      "dateDocument": "2015-09-02",
+      "roFundstelle": "AS 2015 610",
+      "titelDe": "Markenschutzverordnung (MSchV)",
+      "titelFr": "Ordonnance sur la protection des marques (OPM)",
+      "titelIt": "Ordinanza sulla protezione dei marchi (OPM)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/610/de",
+      "sha": "078c7261ac6886f081f014b1b1539c3a004b9bc2e0e9e2f87510d46a6f5fb3f7"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2017-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/774",
+      "dateDocument": "2016-12-02",
+      "roFundstelle": "AS 2016 774",
+      "titelDe": "Markenschutzverordnung (MSchV)",
+      "titelFr": "Ordonnance sur la protection des marques (OPM)",
+      "titelIt": "Ordinanza sulla protezione dei marchi (OPM)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/774/de",
+      "sha": "a56e2ffa91b32431d5329a7d2ce4cbdea73466fba62a5a152365a8e319636b08"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2014-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/232.111",
+      "sha": "761a726cbdb5650c08c1c02cbb42df54f17088f2bbf8873f33b3c0a5e2891a03"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2011-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/307",
+      "dateDocument": "2011-05-11",
+      "roFundstelle": "AS 2011 307",
+      "titelDe": "Markenschutzverordnung (MSchV)",
+      "titelFr": "Ordonnance sur la protection des marques (OPM)",
+      "titelIt": "Ordinanza sulla protezione dei marchi (OPM)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/307/de",
+      "sha": "95ccc3c7c084479b556f24f4877e6a0a7a6fb66652441af07621e218c74640ef"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2009-03-16",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/144",
+      "dateDocument": "2007-06-27",
+      "roFundstelle": "AS 2009 144",
+      "titelDe": "Markenschutzverordnung (MSchV)",
+      "titelFr": "Ordonnance sur la protection des marques (OPM)",
+      "titelIt": "Ordinanza sulla protezione dei marchi (OPM)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/144/de",
+      "sha": "5bd0e743ac80dd3a85c418633959b9061c8178c493597d19929da1e63f8b6ea9"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2008-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/276",
+      "dateDocument": "2008-03-14",
+      "roFundstelle": "AS 2008 276",
+      "titelDe": "Markenschutzverordnung (MSchV)",
+      "titelFr": "Ordonnance sur la protection des marques (OPM)",
+      "titelIt": "Ordinanza sulla protezione dei marchi (OPM)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/276/de",
+      "sha": "f15782ec109fbe5e89d21bf527c68dd47d472c1baccf816492933c82ff2fa6cc"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2008-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/364",
+      "dateDocument": "2008-05-21",
+      "roFundstelle": "AS 2008 364",
+      "titelDe": "Markenschutzverordnung (MSchV)",
+      "titelFr": "Ordonnance sur la protection des marques (OPM)",
+      "titelIt": "Ordinanza sulla protezione dei marchi (OPM)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/364/de",
+      "sha": "c1e515a8188e73e15df5a8fc0293297aa7a1e55bbcd3e21daf5b5ed54b7d2aee"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2007-05-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/232.111",
+      "sha": "312a633e98514afc31e96c993e96d93330fd9af0ec79cd33e73d53ccf3d20dc3"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2007-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/689",
+      "dateDocument": "2006-10-18",
+      "roFundstelle": "AS 2006 689",
+      "titelDe": "Markenschutzverordnung (MSchV)",
+      "titelFr": "Ordonnance sur la protection des marques (OPM)",
+      "titelIt": "Ordinanza sulla protezione dei marchi (OPM)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/689/de",
+      "sha": "b4ee08eceb85b616313991b420f2eb3197ed8100a4e34e138c1509ee3fda7d24"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2006-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/232.111",
+      "sha": "67887067e64082b5ffc9e0f0149b65d6fa93a5c012b47202d130eda52921eac8"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2005-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/768",
+      "dateDocument": "2004-12-03",
+      "roFundstelle": "AS 2004 768",
+      "titelDe": "Markenschutzverordnung (MSchV)",
+      "titelFr": "Ordonnance sur la protection des marques (OPM)",
+      "titelIt": "Ordinanza sulla protezione dei marchi (OPM)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/768/de",
+      "sha": "273cd908009388ebd2d8a7813dc89982278ab2a18b01bbd3eb86006b4263a871"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2002-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/182",
+      "dateDocument": "2002-03-08",
+      "roFundstelle": "AS 2002 182",
+      "titelDe": "Markenschutzverordnung (MSchV)",
+      "titelFr": "Ordonnance sur la protection des marques (OPM)",
+      "titelIt": "Ordinanza sulla protezione dei marchi (OPM)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/182/de",
+      "sha": "d5b5d58a01d2859e5e3347716859cab503e420acc6a95566649cc70dada88aec"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1993-04-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1993/296_296_296",
+      "dateDocument": "1992-12-23",
+      "roFundstelle": "AS 1993 296",
+      "titelDe": "Verordnung vom 23. Dezember 1992 über den Schutz von Marken und Herkunftsangaben (MSchV)",
+      "titelFr": "Ordonnance du 23 décembre 1992 sur la protection des marques et des indications de provenance (OPM)",
+      "titelIt": "Ordinanza del 23 dicembre 1992 sulla protezione dei marchi e delle indicazioni di provenienza (OPM)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1993/296_296_296/de",
+      "sha": "b102379a0c3768d1bf2bbc7f93ab646cfca161c67f36460eb226e7fec015ea5e"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1929-05-15",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/45/158_164_163",
+      "dateDocument": "1929-04-24",
+      "roFundstelle": "AS 45 158",
+      "titelDe": "Verordnung vom 24. April 1929 über den Schutz der Fabrik- und Handelsmarken (MSchV)",
+      "titelFr": "Ordonnance du 24 avril 1929 sur la protection des marques de fabrique et de commerce (OMF)",
+      "titelIt": "Ordinanza del 24 aprile 1929 sulla protezione delle marche di fabbrica e di commercio (OMFC)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/45/158_164_163/de",
+      "sha": "4f48ae07a3c6211c4b2e298b646ee5b33e904e0cd42e02e90267e6256212ccd0"
+    }
+  ],
+  "sha": "c58fcbaa76f495b148eb547d20f18408d3a33876fdac8ec6b2f2b7d3ddb3cd7f"
+}

@@ -1,0 +1,768 @@
+{
+  "sr": "818.101.1",
+  "korpusStand": "2025-01-01",
+  "bBindings": [
+    {
+      "sr": {
+        "type": "literal",
+        "value": "818.101.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/298"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-04-29"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemienverordnung, EpV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la lutte contre les maladies transmissibles de l'homme (Ordonnance sur les épidémies, OEp)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente la lotta contro le malattie trasmissibili dell'essere umano (Ordinanza sulle epidemie, OEp)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "818.101.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/298"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-04-29"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemienverordnung, EpV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la lutte contre les maladies transmissibles de l'homme (Ordonnance sur les épidémies, OEp)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente la lotta contro le malattie trasmissibili dell'essere umano (Ordinanza sulle epidemie, OEp)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "818.101.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/298"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-04-29"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemienverordnung, EpV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la lutte contre les maladies transmissibles de l'homme (Ordonnance sur les épidémies, OEp)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente la lotta contro le malattie trasmissibili dell'essere umano (Ordinanza sulle epidemie, OEp)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "818.101.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/298"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-04-29"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemienverordnung, EpV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la lutte contre les maladies transmissibles de l'homme (Ordonnance sur les épidémies, OEp)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente la lotta contro le malattie trasmissibili dell'essere umano (Ordinanza sulle epidemie, OEp)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "818.101.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2021/156"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-03-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-03-19"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemienverordnung, EpV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la lutte contre les maladies transmissibles de l’homme (Ordonnance sur les épidémies, OEp)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente la lotta contro le malattie trasmissibili dell’essere umano (Ordinanza sulle epidemie, OEp)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "818.101.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2021/377"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-06-23"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemienverordnung, EpV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la lutte contre les maladies transmissibles de l’homme (Ordonnance sur les épidémies, OEp)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente la lotta contro le malattie trasmissibili dell’essere umano (Ordinanza sulle epidemie, OEp)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "818.101.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2021/506"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-09-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-08-25"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemienverordnung, EpV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la lutte contre les maladies transmissibles de l’homme (Ordonnance sur les épidémies, OEp)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente la lotta contro le malattie trasmissibili dell’essere umano (Ordinanza sulle epidemie, OEp)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "818.101.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2021/53"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-01-27"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemienverordnung, EpV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la lutte contre les maladies transmissibles de l’homme (Ordonnance sur les épidémies, OEp)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente la lotta contro le malattie trasmissibili dell'essere umano (Ordinanza sulle epidemie, OEp)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "818.101.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2021/648"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-11-04"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-11-03"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemienverordnung, EpV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la lutte contre les maladies transmissibles de l’homme (Ordonnance sur les épidémies, OEp)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente la lotta contro le malattie trasmissibili dell’essere umano (Ordinanza sulle epidemie, OEp)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "818.101.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2021/66"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-01-04"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-02-03"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemienverordnung, EpV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la lutte contre les maladies transmissibles de l’homme (Ordonnance sur les épidémies, OEp)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente la lotta contro le malattie trasmissibili dell’essere umano (Ordinanza sulle epidemie, OEp)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "818.101.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2021/825"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2022-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-12-03"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemienverordnung, EpV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la lutte contre les maladies transmissibles de l’homme (Ordonnance sur les épidémies, OEp)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente la lotta contro le malattie trasmissibili dell’essere umano (Ordinanza sulle epidemie, OEp)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "818.101.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2022/345"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2022-06-11"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2022-06-10"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemienverordnung, EpV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la lutte contre les maladies transmissibles de l’homme (Ordonnance sur les épidémies, OEp)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente la lotta contro le malattie trasmissibili dell’essere umano (Ordinanza sulle epidemie, OEp)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "818.101.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2022/467"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2022-09-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2022-08-24"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemienverordnung, EpV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la lutte contre les maladies transmissibles de l’homme (Ordonnance sur les épidémies, OEp)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente la lotta contro le malattie trasmissibili dell’essere umano (Ordinanza sulle epidemie, OEp)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "818.101.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2022/467"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2022-09-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2022-08-24"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemienverordnung, EpV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la lutte contre les maladies transmissibles de l’homme (Ordonnance sur les épidémies, OEp)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente la lotta contro le malattie trasmissibili dell’essere umano (Ordinanza sulle epidemie, OEp)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "818.101.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2022/835"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2023-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2022-12-16"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemienverordnung, EpV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la lutte contre les maladies transmissibles de l’homme (Ordonnance sur les épidémies, OEp)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente la lotta contro le malattie trasmissibili dell’essere umano (Ordinanza sulle epidemie, OEp)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "818.101.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2022/835"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2023-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2022-12-16"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemienverordnung, EpV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la lutte contre les maladies transmissibles de l’homme (Ordonnance sur les épidémies, OEp)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente la lotta contro le malattie trasmissibili dell’essere umano (Ordinanza sulle epidemie, OEp)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "818.101.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2022/95"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2022-02-17"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2022-02-16"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemienverordnung, EpV) (Übernahme der Kosten von Covid-19-Arzneimitteln)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la lutte contre les maladies transmissibles de l’homme (Ordonnance sur les épidémies, OEp) (Prise en charge des coûts des médicaments utilisés pour le traitement du COVID-19)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente la lotta contro le malattie trasmissibili dell’essere umano (Ordinanza sulle epidemie, OEp) (Assunzione dei costi dei medicamenti COVID-19)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "818.101.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2022/95"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2022-02-17"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2022-02-16"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemienverordnung, EpV) (Übernahme der Kosten von Covid-19-Arzneimitteln)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la lutte contre les maladies transmissibles de l’homme (Ordonnance sur les épidémies, OEp) (Prise en charge des coûts des médicaments utilisés pour le traitement du COVID-19)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente la lotta contro le malattie trasmissibili dell’essere umano (Ordinanza sulle epidemie, OEp) (Assunzione dei costi dei medicamenti COVID-19)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "818.101.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2023/790"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2024-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2023-11-29"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemienverordnung, EpV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la lutte contre les maladies transmissibles de l’homme (Ordonnance sur les épidémies, OEp)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente la lotta contro le malattie trasmissibili dell’essere umano (Ordinanza sulle epidemie, OEp)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "818.101.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2023/790"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2024-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2023-11-29"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemienverordnung, EpV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la lutte contre les maladies transmissibles de l’homme (Ordonnance sur les épidémies, OEp)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente la lotta contro le malattie trasmissibili dell’essere umano (Ordinanza sulle epidemie, OEp)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "818.101.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2023/791"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2024-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2023-11-29"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemienverordnung, EpV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la lutte contre les maladies transmissibles de l’homme (Ordonnance sur les épidémies, OEp)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente la lotta contro le malattie trasmissibili dell’essere umano (Ordinanza sulle epidemie, OEp)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "818.101.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2023/791"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2024-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2023-11-29"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemienverordnung, EpV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la lutte contre les maladies transmissibles de l’homme (Ordonnance sur les épidémies, OEp)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente la lotta contro le malattie trasmissibili dell’essere umano (Ordinanza sulle epidemie, OEp)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "818.101.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2024/669"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2025-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2024-11-06"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemienverordnung, EpV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la lutte contre les maladies transmissibles de l’homme (Ordonnance sur les épidémies, OEp)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente la lotta contro le malattie trasmissibili dell’essere umano (Ordinanza sulle epidemie, OEp)"
+      }
+    }
+  ],
+  "aStaende": [
+    "2016-01-01",
+    "2019-03-01",
+    "2020-11-19",
+    "2021-01-04",
+    "2021-02-01",
+    "2021-02-04",
+    "2021-03-01",
+    "2021-06-01",
+    "2021-09-01",
+    "2021-09-20",
+    "2021-11-04",
+    "2022-01-01",
+    "2022-02-17",
+    "2022-04-01",
+    "2022-05-20",
+    "2022-06-11",
+    "2022-07-01",
+    "2022-09-01",
+    "2023-01-01",
+    "2023-04-01",
+    "2023-09-01",
+    "2024-01-01",
+    "2024-07-01",
+    "2025-01-01"
+  ]
+}

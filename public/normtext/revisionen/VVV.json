@@ -1,0 +1,327 @@
+{
+  "erlassKey": "VVV",
+  "sr": "741.31",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2026-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2025/645",
+      "dateDocument": "2025-10-15",
+      "roFundstelle": "AS 2025 645",
+      "titelDe": "Verkehrsversicherungsverordnung (VVV)",
+      "titelFr": "Ordonnance sur l’assurance des véhicules (OAV)",
+      "titelIt": "Ordinanza sull’assicurazione dei veicoli (OAV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2025/645/de",
+      "sha": "2fc7ce3ae6e7b3c89cb885fc08f892f18209e90c435b91b6ac953cd7821a7201"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2026-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2025/687",
+      "dateDocument": "2025-11-10",
+      "roFundstelle": "AS 2025 687",
+      "titelDe": "Verkehrsversicherungsverordnung (VVV). Berichtigung (Betrifft nur den italienischen Text)",
+      "titelFr": "Ordonnance sur l’assurance des véhicules (OAV). Erratum (Ne concerne que le texte italien)",
+      "titelIt": "Ordinanza sull’assicurazione dei veicoli (OAV). Correzione",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2025/687/de",
+      "sha": "52090fd68320e082191c739dc711da0e2175d3a5713b4a59fccc9f921f476da5"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2024-05-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/741.31",
+      "sha": "1b99730408acad5ff704fdeeae3203697a46e104710f19995995a1973d26a09a"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2024-04-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2024/29",
+      "dateDocument": "2023-12-22",
+      "roFundstelle": "AS 2024 29",
+      "titelDe": "Verkehrsversicherungsverordnung (VVV)",
+      "titelFr": "Ordonnance sur l’assurance des véhicules (OAV)",
+      "titelIt": "Ordinanza sull’assicurazione dei veicoli (OAV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2024/29/de",
+      "sha": "e7b72f3139a8616e0bc1d723f61635469471045c500282219e4574ac1453cdc5"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/741.31",
+      "sha": "d27fb26e0e235a9a8f153e20a4f7f74643a1ee8626f8235b8bd625dfce8be03a"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2022-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/741.31",
+      "sha": "6b1045c0f1c5ec0a820f6eb254ad5f2ae4c3a1c9407b3983492079c50e72788e"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2021-09-24",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2021/578",
+      "dateDocument": "2021-09-24",
+      "roFundstelle": "AS 2021 578",
+      "titelDe": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS). Berichtigung (Betrifft nur den italienischen Text)",
+      "titelFr": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV). Erratum (Ne concerne que le texte italien)",
+      "titelIt": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV). Correzione",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2021/578/de",
+      "sha": "fab2d989901b92d4055c0f583f67536fefb80c6ce82ec48c7df6ea993a3ee525"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2019-02-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/43",
+      "dateDocument": "2018-11-21",
+      "roFundstelle": "AS 2019 43",
+      "titelDe": "Verkehrsversicherungsverordnung (VVV)",
+      "titelFr": "Ordonnance sur l'assurance des véhicules (OAV)",
+      "titelIt": "Ordinanza sull'assicurazione dei veicoli (OAV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/43/de",
+      "sha": "621014eadccaecfbe3c57168cffaa0c3de76e2abe94f298df95f45bd87bb22c0"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2019-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/741.31",
+      "sha": "41769903a02a3b96a0fa09826e9c93a62c93c47f100861ef6f1202800f943c4b"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2017-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/643",
+      "dateDocument": "2016-10-26",
+      "roFundstelle": "AS 2016 643",
+      "titelDe": "Verkehrsversicherungsverordnung (VVV)",
+      "titelFr": "Ordonnance sur l'assurance des véhicules (OAV)",
+      "titelIt": "Ordinanza sull'assicurazione dei veicoli (OAV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/643/de",
+      "sha": "5fc4328385b76b03e7632201603f87e31d8f5aa33cfbf85669d7d577c7fd6b72"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2015-06-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/276",
+      "dateDocument": "2015-04-15",
+      "roFundstelle": "AS 2015 276",
+      "titelDe": "Verkehrsversicherungsverordnung (VVV)",
+      "titelFr": "Ordonnance sur l'assurance des véhicules (OAV)",
+      "titelIt": "Ordinanza sull'assicurazione dei veicoli (OAV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/276/de",
+      "sha": "83dfac804d73a03e723e26444c8d85a3f0d330b197dc243e1e0274130b84e571"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2015-04-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/66",
+      "dateDocument": "2015-01-21",
+      "roFundstelle": "AS 2015 66",
+      "titelDe": "Verkehrsversicherungsverordnung (VVV)",
+      "titelFr": "Ordonnance sur l'assurance des véhicules (OAV)",
+      "titelIt": "Ordinanza sull'assicurazione dei veicoli (OAV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/66/de",
+      "sha": "373176de1dfa13ab68192eb31b477fd1e7b59075597c36f2b3bb3db0ef3a84b4"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2014-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/826",
+      "dateDocument": "2013-11-29",
+      "roFundstelle": "AS 2013 826",
+      "titelDe": "Verkehrsversicherungsverordnung (VVV)",
+      "titelFr": "Ordonnance sur l'assurance des véhicules (OAV)",
+      "titelIt": "Ordinanza sull'assicurazione dei veicoli (OAV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/826/de",
+      "sha": "3de9e181c9ed9fdaab7095b824439b863bb553bc8bd08708a807dd9ada3c2a8c"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2012-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/713",
+      "dateDocument": "2011-10-12",
+      "roFundstelle": "AS 2011 713",
+      "titelDe": "Verkehrsversicherungsverordnung (VVV)",
+      "titelFr": "Ordonnance sur l'assurance des véhicules (OAV)",
+      "titelIt": "Ordinanza sull'assicurazione dei veicoli (OAV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/713/de",
+      "sha": "7feb860b717032de6402f880d21581a4389e04036910a5299fbb33655172c286"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2009-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/704",
+      "dateDocument": "2008-10-22",
+      "roFundstelle": "AS 2008 704",
+      "titelDe": "Verkehrsversicherungsverordnung (VVV)",
+      "titelFr": "Ordonnance sur l'assurance des véhicules (OAV)",
+      "titelIt": "Ordinanza sull'assicurazione dei veicoli (OAV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/704/de",
+      "sha": "9d306c984fe7dd51783ff1c18a983159eff62bd30c66dff674d2dde93575cc60"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2008-12-05",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/741.31",
+      "sha": "f9a034ab38e15101315e5d2cbb46a2dbf2b951ddf6ddf46a2383c0b775060e82"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2007-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/299",
+      "dateDocument": "2007-03-28",
+      "roFundstelle": "AS 2007 299",
+      "titelDe": "Verkehrsversicherungsverordnung (VVV)",
+      "titelFr": "Ordonnance sur l'assurance des véhicules (OAV)",
+      "titelIt": "Ordinanza sull'assicurazione dei veicoli (OAV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/299/de",
+      "sha": "5fb0417cf2455797f1ea0d60136db5af57c5b5692984eaaac317780d5d2d8b93"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2007-02-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/21",
+      "dateDocument": "2006-11-29",
+      "roFundstelle": "AS 2007 21",
+      "titelDe": "Verkehrsversicherungsverordnung (VVV)",
+      "titelFr": "Ordonnance sur l'assurance des véhicules (OAV)",
+      "titelIt": "Ordinanza sull'assicurazione dei veicoli (OAV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/21/de",
+      "sha": "c5ab18b42e5432589ccd7af02c9258dc621669a3ea490849d0825ffe93c57041"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2005-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/741.31",
+      "sha": "d82c215904eb7e21bd8f9630ca1099aefcdad0b374e2bd54381cf785660d4d07"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2005-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/741.31",
+      "sha": "1ead532c3e3d2c2d0e2a66308031204baded6220bb0ddbc4135e45de828bccc1"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2004-03-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/57",
+      "dateDocument": "2004-01-14",
+      "roFundstelle": "AS 2004 57",
+      "titelDe": "Verkehrsversicherungsverordnung (VVV)",
+      "titelFr": "Ordonnance sur l'assurance des véhicules (OAV)",
+      "titelIt": "Ordinanza sull'assicurazione dei veicoli (OAV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/57/de",
+      "sha": "9bfebdc12d2baebea13137996cbfbb03f6b1fbb30dd2f0c745eb18bc8dfecbd4"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2003-04-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/483",
+      "dateDocument": "2002-07-03",
+      "roFundstelle": "AS 2002 483",
+      "titelDe": "Verkehrsversicherungsverordnung (VVV)",
+      "titelFr": "Ordonnance sur l'assurances des véhicules (OAV)",
+      "titelIt": "Ordinanza sull'assicurazione dei veicoli (OAV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/483/de",
+      "sha": "179cb7ecaea89587577047e7249c2717ad6dfe196dee7aaaa09f17998e6cd423"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2003-02-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/15",
+      "dateDocument": "2002-12-09",
+      "roFundstelle": "AS 2003 15",
+      "titelDe": "Verkehrsversicherungsverordnung (VVV)",
+      "titelFr": "Ordonnance sur l'assurance des véhicules (OAV)",
+      "titelIt": "Ordinanza sull'assicurazione dei veicoli (OAV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/15/de",
+      "sha": "42ddeb897eb521a5b1c793511e69caac5683e61aea6865ea09b19f18f6726020"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2003-02-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/199",
+      "dateDocument": "2004-03-30",
+      "roFundstelle": "AS 2004 199",
+      "titelDe": "Verkehrsversicherungsverordnung vom 20. November 1959 (VVV) (Betrifft nur den französischen Text)",
+      "titelFr": "Ordonnance du 20 novembre 1959 sur l'assurance des véhicules (OAV)",
+      "titelIt": "Ordinanza del 20 novembre 1959 sull'assicurazione dei veicoli (OAV) (Concerne solo il testo francese)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/199/de",
+      "sha": "26fdcb6d73c59b1c48273b7716770b2f745a1ff7e6a82075afaebf1cb7383e3b"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2003-02-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/725",
+      "dateDocument": "2011-11-15",
+      "roFundstelle": "AS 2011 725",
+      "titelDe": "Verkehrsversicherungsverordnung (VVV) (Betrifft nur den französischen und italienischen Text)",
+      "titelFr": "Ordonnance sur l'assurance des véhicules (OAV)",
+      "titelIt": "Ordinanza sull'assicurazione dei veicoli (OAV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/725/de",
+      "sha": "d9efd79b877d2797ea36345dde648d366a6c9a00c6b9b4f48e0a23c61e71604f"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2003-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/741.31",
+      "sha": "e32d8292ed2563e276d31cd98c6eaa9e0d7642ada99cff18a2ec851d757cf515"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2001-06-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/193",
+      "dateDocument": "2001-04-11",
+      "roFundstelle": "AS 2001 193",
+      "titelDe": "Verkehrsversicherungsverordnung (VVV)",
+      "titelFr": "Ordonnance sur l'assurance des véhicules (OAV)",
+      "titelIt": "Ordinanza sull'assicurazione dei veicoli (OAV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/193/de",
+      "sha": "8232ea3005e5cc9a0f6c910131a279ef55c8426462278fcffac724b6244abce6"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2001-01-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/473",
+      "dateDocument": "2000-11-15",
+      "roFundstelle": "AS 2000 473",
+      "titelDe": "Verkehrsversicherungsverordnung (VVV)",
+      "titelFr": "Ordonnance sur l'assurance des véhicules (OAV)",
+      "titelIt": "Ordinanza sull'assicurazione dei veicoli (OAV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/473/de",
+      "sha": "d2a9501deebf0278fc791db993a605a9d92dfe561986f4255650b613a5a52252"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2000-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/741.31",
+      "sha": "f5c222824e683facdb52c6b64457d75f3ef4e52bb2c13876d68ac3e8544b89e1"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1992-08-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/79",
+      "dateDocument": "2002-03-12",
+      "roFundstelle": "AS 2002 79",
+      "titelDe": "Verkehrsversicherungsverordnung (VVV) (Betrifft nur den italienischen Text)",
+      "titelFr": "Ordonnance du 20 novembre 1959 sur l'assurance des véhicules (OAV) (Ne concerne que le text italien)",
+      "titelIt": "Ordinanza sull'assicurazione dei veicoli (OAV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/79/de",
+      "sha": "5bd6b250d082f7aeca74c4179d95a00f3b5d09d335e629cf129bfd38b3f3465e"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1959-11-20",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1959/1271_1321_1317",
+      "dateDocument": "1959-11-20",
+      "roFundstelle": "AS 1959 1271",
+      "titelDe": "Verkehrsversicherungsverordnung vom 20. November 1959 (VVV)",
+      "titelFr": "Ordonnance du 20 novembre 1959 sur l'assurance des véhicules (OAV)",
+      "titelIt": "Ordinanza del 20 novembre 1959 sull'assicurazione dei veicoli (OAV)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1959/1271_1321_1317/de",
+      "sha": "14aac9edbe4f3af12e3cc62c81bcc31db31c9c0620c397a529cd29b859b717ef"
+    }
+  ],
+  "sha": "a608e61a7e43355d5f0d7661935ce1117c21fb946ba4a0a49f7a7aa8dfde33bb"
+}

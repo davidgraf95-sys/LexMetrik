@@ -1,0 +1,64 @@
+{
+  "erlassKey": "BGOE",
+  "sr": "152.3",
+  "abgerufen": "2026-07-10",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2023-11-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2023/584",
+      "dateDocument": "2022-09-30",
+      "roFundstelle": "AS 2023 584",
+      "titelDe": "Bundesgesetz über das Öffentlichkeitsprinzip der Verwaltung (Öffentlichkeitsgesetz, BGÖ) (Kostenloser Zugang zu amtlichen Dokumenten)",
+      "titelFr": "Loi fédérale sur le principe de la transparence dans l’administration (Loi sur la transparence, LTrans) (Gratuité de l’accès aux documents officiels)",
+      "titelIt": "Legge federale sul principio di trasparenza dell’amministrazione (Legge sulla trasparenza, LTras) (Gratuità dell’accesso a documenti ufficiali)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2023/584/de",
+      "sha": "0513975c37f9ca2b1291a7a6e7eebe3757452f2da1013b56ac4c66ca3aaabe53"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/152.3",
+      "sha": "b9a5708ba9084c04fb09bcb13eb097b8ff01ec29467f74df50e3c02620aa1d13"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2014-08-19",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/453",
+      "dateDocument": "2014-06-16",
+      "roFundstelle": "AS 2014 453",
+      "titelDe": "Bundesgesetz über das Öffentlichkeitsprinzip der Verwaltung (Öffentlichkeitsgesetz, BGÖ) (Betrifft nur den italienischen Text)",
+      "titelFr": "Loi fédérale sur le principe de la transparence dans l'administration (Loi sur la transparence, LTrans) (Ne concerne que le texte italien)",
+      "titelIt": "Legge federale sul principio di trasparenza dell'amministrazione (Legge sulla trasparenza, LTras)",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/453/de",
+      "sha": "b4378f0ad2780a10a3813a016376fc9a0367eed255849e8d7a499b18f5cc42f3"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2009-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/152.3",
+      "sha": "6a323d49d1c44f33e2b8c000bd500442b4869c2e12fa3ed3cd303a8dfd10915a"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2007-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/152.3",
+      "sha": "5be097ba88b8933647349d1f35700fb85e59209add25b33d6d5ea73f4276e087"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2006-07-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/355",
+      "dateDocument": "2004-12-17",
+      "roFundstelle": "AS 2006 355",
+      "titelDe": "Bundesgesetz über das Öffentlichkeitsprinzip der Verwaltung (Öffentlichkeitsgesetz, BGÖ)",
+      "titelFr": "Loi fédérale sur le principe de la transparence dans l'administration (Loi sur la transparence, LTrans)",
+      "titelIt": "Legge federale sul principio di trasparenza dell'amministrazione (Legge sulla trasparenza, LTras)",
+      "botschaftKey": "BOTSCHAFT-2003-246",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/355/de",
+      "sha": "03cc69d1d06d9b5e9730576c6b8e9be4d9f728f7df034b9583701c7f1a3fd965"
+    }
+  ],
+  "sha": "50e2e280445583673d2c99400e0cf3c831b8a642126b619dca7a669d0b7a66d0"
+}
