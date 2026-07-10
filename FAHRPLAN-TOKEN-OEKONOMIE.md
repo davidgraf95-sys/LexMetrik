@@ -67,6 +67,15 @@ effort-Senkung wirkt dort direkt (−48…−76 %). Typ B ist mit 53 % des Volum
 (T6-Sonde/T9-ast-grep/T13-Anker senken Reads je Bau-Session). T5-Read-Guards = Versicherung gegen
 Ausreisser, nicht Volumentreiber (nur 2 Mega-Sessions). Nächste Messung: Mean/Median je Typ vergleichen.
 
+**Fortschritt (10.7.2026):**
+- **T2 ✅ #172** — Token-Baseline/Regressionswächter (P0).
+- **T7 ✅ #173** — ROADMAP-Chronik-Split (`ROADMAP-CHRONIK.md`). *Rest:* ROADMAP.md 93.6 KB, über dem DoD-Ziel ≤~65 KB — weitere Chronik-Auslagerung offen (kollidiert derzeit mit Parallel-Schreibern).
+- **check:plan geheilt** — `QS-TOK` fehlte in `scripts/plan/inventar.ts` (seit #171), rötete die gate-Kette für alle; registriert, grün.
+- **T1 ✅** — STRUKTUR-Rotation mechanisiert (`.claude/hooks/struktur-rotieren.py`, SessionStart-Hook + `npm run struktur:rotieren`) inkl. **T7-K Teil 2 Re-Akkumulations-Wächter**. Dogfood: 34 Karten ≤6.7. rotiert, STRUKTUR.md 139.4→35.6 KB (Budget 60), Byte-Bilanz belegt (0 Inhaltsverlust), idempotent.
+- **T3 ✅** — FAHRPLAN-§-Slice-CLI (`npm run fahrplan`), ToC immer dabei; GESETZES-UX §10-Slice 60.6 KB vs. 119.5 KB Ganzdatei.
+- **T16 offen** — CLAUDE.md-§7-Detail in `paths`-Rule: §8 Ziff. 4 «nicht ohne separates Go David» (+ Probelauf-Vorbedingung); Leitplanke «CLAUDE.md im Zweifel nicht anfassen». Bleibt liegen.
+- Übrige §§4–§7 (T4/T5/T6/T8/T9/T11/T12/T13/T14/T15/T17/T18/T19/T10) unverändert offen, je Reihenfolge §8.
+
 ## §1 Ist-Befund
 
 | Posten | Befund |
