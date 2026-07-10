@@ -841,10 +841,22 @@ const P_FREMD_UNAUFL_RE = /^\s*(?:des|der|über|vom)\s+[A-ZÄÖÜ]/;
 // matchen NICHT (nur EIN führender Grossbuchstabe).
 const P_FREMD_KUERZEL_RE = /^\s*(?:[A-ZÄÖÜ]{2,}|[A-ZÄÖÜ][a-zäöü]*[A-ZÄÖÜ]\w*)/;
 
-function konsumierePassusKette(text: string, pos: number): number {
+// Erkennt, ob die NÄCHSTE Passus-Gruppe mit einem PLURAL-Zahl-Schlüsselwort
+// («Absätze/Ziffern/Sätze/Abs./Ziff.») beginnt — die Alternation in
+// PASSUS_GRUPPE_RE probiert die Plural-Branch zuerst, der Präfix-Test ist also
+// äquivalent zur Frage «hat die Plural-Branch gematcht».
+const P_KW_NUM_PL_RE = new RegExp('^\\s+' + P_KW_NUM_PL);
+// B1 (Gegenprüfungs-Befund 10.7.2026): Fortsetzungs-Wert einer UNTERBROCHENEN
+// Plural-Wertliste — «und|oder N» OHNE folgendes Passus-Wort.
+const P_PLURAL_FORTSATZ_RE = new RegExp('^\\s*(?:und|oder)\\s+' + P_NUM + '(?!\\s+' + P_KW_ANY + ')');
+
+function konsumierePassusKette(text: string, pos: number): { pos: number; pluralNum: boolean } {
+  let pluralNum = false;
   for (;;) {
-    const m = PASSUS_GRUPPE_RE.exec(text.slice(pos));
-    if (!m) return pos;
+    const rest = text.slice(pos);
+    const m = PASSUS_GRUPPE_RE.exec(rest);
+    if (!m) return { pos, pluralNum };
+    if (P_KW_NUM_PL_RE.test(rest)) pluralNum = true;
     pos += m[0].length;
   }
 }
@@ -868,7 +880,22 @@ export function artikelnPluralVerweise(text: string): PluralRegion[] {
       if (!am) break;
       glieder.push({ roh: am[0], start: pos, end: pos + am[0].length });
       pos += am[0].length;
-      pos = konsumierePassusKette(text, pos);
+      let kette = konsumierePassusKette(text, pos);
+      pos = kette.pos;
+      // B1 (Gegenprüfungs-Befund 10.7.2026, BETMG 8a/FAV 44a/FinfraV 129): nach
+      // einer PLURAL-«Absätze/Ziffern»-Gruppe gehört ein «und|oder N» OHNE
+      // folgendes Passus-Wort weiter zur WERTLISTE — auch wenn eine «Buchstabe»-
+      // Gruppe dazwischen lag: «Artikeln 8 Absätze 1 Buchstabe d und 5, 11» =
+      // Art. 8 (Abs. 1 lit. d und Abs. 5), dann Art. 11. Ohne diese Regel würde
+      // «5» als Artikel-Glied verlinkt (Falsch-Ziel). Komma/sowie/Bereich bleiben
+      // Glied-Konnektoren (§1-sichere Seite: Under-Link statt Falsch-Link).
+      while (kette.pluralNum) {
+        const vm = P_PLURAL_FORTSATZ_RE.exec(text.slice(pos));
+        if (!vm) break;
+        pos += vm[0].length;
+        const k2 = konsumierePassusKette(text, pos);
+        pos = k2.pos;
+      }
       const cm = P_KONN_ZAHL_RE.exec(text.slice(pos));
       if (!cm) break;
       pos += cm[0].length;

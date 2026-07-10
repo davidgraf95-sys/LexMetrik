@@ -473,3 +473,49 @@ describe('artikelnPluralVerweise — Korpus-Härtungen (§1)', () => {
     expect(erkenneGenitivGesetz('Zivilgesetz­bu­ches')).toBe('ZGB');
   });
 });
+
+// B1 — Gegenprüfungs-Befund (Opus, 10.7.2026, WIDERLEGT→gefixt): eine durch
+// «Buchstabe» UNTERBROCHENE Plural-«Absätze»-Wertliste liess die nachfolgende
+// «und N»-Zahl als Artikel-Glied lecken (Falsch-Ziel: BETMG 8a «… Absätze 1
+// Buchstabe d und 5, 11 …» → Glied «5» = in Wahrheit Absatz 5). Fix: nach einer
+// Plural-Zahl-Gruppe wird «und|oder N» (ohne folgendes Passus-Wort) weiter der
+// Wertliste zugeschlagen; Komma/sowie bleiben Glied-Konnektoren.
+describe('artikelnPluralVerweise — B1: unterbrochene Plural-Wertliste (Gegenprüfung 10.7.2026)', () => {
+  it('BETMG Art. 8a verbatim: Glieder [8, 11, 13, 19, 20] — die «und 5» ist Absatz 5, KEIN Glied', () => {
+    const t = 'Dabei kann er von den Artikeln 8 Absätze 1 Buchstabe d und 5, 11, 13, 19 Absatz 1 Buchstabe f und 20 Absatz 1 Buchstaben d und e abweichen.';
+    const rs = artikelnPluralVerweise(t);
+    expect(rs).toHaveLength(1);
+    expect(rs[0].glieder.map((g) => g.roh)).toEqual(['8', '11', '13', '19', '20']);
+    expect(rs[0].fremd).toBeNull();
+    expect(rs[0].unterdruecken).toBe(false);
+  });
+
+  it('FAV Art. 44a verbatim: «19 Absätze 2 Buchstabe d und 3 sowie 24a» — 3 ist Absatz, 24a ist Glied', () => {
+    const t = 'die Anforderungen nach den Artikeln 7 Absatz 2bis, 19 Absätze 2 Buchstabe d und 3 sowie 24a nicht erfüllen';
+    const rs = artikelnPluralVerweise(t);
+    expect(rs[0].glieder.map((g) => g.roh)).toEqual(['7', '19', '24a']);
+  });
+
+  it('FinfraV Art. 129 verbatim: «37 Absätze 1 Buchstabe d und 2» — 2 ist Absatz, KEIN Glied', () => {
+    const t = 'Meldepflichten nach den Artikeln 36 Absatz 2 und 37 Absätze 1 Buchstabe d und 2 sind spätestens ab dem 1. Oktober 2018 zu erfüllen.';
+    const rs = artikelnPluralVerweise(t);
+    expect(rs[0].glieder.map((g) => g.roh)).toEqual(['36', '37']);
+  });
+
+  it('Gegenprobe: «und 20 Absatz 1» NACH Plural-Gruppe bleibt ein Glied (Passus-Wort folgt)', () => {
+    const rs = artikelnPluralVerweise('nach den Artikeln 8 Absätze 1 und 2 und 20 Absatz 1 Buchstabe e gilt');
+    expect(rs[0].glieder.map((g) => g.roh)).toEqual(['8', '20']);
+  });
+
+  it('Gegenprobe: UNUNTERBROCHENE Plural-Wertliste konsumiert auch Komma-Werte («Absätze 1 und 2, 11») — §1-sichere Seite', () => {
+    // «Absätze 1 und 2, 11 und 13» ist echt ambig (Absätze 11/13 oder Artikel
+    // 11/13?). Die Wertlisten-Grammatik («Absätze 1, 2 und 3» ist amtlich üblich)
+    // schlägt die Zahlen der Liste zu — Under-Link, nie ein Falsch-Link. Erst ein
+    // UNTERBRECHENDES Element (Buchstabe-Gruppe, B1) oder ein Passus-Wort nach
+    // der Zahl beendet die Liste; das Komma-Glied nach einer B1-Fortsetzung
+    // (BETMG: «… und 5, 11») bleibt dagegen ein Artikel (Test oben).
+    const rs = artikelnPluralVerweise('nach den Artikeln 8 Absätze 1 und 2, 11 und 13 gilt');
+    expect(rs[0].glieder.map((g) => g.roh)).toEqual(['8']);
+    expect(rs[0].unterdruecken).toBe(false);
+  });
+});
