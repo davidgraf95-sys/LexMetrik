@@ -16,13 +16,13 @@ import {
   type Werkzeug, type MaterialBezug,
 } from './normtext/werkzeuge';
 import { ERLASS_REGISTER } from './normtext/register';
-import { rechtsprechungFuerErlass, type EntscheidRef } from './rechtsprechung/norm-index';
+import { rechtsprechungFuerErlass, leitfaelleFuerArtikel, type EntscheidRef, type LeitfallRef } from './rechtsprechung/norm-index';
 import { ladeMaterialManifest } from './materialien/browse';
 import { ladeKantenShard } from './materialien/kanten-shard';
 import type { BrowseMaterial } from './materialien/typen';
 import type { Herkunft } from './verzahnung/typen';
 
-export type { Werkzeug, MaterialBezug, EntscheidRef };
+export type { Werkzeug, MaterialBezug, EntscheidRef, LeitfallRef };
 
 /** Quelle-Korpus des Readers, der das Panel zeigt. */
 export type KontextTyp = 'norm' | 'entscheid' | 'material';
@@ -196,6 +196,71 @@ export function mischeMaterialien(sync: readonly MaterialBezug[], softLaw: reado
   const out = [...sync];
   for (const m of softLaw) if (!seen.has(m.key)) { seen.add(m.key); out.push(m); }
   return out.sort((a, b) => a.behoerdeKuerzel.localeCompare(b.behoerdeKuerzel) || a.key.localeCompare(b.key));
+}
+
+// ─── Artikelscharfer Kontext (W2·5d U-VERWEIS/A7, David 5.7.2026) ────────────
+//
+// Für das strukturierte Verweis-Popover: zu EINEM (Erlass, Artikel) die
+// massgeblichen Entscheide (Leitfall-Shard, dieselbe Quelle wie der Artikel-Fuss)
+// + die artikelscharfen Material-Kanten (Kanten-Shard, dieselbe Quelle wie das
+// Kontext-Panel). KEINE neue Zuordnung — reine Projektion der bestehenden Shards
+// auf einen Artikel (§3/§5); beide Loader teilen ihre Promise-Caches mit dem
+// Reader (kein Doppel-Fetch, §15.3).
+
+/** Artikelscharfe Material-Kante fürs Popover (MaterialBezug + Fundstelle). */
+export interface ArtikelKontext {
+  entscheide: LeitfallRef[];
+  materialien: MaterialBezug[];
+}
+
+/**
+ * Artikelscharfe Materialien zu (erlassKey, artikelToken) aus dem Kanten-Shard.
+ * Je Dokument EIN Eintrag; Sublabel = Fundstellen-Ziffer (eindeutig) bzw.
+ * «Ziff. X u. a.» bei mehreren. Dokument-Metadaten aus dem Browse-Register;
+ * nicht (mehr) gelistete Dokumente still ausgelassen (§8, kein toter Link).
+ */
+export async function materialienFuerArtikel(erlassKey: string, artikelToken: string): Promise<MaterialBezug[]> {
+  const [shard, manifest] = await Promise.all([ladeKantenShard(erlassKey), ladeMaterialManifest()]);
+  if (!shard || !manifest) return [];
+  const regByKey = new Map<string, BrowseMaterial>(manifest.materialien.map((m) => [m.key, m]));
+  const proDok = new Map<string, DokSammler>();
+  const reihenfolge: string[] = [];
+  for (const kante of shard.kanten) {
+    if (kante.artikel !== artikelToken) continue;
+    let s = proDok.get(kante.dok);
+    if (!s) { s = { quellen: new Set(), artikel: new Set(), ziffern: new Set() }; proDok.set(kante.dok, s); reihenfolge.push(kante.dok); }
+    s.quellen.add(kante.quelle);
+    for (const f of kante.fundstellen) if (f.z) s.ziffern.add(f.z);
+  }
+  const out: MaterialBezug[] = [];
+  for (const dok of reihenfolge) {
+    const reg = regByKey.get(dok);
+    if (!reg) continue;
+    const s = proDok.get(dok)!;
+    const ziffern = [...s.ziffern];
+    const sublabel = ziffern.length === 1 ? ziffern[0]
+      : ziffern.length > 1 ? `${ziffern[0]} u. a.` : undefined;
+    out.push({
+      key: reg.key, titel: reg.titel, behoerdeKuerzel: reg.behoerdeKuerzel,
+      doktypLabel: reg.doktypLabel, nummer: reg.nummer,
+      pfad: `/materialien/${encodeURIComponent(reg.key)}`,
+      herkunft: aggregiereHerkunft(s.quellen), stand: reg.stand,
+      artikel: artikelToken, sublabel,
+    });
+  }
+  return out.sort((a, b) => a.behoerdeKuerzel.localeCompare(b.behoerdeKuerzel) || a.key.localeCompare(b.key));
+}
+
+/**
+ * Der ganze artikelscharfe Kontext fürs Verweis-Popover (A7): Entscheide +
+ * Materialien parallel geladen. Rein projizierend, deterministisch je Shard-Stand.
+ */
+export async function kontextFuerArtikel(erlassKey: string, artikelToken: string): Promise<ArtikelKontext> {
+  const [entscheide, materialien] = await Promise.all([
+    leitfaelleFuerArtikel(erlassKey, artikelToken),
+    materialienFuerArtikel(erlassKey, artikelToken),
+  ]);
+  return { entscheide, materialien };
 }
 
 /**

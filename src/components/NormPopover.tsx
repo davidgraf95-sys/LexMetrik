@@ -5,6 +5,7 @@ import { istSchliessTaste } from '../lib/normtext/tasten';
 import { bestimmePassusZiel } from '../lib/normtext/passusZiel';
 import { usePaneSteuerung } from './layout/usePaneLayout';
 import { ArtikelBody } from './normtext/ArtikelBody';
+import { VerweisKontext } from './kontext/VerweisKontext';
 
 // Norm-Vorschau-Popover (§7 Zitat-Ausnahme): zeigt den Volltext des zitierten
 // Artikels aus einem Snapshot, die zitierte Stelle hervorgehoben, mit Stand +
@@ -161,6 +162,13 @@ export function NormPopover({ snapshot, passus, onClose }: {
           Snapshot — massgeblich ist die amtliche Fassung (Live-Link oben).
         </p>
       </div>
+
+      {/* W2·5d U-VERWEIS/A7: artikelscharfe Verzahnung UNTER dem Wortlaut+Fuss —
+          massgebliche Entscheide, klar abgetrennt die amtlichen Materialien
+          (Top-n + Zähler, dieselben Shards wie Reader-Fuss/Kontext-Panel). ANS
+          ENDE angehängt: das lazy Einwachsen verschiebt keinen Inhalt darüber
+          (CLS 0 by construction, §15.2). */}
+      <VerweisKontext erlassKey={readerKey} artikel={snapshot.artikel} artikelZitat={titel} />
     </div>
   );
 }

@@ -36,6 +36,12 @@ test('DSG-Reader @390: async Soft-Law-Dokument erscheint, kein horizontaler Over
   await page.setViewportSize({ width: 390, height: 900 })
   await page.goto('/gesetze/bund/DSG')
 
+  // W2·5d U-VERWEIS/A13: reine Erlass-Ebene-Kanten liegen jetzt DEZENTER hinter
+  // dem Zähler («n Dokumente auf Erlass-Ebene», <details>) — erst aufklappen.
+  const zaehler = page.getByText(/Dokumente? auf Erlass-Ebene/)
+  await expect(zaehler).toBeVisible({ timeout: 15000 })
+  await zaehler.click()
+
   // Ein per Adapter erfasstes EDÖB-DB-Dokument (nur im register.json + Shard, NICHT
   // im in-Bundle-Register) — beweist den async-Loader + Merge.
   await expect(
