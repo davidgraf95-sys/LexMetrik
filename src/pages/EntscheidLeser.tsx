@@ -379,7 +379,7 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam }: { schlues
           {snap.leitcharakter === 'leitentscheid' && <StatusBadge praedikat="leitentscheid" interaktiv />}
           <span className="lc-badge lc-badge-soft uppercase" title={SPRACH_LABEL[snap.sprache]}>{snap.sprache}</span>
           {snap.kuratierung === 'maschinell' && <StatusBadge praedikat="maschinell" />}
-          <span className="ml-auto inline-flex items-center gap-2">
+          <span className="ml-auto inline-flex flex-wrap items-center justify-end gap-2 gap-y-1.5">
             {/* Amtliche Quelle direkt oben erreichbar (massgebliche Fassung, §8) —
                 folgt der Ansicht (Voll → Urteil/aza, Auszug → BGE-Sammlung). */}
             <a href={massgeblicheUrl} target="_blank" rel="noopener noreferrer"
@@ -388,7 +388,10 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam }: { schlues
               ↗ massgebliche Fassung{massgeblichFehlt && <span className="text-ink-500"> (Urteil n. v.)</span>}
             </a>
             {/* R17: Lese-Schriftgrösse */}
-            <span className="inline-flex items-stretch rounded border border-line overflow-hidden" role="group" aria-label="Schriftgrösse">
+            {/* shrink-0: die Schlusszeile ist ein flex-wrap-Streifen; ohne dies
+                staucht der Flex die overflow-hidden-Gruppe bei 390 unter ihre
+                Inhaltsbreite und beschnitt «A− A+» (Responsive-Audit D5). */}
+            <span className="inline-flex shrink-0 items-stretch rounded border border-line overflow-hidden" role="group" aria-label="Schriftgrösse">
               <button type="button" onClick={() => setFs(fsIdx - 1)} disabled={fsIdx === 0}
                 className="min-h-6 px-2 py-1 text-ink-600 hover:bg-paper-sunken disabled:opacity-40" title="Schrift kleiner">A−</button>
               <button type="button" onClick={() => setFs(fsIdx + 1)} disabled={fsIdx === FS_STUFEN.length - 1}
