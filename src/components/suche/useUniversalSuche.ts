@@ -44,7 +44,19 @@ export interface UniversalSucheErgebnis {
   abdeckung: Abdeckung | null;
 }
 
-export function useUniversalSuche(q: string): UniversalSucheErgebnis {
+/** Optionen für die /suche-Vollseite (S5): grösseres Artikel-Limit + ungekappte
+ *  Gruppen. Ohne Optionen bleibt das Dropdown-Verhalten unverändert (Kappung 6,
+ *  40 Artikel-Treffer). */
+export interface UniversalSucheOpt {
+  /** Anzahl gesuchter Artikel-Volltext-Treffer (Default 40 = Dropdown). */
+  artikelLimit?: number;
+  /** Kappung je Gruppe (Default 6 = Dropdown; die /suche-Seite gibt grosszügig). */
+  kappung?: number;
+}
+
+export function useUniversalSuche(q: string, opt: UniversalSucheOpt = {}): UniversalSucheErgebnis {
+  const artikelLimit = opt.artikelLimit ?? 40;
+  const kappung = opt.kappung ?? 6;
   const [presetSucheFn, setPresetSucheFn] = useState<((s: string, limit?: number) => PresetIndexEintrag[]) | null>(null);
   const [artikelSucheFn, setArtikelSucheFn] = useState<((s: string, limit?: number) => SuchTreffer[]) | null>(null);
   const [gesetze, setGesetze] = useState<BrowseErlass[] | null>(null);
@@ -111,8 +123,8 @@ export function useUniversalSuche(q: string): UniversalSucheErgebnis {
   // universalSuche.ts) → das Entkoppeln ändert nur das WANN, nicht das WAS (§6.4).
   const qArtikel = useDeferredValue(q);
   const artikelTreffer = useMemo(
-    () => (artikelSucheFn ? artikelSucheFn(qArtikel, 40) : null),
-    [artikelSucheFn, qArtikel],
+    () => (artikelSucheFn ? artikelSucheFn(qArtikel, artikelLimit) : null),
+    [artikelSucheFn, qArtikel, artikelLimit],
   );
 
   const gruppen = useMemo(
@@ -131,7 +143,7 @@ export function useUniversalSuche(q: string): UniversalSucheErgebnis {
         artikel: artikelTreffer,
         entscheide,
         materialien,
-      });
+      }, kappung);
       const sprung = sprungGruppe(direkt) ?? bgeSprungGruppe(bge);
       return [
         ...(sprung ? [sprung] : []),
@@ -139,7 +151,7 @@ export function useUniversalSuche(q: string): UniversalSucheErgebnis {
         ...(onlineGruppe ? [onlineGruppe] : []),
       ];
     },
-    [q, direkt, bge, presetSucheFn, artikelTreffer, gesetze, entscheide, materialien, onlineGruppe],
+    [q, direkt, bge, presetSucheFn, artikelTreffer, gesetze, entscheide, materialien, onlineGruppe, kappung],
   );
   const allesGeladen = presetSucheFn !== null && artikelSucheFn !== null && gesetze !== null && entscheide !== null && materialien !== null;
 

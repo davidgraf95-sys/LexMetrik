@@ -1,15 +1,25 @@
 import type { SuchTreffer } from '../universalSuche';
-import { expandiereSuchbegriff } from './vokabular';
+import { sucherTerme, rangiere, type RankEintrag } from './artikelRanking';
 
 // ─── Artikel-Volltextsuche (ROADMAP Schritt 5, FlexSearch) ──────────────────
 //
-// LAZY: FlexSearch-Lib UND der ~4 MB (gzip) Bund-Index werden erst beim ERSTEN
-// Aufruf dynamisch geladen und client-seitig zu einem Index gebaut — nie im
-// Haupt-Bundle (§3/§6.4: eigener Chunk, nur Ladezeitpunkt). Danach gecacht.
-// Term-/Zitat-Suche (z. B. «243 ZPO», «Notwehr»), KEINE semantische Suche —
-// deklinationsabhängige Phrasen treffen unscharf (§8, ehrlich kommuniziert).
+// LAZY: FlexSearch-Lib UND der Bund-Index werden erst beim ERSTEN Aufruf dynamisch
+// geladen und client-seitig zu einem Index gebaut — nie im Haupt-Bundle (§3/§6.4:
+// eigener Chunk, nur Ladezeitpunkt). Danach gecacht. Term-/Zitat-Suche (z. B.
+// «243 ZPO», «Notwehr»), KEINE semantische Suche — deklinationsabhängige Phrasen
+// treffen unscharf (§8, ehrlich kommuniziert).
+//
+// UI-NAV S4: FlexSearch liefert nur noch den RECALL (Kandidatenmenge); die
+// Reihenfolge bestimmt die deterministische Relevanz-Schicht artikelRanking.ts
+// (Sachüberschrift-Boost + Termfrequenz + Kernerlass-Priorität + Synonyme). Feld
+// `m` (Marginalie/Gliederung) macht Alltagsbegriffe wie «Miete» auffindbar, die
+// im Artikeltext nie vorkommen (K10: dasselbe Daten-Sidecar, das der Reader nutzt).
 
-interface IndexEintrag { k: string; ku: string; a: string; l: string; t: string }
+interface IndexEintrag extends RankEintrag { k: string; ku: string; a: string; l: string; m: string; n: string; g: string; t: string }
+
+// Kandidaten-Pool: deutlich grösser als das Anzeige-Limit, damit die Re-Rangierung
+// die wirklich relevanten Treffer aus einer breiten Recall-Menge heben kann.
+const POOL = 300;
 
 let suchFn: ((q: string, limit?: number) => SuchTreffer[]) | null = null;
 let ladePromise: Promise<(q: string, limit?: number) => SuchTreffer[]> | null = null;
@@ -31,6 +41,93 @@ function snippet(text: string, q: string): string {
   return (start > 0 ? '… ' : '') + text.slice(start, ende).trim() + (ende < text.length ? ' …' : '');
 }
 
+function treffer(e: IndexEintrag, q: string): SuchTreffer {
+  return {
+    id: `art:${e.k}:${e.a}`,
+    // Label: Anzeige-Kürzel (e.ku, «StGB»); href: ROUTEN-Key (e.k, «STGB»).
+    label: `${e.l} ${e.ku}`,
+    untertitel: snippet(e.t, q),
+    marke: { text: 'Gesetzestext', ton: 'soft' as const, redundant: true },
+    href: `/gesetze/bund/${encodeURIComponent(e.k)}#art-${e.a}`,
+  };
+}
+
+// Minimal-Typen für die FlexSearch-Document-Oberfläche (die Lib bringt keine
+// passenden ESM-Typen für diese Nutzung mit).
+interface DocLike {
+  add(doc: { id: number; t: string; l: string; m: string; n: string; g: string }): void;
+  search(q: string, opt: { limit: number; suggest: boolean }): { field: string; result: (number | string)[] }[];
+}
+type FlexLike = {
+  Document: new (cfg: unknown) => DocLike;
+  Charset?: { LatinBalance?: unknown };
+};
+
+/**
+ * Baut die synchrone Suchfunktion aus den Index-Einträgen + der FlexSearch-Lib.
+ * Herausgezogen (§5), damit der Query-Testset-Test (src/tests/suche/…) exakt
+ * dieselbe Pipeline (Recall + Re-Rangierung) gegen den echten Korpus fahren kann.
+ */
+export function baueSuchFn(eintraege: IndexEintrag[], FlexSearch: FlexLike): (q: string, limit?: number) => SuchTreffer[] {
+  const Document = FlexSearch.Document;
+  const Charset = FlexSearch.Charset;
+  const idx = new Document({
+    document: {
+      id: 'id',
+      index: [
+        { field: 't', tokenize: 'forward' },
+        { field: 'l', tokenize: 'forward' },
+        // S4: Marginalie (primär + nachrangig) + Gliederung als eigene Recall-
+        // Felder — «Miete» findet so «Achter Titel: Die Miete», auch wo der
+        // Artikeltext das Wort nie führt.
+        { field: 'm', tokenize: 'forward' },
+        { field: 'n', tokenize: 'forward' },
+        { field: 'g', tokenize: 'forward' },
+      ],
+    },
+    encoder: Charset?.LatinBalance,
+  });
+  eintraege.forEach((e, i) => idx.add({
+    id: i,
+    // Kürzel UND Routen-Key mitindexieren (z. B. «StGB» und «STGB», «ArGV 1»/«ARGV_1»).
+    t: (e.l + ' ' + e.ku + ' ' + e.k + ' ' + e.t).toLowerCase(),
+    l: (e.l + ' ' + e.ku + ' ' + e.k).toLowerCase(),
+    m: e.m.toLowerCase(),
+    n: e.n.toLowerCase(),
+    g: e.g.toLowerCase(),
+  }));
+
+  // Feld-Priorität im Recall: Marginalie/Gliederung ZUERST einsammeln, damit
+  // topische Treffer nicht von der (oft grösseren) Textmenge aus dem Pool
+  // gedrängt werden. Kritisch für Fälle wie OR 253, dessen Artikeltext das Wort
+  // «Miete» nie führt — er ist NUR über die Gliederung «Die Miete» auffindbar.
+  const FELD_PRIO: Record<string, number> = { m: 0, n: 1, g: 2, l: 3, t: 4 };
+
+  return (q: string, limit = 40): SuchTreffer[] => {
+    // RECALL: Original-Query + Vokabular-Synonyme (OCL-portiert, §2-deterministisch)
+    // über alle Felder sammeln — grosser Pool, damit die Re-Rangierung die besten
+    // Treffer heben kann (z. B. «vaterschaftsurlaub» → «Urlaub … Geburt»).
+    const { orig, syn } = sucherTerme(q);
+    const terme = [q.toLowerCase(), ...orig, ...syn];
+    const gesehen = new Set<number>();
+    const kandidaten: IndexEintrag[] = [];
+    for (const term of terme) {
+      if (kandidaten.length >= POOL) break;
+      const buckets = idx.search(term, { limit: POOL, suggest: true })
+        .slice()
+        .sort((a, b) => (FELD_PRIO[a.field] ?? 9) - (FELD_PRIO[b.field] ?? 9));
+      for (const bucket of buckets) {
+        for (const id of bucket.result) {
+          const n = id as number;
+          if (!gesehen.has(n)) { gesehen.add(n); kandidaten.push(eintraege[n]); }
+        }
+      }
+    }
+    // RE-RANGIERUNG (S4): deterministische Relevanz statt FlexSearch-Roh-Ordnung.
+    return rangiere(kandidaten, q, limit).map((e) => treffer(e, q));
+  };
+}
+
 async function baue(): Promise<(q: string, limit?: number) => SuchTreffer[]> {
   const [flex, daten] = await Promise.all([
     import('flexsearch'),
@@ -39,53 +136,7 @@ async function baue(): Promise<(q: string, limit?: number) => SuchTreffer[]> {
       return r.json() as Promise<{ eintraege: IndexEintrag[] }>;
     }),
   ]);
-  const FlexSearch = (flex as unknown as { default?: unknown }).default ?? flex;
-  const Document = (FlexSearch as { Document: new (cfg: unknown) => DocLike }).Document;
-  const Charset = (FlexSearch as { Charset?: { LatinBalance?: unknown } }).Charset;
-
-  const eintraege = daten.eintraege;
-  const idx = new Document({
-    document: { id: 'id', index: [{ field: 't', tokenize: 'forward' }, { field: 'l', tokenize: 'forward' }] },
-    encoder: Charset?.LatinBalance,
-  });
-  eintraege.forEach((e, i) => idx.add({
-    id: i,
-    // Kürzel UND Routen-Key mitindexieren (z. B. «StGB» und «STGB», «ArGV 1»/«ARGV_1»).
-    t: (e.l + ' ' + e.ku + ' ' + e.k + ' ' + e.t).toLowerCase(),
-    l: (e.l + ' ' + e.ku + ' ' + e.k).toLowerCase(),
-  }));
-
-  suchFn = (q: string, limit = 40): SuchTreffer[] => {
-    // Original zuerst (behält das FlexSearch-Ranking), dann Vokabular-
-    // Erweiterungen (OCL-portiert, §2-deterministisch): so trifft z. B.
-    // «vaterschaftsurlaub» auch den Normtext, der «Urlaub … Geburt» sagt.
-    const terme = [q.toLowerCase(), ...expandiereSuchbegriff(q)];
-    const gesehen = new Set<number | string>();
-    const ids: (number | string)[] = [];
-    for (const term of terme) {
-      if (ids.length >= limit) break;
-      for (const id of idx.search(term, { limit, suggest: true }).flatMap((r) => r.result)) {
-        if (!gesehen.has(id)) { gesehen.add(id); ids.push(id); }
-      }
-    }
-    return ids.slice(0, limit).map((i) => {
-      const e = eintraege[i as number];
-      return {
-        id: `art:${e.k}:${e.a}`,
-        // Label: Anzeige-Kürzel (e.ku, «StGB»); href: ROUTEN-Key (e.k, «STGB»).
-        label: `${e.l} ${e.ku}`,
-        untertitel: snippet(e.t, q),
-        marke: { text: 'Gesetzestext', ton: 'soft' as const, redundant: true },
-        href: `/gesetze/bund/${encodeURIComponent(e.k)}#art-${e.a}`,
-      };
-    });
-  };
+  const FlexSearch = ((flex as unknown as { default?: unknown }).default ?? flex) as FlexLike;
+  suchFn = baueSuchFn(daten.eintraege, FlexSearch);
   return suchFn;
-}
-
-// Minimal-Typen für die FlexSearch-Document-Oberfläche (die Lib bringt keine
-// passenden ESM-Typen für diese Nutzung mit).
-interface DocLike {
-  add(doc: { id: number; t: string; l: string }): void;
-  search(q: string, opt: { limit: number; suggest: boolean }): { field: string; result: (number | string)[] }[];
 }

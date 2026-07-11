@@ -16,6 +16,7 @@ import { fileURLToPath } from 'node:url';
 
 const wurzel = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const BUND = resolve(wurzel, 'public/normtext/bund');
+const STRUKTUR = resolve(wurzel, 'public/normtext/struktur/bund');
 const ZIEL = resolve(wurzel, 'public/such-index/artikel-bund.json');
 
 interface Block { absatz?: string; text?: string; items?: { marke?: string; text?: string }[] }
@@ -31,12 +32,52 @@ function artikelText(bloecke: Block[]): string {
   return teile.join(' ').replace(/\s+/g, ' ').trim();
 }
 
+// ── Sachüberschrift (Marginalie + Gliederung) je Artikel (UI-NAV S4) ─────────
+//
+// Der Ranking-Boost «Marginalie/Sachüberschrift» (S4/#40) braucht den Randtitel
+// UND den Titel-/Abschnitts-Pfad als DURCHSUCHBARES Feld. Beides liegt bereits in
+// public/normtext/struktur/bund/<key>.json (artikel[a].marginalie + .gliederung) —
+// derselbe Datenbestand, aus dem der Reader die Randtitel rendert (K10: KEIN
+// Zweit-Index, nur ein zusätzliches Feld auf denselben Daten). So trifft die
+// Alltags-Query «Miete» über die Gliederung «Achter Titel: Die Miete» direkt die
+// mietrechtlichen Artikel (OR 253 ff.), die im Artikeltext das Wort «Miete» selbst
+// nie führen (FlexSearch-forward: «miete» ist kein Präfix von «mietvertrag»).
+interface StrukturArtikel { marginalie?: string[]; gliederung?: { ebene?: number; label?: string }[] }
+interface StrukturDatei { artikel?: Record<string, StrukturArtikel> }
+
+/** Enumerator-Präfix eines Randtitels entfernen («G. Verjährung» → «Verjährung»,
+ *  «1. Zehn Jahre» → «Zehn Jahre», «a. Grundsatz» → «Grundsatz»). Deterministisch;
+ *  reine Text-Säuberung, damit die Buchstaben-/Ziffern-Zähler nicht als Suchrauschen
+ *  in den Index geraten. */
+function ohneEnumerator(s: string): string {
+  return s.replace(/^\s*(?:[0-9]+|[IVXLCDMivxlcdm]+|[A-Za-z])[.)]\s+/, '').trim();
+}
+
+/** Labels entdoppeln + säubern (Enumerator weg, Whitespace normalisiert), in
+ *  stabiler Reihenfolge zu einem Text joinen. */
+function labelText(rohe: (string | undefined)[]): string {
+  const teile: string[] = [];
+  const sehen = new Set<string>();
+  for (const roh of rohe) {
+    const s = ohneEnumerator((roh ?? '').replace(/\s+/g, ' ').trim());
+    if (s && !sehen.has(s.toLowerCase())) { sehen.add(s.toLowerCase()); teile.push(s); }
+  }
+  return teile.join(' · ');
+}
+
 // Kompaktes Schema (kurze Keys → kleinere Datei): k=ROUTEN-Key (Dateiname-Stamm
 // = ERLASS_REGISTER.key, für /gesetze/bund/<k>), ku=Anzeige-Kürzel (z. B. «StGB»),
-// a=artikel, l=label, t=text. ebene ist immer 'bund'.
+// a=artikel, l=label, m=PRIMÄRE Marginalie (oberster Randtitel = Hauptthema des
+// Artikels), n=nachrangige Marginalie (tiefere Randtitel-Stufen), g=Gliederung
+// (Titel-/Abschnitts-Pfad), t=text. ebene ist immer 'bund'.
+// m/n/g werden GETRENNT geführt (S4): trifft die Query die primäre Marginalie ODER
+// den Gliederungs-Titel, ist der Artikel dem Thema GEWIDMET (OR 127 «Verjährung»,
+// OR 492 im Titel «Die Bürgschaft»); trifft sie nur eine nachrangige Marginalie,
+// NENNT der Artikel das Thema bloss (OR 121 «Verrechnung … Bei Bürgschaft»). Die
+// Rangschicht (artikelRanking.ts) wertet das unterschiedlich.
 // WICHTIG (§8): k MUSS der Dateiname-Stamm sein, NICHT das interne `erlass`-Feld —
 // 71/218 Erlasse haben Kürzel ≠ Dateiname (StGB/STGB, AdoV/ADOV …); sonst tote Links.
-interface IndexEintrag { k: string; ku: string; a: string; l: string; t: string }
+interface IndexEintrag { k: string; ku: string; a: string; l: string; m: string; n: string; g: string; t: string }
 
 export function baueBundIndex(): { erzeugt: string; ebene: 'bund'; eintraege: IndexEintrag[] } {
   const eintraege: IndexEintrag[] = [];
@@ -44,11 +85,19 @@ export function baueBundIndex(): { erzeugt: string; ebene: 'bund'; eintraege: In
     const key = datei.replace(/\.json$/, ''); // = Routen-Key (ERLASS_REGISTER.key)
     let snap: { eintraege?: Eintrag[] };
     try { snap = JSON.parse(readFileSync(resolve(BUND, datei), 'utf8')); } catch { continue; }
+    // Sidecar-Strukturdatei (Marginalie/Gliederung) — fehlt sie, bleibt m leer (§8).
+    let struktur: StrukturDatei = {};
+    try { struktur = JSON.parse(readFileSync(resolve(STRUKTUR, datei), 'utf8')); } catch { /* keine Struktur → m='' */ }
     for (const e of snap.eintraege ?? []) {
       if (!e.bloecke || e.bloecke.length === 0) continue;
       const t = artikelText(e.bloecke);
       if (!t) continue;
-      eintraege.push({ k: key, ku: e.erlass, a: e.artikel, l: e.artikelLabel, t });
+      const sa = struktur.artikel?.[e.artikel];
+      const marg = sa?.marginalie ?? [];
+      const m = labelText(marg.slice(0, 1)); // primäre (oberste) Marginalie = Hauptthema
+      const n = labelText(marg.slice(1)); // nachrangige Randtitel-Stufen
+      const g = labelText((sa?.gliederung ?? []).map((x) => x.label));
+      eintraege.push({ k: key, ku: e.erlass, a: e.artikel, l: e.artikelLabel, m, n, g, t });
     }
   }
   // Stabile Reihenfolge (erlass, dann Datei-Reihenfolge der Artikel bleibt erhalten).

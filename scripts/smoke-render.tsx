@@ -24,6 +24,7 @@ import { VorlagenUebersicht } from '../src/pages/VorlagenUebersicht';
 import { Shell } from '../src/components/layout/Shell';
 import { Kontakt } from '../src/pages/Kontakt';
 import { Datenschutz } from '../src/pages/Datenschutz';
+import { Suche } from '../src/pages/Suche';
 import { RechnerVerzugszins } from '../src/pages/RechnerVerzugszins';
 import { RechnerZpo } from '../src/pages/RechnerZpo';
 import { RechnerKuendigung } from '../src/pages/RechnerKuendigung';
@@ -54,6 +55,7 @@ const SEITEN: [string, React.ComponentType][] = [
   ['Shell', () => <Shell><Startseite /></Shell>],
   ['Kontakt', Kontakt],
   ['Datenschutz', Datenschutz],
+  ['Suche', Suche],
   ['VorlageTestament', VorlageTestament],
   ['VorlagePatientenverfuegung', VorlagePatientenverfuegung],
   ['VorlageVorsorgeauftrag', VorlageVorsorgeauftrag],
