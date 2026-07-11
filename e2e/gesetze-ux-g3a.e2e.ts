@@ -39,8 +39,13 @@ test('Kopf-Label: Verordnung wird als «Verordnung» betitelt, nicht «Bundesges
   await expect(overline).not.toContainText('Bundesgesetz');
 });
 
-test('Kopf-Label: Gesetz bleibt «Bundesgesetz» (OR)', async ({ page }) => {
-  await warteReader(page, '/gesetze/bund/OR');
+// CI-Härtung (§194-Muster, QS-PERF): der 935-KB/1686-Artikel-OR starvte den
+// gedrosselten 2-Kern-Runner nahe an die 20-s-warteReader-Latte (16–19 s lokal
+// unter Contention). Die Kopf-Label-Semantik («Bundesgesetz» für grundart GESETZ)
+// ist seitengrössen-unabhängig → Umzug auf das kleine ELG (~50 KB), ebenfalls ein
+// Bundesgesetz. Der OR-Fall bleibt im Linien-Kanon-Tor (check:linien-kanon) gegated.
+test('Kopf-Label: Gesetz bleibt «Bundesgesetz» (ELG)', async ({ page }) => {
+  await warteReader(page, '/gesetze/bund/ELG');
   await expect(page.locator('.lc-leser > header .lc-overline').first()).toContainText('Bundesgesetz');
 });
 
@@ -48,12 +53,18 @@ test('Kopf-Label: Gesetz bleibt «Bundesgesetz» (OR)', async ({ page }) => {
 // Davids A8-Befund («zgb sehr viele, arg fast keine») geheilt: der Auto-Default
 // folgt dem TATSÄCHLICHEN Aufbau, nicht der grundart-Schublade. NEGATIV: die tiefe
 // Kodifikation bleibt ruhig; POSITIV: das flache Gesetz zeigt seine Ebene.
-test('U-LINIEN: tiefe Kodifikation ZGB bleibt im Auto-Default RUHIG (Guide transparent)', async ({ page }) => {
-  await warteReader(page, '/gesetze/bund/ZGB#art-684');
+// CI-Härtung (§194-Muster, QS-PERF): das 606-KB-ZGB starvte den gedrosselten
+// 2-Kern-Runner bis an die 20-s-warteReader-Latte (19 s lokal unter Contention).
+// Die geprüfte Semantik («tiefe Kodifikation, strukturTiefe≥3 → Auto-Guide AUS»)
+// ist seitengrössen-unabhängig → Umzug auf das kleine BUEG (~34 KB, strukturTiefe 3,
+// dieselbe autoGuide=false-Klasse wie ZGB/OR). ZGB/OR bleiben als Referenz-Verdikte
+// im Aufbau-Tor (check:linien-kanon) über den vollen Korpus gegated.
+test('U-LINIEN: tiefe Kodifikation BUEG bleibt im Auto-Default RUHIG (Guide transparent)', async ({ page }) => {
+  await warteReader(page, '/gesetze/bund/BUEG#art-10');
   await expect(page.locator('.lc-leser')).toHaveAttribute('data-guide-auto', 'aus');
   await expect(page.locator('html')).toHaveAttribute('data-linien', 'auto');
-  await expect(page.locator('#art-684')).toBeVisible({ timeout: 20000 });
-  const farbe = await guideFarbe(page, 'art-684');
+  await expect(page.locator('#art-10')).toBeVisible({ timeout: 20000 });
+  const farbe = await guideFarbe(page, 'art-10');
   expect(farbe, 'Guide-Container bleibt strukturell im DOM').not.toBeNull();
   expect(farbe).toBe('rgba(0, 0, 0, 0)'); // tiefe Kodifikation → ruhig, Guide unsichtbar
 });

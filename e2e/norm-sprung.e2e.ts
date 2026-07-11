@@ -207,8 +207,22 @@ test.describe('Norm-Sprung in der normalen Suchleiste (A5)', () => {
     // nur oben an und verschiebt nichts → CLS ≈ 0 (§15.2).
     const cls = await page.evaluate(() => (window as unknown as { __cls?: number }).__cls ?? 0)
     expect(cls, `CLS ${cls}`).toBeLessThan(0.05)
-    // Springen: die Navigation selbst muss erfolgen (Funktions-Treue), ohne
-    // Wall-Clock-Wand (Reader-Seitenlast unter Drossel ist kein Interaktions-Lag).
+    // SPRINGEN (deterministisch — CI-Härtung QS-PERF, §15.3-Nachzug zu #183):
+    // Enter OHNE aktive Pfeil-Auswahl nimmt den OBERSTEN Treffer = den Norm-Sprung
+    // (exakt der A5-Kontrakt des P3-Tests oben). Die vorangehende Pfeil-Navigation
+    // hat NUR die Reaktivität bewiesen (aria-activedescendant); sie darf den Sprung
+    // NICHT steuern, denn `aktivIndex` ist ein POSITIONS-Index in die async
+    // wachsende Trefferliste: die per useDeferredValue entkoppelte ~4-MB-
+    // Artikelgruppe (#183) landet «einen Tick später», sodass ein arrow-gesetzter
+    // Index unter Drossel auf einen nachträglich eingeschobenen Artikel-Treffer
+    // zeigt (real reproduziert: Enter landete auf SCHKG#art-257 statt OR). Ein
+    // Query-Reset (leeren → neu tippen) setzt aktivIndex auf -1 (HeaderSuche.tsx),
+    // damit Enter deterministisch den Sprung nimmt. Alles WEITERHIN unter Drossel —
+    // der Fluiditäts-Beweis (tippen → Sprung sichtbar → springen) bleibt scharf.
+    await feld.fill('')
+    await expect(box).toBeHidden()
+    await feld.fill('OR 257d')
+    await expect(box.getByText('Sprung', { exact: true })).toBeVisible({ timeout: 12000 })
     await feld.press('Enter')
     await expect(page).toHaveURL(/\/gesetze\/bund\/OR#art-257_d$/, { timeout: 15000 })
     await client.send('Emulation.setCPUThrottlingRate', { rate: 1 })
