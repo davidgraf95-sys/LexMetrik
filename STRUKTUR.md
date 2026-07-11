@@ -27,6 +27,10 @@ Steuer-Doks ihr Budget wieder überschreiten. Offene Abnahmen sind davon unberü
 (Spiegel: `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 11.7.2026 — QS-TOK/T19 Warn-Injektions-Entfernung (Prompt-Cache-Hygiene, Worktree `lm-qstok-t19`, Branch `feat/qstok-t19`)
+
+**Auftrag:** T19 (nach T1/#176) — die git-zustandsabhängige, byte-instabile SessionStart-Warn-Injektion aus `struktur-aktuell.py` aus der SessionStart-Kette (`.claude/settings.json`) entfernen, damit der Sitzungs-Präfix byte-stabil bleibt (Prompt-Cache-Treffer). **Empirie:** bei realem STRUKTUR-Lag injizierte der Hook 1101 Byte/937 Zeichen variablen `additionalContext`; dieselbe Lag-Lage nach T19 = 0 Byte. Schutzfunktion nicht ersatzlos gestrichen: trägt mechanisch `struktur-rotieren.py` (T1-Rotation + size-basierter Re-Akkumulations-Wächter); Lag-Audit bleibt On-Demand als `npm run struktur:aktuell` (verhaltensgleich, stdin-tty-sicher). CLAUDE.md-Kopf + FAHRPLAN §Stand + `dispatch-template.md §7` nachgezogen. Gegenprüfung n/a (Prozess-Hook).
+
 ## Session 11.7.2026 — OpenCaseLaw Baustein ① LexWork-Kantons-API: POC/Mess-Verifikation (W2·6, Worktree `lm-ocl-lexwork`, Branch `feat/ocl-lexwork-kantone`, doc-only)
 
 **Auftrag:** OCL-Baustein 1 (LexWork-Kantons-API für 19 Kt.) bauen, Go David 10.7. **Kernbefund: bereits gebaut+live — kein Neubau** (Neubau = §1/§6-Verstoss, Golden-Churn auf 1 232 Snapshots). Adapter `scripts/normtext/adapter-lexwork.ts` (fetch→`xhtml_tol`, Drift `version_uid`), Discovery `lexfind-discovery.ts` (host-agnostisch, folgt Redirects), 1 232 Snapshots (alle 26 Kt.), Drift-Tor `check:normtext-netz` existieren produktiv — alle drei Auftrags-Bau-Items sind da.

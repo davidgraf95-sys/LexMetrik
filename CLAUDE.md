@@ -20,9 +20,13 @@ zieht in derselben Session oben eine ehrliche Session-Karte in `STRUKTUR.md`
 nach — STRUKTUR.md soll jederzeit den aktuellen Stand repräsentieren. Auch eine
 Parallel-/Autonom-Session (§12) erfüllt diese Pflicht; sieht sie fremde,
 undokumentierte Commits, trägt sie nur die fehlende Karte nach (nicht erneut
-umsetzen). Absicherung: der SessionStart-Hook `struktur-aktuell.py` meldet zu
-Sitzungsbeginn, wenn substanzielle Commits seit der letzten Karten-Pflege NICHT
-in STRUKTUR.md dokumentiert sind — diese Lücke wird dann zuerst geschlossen.
+umsetzen). Absicherung: der SessionStart-Hook `struktur-rotieren.py` hält
+STRUKTUR.md mechanisch schlank (rotiert erledigte Karten byte-genau ins Archiv +
+Re-Akkumulations-Wächter); das On-Demand-Audit `npm run struktur:aktuell` meldet
+auf Abruf, wenn substanzielle Commits seit der letzten Karten-Pflege NICHT in
+STRUKTUR.md dokumentiert sind — diese Lücke wird dann zuerst geschlossen. (Die
+früher bei jedem Sitzungsstart injizierte, git-zustandsabhängige Warnung ist
+zwecks Prompt-Cache-Stabilität aus der SessionStart-Kette entfernt, QS-TOK/T19.)
 
 ## §1 Oberstes Ziel: fachliche Korrektheit (Logik vor allem)
 

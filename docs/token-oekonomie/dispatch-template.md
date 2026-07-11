@@ -190,11 +190,11 @@ Wirkung ist **dollar-seitig** (höhere cacheRead-Quote), das Token-*Volumen* ble
 
 ## 7 · Offen / abhängig
 
-- **T19 Warn-Injektions-Entfernung** — hängt an **T1** (`struktur-rotieren.py`, PR #176 QS-TOK
-  P1-Rest). Solange #176 nicht gemergt ist, bleibt `.claude/hooks/struktur-aktuell.py` die
-  warnende SessionStart-Injektion. Sobald #176 auf main ist: die Warn-Injektion durch die stille
-  Rotation ablösen (dann ist der SessionStart-Präfix byte-stabil). **Nicht auf ungemergtem Stand
-  gebaut** (Vorgabe).
+- **T19 Warn-Injektions-Entfernung** — ✅ **erledigt** (11.7.2026, nach T1/#176). Die git-zustands-
+  abhängige (byte-instabile) SessionStart-Injektion aus `.claude/hooks/struktur-aktuell.py` ist aus
+  der SessionStart-Kette (`.claude/settings.json`) entfernt → Präfix byte-stabil. Die Schutzfunktion
+  trägt jetzt mechanisch `struktur-rotieren.py` (T1-Rotation rückt die Basis nach + Re-Akkumulations-
+  Wächter, size-basiert = stabil); das Lag-Audit bleibt als On-Demand-Werkzeug `npm run struktur:aktuell`.
 - **check:plan** ist auf `origin/main` bis zum Merge von #176 rot (`QS-TOK`-@meta verwaist);
   wird von #176 geheilt. P3 fixt das nicht selbst (P1b-Fläche).
 

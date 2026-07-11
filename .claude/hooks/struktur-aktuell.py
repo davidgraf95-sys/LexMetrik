@@ -1,12 +1,23 @@
 #!/usr/bin/env python3
-"""SessionStart-Hook (Auftrag David 22.6.2026): stellt sicher, dass STRUKTUR.md
-den aktuellen Stand repräsentiert.
+"""STRUKTUR.md-Lag-Audit — On-Demand (Auftrag David 22.6.2026; entkoppelt QS-TOK/T19).
 
-Hintergrund: Am 22.6. landeten PRs #37–#49 (z.T. autonome/Parallel-Sessions)
-auf main, OHNE dass die STRUKTUR.md-Session-Karte nachgezogen wurde — STRUKTUR.md
-ist aber laut CLAUDE.md der «erste Anlaufpunkt für den aktuellen Stand». Dieser
-Hook misst beim Sitzungsstart, wie weit STRUKTUR.md hinter HEAD zurückliegt, und
-injiziert bei Bedarf einen Hinweis als zusätzlichen Kontext (kein Block).
+Misst, wie weit STRUKTUR.md hinter HEAD zurückliegt, und meldet substanzielle
+Commits, für die noch keine Session-Karte gezogen wurde.
+
+**T19 (Prompt-Cache-Hygiene, 11.7.2026):** Dieser Check lief früher als
+SessionStart-Hook und injizierte die Meldung bei JEDEM Sitzungsstart als
+`additionalContext`. Weil die Meldung git-zustandsabhängig (Commit-Zahl + -Liste)
+und damit byte-INSTABIL ist, machte sie den SessionStart-Präfix in jeder Session
+verschieden und verhinderte den Prompt-Cache-Treffer. Ab T19 ist die Warn-
+Injektion aus der SessionStart-Kette ENTFERNT (`.claude/settings.json`); die
+Schutzfunktion (STRUKTUR.md aktuell halten) trägt jetzt mechanisch
+`struktur-rotieren.py` (T1: rotiert Karten byte-genau + committet `docs(STRUKTUR…)`,
+rückt damit die Basis nach + Re-Akkumulations-Wächter). Dieses Skript bleibt als
+**On-Demand-Audit** erhalten: `npm run struktur:aktuell` (bzw. direkt aufrufen)
+druckt dieselbe Lag-Analyse, ohne den Sitzungs-Präfix zu belasten.
+
+Ausgabe: bei SessionStart-Input (JSON auf stdin) das `hookSpecificOutput`-JSON
+wie bisher; bei manuellem Lauf ohne stdin dieselbe Analyse. Kein Lag → still.
 
 Mechanik:
 - Basis = jüngster Commit, der STRUKTUR.md berührt hat.
@@ -28,10 +39,13 @@ def git(repo, *args, timeout=15):
 
 
 def main():
-    try:
-        json.load(sys.stdin)  # Input konsumieren, Inhalt egal
-    except Exception:
-        pass
+    # SessionStart liefert JSON auf stdin; beim manuellen Lauf (npm run
+    # struktur:aktuell) ist stdin ein TTY/leer — dann nicht blockierend lesen.
+    if not sys.stdin.isatty():
+        try:
+            json.load(sys.stdin)  # Input konsumieren, Inhalt egal
+        except Exception:
+            pass
 
     repo = os.environ.get("CLAUDE_PROJECT_DIR") or os.path.dirname(
         os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
