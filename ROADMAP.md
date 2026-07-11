@@ -794,6 +794,23 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   Desktop+Mobil): tote Rückwege · Erlass-Key-case-insensitiv+hilfreiche Fehlseite · Anker-`--nt-stick` ·
   Kleinposten (Ergebnis-FAB-IO · Rechner-Filter · Streitwert-Leerzustand · Entwurf-Legende-Popover ·
   Entscheid-`?ansicht=` · «In neuem Reiter»-Toast+☰-Tooltip). Rest der Kette (Suche S1–S6 …) offen.
+- [ ] **5f · Design-Wärme & Atmosphäre (Ultracode-Synthese 11.7.)** *(`[OF]`, reine Darstellung/Token-Schicht)*:
+  <!-- @meta id: W2·11-DESIGN · status: ready · of: ja · blocker: null · dep: [] · kollision: [src/index.css, tailwind.config.js, DESIGN-REGLEMENT.md, scripts/check-design-tokens.ts, src/components/rechtsprechung, src/pages/EntscheidLeser.tsx] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-DESIGN-WAERME.md -->
+  Farbklima/Wärme/Typografie-Plan aus 48 Ultracode-Befunden + 3 Kritik-Linsen (reglement-treue ·
+  umsetzbarkeit · geschmacks-kohärenz). Fünf tragende Entscheide: **E1** Ein Papier, eine Tinte,
+  ein Winkel (OKLCH-Rekalibrierung der Neutralen auf Brass-Hue, kein zweiter Wärme-Kanal) ·
+  **E2** Brass ist Signal, nicht Klima (warm empfangen, kühl prüfen) · **E3** Zwei Stimmen
+  (Serif=Werkstoff/Sans=Werkzeug, Mono-Diät) · **E4** Ein Lese-Register (`--reading-ink`,
+  Kontrastfenster) · **E5** Rollen vor Stufen, Messung vor Geschmack (`check:farbwelt`-Tor).
+  Bau-Einheiten D-0 Mess-Fundament → D-1 Sofort-Fixes (FS-Bug · Overline-AA · danger-dark-1.4.11 ·
+  Lesespalte Regeste/Verdikt · Chevron · Motion-Dedup) → D-2 Rollen-Aliase+§13-Nachträge →
+  D-3 oklab-Mix → D-4 Ink-Wärme → D-5 Papier-Treppe → D-6 Dunkel-Paket → D-7 Lese-Register →
+  D-8 Wörterbuch-auf-Fläche+Mono-Diät; D-9 = David-Entscheide (Display-Serif · Typo-Rampe ·
+  Stripe-L) nur bereitgelegt. Fixpunkte: `--paper` hell/dunkel + C-1/C-2/C-3-Kalibrierung;
+  golden byte-gleich; §15 ohne Textur/Font-Zuwachs. **Vor jedem Schnitt Prod-Re-Audit**
+  (Befund-Vintage teils vor #201). Verworfen mit Grund (`--paper-warm`, Dark-Brass-Tausch,
+  Elevation-Neubau, Sepia-Modus u. a.). Detail: **[`FAHRPLAN-DESIGN-WAERME.md`](FAHRPLAN-DESIGN-WAERME.md)**.
+  Trailer `Roadmap: W2·11-DESIGN`.
 - [ ] **6 · Konsultieren-Klingen** *(`[OF]`, amtlich)*:
   <!-- @meta id: W2·6 · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->
   - **Mehrsprachiger Normvergleich DE/FR/IT** (Auslegungswerkzeug, Art. 14 PublG — alle drei
