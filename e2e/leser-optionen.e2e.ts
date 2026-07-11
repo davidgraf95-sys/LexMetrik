@@ -85,29 +85,26 @@ test('Options-Leiste: vier role=switch (V2·B-1 «Entscheide»); Fussnoten/Verwe
   await expect(html).toHaveAttribute('data-leitfaelle', 'an');
 });
 
-test('Linien-Toggle: explizit AN sichtbar → AUS transparent (Guide bleibt im DOM), persistiert über Reload', async ({ page }) => {
-  // BV ist eine tiefe Struktur (Gliederungstiefe 3) → im Auto-Default (U-LINIEN/A8)
-  // bleibt der Guide ruhig aus (data-guide-auto="aus"); der Container mit border-
-  // Breite BLEIBT aber im DOM. Ein expliziter Klick setzt den globalen Zustand und
-  // übersteuert den Aufbau-Default.
+test('Linien-Toggle: explizit AUS transparent (Guide bleibt im DOM), persistiert über Reload', async ({ page }) => {
+  // BV ist eine tiefe Struktur (Gliederungstiefe 3, dichte 8). V2·L-3 (David 10.7.,
+  // Umkehr #161): der Auto-Default zeigt jetzt AUCH bei tiefen Kodifikationen den
+  // EINEN Guide (data-guide-auto="an") — die Tiefe deckelt nicht mehr. Ein expliziter
+  // Klick setzt den globalen Zustand ('an'/'aus') und übersteuert den Aufbau-Default;
+  // der border-Container BLEIBT bei 'aus' im DOM (nur transparent).
   await warteReader(page, '/gesetze/bund/BV#art-8', 'art-8');
   await expect(page.locator('html')).toHaveAttribute('data-linien', 'auto');
-  await expect(page.locator('.lc-leser').first()).toHaveAttribute('data-guide-auto', 'aus');
-  const autoAus = await guide(page, 'art-8');
-  expect(autoAus, 'Guide-Container existiert (auch im Auto-Default)').not.toBeNull();
-  expect(parseFloat(autoAus!.width)).toBeGreaterThan(0);
-  expect(autoAus!.color).toBe('rgba(0, 0, 0, 0)'); // auto + tiefe Kodifikation → transparent (ruhig)
+  await expect(page.locator('.lc-leser').first()).toHaveAttribute('data-guide-auto', 'an');
+  const autoAn = await guide(page, 'art-8');
+  expect(autoAn, 'Guide-Container existiert (auch im Auto-Default)').not.toBeNull();
+  expect(parseFloat(autoAn!.width)).toBeGreaterThan(0);
+  expect(autoAn!.color).not.toBe('rgba(0, 0, 0, 0)'); // V2·L-3: tiefe Kodifikation zeigt den Guide
 
-  // A4: Switches liegen im «Ansicht»-Dropdown — öffnen (bleibt über beide Klicks offen).
+  // A4: Switches liegen im «Ansicht»-Dropdown — öffnen (bleibt über die Klicks offen).
   await ansichtOeffnen(page);
-  // POSITIV: «Linien» explizit AN → Kante sichtbar (nicht transparent).
-  await page.getByRole('switch', { name: 'Linien' }).click();
-  await expect(page.locator('html')).toHaveAttribute('data-linien', 'an');
-  const an = await guide(page, 'art-8');
-  expect(an!.color).not.toBe('rgba(0, 0, 0, 0)');
-
-  // NEGATIV: «Linien» AUS → Attribut gesetzt, Kante transparent, aber Element
-  // (border-Breite > 0) BLEIBT — kein Textknoten bewegt, kein display-Wechsel.
+  // NEGATIV: BV startet im Aufbau-Default sichtbar (V2·L-3) → erster Klick auf den
+  // effektiv-an-Schalter setzt explizit AUS. Attribut gesetzt, Kante transparent,
+  // aber Element (border-Breite > 0) BLEIBT — kein Textknoten bewegt, kein display-
+  // Wechsel.
   await page.getByRole('switch', { name: 'Linien' }).click();
   await expect(page.locator('html')).toHaveAttribute('data-linien', 'aus');
   const aus = await guide(page, 'art-8');
@@ -115,6 +112,16 @@ test('Linien-Toggle: explizit AN sichtbar → AUS transparent (Guide bleibt im D
   expect(parseFloat(aus!.width)).toBeGreaterThan(0);
   expect(aus!.color).toBe('rgba(0, 0, 0, 0)'); // transparent
   expect(aus!.padding).toBe('0px'); // Einzug kollabiert (flach)
+
+  // POSITIV: zweiter Klick → «Linien» explizit AN → Kante wieder sichtbar.
+  await page.getByRole('switch', { name: 'Linien' }).click();
+  await expect(page.locator('html')).toHaveAttribute('data-linien', 'an');
+  const an = await guide(page, 'art-8');
+  expect(an!.color).not.toBe('rgba(0, 0, 0, 0)');
+
+  // Zurück auf AUS für den Persistenz-Teil (dritter Klick).
+  await page.getByRole('switch', { name: 'Linien' }).click();
+  await expect(page.locator('html')).toHaveAttribute('data-linien', 'aus');
 
   // Persistenz + Pre-Paint: Reload stellt data-linien=aus wieder her.
   const ls = await page.evaluate(() => localStorage.getItem('lm.leser.optionen'));

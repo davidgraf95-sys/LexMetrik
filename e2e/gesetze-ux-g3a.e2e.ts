@@ -49,24 +49,28 @@ test('Kopf-Label: Gesetz bleibt «Bundesgesetz» (ELG)', async ({ page }) => {
   await expect(page.locator('.lc-leser > header .lc-overline').first()).toContainText('Bundesgesetz');
 });
 
-// ── U-LINIEN/A8: AUFBAU-abhängiger Linien-Default (data-guide-auto am .lc-leser) ─
+// ── U-LINIEN/A8 + V2·L-3: AUFBAU-abhängiger Linien-Default (data-guide-auto) ────
 // Davids A8-Befund («zgb sehr viele, arg fast keine») geheilt: der Auto-Default
-// folgt dem TATSÄCHLICHEN Aufbau, nicht der grundart-Schublade. NEGATIV: die tiefe
-// Kodifikation bleibt ruhig; POSITIV: das flache Gesetz zeigt seine Ebene.
-// CI-Härtung (§194-Muster, QS-PERF): das 606-KB-ZGB starvte den gedrosselten
-// 2-Kern-Runner bis an die 20-s-warteReader-Latte (19 s lokal unter Contention).
-// Die geprüfte Semantik («tiefe Kodifikation, strukturTiefe≥3 → Auto-Guide AUS»)
-// ist seitengrössen-unabhängig → Umzug auf das kleine BUEG (~34 KB, strukturTiefe 3,
-// dieselbe autoGuide=false-Klasse wie ZGB/OR). ZGB/OR bleiben als Referenz-Verdikte
-// im Aufbau-Tor (check:linien-kanon) über den vollen Korpus gegated.
-test('U-LINIEN: tiefe Kodifikation BUEG bleibt im Auto-Default RUHIG (Guide transparent)', async ({ page }) => {
-  await warteReader(page, '/gesetze/bund/BUEG#art-10');
+// folgt dem TATSÄCHLICHEN Aufbau, nicht der grundart-Schublade. V2·L-3 (David
+// 10.7., Umkehr #161): die TIEFE deckelt den Auto-Guide NICHT mehr — die ruhige
+// Klasse ist jetzt allein «Dichte < 2» (der EINE Guide wäre ein Per-Artikel-
+// Barcode statt einer Gruppierung). NEGATIV: dichte-armer Erlass bleibt ruhig;
+// POSITIV: das flache Gesetz zeigt seine Ebene.
+// Fixture-Wechsel BUEG → STG (deklariert, §6.3): das #210-Fixture BUEG
+// (strukturTiefe 3, dichteAmGuide 4) war gewählt, WEIL es unter der ALTEN Regel
+// autoGuide=false hatte — unter der L-3-Regel (dichte≥2 ⇒ AN) ist es autoGuide=true
+// und damit kein Ruhig-Fall mehr. STG (~104 KB, strukturTiefe 3, dichteAmGuide 1)
+// ist ein ECHTER Ruhig-Fall der neuen Regel: tief UND dichte-arm ⇒ Guide aus.
+// ZGB/OR (jetzt autoGuide=true) bleiben als Referenz-Verdikte im Aufbau-Tor
+// (check:linien-kanon) über den vollen Korpus gegated.
+test('U-LINIEN/L-3: dichte-armer Erlass STG bleibt im Auto-Default RUHIG (Guide transparent)', async ({ page }) => {
+  await warteReader(page, '/gesetze/bund/STG#art-10');
   await expect(page.locator('.lc-leser')).toHaveAttribute('data-guide-auto', 'aus');
   await expect(page.locator('html')).toHaveAttribute('data-linien', 'auto');
   await expect(page.locator('#art-10')).toBeVisible({ timeout: 20000 });
   const farbe = await guideFarbe(page, 'art-10');
   expect(farbe, 'Guide-Container bleibt strukturell im DOM').not.toBeNull();
-  expect(farbe).toBe('rgba(0, 0, 0, 0)'); // tiefe Kodifikation → ruhig, Guide unsichtbar
+  expect(farbe).toBe('rgba(0, 0, 0, 0)'); // dichte < 2 → ruhig, Guide unsichtbar (L-3)
 });
 
 test('U-LINIEN: flaches Gesetz ArG zeigt seine Ebene im Auto-Default (Guide sichtbar)', async ({ page }) => {
