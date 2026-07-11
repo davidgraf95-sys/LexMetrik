@@ -5,6 +5,7 @@ import type { NormSnapshot } from '../../lib/normtext/typen';
 import type { BrowseErlass } from '../../lib/normtext/browse-typen';
 import { ERLASS_REGISTER, type ErlassTyp, type Grundart } from '../../lib/normtext/register';
 import { GRUNDART_SEED } from '../../lib/normtext/grundart.generated';
+import { norm } from '../../lib/suche/normQuery';
 
 // M11 (§5 Verzahnung): Reverse-Resolver SR-Nummer → interner Erlass, ABGELEITET
 // aus dem Register (keine Handtabelle, §3/§5 eine Quelle). Nur Bund-Erlasse, die
@@ -148,6 +149,61 @@ export function richText(s: string, keyBase: string): ReactNode {
 // Fussnoten-Text mit klickbaren AS/BBl-Verweisen (die Label-Vorkommen werden
 // durch Anker ersetzt) und erhaltenen Hervorhebungen (G15). Reine Darstellung.
 export function escRe(s: string): string { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+
+// ── W2·10-UI-NAV/N0b: Fuzzy-Erlass-Vorschläge für die Fehlseite ──────────────
+// Deterministisch (§2 — kein LLM): normalisiert Anfrage + Kandidaten mit norm()
+// aus normQuery (dieselbe Normalform wie die Norm-Sprung-Auflösung, KEIN neuer
+// Index/K10) und rankt per Levenshtein-Distanz gegen Kürzel + Routen-Key des
+// Manifests. «ORR» → «OR» (Distanz 1); Titel-Teilstring als schwächerer Treffer
+// («obligationenrecht» → OR). Nur nahe Kandidaten (kurze Keys: Distanz ≤ 1,
+// längere ≤ 2, oder Präfix/Teilstring). Rein ableitend (§3), keine Rechtslogik.
+function levenshtein(a: string, b: string): number {
+  const m = a.length, n = b.length;
+  if (m === 0) return n;
+  if (n === 0) return m;
+  let vor = Array.from({ length: n + 1 }, (_, i) => i);
+  let akt = new Array<number>(n + 1);
+  for (let i = 1; i <= m; i++) {
+    akt[0] = i;
+    for (let j = 1; j <= n; j++) {
+      const kosten = a[i - 1] === b[j - 1] ? 0 : 1;
+      akt[j] = Math.min(akt[j - 1] + 1, vor[j] + 1, vor[j - 1] + kosten);
+    }
+    [vor, akt] = [akt, vor];
+  }
+  return vor[n];
+}
+
+export function erlassVorschlaege<T extends Pick<BrowseErlass, 'key' | 'kuerzel' | 'titel'>>(
+  erlasse: readonly T[],
+  roh: string,
+  max = 6,
+): T[] {
+  const nq = norm(roh);
+  if (!nq) return [];
+  const grenze = nq.length <= 4 ? 1 : 2;
+  // Rang für Titel-Teilstring-Treffer: bewusst nicht-ganzzahlig, damit er NIE mit
+  // einer echten (ganzzahligen) Levenshtein-Distanz kollidiert und die Titel-Treffer
+  // stets NACH den nahen Kürzel-/Key-Treffern (≤ grenze) einsortiert werden.
+  const TITEL_RANG = 2.5;
+  const bewertet: { e: T; rang: number }[] = [];
+  for (const e of erlasse) {
+    const kandidaten = [...new Set([norm(e.kuerzel), norm(e.key)])].filter(Boolean);
+    let dist = Infinity;
+    for (const k of kandidaten) {
+      if (k === nq) { dist = 0; break; }
+      if (k.startsWith(nq) || nq.startsWith(k)) dist = Math.min(dist, 0.5);
+      else dist = Math.min(dist, levenshtein(nq, k));
+    }
+    if (dist <= grenze) bewertet.push({ e, rang: dist });
+    else if (nq.length >= 4 && norm(e.titel).includes(nq)) bewertet.push({ e, rang: TITEL_RANG });
+  }
+  bewertet.sort((a, b) =>
+    a.rang - b.rang
+    || a.e.kuerzel.length - b.e.kuerzel.length
+    || a.e.key.localeCompare(b.e.key));
+  return bewertet.slice(0, max).map((x) => x.e);
+}
 export function fnTextMitLinks(fn: Fussnote): ReactNode {
   if (!fn.links.length) return richText(fn.text, 'fn');
   const map = new Map(fn.links.map((l) => [l.label, l.url]));

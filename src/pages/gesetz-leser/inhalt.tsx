@@ -30,6 +30,7 @@ import {
   berechneSekPos, berechneSektionMeta, berechneSekLabelById,
 } from './berechnungen';
 import { AmtlichesPdf } from './parts/AmtlichesPdf';
+import { GesetzFehlSeite } from './FehlSeite';
 
 // ═══ ABSCHNITT · Reine Rechenlogik ausgelagert (QS-TOK/P5, §6 Ziff. 6) ═══════
 // paneRoot/istAnhangToken/findeArt (Pane-Scoping, referenzstabil, KEIN React
@@ -256,7 +257,22 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     if (ebene === 'kanton') void ladeKantonSystematik().then((s) => { if (lebt) setKantonSys(s); });
     void ladeErlass(schluessel).then(async (e) => {
       if (!lebt) return;
-      if (!e) { setFehler(true); return; }
+      if (!e) {
+        // W2·10-UI-NAV/N0b: Key case-insensitiv gegen das Register auflösen und auf
+        // die kanonische URL umleiten (/gesetze/bund/or → /gesetze/bund/OR). Nur bei
+        // EINDEUTIGEM Case-Treffer (kein Rate-Sprung); sonst ehrliche Fehlseite.
+        const m = await ladeBrowseManifest();
+        if (!lebt) return;
+        const roh = schluessel.toLowerCase();
+        const kandidaten = m?.erlasse.filter((x) => x.key.toLowerCase() === roh) ?? [];
+        if (kandidaten.length === 1) {
+          const ziel = kandidaten[0];
+          navigate(`/gesetze/${ziel.ebene}/${encodeURIComponent(ziel.key)}`, { replace: true });
+          return;
+        }
+        setFehler(true);
+        return;
+      }
       // pdf-embed: kein Snapshot-JSON — Erlass setzen, der Reader rendert das
       // eingebettete amtliche PDF (eintraege bleibt null).
       if (e.status === 'pdf-embed') { setErlass(e); return; }
@@ -779,12 +795,9 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   }, [manifest, erlass]);
 
   if (fehler) {
-    return (
-      <div className="space-y-4">
-        <Link to="/gesetze" className="text-body-s text-brass-700">‹ Zur Gesetzessammlung</Link>
-        <div className="lc-notice lc-notice-warn">Dieser Erlass ist nicht als Volltext verfügbar.</div>
-      </div>
-    );
+    // W2·10-UI-NAV/N0b: hilfreiche Fehlseite (angefragter Key + Fuzzy-Vorschläge +
+    // eingebettetes Erlass-Suchfeld) statt der nackten «nicht verfügbar»-Notiz.
+    return <GesetzFehlSeite schluessel={schluessel} manifest={manifest} />;
   }
   // ── pdf-embed: amtliches PDF in-app (kein extrahierbarer Volltext-HTML) ──────
   // Auftrag David 25.6.2026: statt nacktem Live-Link das amtliche Fedlex-PDF in
