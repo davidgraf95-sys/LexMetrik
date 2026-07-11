@@ -33,11 +33,6 @@
             "type": "command",
             "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/struktur-rotieren.py\" --hook",
             "timeout": 30
-          },
-          {
-            "type": "command",
-            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/struktur-aktuell.py\"",
-            "timeout": 30
           }
         ]
       }

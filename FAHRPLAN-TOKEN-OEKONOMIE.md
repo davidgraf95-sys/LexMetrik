@@ -60,8 +60,22 @@ Gegenprüfung fix Opus/high; Synthese nie unter Sonnet — kalibriert an T2-Base
 Überdeckung/Kontrast bleiben Bild), **T11** (Gegenprüfungs-Beschaffung als Skill-Zusatz in
 »gegenpruefung« + Template §5: gepinnter Filestore-HTML + Scope-Anker übergeben, Currency-Check
 + Re-Derivation bleiben beim Prüf-Agenten). **DoD:** Template + 10-Dispatch-Stichprobe (Anhang A)
-100 % `model`/`effort`-explizit. **Offen T19:** Warn-Injektions-Entfernung hängt an T1/#176
-(nicht auf ungemergtem Stand gebaut); Cache-Hygiene-Regeln bereits im Template §6 dokumentiert.
+100 % `model`/`effort`-explizit.
+
+### Stand T19 — Warn-Injektions-Entfernung (11.7.2026, nach T1/#176)
+
+Die git-zustandsabhängige (byte-INSTABILE) SessionStart-Injektion aus
+`.claude/hooks/struktur-aktuell.py` ist aus der SessionStart-Kette
+(`.claude/settings.json`) **entfernt** → der Sitzungs-Präfix bleibt byte-stabil
+(Prompt-Cache-Treffer). **Empirischer Beleg:** bei realem STRUKTUR-Lag injizierte
+der Hook **1101 Byte / 937 Zeichen** variablen `additionalContext` (Commit-Zahl +
+-Liste, bis 30 Zeilen); dieselbe Lag-Lage nach T19 = **0 Byte** aus der
+verbleibenden Kette. Die Schutzfunktion ist **nicht ersatzlos gestrichen**: sie
+trägt jetzt mechanisch `struktur-rotieren.py` (T1 rotiert Karten byte-genau +
+rückt die Basis nach + size-basierter Re-Akkumulations-Wächter = stabil), und das
+Lag-Audit bleibt als On-Demand-Werkzeug **`npm run struktur:aktuell`** (verhaltens-
+gleich, nur stdin-tty-sicher). CLAUDE.md-Kopf + `dispatch-template.md §7`
+nachgezogen. Gegenprüfung n/a (Prozess-Hook, keine Inhalts-/Rechenfläche).
 
 ### Stand T2 — Token-Baseline gemessen (10.7.2026, PR QS-TOK/T2)
 
@@ -102,7 +116,8 @@ Ausreisser, nicht Volumentreiber (nur 2 Mega-Sessions). Nächste Messung: Mean/M
 - **T1 ✅** — STRUKTUR-Rotation mechanisiert (`.claude/hooks/struktur-rotieren.py`, SessionStart-Hook + `npm run struktur:rotieren`) inkl. **T7-K Teil 2 Re-Akkumulations-Wächter**. Dogfood: 34 Karten ≤6.7. rotiert, STRUKTUR.md 139.4→35.6 KB (Budget 60), Byte-Bilanz belegt (0 Inhaltsverlust), idempotent.
 - **T3 ✅** — FAHRPLAN-§-Slice-CLI (`npm run fahrplan`), ToC immer dabei; GESETZES-UX §10-Slice 60.6 KB vs. 119.5 KB Ganzdatei.
 - **T16 offen** — CLAUDE.md-§7-Detail in `paths`-Rule: §8 Ziff. 4 «nicht ohne separates Go David» (+ Probelauf-Vorbedingung); Leitplanke «CLAUDE.md im Zweifel nicht anfassen». Bleibt liegen.
-- Übrige §§4–§7 (T4/T5/T6/T8/T9/T11/T12/T13/T14/T15/T17/T18/T19/T10) unverändert offen, je Reihenfolge §8.
+- **T19 ✅** — Warn-Injektion aus SessionStart-Kette entfernt (Präfix byte-stabil; Beleg 1101→0 Byte); Schutzfunktion trägt `struktur-rotieren.py`, Audit als `npm run struktur:aktuell`. Stand-Details oben.
+- Übrige §§4–§7 (T4/T5/T6/T8/T9/T11/T12/T13/T14/T15/T17/T18/T10) unverändert offen, je Reihenfolge §8.
 
 **P2 (T5+T6) GEBAUT (10.7.2026, Worktree `feat/qstok-p2-guards`):** T5-Guards — Read/cat-Soft-Guard `.claude/hooks/lese-schutz.py` (>200 KB ohne offset/limit + §6-Nie-lesen-Dateien → Werkzeug-Verweis, Override via offset/limit/Sonde; feuert nur auf Agenten-Tools, Generatoren/Tore unberührt), `.gitattributes` (normtext+golden `linguist-generated` OHNE `-diff`, fontData/grundart `-diff`), fontData-Banner. T6-Sonde `npm run zeige` (`scripts/zeige.ts`, byte-treuer Roh-Slice via typen.ts-Deserialisierung; Bund/`--kanton`/`--struktur`/`--register`/`--sql` read-only) — OR Art. 1 byte-identisch bewiesen. Voller `gate` grün ausser `check:plan` (P1b-Inventar-Fix noch offen, nicht P2-verursacht). CLAUDE.md-Verankerung (T6-DoD) + T4-Template offen (T4 = P3).
 
