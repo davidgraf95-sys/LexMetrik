@@ -114,7 +114,7 @@ function SprungNavigation({ ziele }: { ziele: { anker: string; label: string }[]
 
 function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam }: { schluessel: string; ansichtParam: string | null; normParam: string | null }) {
   const navigate = useNavigate();
-  const { imPane } = usePaneKontext();
+  const { imPane, wurzel } = usePaneKontext();
   // W2·5d U-POSITION/A17: im SEKUNDÄREN Pane ist die massgebliche Fundstelle-/
   // Hash-Quelle die PANE-LOKALE Location (react-router `<Routes location>`), NICHT
   // `window.location.hash` (= die Haupt-URL). Wird ein Entscheid via ⧉ aus einem
@@ -131,6 +131,21 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam }: { schlues
   // BGE-Umschalter: 'voll' = vollständiges Urteil (Default), 'auszug' = amtl. BGE-Sammlungstext.
   const [bodyTab, setBodyTab] = useState<'voll' | 'auszug'>('voll');
   const closeLese = useCallback(() => setLese(false), []);
+  // W2·10-UI-NAV/N0d·J5: Tab-Klick spiegelt die gewählte Fassung als ?ansicht=
+  // (teilbar/reload-fest — die Start-Ansicht-Weiche liest sie beim Laden) und
+  // scrollt an den Dokumentanfang (neuer Fassungstext, oben beginnen). Die URL
+  // wird per replaceState gespiegelt (kein Router-Rerender/Lade-Effekt-Neulauf);
+  // im Pane bleibt die Haupt-URL unberührt, gescrollt wird die Pane-Wurzel.
+  const wechsleTab = useCallback((neu: 'voll' | 'auszug') => {
+    setBodyTab(neu);
+    if (!imPane && typeof window !== 'undefined' && window.history) {
+      const u = new URL(window.location.href);
+      u.searchParams.set('ansicht', neu);
+      window.history.replaceState(window.history.state, '', u);
+    }
+    if (imPane) wurzel?.current?.scrollTo({ top: 0, behavior: 'smooth' });
+    else if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [imPane, wurzel]);
   const [fsIdx, setFsIdx] = useState<number>(ladeFsIdx);
   const setFs = (i: number) => {
     const x = Math.max(0, Math.min(FS_STUFEN.length - 1, i));
@@ -432,7 +447,7 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam }: { schlues
                 { code: 'voll', label: <>Vollständiges Urteil{snap.azaUrteil && <span className="num"> · {snap.azaUrteil.aktenzeichen}</span>}</> },
               ]}
               value={bodyTab}
-              onChange={setBodyTab}
+              onChange={wechsleTab}
               mode="tab"
               ariaLabel="Textfassung des Entscheids"
             />
