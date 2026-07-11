@@ -60,7 +60,7 @@ export function VerweisKontext({ erlassKey, artikel, artikelZitat }: {
   return (
     <div className="border-t border-rule-struktur px-5 py-3 space-y-4">
       {ctx.entscheide.length > 0 && (
-        <KontextGruppe titel="Massgebliche Entscheide" richtung="Wird zitiert von" anzahl={ctx.entscheide.length}>
+        <KontextGruppe titel="Massgebliche Entscheide" richtung="Wird zitiert von" punkt="entscheid" anzahl={ctx.entscheide.length}>
           <ul className="flex flex-col gap-1">
             {entscheide.map((r) => (
               <li key={r.key} className="text-body-s">
@@ -85,7 +85,7 @@ export function VerweisKontext({ erlassKey, artikel, artikelZitat }: {
         </KontextGruppe>
       )}
       {ctx.materialien.length > 0 && (
-        <KontextGruppe titel="Amtliche Materialien" richtung="Legt aus" anzahl={ctx.materialien.length}>
+        <KontextGruppe titel="Amtliche Materialien" richtung="Legt aus" punkt="material" anzahl={ctx.materialien.length}>
           <ul className="flex flex-col gap-1">
             {materialien.map((m) => (
               <li key={m.key} className="text-body-s">

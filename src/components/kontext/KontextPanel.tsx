@@ -56,17 +56,27 @@ function kurzDatum(iso: string): string {
 // Exportiert (V1.3): der EntscheidLeser rendert seine beiden Richtungs-Gruppen
 // («Zitierte Normen» / «Zitierte Entscheide») mit DERSELBEN Hülle im Panel —
 // eine Anatomie, keine zweite Gruppen-Optik (§5).
-export function KontextGruppe({ titel, richtung, anzahl, children, hinweis }: {
+export function KontextGruppe({ titel, richtung, anzahl, children, hinweis, punkt }: {
   titel: string;
   /** Beziehungstyp als Text (juris/EUR-Lex-Muster): «Wendet an» u. a.; nie Farbe. */
   richtung?: string;
   anzahl: number;
   children: ReactNode;
   hinweis?: ReactNode;
+  /** Farb-Wörterbuch V2·C-3 (§4b-B): Familien-Punkt vor dem Gruppentitel —
+   *  'norm' = brass (Erlasse/Verweise), 'entscheid' = slate (Rechtsprechung),
+   *  'material' = sage (Botschaften/Vernehmlassungen/Soft-Law, kein Gesetzesrang).
+   *  Redundant zum Gruppentitel (`aria-hidden`, Farbe trägt NIE allein, §13/F2);
+   *  sitzt auf `--paper`. Ohne Prop kein Punkt (Werkzeuge/Revisionen neutral). */
+  punkt?: 'norm' | 'entscheid' | 'material';
 }) {
+  const punktKlasse = punkt === 'entscheid' ? 'lc-punkt lc-punkt-entscheid'
+    : punkt === 'material' ? 'lc-punkt lc-punkt-material'
+    : punkt === 'norm' ? 'lc-punkt' : null;
   return (
     <div className="space-y-2">
       <h3 className="lc-overline text-ink-600">
+        {punktKlasse && <span className={punktKlasse} aria-hidden />}
         {richtung && <span className="text-brass-700">{richtung} · </span>}
         {titel} <span className="num text-ink-500">{anzahl}</span>
       </h3>
@@ -276,7 +286,7 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false 
               Auslegung (Materialien). Nur Gesetz-Reader. §8: maschinell aus dem amtlichen
               Fedlex-Projekt-Graphen zugeordnet, massgeblich bleibt die amtliche Quelle. */}
           {(botschaftenFehler || botschaften.length > 0) && (
-            <KontextGruppe titel="Entstehungsgeschichte" richtung="Botschaft des Bundesrates"
+            <KontextGruppe titel="Entstehungsgeschichte" richtung="Botschaft des Bundesrates" punkt="material"
               anzahl={botschaften.length}
               hinweis={botschaftenFehler
                 ? undefined
@@ -402,7 +412,7 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false 
               Fedlex-Graphen zugeordnet (grob bei Mantelvorlagen), massgeblich bleibt die
               amtliche Quelle. Reichweite ~ab 2006. */}
           {(vernehmlassungenFehler || vernehmlassungen.length > 0) && (
-            <KontextGruppe titel="Gesetzgebung in Arbeit" richtung="Vernehmlassung"
+            <KontextGruppe titel="Gesetzgebung in Arbeit" richtung="Vernehmlassung" punkt="material"
               anzahl={vernehmlassungen.length}
               hinweis={vernehmlassungenFehler
                 ? undefined
@@ -443,7 +453,7 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false 
 
           {/* Normen (für Entscheid- und Material-Reader). */}
           {!ohneNormen && normen.length > 0 && (
-            <KontextGruppe titel="Erlasse" richtung="Wendet an" anzahl={normen.length}
+            <KontextGruppe titel="Erlasse" richtung="Wendet an" punkt="norm" anzahl={normen.length}
               hinweis={<><span className="num">{normen.length}</span> erfasste Erlasse — aus den zitierten Normen der Quelle abgeleitet.</>}>
               <ul className="flex flex-wrap gap-2">
                 {normen.map((n) => (
@@ -460,7 +470,7 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false 
 
           {/* Entscheide (für Norm- und Material-Reader). */}
           {(entscheideLaden || (entscheide && entscheide.length > 0)) && (
-            <KontextGruppe titel="Bundesgerichtsentscheide" richtung="Wird zitiert von"
+            <KontextGruppe titel="Bundesgerichtsentscheide" richtung="Wird zitiert von" punkt="entscheid"
               anzahl={entscheide?.length ?? 0}
               hinweis={entscheideLaden ? undefined : typ === 'material'
                 ? <><span className="num">{entscheide?.length ?? 0}</span> erfasste Entscheide — über die gemeinsam zitierten Erlasse zugeordnet: zwei Schritte entfernt, entsprechend unschärfer. Entscheide beziehen sich auf die im Entscheidzeitpunkt geltende Fassung.</>
@@ -559,7 +569,7 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false 
               );
             };
             return (
-              <KontextGruppe titel="Amtliche Materialien" richtung="Legt aus" anzahl={alleMaterialien.length}
+              <KontextGruppe titel="Amtliche Materialien" richtung="Legt aus" punkt="material" anzahl={alleMaterialien.length}
                 hinweis={<><span className="num">{alleMaterialien.length}</span> erfasste Behördenpublikationen (Kreisschreiben, Wegleitungen, Leitfäden u. a.) — kein Gesetzesrang.</>}>
                 {artikelScharf.length > 0 && (
                   <ul className="flex flex-col gap-1.5">{sichtbarScharf.map(zeile)}</ul>
