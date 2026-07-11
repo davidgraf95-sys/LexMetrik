@@ -59,6 +59,12 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // revidiert hat (Normrevisions-Ehrlichkeit, §V1c).
   const [revisionShard, setRevisionShard] = useState<{ key: string; shard: RevisionShard | null } | null>(null);
   const [fehler, setFehler] = useState(false);
+  // W2·10-UI-NAV/N0d·O3: kurze Bestätigung nach «In neuem Reiter» — der Reader
+  // wird bei der ?r-Instanz-Navigation NICHT neu gemountet (gleicher key=schluessel),
+  // darum überlebt dieser Zustand den Soft-Nav und weist zum Reiter-Tracker (☰).
+  const [reiterToast, setReiterToast] = useState(false);
+  const reiterToastTimer = useRef<number | null>(null);
+  useEffect(() => () => { if (reiterToastTimer.current) window.clearTimeout(reiterToastTimer.current); }, []);
   const [suche, setSuche] = useState('');
   // Rank 9 (QS-PERF, §15/3): entprellter Suchwert. Das Eingabefeld bleibt sofort
   // responsiv (`suche`), aber die TEUREN Ableitungen — Treffer-Filter über ~1000
@@ -1010,6 +1016,16 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
       // Pane liegen Topbar/PaneKopf ausserhalb des Scroll-Containers → nur die dritte
       // Zeile (top 0.5rem) klebt (Muster --rsp-stick, Entscheid-Leser B3).
       style={{ '--nt-stick': imPane ? '3.5rem' : 'calc(4rem + 2.25rem + 3rem)' } as CSSProperties}>
+      {/* O3: flüchtige Bestätigung nach «In neuem Reiter» — zeigt zum ☰-Reiter-
+          Tracker oben rechts (aria-live für Screenreader). Fixed, überlagert nichts
+          Interaktives; verschwindet nach ~3 s bzw. bei erneutem Reiter-Öffnen. */}
+      {reiterToast && (
+        <div role="status" aria-live="polite"
+          className="fixed right-3 top-20 z-50 flex items-center gap-2 rounded-lg border border-line bg-paper-raised px-3 py-2 text-body-s text-ink-700 shadow-lg">
+          <span aria-hidden className="text-brass-700">⧉</span>
+          Im neuen Reiter geöffnet — oben unter ☰
+        </div>
+      )}
       {/* Breadcrumb trägt seit A/F der Kopf: Einzelansicht → Inhalts-Kopf, Split-View
           → PaneKopf. Kein zweiter Inline-Breadcrumb mehr (sonst Dopplung im Pane).
           G2b: EINE Kopf-Komponente (ErlassLeserKopf) — dieselbe wie im pdf-embed-
@@ -1041,6 +1057,10 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
                 const ziel = naechsteInstanz(window.location.pathname + window.location.hash);
                 merkeTab(ziel, erlass.kuerzel);
                 navigate(ziel);
+                // O3: kurze Bestätigung mit Zeiger auf den Reiter-Tracker (☰ oben).
+                setReiterToast(true);
+                if (reiterToastTimer.current) window.clearTimeout(reiterToastTimer.current);
+                reiterToastTimer.current = window.setTimeout(() => setReiterToast(false), 3200);
               }}
               className="lc-chip hover:text-brass-700" title="Diesen Erlass zusätzlich in einem neuen Reiter öffnen">⧉ In neuem Reiter</button>
             {/* W2·5d U-PDF/A12: Download = AMTLICHES PDF der gepinnten Fassung
