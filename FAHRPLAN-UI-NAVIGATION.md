@@ -188,8 +188,9 @@ präzisiert, nie autonom gekippt.
 
 ## §3 · P2 — Verzahnung Norm ↔ Rechtsprechung ↔ Werkzeug (der Burggraben-Anschluss)
 
-### V1 · Artikel↔Werkzeug-Map (beide Richtungen, EINE Datenstruktur) — M
-- **Kern:** `ERLASS_WERKZEUGE` (`normtext/werkzeuge.ts`) ist deklariert «Erlass-granular» —
+### V1 · Artikel↔Werkzeug-Map (beide Richtungen, EINE Datenstruktur) — M ✅ (11.7.2026, Branch `feat/uinav-v1`)
+- **Gebaut:** artikel-scharfe `ARTIKEL_WERKZEUGE`-Map in `normtext/werkzeuge.ts` (EINE Datenstruktur, §5) mit Artikel-Bereichen (`von`/`bis`, Sub-Artikel 335a ⊂ 335) + fachlichem **Norm-Beleg je Kante** (§7); 60 Kanten über 10 Erlasse, Zweifelsfälle (13. ML, Schadenszins, Werkvertrags-Gewährleistung, AIG-Fristen) bewusst ausgelassen + im Code ausgewiesen (§8). **Beide Richtungen:** (a) Entscheid — `werkzeugeFuerZitate()` löst die zitierten Norm-Strings artikelscharf auf → Rausch-Filter (BGE 152 I 65: 7 grobe Werkzeuge inkl. Erbrecht/Vorsorge → **0**, da Art. 448 ZGB = Erwachsenenschutz, Art. 321 StGB = Berufsgeheimnis); (b) Gesetz-Reader — neue KontextPanel-Gruppe «Werkzeuge zu einzelnen Artikeln» (Art. 127–142 OR → Verjährung), ersetzt dort die grobe Erlass-Liste. Konsumenten: `KontextPanel.tsx`, `EntscheidLeser.tsx` (`artikelZitate`-Prop), `kontext.ts`. Golden `IDENTISCH` (209, alles runtime); tsc/lint/3653 Unit-Tests grün (8 neue Map-Tests); Gegenprüfung Opus (Anker gegen Fedlex). Trailer `Roadmap: W2·10-UI-NAV`.
+- **Kern (Spec):** `ERLASS_WERKZEUGE` (`normtext/werkzeuge.ts`) ist deklariert «Erlass-granular» —
   daher ZGB→Erbrecht-Rauschen unter BGE 152 I 65 UND fehlender Rechner-Hinweis bei OR 127.
   Bau: **artikel-scharfe Map** (Artikel-Ranges: Art. 448 ZGB ≠ Erbrecht) + Relevanzschwelle
   mit **Ausblenden unter Schwelle** (lieber 1–2 treffende Werkzeuge als 7 grobe) — gespeist

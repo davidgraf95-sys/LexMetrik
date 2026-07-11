@@ -12,7 +12,7 @@
 // der Entscheid. So entstehen keine Selbstverweise.
 
 import {
-  werkzeugeFuerEntscheid, materialienFuerNorm,
+  werkzeugeFuerEntscheid, werkzeugeFuerZitate, materialienFuerNorm,
   type Werkzeug, type MaterialBezug,
 } from './normtext/werkzeuge';
 import { ERLASS_REGISTER } from './normtext/register';
@@ -81,14 +81,25 @@ export interface KontextSync {
   werkzeuge: Werkzeug[];
 }
 
-export function kontextSync(typ: KontextTyp, normKeys: readonly string[]): KontextSync {
+export function kontextSync(
+  typ: KontextTyp,
+  normKeys: readonly string[],
+  /** Artikel-scharfe Zitat-Strings (V1, nur Entscheid-Reader): «Art. 448 ZGB»,
+   *  «Art. 321 StGB» … Wenn gesetzt, werden die «Passende Werkzeuge» artikelscharf
+   *  aufgelöst (Rausch-Filter #28) statt grob über den Erlass — so zeigt ein
+   *  Entscheid nur Werkzeuge zu tatsächlich zitierten Artikeln. */
+  artikelZitate?: readonly string[],
+): KontextSync {
   return {
     // Norm-Reader IST die Norm → keine Normen-Gruppe (Selbstverweis vermeiden).
     normen: typ === 'norm' ? [] : normenFuer(normKeys),
     // Material-Reader IST das Material → keine Materialien-Gruppe.
     materialien: typ === 'material' ? [] : materialienFuer(normKeys),
-    // Werkzeuge sind für alle drei Korpora fremd → immer auflösen.
-    werkzeuge: werkzeugeFuerEntscheid([...normKeys]),
+    // Werkzeuge sind für alle drei Korpora fremd. Am Entscheid mit Zitat-Liste
+    // artikelscharf (kein Erlass-Rauschen); sonst grob über den Erlass.
+    werkzeuge: artikelZitate && artikelZitate.length > 0
+      ? werkzeugeFuerZitate(artikelZitate)
+      : werkzeugeFuerEntscheid([...normKeys]),
   };
 }
 
