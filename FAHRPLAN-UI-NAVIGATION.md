@@ -147,7 +147,17 @@ präzisiert, nie autonom gekippt.
 - **Prüfpunkte:** «Verjärung» zeigt «Meinten Sie Verjährung?»; kein sichtbarer Treffer springt
   beim Einwachsen; Enter nach 0,5 s landet richtig. *(#5, #44, #48, #52, #56, E1, E2-Verify.)*
 
-### S4 · Gesetzestext-Ranking bei Alltagsbegriffen — M–L
+### S4 · Gesetzestext-Ranking bei Alltagsbegriffen — M–L ✅ (12.7.2026, `feat/uinav-s4-s5`)
+> **Gebaut (Opus).** FlexSearch liefert nur noch den Recall; die Reihenfolge bestimmt
+> eine reine, deterministische Relevanz-Schicht `src/lib/suche/artikelRanking.ts` (§2). Der
+> Such-Index bekommt drei Felder aus dem bestehenden `struktur/bund`-Sidecar (K10, KEIN
+> Zweit-Index): m=primäre Marginalie (Hauptthema), n=nachrangige Marginalie, g=Gliederungs-
+> Titel. Drei topische Stufen (Hauptthema → Nebenerwähnung → Text), innerhalb einer Stufe
+> Kernerlass ↑ + Artikelnummer ↑ (definitorischer Eröffnungsartikel zuerst). **Query-Testset
+> = Gate** (`src/tests/suche/rankingTestset.test.ts`, gegen den echten Bund-Korpus, Vorher/
+> Nachher-Metrik + «nie schlechter als roh»): «Miete»→OR 253 (— → 1), «Verjährung»→OR 60/127
+> (— → 1/3), «Kündigung»→OR 271 (26 → 1), «Werkvertrag»→OR 363 (2 → 1). Synonyme tragen
+> Recall+Textfrequenz, nicht die topische Ordnung. Golden byte-gleich, gate:schnell grün.
 - **Kern:** Relevanz-Score im Artikel-Volltext-Index: Boost für Marginalie/Sachüberschrift +
   Termfrequenz + **kuratierte Kernerlass-Prioritätsliste** (klein halten: OR/ZGB/StGB/ZPO/BV/
   SchKG; im Code dokumentiert-begründet, kein Schein-Objektivität) + `such-vokabular.json` als
@@ -160,7 +170,19 @@ präzisiert, nie autonom gekippt.
 - **Prüfpunkte:** «Miete» zeigt OR 253 ff. in den Top-Treffern; «Verjährung» OR 127/134 vor
   IPRG/MStG. *(#40 — schwerster Einzelbefund.)*
 
-### S5 · /suche-Ergebnisseite (+ Facetten Etappe 2) — L · **David-Go einholen**
+### S5 · /suche-Ergebnisseite (+ Facetten Etappe 2) — L ✅ (12.7.2026, `feat/uinav-s4-s5`)
+> **David-Gate AUFGEHOBEN** (David 11.7. im Chat: «du hast bei allem was ich entscheiden
+> muss selbst die wahl» → Orchestrator-Entscheid: bauen). **Gebaut (Opus).** Neue Route
+> `/suche?q=` (prerenderte Shell via `seo.ts`, `ERWARTETE_ROUTEN` 62→63; client-gefüllte
+> Treffer) zeigt alle Gruppen ungekappt — bes. die Gesetzestext-Gruppe (34/40 Treffer waren
+> im Dropdown strukturell unerreichbar, §8). Additiv zum A5/A6-Dropdown, **A5-Enter-Semantik
+> unberührt** (kein Palette-Revival). `artikelGruppe` bekommt endlich `mehrHref` (/suche?q=);
+> `useUniversalSuche(q, {artikelLimit, kappung})` — Default = Dropdown unverändert.
+> Inhaltstyp-Facette (Etappe 2, ehrlich+lokal; Masse-Counts folgen mit E3, §8),
+> role=group-Landmarken (`sektionsRollen`), Deep-Link `?q=` stabil, CLS über festen
+> Kopf/Feld. e2e (`suche-seite.e2e.ts`) + a11y-Prüfpunkt grün. **O1-«Suchanfragen-Verlauf»
+> hängt laut Plan an O1** (eigene Baueinheit), NICHT an S5 → hier nicht mitgebaut; der
+> Landeplatz existiert nun.
 - **Kern:** `/suche?q=`-Route (heute 404, `routesManifest.ts`): alle Gruppen ungekappt,
   `artikelGruppe` bekommt endlich ein `mehrHref`-Ziel (heute sind 34/40 Treffer strukturell
   unerreichbar — §8-relevant), Dropdown bleibt Schnellzugriff und verlinkt «alle 40 →»;
@@ -445,8 +467,10 @@ präzisiert, nie autonom gekippt.
 4. **Lese-Ergonomie-Toggles** Lesebreite/Zeilenabstand *(#79)*: Mechanik sauber
    (data-*-CSS, R6-byte-gleich), aber das «Ansicht»-Dropdown wurde zweimal per David-Entscheid
    umgebaut («keine Wucherung», §3.1) — zwei weitere Toggles nur mit Go.
-5. **/suche-Ergebnisseite** *(S5)*: additive Erweiterung des gerade fixierten A5/A6-Modells —
-   kurzes Ja/Nein.
+5. **/suche-Ergebnisseite** *(S5)*: ~~additive Erweiterung des gerade fixierten A5/A6-Modells —
+   kurzes Ja/Nein.~~ **ERLEDIGT 12.7.2026: Gate aufgehoben** (David 11.7. im Chat: «du hast bei
+   allem was ich entscheiden muss selbst die wahl» → Orchestrator-Entscheid bauen), S5 gebaut +
+   gemergt.
 6. **Externe bger.ch-Chips im «Zitierte Entscheide»-Block** *(#24)*: der nackte Zähler ist
    dokumentierter VZUI-Entscheid (§0/1c: nur Korpus-Treffer als Chips, «keine grauen
    Nicht-Link-Chip-Reihen»). Eine Revision (externe Chips) wäre Entscheid-Änderung → Frage,
@@ -530,9 +554,9 @@ präzisiert, nie autonom gekippt.
 | 3 | **O1** Verlauf-Initiative (+Tracker-Label sofort) | M | zuletztVerwendet/Topbar | §8 «nur auf diesem Gerät» |
 | 4 | **V1 · V4 · V6** Verzahnung datenarm | M/S/S–M | KontextPanel/Registry | V1-Datenlage zuerst erheben |
 | 5 | **J1 · J2 · J4 · J5 · O4 · O2 · O5** Rechtsprechung/Übersichten | S–M | Rechtsprechung-Pages | J1-Scroll-Restoration-Prüfpunkt |
-| 6 | **S4** Ranking · **J3** Sachgebiets-Pipeline | M–L / M | Suchindex / scripts | S4 Query-Testset; **J3 = QS-GP** |
+| 6 | **S4** Ranking ✅ (12.7.) · **J3** Sachgebiets-Pipeline | M–L / M | Suchindex / scripts | S4 Query-Testset **gebaut+grün**; **J3 = QS-GP** |
 | 7 | **R1–R7 · V2 · V3 · V5 · Z2 · E4** Reader-Welle | S–M je | parts/inhalt/ArtikelBody/index.css | **hart hinter A20–A25** (§0.2); golden byte-gleich je Einheit |
-| 8 | **S5** /suche (+Facetten E2) · **Z1** ICS | L / S–M | Routen/Manifest | S5 = David-Go (§Y-5) |
+| 8 | **S5** /suche (+Facetten E2) ✅ (12.7.) · **Z1** ICS | L / S–M | Routen/Manifest | S5 = David-Go **aufgehoben+gebaut** (§Y-5) |
 | 9 | **R8** j/k · **W2** Beispiel-Chips | S–M / M | Reader / Rechner-Forms | **W2 = gegenpruefung je Preset** |
 
 **W2 (Beispiel-Chips, #35):** `BeispielChips` ist BEREITS gemeinsamer Baustein
