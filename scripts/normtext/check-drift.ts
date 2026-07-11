@@ -24,7 +24,7 @@ import {
   sammleZhPdfInventar,
   sammlePdfInventar,
 } from './inventar-kanton.ts';
-import { holeLexWork } from './adapter-lexwork.ts';
+import { holeLexWork, LexWorkShellError } from './adapter-lexwork.ts';
 import { holeHtm } from './adapter-htm.ts';
 import { holeZhPdf } from './adapter-zh-pdf.ts';
 import { holePdf, PDF_PROFILE } from './adapter-pdf.ts';
@@ -193,17 +193,20 @@ async function main(): Promise<void> {
     let kantonGeprüft = 0;
     let kantonDrift = 0;
     let kantonWarnungen = 0;
+    let kantonShell = 0;
 
     const kantonLimit = pLimit(FETCH_CONCURRENCY);
     const kantonAbrufe = await Promise.all(
       gruppen.map((gruppe) =>
-        kantonLimit(async (): Promise<{ skip: true } | { ok: true; ergebnis: Awaited<ReturnType<typeof holeLexWork>> } | { ok: false; msg: string }> => {
+        kantonLimit(async (): Promise<{ skip: true } | { ok: true; ergebnis: Awaited<ReturnType<typeof holeLexWork>> } | { ok: false; msg: string; shell: boolean }> => {
           // Gruppen ohne Snapshot NICHT über das Netz holen (wie seriell).
           if (kantonTokens.get(`${gruppe.kanton}/${gruppe.lawId}`) === undefined) return { skip: true };
           try {
             return { ok: true, ergebnis: await holeLexWork(gruppe.host, gruppe.lang, gruppe.lawId) };
           } catch (err) {
-            return { ok: false, msg: err instanceof Error ? err.message : String(err) };
+            // Soft-404-Shell (Endpunkt migriert/tot) ist ein HARTER Fehler, kein
+            // transienter Netz-Blip: sonst veraltet der Snapshot still (GL-Klasse).
+            return { ok: false, msg: err instanceof Error ? err.message : String(err), shell: err instanceof LexWorkShellError };
           }
         }),
       ),
@@ -217,7 +220,18 @@ async function main(): Promise<void> {
       const snapshotToken = kantonTokens.get(key)!;
 
       if (!abruf.ok) {
-        // Netzfehler → Warnung, kein harter Fehler (§8: transparent machen)
+        if (abruf.shell) {
+          // Soft-404-Shell = HARTER Fehler: der strukturierte Endpunkt liefert
+          // keine Daten mehr, der Snapshot würde still veralten (die GL-Klasse,
+          // 11.7.2026). Exit 1, damit die Klasse nie wieder unbemerkt driftet.
+          console.error(
+            `FEHLER Kanton-Soft-404: ${gruppe.kanton} ${gruppe.lawId}: ${abruf.msg}`,
+          );
+          kantonShell++;
+          exitCode = 1;
+          continue;
+        }
+        // Transienter Netzfehler → Warnung, kein harter Fehler (§8: transparent).
         console.warn(`WARNUNG Kanton-Netz: ${gruppe.kanton} ${gruppe.lawId}: ${abruf.msg}`);
         kantonWarnungen++;
         continue;
@@ -242,7 +256,7 @@ async function main(): Promise<void> {
     }
 
     console.log(
-      `check:normtext-netz: ${kantonGeprüft} Kanton-Gruppen geprüft — Drift: ${kantonDrift}, Netz-Warnungen: ${kantonWarnungen}`,
+      `check:normtext-netz: ${kantonGeprüft} Kanton-Gruppen geprüft — Drift: ${kantonDrift}, Soft-404-Shells: ${kantonShell}, Netz-Warnungen: ${kantonWarnungen}`,
     );
 
     // ─── Prüfung 4: HTM-Drift (NETZ) — quelleHash statt version_uid ──────────

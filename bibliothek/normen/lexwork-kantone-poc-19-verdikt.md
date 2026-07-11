@@ -99,6 +99,49 @@ einzig lebende strukturierte Endpunkt. **Kein Fix in dieser Session** (Snapshot-
 Risiko, Golden-Churn, Pflicht-Gegenprüfung, David-Schema-Entscheid). → Follow-up-
 Kandidat (unten).
 
+## GL-NACHTRAG 11.7.2026 (abends) — Soft-404-Prämisse WIDERLEGT, Klasse entschärft
+
+Der Follow-up «GL-`json_content`-Andockung» (unten) wurde als Risiko-Einheit
+begonnen — und die zugrunde liegende Prämisse dabei **per Messung widerlegt** (§7:
+«Fehler sitzen oft in der eigenen Transformation, nicht in der Quelle; Wechsel per
+Messung belegen, nie annehmen»):
+
+1. **`xhtml_tol` lebt.** `GET https://gesetze.gl.ch/api/de/texts_of_law/{lawId}`
+   liefert für **alle 5** tarif-zitierten GL-Erlasse HTTP 200 + `application/json`
+   mit populiertem `selected_version.xhtml_tol` (III B/7/1: 44 KB), **3/3
+   reproduzierbar**. Der Adapter `holeLexWork` parst sie fehlerfrei (14/16/19/29/14
+   Artikel).
+2. **Kein Drift.** Der committete `fassungsToken` (= `version_uid`) ist für alle 5
+   Erlasse **zeichengleich zum Live-Wert** (3211018a / 4a9384f7 / 6f484b8a / b2009f94)
+   → GL war nie gedriftet, sondern aktuell.
+3. **Verwechslung Pfad `/app/` vs. `/api/`.** Die im Ursprungsbefund gesehene
+   «Angular-/Casemates-Shell» (2.3 KB, HTTP 200, `text/html`) serviert nur der
+   **`/app/`-SPA-Pfad** (die menschliche `quelleUrl` in den Tarif-Daten), **nicht**
+   der vom Adapter genutzte **`/api/`-Endpunkt**. Ein bogus/numerischer lawId auf
+   `/api/` gibt einen sauberen **HTTP 404** (leer), keine 200-Shell.
+
+**Folge:** Kein `json_content`-Umbau, kein Golden-Churn-Migrationsschritt, der
+David-reservierte SCHEMA-ENTSCHEID (a/b/c) bleibt **unberührt und offen**.
+
+**Stattdessen — Fehlerklasse dauerhaft entschärft (der eigentliche Mehrwert):**
+- `adapter-lexwork.ts`: neue `LexWorkShellError`; `holeLexWork` erkennt eine
+  Soft-404-Shell explizit (Content-Type ≠ JSON **oder** HTML-Body → JSON-Parse
+  scheitert) statt am kryptischen «Unexpected token '<'».
+- `check-drift.ts` (Prüfung 3, `check:normtext-netz`): Shell = **HARTER** Fehler
+  (Exit 1) statt blosser Netz-Warnung — die Bedingung, unter der GL angeblich «still
+  driftete», ist jetzt **gate-geschützt** für alle 19 LexWork-Kantone. End-to-End
+  live gegen die reale `/app/`-Shell verifiziert (wirft `LexWorkShellError`).
+- GL-Snapshots auf die aktuelle Adapter-Vintage regeneriert (`--nur=kanton
+  --kanton=GL`): **amtlich 0 Änderung** (version_uid identisch), reiner
+  **Extraktions-Diff** = +5 S1-Leerplatzhalter (III-C.1 art_3/4/8–11/12–14/19,
+  aufgehoben → Nummerierung reisst nicht mehr) + N1-Randtitel + S9-Volltitel;
+  golden **rein additiv** (5 Leer-Shas `e3b0c44…`, kein Bestands-Sha geändert).
+
+**Damit ist der «Pflegebedarf GL-Currency» (unten) und der Verfallsregister-
+Kandidat AUFGELÖST** (`bibliothek/register/parameter-verfall.md`). Der Follow-up 1
+(«GL-`json_content`-Andockung») ist **gegenstandslos**; Follow-up 2 (SCHEMA-ENTSCHEID)
+bleibt David-Sache.
+
 ## Gegenprüfung (unabhängiger Durchgang, 11.7.2026)
 
 Amtliche Quelle je Fall **in dieser Prüfsession geöffnet**; Sollwert aus der Quelle

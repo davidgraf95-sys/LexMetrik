@@ -134,18 +134,30 @@ bleibt stets die amtliche Quelle. NICHT von Hand editieren — Block wird von
 - **Prüfen:** ab Juli 2026 auf ne.ch, vor jeder Stammdaten-Übernahme NE.
 - **Quelle:** ne.ch/Presse (Doppelcheck-Durchgang 5.6.2026).
 
-## GL LexWork-Migration `gesetze.gl.ch` — `xhtml_tol`-Endpunkt tot (Befund 11.7.2026)
-- **Was:** Glarus ist von `gl.clex.ch` (301) auf `gesetze.gl.ch` migriert. Der
-  `lightweight_index` antwortet dort (487 Erlasse), aber der vom `adapter-lexwork.ts`
-  genutzte `GET …/texts_of_law/{lawId}` (→ `xhtml_tol`) liefert einen Soft-404
-  (Angular-Shell). Nur `…/texts_of_law/{lawId}/show_as_json` (`json_content`) lebt weiter.
-- **Folge:** Die 5 GL-Snapshots (`public/normtext/kanton/GL-*.json`) driften; der
-  heutige Adapter-Pfad kann sie nicht refreshen → `check:normtext-netz` warnt für GL.
-  Alle anderen 6 migrierten LexWork-Hosts (FR/NW/OW/SH/VS/ZG) servieren `xhtml_tol`
-  weiter — der Bruch ist GL-spezifisch.
-- **Prüfen/Auflösen:** GL über den `json_content`-Pfad andocken (Follow-up, Risiko-
-  Schritt mit Pflicht-Gegenprüfung; koppelt an David-SCHEMA-ENTSCHEID a/b/c).
-- **Quelle:** Live-Sweep 11.7.2026, `bibliothek/normen/lexwork-kantone-poc-19-verdikt.md`.
+## ~~GL LexWork-Migration `gesetze.gl.ch` — `xhtml_tol`-Endpunkt tot~~ → AUFGELÖST (Prämisse widerlegt, 11.7.2026 abends)
+- **Ursprungs-Befund (11.7.2026, POC):** Glarus ist von `gl.clex.ch` (301) auf
+  `gesetze.gl.ch` migriert; der vom `adapter-lexwork.ts` genutzte
+  `GET …/texts_of_law/{lawId}` (→ `xhtml_tol`) liefere eine Soft-404-Angular-Shell,
+  nur `/show_as_json` (`json_content`) lebe weiter; 5 GL-Snapshots drifteten.
+- **AUFLÖSUNG 11.7.2026 (§7 «per Messung, nicht per Annahme»):** Die Prämisse ist
+  **widerlegt**. Live-Nachmessung (`/api/de/texts_of_law/{lawId}`) liefert für **alle 5**
+  GL-Erlasse HTTP 200 + `application/json` mit **populiertem `xhtml_tol`** (44 KB), 3/3
+  reproduzierbar. Der `version_uid`-Drift-Token jedes committeten Snapshots ist
+  **zeichengleich zum Live-Wert** → GL war nie gedriftet, sondern aktuell. Die
+  «Angular-Shell» (2.3 KB, HTTP 200, text/html, «Casemates») serviert nur der
+  **`/app/`-SPA-Pfad** (die menschliche `quelleUrl`), **nicht** der vom Adapter genutzte
+  **`/api/`-Endpunkt** — der POC hatte die beiden Pfade verwechselt. Kein `json_content`-
+  Umbau, kein David-SCHEMA-ENTSCHEID nötig; die reservierte a/b/c-Frage bleibt unberührt.
+- **Statt Umbau — Klasse dauerhaft entschärft:** `holeLexWork` erkennt jetzt eine
+  Soft-404-Shell (Content-Type ≠ JSON **oder** HTML-Body statt JSON) als eigene
+  `LexWorkShellError`; `check:normtext-netz` (Prüfung 3) wertet sie als **HARTEN**
+  Fehler (Exit 1) statt als blosse Netz-Warnung — falls ein LexWork-Host seinen
+  `/api/`-Endpunkt je wirklich migriert, driftet die Klasse **nie wieder still**.
+  Host-agnostisch für alle 19 LexWork-Kantone. GL-Snapshots zur aktuellen Adapter-
+  Vintage refresht (nur Extraktions-Diff: +5 S1-Leerplatzhalter III-C.1, Randtitel;
+  amtlich 0 Änderung, golden nur additiv). Gegenprüfung bestanden (3 Erlasse zeichengenau).
+- **Quelle:** Live-Nachmessung 11.7.2026; POC-Nachtrag in
+  `bibliothek/normen/lexwork-kantone-poc-19-verdikt.md` §GL-Nachtrag.
 
 ## Terminierte Nachfolgefassungen kantonaler Kosten-Erlasse (✓2-Befund 5.6.2026)
 - **SG Gerichtskostenverordnung (GKV, sGS 941.12): Nachfolgefassung seit 1.7.2026 in Vollzug — AUFGELÖST + verifiziert 1.7.2026.**

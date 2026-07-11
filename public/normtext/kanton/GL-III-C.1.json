@@ -1,13 +1,14 @@
 {
-  "erzeugt": "2026-06-19",
+  "erzeugt": "2026-07-11",
   "eintraege": [
     {
       "id": "kanton/GL/III-C.1/art_1",
       "ebene": "kanton",
       "quelle": "GL",
-      "erlass": "EG ZPO (GS III C/1)",
+      "erlass": "Einführungsgesetz zur Schweizerischen Zivilprozessordnung, EG ZPO (GS III C/1)",
       "artikel": "1",
       "artikelLabel": "Art. 1",
+      "titel": "Gegenstand",
       "bloecke": [
         {
           "absatz": "1",
@@ -24,7 +25,7 @@
       ],
       "stand": "2022-07-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-C.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "6f484b8a32077fb248dc7cd0fd81fada",
       "sha": "e16619c22045e929befd884bf005227cee24f0a8cfbf41409381c3aa2b92e65f"
     },
@@ -32,9 +33,10 @@
       "id": "kanton/GL/III-C.1/art_2",
       "ebene": "kanton",
       "quelle": "GL",
-      "erlass": "EG ZPO (GS III C/1)",
+      "erlass": "Einführungsgesetz zur Schweizerischen Zivilprozessordnung, EG ZPO (GS III C/1)",
       "artikel": "2",
       "artikelLabel": "Art. 2",
+      "titel": "Kantonales Privatrecht",
       "bloecke": [
         {
           "absatz": "1",
@@ -43,17 +45,56 @@
       ],
       "stand": "2022-07-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-C.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "6f484b8a32077fb248dc7cd0fd81fada",
       "sha": "761980c92a136399092ee1111e2bac88dd7b74596808e68fe7abb1eeb5a52839"
+    },
+    {
+      "id": "kanton/GL/III-C.1/art_3",
+      "ebene": "kanton",
+      "quelle": "GL",
+      "erlass": "Einführungsgesetz zur Schweizerischen Zivilprozessordnung, EG ZPO (GS III C/1)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2022-07-01",
+      "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-C.1",
+      "abgerufen": "2026-07-11",
+      "fassungsToken": "6f484b8a32077fb248dc7cd0fd81fada",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/GL/III-C.1/art_4",
+      "ebene": "kanton",
+      "quelle": "GL",
+      "erlass": "Einführungsgesetz zur Schweizerischen Zivilprozessordnung, EG ZPO (GS III C/1)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2022-07-01",
+      "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-C.1",
+      "abgerufen": "2026-07-11",
+      "fassungsToken": "6f484b8a32077fb248dc7cd0fd81fada",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "id": "kanton/GL/III-C.1/art_5",
       "ebene": "kanton",
       "quelle": "GL",
-      "erlass": "EG ZPO (GS III C/1)",
+      "erlass": "Einführungsgesetz zur Schweizerischen Zivilprozessordnung, EG ZPO (GS III C/1)",
       "artikel": "5",
       "artikelLabel": "Art. 5",
+      "titel": "Rechtshilfe in Zivilsachen",
       "bloecke": [
         {
           "absatz": "1",
@@ -66,7 +107,7 @@
       ],
       "stand": "2022-07-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-C.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "6f484b8a32077fb248dc7cd0fd81fada",
       "sha": "88f6fe7ccb94e4f92102c42ab65e4a68b94e5762a62706fa69f93c28ca520e38"
     },
@@ -74,9 +115,10 @@
       "id": "kanton/GL/III-C.1/art_6",
       "ebene": "kanton",
       "quelle": "GL",
-      "erlass": "EG ZPO (GS III C/1)",
+      "erlass": "Einführungsgesetz zur Schweizerischen Zivilprozessordnung, EG ZPO (GS III C/1)",
       "artikel": "6",
       "artikelLabel": "Art. 6",
+      "titel": "Schiedsgerichtsbarkeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -85,7 +127,7 @@
       ],
       "stand": "2022-07-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-C.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "6f484b8a32077fb248dc7cd0fd81fada",
       "sha": "8f707fd5852d06601b5c051709feb12f1aca17239ea95a2655aa34a23fe106d2"
     },
@@ -93,9 +135,10 @@
       "id": "kanton/GL/III-C.1/art_7",
       "ebene": "kanton",
       "quelle": "GL",
-      "erlass": "EG ZPO (GS III C/1)",
+      "erlass": "Einführungsgesetz zur Schweizerischen Zivilprozessordnung, EG ZPO (GS III C/1)",
       "artikel": "7",
       "artikelLabel": "Art. 7",
+      "titel": "Freiwillige Gerichtsbarkeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -104,6 +147,42 @@
             {
               "marke": "1",
               "text": "Zivilgesetzbuch (ZGB)"
+            },
+            {
+              "marke": "a",
+              "text": "Entgegennahme von mündlichen letztwilligen Verfügungen (Art. 507 ZGB);"
+            },
+            {
+              "marke": "b",
+              "text": "Anordnung der amtlichen Liquidation einer Erbschaft (Art. 593ff. ZGB);"
+            },
+            {
+              "marke": "c",
+              "text": "Bestellung eines Vertreters für die Erbengemeinschaft (Art. 602 Abs. 3 ZGB);"
+            },
+            {
+              "marke": "d",
+              "text": "Verschiebung der Erbteilung und Sicherung der Ansprüche der Miterben gegenüber zahlungsunfähigen Erben (Art. 604 ZGB);"
+            },
+            {
+              "marke": "e",
+              "text": "Losbildung (Art. 611 ZGB);"
+            },
+            {
+              "marke": "f",
+              "text": "Versteigerungs- oder Teilungsart vor Anhebung des Erbteilungsprozesses (Art. 612f. ZGB);"
+            },
+            {
+              "marke": "g",
+              "text": "Beauftragung der Schätzungskommission mit der Feststellung des Anrechnungswertes von Grundstücken (Art. 618 ZGB);"
+            },
+            {
+              "marke": "h",
+              "text": "Aufsicht über den Willensvollstrecker (Art. 517 f. ZGB);"
+            },
+            {
+              "marke": "i",
+              "text": "Aufsicht über den Erbschaftsliquidator (Art. 595 ZGB);"
             }
           ]
         },
@@ -132,17 +211,56 @@
       ],
       "stand": "2022-07-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-C.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "6f484b8a32077fb248dc7cd0fd81fada",
-      "sha": "fc926ec023152ec1ef9b220e64197fcae9c56cfdace81173f1d72b9ae24e0027"
+      "sha": "eb4aa37195d6ef7e1249059f7034b163f63bdec221ae02baa7316ddad2b08d95"
+    },
+    {
+      "id": "kanton/GL/III-C.1/art_8–11",
+      "ebene": "kanton",
+      "quelle": "GL",
+      "erlass": "Einführungsgesetz zur Schweizerischen Zivilprozessordnung, EG ZPO (GS III C/1)",
+      "artikel": "8–11",
+      "artikelLabel": "Art. 8–11",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2022-07-01",
+      "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-C.1",
+      "abgerufen": "2026-07-11",
+      "fassungsToken": "6f484b8a32077fb248dc7cd0fd81fada",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/GL/III-C.1/art_12–14",
+      "ebene": "kanton",
+      "quelle": "GL",
+      "erlass": "Einführungsgesetz zur Schweizerischen Zivilprozessordnung, EG ZPO (GS III C/1)",
+      "artikel": "12–14",
+      "artikelLabel": "Art. 12–14",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2022-07-01",
+      "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-C.1",
+      "abgerufen": "2026-07-11",
+      "fassungsToken": "6f484b8a32077fb248dc7cd0fd81fada",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "id": "kanton/GL/III-C.1/art_15",
       "ebene": "kanton",
       "quelle": "GL",
-      "erlass": "EG ZPO (GS III C/1)",
+      "erlass": "Einführungsgesetz zur Schweizerischen Zivilprozessordnung, EG ZPO (GS III C/1)",
       "artikel": "15",
       "artikelLabel": "Art. 15",
+      "titel": "Parteivertretung (Art. 68 Abs. 2 ZPO)",
       "bloecke": [
         {
           "absatz": "1",
@@ -159,7 +277,7 @@
       ],
       "stand": "2022-07-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-C.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "6f484b8a32077fb248dc7cd0fd81fada",
       "sha": "37116064f16c9de0c63716c7b65c89b2750b709e5157aa1f5b274468552ea8ef"
     },
@@ -167,9 +285,10 @@
       "id": "kanton/GL/III-C.1/art_16",
       "ebene": "kanton",
       "quelle": "GL",
-      "erlass": "EG ZPO (GS III C/1)",
+      "erlass": "Einführungsgesetz zur Schweizerischen Zivilprozessordnung, EG ZPO (GS III C/1)",
       "artikel": "16",
       "artikelLabel": "Art. 16",
+      "titel": "Inhalt",
       "bloecke": [
         {
           "absatz": "1",
@@ -186,7 +305,7 @@
       ],
       "stand": "2022-07-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-C.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "6f484b8a32077fb248dc7cd0fd81fada",
       "sha": "33205e1bf6eb4906344f6ee81d060bb90147b2c3b4daf9f71e313b805fea14fa"
     },
@@ -194,9 +313,10 @@
       "id": "kanton/GL/III-C.1/art_17",
       "ebene": "kanton",
       "quelle": "GL",
-      "erlass": "EG ZPO (GS III C/1)",
+      "erlass": "Einführungsgesetz zur Schweizerischen Zivilprozessordnung, EG ZPO (GS III C/1)",
       "artikel": "17",
       "artikelLabel": "Art. 17",
+      "titel": "Zuständigkeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -209,7 +329,7 @@
       ],
       "stand": "2022-07-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-C.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "6f484b8a32077fb248dc7cd0fd81fada",
       "sha": "b604e4f3a24452685f036f602a6086a811e6214d96d70f3bc0ce3aabda4cb404"
     },
@@ -217,9 +337,10 @@
       "id": "kanton/GL/III-C.1/art_18",
       "ebene": "kanton",
       "quelle": "GL",
-      "erlass": "EG ZPO (GS III C/1)",
+      "erlass": "Einführungsgesetz zur Schweizerischen Zivilprozessordnung, EG ZPO (GS III C/1)",
       "artikel": "18",
       "artikelLabel": "Art. 18",
+      "titel": "Kosten und Verfahren",
       "bloecke": [
         {
           "absatz": "1",
@@ -236,17 +357,37 @@
       ],
       "stand": "2022-07-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-C.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "6f484b8a32077fb248dc7cd0fd81fada",
       "sha": "ec09f5c6261b6515525d5e166c2d6971dbaedb57ad4372729e3969b67c1141d3"
+    },
+    {
+      "id": "kanton/GL/III-C.1/art_19",
+      "ebene": "kanton",
+      "quelle": "GL",
+      "erlass": "Einführungsgesetz zur Schweizerischen Zivilprozessordnung, EG ZPO (GS III C/1)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2022-07-01",
+      "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-C.1",
+      "abgerufen": "2026-07-11",
+      "fassungsToken": "6f484b8a32077fb248dc7cd0fd81fada",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "id": "kanton/GL/III-C.1/art_19_a",
       "ebene": "kanton",
       "quelle": "GL",
-      "erlass": "EG ZPO (GS III C/1)",
+      "erlass": "Einführungsgesetz zur Schweizerischen Zivilprozessordnung, EG ZPO (GS III C/1)",
       "artikel": "19_a",
       "artikelLabel": "Art. 19a",
+      "titel": "Nachzahlung (Art. 123 ZPO)",
       "bloecke": [
         {
           "absatz": "1",
@@ -255,7 +396,7 @@
       ],
       "stand": "2022-07-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-C.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "6f484b8a32077fb248dc7cd0fd81fada",
       "sha": "2d62c9e6c3992829d125a14764d93f40f2e3e76458aa0a4951d2ac1c0f800319"
     },
@@ -263,9 +404,10 @@
       "id": "kanton/GL/III-C.1/art_20",
       "ebene": "kanton",
       "quelle": "GL",
-      "erlass": "EG ZPO (GS III C/1)",
+      "erlass": "Einführungsgesetz zur Schweizerischen Zivilprozessordnung, EG ZPO (GS III C/1)",
       "artikel": "20",
       "artikelLabel": "Art. 20",
+      "titel": "Parteientschädigung (Art. 96 ZPO)",
       "bloecke": [
         {
           "absatz": "1",
@@ -282,7 +424,7 @@
       ],
       "stand": "2022-07-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-C.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "6f484b8a32077fb248dc7cd0fd81fada",
       "sha": "9fa27343d42956710a65dfb4bb73fa2ca38f189b2ba1866246f222cb12c766d6"
     },
@@ -290,9 +432,10 @@
       "id": "kanton/GL/III-C.1/art_21",
       "ebene": "kanton",
       "quelle": "GL",
-      "erlass": "EG ZPO (GS III C/1)",
+      "erlass": "Einführungsgesetz zur Schweizerischen Zivilprozessordnung, EG ZPO (GS III C/1)",
       "artikel": "21",
       "artikelLabel": "Art. 21",
+      "titel": "Inkrafttreten",
       "bloecke": [
         {
           "absatz": "1",
@@ -301,7 +444,7 @@
       ],
       "stand": "2022-07-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-C.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "6f484b8a32077fb248dc7cd0fd81fada",
       "sha": "c4d97df3812bfbc0460d48d98320db48540ac498ac030d24020bf63b2fc5b975"
     },
@@ -309,9 +452,10 @@
       "id": "kanton/GL/III-C.1/art_22",
       "ebene": "kanton",
       "quelle": "GL",
-      "erlass": "EG ZPO (GS III C/1)",
+      "erlass": "Einführungsgesetz zur Schweizerischen Zivilprozessordnung, EG ZPO (GS III C/1)",
       "artikel": "22",
       "artikelLabel": "Art. 22",
+      "titel": "Übergangsbestimmung",
       "bloecke": [
         {
           "absatz": "1",
@@ -328,7 +472,7 @@
       ],
       "stand": "2022-07-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-C.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "6f484b8a32077fb248dc7cd0fd81fada",
       "sha": "1ab3545d6ea73868ef2032c5533eb8eb76d5b37988993fbc44733f86c2b00668"
     },
@@ -336,9 +480,10 @@
       "id": "kanton/GL/III-C.1/art_23",
       "ebene": "kanton",
       "quelle": "GL",
-      "erlass": "EG ZPO (GS III C/1)",
+      "erlass": "Einführungsgesetz zur Schweizerischen Zivilprozessordnung, EG ZPO (GS III C/1)",
       "artikel": "23",
       "artikelLabel": "Art. 23",
+      "titel": "Aufhebung bisherigen Rechts",
       "bloecke": [
         {
           "absatz": "1",
@@ -347,7 +492,7 @@
       ],
       "stand": "2022-07-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-C.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "6f484b8a32077fb248dc7cd0fd81fada",
       "sha": "b1becd5ebf8e6a3ed976ef1085853d1d4d65e2317d6e2427eb138f82261d4dc3"
     }
