@@ -1,8 +1,9 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-11",
  "kopf": {
   "srNummer": "951.312",
   "titel": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die kollektiven Kapitalanlagen",
+  "erlassdatum": "vom 27. August 2014 (Stand am 1. Januar 2021)",
   "praeambel": [
    {
     "rolle": "autor",
@@ -27,7 +28,7 @@
     "links": [
      {
       "label": "SR <b>951.31</b>",
-      "url": "https://fedlex.data.admin.ch/eli/cc/2006/822/20200101"
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11533"
      }
     ],
     "absatz": null,
@@ -403,10 +404,10 @@
      "links": [
       {
        "label": "SR <b>951.311</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2006/859/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11534"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -436,10 +437,10 @@
      "links": [
       {
        "label": "SR <b>951.311</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2006/859/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11534"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -583,10 +584,10 @@
      "links": [
       {
        "label": "SR <b>951.311</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2006/859/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11534"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -730,10 +731,10 @@
      "links": [
       {
        "label": "SR <b>951.311</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2006/859/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11534"
       }
      ],
-     "absatz": null,
+     "absatz": "5",
      "item": "a"
     }
    ]
@@ -972,10 +973,10 @@
      "links": [
       {
        "label": "SR <b>951.311</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2006/859/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11534"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "a"
     }
    ]
@@ -1100,7 +1101,7 @@
      "links": [
       {
        "label": "SR <b>951.311</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2006/859/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11534"
       }
      ],
      "absatz": null,
@@ -1209,10 +1210,10 @@
      "links": [
       {
        "label": "SR <b>951.311</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2006/859/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11534"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -1280,10 +1281,10 @@
      "links": [
       {
        "label": "SR <b>951.311</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2006/859/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11534"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -1383,10 +1384,10 @@
      "links": [
       {
        "label": "SR <b>951.311</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2006/859/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11534"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -1412,16 +1413,21 @@
      "links": [
       {
        "label": "SR <b>951.311</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2006/859/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11534"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
      "nr": "16",
-     "text": "Fassung gemäss Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (<i>AS <b>2020</b> 5327</i>).",
-     "links": [],
+     "text": "Fassung gemäss Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanzinstitute, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5327).",
+     "links": [
+      {
+       "label": "AS <b>2020</b> 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
      "absatz": null,
      "item": null,
      "sektion": "1. Kapitel: Pflichten für Vertreter ausländischer kollektiver Kapitalanlagen"
@@ -1443,15 +1449,25 @@
    "fussnoten": [
     {
      "nr": "20",
-     "text": "Fassung gemäss Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (<i>AS <b>2020</b> 5327</i>).",
-     "links": [],
+     "text": "Fassung gemäss Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanzinstitute, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5327).",
+     "links": [
+      {
+       "label": "AS <b>2020</b> 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
      "absatz": null,
      "item": null
     },
     {
      "nr": "21",
-     "text": "<i>SR <b>954.111</b></i>",
-     "links": [],
+     "text": "SR <b>954.111</b>",
+     "links": [
+      {
+       "label": "SR <b>954.111</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11591"
+      }
+     ],
      "absatz": null,
      "item": null
     }
@@ -1472,8 +1488,13 @@
    "fussnoten": [
     {
      "nr": "23",
-     "text": "Fassung gemäss Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (<i>AS <b>2020</b> 5327</i>).",
-     "links": [],
+     "text": "Fassung gemäss Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanzinstitute, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5327).",
+     "links": [
+      {
+       "label": "AS <b>2020</b> 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
      "absatz": null,
      "item": null,
      "sektion": "3. Kapitel: SICAV"
@@ -1516,10 +1537,10 @@
      "links": [
       {
        "label": "SR <b>951.311</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2006/859/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11534"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "b"
     }
    ]
@@ -1549,10 +1570,10 @@
      "links": [
       {
        "label": "SR <b>220</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -1582,7 +1603,7 @@
      "links": [
       {
        "label": "SR <b>951.311</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2006/859/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11534"
       }
      ],
      "absatz": null,
@@ -1615,7 +1636,7 @@
      "links": [
       {
        "label": "SR <b>951.311</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2006/859/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11534"
       }
      ],
      "absatz": null,
@@ -1623,8 +1644,13 @@
     },
     {
      "nr": "31",
-     "text": "Fassung gemäss Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (<i>AS <b>2020</b> 5327</i>).",
-     "links": [],
+     "text": "Fassung gemäss Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanzinstitute, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5327).",
+     "links": [
+      {
+       "label": "AS <b>2020</b> 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
      "absatz": null,
      "item": null
     }
@@ -1674,7 +1700,7 @@
      "links": [
       {
        "label": "SR <b>951.311</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2006/859/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11534"
       }
      ],
      "absatz": null,
@@ -1741,8 +1767,13 @@
    "fussnoten": [
     {
      "nr": "33",
-     "text": "Fassung gemäss Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (<i>AS <b>2020</b> 5327</i>).",
-     "links": [],
+     "text": "Fassung gemäss Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanzinstitute, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5327).",
+     "links": [
+      {
+       "label": "AS <b>2020</b> 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
      "absatz": null,
      "item": null
     }
@@ -1809,10 +1840,10 @@
      "links": [
       {
        "label": "SR <b>221.432</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2012/812/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5937"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -1853,7 +1884,7 @@
      "links": [
       {
        "label": "SR <b>951.311</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2006/859/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11534"
       }
      ],
      "absatz": null,
@@ -1865,10 +1896,10 @@
      "links": [
       {
        "label": "SR <b>221.432</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2012/812/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5937"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -1898,7 +1929,7 @@
      "links": [
       {
        "label": "SR <b>951.311</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2006/859/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11534"
       }
      ],
      "absatz": null,
@@ -1910,10 +1941,10 @@
      "links": [
       {
        "label": "SR <b>220</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
-     "absatz": null,
+     "absatz": "6",
      "item": null
     }
    ]
@@ -1962,7 +1993,7 @@
      "links": [
       {
        "label": "SR <b>951.311</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2006/859/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11534"
       }
      ],
      "absatz": null,
@@ -1995,7 +2026,7 @@
      "links": [
       {
        "label": "SR <b>951.311</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2006/859/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11534"
       }
      ],
      "absatz": null,
@@ -2028,7 +2059,7 @@
      "links": [
       {
        "label": "SR <b>951.311</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2006/859/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11534"
       }
      ],
      "absatz": null,
@@ -2061,7 +2092,7 @@
      "links": [
       {
        "label": "SR <b>951.311</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2006/859/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11534"
       }
      ],
      "absatz": null,
@@ -2073,10 +2104,10 @@
      "links": [
       {
        "label": "SR <b>220</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -2106,10 +2137,10 @@
      "links": [
       {
        "label": "SR <b>220</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -2139,10 +2170,10 @@
      "links": [
       {
        "label": "SR <b>951.311</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2006/859/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11534"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": "c"
     }
    ]
@@ -2286,7 +2317,7 @@
      "links": [
       {
        "label": "SR <b>951.311</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2006/859/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11534"
       }
      ],
      "absatz": null,
@@ -2313,8 +2344,13 @@
    "fussnoten": [
     {
      "nr": "47",
-     "text": "Aufgehoben durch Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, mit Wirkung seit 1. Jan. 2021 (<i>AS <b>2020</b> 5327</i>).",
-     "links": [],
+     "text": "Aufgehoben durch Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanzinstitute, mit Wirkung seit 1. Jan. 2021 (AS <b>2020</b> 5327).",
+     "links": [
+      {
+       "label": "AS <b>2020</b> 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
      "absatz": null,
      "item": null
     }
@@ -2356,10 +2392,10 @@
      "links": [
       {
        "label": "SR <b>220</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -2368,10 +2404,10 @@
      "links": [
       {
        "label": "SR <b>221.432</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2012/812/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5937"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -2393,8 +2429,13 @@
    "fussnoten": [
     {
      "nr": "50",
-     "text": "Fassung gemäss Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (<i>AS <b>2020</b> 5327</i>).",
-     "links": [],
+     "text": "Fassung gemäss Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanzinstitute, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5327).",
+     "links": [
+      {
+       "label": "AS <b>2020</b> 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
      "absatz": null,
      "item": null
     },
@@ -2404,7 +2445,7 @@
      "links": [
       {
        "label": "SR <b>956.1</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2008/736/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11614"
       }
      ],
      "absatz": null,
@@ -2433,7 +2474,7 @@
      "links": [
       {
        "label": "SR <b>951.311</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2006/859/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11534"
       }
      ],
      "absatz": null,
@@ -2441,9 +2482,14 @@
     },
     {
      "nr": "53",
-     "text": "Eingefügt durch Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (<i>AS <b>2020</b> 5327</i>).",
-     "links": [],
-     "absatz": null,
+     "text": "Eingefügt durch Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanzinstitute, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5327).",
+     "links": [
+      {
+       "label": "AS <b>2020</b> 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
+     "absatz": "1bis",
      "item": null
     },
     {
@@ -2452,17 +2498,22 @@
      "links": [
       {
        "label": "SR <b>220</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
      "nr": "55",
-     "text": "Fassung gemäss Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (<i>AS <b>2020</b> 5327</i>).",
-     "links": [],
-     "absatz": null,
+     "text": "Fassung gemäss Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanzinstitute, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5327).",
+     "links": [
+      {
+       "label": "AS <b>2020</b> 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
+     "absatz": "2",
      "item": null
     }
    ]
@@ -2488,7 +2539,7 @@
      "links": [
       {
        "label": "SR <b>956.1</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2008/736/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11614"
       }
      ],
      "absatz": null,
@@ -2500,7 +2551,7 @@
      "links": [
       {
        "label": "SR <b>956.161</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2014/708/20150101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11621"
       }
      ],
      "absatz": null,
@@ -2508,30 +2559,50 @@
     },
     {
      "nr": "58",
-     "text": "Fassung gemäss Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (<i>AS <b>2020</b> 5327</i>).",
-     "links": [],
+     "text": "Fassung gemäss Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanzinstitute, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5327).",
+     "links": [
+      {
+       "label": "AS <b>2020</b> 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
      "absatz": null,
      "item": null
     },
     {
      "nr": "59",
-     "text": "Fassung gemäss Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (<i>AS <b>2020</b> 5327</i>).",
-     "links": [],
-     "absatz": null,
+     "text": "Fassung gemäss Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanzinstitute, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5327).",
+     "links": [
+      {
+       "label": "AS <b>2020</b> 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
+     "absatz": "1",
      "item": null
     },
     {
      "nr": "60",
-     "text": "Fassung gemäss Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (<i>AS <b>2020</b> 5327</i>).",
-     "links": [],
-     "absatz": null,
+     "text": "Fassung gemäss Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanzinstitute, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5327).",
+     "links": [
+      {
+       "label": "AS <b>2020</b> 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
+     "absatz": "3",
      "item": null
     },
     {
      "nr": "61",
-     "text": "Aufgehoben durch Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, mit Wirkung seit 1. Jan. 2021 (<i>AS <b>2020</b> 5327</i>).",
-     "links": [],
-     "absatz": null,
+     "text": "Aufgehoben durch Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanzinstitute, mit Wirkung seit 1. Jan. 2021 (AS <b>2020</b> 5327).",
+     "links": [
+      {
+       "label": "AS <b>2020</b> 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
+     "absatz": "4",
      "item": null
     }
    ]
@@ -2557,7 +2628,7 @@
      "links": [
       {
        "label": "SR <b>956.1</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2008/736/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11614"
       }
      ],
      "absatz": null,
@@ -2569,7 +2640,7 @@
      "links": [
       {
        "label": "SR <b>951.311</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2006/859/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11534"
       }
      ],
      "absatz": null,
@@ -2581,7 +2652,7 @@
      "links": [
       {
        "label": "SR <b>956.161</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2014/708/20150101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11621"
       }
      ],
      "absatz": null,
@@ -2610,7 +2681,7 @@
      "links": [
       {
        "label": "SR <b>956.1</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2008/736/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11614"
       }
      ],
      "absatz": null,
@@ -2622,7 +2693,7 @@
      "links": [
       {
        "label": "SR <b>956.161</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2014/708/20150101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11621"
       }
      ],
      "absatz": null,
@@ -2630,23 +2701,38 @@
     },
     {
      "nr": "67",
-     "text": "Fassung gemäss Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (<i>AS <b>2020</b> 5327</i>).",
-     "links": [],
+     "text": "Fassung gemäss Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanzinstitute, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5327).",
+     "links": [
+      {
+       "label": "AS <b>2020</b> 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
      "absatz": null,
      "item": null
     },
     {
      "nr": "68",
-     "text": "Fassung gemäss Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (<i>AS <b>2020</b> 5327</i>).",
-     "links": [],
-     "absatz": null,
+     "text": "Fassung gemäss Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanzinstitute, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5327).",
+     "links": [
+      {
+       "label": "AS <b>2020</b> 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
+     "absatz": "1",
      "item": null
     },
     {
      "nr": "69",
-     "text": "Fassung gemäss Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (<i>AS <b>2020</b> 5327</i>).",
-     "links": [],
-     "absatz": null,
+     "text": "Fassung gemäss Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanzinstitute, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5327).",
+     "links": [
+      {
+       "label": "AS <b>2020</b> 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
+     "absatz": "2",
      "item": null
     }
    ]
@@ -2672,7 +2758,7 @@
      "links": [
       {
        "label": "SR <b>951.311</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2006/859/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11534"
       }
      ],
      "absatz": null,
@@ -2684,10 +2770,10 @@
      "links": [
       {
        "label": "SR <b>220</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -2713,7 +2799,7 @@
      "links": [
       {
        "label": "SR <b>956.1</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2008/736/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11614"
       }
      ],
      "absatz": null,
@@ -2725,7 +2811,7 @@
      "links": [
       {
        "label": "SR <b>951.311</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2006/859/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11534"
       }
      ],
      "absatz": null,
@@ -2737,7 +2823,7 @@
      "links": [
       {
        "label": "SR <b>956.161</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2014/708/20150101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11621"
       }
      ],
      "absatz": null,
@@ -2749,10 +2835,10 @@
      "links": [
       {
        "label": "SR <b>220</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -2797,8 +2883,13 @@
    "fussnoten": [
     {
      "nr": "80",
-     "text": "Aufgehoben durch Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, mit Wirkung seit 1. Jan. 2021 (<i>AS <b>2020</b> 5327</i>).",
-     "links": [],
+     "text": "Aufgehoben durch Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanzinstitute, mit Wirkung seit 1. Jan. 2021 (AS <b>2020</b> 5327).",
+     "links": [
+      {
+       "label": "AS <b>2020</b> 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
      "absatz": null,
      "item": null
     }
@@ -2834,16 +2925,21 @@
      "links": [
       {
        "label": "SR <b>951.311</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2006/859/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11534"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
      "nr": "76",
-     "text": "Eingefügt durch Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, in Kraft seit 1. Jan. 2021 (<i>AS <b>2020</b> 5327</i>).",
-     "links": [],
+     "text": "Eingefügt durch Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanzinstitute, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5327).",
+     "links": [
+      {
+       "label": "AS <b>2020</b> 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
      "absatz": null,
      "item": null,
      "sektion": "4a. Titel: Form der Zustellung"
@@ -2880,7 +2976,7 @@
     "Meldepflicht bei Kündigung oder Änderung der Berufshaftpflichtversicherung"
    ]
   },
-  "68__71_": {
+  "68_71": {
    "gliederung": [
     {
      "ebene": 1,
@@ -2895,14 +2991,19 @@
    "fussnoten": [
     {
      "nr": "22",
-     "text": "Aufgehoben durch Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, mit Wirkung seit 1. Jan. 2021 (<i>AS <b>2020</b> 5327</i>).",
-     "links": [],
+     "text": "Aufgehoben durch Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanzinstitute, mit Wirkung seit 1. Jan. 2021 (AS <b>2020</b> 5327).",
+     "links": [
+      {
+       "label": "AS <b>2020</b> 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
      "absatz": null,
      "item": null
     }
    ]
   },
-  "73__76_": {
+  "73_76": {
    "gliederung": [
     {
      "ebene": 1,
@@ -2917,8 +3018,13 @@
    "fussnoten": [
     {
      "nr": "25",
-     "text": "Aufgehoben durch Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanz­institute, mit Wirkung seit 1. Jan. 2021 (<i>AS <b>2020</b> 5327</i>).",
-     "links": [],
+     "text": "Aufgehoben durch Anhang Ziff. 1 der V der FINMA vom 4. Nov. 2020 über die Finanzinstitute, mit Wirkung seit 1. Jan. 2021 (AS <b>2020</b> 5327).",
+     "links": [
+      {
+       "label": "AS <b>2020</b> 5327",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/922"
+      }
+     ],
      "absatz": null,
      "item": null
     }

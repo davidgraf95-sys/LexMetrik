@@ -1,12 +1,13 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-11",
  "kopf": {
   "srNummer": "0.142.30",
   "titel": "Abkommen über die Rechtsstellung der Flüchtlinge",
+  "erlassdatum": "(Stand am 14. Juni 2012)",
   "praeambelTitel": "Präambel",
   "praeambel": [
    {
-    "rolle": "autor",
+    "rolle": "praeambel",
     "text": "In der Erwägung, dass die Charta der Vereinten Nationen und die am 10. Dezember 1948 von der Generalversammlung angenommene allgemeine Erklärung der Menschenrechte den Grundsatz bestätigt haben, dass die Menschen ohne Unterschied die Menschenrechte und Freiheitsrechte geniessen sollen,",
     "fnNrs": [
      "3"
@@ -14,7 +15,7 @@
    },
    {
     "rolle": "praeambel",
-    "text": "in der Erwägung, dass die Vereinten Nationen wiederholt ihr grosses Interesse für die Flüchtlinge bekundet haben und dass sie sich bestrebt haben, diesen in möglichst weitem Umfang die Ausübung der Menschenrechte und der Grundfreiheiten zu gewährl­eisten,"
+    "text": "in der Erwägung, dass die Vereinten Nationen wiederholt ihr grosses Interesse für die Flüchtlinge bekundet haben und dass sie sich bestrebt haben, diesen in möglichst weitem Umfang die Ausübung der Menschenrechte und der Grundfreiheiten zu gewährleisten,"
    },
    {
     "rolle": "praeambel",
@@ -22,7 +23,7 @@
    },
    {
     "rolle": "praeambel",
-    "text": "in der Erwägung, dass sich aus der Asylgewährung für einzelne Länder eine ausser­ordentlich schwere Belastung ergeben kann und dass eine befriedigende Lösung des Problems, dessen Tragweite und internationale Bedeutung die Organisation der Vereinten Nationen anerkannt hat, ohne internationale Zusammenarbeit nicht erreicht werden kann,"
+    "text": "in der Erwägung, dass sich aus der Asylgewährung für einzelne Länder eine ausserordentlich schwere Belastung ergeben kann und dass eine befriedigende Lösung des Problems, dessen Tragweite und internationale Bedeutung die Organisation der Vereinten Nationen anerkannt hat, ohne internationale Zusammenarbeit nicht erreicht werden kann,"
    },
    {
     "rolle": "praeambel",
@@ -63,7 +64,7 @@
     "links": [
      {
       "label": "SR <b>0.120</b>",
-      "url": "https://fedlex.data.admin.ch/eli/cc/2003/160/20150623"
+      "url": "https://fedlex.data.admin.ch/eli/cc/2003/160"
      }
     ],
     "absatz": null,
@@ -585,25 +586,7 @@
     "Mitteilungen durch den Generalsekretär der Vereinten Nationen"
    ]
   },
-  "lvl_d937e60": {
-   "gliederung": [
-    {
-     "ebene": 1,
-     "label": "Anhänge"
-    }
-   ],
-   "marginalie": []
-  },
-  "lvl_d937e61": {
-   "gliederung": [
-    {
-     "ebene": 1,
-     "label": "Anhänge"
-    }
-   ],
-   "marginalie": []
-  },
-  "lvl_d937e63": {
+  "annex_u1": {
    "gliederung": [
     {
      "ebene": 1,

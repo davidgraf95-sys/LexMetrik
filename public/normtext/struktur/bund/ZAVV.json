@@ -1,16 +1,17 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-11",
  "kopf": {
   "srNummer": "364.3",
   "titel": "Verordnung über die Anwendung polizeilichen Zwangs und polizeilicher Massnahmen im Zuständigkeitsbereich des Bundes",
+  "erlassdatum": "vom 12. November 2008 (Stand am 1. Januar 2023)",
   "praeambel": [
    {
     "rolle": "autor",
     "text": "Der Schweizerische Bundesrat,"
    },
    {
-    "rolle": "ingress",
-    "text": "gestützt auf die Artikel 14, 16, 17 Absatz 1, 26 und 29 des Zwangsanwendungs­gesetzes vom 20. März 2008 und auf Artikel 92 Absatz 4 Buchstabe b des Militärgesetzes vom 3. Februar 1995,",
+    "rolle": "praeambel",
+    "text": "gestützt auf die Artikel 14, 16, 17 Absatz 1, 26 und 29 des Zwangsanwendungsgesetzes vom 20. März 2008 und auf Artikel 92 Absatz 4 Buchstabe b des Militärgesetzes vom 3. Februar 1995,",
     "fnNrs": [
      "1",
      "2",
@@ -425,7 +426,7 @@
     }
    ],
    "marginalie": [
-    "Besondere Bestimmungen für den Transport von Kindern und Frauen"
+    "Besondere Bestimmungen für den Transport von Kindernund Frauen"
    ]
   },
   "25": {
@@ -482,7 +483,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/746"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     },
     {
@@ -494,7 +495,7 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/1999/357"
       }
      ],
-     "absatz": null,
+     "absatz": "5",
      "item": null
     },
     {
@@ -506,7 +507,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/100"
       }
      ],
-     "absatz": null,
+     "absatz": "5",
      "item": null
     }
    ]
@@ -612,7 +613,7 @@
     }
    ],
    "marginalie": [
-    "Anforderungen an die Ausbildung des Personals privater Sicherheitsunternehmen"
+    "Anforderungen an die Ausbildung des Personalsprivater Sicherheitsunternehmen"
    ],
    "fussnoten": [
     {
@@ -636,7 +637,7 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2015/435"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -648,7 +649,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/435"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -726,7 +727,7 @@
     }
    ]
   },
-  "lvl_u1": {
+  "annex_u1": {
    "gliederung": [
     {
      "ebene": 1,

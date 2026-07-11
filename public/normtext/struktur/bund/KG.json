@@ -1,8 +1,9 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-11",
  "kopf": {
   "srNummer": "251",
   "titel": "Bundesgesetz über Kartelle und andere Wettbewerbsbeschränkungen",
+  "erlassdatum": "vom 6. Oktober 1995 (Stand am 1. Juli 2023)",
   "praeambel": [
    {
     "rolle": "autor",
@@ -45,7 +46,7 @@
     "links": [
      {
       "label": "SR <b>101</b>",
-      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404"
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4715"
      }
     ],
     "absatz": null,
@@ -125,7 +126,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/848"
       }
      ],
-     "absatz": null,
+     "absatz": "1bis",
      "item": null
     }
    ]
@@ -158,7 +159,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/848"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -167,10 +168,10 @@
      "links": [
       {
        "label": "SR <b>942.20</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1986/895_895_895"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11238"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -203,7 +204,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/848"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -219,7 +220,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/1720"
       }
      ],
-     "absatz": null,
+     "absatz": "2bis",
      "item": null
     }
    ]
@@ -256,7 +257,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/848"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     }
    ]
@@ -293,7 +294,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/848"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "e"
     }
    ]
@@ -342,7 +343,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/1720"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -358,7 +359,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/1720"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "g"
     }
    ]
@@ -410,7 +411,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/848"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -419,10 +420,10 @@
      "links": [
       {
        "label": "SR <b>952.0</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/51/117_121_129"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11561"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     },
     {
@@ -442,7 +443,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/848"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -468,10 +469,10 @@
      "links": [
       {
        "label": "SR <b>952.0</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/51/117_121_129"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11561"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     },
     {
@@ -487,7 +488,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/303"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -524,10 +525,10 @@
      "links": [
       {
        "label": "SR <b>220</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "b"
     }
    ]
@@ -613,7 +614,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/848"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -633,7 +634,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/848"
       }
      ],
-     "absatz": null,
+     "absatz": "2bis",
      "item": null
     }
    ]
@@ -662,7 +663,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/419"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -718,10 +719,10 @@
      "links": [
       {
        "label": "SR <b>172.021</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5059"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -818,7 +819,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/848"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -900,7 +901,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -920,7 +921,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -1017,7 +1018,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -1037,7 +1038,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -1093,7 +1094,7 @@
      "links": [
       {
        "label": "SR <b>172.021</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5059"
       }
      ],
      "absatz": null,
@@ -1122,7 +1123,7 @@
      "links": [
       {
        "label": "SR <b>172.021</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5059"
       }
      ],
      "absatz": null,
@@ -1202,10 +1203,10 @@
      "links": [
       {
        "label": "SR <b>273</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1948/485_473_421"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6141"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -1214,10 +1215,10 @@
      "links": [
       {
        "label": "SR <b>313.0</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1974/1857_1857_1857"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6234"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -1243,10 +1244,10 @@
      "links": [
       {
        "label": "SR <b>172.021</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5059"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -1348,7 +1349,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/848"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -1502,7 +1503,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -1575,10 +1576,10 @@
      "links": [
       {
        "label": "SR <b>313.0</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1974/1857_1857_1857"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6234"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -1669,7 +1670,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1992/288_288_288"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -1753,10 +1754,10 @@
      "links": [
       {
        "label": "SR <b>0.748.127.192.68</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2002/258"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/3158"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -1842,7 +1843,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/1720"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -1923,7 +1924,7 @@
     }
    ]
   },
-  "lvl_u1": {
+  "annex_u1": {
    "gliederung": [
     {
      "ebene": 1,

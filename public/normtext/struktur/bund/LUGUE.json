@@ -1,8 +1,9 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-11",
  "kopf": {
   "srNummer": "0.275.12",
   "titel": "Übereinkommen über die gerichtliche Zuständigkeit und die Anerkennung und Vollstreckung von Entscheidungen in Zivil- und Handelssachen",
+  "erlassdatum": "(Stand am 8. April 2016)",
   "praeambelTitel": "Präambel",
   "praeambel": [
    {
@@ -11,11 +12,11 @@
    },
    {
     "rolle": "praeambel",
-    "text": "entschlossen, in ihren Hoheitsgebieten den Rechtsschutz der dort ansässigen Perso­nen zu verstärken,"
+    "text": "entschlossen, in ihren Hoheitsgebieten den Rechtsschutz der dort ansässigen Personen zu verstärken,"
    },
    {
     "rolle": "praeambel",
-    "text": "in der Erwägung, dass es zu diesem Zweck geboten ist, die internationale Zustän­digkeit ihrer Gerichte festzulegen, die Anerkennung von Entscheidungen zu erleichtern und ein beschleunigtes Verfahren einzuführen, um die Vollstreckung von Entscheidungen, öffentlichen Urkunden und gerichtlichen Vergleichen sicherzustel­len,"
+    "text": "in der Erwägung, dass es zu diesem Zweck geboten ist, die internationale Zuständigkeit ihrer Gerichte festzulegen, die Anerkennung von Entscheidungen zu erleichtern und ein beschleunigtes Verfahren einzuführen, um die Vollstreckung von Entscheidungen, öffentlichen Urkunden und gerichtlichen Vergleichen sicherzustellen,"
    },
    {
     "rolle": "praeambel",
@@ -27,7 +28,7 @@
    },
    {
     "rolle": "praeambel",
-    "text": "in der Überzeugung, dass die Ausdehnung der Grundsätze der Verordnung (EG) Nr. 44/2001 auf die Vertragsparteien des vorliegenden Übereinkommens die recht­liche und wirtschaftliche Zusammenarbeit verstärken wird,"
+    "text": "in der Überzeugung, dass die Ausdehnung der Grundsätze der Verordnung (EG) Nr. 44/2001 auf die Vertragsparteien des vorliegenden Übereinkommens die rechtliche und wirtschaftliche Zusammenarbeit verstärken wird,"
    },
    {
     "rolle": "praeambel",
@@ -38,7 +39,7 @@
     "text": "haben in diesem Sinne beschlossen, dieses Übereinkommen zu schliessen, und"
    },
    {
-    "rolle": "praeambel",
+    "rolle": "verb",
     "text": "sind wie folgt übereingekommen:"
    }
   ],
@@ -358,11 +359,11 @@
      "links": [
       {
        "label": "SR <b>0.232.142.2</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2007/849/20130503"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/1089"
       }
      ],
      "absatz": null,
-     "item": "u"
+     "item": "4"
     }
    ]
   },
@@ -424,7 +425,7 @@
      "links": [
       {
        "label": "SR <b>0.274.131</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1994/2809_2809_2809/20200713"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/1200"
       }
      ],
      "absatz": null,
@@ -1034,7 +1035,7 @@
    ],
    "marginalie": []
   },
-  "annex_II_I": {
+  "annex_II": {
    "gliederung": [
     {
      "ebene": 1,
@@ -1043,7 +1044,7 @@
    ],
    "marginalie": []
   },
-  "annex_I_I": {
+  "annex_III": {
    "gliederung": [
     {
      "ebene": 1,
@@ -1052,7 +1053,7 @@
    ],
    "marginalie": []
   },
-  "annex_I_V": {
+  "annex_IV": {
    "gliederung": [
     {
      "ebene": 1,
@@ -1061,7 +1062,7 @@
    ],
    "marginalie": []
   },
-  "annex_I_X": {
+  "annex_IX": {
    "gliederung": [
     {
      "ebene": 1,
@@ -1079,7 +1080,7 @@
    ],
    "marginalie": []
   },
-  "annex_VII_I": {
+  "annex_VI": {
    "gliederung": [
     {
      "ebene": 1,
@@ -1088,7 +1089,7 @@
    ],
    "marginalie": []
   },
-  "annex_VI_I": {
+  "annex_VII": {
    "gliederung": [
     {
      "ebene": 1,
@@ -1097,7 +1098,7 @@
    ],
    "marginalie": []
   },
-  "annex_V_I": {
+  "annex_VIII": {
    "gliederung": [
     {
      "ebene": 1,
@@ -1106,43 +1107,7 @@
    ],
    "marginalie": []
   },
-  "lvl_d1141e112": {
-   "gliederung": [
-    {
-     "ebene": 1,
-     "label": "Anhänge"
-    }
-   ],
-   "marginalie": []
-  },
-  "lvl_d1141e117": {
-   "gliederung": [
-    {
-     "ebene": 1,
-     "label": "Anhänge"
-    }
-   ],
-   "marginalie": []
-  },
-  "lvl_d1141e125": {
-   "gliederung": [
-    {
-     "ebene": 1,
-     "label": "Anhänge"
-    }
-   ],
-   "marginalie": []
-  },
-  "lvl_d1141e136": {
-   "gliederung": [
-    {
-     "ebene": 1,
-     "label": "Anhänge"
-    }
-   ],
-   "marginalie": []
-  },
-  "lvl_d1141e137": {
+  "annex_u1": {
    "gliederung": [
     {
      "ebene": 1,

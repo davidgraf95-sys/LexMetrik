@@ -1,8 +1,9 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-11",
  "kopf": {
   "srNummer": "141.01",
   "titel": "Verordnung über das Schweizer Bürgerrecht",
+  "erlassdatum": "vom 17. Juni 2016 (Stand am 9. Juli 2019)",
   "praeambel": [
    {
     "rolle": "autor",
@@ -27,7 +28,7 @@
     "links": [
      {
       "label": "SR <b>141.0</b>",
-      "url": "https://fedlex.data.admin.ch/eli/cc/2016/404/20190709"
+      "url": "https://fedlex.data.admin.ch/eli/cc/2016/404"
      }
     ],
     "absatz": null,
@@ -93,7 +94,7 @@
      "links": [
       {
        "label": "SR <b>121</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2017/494/20200324"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2017/494"
       }
      ],
      "absatz": null,
@@ -155,7 +156,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/510"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "d"
     }
    ]
@@ -434,7 +435,7 @@
      "links": [
       {
        "label": "SR <b>172.041.1</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2004/677/20130101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2004/677"
       }
      ],
      "absatz": null,
@@ -466,7 +467,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/388"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "b"
     }
    ]
@@ -492,7 +493,7 @@
      "links": [
       {
        "label": "SR <b>191.11</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2015/652/20151101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2015/652"
       }
      ],
      "absatz": null,
@@ -524,7 +525,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/62"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     }
    ]
@@ -580,10 +581,10 @@
      "links": [
       {
        "label": "SR <b>311.0</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799/20200303"
+       "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "a"
     }
    ]
@@ -668,7 +669,7 @@
     }
    ]
   },
-  "lvl_d922e56": {
+  "annex_u1": {
    "gliederung": [
     {
      "ebene": 1,

@@ -1,8 +1,9 @@
 {
- "erzeugt": "2026-06-30",
+ "erzeugt": "2026-07-11",
  "kopf": {
   "srNummer": "0.211.232.1",
   "titel": "Übereinkommen über den internationalen Schutz von Erwachsenen",
+  "erlassdatum": "(Stand am 9. Mai 2023)",
   "praeambel": [
    {
     "rolle": "autor",
@@ -389,7 +390,7 @@
    "fussnoten": [
     {
      "nr": "3",
-     "text": "DE: Verwahrer (so auch in den Artikeln 43, <i>53</i>–56, <i>58 </i>und <i>59</i>)",
+     "text": "DE: Verwahrer (so auch in den Artikeln 43, 53–56, 58 und 59)",
      "links": [],
      "absatz": null,
      "item": null
@@ -603,16 +604,7 @@
    ],
    "marginalie": []
   },
-  "lvl_u1": {
-   "gliederung": [
-    {
-     "ebene": 1,
-     "label": "Anhänge"
-    }
-   ],
-   "marginalie": []
-  },
-  "lvl_u2": {
+  "annex_u1": {
    "gliederung": [
     {
      "ebene": 1,

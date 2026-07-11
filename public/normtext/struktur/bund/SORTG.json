@@ -1,8 +1,9 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-11",
  "kopf": {
   "srNummer": "232.16",
   "titel": "Bundesgesetz über den Schutz von Pflanzenzüchtungen",
+  "erlassdatum": "vom 20. März 1975 (Stand am 1. Januar 2011)",
   "praeambel": [
    {
     "rolle": "autor",
@@ -25,11 +26,11 @@
   "fussnoten": [
    {
     "nr": "1",
-    "text": "[BS <b>1</b> 3]. Den genannten Bestimmungen entsprechen heute Art. 122 und <i>123 </i>der BV vom 18. April 1999 (SR <b>101</b>).",
+    "text": "[BS <b>1</b> 3]. Den genannten Bestimmungen entsprechen heute Art. 122 und 123 der BV vom 18. April 1999 (SR <b>101</b>).",
     "links": [
      {
       "label": "SR <b>101</b>",
-      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404/20200101"
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4715"
      }
     ],
     "absatz": null,
@@ -53,7 +54,7 @@
     "links": [
      {
       "label": "BBl <b>1974</b> I 1469",
-      "url": "https://fedlex.data.admin.ch/eli/fga/1974/1_1469__"
+      "url": "https://fedlex.data.admin.ch/eli/fga/1974/1_1469_1409_1399"
      }
     ],
     "absatz": null,
@@ -99,7 +100,7 @@
      "links": [
       {
        "label": "SR <b>0.232.161</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1977/1359_1359_1359/19810701"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/1107"
       }
      ],
      "absatz": null,
@@ -141,14 +142,14 @@
    "fussnoten": [
     {
      "nr": "7",
-     "text": "Fassung gemäss Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004 </b>4155).",
+     "text": "Fassung gemäss Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004</b> 4155).",
      "links": [
       {
        "label": "AS <b>2008</b> 3897",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/526"
       },
       {
-       "label": "BBl <b>2004 </b>4155",
+       "label": "BBl <b>2004</b> 4155",
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/683"
       }
      ],
@@ -222,14 +223,14 @@
    "fussnoten": [
     {
      "nr": "9",
-     "text": "Eingefügt durch Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004 </b>4155).",
+     "text": "Eingefügt durch Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004</b> 4155).",
      "links": [
       {
        "label": "AS <b>2008</b> 3897",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/526"
       },
       {
-       "label": "BBl <b>2004 </b>4155",
+       "label": "BBl <b>2004</b> 4155",
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/683"
       }
      ],
@@ -239,14 +240,14 @@
     },
     {
      "nr": "10",
-     "text": "Ursprünglich 2. Abschn. des 1. Kap. Fassung gemäss Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004 </b>4155).",
+     "text": "Ursprünglich 2. Abschn. des 1. Kap. Fassung gemäss Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, in Kraft seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004</b> 4155).",
      "links": [
       {
        "label": "AS <b>2008</b> 3897",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/526"
       },
       {
-       "label": "BBl <b>2004 </b>4155",
+       "label": "BBl <b>2004</b> 4155",
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/683"
       }
      ],
@@ -322,10 +323,10 @@
      "links": [
       {
        "label": "SR <b>220</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -341,7 +342,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/683"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -504,7 +505,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/683"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -537,7 +538,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/683"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "c"
     },
     {
@@ -553,7 +554,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/683"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -586,7 +587,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/683"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "c"
     }
    ]
@@ -642,10 +643,10 @@
      "links": [
       {
        "label": "SR <b>711</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/47/689_701_723/20120101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8369"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -905,7 +906,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/683"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -1077,7 +1078,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/683"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -1112,37 +1113,6 @@
    ],
    "marginalie": [
     "Klagerecht vor Erteilung des Sortenschutzes"
-   ]
-  },
-  "39": {
-   "gliederung": [
-    {
-     "ebene": 1,
-     "label": "3. Kapitel: Zivilrechtlicher Schutz"
-    },
-    {
-     "ebene": 2,
-     "label": "…"
-    }
-   ],
-   "marginalie": [],
-   "fussnoten": [
-    {
-     "nr": "36",
-     "text": "Aufgehoben durch Anhang 1 Ziff. II 13 der Zivilprozessordnung vom 19. Dez. 2008, mit Wirkung seit 1. Jan. 2011 (AS <b>2010</b> 1739; BBl <b>2006</b> 7221).",
-     "links": [
-      {
-       "label": "AS <b>2010</b> 1739",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2010/262"
-      },
-      {
-       "label": "BBl <b>2006</b> 7221",
-       "url": "https://fedlex.data.admin.ch/eli/fga/2006/914"
-      }
-     ],
-     "absatz": null,
-     "item": null
-    }
    ]
   },
   "41": {
@@ -1454,6 +1424,37 @@
     }
    ]
   },
+  "4446": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Zivilrechtlicher Schutz"
+    },
+    {
+     "ebene": 2,
+     "label": "…"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "41",
+     "text": "Aufgehoben durch Art. 2 Ziff. 1 des BB vom 5. Okt. 2007, mit Wirkung seit 1. Sept. 2008 (AS <b>2008</b> 3897; BBl <b>2004 </b>4155).",
+     "links": [
+      {
+       "label": "AS <b>2008</b> 3897",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/526"
+      },
+      {
+       "label": "BBl <b>2004 </b>4155",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2004/683"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
   "13_a": {
    "gliederung": [
     {
@@ -1576,6 +1577,37 @@
       {
        "label": "BBl <b>2004 </b>4155",
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/683"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "39_40": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Zivilrechtlicher Schutz"
+    },
+    {
+     "ebene": 2,
+     "label": "…"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "36",
+     "text": "Aufgehoben durch Anhang 1 Ziff. II 13 der Zivilprozessordnung vom 19. Dez. 2008, mit Wirkung seit 1. Jan. 2011 (AS <b>2010</b> 1739; BBl <b>2006</b> 7221).",
+     "links": [
+      {
+       "label": "AS <b>2010</b> 1739",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/262"
+      },
+      {
+       "label": "BBl <b>2006</b> 7221",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2006/914"
       }
      ],
      "absatz": null,

@@ -21,7 +21,8 @@
 // Exit 2 → Endpoint/Netz-Fehler (keine Aussage möglich).
 // SSoT §5: die Pin-Liste wird aus scripts/fedlex-cache.sh geparst — die
 // Parse-Logik liegt einmal in scripts/fedlex-pins.ts (auch vom Gegenprüfungs-Tor genutzt).
-import { lesePins, type Pin } from './fedlex-pins';
+import { lesePins, lesePinsVoll, type Pin } from './fedlex-pins';
+import { loeseHtmlManifeste } from './fedlex-manifest';
 import { PDF_EMBED_QUELLEN } from '../src/lib/normtext/pdf-embed.ts';
 
 const ENDPOINT = 'https://fedlex.data.admin.ch/sparqlendpoint';
@@ -118,9 +119,37 @@ for (const pin of pins) {
   }
 }
 
+// ─── P1-a/b Kanonik-Arbiter: gepinntes html-N == kanonische isExemplifiedBy ──
+// Der Datums-Check oben erkennt eine NEUERE Konsolidierung, aber NICHT, wenn ein
+// Pin auf einer nicht-kanonischen html-Manifestation (Alias-URL / veraltete
+// Revision) desselben Datums klebt (Querschnitts-Wurzel: Alt-Generations-Dumps
+// + Soft-404-Shells). Darum je cache.sh-Pin das kanonische html-N via
+// isExemplifiedBy auflösen und gegen das gepinnte n prüfen. Fedlex re-issued
+// dieselbe Konsolidierung (Fussnoten/Soft-Hyphen), das -N inkrementiert → ein
+// Pin unter der neuesten Revision ist die einzige treue Fassung (§7).
+const vollPins = lesePinsVoll();
+let unkanonisch = 0;
+try {
+  const manifeste = await loeseHtmlManifeste(vollPins);
+  console.log('\n── Kanonik-Arbiter (html-N vs. isExemplifiedBy) ──');
+  for (const p of vollPins) {
+    const b = manifeste.get(p.name);
+    if (!b || b.n === null) continue; // keine html-Manifestation → Alias+Sonde, s. cache.sh
+    if (b.n !== p.n) {
+      console.log(`NICHT-KANONISCH  ${p.name}: gepinnt html-${p.n}, kanonisch html-${b.n} (${b.file}) → re-pinnen (fedlex-repin-kanonik.ts) + regenerieren!`);
+      unkanonisch++;
+    }
+  }
+  if (unkanonisch === 0) console.log('Alle Pins docken an der kanonischen html-Manifestation (isExemplifiedBy).');
+} catch (e) {
+  console.error(`FEHLER: Kanonik-Auflösung (isExemplifiedBy) nicht möglich (${e instanceof Error ? e.message : e}).`);
+  process.exit(2);
+}
+
 console.log('');
-if (ueberholt > 0) {
-  console.log(`${ueberholt} Pin(s) überholt oder unauffindbar — Caches/Quellen-Register nachführen, betroffene Anker und Wortlaute neu verifizieren (§7).`);
+if (ueberholt > 0 || unkanonisch > 0) {
+  if (ueberholt > 0) console.log(`${ueberholt} Pin(s) überholt oder unauffindbar — Caches/Quellen-Register nachführen, betroffene Anker und Wortlaute neu verifizieren (§7).`);
+  if (unkanonisch > 0) console.log(`${unkanonisch} Pin(s) nicht-kanonisch (html-N ≠ isExemplifiedBy) — Alias-/Alt-Revisions-Wurzel: re-pinnen + Snapshots/Struktur regenerieren.`);
   process.exit(1);
 }
 if (angekuendigt > 0) {

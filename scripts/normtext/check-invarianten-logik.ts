@@ -71,6 +71,28 @@ export const ARTEFAKT_ERWARTET: ReadonlyMap<string, number> = new Map([
   ['VVV|bund/VVV/annex_4', 1],
   ['VZV|bund/VZV/annex_2', 2],
   ['ZPO|bund/ZPO/art_250', 1],
+  // ── P1-a/b Kanonik-Re-Pin (11.7.2026): die kanonischen isExemplifiedBy-
+  // Fassungen tragen mehr Anhang-/Tabellen-Inhalt als die alten Alias-Dumps →
+  // 23 NEUE «[tab]»-Marker-Artefakte in 14 Artikeln/Anhängen. EMPIRISCH geprüft:
+  // reine MARKER-Label-Artefakte (Fedlex-Tab-Platzhalter) — der Item-TEXT ist je
+  // vollständig erhalten (Muster STG art_22: marke «[tab]», text «abis. Lebens-
+  // versicherung, soweit diese der beruflichen Vorsorge …»; STG-Tarife art_6/art_8
+  // unversehrt). KEIN Textverlust, kein Parser-Eingriff (Quelle alias→kanonisch);
+  // Sanierung = der deferierte [tab]-Batch (P5). Beleg: fedlex-pin-kanonik-2026-07-11.md.
+  ['ENTG|bund/ENTG/art_19', 1],
+  ['FAV|bund/FAV/annex_5', 5],
+  ['FZA|bund/FZA/annex_II', 2],
+  ['HREGV|bund/HREGV/art_171', 1],
+  ['HZUE|bund/HZUE/annex_u1', 2],
+  ['IRSG|bund/IRSG/art_109', 1],
+  ['LUGUE|bund/LUGUE/annex_VI', 2],
+  ['MVG|bund/MVG/art_95_a', 1],
+  ['STG|bund/STG/art_1', 1],
+  ['STG|bund/STG/art_6', 2],
+  ['STG|bund/STG/art_7', 1],
+  ['STG|bund/STG/art_22', 2],
+  ['VSTRR|bund/VSTRR/art_29', 1],
+  ['VSTV|bund/VSTV/art_47', 1],
 ]);
 // Text, der mit einem freistehenden lat. Zähl-Suffix + Trenner beginnt (der
 // N1-Leak «a bis .» → Text «bis . …»). Nur am ANFANG, gefolgt von Punkt/Klammer,

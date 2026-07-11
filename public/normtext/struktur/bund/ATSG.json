@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-11",
  "kopf": {
   "srNummer": "830.1",
   "titel": "Bundesgesetz über den Allgemeinen Teil des Sozialversicherungsrechts",
@@ -77,7 +77,7 @@
    },
    {
     "nr": "5",
-    "text": "Im Bundesblatt nicht veröffentlicht; siehe AB <b>1999</b> N 1241 und <i>1244</i>.",
+    "text": "Im Bundesblatt nicht veröffentlicht; siehe AB <b>1999</b> N 1241 und 1244.",
     "links": [],
     "absatz": null,
     "item": null
@@ -2438,7 +2438,9 @@
      "label": "6. Kapitel: Verschiedene Bestimmungen"
     }
    ],
-   "marginalie": [],
+   "marginalie": [
+    "Elektronischer Datenaustausch"
+   ],
    "fussnoten": [
     {
      "nr": "65",
@@ -2491,7 +2493,7 @@
     }
    ]
   },
-  "lvl_u1": {
+  "annex_u1": {
    "gliederung": [
     {
      "ebene": 1,

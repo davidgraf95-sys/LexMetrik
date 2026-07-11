@@ -31,3 +31,35 @@ export function lesePins(shText?: string): Pin[] {
   }
   return pins;
 }
+
+// ─── P1-a/b Pin-Kanonik (Querschnitts-Wurzel): vollständige Pin-Felder ────────
+// `lesePins()` gibt bewusst nur name/eli/kons (Signatur stabil — Gegenprüfungs-
+// Tor + Currency-Monitoring hängen daran). Die Kanonik-Arbeit (html-N via
+// isExemplifiedBy statt Alias-URL) braucht ZUSÄTZLICH das gepinnte html-N und
+// die Anker/SR — darum ein zweiter, additiver Parser über DASSELBE 6-Feld-Format
+// `name|eli|YYYYMMDD|html-N|anker|sr` (SSoT bleibt cache.sh, §5).
+export type PinVoll = Pin & {
+  konsKompakt: string; // "YYYYMMDD"
+  n: number; // gepinntes html-N (0 = Alias-URL ohne -N-Suffix)
+  anker: string[];
+  sr: string; // 6. Feld, kann leer sein (Altbestand)
+};
+
+export function lesePinsVoll(shText?: string): PinVoll[] {
+  const sh = shText ?? readFileSync(CACHE_SH, 'utf8');
+  const pins: PinVoll[] = [];
+  for (const m of sh.matchAll(
+    /^\s*"([a-z0-9_]+)\|([a-z0-9/_]+)\|(\d{8})\|(\d+)\|([^|]*)\|([^"]*)"/gm,
+  )) {
+    pins.push({
+      name: m[1],
+      eli: m[2],
+      kons: `${m[3].slice(0, 4)}-${m[3].slice(4, 6)}-${m[3].slice(6, 8)}`,
+      konsKompakt: m[3],
+      n: Number(m[4]),
+      anker: m[5].split(',').map((a) => a.trim()).filter(Boolean),
+      sr: m[6].trim(),
+    });
+  }
+  return pins;
+}

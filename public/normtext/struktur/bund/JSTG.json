@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-11",
  "kopf": {
   "srNummer": "311.1",
   "titel": "Bundesgesetz über das Jugendstrafrecht",
@@ -29,7 +29,7 @@
     "links": [
      {
       "label": "SR <b>101</b>",
-      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404"
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4715"
      }
     ],
     "absatz": null,
@@ -62,7 +62,7 @@
      "links": [
       {
        "label": "SR <b>311.0</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6196"
       }
      ],
      "absatz": "1",
@@ -202,7 +202,7 @@
      "links": [
       {
        "label": "SR <b>311.0</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6196"
       }
      ],
      "absatz": "2",
@@ -214,7 +214,7 @@
      "links": [
       {
        "label": "SR <b>312.0</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2010/267"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6214"
       }
      ],
      "absatz": "2",
@@ -255,11 +255,15 @@
    "fussnoten": [
     {
      "nr": "13",
-     "text": "Seit Inkrafttreten des BG vom 19. Dez. 2008 (Erwachsenenschutz, Personenrecht und Kindesrecht; AS <b>2011</b> 725) am 1. Jan. 2013: Kindesschutzbehörde.",
+     "text": "Fassung des zweiten Satzes gemäss Ziff. I des BG vom 14. Juni 2024 (Massnahmenpaket Sanktionenvollzug), in Kraft seit 1. Juli 2025 (AS <b>2025</b> 224; BBl <b>2022</b> 2991).",
      "links": [
       {
-       "label": "AS <b>2011</b> 725",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2011/114"
+       "label": "AS <b>2025</b> 224",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/224"
+      },
+      {
+       "label": "BBl <b>2022</b> 2991",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2022/2991"
       }
      ],
      "absatz": null,
@@ -287,6 +291,24 @@
    ],
    "marginalie": [
     "Abklärung der persönlichen Verhältnisse, Beobachtung und Begutachtung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "15",
+     "text": "Eingefügt durch Ziff. I des BG vom 14. Juni 2024 (Massnahmenpaket Sanktionenvollzug), in Kraft seit 1. Juli 2025 (AS <b>2025</b> 224; BBl <b>2022</b> 2991).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 224",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/224"
+      },
+      {
+       "label": "BBl <b>2022</b> 2991",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2022/2991"
+      }
+     ],
+     "absatz": "4",
+     "item": null
+    }
    ]
   },
   "10": {
@@ -302,6 +324,24 @@
    ],
    "marginalie": [
     "Anordnung der Schutzmassnahmen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "16",
+     "text": "Zweiter Satz eingefügt durch Ziff. I des BG vom 14. Juni 2024 (Massnahmenpaket Sanktionenvollzug), in Kraft seit 1. Juli 2025 (AS <b>2025</b> 224; BBl <b>2022</b> 2991).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 224",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/224"
+      },
+      {
+       "label": "BBl <b>2022</b> 2991",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2022/2991"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "11": {
@@ -335,12 +375,32 @@
    ],
    "fussnoten": [
     {
-     "nr": "15",
-     "text": "Seit Inkrafttreten des BG vom 19. Dez. 2008 (Erwachsenenschutz, Personenrecht und Kindesrecht; AS <b>2011</b> 725) am 1. Jan. 2013: des Volljährigkeitsalters.",
+     "nr": "17",
+     "text": "Fassung gemäss Ziff. I des BG vom 14. Juni 2024 (Massnahmenpaket Sanktionenvollzug), in Kraft seit 1. Juli 2025 (AS <b>2025</b> 224; BBl <b>2022</b> 2991).",
      "links": [
       {
-       "label": "AS <b>2011</b> 725",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2011/114"
+       "label": "AS <b>2025</b> 224",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/224"
+      },
+      {
+       "label": "BBl <b>2022</b> 2991",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2022/2991"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "18",
+     "text": "Fassung gemäss Ziff. I des BG vom 14. Juni 2024 (Massnahmenpaket Sanktionenvollzug), in Kraft seit 1. Juli 2025 (AS <b>2025</b> 224; BBl <b>2022</b> 2991).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 224",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/224"
+      },
+      {
+       "label": "BBl <b>2022</b> 2991",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2022/2991"
       }
      ],
      "absatz": "3",
@@ -364,24 +424,44 @@
    ],
    "fussnoten": [
     {
-     "nr": "16",
+     "nr": "19",
      "text": "SR <b>210</b>",
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5703"
       }
      ],
      "absatz": "2",
      "item": null
     },
     {
-     "nr": "17",
-     "text": "Seit Inkrafttreten des BG vom 19. Dez. 2008 (Erwachsenenschutz, Personenrecht und Kindesrecht; AS <b>2011</b> 725) am 1. Jan. 2013: des Volljährigkeitsalters.",
+     "nr": "20",
+     "text": "Fassung gemäss Ziff. I des BG vom 14. Juni 2024 (Massnahmenpaket Sanktionenvollzug), in Kraft seit 1. Juli 2025 (AS <b>2025</b> 224; BBl <b>2022</b> 2991).",
      "links": [
       {
-       "label": "AS <b>2011</b> 725",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2011/114"
+       "label": "AS <b>2025</b> 224",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/224"
+      },
+      {
+       "label": "BBl <b>2022</b> 2991",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2022/2991"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "21",
+     "text": "Fassung gemäss Ziff. I des BG vom 14. Juni 2024 (Massnahmenpaket Sanktionenvollzug), in Kraft seit 1. Juli 2025 (AS <b>2025</b> 224; BBl <b>2022</b> 2991).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 224",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/224"
+      },
+      {
+       "label": "BBl <b>2022</b> 2991",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2022/2991"
       }
      ],
      "absatz": "4",
@@ -402,6 +482,24 @@
    ],
    "marginalie": [
     "Ambulante Behandlung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "22",
+     "text": "Aufgehoben durch Ziff. I des BG vom 14. Juni 2024 (Massnahmenpaket Sanktionenvollzug), mit Wirkung seit 1. Juli 2025 (AS <b>2025</b> 224; BBl <b>2022</b> 2991).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 224",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/224"
+      },
+      {
+       "label": "BBl <b>2022</b> 2991",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2022/2991"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "15": {
@@ -420,15 +518,47 @@
    ],
    "fussnoten": [
     {
-     "nr": "18",
-     "text": "Seit Inkrafttreten des BG vom 19. Dez. 2008 (Erwachsenenschutz, Personenrecht und Kindesrecht; AS <b>2011</b> 725) am 1. Jan. 2013: Kindesschutzbehörde.",
+     "nr": "23",
+     "text": "Fassung gemäss Ziff. I des BG vom 14. Juni 2024 (Massnahmenpaket Sanktionenvollzug), in Kraft seit 1. Juli 2025 (AS <b>2025</b> 224; BBl <b>2022</b> 2991).",
      "links": [
       {
-       "label": "AS <b>2011</b> 725",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2011/114"
+       "label": "AS <b>2025</b> 224",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/224"
+      },
+      {
+       "label": "BBl <b>2022</b> 2991",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2022/2991"
       }
      ],
      "absatz": "4",
+     "item": null
+    },
+    {
+     "nr": "24",
+     "text": "SR <b>311.0</b>",
+     "links": [
+      {
+       "label": "SR <b>311.0</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6196"
+      }
+     ],
+     "absatz": "5",
+     "item": null
+    },
+    {
+     "nr": "25",
+     "text": "Eingefügt durch Ziff. I des BG vom 14. Juni 2024 (Massnahmenpaket Sanktionenvollzug), in Kraft seit 1. Juli 2025 (AS <b>2025</b> 224; BBl <b>2022</b> 2991).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 224",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/224"
+      },
+      {
+       "label": "BBl <b>2022</b> 2991",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2022/2991"
+      }
+     ],
+     "absatz": "5",
      "item": null
     }
    ]
@@ -449,31 +579,31 @@
    ],
    "fussnoten": [
     {
-     "nr": "19",
+     "nr": "26",
      "text": "SR <b>210</b>",
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5703"
       }
      ],
      "absatz": "1",
      "item": null
     },
     {
-     "nr": "20",
+     "nr": "27",
      "text": "SR <b>311.0</b>",
      "links": [
       {
        "label": "SR <b>311.0</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6196"
       }
      ],
      "absatz": "3",
      "item": null
     },
     {
-     "nr": "21",
+     "nr": "28",
      "text": "Eingefügt durch Anhang Ziff. 1 der Jugendstrafprozessordnung vom 20. März 2009, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 1573; BBl <b>2006</b> 1085, <b>2008 </b>3121).",
      "links": [
       {
@@ -540,7 +670,47 @@
    ],
    "fussnoten": [
     {
-     "nr": "23",
+     "nr": "30",
+     "text": "SR <b>311.0</b>",
+     "links": [
+      {
+       "label": "SR <b>311.0</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6196"
+      }
+     ],
+     "absatz": "1bis",
+     "item": null
+    },
+    {
+     "nr": "31",
+     "text": "Infolge Ablehnung der Vorlage 1 des Massnahmenpakets Sanktionenvollzug (BBl <b>2022</b> 2992) am 14. Juni 2024 (AB 2024 N 1347) stimmt der Verweis nicht. Siehe bis auf Weiteres Art. 62<i>d</i> Abs. 2 StGB.",
+     "links": [
+      {
+       "label": "BBl <b>2022</b> 2992",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2022/2992"
+      }
+     ],
+     "absatz": "1bis",
+     "item": null
+    },
+    {
+     "nr": "32",
+     "text": "Eingefügt durch Ziff. I des BG vom 14. Juni 2024 (Massnahmenpaket Sanktionenvollzug), in Kraft seit 1. Juli 2025 (AS <b>2025</b> 224; BBl <b>2022</b> 2991).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 224",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/224"
+      },
+      {
+       "label": "BBl <b>2022</b> 2991",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2022/2991"
+      }
+     ],
+     "absatz": "1bis",
+     "item": null
+    },
+    {
+     "nr": "33",
      "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2015 (Änderungen des Sanktionenrechts), in Kraft seit 1. Juli 2016 (AS <b>2016</b> 1249; BBl <b>2012</b> 4721).",
      "links": [
       {
@@ -556,32 +726,24 @@
      "item": null
     },
     {
-     "nr": "24",
-     "text": "Seit Inkrafttreten des BG vom 19. Dez. 2008 (Erwachsenenschutz, Personenrecht und Kindesrecht; AS <b>2011</b> 725) am 1. Jan. 2013: Kindesschutzmassnahmen.",
+     "nr": "34",
+     "text": "Aufgehoben durch Ziff. I des BG vom 14. Juni 2024 (Massnahmenpaket Sanktionenvollzug), mit Wirkung seit 1. Juli 2025 (AS <b>2025</b> 224; BBl <b>2022</b> 2991).",
      "links": [
       {
-       "label": "AS <b>2011</b> 725",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2011/114"
+       "label": "AS <b>2025</b> 224",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/224"
+      },
+      {
+       "label": "BBl <b>2022</b> 2991",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2022/2991"
       }
      ],
      "absatz": "3",
      "item": null
     },
     {
-     "nr": "25",
-     "text": "SR <b>311.0</b>",
-     "links": [
-      {
-       "label": "SR <b>311.0</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
-      }
-     ],
-     "absatz": "4",
-     "item": null
-    },
-    {
-     "nr": "26",
-     "text": "Eingefügt durch Ziff. I 3 des BG vom 13. Dez. 2013 über das Tätigkeitsverbot und das Kontakt- und Rayonverbot, in Kraft seit 1. Jan. 2015 (AS <b>2014</b> 2055; BBl <b>2012</b> 8819).",
+     "nr": "35",
+     "text": "Eingefügt durch Ziff. I 3 des BG vom 13. Dez. 2013 über das Tätigkeitsverbot und das Kontakt- und Rayonverbot (AS <b>2014</b> 2055; BBl <b>2012</b> 8819). Aufgehoben durch Ziff. I des BG vom 14. Juni 2024 (Massnahmenpaket Sanktionenvollzug), mit Wirkung seit 1. Juli 2025 (AS <b>2025</b> 224; BBl <b>2022</b> 2991).",
      "links": [
       {
        "label": "AS <b>2014</b> 2055",
@@ -590,6 +752,14 @@
       {
        "label": "BBl <b>2012</b> 8819",
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/1575"
+      },
+      {
+       "label": "AS <b>2025</b> 224",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/224"
+      },
+      {
+       "label": "BBl <b>2022</b> 2991",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2022/2991"
       }
      ],
      "absatz": "4",
@@ -628,7 +798,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "27",
+     "nr": "43",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 14. Dez. 2018 über die Änderung der Wiedergutmachungsregelung, in Kraft seit 1. Juli 2019 (AS <b>2019</b> 1809; BBl <b>2018</b> 3757 4925).",
      "links": [
       {
@@ -648,7 +818,7 @@
      "item": "c"
     },
     {
-     "nr": "28",
+     "nr": "44",
      "text": "Aufgehoben durch Anhang Ziff. 1 der Jugendstrafprozessordnung vom 20. März 2009, mit Wirkung seit 1. Jan. 2011 (AS <b>2010</b> 1573; BBl <b>2006</b> 1085, <b>2008 </b>3121).",
      "links": [
       {
@@ -730,12 +900,12 @@
    ],
    "fussnoten": [
     {
-     "nr": "29",
+     "nr": "45",
      "text": "SR <b>311.0</b>",
      "links": [
       {
        "label": "SR <b>311.0</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6196"
       }
      ],
      "absatz": "2",
@@ -774,19 +944,19 @@
    ],
    "fussnoten": [
     {
-     "nr": "30",
+     "nr": "48",
      "text": "SR <b>311.0</b>",
      "links": [
       {
        "label": "SR <b>311.0</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6196"
       }
      ],
      "absatz": "1",
      "item": null
     },
     {
-     "nr": "31",
+     "nr": "49",
      "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2015 (Änderungen des Sanktionenrechts), in Kraft seit 1. Jan. 2018 (AS <b>2016</b> 1249; BBl <b>2012</b> 4721).",
      "links": [
       {
@@ -802,7 +972,7 @@
      "item": null
     },
     {
-     "nr": "32",
+     "nr": "50",
      "text": "Eingefügt durch Anhang Ziff. 1 der Jugendstrafprozessordnung vom 20. März 2009, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 1573; BBl <b>2006</b> 1085, <b>2008 </b>3121).",
      "links": [
       {
@@ -839,12 +1009,28 @@
    ],
    "fussnoten": [
     {
-     "nr": "33",
-     "text": "SR <b>311.0</b>",
+     "nr": "54",
+     "text": "Infolge Ablehnung der Vorlage 1 des Massnahmenpakets Sanktionenvollzug (BBl <b>2022</b> 2992) am 14. Juni 2024 (AB 2024 N 1347) stimmt der Verweis nicht. Siehe bis auf Weiteres Art. 62<i>d</i> Abs. 2 StGB.",
      "links": [
       {
-       "label": "SR <b>311.0</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
+       "label": "BBl <b>2022</b> 2992",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2022/2992"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "55",
+     "text": "Fassung gemäss Ziff. I des BG vom 14. Juni 2024 (Massnahmenpaket Sanktionenvollzug), in Kraft seit 1. Juli 2025 (AS <b>2025</b> 224; BBl <b>2022</b> 2991).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 224",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/224"
+      },
+      {
+       "label": "BBl <b>2022</b> 2991",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2022/2991"
       }
      ],
      "absatz": "3",
@@ -898,12 +1084,12 @@
    ],
    "fussnoten": [
     {
-     "nr": "34",
+     "nr": "56",
      "text": "SR <b>311.0</b>",
      "links": [
       {
        "label": "SR <b>311.0</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6196"
       }
      ],
      "absatz": "5",
@@ -924,6 +1110,36 @@
    ],
    "marginalie": [
     "Zusammentreffen von Schutzmassnahmen und Freiheitsentzug"
+   ],
+   "fussnoten": [
+    {
+     "nr": "57",
+     "text": "SR <b>311.0</b>",
+     "links": [
+      {
+       "label": "SR <b>311.0</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6196"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    },
+    {
+     "nr": "58",
+     "text": "Dritter Satz eingefügt durch Ziff. I des BG vom 14. Juni 2024 (Massnahmenpaket Sanktionenvollzug), in Kraft seit 1. Juli 2025 (AS <b>2025</b> 224; BBl <b>2022</b> 2991).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 224",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/224"
+      },
+      {
+       "label": "BBl <b>2022</b> 2991",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2022/2991"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "33": {
@@ -983,7 +1199,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "35",
+     "nr": "59",
      "text": "Eingefügt durch Anhang 1 Ziff. 5 des BG vom 17. Juni 2022, in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 468; BBl <b>2019</b> 6697).",
      "links": [
       {
@@ -999,19 +1215,19 @@
      "item": null
     },
     {
-     "nr": "36",
+     "nr": "60",
      "text": "SR <b>311.0</b>",
      "links": [
       {
        "label": "SR <b>311.0</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6196"
       }
      ],
      "absatz": "2",
      "item": null
     },
     {
-     "nr": "37",
+     "nr": "61",
      "text": "Fassung gemäss Anhang Ziff. 1 des BG vom 16. Juni 2023 über eine Revision des Sexualstrafrechts, in Kraft seit 1. Juli 2024 (AS <b>2024</b> 27; BBl <b>2018</b> 2827; <b>2022</b> 687, 1011).",
      "links": [
       {
@@ -1035,7 +1251,7 @@
      "item": null
     },
     {
-     "nr": "38",
+     "nr": "62",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 16. Juni 2023 über eine Revision des Sexualstrafrechts, in Kraft seit 1. Juli 2024 (AS <b>2024</b> 27; BBl <b>2018</b> 2827; <b>2022</b> 687, 1011).",
      "links": [
       {
@@ -1081,7 +1297,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "40",
+     "nr": "64",
      "text": "Fassung gemäss Anhang 1 Ziff. 5 des BG vom 17. Juni 2022, in Kraft seit 1. Juli 2025 (AS <b>2023</b> 468, <b>2024</b> 490; BBl <b>2019</b> 6697).",
      "links": [
       {
@@ -1101,7 +1317,7 @@
      "item": null
     },
     {
-     "nr": "39",
+     "nr": "63",
      "text": "Fassung gemäss Anhang 1 Ziff. 5 des BG vom 17. Juni 2022, in Kraft seit 1. Juli 2025 (AS <b>2023</b> 468, <b>2024</b> 490; BBl <b>2019</b> 6697).",
      "links": [
       {
@@ -1137,7 +1353,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "42",
+     "nr": "66",
      "text": "Die Änderungen können unter AS <b>2006</b> 3545 konsultiert werden.",
      "links": [
       {
@@ -1166,7 +1382,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "43",
+     "nr": "67",
      "text": "AS <b>1971</b> 777",
      "links": [
       {
@@ -1178,12 +1394,16 @@
      "item": null
     },
     {
-     "nr": "44",
-     "text": "Seit Inkrafttreten des BG vom 19. Dez. 2008 (Erwachsenenschutz, Personenrecht und Kindesrecht; AS <b>2011</b> 725) am 1. Jan. 2013: Kindesschutzbehörde.",
+     "nr": "68",
+     "text": "Fassung gemäss Ziff. I des BG vom 14. Juni 2024 (Massnahmenpaket Sanktionenvollzug), in Kraft seit 1. Juli 2025 (AS <b>2025</b> 224; BBl <b>2022</b> 2991).",
      "links": [
       {
-       "label": "AS <b>2011</b> 725",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2011/114"
+       "label": "AS <b>2025</b> 224",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/224"
+      },
+      {
+       "label": "BBl <b>2022</b> 2991",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2022/2991"
       }
      ],
      "absatz": "2",
@@ -1207,7 +1427,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "45",
+     "nr": "69",
      "text": "AS <b>1971</b> 777",
      "links": [
       {
@@ -1219,7 +1439,7 @@
      "item": null
     },
     {
-     "nr": "46",
+     "nr": "70",
      "text": "AS <b>1971</b> 777",
      "links": [
       {
@@ -1248,7 +1468,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "47",
+     "nr": "71",
      "text": "AS <b>1971</b> 777",
      "links": [
       {
@@ -1290,7 +1510,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "49",
+     "nr": "73",
      "text": "AS <b>2006</b> 3459",
      "links": [
       {
@@ -1302,7 +1522,7 @@
      "item": null
     },
     {
-     "nr": "50",
+     "nr": "74",
      "text": "AS <b>2006</b> 3389",
      "links": [
       {
@@ -1314,7 +1534,7 @@
      "item": null
     },
     {
-     "nr": "51",
+     "nr": "75",
      "text": "BRB vom 5. Juli 2006",
      "links": [],
      "absatz": null,
@@ -1338,7 +1558,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "22",
+     "nr": "29",
      "text": "Eingefügt durch Ziff. I 3 des BG vom 13. Dez. 2013 über das Tätigkeitsverbot und das Kontakt- und Rayonverbot, in Kraft seit 1. Jan. 2015 (AS <b>2014</b> 2055; BBl <b>2012</b> 8819).",
      "links": [
       {
@@ -1355,6 +1575,255 @@
     }
    ]
   },
+  "19_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Schutzmassnahmen und Strafen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Schutzmassnahmen"
+    }
+   ],
+   "marginalie": [
+    "Anschlussmassnahmen a. Grundsätze"
+   ],
+   "fussnoten": [
+    {
+     "nr": "36",
+     "text": "Eingefügt durch Ziff. I des BG vom 14. Juni 2024 (Massnahmenpaket Sanktionenvollzug), in Kraft seit 1. Juli 2025 (AS <b>2025</b> 224; BBl <b>2022</b> 2991).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 224",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/224"
+      },
+      {
+       "label": "BBl <b>2022</b> 2991",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2022/2991"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "37",
+     "text": "SR <b>311.0</b>",
+     "links": [
+      {
+       "label": "SR <b>311.0</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6196"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "19_b": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Schutzmassnahmen und Strafen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Schutzmassnahmen"
+    }
+   ],
+   "marginalie": [
+    "b. Tätigkeitsverbot und Kontakt- und Rayonverbot nach dem StGB"
+   ],
+   "fussnoten": [
+    {
+     "nr": "38",
+     "text": "Eingefügt durch Ziff. I des BG vom 14. Juni 2024 (Massnahmenpaket Sanktionenvollzug), in Kraft seit 1. Juli 2025 (AS <b>2025</b> 224; BBl <b>2022</b> 2991).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 224",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/224"
+      },
+      {
+       "label": "BBl <b>2022</b> 2991",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2022/2991"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "39",
+     "text": "SR <b>311.0</b>",
+     "links": [
+      {
+       "label": "SR <b>311.0</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6196"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "19_c": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Schutzmassnahmen und Strafen"
+    },
+    {
+     "ebene": 2,
+     "label": "2. Abschnitt: Schutzmassnahmen"
+    }
+   ],
+   "marginalie": [
+    "c. Verwahrung gemäss Artikel 64 Absatz 1 StGB nach geschlossener Unterbringung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "40",
+     "text": "Eingefügt durch Ziff. I des BG vom 14. Juni 2024 (Massnahmenpaket Sanktionenvollzug), in Kraft seit 1. Juli 2025 (AS <b>2025</b> 224; BBl <b>2022</b> 2991).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 224",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/224"
+      },
+      {
+       "label": "BBl <b>2022</b> 2991",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2022/2991"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "41",
+     "text": "SR <b>311.0</b>",
+     "links": [
+      {
+       "label": "SR <b>311.0</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6196"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "42",
+     "text": "Infolge Ablehnung der Vorlage 1 des Massnahmenpakets Sanktionenvollzug (BBl <b>2022</b> 2992) am 14. Juni 2024 (AB 2024 N 1347) stimmt der Verweis nicht. Siehe bis auf Weiteres Art. 62<i>d</i> Abs. 2 StGB.",
+     "links": [
+      {
+       "label": "BBl <b>2022</b> 2992",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2022/2992"
+      }
+     ],
+     "absatz": "2",
+     "item": "c"
+    }
+   ]
+  },
+  "25_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Schutzmassnahmen und Strafen"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Abschnitt: Strafen"
+    }
+   ],
+   "marginalie": [
+    "a. Verwahrungsvorbehalt"
+   ],
+   "fussnoten": [
+    {
+     "nr": "46",
+     "text": "Eingefügt durch Ziff. I des BG vom 14. Juni 2024 (Massnahmenpaket Sanktionenvollzug), in Kraft seit 1. Juli 2025 (AS <b>2025</b> 224; BBl <b>2022</b> 2991).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 224",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/224"
+      },
+      {
+       "label": "BBl <b>2022</b> 2991",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2022/2991"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "47",
+     "text": "SR <b>311.0</b>",
+     "links": [
+      {
+       "label": "SR <b>311.0</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6196"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "27_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Kapitel: Schutzmassnahmen und Strafen"
+    },
+    {
+     "ebene": 2,
+     "label": "3. Abschnitt: Strafen"
+    }
+   ],
+   "marginalie": [
+    "c. Anordnung der vorbehaltenen Verwahrung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "51",
+     "text": "Eingefügt durch Ziff. I des BG vom 14. Juni 2024 (Massnahmenpaket Sanktionenvollzug), in Kraft seit 1. Juli 2025 (AS <b>2025</b> 224; BBl <b>2022</b> 2991).",
+     "links": [
+      {
+       "label": "AS <b>2025</b> 224",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2025/224"
+      },
+      {
+       "label": "BBl <b>2022</b> 2991",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2022/2991"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "52",
+     "text": "SR <b>311.0</b>",
+     "links": [
+      {
+       "label": "SR <b>311.0</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6196"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "53",
+     "text": "Infolge Ablehnung der Vorlage 1 des Massnahmenpakets Sanktionenvollzug (BBl <b>2022</b> 2992) am 14. Juni 2024 (AB 2024 N 1347) stimmt der Verweis nicht. Siehe bis auf Weiteres Art. 62<i>d</i> Abs. 2 StGB.",
+     "links": [
+      {
+       "label": "BBl <b>2022</b> 2992",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2022/2992"
+      }
+     ],
+     "absatz": "2",
+     "item": "c"
+    }
+   ]
+  },
   "39_43": {
    "gliederung": [
     {
@@ -1365,7 +1834,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "41",
+     "nr": "65",
      "text": "Aufgehoben durch Anhang Ziff. 1 der Jugendstrafprozessordnung vom 20. März 2009, mit Wirkung seit 1. Jan. 2011 (AS <b>2010</b> 1573; BBl <b>2006</b> 1085, <b>2008 </b>3121).",
      "links": [
       {
@@ -1400,7 +1869,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "48",
+     "nr": "72",
      "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 19. Juni 2015 (Änderungen des Sanktionenrechts), in Kraft seit 1. Juli 2016 (AS <b>2016</b> 1249; BBl <b>2012</b> 4721).",
      "links": [
       {

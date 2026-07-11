@@ -1,11 +1,12 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-11",
  "kopf": {
   "srNummer": "0.108",
   "titel": "Übereinkommen zur Beseitigung jeder Form von Diskriminierung der Frau",
+  "erlassdatum": "(Stand am 19. April 2023)",
   "praeambel": [
    {
-    "rolle": "autor",
+    "rolle": "praeambel",
     "text": "Die Vertragsstaaten dieses Übereinkommens –"
    },
    {
@@ -75,7 +76,7 @@
     "text": "entschlossen, die in der Erklärung über die Beseitigung der Diskriminierung der Frau niedergelegten Grundsätze zu verwirklichen und zu diesem Zweck die zur Beseitigung jeder Form und Erscheinungsweise einer solchen Diskriminierung erforderlichen Massnahmen zu ergreifen –"
    },
    {
-    "rolle": "praeambel",
+    "rolle": "verb",
     "text": "sind wie folgt übereingekommen:"
    }
   ],
@@ -98,7 +99,7 @@
     "links": [
      {
       "label": "SR <b>0.120</b>",
-      "url": "https://fedlex.data.admin.ch/eli/cc/2003/160"
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/41"
      }
     ],
     "absatz": null,
@@ -110,7 +111,7 @@
     "links": [
      {
       "label": "SR <b>0.103.1</b>",
-      "url": "https://fedlex.data.admin.ch/eli/cc/1993/725_725_725"
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/19"
      }
     ],
     "absatz": null,
@@ -385,15 +386,6 @@
     {
      "ebene": 1,
      "label": "Teil VI"
-    }
-   ],
-   "marginalie": []
-  },
-  "lvl_u1": {
-   "gliederung": [
-    {
-     "ebene": 1,
-     "label": "Anhänge"
     }
    ],
    "marginalie": []

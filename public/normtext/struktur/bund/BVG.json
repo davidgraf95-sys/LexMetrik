@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-11",
  "kopf": {
   "srNummer": "831.40",
   "titel": "Bundesgesetz über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge",
@@ -30,7 +30,7 @@
     "links": [
      {
       "label": "SR <b>101</b>",
-      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404"
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4715"
      }
     ],
     "absatz": null,
@@ -226,7 +226,7 @@
      "links": [
       {
        "label": "SR <b>831.42</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1994/2386_2386_2386"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10100"
       }
      ],
      "absatz": "2",
@@ -314,7 +314,7 @@
      "links": [
       {
        "label": "SR <b>831.10</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/63/837_843_843"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10002"
       }
      ],
      "absatz": "2",
@@ -403,7 +403,7 @@
      "links": [
       {
        "label": "SR <b>220</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
      "absatz": "3",
@@ -808,7 +808,7 @@
      "links": [
       {
        "label": "SR <b>831.10</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/63/837_843_843"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10002"
       }
      ],
      "absatz": "1",
@@ -870,22 +870,6 @@
      ],
      "absatz": "1",
      "item": null
-    },
-    {
-     "nr": "42",
-     "text": "Seit 1. Jan. 2005: Rentenalter 64 für Frauen (Art. 62<i>a</i> Abs. 2 Bst. a der V vom 18. April 1984 über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge in der Fassung der Änd. vom 18. Aug. 2004 – AS <b>2004</b> 4279 4653).",
-     "links": [
-      {
-       "label": "AS <b>2004</b> 4279",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2004/644"
-      },
-      {
-       "label": "4653",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2004/714"
-      }
-     ],
-     "absatz": "2",
-     "item": null
     }
    ]
   },
@@ -913,7 +897,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "43",
+     "nr": "42",
      "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -929,7 +913,7 @@
      "item": null
     },
     {
-     "nr": "44",
+     "nr": "43",
      "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2313; BBl <b>2013</b> 4887).",
      "links": [
       {
@@ -945,7 +929,7 @@
      "item": "c"
     },
     {
-     "nr": "45",
+     "nr": "44",
      "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2313; BBl <b>2013</b> 4887).",
      "links": [
       {
@@ -961,19 +945,19 @@
      "item": "d"
     },
     {
-     "nr": "46",
+     "nr": "45",
      "text": "SR <b>831.42</b>",
      "links": [
       {
        "label": "SR <b>831.42</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1994/2386_2386_2386"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10100"
       }
      ],
      "absatz": "1",
      "item": "d"
     },
     {
-     "nr": "47",
+     "nr": "46",
      "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2313; BBl <b>2013</b> 4887).",
      "links": [
       {
@@ -989,14 +973,14 @@
      "item": "e"
     },
     {
-     "nr": "48",
+     "nr": "47",
      "text": "Siehe auch die UeB Änd. 17.12.2010 am Schluss dieses Textes.",
      "links": [],
      "absatz": "2",
      "item": null
     },
     {
-     "nr": "49",
+     "nr": "48",
      "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2313; BBl <b>2013</b> 4887).",
      "links": [
       {
@@ -1037,7 +1021,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "50",
+     "nr": "49",
      "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637). Siehe auch die UeB der Änd. vom 3. Okt. 2003 am Ende dieses Erlasses.",
      "links": [
       {
@@ -1047,22 +1031,6 @@
       {
        "label": "BBl <b>2000</b> 2637",
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/555"
-      }
-     ],
-     "absatz": null,
-     "item": null
-    },
-    {
-     "nr": "51",
-     "text": "Seit 1. Jan. 2005 für Frauen: Altersjahr 55–64 (Art. 62<i>a</i> Abs. 2 Bst. b der V vom 18. April 1984 über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge in der Fassung der Änd. vom 18. Aug. 2004 – AS <b>2004</b> 4279 4653).",
-     "links": [
-      {
-       "label": "AS <b>2004</b> 4279",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2004/644"
-      },
-      {
-       "label": "4653",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2004/714"
       }
      ],
      "absatz": null,
@@ -1094,7 +1062,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "52",
+     "nr": "50",
      "text": "Zweiter Satz eingefügt durch Anhang Ziff. 4 des BG vom 17. Dez. 2021 (AHV 21), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 92; BBl <b>2019</b> 6305).",
      "links": [
       {
@@ -1110,19 +1078,19 @@
      "item": null
     },
     {
-     "nr": "53",
+     "nr": "51",
      "text": "SR <b>210</b>",
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5703"
       }
      ],
      "absatz": "2",
      "item": null
     },
     {
-     "nr": "54",
+     "nr": "52",
      "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2313; BBl <b>2013</b> 4887).",
      "links": [
       {
@@ -1163,7 +1131,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "55",
+     "nr": "53",
      "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -1179,12 +1147,12 @@
      "item": null
     },
     {
-     "nr": "56",
+     "nr": "54",
      "text": "SR <b>830.1</b>",
      "links": [
       {
        "label": "SR <b>830.1</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2002/510"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9993"
       }
      ],
      "absatz": null,
@@ -1216,7 +1184,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "57",
+     "nr": "55",
      "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -1280,7 +1248,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "61",
+     "nr": "59",
      "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637). Siehe auch die UeB der Änd. vom 3. Okt. 2003 am Ende dieses Erlasses.",
      "links": [
       {
@@ -1296,7 +1264,7 @@
      "item": null
     },
     {
-     "nr": "62",
+     "nr": "60",
      "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 17. Dez. 2021 (AHV 21), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 92; BBl <b>2019</b> 6305).",
      "links": [
       {
@@ -1312,19 +1280,19 @@
      "item": null
     },
     {
-     "nr": "63",
+     "nr": "61",
      "text": "SR <b>210</b>",
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5703"
       }
      ],
      "absatz": "3",
      "item": null
     },
     {
-     "nr": "64",
+     "nr": "62",
      "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2313; BBl <b>2013</b> 4887).",
      "links": [
       {
@@ -1340,7 +1308,7 @@
      "item": null
     },
     {
-     "nr": "65",
+     "nr": "63",
      "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2313; BBl <b>2013</b> 4887).",
      "links": [
       {
@@ -1381,7 +1349,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "66",
+     "nr": "64",
      "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -1397,7 +1365,7 @@
      "item": null
     },
     {
-     "nr": "67",
+     "nr": "65",
      "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -1413,7 +1381,7 @@
      "item": "b"
     },
     {
-     "nr": "68",
+     "nr": "66",
      "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -1454,7 +1422,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "69",
+     "nr": "67",
      "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -1470,12 +1438,12 @@
      "item": null
     },
     {
-     "nr": "70",
+     "nr": "68",
      "text": "SR <b>830.1</b>",
      "links": [
       {
        "label": "SR <b>830.1</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2002/510"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9993"
       }
      ],
      "absatz": null,
@@ -1507,7 +1475,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "71",
+     "nr": "69",
      "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637). Siehe auch die UeB der Änd. vom 3. Okt. 2003 am Ende dieses Erlasses.",
      "links": [
       {
@@ -1523,7 +1491,7 @@
      "item": null
     },
     {
-     "nr": "72",
+     "nr": "70",
      "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 19. Juni 2020 (Weiterentwicklung der IV), in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 705; BBl <b>2017</b> 2535).",
      "links": [
       {
@@ -1539,7 +1507,7 @@
      "item": null
     },
     {
-     "nr": "73",
+     "nr": "71",
      "text": "Aufgehoben durch Anhang Ziff. 3 des BG vom 19. Juni 2020 (Weiterentwicklung der IV), mit Wirkung seit 1. Jan. 2022 (AS <b>2021</b> 705; BBl <b>2017</b> 2535).",
      "links": [
       {
@@ -1555,35 +1523,19 @@
      "item": null
     },
     {
-     "nr": "74",
-     "text": "Seit 1. Jan. 2005: Rentenalter 64 für Frauen (Art. 62<i>a</i> Abs. 2 Bst. c der V vom 18. April 1984 über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge in der Fassung der Änd. vom 18. Aug. 2004 – AS <b>2004</b> 4279 4653).",
-     "links": [
-      {
-       "label": "AS <b>2004</b> 4279",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2004/644"
-      },
-      {
-       "label": "4653",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2004/714"
-      }
-     ],
-     "absatz": "2",
-     "item": null
-    },
-    {
-     "nr": "75",
+     "nr": "72",
      "text": "SR <b>210</b>",
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5703"
       }
      ],
      "absatz": "5",
      "item": null
     },
     {
-     "nr": "76",
+     "nr": "73",
      "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2313; BBl <b>2013</b> 4887).",
      "links": [
       {
@@ -1624,19 +1576,19 @@
    ],
    "fussnoten": [
     {
-     "nr": "80",
+     "nr": "77",
      "text": "SR <b>210</b>",
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5703"
       }
      ],
      "absatz": "2",
      "item": null
     },
     {
-     "nr": "81",
+     "nr": "78",
      "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2313; BBl <b>2013</b> 4887).",
      "links": [
       {
@@ -1677,19 +1629,19 @@
    ],
    "fussnoten": [
     {
-     "nr": "82",
-     "text": "SR <b>831.20</b>. Heute: Art. 28 Abs. 1 und <i>29 </i>Abs. 1−3 IVG.",
+     "nr": "79",
+     "text": "SR <b>831.20</b>. Heute: Art. 28 Abs. 1 und 29 Abs. 1−3 IVG.",
      "links": [
       {
        "label": "SR <b>831.20</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1959/827_857_845"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10046"
       }
      ],
      "absatz": "1",
      "item": null
     },
     {
-     "nr": "83",
+     "nr": "80",
      "text": "Fassung gemäss Ziff. II 3 des BG vom 9. Okt. 1986 (2. IV-Revision), in Kraft seit 1. Jan. 1988 (AS <b>1987</b> 447; BBl <b>1985</b> I 17).",
      "links": [
       {
@@ -1705,7 +1657,7 @@
      "item": null
     },
     {
-     "nr": "84",
+     "nr": "81",
      "text": "Fassung gemäss Anhang Ziff. 6 des BG vom 18. März 2011 (6. IV-Revision, erstes Massnahmenpaket), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 5659; BBl <b>2010</b> 1817). Siehe auch die UeB der Änd. vom 18. März 2011 am Ende dieses Textes.",
      "links": [
       {
@@ -1721,7 +1673,7 @@
      "item": null
     },
     {
-     "nr": "85",
+     "nr": "82",
      "text": "Fassung gemäss Ziff. I des BG vom 19. März 2010 (Strukturreform), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -1737,7 +1689,7 @@
      "item": null
     },
     {
-     "nr": "86",
+     "nr": "83",
      "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -1776,7 +1728,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "93",
+     "nr": "90",
      "text": "Fassung gemäss Anhang Ziff. 3 des Freizügigkeitsgesetzes vom 17. Dez. 1993, in Kraft seit 1. Jan. 1995 (AS <b>1994</b> 2386; BBl <b>1992</b> III 533).",
      "links": [
       {
@@ -1792,19 +1744,19 @@
      "item": null
     },
     {
-     "nr": "94",
+     "nr": "91",
      "text": "SR <b>831.42</b>",
      "links": [
       {
        "label": "SR <b>831.42</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1994/2386_2386_2386"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10100"
       }
      ],
      "absatz": null,
      "item": null
     },
     {
-     "nr": "91",
+     "nr": "88",
      "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 1993 über die Wohneigentumsförderung mit Mitteln der beruflichen Vorsorge, in Kraft seit 1. Jan. 1995 (AS <b>1994</b> 2372; BBl <b>1992</b> VI 237).",
      "links": [
       {
@@ -1821,7 +1773,7 @@
      "sektion": "4. Kapitel: Freizügigkeitsleistung und Wohneigentumsförderung"
     },
     {
-     "nr": "92",
+     "nr": "89",
      "text": "Eingefügt durch Ziff. I des BG vom 17. Dez. 1993 über die Wohneigentumsförderung mit Mitteln der beruflichen Vorsorge, in Kraft seit 1. Jan. 1995 (AS <b>1994</b> 2372; BBl <b>1992</b> VI 237).",
      "links": [
       {
@@ -1895,7 +1847,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "111",
+     "nr": "108",
      "text": "Aufgehoben durch Ziff. I des BG vom 19. März 2010 (Strukturreform), mit Wirkung seit 1. Jan. 2012 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -1932,7 +1884,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "115",
+     "nr": "112",
      "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -1948,7 +1900,7 @@
      "item": "a"
     },
     {
-     "nr": "116",
+     "nr": "113",
      "text": "Aufgehoben durch Anhang Ziff. 10 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
@@ -2008,7 +1960,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "126",
+     "nr": "123",
      "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637). Siehe auch die UeB der Änd. vom 3. Okt. 2003 am Ende dieses Erlasses.",
      "links": [
       {
@@ -2024,7 +1976,7 @@
      "item": null
     },
     {
-     "nr": "127",
+     "nr": "124",
      "text": "Eingefügt durch Ziff. I des BG vom 18. Juni 2004, in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 4635; BBl <b>2003</b> 6399).",
      "links": [
       {
@@ -2061,7 +2013,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "128",
+     "nr": "125",
      "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -2077,7 +2029,7 @@
      "item": null
     },
     {
-     "nr": "129",
+     "nr": "126",
      "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 17. Dez. 2021 (AHV 21), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 92; BBl <b>2019</b> 6305).",
      "links": [
       {
@@ -2093,7 +2045,7 @@
      "item": null
     },
     {
-     "nr": "130",
+     "nr": "127",
      "text": "Aufgehoben durch Anhang Ziff. 4 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), mit Wirkung seit 1. Jan. 2017 (AS <b>2016</b> 2313; BBl <b>2013</b> 4887).",
      "links": [
       {
@@ -2149,7 +2101,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "132",
+     "nr": "129",
      "text": "Fassung des zweiten Satzes gemäss Ziff. I des BG vom 17. Dez. 1993 über die Wohneigentumsförderung mit Mitteln der beruflichen Vorsorge, in Kraft seit 1. Jan. 1995 (AS <b>1994</b> 2372; BBl <b>1992</b> VI 237).",
      "links": [
       {
@@ -2186,7 +2138,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "133",
+     "nr": "130",
      "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 20. März 2015 (Kindesunterhalt), in Kraft seit 1. Jan. 2022 (AS <b>2015</b> 4299 5017, <b>2020</b> 5; BBl <b>2014</b> 529).",
      "links": [
       {
@@ -2210,36 +2162,36 @@
      "item": null
     },
     {
-     "nr": "134",
+     "nr": "131",
      "text": "SR <b>210</b>",
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5703"
       }
      ],
      "absatz": "1",
      "item": null
     },
     {
-     "nr": "135",
+     "nr": "132",
      "text": "SR <b>831.42</b>",
      "links": [
       {
        "label": "SR <b>831.42</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1994/2386_2386_2386"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10100"
       }
      ],
      "absatz": "3",
      "item": "b"
     },
     {
-     "nr": "136",
+     "nr": "133",
      "text": "SR <b>220</b>",
      "links": [
       {
        "label": "SR <b>220</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
      "absatz": "3",
@@ -2267,7 +2219,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "137",
+     "nr": "134",
      "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -2283,24 +2235,24 @@
      "item": null
     },
     {
-     "nr": "138",
+     "nr": "135",
      "text": "SR <b>220</b>",
      "links": [
       {
        "label": "SR <b>220</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
      "absatz": "2",
      "item": null
     },
     {
-     "nr": "139",
+     "nr": "136",
      "text": "SR <b>831.425</b>",
      "links": [
       {
        "label": "SR <b>831.425</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1994/2399_2399_2399"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10102"
       }
      ],
      "absatz": "3",
@@ -2396,7 +2348,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "140",
+     "nr": "137",
      "text": "Betrag gemäss Art. 5 der V vom 18. April 1984 über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge in der Fassung der Änd. vom 28. Aug. 2024, in Kraft seit 1. Jan. 2025 (AS <b>2024 </b>469).",
      "links": [
       {
@@ -2408,7 +2360,7 @@
      "item": null
     },
     {
-     "nr": "141",
+     "nr": "138",
      "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -2445,7 +2397,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "142",
+     "nr": "139",
      "text": "Fassung gemäss Art. 117<i>a</i> des Arbeitslosenversicherungsgesetzes vom 26. Juni 1982, in Kraft seit 1. Juli 1997 (AS <b>1982</b> 2184; BBl <b>1980</b> III 489).",
      "links": [
       {
@@ -2461,7 +2413,7 @@
      "item": null
     },
     {
-     "nr": "143",
+     "nr": "140",
      "text": "Fassung gemäss Ziff. I des BG vom 19. März 2010 (Strukturreform), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -2494,7 +2446,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "146",
+     "nr": "143",
      "text": "Fassung gemäss Anhang Ziff. 9 des BG vom 23. Juni 2006 (Neue AHV-Versichertennummer), in Kraft seit 1. Dez. 2007 (AS<b> 2007</b> 5259; BBl <b>2006</b> 501).",
      "links": [
       {
@@ -2510,7 +2462,7 @@
      "item": null
     },
     {
-     "nr": "147",
+     "nr": "144",
      "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2010 (Finanzierung von Vorsorgeeinrichtungen öffentlich-rechtlicher Körperschaften), in Kraft seit 1. Jan. 2014 (AS <b>2011</b> 3385; BBl <b>2008</b> 8411).",
      "links": [
       {
@@ -2526,7 +2478,7 @@
      "item": null
     },
     {
-     "nr": "148",
+     "nr": "145",
      "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -2542,7 +2494,7 @@
      "item": "b"
     },
     {
-     "nr": "149",
+     "nr": "146",
      "text": "Ausdruck gemäss Anhang Ziff. 29 des BG vom 18. Dez. 2020 (Systematische Verwendung der AHV-Nummer durch Behörden), in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 758; BBl <b>2019 </b>7359). Diese Änd. wurde in den in der AS genannten Bestimmungen vorgenommen.",
      "links": [
       {
@@ -2558,19 +2510,19 @@
      "item": null
     },
     {
-     "nr": "150",
+     "nr": "147",
      "text": "SR <b>831.10</b>",
      "links": [
       {
        "label": "SR <b>831.10</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/63/837_843_843"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10002"
       }
      ],
      "absatz": "4",
      "item": null
     },
     {
-     "nr": "151",
+     "nr": "148",
      "text": "Eingefügt durch Anhang Ziff. 9 des BG vom 23. Juni 2006 (Neue AHV-Versichertennummer), in Kraft seit 1. Dez. 2007 (AS<b> 2007</b> 5259; BBl <b>2006</b> 501).",
      "links": [
       {
@@ -2603,8 +2555,8 @@
    ],
    "fussnoten": [
     {
-     "nr": "152",
-     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), Abs. 2 Ziff. 7–9, <i>12</i>–14, <i>16 </i>(mit Ausnahme von Art. 66 Abs. 4), 17, <i>19</i>-23 und <i>26 </i>in Kraft seit 1. April 2004, Abs. 1 und <i>2 </i>Ziff. 3–6, <i>10</i>, <i>11</i>, <i>15</i>, <i>16 </i>(Art. 66 Abs. 4) und 18 in Kraft seit 1. Jan. 2005, Abs. 2 Ziff. 1, <i>24 </i>und <i>25 </i>in Kraft seit 1. Jan. 2006 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
+     "nr": "149",
+     "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), Abs. 2 Ziff. 7–9, 12–14, 16 (mit Ausnahme von Art. 66 Abs. 4), 17, 19-23 und 26 in Kraft seit 1. April 2004, Abs. 1 und 2 Ziff. 3–6, 10, 11, 15, 16 (Art. 66 Abs. 4) und 18 in Kraft seit 1. Jan. 2005, Abs. 2 Ziff. 1, 24 und 25 in Kraft seit 1. Jan. 2006 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
        "label": "AS <b>2004</b> 1677",
@@ -2619,7 +2571,7 @@
      "item": null
     },
     {
-     "nr": "153",
+     "nr": "150",
      "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2010 (Finanzierung von Vorsorgeeinrichtungen öffentlich-rechtlicher Körperschaften), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3385; BBl <b>2008</b> 8411).",
      "links": [
       {
@@ -2635,7 +2587,7 @@
      "item": null
     },
     {
-     "nr": "154",
+     "nr": "151",
      "text": "Fassung gemäss Ziff. I des BG vom 11. Dez. 2009 (Massnahmen zur Erleichterung der Arbeitsmarktbeteiligung älterer Arbeitnehmender), in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 4427; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -2651,7 +2603,7 @@
      "item": "1"
     },
     {
-     "nr": "155",
+     "nr": "152",
      "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 17. Dez. 2021 (AHV 21), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 92; BBl <b>2019</b> 6305).",
      "links": [
       {
@@ -2667,7 +2619,7 @@
      "item": "2"
     },
     {
-     "nr": "156",
+     "nr": "153",
      "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2313; BBl <b>2013</b> 4887).",
      "links": [
       {
@@ -2683,7 +2635,7 @@
      "item": "3a"
     },
     {
-     "nr": "157",
+     "nr": "154",
      "text": "Ursprünglich Ziff. 3<i>a</i>. Eingefügt durch Anhang Ziff. 6 des BG vom 18. März 2011 (6. IV-Revision, erstes Massnahmenpaket) (AS <b>2011</b> 5659; BBl <b>2010</b> 1817).",
      "links": [
       {
@@ -2699,7 +2651,7 @@
      "item": "3b"
     },
     {
-     "nr": "158",
+     "nr": "155",
      "text": "Fassung gemäss Ziff. I des BG vom 18. Juni 2004, in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 4635; BBl <b>2003</b> 6399).",
      "links": [
       {
@@ -2715,7 +2667,7 @@
      "item": "5"
     },
     {
-     "nr": "159",
+     "nr": "156",
      "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2313; BBl <b>2013</b> 4887).",
      "links": [
       {
@@ -2731,7 +2683,7 @@
      "item": "5a"
     },
     {
-     "nr": "160",
+     "nr": "157",
      "text": "Eingefügt durch Anhang Ziff. 3 des BG vom 20. März 2015 (Kindesunterhalt), in Kraft seit 1. Jan. 2022 (AS <b>2015</b> 4299 5017, <b>2020</b> 5; BBl <b>2014</b> 529).",
      "links": [
       {
@@ -2755,7 +2707,7 @@
      "item": "5b"
     },
     {
-     "nr": "161",
+     "nr": "158",
      "text": "Eingefügt durch Ziff. II 2 des BG vom 22. März 2019 (EL-Reform), in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 585; BBl <b>2016</b> 7465).",
      "links": [
       {
@@ -2771,7 +2723,7 @@
      "item": "6a"
     },
     {
-     "nr": "162",
+     "nr": "159",
      "text": "Ursprünglich: Ziff. 6<i>a</i>. Eingefügt durch Anhang Ziff. 9 des BG vom 23. Juni 2006 (Neue AHV-Versichertennummer), in Kraft seit 1. Dez. 2007 (AS<b> 2007</b> 5259; BBl <b>2006</b> 501).",
      "links": [
       {
@@ -2787,7 +2739,7 @@
      "item": "6b"
     },
     {
-     "nr": "163",
+     "nr": "160",
      "text": "Fassung gemäss Ziff. I des BG vom 19. März 2010 (Strukturreform), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -2803,7 +2755,7 @@
      "item": "7"
     },
     {
-     "nr": "164",
+     "nr": "161",
      "text": "Fassung gemäss Ziff. I des BG vom 19. März 2010 (Strukturreform), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -2819,7 +2771,7 @@
      "item": "9"
     },
     {
-     "nr": "165",
+     "nr": "162",
      "text": "Fassung gemäss Ziff. I des BG vom 19. März 2010 (Strukturreform), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -2835,7 +2787,7 @@
      "item": "10"
     },
     {
-     "nr": "166",
+     "nr": "163",
      "text": "Fassung gemäss Anhang Ziff. 5 des BG vom 17. Juni 2022 (Modernisierung der Aufsicht), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 688; BBl <b>2020 </b>1).",
      "links": [
       {
@@ -2851,7 +2803,7 @@
      "item": "12"
     },
     {
-     "nr": "167",
+     "nr": "164",
      "text": "Fassung gemäss Anhang Ziff. 5 des BG vom 17. Juni 2022 (Modernisierung der Aufsicht), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 688; BBl <b>2020 </b>1).",
      "links": [
       {
@@ -2867,7 +2819,7 @@
      "item": "13"
     },
     {
-     "nr": "168",
+     "nr": "165",
      "text": "Fassung gemäss Ziff. I des BG vom 19. März 2010 (Strukturreform), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -2883,7 +2835,7 @@
      "item": "14"
     },
     {
-     "nr": "169",
+     "nr": "166",
      "text": "Aufgehoben durch Ziff. I des BG vom 19. März 2010 (Strukturreform), mit Wirkung seit 1. Jan. 2012 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -2899,7 +2851,7 @@
      "item": "15"
     },
     {
-     "nr": "170",
+     "nr": "167",
      "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2010 (Finanzierung von Vorsorgeeinrichtungen öffentlich-rechtlicher Körperschaften), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3385; BBl <b>2008</b> 8411).",
      "links": [
       {
@@ -2915,7 +2867,7 @@
      "item": "16"
     },
     {
-     "nr": "171",
+     "nr": "168",
      "text": "Fassung gemäss Anhang Ziff. 5 des BG vom 17. Juni 2022 (Modernisierung der Aufsicht), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 688; BBl <b>2020 </b>1).",
      "links": [
       {
@@ -2931,7 +2883,7 @@
      "item": "18"
     },
     {
-     "nr": "172",
+     "nr": "169",
      "text": "Fassung gemäss Anhang Ziff. 10 des BG vom 19. Juni 2020 (Aktienrecht), in Kraft seit 1. Jan. 2023 (AS <b>2020</b> 4005; <b>2022</b> 109; BBl <b>2017</b> 399).",
      "links": [
       {
@@ -2951,7 +2903,7 @@
      "item": "21"
     },
     {
-     "nr": "173",
+     "nr": "170",
      "text": "Eingefügt durch Anhang Ziff. 9 des BG vom 23. Juni 2006 (Neue AHV-Versichertennummer), in Kraft seit 1. Dez. 2007 (AS<b> 2007</b> 5259; BBl <b>2006</b> 501).",
      "links": [
       {
@@ -2967,7 +2919,7 @@
      "item": "25a"
     },
     {
-     "nr": "174",
+     "nr": "171",
      "text": "Eingefügt durch Anhang Ziff. 9 des BG vom 23. Juni 2006 (Neue AHV-Versichertennummer), in Kraft seit 1. Dez. 2007 (AS<b> 2007</b> 5259; BBl <b>2006</b> 501).",
      "links": [
       {
@@ -3000,7 +2952,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "175",
+     "nr": "172",
      "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2010 (Finanzierung von Vorsorgeeinrichtungen öffentlich-rechtlicher Körperschaften), in Kraft seit 1. Jan. 2015 (AS <b>2011</b> 3385, <b>2013</b> 2253; BBl <b>2008</b> 8411).",
      "links": [
       {
@@ -3037,7 +2989,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "176",
+     "nr": "173",
      "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. April 2004 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -3053,7 +3005,7 @@
      "item": null
     },
     {
-     "nr": "177",
+     "nr": "174",
      "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. April 2004 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -3069,7 +3021,7 @@
      "item": null
     },
     {
-     "nr": "178",
+     "nr": "175",
      "text": "Aufgehoben durch Ziff. I des BG vom 17. Dez. 2010 (Finanzierung von Vorsorgeeinrichtungen öffentlich-rechtlicher Körperschaften), mit Wirkung seit 1. Jan. 2015 (AS <b>2011</b> 3385, <b>2013</b> 2253; BBl <b>2008</b> 8411).",
      "links": [
       {
@@ -3089,7 +3041,7 @@
      "item": null
     },
     {
-     "nr": "179",
+     "nr": "176",
      "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision) (AS <b>2004</b> 1677; BBl <b>2000</b> 2637). Aufgehoben durch Ziff. I des BG vom 19. März 2010 (Strukturreform), mit Wirkung seit 1. Jan. 2012 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -3130,7 +3082,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "184",
+     "nr": "181",
      "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -3146,7 +3098,7 @@
      "item": null
     },
     {
-     "nr": "185",
+     "nr": "182",
      "text": "Fassung gemäss Ziff. I des BG vom 19. März 2010 (Strukturreform), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -3162,7 +3114,7 @@
      "item": null
     },
     {
-     "nr": "186",
+     "nr": "183",
      "text": "Fassung gemäss Anhang Ziff. 22 des BG vom 15. Juni 2018 (Revision des Verjährungsrechts), in Kraft seit 1. Jan. 2020 (AS <b>2018</b> 5343; BBl <b>2014</b> 235).",
      "links": [
       {
@@ -3178,19 +3130,19 @@
      "item": null
     },
     {
-     "nr": "187",
+     "nr": "184",
      "text": "SR <b>220</b>",
      "links": [
       {
        "label": "SR <b>220</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
      "absatz": "4",
      "item": null
     },
     {
-     "nr": "188",
+     "nr": "185",
      "text": "Eingefügt durch Ziff. I des BG vom 19. März 2010 (Strukturreform), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -3221,7 +3173,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "200",
+     "nr": "197",
      "text": "Aufgehoben durch Ziff. I des BG vom 19. März 2010 (Strukturreform), mit Wirkung seit 1. Jan. 2012 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -3258,19 +3210,19 @@
    ],
    "fussnoten": [
     {
-     "nr": "217",
+     "nr": "214",
      "text": "SR <b>172.021</b>",
      "links": [
       {
        "label": "SR <b>172.021</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5059"
       }
      ],
      "absatz": "4",
      "item": null
     },
     {
-     "nr": "216",
+     "nr": "213",
      "text": "Ursprünglich: Zweiter Titel.",
      "links": [],
      "absatz": null,
@@ -3318,7 +3270,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "218",
+     "nr": "215",
      "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 3067; BBl <b>1996</b> I 564 <i>580</i>). Siehe auch die UeB dieser Änd. am Ende dieses Textes.",
      "links": [
       {
@@ -3334,7 +3286,7 @@
      "item": null
     },
     {
-     "nr": "219",
+     "nr": "216",
      "text": "Fassung gemäss Ziff. II 1 des BG vom 18. Dez. 1998, in Kraft seit 1. Mai 1999 (AS <b>1999</b> 1384; <i>BBl <b>1998</b> 5569</i>).",
      "links": [
       {
@@ -3346,19 +3298,19 @@
      "item": "b"
     },
     {
-     "nr": "220",
+     "nr": "217",
      "text": "SR <b>831.42</b>",
      "links": [
       {
        "label": "SR <b>831.42</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1994/2386_2386_2386"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10100"
       }
      ],
      "absatz": "1",
      "item": "c"
     },
     {
-     "nr": "221",
+     "nr": "218",
      "text": "Fassung gemäss Ziff. I des BG vom 20. Dez. 2006 (Wechsel der Vorsorgeeinrichtung), in Kraft seit 1. Mai 2007 (AS <b>2007 </b>1803; BBl <b>2005</b> 5941 5953).",
      "links": [
       {
@@ -3378,7 +3330,7 @@
      "item": "d"
     },
     {
-     "nr": "222",
+     "nr": "219",
      "text": "Eingefügt durch Ziff. II 1 des BG vom 18. Dez. 1998, in Kraft seit 1. Mai 1999 (AS <b>1999</b> 1384; <i>BBl <b>1998</b> 5569</i>).",
      "links": [
       {
@@ -3390,7 +3342,7 @@
      "item": "f"
     },
     {
-     "nr": "223",
+     "nr": "220",
      "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 17. Juni 2022 (Modernisierung der Aufsicht), in Kraft seit 1. Juli 2024 (AS <b>2023</b> 688; BBl <b>2020 </b>1).",
      "links": [
       {
@@ -3406,7 +3358,7 @@
      "item": "fbis"
     },
     {
-     "nr": "224",
+     "nr": "221",
      "text": "Eingefügt durch Ziff. I 7 des BG vom 8. Okt. 1999 zum Abk. zwischen der Schweizerischen Eidgenossenschaft einerseits und der EG sowie ihren Mitgliedstaaten andererseits über die Freizügigkeit (AS <b>2002</b> 701; BBl <b>1999</b> 6128). Fassung gemäss Ziff. I 6 des BG vom 14. Dez. 2001 betreffend die Bestimmungen über die Personenfreizügigkeit im Abk. zur Änd. des Übereink. zur Errichtung der EFTA, in Kraft seit 1. Juni 2002 (AS <b>2002</b> 685; BBl <b>2001</b> 4963).",
      "links": [
       {
@@ -3430,14 +3382,14 @@
      "item": "g"
     },
     {
-     "nr": "225",
+     "nr": "222",
      "text": "Heute: Europäische Union.",
      "links": [],
      "absatz": "1",
      "item": "g"
     },
     {
-     "nr": "226",
+     "nr": "223",
      "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -3453,7 +3405,7 @@
      "item": "h"
     },
     {
-     "nr": "227",
+     "nr": "224",
      "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 17. Juni 2022 (Modernisierung der Aufsicht), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 688; BBl <b>2020 </b>1).",
      "links": [
       {
@@ -3469,19 +3421,19 @@
      "item": "i"
     },
     {
-     "nr": "228",
+     "nr": "225",
      "text": "SR <b>831.10</b>",
      "links": [
       {
        "label": "SR <b>831.10</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/63/837_843_843"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10002"
       }
      ],
      "absatz": "2",
      "item": null
     },
     {
-     "nr": "229",
+     "nr": "226",
      "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2010 (Finanzierung von Vorsorgeeinrichtungen öffentlich-rechtlicher Körperschaften), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3385; BBl <b>2008</b> 8411).",
      "links": [
       {
@@ -3518,7 +3470,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "232",
+     "nr": "229",
      "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 3067; BBl <b>1996</b> I 564 <i>580</i>).",
      "links": [
       {
@@ -3534,12 +3486,12 @@
      "item": null
     },
     {
-     "nr": "233",
+     "nr": "230",
      "text": "SR <b>831.42</b>",
      "links": [
       {
        "label": "SR <b>831.42</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1994/2386_2386_2386"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10100"
       }
      ],
      "absatz": null,
@@ -3586,7 +3538,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "235",
+     "nr": "232",
      "text": "Fassung gemäss Ziff. I des BG vom 21. Juni 1996, in Kraft seit 1. Juli 1998 (AS <b>1996</b> 3067, <b>1998</b> 1573; BBl <b>1996</b> I 564 <i>580</i>).",
      "links": [
       {
@@ -3606,7 +3558,7 @@
      "item": null
     },
     {
-     "nr": "236",
+     "nr": "233",
      "text": "Eingefügt durch Ziff. II 1 des BG vom 18. Dez. 1998 (AS <b>1999</b> 1384; <i>BBl <b>1998</b> 5569</i>). Fassung gemäss Anhang Ziff. 5 des BG vom 17. Juni 2022 (Modernisierung der Aufsicht), in Kraft seit 1. Juli 2024 (AS <b>2023</b> 688; BBl <b>2020 </b>1).",
      "links": [
       {
@@ -3626,7 +3578,7 @@
      "item": null
     },
     {
-     "nr": "237",
+     "nr": "234",
      "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -3663,7 +3615,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "239",
+     "nr": "236",
      "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2313; BBl <b>2013</b> 4887).",
      "links": [
       {
@@ -3679,7 +3631,7 @@
      "item": null
     },
     {
-     "nr": "240",
+     "nr": "237",
      "text": "Eingefügt durch Art. 117<i>a</i> des Arbeitslosenversicherungsgesetzes vom 26. Juni 1982, in Kraft seit 1. Juli 1997 (AS <b>1982</b> 2184; BBl <b>1980</b> III 489).",
      "links": [
       {
@@ -3695,7 +3647,7 @@
      "item": "e"
     },
     {
-     "nr": "241",
+     "nr": "238",
      "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2313; BBl <b>2013</b> 4887).",
      "links": [
       {
@@ -3711,19 +3663,19 @@
      "item": "f"
     },
     {
-     "nr": "242",
+     "nr": "239",
      "text": "SR <b>281.1</b>",
      "links": [
       {
        "label": "SR <b>281.1</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6149"
       }
      ],
      "absatz": "2bis",
      "item": null
     },
     {
-     "nr": "243",
+     "nr": "240",
      "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -3739,19 +3691,19 @@
      "item": null
     },
     {
-     "nr": "244",
+     "nr": "241",
      "text": "SR <b>831.42</b>",
      "links": [
       {
        "label": "SR <b>831.42</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1994/2386_2386_2386"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10100"
       }
      ],
      "absatz": "5",
      "item": null
     },
     {
-     "nr": "245",
+     "nr": "242",
      "text": "Eingefügt durch Anhang Ziff. 3 des Freizügigkeitsgesetzes vom 17. Dez. 1993, in Kraft 1. Jan. 1995 (AS <b>1994</b> 2386; BBl <b>1992</b> III 533).",
      "links": [
       {
@@ -3767,7 +3719,7 @@
      "item": null
     },
     {
-     "nr": "246",
+     "nr": "243",
      "text": "Eingefügt durch Ziff. I des BG vom 20. Dez. 2006 (Wechsel der Vorsorgeeinrichtung), in Kraft seit 1. Mai 2007 (AS <b>2007 </b>1803; BBl <b>2005</b> 5941 5953).",
      "links": [
       {
@@ -3808,7 +3760,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "251",
+     "nr": "248",
      "text": "Fassung gemäss Ziff. I des BG vom 19. März 2010 (Strukturreform), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -3824,7 +3776,7 @@
      "item": null
     },
     {
-     "nr": "252",
+     "nr": "249",
      "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2010 (Finanzierung von Vorsorgeeinrichtungen öffentlich-rechtlicher Körperschaften), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3385; BBl <b>2008</b> 8411).",
      "links": [
       {
@@ -3840,7 +3792,7 @@
      "item": null
     },
     {
-     "nr": "253",
+     "nr": "250",
      "text": "Dritter Satz eingefügt durch Anhang Ziff. 5 des BG vom 17. Juni 2022 (Modernisierung der Aufsicht), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 688; BBl <b>2020 </b>1). Siehe auch die SchlB dieser Änd. am Schluss dieses Textes.",
      "links": [
       {
@@ -3856,7 +3808,7 @@
      "item": null
     },
     {
-     "nr": "254",
+     "nr": "251",
      "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2010 (Finanzierung von Vorsorgeeinrichtungen öffentlich-rechtlicher Körperschaften), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3385; BBl <b>2008</b> 8411).",
      "links": [
       {
@@ -3872,7 +3824,7 @@
      "item": null
     },
     {
-     "nr": "249",
+     "nr": "246",
      "text": "Ursprünglich: Dritter Titel. Fassung gemäss Ziff. I des BG vom 19. März 2010 (Strukturreform), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -3889,7 +3841,7 @@
      "sektion": "Vierter Titel: Aufsicht und Oberaufsicht"
     },
     {
-     "nr": "250",
+     "nr": "247",
      "text": "Eingefügt durch Ziff. I des BG vom 19. März 2010 (Strukturreform), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -3927,7 +3879,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "255",
+     "nr": "252",
      "text": "Fassung gemäss Ziff. I des BG vom 19. März 2010 (Strukturreform), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -3943,7 +3895,7 @@
      "item": null
     },
     {
-     "nr": "256",
+     "nr": "253",
      "text": "Fassung gemäss Ziff. I des BG vom 19. März 2010 (Strukturreform), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -3959,7 +3911,7 @@
      "item": "a"
     },
     {
-     "nr": "257",
+     "nr": "254",
      "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. April 2004 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -3975,7 +3927,7 @@
      "item": "b"
     },
     {
-     "nr": "258",
+     "nr": "255",
      "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. April 2004 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -3991,19 +3943,19 @@
      "item": "e"
     },
     {
-     "nr": "259",
+     "nr": "256",
      "text": "SR <b>210</b>",
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5703"
       }
      ],
      "absatz": "2",
      "item": null
     },
     {
-     "nr": "260",
+     "nr": "257",
      "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2313; BBl <b>2013</b> 4887).",
      "links": [
       {
@@ -4019,7 +3971,7 @@
      "item": null
     },
     {
-     "nr": "261",
+     "nr": "258",
      "text": "Eingefügt durch Anhang Ziff. 10 des Fusionsgesetzes vom 3. Okt. 2003, in Kraft seit 1. Juli 2004 (AS <b>2004</b> 2617; BBl <b>2000</b> 4337).",
      "links": [
       {
@@ -4054,7 +4006,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "263",
+     "nr": "260",
      "text": "Aufgehoben durch Ziff. I des BG vom 19. März 2010 (Strukturreform), mit Wirkung seit 1. Jan. 2012 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -4091,7 +4043,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "266",
+     "nr": "263",
      "text": "Fassung gemäss Ziff. I des BG vom 19. März 2010 (Strukturreform), in Kraft seit 1. Jan. 2012, mit Ausnahme von Abs. 1 in Kraft seit 1. Aug. 2011 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -4107,19 +4059,19 @@
      "item": null
     },
     {
-     "nr": "267",
+     "nr": "264",
      "text": "SR <b>170.32</b>",
      "links": [
       {
        "label": "SR <b>170.32</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1958/1413_1483_1489"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4971"
       }
      ],
      "absatz": "4",
      "item": null
     },
     {
-     "nr": "265",
+     "nr": "262",
      "text": "Eingefügt durch Ziff. I des BG vom 19. März 2010 (Strukturreform), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -4153,7 +4105,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "276",
+     "nr": "273",
      "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2010 (Finanzierung von Vorsorgeeinrichtungen öffentlich-rechtlicher Körperschaften), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3385; BBl <b>2008</b> 8411).",
      "links": [
       {
@@ -4169,7 +4121,7 @@
      "item": null
     },
     {
-     "nr": "277",
+     "nr": "274",
      "text": "Eingefügt durch Ziff. I des BG vom 17. Dez. 2010 (Finanzierung von Vorsorgeeinrichtungen öffentlich-rechtlicher Körperschaften), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3385; BBl <b>2008</b> 8411).",
      "links": [
       {
@@ -4185,7 +4137,7 @@
      "item": null
     },
     {
-     "nr": "278",
+     "nr": "275",
      "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. April 2004 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -4201,19 +4153,19 @@
      "item": null
     },
     {
-     "nr": "279",
+     "nr": "276",
      "text": "SR <b>831.42</b>",
      "links": [
       {
        "label": "SR <b>831.42</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1994/2386_2386_2386"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10100"
       }
      ],
      "absatz": "4",
      "item": null
     },
     {
-     "nr": "280",
+     "nr": "277",
      "text": "Eingefügt durch Ziff. I des BG vom 19. März 2010 (Strukturreform), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -4229,7 +4181,7 @@
      "item": null
     },
     {
-     "nr": "275",
+     "nr": "272",
      "text": "Eingefügt durch Ziff. I des BG vom 17. Dez. 2010 (Finanzierung von Vorsorgeeinrichtungen öffentlich-rechtlicher Körperschaften), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3385; BBl <b>2008</b> 8411).",
      "links": [
       {
@@ -4263,7 +4215,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "288",
+     "nr": "285",
      "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -4311,7 +4263,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "289",
+     "nr": "286",
      "text": "Aufgehoben durch Anhang Ziff. II 3 des Versicherungsaufsichtsgesetzes vom 17. Dez. 2004, mit Wirkung seit 1. Jan. 2006 (AS <b>2005</b> 5269; BBl <b>2003</b> 3789).",
      "links": [
       {
@@ -4327,7 +4279,7 @@
      "item": null
     },
     {
-     "nr": "290",
+     "nr": "287",
      "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. April 2004 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -4343,7 +4295,7 @@
      "item": null
     },
     {
-     "nr": "291",
+     "nr": "288",
      "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. April 2004 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -4374,7 +4326,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "293",
+     "nr": "290",
      "text": "Aufgehoben durch Ziff. I des BG vom 17. Dez. 2010 (Finanzierung von Vorsorgeeinrichtungen öffentlich-rechtlicher Körperschaften), mit Wirkung seit 1. Jan. 2012 (AS <b>2011</b> 3385; BBl <b>2008</b> 8411).",
      "links": [
       {
@@ -4405,7 +4357,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "294",
+     "nr": "291",
      "text": "Aufgehoben durch Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), mit Wirkung seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -4438,7 +4390,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "295",
+     "nr": "292",
      "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -4471,19 +4423,19 @@
    ],
    "fussnoten": [
     {
-     "nr": "299",
+     "nr": "296",
      "text": "SR <b>831.42</b>",
      "links": [
       {
        "label": "SR <b>831.42</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1994/2386_2386_2386"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10100"
       }
      ],
      "absatz": "3",
      "item": null
     },
     {
-     "nr": "300",
+     "nr": "297",
      "text": "Eingefügt durch Anhang Ziff. 3 des Freizügigkeitsgesetzes vom 17. Dez. 1993 (AS <b>1994</b> 2386; BBl <b>1992</b> III 533). Fassung gemäss Ziff. I des BG vom 21. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 3067; BBl <b>1996</b> I 564 <i>580</i>).",
      "links": [
       {
@@ -4524,7 +4476,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "304",
+     "nr": "301",
      "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -4540,19 +4492,19 @@
      "item": null
     },
     {
-     "nr": "305",
+     "nr": "302",
      "text": "SR <b>831.42</b>",
      "links": [
       {
        "label": "SR <b>831.42</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1994/2386_2386_2386"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10100"
       }
      ],
      "absatz": "1",
      "item": "a"
     },
     {
-     "nr": "306",
+     "nr": "303",
      "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -4568,7 +4520,7 @@
      "item": "d"
     },
     {
-     "nr": "307",
+     "nr": "304",
      "text": "Aufgehoben durch Anhang Ziff. 109 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, mit Wirkung seit 1. Jan. 2007 (AS <b>2006</b> 2197; BBl <b>2001</b> 4202).",
      "links": [
       {
@@ -4601,7 +4553,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "308",
+     "nr": "305",
      "text": "Fassung gemäss Ziff. I 14 der V der BVers vom 20. Dez. 2006 über die Anpassung von Erlassen an die Bestimmungen des Bundesgerichtsgesetzes und des Verwaltungsgerichtsgesetzes (AS <b>2006</b> 5599; BBl <b>2006</b> 7759).",
      "links": [
       {
@@ -4617,7 +4569,7 @@
      "item": null
     },
     {
-     "nr": "309",
+     "nr": "306",
      "text": "Eingefügt durch Ziff. I des BG vom 19. März 2010 (Strukturreform), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -4633,7 +4585,7 @@
      "item": null
     },
     {
-     "nr": "310",
+     "nr": "307",
      "text": "Eingefügt durch Ziff. I des BG vom 19. März 2010 (Strukturreform), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -4666,7 +4618,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "311",
+     "nr": "308",
      "text": "Fassung gemäss Ziff. I 11 des BG vom 17. Dez. 2021 über die Anpassung des Nebenstrafrechts an das geänderte Sanktionenrecht, in Kraft seit 1. Juli 2023 (AS <b>2023</b> 254; BBl <b>2018</b> 2827).",
      "links": [
       {
@@ -4682,12 +4634,12 @@
      "item": null
     },
     {
-     "nr": "312",
+     "nr": "309",
      "text": "SR <b>311.0</b>",
      "links": [
       {
        "label": "SR <b>311.0</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6196"
       }
      ],
      "absatz": null,
@@ -4711,7 +4663,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "313",
+     "nr": "310",
      "text": "Fassung gemäss Ziff. II des BG vom 17. Dez. 2021 über die Anpassung des Nebenstrafrechts an das geänderte Sanktionenrecht, in Kraft seit 1. Juli 2023 (AS <b>2023</b> 254; BBl <b>2018</b> 2827).",
      "links": [
       {
@@ -4727,12 +4679,12 @@
      "item": null
     },
     {
-     "nr": "314",
+     "nr": "311",
      "text": "SR <b>311.0</b>",
      "links": [
       {
        "label": "SR <b>311.0</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6196"
       }
      ],
      "absatz": "1",
@@ -4756,7 +4708,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "315",
+     "nr": "312",
      "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -4789,7 +4741,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "316",
+     "nr": "313",
      "text": "Fassung gemäss Anhang 1 Ziff. II 29 der Strafprozessordnung vom 5. Okt. 2007, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 1881; BBl <b>2006</b> 1085).",
      "links": [
       {
@@ -4822,7 +4774,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "317",
+     "nr": "314",
      "text": "Fassung gemäss Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -4838,7 +4790,7 @@
      "item": null
     },
     {
-     "nr": "318",
+     "nr": "315",
      "text": "Fassung gemäss Anhang Ziff. 109 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 2197; BBl <b>2001</b> 4202).",
      "links": [
       {
@@ -4871,7 +4823,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "327",
+     "nr": "324",
      "text": "Eingefügt durch Ziff. I 10 des BG vom 19. März 1999 über das Stabilisierungsprogramm 1998, in Kraft seit 1. Jan. 2001 (AS <b>1999</b> 2374; <i>BBl <b>1999</b> 4</i>).",
      "links": [
       {
@@ -4901,7 +4853,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "328",
+     "nr": "325",
      "text": "Fassung gemäss Ziff. I des BG vom 18. Juni 2004, in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 4635; BBl <b>2003</b> 6399).",
      "links": [
       {
@@ -4934,7 +4886,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "330",
+     "nr": "327",
      "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 18. Dez. 2020 (Erbrecht), in Kraft seit 1. Jan. 2023 (AS <b>2021</b> 312; BBl ).",
      "links": [
       {
@@ -4997,7 +4949,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "332",
+     "nr": "329",
      "text": "Ursprünglich: Zweiter Titel.",
      "links": [],
      "absatz": null,
@@ -5022,7 +4974,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "338",
+     "nr": "335",
      "text": "Fassung gemäss Ziff. I des BG von 23. Juni 2000, in Kraft seit 1. Jan. 2001 (AS <b>2000</b> 2689; BBl <b>2000</b> 255).",
      "links": [
       {
@@ -5055,7 +5007,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "356",
+     "nr": "353",
      "text": "Fassung gemäss Ziff. I des BG von 23. Juni 2000, in Kraft seit 1. Jan. 2001 (AS <b>2000</b> 2689; BBl <b>2000</b> 255).",
      "links": [
       {
@@ -5071,7 +5023,7 @@
      "item": null
     },
     {
-     "nr": "357",
+     "nr": "354",
      "text": "Eingefügt durch Anhang Ziff. 3 des BG vom 19. Juni 2020 (Weiterentwicklung der IV), in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 705; BBl <b>2017</b> 2535).",
      "links": [
       {
@@ -5104,7 +5056,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "358",
+     "nr": "355",
      "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 19. Juni 2020 (Weiterentwicklung der IV), in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 705; BBl <b>2017</b> 2535).",
      "links": [
       {
@@ -5135,7 +5087,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "359",
+     "nr": "356",
      "text": "Aufgehoben durch Anhang Ziff. 10 des Bundesstatistikgesetzes vom 9. Okt. 1992, mit Wirkung seit 1. Aug. 1993 (AS <b>1993 </b>2080; BBl <b>1992</b> I 373).",
      "links": [
       {
@@ -5166,7 +5118,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "375",
+     "nr": "372",
      "text": "Ursprünglich Siebenter Teil.",
      "links": [],
      "absatz": null,
@@ -5219,7 +5171,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "377",
+     "nr": "374",
      "text": "Aufgehoben durch Ziff. II 41 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Aug. 2008 (AS <b>2008</b> 3437; BBl <b>2007</b> 6121).",
      "links": [
       {
@@ -5252,7 +5204,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "379",
+     "nr": "376",
      "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -5268,7 +5220,7 @@
      "item": null
     },
     {
-     "nr": "380",
+     "nr": "377",
      "text": "Satz aufgehoben durch Ziff. II 41 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Aug. 2008 (AS <b>2008</b> 3437; BBl <b>2007</b> 6121).",
      "links": [
       {
@@ -5284,7 +5236,7 @@
      "item": null
     },
     {
-     "nr": "381",
+     "nr": "378",
      "text": "Fassung gemäss Ziff. II 411 des BG vom 15. Dez. 1989 über die Genehmigung kantonaler Erlasse durch den Bund, in Kraft seit 1. Febr. 1991 (AS <b>1991</b> 362; BBl <b>1988</b> II 1333).",
      "links": [
       {
@@ -5317,7 +5269,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "382",
+     "nr": "379",
      "text": "Art. 1 der V vom 29. Juni 1983 (AS <b>1983 </b>827)",
      "links": [
       {
@@ -5436,7 +5388,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "58",
+     "nr": "56",
      "text": "Eingefügt durch Anhang Ziff. 29 des Partnerschaftsgesetzes vom 18. Juni 2004 (AS <b>2005</b> 5685; BBl <b>2003</b> 1288). Fassung gemäss Anhang Ziff. 3 des BG vom 17. Juni 2016 (Adoption), in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 3699; BBl <b>2015</b> 877).",
      "links": [
       {
@@ -5485,7 +5437,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "59",
+     "nr": "57",
      "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -5501,8 +5453,8 @@
      "item": null
     },
     {
-     "nr": "60",
-     "text": "Heute: den Art. 19, <i>19</i><i>a</i> und 20.",
+     "nr": "58",
+     "text": "Heute: den Art. 19, 19<i>a</i> und 20.",
      "links": [],
      "absatz": "1",
      "item": null
@@ -5533,7 +5485,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "77",
+     "nr": "74",
      "text": "Eingefügt durch Anhang Ziff. 3 des BG vom 19. Juni 2020 (Weiterentwicklung der IV), in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 705; BBl <b>2017</b> 2535). Siehe auch die UeB dieser Änd. am Schluss des Textes.",
      "links": [
       {
@@ -5574,7 +5526,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "78",
+     "nr": "75",
      "text": "Eingefügt durch Anhang Ziff. 3 des BG vom 19. Juni 2020 (Weiterentwicklung der IV), in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 705; BBl <b>2017</b> 2535).",
      "links": [
       {
@@ -5590,12 +5542,12 @@
      "item": null
     },
     {
-     "nr": "79",
+     "nr": "76",
      "text": "SR <b>830.1</b>",
      "links": [
       {
        "label": "SR <b>830.1</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2002/510"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9993"
       }
      ],
      "absatz": null,
@@ -5627,7 +5579,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "87",
+     "nr": "84",
      "text": "Eingefügt durch Anhang Ziff. 6 des BG vom 18. März 2011 (6. IV-Revision, erstes Massnahmenpaket), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 5659; BBl <b>2010</b> 1817).",
      "links": [
       {
@@ -5643,12 +5595,12 @@
      "item": null
     },
     {
-     "nr": "88",
+     "nr": "85",
      "text": "SR <b>831.20</b>",
      "links": [
       {
        "label": "SR <b>831.20</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1959/827_857_845"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10046"
       }
      ],
      "absatz": "1",
@@ -5680,7 +5632,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "89",
+     "nr": "86",
      "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5137; BBl <b>2018</b> 1607).",
      "links": [
       {
@@ -5696,12 +5648,12 @@
      "item": null
     },
     {
-     "nr": "90",
+     "nr": "87",
      "text": "SR <b>830.1</b>",
      "links": [
       {
        "label": "SR <b>830.1</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2002/510"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9993"
       }
      ],
      "absatz": null,
@@ -5731,7 +5683,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "95",
+     "nr": "92",
      "text": "Aufgehoben durch Anhang Ziff. 3 des Freizügigkeitsgesetzes vom 17. Dez. 1993, mit Wirkung seit 1. Jan. 1995 (AS <b>1994</b> 2386; BBl <b>1992</b> III 533).",
      "links": [
       {
@@ -5772,19 +5724,19 @@
    ],
    "fussnoten": [
     {
-     "nr": "97",
+     "nr": "94",
      "text": "SR <b>831.42</b>",
      "links": [
       {
        "label": "SR <b>831.42</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1994/2386_2386_2386"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10100"
       }
      ],
      "absatz": null,
      "item": null
     },
     {
-     "nr": "96",
+     "nr": "93",
      "text": "Eingefügt durch Ziff. I des BG vom 17. Dez. 1993 über die Wohneigentumsförderung mit Mitteln der beruflichen Vorsorge, in Kraft seit 1. Jan. 1995 (AS <b>1994</b> 2372; BBl <b>1992</b> VI 237).",
      "links": [
       {
@@ -5826,19 +5778,19 @@
    ],
    "fussnoten": [
     {
-     "nr": "98",
+     "nr": "95",
      "text": "SR <b>220</b>",
      "links": [
       {
        "label": "SR <b>220</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
      "absatz": null,
      "item": null
     },
     {
-     "nr": "99",
+     "nr": "96",
      "text": "Ausdruck gemäss Ziff. I 6 des BG vom 20. Dez. 2019 über die Verbesserung der Vereinbarkeit von Erwerbstätigkeit und Angehörigenbetreuung, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 4525; BBl <b>2019</b> 4103). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
      "links": [
       {
@@ -5879,7 +5831,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "100",
+     "nr": "97",
      "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2313; BBl <b>2013</b> 4887).",
      "links": [
       {
@@ -5895,43 +5847,43 @@
      "item": null
     },
     {
-     "nr": "101",
+     "nr": "98",
      "text": "SR <b>210</b>",
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5703"
       }
      ],
      "absatz": "6",
      "item": null
     },
     {
-     "nr": "102",
+     "nr": "99",
      "text": "SR <b>272</b>",
      "links": [
       {
        "label": "SR <b>272</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2010/262"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6136"
       }
      ],
      "absatz": "6",
      "item": null
     },
     {
-     "nr": "103",
+     "nr": "100",
      "text": "SR <b>831.42</b>",
      "links": [
       {
        "label": "SR <b>831.42</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1994/2386_2386_2386"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10100"
       }
      ],
      "absatz": "6",
      "item": null
     },
     {
-     "nr": "104",
+     "nr": "101",
      "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2313; BBl <b>2013</b> 4887).",
      "links": [
       {
@@ -5972,7 +5924,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "105",
+     "nr": "102",
      "text": "Fassung gemäss Ziff. II 2 des BG vom 22. März 2019 (EL-Reform), in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 585; BBl <b>2016</b> 7465).",
      "links": [
       {
@@ -5988,7 +5940,7 @@
      "item": "a"
     },
     {
-     "nr": "106",
+     "nr": "103",
      "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2313; BBl <b>2013</b> 4887).",
      "links": [
       {
@@ -6029,7 +5981,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "107",
+     "nr": "104",
      "text": "Fassung gemäss Ziff. II 2 des BG vom 22. März 2019 (EL-Reform), in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 585; BBl <b>2016</b> 7465).",
      "links": [
       {
@@ -6045,7 +5997,7 @@
      "item": "a"
     },
     {
-     "nr": "108",
+     "nr": "105",
      "text": "Fassung gemäss Ziff. II 2 des BG vom 22. März 2019 (EL-Reform), in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 585; BBl <b>2016</b> 7465).",
      "links": [
       {
@@ -6086,7 +6038,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "109",
+     "nr": "106",
      "text": "Eingefügt durch Ziff. I des BG vom 18. Juni 2004, in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 4635; BBl <b>2003</b> 6399).",
      "links": [
       {
@@ -6127,7 +6079,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "110",
+     "nr": "107",
      "text": "Ursprünglich Art. 30<i>f</i>.",
      "links": [],
      "absatz": null,
@@ -6155,7 +6107,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "113",
+     "nr": "110",
      "text": "Ausdruck gemäss Anhang Ziff. 4 des BG vom 17. Dez. 2021 (AHV 21), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 92; BBl <b>2019</b> 6305).",
      "links": [
       {
@@ -6171,19 +6123,19 @@
      "item": null
     },
     {
-     "nr": "114",
+     "nr": "111",
      "text": "SR <b>220</b>",
      "links": [
       {
        "label": "SR <b>220</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
      "absatz": "3",
      "item": null
     },
     {
-     "nr": "112",
+     "nr": "109",
      "text": "Eingefügt durch Ziff. I des BG vom 11. Dez. 2009 (Massnahmen zur Erleichterung der Arbeitsmarktbeteiligung älterer Arbeitnehmender), in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 4427; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -6240,7 +6192,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "117",
+     "nr": "114",
      "text": "Eingefügt durch Anhang Ziff. 10 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, in Kraft seit 1. Jan. 2003 (AS <b>2002</b> 3371; BBl <b>1991</b> II 185 <i>910</i>, <b>1994</b> V 921, <i><b>1999</b> 4523</i>).",
      "links": [
       {
@@ -6260,7 +6212,7 @@
      "item": null
     },
     {
-     "nr": "118",
+     "nr": "115",
      "text": "Fassung gemäss Anhang Ziff. 2 des BG vom 25. Sept. 2015 (Unfallversicherung und Unfallverhütung), in Kraft seit seit 1. Jan. 2017 (AS <b>2016</b> 4375; BBl <b>2008 </b>5395, <b>2014</b> 7911).",
      "links": [
       {
@@ -6280,31 +6232,31 @@
      "item": null
     },
     {
-     "nr": "119",
+     "nr": "116",
      "text": "SR <b>830.1</b>",
      "links": [
       {
        "label": "SR <b>830.1</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2002/510"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9993"
       }
      ],
      "absatz": "2",
      "item": null
     },
     {
-     "nr": "120",
+     "nr": "117",
      "text": "SR <b>833.1</b>",
      "links": [
       {
        "label": "SR <b>833.1</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1993/3043_3043_3043"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10252"
       }
      ],
      "absatz": "2",
      "item": null
     },
     {
-     "nr": "121",
+     "nr": "118",
      "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 25. Sept. 2015 (Unfallversicherung und Unfallverhütung), in Kraft seit seit 1. Jan. 2017 (AS <b>2016</b> 4375; BBl <b>2008 </b>5395, <b>2014</b> 7911).",
      "links": [
       {
@@ -6324,7 +6276,7 @@
      "item": null
     },
     {
-     "nr": "122",
+     "nr": "119",
      "text": "Eingefügt durch Anhang Ziff. 2 des BG vom 25. Sept. 2015 (Unfallversicherung und Unfallverhütung), in Kraft seit seit 1. Jan. 2017 (AS <b>2016</b> 4375; BBl <b>2008 </b>5395, <b>2014</b> 7911).",
      "links": [
       {
@@ -6365,7 +6317,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "123",
+     "nr": "120",
      "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -6402,7 +6354,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "124",
+     "nr": "121",
      "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -6418,7 +6370,7 @@
      "item": null
     },
     {
-     "nr": "125",
+     "nr": "122",
      "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5137; BBl <b>2018</b> 1607).",
      "links": [
       {
@@ -6455,7 +6407,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "131",
+     "nr": "128",
      "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2313; BBl <b>2013</b> 4887).",
      "links": [
       {
@@ -6492,7 +6444,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "144",
+     "nr": "141",
      "text": "Eingefügt durch Ziff. II 2 des BG vom 22. März 2019 (EL-Reform), in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 585; BBl <b>2016</b> 7465).",
      "links": [
       {
@@ -6508,7 +6460,7 @@
      "item": null
     },
     {
-     "nr": "145",
+     "nr": "142",
      "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 17. Dez. 2021 (AHV 21), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 92; BBl <b>2019</b> 6305).",
      "links": [
       {
@@ -6541,7 +6493,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "180",
+     "nr": "177",
      "text": "Eingefügt durch Ziff. I des BG vom 17. Dez. 2010 (Finanzierung von Vorsorgeeinrichtungen öffentlich-rechtlicher Körperschaften), in Kraft seit 1. Jan. 2012, mit Ausnahme von Abs. 6, in Kraft seit 1. Jan. 2015 (AS <b>2011</b> 3385, <b>2013</b> 2253; BBl <b>2008</b> 8411).",
      "links": [
       {
@@ -6561,12 +6513,12 @@
      "item": null
     },
     {
-     "nr": "181",
+     "nr": "178",
      "text": "SR <b>220</b>",
      "links": [
       {
        "label": "SR <b>220</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
      "absatz": "5",
@@ -6590,7 +6542,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "182",
+     "nr": "179",
      "text": "Eingefügt durch Ziff. I des BG vom 19. März 2010 (Strukturreform), in Kraft seit 1. Aug. 2011 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -6623,7 +6575,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "183",
+     "nr": "180",
      "text": "Eingefügt durch Ziff. I des BG vom 19. März 2010 (Strukturreform), in Kraft seit 1. Aug. 2011 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -6656,7 +6608,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "189",
+     "nr": "186",
      "text": "Eingefügt durch Ziff. I des BG vom 19. März 2010 (Strukturreform), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -6689,7 +6641,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "190",
+     "nr": "187",
      "text": "Eingefügt durch Ziff. I des BG vom 19. März 2010 (Strukturreform), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -6705,12 +6657,12 @@
      "item": null
     },
     {
-     "nr": "191",
+     "nr": "188",
      "text": "SR <b>221.302</b>",
      "links": [
       {
        "label": "SR <b>221.302</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2007/533"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5919"
       }
      ],
      "absatz": null,
@@ -6734,7 +6686,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "192",
+     "nr": "189",
      "text": "Eingefügt durch Ziff. I des BG vom 19. März 2010 (Strukturreform), in Kraft seit 1. Aug. 2011 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -6767,7 +6719,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "193",
+     "nr": "190",
      "text": "Eingefügt durch Ziff. I des BG vom 19. März 2010 (Strukturreform), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -6800,7 +6752,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "194",
+     "nr": "191",
      "text": "Eingefügt durch Ziff. I des BG vom 19. März 2010 (Strukturreform), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -6816,7 +6768,7 @@
      "item": null
     },
     {
-     "nr": "195",
+     "nr": "192",
      "text": "Fassung gemäss Anhang Ziff. 5 des BG vom 17. Juni 2022 (Modernisierung der Aufsicht), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 688; BBl <b>2020 </b>1).",
      "links": [
       {
@@ -6832,7 +6784,7 @@
      "item": "b"
     },
     {
-     "nr": "196",
+     "nr": "193",
      "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 17. Juni 2022 (Modernisierung der Aufsicht), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 688; BBl <b>2020 </b>1).",
      "links": [
       {
@@ -6848,19 +6800,19 @@
      "item": null
     },
     {
-     "nr": "197",
+     "nr": "194",
      "text": "Berichtigt von der Redaktionskommission der BVers (Art. 58 Abs. 1 ParlG – SR <b>171.10</b>).",
      "links": [
       {
        "label": "SR <b>171.10</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2003/510"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4991"
       }
      ],
      "absatz": "2",
      "item": "a"
     },
     {
-     "nr": "198",
+     "nr": "195",
      "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 17. Juni 2022 (Modernisierung der Aufsicht), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 688; BBl <b>2020 </b>1).",
      "links": [
       {
@@ -6876,7 +6828,7 @@
      "item": null
     },
     {
-     "nr": "199",
+     "nr": "196",
      "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 17. Juni 2022 (Modernisierung der Aufsicht), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 688; BBl <b>2020 </b>1).",
      "links": [
       {
@@ -6909,7 +6861,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "201",
+     "nr": "198",
      "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision) (AS <b>2004</b> 1677; BBl <b>2000</b> 2637). Fassung gemäss Ziff. I des BG vom 19. März 2010 (Strukturreform), in Kraft seit 1. Aug. 2011 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -6950,7 +6902,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "202",
+     "nr": "199",
      "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -6983,7 +6935,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "203",
+     "nr": "200",
      "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -7016,7 +6968,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "204",
+     "nr": "201",
      "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -7032,7 +6984,7 @@
      "item": null
     },
     {
-     "nr": "205",
+     "nr": "202",
      "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2010 (Finanzierung von Vorsorgeeinrichtungen öffentlich-rechtlicher Körperschaften), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3385; BBl <b>2008</b> 8411).",
      "links": [
       {
@@ -7048,7 +7000,7 @@
      "item": null
     },
     {
-     "nr": "206",
+     "nr": "203",
      "text": "Fassung gemäss Ziff. I 14 der V der BVers vom 20. Dez. 2006 über die Anpassung von Erlassen an die Bestimmungen des Bundesgerichtsgesetzes und des Verwaltungsgerichtsgesetzes (AS <b>2006</b> 5599; BBl <b>2006</b> 7759).",
      "links": [
       {
@@ -7081,7 +7033,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "207",
+     "nr": "204",
      "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. April 2004 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -7097,19 +7049,19 @@
      "item": null
     },
     {
-     "nr": "208",
+     "nr": "205",
      "text": "SR <b>831.42</b>",
      "links": [
       {
        "label": "SR <b>831.42</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1994/2386_2386_2386"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10100"
       }
      ],
      "absatz": "1",
      "item": null
     },
     {
-     "nr": "209",
+     "nr": "206",
      "text": "Eingefügt durch Ziff. I des BG vom 20. Dez. 2006 (Wechsel der Vorsorgeeinrichtung), in Kraft seit 1. Mai 2007 (AS <b>2007 </b>1803; BBl <b>2005</b> 5941 5953).",
      "links": [
       {
@@ -7146,7 +7098,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "210",
+     "nr": "207",
      "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 17. Juni 2022 (Modernisierung der Aufsicht), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 688; BBl <b>2020 </b>1).",
      "links": [
       {
@@ -7162,12 +7114,12 @@
      "item": null
     },
     {
-     "nr": "211",
+     "nr": "208",
      "text": "SR <b>961.01</b>",
      "links": [
       {
        "label": "SR <b>961.01</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2005/734"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11633"
       }
      ],
      "absatz": "4",
@@ -7191,7 +7143,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "212",
+     "nr": "209",
      "text": "Eingefügt durch Ziff. I des BG vom 20. Dez. 2006 (Wechsel der Vorsorgeeinrichtung), in Kraft seit 1. Mai 2007 (AS <b>2007 </b>1803; BBl <b>2005</b> 5941 5953).",
      "links": [
       {
@@ -7228,19 +7180,19 @@
    ],
    "fussnoten": [
     {
-     "nr": "214",
+     "nr": "211",
      "text": "SR <b>210</b>",
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5703"
       }
      ],
      "absatz": "1",
      "item": null
     },
     {
-     "nr": "215",
+     "nr": "212",
      "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2313; BBl <b>2013</b> 4887).",
      "links": [
       {
@@ -7256,7 +7208,7 @@
      "item": null
     },
     {
-     "nr": "213",
+     "nr": "210",
      "text": "Eingefügt durch Ziff. I des BG vom 19. März 2010 (Strukturreform), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -7354,7 +7306,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "230",
+     "nr": "227",
      "text": "Eingefügt durch Ziff. I des BG vom 21. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 3067; BBl <b>1996</b> I 564 <i>580</i>).",
      "links": [
       {
@@ -7370,7 +7322,7 @@
      "item": null
     },
     {
-     "nr": "231",
+     "nr": "228",
      "text": "Fassung gemäss Ziff. I des BG vom 17. Dez. 2010 (Finanzierung von Vorsorgeeinrichtungen öffentlich-rechtlicher Körperschaften), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3385; BBl <b>2008</b> 8411).",
      "links": [
       {
@@ -7407,7 +7359,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "234",
+     "nr": "231",
      "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 17. Juni 2022 (Modernisierung der Aufsicht), in Kraft seit 1. Juli 2024 (AS <b>2023</b> 688; BBl <b>2020 </b>1).",
      "links": [
       {
@@ -7444,7 +7396,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "238",
+     "nr": "235",
      "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 17. Juni 2022 (Modernisierung der Aufsicht), in Kraft seit 1. Juli 2024 (AS <b>2023</b> 688; BBl <b>2020 </b>1).",
      "links": [
       {
@@ -7481,7 +7433,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "247",
+     "nr": "244",
      "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 19. Juni 2015 (Vorsorgeausgleich bei Scheidung), in Kraft seit 1. Jan. 2017 (AS <b>2016</b> 2313; BBl <b>2013</b> 4887).",
      "links": [
       {
@@ -7518,7 +7470,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "248",
+     "nr": "245",
      "text": "Eingefügt durch Ziff. I des BG vom 25. Sept. 2020 (AS <b>2020</b> 3845; BBl <b>2020</b> 6343). Fassung gemäss Ziff. I des BG vom 16. Juni 2023, in Kraft vom 26. Sept. 2023 bis zum 25. Sept. 2027 (AS <b>2023</b> 323; BBl <b>2023</b> 391).",
      "links": [
       {
@@ -7563,7 +7515,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "262",
+     "nr": "259",
      "text": "Eingefügt durch Ziff. I des BG vom 19. März 2010 (Strukturreform), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -7598,7 +7550,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "264",
+     "nr": "261",
      "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision) (AS <b>2004</b> 1677; BBl <b>2000</b> 2637). Aufgehoben durch Ziff. I des BG vom 19. März 2010 (Strukturreform), mit Wirkung seit 1. Jan. 2012 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -7643,7 +7595,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "268",
+     "nr": "265",
      "text": "Eingefügt durch Ziff. I des BG vom 19. März 2010 (Strukturreform), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -7680,7 +7632,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "269",
+     "nr": "266",
      "text": "Eingefügt durch Ziff. I des BG vom 19. März 2010 (Strukturreform), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -7717,7 +7669,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "270",
+     "nr": "267",
      "text": "Eingefügt durch Ziff. I des BG vom 19. März 2010 (Strukturreform), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3393; BBl <b>2007</b> 5669).",
      "links": [
       {
@@ -7733,7 +7685,7 @@
      "item": null
     },
     {
-     "nr": "271",
+     "nr": "268",
      "text": "Fassung gemäss Anhang Ziff. 5 des BG vom 17. Juni 2022 (Modernisierung der Aufsicht), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 688; BBl <b>2020 </b>1).",
      "links": [
       {
@@ -7749,7 +7701,7 @@
      "item": null
     },
     {
-     "nr": "272",
+     "nr": "269",
      "text": "Fassung gemäss Anhang Ziff. 5 des BG vom 17. Juni 2022 (Modernisierung der Aufsicht), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 688; BBl <b>2020 </b>1).",
      "links": [
       {
@@ -7765,19 +7717,19 @@
      "item": "a"
     },
     {
-     "nr": "273",
+     "nr": "270",
      "text": "SR <b>831.42</b>",
      "links": [
       {
        "label": "SR <b>831.42</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1994/2386_2386_2386"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10100"
       }
      ],
      "absatz": "2",
      "item": "a"
     },
     {
-     "nr": "274",
+     "nr": "271",
      "text": "Eingefügt durch Ziff. I des BG vom 17. März 2017 (AS <b>2017</b> 6337; BBl <b>2016</b> 6845 8193). Aufgehoben durch Anhang Ziff. 5 des BG vom 17. Juni 2022 (Modernisierung der Aufsicht), mit Wirkung seit 1. Jan. 2024 (AS <b>2023</b> 688; BBl <b>2020 </b>1).",
      "links": [
       {
@@ -7822,7 +7774,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "281",
+     "nr": "278",
      "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. April 2004 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -7838,7 +7790,7 @@
      "item": null
     },
     {
-     "nr": "282",
+     "nr": "279",
      "text": "Fassung gemäss Anhang Ziff. 10 des BG vom 19. Juni 2020 (Aktienrecht), in Kraft seit 1. Jan. 2023 (AS <b>2020</b> 4005; <b>2022</b> 109; BBl <b>2017</b> 399).",
      "links": [
       {
@@ -7875,7 +7827,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "283",
+     "nr": "280",
      "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -7891,7 +7843,7 @@
      "item": null
     },
     {
-     "nr": "284",
+     "nr": "281",
      "text": "Fassung gemäss Anhang Ziff. 5 des BG vom 17. Juni 2022 (Modernisierung der Aufsicht), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 688; BBl <b>2020 </b>1).",
      "links": [
       {
@@ -7924,7 +7876,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "285",
+     "nr": "282",
      "text": "Eingefügt durch Ziff. I des BG vom 18. Juni 2004, in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 4635; BBl <b>2003</b> 6399).",
      "links": [
       {
@@ -7957,7 +7909,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "286",
+     "nr": "283",
      "text": "Eingefügt durch Ziff. I des BG vom 18. Juni 2004, in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 4635; BBl <b>2003</b> 6399).",
      "links": [
       {
@@ -7990,7 +7942,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "287",
+     "nr": "284",
      "text": "Eingefügt durch Ziff. I des BG vom 18. Juni 2004, in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 4635; BBl <b>2003</b> 6399).",
      "links": [
       {
@@ -8023,7 +7975,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "292",
+     "nr": "289",
      "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. April 2004 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -8056,7 +8008,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "296",
+     "nr": "293",
      "text": "Eingefügt durch Anhang Ziff. 10 des BG vom 19. Juni 2020 (Aktienrecht), in Kraft seit 1. Jan. 2023 (AS <b>2020</b> 4005; <b>2022</b> 109; BBl <b>2017</b> 399).",
      "links": [
       {
@@ -8076,12 +8028,12 @@
      "item": null
     },
     {
-     "nr": "297",
+     "nr": "294",
      "text": "SR <b>220</b>",
      "links": [
       {
        "label": "SR <b>220</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
      "absatz": "1",
@@ -8105,7 +8057,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "298",
+     "nr": "295",
      "text": "Eingefügt durch Anhang Ziff. 10 des BG vom 19. Juni 2020 (Aktienrecht), in Kraft seit 1. Jan. 2023 (AS <b>2020</b> 4005; <b>2022</b> 109; BBl <b>2017</b> 399).",
      "links": [
       {
@@ -8142,21 +8094,21 @@
    ],
    "fussnoten": [
     {
-     "nr": "302",
+     "nr": "299",
      "text": "Siehe auch die UeB Änd. 17.12.2010 am Schluss des Textes.",
      "links": [],
      "absatz": "1",
      "item": "b"
     },
     {
-     "nr": "303",
+     "nr": "300",
      "text": "Siehe auch die UeB Änd. 17.12.2010 am Schluss des Textes.",
      "links": [],
      "absatz": "1",
      "item": "c"
     },
     {
-     "nr": "301",
+     "nr": "298",
      "text": "Eingefügt durch Ziff. I des BG vom 17. Dez. 2010 (Finanzierung von Vorsorgeeinrichtungen öffentlich-rechtlicher Körperschaften), in Kraft seit 1. Jan. 2012 (AS <b>2011</b> 3385; BBl <b>2008</b> 8411).",
      "links": [
       {
@@ -8280,7 +8232,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "321",
+     "nr": "318",
      "text": "Eingefügt durch Ziff. I 10 des BG vom 19. März 1999 über das Stabilisierungsprogramm 1998 (AS <b>1999</b> 2374; <i>BBl <b>1999</b> 4</i>). Fassung gemäss Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2006 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -8300,7 +8252,7 @@
      "item": null
     },
     {
-     "nr": "319",
+     "nr": "316",
      "text": "Fassung gemäss Ziff. I 10 des BG vom 19. März 1999 über das Stabilisierungsprogramm 1998, in Kraft seit 1. Jan. 2001 (AS <b>1999</b> 2374; <i>BBl <b>1999</b> 4</i>).",
      "links": [
       {
@@ -8313,7 +8265,7 @@
      "sektion": "Sechster Teil: Umfang der Leistungen, Steuerrecht und besondere Bestimmungen"
     },
     {
-     "nr": "320",
+     "nr": "317",
      "text": "Fassung gemäss Ziff. I 10 des BG vom 19. März 1999 über das Stabilisierungsprogramm 1998, in Kraft seit 1. Jan. 2001 (AS <b>1999</b> 2374; <i>BBl <b>1999</b> 4</i>).",
      "links": [
       {
@@ -8343,7 +8295,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "322",
+     "nr": "319",
      "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2006 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -8359,7 +8311,7 @@
      "item": null
     },
     {
-     "nr": "323",
+     "nr": "320",
      "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 17. Dez. 2021 (AHV 21), in Kraft seit 1. Jan. 2024 (AS <b>2023</b> 92; BBl <b>2019</b> 6305).",
      "links": [
       {
@@ -8375,19 +8327,19 @@
      "item": "b"
     },
     {
-     "nr": "324",
+     "nr": "321",
      "text": "SR <b>831.42</b>. Heute: Art. 22<i>d</i> FZG.",
      "links": [
       {
        "label": "SR <b>831.42</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1994/2386_2386_2386"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10100"
       }
      ],
      "absatz": "4",
      "item": null
     },
     {
-     "nr": "325",
+     "nr": "322",
      "text": "Fassung gemäss Art. 37 Ziff. 3 des Partnerschaftsgesetzes vom 18. Juni 2004, in Kraft seit 1. Jan. 2007 (AS <b>2005</b> 5269; BBl <b>2003</b> 3789).",
      "links": [
       {
@@ -8420,7 +8372,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "326",
+     "nr": "323",
      "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2006 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -8453,7 +8405,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "329",
+     "nr": "326",
      "text": "Eingefügt durch Ziff. I des BG vom 18. Juni 2004, in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 4635; BBl <b>2003</b> 6399).",
      "links": [
       {
@@ -8486,7 +8438,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "331",
+     "nr": "328",
      "text": "Eingefügt durch Ziff. I des BG vom 17. Dez. 1993 über die Wohneigentumsförderung mit Mitteln der beruflichen Vorsorge, in Kraft seit 1. Jan. 1995 (AS <b>1994</b> 2372; BBl <b>1992</b> VI 237).",
      "links": [
       {
@@ -8519,7 +8471,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "333",
+     "nr": "330",
      "text": "Eingefügt durch Ziff. I des BG von 23. Juni 2000, in Kraft seit 1. Jan. 2001 (AS <b>2000</b> 2689; BBl <b>2000</b> 255).",
      "links": [
       {
@@ -8535,7 +8487,7 @@
      "item": null
     },
     {
-     "nr": "334",
+     "nr": "331",
      "text": "Fassung gemäss Anhang 1 Ziff. II 81 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
@@ -8551,7 +8503,7 @@
      "item": null
     },
     {
-     "nr": "335",
+     "nr": "332",
      "text": "Eingefügt durch Anhang Ziff. 9 des BG vom 23. Juni 2006 (Neue AHV-Versichertennummer), in Kraft seit 1. Dez. 2007 (AS<b> 2007</b> 5259; BBl <b>2006</b> 501).",
      "links": [
       {
@@ -8567,7 +8519,7 @@
      "item": "f"
     },
     {
-     "nr": "336",
+     "nr": "333",
      "text": "Eingefügt durch Anhang 1 Ziff. II 81 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
       {
@@ -8600,7 +8552,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "337",
+     "nr": "334",
      "text": "Eingefügt durch Ziff. I des BG von 23. Juni 2000, in Kraft seit 1. Jan. 2001 (AS <b>2000</b> 2689; BBl <b>2000</b> 255).",
      "links": [
       {
@@ -8633,7 +8585,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "339",
+     "nr": "336",
      "text": "Eingefügt durch Ziff. I des BG von 23. Juni 2000, in Kraft seit 1. Jan. 2001 (AS <b>2000</b> 2689; BBl <b>2000</b> 255).",
      "links": [
       {
@@ -8649,7 +8601,7 @@
      "item": null
     },
     {
-     "nr": "340",
+     "nr": "337",
      "text": "Eingefügt durch Anhang Ziff. 3 des BG vom 20. März 2015 (Kindesunterhalt), in Kraft seit 1. Jan. 2022 (AS <b>2015</b> 4299 5017, <b>2020</b> 5; BBl <b>2014</b> 529).",
      "links": [
       {
@@ -8673,19 +8625,19 @@
      "item": "abis"
     },
     {
-     "nr": "341",
+     "nr": "338",
      "text": "SR <b>281.1</b>",
      "links": [
       {
        "label": "SR <b>281.1</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6149"
       }
      ],
      "absatz": "1",
      "item": "d"
     },
     {
-     "nr": "342",
+     "nr": "339",
      "text": "Eingefügt durch Anhang Ziff. 27 des BG vom 19. Dez. 2008 (Erwachsenenschutz, Personenrecht und Kindesrecht), in Kraft seit 1. Jan. 2013 (AS <b>2011</b> 725; BBl <b>2006</b> 7001).",
      "links": [
       {
@@ -8701,19 +8653,19 @@
      "item": "f"
     },
     {
-     "nr": "343",
+     "nr": "340",
      "text": "SR <b>210</b>",
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5703"
       }
      ],
      "absatz": "1",
      "item": "f"
     },
     {
-     "nr": "344",
+     "nr": "341",
      "text": "Eingefügt durch Anhang Ziff. 10 des BG vom 23. Dez. 2011 (AS <b>2012</b> 3745; BBl <b>2007 </b>5037, <b>2010</b> 7841). Aufgehoben durch Anhang Ziff. II 16 des Nachrichtendienstgesetzes vom 25. Sept. 2015, mit Wirkung seit 1. Sept. 2017 (AS <b>2017</b> 4095; BBl <b>2014</b> 2105).",
      "links": [
       {
@@ -8741,7 +8693,7 @@
      "item": "g"
     },
     {
-     "nr": "345",
+     "nr": "342",
      "text": "Eingefügt durch Anhang Ziff. 9 des BG vom 23. Juni 2006 (Neue AHV-Versicherten-nummer), in Kraft seit 1. Dez. 2007 (AS<b> 2007</b> 5259; BBl <b>2006</b> 501).",
      "links": [
       {
@@ -8757,31 +8709,31 @@
      "item": "bbis"
     },
     {
-     "nr": "346",
+     "nr": "343",
      "text": "SR <b>642.11</b>",
      "links": [
       {
        "label": "SR <b>642.11</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1991/1184_1184_1184"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8175"
       }
      ],
      "absatz": "2",
      "item": "c"
     },
     {
-     "nr": "347",
+     "nr": "344",
      "text": "SR <b>431.01</b>",
      "links": [
       {
        "label": "SR <b>431.01</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1993/2080_2080_2080"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6946"
       }
      ],
      "absatz": "2",
      "item": "d"
     },
     {
-     "nr": "348",
+     "nr": "345",
      "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 6. Okt. 2006 (5. IV-Revision), in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 5129; BBl <b>2005</b> 4459).",
      "links": [
       {
@@ -8797,19 +8749,19 @@
      "item": "f"
     },
     {
-     "nr": "349",
+     "nr": "346",
      "text": "SR <b>831.20</b>",
      "links": [
       {
        "label": "SR <b>831.20</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1959/827_857_845"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10046"
       }
      ],
      "absatz": "2",
      "item": "f"
     },
     {
-     "nr": "350",
+     "nr": "347",
      "text": "Eingefügt durch Anhang Ziff. 10 des BG vom 23. Dez. 2011 (AS <b>2012</b> 3745; BBl <b>2007 </b>5037, <b>2010</b> 7841). Fassung gemäss Anhang Ziff. II 16 des Nachrichtendienstgesetzes vom 25. Sept. 2015, in Kraft seit 1. Sept. 2017 (AS <b>2017</b> 4095; BBl <b>2014</b> 2105).",
      "links": [
       {
@@ -8837,24 +8789,24 @@
      "item": "g"
     },
     {
-     "nr": "351",
+     "nr": "348",
      "text": "SR <b>121</b>",
      "links": [
       {
        "label": "SR <b>121</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2017/494"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4758"
       }
      ],
      "absatz": "2",
      "item": "g"
     },
     {
-     "nr": "352",
+     "nr": "349",
      "text": "SR <b>642.21</b>",
      "links": [
       {
        "label": "SR <b>642.21</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1966/371_385_384"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8211"
       }
      ],
      "absatz": "3",
@@ -8878,7 +8830,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "353",
+     "nr": "350",
      "text": "Eingefügt durch Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), Abs. 2 in Kraft seit 1. April 2004, die übrigen Bestimmungen am 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -8894,7 +8846,7 @@
      "item": null
     },
     {
-     "nr": "354",
+     "nr": "351",
      "text": "Eingefügt durch Anhang Ziff. 10 des BG vom 19. Juni 2020 (Aktienrecht), in Kraft seit 1. Jan. 2023 (AS <b>2020</b> 4005; <b>2022</b> 109; BBl <b>2017</b> 399).",
      "links": [
       {
@@ -8914,7 +8866,7 @@
      "item": "d"
     },
     {
-     "nr": "355",
+     "nr": "352",
      "text": "Fassung des zweiten Satzes gemäss Anhang Ziff. 10 des BG vom 19. Juni 2020 (Aktienrecht), in Kraft seit 1. Jan. 2023 (AS <b>2020</b> 4005; <b>2022</b> 109; BBl <b>2017</b> 399).",
      "links": [
       {
@@ -8947,7 +8899,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "362",
+     "nr": "359",
      "text": "Fassung gemäss Anhang Ziff. 4 des BB vom 17. Juni 2016 (Ausdehnung des Freizügigkeitsabkommens auf die Republik Kroatien), in Kraft seit 1. Jan. 2017 (AS <b>2016 </b>5233; BBl <b>2016</b> 2223).",
      "links": [
       {
@@ -8963,43 +8915,43 @@
      "item": null
     },
     {
-     "nr": "363",
+     "nr": "360",
      "text": "SR <b>0.142.112.681</b>",
      "links": [
       {
        "label": "SR <b>0.142.112.681</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2002/243"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/211"
       }
      ],
      "absatz": "1",
      "item": null
     },
     {
-     "nr": "364",
+     "nr": "361",
      "text": "Verordnung (EG) Nr. 883/2004 des Europäischen Parlaments und des Rates vom 29. April 2004 zur Koordinierung der Systeme der sozialen Sicherheit (SR <b>0.831.109.268.1</b>).",
      "links": [
       {
        "label": "SR <b>0.831.109.268.1</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2012/323"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/3724"
       }
      ],
      "absatz": "1",
      "item": "a"
     },
     {
-     "nr": "365",
+     "nr": "362",
      "text": "Verordnung (EG) Nr. 987/2009 des Europäischen Parlaments und des Rates vom 16. September 2009 zur Festlegung der Modalitäten für die Durchführung der Verordnung (EG) Nr. 883/2004 über die Koordinierung der Systeme der sozialen Sicherheit (SR <b>0.831.109.268.11</b>).",
      "links": [
       {
        "label": "SR <b>0.831.109.268.11</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2012/356"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/3725"
       }
      ],
      "absatz": "1",
      "item": "b"
     },
     {
-     "nr": "366",
+     "nr": "363",
      "text": "Verordnung (EWG) Nr. 1408/71 des Rates vom 14. Juni 1971 zur Anwendung der Systeme der sozialen Sicherheit auf Arbeitnehmer und Selbstständige sowie deren Familienangehörige, die innerhalb der Gemeinschaft zu- und abwandern; in der jeweils gültigen Fassung des Freizügigkeitsabkommens (AS <b>2004</b> 121, <b>2008</b> 4219 4273, <b>2009</b> 4831) bzw. des revidierten EFTA-Übereinkommens.",
      "links": [
       {
@@ -9023,7 +8975,7 @@
      "item": "c"
     },
     {
-     "nr": "367",
+     "nr": "364",
      "text": "Verordnung (EWG) Nr. 574/72 des Rates vom 21. März 1972 über die Durchführung der Verordnung (EWG) Nr. 1408/71 zur Anwendung der Systeme der sozialen Sicherheit auf Arbeitnehmer und Selbstständige sowie deren Familienangehörige, die innerhalb der Gemeinschaft zu- und abwandern; in der jeweils gültigen Fassung des Freizügigkeitsabkommens (AS <b>2005</b> 3909, <b>2008</b> 4273, <b>2009</b> 621 4845) bzw. des revidierten EFTA-Übereinkommens.",
      "links": [
       {
@@ -9047,19 +8999,19 @@
      "item": "d"
     },
     {
-     "nr": "368",
+     "nr": "365",
      "text": "SR <b>0.632.31</b>",
      "links": [
       {
        "label": "SR <b>0.632.31</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1960/590_635_621"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/2314"
       }
      ],
      "absatz": "2",
      "item": null
     },
     {
-     "nr": "360",
+     "nr": "357",
      "text": "Eingefügt durch Ziff. I 7 des BG vom 8. Okt. 1999 zum Abk. zwischen der Schweizerischen Eidgenossenschaft einerseits und der EG sowie ihren Mitgliedstaaten andererseits über die Freizügigkeit (AS <b>2002</b> 701; BBl <b>1999</b> 6128). Fassung gemäss Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 1677; BBl <b>2000</b> 2637).",
      "links": [
       {
@@ -9084,7 +9036,7 @@
      "sektion": "Siebenter Teil: Internationale Koordination"
     },
     {
-     "nr": "361",
+     "nr": "358",
      "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5137; BBl <b>2018</b> 1607).",
      "links": [
       {
@@ -9114,24 +9066,24 @@
    ],
    "fussnoten": [
     {
-     "nr": "369",
+     "nr": "366",
      "text": "SR <b>0.142.112.681</b>",
      "links": [
       {
        "label": "SR <b>0.142.112.681</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2002/243"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/211"
       }
      ],
      "absatz": "1",
      "item": null
     },
     {
-     "nr": "370",
+     "nr": "367",
      "text": "SR <b>0.632.31</b>",
      "links": [
       {
        "label": "SR <b>0.632.31</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1960/590_635_621"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/2314"
       }
      ],
      "absatz": "2",
@@ -9151,24 +9103,24 @@
    ],
    "fussnoten": [
     {
-     "nr": "371",
+     "nr": "368",
      "text": "SR <b>0.142.112.681</b>",
      "links": [
       {
        "label": "SR <b>0.142.112.681</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2002/243"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/211"
       }
      ],
      "absatz": null,
      "item": "a"
     },
     {
-     "nr": "372",
+     "nr": "369",
      "text": "SR <b>0.632.31</b>",
      "links": [
       {
        "label": "SR <b>0.632.31</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1960/590_635_621"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/2314"
       }
      ],
      "absatz": null,
@@ -9199,7 +9151,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "373",
+     "nr": "370",
      "text": "Eingefügt durch Anhang Ziff. 4 des BG vom 21. Juni 2019, in Kraft seit 1. Jan. 2021 (AS <b>2020</b> 5137; BBl <b>2018</b> 1607).",
      "links": [
       {
@@ -9215,12 +9167,12 @@
      "item": null
     },
     {
-     "nr": "374",
+     "nr": "371",
      "text": "SR <b>830.1</b>",
      "links": [
       {
        "label": "SR <b>830.1</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2002/510"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9993"
       }
      ],
      "absatz": null,
@@ -9242,7 +9194,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "376",
+     "nr": "373",
      "text": "Aufgehoben durch Ziff. II 41 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Aug. 2008 (AS <b>2008</b> 3437; BBl <b>2007</b> 6121).",
      "links": [
       {
@@ -9273,7 +9225,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "378",
+     "nr": "375",
      "text": "Eingefügt durch Ziff. I 10 des BG vom 19. März 1999 über das Stabilisierungsprogramm 1998 (AS <b>1999</b> 2374; <i>BBl <b>1999</b> 4</i>). Aufgehoben durch Ziff. II 41 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Aug. 2008 (AS <b>2008</b> 3437; BBl <b>2007</b> 6121).",
      "links": [
       {

@@ -1,8 +1,9 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-11",
  "kopf": {
   "srNummer": "141.0",
   "titel": "Bundesgesetz über das Schweizer Bürgerrecht",
+  "erlassdatum": "vom 20. Juni 2014 (Stand am 1. September 2023)",
   "praeambel": [
    {
     "rolle": "autor",
@@ -368,7 +369,7 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2003/510"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -863,8 +864,12 @@
    "fussnoten": [
     {
      "nr": "6",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 3 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (<i>AS <b>2022</b> 491</i>; BBl <b>2017</b> 6941).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 3 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
+      {
+       "label": "AS <b>2022</b> 491",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
+      },
       {
        "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
@@ -1092,7 +1097,7 @@
     }
    ]
   },
-  "lvl_u1": {
+  "annex_u1": {
    "gliederung": [
     {
      "ebene": 1,

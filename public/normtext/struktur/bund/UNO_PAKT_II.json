@@ -1,8 +1,9 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-11",
  "kopf": {
   "srNummer": "0.103.2",
   "titel": "Internationaler Pakt über bürgerliche und politische Rechte",
+  "erlassdatum": "(Stand am 9. Mai 2022)",
   "praeambel": [
    {
     "rolle": "autor",
@@ -55,7 +56,7 @@
     "links": [
      {
       "label": "SR <b>0.120</b>",
-      "url": "https://fedlex.data.admin.ch/eli/cc/2003/160"
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/41"
      }
     ],
     "absatz": null,
@@ -268,7 +269,7 @@
      "links": [
       {
        "label": "SR <b>0.822.719.7</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1976/689_689_689"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/3622"
       }
      ],
      "absatz": null,
@@ -516,7 +517,7 @@
      "links": [
       {
        "label": "SR <b>0.193.501</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1948/1048_1037_1010"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/809"
       }
      ],
      "absatz": null,
@@ -565,42 +566,6 @@
     {
      "ebene": 1,
      "label": "Teil VI"
-    }
-   ],
-   "marginalie": []
-  },
-  "lvl_d4e67": {
-   "gliederung": [
-    {
-     "ebene": 1,
-     "label": "Anhänge"
-    }
-   ],
-   "marginalie": []
-  },
-  "lvl_d4e68": {
-   "gliederung": [
-    {
-     "ebene": 1,
-     "label": "Anhänge"
-    }
-   ],
-   "marginalie": []
-  },
-  "lvl_d4e69": {
-   "gliederung": [
-    {
-     "ebene": 1,
-     "label": "Anhänge"
-    }
-   ],
-   "marginalie": []
-  },
-  "lvl_d4e70": {
-   "gliederung": [
-    {
-     "ebene": 1,
-     "label": "Anhänge"
     }
    ],
    "marginalie": []

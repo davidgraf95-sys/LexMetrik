@@ -1,8 +1,9 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-11",
  "kopf": {
   "srNummer": "281.42",
-  "titel": "Verordnung des Bundesgerichts über die Zwangs­verwertung von Grundstücken",
+  "titel": "Verordnung des Bundesgerichts über die Zwangsverwertung von Grundstücken",
+  "erlassdatum": "vom 23. April 1920 (Stand am 1. Januar 2012)",
   "praeambel": [
    {
     "rolle": "autor",
@@ -39,7 +40,7 @@
     "links": [
      {
       "label": "SR <b>281.1</b>",
-      "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529/20200101"
+      "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
      }
     ],
     "absatz": null,
@@ -56,7 +57,7 @@
     }
    ],
    "marginalie": [
-    "A. Sachlicher Gel­tungsbereich"
+    "A. Sachlicher Geltungsbereich"
    ],
    "fussnoten": [
     {
@@ -77,10 +78,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -89,10 +90,10 @@
      "links": [
       {
        "label": "SR <b>281.41</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/39/55_55_57/20170101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/39/55_55_57"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -130,7 +131,7 @@
     }
    ],
    "marginalie": [
-    "C. Anmeldung für Eintragungen und Vormerkun­gen im Grund­buch",
+    "C. Anmeldung für Eintragungen und Vormerkungen im Grundbuch",
     "I. Zeitpunkt"
    ],
    "fussnoten": [
@@ -156,7 +157,7 @@
     }
    ],
    "marginalie": [
-    "C. Anmeldung für Eintragungen und Vormerkun­gen im Grund­buch",
+    "C. Anmeldung für Eintragungen und Vormerkungen im Grundbuch",
     "II. Zuständigkeit"
    ]
   },
@@ -168,8 +169,8 @@
     }
    ],
    "marginalie": [
-    "C. Anmeldung für Eintragungen und Vormerkun­gen im Grund­buch",
-    "III. Verkehr mit dem Grundbuch­amt"
+    "C. Anmeldung für Eintragungen und Vormerkungen im Grundbuch",
+    "III. Verkehr mit dem Grundbuchamt"
    ],
    "fussnoten": [
     {
@@ -354,7 +355,7 @@
       },
       {
        "label": "SR <b>783.01</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2012/586/20190101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2012/586"
       }
      ],
      "absatz": null,
@@ -370,8 +371,8 @@
     }
    ],
    "marginalie": [
-    "C. Anmeldung für Eintragungen und Vormerkun­gen im Grund­buch",
-    "IV. Verfügungs­beschrän­kung",
+    "C. Anmeldung für Eintragungen und Vormerkungen im Grundbuch",
+    "IV. Verfügungsbeschränkung",
     "1. Löschung"
    ],
    "fussnoten": [
@@ -457,8 +458,8 @@
     }
    ],
    "marginalie": [
-    "C. Anmeldung für Eintragungen und Vormerkun­gen im Grund­buch",
-    "IV. Verfügungs­beschrän­kung",
+    "C. Anmeldung für Eintragungen und Vormerkungen im Grundbuch",
+    "IV. Verfügungsbeschränkung",
     "2. Zuständigkeit"
    ],
    "fussnoten": [
@@ -492,7 +493,7 @@
     }
    ],
    "marginalie": [
-    "A. Umfang und Vollzug der Pfän­dung"
+    "A. Umfang und Vollzug der Pfändung"
    ]
   },
   "9": {
@@ -523,7 +524,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -544,7 +545,7 @@
     }
    ],
    "marginalie": [
-    "C. Nicht auf den Schuldner einge­tragene Grund­stücke"
+    "C. Nicht auf den Schuldner eingetragene Grundstücke"
    ],
    "fussnoten": [
     {
@@ -556,7 +557,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "1"
     },
     {
@@ -565,10 +566,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "1"
     },
     {
@@ -580,7 +581,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -602,7 +603,7 @@
    ],
    "marginalie": [
     "D. Bestandteile und Zugehör",
-    "I. Im allgemei­nen"
+    "I. Im allgemeinen"
    ],
    "fussnoten": [
     {
@@ -611,10 +612,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -626,7 +627,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     }
    ]
@@ -648,7 +649,7 @@
    ],
    "marginalie": [
     "D. Bestandteile und Zugehör",
-    "II. Gesonderte Pfändung der Zu­gehör"
+    "II. Gesonderte Pfändung der Zugehör"
    ]
   },
   "13": {
@@ -667,7 +668,7 @@
     }
    ],
    "marginalie": [
-    "E. Eigentümer­titel"
+    "E. Eigentümertitel"
    ],
    "fussnoten": [
     {
@@ -679,7 +680,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -693,7 +694,7 @@
      ],
      "absatz": null,
      "item": null,
-     "sektion": "E. Eigentümer­titel"
+     "sektion": "E. Eigentümertitel"
     }
    ]
   },
@@ -744,7 +745,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "a"
     },
     {
@@ -753,10 +754,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "a"
     },
     {
@@ -768,7 +769,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "b"
     },
     {
@@ -777,10 +778,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "b"
     },
     {
@@ -789,10 +790,10 @@
      "links": [
       {
        "label": "SR <b>221.229.1</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/719_735_717/20110101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/719_735_717"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "c"
     },
     {
@@ -801,10 +802,10 @@
      "links": [
       {
        "label": "SR <b>281.51</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/26/205_203_198/19970101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/26/205_203_198"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "c"
     },
     {
@@ -816,7 +817,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -837,7 +838,7 @@
     }
    ],
    "marginalie": [
-    "A. Im allgemei­nen. Dauer und Aus­übung"
+    "A. Im allgemeinen. Dauer und Ausübung"
    ],
    "fussnoten": [
     {
@@ -849,7 +850,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -871,7 +872,7 @@
    ],
    "marginalie": [
     "B. Umfang",
-    "I. Ordentliche Verwaltungs­mass­nahmen"
+    "I. Ordentliche Verwaltungsmassnahmen"
    ]
   },
   "18": {
@@ -891,7 +892,7 @@
    ],
    "marginalie": [
     "B. Umfang",
-    "II. Ausseror­dentli­che Verwal­tungs­massnahmen"
+    "II. Ausserordentliche Verwaltungsmassnahmen"
    ],
    "fussnoten": [
     {
@@ -900,10 +901,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -943,8 +944,8 @@
     }
    ],
    "marginalie": [
-    "D. Rechnungs­füh­rung",
-    "I. Verwaltungs­ko­sten"
+    "D. Rechnungsführung",
+    "I. Verwaltungskosten"
    ],
    "fussnoten": [
     {
@@ -956,7 +957,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -977,7 +978,7 @@
     }
    ],
    "marginalie": [
-    "D. Rechnungs­füh­rung",
+    "D. Rechnungsführung",
     "II. Einnahmen und Ausgaben"
    ]
   },
@@ -1009,7 +1010,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     }
    ]
@@ -1030,7 +1031,7 @@
     }
    ],
    "marginalie": [
-    "A. Inhalt der Pfän­dungsur­kunde, Schät­zung, Miet- und Pacht­zinse"
+    "A. Inhalt derPfändungsurkunde, Schätzung, Miet- und Pachtzinse"
    ],
    "fussnoten": [
     {
@@ -1051,10 +1052,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -1063,10 +1064,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -1110,7 +1111,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -1148,7 +1149,7 @@
     }
    ],
    "marginalie": [
-    "A. Verwertungs­frist"
+    "A. Verwertungsfrist"
    ],
    "fussnoten": [
     {
@@ -1160,7 +1161,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -1174,7 +1175,7 @@
      ],
      "absatz": null,
      "item": null,
-     "sektion": "A. Verwertungs­frist"
+     "sektion": "A. Verwertungsfrist"
     }
    ]
   },
@@ -1198,7 +1199,7 @@
     }
    ],
    "marginalie": [
-    "A. Verwertungs­frist"
+    "A. Verwertungsfrist"
    ],
    "fussnoten": [
     {
@@ -1258,7 +1259,7 @@
     }
    ],
    "marginalie": [
-    "C. Einforderung eines Grundbuch­auszu­ges"
+    "C. Einforderung eines Grundbuchauszuges"
    ]
   },
   "29": {
@@ -1281,8 +1282,8 @@
     }
    ],
    "marginalie": [
-    "D. Bekanntma­chung der Stei­ge­rung",
-    "I. Steigerungs­pu­blikation"
+    "D. Bekanntmachung der Steigerung",
+    "I. Steigerungspublikation"
    ],
    "fussnoten": [
     {
@@ -1294,7 +1295,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -1303,10 +1304,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     },
     {
@@ -1318,7 +1319,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     }
    ]
@@ -1343,8 +1344,8 @@
     }
    ],
    "marginalie": [
-    "D. Bekanntma­chung der Stei­ge­rung",
-    "II. Spezialanzei­gen"
+    "D. Bekanntmachung der Steigerung",
+    "II. Spezialanzeigen"
    ],
    "fussnoten": [
     {
@@ -1356,7 +1357,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -1365,10 +1366,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -1380,7 +1381,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -1389,10 +1390,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     },
     {
@@ -1404,7 +1405,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     }
    ]
@@ -1429,7 +1430,7 @@
     }
    ],
    "marginalie": [
-    "D. Bekanntma­chung der Stei­ge­rung",
+    "D. Bekanntmachung der Steigerung",
     "III. Im Falle der Einstellung der Steigerung"
    ]
   },
@@ -1453,7 +1454,7 @@
     }
    ],
    "marginalie": [
-    "E. Aufschubs­­bewilligung nach erfolgter Publika­tion"
+    "E. Aufschubsbewilligung nach erfolgter Publikation"
    ],
    "fussnoten": [
     {
@@ -1465,7 +1466,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -1514,7 +1515,7 @@
    ],
    "marginalie": [
     "B. Inhalt",
-    "I. Im allgemei­nen"
+    "I. Im allgemeinen"
    ],
    "fussnoten": [
     {
@@ -1526,7 +1527,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "b"
     }
    ]
@@ -1552,7 +1553,7 @@
    ],
    "marginalie": [
     "B. Inhalt",
-    "II. Leere Pfand­stellen und Eigentümer­titel"
+    "II. Leere Pfandstellen und Eigentümertitel"
    ],
    "fussnoten": [
     {
@@ -1561,10 +1562,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -1590,7 +1591,7 @@
    ],
    "marginalie": [
     "B. Inhalt",
-    "III. Von der Auf­nahme ausge­schlossene An­sprüche"
+    "III. Von der Aufnahme ausgeschlossene Ansprüche"
    ]
   },
   "37": {
@@ -1622,10 +1623,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -1637,7 +1638,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -1675,7 +1676,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -1701,7 +1702,7 @@
    ],
    "marginalie": [
     "D. Bereinigung",
-    "II. Parteirolle und Gerichts­stand im Prozess"
+    "II. Parteirolle und Gerichtsstand im Prozess"
    ],
    "fussnoten": [
     {
@@ -1739,7 +1740,7 @@
    ],
    "marginalie": [
     "D. Bereinigung",
-    "III. Ergänzung oder Berichti­gung durch die Auf­sichts­behörde"
+    "III. Ergänzung oder Berichtigung durch die Aufsichtsbehörde"
    ]
   },
   "41": {
@@ -1763,7 +1764,7 @@
    ],
    "marginalie": [
     "D. Bereinigung",
-    "III. Ergänzung oder Berichti­gung durch die Auf­sichts­behörde"
+    "III. Ergänzung oder Berichtigung durch die Aufsichtsbehörde"
    ],
    "fussnoten": [
     {
@@ -1801,7 +1802,7 @@
    ],
    "marginalie": [
     "D. Bereinigung",
-    "IV. Vom Schuld­ner aner­kannte, von einem Gläu­biger mit Erfolg be­strittene An­sprüche"
+    "IV. Vom Schuldner anerkannte, von einem Gläubiger mit Erfolg bestrittene Ansprüche"
    ],
    "fussnoten": [
     {
@@ -1815,7 +1816,7 @@
      ],
      "absatz": null,
      "item": null,
-     "sektion": "IV. Vom Schuld­ner aner­kannte, von einem Gläu­biger mit Erfolg be­strittene An­sprüche"
+     "sektion": "IV. Vom Schuldner anerkannte, von einem Gläubiger mit Erfolg bestrittene Ansprüche"
     }
    ]
   },
@@ -1840,7 +1841,7 @@
    ],
    "marginalie": [
     "D. Bereinigung",
-    "V. Anfechtung von Rang und Höhe. Ver­hält­nis zwischen Gläu-bi­gern einer Grup­pe"
+    "V. Anfechtung von Rang und Höhe. Verhältnis zwischen Gläu-bigern einer Gruppe"
    ],
    "fussnoten": [
     {
@@ -1854,7 +1855,7 @@
      ],
      "absatz": null,
      "item": null,
-     "sektion": "V. Anfechtung von Rang und Höhe. Ver­hält­nis zwischen Gläu-bi­gern einer Grup­pe"
+     "sektion": "V. Anfechtung von Rang und Höhe. Verhältnis zwischen Gläu-bigern einer Gruppe"
     }
    ]
   },
@@ -1902,7 +1903,7 @@
    ],
    "marginalie": [
     "A. Inhalt",
-    "I. Im allgemei­nen"
+    "I. Im allgemeinen"
    ],
    "fussnoten": [
     {
@@ -1914,7 +1915,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "a"
     }
    ]
@@ -1940,7 +1941,7 @@
    ],
    "marginalie": [
     "A. Inhalt",
-    "II. Barzahlung des Steigerungs­prei­ses",
+    "II. Barzahlung des Steigerungspreises",
     "1. effektiv"
    ],
    "fussnoten": [
@@ -1953,7 +1954,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -1979,8 +1980,8 @@
    ],
    "marginalie": [
     "A. Inhalt",
-    "II. Barzahlung des Steigerungs­prei­ses",
-    "2. auf andere Wei­se"
+    "II. Barzahlung des Steigerungspreises",
+    "2. auf andere Weise"
    ]
   },
   "48": {
@@ -2005,7 +2006,7 @@
    "marginalie": [
     "A. Inhalt",
     "III. Überbindung",
-    "1. auf Abrech­nung am Zu­schlagspreis"
+    "1. auf Abrechnung am Zuschlagspreis"
    ]
   },
   "49": {
@@ -2030,7 +2031,7 @@
    "marginalie": [
     "A. Inhalt",
     "III. Überbindung",
-    "2. ohne Abrech­nung am Zu­schlagspreis"
+    "2. ohne Abrechnung am Zuschlagspreis"
    ],
    "fussnoten": [
     {
@@ -2042,7 +2043,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -2054,7 +2055,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "a"
     },
     {
@@ -2063,10 +2064,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "b"
     },
     {
@@ -2078,7 +2079,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -2126,7 +2127,7 @@
      "links": [
       {
        "label": "SR <b>220</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
      "absatz": null,
@@ -2177,10 +2178,10 @@
      "links": [
       {
        "label": "SR <b>220</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -2228,7 +2229,7 @@
     }
    ],
    "marginalie": [
-    "A. Im allgemei­nen"
+    "A. Im allgemeinen"
    ],
    "fussnoten": [
     {
@@ -2240,7 +2241,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -2252,7 +2253,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -2277,8 +2278,8 @@
     }
    ],
    "marginalie": [
-    "B. Wenn ein Pfandgläubiger auf Pfändung be­treibt und",
-    "I. der Pfandgläu­biger die Ver­wer­tung ver­langt"
+    "B. Wenn ein Pfandgläubiger auf Pfändung betreibt und",
+    "I. der Pfandgläubiger die Verwertung verlangt"
    ],
    "fussnoten": [
     {
@@ -2290,7 +2291,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -2315,8 +2316,8 @@
     }
    ],
    "marginalie": [
-    "B. Wenn ein Pfandgläubiger auf Pfändung be­treibt und",
-    "II. ein anderer Gläubiger die Verwertung ver­langt"
+    "B. Wenn ein Pfandgläubiger auf Pfändung betreibt und",
+    "II. ein anderer Gläubiger die Verwertung verlangt"
    ],
    "fussnoten": [
     {
@@ -2354,7 +2355,7 @@
    ],
    "marginalie": [
     "A. Doppelaufruf",
-    "I. Im allgemei­nen"
+    "I. Im allgemeinen"
    ],
    "fussnoten": [
     {
@@ -2437,7 +2438,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     }
    ]
@@ -2487,7 +2488,7 @@
    ],
    "marginalie": [
     "B. Angebot",
-    "III. Ausruf der An­gebote und Zu­schlag"
+    "III. Ausruf der Angebote und Zuschlag"
    ]
   },
   "61": {
@@ -2510,7 +2511,7 @@
     }
    ],
    "marginalie": [
-    "C. Steigerung und Pro­tokoll"
+    "C. Steigerung und Protokoll"
    ],
    "fussnoten": [
     {
@@ -2547,7 +2548,7 @@
     }
    ],
    "marginalie": [
-    "D. Versicherte Zu­gehör"
+    "D. Versicherte Zugehör"
    ],
    "fussnoten": [
     {
@@ -2556,7 +2557,7 @@
      "links": [
       {
        "label": "SR <b>281.51</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/26/205_203_198/19970101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/26/205_203_198"
       }
      ],
      "absatz": null,
@@ -2584,7 +2585,7 @@
     }
    ],
    "marginalie": [
-    "E. Zahlungs- ver­zug des Ersteige­rers"
+    "E. Zahlungs-verzug des Ersteigerers"
    ],
    "fussnoten": [
     {
@@ -2596,7 +2597,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -2621,8 +2622,8 @@
     }
    ],
    "marginalie": [
-    "F. Neue Steige­rung",
-    "I. Bekanntma­chung"
+    "F. Neue Steigerung",
+    "I. Bekanntmachung"
    ],
    "fussnoten": [
     {
@@ -2659,8 +2660,8 @@
     }
    ],
    "marginalie": [
-    "F. Neue Steige­rung",
-    "II. Lastenver­zeichnis und Stei­gerungs­bedingungen"
+    "F. Neue Steigerung",
+    "II. Lastenverzeichnis und Steigerungsbedingungen"
    ],
    "fussnoten": [
     {
@@ -2672,7 +2673,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -2697,8 +2698,8 @@
     }
    ],
    "marginalie": [
-    "G. Vollzug des Zu­schlages",
-    "I. Anmeldung des Eigentums­über­gangs"
+    "G. Vollzug des Zuschlages",
+    "I. Anmeldung des Eigentumsübergangs"
    ],
    "fussnoten": [
     {
@@ -2710,7 +2711,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/667"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -2735,8 +2736,8 @@
     }
    ],
    "marginalie": [
-    "G. Vollzug des Zu­schlages",
-    "II. Person, die ein­zutragen ist"
+    "G. Vollzug des Zuschlages",
+    "II. Person, die einzutragen ist"
    ]
   },
   "68": {
@@ -2759,7 +2760,7 @@
     }
    ],
    "marginalie": [
-    "G. Vollzug des Zu­schlages",
+    "G. Vollzug des Zuschlages",
     "III. Löschungen im Grundbuch"
    ],
    "fussnoten": [
@@ -2769,10 +2770,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "a"
     }
    ]
@@ -2797,7 +2798,7 @@
     }
    ],
    "marginalie": [
-    "G. Vollzug des Zu­schlages",
+    "G. Vollzug des Zuschlages",
     "IV. Zu löschende Pfandtitel"
    ]
   },
@@ -2821,8 +2822,8 @@
     }
    ],
    "marginalie": [
-    "G. Vollzug des Zu­schlages",
-    "V. Anzeige an Mieter und Päch­ter"
+    "G. Vollzug des Zuschlages",
+    "V. Anzeige an Mieter und Pächter"
    ]
   },
   "71": {
@@ -2845,7 +2846,7 @@
     }
    ],
    "marginalie": [
-    "H. Ergebnislosig­keit der Steige­rung"
+    "H. Ergebnislosigkeit der Steigerung"
    ],
    "fussnoten": [
     {
@@ -2857,7 +2858,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -2866,10 +2867,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -2883,7 +2884,7 @@
      ],
      "absatz": null,
      "item": null,
-     "sektion": "H. Ergebnislosig­keit der Steige­rung"
+     "sektion": "H. Ergebnislosigkeit der Steigerung"
     }
    ]
   },
@@ -2907,7 +2908,7 @@
     }
    ],
    "marginalie": [
-    "J. Ausfallforde­rung"
+    "J. Ausfallforderung"
    ],
    "fussnoten": [
     {
@@ -2919,7 +2920,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -2928,10 +2929,10 @@
      "links": [
       {
        "label": "SR <b>220</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -2952,7 +2953,7 @@
     }
    ],
    "marginalie": [
-    "A. Grundbuch­aus­zug"
+    "A. Grundbuchauszug"
    ],
    "fussnoten": [
     {
@@ -3057,7 +3058,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/606_606_606"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -3069,7 +3070,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -3090,7 +3091,7 @@
     }
    ],
    "marginalie": [
-    "C. Mitteilungen und Fristanset­zungen"
+    "C. Mitteilungen und Fristansetzungen"
    ]
   },
   "77": {
@@ -3109,7 +3110,7 @@
     }
    ],
    "marginalie": [
-    "D. Aufschub­bewilligung. Ein­kassierte Gelder"
+    "D. Aufschubbewilligung. Einkassierte Gelder"
    ]
   },
   "78": {
@@ -3140,7 +3141,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -3185,7 +3186,7 @@
     }
    ],
    "marginalie": [
-    "B. Aufzulegende Akten­stücke"
+    "B. Aufzulegende Aktenstücke"
    ],
    "fussnoten": [
     {
@@ -3214,8 +3215,8 @@
     }
    ],
    "marginalie": [
-    "C. Verteilungs­grundsätze",
-    "I. Im allgemei­nen"
+    "C. Verteilungsgrundsätze",
+    "I. Im allgemeinen"
    ],
    "fussnoten": [
     {
@@ -3244,8 +3245,8 @@
     }
    ],
    "marginalie": [
-    "C. Verteilungs­grundsätze",
-    "II. Wenn ein Grundpfandgläu­biger auf Pfän­dung betreibt"
+    "C. Verteilungsgrundsätze",
+    "II. Wenn ein Grundpfandgläubiger auf Pfändung betreibt"
    ],
    "fussnoten": [
     {
@@ -3257,7 +3258,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -3274,8 +3275,8 @@
     }
    ],
    "marginalie": [
-    "C. Verteilungs­grundsätze",
-    "III. Früchte und Er­trägnisse"
+    "C. Verteilungsgrundsätze",
+    "III. Früchte und Erträgnisse"
    ],
    "fussnoten": [
     {
@@ -3284,7 +3285,7 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
      "absatz": null,
@@ -3328,7 +3329,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -3345,7 +3346,7 @@
     }
    ],
    "marginalie": [
-    "A. Rechtsvor­schlag"
+    "A. Rechtsvorschlag"
    ],
    "fussnoten": [
     {
@@ -3374,7 +3375,7 @@
     }
    ],
    "marginalie": [
-    "B. Unzulässig­keit"
+    "B. Unzulässigkeit"
    ],
    "fussnoten": [
     {
@@ -3383,7 +3384,7 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
      "absatz": null,
@@ -3395,7 +3396,7 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
      "absatz": null,
@@ -3415,8 +3416,8 @@
     }
    ],
    "marginalie": [
-    "C. Pfandgegen­stand",
-    "I. Subsidiäre Haf­tung"
+    "C. Pfandgegenstand",
+    "I. Subsidiäre Haftung"
    ]
   },
   "88": {
@@ -3431,8 +3432,8 @@
     }
    ],
    "marginalie": [
-    "C. Pfandgegen­stand",
-    "II. Eigentum eines Dritten. Familienwoh­nung",
+    "C. Pfandgegenstand",
+    "II. Eigentum eines Dritten. Familienwohnung",
     "1. Allgemeine Vorschriften"
    ],
    "fussnoten": [
@@ -3445,7 +3446,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -3454,10 +3455,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     },
     {
@@ -3469,7 +3470,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     },
     {
@@ -3481,7 +3482,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     },
     {
@@ -3495,7 +3496,7 @@
      ],
      "absatz": null,
      "item": null,
-     "sektion": "II. Eigentum eines Dritten. Familienwoh­nung"
+     "sektion": "II. Eigentum eines Dritten. Familienwohnung"
     }
    ]
   },
@@ -3511,9 +3512,9 @@
     }
    ],
    "marginalie": [
-    "C. Pfandgegen­stand",
-    "II. Eigentum eines Dritten. Familienwoh­nung",
-    "2. Konkurs des persönlich haf­ten­den Schuld­ners"
+    "C. Pfandgegenstand",
+    "II. Eigentum eines Dritten. Familienwohnung",
+    "2. Konkurs des persönlich haftenden Schuldners"
    ],
    "fussnoten": [
     {
@@ -3525,7 +3526,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -3537,7 +3538,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -3554,7 +3555,7 @@
     }
    ],
    "marginalie": [
-    "D. Fakultative Ver­fügungsbe­schränkung"
+    "D. Fakultative Verfügungsbeschränkung"
    ],
    "fussnoten": [
     {
@@ -3563,10 +3564,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -3578,7 +3579,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -3617,10 +3618,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -3638,7 +3639,7 @@
    ],
    "marginalie": [
     "E. Miet- und Pachtzinse",
-    "II. Anzeige an den Pfandeigen­tümer"
+    "II. Anzeige an den Pfandeigentümer"
    ],
    "fussnoten": [
     {
@@ -3659,10 +3660,10 @@
      "links": [
       {
        "label": "SR <b>311.0</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799/20200303"
+       "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -3674,7 +3675,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -3692,7 +3693,7 @@
    ],
    "marginalie": [
     "E. Miet- und Pachtzinse",
-    "III. Rechtsvor­schlag"
+    "III. Rechtsvorschlag"
    ],
    "fussnoten": [
     {
@@ -3716,7 +3717,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -3734,7 +3735,7 @@
    ],
    "marginalie": [
     "E. Miet- und Pachtzinse",
-    "IV. Pflichten des Amtes während der Zin­sensper­re"
+    "IV. Pflichten des Amtes während der Zinsensperre"
    ]
   },
   "95": {
@@ -3751,7 +3752,7 @@
    "marginalie": [
     "E. Miet- und Pachtzinse",
     "V. Verwendung der Zinse",
-    "1. Abschlagszah­lungen an Gläubi­ger"
+    "1. Abschlagszahlungen an Gläubiger"
    ],
    "fussnoten": [
     {
@@ -3763,7 +3764,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -3791,7 +3792,7 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
      "absatz": null,
@@ -3812,7 +3813,7 @@
    ],
    "marginalie": [
     "A. Vorverfahren",
-    "I. Obligatorische Verfügungsbe­schränkung"
+    "I. Obligatorische Verfügungsbeschränkung"
    ],
    "fussnoten": [
     {
@@ -3821,10 +3822,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -3836,7 +3837,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -3854,7 +3855,7 @@
    ],
    "marginalie": [
     "A. Vorverfahren",
-    "II. Berechnung der Verwer­tungs­fristen"
+    "II. Berechnung der Verwertungsfristen"
    ],
    "fussnoten": [
     {
@@ -3866,7 +3867,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -3875,10 +3876,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -3890,7 +3891,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -3902,7 +3903,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -3920,7 +3921,7 @@
    ],
    "marginalie": [
     "A. Vorverfahren",
-    "III. Grundbuch­aus­zug und Schätzung"
+    "III. Grundbuchauszug undSchätzung"
    ],
    "fussnoten": [
     {
@@ -3950,7 +3951,7 @@
    ],
    "marginalie": [
     "A. Vorverfahren",
-    "IV. Wenn sich nachträglich er­gibt, dass Pfand Drittei­gentum oder Familienei­gentum ist"
+    "IV. Wenn sich nachträglich ergibt, dass Pfand Dritteigentum oder Familieneigentum ist"
    ],
    "fussnoten": [
     {
@@ -3962,7 +3963,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -3976,7 +3977,7 @@
      ],
      "absatz": null,
      "item": null,
-     "sektion": "IV. Wenn sich nachträglich er­gibt, dass Pfand Drittei­gentum oder Familienei­gentum ist"
+     "sektion": "IV. Wenn sich nachträglich ergibt, dass Pfand Dritteigentum oder Familieneigentum ist"
     }
    ]
   },
@@ -4004,7 +4005,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -4022,7 +4023,7 @@
    ],
    "marginalie": [
     "C. Verwertung",
-    "I. Im allgemei­nen"
+    "I. Im allgemeinen"
    ],
    "fussnoten": [
     {
@@ -4052,8 +4053,8 @@
    ],
    "marginalie": [
     "C. Verwertung",
-    "II. Besondere Be­stimmungen",
-    "1. Bei Dritt­eigen­tum"
+    "II. Besondere Bestimmungen",
+    "1. Bei Dritteigentum"
    ],
    "fussnoten": [
     {
@@ -4083,7 +4084,7 @@
    ],
    "marginalie": [
     "C. Verwertung",
-    "II. Besondere Be­stimmungen",
+    "II. Besondere Bestimmungen",
     "2. Doppelaufruf"
    ],
    "fussnoten": [
@@ -4093,10 +4094,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -4108,7 +4109,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -4120,7 +4121,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -4138,7 +4139,7 @@
    ],
    "marginalie": [
     "C. Verwertung",
-    "II. Besondere Be­stimmungen",
+    "II. Besondere Bestimmungen",
     "3. Betreibender Gläubiger nach Art. 142a (126) SchKG"
    ],
    "fussnoten": [
@@ -4151,7 +4152,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -4182,8 +4183,8 @@
    ],
    "marginalie": [
     "C. Verwertung",
-    "II. Besondere Be­stimmungen",
-    "4. Bauhandwer­kerpfandrecht"
+    "II. Besondere Bestimmungen",
+    "4. Bauhandwerkerpfandrecht"
    ],
    "fussnoten": [
     {
@@ -4204,7 +4205,7 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
      "absatz": null,
@@ -4225,8 +4226,8 @@
    ],
    "marginalie": [
     "C. Verwertung",
-    "II. Besondere Be­stimmungen",
-    "5. Haftung meh­re­rer Grund­stücke"
+    "II. Besondere Bestimmungen",
+    "5. Haftung mehrerer Grundstücke"
    ],
    "fussnoten": [
     {
@@ -4235,10 +4236,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -4256,8 +4257,8 @@
    ],
    "marginalie": [
     "C. Verwertung",
-    "II. Besondere Be­stimmungen",
-    "6. Getrennt ver­pfändete Grund­stücke"
+    "II. Besondere Bestimmungen",
+    "6. Getrennt verpfändete Grundstücke"
    ],
    "fussnoten": [
     {
@@ -4269,7 +4270,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -4281,7 +4282,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
-     "absatz": null,
+     "absatz": "1bis",
      "item": null
     },
     {
@@ -4293,7 +4294,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -4311,8 +4312,8 @@
    ],
    "marginalie": [
     "C. Verwertung",
-    "II. Besondere Be­stimmungen",
-    "7. Gleichzeitige Pfändung des Un­terpfandes"
+    "II. Besondere Bestimmungen",
+    "7. Gleichzeitige Pfändung des Unterpfandes"
    ]
   },
   "110": {
@@ -4328,7 +4329,7 @@
    ],
    "marginalie": [
     "C. Verwertung",
-    "II. Besondere Be­stimmungen",
+    "II. Besondere Bestimmungen",
     "8. Anmeldung im Grundbuch"
    ]
   },
@@ -4345,8 +4346,8 @@
    ],
    "marginalie": [
     "C. Verwertung",
-    "II. Besondere Be­stimmungen",
-    "9. Ergebnislosig­keit der Ver­wer­tung"
+    "II. Besondere Bestimmungen",
+    "9. Ergebnislosigkeit derVerwertung"
    ]
   },
   "112": {
@@ -4361,7 +4362,7 @@
     }
    ],
    "marginalie": [
-    "A. Verteilungs­liste"
+    "A. Verteilungsliste"
    ],
    "fussnoten": [
     {
@@ -4390,7 +4391,7 @@
     }
    ],
    "marginalie": [
-    "B. Konkurrenz zwischen Pfän­dungs- und Pfandgläubi­gern"
+    "B. Konkurrenz zwischen Pfändungs- und Pfandgläubigern"
    ],
    "fussnoten": [
     {
@@ -4402,7 +4403,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -4414,7 +4415,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -4461,7 +4462,7 @@
     }
    ],
    "marginalie": [
-    "E. Dienstbar-keits- und Grundlastbe­rechtigte, deren Recht gelöscht worden ist"
+    "E. Dienstbar-keits- und Grundlastberechtigte, deren Recht gelöscht worden ist"
    ],
    "fussnoten": [
     {
@@ -4470,10 +4471,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -4485,7 +4486,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -4502,7 +4503,7 @@
     }
    ],
    "marginalie": [
-    "F. Bestreitung durch Bauhand­werker"
+    "F. Bestreitung durch Bauhandwerker"
    ],
    "fussnoten": [
     {
@@ -4511,10 +4512,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -4523,10 +4524,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -4543,7 +4544,7 @@
     }
    ],
    "marginalie": [
-    "G. Bei gesamt­hafter Verwer­tung ge­trennt verpfände­ter Grundstücke"
+    "G. Bei gesamthafter Verwertung getrennt verpfändeter Grundstücke"
    ]
   },
   "119": {
@@ -4558,7 +4559,7 @@
     }
    ],
    "marginalie": [
-    "H. Bei Verwer­tung soli­darisch ver­pfände­ter Grund­stücke"
+    "H. Bei Verwertung solidarisch verpfändeter Grundstücke"
    ]
   },
   "120": {
@@ -4573,8 +4574,8 @@
     }
    ],
    "marginalie": [
-    "J. Pfandausfall­schein",
-    "I. Im allgemei­nen"
+    "J. Pfandausfallschein",
+    "I. Im allgemeinen"
    ],
    "fussnoten": [
     {
@@ -4603,8 +4604,8 @@
     }
    ],
    "marginalie": [
-    "J. Pfandausfall­schein",
-    "II. In nach Be­stätigung des Nachlassvertra­ges durchgeführ­ter Verwertung"
+    "J. Pfandausfallschein",
+    "II. In nach Bestätigung des Nachlassvertrages durchgeführter Verwertung"
    ],
    "fussnoten": [
     {
@@ -4629,7 +4630,7 @@
     }
    ],
    "marginalie": [
-    "A. Verhältnis zur Verordnung über die Geschäfts­füh­rung der Kon­kurs­ämter"
+    "A. Verhältnis zur Verordnung über die Geschäftsführung der Konkursämter"
    ],
    "fussnoten": [
     {
@@ -4638,7 +4639,7 @@
      "links": [
       {
        "label": "SR <b>281.32</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/751_749_771/19970101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/27/751_749_771"
       }
      ],
      "absatz": null,
@@ -4654,8 +4655,8 @@
     }
    ],
    "marginalie": [
-    "B. Besondere Vor­schriften.",
-    "I. Anmeldung der Dienstbar­­kei­ten"
+    "B. Besondere Vorschriften.",
+    "I. Anmeldung der Dienstbarkeiten"
    ],
    "fussnoten": [
     {
@@ -4667,7 +4668,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -4679,7 +4680,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -4692,8 +4693,8 @@
     }
    ],
    "marginalie": [
-    "B. Besondere Vor­schriften.",
-    "II. Anzeige an Mieter und Päch­ter"
+    "B. Besondere Vorschriften.",
+    "II. Anzeige an Mieter und Pächter"
    ]
   },
   "125": {
@@ -4704,8 +4705,8 @@
     }
    ],
    "marginalie": [
-    "B. Besondere Vor­schriften.",
-    "III. Lasten­bereini­gung"
+    "B. Besondere Vorschriften.",
+    "III. Lastenbereinigung"
    ],
    "fussnoten": [
     {
@@ -4714,10 +4715,10 @@
      "links": [
       {
        "label": "SR <b>281.32</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/751_749_771/19970101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/27/751_749_771"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -4729,7 +4730,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -4742,8 +4743,8 @@
     }
    ],
    "marginalie": [
-    "B. Besondere Vor­schriften.",
-    "IV. Faustpfand­for­derungen, für welche Eigentü­mertitel haf­ten"
+    "B. Besondere Vorschriften.",
+    "IV. Faustpfandforderungen, für welche Eigentümertitel haften"
    ],
    "fussnoten": [
     {
@@ -4768,8 +4769,8 @@
     }
    ],
    "marginalie": [
-    "B. Besondere Vor­schriften.",
-    "V. Legitimation zur An­fech­tung der Lastenver­zeichnisse"
+    "B. Besondere Vorschriften.",
+    "V. Legitimation zur Anfechtung der Lastenverzeichnisse"
    ]
   },
   "128": {
@@ -4780,7 +4781,7 @@
     }
    ],
    "marginalie": [
-    "B. Besondere Vor­schriften.",
+    "B. Besondere Vorschriften.",
     "VI. Zeitpunkt der Verwertung"
    ],
    "fussnoten": [
@@ -4793,7 +4794,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -4802,10 +4803,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -4818,8 +4819,8 @@
     }
    ],
    "marginalie": [
-    "B. Besondere Vor­schriften.",
-    "VII. Spezial­anzei­ge"
+    "B. Besondere Vorschriften.",
+    "VII. Spezialanzeige"
    ],
    "fussnoten": [
     {
@@ -4828,10 +4829,10 @@
      "links": [
       {
        "label": "SR <b>281.32</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/751_749_771/19970101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/27/751_749_771"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -4843,7 +4844,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -4852,10 +4853,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -4867,7 +4868,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -4880,7 +4881,7 @@
     }
    ],
    "marginalie": [
-    "B. Besondere Vor­schriften.",
+    "B. Besondere Vorschriften.",
     "VIII. Steigerung"
    ],
    "fussnoten": [
@@ -4893,7 +4894,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -4905,7 +4906,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -4917,7 +4918,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1976/164_164_164"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -4930,8 +4931,8 @@
     }
    ],
    "marginalie": [
-    "B. Besondere Vor­schriften.",
-    "IX. Ausfallforde­rung"
+    "B. Besondere Vorschriften.",
+    "IX. Ausfallforderung"
    ]
   },
   "132": {
@@ -4942,34 +4943,8 @@
     }
    ],
    "marginalie": [
-    "B. Besondere Vor­schriften.",
+    "B. Besondere Vorschriften.",
     "X. Verteilung"
-   ]
-  },
-  "133": {
-   "gliederung": [
-    {
-     "ebene": 1,
-     "label": "C. Verwertung im Konkursverfahren"
-    }
-   ],
-   "marginalie": [
-    "B. Besondere Vor­schriften.",
-    "X. Verteilung"
-   ],
-   "fussnoten": [
-    {
-     "nr": "221",
-     "text": "Aufgehoben durch Ziff. I der V des BGer vom 5. Juni 1996 (AS <b>1996</b> 2900).",
-     "links": [
-      {
-       "label": "AS <b>1996</b> 2900",
-       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
-      }
-     ],
-     "absatz": null,
-     "item": null
-    }
    ]
   },
   "106_a": {
@@ -4985,8 +4960,8 @@
    ],
    "marginalie": [
     "C. Verwertung",
-    "II. Besondere Be­stimmungen",
-    "4a. Verwertung eines im Mitei­gen­tum ste­henden, als gan­zes verpfän­de­ten Grund­stücks"
+    "II. Besondere Bestimmungen",
+    "4a. Verwertung eines im Miteigentum stehenden, als ganzes verpfändeten Grundstücks"
    ],
    "fussnoten": [
     {
@@ -5011,10 +4986,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     },
     {
@@ -5026,7 +5001,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "5",
      "item": null
     }
    ]
@@ -5039,10 +5014,10 @@
     }
    ],
    "marginalie": [
-    "B. Besondere Vor­schriften.",
+    "B. Besondere Vorschriften.",
     "VIII. Steigerung",
-    "a. Besonderhei­ten der Verwer­tung eines Mitei­gen­tumsan­teils",
-    "1. Grundbuch-aus­zug. Anmel­dung von Dienst­barkei­ten"
+    "a. Besonderheiten der Verwertung eines Miteigentumsanteils",
+    "1. Grundbuch-auszug. Anmeldung von Dienstbarkeiten"
    ],
    "fussnoten": [
     {
@@ -5063,10 +5038,10 @@
      "links": [
       {
        "label": "SR <b>281.32</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/751_749_771/19970101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/27/751_749_771"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -5078,7 +5053,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -5087,10 +5062,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -5103,10 +5078,10 @@
     }
    ],
    "marginalie": [
-    "B. Besondere Vor­schriften.",
+    "B. Besondere Vorschriften.",
     "VIII. Steigerung",
-    "a. Besonderhei­ten der Verwer­tung eines Mitei­gen­tumsan­teils",
-    "2. Anzeigen. Ver­waltung"
+    "a. Besonderheiten der Verwertung eines Miteigentumsanteils",
+    "2. Anzeigen. Verwaltung"
    ],
    "fussnoten": [
     {
@@ -5131,10 +5106,10 @@
     }
    ],
    "marginalie": [
-    "B. Besondere Vor­schriften.",
+    "B. Besondere Vorschriften.",
     "VIII. Steigerung",
-    "a. Besonderhei­ten der Verwer­tung eines Mitei­gen­tumsan­teils",
-    "3. Lastenver­zeichnis. Kollo­ka­tionsplan"
+    "a. Besonderheiten der Verwertung eines Miteigentumsanteils",
+    "3. Lastenverzeichnis. Kollokationsplan"
    ],
    "fussnoten": [
     {
@@ -5155,10 +5130,10 @@
      "links": [
       {
        "label": "SR <b>281.32</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/751_749_771/19970101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/27/751_749_771"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -5170,7 +5145,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -5183,10 +5158,10 @@
     }
    ],
    "marginalie": [
-    "B. Besondere Vor­schriften.",
+    "B. Besondere Vorschriften.",
     "VIII. Steigerung",
-    "a. Besonderhei­ten der Verwer­tung eines Mitei­gen­tumsan­teils",
-    "4. Steigerungs­pu­blikation und Spe­zial­anzei­gen"
+    "a. Besonderheiten der Verwertung eines Miteigentumsanteils",
+    "4. Steigerungspublikation und Spezialanzeigen"
    ],
    "fussnoten": [
     {
@@ -5207,10 +5182,10 @@
      "links": [
       {
        "label": "SR <b>281.32</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/751_749_771/19970101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/27/751_749_771"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -5222,7 +5197,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -5236,7 +5211,7 @@
      ],
      "absatz": null,
      "item": null,
-     "sektion": "4. Steigerungs­pu­blikation und Spe­zial­anzei­gen"
+     "sektion": "4. Steigerungspublikation und Spezialanzeigen"
     }
    ]
   },
@@ -5248,9 +5223,9 @@
     }
    ],
    "marginalie": [
-    "B. Besondere Vor­schriften.",
+    "B. Besondere Vorschriften.",
     "VIII. Steigerung",
-    "a. Besonderhei­ten der Verwer­tung eines Mitei­gen­tumsan­teils",
+    "a. Besonderheiten der Verwertung eines Miteigentumsanteils",
     "5. Vorgehen bei Pfandbelastung des Grundstücks als solchem"
    ],
    "fussnoten": [
@@ -5276,10 +5251,10 @@
     }
    ],
    "marginalie": [
-    "B. Besondere Vor­schriften.",
+    "B. Besondere Vorschriften.",
     "VIII. Steigerung",
-    "a. Besonderhei­ten der Verwer­tung eines Mitei­gen­tumsan­teils",
-    "6. Steigerungs­be­dingungen"
+    "a. Besonderheiten der Verwertung eines Miteigentumsanteils",
+    "6. Steigerungsbedingungen"
    ],
    "fussnoten": [
     {
@@ -5300,7 +5275,7 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
      "absatz": null,
@@ -5316,10 +5291,10 @@
     }
    ],
    "marginalie": [
-    "B. Besondere Vor­schriften.",
+    "B. Besondere Vorschriften.",
     "VIII. Steigerung",
-    "a. Besonderhei­ten der Verwer­tung eines Mitei­gen­tumsan­teils",
-    "7. Vorbehalt der Grundpfandbe­trei­bung"
+    "a. Besonderheiten der Verwertung eines Miteigentumsanteils",
+    "7. Vorbehalt der Grundpfandbetreibung"
    ],
    "fussnoten": [
     {
@@ -5340,15 +5315,41 @@
      "links": [
       {
        "label": "SR <b>281.32</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/751_749_771/19970101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/27/751_749_771"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
      "nr": "220",
      "text": "Fassung gemäss Ziff. I der V des BGer vom 5. Juni 1996, in Kraft seit 1. Jan. 1997 (AS <b>1996</b> 2900).",
+     "links": [
+      {
+       "label": "AS <b>1996</b> 2900",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "133_134": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "C. Verwertung im Konkursverfahren"
+    }
+   ],
+   "marginalie": [
+    "B. Besondere Vorschriften.",
+    "X. Verteilung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "221",
+     "text": "Aufgehoben durch Ziff. I der V des BGer vom 5. Juni 1996 (AS <b>1996</b> 2900).",
      "links": [
       {
        "label": "AS <b>1996</b> 2900",
@@ -5397,7 +5398,7 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
      "absatz": null,
@@ -5409,7 +5410,7 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
      "absatz": null,
@@ -5433,7 +5434,7 @@
     }
    ],
    "marginalie": [
-    "C. Bestreitung des Miteigentums oder des Quoten­verhältnis­ses"
+    "C. Bestreitung des Miteigentums oder des Quotenverhältnisses"
    ],
    "fussnoten": [
     {
@@ -5457,7 +5458,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -5549,7 +5550,7 @@
    ],
    "marginalie": [
     "B. Angebot",
-    "IV. Ausübung ge­setzlicher Vor­kaufsrechte"
+    "IV. Ausübung gesetzlicher Vorkaufsrechte"
    ],
    "fussnoten": [
     {
@@ -5574,10 +5575,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -5598,7 +5599,7 @@
     }
    ],
    "marginalie": [
-    "B. Bekann­tmachung der Steigerung; An­meldung von Rechts­an­sprü­chen",
+    "B. Bekanntmachung der Steigerung; Anmeldung von Rechtsansprüchen",
     "I. Publikation"
    ],
    "fussnoten": [
@@ -5632,8 +5633,8 @@
     }
    ],
    "marginalie": [
-    "B. Bekann­tmachung der Steigerung; An­meldung von Rechts­an­sprü­chen",
-    "II. Spezialanzei­gen"
+    "B. Bekanntmachung der Steigerung; Anmeldung von Rechtsansprüchen",
+    "II. Spezialanzeigen"
    ],
    "fussnoten": [
     {
@@ -5666,7 +5667,7 @@
     }
    ],
    "marginalie": [
-    "C. Lastenver­zeichnis",
+    "C. Lastenverzeichnis",
     "I. Inhalt"
    ],
    "fussnoten": [
@@ -5700,7 +5701,7 @@
     }
    ],
    "marginalie": [
-    "C. Lastenver­zeichnis",
+    "C. Lastenverzeichnis",
     "II. Mitteilung"
    ],
    "fussnoten": [
@@ -5735,7 +5736,7 @@
    ],
    "marginalie": [
     "D. Vorgehen bei Pfandbelastung des Grundstücks als solchem.",
-    "I. Einigungsver­handlungen"
+    "I. Einigungsverhandlungen"
    ],
    "fussnoten": [
     {
@@ -5759,7 +5760,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2900_2900_2900"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -5768,10 +5769,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -5826,7 +5827,7 @@
     }
    ],
    "marginalie": [
-    "E. Steigerungs­be­dingungen"
+    "E. Steigerungsbedingungen"
    ],
    "fussnoten": [
     {
@@ -5847,10 +5848,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -5859,10 +5860,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -5883,7 +5884,7 @@
     }
    ],
    "marginalie": [
-    "F. Zuschlags­preis"
+    "F. Zuschlagspreis"
    ],
    "fussnoten": [
     {
@@ -5916,7 +5917,7 @@
     }
    ],
    "marginalie": [
-    "G. Entsprechend an­wendbare Be­stimmungen"
+    "G. Entsprechend anwendbare Bestimmungen"
    ],
    "fussnoten": [
     {
@@ -5968,10 +5969,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -6001,7 +6002,7 @@
     }
    ],
    "marginalie": [
-    "E. Verteilung des Erlöses aus ei­nem Miteigen­tumsan­teil"
+    "E. Verteilung des Erlöses aus einem Miteigentumsanteil"
    ],
    "fussnoten": [
     {
@@ -6018,7 +6019,7 @@
     }
    ]
   },
-  "disp_1_art_135": {
+  "disp_u1_art_135": {
    "gliederung": [
     {
      "ebene": 1,
@@ -6031,12 +6032,12 @@
      "nr": "222",
      "text": "Gegenstandslose UeB.",
      "links": [],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
   },
-  "disp_1_art_136": {
+  "disp_u1_art_136": {
    "gliederung": [
     {
      "ebene": 1,
@@ -6049,7 +6050,7 @@
      "nr": "223",
      "text": "[<i>AS <b>33</b> 113</i>]",
      "links": [],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -6058,10 +6059,10 @@
      "links": [
       {
        "label": "SR <b>281.32</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/751_749_771/19970101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/27/751_749_771"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]

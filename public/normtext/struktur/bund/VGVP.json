@@ -1,8 +1,9 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-11",
  "kopf": {
   "srNummer": "814.621",
   "titel": "Verordnung über Getränkeverpackungen",
+  "erlassdatum": "vom 5. Juli 2000 (Stand am 1. Januar 2022)",
   "praeambel": [
    {
     "rolle": "autor",
@@ -24,8 +25,13 @@
   "fussnoten": [
    {
     "nr": "1",
-    "text": "<i>SR <b>814.01</b></i>",
-    "links": [],
+    "text": "SR <b>814.01</b>",
+    "links": [
+     {
+      "label": "SR <b>814.01</b>",
+      "url": "https://fedlex.data.admin.ch/eli/cc/1984/1122_1122_1122"
+     }
+    ],
     "absatz": null,
     "item": null
    },
@@ -35,7 +41,7 @@
     "links": [
      {
       "label": "SR <b>946.51</b>",
-      "url": "https://fedlex.data.admin.ch/eli/cc/1996/1725_1725_1725/20170501"
+      "url": "https://fedlex.data.admin.ch/eli/cc/1996/1725_1725_1725"
      }
     ],
     "absatz": null,
@@ -145,14 +151,14 @@
    "fussnoten": [
     {
      "nr": "3",
-     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 16 Abs. 3 der Publikations­verordnung vom 17. Nov. 2004 (SR <b>170.512.1</b>) angepasst. Diese Anpassung wurde im ganzen Text vorgenommen.",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 16 Abs. 3 der Publikationsverordnung vom 17. November 2004 (SR <b>170.512.1</b>) angepasst. Diese Anpassung wurde im ganzen Text vorgenommen.",
      "links": [
       {
        "label": "SR <b>170.512.1</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2015/670/20180101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2015/670"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -181,14 +187,18 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 20 Abs. 2 der Publikationsverordnung vom 7. Okt. 2015 (SR <b>170.512.1</b>) auf den 1. Jan. 2022 angepasst (<i>AS <b>2021</b> 589</i>). Diese Anpassung wurde im ganzen Text vorgenommen.",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 20 Abs. 2 der Publikationsverordnung vom 7. Oktober 2015 (SR <b>170.512.1</b>) auf den 1. Januar 2022 angepasst (AS <b>2021</b> 589). Diese Anpassung wurde im ganzen Text vorgenommen.",
      "links": [
       {
        "label": "SR <b>170.512.1</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2015/670/20180101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2015/670"
+      },
+      {
+       "label": "AS <b>2021</b> 589",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/589"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -202,6 +212,20 @@
    ],
    "marginalie": [
     "Verwendung der Gebühr"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "Eingefügt durch Anhang Ziff. II 1 der V vom 20. Oktober 2021 über die Rückgabe, die Rücknahme und die Entsorgung elektrischer und elektronischer Geräte, in Kraft seit 1. Januar 2022 (AS <b>2021</b> 633).",
+     "links": [
+      {
+       "label": "AS <b>2021</b> 633",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/633"
+      }
+     ],
+     "absatz": null,
+     "item": "g"
+    }
    ]
   },
   "13": {
@@ -235,6 +259,20 @@
    ],
    "marginalie": [
     "Organisation"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Fassung gemäss Anhang Ziff. II 1 der V vom 20. Oktober 2021 über die Rückgabe, die Rücknahme und die Entsorgung elektrischer und elektronischer Geräte, in Kraft seit 1. Januar 2022 (AS <b>2021</b> 633).",
+     "links": [
+      {
+       "label": "AS <b>2021</b> 633",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/633"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
    ]
   },
   "16": {
@@ -260,8 +298,8 @@
    ],
    "fussnoten": [
     {
-     "nr": "5",
-     "text": "Fassung gemäss Ziff. II 80 der V vom 8. Nov. 2006 über die Anpassung von Bundesratsverordnungen an die Totalrevision der Bundesrechtspflege, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 4705).",
+     "nr": "7",
+     "text": "Fassung gemäss Ziff. II 80 der V vom 8. November 2006 über die Anpassung von Bundesratsverordnungen an die Totalrevision der Bundesrechtspflege, in Kraft seit 1. Januar 2007 (AS <b>2006</b> 4705).",
      "links": [
       {
        "label": "AS <b>2006</b> 4705",
@@ -272,15 +310,15 @@
      "item": null
     },
     {
-     "nr": "6",
-     "text": "Aufgehoben durch Ziff. II 80 der V vom 8. Nov. 2006 über die Anpassung von Bundesratsverordnungen an die Totalrevision der Bundesrechtspflege, mit Wirkung seit 1. Jan. 2007 (AS <b>2006</b> 4705).",
+     "nr": "8",
+     "text": "Aufgehoben durch Ziff. II 80 der V vom 8. November 2006 über die Anpassung von Bundesratsverordnungen an die Totalrevision der Bundesrechtspflege, mit Wirkung seit 1. Januar 2007 (AS <b>2006</b> 4705).",
      "links": [
       {
        "label": "AS <b>2006</b> 4705",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/725"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -341,7 +379,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "7",
+     "nr": "9",
      "text": "[AS <b>1990</b> 1480; <b>1995</b> 5505; <b>1998</b> 832]",
      "links": [
       {
@@ -357,19 +395,19 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1998/832_832_832"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "8",
-     "text": "Aufgehoben durch Ziff. IV 33 der V vom 22. Aug. 2007 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Jan. 2008 (AS <b>2007 </b>4477).",
+     "nr": "10",
+     "text": "Aufgehoben durch Ziff. IV 33 der V vom 22. Aug. 2007 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Januar 2008 (AS <b>2007 </b>4477).",
      "links": [
       {
        "label": "AS <b>2007 </b>4477",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/633"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -386,15 +424,15 @@
    ],
    "fussnoten": [
     {
-     "nr": "9",
-     "text": "Gemäss Art. 2 der V über die Höhe der vorgezogenen Entsorgungsgebühr für Getränkeverpackungen aus Glas vom 7. Sept. 2001, in Kraft seit 1. Jan. 2002 (SR <b>814.621.4</b>).",
+     "nr": "11",
+     "text": "Gemäss Art. 2 der V über die Höhe der vorgezogenen Entsorgungsgebühr für Getränkeverpackungen aus Glas vom 7. September 2001, in Kraft seit 1. Januar 2002 (SR <b>814.621.4</b>).",
      "links": [
       {
        "label": "SR <b>814.621.4</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2001/359/20020101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2001/359"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]

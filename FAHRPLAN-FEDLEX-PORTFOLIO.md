@@ -112,7 +112,33 @@ Wiederverwenden statt neu bauen (§1 CLAUDE.md: lieber Duplikat behalten als fal
 
 ## Paket 1 — Gesetze-Currency & Coverage (P0)
 
-> **✅ P1-a + P1-b AUSGEFÜHRT 5.7.2026 (Opus-Bau-Session; Branch `feat/fedlex-p1-ab`; Trailer `Roadmap: QS-CURRENCY`). PAKET 1 DAMIT KOMPLETT.**
+> **✅ P1-a/b PIN-KANONIK GEBAUT 11.7.2026 (Opus-Bau-Session; Branch `fix/fedlex-p1ab-pin-kanonik`; Trailer `Roadmap: W2·6`). QUERSCHNITTS-WURZEL GESCHLOSSEN.**
+> Die noch offene P1-a/b-Wurzel (FAHRPLAN-GESETZESDARSTELLUNG-V2 §Querschnitts-Wurzel):
+> `fedlex-cache.sh` dockte bei **166/227** Pins an die nicht-kanonische **Alias-URL**
+> (`…-de-html.html`, html-N-Feld 0) an → Alt-Generations-Dumps + Soft-404-Casemates-
+> Shells; die 1–5-Fallback-Heuristik konnte die echten kanonischen N (kov/ssv/
+> kkv_finma=14, chemrrv=26, finma_gebv=17, mwstv=11) nie erreichen. **Fix:** jedes
+> html-N ist jetzt die registrierte `isExemplifiedBy`-Manifestation — aufgelöst von
+> `scripts/fedlex-manifest.ts` (`loeseHtmlManifeste`/`nAusUrl`), angewandt von
+> `fedlex-repin-kanonik.ts`, dauerhaft bewacht vom neuen **Kanonik-Arbiter** in
+> `check:fedlex-versionen` (html-N ≠ isExemplifiedBy ⇒ Exit 1; negativ-getestet).
+> **Datenlauf:** 104 Snapshots + 130 Struktur-Sidecars aus der kanonischen Fassung
+> regeneriert (reine Datum-Churn zurückgesetzt), register.artikelAnzahl + artikel-
+> revisionen-Shards + Bilder (4 verwaiste weg, GBV-Dangling-Ref geheilt) nachgezogen.
+> **KEIN Parser-Eingriff** → jeder Text-Diff ist AMTLICH (Quelle alias→kanonisch):
+> 10 Erlasse +Artikel (Soft-404-Heilung), 85 nur FN/Text-Drift, 9 nur −`lvl_`-Struktur
+> (kein `art_`-Verlust). Musterheilung OR (Kronjuwel, html-4→html-12): Alias-Dump
+> trug «Mietzinse die künftig fällig werden» ohne Kommata + «2 e 3»-Leak — kanonisch
+> korrekt. **Härtung (b):** cache.sh Casemates-Shell- + Anker-Count-Sonde; `struktur-
+> run` «0 übersprungen»-Pflichtkontrolle (fehlender Cache = harter Fehler statt still).
+> 23 neue `[tab]`-Marker-Artefakte (Anhang-Inhalt) ins Expected-Fail-Register triagiert
+> (Text je erhalten, Sanierung = P5). Neue `[tab]`-`<p>`-Klasse `man-space-before-0`
+> (leerer Spacer) entschieden. Voller `npm run gate` grün; engine golden byte-gleich.
+> **Gegenprüfung bestanden** (unabh. Opus-Zweitdurchgang, 5 Stichproben live gegen
+> Fedlex: OR/UNO_PAKT_II/GFK/LUGUE/DBG — kein Norm-Verlust, DBG-Beträge exakt).
+> Beleg: `bibliothek/register/fedlex-pin-kanonik-2026-07-11.md`.
+>
+> **✅ P1-a + P1-b (Currency-Datenlauf) AUSGEFÜHRT 5.7.2026 (Branch `feat/fedlex-p1-ab`; Trailer `Roadmap: QS-CURRENCY`).**
 > **P1-b (Monitoring dicht, zuerst):** Regex-Fix `fedlex-pins.ts` `[a-z_]+`→`[a-z0-9_]+` (die 11 Ziffern-Namen-Pins
 > asylv1/2/3, argv1..5, bvv_2, bvv3, co2_gesetz waren parser-blind → jetzt 207→218 überwacht) + Parser-Selbsttest
 > `src/tests/fedlex-pins.test.ts` (geparste Pins == cache.sh-Datenzeilen, Gegen-Regex). **Coverage-Assertion** in
