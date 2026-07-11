@@ -1356,15 +1356,15 @@ Barrel, berechnungen.ts, CLS-Härtung), nicht dagegen. Reine Darstellung/Interak
   - **Bund:** Fedlex-`jolux:isExemplifiedBy` der pdf-a-Manifestation der Konsolidierung
     mit `dateApplicability` == gepinnte Fassung. Die **EXAKTE** Filestore-URL wird
     gelesen, nicht konstruiert — der Revisions-Suffix variiert real: (none)·-1·-2·-3·
-    -4·-5·-12 (Verteilung 102/68/23/9/11/4/1 über 218 Erlasse). **Suffix-Falle `-2`
-    (P1-a/b) damit gegenstandslos**: eine suffixlose Konstruktion hätte für 116/218
-    die ÄLTERE Datei geladen (HTTP 200, kein 404). **218/218 Bund** aufgelöst.
+    -4·-5·-12 (Verteilung 109/69/24/9/11/4/1 über 227 Erlasse). **Suffix-Falle `-2`
+    (P1-a/b) damit gegenstandslos**: eine suffixlose Konstruktion hätte für 118/227
+    die ÄLTERE Datei geladen (HTTP 200, kein 404). **227/227 Bund** aufgelöst (inkl. 9 P4-Staatsverträge nach additivem Rebase).
   - **Kanton:** LexWork `selected_version.pdf_link_tol`, nur bei Versions-Gleichstand
     (In-Kraft-Datum == snapshot.stand, sonst Drift ⇒ weglassen, §8). **1184/1231**
     (47 ehrlich ohne Aktion; 0 Netz-Fehler).
   - **Staatsvertrag/pdf-embed:** bestehendes self-hosted PDF (EMRK `-2` kanonisch,
     NYÜ suffixlos), nur ehrlich beschriftet.
-- **Abdeckung:** **1402 Erlasse** mit amtlichem PDF (218 Bund + 1184 Kanton) +
+- **Abdeckung:** **1411 Erlasse** mit amtlichem PDF (227 Bund + 1184 Kanton) +
   2 Staatsverträge; ehrlich ohne Aktion: 47 Kanton (Drift/kein PDF).
 - **Beschriftung (§8):** eine Komponente `parts/AmtlichesPdf.tsx` — «⬇ Amtliches PDF
   (Fassung vom TT.MM.JJJJ)», `<a>` (Bund/Kanton neuer Tab; pdf-embed same-origin
@@ -1384,11 +1384,17 @@ Barrel, berechnungen.ts, CLS-Härtung), nicht dagegen. Reine Darstellung/Interak
 - **A9-DoD:** e2e `gesetze-pdf-download` (Bund Fedlex-Filestore-Ziel + ehrliche
   «Fassung vom …» + `target=_blank` + aria + Tastaturfokus; Kanton LexWork-Ziel);
   `check:perf-budget` grün (CLS 0 — pdfUrl am Erlass, keine neue Async-Klasse).
-- **Tore:** voller `npm run gate` GRÜN (tsc · vitest inkl. neuer `pdf-quellen.test.ts` ·
-  golden:vergleich IDENTISCH · lint · 26er-`check`-Kette inkl. `check:pdf-quellen`,
-  `check:paritaet`, `check:gegenpruefung`). **Golden-Klasse: Engine-Golden byte-gleich**
-  (kein `src/lib/vorlagen|tarif`-Eingriff); **register.json + daten-manifest additiv-
-  ändernd** (neues Feld `pdfUrl/pdfStand`, `datenhaltung:manifest` nachgezogen).
+- **Tore:** tsc · vitest (inkl. neuer `pdf-quellen.test.ts`) · golden:vergleich
+  IDENTISCH · lint · build · e2e `gesetze-pdf-download` grün; `check:pdf-quellen`/
+  `check:paritaet`/`check:gegenpruefung` grün. **Alle CI-gated Stufen grün** (CI-`ci.yml`
+  fährt tsc/test/lint/build/golden/smoke/e2e/perf — NICHT die volle `check`-Kette).
+  **EINZIGES lokales Rot: der VORBESTEHENDE `check:revisionen`** — der P4-Merge (#186,
+  9 Staatsverträge) fügte 9 Bund-Snapshots OHNE Paket-5-Revisionen-Sidecar hinzu ⇒
+  auf `origin/main` bereits rot (227 Bund vs. 218 Sidecars), **nicht dieser Diff, nicht
+  CI-gated**; heilbar nur durch eine eigene Paket-5-Reconciliation (`normtext:revisionen`,
+  Risiko-Pfad — bewusst NICHT in U-PDF gebündelt, §14.2). **Golden-Klasse: Engine-Golden
+  byte-gleich** (kein `src/lib/vorlagen|tarif`-Eingriff); **register.json + daten-manifest
+  additiv-ändernd** (neues Feld `pdfUrl/pdfStand`, `datenhaltung:manifest` nachgezogen).
 - **Bewusst NICHT (U-PDF-Scope):** kein render-eigenes PDF (§10.5) · keine Client-
   SPARQL · keine Kopf-Slot-Umlayoutierung (A22-K-1/K-2 «in Kraft seit» + Fussnoten-
   Chip bleiben dem koordinierten V2-Kopf-PR, §10.8 A22 — U-PDF liefert nur den
