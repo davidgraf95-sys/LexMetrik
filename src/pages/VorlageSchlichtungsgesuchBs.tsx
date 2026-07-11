@@ -572,7 +572,7 @@ export function VorlageSchlichtungsgesuchBs() {
 
   return (
     <VorlagenWizardRahmen
-      zurueckHref="/"
+      zurueckHref="/vorlagen"
       overline={`${card?.rechtsgebiet ?? 'Zivilprozess (ZPO)'} · Vorlage · Basel-Stadt`}
       titel="Schlichtungsgesuch (Basel-Stadt)"
       intro="Stellt ein Schlichtungsgesuch nach Art. 202 ZPO für die Basler Schlichtungsbehörde zusammen – Parteien, Rechtsbegehren, Streitgegenstand, Anträge und Beilagen, aus festen Bausteinen ohne Sprachmodell."

@@ -506,7 +506,7 @@ export function VorlageAgGruendung() {
 
   return (
     <VorlagenWizardRahmen
-      zurueckHref="/"
+      zurueckHref="/vorlagen"
       overline="Gesellschaftsrecht · Vorlage"
       titel="AG-Gründungsunterlagen"
       intro={

@@ -25,14 +25,18 @@ export function RechnerKopf({ calc, titelOverride, kategorieOverride, kurzbeschr
       {/* EINE Navigationszeile statt zwei (Design-Review 6.6.2026): der
           sichtbare Rückweg (Pfeil → Startseite) und die Breadcrumb
           (Katalog / Titel) teilen sich eine Zeile — gleiche Ziele, halber Platz. */}
+      {/* W2·10-UI-NAV/N0a: beide Rückwege zeigten auf «/» (Startseite), obwohl
+          «Übersicht»/«Katalog» die Rechner-Übersicht versprechen — Ziel auf
+          /rechner korrigiert, Label ans Ziel angeglichen («Alle Rechner»/
+          «Rechner»), Crumb-Tap-Höhe ≥24 px (py-1). */}
       <nav className="flex items-center gap-3 min-w-0">
-        <Link to="/" className="inline-flex items-center gap-2 no-underline text-body-s font-medium text-brass-700 hover:text-brass-600 shrink-0">
+        <Link to="/rechner" className="inline-flex items-center gap-2 no-underline text-body-s font-medium text-brass-700 hover:text-brass-600 shrink-0">
           <span aria-hidden className="inline-flex items-center justify-center w-7 h-7 rounded-full border border-line bg-surface">←</span>
-          Übersicht
+          Alle Rechner
         </Link>
         <span aria-hidden className="h-4 w-px bg-line-strong shrink-0" />
         <span className="lc-overline lc-overline-soft text-ink-500 truncate">
-          <Link to="/" className="no-underline text-ink-500 hover:text-ink-600">Katalog</Link>
+          <Link to="/rechner" className="inline-block py-1 no-underline text-ink-500 hover:text-ink-600">Rechner</Link>
           <span className="mx-1.5">/</span>
           <span className="text-ink-500">{titel}</span>
         </span>
