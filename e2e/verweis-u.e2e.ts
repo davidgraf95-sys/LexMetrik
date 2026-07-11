@@ -87,6 +87,53 @@ test.describe('A11 — Verweise in Präambel/Ingress', () => {
   });
 });
 
+// ─── V2·FN-3 — Präambel-Fussnoten inline (A20, David 10.7.2026) ──────────────
+// Auf dem A11-NormText-Unterbau: die Ingress-/Präambel-Zeilen tragen jetzt den
+// FnRef-Marker (data-fn-marker, `artikel="kopf"`) HINTER dem Zeilentext; der
+// Kopf-Apparat trägt den Sprunganker `#fn-kopf-${nr}`. Wirkt für OR sofort, für
+// VZG (Alt-Form) nach FN-1. VRK als Kurz-Ingress-Testfall. Daten additiv aus
+// FN-1/FN-2 (fnNrs je Zeile + numerierter Kopf-Apparat), reine Darstellung.
+test.describe('FN-3 — Präambel-Fussnoten inline (Marker + Kopf-Apparat-Anker)', () => {
+  for (const { key, nr, apparatText } of [
+    { key: 'OR', nr: '1', apparatText: /BBl/ },      // Kronjuwel, Ingress-Note 1
+    { key: 'VZG', nr: '2', apparatText: /SR/ },       // Alt-Form (nach FN-1), Note 2
+    { key: 'VRK', nr: '2', apparatText: /SR/ },       // Staatsvertrags-Kurz-Ingress
+  ]) {
+    test(`${key}-Ingress: Marker ${nr} verlinkt auf Kopf-Apparat #fn-kopf-${nr}`, async ({ page }) => {
+      const fehler = fehlerSammeln(page);
+      await page.goto(`/gesetze/bund/${key}`);
+      const ingress = page.locator('section[aria-label="Ingress"]');
+      await expect(ingress).toBeVisible({ timeout: 15_000 });
+      // (1) Marker sitzt in einer Präambel-Zeile (data-fn-marker), nicht im Apparat.
+      const marker = ingress.locator(`[data-fn-marker] button[aria-label="Fussnote ${nr}"]`);
+      await expect(marker.first()).toBeVisible({ timeout: 10_000 });
+      // (2) Sprunganker existiert am Kopf-Apparat mit dem passenden Text.
+      const anker = ingress.locator(`#fn-kopf-${nr}`);
+      await expect(anker).toHaveCount(1);
+      await expect(anker).toHaveText(apparatText);
+      // (3) Klick öffnet das Popover DIREKT an der Stelle (aus #fn-kopf-nr gespeist).
+      await marker.first().click();
+      const popover = page.locator('[role="note"]');
+      await expect(popover.first()).toBeVisible({ timeout: 5_000 });
+      await expect(popover.first()).toHaveText(apparatText);
+      expect(fehler).toEqual([]);
+    });
+  }
+
+  test('R9/§8: Marker folgt dem Fussnoten-Toggle (Substanz bleibt im DOM)', async ({ page }) => {
+    const fehler = fehlerSammeln(page);
+    await page.goto('/gesetze/bund/OR');
+    const ingress = page.locator('section[aria-label="Ingress"]');
+    await expect(ingress).toBeVisible({ timeout: 15_000 });
+    // Marker UND Apparat-Anker liegen IMMER im DOM (data-fn-marker/-apparat) —
+    // die Prominenz steuert allein der data-fussnoten-CSS-Toggle (nie display:none
+    // am Substanz-Träger). Ctrl+F/Print/Screenreader bleiben vollständig.
+    await expect(ingress.locator('[data-fn-marker]').first()).toHaveCount(1);
+    await expect(ingress.locator('[data-fn-apparat] #fn-kopf-1')).toHaveCount(1);
+    expect(fehler).toEqual([]);
+  });
+});
+
 test.describe('A7 — strukturiertes Verweis-Popover (Wortlaut → Entscheide → Materialien)', () => {
   test('MWSTV → «Art. 18 Abs. 2 MWSTG»: Popover mit Wortlaut + abgetrennten Materialien (Behörde · Stand)', async ({ page }) => {
     const fehler = fehlerSammeln(page);

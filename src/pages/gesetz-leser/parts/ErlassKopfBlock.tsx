@@ -1,4 +1,5 @@
 import { NormText, type InternRefs } from '../../../components/NormText';
+import { FnRef } from '../../../components/normtext/ArtikelBody';
 import type { ErlassKopf } from '../../../lib/normtext/browse';
 import { fnTextMitLinks } from '../helpers';
 
@@ -56,14 +57,30 @@ export function ErlassKopfBlock({ kopf, intern }: { kopf: ErlassKopf; intern?: I
               {verlinkbar
                 ? <NormText text={z.text} intern={intern ?? PRAEAMBEL_INTERN_FALLBACK} />
                 : z.text}
+              {/* FN-3 (V2 §2 F1-Familie, David 10.7.2026 «Präambel-Fussnoten
+                  unverlinkt»): Ingress-/Präambel-Fussnoten HINTER dem A11-NormText-
+                  Element inline verlinken — dieselbe FnRef-Marker-Mechanik wie im
+                  Artikel-Fliesstext (FN-1/FN-2/G2b). `artikel="kopf"` ⇒ FnRef löst den
+                  Popover aus `#fn-kopf-${nr}` am Kopf-Apparat auf. Marker trägt
+                  `data-fn-marker` ⇒ folgt dem Fussnoten-Toggle (R9/§8: Substanz bleibt
+                  im DOM, der data-fussnoten-CSS-Toggle dämpft nur). Additiv: nur wenn
+                  die Zeile amtliche Marker trägt (`fnNrs` aus FN-2). */}
+              {z.fnNrs && z.fnNrs.length > 0 && (
+                <span className="ml-0.5" data-fn-marker>{z.fnNrs.map((nr, j) => (
+                  <span key={nr}>{j > 0 && <span className="align-super text-[0.62em] text-ink-500">,</span>}<FnRef artikel="kopf" nr={nr} /></span>
+                ))}</span>
+              )}
             </p>
           ))}
         </div>
       )}
       {kopf.fussnoten && kopf.fussnoten.length > 0 && (
         <div data-fn-apparat className="mt-3 border-t border-rule-artikel pt-2 space-y-1">
+          {/* FN-3: Anker `fn-kopf-${nr}` am Kopf-Apparat — Sprungziel des FnRef-Popovers
+              (getElementById) und des #-Sprungs; `nt-anker`/`target:` wie im Artikel-
+              Apparat (ArtikelLeser). Nummernlose Zeilen (nr='') tragen keinen Anker. */}
           {kopf.fussnoten.map((fn, i) => (
-            <p key={i} className="text-xs leading-normal text-ink-500">
+            <p key={i} id={fn.nr ? `fn-kopf-${fn.nr}` : undefined} className="nt-anker text-xs leading-normal text-ink-500 target:bg-brass-100">
               {fn.nr && <span className="num mr-1 text-ink-300">{fn.nr}</span>}
               {fnTextMitLinks(fn)}
             </p>
