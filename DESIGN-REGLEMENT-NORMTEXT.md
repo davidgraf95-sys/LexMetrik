@@ -282,10 +282,16 @@ hell / **3.47** dunkel; warn-700-↻ **5.24** / **9.43**; brass-700-★ **4.91**
 gehalten). **Gegated:** `verzahnung.test` (Default byte-identisch, Entscheid-Slate,
 ↻-warn), Golden byte-gleich.
 
-### §4c · Leser-Darstellungsoptionen (W2·5d G2a, 4.7.2026; U-KOPF/A1+A4, 5.7.2026)
+### §4c · Leser-Darstellungsoptionen (W2·5d G2a, 4.7.2026; U-KOPF/A1+A4, 5.7.2026; V2·B-1/B-2/K-2, 11.7.2026)
 
-Drei persistente, **rein visuelle** Lese-Umschalter (genau drei, keine Wucherung,
-Auftrag David): **Linien** (Gliederungs-Guide + Einzug), **Fussnoten** (Marker +
+**V2-Nachtrag (David 10.7.2026, überstimmt «genau drei Toggles»):** es sind jetzt
+**vier** persistente, rein visuelle Umschalter im «Ansicht»-Dropdown — **Linien ·
+Fussnoten · Verweise · Entscheide** — plus ein JS-Filter **Zeitraum** und, im
+aktionen-Slot, ein prominenter **Fussnoten-Chip**. Die «genau drei»-Fassung von
+§3.1/§10.5 (UX) ist damit ausdrücklich überstimmt (A22/A23). Details am Ende von §4c.
+
+Die ursprünglich drei persistenten, **rein visuellen** Lese-Umschalter (Auftrag
+David): **Linien** (Gliederungs-Guide + Einzug), **Fussnoten** (Marker +
 Apparat sichtbar/verschwunden), **Verweise** (Verweis-Link-Unterstreichung). Sie
 liegen seit U-KOPF/A4 (David 5.7.2026) in **einem «Ansicht»-Dropdown im aktionen-
 Slot des `ErlassLeserKopf`** (die frühere G2a-Chip-Leiste entfällt; Details im
@@ -361,6 +367,34 @@ grundart-abhängigen G3a/K11-Default ab.
   mittlere Glieder `hidden sm:inline-flex` + «…»-Platzhalter). Der Sticky-Positions-
   Kopf bleibt — wie bisher — ein **≥ 1024px-2-Spalten-Feature** (mobil keine
   Positionsleiste).
+
+**V2-Nachtrag (David 10.7.2026 «go zu allem», koordinierter Kopf-PR 11.7.2026) —
+deklarierte Erweiterungen (überstimmen «genau drei Toggles»):**
+
+- **B-1 — 4. Toggle «Entscheide» (Default AN).** Blendet die verlinkten BGE-Leitfall-
+  Zeilen aus — **reine Referenzschicht, der Normtext ist NIE betroffen.** Mechanik =
+  data-* + CSS wie die anderen Toggles: `leserOptionen.ts`-Feld `leitfaelle`,
+  `html[data-leitfaelle="aus"] .lc-leser [data-leitfall-zeile]{display:none}`
+  (Marker `data-leitfall-zeile` an `LeitfallZeile`). Default 'an' ⇒ CSS-No-op ⇒
+  byte-gleich (R6); kein React-Re-Render (§15).
+- **B-2 — Zeitraum-Filter «alle · 20 · 10 · 5 J.» (Default alle).** KEIN data-*-
+  Toggle, sondern JS-Filter der client-only-`LeitfallZeile` über `r.datum` (jahr-
+  genau, Q1/Bandjahr-sicher; unparsbares Datum konservativ behalten, §8) VOR der
+  Sichtbarkeits-Kappung (`LEITFAELLE_SICHTBAR` 5→**10**, David 10.7.). Abo über
+  **Primitiv-Selektor `useLeitfallZeitraum()`** (nur der String ⇒ Zeilen rendern nur
+  bei echter Zeitraum-Änderung, nicht bei jedem anderen Toggle — §15-Zusage bewiesen).
+  §8: eine voll weggefilterte Zeile verschwindet NICHT kommentarlos, sondern zeigt
+  «n ältere ausgeblendet · alle zeigen» (klickbar). A11y: `role="group"`, Buttons mit
+  `aria-pressed` (kein `radiogroup` → keine unerfüllte Pfeiltasten-Erwartung).
+- **K-2 — Fussnoten-Chip im aktionen-Slot (`LeserFussnotenChip`).** Prominentes
+  KOPF-SIGNAL «❡ N Fussnoten» (N = Summe der Sidecar-Fussnoten) UND **echter Toggle**
+  (aria-pressed) auf denselben `fussnoten`-Wert wie der Dropdown-Schalter; beim
+  **Einschalten** springt er zum Apparat (erst einschalten, dann `scrollIntoView` des
+  ersten `[data-fn-marker]` — nie in ein display:none-Ziel). `N===0`/Sidecar noch
+  nicht geladen ⇒ kein Chip (CLS-schonend, e2e-gemessen CLS 0).
+- **Slot-Layout (U-PDF, EINMALIG):** Reihenfolge **Ansicht · Fussnoten · In neuem
+  Reiter · Download**; das Ansicht-Dropdown öffnet mobil-sicher rechtsbündig
+  (`right-0 sm:left-0`).
 
 ## §5 · Verzahnung (der Burggraben, Fedlex-Übertreffer)
 

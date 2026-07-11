@@ -27,6 +27,20 @@ Steuer-Doks ihr Budget wieder überschreiten. Offene Abnahmen sind davon unberü
 (Spiegel: `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 11.7.2026 — Gesetzesdarstellung V2: koordinierter Kopf-PR (A22·K-2 + A23·B-1/B-2 + U-PDF-Slot, Worktree `lm-v2-kopf`, Branch `feat/v2-kopf-pr`)
+
+**Auftrag (David-Go 10.7. «go zu allem», nach U-VERWEIS-Merge):** die drei nach U-VERWEIS freigegebenen Kopf-Einheiten aus `FAHRPLAN-GESETZESDARSTELLUNG-V2.md` in EINEM Schnitt — **K-2** Fussnoten-Chip im Kopf, **B-1/B-2** BGE-Steuerung im «Ansicht»-Dropdown, **U-PDF-Slot-Layout**. Reines UI. L-3/Restposten NICHT (David-Gate).
+
+**Gebaut:**
+- **K-2** `LeserFussnotenChip` (aktionen-Slot): echter Toggle (aria-pressed) auf `fussnoten` + Zähler N (Summe Sidecar-Fussnoten via `useMemo`); Einschalten → `scrollIntoView` erster `[data-fn-marker]` (erst einschalten, dann scrollen); kein Chip bei N=0/vor Sidecar-Laden (CLS 0 e2e-gemessen).
+- **B-1** 4. Toggle «Entscheide» (`leserOptionen.ts`-Feld `leitfaelle`, Default an) — CSS `html[data-leitfaelle="aus"] .lc-leser [data-leitfall-zeile]{display:none}`, kein Re-Render (§15).
+- **B-2** Zeitraum «alle·20·10·5 J.» (Default alle): reine Filter-Fn `leitfallFilter.ts` (jahr-genau/Q1-sicher) + Unit-Test; `LEITFAELLE_SICHTBAR` 5→**10**; **Primitiv-Selektor `useLeitfallZeitraum()`** (Zeilen rendern nur bei echter Zeitraum-Änderung); §8-Härtung: voll weggefilterte Zeile → «n ältere ausgeblendet · alle zeigen» (klickbar); aktiver Zeitraum als Micro-Label.
+- **U-PDF-Slot** EINMALIG neu geordnet: **Ansicht · Fussnoten · In neuem Reiter · Amtliches PDF**; Ansicht-Dropdown mobil-sicher (`right-0 sm:left-0` — Nebenbefund: neuer Zeitraum-Block deckte vorbestehenden @390-Rechts-Overflow auf, behoben).
+
+**Verifikation:** golden `IDENTISCH` (209 byte-gleich — alle Änderungen client-only/CSS); tsc/vitest (3697+6 neu)/lint grün; e2e `leser-optionen` (4 switches) + `leser-kopf-a9` (Throttle, CLS 0) + `leser-kopf-v2` (K-2/B-1/B-2) + `leitfaelle-chips` **11/11 grün**; Visual Desktop+Mobil@390. Gegenprüfung **n/a** (reines UI). Trailer `Roadmap: W2·5d`.
+
+**⚠ Vorbestehende Daten-Reds auf main (NICHT von diesem PR):** `check:p-klassen` (`entg`: `man-space-before-0`) + `check:vollstaendigkeit` (ARG/VWVG/GBV/VSTG/KG/… je 1–5 Artikel «in HTML, nicht im Snapshot») schon auf sauberem `origin/main` (bb0e334a) rot — Daten-/Extraktor-Sache (Fedlex-P1-a/b / FN-Regeneration), TABU für diesen UI-PR. Für den paralleln Daten-Agenten.
+
 ## Session 11.7.2026 — QS-TOK/T19 Warn-Injektions-Entfernung (Prompt-Cache-Hygiene, Worktree `lm-qstok-t19`, Branch `feat/qstok-t19`)
 
 **Auftrag:** T19 (nach T1/#176) — die git-zustandsabhängige, byte-instabile SessionStart-Warn-Injektion aus `struktur-aktuell.py` aus der SessionStart-Kette (`.claude/settings.json`) entfernen, damit der Sitzungs-Präfix byte-stabil bleibt (Prompt-Cache-Treffer). **Empirie:** bei realem STRUKTUR-Lag injizierte der Hook 1101 Byte/937 Zeichen variablen `additionalContext`; dieselbe Lag-Lage nach T19 = 0 Byte. Schutzfunktion nicht ersatzlos gestrichen: trägt mechanisch `struktur-rotieren.py` (T1-Rotation + size-basierter Re-Akkumulations-Wächter); Lag-Audit bleibt On-Demand als `npm run struktur:aktuell` (verhaltensgleich, stdin-tty-sicher). CLAUDE.md-Kopf + FAHRPLAN §Stand + `dispatch-template.md §7` nachgezogen. Gegenprüfung n/a (Prozess-Hook).

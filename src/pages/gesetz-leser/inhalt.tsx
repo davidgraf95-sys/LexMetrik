@@ -21,7 +21,7 @@ import type { BrowseErlass, BrowseManifest } from '../../lib/normtext/browse-typ
 import type { NormSnapshot } from '../../lib/normtext/typen';
 import { formatiereDatum, passtAufSuche, pfadZu, baueZitat, kopfOverline, grundartMeta } from './helpers';
 import { ArtikelLeser, SektionKopf, SektionBaumTOC, ErlassKopfBlock, ErlassLeserKopf, SektionKontextKopf } from './parts';
-import { LeserAnsichtMenu } from './LeserAnsichtMenu';
+import { LeserAnsichtMenu, LeserFussnotenChip } from './LeserAnsichtMenu';
 import { beiLeerlauf } from '../../lib/leerlauf';
 import { ladeLeitfallShard, normArtikelToken, type LeitfallShard } from '../../lib/rechtsprechung/norm-index';
 import { ladeRevisionShard, revisionFuerToken, type RevisionShard } from '../../lib/verzahnung/artikel-revisionen';
@@ -322,6 +322,16 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // (data-guide-auto am .lc-leser → index.css). Reine Darstellung (§3, SSoT
   // linienAufbau.ts, im Tor `check:linien-kanon` korpusweit gegated).
   const linien = useMemo(() => linienProfil(struktur), [struktur]);
+
+  // V2·K-2: Gesamtzahl der Fussnoten aus dem Struktur-Sidecar (Kopf-Signal + Zähler
+  // am Fussnoten-Chip). null = Sidecar noch nicht geladen ⇒ der Chip erscheint erst
+  // danach (kein Zahl-Nachwachsen im Kopf → CLS-schonend). EINMAL je Sidecar berechnet.
+  const fussnotenAnzahl = useMemo<number | null>(() => {
+    if (!struktur) return null;
+    let n = 0;
+    for (const v of Object.values(struktur)) n += v?.fussnoten?.length ?? 0;
+    return n;
+  }, [struktur]);
 
   // Dokument-Position (Index des ersten enthaltenen Artikels) je Sektion — EINMAL
   // bottom-up berechnet, damit renderSektion die Kinder + direkten Artikel eines
@@ -985,14 +995,21 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
         overline={kopfOverline(erlass, meta.erlassTyp, overlineGebiet)}
         hinweis="Snapshot — massgeblich ist die amtliche Fassung"
         aktionen={
+          // V2 (koordinierter Kopf-PR): EIN Slot-Layout in der Reihenfolge
+          // Ansicht · Fussnoten · Download (§F2) — der Slot wird nicht mehrfach
+          // umgebaut. «In neuem Reiter» steht zwischen den Bedien- und den
+          // Download-Aktionen (Download bleibt der letzte, verankerte Punkt).
           <>
-            {/* W2·5d U-PDF/A12: Download = AMTLICHES PDF der gepinnten Fassung
-                (Bund Fedlex-Filestore / Kanton LexWork; aus erlass.pdfUrl,
-                synchron am Erlass ⇒ CLS 0, §15/2). Fehlt die amtliche PDF-URL,
-                entfällt die Aktion (nie render-eigenes PDF, §8/§10.5). */}
-            {erlass.pdfUrl && (
-              <AmtlichesPdf href={erlass.pdfUrl} stand={erlass.pdfStand ?? erlass.stand} extern />
-            )}
+            {/* W2·5d U-KOPF/A4 + V2·B-1/B-2: «Ansicht»-Dropdown
+                (Linien/Fussnoten/Verweise/Entscheide + Zeitraum) — reine data-*-/
+                CSS-Toggles bzw. JS-Filter (leserOptionen.ts), global, jede Instanz
+                synchron. Linien-Schalter nur bei geschachteltem Gesetz (sonst
+                wirkungslos). */}
+            <LeserAnsichtMenu zeigeLinien={linien.guideEbene !== null} linienAutoAn={linien.autoGuide} />
+            {/* V2·K-2: prominentes Kopf-Signal + Toggle für die Fussnoten (Zähler N
+                aus dem Sidecar); Einschalten springt zum Apparat. Kein Chip ohne
+                Fussnoten / vor dem Sidecar-Laden (CLS-schonend). */}
+            <LeserFussnotenChip anzahl={fussnotenAnzahl} />
             {/* Dasselbe Gesetz zusätzlich in einem zweiten Reiter öffnen (Auftrag
                 David) — zum Vergleich zweier Stellen; die Reiter unterscheiden sich
                 im Label über den Artikel («OR – Art. 41» / «OR – Art. 97»). */}
@@ -1003,11 +1020,13 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
                 navigate(ziel);
               }}
               className="lc-chip hover:text-brass-700" title="Diesen Erlass zusätzlich in einem neuen Reiter öffnen">⧉ In neuem Reiter</button>
-            {/* W2·5d U-KOPF/A4: «Ansicht»-Dropdown (Linien/Fussnoten/Verweise) —
-                reine data-*-/CSS-Toggles (leserOptionen.ts), global, jede Instanz
-                synchron. Ersetzt die frühere G2a-Chip-Leiste (David 5.7.2026).
-                Linien-Schalter nur bei geschachteltem Gesetz (sonst wirkungslos). */}
-            <LeserAnsichtMenu zeigeLinien={linien.guideEbene !== null} linienAutoAn={linien.autoGuide} />
+            {/* W2·5d U-PDF/A12: Download = AMTLICHES PDF der gepinnten Fassung
+                (Bund Fedlex-Filestore / Kanton LexWork; aus erlass.pdfUrl,
+                synchron am Erlass ⇒ CLS 0, §15/2). Fehlt die amtliche PDF-URL,
+                entfällt die Aktion (nie render-eigenes PDF, §8/§10.5). */}
+            {erlass.pdfUrl && (
+              <AmtlichesPdf href={erlass.pdfUrl} stand={erlass.pdfStand ?? erlass.stand} extern />
+            )}
           </>
         } />
 

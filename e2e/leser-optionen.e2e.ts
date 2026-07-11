@@ -60,12 +60,14 @@ async function guide(page: Page, artId: string) {
   }, artId);
 }
 
-test('Options-Leiste: drei role=switch; Fussnoten/Verweise an, Linien-Default aufbau-basiert (auto, U-LINIEN/A8)', async ({ page }) => {
+test('Options-Leiste: vier role=switch (V2·B-1 «Entscheide»); Fussnoten/Verweise/Entscheide an, Linien-Default aufbau-basiert (auto, U-LINIEN/A8)', async ({ page }) => {
   await warteReader(page, '/gesetze/bund/BGBM', 'art-1');
   await ansichtOeffnen(page);
   const gruppe = page.locator('[aria-label="Darstellungsoptionen"]').first();
   await expect(gruppe).toBeVisible();
-  await expect(gruppe.getByRole('switch')).toHaveCount(3); // BGBM geschachtelt → Linien sichtbar
+  // V2·B-1 (David 10.7.2026, überstimmt «genau drei Toggles», A19+): 4. Schalter
+  // «Entscheide» im Dropdown. BGBM geschachtelt → Linien sichtbar ⇒ 4 Switches.
+  await expect(gruppe.getByRole('switch')).toHaveCount(4);
   // W2·5d U-LINIEN/A8: Linien-Default ist 'auto' — AUFBAU-basiert (nicht mehr die
   // grundart-Schublade K11). BGBM ist ein flacher Kurzerlass mit EINER Gliederungs-
   // ebene → der Guide macht diese Ebene sichtbar (autoGuide), der Schalter zeigt
@@ -75,10 +77,12 @@ test('Options-Leiste: drei role=switch; Fussnoten/Verweise an, Linien-Default au
   for (const name of ['Fussnoten', 'Verweise']) {
     await expect(gruppe.getByRole('switch', { name })).toHaveAttribute('aria-checked', 'true');
   }
+  await expect(gruppe.getByRole('switch', { name: 'Entscheide' })).toHaveAttribute('aria-checked', 'true');
   const html = page.locator('html');
   await expect(html).toHaveAttribute('data-linien', 'auto');
   await expect(html).toHaveAttribute('data-fussnoten', 'an');
   await expect(html).toHaveAttribute('data-verweise', 'an');
+  await expect(html).toHaveAttribute('data-leitfaelle', 'an');
 });
 
 test('Linien-Toggle: explizit AN sichtbar → AUS transparent (Guide bleibt im DOM), persistiert über Reload', async ({ page }) => {

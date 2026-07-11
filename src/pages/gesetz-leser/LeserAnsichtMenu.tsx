@@ -18,7 +18,10 @@
 
 import { useEffect, useId, useRef, useState } from 'react';
 import { useDialogFokus } from '../../components/layout/useDialogFokus';
-import { setzeOption, useLeserOptionen, type OptFeld } from './leserOptionen';
+import {
+  setzeOption, setzeZeitraum, useLeserOptionen, useLeitfallZeitraum,
+  type OptFeld, type LeitfallZeitraum,
+} from './leserOptionen';
 
 function OptSwitch({ feld, an, label, titel }: {
   feld: OptFeld;
@@ -44,6 +47,80 @@ function OptSwitch({ feld, an, label, titel }: {
       >
         {an ? '✓' : '○'} {an ? 'an' : 'aus'}
       </span>
+    </button>
+  );
+}
+
+/** V2·B-2: Zeitraum-Wahl für die Leitfälle («alle · 20 · 10 · 5 J.»). Kein `role=
+ *  menu`/`radiogroup` (die versprächen Pfeiltasten-Bedienung, die es nicht gibt —
+ *  dieselbe Ehrlichkeits-Lehre wie das Dropdown selbst): eine `role="group"` mit
+ *  einzeln Tab-fokussierbaren Buttons, jeder trägt `aria-pressed` für den aktiven
+ *  Stand. Umschalten setzt den JS-Filterwert (setzeZeitraum) — kein Normtext-Re-
+ *  Render, nur die Leitfall-Zeilen (Primitiv-Selektor). */
+function ZeitraumWahl() {
+  const zeitraum = useLeitfallZeitraum();
+  const stufen: readonly [LeitfallZeitraum, string][] = [
+    ['alle', 'alle'], ['20', '20 J.'], ['10', '10 J.'], ['5', '5 J.'],
+  ];
+  return (
+    <div role="group" aria-label="Zeitraum der Entscheide" className="flex flex-wrap items-center gap-1 px-2.5 pt-1.5 pb-0.5">
+      <span className="lc-overline mr-1">Zeitraum</span>
+      {stufen.map(([wert, label]) => {
+        const aktiv = zeitraum === wert;
+        return (
+          <button
+            key={wert}
+            type="button"
+            aria-pressed={aktiv}
+            onClick={() => setzeZeitraum(wert)}
+            title={wert === 'alle' ? 'Alle Entscheide zeigen' : `Nur Entscheide der letzten ${wert} Jahre`}
+            className={`rounded px-1.5 py-0.5 text-xs transition-colors ${
+              aktiv ? 'bg-brass-100/60 font-medium text-ink-900' : 'text-ink-500 hover:bg-brass-100/40'
+            }`}
+          >
+            {label}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
+/** V2·K-2 (David 10.7.2026): der Fussnoten-Chip im Kopf-aktionen-Slot — prominentes
+ *  KOPF-SIGNAL (Zähler N aus dem Struktur-Sidecar) UND echter Toggle auf denselben
+ *  `fussnoten`-Options-Wert wie der Dropdown-Schalter (aria-pressed korrekt). Beim
+ *  Einschalten springt er zum Apparat (erst EINSCHALTEN, dann scrollen — nie in ein
+ *  display:none-Ziel, §K-2). `anzahl===0` ⇒ kein Chip (kein Apparat vorhanden);
+ *  `anzahl===null` ⇒ Sidecar noch nicht geladen ⇒ Chip erst danach (kein Zahl-
+ *  Nachwachsen im Kopf → CLS-schonend). */
+export function LeserFussnotenChip({ anzahl }: { anzahl: number | null }) {
+  const opt = useLeserOptionen();
+  const an = opt.fussnoten === 'an';
+  if (anzahl == null || anzahl === 0) return null;
+  const klick = () => {
+    const nun = an ? 'aus' : 'an';
+    setzeOption('fussnoten', nun);
+    if (nun === 'an') {
+      // Erst einschalten (Zeile oben), dann zum ersten sichtbaren Apparat springen.
+      // rAF: das data-Attribut ist gesetzt, das Ziel ist nicht mehr display:none.
+      requestAnimationFrame(() => {
+        document.querySelector('.lc-leser [data-fn-marker]')
+          ?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+    }
+  };
+  return (
+    <button
+      type="button"
+      onClick={klick}
+      aria-pressed={an}
+      className="lc-chip inline-flex items-center gap-1 hover:text-brass-700"
+      aria-label={`${anzahl} Fussnoten — ${an ? 'ausblenden' : 'einblenden und zum Apparat springen'}`}
+      title={an ? 'Fussnoten sind eingeblendet — hier ausblenden' : 'Fussnoten einblenden und zum Fussnoten-Apparat springen'}
+    >
+      <span aria-hidden>❡</span>
+      <span className="num tabular-nums" aria-hidden>{anzahl}</span>
+      <span aria-hidden>Fussnoten</span>
     </button>
   );
 }
@@ -85,7 +162,7 @@ export function LeserAnsichtMenu({ zeigeLinien, linienAutoAn = false }: { zeigeL
         aria-expanded={offen}
         aria-controls={panelId}
         className="lc-chip inline-flex items-center gap-1 hover:text-brass-700"
-        title="Darstellung: Linien, Fussnoten, Verweise"
+        title="Darstellung: Linien, Fussnoten, Verweise, Entscheide (mit Zeitraum)"
       >
         <span aria-hidden>◧</span>Ansicht
         <span aria-hidden className={`transition-transform ${offen ? 'rotate-180' : ''}`}>▾</span>
@@ -98,7 +175,7 @@ export function LeserAnsichtMenu({ zeigeLinien, linienAutoAn = false }: { zeigeL
           tabIndex={-1}
           role="group"
           aria-label="Darstellungsoptionen"
-          className="absolute left-0 top-full z-40 mt-1.5 flex w-[13rem] max-w-[calc(100vw-2rem)] flex-col gap-0.5 rounded-lg border border-line bg-paper-raised p-1.5 shadow-lg"
+          className="absolute right-0 sm:left-0 sm:right-auto top-full z-40 mt-1.5 flex w-[13rem] max-w-[calc(100vw-2rem)] flex-col gap-0.5 rounded-lg border border-line bg-paper-raised p-1.5 shadow-lg"
         >
           <p className="lc-overline px-2.5 pb-1 pt-0.5">Darstellung</p>
           {zeigeLinien && (
@@ -121,6 +198,17 @@ export function LeserAnsichtMenu({ zeigeLinien, linienAutoAn = false }: { zeigeL
             label="Verweise"
             titel="Verweis-Links unterstreichen oder schlicht darstellen (der Link bleibt aktiv)"
           />
+          {/* V2·B-1 (David 10.7.2026): 4. Schalter «Entscheide» — blendet die
+              verlinkten BGE-Leitfall-Zeilen ein/aus (rein CSS via data-leitfaelle,
+              Default AN). B-2: darunter der Zeitraum-Filter, nur wenn Entscheide AN
+              (sonst wirkungslos → keine toten Steuerelemente, §13 F4). */}
+          <OptSwitch
+            feld="leitfaelle"
+            an={opt.leitfaelle === 'an'}
+            label="Entscheide"
+            titel="Verlinkte Bundesgerichts-Leitfälle unter den Artikeln ein- oder ausblenden"
+          />
+          {opt.leitfaelle === 'an' && <ZeitraumWahl />}
         </div>
       )}
     </div>

@@ -16,10 +16,14 @@ import type { BrowseErlass } from '../../../lib/normtext/browse-typen';
 import type { NormSnapshot } from '../../../lib/normtext/typen';
 import { margStufeStil, fnTextMitLinks, baueZitat } from '../helpers';
 import { schaetzeArtikelHoehe } from '../berechnungen';
+import { setzeZeitraum, useLeitfallZeitraum } from '../leserOptionen';
+import { filtereLeitfaelleNachZeitraum, zeitraumLabel } from '../leitfallFilter';
 
-// Schaufenster-Chips: nur die wenigen zentralen Leitfälle direkt zeigen (Reihenfolge
-// = `gewicht` aus dem Shard), Rest hinter «+n weitere». Bewusst klein, kein Panel.
-const LEITFAELLE_SICHTBAR = 5;
+// Schaufenster-Chips: nur die zentralen Leitfälle direkt zeigen (Reihenfolge =
+// `gewicht` aus dem Shard), Rest hinter «+n weitere». V2·B-2 (David 10.7.2026,
+// «auch mehr als fünf»): Kappung von 5 auf 10 angehoben; below-fold, kein
+// Normtext-Re-Render (§15). Bewusst klein, kein Panel.
+const LEITFAELLE_SICHTBAR = 10;
 
 // «Leitfälle zu diesem Artikel» (FAHRPLAN-DATENHALTUNG §11.2, Weiche B): Chip-Zeile
 // analog «Verweise». V1a-Endzustand (CI-Befund W2·7-VZUI, 3 Iterationen): die Zeile
@@ -47,6 +51,9 @@ const LeitfallZeile = memo(function LeitfallZeile({ refs, normZitat, revision }:
 }) {
   const [alleAuf, setAlleAuf] = useState(false);
   const { oeffneDaneben, kannOeffnen, istOffen } = usePaneSteuerung();
+  // V2·B-2: der Zeitraum-Filter als PRIMITIV-Selektor — diese Zeile re-rendert nur
+  // bei echter Zeitraum-Änderung, nicht bei jedem anderen Ansicht-Toggle (§15).
+  const zeitraum = useLeitfallZeitraum();
 
   // Wie die «Verweise»-Zeile: ohne Treffer GAR KEINE Zeile (kein reservierter
   // Leerraum, §15.2 — die grosse Mehrheit der Artikel hat keine Leitfälle; eine
@@ -55,11 +62,43 @@ const LeitfallZeile = memo(function LeitfallZeile({ refs, normZitat, revision }:
   // prerenderte Normtext (LCP/Ctrl+F) bleibt unberührt (§15.1/3).
   if (!refs || refs.length === 0) return null;
 
-  const sichtbar = alleAuf ? refs : refs.slice(0, LEITFAELLE_SICHTBAR);
-  const rest = refs.length - sichtbar.length;
+  // V2·B-2: nach Zeitraum filtern (jahr-genau, Q1-sicher). `new Date` ist hier
+  // unbedenklich — die Zeile ist client-only (nicht prerendert), kein Hydra-Drift.
+  const gefiltert = filtereLeitfaelleNachZeitraum(refs, zeitraum, new Date().getFullYear());
+  const zeitLabel = zeitraumLabel(zeitraum);
+  const ueberschrift = (
+    <span className="lc-overline mr-1" title="Maschinell aus den zitierten Normen zugeordnet — keine redaktionelle Präjudizienauswahl. Entscheide beziehen sich auf die im Entscheidzeitpunkt geltende Fassung.">Leitfälle</span>
+  );
+
+  // §8-Härtung (B-2): sind durch den Zeitraum ALLE weggefiltert, verschwindet die
+  // Zeile NICHT kommentarlos — sie zeigt «n ältere ausgeblendet» (klickbar → alle).
+  // Marker `data-leitfall-zeile` bleibt gesetzt, damit der Entscheide-Toggle (B-1)
+  // auch diese Hinweis-Zeile mit ausblendet.
+  if (gefiltert.length === 0) {
+    const n = refs.length;
+    return (
+      <div data-leitfall-zeile className="mt-4 flex flex-wrap items-center gap-2">
+        {ueberschrift}
+        <button
+          type="button"
+          onClick={() => setzeZeitraum('alle')}
+          className="lc-chip hover:text-brass-700"
+          title="Zeitraum-Filter (Rubrik Ansicht) aufheben und alle Leitfälle zeigen"
+        >
+          {n} {n === 1 ? 'älterer ausgeblendet' : 'ältere ausgeblendet'} · alle zeigen
+        </button>
+      </div>
+    );
+  }
+
+  const sichtbar = alleAuf ? gefiltert : gefiltert.slice(0, LEITFAELLE_SICHTBAR);
+  const rest = gefiltert.length - sichtbar.length;
   return (
-    <div className="mt-4 flex flex-wrap items-center gap-2">
-      <span className="lc-overline mr-1" title="Maschinell aus den zitierten Normen zugeordnet — keine redaktionelle Präjudizienauswahl. Entscheide beziehen sich auf die im Entscheidzeitpunkt geltende Fassung.">Leitfälle</span>
+    <div data-leitfall-zeile className="mt-4 flex flex-wrap items-center gap-2">
+      {ueberschrift}
+      {zeitLabel && (
+        <span className="text-micro text-ink-400" title="Aktiver Zeitraum-Filter (Rubrik Ansicht)">{zeitLabel}</span>
+      )}
       {sichtbar.map((r) => {
         // ?norm= trägt die Fundstellen-Absicht: das Ziel springt zur ersten
         // Erwägung, die diese Norm zitiert (Auflösung im EntscheidLeser, §5).

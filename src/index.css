@@ -271,6 +271,17 @@
     text-decoration-line: none;
   }
 
+  /* Entscheide AUS (V2·B-1, David 10.7.2026): die verlinkten Bundesgerichts-
+     Leitfall-Zeilen werden ganz ausgeblendet — reine Referenzschicht, der NORMTEXT
+     ist NIE betroffen. `display:none` an der `[data-leitfall-zeile]`-Zeile (Marker
+     an LeitfallZeile). Blaupause der Fussnoten-Regel: Default 'an' emittiert keine
+     Regel (byte-gleich, R6); toggle-getrieben ⇒ Reflow binnen 500 ms nach Klick
+     (input-exkludiert) ⇒ kein CLS-Beitrag. KEIN React-Re-Render (§15) — die Zeilen
+     bleiben im DOM (Ctrl+F/Screenreader-neutral wie der Fussnoten-Toggle). */
+  html[data-leitfaelle="aus"] .lc-leser [data-leitfall-zeile] {
+    display: none;
+  }
+
   /* W2.8: lange Erlasse (OR/ZGB ~1099 Art.) — off-screen-Artikel überspringen
      Layout/Paint. Inhalt bleibt im DOM (Suche/Anker/Screenreader/Crawler
      unberührt), nur der Render-ZEITPUNKT ändert (§6.4). contain-intrinsic-size
