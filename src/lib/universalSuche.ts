@@ -213,10 +213,16 @@ export function materialGruppe(liste: BrowseMaterial[] | null, q: string, kappun
 // ── Aggregation ──────────────────────────────────────────────────────────────
 
 /** Gesetzestext-/Artikel-Volltext-Gruppe. `treffer === null` ⇒ Index noch nicht
- *  geladen (Platzhalter); sonst die bereits via FlexSearch gefundenen Treffer. */
-export function artikelGruppe(treffer: SuchTreffer[] | null, kappung = KAPPUNG): SuchGruppe {
+ *  geladen (Platzhalter); sonst die bereits via FlexSearch gefundenen Treffer.
+ *  `q` (optional): setzt bei Kappung das «alle N →»-Ziel auf die /suche-Seite
+ *  (UI-NAV S5) — bis dahin waren die Treffer jenseits der Kappung strukturell
+ *  unerreichbar (§8), die Gruppe hatte als einzige kein `mehrHref`. */
+export function artikelGruppe(treffer: SuchTreffer[] | null, kappung = KAPPUNG, q = ''): SuchGruppe {
   if (treffer === null) return { id: 'artikel', titel: 'Gesetzestext', treffer: [], gesamt: 0, laedt: true };
-  return { id: 'artikel', titel: 'Gesetzestext', treffer: treffer.slice(0, kappung), gesamt: treffer.length };
+  return {
+    id: 'artikel', titel: 'Gesetzestext', treffer: treffer.slice(0, kappung), gesamt: treffer.length,
+    mehrHref: q.trim() !== '' && treffer.length > kappung ? `/suche?q=${encodeURIComponent(q)}` : undefined,
+  };
 }
 
 export interface SuchDaten {
@@ -239,7 +245,7 @@ export function sucheAlles(q: string, daten: SuchDaten, kappung = KAPPUNG): Such
   if (q.trim() === '') return [];
   const gruppen = [
     gesetzGruppe(daten.gesetze, q, kappung),
-    artikelGruppe(daten.artikel, kappung),
+    artikelGruppe(daten.artikel, kappung, q),
     entscheidGruppe(daten.entscheide, q, kappung),
     materialGruppe(daten.materialien, q, kappung),
     katalogGruppe(q, kappung),

@@ -58,6 +58,9 @@ const BEKANNTE_BEFUNDE: Record<string, string[]> = {
   'gesetze-kanton-BS': ['link-in-text-block'],
   'gesetze-leser-BS': ['link-in-text-block'],
   'gesetze-leser-bund': ['link-in-text-block'],
+  // /suche (UI-NAV S5): Inline-Links (Abdeckung/«Was ist durchsuchbar») + die
+  // brass-Trefferlinks tragen denselben Markenentscheid (B-2, no-underline).
+  'suche-seite': ['link-in-text-block'],
   'rechtsprechung-uebersicht': ['link-in-text-block'],
   'rechtsprechung-leser': ['link-in-text-block'],
   'international': ['link-in-text-block'],
@@ -190,6 +193,15 @@ test('Rechtsprechung — Übersicht', async ({ page }, testInfo) => {
   await oeffnen(page, '/rechtsprechung')
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
   await axePruefen(page, testInfo, 'rechtsprechung-uebersicht')
+})
+
+// UI-NAV S5: die /suche-Ergebnisseite mit Treffern (Gruppen-Landmarken,
+// Facetten-Buttons, Trefferlisten) a11y-sauber.
+test('Suche — Ergebnisseite (S5)', async ({ page }, testInfo) => {
+  await oeffnen(page, '/suche?q=Miete')
+  await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
+  await expect(page.getByRole('group', { name: 'Gesetzestext', exact: true })).toBeVisible()
+  await axePruefen(page, testInfo, 'suche-seite')
 })
 
 test('Rechtsprechung — Entscheid-Reader', async ({ page }, testInfo) => {

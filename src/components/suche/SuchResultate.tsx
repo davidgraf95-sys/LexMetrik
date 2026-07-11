@@ -103,7 +103,7 @@ function Zeile({ t, onAuswahl, onNavigate, optionId, aktiv, alsOption, sprung, q
   );
 }
 
-function Gruppe({ g, index, onAuswahl, onNavigate, listboxId, aktivId, q }: {
+function Gruppe({ g, index, onAuswahl, onNavigate, listboxId, aktivId, q, sektionsRollen }: {
   g: SuchGruppe;
   index: number;
   onAuswahl?: () => void;
@@ -111,9 +111,14 @@ function Gruppe({ g, index, onAuswahl, onNavigate, listboxId, aktivId, q }: {
   listboxId?: string;
   aktivId?: string;
   q: string;
+  sektionsRollen?: boolean;
 }) {
+  // Gruppen-Landmarke: im Listbox-Modus zwingend (role=group in der Listbox); auf
+  // der /suche-Seite (S5) optional per `sektionsRollen`, damit Screenreader die
+  // Inhaltstyp-Abschnitte ansteuern können — ohne den Options-Modus.
+  const alsGruppe = !!listboxId || !!sektionsRollen;
   return (
-    <div role={listboxId ? 'group' : undefined} aria-label={listboxId ? g.titel : undefined}
+    <div role={alsGruppe ? 'group' : undefined} aria-label={alsGruppe ? g.titel : undefined}
       className="lc-reveal border-t border-line first:border-t-0" style={{ animationDelay: `${index * 55}ms` }}>
       <div className="flex items-baseline gap-2 px-4 pt-3 pb-1">
         <span className="lc-overline text-ink-500">{g.titel}</span>
@@ -150,7 +155,7 @@ function Gruppe({ g, index, onAuswahl, onNavigate, listboxId, aktivId, q }: {
   );
 }
 
-export function SuchResultate({ gruppen, allesGeladen, q, onAuswahl, onNavigate, listboxId, aktivId, vorschlag, abdeckung, onVorschlag }: {
+export function SuchResultate({ gruppen, allesGeladen, q, onAuswahl, onNavigate, listboxId, aktivId, vorschlag, abdeckung, onVorschlag, sektionsRollen }: {
   gruppen: SuchGruppe[];
   allesGeladen: boolean;
   q: string;
@@ -167,6 +172,8 @@ export function SuchResultate({ gruppen, allesGeladen, q, onAuswahl, onNavigate,
   abdeckung?: Abdeckung | null;
   /** Übernimmt einen Vorschlag als neue Query (setzt das Feld). */
   onVorschlag?: (begriff: string) => void;
+  /** /suche-Seite (S5): jede Gruppe als role=group-Landmarke (ohne Listbox). */
+  sektionsRollen?: boolean;
 }) {
   if (q === '') return null;
 
@@ -203,7 +210,7 @@ export function SuchResultate({ gruppen, allesGeladen, q, onAuswahl, onNavigate,
                 ? <>Keine Treffer zu «{q}». Versuchen Sie einen Erlass, eine Norm oder ein Stichwort.</>
                 : <>wird durchsucht …</>}
             </p>
-          : gruppen.map((g, i) => <Gruppe key={g.id} g={g} index={i} onAuswahl={onAuswahl} onNavigate={onNavigate} listboxId={listboxId} aktivId={aktivId} q={q} />)}
+          : gruppen.map((g, i) => <Gruppe key={g.id} g={g} index={i} onAuswahl={onAuswahl} onNavigate={onNavigate} listboxId={listboxId} aktivId={aktivId} q={q} sektionsRollen={sektionsRollen} />)}
       </div>
       {/* §8-Korpus-Offenlegung (S3/E1): was die Suche wirklich durchsucht, ausserhalb
           der Listbox. Link auf die Abdeckungsseite «Was ist drin». */}

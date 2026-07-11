@@ -36,6 +36,9 @@ const Datenschutz = lazyRetry(() => import('./pages/Datenschutz').then((m) => ({
 const Einstellungen = lazyRetry(() => import('./pages/Einstellungen').then((m) => ({ default: m.Einstellungen })));
 // UI-NAV S3/E1: Korpus-Abdeckungsseite «Was ist drin» (Suche-Fusszeile verlinkt hierher).
 const Abdeckung = lazyRetry(() => import('./pages/Abdeckung').then((m) => ({ default: m.Abdeckung })));
+// UI-NAV S5: Volltext-Ergebnisseite (?q=) — macht die im Dropdown gekappten
+// Treffer zugänglich (bes. die Gesetzestext-Gruppe). Additiv zum A5/A6-Dropdown.
+const Suche = lazyRetry(() => import('./pages/Suche').then((m) => ({ default: m.Suche })));
 // Rubrik V «Gesetze» (browsbare Rechtssammlung) — eigenständige Nav-Sektion,
 // KEINE Katalog-Oberkategorie (oberkategorien.ts unberührt). Übersicht /gesetze
 // wird prerendert (seo.ts), die Lesesicht /gesetze/:ebene/:key ist client-lazy
@@ -123,6 +126,7 @@ export function RouteSwitch({ location }: { location?: string }) {
       <Route path="/datenschutz" element={<Datenschutz />} />
       <Route path="/einstellungen" element={<Einstellungen />} />
       <Route path="/abdeckung" element={<Abdeckung />} />
+      <Route path="/suche" element={<Suche />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

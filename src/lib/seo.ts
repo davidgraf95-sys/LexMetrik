@@ -87,6 +87,7 @@ const STATISCHE_SEITEN: Record<string, { titel: string; beschreibung: string; og
   '/kontakt': { titel: 'Kontakt aufnehmen — LexMetrik', beschreibung: 'Fragen, Korrekturen zu einer Berechnung oder einem Baustein, Vorschläge für neue Rechner und Vorlagen — Hinweise auf Fehler sind besonders willkommen.' },
   '/datenschutz': { titel: 'Datenschutzerklärung — LexMetrik', beschreibung: 'Datenschutzerklärung von LexMetrik (Entwurf). Die Eingaben verlassen den Browser nicht — Berechnung und Dokumenterstellung laufen lokal im Gerät.' },
   '/abdeckung': { titel: 'Was ist durchsuchbar — LexMetrik', beschreibung: 'Was die LexMetrik-Suche wirklich durchsucht: Bundeserlasse im Volltext, kantonale Erlasse nach Titel, Bundesgerichts-Leitentscheide und amtliche Materialien — ehrlich offengelegt, mit Live-Link zur amtlichen Fassung.' },
+  '/suche': { titel: 'Suche — LexMetrik', beschreibung: 'Volltextsuche über LexMetrik: Gesetzestext, Gesetze, Bundesgerichtsentscheide, amtliche Materialien sowie Rechner und Vorlagen — alle Treffer auf einer Seite, nach Inhaltstyp filterbar, mit teilbarem Deep-Link.' },
 };
 
 /** href → Pfad ohne Hash-Sprungmarke. */
