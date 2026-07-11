@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { labelAusMeta } from '../lib/verlaufLabel';
-import { merkeBesuch } from '../lib/zuletztVerwendet';
+import { merkeBesuch, typVonRoute } from '../lib/zuletztVerwendet';
 import { loeseZuletztTitel } from '../lib/zuletztTitel';
 
 // ─── Unsichtbarer «Zuletzt verwendet»-Tracker (App-Shell) ───────────────────
@@ -22,7 +22,7 @@ import { loeseZuletztTitel } from '../lib/zuletztTitel';
 //     s. lib/zuletztTitel.ts) und den aufgelösten Titel mitspeichern. Bei Routen-
 //     Wechsel vor der Auflösung: abbrechen (die verlassene Route wird nicht
 //     gemerkt); nicht auflösbar → gar nichts merken (kein Roh-Slug-Chip, §8).
-const INHALT_ITEM = /^\/(rechner|vorlagen|gesetze|rechtsprechung)\/.+/;
+const INHALT_ITEM = /^\/(rechner|vorlagen|gesetze|rechtsprechung|materialien)\/.+/;
 
 /** requestIdleCallback mit garantiert feuerndem setTimeout-Fallback (§15.3) —
  *  identisches Muster wie App.tsx-Prefetch / gesetz-leser/parts.tsx-Shard-Fetch. */
@@ -46,17 +46,18 @@ export function ZuletztTracker() {
     if (!INHALT_ITEM.test(pathname)) return;
     // Date.now() ist in der Darstellungsschicht erlaubt (nicht in src/lib, §2):
     // die Uhrzeit ist Anzeige-/Ordnungs-Metadaten, keine Rechtslogik.
+    const typ = typVonRoute(pathname);
     const sofort = labelAusMeta(pathname);
     if (sofort) {
-      merkeBesuch({ route: pathname, titel: sofort, zeit: Date.now() });
+      merkeBesuch({ route: pathname, titel: sofort, typ, zeit: Date.now() });
       return;
     }
-    // Gesetz/Entscheid: Schreibzeit-Auflösung off-critical-path (lazy Manifest).
+    // Gesetz/Entscheid/Material: Schreibzeit-Auflösung off-critical-path (lazy Manifest).
     let abgebrochen = false;
     const abbrechen = beiLeerlauf(() => {
       void loeseZuletztTitel(pathname).then((titel) => {
         if (abgebrochen || !titel) return;
-        merkeBesuch({ route: pathname, titel, zeit: Date.now() });
+        merkeBesuch({ route: pathname, titel, typ, zeit: Date.now() });
       });
     });
     return () => { abgebrochen = true; abbrechen(); };

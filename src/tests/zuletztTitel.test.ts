@@ -21,11 +21,18 @@ const ENTSCHEIDE = {
     { key: 'bge-151-iii-377', zitierung: 'BGE 151 III 377', nummer: '4A_1/2025', bgeReferenz: '151 III 377', datei: 'bund/bge-151-iii-377.json' },
   ],
 };
+const MATERIALIEN = {
+  erzeugt: '2026-07-03',
+  materialien: [
+    { key: 'estv-ks-42', titel: 'Kreisschreiben Nr. 42', behoerdeKuerzel: 'ESTV', nummer: '42' },
+  ],
+};
 
 beforeEach(() => {
   vi.stubGlobal('fetch', vi.fn(async (url: string) => {
     const body = url.includes('/normtext/register.json') ? GESETZE
       : url.includes('/rechtsprechung/register.json') ? ENTSCHEIDE
+      : url.includes('/materialien/register.json') ? MATERIALIEN
       : null;
     return { ok: body !== null, json: async () => body } as unknown as Response;
   }));
@@ -55,6 +62,14 @@ describe('loeseZuletztTitel — Schreibzeit-Auflösung', () => {
 
   it('Entscheid mit unbekanntem Schlüssel → null', async () => {
     expect(await loeseZuletztTitel('/rechtsprechung/foo')).toBeNull();
+  });
+
+  it('Material: Titel aus dem Manifest (O1 — Tracking auf Materialien ausgeweitet)', async () => {
+    expect(await loeseZuletztTitel('/materialien/estv-ks-42')).toBe('Kreisschreiben Nr. 42');
+  });
+
+  it('Material mit unbekanntem Schlüssel → null', async () => {
+    expect(await loeseZuletztTitel('/materialien/foo')).toBeNull();
   });
 
   it('kein Gesetz-/Entscheid-/Katalog-Pfad → null', async () => {

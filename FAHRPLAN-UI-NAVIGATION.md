@@ -321,7 +321,27 @@ präzisiert, nie autonom gekippt.
 
 ## §5 · P3b — Verlauf-Initiative (EINE Baueinheit, EINE Datenquelle)
 
-### O1 · Lokaler Verlauf & Wiedereinstieg — M
+### O1 · Lokaler Verlauf & Wiedereinstieg — M ✅ (11.7.2026, `feat/uinav-o1-verlauf`)
+> **Gebaut (Opus):** (1) Tracking auf **alle Inhaltstypen** — Materialien ergänzt
+> (Gesetz/Entscheid waren im Vintage-Re-Audit bereits gebaut, `INHALT_ITEM`), plus
+> ein `typ`-Diskriminator je Eintrag (Typ-Icon) mit Alt-Eintrags-Migration. (2)
+> **⌘K-/Fokus-Leerzustand** der Kopf-Suche (`SucheLeerzustand`): Zuletzt-Liste (bis 5)
+> + 5 kuratierte Rubrik-Einstiege, synchron/CLS-frei (nur auf Fokus → keine
+> Prerender-Divergenz). (3) **Topbar-«Verlauf»** (`VerlaufUebersicht`): Uhr-Trigger
+> + Dialog-Flyout, chronologisch heute/gestern/früher, Typ-Icons, §8-Fusszeile «Nur
+> auf diesem Gerät» + «Verlauf leeren». (4) Startseiten-Chips speisen sich
+> unverändert aus derselben Quelle (§5, EINE Store). Reaktiver `useZuletzt`-Hook
+> (§15.2: Initialstate auf Server-[leer] gepinnt, Sync nach Mount via `ZULETZT_EVENT`
+> + `storage`). Store-Kappung 6→12 (Topbar-Verlauf, deklarierte Änderung §6.3).
+> Tore grün (tsc · vitest 3764 · golden 209 byte-gleich · lint · gegenpruefung n/a);
+> neue e2e `verlauf-o1` (Leerzustand-Recents + Topbar-Verlauf), norm-sprung/a11y/smoke
+> bleiben grün (A9-DoD). **Fremd-vorbestehend rot** (unberührt vom UI-Diff):
+> `check:p-klassen` + `check:vollstaendigkeit` (Normtext-Daten).
+> **Ausgelassen (deklariert):** **Suchanfragen-Verlauf** — der EINE Store ist
+> navigations-/route-keyed (§5), Query-Historie ist ein anderer Belang, und ihr
+> natürlicher Landeplatz `/suche` ist David-gegatet (S5); ins Route-Store zu falten
+> würde §14.2 (Belange nicht mischen, Einheit klein für EIN Gate) verletzen → eigener
+> Posten, wenn S5 freigegeben ist. Schritt 2/3/4 der Spec brauchen es nicht.
 - **Engpass zuerst:** `zuletztVerwendet.ts` trackt nur Rechner/Vorlagen — «Gesetze/Entscheide
   = eigenes Arbeitspaket» steht wörtlich im Code (FAHRPLAN-STARTSEITE-V3 §3 #5, ~½ Session).
   **Reihenfolge:** (1) Tracking auf alle Inhaltstypen ausdehnen (Gesetz-Artikel, BGE,

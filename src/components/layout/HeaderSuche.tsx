@@ -2,6 +2,7 @@ import { useEffect, useId, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useUniversalSuche } from '../suche/useUniversalSuche';
 import { SuchResultate } from '../suche/SuchResultate';
+import { SucheLeerzustand } from '../suche/SucheLeerzustand';
 import { suchOptionId } from '../suche/suchOptionId';
 
 // ─── Globale Suche im Top-Streifen (UI-Welle: Dropdown überall) ─────────────
@@ -49,7 +50,12 @@ export function HeaderSuche() {
     setLetzteQuery(q);
     setAktivIndex(-1);
   }
-  const zeigtPanel = offen && q !== '';
+  // UI-NAV O1: das Feld öffnet auch LEER (⌘K/Fokus) → Verlauf + kuratierte
+  // Einstiege (SucheLeerzustand). `feldLeer` an `wert` (nicht am nachhängenden `q`),
+  // damit der Leerzustand beim ersten Tastendruck sofort den Treffern weicht.
+  const feldLeer = wert.trim() === '';
+  const zeigtPanel = offen && !feldLeer;
+  const zeigtLeer = offen && feldLeer;
   const aktivId = zeigtPanel && aktivIndex >= 0 && aktivIndex < flach.length ? flach[aktivIndex].oid : undefined;
 
   // Globale Fokus-Shortcuts: «/» UND ⌘K/Ctrl-K fokussieren das Feld (A5 — die
@@ -65,7 +71,8 @@ export function HeaderSuche() {
       if (!el) return;
       el.focus();
       el.select();
-      if (el.value.trim() !== '') setOffen(true);
+      // UI-NAV O1: immer öffnen — leer erscheint der Verlauf-/Einstieg-Leerzustand.
+      setOffen(true);
     };
     const handler = (e: KeyboardEvent) => {
       if ((e.metaKey || e.ctrlKey) && !e.altKey && (e.key === 'k' || e.key === 'K')) {
@@ -150,7 +157,7 @@ export function HeaderSuche() {
         type="search"
         value={wert}
         onChange={(e) => { setWert(e.target.value); setOffen(true); setEnterQ(null); }}
-        onFocus={() => { if (wert.trim()) setOffen(true); }}
+        onFocus={() => setOffen(true)}
         onKeyDown={aufTaste}
         placeholder="Suchen oder Norm springen (z. B. «OR 257d») …"
         className="lc-input h-11 py-0 text-body-s w-full pr-3 lg:pr-14"
@@ -167,7 +174,7 @@ export function HeaderSuche() {
           nicht interaktiv (pointer-events-none) — die Bedienung ist das Feld
           selbst, mobil reicht es ohne Hinweis (A5). */}
       <kbd className="pointer-events-none absolute right-2.5 top-1/2 hidden -translate-y-1/2 num text-micro font-medium tracking-tight text-ink-600 lg:inline">⌘K</kbd>
-      {zeigtPanel && (
+      {(zeigtPanel || zeigtLeer) && (
         // Im Header intern scrollbar (David 28.6.): die geöffnete Trefferfläche
         // wächst sonst unbegrenzt aus dem Top-Streifen heraus. max-h + eigener
         // Scroll + overscroll-contain (kein Durchscrollen auf die Seite). Nur der
@@ -179,9 +186,12 @@ export function HeaderSuche() {
         // Unlesbarkeit kappen. Darum mobil viewport-verankert (fixed, feste
         // Seitenränder inset-x-2) → lesbare Breite OHNE horizontalen Overflow.
         <div className="absolute left-0 right-0 top-full mt-2 z-30 max-h-[70vh] overflow-y-auto overscroll-contain rounded-lg max-sm:fixed max-sm:inset-x-2 max-sm:left-2 max-sm:right-2 max-sm:top-[3.75rem] max-sm:mt-0">
-          <SuchResultate gruppen={gruppen} allesGeladen={allesGeladen} q={q} onAuswahl={auswahl} listboxId={listboxId} aktivId={aktivId}
-            vorschlag={vorschlag} abdeckung={abdeckung} onVorschlag={uebernehmeVorschlag}
-            onNavigate={(href) => navigate(href)} />
+          {zeigtLeer
+            // UI-NAV O1: Leerzustand (⌘K/Fokus ohne Eingabe) — Verlauf + Einstiege.
+            ? <SucheLeerzustand onAuswahl={auswahl} />
+            : <SuchResultate gruppen={gruppen} allesGeladen={allesGeladen} q={q} onAuswahl={auswahl} listboxId={listboxId} aktivId={aktivId}
+                vorschlag={vorschlag} abdeckung={abdeckung} onVorschlag={uebernehmeVorschlag}
+                onNavigate={(href) => navigate(href)} />}
         </div>
       )}
     </div>

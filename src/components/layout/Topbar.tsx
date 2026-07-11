@@ -4,6 +4,7 @@ import { HeaderSuche } from './HeaderSuche';
 import { SprachUmschalter } from '../SprachUmschalter';
 import { ThemaUmschalter } from './ThemaUmschalter';
 import { ReiterUebersicht } from './ReiterUebersicht';
+import { VerlaufUebersicht } from './VerlaufUebersicht';
 import type { Schriftskala } from './useSchriftskala';
 
 // ─── Top-Streifen der App-Shell (Build-Plan App-Shell, Phase 3) ─────────────
@@ -96,6 +97,7 @@ export function Topbar({ onMenu, seitenleisteEingeklappt, onSeitenleisteUmschalt
           {/* A5 (David 5.7.2026): kein eigener Palette-Knopf mehr — die
               HeaderSuche trägt den Norm-Sprung selbst; ⌘K/Ctrl-K und «/»
               fokussieren ihr Feld (Hinweis-kbd sitzt im Feld). */}
+          <VerlaufUebersicht />
           <ReiterUebersicht />
           <ThemaUmschalter />
           <SprachUmschalter />
