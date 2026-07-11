@@ -27,6 +27,16 @@ Steuer-Doks ihr Budget wieder überschreiten. Offene Abnahmen sind davon unberü
 (Spiegel: `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 11.7.2026 — OpenCaseLaw Baustein ① LexWork-Kantons-API: POC/Mess-Verifikation (W2·6, Worktree `lm-ocl-lexwork`, Branch `feat/ocl-lexwork-kantone`, doc-only)
+
+**Auftrag:** OCL-Baustein 1 (LexWork-Kantons-API für 19 Kt.) bauen, Go David 10.7. **Kernbefund: bereits gebaut+live — kein Neubau** (Neubau = §1/§6-Verstoss, Golden-Churn auf 1 232 Snapshots). Adapter `scripts/normtext/adapter-lexwork.ts` (fetch→`xhtml_tol`, Drift `version_uid`), Discovery `lexfind-discovery.ts` (host-agnostisch, folgt Redirects), 1 232 Snapshots (alle 26 Kt.), Drift-Tor `check:normtext-netz` existieren produktiv — alle drei Auftrags-Bau-Items sind da.
+
+**Geliefert (POC/Mess-Phase §7):** 19 LexWork-Kantone **live** gegen die amtlichen Portale verifiziert (read-only). **18/19 voll nutzbar** (Index-Liveness, `version_uid`, `xhtml_tol`/`class='article'`). 7 Hosts 301→neuer amtlicher Host (FR/GL/NW/OW/SH/VS/ZG); «nie hardcoden» bestätigt. **GL = Currency-Befund:** `gesetze.gl.ch` serviert `texts_of_law/{id}` (`xhtml_tol`) nicht mehr (Soft-404-Shell), nur `/show_as_json` lebt → GL-Snapshots driften; erstes Argument für den `json_content`-Upgrade. Verfallsregister-Eintrag gesetzt.
+
+**Gegenprüfung bestanden** (unabhängig, amtliche Quelle in Prüfsession geöffnet): SO 111.1 Art. 1 zeichengleich; AR-future (geltende≠künftige Fassung); BS 153.100 art_53 abrogated (leerer Block, kein fabrizierter Text). Doc-only → kein Risiko-Diff, kein `gegenpruefung:ok`-Token nötig.
+
+**Artefakte:** Verdikt-Tabelle+§11 `bibliothek/normen/lexwork-kantone-poc-19-verdikt.md` (+INDEX); Verfall-Eintrag GL; FAHRPLAN-OPENCASELAW §Stand; ROADMAP-OCL-Notiz. **Offen (Follow-ups):** GL-`json_content`-Andockung + David-SCHEMA-ENTSCHEID `json_content` vs. `xhtml_tol`. Trailer `Roadmap: W2·6`. PR mit armiertem Auto-Merge.
+
 ## Session 11.7.2026 — U-POSITION (A2+A16+A17): Scrollbalken-Proportionalität · exakte Zurück-Restoration · Split-View-Fundstelle (W2·5d, reines UI, Worktree `lm-u-position`, Branch `feat/u-position-a2-a16-a17`)
 
 **Reader-Kette W2·5d nach U-VERWEIS.** Drei Anmerkungen an der Höhen-/Anker-Mechanik, reine Darstellung/Interaktion (`Gegenpruefung: n/a`). **Golden byte-gleich** (alle Änderungen Client-Reader; kein `public/normtext`/`erlassVolltextHtml`; `golden:vergleich` IDENTISCH).

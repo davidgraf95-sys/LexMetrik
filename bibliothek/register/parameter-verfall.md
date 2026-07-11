@@ -134,6 +134,19 @@ bleibt stets die amtliche Quelle. NICHT von Hand editieren — Block wird von
 - **Prüfen:** ab Juli 2026 auf ne.ch, vor jeder Stammdaten-Übernahme NE.
 - **Quelle:** ne.ch/Presse (Doppelcheck-Durchgang 5.6.2026).
 
+## GL LexWork-Migration `gesetze.gl.ch` — `xhtml_tol`-Endpunkt tot (Befund 11.7.2026)
+- **Was:** Glarus ist von `gl.clex.ch` (301) auf `gesetze.gl.ch` migriert. Der
+  `lightweight_index` antwortet dort (487 Erlasse), aber der vom `adapter-lexwork.ts`
+  genutzte `GET …/texts_of_law/{lawId}` (→ `xhtml_tol`) liefert einen Soft-404
+  (Angular-Shell). Nur `…/texts_of_law/{lawId}/show_as_json` (`json_content`) lebt weiter.
+- **Folge:** Die 5 GL-Snapshots (`public/normtext/kanton/GL-*.json`) driften; der
+  heutige Adapter-Pfad kann sie nicht refreshen → `check:normtext-netz` warnt für GL.
+  Alle anderen 6 migrierten LexWork-Hosts (FR/NW/OW/SH/VS/ZG) servieren `xhtml_tol`
+  weiter — der Bruch ist GL-spezifisch.
+- **Prüfen/Auflösen:** GL über den `json_content`-Pfad andocken (Follow-up, Risiko-
+  Schritt mit Pflicht-Gegenprüfung; koppelt an David-SCHEMA-ENTSCHEID a/b/c).
+- **Quelle:** Live-Sweep 11.7.2026, `bibliothek/normen/lexwork-kantone-poc-19-verdikt.md`.
+
 ## Terminierte Nachfolgefassungen kantonaler Kosten-Erlasse (✓2-Befund 5.6.2026)
 - **SG Gerichtskostenverordnung (GKV, sGS 941.12): Nachfolgefassung seit 1.7.2026 in Vollzug — AUFGELÖST + verifiziert 1.7.2026.**
   Nachtrag vom 5.12.2025 (nGS 2026-001), LexWork `current_version` 3863. Art. 10
