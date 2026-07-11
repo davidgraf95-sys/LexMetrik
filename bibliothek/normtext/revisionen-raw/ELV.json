@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1965-12-06"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 6. Dezember 1965 zum Bundesgesetz über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 6 décembre 1965 relative à la loi fédérale sur les prestations complémentaires à l'assurance-vieillesse, survivants et invalidité"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 6 dicembre 1965 concernente la legge federale sulle prestazioni complementari all'assicurazione per la vecchiaia, i superstiti e l'invalidità"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.301"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1965/1045_1057_1041"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1966-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1965-12-06"
+        "value": "RO 1965 1057"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1965-12-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1965 1057"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 6. Dezember 1965 zum Bundesgesetz über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1965-12-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1965 1057"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 6. Dezember 1965 zum Bundesgesetz über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 6 décembre 1965 relative à la loi fédérale sur les prestations complémentaires à l'assurance-vieillesse, survivants et invalidité"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 6 dicembre 1965 concernente la legge federale sulle prestazioni complementari all'assicurazione per la vecchiaia, i superstiti e l'invalidità"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.301"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1965/1045_1057_1041"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1966-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1965-12-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1965 1057"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 6. Dezember 1965 zum Bundesgesetz über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1971-01-15"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 15. Januar 1971 über die Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 15 janvier 1971 sur les prestations complémentaires à l'assurance-vieillesse, survivants et invalidité (OPC-AVS/AI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 15 gennaio 1971 sulle prestazioni complementari all'assicurazione per la vecchiaia, i superstiti e l'invalidità (OPC-AVS/AI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.301"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1971/37_37_37"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1971-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1971-01-15"
+        "value": "RO 1971 37"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1971-01-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1971 37"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 15. Januar 1971 über die Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELV)"
@@ -245,6 +237,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1971-01-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1971 37"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 15. Januar 1971 über die Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 15 janvier 1971 sur les prestations complémentaires à l'assurance-vieillesse, survivants et invalidité (OPC-AVS/AI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 15 gennaio 1971 sulle prestazioni complementari all'assicurazione per la vecchiaia, i superstiti e l'invalidità (OPC-AVS/AI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.301"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1971/37_37_37"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1971-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1971-01-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1971 37"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 15. Januar 1971 über die Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELV)"
@@ -277,37 +309,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-09-16"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les prestations complémentaires à l'assurance-vieillesse, survivants et invalidité (OPC-AVS/AI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulle prestazioni complementari all'assicurazione per la vecchiaia, i superstiti e l'invalidità (OPC-AVS/AI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.301"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1998/2582_2582_2582"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-09-16"
+        "value": "RO 1998 2582"
       },
       "titleDe": {
         "type": "literal",
@@ -341,6 +345,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-09-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1998 2582"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les prestations complémentaires à l'assurance-vieillesse, survivants et invalidité (OPC-AVS/AI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulle prestazioni complementari all'assicurazione per la vecchiaia, i superstiti e l'invalidità (OPC-AVS/AI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.301"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1998/2582_2582_2582"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-09-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1998 2582"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELV)"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-11-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2908"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELV)"
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-11-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2908"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELV)"
@@ -436,6 +488,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-11-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2908"
       },
       "titleDe": {
         "type": "literal",
@@ -469,37 +525,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-09-11"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les prestations complémentaires à l'assurance-vieillesse, survivants et invalidité (OPC-AVS/AI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulle prestazioni complementari all'assicurazione per la vecchiaia, i superstiti e l'invalidità (OPC-AVS/AI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.301"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/577"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-09-11"
+        "value": "RO 2002 3726"
       },
       "titleDe": {
         "type": "literal",
@@ -533,6 +561,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-09-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3726"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les prestations complémentaires à l'assurance-vieillesse, survivants et invalidité (OPC-AVS/AI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulle prestazioni complementari all'assicurazione per la vecchiaia, i superstiti e l'invalidità (OPC-AVS/AI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.301"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/577"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-09-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3726"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELV)"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-05-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3877"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELV)"
@@ -597,6 +669,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-05-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3877"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELV)"
@@ -628,6 +704,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-05-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3877"
       },
       "titleDe": {
         "type": "literal",
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-09-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 4369"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELV)"
@@ -693,6 +777,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-09-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 4369"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELV)"
@@ -725,69 +813,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-09-24"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les prestations complémentaires à l'assurance-vieillesse, survivants et invalidité (OPC-AVS/AI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulle prestazioni complementari all'assicurazione per la vecchiaia, i superstiti e l'invalidità (OPC-AVS/AI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.301"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2005/770"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-11-23"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung über die Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les prestations complémentaires à l'assurance-vieillesse, survivants et invalidité (OPC-AVS/AI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulle prestazioni complementari all'assicurazione per la vecchiaia, i superstiti e l'invalidità (OPC-AVS/AI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.301"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2005/770"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-11-23"
+        "value": "RO 2004 4369"
       },
       "titleDe": {
         "type": "literal",
@@ -821,6 +849,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-11-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5637"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les prestations complémentaires à l'assurance-vieillesse, survivants et invalidité (OPC-AVS/AI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulle prestazioni complementari all'assicurazione per la vecchiaia, i superstiti e l'invalidità (OPC-AVS/AI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.301"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/770"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-11-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5637"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les prestations complémentaires à l'assurance-vieillesse, survivants et invalidité (OPC-AVS/AI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulle prestazioni complementari all'assicurazione per la vecchiaia, i superstiti e l'invalidità (OPC-AVS/AI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.301"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/770"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-11-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5637"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELV)"
@@ -853,6 +957,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-09-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6341"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELV)"
@@ -885,6 +993,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-09-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6341"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELV)"
@@ -916,6 +1028,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-09-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6341"
       },
       "titleDe": {
         "type": "literal",
@@ -949,6 +1065,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-11-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 4683"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELV)"
@@ -981,6 +1101,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-11-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 4683"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELV)"
@@ -1013,6 +1137,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-11-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 4683"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELV)"
@@ -1045,6 +1173,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-01-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 599"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELV)"
@@ -1077,6 +1209,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-01-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 599"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELV)"
@@ -1108,6 +1244,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-01-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 599"
       },
       "titleDe": {
         "type": "literal",
@@ -1140,6 +1280,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-10-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 4617"
       },
       "titleDe": {
         "type": "literal",
@@ -1173,6 +1317,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-10-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 4617"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELV)"
@@ -1204,6 +1352,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-10-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 4617"
       },
       "titleDe": {
         "type": "literal",

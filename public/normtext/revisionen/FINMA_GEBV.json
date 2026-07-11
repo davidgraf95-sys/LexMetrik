@@ -1,7 +1,7 @@
 {
   "erlassKey": "FINMA_GEBV",
   "sr": "956.122",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -76,49 +76,49 @@
       "dateEntryInForce": "2013-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/834",
       "dateDocument": "2012-11-21",
-      "roFundstelle": "AS 2012 834",
+      "roFundstelle": "AS 2012 6915",
       "titelDe": "Verordnung über die Erhebung von Gebühren und Abgaben durch die Eidgenössische Finanzmarktaufsicht (FINMA-Gebühren- und Abgabenverordnung, FINMA-GebV)",
       "titelFr": "Ordonnance réglant la perception d'émoluments et de taxes par l'Autorité fédérale de surveillance des marchés financiers (Ordonnance sur les émoluments et les taxes de la FINMA, Oém-FINMA)",
       "titelIt": "Ordinanza sulla riscossione di emolumenti e tasse da parte dell'Autorità federale di vigilanza sui mercati finanziari (Ordinanza sugli emolumenti e sulle tasse della FINMA, Oem-FINMA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/834/de",
-      "sha": "70ab16bae15acbaa0542d39a0d06ba817b9b74ae6abbe598d20db6d9359045cd"
+      "sha": "ec804ed67d6ef1e3b1f926c6b5f9836e5972eb20d0f348b6e6f07927f93fba66"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2011-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/799",
       "dateDocument": "2010-11-17",
-      "roFundstelle": "AS 2010 799",
+      "roFundstelle": "AS 2010 5597",
       "titelDe": "Verordnung über die Erhebung von Gebühren und Abgaben durch die Eidgenössische Finanzmarktaufsicht (FINMA-Gebühren- und Abgabenverordnung, FINMA-GebV)",
       "titelFr": "Ordonnance réglant la perception d'émoluments et de taxes par l'Autorité fédérale de surveillance des marchés financiers (Ordonnance sur les émoluments et les taxes de la FINMA, Oém-FINMA)",
       "titelIt": "Ordinanza sulla riscossione di emolumenti e tasse da parte dell'Autorità federale di vigilanza sui mercati finanziari (Ordinanza sugli emolumenti e sulle tasse della FINMA, Oem-FINMA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/799/de",
-      "sha": "73aafb7ebcdbb3ea72d0c12207cc26f7667ae17006444f307f853866a1a35379"
+      "sha": "385278a2a1de685ececcda75e3770c09b8e0527f89cfba3376641135578a9f9b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2009-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/749",
       "dateDocument": "2008-10-15",
-      "roFundstelle": "AS 2008 749",
+      "roFundstelle": "AS 2008 5343",
       "titelDe": "Verordnung über die Erhebung von Gebühren und Abgaben durch die Eidgenössische Finanzmarktaufsicht (FINMA-Gebühren- und Abgabenverordnung, FINMA-GebV)",
       "titelFr": "Ordonnance réglant la perception d'émoluments et de taxes par l'Autorité fédérale de surveillance des marchés financiers (Ordonnance sur les émoluments et les taxes de la FINMA, Oém-FINMA)",
       "titelIt": "Ordinanza sulla riscossione di emolumenti e tasse da parte dell'Autorità federale di vigilanza sui mercati finanziari (Ordinanza sugli emolumenti e sulle tasse della FINMA, Oem-FINMA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/749/de",
-      "sha": "24394c8f957bdaeadccd124b9095438f6dac6be9feda03000872021d5899ce53"
+      "sha": "0bba0c68bdf8a657a9a58cec52dc6bf587ae4dccb474fb8ce1521da6dcaf5e43"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2009-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/224",
       "dateDocument": "2009-03-25",
-      "roFundstelle": "AS 2009 224",
+      "roFundstelle": "AS 2009 1559",
       "titelDe": "Verordnung über die Erhebung von Gebühren und Abgaben durch die Eidgenössische Finanzmarktaufsicht (FINMA-Gebühren- und Abgabenverordnung; FINMA-GebV)",
       "titelFr": "Ordonnance réglant la perception d'émoluments et de taxes par l'Autorité fédérale de surveillance des marchés financiers (Ordonnance sur les émoluments et les taxes de la FINMA, Oém FINMA)",
       "titelIt": "Ordinanza sulla riscossione di emolumenti e tasse da parte dell'Autorità federale di vigilanza sui mercati finanziari (Ordinanza sugli emolumenti e sulle tasse della FINMA, Oem-FINMA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/224/de",
-      "sha": "0a74213f32a7158c5089c5b8848530d6c9e538ddd1dc6bddd1e52615a8a7ec12"
+      "sha": "898a799a22ada6d28e16f530a678d539b8a9a17eb0bf5cb4a67b175029a8203d"
     }
   ],
-  "sha": "b618933249dcaa05760812446f8c7a38ec8d4bbcddb60768ebc641dceb02bb45"
+  "sha": "f70232457596160fce3e1a350ad2c55da0859b2f8d7d0f8c37f20c8379241fb1"
 }

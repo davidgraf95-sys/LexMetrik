@@ -1,7 +1,7 @@
 {
   "erlassKey": "FINIV",
   "sr": "954.11",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -45,60 +45,60 @@
       "dateEntryInForce": "2020-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/763",
       "dateDocument": "2019-11-06",
-      "roFundstelle": "AS 2019 763",
+      "roFundstelle": "AS 2019 4633",
       "titelDe": "Verordnung über die Finanzinstitute (Finanzinstitutsverordnung, FINIV)",
       "titelFr": "Ordonnance sur les établissements financiers (OEFin)",
       "titelIt": "Ordinanza sugli istituti finanziari (OIsFi)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/763/de",
-      "sha": "258dd8e3ae256cf859a489bdd74aba2c351ee17fc6513568344a52f8a88f5a53"
+      "sha": "ab9715bf1ea8e60bad9d619ef04653d743a1d9e5655442ff35d5c57794ad0749"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2013-05-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/251",
       "dateDocument": "2013-04-10",
-      "roFundstelle": "AS 2013 251",
+      "roFundstelle": "AS 2013 1111",
       "titelDe": "Verordnung über die Börsen und den Effektenhandel (Börsenverordnung, BEHV)",
       "titelFr": "Ordonnance sur les bourses et le commerce des valeurs mobilières (Ordonnance sur les bourses, OBVM)",
       "titelIt": "Ordinanza sulle borse e il commercio di valori mobiliari (Ordinanza sulle borse, OBVM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/251/de",
-      "sha": "8ea68e9d65d0ef821c7d58642f262dc68cde6fbaff4985bf658aeab232fc6f0a"
+      "sha": "c576690f7e95a4e7dbf97fbb92c6268c88a8ab06d1e76d6344284b9543c37aa3"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2011-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/467",
       "dateDocument": "2011-06-29",
-      "roFundstelle": "AS 2011 467",
+      "roFundstelle": "AS 2011 3461",
       "titelDe": "Verordnung über die Börsen und den Effektenhandel (Börsenverordnung, BEHV)",
       "titelFr": "Ordonnance sur les bourses et le commerce des valeurs mobilières (Ordonnance sur les bourses, OBVM)",
       "titelIt": "Ordinanza sulle borse e il commercio di valori mobiliari (Ordinanza sulle borse, OBVM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/467/de",
-      "sha": "4b549c5ab0846d8692ab021c11239028ea5e5f242e7e613f7cbc1b5578381313"
+      "sha": "57144126c9c28c32b1cb5fcbd0120f737a714d761ef12eb8557e621820c0fda7"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2004-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/343",
       "dateDocument": "2004-03-31",
-      "roFundstelle": "AS 2004 343",
+      "roFundstelle": "AS 2004 2781",
       "titelDe": "Verordnung über die Börsen und den Effektenhandel (Börsenverordnung, BEHV)",
       "titelFr": "Ordonnance sur les bourses et le commerce des valeurs mobilières (Ordonnance sur les bourses, OBVM)",
       "titelIt": "Ordinanza sulle borse e il commercio di valori mobiliari (Ordinanza sulle borse, OBVM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/343/de",
-      "sha": "a53e5b4d56f3cb810f5425f981bb9a6cea05e584cc3114f5468dd020e1e1ef47"
+      "sha": "119b837af39274c8853f9320014e46372e275577abce645e8591da49cbe7335f"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "1999-12-31",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/533",
       "dateDocument": "1999-10-27",
-      "roFundstelle": "AS 1999 533",
+      "roFundstelle": "AS 1999 3670",
       "titelDe": "Verordnung über die Börsen und den Effektenhandel (Börsenverordnung, BEHV)",
       "titelFr": "Ordonnance sur les bourses et le commerce des valeurs mobilières (Ordonnance sur les bourses, OBVM)",
       "titelIt": "Ordinanza sulle borse e il commercio di valori mobiliari (Ordinanza sulle borse, OBVM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/533/de",
-      "sha": "a68845f978188a101e29d515b620996e58cc0c4310c6677ba839e480ee84904e"
+      "sha": "e053e615b323a386a512153a02e8715e723806ddc2908de9e6294f869d2a763d"
     },
     {
       "art": "aenderung",
@@ -113,5 +113,5 @@
       "sha": "709fe058838d351585ac9c86da0adf01f5c775b4d89f54010dfd572c3724d4b9"
     }
   ],
-  "sha": "11dff85501fd00b86889845107bac637ef81a7734a1ddbee7136b251e089885a"
+  "sha": "c1e2e5f75b4aaed6ccff61425062ed493126a881a37ba4d461f9567a2331af7f"
 }

@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1972-03-17"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesbeschluss vom 17. März 1972 über dringliche Massnahmen auf dem Gebiete der Raumplanung"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Arrêté fédéral du 17 mars 1972 instituant des mesures urgentes en matière d'aménagement du territoire"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Decreto federale del 17 marzo 1972 su alcuni provvedimenti urgenti nell'ambito della pianificazione del territorio"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "700"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1972/644_652_576"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1972-03-24"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1972-03-17"
+        "value": "RO 1972 652"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1972-03-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1972 652"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss vom 17. März 1972 über dringliche Massnahmen auf dem Gebiete der Raumplanung"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1972-03-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1972 652"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesbeschluss vom 17. März 1972 über dringliche Massnahmen auf dem Gebiete der Raumplanung"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Arrêté fédéral du 17 mars 1972 instituant des mesures urgentes en matière d'aménagement du territoire"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Decreto federale del 17 marzo 1972 su alcuni provvedimenti urgenti nell'ambito della pianificazione del territorio"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "700"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1972/644_652_576"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1972-03-24"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1972-03-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1972 652"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss vom 17. März 1972 über dringliche Massnahmen auf dem Gebiete der Raumplanung"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1979-06-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom 22. Juni 1979 über die Raumplanung (Raumplanungsgesetz, RPG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 22 juin 1979 sur l'aménagement du territoire (Loi sur l'aménagement du territoire, LAT)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 22 giugno 1979 sulla pianificazione del territorio (Legge sulla pianificazione del territorio, LPT)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "700"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1979/1573_1573_1573"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1980-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1979-06-22"
+        "value": "RO 1979 1573"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1979-06-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1979 1573"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 22. Juni 1979 über die Raumplanung (Raumplanungsgesetz, RPG)"
@@ -245,6 +237,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1979-06-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1979 1573"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 22. Juni 1979 über die Raumplanung (Raumplanungsgesetz, RPG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 22 juin 1979 sur l'aménagement du territoire (Loi sur l'aménagement du territoire, LAT)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 22 giugno 1979 sulla pianificazione del territorio (Legge sulla pianificazione del territorio, LPT)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "700"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1979/1573_1573_1573"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1980-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1979-06-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1979 1573"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 22. Juni 1979 über die Raumplanung (Raumplanungsgesetz, RPG)"
@@ -277,37 +309,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-03-20"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur l'aménagement du territoire (LAT)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulla pianificazione del territorio (LPT)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "700"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/309"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-09-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-03-20"
+        "value": "RO 2000 2042"
       },
       "titleDe": {
         "type": "literal",
@@ -341,6 +345,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-03-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2042"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'aménagement du territoire (LAT)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla pianificazione del territorio (LPT)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "700"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/309"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-09-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-03-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2042"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)"
@@ -373,37 +417,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-09-05"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur l'aménagement du territoire (loi sur l'aménagement du territoire, LAT)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulla pianificazione del territorio (Legge sulla pianificazione del territorio, LPT)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "700"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/338"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-09-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-09-05"
+        "value": "RO 2000 2190"
       },
       "titleDe": {
         "type": "literal",
@@ -437,6 +453,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-09-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2190"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'aménagement du territoire (loi sur l'aménagement du territoire, LAT)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla pianificazione del territorio (Legge sulla pianificazione del territorio, LPT)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "700"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/338"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-09-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-09-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2190"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)"
@@ -469,37 +525,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-12-13"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur l'aménagement du territoire (Loi sur l'aménagement du territoire, LAT)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulla pianificazione del territorio (Legge sulla pianificazione del territorio, LPT)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "700"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/181"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-06-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-12-13"
+        "value": "RO 2003 1021"
       },
       "titleDe": {
         "type": "literal",
@@ -533,6 +561,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-12-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 1021"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'aménagement du territoire (Loi sur l'aménagement du territoire, LAT)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla pianificazione del territorio (Legge sulla pianificazione del territorio, LPT)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "700"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/181"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-12-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 1021"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 3637"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)"
@@ -597,6 +669,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 3637"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)"
@@ -628,6 +704,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 3637"
       },
       "titleDe": {
         "type": "literal",
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-12-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 2913"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)"
@@ -693,6 +777,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-12-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 2913"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)"
@@ -725,69 +813,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-12-17"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur l'aménagement du territoire (Loi sur l'aménagement du territoire, LAT)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulla pianificazione del territorio (Legge sulla pianificazione del territorio, LPT)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "700"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/640"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-11-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-12-23"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur l'aménagement du territoire (Loi sur l'aménagement du territoire, LAT)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulla pianificazione del territorio (Legge sulla pianificazione del territorio, LPT)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "700"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/640"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-11-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-12-23"
+        "value": "RO 2011 2913"
       },
       "titleDe": {
         "type": "literal",
@@ -821,6 +849,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-12-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 5535"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'aménagement du territoire (Loi sur l'aménagement du territoire, LAT)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla pianificazione del territorio (Legge sulla pianificazione del territorio, LPT)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "700"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/640"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-11-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-12-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 5535"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'aménagement du territoire (Loi sur l'aménagement du territoire, LAT)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla pianificazione del territorio (Legge sulla pianificazione del territorio, LPT)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "700"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/640"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-11-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-12-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 5535"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)"
@@ -853,6 +957,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 899"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)"
@@ -885,6 +993,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 899"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)"
@@ -916,6 +1028,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 899"
       },
       "titleDe": {
         "type": "literal",
@@ -949,6 +1065,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-03-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 905"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)"
@@ -981,6 +1101,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-03-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 905"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)"
@@ -1012,6 +1136,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-03-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 905"
       },
       "titleDe": {
         "type": "literal",

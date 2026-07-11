@@ -1,7 +1,7 @@
 {
   "erlassKey": "VVEA",
   "sr": "814.600",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -130,24 +130,24 @@
       "dateEntryInForce": "2021-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/1029",
       "dateDocument": "2020-12-11",
-      "roFundstelle": "AS 2020 1029",
+      "roFundstelle": "AS 2020 6283",
       "titelDe": "Verordnung über die Vermeidung und die Entsorgung von Abfällen (Abfallverordnung, VVEA)",
       "titelFr": "Ordonnance sur la limitation et l'élimination des déchets (Ordonnance sur les déchets, OLED)",
       "titelIt": "Ordinanza sulla prevenzione e lo smaltimento di rifiuti (Ordinanza sui rifiuti, OPSR)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/1029/de",
-      "sha": "128749fd53196fc5c942e7dd18c5e94394c86913106947b815a5d392de478e64"
+      "sha": "be02ad1fdc8a7ca2b274238f622610bf41e8a1bff2365f15dbe929971cfc3ce4"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2020-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/147",
       "dateDocument": "2020-02-12",
-      "roFundstelle": "AS 2020 147",
+      "roFundstelle": "AS 2020 801",
       "titelDe": "Verordnung über die Vermeidung und die Entsorgung von Abfällen (Abfallverordnung, VVEA)",
       "titelFr": "Ordonnance sur la limitation et l'élimination des déchets (Ordonnance sur les déchets, OLED)",
       "titelIt": "Ordinanza sulla prevenzione e lo smaltimento dei rifiuti (Ordinanza sui rifiuti, OPSR)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/147/de",
-      "sha": "6a412ecaf8f4a88d1e582dc583e0aaece2604296aa6caedb41be55eb09b07ba8"
+      "sha": "0bdf7f8502c9f99afa67522c856ff6b28dbddf9f63f9423ccb0b01d3f7432bde"
     },
     {
       "art": "sammelerlass-marker",
@@ -160,12 +160,12 @@
       "dateEntryInForce": "2018-11-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/571",
       "dateDocument": "2018-09-21",
-      "roFundstelle": "AS 2018 571",
+      "roFundstelle": "AS 2018 3515",
       "titelDe": "Verordnung über die Vermeidung und die Entsorgung von Abfällen (Abfallverordnung, VVEA)",
       "titelFr": "Ordonnance sur la limitation et l'élimination des déchets (Ordonnance sur les déchets, OLED)",
       "titelIt": "Ordinanza sulla prevenzione e lo smaltimento dei rifiuti (Ordinanza sui rifiuti, OPSR)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/571/de",
-      "sha": "85475375f6b30eb45e5e1e2a9ba6d60da26f22f85e65819b3b38de729d55e835"
+      "sha": "4199e7d7cc5b22d5b4bfd85c4f5b31de012b6b97999665e860eed89f0a51298e"
     },
     {
       "art": "sammelerlass-marker",
@@ -178,48 +178,48 @@
       "dateEntryInForce": "2017-10-03",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/561",
       "dateDocument": "2017-10-03",
-      "roFundstelle": "AS 2017 561",
+      "roFundstelle": "AS 2017 5137",
       "titelDe": "Verordnung über die Vermeidung und die Entsorgung von Abfällen (Abfallverordnung, VVEA) (Betrifft nur den französischen Text)",
       "titelFr": "Ordonnance sur la limitation et l'élimination des déchets (Ordonnance sur les déchets, OLED)",
       "titelIt": "Ordinanza sulla prevenzione e lo smaltimento dei rifiuti (Ordinanza sui rifiuti, OPSR) (Concerne soltanto il testo francese)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/561/de",
-      "sha": "b842fef13be2e7ed46aa02383a07515de0f3cf3a80092e21bd76a5c43d175ac6"
+      "sha": "ebe94c504321bc9fb6c40bd57574a11e094dc95b1a0493a2ddace1bfadcb6b0e"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2016-07-19",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/417",
       "dateDocument": "2016-07-19",
-      "roFundstelle": "AS 2016 417",
+      "roFundstelle": "AS 2016 2629",
       "titelDe": "Verordnung über die Vermeidung und die Entsorgung von Abfällen (Abfallverordnung, VVEA) (Betrifft nur den französischen und italienischen Text)",
       "titelFr": "Ordonnance sur la limitation et l'élimination des déchets (Ordonnance sur les déchets, OLED)",
       "titelIt": "Ordinanza sulla prevenzione e lo smaltimento dei rifiuti (Ordinanza sui rifiuti, OPSR)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/417/de",
-      "sha": "4c49fcdcaaae397353b7bd2d83435451064ceee79ce2ad0034bd2127c4ae3b74"
+      "sha": "d20f853e56864d159405780d383dda13918167c178879b57815c800836941583"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2016-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/891",
       "dateDocument": "2015-12-04",
-      "roFundstelle": "AS 2015 891",
+      "roFundstelle": "AS 2015 5699",
       "titelDe": "Verordnung über die Vermeidung und die Entsorgung von Abfällen (Abfallverordnung, VVEA)",
       "titelFr": "Ordonnance sur la limitation et l'élimination des déchets (Ordonnance sur les déchets, OLED)",
       "titelIt": "Ordinanza sulla prevenzione e lo smaltimento dei rifiuti (Ordinanza sui rifiuti, OPSR)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/891/de",
-      "sha": "a2b31e8009c4adb7d788e70302f15a005f88bd90626e9ce4618ceaac45a29bfb"
+      "sha": "68eddf5e9c4e487e3da9eb97f2097c884ebe139c423a1a64e3b325951b4e4a7d"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2007-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/389",
       "dateDocument": "2007-06-08",
-      "roFundstelle": "AS 2007 389",
+      "roFundstelle": "AS 2007 2929",
       "titelDe": "Technische Verordnung über Abfälle (TVA)",
       "titelFr": "Ordonnance sur le traitement des déchets (OTD)",
       "titelIt": "Ordinanza tecnica sui rifiuti (OTR)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/389/de",
-      "sha": "6d07232f28564b1325a274c126c4cf09184bb34551a88b54b7c68f3275cf3e4d"
+      "sha": "f778b3b6186a92ae075cb439583feae247df2102e640155091add13c5c26eda6"
     },
     {
       "art": "aenderung",
@@ -238,13 +238,13 @@
       "dateEntryInForce": "1991-02-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/302",
       "dateDocument": "2008-05-14",
-      "roFundstelle": "AS 2008 302",
+      "roFundstelle": "AS 2008 2111",
       "titelDe": "Technische Verordnung über Abfälle (TVA) (Betrifft nur den französischen Text)",
       "titelFr": "Ordonnance sur le traitement des déchets (OTD)",
       "titelIt": "Ordinanza tecnica sui rifiuti (OTR) (Concerne solo il testo francese)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/302/de",
-      "sha": "3320cf937257228c8427cbf150777c010bf3ea6b94345bee4dfe657a93f8303c"
+      "sha": "f9564c812f55206e9b5359b7e6805fd2d7146a851145205a0831d68f1a53386c"
     }
   ],
-  "sha": "b5268963eee3da53a8c0be0f6754c1c98809eb67fd15392290b3fce854207bf3"
+  "sha": "08855d8a136239542c0e61a90c9a422486a36528938148aa3f45a8b46f16a642"
 }

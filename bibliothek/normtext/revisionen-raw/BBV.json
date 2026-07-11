@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1965-03-30"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 30. März 1965 zum Bundesgesetz über die Berufsbildung"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance d'exécution du 30 mars 1965 de la loi fédérale sur la formation professionnelle"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza d'esecuzione del 30 marzo 1965 della legge federale sulla formazione professionale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "412.101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1965/345_350_346"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1965-04-15"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1965-03-30"
+        "value": "RO 1965 350"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1965-03-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1965 350"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 30. März 1965 zum Bundesgesetz über die Berufsbildung"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1965-03-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1965 350"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 30. März 1965 zum Bundesgesetz über die Berufsbildung"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance d'exécution du 30 mars 1965 de la loi fédérale sur la formation professionnelle"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza d'esecuzione del 30 marzo 1965 della legge federale sulla formazione professionale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "412.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1965/345_350_346"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1965-04-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1965-03-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1965 350"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 30. März 1965 zum Bundesgesetz über die Berufsbildung"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1979-11-07"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 7. November 1979 über die Berufsbildung (BBV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 7 novembre 1979 sur la formation professionnelle (OFPr)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 7 novembre 1979 sulla formazione professionale (OFP)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "412.101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1979/1712_1712_1712"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1980-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1979-11-07"
+        "value": "RO 1979 1712"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1979-11-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1979 1712"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 7. November 1979 über die Berufsbildung (BBV)"
@@ -245,6 +237,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1979-11-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1979 1712"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 7. November 1979 über die Berufsbildung (BBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 7 novembre 1979 sur la formation professionnelle (OFPr)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 7 novembre 1979 sulla formazione professionale (OFP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "412.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1979/1712_1712_1712"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1980-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1979-11-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1979 1712"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 7. November 1979 über die Berufsbildung (BBV)"
@@ -277,37 +309,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-11-19"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Berufsbildung (Berufsbildungsverordnung, BBV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la formation professionnelle (OFPr)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla formazione professionale (OFPr)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "412.101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/748"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-11-19"
+        "value": "RO 2003 5047"
       },
       "titleDe": {
         "type": "literal",
@@ -341,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-11-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 5047"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Berufsbildung (Berufsbildungsverordnung, BBV)"
@@ -373,6 +381,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-11-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 5047"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Berufsbildung (Berufsbildungsverordnung, BBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la formation professionnelle (OFPr)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla formazione professionale (OFPr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "412.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/748"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-11-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 5047"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Berufsbildung (Berufsbildungsverordnung, BBV)"
@@ -404,6 +452,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-11-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5823"
       },
       "titleDe": {
         "type": "literal",
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-11-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5823"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Anpassungen des Verordnungsrechts an die Neugestaltung des Finanzausgleichs und der Aufgabenteilung zwischen Bund und Kantonen"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-11-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5823"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Anpassungen des Verordnungsrechts an die Neugestaltung des Finanzausgleichs und der Aufgabenteilung zwischen Bund und Kantonen"
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-12-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 6005"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Berufsbildung (Berufsbildungsverordnung, BBV)"
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-12-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 6005"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Berufsbildung (Berufsbildungsverordnung, BBV)"
@@ -565,69 +633,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-12-03"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Berufsbildung (Berufsbildungsverordnung, BBV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la formation professionnelle (OFPr)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla formazione professionale (OFPr)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "412.101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/773"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-11-14"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung über die Berufsbildung (Berufsbildungsverordnung, BBV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la formation professionnelle (OFPr)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla formazione professionale (OFPr)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "412.101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/773"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-11-14"
+        "value": "RO 2010 6005"
       },
       "titleDe": {
         "type": "literal",
@@ -661,6 +669,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-11-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6473"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Berufsbildung (Berufsbildungsverordnung, BBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la formation professionnelle (OFPr)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla formazione professionale (OFPr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "412.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/773"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-11-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6473"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Berufsbildung (Berufsbildungsverordnung, BBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la formation professionnelle (OFPr)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla formazione professionale (OFPr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "412.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/773"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-11-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6473"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Berufsbildung (Berufsbildungsverordnung, BBV)"
@@ -693,6 +777,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-06-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1873"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Berufsbildung (Berufsbildungsverordnung, BBV)"
@@ -725,6 +813,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-06-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1873"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Berufsbildung (Berufsbildungsverordnung, BBV)"
@@ -756,6 +848,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-06-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1873"
       },
       "titleDe": {
         "type": "literal",
@@ -789,6 +885,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 3807"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Berufsbildung (Berufsbildungsverordnung, BBV)"
@@ -821,6 +921,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 3807"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Berufsbildung (Berufsbildungsverordnung, BBV)"
@@ -852,6 +956,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 3807"
       },
       "titleDe": {
         "type": "literal",
@@ -884,6 +992,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-09-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5147"
       },
       "titleDe": {
         "type": "literal",
@@ -917,6 +1029,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-09-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5147"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Berufsbildung (Berufsbildungsverordnung, BBV)"
@@ -948,6 +1064,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-09-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5147"
       },
       "titleDe": {
         "type": "literal",

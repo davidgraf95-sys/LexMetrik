@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1971-08-25"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesratsbeschluss vom 25. August 1971 über die Schweizerische Pharmakopöe"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Arrêté du Conseil fédéral du 25 août 1971 concernant la Pharmacopée suisse"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Decreto del Consiglio federale del 25 agosto 1971 concernente la farmacopea svizzera"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "812.21"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1971/1181_1182_1182"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1972-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1971-08-25"
+        "value": "RO 1971 1182"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1971-08-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1971 1182"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesratsbeschluss vom 25. August 1971 über die Schweizerische Pharmakopöe"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1971-08-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1971 1182"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesratsbeschluss vom 25. August 1971 über die Schweizerische Pharmakopöe"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Arrêté du Conseil fédéral du 25 août 1971 concernant la Pharmacopée suisse"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Decreto del Consiglio federale del 25 agosto 1971 concernente la farmacopea svizzera"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "812.21"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1971/1181_1182_1182"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1972-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1971-08-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1971 1182"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesratsbeschluss vom 25. August 1971 über die Schweizerische Pharmakopöe"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1984-12-17"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 17. Dezember 1984 über die Schweizerische Pharmakopöe"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 17 décembre 1984 concernant la Pharmacopée suisse"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 17 dicembre 1984 sulla Farmacopea svizzera"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "812.21"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1984/1514_1514_1514"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1985-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1984-12-17"
+        "value": "RO 1984 1514"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1984-12-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1984 1514"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 17. Dezember 1984 über die Schweizerische Pharmakopöe"
@@ -245,6 +237,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1984-12-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1984 1514"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 17. Dezember 1984 über die Schweizerische Pharmakopöe"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 17 décembre 1984 concernant la Pharmacopée suisse"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 17 dicembre 1984 sulla Farmacopea svizzera"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "812.21"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1984/1514_1514_1514"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1985-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1984-12-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1984 1514"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 17. Dezember 1984 über die Schweizerische Pharmakopöe"
@@ -277,37 +309,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1987-05-20"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 20. Mai 1987 über die Schweizerische Pharmakopöe"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 20 mai 1987 concernant la Pharmacopée suisse"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 20 maggio 1987 sulla Farmacopea svizzera"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "812.21"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1987/794_794_794"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1987-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1987-05-20"
+        "value": "RO 1987 794"
       },
       "titleDe": {
         "type": "literal",
@@ -341,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1987-05-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1987 794"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 20. Mai 1987 über die Schweizerische Pharmakopöe"
@@ -373,6 +381,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1987-05-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1987 794"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 20. Mai 1987 über die Schweizerische Pharmakopöe"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 20 mai 1987 concernant la Pharmacopée suisse"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 20 maggio 1987 sulla Farmacopea svizzera"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "812.21"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1987/794_794_794"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1987-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1987-05-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1987 794"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 20. Mai 1987 über die Schweizerische Pharmakopöe"
@@ -405,37 +453,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1989-10-06"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom 6. Oktober 1989 über die Pharmakopöe (Pharmakopöegesetz, PhaG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 6 octobre 1989 sur la pharmacopée (Loi sur la pharmacopée, LPha)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 6 ottobre 1989 sulla farmacopea (Legge sulla farmacopea, LFarm)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "812.21"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1990/570_570_570"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1990-05-15"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1989-10-06"
+        "value": "RO 1990 570"
       },
       "titleDe": {
         "type": "literal",
@@ -469,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1989-10-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1990 570"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 6. Oktober 1989 über die Pharmakopöe (Pharmakopöegesetz, PhaG)"
@@ -501,6 +525,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1989-10-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1990 570"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 6. Oktober 1989 über die Pharmakopöe (Pharmakopöegesetz, PhaG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 6 octobre 1989 sur la pharmacopée (Loi sur la pharmacopée, LPha)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 6 ottobre 1989 sulla farmacopea (Legge sulla farmacopea, LFarm)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "812.21"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1990/570_570_570"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1990-05-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1989-10-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1990 570"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 6. Oktober 1989 über die Pharmakopöe (Pharmakopöegesetz, PhaG)"
@@ -533,37 +597,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-12-15"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über Arzneimittel und Medizinprodukte (Heilmittelgesetz, HMG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur les médicaments et les dispositifs médicaux (Loi sur les produits thérapeutiques, LPTh)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sui medicamenti e i dispositivi medici (Legge sugli agenti terapeutici, LATer)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "812.21"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2001/422"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-12-15"
+        "value": "RO 2001 2790"
       },
       "titleDe": {
         "type": "literal",
@@ -597,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-12-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 2790"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Arzneimittel und Medizinprodukte (Heilmittelgesetz, HMG)"
@@ -629,6 +669,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-12-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 2790"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über Arzneimittel und Medizinprodukte (Heilmittelgesetz, HMG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les médicaments et les dispositifs médicaux (Loi sur les produits thérapeutiques, LPTh)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sui medicamenti e i dispositivi medici (Legge sugli agenti terapeutici, LATer)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "812.21"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2001/422"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-12-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 2790"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Arzneimittel und Medizinprodukte (Heilmittelgesetz, HMG)"
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-06-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 4873"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Arzneimittel und Medizinprodukte (Heilmittelgesetz, HMG)"
@@ -693,6 +777,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-06-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 4873"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Arzneimittel und Medizinprodukte (Heilmittelgesetz, HMG)"
@@ -724,6 +812,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-06-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 4873"
       },
       "titleDe": {
         "type": "literal",
@@ -757,37 +849,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-09-08"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die abschliessende Inkraftsetzung der Änderung vom 13. Juni 2008 des Heilmittelgesetzes"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'entrée en vigueur complète de la modification du 13 juin 2008 de la loi sur les produits thérapeutiques"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'entrata in vigore integrale della modifica del 13 giugno 2008 della legge sugli agenti terapeutici"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "812.21"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/582"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-09-08"
+        "value": "RO 2010 4027"
       },
       "titleDe": {
         "type": "literal",
@@ -821,6 +885,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-09-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4027"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die abschliessende Inkraftsetzung der Änderung vom 13. Juni 2008 des Heilmittelgesetzes"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'entrée en vigueur complète de la modification du 13 juin 2008 de la loi sur les produits thérapeutiques"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'entrata in vigore integrale della modifica del 13 giugno 2008 della legge sugli agenti terapeutici"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "812.21"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/582"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-09-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4027"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die abschliessende Inkraftsetzung der Änderung vom 13. Juni 2008 des Heilmittelgesetzes"
@@ -853,37 +957,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-07-03"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über Arzneimittel und Medizinprodukte (Heilmittelgesetz, HMG) (Betrifft nur den italienischen Text)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur les médicaments et les dispositifs médicaux (Loi sur les produits thérapeutiques, LPTh) (Ne concerne que le texte italien)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sui medicamenti e i dispositivi medici (Legge sugli agenti terapeutici, LATer)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "812.21"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/427"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-07-03"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-07-03"
+        "value": "RO 2012 3743"
       },
       "titleDe": {
         "type": "literal",
@@ -917,6 +993,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-07-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 3743"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über Arzneimittel und Medizinprodukte (Heilmittelgesetz, HMG) (Betrifft nur den italienischen Text)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les médicaments et les dispositifs médicaux (Loi sur les produits thérapeutiques, LPTh) (Ne concerne que le texte italien)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sui medicamenti e i dispositivi medici (Legge sugli agenti terapeutici, LATer)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "812.21"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/427"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-07-03"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-07-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 3743"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Arzneimittel und Medizinprodukte (Heilmittelgesetz, HMG) (Betrifft nur den italienischen Text)"
@@ -949,37 +1065,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-06-21"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über Arzneimittel und Medizinprodukte (Heilmittelgesetz, HMG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur les médicaments et les dispositifs médicaux (Loi sur les produits thérapeutiques, LPTh)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sui medicamenti e i dispositivi medici (Legge sugli agenti terapeutici, LATer)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "812.21"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2013/761"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-06-21"
+        "value": "RO 2013 4137"
       },
       "titleDe": {
         "type": "literal",
@@ -1013,6 +1101,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-06-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4137"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über Arzneimittel und Medizinprodukte (Heilmittelgesetz, HMG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les médicaments et les dispositifs médicaux (Loi sur les produits thérapeutiques, LPTh)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sui medicamenti e i dispositivi medici (Legge sugli agenti terapeutici, LATer)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "812.21"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/761"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-06-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4137"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Arzneimittel und Medizinprodukte (Heilmittelgesetz, HMG)"
@@ -1045,6 +1173,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-03-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 2745"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Arzneimittel und Medizinprodukte (Heilmittelgesetz, HMG)"
@@ -1077,6 +1209,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-03-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 2745"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Arzneimittel und Medizinprodukte (Heilmittelgesetz, HMG)"
@@ -1108,6 +1244,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-03-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 2745"
       },
       "titleDe": {
         "type": "literal",
@@ -1141,6 +1281,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-09-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3575"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über eine Teilinkraftsetzung der Änderung vom 18. März 2016 des Heilmittelgesetzes"
@@ -1173,6 +1317,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-09-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3575"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über eine Teilinkraftsetzung der Änderung vom 18. März 2016 des Heilmittelgesetzes"
@@ -1205,6 +1353,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-09-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3575"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über eine Teilinkraftsetzung der Änderung vom 18. März 2016 des Heilmittelgesetzes"
@@ -1237,6 +1389,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-12-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 5449"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Arzneimittel und Medizinprodukte (Heilmittelgesetz, HMG)"
@@ -1269,6 +1425,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-12-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 5449"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Arzneimittel und Medizinprodukte (Heilmittelgesetz, HMG)"
@@ -1301,6 +1461,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-12-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 5449"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Arzneimittel und Medizinprodukte (Heilmittelgesetz, HMG)"
@@ -1332,6 +1496,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-04-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1393"
       },
       "titleDe": {
         "type": "literal",
@@ -1365,6 +1533,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-04-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1393"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die abschliessende Inkraftsetzung der Änderung vom 18. März 2016 des Heilmittelgesetzes"
@@ -1397,6 +1569,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-04-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1393"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die abschliessende Inkraftsetzung der Änderung vom 18. März 2016 des Heilmittelgesetzes"
@@ -1429,6 +1605,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-03-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2961"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Arzneimittel und Medizinprodukte (Heilmittelgesetz, HMG)"
@@ -1461,6 +1641,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-03-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2961"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Arzneimittel und Medizinprodukte (Heilmittelgesetz, HMG)"
@@ -1492,6 +1676,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-03-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2961"
       },
       "titleDe": {
         "type": "literal",

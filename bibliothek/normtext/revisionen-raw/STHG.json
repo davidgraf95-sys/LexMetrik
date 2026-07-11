@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1990-12-14"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom 14. Dezember 1990 über die Harmonisierung der direkten Steuern der Kantone und Gemeinden (Steuerharmonisierungsgesetz, StHG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 14 décembre 1990 sur l'harmonisation des impôts directs des cantons et des communes (LHID)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 14 dicembre 1990 sull'armonizzazione delle imposte dirette dei Cantoni e dei Comuni (LAID)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "642.14"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1991/1256_1256_1256"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1993-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1990-12-14"
+        "value": "RO 1991 1256"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1990-12-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1991 1256"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 14. Dezember 1990 über die Harmonisierung der direkten Steuern der Kantone und Gemeinden (Steuerharmonisierungsgesetz, StHG)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1990-12-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1991 1256"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 14. Dezember 1990 über die Harmonisierung der direkten Steuern der Kantone und Gemeinden (Steuerharmonisierungsgesetz, StHG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 14 décembre 1990 sur l'harmonisation des impôts directs des cantons et des communes (LHID)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 14 dicembre 1990 sull'armonizzazione delle imposte dirette dei Cantoni e dei Comuni (LAID)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "642.14"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1991/1256_1256_1256"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1993-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1990-12-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1991 1256"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 14. Dezember 1990 über die Harmonisierung der direkten Steuern der Kantone und Gemeinden (Steuerharmonisierungsgesetz, StHG)"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-10-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 1310"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Harmonisierung der direkten Steuern der Kantone und Gemeinden (StHG)"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-10-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 1310"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Harmonisierung der direkten Steuern der Kantone und Gemeinden (StHG)"
@@ -213,6 +237,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-10-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 1310"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Harmonisierung der direkten Steuern der Kantone und Gemeinden (StHG)"
@@ -244,6 +272,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-07-02"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5683"
       },
       "titleDe": {
         "type": "literal",
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-07-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5683"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 14. Dezember 1990 über die Harmonisierung der direkten Steuern der Kantone und Gemeinden (StHG)"
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-07-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5683"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 14. Dezember 1990 über die Harmonisierung der direkten Steuern der Kantone und Gemeinden (StHG)"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-08-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 4549"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Harmonisierung der direkten Steuern der Kantone und Gemeinden (StHG) (Betrifft nur den italienischen Text)"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-08-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 4549"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Harmonisierung der direkten Steuern der Kantone und Gemeinden (StHG) (Betrifft nur den italienischen Text)"
@@ -404,6 +452,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-08-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 4549"
       },
       "titleDe": {
         "type": "literal",
@@ -436,6 +488,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-02-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 993"
       },
       "titleDe": {
         "type": "literal",
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-02-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 993"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die steuerliche Behandlung der berufsorientierten Aus- und Weiterbildungskosten"
@@ -500,6 +560,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-02-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 993"
       },
       "titleDe": {
         "type": "literal",
@@ -532,6 +596,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5039"
       },
       "titleDe": {
         "type": "literal",
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5039"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Harmonisierung der direkten Steuern der Kantone und Gemeinden (StHG)"
@@ -596,6 +668,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5039"
       },
       "titleDe": {
         "type": "literal",

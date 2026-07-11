@@ -1,7 +1,7 @@
 {
   "erlassKey": "IPRG",
   "sr": "291",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -72,13 +72,13 @@
       "dateEntryInForce": "2021-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/767",
       "dateDocument": "2020-06-19",
-      "roFundstelle": "AS 2020 767",
+      "roFundstelle": "AS 2020 4179",
       "titelDe": "Bundesgesetz über das Internationale Privatrecht (IPRG)",
       "titelFr": "Loi fédérale sur le droit international privé (LDIP)",
       "titelIt": "Legge federale sul diritto internazionale privato (LDIP)",
       "botschaftKey": "BOTSCHAFT-2018-2548",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/767/de",
-      "sha": "8d66f56e38b9c33feac5d328470080a292bf3752f4a51d0871e4d682cfa38155"
+      "sha": "aadea0166805fab8355fb560e887e3c6d39583ac54105eb8a410269b119a0bb2"
     },
     {
       "art": "sammelerlass-marker",
@@ -91,25 +91,25 @@
       "dateEntryInForce": "2019-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/527",
       "dateDocument": "2018-03-16",
-      "roFundstelle": "AS 2018 527",
+      "roFundstelle": "AS 2018 3263",
       "titelDe": "Bundesgesetz über das Internationale Privatrecht (IPRG)",
       "titelFr": "Loi fédérale sur le droit international privé (LDIP)",
       "titelIt": "Legge federale sul diritto internazionale privato (LDIP)",
       "botschaftKey": "BOTSCHAFT-2017-1054",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/527/de",
-      "sha": "907d16333e50ffec6f7e628cdf731153b053a7f382d1113099036003f2acd22f"
+      "sha": "2567f375f170de07800f0d9560525ecd732e832b258cb1736f40c90e10c33026"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2017-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/179",
       "dateDocument": "2017-03-28",
-      "roFundstelle": "AS 2017 179",
+      "roFundstelle": "AS 2017 1687",
       "titelDe": "Mitteilung betreffend die Gegenstandslosigkeit von Anhang 2 des Bundesgesetzes vom 18. Dezember 1987 über das Internationale Privatrecht",
       "titelFr": "Communication relative à l'annexe 2 de la loi fédérale du 18 décembre 1987 sur le droit international privé, devenue sans objet",
       "titelIt": "Comunicazione concernente la perdita d'oggetto dell'allegato 2 della legge federale del 18 dicembre 1987 sul diritto internazionale privato",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/179/de",
-      "sha": "2052a0577f9f1cc61d8db824741042e334785a3e3a2ff7ef2d6d38863355b033"
+      "sha": "3837e560dad8d55bbbc5e1498e8756e75278ed938463804f90de8207935c6853"
     },
     {
       "art": "sammelerlass-marker",
@@ -152,25 +152,25 @@
       "dateEntryInForce": "2010-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/814",
       "dateDocument": "2008-10-03",
-      "roFundstelle": "AS 2009 814",
+      "roFundstelle": "AS 2009 6579",
       "titelDe": "Bundesbeschluss über die Genehmigung und die Umsetzung des Übereinkommens über die auf bestimmte Rechte an intermediärverwahrten Wertpapieren anzuwendende Rechtsordnung",
       "titelFr": "Arrêté fédéral portant approbation et mise en uvre de la Convention de La Haye sur la loi applicable à certains droits sur des titres détenus auprès d'un intermédiaire",
       "titelIt": "Decreto federale che approva e traspone nel diritto svizzero la Convenzione dell'Aia sulla legge applicabile ad alcuni diritti su strumenti finanziari detenuti presso un intermediario",
       "botschaftKey": "BOTSCHAFT-2006-1228",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/814/de",
-      "sha": "5da0f6a05531af4d6ba9a72ab93a89111cac471094e7262b0c0f2ac97f3a6b8b"
+      "sha": "c0efdbe34b08f85a153e23de34d0533098612200370d53ffc14930919e4ebcfd"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2010-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/272",
       "dateDocument": "2011-05-17",
-      "roFundstelle": "AS 2011 272",
+      "roFundstelle": "AS 2011 1771",
       "titelDe": "Mitteilung über die einseitige Anwendung des Haager Übereinkommens über die auf bestimmte Rechte an intermediärverwahrten Wertpapieren anzuwendende Rechtsordnung",
       "titelFr": "Communication sur l'application unilatérale de la Convention de La Haye sur la loi applicable à certains droits sur des titres détenus auprès d'un intermédiaire",
       "titelIt": "Comunicazione concernente l'applicazione unilaterale della Convenzione dell'Aia sulla legge applicabile ad alcuni diritti su strumenti finanziari detenuti presso un intermediario",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/272/de",
-      "sha": "75ca6539f9ba4fe5727e8f6667ea8f6911e8e6bf21fb897eeae74526e8b4d6d2"
+      "sha": "8de656c0cd663b97e6edb8821efae51af9af06523756e6b8790aeabff468be5e"
     },
     {
       "art": "sammelerlass-marker",
@@ -201,12 +201,12 @@
       "dateEntryInForce": "2007-03-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/75",
       "dateDocument": "2006-10-06",
-      "roFundstelle": "AS 2007 75",
+      "roFundstelle": "AS 2007 387",
       "titelDe": "Bundesgesetz über das internationale Privatrecht (Schiedsgerichtsbarkeit. Zuständigkeit)",
       "titelFr": "Loi fédérale sur le droit international privé (Arbitrage. Compétence)",
       "titelIt": "Legge federale sul diritto internazionale privato (Arbitrato. Competenza)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/75/de",
-      "sha": "7ea376414827430f840442672acf3bc7904f0ec696f2b243ad1b54efcf06e0d3"
+      "sha": "06c559e22e21a7e6a94723c9952d926373a707ac6fd5fa905f86bb81ca9c0e69"
     },
     {
       "art": "sammelerlass-marker",
@@ -225,12 +225,12 @@
       "dateEntryInForce": "2004-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/422",
       "dateDocument": "2005-05-25",
-      "roFundstelle": "AS 2005 422",
+      "roFundstelle": "AS 2005 2477",
       "titelDe": "Bundesgesetz über das Internationale Privatrecht (Betrifft nur den italienischen Text)",
       "titelFr": "Loi fédérale sur le droit international privé (Ne concerne que le texte italien)",
       "titelIt": "Legge federale sul diritto internazionale privato",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/422/de",
-      "sha": "b8dc47c8dc9561746a6d68559b24a2033bbe116c060b6a92ff5fa0423531045e"
+      "sha": "05292a86784f058cbe85868abe03c09a7c2257e27b2789c878d389b4053cdd96"
     },
     {
       "art": "sammelerlass-marker",
@@ -257,5 +257,5 @@
       "sha": "63a1eb9d4799e7e99f7fa1c1a448f791e89c397c0776403c982bb4daee64529a"
     }
   ],
-  "sha": "bb115260a6560e53ed9e863afcc7ad4e07cac241bab1b38a6f3b5d5742fd9b27"
+  "sha": "f3b37e1becf8dc803e5e1637349287bc2ee9f5aeb4a82b97f6fa0b20130818fe"
 }

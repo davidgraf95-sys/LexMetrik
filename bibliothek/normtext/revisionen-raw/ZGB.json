@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-06-26"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Schweizerisches Zivilgesetzbuch (Personenstand, Eheschliessung, Scheidung, Kindsrecht, Verwandtenunterstützungspflicht, Heimstätten, Vormundschaft, Ehevermittlung)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code civil suisse (état civil, conclusion du mariage et divorce, filiation, dette alimentaire, asiles de famille, tutelle et courtage matrimonial)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice civile svizzero (stato civile, matrimonio, divorzio, diritto di filiazione, obbligo di assistenza fra parenti, asili di famiglia, tutela, mediazione matrimonile)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "210"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1999/149"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-06-26"
+        "value": "RO 1999 1118"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-06-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 1118"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Schweizerisches Zivilgesetzbuch (Personenstand, Eheschliessung, Scheidung, Kindsrecht, Verwandtenunterstützungspflicht, Heimstätten, Vormundschaft, Ehevermittlung)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code civil suisse (état civil, conclusion du mariage et divorce, filiation, dette alimentaire, asiles de famille, tutelle et courtage matrimonial)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice civile svizzero (stato civile, matrimonio, divorzio, diritto di filiazione, obbligo di assistenza fra parenti, asili di famiglia, tutela, mediazione matrimonile)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "210"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/149"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-06-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 1118"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Zivilgesetzbuch (Personenstand, Eheschliessung, Scheidung, Kindsrecht, Verwandtenunterstützungspflicht, Heimstätten, Vormundschaft, Ehevermittlung)"
@@ -117,37 +129,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-10-05"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Schweizerisches Zivilgesetzbuch (Erbrecht des überlebenden Ehegatten)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code civil suisse (Droit de succession du conjoint survivant)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice civile svizzero (Diritto successorio del coniuge superstite)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "210"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/57"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-03-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-10-05"
+        "value": "RO 2002 269"
       },
       "titleDe": {
         "type": "literal",
@@ -181,6 +165,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-10-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 269"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Schweizerisches Zivilgesetzbuch (Erbrecht des überlebenden Ehegatten)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code civil suisse (Droit de succession du conjoint survivant)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice civile svizzero (Diritto successorio del coniuge superstite)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "210"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/57"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-03-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-10-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 269"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Zivilgesetzbuch (Erbrecht des überlebenden Ehegatten)"
@@ -213,37 +237,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-10-04"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Zivilgesetzbuch, Obligationenrecht, Strafgesetzbuch, Bundesgesetz über Schuldbetreibung und Konkurs (Grundsatzartikel Tiere)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code civil, Code des obligations, Code pénal, Loi fédérale sur la poursuite pour dettes et la faillite (Animaux)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice civile, Codice delle obbligazioni, Codice penale, Legge federale sulla esecuzione e sul fallimento (Articolo di principio sugli animali)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "210"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/100"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-10-04"
+        "value": "RO 2003 463"
       },
       "titleDe": {
         "type": "literal",
@@ -277,6 +273,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-10-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 463"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Zivilgesetzbuch, Obligationenrecht, Strafgesetzbuch, Bundesgesetz über Schuldbetreibung und Konkurs (Grundsatzartikel Tiere)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code civil, Code des obligations, Code pénal, Loi fédérale sur la poursuite pour dettes et la faillite (Animaux)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice civile, Codice delle obbligazioni, Codice penale, Legge federale sulla esecuzione e sul fallimento (Articolo di principio sugli animali)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "210"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/100"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-10-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 463"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Zivilgesetzbuch, Obligationenrecht, Strafgesetzbuch, Bundesgesetz über Schuldbetreibung und Konkurs (Grundsatzartikel Tiere)"
@@ -309,37 +345,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-06-20"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Zivilgesetzbuch"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code civil"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice civile"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "210"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/613"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-06-20"
+        "value": "RO 2003 4121"
       },
       "titleDe": {
         "type": "literal",
@@ -373,6 +381,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-06-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 4121"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Zivilgesetzbuch"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code civil"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice civile"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "210"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/613"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-06-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 4121"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Zivilgesetzbuch"
@@ -405,37 +453,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-12-19"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Zivilgesetzbuch (Trennungsfrist im Scheidungsrecht)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code civil suisse (Délai de séparation en droit du divorce)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice civile (Termine di separazione nel diritto del divorzio)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "210"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/254"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-06-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-12-19"
+        "value": "RO 2004 2161"
       },
       "titleDe": {
         "type": "literal",
@@ -469,6 +489,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-12-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 2161"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Zivilgesetzbuch (Trennungsfrist im Scheidungsrecht)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code civil suisse (Délai de séparation en droit du divorce)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice civile (Termine di separazione nel diritto del divorzio)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "210"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/254"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-12-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 2161"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Zivilgesetzbuch (Trennungsfrist im Scheidungsrecht)"
@@ -501,37 +561,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-10-05"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Schweizerisches Zivilgesetzbuch (Elektronische Führung der Personenstandsregister)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code civil suisse (tenue informatisée des registres de l'état civil)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice civile svizzero (Gestione elettronica dei registri dello stato civile)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "210"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/361"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-10-05"
+        "value": "RO 2004 2911"
       },
       "titleDe": {
         "type": "literal",
@@ -565,6 +597,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-10-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 2911"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Schweizerisches Zivilgesetzbuch (Elektronische Führung der Personenstandsregister)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code civil suisse (tenue informatisée des registres de l'état civil)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice civile svizzero (Gestione elettronica dei registri dello stato civile)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "210"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/361"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-10-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 2911"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Zivilgesetzbuch (Elektronische Führung der Personenstandsregister)"
@@ -597,37 +669,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-12-17"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Zivilgesetzbuch (Festlegung der Beitragspflicht von Vereinsmitgliedern)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code civil suisse (Fixation des cotisations des membres d'associations)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice civile svizzero (Determinazione dei contributi dei membri di associazioni)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "210"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2005/344"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-06-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-12-17"
+        "value": "RO 2005 2117"
       },
       "titleDe": {
         "type": "literal",
@@ -661,6 +705,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-12-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 2117"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Zivilgesetzbuch (Festlegung der Beitragspflicht von Vereinsmitgliedern)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code civil suisse (Fixation des cotisations des membres d'associations)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice civile svizzero (Determinazione dei contributi dei membri di associazioni)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "210"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/344"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-12-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 2117"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Zivilgesetzbuch (Festlegung der Beitragspflicht von Vereinsmitgliedern)"
@@ -693,37 +777,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-10-08"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Schweizerisches Zivilgesetzbuch (Stiftungsrecht)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code civil suisse (Droit des fondations)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice civile svizzero (Diritto delle fondazioni)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "210"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2005/591"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-10-08"
+        "value": "RO 2005 4545"
       },
       "titleDe": {
         "type": "literal",
@@ -757,6 +813,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-10-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 4545"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Schweizerisches Zivilgesetzbuch (Stiftungsrecht)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code civil suisse (Droit des fondations)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice civile svizzero (Diritto delle fondazioni)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "210"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/591"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-10-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 4545"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Zivilgesetzbuch (Stiftungsrecht)"
@@ -789,37 +885,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-06-23"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Schweizerisches Zivilgesetzbuch (Schutz der Persönlichkeit gegen Gewalt, Drohungen oder Nachstellungen)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code civil suisse (Protection de la personnalité en cas de violence, de menaces ou de harcèlement)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice civile svizzero (Protezione della personalità in caso di violenza, minacce o insidie)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "210"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/32"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-06-23"
+        "value": "RO 2007 137"
       },
       "titleDe": {
         "type": "literal",
@@ -853,6 +921,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-06-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 137"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Schweizerisches Zivilgesetzbuch (Schutz der Persönlichkeit gegen Gewalt, Drohungen oder Nachstellungen)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code civil suisse (Protection de la personnalité en cas de violence, de menaces ou de harcèlement)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice civile svizzero (Protezione della personalità in caso di violenza, minacce o insidie)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "210"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/32"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-06-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 137"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Zivilgesetzbuch (Schutz der Persönlichkeit gegen Gewalt, Drohungen oder Nachstellungen)"
@@ -885,37 +993,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-10-06"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Schaffung und die Änderung von Erlassen zur Neugestaltung des Finanzausgleichs und der Aufgabenteilung zwischen Bund und Kantonen (NFA)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale concernant l'adoption et la modification d'actes dans le cadre de la réforme de la péréquation financière et de la répartition des tâches entre la Confédération et les cantons (RPT)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale che emana e modifica atti legislativi per la nuova impostazione della perequazione finanziaria e della ripartizione dei compiti tra Confederazione e Cantoni (NPC)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "210"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/787"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-10-06"
+        "value": "RO 2007 5779"
       },
       "titleDe": {
         "type": "literal",
@@ -949,6 +1029,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-10-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5779"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Schaffung und die Änderung von Erlassen zur Neugestaltung des Finanzausgleichs und der Aufgabenteilung zwischen Bund und Kantonen (NFA)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale concernant l'adoption et la modification d'actes dans le cadre de la réforme de la péréquation financière et de la répartition des tâches entre la Confédération et les cantons (RPT)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale che emana e modifica atti legislativi per la nuova impostazione della perequazione finanziaria e della ripartizione dei compiti tra Confederazione e Cantoni (NPC)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "210"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/787"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-10-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5779"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Schaffung und die Änderung von Erlassen zur Neugestaltung des Finanzausgleichs und der Aufgabenteilung zwischen Bund und Kantonen (NFA)"
@@ -981,37 +1101,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-09-25"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Zivilgesetzbuch (Bedenkzeit im Scheidungsverfahren auf gemeinsames Begehren)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code civil (Délai de réflexion dans la procédure de divorce sur requête commune)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice civile (Periodo di riflessione nella procedura di divorzio su richiesta comune)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "210"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/37"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-02-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-09-25"
+        "value": "RO 2010 281"
       },
       "titleDe": {
         "type": "literal",
@@ -1045,6 +1137,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-09-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 281"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Zivilgesetzbuch (Bedenkzeit im Scheidungsverfahren auf gemeinsames Begehren)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code civil (Délai de réflexion dans la procédure de divorce sur requête commune)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice civile (Periodo di riflessione nella procedura di divorzio su richiesta comune)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "210"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/37"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-09-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 281"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Zivilgesetzbuch (Bedenkzeit im Scheidungsverfahren auf gemeinsames Begehren)"
@@ -1077,37 +1209,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-06-12"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Zivilgesetzbuch (ZGB) (Unterbindung von Ehen bei rechtswidrigem Aufenthalt)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code civil (CC) (Empêcher les mariages en cas de séjour irrégulier)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice civile (CC) (Impedire la conclusione di matrimoni in caso di soggiorno irregolare)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "210"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/411"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-06-12"
+        "value": "RO 2010 3057"
       },
       "titleDe": {
         "type": "literal",
@@ -1141,6 +1245,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-06-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 3057"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Zivilgesetzbuch (ZGB) (Unterbindung von Ehen bei rechtswidrigem Aufenthalt)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code civil (CC) (Empêcher les mariages en cas de séjour irrégulier)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice civile (CC) (Impedire la conclusione di matrimoni in caso di soggiorno irregolare)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "210"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/411"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-06-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 3057"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Zivilgesetzbuch (ZGB) (Unterbindung von Ehen bei rechtswidrigem Aufenthalt)"
@@ -1173,37 +1317,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-12-19"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Schweizerisches Zivilgesetzbuch (Erwachsenenschutz, Personenrecht und Kindesrecht)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code civil suisse (Protection de l'adulte, droit des personnes et droit de la filiation)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice civile svizzero (Protezione degli adulti, diritto delle persone e diritto della filiazione)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "210"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/114"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-12-19"
+        "value": "RO 2011 725"
       },
       "titleDe": {
         "type": "literal",
@@ -1237,6 +1353,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-12-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 725"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Schweizerisches Zivilgesetzbuch (Erwachsenenschutz, Personenrecht und Kindesrecht)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code civil suisse (Protection de l'adulte, droit des personnes et droit de la filiation)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice civile svizzero (Protezione degli adulti, diritto delle persone e diritto della filiazione)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "210"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/114"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-12-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 725"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Zivilgesetzbuch (Erwachsenenschutz, Personenrecht und Kindesrecht)"
@@ -1269,37 +1425,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-12-11"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Schweizerisches Zivilgesetzbuch (Register-Schuldbrief und weitere Änderungen im Sachenrecht)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code civil suisse (Cédule hypothécaire de registre et autres modifications des droits réels)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice civile svizzero (Cartella ipotecaria registrale e altre modifiche della disciplina dei diritti reali)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "210"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/666"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-12-11"
+        "value": "RO 2011 4637"
       },
       "titleDe": {
         "type": "literal",
@@ -1333,6 +1461,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-12-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4637"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Schweizerisches Zivilgesetzbuch (Register-Schuldbrief und weitere Änderungen im Sachenrecht)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code civil suisse (Cédule hypothécaire de registre et autres modifications des droits réels)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice civile svizzero (Cartella ipotecaria registrale e altre modifiche della disciplina dei diritti reali)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "210"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/666"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-12-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4637"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Zivilgesetzbuch (Register-Schuldbrief und weitere Änderungen im Sachenrecht)"
@@ -1365,37 +1533,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-09-30"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Schweizerisches Zivilgesetzbuch (Name und Bürgerrecht)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code civil suisse (Nom et droit de cité)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice civile svizzero (Cognome e cittadinanza)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "210"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/309"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-09-30"
+        "value": "RO 2012 2569"
       },
       "titleDe": {
         "type": "literal",
@@ -1429,6 +1569,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-09-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 2569"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Schweizerisches Zivilgesetzbuch (Name und Bürgerrecht)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code civil suisse (Nom et droit de cité)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice civile svizzero (Cognome e cittadinanza)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "210"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/309"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-09-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 2569"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Zivilgesetzbuch (Name und Bürgerrecht)"
@@ -1461,37 +1641,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-05-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Zivilgesetzbuch (Name und Bürgerrecht)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code civil (Nom et droit de cité)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice civile (Cognome e cittadinanza)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "210"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/368"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-05-22"
+        "value": "RO 2012 3227"
       },
       "titleDe": {
         "type": "literal",
@@ -1525,6 +1677,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-05-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 3227"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Zivilgesetzbuch (Name und Bürgerrecht)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code civil (Nom et droit de cité)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice civile (Cognome e cittadinanza)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "210"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/368"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-05-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 3227"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Zivilgesetzbuch (Name und Bürgerrecht)"
@@ -1557,37 +1749,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-06-21"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Schweizerisches Zivilgesetzbuch (Elterliche Sorge)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code civil suisse (Autorité parentale)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice civile svizzero (Autorità parentale)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "210"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2014/53"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-06-21"
+        "value": "RO 2014 357"
       },
       "titleDe": {
         "type": "literal",
@@ -1621,6 +1785,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-06-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 357"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Schweizerisches Zivilgesetzbuch (Elterliche Sorge)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code civil suisse (Autorité parentale)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice civile svizzero (Autorità parentale)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "210"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/53"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-06-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 357"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Zivilgesetzbuch (Elterliche Sorge)"
@@ -1653,37 +1857,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-12-12"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz zur Umsetzung der 2012 revidierten Empfehlungen der Groupe d'action financière"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur la mise en uvre des recommandations du Groupe d'action financière, révisées en 2012"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale concernente l'attuazione delle Raccomandazioni del Gruppo d'azione finanziaria rivedute nel 2012"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "210"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/289"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-12-12"
+        "value": "RO 2015 1389"
       },
       "titleDe": {
         "type": "literal",
@@ -1717,6 +1893,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-12-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1389"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz zur Umsetzung der 2012 revidierten Empfehlungen der Groupe d'action financière"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur la mise en uvre des recommandations du Groupe d'action financière, révisées en 2012"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale concernente l'attuazione delle Raccomandazioni del Gruppo d'azione finanziaria rivedute nel 2012"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "210"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/289"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-12-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1389"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz zur Umsetzung der 2012 revidierten Empfehlungen der Groupe d'action financière"
@@ -1749,37 +1965,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-03-20"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Schweizerisches Zivilgesetzbuch (Kindesunterhalt)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code civil suisse (Entretien de l'enfant)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice civile svizzero (Mantenimento del figlio)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "210"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/728"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-03-20"
+        "value": "RO 2015 4299"
       },
       "titleDe": {
         "type": "literal",
@@ -1813,6 +2001,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-03-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 4299"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Schweizerisches Zivilgesetzbuch (Kindesunterhalt)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code civil suisse (Entretien de l'enfant)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice civile svizzero (Mantenimento del figlio)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "210"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/728"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-03-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 4299"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Zivilgesetzbuch (Kindesunterhalt)"
@@ -1845,6 +2073,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-12-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 5017"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Zivilgesetzbuch (Kindesunterhalt)"
@@ -1877,6 +2109,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-12-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 5017"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Zivilgesetzbuch (Kindesunterhalt)"
@@ -1908,6 +2144,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-12-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 5017"
       },
       "titleDe": {
         "type": "literal",
@@ -1940,6 +2180,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 935"
       },
       "titleDe": {
         "type": "literal",
@@ -1973,6 +2217,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 935"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Zivilgesetzbuch (Personalfürsorgestiftungen)"
@@ -2004,6 +2252,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 935"
       },
       "titleDe": {
         "type": "literal",
@@ -2036,6 +2288,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2313"
       },
       "titleDe": {
         "type": "literal",
@@ -2069,6 +2325,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2313"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Zivilgesetzbuch (Vorsorgeausgleich bei Scheidung)"
@@ -2100,6 +2360,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2313"
       },
       "titleDe": {
         "type": "literal",
@@ -2132,6 +2396,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-06-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 3699"
       },
       "titleDe": {
         "type": "literal",
@@ -2165,6 +2433,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-06-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 3699"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Zivilgesetzbuch (Adoption)"
@@ -2196,6 +2468,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-06-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 3699"
       },
       "titleDe": {
         "type": "literal",
@@ -2228,6 +2504,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-09-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 2801"
       },
       "titleDe": {
         "type": "literal",
@@ -2261,6 +2541,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-09-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 2801"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Zivilgesetzbuch"
@@ -2292,6 +2576,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-09-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 2801"
       },
       "titleDe": {
         "type": "literal",
@@ -2324,6 +2612,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-12-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 2947"
       },
       "titleDe": {
         "type": "literal",
@@ -2357,6 +2649,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-12-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 2947"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Zivilgesetzbuch (Kindesschutz)"
@@ -2388,6 +2684,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-12-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 2947"
       },
       "titleDe": {
         "type": "literal",
@@ -2420,6 +2720,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-12-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 4017"
       },
       "titleDe": {
         "type": "literal",
@@ -2453,6 +2757,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-12-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 4017"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Zivilgesetzbuch (Beurkundung des Personenstands und Grundbuch)"
@@ -2484,6 +2792,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-12-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 4017"
       },
       "titleDe": {
         "type": "literal",
@@ -2516,6 +2828,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-12-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2273"
       },
       "titleDe": {
         "type": "literal",
@@ -2549,6 +2865,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-12-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2273"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Verbesserung des Schutzes gewaltbetroffener Personen"
@@ -2580,6 +2900,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-12-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2273"
       },
       "titleDe": {
         "type": "literal",
@@ -2612,6 +2936,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-09-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 3813"
       },
       "titleDe": {
         "type": "literal",
@@ -2645,6 +2973,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-09-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 3813"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Zivilgesetzbuch"
@@ -2676,6 +3008,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-09-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 3813"
       },
       "titleDe": {
         "type": "literal",
@@ -2708,6 +3044,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-12-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 5"
       },
       "titleDe": {
         "type": "literal",
@@ -2741,6 +3081,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-12-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 5"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die abschliessende Inkraftsetzung der Änderung vom 20. März 2015 des Zivilgesetzbuches (Kindesunterhalt)"
@@ -2772,6 +3116,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-12-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 5"
       },
       "titleDe": {
         "type": "literal",
@@ -3349,6 +3697,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1907-12-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 24 245"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Zivilgesetzbuch vom 10. Dezember 1907"
@@ -3381,6 +3733,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1907-12-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 24 245"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Zivilgesetzbuch vom 10. Dezember 1907"
@@ -3413,6 +3769,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1907-12-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 24 245"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Zivilgesetzbuch vom 10. Dezember 1907"
@@ -3444,6 +3804,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1907-12-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 24 245"
       },
       "titleDe": {
         "type": "literal",

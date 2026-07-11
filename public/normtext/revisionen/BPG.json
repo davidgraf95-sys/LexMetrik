@@ -1,7 +1,7 @@
 {
   "erlassKey": "BPG",
   "sr": "172.220.1",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -65,25 +65,25 @@
       "dateEntryInForce": "2015-04-09",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/197",
       "dateDocument": "2015-03-18",
-      "roFundstelle": "AS 2015 197",
+      "roFundstelle": "AS 2015 1021",
       "titelDe": "Bundespersonalgesetz (BPG) (Betrifft nur den italienischen Text)",
       "titelFr": "Loi sur le personnel de la Confédération (LPers) (Ne concerne que le texte italien)",
       "titelIt": "Legge sul personale federale (LPers)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/197/de",
-      "sha": "bc0d70509688bc736157cb865e8bad86a97231c8d5a24318b8964e9467b5c3ca"
+      "sha": "356ed47f4b0b652c374a3ecb5b05eb17eb003e542fedacc0d56e3841efe17e65"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2013-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/352",
       "dateDocument": "2012-12-14",
-      "roFundstelle": "AS 2013 352",
+      "roFundstelle": "AS 2013 1493",
       "titelDe": "Bundespersonalgesetz (BPG)",
       "titelFr": "Loi sur le personnel de la Confédération (LPers)",
       "titelIt": "Legge sul personale federale (LPers)",
       "botschaftKey": "BOTSCHAFT-2011-1076",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/352/de",
-      "sha": "7e1dcd037860f4317ad6c97f0579213f5656f65d5821e5d55cc66f892576bd06"
+      "sha": "9fd24ac482977d63221b634edc988a3ef0bef5d2cb8c8beaa1e1b4a989784f24"
     },
     {
       "art": "sammelerlass-marker",
@@ -96,13 +96,13 @@
       "dateEntryInForce": "2012-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/785",
       "dateDocument": "2011-06-17",
-      "roFundstelle": "AS 2011 785",
+      "roFundstelle": "AS 2011 5583",
       "titelDe": "Bundesgesetz über Optimierungen bei der Verwaltung von Personaldaten und bei den Anlagen von PUBLICA",
       "titelFr": "Loi fédérale sur l'optimisation de la gestion des données du personnel de la Confédération et des placements de PUBLICA",
       "titelIt": "Legge federale concernente ottimizzazioni nella gestione dei dati del personale e negli investimenti di PUBLICA",
       "botschaftKey": "BOTSCHAFT-2010-1290",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/785/de",
-      "sha": "e4003bdc46705164e9d7be17a4a29d497ceb45b2bcceac3fe99574bda45aaeb0"
+      "sha": "8e3a62950c7b780caeb3179d1c4cd029e2ebd1d5bf64e68bbd1c700ae12446c5"
     },
     {
       "art": "sammelerlass-marker",
@@ -163,13 +163,13 @@
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/123",
       "dateDocument": "2000-03-24",
-      "roFundstelle": "AS 2001 123",
+      "roFundstelle": "AS 2001 894",
       "titelDe": "Bundespersonalgesetz (BPG)",
       "titelFr": "Loi sur le personnel de la Confédération (LPers)",
       "titelIt": "Legge sul personale federale (LPers)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/123/de",
-      "sha": "4f2b4096f19b9c217cc21a77b7003a59dabbc37096e050ba1659e1e1e7f7de7f"
+      "sha": "031b518547f510b7d1746dd4915623c6e962788908d693b9b897b688f2d15204"
     }
   ],
-  "sha": "432960d555bffbbb5fa4ed821bd5cfdc8641569d7eb1bd13b3f7efe10feb5c68"
+  "sha": "c0916f3c6c59b8f4528e5bec29c3098f1b6e4f0eaf36001fde396ae9e2dca296"
 }

@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1969-08-27"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 27. August 1969 über Bau und Ausrüstung der Strassenfahrzeuge (BAV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 28 août 1969 sur la construction et l'équipement des véhicules routiers (OCE)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 27 agosto 1969 concernente la costruzione e l'equipaggiamento dei veicoli stradali (OCE)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.41"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1969/821_841_839"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1969-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1969-08-27"
+        "value": "RO 1969 841"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1969-08-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1969 841"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 27. August 1969 über Bau und Ausrüstung der Strassenfahrzeuge (BAV)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1969-08-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1969 841"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 27. August 1969 über Bau und Ausrüstung der Strassenfahrzeuge (BAV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 28 août 1969 sur la construction et l'équipement des véhicules routiers (OCE)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 27 agosto 1969 concernente la costruzione e l'equipaggiamento dei veicoli stradali (OCE)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.41"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1969/821_841_839"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1969-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1969-08-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1969 841"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 27. August 1969 über Bau und Ausrüstung der Strassenfahrzeuge (BAV)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1995-06-19"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 19. Juni 1995 über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 19 juin 1995 concernant les exigences techniques requises pour les véhicules routiers (OETV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 19 giugno 1995 concernente le esigenze tecniche per i veicoli stradali (OETV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.41"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1995/4425_4425_4425"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1995-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1995-06-19"
+        "value": "RO 1995 4425"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1995-06-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1995 4425"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 19. Juni 1995 über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -245,6 +237,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1995-06-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1995 4425"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 19. Juni 1995 über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 19 juin 1995 concernant les exigences techniques requises pour les véhicules routiers (OETV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 19 giugno 1995 concernente le esigenze tecniche per i veicoli stradali (OETV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.41"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1995/4425_4425_4425"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1995-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1995-06-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1995 4425"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 19. Juni 1995 über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -277,37 +309,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-09-02"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.41"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1998/2352_2352_2352"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-09-02"
+        "value": "RO 1998 2352"
       },
       "titleDe": {
         "type": "literal",
@@ -341,37 +345,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-09-02"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.41"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1999/384"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-09-27"
+        "value": "RO 1998 2352"
       },
       "titleDe": {
         "type": "literal",
@@ -393,17 +369,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1999/384"
+        "value": "https://fedlex.data.admin.ch/eli/oc/1998/2352_2352_2352"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-10-01"
+        "value": "1998-10-01"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-09-27"
+        "value": "1998-09-02"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1998 2352"
       },
       "titleDe": {
         "type": "literal",
@@ -437,6 +417,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-09-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2494"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.41"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/384"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-09-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2494"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.41"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/384"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-09-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2494"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-03-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1034"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-03-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1034"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -532,6 +596,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-03-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1034"
       },
       "titleDe": {
         "type": "literal",
@@ -565,37 +633,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-09-18"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.41"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/362"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-09-18"
+        "value": "RO 2000 2290"
       },
       "titleDe": {
         "type": "literal",
@@ -629,6 +669,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-09-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2290"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.41"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/362"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-09-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2290"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -660,6 +740,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-09-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2433"
       },
       "titleDe": {
         "type": "literal",
@@ -693,6 +777,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-09-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2433"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -725,6 +813,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-09-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2433"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -757,37 +849,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-11-01"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.41"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/501"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-11-01"
+        "value": "RO 2000 2888"
       },
       "titleDe": {
         "type": "literal",
@@ -821,37 +885,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-11-01"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.41"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/195"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-06-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-06-15"
+        "value": "RO 2000 2888"
       },
       "titleDe": {
         "type": "literal",
@@ -873,17 +909,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/195"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/501"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-06-01"
+        "value": "2001-01-01"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-06-15"
+        "value": "2000-11-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2888"
       },
       "titleDe": {
         "type": "literal",
@@ -917,6 +957,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-06-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1181"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.41"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/195"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-06-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1181"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.41"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/195"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-06-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1181"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -949,6 +1065,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-05-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1938"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -981,6 +1101,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-05-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1938"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -1012,6 +1136,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-05-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1938"
       },
       "titleDe": {
         "type": "literal",
@@ -1045,37 +1173,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-09-20"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS) "
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.41"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/471"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-09-23"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-09-20"
+        "value": "RO 2002 3176"
       },
       "titleDe": {
         "type": "literal",
@@ -1109,6 +1209,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-09-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3176"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS) "
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.41"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/471"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-09-23"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-09-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3176"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS) "
@@ -1141,37 +1281,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-07-03"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.41"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/484"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-07-03"
+        "value": "RO 2002 3216"
       },
       "titleDe": {
         "type": "literal",
@@ -1205,6 +1317,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-07-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3216"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.41"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/484"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-07-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3216"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -1236,6 +1388,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-08-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3218"
       },
       "titleDe": {
         "type": "literal",
@@ -1269,6 +1425,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-08-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3218"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -1301,6 +1461,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-08-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3218"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -1333,37 +1497,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-10-16"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.41"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/535"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-12-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-10-16"
+        "value": "RO 2002 3567"
       },
       "titleDe": {
         "type": "literal",
@@ -1397,37 +1533,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-10-16"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.41"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/271"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-08-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-06-16"
+        "value": "RO 2002 3567"
       },
       "titleDe": {
         "type": "literal",
@@ -1449,17 +1557,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/271"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/535"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-08-01"
+        "value": "2002-12-01"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-06-16"
+        "value": "2002-10-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3567"
       },
       "titleDe": {
         "type": "literal",
@@ -1493,6 +1605,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-06-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 1819"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.41"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/271"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-06-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 1819"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.41"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/271"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-06-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 1819"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -1525,6 +1713,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-06-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 3525"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -1557,6 +1749,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-06-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 3525"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -1588,6 +1784,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-06-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 3525"
       },
       "titleDe": {
         "type": "literal",
@@ -1621,37 +1821,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-01-14"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.41"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/58"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-03-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-01-14"
+        "value": "RO 2004 655"
       },
       "titleDe": {
         "type": "literal",
@@ -1685,6 +1857,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-01-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 655"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.41"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/58"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-03-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-01-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 655"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -1716,6 +1928,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-02-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 727"
       },
       "titleDe": {
         "type": "literal",
@@ -1749,6 +1965,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-02-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 727"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 19. Juni 1995 über die technischen Anforderungen an Strassenfahrzeuge (VTS) (Betrifft nur den italienischen Text)"
@@ -1781,6 +2001,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-02-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 727"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 19. Juni 1995 über die technischen Anforderungen an Strassenfahrzeuge (VTS) (Betrifft nur den italienischen Text)"
@@ -1813,37 +2037,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-06-10"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.41"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2005/545"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-06-10"
+        "value": "RO 2005 4111"
       },
       "titleDe": {
         "type": "literal",
@@ -1877,6 +2073,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-06-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 4111"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.41"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/545"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-06-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 4111"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -1909,6 +2145,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-08-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 4515"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -1941,6 +2181,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-08-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 4515"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -1972,6 +2216,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-08-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 4515"
       },
       "titleDe": {
         "type": "literal",
@@ -2005,37 +2253,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-03-29"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.41"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/262"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-11-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-03-29"
+        "value": "RO 2006 1677"
       },
       "titleDe": {
         "type": "literal",
@@ -2069,6 +2289,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-03-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 1677"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.41"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/262"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-11-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-03-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 1677"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -2101,6 +2361,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-08-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 3431"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -2133,6 +2397,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-08-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 3431"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -2164,6 +2432,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-08-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 3431"
       },
       "titleDe": {
         "type": "literal",
@@ -2197,37 +2469,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-11-29"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.41"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/22"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-02-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-11-29"
+        "value": "RO 2007 91"
       },
       "titleDe": {
         "type": "literal",
@@ -2261,6 +2505,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-11-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 91"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.41"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/22"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-11-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 91"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -2293,6 +2577,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 2109"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -2325,6 +2613,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 2109"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -2356,6 +2648,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 2109"
       },
       "titleDe": {
         "type": "literal",
@@ -2389,37 +2685,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.41"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2008/768"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-02-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-10-22"
+        "value": "RO 2008 5567"
       },
       "titleDe": {
         "type": "literal",
@@ -2453,6 +2721,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5567"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.41"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/768"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-10-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5567"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -2485,6 +2793,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-01-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 355"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -2517,6 +2829,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-01-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 355"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -2548,6 +2864,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-01-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 355"
       },
       "titleDe": {
         "type": "literal",
@@ -2581,37 +2901,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-10-14"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.41"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/696"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-10-14"
+        "value": "RO 2009 5705"
       },
       "titleDe": {
         "type": "literal",
@@ -2645,6 +2937,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-10-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5705"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.41"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/696"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-10-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5705"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -2676,6 +3008,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-03-09"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 879"
       },
       "titleDe": {
         "type": "literal",
@@ -2709,6 +3045,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-03-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 879"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS) (Betrifft nur den französischen Text)"
@@ -2741,6 +3081,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-03-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 879"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS) (Betrifft nur den französischen Text)"
@@ -2773,37 +3117,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-06-30"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.41"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/432"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-06-30"
+        "value": "RO 2010 3219"
       },
       "titleDe": {
         "type": "literal",
@@ -2837,6 +3153,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-06-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 3219"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.41"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/432"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-06-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 3219"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -2868,6 +3224,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-09-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4489"
       },
       "titleDe": {
         "type": "literal",
@@ -2901,6 +3261,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-09-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4489"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Änderung von Bestimmungen über Messmittel für die Schallmessung"
@@ -2933,6 +3297,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-09-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4489"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Änderung von Bestimmungen über Messmittel für die Schallmessung"
@@ -2965,37 +3333,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-10-12"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.41"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/714"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-10-12"
+        "value": "RO 2011 4939"
       },
       "titleDe": {
         "type": "literal",
@@ -3029,6 +3369,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-10-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4939"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.41"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/714"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-10-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4939"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -3061,6 +3441,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-03-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 1825"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -3093,6 +3477,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-03-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 1825"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -3124,6 +3512,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-03-02"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 1825"
       },
       "titleDe": {
         "type": "literal",
@@ -3157,37 +3549,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-11-30"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.41"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/860"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-11-30"
+        "value": "RO 2012 7089"
       },
       "titleDe": {
         "type": "literal",
@@ -3221,6 +3585,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-11-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 7089"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.41"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/860"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-11-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 7089"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -3253,6 +3657,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-11-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4693"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -3285,6 +3693,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-11-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4693"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -3316,6 +3728,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-11-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4693"
       },
       "titleDe": {
         "type": "literal",
@@ -3349,37 +3765,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-04-15"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.41"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/277"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-06-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-04-15"
+        "value": "RO 2015 1321"
       },
       "titleDe": {
         "type": "literal",
@@ -3413,6 +3801,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-04-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1321"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.41"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/277"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-04-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1321"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -3445,6 +3873,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2473"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -3477,6 +3909,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2473"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -3508,6 +3944,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2473"
       },
       "titleDe": {
         "type": "literal",
@@ -3541,37 +3981,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-01-21"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.41"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/67"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-01-21"
+        "value": "RO 2015 465"
       },
       "titleDe": {
         "type": "literal",
@@ -3605,6 +4017,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-01-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 465"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.41"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/67"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-01-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 465"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -3637,6 +4089,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-11-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 5133"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -3669,6 +4125,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-11-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 5133"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -3700,6 +4160,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-11-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 5133"
       },
       "titleDe": {
         "type": "literal",
@@ -3733,6 +4197,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-04-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 2651"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -3765,6 +4233,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-04-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 2651"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -3797,69 +4269,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-04-05"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.41"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2018/389"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-09-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-06-27"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.41"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2018/389"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-09-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-06-27"
+        "value": "RO 2017 2651"
       },
       "titleDe": {
         "type": "literal",
@@ -3893,6 +4305,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-06-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 2675"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.41"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/389"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-09-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-06-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 2675"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.41"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/389"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-09-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-06-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 2675"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -3924,6 +4412,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-02-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 685"
       },
       "titleDe": {
         "type": "literal",
@@ -3957,6 +4449,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-02-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 685"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS) (Betrifft nur den französischen Text)"
@@ -3989,6 +4485,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-02-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 685"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS) (Betrifft nur den französischen Text)"
@@ -4021,6 +4521,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-11-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 253"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -4053,6 +4557,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-11-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 253"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS)"
@@ -4084,6 +4592,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-11-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 253"
       },
       "titleDe": {
         "type": "literal",

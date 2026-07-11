@@ -1,7 +1,7 @@
 {
   "erlassKey": "LRV",
   "sr": "814.318.142.1",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -118,60 +118,60 @@
       "dateEntryInForce": "2020-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/146",
       "dateDocument": "2020-02-12",
-      "roFundstelle": "AS 2020 146",
+      "roFundstelle": "AS 2020 793",
       "titelDe": "Luftreinhalte-Verordnung (LRV)",
       "titelFr": "Ordonnance sur la protection de l'air (OPair)",
       "titelIt": "Ordinanza contro l'inquinamento atmosferico (OIAt)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/146/de",
-      "sha": "dcfa86e5bae03fbc77ecdb26ab179c6427917c40f7ca8947307e76466158e539"
+      "sha": "292f430b4df6a613a261efae3fadc21fd4a52b84d311e102296edb4e4f8e6c20"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2019-04-16",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/232",
       "dateDocument": "2019-04-16",
-      "roFundstelle": "AS 2019 232",
+      "roFundstelle": "AS 2019 1225",
       "titelDe": "Luftreinhalte-Verordnung (LRV) (Betrifft nur den italienischen Text)",
       "titelFr": "Ordonnance sur la protection de l'air (OPair) (Ne concerne que le texte italien)",
       "titelIt": "Ordinanza contro l'inquinamento atmosferico (OIAt)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/232/de",
-      "sha": "d856c031226b17af9e242fe2bf31c37af7532692c0308ffc3e4afc8cbbdcc23c"
+      "sha": "153bf500aa656982c72668725243d90f8a31fa66f523e9157bf22622353479be"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2018-12-11",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/748",
       "dateDocument": "2018-12-11",
-      "roFundstelle": "AS 2018 748",
+      "roFundstelle": "AS 2018 4709",
       "titelDe": "Luftreinhalte-Verordnung (LRV) (Betrifft nur den italienischen Text)",
       "titelFr": "Ordonnance sur la protection de l'air (OPair) (Ne concerne que le texte italien)",
       "titelIt": "Ordinanza contro l'inquinamento atmosferico (OIAt)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/748/de",
-      "sha": "ee7390abad9092b7b3af9d9f475963714cf7392f291e926f22b493fce3b7020a"
+      "sha": "c35242429236479e9d124371ce67707e42578b37705eaa40dbf9109c0582f70f"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2018-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/252",
       "dateDocument": "2018-04-11",
-      "roFundstelle": "AS 2018 252",
+      "roFundstelle": "AS 2018 1687",
       "titelDe": "Luftreinhalte-Verordnung (LRV)",
       "titelFr": "Ordonnance sur la protection de l'air (OPair)",
       "titelIt": "Ordinanza contro l'inquinamento atmosferico (OIAt)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/252/de",
-      "sha": "af391acd0666daba87526449ffa389ce017291b09c8fd20563ae1c6114d62691"
+      "sha": "bd39797480c1844575c1011291c3371c9484774fca2191a3dd6a1e18d93ca06d"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2018-04-24",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/242",
       "dateDocument": "2018-04-24",
-      "roFundstelle": "AS 2018 242",
+      "roFundstelle": "AS 2018 1651",
       "titelDe": "Luftreinhalte-Verordnung (LRV) (Betrifft nur den französischen Text)",
       "titelFr": "Ordonnance sur la protection de l'air (OPair)",
       "titelIt": "Ordinanza contro l'inquinamento atmosferico (OIAt) (Concerne soltanto il testo francese)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/242/de",
-      "sha": "9ef6c96abe3ad497853e31927d94ef772685155b9929a8900fd3bc17a07a1111"
+      "sha": "75fb4e581d96c776563f24b364d8bea5488a53927b5476d15a8015eb251fbcd3"
     },
     {
       "art": "sammelerlass-marker",
@@ -184,12 +184,12 @@
       "dateEntryInForce": "2017-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/136",
       "dateDocument": "2017-03-03",
-      "roFundstelle": "AS 2017 136",
+      "roFundstelle": "AS 2017 715",
       "titelDe": "Luftreinhalte-Verordnung (LRV)",
       "titelFr": "Ordonnance sur la protection de l'air (OPair)",
       "titelIt": "Ordinanza contro l'inquinamento atmosferico (OIAt)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/136/de",
-      "sha": "27e3739b6b4dd76d5b7cd2d0fd96ca3948f0953c7f95d80a59e7f1ef7ca02cfe"
+      "sha": "512c2dacc1e37ee77861b41bb18eadb0eca205e4b85d4ded22725a43c75f820f"
     },
     {
       "art": "sammelerlass-marker",
@@ -208,60 +208,60 @@
       "dateEntryInForce": "2015-11-16",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/699",
       "dateDocument": "2015-10-14",
-      "roFundstelle": "AS 2015 699",
+      "roFundstelle": "AS 2015 4171",
       "titelDe": "Luftreinhalte-Verordnung (LRV)",
       "titelFr": "Ordonnance sur la protection de l'air (OPair)",
       "titelIt": "Ordinanza contro l'inquinamento atmosferico (OIAt)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/699/de",
-      "sha": "13cf9b863978c86db0ec58f0ede451ce5ef71422a798c576cdb848af795e4fed"
+      "sha": "2f479f159c65303e5ad21648f132976742c5a56dc69a4a6b7587c27295a8307e"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2014-02-04",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/64",
       "dateDocument": "2014-02-04",
-      "roFundstelle": "AS 2014 64",
+      "roFundstelle": "AS 2014 403",
       "titelDe": "Luftreinhalte-Verordnung (LRV) (Betrifft nur den italienischen Text)",
       "titelFr": "Ordonnance sur la protection de l'air (OPair) (Ne concerne que le texte italien)",
       "titelIt": "Ordinanza contro l'inquinamento atosferico (OIAt)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/64/de",
-      "sha": "64cd7e95ea9bdc3b57db6a67ef9b497ad198dcc4bb8c1337cfbd38ce587c7eda"
+      "sha": "ad36c67f098dac1ed76c161c3431ad419bf2b17901764f85ab231232e64cfe0b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2010-07-15",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/395",
       "dateDocument": "2010-06-18",
-      "roFundstelle": "AS 2010 395",
+      "roFundstelle": "AS 2010 2965",
       "titelDe": "Luftreinhalte-Verordnung (LRV)",
       "titelFr": "Ordonnance sur la protection de l'air (OPair)",
       "titelIt": "Ordinanza contro l'inquinamento atmosferico (OIAt)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/395/de",
-      "sha": "c8a96fa652b1286cbc0ed331515df9c05ed0219eab89869ece0db0a489549b9a"
+      "sha": "207fb3aaaa48729770584c8740d15aa01a2076eb9cd7d62cc0e82d3cff67f005"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2009-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/648",
       "dateDocument": "2008-09-19",
-      "roFundstelle": "AS 2008 648",
+      "roFundstelle": "AS 2008 4639",
       "titelDe": "Luftreinhalte-Verordnung (LRV)",
       "titelFr": "Ordonnance sur la protection de l'air (OPair)",
       "titelIt": "Ordinanza contro l'inquinamento atmosferico (OIAt)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/648/de",
-      "sha": "2f9d36688bd5c5b03e300b921b3896746da2732f61e4d522b7a1fab72bb8005d"
+      "sha": "fc422eec9b45ba0f91e7af56b9f3d93e5a5b2fc11a0e599b522a5e3811451614"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2009-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/721",
       "dateDocument": "2008-10-22",
-      "roFundstelle": "AS 2008 721",
+      "roFundstelle": "AS 2008 5163",
       "titelDe": "Luftreinhalte-Verordnung (LRV)",
       "titelFr": "Ordonnance sur la protection de l'air (OPair)",
       "titelIt": "Ordinanza contro l'inquinamento atmosferico (OIAt)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/721/de",
-      "sha": "39eb4f89c2f05be40d2b25e439c983610f4909ea0c9f44c8996fb16612c762cf"
+      "sha": "91cd8d54ab982cf632f39154772dbf198c7f2dfb55e6bf4ff17bd12266e5b732"
     },
     {
       "art": "sammelerlass-marker",
@@ -280,12 +280,12 @@
       "dateEntryInForce": "2007-09-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/508",
       "dateDocument": "2007-07-04",
-      "roFundstelle": "AS 2007 508",
+      "roFundstelle": "AS 2007 3875",
       "titelDe": "Luftreinhalteverordnung (LRV)",
       "titelFr": "Ordonnance sur la protection de l'air (OPair)",
       "titelIt": "Ordinanza contro l'inquinamento atmosferico (OIAt)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/508/de",
-      "sha": "92ed776307371c027f050209488c34478fccf6904eaf572726653270e48d8c6a"
+      "sha": "25fda74dd1da76fe4693c20503b12d9c21017582a9ce0f190d6dd5271bec75af"
     },
     {
       "art": "sammelerlass-marker",
@@ -304,12 +304,12 @@
       "dateEntryInForce": "2005-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/484",
       "dateDocument": "2004-06-23",
-      "roFundstelle": "AS 2004 484",
+      "roFundstelle": "AS 2004 3561",
       "titelDe": "Luftreinhalte-Verordnung (LRV)",
       "titelFr": "Ordonnance sur la protection de l'air (OPair)",
       "titelIt": "Ordinanza contro l'inquinamento atmosferico (OIAt)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/484/de",
-      "sha": "b6f1cb0ef7ff99041b3742e7f1d997115a2176055086e70dae0b9ddcf501c25a"
+      "sha": "4830ec475a373f3066a2f719b40b542f75c709f3069ed4e55512a95cf67e463b"
     },
     {
       "art": "sammelerlass-marker",
@@ -328,12 +328,12 @@
       "dateEntryInForce": "2000-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/386",
       "dateDocument": "1999-08-25",
-      "roFundstelle": "AS 1999 386",
+      "roFundstelle": "AS 1999 2498",
       "titelDe": "Luftreinhalte-Verordnung (LRV)",
       "titelFr": "Ordonnance sur la protection de l'air (OPair)",
       "titelIt": "Ordinanza contro l'inquinamento atmosferico (OIAt)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/386/de",
-      "sha": "9ffcabcc10e884b235fdd3e3153e2fcaa423cd3efdcf8f96a16e2e99916a838f"
+      "sha": "9022a8740641d0f360b6fc82802ae35ff32029bab28383f7b4e8c57f74f5378d"
     },
     {
       "art": "aenderung",
@@ -360,5 +360,5 @@
       "sha": "e0e746ed2210298d217e9b7a57074e789cb9a517636e8314ef232b0ecb387383"
     }
   ],
-  "sha": "bd788e37bf838eb6b269bce9a918f8e81e0b844bb06944747350c97856da5bc7"
+  "sha": "c81c727dc1ed9ae5fe3708191d7fc33c307432e3b854ab0bbdaf766ebbc2e146"
 }

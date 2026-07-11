@@ -1,7 +1,7 @@
 {
   "erlassKey": "AMBV",
   "sr": "812.212.1",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -69,96 +69,96 @@
       "dateEntryInForce": "2019-07-16",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/409",
       "dateDocument": "2019-07-16",
-      "roFundstelle": "AS 2019 409",
+      "roFundstelle": "AS 2019 2195",
       "titelDe": "Verordnung über die Bewilligungen im Arzneimittelbereich (Arzneimittel-Bewilligungsverordnung; AMBV)",
       "titelFr": "Ordonnance sur les autorisations dans le domaine des médicaments (OAMéd)",
       "titelIt": "Ordinanza sulle autorizzazioni nel settore dei medicamenti (Ordinanza sull'autorizzazione dei medicamenti, OAMed)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/409/de",
-      "sha": "10ff60097a7d2790a435f1bb6ffee0be54ba1adc38add69f5e82609eb74b98ef"
+      "sha": "83ecaca352bfe3d4b8c4f152dc96e2cf15a843aca55e22010dd7d6acaa41e84f"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2019-05-28",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/308",
       "dateDocument": "2019-05-28",
-      "roFundstelle": "AS 2019 308",
+      "roFundstelle": "AS 2019 1605",
       "titelDe": "Verordnung über die Bewilligungen im Arzneimittelbereich (Arzneimittel-Bewilligungsverordnung; AMBV)",
       "titelFr": "Ordonnance sur les autorisations dans le domaine des médicaments (OAMéd)",
       "titelIt": "Ordinanza sulle autorizzazioni nel settore dei medicamenti (Ordinanza sull'autorizzazione dei medicamenti, OAMed)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/308/de",
-      "sha": "0c1899b249acf4ac683ddf4d98f38defdf86da0851d6a84bd5539265664d8143"
+      "sha": "518412db043cff49cb75352d24d10c1b6069316ee139567486b98a81a3dfcab2"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2019-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/786",
       "dateDocument": "2018-11-14",
-      "roFundstelle": "AS 2018 786",
+      "roFundstelle": "AS 2018 5029",
       "titelDe": "Verordnung über die Bewilligungen im Arzneimittelbereich (Arzneimittel-Bewilligungsverordnung; AMBV)",
       "titelFr": "Ordonnance sur les autorisations dans le domaine des médicaments (OAMéd)",
       "titelIt": "Ordinanza sulle autorizzazioni nel settore dei medicamenti (Ordinanza sull'autorizzazione dei medicamenti, OAMed)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/786/de",
-      "sha": "46bd9bd9330b34a8390fb5af567c6bae82e8a67665b364c7719714413301c47e"
+      "sha": "233e50e95d1b8b126f32b07a98665b7f9ea54eb3039be090f41656d43aa337a0"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2018-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/281",
       "dateDocument": "2017-04-05",
-      "roFundstelle": "AS 2017 281",
+      "roFundstelle": "AS 2017 2785",
       "titelDe": "Verordnung über die Bewilligungen im Arzneimittelbereich (Arzneimittel-Bewilligungsverordnung, AMBV)",
       "titelFr": "Ordonnance sur les autorisations dans le domaine des médicaments (OAMéd)",
       "titelIt": "Ordinanza sulle autorizzazioni nel settore dei medicamenti (Ordinanza sull'autorizzazione dei medicamenti, OAMed)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/281/de",
-      "sha": "49ec6c9d87243418843b673871eff083fc82745ed3842f4fb4660f7ba005c4a8"
+      "sha": "b22672f3289944fbc97ac94ea93db45396495dfa9b38ffc8dda88271cfc5d5ef"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2015-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/365",
       "dateDocument": "2015-06-10",
-      "roFundstelle": "AS 2015 365",
+      "roFundstelle": "AS 2015 1901",
       "titelDe": "Verordnung über Bewilligungen im Arzneimittelbereich (Arzneimittel-Bewilligungsverordnung, AMBV)",
       "titelFr": "Ordonnance sur les autorisations dans le domaine des médicaments (OAMéd)",
       "titelIt": "Ordinanza sulle autorizzazioni nel settore dei medicamenti (Ordinanza sull'autorizzazione dei medicamenti, OAM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/365/de",
-      "sha": "766876684c13b9563ca502add173cfdcc215a7b4e4b2faa2454ae86f443ee455"
+      "sha": "45e22c452c1ddeabde0069ba7a0589f6739ae81f558d8addcea2de8499b53249"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2010-10-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/584",
       "dateDocument": "2010-09-08",
-      "roFundstelle": "AS 2010 584",
+      "roFundstelle": "AS 2010 4031",
       "titelDe": "Verordnung über die Bewilligungen im Arzneimittelbereich (Arzneimittel-Bewilligungsverordnung, AMBV)",
       "titelFr": "Ordonnance sur les autorisations dans le domaine des médicaments (OAMéd)",
       "titelIt": "Ordinanza sulle autorizzazioni nel settore dei medicamenti (Ordinanza sull'autorizzazione dei medicamenti, OAM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/584/de",
-      "sha": "441e9cc02e9131c24cf8671b92969c066d47f25a95b4281ba7561c7389e8891b"
+      "sha": "94014e7c55769f9fe404d46af63690be37a2acd7994f2ea01512398f97860375"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2006-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/449",
       "dateDocument": "2006-07-07",
-      "roFundstelle": "AS 2006 449",
+      "roFundstelle": "AS 2006 2945",
       "titelDe": "Verordnung über die Bewilligungen im Arzneimittelbereich (Arzneimittel-Bewilligungsverordnung, AMBV)",
       "titelFr": "Ordonnance sur les autorisations dans le domaine des médicaments (OAMéd)",
       "titelIt": "Ordinanza sulle autorizzazioni nel settore dei medicamenti (Ordinanza sull'autorizzazione dei medicamenti, OAM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/449/de",
-      "sha": "4d49c99fd6adbaba62752474ba4c341d110fdf46e932cbb17e87821f86e3e4a5"
+      "sha": "f097cbb03dc9af5be379f3bc596a5024ce461952d2f8b63eecc66339aa3d767a"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2002-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/515",
       "dateDocument": "2001-10-17",
-      "roFundstelle": "AS 2001 515",
+      "roFundstelle": "AS 2001 3399",
       "titelDe": "Verordnung über die Bewilligungen im Arzneimittelbereich (Arzneimittel-Bewilligungsverordnung, AMBV)",
       "titelFr": "Ordonnance sur les autorisations dans le domaine des médicaments (OAMéd)",
       "titelIt": "Ordinanza sulle autorizzazioni nel settore dei medicamenti (Ordinanza sull'autorizzazione dei medicamenti, OAMed)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/515/de",
-      "sha": "06e0c7ba45e8e8e75b04b76cb2d3fb749f6859267e19f7f120c13da8cb58136b"
+      "sha": "ccb2ad34bb68586240bc9aff24c487fe9ffb3bc3a7ef18745807b74eb4d74f6b"
     },
     {
       "art": "aenderung",
@@ -173,5 +173,5 @@
       "sha": "b35f29c4b3831698a9dbd92808359ae17996106a37dc1ba1a9cf5860463181e6"
     }
   ],
-  "sha": "66e80833e2c76f075a2aac2d0b6c56cf0ea0adae8124ea7df3a81beb04e42b13"
+  "sha": "6469d03f25e8a0399028d79c6bfe8aa85c4330c823c049eb48902c361fbe6d5e"
 }

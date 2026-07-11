@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1966-12-16"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Internationaler Pakt vom 16. Dezember 1966 über wirtschaftliche, soziale und kulturelle Rechte"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Pacte international du 16 décembre 1966 relatif aux droits économiques, sociaux et culturels"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Patto internazionale del 16 dicembre 1966 relativo ai diritti economici, sociali e culturali"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.103.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1993/725_725_725"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1992-09-18"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1966-12-16"
+        "value": "RO 1993 725"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1966-12-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1993 725"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über wirtschaftliche, soziale und kulturelle Rechte"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1966-12-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1993 725"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Internationaler Pakt vom 16. Dezember 1966 über wirtschaftliche, soziale und kulturelle Rechte"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Pacte international du 16 décembre 1966 relatif aux droits économiques, sociaux et culturels"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Patto internazionale del 16 dicembre 1966 relativo ai diritti economici, sociali e culturali"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.103.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1993/725_725_725"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1992-09-18"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1966-12-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1993 725"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über wirtschaftliche, soziale und kulturelle Rechte"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-05-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 3875"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über wirtschaftliche, soziale und kulturelle Rechte"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-05-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 3875"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über wirtschaftliche, soziale und kulturelle Rechte"
@@ -212,6 +236,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-05-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 3875"
       },
       "titleDe": {
         "type": "literal",
@@ -245,37 +273,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-01-13"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Internationaler Pakt vom 16. Dezember 1966 über wirtschaftliche, soziale und kulturelle Rechte"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Pacte international du 16 décembre 1966 relatif aux droits économiques, sociaux et culturels"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Patto internazionale del 16 dicembre 1966 relativo ai diritti economici, sociali e culturali"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.103.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/83"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-01-13"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-01-13"
+        "value": "RO 2006 591"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +309,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-01-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 591"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Internationaler Pakt vom 16. Dezember 1966 über wirtschaftliche, soziale und kulturelle Rechte"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Pacte international du 16 décembre 1966 relatif aux droits économiques, sociaux et culturels"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Patto internazionale del 16 dicembre 1966 relativo ai diritti economici, sociali e culturali"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.103.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/83"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-01-13"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-01-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 591"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über wirtschaftliche, soziale und kulturelle Rechte"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-10-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 413"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über wirtschaftliche, soziale und kulturelle Rechte"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-10-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 413"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über wirtschaftliche, soziale und kulturelle Rechte"
@@ -404,6 +452,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-10-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 413"
       },
       "titleDe": {
         "type": "literal",
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-12-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 587"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über wirtschaftliche, soziale und kulturelle Rechte"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-12-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 587"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über wirtschaftliche, soziale und kulturelle Rechte"
@@ -501,69 +561,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-12-15"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Internationaler Pakt vom 16. Dezember 1966 über wirtschaftliche, soziale und kulturelle Rechte"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Pacte international du 16 décembre 1966 relatif aux droits économiques, sociaux et culturels"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Patto internazionale del 16 dicembre 1966 relativo ai diritti economici, sociali e culturali"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.103.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/364"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-05-22"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-05-22"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Internationaler Pakt vom 16. Dezember 1966 über wirtschaftliche, soziale und kulturelle Rechte"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Pacte international du 16 décembre 1966 relatif aux droits économiques, sociaux et culturels"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Patto internazionale del 16 dicembre 1966 relativo ai diritti economici, sociali e culturali"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.103.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/364"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-05-22"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-05-22"
+        "value": "RO 2009 587"
       },
       "titleDe": {
         "type": "literal",
@@ -597,6 +597,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-05-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 3147"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Internationaler Pakt vom 16. Dezember 1966 über wirtschaftliche, soziale und kulturelle Rechte"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Pacte international du 16 décembre 1966 relatif aux droits économiques, sociaux et culturels"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Patto internazionale del 16 dicembre 1966 relativo ai diritti economici, sociali e culturali"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.103.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/364"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-05-22"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-05-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 3147"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Internationaler Pakt vom 16. Dezember 1966 über wirtschaftliche, soziale und kulturelle Rechte"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Pacte international du 16 décembre 1966 relatif aux droits économiques, sociaux et culturels"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Patto internazionale del 16 dicembre 1966 relativo ai diritti economici, sociali e culturali"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.103.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/364"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-05-22"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-05-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 3147"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über wirtschaftliche, soziale und kulturelle Rechte"
@@ -629,6 +705,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-03-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 989"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über wirtschaftliche, soziale und kulturelle Rechte"
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-03-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 989"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über wirtschaftliche, soziale und kulturelle Rechte"
@@ -692,6 +776,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-03-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 989"
       },
       "titleDe": {
         "type": "literal",
@@ -725,6 +813,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-07-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 2997"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über wirtschaftliche, soziale und kulturelle Rechte"
@@ -757,6 +849,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-07-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 2997"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über wirtschaftliche, soziale und kulturelle Rechte"
@@ -789,6 +885,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-07-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 2997"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über wirtschaftliche, soziale und kulturelle Rechte"
@@ -821,6 +921,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-05-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1789"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über wirtschaftliche, soziale und kulturelle Rechte"
@@ -853,6 +957,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-05-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1789"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über wirtschaftliche, soziale und kulturelle Rechte"
@@ -884,6 +992,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-05-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1789"
       },
       "titleDe": {
         "type": "literal",

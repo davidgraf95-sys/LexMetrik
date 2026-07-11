@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-30"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Übereinkommen über die gerichtliche Zuständigkeit und die Anerkennung und Vollstreckung von Entscheidungen in Zivil- und Handelssachen (Lugano-Übereinkommen, LugÜ) (mit Prot. und Anhängen)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention concernant la compétence judiciaire, la reconnaissance et l'exécution des décisions en matière civile et commerciale (Convention de Lugano, CL) (avec prot. et annexes)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione concernente la competenza giurisdizionale, il riconoscimento e l'esecuzione delle decisioni in materia civile e commerciale (Convenzione di Lugano, CLug) (con prot. e all.)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.275.12"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/801"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-10-30"
+        "value": "RO 2010 5609"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5609"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen über die gerichtliche Zuständigkeit und die Anerkennung und Vollstreckung von Entscheidungen in Zivil- und Handelssachen (Lugano-Übereinkommen, LugÜ) (mit Prot. und Anhängen)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5609"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen über die gerichtliche Zuständigkeit und die Anerkennung und Vollstreckung von Entscheidungen in Zivil- und Handelssachen (Lugano-Übereinkommen, LugÜ) (mit Prot. und Anhängen)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention concernant la compétence judiciaire, la reconnaissance et l'exécution des décisions en matière civile et commerciale (Convention de Lugano, CL) (avec prot. et annexes)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione concernente la competenza giurisdizionale, il riconoscimento e l'esecuzione delle decisioni in materia civile e commerciale (Convenzione di Lugano, CLug) (con prot. e all.)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.275.12"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/801"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-10-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5609"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen über die gerichtliche Zuständigkeit und die Anerkennung und Vollstreckung von Entscheidungen in Zivil- und Handelssachen (Lugano-Übereinkommen, LugÜ) (mit Prot. und Anhängen)"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-05-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 1215"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 30. Oktober 2007 über die gerichtliche Zuständigkeit und die Anerkennung und Vollstreckung von Entscheidungen in Zivil- und Handelssachen (Lugano-Übereinkommen, LugÜ)"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-05-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 1215"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 30. Oktober 2007 über die gerichtliche Zuständigkeit und die Anerkennung und Vollstreckung von Entscheidungen in Zivil- und Handelssachen (Lugano-Übereinkommen, LugÜ)"
@@ -213,69 +237,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-05-01"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Übereinkommen vom 30. Oktober 2007 über die gerichtliche Zuständigkeit und die Anerkennung und Vollstreckung von Entscheidungen in Zivil- und Handelssachen (Lugano-Übereinkommen, LugÜ)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention du 30 octobre 2007 concernant la compétence judiciaire, la reconnaissance et l'exécution des décisions en matière civile et commerciale (Convention de Lugano, CL)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione del 30 ottobre 2007 concernente la competenza giurisdizionale, il riconoscimento e l'esecuzione delle decisioni in materia civile e commerciale (Convenzione di Lugano, CLug)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.275.12"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/830"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-04-29"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-03-28"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Übereinkommen vom 30. Oktober 2007 über die gerichtliche Zuständigkeit und die Anerkennung und Vollstreckung von Entscheidungen in Zivil- und Handelssachen (Lugano-Übereinkommen, LugÜ)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention du 30 octobre 2007 concernant la compétence judiciaire, la reconnaissance et l'exécution des décisions en matière civile et commerciale (Convention de Lugano, CL)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione del 30 ottobre 2007 concernente la competenza giurisdizionale, il riconoscimento e l'esecuzione delle decisioni in materia civile e commerciale (Convenzione di Lugano, CLug)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.275.12"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/830"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-04-29"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-03-28"
+        "value": "RO 2011 1215"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +273,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-03-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 6059"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 30. Oktober 2007 über die gerichtliche Zuständigkeit und die Anerkennung und Vollstreckung von Entscheidungen in Zivil- und Handelssachen (Lugano-Übereinkommen, LugÜ)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 30 octobre 2007 concernant la compétence judiciaire, la reconnaissance et l'exécution des décisions en matière civile et commerciale (Convention de Lugano, CL)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 30 ottobre 2007 concernente la competenza giurisdizionale, il riconoscimento e l'esecuzione delle decisioni in materia civile e commerciale (Convenzione di Lugano, CLug)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.275.12"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/830"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-04-29"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-03-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 6059"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 30. Oktober 2007 über die gerichtliche Zuständigkeit und die Anerkennung und Vollstreckung von Entscheidungen in Zivil- und Handelssachen (Lugano-Übereinkommen, LugÜ)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 30 octobre 2007 concernant la compétence judiciaire, la reconnaissance et l'exécution des décisions en matière civile et commerciale (Convention de Lugano, CL)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 30 ottobre 2007 concernente la competenza giurisdizionale, il riconoscimento e l'esecuzione delle decisioni in materia civile e commerciale (Convenzione di Lugano, CLug)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.275.12"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/830"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-04-29"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-03-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 6059"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 30. Oktober 2007 über die gerichtliche Zuständigkeit und die Anerkennung und Vollstreckung von Entscheidungen in Zivil- und Handelssachen (Lugano-Übereinkommen, LugÜ)"
@@ -340,6 +380,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-02-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 777"
       },
       "titleDe": {
         "type": "literal",
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-02-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 777"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen über die gerichtliche Zuständigkeit und die Anerkennung und Vollstreckung von Entscheidungen in Zivil- und Handelssachen (Lugano-Übereinkommen, LugÜ) (Betrifft nur den französischen Text)"
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-02-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 777"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen über die gerichtliche Zuständigkeit und die Anerkennung und Vollstreckung von Entscheidungen in Zivil- und Handelssachen (Lugano-Übereinkommen, LugÜ) (Betrifft nur den französischen Text)"
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-03-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 4703"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 30. Oktober 2007 über die gerichtliche Zuständigkeit und die Anerkennung und Vollstreckung von Entscheidungen in Zivil- und Handelssachen (Lugano-Übereinkommen, LugÜ)"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-03-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 4703"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 30. Oktober 2007 über die gerichtliche Zuständigkeit und die Anerkennung und Vollstreckung von Entscheidungen in Zivil- und Handelssachen (Lugano-Übereinkommen, LugÜ)"
@@ -500,6 +560,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-03-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 4703"
       },
       "titleDe": {
         "type": "literal",
@@ -532,6 +596,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-04-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 113"
       },
       "titleDe": {
         "type": "literal",
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-04-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 113"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 30. Oktober 2007 über die gerichtliche Zuständigkeit und die Anerkennung und Vollstreckung von Entscheidungen in Zivil- und Handelssachen (Lugano-Übereinkommen, LugÜ)"
@@ -596,6 +668,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-04-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 113"
       },
       "titleDe": {
         "type": "literal",

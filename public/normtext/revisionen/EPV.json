@@ -1,7 +1,7 @@
 {
   "erlassKey": "EPV",
   "sr": "818.101.1",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -237,13 +237,13 @@
       "dateEntryInForce": "2016-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/298",
       "dateDocument": "2015-04-29",
-      "roFundstelle": "AS 2015 298",
+      "roFundstelle": "AS 2015 1463",
       "titelDe": "Verordnung über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemienverordnung, EpV)",
       "titelFr": "Ordonnance sur la lutte contre les maladies transmissibles de l'homme (Ordonnance sur les épidémies, OEp)",
       "titelIt": "Ordinanza concernente la lotta contro le malattie trasmissibili dell'essere umano (Ordinanza sulle epidemie, OEp)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/298/de",
-      "sha": "903c97d25266e2831b10eabead4fe319ece06d00c3ecff1c1b7008c4b68b1814"
+      "sha": "02e8c1ed8d6c998a9101b6ba1375b7c3bb6bade3f6d4cd16ccd98a5e37714453"
     }
   ],
-  "sha": "58cfca00924480df94808293300a4510482da2fa8cc1eb68ebcefb5e857eb2f3"
+  "sha": "6fb90bfee374652fa4099cd42a01b84faa281fa59a56581b10b1adfa133dea56"
 }

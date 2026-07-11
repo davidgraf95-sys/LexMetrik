@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1948-12-21"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom 21. Dezember 1948 über die Luftfahrt (Luftfahrtgesetz, LFG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 21 décembre 1948 sur l'aviation (LA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 21 dicembre 1948 sulla navigazione aerea (LNA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "748.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1950/471_491_479"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1950-06-15"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1948-12-21"
+        "value": "RO 1950 491"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1948-12-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1950 491"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 21. Dezember 1948 über die Luftfahrt (Luftfahrtgesetz, LFG)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1948-12-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1950 491"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 21. Dezember 1948 über die Luftfahrt (Luftfahrtgesetz, LFG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 21 décembre 1948 sur l'aviation (LA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 21 dicembre 1948 sulla navigazione aerea (LNA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "748.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1950/471_491_479"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1950-06-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1948-12-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1950 491"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 21. Dezember 1948 über die Luftfahrt (Luftfahrtgesetz, LFG)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-06-26"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Luftfahrt (Luftfahrtgesetz, LFG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur l'aviation (LA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulla navigazione aerea (LNA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "748.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1998/2566_2566_2566"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-11-15"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-06-26"
+        "value": "RO 1998 2566"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-06-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1998 2566"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Luftfahrt (Luftfahrtgesetz, LFG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'aviation (LA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla navigazione aerea (LNA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "748.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1998/2566_2566_2566"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-11-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-06-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1998 2566"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Luftfahrt (Luftfahrtgesetz, LFG)"
@@ -245,6 +273,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-10-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1678"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Luftfahrt (Luftfahrtgesetz, LFG)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-10-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1678"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Luftfahrt (Luftfahrtgesetz, LFG)"
@@ -308,6 +344,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-10-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1678"
       },
       "titleDe": {
         "type": "literal",
@@ -341,37 +381,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-03-21"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Luftfahrtgesetz (LFG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur l'aviation (LA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulla navigazione aerea (LNA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "748.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/320"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-08-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-03-21"
+        "value": "RO 2003 2179"
       },
       "titleDe": {
         "type": "literal",
@@ -405,6 +417,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-03-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 2179"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Luftfahrtgesetz (LFG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'aviation (LA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla navigazione aerea (LNA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "748.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/320"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-03-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 2179"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Luftfahrtgesetz (LFG)"
@@ -437,37 +489,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-03-19"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Luftfahrt (Luftfahrtgesetz, LFG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur l'aviation (LA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulla navigazione aerea (LNA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "748.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/534"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-09-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-03-19"
+        "value": "RO 2004 3867"
       },
       "titleDe": {
         "type": "literal",
@@ -501,6 +525,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-03-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 3867"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Luftfahrt (Luftfahrtgesetz, LFG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'aviation (LA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla navigazione aerea (LNA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "748.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/534"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-09-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-03-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 3867"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Luftfahrt (Luftfahrtgesetz, LFG)"
@@ -532,6 +596,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-12-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 1989"
       },
       "titleDe": {
         "type": "literal",
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-12-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 1989"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Luftfahrt (Luftfahrtgesetz, LFG)"
@@ -597,6 +669,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-12-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 1989"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Luftfahrt (Luftfahrtgesetz, LFG)"
@@ -629,37 +705,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-09"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die vollständige Inkraftsetzung der Änderung vom 16. Dezember 2005 des Bundesgesetzes über die Luftfahrt"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant la mise en vigueur intégrale de la modification du 16 décembre 2005 de la loi fédérale sur l'aviation"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'entrata in vigore integrale della modifica del 16 dicembre 2005 della legge federale sulla navigazione aerea"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "748.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/163"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-03-09"
+        "value": "RO 2007 915"
       },
       "titleDe": {
         "type": "literal",
@@ -693,6 +741,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 915"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die vollständige Inkraftsetzung der Änderung vom 16. Dezember 2005 des Bundesgesetzes über die Luftfahrt"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant la mise en vigueur intégrale de la modification du 16 décembre 2005 de la loi fédérale sur l'aviation"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'entrata in vigore integrale della modifica del 16 dicembre 2005 della legge federale sulla navigazione aerea"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "748.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/163"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-03-09"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 915"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die vollständige Inkraftsetzung der Änderung vom 16. Dezember 2005 des Bundesgesetzes über die Luftfahrt"
@@ -725,6 +813,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-10-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 1119"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Luftfahrt (Luftfahrtgesetz, LFG)"
@@ -757,6 +849,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-10-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 1119"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Luftfahrt (Luftfahrtgesetz, LFG)"
@@ -788,6 +884,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-10-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 1119"
       },
       "titleDe": {
         "type": "literal",
@@ -820,6 +920,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-04-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 2751"
       },
       "titleDe": {
         "type": "literal",
@@ -853,6 +957,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-04-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 2751"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über eine weitere Teilinkraftsetzung der Änderung vom 1. Oktober 2010 des Luftfahrtgesetzes"
@@ -884,6 +992,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-04-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 2751"
       },
       "titleDe": {
         "type": "literal",
@@ -916,6 +1028,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-09-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 3323"
       },
       "titleDe": {
         "type": "literal",
@@ -949,6 +1065,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-09-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 3323"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Luftfahrt (Luftfahrtgesetz, LFG) (Betrifft nur den italienischen Text)"
@@ -980,6 +1100,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-09-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 3323"
       },
       "titleDe": {
         "type": "literal",
@@ -1012,6 +1136,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-05-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1337"
       },
       "titleDe": {
         "type": "literal",
@@ -1045,6 +1173,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-05-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1337"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die abschliessende Inkraftsetzung der Änderung vom 1. Oktober 2010 des Luftfahrtgesetzes"
@@ -1076,6 +1208,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-05-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1337"
       },
       "titleDe": {
         "type": "literal",
@@ -1108,6 +1244,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-06-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5607"
       },
       "titleDe": {
         "type": "literal",
@@ -1141,6 +1281,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-06-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5607"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Luftfahrt (Luftfahrtgesetz, LFG)"
@@ -1172,6 +1316,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-06-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5607"
       },
       "titleDe": {
         "type": "literal",
@@ -1204,6 +1352,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-10-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3841"
       },
       "titleDe": {
         "type": "literal",
@@ -1237,6 +1389,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-10-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3841"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über eine Teilinkraftsetzung der Änderung vom 16. Juni 2017 des Luftfahrtgesetzes"
@@ -1268,6 +1424,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-10-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3841"
       },
       "titleDe": {
         "type": "literal",
@@ -1301,6 +1461,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-05-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1493"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Luftfahrt (Luftfahrtgesetz, LFG)"
@@ -1332,6 +1496,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-05-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1493"
       },
       "titleDe": {
         "type": "literal",

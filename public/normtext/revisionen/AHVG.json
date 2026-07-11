@@ -1,7 +1,7 @@
 {
   "erlassKey": "AHVG",
   "sr": "831.10",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -129,13 +129,13 @@
       "dateEntryInForce": "2017-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/828",
       "dateDocument": "2016-06-17",
-      "roFundstelle": "AS 2016 828",
+      "roFundstelle": "AS 2016 5233",
       "titelDe": "Bundesbeschluss über die Genehmigung und die Umsetzung des Protokolls zum Freizügigkeitsabkommen zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft sowie ihren Mitgliedstaaten andererseits betreffend die Ausdehnung auf die Republik Kroatien",
       "titelFr": "Arrêté fédéral portant approbation et mise en uvre du protocole relatif à l'accord sur la libre circulation des personnes entre la Confédération suisse, d'une part, et la Communauté européenne et ses Etats membres, d'autre part, concernant l'extension à la République de Croatie",
       "titelIt": "Decreto federale che approva e traspone nel diritto svizzero il Protocollo relativo all'estensione alla Croazia dell'Accordo tra la Confederazione Svizzera, da una parte, e la Comunità europea ed i suoi Stati membri, dall'altra, sulla libera circolazione delle persone",
       "botschaftKey": "BOTSCHAFT-2016-467",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/828/de",
-      "sha": "c62b3fa92de60b32390f83a2b0c405e203e96a5581e5dfed88404e51f1f1475e"
+      "sha": "71a80de3a7a0d3bdb1d4f87e8fb1b224b837fc23afd4b8c240c7628c9756df6f"
     },
     {
       "art": "sammelerlass-marker",
@@ -166,38 +166,38 @@
       "dateEntryInForce": "2012-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/673",
       "dateDocument": "2011-06-17",
-      "roFundstelle": "AS 2011 673",
+      "roFundstelle": "AS 2011 4745",
       "titelDe": "Bundesgesetz über die Alters- und Hinterlassenenversicherung (AHVG) (Verbesserung der Durchführung)",
       "titelFr": "Loi fédérale sur l'assurance-vieillesse et survivants (LAVS) (Amélioration de la mise en uvre)",
       "titelIt": "Legge federale sull'assicurazione per la vecchiaia e per i superstiti (LAVS) (Miglioramento dell'esecuzione)",
       "botschaftKey": "BOTSCHAFT-2011-61",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/673/de",
-      "sha": "c845754617dcf20667e1f270a59e4e3595418c1917d8421ec2ea47c65c3d5f38"
+      "sha": "6e3c5610a1975276d82a6d7cfd34ea65371400bf8b3cce9d3917f4c3824cb189"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2011-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/432",
       "dateDocument": "2008-06-13",
-      "roFundstelle": "AS 2009 432",
+      "roFundstelle": "AS 2009 3517",
       "titelDe": "Bundesgesetz über die Neuordnung der Pflegefinanzierung",
       "titelFr": "Loi fédérale sur le nouveau régime de financement des soins",
       "titelIt": "Legge federale concernente il nuovo ordinamento del finanziamento delle cure",
       "botschaftKey": "BOTSCHAFT-2005-237",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/432/de",
-      "sha": "ca67c14306b6d1ea12f86a096b8417be39ede8375439636dbe3f99507f0122c4"
+      "sha": "32d251e61190ba2dab4ba98470a863f2b2a6e4c1289fdfb8e3b721accdad85ef"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2011-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/242",
       "dateDocument": "2010-04-16",
-      "roFundstelle": "AS 2010 242",
+      "roFundstelle": "AS 2010 1643",
       "titelDe": "Bundesgesetz über die Neuordnung der Pflegefinanzierung (Betrifft nur den französischen Text)",
       "titelFr": "Loi fédérale sur le nouveau régime de financement des soins",
       "titelIt": "Legge federale concernente il nuovo ordinamento del finanziamento delle cure (Concerne solo il testo francese)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/242/de",
-      "sha": "d28d16314e7968a3199a49ba427bcbbc9320c7ec8e9cb0760c56f9efad585cf1"
+      "sha": "744ae333c050320f398ddbf589419502762c1acf7e12eebba80117da8f8f4b5d"
     },
     {
       "art": "sammelerlass-marker",
@@ -210,13 +210,13 @@
       "dateEntryInForce": "2009-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/296",
       "dateDocument": "2008-06-13",
-      "roFundstelle": "AS 2009 296",
+      "roFundstelle": "AS 2009 2411",
       "titelDe": "Bundesbeschluss über die Genehmigung der Weiterführung des Freizügigkeitsabkommens zwischen der Schweiz und der Europäischen Gemeinschaft und ihren Mitgliedstaaten sowie über die Genehmigung und die Umsetzung des Protokolls über die Ausdehnung des Freizügigkeitsabkommens auf Bulgarien und Rumänien",
       "titelFr": "Arrêté fédéral portant approbation de la reconduction de l'accord entre la Suisse et la Communauté européenne et ses Etats membres sur la libre circulation des personnes, ainsi qu'approbation et mise en uvre du protocole visant à étendre l'accord sur la libre circulation à la Bulgarie et à la Roumanie",
       "titelIt": "Decreto federale che approva il rinnovo dell'Accordo tra la Svizzera e la Comunità europea ed i suoi Stati membri sulla libera circolazione delle persone e approva e traspone nel diritto svizzero il Protocollo relativo all'estensione alla Bulgaria e alla Romania dell'Accordo sulla libera circolazione delle persone",
       "botschaftKey": "BOTSCHAFT-2008-472",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/296/de",
-      "sha": "3eb4b8a57373cc2b2c9d5fce6cbec78d5b1580a3030fc331fc79467b39b1e988"
+      "sha": "6cdfea24f013a2368151972b6d448cf50e79b95b147f86be6e8f86e7e1a1fb40"
     },
     {
       "art": "sammelerlass-marker",
@@ -241,26 +241,26 @@
       "dateEntryInForce": "2007-12-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/747",
       "dateDocument": "2006-06-23",
-      "roFundstelle": "AS 2007 747",
+      "roFundstelle": "AS 2007 5259",
       "titelDe": "Bundesgesetz über die Alters- und Hinterlassenenversicherung (AHVG) (Neue AHV-Versichertennummer)",
       "titelFr": "Loi fédérale sur l'assurance-vieillesse et survivants (LAVS) (Nouveau numéro d'assuré AVS)",
       "titelIt": "Legge federale sull'assicurazione per la vecchiaia e per i superstiti (LAVS) (Nuovo numero d'assicurato dell'AVS)",
       "botschaftKey": "BOTSCHAFT-2006-52",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/747/de",
-      "sha": "0004cf3efd5f4928df6d90177cae9da8dc3392d78a0f1193d1a831db872ba4b1"
+      "sha": "013f7968521b6d1a8a26d5bb7bd5bdf49c4115e0e6a328b1a32cc57397d963c0"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2007-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/741",
       "dateDocument": "2005-12-16",
-      "roFundstelle": "AS 2006 741",
+      "roFundstelle": "AS 2006 4817",
       "titelDe": "Bundesgesetz über die Alters- und Hinterlassenenversicherung (AHVG)",
       "titelFr": "Loi fédérale sur l'assurance-vieillesse et survivants (LAVS)",
       "titelIt": "Legge federale sull'assicurazione per la vecchiaia e per i superstiti (LAVS)",
       "botschaftKey": "BOTSCHAFT-2002-1106",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/741/de",
-      "sha": "6f07866db3f480c5aadc5552df75b6d1f8dea0a878e142d9f3a1f30629f07dd2"
+      "sha": "08be44fc8dd33186e2ed4afe3c91602de8545826bd086c59481ca28760362ccd"
     },
     {
       "art": "sammelerlass-marker",
@@ -303,39 +303,39 @@
       "dateEntryInForce": "2001-02-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/59",
       "dateDocument": "2000-10-06",
-      "roFundstelle": "AS 2001 59",
+      "roFundstelle": "AS 2001 292",
       "titelDe": "Bundesgesetz über die Alters- und Hinterlassenenversicherung (AHVG)",
       "titelFr": "Loi fédérale sur l'assurance-vieillesse et survivants (LAVS)",
       "titelIt": "Legge federale sull'assicurazione per la vecchiaia e per i superstiti (LAVS)",
       "botschaftKey": "BOTSCHAFT-2000-849",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/59/de",
-      "sha": "33dbf0ed0294fd45d508d91013ade6601b995d19e28489adf6cc084ac2b7d68f"
+      "sha": "ebc81b7b42beaac1bd1a0c9635bc067c748f6dd40f6bd081c866672079ed8c3d"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/439",
       "dateDocument": "2000-06-23",
-      "roFundstelle": "AS 2000 439",
+      "roFundstelle": "AS 2000 2677",
       "titelDe": "Bundesgesetz vom über die Alters- und Hinterlassenenversicherung (AHVG)",
       "titelFr": "Loi fédérale sur l'assurance-vieillesse et survivants (LAVS)",
       "titelIt": "Legge federale sull'assicurazione per la vecchiaia e per i superstiti (LAVS)",
       "botschaftKey": "BOTSCHAFT-1999-1_4983_4601_4303",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/439/de",
-      "sha": "de1648beed45ce666066be244c0319f84bc788d1649226cba9f9ee10257c8992"
+      "sha": "624335c01ff8f2121064c1cfce7d3d6c0a9880883fc9abf2ec0d22aa6001bfd6"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/461",
       "dateDocument": "2000-06-23",
-      "roFundstelle": "AS 2000 461",
+      "roFundstelle": "AS 2000 2749",
       "titelDe": "Bundesgesetz über die Alters- und Hinterlassenenversicherung (AHVG)",
       "titelFr": "Loi fédérale sur l'assurance-vieillesse et survivants (LAVS)",
       "titelIt": "Legge federale sull'assicurazione per la vecchiaia e per i superstiti (LAVS)",
       "botschaftKey": "BOTSCHAFT-2000-99",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/461/de",
-      "sha": "ee0893a487c886fe148a6a3afecbac3decea8ec80c5be6ebd2ce3d4dfbfbc263"
+      "sha": "14ca9a38a057282daad437014ee3fefee9c386813d160b088fa3722f162c14a4"
     },
     {
       "art": "sammelerlass-marker",
@@ -362,5 +362,5 @@
       "sha": "cdf7e2d94d3d71ca886c9569cafbffdf6dfab2bfe903bc909737e3317538c15f"
     }
   ],
-  "sha": "21a7f8af18d3c3cad9a6645b24fe3ce69a0ecd9121a1c825e57376fe12d26010"
+  "sha": "f2dc04db184559059558078b81b840394b890350661c986060c88e5dc8acbcdd"
 }

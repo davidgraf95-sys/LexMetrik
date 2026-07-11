@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1986-11-12"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 12. November 1986 über den Verkehr mit Sonderabfällen (VVS)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 12 novembre 1986 sur les mouvements de déchets spéciaux (ODS)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 12 novembre 1986 sul traffico dei rifiuti speciali (OTRS)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "814.610"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1987/55_55_55"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1987-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1986-11-12"
+        "value": "RO 1987 55"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1986-11-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1987 55"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 12. November 1986 über den Verkehr mit Sonderabfällen (VVS)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1986-11-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1987 55"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 12. November 1986 über den Verkehr mit Sonderabfällen (VVS)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 12 novembre 1986 sur les mouvements de déchets spéciaux (ODS)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 12 novembre 1986 sul traffico dei rifiuti speciali (OTRS)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "814.610"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1987/55_55_55"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1987-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1986-11-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1987 55"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 12. November 1986 über den Verkehr mit Sonderabfällen (VVS)"
@@ -149,69 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-06-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über den Verkehr mit Abfällen (VeVA)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les mouvements de déchets (OMoD)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sul traffico di rifiuti (OTRif)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "814.610"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2005/551"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-06-22"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung über den Verkehr mit Abfällen (VeVA)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les mouvements de déchets (OMoD)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sul traffico di rifiuti (OTRif)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "814.610"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2005/551"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-06-22"
+        "value": "RO 2005 4199"
       },
       "titleDe": {
         "type": "literal",
@@ -245,6 +201,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-06-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 4199"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über den Verkehr mit Abfällen (VeVA)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les mouvements de déchets (OMoD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul traffico di rifiuti (OTRif)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "814.610"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/551"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-06-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 4199"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über den Verkehr mit Abfällen (VeVA)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les mouvements de déchets (OMoD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul traffico di rifiuti (OTRif)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "814.610"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/551"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-06-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 4199"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Verkehr mit Abfällen (VeVA)"
@@ -276,6 +308,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-08-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 4423"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-08-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 4423"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Verkehr mit Abfällen (VeVA) (Betrifft nur den französischen Text)"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-08-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 4423"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Verkehr mit Abfällen (VeVA) (Betrifft nur den französischen Text)"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-11-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 6259"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Verkehr mit Abfällen (VeVA)"
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-11-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 6259"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Verkehr mit Abfällen (VeVA)"
@@ -437,69 +489,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-11-11"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über den Verkehr mit Abfällen (VeVA)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les mouvements de déchets (OMoD)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sul traffico di rifiuti (OTRif)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "814.610"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2014/28"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-05-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-12-18"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung über den Verkehr mit Abfällen (VeVA)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les mouvements de déchets (OMoD)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sul traffico di rifiuti (OTRif)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "814.610"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2014/28"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-05-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-12-18"
+        "value": "RO 2009 6259"
       },
       "titleDe": {
         "type": "literal",
@@ -533,6 +525,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-12-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 193"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über den Verkehr mit Abfällen (VeVA)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les mouvements de déchets (OMoD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul traffico di rifiuti (OTRif)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "814.610"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/28"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-05-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-12-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 193"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über den Verkehr mit Abfällen (VeVA)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les mouvements de déchets (OMoD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul traffico di rifiuti (OTRif)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "814.610"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/28"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-05-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-12-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 193"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Verkehr mit Abfällen (VeVA)"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-03-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1117"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Verkehr mit Abfällen (VeVA)"
@@ -597,6 +669,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-03-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1117"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Verkehr mit Abfällen (VeVA)"
@@ -628,6 +704,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-03-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1117"
       },
       "titleDe": {
         "type": "literal",

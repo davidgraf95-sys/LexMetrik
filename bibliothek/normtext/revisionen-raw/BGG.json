@@ -21,6 +21,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2719"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Organisation der Bundesrechtspflege (Bundesrechtspflegegesetz, OG)"
@@ -53,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2719"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Organisation der Bundesrechtspflege (Bundesrechtspflegegesetz, OG)"
@@ -85,6 +93,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2719"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Organisation der Bundesrechtspflege (Bundesrechtspflegegesetz, OG)"
@@ -117,6 +129,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-10-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 505"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Abschaffung der Bundesassisen"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-10-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 505"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Abschaffung der Bundesassisen"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-10-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 505"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Abschaffung der Bundesassisen"
@@ -213,6 +237,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-06-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 1205"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über das Bundesgericht (Bundesgerichtsgesetz, BGG)"
@@ -245,6 +273,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-06-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 1205"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über das Bundesgericht (Bundesgerichtsgesetz, BGG)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-06-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 1205"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über das Bundesgericht (Bundesgerichtsgesetz, BGG)"
@@ -308,6 +344,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-06-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 1205"
       },
       "titleDe": {
         "type": "literal",
@@ -340,6 +380,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-06-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4213"
       },
       "titleDe": {
         "type": "literal",
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-06-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4213"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Bereinigung und Aktualisierung der Totalrevision der Bundesrechtspflege"
@@ -404,6 +452,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-06-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4213"
       },
       "titleDe": {
         "type": "literal",
@@ -436,6 +488,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-06-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 9"
       },
       "titleDe": {
         "type": "literal",
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-06-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 9"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über eine Neuregelung des Steuererlasses (Steuererlassgesetz)"
@@ -500,6 +560,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-06-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 9"
       },
       "titleDe": {
         "type": "literal",
@@ -629,6 +693,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1943-12-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 60 269"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 16. Dezember 1943 über die Organisation der Bundesrechtspflege (Bundesrechtspflegegesetz, OG)"
@@ -661,6 +729,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1943-12-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 60 269"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 16. Dezember 1943 über die Organisation der Bundesrechtspflege (Bundesrechtspflegegesetz, OG)"
@@ -693,6 +765,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1943-12-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 60 269"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 16. Dezember 1943 über die Organisation der Bundesrechtspflege (Bundesrechtspflegegesetz, OG)"
@@ -724,6 +800,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1943-12-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 60 269"
       },
       "titleDe": {
         "type": "literal",

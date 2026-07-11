@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import {
-  baueRevisionen, roFundstelleAusOc, liveLink, botschaftIndex, serialisiere,
+  baueRevisionen, roFundstelleAusOc, fundstelle, liveLink, botschaftIndex, serialisiere,
   MARKER_CUTOFF, type ErlassMeta,
 } from '../../scripts/normtext/revisionen-generieren';
 import { revisionenFuerNorm, revisionTitel, type RevisionBezug } from '../lib/normtext/revisionen';
@@ -28,6 +28,24 @@ describe('roFundstelleAusOc', () => {
   });
   it('gibt undefined bei unerwarteter URI', () => {
     expect(roFundstelleAusOc('https://example.org/foo')).toBeUndefined();
+  });
+});
+
+describe('fundstelle — massgebliche AS-Fundstelle (§7, gelesen statt fabriziert)', () => {
+  it('nimmt bei Einzel-Segment-ELI die historicalId-Seite (digitale AS vor 2019, Sequenz ≠ Seite)', () => {
+    // Regressionsanker Gegenprüfung 11.7.2026: oc/2005/566 ⇒ real AS 2005 4395 (NICHT «AS 2005 566»).
+    expect(fundstelle(OC('2005/566'), 'RO 2005 4395')).toBe('AS 2005 4395');
+    expect(fundstelle(OC('2014/245'), 'RO 2014 1119')).toBe('AS 2014 1119');
+  });
+  it('bevorzugt bei Multi-Segment-ELI die DE-Ableitung (erstes Segment), nicht die FR-historicalId', () => {
+    expect(fundstelle(OC('1973/348_347_349'), 'RO 1973 347')).toBe('AS 1973 348');
+  });
+  it('leitet ohne historicalId ab (Einzel-Segment seit der AS-Reform 2019: Sequenz == Seite)', () => {
+    expect(fundstelle(OC('2024/487'))).toBe('AS 2024 487');
+  });
+  it('nimmt unerwartetes historicalId-Format verbatim (nie fabrizieren)', () => {
+    expect(fundstelle(OC('2005/1'), 'BS 8 123')).toBe('BS 8 123');
+    expect(fundstelle(OC('2005/1'), 'Sonderfall')).toBe('Sonderfall');
   });
 });
 

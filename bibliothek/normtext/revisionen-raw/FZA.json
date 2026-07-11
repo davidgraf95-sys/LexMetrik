@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-06-21"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Abkommen zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit (mit Anhängen, Prot. und Schlussakte)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Accord entre la Confédération suisse d'une part, et la Communauté européenne et ses Etats membres, d'autre part, sur la libre circulation des personnes (avec annexes, prot. et acte final)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Accordo tra la Confederazione Svizzera, da una parte, e la Comunità europea ed i suoi Stati membri, dall'altra, sulla libera circolazione delle persone (con allegati, protocolli e atto finale)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.142.112.681"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/243"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-06-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-06-21"
+        "value": "RO 2002 1529"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-06-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1529"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Abkommen zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit (mit Anhängen, Prot. und Schlussakte)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-06-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1529"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Abkommen zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit (mit Anhängen, Prot. und Schlussakte)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Accord entre la Confédération suisse d'une part, et la Communauté européenne et ses Etats membres, d'autre part, sur la libre circulation des personnes (avec annexes, prot. et acte final)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Accordo tra la Confederazione Svizzera, da una parte, e la Comunità europea ed i suoi Stati membri, dall'altra, sulla libera circolazione delle persone (con allegati, protocolli e atto finale)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.142.112.681"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/243"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-06-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1529"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Abkommen zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit (mit Anhängen, Prot. und Schlussakte)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-10-07"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Abkommen zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit (mit Anhängen, Protokolle und Schlussakte)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Accord entre la Confédération suisse d'une part, et la Communauté européenne et ses Etats membres, d'autre part, sur la libre circulation des personnes (avec annexes, prot. et acte final) (Ne concerne que le texte allemand)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Accordo tra la Confederazione Svizzera, da una parte, e la Comunità europea ed i suoi Stati membri, dall'altra, sulla libera circolazione delle persone (con allegati, protocolli e atto finale) (Concerne solo il testo tedesco)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.142.112.681"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/509"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-06-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-10-07"
+        "value": "RO 2003 3541"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-10-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3541"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Abkommen zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit (mit Anhängen, Protokolle und Schlussakte)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Accord entre la Confédération suisse d'une part, et la Communauté européenne et ses Etats membres, d'autre part, sur la libre circulation des personnes (avec annexes, prot. et acte final) (Ne concerne que le texte allemand)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Accordo tra la Confederazione Svizzera, da una parte, e la Comunità europea ed i suoi Stati membri, dall'altra, sulla libera circolazione delle persone (con allegati, protocolli e atto finale) (Concerne solo il testo tedesco)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.142.112.681"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/509"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-10-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3541"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Abkommen zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit (mit Anhängen, Protokolle und Schlussakte)"
@@ -245,37 +273,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-07-15"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Beschluss Nr. 2/2003 des Gemischten Ausschusses EU-Schweiz zur Änderung des Anhangs II (Soziale Sicherheit) des Abkommens zwischen der Europäischen Gemeinschaft und ihren Mitgliedstaaten einerseits und der Schweizerischen Eidgenossenschaft andererseits über die Freizügigkeit"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Décision n<sup>o</sup> 2/2003 du Comité mixte UE-Suisse portant modification de l'annexe II (sécurité sociale) de l'accord entre la Communauté européenne et ses États membres et la Confédération suisse sur la libre circulation des personnes"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Decisione n. 2/2003 del Comitato misto UE-Svizzera, recante modifica dell'allegato II (sicurezza sociale) all'accordo tra la Comunità europea ed i suoi Stati membri, da una parte, e la Confederazione svizzera, dall'altra, per la libera circolazione delle persone"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.142.112.681"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/150"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-07-15"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-07-15"
+        "value": "RO 2004 1277"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +309,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-07-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 1277"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Beschluss Nr. 2/2003 des Gemischten Ausschusses EU-Schweiz zur Änderung des Anhangs II (Soziale Sicherheit) des Abkommens zwischen der Europäischen Gemeinschaft und ihren Mitgliedstaaten einerseits und der Schweizerischen Eidgenossenschaft andererseits über die Freizügigkeit"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Décision n<sup>o</sup> 2/2003 du Comité mixte UE-Suisse portant modification de l'annexe II (sécurité sociale) de l'accord entre la Communauté européenne et ses États membres et la Confédération suisse sur la libre circulation des personnes"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Decisione n. 2/2003 del Comitato misto UE-Svizzera, recante modifica dell'allegato II (sicurezza sociale) all'accordo tra la Comunità europea ed i suoi Stati membri, da una parte, e la Confederazione svizzera, dall'altra, per la libera circolazione delle persone"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.142.112.681"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/150"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-07-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-07-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 1277"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Beschluss Nr. 2/2003 des Gemischten Ausschusses EU-Schweiz zur Änderung des Anhangs II (Soziale Sicherheit) des Abkommens zwischen der Europäischen Gemeinschaft und ihren Mitgliedstaaten einerseits und der Schweizerischen Eidgenossenschaft andererseits über die Freizügigkeit"
@@ -341,37 +381,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-04-30"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Beschluss Nr. 1/2004 des Gemischten Ausschusses EG-Schweiz für Freizügigkeit zur Änderung des Anhangs III (gegenseitige Anerkennung beruflicher Qualifikationen) des Abkommens zwischen der Europäischen Gemeinschaft und ihren Mitgliedstaaten einerseits und der Schweizerischen Eidgenossenschaft andererseits"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Décision N<sup>o</sup> 1/2004 du Comité mixte UE-Suisse portant modification de l'annexe III (reconnaissance mutuelle des qualifications professionnelles) de l'accord sur la libre circulation des personnes entre la Communauté européenne et ses États membres, d'une part, et la Confédération suisse, d'autre part"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Decisione N. 1/2004 del Comitato misto UE-Svizzera che modifica l'allegato III relativo al (Mutual Recognition of Professional Qualifications) riconoscimento reciproco delle qualifiche professionali dell'accordo sulla libera circolazione delle persone tra la Comunità europea e i suoi Stati membri, da una parte, e la Confederazione svizzera, dall'altra"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.142.112.681"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/627"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-04-30"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-04-30"
+        "value": "RO 2004 4203"
       },
       "titleDe": {
         "type": "literal",
@@ -405,6 +417,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-04-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 4203"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Beschluss Nr. 1/2004 des Gemischten Ausschusses EG-Schweiz für Freizügigkeit zur Änderung des Anhangs III (gegenseitige Anerkennung beruflicher Qualifikationen) des Abkommens zwischen der Europäischen Gemeinschaft und ihren Mitgliedstaaten einerseits und der Schweizerischen Eidgenossenschaft andererseits"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Décision N<sup>o</sup> 1/2004 du Comité mixte UE-Suisse portant modification de l'annexe III (reconnaissance mutuelle des qualifications professionnelles) de l'accord sur la libre circulation des personnes entre la Communauté européenne et ses États membres, d'une part, et la Confédération suisse, d'autre part"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Decisione N. 1/2004 del Comitato misto UE-Svizzera che modifica l'allegato III relativo al (Mutual Recognition of Professional Qualifications) riconoscimento reciproco delle qualifiche professionali dell'accordo sulla libera circolazione delle persone tra la Comunità europea e i suoi Stati membri, da una parte, e la Confederazione svizzera, dall'altra"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.142.112.681"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/627"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-04-30"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-04-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 4203"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Beschluss Nr. 1/2004 des Gemischten Ausschusses EG-Schweiz für Freizügigkeit zur Änderung des Anhangs III (gegenseitige Anerkennung beruflicher Qualifikationen) des Abkommens zwischen der Europäischen Gemeinschaft und ihren Mitgliedstaaten einerseits und der Schweizerischen Eidgenossenschaft andererseits"
@@ -437,37 +489,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-10-26"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Protokoll zum Abkommen zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit im Hinblick auf die Aufnahme der Tschechischen Republik, der Republik Estland, der Republik Zypern, der Republik Lettland, der Republik Litauen, der Republik Ungarn, der Republik Malta, der Republik Polen, der Republik Slowenien und der Slowakischen Republik als Vertragsparteien infolge ihres Beitritts zur Europäischen Union"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Protocole à l'accord entre la Confédération suisse, d'une part, et la Communauté européenne et ses Etats membres, d'autre part, sur la libre circulation des personnes, concernant la participation, en tant que parties contractantes, de la République tchèque, de la République d'Estonie, de la République de Chypre, de la République de Lettonie, de la République de Lituanie, de la République de Hongrie, de la République de Malte, de la République de Pologne, de la République de Slovénie et de la République slovaque, à la suite de leur adhésion à l'Union européenne"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Protocollo all'Accordo tra la Confederazione Svizzera, da una parte, e la Comunità europea e i suoi Stati membri, dall'altra, sulla libera circolazione delle persone, relativo alla partecipazione, in qualità di Parti contraenti, della Repubblica Ceca, Repubblica di Estonia, Repubblica di Cipro, Repubblica di Lettonia, Repubblica di Lituania, Repubblica di Ungheria, Repubblica di Malta, Repubblica di Polonia, Repubblica di Slovenia e Repubblica Slovacca, successivamente alla loro adesione all'Unione europea"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.142.112.681"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/179"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-10-26"
+        "value": "RO 2006 995"
       },
       "titleDe": {
         "type": "literal",
@@ -501,6 +525,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-10-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 995"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Protokoll zum Abkommen zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit im Hinblick auf die Aufnahme der Tschechischen Republik, der Republik Estland, der Republik Zypern, der Republik Lettland, der Republik Litauen, der Republik Ungarn, der Republik Malta, der Republik Polen, der Republik Slowenien und der Slowakischen Republik als Vertragsparteien infolge ihres Beitritts zur Europäischen Union"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Protocole à l'accord entre la Confédération suisse, d'une part, et la Communauté européenne et ses Etats membres, d'autre part, sur la libre circulation des personnes, concernant la participation, en tant que parties contractantes, de la République tchèque, de la République d'Estonie, de la République de Chypre, de la République de Lettonie, de la République de Lituanie, de la République de Hongrie, de la République de Malte, de la République de Pologne, de la République de Slovénie et de la République slovaque, à la suite de leur adhésion à l'Union européenne"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Protocollo all'Accordo tra la Confederazione Svizzera, da una parte, e la Comunità europea e i suoi Stati membri, dall'altra, sulla libera circolazione delle persone, relativo alla partecipazione, in qualità di Parti contraenti, della Repubblica Ceca, Repubblica di Estonia, Repubblica di Cipro, Repubblica di Lettonia, Repubblica di Lituania, Repubblica di Ungheria, Repubblica di Malta, Repubblica di Polonia, Repubblica di Slovenia e Repubblica Slovacca, successivamente alla loro adesione all'Unione europea"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.142.112.681"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/179"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-10-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 995"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Protokoll zum Abkommen zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit im Hinblick auf die Aufnahme der Tschechischen Republik, der Republik Estland, der Republik Zypern, der Republik Lettland, der Republik Litauen, der Republik Ungarn, der Republik Malta, der Republik Polen, der Republik Slowenien und der Slowakischen Republik als Vertragsparteien infolge ihres Beitritts zur Europäischen Union"
@@ -533,37 +597,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-07-06"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Beschluss Nr. 1/2006 des Gemischten Ausschusses Schweiz-EU vom 6. Juli 2006 zur Änderung des Anhangs II (Soziale Sicherheit) des Abkommens zwischen der Europäischen Gemeinschaft und ihren Mitgliedstaaten einerseits und der Schweizerischen Eidgenossenschaft andererseits über die Freizügigkeit"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Décision n<sup>o</sup> 1/2006 du comité mixte Suisse-UE du 6 juillet 2006 portant modification de l'annexe II (sécurité sociale) de l'accord entre la Communauté européenne et ses États membres d'une part, et la Confédération suisse, d'autre part, sur la libre circulation des personnes"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Decisione n. 1/2006 del comitato misto Svizzera-UE del 6 luglio 2006 recante modifica ell'allegato II (sicurezza sociale) dell'Accordo tra la Comunità europea ed i suoi Stati membri da una parte e la Confederazione svizzera, dall'altra, sulla libera circolazione delle persone"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.142.112.681"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/860"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-07-06"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-07-06"
+        "value": "RO 2006 5851"
       },
       "titleDe": {
         "type": "literal",
@@ -597,6 +633,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-07-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 5851"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Beschluss Nr. 1/2006 des Gemischten Ausschusses Schweiz-EU vom 6. Juli 2006 zur Änderung des Anhangs II (Soziale Sicherheit) des Abkommens zwischen der Europäischen Gemeinschaft und ihren Mitgliedstaaten einerseits und der Schweizerischen Eidgenossenschaft andererseits über die Freizügigkeit"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Décision n<sup>o</sup> 1/2006 du comité mixte Suisse-UE du 6 juillet 2006 portant modification de l'annexe II (sécurité sociale) de l'accord entre la Communauté européenne et ses États membres d'une part, et la Confédération suisse, d'autre part, sur la libre circulation des personnes"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Decisione n. 1/2006 del comitato misto Svizzera-UE del 6 luglio 2006 recante modifica ell'allegato II (sicurezza sociale) dell'Accordo tra la Comunità europea ed i suoi Stati membri da una parte e la Confederazione svizzera, dall'altra, sulla libera circolazione delle persone"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.142.112.681"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/860"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-07-06"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-07-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 5851"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Beschluss Nr. 1/2006 des Gemischten Ausschusses Schweiz-EU vom 6. Juli 2006 zur Änderung des Anhangs II (Soziale Sicherheit) des Abkommens zwischen der Europäischen Gemeinschaft und ihren Mitgliedstaaten einerseits und der Schweizerischen Eidgenossenschaft andererseits über die Freizügigkeit"
@@ -629,37 +705,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-05-29"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Abkommen vom 21. Juni 1999 zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Accord du 21 juin 1999 entre la Confédération suisse, d'une part, et la Communauté européenne et ses Etats membres, d'autre part, sur la libre circulation des personnes"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Accordo del 21 giugno 1999 tra la Confederazione Svizzera, da una parte, e la Comunità europea ed i suoi Stati membri, dall'altra, sulla libera circolazione delle persone"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.142.112.681"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2008/129"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-06-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-05-29"
+        "value": "RO 2008 573"
       },
       "titleDe": {
         "type": "literal",
@@ -693,6 +741,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-05-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 573"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Abkommen vom 21. Juni 1999 zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Accord du 21 juin 1999 entre la Confédération suisse, d'une part, et la Communauté européenne et ses Etats membres, d'autre part, sur la libre circulation des personnes"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Accordo del 21 giugno 1999 tra la Confederazione Svizzera, da una parte, e la Comunità europea ed i suoi Stati membri, dall'altra, sulla libera circolazione delle persone"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.142.112.681"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/129"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-05-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 573"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Abkommen vom 21. Juni 1999 zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit"
@@ -725,6 +813,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-05-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 3075"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Abkommen vom 21. Juni 1999 zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit"
@@ -757,6 +849,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-05-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 3075"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Abkommen vom 21. Juni 1999 zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit"
@@ -788,6 +884,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-05-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 3075"
       },
       "titleDe": {
         "type": "literal",
@@ -821,37 +921,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-05-27"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Abkommen vom 21. Juni 1999 zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Accord du 21 juin 1999 entre la Confédération suisse, d'une part, et la Communauté européenne et ses Etats membres, d'autre part, sur la libre circulation des personnes"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Accordo del 21 giugno 1999 tra la Confederazione Svizzera, da una parte, e la Comunità europea ed i suoi Stati membri, dall'altra, sulla libera circolazione delle persone"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.142.112.681"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/581"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-06-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-05-27"
+        "value": "RO 2011 4127"
       },
       "titleDe": {
         "type": "literal",
@@ -885,6 +957,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-05-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4127"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Abkommen vom 21. Juni 1999 zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Accord du 21 juin 1999 entre la Confédération suisse, d'une part, et la Communauté européenne et ses Etats membres, d'autre part, sur la libre circulation des personnes"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Accordo del 21 giugno 1999 tra la Confederazione Svizzera, da una parte, e la Comunità europea ed i suoi Stati membri, dall'altra, sulla libera circolazione delle persone"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.142.112.681"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/581"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-05-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4127"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Abkommen vom 21. Juni 1999 zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit"
@@ -916,6 +1028,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-09-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4859"
       },
       "titleDe": {
         "type": "literal",
@@ -949,6 +1065,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-09-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4859"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Beschluss Nr. 2/2011 des Gemischten Ausschusses EU Schweiz der mit Artikel 14 des Abkommens zwischen der Europäischen Gemeinschaft und ihren Mitgliedstaaten einerseits und der Schweizerischen Eidgenossenschaft andererseits über die Freizügigkeit eingesetzt wurde über die Änderung von Anhang III (Gegenseitige Anerkennung von Berufsqualifikationen) dieses Abkommens"
@@ -981,6 +1101,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-09-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4859"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Beschluss Nr. 2/2011 des Gemischten Ausschusses EU Schweiz der mit Artikel 14 des Abkommens zwischen der Europäischen Gemeinschaft und ihren Mitgliedstaaten einerseits und der Schweizerischen Eidgenossenschaft andererseits über die Freizügigkeit eingesetzt wurde über die Änderung von Anhang III (Gegenseitige Anerkennung von Berufsqualifikationen) dieses Abkommens"
@@ -1013,37 +1137,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-03-31"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Beschluss Nr. 1/2012 des Gemischten Ausschusses eingesetzt im Rahmen des Abkommens zwischen der Europäischen Gemeinschaft und ihren Mitgliedstaaten einerseits und der Schweizerischen Eidgenossenschaft andererseits über die Freizügigkeit zur Ersetzung des Anhangs II dieses Abkommens über die Koordinierung der Systeme der sozialen Sicherheit"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Décision N<sup>o</sup> 1/2012 du Comité mixte institué par l'accord entre la Communauté européenne et ses États membres, d'une part, et la Confédération suisse, d'autre part, sur la libre circulation des personnes, remplaçant l'annexe II dudit accord sur la coordination des systèmes de sécurité sociale"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Decisione N. 1/2012 del Comitato misto istituito a norma dell'accordo tra la Comunità europea e i suoi Stati membri, da una parte, e la Confederazione svizzera, dall'altra, sulla libera circolazione delle persone che sostituisce l'allegato II di tale accordo riguardante il coordinamento dei sistemi di sicurezza sociale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.142.112.681"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/282"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-03-31"
+        "value": "RO 2012 2345"
       },
       "titleDe": {
         "type": "literal",
@@ -1077,6 +1173,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-03-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 2345"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Beschluss Nr. 1/2012 des Gemischten Ausschusses eingesetzt im Rahmen des Abkommens zwischen der Europäischen Gemeinschaft und ihren Mitgliedstaaten einerseits und der Schweizerischen Eidgenossenschaft andererseits über die Freizügigkeit zur Ersetzung des Anhangs II dieses Abkommens über die Koordinierung der Systeme der sozialen Sicherheit"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Décision N<sup>o</sup> 1/2012 du Comité mixte institué par l'accord entre la Communauté européenne et ses États membres, d'une part, et la Confédération suisse, d'autre part, sur la libre circulation des personnes, remplaçant l'annexe II dudit accord sur la coordination des systèmes de sécurité sociale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Decisione N. 1/2012 del Comitato misto istituito a norma dell'accordo tra la Comunità europea e i suoi Stati membri, da una parte, e la Confederazione svizzera, dall'altra, sulla libera circolazione delle persone che sostituisce l'allegato II di tale accordo riguardante il coordinamento dei sistemi di sicurezza sociale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.142.112.681"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/282"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-03-31"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 2345"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Beschluss Nr. 1/2012 des Gemischten Ausschusses eingesetzt im Rahmen des Abkommens zwischen der Europäischen Gemeinschaft und ihren Mitgliedstaaten einerseits und der Schweizerischen Eidgenossenschaft andererseits über die Freizügigkeit zur Ersetzung des Anhangs II dieses Abkommens über die Koordinierung der Systeme der sozialen Sicherheit"
@@ -1109,37 +1245,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-05-23"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Beschluss Nr. 1/2012 des gemischten Ausschusses eingesetzt im Rahmen des Abkommens zwischen der Europäischen Gemeinschaft und ihren Mitgliedstaaten einerseits und der Schweizerischen Eidgenossenschaft andererseits über die Freizügigkeit zur Ersetzung des Anhangs II dieses Abkommens über die Koordinierung der Systeme der sozialen Sicherheit"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Décision N<sup>o</sup> 1/2012 du Comité mixte institué par l'accord entre la Communauté européenne et ses États membres, d'une part, et la Confédération suisse, d'autre part, sur la libre circulation des personnes, remplaçant l'annexe II dudit accord sur la coordination des systèmes de sécurité sociale (Ne concerne que le texte allemand)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Decisione N. 1/2012 del Comitato misto istituito a norma dell'accordo tra la Comunità europea e i suoi Stati membri, da una parte, e la Confederazione svizzera, dall'altra, sulla libera circolazione delle persone che sostituisce l'allegato II di tale accordo riguardante il coordinamento dei sistemi di sicurezza sociale (Concerne soltanto il testo tedesco)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.142.112.681"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/346"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-05-23"
+        "value": "RO 2012 2901"
       },
       "titleDe": {
         "type": "literal",
@@ -1173,6 +1281,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-05-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 2901"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Beschluss Nr. 1/2012 des gemischten Ausschusses eingesetzt im Rahmen des Abkommens zwischen der Europäischen Gemeinschaft und ihren Mitgliedstaaten einerseits und der Schweizerischen Eidgenossenschaft andererseits über die Freizügigkeit zur Ersetzung des Anhangs II dieses Abkommens über die Koordinierung der Systeme der sozialen Sicherheit"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Décision N<sup>o</sup> 1/2012 du Comité mixte institué par l'accord entre la Communauté européenne et ses États membres, d'une part, et la Confédération suisse, d'autre part, sur la libre circulation des personnes, remplaçant l'annexe II dudit accord sur la coordination des systèmes de sécurité sociale (Ne concerne que le texte allemand)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Decisione N. 1/2012 del Comitato misto istituito a norma dell'accordo tra la Comunità europea e i suoi Stati membri, da una parte, e la Confederazione svizzera, dall'altra, sulla libera circolazione delle persone che sostituisce l'allegato II di tale accordo riguardante il coordinamento dei sistemi di sicurezza sociale (Concerne soltanto il testo tedesco)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.142.112.681"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/346"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-05-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 2901"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Beschluss Nr. 1/2012 des gemischten Ausschusses eingesetzt im Rahmen des Abkommens zwischen der Europäischen Gemeinschaft und ihren Mitgliedstaaten einerseits und der Schweizerischen Eidgenossenschaft andererseits über die Freizügigkeit zur Ersetzung des Anhangs II dieses Abkommens über die Koordinierung der Systeme der sozialen Sicherheit"
@@ -1205,37 +1353,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-14"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesbeschluss über die Genehmigung des Beschlusses Nr. 2/2011 des Gemischten Ausschusses EU-Schweiz zum Freizügigkeitsabkommen (Änderung von Anhang III des Abkommens, gegenseitige Anerkennung von Berufsqualifikationen) und über die Umsetzung des Beschlusses (Bundesgesetz über die Meldepflicht und die Nachprüfung der Berufsqualifikationen von Dienstleistungserbringerinnen und -erbringern in reglementierten Berufen)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Arrêté fédéral portant approbation de la décision n<sup>o</sup> 2/2011 du Comité mixte UE-Suisse sur la libre circulation des personnes (modification de l'annexe III à l'accord, reconnaissance mutuelle des qualifications professionnelles) et de la mise en uvre de la décision (projet de loi fédérale portant sur l'obligation des prestataires de services de déclarer leurs qualifications professionnelles dans le cadre des professions réglementées et sur la vérification de ces qualifications)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Decreto federale che approva la decisione n. 2/2011 del Comitato misto UE-Svizzera istituito dall'Accordo sulla libera circolazione delle persone (modifica dell'allegato III dell'Accordo, reciproco riconoscimento delle qualifiche professionali) e la traspone nel diritto svizzero (legge federale sull'obbligo di dichiarazione e sulla verifica delle qualifiche professionali dei prestatori di servizi in professioni regolamentate)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.142.112.681"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2013/508"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-09-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-12-14"
+        "value": "RO 2013 2415"
       },
       "titleDe": {
         "type": "literal",
@@ -1269,6 +1389,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 2415"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesbeschluss über die Genehmigung des Beschlusses Nr. 2/2011 des Gemischten Ausschusses EU-Schweiz zum Freizügigkeitsabkommen (Änderung von Anhang III des Abkommens, gegenseitige Anerkennung von Berufsqualifikationen) und über die Umsetzung des Beschlusses (Bundesgesetz über die Meldepflicht und die Nachprüfung der Berufsqualifikationen von Dienstleistungserbringerinnen und -erbringern in reglementierten Berufen)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Arrêté fédéral portant approbation de la décision n<sup>o</sup> 2/2011 du Comité mixte UE-Suisse sur la libre circulation des personnes (modification de l'annexe III à l'accord, reconnaissance mutuelle des qualifications professionnelles) et de la mise en uvre de la décision (projet de loi fédérale portant sur l'obligation des prestataires de services de déclarer leurs qualifications professionnelles dans le cadre des professions réglementées et sur la vérification de ces qualifications)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Decreto federale che approva la decisione n. 2/2011 del Comitato misto UE-Svizzera istituito dall'Accordo sulla libera circolazione delle persone (modifica dell'allegato III dell'Accordo, reciproco riconoscimento delle qualifiche professionali) e la traspone nel diritto svizzero (legge federale sull'obbligo di dichiarazione e sulla verifica delle qualifiche professionali dei prestatori di servizi in professioni regolamentate)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.142.112.681"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/508"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-09-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-12-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 2415"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung des Beschlusses Nr. 2/2011 des Gemischten Ausschusses EU-Schweiz zum Freizügigkeitsabkommen (Änderung von Anhang III des Abkommens, gegenseitige Anerkennung von Berufsqualifikationen) und über die Umsetzung des Beschlusses (Bundesgesetz über die Meldepflicht und die Nachprüfung der Berufsqualifikationen von Dienstleistungserbringerinnen und -erbringern in reglementierten Berufen)"
@@ -1301,6 +1461,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-05-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1893"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Abkommen vom 21. Juni 1999 zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit"
@@ -1333,6 +1497,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-05-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1893"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Abkommen vom 21. Juni 1999 zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit"
@@ -1365,6 +1533,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-05-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1893"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Abkommen vom 21. Juni 1999 zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit"
@@ -1396,6 +1568,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-11-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 333"
       },
       "titleDe": {
         "type": "literal",
@@ -1429,6 +1605,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-11-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 333"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Beschluss Nr. 1/2014 des Gemischten Ausschusses, eingesetzt im Rahmen des Abkommens zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit zur Änderung von Anhang II dieses Abkommens über die Koordinierung der Systeme der sozialen Sicherheit"
@@ -1461,6 +1641,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-11-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 333"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Beschluss Nr. 1/2014 des Gemischten Ausschusses, eingesetzt im Rahmen des Abkommens zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit zur Änderung von Anhang II dieses Abkommens über die Koordinierung der Systeme der sozialen Sicherheit"
@@ -1493,6 +1677,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2497"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Beschluss Nr. 1/2015 des Gemischten Ausschusses EU-Schweiz über die Änderung von Anhang III des Abkommens zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit"
@@ -1525,6 +1713,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2497"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Beschluss Nr. 1/2015 des Gemischten Ausschusses EU-Schweiz über die Änderung von Anhang III des Abkommens zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit"
@@ -1556,6 +1748,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2497"
       },
       "titleDe": {
         "type": "literal",
@@ -1588,6 +1784,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-03-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 5251"
       },
       "titleDe": {
         "type": "literal",
@@ -1621,6 +1821,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-03-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 5251"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Protokoll zum Abkommen zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit im Hinblick auf die Aufnahme der Republik Kroatien als Vertragspartei infolge ihres Beitritts zur Europäischen Union"
@@ -1652,6 +1856,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-03-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 5251"
       },
       "titleDe": {
         "type": "literal",
@@ -1684,6 +1892,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-12-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 203"
       },
       "titleDe": {
         "type": "literal",
@@ -1717,6 +1929,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-12-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 203"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Abkommen vom 21. Juni 1999 zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit"
@@ -1748,6 +1964,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-12-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 203"
       },
       "titleDe": {
         "type": "literal",

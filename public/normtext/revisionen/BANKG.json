@@ -1,7 +1,7 @@
 {
   "erlassKey": "BANKG",
   "sr": "952.0",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -65,13 +65,13 @@
       "dateEntryInForce": "2015-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/272",
       "dateDocument": "2013-03-22",
-      "roFundstelle": "AS 2014 272",
+      "roFundstelle": "AS 2014 1267",
       "titelDe": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG) (Nachrichtenlose Vermögenswerte)",
       "titelFr": "Loi fédérale sur les banques et les caisses d'épargne (Loi sur les banques, LB) (Avoirs en déshérence)",
       "titelIt": "Legge federale sulle banche e le casse di risparmio (Legge sulle banche, LBCR) (Averi non rivendicati)",
       "botschaftKey": "BOTSCHAFT-2010-1348",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/272/de",
-      "sha": "72114f4e57e0f40da2e6f5e83de8f15583f548403258dba00aff8367cb1caf72"
+      "sha": "4928ed63345137e5d76735f5bc531f8be66f1473375f6cbab5d7e2635e3c78f6"
     },
     {
       "art": "sammelerlass-marker",
@@ -84,39 +84,39 @@
       "dateEntryInForce": "2012-03-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/126",
       "dateDocument": "2011-09-30",
-      "roFundstelle": "AS 2012 126",
+      "roFundstelle": "AS 2012 811",
       "titelDe": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG) (Stärkung der Stabilität im Finanzsektor; too big to fail)",
       "titelFr": "Loi fédérale sur les banques et les caisses d'épargne (Loi sur les banques, LB) (Renforcement de la stabilité dans le secteur financier; too big to fail)",
       "titelIt": "Legge federale sulle banche e le casse di risparmio (Legge sulle banche, LBCR) (Rafforzamento della stabilità nel settore finanziario; too big to fail)",
       "botschaftKey": "BOTSCHAFT-2011-762",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/126/de",
-      "sha": "e1cc44e8b686ac41fff64a7fa418d9bba4dc884277f37a126a93da123379c9ca"
+      "sha": "623ff7b3445725305158b9e554374cf6639e09a5553efc0b43c7e3e29ff1c095"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2011-09-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/559",
       "dateDocument": "2011-03-18",
-      "roFundstelle": "AS 2011 559",
+      "roFundstelle": "AS 2011 3919",
       "titelDe": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG) (Sicherung der Einlagen)",
       "titelFr": "Loi fédérale sur les banques et les caisses d'épargne (Loi sur les banques, LB) (Garantie des dépôts)",
       "titelIt": "Legge federale sulle banche e le casse di risparmio (Legge sulle banche, LBCR) (Garanzia dei depositi)",
       "botschaftKey": "BOTSCHAFT-2010-655",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/559/de",
-      "sha": "86bca924e389ffe42bf6a1bd20f4de7e23bebe46ca52d157a21542d0342d5456"
+      "sha": "7a6eb35f2c56e631727795304badd8b14b15ebde0ae0375234d3c130202736ba"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2011-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/901",
       "dateDocument": "2010-12-17",
-      "roFundstelle": "AS 2010 901",
+      "roFundstelle": "AS 2010 6405",
       "titelDe": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG) (Verstärkung des Einlegerschutzes)",
       "titelFr": "Loi fédérale sur les banques et les caisses d'épargne (Loi sur les banques, LB) (Renforcement de la protection des déposants)",
       "titelIt": "Legge federale sulle banche e le casse di risparmio (Legge sulle banche, LBCR) (Rafforzamento della protezione dei depositanti)",
       "botschaftKey": "BOTSCHAFT-2010-655",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/901/de",
-      "sha": "b77aa569c0144050b07feb1d58cabef60cd78987ef820ebe58170f40984d8193"
+      "sha": "794596d372d90c89ef76bb86b6e6d17542aade8a40898bd9012dc68b73aeb15a"
     },
     {
       "art": "sammelerlass-marker",
@@ -135,13 +135,13 @@
       "dateEntryInForce": "2008-12-20",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/6",
       "dateDocument": "2008-12-19",
-      "roFundstelle": "AS 2009 6",
+      "roFundstelle": "AS 2009 55",
       "titelDe": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG) (Verstärkung des Einlegerschutzes)",
       "titelFr": "Loi fédérale sur les banques et les caisses d'épargne (Loi sur les banques, LB) (Renforcement de la protection des déposants)",
       "titelIt": "Legge federale sulle banche e le casse di risparmio (Legge sulle banche, LBCR) (Rafforzamento della protezione dei depositanti)",
       "botschaftKey": "BOTSCHAFT-2008-1587",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/6/de",
-      "sha": "6d1b9f0a9dcc1acfbc774dec508f531d3f39a3d8c88f631672cb21472a794bd2"
+      "sha": "f2ee148648260adafa4914a288fd634ff3fa3fdf42eef7ee1a99a7a5359c844d"
     },
     {
       "art": "sammelerlass-marker",
@@ -166,13 +166,13 @@
       "dateEntryInForce": "2004-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/340",
       "dateDocument": "2003-10-03",
-      "roFundstelle": "AS 2004 340",
+      "roFundstelle": "AS 2004 2767",
       "titelDe": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG)",
       "titelFr": "Loi fédérale sur les banques et les caisses d'épargne (Loi sur les banques, LB)",
       "titelIt": "Legge federale sulle banche e le casse di risparmio (Legge sulle banche, LBCR)",
       "botschaftKey": "BOTSCHAFT-2002-1290",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/340/de",
-      "sha": "bf89a893ff67c19ca8e17efe17353e4a1ae096ee14356317f0f3a9a3debda904"
+      "sha": "2aec0f724ab9dfff77c002733a406673203785630025e5e95da251179dbf55bb"
     },
     {
       "art": "sammelerlass-marker",
@@ -185,12 +185,12 @@
       "dateEntryInForce": "1999-10-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/368",
       "dateDocument": "1999-04-22",
-      "roFundstelle": "AS 1999 368",
+      "roFundstelle": "AS 1999 2405",
       "titelDe": "Bundesgesetz über die Banken und Sparkassen",
       "titelFr": "Loi fédérale sur les banques et les caisses d'épargne",
       "titelIt": "Legge federale sulle banche e le casse di risparmio",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/368/de",
-      "sha": "ba45f3ce585e4acd20094aa6ce9db94fa97a74813adef54a57f63259ce739326"
+      "sha": "3b8fe4b41dc5c50d5f321e899ad4102b52ab92422f29dcb3481c77a2e9196177"
     },
     {
       "art": "aenderung",
@@ -205,5 +205,5 @@
       "sha": "a008e465b47fc35076b524e3b3884e10c89e004f1d4a1ef4e41f1d9d8c0de553"
     }
   ],
-  "sha": "cc3c2cfd37eec85512480a67b1407a12c0e923b83be42e4432eafa83bb7c3c38"
+  "sha": "b4bdaf1d9475853dcf0e6965646e2d680d4fcf274510dbbc0949ae95cfba3863"
 }

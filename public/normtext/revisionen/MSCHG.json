@@ -1,7 +1,7 @@
 {
   "erlassKey": "MSCHG",
   "sr": "232.11",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -46,13 +46,13 @@
       "dateEntryInForce": "2017-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/609",
       "dateDocument": "2013-06-21",
-      "roFundstelle": "AS 2015 609",
+      "roFundstelle": "AS 2015 3631",
       "titelDe": "Bundesgesetz über den Schutz von Marken und Herkunftsangaben (Markenschutzgesetz, MSchG)",
       "titelFr": "Loi fédérale sur la protection des marques et des indications de provenance (Loi sur la protection des marques, LPM)",
       "titelIt": "Legge federale sulla protezione dei marchi e delle indicazioni di provenienza (Legge sulla protezione dei marchi, LPM)",
       "botschaftKey": "BOTSCHAFT-2009-1471",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/609/de",
-      "sha": "c25af0881d4ac7f29ce8f0785726f02de627ff9cb120c1fe42ce7c59b67cacc8"
+      "sha": "19c1733cb8bdb0e26775a0ff799bad508bb3353411019964f8d8dff18615557e"
     },
     {
       "art": "sammelerlass-marker",
@@ -127,5 +127,5 @@
       "sha": "03390d90f55e8a5bded38d8655cce925abbaaafdc1c01fea8e3c6546ee13a596"
     }
   ],
-  "sha": "b35810cc6a6c70d247659cefa7a6826457fb7a3d458bfd5e3e64dbbb0fa3e169"
+  "sha": "125c50ceacc31f68b676e50d4c2ffca38c42118e93940b755036ba2e202b3703"
 }

@@ -1,7 +1,7 @@
 {
   "erlassKey": "ZENTV",
   "sr": "360.1",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -57,36 +57,36 @@
       "dateEntryInForce": "2007-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/345",
       "dateDocument": "2007-05-16",
-      "roFundstelle": "AS 2007 345",
+      "roFundstelle": "AS 2007 2549",
       "titelDe": "Verordnung über die Wahrnehmung kriminalpolizeilicher Aufgaben im Bundesamt für Polizei",
       "titelFr": "Ordonnance concernant l'exécution de tâches de police judiciaire au sein de l'Office fédéral de la police",
       "titelIt": "Ordinanza sull'adempimento di compiti di polizia giudiziaria in seno all'Ufficio federale di polizia",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/345/de",
-      "sha": "af8847c4b0aa7008de61792a881b0d55f9e9cc00c8a4a3b3842db8ac181270ea"
+      "sha": "4aac85d552f04a070d9e32edf37a050e0fd7141e704fffbb3cb612d455cd698b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2005-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/426",
       "dateDocument": "2005-06-22",
-      "roFundstelle": "AS 2005 426",
+      "roFundstelle": "AS 2005 2503",
       "titelDe": "Verordnung über die Wahrnehmung kriminalpolizeilicher Aufgaben im Bundesamt für Polizei",
       "titelFr": "Ordonnance concernant l'exécution de tâches de police judiciaire au sein de l'Office fédéral de la police",
       "titelIt": "Ordinanza sull'adempimento di compiti di polizia giudiziaria in seno all'Ufficio federale di polizia",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/426/de",
-      "sha": "cacb2a69cd79a73601648cb473a63307025340a14be770548b0ecdf160a4a3f2"
+      "sha": "0411c3bb22ca6574e4ac37c79042dd11c40b05ab5ca58f47be6b87b996aaf549"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2002-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/29",
       "dateDocument": "2001-11-30",
-      "roFundstelle": "AS 2002 29",
+      "roFundstelle": "AS 2002 163",
       "titelDe": "Verordnung über die Wahrnehmung kriminalpolizeilicher Aufgaben im Bundesamt für Polizei",
       "titelFr": "Ordonnance concernant l'exécution de tâches de police judiciaire au sein de l'Office fédéral de la police",
       "titelIt": "Ordinanza sull'adempimento di compiti di polizia giudiziaria in seno all'Ufficio federale di polizia",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/29/de",
-      "sha": "bb3ca3691aae4445e353db025de4c112935eca9b92267c50abfa6b69c028b5cb"
+      "sha": "0085ddc2d557623f762330050d3c49cf47356fd8ab2ae54f8975e203fe065630"
     },
     {
       "art": "aenderung",
@@ -101,5 +101,5 @@
       "sha": "28486458e1ddcc190e82b0c27a2b5c813bebd0f743dc08a02673283608fc8049"
     }
   ],
-  "sha": "919a1888677de4f8ebfb6a3554f5f71b82c88ca303a8c15b1ca6f5d6557219be"
+  "sha": "fdd6d7990cd30d2f023795fa17d760a5006099a6c56837cd33ff54de8a2806db"
 }

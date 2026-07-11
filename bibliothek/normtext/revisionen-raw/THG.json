@@ -21,6 +21,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1995-10-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1996 1725"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 6. Oktober 1995 über die technischen Handelshemmnisse (THG)"
@@ -53,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1995-10-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1996 1725"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 6. Oktober 1995 über die technischen Handelshemmnisse (THG)"
@@ -85,6 +93,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1995-10-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1996 1725"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 6. Oktober 1995 über die technischen Handelshemmnisse (THG)"
@@ -116,6 +128,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1995-10-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1996 1725"
       },
       "titleDe": {
         "type": "literal",
@@ -148,6 +164,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-12-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 883"
       },
       "titleDe": {
         "type": "literal",
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-12-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 883"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die technischen Handelshemmnisse (THG)"
@@ -212,6 +236,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-12-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 883"
       },
       "titleDe": {
         "type": "literal",
@@ -244,6 +272,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-06-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 2617"
       },
       "titleDe": {
         "type": "literal",
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-06-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 2617"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die technischen Handelshemmnisse (THG)"
@@ -308,6 +344,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-06-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 2617"
       },
       "titleDe": {
         "type": "literal",

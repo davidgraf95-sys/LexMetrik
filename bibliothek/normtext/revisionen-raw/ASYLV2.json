@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1991-05-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Asylverordnung 2 vom 22. Mai 1991 über Finanzierungsfragen (Asylverordnung 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance 2 du 22 mai 1991 sur l'asile relative au financement (Ordonnance 2 sur l'asile)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza 2 del 22 maggio 1991 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.312"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1991/1166_1166_1166"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1991-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1991-05-22"
+        "value": "RO 1991 1166"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1991-05-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1991 1166"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 vom 22. Mai 1991 über Finanzierungsfragen (Asylverordnung 2)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1991-05-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1991 1166"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Asylverordnung 2 vom 22. Mai 1991 über Finanzierungsfragen (Asylverordnung 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance 2 du 22 mai 1991 sur l'asile relative au financement (Ordonnance 2 sur l'asile)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza 2 del 22 maggio 1991 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.312"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1991/1166_1166_1166"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1991-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1991-05-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1991 1166"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 vom 22. Mai 1991 über Finanzierungsfragen (Asylverordnung 2)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-08-11"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.312"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1999/360"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-08-11"
+        "value": "RO 1999 2318"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-08-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2318"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
@@ -245,6 +237,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-08-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2318"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.312"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/360"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-08-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2318"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-02-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 662"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-02-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 662"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
@@ -340,6 +380,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-02-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 662"
       },
       "titleDe": {
         "type": "literal",
@@ -373,37 +417,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-12-04"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.312"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2001/20"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-12-04"
+        "value": "RO 2001 113"
       },
       "titleDe": {
         "type": "literal",
@@ -437,6 +453,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-12-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 113"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.312"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2001/20"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-12-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 113"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-11-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 4131"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-11-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 4131"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
@@ -532,6 +596,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-11-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 4131"
       },
       "titleDe": {
         "type": "literal",
@@ -565,37 +633,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-03-24"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.312"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/204"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-03-24"
+        "value": "RO 2004 1657"
       },
       "titleDe": {
         "type": "literal",
@@ -629,6 +669,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-03-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 1657"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.312"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/204"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-03-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 1657"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
@@ -660,6 +740,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-12-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 5007"
       },
       "titleDe": {
         "type": "literal",
@@ -693,6 +777,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-12-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 5007"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2) "
@@ -725,6 +813,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-12-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 5007"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2) "
@@ -757,37 +849,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-03-01"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.312"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/166"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-03-01"
+        "value": "RO 2006 933"
       },
       "titleDe": {
         "type": "literal",
@@ -821,6 +885,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-03-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 933"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.312"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/166"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-03-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 933"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2)"
@@ -853,37 +957,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-24"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.312"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/768"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-10-24"
+        "value": "RO 2007 5585"
       },
       "titleDe": {
         "type": "literal",
@@ -917,6 +993,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5585"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.312"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/768"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-10-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5585"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
@@ -949,6 +1065,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-03-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 1563"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
@@ -981,6 +1101,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-03-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 1563"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
@@ -1012,6 +1136,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-03-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 1563"
       },
       "titleDe": {
         "type": "literal",
@@ -1045,37 +1173,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-12-12"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.312"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/39"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-12-12"
+        "value": "RO 2009 235"
       },
       "titleDe": {
         "type": "literal",
@@ -1109,6 +1209,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-12-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 235"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.312"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/39"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-12-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 235"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
@@ -1141,6 +1281,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-11-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 6087"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
@@ -1173,6 +1317,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-11-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 6087"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
@@ -1204,6 +1352,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-11-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 6087"
       },
       "titleDe": {
         "type": "literal",
@@ -1237,37 +1389,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-07"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.312"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/842"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-12-07"
+        "value": "RO 2012 6951"
       },
       "titleDe": {
         "type": "literal",
@@ -1301,6 +1425,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6951"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.312"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/842"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-12-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6951"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
@@ -1333,6 +1497,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-12-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 5359"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
@@ -1365,6 +1533,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-12-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 5359"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
@@ -1396,6 +1568,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-12-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 5359"
       },
       "titleDe": {
         "type": "literal",
@@ -1429,37 +1605,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-05"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza 2 sull'asilo relativa a questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.312"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/382"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-09-29"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-06-05"
+        "value": "RO 2015 2053"
       },
       "titleDe": {
         "type": "literal",
@@ -1493,6 +1641,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2053"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza 2 sull'asilo relativa a questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.312"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/382"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-09-29"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-06-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2053"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
@@ -1525,37 +1713,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-11-16"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.312"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2016/707"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-12-15"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-11-16"
+        "value": "RO 2016 4223"
       },
       "titleDe": {
         "type": "literal",
@@ -1589,6 +1749,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-11-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4223"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.312"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/707"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-12-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-11-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4223"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
@@ -1621,6 +1821,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-10-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6173"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
@@ -1653,6 +1857,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-10-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6173"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
@@ -1684,6 +1892,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-10-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6173"
       },
       "titleDe": {
         "type": "literal",
@@ -1717,37 +1929,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-11-15"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.312"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2017/721"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-11-15"
+        "value": "RO 2017 6545"
       },
       "titleDe": {
         "type": "literal",
@@ -1781,6 +1965,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-11-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6545"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.312"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2017/721"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-11-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6545"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
@@ -1813,6 +2037,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-06-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 2875"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
@@ -1845,6 +2073,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-06-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 2875"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
@@ -1876,6 +2108,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-06-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 2875"
       },
       "titleDe": {
         "type": "literal",
@@ -1909,37 +2145,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-10-02"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2) (Betrifft nur den italienischen Text)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2) (Ne concerne que le texte italien)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.312"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2018/533"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-10-02"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-10-02"
+        "value": "RO 2018 3311"
       },
       "titleDe": {
         "type": "literal",
@@ -1973,6 +2181,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-10-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3311"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2) (Betrifft nur den italienischen Text)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2) (Ne concerne que le texte italien)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.312"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/533"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-10-02"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-10-02"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3311"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2) (Betrifft nur den italienischen Text)"
@@ -2004,6 +2252,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-02-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 731"
       },
       "titleDe": {
         "type": "literal",
@@ -2037,6 +2289,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-02-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 731"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2). Betrifft nur den italienischen Text"
@@ -2069,6 +2325,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-02-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 731"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2). Betrifft nur den italienischen Text"
@@ -2101,6 +2361,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-04-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1233"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
@@ -2133,6 +2397,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-04-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1233"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
@@ -2165,69 +2433,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-04-10"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.312"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2020/174"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2020-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2020-02-19"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.312"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2020/174"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2020-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2020-02-19"
+        "value": "RO 2019 1233"
       },
       "titleDe": {
         "type": "literal",
@@ -2261,6 +2469,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-02-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 915"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.312"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2020/174"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-02-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 915"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.312"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2020/174"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-02-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 915"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
@@ -2292,6 +2576,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-07-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 3343"
       },
       "titleDe": {
         "type": "literal",
@@ -2325,6 +2613,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-07-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 3343"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2) (Betrifft nur den italienischen Text)"
@@ -2357,6 +2649,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-07-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 3343"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2) (Betrifft nur den italienischen Text)"
@@ -2389,6 +2685,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-09-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 3991"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
@@ -2421,6 +2721,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-09-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 3991"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
@@ -2453,6 +2757,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-09-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 3991"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
@@ -2485,6 +2793,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-11-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 5869"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
@@ -2517,6 +2829,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-11-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 5869"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)"
@@ -2548,6 +2864,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-11-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 5869"
       },
       "titleDe": {
         "type": "literal",

@@ -1,7 +1,7 @@
 {
   "erlassKey": "BEWV",
   "sr": "211.412.411",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -45,12 +45,12 @@
       "dateEntryInForce": "2007-12-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/741",
       "dateDocument": "2007-11-14",
-      "roFundstelle": "AS 2007 741",
+      "roFundstelle": "AS 2007 5235",
       "titelDe": "Verordnung über den Erwerb von Grundstücken durch Personen im Ausland (BewV)",
       "titelFr": "Ordonnance sur l'acquisition d'immeubles par des personnes à l'étranger (OAIE)",
       "titelIt": "Ordinanza sull'acquisto di fondi da parte di persone all'estero (OAFE)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/741/de",
-      "sha": "a142471ece8f4b339371737e4bd4af37fad5a59bb753da603afc91e13f83b75f"
+      "sha": "a72761a38ca37fe2c97bb83d688b2774e73b41a2404786362578a90104343b4e"
     },
     {
       "art": "sammelerlass-marker",
@@ -63,24 +63,24 @@
       "dateEntryInForce": "2006-02-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/25",
       "dateDocument": "2006-01-11",
-      "roFundstelle": "AS 2006 25",
+      "roFundstelle": "AS 2006 93",
       "titelDe": "Verordnung über den Erwerb von Grundstücken durch Personen im Ausland (BewV)",
       "titelFr": "Ordonnance sur l'acquisition d'immeubles par des personnes à l'étranger (OAIE)",
       "titelIt": "Ordinanza sull'acquisto di fondi da parte di persone all'estero (OAFE)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/25/de",
-      "sha": "2fdb37d96aecc4fd1d8c58c2fdf221f7073424067873ad670c19c161aaf923eb"
+      "sha": "6861e39c1f1e13300e3e7fc00eaf54b6edd94a55cc98e0ec023962c209834e11"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2005-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/205",
       "dateDocument": "2005-03-04",
-      "roFundstelle": "AS 2005 205",
+      "roFundstelle": "AS 2005 1341",
       "titelDe": "Verordnung über den Erwerb von Grundstücken durch Personen im Ausland (BewV)",
       "titelFr": "Ordonnance sur l'acquisition d'immeubles par des personnes à l'étranger (OAIE)",
       "titelIt": "Ordinanza sull'acquisto di fondi da parte di persone all'estero (OAFE)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/205/de",
-      "sha": "0c091f05f739cfb69658ea9ce3d28b0f67de77697a002ccc76066d8ffbbe6594"
+      "sha": "099c2464218dd58739144007a96a2824e9c954a80ac35bfc38371ac997c82eeb"
     },
     {
       "art": "sammelerlass-marker",
@@ -93,48 +93,48 @@
       "dateEntryInForce": "2003-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/255",
       "dateDocument": "2003-05-28",
-      "roFundstelle": "AS 2003 255",
+      "roFundstelle": "AS 2003 1635",
       "titelDe": "Verordnung über den Erwerb von Grundstücken durch Personen im Ausland (BewV)",
       "titelFr": "Ordonnance sur l'acquisition d'immeubles par des personnes à l'étranger (OAIE)",
       "titelIt": "Ordinanza sull'acquisto di fondi da parte di persone all'estero (OAIE)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/255/de",
-      "sha": "79017b7f1f53b0674219cb6c70925dc89c488f0943dfc28a514e1966b1ea4749"
+      "sha": "5c15fbeb96d5bc7dac2fea6b1e43d710814b4dc456800f7f9130f64ebe986f60"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2002-09-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/326",
       "dateDocument": "2002-07-03",
-      "roFundstelle": "AS 2002 326",
+      "roFundstelle": "AS 2002 2469",
       "titelDe": "Verordnung über den Erwerb von Grundstücken durch Personen im Ausland (BewV)",
       "titelFr": "Ordonnance sur l'acquisition d'immeubles par des personnes à l'étranger (OAIE)",
       "titelIt": "Ordinanza sull'acquisto di fondi da parte di persone all'estero (OAFE)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/326/de",
-      "sha": "456736e3333ad0f49a6878a19514d776e251d41f1cc6804b89f5e964e8d518d4"
+      "sha": "b07afa7c2d98adb34df6eb30fe7cb22a6cf64c92438bd69385d1d0273b3643f6"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2002-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/181",
       "dateDocument": "2002-01-23",
-      "roFundstelle": "AS 2002 181",
+      "roFundstelle": "AS 2002 1115",
       "titelDe": "Verordnung über den Erwerb von Grundstücken durch Personen im Ausland (BewV)",
       "titelFr": "Ordonnance sur l'acquisition d'immeubles par des personnes à l'étranger (OAIE)",
       "titelIt": "Ordinanza sull'acquisto di fondi da parte di persone all'estero (OAFE)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/181/de",
-      "sha": "229add2e444670b4b89a12e7bdff2871371d66b9d5306921d159dd1ba2af9700"
+      "sha": "515e7a147a370244c8b87769b891a551f682d93d5d1e742e63a6f91c4ee1f0b3"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/488",
       "dateDocument": "2000-11-22",
-      "roFundstelle": "AS 2000 488",
+      "roFundstelle": "AS 2000 2853",
       "titelDe": "Verordnung über den Erwerb von Grundstücken durch Personen im Ausland (BewV)",
       "titelFr": "Ordonnance sur l'acquisition d'immeubles par des personnes à l'étranger (OAIE)",
       "titelIt": "Ordinanza sull'acquisto di fondi da parte di persone all'estero (OAFE)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/488/de",
-      "sha": "c5dd1d2ffbc70b7bdf38110051284d4696e92a3ec99846cdfd25b9c4d11554ed"
+      "sha": "096ce07d8c2e1ac7771502f733229ee3a8a05127d62884ba05ab896a22217b50"
     },
     {
       "art": "aenderung",
@@ -185,5 +185,5 @@
       "sha": "46676f30257a83dc295d50deb5ca39a80b86c9b64f8a1d4504a4bd74e1f11ef3"
     }
   ],
-  "sha": "5018947ef600f5be0805431cb720209139530add5c99d27eb9a92a11b0f96b63"
+  "sha": "7dffe09506add14087dc57b54214613b2c52739a6831ade70339371236a1e6b8"
 }

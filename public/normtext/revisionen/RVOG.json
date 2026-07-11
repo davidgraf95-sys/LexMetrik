@@ -1,7 +1,7 @@
 {
   "erlassKey": "RVOG",
   "sr": "172.010",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -34,25 +34,25 @@
       "dateEntryInForce": "2018-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/573",
       "dateDocument": "2017-03-17",
-      "roFundstelle": "AS 2017 573",
+      "roFundstelle": "AS 2017 5205",
       "titelDe": "Bundesgesetz über das Stabilisierungsprogramm 20172019",
       "titelFr": "Loi fédérale sur le programme de stabilisation 20172019",
       "titelIt": "Legge federale sul programma di stabilizzazione 20172019",
       "botschaftKey": "BOTSCHAFT-2016-1047",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/573/de",
-      "sha": "b036e0ad9c5fa2ef87092982c3731c62ffe0a21098f07d061f8b346b215436a9"
+      "sha": "c42d0779cfb1d3512ec6a61651e91a5438ad84ff89e802ab3aa256dade4c8bc7"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2017-05-30",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/333",
       "dateDocument": "2017-05-22",
-      "roFundstelle": "AS 2017 333",
+      "roFundstelle": "AS 2017 3259",
       "titelDe": "Regierungs- und Verwaltungsorganisationsgesetz (RVOG) (Betrifft nur den französischen Text)",
       "titelFr": "Loi sur l'organisation du gouvernement et de l'administration (LOGA)",
       "titelIt": "Legge sull'organizzazione del Governo e dell'Amministrazione (LOGA) (Concerne soltanto il testo francese)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/333/de",
-      "sha": "25921b41b996cf031b1c6014e81e977136af2894fa89d731f506cde02a29f449"
+      "sha": "df049ee91dd9c9d9202c5d41a11bb80be7965c996317b46009753381c076440c"
     },
     {
       "art": "sammelerlass-marker",
@@ -65,13 +65,13 @@
       "dateEntryInForce": "2015-05-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/177",
       "dateDocument": "2014-09-26",
-      "roFundstelle": "AS 2015 177",
+      "roFundstelle": "AS 2015 969",
       "titelDe": "Bundesgesetz über die Kompetenz zum Abschluss völkerrechtlicher Verträge von beschränkter Tragweite und über die vorläufige Anwendung völkerrechtlicher Verträge (Änderung des Regierungs- und Verwaltungsorganisationsgesetzes und des Parlamentsgesetzes)",
       "titelFr": "Loi fédérale sur la compétence de conclure des traités internationaux de portée mineure et sur l'application provisoire des traités internationaux (Modification de la loi sur l'organisation du gouvernement et de l'administration et de la loi sur le Parlement)",
       "titelIt": "Legge federale sulla competenza di concludere trattati internazionali di portata limitata e sull'applicazione provvisoria dei trattati internazionali (Modifica della legge sull'organizzazione del Governo e dell'Amministrazione e della legge sul Parlamento)",
       "botschaftKey": "BOTSCHAFT-2012-1138",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/177/de",
-      "sha": "c2cb5cf9aa21c63e4375749450368f0a52dd5085319d13cde5811a07c89ac06d"
+      "sha": "bb297904618eccc9dd319eefa25ca2d9902083b9915648b829b45d6a4aea9239"
     },
     {
       "art": "sammelerlass-marker",
@@ -84,26 +84,26 @@
       "dateEntryInForce": "2014-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/810",
       "dateDocument": "2012-09-28",
-      "roFundstelle": "AS 2013 810",
+      "roFundstelle": "AS 2013 4549",
       "titelDe": "Regierungs- und Verwaltungsorganisationsgesetz (RVOG)",
       "titelFr": "Loi sur l'organisation du gouvernement et de l'administration (LOGA)",
       "titelIt": "Legge sull'organizzazione del Governo e dell'Amministrazione (LOGA)",
       "botschaftKey": "BOTSCHAFT-2010-1440",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/810/de",
-      "sha": "e40592a4b13db2424fcc273940ba8166ae863f67d56052570201b61c977500e3"
+      "sha": "37d851f2b26777ac1f6d69c015f1ac5ddb17fe2c2ce468826e884fa931eb6e29"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2012-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/159",
       "dateDocument": "2010-10-01",
-      "roFundstelle": "AS 2012 159",
+      "roFundstelle": "AS 2012 941",
       "titelDe": "Regierungs- und Verwaltungsorganisationsgesetz (RVOG) (Datenschutz bei der Benutzung der elektronischen Infrastruktur)",
       "titelFr": "Loi sur l'organisation du gouvernement et de l'administration (LOGA) (Protection des données lors de l'utilisation de l'infrastructure électronique)",
       "titelIt": "Legge sull'organizzazione del Governo e dell'Amministrazione (LOGA) (Protezione dei dati derivanti dall'utilizzazione dell'infrastruttura elettronica)",
       "botschaftKey": "BOTSCHAFT-2009-1469",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/159/de",
-      "sha": "a67c7b521298c1b1d8130f8283daacdab7d4574f2e8b7aa9cbfae46f3f2c5249"
+      "sha": "44a585478711a814c7d5dd6ae5c484cb4fe49a64f174b5be12a83279755162df"
     },
     {
       "art": "sammelerlass-marker",
@@ -134,25 +134,25 @@
       "dateEntryInForce": "2010-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/750",
       "dateDocument": "2009-11-27",
-      "roFundstelle": "AS 2009 750",
+      "roFundstelle": "AS 2009 6135",
       "titelDe": "Verordnung über die abschliessende Inkraftsetzung der Änderung vom 20. März 2008 des Regierungs- und Verwaltungsorganisationsgesetzes",
       "titelFr": "Ordonnance sur l'entrée en vigueur complète de la modification du 20 mars 2008 de la loi sur l'organisation du gouvernement et de l'administration",
       "titelIt": "Ordinanza sull'entrata in vigore integrale della modifica del 20 marzo 2008 della legge sull'organizzazione del Governo e dell'Amministrazione",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/750/de",
-      "sha": "0e57676282b9c8793e437e0d1007395ea21d757ae3126bfb6d780b5c1f53aca0"
+      "sha": "4531b0c122656007bb3c637b683030b0c36ef47e6a68344d548eb991cc73aec4"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2009-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/818",
       "dateDocument": "2008-03-20",
-      "roFundstelle": "AS 2008 818",
+      "roFundstelle": "AS 2008 5941",
       "titelDe": "Regierungs- und Verwaltungsorganisationsgesetz (RVOG) (Neuordnung der ausserparlamentarischen Kommissionen)",
       "titelFr": "Loi sur l'organisation du gouvernement et de l'administration (LOGA) (Réorganisation des commissions extraparlementaires)",
       "titelIt": "Legge sull'organizzazione del Governo e dell'Amministrazione (LOGA) (Riordinamento delle commissioni extraparlamentari)",
       "botschaftKey": "BOTSCHAFT-2007-1016",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/818/de",
-      "sha": "f4b20a69131aeda4651b9c039e52844b6fe27eef21a827e86192ae61f86f51f9"
+      "sha": "139188cc41be4a661107d0a6ae876014d62323e1c04314559ba5b35626c6a2fb"
     },
     {
       "art": "sammelerlass-marker",
@@ -171,13 +171,13 @@
       "dateEntryInForce": "2006-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/224",
       "dateDocument": "2005-10-07",
-      "roFundstelle": "AS 2006 224",
+      "roFundstelle": "AS 2006 1265",
       "titelDe": "Regierungs- und Verwaltungsorganisationsgesetz (RVOG)",
       "titelFr": "Loi sur l'organisation du gouvernement et de l'administration (LOGA)",
       "titelIt": "Legge federale sull'organizzazione del Governo e dell'Amministrazione (LOGA)",
       "botschaftKey": "BOTSCHAFT-2004-1239",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/224/de",
-      "sha": "126f681feaaad263db288e53d1401fc5f4178ba866a196c31ebe75174820c511"
+      "sha": "a7a0fa6886a9e650b6359985529250e844d197c0807f85b7ecc5b593236b6282"
     },
     {
       "art": "sammelerlass-marker",
@@ -214,50 +214,50 @@
       "dateEntryInForce": "2001-02-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/21",
       "dateDocument": "2000-06-23",
-      "roFundstelle": "AS 2001 21",
+      "roFundstelle": "AS 2001 114",
       "titelDe": "Bundesgesetz über Titel und Orden ausländischer Regierungen",
       "titelFr": "Loi fédérale sur les titres et les décorations octroyés par des autorités étrangères",
       "titelIt": "Legge federale concernente le liberalità e le onorificenze di Governi esteri",
       "botschaftKey": "BOTSCHAFT-1999-1_7922_7145_6784",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/21/de",
-      "sha": "6323cb0ba9ec8060698c3ea3372d94a38adc91a89eaf553e9a8f7df96d0cba6c"
+      "sha": "4989dab9341c39f54d4fbde4687f09c1d15bbf86c1c85d4b51117ac43676f0bd"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2000-09-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/318",
       "dateDocument": "2000-03-24",
-      "roFundstelle": "AS 2000 318",
+      "roFundstelle": "AS 2000 2095",
       "titelDe": "Regierungs- und Verwaltungsorganisationsgesetz (RVOG)",
       "titelFr": "Loi sur l'organisation du gouvernement et de l'administration (LOGA)",
       "titelIt": "Legge federale sull'organizzazione del Governo e dell'Amministrazione (LOGA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/318/de",
-      "sha": "ef79d650863a067912dd58507b6749192fc61e13f63443eec7975f4fb49655a5"
+      "sha": "18c5adabaa2ddd0a43ddc06f231343e78669d418dff4220c7cfefe59f20e63ac"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2000-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/472",
       "dateDocument": "1999-06-18",
-      "roFundstelle": "AS 1999 472",
+      "roFundstelle": "AS 1999 3071",
       "titelDe": "Bundesgesetz über die Koordination und Vereinfachung von Entscheidverfahren",
       "titelFr": "Loi fédérale sur la coordination et la simplification des procédures de décision",
       "titelIt": "Legge federale sul coordinamento e la semplificazione delle procedure d'approvazione dei piani",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/472/de",
-      "sha": "71446df247fc5665124dd78685475c24d511e94498af69bfe52d2b6c665fac30"
+      "sha": "42fbcc35c913366e5ad5333b2cd77ee629f54148df471003de5912b9882c4489"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2000-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/56",
       "dateDocument": "1999-10-08",
-      "roFundstelle": "AS 2000 56",
+      "roFundstelle": "AS 2000 289",
       "titelDe": "Regierungs- und Verwaltungsorganisationsgesetz (RVOG)",
       "titelFr": "Loi sur l'organisation du gouvernement et de l'administration (LOGA)",
       "titelIt": "Legge sull'organizzazione del Governo e dell'Amministrazione (LOGA)",
       "botschaftKey": "BOTSCHAFT-1999-1_7922_7145_6784",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/56/de",
-      "sha": "1b7b5e52c596beb357ab48914c4cf22bc9186bf2b1a543377deedb3cda43c8f3"
+      "sha": "614d094b08eeabf4e2392cd4698b1427a01032e2cb23b43d4b21bae3533e1de9"
     },
     {
       "art": "aenderung",
@@ -296,5 +296,5 @@
       "sha": "f840a8b37589f1fff1f28f80b64f1790f83a2605e7f2c80cb5ac0c46ad8b3984"
     }
   ],
-  "sha": "65dfe1f5e65e2db7b89cac1da62956d40252165b6d967c4a223d92551fe9cf8e"
+  "sha": "c6e6a0a995dc4fcfd2546d8f65ba4bfc71260830e2a65691ae6a280c789a265e"
 }

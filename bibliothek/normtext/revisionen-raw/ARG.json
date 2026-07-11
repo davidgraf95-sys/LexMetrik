@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1964-03-13"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom 13. März 1964 über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz, ArG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 13 mars 1964 sur le travail dans l'industrie, l'artisanat et le commerce (Loi sur le travail, LTr)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 13 marzo 1964 sul lavoro nell'industria, nell'artigianato e nel commercio (Legge sul lavoro, LL)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "822.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1966/57_57_57"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1966-02-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1964-03-13"
+        "value": "RO 1966 57"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1964-03-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1966 57"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 13. März 1964 über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz, ArG)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1964-03-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1966 57"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 13. März 1964 über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz, ArG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 13 mars 1964 sur le travail dans l'industrie, l'artisanat et le commerce (Loi sur le travail, LTr)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 13 marzo 1964 sul lavoro nell'industria, nell'artigianato e nel commercio (Legge sul lavoro, LL)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "822.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1966/57_57_57"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1966-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1964-03-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1966 57"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 13. März 1964 über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz, ArG)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-03-19"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur le travail dans l'industrie, l'artisanat et le commerce (Loi sur le travail)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sul lavoro nell'industria, nell'artigianato e nel commercio (Legge sul lavoro)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "822.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/241"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-08-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-03-19"
+        "value": "RO 2000 1568"
       },
       "titleDe": {
         "type": "literal",
@@ -213,37 +201,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-03-19"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur le travail dans l'industrie, l'artisanat et le commerce (Loi sur le travail)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sul lavoro nell'industria, nell'artigianato e nel commercio (Legge sul lavoro)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "822.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/242"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-08-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-03-20"
+        "value": "RO 2000 1568"
       },
       "titleDe": {
         "type": "literal",
@@ -265,7 +225,7 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/242"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/241"
       },
       "dateForce": {
         "type": "typed-literal",
@@ -275,7 +235,11 @@
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-03-20"
+        "value": "1999-03-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1568"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +273,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-03-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1569"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur le travail dans l'industrie, l'artisanat et le commerce (Loi sur le travail)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sul lavoro nell'industria, nell'artigianato e nel commercio (Legge sul lavoro)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "822.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/242"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-03-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1569"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur le travail dans l'industrie, l'artisanat et le commerce (Loi sur le travail)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sul lavoro nell'industria, nell'artigianato e nel commercio (Legge sul lavoro)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "822.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/242"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-03-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1569"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz)"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-03-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 2547"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz)"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-03-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 2547"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz)"
@@ -404,6 +452,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-03-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 2547"
       },
       "titleDe": {
         "type": "literal",
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-10-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 961"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz)"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-10-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 961"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz)"
@@ -501,69 +561,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-10-08"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur le travail dans l'industrie, l'artisanat et le commerce (Loi sur le travail)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sul lavoro nell'industria, nell'artigianato e nel commercio (Legge sul lavoro)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "822.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/691"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-06-23"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur le travail dans l'industrie, l'artisanat et le commerce (Loi sur le travail)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sul lavoro nell'industria, nell'artigianato e nel commercio (Legge sul lavoro)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "822.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/691"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-06-23"
+        "value": "RO 2006 961"
       },
       "titleDe": {
         "type": "literal",
@@ -597,6 +597,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-06-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 4957"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur le travail dans l'industrie, l'artisanat et le commerce (Loi sur le travail)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sul lavoro nell'industria, nell'artigianato e nel commercio (Legge sul lavoro)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "822.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/691"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-06-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 4957"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur le travail dans l'industrie, l'artisanat et le commerce (Loi sur le travail)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sul lavoro nell'industria, nell'artigianato e nel commercio (Legge sul lavoro)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "822.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/691"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-06-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 4957"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz)"
@@ -629,6 +705,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-12-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2903"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz)"
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-12-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2903"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz)"
@@ -692,6 +776,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-12-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2903"
       },
       "titleDe": {
         "type": "literal",
@@ -724,6 +812,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4081"
       },
       "titleDe": {
         "type": "literal",
@@ -757,6 +849,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4081"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz, ArG)"
@@ -788,6 +884,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4081"
       },
       "titleDe": {
         "type": "literal",

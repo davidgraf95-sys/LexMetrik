@@ -1,7 +1,7 @@
 {
   "erlassKey": "KAG",
   "sr": "951.31",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -53,12 +53,12 @@
       "dateEntryInForce": "2015-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/304",
       "dateDocument": "2014-12-12",
-      "roFundstelle": "AS 2015 304",
+      "roFundstelle": "AS 2015 1535",
       "titelDe": "Bundesgesetz über die Ausweitung der Strafbarkeit der Verletzung des Berufsgeheimnisses (Änderung des Kollektivanlagen-, des Banken- und des Börsengesetzes)",
       "titelFr": "Loi fédérale sur l'extension de la punissabilité en matière de violation du secret professionnel (Modification de la loi sur les placements collectifs, de la loi sur les banques et de la loi sur les bourses)",
       "titelIt": "Legge federale sull'estensione della punibilità della violazione del segreto professionale (Modifica della legge sugli investimenti collettivi, della legge sulle banche e della legge sulle borse)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/304/de",
-      "sha": "d56883ee6c6fc4b43848b399c203ba607df14ab265d1906507be9173f6a1c1db"
+      "sha": "aaee8e0d5510b2246e85812895e8d9bd79f92903363674b7a88317db189bd692"
     },
     {
       "art": "sammelerlass-marker",
@@ -83,13 +83,13 @@
       "dateEntryInForce": "2013-03-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/116",
       "dateDocument": "2012-09-28",
-      "roFundstelle": "AS 2013 116",
+      "roFundstelle": "AS 2013 585",
       "titelDe": "Bundesgesetz über die kollektiven Kapitalanlagen (Kollektivanlagengesetz, KAG)",
       "titelFr": "Loi fédérale sur les placements collectifs de capitaux (Loi sur les placements collectifs, LPCC)",
       "titelIt": "Legge federale sugli investimenti collettivi di capitale (Legge sugli investimenti collettivi, LICol)",
       "botschaftKey": "BOTSCHAFT-2012-495",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/116/de",
-      "sha": "0a5ccdb322135f106a640cc10f28d9c5b91bd35680ac77f1885cd1a6ad8522bf"
+      "sha": "0184656e7281b5a4ce8cfa39edc4e318cf54e468d727f13ec345aaef59e3a482"
     },
     {
       "art": "sammelerlass-marker",
@@ -108,25 +108,25 @@
       "dateEntryInForce": "2007-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/822",
       "dateDocument": "2006-06-23",
-      "roFundstelle": "AS 2006 822",
+      "roFundstelle": "AS 2006 5379",
       "titelDe": "Bundesgesetz über die kollektiven Kapitalanlagen (Kollektivanlagengesetz, KAG)",
       "titelFr": "Loi fédérale sur les placements collectifs de capitaux (Loi sur les placements collectifs, LPCC)",
       "titelIt": "Legge federale sugli investimenti collettivi di capitale (Legge sugli investimenti collettivi, LICol)",
       "botschaftKey": "BOTSCHAFT-2005-1000",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/822/de",
-      "sha": "f8def994a99b860605935d6696f3bda3354b6bb223f503e374c19227d971c01f"
+      "sha": "360f2bb8368044527b515f758ac8b01435ee1863ddff9ef7209a6c7f6edc7d06"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2007-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/407",
       "dateDocument": "2007-07-03",
-      "roFundstelle": "AS 2007 407",
+      "roFundstelle": "AS 2007 3351",
       "titelDe": "Bundesgesetz über die kollektiven Kapitalanlagen (Kollektivanlagengesetz, KAG) (Betrifft nur den italienischen Text)",
       "titelFr": "Loi fédérale sur les placements collectifs de capitaux (Loi sur les placements collectifs, LPCC) (Ne concerne que le texte italien)",
       "titelIt": "Legge federale sugli investimenti collettivi di capitale (Legge sugli investimenti collettivi, LICol)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/407/de",
-      "sha": "b610f1e6a7df992f49f731ccf79273303e3232f6833bcc00c727d3b3e29e70dd"
+      "sha": "45a90514b4535ad7b2dd92b38facbb87e95bc99c10ed5ae04fffb2d4b476b0d5"
     },
     {
       "art": "aenderung",
@@ -153,5 +153,5 @@
       "sha": "fb2f2688dcfff6065a1275f15f1af6a652a640293dbf17131187ecc8035c0d1e"
     }
   ],
-  "sha": "4d6a6fa3ab4bfb9c0611a78df78574166655d43edf5ac4a8b982dc4cfabf0fb5"
+  "sha": "be663031a77526802f798033577e12ba4ac36d6ac3d9bd2c494c16ff25ace76c"
 }

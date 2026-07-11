@@ -1,7 +1,7 @@
 {
   "erlassKey": "EOG",
   "sr": "834.1",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -95,12 +95,12 @@
       "dateEntryInForce": "2021-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/844",
       "dateDocument": "2019-09-27",
-      "roFundstelle": "AS 2020 844",
+      "roFundstelle": "AS 2020 4689",
       "titelDe": "Bundesgesetz über den Erwerbsersatz für Dienstleistende und bei Mutterschaft (Erwerbsersatzgesetz, EOG)",
       "titelFr": "Loi fédérale sur les allocations pour perte de gain en cas de service et de maternité (Loi sur les allocations pour perte de gain, LAPG)",
       "titelIt": "Legge federale sulle indennità di perdita di guadagno per chi presta servizio e in caso di maternità (Legge sulle indennità di perdita di guadagno, LIPG)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/844/de",
-      "sha": "e9ffeeef5437781f986ae1257fce5b9e95fd89ba2aee442196b5bf84a4b384f8"
+      "sha": "7ae934dc9a14c6ecb71186d3e82565dd08c5b18167fc20d862f481d059aea0c0"
     },
     {
       "art": "sammelerlass-marker",
@@ -203,12 +203,12 @@
       "dateEntryInForce": "2005-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/217",
       "dateDocument": "2003-10-03",
-      "roFundstelle": "AS 2005 217",
+      "roFundstelle": "AS 2005 1429",
       "titelDe": "Bundesgesetz über die Erwerbsersatzordnung für Dienstleistende in Armee, Zivildienst und Zivilschutz (Erwerbsersatzgesetz, EOG)",
       "titelFr": "Loi fédérale du 25 septembre 1952 sur le régime des allocations pour perte de gain en faveur des personnes servant dans l'armée, dans le service civil ou dans la protection civile (Loi sur les allocations pour perte de gain, LAPG)",
       "titelIt": "Legge federale sulle indennità di perdita di guadagno in caso di servizio militare, servizio civile o servizio di protezione civile (Legge sulle indennità di perdita di guadagno, LIPG)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/217/de",
-      "sha": "b15a073daeec551d9c5c7ae92a67fd41d438f851d5b3b5b0aefe193f95ec8c84"
+      "sha": "3bba693faf15d3be7d54222f191924de62abd026b131ba03a7233c570745007f"
     },
     {
       "art": "sammelerlass-marker",
@@ -221,25 +221,25 @@
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/466",
       "dateDocument": "2000-06-23",
-      "roFundstelle": "AS 2000 466",
+      "roFundstelle": "AS 2000 2770",
       "titelDe": "Bundesgesetz über die Erwerbsersatzordnung für Dienstleistende in Armee, Zivildienst und Zivilschutz (Erwerbsersatzgesetz, EOG)",
       "titelFr": "Loi fédérale sur le régime des allocations pour perte de gain en faveur des personnes servant dans l'armée, dans le service civil ou dans la protection civile (LAPG)",
       "titelIt": "Legge federale sulle indennità di perdita di guadagno in caso di servizio militare, servizio civile o servizio di protezione civile (LIPG)",
       "botschaftKey": "BOTSCHAFT-2000-99",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/466/de",
-      "sha": "9718f13be51c733e6c1ee531ededc61511b8816f87cce0ed06ceda99da2c29b2"
+      "sha": "95516ae4747effc320bde83cd10937b04d6c74b6fb8a0591906190c079de0d6c"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "1999-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/237",
       "dateDocument": "1998-12-18",
-      "roFundstelle": "AS 1999 237",
+      "roFundstelle": "AS 1999 1571",
       "titelDe": "Bundesgesetz über die Erwerbsersatzordnung für Dienstleistende in Armee, Zivildienst und Zivilschutz (Erwerbsersatzgesetz, EOG)",
       "titelFr": "Loi fédérale sur le régime des allocations pour perte de gain en faveur des personnes servant dans l'armée, dans le service civil ou dans la protection civile (Loi sur les allocations pour perte de gain, LAPG)",
       "titelIt": "Legge federale sulle indennità di perdita di guadagno in caso di servizio militare, servizio civile o servizio di protezione civile (LIPG)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/237/de",
-      "sha": "23eb44cbf11d74ee3a6e81d5c1748f3345356050726ec643cca5f1983162206a"
+      "sha": "c265dd88adbbd77e1bb6e8c139dbdd74d26f2fb9410ba9f779654c72e6ac3f3a"
     },
     {
       "art": "aenderung",
@@ -254,5 +254,5 @@
       "sha": "208ca5dd5a457a2cfe07a3862be62e0b33ac94363f21530b45fc909895d0f616"
     }
   ],
-  "sha": "5a3603e5a20991356b354b197366c03b988b79ec9514f1b11992dc7700101c3a"
+  "sha": "625c8b153266258bba3a3d422d6abc349fa47dcf8371c79daca9d70f22ec25d3"
 }

@@ -21,6 +21,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-07-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 2835"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Kostenermittlung und die Leistungserfassung durch Spitäler, Geburtshäuser und Pflegeheime in der Krankenversicherung (VKL)"
@@ -53,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-07-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 2835"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Kostenermittlung und die Leistungserfassung durch Spitäler, Geburtshäuser und Pflegeheime in der Krankenversicherung (VKL)"
@@ -85,6 +93,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-07-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 2835"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Kostenermittlung und die Leistungserfassung durch Spitäler, Geburtshäuser und Pflegeheime in der Krankenversicherung (VKL)"
@@ -116,6 +128,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-07-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 2835"
       },
       "titleDe": {
         "type": "literal",
@@ -148,6 +164,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5105"
       },
       "titleDe": {
         "type": "literal",
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5105"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Kostenermittlung und die Leistungserfassung durch Spitäler und Pflegeheime in der Krankenversicherung (VKL)"
@@ -212,6 +236,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5105"
       },
       "titleDe": {
         "type": "literal",

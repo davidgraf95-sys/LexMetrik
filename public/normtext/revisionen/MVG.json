@@ -1,7 +1,7 @@
 {
   "erlassKey": "MVG",
   "sr": "833.1",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -117,13 +117,13 @@
       "dateEntryInForce": "2005-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/472",
       "dateDocument": "2005-03-18",
-      "roFundstelle": "AS 2005 472",
+      "roFundstelle": "AS 2005 2881",
       "titelDe": "Bundesgesetz über die Übertragung der Führung der Militärversicherung an die SUVA",
       "titelFr": "Loi fédérale sur le transfert à la CNA de la gestion de l'assurance militaire",
       "titelIt": "Legge federale sul trasferimento della gestione dell'assicurazione militare all'INSAI",
       "botschaftKey": "BOTSCHAFT-2004-552",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/472/de",
-      "sha": "0f8dacf697d880daafa2648b6e3c0c5d1173e295ef917920d87ad8ae650715ab"
+      "sha": "a582f8971552d3c10e0496256a3f7db803a49a7f4def3e2e9f23afa62ef4a4fe"
     },
     {
       "art": "sammelerlass-marker",
@@ -142,13 +142,13 @@
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/465",
       "dateDocument": "2000-06-23",
-      "roFundstelle": "AS 2000 465",
+      "roFundstelle": "AS 2000 2765",
       "titelDe": "Bundesgesetz über die Militärversicherung (MVG)",
       "titelFr": "Loi fédérale sur l'assurance militaire (LAM)",
       "titelIt": "Legge federale sull'assicurazione militare (LAM)",
       "botschaftKey": "BOTSCHAFT-2000-99",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/465/de",
-      "sha": "5000dfc3f7fb7d74410b092bf4b7fe44b6d80020554960f3a9a2e2e1cad50327"
+      "sha": "adbb216881e57a8ee1b16aaab7cd9fd1d097f751d7835171404816ae8c67c77d"
     },
     {
       "art": "aenderung",
@@ -167,12 +167,12 @@
       "dateEntryInForce": "1994-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/388",
       "dateDocument": "2010-05-26",
-      "roFundstelle": "AS 2010 388",
+      "roFundstelle": "AS 2010 2943",
       "titelDe": "Bundesgesetz über die Militärversicherung (MVG) (Betrifft nur den italienischen Text)",
       "titelFr": "Loi fédérale sur l'assurance militaire (LAM) (Ne concerne que le texte italien)",
       "titelIt": "Legge federale sull'assicurazione militare (LAM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/388/de",
-      "sha": "db46771f314731ab173681fd0a79b67f132c967c08442369d1907e6bd5c9fc5b"
+      "sha": "b1011fe3c257c58e8efc98f6fc5bacb9ce1fbbce643e7b97fd4f689dec2f81ed"
     },
     {
       "art": "aenderung",
@@ -187,5 +187,5 @@
       "sha": "e401e4d3a39f8e3586a85233556164369019d9150b8cbbe83668dfea4bace5eb"
     }
   ],
-  "sha": "9fcfe9a3e2307967ec2e2cf40236701816e2fd634d9575d598ce76318333a09a"
+  "sha": "b671d24f9cdb1b3088a0bfe47b89781a6d4fd8978c2eebc183b9d808e32d9646"
 }

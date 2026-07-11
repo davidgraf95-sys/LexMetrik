@@ -1,7 +1,7 @@
 {
   "erlassKey": "BGBB",
   "sr": "211.412.11",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -33,13 +33,13 @@
       "dateEntryInForce": "2008-09-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/462",
       "dateDocument": "2007-10-05",
-      "roFundstelle": "AS 2008 462",
+      "roFundstelle": "AS 2008 3585",
       "titelDe": "Bundesgesetz über das bäuerliche Bodenrecht (BGBB)",
       "titelFr": "Loi fédérale sur le droit foncier rural (LDFR)",
       "titelIt": "Legge federale sul diritto fondiario rurale (LDFR)",
       "botschaftKey": "BOTSCHAFT-2006-775",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/462/de",
-      "sha": "0a498c6021e7eb716fec02ca5b5adb8aed12ad948cd787721875854a43905261"
+      "sha": "604bf06c1a05189a4401d4e4df3874f99be4168d502fa829b008e3c7ba7f9d12"
     },
     {
       "art": "sammelerlass-marker",
@@ -58,13 +58,13 @@
       "dateEntryInForce": "2004-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/614",
       "dateDocument": "2003-06-20",
-      "roFundstelle": "AS 2003 614",
+      "roFundstelle": "AS 2003 4123",
       "titelDe": "Bundesgesetz über das bäuerliche Bodenrecht (BGBB)",
       "titelFr": "Loi fédérale sur le droit foncier rural (LDFR)",
       "titelIt": "Legge federale sul diritto fondiario rurale (LDFR)",
       "botschaftKey": "BOTSCHAFT-2002-780",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/614/de",
-      "sha": "4e0dd940ff3dd702bd723baa83babec672ea5204562675dbcbd882cd28eb32ac"
+      "sha": "f5043ae15addd766a2847a06793e4a7c3b099122cd93c10a92797a9089f57563"
     },
     {
       "art": "sammelerlass-marker",
@@ -115,5 +115,5 @@
       "sha": "addcb1f21ce73b9a071fef09df5aaef17f86e151a0a097f37a92742f40f977b9"
     }
   ],
-  "sha": "b8fccd5efe69894eb122f22b3371b5e968fa8110ec71361086c86168fb585730"
+  "sha": "363954458ee65ca5986e67d5dfe9aa6b7ced4d921dc795de7112a4193c598b18"
 }

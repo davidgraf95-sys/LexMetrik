@@ -21,69 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1978-06-23"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom 23. Juni 1978 betreffend die Aufsicht über die privaten Versicherungseinrichtungen (Versicherungsaufsichtsgesetz, VAG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 23 juin 1978 sur la surveillance des institutions d'assurance privées (Loi sur la surveillance des assurances, LSA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 23 giugno 1978 sulla sorveglianza degli istituti d'assicurazione privati (Legge sulla sorveglianza degli assicuratori, LSA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "961.01"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1978/1836_1836_1836"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1979-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1978-06-23"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Bundesgesetz vom 23. Juni 1978 betreffend die Aufsicht über die privaten Versicherungseinrichtungen (Versicherungsaufsichtsgesetz, VAG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 23 juin 1978 sur la surveillance des institutions d'assurance privées (Loi sur la surveillance des assurances, LSA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 23 giugno 1978 sulla sorveglianza degli istituti d'assicurazione privati (Legge sulla sorveglianza degli assicuratori, LSA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "961.01"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1978/1836_1836_1836"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1979-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1978-06-23"
+        "value": "RO 1978 1836"
       },
       "titleDe": {
         "type": "literal",
@@ -117,6 +57,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1978-06-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1978 1836"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 23. Juni 1978 betreffend die Aufsicht über die privaten Versicherungseinrichtungen (Versicherungsaufsichtsgesetz, VAG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 23 juin 1978 sur la surveillance des institutions d'assurance privées (Loi sur la surveillance des assurances, LSA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 23 giugno 1978 sulla sorveglianza degli istituti d'assicurazione privati (Legge sulla sorveglianza degli assicuratori, LSA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "961.01"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1978/1836_1836_1836"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1979-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1978-06-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1978 1836"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 23. Juni 1978 betreffend die Aufsicht über die privaten Versicherungseinrichtungen (Versicherungsaufsichtsgesetz, VAG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 23 juin 1978 sur la surveillance des institutions d'assurance privées (Loi sur la surveillance des assurances, LSA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 23 giugno 1978 sulla sorveglianza degli istituti d'assicurazione privati (Legge sulla sorveglianza degli assicuratori, LSA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "961.01"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1978/1836_1836_1836"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1979-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1978-06-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1978 1836"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 23. Juni 1978 betreffend die Aufsicht über die privaten Versicherungseinrichtungen (Versicherungsaufsichtsgesetz, VAG)"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-10-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 232"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz betreffend die Aufsicht über die privaten Versicherungseinrichtungen (Versicherungsaufsichtsgesetz, VAG)"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-10-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 232"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz betreffend die Aufsicht über die privaten Versicherungseinrichtungen (Versicherungsaufsichtsgesetz, VAG)"
@@ -213,6 +237,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-10-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 232"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz betreffend die Aufsicht über die privaten Versicherungseinrichtungen (Versicherungsaufsichtsgesetz, VAG)"
@@ -245,69 +273,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-12-17"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz betreffend die Aufsicht über Versicherungsunternehmen (Versicherungsaufsichtsgesetz, VAG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur la surveillance des entreprises d'assurance (Loi sur la surveillance des assurances, LSA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulla sorveglianza delle imprese di assicurazione (Legge sulla sorveglianza degli assicuratori, LSA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "961.01"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2005/734"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-12-17"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Bundesgesetz betreffend die Aufsicht über Versicherungsunternehmen (Versicherungsaufsichtsgesetz, VAG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur la surveillance des entreprises d'assurance (Loi sur la surveillance des assurances, LSA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulla sorveglianza delle imprese di assicurazione (Legge sulla sorveglianza degli assicuratori, LSA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "961.01"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2005/734"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-12-17"
+        "value": "RO 2005 5269"
       },
       "titleDe": {
         "type": "literal",
@@ -341,6 +309,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-12-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5269"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz betreffend die Aufsicht über Versicherungsunternehmen (Versicherungsaufsichtsgesetz, VAG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur la surveillance des entreprises d'assurance (Loi sur la surveillance des assurances, LSA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla sorveglianza delle imprese di assicurazione (Legge sulla sorveglianza degli assicuratori, LSA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "961.01"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/734"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-12-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5269"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz betreffend die Aufsicht über Versicherungsunternehmen (Versicherungsaufsichtsgesetz, VAG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur la surveillance des entreprises d'assurance (Loi sur la surveillance des assurances, LSA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla sorveglianza delle imprese di assicurazione (Legge sulla sorveglianza degli assicuratori, LSA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "961.01"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/734"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-12-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5269"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz betreffend die Aufsicht über Versicherungsunternehmen (Versicherungsaufsichtsgesetz, VAG)"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-12-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1539"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz betreffend die Aufsicht über Versicherungsunternehmen (Versicherungsaufsichtsgesetz, VAG)"
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-12-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1539"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz betreffend die Aufsicht über Versicherungsunternehmen (Versicherungsaufsichtsgesetz, VAG)"
@@ -436,6 +488,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-12-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1539"
       },
       "titleDe": {
         "type": "literal",
@@ -468,6 +524,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-02-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 921"
       },
       "titleDe": {
         "type": "literal",
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-02-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 921"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (Finanzmarktinfrastrukturgesetz, FinfraG)"
@@ -532,6 +596,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-02-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 921"
       },
       "titleDe": {
         "type": "literal",
@@ -629,6 +697,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1885-06-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 8 167"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz betreffend Beaufsichtigung von Privatunternehmungen im Gebiete des Versicherungswesens "
@@ -661,6 +733,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1885-06-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 8 167"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz betreffend Beaufsichtigung von Privatunternehmungen im Gebiete des Versicherungswesens "
@@ -693,6 +769,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1885-06-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 8 167"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz betreffend Beaufsichtigung von Privatunternehmungen im Gebiete des Versicherungswesens "
@@ -724,6 +804,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1885-06-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 8 167"
       },
       "titleDe": {
         "type": "literal",

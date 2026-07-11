@@ -1,7 +1,7 @@
 {
   "erlassKey": "KLV",
   "sr": "832.112.31",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -410,12 +410,12 @@
       "dateEntryInForce": "2022-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/1034",
       "dateDocument": "2020-11-30",
-      "roFundstelle": "AS 2020 1034",
+      "roFundstelle": "AS 2020 6337",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/1034/de",
-      "sha": "cde901c749dacb572ece2c617bb1033301d39fd30c38b6016ecc40b287287a13"
+      "sha": "edcf0de58c1db7a1aeead05f2048b25411c8098e7383564e1337878843b61379"
     },
     {
       "art": "aenderung",
@@ -554,36 +554,36 @@
       "dateEntryInForce": "2021-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/1033",
       "dateDocument": "2020-11-30",
-      "roFundstelle": "AS 2020 1033",
+      "roFundstelle": "AS 2020 6327",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/1033/de",
-      "sha": "bba0bbe3bb58f4d52d57b94d0535d3f45e17abdf94deb89d8950de6c247606aa"
+      "sha": "25fa200865db514ce769a9f2aaa0996e9f668f0d119fa89afaa13a94d959a8d7"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2021-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/514",
       "dateDocument": "2020-07-07",
-      "roFundstelle": "AS 2020 514",
+      "roFundstelle": "AS 2020 2829",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/514/de",
-      "sha": "d3c741e20a6ee6ff4d01b0661accc8c532d9fcf2f4fa7df2bb6304f6feb40a13"
+      "sha": "a9bbc69c17fc855c7c466c029a839e6176f8be7f88b69de2362f3cd08572794b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2020-12-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/755",
       "dateDocument": "2020-09-25",
-      "roFundstelle": "AS 2020 755",
+      "roFundstelle": "AS 2020 4139",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/755/de",
-      "sha": "367429d3a1c1d74f304e9d7ffe501b10e61a6e7ecc39bf03cb1e90dd13a78471"
+      "sha": "1736dbc91b9e51aac884878920dd6419a5d4fc097505aa41027885efcbb4209e"
     },
     {
       "art": "sammelerlass-marker",
@@ -596,108 +596,108 @@
       "dateEntryInForce": "2020-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/464",
       "dateDocument": "2020-05-27",
-      "roFundstelle": "AS 2020 464",
+      "roFundstelle": "AS 2020 2539",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/464/de",
-      "sha": "4b5d2deb4f2525edcc36c7a6cd9331adda2ad18cbf75296bfab8bff4bfd89f38"
+      "sha": "e99f33049ff72b14c041358cbf9041c92208faff506a5486653c8f87190944d4"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2020-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/99",
       "dateDocument": "2020-02-07",
-      "roFundstelle": "AS 2020 99",
+      "roFundstelle": "AS 2020 529",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell&#700;assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/99/de",
-      "sha": "c12e871a2154cc317f2387d3632be7c9e8c2d4bac1c4b5e3b6736c7c4b448d53"
+      "sha": "2e590090d094c3b65214dbc13b5f5143ebf5f05931b33a78dc23664f26539a49"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2020-04-30",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/277",
       "dateDocument": "2020-04-27",
-      "roFundstelle": "AS 2020 277",
+      "roFundstelle": "AS 2020 1409",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/277/de",
-      "sha": "37ba6a77c0e8c51abc3f20239f768bf0289ca3b9d4b346389cf683709a4ceaeb"
+      "sha": "4c2802855ef8c34dc72e42ee6bab6921e46626de15348fff3ca5aed615c400da"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2020-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/98",
       "dateDocument": "2020-02-07",
-      "roFundstelle": "AS 2020 98",
+      "roFundstelle": "AS 2020 519",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/98/de",
-      "sha": "7237f2a51d568341574406fe6c96cff18cfa3c637279ca50f54b073c3b84c96c"
+      "sha": "93210746931b4f764e9409cec798f3da2833de488146b8aae38537fe92770695"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2020-03-04",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/121",
       "dateDocument": "2020-02-28",
-      "roFundstelle": "AS 2020 121",
+      "roFundstelle": "AS 2020 629",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/121/de",
-      "sha": "2f9e2b45939a71660fee4d53909d11f8cb96c44b17723404aaa80b2655c5f15f"
+      "sha": "8cbd5a6afe4edf25cbcd29be77cf6193c49991dd6e92fbd223fb90321b73a9af"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2020-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/398",
       "dateDocument": "2019-07-02",
-      "roFundstelle": "AS 2019 398",
+      "roFundstelle": "AS 2019 2145",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/398/de",
-      "sha": "8d4f3c91badbe325a13574ad85b617e744a6a840e5f0851536ceee04e80c05b5"
+      "sha": "e6aed19d40fb7b9d7f2b3ac60dc106ef77f549a720590860d8267afa4f21baea"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2020-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/554",
       "dateDocument": "2019-09-24",
-      "roFundstelle": "AS 2019 554",
+      "roFundstelle": "AS 2019 3039",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/554/de",
-      "sha": "e40060e529f55e7c3c5a5a490ced0d7a2dc1e305f3927d153f291090913386d7"
+      "sha": "a325b6cb98f35196e23ca1c84f10eea793c521edc72279109743698a2194bd25"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2020-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/756",
       "dateDocument": "2019-12-06",
-      "roFundstelle": "AS 2019 756",
+      "roFundstelle": "AS 2019 4387",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/756/de",
-      "sha": "37130167cdb445db79e729f86b5f109863de661b441d6d23dfd7c22d6dbcc8ec"
+      "sha": "d0fdc2f458b34aa03e0e55eac93ab43719b879c54b85541e0fdb8ec285a86b7b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2020-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/792",
       "dateDocument": "2019-12-24",
-      "roFundstelle": "AS 2019 792",
+      "roFundstelle": "AS 2019 5017",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/792/de",
-      "sha": "d10ca35d9eb101bbfe3fd64c233991b76b989b7322a40a086919d14990fa244f"
+      "sha": "08807bdba564faac3c45fa2f72d67e20327309b3fd4be4fc0176e3e4971a4268"
     },
     {
       "art": "sammelerlass-marker",
@@ -710,24 +710,24 @@
       "dateEntryInForce": "2019-07-09",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/393",
       "dateDocument": "2019-07-09",
-      "roFundstelle": "AS 2019 393",
+      "roFundstelle": "AS 2019 2115",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV) (Betrifft nur den französischen und den italienischen Text)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/393/de",
-      "sha": "1137154d694d3965641c57084f6d059aea5d10465bd44086fc9b623d7c597b2a"
+      "sha": "0d96047cfcff0e2171204c9655ff98602d1f1b300039b922d4e5c3ae47c648e5"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2019-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/355",
       "dateDocument": "2019-06-06",
-      "roFundstelle": "AS 2019 355",
+      "roFundstelle": "AS 2019 1931",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/355/de",
-      "sha": "04237f9a8a3b6a897328b13b1fb5ffcd0bb3ab4066eb7603aac2ef4b3cb66352"
+      "sha": "bf9e2a14321019a33fa09b7a83a0f3a3d36c8269b2dc62e4432e94af76c8053a"
     },
     {
       "art": "sammelerlass-marker",
@@ -740,96 +740,96 @@
       "dateEntryInForce": "2019-03-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/121",
       "dateDocument": "2019-02-19",
-      "roFundstelle": "AS 2019 121",
+      "roFundstelle": "AS 2019 689",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/121/de",
-      "sha": "1a5a39236d6d6e63f7f5c75ef758bd0c3d9ad8f6b54d7fbc3561200837e13db5"
+      "sha": "57bfca543504f4306ab2ee5116da146e27a8256838e86656e98f1164f5d51983"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2019-03-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/78",
       "dateDocument": "2019-01-16",
-      "roFundstelle": "AS 2019 78",
+      "roFundstelle": "AS 2019 439",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/78/de",
-      "sha": "3e11da86dd9277da5d10ed5dd5726374b1b19d61df92ecc99deb94c56a008a81"
+      "sha": "339b3ff657f0e2384ca667d2000862b38dd4946e969c83fa3c37a3c90073aec9"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2019-02-19",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/120",
       "dateDocument": "2019-02-19",
-      "roFundstelle": "AS 2019 120",
+      "roFundstelle": "AS 2019 687",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV) (Betrifft nur den französischen Text)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre) (Concerne soltanto il testo francese)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/120/de",
-      "sha": "0e48811fb1611f44b02b161aec789f27f7c1fcf19f085ebdb2cf7307793fd8e3"
+      "sha": "dafa1aea07f8b549c670db832b48c8898da6d1efe8381a518a0fdde0a4646cbd"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2019-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/138",
       "dateDocument": "2018-02-12",
-      "roFundstelle": "AS 2018 138",
+      "roFundstelle": "AS 2018 967",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/138/de",
-      "sha": "3f4c9166ffe83fff5545522b60f329c7edb074df8a33df3f1b9742195c87c4bb"
+      "sha": "76d59d3623afc0901d876a27cd3bac1a1b650455e7b2ce95c09f958608d5bd2f"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2019-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/340",
       "dateDocument": "2018-06-07",
-      "roFundstelle": "AS 2018 340",
+      "roFundstelle": "AS 2018 2375",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/340/de",
-      "sha": "3ca61b21f557ae799e12de23262faa2351014c923b470ff1aae9e5246b8e4561"
+      "sha": "e0988d731c2a203c76f39cd5077b6563bb1a8f0a7849d4f486d38b33247b13d1"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2019-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/432",
       "dateDocument": "2018-07-31",
-      "roFundstelle": "AS 2018 432",
+      "roFundstelle": "AS 2018 2837",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV) (Betrifft nur den französischen Text)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre) (Concerne soltanto il testo francese)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/432/de",
-      "sha": "74c0ec4e356b636e65cf47f14558d472e31c380a80d566e3f1fafb8054bf98aa"
+      "sha": "a195e078069d725bc8e461ab035bf125ff615ebc66f7effa51d5af0e535498fa"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2019-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/616",
       "dateDocument": "2018-10-15",
-      "roFundstelle": "AS 2018 616",
+      "roFundstelle": "AS 2018 3891",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/616/de",
-      "sha": "e6f5c3164600bad7acd8a9b1e5b56f245730b2817c11b39f8702f1be4124edee"
+      "sha": "a03f3fd50052c718f6847ec7443f2d0c490142644f5cfcbf18d8fe9a3c71dd4d"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2019-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/793",
       "dateDocument": "2018-11-30",
-      "roFundstelle": "AS 2018 793",
+      "roFundstelle": "AS 2018 5085",
       "titelDe": "Verordnung KLV des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/793/de",
-      "sha": "82d6fe8dbbc7dcf46cb23dad4a456386e5a96e7e8225c046d95583f9bb02aea2"
+      "sha": "24ea3544ecc98526a9a85a8d991bcf186f87c877bcf4a627d6f3a8d29420861d"
     },
     {
       "art": "sammelerlass-marker",
@@ -854,36 +854,36 @@
       "dateEntryInForce": "2018-07-17",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/403",
       "dateDocument": "2018-07-17",
-      "roFundstelle": "AS 2018 403",
+      "roFundstelle": "AS 2018 2745",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/403/de",
-      "sha": "f804ef276430b81a553c26ab1f4d9f9f9fb62a13fcd48da4302cf04bf1440e05"
+      "sha": "354695ee36b6d0b93d3bdd835be32a60af46b216ef30edd1962bfbd5c1c67556"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2018-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/339",
       "dateDocument": "2018-06-07",
-      "roFundstelle": "AS 2018 339",
+      "roFundstelle": "AS 2018 2361",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/339/de",
-      "sha": "6e25ca1439e543bb9048588b7834291dc2b848fa3860879539a163072b2b219c"
+      "sha": "768bb7e23e26dfdbc8541bf168b48bad16c448087884f9dd14953cbb0204265b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2018-06-19",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/348",
       "dateDocument": "2018-06-19",
-      "roFundstelle": "AS 2018 348",
+      "roFundstelle": "AS 2018 2419",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV). Betrifft nur den französischen und italienischen Text.",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/348/de",
-      "sha": "3c9352cf160bb5684eef15baaaf09db1f0e75d1a5b3fd20262f8f0a3808da23a"
+      "sha": "00ee66d2b2e6bb5a0f833653b40cccec820741c0572a9e0b75671b1d10d387c6"
     },
     {
       "art": "sammelerlass-marker",
@@ -902,108 +902,108 @@
       "dateEntryInForce": "2018-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/773",
       "dateDocument": "2017-11-28",
-      "roFundstelle": "AS 2017 773",
+      "roFundstelle": "AS 2017 7151",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/773/de",
-      "sha": "7e974dc3aeb02e4cd1bc3dc3c6c71f8aa1cef99da3594c836a3ae40bd55e067e"
+      "sha": "3511f1c88aefe94792ea9efc0682fca6cb13b34fd8a982475b6f12cd7fca2242"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2017-08-03",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/460",
       "dateDocument": "2017-08-03",
-      "roFundstelle": "AS 2017 460",
+      "roFundstelle": "AS 2017 3881",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/460/de",
-      "sha": "7661b87f968e55a0c81e8d392f702504d4148b016f9b9e6f511fa8da507aa45b"
+      "sha": "88c298245ecdaeb2978c3777bdb68d1292f4b30079b1ec94ab76d41f9879458b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2017-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/421",
       "dateDocument": "2017-06-16",
-      "roFundstelle": "AS 2017 421",
+      "roFundstelle": "AS 2017 3689",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/421/de",
-      "sha": "429427be978ae4d7a9d7952a3f8508cc059e7f3fbbba340e34a7c3f871c3ae02"
+      "sha": "e8402447025c1edd8dc6ae83a268aed35b7d8ddf05d87c66a51bd46cddde576f"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2017-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/379",
       "dateDocument": "2017-06-02",
-      "roFundstelle": "AS 2017 379",
+      "roFundstelle": "AS 2017 3487",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/379/de",
-      "sha": "d95f9265026b63759a26e002519c70824d708092c3509481371695e951a41fc7"
+      "sha": "225326c8d5fa058098a8a78fedaea15499c86dd1c3155565d5600dd0db55be5e"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2017-03-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/108",
       "dateDocument": "2017-02-01",
-      "roFundstelle": "AS 2017 108",
+      "roFundstelle": "AS 2017 633",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/108/de",
-      "sha": "f94b680ce183c8a01c1448e39772dd6d47768211438ac2b4333021ca64842868"
+      "sha": "fe09345a76e0b3c981d7d7cfaa8f664547ce684f04ad0dd8ce1a65e9523ab45f"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2017-01-10",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/23",
       "dateDocument": "2016-11-25",
-      "roFundstelle": "AS 2017 23",
+      "roFundstelle": "AS 2017 71",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/23/de",
-      "sha": "bd75157c90608a3cf011fcb19f10ecc7ee4b942f0c25eabf7ab3fbe05269be1a"
+      "sha": "27771fc0e594a250e2674215e416ce5be189aee45637850fbe96a694e1f8e8ed"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2017-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/750",
       "dateDocument": "2016-11-25",
-      "roFundstelle": "AS 2016 750",
+      "roFundstelle": "AS 2016 4639",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/750/de",
-      "sha": "c6d7e7a8448ea677cb7f9319a648c69d2b972329f1b16816ddf97e5386cf98c7"
+      "sha": "b9005c7e8e08e0c15fcef7093f206f82ce7cb79d33ac3bd3e25bc4208eec8e3e"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2017-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/793",
       "dateDocument": "2016-12-09",
-      "roFundstelle": "AS 2016 793",
+      "roFundstelle": "AS 2016 4933",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/793/de",
-      "sha": "ef59507f5098645133d77625122daab5af5353b0747cf91733dff8d7c02430c7"
+      "sha": "41af764e05ee5651a3eefb8f983b655602ad49d3a2c1addf026c04604e6fb1e7"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2016-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/396",
       "dateDocument": "2016-06-20",
-      "roFundstelle": "AS 2016 396",
+      "roFundstelle": "AS 2016 2537",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/396/de",
-      "sha": "b715c4e97b4186b7a1e715487a3a1b593997b569f7dbc43de4c29956c63ea60d"
+      "sha": "fe1a0500b5012e5668cb3c30bd31cd6ef46237a9eb8c8b47823bf9f9f8c1501e"
     },
     {
       "art": "sammelerlass-marker",
@@ -1016,396 +1016,396 @@
       "dateEntryInForce": "2016-05-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/220",
       "dateDocument": "2016-03-21",
-      "roFundstelle": "AS 2016 220",
+      "roFundstelle": "AS 2016 1177",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/220/de",
-      "sha": "aa925c0706694e76cd0573973fb5a7e5cad680781449e68b1e5a7579b5af4a67"
+      "sha": "a34159a108e881cf96e8900b1365a4bd7b72b4646943df6aee2b739bcf80e2b1"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2016-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/837",
       "dateDocument": "2015-11-27",
-      "roFundstelle": "AS 2015 837",
+      "roFundstelle": "AS 2015 5125",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/837/de",
-      "sha": "0a88755ad2dde347683dffb91b2a9355d2865f909f99473be46c4b161b1a7a44"
+      "sha": "c044c6a234db99bc74af28bf275ffbbeefc456e3116898765664bc17c4a08bab"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2015-11-15",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/700",
       "dateDocument": "2015-10-21",
-      "roFundstelle": "AS 2015 700",
+      "roFundstelle": "AS 2015 4189",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/700/de",
-      "sha": "b14d533e2a4a8c024060a32c41b6d123a207005292d37ba87fa83bc8880287e4"
+      "sha": "fee6b7805d5fab2f02fb122bf4b90b900612c49f4ec059e9a61a0d9e9d4fe96f"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2015-09-15",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/587",
       "dateDocument": "2015-09-15",
-      "roFundstelle": "AS 2015 587",
+      "roFundstelle": "AS 2015 3147",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV) (Betrifft nur den französischen Text)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre) (Concerne soltanto il testo francese)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/587/de",
-      "sha": "a3e7ce4e2962b088d1a6d8a3e679d6f9671b7dd98467ab8b64e22abf7ae59e57"
+      "sha": "46bde46a7892df8ee7fe160abefdcfbe232ab7fc7fc3ad7583dccca3f4d8ef68"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2015-07-15",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/406",
       "dateDocument": "2015-06-17",
-      "roFundstelle": "AS 2015 406",
+      "roFundstelle": "AS 2015 2197",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/406/de",
-      "sha": "bc2abebe1c298a99648a5303d819b506aad5632184f633209bff35c80387458b"
+      "sha": "60082f31612b083eab72aa3a0816a184e7ba2c93a49cd62ee23877a0b6de069f"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2015-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/281",
       "dateDocument": "2015-04-29",
-      "roFundstelle": "AS 2015 281",
+      "roFundstelle": "AS 2015 1359",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/281/de",
-      "sha": "c0ce12d9f249cfb6c0ea039efd5bfcc52263888a37daf80a3b558649ebe4b116"
+      "sha": "556bc7bfd0da2a527002d12082bcad66cfff88f9a65c2748d169a87f430236f0"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2015-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/607",
       "dateDocument": "2014-10-21",
-      "roFundstelle": "AS 2014 607",
+      "roFundstelle": "AS 2014 3487",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/607/de",
-      "sha": "4f653fce12a161744408212f3508854fedf530bcf353b3a16d6f02cb08b9013c"
+      "sha": "833cf5da455ac0e93f01da341e82e6021b9d9042429f3188128571ec542f5fa1"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2015-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/724",
       "dateDocument": "2014-11-20",
-      "roFundstelle": "AS 2014 724",
+      "roFundstelle": "AS 2014 4393",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/724/de",
-      "sha": "439213c58061b9348cbc22127a2d268685a1a0fb479a7cff0b751d2113269a20"
+      "sha": "067c6a34e9ef6c3f7afaca219ff88c1915a86e56afc015f25d055561f8e03a90"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2014-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/269",
       "dateDocument": "2014-05-16",
-      "roFundstelle": "AS 2014 269",
+      "roFundstelle": "AS 2014 1251",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/269/de",
-      "sha": "ce314b27fd6e381b1faff4e9207fa8bcb65e0be5aab0e42668112d9a037a78b3"
+      "sha": "d009aa5b5478f287411133ebaec240ca96d74d6bea4ec85cc10e9a5171941ae1"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2014-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/850",
       "dateDocument": "2013-12-06",
-      "roFundstelle": "AS 2013 850",
+      "roFundstelle": "AS 2013 5329",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/850/de",
-      "sha": "97ca61a24b964d824011ac7b113b88b8af44877d7fcfff218a7d980b96875a00"
+      "sha": "66bd17accbfe6c27a35769ce35aaaf94607e786424b066453cb44798cb360d43"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2013-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/414",
       "dateDocument": "2013-06-10",
-      "roFundstelle": "AS 2013 414",
+      "roFundstelle": "AS 2013 1925",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/414/de",
-      "sha": "6b9980d6998042a7ea4e1849e00e7ede059d740e15b4963dd3ba75e105449059"
+      "sha": "88b0cb82e70f00340b20ac92ead0cf876d005f0056255e6cc4d16814766eed4d"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2013-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/319",
       "dateDocument": "2013-05-08",
-      "roFundstelle": "AS 2013 319",
+      "roFundstelle": "AS 2013 1357",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/319/de",
-      "sha": "06b40fbe75c231b94c012099e127a6d79ee794efab3634b5701c23e5a4e757cb"
+      "sha": "803eadfebaf9d32b4e47c42043cb01488a0012b4a85a89962a91ce96a7135a13"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2013-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/681",
       "dateDocument": "2012-10-16",
-      "roFundstelle": "AS 2012 681",
+      "roFundstelle": "AS 2012 5829",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/681/de",
-      "sha": "e6f72f63ded33a0354c6e64175078efda906ed79e4b716f10bf18895bb426cc4"
+      "sha": "95af8c14e3b1edf9584363cd29c8fbbdf5645f3892ff1e3e814884c141a95813"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2013-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/795",
       "dateDocument": "2012-11-15",
-      "roFundstelle": "AS 2012 795",
+      "roFundstelle": "AS 2012 6587",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/795/de",
-      "sha": "7d9c550fdd24f027f547f08d24cfdbce55d8eed5994aa53729595fcc238c978b"
+      "sha": "4be0fe88eb1313ec6c9719a80bce6b35c13bc90e5f066c425b89ac42af54de06"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2012-09-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/511",
       "dateDocument": "2012-08-13",
-      "roFundstelle": "AS 2012 511",
+      "roFundstelle": "AS 2012 4347",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/511/de",
-      "sha": "debc50e4a7be56470eb3b4ce230bbab82b673f7dc22d7086682b74624a4e3bed"
+      "sha": "27967662cc1bb4742e1d71d8f65b5839720779aa1ef3a64c8388e5fa5b1904b5"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2012-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/400",
       "dateDocument": "2012-06-12",
-      "roFundstelle": "AS 2012 400",
+      "roFundstelle": "AS 2012 3553",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/400/de",
-      "sha": "ddf12dcc378293d59afc51ec9d2eb2fbb770e12551961cefe7683d25b0048a6c"
+      "sha": "8b7eab0ca6a5fb823467d6f6bbaf0fbeff9321afb30c971aeea156b69e089a0d"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2012-05-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/247",
       "dateDocument": "2012-03-21",
-      "roFundstelle": "AS 2012 247",
+      "roFundstelle": "AS 2012 1769",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/247/de",
-      "sha": "48968ec7f662c83ba7476c9caa1cf41da5a2af26745bb228cfbf581ca0c1d8d1"
+      "sha": "8351a6be5d567d8f95ac0315ba609f38f976cf9396382e66a1353664d936f635"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2012-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/899",
       "dateDocument": "2011-12-05",
-      "roFundstelle": "AS 2011 899",
+      "roFundstelle": "AS 2011 6487",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/899/de",
-      "sha": "f9460fc7747c6a90c481a359273b8ae1f4c988d626edb559178c0686d433fc44"
+      "sha": "d1e5e145d16e8116fc2ecb27ec474aba8d9bf6b2cd1e3ab2e2a3fe09a824b298"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2011-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/370",
       "dateDocument": "2011-05-31",
-      "roFundstelle": "AS 2011 370",
+      "roFundstelle": "AS 2011 2669",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/370/de",
-      "sha": "ba10bae62cd26124dc5e0245c6320e70a9e3d454ae0688d92af7cce19eeb9177"
+      "sha": "d5b115b52025408e9d2eee01e30fb01fe5a3ac5dc02cf93d67662d0856dd1987"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2011-03-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/105",
       "dateDocument": "2011-02-02",
-      "roFundstelle": "AS 2011 105",
+      "roFundstelle": "AS 2011 657",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/105/de",
-      "sha": "dbf7c7bf6eba3c2aaf5b6bddc766f10268b2952309ca349e960cd3261426a3f7"
+      "sha": "df5312d5951dd64a8f85b901f8aeb93ebd971ddfae7eac02d1aeda17b9195f9e"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2011-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/831",
       "dateDocument": "2010-12-02",
-      "roFundstelle": "AS 2010 831",
+      "roFundstelle": "AS 2010 5837",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/831/de",
-      "sha": "dd0c8dad2601e816d9e9119c902bf0dfdf80e4035399977eee8afac138fed9ca"
+      "sha": "afe1dd0aade335bf2a821c4083cf0233425fc606357abf633ae27b42fa1e82f2"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2010-09-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/513",
       "dateDocument": "2010-08-16",
-      "roFundstelle": "AS 2010 513",
+      "roFundstelle": "AS 2010 3559",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/513/de",
-      "sha": "2e43739ddb4c71f61b795e46de54139952555704b4639ab18083c73d9ec0b41d"
+      "sha": "d8b87fb44be91b4e85eec20c29bba3800016ec44d7d66a9aac91d72502087b41"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2010-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/436",
       "dateDocument": "2010-06-30",
-      "roFundstelle": "AS 2010 436",
+      "roFundstelle": "AS 2010 3249",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/436/de",
-      "sha": "eaae4065660f5af0800578c1c08498d3fd936bb955a5f7739804ad7157ec5d1f"
+      "sha": "6359b131e59eabe022472e808e578d1cab4a6048954d4ca2848e24291c7c424b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2010-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/359",
       "dateDocument": "2010-06-14",
-      "roFundstelle": "AS 2010 359",
+      "roFundstelle": "AS 2010 2755",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/359/de",
-      "sha": "7deb6380a5437d8641b1fee7c54cc27dc66462d3dfa509ed63659e60cda4c0d8"
+      "sha": "17b00474e6d9afb3c5050d25affa3e94ac45d2109ddf4967d80f50f29834935f"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2010-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/744",
       "dateDocument": "2009-10-27",
-      "roFundstelle": "AS 2009 744",
+      "roFundstelle": "AS 2009 6083",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/744/de",
-      "sha": "22082b777c0454dde6c9323f1d1c02cbd786bf09c6e33650e6694fa0ac8a266b"
+      "sha": "a17d406c2e2dfcafd4f51d2768a2ff3702fdb75cbb4ef18af6529528d39e16cb"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2010-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/837",
       "dateDocument": "2009-12-04",
-      "roFundstelle": "AS 2009 837",
+      "roFundstelle": "AS 2009 6849",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/837/de",
-      "sha": "37a9e82bdcd291184dec85834f4e0e361f8b801e121b22e82a5bbd1ae3ce5614"
+      "sha": "6714469a96a50de9b0a1eddf5c97c2b4f8ed6f52f4e38cfd53e3c589fdf0592f"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2009-10-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/521",
       "dateDocument": "2009-07-01",
-      "roFundstelle": "AS 2009 521",
+      "roFundstelle": "AS 2009 4251",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/521/de",
-      "sha": "c2c4b3926aa4557f6c18fab800c6de956d1d50e9e85fef601a0a19d5be84437c"
+      "sha": "04c633f4662770412765c1bd7a6ec5bff608019b2736aeaac806e8b502289f50"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2009-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/435",
       "dateDocument": "2009-06-24",
-      "roFundstelle": "AS 2009 435",
+      "roFundstelle": "AS 2009 3527",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/435/de",
-      "sha": "25b75b5e426b597faa083471fb38c88d93d239445de5d7ae87ccb80c59bbe67b"
+      "sha": "fcb58b5a451880950c88637400cfd84238976650d3724a1bb6a6b22804afc4b5"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2009-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/246",
       "dateDocument": "2009-01-28",
-      "roFundstelle": "AS 2009 246",
+      "roFundstelle": "AS 2009 1669",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/246/de",
-      "sha": "12585dcd770e6b63d25b38d6b7d97f70358e7bd2b2d8571f494d2682e9c8cab0"
+      "sha": "271105840ec27ecd04420d5663ebddb76e6f279911f0211b1bf75231843fa305"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2009-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/370",
       "dateDocument": "2009-06-05",
-      "roFundstelle": "AS 2009 370",
+      "roFundstelle": "AS 2009 2821",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/370/de",
-      "sha": "c9f8d735a440990b3a9a35c4ac434800bfbc0bba12ae6a7ee6d22004f36c0a1f"
+      "sha": "aa95d1a39cbe6c7db2d3ee2a1b72ebd121ca2029bd9a55ae1f74acea4a70e05e"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2009-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/401",
       "dateDocument": "2009-06-26",
-      "roFundstelle": "AS 2009 401",
+      "roFundstelle": "AS 2009 3173",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/401/de",
-      "sha": "1f1b15d75b0a910cc2186fc4726de10207632c62706d386ac94b93dc954a45f3"
+      "sha": "6c55eef54fb50ac53b96e757e428d8ee7e66b6f944fc0b64e05fed0871229005"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2009-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/885",
       "dateDocument": "2008-12-10",
-      "roFundstelle": "AS 2008 885",
+      "roFundstelle": "AS 2008 6493",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/885/de",
-      "sha": "8ad031b51fd644a176c31a95f719afc4b878e774e4579c0024e363f17db48b2c"
+      "sha": "74ffbb40f1167dedd48b7d42e9724ec30c3c4a78909061900dcac4bf74aa9f20"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2008-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/458",
       "dateDocument": "2008-06-26",
-      "roFundstelle": "AS 2008 458",
+      "roFundstelle": "AS 2008 3553",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/458/de",
-      "sha": "303c21439a8d6d378ae4282146fe8c519332a304c44f02174e2a8682d82b61f5"
+      "sha": "b81b98862f882697642f62a7f31e8898469d158c25f6c48bafaa0a86683532ac"
     },
     {
       "art": "sammelerlass-marker",
@@ -1418,36 +1418,36 @@
       "dateEntryInForce": "2008-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/882",
       "dateDocument": "2007-11-21",
-      "roFundstelle": "AS 2007 882",
+      "roFundstelle": "AS 2007 6839",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/882/de",
-      "sha": "b7c52f9d96511d14d633725c137d5889f04c9c85f31909ebc932fb4a44772dc7"
+      "sha": "140168dd2f7b354246560e13fa8ef433d0ba0cdae2ed9d1aa0040b572b18a373"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2007-10-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/618",
       "dateDocument": "2007-09-24",
-      "roFundstelle": "AS 2007 618",
+      "roFundstelle": "AS 2007 4443",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/618/de",
-      "sha": "b96c019be4abe1e245a61b30029763568121a3e0881431a44bec851e61c196bb"
+      "sha": "15efbebf574c6f6772cc97768ed4663ec95f1c2faf5611f87d2cd4d7d14f1bbd"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2007-10-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/648",
       "dateDocument": "2007-10-09",
-      "roFundstelle": "AS 2007 648",
+      "roFundstelle": "AS 2007 4633",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/648/de",
-      "sha": "048cbace1dc82bafbe26958c5bb2d7d261d3cfdab89f63cf714ada139e3727ba"
+      "sha": "b83aaf327f3c92b37c0101837f05c63e8cab1d6d212f82bdf4852be81c974924"
     },
     {
       "art": "sammelerlass-marker",
@@ -1460,444 +1460,444 @@
       "dateEntryInForce": "2007-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/440",
       "dateDocument": "2007-06-28",
-      "roFundstelle": "AS 2007 440",
+      "roFundstelle": "AS 2007 3581",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/440/de",
-      "sha": "e932e2b72fb53e0d12aec00bbc81239863b5f1f8af6bc3cb78ac11f1bc452da7"
+      "sha": "f5e8212ac6a2616ffce4c217ff43fa5812d84b81513cf227e5daf1a76cbe2635"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2007-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/227",
       "dateDocument": "2007-04-04",
-      "roFundstelle": "AS 2007 227",
+      "roFundstelle": "AS 2007 1367",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/227/de",
-      "sha": "01fe928ef58ede19d68fef53fb5d0a13fb213066dff01f2d438c1bcc6185be05"
+      "sha": "df66c83617ee5070c30dfbaf4d106a7d28d3e6fa6da01bbf8c5eef467b8949b1"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2007-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/856",
       "dateDocument": "2006-12-20",
-      "roFundstelle": "AS 2006 856",
+      "roFundstelle": "AS 2006 5769",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/856/de",
-      "sha": "25c0fda5f6371540f7d7b56b2bcb7c4187b081b461e329ddf1bd3fface697c05"
+      "sha": "2c81a5f09028b5c2724b7694e458602315e7ef9d832b2fd5d9d8e02d162a76d4"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2007-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/110",
       "dateDocument": "2007-02-13",
-      "roFundstelle": "AS 2007 110",
+      "roFundstelle": "AS 2007 553",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/110/de",
-      "sha": "589f9c51e91bee4eb2b2dd86e52e5beac20b77db1bdcc85e57a190ef26e3da81"
+      "sha": "0a3bd0c4d9de47fe1b15c6a316d2ce33ed8f4e857b963a807e60ccd45cc7e93f"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2006-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/452",
       "dateDocument": "2006-07-03",
-      "roFundstelle": "AS 2006 452",
+      "roFundstelle": "AS 2006 2957",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/452/de",
-      "sha": "f9f11f2219c2befe3219eaa4c5544d053e1dcb1a439234e51429d388656d9aa6"
+      "sha": "128398d9c3cc6571e6fad1da747eafc341352e843d6bac1a052b67f67558ee64"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2006-05-10",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/271",
       "dateDocument": "2006-04-26",
-      "roFundstelle": "AS 2006 271",
+      "roFundstelle": "AS 2006 1757",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/271/de",
-      "sha": "de3dcfde9e6a404f5a34bc313d536ab177af9abb98f5ad9bfaa517777a6290f0"
+      "sha": "d96326c2a831eb30468ac63a4037c1c45d2a99ae60802b1c4c38af013b243775"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2006-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/10",
       "dateDocument": "2005-11-09",
-      "roFundstelle": "AS 2006 10",
+      "roFundstelle": "AS 2006 23",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/10/de",
-      "sha": "ef553fd8a21de8f44883ddd74bee5d48dfe369e18b989658e55113182360618a"
+      "sha": "e26210ea6a8b7026af60981de1893adfb26166b858889922bff5b7967d4f1297"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2006-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/9",
       "dateDocument": "2005-12-12",
-      "roFundstelle": "AS 2006 9",
+      "roFundstelle": "AS 2006 21",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/9/de",
-      "sha": "658102083488a0f9fafe565327af4724ca3e151530e23a23ad993363378c7659"
+      "sha": "75501d37bdd1eada9a1820698fa9111827401c8b8a41c32fc954a455ecf42239"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2005-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/470",
       "dateDocument": "2005-06-02",
-      "roFundstelle": "AS 2005 470",
+      "roFundstelle": "AS 2005 2875",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/470/de",
-      "sha": "9f92396564f54a8f10c79f20a9ac08ca9783d856b87a51883aadc7de24cec646"
+      "sha": "db092182533824cec2e70d5b46a4a618390960621c70d5ed22d4b7fd92a5d756"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2005-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/471",
       "dateDocument": "2005-06-28",
-      "roFundstelle": "AS 2005 471",
+      "roFundstelle": "AS 2005 2879",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/471/de",
-      "sha": "fb0224bc6023d830847993c0e4a6f62b1898ea611ffd4db2925e21756966bc53"
+      "sha": "5acf564c9e4a822a69975909df8015748d2f4a866e6580c9fb177a284c1396a2"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2005-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/827",
       "dateDocument": "2004-11-30",
-      "roFundstelle": "AS 2004 827",
+      "roFundstelle": "AS 2004 5401",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/827/de",
-      "sha": "a810ca7a58cf13a12c55f9470c99e853813c2fe0089d9b9e7f12448ccc385523"
+      "sha": "0a656c1b915c0c330b6eebb1a1f3518d9c01807977a5abcea2de683b607c96a2"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2004-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/436",
       "dateDocument": "2004-06-30",
-      "roFundstelle": "AS 2004 436",
+      "roFundstelle": "AS 2004 3385",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/436/de",
-      "sha": "cc65a10c2fdd03071ebcd1fe4674b165064fc77c84e5d70d5907df7447ded7e4"
+      "sha": "1b07b508495727e18f5c1769ecf0f3926054f03284fa223cf8e8e6547ef8401d"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2004-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/370",
       "dateDocument": "2004-06-16",
-      "roFundstelle": "AS 2004 370",
+      "roFundstelle": "AS 2004 2973",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/370/de",
-      "sha": "8c41b66c31e0c5b66c02b931202bc1aed658db4cb86b7cdfdb480dd9ed94a2bb"
+      "sha": "af9ce74f97d05ec4b3ffdab82c385cb852fdb8945adf4f1d76c2c1833b5fcef0"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2004-05-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/231",
       "dateDocument": "2004-04-08",
-      "roFundstelle": "AS 2004 231",
+      "roFundstelle": "AS 2004 2029",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/231/de",
-      "sha": "8ddd3f9747c8549bf624781709e31b6d3afda6fbac6580192a070ebcf768c70b"
+      "sha": "2dd79a24bd5d32b4747e02d584244e2bc42274a38dcc84680c862a24cc6b128f"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2004-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/209",
       "dateDocument": "2004-03-29",
-      "roFundstelle": "AS 2004 209",
+      "roFundstelle": "AS 2004 1713",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/209/de",
-      "sha": "1c518abe34834ab754fe52f9dac0147f10f0521436a4e500b0d2d92b0ccbd566"
+      "sha": "19de9d524a62f65e32ea5226d265221cf11a02021d7fe8ba1db741b1041fac58"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2004-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/775",
       "dateDocument": "2003-11-17",
-      "roFundstelle": "AS 2003 775",
+      "roFundstelle": "AS 2003 5283",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/775/de",
-      "sha": "71438388c751c4d90ddb53e96b5aa914c09a882a70399dd1edc290cabf1dc9d1"
+      "sha": "c02803c65c49a12d988a1650554d7804016ac09050944997e26b92e0cab0da15"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2003-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/562",
       "dateDocument": "2002-10-07",
-      "roFundstelle": "AS 2002 562",
+      "roFundstelle": "AS 2002 3670",
       "titelDe": "Verordnung über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/562/de",
-      "sha": "7c0e6c95a130b73239f4b95b904c27974559624b3312330bc8c2039e6e07055c"
+      "sha": "42dfa89fec1e8b8064c6d5b635cf1b722fa24915da7a921a198ceb6e0f4fd63d"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2003-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/692",
       "dateDocument": "2002-12-09",
-      "roFundstelle": "AS 2002 692",
+      "roFundstelle": "AS 2002 4253",
       "titelDe": "Verordnung über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/692/de",
-      "sha": "9eccacb978778686273345097d9affd08039bab78a8a88fa307bcb83e4f14838"
+      "sha": "8d3066693e81b6533cddf0d8103a5c5a34d07b1a824d53bf36db9485a2031031"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2002-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/436",
       "dateDocument": "2002-07-02",
-      "roFundstelle": "AS 2002 436",
+      "roFundstelle": "AS 2002 3013",
       "titelDe": "Verordnung über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/436/de",
-      "sha": "b791d182d424a2d01bce218477ba0e8cd47cd772b80c88ab3fdc84055ebca2dc"
+      "sha": "443cc9b51c04c2e906a4d5ff8922b2210f629697916e1d7449702c2814b9c8e2"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2002-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/696",
       "dateDocument": "2005-11-15",
-      "roFundstelle": "AS 2005 696",
+      "roFundstelle": "AS 2005 5021",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV) (Betrifft nur den französischen Text)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre) (Concerne solo il testo francese)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/696/de",
-      "sha": "d1a38ded9c791eeae0067d69d6b58121dbe9bdbce6f4e519c70a0e30fc674262"
+      "sha": "c69df7ba41efc0683e9fb76f1cc54de92f885a5eb6a3dc604d5cdb4bf6740f11"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2002-05-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/240",
       "dateDocument": "2002-05-15",
-      "roFundstelle": "AS 2002 240",
+      "roFundstelle": "AS 2002 1520",
       "titelDe": "Verordnung über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/240/de",
-      "sha": "b82614ca337c60b5af1dd3d07599971f2345248d633ba94f7296f53efcf76ba7"
+      "sha": "0ffbbafdda554f8a7fe641b488b2d077eefe8baef437353145e4f2ecb73d7479"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2002-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/310",
       "dateDocument": "2001-07-06",
-      "roFundstelle": "AS 2001 310",
+      "roFundstelle": "AS 2001 2142",
       "titelDe": "Verordnung über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/310/de",
-      "sha": "7177131084ed6578c4786b7efd83b06d10892fb9aae543252eeeb9c34ebed9ab"
+      "sha": "e36bd8bf6cf7e4b44e2c19027801b750c36b767c4d2d03db77ad7e84334b1d7b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2002-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/315",
       "dateDocument": "2001-07-09",
-      "roFundstelle": "AS 2001 315",
+      "roFundstelle": "AS 2001 2150",
       "titelDe": "Verordnung über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/315/de",
-      "sha": "f04eb0a66913b777575f24bc48ea512abb4a801b57fc977bff3308c0d71bfc64"
+      "sha": "f49376df78aed95aacbdb2ced55800bd80513a737dc483c4562876db1fd5c800"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2002-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/412",
       "dateDocument": "2001-08-13",
-      "roFundstelle": "AS 2001 412",
+      "roFundstelle": "AS 2001 2737",
       "titelDe": "Verordnung über Leistungen in der obligatorischen Krankenpflegeversicherungen (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/412/de",
-      "sha": "ef210cae46d5f80de0c344139d53ca3d2f255c76ea6477eee258761e510abaae"
+      "sha": "e23375f02cc227c000967ef6d6e8f8cc272435d61a9f3c5d2784d392c340db63"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/259",
       "dateDocument": "2001-07-06",
-      "roFundstelle": "AS 2001 259",
+      "roFundstelle": "AS 2001 1683",
       "titelDe": "Verordnung über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/259/de",
-      "sha": "c983ca60ad65fd172d967b975ca75c66a1f65185204921dce94537ebfbfa7740"
+      "sha": "1f5b864a73d42db45eb3868da8c0ae9a64da1db8f80efc517001d5a63ac9a13f"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/406",
       "dateDocument": "2000-07-10",
-      "roFundstelle": "AS 2000 406",
+      "roFundstelle": "AS 2000 2546",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/406/de",
-      "sha": "60ea3130545de49085a411ea1d1ca0aa020b470e476d4a49bbd00bb019e6c995"
+      "sha": "71a6d14fd3d8a8d3a11af07b8ee7962f0f23b157e9cfa5d66819ea2ad67e12cb"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/437",
       "dateDocument": "2000-07-07",
-      "roFundstelle": "AS 2000 437",
+      "roFundstelle": "AS 2000 2674",
       "titelDe": "Verordnung über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/437/de",
-      "sha": "13c128beaf349dd0d46862fc81e618e321f05c416866c8a8ed05073d33e20c70"
+      "sha": "da3cfe734117c89c62382ea6a56bfc287a8fef8a215b76ad46429f8fde4f9d9d"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/444",
       "dateDocument": "2000-10-20",
-      "roFundstelle": "AS 2000 444",
+      "roFundstelle": "AS 2000 2695",
       "titelDe": "Verordnung über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/444/de",
-      "sha": "1c76c4507ffc3367c7f1dd7e30691f54bbbd1f80ce838603fa92330ef58cc80b"
+      "sha": "77a9e143bb625567ca21b70fb0e60e8194fd8bffd843a80f9fb791a87f232fd0"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/560",
       "dateDocument": "2000-11-27",
-      "roFundstelle": "AS 2000 560",
+      "roFundstelle": "AS 2000 3088",
       "titelDe": "Verordnung über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/560/de",
-      "sha": "46b0317fed19a7cd4a825c778982c4321fabbbd9d275adf23e538ae0db30d391"
+      "sha": "e54f76f5345df20887e7887f755f4fb6bdb2ea5bf049209f315f001033654c69"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/61",
       "dateDocument": "2000-12-19",
-      "roFundstelle": "AS 2001 61",
+      "roFundstelle": "AS 2001 295",
       "titelDe": "Verordnung über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/61/de",
-      "sha": "ebfd8a75d00f8fa9e1a6916c5af242bf5b9de9485566c5117ce371b5c1d94c1b"
+      "sha": "1c3a0143bc462093e6c74649455755fec83fd3d9de2f4f5447b6fd7ea853e1c7"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2000-10-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/366",
       "dateDocument": "2000-07-06",
-      "roFundstelle": "AS 2000 366",
+      "roFundstelle": "AS 2000 2312",
       "titelDe": "Verordnung über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/366/de",
-      "sha": "156ee313a8fe7516e9d47ff1d1446cd925bf2630f779eb4899d21c68bae40d8d"
+      "sha": "79c6b9bb678beaf08e3c68fad23c1e79bdfd3ed909acc1fef3f13d92866c342f"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2000-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/398",
       "dateDocument": "1999-07-05",
-      "roFundstelle": "AS 1999 398",
+      "roFundstelle": "AS 1999 2516",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/398/de",
-      "sha": "b046c975ffd6bfb95728c26f726e14fad67409df0391c50d4598dc2ad951dd4a"
+      "sha": "d2b7a71c46073c19aa7d068d5653297d5c9825187ddc0471aa5e2aebba4495ff"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2000-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/39",
       "dateDocument": "1999-12-13",
-      "roFundstelle": "AS 2000 39",
+      "roFundstelle": "AS 2000 234",
       "titelDe": "Verordnung über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/39/de",
-      "sha": "023ae96eaeba78183c8b0ed42e6af3d0fe47b28fa8e125c8c203523f051c6980"
+      "sha": "a8e4bbc8df15fc97a5ed3f51ca93aa3efd85394d8e351ae23becb92c123216e4"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "1999-10-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/389",
       "dateDocument": "1999-06-29",
-      "roFundstelle": "AS 1999 389",
+      "roFundstelle": "AS 1999 2505",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/389/de",
-      "sha": "c3dd3b6a9a346b6781ab234b5330dc66cfa337e8777ab42a2e4ad1ef769e4c4e"
+      "sha": "08576e048ebb0c61d2a91664837dc504036a365b5689cb010b4d9cf1de5dbd59"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "1999-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/387",
       "dateDocument": "1999-07-19",
-      "roFundstelle": "AS 1999 387",
+      "roFundstelle": "AS 1999 2503",
       "titelDe": "Verordnung über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/387/de",
-      "sha": "e3c816ad61ed8c34c13af3e800a6b6d1772ab70721916fbeb69d7a0b89d5f83a"
+      "sha": "139d12cbf08a3d1d063c115174034b6c326845ac1cd3ff36d7d666e918a4d213"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "1999-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/388",
       "dateDocument": "1999-06-28",
-      "roFundstelle": "AS 1999 388",
+      "roFundstelle": "AS 1999 2504",
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/388/de",
-      "sha": "6359ed64ce34864180aa74a940ff2c6d5dc98a4a4c65472b8b91a368647c2f76"
+      "sha": "595a5bc02f032dc19aaba0248ce66f703231f76e46ba1a5aa56834023cc4953c"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "1999-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/399",
       "dateDocument": "1999-06-29",
-      "roFundstelle": "AS 1999 399",
+      "roFundstelle": "AS 1999 2517",
       "titelDe": "Verordnung über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance sur les prestations dans l'assurance obligatoire les soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie(Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/399/de",
-      "sha": "726d5a3f8179f5c5600c9bd894697e65ed10b3f9dab9e6fcf82443148768c86f"
+      "sha": "f5b2136ac5df2ade2c33f8d8f80c54ad365574be535b1751f5a1fc3f1809a522"
     },
     {
       "art": "aenderung",
@@ -1916,24 +1916,24 @@
       "dateEntryInForce": "1999-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/107",
       "dateDocument": "1998-12-24",
-      "roFundstelle": "AS 1999 107",
+      "roFundstelle": "AS 1999 738",
       "titelDe": "Verordnung über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/107/de",
-      "sha": "04e95be99d9080e47b04468a2f1492f9fe034c2e16c6129192f37e238b486cca"
+      "sha": "0019beb659d3eb9ad9a33014460bfe905ad3f6da2ce84449eab7755dcd81c6af"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "1999-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/65",
       "dateDocument": "1998-11-18",
-      "roFundstelle": "AS 1999 65",
+      "roFundstelle": "AS 1999 528",
       "titelDe": "Verordnung über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance sur les prestations dans l'assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l'assurance des soins, OPAS)",
       "titelIt": "Ordinanza sulle prestazioni dell'assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, Opre)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/65/de",
-      "sha": "3601e934d4daea03f12d5d83111f96b9642da4fbdd7e287e2b83786971668b37"
+      "sha": "220c8c7a68ae1c1c40634fc2e968e49004b6215122151254ea0f078f09669e4d"
     },
     {
       "art": "aenderung",
@@ -1960,5 +1960,5 @@
       "sha": "e636cf67a1d1aa35b4a5099a945ccc9acf2f3f80e0dee33993e1bf4034113129"
     }
   ],
-  "sha": "ef1fdd2fd02ae8899c001a3aba4dd5cf1e2b271c3fd0095475d33b0d61d541ef"
+  "sha": "c737c80e15cfaef6b2df427a2e546aea1f933db59587e8852888007ab26636de"
 }

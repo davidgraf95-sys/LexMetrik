@@ -1,7 +1,7 @@
 {
   "erlassKey": "VOEB",
   "sr": "172.056.11",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -21,84 +21,84 @@
       "dateEntryInForce": "2021-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/127",
       "dateDocument": "2020-02-12",
-      "roFundstelle": "AS 2020 127",
+      "roFundstelle": "AS 2020 691",
       "titelDe": "Verordnung über das öffentliche Beschaffungswesen (VöB)",
       "titelFr": "Ordonnance sur les marchés publics (OMP)",
       "titelIt": "Ordinanza sugli appalti pubblici (OAPub)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/127/de",
-      "sha": "bf8ac914f85d9dcbfde7a1b02f42baa22d6263d4b07512c355dae946b45e91ca"
+      "sha": "35e79bbb99b404a78c4619acc6e8c788a5e01a07695782a3d12bb74753cffce5"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2015-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/141",
       "dateDocument": "2015-02-25",
-      "roFundstelle": "AS 2015 141",
+      "roFundstelle": "AS 2015 775",
       "titelDe": "Verordnung über das öffentliche Beschaffungswesen (VöB)",
       "titelFr": "Ordonnance sur les marchés publics (OMP)",
       "titelIt": "Ordinanza sugli acquisti pubblici (OAPub)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/141/de",
-      "sha": "dceddd1b2d382f8351a630a4adbef8c15fc7d71196b90c27fb5963d9cfb0d173"
+      "sha": "4481e1f22ede7b996c1580709a9700c0abde5b384c0bc607b67b8180a5238398"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2010-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/752",
       "dateDocument": "2009-11-18",
-      "roFundstelle": "AS 2009 752",
+      "roFundstelle": "AS 2009 6149",
       "titelDe": "Verordnung über das öffentliche Beschaffungswesen (VoeB)",
       "titelFr": "Ordonnance sur les marchés publics (OMP)",
       "titelIt": "Ordinanza sugli acquisti pubblici (OAPub)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/752/de",
-      "sha": "54817a68edc39114bada70a3cd2a878f48670623e4e95f0afed8ca3161faa902"
+      "sha": "a72ae0fb5f21e5ec9f018c8f92fe63854a47e206d9d50d9f57650599920b6173"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2010-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/222",
       "dateDocument": "2010-04-20",
-      "roFundstelle": "AS 2010 222",
+      "roFundstelle": "AS 2010 1565",
       "titelDe": "Verordnung über das öffentliche Beschaffungswesen (VöB) (Betrifft nur den französischen Text)",
       "titelFr": "Ordonnance sur les marchés publics (OMP)",
       "titelIt": "Ordinanza sugli acquisti pubblici (OAPub) (Concerne solo il testo francese)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/222/de",
-      "sha": "3c6565e1e9951b680ef29762a2568c713a1292f4bb3bee54cf79a929af151974"
+      "sha": "98679c7c8bc9ed617c3c1745dad464253dd1b4036fc339c64bfa3eef4382d13b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2006-05-15",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/259",
       "dateDocument": "2006-04-26",
-      "roFundstelle": "AS 2006 259",
+      "roFundstelle": "AS 2006 1667",
       "titelDe": "Verordnung über das öffentliche Beschaffungswesen (VoeB)",
       "titelFr": "Ordonnance sur les marchés publics (OMP)",
       "titelIt": "Ordinanza sugli acquisti pubblici (OAPub)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/259/de",
-      "sha": "a7c3ebab87e54371ec02ebe9b58fece8e67853bd69d649c06ac341f48824748e"
+      "sha": "0ae0f3c6a9e46f53cd44a442567b8e38628e146beb0f09346478b558dcd8f344"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2002-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/157",
       "dateDocument": "2001-11-30",
-      "roFundstelle": "AS 2002 157",
+      "roFundstelle": "AS 2002 886",
       "titelDe": "Verordnung über das öffentliche Beschaffungswesen (VoeB)",
       "titelFr": "Ordonnance sur les marchés publics (OMP)",
       "titelIt": "Ordinanza sugli acquisti pubblici (OAPub)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/157/de",
-      "sha": "96f45b874cbe11c391a9c73c100d35ff040f8b0e142e334ac65b5ee370f71ae1"
+      "sha": "5c1913e1ad08e49fb4c4b465834050f1cbd1c86543c1be340df209147328f924"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2002-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/264",
       "dateDocument": "2002-05-15",
-      "roFundstelle": "AS 2002 264",
+      "roFundstelle": "AS 2002 1759",
       "titelDe": "Verordnung über das öffentliche Beschaffungswesen (VoeB)",
       "titelFr": "Ordonnance sur les marchés publics (OMP)",
       "titelIt": "Ordinanza sugli acquisti pubblici (OAPub)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/264/de",
-      "sha": "05207a3f81a0917bc6e225983dce1685f57f2c11038eb5829653bc2c2669be86"
+      "sha": "9535abf86e163c676286d2f592d83b46e8b6f5447dc8085b80120071ce95497e"
     },
     {
       "art": "aenderung",
@@ -125,5 +125,5 @@
       "sha": "20cdee262457b547111c6af6ffe4388236bac7c71a440cc39cfe70ea09456295"
     }
   ],
-  "sha": "d56729af4001f2f2e94b5d0b4a28036d90064420f6c0c3462a334a12ee90cb6c"
+  "sha": "879905487615d74b89a2e782b1cf3fddfbd6eda7e6a610e4f871e35b5275e5d7"
 }

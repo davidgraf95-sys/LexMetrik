@@ -21,6 +21,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-03-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1573"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerische Jugendstrafprozessordnung (Jugendstrafprozessordnung, JStPO)"
@@ -53,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-03-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1573"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerische Jugendstrafprozessordnung (Jugendstrafprozessordnung, JStPO)"
@@ -85,6 +93,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-03-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1573"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerische Jugendstrafprozessordnung (Jugendstrafprozessordnung, JStPO)"
@@ -116,6 +128,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-03-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1573"
       },
       "titleDe": {
         "type": "literal",

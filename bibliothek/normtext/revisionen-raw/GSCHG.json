@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1971-10-08"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom 8. Oktober 1971 über den Schutz der Gewässer gegen Verunreinigung (Gewässerschutzgesetz)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 8 octobre 1971 sur la protection des eaux contre la pollution (Loi sur la protection des eaux)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 8 ottobre 1971 contro l'inquinamento delle acque"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "814.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1972/950_958_1120"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1972-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1971-10-08"
+        "value": "RO 1972 958"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1971-10-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1972 958"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 8. Oktober 1971 über den Schutz der Gewässer gegen Verunreinigung (Gewässerschutzgesetz)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1971-10-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1972 958"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 8. Oktober 1971 über den Schutz der Gewässer gegen Verunreinigung (Gewässerschutzgesetz)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 8 octobre 1971 sur la protection des eaux contre la pollution (Loi sur la protection des eaux)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 8 ottobre 1971 contro l'inquinamento delle acque"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "814.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1972/950_958_1120"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1972-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1971-10-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1972 958"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 8. Oktober 1971 über den Schutz der Gewässer gegen Verunreinigung (Gewässerschutzgesetz)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1991-01-24"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom 24. Januar 1991 über den Schutz der Gewässer (Gewässerschutzgesetz, GSchG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 24 janvier 1991 sur la protection des eaux (LEaux)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 24 gennaio 1991 sulla protezione delle acque (LPAc)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "814.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1992/1860_1860_1860"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1992-11-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1991-01-24"
+        "value": "RO 1992 1860"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1991-01-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1992 1860"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 24. Januar 1991 über den Schutz der Gewässer (Gewässerschutzgesetz, GSchG)"
@@ -245,6 +237,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1991-01-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1992 1860"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 24. Januar 1991 über den Schutz der Gewässer (Gewässerschutzgesetz, GSchG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 24 janvier 1991 sur la protection des eaux (LEaux)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 24 gennaio 1991 sulla protezione delle acque (LPAc)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "814.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1992/1860_1860_1860"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1992-11-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1991-01-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1992 1860"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 24. Januar 1991 über den Schutz der Gewässer (Gewässerschutzgesetz, GSchG)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-10-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 3859"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Schutz der Gewässer (Gewässerschutzgesetz, GSchG)"
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-10-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 3859"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Schutz der Gewässer (Gewässerschutzgesetz, GSchG)"
@@ -341,69 +381,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-10-08"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über den Schutz der Gewässer (Gewässerschutzgesetz, GSchG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur la protection des eaux (LEaux)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulla protezione delle acque (LPAc)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "814.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/656"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-03-24"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Bundesgesetz über den Schutz der Gewässer (Gewässerschutzgesetz, GSchG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur la protection des eaux (LEaux)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulla protezione delle acque (LPAc)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "814.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/656"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-03-24"
+        "value": "RO 2006 3859"
       },
       "titleDe": {
         "type": "literal",
@@ -437,6 +417,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-03-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4287"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über den Schutz der Gewässer (Gewässerschutzgesetz, GSchG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur la protection des eaux (LEaux)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla protezione delle acque (LPAc)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "814.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/656"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-03-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4287"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über den Schutz der Gewässer (Gewässerschutzgesetz, GSchG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur la protection des eaux (LEaux)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla protezione delle acque (LPAc)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "814.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/656"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-03-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4287"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Schutz der Gewässer (Gewässerschutzgesetz, GSchG)"
@@ -468,6 +524,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-12-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4285"
       },
       "titleDe": {
         "type": "literal",
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-12-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4285"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Schutz der Gewässer (Gewässerschutzgesetz, GSchG) (Renaturierung)"
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-12-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4285"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Schutz der Gewässer (Gewässerschutzgesetz, GSchG) (Renaturierung)"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-03-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 2339"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Schutz der Gewässer (Gewässerschutzgesetz, GSchG)"
@@ -597,6 +669,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-03-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 2339"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Schutz der Gewässer (Gewässerschutzgesetz, GSchG)"
@@ -629,6 +705,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-03-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 2339"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Schutz der Gewässer (Gewässerschutzgesetz, GSchG)"
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-03-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 3327"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Schutz der Gewässer (Gewässerschutzgesetz, GSchG)"
@@ -693,6 +777,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-03-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 3327"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Schutz der Gewässer (Gewässerschutzgesetz, GSchG)"
@@ -724,6 +812,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-03-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 3327"
       },
       "titleDe": {
         "type": "literal",
@@ -756,6 +848,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-08-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 3021"
       },
       "titleDe": {
         "type": "literal",
@@ -789,6 +885,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-08-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 3021"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Schutz der Gewässer (Gewässerschutzgesetz, GSchG) (Betrifft nur den französischen Text)"
@@ -820,6 +920,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-08-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 3021"
       },
       "titleDe": {
         "type": "literal",

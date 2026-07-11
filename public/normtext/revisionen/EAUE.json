@@ -1,0 +1,93 @@
+{
+  "erlassKey": "EAUE",
+  "sr": "0.353.1",
+  "abgerufen": "2026-07-11",
+  "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
+  "revisionen": [
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2023-06-28",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2023/348",
+      "dateDocument": "2023-06-28",
+      "roFundstelle": "AS 2023 348",
+      "titelDe": "Europäisches Auslieferungsübereinkommen vom 13. Dezember 1957",
+      "titelFr": "Convention européenne d’extradition du 13 décembre 1957",
+      "titelIt": "Convenzione europea di estradizione del 13 dicembre 1957",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2023/348/de",
+      "sha": "0fcad1d4a5620b8c2b1acf5d582b5a0dbc766668600092329e7a42f930fa6fde"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2016-11-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/0.353.1",
+      "sha": "26c1f3cb19bec395ce9f159d4f184e2159cd46fcaf5acddbc7f0b00e3948dfc0"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2013-05-13",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/346",
+      "dateDocument": "2013-05-13",
+      "roFundstelle": "AS 2013 1481",
+      "titelDe": "Europäisches Auslieferungsübereinkommen vom 13. Dezember 1957",
+      "titelFr": "Convention européenne d'extradition du 13 décembre 1957",
+      "titelIt": "Convenzione europea di estradizione del 13 dicembre 1957",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/346/de",
+      "sha": "105885ed406a6a2889f62228276fb66ca21f6df9c9c788b9d22fb27e1b09db68"
+    },
+    {
+      "art": "sammelerlass-marker",
+      "dateEntryInForce": "2012-09-20",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/0.353.1",
+      "sha": "0ba7cb49cf9ed155ecb1dcaaa323fb2ab482629d5cc8bff5c674d779df3e86ea"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2007-03-09",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/235",
+      "dateDocument": "2007-03-09",
+      "roFundstelle": "AS 2007 1383",
+      "titelDe": "Europäisches Auslieferungsübereinkommen vom 13. Dezember 1957",
+      "titelFr": "Convention européenne d'extradition du 13 décembre 1957",
+      "titelIt": "Convenzione europea di estradizione del 13 dicembre 1957",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/235/de",
+      "sha": "38126d43daffab0d9548a71b59dfc36bdd06e423b47a54e556036c3cdcaa419f"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2004-06-16",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/563",
+      "dateDocument": "2004-06-16",
+      "roFundstelle": "AS 2004 3949",
+      "titelDe": "Europäisches Auslieferungsübereinkommen vom 13. Dezember 1957",
+      "titelFr": "Convention européenne d'extradition du 13 décembre 1957",
+      "titelIt": "Convenzione europea di estradizione del 13 dicembre 1957",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/563/de",
+      "sha": "5c5dbfc074b22c8a5e16c162fe6eadf7a92d01ac19d065b33c11b62ec9411395"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1967-03-20",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/1967/814_854_850",
+      "dateDocument": "1957-12-13",
+      "roFundstelle": "AS 1967 814",
+      "titelDe": "Europäisches Auslieferungsübereinkommen vom 13. Dezember 1957",
+      "titelFr": "Convention européenne d'extradition du 13 décembre 1957",
+      "titelIt": "Convenzione europea di estradizione del 13 dicembre 1957",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1967/814_854_850/de",
+      "sha": "37cbf14d86cc26ac72956c0923b6be08812aad19525a0d6e3b382b0ca350797b"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "1967-03-20",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/812",
+      "dateDocument": "2010-11-18",
+      "roFundstelle": "AS 2010 5753",
+      "titelDe": "Europäisches Auslieferungsübereinkommen (Betrifft nur den italienischen Text)",
+      "titelFr": "Convention européenne d'extradition (Ne concerne que le texte italien)",
+      "titelIt": "Convenzione europea di estradizione",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/812/de",
+      "sha": "84460a244898e5849d8470d32baf7d15e02dcd09c4b29acd4b2780f4bc7bf381"
+    }
+  ],
+  "sha": "f5eaa688599dff5a871352e9a2e47f508ac065f48945961118cf54c0cc1f98d6"
+}

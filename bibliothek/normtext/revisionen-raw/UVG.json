@@ -21,69 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1981-03-20"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom 20. März 1981 über die Unfallversicherung (UVG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 20 mars 1981 sur l'assurance-accidents (LAA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 20 marzo 1981 sull'assicurazione contro gli infortuni (LAINF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1982/1676_1676_1676"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1984-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1981-03-20"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Bundesgesetz vom 20. März 1981 über die Unfallversicherung (UVG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 20 mars 1981 sur l'assurance-accidents (LAA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 20 marzo 1981 sull'assicurazione contro gli infortuni (LAINF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1982/1676_1676_1676"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1984-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1981-03-20"
+        "value": "RO 1982 1676"
       },
       "titleDe": {
         "type": "literal",
@@ -117,6 +57,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1981-03-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1982 1676"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 20. März 1981 über die Unfallversicherung (UVG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 20 mars 1981 sur l'assurance-accidents (LAA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 20 marzo 1981 sull'assicurazione contro gli infortuni (LAINF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1982/1676_1676_1676"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1984-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1981-03-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1982 1676"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 20. März 1981 über die Unfallversicherung (UVG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 20 mars 1981 sur l'assurance-accidents (LAA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 20 marzo 1981 sull'assicurazione contro gli infortuni (LAINF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1982/1676_1676_1676"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1984-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1981-03-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1982 1676"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 20. März 1981 über die Unfallversicherung (UVG)"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-10-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 1321"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Unfallversicherung (UVG)"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-10-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 1321"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Unfallversicherung (UVG)"
@@ -213,69 +237,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-10-09"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Unfallversicherung (UVG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur l'assurance-accidents (LAA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sull'assicurazione contro gli infortuni (LAINF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/464"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-06-23"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Bundesgesetz über die Unfallversicherung (UVG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur l'assurance-accidents (LAA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sull'assicurazione contro gli infortuni (LAINF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/464"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-06-23"
+        "value": "RO 1999 1321"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +273,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2760"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Unfallversicherung (UVG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'assurance-accidents (LAA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'assicurazione contro gli infortuni (LAINF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/464"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-06-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2760"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Unfallversicherung (UVG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'assurance-accidents (LAA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'assicurazione contro gli infortuni (LAINF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/464"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-06-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2760"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Unfallversicherung (UVG)"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-12-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1491"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Unfallversicherung (UVG)"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-12-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1491"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Unfallversicherung (UVG)"
@@ -404,6 +452,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-12-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1491"
       },
       "titleDe": {
         "type": "literal",
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-10-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5259"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Unfallversicherung (UVG)"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-10-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5259"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Unfallversicherung (UVG)"
@@ -500,6 +560,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-10-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5259"
       },
       "titleDe": {
         "type": "literal",
@@ -532,6 +596,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4375"
       },
       "titleDe": {
         "type": "literal",
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4375"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Unfallversicherung (UVG) (Unfallversicherung und Unfallverhütung)"
@@ -596,6 +668,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4375"
       },
       "titleDe": {
         "type": "literal",
@@ -628,6 +704,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4941"
       },
       "titleDe": {
         "type": "literal",
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4941"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Unfallversicherung (UVG) (Organisation und Nebentätigkeiten der SUVA)"
@@ -692,6 +776,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4941"
       },
       "titleDe": {
         "type": "literal",
@@ -724,6 +812,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-04-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 2291"
       },
       "titleDe": {
         "type": "literal",
@@ -757,6 +849,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-04-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 2291"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Verhütung von Unfällen und Berufskrankheiten (Verordnung über die Unfallverhütung, VUV) (Betrifft nur den italienischen Text)"
@@ -788,6 +884,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-04-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 2291"
       },
       "titleDe": {
         "type": "literal",

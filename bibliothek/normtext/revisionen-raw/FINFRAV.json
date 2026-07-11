@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-11-25"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (Finanzmarktinfrastrukturverordnung, FinfraV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les infrastructures des marchés financiers et le comportement sur le marché en matière de négociation de valeurs mobilières et de dérivés (Ordonnance sur l'infrastructure des marchés financiers, OIMF)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulle infrastrutture del mercato finanziario e il comportamento sul mercato nel commercio di valori mobiliari e derivati (Ordinanza sull'infrastruttura finanziaria, OInFi)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "958.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/854"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-11-25"
+        "value": "RO 2015 5413"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-11-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 5413"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (Finanzmarktinfrastrukturverordnung, FinfraV)"
@@ -117,37 +93,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-11-25"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (Finanzmarktinfrastrukturverordnung, FinfraV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les infrastructures des marchés financiers et le comportement sur le marché en matière de négociation de valeurs mobilières et de dérivés (Ordonnance sur l'infrastructure des marchés financiers, OIMF)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulle infrastrutture del mercato finanziario e il comportamento sul mercato nel commercio di valori mobiliari e derivati (Ordinanza sull'infrastruttura finanziaria, OInFi)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "958.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2016/434"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-08-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-06-29"
+        "value": "RO 2015 5413"
       },
       "titleDe": {
         "type": "literal",
@@ -169,17 +117,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2016/434"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/854"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-08-01"
+        "value": "2016-01-01"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-06-29"
+        "value": "2015-11-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 5413"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +165,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-06-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2703"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (Finanzmarktinfrastrukturverordnung, FinfraV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les infrastructures des marchés financiers et le comportement sur le marché en matière de négociation de valeurs mobilières et de dérivés (Ordonnance sur l'infrastructure des marchés financiers, OIMF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulle infrastrutture del mercato finanziario e il comportamento sul mercato nel commercio di valori mobiliari e derivati (Ordinanza sull'infrastruttura finanziaria, OInFi)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "958.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/434"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-06-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2703"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (Finanzmarktinfrastrukturverordnung, FinfraV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les infrastructures des marchés financiers et le comportement sur le marché en matière de négociation de valeurs mobilières et de dérivés (Ordonnance sur l'infrastructure des marchés financiers, OIMF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulle infrastrutture del mercato finanziario e il comportamento sul mercato nel commercio di valori mobiliari e derivati (Ordinanza sull'infrastruttura finanziaria, OInFi)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "958.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/434"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-06-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2703"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (Finanzmarktinfrastrukturverordnung, FinfraV)"
@@ -245,6 +273,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-07-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 3715"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (Finanzmarktinfrastrukturverordnung, FinfraV)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-07-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 3715"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (Finanzmarktinfrastrukturverordnung, FinfraV)"
@@ -308,6 +344,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-07-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 3715"
       },
       "titleDe": {
         "type": "literal",
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-07-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 2995"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (Finanzmarktinfrastrukturverordnung, FinfraV)"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-07-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 2995"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (Finanzmarktinfrastrukturverordnung, FinfraV)"
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-07-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 2995"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (Finanzmarktinfrastrukturverordnung, FinfraV)"
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-09-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3377"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (Finanzmarktinfrastrukturverordnung, FinfraV)"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-09-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3377"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (Finanzmarktinfrastrukturverordnung, FinfraV)"
@@ -501,69 +561,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-09-14"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (Finanzmarktinfrastrukturverordnung, FinfraV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les infrastructures des marchés financiers et le comportement sur le marché en matière de négociation de valeurs mobilières et de dérivés (Ordonnance sur l'infrastructure des marchés financiers, OIMF)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulle infrastrutture del mercato finanziario e il comportamento sul mercato nel commercio di valori mobiliari e derivati (Ordinanza sull'infrastruttura finanziaria, OInFi)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "958.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2019/478"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2019-08-31"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2019-06-28"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (Finanzmarktinfrastrukturverordnung, FinfraV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les infrastructures des marchés financiers et le comportement sur le marché en matière de négociation de valeurs mobilières et de dérivés (Ordonnance sur l'infrastructure des marchés financiers, OIMF)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulle infrastrutture del mercato finanziario e il comportamento sul mercato nel commercio di valori mobiliari e derivati (Ordinanza sull'infrastruttura finanziaria, OInFi)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "958.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2019/478"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2019-08-31"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2019-06-28"
+        "value": "RO 2018 3377"
       },
       "titleDe": {
         "type": "literal",
@@ -597,6 +597,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-06-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2577"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (Finanzmarktinfrastrukturverordnung, FinfraV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les infrastructures des marchés financiers et le comportement sur le marché en matière de négociation de valeurs mobilières et de dérivés (Ordonnance sur l'infrastructure des marchés financiers, OIMF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulle infrastrutture del mercato finanziario e il comportamento sul mercato nel commercio di valori mobiliari e derivati (Ordinanza sull'infrastruttura finanziaria, OInFi)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "958.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2019/478"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-08-31"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-06-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2577"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (Finanzmarktinfrastrukturverordnung, FinfraV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les infrastructures des marchés financiers et le comportement sur le marché en matière de négociation de valeurs mobilières et de dérivés (Ordonnance sur l'infrastructure des marchés financiers, OIMF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulle infrastrutture del mercato finanziario e il comportamento sul mercato nel commercio di valori mobiliari e derivati (Ordinanza sull'infrastruttura finanziaria, OInFi)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "958.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2019/478"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-08-31"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-06-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2577"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (Finanzmarktinfrastrukturverordnung, FinfraV)"
@@ -629,6 +705,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-09-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 3801"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (Finanzmarktinfrastrukturverordnung, FinfraV)"
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-09-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 3801"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (Finanzmarktinfrastrukturverordnung, FinfraV)"
@@ -692,6 +776,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-09-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 3801"
       },
       "titleDe": {
         "type": "literal",

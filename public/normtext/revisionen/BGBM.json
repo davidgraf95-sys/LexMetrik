@@ -1,7 +1,7 @@
 {
   "erlassKey": "BGBM",
   "sr": "943.02",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -27,13 +27,13 @@
       "dateEntryInForce": "2006-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/364",
       "dateDocument": "2005-12-16",
-      "roFundstelle": "AS 2006 364",
+      "roFundstelle": "AS 2006 2363",
       "titelDe": "Bundesgesetz über den Binnenmarkt (Binnenmarktgesetz, BGBM)",
       "titelFr": "Loi fédérale sur le marché intérieur (LMI)",
       "titelIt": "Legge federale sul mercato interno (LMI)",
       "botschaftKey": "BOTSCHAFT-2005-54",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/364/de",
-      "sha": "584f688c97806fa781cce4ecc5efcfe7fa67e264032c676a964be1e26fc4892d"
+      "sha": "c3a6643ed43354e217c6973994cf0134fd2eb460634f94c7dd47ab6fe136f88b"
     },
     {
       "art": "aenderung",
@@ -48,5 +48,5 @@
       "sha": "d9f2eeec455f32a3cc47524f6a3ffbd847ae06a4b7a948c550c12536f9a63975"
     }
   ],
-  "sha": "e5417c0e80a1ab6b2b6644ed168bb00a9f2a5b6bdaa4cb7ee371ea38e53df4ee"
+  "sha": "2f539b653c812bfe10f5af31f69eb433a3da1df4fc744d6c9ec50963228c66e5"
 }

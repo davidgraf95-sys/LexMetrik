@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-07-03"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundespersonalverordnung (BPV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le personnel de la Confédération (OPers)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sul personale federale (OPers)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "172.220.111.3"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2001/319"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-07-03"
+        "value": "RO 2001 2206"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-07-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 2206"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-07-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 2206"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundespersonalverordnung (BPV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le personnel de la Confédération (OPers)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul personale federale (OPers)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.220.111.3"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2001/319"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-07-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 2206"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV)"
@@ -148,6 +164,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-12-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 5011"
       },
       "titleDe": {
         "type": "literal",
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-12-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 5011"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Aufhebung und Änderung von Verordnungen im Zusammenhang mit der Neuregelung des militärischen Personals"
@@ -213,6 +237,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-12-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 5011"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Aufhebung und Änderung von Verordnungen im Zusammenhang mit der Neuregelung des militärischen Personals"
@@ -245,37 +273,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-12-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundespersonalverordnung (BPV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le personnel de la Confédération (OPers)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sul personale federale (OPers)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "172.220.111.3"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2005/2"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-12-22"
+        "value": "RO 2005 3"
       },
       "titleDe": {
         "type": "literal",
@@ -309,37 +309,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-12-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundespersonalverordnung (BPV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le personnel de la Confédération (OPers)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sul personale federale (OPers)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "172.220.111.3"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/157"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-02-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-03-20"
+        "value": "RO 2005 3"
       },
       "titleDe": {
         "type": "literal",
@@ -361,17 +333,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/157"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/2"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-02-01"
+        "value": "2005-01-01"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-03-20"
+        "value": "2004-12-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 3"
       },
       "titleDe": {
         "type": "literal",
@@ -405,6 +381,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 869"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundespersonalverordnung (BPV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le personnel de la Confédération (OPers)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul personale federale (OPers)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.220.111.3"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/157"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-03-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 869"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundespersonalverordnung (BPV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le personnel de la Confédération (OPers)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul personale federale (OPers)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.220.111.3"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/157"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-03-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 869"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV)"
@@ -436,6 +488,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-06-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 2871"
       },
       "titleDe": {
         "type": "literal",
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-06-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 2871"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV)"
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-06-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 2871"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV)"
@@ -533,37 +597,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-01-23"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundespersonalverordnung (BPV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le personnel de la Confédération (OPers)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sul personale federale (OPers)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "172.220.111.3"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/52"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-02-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-01-23"
+        "value": "RO 2007 271"
       },
       "titleDe": {
         "type": "literal",
@@ -597,6 +633,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-01-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 271"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundespersonalverordnung (BPV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le personnel de la Confédération (OPers)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul personale federale (OPers)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.220.111.3"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/52"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-01-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 271"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV)"
@@ -628,6 +704,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-07-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 3431"
       },
       "titleDe": {
         "type": "literal",
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-07-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 3431"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Änderungen des Bundesrechts infolge  des Primatwechsels bei PUBLICA (Betrifft nur den französischen Text)"
@@ -693,6 +777,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-07-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 3431"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Änderungen des Bundesrechts infolge  des Primatwechsels bei PUBLICA (Betrifft nur den französischen Text)"
@@ -725,37 +813,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-11-05"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über Optimierungen im Lohnsystem des Bundespersonals"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'optimisation du système salarial du personnel fédéral"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'ottimizzazione del sistema salariale del personale federale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "172.220.111.3"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2008/785"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-02-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-11-05"
+        "value": "RO 2008 5643"
       },
       "titleDe": {
         "type": "literal",
@@ -789,6 +849,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-11-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5643"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Optimierungen im Lohnsystem des Bundespersonals"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'optimisation du système salarial du personnel fédéral"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'ottimizzazione del sistema salariale del personale federale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.220.111.3"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/785"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-11-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5643"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Optimierungen im Lohnsystem des Bundespersonals"
@@ -821,37 +921,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-12-05"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundespersonalverordnung (BPV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le personnel de la Confédération (OPers)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sul personale federale (OPers)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "172.220.111.3"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2008/861"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-12-05"
+        "value": "RO 2008 6411"
       },
       "titleDe": {
         "type": "literal",
@@ -885,37 +957,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-12-05"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundespersonalverordnung (BPV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le personnel de la Confédération (OPers)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sul personale federale (OPers)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "172.220.111.3"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/184"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-03-06"
+        "value": "RO 2008 6411"
       },
       "titleDe": {
         "type": "literal",
@@ -937,7 +981,7 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/184"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/861"
       },
       "dateForce": {
         "type": "typed-literal",
@@ -947,7 +991,11 @@
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-03-06"
+        "value": "2008-12-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 6411"
       },
       "titleDe": {
         "type": "literal",
@@ -981,6 +1029,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-03-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 1137"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundespersonalverordnung (BPV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le personnel de la Confédération (OPers)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul personale federale (OPers)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.220.111.3"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/184"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-03-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 1137"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundespersonalverordnung (BPV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le personnel de la Confédération (OPers)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul personale federale (OPers)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.220.111.3"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/184"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-03-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 1137"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV)"
@@ -1013,6 +1137,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-11-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 6417"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV)"
@@ -1045,6 +1173,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-11-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 6417"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV)"
@@ -1076,6 +1208,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-11-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 6417"
       },
       "titleDe": {
         "type": "literal",
@@ -1109,37 +1245,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-06-11"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundespersonalverordnung (BPV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le personnel de la Confédération (OPers)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sul personale federale (OPers)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "172.220.111.3"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/353"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-06-11"
+        "value": "RO 2010 2649"
       },
       "titleDe": {
         "type": "literal",
@@ -1173,6 +1281,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-06-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 2649"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundespersonalverordnung (BPV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le personnel de la Confédération (OPers)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul personale federale (OPers)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.220.111.3"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/353"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-06-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 2649"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV)"
@@ -1205,6 +1353,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-11-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5793"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV)"
@@ -1237,6 +1389,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-11-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5793"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV)"
@@ -1268,6 +1424,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-11-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5793"
       },
       "titleDe": {
         "type": "literal",
@@ -1301,37 +1461,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-08-15"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundespersonalverordnung (BPV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le personnel de la Confédération (OPers)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sul personale federale (OPers)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "172.220.111.3"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/525"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-09-15"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-08-15"
+        "value": "RO 2012 4483"
       },
       "titleDe": {
         "type": "literal",
@@ -1365,6 +1497,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-08-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 4483"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundespersonalverordnung (BPV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le personnel de la Confédération (OPers)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul personale federale (OPers)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.220.111.3"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/525"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-09-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-08-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 4483"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV)"
@@ -1397,6 +1569,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-05-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1515"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV)"
@@ -1429,6 +1605,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-05-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1515"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV)"
@@ -1460,6 +1640,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-05-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1515"
       },
       "titleDe": {
         "type": "literal",
@@ -1493,37 +1677,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-09-13"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundespersonalverordnung (BPV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le personnel de la Confédération (OPers)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sul personale federale (OPers)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "172.220.111.3"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2013/614"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-09-13"
+        "value": "RO 2013 3209"
       },
       "titleDe": {
         "type": "literal",
@@ -1557,37 +1713,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-09-13"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundespersonalverordnung (BPV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le personnel de la Confédération (OPers)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sul personale federale (OPers)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "172.220.111.3"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2013/780"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-11-20"
+        "value": "RO 2013 3209"
       },
       "titleDe": {
         "type": "literal",
@@ -1609,7 +1737,7 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2013/780"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/614"
       },
       "dateForce": {
         "type": "typed-literal",
@@ -1619,7 +1747,11 @@
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-11-20"
+        "value": "2013-09-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 3209"
       },
       "titleDe": {
         "type": "literal",
@@ -1653,6 +1785,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-11-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4397"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundespersonalverordnung (BPV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le personnel de la Confédération (OPers)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul personale federale (OPers)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.220.111.3"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/780"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-11-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4397"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundespersonalverordnung (BPV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le personnel de la Confédération (OPers)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul personale federale (OPers)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.220.111.3"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/780"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-11-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4397"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV)"
@@ -1685,6 +1893,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-03-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 717"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV) (Betrifft nur den französischen Text)"
@@ -1717,6 +1929,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-03-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 717"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV) (Betrifft nur den französischen Text)"
@@ -1748,6 +1964,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-03-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 717"
       },
       "titleDe": {
         "type": "literal",
@@ -1781,37 +2001,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-06-20"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundespersonalverordnung (BPV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le personnel de la Confédération (OPers)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sul personale federale (OPers)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "172.220.111.3"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2014/367"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-08-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-06-20"
+        "value": "RO 2014 2171"
       },
       "titleDe": {
         "type": "literal",
@@ -1845,6 +2037,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-06-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 2171"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundespersonalverordnung (BPV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le personnel de la Confédération (OPers)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul personale federale (OPers)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.220.111.3"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/367"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-06-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 2171"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV)"
@@ -1877,6 +2109,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-10-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 3403"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV)"
@@ -1909,6 +2145,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-10-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 3403"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV)"
@@ -1940,6 +2180,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-10-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 3403"
       },
       "titleDe": {
         "type": "literal",
@@ -1973,37 +2217,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-11-28"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundespersonalverordnung (BPV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le personnel de la Confédération (OPers)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sul personale federale (OPers)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "172.220.111.3"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2014/765"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-11-28"
+        "value": "RO 2014 4567"
       },
       "titleDe": {
         "type": "literal",
@@ -2037,6 +2253,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-11-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 4567"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundespersonalverordnung (BPV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le personnel de la Confédération (OPers)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul personale federale (OPers)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.220.111.3"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/765"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-11-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 4567"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV)"
@@ -2069,6 +2325,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2243"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV)"
@@ -2101,6 +2361,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2243"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV)"
@@ -2132,6 +2396,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2243"
       },
       "titleDe": {
         "type": "literal",
@@ -2165,37 +2433,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-08-04"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundespersonalverordnung (BPV) (Betrifft nur den italienischen Text)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le personnel de la Confédération (OPers) (Ne concerne que le texte italien)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sul personale federale (OPers)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "172.220.111.3"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/487"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-08-04"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-08-04"
+        "value": "RO 2015 2579"
       },
       "titleDe": {
         "type": "literal",
@@ -2229,6 +2469,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-08-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2579"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundespersonalverordnung (BPV) (Betrifft nur den italienischen Text)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le personnel de la Confédération (OPers) (Ne concerne que le texte italien)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul personale federale (OPers)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.220.111.3"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/487"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-08-04"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-08-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2579"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV) (Betrifft nur den italienischen Text)"
@@ -2261,37 +2541,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-11"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundespersonalverordnung (BPV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le personnel de la Confédération (OPers)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sul personale federale (OPers)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "172.220.111.3"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/589"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-09-11"
+        "value": "RO 2015 3155"
       },
       "titleDe": {
         "type": "literal",
@@ -2325,6 +2577,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 3155"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundespersonalverordnung (BPV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le personnel de la Confédération (OPers)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul personale federale (OPers)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.220.111.3"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/589"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-09-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 3155"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV)"
@@ -2356,6 +2648,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-12-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 5919"
       },
       "titleDe": {
         "type": "literal",
@@ -2389,6 +2685,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-12-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 5919"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV) (Betrifft nur den französischen Text)"
@@ -2421,6 +2721,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-12-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 5919"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV) (Betrifft nur den französischen Text)"
@@ -2453,37 +2757,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-10-12"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundespersonalverordnung (BPV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le personnel de la Confédération (OPers)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sul personale federale (OPers)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "172.220.111.3"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2016/611"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-12-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-10-12"
+        "value": "RO 2016 3637"
       },
       "titleDe": {
         "type": "literal",
@@ -2517,6 +2793,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-10-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 3637"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundespersonalverordnung (BPV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le personnel de la Confédération (OPers)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul personale federale (OPers)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.220.111.3"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/611"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-12-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-10-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 3637"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV)"
@@ -2548,6 +2864,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-12-02"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4507"
       },
       "titleDe": {
         "type": "literal",
@@ -2581,6 +2901,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-12-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4507"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung"
@@ -2613,6 +2937,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-12-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4507"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung"
@@ -2645,37 +2973,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-11-15"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundespersonalverordnung (BPV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le personnel de la Confédération (OPers)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sul personale federale (OPers)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "172.220.111.3"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2017/689"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-11-15"
+        "value": "RO 2017 6209"
       },
       "titleDe": {
         "type": "literal",
@@ -2709,37 +3009,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-11-15"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundespersonalverordnung (BPV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le personnel de la Confédération (OPers)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sul personale federale (OPers)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "172.220.111.3"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2017/753"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-11-22"
+        "value": "RO 2017 6209"
       },
       "titleDe": {
         "type": "literal",
@@ -2761,17 +3033,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2017/753"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2017/689"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-01-01"
+        "value": "2018-07-01"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-11-22"
+        "value": "2017-11-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6209"
       },
       "titleDe": {
         "type": "literal",
@@ -2805,6 +3081,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-11-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6737"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundespersonalverordnung (BPV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le personnel de la Confédération (OPers)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul personale federale (OPers)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.220.111.3"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2017/753"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-11-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6737"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundespersonalverordnung (BPV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le personnel de la Confédération (OPers)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul personale federale (OPers)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.220.111.3"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2017/753"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-11-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6737"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV)"
@@ -2837,6 +3189,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-10-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 4009"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV)"
@@ -2869,6 +3225,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-10-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 4009"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV)"
@@ -2900,6 +3260,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-10-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 4009"
       },
       "titleDe": {
         "type": "literal",
@@ -2933,6 +3297,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-12-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 747"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV)"
@@ -2965,6 +3333,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-12-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 747"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV)"
@@ -2997,69 +3369,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-12-08"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundespersonalverordnung (BPV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le personnel de la Confédération (OPers)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sul personale federale (OPers)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "172.220.111.3"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2019/693"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2020-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2019-11-13"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Bundespersonalverordnung (BPV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le personnel de la Confédération (OPers)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sul personale federale (OPers)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "172.220.111.3"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2019/693"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2020-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2019-11-13"
+        "value": "RO 2018 747"
       },
       "titleDe": {
         "type": "literal",
@@ -3093,6 +3405,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-11-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 3803"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundespersonalverordnung (BPV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le personnel de la Confédération (OPers)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul personale federale (OPers)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.220.111.3"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2019/693"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-11-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 3803"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundespersonalverordnung (BPV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le personnel de la Confédération (OPers)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul personale federale (OPers)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.220.111.3"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2019/693"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-11-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 3803"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV)"
@@ -3125,6 +3513,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-11-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 5395"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV)"
@@ -3157,6 +3549,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-11-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 5395"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalverordnung (BPV)"
@@ -3188,6 +3584,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-11-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 5395"
       },
       "titleDe": {
         "type": "literal",

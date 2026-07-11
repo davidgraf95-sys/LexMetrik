@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1970-12-18"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom 18. Dezember 1970 über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemiengesetz)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 18 décembre 1970 sur la lutte contre les maladies transmissibles de l'homme (Loi sur les épidémies)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 18 dicembre 1970 per la lotta contro le malattie trasmissibili dell'uomo (Legge sulle epidemie)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "818.101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1974/1071_1071_1071"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1974-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1970-12-18"
+        "value": "RO 1974 1071"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1970-12-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1974 1071"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 18. Dezember 1970 über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemiengesetz)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1970-12-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1974 1071"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 18. Dezember 1970 über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemiengesetz)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 18 décembre 1970 sur la lutte contre les maladies transmissibles de l'homme (Loi sur les épidémies)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 18 dicembre 1970 per la lotta contro le malattie trasmissibili dell'uomo (Legge sulle epidemie)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "818.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1974/1071_1071_1071"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1974-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1970-12-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1974 1071"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 18. Dezember 1970 über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemiengesetz)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-10-06"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Epidemiengesetz (Versorgung der Bevölkerung mit Heilmitteln)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi sur les épidémies (Approvisionnement de la population en produits thérapeutiques)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge sulle epidemie (Approvvigionamento della popolazione con agenti terapeutici)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "818.101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/608"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-10-07"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-10-06"
+        "value": "RO 2006 4137"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-10-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4137"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Epidemiengesetz (Versorgung der Bevölkerung mit Heilmitteln)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi sur les épidémies (Approvisionnement de la population en produits thérapeutiques)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge sulle epidemie (Approvvigionamento della popolazione con agenti terapeutici)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "818.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/608"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-10-07"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-10-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4137"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Epidemiengesetz (Versorgung der Bevölkerung mit Heilmitteln)"
@@ -245,6 +273,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 7281"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Epidemiengesetz (Versorgung der Bevölkerung mit Heilmitteln)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 7281"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Epidemiengesetz (Versorgung der Bevölkerung mit Heilmitteln)"
@@ -308,6 +344,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 7281"
       },
       "titleDe": {
         "type": "literal",
@@ -340,6 +380,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-09-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1435"
       },
       "titleDe": {
         "type": "literal",
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-09-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1435"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemiengesetz, EpG)"
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-09-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1435"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemiengesetz, EpG)"
@@ -436,6 +488,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-09-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1435"
       },
       "titleDe": {
         "type": "literal",
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-06-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2191"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemiengesetz, EpG)"
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-06-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2191"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemiengesetz, EpG)"
@@ -533,69 +597,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-06-19"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemiengesetz, EpG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur la lutte contre les maladies transmissibles de l'homme (Loi sur les épidémies, LEp)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulla lotta contro le malattie trasmissibili dell'essere umano (Legge sulle epidemie, LEp)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "818.101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2020/492"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2020-06-25"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2020-06-30"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Bundesgesetz über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemiengesetz, EpG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur la lutte contre les maladies transmissibles de l'homme (Loi sur les épidémies, LEp)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulla lotta contro le malattie trasmissibili dell'essere umano (Legge sulle epidemie, LEp)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "818.101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2020/492"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2020-06-25"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2020-06-30"
+        "value": "RO 2020 2191"
       },
       "titleDe": {
         "type": "literal",
@@ -629,6 +633,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-06-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2727"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemiengesetz, EpG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur la lutte contre les maladies transmissibles de l'homme (Loi sur les épidémies, LEp)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla lotta contro le malattie trasmissibili dell'essere umano (Legge sulle epidemie, LEp)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "818.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2020/492"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-06-25"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-06-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2727"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemiengesetz, EpG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur la lutte contre les maladies transmissibles de l'homme (Loi sur les épidémies, LEp)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla lotta contro le malattie trasmissibili dell'essere umano (Legge sulle epidemie, LEp)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "818.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2020/492"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-06-25"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-06-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2727"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemiengesetz, EpG)"
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1947-04-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 63 358"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesratsbeschluss über die Anwendung des BG betreffend Massnahmen gegen gemeingefährliche Epidemien auf andere übertragbare Krankheiten "
@@ -693,6 +777,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1947-04-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 63 358"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesratsbeschluss über die Anwendung des BG betreffend Massnahmen gegen gemeingefährliche Epidemien auf andere übertragbare Krankheiten "
@@ -725,6 +813,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1947-04-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 63 358"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesratsbeschluss über die Anwendung des BG betreffend Massnahmen gegen gemeingefährliche Epidemien auf andere übertragbare Krankheiten "
@@ -756,6 +848,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1947-04-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 63 358"
       },
       "titleDe": {
         "type": "literal",

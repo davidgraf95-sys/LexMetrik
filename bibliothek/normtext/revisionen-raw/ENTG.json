@@ -21,6 +21,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-06-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 4085"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Enteignung (EntG)"
@@ -53,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-06-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 4085"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Enteignung (EntG)"
@@ -85,6 +93,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-06-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 4085"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Enteignung (EntG)"
@@ -117,6 +129,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1930-06-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 47 701"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 20. Juni 1930 über die Enteignung (EntG)"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1930-06-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 47 701"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 20. Juni 1930 über die Enteignung (EntG)"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1930-06-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 47 701"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 20. Juni 1930 über die Enteignung (EntG)"
@@ -212,6 +236,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1930-06-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 47 701"
       },
       "titleDe": {
         "type": "literal",

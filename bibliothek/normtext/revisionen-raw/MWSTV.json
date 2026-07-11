@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1973-03-21"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom 21. März 1973 über die Erhöhung der Warenumsatzsteuer und der Wehrsteuer und den Ausgleich der Folgen der kalten Progression"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 21 mars 1973 concernant l'augmentation de l'impôt sur le chiffre d'affaires et de l'impôt pour la défense nationale et compensation des effets de la progression à froid"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 21 marzo 1973 concernente l'aumento delle imposte sulla cifra d'affari e per la difesa nazionale e la compensazione degli effetti della progressione a freddo"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "641.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1973/1058_1058_1056"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1973-07-04"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1973-03-21"
+        "value": "RO 1973 1058"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1973-03-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1973 1058"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 21. März 1973 über die Erhöhung der Warenumsatzsteuer und der Wehrsteuer und den Ausgleich der Folgen der kalten Progression"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1973-03-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1973 1058"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 21. März 1973 über die Erhöhung der Warenumsatzsteuer und der Wehrsteuer und den Ausgleich der Folgen der kalten Progression"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 21 mars 1973 concernant l'augmentation de l'impôt sur le chiffre d'affaires et de l'impôt pour la défense nationale et compensation des effets de la progression à froid"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 21 marzo 1973 concernente l'aumento delle imposte sulla cifra d'affari e per la difesa nazionale e la compensazione degli effetti della progressione a freddo"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "641.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1973/1058_1058_1056"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1973-07-04"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1973-03-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1973 1058"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 21. März 1973 über die Erhöhung der Warenumsatzsteuer und der Wehrsteuer und den Ausgleich der Folgen der kalten Progression"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1994-06-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 22. Juni 1994 über die Mehrwertsteuer (MWSTV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 22 juin 1994 régissant la taxe sur la valeur ajoutée (OTVA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 22 giugno 1994 concernente l'imposta sul valore aggiunto (OIVA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "641.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1994/1464_1464_1464"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1995-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1994-06-22"
+        "value": "RO 1994 1464"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1994-06-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1994 1464"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 22. Juni 1994 über die Mehrwertsteuer (MWSTV)"
@@ -245,6 +237,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1994-06-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1994 1464"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 22. Juni 1994 über die Mehrwertsteuer (MWSTV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 22 juin 1994 régissant la taxe sur la valeur ajoutée (OTVA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 22 giugno 1994 concernente l'imposta sul valore aggiunto (OIVA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "641.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1994/1464_1464_1464"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1995-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1994-06-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1994 1464"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 22. Juni 1994 über die Mehrwertsteuer (MWSTV)"
@@ -277,37 +309,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-03-29"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung zum Bundesgesetz über die Mehrwertsteuer (MWSTGV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative à la loi fédérale régissant la taxe sur la valeur ajoutée (OLTVA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza relativa alla legge federale concernente l'imposta sul valore aggiunto (OLIVA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "641.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/213"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-03-29"
+        "value": "RO 2000 1347"
       },
       "titleDe": {
         "type": "literal",
@@ -341,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-03-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1347"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über die Mehrwertsteuer (MWSTGV)"
@@ -373,6 +381,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-03-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1347"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung zum Bundesgesetz über die Mehrwertsteuer (MWSTGV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative à la loi fédérale régissant la taxe sur la valeur ajoutée (OLTVA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza relativa alla legge federale concernente l'imposta sul valore aggiunto (OLIVA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "641.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/213"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-03-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1347"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über die Mehrwertsteuer (MWSTGV)"
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-11-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 4353"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über die Mehrwertsteuer (MWSTGV)"
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-11-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 4353"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über die Mehrwertsteuer (MWSTGV)"
@@ -468,6 +524,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-11-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 4353"
       },
       "titleDe": {
         "type": "literal",
@@ -501,37 +561,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-12-10"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung zum Bundesgesetz über die Mehrwertsteuer (MWSTGV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative à la loi fédérale régissant la taxe sur la valeur ajoutée (OLTVA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza relativa alla legge federale concernente l'imposta sul valore aggiunto (OLIVA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "641.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/820"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-12-10"
+        "value": "RO 2004 5387"
       },
       "titleDe": {
         "type": "literal",
@@ -565,6 +597,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-12-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 5387"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung zum Bundesgesetz über die Mehrwertsteuer (MWSTGV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative à la loi fédérale régissant la taxe sur la valeur ajoutée (OLTVA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza relativa alla legge federale concernente l'imposta sul valore aggiunto (OLIVA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "641.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/820"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-12-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 5387"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über die Mehrwertsteuer (MWSTGV)"
@@ -597,37 +669,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-05-24"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung zum Bundesgesetz über die Mehrwertsteuer (MWSTGV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative à la loi sur la TVA (OLTVA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza relativa alla legge federale concernente l'imposta sul valore aggiunto (OLIVA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "641.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/360"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-05-24"
+        "value": "RO 2006 2353"
       },
       "titleDe": {
         "type": "literal",
@@ -661,6 +705,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-05-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 2353"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung zum Bundesgesetz über die Mehrwertsteuer (MWSTGV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative à la loi sur la TVA (OLTVA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza relativa alla legge federale concernente l'imposta sul valore aggiunto (OLIVA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "641.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/360"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-05-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 2353"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über die Mehrwertsteuer (MWSTGV)"
@@ -693,37 +777,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-11-27"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Mehrwertsteuerverordnung (MWSTV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance régissant la taxe sur la valeur ajoutée (OTVA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'imposta sul valore aggiunto (Ordinanza sull'IVA, OIVA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "641.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/828"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-11-27"
+        "value": "RO 2009 6743"
       },
       "titleDe": {
         "type": "literal",
@@ -757,6 +813,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-11-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 6743"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Mehrwertsteuerverordnung (MWSTV)"
@@ -789,37 +849,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-11-27"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Mehrwertsteuerverordnung (MWSTV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance régissant la taxe sur la valeur ajoutée (OTVA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'imposta sul valore aggiunto (Ordinanza sull'IVA, OIVA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "641.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/371"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-06-18"
+        "value": "RO 2009 6743"
       },
       "titleDe": {
         "type": "literal",
@@ -841,7 +873,7 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/371"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/828"
       },
       "dateForce": {
         "type": "typed-literal",
@@ -851,7 +883,11 @@
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-06-18"
+        "value": "2009-11-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 6743"
       },
       "titleDe": {
         "type": "literal",
@@ -885,6 +921,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-06-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 2833"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Mehrwertsteuerverordnung (MWSTV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance régissant la taxe sur la valeur ajoutée (OTVA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'imposta sul valore aggiunto (Ordinanza sull'IVA, OIVA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "641.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/371"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-06-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 2833"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Mehrwertsteuerverordnung (MWSTV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance régissant la taxe sur la valeur ajoutée (OTVA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'imposta sul valore aggiunto (Ordinanza sull'IVA, OIVA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "641.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/371"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-06-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 2833"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Mehrwertsteuerverordnung (MWSTV)"
@@ -917,6 +1029,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-10-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4739"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Mehrwertsteuerverordnung (MWSTV)"
@@ -949,6 +1065,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-10-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4739"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Mehrwertsteuerverordnung (MWSTV)"
@@ -980,6 +1100,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-10-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4739"
       },
       "titleDe": {
         "type": "literal",
@@ -1013,37 +1137,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-12-28"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Mehrwertsteuerverordnung (MWSTV) (Betrifft nur den italienischen Text)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance régissant la taxe sur la valeur ajoutée (OTVA) (Ne concerne que le texte italien)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'imposta sul valore aggiunto (Ordinanza sull'IVA, OIVA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "641.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/910"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-12-28"
+        "value": "RO 2011 6545"
       },
       "titleDe": {
         "type": "literal",
@@ -1077,6 +1173,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-12-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 6545"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Mehrwertsteuerverordnung (MWSTV) (Betrifft nur den italienischen Text)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance régissant la taxe sur la valeur ajoutée (OTVA) (Ne concerne que le texte italien)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'imposta sul valore aggiunto (Ordinanza sull'IVA, OIVA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "641.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/910"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-12-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 6545"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Mehrwertsteuerverordnung (MWSTV) (Betrifft nur den italienischen Text)"
@@ -1109,37 +1245,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-10-30"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Mehrwertsteuerverordnung (MWSTV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance régissant la taxe sur la valeur ajoutée (OTVA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'imposta sul valore aggiunto (Ordinanza sull'IVA, OIVA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "641.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2013/704"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-10-30"
+        "value": "RO 2013 3839"
       },
       "titleDe": {
         "type": "literal",
@@ -1173,6 +1281,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-10-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 3839"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Mehrwertsteuerverordnung (MWSTV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance régissant la taxe sur la valeur ajoutée (OTVA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'imposta sul valore aggiunto (Ordinanza sull'IVA, OIVA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "641.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/704"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-10-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 3839"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Mehrwertsteuerverordnung (MWSTV)"
@@ -1204,6 +1352,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-11-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 3847"
       },
       "titleDe": {
         "type": "literal",
@@ -1237,6 +1389,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-11-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 3847"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Mehrwertsteuerverordnung (MWSTV)"
@@ -1269,6 +1425,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-11-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 3847"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Mehrwertsteuerverordnung (MWSTV)"
@@ -1301,6 +1461,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-10-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6307"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Mehrwertsteuerverordnung (MWSTV)"
@@ -1333,6 +1497,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-10-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6307"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Mehrwertsteuerverordnung (MWSTV)"
@@ -1365,6 +1533,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-10-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6307"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Mehrwertsteuerverordnung (MWSTV)"
@@ -1396,6 +1568,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-12-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 7263"
       },
       "titleDe": {
         "type": "literal",
@@ -1429,6 +1605,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-12-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 7263"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Mehrwertsteuerverordnung (MWSTV) (Betrifft nur den französischen Text)"
@@ -1461,6 +1641,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-12-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 7263"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Mehrwertsteuerverordnung (MWSTV) (Betrifft nur den französischen Text)"
@@ -1493,6 +1677,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-08-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3143"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Mehrwertsteuerverordnung (MWSTV)"
@@ -1525,6 +1713,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-08-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3143"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Mehrwertsteuerverordnung (MWSTV)"
@@ -1557,6 +1749,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-08-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3143"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Mehrwertsteuerverordnung (MWSTV)"
@@ -1588,6 +1784,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-01-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 521"
       },
       "titleDe": {
         "type": "literal",
@@ -1621,6 +1821,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-01-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 521"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Mehrwertsteuerverordnung (MWSTV). (Betrifft nur den italienischen Text)"
@@ -1653,6 +1857,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-01-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 521"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Mehrwertsteuerverordnung (MWSTV). (Betrifft nur den italienischen Text)"
@@ -1685,6 +1893,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-03-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 911"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Mehrwertsteuerverordnung (MWSTV)"
@@ -1717,6 +1929,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-03-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 911"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Mehrwertsteuerverordnung (MWSTV)"
@@ -1748,6 +1964,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-03-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 911"
       },
       "titleDe": {
         "type": "literal",

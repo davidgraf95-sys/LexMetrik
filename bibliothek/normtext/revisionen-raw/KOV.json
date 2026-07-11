@@ -21,6 +21,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1911-07-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 27 749"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 13. Juli 1911 über die Geschäftsführung der Konkursämter (KOV)"
@@ -53,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1911-07-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 27 749"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 13. Juli 1911 über die Geschäftsführung der Konkursämter (KOV)"
@@ -85,6 +93,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1911-07-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 27 749"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 13. Juli 1911 über die Geschäftsführung der Konkursämter (KOV)"
@@ -116,6 +128,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1911-07-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 27 749"
       },
       "titleDe": {
         "type": "literal",

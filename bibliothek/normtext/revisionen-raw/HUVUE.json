@@ -1,0 +1,600 @@
+{
+  "sr": "0.211.213.02",
+  "korpusStand": "2016-09-15",
+  "bBindings": [
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.211.213.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1976/1559_1559_1559"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1976-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1973-10-02"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1976 1559"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 2. Oktober 1973 über die Anerkennung und Vollstreckung von Unterhaltsentscheidungen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 2 octobre 1973 concernant la reconnaissance et l'exécution de décisions relatives aux obligations alimentaires"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 2 ottobre 1973 concernente il riconoscimento e l'esecuzione delle decisioni in materia di obbligazioni alimentari"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.211.213.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1976/1559_1559_1559"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1976-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1973-10-02"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1976 1559"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 2. Oktober 1973 über die Anerkennung und Vollstreckung von Unterhaltsentscheidungen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 2 octobre 1973 concernant la reconnaissance et l'exécution de décisions relatives aux obligations alimentaires"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 2 ottobre 1973 concernente il riconoscimento e l'esecuzione delle decisioni in materia di obbligazioni alimentari"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.211.213.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1976/1559_1559_1559"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1976-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1973-10-02"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1976 1559"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 2. Oktober 1973 über die Anerkennung und Vollstreckung von Unterhaltsentscheidungen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 2 octobre 1973 concernant la reconnaissance et l'exécution de décisions relatives aux obligations alimentaires"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 2 ottobre 1973 concernente il riconoscimento e l'esecuzione delle decisioni in materia di obbligazioni alimentari"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.211.213.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1976/1559_1559_1559"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1976-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1973-10-02"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1976 1559"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 2. Oktober 1973 über die Anerkennung und Vollstreckung von Unterhaltsentscheidungen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 2 octobre 1973 concernant la reconnaissance et l'exécution de décisions relatives aux obligations alimentaires"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 2 ottobre 1973 concernente il riconoscimento e l'esecuzione delle decisioni in materia di obbligazioni alimentari"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.211.213.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/116"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-10-05"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-10-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 1001"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 2. Oktober 1973 über die Anerkennung und Vollstreckung von Unterhaltsentscheidungen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 2 octobre 1973 concernant la reconnaissance et l'exécution de décisions relatives aux obligations alimentaires"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 2 ottobre 1973 concernente il riconoscimento e l'esecuzione delle decisioni in materia di obbligazioni alimentari"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.211.213.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/116"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-10-05"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-10-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 1001"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 2. Oktober 1973 über die Anerkennung und Vollstreckung von Unterhaltsentscheidungen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 2 octobre 1973 concernant la reconnaissance et l'exécution de décisions relatives aux obligations alimentaires"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 2 ottobre 1973 concernente il riconoscimento e l'esecuzione delle decisioni in materia di obbligazioni alimentari"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.211.213.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/116"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-10-05"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-10-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 1001"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 2. Oktober 1973 über die Anerkennung und Vollstreckung von Unterhaltsentscheidungen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 2 octobre 1973 concernant la reconnaissance et l'exécution de décisions relatives aux obligations alimentaires"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 2 ottobre 1973 concernente il riconoscimento e l'esecuzione delle decisioni in materia di obbligazioni alimentari"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.211.213.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/500"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-06-11"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-06-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 3743"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 2. Oktober 1973 über die Anerkennung und Vollstreckung von Unterhaltsentscheidungen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 2 octobre 1973 concernant la reconnaissance et l'exécution de décisions relatives aux obligations alimentaires"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 2 ottobre 1973 concernente il riconoscimento e l'esecuzione delle decisioni in materia di obbligazioni alimentari"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.211.213.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/500"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-06-11"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-06-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 3743"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 2. Oktober 1973 über die Anerkennung und Vollstreckung von Unterhaltsentscheidungen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 2 octobre 1973 concernant la reconnaissance et l'exécution de décisions relatives aux obligations alimentaires"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 2 ottobre 1973 concernente il riconoscimento e l'esecuzione delle decisioni in materia di obbligazioni alimentari"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.211.213.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/500"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-06-11"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-06-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 3743"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 2. Oktober 1973 über die Anerkennung und Vollstreckung von Unterhaltsentscheidungen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 2 octobre 1973 concernant la reconnaissance et l'exécution de décisions relatives aux obligations alimentaires"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 2 ottobre 1973 concernente il riconoscimento e l'esecuzione delle decisioni in materia di obbligazioni alimentari"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.211.213.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/74"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-01-28"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-01-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 449"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 2. Oktober 1973 über die Anerkennung und Vollstreckung von Unterhaltsentscheidungen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 2 octobre 1973 concernant la reconnaissance et l'exécution de décisions relatives aux obligations alimentaires"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 2 ottobre 1973 concernente il riconoscimento e l'esecuzione delle decisioni in materia di obbligazioni alimentari"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.211.213.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/74"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-01-28"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-01-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 449"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 2. Oktober 1973 über die Anerkennung und Vollstreckung von Unterhaltsentscheidungen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 2 octobre 1973 concernant la reconnaissance et l'exécution de décisions relatives aux obligations alimentaires"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 2 ottobre 1973 concernente il riconoscimento e l'esecuzione delle decisioni in materia di obbligazioni alimentari"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.211.213.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/74"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-01-28"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-01-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 449"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 2. Oktober 1973 über die Anerkennung und Vollstreckung von Unterhaltsentscheidungen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 2 octobre 1973 concernant la reconnaissance et l'exécution de décisions relatives aux obligations alimentaires"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 2 ottobre 1973 concernente il riconoscimento e l'esecuzione delle decisioni in materia di obbligazioni alimentari"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.211.213.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/549"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-09-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-09-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 3249"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 2. Oktober 1973 über die Anerkennung und Vollstreckung von Unterhaltsentscheidungen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 2 octobre 1973 concernant la reconnaissance et l'exécution de décisions relatives aux obligations alimentaires"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 2 ottobre 1973 concernente il riconoscimento e l'esecuzione delle decisioni in materia di obbligazioni alimentari"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.211.213.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/549"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-09-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-09-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 3249"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 2. Oktober 1973 über die Anerkennung und Vollstreckung von Unterhaltsentscheidungen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 2 octobre 1973 concernant la reconnaissance et l'exécution de décisions relatives aux obligations alimentaires"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 2 ottobre 1973 concernente il riconoscimento e l'esecuzione delle decisioni in materia di obbligazioni alimentari"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.211.213.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/549"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-09-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-09-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 3249"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 2. Oktober 1973 über die Anerkennung und Vollstreckung von Unterhaltsentscheidungen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 2 octobre 1973 concernant la reconnaissance et l'exécution de décisions relatives aux obligations alimentaires"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 2 ottobre 1973 concernente il riconoscimento e l'esecuzione delle decisioni in materia di obbligazioni alimentari"
+      }
+    }
+  ],
+  "aStaende": [
+    "1976-08-01",
+    "1977-09-01",
+    "1979-10-15",
+    "1980-05-01",
+    "1981-06-01",
+    "1982-03-15",
+    "1983-11-01",
+    "1985-05-01",
+    "1987-07-01",
+    "1988-12-01",
+    "1993-06-01",
+    "1994-04-20",
+    "2004-10-05",
+    "2008-06-11",
+    "2014-01-28",
+    "2016-09-15"
+  ]
+}

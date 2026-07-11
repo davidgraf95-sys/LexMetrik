@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1965-10-13"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom 13. Oktober 1965 über die Verrechnungssteuer (Verrechnungssteuergesetz, VStG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 13 octobre 1965 sur l'impôt anticipé (LIA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 13 ottobre 1965 su l'imposta preventiva (LIP)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "642.21"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1966/371_385_384"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1967-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1965-10-13"
+        "value": "RO 1966 385"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1965-10-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1966 385"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 13. Oktober 1965 über die Verrechnungssteuer (Verrechnungssteuergesetz, VStG)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1965-10-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1966 385"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 13. Oktober 1965 über die Verrechnungssteuer (Verrechnungssteuergesetz, VStG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 13 octobre 1965 sur l'impôt anticipé (LIA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 13 ottobre 1965 su l'imposta preventiva (LIP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "642.21"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1966/371_385_384"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1967-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1965-10-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1966 385"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 13. Oktober 1965 über die Verrechnungssteuer (Verrechnungssteuergesetz, VStG)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-23"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Verrechnungssteuer (VStG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur l'impôt anticipé (LIA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sull'imposta preventiva (LIP)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "642.21"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/458"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-06-23"
+        "value": "RO 2000 2741"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2741"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Verrechnungssteuer (VStG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'impôt anticipé (LIA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'imposta preventiva (LIP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "642.21"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/458"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-06-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2741"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Verrechnungssteuer (VStG)"
@@ -245,6 +273,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 5981"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Verrechnungssteuer (VStG)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 5981"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Verrechnungssteuer (VStG)"
@@ -308,6 +344,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 5981"
       },
       "titleDe": {
         "type": "literal",
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-03-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 3451"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Verrechnungssteuer (Verrechnungssteuergesetz, VStG)"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-03-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 3451"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Verrechnungssteuer (Verrechnungssteuergesetz, VStG)"
@@ -405,69 +453,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-03-18"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Verrechnungssteuer (Verrechnungssteuergesetz, VStG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur l'impôt anticipé (LIA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sull'imposta preventiva (LIP)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "642.21"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2017/83"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-02-15"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-09-30"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Bundesgesetz über die Verrechnungssteuer (Verrechnungssteuergesetz, VStG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur l'impôt anticipé (LIA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sull'imposta preventiva (LIP)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "642.21"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2017/83"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-02-15"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-09-30"
+        "value": "RO 2016 3451"
       },
       "titleDe": {
         "type": "literal",
@@ -501,6 +489,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-09-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 497"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Verrechnungssteuer (Verrechnungssteuergesetz, VStG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'impôt anticipé (LIA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'imposta preventiva (LIP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "642.21"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2017/83"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-02-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-09-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 497"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Verrechnungssteuer (Verrechnungssteuergesetz, VStG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'impôt anticipé (LIA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'imposta preventiva (LIP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "642.21"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2017/83"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-02-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-09-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 497"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Verrechnungssteuer (Verrechnungssteuergesetz, VStG)"
@@ -532,6 +596,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-06-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2013"
       },
       "titleDe": {
         "type": "literal",
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-06-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2013"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Geldspiele (Geldspielgesetz, BGS) (Betrifft nur den französischen Text)"
@@ -597,6 +669,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-06-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2013"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Geldspiele (Geldspielgesetz, BGS) (Betrifft nur den französischen Text)"
@@ -629,6 +705,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-09-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 433"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Verrechnungssteuer (Verrechnungssteuergesetz, VStG)"
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-09-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 433"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Verrechnungssteuer (Verrechnungssteuergesetz, VStG)"
@@ -692,6 +776,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-09-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 433"
       },
       "titleDe": {
         "type": "literal",

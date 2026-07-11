@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1993-05-29"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Übereinkommen über den Schutz von Kindern und die Zusammenarbeit auf dem Gebiet der Internationalen Adoption (mit Verzeichnis)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention sur la protection des enfants et la coopération en matière d'adoption internationale (avec liste)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione sulla protezione dei minori e sulla cooperazione in materia di adozione internazionale (Elenco)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.211.221.311"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/99"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1993-05-29"
+        "value": "RO 2003 415"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1993-05-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 415"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen über den Schutz von Kindern und die Zusammenarbeit auf dem Gebiet der Internationalen Adoption (mit Verzeichnis)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1993-05-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 415"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen über den Schutz von Kindern und die Zusammenarbeit auf dem Gebiet der Internationalen Adoption (mit Verzeichnis)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention sur la protection des enfants et la coopération en matière d'adoption internationale (avec liste)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione sulla protezione dei minori e sulla cooperazione in materia di adozione internazionale (Elenco)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.211.221.311"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/99"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1993-05-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 415"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen über den Schutz von Kindern und die Zusammenarbeit auf dem Gebiet der Internationalen Adoption (mit Verzeichnis)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-12-08"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Übereinkommen vom 29. Mai 1993 über den Schutz von Kindern und die Zusammenarbeit auf dem Gebiet der Internationalen Adoption (mit Verzeichnis)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention du 29 mai 1993 sur la protection des enfants et la coopération en matière d'adoption internationale (avec liste)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione del 29 maggio 1993 sulla protezione dei minori e sulla cooperazione in materia di adozione internazionale (con elenco)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.211.221.311"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/310"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-12-08"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-12-08"
+        "value": "RO 2004 2583"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-12-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 2583"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 29. Mai 1993 über den Schutz von Kindern und die Zusammenarbeit auf dem Gebiet der Internationalen Adoption (mit Verzeichnis)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 29 mai 1993 sur la protection des enfants et la coopération en matière d'adoption internationale (avec liste)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 29 maggio 1993 sulla protezione dei minori e sulla cooperazione in materia di adozione internazionale (con elenco)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.211.221.311"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/310"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-12-08"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-12-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 2583"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 29. Mai 1993 über den Schutz von Kindern und die Zusammenarbeit auf dem Gebiet der Internationalen Adoption (mit Verzeichnis)"
@@ -245,37 +273,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-03-08"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Übereinkommen vom 29. Mai 1993 über den Schutz von Kindern und die Zusammenarbeit auf dem Gebiet der Internationalen Adoption"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention du 29 mai 1993 sur la protection des enfants et la coopération en matière d'adoption internationale"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione del 29 maggio 1993 sulla protezione dei minori e sulla cooperazione in materia di adozione internazionale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.211.221.311"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/257"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-03-08"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-03-08"
+        "value": "RO 2006 1655"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +309,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-03-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 1655"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 29. Mai 1993 über den Schutz von Kindern und die Zusammenarbeit auf dem Gebiet der Internationalen Adoption"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 29 mai 1993 sur la protection des enfants et la coopération en matière d'adoption internationale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 29 maggio 1993 sulla protezione dei minori e sulla cooperazione in materia di adozione internazionale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.211.221.311"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/257"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-03-08"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-03-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 1655"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 29. Mai 1993 über den Schutz von Kindern und die Zusammenarbeit auf dem Gebiet der Internationalen Adoption"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-02-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 1635"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 29. Mai 1993 über den Schutz von Kindern und die Zusammenarbeit auf dem Gebiet der Internationalen Adoption"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-02-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 1635"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 29. Mai 1993 über den Schutz von Kindern und die Zusammenarbeit auf dem Gebiet der Internationalen Adoption"
@@ -404,6 +452,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-02-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 1635"
       },
       "titleDe": {
         "type": "literal",
@@ -437,37 +489,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-12-09"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Übereinkommen über den Schutz von Kindern und die Zusammenarbeit auf dem Gebiet der Internationalen Adoption"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention sur la protection des enfants et la coopération en matière d'adoption internationale (Ne concerne que le texte allemand)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione sulla protezione dei minori e sulla cooperazione in materia di adozione internazionale (Concerne solo il testo tedesco)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.211.221.311"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2008/815"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-12-09"
+        "value": "RO 2008 5909"
       },
       "titleDe": {
         "type": "literal",
@@ -501,6 +525,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-12-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5909"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen über den Schutz von Kindern und die Zusammenarbeit auf dem Gebiet der Internationalen Adoption"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention sur la protection des enfants et la coopération en matière d'adoption internationale (Ne concerne que le texte allemand)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione sulla protezione dei minori e sulla cooperazione in materia di adozione internazionale (Concerne solo il testo tedesco)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.211.221.311"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/815"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-12-09"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5909"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen über den Schutz von Kindern und die Zusammenarbeit auf dem Gebiet der Internationalen Adoption"
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-02-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 937"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 29. Mai 1993 über den Schutz von Kindern und die Zusammenarbeit auf dem Gebiet der Internationalen Adoption"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-02-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 937"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 29. Mai 1993 über den Schutz von Kindern und die Zusammenarbeit auf dem Gebiet der Internationalen Adoption"
@@ -597,69 +669,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-02-10"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Übereinkommen vom 29. Mai 1993 über den Schutz von Kindern und die Zusammenarbeit auf dem Gebiet der Internationalen Adoption"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention du 29 mai 1993 sur la protection des enfants et la coopération en matière d'adoption internationale"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione del 29 maggio 1993 sulla protezione dei minori e sulla cooperazione in materia di adozione internazionale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.211.221.311"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/437"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-06-21"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-06-21"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Übereinkommen vom 29. Mai 1993 über den Schutz von Kindern und die Zusammenarbeit auf dem Gebiet der Internationalen Adoption"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention du 29 mai 1993 sur la protection des enfants et la coopération en matière d'adoption internationale"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione del 29 maggio 1993 sulla protezione dei minori e sulla cooperazione in materia di adozione internazionale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.211.221.311"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/437"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-06-21"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-06-21"
+        "value": "RO 2010 937"
       },
       "titleDe": {
         "type": "literal",
@@ -693,6 +705,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-06-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3297"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 29. Mai 1993 über den Schutz von Kindern und die Zusammenarbeit auf dem Gebiet der Internationalen Adoption"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 29 mai 1993 sur la protection des enfants et la coopération en matière d'adoption internationale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 29 maggio 1993 sulla protezione dei minori e sulla cooperazione in materia di adozione internazionale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.211.221.311"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/437"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-06-21"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-06-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3297"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 29. Mai 1993 über den Schutz von Kindern und die Zusammenarbeit auf dem Gebiet der Internationalen Adoption"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 29 mai 1993 sur la protection des enfants et la coopération en matière d'adoption internationale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 29 maggio 1993 sulla protezione dei minori e sulla cooperazione in materia di adozione internazionale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.211.221.311"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/437"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-06-21"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-06-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3297"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 29. Mai 1993 über den Schutz von Kindern und die Zusammenarbeit auf dem Gebiet der Internationalen Adoption"
@@ -725,6 +813,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-10-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 3561"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 29. Mai 1993 über den Schutz von Kindern und die Zusammenarbeit auf dem Gebiet der Internationalen Adoption"
@@ -757,6 +849,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-10-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 3561"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 29. Mai 1993 über den Schutz von Kindern und die Zusammenarbeit auf dem Gebiet der Internationalen Adoption"
@@ -788,6 +884,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-10-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 3561"
       },
       "titleDe": {
         "type": "literal",
@@ -821,6 +921,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-03-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 883"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 29. Mai 1993 über den Schutz von Kindern und die Zusammenarbeit auf dem Gebiet der Internationalen Adoption"
@@ -853,6 +957,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-03-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 883"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 29. Mai 1993 über den Schutz von Kindern und die Zusammenarbeit auf dem Gebiet der Internationalen Adoption"
@@ -885,6 +993,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-03-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 883"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 29. Mai 1993 über den Schutz von Kindern und die Zusammenarbeit auf dem Gebiet der Internationalen Adoption"
@@ -917,6 +1029,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-11-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 21"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 29. Mai 1993 über den Schutz von Kindern und die Zusammenarbeit auf dem Gebiet der Internationalen Adoption"
@@ -949,6 +1065,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-11-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 21"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 29. Mai 1993 über den Schutz von Kindern und die Zusammenarbeit auf dem Gebiet der Internationalen Adoption"
@@ -980,6 +1100,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-11-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 21"
       },
       "titleDe": {
         "type": "literal",
@@ -1012,6 +1136,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-09-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 3771"
       },
       "titleDe": {
         "type": "literal",
@@ -1045,6 +1173,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-09-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 3771"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 29. Mai 1993 über den Schutz von Kindern und die Zusammenarbeit auf dem Gebiet der Internationalen Adoption"
@@ -1076,6 +1208,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-09-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 3771"
       },
       "titleDe": {
         "type": "literal",

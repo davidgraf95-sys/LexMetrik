@@ -1,7 +1,7 @@
 {
   "erlassKey": "RPG",
   "sr": "700",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -64,25 +64,25 @@
       "dateEntryInForce": "2014-05-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/197",
       "dateDocument": "2012-06-15",
-      "roFundstelle": "AS 2014 197",
+      "roFundstelle": "AS 2014 899",
       "titelDe": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)",
       "titelFr": "Loi fédérale sur l'aménagement du territoire (Loi sur l'aménagement du territoire, LAT)",
       "titelIt": "Legge federale sulla pianificazione del territorio (Legge sulla pianificazione del territorio, LPT)",
       "botschaftKey": "BOTSCHAFT-2010-186",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/197/de",
-      "sha": "b4c5e9e09a62565e830dea5e73ab6c46b42333f1e73baa24cf8a533d22b27e07"
+      "sha": "c8c9adb20d3ed1dbb17fbc22210fe451dac90103f738887768c655c3348dfeb8"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2014-05-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/198",
       "dateDocument": "2013-03-22",
-      "roFundstelle": "AS 2014 198",
+      "roFundstelle": "AS 2014 905",
       "titelDe": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)",
       "titelFr": "Loi fédérale sur l'aménagement du territoire (Loi sur l'aménagement du territoire, LAT)",
       "titelIt": "Legge federale sulla pianificazione del territorio (Legge sulla pianificazione del territorio, LPT)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/198/de",
-      "sha": "3b9ad5e7d8afef66db6981e1f8e9ebeab63d7e1c09be06cb1823d66066718c21"
+      "sha": "55e774bf0231a0a7be9b7f28e1a9809b1961414cbadce1633edc538e656dcd5f"
     },
     {
       "art": "sammelerlass-marker",
@@ -95,25 +95,25 @@
       "dateEntryInForce": "2012-11-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/640",
       "dateDocument": "2011-12-23",
-      "roFundstelle": "AS 2012 640",
+      "roFundstelle": "AS 2012 5535",
       "titelDe": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)",
       "titelFr": "Loi fédérale sur l'aménagement du territoire (Loi sur l'aménagement du territoire, LAT)",
       "titelIt": "Legge federale sulla pianificazione del territorio (Legge sulla pianificazione del territorio, LPT)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/640/de",
-      "sha": "9f4f8fcb3ee53c7f37dd998f616d4a3b9ff3744f80586b25876377f50da9a168"
+      "sha": "c71b0d336ea8f904cde2b42c79a5f763a90b8754afa884f75ca9ee9d1c4aa94b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2011-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/377",
       "dateDocument": "2010-12-17",
-      "roFundstelle": "AS 2011 377",
+      "roFundstelle": "AS 2011 2913",
       "titelDe": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)",
       "titelFr": "Loi fédérale sur l'aménagement du territoire (Loi sur l'aménagement du territoire, LAT)",
       "titelIt": "Legge federale sulla pianificazione del territorio (Legge sulla pianificazione del territorio, LPT)",
       "botschaftKey": "BOTSCHAFT-2007-793",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/377/de",
-      "sha": "d7718ecf2ff1446498fc7fad25eb0454bd3bbe0e5f7fce06b5700185a14e1608"
+      "sha": "634fda9912f084418bce53719bfe890d9715ce5e5318497aad2500c6b34391d7"
     },
     {
       "art": "sammelerlass-marker",
@@ -132,13 +132,13 @@
       "dateEntryInForce": "2007-09-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/452",
       "dateDocument": "2007-03-23",
-      "roFundstelle": "AS 2007 452",
+      "roFundstelle": "AS 2007 3637",
       "titelDe": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)",
       "titelFr": "Loi fédérale sur l'aménagement du territoire (Loi sur l'aménagement du territoire, LAT)",
       "titelIt": "Legge federale sulla pianificazione del territorio (Legge sulla pianificazione del territorio, LPT)",
       "botschaftKey": "BOTSCHAFT-2005-1151",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/452/de",
-      "sha": "8c648ec0f645a7267d7ee5b5626830523a45c672c39149158ac2741beab2cb62"
+      "sha": "0cde8ffa65ead9d0ec77435d72382da1347b4dd66c9716e74141233422f4858b"
     },
     {
       "art": "sammelerlass-marker",
@@ -157,37 +157,37 @@
       "dateEntryInForce": "2003-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/181",
       "dateDocument": "2002-12-13",
-      "roFundstelle": "AS 2003 181",
+      "roFundstelle": "AS 2003 1021",
       "titelDe": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)",
       "titelFr": "Loi fédérale sur l'aménagement du territoire (Loi sur l'aménagement du territoire, LAT)",
       "titelIt": "Legge federale sulla pianificazione del territorio (Legge sulla pianificazione del territorio, LPT)",
       "botschaftKey": "BOTSCHAFT-2002-1110",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/181/de",
-      "sha": "bbfacb2541a9ca2144feeba02a24ee3eda76b117e7387ef5cdfb835607f64a86"
+      "sha": "af67eaf84e798934a7a9da4320dfa5888c0352cbea0b7eddfcb515cd4ef44f62"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2000-09-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/309",
       "dateDocument": "1998-03-20",
-      "roFundstelle": "AS 2000 309",
+      "roFundstelle": "AS 2000 2042",
       "titelDe": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)",
       "titelFr": "Loi fédérale sur l'aménagement du territoire (LAT)",
       "titelIt": "Legge federale sulla pianificazione del territorio (LPT)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/309/de",
-      "sha": "3fdfd3845412178f0a90eb828f1f6fd1a9f72fdf1fd0a19af947d081eee48b68"
+      "sha": "2e82a2080d611b92e73c38a0793d3694f9711e4d20d1db3ff1f45bff08e77e76"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2000-09-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/338",
       "dateDocument": "2000-09-05",
-      "roFundstelle": "AS 2000 338",
+      "roFundstelle": "AS 2000 2190",
       "titelDe": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)",
       "titelFr": "Loi fédérale sur l'aménagement du territoire (loi sur l'aménagement du territoire, LAT)",
       "titelIt": "Legge federale sulla pianificazione del territorio (Legge sulla pianificazione del territorio, LPT)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/338/de",
-      "sha": "a1643119c6350431d6276013143bc3738ebece7344e62a82e557ab8eecbe1468"
+      "sha": "0d994fac2a502add9f74be7eb8622db71872602d5712c4ed4e9c6f66e0a9332b"
     },
     {
       "art": "aenderung",
@@ -214,5 +214,5 @@
       "sha": "96931a290ece329b406536aaf1e89ab9f7fd6ff2124b749d60721ea5329e36fc"
     }
   ],
-  "sha": "777a4302cb3aaa0d9dc8cdb2f6ddb4000589002901bcbcac41803dcf1c139588"
+  "sha": "e812128a43280eeb66c7ae840ee86a0eb38e8e833cf3881d566fc431a89c69ea"
 }

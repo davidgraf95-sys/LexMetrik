@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1970-03-18"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Übereinkommen vom 18. März 1970 über die Beweisaufnahme im Ausland in Zivil- oder Handelssachen"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention du 18 mars 1970 sur l'obtention des preuves à l'étranger en matière civile ou commerciale"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione del 18 marzo 1970 sull'assunzione all'estero delle prove in materia civile o commerciale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.274.132"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1994/2824_2824_2824"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1995-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1970-03-18"
+        "value": "RO 1994 2824"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1970-03-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1994 2824"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 18. März 1970 über die Beweisaufnahme im Ausland in Zivil- oder Handelssachen"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1970-03-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1994 2824"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 18. März 1970 über die Beweisaufnahme im Ausland in Zivil- oder Handelssachen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 18 mars 1970 sur l'obtention des preuves à l'étranger en matière civile ou commerciale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 18 marzo 1970 sull'assunzione all'estero delle prove in materia civile o commerciale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.274.132"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1994/2824_2824_2824"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1995-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1970-03-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1994 2824"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 18. März 1970 über die Beweisaufnahme im Ausland in Zivil- oder Handelssachen"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-06-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1928"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 18. März 1970 über die Beweisaufnahme im Ausland in Zivil- oder Handelssachen"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-06-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1928"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 18. März 1970 über die Beweisaufnahme im Ausland in Zivil- oder Handelssachen"
@@ -212,6 +236,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-06-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1928"
       },
       "titleDe": {
         "type": "literal",
@@ -245,37 +273,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-11-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Übereinkommen vom 18. März 1970 über die Beweisaufnahme im Ausland in Zivil- oder Handelssachen"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention du 18 mars 1970 sur l'obtention des preuves à l'étranger en matière civile ou commerciale"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione del 18 marzo 1970 sull'assunzione all'estero delle prove in materia civile o commerciale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.274.132"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2005/150"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-11-22"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-11-22"
+        "value": "RO 2005 1139"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +309,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-11-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 1139"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 18. März 1970 über die Beweisaufnahme im Ausland in Zivil- oder Handelssachen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 18 mars 1970 sur l'obtention des preuves à l'étranger en matière civile ou commerciale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 18 marzo 1970 sull'assunzione all'estero delle prove in materia civile o commerciale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.274.132"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/150"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-11-22"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-11-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 1139"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 18. März 1970 über die Beweisaufnahme im Ausland in Zivil- oder Handelssachen"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-09-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 4989"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 18. März 1970 über die Beweisaufnahme im Ausland in Zivil- oder Handelssachen"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-09-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 4989"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 18. März 1970 über die Beweisaufnahme im Ausland in Zivil- oder Handelssachen"
@@ -404,6 +452,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-09-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 4989"
       },
       "titleDe": {
         "type": "literal",
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-10-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 101"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 18. März 1970 über die Beweisaufnahme im Ausland in Zivil- oder Handelssachen"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-10-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 101"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 18. März 1970 über die Beweisaufnahme im Ausland in Zivil- oder Handelssachen"
@@ -501,69 +561,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-10-31"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Übereinkommen vom 18. März 1970 über die Beweisaufnahme im Ausland in Zivil- oder Handelssachen"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention du 18 mars 1970 sur l'obtention des preuves à l'étranger en matière civile ou commerciale"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione del 18 marzo 1970 sull'assunzione all'estero delle prove in materia civile o commerciale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.274.132"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2014/124"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-02-20"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-02-20"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Übereinkommen vom 18. März 1970 über die Beweisaufnahme im Ausland in Zivil- oder Handelssachen"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention du 18 mars 1970 sur l'obtention des preuves à l'étranger en matière civile ou commerciale"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione del 18 marzo 1970 sull'assunzione all'estero delle prove in materia civile o commerciale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.274.132"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2014/124"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-02-20"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-02-20"
+        "value": "RO 2012 101"
       },
       "titleDe": {
         "type": "literal",
@@ -597,6 +597,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-02-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 583"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 18. März 1970 über die Beweisaufnahme im Ausland in Zivil- oder Handelssachen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 18 mars 1970 sur l'obtention des preuves à l'étranger en matière civile ou commerciale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 18 marzo 1970 sull'assunzione all'estero delle prove in materia civile o commerciale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.274.132"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/124"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-02-20"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-02-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 583"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 18. März 1970 über die Beweisaufnahme im Ausland in Zivil- oder Handelssachen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 18 mars 1970 sur l'obtention des preuves à l'étranger en matière civile ou commerciale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 18 marzo 1970 sull'assunzione all'estero delle prove in materia civile o commerciale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.274.132"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/124"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-02-20"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-02-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 583"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 18. März 1970 über die Beweisaufnahme im Ausland in Zivil- oder Handelssachen"
@@ -629,6 +705,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-03-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1075"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 18. März 1970 über die Beweisaufnahme im Ausland in Zivil- oder Handelssachen"
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-03-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1075"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 18. März 1970 über die Beweisaufnahme im Ausland in Zivil- oder Handelssachen"
@@ -692,6 +776,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-03-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1075"
       },
       "titleDe": {
         "type": "literal",
@@ -725,6 +813,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-05-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1855"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 18. März 1970 über die Beweisaufnahme im Ausland in Zivil- oder Handelssachen"
@@ -757,6 +849,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-05-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1855"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 18. März 1970 über die Beweisaufnahme im Ausland in Zivil- oder Handelssachen"
@@ -788,6 +884,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-05-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1855"
       },
       "titleDe": {
         "type": "literal",

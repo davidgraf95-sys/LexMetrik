@@ -21,69 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-06-17"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über das Schweizer Bürgerrecht (Bürgerrechtsverordnung, BüV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la nationalité suisse (Ordonnance sur la nationalité, OLN)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla cittadinanza svizzera (Ordinanza sulla cittadinanza, OCit)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "141.01"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2016/405"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-06-17"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung über das Schweizer Bürgerrecht (Bürgerrechtsverordnung, BüV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la nationalité suisse (Ordonnance sur la nationalité, OLN)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla cittadinanza svizzera (Ordinanza sulla cittadinanza, OCit)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "141.01"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2016/405"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-06-17"
+        "value": "RO 2016 2577"
       },
       "titleDe": {
         "type": "literal",
@@ -117,6 +57,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-06-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2577"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über das Schweizer Bürgerrecht (Bürgerrechtsverordnung, BüV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la nationalité suisse (Ordonnance sur la nationalité, OLN)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla cittadinanza svizzera (Ordinanza sulla cittadinanza, OCit)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "141.01"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/405"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-06-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2577"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über das Schweizer Bürgerrecht (Bürgerrechtsverordnung, BüV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la nationalité suisse (Ordonnance sur la nationalité, OLN)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla cittadinanza svizzera (Ordinanza sulla cittadinanza, OCit)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "141.01"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/405"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-06-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2577"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über das Schweizer Bürgerrecht (Bürgerrechtsverordnung, BüV)"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-01-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 533"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über das Schweizer Bürgerrecht (Bürgerrechtsverordnung, BüV)"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-01-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 533"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über das Schweizer Bürgerrecht (Bürgerrechtsverordnung, BüV)"
@@ -212,6 +236,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-01-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 533"
       },
       "titleDe": {
         "type": "literal",
@@ -244,6 +272,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-07-09"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2105"
       },
       "titleDe": {
         "type": "literal",
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-07-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2105"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über das Schweizer Bürgerrecht (Bürgerrechtsverordnung, BüV) (Betrifft nur den französischen Text)"
@@ -308,6 +344,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-07-09"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2105"
       },
       "titleDe": {
         "type": "literal",

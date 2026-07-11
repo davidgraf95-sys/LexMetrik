@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1968-03-04"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesratsbeschluss  vom 4. März 1968 über die Änderung der schweizerischen Landespharmakopöe"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Arrêté du Conseil fédéral du 4 mars 1968  modifiant la pharmacopée nationale suisse"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Decreto del Consiglio federale del 4 marzo 1968 che modifica quello concernente la Farmacopea nazionale svizzera"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "812.212.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1968/361_385_385"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1968-03-15"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1968-03-04"
+        "value": "RO 1968 385"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1968-03-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1968 385"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesratsbeschluss  vom 4. März 1968 über die Änderung der schweizerischen Landespharmakopöe"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1968-03-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1968 385"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesratsbeschluss  vom 4. März 1968 über die Änderung der schweizerischen Landespharmakopöe"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Arrêté du Conseil fédéral du 4 mars 1968  modifiant la pharmacopée nationale suisse"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Decreto del Consiglio federale del 4 marzo 1968 che modifica quello concernente la Farmacopea nazionale svizzera"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "812.212.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1968/361_385_385"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1968-03-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1968-03-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1968 385"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesratsbeschluss  vom 4. März 1968 über die Änderung der schweizerischen Landespharmakopöe"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-10-17"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Bewilligungen im Arzneimittelbereich (Arzneimittel-Bewilligungsverordnung, AMBV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les autorisations dans le domaine des médicaments (OAMéd)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulle autorizzazioni nel settore dei medicamenti (Ordinanza sull'autorizzazione dei medicamenti, OAMed)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "812.212.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2001/515"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-10-17"
+        "value": "RO 2001 3399"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-10-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 3399"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Bewilligungen im Arzneimittelbereich (Arzneimittel-Bewilligungsverordnung, AMBV)"
@@ -245,6 +237,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-10-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 3399"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Bewilligungen im Arzneimittelbereich (Arzneimittel-Bewilligungsverordnung, AMBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les autorisations dans le domaine des médicaments (OAMéd)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulle autorizzazioni nel settore dei medicamenti (Ordinanza sull'autorizzazione dei medicamenti, OAMed)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "812.212.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2001/515"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-10-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 3399"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Bewilligungen im Arzneimittelbereich (Arzneimittel-Bewilligungsverordnung, AMBV)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-07-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 2945"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Bewilligungen im Arzneimittelbereich (Arzneimittel-Bewilligungsverordnung, AMBV)"
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-07-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 2945"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Bewilligungen im Arzneimittelbereich (Arzneimittel-Bewilligungsverordnung, AMBV)"
@@ -340,6 +380,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-07-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 2945"
       },
       "titleDe": {
         "type": "literal",
@@ -373,37 +417,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-09-08"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Bewilligungen im Arzneimittelbereich (Arzneimittel-Bewilligungsverordnung, AMBV) "
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les autorisations dans le domaine des médicaments (OAMéd)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulle autorizzazioni nel settore dei medicamenti (Ordinanza sull'autorizzazione dei medicamenti, OAM)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "812.212.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/584"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-09-08"
+        "value": "RO 2010 4031"
       },
       "titleDe": {
         "type": "literal",
@@ -437,6 +453,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-09-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4031"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Bewilligungen im Arzneimittelbereich (Arzneimittel-Bewilligungsverordnung, AMBV) "
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les autorisations dans le domaine des médicaments (OAMéd)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulle autorizzazioni nel settore dei medicamenti (Ordinanza sull'autorizzazione dei medicamenti, OAM)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "812.212.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/584"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-09-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4031"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Bewilligungen im Arzneimittelbereich (Arzneimittel-Bewilligungsverordnung, AMBV) "
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1901"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Bewilligungen im Arzneimittelbereich (Arzneimittel-Bewilligungsverordnung, AMBV)"
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1901"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Bewilligungen im Arzneimittelbereich (Arzneimittel-Bewilligungsverordnung, AMBV)"
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1901"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Bewilligungen im Arzneimittelbereich (Arzneimittel-Bewilligungsverordnung, AMBV)"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-04-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 2785"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Bewilligungen im Arzneimittelbereich (Arzneimittel-Bewilligungsverordnung, AMBV)"
@@ -597,6 +669,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-04-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 2785"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Bewilligungen im Arzneimittelbereich (Arzneimittel-Bewilligungsverordnung, AMBV)"
@@ -629,6 +705,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-04-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 2785"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Bewilligungen im Arzneimittelbereich (Arzneimittel-Bewilligungsverordnung, AMBV)"
@@ -661,69 +741,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-11-14"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Bewilligungen im Arzneimittelbereich (Arzneimittel-Bewilligungsverordnung; AMBV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les autorisations dans le domaine des médicaments (OAMéd)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulle autorizzazioni nel settore dei medicamenti (Ordinanza sull'autorizzazione dei medicamenti, OAMed)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "812.212.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2018/786"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2019-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-11-14"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung über die Bewilligungen im Arzneimittelbereich (Arzneimittel-Bewilligungsverordnung; AMBV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les autorisations dans le domaine des médicaments (OAMéd)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulle autorizzazioni nel settore dei medicamenti (Ordinanza sull'autorizzazione dei medicamenti, OAMed)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "812.212.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2018/786"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2019-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-11-14"
+        "value": "RO 2018 5029"
       },
       "titleDe": {
         "type": "literal",
@@ -757,6 +777,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-11-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 5029"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Bewilligungen im Arzneimittelbereich (Arzneimittel-Bewilligungsverordnung; AMBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les autorisations dans le domaine des médicaments (OAMéd)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulle autorizzazioni nel settore dei medicamenti (Ordinanza sull'autorizzazione dei medicamenti, OAMed)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "812.212.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/786"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-11-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 5029"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Bewilligungen im Arzneimittelbereich (Arzneimittel-Bewilligungsverordnung; AMBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les autorisations dans le domaine des médicaments (OAMéd)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulle autorizzazioni nel settore dei medicamenti (Ordinanza sull'autorizzazione dei medicamenti, OAMed)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "812.212.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/786"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-11-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 5029"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Bewilligungen im Arzneimittelbereich (Arzneimittel-Bewilligungsverordnung; AMBV)"
@@ -789,6 +885,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-05-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1605"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Bewilligungen im Arzneimittelbereich (Arzneimittel-Bewilligungsverordnung; AMBV)"
@@ -821,6 +921,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-05-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1605"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Bewilligungen im Arzneimittelbereich (Arzneimittel-Bewilligungsverordnung; AMBV)"
@@ -852,6 +956,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-05-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1605"
       },
       "titleDe": {
         "type": "literal",
@@ -885,6 +993,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-07-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2195"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Bewilligungen im Arzneimittelbereich (Arzneimittel-Bewilligungsverordnung; AMBV)"
@@ -917,6 +1029,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-07-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2195"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Bewilligungen im Arzneimittelbereich (Arzneimittel-Bewilligungsverordnung; AMBV)"
@@ -948,6 +1064,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-07-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2195"
       },
       "titleDe": {
         "type": "literal",

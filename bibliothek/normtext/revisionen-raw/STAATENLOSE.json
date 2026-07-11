@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1954-09-28"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Übereinkommen vom 28. September 1954 über die Rechtsstellung der Staatenlosen (mit Anhang und Muster)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention du 28 septembre 1954 relative au statut des apatrides (avec annexe et modèle)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione del 28 settembre 1954 sullo statuto degli apolidi (con. All. e Modello)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.142.40"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1972/2320_2374_2150"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1972-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1954-09-28"
+        "value": "RO 1972 2374"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1954-09-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1972 2374"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 28. September 1954 über die Rechtsstellung der Staatenlosen (mit Anhang und Muster)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1954-09-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1972 2374"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 28. September 1954 über die Rechtsstellung der Staatenlosen (mit Anhang und Muster)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 28 septembre 1954 relative au statut des apatrides (avec annexe et modèle)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 28 settembre 1954 sullo statuto degli apolidi (con. All. e Modello)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.142.40"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1972/2320_2374_2150"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1972-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1954-09-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1972 2374"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 28. September 1954 über die Rechtsstellung der Staatenlosen (mit Anhang und Muster)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-03-19"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Übereinkommen vom 28. September 1954 über die Rechtsstellung der Staatenlosen (mit Anhang und Muster)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention du 28 septembre 1954 relative au statut des apatrides (avec annexe et modèle)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione del 28 settembre 1954 sullo statuto degli apolidi (con Allegato e Modello)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.142.40"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/414"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-03-19"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-03-19"
+        "value": "RO 2004 3219"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-03-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 3219"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 28. September 1954 über die Rechtsstellung der Staatenlosen (mit Anhang und Muster)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 28 septembre 1954 relative au statut des apatrides (avec annexe et modèle)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 28 settembre 1954 sullo statuto degli apolidi (con Allegato e Modello)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.142.40"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/414"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-03-19"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-03-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 3219"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 28. September 1954 über die Rechtsstellung der Staatenlosen (mit Anhang und Muster)"
@@ -245,37 +273,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-09-18"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Übereinkommen vom 28. September 1954 über die Rechtsstellung der Staatenlosen"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention du 28 septembre 1954 relative au statut des apatrides"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione del 28 settembre 1954 sullo statuto degli apolidi"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.142.40"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/664"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-09-18"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-09-18"
+        "value": "RO 2006 4391"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +309,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-09-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4391"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 28. September 1954 über die Rechtsstellung der Staatenlosen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 28 septembre 1954 relative au statut des apatrides"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 28 settembre 1954 sullo statuto degli apolidi"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.142.40"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/664"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-09-18"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-09-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4391"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 28. September 1954 über die Rechtsstellung der Staatenlosen"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-06-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 3181"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 28. September 1954 über die Rechtsstellung der Staatenlosen"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-06-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 3181"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 28. September 1954 über die Rechtsstellung der Staatenlosen"
@@ -404,6 +452,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-06-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 3181"
       },
       "titleDe": {
         "type": "literal",
@@ -437,37 +489,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-06-08"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Übereinkommen vom 28. September 1954 über die Rechtsstellung der Staatenlosen"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention du 28 septembre 1954 relative au statut des apatrides"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione del 28 settembre 1954 sullo statuto degli apolidi"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.142.40"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/433"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-06-08"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-06-08"
+        "value": "RO 2011 3289"
       },
       "titleDe": {
         "type": "literal",
@@ -501,6 +525,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-06-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3289"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 28. September 1954 über die Rechtsstellung der Staatenlosen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 28 septembre 1954 relative au statut des apatrides"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 28 settembre 1954 sullo statuto degli apolidi"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.142.40"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/433"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-06-08"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-06-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3289"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 28. September 1954 über die Rechtsstellung der Staatenlosen"
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-03-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 1551"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 28. September 1954 über die Rechtsstellung der Staatenlosen"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-03-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 1551"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 28. September 1954 über die Rechtsstellung der Staatenlosen"
@@ -596,6 +668,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-03-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 1551"
       },
       "titleDe": {
         "type": "literal",
@@ -629,6 +705,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-11-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 271"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 28. September 1954 über die Rechtsstellung der Staatenlosen"
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-11-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 271"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 28. September 1954 über die Rechtsstellung der Staatenlosen"
@@ -693,69 +777,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-11-05"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Übereinkommen vom 28. September 1954 über die Rechtsstellung der Staatenlosen"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention du 28 septembre 1954 relative au statut des apatrides"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione del 28 settembre 1954 sullo statuto degli apolidi"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.142.40"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2014/563"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-10-01"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Übereinkommen vom 28. September 1954 über die Rechtsstellung der Staatenlosen"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention du 28 septembre 1954 relative au statut des apatrides"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione del 28 settembre 1954 sullo statuto degli apolidi"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.142.40"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2014/563"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-10-01"
+        "value": "RO 2013 271"
       },
       "titleDe": {
         "type": "literal",
@@ -789,6 +813,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-10-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 3271"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 28. September 1954 über die Rechtsstellung der Staatenlosen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 28 septembre 1954 relative au statut des apatrides"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 28 settembre 1954 sullo statuto degli apolidi"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.142.40"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/563"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-10-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 3271"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 28. September 1954 über die Rechtsstellung der Staatenlosen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 28 septembre 1954 relative au statut des apatrides"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 28 settembre 1954 sullo statuto degli apolidi"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.142.40"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/563"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-10-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 3271"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 28. September 1954 über die Rechtsstellung der Staatenlosen"
@@ -821,6 +921,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-06-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2217"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 28. September 1954 über die Rechtsstellung der Staatenlosen"
@@ -853,6 +957,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-06-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2217"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 28. September 1954 über die Rechtsstellung der Staatenlosen"
@@ -884,6 +992,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-06-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2217"
       },
       "titleDe": {
         "type": "literal",
@@ -917,6 +1029,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-02-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 747"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 28. September 1954 über die Rechtsstellung der Staatenlosen"
@@ -949,6 +1065,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-02-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 747"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 28. September 1954 über die Rechtsstellung der Staatenlosen"
@@ -981,6 +1101,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-02-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 747"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 28. September 1954 über die Rechtsstellung der Staatenlosen"
@@ -1013,6 +1137,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-05-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1661"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 28. September 1954 über die Rechtsstellung der Staatenlosen"
@@ -1045,6 +1173,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-05-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1661"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 28. September 1954 über die Rechtsstellung der Staatenlosen"
@@ -1076,6 +1208,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-05-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1661"
       },
       "titleDe": {
         "type": "literal",

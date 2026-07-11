@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1994-11-23"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 23. November 1994 über die Infrastruktur der Luftfahrt (VIL)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 23 novembre 1994 sur l'infrastructure aéronautique (OSIA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 23 novembre 1994 sull'infrastruttura aeronautica (OSIA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "748.131.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1994/3050_3050_3050"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1995-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1994-11-23"
+        "value": "RO 1994 3050"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1994-11-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1994 3050"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 23. November 1994 über die Infrastruktur der Luftfahrt (VIL)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1994-11-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1994 3050"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 23. November 1994 über die Infrastruktur der Luftfahrt (VIL)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 23 novembre 1994 sur l'infrastructure aéronautique (OSIA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 23 novembre 1994 sull'infrastruttura aeronautica (OSIA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "748.131.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1994/3050_3050_3050"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1995-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1994-11-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1994 3050"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 23. November 1994 über die Infrastruktur der Luftfahrt (VIL)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-01-25"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Infrastruktur der Luftfahrt (VIL) (nur ital.)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'infrastructure aéronautique (OSIA) (seulement en italien)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'infrastruttura aeronautica (OSIA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "748.131.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/33"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1995-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-01-25"
+        "value": "RO 2000 186"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-01-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 186"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Infrastruktur der Luftfahrt (VIL) (nur ital.)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'infrastructure aéronautique (OSIA) (seulement en italien)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'infrastruttura aeronautica (OSIA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "748.131.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/33"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1995-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-01-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 186"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Infrastruktur der Luftfahrt (VIL) (nur ital.)"
@@ -245,37 +273,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-01-30"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Infrastruktur der Luftfahrt (VIL)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'infrastructure aéronautique (OSIA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'infrastruttura aeronautica (OSIA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "748.131.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/197"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-06-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-01-30"
+        "value": "RO 2002 1186"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +309,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-01-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1186"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Infrastruktur der Luftfahrt (VIL)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'infrastructure aéronautique (OSIA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'infrastruttura aeronautica (OSIA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "748.131.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/197"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-01-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1186"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Infrastruktur der Luftfahrt (VIL)"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-02-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 595"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Infrastruktur der Luftfahrt (VIL)"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-02-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 595"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Infrastruktur der Luftfahrt (VIL)"
@@ -404,6 +452,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-02-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 595"
       },
       "titleDe": {
         "type": "literal",
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-04-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 1605"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Infrastruktur der Luftfahrt (VIL) (Betrifft nur den französischen Text)"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-04-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 1605"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Infrastruktur der Luftfahrt (VIL) (Betrifft nur den französischen Text)"
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-04-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 1605"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Infrastruktur der Luftfahrt (VIL) (Betrifft nur den französischen Text)"
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-10-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 4423"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Infrastruktur der Luftfahrt (VIL)"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-10-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 4423"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Infrastruktur der Luftfahrt (VIL)"
@@ -597,69 +669,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-10-21"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Infrastruktur der Luftfahrt (VIL)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'infrastructure aéronautique (OSIA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'infrastruttura aeronautica (OSIA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "748.131.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2018/611"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2019-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-10-17"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung über die Infrastruktur der Luftfahrt (VIL)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'infrastructure aéronautique (OSIA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'infrastruttura aeronautica (OSIA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "748.131.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2018/611"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2019-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-10-17"
+        "value": "RO 2015 4423"
       },
       "titleDe": {
         "type": "literal",
@@ -693,6 +705,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-10-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3849"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Infrastruktur der Luftfahrt (VIL)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'infrastructure aéronautique (OSIA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'infrastruttura aeronautica (OSIA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "748.131.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/611"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-10-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3849"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Infrastruktur der Luftfahrt (VIL)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'infrastructure aéronautique (OSIA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'infrastruttura aeronautica (OSIA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "748.131.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/611"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-10-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3849"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Infrastruktur der Luftfahrt (VIL)"
@@ -725,6 +813,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-04-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1331"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Infrastruktur der Luftfahrt (VIL)"
@@ -757,6 +849,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-04-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1331"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Infrastruktur der Luftfahrt (VIL)"
@@ -788,6 +884,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-04-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1331"
       },
       "titleDe": {
         "type": "literal",

@@ -1,7 +1,7 @@
 {
   "erlassKey": "DSV",
   "sr": "235.11",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -57,48 +57,48 @@
       "dateEntryInForce": "2012-10-16",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/635",
       "dateDocument": "2012-10-16",
-      "roFundstelle": "AS 2012 635",
+      "roFundstelle": "AS 2012 5521",
       "titelDe": "Verordnung zum Bundesgesetz über den Datenschutz (VDSG) (Betrifft nur den italienischen Text)",
       "titelFr": "Ordonnance relative à la loi fédérale sur la protection des données (OLPD) (Ne concerne que le texte italien)",
       "titelIt": "Ordinanza relativa alla legge federale sulla protezione dei dati (OLPD)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/635/de",
-      "sha": "9f0e28ea77c4827618df7d9a5d7d88ca146dbfb7292fe673a1decfb6e2cad299"
+      "sha": "3ddedb1d6932afe0cf3b75f890a9c758966c695ee66c78eaaf777a354d8e1c0a"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2010-12-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/465",
       "dateDocument": "2010-06-04",
-      "roFundstelle": "AS 2010 465",
+      "roFundstelle": "AS 2010 3399",
       "titelDe": "Verordnung zum Bundesgesetz über den Datenschutz (VDSG)",
       "titelFr": "Ordonnance relative à la loi fédérale sur la protection des données (OLPD)",
       "titelIt": "Ordinanza relativa alla legge federale sulla protezione dei dati (OLPD)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/465/de",
-      "sha": "f52cd37688b8f95392838645820001115ef5d645f222d66c59139bda7235a135"
+      "sha": "e43b52aec6be0261c40088e97127911000479185d7fb98e6566449051053f0cf"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2008-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/700",
       "dateDocument": "2007-09-28",
-      "roFundstelle": "AS 2007 700",
+      "roFundstelle": "AS 2007 4993",
       "titelDe": "Verordnung zum Bundesgesetz über den Datenschutz (VDSG)",
       "titelFr": "Ordonnance relative à la loi fédérale sur la protection des données (OLPD)",
       "titelIt": "Ordinanza relativa alla legge federale sulla protezione dei dati (OLPD)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/700/de",
-      "sha": "fe8d025453b64c3e290a357b8666bc23423d0f3af6fbb3f7e912d742ac1a1866"
+      "sha": "192d5219fdf450fe2db3ca1a55bdbb8b737e04eb72504629f2575a453baa3cda"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2008-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/58",
       "dateDocument": "2008-01-22",
-      "roFundstelle": "AS 2008 58",
+      "roFundstelle": "AS 2008 189",
       "titelDe": "Verordnung zum Bundesgesetz über den Datenschutz (VDSG)",
       "titelFr": "Ordonnance relative à la loi fédérale sur la protection des données (OLPD)",
       "titelIt": "Ordinanza relativa alla legge federale sulla protezione dei dati (OLPD)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/58/de",
-      "sha": "63e6e22d34f4e328970d5d3074e2131689cbf5eafed97dcb5ef7a236810ff358"
+      "sha": "d08d0338bf2c1f43071f6c5a2885f1322aca3d8df82a7d84f1922f1cef34f137"
     },
     {
       "art": "aenderung",
@@ -113,5 +113,5 @@
       "sha": "53a3e7a39c68723b98f08a85b0dc1f7db2bb78e70b55b3060c96a8076439aee7"
     }
   ],
-  "sha": "4d51712b9f4f136f07481ac2d999b57c15d9eab1a2ef988b5bf00b3e3452d13b"
+  "sha": "47d8b7319246ec68eb8651cd7207a66f02243ced4b5df4ea6095735f52c28fb4"
 }

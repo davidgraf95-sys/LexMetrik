@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1874-05-29"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesverfassung der Schweizerischen Eidgenossenschaft vom 29. Mai 1874"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Constitution fédérale de la Confédération suisse du 29 mai 1874"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Costituzione federale della Confederazione Svizzera del 29 maggio 1874"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1/1_1_1"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1874-05-29"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1874-05-29"
+        "value": "RO 1 1"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1874-05-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1 1"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesverfassung der Schweizerischen Eidgenossenschaft vom 29. Mai 1874"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1874-05-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1 1"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesverfassung der Schweizerischen Eidgenossenschaft vom 29. Mai 1874"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Constitution fédérale de la Confédération suisse du 29 mai 1874"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Costituzione federale della Confederazione Svizzera del 29 maggio 1874"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1/1_1_1"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1874-05-29"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1874-05-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1 1"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesverfassung der Schweizerischen Eidgenossenschaft vom 29. Mai 1874"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-08-21"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesbeschluss über Massnahmen zum Haushaltsausgleich"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Arrêté fédéral instituant des mesures visant à équilibrer le budget"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Decreto federale che istituisce provvedimenti intesi a equilibrare il bilancio"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1998/2031_2031_2031"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-06-07"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-08-21"
+        "value": "RO 1998 2031"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-08-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1998 2031"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesbeschluss über Massnahmen zum Haushaltsausgleich"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Arrêté fédéral instituant des mesures visant à équilibrer le budget"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Decreto federale che istituisce provvedimenti intesi a equilibrare il bilancio"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1998/2031_2031_2031"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-06-07"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-08-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1998 2031"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über Massnahmen zum Haushaltsausgleich"
@@ -245,37 +273,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-03-20"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesbeschluss über Bau und Finanzierung von Infrastrukturvorhaben des öffentlichen Verkehrs"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Arrêté fédéral relatif à la réalisation et au financement des projets d'infrastructure des transports publics"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Decreto federale concernente la costruzione e il finanziamento dei progetti d'infrastruttura dei trasporti pubblici"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1999/110"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-11-29"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-03-20"
+        "value": "RO 1999 741"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +309,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-03-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 741"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesbeschluss über Bau und Finanzierung von Infrastrukturvorhaben des öffentlichen Verkehrs"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Arrêté fédéral relatif à la réalisation et au financement des projets d'infrastructure des transports publics"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Decreto federale concernente la costruzione e il finanziamento dei progetti d'infrastruttura dei trasporti pubblici"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/110"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-11-29"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-03-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 741"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über Bau und Finanzierung von Infrastrukturvorhaben des öffentlichen Verkehrs"
@@ -341,37 +381,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-04-29"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesbeschluss über einen befristet geltenden, neuen Getreideartikel"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Arrêté fédéral sur un nouvel article céréalier de durée limitée"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Decreto federale concernente un nuovo articolo di validità limitata sui cereali"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1999/111"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-11-29"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-04-29"
+        "value": "RO 1999 743"
       },
       "titleDe": {
         "type": "literal",
@@ -405,6 +417,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-04-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 743"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesbeschluss über einen befristet geltenden, neuen Getreideartikel"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Arrêté fédéral sur un nouvel article céréalier de durée limitée"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Decreto federale concernente un nuovo articolo di validità limitata sui cereali"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/111"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-11-29"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-04-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 743"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über einen befristet geltenden, neuen Getreideartikel"
@@ -437,37 +489,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-10-09"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesbeschluss über die Änderung der Voraussetzungen für die Wählbarkeit in den Bundesrat"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Arrêté fédéral concernant la modification des conditions d'éligibilité au Conseil fédéral"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Decreto federale concernente la modifica delle condizioni di eleggibilità al Consiglio federale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1999/168"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-02-07"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-10-09"
+        "value": "RO 1999 1239"
       },
       "titleDe": {
         "type": "literal",
@@ -501,6 +525,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-10-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 1239"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesbeschluss über die Änderung der Voraussetzungen für die Wählbarkeit in den Bundesrat"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Arrêté fédéral concernant la modification des conditions d'éligibilité au Conseil fédéral"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Decreto federale concernente la modifica delle condizioni di eleggibilità al Consiglio federale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/168"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-02-07"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-10-09"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 1239"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Änderung der Voraussetzungen für die Wählbarkeit in den Bundesrat"
@@ -533,37 +597,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-06-26"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesbeschluss betreffend eine Verfassungsbestimmung über die Transplantationsmedizin"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Arrêté fédéral concernant un article constitutionnel sur la médecine de la transplantation"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Decreto federale concernente un articolo costituzionale sulla medicina dei trapianti"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1999/186"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-02-07"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-06-26"
+        "value": "RO 1999 1341"
       },
       "titleDe": {
         "type": "literal",
@@ -597,6 +633,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-06-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 1341"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesbeschluss betreffend eine Verfassungsbestimmung über die Transplantationsmedizin"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Arrêté fédéral concernant un article constitutionnel sur la médecine de la transplantation"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Decreto federale concernente un articolo costituzionale sulla medicina dei trapianti"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/186"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-02-07"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-06-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 1341"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss betreffend eine Verfassungsbestimmung über die Transplantationsmedizin"
@@ -629,37 +705,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-09-28"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesbeschluss über das Inkrafttreten der neuen Bundesverfassung vom 18. April 1999"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Arrêté fédéral sur l'entrée en vigueur de la nouvelle Constitution fédérale du 18 avril 1999"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Decreto federale concernente l'entrata in vigore della nuova Costituzione federale del 18 aprile 1999"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1999/403"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-09-28"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-09-28"
+        "value": "RO 1999 2555"
       },
       "titleDe": {
         "type": "literal",
@@ -693,6 +741,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-09-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2555"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesbeschluss über das Inkrafttreten der neuen Bundesverfassung vom 18. April 1999"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Arrêté fédéral sur l'entrée en vigueur de la nouvelle Constitution fédérale du 18 avril 1999"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Decreto federale concernente l'entrata in vigore della nuova Costituzione federale del 18 aprile 1999"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/403"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-09-28"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-09-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2555"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über das Inkrafttreten der neuen Bundesverfassung vom 18. April 1999"
@@ -725,37 +813,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-12-18"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesverfassung der Schweizerischen Eidgenossenschaft vom 18. April 1999"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Constitution fédérale de la Confédération suisse du 18 avril 1999"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Costituzione federale della Confederazione Svizzera del 18 aprile 1999"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1999/404"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-12-18"
+        "value": "RO 1999 2556"
       },
       "titleDe": {
         "type": "literal",
@@ -789,6 +849,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-12-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2556"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesverfassung der Schweizerischen Eidgenossenschaft vom 18. April 1999"
@@ -821,6 +885,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-12-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2556"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesverfassung der Schweizerischen Eidgenossenschaft vom 18. April 1999"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Constitution fédérale de la Confédération suisse du 18 avril 1999"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Costituzione federale della Confederazione Svizzera del 18 aprile 1999"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/404"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-12-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2556"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesverfassung der Schweizerischen Eidgenossenschaft vom 18. April 1999"
@@ -853,37 +957,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-10-26"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesverfassung der Schweizerischen Eidgenossenschaft vom 18. April 1999 (nur ital.)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Constitution fédérale de la Confédération suisse du 18 avril 1999 (seulement en italien)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Costituzione federale della Confederazione Svizzera del 18 aprile 1999"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1999/418"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-10-26"
+        "value": "RO 1999 2680"
       },
       "titleDe": {
         "type": "literal",
@@ -917,6 +993,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-10-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2680"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesverfassung der Schweizerischen Eidgenossenschaft vom 18. April 1999 (nur ital.)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Constitution fédérale de la Confédération suisse du 18 avril 1999 (seulement en italien)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Costituzione federale della Confederazione Svizzera del 18 aprile 1999"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/418"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-10-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2680"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesverfassung der Schweizerischen Eidgenossenschaft vom 18. April 1999 (nur ital.)"
@@ -949,37 +1065,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-12-15"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesbeschluss über die Aufhebung der Genehmigungspflicht für die Errichtung von Bistümern"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Arrêté fédéral portant abrogation de la disposition constitutionnelle soumettant l'érection des évêchés à l'approbation de la Confédération"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Decreto federale concernente la soppressione dell'obbligo d'approvazione per l'istituzione di diocesi"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2001/321"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-06-10"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-12-15"
+        "value": "RO 2001 2262"
       },
       "titleDe": {
         "type": "literal",
@@ -1013,6 +1101,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-12-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 2262"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesbeschluss über die Aufhebung der Genehmigungspflicht für die Errichtung von Bistümern"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Arrêté fédéral portant abrogation de la disposition constitutionnelle soumettant l'érection des évêchés à l'approbation de la Confédération"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Decreto federale concernente la soppressione dell'obbligo d'approvazione per l'istituzione di diocesi"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2001/321"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-06-10"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-12-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 2262"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Aufhebung der Genehmigungspflicht für die Errichtung von Bistümern"
@@ -1045,37 +1173,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-10-05"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesbeschluss über die Volksinitiative «für den Beitritt der Schweiz zur Organisation der Vereinten Nationen (UNO)»"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Arrêté fédéral sur l'initiative populaire «Pour l'adhésion de la Suisse à l'Organisation des Nations Unies (ONU)»"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Decreto federale concernente l'iniziativa popolare «per l'adesione della Svizzera all'Organizzazione delle Nazioni Unite (ONU)»"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/156"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-03-03"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-10-05"
+        "value": "RO 2002 885"
       },
       "titleDe": {
         "type": "literal",
@@ -1109,6 +1209,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-10-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 885"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesbeschluss über die Volksinitiative «für den Beitritt der Schweiz zur Organisation der Vereinten Nationen (UNO)»"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Arrêté fédéral sur l'initiative populaire «Pour l'adhésion de la Suisse à l'Organisation des Nations Unies (ONU)»"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Decreto federale concernente l'iniziativa popolare «per l'adesione della Svizzera all'Organizzazione delle Nazioni Unite (ONU)»"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/156"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-03-03"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-10-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 885"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Volksinitiative «für den Beitritt der Schweiz zur Organisation der Vereinten Nationen (UNO)»"
@@ -1141,37 +1281,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-09-24"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesbeschluss über das teilweise Inkrafttreten der Justizreform vom 12. März 2000"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Arrêté fédéral sur l'entrée en vigueur partielle de la réforme de la justice du 12 mars 2000"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Decreto federale concernente l'entrata in vigore parziale della riforma giudiziaria del 12 marzo 2000"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/466"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-09-24"
+        "value": "RO 2002 3147"
       },
       "titleDe": {
         "type": "literal",
@@ -1205,6 +1317,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-09-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3147"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesbeschluss über das teilweise Inkrafttreten der Justizreform vom 12. März 2000"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Arrêté fédéral sur l'entrée en vigueur partielle de la réforme de la justice du 12 mars 2000"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Decreto federale concernente l'entrata in vigore parziale della riforma giudiziaria del 12 marzo 2000"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/466"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-09-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3147"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über das teilweise Inkrafttreten der Justizreform vom 12. März 2000"
@@ -1236,6 +1388,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-10-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3148"
       },
       "titleDe": {
         "type": "literal",
@@ -1269,6 +1425,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-10-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3148"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Reform der Justiz"
@@ -1301,6 +1461,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-10-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3148"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Reform der Justiz"
@@ -1333,6 +1497,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-06-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 241"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über eine Schuldenbremse"
@@ -1365,6 +1533,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-06-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 241"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über eine Schuldenbremse"
@@ -1396,6 +1568,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-06-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 241"
       },
       "titleDe": {
         "type": "literal",
@@ -1428,6 +1604,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-10-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 1949"
       },
       "titleDe": {
         "type": "literal",
@@ -1461,6 +1641,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-10-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 1949"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Änderung der Volksrechte"
@@ -1492,6 +1676,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-10-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 1949"
       },
       "titleDe": {
         "type": "literal",
@@ -1524,6 +1712,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-06-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 1953"
       },
       "titleDe": {
         "type": "literal",
@@ -1557,6 +1749,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-06-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 1953"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über das Inkrafttreten der direkt anwendbaren Bestimmungen der Änderung der Volksrechte vom 4. Oktober 2002"
@@ -1588,6 +1784,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-06-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 1953"
       },
       "titleDe": {
         "type": "literal",
@@ -1620,6 +1820,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-06-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 2341"
       },
       "titleDe": {
         "type": "literal",
@@ -1653,6 +1857,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-06-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 2341"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Volksinitiative «Lebenslange Verwahrung für nicht therapierbare, extrem gefährliche Sexual- und Gewaltstraftäter»"
@@ -1684,6 +1892,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-06-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 2341"
       },
       "titleDe": {
         "type": "literal",
@@ -1716,6 +1928,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-03-02"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 1475"
       },
       "titleDe": {
         "type": "literal",
@@ -1749,6 +1965,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-03-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 1475"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über das teilweise Inkrafttreten der Justizreform vom 12. März 2000"
@@ -1780,6 +2000,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-03-02"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 1475"
       },
       "titleDe": {
         "type": "literal",
@@ -1812,6 +2036,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-03-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 1057"
       },
       "titleDe": {
         "type": "literal",
@@ -1845,6 +2073,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-03-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 1057"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über eine neue Finanzordnung"
@@ -1876,6 +2108,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-03-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 1057"
       },
       "titleDe": {
         "type": "literal",
@@ -1908,6 +2144,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-03-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 1059"
       },
       "titleDe": {
         "type": "literal",
@@ -1941,6 +2181,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-03-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 1059"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über das vollständige Inkrafttreten der Justizreform vom 12. März 2000"
@@ -1972,6 +2216,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-03-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 1059"
       },
       "titleDe": {
         "type": "literal",
@@ -2004,6 +2252,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-06-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 89"
       },
       "titleDe": {
         "type": "literal",
@@ -2037,6 +2289,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-06-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 89"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Volksinitiative «für Lebensmittel aus gentechnikfreier Landwirtschaft»"
@@ -2068,6 +2324,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-06-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 89"
       },
       "titleDe": {
         "type": "literal",
@@ -2100,6 +2360,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-12-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 3033"
       },
       "titleDe": {
         "type": "literal",
@@ -2133,6 +2397,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-12-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 3033"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Neuordnung der Verfassungsbestimmungen zur Bildung"
@@ -2164,6 +2432,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-12-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 3033"
       },
       "titleDe": {
         "type": "literal",
@@ -2196,6 +2468,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-10-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5765"
       },
       "titleDe": {
         "type": "literal",
@@ -2229,6 +2505,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-10-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5765"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss zur Neugestaltung des Finanzausgleichs und der Aufgabenteilung zwischen Bund und Kantonen (NFA)"
@@ -2260,6 +2540,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-10-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5765"
       },
       "titleDe": {
         "type": "literal",
@@ -2292,6 +2576,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5325"
       },
       "titleDe": {
         "type": "literal",
@@ -2325,6 +2613,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5325"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verfassungsartikel «Zukunft mit Komplementärmedizin»"
@@ -2356,6 +2648,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5325"
       },
       "titleDe": {
         "type": "literal",
@@ -2388,6 +2684,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-12-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 6409"
       },
       "titleDe": {
         "type": "literal",
@@ -2421,6 +2721,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-12-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 6409"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über den Verzicht auf die Einführung der allgemeinen Volksinitiative"
@@ -2452,6 +2756,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-12-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 6409"
       },
       "titleDe": {
         "type": "literal",
@@ -2484,6 +2792,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-06-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 471"
       },
       "titleDe": {
         "type": "literal",
@@ -2517,6 +2829,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-06-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 471"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss betreffend die Volksinitiative «Für die Unverjährbarkeit pornografischer Straftaten an Kindern»"
@@ -2548,6 +2864,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-06-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 471"
       },
       "titleDe": {
         "type": "literal",
@@ -2580,6 +2900,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-09-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1569"
       },
       "titleDe": {
         "type": "literal",
@@ -2613,6 +2937,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-09-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1569"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss zu einem Verfassungsartikel über die Forschung am Menschen"
@@ -2644,6 +2972,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-09-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1569"
       },
       "titleDe": {
         "type": "literal",
@@ -2676,6 +3008,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 2159"
       },
       "titleDe": {
         "type": "literal",
@@ -2709,6 +3045,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 2159"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss zur Schaffung einer Spezialfinanzierung für Aufgaben im Luftverkehr"
@@ -2740,6 +3080,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 2159"
       },
       "titleDe": {
         "type": "literal",
@@ -2772,6 +3116,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-06-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 2161"
       },
       "titleDe": {
         "type": "literal",
@@ -2805,6 +3153,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-06-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 2161"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Volksinitiative «Gegen den Bau von Minaretten»"
@@ -2836,6 +3188,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-06-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 2161"
       },
       "titleDe": {
         "type": "literal",
@@ -2868,6 +3224,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-06-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 3821"
       },
       "titleDe": {
         "type": "literal",
@@ -2901,6 +3261,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-06-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 3821"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss vom 13. Juni 2008 über eine befristete Zusatzfinanzierung der Invalidenversicherung durch Anhebung der Mehrwertsteuersätze, geändert durch den Bundesbeschluss vom 12. Juni 2009 über die Änderung dieses Beschlusses"
@@ -2932,6 +3296,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-06-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 3821"
       },
       "titleDe": {
         "type": "literal",
@@ -2964,6 +3332,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-06-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 1199"
       },
       "titleDe": {
         "type": "literal",
@@ -2997,6 +3369,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-06-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 1199"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Volksinitiative «Für die Ausschaffung krimineller Ausländer (Ausschaffungsinitiative)»"
@@ -3028,6 +3404,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-06-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 1199"
       },
       "titleDe": {
         "type": "literal",
@@ -3060,6 +3440,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-06-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 3627"
       },
       "titleDe": {
         "type": "literal",
@@ -3093,6 +3477,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-06-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 3627"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Volksinitiative «Schluss mit uferlosem Bau von Zweitwohnungen!»"
@@ -3124,6 +3512,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-06-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 3627"
       },
       "titleDe": {
         "type": "literal",
@@ -3156,6 +3548,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-09-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 3629"
       },
       "titleDe": {
         "type": "literal",
@@ -3189,6 +3585,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-09-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 3629"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Regelung der Geldspiele zugunsten gemeinnütziger Zwecke (Gegenentwurf zur Volksinitiative «Für Geldspiele im Dienste des Gemeinwohls»)"
@@ -3220,6 +3620,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-09-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 3629"
       },
       "titleDe": {
         "type": "literal",
@@ -3252,6 +3656,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-03-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1303"
       },
       "titleDe": {
         "type": "literal",
@@ -3285,6 +3693,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-03-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1303"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Eidgenössische Volksinitiative «Gegen die Abzockerei»"
@@ -3316,6 +3728,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-03-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1303"
       },
       "titleDe": {
         "type": "literal",
@@ -3348,6 +3764,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-03-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 435"
       },
       "titleDe": {
         "type": "literal",
@@ -3381,6 +3801,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-03-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 435"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Jugendmusikförderung (Gegenentwurf zur Volksinitiative «jugend + musik»)"
@@ -3412,6 +3836,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-03-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 435"
       },
       "titleDe": {
         "type": "literal",
@@ -3444,6 +3872,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-09-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1391"
       },
       "titleDe": {
         "type": "literal",
@@ -3477,6 +3909,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-09-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1391"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Eidgenössische Volksinitiative «Gegen Masseneinwanderung»"
@@ -3508,6 +3944,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-09-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1391"
       },
       "titleDe": {
         "type": "literal",
@@ -3540,6 +3980,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-09-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 2769"
       },
       "titleDe": {
         "type": "literal",
@@ -3573,6 +4017,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-09-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 2769"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die medizinische Grundversorgung (Direkter Gegenentwurf zur Volksinitiative «Ja zur Hausarztmedizin»)"
@@ -3604,6 +4052,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-09-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 2769"
       },
       "titleDe": {
         "type": "literal",
@@ -3636,6 +4088,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-05-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 2771"
       },
       "titleDe": {
         "type": "literal",
@@ -3669,6 +4125,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-05-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 2771"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Eidgenössische Volksinitiative «Pädophile sollen nicht mehr mit Kindern arbeiten dürfen»"
@@ -3700,6 +4160,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-05-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 2771"
       },
       "titleDe": {
         "type": "literal",
@@ -3732,6 +4196,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-06-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 645"
       },
       "titleDe": {
         "type": "literal",
@@ -3765,6 +4233,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-06-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 645"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Finanzierung und den Ausbau der Eisenbahninfrastruktur (direkter Gegenentwurf zur Volksinitiative «Für den öffentlichen Verkehr»)"
@@ -3796,6 +4268,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-06-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 645"
       },
       "titleDe": {
         "type": "literal",
@@ -3828,6 +4304,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-12-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2887"
       },
       "titleDe": {
         "type": "literal",
@@ -3861,6 +4341,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-12-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2887"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Änderung der Verfassungsbestimmung zur Fortpflanzungsmedizin und Gentechnologie im Humanbereich"
@@ -3892,6 +4376,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-12-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2887"
       },
       "titleDe": {
         "type": "literal",
@@ -3924,6 +4412,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-09-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 2643"
       },
       "titleDe": {
         "type": "literal",
@@ -3957,6 +4449,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-09-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 2643"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die erleichterte Einbürgerung von Personen der dritten Ausländergeneration"
@@ -3988,6 +4484,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-09-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 2643"
       },
       "titleDe": {
         "type": "literal",
@@ -4020,6 +4520,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-09-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6731"
       },
       "titleDe": {
         "type": "literal",
@@ -4053,6 +4557,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-09-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6731"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Schaffung eines Fonds für die Nationalstrassen und den Agglomerationsverkehr"
@@ -4084,6 +4592,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-09-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6731"
       },
       "titleDe": {
         "type": "literal",
@@ -4116,6 +4628,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6735"
       },
       "titleDe": {
         "type": "literal",
@@ -4149,6 +4665,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6735"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Ernährungssicherheit (direkter Gegenentwurf zur Volksinitiative «Für Ernährungssicherheit»)"
@@ -4180,6 +4700,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6735"
       },
       "titleDe": {
         "type": "literal",
@@ -4212,6 +4736,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-06-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 769"
       },
       "titleDe": {
         "type": "literal",
@@ -4245,6 +4773,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-06-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 769"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die neue Finanzordnung 2021"
@@ -4276,6 +4808,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-06-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 769"
       },
       "titleDe": {
         "type": "literal",
@@ -4308,6 +4844,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-03-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 525"
       },
       "titleDe": {
         "type": "literal",
@@ -4341,6 +4881,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-03-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 525"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Velowege sowie die Fuss- und Wanderwege (direkter Gegenentwurf zur Volksinitiative «Zur Förderung der Velo-, Fuss- und Wanderwege [Velo-Initiative]»)"
@@ -4372,6 +4916,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-03-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 525"
       },
       "titleDe": {
         "type": "literal",

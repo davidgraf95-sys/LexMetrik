@@ -21,69 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1951-07-28"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Abkommen vom 28. Juli 1951 über die Rechtsstellung der Flüchtlinge (mit Anhang)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention du 28 juillet 1951 relative au statut des réfugiés (avec annexe)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione del 28 luglio 1951 sullo statuto dei rifugiati (con. All.)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.142.30"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1955/443_461_469"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1955-04-21"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1951-07-28"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Abkommen vom 28. Juli 1951 über die Rechtsstellung der Flüchtlinge (mit Anhang)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention du 28 juillet 1951 relative au statut des réfugiés (avec annexe)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione del 28 luglio 1951 sullo statuto dei rifugiati (con. All.)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.142.30"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1955/443_461_469"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1955-04-21"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1951-07-28"
+        "value": "RO 1955 461"
       },
       "titleDe": {
         "type": "literal",
@@ -117,6 +57,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1951-07-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1955 461"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Abkommen vom 28. Juli 1951 über die Rechtsstellung der Flüchtlinge (mit Anhang)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 28 juillet 1951 relative au statut des réfugiés (avec annexe)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 28 luglio 1951 sullo statuto dei rifugiati (con. All.)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.142.30"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1955/443_461_469"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1955-04-21"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1951-07-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1955 461"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Abkommen vom 28. Juli 1951 über die Rechtsstellung der Flüchtlinge (mit Anhang)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 28 juillet 1951 relative au statut des réfugiés (avec annexe)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 28 luglio 1951 sullo statuto dei rifugiati (con. All.)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.142.30"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1955/443_461_469"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1955-04-21"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1951-07-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1955 461"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Abkommen vom 28. Juli 1951 über die Rechtsstellung der Flüchtlinge (mit Anhang)"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-05-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3978"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Abkommen vom 28. Juli 1951 über die Rechtsstellung der Flüchtlinge (mit Anhang)"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-05-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3978"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Abkommen vom 28. Juli 1951 über die Rechtsstellung der Flüchtlinge (mit Anhang)"
@@ -213,6 +237,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-05-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3978"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Abkommen vom 28. Juli 1951 über die Rechtsstellung der Flüchtlinge (mit Anhang)"
@@ -245,6 +273,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-02-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 1651"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Abkommen vom 28. Juli 1951 über die Rechtsstellung der Flüchtlinge"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-02-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 1651"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Abkommen vom 28. Juli 1951 über die Rechtsstellung der Flüchtlinge"
@@ -309,69 +345,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-02-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Abkommen vom 28. Juli 1951 über die Rechtsstellung der Flüchtlinge"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention du 28 juillet 1951 relative au statut des réfugiés"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione del 28 luglio 1951 sullo statuto dei rifugiati"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.142.30"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/307"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-03-23"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-03-23"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Abkommen vom 28. Juli 1951 über die Rechtsstellung der Flüchtlinge"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention du 28 juillet 1951 relative au statut des réfugiés"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione del 28 luglio 1951 sullo statuto dei rifugiati"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.142.30"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/307"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-03-23"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-03-23"
+        "value": "RO 2006 1651"
       },
       "titleDe": {
         "type": "literal",
@@ -405,6 +381,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-03-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 2491"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Abkommen vom 28. Juli 1951 über die Rechtsstellung der Flüchtlinge"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 28 juillet 1951 relative au statut des réfugiés"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 28 luglio 1951 sullo statuto dei rifugiati"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.142.30"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/307"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-03-23"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-03-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 2491"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Abkommen vom 28. Juli 1951 über die Rechtsstellung der Flüchtlinge"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 28 juillet 1951 relative au statut des réfugiés"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 28 luglio 1951 sullo statuto dei rifugiati"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.142.30"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/307"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-03-23"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-03-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 2491"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Abkommen vom 28. Juli 1951 über die Rechtsstellung der Flüchtlinge"
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 3601"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Abkommen vom 28. Juli 1951 über die Rechtsstellung der Flüchtlinge"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 3601"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Abkommen vom 28. Juli 1951 über die Rechtsstellung der Flüchtlinge"
@@ -500,6 +560,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 3601"
       },
       "titleDe": {
         "type": "literal",

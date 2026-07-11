@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-24"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über das Einreise- und Visumverfahren (VEV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la procédure d'entrée et de visas (OPEV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente la procedura d'entrata e di rilascio del visto (OPEV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.204"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/761"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-10-24"
+        "value": "RO 2007 5537"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5537"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über das Einreise- und Visumverfahren (VEV)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5537"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über das Einreise- und Visumverfahren (VEV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la procédure d'entrée et de visas (OPEV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente la procedura d'entrata e di rilascio del visto (OPEV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.204"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/761"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-10-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5537"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über das Einreise- und Visumverfahren (VEV)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.204"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2008/758"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-12-12"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-10-22"
+        "value": "RO 2008 5441"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5441"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -245,37 +237,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.204"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/594"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-12-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-09-30"
+        "value": "RO 2008 5441"
       },
       "titleDe": {
         "type": "literal",
@@ -297,17 +261,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/594"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/758"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-12-01"
+        "value": "2008-12-12"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-09-30"
+        "value": "2008-10-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5441"
       },
       "titleDe": {
         "type": "literal",
@@ -341,6 +309,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-09-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5097"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.204"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/594"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-12-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-09-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5097"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.204"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/594"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-12-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-09-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5097"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-03-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1205"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-03-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1205"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -436,6 +488,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-03-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1205"
       },
       "titleDe": {
         "type": "literal",
@@ -469,37 +525,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-03-31"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.204"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/194"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-04-05"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-03-31"
+        "value": "RO 2010 1449"
       },
       "titleDe": {
         "type": "literal",
@@ -533,37 +561,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-03-31"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.204"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/815"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-11-24"
+        "value": "RO 2010 1449"
       },
       "titleDe": {
         "type": "literal",
@@ -585,17 +585,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/815"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/194"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-01-01"
+        "value": "2010-04-05"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-11-24"
+        "value": "2010-03-31"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1449"
       },
       "titleDe": {
         "type": "literal",
@@ -629,6 +633,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-11-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5763"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.204"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/815"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-11-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5763"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.204"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/815"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-11-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5763"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-11-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5767"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -693,6 +777,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-11-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5767"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -724,6 +812,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-11-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5767"
       },
       "titleDe": {
         "type": "literal",
@@ -757,37 +849,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-02-17"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.204"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/95"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-02-18"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-02-17"
+        "value": "RO 2010 605"
       },
       "titleDe": {
         "type": "literal",
@@ -821,37 +885,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-02-17"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.204"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/446"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-08-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-07-06"
+        "value": "RO 2010 605"
       },
       "titleDe": {
         "type": "literal",
@@ -873,17 +909,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/446"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/95"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-08-01"
+        "value": "2010-02-18"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-07-06"
+        "value": "2010-02-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 605"
       },
       "titleDe": {
         "type": "literal",
@@ -917,6 +957,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-07-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3317"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.204"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/446"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-07-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3317"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.204"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/446"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-07-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3317"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -949,6 +1065,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-07-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 3817"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -981,6 +1101,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-07-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 3817"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -1012,6 +1136,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-07-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 3817"
       },
       "titleDe": {
         "type": "literal",
@@ -1045,37 +1173,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-09-14"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.204"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/582"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-09-14"
+        "value": "RO 2012 4891"
       },
       "titleDe": {
         "type": "literal",
@@ -1109,37 +1209,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-09-14"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.204"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2013/565"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-10-18"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-08-14"
+        "value": "RO 2012 4891"
       },
       "titleDe": {
         "type": "literal",
@@ -1161,17 +1233,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2013/565"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/582"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-10-18"
+        "value": "2012-10-01"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-08-14"
+        "value": "2012-09-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 4891"
       },
       "titleDe": {
         "type": "literal",
@@ -1205,6 +1281,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-08-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 2733"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.204"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/565"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-10-18"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-08-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 2733"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.204"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/565"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-10-18"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-08-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 2733"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -1237,6 +1389,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-04-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 953"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -1269,6 +1425,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-04-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 953"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -1300,6 +1460,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-04-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 953"
       },
       "titleDe": {
         "type": "literal",
@@ -1333,37 +1497,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-06-06"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.204"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2014/296"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-06-09"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-06-06"
+        "value": "RO 2014 1393"
       },
       "titleDe": {
         "type": "literal",
@@ -1397,37 +1533,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-06-06"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.204"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2014/92"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-03-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-02-19"
+        "value": "RO 2014 1393"
       },
       "titleDe": {
         "type": "literal",
@@ -1449,17 +1557,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2014/92"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/296"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-03-01"
+        "value": "2014-06-09"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-02-19"
+        "value": "2014-06-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1393"
       },
       "titleDe": {
         "type": "literal",
@@ -1493,6 +1605,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-02-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 491"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.204"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/92"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-03-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-02-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 491"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.204"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/92"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-03-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-02-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 491"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -1525,6 +1713,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1867"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -1557,6 +1749,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1867"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -1588,6 +1784,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1867"
       },
       "titleDe": {
         "type": "literal",
@@ -1621,37 +1821,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-02"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.204"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/571"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-09-02"
+        "value": "RO 2015 3035"
       },
       "titleDe": {
         "type": "literal",
@@ -1685,37 +1857,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-02"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.204"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/624"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-10-15"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-09-18"
+        "value": "RO 2015 3035"
       },
       "titleDe": {
         "type": "literal",
@@ -1737,17 +1881,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/624"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/571"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-10-15"
+        "value": "2015-10-01"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-09-18"
+        "value": "2015-09-02"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 3035"
       },
       "titleDe": {
         "type": "literal",
@@ -1781,6 +1929,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 3723"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.204"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/624"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-10-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-09-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 3723"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.204"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/624"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-10-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-09-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 3723"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -1813,6 +2037,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-11-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 4741"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -1845,6 +2073,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-11-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 4741"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -1876,6 +2108,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-11-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 4741"
       },
       "titleDe": {
         "type": "literal",
@@ -1909,37 +2145,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-02-11"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'entrée et l'octroi des visas (OEV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.204"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/78"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-03-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-02-11"
+        "value": "RO 2015 541"
       },
       "titleDe": {
         "type": "literal",
@@ -1973,6 +2181,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-02-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 541"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'entrée et l'octroi des visas (OEV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.204"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/78"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-03-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-02-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 541"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -2005,37 +2253,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-11-24"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente concernente l'entrata e il rilascio del visto (OEV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.204"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/795"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-12-14"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-11-24"
+        "value": "RO 2015 4871"
       },
       "titleDe": {
         "type": "literal",
@@ -2069,6 +2289,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-11-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 4871"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente concernente l'entrata e il rilascio del visto (OEV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.204"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/795"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-12-14"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-11-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 4871"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -2101,37 +2361,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-12-11"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.204"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/858"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-12-28"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-12-11"
+        "value": "RO 2015 5559"
       },
       "titleDe": {
         "type": "literal",
@@ -2165,6 +2397,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-12-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 5559"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.204"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/858"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-12-28"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-12-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 5559"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -2197,6 +2469,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-03-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 923"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -2229,6 +2505,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-03-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 923"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -2260,6 +2540,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-03-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 923"
       },
       "titleDe": {
         "type": "literal",
@@ -2293,37 +2577,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-05-04"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.204"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2016/256"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-05-16"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-05-04"
+        "value": "RO 2016 1283"
       },
       "titleDe": {
         "type": "literal",
@@ -2357,6 +2613,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-05-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1283"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.204"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/256"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-05-16"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-05-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1283"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -2389,6 +2685,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-07-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2635"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -2421,6 +2721,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-07-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2635"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -2452,6 +2756,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-07-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2635"
       },
       "titleDe": {
         "type": "literal",
@@ -2485,37 +2793,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-10-11"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.204"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2016/595"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-11-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-10-11"
+        "value": "RO 2016 3539"
       },
       "titleDe": {
         "type": "literal",
@@ -2549,6 +2829,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-10-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 3539"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.204"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/595"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-11-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-10-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 3539"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -2581,6 +2901,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-10-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 3721"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -2613,6 +2937,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-10-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 3721"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -2644,6 +2972,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-10-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 3721"
       },
       "titleDe": {
         "type": "literal",
@@ -2677,37 +3009,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.204"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2017/177"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-03-28"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-03-22"
+        "value": "RO 2017 1683"
       },
       "titleDe": {
         "type": "literal",
@@ -2741,6 +3045,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 1683"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.204"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2017/177"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-03-28"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-03-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 1683"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -2773,6 +3117,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-04-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 2549"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -2805,6 +3153,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-04-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 2549"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -2836,6 +3188,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-04-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 2549"
       },
       "titleDe": {
         "type": "literal",
@@ -2869,37 +3225,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-06-02"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.204"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2017/339"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-06-11"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-06-02"
+        "value": "RO 2017 3273"
       },
       "titleDe": {
         "type": "literal",
@@ -2933,6 +3261,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-06-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 3273"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.204"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2017/339"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-06-11"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-06-02"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 3273"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -2965,6 +3333,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-08-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3087"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -2997,6 +3369,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-08-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3087"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -3029,6 +3405,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-08-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3087"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -3060,6 +3440,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-08-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3087"
       },
       "titleDe": {
         "type": "literal",
@@ -3093,37 +3477,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-12-04"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.204"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2018/711"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-12-04"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-12-04"
+        "value": "RO 2018 4559"
       },
       "titleDe": {
         "type": "literal",
@@ -3157,6 +3513,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-12-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 4559"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.204"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/711"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-12-04"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-12-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 4559"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -3189,6 +3585,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-02-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 907"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -3221,6 +3621,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-02-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 907"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -3252,6 +3656,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-02-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 907"
       },
       "titleDe": {
         "type": "literal",
@@ -3285,37 +3693,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-12-19"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.204"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2019/22"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2019-02-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-12-19"
+        "value": "RO 2019 153"
       },
       "titleDe": {
         "type": "literal",
@@ -3349,6 +3729,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-12-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 153"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.204"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2019/22"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-12-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 153"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -3381,6 +3801,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-05-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1435"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -3413,6 +3837,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-05-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1435"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -3444,6 +3872,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-05-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1435"
       },
       "titleDe": {
         "type": "literal",
@@ -3477,6 +3909,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-08-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2633"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -3509,6 +3945,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-08-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2633"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -3541,69 +3981,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-08-14"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.204"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2019/75"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2019-02-15"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2019-01-16"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.204"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2019/75"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2019-02-15"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2019-01-16"
+        "value": "RO 2019 2633"
       },
       "titleDe": {
         "type": "literal",
@@ -3637,6 +4017,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-01-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 431"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.204"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2019/75"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-02-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-01-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 431"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'entrée et l'octroi de visas (OEV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'entrata e il rilascio del visto (OEV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.204"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2019/75"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-02-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-01-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 431"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -3669,6 +4125,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-03-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 6415"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -3701,6 +4161,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-03-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 6415"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -3732,6 +4196,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-03-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 6415"
       },
       "titleDe": {
         "type": "literal",
@@ -3765,6 +4233,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-05-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1837"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -3797,6 +4269,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-05-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1837"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einreise und die Visumerteilung (VEV)"
@@ -3828,6 +4304,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-05-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1837"
       },
       "titleDe": {
         "type": "literal",

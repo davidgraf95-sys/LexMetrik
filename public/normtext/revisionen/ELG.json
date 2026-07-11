@@ -1,7 +1,7 @@
 {
   "erlassKey": "ELG",
   "sr": "831.30",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -46,25 +46,25 @@
       "dateEntryInForce": "2021-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/111",
       "dateDocument": "2019-03-22",
-      "roFundstelle": "AS 2020 111",
+      "roFundstelle": "AS 2020 585",
       "titelDe": "Bundesgesetz über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELG) (EL-Reform)",
       "titelFr": "Loi fédérale sur les prestations complémentaires à l'AVS et à l'AI (Loi sur les prestations complémentaires, LPC) (Réforme des PC)",
       "titelIt": "Legge federale sulle prestazioni complementari all'assicurazione per la vecchiaia, i superstiti e l'invalidità (LPC) (Riforma delle PC)",
       "botschaftKey": "BOTSCHAFT-2016-1620",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/111/de",
-      "sha": "3b8e8b7a4c4f9839a73ecb0cb8dd29c11930616c350764013a725e1fa281361e"
+      "sha": "13f751ae891a776eb0ea244b6e6bda2c756d9e8bde6dad50cc8ec564e5884db6"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2021-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/513",
       "dateDocument": "2020-06-30",
-      "roFundstelle": "AS 2020 513",
+      "roFundstelle": "AS 2020 2827",
       "titelDe": "Bundesgesetz über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELG) (EL-Reform) (Betrifft nur den italienischen Text)",
       "titelFr": "Loi fédérale sur les prestations complémentaires à l'AVS et à l'AI (Loi sur les prestations complémentaires, LPC) (Réforme des PC) (Ne concerne que le texte italien)",
       "titelIt": "Legge federale sulle prestazioni complementari all'assicurazione per la vecchiaia, i superstiti e l'invalidità (LPC) (Riforma delle PC)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/513/de",
-      "sha": "d6fda50a7e53c765614d36e10c822d9eee374d754166716320a3f4e8c6c847f9"
+      "sha": "d1774e8fce37260a838eb6c3650d463f69266dfcee0a8cc625d2277c050563e1"
     },
     {
       "art": "sammelerlass-marker",
@@ -131,26 +131,26 @@
       "dateEntryInForce": "2008-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/804",
       "dateDocument": "2006-10-06",
-      "roFundstelle": "AS 2007 804",
+      "roFundstelle": "AS 2007 6055",
       "titelDe": "Bundesgesetz über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELG)",
       "titelFr": "Loi fédérale sur les prestations complémentaires à l'AVS et à l'AI (Loi sur les prestations complémentaires, LPC)",
       "titelIt": "Legge federale sulle prestazioni complementari all'assicurazione per la vecchiaia, i superstiti e l'invalidità (LPC)",
       "botschaftKey": "BOTSCHAFT-2005-976",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/804/de",
-      "sha": "bf652ce4cd23a6f4a9a851a333a7a1b3e97f0c15e542048228b7df94d9e41613"
+      "sha": "b3a2e187ddd3478af64d22f4e20f0da54d4c6b03bdf2283be7c5955b9e32a38f"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/441",
       "dateDocument": "2000-06-23",
-      "roFundstelle": "AS 2000 441",
+      "roFundstelle": "AS 2000 2687",
       "titelDe": "Bundesgesetz über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELG)",
       "titelFr": "Loi fédérale sur les prestations complémentaires à l'assurance-vieillesse, survivants et invalidité (LPC)",
       "titelIt": "Legge federale sulle prestazioni complementari al l'assicurazione per la vecchiaia, i superstiti e l'invalidità (LPC)",
       "botschaftKey": "BOTSCHAFT-2000-99",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/441/de",
-      "sha": "b38960b5f7c89bfeeeecca9244e3e1c7f803512e9b883140d019e1af3c077669"
+      "sha": "6ba570a7088c8236412b0aa20ac670eb93b878b64e948ce285d6a12c991fc1ab"
     },
     {
       "art": "aenderung",
@@ -165,5 +165,5 @@
       "sha": "1ec623b9c28354e4facb3b50d90060bd4413a8fc934a1c90be21cc64b63643e5"
     }
   ],
-  "sha": "c77ce63b3ca76d628093ceb6ae2ae70a84606e674c085cc50f683ff30bc09b56"
+  "sha": "b4e8d78066be239ce8e75e3e4d5d9c4143be5db7d3a7503e2db1eb3d7336a230"
 }

@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1959-12-14"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung (1) zum Bundesgesetz vom 14. Dezember 1959 über die Erfindungspatente Titel I und II (PatV 1)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance (1) du 14 décembre 1959 relative à la loi fédéral sur les brevets d'invention, titres premier et deuxième (OBI 1)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza (1) del 14 dicembre 1959 per la legge federale sui brevetti d'invenzione, titolo primo e secondo (OBI 1)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "232.141"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1959/1979_2041_2065"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1960-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1959-12-14"
+        "value": "RO 1959 2041"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1959-12-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1959 2041"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung (1) zum Bundesgesetz vom 14. Dezember 1959 über die Erfindungspatente Titel I und II (PatV 1)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1959-12-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1959 2041"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung (1) zum Bundesgesetz vom 14. Dezember 1959 über die Erfindungspatente Titel I und II (PatV 1)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance (1) du 14 décembre 1959 relative à la loi fédéral sur les brevets d'invention, titres premier et deuxième (OBI 1)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza (1) del 14 dicembre 1959 per la legge federale sui brevetti d'invenzione, titolo primo e secondo (OBI 1)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "232.141"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1959/1979_2041_2065"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1960-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1959-12-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1959 2041"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung (1) zum Bundesgesetz vom 14. Dezember 1959 über die Erfindungspatente Titel I und II (PatV 1)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1977-10-19"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 19. Oktober 1977 über die Erfindungspatente (Patentverordnung, PatV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 19 octobre 1977 relative aux brevets d'invention (Ordonnance sur les brevets, OBI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 19 ottobre 1977 relativa ai brevetti d'invenzione (Ordinanza sui brevetti, OBI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "232.141"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1977/2027_2027_2027"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1978-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1977-10-19"
+        "value": "RO 1977 2027"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1977-10-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1977 2027"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 19. Oktober 1977 über die Erfindungspatente (Patentverordnung, PatV)"
@@ -245,6 +237,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1977-10-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1977 2027"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 19. Oktober 1977 über die Erfindungspatente (Patentverordnung, PatV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 19 octobre 1977 relative aux brevets d'invention (Ordonnance sur les brevets, OBI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 19 ottobre 1977 relativa ai brevetti d'invenzione (Ordinanza sui brevetti, OBI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "232.141"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1977/2027_2027_2027"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1978-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1977-10-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1977 2027"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 19. Oktober 1977 über die Erfindungspatente (Patentverordnung, PatV)"
@@ -277,37 +309,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-03-31"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative aux brevets d'invention (Ordonnance sur les brevets, OBI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza relativa ai brevetti d'invenzione (Ordinanza sui brevetti, OBI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "232.141"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1999/216"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-05-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-03-31"
+        "value": "RO 1999 1443"
       },
       "titleDe": {
         "type": "literal",
@@ -341,6 +345,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-03-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 1443"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative aux brevets d'invention (Ordonnance sur les brevets, OBI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza relativa ai brevetti d'invenzione (Ordinanza sui brevetti, OBI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "232.141"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/216"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-05-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-03-31"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 1443"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-08-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2629"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)"
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-08-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2629"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)"
@@ -436,6 +488,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-08-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2629"
       },
       "titleDe": {
         "type": "literal",
@@ -469,37 +525,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-12-03"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative aux brevets d'invention (Ordonnance sur les brevets, OBI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza relativa ai brevetti d'invenzione (Ordinanza sui brevetti, OBI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "232.141"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/770"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-12-03"
+        "value": "RO 2004 5025"
       },
       "titleDe": {
         "type": "literal",
@@ -533,6 +561,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-12-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 5025"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative aux brevets d'invention (Ordonnance sur les brevets, OBI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza relativa ai brevetti d'invenzione (Ordinanza sui brevetti, OBI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "232.141"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/770"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-12-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 5025"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-10-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4483"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)"
@@ -597,6 +669,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-10-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4483"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)"
@@ -628,6 +704,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-10-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4483"
       },
       "titleDe": {
         "type": "literal",
@@ -661,37 +741,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-17"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative aux brevets d'invention (Ordonnance sur les brevets, OBI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza relativa ai brevetti d'invenzione (Ordinanza sui brevetti, OBI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "232.141"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/810"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-12-13"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-10-17"
+        "value": "RO 2007 6085"
       },
       "titleDe": {
         "type": "literal",
@@ -725,6 +777,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 6085"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative aux brevets d'invention (Ordonnance sur les brevets, OBI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza relativa ai brevetti d'invenzione (Ordinanza sui brevetti, OBI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "232.141"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/810"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-12-13"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-10-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 6085"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)"
@@ -757,6 +849,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-03-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 1659"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)"
@@ -789,6 +885,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-03-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 1659"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)"
@@ -820,6 +920,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-03-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 1659"
       },
       "titleDe": {
         "type": "literal",
@@ -853,6 +957,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-05-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2585"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)"
@@ -885,6 +993,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-05-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2585"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)"
@@ -917,69 +1029,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-05-21"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative aux brevets d'invention (Ordonnance sur les brevets, OBI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza relativa ai brevetti d'invenzione (Ordinanza sui brevetti, OBI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "232.141"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/309"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-05-11"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative aux brevets d'invention (Ordonnance sur les brevets, OBI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza relativa ai brevetti d'invenzione (Ordinanza sui brevetti, OBI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "232.141"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/309"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-05-11"
+        "value": "RO 2008 2585"
       },
       "titleDe": {
         "type": "literal",
@@ -1013,6 +1065,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-05-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 2247"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative aux brevets d'invention (Ordonnance sur les brevets, OBI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza relativa ai brevetti d'invenzione (Ordinanza sui brevetti, OBI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "232.141"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/309"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-05-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 2247"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative aux brevets d'invention (Ordonnance sur les brevets, OBI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza relativa ai brevetti d'invenzione (Ordinanza sui brevetti, OBI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "232.141"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/309"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-05-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 2247"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)"
@@ -1045,6 +1173,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-05-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1305"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)"
@@ -1077,6 +1209,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-05-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1305"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)"
@@ -1108,6 +1244,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-05-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1305"
       },
       "titleDe": {
         "type": "literal",
@@ -1141,6 +1281,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-12-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4837"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)"
@@ -1173,6 +1317,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-12-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4837"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)"
@@ -1205,6 +1353,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-12-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4837"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)"
@@ -1237,6 +1389,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-09-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3551"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)"
@@ -1269,6 +1425,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-09-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3551"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)"
@@ -1300,6 +1460,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-09-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3551"
       },
       "titleDe": {
         "type": "literal",

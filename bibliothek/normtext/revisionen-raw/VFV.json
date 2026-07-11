@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1961-05-26"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 26. Mai 1961 über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung (VFV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 26 mai 1961 concernant l'assurance-vieillesse, survivants et invalidité facultative (OAF)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 26 maggio 1961 concernente l'assicurazione facoltativa per la vecchiaia, i superstiti e l'invalidità (OAF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.111"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1961/419_429_439"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1961-06-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1961-05-26"
+        "value": "RO 1961 429"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1961-05-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1961 429"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 26. Mai 1961 über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung (VFV)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1961-05-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1961 429"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 26. Mai 1961 über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung (VFV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 26 mai 1961 concernant l'assurance-vieillesse, survivants et invalidité facultative (OAF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 26 maggio 1961 concernente l'assicurazione facoltativa per la vecchiaia, i superstiti e l'invalidità (OAF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.111"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1961/419_429_439"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1961-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1961-05-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1961 429"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 26. Mai 1961 über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung (VFV)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-08-25"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung für Auslandschweizer (VFV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant l'assurance-vieillesse, survivants et invalidité facultative des ressortissants suisse résidant a l'étranger (OAF)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'assicurazione facoltativa per la vecchiaia, i superstiti e l'invalidità degli Svizzeri dell'estero (OAF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.111"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1999/421"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-11-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-08-25"
+        "value": "RO 1999 2685"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-08-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2685"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung für Auslandschweizer (VFV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant l'assurance-vieillesse, survivants et invalidité facultative des ressortissants suisse résidant a l'étranger (OAF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'assicurazione facoltativa per la vecchiaia, i superstiti e l'invalidità degli Svizzeri dell'estero (OAF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.111"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/421"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-11-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-08-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2685"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung für Auslandschweizer (VFV)"
@@ -245,37 +273,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-10-18"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung für Auslandschweizer (VFV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant l'assurance-vieillesse, survivants et invalidité facultative des ressortissants suisses résidant à l'étranger (OAF)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'assicurazione facoltativa per la vecchiaia, i superstiti e l'invalidità degli Svizzeri dell'estero (OAF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.111"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/479"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-10-18"
+        "value": "RO 2000 2828"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +309,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-10-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2828"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung für Auslandschweizer (VFV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant l'assurance-vieillesse, survivants et invalidité facultative des ressortissants suisses résidant à l'étranger (OAF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'assicurazione facoltativa per la vecchiaia, i superstiti e l'invalidità degli Svizzeri dell'estero (OAF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.111"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/479"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-10-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2828"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung für Auslandschweizer (VFV)"
@@ -341,37 +381,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-09-20"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung (VFV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant l'assurance-vieillesse, survivants et invalidité facultative (OAF)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'assicurazione facoltativa per la vecchiaia, i superstiti e l'invalidità (OAF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.111"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/502"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-09-20"
+        "value": "RO 2002 3343"
       },
       "titleDe": {
         "type": "literal",
@@ -405,37 +417,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-09-20"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung (VFV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant l'assurance-vieillesse, survivants et invalidité facultative (OAF)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'assicurazione facoltativa per la vecchiaia, i superstiti e l'invalidità (OAF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.111"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/571"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-09-11"
+        "value": "RO 2002 3343"
       },
       "titleDe": {
         "type": "literal",
@@ -457,7 +441,7 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/571"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/502"
       },
       "dateForce": {
         "type": "typed-literal",
@@ -467,7 +451,11 @@
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-09-11"
+        "value": "2002-09-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3343"
       },
       "titleDe": {
         "type": "literal",
@@ -501,6 +489,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-09-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3716"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung (VFV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant l'assurance-vieillesse, survivants et invalidité facultative (OAF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'assicurazione facoltativa per la vecchiaia, i superstiti e l'invalidità (OAF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.111"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/571"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-09-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3716"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung (VFV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant l'assurance-vieillesse, survivants et invalidité facultative (OAF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'assicurazione facoltativa per la vecchiaia, i superstiti e l'invalidità (OAF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.111"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/571"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-09-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3716"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung (VFV)"
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-04-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 2027"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung (VFV)"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-04-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 2027"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung (VFV)"
@@ -596,6 +668,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-04-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 2027"
       },
       "titleDe": {
         "type": "literal",
@@ -629,37 +705,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-11-23"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung (VFV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant l'assurance-vieillesse, survivants et invalidité facultative (OAF)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'assicurazione facoltativa per la vecchiaia, i superstiti e l'invalidità (OAF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.111"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2005/768"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-11-23"
+        "value": "RO 2005 5633"
       },
       "titleDe": {
         "type": "literal",
@@ -693,6 +741,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-11-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5633"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung (VFV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant l'assurance-vieillesse, survivants et invalidité facultative (OAF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'assicurazione facoltativa per la vecchiaia, i superstiti e l'invalidità (OAF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.111"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/768"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-11-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5633"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung (VFV)"
@@ -725,6 +813,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-09-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4149"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung (VFV)"
@@ -757,6 +849,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-09-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4149"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung (VFV)"
@@ -788,6 +884,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-09-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4149"
       },
       "titleDe": {
         "type": "literal",
@@ -821,37 +921,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-16"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung (VFV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant l'assurance-vieillesse, survivants et invalidité facultative (OAF)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'assicurazione facoltativa per la vecchiaia, i superstiti e l'invalidità (OAF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.111"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/226"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-03-16"
+        "value": "RO 2007 1359"
       },
       "titleDe": {
         "type": "literal",
@@ -885,6 +957,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 1359"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung (VFV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant l'assurance-vieillesse, survivants et invalidité facultative (OAF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'assicurazione facoltativa per la vecchiaia, i superstiti e l'invalidità (OAF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.111"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/226"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-03-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 1359"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung (VFV)"
@@ -917,6 +1029,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-09-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 4719"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung (VFV)"
@@ -949,6 +1065,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-09-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 4719"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung (VFV)"
@@ -980,6 +1100,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-09-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 4719"
       },
       "titleDe": {
         "type": "literal",
@@ -1013,6 +1137,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-09-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4581"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung (VFV)"
@@ -1045,6 +1173,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-09-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4581"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung (VFV)"
@@ -1077,69 +1209,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-09-24"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung (VFV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant l'assurance-vieillesse, survivants et invalidité facultative (OAF)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'assicurazione facoltativa per la vecchiaia, i superstiti e l'invalidità (OAF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.111"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/748"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-09-21"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung (VFV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant l'assurance-vieillesse, survivants et invalidité facultative (OAF)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'assicurazione facoltativa per la vecchiaia, i superstiti e l'invalidità (OAF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.111"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/748"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-09-21"
+        "value": "RO 2010 4581"
       },
       "titleDe": {
         "type": "literal",
@@ -1173,6 +1245,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-09-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6337"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung (VFV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant l'assurance-vieillesse, survivants et invalidité facultative (OAF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'assicurazione facoltativa per la vecchiaia, i superstiti e l'invalidità (OAF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.111"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/748"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-09-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6337"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung (VFV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant l'assurance-vieillesse, survivants et invalidité facultative (OAF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'assicurazione facoltativa per la vecchiaia, i superstiti e l'invalidità (OAF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.111"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/748"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-09-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6337"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung (VFV)"
@@ -1205,6 +1353,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-09-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3531"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung (VFV)"
@@ -1237,6 +1389,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-09-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3531"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung (VFV)"
@@ -1268,6 +1424,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-09-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3531"
       },
       "titleDe": {
         "type": "literal",
@@ -1301,6 +1461,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-11-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 3757"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung (VFV)"
@@ -1333,6 +1497,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-11-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 3757"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung (VFV)"
@@ -1365,6 +1533,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-11-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 3757"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung (VFV)"
@@ -1397,6 +1569,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-10-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 4613"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung (VFV)"
@@ -1429,6 +1605,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-10-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 4613"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die freiwillige Alters-, Hinterlassenen- und Invalidenversicherung (VFV)"
@@ -1460,6 +1640,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-10-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 4613"
       },
       "titleDe": {
         "type": "literal",

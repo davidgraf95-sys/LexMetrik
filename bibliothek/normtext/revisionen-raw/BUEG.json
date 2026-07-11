@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1952-09-29"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom 29. September 1952 über Erwerb und Verlust des Schweizer Bürgerrechts (Bürgerrechtsgesetz, BüG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 29 septembre 1952 sur l'acquisition et la perte de la  nationalité suisse (Loi sur la nationalité, LN)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 29 settembre 1952 su l'acquisto e la perdita della cittadinanza svizzera (Legge sulla cittadinanza, LCit)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "141.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1952/1087_1115_1119"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1953-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1952-09-29"
+        "value": "RO 1952 1115"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1952-09-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1952 1115"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 29. September 1952 über Erwerb und Verlust des Schweizer Bürgerrechts (Bürgerrechtsgesetz, BüG)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1952-09-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1952 1115"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 29. September 1952 über Erwerb und Verlust des Schweizer Bürgerrechts (Bürgerrechtsgesetz, BüG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 29 septembre 1952 sur l'acquisition et la perte de la  nationalité suisse (Loi sur la nationalité, LN)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 29 settembre 1952 su l'acquisto e la perdita della cittadinanza svizzera (Legge sulla cittadinanza, LCit)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "141.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1952/1087_1115_1119"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1953-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1952-09-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1952 1115"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 29. September 1952 über Erwerb und Verlust des Schweizer Bürgerrechts (Bürgerrechtsgesetz, BüG)"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-03-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1891"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Schaffung und die Anpassung gesetzlicher Grundlagen für die Bearbeitung von Personendaten"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-03-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1891"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Schaffung und die Anpassung gesetzlicher Grundlagen für die Bearbeitung von Personendaten"
@@ -213,6 +237,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-03-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1891"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Schaffung und die Anpassung gesetzlicher Grundlagen für die Bearbeitung von Personendaten"
@@ -245,6 +273,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-10-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5233"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Erwerb und Verlust des Schweizer Bürgerrechts (Bürgerrechtsgesetz, BüG)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-10-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5233"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Erwerb und Verlust des Schweizer Bürgerrechts (Bürgerrechtsgesetz, BüG)"
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-10-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5233"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Erwerb und Verlust des Schweizer Bürgerrechts (Bürgerrechtsgesetz, BüG)"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-12-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5911"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Erwerb und Verlust des Schweizer Bürgerrechts (Bürgerrechtsgesetz, BüG) (Verfahren im Kanton/Beschwerde vor einem kantonalen Gericht)"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-12-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5911"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Erwerb und Verlust des Schweizer Bürgerrechts (Bürgerrechtsgesetz, BüG) (Verfahren im Kanton/Beschwerde vor einem kantonalen Gericht)"
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-12-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5911"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Erwerb und Verlust des Schweizer Bürgerrechts (Bürgerrechtsgesetz, BüG) (Verfahren im Kanton/Beschwerde vor einem kantonalen Gericht)"
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-09-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 347"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Erwerb und Verlust des Schweizer Bürgerrechts (Bürgerrechtsgesetz, BüG) (Fristausdehnung für die Nichtigerklärung)"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-09-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 347"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Erwerb und Verlust des Schweizer Bürgerrechts (Bürgerrechtsgesetz, BüG) (Fristausdehnung für die Nichtigerklärung)"
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-09-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 347"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Erwerb und Verlust des Schweizer Bürgerrechts (Bürgerrechtsgesetz, BüG) (Fristausdehnung für die Nichtigerklärung)"
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-06-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2561"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über das Schweizer Bürgerrecht (Bürgerrechtsgesetz, BüG)"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-06-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2561"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über das Schweizer Bürgerrecht (Bürgerrechtsgesetz, BüG)"
@@ -597,6 +669,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-06-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2561"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über das Schweizer Bürgerrecht (Bürgerrechtsgesetz, BüG)"
@@ -628,6 +704,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-06-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2561"
       },
       "titleDe": {
         "type": "literal",
@@ -660,6 +740,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-09-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 531"
       },
       "titleDe": {
         "type": "literal",
@@ -693,6 +777,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-09-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 531"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über das Schweizer Bürgerrecht (Bürgerrechtsgesetz; BüG) (Erleichterte Einbürgerung von Personen der dritten Ausländergeneration)"
@@ -724,6 +812,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-09-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 531"
       },
       "titleDe": {
         "type": "literal",
@@ -756,6 +848,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-07-09"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2103"
       },
       "titleDe": {
         "type": "literal",
@@ -789,6 +885,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-07-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2103"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über das Schweizer Bürgerrecht (Bürgerrechtsgesetz; BüG) (Erleichterte Einbürgerung von Personen der dritten Ausländergeneration) (Betrifft nur den französischen und den italienischen Text)"
@@ -820,6 +920,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-07-09"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2103"
       },
       "titleDe": {
         "type": "literal",

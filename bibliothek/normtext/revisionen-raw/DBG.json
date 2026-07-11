@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1990-12-14"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom 14. Dezember 1990 über die direkte Bundessteuer (DBG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 14 décembre 1990 sur l'impôt fédéral direct (LIFD)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 14 dicembre 1990 sull'imposta federale diretta (LIFD)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "642.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1991/1184_1184_1184"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1995-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1990-12-14"
+        "value": "RO 1991 1184"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1990-12-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1991 1184"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 14. Dezember 1990 über die direkte Bundessteuer (DBG)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1990-12-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1991 1184"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 14. Dezember 1990 über die direkte Bundessteuer (DBG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 14 décembre 1990 sur l'impôt fédéral direct (LIFD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 14 dicembre 1990 sull'imposta federale diretta (LIFD)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "642.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1991/1184_1184_1184"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1995-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1990-12-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1991 1184"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 14. Dezember 1990 über die direkte Bundessteuer (DBG)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-10-09"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die direkte Bundessteuer (DBG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur l'impôt fédéral direct (LIFD)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sull'imposta federale diretta (LIFD)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "642.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1999/177"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-10-09"
+        "value": "RO 1999 1308"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-10-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 1308"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die direkte Bundessteuer (DBG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'impôt fédéral direct (LIFD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'imposta federale diretta (LIFD)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "642.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/177"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-10-09"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 1308"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die direkte Bundessteuer (DBG)"
@@ -244,6 +272,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-12-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2147"
       },
       "titleDe": {
         "type": "literal",
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-12-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2147"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Unzulässigkeit steuerlicher Abzüge von Bestechungsgeldern"
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-12-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2147"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Unzulässigkeit steuerlicher Abzüge von Bestechungsgeldern"
@@ -341,37 +381,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-10-08"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die direkte Bundessteuer (DBG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur l'impôt fédéral direct (LIFD)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sull'imposta federale diretta (LIFD)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "642.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/63"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-10-08"
+        "value": "RO 2000 324"
       },
       "titleDe": {
         "type": "literal",
@@ -405,6 +417,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-10-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 324"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die direkte Bundessteuer (DBG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'impôt fédéral direct (LIFD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'imposta federale diretta (LIFD)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "642.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/63"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-10-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 324"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die direkte Bundessteuer (DBG)"
@@ -436,6 +488,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-12-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1050"
       },
       "titleDe": {
         "type": "literal",
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-12-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1050"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz zur Koordination und Vereinfachung der Veranlagungsverfahren für die direkten Steuern im interkantonalen Verhältnis"
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-12-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1050"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz zur Koordination und Vereinfachung der Veranlagungsverfahren für die direkten Steuern im interkantonalen Verhältnis"
@@ -533,37 +597,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-10-08"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Aufhebung der Haftung der Erben für Steuerbussen"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur la suppression de la responsabilité des héritiers pour les amendes fiscales"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulla soppressione della responsabilità degli eredi per le multe fiscali"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "642.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2005/133"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-03-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-10-08"
+        "value": "RO 2005 1051"
       },
       "titleDe": {
         "type": "literal",
@@ -597,6 +633,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-10-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 1051"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Aufhebung der Haftung der Erben für Steuerbussen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur la suppression de la responsabilité des héritiers pour les amendes fiscales"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla soppressione della responsabilità degli eredi per le multe fiscali"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "642.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/133"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-03-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-10-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 1051"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Aufhebung der Haftung der Erben für Steuerbussen"
@@ -629,37 +705,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-06-23"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über dringende Anpassungen bei der Unternehmensbesteuerung"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur des modifications urgentes de l'imposition des entreprises"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale che introduce alcuni adeguamenti urgenti nell'imposizione delle imprese"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "642.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/760"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-06-23"
+        "value": "RO 2006 4883"
       },
       "titleDe": {
         "type": "literal",
@@ -693,6 +741,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-06-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4883"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über dringende Anpassungen bei der Unternehmensbesteuerung"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur des modifications urgentes de l'imposition des entreprises"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale che introduce alcuni adeguamenti urgenti nell'imposizione delle imprese"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "642.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/760"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-06-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4883"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über dringende Anpassungen bei der Unternehmensbesteuerung"
@@ -725,37 +813,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-10-06"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die direkte Bundessteuer (Sofortmassnahmen im Bereich der Ehepaarbesteuerung)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur l'impôt fédéral direct (Mesures immédiates concernant l'imposition des couples mariés)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sull'imposta federale diretta (Misure immediate nell'ambito dell'imposizione dei coniugi)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "642.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/128"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-10-06"
+        "value": "RO 2007 615"
       },
       "titleDe": {
         "type": "literal",
@@ -789,6 +849,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-10-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 615"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die direkte Bundessteuer (Sofortmassnahmen im Bereich der Ehepaarbesteuerung)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'impôt fédéral direct (Mesures immédiates concernant l'imposition des couples mariés)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'imposta federale diretta (Misure immediate nell'ambito dell'imposizione dei coniugi)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "642.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/128"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-10-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 615"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die direkte Bundessteuer (Sofortmassnahmen im Bereich der Ehepaarbesteuerung)"
@@ -821,37 +921,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-12-20"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über Änderungen des Nachsteuerverfahrens und des Strafverfahrens wegen Steuerhinterziehung auf dem Gebiet der direkten Steuern"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale portant modification de la procédure de rappel d'impôt et de la procédure pénale pour soustraction d'impôt en matière d'imposition directe"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulla modifica della procedura di ricupero d'imposta e del procedimento penale per sottrazione d'imposta in materia di imposizione diretta"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "642.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/400"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-12-20"
+        "value": "RO 2007 2973"
       },
       "titleDe": {
         "type": "literal",
@@ -885,6 +957,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-12-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 2973"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über Änderungen des Nachsteuerverfahrens und des Strafverfahrens wegen Steuerhinterziehung auf dem Gebiet der direkten Steuern"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale portant modification de la procédure de rappel d'impôt et de la procédure pénale pour soustraction d'impôt en matière d'imposition directe"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla modifica della procedura di ricupero d'imposta e del procedimento penale per sottrazione d'imposta in materia di imposizione diretta"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "642.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/400"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-12-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 2973"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Änderungen des Nachsteuerverfahrens und des Strafverfahrens wegen Steuerhinterziehung auf dem Gebiet der direkten Steuern"
@@ -917,37 +1029,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-03-20"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Vereinfachung der Nachbesteuerung in Erbfällen und die Einführung der straflosen Selbstanzeige"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur la simplification du rappel d'impôt en cas de succession et sur l'introduction de la dénonciation spontanée non punissable"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale relativa alla semplificazione del ricupero d'imposta in caso di successione e all'introduzione dell'autodenuncia esente da pena"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "642.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2008/618"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-03-20"
+        "value": "RO 2008 4453"
       },
       "titleDe": {
         "type": "literal",
@@ -981,6 +1065,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-03-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 4453"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Vereinfachung der Nachbesteuerung in Erbfällen und die Einführung der straflosen Selbstanzeige"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur la simplification du rappel d'impôt en cas de succession et sur l'introduction de la dénonciation spontanée non punissable"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale relativa alla semplificazione del ricupero d'imposta in caso di successione e all'introduzione dell'autodenuncia esente da pena"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "642.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/618"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-03-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 4453"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Vereinfachung der Nachbesteuerung in Erbfällen und die Einführung der straflosen Selbstanzeige"
@@ -1013,37 +1137,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-03"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die steuerliche Behandlung von Instandstellungskosten bei Liegenschaften"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur le traitement fiscal des frais de remise en état des immeubles"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sul trattamento fiscale delle spese di riattazione degli immobili"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "642.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/218"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-10-03"
+        "value": "RO 2009 1515"
       },
       "titleDe": {
         "type": "literal",
@@ -1077,6 +1173,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 1515"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die steuerliche Behandlung von Instandstellungskosten bei Liegenschaften"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur le traitement fiscal des frais de remise en état des immeubles"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sul trattamento fiscale delle spese di riattazione degli immobili"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "642.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/218"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-10-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 1515"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die steuerliche Behandlung von Instandstellungskosten bei Liegenschaften"
@@ -1109,37 +1245,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-06-12"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die steuerliche Abzugsfähigkeit von Zuwendungen an politische Parteien"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur la déductibilité des versements en faveur de partis politiques"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulla deducibilità fiscale dei versamenti ai partiti"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "642.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/58"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-06-12"
+        "value": "RO 2010 449"
       },
       "titleDe": {
         "type": "literal",
@@ -1173,6 +1281,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-06-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 449"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die steuerliche Abzugsfähigkeit von Zuwendungen an politische Parteien"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur la déductibilité des versements en faveur de partis politiques"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla deducibilità fiscale dei versamenti ai partiti"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "642.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/58"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-06-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 449"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die steuerliche Abzugsfähigkeit von Zuwendungen an politische Parteien"
@@ -1205,37 +1353,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-09-25"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die direkte Bundessteuer (DBG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur l'impôt fédéral direct (LIFD)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sull'imposta federale diretta (LIFD)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "642.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/59"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-09-25"
+        "value": "RO 2010 453"
       },
       "titleDe": {
         "type": "literal",
@@ -1269,6 +1389,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-09-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 453"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die direkte Bundessteuer (DBG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'impôt fédéral direct (LIFD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'imposta federale diretta (LIFD)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "642.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/59"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-09-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 453"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die direkte Bundessteuer (DBG)"
@@ -1300,6 +1460,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-09-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 455"
       },
       "titleDe": {
         "type": "literal",
@@ -1333,6 +1497,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-09-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 455"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die steuerliche Entlastung von Familien mit Kindern"
@@ -1365,6 +1533,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-09-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 455"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die steuerliche Entlastung von Familien mit Kindern"
@@ -1397,6 +1569,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-12-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3259"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Besteuerung von Mitarbeiterbeteiligungen"
@@ -1429,6 +1605,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-12-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3259"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Besteuerung von Mitarbeiterbeteiligungen"
@@ -1460,6 +1640,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-12-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3259"
       },
       "titleDe": {
         "type": "literal",
@@ -1492,6 +1676,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 5977"
       },
       "titleDe": {
         "type": "literal",
@@ -1525,6 +1713,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 5977"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Vereinfachungen bei der Besteuerung von Lotteriegewinnen"
@@ -1556,6 +1748,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 5977"
       },
       "titleDe": {
         "type": "literal",
@@ -1588,6 +1784,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-06-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 489"
       },
       "titleDe": {
         "type": "literal",
@@ -1621,6 +1821,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-06-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 489"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Steuerbefreiung des Feuerwehrsoldes"
@@ -1652,6 +1856,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-06-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 489"
       },
       "titleDe": {
         "type": "literal",
@@ -1684,6 +1892,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-09-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 779"
       },
       "titleDe": {
         "type": "literal",
@@ -1717,6 +1929,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-09-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 779"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Besteuerung nach dem Aufwand"
@@ -1748,6 +1964,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-09-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 779"
       },
       "titleDe": {
         "type": "literal",
@@ -1780,6 +2000,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1345"
       },
       "titleDe": {
         "type": "literal",
@@ -1813,6 +2037,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1345"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die direkte Bundessteuer (DBG)"
@@ -1844,6 +2072,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1345"
       },
       "titleDe": {
         "type": "literal",
@@ -1876,6 +2108,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-03-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 2397"
       },
       "titleDe": {
         "type": "literal",
@@ -1909,6 +2145,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-03-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 2397"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die formelle Bereinigung der zeitlichen Bemessung der direkten Steuern bei den natürlichen Personen"
@@ -1940,6 +2180,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-03-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 2397"
       },
       "titleDe": {
         "type": "literal",
@@ -1972,6 +2216,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-09-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1105"
       },
       "titleDe": {
         "type": "literal",
@@ -2005,6 +2253,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-09-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1105"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die steuerliche Behandlung der berufsorientierten Aus- und Weiterbildungskosten"
@@ -2036,6 +2288,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-09-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1105"
       },
       "titleDe": {
         "type": "literal",
@@ -2068,6 +2324,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-06-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 651"
       },
       "titleDe": {
         "type": "literal",
@@ -2101,6 +2361,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-06-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 651"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Finanzierung und den Ausbau der Eisenbahninfrastruktur"
@@ -2132,6 +2396,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-06-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 651"
       },
       "titleDe": {
         "type": "literal",
@@ -2164,6 +2432,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-09-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 779"
       },
       "titleDe": {
         "type": "literal",
@@ -2197,6 +2469,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-09-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 779"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über eine Anpassung des DBG und des StHG an die Allgemeinen Bestimmungen des StGB"
@@ -2228,6 +2504,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-09-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 779"
       },
       "titleDe": {
         "type": "literal",
@@ -2260,6 +2540,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-03-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2947"
       },
       "titleDe": {
         "type": "literal",
@@ -2293,6 +2577,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-03-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2947"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Gewinnbesteuerung von juristischen Personen mit ideellen Zwecken"
@@ -2324,6 +2612,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-03-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2947"
       },
       "titleDe": {
         "type": "literal",
@@ -2356,6 +2648,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-04-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 1811"
       },
       "titleDe": {
         "type": "literal",
@@ -2389,6 +2685,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-04-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 1811"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Mitteilung über die Änderung der Teilinkraftsetzung des Energiegesetzes"
@@ -2420,6 +2720,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-04-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 1811"
       },
       "titleDe": {
         "type": "literal",
@@ -2452,6 +2756,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-12-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 1813"
       },
       "titleDe": {
         "type": "literal",
@@ -2485,6 +2793,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-12-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 1813"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Revision der Quellenbesteuerung des Erwerbseinkommens"
@@ -2516,6 +2828,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-12-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 1813"
       },
       "titleDe": {
         "type": "literal",
@@ -2548,6 +2864,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-12-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1207"
       },
       "titleDe": {
         "type": "literal",
@@ -2581,6 +2901,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-12-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1207"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Berechnung des Beteiligungsabzugs bei systemrelevanten Banken"
@@ -2612,6 +2936,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-12-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1207"
       },
       "titleDe": {
         "type": "literal",
@@ -2644,6 +2972,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-08-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 3641"
       },
       "titleDe": {
         "type": "literal",
@@ -2677,6 +3009,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-08-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 3641"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die direkte Bundessteuer (DBG) (Betrifft nur den italienischen Text)"
@@ -2708,6 +3044,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-08-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 3641"
       },
       "titleDe": {
         "type": "literal",
@@ -2740,6 +3080,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-06-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 5121"
       },
       "titleDe": {
         "type": "literal",
@@ -2773,6 +3117,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-06-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 5121"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die steuerliche Behandlung finanzieller Sanktionen"
@@ -2804,6 +3152,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-06-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 5121"
       },
       "titleDe": {
         "type": "literal",
@@ -3093,6 +3445,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1940-12-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 56 2021"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesratsbeschluss über die Erhebung einer direkten Bundessteuer (BdBSt) "
@@ -3125,6 +3481,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1940-12-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 56 2021"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesratsbeschluss über die Erhebung einer direkten Bundessteuer (BdBSt) "
@@ -3157,6 +3517,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1940-12-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 56 2021"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesratsbeschluss über die Erhebung einer direkten Bundessteuer (BdBSt) "
@@ -3188,6 +3552,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1940-12-09"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 56 2021"
       },
       "titleDe": {
         "type": "literal",

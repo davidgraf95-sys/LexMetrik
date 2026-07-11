@@ -21,6 +21,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-11-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 4459"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Finanzdienstleistungen (Finanzdienstleistungsverordnung, FIDLEV)"
@@ -53,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-11-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 4459"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Finanzdienstleistungen (Finanzdienstleistungsverordnung, FIDLEV)"
@@ -85,6 +93,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-11-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 4459"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Finanzdienstleistungen (Finanzdienstleistungsverordnung, FIDLEV)"
@@ -116,6 +128,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-11-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 4459"
       },
       "titleDe": {
         "type": "literal",

@@ -21,69 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1949-09-20"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom 20. Septermber 1949 über die Militärversicherung"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 20 septembre 1949 sur l'assurance militaire"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 20 settembre 1949 su l'assicurazione militare"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "833.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1949/1671_1775_1705"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1950-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1949-09-20"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Bundesgesetz vom 20. Septermber 1949 über die Militärversicherung"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 20 septembre 1949 sur l'assurance militaire"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 20 settembre 1949 su l'assicurazione militare"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "833.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1949/1671_1775_1705"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1950-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1949-09-20"
+        "value": "RO 1949 1775"
       },
       "titleDe": {
         "type": "literal",
@@ -117,6 +57,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1949-09-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1949 1775"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 20. Septermber 1949 über die Militärversicherung"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 20 septembre 1949 sur l'assurance militaire"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 20 settembre 1949 su l'assicurazione militare"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "833.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1949/1671_1775_1705"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1950-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1949-09-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1949 1775"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 20. Septermber 1949 über die Militärversicherung"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 20 septembre 1949 sur l'assurance militaire"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 20 settembre 1949 su l'assicurazione militare"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "833.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1949/1671_1775_1705"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1950-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1949-09-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1949 1775"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 20. Septermber 1949 über die Militärversicherung"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1992-06-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1993 3043"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 19. Juni 1992 über die Militärversicherung (MVG)"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1992-06-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1993 3043"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 19. Juni 1992 über die Militärversicherung (MVG)"
@@ -213,6 +237,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1992-06-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1993 3043"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 19. Juni 1992 über die Militärversicherung (MVG)"
@@ -244,6 +272,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1992-06-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1993 3043"
       },
       "titleDe": {
         "type": "literal",
@@ -276,6 +308,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2765"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2765"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Militärversicherung (MVG)"
@@ -340,6 +380,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2765"
       },
       "titleDe": {
         "type": "literal",
@@ -372,6 +416,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-03-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 2881"
       },
       "titleDe": {
         "type": "literal",
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-03-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 2881"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Übertragung der Führung der Militärversicherung an die SUVA"
@@ -436,6 +488,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-03-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 2881"
       },
       "titleDe": {
         "type": "literal",
@@ -468,6 +524,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-05-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 2943"
       },
       "titleDe": {
         "type": "literal",
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-05-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 2943"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Militärversicherung (MVG) (Betrifft nur den italienischen Text)"
@@ -532,6 +596,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-05-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 2943"
       },
       "titleDe": {
         "type": "literal",

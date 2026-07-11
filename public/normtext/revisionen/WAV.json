@@ -1,7 +1,7 @@
 {
   "erlassKey": "WAV",
   "sr": "921.01",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -45,12 +45,12 @@
       "dateEntryInForce": "2017-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/539",
       "dateDocument": "2016-08-17",
-      "roFundstelle": "AS 2016 539",
+      "roFundstelle": "AS 2016 3215",
       "titelDe": "Verordnung über den Wald (Waldverordnung, WaV)",
       "titelFr": "Ordonnance sur les forêts (OFo)",
       "titelIt": "Ordinanza sulle foreste (OFo)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/539/de",
-      "sha": "ed396b93b2dd26e24674b4646241beab9feaca4716934cf14f4068fd7ba5708e"
+      "sha": "a4b289cbd25cbc453dcd4d8ea18a11d11f31600858fdad5b3ab7242498332c22"
     },
     {
       "art": "sammelerlass-marker",
@@ -69,12 +69,12 @@
       "dateEntryInForce": "2013-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/419",
       "dateDocument": "2013-06-14",
-      "roFundstelle": "AS 2013 419",
+      "roFundstelle": "AS 2013 1983",
       "titelDe": "Verordnung über den Wald (Waldverordnung, WaV)",
       "titelFr": "Ordonnance sur les forêts (OFo)",
       "titelIt": "Ordinanza sulle foreste (OFo)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/419/de",
-      "sha": "c195915a9a619d03370d236f7fea63d77ef1c54c07fc130282854169cc6aa4c5"
+      "sha": "e16a7bab7867831e07cc496d970001aa0108eb1352c5ba687d47c9a16ca9b82d"
     },
     {
       "art": "sammelerlass-marker",
@@ -111,12 +111,12 @@
       "dateEntryInForce": "2006-10-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/578",
       "dateDocument": "2006-09-13",
-      "roFundstelle": "AS 2006 578",
+      "roFundstelle": "AS 2006 3865",
       "titelDe": "Verordnung über den Wald (Waldverordnung, WaV)",
       "titelFr": "Ordonnance sur les forêts (OFo)",
       "titelIt": "Ordinanza sulle foreste (OFo)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/578/de",
-      "sha": "78ce3de1a3e90754cea89b92200395cb50843e6013ba82166855b2d9d9ac7142"
+      "sha": "fcf9927899738bbb03a92148044caa74f9eb10654f3a1b33da018edf0a8d4532"
     },
     {
       "art": "sammelerlass-marker",
@@ -129,12 +129,12 @@
       "dateEntryInForce": "2005-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/458",
       "dateDocument": "2004-06-23",
-      "roFundstelle": "AS 2004 458",
+      "roFundstelle": "AS 2004 3447",
       "titelDe": "Verordnung über den Wald (Waldverordnung, WaV)",
       "titelFr": "Ordonnance sur les forêts (OFo)",
       "titelIt": "Ordinanza sulle foreste (OFo)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/458/de",
-      "sha": "34dbe3dd3a311e15d29968454cc5fd5f757857ca60c1731f2eea524a3029d17f"
+      "sha": "90e8fcc666fcad541c0f6792421853ab148295b471a70be8e66300554d662243"
     },
     {
       "art": "sammelerlass-marker",
@@ -197,5 +197,5 @@
       "sha": "e3e9f8c9b2fc75793a78bddb07c1b86ddae056adeef375cbfee3b6986fd7e715"
     }
   ],
-  "sha": "6d13b0e4a3810478526b1a967dbe38756e979b21acf5da6985165c2bc66552fe"
+  "sha": "bbd3253476922b22557214d5341bb703cf9dc97770ffc6d96bdd7777f32852ce"
 }

@@ -1,7 +1,7 @@
 {
   "erlassKey": "VINTA",
   "sr": "142.205",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -33,109 +33,109 @@
       "dateEntryInForce": "2019-05-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/234",
       "dateDocument": "2019-04-10",
-      "roFundstelle": "AS 2019 234",
+      "roFundstelle": "AS 2019 1229",
       "titelDe": "Verordnung über die Integration von Ausländerinnen und Ausländern (VIntA)",
       "titelFr": "Ordonnance sur l'intégration des étrangers (OIE)",
       "titelIt": "Ordinanza sull'integrazione degli stranieri (OIntS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/234/de",
-      "sha": "d315d1e442339f9b8256bb00d0a737431aa7ba4c33e2321983b09e3b6c351f40"
+      "sha": "e396b0a6408be324e52d78e6984549b0cacf279d648dca7c72cdf8a19617d197"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2019-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/511",
       "dateDocument": "2018-08-15",
-      "roFundstelle": "AS 2018 511",
+      "roFundstelle": "AS 2018 3189",
       "titelDe": "Verordnung über die Integration von Ausländerinnen und Ausländern (VIntA)",
       "titelFr": "Ordonnance sur l'intégration des étrangers (OIE)",
       "titelIt": "Ordinanza sull'integrazione degli stranieri (OIntS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/511/de",
-      "sha": "ff7b65ed3e2b73bafe0a3d3cace534935102af6b7b1848836c6130d295a1d381"
+      "sha": "2dd4a0c6fa83f526b52dbb7de6c27f8c2d621e2c1fdf19f9c591e84aa0460f0b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2018-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/95",
       "dateDocument": "2017-12-08",
-      "roFundstelle": "AS 2018 95",
+      "roFundstelle": "AS 2018 745",
       "titelDe": "Verordnung über die Integration von Ausländerinnen und Ausländern (VIntA)",
       "titelFr": "Ordonnance sur l'intégration des étrangers (OIE)",
       "titelIt": "Ordinanza sull'integrazione degli stranieri (OIntS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/95/de",
-      "sha": "520ab49f19afed1e1a93b189ed879a7ffe79672642d15b20d304a191c7d9cc0f"
+      "sha": "3148b297cf977d00d6dfe0666191874e03b9f8b8eff8904a67a16d6d0b3bfbe0"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2018-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/720",
       "dateDocument": "2017-11-15",
-      "roFundstelle": "AS 2017 720",
+      "roFundstelle": "AS 2017 6543",
       "titelDe": "Verordnung über die Integration von Ausländerinnen und Ausländern (VIntA)",
       "titelFr": "Ordonnance sur l'intégration des étrangers (OIE)",
       "titelIt": "Ordinanza sull'integrazione degli stranieri (OIntS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/720/de",
-      "sha": "3d21bec59a2547711cddd2b00741d94730451eccf322d9199565d2fec77a9c69"
+      "sha": "7e53f5e17a7f9e46e515f6987a524b46e6ae4d12f708b82a326e8bc47b057d4c"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2014-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/854",
       "dateDocument": "2013-12-13",
-      "roFundstelle": "AS 2013 854",
+      "roFundstelle": "AS 2013 5351",
       "titelDe": "Verordnung über die Integration von Ausländerinnen und Ausländern (VIntA)",
       "titelFr": "Ordonnance sur l'intégration des étrangers (OIE)",
       "titelIt": "Ordinanza sull'integrazione degli stranieri (OIntS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/854/de",
-      "sha": "45484e923b3fff32527d34cbe2405a1338c832f3cc7dfbc1477a495cc3fbed92"
+      "sha": "9d97ce2dcca6c5e92a2d9d55c47edda6f96da6f88d2bfe27f2d3b08bcda315da"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2013-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/840",
       "dateDocument": "2012-12-07",
-      "roFundstelle": "AS 2012 840",
+      "roFundstelle": "AS 2012 6947",
       "titelDe": "Verordnung über die Integration von Ausländerinnen und Ausländern (VIntA)",
       "titelFr": "Ordonnance sur l'intégration des étrangers (OIE)",
       "titelIt": "Ordinanza sull'integrazione degli stranieri (OIntS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/840/de",
-      "sha": "ae36d23cdec01dad404a782e45f0e8ab18cd72cb954702d77caaff5e6d1d6552"
+      "sha": "4ff6ffed1772bde23abc40c077a88d2c881fc16055f2228fc77e3f08fbc0bf80"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2008-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/762",
       "dateDocument": "2007-10-24",
-      "roFundstelle": "AS 2007 762",
+      "roFundstelle": "AS 2007 5551",
       "titelDe": "Verordnung über die Integration von Ausländerinnen und Ausländern (VIntA)",
       "titelFr": "Ordonnance sur l'intégration des étrangers (OIE)",
       "titelIt": "Ordinanza sull'integrazione degli stranieri (OIntS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/762/de",
-      "sha": "576fb49909982708b4e08799031aacbc08eece470d6556ec5d44999f052c51b3"
+      "sha": "f1f8ed0680f66dfd790f6fd59e5f1f982700db5fd7f7125177c86e90681129b9"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2006-02-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/634",
       "dateDocument": "2005-09-07",
-      "roFundstelle": "AS 2005 634",
+      "roFundstelle": "AS 2005 4769",
       "titelDe": "Verordnung über die Integration von Ausländerinnen und Ausländern (VIntA)",
       "titelFr": "Ordonnance sur l'intégration des étrangers (OIE)",
       "titelIt": "Ordinanza sull'integrazione degli stranieri (OIntS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/634/de",
-      "sha": "afcbfa779545a3449eb6ba8a145ef349a6cfd12bb297b90ab75112967e7e159a"
+      "sha": "c7cb984c859c97ae365863b9c3f0dbe240385565e8c2f5bb17ad6375fd07060b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2000-10-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/360",
       "dateDocument": "2000-09-13",
-      "roFundstelle": "AS 2000 360",
+      "roFundstelle": "AS 2000 2281",
       "titelDe": "Verordnung über die Integration von Ausländerinnen und Ausländern (VIntA)",
       "titelFr": "Ordonnance sur l'intégration des étrangers (OIE)",
       "titelIt": "Ordinanza sull'integrazione degli stranieri (OIntS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/360/de",
-      "sha": "f00dedd4781ef3ca6d3df6f4b31caaa75083c5984aa6b1481f0f6bd517d4ba7d"
+      "sha": "4c8df9f52ff82875dc99f6d5d6c02a22505af987b32fedb927a243e81ab131bf"
     }
   ],
-  "sha": "65de9f81e12c19a695d55259d6c47c0d1ccf97cd1acd39f2457a91f4af73b31b"
+  "sha": "ada9d29e7ca0618df39e816a8451e44689665107ee7cb38298a6486acf3faf8e"
 }

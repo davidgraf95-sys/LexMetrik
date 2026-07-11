@@ -21,6 +21,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1952-09-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1952 1046"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 25. September 1952 über den Erwerbsersatz (Erwerbsersatzgesetz, EOG)"
@@ -53,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1952-09-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1952 1046"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 25. September 1952 über den Erwerbsersatz (Erwerbsersatzgesetz, EOG)"
@@ -85,6 +93,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1952-09-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1952 1046"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 25. September 1952 über den Erwerbsersatz (Erwerbsersatzgesetz, EOG)"
@@ -116,6 +128,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1952-09-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1952 1046"
       },
       "titleDe": {
         "type": "literal",
@@ -148,6 +164,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-12-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 1571"
       },
       "titleDe": {
         "type": "literal",
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-12-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 1571"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Erwerbsersatzordnung für Dienstleistende in Armee, Zivildienst und Zivilschutz (Erwerbsersatzgesetz, EOG)"
@@ -212,6 +236,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-12-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 1571"
       },
       "titleDe": {
         "type": "literal",
@@ -244,6 +272,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2770"
       },
       "titleDe": {
         "type": "literal",
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2770"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Erwerbsersatzordnung für Dienstleistende in Armee, Zivildienst und Zivilschutz (Erwerbsersatzgesetz, EOG)"
@@ -308,6 +344,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2770"
       },
       "titleDe": {
         "type": "literal",
@@ -340,6 +380,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-10-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 1429"
       },
       "titleDe": {
         "type": "literal",
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-10-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 1429"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Erwerbsersatzordnung für Dienstleistende in Armee, Zivildienst und Zivilschutz (Erwerbsersatzgesetz, EOG)"
@@ -404,6 +452,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-10-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 1429"
       },
       "titleDe": {
         "type": "literal",
@@ -436,6 +488,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-09-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 4689"
       },
       "titleDe": {
         "type": "literal",
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-09-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 4689"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Erwerbsersatz für Dienstleistende und bei Mutterschaft (Erwerbsersatzgesetz, EOG)"
@@ -500,6 +560,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-09-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 4689"
       },
       "titleDe": {
         "type": "literal",

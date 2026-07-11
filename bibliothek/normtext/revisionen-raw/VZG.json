@@ -21,6 +21,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1920-04-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 36 433"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung des Bundesgerichts vom 23. April 1920 über die Zwangsverwertung von Grundstücken (VZG)"
@@ -53,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1920-04-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 36 433"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung des Bundesgerichts vom 23. April 1920 über die Zwangsverwertung von Grundstücken (VZG)"
@@ -85,6 +93,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1920-04-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 36 433"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung des Bundesgerichts vom 23. April 1920 über die Zwangsverwertung von Grundstücken (VZG)"
@@ -116,6 +128,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1920-04-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 36 433"
       },
       "titleDe": {
         "type": "literal",

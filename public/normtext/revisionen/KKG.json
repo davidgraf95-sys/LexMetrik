@@ -1,7 +1,7 @@
 {
   "erlassKey": "KKG",
   "sr": "221.214.1",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -21,24 +21,24 @@
       "dateEntryInForce": "2016-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/690",
       "dateDocument": "2015-03-20",
-      "roFundstelle": "AS 2015 690",
+      "roFundstelle": "AS 2015 4111",
       "titelDe": "Bundesgesetz über den Konsumkredit (KKG)",
       "titelFr": "Loi fédérale sur le crédit à la consommation (LCC)",
       "titelIt": "Legge federale sul credito al consumo (LCC)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/690/de",
-      "sha": "7396f7e44ef3412d8664662d04576616e60d03a119720b90351d2c5e58c97820"
+      "sha": "bc5d4104182ebd1f1f81fdca3b9e8623c01d6a1c79ef3588d4788b878b90a918"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2003-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/593",
       "dateDocument": "2001-03-23",
-      "roFundstelle": "AS 2002 593",
+      "roFundstelle": "AS 2002 3846",
       "titelDe": "Bundesgesetz über den Konsumkredit (KKG)",
       "titelFr": "Loi fédérale sur le crédit à la consommation (LCC)",
       "titelIt": "Legge federale sul credito al consumo (LCC)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/593/de",
-      "sha": "43f5d2d93f5a11ae212a7f8fcbe8358f6f80c4cbc10723fac305023b66b685f4"
+      "sha": "e6dc7c6876a83f02c8350cc4149cfaf9ff8b2eaa7611b8b4939d75261c5fc407"
     },
     {
       "art": "aenderung",
@@ -53,5 +53,5 @@
       "sha": "2efdfa03d9df578eac19a884af68c4f342da9c28d812c077d6ff76e0e5041064"
     }
   ],
-  "sha": "cd9b560d91f69a0b7187db1d359d5682e7ae78916553fe0061ed8e5d2bb6288b"
+  "sha": "733012b9ef7b79f1c466604bbb8960f9dadf11256e735a264438e953915a5e9e"
 }

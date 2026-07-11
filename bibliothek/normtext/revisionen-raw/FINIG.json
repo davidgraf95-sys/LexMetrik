@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1995-03-24"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom 24. März 1995 über die Börsen und den Effektenhandel (Börsengesetz, BEHG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 24 mars 1995 sur les bourses et le commerce des valeurs mobilières (Loi sur les bourses, LBVM)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 24 marzo 1995 sulle borse e il commercio di valori mobiliari (Legge sulle borse, LBVM)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "954.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1997/68_68_68"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1997-02-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1995-03-24"
+        "value": "RO 1997 68"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1995-03-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1997 68"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 24. März 1995 über die Börsen und den Effektenhandel (Börsengesetz, BEHG)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1995-03-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1997 68"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 24. März 1995 über die Börsen und den Effektenhandel (Börsengesetz, BEHG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 24 mars 1995 sur les bourses et le commerce des valeurs mobilières (Loi sur les bourses, LBVM)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 24 marzo 1995 sulle borse e il commercio di valori mobiliari (Legge sulle borse, LBVM)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "954.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1997/68_68_68"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1997-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1995-03-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1997 68"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 24. März 1995 über die Börsen und den Effektenhandel (Börsengesetz, BEHG)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-10-07"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Börsen und den Effektenhandel (Börsengesetz, BEHG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur les bourses et le commerce des valeurs mobilières (Loi sur les bourses, LBVM)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulle borse e il commercio di valori mobiliari (Legge sulle borse, LBVM)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "954.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/34"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-02-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-10-07"
+        "value": "RO 2006 197"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-10-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 197"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Börsen und den Effektenhandel (Börsengesetz, BEHG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les bourses et le commerce des valeurs mobilières (Loi sur les bourses, LBVM)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle borse e il commercio di valori mobiliari (Legge sulle borse, LBVM)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "954.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/34"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-10-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 197"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Börsen und den Effektenhandel (Börsengesetz, BEHG)"
@@ -244,6 +272,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-06-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5291"
       },
       "titleDe": {
         "type": "literal",
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-06-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5291"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Börsen und den Effektenhandel"
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-06-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5291"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Börsen und den Effektenhandel"
@@ -341,37 +381,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-12-16"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Börsengesetz (BEHG) (Betrifft nur den französischen Text)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi sur les bourses (LBVM)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge sulle borse (LBVM) (Concerne solo il testo francese)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "954.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2008/851"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1997-02-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-12-16"
+        "value": "RO 2008 6257"
       },
       "titleDe": {
         "type": "literal",
@@ -405,6 +417,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-12-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 6257"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Börsengesetz (BEHG) (Betrifft nur den französischen Text)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi sur les bourses (LBVM)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge sulle borse (LBVM) (Concerne solo il testo francese)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "954.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/851"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1997-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-12-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 6257"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Börsengesetz (BEHG) (Betrifft nur den französischen Text)"
@@ -437,37 +489,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-03-31"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Börsen und den Effektenhandel (Börsengesetz, BEHG) (Betrifft nur den italienischen Text)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur les bourses et le commerce des valeurs mobilières (Loi sur les bourses, LBVM) (Ne concerne que le texte italien)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulle borse e il commercio di valori mobiliari (Legge sulle borse, LBVM)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "954.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/199"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1997-02-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-03-31"
+        "value": "RO 2009 1267"
       },
       "titleDe": {
         "type": "literal",
@@ -501,6 +525,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-03-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 1267"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Börsen und den Effektenhandel (Börsengesetz, BEHG) (Betrifft nur den italienischen Text)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les bourses et le commerce des valeurs mobilières (Loi sur les bourses, LBVM) (Ne concerne que le texte italien)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle borse e il commercio di valori mobiliari (Legge sulle borse, LBVM)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "954.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/199"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1997-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-03-31"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 1267"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Börsen und den Effektenhandel (Börsengesetz, BEHG) (Betrifft nur den italienischen Text)"
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-09-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1103"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Börsen und den Effektenhandel (Börsengesetz, BEHG)"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-09-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1103"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Börsen und den Effektenhandel (Börsengesetz, BEHG)"
@@ -597,6 +669,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-09-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1103"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Börsen und den Effektenhandel (Börsengesetz, BEHG)"
@@ -629,69 +705,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-06-15"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Finanzinstitute (Finanzinstitutsgesetz, FINIG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur les établissements financiers (LEFin)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sugli istituti finanziari (Legge sugli istituti finanziari, LIsFi)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "954.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2018/801"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2019-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-06-15"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Bundesgesetz über die Finanzinstitute (Finanzinstitutsgesetz, FINIG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur les établissements financiers (LEFin)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sugli istituti finanziari (Legge sugli istituti finanziari, LIsFi)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "954.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2018/801"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2019-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-06-15"
+        "value": "RO 2018 5247"
       },
       "titleDe": {
         "type": "literal",
@@ -725,6 +741,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-06-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 5247"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Finanzinstitute (Finanzinstitutsgesetz, FINIG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les établissements financiers (LEFin)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sugli istituti finanziari (Legge sugli istituti finanziari, LIsFi)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "954.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/801"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-06-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 5247"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Finanzinstitute (Finanzinstitutsgesetz, FINIG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les établissements financiers (LEFin)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sugli istituti finanziari (Legge sugli istituti finanziari, LIsFi)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "954.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/801"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-06-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 5247"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Finanzinstitute (Finanzinstitutsgesetz, FINIG)"
@@ -756,6 +848,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-11-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 4631"
       },
       "titleDe": {
         "type": "literal",
@@ -789,6 +885,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-11-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 4631"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die abschliessende Inkraftsetzung des Finanzinstitutsgesetzes"
@@ -821,6 +921,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-11-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 4631"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die abschliessende Inkraftsetzung des Finanzinstitutsgesetzes"
@@ -853,6 +957,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-12-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 5065"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Finanzinstitute (Finanzinstitutsgesetz, FINIG)"
@@ -885,6 +993,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-12-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 5065"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Finanzinstitute (Finanzinstitutsgesetz, FINIG)"
@@ -917,6 +1029,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-12-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 5065"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Finanzinstitute (Finanzinstitutsgesetz, FINIG)"
@@ -949,6 +1065,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-01-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 501"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Finanzinstitute (Finanzinstitutsgesetz, FINIG)"
@@ -981,6 +1101,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-01-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 501"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Finanzinstitute (Finanzinstitutsgesetz, FINIG)"
@@ -1012,6 +1136,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-01-31"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 501"
       },
       "titleDe": {
         "type": "literal",

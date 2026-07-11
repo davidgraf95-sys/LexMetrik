@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1992-03-25"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 25. März 1992 über Fernmeldedienste (FDV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 25 mars 1992 sur les services de télécommunication (OST)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 25 marzo 1992 sui servizi di telecomunicazione (OSTC)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "784.101.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1992/848_848_848"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1992-05-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1992-03-25"
+        "value": "RO 1992 848"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1992-03-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1992 848"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 25. März 1992 über Fernmeldedienste (FDV)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1992-03-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1992 848"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 25. März 1992 über Fernmeldedienste (FDV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 25 mars 1992 sur les services de télécommunication (OST)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 25 marzo 1992 sui servizi di telecomunicazione (OSTC)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "784.101.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1992/848_848_848"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1992-05-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1992-03-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1992 848"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 25. März 1992 über Fernmeldedienste (FDV)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1997-10-06"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 6. Oktober 1997 über Fernmeldedienste (FDV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 6 octobre 1997 sur les services de télécommunication (OST)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 6 ottobre 1997 sui servizi di telecomunicazione (OST)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "784.101.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1997/2833_2833_2833"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1997-10-06"
+        "value": "RO 1997 2833"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1997-10-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1997 2833"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 6. Oktober 1997 über Fernmeldedienste (FDV)"
@@ -245,6 +237,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1997-10-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1997 2833"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 6. Oktober 1997 über Fernmeldedienste (FDV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 6 octobre 1997 sur les services de télécommunication (OST)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 6 ottobre 1997 sui servizi di telecomunicazione (OST)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "784.101.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1997/2833_2833_2833"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1997-10-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1997 2833"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 6. Oktober 1997 über Fernmeldedienste (FDV)"
@@ -277,37 +309,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-04-05"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über Fernmeldedienste (FDV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les services de télécommunications (OST)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sui servizi di telecomunicazione (OST)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "784.101.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/165"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-05-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-04-05"
+        "value": "RO 2000 1044"
       },
       "titleDe": {
         "type": "literal",
@@ -341,6 +345,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-04-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1044"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Fernmeldedienste (FDV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les services de télécommunications (OST)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sui servizi di telecomunicazione (OST)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "784.101.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/165"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-05-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-04-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1044"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Fernmeldedienste (FDV)"
@@ -373,37 +417,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-10-31"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über Fernmeldedienste (FDV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les services de télécommunication (OST)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sui servizi di telecomunicazione (OST)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "784.101.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2001/421"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-11-15"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-10-31"
+        "value": "RO 2001 2759"
       },
       "titleDe": {
         "type": "literal",
@@ -437,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-10-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 2759"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Fernmeldedienste (FDV)"
@@ -469,6 +489,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-10-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 2759"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Fernmeldedienste (FDV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les services de télécommunication (OST)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sui servizi di telecomunicazione (OST)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "784.101.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2001/421"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-11-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-10-31"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 2759"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Fernmeldedienste (FDV)"
@@ -500,6 +560,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-12-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 3170"
       },
       "titleDe": {
         "type": "literal",
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-12-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 3170"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Fernmeldedienste (FDV) (Betrifft nur den italienischen Text)"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-12-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 3170"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Fernmeldedienste (FDV) (Betrifft nur den italienischen Text)"
@@ -597,37 +669,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-07-09"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über Fernmeldedienste (FDV) (nur ital.)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les services de télécommunication (OST) (seulement en italien)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sui servizi di telecomunicazione (OST)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "784.101.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/259"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-11-15"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-07-09"
+        "value": "RO 2002 1728"
       },
       "titleDe": {
         "type": "literal",
@@ -661,6 +705,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-07-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1728"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Fernmeldedienste (FDV) (nur ital.)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les services de télécommunication (OST) (seulement en italien)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sui servizi di telecomunicazione (OST)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "784.101.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/259"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-11-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-07-09"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1728"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Fernmeldedienste (FDV) (nur ital.)"
@@ -693,37 +777,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-01-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über Fernmeldedienste (FDV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les services de télécommunication (OST)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sui servizi di telecomunicazione (OST)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "784.101.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/27"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-11-15"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-01-22"
+        "value": "RO 2002 158"
       },
       "titleDe": {
         "type": "literal",
@@ -757,6 +813,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-01-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 158"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Fernmeldedienste (FDV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les services de télécommunication (OST)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sui servizi di telecomunicazione (OST)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "784.101.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/27"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-11-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-01-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 158"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Fernmeldedienste (FDV)"
@@ -789,6 +885,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-12-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 271"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Fernmeldedienste (FDV)"
@@ -821,6 +921,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-12-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 271"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Fernmeldedienste (FDV)"
@@ -852,6 +956,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-12-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 271"
       },
       "titleDe": {
         "type": "literal",
@@ -885,37 +993,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-03-07"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über Fernmeldedienste (FDV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les services de télécommunication (OST)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sui servizi di telecomunicazione (OST)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "784.101.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/117"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-03-07"
+        "value": "RO 2003 544"
       },
       "titleDe": {
         "type": "literal",
@@ -949,6 +1029,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-03-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 544"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Fernmeldedienste (FDV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les services de télécommunication (OST)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sui servizi di telecomunicazione (OST)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "784.101.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/117"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-03-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 544"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Fernmeldedienste (FDV)"
@@ -981,6 +1101,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-12-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 4767"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Fernmeldedienste (FDV)"
@@ -1013,6 +1137,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-12-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 4767"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Fernmeldedienste (FDV)"
@@ -1044,6 +1172,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-12-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 4767"
       },
       "titleDe": {
         "type": "literal",
@@ -1077,37 +1209,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-06-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über Fernmeldedienste (FDV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les services de télécommunication (OST)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sui servizi di telecomunicazione (OST)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "784.101.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2005/510"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-09-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-06-22"
+        "value": "RO 2005 3555"
       },
       "titleDe": {
         "type": "literal",
@@ -1141,6 +1245,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-06-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 3555"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Fernmeldedienste (FDV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les services de télécommunication (OST)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sui servizi di telecomunicazione (OST)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "784.101.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/510"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-09-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-06-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 3555"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Fernmeldedienste (FDV)"
@@ -1173,6 +1317,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-01-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 669"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Fernmeldedienste (FDV)"
@@ -1205,6 +1353,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-01-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 669"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Fernmeldedienste (FDV)"
@@ -1236,6 +1388,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-01-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 669"
       },
       "titleDe": {
         "type": "literal",
@@ -1269,37 +1425,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-09-13"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über Fernmeldedienste (FDV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les services de télécommunication (OST)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sui servizi di telecomunicazione (OST)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "784.101.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/592"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-10-10"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-09-13"
+        "value": "RO 2006 3939"
       },
       "titleDe": {
         "type": "literal",
@@ -1333,6 +1461,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-09-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 3939"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Fernmeldedienste (FDV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les services de télécommunication (OST)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sui servizi di telecomunicazione (OST)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "784.101.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/592"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-10-10"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-09-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 3939"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Fernmeldedienste (FDV)"
@@ -1365,6 +1533,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 945"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Fernmeldedienste (FDV)"
@@ -1397,6 +1569,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 945"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Fernmeldedienste (FDV)"
@@ -1429,6 +1605,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 945"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Fernmeldedienste (FDV)"
@@ -1460,6 +1640,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-09"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 945"
       },
       "titleDe": {
         "type": "literal",
@@ -1493,37 +1677,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-11-04"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über Fernmeldedienste (FDV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les services de télécommunication (OST)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sui servizi di telecomunicazione (OST)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "784.101.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/703"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-11-04"
+        "value": "RO 2009 5821"
       },
       "titleDe": {
         "type": "literal",
@@ -1557,6 +1713,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-11-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5821"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Fernmeldedienste (FDV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les services de télécommunication (OST)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sui servizi di telecomunicazione (OST)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "784.101.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/703"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-11-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5821"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Fernmeldedienste (FDV)"
@@ -1589,6 +1785,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-12-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 367"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Fernmeldedienste (FDV)"
@@ -1621,6 +1821,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-12-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 367"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Fernmeldedienste (FDV)"
@@ -1652,6 +1856,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-12-09"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 367"
       },
       "titleDe": {
         "type": "literal",
@@ -1685,37 +1893,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-18"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über Fernmeldedienste (FDV) (Betrifft nur den französischen Text)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les services de télécommunication (OST)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sui servizi di telecomunicazione (OST) (Concerne solo il testo francese)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "784.101.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/885"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-12-18"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-12-18"
+        "value": "RO 2012 7265"
       },
       "titleDe": {
         "type": "literal",
@@ -1749,6 +1929,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 7265"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Fernmeldedienste (FDV) (Betrifft nur den französischen Text)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les services de télécommunication (OST)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sui servizi di telecomunicazione (OST) (Concerne solo il testo francese)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "784.101.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/885"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-12-18"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-12-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 7265"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Fernmeldedienste (FDV) (Betrifft nur den französischen Text)"
@@ -1781,6 +2001,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 7505"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Fernmeldedienste (FDV) (Betrifft nur den französischen Text)"
@@ -1813,6 +2037,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 7505"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Fernmeldedienste (FDV) (Betrifft nur den französischen Text)"
@@ -1844,6 +2072,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 7505"
       },
       "titleDe": {
         "type": "literal",
@@ -1877,6 +2109,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-03-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 729"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Fernmeldedienste (FDV)"
@@ -1909,6 +2145,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-03-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 729"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Fernmeldedienste (FDV)"
@@ -1941,69 +2181,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-03-14"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über Fernmeldedienste (FDV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les services de télécommunication (OST)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sui servizi di telecomunicazione (OST)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "784.101.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2014/697"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-11-05"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung über Fernmeldedienste (FDV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les services de télécommunication (OST)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sui servizi di telecomunicazione (OST)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "784.101.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2014/697"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-11-05"
+        "value": "RO 2014 729"
       },
       "titleDe": {
         "type": "literal",
@@ -2037,6 +2217,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-11-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 4161"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Fernmeldedienste (FDV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les services de télécommunication (OST)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sui servizi di telecomunicazione (OST)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "784.101.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/697"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-11-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 4161"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Fernmeldedienste (FDV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les services de télécommunication (OST)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sui servizi di telecomunicazione (OST)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "784.101.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/697"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-11-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 4161"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Fernmeldedienste (FDV)"
@@ -2068,6 +2324,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-12-02"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 13"
       },
       "titleDe": {
         "type": "literal",
@@ -2101,6 +2361,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-12-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 13"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Fernmeldedienste"
@@ -2133,6 +2397,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-12-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 13"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Fernmeldedienste"
@@ -2165,6 +2433,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-10-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 3487"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Fernmeldedienste (FDV)"
@@ -2197,6 +2469,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-10-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 3487"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Fernmeldedienste (FDV)"
@@ -2229,6 +2505,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-10-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 3487"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Fernmeldedienste (FDV)"
@@ -2261,6 +2541,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-11-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 6183"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Fernmeldedienste (FDV)"
@@ -2293,6 +2577,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-11-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 6183"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Fernmeldedienste (FDV)"
@@ -2324,6 +2612,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-11-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 6183"
       },
       "titleDe": {
         "type": "literal",

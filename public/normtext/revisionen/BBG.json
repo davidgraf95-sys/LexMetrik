@@ -1,7 +1,7 @@
 {
   "erlassKey": "BBG",
   "sr": "412.10",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -65,13 +65,13 @@
       "dateEntryInForce": "2018-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/564",
       "dateDocument": "2016-12-16",
-      "roFundstelle": "AS 2017 564",
+      "roFundstelle": "AS 2017 5143",
       "titelDe": "Bundesgesetz über die Berufsbildung (Berufsbildungsgesetz, BBG)",
       "titelFr": "Loi fédérale sur la formation professionnelle (LFPr)",
       "titelIt": "Legge federale sulla formazione professionale (Legge sulla formazione professionale, LFPr)",
       "botschaftKey": "BOTSCHAFT-2016-576",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/564/de",
-      "sha": "3e300dce204b01278505f77e737f4504ba0425966e7396117096e3838e7ff1d4"
+      "sha": "cab3c4c973649c87cc970b4512fa4dfe24d2bb7a9c9c2b2276bdaa9e792b92e6"
     },
     {
       "art": "sammelerlass-marker",
@@ -144,13 +144,13 @@
       "dateEntryInForce": "2004-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/674",
       "dateDocument": "2002-12-13",
-      "roFundstelle": "AS 2003 674",
+      "roFundstelle": "AS 2003 4557",
       "titelDe": "Bundesgesetz über die Berufsbildung (Berufsbildungsgesetz, BBG)",
       "titelFr": "Loi fédérale sur la formation professionnelle (LFPr)",
       "titelIt": "Legge federale sulla formazione professionale (Legge sulla formazione professionale, LFPr)",
       "botschaftKey": "BOTSCHAFT-2000-1232",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/674/de",
-      "sha": "61e5bc53cb5ad847e91662facfa86ec299f8125c8eaceedb50ba1e0c9e9dad72"
+      "sha": "f2a567a899c5632d58dcf97d1073d8af3885f7a9a1f3a788eef50fb6074e23dd"
     },
     {
       "art": "aenderung",
@@ -177,5 +177,5 @@
       "sha": "3a378561d6fb932e2c2e198349e2a90487366898675e886fb3bbd6ff0fcbfb53"
     }
   ],
-  "sha": "9685a2da3516c7ea0b463ac1d150271d41cea89d4de60630a06935a958908f6b"
+  "sha": "697b2bcb09c3c15999f385c876020191ad949c2730bb8983c8b4dd5aea9163f5"
 }

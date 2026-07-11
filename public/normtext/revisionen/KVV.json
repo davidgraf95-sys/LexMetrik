@@ -1,7 +1,7 @@
 {
   "erlassKey": "KVV",
   "sr": "832.102",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -282,12 +282,12 @@
       "dateEntryInForce": "2020-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/786",
       "dateDocument": "2019-12-06",
-      "roFundstelle": "AS 2019 786",
+      "roFundstelle": "AS 2019 4771",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/786/de",
-      "sha": "6adbc364e175927f822202f781b277fbe227fe4ae8dab19ffd5c53069ebd44b8"
+      "sha": "d3c6890794b93f5b30d237a7f0b8c3941b6e3ab9878e3e4fc43a873878cd2c1d"
     },
     {
       "art": "sammelerlass-marker",
@@ -300,36 +300,36 @@
       "dateEntryInForce": "2018-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/703",
       "dateDocument": "2017-10-25",
-      "roFundstelle": "AS 2017 703",
+      "roFundstelle": "AS 2017 6339",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/703/de",
-      "sha": "ade789fb3716f067845424f9d5319260171a9ec195d45b7b6add299ab2db23c5"
+      "sha": "2e6ef58deff5acea3a11ae6a424b2300685ae8bda8e8802f8a385f9c2b929798"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2018-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/749",
       "dateDocument": "2017-11-15",
-      "roFundstelle": "AS 2017 749",
+      "roFundstelle": "AS 2017 6723",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/749/de",
-      "sha": "e46d64cc855738d097b90c1fe0d8ff9bb90521b4aa237c6ce2e612b62f437f50"
+      "sha": "0543477b95588d98bdee3369de01aac873eebb49f5e7f67aafbb877174274255"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2017-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/420",
       "dateDocument": "2017-06-16",
-      "roFundstelle": "AS 2017 420",
+      "roFundstelle": "AS 2017 3687",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/420/de",
-      "sha": "f18496f57a7e61a575e22f2c2f65605310dc2dce42d092a277199528b3006609"
+      "sha": "87f69b67826de46855fe5c674618baf60809c133fb5dd1c813a646f0be3a6a01"
     },
     {
       "art": "sammelerlass-marker",
@@ -342,60 +342,60 @@
       "dateEntryInForce": "2017-03-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/106",
       "dateDocument": "2017-02-01",
-      "roFundstelle": "AS 2017 106",
+      "roFundstelle": "AS 2017 623",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/106/de",
-      "sha": "b74ee07d57153dfa73d69ced72b0cc2dc5eb98530adad65821c8ee70c5752426"
+      "sha": "327d995ea70d4893179f3b9274ebb15ada0938dda5c513824ebe332d78b97ca1"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2017-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/792",
       "dateDocument": "2016-12-09",
-      "roFundstelle": "AS 2016 792",
+      "roFundstelle": "AS 2016 4927",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/792/de",
-      "sha": "b4c01328a17aaf60e099920828ac014a541ee2acc71e6df4024025b9f634557d"
+      "sha": "072df10e72f087a7cea081ee0493f0c3f4cf1d05beac89edc6614a55c8f92532"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2016-11-29",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/704",
       "dateDocument": "2016-11-29",
-      "roFundstelle": "AS 2016 704",
+      "roFundstelle": "AS 2016 4195",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal) (Ne concerne que le texte allemand)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal) (Concerne soltanto il testo tedesco)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/704/de",
-      "sha": "ea150bb325a7c3702c6bbaaca5a0db592c1d58140c1fae3deb3fe86277f90271"
+      "sha": "1980704701343c417b7b86cb6b4f579180c6cc6cd6bb7dcfa2b0ba30453fe699"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2016-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/429",
       "dateDocument": "2016-06-29",
-      "roFundstelle": "AS 2016 429",
+      "roFundstelle": "AS 2016 2689",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/429/de",
-      "sha": "62c04ba930ea6974f192ece5d67ba35941b07c7416218a8c3d8bcae5c5ebaa31"
+      "sha": "a7d40e3897d2a2c4da8e2dbde583e7f887284c9f0673fdf1b9c2c7739eeebfcb"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2016-05-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/219",
       "dateDocument": "2016-03-23",
-      "roFundstelle": "AS 2016 219",
+      "roFundstelle": "AS 2016 1175",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/219/de",
-      "sha": "928c071493c122f23b3b1381d737324d7007a93e2b8461c5e42f758f686c8339"
+      "sha": "00ff1abcd238727f7c133b8dd1be8a2d499b53b51c359b5e1c6be3dfe8aa51ab"
     },
     {
       "art": "sammelerlass-marker",
@@ -408,48 +408,48 @@
       "dateEntryInForce": "2015-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/258",
       "dateDocument": "2015-04-29",
-      "roFundstelle": "AS 2015 258",
+      "roFundstelle": "AS 2015 1255",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/258/de",
-      "sha": "9951bac1d9af1602ef9553cf78c73c1932a31aa814bd74ddb71744f973468717"
+      "sha": "cfec544e5bc085b4ded42d897084dd768c064f9e19235de4e9096cbda5355fc3"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2015-04-28",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/236",
       "dateDocument": "2015-04-28",
-      "roFundstelle": "AS 2015 236",
+      "roFundstelle": "AS 2015 1177",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/236/de",
-      "sha": "d129ce623a324dc0d5af441526665d512ef7241122e7230df58216ec8a1bbaa2"
+      "sha": "f2b9ac3494bad30e5093e060f349e01de288fdd61a18a29257dae784007e7030"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2015-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/723",
       "dateDocument": "2014-11-19",
-      "roFundstelle": "AS 2014 723",
+      "roFundstelle": "AS 2014 4391",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/723/de",
-      "sha": "09f7c2a2249d80f6b8c087e63bc7356463f4806e13fd4d8162b31643be5e4546"
+      "sha": "2526c17a48d981aefb38dca682ef2a4d4c62fb3a77a44f0d3150c41f77e9bef4"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2014-11-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/559",
       "dateDocument": "2014-10-15",
-      "roFundstelle": "AS 2014 559",
+      "roFundstelle": "AS 2014 3263",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/559/de",
-      "sha": "09005dee0c3da95aee11ba432c9d2d8a01f5f0a1b8e8dc113f1323c9d209587a"
+      "sha": "057a009273fd5de693a2c5d5ff365ea2f915c531aa0a617ef70d64deeb00140b"
     },
     {
       "art": "sammelerlass-marker",
@@ -462,72 +462,72 @@
       "dateEntryInForce": "2014-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/800",
       "dateDocument": "2013-11-29",
-      "roFundstelle": "AS 2013 800",
+      "roFundstelle": "AS 2013 4523",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/800/de",
-      "sha": "a0d9e26954e693917a049cb0b82d670e6129a4d20aca2177f71eab511e1aa724"
+      "sha": "861fcba4a6f529425ae7e1b08fa185deeaf2862cdea83b45f441adb7e9a77a4e"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2013-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/318",
       "dateDocument": "2013-05-08",
-      "roFundstelle": "AS 2013 318",
+      "roFundstelle": "AS 2013 1353",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/318/de",
-      "sha": "346a2e32356c6fc3d86948269e087771a0cbe5d43cf0e8051ab66c158d7245e0"
+      "sha": "45b23a44a68200d3791d811c4b5cfca95ccb023573f98b3e28a59b64feab6a84"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2013-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/474",
       "dateDocument": "2012-07-04",
-      "roFundstelle": "AS 2012 474",
+      "roFundstelle": "AS 2012 4089",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/474/de",
-      "sha": "7b24d89c0bcae8600751522ae7dffcf164a9ead9ce7cc625ecc72354bf55175d"
+      "sha": "4a0afafe9c44c26177200e5915488654cc4f133627ff9c699a8f7d61ba1e5ef3"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2012-05-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/246",
       "dateDocument": "2012-03-21",
-      "roFundstelle": "AS 2012 246",
+      "roFundstelle": "AS 2012 1767",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/246/de",
-      "sha": "e298c9f93877bd8d9b609a9ed269b0eac343db6916fe4e55ed93d6d31fadb731"
+      "sha": "800be96050e9a5324b4f1304df6a169b1a001533d609d638d03da83f70924f70"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2012-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/162",
       "dateDocument": "2011-11-02",
-      "roFundstelle": "AS 2012 162",
+      "roFundstelle": "AS 2012 955",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/162/de",
-      "sha": "619bc812e39f3515dd2ec51a18e04cc1dfa00cddfef4b6211335fbb3d2529e5f"
+      "sha": "6f4989b0cc6c4516a4a3a7db5d2b0d72c488bda5ca4e22eac272218ff0b4f165"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2012-02-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/61",
       "dateDocument": "2012-01-18",
-      "roFundstelle": "AS 2012 61",
+      "roFundstelle": "AS 2012 459",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/61/de",
-      "sha": "2cbc72b9a6113b7cb4d46f3a56b303fe5c8efaf9bf496ca5045a3493730503ab"
+      "sha": "969a3aa0d4ba81d859351344a90b2479580842b8773951bb7ae398730588a3e7"
     },
     {
       "art": "sammelerlass-marker",
@@ -540,84 +540,84 @@
       "dateEntryInForce": "2012-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/462",
       "dateDocument": "2011-06-22",
-      "roFundstelle": "AS 2011 462",
+      "roFundstelle": "AS 2011 3449",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/462/de",
-      "sha": "82304c06d0a347b29d96a272c18f2d9bae49a93bd95e7889edb7db3f02c74b0d"
+      "sha": "a7c14892e5c9d0f45d301dc7bdb59cd282e36942ec376f0b3a63794acdc31e2d"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2012-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/477",
       "dateDocument": "2011-06-22",
-      "roFundstelle": "AS 2011 477",
+      "roFundstelle": "AS 2011 3527",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/477/de",
-      "sha": "00c683c57dabd88879e77dc6b96d25175356153cdbdb8a4c2c167cc3341c413f"
+      "sha": "84f50845970c85b1d4aa604e87d0bd2105c9b2cb332071dcd05e2bfd03593f5d"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2011-12-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/738",
       "dateDocument": "2011-11-02",
-      "roFundstelle": "AS 2011 738",
+      "roFundstelle": "AS 2011 5037",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/738/de",
-      "sha": "2904d7a2aa85a5c30ce6faf43651404393fc992b2a4e34417c379bb223ea3fd7"
+      "sha": "1b35b7ab8105f2aca13fbd4db0fd1fd260c842fa7a4b27ecba40e3577f6f0b0e"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2011-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/478",
       "dateDocument": "2011-07-06",
-      "roFundstelle": "AS 2011 478",
+      "roFundstelle": "AS 2011 3535",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/478/de",
-      "sha": "9f512f5dcfe097c6573864f2b1237e44f77a57f2e5b55102aec8361b5e0180d6"
+      "sha": "a94aa38178580e668aefb1906972fc6ec5c32dde5c733c1b0d808c294a165604"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2011-03-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/104",
       "dateDocument": "2011-02-02",
-      "roFundstelle": "AS 2011 104",
+      "roFundstelle": "AS 2011 653",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/104/de",
-      "sha": "2337f3dc587eeb13a19859d8584e5d5bdedad0a301e1ee5642b491dfb9c1db60"
+      "sha": "3dd72d181cbc873d52638dfaa538e591412287b9f6d83a02461f1920434d12d0"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2011-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/878",
       "dateDocument": "2010-12-03",
-      "roFundstelle": "AS 2010 878",
+      "roFundstelle": "AS 2010 6155",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/878/de",
-      "sha": "1b94964d4df810e5788a2df6bba1a08535a2a2ee12dadabb5a836b5e88d4575a"
+      "sha": "f3a0feff89e32a8986402bcfa6f17a40f3741dae5d6a8805037b8c9bab8150a8"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2011-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/879",
       "dateDocument": "2010-12-03",
-      "roFundstelle": "AS 2010 879",
+      "roFundstelle": "AS 2010 6161",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/879/de",
-      "sha": "7f50b5005fe219237957f5e95cd6c9987b0459fcef28ad1f01c1907b5cc7c069"
+      "sha": "353ac69cd7c2c2a6d2f1e8236322ea8b5f008856e88b674cdbb483471ea5152d"
     },
     {
       "art": "sammelerlass-marker",
@@ -636,36 +636,36 @@
       "dateEntryInForce": "2009-10-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/520",
       "dateDocument": "2009-07-01",
-      "roFundstelle": "AS 2009 520",
+      "roFundstelle": "AS 2009 4245",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/520/de",
-      "sha": "0082ba979d70bb91113a2a51f563cf8e16b0d1b247af100f280c3e0c3725fbab"
+      "sha": "ec450398007c96887a4cd04290d89085b7ee7ed2fdf3457abb20d8f208b463e3"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2009-10-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/560",
       "dateDocument": "2009-09-11",
-      "roFundstelle": "AS 2009 560",
+      "roFundstelle": "AS 2009 4759",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/560/de",
-      "sha": "d5e4e0b8ca63833e524a335ff6acbd9069c3e03807e60447a441cf8c6097c20a"
+      "sha": "2f6af00c465bb460e01f5cde00ab51a15bb15b9b1d2f4d92df3acd0a01a39f5e"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2009-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/434",
       "dateDocument": "2009-06-24",
-      "roFundstelle": "AS 2009 434",
+      "roFundstelle": "AS 2009 3525",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/434/de",
-      "sha": "95ef67147f03b7b7cda6e553c6e9381f6113b72856072af8f22c243679caaa1b"
+      "sha": "74740d8f34bad0fa9f0468931e8fe38fc0031e71d7e6a24344e26fe60fe48be9"
     },
     {
       "art": "sammelerlass-marker",
@@ -678,24 +678,24 @@
       "dateEntryInForce": "2009-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/708",
       "dateDocument": "2008-10-22",
-      "roFundstelle": "AS 2008 708",
+      "roFundstelle": "AS 2008 5097",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/708/de",
-      "sha": "1ee4eda2d630f9f09a0d3d603caa09e2c7bc4e559e9124f4d1a3d309c8a69d23"
+      "sha": "089db71ed3d4fa3f67ad981395b98b6779255dc7019cef3cdb92ebe70218e041"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2008-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/881",
       "dateDocument": "2007-11-21",
-      "roFundstelle": "AS 2007 881",
+      "roFundstelle": "AS 2007 6837",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/881/de",
-      "sha": "cd455d92a1cdf149cc65a05912ae1165b1762596ebfcbf7ba60ec1012ef0e4c9"
+      "sha": "b85ffe1fca04f5d26858777296cb7f457808dedf9a228b8d68776f48a6868b14"
     },
     {
       "art": "sammelerlass-marker",
@@ -708,12 +708,12 @@
       "dateEntryInForce": "2007-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/439",
       "dateDocument": "2007-06-27",
-      "roFundstelle": "AS 2007 439",
+      "roFundstelle": "AS 2007 3573",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/439/de",
-      "sha": "ba6b712830ee3ae1ca78e87b0357e030a6ee69dd5d0f79710850352486b1c455"
+      "sha": "b8e878aac88d8b53c04bc3aa29b7ca5a8b7b9299a6b77b8b15f0d73141a14f52"
     },
     {
       "art": "sammelerlass-marker",
@@ -732,12 +732,12 @@
       "dateEntryInForce": "2006-05-10",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/269",
       "dateDocument": "2006-04-26",
-      "roFundstelle": "AS 2006 269",
+      "roFundstelle": "AS 2006 1717",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/269/de",
-      "sha": "ab07f67efbb77928ec71cdf2407c8a78c15ca8e0bccdd2acbf6d28e3e97b6e44"
+      "sha": "4bd8e06460aef99a7ae8694473d25df6dcf4f22a8949e9c19b57cd3873985b18"
     },
     {
       "art": "sammelerlass-marker",
@@ -750,12 +750,12 @@
       "dateEntryInForce": "2006-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/771",
       "dateDocument": "2005-11-09",
-      "roFundstelle": "AS 2005 771",
+      "roFundstelle": "AS 2005 5639",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/771/de",
-      "sha": "1248c513ca6f9a8df6a57a9a4a1c62e8afb8772833f4388e0c20c7e803822c4a"
+      "sha": "455b2c79f1c405c11188a4cc6c4f13edb1da8af8751f8f2e75a66c008f2b9364"
     },
     {
       "art": "sammelerlass-marker",
@@ -768,24 +768,24 @@
       "dateEntryInForce": "2005-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/454",
       "dateDocument": "2004-05-26",
-      "roFundstelle": "AS 2004 454",
+      "roFundstelle": "AS 2004 3437",
       "titelDe": "Verordnung über die Krankenversicherung (KVV) (Kostenbeteiligung)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal) (Participation aux coûts)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal) (Partecipazione ai costi)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/454/de",
-      "sha": "353160d641b71d9a833bb6eda02f729367968b90d0e632a4a8b6861141052ff4"
+      "sha": "a4e0d99ded82a10eaad58786bb99f3de7a53b84340bc941c0f21259bd1ab4f65"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2005-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/784",
       "dateDocument": "2004-12-03",
-      "roFundstelle": "AS 2004 784",
+      "roFundstelle": "AS 2004 5075",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/784/de",
-      "sha": "1da3af689e16879d98f32d94a9e68479eba0e3051632e500a1a7ccb760464b8a"
+      "sha": "47d9d331eda13e56c206c04392f0ff53af30d30a5de49560cfd8c348816c0725"
     },
     {
       "art": "sammelerlass-marker",
@@ -804,84 +804,84 @@
       "dateEntryInForce": "2004-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/577",
       "dateDocument": "2003-11-11",
-      "roFundstelle": "AS 2003 577",
+      "roFundstelle": "AS 2003 3991",
       "titelDe": "Verordnung vom 27. Juni 1995 über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance du 27 juin 1995 sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza del 27 giugno 1995 sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/577/de",
-      "sha": "198f5105e3cacd03cfa8d88de801d11819143c57dd6341d85fc5169c45c019f9"
+      "sha": "5cc7880949f782929207faa4da5b59da0b41d533298f6634633b575a4b6b14a0"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2004-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/773",
       "dateDocument": "2003-12-15",
-      "roFundstelle": "AS 2003 773",
+      "roFundstelle": "AS 2003 5279",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/773/de",
-      "sha": "bcb7604febbb0981d17c43d6fe9bbcc51f0d557929dc62987a56990d352866ec"
+      "sha": "8add80d31c9a0daab97f7bd91b83d2c35f21b0314ae6060be9f42e0bfeb208fd"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2003-10-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/445",
       "dateDocument": "2003-06-06",
-      "roFundstelle": "AS 2003 445",
+      "roFundstelle": "AS 2003 3249",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/445/de",
-      "sha": "3a2a0c345adfe972a2f7691ddcc09253bd3e18f2ffd8767cbb78670a8979d0eb"
+      "sha": "88e22cf53c923b2afba2a90e2d9b3ef19b329b91b420d0d6d679bb13e8769e5b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2003-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/605",
       "dateDocument": "2002-09-11",
-      "roFundstelle": "AS 2002 605",
+      "roFundstelle": "AS 2002 3908",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/605/de",
-      "sha": "ce7f6818087a92ea21d336fec2d16b51d7d49ca903a5b80dc9bd0a54eb66a7a4"
+      "sha": "78a6e7b4d88cb5993f19b78f75181deb3ce36f7ee513474a03dfa2e9ace0262e"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2002-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/316",
       "dateDocument": "2002-06-26",
-      "roFundstelle": "AS 2002 316",
+      "roFundstelle": "AS 2002 2129",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/316/de",
-      "sha": "8f94b15a29c178f70484a6b1260136022e29e605d6c127e8bf39f808c6275ea6"
+      "sha": "71888e67b89bce664eb61d225fbbb95deb856f89ff5701734f76d967b07db36d"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2002-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/161",
       "dateDocument": "2001-07-03",
-      "roFundstelle": "AS 2002 161",
+      "roFundstelle": "AS 2002 915",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/161/de",
-      "sha": "dca6e0c79cc4748513024856b17a8c70fa381b10a89a13e65ff8cd78acd035cc"
+      "sha": "f7a06ac21b70fd4fa1cf65ca2fd15f4b01ffdb265d8c88161228fd53def3d8c2"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2002-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/251",
       "dateDocument": "2002-05-22",
-      "roFundstelle": "AS 2002 251",
+      "roFundstelle": "AS 2002 1633",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/251/de",
-      "sha": "1fc67ddf935b153e43300a0632b1ee72f2e16f6ffa7587fc5c4f0498e3aae61f"
+      "sha": "fa60f5af3c9d716962395b8c2e2cd2489092cd5018612dae64173d98a8711e96"
     },
     {
       "art": "sammelerlass-marker",
@@ -894,60 +894,60 @@
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/481",
       "dateDocument": "2000-10-02",
-      "roFundstelle": "AS 2000 481",
+      "roFundstelle": "AS 2000 2835",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/481/de",
-      "sha": "192b1844b074088e614b49fc373cb92f23ff97c65d5c5221262a86e038e4805a"
+      "sha": "71c40d82b6adfeb2c51fde2df666da417c9beda224424cc29b137b1401abdfa4"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/510",
       "dateDocument": "2000-11-22",
-      "roFundstelle": "AS 2000 510",
+      "roFundstelle": "AS 2000 2911",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/510/de",
-      "sha": "5ea85954398e655368644dd361f5393fec95c5549a63919baa765616124f3312"
+      "sha": "b084a33ecbf409b33468a593f8cef91dfb53cce4645bdd1a24b4877c4ed572fc"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/31",
       "dateDocument": "2000-12-11",
-      "roFundstelle": "AS 2001 31",
+      "roFundstelle": "AS 2001 138",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/31/de",
-      "sha": "c50ebb70d6ce3c318a8bc3e7b827dde53a7574614e9bc690f304101d8fa5e06b"
+      "sha": "042d030238b28797afc29cc5b552074712e7678df2b43f1d27f9d35f5f45b652"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2000-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/137",
       "dateDocument": "2000-02-23",
-      "roFundstelle": "AS 2000 137",
+      "roFundstelle": "AS 2000 889",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/137/de",
-      "sha": "6f4520414ded1f4af1613cd239ee9c30e5dcf05faf5d242c74dfe14f89fd76a6"
+      "sha": "25ba84da685bca17c13524d87fafdfccf66859c371bcb630dc0c66a929f9d5f4"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "1999-10-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/367",
       "dateDocument": "1999-08-11",
-      "roFundstelle": "AS 1999 367",
+      "roFundstelle": "AS 1999 2403",
       "titelDe": "Verordnung über die Krankenversicherung (KVV)",
       "titelFr": "Ordonnance sur l'assurance-maladie (OAMal)",
       "titelIt": "Ordinanza sull'assicurazione malattie (OAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/367/de",
-      "sha": "3a18e352b9c21430611c194a47a1ed6cc19e9d26650074e1526cb9c36be8f045"
+      "sha": "dda8a8cdb7d701fe64ce2e04ac4e53b58636fa0cfbf05001cf252e2c51c4469c"
     },
     {
       "art": "aenderung",
@@ -974,5 +974,5 @@
       "sha": "1b8f4b7546ec7284c63371e873d9a217b6191c580f1a463aaa8d76db384f3eca"
     }
   ],
-  "sha": "8d0013c24bce7a1f5f1df0e272c3bd57f4ae5a3902f4f34424ccec2852c9da57"
+  "sha": "a470d8e385d7f1b99a151ead1f483d47aa1ee9c346f331de054db3fbe8e215b5"
 }

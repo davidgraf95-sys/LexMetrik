@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-12-23"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Anhebung der Mehrwertsteuersätze zur Finanzierung der Eisenbahngrossprojekte"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le relèvement des taux de la taxe sur la valeur ajoutée en faveur du financement des grands projets ferroviaires"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'aumento delle aliquote dell'imposta sul valore aggiunto per finanziare i grandi progetti ferroviari"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "641.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/183"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-12-23"
+        "value": "RO 2000 1134"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-12-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1134"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Anhebung der Mehrwertsteuersätze zur Finanzierung der Eisenbahngrossprojekte"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le relèvement des taux de la taxe sur la valeur ajoutée en faveur du financement des grands projets ferroviaires"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'aumento delle aliquote dell'imposta sul valore aggiunto per finanziare i grandi progetti ferroviari"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "641.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/183"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-12-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1134"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Anhebung der Mehrwertsteuersätze zur Finanzierung der Eisenbahngrossprojekte"
@@ -117,37 +129,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-09-02"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale régissant la taxe sur la valeur ajoutée (Loi sur la TVA, LTVA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale concernente l'imposta sul valore aggiunto (Legge sull'IVA, LIVA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "641.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/212"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-09-02"
+        "value": "RO 2000 1300"
       },
       "titleDe": {
         "type": "literal",
@@ -181,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-09-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1300"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG)"
@@ -213,6 +201,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-09-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1300"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale régissant la taxe sur la valeur ajoutée (Loi sur la TVA, LTVA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale concernente l'imposta sul valore aggiunto (Legge sull'IVA, LIVA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "641.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/212"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-09-02"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1300"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG)"
@@ -245,6 +273,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-06-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 3086"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-06-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 3086"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG)"
@@ -308,6 +344,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-06-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 3086"
       },
       "titleDe": {
         "type": "literal",
@@ -341,37 +381,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-12-14"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale régissant la taxe sur la valeur ajoutée (Loi sur la TVA, LTVA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale concernente l'imposta sul valore aggiunto (Legge sull'IVA, LIVA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "641.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/232"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-12-14"
+        "value": "RO 2002 1480"
       },
       "titleDe": {
         "type": "literal",
@@ -405,6 +417,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-12-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1480"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale régissant la taxe sur la valeur ajoutée (Loi sur la TVA, LTVA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale concernente l'imposta sul valore aggiunto (Legge sull'IVA, LIVA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "641.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/232"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-12-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1480"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG)"
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-06-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 4351"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG)"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-06-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 4351"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG)"
@@ -500,6 +560,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-06-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 4351"
       },
       "titleDe": {
         "type": "literal",
@@ -533,37 +597,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-12-16"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale régissant la taxe sur la valeur ajoutée (Loi sur la TVA, LTVA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale concernente l'imposta sul valore aggiunto (Legge sull'IVA, LIVA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "641.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/408"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-12-16"
+        "value": "RO 2006 2673"
       },
       "titleDe": {
         "type": "literal",
@@ -597,6 +633,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-12-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 2673"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale régissant la taxe sur la valeur ajoutée (Loi sur la TVA, LTVA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale concernente l'imposta sul valore aggiunto (Legge sull'IVA, LIVA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "641.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/408"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-12-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 2673"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG)"
@@ -628,6 +704,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-08-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 3243"
       },
       "titleDe": {
         "type": "literal",
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-08-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 3243"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG) (Betrifft nur den französischen Text)"
@@ -693,6 +777,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-08-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 3243"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG) (Betrifft nur den französischen Text)"
@@ -725,37 +813,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-06-12"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale régissant la taxe sur la valeur ajoutée (Loi sur la TVA, LTVA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale concernente l'imposta sul valore aggiunto (Legge sull'IVA, LIVA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "641.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/615"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-06-12"
+        "value": "RO 2009 5203"
       },
       "titleDe": {
         "type": "literal",
@@ -789,6 +849,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-06-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5203"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG)"
@@ -821,6 +885,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-06-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5203"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale régissant la taxe sur la valeur ajoutée (Loi sur la TVA, LTVA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale concernente l'imposta sul valore aggiunto (Legge sull'IVA, LIVA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "641.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/615"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-06-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5203"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG)"
@@ -853,6 +957,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-12-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 7129"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG) (Betrifft nur den italienischen Text)"
@@ -885,6 +993,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-12-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 7129"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG) (Betrifft nur den italienischen Text)"
@@ -916,6 +1028,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-12-02"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 7129"
       },
       "titleDe": {
         "type": "literal",
@@ -949,37 +1065,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-04-13"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG) (Betrifft nur den italienischen Text)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale régissant la taxe sur la valeur ajoutée (Loi sur la TVA, LTVA) (Ne concerne que le texte italien)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale concernente l'imposta sul valore aggiunto (Legge sull'IVA, LIVA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "641.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/203"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-04-13"
+        "value": "RO 2010 1469"
       },
       "titleDe": {
         "type": "literal",
@@ -1013,6 +1101,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-04-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1469"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG) (Betrifft nur den italienischen Text)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale régissant la taxe sur la valeur ajoutée (Loi sur la TVA, LTVA) (Ne concerne que le texte italien)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale concernente l'imposta sul valore aggiunto (Legge sull'IVA, LIVA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "641.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/203"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-04-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1469"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG) (Betrifft nur den italienischen Text)"
@@ -1044,6 +1172,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-04-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 2055"
       },
       "titleDe": {
         "type": "literal",
@@ -1077,6 +1209,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-04-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 2055"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Anhebung der Mehrwertsteuersätze zur befristeten Zusatzfinanzierung der Invalidenversicherung"
@@ -1109,6 +1245,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-04-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 2055"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Anhebung der Mehrwertsteuersätze zur befristeten Zusatzfinanzierung der Invalidenversicherung"
@@ -1141,37 +1281,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-06-15"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG) (Betrifft nur den italienischen Text)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale régissant la taxe sur la valeur ajoutée (Loi sur la TVA, LTVA) (Ne concerne que le texte italien)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale concernente l'imposta sul valore aggiunto (Legge sull'IVA, LIVA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "641.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/355"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-06-15"
+        "value": "RO 2011 2423"
       },
       "titleDe": {
         "type": "literal",
@@ -1205,6 +1317,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-06-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 2423"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG) (Betrifft nur den italienischen Text)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale régissant la taxe sur la valeur ajoutée (Loi sur la TVA, LTVA) (Ne concerne que le texte italien)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale concernente l'imposta sul valore aggiunto (Legge sull'IVA, LIVA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "641.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/355"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-06-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 2423"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG) (Betrifft nur den italienischen Text)"
@@ -1236,6 +1388,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-10-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4737"
       },
       "titleDe": {
         "type": "literal",
@@ -1269,6 +1425,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-10-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4737"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über eine weitere Teilinkraftsetzung des Mehrwertsteuergesetzes"
@@ -1301,6 +1461,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-10-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4737"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über eine weitere Teilinkraftsetzung des Mehrwertsteuergesetzes"
@@ -1333,37 +1497,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-26"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Mitteilung über die Auswirkung einer Gemeindefusion auf ein Gesetz"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Communication concernant la répercussion d'une fusion de communes sur une loi"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Comunicazione concernente la ripercussione di una fusione comunale su una legge"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "641.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/399"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-06-26"
+        "value": "RO 2012 3551"
       },
       "titleDe": {
         "type": "literal",
@@ -1397,6 +1533,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 3551"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Mitteilung über die Auswirkung einer Gemeindefusion auf ein Gesetz"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Communication concernant la répercussion d'une fusion de communes sur une loi"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Comunicazione concernente la ripercussione di una fusione comunale su una legge"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "641.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/399"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-06-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 3551"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Mitteilung über die Auswirkung einer Gemeindefusion auf ein Gesetz"
@@ -1429,37 +1605,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-02-20"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG) (Betrifft nur den italienischen Text)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance-chômage, LACI) (Ne concerne que le texte italien)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "641.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2013/165"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-03-12"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-02-20"
+        "value": "RO 2013 809"
       },
       "titleDe": {
         "type": "literal",
@@ -1493,6 +1641,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-02-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 809"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG) (Betrifft nur den italienischen Text)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance-chômage, LACI) (Ne concerne que le texte italien)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "641.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/165"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-03-12"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-02-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 809"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG) (Betrifft nur den italienischen Text)"
@@ -1525,37 +1713,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-06-21"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale régissant la taxe sur la valeur ajoutée (Loi sur la TVA, LTVA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale concernente l'imposta sul valore aggiunto (Legge sull'IVA, LIVA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "641.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2013/651"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-06-21"
+        "value": "RO 2013 3505"
       },
       "titleDe": {
         "type": "literal",
@@ -1589,6 +1749,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-06-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 3505"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale régissant la taxe sur la valeur ajoutée (Loi sur la TVA, LTVA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale concernente l'imposta sul valore aggiunto (Legge sull'IVA, LIVA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "641.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/651"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-06-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 3505"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG)"
@@ -1621,6 +1821,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-04-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1357"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG) (Betrifft nur den französischen Text)"
@@ -1653,6 +1857,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-04-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1357"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG) (Betrifft nur den französischen Text)"
@@ -1684,6 +1892,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-04-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1357"
       },
       "titleDe": {
         "type": "literal",
@@ -1717,6 +1929,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-09-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 3575"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetzes über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG)"
@@ -1749,6 +1965,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-09-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 3575"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetzes über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG)"
@@ -1780,6 +2000,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-09-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 3575"
       },
       "titleDe": {
         "type": "literal",
@@ -1812,6 +2036,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-08-31"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 4857"
       },
       "titleDe": {
         "type": "literal",
@@ -1845,6 +2073,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-08-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 4857"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG) (Betrifft nur den französischen Text)"
@@ -1876,6 +2108,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-08-31"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 4857"
       },
       "titleDe": {
         "type": "literal",
@@ -1908,6 +2144,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-08-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5059"
       },
       "titleDe": {
         "type": "literal",
@@ -1941,6 +2181,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-08-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5059"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG) (Betrifft nur den italienischen Text)"
@@ -1972,6 +2216,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-08-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5059"
       },
       "titleDe": {
         "type": "literal",
@@ -2004,6 +2252,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-11-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6305"
       },
       "titleDe": {
         "type": "literal",
@@ -2037,6 +2289,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-11-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6305"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die befristete Anhebung der Mehrwertsteuersätze zur Finanzierung des Ausbaus der Eisenbahninfrastruktur"
@@ -2068,6 +2324,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-11-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6305"
       },
       "titleDe": {
         "type": "literal",
@@ -2100,6 +2360,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-06-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 7667"
       },
       "titleDe": {
         "type": "literal",
@@ -2133,6 +2397,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-06-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 7667"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG)"
@@ -2164,6 +2432,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-06-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 7667"
       },
       "titleDe": {
         "type": "literal",
@@ -2453,6 +2725,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1941-07-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 57 821"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesratsbeschluss vom 29. Juli 1941 über die Warenumsatzsteuer "
@@ -2485,6 +2761,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1941-07-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 57 821"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesratsbeschluss vom 29. Juli 1941 über die Warenumsatzsteuer "
@@ -2517,6 +2797,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1941-07-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 57 821"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesratsbeschluss vom 29. Juli 1941 über die Warenumsatzsteuer "
@@ -2548,6 +2832,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1941-07-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 57 821"
       },
       "titleDe": {
         "type": "literal",

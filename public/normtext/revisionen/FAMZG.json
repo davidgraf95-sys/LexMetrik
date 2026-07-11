@@ -1,7 +1,7 @@
 {
   "erlassKey": "FAMZG",
   "sr": "836.2",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -46,13 +46,13 @@
       "dateEntryInForce": "2020-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/502",
       "dateDocument": "2019-09-27",
-      "roFundstelle": "AS 2020 502",
+      "roFundstelle": "AS 2020 2775",
       "titelDe": "Bundesgesetz über die Familienzulagen (Familienzulagengesetz, FamZG)",
       "titelFr": "Loi fédérale sur les allocations familiales (Loi sur les allocations familiales, LAFam)",
       "titelIt": "Legge federale sugli assegni familiari (Legge sugli assegni familiari, LAFam)",
       "botschaftKey": "BOTSCHAFT-2019-171",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/502/de",
-      "sha": "c615abba7e771b69bdb2b9e3a5ec2fb4a0189fbbc3d41837b9419239f95f2b69"
+      "sha": "008c50ebeb71dd0ce05f90fda8f2e1da0edcdbb98a3aca008b44d6f54517c671"
     },
     {
       "art": "sammelerlass-marker",
@@ -65,37 +65,37 @@
       "dateEntryInForce": "2013-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/718",
       "dateDocument": "2011-10-26",
-      "roFundstelle": "AS 2011 718",
+      "roFundstelle": "AS 2011 4949",
       "titelDe": "Verordnung über die abschliessende Inkraftsetzung der Änderung vom 18. März 2011 des Bundesgesetzes über die Familienzulagen",
       "titelFr": "Ordonnance sur la mise en vigueur complète de la modification du 18 mars 2011 de la loi sur les allocations familiales",
       "titelIt": "Ordinanza sull'entrata in vigore integrale della modifica del 18 marzo 2011 della legge sugli assegni familiari",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/718/de",
-      "sha": "0d88071594b3538e8dba76beb4273ae45d128cd1a1a082afddee8351d22b32b9"
+      "sha": "6e7a62902a72868d642d27908f9b7b5cb1b5427b3299c4bf259949193a2c76af"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2011-09-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/567",
       "dateDocument": "2011-03-18",
-      "roFundstelle": "AS 2011 567",
+      "roFundstelle": "AS 2011 3973",
       "titelDe": "Bundesgesetz über die Familienzulagen (Familienzulagengesetz, FamZG)",
       "titelFr": "Loi fédérale sur les allocations familiales (Loi sur les allocations familiales, LAFam)",
       "titelIt": "Legge federale sugli assegni familiari (Legge sugli assegni familiari, LAFam)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/567/de",
-      "sha": "f7d103bb01dbade25ed2ce6c44df8d3cc8034d6553ce698996d5f357007ba893"
+      "sha": "57cdf0709a2a3b82640c15bf5a6073fe535cccbc86ecbc8490ed2fba1ce61eb0"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2010-10-15",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/636",
       "dateDocument": "2010-06-18",
-      "roFundstelle": "AS 2010 636",
+      "roFundstelle": "AS 2010 4491",
       "titelDe": "Bundesgesetz über die Familienzulagen (Familienzulagengesetz, FamZG)",
       "titelFr": "Loi fédérale sur les allocations familiales (Loi sur les allocations familiales, LAFam)",
       "titelIt": "Legge federale sugli assegni familiari (Legge sugli assegni familiari, LAFam)",
       "botschaftKey": "BOTSCHAFT-2009-1101",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/636/de",
-      "sha": "59a80db1d00a71f05c4c2c81a734d366ba2b775010d9887e77274323d7998352"
+      "sha": "2d33d53e5c1418865959c01e85d8a3c6bc35cbdf9409f37311a08bdcf75a64b8"
     },
     {
       "art": "sammelerlass-marker",
@@ -108,13 +108,13 @@
       "dateEntryInForce": "2009-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/51",
       "dateDocument": "2006-03-24",
-      "roFundstelle": "AS 2008 51",
+      "roFundstelle": "AS 2008 131",
       "titelDe": "Bundesgesetz über die Familienzulagen und Finanzhilfen an Familienorganisationen (Familienzulagengesetz, FamZG)",
       "titelFr": "Loi fédérale sur les allocations familiales et les aides financières aux organisations familiales (Loi sur les allocations familiales, LAFam)",
       "titelIt": "Legge federale sugli assegni familiari e sugli aiuti finanziari a organizzazioni familiari (Legge sugli assegni familiari, LAFam)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/51/de",
-      "sha": "dc60d29d6e2594564912224aa3140bad42785b02ddfaf8681d9da1ec2c407dd9"
+      "sha": "949c807228d89bc771c5c136f7588c5cea5f26259782ae242c8981cb3909ac9d"
     }
   ],
-  "sha": "125b9332a6fc66dd779fe9ab3a7b33f0fa9cb3e1c24cbfc2acd7997aa72e392c"
+  "sha": "eda3eda3e5fce2157ef2fd2e0333f07050efa4eb3759eec62c73683681e85d54"
 }

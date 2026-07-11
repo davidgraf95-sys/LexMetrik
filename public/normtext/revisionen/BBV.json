@@ -1,7 +1,7 @@
 {
   "erlassKey": "BBV",
   "sr": "412.101",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -70,12 +70,12 @@
       "dateEntryInForce": "2018-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/565",
       "dateDocument": "2017-09-15",
-      "roFundstelle": "AS 2017 565",
+      "roFundstelle": "AS 2017 5147",
       "titelDe": "Verordnung über die Berufsbildung (Berufsbildungsverordnung, BBV)",
       "titelFr": "Ordonnance sur la formation professionnelle (OFPr)",
       "titelIt": "Ordinanza sulla formazione professionale (Ordinanza sulla formazione professionale, OFPr)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/565/de",
-      "sha": "742280342bfe2d6a473e4619a1503163da8cf193adce665ac403f008881fe6b8"
+      "sha": "43dd1863e2b854128a0ceadbeb556bcaaf367cae1308511f5d54121eae2afdb9"
     },
     {
       "art": "sammelerlass-marker",
@@ -88,12 +88,12 @@
       "dateEntryInForce": "2016-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/637",
       "dateDocument": "2015-09-25",
-      "roFundstelle": "AS 2015 637",
+      "roFundstelle": "AS 2015 3807",
       "titelDe": "Verordnung über die Berufsbildung (Berufsbildungsverordnung, BBV)",
       "titelFr": "Ordonnance sur la formation professionnelle (OFPr)",
       "titelIt": "Ordinanza sulla formazione professionale (OFPr)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/637/de",
-      "sha": "858e8e9404bb59f252615691e8993caad511c43f7def49e3b10dc618d4b9d4a8"
+      "sha": "6f028e582ef78de82fbe151abfa06ed244121964e631e8190b5a71daa067ac05"
     },
     {
       "art": "sammelerlass-marker",
@@ -106,24 +106,24 @@
       "dateEntryInForce": "2014-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/334",
       "dateDocument": "2014-06-20",
-      "roFundstelle": "AS 2014 334",
+      "roFundstelle": "AS 2014 1873",
       "titelDe": "Verordnung über die Berufsbildung (Berufsbildungsverordnung, BBV)",
       "titelFr": "Ordonnance sur la formation professionnelle (OFPr)",
       "titelIt": "Ordinanza sulla formazione professionale (OFPr)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/334/de",
-      "sha": "8dfdfa3c7d99423ff8ff4d31d25d04a0b7cabbebc5d6d5534cbf6dcd55f69f94"
+      "sha": "de9cdaf5644a506c47490d9a6e10921676f8b15f124a3a307799fa530b504462"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2013-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/773",
       "dateDocument": "2012-11-14",
-      "roFundstelle": "AS 2012 773",
+      "roFundstelle": "AS 2012 6473",
       "titelDe": "Verordnung über die Berufsbildung (Berufsbildungsverordnung, BBV)",
       "titelFr": "Ordonnance sur la formation professionnelle (OFPr)",
       "titelIt": "Ordinanza sulla formazione professionale (OFPr)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/773/de",
-      "sha": "a3e12c1b1e3edfb7005e143dc7d19b588f42c53c72044fa4fecf43a7154772d6"
+      "sha": "92426afdb4fc35a8b9932726cbebdeaca95b4de277f08422de734f137480c578"
     },
     {
       "art": "sammelerlass-marker",
@@ -142,12 +142,12 @@
       "dateEntryInForce": "2011-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/864",
       "dateDocument": "2010-12-03",
-      "roFundstelle": "AS 2010 864",
+      "roFundstelle": "AS 2010 6005",
       "titelDe": "Verordnung über die Berufsbildung (Berufsbildungsverordnung, BBV)",
       "titelFr": "Ordonnance sur la formation professionnelle (OFPr)",
       "titelIt": "Ordinanza sulla formazione professionale (OFPr)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/864/de",
-      "sha": "1f007d2a996a8b960cd215919252b95eaaa2df7f12e2b7ff8c9fcbe47728b196"
+      "sha": "ad38b96fedc21413a1ece69c04a5f601d2de8e993e955d327adc06060222869e"
     },
     {
       "art": "sammelerlass-marker",
@@ -160,12 +160,12 @@
       "dateEntryInForce": "2008-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/789",
       "dateDocument": "2007-11-07",
-      "roFundstelle": "AS 2007 789",
+      "roFundstelle": "AS 2007 5823",
       "titelDe": "Verordnung über Anpassungen des Verordnungsrechts an die Neugestaltung des Finanzausgleichs und der Aufgabenteilung zwischen Bund und Kantonen",
       "titelFr": "Ordonnance sur les adaptations des ordonnances touchées par la réforme de la péréquation financière et de la répartition des tâches entre la Confédération et les cantons",
       "titelIt": "Ordinanza che adegua il diritto regolamentare alla Nuova impostazione della perequazione finanziaria e della ripartizione dei compiti tra Confederazione e Cantoni",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/789/de",
-      "sha": "f5a9ac798116ae16a2a05505c14d8e47968ca9ea2a5fe0a61f8e4648760e06c4"
+      "sha": "2c0b72ea1f35c8f9b9af4d099ac6ae156b00a1a6e64f00f30febb5dead661253"
     },
     {
       "art": "sammelerlass-marker",
@@ -184,12 +184,12 @@
       "dateEntryInForce": "2004-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/748",
       "dateDocument": "2003-11-19",
-      "roFundstelle": "AS 2003 748",
+      "roFundstelle": "AS 2003 5047",
       "titelDe": "Verordnung über die Berufsbildung (Berufsbildungsverordnung, BBV)",
       "titelFr": "Ordonnance sur la formation professionnelle (OFPr)",
       "titelIt": "Ordinanza sulla formazione professionale (OFPr)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/748/de",
-      "sha": "9c20c4c3f92ee8cb312c19db8d6bb74fb8e58eef67c602971e9733586c49baff"
+      "sha": "229292e2a552d80d66bedd16d95345618ada4bbac3e974e89fd7b78a4e0d6d4f"
     },
     {
       "art": "aenderung",
@@ -216,5 +216,5 @@
       "sha": "f8ebaddc01f04049e99651e998725d39cec3858521c30d053391259554313595"
     }
   ],
-  "sha": "199161ca189c2ce0dc92c140c30aec6ee2b5a53ae0d266eb80eba618f72ea5fe"
+  "sha": "07a7bc37f3216612e30b25e2c0909789fc6a03575398fabb0bcd3394ce26340a"
 }

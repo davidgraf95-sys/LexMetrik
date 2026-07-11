@@ -1,7 +1,7 @@
 {
   "erlassKey": "IRSG",
   "sr": "351.1",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -94,13 +94,13 @@
       "dateEntryInForce": "2004-10-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/621",
       "dateDocument": "2003-12-19",
-      "roFundstelle": "AS 2004 621",
+      "roFundstelle": "AS 2004 4161",
       "titelDe": "Bundesbeschluss über die Genehmigung und die Umsetzung des Zusatzprotokolls zum Übereinkommen des Europarats über die Überstellung verurteilter Personen",
       "titelFr": "Arrêté fédéral portant approbation et mise en uvre du Protocole additionnel à la Convention du Conseil de l'Europe sur le transfèrement des personnes condamnées",
       "titelIt": "Decreto federale che approva e traspone nel diritto svizzero il Protocollo addizionale alla Convenzione del Consiglio d'Europa sul trasferimento dei condannati",
       "botschaftKey": "BOTSCHAFT-2002-672",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/621/de",
-      "sha": "be2b5bdc5b1ea0328dc82db7624eaff92bb012f713661074998243fdcd13b6a3"
+      "sha": "d6a09f3c3d09787a4b690e56cf7675150d0f1a122128fdbbd41e372fd23de6cc"
     },
     {
       "art": "sammelerlass-marker",
@@ -119,13 +119,13 @@
       "dateEntryInForce": "2002-11-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/498",
       "dateDocument": "2002-06-21",
-      "roFundstelle": "AS 2002 498",
+      "roFundstelle": "AS 2002 3333",
       "titelDe": "Bundesgesetz über internationale Rechtshilfe in Strafsachen (Rechtshilfegesetz, IRSG)",
       "titelFr": "Loi fédérale sur l'entraide internationale en matière pénale (Loi sur l'entraide pénale internationale, EIMP)",
       "titelIt": "Legge federale sull'assistenza internazionale in materia penale (Assistenza in materia penale, AIMP)",
       "botschaftKey": "BOTSCHAFT-2002-672",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/498/de",
-      "sha": "077e4ac056c823f025c9f04755cc10a84cfa7d47c5e1786497769079a723f606"
+      "sha": "803846a0a92e96d2e8165029d3664b9a85ad1347c9ac960b56f71f479cd12fed"
     },
     {
       "art": "sammelerlass-marker",
@@ -152,5 +152,5 @@
       "sha": "56dbdb648b6badfd095247feab55a4b88090e5de7b59fbd14bdda60b83df5d91"
     }
   ],
-  "sha": "3c203d93473d8f876e12e22855703d3988c91765c14c7923d271c415aa7a2df6"
+  "sha": "930040bbf9e09e7c0f2983540f1cc4f4e99671399f88cb5f70cef03e5eeec1aa"
 }

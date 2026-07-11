@@ -1,7 +1,7 @@
 {
   "erlassKey": "THG",
   "sr": "946.51",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -21,13 +21,13 @@
       "dateEntryInForce": "2010-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/349",
       "dateDocument": "2009-06-12",
-      "roFundstelle": "AS 2010 349",
+      "roFundstelle": "AS 2010 2617",
       "titelDe": "Bundesgesetz über die technischen Handelshemmnisse (THG)",
       "titelFr": "Loi fédérale sur les entraves techniques au commerce&#61482; (LETC)",
       "titelIt": "Legge federale sugli ostacoli tecnici al commercio (LOTC)",
       "botschaftKey": "BOTSCHAFT-2008-1231",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/349/de",
-      "sha": "69f57d2825b752af49f69eaf12fdb82484d9a443f1a1fbd39f4610b873c65941"
+      "sha": "4037b67996a8d081f258bd066d3eee98edfa0361d6be8e9a169d86f186a02018"
     },
     {
       "art": "sammelerlass-marker",
@@ -40,13 +40,13 @@
       "dateEntryInForce": "2002-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/155",
       "dateDocument": "2001-12-14",
-      "roFundstelle": "AS 2002 155",
+      "roFundstelle": "AS 2002 883",
       "titelDe": "Bundesgesetz über die technischen Handelshemmnisse (THG)",
       "titelFr": "Loi fédérale sur les entraves techniques au commerce (LETC)",
       "titelIt": "Legge federale sugli ostacoli tecnici al commercio (LOTC)",
       "botschaftKey": "BOTSCHAFT-2001-845",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/155/de",
-      "sha": "47a6fa0708ee9fcfd3d5d55e75ebd901a294681ee2f03d9b7dbfdbb33e1e48e2"
+      "sha": "bf361091fb12fda446612e9d1151bcc868e52c3fb95e762c7486ed30e937f1b2"
     },
     {
       "art": "aenderung",
@@ -61,5 +61,5 @@
       "sha": "929bc494447599b6f8119bda91dd7c3949ce92ebd9c73a04a8ed6f59bb22f85a"
     }
   ],
-  "sha": "74e952adfdc8a59541603d608ca52b4ff7bc23c48134a4aae8705ee1db267ece"
+  "sha": "db37f949d42d50778978dbb11b1a935290a40b04523e4ba02d2570751028dbcc"
 }

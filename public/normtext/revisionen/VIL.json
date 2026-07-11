@@ -1,7 +1,7 @@
 {
   "erlassKey": "VIL",
   "sr": "748.131.1",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -63,12 +63,12 @@
       "dateEntryInForce": "2020-04-23",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/251",
       "dateDocument": "2020-04-22",
-      "roFundstelle": "AS 2020 251",
+      "roFundstelle": "AS 2020 1331",
       "titelDe": "Verordnung über die Infrastruktur der Luftfahrt (VIL)",
       "titelFr": "Ordonnance sur l'infrastructure aéronautique (OSIA)",
       "titelIt": "Ordinanza sull'infrastruttura aeronautica (OSIA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/251/de",
-      "sha": "afcbc866793fa7eb7597a4671b64ef5f095d6ae18c75d87b0ecbd0634afd5e4c"
+      "sha": "832f698e7ec16f06f68ba75126a78ddf80da61968e3e0dab3566ea1ec621ac64"
     },
     {
       "art": "sammelerlass-marker",
@@ -81,24 +81,24 @@
       "dateEntryInForce": "2019-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/611",
       "dateDocument": "2018-10-17",
-      "roFundstelle": "AS 2018 611",
+      "roFundstelle": "AS 2018 3849",
       "titelDe": "Verordnung über die Infrastruktur der Luftfahrt (VIL)",
       "titelFr": "Ordonnance sur l'infrastructure aéronautique (OSIA)",
       "titelIt": "Ordinanza sull'infrastruttura aeronautica (OSIA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/611/de",
-      "sha": "2a5700af17cac803c37c11139388f62113e0d42155ce9ae11c9dc7d7f5f95240"
+      "sha": "411c8c55141514485703ee69a50fe3b125fcac0a2ccff9b3bb085f63ff403078"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2015-12-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/733",
       "dateDocument": "2015-10-21",
-      "roFundstelle": "AS 2015 733",
+      "roFundstelle": "AS 2015 4423",
       "titelDe": "Verordnung über die Infrastruktur der Luftfahrt (VIL)",
       "titelFr": "Ordonnance sur l'infrastructure aéronautique (OSIA)",
       "titelIt": "Ordinanza sull'infrastruttura aeronautica (OSIA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/733/de",
-      "sha": "a27fb928b47180413b354525bfee9d77e74124a71213b8c246129a7c19cb95a2"
+      "sha": "f16ba17f7dc73f296e7fb200156adc18c8d3fef2168a209b48f35c68932b42cc"
     },
     {
       "art": "sammelerlass-marker",
@@ -123,36 +123,36 @@
       "dateEntryInForce": "2008-03-15",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/135",
       "dateDocument": "2008-02-13",
-      "roFundstelle": "AS 2008 135",
+      "roFundstelle": "AS 2008 595",
       "titelDe": "Verordnung über die Infrastruktur der Luftfahrt (VIL)",
       "titelFr": "Ordonnance sur l'infrastructure aéronautique (OSIA)",
       "titelIt": "Ordinanza sull'infrastruttura aeronautica (OSIA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/135/de",
-      "sha": "901be4fa8f473fdd67e6ca6773900b59ad1b2f68621c370f8d3084ca3dfac68b"
+      "sha": "6d831952f5bc082a3bb6f89d891b0a75626f37182c723f5c2414506ad9ca7ca2"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2008-03-15",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/231",
       "dateDocument": "2008-04-01",
-      "roFundstelle": "AS 2008 231",
+      "roFundstelle": "AS 2008 1605",
       "titelDe": "Verordnung über die Infrastruktur der Luftfahrt (VIL) (Betrifft nur den französischen Text)",
       "titelFr": "Ordonnance sur l'infrastructure aéronautique (OSIA)",
       "titelIt": "Ordinanza sull'infrastruttura aeronautica (OSIA) (Concerne solo il testo francese.)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/231/de",
-      "sha": "181ef84e23c471569b6ecbf20669972ee72019e23b662fd7d6e5518c6a46ca88"
+      "sha": "854b53df824e0edf9fb62b07f91c745f35513f4111440ca5f9e077af38ccee47"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2002-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/197",
       "dateDocument": "2002-01-30",
-      "roFundstelle": "AS 2002 197",
+      "roFundstelle": "AS 2002 1186",
       "titelDe": "Verordnung über die Infrastruktur der Luftfahrt (VIL)",
       "titelFr": "Ordonnance sur l'infrastructure aéronautique (OSIA)",
       "titelIt": "Ordinanza sull'infrastruttura aeronautica (OSIA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/197/de",
-      "sha": "0eb1ddd30ca8bb7d691e1408480a1a375a52c0e0e249551ac30fe28ae5c44e3a"
+      "sha": "bf43cbc65dd251aa0b78215d21ce551f4682e5bb46997ad6c563eeb7d078984c"
     },
     {
       "art": "sammelerlass-marker",
@@ -183,13 +183,13 @@
       "dateEntryInForce": "1995-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/33",
       "dateDocument": "2000-01-25",
-      "roFundstelle": "AS 2000 33",
+      "roFundstelle": "AS 2000 186",
       "titelDe": "Verordnung über die Infrastruktur der Luftfahrt (VIL) (nur ital.)",
       "titelFr": "Ordonnance sur l'infrastructure aéronautique (OSIA) (seulement en italien)",
       "titelIt": "Ordinanza sull'infrastruttura aeronautica (OSIA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/33/de",
-      "sha": "ca3ffc9996badb9cf912db5a18b66d988ef0c197336e41e08da40f2089d3c700"
+      "sha": "df0310a38dc2fc3a6d5da62c0f31f7ae833a5f851c35238007adf1c45c407f87"
     }
   ],
-  "sha": "b1fbbf6855c8d6a3146548fe30151518a4000412edb07ff67c3f99df9796018b"
+  "sha": "dab080a9dea2e13c3c9814322109457dbb89949f033479b4395e8bd77bba303e"
 }

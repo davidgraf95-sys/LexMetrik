@@ -1,7 +1,7 @@
 {
   "erlassKey": "ENG",
   "sr": "730.0",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -158,63 +158,63 @@
       "dateEntryInForce": "2018-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/762",
       "dateDocument": "2016-09-30",
-      "roFundstelle": "AS 2017 762",
+      "roFundstelle": "AS 2017 6839",
       "titelDe": "Energiegesetz (EnG)",
       "titelFr": "Loi sur l'énergie (LEne)",
       "titelIt": "Legge federale sull'energia (LEne)",
       "botschaftKey": "BOTSCHAFT-2013-1476",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/762/de",
-      "sha": "3a41a025af2d50b87f0b255a289a796dbbe9bdc60a06f912122eb4c32a800170"
+      "sha": "58f059fe2082bba23d8eed88b69901e708a3226d536ad8b7be5f5f73ae71f61c"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2014-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/794",
       "dateDocument": "2013-06-21",
-      "roFundstelle": "AS 2013 794",
+      "roFundstelle": "AS 2013 4505",
       "titelDe": "Energiegesetz (EnG)",
       "titelFr": "Loi sur l'énergie (LEne)",
       "titelIt": "Legge sull'energia (LEne)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/794/de",
-      "sha": "5d8e6cb602bc59b538ceb3038b7483fa4a28f1598180e823abe8d3dd2560f9b8"
+      "sha": "7720b06863820ef75a1d5a0c3b6800a1af0d004b797cd459c14dea04f9819d29"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2012-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/370",
       "dateDocument": "2011-12-23",
-      "roFundstelle": "AS 2012 370",
+      "roFundstelle": "AS 2012 3231",
       "titelDe": "Energiegesetz (EnG)",
       "titelFr": "Loi sur l'énergie (LEne)",
       "titelIt": "Legge sull'energia (LEne)",
       "botschaftKey": "BOTSCHAFT-2011-337",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/370/de",
-      "sha": "53981fa409013a7b6be584ab223412b848458e1ccc73d15e678112fcc80f0892"
+      "sha": "410882af1505cc80476336d741526a0db1d040b50a29a19e57adda940e52adbe"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2011-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/728",
       "dateDocument": "2010-06-18",
-      "roFundstelle": "AS 2010 728",
+      "roFundstelle": "AS 2010 5065",
       "titelDe": "Energiegesetz (EnG)",
       "titelFr": "Loi sur l'énergie (LEne)",
       "titelIt": "Legge sull'energia (LEne)",
       "botschaftKey": "BOTSCHAFT-2009-921",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/728/de",
-      "sha": "eee27e109278e227c393d2eaf69b9bc78640c889557c4a093cd2f004f7273e99"
+      "sha": "e3404198f51ba401754b14ac69e542029baaea7192a8d1c5fb305d6e7869697c"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "1999-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/27",
       "dateDocument": "1998-06-26",
-      "roFundstelle": "AS 1999 27",
+      "roFundstelle": "AS 1999 197",
       "titelDe": "Energiegesetz (EnG)",
       "titelFr": "Loi sur l'énergie (LEne)",
       "titelIt": "Legge sull'energia (LEne)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/27/de",
-      "sha": "38ba56525aafe8930d9b6f205c6a9420a0d561c66b26db7001c5ff11a5ca433f"
+      "sha": "82528d7da0b4a686072bcd91be966874ec0ee66560b915439a6b74993f28decf"
     },
     {
       "art": "aenderung",
@@ -229,5 +229,5 @@
       "sha": "0562c2845935c224b5750141a30328dedb658dd3f39fb47d40522ddeb33f5480"
     }
   ],
-  "sha": "021cf642e2892ffb689bb708d3dcb748e8dca9fafd0996960325fc4abdb85b00"
+  "sha": "cc2b4a8bc8a715d49eb352aa8ca44a85fc70d8e37e66f987b7e836eae5bca8ef"
 }

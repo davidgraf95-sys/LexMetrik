@@ -1,7 +1,7 @@
 {
   "erlassKey": "BV",
   "sr": "101",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -100,13 +100,13 @@
       "dateEntryInForce": "2021-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/137",
       "dateDocument": "2017-06-16",
-      "roFundstelle": "AS 2019 137",
+      "roFundstelle": "AS 2019 769",
       "titelDe": "Bundesbeschluss über die neue Finanzordnung 2021",
       "titelFr": "Arrêté fédéral concernant le nouveau régime financier 2021",
       "titelIt": "Decreto federale concernente il nuovo ordinamento finanziario 2021",
       "botschaftKey": "BOTSCHAFT-2016-1193",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/137/de",
-      "sha": "245d99edda554135420861192297bfedd51a6e6053d5c9d42f3d5958d9b09f6c"
+      "sha": "4ccf95a5b3bda2f0962ebf567fe8ca270a54be8e87578981f717927ea3be2ad5"
     },
     {
       "art": "sammelerlass-marker",
@@ -119,533 +119,533 @@
       "dateEntryInForce": "2018-09-23",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/91",
       "dateDocument": "2018-03-13",
-      "roFundstelle": "AS 2019 91",
+      "roFundstelle": "AS 2019 525",
       "titelDe": "Bundesbeschluss über die Velowege sowie die Fuss- und Wanderwege (direkter Gegenentwurf zur Volksinitiative «Zur Förderung der Velo-, Fuss- und Wanderwege [Velo-Initiative]»)",
       "titelFr": "Arrêté fédéral concernant les voies cyclables et les chemins et sentiers pédestres (contre-projet direct à l'initiative populaire «Pour la promotion des voies cyclables et des chemins et sentiers pédestres [initiative vélo]»)",
       "titelIt": "Decreto federale concernente le vie ciclabili, i sentieri e i percorsi pedonali (controprogetto diretto all'iniziativa popolare «Per la promozione delle vie ciclabili e dei sentieri e percorsi pedonali [Iniziativa per la bici]»)",
       "botschaftKey": "BOTSCHAFT-2017-1639",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/91/de",
-      "sha": "4d1b117b682cdb2080a275a6159683a3bc5e93601e11c0ae66d863a0f78ab293"
+      "sha": "be7a7fa09fc74df9a00b5d0dce13740f34f4a9e52f57836b287c8d489a824bd8"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2018-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/751",
       "dateDocument": "2016-09-30",
-      "roFundstelle": "AS 2017 751",
+      "roFundstelle": "AS 2017 6731",
       "titelDe": "Bundesbeschluss über die Schaffung eines Fonds für die Nationalstrassen und den Agglomerationsverkehr",
       "titelFr": "Arrêté fédéral sur la création d'un fonds pour les routes nationales et pour le trafic d'agglomération",
       "titelIt": "Decreto federale concernente la creazione di un fondo per le strade nazionali e il traffico d'agglomerato",
       "botschaftKey": "BOTSCHAFT-2015-416",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/751/de",
-      "sha": "973bfce8f9ce44e14f7b0d48b1946a014a1868c5d87452659518b869e6ccd7df"
+      "sha": "83962af3fbb4df5ea70627b11ae09d101098eeef7fe9585ef4ef119523dbd70e"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2017-09-24",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/752",
       "dateDocument": "2017-03-14",
-      "roFundstelle": "AS 2017 752",
+      "roFundstelle": "AS 2017 6735",
       "titelDe": "Bundesbeschluss über die Ernährungssicherheit (direkter Gegenentwurf zur Volksinitiative «Für Ernährungssicherheit»)",
       "titelFr": "Arrêté fédéral sur la sécurité alimentaire (contre-projet direct à l'initiative populaire «Pour la sécurité alimentaire»)",
       "titelIt": "Decreto federale sulla sicurezza alimentare (controprogetto diretto all'iniziativa popolare «Per la sicurezza alimentare»)",
       "botschaftKey": "BOTSCHAFT-2015-1320",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/752/de",
-      "sha": "f9e13b20ed581522ae29969679685b4c638688642c160fec6460850067bc0204"
+      "sha": "89aadfb1bf5bd2ede6c042269aacefe1c677794b0e462c11401c2ec92e227beb"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2017-02-12",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/259",
       "dateDocument": "2016-09-30",
-      "roFundstelle": "AS 2017 259",
+      "roFundstelle": "AS 2017 2643",
       "titelDe": "Bundesbeschluss über die erleichterte Einbürgerung von Personen der dritten Ausländergeneration",
       "titelFr": "Arrêté fédéral concernant la naturalisation facilitée des étrangers de la troisième génération",
       "titelIt": "Decreto federale concernente la naturalizzazione agevolata degli stranieri della terza generazione",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/259/de",
-      "sha": "658ee451ee2e0968bb5ed126aca2a799fd38894405e34e94c6e77810422fd573"
+      "sha": "577ce0d18dd0a2d6c6d76a4a2195f0389780f1790725e1044b4fac531b6cc77e"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2016-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/104",
       "dateDocument": "2013-06-20",
-      "roFundstelle": "AS 2015 104",
+      "roFundstelle": "AS 2015 645",
       "titelDe": "Bundesbeschluss über die Finanzierung und den Ausbau der Eisenbahninfrastruktur (direkter Gegenentwurf zur Volksinitiative «Für den öffentlichen Verkehr»)",
       "titelFr": "Arrêté fédéral portant règlement du financement et de l'aménagement de l'infrastructure ferroviaire (contre-projet direct à l'initiative populaire «Pour les transports publics»)",
       "titelIt": "Decreto federale concernente il finanziamento e l'ampliamento dell'infrastruttura ferroviaria (controprogetto diretto all'iniziativa popolare «Per i trasporti pubblici»)",
       "botschaftKey": "BOTSCHAFT-2012-305",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/104/de",
-      "sha": "36ed1f9707fa8792005e683714aa1571d8ec6a61212dfb7b5bd4a608644e220b"
+      "sha": "bdb637313cd55eadb7d69d4afac8fc7aea1c2fa711a5a5062874252113ae668c"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2015-06-14",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/541",
       "dateDocument": "2014-12-12",
-      "roFundstelle": "AS 2015 541",
+      "roFundstelle": "AS 2015 2887",
       "titelDe": "Bundesbeschluss über die Änderung der Verfassungsbestimmung zur Fortpflanzungsmedizin und Gentechnologie im Humanbereich",
       "titelFr": "Arrêté fédéral concernant la modification de l'article constitutionnel relatif à la procréation médicalement assistée et au génie génétique dans le domaine humain",
       "titelIt": "Decreto federale concernente la modifica dell'articolo costituzionale relativo alla medicina riproduttiva e all'ingegneria genetica in ambito umano",
       "botschaftKey": "BOTSCHAFT-2013-1075",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/541/de",
-      "sha": "c4932c14748bdac51b6ceb375025ff1a507c8b0ebfc2ea69fa639ec467f3d431"
+      "sha": "a79ab6716e0bb45773136ac00a09b330384453c3516f832e586772c49743b30f"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2014-05-18",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/476",
       "dateDocument": "2013-09-19",
-      "roFundstelle": "AS 2014 476",
+      "roFundstelle": "AS 2014 2769",
       "titelDe": "Bundesbeschluss über die medizinische Grundversorgung (Direkter Gegenentwurf zur Volksinitiative «Ja zur Hausarztmedizin»)",
       "titelFr": "Arrêté fédéral concernant les soins médicaux de base (Contre-projet direct à l'initiative populaire «Oui à la médecine de famille»)",
       "titelIt": "Decreto federale concernente le cure mediche di base (Controprogetto diretto all'iniziativa popolare «Sì alla medicina di famiglia»)",
       "botschaftKey": "BOTSCHAFT-2011-1253",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/476/de",
-      "sha": "9da6b14ac27df637bc3d77e07d160d2a24cf8782ae6df7d16cfb2f4e3dcff3a8"
+      "sha": "f0b3b3a5165dd0a791b8b84b93b17f34c9fd040f45a1e20229a0a8a91c1e0c17"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2014-05-18",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/477",
       "dateDocument": "2014-05-18",
-      "roFundstelle": "AS 2014 477",
+      "roFundstelle": "AS 2014 2771",
       "titelDe": "Eidgenössische Volksinitiative «Pädophile sollen nicht mehr mit Kindern arbeiten dürfen»",
       "titelFr": "Initiative populaire fédérale «Pour que les pédophiles ne travaillent plus avec des enfants»",
       "titelIt": "Iniziativa popolare federale «Affinché i pedofili non lavorino più con fanciulli»",
       "botschaftKey": "BOTSCHAFT-2012-1575",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/477/de",
-      "sha": "0509f65ced63e9df54f14867adf81ab53d4a7f6529030ec5916a420e660784c8"
+      "sha": "6d0f04a4d257ffa61a549b54c9298918e22efc32f02c4de7fa3031e514020911"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2014-02-09",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/295",
       "dateDocument": "2013-09-27",
-      "roFundstelle": "AS 2014 295",
+      "roFundstelle": "AS 2014 1391",
       "titelDe": "Eidgenössische Volksinitiative «Gegen Masseneinwanderung»",
       "titelFr": "Initiative populaire fédérale «Contre l'immigration de masse»",
       "titelIt": "Iniziativa popolare federale «Contro l'immigrazione di massa»",
       "botschaftKey": "BOTSCHAFT-2013-50",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/295/de",
-      "sha": "917ac0873c401eb3481bb86a68722c7fd9720ace86f258ba33180763aef5c495"
+      "sha": "205dec61c820765fb735a8a38c08cadff9db3e5656537f0d08e96692f8b3e8bf"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2013-03-03",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/297",
       "dateDocument": "2013-03-03",
-      "roFundstelle": "AS 2013 297",
+      "roFundstelle": "AS 2013 1303",
       "titelDe": "Eidgenössische Volksinitiative «Gegen die Abzockerei»",
       "titelFr": "Initiative populaire fédérale «Contre les rémunérations abusives»",
       "titelIt": "Iniziativa popolare federale «Contro le retribuzioni abusive»",
       "botschaftKey": "BOTSCHAFT-2009-37",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/297/de",
-      "sha": "32b1bc744c70fea8616230c15f7ef01b8222f1b80f6c0d9e69e78f247c1c8a4d"
+      "sha": "837ed22046b5abfb13de46e5e910b654741e42de702605ccec63244f01153741"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2012-09-23",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/85",
       "dateDocument": "2012-03-15",
-      "roFundstelle": "AS 2013 85",
+      "roFundstelle": "AS 2013 435",
       "titelDe": "Bundesbeschluss über die Jugendmusikförderung (Gegenentwurf zur Volksinitiative «jugend + musik»)",
       "titelFr": "Arrêté fédéral sur la promotion de la formation musicale des jeunes (contre-projet à l'initiative populaire «jeunesse + musique»)",
       "titelIt": "Decreto federale sulla promozione della formazione musicale dei giovani (Controprogetto all'iniziativa popolare «gioventù + musica»)",
       "botschaftKey": "BOTSCHAFT-2010-1",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/85/de",
-      "sha": "a5d7c158ce62778db66f2a4b51f662562b2922bdadc1a0f65bb691420e99ad9c"
+      "sha": "dfa60d1c28ea3c8fdac20918587ed9f03c4caa986f52f13cd5990122d3f7d531"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2012-03-11",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/416",
       "dateDocument": "2011-06-17",
-      "roFundstelle": "AS 2012 416",
+      "roFundstelle": "AS 2012 3627",
       "titelDe": "Bundesbeschluss über die Volksinitiative «Schluss mit uferlosem Bau von Zweitwohnungen!»",
       "titelFr": "Arrêté fédéral concernant l'initiative populaire «Pour en finir avec les constructions envahissantes de résidences secondaires»",
       "titelIt": "Decreto federale concernente l'iniziativa popolare «Basta con la costruzione sfrenata di abitazioni secondarie!»",
       "botschaftKey": "BOTSCHAFT-2008-1556",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/416/de",
-      "sha": "2b06ce447e4d2daf511b80573ed1ab47d6352d0044061d2c2a67a2c6631d6045"
+      "sha": "a83c8c3d405356e19761b171e3e29cd45629811adec506e4cdd712e502adb6d4"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2012-03-11",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/417",
       "dateDocument": "2011-09-29",
-      "roFundstelle": "AS 2012 417",
+      "roFundstelle": "AS 2012 3629",
       "titelDe": "Bundesbeschluss über die Regelung der Geldspiele zugunsten gemeinnütziger Zwecke (Gegenentwurf zur Volksinitiative «Für Geldspiele im Dienste des Gemeinwohls»)",
       "titelFr": "Arrêté fédéral concernant la réglementation des jeux d'argent en faveur de l'utilité publique (Contre-projet à l'initiative «Pour des jeux d'argent au service du bien commun»)",
       "titelIt": "Decreto federale concernente il disciplinamento dei giochi in denaro a favore dell'utilità pubblica (controprogetto all'iniziativa «Per giochi in denaro al servizio del bene comune»)",
       "botschaftKey": "BOTSCHAFT-2010-1467",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/417/de",
-      "sha": "348ec0b32060416af4ee1751dd567d6633ca17fc22fd0b03711c1589c2eddb25"
+      "sha": "e5453ff81660286475101ab73da30e9dc0fca9e27942e5856146e224bdc43bd4"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2011-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/542",
       "dateDocument": "2008-06-13",
-      "roFundstelle": "AS 2010 542",
+      "roFundstelle": "AS 2010 3821",
       "titelDe": "Bundesbeschluss vom 13. Juni 2008 über eine befristete Zusatzfinanzierung der Invalidenversicherung durch Anhebung der Mehrwertsteuersätze, geändert durch den Bundesbeschluss vom 12. Juni 2009 über die Änderung dieses Beschlusses",
       "titelFr": "Arrêté fédéral du 13 juin 2008 relatif au financement additionnel de l'AI par un relèvement temporaire des taux de la TVA, modifié par l'arrêté fédéral du 12 juin 2009 portant modification de cet arrêté",
       "titelIt": "Decreto federale del 13 giugno 2008 sul finanziamento aggiuntivo temporaneo dell'assicurazione invalidità mediante l'aumento delle aliquote dell'imposta sul valore aggiunto, modifica con il decreto federale del 12 giugno 2009 concernente la modifica del questo decreto",
       "botschaftKey": "BOTSCHAFT-2005-721",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/542/de",
-      "sha": "aed140e6d3d6857a06709b3fe6826fc027ddc80517b6bdf63d1d9a4c8da2b1ac"
+      "sha": "1dab05daebad98f65de0f6489b430a32a579ff6c85735eb1d9674f4e9b600998"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2010-11-28",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/175",
       "dateDocument": "2010-06-18",
-      "roFundstelle": "AS 2011 175",
+      "roFundstelle": "AS 2011 1199",
       "titelDe": "Bundesbeschluss über die Volksinitiative «Für die Ausschaffung krimineller Ausländer (Ausschaffungsinitiative)»",
       "titelFr": "Arrêté fédéral relatif à l'initiative populaire «Pour le renvoi des étrangers criminels (Initiative sur le renvoi)»",
       "titelIt": "Decreto federale concernente l'iniziativa popolare «Per l'espulsione degli stranieri che commettono reati (Iniziativa espulsione)»",
       "botschaftKey": "BOTSCHAFT-2009-876",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/175/de",
-      "sha": "0cc390fa7de5892553ba7dc82326d58dd5e918b55e575a6637c50077b04ff71c"
+      "sha": "99600e4d3187dbf30f2e4926a23334eff5dfe65ca932075902855132780da80d"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2010-03-07",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/224",
       "dateDocument": "2009-09-25",
-      "roFundstelle": "AS 2010 224",
+      "roFundstelle": "AS 2010 1569",
       "titelDe": "Bundesbeschluss zu einem Verfassungsartikel über die Forschung am Menschen",
       "titelFr": "Arrêté fédéral relatif à un article constitutionnel concernant la recherche sur l'être humain",
       "titelIt": "Decreto federale su un articolo costituzionale concernente la ricerca sull'essere umano",
       "botschaftKey": "BOTSCHAFT-2007-1025",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/224/de",
-      "sha": "0549ffc2e568b6f87affb2a083537026148a1dbd1e1c0233edd5a20d06986711"
+      "sha": "33e05f6fd5515c1bc340309eb7e606a9b1b313f0d5736e8372351969bbe70a60"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2009-11-29",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/292",
       "dateDocument": "2008-10-03",
-      "roFundstelle": "AS 2010 292",
+      "roFundstelle": "AS 2010 2159",
       "titelDe": "Bundesbeschluss zur Schaffung einer Spezialfinanzierung für Aufgaben im Luftverkehr",
       "titelFr": "Arrêté fédéral sur la création d'un financement spécial en faveur de tâches dans le domaine du trafic aérien",
       "titelIt": "Decreto federale concernente la creazione di un sistema di finanziamento speciale per compiti connessi al traffico aereo",
       "botschaftKey": "BOTSCHAFT-2007-943",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/292/de",
-      "sha": "6daa6dcf43adb202ffcf4dc70d78d3508cce8c7f3aadfdfa9dc63f0831f9ac23"
+      "sha": "eaa42be57c2def06dbffd62b5778ecd6881f136f9216bc70dbaa8638e93f9427"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2009-11-29",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/293",
       "dateDocument": "2009-06-12",
-      "roFundstelle": "AS 2010 293",
+      "roFundstelle": "AS 2010 2161",
       "titelDe": "Bundesbeschluss über die Volksinitiative «Gegen den Bau von Minaretten»",
       "titelFr": "Arrêté fédéral concernant l'initiative populaire «Contre la construction de minarets»",
       "titelIt": "Decreto federale sull'iniziativa popolare «Contro l'edificazione di minareti»",
       "botschaftKey": "BOTSCHAFT-2008-1294",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/293/de",
-      "sha": "8d13588126673af85558a3562f9bf69e02f0f346fd7b5fa5bcaa97376f4031d2"
+      "sha": "a16453ad7a3ae38c6a0ba41c228d00391dd75d8fff1075e4e44294f96266337d"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2009-09-27",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/783",
       "dateDocument": "2008-12-19",
-      "roFundstelle": "AS 2009 783",
+      "roFundstelle": "AS 2009 6409",
       "titelDe": "Bundesbeschluss über den Verzicht auf die Einführung der allgemeinen Volksinitiative",
       "titelFr": "Arrêté fédéral portant suppression de l'initiative populaire générale",
       "titelIt": "Decreto federale concernente la rinuncia all'introduzione dell'iniziativa popolare generica",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/783/de",
-      "sha": "0ba0aa1bd843d0bf3325783ed34806a089030d49a7aaf0fdb0e9233e34694c1f"
+      "sha": "47d361ea46ee4ee781245bf9f318f21ce238737122b533ff0cc38ef2d735852f"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2009-05-17",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/633",
       "dateDocument": "2008-10-03",
-      "roFundstelle": "AS 2009 633",
+      "roFundstelle": "AS 2009 5325",
       "titelDe": "Verfassungsartikel «Zukunft mit Komplementärmedizin»",
       "titelFr": "Article constitutionnel «Pour la prise en compte des médecines complémentaires»",
       "titelIt": "Articolo costituzionale «Un futuro con la medicina complementare»",
       "botschaftKey": "BOTSCHAFT-2006-947",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/633/de",
-      "sha": "68cbcf9cddef8add8bdef1c9e16ef21cc6ea0011a7f7371c7f2d5f9850e5ca7c"
+      "sha": "232974f9354e296059cfcfdde343af4d59b3f72fb6061f5d75898f9143a806b3"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2008-11-30",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/82",
       "dateDocument": "2008-06-13",
-      "roFundstelle": "AS 2009 82",
+      "roFundstelle": "AS 2009 471",
       "titelDe": "Bundesbeschluss betreffend die Volksinitiative «Für die Unverjährbarkeit pornografischer Straftaten an Kindern»",
       "titelFr": "Arrêté fédéral concernant l'initiative populaire «Pour l'imprescriptibilité des actes de pornographie enfantine»",
       "titelIt": "Decreto federale concernente l'iniziativa popolare «Per l'imprescrittibilità dei reati di pornografia infantile»",
       "botschaftKey": "BOTSCHAFT-2007-758",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/82/de",
-      "sha": "e73b4ddc7d4b3d8e9728f1c81291b8ce67a2e89f5c01942e08369cfbb1cca48f"
+      "sha": "9cb236a4af63f18255de60268d36ab424c51acf8bfadfdca932661c83a74cb51"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2008-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/785",
       "dateDocument": "2003-10-03",
-      "roFundstelle": "AS 2007 785",
+      "roFundstelle": "AS 2007 5765",
       "titelDe": "Bundesbeschluss zur Neugestaltung des Finanzausgleichs und der Aufgabenteilung zwischen Bund und Kantonen (NFA)",
       "titelFr": "Arrêté fédéral concernant la réforme de la péréquation financière et de la répartition des tâches entre la Confédération et les cantons (RPT)",
       "titelIt": "Decreto federale concernente la nuova impostazione della perequazione finanziaria e della ripartizione dei compiti tra Confederazione e Cantoni (NPC)",
       "botschaftKey": "BOTSCHAFT-2002-316",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/785/de",
-      "sha": "376e49579d3b3054e03f7289a212d437af2f6d6707866e40da5555963640100a"
+      "sha": "32b309b8f8d6464d7dac055d5d2329c61525e331346b20d87788996677eef943"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2007-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/184",
       "dateDocument": "2004-03-19",
-      "roFundstelle": "AS 2006 184",
+      "roFundstelle": "AS 2006 1057",
       "titelDe": "Bundesbeschluss über eine neue Finanzordnung",
       "titelFr": "Arrêté fédéral sur un nouveau régime financier",
       "titelIt": "Decreto federale concernente un nuovo ordinamento finanziario",
       "botschaftKey": "BOTSCHAFT-2003-220",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/184/de",
-      "sha": "14d31a21d0a4e2e86f028a54aad1df38ed6fb211dd23c0b26908ae9cbb2d9041"
+      "sha": "4c630d525252f67a198352e9213feed11917a58ed89b2a688435121787e0b46c"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2007-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/185",
       "dateDocument": "2005-03-08",
-      "roFundstelle": "AS 2006 185",
+      "roFundstelle": "AS 2006 1059",
       "titelDe": "Bundesbeschluss über das vollständige Inkrafttreten der Justizreform vom 12. März 2000",
       "titelFr": "Arrêté fédéral sur l'entrée en vigueur intégrale de la réforme de la justice du 12 mars 2000",
       "titelIt": "Decreto federale che mette integralmente in vigore la riforma giudiziaria del 12 marzo 2000",
       "botschaftKey": "BOTSCHAFT-2001-731",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/185/de",
-      "sha": "ac5aa5cdbe8029642b9e31d576ca547b75b5c2fb8e7bbd9353bbe73b4ca42c8f"
+      "sha": "a1a4fbdbdd41b2fc6dcd34ef9ad54f9af12e52e0373ae13a1f5455ce79eac654"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2006-05-21",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/468",
       "dateDocument": "2005-12-16",
-      "roFundstelle": "AS 2006 468",
+      "roFundstelle": "AS 2006 3033",
       "titelDe": "Bundesbeschluss über die Neuordnung der Verfassungsbestimmungen zur Bildung",
       "titelFr": "Arrêté fédéral modifiant les articles de la Constitution sur la formation",
       "titelIt": "Decreto federale sul nuovo ordinamento delle disposizioni costituzionali nel settore della formazione",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/468/de",
-      "sha": "0363f13139d9e8b493eb6edab91de80c03d975000624a3f1f4bfc04423417bb1"
+      "sha": "44134b2e33bb711292a85e110985a888d4c7ab6455eeeae29f2bd0416cd921a1"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2005-11-27",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/23",
       "dateDocument": "2005-06-17",
-      "roFundstelle": "AS 2006 23",
+      "roFundstelle": "AS 2006 89",
       "titelDe": "Bundesbeschluss über die Volksinitiative «für Lebensmittel aus gentechnikfreier Landwirtschaft»",
       "titelFr": "Arrêté fédéral concernant l'initiative populaire «pour des aliments produits sans manipulations génétiques»",
       "titelIt": "Decreto federale concernente l'iniziativa popolare «per alimenti prodotti senza manipolazioni genetiche»",
       "botschaftKey": "BOTSCHAFT-2004-882",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/23/de",
-      "sha": "5756638e8d261bd668941bfa3bbe1c392a8c0f8aaf78157d0458e0d6b95a8ac8"
+      "sha": "de223624e4c5f02bdb6fd43235d35916c105fec2c5ebe81c09b246bb89604718"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2005-03-02",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/222",
       "dateDocument": "2005-03-02",
-      "roFundstelle": "AS 2005 222",
+      "roFundstelle": "AS 2005 1475",
       "titelDe": "Bundesbeschluss über das teilweise Inkrafttreten der Justizreform vom 12. März 2000",
       "titelFr": "Arrêté fédéral sur l'entrée en vigueur partielle de la réforme de la justice du 12 mars 2000",
       "titelIt": "Decreto federale concernente l'entrata in vigore parziale della riforma giudiziaria del 12 marzo 2000",
       "botschaftKey": "BOTSCHAFT-2004-845",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/222/de",
-      "sha": "273f6fe4c0ec358d83b89436704abaad2de7f3a4fb292ec2cb5deb42302011f0"
+      "sha": "5e67ba5d75c1342e629633b6c780c5826ddba9a26ac8d4974aeb593e065603e0"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2004-02-08",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/272",
       "dateDocument": "2003-06-20",
-      "roFundstelle": "AS 2004 272",
+      "roFundstelle": "AS 2004 2341",
       "titelDe": "Bundesbeschluss über die Volksinitiative «Lebenslange Verwahrung für nicht therapierbare, extrem gefährliche Sexual- und Gewaltstraftäter»",
       "titelFr": "Arrêté fédéral concernant l'initiative populaire «Internement à vie pour les délinquants sexuels ou violents jugés très dangereux et non amendables»",
       "titelIt": "Decreto federale concernente l'iniziativa popolare «Internamento a vita per criminali sessuomani o violenti estremamente pericolosi e refrattari alla terapia»",
       "botschaftKey": "BOTSCHAFT-2001-638",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/272/de",
-      "sha": "07ed3b8f1336f9eb9747deb11b158c6fe64f7fa5793317487170369283e0a94b"
+      "sha": "4ec67709274f7e2b01f17d24b93bea771e5391bb8477fd73a756fe40065675c4"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2003-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/296",
       "dateDocument": "2002-10-04",
-      "roFundstelle": "AS 2003 296",
+      "roFundstelle": "AS 2003 1949",
       "titelDe": "Bundesbeschluss über die Änderung der Volksrechte",
       "titelFr": "Arrêté fédéral relatif à la révision des droits populaires",
       "titelIt": "Decreto federale concernente la revisione dei diritti popolari",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/296/de",
-      "sha": "93f3f700613b682c39c96f9ce1b8220c2a5dc3d2072d07a1f1c69fa4dcb275f7"
+      "sha": "1ccd0faf82b3b60a8d522c80fe6e7c556705b3aa6a059f9bd2b3588dc4016f78"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2003-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/297",
       "dateDocument": "2003-06-19",
-      "roFundstelle": "AS 2003 297",
+      "roFundstelle": "AS 2003 1953",
       "titelDe": "Bundesbeschluss über das Inkrafttreten der direkt anwendbaren Bestimmungen der Änderung der Volksrechte vom 4. Oktober 2002",
       "titelFr": "Arrêté fédéral portant mise en vigueur des dispositions directement applicables de l'arrêté fédéral du 4 octobre 2002 relatif à la révision des droits populaires",
       "titelIt": "Decreto federale concernente l'entrata in vigore delle disposizioni direttamente applicabili della revisione dei diritti popolari del 4 ottobre 2002",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/297/de",
-      "sha": "652938567cd1cddd953c9fdf225047a1c81cef22bef428bdaea7db25602d194d"
+      "sha": "aa4cdc7a4af442e733437666fcbf0564632eafce0d22c43ae60997e96f89da71"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2003-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/466",
       "dateDocument": "2002-09-24",
-      "roFundstelle": "AS 2002 466",
+      "roFundstelle": "AS 2002 3147",
       "titelDe": "Bundesbeschluss über das teilweise Inkrafttreten der Justizreform vom 12. März 2000",
       "titelFr": "Arrêté fédéral sur l'entrée en vigueur partielle de la réforme de la justice du 12 mars 2000",
       "titelIt": "Decreto federale concernente l'entrata in vigore parziale della riforma giudiziaria del 12 marzo 2000",
       "botschaftKey": "BOTSCHAFT-2001-731",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/466/de",
-      "sha": "760b949b63abf3272eb37611e8c405b6d427d0dfe8f437381c5a76624731122b"
+      "sha": "30a068a3e3b56ef2690c85e9c984a1535a25cca8e25863ff99013dd19afa13cc"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2003-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/467",
       "dateDocument": "1999-10-08",
-      "roFundstelle": "AS 2002 467",
+      "roFundstelle": "AS 2002 3148",
       "titelDe": "Bundesbeschluss über die Reform der Justiz",
       "titelFr": "Arrêté fédéral relatif à la réforme de la justice",
       "titelIt": "Decreto federale sulla riforma giudiziaria",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/467/de",
-      "sha": "5c308dc35c3b63582df9c1783768f4ab2783c2d7b4ed2d7f08622f878fac5088"
+      "sha": "6e48687fc6c7f61be0f677576f3d2f0a9be6bee2e6eca1174626ec5afdc59b67"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2002-03-03",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/156",
       "dateDocument": "2001-10-05",
-      "roFundstelle": "AS 2002 156",
+      "roFundstelle": "AS 2002 885",
       "titelDe": "Bundesbeschluss über die Volksinitiative «für den Beitritt der Schweiz zur Organisation der Vereinten Nationen (UNO)»",
       "titelFr": "Arrêté fédéral sur l'initiative populaire «Pour l'adhésion de la Suisse à l'Organisation des Nations Unies (ONU)»",
       "titelIt": "Decreto federale concernente l'iniziativa popolare «per l'adesione della Svizzera all'Organizzazione delle Nazioni Unite (ONU)»",
       "botschaftKey": "BOTSCHAFT-2001-230",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/156/de",
-      "sha": "2d102b165768cfcc41227945e3d0aa1e344c0355aa38bd60c3f73da362f27488"
+      "sha": "d3196f05eb4e944562e0d01e97998bf19c2814d3ce0a5b26c46e13ec32e5aa95"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-12-02",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/51",
       "dateDocument": "2001-06-22",
-      "roFundstelle": "AS 2002 51",
+      "roFundstelle": "AS 2002 241",
       "titelDe": "Bundesbeschluss über eine Schuldenbremse",
       "titelFr": "Arrêté fédéral concernant un frein à l'endettement",
       "titelIt": "Decreto federale sul freno all'indebitamento",
       "botschaftKey": "BOTSCHAFT-2000-962",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/51/de",
-      "sha": "d8d53ab296b14749096edb61bb4e8a8190399b39479cda1d85b197a9eb5f9607"
+      "sha": "239b2651575028c1ca9f052be474cf04be2be3dfa2b4876df36379e02668d863"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-06-10",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/321",
       "dateDocument": "2000-12-15",
-      "roFundstelle": "AS 2001 321",
+      "roFundstelle": "AS 2001 2262",
       "titelDe": "Bundesbeschluss über die Aufhebung der Genehmigungspflicht für die Errichtung von Bistümern",
       "titelFr": "Arrêté fédéral portant abrogation de la disposition constitutionnelle soumettant l'érection des évêchés à l'approbation de la Confédération",
       "titelIt": "Decreto federale concernente la soppressione dell'obbligo d'approvazione per l'istituzione di diocesi",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/321/de",
-      "sha": "68a9839164f27445c5142593c12594e33694713e88c87a849bb54aed16863955"
+      "sha": "be437010cea42ff4d95499ad44e7f15908581a788758a885e50ea0257ca07d08"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2000-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/404",
       "dateDocument": "1998-12-18",
-      "roFundstelle": "AS 1999 404",
+      "roFundstelle": "AS 1999 2556",
       "titelDe": "Bundesverfassung der Schweizerischen Eidgenossenschaft vom 18. April 1999",
       "titelFr": "Constitution fédérale de la Confédération suisse du 18 avril 1999",
       "titelIt": "Costituzione federale della Confederazione Svizzera del 18 aprile 1999",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/404/de",
-      "sha": "0393de31e9105bfbaacdae5d8a9de8e4dee68a56ecb0bb3901b65732cae3de7b"
+      "sha": "4a3ead7ba1f0da693bdca270d09a8b9b983a4678f440578acfb5ae5062283d56"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2000-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/418",
       "dateDocument": "1999-10-26",
-      "roFundstelle": "AS 1999 418",
+      "roFundstelle": "AS 1999 2680",
       "titelDe": "Bundesverfassung der Schweizerischen Eidgenossenschaft vom 18. April 1999 (nur ital.)",
       "titelFr": "Constitution fédérale de la Confédération suisse du 18 avril 1999 (seulement en italien)",
       "titelIt": "Costituzione federale della Confederazione Svizzera del 18 aprile 1999",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/418/de",
-      "sha": "f9f4adb700ad81050ea24e58a8d6ddde3ee7b9640b4c5a95082d3e0eaf128d30"
+      "sha": "a90a40298491009622747098cc9a62b6a0d4ee6413425832d33388581ec069d4"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "1999-09-28",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/403",
       "dateDocument": "1999-09-28",
-      "roFundstelle": "AS 1999 403",
+      "roFundstelle": "AS 1999 2555",
       "titelDe": "Bundesbeschluss über das Inkrafttreten der neuen Bundesverfassung vom 18. April 1999",
       "titelFr": "Arrêté fédéral sur l'entrée en vigueur de la nouvelle Constitution fédérale du 18 avril 1999",
       "titelIt": "Decreto federale concernente l'entrata in vigore della nuova Costituzione federale del 18 aprile 1999",
       "botschaftKey": "BOTSCHAFT-1999-1_7922_7145_6784",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/403/de",
-      "sha": "f9c3c6f282fd77f5f7b82e5bfc11deee5795af7673b5291fdfd48b5bd18e24b1"
+      "sha": "afdaa0cd1f5654380b2cb11a0520748cbcc3aae058c24a1018d60fbfa948b41b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "1999-02-07",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/168",
       "dateDocument": "1998-10-09",
-      "roFundstelle": "AS 1999 168",
+      "roFundstelle": "AS 1999 1239",
       "titelDe": "Bundesbeschluss über die Änderung der Voraussetzungen für die Wählbarkeit in den Bundesrat",
       "titelFr": "Arrêté fédéral concernant la modification des conditions d'éligibilité au Conseil fédéral",
       "titelIt": "Decreto federale concernente la modifica delle condizioni di eleggibilità al Consiglio federale",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/168/de",
-      "sha": "032a597482b29c5d3c81e1d3fda77fe9009cc654380fa5d8791dfd62f99ec605"
+      "sha": "5c98e655a643e83a3e79192a806183c0ad1ae6ddda9b1172f6513debd536ac66"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "1999-02-07",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/186",
       "dateDocument": "1998-06-26",
-      "roFundstelle": "AS 1999 186",
+      "roFundstelle": "AS 1999 1341",
       "titelDe": "Bundesbeschluss betreffend eine Verfassungsbestimmung über die Transplantationsmedizin",
       "titelFr": "Arrêté fédéral concernant un article constitutionnel sur la médecine de la transplantation",
       "titelIt": "Decreto federale concernente un articolo costituzionale sulla medicina dei trapianti",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/186/de",
-      "sha": "52bb20b44d5e3ded0759a3072d79bdbc59ca026f3b402c64a630edf991c0ad0a"
+      "sha": "025db4e0b83997648839e9ba45ed044501eb60ac025606b5a9b108aba82cb111"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "1998-11-29",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/110",
       "dateDocument": "1998-03-20",
-      "roFundstelle": "AS 1999 110",
+      "roFundstelle": "AS 1999 741",
       "titelDe": "Bundesbeschluss über Bau und Finanzierung von Infrastrukturvorhaben des öffentlichen Verkehrs",
       "titelFr": "Arrêté fédéral relatif à la réalisation et au financement des projets d'infrastructure des transports publics",
       "titelIt": "Decreto federale concernente la costruzione e il finanziamento dei progetti d'infrastruttura dei trasporti pubblici",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/110/de",
-      "sha": "819b2a21cce7b013d327e3422e9fc0a21d667c99125e294800a6d28cab0d4d22"
+      "sha": "ef440e60cb4d30913a2b7d7369ad110e23019ae5c9f3eda2834039574d73eac7"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "1998-11-29",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/111",
       "dateDocument": "1998-04-29",
-      "roFundstelle": "AS 1999 111",
+      "roFundstelle": "AS 1999 743",
       "titelDe": "Bundesbeschluss über einen befristet geltenden, neuen Getreideartikel",
       "titelFr": "Arrêté fédéral sur un nouvel article céréalier de durée limitée",
       "titelIt": "Decreto federale concernente un nuovo articolo di validità limitata sui cereali",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/111/de",
-      "sha": "e44a2e97de6cf552db8301848ee9d64d48a15bb782e9fb5622bebddbba89198d"
+      "sha": "38388dce0c55db0d9f65d7363a5bae59e43b9ee828920cf992114c635c6c6fc9"
     },
     {
       "art": "aenderung",
@@ -672,5 +672,5 @@
       "sha": "edb5186f8b37a2da35a52788bf71fa41928adcccb8f1a7c1110acc49e64972d0"
     }
   ],
-  "sha": "41a2cf9bb32204fe65b54ffe509c51817caadb72c3768c23692aa374eb4944a6"
+  "sha": "6b106a61012b6cd4deec4c903fead0851f98bdba10fc795c370a6fe186236961"
 }

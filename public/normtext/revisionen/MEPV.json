@@ -1,7 +1,7 @@
 {
   "erlassKey": "MEPV",
   "sr": "812.213",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -39,12 +39,12 @@
       "dateEntryInForce": "2021-05-26",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/552",
       "dateDocument": "2020-07-01",
-      "roFundstelle": "AS 2020 552",
+      "roFundstelle": "AS 2020 2977",
       "titelDe": "Medizinprodukteverordnung (MepV)",
       "titelFr": "Ordonnance sur les dispositifs médicaux (ODim)",
       "titelIt": "Ordinanza relativa ai dispositivi medici (ODmed)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/552/de",
-      "sha": "996494184a877fb548f0c50d1514643b7a7ac4530a7772cf552bd5535b305bfc"
+      "sha": "2d281a53abad9d16d2d10ea57e94099ec69c7b81ecab390c7f29eb3a40fab719"
     },
     {
       "art": "aenderung",
@@ -75,61 +75,61 @@
       "dateEntryInForce": "2020-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/551",
       "dateDocument": "2020-07-01",
-      "roFundstelle": "AS 2020 551",
+      "roFundstelle": "AS 2020 2975",
       "titelDe": "Medizinprodukteverordnung (MepV)",
       "titelFr": "Ordonnance sur les dispositifs médicaux (ODim)",
       "titelIt": "Ordinanza relativa ai dispositivi medici (ODmed)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/551/de",
-      "sha": "b47cb16fd21951b566cef0b1dc93d8f49879ae21d5ffdabeea9f14973f0b08cc"
+      "sha": "3180b887378de88847e9608e7ffd5df30422bcdf9c0e95ef61345264b9567d3d"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2017-11-26",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/650",
       "dateDocument": "2017-10-25",
-      "roFundstelle": "AS 2017 650",
+      "roFundstelle": "AS 2017 5935",
       "titelDe": "Medizinprodukteverordnung (MepV)",
       "titelFr": "Ordonnance sur les dispositifs médicaux (ODim)",
       "titelIt": "Ordinanza relativa ai dispositivi medici (ODmed)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/650/de",
-      "sha": "b6050eb72981d72266c117c82cb546cadaf5d6c92053fed9914f22b98a523a43"
+      "sha": "93734fcbbcbd223e77752654724327aa41f7abcf656e99f1510fb476c2d4819c"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2015-04-15",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/189",
       "dateDocument": "2015-04-01",
-      "roFundstelle": "AS 2015 189",
+      "roFundstelle": "AS 2015 999",
       "titelDe": "Medizinprodukteverordnung (MepV)",
       "titelFr": "Ordonnance sur les dispositifs médicaux (ODim)",
       "titelIt": "Ordinanza relativa ai dispositivi medici (ODmed)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/189/de",
-      "sha": "3848819b2d3147133c17b829492c2b9a7df6c8f6a09c773e8bd781be014d6773"
+      "sha": "bc10296d4fe983bfb2a7f6ddadd7592adef41261c5b2513616fdba3a4a0bdfe2"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2010-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/170",
       "dateDocument": "2010-03-24",
-      "roFundstelle": "AS 2010 170",
+      "roFundstelle": "AS 2010 1215",
       "titelDe": "Medizinprodukteverordnung (MepV)",
       "titelFr": "Ordonnance sur les dispositifs médicaux (ODim)",
       "titelIt": "Ordinanza relativa ai dispositivi medici (ODmed)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/170/de",
-      "sha": "da002dc3a6a116bc57c87224f8d011d396777a5bfa784dbec1830fe0b5386a53"
+      "sha": "46d31e55a249e870c9869699f81bb57cc018266c51c0198b1de11306155b9382"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2002-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/520",
       "dateDocument": "2001-10-17",
-      "roFundstelle": "AS 2001 520",
+      "roFundstelle": "AS 2001 3487",
       "titelDe": "Medizinprodukteverordnung (MepV)",
       "titelFr": "Ordonnance sur les dispositifs médicaux (ODim)",
       "titelIt": "Ordinanza relativa ai dispositivi medici (ODmed)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/520/de",
-      "sha": "ab1c6790529a4014277633a7bbd7e51e5f447aa844ea637872a3462d4fec6bf9"
+      "sha": "cd0b183752da6033ee1b4505b32b474604df76bece1687fad628f85324f29079"
     }
   ],
-  "sha": "1d31260964bab278a0e260dc111305462119ce494ff10bc79143801fc236883b"
+  "sha": "7dd9533357f28754b09ba20c37a369fdb2bd43875d62d46cd22f704353700406"
 }

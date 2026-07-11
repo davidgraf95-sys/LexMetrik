@@ -1,7 +1,7 @@
 {
   "erlassKey": "BPV",
   "sr": "172.220.111.3",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -125,96 +125,96 @@
       "dateEntryInForce": "2021-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/936",
       "dateDocument": "2020-11-18",
-      "roFundstelle": "AS 2020 936",
+      "roFundstelle": "AS 2020 5395",
       "titelDe": "Bundespersonalverordnung (BPV)",
       "titelFr": "Ordonnance sur le personnel de la Confédération (OPers)",
       "titelIt": "Ordinanza sul personale federale (OPers)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/936/de",
-      "sha": "d925cbd0766c6db6da810508c39d32b9d2b8175f470ceef2f42b1b2ebaa0d3a4"
+      "sha": "183c851ef4dd26fbe1370b03cfefc13bc3e49da6d5f71aee69e1d8e0b762d3aa"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2020-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/693",
       "dateDocument": "2019-11-13",
-      "roFundstelle": "AS 2019 693",
+      "roFundstelle": "AS 2019 3803",
       "titelDe": "Bundespersonalverordnung (BPV)",
       "titelFr": "Ordonnance sur le personnel de la Confédération (OPers)",
       "titelIt": "Ordinanza sul personale federale (OPers)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/693/de",
-      "sha": "454805c2697f6b78a86cae3af83834490e9ce25abb29bcc8b0baa8c3c13209d6"
+      "sha": "61300a82983943b864e8e956747e6054a1c62e4bba76a9f03fd16c2410754a45"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2019-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/647",
       "dateDocument": "2018-10-24",
-      "roFundstelle": "AS 2018 647",
+      "roFundstelle": "AS 2018 4009",
       "titelDe": "Bundespersonalverordnung (BPV)",
       "titelFr": "Ordonnance sur le personnel de la Confédération (OPers)",
       "titelIt": "Ordinanza sul personale federale (OPers)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/647/de",
-      "sha": "70fce2843907d96523b65668a06fb8dc5fd1cc6fafe02702f9b51de27ee47382"
+      "sha": "e48a16916a8554b5dc7c9e5c4421293657157b1498f74c3a2cba13167074bb64"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2018-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/689",
       "dateDocument": "2017-11-15",
-      "roFundstelle": "AS 2017 689",
+      "roFundstelle": "AS 2017 6209",
       "titelDe": "Bundespersonalverordnung (BPV)",
       "titelFr": "Ordonnance sur le personnel de la Confédération (OPers)",
       "titelIt": "Ordinanza sul personale federale (OPers)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/689/de",
-      "sha": "7e458f9259a1d4f76d3b30841f64ba730575edc2dcc47769c1614bdb6db089d5"
+      "sha": "2809c7a08935b059522dcb9beb1dcc3375f6ccedf76209a464cbbc7e36858383"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2018-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/96",
       "dateDocument": "2017-12-08",
-      "roFundstelle": "AS 2018 96",
+      "roFundstelle": "AS 2018 747",
       "titelDe": "Bundespersonalverordnung (BPV)",
       "titelFr": "Ordonnance sur le personnel de la Confédération (OPers)",
       "titelIt": "Ordinanza sul personale federale (OPers)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/96/de",
-      "sha": "30a5d20daa6fa853a61409bf09e1342aa0b0e7a21dd0609920c27a7cdd028999"
+      "sha": "32bd94c772f7f2d390b163c608e8839911842d06fadee1c5ce3b6c9b59a88b1f"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2018-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/753",
       "dateDocument": "2017-11-22",
-      "roFundstelle": "AS 2017 753",
+      "roFundstelle": "AS 2017 6737",
       "titelDe": "Bundespersonalverordnung (BPV)",
       "titelFr": "Ordonnance sur le personnel de la Confédération (OPers)",
       "titelIt": "Ordinanza sul personale federale (OPers)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/753/de",
-      "sha": "9eb0e419ec2371efec1e070477e22e5210f555657bd593b1153978606867429b"
+      "sha": "7d3d43c68ce668617aa89adaa87c993ba4e0bbbd1ec0025a281bffe8f5ebb14c"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2017-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/734",
       "dateDocument": "2016-12-02",
-      "roFundstelle": "AS 2016 734",
+      "roFundstelle": "AS 2016 4507",
       "titelDe": "Bundespersonalverordnung",
       "titelFr": "Ordonnance sur le personnel de la Confédération",
       "titelIt": "Ordinanza sul personale federale",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/734/de",
-      "sha": "268e5ff2d05c33546ff1e7a88d629273cd8e35ad5dde45a8a630cda7f4f2ed99"
+      "sha": "08205e95c657772dbdedfdf1dc067664873fa0e60a98969197ce46ed11d30a0b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2016-12-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/611",
       "dateDocument": "2016-10-12",
-      "roFundstelle": "AS 2016 611",
+      "roFundstelle": "AS 2016 3637",
       "titelDe": "Bundespersonalverordnung (BPV)",
       "titelFr": "Ordonnance sur le personnel de la Confédération (OPers)",
       "titelIt": "Ordinanza sul personale federale (OPers)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/611/de",
-      "sha": "368c8e4a584e2dbf05649f739c590ec7488bc609fed3ac85ab6bcbfcebf3bdeb"
+      "sha": "f1f46258fdfdd40a5c880d76d4ae10055b1e9ac044f1f104d8c636b7ba9ef115"
     },
     {
       "art": "sammelerlass-marker",
@@ -227,72 +227,72 @@
       "dateEntryInForce": "2015-12-22",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/903",
       "dateDocument": "2015-12-22",
-      "roFundstelle": "AS 2015 903",
+      "roFundstelle": "AS 2015 5919",
       "titelDe": "Bundespersonalverordnung (BPV) (Betrifft nur den französischen Text)",
       "titelFr": "Ordonnance sur le personnel de la Confédération (OPers)",
       "titelIt": "Ordinanza sul personale federale (OPers) (Concerne soltanto il testo francese)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/903/de",
-      "sha": "5ec504301be041c5d8619acb05a0a0ccc721f2228a429155985855337b4f1429"
+      "sha": "a9d169245b86b19537df80102063ebb0fbffd779b8a0a2aef26cd1b07478cb7d"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2015-10-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/589",
       "dateDocument": "2015-09-11",
-      "roFundstelle": "AS 2015 589",
+      "roFundstelle": "AS 2015 3155",
       "titelDe": "Bundespersonalverordnung (BPV)",
       "titelFr": "Ordonnance sur le personnel de la Confédération (OPers)",
       "titelIt": "Ordinanza sul personale federale (OPers)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/589/de",
-      "sha": "aef91555a0eb34303fbd276e8080887aefc5a1cfefdbf2b3dbb032ea5dc8a088"
+      "sha": "18d6301e5b9fb1029fae3f9697dd4bb599da1c0444dc782a7e0205da151b294e"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2015-08-04",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/487",
       "dateDocument": "2015-08-04",
-      "roFundstelle": "AS 2015 487",
+      "roFundstelle": "AS 2015 2579",
       "titelDe": "Bundespersonalverordnung (BPV) (Betrifft nur den italienischen Text)",
       "titelFr": "Ordonnance sur le personnel de la Confédération (OPers) (Ne concerne que le texte italien)",
       "titelIt": "Ordinanza sul personale federale (OPers)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/487/de",
-      "sha": "e3788d39debbc97babc540405564eb16d197eb53f7b7a97d80d0abfe955c2773"
+      "sha": "a42a6b22125565437b082987970fd823bf4da5ada810cfbb70600ade9e84f174"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2015-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/417",
       "dateDocument": "2015-06-12",
-      "roFundstelle": "AS 2015 417",
+      "roFundstelle": "AS 2015 2243",
       "titelDe": "Bundespersonalverordnung (BPV)",
       "titelFr": "Ordonnance sur le personnel de la Confédération (OPers)",
       "titelIt": "Ordinanza sul personale federale (OPers)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/417/de",
-      "sha": "edcdf4179a7a6a66047b6660b1929864898b7a361d850f690b98c2b1a132e842"
+      "sha": "e92378cddec8b9a93834126a573b9682074c1707c371c4f7b93fba77292c8ffc"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2015-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/592",
       "dateDocument": "2014-10-15",
-      "roFundstelle": "AS 2014 592",
+      "roFundstelle": "AS 2014 3403",
       "titelDe": "Bundespersonalverordnung (BPV)",
       "titelFr": "Ordonnance sur le personnel de la Confédération (OPers)",
       "titelIt": "Ordinanza sul personale federale (OPers)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/592/de",
-      "sha": "dcfae73b4a3b3eab01b3f234c203b39701bebd4cadfc421dca891d83b823eccf"
+      "sha": "eb2308d22c63c7d6573bb901eb534dca9b91af1bc8839c5c397e8ba3b00ee9ea"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2015-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/765",
       "dateDocument": "2014-11-28",
-      "roFundstelle": "AS 2014 765",
+      "roFundstelle": "AS 2014 4567",
       "titelDe": "Bundespersonalverordnung (BPV)",
       "titelFr": "Ordonnance sur le personnel de la Confédération (OPers)",
       "titelIt": "Ordinanza sul personale federale (OPers)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/765/de",
-      "sha": "144bb9e73c021293c1f2472bbd31356092513ad693149a9a4570a140b8f755e9"
+      "sha": "edeb76432c807b35fe8ef99ad289f94ca07c467708be8eff2853b4a7ccd86336"
     },
     {
       "art": "sammelerlass-marker",
@@ -305,156 +305,156 @@
       "dateEntryInForce": "2014-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/367",
       "dateDocument": "2014-06-20",
-      "roFundstelle": "AS 2014 367",
+      "roFundstelle": "AS 2014 2171",
       "titelDe": "Bundespersonalverordnung (BPV)",
       "titelFr": "Ordonnance sur le personnel de la Confédération (OPers)",
       "titelIt": "Ordinanza sul personale federale (OPers)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/367/de",
-      "sha": "9c3a3095981d7202d8887f82640ff15bbc66f35bfe6ba14e0819dd370da0c58b"
+      "sha": "79e0c5d0d609d549d38c6aac4ac06549752f00851551dc38713329ff261eda5f"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2014-03-25",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/153",
       "dateDocument": "2014-03-25",
-      "roFundstelle": "AS 2014 153",
+      "roFundstelle": "AS 2014 717",
       "titelDe": "Bundespersonalverordnung (BPV) (Betrifft nur den französischen Text)",
       "titelFr": "Ordonnance sur le personnel de la Confédération (OPers)",
       "titelIt": "Ordinanza sul personale federale (OPers) (Concerne soltanto il testo francese)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/153/de",
-      "sha": "fb4edabb7a546eb8a1cc16d4c6450c361ab820bae27fabeb5108d317172f5c23"
+      "sha": "065d7663446019491290ea1491fec0db168d856c7d417165b140d2cba27434a4"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2014-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/614",
       "dateDocument": "2013-09-13",
-      "roFundstelle": "AS 2013 614",
+      "roFundstelle": "AS 2013 3209",
       "titelDe": "Bundespersonalverordnung (BPV)",
       "titelFr": "Ordonnance sur le personnel de la Confédération (OPers)",
       "titelIt": "Ordinanza sul personale federale (OPers)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/614/de",
-      "sha": "f11d94ebeb1f2be4fba8d20a856d63dcd5267880c9e1408eb64ac71d48636ec3"
+      "sha": "773cca0f918d763835596368a3cc16ddbc1bee821ab38d444a8da0df9feb91ce"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2014-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/780",
       "dateDocument": "2013-11-20",
-      "roFundstelle": "AS 2013 780",
+      "roFundstelle": "AS 2013 4397",
       "titelDe": "Bundespersonalverordnung (BPV)",
       "titelFr": "Ordonnance sur le personnel de la Confédération (OPers)",
       "titelIt": "Ordinanza sul personale federale (OPers)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/780/de",
-      "sha": "a54005d1b4565bbea4860016ae529d3c83ccc126d642ace68e0cb24344cf6de9"
+      "sha": "5897e83e2d5805ed6a85ffe9fb04fe6a0db6736821ed8825459c3d0cfe30d2c4"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2013-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/354",
       "dateDocument": "2013-05-01",
-      "roFundstelle": "AS 2013 354",
+      "roFundstelle": "AS 2013 1515",
       "titelDe": "Bundespersonalverordnung (BPV)",
       "titelFr": "Ordonnance sur le personnel de la Confédération (OPers)",
       "titelIt": "Ordinanza sul personale federale (OPers)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/354/de",
-      "sha": "d0fca5d5367694838b70cb766953b54531ee1a9419fb1c07b7dc4f808789d32f"
+      "sha": "46b081e9ddc6053e14f296e26da796ea393b4fcd485c0cf3d40ee7bf4f9fc402"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2012-09-15",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/525",
       "dateDocument": "2012-08-15",
-      "roFundstelle": "AS 2012 525",
+      "roFundstelle": "AS 2012 4483",
       "titelDe": "Bundespersonalverordnung (BPV)",
       "titelFr": "Ordonnance sur le personnel de la Confédération (OPers)",
       "titelIt": "Ordinanza sul personale federale (OPers)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/525/de",
-      "sha": "fd49748bc71a993ad58abbe86f4561ca5ca3f3ef9562efde34814ad1134eceae"
+      "sha": "282c0388b7341c4db4eeb6a5a123db4c4d849786abe8cfded530d0383764668b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2011-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/821",
       "dateDocument": "2010-11-24",
-      "roFundstelle": "AS 2010 821",
+      "roFundstelle": "AS 2010 5793",
       "titelDe": "Bundespersonalverordnung (BPV)",
       "titelFr": "Ordonnance sur le personnel de la Confédération (OPers)",
       "titelIt": "Ordinanza sul personale federale (OPers)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/821/de",
-      "sha": "226f4aed30590ac81036b8daf3ac1340aae87cb5e8c0f0ce4ad8a908545a20d7"
+      "sha": "4357d291685feb4c32a0af586972bf452e271d0f74f291708c08f204c92394b8"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2010-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/353",
       "dateDocument": "2010-06-11",
-      "roFundstelle": "AS 2010 353",
+      "roFundstelle": "AS 2010 2649",
       "titelDe": "Bundespersonalverordnung (BPV)",
       "titelFr": "Ordonnance sur le personnel de la Confédération (OPers)",
       "titelIt": "Ordinanza sul personale federale (OPers)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/353/de",
-      "sha": "b8d24ce1b2688e38e4e175828b1d1d9d13b6bda9380a99d6ceb73a38ae848dd2"
+      "sha": "499e09ab57732a0483aff70140763caa28af3a399e5ef66dc11366369944b3da"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2010-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/785",
       "dateDocument": "2009-11-27",
-      "roFundstelle": "AS 2009 785",
+      "roFundstelle": "AS 2009 6417",
       "titelDe": "Bundespersonalverordnung (BPV)",
       "titelFr": "Ordonnance sur le personnel de la Confédération (OPers)",
       "titelIt": "Ordinanza sul personale federale (OPers)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/785/de",
-      "sha": "3dc6b806c694ef7702e2e9cba92220df668222b7792f6239dbcfe8f8527d4d20"
+      "sha": "a8ff164cc43e710e48f72f49a5274933da3a1d1768ebc30e474b2ea4865488ae"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2009-02-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/785",
       "dateDocument": "2008-11-05",
-      "roFundstelle": "AS 2008 785",
+      "roFundstelle": "AS 2008 5643",
       "titelDe": "Verordnung über Optimierungen im Lohnsystem des Bundespersonals",
       "titelFr": "Ordonnance sur l'optimisation du système salarial du personnel fédéral",
       "titelIt": "Ordinanza concernente l'ottimizzazione del sistema salariale del personale federale",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/785/de",
-      "sha": "4875377e5beb5629d851b0683f3556bec0c1e7b0546fc9deb33fff5b14e1656f"
+      "sha": "82ad4e91ac2f177d1c08dfad712f68c7fff4fcbb4662a0a162e3c5cf35151594"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2009-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/861",
       "dateDocument": "2008-12-05",
-      "roFundstelle": "AS 2008 861",
+      "roFundstelle": "AS 2008 6411",
       "titelDe": "Bundespersonalverordnung (BPV)",
       "titelFr": "Ordonnance sur le personnel de la Confédération (OPers)",
       "titelIt": "Ordinanza sul personale federale (OPers)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/861/de",
-      "sha": "476097d745a226c8436e18e87f4688eddfecf551d8c6ff47a6c9695388ae94ce"
+      "sha": "2493bf15c6363e772e471d63efa124ad72f0ec5a16b83eed55cbf31c02600611"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2009-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/184",
       "dateDocument": "2009-03-06",
-      "roFundstelle": "AS 2009 184",
+      "roFundstelle": "AS 2009 1137",
       "titelDe": "Bundespersonalverordnung (BPV)",
       "titelFr": "Ordonnance sur le personnel de la Confédération (OPers)",
       "titelIt": "Ordinanza sul personale federale (OPers)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/184/de",
-      "sha": "ee62f884e05129c3e0c39aea16bb6b41e57a81f10b865e63c4b17969e40cc021"
+      "sha": "45369eda471c09dda67ff3ea46db6df3f828945255304334b2441f7d25827555"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2008-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/445",
       "dateDocument": "2008-07-15",
-      "roFundstelle": "AS 2008 445",
+      "roFundstelle": "AS 2008 3431",
       "titelDe": "Verordnung über Änderungen des Bundesrechts infolge des Primatwechsels bei PUBLICA (Betrifft nur den französischen Text)",
       "titelFr": "Ordonnance modifiant le droit fédéral à la suite du changement de régime de prévoyance de PUBLICA",
       "titelIt": "Ordinanza concernente modifiche del diritto federale in seguito al cambiamento di primato presso PUBLICA (Concerne solo il testo francese)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/445/de",
-      "sha": "743117daea7df3ad79b7521df734e9716a6e8d2647d7c8af1e479b6abdedfeab"
+      "sha": "ec7f478adc0b2e0a6d651dadba0b2232ea71b05627ac1d6faab45ceacb6d795c"
     },
     {
       "art": "sammelerlass-marker",
@@ -473,36 +473,36 @@
       "dateEntryInForce": "2007-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/379",
       "dateDocument": "2007-06-15",
-      "roFundstelle": "AS 2007 379",
+      "roFundstelle": "AS 2007 2871",
       "titelDe": "Bundespersonalverordnung (BPV)",
       "titelFr": "Ordonnance sur le personnel de la Confédération (OPers)",
       "titelIt": "Ordinanza sul personale della Confederazione (OPers)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/379/de",
-      "sha": "1fe5f7104f327c99aa8b8b17d14c245470f3144dc03977ae7617328e2a8f70a2"
+      "sha": "7155a4975382640bc04546265b5fde2dc70b6e385a212c392d32599a2f91f73b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2007-02-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/157",
       "dateDocument": "2007-03-20",
-      "roFundstelle": "AS 2007 157",
+      "roFundstelle": "AS 2007 869",
       "titelDe": "Bundespersonalverordnung (BPV)",
       "titelFr": "Ordonnance sur le personnel de la Confédération (OPers)",
       "titelIt": "Ordinanza sul personale federale (OPers)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/157/de",
-      "sha": "9b5c05fb0b64b72b568b15933151cde23e3c3761e38230381851bd9ba692eb9f"
+      "sha": "bba7bfb6d1436073a1b3fb8d5fa3e9a3ecb5c72a4d84058ed2763a9009f55e6f"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2007-02-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/52",
       "dateDocument": "2007-01-23",
-      "roFundstelle": "AS 2007 52",
+      "roFundstelle": "AS 2007 271",
       "titelDe": "Bundespersonalverordnung (BPV)",
       "titelFr": "Ordonnance sur le personnel de la Confédération (OPers)",
       "titelIt": "Ordinanza sul personale federale (OPers)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/52/de",
-      "sha": "394758ea0fb0fc476437bf86477010ce56a5a184f61174398fafeab2c430f262"
+      "sha": "97b65bba49796693db3255817806a469aebe6ea5004e287f9777c61a3bbf2c0f"
     },
     {
       "art": "sammelerlass-marker",
@@ -527,37 +527,37 @@
       "dateEntryInForce": "2005-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/2",
       "dateDocument": "2004-12-22",
-      "roFundstelle": "AS 2005 2",
+      "roFundstelle": "AS 2005 3",
       "titelDe": "Bundespersonalverordnung (BPV)",
       "titelFr": "Ordonnance sur le personnel de la Confédération (OPers)",
       "titelIt": "Ordinanza sul personale federale (OPers)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/2/de",
-      "sha": "ad9da744b02f4004e54282540ca023ab2717a03ba189cd62c4c45a42366f23d1"
+      "sha": "750846cd4f6eba1f38492b501afb6a94e5eb94d4e977bd406b349420b13abc80"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2004-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/745",
       "dateDocument": "2003-12-05",
-      "roFundstelle": "AS 2003 745",
+      "roFundstelle": "AS 2003 5011",
       "titelDe": "Verordnung über die Aufhebung und Änderung von Verordnungen im Zusammenhang mit der Neuregelung des militärischen Personals",
       "titelFr": "Ordonnance sur l'abrogation et la modification d'ordonnances en relation avec la nouvelle réglementation du personnel militaire",
       "titelIt": "Ordinanza concernente l'abrogazione e la modifica di ordinanze in relazione con la nuova regolamentazione del personale militare",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/745/de",
-      "sha": "517c172abcfd2b5c13701758da8d5940989f0241e4f18cacfaceee7f6a89eca7"
+      "sha": "1fcd6789ec4bb3f453e7188d09f8a923fc4bc75b7ae8264dd9481d7923a182ef"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2002-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/319",
       "dateDocument": "2001-07-03",
-      "roFundstelle": "AS 2001 319",
+      "roFundstelle": "AS 2001 2206",
       "titelDe": "Bundespersonalverordnung (BPV)",
       "titelFr": "Ordonnance sur le personnel de la Confédération (OPers)",
       "titelIt": "Ordinanza sul personale federale (OPers)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/319/de",
-      "sha": "bcdd6bf0bb8883b032300b784f8610a52eea7f87ed33cd8dd5a2b949b28a46bb"
+      "sha": "b7fc689e57511af70eed828f563478b935864d49636cce4d6e0ddc5200af87ba"
     }
   ],
-  "sha": "db94224d3d771f3899909defd3f9058ea5e0a36b74e4d0a9494f8223b784fab7"
+  "sha": "98a41de43cf8b5a0c0e7c10a910458e81a1cd1caf35c50b52156fcbd33057188"
 }

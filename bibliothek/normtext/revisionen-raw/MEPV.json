@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-10-17"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Medizinprodukteverordnung (MepV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les dispositifs médicaux (ODim)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza relativa ai dispositivi medici (ODmed)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "812.213"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2001/520"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-10-17"
+        "value": "RO 2001 3487"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-10-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 3487"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Medizinprodukteverordnung (MepV)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-10-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 3487"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Medizinprodukteverordnung (MepV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les dispositifs médicaux (ODim)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza relativa ai dispositivi medici (ODmed)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "812.213"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2001/520"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-10-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 3487"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Medizinprodukteverordnung (MepV)"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-03-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1215"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Medizinprodukteverordnung (MepV)"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-03-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1215"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Medizinprodukteverordnung (MepV)"
@@ -212,6 +236,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-03-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1215"
       },
       "titleDe": {
         "type": "literal",
@@ -245,6 +273,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-04-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 999"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Medizinprodukteverordnung (MepV)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-04-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 999"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Medizinprodukteverordnung (MepV)"
@@ -309,69 +345,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-04-01"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Medizinprodukteverordnung (MepV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les dispositifs médicaux (ODim)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza relativa ai dispositivi medici (ODmed)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "812.213"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2017/650"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-11-26"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-10-25"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Medizinprodukteverordnung (MepV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les dispositifs médicaux (ODim)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza relativa ai dispositivi medici (ODmed)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "812.213"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2017/650"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-11-26"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-10-25"
+        "value": "RO 2015 999"
       },
       "titleDe": {
         "type": "literal",
@@ -405,6 +381,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-10-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5935"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Medizinprodukteverordnung (MepV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les dispositifs médicaux (ODim)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza relativa ai dispositivi medici (ODmed)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "812.213"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2017/650"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-11-26"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-10-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5935"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Medizinprodukteverordnung (MepV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les dispositifs médicaux (ODim)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza relativa ai dispositivi medici (ODmed)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "812.213"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2017/650"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-11-26"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-10-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5935"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Medizinprodukteverordnung (MepV)"
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-07-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2975"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Medizinprodukteverordnung (MepV)"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-07-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2975"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Medizinprodukteverordnung (MepV)"
@@ -501,69 +561,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-07-01"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Medizinprodukteverordnung (MepV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les dispositifs médicaux (ODim)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza relativa ai dispositivi medici (ODmed)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "812.213"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2020/552"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2021-05-26"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2020-07-01"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Medizinprodukteverordnung (MepV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les dispositifs médicaux (ODim)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza relativa ai dispositivi medici (ODmed)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "812.213"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2020/552"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2021-05-26"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2020-07-01"
+        "value": "RO 2020 2975"
       },
       "titleDe": {
         "type": "literal",
@@ -597,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-07-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2977"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Medizinprodukteverordnung (MepV)"
@@ -628,6 +632,82 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-07-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2977"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Medizinprodukteverordnung (MepV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les dispositifs médicaux (ODim)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza relativa ai dispositivi medici (ODmed)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "812.213"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2020/552"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-05-26"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-07-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2977"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Medizinprodukteverordnung (MepV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les dispositifs médicaux (ODim)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza relativa ai dispositivi medici (ODmed)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "812.213"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2020/552"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-05-26"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-07-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2977"
       },
       "titleDe": {
         "type": "literal",

@@ -1,7 +1,7 @@
 {
   "erlassKey": "ARGV4",
   "sr": "822.114",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -9,48 +9,48 @@
       "dateEntryInForce": "2015-05-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/215",
       "dateDocument": "2015-04-01",
-      "roFundstelle": "AS 2015 215",
+      "roFundstelle": "AS 2015 1085",
       "titelDe": "Verordnung 4 zum Arbeitsgesetz (ArGV 4) (Industrielle Betriebe, Plangenehmigung und Betriebsbewilligung)",
       "titelFr": "Ordonnance 4 relative à la loi sur le travail (OLT 4) (Entreprises industrielles, approbation des plans et autorisation d'exploiter)",
       "titelIt": "Ordinanza 4 concernente la legge sul lavoro (OLL 4) (Aziende industriali, approvazione dei piani e permesso d'esercizio)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/215/de",
-      "sha": "42fbfb0534f43db3502fd348bc3293be4efd2a0419deea8a0172e4efd3ddabcc"
+      "sha": "940a944d5a8983dd4cceaa19f3b0ecd86a51b16d17552f6039f91f1a2e2ab138"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2009-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/293",
       "dateDocument": "2009-05-06",
-      "roFundstelle": "AS 2009 293",
+      "roFundstelle": "AS 2009 2401",
       "titelDe": "Verordnung 4 zum Arbeitsgesetz (ArGV 4) (Industrielle Betriebe, Plangenehmigung und Betriebsbewilligung)",
       "titelFr": "Ordonnance 4 relative à la loi sur le travail (OLT 4) (Entreprises industrielles, approbation des plans et autorisation d'exploiter)",
       "titelIt": "Ordinanza 4 concernente la legge sul lavoro (OLL 4) (Aziende industriali, approvazione dei piani e permesso d'esercizio)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/293/de",
-      "sha": "4eb2c748da92d654ba06d0e8a7023146cb54bc51179a9b06dd1ac311e7a02e2e"
+      "sha": "a905bd8b9962f9b7b50bbc05356118ab3bc90162ab78ec927d4f31e1cc11be15"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2008-12-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/726",
       "dateDocument": "2008-10-29",
-      "roFundstelle": "AS 2008 726",
+      "roFundstelle": "AS 2008 5183",
       "titelDe": "Verordnung 4 zum Arbeitsgesetz (ArGV 4) (Industrielle Betriebe, Plangenehmigung und Betriebsbewilligung)",
       "titelFr": "Ordonnance 4 relative à la loi sur le travail (OLT 4) (Entreprises industrielles, approbation des plans et autorisation d'exploiter)",
       "titelIt": "Ordinanza 4 concernente la legge sul lavoro (OLL 4) (Aziende industriali, approvazione dei piani e permesso d'esercizio)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/726/de",
-      "sha": "945f1c8fd651c9c91a71223fd47d8b513fca814af8eb8f74c4a3a9703da85516"
+      "sha": "c81f8e2451ab76f475bb865238b689aef10361572a0f8012c5059cb41b11d80f"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2006-11-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/622",
       "dateDocument": "2006-09-29",
-      "roFundstelle": "AS 2006 622",
+      "roFundstelle": "AS 2006 4183",
       "titelDe": "Verordnung 4 zum Arbeitsgesetz (ArGV 4) (Industrielle Betriebe, Plangenehmigung und Betriebsbewilligung)",
       "titelFr": "Ordonnance 4 relative à la loi sur le travail (OLT 4) (Entreprises industrielles, approbation des plans et autorisation d'exploiter)",
       "titelIt": "Ordinanza 4 concernente la legge sul lavoro (OLL 4) (Aziende industriali, approvazione dei piani e permesso d'esercizio)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/622/de",
-      "sha": "058ebd2c9d96e3991bcc49b7059471f6ae71fd8dc2bdf15978a2762631841cfa"
+      "sha": "25244368f9bb25da1820b46be00973fd3e9d5a5334019207ecdbe35c08412644"
     },
     {
       "art": "sammelerlass-marker",
@@ -63,12 +63,12 @@
       "dateEntryInForce": "2000-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/245",
       "dateDocument": "2000-05-10",
-      "roFundstelle": "AS 2000 245",
+      "roFundstelle": "AS 2000 1636",
       "titelDe": "Verordnung 4 zum Arbeitsgesetz (Bau und Einrichtung von Betrieben mit Plangenehmigungspflicht, ArGV 4)",
       "titelFr": "Ordonnance 4 relative à la loi sur le travail (Construction et aménagement des entreprises soumises à la procédure d'approbation des plans, OLT 4)",
       "titelIt": "Ordinanza 4 concernente la legge sul lavoro (Costruzione e trasformazione di aziende assoggettate all'approvazione dei piani, OLL4)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/245/de",
-      "sha": "745948388832e16e88e4f868661528e10113bf206699c8ebcdc2886719d9976d"
+      "sha": "fa75447f970a049cc37ab6d52b2492b6988379442fd1a3710af4c2bd8771cb0c"
     },
     {
       "art": "aenderung",
@@ -83,5 +83,5 @@
       "sha": "635b278f13e702212c4358abfb9a043e5f683a285223df6f18544648878327b0"
     }
   ],
-  "sha": "308913647440c67c117d650e14888695470f530185b8faed145e6d06378cf108"
+  "sha": "7bf04d80c82f6cff9b470bc9efcbb48c4cf274f331b29c981d6c213ea223e487"
 }

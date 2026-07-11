@@ -21,69 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-23"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Freizügigkeit der Anwältinnen und Anwälte (Anwaltsgesetz, BGFA)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur la libre circulation des avocats (Loi sur les avocats, LLCA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulla libera circolazione degli avvocati (Legge sugli avvocati, LLCA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "935.61"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/153"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-06-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-06-23"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Bundesgesetz über die Freizügigkeit der Anwältinnen und Anwälte (Anwaltsgesetz, BGFA)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur la libre circulation des avocats (Loi sur les avocats, LLCA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulla libera circolazione degli avvocati (Legge sugli avvocati, LLCA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "935.61"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/153"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-06-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-06-23"
+        "value": "RO 2002 863"
       },
       "titleDe": {
         "type": "literal",
@@ -117,6 +57,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 863"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Freizügigkeit der Anwältinnen und Anwälte (Anwaltsgesetz, BGFA)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur la libre circulation des avocats (Loi sur les avocats, LLCA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla libera circolazione degli avvocati (Legge sugli avvocati, LLCA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "935.61"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/153"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-06-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 863"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Freizügigkeit der Anwältinnen und Anwälte (Anwaltsgesetz, BGFA)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur la libre circulation des avocats (Loi sur les avocats, LLCA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla libera circolazione degli avvocati (Legge sugli avvocati, LLCA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "935.61"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/153"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-06-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 863"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Freizügigkeit der Anwältinnen und Anwälte (Anwaltsgesetz, BGFA)"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-03-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 2134"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Freizügigkeit der Anwältinnen und Anwälte (Anwaltsgesetz, BGFA)"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-03-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 2134"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Freizügigkeit der Anwältinnen und Anwälte (Anwaltsgesetz, BGFA)"
@@ -212,6 +236,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-03-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 2134"
       },
       "titleDe": {
         "type": "literal",
@@ -245,6 +273,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-06-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4399"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Freizügigkeit der Anwältinnen und Anwälte (Anwaltsgesetz, BGFA)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-06-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4399"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Freizügigkeit der Anwältinnen und Anwälte (Anwaltsgesetz, BGFA)"
@@ -308,6 +344,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-06-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4399"
       },
       "titleDe": {
         "type": "literal",
@@ -340,6 +380,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-06-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 2869"
       },
       "titleDe": {
         "type": "literal",
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-06-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 2869"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Freizügigkeit der Anwältinnen und Anwälte (Anwaltsgesetz, BGFA) (Betrifft nur den italienischen Text)"
@@ -404,6 +452,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-06-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 2869"
       },
       "titleDe": {
         "type": "literal",

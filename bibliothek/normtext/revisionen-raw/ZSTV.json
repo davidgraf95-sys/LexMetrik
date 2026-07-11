@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-04-28"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Zivilstandsverordnung (ZStV) "
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'état civil (OEC)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sullo stato civile (OSC)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "211.112.2"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/362"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-04-28"
+        "value": "RO 2004 2915"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-04-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 2915"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Zivilstandsverordnung (ZStV) "
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-04-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 2915"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Zivilstandsverordnung (ZStV) "
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'état civil (OEC)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sullo stato civile (OSC)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "211.112.2"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/362"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-04-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 2915"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Zivilstandsverordnung (ZStV) "
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-04-11"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die vollständige Inkraftsetzung der Zivilstandsverordnung vom 28. April 2004"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la mise en vigueur complète de l'ordonnance du 28 avril 2004 sur l'état civil"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza relativa all'entrata in vigore completa dell'ordinanza del 28 aprile 2004 sullo stato civile"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "211.112.2"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2005/300"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-04-11"
+        "value": "RO 2005 1823"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-04-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 1823"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die vollständige Inkraftsetzung der Zivilstandsverordnung vom 28. April 2004"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la mise en vigueur complète de l'ordonnance du 28 avril 2004 sur l'état civil"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza relativa all'entrata in vigore completa dell'ordinanza del 28 aprile 2004 sullo stato civile"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "211.112.2"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/300"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-04-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 1823"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die vollständige Inkraftsetzung der Zivilstandsverordnung vom 28. April 2004"
@@ -245,37 +273,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-12-13"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Zivilstandsverordnung (ZStV) (Betrifft nur den französischen Text)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'état civil (OEC)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sullo stato civile (OSC) (Concerne solo il testo francese)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "211.112.2"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2005/761"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-12-13"
+        "value": "RO 2005 5599"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +309,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-12-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5599"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Zivilstandsverordnung (ZStV) (Betrifft nur den französischen Text)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'état civil (OEC)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sullo stato civile (OSC) (Concerne solo il testo francese)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "211.112.2"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/761"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-12-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5599"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Zivilstandsverordnung (ZStV) (Betrifft nur den französischen Text)"
@@ -341,37 +381,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-12-09"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Zivilstandsverordnung (ZStV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'état civil (OEC)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sullo stato civile (OSC)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "211.112.2"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2005/781"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-12-09"
+        "value": "RO 2005 5679"
       },
       "titleDe": {
         "type": "literal",
@@ -405,6 +417,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-12-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5679"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Zivilstandsverordnung (ZStV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'état civil (OEC)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sullo stato civile (OSC)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "211.112.2"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/781"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-12-09"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5679"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Zivilstandsverordnung (ZStV)"
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-06-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 2923"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Zivilstandsverordnung (ZStV)"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-06-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 2923"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Zivilstandsverordnung (ZStV)"
@@ -500,6 +560,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-06-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 2923"
       },
       "titleDe": {
         "type": "literal",
@@ -533,37 +597,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-09-12"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Aufhebung und Anpassung von Verordnungen im Rahmen der Neuordnung der ausserparlamentarischen Kommissionen"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant l'abrogation et l'adaptation d'ordonnances dans le cadre de la réorganisation des commissions extraparlementaires"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'abrogazione e l'adeguamento di ordinanze nell'ambito del riordinamento delle commissioni extraparlamentari"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "211.112.2"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/637"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-09-12"
+        "value": "RO 2007 4525"
       },
       "titleDe": {
         "type": "literal",
@@ -597,6 +633,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-09-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 4525"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Aufhebung und Anpassung von Verordnungen im Rahmen der Neuordnung der ausserparlamentarischen Kommissionen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant l'abrogation et l'adaptation d'ordonnances dans le cadre de la réorganisation des commissions extraparlementaires"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'abrogazione e l'adeguamento di ordinanze nell'ambito del riordinamento delle commissioni extraparlamentari"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "211.112.2"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/637"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-09-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 4525"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Aufhebung und Anpassung von Verordnungen im Rahmen der Neuordnung der ausserparlamentarischen Kommissionen"
@@ -629,37 +705,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-24"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Zivilstandsverordnung (ZStV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'état civil (OEC)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sullo stato civile (OSC)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "211.112.2"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/772"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-10-24"
+        "value": "RO 2007 5625"
       },
       "titleDe": {
         "type": "literal",
@@ -693,6 +741,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5625"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Zivilstandsverordnung (ZStV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'état civil (OEC)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sullo stato civile (OSC)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "211.112.2"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/772"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-10-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5625"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Zivilstandsverordnung (ZStV)"
@@ -725,6 +813,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-06-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 3061"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Zivilstandsverordnung (ZStV)"
@@ -757,6 +849,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-06-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 3061"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Zivilstandsverordnung (ZStV)"
@@ -788,6 +884,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-06-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 3061"
       },
       "titleDe": {
         "type": "literal",
@@ -821,37 +921,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-11-07"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Zivilstandsverordnung (ZStV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'état civil (OEC)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sullo stato civile (OSC)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "211.112.2"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/772"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-11-07"
+        "value": "RO 2012 6463"
       },
       "titleDe": {
         "type": "literal",
@@ -885,6 +957,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-11-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6463"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Zivilstandsverordnung (ZStV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'état civil (OEC)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sullo stato civile (OSC)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "211.112.2"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/772"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-11-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6463"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Zivilstandsverordnung (ZStV)"
@@ -917,6 +1029,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-03-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1045"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Zivilstandsverordnung (ZStV)"
@@ -949,6 +1065,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-03-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1045"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Zivilstandsverordnung (ZStV)"
@@ -980,6 +1100,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-03-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1045"
       },
       "titleDe": {
         "type": "literal",
@@ -1013,37 +1137,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-09-10"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Zivilstandsverordnung (ZStV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'état civil (OEC)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sullo stato civile (OSC)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "211.112.2"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2013/587"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-09-10"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-09-10"
+        "value": "RO 2013 3021"
       },
       "titleDe": {
         "type": "literal",
@@ -1077,6 +1173,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-09-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 3021"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Zivilstandsverordnung (ZStV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'état civil (OEC)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sullo stato civile (OSC)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "211.112.2"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/587"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-09-10"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-09-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 3021"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Zivilstandsverordnung (ZStV)"
@@ -1109,6 +1245,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-05-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1327"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Zivilstandsverordnung (ZStV)"
@@ -1141,6 +1281,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-05-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1327"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Zivilstandsverordnung (ZStV)"
@@ -1172,6 +1316,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-05-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1327"
       },
       "titleDe": {
         "type": "literal",
@@ -1205,37 +1353,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-07-01"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Zivilstandsverordnung (ZStV) (Betrifft nur den französischen Text)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'état civil (OEC)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sullo stato civile (OSC) (Concerne soltanto il testo francese)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "211.112.2"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2014/353"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-07-01"
+        "value": "RO 2014 2049"
       },
       "titleDe": {
         "type": "literal",
@@ -1269,6 +1389,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-07-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 2049"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Zivilstandsverordnung (ZStV) (Betrifft nur den französischen Text)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'état civil (OEC)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sullo stato civile (OSC) (Concerne soltanto il testo francese)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "211.112.2"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/353"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-07-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 2049"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Zivilstandsverordnung (ZStV) (Betrifft nur den französischen Text)"
@@ -1301,6 +1461,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-10-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 3925"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Zivilstandsverordnung (ZStV)"
@@ -1333,6 +1497,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-10-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 3925"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Zivilstandsverordnung (ZStV)"
@@ -1365,69 +1533,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-10-26"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Zivilstandsverordnung (ZStV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'état civil (OEC)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sullo stato civile (OSC)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "211.112.2"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2016/811"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-12-20"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Zivilstandsverordnung (ZStV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'état civil (OEC)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sullo stato civile (OSC)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "211.112.2"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2016/811"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-12-20"
+        "value": "RO 2016 3925"
       },
       "titleDe": {
         "type": "literal",
@@ -1461,6 +1569,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-12-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 5111"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Zivilstandsverordnung (ZStV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'état civil (OEC)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sullo stato civile (OSC)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "211.112.2"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/811"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-12-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 5111"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Zivilstandsverordnung (ZStV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'état civil (OEC)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sullo stato civile (OSC)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "211.112.2"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/811"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-12-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 5111"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Zivilstandsverordnung (ZStV)"
@@ -1493,6 +1677,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-10-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 4309"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Zivilstandsverordnung (ZStV)"
@@ -1525,6 +1713,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-10-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 4309"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Zivilstandsverordnung (ZStV)"
@@ -1556,6 +1748,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-10-31"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 4309"
       },
       "titleDe": {
         "type": "literal",
@@ -1589,6 +1785,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-12-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 5447"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Zivilstandsverordnung (ZStV)"
@@ -1621,6 +1821,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-12-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 5447"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Zivilstandsverordnung (ZStV)"
@@ -1653,6 +1857,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-12-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 5447"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Zivilstandsverordnung (ZStV)"
@@ -1685,6 +1893,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-11-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 3815"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Zivilstandsverordnung (ZStV)"
@@ -1717,6 +1929,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-11-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 3815"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Zivilstandsverordnung (ZStV)"
@@ -1748,6 +1964,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-11-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 3815"
       },
       "titleDe": {
         "type": "literal",

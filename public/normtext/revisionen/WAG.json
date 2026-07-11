@@ -1,7 +1,7 @@
 {
   "erlassKey": "WAG",
   "sr": "921.0",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -33,25 +33,25 @@
       "dateEntryInForce": "2017-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/538",
       "dateDocument": "2016-03-18",
-      "roFundstelle": "AS 2016 538",
+      "roFundstelle": "AS 2016 3207",
       "titelDe": "Bundesgesetz über den Wald (Waldgesetz, WaG)",
       "titelFr": "Loi fédérale sur les forêts (Loi sur les forêts, LFo)",
       "titelIt": "Legge federale sulle foreste (Legge forestale, LFo)",
       "botschaftKey": "BOTSCHAFT-2014-1078",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/538/de",
-      "sha": "35cda58cd80015750c2e1804ead4d3288d257ebe91ebb10b9d07a6ce07b7cb4e"
+      "sha": "afba9d03145a1a6dc137ceb7f953a41b64623cf5baf042bbf3fc3acc592d2c75"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2013-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/418",
       "dateDocument": "2012-03-16",
-      "roFundstelle": "AS 2013 418",
+      "roFundstelle": "AS 2013 1981",
       "titelDe": "Bundesgesetz über den Wald (Waldgesetz, WaG)",
       "titelFr": "Loi fédérale sur les forêts (Loi sur les forêts, LFo)",
       "titelIt": "Legge federale sulle foreste (Legge forestale, LFo)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/418/de",
-      "sha": "36f138b67501aae9f1d75332f00796ed6d392af5278f5d204c31ed084f330db0"
+      "sha": "328561f0a445bd49e897af997a742c5958eb5e3d234e969c5c2f8332817cbd0f"
     },
     {
       "art": "sammelerlass-marker",
@@ -108,5 +108,5 @@
       "sha": "5629e8aad2b8e159b4fa6cfbf82a85541703514fe4c607b5db63024c2a99f884"
     }
   ],
-  "sha": "809420184f3fe8229882e639caae2917d8c6a44241a115a5288fc22447e119a8"
+  "sha": "880ef55a34e451cd389259d257153ba1cec15e70db2153cbfd8734dc674448cd"
 }

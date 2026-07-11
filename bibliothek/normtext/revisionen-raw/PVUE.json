@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1967-07-14"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Pariser Übereinkunft vom 20. März 1883 zum Schutz des gewerblichen Eigentums, revidiert in Stockholm am 14. Juli 1967"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention de Paris du 20 mars 1883 pour la protection de la propriété industrielle, révisée à Stockholm le 14 juillet 1967"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione di Parigi del 20 marzo 1883 per la protezione della proprietà industriale, riveduta a Stoccolma il 14 luglio 1967"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.232.04"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1970/620_620_620"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1970-04-26"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1967-07-14"
+        "value": "RO 1970 620"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1967-07-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1970 620"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Pariser Übereinkunft vom 20. März 1883 zum Schutz des gewerblichen Eigentums, revidiert in Stockholm am 14. Juli 1967"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1967-07-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1970 620"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Pariser Übereinkunft vom 20. März 1883 zum Schutz des gewerblichen Eigentums, revidiert in Stockholm am 14. Juli 1967"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention de Paris du 20 mars 1883 pour la protection de la propriété industrielle, révisée à Stockholm le 14 juillet 1967"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione di Parigi del 20 marzo 1883 per la protezione della proprietà industriale, riveduta a Stoccolma il 14 luglio 1967"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.232.04"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1970/620_620_620"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1970-04-26"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1967-07-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1970 620"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Pariser Übereinkunft vom 20. März 1883 zum Schutz des gewerblichen Eigentums, revidiert in Stockholm am 14. Juli 1967"
@@ -148,6 +164,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-07-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 2418"
       },
       "titleDe": {
         "type": "literal",
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-07-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 2418"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Pariser Verbandsübereinkunft zum Schutz des gewerblichen Eigentums, revidiert in Stockholm am 14. Juli 1967"
@@ -213,6 +237,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-07-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 2418"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Pariser Verbandsübereinkunft zum Schutz des gewerblichen Eigentums, revidiert in Stockholm am 14. Juli 1967"
@@ -245,6 +273,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-11-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 759"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Pariser Verbandsübereinkunft zum Schutz des gewerblichen Eigentums, revidiert in Stockholm am 14. Juli 1967"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-11-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 759"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Pariser Verbandsübereinkunft zum Schutz des gewerblichen Eigentums, revidiert in Stockholm am 14. Juli 1967"
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-11-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 759"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Pariser Verbandsübereinkunft zum Schutz des gewerblichen Eigentums, revidiert in Stockholm am 14. Juli 1967"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-04-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 2535"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Pariser Übereinkunft zum Schutz des gewerblichen Eigentums, revidiert in Stockholm am 14. Juli 1967"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-04-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 2535"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Pariser Übereinkunft zum Schutz des gewerblichen Eigentums, revidiert in Stockholm am 14. Juli 1967"
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-04-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 2535"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Pariser Übereinkunft zum Schutz des gewerblichen Eigentums, revidiert in Stockholm am 14. Juli 1967"
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-03-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 887"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Pariser Übereinkunft vom 20. März 1883 zum Schutz des gewerblichen Eigentums, revidiert in Stockholm am 14. Juli 1967"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-03-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 887"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Pariser Übereinkunft vom 20. März 1883 zum Schutz des gewerblichen Eigentums, revidiert in Stockholm am 14. Juli 1967"
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-03-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 887"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Pariser Übereinkunft vom 20. März 1883 zum Schutz des gewerblichen Eigentums, revidiert in Stockholm am 14. Juli 1967"
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-07-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 3727"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Pariser Übereinkunft vom 20. März 1883 zum Schutz des gewerblichen Eigentums, revidiert in Stockholm am 14. Juli 1967"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-07-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 3727"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Pariser Übereinkunft vom 20. März 1883 zum Schutz des gewerblichen Eigentums, revidiert in Stockholm am 14. Juli 1967"
@@ -596,6 +668,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-07-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 3727"
       },
       "titleDe": {
         "type": "literal",

@@ -1,7 +1,7 @@
 {
   "erlassKey": "HMG",
   "sr": "812.21",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -58,74 +58,74 @@
       "dateEntryInForce": "2020-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/550",
       "dateDocument": "2019-03-22",
-      "roFundstelle": "AS 2020 550",
+      "roFundstelle": "AS 2020 2961",
       "titelDe": "Bundesgesetz über Arzneimittel und Medizinprodukte (Heilmittelgesetz, HMG)",
       "titelFr": "Loi fédérale sur les médicaments et les dispositifs médicaux (Loi sur les produits thérapeutiques, LPTh)",
       "titelIt": "Legge federale sui medicamenti e i dispositivi medici (Legge sugli agenti terapeutici, LATer)",
       "botschaftKey": "BOTSCHAFT-2019-1",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/550/de",
-      "sha": "9b50e06165d8dff91319bc1d025336173a9a49a844e3fd2570285c84fd652268"
+      "sha": "bbb5b14d4a1404e1b1a91d32b7f289b9fc304bf9110ca1b1902f4dc84ed266af"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2020-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/272",
       "dateDocument": "2019-04-10",
-      "roFundstelle": "AS 2019 272",
+      "roFundstelle": "AS 2019 1393",
       "titelDe": "Verordnung über die abschliessende Inkraftsetzung der Änderung vom 18. März 2016 des Heilmittelgesetzes",
       "titelFr": "Ordonnance portant dernière mise en vigueur partielle de la modification du 18 mars 2016 de la loi sur les produits thérapeutiques",
       "titelIt": "Ordinanza concernente l'entrata in vigore integrale della modifica del 18 marzo 2016 della legge sugli agenti terapeutici",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/272/de",
-      "sha": "b50845d4c11ad9b3e51bc763fa17b3dfc6072587d98b7397f32c82f3083c8867"
+      "sha": "2d8929a8233e44e050262525ef941154a496ed0a6628af6c107310f7d6124811"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2019-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/587",
       "dateDocument": "2018-09-21",
-      "roFundstelle": "AS 2018 587",
+      "roFundstelle": "AS 2018 3575",
       "titelDe": "Verordnung über eine Teilinkraftsetzung der Änderung vom 18. März 2016 des Heilmittelgesetzes",
       "titelFr": "Ordonnance portant mise en vigueur partielle de la modification du 18 mars 2016 de la loi sur les produits thérapeutiques",
       "titelIt": "Ordinanza concernente l'entrata in vigore parziale della modifica del 18 marzo 2016 della legge sugli agenti terapeutici",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/587/de",
-      "sha": "3dfe0778007a8ff289ac5e1711e6b14fb9fde1887188cbae546cfc53307c4d97"
+      "sha": "ffbceb14bfc204d4840d6bb9fb0e510813e63559e009fd003037778b61c6f638"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2019-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/824",
       "dateDocument": "2018-12-13",
-      "roFundstelle": "AS 2018 824",
+      "roFundstelle": "AS 2018 5449",
       "titelDe": "Bundesgesetz über Arzneimittel und Medizinprodukte (Heilmittelgesetz, HMG)",
       "titelFr": "Loi fédérale sur les médicaments et les dispositifs médicaux (Loi sur les produits thérapeutiques, LPTh)",
       "titelIt": "Legge federale sui medicamenti e i dispositivi medici (Legge sugli agenti terapeutici, LATer)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/824/de",
-      "sha": "0294c9dcf35b901f0401fd28d0787b237b28d37462dd7b287b08436712b692a9"
+      "sha": "edbf1f80bacd2e46e861c74fa470a64ed781f420cc08c4bb2ecf3dba4832d3af"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2018-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/280",
       "dateDocument": "2016-03-18",
-      "roFundstelle": "AS 2017 280",
+      "roFundstelle": "AS 2017 2745",
       "titelDe": "Bundesgesetz über Arzneimittel und Medizinprodukte (Heilmittelgesetz, HMG)",
       "titelFr": "Loi fédérale sur les médicaments et les dispositifs médicaux (Loi sur les produits thérapeutiques, LPTh)",
       "titelIt": "Legge federale sui medicamenti e i dispositivi medici (Legge sugli agenti terapeutici, LATer)",
       "botschaftKey": "BOTSCHAFT-2013-1",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/280/de",
-      "sha": "a4148ac99ee93b97992f8fcbf344df64334cb3476205683ef4bd587686199da4"
+      "sha": "e35e4ab82b3de2b6a8b51617d0bbb6fc6d6e6fdfbb3bed2499662b63e31d8b5c"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2014-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/761",
       "dateDocument": "2013-06-21",
-      "roFundstelle": "AS 2013 761",
+      "roFundstelle": "AS 2013 4137",
       "titelDe": "Bundesgesetz über Arzneimittel und Medizinprodukte (Heilmittelgesetz, HMG)",
       "titelFr": "Loi fédérale sur les médicaments et les dispositifs médicaux (Loi sur les produits thérapeutiques, LPTh)",
       "titelIt": "Legge federale sui medicamenti e i dispositivi medici (Legge sugli agenti terapeutici, LATer)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/761/de",
-      "sha": "74ce50467e4491751ba09ca5c3eb62911f6e083e995fb59b151979eed96d55af"
+      "sha": "d30632d735bcbc8a8a0199ad82ca5e6d89ee6f71e1e246017d9990312f30f1c1"
     },
     {
       "art": "sammelerlass-marker",
@@ -144,24 +144,24 @@
       "dateEntryInForce": "2012-07-03",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/427",
       "dateDocument": "2012-07-03",
-      "roFundstelle": "AS 2012 427",
+      "roFundstelle": "AS 2012 3743",
       "titelDe": "Bundesgesetz über Arzneimittel und Medizinprodukte (Heilmittelgesetz, HMG) (Betrifft nur den italienischen Text)",
       "titelFr": "Loi fédérale sur les médicaments et les dispositifs médicaux (Loi sur les produits thérapeutiques, LPTh) (Ne concerne que le texte italien)",
       "titelIt": "Legge federale sui medicamenti e i dispositivi medici (Legge sugli agenti terapeutici, LATer)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/427/de",
-      "sha": "f1b4618195301678a2aa705c12d950699343a6e6424d3333640a05fe14dfc8df"
+      "sha": "de96326ee67363076b7ae4ae996f81444c37e2d119a103206be72a5ad2d48d14"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2010-10-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/582",
       "dateDocument": "2010-09-08",
-      "roFundstelle": "AS 2010 582",
+      "roFundstelle": "AS 2010 4027",
       "titelDe": "Verordnung über die abschliessende Inkraftsetzung der Änderung vom 13. Juni 2008 des Heilmittelgesetzes",
       "titelFr": "Ordonnance sur l'entrée en vigueur complète de la modification du 13 juin 2008 de la loi sur les produits thérapeutiques",
       "titelIt": "Ordinanza sull'entrata in vigore integrale della modifica del 13 giugno 2008 della legge sugli agenti terapeutici",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/582/de",
-      "sha": "d3c6e02b63d8e4d0c219b9ada81c98f8692f57bcd0db7f58462b53c85a751b57"
+      "sha": "7a4dcc7b8623a942e5c1df786354dcf4ef158252f0cbe8842d259a829ee48696"
     },
     {
       "art": "sammelerlass-marker",
@@ -174,13 +174,13 @@
       "dateEntryInForce": "2009-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/682",
       "dateDocument": "2008-06-13",
-      "roFundstelle": "AS 2008 682",
+      "roFundstelle": "AS 2008 4873",
       "titelDe": "Bundesgesetz über Arzneimittel und Medizinprodukte (Heilmittelgesetz, HMG)",
       "titelFr": "Loi fédérale sur les médicaments et les dispositifs médicaux (Loi sur les produits thérapeutiques, LPTh)",
       "titelIt": "Legge federale sui medicamenti e i dispositivi medici (Legge sugli agenti terapeutici, LATer)",
       "botschaftKey": "BOTSCHAFT-2007-384",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/682/de",
-      "sha": "5c67639444d99114c7b7d3199a3bb67eab44e5748442355c017d37778f69f830"
+      "sha": "a9e4bc7afdb2ddb91ddc1de8f15511c3a2a3283a58dbed5dd3267c1587ac0111"
     },
     {
       "art": "sammelerlass-marker",
@@ -205,12 +205,12 @@
       "dateEntryInForce": "2002-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/422",
       "dateDocument": "2000-12-15",
-      "roFundstelle": "AS 2001 422",
+      "roFundstelle": "AS 2001 2790",
       "titelDe": "Bundesgesetz über Arzneimittel und Medizinprodukte (Heilmittelgesetz, HMG)",
       "titelFr": "Loi fédérale sur les médicaments et les dispositifs médicaux (Loi sur les produits thérapeutiques, LPTh)",
       "titelIt": "Legge federale sui medicamenti e i dispositivi medici (Legge sugli agenti terapeutici, LATer)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/422/de",
-      "sha": "fc2c4316a44e481ac9b1d8da4d201d01ef516534e6c39d537784c46f02703b2a"
+      "sha": "338ce083a7f666b7f6211a0c0f6c0a163f9e447f3a38e727874b5d1ce2c0e187"
     },
     {
       "art": "sammelerlass-marker",
@@ -267,5 +267,5 @@
       "sha": "262beeac8e8725bc781d9795dc9eea8c52c0d48bdff9c05d4aa9bdfad695ada7"
     }
   ],
-  "sha": "1a2b98e902f55553c6a2fe82c7b8ef1fc8a17c62a143ea3373dd2e66f495d56b"
+  "sha": "bc1b8929bac9db6aff52371f8a6eaa2541084fc665dafb619a7cd8c7821f4aed"
 }

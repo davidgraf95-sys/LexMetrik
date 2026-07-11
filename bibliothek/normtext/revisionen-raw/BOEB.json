@@ -21,69 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1994-12-16"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom 16. Dezember 1994 über das öffentliche Beschaffungswesen (BöB)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 16 décembre 1994 sur les marchés publics (LMP)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 16 dicembre 1994 sugli acquisti pubblici (LAPub)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "172.056.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1996/508_508_508"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1996-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1994-12-16"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Bundesgesetz vom 16. Dezember 1994 über das öffentliche Beschaffungswesen (BöB)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 16 décembre 1994 sur les marchés publics (LMP)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 16 dicembre 1994 sugli acquisti pubblici (LAPub)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "172.056.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1996/508_508_508"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1996-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1994-12-16"
+        "value": "RO 1996 508"
       },
       "titleDe": {
         "type": "literal",
@@ -117,6 +57,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1994-12-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1996 508"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 16. Dezember 1994 über das öffentliche Beschaffungswesen (BöB)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 16 décembre 1994 sur les marchés publics (LMP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 16 dicembre 1994 sugli acquisti pubblici (LAPub)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.056.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1996/508_508_508"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1996-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1994-12-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1996 508"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 16. Dezember 1994 über das öffentliche Beschaffungswesen (BöB)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 16 décembre 1994 sur les marchés publics (LMP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 16 dicembre 1994 sugli acquisti pubblici (LAPub)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.056.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1996/508_508_508"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1996-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1994-12-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1996 508"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 16. Dezember 1994 über das öffentliche Beschaffungswesen (BöB)"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-11-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 5581"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung des EVD über die Anpassung der Schwellenwerte im öffentlichen Beschaffungswesen für die Jahre 2012 und 2013"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-11-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 5581"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung des EVD über die Anpassung der Schwellenwerte im öffentlichen Beschaffungswesen für die Jahre 2012 und 2013"
@@ -213,6 +237,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-11-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 5581"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung des EVD über die Anpassung der Schwellenwerte im öffentlichen Beschaffungswesen für die Jahre 2012 und 2013"
@@ -245,6 +273,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-09-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 773"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über das öffentliche Beschaffungswesen (BöB)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-09-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 773"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über das öffentliche Beschaffungswesen (BöB)"
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-09-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 773"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über das öffentliche Beschaffungswesen (BöB)"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-06-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 641"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über das öffentliche Beschaffungswesen (BöB)"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-06-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 641"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über das öffentliche Beschaffungswesen (BöB)"
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-06-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 641"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über das öffentliche Beschaffungswesen (BöB)"
@@ -436,6 +488,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-06-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 641"
       },
       "titleDe": {
         "type": "literal",

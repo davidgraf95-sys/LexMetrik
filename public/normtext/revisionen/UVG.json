@@ -1,7 +1,7 @@
 {
   "erlassKey": "UVG",
   "sr": "832.20",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -76,38 +76,38 @@
       "dateEntryInForce": "2017-04-04",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/214",
       "dateDocument": "2017-04-04",
-      "roFundstelle": "AS 2017 214",
+      "roFundstelle": "AS 2017 2291",
       "titelDe": "Verordnung über die Verhütung von Unfällen und Berufskrankheiten (Verordnung über die Unfallverhütung, VUV) (Betrifft nur den italienischen Text)",
       "titelFr": "Ordonnance sur la prévention des accidents et des maladies professionnelles (Ordonnance sur la prévention des accidents, OPA) (Ne concerne que le texte italien)",
       "titelIt": "Ordinanza sulla prevenzione degli infortuni e delle malattie professionali (Ordinanza sulla prevenzione degli infortuni, OPI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/214/de",
-      "sha": "0045f40ef831a833db21eb15e85a91617d803737b7bb0182fb911efe9ab00c4f"
+      "sha": "a687721c0d92abdc70d1ab330a47d21b385c3d57f8121eb8b01b0558bbc0b458"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2017-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/723",
       "dateDocument": "2015-09-25",
-      "roFundstelle": "AS 2016 723",
+      "roFundstelle": "AS 2016 4375",
       "titelDe": "Bundesgesetz über die Unfallversicherung (UVG) (Unfallversicherung und Unfallverhütung)",
       "titelFr": "Loi fédérale sur l'assurance-accidents (LAA) (Assurance-accidents et prévention des accidents)",
       "titelIt": "Legge federale sull'assicurazione contro gli infortuni (LAINF) (Assicurazione contro gli infortuni e prevenzione degli infortuni)",
       "botschaftKey": "BOTSCHAFT-2014-1712",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/723/de",
-      "sha": "9a3691655a0ba8dbb07339596fb2f27a36ffd853dac4cc961203cb8bd7961744"
+      "sha": "6a5f667c945dfa46d9fc3310e00b505e4272478ef426a71be31e846723e3800a"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2017-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/795",
       "dateDocument": "2015-09-25",
-      "roFundstelle": "AS 2016 795",
+      "roFundstelle": "AS 2016 4941",
       "titelDe": "Bundesgesetz über die Unfallversicherung (UVG) (Organisation und Nebentätigkeiten der SUVA)",
       "titelFr": "Loi fédérale sur l'assurance-accidents (LAA) (Organisation et activités accessoires de la CNA)",
       "titelIt": "Legge federale sull'assicurazione contro gli infortuni (LAINF) (Organizzazione e attività accessorie dell'INSAI)",
       "botschaftKey": "BOTSCHAFT-2008-981",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/795/de",
-      "sha": "97fbbc39add390b43c8205dbf4839da5ebe2c7551cc721ae1d354ec1ed36b02d"
+      "sha": "a3334ee04cb7f34671aa2b4ceed3b8240c9e9e7d3cdea63c8dc8f859905efcab"
     },
     {
       "art": "sammelerlass-marker",
@@ -162,12 +162,12 @@
       "dateEntryInForce": "2006-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/730",
       "dateDocument": "2004-10-08",
-      "roFundstelle": "AS 2005 730",
+      "roFundstelle": "AS 2005 5259",
       "titelDe": "Bundesgesetz über die Unfallversicherung (UVG)",
       "titelFr": "Loi fédérale sur l'assurance-accidents (LAA)",
       "titelIt": "Legge federale sull'assicurazione contro gli infortuni (LAINF)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/730/de",
-      "sha": "85337a56eeedbee590d77e753014bb72d4472bfe0b3d003f4ad16e2d36687c3f"
+      "sha": "16ef3cb96513b80a19252ad03e2f131c9f2ddfb3391119c29a7bf09b89dfee35"
     },
     {
       "art": "sammelerlass-marker",
@@ -204,37 +204,37 @@
       "dateEntryInForce": "2001-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/215",
       "dateDocument": "2000-12-15",
-      "roFundstelle": "AS 2001 215",
+      "roFundstelle": "AS 2001 1491",
       "titelDe": "Bundesgesetz über die Unfallversicherung (UVG)",
       "titelFr": "Loi fédérale sur l'assurance-accidents (LAA)",
       "titelIt": "Legge federale sull'assicurazione contro gli infortuni (LAINF)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/215/de",
-      "sha": "7cacd5c3b8b2a66d272341c1fb06638e8c890daf9b838c799b8286776a3b6603"
+      "sha": "04346b9601ce8b03adabc7529e25f45fc753d3e193071f5cc232536023172666"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/464",
       "dateDocument": "2000-06-23",
-      "roFundstelle": "AS 2000 464",
+      "roFundstelle": "AS 2000 2760",
       "titelDe": "Bundesgesetz über die Unfallversicherung (UVG)",
       "titelFr": "Loi fédérale sur l'assurance-accidents (LAA)",
       "titelIt": "Legge federale sull'assicurazione contro gli infortuni (LAINF)",
       "botschaftKey": "BOTSCHAFT-2000-99",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/464/de",
-      "sha": "09ed286eef81a32b7b75b91bfd5fecf6fdc176cb10a801539c7b0193e19b9c88"
+      "sha": "13bef94567857eda5db0409f7eb7749ebe29aa647b97b09cbe54fb158f4b7255"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "1999-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/181",
       "dateDocument": "1998-10-09",
-      "roFundstelle": "AS 1999 181",
+      "roFundstelle": "AS 1999 1321",
       "titelDe": "Bundesgesetz über die Unfallversicherung (UVG)",
       "titelFr": "Loi fédérale sur l'assurance-accidents (LAA)",
       "titelIt": "Legge federale sull'assicurazione contro gli infortuni (LAINF)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/181/de",
-      "sha": "541b0cc0147dec65059f13038d0286e4355de1bc0041ebe549a39e7e61f295fa"
+      "sha": "7be8818708dc96284f4e27e3593237f79ea6487dbb070acde6c0147fb00141a1"
     },
     {
       "art": "aenderung",
@@ -249,5 +249,5 @@
       "sha": "8d83a93e081012658ebe6c2856c8524398e2487cc36b4815fffdfe108eab55f3"
     }
   ],
-  "sha": "386fa442d3db82d2d0a3b17f17bddaaddcb7865fe8b65f94bb79235ec447044c"
+  "sha": "7a01a8e49f972ffaf3f033b405b86280e5b7bd9c05efe1c7be15feb3b542b075"
 }

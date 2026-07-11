@@ -1,7 +1,7 @@
 {
   "erlassKey": "EOV",
   "sr": "834.11",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -112,60 +112,60 @@
       "dateEntryInForce": "2021-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/825",
       "dateDocument": "2020-10-14",
-      "roFundstelle": "AS 2020 825",
+      "roFundstelle": "AS 2020 4623",
       "titelDe": "Verordnung zum Erwerbsersatzgesetz (EOV)",
       "titelFr": "Règlement sur les allocations pour perte de gain (RAPG)",
       "titelIt": "Ordinanza sulle indennità di perdita di guadagno (OIPG)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/825/de",
-      "sha": "8260ac97e258a319e286affa981d415cf327a0a5cf571098a499e8dd628372bb"
+      "sha": "c85621195133a28611965d7d06ff0d1ffa213dbfcd288e1991eee09d509c5dde"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2021-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/845",
       "dateDocument": "2020-10-21",
-      "roFundstelle": "AS 2020 845",
+      "roFundstelle": "AS 2020 4697",
       "titelDe": "Verordnung zum Erwerbsersatzgesetz (EOV)",
       "titelFr": "Règlement sur les allocations pour perte de gain (RAPG)",
       "titelIt": "Ordinanza sulle indennità di perdita di guadagno (OIPG)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/845/de",
-      "sha": "821667e5aad0ca69679c04e2c16c3c4e2420d981c8b2b3d50c438f4767230bf8"
+      "sha": "5ab222a6494b986617b349ac428c3ed8fa93a173dfb383c6f6218a326b75f824"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2020-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/680",
       "dateDocument": "2019-11-13",
-      "roFundstelle": "AS 2019 680",
+      "roFundstelle": "AS 2019 3761",
       "titelDe": "Verordnung zum Erwerbsersatzgesetz (EOV)",
       "titelFr": "Règlement sur les allocations pour perte de gain (RAPG)",
       "titelIt": "Ordinanza sulle indennità di perdita di guadagno (OIPG)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/680/de",
-      "sha": "5d259821b3f2dc8ab6c316ebb65808086a0eb8789f20e29374ffb6ace29c6968"
+      "sha": "f3ffad33b7531dbeb14223fbcb94a2c67f2ef63963267fb8d53a917f71ae7dbb"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2019-02-19",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/122",
       "dateDocument": "2019-02-19",
-      "roFundstelle": "AS 2019 122",
+      "roFundstelle": "AS 2019 691",
       "titelDe": "Verordnung zum Erwerbsersatzgesetz (EOV)",
       "titelFr": "Règlement sur les allocations pour perte de gain (RAPG)",
       "titelIt": "Ordinanza sulle indennità di perdita di guadagno (OIPG)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/122/de",
-      "sha": "6245d0f12d7125360d1a0ae664cddc13305f25cd67edf034381d25a147723ee9"
+      "sha": "35f7a89d0610b308f647c4791c6a4abcaeabc54efac0439caad3c272a2f2e674"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2019-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/579",
       "dateDocument": "2018-09-21",
-      "roFundstelle": "AS 2018 579",
+      "roFundstelle": "AS 2018 3539",
       "titelDe": "Verordnung zum Erwerbsersatzgesetz (EOV)",
       "titelFr": "Règlement sur les allocations pour perte de gain (RAPG)",
       "titelIt": "Ordinanza sulle indennità di perdita di guadagno (OIPG)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/579/de",
-      "sha": "3b88d56717cc4419c0fe19df32372295b27d45cf76834863fea96fd2adbebe44"
+      "sha": "ab3139a23e5c92b0c64da37ab6d5fe1c3f2bc78d463612e3066356e5972bbf67"
     },
     {
       "art": "sammelerlass-marker",
@@ -178,36 +178,36 @@
       "dateEntryInForce": "2016-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/575",
       "dateDocument": "2015-09-02",
-      "roFundstelle": "AS 2015 575",
+      "roFundstelle": "AS 2015 3079",
       "titelDe": "Verordnung zum Erwerbsersatzgesetz (EOV)",
       "titelFr": "Règlement sur les allocations pour perte de gain (RAPG)",
       "titelIt": "Ordinanza sulle indennità di perdita di guadagno (OIPG)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/575/de",
-      "sha": "0eddad0df3523727240ba8ac87a1aac87df331a3bfaa5ae3c3fca8f99c54ec36"
+      "sha": "6bc691dc07ce3973af20f1e4e6a25e7a9c233da86bbb306c8d5402a0b1b22251"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2015-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/581",
       "dateDocument": "2014-10-15",
-      "roFundstelle": "AS 2014 581",
+      "roFundstelle": "AS 2014 3349",
       "titelDe": "Verordnung zum Erwerbsersatzgesetz (EOV)",
       "titelFr": "Règlement sur les allocations pour perte de gain (RAPG)",
       "titelIt": "Ordinanza sulle indennità di perdita di guadagno (OIPG)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/581/de",
-      "sha": "30b589c31d6de9dce793dd48d2080d24638270633861031f7409677b9bbb2035"
+      "sha": "447df7dab8f52c6c73450810031e3e06689c6736b1eaa0e479dcff5224d47055"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2013-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/754",
       "dateDocument": "2012-09-21",
-      "roFundstelle": "AS 2012 754",
+      "roFundstelle": "AS 2012 6349",
       "titelDe": "Verordnung zum Erwerbsersatzgesetz (EOV)",
       "titelFr": "Règlement sur les allocations pour perte de gain (RAPG)",
       "titelIt": "Ordinanza sulle indennità di perdita di guadagno (OIPG)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/754/de",
-      "sha": "f477bcbe143ca1ed650bf10db90cd51a8ddbbb10f853fcd8554d5aa967d6a5b9"
+      "sha": "e75147e1cc509eebad51c8311a011f78b2bd5c320c8d5c2d8da56ba148db63c9"
     },
     {
       "art": "sammelerlass-marker",
@@ -220,132 +220,132 @@
       "dateEntryInForce": "2011-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/396",
       "dateDocument": "2010-06-18",
-      "roFundstelle": "AS 2010 396",
+      "roFundstelle": "AS 2010 2975",
       "titelDe": "Verordnung zum Erwerbsersatzgesetz (EOV)",
       "titelFr": "Règlement sur les allocations pour perte de gain (RAPG)",
       "titelIt": "Ordinanza sulle indennità di perdita di guadagno (OIPG)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/396/de",
-      "sha": "06d04678902ce20421488f1e2e21d6305c3422ad679a9dea42e539cddcac58c4"
+      "sha": "95ad5c147fe6ad1f0beb49cc9d94a5e64c12f5c40a5dc546284edb134a3d00e1"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2011-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/661",
       "dateDocument": "2010-09-24",
-      "roFundstelle": "AS 2010 661",
+      "roFundstelle": "AS 2010 4589",
       "titelDe": "Verordnung zum Erwerbsersatzgesetz (EOV)",
       "titelFr": "Règlement sur les allocations pour perte de gain (RAPG)",
       "titelIt": "Ordinanza sulle indennità di perdita di guadagno (OIPG)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/661/de",
-      "sha": "811d7c4b00292f91b4ef84fada13160f2dc884d46e7998f7d8754dddb96f8a61"
+      "sha": "5a64daa2cdfb95da09697498e11302c253637d4b9d8ce5bf78460a986c759b0d"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2010-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/611",
       "dateDocument": "2009-09-30",
-      "roFundstelle": "AS 2009 611",
+      "roFundstelle": "AS 2009 5191",
       "titelDe": "Verordnung zum Erwerbsersatzgesetz (EOV)",
       "titelFr": "Règlement sur les allocations pour perte de gain (RAPG)",
       "titelIt": "Ordinanza sulle indennità di perdita di guadagno (OIPG)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/611/de",
-      "sha": "f351a708b83e9ce48c5dd98aabef4cf781b265cb6e8d8f3491a4dca581072d0b"
+      "sha": "b0831db261cdf7a8cabe3539cd58da0f3f34bf7c2359c9a2ac564bb1e6cd8a7e"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2009-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/664",
       "dateDocument": "2008-09-26",
-      "roFundstelle": "AS 2008 664",
+      "roFundstelle": "AS 2008 4727",
       "titelDe": "Verordnung zum Erwerbsersatzgesetz (EOV)",
       "titelFr": "Règlement sur les allocations pour perte de gain (RAPG)",
       "titelIt": "Ordinanza sulle indennità di perdita di guadagno (OIPG)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/664/de",
-      "sha": "98955faa3e3fa41f66e3ffee9047cd2f01bce0900122ab911565a290684873ff"
+      "sha": "62988baf4832ea91c2122c3d89d1536eab00a5ca2ff3332ea5bdd64cdacd0555"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2007-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/617",
       "dateDocument": "2006-09-22",
-      "roFundstelle": "AS 2006 617",
+      "roFundstelle": "AS 2006 4161",
       "titelDe": "Verordnung zum Erwerbsersatzgesetz (EOV)",
       "titelFr": "Règlement sur les allocations pour perte de gain (RAPG)",
       "titelIt": "Ordinanza sulle indennità di perdita di guadagno (OIPG)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/617/de",
-      "sha": "d78cfcfe50a8fcd4bcb029a635e7271f244fd57ce8cff6ec04bcf72aad189b79"
+      "sha": "9ba40809af595f6662732d4cc2dd48299ea09467c11d50dda15b0c98cbc39ce9"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2005-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/187",
       "dateDocument": "2004-11-24",
-      "roFundstelle": "AS 2005 187",
+      "roFundstelle": "AS 2005 1251",
       "titelDe": "Verordnung zum Erwerbsersatzgesetz (EOV)",
       "titelFr": "Règlement sur les allocations pour perte de gain (RAPG)",
       "titelIt": "Ordinanza sulle indennità di perdita di guadagno (OIPG)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/187/de",
-      "sha": "e6098540d78e2ef0143a58368f2780e8475d57a6f1aae81daf685407664d612f"
+      "sha": "4db37ca1e6dd922fbf504fb84665b98c5f19ecbe3a2f9c8581578c3687d7bb96"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2005-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/667",
       "dateDocument": "2004-09-24",
-      "roFundstelle": "AS 2004 667",
+      "roFundstelle": "AS 2004 4377",
       "titelDe": "Verordnung über die Erwerbsersatzordnung (EOV)",
       "titelFr": "Règlement sur les allocations pour perte de gain (RAPG)",
       "titelIt": "Ordinanza sulle indennità per perdita di guadagno (OIPG)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/667/de",
-      "sha": "f9a2919c70e99be9c82ab20fbbf5e4331ccc706b53524e20b91a7df29cff5d65"
+      "sha": "cc4566b1bd5da2a5b97e59fd523bd6a1e07d9f0721bf1d04eee0d4dcccfcee8a"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2003-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/506",
       "dateDocument": "2002-09-20",
-      "roFundstelle": "AS 2002 506",
+      "roFundstelle": "AS 2002 3350",
       "titelDe": "Verordnung zur Erwerbsersatzordnung (EOV)",
       "titelFr": "Règlement sur les allocations pour perte de gain (RAPG)",
       "titelIt": "Ordinanza sulle indennità per perdita di guadagno (OIPG)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/506/de",
-      "sha": "167a9c9a63b6b3cf177749543e29085bca0192ae79547a5a26c9e53567634d20"
+      "sha": "b2c1426ba20d3afffec8ca2f75b2157a9a4dae0311c7b1ad8bcbc811caa81385"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2003-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/618",
       "dateDocument": "2002-09-11",
-      "roFundstelle": "AS 2002 618",
+      "roFundstelle": "AS 2002 3942",
       "titelDe": "Verordnung zur Erwerbsersatzordnung (EOV)",
       "titelFr": "Règlement sur les allocations pour perte de gain (RAPG)",
       "titelIt": "Ordinanza sulle indennità per perdita di guadagno (OIPG)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/618/de",
-      "sha": "a2cf1ae5ed8c51883c223eac3f1b9e834fa94b70c32d21ae2a2f2d3057ba952d"
+      "sha": "93b15ef59dfb02ef3400eef3baa0b8c6799fb4ca05748f4d2dada9338ed59bcf"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2000-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/423",
       "dateDocument": "1999-08-25",
-      "roFundstelle": "AS 1999 423",
+      "roFundstelle": "AS 1999 2689",
       "titelDe": "Verordnung zur Erwerbsersatzordnung (EOV)",
       "titelFr": "Règlement sur les allocations pour perte de gain (RAPG)",
       "titelIt": "Ordinanza sulle indennità per perdita di guadagno (OIPG)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/423/de",
-      "sha": "3fcb8dafe04aaca582dedf412bf1f52ad448601c6cb16aa22f485ac1b8c9d555"
+      "sha": "7ac740fd09c4c3dfdb6961a0fc8601381599ee2259b201ac97c362942533b496"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "1999-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/305",
       "dateDocument": "1999-05-31",
-      "roFundstelle": "AS 1999 305",
+      "roFundstelle": "AS 1999 1854",
       "titelDe": "Verordnung zur Erwerbsersatzordnung (EOV)",
       "titelFr": "Règlement sur les allocations pour perte de gain (RAPG)",
       "titelIt": "Ordinanza sulle indennità per perdita di guadagno (OIPG)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/305/de",
-      "sha": "064d0edd8911101c75ed214df3374b3af89dc48427173702705bc81ebd0dc2ad"
+      "sha": "9e8ededaa8878f6bd12861bfd17067d2d226d60d4c67aab1ef526123b02d4abc"
     },
     {
       "art": "aenderung",
@@ -360,5 +360,5 @@
       "sha": "2a4d7394978e281434e886d13c11583df40f4b98863d1b2e6c5c3c261dc3ef09"
     }
   ],
-  "sha": "16b2f9eb818ee596fac1ff60333ac11be192dbc7f410e96aa5f4b03e99f6674f"
+  "sha": "810c86ea41f7f093e3c57bf8a90f638d4ae8e2c2bd65f9cab8849ae9c49cc9ba"
 }

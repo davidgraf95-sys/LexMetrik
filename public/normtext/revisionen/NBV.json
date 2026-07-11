@@ -1,7 +1,7 @@
 {
   "erlassKey": "NBV",
   "sr": "951.131",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -27,156 +27,156 @@
       "dateEntryInForce": "2021-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/827",
       "dateDocument": "2020-07-02",
-      "roFundstelle": "AS 2020 827",
+      "roFundstelle": "AS 2020 4627",
       "titelDe": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)",
       "titelFr": "Ordonnance relative à la loi fédérale sur la Banque nationale suisse (Ordonnance de la Banque nationale, OBN)",
       "titelIt": "Ordinanza relativa alla legge federale sulla Banca nazionale svizzera (Ordinanza sulla Banca nazionale, OBN)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/827/de",
-      "sha": "79b3ab15445d470c553b7feb1e7a1ee19261c774c7555ab545aee0b524551efc"
+      "sha": "220e52db014c113cc789f90496acf11d25c4efb748e1902dac3bbd35a0a85165"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2020-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/706",
       "dateDocument": "2019-11-21",
-      "roFundstelle": "AS 2019 706",
+      "roFundstelle": "AS 2019 3909",
       "titelDe": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)",
       "titelFr": "Ordonnance relative à la loi fédérale sur la Banque nationale suisse (Ordonnance de la Banque nationale, OBN)",
       "titelIt": "Ordinanza relativa alla legge federale sulla Banca nazionale svizzera (Ordinanza sulla Banca nazionale, OBN)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/706/de",
-      "sha": "1a354adbcf6643964b4053a7e3dc2e900fdb8b4baa377140d90406e075c7a597"
+      "sha": "3e845cd70a8775a559be264750fd65dce256026515b494162636a70634152a69"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2018-01-30",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/59",
       "dateDocument": "2018-01-30",
-      "roFundstelle": "AS 2018 59",
+      "roFundstelle": "AS 2018 527",
       "titelDe": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV). (Betrifft nur den französischen Text)",
       "titelFr": "Ordonnance relative à la loi fédérale sur la Banque nationale suisse (Ordonnance de la Banque nationale, OBN)",
       "titelIt": "Ordinanza relativa alla legge federale sulla Banca nazionale svizzera (Ordinanza sulla Banca nazionale, OBN). (Concerne soltanto il testo francese)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/59/de",
-      "sha": "5428aec3d7320c45254e96c8743e31648a7e7585a55bb62bf7bfba53c8f4943c"
+      "sha": "b88606c14d5f19bf10f79d5d9b91a706db1a119dbba8e01dc80b703c2233dde3"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2018-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/711",
       "dateDocument": "2017-06-08",
-      "roFundstelle": "AS 2017 711",
+      "roFundstelle": "AS 2017 6495",
       "titelDe": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)",
       "titelFr": "Ordonnance relative à la loi fédérale sur la Banque nationale suisse (Ordonnance de la Banque nationale, OBN)",
       "titelIt": "Ordinanza relativa alla legge federale sulla Banca nazionale svizzera (Ordinanza sulla Banca nazionale, OBN)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/711/de",
-      "sha": "81b5535acdef94520d1cafdfe7b0e824cfa536289819b5b5630cf7a9624f4033"
+      "sha": "d46d46ffe6e36a85a44f31ed7dd4320284d79e430bf60bf56a4b10c1f35a2e6d"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2016-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/850",
       "dateDocument": "2015-11-26",
-      "roFundstelle": "AS 2015 850",
+      "roFundstelle": "AS 2015 5307",
       "titelDe": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)",
       "titelFr": "Ordonnance relative à la loi fédérale sur la Banque nationale suisse (Ordonnance de la Banque nationale, OBN)",
       "titelIt": "Ordinanza relativa alla legge federale sulla Banca nazionale svizzera (Ordinanza sulla Banca nazionale, OBN)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/850/de",
-      "sha": "f7908aac6c126c78509abd7e8b5b10b7d8b31b9c3f928774d2349c37f027362d"
+      "sha": "e44add5d5e21aedeee48d598aa82a466289a3d6776b3becbd8cabf8db8753033"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2015-03-10",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/138",
       "dateDocument": "2015-03-10",
-      "roFundstelle": "AS 2015 138",
+      "roFundstelle": "AS 2015 767",
       "titelDe": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)",
       "titelFr": "Ordonnance relative à la loi fédérale sur la Banque nationale suisse (Ordonnance de la Banque nationale, OBN)",
       "titelIt": "Ordinanza relativa alla legge federale sulla Banca nazionale svizzera (Ordinanza sulla Banca nazionale, OBN)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/138/de",
-      "sha": "125be691cdf104ee9318f828e317362ea2be2b75c06d70af0658a6d7e63f32a0"
+      "sha": "9b3e2e7106538fa55ef8c3fa6790e6ab3de00f57aaceb215ec63d59545ae44b6"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2015-02-24",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/103",
       "dateDocument": "2015-02-24",
-      "roFundstelle": "AS 2015 103",
+      "roFundstelle": "AS 2015 643",
       "titelDe": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)",
       "titelFr": "Ordonnance relative à la loi fédérale sur la Banque nationale suisse (Ordonnance de la Banque nationale, OBN)",
       "titelIt": "Ordinanza relativa alla legge federale sulla Banca nazionale svizzera (Ordinanza sulla Banca nazionale, OBN)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/103/de",
-      "sha": "30bb6f05e164e6c76794a7a9a1f3493a65e5b0d4b7f843dfafdc21a6cd6aff9d"
+      "sha": "3e9d125d6fb9ffd477d5754527bc7ddf80a716f80fc2804609ef24cb124a837f"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2015-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/511",
       "dateDocument": "2014-05-07",
-      "roFundstelle": "AS 2014 511",
+      "roFundstelle": "AS 2014 3023",
       "titelDe": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)",
       "titelFr": "Ordonnance relative à la loi fédérale sur la Banque nationale suisse (Ordonnance de la Banque nationale, OBN)",
       "titelIt": "Ordinanza relativa alla legge federale sulla Banca nazionale svizzera (Ordinanza sulla Banca nazionale, OBN)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/511/de",
-      "sha": "7e130e9c85b0929cbf49b9c63a56e95752df42661b88071875136cebce174f0c"
+      "sha": "f716b9eb85b7b420be997fc74138455d121fa844c8c9e71314d4efdff2767823"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2013-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/420",
       "dateDocument": "2013-06-10",
-      "roFundstelle": "AS 2013 420",
+      "roFundstelle": "AS 2013 1987",
       "titelDe": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)",
       "titelFr": "Ordonnance relative à la loi fédérale sur la Banque nationale suisse (Ordonnance de la Banque nationale, OBN)",
       "titelIt": "Ordinanza relativa alla legge federale sulla Banca nazionale svizzera (Ordinanza sulla Banca nazionale, OBN)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/420/de",
-      "sha": "844cc800406f65203681735b6c63307dd68dc660d660f31e5d80dbcc6743e50f"
+      "sha": "d9410bb8c1c2a1266b9b9011656d9cb3a8c0146d32798f80700cd768f086e45d"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2012-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/741",
       "dateDocument": "2011-06-23",
-      "roFundstelle": "AS 2011 741",
+      "roFundstelle": "AS 2011 5043",
       "titelDe": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)",
       "titelFr": "Ordonnance relative à la loi fédérale sur la Banque nationale suisse (Ordonnance de la Banque nationale, OBN)",
       "titelIt": "Ordinanza relativa alla legge federale sulla Banca nazionale svizzera (Ordinanza sulla Banca nazionale, OBN)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/741/de",
-      "sha": "0c8951ba60814cf63d822d3a75974537eac9d8211334140c7a121f89b20a694f"
+      "sha": "617c9e09ed2dbead8fcac7a0a7b5a5b11dca92e85505835089690247f08dbf8a"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2010-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/780",
       "dateDocument": "2009-09-03",
-      "roFundstelle": "AS 2009 780",
+      "roFundstelle": "AS 2009 6373",
       "titelDe": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)",
       "titelFr": "Ordonnance relative à la loi fédérale sur la Banque nationale suisse (Ordonnance de la Banque nationale, OBN)",
       "titelIt": "Ordinanza relativa alla legge federale sulla Banca nazionale svizzera (Ordinanza sulla Banca nazionale, OBN)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/780/de",
-      "sha": "23f3994acb48b995782b45afe2172b2ea0d7e890a109839c6d3efdf967ef5628"
+      "sha": "7ac1e37c7c0a369945761cad48cc12aefaa0e6e3f7e9d5c5da5b354aefc6f173"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2007-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/367",
       "dateDocument": "2007-04-12",
-      "roFundstelle": "AS 2007 367",
+      "roFundstelle": "AS 2007 2791",
       "titelDe": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)",
       "titelFr": "Ordonnance relative à la loi fédérale sur la Banque nationale suisse (Ordonnance de la Banque nationale, OBN)",
       "titelIt": "Ordinanza relativa alla legge federale sulla Banca nazionale svizzera (Ordinanza sulla Banca nazionale, OBN)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/367/de",
-      "sha": "91a25225772f74373d81fa704b321d38f1558a5a0ee2b95bcabd0ef9d069cdb4"
+      "sha": "04e8157f991a187acbf59605f9b546f047b40e34554f2a5375cf1e74d5283855"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2004-05-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/233",
       "dateDocument": "2004-03-18",
-      "roFundstelle": "AS 2004 233",
+      "roFundstelle": "AS 2004 2033",
       "titelDe": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)",
       "titelFr": "Ordonnance relative à la loi fédérale sur la Banque nationale suisse (Ordonnance de la Banque nationale, OBN)",
       "titelIt": "Ordinanza relativa alla legge federale sulla Banca nazionale svizzera (Ordinanza sulla Banca nazionale, OBN)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/233/de",
-      "sha": "c101e1f7a9d9db56c70db652df23b5f484369f4e2cb700e0014309646df5576c"
+      "sha": "8fd069c5ca9870b925fa6953a6496ab21ed18eb27bad01057db1034b517655fe"
     },
     {
       "art": "aenderung",
@@ -191,5 +191,5 @@
       "sha": "0165841d0086ff3da4285da847b1be4273a2d3c03cf5513b1a0054094cc64b86"
     }
   ],
-  "sha": "f781d89c990af758cf63205c5cb6c3b47ba4ef8d24fc8db16876a0ca9e99fd33"
+  "sha": "78ae1d5abce8ecdb44ce6186535ecb4ab417ed13027f10ba3ec855891c86acee"
 }

@@ -1,7 +1,7 @@
 {
   "erlassKey": "BGOE",
   "sr": "152.3",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -27,12 +27,12 @@
       "dateEntryInForce": "2014-08-19",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/453",
       "dateDocument": "2014-06-16",
-      "roFundstelle": "AS 2014 453",
+      "roFundstelle": "AS 2014 2599",
       "titelDe": "Bundesgesetz über das Öffentlichkeitsprinzip der Verwaltung (Öffentlichkeitsgesetz, BGÖ) (Betrifft nur den italienischen Text)",
       "titelFr": "Loi fédérale sur le principe de la transparence dans l'administration (Loi sur la transparence, LTrans) (Ne concerne que le texte italien)",
       "titelIt": "Legge federale sul principio di trasparenza dell'amministrazione (Legge sulla trasparenza, LTras)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/453/de",
-      "sha": "b4378f0ad2780a10a3813a016376fc9a0367eed255849e8d7a499b18f5cc42f3"
+      "sha": "9e2487ccd74eeb411e6225738ef32eb3eaf0b7c85419422331aaba6dbd338e0a"
     },
     {
       "art": "sammelerlass-marker",
@@ -51,14 +51,14 @@
       "dateEntryInForce": "2006-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/355",
       "dateDocument": "2004-12-17",
-      "roFundstelle": "AS 2006 355",
+      "roFundstelle": "AS 2006 2319",
       "titelDe": "Bundesgesetz über das Öffentlichkeitsprinzip der Verwaltung (Öffentlichkeitsgesetz, BGÖ)",
       "titelFr": "Loi fédérale sur le principe de la transparence dans l'administration (Loi sur la transparence, LTrans)",
       "titelIt": "Legge federale sul principio di trasparenza dell'amministrazione (Legge sulla trasparenza, LTras)",
       "botschaftKey": "BOTSCHAFT-2003-246",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/355/de",
-      "sha": "03cc69d1d06d9b5e9730576c6b8e9be4d9f728f7df034b9583701c7f1a3fd965"
+      "sha": "bc9df2aa6e5040a92230642ef907c430a2109f2a4a9773869fe083c5c522dd74"
     }
   ],
-  "sha": "50e2e280445583673d2c99400e0cf3c831b8a642126b619dca7a669d0b7a66d0"
+  "sha": "385db8204d1d1c7b1538c422c48d3f125b66cc6d2ebcb9d8dc2fa04e2fb88626"
 }

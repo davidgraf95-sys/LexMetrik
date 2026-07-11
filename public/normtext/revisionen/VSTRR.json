@@ -1,7 +1,7 @@
 {
   "erlassKey": "VSTRR",
   "sr": "313.0",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -27,12 +27,12 @@
       "dateEntryInForce": "2019-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/723",
       "dateDocument": "2018-11-21",
-      "roFundstelle": "AS 2018 723",
+      "roFundstelle": "AS 2018 4587",
       "titelDe": "Verordnung über die Änderung des Bundesgesetzes über das Verwaltungsstrafrecht",
       "titelFr": "Ordonnance concernant la modification de la loi fédérale sur le droit pénal administratif",
       "titelIt": "Ordinanza che modifica la legge federale sul diritto penale amministrativo",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/723/de",
-      "sha": "fcc73a3a89e17e911410153339c5206ef5045624f4cc1ebab5bbbdd60bec9b55"
+      "sha": "70c84f2ca244f0ecd0e89c1cfba5397fa066b1b32d22435235905ded7fdc039f"
     },
     {
       "art": "sammelerlass-marker",
@@ -105,12 +105,12 @@
       "dateEntryInForce": "2000-10-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/326",
       "dateDocument": "1999-12-22",
-      "roFundstelle": "AS 2000 326",
+      "roFundstelle": "AS 2000 2141",
       "titelDe": "Bundesgesetz über das Verwaltungsstrafrecht",
       "titelFr": "Loi fédérale sur le droit pénal administratif",
       "titelIt": "Legge federale sul diritto penale amministrativo",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/326/de",
-      "sha": "e1b6be011701c8c3d6b86da72878da98d21c0ee81cb8ecc5f3c2d9e243524f5c"
+      "sha": "2c25b7450c9114a50866e4db43af5b8983b1a959ab5e16d13b62fedc4305fe8a"
     },
     {
       "art": "aenderung",
@@ -125,5 +125,5 @@
       "sha": "9c9cf2c1044495c206e764c70587c18617c62daf354d7a07517ceadaebf67c66"
     }
   ],
-  "sha": "b9f4085949fe4ac7f02b6ecf9b6079da4e7d723041c8072c96eb6fec1c1555b3"
+  "sha": "89adde09b88f43c84388d096628a62b72963cac77db9f1fb5fc550cf69d791d9"
 }

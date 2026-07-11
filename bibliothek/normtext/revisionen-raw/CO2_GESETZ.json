@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-10-08"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Reduktion der CO<sub>2</sub>-Emissionen (CO<sub>2</sub>-Gesetz)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur la réduction des émissions de CO<sub>2</sub> (Loi sur le CO<sub>2</sub>)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulla riduzione delle emissioni di CO<sub>2</sub> (Legge sul CO<sub>2</sub>)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "641.71"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/148"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-05-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-10-08"
+        "value": "RO 2000 979"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-10-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 979"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Reduktion der CO<sub>2</sub>-Emissionen (CO<sub>2</sub>-Gesetz)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-10-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 979"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Reduktion der CO<sub>2</sub>-Emissionen (CO<sub>2</sub>-Gesetz)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur la réduction des émissions de CO<sub>2</sub> (Loi sur le CO<sub>2</sub>)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla riduzione delle emissioni di CO<sub>2</sub> (Legge sul CO<sub>2</sub>)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "641.71"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/148"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-05-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-10-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 979"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Reduktion der CO<sub>2</sub>-Emissionen (CO<sub>2</sub>-Gesetz)"
@@ -148,6 +164,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-06-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 951"
       },
       "titleDe": {
         "type": "literal",
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-06-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 951"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Reduktion der CO<sub>2</sub>-Emissionen (CO<sub>2</sub>-Gesetz) (Anreize für energetisch wirksame Massnahmen im Gebäudebereich) "
@@ -213,6 +237,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-06-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 951"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Reduktion der CO<sub>2</sub>-Emissionen (CO<sub>2</sub>-Gesetz) (Anreize für energetisch wirksame Massnahmen im Gebäudebereich) "
@@ -245,6 +273,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-06-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 13"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Reduktion der CO<sub>2</sub>-Emissionen (CO<sub>2</sub>-Gesetz)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-06-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 13"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Reduktion der CO<sub>2</sub>-Emissionen (CO<sub>2</sub>-Gesetz)"
@@ -309,69 +345,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-06-18"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Reduktion der CO<sub>2</sub>-Emissionen (CO<sub>2</sub>-Gesetz)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur la réduction des émissions de CO<sub>2</sub> (Loi sur le CO<sub>2</sub>)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulla riduzione delle emissioni di CO<sub>2</sub> (Legge sul CO<sub>2</sub>)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "641.71"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/23"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-05-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-03-18"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Bundesgesetz über die Reduktion der CO<sub>2</sub>-Emissionen (CO<sub>2</sub>-Gesetz)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur la réduction des émissions de CO<sub>2</sub> (Loi sur le CO<sub>2</sub>)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulla riduzione delle emissioni di CO<sub>2</sub> (Legge sul CO<sub>2</sub>)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "641.71"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/23"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-05-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-03-18"
+        "value": "RO 2011 13"
       },
       "titleDe": {
         "type": "literal",
@@ -405,6 +381,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-03-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 351"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Reduktion der CO<sub>2</sub>-Emissionen (CO<sub>2</sub>-Gesetz)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur la réduction des émissions de CO<sub>2</sub> (Loi sur le CO<sub>2</sub>)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla riduzione delle emissioni di CO<sub>2</sub> (Legge sul CO<sub>2</sub>)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "641.71"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/23"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-05-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-03-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 351"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Reduktion der CO<sub>2</sub>-Emissionen (CO<sub>2</sub>-Gesetz)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur la réduction des émissions de CO<sub>2</sub> (Loi sur le CO<sub>2</sub>)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla riduzione delle emissioni di CO<sub>2</sub> (Legge sul CO<sub>2</sub>)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "641.71"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/23"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-05-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-03-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 351"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Reduktion der CO<sub>2</sub>-Emissionen (CO<sub>2</sub>-Gesetz)"
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-12-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6989"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Reduktion der CO<sub>2</sub>-Emissionen (CO<sub>2</sub>-Gesetz)"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-12-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6989"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Reduktion der CO<sub>2</sub>-Emissionen (CO<sub>2</sub>-Gesetz)"
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-12-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6989"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Reduktion der CO<sub>2</sub>-Emissionen (CO<sub>2</sub>-Gesetz)"
@@ -532,6 +596,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-12-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6989"
       },
       "titleDe": {
         "type": "literal",
@@ -564,6 +632,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-03-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 4327"
       },
       "titleDe": {
         "type": "literal",
@@ -597,6 +669,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-03-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 4327"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung des Abkommens zwischen der Schweiz und der Europäischen Union zur Verknüpfung der Emissionshandelssysteme und über seine Umsetzung (Änderung des CO<sub>2</sub>-Gesetzes)"
@@ -628,6 +704,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-03-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 4327"
       },
       "titleDe": {
         "type": "literal",

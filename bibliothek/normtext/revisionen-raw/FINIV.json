@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1996-12-02"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 2. Dezember 1996 über die Börsen und den Effektenhandel (Börsenverordnung, BEHV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 2 décembre 1996 sur les bourses et le commerce des valeurs mobilières (Ordonnance sur les bourses, OBVM)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 2 dicembre 1996 sulle borse e il commercio di valori mobiliari (Ordinanza sulle borse, OBVM)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "954.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1997/85_85_85"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1997-02-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1996-12-02"
+        "value": "RO 1997 85"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1996-12-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1997 85"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 2. Dezember 1996 über die Börsen und den Effektenhandel (Börsenverordnung, BEHV)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1996-12-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1997 85"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 2. Dezember 1996 über die Börsen und den Effektenhandel (Börsenverordnung, BEHV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 2 décembre 1996 sur les bourses et le commerce des valeurs mobilières (Ordonnance sur les bourses, OBVM)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 2 dicembre 1996 sulle borse e il commercio di valori mobiliari (Ordinanza sulle borse, OBVM)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "954.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1997/85_85_85"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1997-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1996-12-02"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1997 85"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 2. Dezember 1996 über die Börsen und den Effektenhandel (Börsenverordnung, BEHV)"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-10-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 3670"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Börsen und den Effektenhandel (Börsenverordnung, BEHV)"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-10-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 3670"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Börsen und den Effektenhandel (Börsenverordnung, BEHV)"
@@ -213,69 +237,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-10-27"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Börsen und den Effektenhandel (Börsenverordnung, BEHV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les bourses et le commerce des valeurs mobilières (Ordonnance sur les bourses, OBVM)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulle borse e il commercio di valori mobiliari (Ordinanza sulle borse, OBVM)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "954.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/343"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-03-31"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung über die Börsen und den Effektenhandel (Börsenverordnung, BEHV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les bourses et le commerce des valeurs mobilières (Ordonnance sur les bourses, OBVM)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulle borse e il commercio di valori mobiliari (Ordinanza sulle borse, OBVM)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "954.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/343"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-03-31"
+        "value": "RO 1999 3670"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +273,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-03-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 2781"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Börsen und den Effektenhandel (Börsenverordnung, BEHV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les bourses et le commerce des valeurs mobilières (Ordonnance sur les bourses, OBVM)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulle borse e il commercio di valori mobiliari (Ordinanza sulle borse, OBVM)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "954.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/343"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-03-31"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 2781"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Börsen und den Effektenhandel (Börsenverordnung, BEHV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les bourses et le commerce des valeurs mobilières (Ordonnance sur les bourses, OBVM)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulle borse e il commercio di valori mobiliari (Ordinanza sulle borse, OBVM)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "954.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/343"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-03-31"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 2781"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Börsen und den Effektenhandel (Börsenverordnung, BEHV)"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-06-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3461"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Börsen und den Effektenhandel (Börsenverordnung, BEHV)"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-06-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3461"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Börsen und den Effektenhandel (Börsenverordnung, BEHV)"
@@ -404,6 +452,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-06-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3461"
       },
       "titleDe": {
         "type": "literal",
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-04-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1111"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Börsen und den Effektenhandel (Börsenverordnung, BEHV)"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-04-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1111"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Börsen und den Effektenhandel (Börsenverordnung, BEHV)"
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-04-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1111"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Börsen und den Effektenhandel (Börsenverordnung, BEHV)"
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-11-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 4633"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Finanzinstitute (Finanzinstitutsverordnung, FINIV)"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-11-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 4633"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Finanzinstitute (Finanzinstitutsverordnung, FINIV)"
@@ -597,6 +669,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-11-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 4633"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Finanzinstitute (Finanzinstitutsverordnung, FINIV)"
@@ -628,6 +704,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-11-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 4633"
       },
       "titleDe": {
         "type": "literal",

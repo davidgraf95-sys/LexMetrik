@@ -1,7 +1,7 @@
 {
   "erlassKey": "PAVO",
   "sr": "211.222.338",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -15,12 +15,12 @@
       "dateEntryInForce": "2017-06-20",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/392",
       "dateDocument": "2017-06-20",
-      "roFundstelle": "AS 2017 392",
+      "roFundstelle": "AS 2017 3543",
       "titelDe": "Verordnung über die Aufnahme von Kindern zur Pflege und zur Adoption (PAVO) (Betrifft nur den französischen Text)",
       "titelFr": "Ordonnance réglant le placement d'enfants à des fins d'entretien et en vue d'adoption (OPEE)",
       "titelIt": "Ordinanza sull'accoglimento di minori a scopo di affiliazione e di adozione (OAMin) (Concerne soltanto il testo francese)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/392/de",
-      "sha": "5e9fd4a29325bf789b7bf67370adf9e5b66cae90071b5f09c69ed31b20c2852f"
+      "sha": "8f4b0fe225609bc049882e9c2f3685e0a3d955cff78e1d507a5f3aeaea2de267"
     },
     {
       "art": "sammelerlass-marker",
@@ -33,12 +33,12 @@
       "dateEntryInForce": "2013-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/676",
       "dateDocument": "2012-10-10",
-      "roFundstelle": "AS 2012 676",
+      "roFundstelle": "AS 2012 5801",
       "titelDe": "Verordnung über die Aufnahme von Kindern zur Pflege und zur Adoption (PAVO)",
       "titelFr": "Ordonnance réglant le placement d'enfants à des fins d'entretien et en vue d'adoption (OPEE)",
       "titelIt": "Ordinanza sull'accoglimento di minori a scopo di affiliazione e di adozione (OAMin)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/676/de",
-      "sha": "2440b0e9a2ef0c3ed9e050a11ec41ecd062d95a16c7526877d8d7d5ecb2a8f6b"
+      "sha": "843ef3dcbf8f91a7b63879a50035063751f27314d640f851d4f2e1dba37b5d9d"
     },
     {
       "art": "sammelerlass-marker",
@@ -51,12 +51,12 @@
       "dateEntryInForce": "2008-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/773",
       "dateDocument": "2007-10-24",
-      "roFundstelle": "AS 2007 773",
+      "roFundstelle": "AS 2007 5627",
       "titelDe": "Verordnung über die Anpassung von Verordnungen an das Bundesgesetz vom 16. Dezember 2005 über die Ausländerinnen und Ausländer",
       "titelFr": "Ordonnance portant adaptation d'ordonnances à la loi fédérale du 16 décembre 2005 sur les étrangers",
       "titelIt": "Ordinanza concernente l'adeguamento di ordinanze alla legge federale del 16 dicembre 2005 sugli stranieri",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/773/de",
-      "sha": "0d70e3bed2a38852c9835b0ad137607d1b23e61d4e51249809d280b72f499f47"
+      "sha": "1d913ae3c6713357036ae3042b09a4eca9064e5e37ea3daf1a7fac552f0184b4"
     },
     {
       "art": "sammelerlass-marker",
@@ -69,24 +69,24 @@
       "dateEntryInForce": "2003-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/672",
       "dateDocument": "2002-11-29",
-      "roFundstelle": "AS 2002 672",
+      "roFundstelle": "AS 2002 4167",
       "titelDe": "Verordnung über die Aufnahme von Pflegekindern",
       "titelFr": "Ordonnance réglant le placement d'enfants",
       "titelIt": "Ordinanza sull'affiliazione",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/672/de",
-      "sha": "97f43efff78e16369bd3c618f67e6711f327fff0b26e111edeabe61002f0042f"
+      "sha": "54b8c8f9096fb11dca4a006583e07ab77518d7a31b7646e742851755ecd2e848"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2003-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/78",
       "dateDocument": "2003-02-25",
-      "roFundstelle": "AS 2003 78",
+      "roFundstelle": "AS 2003 374",
       "titelDe": "Verordnung vom 19. Oktober 1977 über die Aufnahme von Kindern zur Pflege und zur Adoption (PAVO) (Betrifft nur den französischen Text)",
       "titelFr": "Ordonnance du 19 octobre 1977 réglant le placement d'enfants à des fins d'entretien et en vue d'adoption (OPEA)",
       "titelIt": "Ordinanza del 19 ottobre 1977 sull'accoglimento di minori a scopo di affiliazione e di adozione (OAMin) (Concerne solo il testo francese)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/78/de",
-      "sha": "0dfcbe9f2654cfd7753e8c0f9cc860b77a445de6644dd68ffdc1a95b74769eb4"
+      "sha": "0d64d0e583b71823bf1d0fe9c7556b34a83219079a12bdf41f0cbccaf5c68f71"
     },
     {
       "art": "aenderung",
@@ -101,5 +101,5 @@
       "sha": "bb4cfc30bf593d25401c2f7c3fe5afb394c68fde50b757d694f2c1a00c055777"
     }
   ],
-  "sha": "84b976a519868df4cf7d465766d55081be1e7f6ccb546218cf742008e8a96abb"
+  "sha": "8467d6d8e6259e9d338c1464725e9819d8138e38927ae76b814bbc37bab818dd"
 }

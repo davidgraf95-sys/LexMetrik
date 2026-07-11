@@ -1,7 +1,7 @@
 {
   "erlassKey": "FIDLEG",
   "sr": "950.1",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -34,14 +34,14 @@
       "dateEntryInForce": "2020-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/758",
       "dateDocument": "2018-06-15",
-      "roFundstelle": "AS 2019 758",
+      "roFundstelle": "AS 2019 4417",
       "titelDe": "Bundesgesetz über die Finanzdienstleistungen (Finanzdienstleistungsgesetz, FIDLEG)",
       "titelFr": "Loi fédérale sur les services financiers (LSFin)",
       "titelIt": "Legge federale sui servizi finanziari (Legge sui servizi finanziari, LSerFi)",
       "botschaftKey": "BOTSCHAFT-2015-2141",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/758/de",
-      "sha": "5d59569f853a8119644d042dea6dced5cd003ce5ef0b6cc19714596a8dd19ffe"
+      "sha": "fdb2b9dbe10ede04f4b8615ce13facd5f1b23aaa5446f592d14da2bb9c099c93"
     }
   ],
-  "sha": "134b01ce625276c2da3ad37bab84dd1ce246a834e4dbe0ac6d2500c9d6832c89"
+  "sha": "e0677bb9afee8be3b05a0587eeacbdfe4fd6ff26374585a5e1c4cbea9c209521"
 }

@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-12-15"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Obligationenrecht (OR) (Mindestnennwert von Aktien)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code des obligations (CO) (Valeur nominale de l'action)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice delle obbligazioni (CO) (Valore naminale minimo delle azioni)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "220"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2001/153"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-05-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-12-15"
+        "value": "RO 2001 1047"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-12-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1047"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Obligationenrecht (OR) (Mindestnennwert von Aktien)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code des obligations (CO) (Valeur nominale de l'action)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice delle obbligazioni (CO) (Valore naminale minimo delle azioni)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "220"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2001/153"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-05-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-12-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1047"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Obligationenrecht (OR) (Mindestnennwert von Aktien)"
@@ -117,37 +129,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-12-15"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Obligationenrecht (OR) (Streitwertgrenze bei Streitigkeiten aus dem Arbeitsverhältnis)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code des obligations (CO) (Valeur litigieuse dans les litiges résultant de contrats de travail)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice delle obbligazioni (CO) (Limite del valore kitigioso in controversie derivanti dal rapporto di lavoro)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "220"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2001/154"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-06-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-12-15"
+        "value": "RO 2001 1048"
       },
       "titleDe": {
         "type": "literal",
@@ -181,6 +165,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-12-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1048"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Obligationenrecht (OR) (Streitwertgrenze bei Streitigkeiten aus dem Arbeitsverhältnis)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code des obligations (CO) (Valeur litigieuse dans les litiges résultant de contrats de travail)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice delle obbligazioni (CO) (Limite del valore kitigioso in controversie derivanti dal rapporto di lavoro)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "220"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2001/154"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-12-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1048"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Obligationenrecht (OR) (Streitwertgrenze bei Streitigkeiten aus dem Arbeitsverhältnis)"
@@ -213,37 +237,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-12-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Obligationenrecht (Die kaufmännische Buchführung)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code des obligations (De la comptabilité commerciale)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice delle obbligazioni (Della contabilità commerciale)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "220"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/170"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-06-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-12-22"
+        "value": "RO 2002 949"
       },
       "titleDe": {
         "type": "literal",
@@ -277,6 +273,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-12-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 949"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Obligationenrecht (Die kaufmännische Buchführung)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code des obligations (De la comptabilité commerciale)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice delle obbligazioni (Della contabilità commerciale)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "220"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/170"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-12-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 949"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Obligationenrecht (Die kaufmännische Buchführung)"
@@ -309,37 +345,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-06-17"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Obligationenrecht (Bürgschaften. Zustimmung des Ehegatten)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code des obligations (Cautionnement. Consentement du conjoint)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice delle obbligazioni (Fideiussione. Consenso del coniuge)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "220"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2005/708"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-12-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-06-17"
+        "value": "RO 2005 5097"
       },
       "titleDe": {
         "type": "literal",
@@ -373,6 +381,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-06-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5097"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Obligationenrecht (Bürgschaften. Zustimmung des Ehegatten)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code des obligations (Cautionnement. Consentement du conjoint)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice delle obbligazioni (Fideiussione. Consenso del coniuge)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "220"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/708"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-12-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-06-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5097"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Obligationenrecht (Bürgschaften. Zustimmung des Ehegatten)"
@@ -405,37 +453,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-10-07"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Obligationenrecht (OR) (Transparenz betreffend Vergütungen an Mitglieder der Verwaltungsrates und der Geschäftsleitung)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code des obligations (CO) (Transparence des indemnités versées aux membres du conseil d'administration et de la direction)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice delle obbligazioni (CO) (Trasparenza delle retribuzioni corrisposte ai membri del consiglio d'amministrazione e della direzione)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "220"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/401"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-10-07"
+        "value": "RO 2006 2629"
       },
       "titleDe": {
         "type": "literal",
@@ -469,6 +489,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-10-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 2629"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Obligationenrecht (OR) (Transparenz betreffend Vergütungen an Mitglieder der Verwaltungsrates und der Geschäftsleitung)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code des obligations (CO) (Transparence des indemnités versées aux membres du conseil d'administration et de la direction)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice delle obbligazioni (CO) (Trasparenza delle retribuzioni corrisposte ai membri del consiglio d'amministrazione e della direzione)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "220"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/401"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-10-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 2629"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Obligationenrecht (OR) (Transparenz betreffend Vergütungen an Mitglieder der Verwaltungsrates und der Geschäftsleitung)"
@@ -501,37 +561,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-12-16"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Obligationenrecht (GmbH-Recht sowie Anpassungen im Aktien-, Genossenschafts-, Handelsregister- und Firmenrecht) (OR)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code des obligations (Droit de la société à responsabilité limitée; adaptation des droits de la société anonyme, de la société coopérative, du registre du commerce et des raisons de commerce) (CO)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice delle obbligazioni (Diritto della società a garanzia limitata; adeguamento del diritto della società anonima, della società cooperativa, del registro di commercio e delle ditte commerciali) (CO)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "220"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/685"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-12-16"
+        "value": "RO 2007 4791"
       },
       "titleDe": {
         "type": "literal",
@@ -565,6 +597,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-12-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 4791"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Obligationenrecht (GmbH-Recht sowie Anpassungen im Aktien-, Genossenschafts-, Handelsregister- und Firmenrecht) (OR)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code des obligations (Droit de la société à responsabilité limitée; adaptation des droits de la société anonyme, de la société coopérative, du registre du commerce et des raisons de commerce) (CO)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice delle obbligazioni (Diritto della società a garanzia limitata; adeguamento del diritto della società anonima, della società cooperativa, del registro di commercio e delle ditte commerciali) (CO)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "220"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/685"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-12-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 4791"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Obligationenrecht (GmbH-Recht sowie Anpassungen im Aktien-, Genossenschafts-, Handelsregister- und Firmenrecht) (OR)"
@@ -597,37 +669,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-06-17"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Obligationenrecht (Revisionsrecht)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code des obligations (Droit de la révision)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice delle obbligazioni (Norme sulla revisione)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "220"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/808"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-06-17"
+        "value": "RO 2011 5863"
       },
       "titleDe": {
         "type": "literal",
@@ -661,6 +705,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-06-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 5863"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Obligationenrecht (Revisionsrecht)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code des obligations (Droit de la révision)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice delle obbligazioni (Norme sulla revisione)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "220"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/808"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-06-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 5863"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Obligationenrecht (Revisionsrecht)"
@@ -693,37 +777,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-03-16"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Obligationenrecht (Verjährungsfristen der Gewährleistungsansprüche im Kauf- und Werkvertrag. Verlängerung und Koordination)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code des obligations (Délais de prescription de la garantie pour défauts dans le contrat de vente et le contrat d'entreprise. Prolongation et coordination)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice delle obbligazioni (Termini di prescrizione della garanzia per i difetti nel contratto di compravendita e nel contratto di appalto. Prolungamento e coordinamento)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "220"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/621"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-03-16"
+        "value": "RO 2012 5415"
       },
       "titleDe": {
         "type": "literal",
@@ -757,6 +813,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-03-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 5415"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Obligationenrecht (Verjährungsfristen der Gewährleistungsansprüche im Kauf- und Werkvertrag. Verlängerung und Koordination)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code des obligations (Délais de prescription de la garantie pour défauts dans le contrat de vente et le contrat d'entreprise. Prolongation et coordination)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice delle obbligazioni (Termini di prescrizione della garanzia per i difetti nel contratto di compravendita e nel contratto di appalto. Prolungamento e coordinamento)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "220"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/621"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-03-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 5415"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Obligationenrecht (Verjährungsfristen der Gewährleistungsansprüche im Kauf- und Werkvertrag. Verlängerung und Koordination)"
@@ -789,37 +885,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-12-23"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Obligationenrecht (Rechnungslegungsrecht)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code des obligations (Droit comptable)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice delle obbligazioni (Diritto contabile)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "220"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/810"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-12-23"
+        "value": "RO 2012 6679"
       },
       "titleDe": {
         "type": "literal",
@@ -853,6 +921,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-12-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6679"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Obligationenrecht (Rechnungslegungsrecht)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code des obligations (Droit comptable)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice delle obbligazioni (Diritto contabile)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "220"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/810"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-12-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6679"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Obligationenrecht (Rechnungslegungsrecht)"
@@ -885,37 +993,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-05-28"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Obligationenrecht (Rechnungslegungsrecht) (Betrifft nur den französischen Text)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code des obligations (Droit comptable)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice delle obbligazioni (Diritto contabile) (Concerne solo il testo francese)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "220"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2013/350"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-05-28"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-05-28"
+        "value": "RO 2013 1489"
       },
       "titleDe": {
         "type": "literal",
@@ -949,6 +1029,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-05-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1489"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Obligationenrecht (Rechnungslegungsrecht) (Betrifft nur den französischen Text)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code des obligations (Droit comptable)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice delle obbligazioni (Diritto contabile) (Concerne solo il testo francese)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "220"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/350"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-05-28"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-05-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1489"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Obligationenrecht (Rechnungslegungsrecht) (Betrifft nur den französischen Text)"
@@ -981,37 +1101,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-12-13"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Obligationenrecht (Aufhebung der Bestimmungen zum Vorauszahlungsvertrag)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code des obligations (Abrogation des dispositions sur la vente avec paiements préalables)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice delle obbligazioni (Abrogazione delle disposizioni concernenti il contratto di vendita a rate anticipate)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "220"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2014/184"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-12-13"
+        "value": "RO 2014 869"
       },
       "titleDe": {
         "type": "literal",
@@ -1045,6 +1137,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-12-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 869"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Obligationenrecht (Aufhebung der Bestimmungen zum Vorauszahlungsvertrag)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code des obligations (Abrogation des dispositions sur la vente avec paiements préalables)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice delle obbligazioni (Abrogazione delle disposizioni concernenti il contratto di vendita a rate anticipate)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "220"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/184"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-12-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 869"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Obligationenrecht (Aufhebung der Bestimmungen zum Vorauszahlungsvertrag)"
@@ -1077,37 +1209,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-19"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Obligationenrecht (Revision des Widerrufsrechts)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code des obligations (Révision du droit de révocation)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice delle obbligazioni (Revisione del diritto di revoca)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "220"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/689"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-06-19"
+        "value": "RO 2015 4107"
       },
       "titleDe": {
         "type": "literal",
@@ -1141,6 +1245,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 4107"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Obligationenrecht (Revision des Widerrufsrechts)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code des obligations (Révision du droit de révocation)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice delle obbligazioni (Revisione del diritto di revoca)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "220"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/689"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-06-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 4107"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Obligationenrecht (Revision des Widerrufsrechts)"
@@ -1173,37 +1317,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-25"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Obligationenrecht (Firmenrecht)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code des obligations (Droit des raisons de commerce)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice delle obbligazioni (Diritto delle ditte commerciali)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "220"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2016/289"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-09-25"
+        "value": "RO 2016 1507"
       },
       "titleDe": {
         "type": "literal",
@@ -1237,6 +1353,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1507"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Obligationenrecht (Firmenrecht)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code des obligations (Droit des raisons de commerce)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice delle obbligazioni (Diritto delle ditte commerciali)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "220"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/289"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-09-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1507"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Obligationenrecht (Firmenrecht)"
@@ -1269,37 +1425,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-06-15"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Obligationenrecht (Revision des Verjährungsrechts)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code des obligations (Révision du droit de la prescription)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice delle obbligazioni (Revisione della disciplina della prescrizione)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "220"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2018/807"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2020-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-06-15"
+        "value": "RO 2018 5343"
       },
       "titleDe": {
         "type": "literal",
@@ -1333,6 +1461,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-06-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 5343"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Obligationenrecht (Revision des Verjährungsrechts)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code des obligations (Révision du droit de la prescription)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice delle obbligazioni (Revisione della disciplina della prescrizione)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "220"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/807"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-06-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 5343"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Obligationenrecht (Revision des Verjährungsrechts)"
@@ -1365,6 +1533,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-07-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2107"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Obligationenrecht (Revision des Verjährungsrechts) (Betrifft nur den italienischen Text)"
@@ -1397,6 +1569,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-07-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2107"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Obligationenrecht (Revision des Verjährungsrechts) (Betrifft nur den italienischen Text)"
@@ -1428,6 +1604,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-07-09"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2107"
       },
       "titleDe": {
         "type": "literal",
@@ -1460,6 +1640,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-06-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 3161"
       },
       "titleDe": {
         "type": "literal",
@@ -1493,6 +1677,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-06-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 3161"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz zur Umsetzung von Empfehlungen des Globalen Forums über Transparenz und Informationsaustausch für Steuerzwecke"
@@ -1524,6 +1712,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-06-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 3161"
       },
       "titleDe": {
         "type": "literal",
@@ -1556,6 +1748,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 957"
       },
       "titleDe": {
         "type": "literal",
@@ -1589,6 +1785,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 957"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Obligationenrecht (Handelsregisterrecht)"
@@ -1620,6 +1820,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 957"
       },
       "titleDe": {
         "type": "literal",
@@ -1653,6 +1857,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-06-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 4005"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Obligationenrecht (Aktienrecht)"
@@ -1685,6 +1893,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-06-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 4005"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Obligationenrecht (Aktienrecht)"
@@ -1717,6 +1929,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-12-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 4525"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Verbesserung der Vereinbarkeit von Erwerbstätigkeit und Angehörigenbetreuung"
@@ -1749,6 +1965,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-12-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 4525"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Verbesserung der Vereinbarkeit von Erwerbstätigkeit und Angehörigenbetreuung"
@@ -1780,6 +2000,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-12-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 4525"
       },
       "titleDe": {
         "type": "literal",
@@ -2293,6 +2517,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1911-03-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 27 321"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 30. März 1911 betreffend die Ergänzung des Schweizerischen Zivilgesetzbuches (Fünfter Teil: Obligationenrecht)"
@@ -2325,6 +2553,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1911-03-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 27 321"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 30. März 1911 betreffend die Ergänzung des Schweizerischen Zivilgesetzbuches (Fünfter Teil: Obligationenrecht)"
@@ -2357,6 +2589,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1911-03-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 27 321"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 30. März 1911 betreffend die Ergänzung des Schweizerischen Zivilgesetzbuches (Fünfter Teil: Obligationenrecht)"
@@ -2388,6 +2624,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1911-03-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 27 321"
       },
       "titleDe": {
         "type": "literal",

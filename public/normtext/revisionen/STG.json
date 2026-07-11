@@ -1,7 +1,7 @@
 {
   "erlassKey": "STG",
   "sr": "641.10",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -46,13 +46,13 @@
       "dateEntryInForce": "2018-03-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/84",
       "dateDocument": "2017-09-29",
-      "roFundstelle": "AS 2018 84",
+      "roFundstelle": "AS 2018 705",
       "titelDe": "Bundesgesetz über die Stempelabgaben (StG)",
       "titelFr": "Loi fédérale sur les droits de timbre (LT)",
       "titelIt": "Legge federale sulle tasse di bollo (LTB)",
       "botschaftKey": "BOTSCHAFT-2017-281",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/84/de",
-      "sha": "8118b12852477e2e6833170f74f2f0434084cef83e2c6f7ff93518d8b2f7b226"
+      "sha": "07a75af6c2f6ef105b4a9fed9805980ccdd09b2824f9dca7bfcf249ba07e08ed"
     },
     {
       "art": "sammelerlass-marker",
@@ -71,12 +71,12 @@
       "dateEntryInForce": "2012-12-28",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/902",
       "dateDocument": "2012-12-03",
-      "roFundstelle": "AS 2012 902",
+      "roFundstelle": "AS 2012 7503",
       "titelDe": "Bundesgesetz über die kollektiven Kapitalanlagen (Kollektivanlagengesetz, KAG) (Betrifft nur den französischen und italienischen Text)",
       "titelFr": "Loi fédérale sur les placements collectifs de capitaux (Loi sur les placements collectifs, LPCC)",
       "titelIt": "Legge federale sugli investimenti collettivi di capitale (Legge sugli investimenti collettivi, LICol)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/902/de",
-      "sha": "8c39c94b7cc6a3222fe9f211de890b9e9540ebb4d8dcbf63078cc3dbd8ffdd84"
+      "sha": "55d23defe34940dfb7089543244c5a4c413f4ab82c18d168d4cf6c35ca8ed8b9"
     },
     {
       "art": "sammelerlass-marker",
@@ -89,12 +89,12 @@
       "dateEntryInForce": "2010-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/447",
       "dateDocument": "2010-03-19",
-      "roFundstelle": "AS 2010 447",
+      "roFundstelle": "AS 2010 3317",
       "titelDe": "Bundesgesetz über die Stempelabgaben (StG)",
       "titelFr": "Loi fédérale sur les droits de timbre (LT)",
       "titelIt": "Legge federale sulle tasse di bollo (LTB)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/447/de",
-      "sha": "bbfec08ed08f76ae6816747b5cb0e30dbcf08a61ca14344c8d77135abb5bd9f7"
+      "sha": "21e1d45a5975c98b435c1bf5154019eed2f6b675a41e2611276cc88646793258"
     },
     {
       "art": "sammelerlass-marker",
@@ -107,13 +107,13 @@
       "dateEntryInForce": "2009-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/397",
       "dateDocument": "2007-03-23",
-      "roFundstelle": "AS 2008 397",
+      "roFundstelle": "AS 2008 2893",
       "titelDe": "Bundesgesetz über die Verbesserung der steuerlichen Rahmenbedingungen für unternehmerische Tätigkeiten und Investitionen (Unternehmenssteuerreformgesetz II)",
       "titelFr": "Loi fédérale sur l'amélioration des conditions fiscales applicables aux activités entrepreneuriales et aux investissements (Loi sur la réforme de l'imposition des entreprises II)",
       "titelIt": "Legge federale sul miglioramento delle condizioni quadro fiscali per le attività e gli investimenti imprenditoriali (Legge sulla riforma II dell'imposizione delle imprese)",
       "botschaftKey": "BOTSCHAFT-2005-737",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/397/de",
-      "sha": "b605b697e5eb34d2e4b5ef307f5f363daa8e9420dd59fed55c5b8c98811b895d"
+      "sha": "4d6161120d1175d7c34d738dda2b8dd507049b6a71ea11d5a714113384dff04b"
     },
     {
       "art": "sammelerlass-marker",
@@ -138,13 +138,13 @@
       "dateEntryInForce": "2006-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/520",
       "dateDocument": "2005-03-18",
-      "roFundstelle": "AS 2005 520",
+      "roFundstelle": "AS 2005 3577",
       "titelDe": "Bundesgesetz über die Stempelabgaben (StG)",
       "titelFr": "Loi fédérale sur les droits de timbre (LT)",
       "titelIt": "Legge federale sulle tasse di bollo (LTB)",
       "botschaftKey": "BOTSCHAFT-2004-878",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/520/de",
-      "sha": "d5cfc9f4fa3fefe5bd0c0ccf7b836d8dea73de3595657ed1db74c4c900c78c66"
+      "sha": "098b3f2a3787a8484a694b0d1683d68dd56a719c013552439581368c0eb668e6"
     },
     {
       "art": "sammelerlass-marker",
@@ -157,26 +157,26 @@
       "dateEntryInForce": "2003-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/554",
       "dateDocument": "2002-06-21",
-      "roFundstelle": "AS 2002 554",
+      "roFundstelle": "AS 2002 3645",
       "titelDe": "Bundesgesetz über die Änderung des Bundesbeschlusses über dringliche Massnahmen im Bereich der Umsatzabgabe",
       "titelFr": "Loi fédérale modifiant l'arrêté fédéral concernant des mesures urgentes dans le domaine du droit de timbre de négociation",
       "titelIt": "Legge federale sulla modifica del decreto federale concernente misure urgenti nell'ambito della tassa di negoziazione",
       "botschaftKey": "BOTSCHAFT-2002-517",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/554/de",
-      "sha": "816e568b63720b500f8c82bc71ff8d3772a05d4d967871bbbe748187919f7e7e"
+      "sha": "242a127e300b8f9078d35dcc50f59c7e6fb41081baed7324cf8cd53e37515e82"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2003-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/555",
       "dateDocument": "2002-06-21",
-      "roFundstelle": "AS 2002 555",
+      "roFundstelle": "AS 2002 3646",
       "titelDe": "Bundesgesetz über neue dringliche Massnahmen im Bereich der Umsatzabgabe",
       "titelFr": "Loi fédérale instaurant de nouvelles mesures urgentes dans le domaine du droit de timbre de négociation",
       "titelIt": "Legge federale concernente nuove misure urgenti nell'ambito della tassa di negoziazione",
       "botschaftKey": "BOTSCHAFT-2002-517",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/555/de",
-      "sha": "6eee604416b7308c6eb14f4584c1aba1a3d22204f87cfd96eef867d09b6f5f6d"
+      "sha": "fee46dde8174b2b5933521dfb2921802d8a4da13460b191e79ad88a09d654ba2"
     },
     {
       "art": "sammelerlass-marker",
@@ -189,13 +189,13 @@
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/541",
       "dateDocument": "2000-12-15",
-      "roFundstelle": "AS 2000 541",
+      "roFundstelle": "AS 2000 2991",
       "titelDe": "Bundesgesetz über neue dringliche Massnahmen im Bereich der Umsatzabgabe",
       "titelFr": "Loi fédérale instaurant de nouvelles mesures urgentes dans le domaine du droit de timbre de négociation",
       "titelIt": "Legge federale concernente nuove misure urgenti nell'ambito della tassa di negoziazione",
       "botschaftKey": "BOTSCHAFT-2000-1253",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/541/de",
-      "sha": "58a7479d8b389d584c7e63a280a8fdceb20b65c1ee5c2d2acd65e7c128f51c77"
+      "sha": "cebf24493c9c16bed94181b221ec29e114237d1f6045886c484780973972d08d"
     },
     {
       "art": "sammelerlass-marker",
@@ -208,25 +208,25 @@
       "dateEntryInForce": "2000-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/62",
       "dateDocument": "1999-10-08",
-      "roFundstelle": "AS 2000 62",
+      "roFundstelle": "AS 2000 322",
       "titelDe": "Bundesgesetz über die Stempelabgaben (StG)",
       "titelFr": "Loi fédérale sur les droits de timbre (LT)",
       "titelIt": "Legge federale sulle tasse di bollo (LTB)",
       "botschaftKey": "BOTSCHAFT-1999-1_7922_7145_6784",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/62/de",
-      "sha": "3beea988db72a6ba3fab0871afafd81daa3c9a4be7f11fa12830051c679f2ac8"
+      "sha": "6ffd63edce655f89cab9366e0ea2dc761741a70450c3fedb4975dff3f358047f"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "1999-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/171",
       "dateDocument": "1999-03-19",
-      "roFundstelle": "AS 1999 171",
+      "roFundstelle": "AS 1999 1287",
       "titelDe": "Bundesbeschluss über dringliche Massnahmen im Bereich der Umsatzabgabe",
       "titelFr": "Arrêté fédéral concernant des mesures urgents dans le domaine du droit de timbre de négociation",
       "titelIt": "Decreto federale concernente misure urgenti nell'ambito della tassa di negoziazione",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/171/de",
-      "sha": "eacb62e237d4264ffa9e93078a0508f156d2eaef0f1a3b95bc67be13d9acdeb0"
+      "sha": "700353bf181f78eba646ec3aa227b988a322df4cea4132670ed43f647b83be49"
     },
     {
       "art": "aenderung",
@@ -241,5 +241,5 @@
       "sha": "201dee55a63a692f6b3cb626a4fbbe7b16ce2119e78c7459808e436eb25fcfe7"
     }
   ],
-  "sha": "002168691116c7105e38856b69e98f09e2e06ba9d58ad92cfdfc58cf62f730ea"
+  "sha": "76b9440dcc44757d85b1f331e088d681bc3585c71a99f32eb22965329b908fbb"
 }

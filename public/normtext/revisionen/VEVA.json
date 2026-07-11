@@ -1,7 +1,7 @@
 {
   "erlassKey": "VEVA",
   "sr": "814.610",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -39,12 +39,12 @@
       "dateEntryInForce": "2016-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/207",
       "dateDocument": "2016-03-23",
-      "roFundstelle": "AS 2016 207",
+      "roFundstelle": "AS 2016 1117",
       "titelDe": "Verordnung über den Verkehr mit Abfällen (VeVA)",
       "titelFr": "Ordonnance sur les mouvements de déchets (OMoD)",
       "titelIt": "Ordinanza sul traffico di rifiuti (OTRif)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/207/de",
-      "sha": "de511f8351d089a232f4daa4ac51ac5105990757073b617af0395cf1fdf722a2"
+      "sha": "a6869dc70a6d25b858fc36ada010a7b272f791d94ae01cb17599f83963060ab3"
     },
     {
       "art": "sammelerlass-marker",
@@ -57,48 +57,48 @@
       "dateEntryInForce": "2014-05-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/28",
       "dateDocument": "2013-12-18",
-      "roFundstelle": "AS 2014 28",
+      "roFundstelle": "AS 2014 193",
       "titelDe": "Verordnung über den Verkehr mit Abfällen (VeVA)",
       "titelFr": "Ordonnance sur les mouvements de déchets (OMoD)",
       "titelIt": "Ordinanza sul traffico di rifiuti (OTRif)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/28/de",
-      "sha": "b32102404f37948267608742e9a2d0fbe917c421cf35dbae83b19f7eca0716f4"
+      "sha": "2fd3d9b6e9978e9bc0a1eaae255209ea6516feab2e495760ce9080437d38596a"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2010-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/764",
       "dateDocument": "2009-11-11",
-      "roFundstelle": "AS 2009 764",
+      "roFundstelle": "AS 2009 6259",
       "titelDe": "Verordnung über den Verkehr mit Abfällen (VeVA)",
       "titelFr": "Ordonnance sur les mouvements de déchets (OMoD)",
       "titelIt": "Ordinanza sul traffico di rifiuti (OTRif)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/764/de",
-      "sha": "4e27dca60464c79770a3d9cc80b57637fa3ff0c8741200e82efb53ea1996f7f5"
+      "sha": "973116ffe090730bf5542e8116db10000bfba45908cc73d16c822c0537209e75"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2006-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/551",
       "dateDocument": "2005-06-22",
-      "roFundstelle": "AS 2005 551",
+      "roFundstelle": "AS 2005 4199",
       "titelDe": "Verordnung über den Verkehr mit Abfällen (VeVA)",
       "titelFr": "Ordonnance sur les mouvements de déchets (OMoD)",
       "titelIt": "Ordinanza sul traffico di rifiuti (OTRif)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/551/de",
-      "sha": "ffdbf69df7fabfa9580d400a136a3c1ae6f516b28ddcc494025529c47e6d90a4"
+      "sha": "3b239287a3552de5a910c573a5c558d937b5f39f2140fc2ef0af3854b2a0082b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2006-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/569",
       "dateDocument": "2005-08-30",
-      "roFundstelle": "AS 2005 569",
+      "roFundstelle": "AS 2005 4423",
       "titelDe": "Verordnung über den Verkehr mit Abfällen (VeVA) (Betrifft nur den französischen Text)",
       "titelFr": "Ordonnance sur les mouvements de déchets (OMoD)",
       "titelIt": "Ordinanza sul traffico di rifiuti (OTRif) (Concerne solo il testo francese)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/569/de",
-      "sha": "16f1b0f6a0027e9800ace1954b27290fb5f4eeb16c05ef4187fb39bc485f2b3b"
+      "sha": "40eaa94751c828fdb1d86454a8d389b3004373998b7a8da4c5a85d639de6bbf0"
     },
     {
       "art": "aenderung",
@@ -113,5 +113,5 @@
       "sha": "b3fb51bf7f3fedce46238400d124327fdc3d0416b4601ec39c80416c8828e4af"
     }
   ],
-  "sha": "f4c07ee8b5043b9d8f771a945cc3b079d229502082458afd8999db67e4c06a56"
+  "sha": "f51830ab02dee64dd88b321d55c7299e155e02dafa4fff5c9cea274ead6ab7cb"
 }

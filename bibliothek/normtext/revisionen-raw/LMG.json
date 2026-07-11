@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1992-10-09"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom 9. Oktober 1992 über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 9 octobre 1992 sur les denrées alimentaires et les objets usuels (Loi sur les denrées alimentaires, LDAI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 9 ottobre 1992 sulle derrate alimentari e gli oggetti d'uso (Legge sulle derrate alimentari, LDerr)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "817.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1995/1469_1469_1469"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1995-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1992-10-09"
+        "value": "RO 1995 1469"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1992-10-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1995 1469"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 9. Oktober 1992 über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1992-10-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1995 1469"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 9. Oktober 1992 über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 9 octobre 1992 sur les denrées alimentaires et les objets usuels (Loi sur les denrées alimentaires, LDAI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 9 ottobre 1992 sulle derrate alimentari e gli oggetti d'uso (Legge sulle derrate alimentari, LDerr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "817.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1995/1469_1469_1469"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1995-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1992-10-09"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1995 1469"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 9. Oktober 1992 über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG)"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-10-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 775"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG)"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-10-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 775"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG)"
@@ -213,6 +237,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-10-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 775"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG)"
@@ -244,6 +272,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-06-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 971"
       },
       "titleDe": {
         "type": "literal",
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-06-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 971"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG)"
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-06-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 971"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG)"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-11-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5449"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die vollständige Inkraftsetzung der Änderung vom 8. Oktober 1999 des Lebensmittelgesetzes"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-11-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5449"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die vollständige Inkraftsetzung der Änderung vom 8. Oktober 1999 des Lebensmittelgesetzes"
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-11-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5449"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die vollständige Inkraftsetzung der Änderung vom 8. Oktober 1999 des Lebensmittelgesetzes"
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 785"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG)"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 785"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG)"
@@ -501,69 +561,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-05"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur les denrées alimentaires et les objets usuels (Loi sur les denrées alimentaires, LDAl)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulle derrate alimentari e gli oggetti d'uso (Legge sulle derrate alimentari, LDerr)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "817.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2017/62"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-05-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-06-20"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur les denrées alimentaires et les objets usuels (Loi sur les denrées alimentaires, LDAl)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulle derrate alimentari e gli oggetti d'uso (Legge sulle derrate alimentari, LDerr)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "817.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2017/62"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-05-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-06-20"
+        "value": "RO 2008 785"
       },
       "titleDe": {
         "type": "literal",
@@ -597,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-06-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 249"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG)"
@@ -628,6 +632,82 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-06-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 249"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les denrées alimentaires et les objets usuels (Loi sur les denrées alimentaires, LDAl)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle derrate alimentari e gli oggetti d'uso (Legge sulle derrate alimentari, LDerr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "817.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2017/62"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-05-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-06-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 249"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (Lebensmittelgesetz, LMG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les denrées alimentaires et les objets usuels (Loi sur les denrées alimentaires, LDAl)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle derrate alimentari e gli oggetti d'uso (Legge sulle derrate alimentari, LDerr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "817.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2017/62"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-05-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-06-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 249"
       },
       "titleDe": {
         "type": "literal",

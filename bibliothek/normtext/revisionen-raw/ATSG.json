@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-10-06"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über den Allgemeinen Teil des Sozialversicherungsrechts (ATSG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur la partie générale du droit des assurances sociales (LPGA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulla parte generale del diritto delle assicurazioni sociali (LPGA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "830.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/510"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-10-06"
+        "value": "RO 2002 3371"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-10-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3371"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Allgemeinen Teil des Sozialversicherungsrechts (ATSG)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-10-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3371"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über den Allgemeinen Teil des Sozialversicherungsrechts (ATSG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur la partie générale du droit des assurances sociales (LPGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla parte generale del diritto delle assicurazioni sociali (LPGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "830.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/510"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-10-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3371"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Allgemeinen Teil des Sozialversicherungsrechts (ATSG)"
@@ -148,6 +164,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-06-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3475"
       },
       "titleDe": {
         "type": "literal",
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-06-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3475"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Änderung des Anhangs zum Bundesgesetz über den Allgemeinen Teil des Sozialversicherungsrechts (Revision 3 des Anhangs zum ATSG)"
@@ -213,6 +237,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-06-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3475"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Änderung des Anhangs zum Bundesgesetz über den Allgemeinen Teil des Sozialversicherungsrechts (Revision 3 des Anhangs zum ATSG)"
@@ -245,6 +273,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-02-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 811"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 6. Oktober 2000 über den Allgemeinen Teil des Sozialversicherungsrechts (ATSG) (Betrifft nur den italienischen Text)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-02-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 811"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 6. Oktober 2000 über den Allgemeinen Teil des Sozialversicherungsrechts (ATSG) (Betrifft nur den italienischen Text)"
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-02-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 811"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 6. Oktober 2000 über den Allgemeinen Teil des Sozialversicherungsrechts (ATSG) (Betrifft nur den italienischen Text)"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-05-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 1935"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Allgemeinen Teil des Sozialversicherungsrechts (ATSG) (Betrifft nur den italienischen Text)"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-05-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 1935"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Allgemeinen Teil des Sozialversicherungsrechts (ATSG) (Betrifft nur den italienischen Text)"
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-05-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 1935"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Allgemeinen Teil des Sozialversicherungsrechts (ATSG) (Betrifft nur den italienischen Text)"
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-09-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5021"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Allgemeinen Teil des Sozialversicherungsrechts (ATSG) (Betrifft nur den italienischen Text)"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-09-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5021"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Allgemeinen Teil des Sozialversicherungsrechts (ATSG) (Betrifft nur den italienischen Text)"
@@ -500,6 +560,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-09-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5021"
       },
       "titleDe": {
         "type": "literal",
@@ -532,6 +596,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-03-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2829"
       },
       "titleDe": {
         "type": "literal",
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-03-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2829"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Allgemeinen Teil des Sozialversicherungsrechts (ATSG) (Gesetzliche Grundlage für die Überwachung von Versicherten)"
@@ -596,6 +668,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-03-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2829"
       },
       "titleDe": {
         "type": "literal",
@@ -628,6 +704,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-06-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 5137"
       },
       "titleDe": {
         "type": "literal",
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-06-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 5137"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Allgemeinen Teil des Sozialversicherungsrechts (ATSG)"
@@ -692,6 +776,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-06-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 5137"
       },
       "titleDe": {
         "type": "literal",

@@ -1,7 +1,7 @@
 {
   "erlassKey": "BEWG",
   "sr": "211.412.41",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -52,25 +52,25 @@
       "dateEntryInForce": "2005-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/204",
       "dateDocument": "2004-10-08",
-      "roFundstelle": "AS 2005 204",
+      "roFundstelle": "AS 2005 1337",
       "titelDe": "Bundesgesetz über den Erwerb von Grundstücken durch Personen im Ausland (BewG)",
       "titelFr": "Loi fédérale sur l'acquisition d'immeubles par des personnes à l'étranger (LFAIE)",
       "titelIt": "Legge federale sull'acquisto di fondi da parte di persone all'estero (LAFE)",
       "botschaftKey": "BOTSCHAFT-2003-674",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/204/de",
-      "sha": "476d825d0b506e686dcf694f8129d95c313300a27806dcde4e75f29afb6d665a"
+      "sha": "73fc6cfbc5cd4b1cfde7b23ca5b7edac2b1ee180a8d3c613781ab64e0a519db5"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2002-09-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/325",
       "dateDocument": "2002-03-22",
-      "roFundstelle": "AS 2002 325",
+      "roFundstelle": "AS 2002 2467",
       "titelDe": "Bundesgesetz über den Erwerb von Grundstücken durch Personen im Ausland (BewG)",
       "titelFr": "Loi fédérale sur l'acquisition d'immeubles par des personnes à l'étranger (LFAIE)",
       "titelIt": "Legge federale sull'acquisto di fondi da parte di persone all'estero (LAFE)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/325/de",
-      "sha": "13c5ef557f73955e99afe274ede3ff080214fdbedc6f87475bdb3fae4d2c8643"
+      "sha": "004402fa97777ef8e9af116792bb2de2b263e9ded213fe3903ad517e43ff933a"
     },
     {
       "art": "sammelerlass-marker",
@@ -109,5 +109,5 @@
       "sha": "81e89b3e13044ad2f1ccc5ca7601a5b39193e35f85218f3d7ae574c43dabd1e4"
     }
   ],
-  "sha": "21c0c52e113412229fa0f6207910c02dbe54aec1e870cf6a558f481dbff230c9"
+  "sha": "fd638503f64e3ea335fd705296f6d43689bfa9fc2b2856beb3dbd1c11b5b926f"
 }

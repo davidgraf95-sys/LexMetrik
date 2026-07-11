@@ -1,7 +1,7 @@
 {
   "erlassKey": "FINMAG",
   "sr": "956.1",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -82,38 +82,38 @@
       "dateEntryInForce": "2009-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/735",
       "dateDocument": "2008-10-15",
-      "roFundstelle": "AS 2008 735",
+      "roFundstelle": "AS 2008 5205",
       "titelDe": "Verordnung über die vollständige Inkraftsetzung des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007",
       "titelFr": "Ordonnance sur la mise en vigueur intégrale de la loi du 22 juin 2007 sur la surveillance des marchés financiers",
       "titelIt": "Ordinanza concernente l'entrata in vigore integrale della legge del 22 giugno 2007 sulla vigilanza dei mercati finanziari",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/735/de",
-      "sha": "0eb27eb6f08679ecd26d7a3617677a30625d73c4ff1b27382355e2d6564d3e20"
+      "sha": "bca0199d527faa120adf20904feb83e372803b13355e2c37a48cd4ccc1783555"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2009-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/736",
       "dateDocument": "2007-06-22",
-      "roFundstelle": "AS 2008 736",
+      "roFundstelle": "AS 2008 5207",
       "titelDe": "Bundesgesetz über die Eidgenössische Finanzmarktaufsicht (Finanzmarktaufsichtsgesetz, FINMAG)",
       "titelFr": "Loi sur l'Autorité fédérale de surveillance des marchés financiers (Loi sur la surveillance des marchés financiers, LFINMA)",
       "titelIt": "Legge federale concernente l'Autorità federale di vigilanza sui mercati finanziari (Legge sulla vigilanza dei mercati finanziari, LFINMA)",
       "botschaftKey": "BOTSCHAFT-2006-303",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/736/de",
-      "sha": "59d859510885ebd0a90e2d51c381b54ec3144f31e25943e31e72ae45651da4e5"
+      "sha": "ece43457387f29bc2e9b4688d4d4a3c7dcee06947642c8afa3263f4f49f132b7"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2008-02-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/68",
       "dateDocument": "2008-01-16",
-      "roFundstelle": "AS 2008 68",
+      "roFundstelle": "AS 2008 269",
       "titelDe": "Verordnung über die vorzeitige Inkraftsetzung von organisatorischen Bestimmungen des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007",
       "titelFr": "Ordonnance sur la mise en vigueur anticipée de dispositions organisationnelles de la loi du 22 juin 2007 sur la surveillance des marchés financiers",
       "titelIt": "Ordinanza concernente l'entrata in vigore anticipata di disposizioni organizzative della legge del 22 giugno 2007 sulla vigilanza dei mercati finanziari",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/68/de",
-      "sha": "4da7e54817f48ee3b709e7e0c20b1702fb893830d3f958de0b47921b2ba165f1"
+      "sha": "c30e1c4ce30b7412e31bf60c3e07d37fce3295fdfc3a5498e5ffbeb5d2933939"
     }
   ],
-  "sha": "5039c5daf59ca96501dbf4aaa06aa5d1bc9fe51a40f1a5a5ed00aa1acc212227"
+  "sha": "fddc1eaf07b212b3f3e9da8e35df6b03bddff2c821502e5ecbf68eae863df820"
 }

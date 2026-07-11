@@ -1,7 +1,7 @@
 {
   "erlassKey": "VMWG",
   "sr": "221.213.11",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -27,12 +27,12 @@
       "dateEntryInForce": "2020-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/302",
       "dateDocument": "2020-04-29",
-      "roFundstelle": "AS 2020 302",
+      "roFundstelle": "AS 2020 1511",
       "titelDe": "Verordnung über die Miete und Pacht von Wohn- und Geschäftsräumen (VMWG)",
       "titelFr": "Ordonnance sur le bail à loyer et le bail à ferme d'habitations et de locaux commerciaux (OBLF)",
       "titelIt": "Ordinanza concernente la locazione e l'affitto di locali d'abitazione o commerciali (OLAL)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/302/de",
-      "sha": "ff2d8954b4f503a07312338bb240c379bc92055faecf0618562d2fa90da5a5b2"
+      "sha": "6b4e789b3ef1880c236e823e1e1b3114b693d4dde1a10ec895766bacc4165c8c"
     },
     {
       "art": "sammelerlass-marker",
@@ -45,12 +45,12 @@
       "dateEntryInForce": "2014-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/68",
       "dateDocument": "2014-01-15",
-      "roFundstelle": "AS 2014 68",
+      "roFundstelle": "AS 2014 417",
       "titelDe": "Verordnung über die Miete und Pacht von Wohn- und Geschäftsräumen (VMWG)",
       "titelFr": "Ordonnance sur le bail à loyer et le bail à ferme d'habitations et de locaux commerciaux (OBFL)",
       "titelIt": "Ordinanza concernente la locazione e l'affitto di locali d'abitazione o commerciali (OLAL)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/68/de",
-      "sha": "b7a44d2ddd57dccc58b097e68a517c33837fbdf8d8a5978e90db22426b30dbcf"
+      "sha": "9bebb5bebab3910dabcaa2c8993aef7d47c20ec22b717fbcf2853747cc98fa66"
     },
     {
       "art": "sammelerlass-marker",
@@ -63,12 +63,12 @@
       "dateEntryInForce": "2011-12-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/702",
       "dateDocument": "2011-10-26",
-      "roFundstelle": "AS 2011 702",
+      "roFundstelle": "AS 2011 4907",
       "titelDe": "Verordnung über die Miete und Pacht von Wohn- und Geschäftsräumen (VMWG)",
       "titelFr": "Ordonnance sur le bail à loyer et le bail à ferme d'habitations et de locaux commerciaux (OBLF)",
       "titelIt": "Ordinanza concernente la locazione e l'affitto di locali d'abitazione o commerciali (OLAL)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/702/de",
-      "sha": "56d2b3b2ee24f66011769531b1270b1086e9c283bb9ff8133fee06aef30a44c1"
+      "sha": "4247eadeaae3ae949b92c25f1bfbf909e481c6058c08efefe00f02a52b7bda31"
     },
     {
       "art": "sammelerlass-marker",
@@ -81,12 +81,12 @@
       "dateEntryInForce": "2008-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/909",
       "dateDocument": "2007-11-28",
-      "roFundstelle": "AS 2007 909",
+      "roFundstelle": "AS 2007 7021",
       "titelDe": "Verordnung über die Miete und Pacht von Wohn- und Geschäftsräumen (VMWG)",
       "titelFr": "Ordonnance sur le bail à loyer et le bail à ferme d'habitations et de locaux commerciaux (OBLF)",
       "titelIt": "Ordinanza concernente la locazione e l'affitto di locali d'abitazione o commerciali (OLAL)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/909/de",
-      "sha": "10867e25ae1deb7bd2bbb6780525dbdc31454502a3536d81220e7bc7d8035b71"
+      "sha": "6490dcdf724b48f9da2f1c4ff99dc694be26fdae5f9041e0a711bde764562c1f"
     },
     {
       "art": "aenderung",
@@ -113,5 +113,5 @@
       "sha": "ca1007d631ea0d3eabe3600f6ef39a651070eb4bd6bc2650318302ead80d34c1"
     }
   ],
-  "sha": "c1bcaa6bcd8cb5bb7edab21683d4c3a40dbcb461dec340522555187ec1868261"
+  "sha": "8bdd9c6d75cb46ef10d1044021ed1a82924ac9e52f9fbc35ed29ae7ed8484067"
 }

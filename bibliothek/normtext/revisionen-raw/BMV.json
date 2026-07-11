@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1983-02-08"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 8. Februar 1983 über die Organisation, die Zulassungsbedingungen, die Promotion und die Abschlussprüfung der Berufsmittelschule"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 8 février 1983 concernant l'organisation, les conditions d'admission, la promotion et l'examen final de l'école professionnel supérieur"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza dell'8 febbraio 1983 concernente l'organizzazione, le condizioni d'ammissione, la promozione e l'esame finale della scuola media professionale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "412.103.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1983/753_753_753"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1983-08-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1983-02-08"
+        "value": "RO 1983 753"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1983-02-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1983 753"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 8. Februar 1983 über die Organisation, die Zulassungsbedingungen, die Promotion und die Abschlussprüfung der Berufsmittelschule"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1983-02-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1983 753"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 8. Februar 1983 über die Organisation, die Zulassungsbedingungen, die Promotion und die Abschlussprüfung der Berufsmittelschule"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 8 février 1983 concernant l'organisation, les conditions d'admission, la promotion et l'examen final de l'école professionnel supérieur"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza dell'8 febbraio 1983 concernente l'organizzazione, le condizioni d'ammissione, la promozione e l'esame finale della scuola media professionale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "412.103.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1983/753_753_753"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1983-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1983-02-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1983 753"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 8. Februar 1983 über die Organisation, die Zulassungsbedingungen, die Promotion und die Abschlussprüfung der Berufsmittelschule"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-11-30"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Berufsmaturität (Berufsmaturitätsverordnung)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la maturité professionnelle"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla maturità professionale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "412.103.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1999/194"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-11-30"
+        "value": "RO 1999 1367"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-11-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 1367"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Berufsmaturität (Berufsmaturitätsverordnung)"
@@ -245,6 +237,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-11-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 1367"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Berufsmaturität (Berufsmaturitätsverordnung)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la maturité professionnelle"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla maturità professionale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "412.103.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/194"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-11-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 1367"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Berufsmaturität (Berufsmaturitätsverordnung)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-11-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 5041"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Berufsmaturität (Berufsmaturitätsverordnung)"
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-11-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 5041"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Berufsmaturität (Berufsmaturitätsverordnung)"
@@ -340,6 +380,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-11-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 5041"
       },
       "titleDe": {
         "type": "literal",
@@ -372,6 +416,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-06-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 3447"
       },
       "titleDe": {
         "type": "literal",
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-06-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 3447"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die eidgenössische Berufsmaturität (Berufsmaturitätsverordnung, BMV)"
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-06-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 3447"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die eidgenössische Berufsmaturität (Berufsmaturitätsverordnung, BMV)"
@@ -468,6 +524,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-06-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 3447"
       },
       "titleDe": {
         "type": "literal",
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-09-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 4703"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die eidgenössische Berufsmaturität (Berufsmaturitätsverordnung, BMV) (Betrifft nur den französischen Text)"
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-09-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 4703"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die eidgenössische Berufsmaturität (Berufsmaturitätsverordnung, BMV) (Betrifft nur den französischen Text)"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-09-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 4703"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die eidgenössische Berufsmaturität (Berufsmaturitätsverordnung, BMV) (Betrifft nur den französischen Text)"
@@ -597,6 +669,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-07-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 2315"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die eidgenössische Berufsmaturität (Berufsmaturitätsverordnung, BMV)"
@@ -629,6 +705,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-07-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 2315"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die eidgenössische Berufsmaturität (Berufsmaturitätsverordnung, BMV)"
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-07-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 2315"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die eidgenössische Berufsmaturität (Berufsmaturitätsverordnung, BMV)"
@@ -692,6 +776,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-09-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 3093"
       },
       "titleDe": {
         "type": "literal",
@@ -725,6 +813,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-09-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 3093"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die eidgenössische Berufsmaturität (Berufsmaturitätsverordnung, BMV)"
@@ -757,6 +849,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-09-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 3093"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die eidgenössische Berufsmaturität (Berufsmaturitätsverordnung, BMV)"
@@ -789,6 +885,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-06-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2645"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die eidgenössische Berufsmaturität (Berufsmaturitätsverordnung, BMV)"
@@ -821,6 +921,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-06-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2645"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die eidgenössische Berufsmaturität (Berufsmaturitätsverordnung, BMV)"
@@ -852,6 +956,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-06-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2645"
       },
       "titleDe": {
         "type": "literal",
@@ -884,6 +992,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-08-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2965"
       },
       "titleDe": {
         "type": "literal",
@@ -917,6 +1029,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-08-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2965"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die eidgenössische Berufsmaturität (Berufsmaturitätsverordnung, BMV) (Betrifft nur den italienischen Text)"
@@ -948,6 +1064,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-08-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2965"
       },
       "titleDe": {
         "type": "literal",

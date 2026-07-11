@@ -1,7 +1,7 @@
 {
   "erlassKey": "BGFA",
   "sr": "935.61",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -52,25 +52,25 @@
       "dateEntryInForce": "2007-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/668",
       "dateDocument": "2006-06-23",
-      "roFundstelle": "AS 2006 668",
+      "roFundstelle": "AS 2006 4399",
       "titelDe": "Bundesgesetz über die Freizügigkeit der Anwältinnen und Anwälte (Anwaltsgesetz, BGFA)",
       "titelFr": "Loi fédérale sur la libre circulation des avocats (Loi sur les avocats, LLCA)",
       "titelIt": "Legge federale sulla libera circolazione degli avvocati (Legge sugli avvocati, LLCA)",
       "botschaftKey": "BOTSCHAFT-2005-1029",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/668/de",
-      "sha": "f5d4729d94432cf9f9515ee3e0a182b4eda9983f05d04aa5a0ba8a273b87c5ea"
+      "sha": "c98bf6aa1b53a9cddb976c5c537a001e74fd5809d2a3bdfea004cb1be7e3151a"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2007-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/378",
       "dateDocument": "2007-06-19",
-      "roFundstelle": "AS 2007 378",
+      "roFundstelle": "AS 2007 2869",
       "titelDe": "Bundesgesetz über die Freizügigkeit der Anwältinnen und Anwälte (Anwaltsgesetz, BGFA) (Betrifft nur den italienischen Text)",
       "titelFr": "Loi fédérale sur la libre circulation des avocats (Loi sur les avocats, LLCA) (Ne concerne que le texte italien)",
       "titelIt": "Legge federale sulla libera circolazione degli avvocati (Legge sugli avvocati, LLCA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/378/de",
-      "sha": "ee24953c5da55ab7bc6277da148f6a93cf36cc98c05fbdf5be989d00534d1f96"
+      "sha": "06822c7eb5d733775bd9a2467816a9865a43a84c42e469ef401a6466c7643c65"
     },
     {
       "art": "sammelerlass-marker",
@@ -83,27 +83,27 @@
       "dateEntryInForce": "2002-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/318",
       "dateDocument": "2002-03-22",
-      "roFundstelle": "AS 2002 318",
+      "roFundstelle": "AS 2002 2134",
       "titelDe": "Bundesgesetz über die Freizügigkeit der Anwältinnen und Anwälte (Anwaltsgesetz, BGFA)",
       "titelFr": "Loi fédérale sur la libre circulation des avocats (Loi sur les avocats, LLCA)",
       "titelIt": "Legge federale sulla libera circolazione degli avvocati (Legge sugli avvocati, LLCA)",
       "botschaftKey": "BOTSCHAFT-2002-337",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/318/de",
-      "sha": "c5bc0aa3702edd08c84e3dec36904edf6a4afc52a3e8be492f89bab26ad44c34"
+      "sha": "814a83280f65dfc65c1c80a6d9dfba10efe222d18195e369fa811fbb8d83b072"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2002-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/153",
       "dateDocument": "2000-06-23",
-      "roFundstelle": "AS 2002 153",
+      "roFundstelle": "AS 2002 863",
       "titelDe": "Bundesgesetz über die Freizügigkeit der Anwältinnen und Anwälte (Anwaltsgesetz, BGFA)",
       "titelFr": "Loi fédérale sur la libre circulation des avocats (Loi sur les avocats, LLCA)",
       "titelIt": "Legge federale sulla libera circolazione degli avvocati (Legge sugli avvocati, LLCA)",
       "botschaftKey": "BOTSCHAFT-1999-1_6013_5331_4983",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/153/de",
-      "sha": "b1d74ab762c8e8064be3c945e1af2022a53ac005a8b8c2d9b34128e55cf6b6a6"
+      "sha": "0d9c5df7b06eeb9b83f3546178d5dd83c17bb5e0c25dce44ece70a2fb3385ee2"
     }
   ],
-  "sha": "a5afebb8c36d13e4e2b1760cf3b7923f6c0b62b05f3c4b26b42a64e6053dcd84"
+  "sha": "b0910c4c389ba7a6f2a287ad887e7f06ba3f11598fafc22b2dc070f2f09e68ac"
 }

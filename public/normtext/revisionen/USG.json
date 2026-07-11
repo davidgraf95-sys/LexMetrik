@@ -1,7 +1,7 @@
 {
   "erlassKey": "USG",
   "sr": "814.01",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -90,12 +90,12 @@
       "dateEntryInForce": "2020-03-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/96",
       "dateDocument": "2019-09-27",
-      "roFundstelle": "AS 2020 96",
+      "roFundstelle": "AS 2020 513",
       "titelDe": "Bundesgesetz über den Umweltschutz (Umweltschutzgesetz; USG)",
       "titelFr": "Loi fédérale sur la protection de l'environnement (Loi sur la protection de l'environnement, LPE)",
       "titelIt": "Legge federale sulla protezione dell'ambiente (Legge sulla protezione dell'ambiente, LPAmb)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/96/de",
-      "sha": "207cd5b24c8527e88eb821a4b42ff289141c6fe328b6928964c18bfa0eb5fd79"
+      "sha": "8ac8be71cb9766bfa760bbfa3e01ee513a8154f1b0b83caef7054b0cb3fca9bd"
     },
     {
       "art": "sammelerlass-marker",
@@ -126,12 +126,12 @@
       "dateEntryInForce": "2015-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/164",
       "dateDocument": "2014-09-26",
-      "roFundstelle": "AS 2015 164",
+      "roFundstelle": "AS 2015 865",
       "titelDe": "Bundesgesetz über den Umweltschutz (Umweltschutzgesetz, USG)",
       "titelFr": "Loi fédérale sur la protection de l'environnement (Loi sur la protection de l'environnement, LPE)",
       "titelIt": "Legge federale sulla protezione dell'ambiente (Legge sulla protezione dell'ambiente, LPAmb)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/164/de",
-      "sha": "81b9e86c7416abeb9c67c04ca3a6e6e654a173b8058809ca57cf60ad9a536ed8"
+      "sha": "74751bb678cc53e8976e3ad86a8818c0219ccdc6cf01171b309726dd5ce68fef"
     },
     {
       "art": "sammelerlass-marker",
@@ -144,25 +144,25 @@
       "dateEntryInForce": "2014-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/234",
       "dateDocument": "2013-09-27",
-      "roFundstelle": "AS 2014 234",
+      "roFundstelle": "AS 2014 1021",
       "titelDe": "Bundesbeschluss über die Genehmigung und die Umsetzung der Aarhus-Konvention und von deren Änderung",
       "titelFr": "Arrêté fédéral portant approbation et mise en uvre de la convention d'Aarhus et de son amendement",
       "titelIt": "Decreto federale che approva e traspone nel diritto svizzero la Convenzione di Aarhus e il suo emendamento",
       "botschaftKey": "BOTSCHAFT-2012-596",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/234/de",
-      "sha": "a819163001553ea0724224a81e8d23d0d496746c5260d150564cd683b201a38b"
+      "sha": "439958345349c4a88bc589397dc71f1f5a33f090c8f2ecb1fbc42acd2ca08a19"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2013-11-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/618",
       "dateDocument": "2013-03-22",
-      "roFundstelle": "AS 2013 618",
+      "roFundstelle": "AS 2013 3241",
       "titelDe": "Bundesgesetz über den Umweltschutz (Umweltschutzgesetz, USG)",
       "titelFr": "Loi fédérale sur la protection de l'environnement (Loi sur la protection de l'environnement, LPE)",
       "titelIt": "Legge federale sulla protezione dell'ambiente (Legge sulla protezione dell'ambiente, LPAmb)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/618/de",
-      "sha": "36417f4409742fbee71bacbe2fdc5e0ca6dab158f8d135680429a6cee3ac0ed9"
+      "sha": "2d2e008cea378992fd329b6bf537beae5026ff50cf381560344222e3ce721843"
     },
     {
       "art": "sammelerlass-marker",
@@ -175,12 +175,12 @@
       "dateEntryInForce": "2009-10-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/556",
       "dateDocument": "2009-03-20",
-      "roFundstelle": "AS 2009 556",
+      "roFundstelle": "AS 2009 4739",
       "titelDe": "Bundesgesetz über den Umweltschutz (Umweltschutzgesetz, USG) (Abgeltungsansprüche bei Sanierungen von Schiessanlagen)",
       "titelFr": "Loi fédérale sur la protection de l'environnement (Loi sur la protection de l'environnement, LPE) (Indemnisation pour l'assainissement de stands de tir)",
       "titelIt": "Legge federale sulla protezione dell'ambiente (Legge sulla protezione dell'ambiente, LPAmb) (Indennità per il risanamento di impianti di tiro)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/556/de",
-      "sha": "c8cc506cbb88d4145713f61b2e318d741f4b188423e649ff8e7fe36492a87bf9"
+      "sha": "ce090d36e1fc6384931efa62c5841c7cff7c68e7611c366c59a9465024d9b2ed"
     },
     {
       "art": "sammelerlass-marker",
@@ -205,24 +205,24 @@
       "dateEntryInForce": "2007-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/357",
       "dateDocument": "2006-12-20",
-      "roFundstelle": "AS 2007 357",
+      "roFundstelle": "AS 2007 2701",
       "titelDe": "Bundesgesetz über den Umweltschutz (Umweltschutzgesetz, USG)",
       "titelFr": "Loi fédérale sur la protection de l'environnement (Loi sur la protection de l'environnement, LPE)",
       "titelIt": "Legge federale sulla protezione dell'ambiente (Legge sulla protezione dell'ambiente, LPAmb)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/357/de",
-      "sha": "32dd7b9b540f6d1f327b4afd661b54a9401c9a592c30fa7edea2549aab4e037f"
+      "sha": "cd574445f563a0b510bae49db90e7dbe8b3c7a4da69343f7f938e39341f7cc6e"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2007-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/288",
       "dateDocument": "2012-04-13",
-      "roFundstelle": "AS 2012 288",
+      "roFundstelle": "AS 2012 2389",
       "titelDe": "Bundesgesetz über den Umweltschutz (Umweltschutzgesetz, USG)",
       "titelFr": "Loi fédérale sur la protection de l'environnement (Loi sur la protection de l'environnement, LPE)",
       "titelIt": "Legge federale sulla protezione dell'ambiente (Legge sulla protezione dell'ambiente, LPAmb)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/288/de",
-      "sha": "fe3ef4e0059ac77a9d7d20c7b62844aee9c6074fe00cb67534dad8e7b044433d"
+      "sha": "7dcbc13e41cc59268eda5c50355a9c86241660464fe4baaebaf0b72561ef523e"
     },
     {
       "art": "sammelerlass-marker",
@@ -235,12 +235,12 @@
       "dateEntryInForce": "2006-11-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/410",
       "dateDocument": "2005-12-16",
-      "roFundstelle": "AS 2006 410",
+      "roFundstelle": "AS 2006 2677",
       "titelDe": "Bundesgesetz über den Umweltschutz (Umweltschutzgesetz, USG)",
       "titelFr": "Loi fédérale sur la protection de l'environnement (Loi sur la protection de l'environnement, LPE)",
       "titelIt": "Legge federale sulla protezione dell'ambiente (Legge sulla protezione dell'ambiente, LPAmb)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/410/de",
-      "sha": "5f9785b33fb8a3b012fb84c70513ddb3ac17b484a08cd8a645c414faec62344a"
+      "sha": "56bc0e95c8291aaccb8048da965b0fee53ff7fd19e511dbc5f41b970c55753d8"
     },
     {
       "art": "sammelerlass-marker",
@@ -253,12 +253,12 @@
       "dateEntryInForce": "2005-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/448",
       "dateDocument": "2005-05-18",
-      "roFundstelle": "AS 2005 448",
+      "roFundstelle": "AS 2005 2601",
       "titelDe": "Verordnung über die Inkraftsetzung von Artikel 54 Absatz 2 zweiter Satz des Umweltschutzgesetzes",
       "titelFr": "Ordonnance concernant l'entrée en vigueur de l'art. 54, al. 2, 2e phrase de la loi sur la protection de l'environnement",
       "titelIt": "Ordinanza concernente l'entrata in vigore dell'articolo 54 capoverso 2 secondo periodo della legge sulla protezione dell'ambiente",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/448/de",
-      "sha": "ddabc30ec98f8b80f49b030b7ca5d0e846a2054bb1ea513b5ada9fbdfd593251"
+      "sha": "92f07d311fa748907e85187777e2a35bc2f42626bab962c13f968f0a9a9ed76c"
     },
     {
       "art": "sammelerlass-marker",
@@ -277,39 +277,39 @@
       "dateEntryInForce": "2004-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/597",
       "dateDocument": "2003-06-20",
-      "roFundstelle": "AS 2003 597",
+      "roFundstelle": "AS 2003 4061",
       "titelDe": "Bundesgesetz über den Umweltschutz (Umweltschutzgesetz, USG)",
       "titelFr": "Loi fédérale sur la protection de l'environnement (Loi sur la protection de l'environnement, LPE)",
       "titelIt": "Legge federale sulla protezione dell'ambiente (Legge sulla protezione dell'ambiente, LPAmb)",
       "botschaftKey": "BOTSCHAFT-2002-1272",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/597/de",
-      "sha": "c5e31c30c80d39c47ca49a8ed2bd1994525ed938845155ba636b1fe4c0b748a2"
+      "sha": "5b9ce07c24d8c9b5b26138468c6c99b7d8c434036b791cda1fcfbf761deb5c3f"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2004-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/624",
       "dateDocument": "2003-06-20",
-      "roFundstelle": "AS 2003 624",
+      "roFundstelle": "AS 2003 4215",
       "titelDe": "Bundesgesetz über den Umweltschutz (Umweltschutzgesetz, USG)",
       "titelFr": "Loi fédérale sur la protection de l'environnement (Loi sur la protection de l'environnement, LPE)",
       "titelIt": "Legge federale sulla protezione dell'ambiente (Legge sulla protezione dell'ambiente, LPAmb)",
       "botschaftKey": "BOTSCHAFT-2002-1014",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/624/de",
-      "sha": "fcfa3d27aec3551a7a0eb6018daa58d4dbc94f3ea8d040ad3dccba84bc150e98"
+      "sha": "97f612dc75b4f8427aa351b558154d9bb6856eabe45ae5679feb91602f38f17b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2004-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/767",
       "dateDocument": "2003-12-19",
-      "roFundstelle": "AS 2003 767",
+      "roFundstelle": "AS 2003 5203",
       "titelDe": "Bundesgesetz über dringliche Massnahmen aus dem Entlastungsprogramm 2003",
       "titelFr": "Loi fédérale sur les mesures urgentes découlant du programme d'allégement budgétaire 2003",
       "titelIt": "Legge federale sulle misure urgenti del programma di sgravio 2003",
       "botschaftKey": "BOTSCHAFT-2003-887",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/767/de",
-      "sha": "c39328ea26d008364d1129779764e3f185124f05f991661b2a4b855327a7bc1b"
+      "sha": "feeed67c52df7be16b1107d4593175e2447d86c7db7cd7c9084be341bebfb614"
     },
     {
       "art": "sammelerlass-marker",
@@ -336,5 +336,5 @@
       "sha": "5dbbe0fca13017ff1bbe08becebf39dab36de1acdd75510495d3e5aa4ac12b08"
     }
   ],
-  "sha": "993db4e91d2d0a1dc4012e205cf67a4c405385690af8cfdc30c41b16368536a3"
+  "sha": "a6b3b8ccc1e55aeab7763c59ac37b091c890e72fc06f553945c611a04b66ee75"
 }

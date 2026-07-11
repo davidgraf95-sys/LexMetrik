@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1966-01-14"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung II vom 14. Januar 1966 zum Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz) (Sonderbestimmungen für bestimmte Gruppen von Betrieben oder Arbeitnehmern)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance II du 14 janvier 1966 concernant l'exécution de la  loi fédérale sur le travail dans l'industrie, l'artisanat et  le commerce (loi sur le travail) (Dispositions spéciales pour certaines catégories d'entreprises ou de travailleurs)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza II del 14 gennaio 1966 per l'esecuzione della legge federale sul lavoro nell'industria, nell'artigianato e nel commercio (legge sul lavoro) (Disposizioni speciali per determinate categorie di aziende o di lavoratori)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "822.112"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1966/119_119_119"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1966-02-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1966-01-14"
+        "value": "RO 1966 119"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1966-01-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1966 119"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung II vom 14. Januar 1966 zum Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz) (Sonderbestimmungen für bestimmte Gruppen von Betrieben oder Arbeitnehmern)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1966-01-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1966 119"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung II vom 14. Januar 1966 zum Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz) (Sonderbestimmungen für bestimmte Gruppen von Betrieben oder Arbeitnehmern)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance II du 14 janvier 1966 concernant l'exécution de la  loi fédérale sur le travail dans l'industrie, l'artisanat et  le commerce (loi sur le travail) (Dispositions spéciales pour certaines catégories d'entreprises ou de travailleurs)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza II del 14 gennaio 1966 per l'esecuzione della legge federale sul lavoro nell'industria, nell'artigianato e nel commercio (legge sul lavoro) (Disposizioni speciali per determinate categorie di aziende o di lavoratori)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "822.112"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1966/119_119_119"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1966-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1966-01-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1966 119"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung II vom 14. Januar 1966 zum Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz) (Sonderbestimmungen für bestimmte Gruppen von Betrieben oder Arbeitnehmern)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-05-10"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung 2 zum Arbeitsgesetz (ArGV 2) (Sonderbestimmungen für bestimmte Gruppen von Betrieben oder Arbeitnehmern und Arbeitnehmerinnen)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance 2 relative à la loi sur le travail (OLT 2) (Dispositions spéciales pour certaines catégories d'entreprises ou de travailleurs)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza 2 concernente la legge sul lavoro (OLL 2) (Disposizioni speciali per determinate categorie di aziende e di lavoratori)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "822.112"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/244"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-08-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-05-10"
+        "value": "RO 2000 1623"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-05-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1623"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung 2 zum Arbeitsgesetz (ArGV 2) (Sonderbestimmungen für bestimmte Gruppen von Betrieben oder Arbeitnehmern und Arbeitnehmerinnen)"
@@ -245,6 +237,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-05-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1623"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung 2 zum Arbeitsgesetz (ArGV 2) (Sonderbestimmungen für bestimmte Gruppen von Betrieben oder Arbeitnehmern und Arbeitnehmerinnen)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance 2 relative à la loi sur le travail (OLT 2) (Dispositions spéciales pour certaines catégories d'entreprises ou de travailleurs)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza 2 concernente la legge sul lavoro (OLL 2) (Disposizioni speciali per determinate categorie di aziende e di lavoratori)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "822.112"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/244"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-05-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1623"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung 2 zum Arbeitsgesetz (ArGV 2) (Sonderbestimmungen für bestimmte Gruppen von Betrieben oder Arbeitnehmern und Arbeitnehmerinnen)"
@@ -276,6 +308,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-05-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 3045"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-05-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 3045"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung 2 zum Arbeitsgesetz (ArGV 2) (Sonderbestimmungen für bestimmte Gruppen von Betrieben oder Arbeitnehmern und Arbeitnehmerinnen)"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-05-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 3045"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung 2 zum Arbeitsgesetz (ArGV 2) (Sonderbestimmungen für bestimmte Gruppen von Betrieben oder Arbeitnehmern und Arbeitnehmerinnen)"
@@ -373,37 +417,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-05-25"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung 2 zum Arbeitsgesetz (ArGV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance 2 relative à la loi sur le travail (OLT 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza 2 concernente la legge sul lavoro (OLL 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "822.112"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2005/433"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-05-25"
+        "value": "RO 2005 2525"
       },
       "titleDe": {
         "type": "literal",
@@ -437,6 +453,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-05-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 2525"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung 2 zum Arbeitsgesetz (ArGV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance 2 relative à la loi sur le travail (OLT 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza 2 concernente la legge sul lavoro (OLL 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "822.112"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/433"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-05-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 2525"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung 2 zum Arbeitsgesetz (ArGV 2)"
@@ -469,37 +525,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-03-10"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung 2 zum Arbeitsgesetz (ArGV2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance 2 relative à la loi sur le travail (OLT 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza 2 concernente la legge sul lavoro (OLL 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "822.112"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/174"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-03-10"
+        "value": "RO 2006 963"
       },
       "titleDe": {
         "type": "literal",
@@ -533,6 +561,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-03-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 963"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung 2 zum Arbeitsgesetz (ArGV2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance 2 relative à la loi sur le travail (OLT 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza 2 concernente la legge sul lavoro (OLL 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "822.112"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/174"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-03-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 963"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung 2 zum Arbeitsgesetz (ArGV2)"
@@ -565,37 +633,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-11-27"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung 2 zum Arbeitsgesetz (ArGV 2) (Sonderbestimmungen für bestimmte Gruppen von Betrieben oder Arbeitnehmern und Arbeitnehmerinnen)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance 2 relative à la loi sur le travail (OLT 2) (Dispositions spéciales pour certaines catégories d'entreprises ou de travailleurs)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza 2 concernente la legge sul lavoro (OLL 2) (Disposizioni speciali per determinate categorie di aziende e di lavoratori)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "822.112"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/803"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-11-27"
+        "value": "RO 2009 6549"
       },
       "titleDe": {
         "type": "literal",
@@ -629,6 +669,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-11-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 6549"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung 2 zum Arbeitsgesetz (ArGV 2) (Sonderbestimmungen für bestimmte Gruppen von Betrieben oder Arbeitnehmern und Arbeitnehmerinnen)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance 2 relative à la loi sur le travail (OLT 2) (Dispositions spéciales pour certaines catégories d'entreprises ou de travailleurs)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza 2 concernente la legge sul lavoro (OLL 2) (Disposizioni speciali per determinate categorie di aziende e di lavoratori)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "822.112"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/803"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-11-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 6549"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung 2 zum Arbeitsgesetz (ArGV 2) (Sonderbestimmungen für bestimmte Gruppen von Betrieben oder Arbeitnehmern und Arbeitnehmerinnen)"
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-10-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6009"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung 2 zum Arbeitsgesetz (ArGV 2) (Sonderbestimmungen für bestimmte Gruppen von Betrieben oder Arbeitnehmern und Arbeitnehmerinnen)"
@@ -693,6 +777,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-10-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6009"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung 2 zum Arbeitsgesetz (ArGV 2) (Sonderbestimmungen für bestimmte Gruppen von Betrieben oder Arbeitnehmern und Arbeitnehmerinnen)"
@@ -724,6 +812,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-10-31"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6009"
       },
       "titleDe": {
         "type": "literal",
@@ -757,37 +849,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-06-14"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung 2 zum Arbeitsgesetz (ArGV 2) (Sonderbestimmungen für bestimmte Gruppen von Betrieben oder Arbeitnehmern und Arbeitnehmerinnen)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance 2 relative à la loi sur le travail (OLT 2) (Dispositions spéciales pour certaines catégories d'entreprises ou de travailleurs)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza 2 concernente la legge sul lavoro (OLL 2) (Disposizioni speciali per determinate categorie di aziende  e di lavoratori)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "822.112"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2013/449"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-08-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-06-14"
+        "value": "RO 2013 2119"
       },
       "titleDe": {
         "type": "literal",
@@ -821,6 +885,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-06-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 2119"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung 2 zum Arbeitsgesetz (ArGV 2) (Sonderbestimmungen für bestimmte Gruppen von Betrieben oder Arbeitnehmern und Arbeitnehmerinnen)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance 2 relative à la loi sur le travail (OLT 2) (Dispositions spéciales pour certaines catégories d'entreprises ou de travailleurs)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza 2 concernente la legge sul lavoro (OLL 2) (Disposizioni speciali per determinate categorie di aziende  e di lavoratori)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "822.112"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/449"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-06-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 2119"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung 2 zum Arbeitsgesetz (ArGV 2) (Sonderbestimmungen für bestimmte Gruppen von Betrieben oder Arbeitnehmern und Arbeitnehmerinnen)"
@@ -853,6 +957,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-11-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4083"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung 2 zum Arbeitsgesetz (ArGV 2) (Sonderbestimmungen für bestimmte Gruppen von Betrieben oder Arbeitnehmern und Arbeitnehmerinnen)"
@@ -885,6 +993,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-11-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4083"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung 2 zum Arbeitsgesetz (ArGV 2) (Sonderbestimmungen für bestimmte Gruppen von Betrieben oder Arbeitnehmern und Arbeitnehmerinnen)"
@@ -916,6 +1028,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-11-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4083"
       },
       "titleDe": {
         "type": "literal",
@@ -949,37 +1065,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-08-20"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung 2 zum Arbeitsgesetz (ArGV 2) (Sonderbestimmungen für bestimmte Gruppen von Betrieben oder Arbeitnehmern und Arbeitnehmerinnen)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance 2 relative à la loi sur le travail (OLT 2) (Dispositions spéciales pour certaines catégories d'entreprises ou de travailleurs)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza 2 concernente la legge sul lavoro (OLL 2) (Disposizioni speciali per determinate categorie di aziende e di lavoratori)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "822.112"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2014/474"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-09-15"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-08-20"
+        "value": "RO 2014 2765"
       },
       "titleDe": {
         "type": "literal",
@@ -1013,6 +1101,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-08-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 2765"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung 2 zum Arbeitsgesetz (ArGV 2) (Sonderbestimmungen für bestimmte Gruppen von Betrieben oder Arbeitnehmern und Arbeitnehmerinnen)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance 2 relative à la loi sur le travail (OLT 2) (Dispositions spéciales pour certaines catégories d'entreprises ou de travailleurs)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza 2 concernente la legge sul lavoro (OLL 2) (Disposizioni speciali per determinate categorie di aziende e di lavoratori)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "822.112"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/474"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-09-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-08-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 2765"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung 2 zum Arbeitsgesetz (ArGV 2) (Sonderbestimmungen für bestimmte Gruppen von Betrieben oder Arbeitnehmern und Arbeitnehmerinnen)"
@@ -1045,6 +1173,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-02-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 669"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung 2 zum Arbeitsgesetz (ArGV 2) (Sonderbestimmungen für bestimmte Gruppen von Betrieben oder Arbeitnehmern und Arbeitnehmerinnen)"
@@ -1077,6 +1209,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-02-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 669"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung 2 zum Arbeitsgesetz (ArGV 2) (Sonderbestimmungen für bestimmte Gruppen von Betrieben oder Arbeitnehmern und Arbeitnehmerinnen)"
@@ -1108,6 +1244,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-02-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 669"
       },
       "titleDe": {
         "type": "literal",
@@ -1141,6 +1281,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-03-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 977"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung 2 zum Arbeitsgesetz (ArGV 2) (Sonderbestimmungen für bestimmte Gruppen von Betrieben oder Arbeitnehmern und Arbeitnehmerinnen)"
@@ -1173,6 +1317,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-03-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 977"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung 2 zum Arbeitsgesetz (ArGV 2) (Sonderbestimmungen für bestimmte Gruppen von Betrieben oder Arbeitnehmern und Arbeitnehmerinnen)"
@@ -1205,6 +1353,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-03-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 977"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung 2 zum Arbeitsgesetz (ArGV 2) (Sonderbestimmungen für bestimmte Gruppen von Betrieben oder Arbeitnehmern und Arbeitnehmerinnen)"
@@ -1237,37 +1389,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-08-17"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung 2 zum Arbeitsgesetz (ArGV 2) (Sonderbestimmungen für bestimmte Gruppen von Betrieben oder Arbeitnehmern und Arbeitnehmerinnen)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance 2 relative à la loi sur le travail (OLT 2) (Dispositions spéciales pour certaines catégories d'entreprises  ou de travailleurs)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza 2 concernente la legge sul lavoro (OLL 2) (Disposizioni speciali per determinate categorie di aziende e di lavoratori)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "822.112"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2016/490"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-09-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-08-17"
+        "value": "RO 2016 2949"
       },
       "titleDe": {
         "type": "literal",
@@ -1301,6 +1425,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-08-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2949"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung 2 zum Arbeitsgesetz (ArGV 2) (Sonderbestimmungen für bestimmte Gruppen von Betrieben oder Arbeitnehmern und Arbeitnehmerinnen)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance 2 relative à la loi sur le travail (OLT 2) (Dispositions spéciales pour certaines catégories d'entreprises  ou de travailleurs)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza 2 concernente la legge sul lavoro (OLL 2) (Disposizioni speciali per determinate categorie di aziende e di lavoratori)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "822.112"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/490"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-09-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-08-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2949"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung 2 zum Arbeitsgesetz (ArGV 2) (Sonderbestimmungen für bestimmte Gruppen von Betrieben oder Arbeitnehmern und Arbeitnehmerinnen)"
@@ -1333,6 +1497,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-12-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 13"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung 2 zum Arbeitsgesetz (ArGV 2) (Sonderbestimmungen für bestimmte Gruppen von Betrieben oder Arbeitnehmern und Arbeitnehmerinnen)"
@@ -1365,6 +1533,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-12-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 13"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung 2 zum Arbeitsgesetz (ArGV 2) (Sonderbestimmungen für bestimmte Gruppen von Betrieben oder Arbeitnehmern und Arbeitnehmerinnen)"
@@ -1396,6 +1568,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-12-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 13"
       },
       "titleDe": {
         "type": "literal",
@@ -1428,6 +1604,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-02-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 941"
       },
       "titleDe": {
         "type": "literal",
@@ -1461,6 +1641,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-02-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 941"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung 2 zum Arbeitsgesetz (ArGV 2) (Sonderbestimmungen für bestimmte Gruppen von Betrieben oder Arbeitnehmern und Arbeitnehmerinnen)"
@@ -1492,6 +1676,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-02-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 941"
       },
       "titleDe": {
         "type": "literal",

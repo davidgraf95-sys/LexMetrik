@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1900-07-27"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 27. Juli 1900 über die gewerblichen Muster und Modelle (MMV) "
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 27 juillet 1900 sur les dessins et modèles industriels (ODMI) "
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 27 luglio 1900 sui disegni e modelli industriali (ODMI) "
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "232.121"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/18/138_135_140"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1900-08-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1900-07-27"
+        "value": "RO 18 135"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1900-07-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 18 135"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 27. Juli 1900 über die gewerblichen Muster und Modelle (MMV) "
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1900-07-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 18 135"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 27. Juli 1900 über die gewerblichen Muster und Modelle (MMV) "
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 27 juillet 1900 sur les dessins et modèles industriels (ODMI) "
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 27 luglio 1900 sui disegni e modelli industriali (ODMI) "
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "232.121"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/18/138_135_140"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1900-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1900-07-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 18 135"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 27. Juli 1900 über die gewerblichen Muster und Modelle (MMV) "
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-03-08"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über den Schutz von Design (Designverordnung, DesV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la protection des designs (Ordonnance sur les designs, ODes)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla protezione del design (Ordinanza sul design, ODes) "
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "232.121"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/183"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-03-08"
+        "value": "RO 2002 1122"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-03-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1122"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz von Design (Designverordnung, DesV)"
@@ -245,6 +237,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-03-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1122"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über den Schutz von Design (Designverordnung, DesV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la protection des designs (Ordonnance sur les designs, ODes)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla protezione del design (Ordinanza sul design, ODes) "
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "232.121"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/183"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-03-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1122"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz von Design (Designverordnung, DesV)"
@@ -277,37 +309,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-12-03"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über den Schutz von Design (Designverordnung, DesV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la protection des designs (Ordonnance sur les designs, ODes)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla protezione del design (Ordinanza sul design, ODes)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "232.121"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/769"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-12-03"
+        "value": "RO 2004 5023"
       },
       "titleDe": {
         "type": "literal",
@@ -341,37 +345,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-12-03"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über den Schutz von Design (Designverordnung, DesV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la protection des designs (Ordonnance sur les designs, ODes)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla protezione del design (Ordinanza sul design, ODes)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "232.121"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/690"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-10-18"
+        "value": "RO 2004 5023"
       },
       "titleDe": {
         "type": "literal",
@@ -393,17 +369,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/690"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/769"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-01-01"
+        "value": "2005-01-01"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-10-18"
+        "value": "2004-12-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 5023"
       },
       "titleDe": {
         "type": "literal",
@@ -437,6 +417,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-10-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4481"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über den Schutz von Design (Designverordnung, DesV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la protection des designs (Ordonnance sur les designs, ODes)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla protezione del design (Ordinanza sul design, ODes)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "232.121"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/690"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-10-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4481"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über den Schutz von Design (Designverordnung, DesV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la protection des designs (Ordonnance sur les designs, ODes)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla protezione del design (Ordinanza sul design, ODes)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "232.121"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/690"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-10-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4481"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz von Design (Designverordnung, DesV)"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-03-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 1895"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz von Design (Designverordnung, DesV)"
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-03-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 1895"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz von Design (Designverordnung, DesV)"
@@ -532,6 +596,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-03-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 1895"
       },
       "titleDe": {
         "type": "literal",
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-05-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2549"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz von Design (Designverordnung, DesV)"
@@ -597,6 +669,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-05-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2549"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz von Design (Designverordnung, DesV)"
@@ -629,6 +705,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-05-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2549"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz von Design (Designverordnung, DesV)"
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-05-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 2245"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz von Design (Designverordnung, DesV)"
@@ -693,6 +777,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-05-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 2245"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz von Design (Designverordnung, DesV)"
@@ -725,6 +813,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-05-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 2245"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz von Design (Designverordnung, DesV)"
@@ -757,6 +849,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-12-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4833"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz von Design (Designverordnung, DesV)"
@@ -789,6 +885,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-12-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4833"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz von Design (Designverordnung, DesV)"
@@ -820,6 +920,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-12-02"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4833"
       },
       "titleDe": {
         "type": "literal",

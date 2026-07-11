@@ -21,6 +21,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1993-06-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1993 3152"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 18. Juni 1993 über Pauschalreisen"
@@ -53,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1993-06-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1993 3152"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 18. Juni 1993 über Pauschalreisen"
@@ -85,6 +93,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1993-06-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1993 3152"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 18. Juni 1993 über Pauschalreisen"
@@ -116,6 +128,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1993-06-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1993 3152"
       },
       "titleDe": {
         "type": "literal",

@@ -1,7 +1,7 @@
 {
   "erlassKey": "FDV",
   "sr": "784.101.1",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -99,24 +99,24 @@
       "dateEntryInForce": "2021-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/1020",
       "dateDocument": "2020-11-18",
-      "roFundstelle": "AS 2020 1020",
+      "roFundstelle": "AS 2020 6183",
       "titelDe": "Verordnung über Fernmeldedienste (FDV)",
       "titelFr": "Ordonnance sur les services de télécommunication (OST)",
       "titelIt": "Ordinanza sui servizi di telecomunicazione (OST)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/1020/de",
-      "sha": "5125b6fbccda60a8ba1819da1726d8e88d85f2dd0b6be30533ad0051cf7d6a01"
+      "sha": "bb0bba35f07b9c8bb2dea2bbda1f772b186e49c48a7cbaf9660ba021b751974b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2020-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/636",
       "dateDocument": "2019-10-30",
-      "roFundstelle": "AS 2019 636",
+      "roFundstelle": "AS 2019 3487",
       "titelDe": "Verordnung über Fernmeldedienste (FDV)",
       "titelFr": "Ordonnance sur les services de télécommunication (OST)",
       "titelIt": "Ordinanza sui servizi di telecomunicazione (OST)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/636/de",
-      "sha": "a7dbb44afaba5afa204211f8e5486d4f1406ab694a0271ebcfa1a63f3f976c8e"
+      "sha": "89339213f5dbf4692eeb4c423a76166e9b0198416c09deb429115b4fa9b40ccf"
     },
     {
       "art": "sammelerlass-marker",
@@ -129,12 +129,12 @@
       "dateEntryInForce": "2018-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/4",
       "dateDocument": "2016-12-02",
-      "roFundstelle": "AS 2017 4",
+      "roFundstelle": "AS 2017 13",
       "titelDe": "Verordnung über Fernmeldedienste",
       "titelFr": "Ordonnance sur les services de télécommunication",
       "titelIt": "Ordinanza sui servizi di telecomunicazione",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/4/de",
-      "sha": "91c1187fa0cfcc3de4a2145a39e61780fd7daf0b782bef39c67e161a80809262"
+      "sha": "c6d09608c170d3757828b9c5a20b24a357e4ab6f4572f9889395be3bc7b32c72"
     },
     {
       "art": "sammelerlass-marker",
@@ -153,60 +153,60 @@
       "dateEntryInForce": "2015-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/697",
       "dateDocument": "2014-11-05",
-      "roFundstelle": "AS 2014 697",
+      "roFundstelle": "AS 2014 4161",
       "titelDe": "Verordnung über Fernmeldedienste (FDV)",
       "titelFr": "Ordonnance sur les services de télécommunication (OST)",
       "titelIt": "Ordinanza sui servizi di telecomunicazione (OST)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/697/de",
-      "sha": "64e01b46cc68f3a33265a2eb8a5472da78a60c271e753b22eeac546affbaa85b"
+      "sha": "2bc87d7085b329669a7119980daa3446ea57aa4fdee74df031f20e685502043d"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2014-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/158",
       "dateDocument": "2014-03-14",
-      "roFundstelle": "AS 2014 158",
+      "roFundstelle": "AS 2014 729",
       "titelDe": "Verordnung über Fernmeldedienste (FDV)",
       "titelFr": "Ordonnance sur les services de télécommunication (OST)",
       "titelIt": "Ordinanza sui servizi di telecomunicazione (OST)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/158/de",
-      "sha": "0a686b9d7e71bac71cb591c8e69ae0d7e1230d1fb562a56ef0c108a9550ed1f1"
+      "sha": "8d78fca6e28a499a523df74b1581cd3dca278c62c24af2924f7110fee51c7f4e"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2012-12-28",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/903",
       "dateDocument": "2012-12-28",
-      "roFundstelle": "AS 2012 903",
+      "roFundstelle": "AS 2012 7505",
       "titelDe": "Verordnung über Fernmeldedienste (FDV) (Betrifft nur den französischen Text)",
       "titelFr": "Ordonnance sur les services de télécommunication (OST)",
       "titelIt": "Ordinanza sui servizi di telecomunicazione (OST) (Concerne solo il testo francese)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/903/de",
-      "sha": "3ef7aac225da4cca5f3092e4869927bf31cf1584e8a4723170f39db66a9b90f8"
+      "sha": "43a08f9f432e1a8e1dcdf6363e969b6ce3fd9a04e598680c3c7fae2edd1c7cb0"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2012-12-18",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/885",
       "dateDocument": "2012-12-18",
-      "roFundstelle": "AS 2012 885",
+      "roFundstelle": "AS 2012 7265",
       "titelDe": "Verordnung über Fernmeldedienste (FDV) (Betrifft nur den französischen Text)",
       "titelFr": "Ordonnance sur les services de télécommunication (OST)",
       "titelIt": "Ordinanza sui servizi di telecomunicazione (OST) (Concerne solo il testo francese)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/885/de",
-      "sha": "370e4068e045fcca4c6e04d086e74c14e288e5d9e9566a4110b1874144368544"
+      "sha": "876f1a3bf61a819e67343b63895fb44c4959eaf153564257a7b123601f941af5"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2012-03-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/25",
       "dateDocument": "2011-12-09",
-      "roFundstelle": "AS 2012 25",
+      "roFundstelle": "AS 2012 367",
       "titelDe": "Verordnung über Fernmeldedienste (FDV)",
       "titelFr": "Ordonnance sur les services de télécommunication (OST)",
       "titelIt": "Ordinanza sui servizi di telecomunicazione (OST)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/25/de",
-      "sha": "193a9f980794ac43e90f328497fc4f3c49fb85519d788f98d7e47123935f8501"
+      "sha": "0e4326be26c620801a99d29961b3db768b8610454995b932158d86c658ace33b"
     },
     {
       "art": "sammelerlass-marker",
@@ -219,12 +219,12 @@
       "dateEntryInForce": "2010-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/703",
       "dateDocument": "2009-11-04",
-      "roFundstelle": "AS 2009 703",
+      "roFundstelle": "AS 2009 5821",
       "titelDe": "Verordnung über Fernmeldedienste (FDV)",
       "titelFr": "Ordonnance sur les services de télécommunication (OST)",
       "titelIt": "Ordinanza sui servizi di telecomunicazione (OST)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/703/de",
-      "sha": "f19ba3b309f38bb32fbec1bcc61a93e5e0d2682274ecbebe8b42c76d745e93e4"
+      "sha": "f4abcf456fa5b0286c22b9657c02d195803df3fb4ed7ec7bbc14e91224d717e1"
     },
     {
       "art": "sammelerlass-marker",
@@ -243,144 +243,144 @@
       "dateEntryInForce": "2007-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/166",
       "dateDocument": "2007-03-09",
-      "roFundstelle": "AS 2007 166",
+      "roFundstelle": "AS 2007 945",
       "titelDe": "Verordnung über Fernmeldedienste (FDV)",
       "titelFr": "Ordonnance sur les services de télécommunication (OST)",
       "titelIt": "Ordinanza sui servizi di telecomunicazione (OST)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/166/de",
-      "sha": "5eb7ff25b5eadea89db6ce38ea6ea0e28757da5fe4ed4146cb9d49c3b2b5509a"
+      "sha": "ea6299ee6ad6b8fd3b5f0c54ed535569e3efb3ebac20617cb597fb2f5a638e4a"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2006-10-10",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/592",
       "dateDocument": "2006-09-13",
-      "roFundstelle": "AS 2006 592",
+      "roFundstelle": "AS 2006 3939",
       "titelDe": "Verordnung über Fernmeldedienste (FDV)",
       "titelFr": "Ordonnance sur les services de télécommunication (OST)",
       "titelIt": "Ordinanza sui servizi di telecomunicazione (OST)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/592/de",
-      "sha": "c9741badda2351def4340f089f0a9d7a8ad8f0dc923c0874a38e2e36b1b41533"
+      "sha": "c7c527d70f18cf934e4c439680a66c6efb1141ddfaca6c3e81574d74dc6205b5"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2005-09-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/510",
       "dateDocument": "2005-06-22",
-      "roFundstelle": "AS 2005 510",
+      "roFundstelle": "AS 2005 3555",
       "titelDe": "Verordnung über Fernmeldedienste (FDV)",
       "titelFr": "Ordonnance sur les services de télécommunication (OST)",
       "titelIt": "Ordinanza sui servizi di telecomunicazione (OST)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/510/de",
-      "sha": "fbf8f0681d1db068e16600cf378eae6e6600cef4b86fe4f31404b131f2a26146"
+      "sha": "86655163588cd224870e8e6c7cf60e970d4f7b070ba4e97859a104f8464fbdcd"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2005-02-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/70",
       "dateDocument": "2005-01-19",
-      "roFundstelle": "AS 2005 70",
+      "roFundstelle": "AS 2005 669",
       "titelDe": "Verordnung über Fernmeldedienste (FDV)",
       "titelFr": "Ordonnance sur les services de télécommunication (OST)",
       "titelIt": "Ordinanza sui servizi di telecomunicazione (OST)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/70/de",
-      "sha": "397a75df471f9c4a41941712941674c29f37aab49cd527da4261bc24852f12ed"
+      "sha": "c5f907d1bac3692e31ded79950b7919ab2027f03f3f94a9d6aa65dd28ade3b78"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2004-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/693",
       "dateDocument": "2003-12-05",
-      "roFundstelle": "AS 2003 693",
+      "roFundstelle": "AS 2003 4767",
       "titelDe": "Verordnung über Fernmeldedienste (FDV)",
       "titelFr": "Ordonnance sur les services de télécommunication (OST)",
       "titelIt": "Ordinanza sui servizi di telecomunicazione (OST)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/693/de",
-      "sha": "3848cd9233af11c0d88b306cd5d5744cd596107c5b6dd75840e2434e54bbb408"
+      "sha": "6fc884d9f1f4dcef520a50dc6fc2062148f5acb01ccb030f42ee07b34df4d115"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2003-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/117",
       "dateDocument": "2003-03-07",
-      "roFundstelle": "AS 2003 117",
+      "roFundstelle": "AS 2003 544",
       "titelDe": "Verordnung über Fernmeldedienste (FDV)",
       "titelFr": "Ordonnance sur les services de télécommunication (OST)",
       "titelIt": "Ordinanza sui servizi di telecomunicazione (OST)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/117/de",
-      "sha": "7c038d9dc45b11f424752ed639435db9838295ae84cc649df01b4fb279cdc207"
+      "sha": "a1c8e8ef80efb2b706f1397fff744b0e6ebc5d9fc4ce6a0e5b74b71b056c0888"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2002-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/58",
       "dateDocument": "2001-12-19",
-      "roFundstelle": "AS 2002 58",
+      "roFundstelle": "AS 2002 271",
       "titelDe": "Verordnung über Fernmeldedienste (FDV)",
       "titelFr": "Ordonnance sur les services de télécommunication (OST)",
       "titelIt": "Ordinanza sui servizi di telecomunicazione (OST)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/58/de",
-      "sha": "77492f97ef41b09e37521c6749e580f5be3911e4173818d57aea416c5bb7b508"
+      "sha": "d2343676ab77700e10d6719d4b4d4aad01550ec8a17b73c0b9f9b79746fb98b1"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-11-15",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/421",
       "dateDocument": "2001-10-31",
-      "roFundstelle": "AS 2001 421",
+      "roFundstelle": "AS 2001 2759",
       "titelDe": "Verordnung über Fernmeldedienste (FDV)",
       "titelFr": "Ordonnance sur les services de télécommunication (OST)",
       "titelIt": "Ordinanza sui servizi di telecomunicazione (OST)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/421/de",
-      "sha": "9406af57a2be2719febc911a58cb4ede20672a8c5d42a6947ce1cf312594ac3a"
+      "sha": "75a675dbaba3313cca2446f92c9dcfd4b31aa9352b9f929f1028b1bf8161b167"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-11-15",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/479",
       "dateDocument": "2001-12-18",
-      "roFundstelle": "AS 2001 479",
+      "roFundstelle": "AS 2001 3170",
       "titelDe": "Verordnung über Fernmeldedienste (FDV) (Betrifft nur den italienischen Text)",
       "titelFr": "Ordonnance sur les services de télécommunication (OST) (Ne concerne que le texte italien)",
       "titelIt": "Ordinanza sui servizi di telecomunicazione (OST)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/479/de",
-      "sha": "5677e8da5754083ea014cd736ffb98e18007d7a483e2822068ad3961c974114d"
+      "sha": "bc612260611d873801fa17306b94034adb69908193954e90f3abd4a46b14a164"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-11-15",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/259",
       "dateDocument": "2002-07-09",
-      "roFundstelle": "AS 2002 259",
+      "roFundstelle": "AS 2002 1728",
       "titelDe": "Verordnung über Fernmeldedienste (FDV) (nur ital.)",
       "titelFr": "Ordonnance sur les services de télécommunication (OST) (seulement en italien)",
       "titelIt": "Ordinanza sui servizi di telecomunicazione (OST)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/259/de",
-      "sha": "c45fd8bde9dc21e82991f3211f0876a03077eb3ec636f01f092d28861b7f48a3"
+      "sha": "82bc5b66acfad02544bbef04f2aad18738b7acd00a3abdda320d06c68617b9c6"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-11-15",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/27",
       "dateDocument": "2002-01-22",
-      "roFundstelle": "AS 2002 27",
+      "roFundstelle": "AS 2002 158",
       "titelDe": "Verordnung über Fernmeldedienste (FDV)",
       "titelFr": "Ordonnance sur les services de télécommunication (OST)",
       "titelIt": "Ordinanza sui servizi di telecomunicazione (OST)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/27/de",
-      "sha": "7c3debeab6704cd09c7dd66c3700157abfce02ce6610a73d46d745bc3f593b6a"
+      "sha": "7bd0b687c47505d4b89bd50ce2b802024d4ddaae52777224ad8dde7ff389e0d3"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2000-05-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/165",
       "dateDocument": "2000-04-05",
-      "roFundstelle": "AS 2000 165",
+      "roFundstelle": "AS 2000 1044",
       "titelDe": "Verordnung über Fernmeldedienste (FDV)",
       "titelFr": "Ordonnance sur les services de télécommunications (OST)",
       "titelIt": "Ordinanza sui servizi di telecomunicazione (OST)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/165/de",
-      "sha": "26c79721eaf16f2d105b1d66177405631e0da657f16267be1d2e964b0326455d"
+      "sha": "08ed975dbd3f41e6570d98ccf81256318aa83dce7fcbf9acd9e7551f28c6612a"
     },
     {
       "art": "aenderung",
@@ -407,5 +407,5 @@
       "sha": "1bb93b91d60b1ca18d306fae85cd79a9c77a8d6ba856f97cfecb010807b08ce0"
     }
   ],
-  "sha": "c97247d295c3598f90a42148d64f7c7fac46951aa47a25e939c4e8e995014450"
+  "sha": "de0d222d869b54b1bd2cb04b3186a807f1a4ea0ecd182e818d6014345c6bb71b"
 }

@@ -21,69 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1900-03-30"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom 30. März 1900 betreffend die gewerblichen Muster und Modelle "
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 30 mars 1900 sur les dessins et modèles industriels "
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 30 marzo 1900 sui disegni e modelli industriali "
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "232.12"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/18/126_124_128"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1900-08-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1900-03-30"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Bundesgesetz vom 30. März 1900 betreffend die gewerblichen Muster und Modelle "
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 30 mars 1900 sur les dessins et modèles industriels "
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 30 marzo 1900 sui disegni e modelli industriali "
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "232.12"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/18/126_124_128"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1900-08-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1900-03-30"
+        "value": "RO 18 124"
       },
       "titleDe": {
         "type": "literal",
@@ -117,6 +57,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1900-03-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 18 124"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 30. März 1900 betreffend die gewerblichen Muster und Modelle "
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 30 mars 1900 sur les dessins et modèles industriels "
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 30 marzo 1900 sui disegni e modelli industriali "
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "232.12"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/18/126_124_128"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1900-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1900-03-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 18 124"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 30. März 1900 betreffend die gewerblichen Muster und Modelle "
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 30 mars 1900 sur les dessins et modèles industriels "
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 30 marzo 1900 sui disegni e modelli industriali "
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "232.12"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/18/126_124_128"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1900-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1900-03-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 18 124"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 30. März 1900 betreffend die gewerblichen Muster und Modelle "
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-10-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1456"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Schutz von Design (Designgesetz, DesG)"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-10-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1456"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Schutz von Design (Designgesetz, DesG)"
@@ -213,6 +237,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-10-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1456"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Schutz von Design (Designgesetz, DesG)"
@@ -244,6 +272,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-10-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1456"
       },
       "titleDe": {
         "type": "literal",

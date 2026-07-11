@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1972-06-19"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Allgemeine Gewässerschutzverordnung vom 19. Juni 1972"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance générale du 19 juin 1972 sur la protection des eaux"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza generale del 19 giugno 1972 sulla protezione delle acque"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "814.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1972/967_976_1138"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1972-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1972-06-19"
+        "value": "RO 1972 976"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1972-06-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1972 976"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Allgemeine Gewässerschutzverordnung vom 19. Juni 1972"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1972-06-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1972 976"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Allgemeine Gewässerschutzverordnung vom 19. Juni 1972"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance générale du 19 juin 1972 sur la protection des eaux"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza generale del 19 giugno 1972 sulla protezione delle acque"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "814.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1972/967_976_1138"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1972-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1972-06-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1972 976"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Allgemeine Gewässerschutzverordnung vom 19. Juni 1972"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-10-28"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Gewässerschutzverordnung (GSchV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la protection des eaux (OEaux)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla protezione delle acque (OPAc)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "814.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1998/2863_2863_2863"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-10-28"
+        "value": "RO 1998 2863"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-10-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1998 2863"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Gewässerschutzverordnung (GSchV)"
@@ -245,6 +237,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-10-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1998 2863"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Gewässerschutzverordnung (GSchV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la protection des eaux (OEaux)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla protezione delle acque (OPAc)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "814.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1998/2863_2863_2863"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-10-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1998 2863"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Gewässerschutzverordnung (GSchV)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-10-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 3168"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Gewässerschutzverordnung (GSchV)"
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-10-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 3168"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Gewässerschutzverordnung (GSchV)"
@@ -340,6 +380,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-10-31"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 3168"
       },
       "titleDe": {
         "type": "literal",
@@ -373,37 +417,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-10-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Gewässerschutzverordnung (GSchV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la protection des eaux (OEaux)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla protezione delle acque (OPAc)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "814.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/590"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-10-22"
+        "value": "RO 2003 4043"
       },
       "titleDe": {
         "type": "literal",
@@ -437,6 +453,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-10-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 4043"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Gewässerschutzverordnung (GSchV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la protection des eaux (OEaux)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla protezione delle acque (OPAc)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "814.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/590"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-10-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 4043"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Gewässerschutzverordnung (GSchV)"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-10-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4291"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Gewässerschutzverordnung (GSchV)"
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-10-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4291"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Gewässerschutzverordnung (GSchV)"
@@ -532,6 +596,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-10-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4291"
       },
       "titleDe": {
         "type": "literal",
@@ -565,37 +633,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-05-04"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Gewässerschutzverordnung (GSchV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la protection des eaux (OEaux)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla protezione delle acque (OPAc)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "814.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/290"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-06-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-05-04"
+        "value": "RO 2011 1955"
       },
       "titleDe": {
         "type": "literal",
@@ -629,6 +669,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-05-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 1955"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Gewässerschutzverordnung (GSchV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la protection des eaux (OEaux)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla protezione delle acque (OPAc)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "814.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/290"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-05-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 1955"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Gewässerschutzverordnung (GSchV)"
@@ -660,6 +740,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-06-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3379"
       },
       "titleDe": {
         "type": "literal",
@@ -693,6 +777,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-06-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3379"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Anpassungen von Verordnungen im Umweltbereich"
@@ -725,6 +813,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-06-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3379"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Anpassungen von Verordnungen im Umweltbereich"
@@ -757,37 +849,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-11-04"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Gewässerschutzverordnung (GSchV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la protection des eaux (OEaux)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla protezione delle acque (OPAc)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "814.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/786"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-11-04"
+        "value": "RO 2015 4791"
       },
       "titleDe": {
         "type": "literal",
@@ -821,6 +885,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-11-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 4791"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Gewässerschutzverordnung (GSchV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la protection des eaux (OEaux)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla protezione delle acque (OPAc)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "814.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/786"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-11-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 4791"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Gewässerschutzverordnung (GSchV)"
@@ -853,6 +957,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-02-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 473"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Gewässerschutzverordnung (GSchV)"
@@ -885,6 +993,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-02-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 473"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Gewässerschutzverordnung (GSchV)"
@@ -916,6 +1028,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-02-02"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 473"
       },
       "titleDe": {
         "type": "literal",
@@ -949,37 +1065,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Gewässerschutzverordnung (GSchV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la protection des eaux (OEaux)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla protezione delle acque (OPAc)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "814.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2017/245"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-05-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-03-22"
+        "value": "RO 2017 2585"
       },
       "titleDe": {
         "type": "literal",
@@ -1013,6 +1101,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 2585"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Gewässerschutzverordnung (GSchV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la protection des eaux (OEaux)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla protezione delle acque (OPAc)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "814.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2017/245"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-05-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-03-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 2585"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Gewässerschutzverordnung (GSchV)"
@@ -1044,6 +1172,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-02-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 509"
       },
       "titleDe": {
         "type": "literal",
@@ -1077,6 +1209,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-02-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 509"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Gewässerschutzverordnung (GSchV) (Betrifft nur den italienischen Text)"
@@ -1109,6 +1245,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-02-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 509"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Gewässerschutzverordnung (GSchV) (Betrifft nur den italienischen Text)"
@@ -1141,6 +1281,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-04-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 1685"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Gewässerschutzverordnung (GSchV)"
@@ -1173,6 +1317,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-04-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 1685"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Gewässerschutzverordnung (GSchV)"
@@ -1205,6 +1353,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-04-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 1685"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Gewässerschutzverordnung (GSchV)"
@@ -1236,6 +1388,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-04-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1487"
       },
       "titleDe": {
         "type": "literal",
@@ -1269,6 +1425,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-04-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1487"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Anpassungen des Verordnungsrechts an die Weiterentwicklung der Programmvereinbarungen im Umweltbereich für die Programmperiode 20202024"
@@ -1301,6 +1461,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-04-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1487"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Anpassungen des Verordnungsrechts an die Weiterentwicklung der Programmvereinbarungen im Umweltbereich für die Programmperiode 20202024"
@@ -1333,6 +1497,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-04-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1489"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Gewässerschutzverordnung (GSchV)"
@@ -1365,6 +1533,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-04-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1489"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Gewässerschutzverordnung (GSchV)"
@@ -1397,6 +1569,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-04-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1489"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Gewässerschutzverordnung (GSchV)"
@@ -1429,6 +1605,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-02-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 515"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Gewässerschutzverordnung (GSchV)"
@@ -1461,6 +1641,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-02-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 515"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Gewässerschutzverordnung (GSchV)"
@@ -1492,6 +1676,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-02-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 515"
       },
       "titleDe": {
         "type": "literal",

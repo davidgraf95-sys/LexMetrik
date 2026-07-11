@@ -21,6 +21,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-04-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 2669"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Handelsregisterverordnung (HRegV)"
@@ -53,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-04-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 2669"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Handelsregisterverordnung (HRegV)"
@@ -85,69 +93,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-04-21"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Handelsregisterverordnung (HRegV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le registre du commerce (ORC)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sul registro di commercio (ORC)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "221.411"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2005/593"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-08-24"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Handelsregisterverordnung (HRegV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le registre du commerce (ORC)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sul registro di commercio (ORC)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "221.411"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2005/593"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-08-24"
+        "value": "RO 2004 2669"
       },
       "titleDe": {
         "type": "literal",
@@ -181,6 +129,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-08-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 4557"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Handelsregisterverordnung (HRegV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le registre du commerce (ORC)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul registro di commercio (ORC)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "221.411"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/593"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-08-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 4557"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Handelsregisterverordnung (HRegV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le registre du commerce (ORC)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul registro di commercio (ORC)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "221.411"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/593"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-08-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 4557"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Handelsregisterverordnung (HRegV)"
@@ -213,6 +237,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 4851"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Handelsregisterverordnung (HRegV)"
@@ -245,6 +273,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 4851"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Handelsregisterverordnung (HRegV)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 4851"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Handelsregisterverordnung (HRegV)"
@@ -308,6 +344,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 4851"
       },
       "titleDe": {
         "type": "literal",
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-05-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1663"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Handelsregisterverordnung (HRegV)"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-05-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1663"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Handelsregisterverordnung (HRegV)"
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-05-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1663"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Handelsregisterverordnung (HRegV)"
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-03-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 971"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Handelsregisterverordnung (HRegV)"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-03-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 971"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Handelsregisterverordnung (HRegV)"
@@ -500,6 +560,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-03-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 971"
       },
       "titleDe": {
         "type": "literal",
@@ -725,6 +789,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1937-06-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 53 573"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Handelsregisterverordnung vom 7. Juni 1937 (HRegV)"
@@ -757,6 +825,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1937-06-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 53 573"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Handelsregisterverordnung vom 7. Juni 1937 (HRegV)"
@@ -789,6 +861,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1937-06-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 53 573"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Handelsregisterverordnung vom 7. Juni 1937 (HRegV)"
@@ -820,6 +896,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1937-06-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 53 573"
       },
       "titleDe": {
         "type": "literal",

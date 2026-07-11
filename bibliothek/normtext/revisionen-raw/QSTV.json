@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1993-10-19"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung des EFD vom 19. Oktober 1993 über die Quellensteuer bei der direkten Bundessteuer (Quellensteuerverordnung, QStV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du DFF du 19 octobre 1993 sur l'imposition à la source dans le cadre de l'impôt fédéral direct (Ordonnance sur l'imposition à la source, OIS)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del DFF del 19 ottobre 1993 sull'imposta alla fonte nel quadro dell'imposta federale diretta (Ordinanza sull'imposta alla fonte, OIFo)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "642.118.2"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1993/3324_3324_3324"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1995-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1993-10-19"
+        "value": "RO 1993 3324"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1993-10-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1993 3324"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung des EFD vom 19. Oktober 1993 über die Quellensteuer bei der direkten Bundessteuer (Quellensteuerverordnung, QStV)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1993-10-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1993 3324"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung des EFD vom 19. Oktober 1993 über die Quellensteuer bei der direkten Bundessteuer (Quellensteuerverordnung, QStV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du DFF du 19 octobre 1993 sur l'imposition à la source dans le cadre de l'impôt fédéral direct (Ordonnance sur l'imposition à la source, OIS)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del DFF del 19 ottobre 1993 sull'imposta alla fonte nel quadro dell'imposta federale diretta (Ordinanza sull'imposta alla fonte, OIFo)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "642.118.2"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1993/3324_3324_3324"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1995-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1993-10-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1993 3324"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung des EFD vom 19. Oktober 1993 über die Quellensteuer bei der direkten Bundessteuer (Quellensteuerverordnung, QStV)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-03-23"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Quellensteuer bei der direkten Bundessteuer (Quellensteuerverodnung, QStV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'imposition à la source dans le cadre de l'impôt fédéral direct (Ordonnance sur l'imposition à la source, OIS)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'imposta alla fonte nel quadro dell'imposta federale diretta (Ordinanza sull'imposta alla fonte, OIFo)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "642.118.2"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2001/156"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-03-23"
+        "value": "RO 2001 1055"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-03-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1055"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Quellensteuer bei der direkten Bundessteuer (Quellensteuerverodnung, QStV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'imposition à la source dans le cadre de l'impôt fédéral direct (Ordonnance sur l'imposition à la source, OIS)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'imposta alla fonte nel quadro dell'imposta federale diretta (Ordinanza sull'imposta alla fonte, OIFo)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "642.118.2"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2001/156"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-03-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1055"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Quellensteuer bei der direkten Bundessteuer (Quellensteuerverodnung, QStV)"
@@ -245,37 +273,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-07-06"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Quellensteuer bei der direkten Bundessteuer (Quellensteuerverordnung, QStV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'imposition à la source dans le cadre de l'impôt fédéral direct (Ordonnance sur l'imposition à la source, OIS)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'imposta alla fonte nel quadro dell'imposta federale diretta (Ordinanza sull'imposta alla fonte, OIFo)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "642.118.2"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2001/308"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-07-06"
+        "value": "RO 2001 2132"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +309,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-07-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 2132"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Quellensteuer bei der direkten Bundessteuer (Quellensteuerverordnung, QStV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'imposition à la source dans le cadre de l'impôt fédéral direct (Ordonnance sur l'imposition à la source, OIS)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'imposta alla fonte nel quadro dell'imposta federale diretta (Ordinanza sull'imposta alla fonte, OIFo)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "642.118.2"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2001/308"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-07-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 2132"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Quellensteuer bei der direkten Bundessteuer (Quellensteuerverordnung, QStV)"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-05-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1621"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Quellensteuer bei der direkten Bundessteuer (Quellensteuerverordnung, QStV)"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-05-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1621"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Quellensteuer bei der direkten Bundessteuer (Quellensteuerverordnung, QStV)"
@@ -404,6 +452,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-05-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1621"
       },
       "titleDe": {
         "type": "literal",
@@ -437,37 +489,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-07-10"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Quellensteuer bei der direkten Bundessteuer (Quellensteuerverordnung, QStV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'imposition à la source dans le cadre de l'impôt fédéral direct (Ordonnance sur l'imposition à la source, OIS)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'imposta alla fonte nel quadro dell'imposta federale diretta (Ordinanza sull'imposta alla fonte, OIFo)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "642.118.2"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/653"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-07-10"
+        "value": "RO 2006 4277"
       },
       "titleDe": {
         "type": "literal",
@@ -501,6 +525,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-07-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4277"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Quellensteuer bei der direkten Bundessteuer (Quellensteuerverordnung, QStV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'imposition à la source dans le cadre de l'impôt fédéral direct (Ordonnance sur l'imposition à la source, OIS)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'imposta alla fonte nel quadro dell'imposta federale diretta (Ordinanza sull'imposta alla fonte, OIFo)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "642.118.2"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/653"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-07-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4277"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Quellensteuer bei der direkten Bundessteuer (Quellensteuerverordnung, QStV)"
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-06-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 3163"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Quellensteuer bei der direkten Bundessteuer (Quellensteuerverordnung, QStV)"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-06-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 3163"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Quellensteuer bei der direkten Bundessteuer (Quellensteuerverordnung, QStV)"
@@ -596,6 +668,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-06-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 3163"
       },
       "titleDe": {
         "type": "literal",
@@ -629,6 +705,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-09-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4481"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Quellensteuer bei der direkten Bundessteuer (Quellensteuerverordnung, QStV)"
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-09-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4481"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Quellensteuer bei der direkten Bundessteuer (Quellensteuerverordnung, QStV)"
@@ -693,69 +777,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-09-28"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Quellensteuer bei der direkten Bundessteuer (Quellensteuerverordnung, QStV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'imposition à la source dans le cadre de l'impôt fédéral direct (Ordonnance sur l'imposition à la source, OIS)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'imposta alla fonte nel quadro dell'imposta federale diretta (Ordinanza sull'imposta alla fonte, OIFo)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "642.118.2"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/590"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-08-18"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung über die Quellensteuer bei der direkten Bundessteuer (Quellensteuerverordnung, QStV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'imposition à la source dans le cadre de l'impôt fédéral direct (Ordonnance sur l'imposition à la source, OIS)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'imposta alla fonte nel quadro dell'imposta federale diretta (Ordinanza sull'imposta alla fonte, OIFo)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "642.118.2"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/590"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-08-18"
+        "value": "RO 2010 4481"
       },
       "titleDe": {
         "type": "literal",
@@ -789,6 +813,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-08-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4329"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Quellensteuer bei der direkten Bundessteuer (Quellensteuerverordnung, QStV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'imposition à la source dans le cadre de l'impôt fédéral direct (Ordonnance sur l'imposition à la source, OIS)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'imposta alla fonte nel quadro dell'imposta federale diretta (Ordinanza sull'imposta alla fonte, OIFo)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "642.118.2"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/590"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-08-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4329"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Quellensteuer bei der direkten Bundessteuer (Quellensteuerverordnung, QStV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'imposition à la source dans le cadre de l'impôt fédéral direct (Ordonnance sur l'imposition à la source, OIS)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'imposta alla fonte nel quadro dell'imposta federale diretta (Ordinanza sull'imposta alla fonte, OIFo)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "642.118.2"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/590"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-08-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4329"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Quellensteuer bei der direkten Bundessteuer (Quellensteuerverordnung, QStV)"
@@ -821,6 +921,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-02-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 783"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung des EFD über die Quellensteuer bei der direkten Bundessteuer (Quellensteuerverordnung, QStV)"
@@ -853,6 +957,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-02-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 783"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung des EFD über die Quellensteuer bei der direkten Bundessteuer (Quellensteuerverordnung, QStV)"
@@ -885,69 +993,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-02-25"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung des EFD über die Quellensteuer bei der direkten Bundessteuer (Quellensteuerverordnung, QStV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du DFF sur l'imposition à la source dans le cadre de l'impôt fédéral direct (Ordonnance sur l'imposition à la source, OIS)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del DFF sull'imposta alla fonte nel quadro dell'imposta federale diretta (Ordinanza sull'imposta alla fonte, OIFo)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "642.118.2"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2018/274"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2021-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-04-11"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung des EFD über die Quellensteuer bei der direkten Bundessteuer (Quellensteuerverordnung, QStV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du DFF sur l'imposition à la source dans le cadre de l'impôt fédéral direct (Ordonnance sur l'imposition à la source, OIS)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del DFF sull'imposta alla fonte nel quadro dell'imposta federale diretta (Ordinanza sull'imposta alla fonte, OIFo)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "642.118.2"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2018/274"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2021-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-04-11"
+        "value": "RO 2013 783"
       },
       "titleDe": {
         "type": "literal",
@@ -981,6 +1029,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-04-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 1829"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung des EFD über die Quellensteuer bei der direkten Bundessteuer (Quellensteuerverordnung, QStV)"
@@ -1012,6 +1064,82 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-04-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 1829"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung des EFD über die Quellensteuer bei der direkten Bundessteuer (Quellensteuerverordnung, QStV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du DFF sur l'imposition à la source dans le cadre de l'impôt fédéral direct (Ordonnance sur l'imposition à la source, OIS)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del DFF sull'imposta alla fonte nel quadro dell'imposta federale diretta (Ordinanza sull'imposta alla fonte, OIFo)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "642.118.2"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/274"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-04-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 1829"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung des EFD über die Quellensteuer bei der direkten Bundessteuer (Quellensteuerverordnung, QStV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du DFF sur l'imposition à la source dans le cadre de l'impôt fédéral direct (Ordonnance sur l'imposition à la source, OIS)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del DFF sull'imposta alla fonte nel quadro dell'imposta federale diretta (Ordinanza sull'imposta alla fonte, OIFo)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "642.118.2"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/274"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-04-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 1829"
       },
       "titleDe": {
         "type": "literal",

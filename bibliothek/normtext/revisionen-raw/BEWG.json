@@ -21,69 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1961-03-23"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesbeschluss vom 23. März 1961 über die Bewilligungspflicht für den Erwerb von Grundstücken durch Personen im Ausland"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Arrêté fédéral du 23 mars 1961 instituant le régime de l'autorisation pour l'acquisition d'immeubles par des personnes domicilées à l'étranger"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Decreto federale 23 marzo 1961 concernente l'autorizzazione per l'acquisto di fondi da parte di persone all'estero"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "211.412.41"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1961/203_209_213"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1961-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1961-03-23"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Bundesbeschluss vom 23. März 1961 über die Bewilligungspflicht für den Erwerb von Grundstücken durch Personen im Ausland"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Arrêté fédéral du 23 mars 1961 instituant le régime de l'autorisation pour l'acquisition d'immeubles par des personnes domicilées à l'étranger"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Decreto federale 23 marzo 1961 concernente l'autorizzazione per l'acquisto di fondi da parte di persone all'estero"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "211.412.41"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1961/203_209_213"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1961-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1961-03-23"
+        "value": "RO 1961 209"
       },
       "titleDe": {
         "type": "literal",
@@ -117,6 +57,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1961-03-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1961 209"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesbeschluss vom 23. März 1961 über die Bewilligungspflicht für den Erwerb von Grundstücken durch Personen im Ausland"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Arrêté fédéral du 23 mars 1961 instituant le régime de l'autorisation pour l'acquisition d'immeubles par des personnes domicilées à l'étranger"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Decreto federale 23 marzo 1961 concernente l'autorizzazione per l'acquisto di fondi da parte di persone all'estero"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "211.412.41"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1961/203_209_213"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1961-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1961-03-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1961 209"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesbeschluss vom 23. März 1961 über die Bewilligungspflicht für den Erwerb von Grundstücken durch Personen im Ausland"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Arrêté fédéral du 23 mars 1961 instituant le régime de l'autorisation pour l'acquisition d'immeubles par des personnes domicilées à l'étranger"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Decreto federale 23 marzo 1961 concernente l'autorizzazione per l'acquisto di fondi da parte di persone all'estero"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "211.412.41"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1961/203_209_213"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1961-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1961-03-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1961 209"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss vom 23. März 1961 über die Bewilligungspflicht für den Erwerb von Grundstücken durch Personen im Ausland"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1983-12-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1984 1148"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 16. Dezember 1983 über den Erwerb von Grundstücken durch Personen im Ausland (BewG)"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1983-12-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1984 1148"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 16. Dezember 1983 über den Erwerb von Grundstücken durch Personen im Ausland (BewG)"
@@ -213,6 +237,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1983-12-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1984 1148"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 16. Dezember 1983 über den Erwerb von Grundstücken durch Personen im Ausland (BewG)"
@@ -244,6 +272,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1983-12-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1984 1148"
       },
       "titleDe": {
         "type": "literal",
@@ -276,6 +308,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-03-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 2467"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-03-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 2467"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Erwerb von Grundstücken durch Personen im Ausland (BewG)"
@@ -340,6 +380,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-03-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 2467"
       },
       "titleDe": {
         "type": "literal",
@@ -372,6 +416,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-10-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 1337"
       },
       "titleDe": {
         "type": "literal",
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-10-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 1337"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Erwerb von Grundstücken durch Personen im Ausland (BewG)"
@@ -436,6 +488,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-10-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 1337"
       },
       "titleDe": {
         "type": "literal",

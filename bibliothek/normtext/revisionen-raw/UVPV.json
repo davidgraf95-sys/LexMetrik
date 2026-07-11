@@ -21,69 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1988-10-19"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 19. Oktober 1988 über die Umweltverträglichkeitsprüfung (UVPV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 19 octobre 1988 relative à l'étude de l'impact sur l'environnement (OEIE)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 19 ottobre 1988 concernente l'esame dell'impatto sull'ambiente (OEIA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "814.011"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1988/1931_1931_1931"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1989-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1988-10-19"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung vom 19. Oktober 1988 über die Umweltverträglichkeitsprüfung (UVPV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 19 octobre 1988 relative à l'étude de l'impact sur l'environnement (OEIE)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 19 ottobre 1988 concernente l'esame dell'impatto sull'ambiente (OEIA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "814.011"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1988/1931_1931_1931"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1989-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1988-10-19"
+        "value": "RO 1988 1931"
       },
       "titleDe": {
         "type": "literal",
@@ -117,6 +57,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1988-10-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1988 1931"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 19. Oktober 1988 über die Umweltverträglichkeitsprüfung (UVPV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 19 octobre 1988 relative à l'étude de l'impact sur l'environnement (OEIE)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 19 ottobre 1988 concernente l'esame dell'impatto sull'ambiente (OEIA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "814.011"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1988/1931_1931_1931"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1989-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1988-10-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1988 1931"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 19. Oktober 1988 über die Umweltverträglichkeitsprüfung (UVPV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 19 octobre 1988 relative à l'étude de l'impact sur l'environnement (OEIE)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 19 ottobre 1988 concernente l'esame dell'impatto sull'ambiente (OEIA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "814.011"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1988/1931_1931_1931"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1989-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1988-10-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1988 1931"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 19. Oktober 1988 über die Umweltverträglichkeitsprüfung (UVPV)"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-09-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 4621"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Umweltverträglichkeitsprüfung (UVPV)"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-09-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 4621"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Umweltverträglichkeitsprüfung (UVPV)"
@@ -213,6 +237,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-09-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 4621"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Umweltverträglichkeitsprüfung (UVPV)"
@@ -245,6 +273,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-08-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2903"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Umweltverträglichkeitsprüfung (UVPV)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-08-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2903"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Umweltverträglichkeitsprüfung (UVPV)"
@@ -308,6 +344,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-08-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2903"
       },
       "titleDe": {
         "type": "literal",

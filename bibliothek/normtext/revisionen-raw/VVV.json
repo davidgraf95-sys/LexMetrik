@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1959-11-20"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verkehrsversicherungsverordnung vom 20. November 1959 (VVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 20 novembre 1959 sur l'assurance des véhicules (OAV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 20 novembre 1959 sull'assicurazione dei veicoli (OAV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.31"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1959/1271_1321_1317"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1959-11-20"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1959-11-20"
+        "value": "RO 1959 1321"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1959-11-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1959 1321"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verkehrsversicherungsverordnung vom 20. November 1959 (VVV)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1959-11-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1959 1321"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verkehrsversicherungsverordnung vom 20. November 1959 (VVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 20 novembre 1959 sur l'assurance des véhicules (OAV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 20 novembre 1959 sull'assicurazione dei veicoli (OAV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.31"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1959/1271_1321_1317"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1959-11-20"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1959-11-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1959 1321"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verkehrsversicherungsverordnung vom 20. November 1959 (VVV)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-11-15"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verkehrsversicherungsverordnung (VVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance des véhicules (OAV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione dei veicoli (OAV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.31"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/473"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-11-15"
+        "value": "RO 2000 2799"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-11-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2799"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verkehrsversicherungsverordnung (VVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance des véhicules (OAV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione dei veicoli (OAV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.31"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/473"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-11-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2799"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verkehrsversicherungsverordnung (VVV)"
@@ -245,6 +273,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-04-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1383"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verkehrsversicherungsverordnung (VVV)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-04-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1383"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verkehrsversicherungsverordnung (VVV)"
@@ -308,6 +344,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-04-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1383"
       },
       "titleDe": {
         "type": "literal",
@@ -341,37 +381,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-07-03"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verkehrsversicherungsverordnung (VVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurances des véhicules (OAV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione dei veicoli (OAV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.31"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/483"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-07-03"
+        "value": "RO 2002 3215"
       },
       "titleDe": {
         "type": "literal",
@@ -405,6 +417,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-07-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3215"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verkehrsversicherungsverordnung (VVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurances des véhicules (OAV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione dei veicoli (OAV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.31"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/483"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-07-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3215"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verkehrsversicherungsverordnung (VVV)"
@@ -437,37 +489,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-03-12"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verkehrsversicherungsverordnung (VVV) (Betrifft nur den italienischen Text)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 20 novembre 1959 sur l'assurance des véhicules (OAV) (Ne concerne que le text italien)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione dei veicoli (OAV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.31"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/79"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1992-08-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-03-12"
+        "value": "RO 2002 359"
       },
       "titleDe": {
         "type": "literal",
@@ -501,6 +525,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-03-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 359"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verkehrsversicherungsverordnung (VVV) (Betrifft nur den italienischen Text)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 20 novembre 1959 sur l'assurance des véhicules (OAV) (Ne concerne que le text italien)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione dei veicoli (OAV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.31"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/79"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1992-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-03-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 359"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verkehrsversicherungsverordnung (VVV) (Betrifft nur den italienischen Text)"
@@ -533,37 +597,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-12-09"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verkehrsversicherungsverordnung (VVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance des véhicules (OAV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione dei veicoli (OAV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.31"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/15"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-02-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-12-09"
+        "value": "RO 2003 136"
       },
       "titleDe": {
         "type": "literal",
@@ -597,6 +633,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-12-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 136"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verkehrsversicherungsverordnung (VVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance des véhicules (OAV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione dei veicoli (OAV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.31"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/15"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-12-09"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 136"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verkehrsversicherungsverordnung (VVV)"
@@ -628,6 +704,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-03-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 1631"
       },
       "titleDe": {
         "type": "literal",
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-03-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 1631"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verkehrsversicherungsverordnung vom 20. November 1959 (VVV) (Betrifft nur den französischen Text)"
@@ -693,6 +777,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-03-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 1631"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verkehrsversicherungsverordnung vom 20. November 1959 (VVV) (Betrifft nur den französischen Text)"
@@ -725,37 +813,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-01-14"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verkehrsversicherungsverordnung (VVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance des véhicules (OAV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione dei veicoli (OAV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.31"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/57"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-03-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-01-14"
+        "value": "RO 2004 649"
       },
       "titleDe": {
         "type": "literal",
@@ -789,6 +849,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-01-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 649"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verkehrsversicherungsverordnung (VVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance des véhicules (OAV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione dei veicoli (OAV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.31"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/57"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-03-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-01-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 649"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verkehrsversicherungsverordnung (VVV)"
@@ -821,6 +921,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-11-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 83"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verkehrsversicherungsverordnung (VVV)"
@@ -853,6 +957,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-11-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 83"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verkehrsversicherungsverordnung (VVV)"
@@ -884,6 +992,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-11-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 83"
       },
       "titleDe": {
         "type": "literal",
@@ -917,37 +1029,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-28"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verkehrsversicherungsverordnung (VVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance des véhicules (OAV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione dei veicoli (OAV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.31"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/299"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-03-28"
+        "value": "RO 2007 2107"
       },
       "titleDe": {
         "type": "literal",
@@ -981,6 +1065,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 2107"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verkehrsversicherungsverordnung (VVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance des véhicules (OAV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione dei veicoli (OAV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.31"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/299"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-03-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 2107"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verkehrsversicherungsverordnung (VVV)"
@@ -1013,6 +1137,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5083"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verkehrsversicherungsverordnung (VVV)"
@@ -1045,6 +1173,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5083"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verkehrsversicherungsverordnung (VVV)"
@@ -1076,6 +1208,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5083"
       },
       "titleDe": {
         "type": "literal",
@@ -1109,37 +1245,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-10-12"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verkehrsversicherungsverordnung (VVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance des véhicules (OAV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione dei veicoli (OAV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.31"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/713"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-10-12"
+        "value": "RO 2011 4933"
       },
       "titleDe": {
         "type": "literal",
@@ -1173,6 +1281,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-10-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4933"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verkehrsversicherungsverordnung (VVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance des véhicules (OAV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione dei veicoli (OAV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.31"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/713"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-10-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4933"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verkehrsversicherungsverordnung (VVV)"
@@ -1204,6 +1352,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-11-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4997"
       },
       "titleDe": {
         "type": "literal",
@@ -1237,6 +1389,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-11-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4997"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verkehrsversicherungsverordnung (VVV) (Betrifft nur den französischen und italienischen Text)"
@@ -1269,6 +1425,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-11-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4997"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verkehrsversicherungsverordnung (VVV) (Betrifft nur den französischen und italienischen Text)"
@@ -1301,6 +1461,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-11-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4691"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verkehrsversicherungsverordnung (VVV)"
@@ -1333,6 +1497,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-11-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4691"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verkehrsversicherungsverordnung (VVV)"
@@ -1365,69 +1533,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-11-29"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verkehrsversicherungsverordnung (VVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance des véhicules (OAV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione dei veicoli (OAV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.31"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/276"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-06-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-04-15"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verkehrsversicherungsverordnung (VVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance des véhicules (OAV)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione dei veicoli (OAV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.31"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/276"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-06-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-04-15"
+        "value": "RO 2013 4691"
       },
       "titleDe": {
         "type": "literal",
@@ -1461,6 +1569,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-04-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1319"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verkehrsversicherungsverordnung (VVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance des véhicules (OAV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione dei veicoli (OAV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.31"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/276"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-04-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1319"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verkehrsversicherungsverordnung (VVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance des véhicules (OAV)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione dei veicoli (OAV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.31"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/276"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-04-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1319"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verkehrsversicherungsverordnung (VVV)"
@@ -1493,6 +1677,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-01-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 463"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verkehrsversicherungsverordnung (VVV)"
@@ -1525,6 +1713,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-01-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 463"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verkehrsversicherungsverordnung (VVV)"
@@ -1556,6 +1748,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-01-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 463"
       },
       "titleDe": {
         "type": "literal",
@@ -1589,6 +1785,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-10-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 3839"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verkehrsversicherungsverordnung (VVV)"
@@ -1621,6 +1821,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-10-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 3839"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verkehrsversicherungsverordnung (VVV)"
@@ -1653,6 +1857,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-10-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 3839"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verkehrsversicherungsverordnung (VVV)"
@@ -1685,6 +1893,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-11-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 249"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verkehrsversicherungsverordnung (VVV)"
@@ -1717,6 +1929,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-11-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 249"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verkehrsversicherungsverordnung (VVV)"
@@ -1748,6 +1964,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-11-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 249"
       },
       "titleDe": {
         "type": "literal",

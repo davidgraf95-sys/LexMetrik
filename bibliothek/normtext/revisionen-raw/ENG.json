@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1990-12-14"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesbeschluss vom 14. Dezember 1990 für eine sparsame und rationelle Energienutzung  (Energienutzungsbeschluss, ENB)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Arrêté fédéral du 14 décembre 1990 pour une utilisation économe et rationelle de l'énergie (Arrêté sur l'énergie, AE)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Decreto federale del 14 dicembre 1990 sull'impiego parsimonioso e razionale dell'energia (Decreto sull'energia)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "730.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1991/1018_1018_1018"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1991-05-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1990-12-14"
+        "value": "RO 1991 1018"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1990-12-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1991 1018"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss vom 14. Dezember 1990 für eine sparsame und rationelle Energienutzung  (Energienutzungsbeschluss, ENB)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1990-12-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1991 1018"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesbeschluss vom 14. Dezember 1990 für eine sparsame und rationelle Energienutzung  (Energienutzungsbeschluss, ENB)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Arrêté fédéral du 14 décembre 1990 pour une utilisation économe et rationelle de l'énergie (Arrêté sur l'énergie, AE)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Decreto federale del 14 dicembre 1990 sull'impiego parsimonioso e razionale dell'energia (Decreto sull'energia)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "730.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1991/1018_1018_1018"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1991-05-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1990-12-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1991 1018"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss vom 14. Dezember 1990 für eine sparsame und rationelle Energienutzung  (Energienutzungsbeschluss, ENB)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-06-26"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Energiegesetz (EnG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi sur l'énergie (LEne)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge sull'energia (LEne)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "730.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1999/27"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-06-26"
+        "value": "RO 1999 197"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-06-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 197"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Energiegesetz (EnG)"
@@ -245,37 +237,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-06-26"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Energiegesetz (EnG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi sur l'énergie (LEne)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge sull'energia (LEne)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "730.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/728"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-06-18"
+        "value": "RO 1999 197"
       },
       "titleDe": {
         "type": "literal",
@@ -297,17 +261,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/728"
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/27"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-01-01"
+        "value": "1999-01-01"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-06-18"
+        "value": "1998-06-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 197"
       },
       "titleDe": {
         "type": "literal",
@@ -341,6 +309,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-06-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5065"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Energiegesetz (EnG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi sur l'énergie (LEne)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge sull'energia (LEne)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "730.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/728"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-06-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5065"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Energiegesetz (EnG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi sur l'énergie (LEne)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge sull'energia (LEne)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "730.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/728"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-06-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5065"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Energiegesetz (EnG)"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-12-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 3231"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Energiegesetz (EnG)"
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-12-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 3231"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Energiegesetz (EnG)"
@@ -436,6 +488,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-12-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 3231"
       },
       "titleDe": {
         "type": "literal",
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-06-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4505"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Energiegesetz (EnG)"
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-06-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4505"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Energiegesetz (EnG)"
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-06-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4505"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Energiegesetz (EnG)"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-09-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6839"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Energiegesetz (EnG)"
@@ -597,6 +669,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-09-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6839"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Energiegesetz (EnG)"
@@ -629,6 +705,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-09-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6839"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Energiegesetz (EnG)"
@@ -660,6 +740,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-09-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6839"
       },
       "titleDe": {
         "type": "literal",

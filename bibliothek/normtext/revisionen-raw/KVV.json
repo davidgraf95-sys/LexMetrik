@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1995-06-27"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 27. Juni 1995 über die Krankenversicherung (KVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 27 juin 1995 sur l'assurance-maladie (OAMal)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 27 giugno 1995 sull'assicurazione malattie (OAMal)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.102"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1995/3867_3867_3867"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1996-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1995-06-27"
+        "value": "RO 1995 3867"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1995-06-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1995 3867"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 27. Juni 1995 über die Krankenversicherung (KVV)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1995-06-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1995 3867"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 27. Juni 1995 über die Krankenversicherung (KVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 27 juin 1995 sur l'assurance-maladie (OAMal)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 27 giugno 1995 sull'assicurazione malattie (OAMal)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.102"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1995/3867_3867_3867"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1996-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1995-06-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1995 3867"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 27. Juni 1995 über die Krankenversicherung (KVV)"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-09-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1998 2634"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-09-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1998 2634"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -212,6 +236,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-09-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1998 2634"
       },
       "titleDe": {
         "type": "literal",
@@ -245,37 +273,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-08-11"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Krankenversicherung (KVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.102"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1999/367"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-08-11"
+        "value": "RO 1999 2403"
       },
       "titleDe": {
         "type": "literal",
@@ -309,37 +309,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-08-11"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Krankenversicherung (KVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.102"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/137"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-02-23"
+        "value": "RO 1999 2403"
       },
       "titleDe": {
         "type": "literal",
@@ -361,17 +333,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/137"
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/367"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-04-01"
+        "value": "1999-10-01"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-02-23"
+        "value": "1999-08-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2403"
       },
       "titleDe": {
         "type": "literal",
@@ -405,6 +381,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-02-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 889"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Krankenversicherung (KVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.102"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/137"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-02-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 889"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Krankenversicherung (KVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.102"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/137"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-02-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 889"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-10-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2835"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-10-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2835"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -500,6 +560,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-10-02"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2835"
       },
       "titleDe": {
         "type": "literal",
@@ -533,37 +597,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-11-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Krankenversicherung (KVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.102"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/510"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-11-22"
+        "value": "RO 2000 2911"
       },
       "titleDe": {
         "type": "literal",
@@ -597,37 +633,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-11-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Krankenversicherung (KVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.102"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2001/31"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-12-11"
+        "value": "RO 2000 2911"
       },
       "titleDe": {
         "type": "literal",
@@ -649,7 +657,7 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2001/31"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/510"
       },
       "dateForce": {
         "type": "typed-literal",
@@ -659,7 +667,11 @@
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-12-11"
+        "value": "2000-11-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2911"
       },
       "titleDe": {
         "type": "literal",
@@ -693,6 +705,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-12-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 138"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Krankenversicherung (KVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.102"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2001/31"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-12-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 138"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Krankenversicherung (KVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.102"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2001/31"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-12-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 138"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -725,6 +813,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-07-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 915"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -757,6 +849,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-07-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 915"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -788,6 +884,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-07-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 915"
       },
       "titleDe": {
         "type": "literal",
@@ -821,37 +921,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-05-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Krankenversicherung (KVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.102"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/251"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-06-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-05-22"
+        "value": "RO 2002 1633"
       },
       "titleDe": {
         "type": "literal",
@@ -885,37 +957,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-05-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Krankenversicherung (KVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.102"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/316"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-06-26"
+        "value": "RO 2002 1633"
       },
       "titleDe": {
         "type": "literal",
@@ -937,17 +981,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/316"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/251"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-07-01"
+        "value": "2002-06-01"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-06-26"
+        "value": "2002-05-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1633"
       },
       "titleDe": {
         "type": "literal",
@@ -981,6 +1029,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-06-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 2129"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Krankenversicherung (KVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.102"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/316"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-06-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 2129"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Krankenversicherung (KVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.102"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/316"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-06-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 2129"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -1013,6 +1137,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-09-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3908"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -1045,6 +1173,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-09-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3908"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -1076,6 +1208,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-09-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3908"
       },
       "titleDe": {
         "type": "literal",
@@ -1109,37 +1245,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-06-06"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Krankenversicherung (KVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.102"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/445"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-06-06"
+        "value": "RO 2003 3249"
       },
       "titleDe": {
         "type": "literal",
@@ -1173,6 +1281,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-06-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3249"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Krankenversicherung (KVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.102"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/445"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-06-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3249"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -1204,6 +1352,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-11-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3991"
       },
       "titleDe": {
         "type": "literal",
@@ -1237,6 +1389,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-11-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3991"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 27. Juni 1995 über die Krankenversicherung (KVV)"
@@ -1269,6 +1425,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-11-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3991"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 27. Juni 1995 über die Krankenversicherung (KVV)"
@@ -1301,37 +1461,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-12-15"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Krankenversicherung (KVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.102"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/773"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-12-15"
+        "value": "RO 2003 5279"
       },
       "titleDe": {
         "type": "literal",
@@ -1365,6 +1497,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-12-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 5279"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Krankenversicherung (KVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.102"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/773"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-12-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 5279"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -1396,6 +1568,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-05-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 3437"
       },
       "titleDe": {
         "type": "literal",
@@ -1429,6 +1605,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-05-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 3437"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV) (Kostenbeteiligung)"
@@ -1461,6 +1641,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-05-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 3437"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV) (Kostenbeteiligung)"
@@ -1493,37 +1677,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-12-03"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Krankenversicherung (KVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.102"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/784"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-12-03"
+        "value": "RO 2004 5075"
       },
       "titleDe": {
         "type": "literal",
@@ -1557,37 +1713,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-12-03"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Krankenversicherung (KVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.102"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2005/771"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-11-09"
+        "value": "RO 2004 5075"
       },
       "titleDe": {
         "type": "literal",
@@ -1609,17 +1737,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2005/771"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/784"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-01-01"
+        "value": "2005-01-01"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-11-09"
+        "value": "2004-12-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 5075"
       },
       "titleDe": {
         "type": "literal",
@@ -1653,6 +1785,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-11-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5639"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Krankenversicherung (KVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.102"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/771"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-11-09"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5639"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Krankenversicherung (KVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.102"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/771"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-11-09"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5639"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -1685,6 +1893,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-04-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 1717"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -1717,6 +1929,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-04-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 1717"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -1748,6 +1964,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-04-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 1717"
       },
       "titleDe": {
         "type": "literal",
@@ -1781,37 +2001,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-06-27"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Krankenversicherung (KVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.102"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/439"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-08-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-06-27"
+        "value": "RO 2007 3573"
       },
       "titleDe": {
         "type": "literal",
@@ -1845,37 +2037,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-06-27"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Krankenversicherung (KVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.102"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/881"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-11-21"
+        "value": "RO 2007 3573"
       },
       "titleDe": {
         "type": "literal",
@@ -1897,17 +2061,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/881"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/439"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-01-01"
+        "value": "2007-08-01"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-11-21"
+        "value": "2007-06-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 3573"
       },
       "titleDe": {
         "type": "literal",
@@ -1941,6 +2109,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-11-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 6837"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Krankenversicherung (KVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.102"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/881"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-11-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 6837"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Krankenversicherung (KVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.102"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/881"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-11-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 6837"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -1973,6 +2217,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5097"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -2005,6 +2253,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5097"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -2036,6 +2288,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5097"
       },
       "titleDe": {
         "type": "literal",
@@ -2069,37 +2325,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-06-24"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Krankenversicherung (KVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.102"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/434"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-08-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-06-24"
+        "value": "RO 2009 3525"
       },
       "titleDe": {
         "type": "literal",
@@ -2133,37 +2361,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-06-24"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Krankenversicherung (KVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.102"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/520"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-07-01"
+        "value": "RO 2009 3525"
       },
       "titleDe": {
         "type": "literal",
@@ -2185,17 +2385,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/520"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/434"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-10-01"
+        "value": "2009-08-01"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-07-01"
+        "value": "2009-06-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 3525"
       },
       "titleDe": {
         "type": "literal",
@@ -2229,6 +2433,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-07-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 4245"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Krankenversicherung (KVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.102"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/520"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-07-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 4245"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Krankenversicherung (KVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.102"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/520"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-07-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 4245"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -2261,6 +2541,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-09-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 4759"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -2293,6 +2577,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-09-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 4759"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -2324,6 +2612,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-09-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 4759"
       },
       "titleDe": {
         "type": "literal",
@@ -2357,37 +2649,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-12-03"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Krankenversicherung (KVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.102"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/878"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-12-03"
+        "value": "RO 2010 6155"
       },
       "titleDe": {
         "type": "literal",
@@ -2421,37 +2685,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-12-03"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Krankenversicherung (KVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.102"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/879"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-12-03"
+        "value": "RO 2010 6155"
       },
       "titleDe": {
         "type": "literal",
@@ -2473,7 +2709,7 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/879"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/878"
       },
       "dateForce": {
         "type": "typed-literal",
@@ -2484,6 +2720,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-12-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 6155"
       },
       "titleDe": {
         "type": "literal",
@@ -2517,6 +2757,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-12-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 6161"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Krankenversicherung (KVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.102"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/879"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-12-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 6161"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Krankenversicherung (KVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.102"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/879"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-12-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 6161"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -2549,6 +2865,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-02-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 653"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -2581,6 +2901,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-02-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 653"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -2612,6 +2936,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-02-02"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 653"
       },
       "titleDe": {
         "type": "literal",
@@ -2645,37 +2973,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-06-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Krankenversicherung (KVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.102"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/462"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-06-22"
+        "value": "RO 2011 3449"
       },
       "titleDe": {
         "type": "literal",
@@ -2709,37 +3009,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-06-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Krankenversicherung (KVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.102"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/477"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-06-22"
+        "value": "RO 2011 3449"
       },
       "titleDe": {
         "type": "literal",
@@ -2761,7 +3033,7 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/477"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/462"
       },
       "dateForce": {
         "type": "typed-literal",
@@ -2772,6 +3044,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-06-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3449"
       },
       "titleDe": {
         "type": "literal",
@@ -2805,6 +3081,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-06-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3527"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Krankenversicherung (KVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.102"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/477"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-06-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3527"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Krankenversicherung (KVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.102"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/477"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-06-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3527"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -2837,6 +3189,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-07-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3535"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -2869,6 +3225,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-07-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3535"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -2900,6 +3260,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-07-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3535"
       },
       "titleDe": {
         "type": "literal",
@@ -2933,37 +3297,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-11-02"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Krankenversicherung (KVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.102"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/738"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-12-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-11-02"
+        "value": "RO 2011 5037"
       },
       "titleDe": {
         "type": "literal",
@@ -2997,37 +3333,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-11-02"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Krankenversicherung (KVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.102"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/162"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-11-02"
+        "value": "RO 2011 5037"
       },
       "titleDe": {
         "type": "literal",
@@ -3049,17 +3357,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/162"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/738"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-04-01"
+        "value": "2011-12-01"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-11-02"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 5037"
       },
       "titleDe": {
         "type": "literal",
@@ -3093,6 +3405,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-11-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 955"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Krankenversicherung (KVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.102"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/162"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-11-02"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 955"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Krankenversicherung (KVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.102"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/162"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-11-02"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 955"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -3125,6 +3513,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-03-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 1767"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -3157,6 +3549,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-03-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 1767"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -3188,6 +3584,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-03-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 1767"
       },
       "titleDe": {
         "type": "literal",
@@ -3221,37 +3621,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-07-04"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Krankenversicherung (KVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.102"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/474"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-07-04"
+        "value": "RO 2012 4089"
       },
       "titleDe": {
         "type": "literal",
@@ -3285,6 +3657,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-07-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 4089"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Krankenversicherung (KVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.102"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/474"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-07-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 4089"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -3317,6 +3729,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-01-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 459"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -3349,6 +3765,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-01-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 459"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -3380,6 +3800,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-01-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 459"
       },
       "titleDe": {
         "type": "literal",
@@ -3413,37 +3837,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-05-08"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Krankenversicherung (KVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.102"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2013/318"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-06-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-05-08"
+        "value": "RO 2013 1353"
       },
       "titleDe": {
         "type": "literal",
@@ -3477,6 +3873,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-05-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1353"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Krankenversicherung (KVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.102"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/318"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-05-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1353"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -3509,6 +3945,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-11-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4523"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -3541,6 +3981,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-11-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4523"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -3572,6 +4016,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-11-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4523"
       },
       "titleDe": {
         "type": "literal",
@@ -3605,37 +4053,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-10-15"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Krankenversicherung (KVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.102"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2014/559"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-11-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-10-15"
+        "value": "RO 2014 3263"
       },
       "titleDe": {
         "type": "literal",
@@ -3669,6 +4089,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-10-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 3263"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Krankenversicherung (KVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.102"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/559"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-11-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-10-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 3263"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -3701,6 +4161,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-11-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 4391"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -3733,6 +4197,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-11-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 4391"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -3764,6 +4232,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-11-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 4391"
       },
       "titleDe": {
         "type": "literal",
@@ -3797,37 +4269,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-04-28"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Krankenversicherung (KVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.102"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/236"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-04-28"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-04-28"
+        "value": "RO 2015 1177"
       },
       "titleDe": {
         "type": "literal",
@@ -3861,6 +4305,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-04-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1177"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Krankenversicherung (KVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.102"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/236"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-04-28"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-04-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1177"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -3893,6 +4377,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-04-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1255"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -3925,6 +4413,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-04-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1255"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -3956,6 +4448,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-04-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1255"
       },
       "titleDe": {
         "type": "literal",
@@ -3989,37 +4485,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-03-23"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Krankenversicherung (KVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.102"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2016/219"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-05-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-03-23"
+        "value": "RO 2016 1175"
       },
       "titleDe": {
         "type": "literal",
@@ -4053,6 +4521,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-03-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1175"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Krankenversicherung (KVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.102"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/219"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-05-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-03-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1175"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -4085,6 +4593,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-06-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2689"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -4117,6 +4629,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-06-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2689"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -4148,6 +4664,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-06-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2689"
       },
       "titleDe": {
         "type": "literal",
@@ -4181,37 +4701,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-11-29"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Krankenversicherung (KVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-maladie (OAMal) (Ne concerne que le texte allemand)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione malattie (OAMal) (Concerne soltanto il testo tedesco)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.102"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2016/704"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-11-29"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-11-29"
+        "value": "RO 2016 4195"
       },
       "titleDe": {
         "type": "literal",
@@ -4245,6 +4737,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-11-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4195"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Krankenversicherung (KVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-maladie (OAMal) (Ne concerne que le texte allemand)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione malattie (OAMal) (Concerne soltanto il testo tedesco)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.102"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/704"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-11-29"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-11-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4195"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -4277,37 +4809,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-12-09"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Krankenversicherung (KVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.102"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2016/792"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-12-09"
+        "value": "RO 2016 4927"
       },
       "titleDe": {
         "type": "literal",
@@ -4341,6 +4845,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-12-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4927"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Krankenversicherung (KVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-maladie (OAMal)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione malattie (OAMal)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.102"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/792"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-12-09"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4927"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -4373,6 +4917,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-02-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 623"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -4405,6 +4953,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-02-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 623"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -4436,6 +4988,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-02-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 623"
       },
       "titleDe": {
         "type": "literal",
@@ -4469,6 +5025,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-06-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 3687"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -4501,6 +5061,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-06-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 3687"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -4533,6 +5097,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-06-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 3687"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -4564,6 +5132,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-10-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6339"
       },
       "titleDe": {
         "type": "literal",
@@ -4597,6 +5169,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-10-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6339"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -4629,6 +5205,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-10-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6339"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -4661,6 +5241,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-11-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6723"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -4693,6 +5277,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-11-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6723"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -4725,6 +5313,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-11-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6723"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -4757,6 +5349,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-12-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 4771"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -4789,6 +5385,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-12-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 4771"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Krankenversicherung (KVV)"
@@ -4820,6 +5420,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-12-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 4771"
       },
       "titleDe": {
         "type": "literal",

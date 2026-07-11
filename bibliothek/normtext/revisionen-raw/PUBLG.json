@@ -21,69 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1986-03-21"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom 21. März 1986 über die Gesetzessammlungen und das Bundesblatt  (Publikationsgesetz)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 21 mars 1986 sur les recueils de lois et la Feuille fédérale (Loi sur les publications officielles)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 21 marzo 1986 sulle raccolte delle leggi e sul Foglio federale (Legge sulle pubblicazioni ufficiali)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "170.512"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1987/600_600_600"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1987-05-15"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1986-03-21"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Bundesgesetz vom 21. März 1986 über die Gesetzessammlungen und das Bundesblatt  (Publikationsgesetz)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 21 mars 1986 sur les recueils de lois et la Feuille fédérale (Loi sur les publications officielles)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 21 marzo 1986 sulle raccolte delle leggi e sul Foglio federale (Legge sulle pubblicazioni ufficiali)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "170.512"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1987/600_600_600"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1987-05-15"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1986-03-21"
+        "value": "RO 1987 600"
       },
       "titleDe": {
         "type": "literal",
@@ -117,6 +57,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1986-03-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1987 600"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 21. März 1986 über die Gesetzessammlungen und das Bundesblatt  (Publikationsgesetz)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 21 mars 1986 sur les recueils de lois et la Feuille fédérale (Loi sur les publications officielles)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 21 marzo 1986 sulle raccolte delle leggi e sul Foglio federale (Legge sulle pubblicazioni ufficiali)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "170.512"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1987/600_600_600"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1987-05-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1986-03-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1987 600"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 21. März 1986 über die Gesetzessammlungen und das Bundesblatt  (Publikationsgesetz)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 21 mars 1986 sur les recueils de lois et la Feuille fédérale (Loi sur les publications officielles)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 21 marzo 1986 sulle raccolte delle leggi e sul Foglio federale (Legge sulle pubblicazioni ufficiali)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "170.512"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1987/600_600_600"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1987-05-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1986-03-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1987 600"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 21. März 1986 über die Gesetzessammlungen und das Bundesblatt  (Publikationsgesetz)"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-06-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 4929"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Sammlungen des Bundesrechts und das Bundesblatt (Publikationsgesetz, PublG)"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-06-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 4929"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Sammlungen des Bundesrechts und das Bundesblatt (Publikationsgesetz, PublG)"
@@ -213,6 +237,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-06-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 4929"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Sammlungen des Bundesrechts und das Bundesblatt (Publikationsgesetz, PublG)"
@@ -244,6 +272,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-06-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 4929"
       },
       "titleDe": {
         "type": "literal",
@@ -276,6 +308,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-09-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 3977"
       },
       "titleDe": {
         "type": "literal",
@@ -308,6 +344,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-09-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 3977"
       },
       "titleDe": {
         "type": "literal",
@@ -405,6 +445,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1849-03-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO I 275"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 5. März 1849 betreffend die Herausgabe eines Bundesblattes "
@@ -437,6 +481,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1849-03-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO I 275"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 5. März 1849 betreffend die Herausgabe eines Bundesblattes "
@@ -469,6 +517,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1849-03-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO I 275"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 5. März 1849 betreffend die Herausgabe eines Bundesblattes "
@@ -500,6 +552,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1849-03-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO I 275"
       },
       "titleDe": {
         "type": "literal",

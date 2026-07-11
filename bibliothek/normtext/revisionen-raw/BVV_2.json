@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1984-04-18"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 18. April 1984 über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 18 avril 1984 sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 18 aprile 1984 sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.441.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1984/543_543_543"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1985-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1984-04-18"
+        "value": "RO 1984 543"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1984-04-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1984 543"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 18. April 1984 über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1984-04-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1984 543"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 18. April 1984 über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 18 avril 1984 sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 18 aprile 1984 sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.441.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1984/543_543_543"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1985-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1984-04-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1984 543"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 18. April 1984 über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-11-01"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung 99 über die Anpassung der Grenzbeträge bei der beruflichen Vorsorge"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance 99 sur l'adaption des montants-limites de la prévoyance professionnelle"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza 99 sull'adeguamento dei limiti di reddito nella previdenza professionale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.441.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1998/3026_3026_3026"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-11-01"
+        "value": "RO 1998 3026"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-11-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1998 3026"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung 99 über die Anpassung der Grenzbeträge bei der beruflichen Vorsorge"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance 99 sur l'adaption des montants-limites de la prévoyance professionnelle"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza 99 sull'adeguamento dei limiti di reddito nella previdenza professionale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.441.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1998/3026_3026_3026"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-11-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1998 3026"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung 99 über die Anpassung der Grenzbeträge bei der beruflichen Vorsorge"
@@ -245,37 +273,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-03-20"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Ivalidenvorsorge (BVV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance pour la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.441.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/204"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-03-20"
+        "value": "RO 2000 1265"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +309,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-03-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1265"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Ivalidenvorsorge (BVV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance pour la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.441.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/204"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-03-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1265"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Ivalidenvorsorge (BVV 2)"
@@ -341,37 +381,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-11-01"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung 01 über die Anpassung der Grenzbeträge bei der beruflichen Vorsorge"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance 01 sur l'adaption des montants-limites de la prévoyance professionnelle"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza 01 sull'adeguamento dei limiti di reddito nella previdenza professionale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.441.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/480"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-11-01"
+        "value": "RO 2000 2833"
       },
       "titleDe": {
         "type": "literal",
@@ -405,6 +417,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-11-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2833"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung 01 über die Anpassung der Grenzbeträge bei der beruflichen Vorsorge"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance 01 sur l'adaption des montants-limites de la prévoyance professionnelle"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza 01 sull'adeguamento dei limiti di reddito nella previdenza professionale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.441.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/480"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-11-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2833"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung 01 über die Anpassung der Grenzbeträge bei der beruflichen Vorsorge"
@@ -437,37 +489,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-11-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.441.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/509"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-11-22"
+        "value": "RO 2000 2909"
       },
       "titleDe": {
         "type": "literal",
@@ -501,37 +525,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-11-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.441.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/559"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-11-27"
+        "value": "RO 2000 2909"
       },
       "titleDe": {
         "type": "literal",
@@ -553,7 +549,7 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/559"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/509"
       },
       "dateForce": {
         "type": "typed-literal",
@@ -563,7 +559,11 @@
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-11-27"
+        "value": "2000-11-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2909"
       },
       "titleDe": {
         "type": "literal",
@@ -597,6 +597,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-11-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 3086"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.441.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/559"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-11-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 3086"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.441.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/559"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-11-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 3086"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -629,6 +705,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-11-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 3169"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-11-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 3169"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -692,6 +776,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-11-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 3169"
       },
       "titleDe": {
         "type": "literal",
@@ -725,37 +813,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-09-11"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.441.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/579"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-09-11"
+        "value": "RO 2002 3729"
       },
       "titleDe": {
         "type": "literal",
@@ -789,37 +849,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-09-11"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.441.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/603"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-10-23"
+        "value": "RO 2002 3729"
       },
       "titleDe": {
         "type": "literal",
@@ -841,7 +873,7 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/603"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/579"
       },
       "dateForce": {
         "type": "typed-literal",
@@ -851,7 +883,11 @@
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-10-23"
+        "value": "2002-09-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3729"
       },
       "titleDe": {
         "type": "literal",
@@ -885,6 +921,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-10-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3904"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.441.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/603"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-10-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3904"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.441.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/603"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-10-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3904"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -916,6 +1028,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-10-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3906"
       },
       "titleDe": {
         "type": "literal",
@@ -949,6 +1065,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-10-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3906"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung 03 über die Anpassung der Grenzbeträge bei der beruflichen Vorsorge"
@@ -981,6 +1101,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-10-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3906"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung 03 über die Anpassung der Grenzbeträge bei der beruflichen Vorsorge"
@@ -1013,37 +1137,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-05-21"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.441.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/259"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-05-21"
+        "value": "RO 2003 1725"
       },
       "titleDe": {
         "type": "literal",
@@ -1077,37 +1173,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-05-21"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.441.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/501"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-09-10"
+        "value": "RO 2003 1725"
       },
       "titleDe": {
         "type": "literal",
@@ -1129,17 +1197,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/501"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/259"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-01-01"
+        "value": "2003-07-01"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-09-10"
+        "value": "2003-05-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 1725"
       },
       "titleDe": {
         "type": "literal",
@@ -1173,6 +1245,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-09-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3523"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.441.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/501"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-09-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3523"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.441.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/501"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-09-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3523"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -1205,6 +1353,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-03-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 1709"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -1237,6 +1389,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-03-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 1709"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -1268,6 +1424,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-03-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 1709"
       },
       "titleDe": {
         "type": "literal",
@@ -1301,37 +1461,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-09-01"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.441.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/633"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-09-01"
+        "value": "RO 2004 4249"
       },
       "titleDe": {
         "type": "literal",
@@ -1365,37 +1497,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-09-01"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.441.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/644"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-08-18"
+        "value": "RO 2004 4249"
       },
       "titleDe": {
         "type": "literal",
@@ -1417,7 +1521,7 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/644"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/633"
       },
       "dateForce": {
         "type": "typed-literal",
@@ -1427,7 +1531,11 @@
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-08-18"
+        "value": "2004-09-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 4249"
       },
       "titleDe": {
         "type": "literal",
@@ -1461,6 +1569,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-08-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 4279"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.441.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/644"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-08-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 4279"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.441.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/644"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-08-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 4279"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -1493,6 +1677,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-10-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 4643"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -1525,6 +1713,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-10-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 4643"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -1556,6 +1748,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-10-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 4643"
       },
       "titleDe": {
         "type": "literal",
@@ -1589,37 +1785,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-11-23"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.441.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/714"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-11-23"
+        "value": "RO 2004 4653"
       },
       "titleDe": {
         "type": "literal",
@@ -1653,37 +1821,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-11-23"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.441.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2005/559"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-06-10"
+        "value": "RO 2004 4653"
       },
       "titleDe": {
         "type": "literal",
@@ -1705,17 +1845,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2005/559"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/714"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-01-01"
+        "value": "2005-01-01"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-06-10"
+        "value": "2004-11-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 4653"
       },
       "titleDe": {
         "type": "literal",
@@ -1749,6 +1893,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-06-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 4279"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.441.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/559"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-06-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 4279"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.441.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/559"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-06-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 4279"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -1781,6 +2001,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-11-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5257"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -1813,6 +2037,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-11-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5257"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -1844,6 +2072,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-11-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5257"
       },
       "titleDe": {
         "type": "literal",
@@ -1877,37 +2109,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-09-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.441.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/616"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-09-22"
+        "value": "RO 2006 4159"
       },
       "titleDe": {
         "type": "literal",
@@ -1941,37 +2145,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-09-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.441.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/617"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-09-05"
+        "value": "RO 2006 4159"
       },
       "titleDe": {
         "type": "literal",
@@ -1993,17 +2169,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/617"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/616"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-01-01"
+        "value": "2007-01-01"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-09-05"
+        "value": "2006-09-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4159"
       },
       "titleDe": {
         "type": "literal",
@@ -2037,6 +2217,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-09-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 4441"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.441.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/617"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-09-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 4441"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.441.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/617"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-09-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 4441"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -2069,6 +2325,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-06-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 3551"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -2101,6 +2361,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-06-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 3551"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -2132,6 +2396,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-06-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 3551"
       },
       "titleDe": {
         "type": "literal",
@@ -2165,37 +2433,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-09-19"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.441.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2008/650"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-09-19"
+        "value": "RO 2008 4651"
       },
       "titleDe": {
         "type": "literal",
@@ -2229,37 +2469,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-09-19"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.441.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2008/663"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-09-26"
+        "value": "RO 2008 4651"
       },
       "titleDe": {
         "type": "literal",
@@ -2281,7 +2493,7 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2008/663"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/650"
       },
       "dateForce": {
         "type": "typed-literal",
@@ -2291,7 +2503,11 @@
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-09-26"
+        "value": "2008-09-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 4651"
       },
       "titleDe": {
         "type": "literal",
@@ -2325,6 +2541,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-09-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 4725"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.441.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/663"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-09-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 4725"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.441.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/663"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-09-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 4725"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -2357,6 +2649,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5189"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -2389,6 +2685,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5189"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -2420,6 +2720,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5189"
       },
       "titleDe": {
         "type": "literal",
@@ -2453,37 +2757,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-04-01"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.441.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/245"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-06-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-04-01"
+        "value": "RO 2009 1667"
       },
       "titleDe": {
         "type": "literal",
@@ -2517,6 +2793,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-04-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 1667"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.441.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/245"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-04-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 1667"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -2549,6 +2865,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-09-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4587"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -2581,6 +2901,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-09-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4587"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -2612,6 +2936,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-09-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4587"
       },
       "titleDe": {
         "type": "literal",
@@ -2645,37 +2973,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-06-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.441.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/461"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-08-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-06-22"
+        "value": "RO 2011 3435"
       },
       "titleDe": {
         "type": "literal",
@@ -2709,6 +3009,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-06-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3435"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.441.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/461"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-06-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3435"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -2740,6 +3080,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-11-02"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 5035"
       },
       "titleDe": {
         "type": "literal",
@@ -2773,6 +3117,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-11-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 5035"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und  Invalidenvorsorge (BVV 2)"
@@ -2805,6 +3153,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-11-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 5035"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und  Invalidenvorsorge (BVV 2)"
@@ -2837,37 +3189,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-03-27"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2) (Betrifft nur den italienischen Text)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2) (Ne concerne que le texte italien)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.441.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/209"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-03-27"
+        "value": "RO 2012 1509"
       },
       "titleDe": {
         "type": "literal",
@@ -2901,6 +3225,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-03-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 1509"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2) (Betrifft nur den italienischen Text)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2) (Ne concerne que le texte italien)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.441.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/209"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-03-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 1509"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2) (Betrifft nur den italienischen Text)"
@@ -2933,37 +3297,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-09-21"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.441.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/753"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-09-21"
+        "value": "RO 2012 6347"
       },
       "titleDe": {
         "type": "literal",
@@ -2997,6 +3333,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-09-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6347"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.441.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/753"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-09-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6347"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -3029,6 +3405,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-05-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1349"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -3061,6 +3441,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-05-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1349"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -3092,6 +3476,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-05-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1349"
       },
       "titleDe": {
         "type": "literal",
@@ -3125,37 +3513,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-10-30"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.441.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2013/763"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-10-30"
+        "value": "RO 2013 4141"
       },
       "titleDe": {
         "type": "literal",
@@ -3189,37 +3549,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-10-30"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.441.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2013/764"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-11-13"
+        "value": "RO 2013 4141"
       },
       "titleDe": {
         "type": "literal",
@@ -3241,7 +3573,7 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2013/764"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/763"
       },
       "dateForce": {
         "type": "typed-literal",
@@ -3251,7 +3583,11 @@
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-11-13"
+        "value": "2013-10-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4141"
       },
       "titleDe": {
         "type": "literal",
@@ -3285,6 +3621,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-11-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4143"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.441.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/764"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-11-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4143"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.441.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/764"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-11-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4143"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -3317,6 +3729,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-06-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1585"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -3349,6 +3765,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-06-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1585"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -3380,6 +3800,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-06-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1585"
       },
       "titleDe": {
         "type": "literal",
@@ -3413,37 +3837,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-10-15"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.441.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2014/579"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-10-15"
+        "value": "RO 2014 3343"
       },
       "titleDe": {
         "type": "literal",
@@ -3477,6 +3873,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-10-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 3343"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.441.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/579"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-10-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 3343"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -3509,6 +3945,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-10-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 4435"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -3541,6 +3981,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-10-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 4435"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -3572,6 +4016,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-10-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 4435"
       },
       "titleDe": {
         "type": "literal",
@@ -3605,37 +4053,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-02-24"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.441.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2016/171"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-02-24"
+        "value": "RO 2016 975"
       },
       "titleDe": {
         "type": "literal",
@@ -3669,6 +4089,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-02-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 975"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.441.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/171"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-02-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 975"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -3701,6 +4161,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-06-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2347"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -3733,6 +4197,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-06-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2347"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -3764,6 +4232,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-06-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2347"
       },
       "titleDe": {
         "type": "literal",
@@ -3797,6 +4269,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-10-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4179"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -3829,6 +4305,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-10-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4179"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -3861,69 +4341,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-10-26"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.441.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2017/543"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-08-30"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.441.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2017/543"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-08-30"
+        "value": "RO 2016 4179"
       },
       "titleDe": {
         "type": "literal",
@@ -3957,6 +4377,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-08-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5021"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.441.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2017/543"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-08-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5021"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la prévoyance professionnelle vieillesse, survivants et invalidité (OPP 2)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (OPP 2)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.441.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2017/543"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-08-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5021"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -3989,6 +4485,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-09-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3537"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -4021,6 +4521,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-09-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3537"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -4052,6 +4556,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-09-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3537"
       },
       "titleDe": {
         "type": "literal",
@@ -4085,6 +4593,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-10-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 4621"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -4117,6 +4629,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-10-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 4621"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)"
@@ -4148,6 +4664,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-10-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 4621"
       },
       "titleDe": {
         "type": "literal",

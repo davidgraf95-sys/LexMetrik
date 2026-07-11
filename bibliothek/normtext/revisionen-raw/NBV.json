@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1979-07-11"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 11. Juli 1979 über die Mindestreserven der Banken"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 11 juillet 1979 sur les réserves minimales des banques"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 11 luglio 1979 sulle riserve minime delle banche"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "951.131"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1979/994_994_994"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1979-08-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1979-07-11"
+        "value": "RO 1979 994"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1979-07-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1979 994"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 11. Juli 1979 über die Mindestreserven der Banken"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1979-07-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1979 994"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 11. Juli 1979 über die Mindestreserven der Banken"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 11 juillet 1979 sur les réserves minimales des banques"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 11 luglio 1979 sulle riserve minime delle banche"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "951.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1979/994_994_994"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1979-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1979-07-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1979 994"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 11. Juli 1979 über die Mindestreserven der Banken"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-03-18"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative à la loi fédérale sur la Banque nationale suisse (Ordonnance de la Banque nationale, OBN)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza relativa alla legge federale sulla Banca nazionale svizzera (Ordinanza sulla Banca nazionale, OBN)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "951.131"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/233"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-05-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-03-18"
+        "value": "RO 2004 2033"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-03-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 2033"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)"
@@ -245,6 +237,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-03-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 2033"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative à la loi fédérale sur la Banque nationale suisse (Ordonnance de la Banque nationale, OBN)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza relativa alla legge federale sulla Banca nazionale svizzera (Ordinanza sulla Banca nazionale, OBN)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "951.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/233"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-05-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-03-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 2033"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-04-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 2791"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)"
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-04-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 2791"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)"
@@ -340,6 +380,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-04-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 2791"
       },
       "titleDe": {
         "type": "literal",
@@ -373,37 +417,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-09-03"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative à la loi fédérale sur la Banque nationale suisse (Ordonnance de la Banque nationale, OBN)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza relativa alla legge federale sulla Banca nazionale svizzera (Ordinanza sulla Banca nazionale, OBN)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "951.131"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/780"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-09-03"
+        "value": "RO 2009 6373"
       },
       "titleDe": {
         "type": "literal",
@@ -437,6 +453,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-09-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 6373"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative à la loi fédérale sur la Banque nationale suisse (Ordonnance de la Banque nationale, OBN)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza relativa alla legge federale sulla Banca nazionale svizzera (Ordinanza sulla Banca nazionale, OBN)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "951.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/780"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-09-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 6373"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-06-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 5043"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)"
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-06-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 5043"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)"
@@ -532,6 +596,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-06-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 5043"
       },
       "titleDe": {
         "type": "literal",
@@ -565,37 +633,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-06-10"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative à la loi fédérale sur la Banque nationale suisse (Ordonnance de la Banque nationale, OBN)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza relativa alla legge federale sulla Banca nazionale svizzera (Ordinanza sulla Banca nazionale, OBN)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "951.131"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2013/420"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-06-10"
+        "value": "RO 2013 1987"
       },
       "titleDe": {
         "type": "literal",
@@ -629,6 +669,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-06-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1987"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative à la loi fédérale sur la Banque nationale suisse (Ordonnance de la Banque nationale, OBN)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza relativa alla legge federale sulla Banca nazionale svizzera (Ordinanza sulla Banca nazionale, OBN)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "951.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/420"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-06-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1987"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)"
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-05-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 3023"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)"
@@ -693,6 +777,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-05-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 3023"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)"
@@ -724,6 +812,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-05-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 3023"
       },
       "titleDe": {
         "type": "literal",
@@ -757,37 +849,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-02-24"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative à la loi fédérale sur la Banque nationale suisse (Ordonnance de la Banque nationale, OBN)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza relativa alla legge federale sulla Banca nazionale svizzera (Ordinanza sulla Banca nazionale, OBN)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "951.131"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/103"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-02-24"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-02-24"
+        "value": "RO 2015 643"
       },
       "titleDe": {
         "type": "literal",
@@ -821,6 +885,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-02-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 643"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative à la loi fédérale sur la Banque nationale suisse (Ordonnance de la Banque nationale, OBN)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza relativa alla legge federale sulla Banca nazionale svizzera (Ordinanza sulla Banca nazionale, OBN)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "951.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/103"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-02-24"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-02-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 643"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)"
@@ -853,6 +957,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-03-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 767"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)"
@@ -885,6 +993,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-03-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 767"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)"
@@ -916,6 +1028,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-03-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 767"
       },
       "titleDe": {
         "type": "literal",
@@ -949,6 +1065,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-11-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 5307"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)"
@@ -981,6 +1101,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-11-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 5307"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)"
@@ -1013,69 +1137,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-11-26"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative à la loi fédérale sur la Banque nationale suisse (Ordonnance de la Banque nationale, OBN)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza relativa alla legge federale sulla Banca nazionale svizzera (Ordinanza sulla Banca nazionale, OBN)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "951.131"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2017/711"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-06-08"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative à la loi fédérale sur la Banque nationale suisse (Ordonnance de la Banque nationale, OBN)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza relativa alla legge federale sulla Banca nazionale svizzera (Ordinanza sulla Banca nazionale, OBN)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "951.131"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2017/711"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-06-08"
+        "value": "RO 2015 5307"
       },
       "titleDe": {
         "type": "literal",
@@ -1109,6 +1173,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-06-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6495"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative à la loi fédérale sur la Banque nationale suisse (Ordonnance de la Banque nationale, OBN)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza relativa alla legge federale sulla Banca nazionale svizzera (Ordinanza sulla Banca nazionale, OBN)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "951.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2017/711"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-06-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6495"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative à la loi fédérale sur la Banque nationale suisse (Ordonnance de la Banque nationale, OBN)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza relativa alla legge federale sulla Banca nazionale svizzera (Ordinanza sulla Banca nazionale, OBN)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "951.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2017/711"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-06-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6495"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)"
@@ -1140,6 +1280,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-01-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 527"
       },
       "titleDe": {
         "type": "literal",
@@ -1173,6 +1317,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-01-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 527"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV). (Betrifft nur den französischen Text)"
@@ -1205,6 +1353,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-01-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 527"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV). (Betrifft nur den französischen Text)"
@@ -1237,6 +1389,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-11-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 3909"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)"
@@ -1269,6 +1425,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-11-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 3909"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)"
@@ -1301,6 +1461,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-11-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 3909"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)"
@@ -1333,6 +1497,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-07-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 4627"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)"
@@ -1365,6 +1533,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-07-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 4627"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über die Schweizerische Nationalbank (Nationalbankverordnung, NBV)"
@@ -1396,6 +1568,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-07-02"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 4627"
       },
       "titleDe": {
         "type": "literal",

@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1958-12-19"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Strassenverkehrsgesetz vom 19. Dezember 1958 (SVG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 19 décembre 1958 sur la circulation routière (LCR)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 19 dicembre 1958 sulla circolazione stradale (LCStr)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.01"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1959/679_705_685"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1959-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1958-12-19"
+        "value": "RO 1959 705"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1958-12-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1959 705"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Strassenverkehrsgesetz vom 19. Dezember 1958 (SVG)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1958-12-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1959 705"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Strassenverkehrsgesetz vom 19. Dezember 1958 (SVG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 19 décembre 1958 sur la circulation routière (LCR)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 19 dicembre 1958 sulla circolazione stradale (LCStr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.01"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1959/679_705_685"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1959-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1958-12-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1959 705"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Strassenverkehrsgesetz vom 19. Dezember 1958 (SVG)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-06-18"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Strassenverkehrsgesetz (Register für Fahrzeuge und Fahrzeughalter sowie für Administrativmassnahmen gegen Fahrzeugführer)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur la circulation routière (Registre des véhicules et des détenteurs de véhicules et registre des mesures administratives frappant les conducteurs de véhicules)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulla circolazione stradale (Registro dei veicoli e dei detentori nonché delle misure amministrative contro i conducenti dei veicoli)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.01"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/472"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-06-18"
+        "value": "RO 2000 2795"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-06-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2795"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Strassenverkehrsgesetz (Register für Fahrzeuge und Fahrzeughalter sowie für Administrativmassnahmen gegen Fahrzeugführer)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur la circulation routière (Registre des véhicules et des détenteurs de véhicules et registre des mesures administratives frappant les conducteurs de véhicules)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla circolazione stradale (Registro dei veicoli e dei detentori nonché delle misure amministrative contro i conducenti dei veicoli)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.01"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/472"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-06-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2795"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Strassenverkehrsgesetz (Register für Fahrzeuge und Fahrzeughalter sowie für Administrativmassnahmen gegen Fahrzeugführer)"
@@ -245,37 +273,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-10-08"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz zum Abkommen zwischen der schweizerischen Eidgenossenschaft und der Europäischen Gemeinschaft über den Güter- und Personenverkehr auf Schiene und Strasse"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale concernant l'accord entre la Confédération suisse et la Communauté européenne sur le transport de marchandises et de voyageurs par rail et par route"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale concernente l'Accordo fra la Confederazione Svizzera e la Comunità europea sul trasporto di merci e di passeggeri su strada e per ferrovia"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.01"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/497"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-10-08"
+        "value": "RO 2000 2877"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +309,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-10-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2877"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz zum Abkommen zwischen der schweizerischen Eidgenossenschaft und der Europäischen Gemeinschaft über den Güter- und Personenverkehr auf Schiene und Strasse"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale concernant l'accord entre la Confédération suisse et la Communauté européenne sur le transport de marchandises et de voyageurs par rail et par route"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale concernente l'Accordo fra la Confederazione Svizzera e la Comunità europea sul trasporto di merci e di passeggeri su strada e per ferrovia"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.01"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/497"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-10-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2877"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz zum Abkommen zwischen der schweizerischen Eidgenossenschaft und der Europäischen Gemeinschaft über den Güter- und Personenverkehr auf Schiene und Strasse"
@@ -341,37 +381,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-12-28"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Strassenverkehrsgesetz (Register für Fahrzeuge und Fahrzeughalter sowie für Administrativmassnahmen gegen Fahrzeugführer)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur la circulation routière (Registre des véhicules et des détenteurs de véhicules et registre des mesures administratives frappant les conducteurs de véhicules)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulla circolazione stradale (Registro dei veicoli e dei detentori nonché delle misure amministrative contro i conducenti di veicoli)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.01"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/566"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-12-28"
+        "value": "RO 2000 3111"
       },
       "titleDe": {
         "type": "literal",
@@ -405,6 +417,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-12-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 3111"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Strassenverkehrsgesetz (Register für Fahrzeuge und Fahrzeughalter sowie für Administrativmassnahmen gegen Fahrzeugführer)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur la circulation routière (Registre des véhicules et des détenteurs de véhicules et registre des mesures administratives frappant les conducteurs de véhicules)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla circolazione stradale (Registro dei veicoli e dei detentori nonché delle misure amministrative contro i conducenti di veicoli)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.01"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/566"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-12-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 3111"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Strassenverkehrsgesetz (Register für Fahrzeuge und Fahrzeughalter sowie für Administrativmassnahmen gegen Fahrzeugführer)"
@@ -437,37 +489,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-12-14"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Strassenverkehrsgesetz (SVG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur la circulation routière (LCR)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge sulla circolazione stradale (LCStr)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.01"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/408"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-12-14"
+        "value": "RO 2002 2767"
       },
       "titleDe": {
         "type": "literal",
@@ -501,6 +525,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-12-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 2767"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Strassenverkehrsgesetz (SVG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur la circulation routière (LCR)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge sulla circolazione stradale (LCStr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.01"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/408"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-12-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 2767"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Strassenverkehrsgesetz (SVG)"
@@ -533,37 +597,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-10-04"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Strassenverkehrsgesetz (SVG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur la circulation routière (LCR)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulla circolazione stradale (LCStr)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.01"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/30"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-02-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-10-04"
+        "value": "RO 2003 222"
       },
       "titleDe": {
         "type": "literal",
@@ -597,6 +633,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-10-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 222"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Strassenverkehrsgesetz (SVG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur la circulation routière (LCR)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla circolazione stradale (LCStr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.01"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/30"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-10-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 222"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Strassenverkehrsgesetz (SVG)"
@@ -628,6 +704,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-09-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3368"
       },
       "titleDe": {
         "type": "literal",
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-09-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3368"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die vollständige Inkraftsetzung der Änderungen vom 18. Juni 1999 und 4. Oktober 2002 des Strassenverkehrsgesetzes"
@@ -693,6 +777,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-09-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3368"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die vollständige Inkraftsetzung der Änderungen vom 18. Juni 1999 und 4. Oktober 2002 des Strassenverkehrsgesetzes"
@@ -725,37 +813,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-04-28"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Inkraftsetzung von weiteren Bestimmungen der Änderung vom 14. Dezember 2001 des Strassenverkehrsgesetzes"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant la mise en vigueur d'autres dispositions da la modification du 14 décembre 2001 de la loi fédérale sur la circulation routière"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente la messa in vigore di altre disposizioni della modifica del 14 dicembre 2001 della legge federale sulla circolazione stradale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.01"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/350"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-04-28"
+        "value": "RO 2004 2849"
       },
       "titleDe": {
         "type": "literal",
@@ -789,6 +849,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-04-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 2849"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Inkraftsetzung von weiteren Bestimmungen der Änderung vom 14. Dezember 2001 des Strassenverkehrsgesetzes"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant la mise en vigueur d'autres dispositions da la modification du 14 décembre 2001 de la loi fédérale sur la circulation routière"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente la messa in vigore di altre disposizioni della modifica del 14 dicembre 2001 della legge federale sulla circolazione stradale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.01"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/350"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-04-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 2849"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Inkraftsetzung von weiteren Bestimmungen der Änderung vom 14. Dezember 2001 des Strassenverkehrsgesetzes"
@@ -821,37 +921,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-01-14"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Inkraftsetzung der Änderung des Artikels 67 Absätze 3 und 4 des Strassenverkehrkehrsgesetzes"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant la mise en vigueur de la modification de l'art. 67, al. 3 et 4, de la loi fédérale sur la circulation routière "
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla messa in vigore della modifica dell'art. 67 cpv. 3 e 4 della legge federale sulla circolazione stradale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.01"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/56"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-03-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-01-14"
+        "value": "RO 2004 647"
       },
       "titleDe": {
         "type": "literal",
@@ -885,6 +957,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-01-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 647"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Inkraftsetzung der Änderung des Artikels 67 Absätze 3 und 4 des Strassenverkehrkehrsgesetzes"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant la mise en vigueur de la modification de l'art. 67, al. 3 et 4, de la loi fédérale sur la circulation routière "
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla messa in vigore della modifica dell'art. 67 cpv. 3 e 4 della legge federale sulla circolazione stradale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.01"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/56"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-03-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-01-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 647"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Inkraftsetzung der Änderung des Artikels 67 Absätze 3 und 4 des Strassenverkehrkehrsgesetzes"
@@ -917,37 +1029,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-10-27"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die vollständige Inkraftsetzung der Änderung vom 14. Dezember 2001 des Strassenverkehrsgesetzes"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant la mise en vigueur complète de la modification du 14 décembre 2001 de la loi fédérale sur la circulation routière"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'entrata in vigore completa della modifica del 14 dicembre 2001 della legge federale sulla circolazione stradale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.01"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/778"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-02-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-10-27"
+        "value": "RO 2004 5053"
       },
       "titleDe": {
         "type": "literal",
@@ -981,6 +1065,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-10-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 5053"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die vollständige Inkraftsetzung der Änderung vom 14. Dezember 2001 des Strassenverkehrsgesetzes"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant la mise en vigueur complète de la modification du 14 décembre 2001 de la loi fédérale sur la circulation routière"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'entrata in vigore completa della modifica del 14 dicembre 2001 della legge federale sulla circolazione stradale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.01"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/778"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-10-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 5053"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die vollständige Inkraftsetzung der Änderung vom 14. Dezember 2001 des Strassenverkehrsgesetzes"
@@ -1013,37 +1137,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-03-20"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Strassenverkehrsgesetz (SVG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur la circulation routière (LCR)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulla circolazione stradale (LCStr)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.01"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2008/530"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-09-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-03-20"
+        "value": "RO 2008 3939"
       },
       "titleDe": {
         "type": "literal",
@@ -1077,6 +1173,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-03-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 3939"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Strassenverkehrsgesetz (SVG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur la circulation routière (LCR)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla circolazione stradale (LCStr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.01"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/530"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-09-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-03-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 3939"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Strassenverkehrsgesetz (SVG)"
@@ -1109,6 +1245,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-12-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3267"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Strassenverkehrsgesetz (SVG)"
@@ -1141,6 +1281,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-12-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3267"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Strassenverkehrsgesetz (SVG)"
@@ -1172,6 +1316,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-12-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3267"
       },
       "titleDe": {
         "type": "literal",
@@ -1205,37 +1353,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-10-01"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Strassenverkehrsgesetz (SVG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur la circulation routière (LCR)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulla circolazione stradale (LCStr)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.01"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/710"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-10-01"
+        "value": "RO 2011 4925"
       },
       "titleDe": {
         "type": "literal",
@@ -1269,6 +1389,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-10-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4925"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Strassenverkehrsgesetz (SVG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur la circulation routière (LCR)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla circolazione stradale (LCStr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.01"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/710"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-10-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4925"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Strassenverkehrsgesetz (SVG)"
@@ -1301,6 +1461,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6291"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Strassenverkehrsgesetz (SVG)"
@@ -1333,6 +1497,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6291"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Strassenverkehrsgesetz (SVG)"
@@ -1364,6 +1532,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6291"
       },
       "titleDe": {
         "type": "literal",
@@ -1397,37 +1569,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-11-29"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über eine Teilinkraftsetzung der Änderung vom 15. Juni 2012 des Strassenverkehrsgesetzes"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant l'entrée en vigueur partielle de la modification du 15 juin 2012 de la loi fédérale sur la circulation routière"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza su un'entrata in vigore parziale della modifica del 15 giugno 2012 della legge federale ulla circolazione stradale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.01"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2013/821"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-11-29"
+        "value": "RO 2013 4669"
       },
       "titleDe": {
         "type": "literal",
@@ -1461,6 +1605,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-11-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4669"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über eine Teilinkraftsetzung der Änderung vom 15. Juni 2012 des Strassenverkehrsgesetzes"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant l'entrée en vigueur partielle de la modification du 15 juin 2012 de la loi fédérale sur la circulation routière"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza su un'entrata in vigore parziale della modifica del 15 giugno 2012 della legge federale ulla circolazione stradale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.01"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/821"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-11-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4669"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über eine Teilinkraftsetzung der Änderung vom 15. Juni 2012 des Strassenverkehrsgesetzes"
@@ -1493,37 +1677,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-12-10"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Strassenverkehrsgesetz (SVG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur la circulation routière (LCR) (Ne concerne que les textes allemand et italien)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulla circolazione stradale (LCStr)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.01"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2013/891"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-12-27"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-12-10"
+        "value": "RO 2013 5577"
       },
       "titleDe": {
         "type": "literal",
@@ -1557,6 +1713,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-12-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 5577"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Strassenverkehrsgesetz (SVG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur la circulation routière (LCR) (Ne concerne que les textes allemand et italien)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla circolazione stradale (LCStr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.01"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/891"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-12-27"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-12-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 5577"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Strassenverkehrsgesetz (SVG)"
@@ -1589,37 +1785,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-05-27"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Strassenverkehrsgesetz (SVG) (Betrifft nur den französischen Text)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur la circulation routière (LCR)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulla circolazione stradale (LCStr) (Concerne solo il testo francese)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.01"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2014/293"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-06-11"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-05-27"
+        "value": "RO 2014 1387"
       },
       "titleDe": {
         "type": "literal",
@@ -1653,6 +1821,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-05-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1387"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Strassenverkehrsgesetz (SVG) (Betrifft nur den französischen Text)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur la circulation routière (LCR)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla circolazione stradale (LCStr) (Concerne solo il testo francese)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.01"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/293"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-06-11"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-05-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1387"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Strassenverkehrsgesetz (SVG) (Betrifft nur den französischen Text)"
@@ -1685,6 +1893,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-05-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1387"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Strassenverkehrsgesetz (SVG)"
@@ -1717,6 +1929,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-05-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1387"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Strassenverkehrsgesetz (SVG)"
@@ -1749,6 +1965,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-05-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1387"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Strassenverkehrsgesetz (SVG)"
@@ -1781,6 +2001,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-07-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2581"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über eine Teilinkraftsetzung der Änderung vom 15. Juni 2012 des Strassenverkehrsgesetzes"
@@ -1813,6 +2037,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-07-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2581"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über eine Teilinkraftsetzung der Änderung vom 15. Juni 2012 des Strassenverkehrsgesetzes"
@@ -1845,69 +2073,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-07-01"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über eine Teilinkraftsetzung der Änderung vom 15. Juni 2012 des Strassenverkehrsgesetzes"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant l'entrée en vigueur partielle de la modification du 15 juin 2012 de la loi fédérale sur la circulation routière"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente un'entrata in vigore parziale della modifica del 15 giugno 2012 della legge federale sulla circolazione stradale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.01"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/489"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-07-01"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung über eine Teilinkraftsetzung der Änderung vom 15. Juni 2012 des Strassenverkehrsgesetzes"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant l'entrée en vigueur partielle de la modification du 15 juin 2012 de la loi fédérale sur la circulation routière"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente un'entrata in vigore parziale della modifica del 15 giugno 2012 della legge federale sulla circolazione stradale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.01"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/489"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-07-01"
+        "value": "RO 2015 2581"
       },
       "titleDe": {
         "type": "literal",
@@ -1941,6 +2109,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-07-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2583"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über eine Teilinkraftsetzung der Änderung vom 15. Juni 2012 des Strassenverkehrsgesetzes"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant l'entrée en vigueur partielle de la modification du 15 juin 2012 de la loi fédérale sur la circulation routière"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente un'entrata in vigore parziale della modifica del 15 giugno 2012 della legge federale sulla circolazione stradale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.01"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/489"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-07-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2583"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über eine Teilinkraftsetzung der Änderung vom 15. Juni 2012 des Strassenverkehrsgesetzes"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant l'entrée en vigueur partielle de la modification du 15 juin 2012 de la loi fédérale sur la circulation routière"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente un'entrata in vigore parziale della modifica del 15 giugno 2012 della legge federale sulla circolazione stradale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.01"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/489"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-07-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2583"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über eine Teilinkraftsetzung der Änderung vom 15. Juni 2012 des Strassenverkehrsgesetzes"
@@ -1973,6 +2217,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-06-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2307"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über eine Teilinkraftsetzung der Änderung vom 15. Juni 2012 des Strassenverkehrsgesetzes"
@@ -2005,6 +2253,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-06-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2307"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über eine Teilinkraftsetzung der Änderung vom 15. Juni 2012 des Strassenverkehrsgesetzes"
@@ -2036,6 +2288,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-06-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2307"
       },
       "titleDe": {
         "type": "literal",
@@ -2068,6 +2324,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-09-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 2807"
       },
       "titleDe": {
         "type": "literal",
@@ -2101,6 +2361,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-09-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 2807"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Strassenverkehrsgesetz (SVG)"
@@ -2132,6 +2396,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-09-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 2807"
       },
       "titleDe": {
         "type": "literal",
@@ -2164,6 +2432,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-11-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 4985"
       },
       "titleDe": {
         "type": "literal",
@@ -2197,6 +2469,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-11-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 4985"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über eine Teilinkraftsetzung der Änderung vom 15. Juni 2012 des Strassenverkehrsgesetzes"
@@ -2228,6 +2504,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-11-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 4985"
       },
       "titleDe": {
         "type": "literal",
