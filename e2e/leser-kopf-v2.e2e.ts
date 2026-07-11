@@ -59,11 +59,16 @@ test('K-2: Fussnoten-Chip im Kopf — Zähler + Toggle (aria-pressed), CLS 0 bei
   expect(cls, 'CLS über den Fussnoten-Chip-Toggle muss 0 sein').toBe(0);
 });
 
+// B-1/B-2 laufen bewusst auf dem KLEINEN ELG (~78 KB Snapshot, Leitfall-Shard mit
+// BGE an Art. 10) statt auf dem 1686-Artikel-OR: dessen Client-Takeover starvte den
+// gedrosselten 2-Kern-CI-Runner ins 30s-Timeout (CI-Run 29139277748, dieselbe Lehre
+// wie leser-optionen → BGBM, CI-Befund 4.7.2026). Die Toggle-/Filter-Semantik ist
+// seitengrössen-unabhängig (Attribut + CSS bzw. Store).
 test('B-1: «Entscheide»-Schalter blendet die Leitfall-Zeilen aus (data-leitfaelle, kein Re-Render)', async ({ page }) => {
-  await warteReader(page, '/gesetze/bund/OR', 'art-1');
-  const art41 = page.locator('#art-41');
-  await art41.scrollIntoViewIfNeeded();
-  const zeile = art41.getByText('Leitfälle', { exact: true });
+  await warteReader(page, '/gesetze/bund/ELG', 'art-1');
+  const art = page.locator('#art-10');
+  await art.scrollIntoViewIfNeeded();
+  const zeile = art.getByText('Leitfälle', { exact: true });
   await expect(zeile).toBeVisible({ timeout: 15000 });
 
   await ansichtOeffnen(page);
@@ -82,7 +87,7 @@ test('B-1: «Entscheide»-Schalter blendet die Leitfall-Zeilen aus (data-leitfae
 });
 
 test('B-2: Zeitraum-Wahl «alle · 20 · 10 · 5 J.» — aria-pressed + Persistenz', async ({ page }) => {
-  await warteReader(page, '/gesetze/bund/OR', 'art-1');
+  await warteReader(page, '/gesetze/bund/ELG', 'art-1');
   await ansichtOeffnen(page);
   const gruppe = page.locator('[aria-label="Zeitraum der Entscheide"]');
   await expect(gruppe).toBeVisible();
