@@ -27,6 +27,20 @@ Steuer-Doks ihr Budget wieder überschreiten. Offene Abnahmen sind davon unberü
 (Spiegel: `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 11.7.2026 — V2·L-3 (A24·L-3): Linien-Auto-Default-Umkehr — tiefe Kodifikationen ZGB/OR zeigen wieder ihren EINEN Guide (W2·5d, reines UI, Worktree `lm-v2-l3`, Branch `feat/v2-l3`)
+
+**Auftrag (Spec `FAHRPLAN-GESETZESDARSTELLUNG-V2.md` §2 F4 L-3 · Z.56, David 10.7. FREIGEGEBEN).** **Gate-Aufhebung:** David 11.7. im Chat «du hast bei allem was ich entscheiden muss selbst die wahl» → Orchestrator-Entscheid: bauen mit hartem Visual-Beweis (Council/Rückfrage entfällt). **Der eigentliche Hebel für Davids Befund** «Liniengliederung funktioniert praktisch nicht»: bis #161 deckelte die Tiefe den Auto-Guide (`strukturTiefe ≥ 3` ⇒ GANZ AUS) — das nahm genau ZGB/OR ihre Gliederungslinie. Denkfehler von #161: es gibt keinen Strich je Ebene, der Reader emittiert höchstens EINEN Guide auf `guideEbene` (kein Barcode).
+
+**Gebaut (pathspec, reines UI):**
+- **Regelwerk-Umkehr** `linienAufbau.ts`: `autoGuide = dichteAmGuide >= DICHTE_MIN` — die alte Tiefe-Obergrenze `strukturTiefe <= TIEF_AB−1` ENTFÄLLT; der Dichte-Boden (Median ≥ 2 Artikel/Sektion) bleibt der einzige Schwellwert (hält den Per-Artikel-Barcode fern). `TIEF_AB` nur noch Klassifikation. **K11-Tri-State/Nutzer-Override unangetastet** (nur der Auto-Default kehrt um).
+- **`check:linien-kanon` deklariert nachgezogen** (Regelwerk-Änderung): B1-Invariante Tiefe-Obergrenze → Biconditional `autoGuide ⟺ tiefe≥1 && dichte≥2`; B2-Referenz-Verdikte **ZGB/OR `autoGuide:false`→`true`** + Kopf-Rationale. Tor GRÜN: 1144 Sidecars invariant, **Auto-Guide AN 158→230, +72 tiefe Kodifikationen** (alle strukturTiefe≥3 ∧ dichte≥2: Tiefe 3:57·4:12·5:3).
+- **Doku:** DESIGN-REGLEMENT-NORMTEXT §4b-A (Tabelle ≥3-Zeile AUS→AN + Umkehr-Rationale + Referenz-Verdikte), `index.css`-Kommentar, `linien-korpus-verteilung.mjs`-Diagnose.
+- **e2e deklariert nachgezogen:** `gesetze-ux-g3a` (ZGB-Verdikt RUHIG→sichtbar) + `leser-optionen` (BV-Toggle: Auto-Default jetzt an, Klick-Zyklus startet bei AUS).
+
+**Visual-Beweis (Playwright, computed border-left-color + 28 Screenshots — 7 Referenzfälle × Desktop/Mobil@390 × Hell/Dunkel):** ZGB(tief5)/OR(tief4) NEU `guide-auto=an`, EIN calmer Guide sichtbar (nested Titel tragen Typo+Einzug, kein Barcode); ArG/BVV3-Kurzerlass/HKUE-Staatsvertrag unverändert sichtbar; **VMWG(flach0)/Kanton-§ weiter `guide-auto=aus`, 0 Guide-Elemente — kein neues Linien-Rauschen auf flachen Erlassen** (konservativ, Dichte-Boden + Tiefe-0-FLACH-Zweig). CLS 0 (nur border-Farbe).
+
+**Verifikation:** golden `IDENTISCH` (209 byte-gleich — data-guide-auto ist client-runtime, nicht prerendert); `check:linien-kanon` GRÜN; tsc/lint (0 Errors) grün; e2e `gesetze-ux-g3a`+`leser-optionen` grün (isoliert). Gegenprüfung **n/a** (reine Darstellung). **⚠ Fremd-Reds (NICHT dieser PR):** `check:p-klassen` + `check:vollstaendigkeit` byte-gleich zu main (nicht CI-gated, s. Kopf-PR-Karte); lokale e2e-Voll-Parallel-Röten = CPU-Contention (isoliert 11/11 grün, CI läuft mit 1 Worker). Trailer `Roadmap: W2·5d`. PR mit armiertem Auto-Merge.
+
 ## Session 11.7.2026 — Gesetzesdarstellung V2: koordinierter Kopf-PR (A22·K-2 + A23·B-1/B-2 + U-PDF-Slot, Worktree `lm-v2-kopf`, Branch `feat/v2-kopf-pr`)
 
 **Auftrag (David-Go 10.7. «go zu allem», nach U-VERWEIS-Merge):** die drei nach U-VERWEIS freigegebenen Kopf-Einheiten aus `FAHRPLAN-GESETZESDARSTELLUNG-V2.md` in EINEM Schnitt — **K-2** Fussnoten-Chip im Kopf, **B-1/B-2** BGE-Steuerung im «Ansicht»-Dropdown, **U-PDF-Slot-Layout**. Reines UI. L-3/Restposten NICHT (David-Gate).

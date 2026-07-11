@@ -225,34 +225,46 @@ flache Artikelliste); `dichteAmGuide` = Median Artikel je Sektion auf `guideEben
 | **0** (flache Artikelliste, z. B. VMWG, Kanton-§) | `null` | — | Kein Guide; Artikel trennt der feine Artikel-Trenner. |
 | **1** (eine Gliederungsebene, z. B. Kurzerlass, Staatsvertrag) | 0 | **AN** (Dichte ≥ 2) | Die EINE Ebene wird sichtbar («flache Ebene sichtbar»). |
 | **2** (zwei Ebenen, z. B. ArG) | 1 | **AN** (Dichte ≥ 2) | Guide auf der inneren Gruppierung; die äussere trägt Typo + Struktur-Trenner. |
-| **≥ 3** (tiefe Kodifikation, z. B. BV, OR, ZGB) | 1 | **AUS** | Guide unsichtbar, **Einzug bleibt** — die vielen Ebenen ertrinken nicht (Rangfolge §4b: Typo > Einzug > Guide). |
+| **≥ 3** (tiefe Kodifikation, z. B. BV, OR, ZGB) | 1 | **AN** (Dichte ≥ 2) | **V2·L-3 (Umkehr #161):** der EINE Guide auf `guideEbene 1` — keine Ebenen-Stapelung, sondern die Gliederungshilfe, die David sehen will; die tieferen Ebenen tragen ihre Tiefe weiter über Einzug + Typo. |
 
-**Zusatz-Boden:** bei `dichteAmGuide ≤ 1` (Median 1 Artikel je geführter Sektion)
-bleibt `autoGuide` **AUS** — der Guide wäre sonst ein Per-Artikel-Barcode statt
-einer Gruppierung.
+**Auto-Default-UMKEHR (V2·L-3, David 10.7.2026, «deine Empfehlung» = JA).** Bis #161
+deckelte die *Tiefe* den Auto-Guide (ab `strukturTiefe ≥ 3` GANZ AUS) — das nahm
+genau ZGB/OR ihre Gliederungslinie, was David als «funktioniert praktisch nicht»
+re-meldete. Der Denkfehler von #161: es gibt keinen Strich *je Ebene* — der Reader
+emittiert **höchstens EINEN** Guide, fix auf `guideEbene` (`min(tiefe−1, 1)`). Ein
+einzelner vertikaler Guide auf der inneren Gruppierungsebene ist kein Barcode.
+Darum hängt der Auto-Guide seit V2·L-3 **allein am Dichte-Boden** (`DICHTE_MIN`),
+die Tiefe deckelt nichts mehr; tiefe Kodifikationen zeigen wieder ihren EINEN Guide.
+
+**Dichte-Boden (der einzige Auto-Guide-Schwellwert):** bei `dichteAmGuide ≤ 1`
+(Median 1 Artikel je geführter Sektion) bleibt `autoGuide` **AUS** — der Guide wäre
+sonst ein Per-Artikel-Barcode statt einer Gruppierung. Dieser Boden schützt auch
+die neu eingeschalteten tiefen Erlasse. FLACHE Erlasse (`strukturTiefe 0`) bekommen
+weiterhin *nie* einen Guide — die Umkehr fügt dort **kein** Linien-Rauschen hinzu.
 
 **Empirische Schwellen-Herleitung** (`node scripts/linien-korpus-verteilung.mjs`,
 1135 Sidecar-Erlasse). Gliederungstiefe-Verteilung: `Tiefe 0: 900 (79 %) · 1: 64 ·
 2: 98 · 3: 58 · 4: 12 · 5: 3`. Der Bruch liegt sichtbar zwischen «flach/mittel»
 (≤ 2 Ebenen) und «tiefe Kodifikation» (≥ 3): ab drei gleichzeitig sichtbaren
 Überschriften-Ebenen trägt die Typo-Staffel + der horizontale Struktur-Trenner + der
-Einzug die Hierarchie bereits vollständig — ein zusätzlicher vertikaler Strich je
-Sektion wird zum «Barcode» (ZGB Art. 684 / OR Art. 319, der Ur-Befund von R4).
-Daraus die Schwellen `TIEF_AB = 3`, `DICHTE_MIN = 2` (`LINIEN_SCHWELLEN`). Ergebnis:
-153 Erlasse zeigen den Guide im Auto-Default (flache/mittlere Gesetze); die 73 tiefen
-Kodifikationen bleiben ruhig.
+Einzug die Hierarchie bereits vollständig. `DICHTE_MIN = 2` bleibt der Boden gegen den
+Per-Artikel-Barcode; `TIEF_AB = 3` ist seit V2·L-3 nur noch die Klassifikations-
+Schwelle «tiefe Kodifikation» (deckelt den Auto-Guide NICHT mehr). Ergebnis nach der
+Umkehr: **230** Erlasse zeigen den Guide im Auto-Default (vorher 153) — dazu gekommen
+sind **+72** tiefe Kodifikationen (alle `strukturTiefe ≥ 3` UND `dichte ≥ 2`: Tiefe 3: 57 ·
+4: 12 · 5: 3); die restlichen tiefen Erlasse ohne tragende Dichte bleiben ruhig.
 
-**Referenz-Verdikte** (im Tor gegated, positiv+negativ): ZGB (Tiefe 5) → **ruhig** ·
-OR (Tiefe 4) → **ruhig** · ArG (Tiefe 2) → **Guide auf Ebene 1 sichtbar** · VMWG
-(Tiefe 0) → **kein Guide** · Kurzerlass/Staatsvertrag (Tiefe 1) → **Guide auf
-Ebene 0 sichtbar**.
+**Referenz-Verdikte** (im Tor gegated, positiv+negativ): ZGB (Tiefe 5) → **Guide auf
+Ebene 1 sichtbar** · OR (Tiefe 4) → **Guide auf Ebene 1 sichtbar** · ArG (Tiefe 2) →
+**Guide auf Ebene 1 sichtbar** · VMWG (Tiefe 0) → **kein Guide** ·
+Kurzerlass/Staatsvertrag (Tiefe 1) → **Guide auf Ebene 0 sichtbar**.
 
 **Maschinell gegated:** `check:linien-kanon` (Nachfolger von R1/R4, in `npm run
 gate`) importiert dieselbe `linienProfil`-Funktion, beweist die korpusweiten
-Invarianten + die Referenz-Verdikte + die Reader-/CSS-Verdrahtung (kein Drift);
-e2e `leser-linien-kanon`/`gesetze-ux-g3a`/`leser-optionen` beweisen das gerenderte
-Ergebnis (ZGB ruhig, ArG sichtbar, ≤ 1 Guide-Stapel). **Wortlaut byte-gleich** (nur
-Klassen/Attribute), Engine-Golden byte-gleich.
+Invarianten (Biconditional `autoGuide ⟺ dichte ≥ 2`) + die Referenz-Verdikte + die
+Reader-/CSS-Verdrahtung (kein Drift); e2e `gesetze-ux-g3a`/`leser-optionen` beweisen
+das gerenderte Ergebnis (ZGB zeigt den Guide, ArG sichtbar, ≤ 1 Guide-Stapel).
+**Wortlaut byte-gleich** (nur Klassen/Attribute), Engine-Golden byte-gleich.
 
 ### §4b-B · Farb-Wörterbuch der Referenzschicht (W2·5d V2·C-1, 10.7.2026, David «go zu allem»)
 
