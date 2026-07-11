@@ -763,6 +763,25 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
       NormChip-Verweisfarbe + Materialien-Familie). **Bau-Go erteilt, seq. deferiert.**
   - [ ] **DEFER FN-5/M14** wortgenaue Marker: hinter QS-PERF/U-POSITION, separates
     David-Go (Entscheid 10.7.). V2 §2 F1.
+- [ ] **5e · UI-Nutzwert & Navigation (Ultracode-Synthese 11.7.)** *(`[OF]`, reine UI/Navigation)*:
+  <!-- @meta id: W2·10-UI-NAV · status: ready · of: ja · blocker: null · dep: [W2·5d] · kollision: [src/components/suche, src/lib/suche, src/lib/universalSuche.ts, src/components/layout, src/components/rechtsprechung, src/pages/Rechtsprechung.tsx, src/pages/gesetz-leser, src/pages/GesetzLeser.tsx] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-UI-NAVIGATION.md -->
+  Priorisierter UI-Verbesserungs-Plan aus 60 empirischen Befunden + 3 Kritik-Linsen
+  (david-treue · repo-realität · praxis-nutzen; Bilanz 44 übernommen / 32 geändert / 4
+  verworfen): Quick-Win-Paket «tote Rückwege/Anker/Key-Normalisierung» → Suche-Kette
+  (Query-Durchreichung `?q=` · BGE-Zitations-Direktsprung + §8-«nicht im Bestand» ·
+  Dropdown-Ehrlichkeit/Enter-Puffer/Meinten-Sie · Ranking-Kernerlasse · /suche-Seite
+  [David-Go] · Mobil-Fokusmodus) → Verzahnungs-Politur (Artikel↔Werkzeug-Map beidseitig,
+  Hover-Preview am NormPopover, Leitfall-Regeste-Popover, Erwägungs-TOC) → Reader-/
+  Wiedereinstiegs-Welle (In-Gesetz-Highlight, Mobile-Gliederung+Quickjump, Zitat+Permalink,
+  Weiterlesen-Chip, Verlauf-Initiative, Tap-Target-Pass) → Rechtsprechungs-/Rechner-Politur
+  (Pagination, Mobil-Filter, Sachgebiets-Pipeline [Risiko → `QS-GP`], News-Karten). Leitthema
+  «gebaut ≠ gefunden». **Vor jedem Schnitt Prod-Re-Audit** (Befund-Vintage teils vor den
+  Merges 10./11.7.); Reader-Flächen **hart HINTER die offenen A20–A25**; 6 Posten =
+  David-Entscheid (A6-Werkzeug-Chip · Arbeitsmappe · V3-Cockpit-Fragen · Lese-Toggles ·
+  /suche-Go · Zitiert-Chips); hart gegated: Zitiert-von=VZUI-V2 (VPS), Fassungsvergleich
+  (Fedlex-P1a/b + Freigabe). Verworfen mit Grund (Command-Palette [A5-Entscheid],
+  Normtext-Virtualisierung [§15.1], Minimap, Scroll-Hash-Sync u. a.).
+  Detail: **[`FAHRPLAN-UI-NAVIGATION.md`](FAHRPLAN-UI-NAVIGATION.md)**. Trailer `Roadmap: W2·10-UI-NAV`.
 - [ ] **6 · Konsultieren-Klingen** *(`[OF]`, amtlich)*:
   <!-- @meta id: W2·6 · status: ready · of: ja · blocker: null · dep: [] · kollision: [] · worktree: nein · 26x: nein -->
   - **Mehrsprachiger Normvergleich DE/FR/IT** (Auslegungswerkzeug, Art. 14 PublG — alle drei
