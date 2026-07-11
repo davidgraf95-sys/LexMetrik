@@ -348,6 +348,17 @@
      zuvor 3× kopierte `lc-overline normal-case` + Inline letterSpacing:0.04em.
      Muss NACH .lc-overline stehen (gleiche Spezifität → Quellreihenfolge gewinnt). */
   .lc-overline-soft { text-transform: none; letter-spacing: .04em; }
+  /* Overline-Farbpunkt (V2·C-2, §4b-B): ordnet eine Referenzzeile ihrer
+     Farbfamilie zu — brass (Default) = Norm-/Wortlaut-Verweis, slate
+     (`-entscheid`) = Rechtsprechung. Redundant zum daneben stehenden Wortlabel
+     («Verweise»/«Leitfälle») → `aria-hidden`, Farbe trägt NIE allein (§13/F2).
+     Ø .5em an der Grundlinie, inline (CLS 0, keine Layout-Verschiebung). Der Punkt
+     sitzt auf `--paper` (nicht `--well` wie der Chip-Tick) → brass-600 statt -500,
+     damit die Füllung ≥3:1 hält (gemessen: brass-600 3.71 hell / 11.74 dunkel,
+     slate-500 5.21 / 3.31; WCAG 1.4.11). */
+  .lc-punkt { display:inline-block; width:.5em; height:.5em; border-radius:9999px;
+    margin-right:.375em; vertical-align:middle; background: var(--brass-600); }
+  .lc-punkt-entscheid { background: var(--slate-500); }
   /* Feinschrift (Copyright/Disclaimer-Zeilen) — eigene Rolle statt das
      lc-overline mit normal-case + Inline-letter-spacing zweckzuentfremden. */
   .lc-fineprint { font-family: var(--font-sans), system-ui, sans-serif; font-size: .6875rem; line-height: 1.5; letter-spacing: .01em; color: var(--ink-600); } /* ink-500→ink-600 (Auftrag David 25.6.2026): 11px-Feinschrift 4.85:1→7.2:1 */
@@ -481,6 +492,15 @@
      via Utilities. slate-500 auf well = 4.81 hell / 3.47 dunkel (≥3:1 UI-Kontrast,
      WCAG 1.4.11) — --slate-500 in html.dark bewusst NICHT überschrieben. */
   .lc-chip-entscheid { border-left-color: var(--slate-500); }
+  /* Currency-Chip-Tonung (V2·C-2, §4b-B): der Fedlex-Freshness-Beweis trägt jetzt
+     Status-Semantik über den Tick — NUR die Tick-Farbe wechselt (Anatomie/Token
+     `lc-chip` identisch → CLS 0). sage = «geltend geprüft am … (maschinell)»
+     (neutraler, maschineller Freshness-Beweis; KEIN Rechtsstatus-Urteil — das
+     «(maschinell)»-Wording bleibt tragend, §7/§8). warn = «nächste Fassung ab …»
+     (echter Fassungsvorbehalt: angekündigt, noch nicht in Kraft). --sage-500/
+     --warn-500 in html.dark bewusst NICHT überschrieben (Tick-Kontrast gehalten). */
+  .lc-chip-geltend { border-left-color: var(--sage-500); }
+  .lc-chip-vorbehalt { border-left-color: var(--warn-500); }
 
   /* Glas-Effekt für sticky Chrome (Topbar/TabStreifen) — eine Quelle statt
      byte-identischem Inline-Style an zwei Stellen. */
