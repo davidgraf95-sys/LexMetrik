@@ -153,7 +153,7 @@ Art. 684 / OR Art. 319). Neu (Tokens in `src/index.css` `:root` **und**
 
 | Rolle | Klasse | CSS-Var (hell / dunkel) | Wo (strukturell) |
 |---|---|---|---|
-| **Gliederungs-Guide** (vertikale Tiefen-Linie) | `border-l border-guide` | `--guide-gliederung` (10 % / 14 %) | `renderSektion` (nur `linien.guideEbene`, aufbau-basiert — §4b-A) |
+| **Gliederungs-Guide** (vertikale Tiefen-Linie) | `border-l border-guide` | `--guide-gliederung` (18 % / 24 %, = `--line-strong`; V2·L-2 von 10 %/14 % angehoben — der Guide war praktisch unsichtbar; NICHT höher, sonst wäre die Deko die dunkelste Linie, F2 nimmt Deko von 3:1 aus) | `renderSektion` (nur `linien.guideEbene`, aufbau-basiert — §4b-A) |
 | **Artikel-Trenner** (fein) | `border-t border-rule-artikel` | `--rule-artikel` (10 % / 14 %) | Artikel-Kopf, Tabellenzeilen, Fussnoten-Trenner |
 | **Struktur-Trenner** (oberste Sektionen Teil/Titel/Abschnitt, eine Spur kräftiger) | `border-t/-b border-rule-struktur` | `--rule-struktur` (14 % / 20 %) | Sektionskopf ebene ≤ 1, Ingress |
 
@@ -172,11 +172,15 @@ Harte Regeln:
    Brass, nie mit der Linien-Sprache vermischt.
 
 **Einzug-Skala & Weissraum-Rhythmus.** Token `einzug` (`tailwind.config.js
-spacing`, 20px/Stufe): Desktop Tiefe *n* → `n × einzug`, gedeckelt bei 3 Stufen;
-**mobil kollabiert der Einzug** (`pl-0 sm:pl-einzug`), die eine Guide bleibt als
-einzelne 1px-Linie am Spaltenrand (statt ~5 Linien × ~24px). **CLS 0:** Einzug =
-`padding`, Guide = `border` darauf → Umschalten/Kollabieren bewegt keinen
-Textknoten.
+spacing`, 20px/Stufe): Desktop Tiefe *n* → `n × einzug`, **gedeckelt bei 5 Stufen**
+(V2·L-1 von 3 angehoben — tiefe Kodifikationen ZGB/OR verloren ab Ebene 3 die
+sichtbare Verschachtelung, David-Befund «Liniengliederung funktioniert praktisch
+nicht»). **Mobil kollabiert der Einzug NICHT mehr auf 0**, sondern trägt ein
+kleineres `einzug-mobil` (~0.75rem, `pl-einzug-mobil sm:pl-einzug`) — die
+Verschachtelung bleibt auch @390 flüsterleise lesbar; die eine Guide bleibt als
+einzelne 1px-Linie am Spaltenrand. **CLS 0:** Einzug = `padding`, Guide = `border`
+darauf → Umschalten/Kollabieren bewegt keinen Textknoten. `data-linien="aus"`
+kollabiert den Einzug weiterhin über ALLE Ebenen auf 0 (`padding-left:0`).
 
 **Lese-Typografie.** Lesespalte **hart auf `max-w-reading` (40rem ≈ 66–71 ch)**,
 nie arbitrary `max-w-[…rem]` (R2). Fliesstext 18px Serif (über Fedlex 14px),

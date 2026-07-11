@@ -65,9 +65,12 @@ export default {
       maxWidth: { content: '70rem', reading: '40rem' }, // content ≈ 1120px (Iteration 3: einheitlich schmalere Spalte)
       // Einzug-Skala des Gesetzes-Readers (W2·5d G1 / DESIGN-REGLEMENT-NORMTEXT
       // §Weissraum-Rhythmus): EINE Stufe = 20px. Tiefe wird über Einzug getragen
-      // (gedeckelt bei 3 Stufen), nicht über gestapelte Linien; mobil kollabiert
-      // der Einzug (`pl-0 sm:pl-einzug`), die eine Guide bleibt am Spaltenrand.
-      spacing: { einzug: '1.25rem' },
+      // (V2·L-1: gedeckelt bei 5 Stufen statt 3 — tiefe Kodifikationen ZGB/OR
+      // blieben zuvor ab Ebene 3 einzuglos gleich, die Verschachtelung war nicht
+      // mehr lesbar). MOBIL kollabiert der Einzug NICHT mehr auf 0 (`einzug-mobil`
+      // ~0.75rem, `pl-einzug-mobil sm:pl-einzug`) — die Verschachtelung bleibt
+      // auch @390 flüsterleise sichtbar; die eine Guide bleibt am Spaltenrand.
+      spacing: { einzug: '1.25rem', 'einzug-mobil': '0.75rem' },
       // CLS-Reservierungs-Tokens der Startseite (Startseite V3, §5): benannte
       // Mindesthöhen für die async-/localStorage-Module — Masse, keine Farben
       // (hell = dunkel). `modul-news` benennt den bisherigen Arbitrary-Wert der
