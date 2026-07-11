@@ -21,7 +21,7 @@
 // merkt dann NICHTS (kein Roh-Slug-Chip, §8) — unverändertes Alt-Verhalten für
 // nicht auflösbare Routen.
 
-import { gesetzPfad, entscheidPfad, erlassVonPfad, labelAusMeta } from './verlaufLabel';
+import { gesetzPfad, entscheidPfad, materialPfad, erlassVonPfad, labelAusMeta } from './verlaufLabel';
 
 // Kurzform bevorzugt (Kürzel/Zitierung sind schon knapp); nur der lange
 // Titel-Fallback (Erlass ohne Kürzel) wird gekappt, damit der Chip nicht über die
@@ -64,6 +64,18 @@ export async function loeseZuletztTitel(path: string): Promise<string | null> {
       const m = await ladeEntscheidManifest();
       const e = m?.entscheide.find((x) => x.key === ent.key);
       return e ? kuerze(e.zitierung) : null;
+    } catch {
+      return null;
+    }
+  }
+
+  const mat = materialPfad(path);
+  if (mat) {
+    try {
+      const { ladeMaterialManifest } = await import('./materialien/browse');
+      const m = await ladeMaterialManifest();
+      const e = m?.materialien.find((x) => x.key === mat.key);
+      return e ? kuerze(e.titel) : null;
     } catch {
       return null;
     }

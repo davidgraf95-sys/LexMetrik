@@ -14,6 +14,7 @@
 import { metaFuerPfad } from './seo';
 import type { BrowseManifest, BrowseErlass } from './normtext/browse-typen';
 import type { EntscheidManifest } from './rechtsprechung/register';
+import type { MaterialManifest } from './materialien/typen';
 
 const SUFFIX = /\s*[—–-]\s*LexMetrik\s*$/;
 
@@ -34,6 +35,12 @@ export function entscheidPfad(path: string): { key: string } | null {
   return m ? { key: decodeURIComponent(m[1]) } : null;
 }
 
+/** Material-Leser-Pfad → {key} oder null. */
+export function materialPfad(path: string): { key: string } | null {
+  const m = /^\/materialien\/([^/]+)\/?$/.exec(pfadTeil(path));
+  return m ? { key: decodeURIComponent(m[1]) } : null;
+}
+
 /** Synchron auflösbares Label (Katalog/statisch) — sonst null. */
 export function labelAusMeta(path: string): string | null {
   const meta = metaFuerPfad(pfadTeil(path));
@@ -44,6 +51,7 @@ export function labelAusMeta(path: string): string | null {
 export interface VerlaufManifeste {
   gesetze?: BrowseManifest | null;
   entscheide?: EntscheidManifest | null;
+  materialien?: MaterialManifest | null;
 }
 
 /**
@@ -75,6 +83,12 @@ export function verlaufLabel(path: string, m: VerlaufManifeste = {}): string {
   if (ent) {
     const e = m.entscheide?.entscheide.find((x) => x.key === ent.key);
     return e ? e.zitierung : 'Entscheid öffnen';
+  }
+
+  const mat = materialPfad(path);
+  if (mat) {
+    const e = m.materialien?.materialien.find((x) => x.key === mat.key);
+    return e ? e.titel : 'Material öffnen';
   }
 
   return 'Zuletzt geöffnet';
