@@ -44,8 +44,12 @@ function markiere(text: string, q: string): ReactNode {
   const muster = worte.join('|');
   const teile = text.split(new RegExp(`(${muster})`, 'ig'));
   const test = new RegExp(`^(?:${muster})$`, 'i');
+  // Hervorhebung über Gewicht + dunklere Tinte statt Farbfläche: eine brass-
+  // Hintergrund-Tönung drückte den ink-500-Snippet-Text unter AA (axe: 4.23:1
+  // auf brass-100) — Gewicht/ink-700 ist in BEIDEN Themes kontrastsicher, weil
+  // der Hintergrund die Panel-Fläche bleibt (§13/F2).
   return teile.map((teil, i) => (test.test(teil)
-    ? <mark key={i} className="rounded-[0.15rem] bg-brass-100 text-inherit">{teil}</mark>
+    ? <mark key={i} className="bg-transparent font-semibold text-ink-700">{teil}</mark>
     : teil));
 }
 
@@ -204,7 +208,10 @@ export function SuchResultate({ gruppen, allesGeladen, q, onAuswahl, onNavigate,
       {/* §8-Korpus-Offenlegung (S3/E1): was die Suche wirklich durchsucht, ausserhalb
           der Listbox. Link auf die Abdeckungsseite «Was ist drin». */}
       {abdeckung && (
-        <p className="mt-2 px-1 text-micro leading-snug text-ink-500">
+        // 11px-Feinschrift in ink-600, nicht ink-500 (Auftrag David 25.6.2026,
+        // Muster lc-fineprint): auf brass-getönten Flächen (Hero) fällt ink-500
+        // bei 11px unter AA (axe 4.23:1) — ink-600 trägt AA in beiden Themes.
+        <p className="mt-2 px-1 text-micro leading-snug text-ink-600">
           Durchsucht: {abdeckung.volltext} Bund-Erlasse im Volltext · {abdeckung.bge} BGE ·
           {' '}kantonale Erlasse ({abdeckung.kantonTitel}): nur nach Titel.{' '}
           <Link to="/abdeckung" onClick={onAuswahl} className="text-brass-700 no-underline hover:text-brass-600">Was ist drin? →</Link>
