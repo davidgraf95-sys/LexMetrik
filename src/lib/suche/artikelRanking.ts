@@ -15,10 +15,9 @@
 // statt der Wortdichte:
 //
 //   Gruppe A — topische Treffer (Marginalie/Gliederung getroffen):
-//     nach Sach-Score ↓ (Marginalie ≫ Gliederung, getippt ≫ Synonym),
-//     dann Kernerlass-Rang ↑, dann Artikelnummer ↑ (definitorisch zuerst).
-//   Gruppe B — reine Texttreffer:
-//     nach Termfrequenz ↓, dann Kernerlass-Rang ↑, dann Artikelnummer ↑.
+//     Kernerlass-Rang ↑, dann Artikelnummer ↑ (definitorisch zuerst).
+//   Gruppe B — reine Texttreffer: behält die FlexSearch-Ankunftsordnung
+//     (= Vorher-Verhalten; FlexSearch rangiert textintern selbst).
 //   A steht immer vor B.
 //
 // K10: KEIN Zweit-Index — m/g sind Felder auf denselben Daten, die der Reader
@@ -45,11 +44,14 @@ const KERN_NICHT = KERNERLASSE.length; // Rang für Nicht-Kernerlasse (ganz hint
 //   Stufe 1 — NEBENERWÄHNUNG: die Query trifft nur eine nachrangige Marginalie —
 //     der Artikel NENNT das Thema, ist ihm aber nicht gewidmet (OR 121
 //     «Verrechnung … Bei Bürgschaft»). Steht hinter dem gewidmeten Artikel.
-//   Stufe 2 — reiner Texttreffer (Gruppe B).
-// Innerhalb einer Stufe ordnet Kernerlass ↑, dann die Artikelnummer (definitorischer
-// Eröffnungsartikel zuerst → «253 ff.», «492 ff.»; die zentralen Allgemein-Teil-
-// Artikel mit niedriger Nummer vor Spezialabschnitten).
-const TF_CAP = 5; // Deckel der Termfrequenz je Term (Langartikel nicht bevorteilen)
+//   Stufe 2 — reiner Texttreffer (Gruppe B): behält die FlexSearch-Ankunftsordnung.
+//     Der volle Artikeltext wird hier BEWUSST NICHT tokenisiert — eine Termfrequenz-
+//     Zählung über bis zu ~1200 Kandidaten-Volltexte je Tastendruck war auf schwacher
+//     Hardware (CI 2 vCPU) der A9-/P3-Killer; die Stufen-Felder m/n/g sind kurz und
+//     billig. FlexSearchs eigene Text-Rangordnung ist zugleich exakt das Vorher-
+//     Verhalten → «nie schlechter als roh» gilt für Gruppe B strukturell.
+// Innerhalb der Stufen 0/1 ordnet Kernerlass ↑, dann die Artikelnummer
+// (definitorischer Eröffnungsartikel zuerst → «253 ff.», «492 ff.»).
 
 /** In vergleichbare Tokens zerlegen (lowercase, ohne Diakritika — spiegelt die
  *  FlexSearch-LatinBalance-Normalisierung; nur a–z/0–9-Sequenzen). */
@@ -61,13 +63,6 @@ function tokens(s: string): string[] {
  *  `tokenize: 'forward'` (ein Token ist über jeden seiner Präfixe auffindbar). */
 function trifft(feldTokens: string[], term: string): boolean {
   return feldTokens.some((tk) => tk.startsWith(term));
-}
-
-/** Anzahl Feld-Tokens mit dem Term als Präfix (für die Termfrequenz). */
-function trefferzahl(feldTokens: string[], term: string): number {
-  let n = 0;
-  for (const tk of feldTokens) if (tk.startsWith(term)) n++;
-  return n;
 }
 
 /** Natürliche Artikel-Ordnung: führende Zahl numerisch, Suffix lexikografisch
@@ -86,43 +81,37 @@ export function sucherTerme(q: string): { orig: string[]; syn: string[] } {
   return { orig, syn };
 }
 
-interface Bewertung<T> { e: T; stufe: number; tf: number; kern: number; num: number; suf: string }
+interface Bewertung<T> { e: T; stufe: number; kern: number; num: number; suf: string; idx: number }
 
-function bewerte<T extends RankEintrag>(e: T, orig: string[], syn: string[]): Bewertung<T> {
+function bewerte<T extends RankEintrag>(e: T, orig: string[], idx: number): Bewertung<T> {
+  // NUR die kurzen Struktur-Felder tokenisieren (m/n/g) — nie den Volltext e.t
+  // (Perf-Kontrakt A9, siehe Kopfkommentar). Topische Treffer NUR aus der
+  // getippten Query; Synonyme tragen allein den Recall (artikelVolltext.ts).
   const mTok = tokens(e.m); // primäre Marginalie (Hauptthema)
   const nTok = tokens(e.n); // nachrangige Marginalie
   const gTok = tokens(e.g); // Gliederungs-Titel
-  const tTok = tokens(e.t);
   let haupt = false; // Stufe 0: primäre Marginalie oder Gliederung
   let neben = false; // Stufe 1: nur nachrangige Marginalie
-  let tf = 0;
   for (const term of orig) {
     if (trifft(mTok, term) || trifft(gTok, term)) haupt = true;
     else if (trifft(nTok, term)) neben = true;
-    tf += Math.min(trefferzahl(tTok, term), TF_CAP);
-  }
-  // Synonyme: nur Textfrequenz (schwächer) — kein topischer Boost.
-  for (const term of syn) {
-    tf += Math.min(trefferzahl(tTok, term), TF_CAP) * 0.4;
   }
   const [num, suf] = artikelSchluessel(e.a);
   const stufe = haupt ? 0 : neben ? 1 : 2;
-  return { e, stufe, tf, kern: KERN_RANG.has(e.k) ? KERN_RANG.get(e.k)! : KERN_NICHT, num, suf };
+  return { e, stufe, kern: KERN_RANG.has(e.k) ? KERN_RANG.get(e.k)! : KERN_NICHT, num, suf, idx };
 }
 
 /**
  * Rangiert die Kandidaten deterministisch und liefert die besten `limit`.
  * Reine Funktion (§2): gleiche Eingabe → gleiche Ausgabe, stabile Tie-Breaks.
- * Kandidaten ohne jeden Bezug (keine topische Stufe UND Textfrequenz 0 —
- * FlexSearch-«suggest»-Rauschen) fallen heraus.
+ * Gruppe B (Stufe 2) behält die Eingabe-Reihenfolge (idx) — das ist die
+ * FlexSearch-Ankunftsordnung, also das Vorher-Verhalten.
  */
 export function rangiere<T extends RankEintrag>(kandidaten: T[], q: string, limit: number): T[] {
-  const { orig, syn } = sucherTerme(q);
-  if (orig.length === 0 && syn.length === 0) return kandidaten.slice(0, limit);
+  const { orig } = sucherTerme(q);
+  if (orig.length === 0) return kandidaten.slice(0, limit);
 
-  const bewertet = kandidaten
-    .map((e) => bewerte(e, orig, syn))
-    .filter((b) => b.stufe < 2 || b.tf > 0);
+  const bewertet = kandidaten.map((e, i) => bewerte(e, orig, i));
 
   bewertet.sort((x, y) => {
     if (x.stufe !== y.stufe) return x.stufe - y.stufe; // Hauptthema → Nebenerwähnung → Text
@@ -134,12 +123,8 @@ export function rangiere<T extends RankEintrag>(kandidaten: T[], q: string, limi
       if (x.num !== y.num) return x.num - y.num;
       return x.suf < y.suf ? -1 : x.suf > y.suf ? 1 : 0;
     }
-    // Gruppe B (rein textuell): Termfrequenz ↓, dann Kern ↑, Artikelnummer ↑.
-    if (y.tf !== x.tf) return y.tf - x.tf;
-    if (x.kern !== y.kern) return x.kern - y.kern;
-    if (x.e.k !== y.e.k) return x.e.k < y.e.k ? -1 : 1;
-    if (x.num !== y.num) return x.num - y.num;
-    return x.suf < y.suf ? -1 : x.suf > y.suf ? 1 : 0;
+    // Gruppe B (rein textuell): FlexSearch-Ankunftsordnung (deterministisch).
+    return x.idx - y.idx;
   });
   return bewertet.slice(0, limit).map((b) => b.e);
 }
