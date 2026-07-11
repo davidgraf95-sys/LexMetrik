@@ -176,6 +176,18 @@ Passt eng auf `[[immer-doppelt-verifizieren]]` + Skill `gegenpruefung`. Vier **d
 
 **Nächster konkreter Schritt (wartet auf Go):** kleiner TS-Extraktor 1 Kanton end-to-end in unsere Normtext-Struktur (`public/normtext/*`, Token=`uid`) + Doppel-Generator + `check:struktur-konsistenz` + Gegenprüfung, Review-Quote gegen jetzige LexFind-Extraktion messen. Andockpunkt `register.ts` `ErlassStatus→render_mode` (`[[lexfind-clex-quelle-strategie]]`). Isoliert auf eigenem Branch/Worktree (nicht auf `feat/normtext-phase1-fundament`).
 
+---
+
+## Stand Baustein ① — VERIFIZIERT, bereits gebaut (11.7.2026, Go David 10.7.)
+
+**Verdikt: Baustein 1 ist gebaut und live — kein Neubau (§1/§6: Neubau = Golden-Churn auf 1 232 Snapshots).** Bau-Agent hat die verlangte POC/Mess-Phase über **alle 19 LexWork-Kantone live** gefahren (read-only, gegen die amtlichen Portale). Voll-Tabelle + §11-Struktur: **`bibliothek/normen/lexwork-kantone-poc-19-verdikt.md`**.
+
+- **Ist-Stand (bestätigt):** browserloser Adapter `scripts/normtext/adapter-lexwork.ts` (fetch → `xhtml_tol`, Drift-Token `version_uid`), host-agnostische Discovery `lexfind-discovery.ts` (keine Host-Whitelist, folgt Redirects), 1 232 Kantons-Snapshots über alle 26 Kt., Drift-Tor `check:normtext-netz` (`check-drift.ts` Prüfung 3) — **alle drei Auftrags-Bau-Items existieren schon**.
+- **Empirie 11.7.:** **18/19 voll nutzbar** (Index-Liveness, `version_uid`, `xhtml_tol` mit `class='article'`). 7 Hosts leiten per 301 auf neue amtliche Hosts um (FR/GL/NW/OW/SH/VS/ZG) — Redirect-Folgen bewährt, «nie hardcoden» bestätigt.
+- **GL = Currency-Befund (teilweise):** `gesetze.gl.ch` serviert den `texts_of_law/{id}`-Endpunkt (`xhtml_tol`) nicht mehr (Soft-404-Shell); nur `/show_as_json` (`json_content`) lebt → GL-Snapshots driften, `check:normtext-netz` warnt GL. **Erstes empirisches Argument für den `json_content`-Upgrade (Option c).** Fix = Follow-up (Snapshot-Risiko-Pfad + Pflicht-Gegenprüfung), koppelt an den offenen David-SCHEMA-ENTSCHEID a/b/c.
+- **Gegenprüfung bestanden:** SO 111.1 Art. 1 zeichengleich zur amtlichen Quelle; AR-future-version (geltende, nicht künftige Fassung); BS-abrogated (leerer Block, kein fabrizierter Text). Kein neuer Risiko-Diff in dieser Session (doc-only) → kein `gegenpruefung:ok`-Token nötig.
+- **Offen (Follow-ups, NICHT gebaut):** (1) GL-`json_content`-Andockung; (2) David-SCHEMA-ENTSCHEID `json_content` vs. `xhtml_tol` (Fidelity vs. Golden-Churn auf 1 232 Snapshots).
+
 Geklontes OCL-Repo lag unter `scratchpad/ocl` (ephemer). POC-Probe-Artefakte im Scratchpad (ephemer).
 
 ---

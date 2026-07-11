@@ -767,6 +767,12 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
       (LexWork-Kantons-API · Fedlex-SPARQL-Eigenheiten · Zitat-Regexes/ECLI · Verifikations-Rails →
       Gegenprüfung). Leit-Doktrin: OCL nie load-bearing, nur Seed/Diff-Orakel + Endpunkt-Wissen selbst
       gegen amtliche Quelle nachbauen. **Detailquelle:** `FAHRPLAN-OPENCASELAW-QUELLEN.md`.
+      **Baustein ① LexWork-Kantons-API ✅ verifiziert 11.7.2026** (POC/Mess über alle 19 Kantone
+      live): war **bereits gebaut+live** (Adapter/Discovery/1232 Snapshots/`check:normtext-netz`) → kein
+      Neubau (§1/§6). 18/19 voll nutzbar; **GL teilweise** (Migration `gesetze.gl.ch`, `xhtml_tol`-Endpunkt
+      tot → Currency-Befund, Verfallsregister). Gegenprüfung SO/AR-future/BS-abrogated bestanden. Doc-only.
+      Verdikt-Tabelle `bibliothek/normen/lexwork-kantone-poc-19-verdikt.md`. Offen: GL-`json_content`-
+      Andockung + David-SCHEMA-ENTSCHEID (`json_content` vs. `xhtml_tol`, Golden-Churn 1232 Snapshots).
     - [~] **Fedlex-Datenarten-Portfolio** *(Plan 2.7.2026; Go David 10.7.2026 «go zu allem», Reihenfolge 1→2→5→3→4)* — 6 verwertbare
       Fedlex-Datenarten (Erlasse/Materialien/Verfahren/Staatsverträge u.a.), ausschliesslich amtliche Fedlex-Stelle
       (SPARQL + Filestore, nie Dritt-Repo). **Detailquelle:** `FAHRPLAN-FEDLEX-PORTFOLIO.md`.
