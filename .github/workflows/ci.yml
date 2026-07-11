@@ -38,6 +38,8 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - name: Plan-Inventar-Konsistenz (Node-only, günstig — darum vor tsc/Build)
+        run: npm run check:plan
       - name: TypeScript (tsc -b)
         run: npx tsc -b
       - name: Tests (volle Ausgabe)

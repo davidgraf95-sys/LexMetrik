@@ -3,6 +3,12 @@
 # (3.7.2026), wären reine .md-PRs sonst PERMANENT unmergbar (Check wird nie
 # gemeldet). Dieser Zwilling triggert INVERS (nur **.md) und meldet denselben
 # Job-Namen als No-op-Erfolg. GitHub-Standardmuster für required checks + paths.
+#
+# check:plan LÄUFT HIER TROTZDEM (10.7.2026): reine .md-PRs sind genau die
+# Klasse, die @meta-Waisen erzeugt (ROADMAP.md/STRUKTUR.md-Änderungen ohne
+# Code) — und das war exakt die Lücke, durch die 3 Waisen grün mergten,
+# weil check:plan bislang NIRGENDS in CI lief. Der Schritt bleibt trotzdem
+# günstig: nur Node + npm ci + ein vite-node-Skript, kein Build/Playwright.
 name: CI (Doku-No-op)
 
 on:
@@ -16,4 +22,12 @@ jobs:
     name: Tore (tsc · Tests · Lint · Build · Checks)
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Reine Doku-Änderung — Code-Tore nicht betroffen (Zwilling meldet grün)."
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Plan-Inventar-Konsistenz (einziger echter Check im Zwilling)
+        run: npm run check:plan
+      - run: echo "Reine Doku-Änderung — restliche Code-Tore nicht betroffen (Zwilling meldet grün)."
