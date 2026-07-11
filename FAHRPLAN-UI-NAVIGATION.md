@@ -41,6 +41,17 @@ Pfade schliessen**, nicht Neubau.
 
 ## §1 · P0 — Quick-Win-Paket (alles S, kollisionsfrei, zusammen ~1–2 Sessions)
 
+> **✅ GEBAUT (11.7.2026, Opus).** N0a–N0d komplett umgesetzt + je empirisch
+> (Playwright Desktop+Mobil@390) belegt, ein Pathspec-Commit je Quick-Win.
+> Tore grün (tsc · vitest 3701 · golden byte-gleich · lint · 26/28 Sub-Checks);
+> **fremd-vorbestehend rot: `check:p-klassen` + `check:vollstaendigkeit`** (Normtext-
+> Daten, von diesem reinen UI-Diff unberührt — nicht gefixt). Prerender aller 61
+> Routen ok. **W3-Abweichung (deklariert):** touch-Popover als Ein-Zeilen-Legende
+> am Katalog-Kopf statt an der Inline-Badge (deren Karten-Zeile ist ein `<Link>` →
+> `<button>` darin wäre ungültige Verschachtelung); der `title` der Inline-Badges
+> bleibt. **W4 (deklarierte fachliche Änderung, §6.3):** `/rechner`-Test auf das neue
+> lokale Filterfeld gezogen (vorher «kein Suchfeld» als Invariante).
+
 ### N0a · Tote Rückwege (EIN Mini-PR)
 - **Kern:** `Footer.tsx:11` `{ to: '/', label: 'Rechner & Vorlagen' }` → `/rechner` (bzw. zwei
   Einträge Rechner·Vorlagen) · `RechnerKopf.tsx:29/35` beide `Link to="/"` → «← Alle Rechner»
@@ -491,7 +502,7 @@ präzisiert, nie autonom gekippt.
 
 | Rang | Einheit(en) | Aufwand | Kollision | Gate-Besonderheit |
 |---|---|---|---|---|
-| 1 | **N0a–N0d** Quick-Wins | je S | keine | reine UI, `gegenpruefung: n/a` |
+| 1 | **N0a–N0d** Quick-Wins ✅ (11.7.) | je S | keine | reine UI, `gegenpruefung: n/a` — **gebaut+belegt** |
 | 2 | **S1 · S2 · S3 · S6** Suche-Kette Kurzteil | S/M/M/S–M | `src/components/suche`, `src/lib/suche` | e2e norm-sprung + universalSuche.test (A6-Kontrakt) |
 | 3 | **O1** Verlauf-Initiative (+Tracker-Label sofort) | M | zuletztVerwendet/Topbar | §8 «nur auf diesem Gerät» |
 | 4 | **V1 · V4 · V6** Verzahnung datenarm | M/S/S–M | KontextPanel/Registry | V1-Datenlage zuerst erheben |
