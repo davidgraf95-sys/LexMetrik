@@ -83,6 +83,7 @@
     "check:pdf": "vite-node scripts/normtext/check-pdf.ts",
     "check:pdf-netz": "vite-node scripts/normtext/check-pdf.ts -- --netz",
     "gen:pdf-quellen": "vite-node scripts/normtext/pdf-quellen-generieren.ts --",
+    "gen:inkrafttreten": "vite-node scripts/normtext/inkrafttreten-generieren.ts --",
     "check:pdf-quellen": "vite-node scripts/normtext/check-pdf-quellen.ts",
     "check:pdf-quellen-netz": "vite-node scripts/normtext/check-pdf-quellen.ts -- --netz",
     "check:perf-budget": "vite-node scripts/check-perf-budget.ts",

@@ -43,6 +43,15 @@ export function ErlassLeserKopf({ erlass, overline, artikelAnzahl, bestimmungsWo
         )}
         {erlass.stand && (erlass.sr || artikelAnzahl != null) && <span className="text-ink-300" aria-hidden>·</span>}
         {erlass.stand && <span>Stand <span className="num">{formatiereDatum(erlass.stand)}</span></span>}
+        {/* K-1: Ur-Inkrafttreten des Erlasses (Fedlex `dateEntryInForce`, build-time
+            projiziert ⇒ CLS 0). Distinkt vom «Stand» (Konsolidierung) — nur Bund;
+            Kanton trägt es nicht (§8). «vom …» wird NICHT gedoppelt (steht im Ingress). */}
+        {erlass.inkraftSeit && (
+          <>
+            <span className="text-ink-300" aria-hidden>·</span>
+            <span>in Kraft seit <span className="num">{formatiereDatum(erlass.inkraftSeit)}</span></span>
+          </>
+        )}
         {erlass.quelleUrl && <a href={erlass.quelleUrl} target="_blank" rel="noopener noreferrer" className="lc-chip no-underline hover:text-brass-700">↗ geltende Fassung</a>}
         {/* P1-d Currency-Chips (Moat-Hebel 3): maschineller Freshness-Beweis + angekündigte
             Fassung. Prerender-stabil (Sidecar zur Bauzeit erhoben, keine Client-Datums-Logik,
