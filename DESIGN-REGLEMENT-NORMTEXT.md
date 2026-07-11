@@ -259,10 +259,10 @@ Farbe — kein Ton trägt zwei Bedeutungen:
 
 | Ton | Bedeutung (die EINE) | Trägt sie |
 | --- | --- | --- |
-| **brass** (Messing) | Marke / Hervorhebung / Wortlaut-Referenz. Kein Rechtsstatus-Urteil. | Norm-KantenChip-Tick (`kategorie='norm'`, Default), ★-Leitentscheid-Glyph, Verweis-Links |
-| **slate** | **Neutraler Referenz-/Sekundärton** — maschinell/prozedural, ohne Wertung. Kein Rechtsstatus-Urteil, insbesondere **NICHT** «ungeprüft/in Vorbereitung». | Rechtsprechungs-KantenChip-Tick (`kategorie='entscheid'`: Leitfälle + zitierte Entscheide), soft-Badges «maschinell»/«nur Verweis» (`lc-badge-soft`) |
-| **warn** | Echter Fassungs-/Sachvorbehalt (eine Warnung, keine Ampel-Wertung des Entscheids). | Revisions-↻-Glyph (`glyphTon: text-warn-700`) |
-| **sage** | Currency «geltend geprüft (maschinell)» — erst mit C-2/C-3. | (noch nicht bespielt) |
+| **brass** (Messing) | Marke / Hervorhebung / Wortlaut-Referenz. Kein Rechtsstatus-Urteil. | Norm-KantenChip-Tick (`kategorie='norm'`, Default), ★-Leitentscheid-Glyph, Verweis-Links, Verweise-Overline-Punkt (`lc-punkt`, V2·C-2 — auf `--paper` in brass-600, s. u.) |
+| **slate** | **Neutraler Referenz-/Sekundärton** — maschinell/prozedural, ohne Wertung. Kein Rechtsstatus-Urteil, insbesondere **NICHT** «ungeprüft/in Vorbereitung». | Rechtsprechungs-KantenChip-Tick (`kategorie='entscheid'`: Leitfälle + zitierte Entscheide), Leitfälle-Overline-Punkt (`lc-punkt-entscheid`, V2·C-2), soft-Badges «maschinell»/«nur Verweis» (`lc-badge-soft`) |
+| **warn** | Echter Fassungs-/Sachvorbehalt (eine Warnung, keine Ampel-Wertung des Entscheids). | Revisions-↻-Glyph (`glyphTon: text-warn-700`), Currency-Chip-Tick «nächste Fassung ab …» (`lc-chip-vorbehalt`, V2·C-2 — angekündigt, noch nicht in Kraft) |
+| **sage** | Currency «geltend geprüft am … (maschinell)» — neutraler, maschineller Freshness-Beweis, KEIN Rechtsstatus-Urteil («(maschinell)»-Wording bleibt tragend, §7/§8). | Currency-Chip-Tick `lc-chip-geltend` (V2·C-2) |
 
 **slate-Doppelbelegung aufgelöst (David-Entscheid §3 Ziff. 3):** slate war latent
 sowohl «Rechtsprechungs-Kante» als auch «ungeprüft/in-Vorbereitung-Status». Fixiert:
@@ -281,6 +281,31 @@ hell / **3.47** dunkel; warn-700-↻ **5.24** / **9.43**; brass-700-★ **4.91**
 `--slate-500` wird in `html.dark` bewusst NICHT überschrieben (Tick-Kontrast bleibt
 gehalten). **Gegated:** `verzahnung.test` (Default byte-identisch, Entscheid-Slate,
 ↻-warn), Golden byte-gleich.
+
+**V2·C-2 (Farb-Wörterbuch Teil 2, 11.7.2026, David «go zu allem») — zwei weitere
+Bausteine, gleiche Anatomie-Disziplin (nur Tick/Punkt-Farbe, CLS 0):**
+
+1. **Overline-Farbpunkte** ordnen die Referenzzeilen ihrer Farbfamilie zu:
+   «Leitfälle» trägt den slate-Punkt (`lc-punkt-entscheid` = Rechtsprechung, deckt
+   sich mit dem Entscheid-Chip-Tick), «Verweise» den brass-Punkt (`lc-punkt` = Norm).
+   Der Punkt ist **redundant zum daneben stehenden Wortlabel** (`aria-hidden`, Farbe
+   trägt NIE allein, §13/F2) und sitzt auf `--paper` statt `--well` — darum brass-**600**
+   (nicht -500 wie der Chip-Tick auf well), damit die Füllung ≥3:1 hält.
+2. **Currency-Chip-Tonung** gibt dem Fedlex-Freshness-Beweis Status-Semantik über den
+   Tick: sage «geltend geprüft am … (maschinell)» (`lc-chip-geltend`) — neutral,
+   maschinell, **kein Rechtsstatus-Urteil**; warn «nächste Fassung ab …»
+   (`lc-chip-vorbehalt`) — echter Fassungsvorbehalt (angekündigt, noch nicht in
+   Kraft). Das «(maschinell)»-Wortfeld bleibt tragend (§7/§8: keine
+   fachliche-Abnahme-Suggestion). `--sage-500`/`--warn-500` in `html.dark` bewusst
+   NICHT überschrieben.
+
+Kontrast als Gate gemessen (WCAG 1.4.11 ≥3:1, Light+Dark, Desktop+Mobil@390,
+Playwright): slate-Leitfälle-Punkt **5.21** hell / **3.31** dunkel; brass-600-
+Verweise-Punkt **3.71** / **11.74**; sage-geltend-Tick **4.14** / **4.03**;
+warn-vorbehalt-Tick **3.02** / **5.52** — alle ≥ Schwelle. **Gegated:**
+`v2-c2-farbwoerterbuch.test` (Leitfälle-slate-Punkt, geltend-sage + «(maschinell)» +
+kein «gegengeprüft/verifiziert», vorbehalt-warn, leer ⇒ kein toter Marker), Golden
+byte-gleich. Gegenprüfung n/a (reines UI).
 
 ### §4c · Leser-Darstellungsoptionen (W2·5d G2a, 4.7.2026; U-KOPF/A1+A4, 5.7.2026; V2·B-1/B-2/K-2, 11.7.2026)
 
