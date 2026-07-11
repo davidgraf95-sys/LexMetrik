@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import type { NormSnapshot } from '../lib/normtext/typen';
 import { textFragment } from '../lib/normtext/passus';
 import { istSchliessTaste } from '../lib/normtext/tasten';
@@ -146,9 +147,14 @@ export function NormPopover({ snapshot, passus, onClose }: {
             der ⧉ (Split-View): Norm im Pane aufschlagen, das gelesene Dokument
             bleibt offen — nur unter dem Pane-Gating sichtbar (nie auf Mobile). */}
         <span className="inline-flex items-center gap-2">
-          <a href={readerLink} className="inline-block text-xs text-brass-700 hover:underline">
+          {/* W2·5d U-POSITION/A16: SPA-<Link> statt Vollseiten-<a> — so bleibt der
+              In-Memory-Scroll-Anker erhalten und Browser-Zurück landet wieder EXAKT
+              am Ausgangs-Artikel (Vollseiten-Navigation verwarf den Anker). onClose
+              schliesst den Popover nach dem Sprung. Im Pane navigiert der Link
+              Pane-lokal (eigene History). */}
+          <Link to={readerLink} onClick={onClose} className="inline-block text-xs text-brass-700 hover:underline">
             Im Gesetz öffnen ›
-          </a>
+          </Link>
           {kannOeffnen && !istOffen(readerLink) && (
             <button type="button"
               onClick={() => { oeffneDaneben(readerLink); onClose(); }}

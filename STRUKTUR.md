@@ -27,6 +27,18 @@ Steuer-Doks ihr Budget wieder überschreiten. Offene Abnahmen sind davon unberü
 (Spiegel: `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 11.7.2026 — U-POSITION (A2+A16+A17): Scrollbalken-Proportionalität · exakte Zurück-Restoration · Split-View-Fundstelle (W2·5d, reines UI, Worktree `lm-u-position`, Branch `feat/u-position-a2-a16-a17`)
+
+**Reader-Kette W2·5d nach U-VERWEIS.** Drei Anmerkungen an der Höhen-/Anker-Mechanik, reine Darstellung/Interaktion (`Gegenpruefung: n/a`). **Golden byte-gleich** (alle Änderungen Client-Reader; kein `public/normtext`/`erlassVolltextHtml`; `golden:vergleich` IDENTISCH).
+
+**A2 Scrollbalken-Proportionalität.** Wurzel empirisch: `.nt-art-cv` gab jedem Artikel denselben `contain-intrinsic-size: auto 320px` → Platzhaltersumme ≠ Realität, Daumen-ans-Ende in der Mitte. **Fix:** `schaetzeArtikelHoehe` (berechnungen.ts, deterministisch aus dem Snapshot) inline je `<article>` (überschreibt 320px). **Logikverlust-Bewertung: keiner** — `content-visibility:auto` bleibt (Ctrl+F/Anker/Druck/SEO unberührt), nur der Schätzwert wird proportional. `check:perf-budget` grün.
+
+**A16 anker-basierte Zurück-Restoration.** `scrollAnker.ts` (neu): {Token, Offset} je Reiter; passiver rAF-Scroll-Listener erfasst den obersten Artikel + Offset. `App.tsx:ScrollWiederherstellung` löst für Leser-Reiter den Anker gegen das AKTUELLE DOM auf (`getElementById`, element-basiert robust gegen die content-visibility-Höhenschätzung), scrollY bleibt Fallback (Nicht-Leser byte-gleich). Interne Verweise navigieren über den **Router** (echter History-Eintrag; manuelles pushState war der debug-widerlegte Irrweg — desynct react-router). NormPopover «Im Gesetz öffnen» → SPA-`<Link>` (deklarierte Änderung, Test in MemoryRouter) ⇒ Cross-Erlass-Zurück (AIG→StGB) landet am Ausgangs-Artikel. Pane-eigene History unangetastet.
+
+**A17 Split-View an der Fundstelle.** Reader lasen die Fundstelle aus `window.location.hash` (Haupt-URL) und brachen für Panes ab ⇒ Pane öffnete oben. Fix: Gesetz-Leser + EntscheidLeser lesen Hash/`?norm` **pane-lokal** (`useLocation`/`<Routes location>`). Nie stumm falsch: ohne `ersteFundstelle` ehrlicher Dokumentanfang; Materialien (nur-live-link) ohne Ziffer-Sprung (n/a).
+
+**Tore:** voller `gate` grün; der VORBESTEHENDE `check:plan`-Orphan `W3·14-Responsive-Defekte` (10.7.-Session: @meta ohne Inventar-Eintrag) mit-reconciliert (`scripts/plan/inventar.ts`). e2e neu `leser-position-u` (P4 A2/A16/A17 + A9-Throttle CLS 0); Voll-Sweep 192/192 (norm-sprung-A9-Parallel-Flake standalone grün); hardened-Specs 10× stabil. Trailer `Roadmap: W2·5d`. PR mit armiertem Auto-Merge.
+
 ## Session 10.7.2026 — CLS-/e2e-Härtung: 0,49-CLS-Race + TOC-Mikro-Shift + Norm-Sprung-Reaktivität (QS-PERF, Worktree `lm-cls-fix`, Branch `fix/cls-race-haertung`)
 
 **Befund (Orchestrator, CI-Queue-Destabilisierung).** Drei byte-identische, nur unter CI-Parallel-Last (6 Tore-Jobs · 4× CPU-Drossel) reproduzierbare e2e-Rotfälle. **Nicht geraten — jeder Befund mit LayoutShift-Attribution (`PerformanceObserver` `sources`) belegt, dann Wurzel-Fix nach §15.2.**
