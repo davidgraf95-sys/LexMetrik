@@ -67,7 +67,7 @@ const LeitfallZeile = memo(function LeitfallZeile({ refs, normZitat, revision }:
   const gefiltert = filtereLeitfaelleNachZeitraum(refs, zeitraum, new Date().getFullYear());
   const zeitLabel = zeitraumLabel(zeitraum);
   const ueberschrift = (
-    <span className="lc-overline mr-1" title="Maschinell aus den zitierten Normen zugeordnet — keine redaktionelle Präjudizienauswahl. Entscheide beziehen sich auf die im Entscheidzeitpunkt geltende Fassung.">Leitfälle</span>
+    <span className="lc-overline mr-1" title="Maschinell aus den zitierten Normen zugeordnet — keine redaktionelle Präjudizienauswahl. Entscheide beziehen sich auf die im Entscheidzeitpunkt geltende Fassung."><span className="lc-punkt lc-punkt-entscheid" aria-hidden />Leitfälle</span>
   );
 
   // §8-Härtung (B-2): sind durch den Zeitraum ALLE weggefiltert, verschwindet die
@@ -364,7 +364,7 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
           {/* VERWEISE: auflösbare Normverweise des Artikels als Chips (Referenz David). */}
           {verweise.length > 0 && (
             <div className="mt-4 flex flex-wrap items-center gap-2">
-              <span className="lc-overline mr-1">Verweise</span>
+              <span className="lc-overline mr-1"><span className="lc-punkt" aria-hidden />Verweise</span>
               {verweise.map((v) => <NormChip key={v} artikel={v} />)}
             </div>
           )}

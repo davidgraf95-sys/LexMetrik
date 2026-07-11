@@ -48,12 +48,12 @@ export function ErlassLeserKopf({ erlass, overline, artikelAnzahl, bestimmungsWo
             Fassung. Prerender-stabil (Sidecar zur Bauzeit erhoben, keine Client-Datums-Logik,
             §15/2 CLS=0). Wortfeld «geltend geprüft am … (maschinell)» ist die zugelassene Formel. */}
         {currency?.geprueftAm && (
-          <span className="lc-chip whitespace-nowrap" title="Maschinell gegen den amtlichen Fedlex-Konsolidierungsgraphen (dateApplicability) geprüft; massgeblich bleibt stets die amtliche Quelle.">
+          <span className="lc-chip lc-chip-geltend whitespace-nowrap" title="Maschinell gegen den amtlichen Fedlex-Konsolidierungsgraphen (dateApplicability) geprüft; massgeblich bleibt stets die amtliche Quelle.">
             {`geltend geprüft am ${formatiereDatum(currency.geprueftAm)} (maschinell)`}
           </span>
         )}
         {currency?.naechsteFassungAb && (
-          <span className="lc-chip whitespace-nowrap" title="Fedlex hat eine künftige Konsolidierung angekündigt; sie ist noch nicht in Kraft und wird erst zum Stichtag massgeblich.">
+          <span className="lc-chip lc-chip-vorbehalt whitespace-nowrap" title="Fedlex hat eine künftige Konsolidierung angekündigt; sie ist noch nicht in Kraft und wird erst zum Stichtag massgeblich.">
             {`nächste Fassung ab ${formatiereDatum(currency.naechsteFassungAb)}`}
           </span>
         )}
