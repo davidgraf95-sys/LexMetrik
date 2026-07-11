@@ -1,16 +1,9 @@
 {
-  "hash": "848c6508b34dffe184778b3e65aa7302ab24341c8ae52ab0d262532b3362a5cf",
+  "hash": "9df7770b1692c13fa35b0bd6288029287a136577fd18c9a65d21029d74aa05b4",
   "verdikt": "bestanden",
-  "quellePin": "gesetze.gl.ch /api/de/texts_of_law LexWork live 2026-07-11 (version_uid je Erlass identisch zu Snapshot)",
+  "quellePin": "fedlex OR/ZGB/ZPO/SchKG/StGB/StPO/BGG/DBG/AHVG/DSG 20260711",
   "datum": "2026-07-11",
   "dateien": [
-    "daten-manifest.json",
-    "public/normtext/kanton/GL-III%20B%2F3%2F2.json",
-    "public/normtext/kanton/GL-III%20B%2F7%2F1.json",
-    "public/normtext/kanton/GL-III%20B_7_1.json",
-    "public/normtext/kanton/GL-III-A.5.json",
-    "public/normtext/kanton/GL-III-C.1.json",
-    "public/normtext/register.json",
-    "scripts/normtext/adapter-lexwork.ts"
+    "src/lib/normtext/werkzeuge.ts"
   ]
 }

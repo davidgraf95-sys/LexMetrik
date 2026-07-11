@@ -513,6 +513,7 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam }: { schlues
           Zitate gegen das kuratierte Manifest auf. Die Regeste bleibt oben
           ungestört (§0-1d). Fundstellen folgen der sichtbaren Ansicht. */}
       <KontextPanel typ="entscheid" normKeys={snap.normKeys}
+        artikelZitate={snap.zitierteNormen}
         ohneNormen={snap.zitierteNormen.length > 0}
         zusatzGruppen={(snap.zitierteNormen.length > 0 || snap.zitierteEntscheide.length > 0) ? (
           <>

@@ -5,6 +5,7 @@ import {
   type KontextTyp, type EntscheidRef, type MaterialBezug,
 } from '../../lib/kontext';
 import { ladeLeitfallShard, artikelProEntscheid } from '../../lib/rechtsprechung/norm-index';
+import { artikelWerkzeugGruppen } from '../../lib/normtext/werkzeuge';
 import { botschaftenFuer, type BotschaftBezug } from '../../lib/materialien/botschaften';
 import { revisionenFuerNorm, revisionTitel, type RevisionAnsicht, type RevisionBezug } from '../../lib/normtext/revisionen';
 import { vernehmlassungenFuer, VERNEHMLASSUNG_STATUS_LABEL, type VernehmlassungBezug } from '../../lib/materialien/vernehmlassungen';
@@ -101,7 +102,7 @@ function DanebenKnopf({ ziel, label, oeffneDaneben, className = 'ml-1' }: {
   );
 }
 
-export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false }: {
+export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false, artikelZitate }: {
   typ: KontextTyp;
   normKeys: readonly string[];
   /** Reader-eigene Gruppen (KontextGruppe), VOR den Standard-Gruppen gerendert —
@@ -110,10 +111,19 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false 
   /** true: die Erlass-Gruppe entfällt (der Reader ersetzt sie artikelscharf —
    *  keine Doppel-Darstellung, FAHRPLAN-VERZAHNUNG-UI §2.2). */
   ohneNormen?: boolean;
+  /** V1 (W2·10-UI-NAV): zitierte Norm-Strings des Entscheids — schaltet die
+   *  «Passende Werkzeuge» artikelscharf (Rausch-Filter, #28). */
+  artikelZitate?: readonly string[];
 }) {
   // Synchron (in-Bundle) — billig + deterministisch, daher pro Render berechnet
   // statt memoisiert (kleine Register, kein O(n²); §6.4).
-  const { normen, materialien, werkzeuge } = kontextSync(typ, normKeys);
+  const { normen, materialien, werkzeuge } = kontextSync(typ, normKeys, artikelZitate);
+  // Richtung «Artikel → Werkzeug» (#38): am Gesetz-Reader (genau EIN Erlass) die
+  // artikelscharfe Zuordnung «welcher Rechner gehört zu welchem Artikel». Ersetzt
+  // dort die grobe Erlass-Werkzeugliste (keine Doppel-Darstellung, Dichte-Regel).
+  const artikelGruppen = typ === 'norm' && normKeys.length === 1
+    ? artikelWerkzeugGruppen(normKeys[0]) : [];
+  const zeigeArtikelWerkzeuge = artikelGruppen.length > 0;
   // B-2 Verzahnung: Rechner direkt NEBEN dem Normtext öffnen (Split-View).
   // Nur ab lg + freier Pane-Kapazität sichtbar (Werkzeuge sind pane-sicher).
   const { oeffneDaneben, kannOeffnen, istOffen } = usePaneSteuerung();
@@ -258,7 +268,7 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false 
   // NICHT als leer (kein vorzeitiges Leerbild → kein Flash/CLS).
   const softLawLaden = typ !== 'material' && (!softLawGeladen || softLawGeladen.key !== normKeysKey);
 
-  const hatSync = normen.length > 0 || alleMaterialien.length > 0 || werkzeuge.length > 0;
+  const hatSync = normen.length > 0 || alleMaterialien.length > 0 || werkzeuge.length > 0 || zeigeArtikelWerkzeuge;
   const istLeer = !zusatzGruppen && !hatSync && !entscheideLaden && !softLawLaden
     && !botschaftenLaden && !botschaftenFehler && botschaften.length === 0
     && !revLaden && !revFehler && alleRevisionen.length === 0
@@ -595,9 +605,38 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false 
             );
           })()}
 
-          {/* Werkzeuge (für alle drei Reader) — kein Zitat-Beziehungstyp, darum
-              bewusst ohne Richtungs-Label. */}
-          {werkzeuge.length > 0 && (
+          {/* Richtung «Artikel → Werkzeug» (#38): am Gesetz-Reader die artikel-
+              scharfe Zuordnung — welcher Rechner/welche Vorlage gehört zu welchem
+              Artikel (Art. 127 OR → Verjährung). Ersetzt dort die grobe Erlass-
+              Werkzeugliste. Jede Zeile trägt ihren Artikel-Bereich als Beleg. */}
+          {zeigeArtikelWerkzeuge && (
+            <KontextGruppe titel="Werkzeuge zu einzelnen Artikeln" anzahl={artikelGruppen.length}
+              hinweis="Rechner und Vorlagen, die genau zu einem Artikel dieses Erlasses passen (eindeutige Zuordnungen; Zweifelsfälle bewusst ausgelassen).">
+              <ul className="flex flex-col gap-2.5">
+                {artikelGruppen.map((g) => (
+                  <li key={`${g.von}-${g.bis}`} className="flex flex-wrap items-baseline gap-x-2 gap-y-1.5">
+                    <span className="num lc-overline shrink-0 text-ink-600" title={g.beleg}>{g.label}</span>
+                    {g.werkzeuge.map((w) => (
+                      <span key={w.id} className="inline-flex items-center">
+                        <Link to={w.href}
+                          className="lc-chip whitespace-nowrap no-underline hover:text-brass-700 hover:border-brass-400">
+                          <span className="text-ink-500 mr-1" aria-hidden>{w.modus === 'rechner' ? '⊞' : '▤'}</span>{w.titel}
+                        </Link>
+                        {kannOeffnen && !istOffen(w.href) && (
+                          <DanebenKnopf ziel={w.href} label={w.titel} oeffneDaneben={oeffneDaneben} />
+                        )}
+                      </span>
+                    ))}
+                  </li>
+                ))}
+              </ul>
+            </KontextGruppe>
+          )}
+
+          {/* Werkzeuge (Entscheid- und Material-Reader; am Gesetz-Reader nur, wenn
+              keine artikelscharfen Gruppen vorliegen) — kein Zitat-Beziehungstyp,
+              darum bewusst ohne Richtungs-Label. */}
+          {!zeigeArtikelWerkzeuge && werkzeuge.length > 0 && (
             <KontextGruppe titel="Passende Werkzeuge" anzahl={werkzeuge.length}
               hinweis="Aus den verknüpften Normen abgeleitet (grobe Zuordnung, keine kuratierte Empfehlung).">
               {/* Mobil eine scrollbare Chip-Reihe, ab sm normaler Umbruch. */}
