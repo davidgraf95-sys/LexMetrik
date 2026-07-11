@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-19",
+  "erzeugt": "2026-07-11",
   "eintraege": [
     {
       "id": "kanton/GL/III%20B%2F3%2F2/art_1",
@@ -8,6 +8,7 @@
       "erlass": "Verordnung über Beurkundung und Beglaubigung mit Gebührentarif (GS III B/3/2)",
       "artikel": "1",
       "artikelLabel": "Art. 1",
+      "titel": "Verfahren",
       "bloecke": [
         {
           "absatz": "1",
@@ -16,7 +17,7 @@
       ],
       "stand": "2009-01-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B%2F3%2F2",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "b2009f947cbdec1ddee55eea5dc312e3",
       "sha": "24204360e093003b616d9e62863d14ed7c0bc401384f100f0834ab099ff6f0db"
     },
@@ -27,6 +28,7 @@
       "erlass": "Verordnung über Beurkundung und Beglaubigung mit Gebührentarif (GS III B/3/2)",
       "artikel": "2",
       "artikelLabel": "Art. 2",
+      "titel": "Ausfertigung der Urkunde",
       "bloecke": [
         {
           "absatz": "1",
@@ -55,7 +57,7 @@
       ],
       "stand": "2009-01-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B%2F3%2F2",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "b2009f947cbdec1ddee55eea5dc312e3",
       "sha": "da4330620936a58c7fb24874399eda6219ae40f576058bcb1ce0bee303bcd34e"
     },
@@ -66,6 +68,7 @@
       "erlass": "Verordnung über Beurkundung und Beglaubigung mit Gebührentarif (GS III B/3/2)",
       "artikel": "3",
       "artikelLabel": "Art. 3",
+      "titel": "Korrekturen",
       "bloecke": [
         {
           "absatz": "1",
@@ -90,7 +93,7 @@
       ],
       "stand": "2009-01-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B%2F3%2F2",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "b2009f947cbdec1ddee55eea5dc312e3",
       "sha": "3e6b17c38a20175e9f957bcfcfc1f6aab14dfbcae6b20e30c969ed2c48f7362f"
     },
@@ -101,6 +104,7 @@
       "erlass": "Verordnung über Beurkundung und Beglaubigung mit Gebührentarif (GS III B/3/2)",
       "artikel": "4",
       "artikelLabel": "Art. 4",
+      "titel": "Beurkundungserklärung",
       "bloecke": [
         {
           "absatz": "1",
@@ -113,7 +117,7 @@
       ],
       "stand": "2009-01-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B%2F3%2F2",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "b2009f947cbdec1ddee55eea5dc312e3",
       "sha": "28f370309ca127852b8250c61791c44adfc144c42625c34675c2d87d374ab8dc"
     },
@@ -124,6 +128,7 @@
       "erlass": "Verordnung über Beurkundung und Beglaubigung mit Gebührentarif (GS III B/3/2)",
       "artikel": "5",
       "artikelLabel": "Art. 5",
+      "titel": "Unterschrift, Handzeichen und Auszüge",
       "bloecke": [
         {
           "absatz": "1",
@@ -140,7 +145,7 @@
       ],
       "stand": "2009-01-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B%2F3%2F2",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "b2009f947cbdec1ddee55eea5dc312e3",
       "sha": "b3352b5e910c891cade2e46ca7ab4e8acb4d6ebbc2ab28f429015f7b336d0f44"
     },
@@ -151,6 +156,7 @@
       "erlass": "Verordnung über Beurkundung und Beglaubigung mit Gebührentarif (GS III B/3/2)",
       "artikel": "6",
       "artikelLabel": "Art. 6",
+      "titel": "Übersetzung",
       "bloecke": [
         {
           "absatz": "1",
@@ -163,7 +169,7 @@
       ],
       "stand": "2009-01-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B%2F3%2F2",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "b2009f947cbdec1ddee55eea5dc312e3",
       "sha": "a3b5844dc2944f8a56b8bd0c59811162ba66734898467c4ccb09ca7a895eedff"
     },
@@ -174,6 +180,7 @@
       "erlass": "Verordnung über Beurkundung und Beglaubigung mit Gebührentarif (GS III B/3/2)",
       "artikel": "7",
       "artikelLabel": "Art. 7",
+      "titel": "Form der Beglaubigung",
       "bloecke": [
         {
           "absatz": "1",
@@ -188,21 +195,37 @@
               "text": "bei Unterschrift oder Handzeichen:"
             },
             {
+              "marke": "a",
+              "text": "in Fällen, in denen die Unterschrift in Gegenwart der Beglaubigungsperson angebracht wird: «Dass N. N. [Name, Vorname, Geburtsdatum, evtl. weitere Identifikationsangaben] seine Unterschrift in meiner Gegenwart hier beigesetzt hat, bescheinigt:» Datum, Siegel oder Stempel, Unterschrift der Beglaubigungsperson."
+            },
+            {
+              "marke": "b",
+              "text": "in Fällen, in denen die Unterschrift auf dem Aktenstück schon angebracht ist: «Dass N. N. [Name, Vorname, Geburtsdatum, evtl. weitere Identifikationsangaben] dem Unterzeichneten erklärt hat, seine Unterschrift sei von ihm eigenhändig angebracht worden, bescheinigt:» Datum, Siegel oder Stempel, Unterschrift der Beglaubigungsperson."
+            },
+            {
               "marke": "2",
               "text": "bei Abschrift, Auszug oder einer andern Wiedergabe: «Dass die vorgelegte Abschrift, Auszug, andere Wiedergabe mit dem mir vorgelegten Dokument übereinstimmt, bescheinigt:» Datum, Siegel oder Stempel, Unterschrift der Beglaubigungsperson."
             },
             {
               "marke": "3",
               "text": "bei Übersetzung:"
+            },
+            {
+              "marke": "a",
+              "text": "in Fällen, in denen die Beglaubigungsperson die Fremdsprache zureichend kennt: «Dass die Übersetzung nach bestem Wissen und Gewissen gemacht wurde, bescheinigt:» Datum, Siegel oder Stempel, Unterschrift der Beglaubigungsperson."
+            },
+            {
+              "marke": "b",
+              "text": "In Fällen, in denen die Beglaubigungsperson die fremde Sprache nicht genügend beherrscht: «Dass der Übersetzer [Name, Vorname, Geburtsdatum, evtl. weitere Identifikationsangaben] mit seiner Unterschrift in meiner Gegenwart erklärt hat, die Übersetzung nach bestem Wissen und Gewissen gemacht zu haben, bescheinigt:» Datum, Siegel oder Stempel, Unterschrift der Beglaubigungsperson."
             }
           ]
         }
       ],
       "stand": "2009-01-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B%2F3%2F2",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "b2009f947cbdec1ddee55eea5dc312e3",
-      "sha": "09aa70ea3d905146610ab7ed0dc6921195bd740031a12f5458f53da111f85782"
+      "sha": "ddef67fca7de5532d0f53d9fecbc06d4ce255e43b4564901b3651fef7219d209"
     },
     {
       "id": "kanton/GL/III%20B%2F3%2F2/art_8",
@@ -211,6 +234,7 @@
       "erlass": "Verordnung über Beurkundung und Beglaubigung mit Gebührentarif (GS III B/3/2)",
       "artikel": "8",
       "artikelLabel": "Art. 8",
+      "titel": "Identifikation der Parteien",
       "bloecke": [
         {
           "absatz": "1",
@@ -219,7 +243,7 @@
       ],
       "stand": "2009-01-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B%2F3%2F2",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "b2009f947cbdec1ddee55eea5dc312e3",
       "sha": "aa96f95b413f7b51c89078b1be153432ddc7c8201f64f42fbbedd046b47d619d"
     },
@@ -230,6 +254,7 @@
       "erlass": "Verordnung über Beurkundung und Beglaubigung mit Gebührentarif (GS III B/3/2)",
       "artikel": "9",
       "artikelLabel": "Art. 9",
+      "titel": "Stempel, Siegel und Register",
       "bloecke": [
         {
           "absatz": "1",
@@ -246,7 +271,7 @@
       ],
       "stand": "2009-01-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B%2F3%2F2",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "b2009f947cbdec1ddee55eea5dc312e3",
       "sha": "38a02dfa8dde5c45bc0c406a0dea9c651688285c799c7207e4e96f0e8990e386"
     },
@@ -257,6 +282,7 @@
       "erlass": "Verordnung über Beurkundung und Beglaubigung mit Gebührentarif (GS III B/3/2)",
       "artikel": "10",
       "artikelLabel": "Art. 10",
+      "titel": "Grundsatz",
       "bloecke": [
         {
           "absatz": "1",
@@ -273,7 +299,7 @@
       ],
       "stand": "2009-01-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B%2F3%2F2",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "b2009f947cbdec1ddee55eea5dc312e3",
       "sha": "665cdaf2b3fd784de75fd128f6a412ab747a3b4662231ff6e5c0714027800156"
     },
@@ -284,6 +310,7 @@
       "erlass": "Verordnung über Beurkundung und Beglaubigung mit Gebührentarif (GS III B/3/2)",
       "artikel": "11",
       "artikelLabel": "Art. 11",
+      "titel": "Geltungsbereich",
       "bloecke": [
         {
           "absatz": "1",
@@ -304,7 +331,7 @@
       ],
       "stand": "2009-01-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B%2F3%2F2",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "b2009f947cbdec1ddee55eea5dc312e3",
       "sha": "b222a6fd88929c3cdf7699a8ed9f966999d4727ca6bf859b58b6a74af55b90ae"
     },
@@ -315,6 +342,7 @@
       "erlass": "Verordnung über Beurkundung und Beglaubigung mit Gebührentarif (GS III B/3/2)",
       "artikel": "12",
       "artikelLabel": "Art. 12",
+      "titel": "Bemessung",
       "bloecke": [
         {
           "absatz": "1",
@@ -335,7 +363,7 @@
       ],
       "stand": "2009-01-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B%2F3%2F2",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "b2009f947cbdec1ddee55eea5dc312e3",
       "sha": "91bde1b0ce878968e1df13d80e3ab86e76c9843ff21c628df0613009cc6e36ad"
     },
@@ -346,6 +374,7 @@
       "erlass": "Verordnung über Beurkundung und Beglaubigung mit Gebührentarif (GS III B/3/2)",
       "artikel": "13",
       "artikelLabel": "Art. 13",
+      "titel": "Rechnungsstellung",
       "bloecke": [
         {
           "absatz": "1",
@@ -376,7 +405,7 @@
       ],
       "stand": "2009-01-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B%2F3%2F2",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "b2009f947cbdec1ddee55eea5dc312e3",
       "sha": "0d46fa54c3d2499a36c10979a080d917a6862b8308820a9cfdf47061d1044fd8"
     },
@@ -387,6 +416,7 @@
       "erlass": "Verordnung über Beurkundung und Beglaubigung mit Gebührentarif (GS III B/3/2)",
       "artikel": "14",
       "artikelLabel": "Art. 14",
+      "titel": "Herabsetzung der Gebühr",
       "bloecke": [
         {
           "absatz": "1",
@@ -405,7 +435,7 @@
       ],
       "stand": "2009-01-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B%2F3%2F2",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "b2009f947cbdec1ddee55eea5dc312e3",
       "sha": "8475c75825e819511f31ee0d6d7a6b995cd846a50c82948ea2884ef81401b48a"
     },
@@ -416,6 +446,7 @@
       "erlass": "Verordnung über Beurkundung und Beglaubigung mit Gebührentarif (GS III B/3/2)",
       "artikel": "15",
       "artikelLabel": "Art. 15",
+      "titel": "Mehrere Rechtsgeschäfte",
       "bloecke": [
         {
           "absatz": "1",
@@ -424,7 +455,7 @@
       ],
       "stand": "2009-01-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B%2F3%2F2",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "b2009f947cbdec1ddee55eea5dc312e3",
       "sha": "76bca062af2054be7e01033d4120b75a1631c40665e6b18a48b5a95c756cb65e"
     },
@@ -435,6 +466,7 @@
       "erlass": "Verordnung über Beurkundung und Beglaubigung mit Gebührentarif (GS III B/3/2)",
       "artikel": "16",
       "artikelLabel": "Art. 16",
+      "titel": "Gebührenberechnung ohne Gebührenposition, Gebührenrahmen",
       "bloecke": [
         {
           "absatz": "1",
@@ -443,7 +475,7 @@
       ],
       "stand": "2009-01-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B%2F3%2F2",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "b2009f947cbdec1ddee55eea5dc312e3",
       "sha": "e3b4f6d043730b62c887ea6c7375c45d62e9d8a4bbfa128796e28788a9be663f"
     },
@@ -454,6 +486,7 @@
       "erlass": "Verordnung über Beurkundung und Beglaubigung mit Gebührentarif (GS III B/3/2)",
       "artikel": "17",
       "artikelLabel": "Art. 17",
+      "titel": "Sicherstellung",
       "bloecke": [
         {
           "absatz": "1",
@@ -462,7 +495,7 @@
       ],
       "stand": "2009-01-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B%2F3%2F2",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "b2009f947cbdec1ddee55eea5dc312e3",
       "sha": "0770cffcc92f30f89334c62792ae43d5af32e1a579c03de6e8d1e4d81ab212e1"
     },
@@ -473,6 +506,7 @@
       "erlass": "Verordnung über Beurkundung und Beglaubigung mit Gebührentarif (GS III B/3/2)",
       "artikel": "18",
       "artikelLabel": "Art. 18",
+      "titel": "Erlass",
       "bloecke": [
         {
           "absatz": "1",
@@ -481,7 +515,7 @@
       ],
       "stand": "2009-01-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B%2F3%2F2",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "b2009f947cbdec1ddee55eea5dc312e3",
       "sha": "77e34de473125d18e4be91f7245d0b4f31b37c00ec02036a4304a3b0ef9323db"
     },
@@ -492,6 +526,7 @@
       "erlass": "Verordnung über Beurkundung und Beglaubigung mit Gebührentarif (GS III B/3/2)",
       "artikel": "19",
       "artikelLabel": "Art. 19",
+      "titel": "Vorvertrag",
       "bloecke": [
         {
           "absatz": "1",
@@ -500,7 +535,7 @@
       ],
       "stand": "2009-01-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B%2F3%2F2",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "b2009f947cbdec1ddee55eea5dc312e3",
       "sha": "48f15a9d260e81af42aa8173b0b97eff3f652c549418add74630bb5ae8686b50"
     },
@@ -511,6 +546,7 @@
       "erlass": "Verordnung über Beurkundung und Beglaubigung mit Gebührentarif (GS III B/3/2)",
       "artikel": "20",
       "artikelLabel": "Art. 20",
+      "titel": "Verlängerung eines zeitlich befristeten Vertrages",
       "bloecke": [
         {
           "absatz": "1",
@@ -519,7 +555,7 @@
       ],
       "stand": "2009-01-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B%2F3%2F2",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "b2009f947cbdec1ddee55eea5dc312e3",
       "sha": "0ea8c0d17dcb86a0db06b4fb5808e3b2a6938b7b838a2f1cff1650226c64d1ff"
     },
@@ -530,6 +566,7 @@
       "erlass": "Verordnung über Beurkundung und Beglaubigung mit Gebührentarif (GS III B/3/2)",
       "artikel": "21",
       "artikelLabel": "Art. 21",
+      "titel": "Nicht gleichzeitiges Erscheinen der Parteien",
       "bloecke": [
         {
           "absatz": "1",
@@ -538,7 +575,7 @@
       ],
       "stand": "2009-01-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B%2F3%2F2",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "b2009f947cbdec1ddee55eea5dc312e3",
       "sha": "a77bb17f211c9a9801cba1be26dbc8d140436667607b6760a6cf2051fd69164f"
     },
@@ -549,6 +586,7 @@
       "erlass": "Verordnung über Beurkundung und Beglaubigung mit Gebührentarif (GS III B/3/2)",
       "artikel": "22",
       "artikelLabel": "Art. 22",
+      "titel": "Bisheriges Recht",
       "bloecke": [
         {
           "absatz": "1",
@@ -557,7 +595,7 @@
       ],
       "stand": "2009-01-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B%2F3%2F2",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "b2009f947cbdec1ddee55eea5dc312e3",
       "sha": "4bf7ee893af2b1e37b1248ebe3af2e4903b852a827e7307fadfea9d74ff923f7"
     },
@@ -568,6 +606,7 @@
       "erlass": "Verordnung über Beurkundung und Beglaubigung mit Gebührentarif (GS III B/3/2)",
       "artikel": "23",
       "artikelLabel": "Art. 23",
+      "titel": "Inkrafttreten",
       "bloecke": [
         {
           "absatz": "1",
@@ -576,7 +615,7 @@
       ],
       "stand": "2009-01-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B%2F3%2F2",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "b2009f947cbdec1ddee55eea5dc312e3",
       "sha": "2aac94082eda7ea2f5b65859f0734df968350e12d5cd1564184696e597e45dfa"
     },
@@ -587,6 +626,7 @@
       "erlass": "Verordnung über Beurkundung und Beglaubigung mit Gebührentarif (GS III B/3/2)",
       "artikel": "a1-1",
       "artikelLabel": "Art. A1-1",
+      "titel": "Nach Zivilgesetzbuch",
       "bloecke": [
         {
           "absatz": "1",
@@ -595,6 +635,22 @@
             {
               "marke": "1",
               "text": "Übertragung von Grundeigentum (Art. 657 Abs. 1) (Kauf, Schenkung, Tausch, Erbgang, Vermächtnis); Kaufrechtsvertrag, Rückkaufs- und Vorvertrag, Grundstücksversteigerung, Errichtung eines selbstständigen und dauernden Baurechts (Fehlt eine Vertragssumme, ist der Vermögenssteuerwert nach der Verordnung über die Bewertung der Grundstücke massgebend. Bei Tauschverträgen der Wert nur des höher eingeschätzten Tauschobjektes.):"
+            },
+            {
+              "marke": "1",
+              "text": "3‰ der Vertragssumme bis 200 000 Fr., mind. aber 400 Fr."
+            },
+            {
+              "marke": "1",
+              "text": "plus 2‰ vom Mehrbetrag über 200 000 bis 500 000 Fr."
+            },
+            {
+              "marke": "1",
+              "text": "plus 1‰ vom Mehrbetrag über 500 000 bis 5 000 000 Fr."
+            },
+            {
+              "marke": "1",
+              "text": "plus 0,5‰ vom Mehrbetrag über 5 000 000 Fr."
             },
             {
               "marke": "2",
@@ -619,15 +675,35 @@
             {
               "marke": "7",
               "text": "Grundpfand (Art. 799)"
+            },
+            {
+              "marke": "7",
+              "text": "Errichtung (Werden in der gleichen öffentlichen Urkunde mehrere Pfandrechte errichtet, so berechnet sich die Gebühr vom Gesamtbetrag der Pfandsummen.): 1,5‰ der Pfandsumme, mind. 50 max. 500 Fr."
+            },
+            {
+              "marke": "7",
+              "text": "Erhöhung: Erhöhter Betrag gemäss Ziff. 7.1."
+            },
+            {
+              "marke": "7",
+              "text": "Vereinbarungen über das Nachrückrecht: 50 Fr."
+            },
+            {
+              "marke": "7",
+              "text": "Umwandlung, Pfandwechsel, Aufteilung und Verlegung, Pfandrechtserneuerung: ½ der Ansätze gemäss Ziff. 7.1. (Werden in der gleichen öffentlichen Urkunde die Pfandsumme erhöht und das Pfandrecht mit der erhöhten Pfandsumme umgewandelt, aufgeteilt oder verlegt.): Gemäss Ziff. 7.2. oder 7.4., wobei die höhere Gebühr berechnet wird.)"
+            },
+            {
+              "marke": "7",
+              "text": "Bei anderen Änderungen: 50 bis 500 Fr."
             }
           ]
         }
       ],
       "stand": "2009-01-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B%2F3%2F2",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "b2009f947cbdec1ddee55eea5dc312e3",
-      "sha": "20d8499d458a334ac64f78dccfcc5e0e3297684a25e9ed22cc6ceecae4157eec"
+      "sha": "fe75abad8237f3a38abdef633f360b93795e20a075f666a93a051ad07092e1e0"
     },
     {
       "id": "kanton/GL/III%20B%2F3%2F2/art_a1-2",
@@ -636,6 +712,7 @@
       "erlass": "Verordnung über Beurkundung und Beglaubigung mit Gebührentarif (GS III B/3/2)",
       "artikel": "a1-2",
       "artikelLabel": "Art. A1-2",
+      "titel": "Nach Obligationenrecht",
       "bloecke": [
         {
           "absatz": "1",
@@ -644,15 +721,27 @@
             {
               "marke": "8",
               "text": "Bürgschaft:"
+            },
+            {
+              "marke": "8",
+              "text": "Errichtung, Vollmacht zur Eingehung einer Bürgschaft, Erhöhung Haftungssumme, Umwandlung in Solidarbürgschaft: je Bürge 0,5‰ des Haftungsbetrages mind. 300 bis 1500 Fr."
+            },
+            {
+              "marke": "8",
+              "text": "Erklärung nach Art. 493 Abs. 6 OR: 50 bis 400 Fr."
+            },
+            {
+              "marke": "8",
+              "text": "Sind getrennt abgegebene Bürgschaftserklärungen zweier oder mehrerer für dieselbe Schuld einstehender Bürgen einzeln durch dieselbe Urkundsperson zu beurkunden, wird für die zweite und jede weitere Beurkundung ein Zuschlag von je 10% dieser Gebühr erhoben."
             }
           ]
         }
       ],
       "stand": "2009-01-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B%2F3%2F2",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "b2009f947cbdec1ddee55eea5dc312e3",
-      "sha": "168c9d78b2003bdf8395750d8b34a80b75c39cd588df0468bfd112c492cf3cab"
+      "sha": "34f4e08e21f6f18bdcd07739b91aa1f3c32475cd50ad3d4139da3de30d6514ff"
     },
     {
       "id": "kanton/GL/III%20B%2F3%2F2/art_a1-3",
@@ -661,6 +750,7 @@
       "erlass": "Verordnung über Beurkundung und Beglaubigung mit Gebührentarif (GS III B/3/2)",
       "artikel": "a1-3",
       "artikelLabel": "Art. A1-3",
+      "titel": "Weitere Beurkundungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -669,7 +759,7 @@
       ],
       "stand": "2009-01-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B%2F3%2F2",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "b2009f947cbdec1ddee55eea5dc312e3",
       "sha": "78b3733991369b4795a02e11bf8aa80a8b2745b1c334a0aea9388db0f853c3ae"
     },
@@ -680,6 +770,7 @@
       "erlass": "Verordnung über Beurkundung und Beglaubigung mit Gebührentarif (GS III B/3/2)",
       "artikel": "a1-4",
       "artikelLabel": "Art. A1-4",
+      "titel": "Gebühr für den eigentlichen Beurkundungsakt und bei der Vorlage ausgefertigter Dokumente",
       "bloecke": [
         {
           "absatz": "1",
@@ -692,7 +783,7 @@
       ],
       "stand": "2009-01-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B%2F3%2F2",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "b2009f947cbdec1ddee55eea5dc312e3",
       "sha": "066e0e90f96ea6ebdb3006fa3a1ee0fae912e92249b12f364c1e6187af787e6b"
     },
@@ -713,8 +804,24 @@
               "text": "Unterschrift, Handzeichen"
             },
             {
+              "marke": "1",
+              "text": "Einzeln: 15 bis 50 Fr."
+            },
+            {
+              "marke": "1",
+              "text": "Bei gleichzeitiger Beglaubigung mehrerer Unterschriften, Handzeichen auf demselben Schriftstück: 50 Fr. für erste und 10 Fr. für jede weitere Unterschrift"
+            },
+            {
               "marke": "2",
               "text": "Abschriften, Auszüge, andere Wiedergaben (Das Erstellen von Abschriften, Auszügen oder andern Wiedergaben ist in dieser Gebühr nicht enthalten.)"
+            },
+            {
+              "marke": "2",
+              "text": "nicht von der Urkundsperson erstellt: 15 Fr. für erste und 5 Fr. für jede weitere Seite"
+            },
+            {
+              "marke": "2",
+              "text": "von der Urkundsperson erstellt: 1 Fr. für erste und 2 Fr. für jede weitere Seite"
             },
             {
               "marke": "3",
@@ -729,9 +836,9 @@
       ],
       "stand": "2009-01-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B%2F3%2F2",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "b2009f947cbdec1ddee55eea5dc312e3",
-      "sha": "eb0d94bd46e8c65a0aacc6c873bf13fb3d55e1f5bb1b1adeaabdce8b4cf0e4e7"
+      "sha": "6f9a2dccb0fa1d90a2d18da9c74a54de39168a821c661397ab34b50776d3cdc4"
     },
     {
       "id": "kanton/GL/III%20B%2F3%2F2/art_a1-6",
@@ -748,7 +855,7 @@
       ],
       "stand": "2009-01-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B%2F3%2F2",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "b2009f947cbdec1ddee55eea5dc312e3",
       "sha": "a1fb762ee41e5ecc58544164c2f86892a1bc9b21641fb4f79a9c8c89aa7f9676"
     }
