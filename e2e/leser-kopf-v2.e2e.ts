@@ -3,8 +3,8 @@ import { test, expect, type Page } from '@playwright/test';
 // FAHRPLAN-GESETZESDARSTELLUNG-V2 — koordinierter Kopf-PR (A22/A23, David 10.7.2026):
 //   · K-1  «in Kraft seit …» in der Meta-Zeile (Ur-Inkrafttreten, Fedlex
 //          dateEntryInForce, build-time projiziert ⇒ CLS 0); nur Bund.
-//   · K-2  Fussnoten-Chip im Kopf: Zähler N + echter Toggle (aria-pressed) +
-//          Apparat-Sprung bei Einschalten; CLS 0 beim Toggle.
+//   · K-2  Fussnoten-Bedienung — seit A26 (David 11.7.2026) EINTRAG im «Ansicht»-
+//          Dropdown (Zähler N im Accessible-Name, role=switch); CLS 0 beim Toggle.
 //   · B-1  «Entscheide»-Schalter im Ansicht-Dropdown blendet die BGE-Leitfall-
 //          Zeilen aus (rein CSS via data-leitfaelle, kein Re-Render).
 //   · B-2  Zeitraum-Wahl «alle · 20 · 10 · 5 J.» (Default alle), persistent.
@@ -29,13 +29,16 @@ test('K-1: «in Kraft seit» in der Meta-Zeile (Bund), nicht beim Kanton', async
   await expect(zeile).toBeVisible({ timeout: 15000 });
 });
 
-test('K-2: Fussnoten-Chip im Kopf — Zähler + Toggle (aria-pressed), CLS 0 beim Umschalten', async ({ page }) => {
+test('K-2 (A26): Fussnoten-Eintrag im «Ansicht»-Dropdown — Zähler + Toggle (aria-checked), CLS 0', async ({ page }) => {
   await warteReader(page, '/gesetze/bund/BGBM', 'art-1');
-  // Der Chip trägt einen Zähler (aria-label «N Fussnoten — …») und ist role=button
-  // (der gleichnamige Dropdown-Schalter ist role=switch → wird nicht mitgefangen).
-  const chip = page.getByRole('button', { name: /^\d+ Fussnoten/ });
-  await expect(chip).toBeVisible({ timeout: 15000 });
-  await expect(chip).toHaveAttribute('aria-pressed', 'true'); // Default: Fussnoten an
+  // A26 (David 11.7.2026): der frühere separate Fussnoten-Chip ist als EINTRAG ins
+  // «Ansicht»-Dropdown gewandert — role=switch mit dem Zähler N im Accessible-Name
+  // («Fussnoten (N)») und dem Zähler-Badge daneben. Menü öffnen und darauf zugreifen.
+  await ansichtOeffnen(page);
+  const gruppe = page.locator('[aria-label="Darstellungsoptionen"]').first();
+  const fn = gruppe.getByRole('switch', { name: /^Fussnoten \(\d+\)$/ }); // Zähler im Namen
+  await expect(fn).toBeVisible({ timeout: 15000 });
+  await expect(fn).toHaveAttribute('aria-checked', 'true'); // Default: Fussnoten an
 
   const marker = page.locator('.lc-leser button[aria-label^="Fussnote"]').first();
   await expect(marker).toBeVisible();
@@ -52,20 +55,20 @@ test('K-2: Fussnoten-Chip im Kopf — Zähler + Toggle (aria-pressed), CLS 0 bei
     }).observe({ type: 'layout-shift' });
   });
 
-  // AUS: Chip aria-pressed=false, data-fussnoten=aus, Marker verschwunden (display:none).
-  await chip.click();
-  await expect(chip).toHaveAttribute('aria-pressed', 'false');
+  // AUS: Schalter aria-checked=false, data-fussnoten=aus, Marker verschwunden (display:none).
+  await fn.click();
+  await expect(fn).toHaveAttribute('aria-checked', 'false');
   await expect(page.locator('html')).toHaveAttribute('data-fussnoten', 'aus');
   await expect(marker).toBeHidden();
 
   // AN zurück: Marker wieder sichtbar (Wiederherstellung).
-  await chip.click();
-  await expect(chip).toHaveAttribute('aria-pressed', 'true');
+  await fn.click();
+  await expect(fn).toHaveAttribute('aria-checked', 'true');
   await expect(page.locator('html')).toHaveAttribute('data-fussnoten', 'an');
   await expect(marker).toBeVisible();
 
   const cls = await page.evaluate(() => (window as unknown as { __cls: number }).__cls);
-  expect(cls, 'CLS über den Fussnoten-Chip-Toggle muss 0 sein').toBe(0);
+  expect(cls, 'CLS über den Fussnoten-Toggle muss 0 sein').toBe(0);
 });
 
 // B-1/B-2 laufen bewusst auf dem KLEINEN ELG (~78 KB Snapshot, Leitfall-Shard mit

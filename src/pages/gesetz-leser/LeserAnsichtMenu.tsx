@@ -16,31 +16,36 @@
 // <html>) bleibt unverändert DARUNTER (leserOptionen.ts) — das Dropdown ist reine
 // Bedien-Oberfläche, Umschalten rendert nur die Switches neu, nie den Normtext (§15).
 
-import { useEffect, useId, useRef, useState } from 'react';
+import { useEffect, useId, useRef, useState, type ReactNode } from 'react';
 import { useDialogFokus } from '../../components/layout/useDialogFokus';
 import {
   setzeOption, setzeZeitraum, useLeserOptionen, useLeitfallZeitraum,
   type OptFeld, type LeitfallZeitraum,
 } from './leserOptionen';
 
-function OptSwitch({ feld, an, label, titel }: {
+function OptSwitch({ feld, an, label, titel, ariaLabel, zusatz }: {
   feld: OptFeld;
   an: boolean;
   label: string;
   titel: string;
+  /** Expliziter Accessible-Name (überschreibt den Text — z. B. «Fussnoten (12)»). */
+  ariaLabel?: string;
+  /** Kleines Zusatz-Signal rechts vom Label (z. B. der Fussnoten-Zähler N). */
+  zusatz?: ReactNode;
 }) {
   return (
     <button
       type="button"
       role="switch"
       aria-checked={an}
+      aria-label={ariaLabel}
       title={titel}
       onClick={() => setzeOption(feld, an ? 'aus' : 'an')}
       className={`flex w-full items-center justify-between gap-3 rounded-md px-2.5 py-1.5 text-left text-body-s transition-colors hover:bg-brass-100/40 ${
         an ? 'text-ink-900' : 'text-ink-600'
       }`}
     >
-      <span>{label}</span>
+      <span className="inline-flex items-center gap-1.5">{label}{zusatz}</span>
       <span
         aria-hidden
         className={`shrink-0 inline-flex items-center gap-1 text-xs ${an ? 'text-brass-700' : 'text-ink-400'}`}
@@ -86,51 +91,22 @@ function ZeitraumWahl() {
   );
 }
 
-/** V2·K-2 (David 10.7.2026): der Fussnoten-Chip im Kopf-aktionen-Slot — prominentes
- *  KOPF-SIGNAL (Zähler N aus dem Struktur-Sidecar) UND echter Toggle auf denselben
- *  `fussnoten`-Options-Wert wie der Dropdown-Schalter (aria-pressed korrekt). Beim
- *  Einschalten springt er zum Apparat (erst EINSCHALTEN, dann scrollen — nie in ein
- *  display:none-Ziel, §K-2). `anzahl===0` ⇒ kein Chip (kein Apparat vorhanden);
- *  `anzahl===null` ⇒ Sidecar noch nicht geladen ⇒ Chip erst danach (kein Zahl-
- *  Nachwachsen im Kopf → CLS-schonend). */
-export function LeserFussnotenChip({ anzahl }: { anzahl: number | null }) {
-  const opt = useLeserOptionen();
-  const an = opt.fussnoten === 'an';
-  if (anzahl == null || anzahl === 0) return null;
-  const klick = () => {
-    const nun = an ? 'aus' : 'an';
-    setzeOption('fussnoten', nun);
-    if (nun === 'an') {
-      // Erst einschalten (Zeile oben), dann zum ersten sichtbaren Apparat springen.
-      // rAF: das data-Attribut ist gesetzt, das Ziel ist nicht mehr display:none.
-      requestAnimationFrame(() => {
-        document.querySelector('.lc-leser [data-fn-marker]')
-          ?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      });
-    }
-  };
-  return (
-    <button
-      type="button"
-      onClick={klick}
-      aria-pressed={an}
-      className="lc-chip inline-flex items-center gap-1 hover:text-brass-700"
-      aria-label={`${anzahl} Fussnoten — ${an ? 'ausblenden' : 'einblenden und zum Apparat springen'}`}
-      title={an ? 'Fussnoten sind eingeblendet — hier ausblenden' : 'Fussnoten einblenden und zum Fussnoten-Apparat springen'}
-    >
-      <span aria-hidden>❡</span>
-      <span className="num tabular-nums" aria-hidden>{anzahl}</span>
-      <span aria-hidden>Fussnoten</span>
-    </button>
-  );
-}
-
 /** Das «Ansicht»-Dropdown. `zeigeLinien` blendet den Linien-Schalter aus, wo es
  *  keine Gliederungs-Sektion mit Guide gibt (flache Artikelliste) — er wäre sonst
  *  wirkungslos (§2.2④). `linienAutoAn` = ob im AUFBAU-abhängigen Default-Zustand
  *  ('auto', U-LINIEN/A8) der Guide für DIESEN Erlass sichtbar ist, damit der
- *  Schalter den EFFEKTIVEN Zustand ehrlich zeigt (§8). */
-export function LeserAnsichtMenu({ zeigeLinien, linienAutoAn = false }: { zeigeLinien: boolean; linienAutoAn?: boolean }) {
+ *  Schalter den EFFEKTIVEN Zustand ehrlich zeigt (§8).
+ *
+ *  A26 (David 11.7.2026): das Dropdown lebt in der IMMER sichtbaren Positions-/
+ *  Kontextleiste (Inhalts-Kopf `Gesetze › Bund › ZPO … Stand … ✕`), damit die
+ *  Darstellungsoptionen jederzeit erreichbar sind, während man im Gesetz ist —
+ *  nicht nur oben im weggescrollten Erlass-Kopf. Der frühere separate Fussnoten-
+ *  Chip (V2·K-2) ist als EINTRAG in dieses Menü gewandert (`fussnotenAnzahl` =
+ *  Zähler N am «Fussnoten»-Schalter). `fussnotenAnzahl===null` ⇒ Sidecar noch
+ *  nicht geladen ⇒ Zähler erscheint erst danach; da er in einem geschlossenen,
+ *  absolut positionierten Panel steckt, wächst im sichtbaren Kopf keine Zahl nach
+ *  (CLS 0). */
+export function LeserAnsichtMenu({ zeigeLinien, linienAutoAn = false, fussnotenAnzahl = null }: { zeigeLinien: boolean; linienAutoAn?: boolean; fussnotenAnzahl?: number | null }) {
   const opt = useLeserOptionen();
   const [offen, setOffen] = useState(false);
   const wrapRef = useRef<HTMLDivElement>(null);
@@ -161,10 +137,13 @@ export function LeserAnsichtMenu({ zeigeLinien, linienAutoAn = false }: { zeigeL
         onClick={() => setOffen((o) => !o)}
         aria-expanded={offen}
         aria-controls={panelId}
+        aria-label="Ansicht"
         className="lc-chip inline-flex items-center gap-1 hover:text-brass-700"
         title="Darstellung: Linien, Fussnoten, Verweise, Entscheide (mit Zeitraum)"
       >
-        <span aria-hidden>◧</span>Ansicht
+        {/* Enger Platz in der Sticky-Positionsleiste (@390): Label nur ≥sm, sonst
+            reines Icon (Accessible-Name bleibt über aria-label «Ansicht» erhalten). */}
+        <span aria-hidden>◧</span><span className="hidden sm:inline">Ansicht</span>
         <span aria-hidden className={`transition-transform ${offen ? 'rotate-180' : ''}`}>▾</span>
       </button>
 
@@ -175,7 +154,7 @@ export function LeserAnsichtMenu({ zeigeLinien, linienAutoAn = false }: { zeigeL
           tabIndex={-1}
           role="group"
           aria-label="Darstellungsoptionen"
-          className="absolute right-0 sm:left-0 sm:right-auto top-full z-40 mt-1.5 flex w-[13rem] max-w-[calc(100vw-2rem)] flex-col gap-0.5 rounded-lg border border-line bg-paper-raised p-1.5 shadow-lg"
+          className="absolute right-0 top-full z-40 mt-1.5 flex w-[13rem] max-w-[calc(100vw-2rem)] flex-col gap-0.5 rounded-lg border border-line bg-paper-raised p-1.5 shadow-lg"
         >
           <p className="lc-overline px-2.5 pb-1 pt-0.5">Darstellung</p>
           {zeigeLinien && (
@@ -186,10 +165,20 @@ export function LeserAnsichtMenu({ zeigeLinien, linienAutoAn = false }: { zeigeL
               titel="Gliederungslinien und Einzug ein- oder ausblenden"
             />
           )}
+          {/* A26 (David 11.7.2026): der frühere separate Fussnoten-Chip ist hier als
+              Eintrag aufgegangen — der Zähler N (Sidecar) sitzt als dezentes Signal
+              rechts vom Label; der Schalter bleibt derselbe `fussnoten`-Toggle. Kein
+              Sprung-zum-Apparat mehr (das Menü ist jetzt DAUERHAFT erreichbar, also
+              kann der Klick von überall im Erlass kommen — ein Sprung an den ersten
+              Marker wäre desorientierend; Ein-/Ausblenden geschieht an Ort). */}
           <OptSwitch
             feld="fussnoten"
             an={opt.fussnoten === 'an'}
             label="Fussnoten"
+            ariaLabel={fussnotenAnzahl != null && fussnotenAnzahl > 0 ? `Fussnoten (${fussnotenAnzahl})` : undefined}
+            zusatz={fussnotenAnzahl != null && fussnotenAnzahl > 0
+              ? <span aria-hidden className="num tabular-nums rounded bg-brass-100/60 px-1 text-micro font-medium text-ink-600">{fussnotenAnzahl}</span>
+              : undefined}
             titel="Fussnoten ein- oder ausblenden — AUS lässt Marker und Apparat verschwinden (der Normtext bleibt durchsuchbar)"
           />
           <OptSwitch
