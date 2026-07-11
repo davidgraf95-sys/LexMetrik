@@ -222,6 +222,42 @@ Fill — sind ausgenommen). Dark-Mode-Parität ist Teil jeder Farb-Entscheidung.
 **F8 — Motion zurückhaltend.** Mechanisch-präzise, kein Overshoot (Token-
 Kurven/-Dauern); `prefers-reduced-motion` wird respektiert (Base-Reset).
 
+**F2b — Farbwelt-Sollwerte (Mess-Tor `check:farbwelt`, FAHRPLAN-DESIGN-WAERME
+D-0).** F2 wird maschinell erzwungen: `scripts/check-farbwelt.ts` parst die
+`:root`- und `html.dark`-Token aus `src/index.css` (Werte) gegen die Name→`var()`-
+Abbildung in `tailwind.config.js` (No-op-Wächter, F7) und misst deterministisch
+(§2, kein Netz/keine Uhr) WCAG-Kontrast hell UND dunkel. Das Tor läuft in
+`check:seriell` → `check-parallel` → `gate` (nicht in CI-Workflows — Aufnahme
+prüft der Orchestrator separat). Vier Klassen:
+
+1. **WCAG-Pflichtpaare (harter FAIL):** Text ≥ 4.5:1, Nicht-Text/Zustände ≥ 3:1 —
+   je hell+dunkel. Quelle sind die dokumentierten Paar-Listen der CSS-Kommentare
+   (ink-600/500-Basistext, `--placeholder`, brass-700-Text, brass-800/brass-100,
+   Status-Badge-Text auf `-bg`, `--focus`-Ring, `lc-akzent-*`-Oberkanten).
+2. **Referenzwerte (harter FAIL bei Drift > ±0.06 — C-1/C-2/C-3, §4b-B):**
+   dokumentierte Zahlen dürfen nie stillschweigend falsch werden (D3/F6). Bei
+   Verschiebung neu messen und HIER + in `DESIGN-REGLEMENT-NORMTEXT §4b-B`
+   nachziehen:
+
+   | Rolle | Tick/Text auf `--well` | hell | dunkel |
+   |---|---|---|---|
+   | C-1 `lc-chip-entscheid` | slate-500 | 4.81 | 3.47 |
+   | C-2 Currency-Chip warn | warn-700 | 5.24 | 9.43 |
+   | C-3 brass-Tick | brass-700 | 4.91 | 10.48 |
+
+   Fixpunkt (unantastbar, FAHRPLAN Fixpunkt 1): `--paper` hell `#FAF8F2` /
+   dunkel `#16150F`.
+3. **Bekannte Risse (WARNUNG + FAIL nur bei Verschlechterung — D-1-Input):**
+   heute unter der Schwelle liegende Paare als Baseline-Guard, damit das Tor auf
+   dem IST-Stand grün ist, ohne die Risse zu verstecken:
+   `ink-500/well` hell 4.48 (Ziel 4.5, D-4) · `danger-500/paper` dunkel 2.72
+   (Ziel 3.0, D-1.3, Direkt-Nicht-Text — der Linien-Ton nutzt bereits danger-700).
+4. **OKLCH-Struktur:** Flächen-L-Leiter `well < paper < surface < paper-raised`
+   je Modus (harter FAIL — Erhebungs-Logik). Hue-Drift je Familie ≤ 8° +
+   L-Monotonie der Rampen sowie Chroma-Dämpfung Akzent (dunkel C ≤ hell −10 %) =
+   **Erstlauf-WARNUNG** (Sollwerte legen erst D-4/D-5 fest, dann scharf).
+   **APCA-Spalte NUR beratend** (Lc), nie Fail — WCAG 2.2 bleibt das Gate.
+
 ## Audit: Stand der Webseite gegen dieses Reglement
 
 Code-Audit 25.6.2026 (adversarial, read-only). Gesamtbild: **Die Webseite
