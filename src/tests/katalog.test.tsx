@@ -67,17 +67,21 @@ const sucheHtml = (url: string) =>
   );
 
 describe('Rechner-Übersicht /rechner (UI-Welle: Ersatz fürs Katalog-Deckblatt, §6.3)', () => {
-  it('zeigt die drei Rechner-Kategorien als Sektionen — ohne Vorlagen, ohne Deckblatt/Suchfeld/Zurück-Weg', () => {
+  it('zeigt die drei Rechner-Kategorien als Sektionen — ohne Vorlagen/Deckblatt/Zurück-Weg, mit EINEM lokalen Filter (N0d·W4)', () => {
     const html = rechnerHtml();
     expect(html).toContain('id="register-zustaendigkeiten"');
     expect(html).toContain('id="register-fristen"');
     expect(html).toContain('id="register-gebuehren"');
     // Vorlagen liegen auf der eigenen Seite /vorlagen
     expect(html).not.toContain('id="register-vorlagen"');
-    // kein Deckblatt-Klickmodell, keine Flachsuche, kein «Alle Kategorien»-Zurück
+    // kein Deckblatt-Klickmodell, kein «Alle Kategorien»-Zurück
     expect(html).not.toContain('aria-label="Oberkategorien"');
-    expect(html).not.toContain('type="search"');
     expect(html).not.toContain('Alle Kategorien');
+    // W2·10-UI-NAV/N0d·W4 (deklarierte fachliche Änderung, §6.3): GENAU EIN lokales
+    // Filter-Feld über die bestehende Katalog-Struktur (keine zweite Voll-Suche —
+    // die UniversalSuche bleibt der Kopf). Vorher war hier bewusst KEIN Suchfeld.
+    expect(html).toContain('id="rechner-filter"');
+    expect(html.match(/type="search"/g)?.length ?? 0).toBe(1);
   });
 
   it('Fristen-Register direkt sichtbar: Haupteinstieg Tagerechner + prozessual/materiell (kein Drilldown)', () => {
