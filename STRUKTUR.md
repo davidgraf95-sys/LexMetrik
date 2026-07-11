@@ -117,6 +117,22 @@ in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
 **Stabilitäts-Beweis:** beide Specs **10×** (170/170) unter Ballast + `--workers=1 --retries=0 --repeat-each=10` GRÜN (7 min); zuvor unter identischen Bedingungen roter SCHKG-Fail. gesetze-ux-g3a 46s→5s (Giant-Load weg). Voller `npm run gate` grün bis auf fremd-vorbestehendes `check:p-klassen`/`check:vollstaendigkeit` (Normtext-Daten, nicht CI-gated, auch auf pristine main rot) — nur Test-Dateien berührt, golden 209 byte-gleich. Gegenprüfung n/a (Test-Infrastruktur). Trailer `Roadmap: QS-PERF`.
 
+## Session 11.7.2026 — DESIGN D-0 «Mess-Fundament `check:farbwelt`» (Worktree `lm-design-d0`, Branch `feat/design-d0-farbwelt`)
+
+**Auftrag (David «direkt umsetzen wenn plan vorliegt»):** Einheit D-0 aus `FAHRPLAN-DESIGN-WAERME.md` (ROADMAP W2·11-DESIGN) — das harte Farbwelt-Mess-Tor VOR jeder Wert-Änderung (E5 «Messung vor Geschmack»). Reine Prüf-Infrastruktur (golden-neutral, kein Runtime).
+
+**Gebaut:** `scripts/check-farbwelt.ts` (deterministisch §2, culori + apca-w3 als devDep). Parst `:root`+`html.dark`-Token aus `src/index.css` (eigener var()/`color-mix(in srgb|oklab)`/transparent-Resolver mit premultiplizierter Alpha) gegen `tailwind.config.js` (No-op-Wächter F7). Misst:
+- **40 WCAG-Pflichtpaare hell+dunkel** (harter FAIL): Text ≥4.5, Nicht-Text/Zustände ≥3 — aus den dokumentierten CSS-Kommentar-Paaren (ink-600/500, placeholder, brass-700/800, Status-Badge-Text, --focus-Ring, lc-akzent-*).
+- **6 Referenzwerte C-1/C-2/C-3 (§4b-B)** + 2 --paper-Fixpunkte (harter FAIL bei Drift, D3/F6): slate 4.81/3.47 · warn 5.24/9.43 · brass 4.91/10.48 (auf --well).
+- **Flächen-L-Leiter** well<paper<surface<raised je Modus (harter FAIL, OKLCH). Hue-Drift/L-Monotonie/Chroma-Dämpfung = **Erstlauf-WARNUNG** (D-4/D-5-Sollwerte offen). **APCA nur beratend** (Lc), nie Fail.
+- **Bekannte Risse als Baseline-Guard** (WARNUNG + FAIL nur bei Verschlechterung): `ink-500/well` hell 4.48 (D-4) · `danger-500/paper` dunkel 2.72 (D-1.3). → **D-1-Input**.
+
+**Verdrahtung:** `check:farbwelt` in `check:seriell` (nach check:design-tokens) → automatisch in `check-parallel`+`gate`. **NICHT** in `.github/workflows` (TABU; CI-Aufnahme prüft Orchestrator).
+
+**Verifikation:** Tor auf IST-Stand GRÜN (0 harte Verstösse, 9 beratende Warnungen). Negativ-Test: `--ink-600` transient auf zu hell → 3 harte WCAG-Fails, Exit 1; revert byte-gleich → grün. tsc/vitest/golden/lint grün. `gate voll` rote Glieder `check:p-klassen`+`check:vollstaendigkeit` sind **pre-existing auf origin/main** (Normtext-Daten, verifiziert ohne meine Änderung) — orthogonal zu D-0.
+
+**Offen:** FAHRPLAN-DESIGN-WAERME.md liegt noch auf PR #208 (nicht auf main) → D-0-✅-Markierung durch Orchestrator nach #208-Merge (kein Copy in diesen Branch, sonst Konflikt).
+
 ## Session 11.7.2026 — UI-NAV O1 «Verlauf-Initiative» (Worktree `lm-uinav-o1`, Branch `feat/uinav-o1-verlauf`)
 
 **Auftrag (David-Go «run till dry»):** Einheit O1 aus `FAHRPLAN-UI-NAVIGATION.md` §5 — den lokalen Verlauf ausweiten und global zugänglich machen. Reines UI, EINE Verlauf-Quelle (§5).
