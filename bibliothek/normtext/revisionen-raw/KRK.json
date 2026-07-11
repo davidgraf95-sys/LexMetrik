@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1989-11-20"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Übereinkommen über die Rechte des Kindes"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention relative aux droits de l'enfant"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione sui diritti del fanciullo"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.107"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1998/2055_2055_2055"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1997-03-26"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1989-11-20"
+        "value": "RO 1998 2055"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1989-11-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1998 2055"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen über die Rechte des Kindes"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1989-11-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1998 2055"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen über die Rechte des Kindes"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention relative aux droits de l'enfant"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione sui diritti del fanciullo"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.107"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1998/2055_2055_2055"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1997-03-26"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1989-11-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1998 2055"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen über die Rechte des Kindes"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-09-04"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Übereinkommen vom 20. November 1989 über die Rechte des Kindes"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention du 20 novembre 1989 relative aux droits de l'enfant"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione del 20 novembre 1989 sui diritti del fanciullo"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.107"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/22"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-09-04"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-09-04"
+        "value": "RO 2004 339"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-09-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 339"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 20. November 1989 über die Rechte des Kindes"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 20 novembre 1989 relative aux droits de l'enfant"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 20 novembre 1989 sui diritti del fanciullo"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.107"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/22"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-09-04"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-09-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 339"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 20. November 1989 über die Rechte des Kindes"
@@ -245,6 +273,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-04-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 3877"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 20. November 1989 über die Rechte des Kindes"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-04-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 3877"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 20. November 1989 über die Rechte des Kindes"
@@ -308,6 +344,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-04-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 3877"
       },
       "titleDe": {
         "type": "literal",
@@ -341,37 +381,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-02-10"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Übereinkommen vom 20. November 1989 über die Rechte des Kindes"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention du 20 novembre 1989 relative aux droits de l'enfant"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione del 20 novembre 1989 sui diritti del fanciullo"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.107"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/90"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-01-12"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-02-10"
+        "value": "RO 2004 813"
       },
       "titleDe": {
         "type": "literal",
@@ -405,6 +417,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-02-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 813"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 20. November 1989 über die Rechte des Kindes"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 20 novembre 1989 relative aux droits de l'enfant"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 20 novembre 1989 sui diritti del fanciullo"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.107"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/90"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-01-12"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-02-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 813"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 20. November 1989 über die Rechte des Kindes"
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-05-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 3839"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 20. November 1989 über die Rechte des Kindes"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-05-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 3839"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 20. November 1989 über die Rechte des Kindes"
@@ -500,6 +560,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-05-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 3839"
       },
       "titleDe": {
         "type": "literal",
@@ -533,37 +597,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1997-12-02"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Übereinkommen vom 20. November 1989 über die Rechte des Kindes"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention du 21 novembre 1989 relative aux droits de l'enfant"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione del 20 novembre 1989 sui diritti del fanciullo"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.107"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/544"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-11-18"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1997-12-02"
+        "value": "RO 2007 4095"
       },
       "titleDe": {
         "type": "literal",
@@ -597,6 +633,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1997-12-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 4095"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 20. November 1989 über die Rechte des Kindes"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 21 novembre 1989 relative aux droits de l'enfant"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 20 novembre 1989 sui diritti del fanciullo"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.107"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/544"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-11-18"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1997-12-02"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 4095"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 20. November 1989 über die Rechte des Kindes"
@@ -629,37 +705,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-01-24"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Übereinkommen vom 20. November 1989 über die Rechte des Kindes"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention du 20 novembre 1989 relative aux droits de l'enfant"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione del 20 novembre 1989 sui diritti del fanciullo"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.107"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/83"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-01-24"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-01-24"
+        "value": "RO 2007 417"
       },
       "titleDe": {
         "type": "literal",
@@ -693,6 +741,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-01-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 417"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 20. November 1989 über die Rechte des Kindes"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 20 novembre 1989 relative aux droits de l'enfant"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 20 novembre 1989 sui diritti del fanciullo"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.107"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/83"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-01-24"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-01-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 417"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 20. November 1989 über die Rechte des Kindes"
@@ -725,6 +813,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-04-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1619"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 20. November 1989 über die Rechte des Kindes"
@@ -757,6 +849,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-04-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1619"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 20. November 1989 über die Rechte des Kindes"
@@ -788,6 +884,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-04-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1619"
       },
       "titleDe": {
         "type": "literal",
@@ -821,6 +921,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-05-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1311"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 20. November 1989 über die Rechte des Kindes"
@@ -853,6 +957,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-05-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1311"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 20. November 1989 über die Rechte des Kindes"
@@ -885,69 +993,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-05-21"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Übereinkommen vom 20. November 1989 über die Rechte des Kindes"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention du 20 novembre 1989 relative aux droits de l'enfant"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione del 20 novembre 1989 sui diritti del fanciullo"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.107"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2014/302"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-06-04"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-06-04"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Übereinkommen vom 20. November 1989 über die Rechte des Kindes"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention du 20 novembre 1989 relative aux droits de l'enfant"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione del 20 novembre 1989 sui diritti del fanciullo"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.107"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2014/302"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-06-04"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-06-04"
+        "value": "RO 2014 1311"
       },
       "titleDe": {
         "type": "literal",
@@ -981,6 +1029,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-06-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1417"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 20. November 1989 über die Rechte des Kindes"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 20 novembre 1989 relative aux droits de l'enfant"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 20 novembre 1989 sui diritti del fanciullo"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.107"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/302"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-06-04"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-06-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1417"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 20. November 1989 über die Rechte des Kindes"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 20 novembre 1989 relative aux droits de l'enfant"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 20 novembre 1989 sui diritti del fanciullo"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.107"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/302"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-06-04"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-06-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1417"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 20. November 1989 über die Rechte des Kindes"
@@ -1013,6 +1137,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-03-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1181"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 20. November 1989 über die Rechte des Kindes"
@@ -1045,6 +1173,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-03-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1181"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 20. November 1989 über die Rechte des Kindes"
@@ -1076,6 +1208,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-03-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1181"
       },
       "titleDe": {
         "type": "literal",
@@ -1109,6 +1245,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-10-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 3803"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 20. November 1989 über die Rechte des Kindes"
@@ -1141,6 +1281,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-10-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 3803"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 20. November 1989 über die Rechte des Kindes"
@@ -1172,6 +1316,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-10-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 3803"
       },
       "titleDe": {
         "type": "literal",

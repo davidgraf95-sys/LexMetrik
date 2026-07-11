@@ -1,7 +1,7 @@
 {
   "erlassKey": "DSG",
   "sr": "235.1",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -52,38 +52,38 @@
       "dateEntryInForce": "2019-03-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/111",
       "dateDocument": "2018-09-28",
-      "roFundstelle": "AS 2019 111",
+      "roFundstelle": "AS 2019 625",
       "titelDe": "Bundesgesetz über die Umsetzung der Richtlinie (EU) 2016/680 zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten zum Zwecke der Verhütung, Ermittlung, Aufdeckung oder Verfolgung von Straftaten oder der Strafvollstreckung (Weiterentwicklung des Schengen-Besitzstands)",
       "titelFr": "Loi fédérale mettant en uvre la directive (UE) 2016/680 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel à des fins de prévention et de détection des infractions pénales, d'enquêtes et de poursuites en la matière ou d'exécution de sanctions pénales (Développement de l'acquis de Schengen)",
       "titelIt": "Legge federale che attua la direttiva (UE) 2016/680 relativa alla protezione delle persone fisiche con riguardo al trattamento dei dati personali a fini di prevenzione, indagine, accertamento e perseguimento di reati o esecuzione di sanzioni penali (Sviluppo dell'acquis di Schengen)",
       "botschaftKey": "BOTSCHAFT-2017-2057",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/111/de",
-      "sha": "239fb760eb33ec3d0e0ee8bdb931fa58ce36c9531c461f010ff002b9f383097b"
+      "sha": "5540cb44a1fb09ff0f8c9993b91044d5cd60aec622530e977393dd43d582d5e0"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2008-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/699",
       "dateDocument": "2006-03-24",
-      "roFundstelle": "AS 2007 699",
+      "roFundstelle": "AS 2007 4983",
       "titelDe": "Bundesgesetz über den Datenschutz (DSG)",
       "titelFr": "Loi fédérale sur la protection des données (LPD)",
       "titelIt": "Legge federale sulla protezione dei dati (LPD)",
       "botschaftKey": "BOTSCHAFT-2003-267",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/699/de",
-      "sha": "05932043b618115138824e2acab02ceaa3ae9ca618266ec2502edc98a1adbc0e"
+      "sha": "3f71d20aa10e981695b6359e511a7467913f6f2a872fa8ebbb1101a360e2f1bf"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2006-12-15",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/756",
       "dateDocument": "2006-11-22",
-      "roFundstelle": "AS 2006 756",
+      "roFundstelle": "AS 2006 4873",
       "titelDe": "Verordnung über die vorzeitige Inkraftsetzung von Artikel 17a der Änderung vom 24. März 2006 des Bundesgesetzes über den Datenschutz",
       "titelFr": "Ordonnance sur la mise en vigueur anticipée de l'art. 17a de la modification du 24 mars 2006 de la loi fédérale sur la protection des données",
       "titelIt": "Ordinanza che mette anticipatamente in vigore l'articolo 17a della modifica del 24 marzo 2006 della legge federale sulla protezione dei dati",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/756/de",
-      "sha": "74bb417c60cbe3168bfe2cf22c94837240149e63c287b51114427abf8197882b"
+      "sha": "0e50b4b09e8174cf44855e0d6f83ca219d9c17a5f6dda9a814b8366afe65603a"
     },
     {
       "art": "aenderung",
@@ -98,5 +98,5 @@
       "sha": "b2fca7d9513018a9a63892f23851e03c55a127f6f6f64bac2646ea6db89571cb"
     }
   ],
-  "sha": "c6a742fa79165217ee150617bb10ef4bb9e8b2de49d76e9bc54951352e4f093b"
+  "sha": "be25ac159a49774e1e666b9f73721df7ff674995d12705e9a6df7e2be5c1244d"
 }

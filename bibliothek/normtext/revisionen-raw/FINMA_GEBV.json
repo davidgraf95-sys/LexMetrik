@@ -21,69 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-15"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Erhebung von Gebühren und Abgaben durch die Eidgenössische Finanzmarktaufsicht (FINMA-Gebühren- und Abgabenverordnung, FINMA-GebV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance réglant la perception d'émoluments et de taxes par l'Autorité fédérale de surveillance des marchés financiers (Ordonnance sur les émoluments et les taxes de la FINMA, Oém-FINMA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla riscossione di emolumenti e tasse da parte dell'Autorità federale di vigilanza sui mercati finanziari (Ordinanza sugli emolumenti e sulle tasse della FINMA, Oem-FINMA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "956.122"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2008/749"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-10-15"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung über die Erhebung von Gebühren und Abgaben durch die Eidgenössische Finanzmarktaufsicht (FINMA-Gebühren- und Abgabenverordnung, FINMA-GebV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance réglant la perception d'émoluments et de taxes par l'Autorité fédérale de surveillance des marchés financiers (Ordonnance sur les émoluments et les taxes de la FINMA, Oém-FINMA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla riscossione di emolumenti e tasse da parte dell'Autorità federale di vigilanza sui mercati finanziari (Ordinanza sugli emolumenti e sulle tasse della FINMA, Oem-FINMA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "956.122"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2008/749"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-10-15"
+        "value": "RO 2008 5343"
       },
       "titleDe": {
         "type": "literal",
@@ -117,6 +57,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5343"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Erhebung von Gebühren und Abgaben durch die Eidgenössische Finanzmarktaufsicht (FINMA-Gebühren- und Abgabenverordnung, FINMA-GebV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance réglant la perception d'émoluments et de taxes par l'Autorité fédérale de surveillance des marchés financiers (Ordonnance sur les émoluments et les taxes de la FINMA, Oém-FINMA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla riscossione di emolumenti e tasse da parte dell'Autorità federale di vigilanza sui mercati finanziari (Ordinanza sugli emolumenti e sulle tasse della FINMA, Oem-FINMA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "956.122"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/749"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-10-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5343"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Erhebung von Gebühren und Abgaben durch die Eidgenössische Finanzmarktaufsicht (FINMA-Gebühren- und Abgabenverordnung, FINMA-GebV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance réglant la perception d'émoluments et de taxes par l'Autorité fédérale de surveillance des marchés financiers (Ordonnance sur les émoluments et les taxes de la FINMA, Oém-FINMA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla riscossione di emolumenti e tasse da parte dell'Autorità federale di vigilanza sui mercati finanziari (Ordinanza sugli emolumenti e sulle tasse della FINMA, Oem-FINMA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "956.122"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/749"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-10-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5343"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Erhebung von Gebühren und Abgaben durch die Eidgenössische Finanzmarktaufsicht (FINMA-Gebühren- und Abgabenverordnung, FINMA-GebV)"
@@ -148,6 +164,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-03-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 1559"
       },
       "titleDe": {
         "type": "literal",
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-03-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 1559"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Erhebung von Gebühren und Abgaben durch die Eidgenössische Finanzmarktaufsicht (FINMA-Gebühren- und Abgabenverordnung; FINMA-GebV)"
@@ -213,6 +237,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-03-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 1559"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Erhebung von Gebühren und Abgaben durch die Eidgenössische Finanzmarktaufsicht (FINMA-Gebühren- und Abgabenverordnung; FINMA-GebV)"
@@ -245,6 +273,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-11-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5597"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Erhebung von Gebühren und Abgaben durch die Eidgenössische Finanzmarktaufsicht (FINMA-Gebühren- und Abgabenverordnung, FINMA-GebV)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-11-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5597"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Erhebung von Gebühren und Abgaben durch die Eidgenössische Finanzmarktaufsicht (FINMA-Gebühren- und Abgabenverordnung, FINMA-GebV)"
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-11-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5597"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Erhebung von Gebühren und Abgaben durch die Eidgenössische Finanzmarktaufsicht (FINMA-Gebühren- und Abgabenverordnung, FINMA-GebV)"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-11-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6915"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Erhebung von Gebühren und Abgaben durch die Eidgenössische Finanzmarktaufsicht (FINMA-Gebühren- und Abgabenverordnung, FINMA-GebV)"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-11-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6915"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Erhebung von Gebühren und Abgaben durch die Eidgenössische Finanzmarktaufsicht (FINMA-Gebühren- und Abgabenverordnung, FINMA-GebV)"
@@ -404,6 +452,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-11-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6915"
       },
       "titleDe": {
         "type": "literal",

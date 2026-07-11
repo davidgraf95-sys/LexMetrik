@@ -21,6 +21,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1995-10-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1996 1738"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 6. Oktober 1995 über den Binnenmarkt (Binnenmarktgesetz, BGBM)"
@@ -53,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1995-10-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1996 1738"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 6. Oktober 1995 über den Binnenmarkt (Binnenmarktgesetz, BGBM)"
@@ -85,6 +93,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1995-10-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1996 1738"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 6. Oktober 1995 über den Binnenmarkt (Binnenmarktgesetz, BGBM)"
@@ -116,6 +128,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1995-10-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1996 1738"
       },
       "titleDe": {
         "type": "literal",
@@ -148,6 +164,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-12-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 2363"
       },
       "titleDe": {
         "type": "literal",
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-12-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 2363"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Binnenmarkt (Binnenmarktgesetz, BGBM)"
@@ -212,6 +236,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-12-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 2363"
       },
       "titleDe": {
         "type": "literal",

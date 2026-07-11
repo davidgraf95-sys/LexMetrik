@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1969-05-23"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Wiener Übereinkommen vom 23. Mai 1969 über das Recht der Verträge (mit Anhang)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention de Vienne du 23 mai 1969 sur le droit des traités (avec annexe)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione di Vienna del 23 maggio 1969 sul diritto dei trattati (con. All.)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.111"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1990/1112_1112_1112"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1990-06-06"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1969-05-23"
+        "value": "RO 1990 1112"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1969-05-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1990 1112"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Wiener Übereinkommen vom 23. Mai 1969 über das Recht der Verträge (mit Anhang)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1969-05-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1990 1112"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Wiener Übereinkommen vom 23. Mai 1969 über das Recht der Verträge (mit Anhang)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention de Vienne du 23 mai 1969 sur le droit des traités (avec annexe)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione di Vienna del 23 maggio 1969 sul diritto dei trattati (con. All.)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.111"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1990/1112_1112_1112"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1990-06-06"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1969-05-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1990 1112"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Wiener Übereinkommen vom 23. Mai 1969 über das Recht der Verträge (mit Anhang)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-09-18"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Wiener Übereinkommen vom 23. Mai 1969 über das Recht der Verträge (mit  Anhang)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention de Vienne du 23 mai 1969 sur le droit des traités (avec annexe)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione di Vienna del 23 maggio 1969 sul diritto dei trattati (con allegato)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.111"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/605"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-09-18"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-09-18"
+        "value": "RO 2003 4081"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-09-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 4081"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Wiener Übereinkommen vom 23. Mai 1969 über das Recht der Verträge (mit  Anhang)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention de Vienne du 23 mai 1969 sur le droit des traités (avec annexe)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione di Vienna del 23 maggio 1969 sul diritto dei trattati (con allegato)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.111"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/605"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-09-18"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-09-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 4081"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Wiener Übereinkommen vom 23. Mai 1969 über das Recht der Verträge (mit  Anhang)"
@@ -245,37 +273,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-01-26"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Wiener Übereinkommen vom 23. Mai 1969 über das Recht der Verträge"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention de Vienne du 23 mai 1969 sur le droit des traités"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione di Vienna del 23 maggio 1969 sul diritto dei trattati"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.111"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/204"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-01-26"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-01-26"
+        "value": "RO 2006 1147"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +309,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-01-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 1147"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Wiener Übereinkommen vom 23. Mai 1969 über das Recht der Verträge"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention de Vienne du 23 mai 1969 sur le droit des traités"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione di Vienna del 23 maggio 1969 sul diritto dei trattati"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.111"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/204"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-01-26"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-01-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 1147"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Wiener Übereinkommen vom 23. Mai 1969 über das Recht der Verträge"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-03-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 1293"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Wiener Übereinkommen vom 23. Mai 1969 über das Recht der Verträge"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-03-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 1293"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Wiener Übereinkommen vom 23. Mai 1969 über das Recht der Verträge"
@@ -404,6 +452,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-03-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 1293"
       },
       "titleDe": {
         "type": "literal",
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-08-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3783"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Wiener Übereinkommen über das Recht der Verträge (Betrifft nur den italienischen Text)"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-08-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3783"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Wiener Übereinkommen über das Recht der Verträge (Betrifft nur den italienischen Text)"
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-08-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3783"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Wiener Übereinkommen über das Recht der Verträge (Betrifft nur den italienischen Text)"
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 3599"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Wiener Übereinkommen vom 23. Mai 1969 über das Recht der Verträge"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 3599"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Wiener Übereinkommen vom 23. Mai 1969 über das Recht der Verträge"
@@ -597,69 +669,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-15"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Wiener Übereinkommen vom 23. Mai 1969 über das Recht der Verträge"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention de Vienne du 23 mai 1969 sur le droit des traités"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione di Vienna del 23 maggio 1969 sul diritto dei trattati"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.111"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/127"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-02-24"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-02-24"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Wiener Übereinkommen vom 23. Mai 1969 über das Recht der Verträge"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention de Vienne du 23 mai 1969 sur le droit des traités"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione di Vienna del 23 maggio 1969 sul diritto dei trattati"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.111"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/127"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-02-24"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-02-24"
+        "value": "RO 2012 3599"
       },
       "titleDe": {
         "type": "literal",
@@ -693,6 +705,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-02-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 745"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Wiener Übereinkommen vom 23. Mai 1969 über das Recht der Verträge"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention de Vienne du 23 mai 1969 sur le droit des traités"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione di Vienna del 23 maggio 1969 sul diritto dei trattati"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.111"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/127"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-02-24"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-02-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 745"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Wiener Übereinkommen vom 23. Mai 1969 über das Recht der Verträge"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention de Vienne du 23 mai 1969 sur le droit des traités"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione di Vienna del 23 maggio 1969 sul diritto dei trattati"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.111"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/127"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-02-24"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-02-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 745"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Wiener Übereinkommen vom 23. Mai 1969 über das Recht der Verträge"
@@ -725,6 +813,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-05-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1789"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Wiener Übereinkommen vom 23. Mai 1969 über das Recht der Verträge"
@@ -757,6 +849,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-05-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1789"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Wiener Übereinkommen vom 23. Mai 1969 über das Recht der Verträge"
@@ -788,6 +884,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-05-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1789"
       },
       "titleDe": {
         "type": "literal",

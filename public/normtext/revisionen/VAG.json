@@ -1,7 +1,7 @@
 {
   "erlassKey": "VAG",
   "sr": "961.01",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -40,12 +40,12 @@
       "dateEntryInForce": "2016-03-15",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/159",
       "dateDocument": "2016-02-17",
-      "roFundstelle": "AS 2016 159",
+      "roFundstelle": "AS 2016 921",
       "titelDe": "Bundesgesetz über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (Finanzmarktinfrastrukturgesetz, FinfraG)",
       "titelFr": "Loi fédérale sur les infrastructures des marchés financiers et le comportement sur le marché en matière de négociation de valeurs mobilières et de dérivés (Loi sur l'infrastructure des marchés financiers, LIMF)",
       "titelIt": "Legge federale sulle infrastrutture del mercato finanziario e il comportamento sul mercato nel commercio di valori mobiliari e derivati (Legge sull'infrastruttura finanziaria, LInFi)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/159/de",
-      "sha": "0b0a471e2f1f76eb390c93e7afcc125d25e173d8f490d12bccb27d78088d1ad8"
+      "sha": "8c00a20c294698872512ae5cbbb511290331791d2d915a7be4328b274c8896c4"
     },
     {
       "art": "sammelerlass-marker",
@@ -58,12 +58,12 @@
       "dateEntryInForce": "2015-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/305",
       "dateDocument": "2014-12-12",
-      "roFundstelle": "AS 2015 305",
+      "roFundstelle": "AS 2015 1539",
       "titelDe": "Bundesgesetz betreffend die Aufsicht über Versicherungsunternehmen (Versicherungsaufsichtsgesetz, VAG)",
       "titelFr": "Loi fédérale sur la surveillance des entreprises d'assurance (Loi sur la surveillance des assurances, LSA)",
       "titelIt": "Legge federale sulla sorveglianza delle imprese di assicurazione (Legge sulla sorveglianza degli assicuratori, LSA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/305/de",
-      "sha": "aace5638b10cbe00704263d227c186387e820eca71c6b267635fcd554c1b1466"
+      "sha": "70497cbee46921822706fb66114530d92e0ce7c346c3b6a309e62f984621b8bb"
     },
     {
       "art": "sammelerlass-marker",
@@ -106,26 +106,26 @@
       "dateEntryInForce": "2006-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/734",
       "dateDocument": "2004-12-17",
-      "roFundstelle": "AS 2005 734",
+      "roFundstelle": "AS 2005 5269",
       "titelDe": "Bundesgesetz betreffend die Aufsicht über Versicherungsunternehmen (Versicherungsaufsichtsgesetz, VAG)",
       "titelFr": "Loi fédérale sur la surveillance des entreprises d'assurance (Loi sur la surveillance des assurances, LSA)",
       "titelIt": "Legge federale sulla sorveglianza delle imprese di assicurazione (Legge sulla sorveglianza degli assicuratori, LSA)",
       "botschaftKey": "BOTSCHAFT-2003-577",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/734/de",
-      "sha": "684056b22a13f88132fd39d0201bf8ee1f6c924fd16c47a7758d2cccc12a9cf7"
+      "sha": "a12290ddd56050ca6907f2edb83c176c7d169b6222c3c27e99ae97a67e2d4567"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2003-02-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/32",
       "dateDocument": "2002-10-04",
-      "roFundstelle": "AS 2003 32",
+      "roFundstelle": "AS 2003 232",
       "titelDe": "Bundesgesetz betreffend die Aufsicht über die privaten Versicherungseinrichtungen (Versicherungsaufsichtsgesetz, VAG)",
       "titelFr": "Loi fédérale sur la surveillance des institutions d'assurance privées (Loi sur la surveillance des assurances, LSA)",
       "titelIt": "Legge federale sulla sorveglianza degli istituti di assicurazione privati (Legge sulla sorveglianza degli assicuratori, LSA)",
       "botschaftKey": "BOTSCHAFT-2002-692",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/32/de",
-      "sha": "a2557190d48f3fe5f2c5881eb953d02144b703f21ed765eb0a1a52ab0b393cdc"
+      "sha": "4cbc50a8cc4548408d049b172c4f25a194c903f38319ddcac46542af5aaaf089"
     },
     {
       "art": "aenderung",
@@ -152,5 +152,5 @@
       "sha": "4eda46b3ff75de39b879f2e5eb367ddfe109066359496c98c93f06df16db2cc9"
     }
   ],
-  "sha": "ba6ae2e828076f330ab184c6fefc3cb1addd66a9254aab1cfb344efc6493c0a8"
+  "sha": "d4018c85461581ea53b14da39cb7b73a156817dddb5839d6bba1f63c90ef2777"
 }

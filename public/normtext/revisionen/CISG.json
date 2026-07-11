@@ -1,7 +1,7 @@
 {
   "erlassKey": "CISG",
   "sr": "0.221.211.1",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -33,96 +33,96 @@
       "dateEntryInForce": "2020-02-06",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/85",
       "dateDocument": "2020-02-06",
-      "roFundstelle": "AS 2020 85",
+      "roFundstelle": "AS 2020 485",
       "titelDe": "Übereinkommen der Vereinten Nationen vom 11. April 1980 über Verträge über den internationalen Warenkauf",
       "titelFr": "Convention des Nations Unies du 11 avril 1980 sur les contrats de vente internationale de marchandises",
       "titelIt": "Convenzione delle Nazioni Unite dell'11 aprile 1980 sui contratti di compravendita internazionale di merci",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/85/de",
-      "sha": "5f15539270142b6cf593c3313d25174666bb07e115de68b0d41e09bf8e48da6f"
+      "sha": "002a21ac0ce65bd20f1b89e5c86fb99cff3175456e0b6423438674d006832e40"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2018-02-09",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/119",
       "dateDocument": "2018-02-09",
-      "roFundstelle": "AS 2018 119",
+      "roFundstelle": "AS 2018 877",
       "titelDe": "Übereinkommen der Vereinten Nationen vom 11. April 1980 über Verträge über den internationalen Warenkauf",
       "titelFr": "Convention des Nations Unies du 11 avril 1980 sur les contrats de vente internationale de marchandises",
       "titelIt": "Convenzione delle Nazioni Unite dell'11 aprile 1980 sui contratti di compravendita internazionale di merci",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/119/de",
-      "sha": "b3352597128b78913acd062694b2c9ed5061d6d8c9652e273cc99e0c5c37924a"
+      "sha": "e156522f05272c7c448e62f4b24095b55210c60d3dfdbf3a6a2d026cd2ace959"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2016-08-04",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/478",
       "dateDocument": "2016-08-04",
-      "roFundstelle": "AS 2016 478",
+      "roFundstelle": "AS 2016 2891",
       "titelDe": "Übereinkommen der Vereinten Nationen vom 11. April 1980 über Verträge über den internationalen Warenkauf",
       "titelFr": "Convention des Nations Unies du 11 avril 1980 sur les contrats de vente internationale de marchandises",
       "titelIt": "Convenzione delle Nazioni Unite dell'11 aprile 1980 sui contratti di compravendita internazionale di merci",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/478/de",
-      "sha": "ed54a79640369d043580e5b2039fb1a00f6771162841edf7d2c8a6c51a435e16"
+      "sha": "a2c9414216fbc934e5139a1f2bfcedf4a329404d2e39dc56ad02c6e2b8d2a7c8"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2014-06-24",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/361",
       "dateDocument": "2014-06-24",
-      "roFundstelle": "AS 2014 361",
+      "roFundstelle": "AS 2014 2153",
       "titelDe": "Übereinkommen der Vereinten Nationen vom 11. April 1980 über Verträge über den internationalen Warenkauf",
       "titelFr": "Convention des Nations Unies du 11 avril 1980 sur les contrats de vente internationale de marchandises",
       "titelIt": "Convenzione delle Nazioni Unite dell'11 aprile 1980 sui contratti di compravendita internazionale di merci",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/361/de",
-      "sha": "e09a7d5e31e80b75632281e2607af74d2f51c00db2620f027010f4f0abc85c6a"
+      "sha": "1de781318f4426773b010258870fe67b49f7b782b9ac97161287e04f38edd124"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2012-04-23",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/303",
       "dateDocument": "2012-04-23",
-      "roFundstelle": "AS 2012 303",
+      "roFundstelle": "AS 2012 2553",
       "titelDe": "Übereinkommen der Vereinten Nationen vom 11. April 1980 über Verträge über den internationalen Warenkauf",
       "titelFr": "Convention des Nations unies du 11 avril 1980 sur les contrats de vente internationale de marchandises",
       "titelIt": "Convenzione delle Nazioni Unite dell'11 aprile 1980 sui contratti di compravendita internazionale di merci",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/303/de",
-      "sha": "149bff3078a3b55debb47092ab49e9a1fdda17a492403928e2983c1ed0dc90e4"
+      "sha": "c0508b419434071d9fa7bde90a026ac39d99d90a7f2732ee3e88bc7bb6b3635f"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2009-03-04",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/242",
       "dateDocument": "2009-03-04",
-      "roFundstelle": "AS 2009 242",
+      "roFundstelle": "AS 2009 1659",
       "titelDe": "Übereinkommen der Vereinten Nationen vom 11. April 1980 über Verträge über den internationalen Warenkauf",
       "titelFr": "Convention des Nations unies du 11 avril 1980 sur les contrats de vente internationale de marchandises",
       "titelIt": "Convenzione delle Nazioni Unite dell'11 aprile 1980 sui contratti di compravendita internazionale di merci",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/242/de",
-      "sha": "6f85ff945953bf11df02c0c38be2616cf704dcc3ed0b4ab6dcd7ba774700025d"
+      "sha": "ef17a0a8c081311636c2f34f9fdc8c163771fc0ad6f34dfb16e25c045601d96a"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2006-04-27",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/317",
       "dateDocument": "2006-04-27",
-      "roFundstelle": "AS 2006 317",
+      "roFundstelle": "AS 2006 2021",
       "titelDe": "Übereinkommen der Vereinten Nationen vom 11. April 1980 über Verträge über den internationalen Warenkauf",
       "titelFr": "Convention des Nations unies du 11 avril 1980 sur les contrats de vente internationale de marchandises",
       "titelIt": "Convenzione delle Nazioni Unite dell'11 aprile 1980 sui contratti di compravendita internazionale di merci",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/317/de",
-      "sha": "55cab1a5537daef1aef9a9d203706d9c9be149dd4503987548dd8d5cad9f36a4"
+      "sha": "d1e6d007ee4c15a0ab9a60fdf84f70f9f32c1fc7b146486c6e25ce10e9d0faf9"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2004-03-25",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/462",
       "dateDocument": "2004-03-25",
-      "roFundstelle": "AS 2004 462",
+      "roFundstelle": "AS 2004 3455",
       "titelDe": "Übereinkommen der Vereinten Nationen vom 11. April 1980 über Verträge über den internationalen Warenkauf",
       "titelFr": "Convention des Nations unies du 11 avril 1980 sur les contrats de vente internationale de marchandises",
       "titelIt": "Convenzione delle Nazioni Unite dell'11 aprile 1980 sui contratti di compravendita internazionale di merci",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/462/de",
-      "sha": "0d1b871dbaa1ab6134394ab7fcf084b5db0a605bb753624d4fee537e93e2da06"
+      "sha": "f72b3b9d7c96281def163902204797ee6a17925af5f96205b097f0236c389c86"
     },
     {
       "art": "aenderung",
@@ -137,5 +137,5 @@
       "sha": "64d6f1d73bab6c502def5e806755fa6ac8e073a915fe7aeace7eb94ff9c65172"
     }
   ],
-  "sha": "ffa15526c804476d348c18c861b2cff2fa569b9466acd562343b7ead8ac83e4b"
+  "sha": "3a9fc3cd276f0833eeca19eb609eaf9a0d6ab7d04b296324f09d48a59e876d7a"
 }

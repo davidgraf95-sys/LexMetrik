@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1978-09-19"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom 19. September 1978 über die Organisation und die Geschäftsführung des Bundesrates und der Bundesverwaltung (Verwaltungsorganisationsgesetz, VwOG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 19 septembre 1978 sur l'organisation et la gestion du Conseil fédéral et de l'administration fédérale (Loi sur l'organisation de l'administration, LOA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 19 settembre 1978 sull'organizzazione e la gestione del Consiglio federale e dell'Amministrazione federale (Legge sull'organizzazione dell'ammininistrazione, LOA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "172.010"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1979/114_114_114"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1979-02-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1978-09-19"
+        "value": "RO 1979 114"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1978-09-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1979 114"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 19. September 1978 über die Organisation und die Geschäftsführung des Bundesrates und der Bundesverwaltung (Verwaltungsorganisationsgesetz, VwOG)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1978-09-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1979 114"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 19. September 1978 über die Organisation und die Geschäftsführung des Bundesrates und der Bundesverwaltung (Verwaltungsorganisationsgesetz, VwOG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 19 septembre 1978 sur l'organisation et la gestion du Conseil fédéral et de l'administration fédérale (Loi sur l'organisation de l'administration, LOA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 19 settembre 1978 sull'organizzazione e la gestione del Consiglio federale e dell'Amministrazione federale (Legge sull'organizzazione dell'ammininistrazione, LOA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1979/114_114_114"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1979-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1978-09-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1979 114"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 19. September 1978 über die Organisation und die Geschäftsführung des Bundesrates und der Bundesverwaltung (Verwaltungsorganisationsgesetz, VwOG)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1997-03-21"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Regierungs- und Verwaltungsorganisationsgesetz vom 21. März 1997 (RVOG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi du 21 mars 1997 sur l'organisation du gouvernement et de l'administration (LOGA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge del 21 marzo 1997 sull'organizzazione del Governo e dell'Amministrazione (LOGA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "172.010"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1997/2022_2022_2022"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1997-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1997-03-21"
+        "value": "RO 1997 2022"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1997-03-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1997 2022"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Regierungs- und Verwaltungsorganisationsgesetz vom 21. März 1997 (RVOG)"
@@ -245,6 +237,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1997-03-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1997 2022"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsgesetz vom 21. März 1997 (RVOG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi du 21 mars 1997 sur l'organisation du gouvernement et de l'administration (LOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge del 21 marzo 1997 sull'organizzazione del Governo e dell'Amministrazione (LOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1997/2022_2022_2022"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1997-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1997-03-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1997 2022"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Regierungs- und Verwaltungsorganisationsgesetz vom 21. März 1997 (RVOG)"
@@ -277,37 +309,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-06-18"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Koordination und Vereinfachung von Entscheidverfahren"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur la coordination et la simplification des procédures de décision"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sul coordinamento e la semplificazione delle procedure d'approvazione dei piani"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "172.010"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1999/472"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-06-18"
+        "value": "RO 1999 3071"
       },
       "titleDe": {
         "type": "literal",
@@ -341,6 +345,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-06-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 3071"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Koordination und Vereinfachung von Entscheidverfahren"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur la coordination et la simplification des procédures de décision"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sul coordinamento e la semplificazione delle procedure d'approvazione dei piani"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/472"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-06-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 3071"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Koordination und Vereinfachung von Entscheidverfahren"
@@ -373,37 +417,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-03-24"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Regierungs- und Verwaltungsorganisationsgesetz (RVOG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi sur l'organisation du gouvernement et de l'administration (LOGA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sull'organizzazione del Governo e dell'Amministrazione (LOGA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "172.010"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/318"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-09-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-03-24"
+        "value": "RO 2000 2095"
       },
       "titleDe": {
         "type": "literal",
@@ -437,6 +453,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-03-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2095"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Regierungs- und Verwaltungsorganisationsgesetz (RVOG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi sur l'organisation du gouvernement et de l'administration (LOGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'organizzazione del Governo e dell'Amministrazione (LOGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/318"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-09-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-03-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2095"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Regierungs- und Verwaltungsorganisationsgesetz (RVOG)"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-10-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 289"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Regierungs- und Verwaltungsorganisationsgesetz (RVOG)"
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-10-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 289"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Regierungs- und Verwaltungsorganisationsgesetz (RVOG)"
@@ -532,6 +596,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-10-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 289"
       },
       "titleDe": {
         "type": "literal",
@@ -565,37 +633,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-23"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über Titel und Orden ausländischer Regierungen"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur les titres et les décorations octroyés par des autorités étrangères"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale concernente le liberalità e le onorificenze di Governi esteri"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "172.010"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2001/21"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-02-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-06-23"
+        "value": "RO 2001 114"
       },
       "titleDe": {
         "type": "literal",
@@ -629,6 +669,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 114"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über Titel und Orden ausländischer Regierungen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les titres et les décorations octroyés par des autorités étrangères"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale concernente le liberalità e le onorificenze di Governi esteri"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.010"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2001/21"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-06-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 114"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Titel und Orden ausländischer Regierungen"
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-10-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 1265"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Regierungs- und Verwaltungsorganisationsgesetz (RVOG)"
@@ -693,6 +777,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-10-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 1265"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Regierungs- und Verwaltungsorganisationsgesetz (RVOG)"
@@ -724,6 +812,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-10-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 1265"
       },
       "titleDe": {
         "type": "literal",
@@ -756,6 +848,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-03-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5941"
       },
       "titleDe": {
         "type": "literal",
@@ -789,6 +885,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-03-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5941"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Regierungs- und Verwaltungsorganisationsgesetz (RVOG) (Neuordnung der ausserparlamentarischen Kommissionen)"
@@ -820,6 +920,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-03-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5941"
       },
       "titleDe": {
         "type": "literal",
@@ -852,6 +956,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-11-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 6135"
       },
       "titleDe": {
         "type": "literal",
@@ -885,6 +993,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-11-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 6135"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die abschliessende Inkraftsetzung der Änderung vom 20. März 2008 des Regierungs- und Verwaltungsorganisationsgesetzes"
@@ -916,6 +1028,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-11-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 6135"
       },
       "titleDe": {
         "type": "literal",
@@ -948,6 +1064,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-10-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 941"
       },
       "titleDe": {
         "type": "literal",
@@ -981,6 +1101,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-10-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 941"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Regierungs- und Verwaltungsorganisationsgesetz (RVOG) (Datenschutz bei der Benutzung der elektronischen Infrastruktur)"
@@ -1012,6 +1136,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-10-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 941"
       },
       "titleDe": {
         "type": "literal",
@@ -1044,6 +1172,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-09-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4549"
       },
       "titleDe": {
         "type": "literal",
@@ -1077,6 +1209,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-09-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4549"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Regierungs- und Verwaltungsorganisationsgesetz (RVOG)"
@@ -1108,6 +1244,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-09-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4549"
       },
       "titleDe": {
         "type": "literal",
@@ -1140,6 +1280,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-09-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 969"
       },
       "titleDe": {
         "type": "literal",
@@ -1173,6 +1317,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-09-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 969"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Kompetenz zum Abschluss völkerrechtlicher Verträge von beschränkter Tragweite und über die vorläufige Anwendung völkerrechtlicher Verträge (Änderung des Regierungs- und Verwaltungsorganisationsgesetzes und des Parlamentsgesetzes)"
@@ -1204,6 +1352,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-09-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 969"
       },
       "titleDe": {
         "type": "literal",
@@ -1236,6 +1388,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-05-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 3259"
       },
       "titleDe": {
         "type": "literal",
@@ -1269,6 +1425,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-05-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 3259"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Regierungs- und Verwaltungsorganisationsgesetz (RVOG) (Betrifft nur den französischen Text)"
@@ -1300,6 +1460,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-05-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 3259"
       },
       "titleDe": {
         "type": "literal",
@@ -1332,6 +1496,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5205"
       },
       "titleDe": {
         "type": "literal",
@@ -1365,6 +1533,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5205"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über das Stabilisierungsprogramm 20172019"
@@ -1396,6 +1568,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5205"
       },
       "titleDe": {
         "type": "literal",
@@ -1461,6 +1637,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1914-03-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 30 292"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 30. März 1914 über die Organisation der Bundesverwaltung "
@@ -1493,6 +1673,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1914-03-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 30 292"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 30. März 1914 über die Organisation der Bundesverwaltung "
@@ -1525,6 +1709,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1914-03-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 30 292"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 30. März 1914 über die Organisation der Bundesverwaltung "
@@ -1556,6 +1744,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1914-03-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 30 292"
       },
       "titleDe": {
         "type": "literal",

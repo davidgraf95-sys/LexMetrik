@@ -21,69 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1965-03-19"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom 19. März 1965 über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 19 mars 1965 sur les prestations complémentaires à l'assurance-vieillesse, survivants et invalidité (LPC)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 19 marzo 1965 sulle prestazioni complementari all'assicurazione per la vecchiaia, i superstiti e l'invalidità (LPC)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.30"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1965/537_541_535"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1966-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1965-03-19"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Bundesgesetz vom 19. März 1965 über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 19 mars 1965 sur les prestations complémentaires à l'assurance-vieillesse, survivants et invalidité (LPC)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 19 marzo 1965 sulle prestazioni complementari all'assicurazione per la vecchiaia, i superstiti e l'invalidità (LPC)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.30"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1965/537_541_535"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1966-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1965-03-19"
+        "value": "RO 1965 541"
       },
       "titleDe": {
         "type": "literal",
@@ -117,6 +57,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1965-03-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1965 541"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 19. März 1965 über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 19 mars 1965 sur les prestations complémentaires à l'assurance-vieillesse, survivants et invalidité (LPC)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 19 marzo 1965 sulle prestazioni complementari all'assicurazione per la vecchiaia, i superstiti e l'invalidità (LPC)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.30"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1965/537_541_535"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1966-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1965-03-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1965 541"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 19. März 1965 über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 19 mars 1965 sur les prestations complémentaires à l'assurance-vieillesse, survivants et invalidité (LPC)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 19 marzo 1965 sulle prestazioni complementari all'assicurazione per la vecchiaia, i superstiti e l'invalidità (LPC)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.30"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1965/537_541_535"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1966-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1965-03-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1965 541"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 19. März 1965 über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELG)"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2687"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELG)"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2687"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELG)"
@@ -213,6 +237,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2687"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELG)"
@@ -245,6 +273,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-10-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 6055"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELG)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-10-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 6055"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELG)"
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-10-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 6055"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELG)"
@@ -340,6 +380,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-10-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 6055"
       },
       "titleDe": {
         "type": "literal",
@@ -372,6 +416,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-03-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 585"
       },
       "titleDe": {
         "type": "literal",
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-03-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 585"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELG) (EL-Reform)"
@@ -436,6 +488,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-03-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 585"
       },
       "titleDe": {
         "type": "literal",
@@ -468,6 +524,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-06-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2827"
       },
       "titleDe": {
         "type": "literal",
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-06-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2827"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELG) (EL-Reform) (Betrifft nur den italienischen Text)"
@@ -532,6 +596,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-06-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2827"
       },
       "titleDe": {
         "type": "literal",

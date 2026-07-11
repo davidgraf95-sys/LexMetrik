@@ -1,7 +1,7 @@
 {
   "erlassKey": "KKV_FINMA",
   "sr": "951.312",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -15,36 +15,36 @@
       "dateEntryInForce": "2015-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/707",
       "dateDocument": "2014-08-27",
-      "roFundstelle": "AS 2014 707",
+      "roFundstelle": "AS 2014 4237",
       "titelDe": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die kollektiven Kapitalanlagen (Kollektivanlagenverordnung-FINMA, KKV-FINMA)",
       "titelFr": "Ordonnance de l'Autorité fédérale de surveillance des marchés financiers sur les placements collectifs de capitaux (Ordonnance de la FINMA sur les placements collectifs, OPC-FINMA)",
       "titelIt": "Ordinanza dell'Autorità federale di vigilanza sui mercati finanziari sugli investimenti collettivi di capitale (Ordinanza FINMA sugli investimenti collettivi, OICol-FINMA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/707/de",
-      "sha": "1b3a67d3f192507f0feac923ed64fd0f1ff02e0905009ed52a46cd06df038032"
+      "sha": "72e1e2cae84b60ed2bed8727bf51143cade6b29756e2669ff649f67c01b66c13"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2009-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/776",
       "dateDocument": "2008-11-20",
-      "roFundstelle": "AS 2008 776",
+      "roFundstelle": "AS 2008 5613",
       "titelDe": "Verordnung über die Anpassung von Behördenverordnungen an das Finanzmarktaufsichtsgesetz",
       "titelFr": "Ordonnance sur l'adaptation d'ordonnances arrêtées par les autorités à la loi sur l'Autorité fédérale de surveillance des marchés financiers",
       "titelIt": "Ordinanza che adegua alcune ordinanze alle disposizioni della legge sulla vigilanza dei mercati finanziari",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/776/de",
-      "sha": "62660c19a270f96a5469184438285681dfd9b17326dfd9076bb3630d8bfd9aff"
+      "sha": "2f01624f7f624d276e90e3e62399033742215f90607df9b9b37bf5f1a011117f"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2007-02-15",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/66",
       "dateDocument": "2006-12-21",
-      "roFundstelle": "AS 2007 66",
+      "roFundstelle": "AS 2007 301",
       "titelDe": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die kollektiven Kapitalanlagen (Kollektivanlagenverordnung-FINMA, KKV-FINMA)",
       "titelFr": "Ordonnance de l'Autorité fédérale de surveillance des marchés financiers sur les placements collectifs de capitaux (Ordonnance de la FINMA sur les placements collectifs, OPC-FINMA)",
       "titelIt": "Ordinanza dell'Autorità federale di vigilanza sui mercati finanziari sugli investimenti collettivi di capitale (Ordinanza FINMA sugli investimenti collettivi, OICol-FINMA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/66/de",
-      "sha": "270b371995c108067dcaf503e0e56c55a9a21b742e154eda00d019a6be8c52c3"
+      "sha": "f85885141ffc9237323b81b89fc489e4021f4daf65e01a6a088359ad8697712d"
     },
     {
       "art": "aenderung",
@@ -59,5 +59,5 @@
       "sha": "fb4cc6e36ee248448951e8656592c30dce57b1fada244afc58f141642cb9ffaa"
     }
   ],
-  "sha": "a4111c0eeadf0db24c2f3bbb8ef6ae7acda4cf6c4ce724024272c1d59c0921bf"
+  "sha": "dd2c371efa598b802067c88a9123ca9fee9b5fce00c65583ad070e41b8a9d2f7"
 }

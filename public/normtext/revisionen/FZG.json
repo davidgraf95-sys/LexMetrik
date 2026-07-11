@@ -1,7 +1,7 @@
 {
   "erlassKey": "FZG",
   "sr": "831.42",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -27,13 +27,13 @@
       "dateEntryInForce": "2017-10-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/542",
       "dateDocument": "2015-12-18",
-      "roFundstelle": "AS 2017 542",
+      "roFundstelle": "AS 2017 5019",
       "titelDe": "Bundesgesetz über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)",
       "titelFr": "Loi fédérale sur le libre passage dans la prévoyance professionnelle vieillesse, survivants et invalidité (Loi sur le libre passage, LFLP)",
       "titelIt": "Legge federale sul libero passaggio nella previdenza professionale per la vecchiaia, i superstiti e l'invalidità (Legge sul libero passaggio, LFLP)",
       "botschaftKey": "BOTSCHAFT-2015-311",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/542/de",
-      "sha": "0bc93ddc2b9053b840df2f43f9f2b09884ba5490ddf500d673c81761f499fd10"
+      "sha": "66028a03b692737158c8e161f3fb85c4ed990cbf5a546f8a14e41da69264c3f1"
     },
     {
       "art": "sammelerlass-marker",
@@ -58,12 +58,12 @@
       "dateEntryInForce": "2010-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/609",
       "dateDocument": "2009-06-12",
-      "roFundstelle": "AS 2009 609",
+      "roFundstelle": "AS 2009 5187",
       "titelDe": "Bundesgesetz über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)",
       "titelFr": "Loi fédérale sur le libre passage dans la prévoyance professionnelle vieillesse, survivants et invalidité (Loi sur le libre passage, LFLP)",
       "titelIt": "Legge federale sul libero passaggio nella previdenza professionale per la vecchiaia, i superstiti e l'invalidità (Legge sul libero passaggio, LFLP)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/609/de",
-      "sha": "ea816684f407df41bc11173e293f41f0d8573745aa78628e262c795b4cf950a8"
+      "sha": "c42e5c6bcfe2a4e06d7057e824688c0a8e5a7f8d92bd4fd7b65845422d5bd26c"
     },
     {
       "art": "sammelerlass-marker",
@@ -112,13 +112,13 @@
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/443",
       "dateDocument": "2000-06-23",
-      "roFundstelle": "AS 2000 443",
+      "roFundstelle": "AS 2000 2693",
       "titelDe": "Bundesgesetz über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)",
       "titelFr": "Loi fédérale sur le libre passage dans la prévoyance professionnelle vieillesse, survivants et invalidité (Loi sur le libre passage, LFLP)",
       "titelIt": "Legge federale sul libero passaggio nella previdenza professionale per la vecchiaia, i superstiti e l'invalidità (Legge sul libero passaggio, LFLP)",
       "botschaftKey": "BOTSCHAFT-2000-99",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/443/de",
-      "sha": "af74e5564cab891957d6123cff76448bfeb3342110f3b052eca3042a66807695"
+      "sha": "f4bed1660f6ae407e0b4b30620dbc5977e7454938d7771ba52dcc494a7b7f096"
     },
     {
       "art": "sammelerlass-marker",
@@ -131,12 +131,12 @@
       "dateEntryInForce": "1999-05-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/199",
       "dateDocument": "1998-12-18",
-      "roFundstelle": "AS 1999 199",
+      "roFundstelle": "AS 1999 1384",
       "titelDe": "Bundesgesetz über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)",
       "titelFr": "Loi fédérale sur le libre passage dans la prévoyance professionnelle vieillesse, survivants et invalidité (loi sur le libre passage, LFLP)",
       "titelIt": "Legge federale sul libero passaggio nella previdenza professionale per la vecchiaia, i superstiti e l'invalidità (Legge sul libero passaggio, LFLP)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/199/de",
-      "sha": "9235cb4752aeae5825edeae369e21bdb9804c72c6cd7875f3630fbc8fb17bc43"
+      "sha": "a105dce35ab7f07eac41751886e70132b900ae6ebd7465cc34d108a4709698e4"
     },
     {
       "art": "aenderung",
@@ -151,5 +151,5 @@
       "sha": "54112ac9778812162fcf0a9e784e15794aed345e2496b3e1aa5d847cbc71206c"
     }
   ],
-  "sha": "a2b693e7c2a78691ff74c83af1789588ee413b4eb9141eece882e40aab407734"
+  "sha": "2a806e4490331a8e76f4c03cd44fcc5a73f67dc99da8e1be073b83da34bc47fa"
 }

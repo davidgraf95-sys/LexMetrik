@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1992-10-09"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom 9. Oktober 1992 über das Urheberrecht und verwandte Schutzrechte (Urheberrechtsgesetz, URG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 9 octobre 1992 sur le droit d'auteur et les droits voisins (Loi sur le droit d'auteur, LDA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 9 ottobre 1992 sul diritto d'autore e sui diritti di protezione affini (Legge sul diritto d'autore, LDA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "231.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1993/1798_1798_1798"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1993-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1992-10-09"
+        "value": "RO 1993 1798"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1992-10-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1993 1798"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 9. Oktober 1992 über das Urheberrecht und verwandte Schutzrechte (Urheberrechtsgesetz, URG)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1992-10-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1993 1798"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 9. Oktober 1992 über das Urheberrecht und verwandte Schutzrechte (Urheberrechtsgesetz, URG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 9 octobre 1992 sur le droit d'auteur et les droits voisins (Loi sur le droit d'auteur, LDA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 9 ottobre 1992 sul diritto d'autore e sui diritti di protezione affini (Legge sul diritto d'autore, LDA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "231.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1993/1798_1798_1798"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1993-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1992-10-09"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1993 1798"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 9. Oktober 1992 über das Urheberrecht und verwandte Schutzrechte (Urheberrechtsgesetz, URG)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-05"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über das Urheberrecht und verwandte Schutzrechte (Urheberrechtsgesetz, URG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur le droit d'auteur et les droits voisins (Loi sur le droit d'auteur, LDA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sul diritto d'autore e sui diritti di protezione affini (Legge sul diritto d'autore, LDA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "231.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2008/347"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-10-05"
+        "value": "RO 2008 2421"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2421"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über das Urheberrecht und verwandte Schutzrechte (Urheberrechtsgesetz, URG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur le droit d'auteur et les droits voisins (Loi sur le droit d'auteur, LDA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sul diritto d'autore e sui diritti di protezione affini (Legge sul diritto d'autore, LDA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "231.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/347"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-10-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2421"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über das Urheberrecht und verwandte Schutzrechte (Urheberrechtsgesetz, URG)"
@@ -244,6 +272,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2497"
       },
       "titleDe": {
         "type": "literal",
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2497"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung von zwei Abkommen der Weltorganisation für geistiges Eigentum und über die Änderung des Urheberrechtsgesetzes"
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2497"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung von zwei Abkommen der Weltorganisation für geistiges Eigentum und über die Änderung des Urheberrechtsgesetzes"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-09-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1003"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über das Urheberrecht und verwandte Schutzrechte (Urheberrechtsgesetz, URG)"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-09-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1003"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über das Urheberrecht und verwandte Schutzrechte (Urheberrechtsgesetz, URG)"
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-09-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1003"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über das Urheberrecht und verwandte Schutzrechte (Urheberrechtsgesetz, URG)"
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-06-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1013"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung des Vertrags von Marrakesch über die Erleichterung des Zugangs zu veröffentlichten Werken für blinde, sehbehinderte oder sonst lesebehinderte Menschen und über seine Umsetzung (Änderung des Urheberrechtsgesetzes)"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-06-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1013"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung des Vertrags von Marrakesch über die Erleichterung des Zugangs zu veröffentlichten Werken für blinde, sehbehinderte oder sonst lesebehinderte Menschen und über seine Umsetzung (Änderung des Urheberrechtsgesetzes)"
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-06-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1013"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung des Vertrags von Marrakesch über die Erleichterung des Zugangs zu veröffentlichten Werken für blinde, sehbehinderte oder sonst lesebehinderte Menschen und über seine Umsetzung (Änderung des Urheberrechtsgesetzes)"
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-06-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2743"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Anpassung von Gesetzen infolge der Änderung der Bezeichnung der Eidgenössischen Zollverwaltung im Rahmen von deren Weiterentwicklung"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-06-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2743"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Anpassung von Gesetzen infolge der Änderung der Bezeichnung der Eidgenössischen Zollverwaltung im Rahmen von deren Weiterentwicklung"
@@ -597,6 +669,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-06-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2743"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Anpassung von Gesetzen infolge der Änderung der Bezeichnung der Eidgenössischen Zollverwaltung im Rahmen von deren Weiterentwicklung"
@@ -629,6 +705,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1922-12-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 39 65"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 7. Dezember 1922 betreffend das Urheberrecht an Werken der Literatur und Kunst"
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1922-12-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 39 65"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 7. Dezember 1922 betreffend das Urheberrecht an Werken der Literatur und Kunst"
@@ -693,6 +777,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1922-12-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 39 65"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 7. Dezember 1922 betreffend das Urheberrecht an Werken der Literatur und Kunst"
@@ -724,6 +812,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1922-12-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 39 65"
       },
       "titleDe": {
         "type": "literal",

@@ -1,7 +1,7 @@
 {
   "erlassKey": "VWVG",
   "sr": "172.021",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -34,13 +34,13 @@
       "dateEntryInForce": "2019-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/177",
       "dateDocument": "2018-09-28",
-      "roFundstelle": "AS 2019 177",
+      "roFundstelle": "AS 2019 975",
       "titelDe": "Bundesbeschluss über die Genehmigung und die Umsetzung des Übereinkommens Nr. 94 des Europarates über die Zustellung von Schriftstücken in Verwaltungssachen im Ausland",
       "titelFr": "Arrêté fédéral portant approbation et mise en uvre de la convention no 94 du Conseil de l'Europe sur la notification à l'étranger des documents en matière administrative",
       "titelIt": "Decreto federale concernente l'approvazione e l'attuazione della Convenzione n. 94 del Consiglio d'Europa sulla notificazione all'estero dei documenti in materia amministrativa",
       "botschaftKey": "BOTSCHAFT-2017-1678",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/177/de",
-      "sha": "990b88aacb0d1d0ae3e25cf511d642c6d3499160ee3f48faf068f8a86899b9af"
+      "sha": "b7fcd1a07c514e79e4c6747238e2326ed1d038e524392782391c4c011bbae6c5"
     },
     {
       "art": "sammelerlass-marker",
@@ -125,13 +125,13 @@
       "dateEntryInForce": "2001-02-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/22",
       "dateDocument": "2000-06-23",
-      "roFundstelle": "AS 2001 22",
+      "roFundstelle": "AS 2001 118",
       "titelDe": "Bundesgesetz über die Anpassung der Bundesgesetzgebung an die Gewährleistung des Redaktionsgeheimnisses",
       "titelFr": "Loi fédérale sur l'adaptation de la législation fédérale à la garantie du secret de rédaction",
       "titelIt": "Legge federale concernente l'adeguamento della legislazione federale alla garanzia del segreto redazionale",
       "botschaftKey": "BOTSCHAFT-1999-1_7922_7145_6784",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/22/de",
-      "sha": "52b41c7af7707d3abb05d8130173bf7978148bc69210eecd66dc25224ec0d399"
+      "sha": "a406e460d9818f1efe0df13151b6422be59209b1b1386df8e8de83ece1485c66"
     },
     {
       "art": "sammelerlass-marker",
@@ -144,13 +144,13 @@
       "dateEntryInForce": "2000-03-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/92",
       "dateDocument": "1999-10-08",
-      "roFundstelle": "AS 2000 92",
+      "roFundstelle": "AS 2000 416",
       "titelDe": "Bundesgesetz über prozessuale Anpassungen an die neue Bundesverfassung",
       "titelFr": "Loi fédérale sur les adaptations de lois de procédure à la nouvelle Constitution fédérale",
       "titelIt": "Legge federale concernente adeguamenti procedurali alla nuova Costituzione federale",
       "botschaftKey": "BOTSCHAFT-1999-1_7922_7145_6784",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/92/de",
-      "sha": "beb5e14b53fa0de4de34b3fd3ad70d157c6384e2d777f44988d5b2d0ef86d45b"
+      "sha": "f1940403f44607284928b6b222d8db03c7399b2c90c746d2f8d1e3db9d70fab7"
     },
     {
       "art": "sammelerlass-marker",
@@ -171,5 +171,5 @@
       "sha": "c5b191110c68b1e91fd74d7ed1ef713356185a3171212313e927e550b6fcb094"
     }
   ],
-  "sha": "59abc6b3272c3b36ca002b573653da304908b7d477ccfcab33b0153bf112fe89"
+  "sha": "d7404aa03976f02bab9b20500143ee447f80807281413b5d2c6a6bc2f544ea63"
 }

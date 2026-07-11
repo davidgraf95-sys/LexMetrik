@@ -21,69 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-02-14"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Versichertenkarte für die obligatorische Krankenpflegeversicherung (VVK)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la carte d'assuré pour l'assurance obligatoire des soins (OCA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla tessera d'assicurato per l'assicurazione obbligatoria delle cure medico-sanitarie (OTeA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.105"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/101"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-03-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-02-14"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung über die Versichertenkarte für die obligatorische Krankenpflegeversicherung (VVK)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la carte d'assuré pour l'assurance obligatoire des soins (OCA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla tessera d'assicurato per l'assicurazione obbligatoria delle cure medico-sanitarie (OTeA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.105"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/101"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-03-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-02-14"
+        "value": "RO 2007 497"
       },
       "titleDe": {
         "type": "literal",
@@ -117,6 +57,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-02-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 497"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Versichertenkarte für die obligatorische Krankenpflegeversicherung (VVK)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la carte d'assuré pour l'assurance obligatoire des soins (OCA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla tessera d'assicurato per l'assicurazione obbligatoria delle cure medico-sanitarie (OTeA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.105"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/101"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-03-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-02-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 497"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Versichertenkarte für die obligatorische Krankenpflegeversicherung (VVK)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la carte d'assuré pour l'assurance obligatoire des soins (OCA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla tessera d'assicurato per l'assicurazione obbligatoria delle cure medico-sanitarie (OTeA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.105"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/101"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-03-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-02-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 497"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Versichertenkarte für die obligatorische Krankenpflegeversicherung (VVK)"
@@ -148,6 +164,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 1069"
       },
       "titleDe": {
         "type": "literal",
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 1069"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Versichertenkarte für die obligatorische Krankenpflegeversicherung (VVK) (Betrifft nur den italienischen Text)"
@@ -213,6 +237,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 1069"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Versichertenkarte für die obligatorische Krankenpflegeversicherung (VVK) (Betrifft nur den italienischen Text)"
@@ -245,6 +273,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-11-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 6145"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Versichertenkarte für die obligatorische Krankenpflegeversicherung (VVK)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-11-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 6145"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Versichertenkarte für die obligatorische Krankenpflegeversicherung (VVK)"
@@ -308,6 +344,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-11-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 6145"
       },
       "titleDe": {
         "type": "literal",

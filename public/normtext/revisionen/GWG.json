@@ -1,7 +1,7 @@
 {
   "erlassKey": "GWG",
   "sr": "955.0",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -108,13 +108,13 @@
       "dateEntryInForce": "2013-11-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/648",
       "dateDocument": "2013-06-21",
-      "roFundstelle": "AS 2013 648",
+      "roFundstelle": "AS 2013 3493",
       "titelDe": "Bundesgesetz über die Bekämpfung der Geldwäscherei und der Terrorismusfinanzierung im Finanzsektor (Geldwäschereigesetz, GwG)",
       "titelFr": "Loi fédérale concernant la lutte contre le blanchiment d'argent et le financement du terrorisme dans le secteur financier (Loi sur le blanchiment d'argent, LBA)",
       "titelIt": "Legge federale relativa alla lotta contro il riciclaggio di denaro e il finanziamento del terrorismo nel settore finanziario (Legge sul riciclaggio di denaro, LRD)",
       "botschaftKey": "BOTSCHAFT-2012-1031",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/648/de",
-      "sha": "36cfa1cb4e8bc9c9fc255f9df47e4346e7e38bed539701123c4000d7ae6f7500"
+      "sha": "7372d0ecdb00284dc9411ff8407f9c1b23b4fa1b533c3d4a49214771e7ddbab6"
     },
     {
       "art": "sammelerlass-marker",
@@ -133,12 +133,12 @@
       "dateEntryInForce": "2010-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/781",
       "dateDocument": "2009-11-18",
-      "roFundstelle": "AS 2009 781",
+      "roFundstelle": "AS 2009 6401",
       "titelDe": "Verordnung über die abschliessende Inkraftsetzung des Bundesgesetzes vom 3. Oktober 2008 zur Umsetzung der revidierten Empfehlungen der Groupe d'action financière (Art. 41 des Geldwäschereigesetzes)",
       "titelFr": "Ordonnance sur l'entrée en vigueur complète de la loi fédérale du 3 octobre 2008 sur la mise en uvre des recommandations révisées du Groupe d'action financière (art. 41 de la loi sur le blanchiment d'argent)",
       "titelIt": "Ordinanza relativa all'entrata in vigore integrale della legge federale del 3 ottobre 2008 concernente l'attuazione delle Raccomandazioni rivedute del Gruppo d'azione finanziaria (art. 41 della legge sul riciclaggio di denaro)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/781/de",
-      "sha": "5762b053e82faf9ccb177783e61a89a68e8d298ce2801d2ed0c124c8006addf2"
+      "sha": "691411353020881db491e19019d00ed123317a95c2610616c47857448e7430da"
     },
     {
       "art": "sammelerlass-marker",
@@ -189,5 +189,5 @@
       "sha": "dacf017c9e801f7e0dd7563482956e20e2cab8c924c4e0b671a95ef6718e982b"
     }
   ],
-  "sha": "dfe3e88d331c1d3746e345f73fe62d73275e1d3df6e676578602d03615bade44"
+  "sha": "e872c5f9df0fc653ac3e278e55c81efd6ee9f0c0be6a565d18809d7398bc7a42"
 }

@@ -1,7 +1,7 @@
 {
   "erlassKey": "AVO",
   "sr": "961.011",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -57,36 +57,36 @@
       "dateEntryInForce": "2015-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/233",
       "dateDocument": "2015-03-25",
-      "roFundstelle": "AS 2015 233",
+      "roFundstelle": "AS 2015 1147",
       "titelDe": "Verordnung über die Beaufsichtigung von privaten Versicherungsunternehmen (Aufsichtsverordnung, AVO)",
       "titelFr": "Ordonnance sur la surveillance des entreprises d'assurance privées (Ordonnance sur la surveillance, OS)",
       "titelIt": "Ordinanza sulla sorveglianza delle imprese di assicurazione private (Ordinanza sulla sorveglianza, OS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/233/de",
-      "sha": "9234c40d262b5f4659b78450ebce74a0a163f5d6df57089cb7bfffb8a4e6c30e"
+      "sha": "a833420b29be0e6166a8be27dd4ccd4fe7d9dc4c299ddecc9a4856cd280d585e"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2014-01-14",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/21",
       "dateDocument": "2014-01-14",
-      "roFundstelle": "AS 2014 21",
+      "roFundstelle": "AS 2014 159",
       "titelDe": "Verordnung über die Beaufsichtigung von privaten Versicherungsunternehmen (Aufsichtsverordnung, AVO) (Betrifft nur den italienischen Text)",
       "titelFr": "Ordonnance sur la surveillance des entreprises d'assurance privées (Ordonnance sur la surveillance, OS) (Ne concerne que le texte italien)",
       "titelIt": "Ordinanza sulla sorveglianza delle imprese di assicurazione private (Ordinanza sulla sorveglianza, OS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/21/de",
-      "sha": "259f18a89327c5382098dc92f16008146b24bda321e4d7760c540cc3a1e9c711"
+      "sha": "934fb574599f6c6d6a8eaead28599c2396c09c6cf4904f42bd66e80d8cdcd108"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2013-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/884",
       "dateDocument": "2012-11-30",
-      "roFundstelle": "AS 2012 884",
+      "roFundstelle": "AS 2012 7263",
       "titelDe": "Verordnung über die Beaufsichtigung von privaten Versicherungsunternehmen (Aufsichtsverordnung, AVO)",
       "titelFr": "Ordonnance sur la surveillance des entreprises d'assurance privées (Ordonnance sur la surveillance, OS)",
       "titelIt": "Ordinanza sulla sorveglianza delle imprese di assicurazione private (Ordinanza sulla sorveglianza, OS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/884/de",
-      "sha": "a5bb626dc1a2ff67647f6c1b877bc39fd3a89ce8a2ef5af2b9a12eb02bfbc3d2"
+      "sha": "f25e5baa40f54c900f813f8e3def785ef373b6f7fe9e266a50dab15d323987cc"
     },
     {
       "art": "sammelerlass-marker",
@@ -105,24 +105,24 @@
       "dateEntryInForce": "2007-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/671",
       "dateDocument": "2006-10-18",
-      "roFundstelle": "AS 2006 671",
+      "roFundstelle": "AS 2006 4425",
       "titelDe": "Verordnung über die Beaufsichtigung von privaten Versicherungsunternehmen (Aufsichtsverordnung, AVO)",
       "titelFr": "Ordonnance sur la surveillance des entreprises d'assurance privées (Ordonnance sur la surveillance, OS)",
       "titelIt": "Ordinanza sulla sorveglianza delle imprese di assicurazione private (Ordinanza sulla sorveglianza, OS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/671/de",
-      "sha": "f0a0f2e46bf299b4521dd750a7f289b9789945c5c6e819e51b6b2fc417cf5405"
+      "sha": "1b58238c50b380a35c364bc07b3649ea43465df5359791efbef45281d1d203f7"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2006-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/735",
       "dateDocument": "2005-11-09",
-      "roFundstelle": "AS 2005 735",
+      "roFundstelle": "AS 2005 5305",
       "titelDe": "Verordnung über die Beaufsichtigung von privaten Versicherungsunternehmen (Aufsichtsverordnung, AVO)",
       "titelFr": "Ordonnance sur la surveillance des entreprises d'assurance privées (Ordonnance sur la surveillance, OS)",
       "titelIt": "Ordinanza sulla sorveglianza delle imprese di assicurazione private (Ordinanza sulla sorveglianza, OS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/735/de",
-      "sha": "af4d4ef50da6f47da1c96586cdce96730f7b1dde76e7b3c3f2a6a06d34a6119a"
+      "sha": "726f081f52cbb186715c8a396ee2a871c78c52e7944760427077d14df740e2c0"
     },
     {
       "art": "aenderung",
@@ -137,5 +137,5 @@
       "sha": "0e7973b2fac0a891efc0c4fab37bb2c6cac9273a26c4f25b53e9c59173b98207"
     }
   ],
-  "sha": "a4ef3ab25525606479ce2df146c504ee2c41cc56eb9255c810d7f3118d992a38"
+  "sha": "a327b1930334aaa1f0462ed3e4acf64fc42558951679d15889afe975e90836cd"
 }

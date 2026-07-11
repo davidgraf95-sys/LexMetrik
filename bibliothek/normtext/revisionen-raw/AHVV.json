@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-09-16"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1998/2579_2579_2579"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-09-16"
+        "value": "RO 1998 2579"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-09-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1998 2579"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1998/2579_2579_2579"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-09-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1998 2579"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -116,6 +128,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-12-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1998 3022"
       },
       "titleDe": {
         "type": "literal",
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-12-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1998 3022"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-12-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1998 3022"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -213,37 +237,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-08-25"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1999/419"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-08-25"
+        "value": "RO 1999 2681"
       },
       "titleDe": {
         "type": "literal",
@@ -277,6 +273,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-08-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2681"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/419"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-08-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2681"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -308,6 +344,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-11-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 3044"
       },
       "titleDe": {
         "type": "literal",
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-11-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 3044"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und  Hinterlassenenversicherung (AHVV)"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-11-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 3044"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und  Hinterlassenenversicherung (AHVV)"
@@ -405,37 +453,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-02-15"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV) (nur ital.)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement sur l'assurance vieillesse et survivants (RAVS) (seulement en italien)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/120"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1986-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-02-15"
+        "value": "RO 2000 701"
       },
       "titleDe": {
         "type": "literal",
@@ -469,6 +489,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-02-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 701"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV) (nur ital.)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement sur l'assurance vieillesse et survivants (RAVS) (seulement en italien)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/120"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1986-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-02-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 701"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV) (nur ital.)"
@@ -501,37 +561,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-03-01"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/226"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-03-01"
+        "value": "RO 2000 1441"
       },
       "titleDe": {
         "type": "literal",
@@ -565,6 +597,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-03-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1441"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/226"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-03-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1441"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -597,6 +669,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1765"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -629,6 +705,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1765"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -660,6 +740,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1765"
       },
       "titleDe": {
         "type": "literal",
@@ -693,37 +777,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-09-18"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement sur l'assurance vieillesse et survivants (RAVS)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/423"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-09-18"
+        "value": "RO 2000 2629"
       },
       "titleDe": {
         "type": "literal",
@@ -757,37 +813,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-09-18"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement sur l'assurance vieillesse et survivants (RAVS)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/478"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-10-18"
+        "value": "RO 2000 2629"
       },
       "titleDe": {
         "type": "literal",
@@ -809,7 +837,7 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/478"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/423"
       },
       "dateForce": {
         "type": "typed-literal",
@@ -819,7 +847,11 @@
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-10-18"
+        "value": "2000-09-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2629"
       },
       "titleDe": {
         "type": "literal",
@@ -853,6 +885,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-10-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2824"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement sur l'assurance vieillesse et survivants (RAVS)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/478"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-10-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2824"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement sur l'assurance vieillesse et survivants (RAVS)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/478"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-10-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2824"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -885,6 +993,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-11-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2905"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -917,6 +1029,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-11-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2905"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -948,6 +1064,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-11-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2905"
       },
       "titleDe": {
         "type": "literal",
@@ -981,37 +1101,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-02-27"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS) (seulement en allemand et italien)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2001/100"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-02-27"
+        "value": "RO 2001 506"
       },
       "titleDe": {
         "type": "literal",
@@ -1045,6 +1137,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-02-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 506"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS) (seulement en allemand et italien)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2001/100"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-02-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 506"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -1077,37 +1209,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-10-18"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione per la vecchiaia e i superstiti (OAVS)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/201"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-06-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-10-18"
+        "value": "RO 2002 1351"
       },
       "titleDe": {
         "type": "literal",
@@ -1141,6 +1245,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-10-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1351"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione per la vecchiaia e i superstiti (OAVS)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/201"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-10-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1351"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -1173,37 +1317,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-04-24"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/209"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-06-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-04-24"
+        "value": "RO 2002 1373"
       },
       "titleDe": {
         "type": "literal",
@@ -1237,37 +1353,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-04-24"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/34"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-11-14"
+        "value": "RO 2002 1373"
       },
       "titleDe": {
         "type": "literal",
@@ -1289,17 +1377,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/34"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/209"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-01-01"
+        "value": "2002-06-01"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-11-14"
+        "value": "2002-04-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1373"
       },
       "titleDe": {
         "type": "literal",
@@ -1333,6 +1425,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-11-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 199"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/34"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-11-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 199"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/34"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-11-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 199"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -1364,6 +1532,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-09-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3337"
       },
       "titleDe": {
         "type": "literal",
@@ -1397,6 +1569,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-09-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3337"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -1429,6 +1605,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-09-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3337"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -1461,37 +1641,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-09-11"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/570"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-09-11"
+        "value": "RO 2002 3710"
       },
       "titleDe": {
         "type": "literal",
@@ -1525,37 +1677,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-09-11"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/523"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-09-10"
+        "value": "RO 2002 3710"
       },
       "titleDe": {
         "type": "literal",
@@ -1577,17 +1701,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/523"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/570"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-01-01"
+        "value": "2003-01-01"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-09-10"
+        "value": "2002-09-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3710"
       },
       "titleDe": {
         "type": "literal",
@@ -1621,6 +1749,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-09-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3683"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/523"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-09-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3683"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/523"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-09-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3683"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -1653,6 +1857,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-05-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3835"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -1685,6 +1893,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-05-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3835"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -1716,6 +1928,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-05-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3835"
       },
       "titleDe": {
         "type": "literal",
@@ -1749,37 +1965,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-02-12"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/86"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-02-12"
+        "value": "RO 2003 382"
       },
       "titleDe": {
         "type": "literal",
@@ -1813,6 +2001,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-02-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 382"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/86"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-02-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 382"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -1845,6 +2073,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-09-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 4361"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -1877,6 +2109,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-09-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 4361"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -1908,6 +2144,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-09-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 4361"
       },
       "titleDe": {
         "type": "literal",
@@ -1941,37 +2181,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-01-28"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement sur l'assurance vieillesse et survivants (RAVS)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/73"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-03-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-01-28"
+        "value": "RO 2004 741"
       },
       "titleDe": {
         "type": "literal",
@@ -2005,6 +2217,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-01-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 741"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement sur l'assurance vieillesse et survivants (RAVS)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/73"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-03-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-01-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 741"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -2036,6 +2288,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-11-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 4953"
       },
       "titleDe": {
         "type": "literal",
@@ -2069,6 +2325,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-11-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 4953"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV) (Betrifft nur den französischen Text)"
@@ -2101,6 +2361,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-11-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 4953"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV) (Betrifft nur den französischen Text)"
@@ -2133,37 +2397,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-11-23"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2005/767"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-11-23"
+        "value": "RO 2005 5631"
       },
       "titleDe": {
         "type": "literal",
@@ -2197,6 +2433,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-11-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5631"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/767"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-11-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5631"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -2229,6 +2505,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-09-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4141"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -2261,6 +2541,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-09-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4141"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -2292,6 +2576,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-09-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4141"
       },
       "titleDe": {
         "type": "literal",
@@ -2325,37 +2613,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-17"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/721"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-10-17"
+        "value": "RO 2007 5125"
       },
       "titleDe": {
         "type": "literal",
@@ -2389,6 +2649,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5125"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/721"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-10-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5125"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -2421,6 +2721,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-11-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5271"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -2453,6 +2757,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-11-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5271"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -2484,6 +2792,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-11-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5271"
       },
       "titleDe": {
         "type": "literal",
@@ -2517,37 +2829,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-09-26"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2008/658"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-09-26"
+        "value": "RO 2008 4711"
       },
       "titleDe": {
         "type": "literal",
@@ -2581,6 +2865,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-09-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 4711"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/658"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-09-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 4711"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -2612,6 +2936,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-12-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 6483"
       },
       "titleDe": {
         "type": "literal",
@@ -2645,6 +2973,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-12-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 6483"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -2677,6 +3009,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-12-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 6483"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -2709,37 +3045,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-06-24"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement sur l'assurance vieillesse et survivants (RAVS)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/433"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-06-24"
+        "value": "RO 2009 3523"
       },
       "titleDe": {
         "type": "literal",
@@ -2773,6 +3081,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-06-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 3523"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement sur l'assurance vieillesse et survivants (RAVS)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/433"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-06-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 3523"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -2805,6 +3153,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-09-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5183"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -2837,6 +3189,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-09-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5183"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -2868,6 +3224,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-09-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5183"
       },
       "titleDe": {
         "type": "literal",
@@ -2901,37 +3261,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-12-04"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Änderung des Zeitpunkts des Inkrafttretens der Neuordnung der Pflegefinanzierung"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la modification de la date d'entrée en vigueur du nouveau régime de financement des soins"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla modifica della data dell'entrata in vigore del nuovo ordinamento del finanziamento delle cure"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/836"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-12-04"
+        "value": "RO 2009 6847"
       },
       "titleDe": {
         "type": "literal",
@@ -2965,6 +3297,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-12-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 6847"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Änderung des Zeitpunkts des Inkrafttretens der Neuordnung der Pflegefinanzierung"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la modification de la date d'entrée en vigueur du nouveau régime de financement des soins"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla modifica della data dell'entrata in vigore del nuovo ordinamento del finanziamento delle cure"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/836"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-12-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 6847"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Änderung des Zeitpunkts des Inkrafttretens der Neuordnung der Pflegefinanzierung"
@@ -2997,37 +3369,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-09-24"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/655"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-09-24"
+        "value": "RO 2010 4573"
       },
       "titleDe": {
         "type": "literal",
@@ -3061,6 +3405,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-09-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4573"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/655"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-09-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4573"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -3093,6 +3477,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-10-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4759"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -3125,6 +3513,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-10-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4759"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -3156,6 +3548,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-10-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4759"
       },
       "titleDe": {
         "type": "literal",
@@ -3189,37 +3585,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-10-30"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/674"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-10-30"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-10-30"
+        "value": "RO 2012 5797"
       },
       "titleDe": {
         "type": "literal",
@@ -3253,6 +3621,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-10-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 5797"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/674"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-10-30"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-10-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 5797"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -3285,6 +3693,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-09-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6329"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -3317,6 +3729,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-09-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6329"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -3348,6 +3764,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-09-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6329"
       },
       "titleDe": {
         "type": "literal",
@@ -3381,37 +3801,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-11-20"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2013/798"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-11-20"
+        "value": "RO 2013 4519"
       },
       "titleDe": {
         "type": "literal",
@@ -3445,6 +3837,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-11-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4519"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/798"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-11-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4519"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -3477,6 +3909,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-05-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1361"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -3509,6 +3945,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-05-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1361"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -3540,6 +3980,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-05-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1361"
       },
       "titleDe": {
         "type": "literal",
@@ -3573,37 +4017,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-10-15"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2014/575"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-10-15"
+        "value": "RO 2014 3331"
       },
       "titleDe": {
         "type": "literal",
@@ -3637,6 +4053,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-10-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 3331"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/575"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-10-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 3331"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -3669,6 +4125,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-04-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1317"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -3701,6 +4161,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-04-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1317"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -3732,6 +4196,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-04-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1317"
       },
       "titleDe": {
         "type": "literal",
@@ -3765,37 +4233,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-10-26"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2016/673"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-10-26"
+        "value": "RO 2016 4057"
       },
       "titleDe": {
         "type": "literal",
@@ -3829,6 +4269,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-10-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4057"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/673"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-10-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4057"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -3861,6 +4341,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-09-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 4813"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV) (Betrifft nur den italienischen Text)"
@@ -3893,6 +4377,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-09-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 4813"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV) (Betrifft nur den italienischen Text)"
@@ -3924,6 +4412,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-09-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 4813"
       },
       "titleDe": {
         "type": "literal",
@@ -3957,37 +4449,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-09-21"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2018/573"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2019-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-09-21"
+        "value": "RO 2018 3525"
       },
       "titleDe": {
         "type": "literal",
@@ -4021,37 +4485,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-09-21"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.101"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2018/789"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2019-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-11-30"
+        "value": "RO 2018 3525"
       },
       "titleDe": {
         "type": "literal",
@@ -4073,7 +4509,7 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2018/789"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/573"
       },
       "dateForce": {
         "type": "typed-literal",
@@ -4083,7 +4519,11 @@
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-11-30"
+        "value": "2018-09-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3525"
       },
       "titleDe": {
         "type": "literal",
@@ -4117,6 +4557,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-11-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 5077"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/789"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-11-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 5077"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement sur l'assurance-vieillesse et survivants (RAVS)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.101"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/789"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-11-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 5077"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -4149,6 +4665,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-11-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 3751"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -4181,6 +4701,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-11-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 3751"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -4212,6 +4736,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-11-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 3751"
       },
       "titleDe": {
         "type": "literal",
@@ -4245,6 +4773,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-03-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 875"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Massnahmen im Zusammenhang mit dem Coronavirus (COVID-19) zur Kurzarbeitsentschädigung und zur Abrechnung der Sozialversicherungsbeiträge"
@@ -4277,6 +4809,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-03-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 875"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Massnahmen im Zusammenhang mit dem Coronavirus (COVID-19) zur Kurzarbeitsentschädigung und zur Abrechnung der Sozialversicherungsbeiträge"
@@ -4308,6 +4844,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-03-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 875"
       },
       "titleDe": {
         "type": "literal",
@@ -4340,6 +4880,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-04-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1407"
       },
       "titleDe": {
         "type": "literal",
@@ -4373,6 +4917,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-04-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1407"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -4404,6 +4952,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-04-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1407"
       },
       "titleDe": {
         "type": "literal",
@@ -4436,6 +4988,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-06-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2185"
       },
       "titleDe": {
         "type": "literal",
@@ -4469,6 +5025,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-06-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2185"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV) (Betrifft nur den italienischen Text)"
@@ -4500,6 +5060,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-06-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2185"
       },
       "titleDe": {
         "type": "literal",
@@ -4532,6 +5096,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-10-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 4605"
       },
       "titleDe": {
         "type": "literal",
@@ -4565,6 +5133,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-10-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 4605"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -4596,6 +5168,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-10-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 4605"
       },
       "titleDe": {
         "type": "literal",
@@ -4628,6 +5204,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-11-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 5437"
       },
       "titleDe": {
         "type": "literal",
@@ -4661,6 +5241,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-11-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 5437"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -4692,6 +5276,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-11-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 5437"
       },
       "titleDe": {
         "type": "literal",
@@ -5077,6 +5665,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1947-10-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 63 1183"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 31. Oktober 1947 über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -5109,6 +5701,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1947-10-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 63 1183"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 31. Oktober 1947 über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -5141,6 +5737,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1947-10-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 63 1183"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 31. Oktober 1947 über die Alters- und Hinterlassenenversicherung (AHVV)"
@@ -5172,6 +5772,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1947-10-31"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 63 1183"
       },
       "titleDe": {
         "type": "literal",

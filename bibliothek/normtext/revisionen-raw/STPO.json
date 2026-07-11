@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-12-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Bundesstrafrechtspflege"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur la procédure pénale"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulla procedura penale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "312.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2001/492"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-12-22"
+        "value": "RO 2001 3308"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-12-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 3308"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Bundesstrafrechtspflege"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur la procédure pénale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla procedura penale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "312.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2001/492"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-12-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 3308"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Bundesstrafrechtspflege"
@@ -116,6 +128,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-12-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 3315"
       },
       "titleDe": {
         "type": "literal",
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-12-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 3315"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Mitteilung über eine Inkraftsetzung"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-12-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 3315"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Mitteilung über eine Inkraftsetzung"
@@ -213,37 +237,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-23"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Bundesstrafrechtspflege"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur la procédure pénale"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulla procedura penale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "312.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/811"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-03-23"
+        "value": "RO 2007 6087"
       },
       "titleDe": {
         "type": "literal",
@@ -277,6 +273,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 6087"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Bundesstrafrechtspflege"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur la procédure pénale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla procedura penale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "312.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/811"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-03-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 6087"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Bundesstrafrechtspflege"
@@ -309,69 +345,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-05"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Schweizerische Strafprozessordnung (Strafprozessordnung, StPO)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code de procédure pénale suisse (Code de procédure pénale, CPP)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice di diritto processuale penale svizzero (Codice di procedura penale, CPP)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "312.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/267"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-10-05"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Schweizerische Strafprozessordnung (Strafprozessordnung, StPO)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code de procédure pénale suisse (Code de procédure pénale, CPP)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice di diritto processuale penale svizzero (Codice di procedura penale, CPP)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "312.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/267"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-10-05"
+        "value": "RO 2010 1881"
       },
       "titleDe": {
         "type": "literal",
@@ -405,6 +381,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1881"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Schweizerische Strafprozessordnung (Strafprozessordnung, StPO)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code de procédure pénale suisse (Code de procédure pénale, CPP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice di diritto processuale penale svizzero (Codice di procedura penale, CPP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "312.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/267"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-10-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1881"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Schweizerische Strafprozessordnung (Strafprozessordnung, StPO)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code de procédure pénale suisse (Code de procédure pénale, CPP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice di diritto processuale penale svizzero (Codice di procedura penale, CPP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "312.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/267"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-10-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1881"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerische Strafprozessordnung (Strafprozessordnung, StPO)"
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-09-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4487"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerische Strafprozessordnung (Strafprozessordnung, StPO)"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-09-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4487"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerische Strafprozessordnung (Strafprozessordnung, StPO)"
@@ -500,6 +560,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-09-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4487"
       },
       "titleDe": {
         "type": "literal",
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-02-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 807"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerische Strafprozessordnung (Strafprozessordnung, StPO) (Betrifft nur den italienischen Text)"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-02-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 807"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerische Strafprozessordnung (Strafprozessordnung, StPO) (Betrifft nur den italienischen Text)"
@@ -597,6 +669,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-02-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 807"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerische Strafprozessordnung (Strafprozessordnung, StPO) (Betrifft nur den italienischen Text)"
@@ -628,6 +704,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1051"
       },
       "titleDe": {
         "type": "literal",
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1051"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die verdeckte Ermittlung und Fahndung (Änderung der Strafprozessordnung und des Militärstrafprozesses)"
@@ -693,6 +777,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1051"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die verdeckte Ermittlung und Fahndung (Änderung der Strafprozessordnung und des Militärstrafprozesses)"
@@ -725,6 +813,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-01-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 243"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerische Strafprozessordnung (Strafprozessordnung, StPO) (Betrifft nur den italienischen Text)"
@@ -757,6 +849,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-01-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 243"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerische Strafprozessordnung (Strafprozessordnung, StPO) (Betrifft nur den italienischen Text)"
@@ -788,6 +884,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-01-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 243"
       },
       "titleDe": {
         "type": "literal",
@@ -820,6 +920,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-11-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 4071"
       },
       "titleDe": {
         "type": "literal",
@@ -853,6 +957,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-11-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 4071"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerische Strafprozessordnung (Strafprozessordnung, StPO) (Betrifft nur den französischen Text)"
@@ -884,6 +992,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-11-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 4071"
       },
       "titleDe": {
         "type": "literal",
@@ -916,6 +1028,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-09-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 4771"
       },
       "titleDe": {
         "type": "literal",
@@ -949,6 +1065,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-09-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 4771"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung und die Umsetzung des Übereinkommens des Europarats über die Fälschung von Arzneimitteln und Medizinprodukten und über ähnliche die öffentliche Gesundheit gefährdende Straftaten (Medicrime-Konvention)"
@@ -980,6 +1100,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-09-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 4771"
       },
       "titleDe": {
         "type": "literal",
@@ -1173,6 +1297,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1934-06-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 50 709"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 15. Juni 1934 über die Bundesstrafrechtspflege "
@@ -1205,6 +1333,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1934-06-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 50 709"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 15. Juni 1934 über die Bundesstrafrechtspflege "
@@ -1237,6 +1369,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1934-06-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 50 709"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 15. Juni 1934 über die Bundesstrafrechtspflege "
@@ -1268,6 +1404,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1934-06-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 50 709"
       },
       "titleDe": {
         "type": "literal",

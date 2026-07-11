@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-12-11"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Geschäftsreglement für das Bundesverwaltungsgericht (VGR)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement du Tribunal administratif fédéral (RTAF)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Regolamento del Tribunale amministrativo federale (RTAF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "173.320.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/799"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-12-11"
+        "value": "RO 2006 5287"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-12-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 5287"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Geschäftsreglement für das Bundesverwaltungsgericht (VGR)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-12-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 5287"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Geschäftsreglement für das Bundesverwaltungsgericht (VGR)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement du Tribunal administratif fédéral (RTAF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Regolamento del Tribunale amministrativo federale (RTAF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "173.320.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/799"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-12-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 5287"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Geschäftsreglement für das Bundesverwaltungsgericht (VGR)"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-04-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2189"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Geschäftsreglement für das Bundesverwaltungsgericht (VGR)"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-04-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2189"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Geschäftsreglement für das Bundesverwaltungsgericht (VGR)"
@@ -213,6 +237,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-04-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2189"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Geschäftsreglement für das Bundesverwaltungsgericht (VGR)"
@@ -244,6 +272,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-04-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2189"
       },
       "titleDe": {
         "type": "literal",
@@ -277,37 +309,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-03-18"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Geschäftsreglement für das Bundesverwaltungsgericht (VGR)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement du Tribunal administratif fédéral (RTAF)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Regolamento del Tribunale amministrativo federale (RTAF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "173.320.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2014/145"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-03-18"
+        "value": "RO 2014 695"
       },
       "titleDe": {
         "type": "literal",
@@ -341,6 +345,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-03-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 695"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Geschäftsreglement für das Bundesverwaltungsgericht (VGR)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement du Tribunal administratif fédéral (RTAF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Regolamento del Tribunale amministrativo federale (RTAF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "173.320.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/145"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-03-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 695"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Geschäftsreglement für das Bundesverwaltungsgericht (VGR)"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-11-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1373"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Geschäftsreglement für das Bundesverwaltungsgericht (VGR)"
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-11-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1373"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Geschäftsreglement für das Bundesverwaltungsgericht (VGR)"
@@ -436,6 +488,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-11-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1373"
       },
       "titleDe": {
         "type": "literal",
@@ -469,37 +525,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-21"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Geschäftsreglement für das Bundesverwaltungsgericht (VGR)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement du Tribunal administratif fédéral (RTAF)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Regolamento del Tribunale amministrativo federale (RTAF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "173.320.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2017/373"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-03-21"
+        "value": "RO 2017 3401"
       },
       "titleDe": {
         "type": "literal",
@@ -533,37 +561,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-21"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Geschäftsreglement für das Bundesverwaltungsgericht (VGR)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement du Tribunal administratif fédéral (RTAF)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Regolamento del Tribunale amministrativo federale (RTAF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "173.320.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2017/450"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-09-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-03-21"
+        "value": "RO 2017 3401"
       },
       "titleDe": {
         "type": "literal",
@@ -585,17 +585,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2017/450"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2017/373"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-09-01"
+        "value": "2017-07-01"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 3401"
       },
       "titleDe": {
         "type": "literal",
@@ -629,6 +633,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 3805"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Geschäftsreglement für das Bundesverwaltungsgericht (VGR)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement du Tribunal administratif fédéral (RTAF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Regolamento del Tribunale amministrativo federale (RTAF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "173.320.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2017/450"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-09-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-03-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 3805"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Geschäftsreglement für das Bundesverwaltungsgericht (VGR)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement du Tribunal administratif fédéral (RTAF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Regolamento del Tribunale amministrativo federale (RTAF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "173.320.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2017/450"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-09-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-03-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 3805"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Geschäftsreglement für das Bundesverwaltungsgericht (VGR)"
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-09-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5767"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Geschäftsreglement für das Bundesverwaltungsgericht (VGR)"
@@ -693,6 +777,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-09-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5767"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Geschäftsreglement für das Bundesverwaltungsgericht (VGR)"
@@ -724,6 +812,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-09-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5767"
       },
       "titleDe": {
         "type": "literal",
@@ -757,6 +849,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-12-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Geschäftsreglement für das Bundesverwaltungsgericht (VGR)"
@@ -789,6 +885,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-12-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Geschäftsreglement für das Bundesverwaltungsgericht (VGR)"
@@ -821,69 +921,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-12-12"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Geschäftsreglement für das Bundesverwaltungsgericht (VGR)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement du Tribunal administratif fédéral (RTAF)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Regolamento del Tribunale amministrativo federale (RTAF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "173.320.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2018/692"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2019-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-11-06"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Geschäftsreglement für das Bundesverwaltungsgericht (VGR)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement du Tribunal administratif fédéral (RTAF)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Regolamento del Tribunale amministrativo federale (RTAF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "173.320.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2018/692"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2019-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-11-06"
+        "value": "RO 2018 3"
       },
       "titleDe": {
         "type": "literal",
@@ -917,6 +957,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-11-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 4305"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Geschäftsreglement für das Bundesverwaltungsgericht (VGR)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement du Tribunal administratif fédéral (RTAF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Regolamento del Tribunale amministrativo federale (RTAF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "173.320.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/692"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-11-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 4305"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Geschäftsreglement für das Bundesverwaltungsgericht (VGR)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement du Tribunal administratif fédéral (RTAF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Regolamento del Tribunale amministrativo federale (RTAF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "173.320.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/692"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-11-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 4305"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Geschäftsreglement für das Bundesverwaltungsgericht (VGR)"
@@ -949,6 +1065,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-06-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2203"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Geschäftsreglement für das Bundesverwaltungsgericht (VGR)"
@@ -981,6 +1101,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-06-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2203"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Geschäftsreglement für das Bundesverwaltungsgericht (VGR)"
@@ -1012,6 +1136,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-06-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2203"
       },
       "titleDe": {
         "type": "literal",
@@ -1045,6 +1173,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-06-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2837"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Geschäftsreglement für das Bundesverwaltungsgericht (VGR)"
@@ -1077,6 +1209,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-06-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2837"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Geschäftsreglement für das Bundesverwaltungsgericht (VGR)"
@@ -1108,6 +1244,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-06-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2837"
       },
       "titleDe": {
         "type": "literal",

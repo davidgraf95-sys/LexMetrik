@@ -21,69 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1991-10-04"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom 4. Oktober 1991 über die Hilfe an Opfer von Straftaten (Opferhilfegesetz, OHG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 4 octobre 1991 sur l'aide aux victimes d'infractions (LAVI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 4 ottobre 1991 concernente l'aiuto alle vittime di reati (LAV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "312.5"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1992/2465_2465_2465"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1993-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1991-10-04"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Bundesgesetz vom 4. Oktober 1991 über die Hilfe an Opfer von Straftaten (Opferhilfegesetz, OHG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 4 octobre 1991 sur l'aide aux victimes d'infractions (LAVI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 4 ottobre 1991 concernente l'aiuto alle vittime di reati (LAV)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "312.5"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1992/2465_2465_2465"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1993-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1991-10-04"
+        "value": "RO 1992 2465"
       },
       "titleDe": {
         "type": "literal",
@@ -117,6 +57,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1991-10-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1992 2465"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 4. Oktober 1991 über die Hilfe an Opfer von Straftaten (Opferhilfegesetz, OHG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 4 octobre 1991 sur l'aide aux victimes d'infractions (LAVI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 4 ottobre 1991 concernente l'aiuto alle vittime di reati (LAV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "312.5"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1992/2465_2465_2465"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1993-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1991-10-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1992 2465"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 4. Oktober 1991 über die Hilfe an Opfer von Straftaten (Opferhilfegesetz, OHG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 4 octobre 1991 sur l'aide aux victimes d'infractions (LAVI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 4 ottobre 1991 concernente l'aiuto alle vittime di reati (LAV)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "312.5"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1992/2465_2465_2465"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1993-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1991-10-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1992 2465"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 4. Oktober 1991 über die Hilfe an Opfer von Straftaten (Opferhilfegesetz, OHG)"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-03-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 2997"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Hilfe an Opfer von Straftaten (Opferhilfegesetz) (Verbesserung des Schutzes von Kindern als Opfer)"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-03-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 2997"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Hilfe an Opfer von Straftaten (Opferhilfegesetz) (Verbesserung des Schutzes von Kindern als Opfer)"
@@ -213,6 +237,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-03-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 2997"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Hilfe an Opfer von Straftaten (Opferhilfegesetz) (Verbesserung des Schutzes von Kindern als Opfer)"
@@ -245,6 +273,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 1607"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Hilfe an Opfer von Straftaten (Opferhilfegesetz, OHG)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 1607"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Hilfe an Opfer von Straftaten (Opferhilfegesetz, OHG)"
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 1607"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Hilfe an Opfer von Straftaten (Opferhilfegesetz, OHG)"
@@ -340,6 +380,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 1607"
       },
       "titleDe": {
         "type": "literal",
@@ -372,6 +416,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-03-31"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 1263"
       },
       "titleDe": {
         "type": "literal",
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-03-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 1263"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Hilfe an Opfer von Straftaten (Opferhilfegesetz, OHG) (Betrifft nur den italienischen Text)"
@@ -436,6 +488,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-03-31"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 1263"
       },
       "titleDe": {
         "type": "literal",

@@ -1,7 +1,7 @@
 {
   "erlassKey": "HREGV",
   "sr": "221.411",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -88,12 +88,12 @@
       "dateEntryInForce": "2020-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/179",
       "dateDocument": "2020-03-06",
-      "roFundstelle": "AS 2020 179",
+      "roFundstelle": "AS 2020 971",
       "titelDe": "Handelsregisterverordnung (HRegV)",
       "titelFr": "Ordonnance sur le registre du commerce (ORC)",
       "titelIt": "Ordinanza sul registro di commercio (ORC)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/179/de",
-      "sha": "4810c619d710a21944d8fa65e64d8d58b86e418bd6b12625bba0681916b29736"
+      "sha": "ceb771b98379df6cdcda3d8bef04bd3f40a1748908cdc6c304283c0177beb32e"
     },
     {
       "art": "sammelerlass-marker",
@@ -118,12 +118,12 @@
       "dateEntryInForce": "2016-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/304",
       "dateDocument": "2016-05-18",
-      "roFundstelle": "AS 2016 304",
+      "roFundstelle": "AS 2016 1663",
       "titelDe": "Handelsregisterverordnung (HRegV)",
       "titelFr": "Ordonnance sur le registre du commerce (ORC)",
       "titelIt": "Ordinanza sul registro di commercio (ORC)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/304/de",
-      "sha": "211dbb9e0fe2a7befed256de61324e4175efc1ac4d560c238eff7ad3c893586b"
+      "sha": "4ebc214444ab75fd04a7cabbaeaae6071c20859da3bd6d647afe4cca081fe280"
     },
     {
       "art": "sammelerlass-marker",
@@ -154,36 +154,36 @@
       "dateEntryInForce": "2008-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/686",
       "dateDocument": "2007-10-17",
-      "roFundstelle": "AS 2007 686",
+      "roFundstelle": "AS 2007 4851",
       "titelDe": "Handelsregisterverordnung (HRegV)",
       "titelFr": "Ordonnance sur le registre du commerce (ORC)",
       "titelIt": "Ordinanza sul registro di commercio (ORC)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/686/de",
-      "sha": "517c722335cfb83b39d68d9994df0cae7b3d62a60cb43c2f0cf4e7cf5b70f47e"
+      "sha": "ce3a15c0b14da9b136429f33307e3a2352973294bf43417fc4833ad3c7f865fb"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2006-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/593",
       "dateDocument": "2005-08-24",
-      "roFundstelle": "AS 2005 593",
+      "roFundstelle": "AS 2005 4557",
       "titelDe": "Handelsregisterverordnung (HRegV)",
       "titelFr": "Ordonnance sur le registre du commerce (ORC)",
       "titelIt": "Ordinanza sul registro di commercio (ORC)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/593/de",
-      "sha": "9c6bf757a5cecfb5b1efb4268924691c41f0c330ac6ae3839d56479769713f8e"
+      "sha": "430241ae3227858f46e37ca3f83fb71bdcbe4ccdd3766040d97d836deb643679"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2004-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/321",
       "dateDocument": "2004-04-21",
-      "roFundstelle": "AS 2004 321",
+      "roFundstelle": "AS 2004 2669",
       "titelDe": "Handelsregisterverordnung (HRegV)",
       "titelFr": "Ordonnance sur le registre du commerce (ORC)",
       "titelIt": "Ordinanza sul registro di commercio (ORC)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/321/de",
-      "sha": "ad923e5a28dcdb77b8d2a6bfc1b8b109930b25d1da43ae6fdfa79ae74df03791"
+      "sha": "b96d6c74ac7518d7be72535b9e91c768110861d91e79a0ffd2f0f0d45ba10284"
     },
     {
       "art": "aenderung",
@@ -198,5 +198,5 @@
       "sha": "9ea0fbf0778ba8da61f19f4377c9dafdb668204357c10322dc29989671692c07"
     }
   ],
-  "sha": "62659fb55ea2fe4b11c7d3db51fc7c03092b23e8e960e742e8f264a767b08cf0"
+  "sha": "9263be7174cee3c21880b8d11531a2cf257ac88d581d969f5a80cd2faf6941cb"
 }

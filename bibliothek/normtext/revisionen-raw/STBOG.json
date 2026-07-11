@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-06-25"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Inkraftsetzung des Strafgerichtsgesetzes und die teilweise Inkraftsetzung des Bundesgesetzes über den Sitz des Bundesstrafgerichts und des Bundesverwaltungsgerichts"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la mise en vigueur de la loi sur le Tribunal pénal fédéral et la mise en vigueur partielle de la loi sur le siège du Tribunal pénal fédéral et celui du Tribunal administratif fédéral"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente la messa in vigore della legge sul Tribunale penale federale e la messa in vigore parziale della legge federale sulle sedi del Tribunale penale federale e del Tribunale amministrativo federale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "173.71"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/313"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-08-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-06-25"
+        "value": "RO 2003 2131"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-06-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 2131"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Inkraftsetzung des Strafgerichtsgesetzes und die teilweise Inkraftsetzung des Bundesgesetzes über den Sitz des Bundesstrafgerichts und des Bundesverwaltungsgerichts"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la mise en vigueur de la loi sur le Tribunal pénal fédéral et la mise en vigueur partielle de la loi sur le siège du Tribunal pénal fédéral et celui du Tribunal administratif fédéral"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente la messa in vigore della legge sul Tribunale penale federale e la messa in vigore parziale della legge federale sulle sedi del Tribunale penale federale e del Tribunale amministrativo federale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "173.71"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/313"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-06-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 2131"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Inkraftsetzung des Strafgerichtsgesetzes und die teilweise Inkraftsetzung des Bundesgesetzes über den Sitz des Bundesstrafgerichts und des Bundesverwaltungsgerichts"
@@ -117,69 +129,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-10-04"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über das Bundesstrafgericht (Strafgerichtsgesetz, SGG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur le Tribunal pénal fédéral (LTPF)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge sul Tribunale penale federale (LTPF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "173.71"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/314"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-08-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-10-04"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Bundesgesetz über das Bundesstrafgericht (Strafgerichtsgesetz, SGG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur le Tribunal pénal fédéral (LTPF)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge sul Tribunale penale federale (LTPF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "173.71"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/314"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-08-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-10-04"
+        "value": "RO 2003 2133"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +165,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-10-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 2133"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über das Bundesstrafgericht (Strafgerichtsgesetz, SGG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur le Tribunal pénal fédéral (LTPF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge sul Tribunale penale federale (LTPF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "173.71"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/314"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-10-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 2133"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über das Bundesstrafgericht (Strafgerichtsgesetz, SGG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur le Tribunal pénal fédéral (LTPF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge sul Tribunale penale federale (LTPF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "173.71"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/314"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-10-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 2133"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über das Bundesstrafgericht (Strafgerichtsgesetz, SGG)"
@@ -245,69 +273,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-03-19"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Organisation der Strafbehörden des Bundes (Strafbehördenorganisationsgesetz, StBOG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur l'organisation des autorités pénales de la Confédération (Loi sur l'organisation des autorités pénales, LOAP)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sull'organizzazione delle autorità penali della Confederazione (Legge sull'organizzazione delle autorità penali, LOAP)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "173.71"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/444"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-03-19"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Bundesgesetz über die Organisation der Strafbehörden des Bundes (Strafbehördenorganisationsgesetz, StBOG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur l'organisation des autorités pénales de la Confédération (Loi sur l'organisation des autorités pénales, LOAP)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sull'organizzazione delle autorità penali della Confederazione (Legge sull'organizzazione delle autorità penali, LOAP)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "173.71"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/444"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-03-19"
+        "value": "RO 2010 3267"
       },
       "titleDe": {
         "type": "literal",
@@ -341,6 +309,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-03-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 3267"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Organisation der Strafbehörden des Bundes (Strafbehördenorganisationsgesetz, StBOG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'organisation des autorités pénales de la Confédération (Loi sur l'organisation des autorités pénales, LOAP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'organizzazione delle autorità penali della Confederazione (Legge sull'organizzazione delle autorità penali, LOAP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "173.71"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/444"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-03-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 3267"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Organisation der Strafbehörden des Bundes (Strafbehördenorganisationsgesetz, StBOG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'organisation des autorités pénales de la Confédération (Loi sur l'organisation des autorités pénales, LOAP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'organizzazione delle autorità penali della Confederazione (Legge sull'organizzazione delle autorità penali, LOAP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "173.71"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/444"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-03-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 3267"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Organisation der Strafbehörden des Bundes (Strafbehördenorganisationsgesetz, StBOG)"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-10-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 349"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Organisation der Strafbehörden des Bundes (Strafbehördenorganisationsgesetz, StBOG)"
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-10-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 349"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Organisation der Strafbehörden des Bundes (Strafbehördenorganisationsgesetz, StBOG)"
@@ -436,6 +488,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-10-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 349"
       },
       "titleDe": {
         "type": "literal",
@@ -468,6 +524,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5769"
       },
       "titleDe": {
         "type": "literal",
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5769"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Organisation der Strafbehörden des Bundes (Strafbehördenorganisationsgesetz, StBOG) (Schaffung einer Berufungskammer am Bundesstrafgericht)"
@@ -532,6 +596,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5769"
       },
       "titleDe": {
         "type": "literal",

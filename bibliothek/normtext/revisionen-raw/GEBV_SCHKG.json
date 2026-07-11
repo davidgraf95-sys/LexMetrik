@@ -21,69 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1957-09-06"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Gebührentarif vom 6. September 1957 zum Bundesgesetz über Schuldbetreibung und Konkurs"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Tarif des frais du 6 septembre 1957 applicable à la loi fédéral sur la poursuite pour dettes et la faillite"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Tariffa del 6 settembre 1957 applicabile alla legge federale sulla esecuzione e sul fallimento"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "281.35"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1957/663_669_689"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1958-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1957-09-06"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Gebührentarif vom 6. September 1957 zum Bundesgesetz über Schuldbetreibung und Konkurs"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Tarif des frais du 6 septembre 1957 applicable à la loi fédéral sur la poursuite pour dettes et la faillite"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Tariffa del 6 settembre 1957 applicabile alla legge federale sulla esecuzione e sul fallimento"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "281.35"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1957/663_669_689"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1958-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1957-09-06"
+        "value": "RO 1957 669"
       },
       "titleDe": {
         "type": "literal",
@@ -117,6 +57,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1957-09-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1957 669"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Gebührentarif vom 6. September 1957 zum Bundesgesetz über Schuldbetreibung und Konkurs"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Tarif des frais du 6 septembre 1957 applicable à la loi fédéral sur la poursuite pour dettes et la faillite"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Tariffa del 6 settembre 1957 applicabile alla legge federale sulla esecuzione e sul fallimento"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "281.35"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1957/663_669_689"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1958-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1957-09-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1957 669"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Gebührentarif vom 6. September 1957 zum Bundesgesetz über Schuldbetreibung und Konkurs"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Tarif des frais du 6 septembre 1957 applicable à la loi fédéral sur la poursuite pour dettes et la faillite"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Tariffa del 6 settembre 1957 applicabile alla legge federale sulla esecuzione e sul fallimento"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "281.35"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1957/663_669_689"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1958-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1957-09-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1957 669"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Gebührentarif vom 6. September 1957 zum Bundesgesetz über Schuldbetreibung und Konkurs"
@@ -149,69 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1971-07-07"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Gebührenordnung vom 7. Juli 1971 zum Bundesgesetz über Schuldbetreibung und Konkurs (GebV SchKG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 7 juillet 1971 sur les frais exigibles en vertu de la loi fédérale sur la poursuite pour dettes et la faillite (OFLP)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 7 luglio 1971 sulle tasse previste dalla legge federale sulla esecuzione e sul fallimento (OTLEF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "281.35"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1971/1080_1080_1081"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1971-08-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1971-07-07"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Gebührenordnung vom 7. Juli 1971 zum Bundesgesetz über Schuldbetreibung und Konkurs (GebV SchKG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 7 juillet 1971 sur les frais exigibles en vertu de la loi fédérale sur la poursuite pour dettes et la faillite (OFLP)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 7 luglio 1971 sulle tasse previste dalla legge federale sulla esecuzione e sul fallimento (OTLEF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "281.35"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1971/1080_1080_1081"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1971-08-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1971-07-07"
+        "value": "RO 1971 1080"
       },
       "titleDe": {
         "type": "literal",
@@ -245,6 +201,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1971-07-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1971 1080"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Gebührenordnung vom 7. Juli 1971 zum Bundesgesetz über Schuldbetreibung und Konkurs (GebV SchKG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 7 juillet 1971 sur les frais exigibles en vertu de la loi fédérale sur la poursuite pour dettes et la faillite (OFLP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 7 luglio 1971 sulle tasse previste dalla legge federale sulla esecuzione e sul fallimento (OTLEF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "281.35"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1971/1080_1080_1081"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1971-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1971-07-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1971 1080"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Gebührenordnung vom 7. Juli 1971 zum Bundesgesetz über Schuldbetreibung und Konkurs (GebV SchKG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 7 juillet 1971 sur les frais exigibles en vertu de la loi fédérale sur la poursuite pour dettes et la faillite (OFLP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 7 luglio 1971 sulle tasse previste dalla legge federale sulla esecuzione e sul fallimento (OTLEF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "281.35"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1971/1080_1080_1081"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1971-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1971-07-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1971 1080"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Gebührenordnung vom 7. Juli 1971 zum Bundesgesetz über Schuldbetreibung und Konkurs (GebV SchKG)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1996-09-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1996 2937"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Gebührenverordnung vom 23. September 1996 zum Bundesgesetz über Schuldbetreibung und Konkurs (GebV SchKG)"
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1996-09-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1996 2937"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Gebührenverordnung vom 23. September 1996 zum Bundesgesetz über Schuldbetreibung und Konkurs (GebV SchKG)"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1996-09-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1996 2937"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Gebührenverordnung vom 23. September 1996 zum Bundesgesetz über Schuldbetreibung und Konkurs (GebV SchKG)"
@@ -372,6 +416,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1996-09-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1996 2937"
       },
       "titleDe": {
         "type": "literal",
@@ -404,6 +452,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-01-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 275"
       },
       "titleDe": {
         "type": "literal",
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-01-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 275"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Gebührenverordnung zum Bundesgesetz über Schuldbetreibung und Konkurs"
@@ -468,6 +524,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-01-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 275"
       },
       "titleDe": {
         "type": "literal",
@@ -500,6 +560,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-11-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 4585"
       },
       "titleDe": {
         "type": "literal",
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-11-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 4585"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Gebührenverordnung zum Bundesgesetz über Schuldbetreibung und Konkurs (GebV SchKG)"
@@ -564,6 +632,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-11-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 4585"
       },
       "titleDe": {
         "type": "literal",

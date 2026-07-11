@@ -1,7 +1,7 @@
 {
   "erlassKey": "MSTG",
   "sr": "321.0",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -147,13 +147,13 @@
       "dateEntryInForce": "2009-03-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/117",
       "dateDocument": "2008-10-03",
-      "roFundstelle": "AS 2009 117",
+      "roFundstelle": "AS 2009 701",
       "titelDe": "Militärstrafgesetz und Militärstrafprozess (Korrekturen infolge der Revision des AT MStG und weitere Anpassungen)",
       "titelFr": "Code pénal militaire et procédure pénale militaire (Modifications découlant de la nouvelle PG CPM et autres adaptations)",
       "titelIt": "Codice penale militare e procedura penale militare (Modifiche in seguito alla revisione della parte generale del CPM e altri adeguamenti)",
       "botschaftKey": "BOTSCHAFT-2007-1322",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/117/de",
-      "sha": "16a8118086f6e11d113b4d06aa0ebba2421508690e7b111a8f416365a45552bc"
+      "sha": "a55402f36e66c0cc5f9f4863eae03532a510bca2139761fbf3c0322fde34b146"
     },
     {
       "art": "sammelerlass-marker",
@@ -166,24 +166,24 @@
       "dateEntryInForce": "2007-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/538",
       "dateDocument": "2003-03-21",
-      "roFundstelle": "AS 2006 538",
+      "roFundstelle": "AS 2006 3389",
       "titelDe": "Militärstrafgesetz (MStG)",
       "titelFr": "Code pénal militaire (CPM)",
       "titelIt": "Codice penale militare (CPM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/538/de",
-      "sha": "ad082bb11da76a2c064c267855d2b00b1bdc554e80982384de76932fcb1b5cee"
+      "sha": "44ae739efdd07b5d5dbe28085c6214afdf6ad30e28423c22c5494ca7091f4efe"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2007-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/836",
       "dateDocument": "2011-11-23",
-      "roFundstelle": "AS 2011 836",
+      "roFundstelle": "AS 2011 6073",
       "titelDe": "Militärstrafgesetz (MStG) (Betrifft nur den französischen Text)",
       "titelFr": "Code pénal militaire (CPM)",
       "titelIt": "Codice penale militare (CPM) (Concerne solo il testo francese)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/836/de",
-      "sha": "1b2435d7a439fa5318ca1cd6c33316679fb70ac223cd188a87d0dbc4e7f1750c"
+      "sha": "ab1b556bf4f7ba255bc9e26012dff0d7569eb03355d987fdfcc70314e2ea62b7"
     },
     {
       "art": "sammelerlass-marker",
@@ -202,25 +202,25 @@
       "dateEntryInForce": "2004-03-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/107",
       "dateDocument": "2003-10-03",
-      "roFundstelle": "AS 2004 107",
+      "roFundstelle": "AS 2004 921",
       "titelDe": "Militärstrafgesetz (Revision der Disziplinarstrafordnung)",
       "titelFr": "Code pénal militaire (Révision du droit disciplinaire)",
       "titelIt": "Codice penale militare (Revisione dell'ordinamento disciplinare)",
       "botschaftKey": "BOTSCHAFT-2002-1270",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/107/de",
-      "sha": "b802c1013600d20b95da80867de159df4ca5acdba9f5b38e494edd95be403b7e"
+      "sha": "0526e669b18f6f6f6e96a1c870d3f23720ba6a6d07805126ccbe58bd964d1b08"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2004-03-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/449",
       "dateDocument": "2007-06-29",
-      "roFundstelle": "AS 2007 449",
+      "roFundstelle": "AS 2007 3629",
       "titelDe": "Militärstrafgesetz (Revision der Disziplinarstrafordnung)",
       "titelFr": "Code pénal militaire (Révision du droit disciplinaire)",
       "titelIt": "Codice penale militare (Revisione dell'ordinamento disciplinare)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/449/de",
-      "sha": "9a7d3d7280c53cdc807d3419993516a78b37b18e0b1f51a7b47f81285b62ca99"
+      "sha": "4df13ef9a193ef513e9597e619ae0dcf31c78c28c52132b9dd484d6c8fdddadc"
     },
     {
       "art": "sammelerlass-marker",
@@ -259,5 +259,5 @@
       "sha": "264b14a108bea156edcb1b3ea1be0b3eccedf1a85cf39befe8104d36dd4d272b"
     }
   ],
-  "sha": "3fddd7ac2e8ce0ee9746a18174f03319ba91db2de4f444ce12ceee8f8c445be4"
+  "sha": "49f94abe2ee408df1b7763b5fca1ca9ff1ed001e75c3fd442aca8d45f38748d7"
 }

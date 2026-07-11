@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1951-10-03"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom 3. Oktober 1951 über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelgesetz, BetmG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 3 octobre 1951 sur les stupéfiants et les substances psychotropes (Loi sur les stupéfiants, LStup)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 3 ottobre 1951 sugli stupefacenti e sulle sostanze psicotrope (Legge sugli stupefacenti, LStup)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "812.121"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1952/241_241_245"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1952-06-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1951-10-03"
+        "value": "RO 1952 241"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1951-10-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1952 241"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 3. Oktober 1951 über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelgesetz, BetmG)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1951-10-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1952 241"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 3. Oktober 1951 über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelgesetz, BetmG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 3 octobre 1951 sur les stupéfiants et les substances psychotropes (Loi sur les stupéfiants, LStup)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 3 ottobre 1951 sugli stupefacenti e sulle sostanze psicotrope (Legge sugli stupefacenti, LStup)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "812.121"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1952/241_241_245"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1952-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1951-10-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1952 241"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 3. Oktober 1951 über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelgesetz, BetmG)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-10-09"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesbeschluss über die ärztliche Verschreibung von Heroin"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Arrêté fédéral sur la prescription médicale d'héroïne"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Decreto federale concernente la prescrizione medica di eroina"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "812.121"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1998/2293_2293_2293"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-10-10"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-10-09"
+        "value": "RO 1998 2293"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-10-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1998 2293"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesbeschluss über die ärztliche Verschreibung von Heroin"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Arrêté fédéral sur la prescription médicale d'héroïne"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Decreto federale concernente la prescrizione medica di eroina"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "812.121"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1998/2293_2293_2293"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-10-10"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-10-09"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1998 2293"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die ärztliche Verschreibung von Heroin"
@@ -245,37 +273,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-06-20"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Verlängerung des Bundesbeschlusses über die ärztliche Verschreibung von Heroin"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur la prorogation de l'arrêté fédéral sur la prescription médicale d'héroïne"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale che proroga il decreto federale concernente la prescrizione medica di eroina"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "812.121"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/670"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-06-20"
+        "value": "RO 2004 4387"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +309,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-06-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 4387"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Verlängerung des Bundesbeschlusses über die ärztliche Verschreibung von Heroin"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur la prorogation de l'arrêté fédéral sur la prescription médicale d'héroïne"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale che proroga il decreto federale concernente la prescrizione medica di eroina"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "812.121"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/670"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-06-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 4387"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Verlängerung des Bundesbeschlusses über die ärztliche Verschreibung von Heroin"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-03-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 2623"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelgesetz, BetmG)"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-03-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 2623"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelgesetz, BetmG)"
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-03-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 2623"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelgesetz, BetmG)"
@@ -436,6 +488,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-05-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 2559"
       },
       "titleDe": {
         "type": "literal",
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-05-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 2559"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die abschliessende Inkraftsetzung der Änderung vom 20. März 2008 des Betäubungsmittelgesetzes vom 3. Oktober 1951"
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-05-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 2559"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die abschliessende Inkraftsetzung der Änderung vom 20. März 2008 des Betäubungsmittelgesetzes vom 3. Oktober 1951"
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-10-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3147"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelgesetz, BetmG) (Betrifft nur den französischen Text)"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-10-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3147"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelgesetz, BetmG) (Betrifft nur den französischen Text)"
@@ -596,6 +668,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-10-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3147"
       },
       "titleDe": {
         "type": "literal",
@@ -628,6 +704,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-02-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 973"
       },
       "titleDe": {
         "type": "literal",
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-02-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 973"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelgesetz, BetmG)"
@@ -692,6 +776,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-02-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 973"
       },
       "titleDe": {
         "type": "literal",
@@ -724,6 +812,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-09-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1451"
       },
       "titleDe": {
         "type": "literal",
@@ -757,6 +849,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-09-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1451"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelgesetz, BetmG)"
@@ -788,6 +884,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-09-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1451"
       },
       "titleDe": {
         "type": "literal",

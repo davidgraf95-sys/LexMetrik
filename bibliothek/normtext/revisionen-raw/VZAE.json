@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1949-03-01"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Vollziehungsverordnung vom 1. März 1949 zum Bundesgesetz über Aufenthalt und Niederlassung der Ausländer (ANAV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement d'exécution du 1<sup>er</sup> mars 1949 de la loi fédérale sur le séjour et l'établissement des étrangers (RSEE)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza d'esecuzione del 1° marzo 1949 della legge federale concernente la dimora e il domicilio degli stranieri (ODDS)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1949/228_232_233"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1949-03-21"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1949-03-01"
+        "value": "RO 1949 232"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1949-03-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1949 232"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Vollziehungsverordnung vom 1. März 1949 zum Bundesgesetz über Aufenthalt und Niederlassung der Ausländer (ANAV)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1949-03-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1949 232"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Vollziehungsverordnung vom 1. März 1949 zum Bundesgesetz über Aufenthalt und Niederlassung der Ausländer (ANAV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement d'exécution du 1<sup>er</sup> mars 1949 de la loi fédérale sur le séjour et l'établissement des étrangers (RSEE)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza d'esecuzione del 1° marzo 1949 della legge federale concernente la dimora e il domicilio degli stranieri (ODDS)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1949/228_232_233"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1949-03-21"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1949-03-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1949 232"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Vollziehungsverordnung vom 1. März 1949 zum Bundesgesetz über Aufenthalt und Niederlassung der Ausländer (ANAV)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-24"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/759"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-10-24"
+        "value": "RO 2007 5497"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5497"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -245,37 +237,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-24"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2008/381"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-06-18"
+        "value": "RO 2007 5497"
       },
       "titleDe": {
         "type": "literal",
@@ -297,17 +261,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2008/381"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/759"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-07-01"
+        "value": "2008-01-01"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-06-18"
+        "value": "2007-10-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5497"
       },
       "titleDe": {
         "type": "literal",
@@ -341,6 +309,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-06-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2737"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/381"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-06-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2737"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/381"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-06-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2737"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -372,6 +416,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5421"
       },
       "titleDe": {
         "type": "literal",
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5421"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Anpassung von Verordnungen im Ausländer- und Asylbereich zur Inkraftsetzung der Schengen- und Dublin-Assoziierungsabkommen"
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5421"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Anpassung von Verordnungen im Ausländer- und Asylbereich zur Inkraftsetzung der Schengen- und Dublin-Assoziierungsabkommen"
@@ -469,37 +525,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-12-12"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2008/856"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-12-12"
+        "value": "RO 2008 6273"
       },
       "titleDe": {
         "type": "literal",
@@ -533,37 +561,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-12-12"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/60"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-01-20"
+        "value": "RO 2008 6273"
       },
       "titleDe": {
         "type": "literal",
@@ -585,7 +585,7 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/60"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/856"
       },
       "dateForce": {
         "type": "typed-literal",
@@ -595,7 +595,11 @@
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-01-20"
+        "value": "2008-12-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 6273"
       },
       "titleDe": {
         "type": "literal",
@@ -629,6 +633,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-01-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 349"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/60"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-01-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 349"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/60"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-01-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 349"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-12-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 6413"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -693,6 +777,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-12-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 6413"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -724,6 +812,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-12-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 6413"
       },
       "titleDe": {
         "type": "literal",
@@ -757,37 +849,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-04-28"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/311"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-04-28"
+        "value": "RO 2010 2203"
       },
       "titleDe": {
         "type": "literal",
@@ -821,37 +885,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-04-28"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/855"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-12-03"
+        "value": "RO 2010 2203"
       },
       "titleDe": {
         "type": "literal",
@@ -873,17 +909,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/855"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/311"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-01-01"
+        "value": "2010-07-01"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-12-03"
+        "value": "2010-04-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 2203"
       },
       "titleDe": {
         "type": "literal",
@@ -917,6 +957,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-12-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5959"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/855"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-12-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5959"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/855"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-12-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5959"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -949,6 +1065,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-12-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 99"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -981,6 +1101,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-12-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 99"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -1012,6 +1136,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-12-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 99"
       },
       "titleDe": {
         "type": "literal",
@@ -1045,37 +1173,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-11-23"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/806"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-11-23"
+        "value": "RO 2011 5855"
       },
       "titleDe": {
         "type": "literal",
@@ -1109,6 +1209,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-11-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 5855"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/806"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-11-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 5855"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -1141,6 +1281,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-11-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6943"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -1173,6 +1317,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-11-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6943"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -1204,6 +1352,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-11-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6943"
       },
       "titleDe": {
         "type": "literal",
@@ -1237,37 +1389,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-07"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/886"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-02-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-12-07"
+        "value": "RO 2012 7267"
       },
       "titleDe": {
         "type": "literal",
@@ -1301,6 +1425,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 7267"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/886"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-12-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 7267"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -1333,6 +1497,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-03-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1041"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -1365,6 +1533,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-03-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1041"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -1396,6 +1568,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-03-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1041"
       },
       "titleDe": {
         "type": "literal",
@@ -1429,37 +1605,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-11-13"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2013/688"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-12-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-11-13"
+        "value": "RO 2013 3683"
       },
       "titleDe": {
         "type": "literal",
@@ -1493,6 +1641,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-11-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 3683"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/688"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-12-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-11-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 3683"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -1525,6 +1713,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-11-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4371"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -1557,6 +1749,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-11-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4371"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -1588,6 +1784,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-11-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4371"
       },
       "titleDe": {
         "type": "literal",
@@ -1621,37 +1821,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-04-30"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Mitteilung über die abschliessende Inkraftsetzung der Änderung einer Verordnung"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Communication concernant la dernière mise en vigueur partielle de la modification d'une ordonnance"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Comunicazione sull'entrata in vigore integrale della modifica di un'ordinanza"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2014/226"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-04-30"
+        "value": "RO 2014 997"
       },
       "titleDe": {
         "type": "literal",
@@ -1685,6 +1857,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-04-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 997"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Mitteilung über die abschliessende Inkraftsetzung der Änderung einer Verordnung"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Communication concernant la dernière mise en vigueur partielle de la modification d'une ordonnance"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Comunicazione sull'entrata in vigore integrale della modifica di un'ordinanza"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/226"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-04-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 997"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Mitteilung über die abschliessende Inkraftsetzung der Änderung einer Verordnung"
@@ -1717,37 +1929,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-10-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2014/613"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-10-22"
+        "value": "RO 2014 3541"
       },
       "titleDe": {
         "type": "literal",
@@ -1781,37 +1965,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-10-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2014/738"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-11-28"
+        "value": "RO 2014 3541"
       },
       "titleDe": {
         "type": "literal",
@@ -1833,17 +1989,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2014/738"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/613"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-01-01"
+        "value": "2016-01-01"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-11-28"
+        "value": "2014-10-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 3541"
       },
       "titleDe": {
         "type": "literal",
@@ -1877,6 +2037,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-11-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 4441"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/738"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-11-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 4441"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/738"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-11-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 4441"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -1908,6 +2144,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1849"
       },
       "titleDe": {
         "type": "literal",
@@ -1941,6 +2181,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1849"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Anpassung von Verordnungen aufgrund von Neuerungen bezüglich des Dublin/Eurodac-Besitzstands"
@@ -1973,6 +2217,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1849"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Anpassung von Verordnungen aufgrund von Neuerungen bezüglich des Dublin/Eurodac-Besitzstands"
@@ -2005,37 +2253,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-08-12"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/517"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-09-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-08-12"
+        "value": "RO 2015 2739"
       },
       "titleDe": {
         "type": "literal",
@@ -2069,6 +2289,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-08-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2739"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/517"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-09-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-08-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2739"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -2101,6 +2361,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 3721"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -2133,6 +2397,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 3721"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -2164,6 +2432,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 3721"
       },
       "titleDe": {
         "type": "literal",
@@ -2197,37 +2469,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-02-11"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/77"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-03-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-02-11"
+        "value": "RO 2015 539"
       },
       "titleDe": {
         "type": "literal",
@@ -2261,6 +2505,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-02-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 539"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/77"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-03-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-02-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 539"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -2293,6 +2577,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-11-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 4737"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -2325,6 +2613,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-11-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 4737"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -2356,6 +2648,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-11-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 4737"
       },
       "titleDe": {
         "type": "literal",
@@ -2389,37 +2685,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-11-23"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2016/731"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-11-23"
+        "value": "RO 2016 4495"
       },
       "titleDe": {
         "type": "literal",
@@ -2453,6 +2721,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-11-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4495"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/731"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-11-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4495"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit"
@@ -2485,37 +2793,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-02-01"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Einführung der Landesverweisung"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la mise en uvre de l'expulsion pénale"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'attuazione dell'espulsione giudiziaria"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2017/100"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-03-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-02-01"
+        "value": "RO 2017 563"
       },
       "titleDe": {
         "type": "literal",
@@ -2549,6 +2829,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-02-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 563"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Einführung der Landesverweisung"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la mise en uvre de l'expulsion pénale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'attuazione dell'espulsione giudiziaria"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2017/100"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-03-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-02-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 563"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Einführung der Landesverweisung"
@@ -2581,37 +2901,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-11-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2017/719"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-11-22"
+        "value": "RO 2017 6539"
       },
       "titleDe": {
         "type": "literal",
@@ -2645,6 +2937,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-11-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6539"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2017/719"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-11-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6539"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -2677,6 +3009,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-08-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3085"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -2709,6 +3045,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-08-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3085"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -2740,6 +3080,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-08-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3085"
       },
       "titleDe": {
         "type": "literal",
@@ -2773,37 +3117,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-08-15"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2018/510"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2019-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-08-15"
+        "value": "RO 2018 3173"
       },
       "titleDe": {
         "type": "literal",
@@ -2837,37 +3153,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-08-15"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2018/543"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2019-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-09-28"
+        "value": "RO 2018 3173"
       },
       "titleDe": {
         "type": "literal",
@@ -2889,7 +3177,7 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2018/543"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/510"
       },
       "dateForce": {
         "type": "typed-literal",
@@ -2899,7 +3187,11 @@
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-09-28"
+        "value": "2018-08-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3173"
       },
       "titleDe": {
         "type": "literal",
@@ -2933,6 +3225,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-09-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3347"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/543"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-09-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3347"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/543"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-09-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3347"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -2965,6 +3333,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-12-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 741"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -2997,6 +3369,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-12-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 741"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -3028,6 +3404,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-12-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 741"
       },
       "titleDe": {
         "type": "literal",
@@ -3061,37 +3441,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-05-01"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2019/279"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2019-06-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2019-05-01"
+        "value": "RO 2019 1431"
       },
       "titleDe": {
         "type": "literal",
@@ -3125,6 +3477,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-05-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1431"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2019/279"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-05-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1431"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -3157,6 +3549,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-09-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 3041"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -3189,6 +3585,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-09-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 3041"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -3220,6 +3620,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-09-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 3041"
       },
       "titleDe": {
         "type": "literal",
@@ -3253,6 +3657,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-11-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 4289"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -3285,6 +3693,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-11-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 4289"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -3317,69 +3729,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-11-27"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2020/171"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2020-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2020-02-19"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.201"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2020/171"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2020-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2020-02-19"
+        "value": "RO 2019 4289"
       },
       "titleDe": {
         "type": "literal",
@@ -3413,6 +3765,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-02-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 883"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2020/171"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-02-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 883"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative à l'admission, au séjour et à l'exercice d'une activité lucrative (OASA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'ammissione, il soggiorno e l'attività lucrativa (OASA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.201"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2020/171"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-02-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 883"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -3444,6 +3872,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-03-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 5853"
       },
       "titleDe": {
         "type": "literal",
@@ -3477,6 +3909,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-03-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 5853"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -3509,6 +3945,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-03-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 5853"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -3541,6 +3981,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-11-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 5861"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE) (Höchstzahlen für Staatsangehörige des Vereinigten Königreichs)"
@@ -3573,6 +4017,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-11-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 5861"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE) (Höchstzahlen für Staatsangehörige des Vereinigten Königreichs)"
@@ -3604,6 +4052,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-11-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 5861"
       },
       "titleDe": {
         "type": "literal",
@@ -3636,6 +4088,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-11-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 5865"
       },
       "titleDe": {
         "type": "literal",
@@ -3669,6 +4125,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-11-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 5865"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (VZAE)"
@@ -3700,6 +4160,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-11-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 5865"
       },
       "titleDe": {
         "type": "literal",

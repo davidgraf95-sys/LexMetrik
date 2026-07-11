@@ -1,7 +1,7 @@
 {
   "erlassKey": "BEG",
   "sr": "957.1",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -58,14 +58,14 @@
       "dateEntryInForce": "2009-10-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/450",
       "dateDocument": "2008-10-03",
-      "roFundstelle": "AS 2009 450",
+      "roFundstelle": "AS 2009 3577",
       "titelDe": "Bundesgesetz über Bucheffekten (Bucheffektengesetz, BEG)",
       "titelFr": "Loi fédérale sur les titres intermédiés (LTI)",
       "titelIt": "Legge federale sui titoli contabili (Legge sui titoli contabili, LTCo)",
       "botschaftKey": "BOTSCHAFT-2006-1228",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/450/de",
-      "sha": "43e1076731cb70f69df38ddfc7fb3823ed8495a3ac1b0e897dcb13249090851f"
+      "sha": "73cad4c9d0da7ede79f08656ef4acf29466bb9e53f5a0fcca765d1af0ea2754b"
     }
   ],
-  "sha": "23fee794b13ee54bd94120b9ffda71605a141416490604b1846e8b9e85343961"
+  "sha": "fa3fa685f1158aec77cbd921591626348a0cad9a285cb10e892604aff0697236"
 }

@@ -1,7 +1,7 @@
 {
   "erlassKey": "IVV",
   "sr": "831.201",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -93,132 +93,132 @@
       "dateEntryInForce": "2021-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/801",
       "dateDocument": "2020-10-07",
-      "roFundstelle": "AS 2020 801",
+      "roFundstelle": "AS 2020 4545",
       "titelDe": "Verordnung über die Verbesserung der Vereinbarkeit von Erwerbstätigkeit und Angehörigenbetreuung",
       "titelFr": "Ordonnance sur l'amélioration de la conciliation entre activité professionnelle et prise en charge de proches",
       "titelIt": "Ordinanza concernente il miglioramento della conciliabilità tra attività lucrativa e assistenza ai familiari",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/801/de",
-      "sha": "c223573ee5162444a14816c0e6ea8e033eb85725891ae16a7e1b992e8815041e"
+      "sha": "3c8ff2d36f5273599ab5dd693f00227e0a92d2931eb7cce5a2ef8b63b6531618"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2021-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/821",
       "dateDocument": "2020-10-14",
-      "roFundstelle": "AS 2020 821",
+      "roFundstelle": "AS 2020 4615",
       "titelDe": "Verordnung über die Invalidenversicherung (IVV)",
       "titelFr": "Règlement sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione per l'invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/821/de",
-      "sha": "49f1f7c45d6fd723f974eb2a8653c9a7b6527f5a481d944bb6c266c53124e62a"
+      "sha": "8fc5d96764d206f5b6c44622ed8491eaf3245b2bad12136516aa141057a48a1d"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2020-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/679",
       "dateDocument": "2019-11-13",
-      "roFundstelle": "AS 2019 679",
+      "roFundstelle": "AS 2019 3759",
       "titelDe": "Verordnung über die Invalidenversicherung (IVV)",
       "titelFr": "Règlement sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione per l'invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/679/de",
-      "sha": "83901ca4e817b85270b2d4d4ac4ccd7f328ea928d18d11d95622b147b20db3b1"
+      "sha": "cd8b515769cef86363d56b378b7d6e4b68219e2e7c9f0ee28231a973e84dcf16"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2019-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/576",
       "dateDocument": "2018-09-21",
-      "roFundstelle": "AS 2018 576",
+      "roFundstelle": "AS 2018 3533",
       "titelDe": "Verordnung über die Invalidenversicherung (IVV)",
       "titelFr": "Règlement sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione per l'invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/576/de",
-      "sha": "77cceb09915c6ee0f8dbe13bd3646c5bf8c684d8ce8b884359c61a4395e5f1aa"
+      "sha": "e9321df64bf6ef6292e67405df19e94a29ca8e828cc30a484fedf9a8d41c801c"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2019-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/792",
       "dateDocument": "2018-11-30",
-      "roFundstelle": "AS 2018 792",
+      "roFundstelle": "AS 2018 5083",
       "titelDe": "Verordnung über die Invalidenversicherung (IVV)",
       "titelFr": "Règlement sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione per l'invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/792/de",
-      "sha": "c5680fb7fe73e9c93c9a3c7b5142f15b9b4ad20dab8e7f42943eeee47059bd7d"
+      "sha": "e34f22ce871d94ba874b627a7794dce0934cd1ada24770beabf9fe0c8c2e7170"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2018-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/822",
       "dateDocument": "2017-12-01",
-      "roFundstelle": "AS 2017 822",
+      "roFundstelle": "AS 2017 7581",
       "titelDe": "Verordnung über die Invalidenversicherung (IVV)",
       "titelFr": "Règlement sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione per l'invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/822/de",
-      "sha": "576e3123ea834f1c51355b2ee53975ee5c59ee31a2df01559e14a544e0f8b695"
+      "sha": "f88e067bff8a8adabf858895257c8663cfe229d0b89c5f0f62678e60a3970ce1"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2015-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/537",
       "dateDocument": "2014-09-19",
-      "roFundstelle": "AS 2014 537",
+      "roFundstelle": "AS 2014 3177",
       "titelDe": "Verordnung über die Invalidenversicherung (IVV)",
       "titelFr": "Règlement sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione per l'invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/537/de",
-      "sha": "74f3ebaebadb0a774b3b3b886b1d51f9cb9127eb4fa5cdfa267d689a347481f5"
+      "sha": "2db7c0b2c000c1df110fd1c296927c34d4ae9a73353487cb8175b623fb13c24d"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2015-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/577",
       "dateDocument": "2014-10-15",
-      "roFundstelle": "AS 2014 577",
+      "roFundstelle": "AS 2014 3339",
       "titelDe": "Verordnung über die Invalidenversicherung (IVV)",
       "titelFr": "Règlement sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione per l'invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/577/de",
-      "sha": "330285d8dc405f5f55863e56efc28d073fed385cec91ff919e1c77a0754dad76"
+      "sha": "b6844d753212468023e85de99223b20ea81d296b0c94a75825434debcc990083"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2013-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/645",
       "dateDocument": "2012-10-10",
-      "roFundstelle": "AS 2012 645",
+      "roFundstelle": "AS 2012 5561",
       "titelDe": "Verordnung über die Invalidenversicherung (IVV)",
       "titelFr": "Règlement sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione per l'invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/645/de",
-      "sha": "3f8199f5e68908eef26f98ee8bde229fcd494404050ffb58f77a06ff3d94f462"
+      "sha": "4934055ae12ee1488ae46bf5df9f7928f2fa85c8bcabc3e23677c340a13f43c0"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2013-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/749",
       "dateDocument": "2012-09-21",
-      "roFundstelle": "AS 2012 749",
+      "roFundstelle": "AS 2012 6339",
       "titelDe": "Verordnung über die Invalidenversicherung (IVV)",
       "titelFr": "Règlement sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione per l'invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/749/de",
-      "sha": "a744abfb2b0af91509aac47fa59ae1375f46264e93b66825ea5059d03b0c6d86"
+      "sha": "0cf90f5e294b59c601681d8bae1d1ce76ada3d5d17311995faf20df0215478eb"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2012-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/292",
       "dateDocument": "2012-04-18",
-      "roFundstelle": "AS 2012 292",
+      "roFundstelle": "AS 2012 2403",
       "titelDe": "Verordnung über die Invalidenversicherung (IVV)",
       "titelFr": "Règlement sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione per l'invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/292/de",
-      "sha": "8e746c1fb14c53497402d87f1f4700194e04092e457a81f87e9f2741d7b53766"
+      "sha": "429fdd0bab96d7e1368d087d4154763204d9fc15753762cd6b3938f1c975e95b"
     },
     {
       "art": "sammelerlass-marker",
@@ -231,24 +231,24 @@
       "dateEntryInForce": "2012-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/800",
       "dateDocument": "2011-11-16",
-      "roFundstelle": "AS 2011 800",
+      "roFundstelle": "AS 2011 5679",
       "titelDe": "Verordnung über die Invalidenversicherung (IVV)",
       "titelFr": "Règlement sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione per l'invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/800/de",
-      "sha": "ddbab72900171dc0d4ebaf5bfa4084ad73c5e38471eb26cb29e6bc153bfaf569"
+      "sha": "fbd1cc8e53a04931d9bc3bc2990a158397c14530029dc431dc974c1b96e70b4b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2011-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/367",
       "dateDocument": "2011-05-25",
-      "roFundstelle": "AS 2011 367",
+      "roFundstelle": "AS 2011 2659",
       "titelDe": "Verordnung über die Invalidenversicherung (IVV)",
       "titelFr": "Règlement sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione per l'invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/367/de",
-      "sha": "5c0aa1e1a51982301d0c22f417808ffa6862530d0605bfbaf88ac9574169d573"
+      "sha": "f70a90b5b184b0060bff036ea07e623b016fff6b05e454436d87fc45c609aaef"
     },
     {
       "art": "sammelerlass-marker",
@@ -261,48 +261,48 @@
       "dateEntryInForce": "2011-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/658",
       "dateDocument": "2010-09-24",
-      "roFundstelle": "AS 2010 658",
+      "roFundstelle": "AS 2010 4583",
       "titelDe": "Verordnung über die Invalidenversicherung (IVV)",
       "titelFr": "Règlement sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione per l'invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/658/de",
-      "sha": "70ccc546cc4c19e145bae9a9aacbe9168f18176bd8d3431b52407282b0bf84de"
+      "sha": "14cb7ed48b4e26c3b55da38642ecc0648fa2938d7ef66a5af96efd14d6949493"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2011-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/84",
       "dateDocument": "2011-01-26",
-      "roFundstelle": "AS 2011 84",
+      "roFundstelle": "AS 2011 561",
       "titelDe": "Verordnung über die Invalidenversicherung (IVV)",
       "titelFr": "Règlement sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione per l'invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/84/de",
-      "sha": "2a3ed71895a9440002d9a30f043f8d629ba28e0af6c47f5a116a65d1e8d69913"
+      "sha": "4cd04bc15771ad3d5061da59f0a34dee982e7884b6e9b81747fcab83aa52e50f"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2009-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/661",
       "dateDocument": "2008-09-26",
-      "roFundstelle": "AS 2008 661",
+      "roFundstelle": "AS 2008 4721",
       "titelDe": "Verordnung über die Invalidenversicherung (IVV)",
       "titelFr": "Règlement sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione per l'invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/661/de",
-      "sha": "3436621de71f4f07e12e898d52bd7ed0e9c769c933f24a8eb481e270d299714d"
+      "sha": "c77c1feb5e83e0654fa2340101eb82fceff831254f5e8ebe4d908bdb059a1ae4"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2009-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/884",
       "dateDocument": "2008-12-05",
-      "roFundstelle": "AS 2008 884",
+      "roFundstelle": "AS 2008 6491",
       "titelDe": "Verordnung über die Invalidenversicherung (IVV)",
       "titelFr": "Règlement sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione per l'invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/884/de",
-      "sha": "cb448f8122a2888b108ed59dd97f42ec7353bdba7aebd4614235ace7ef4f9903"
+      "sha": "0aab99b05b27e876871b9f0b5435b25d2c08ddd30e532f009ab6a6869766954f"
     },
     {
       "art": "sammelerlass-marker",
@@ -315,240 +315,240 @@
       "dateEntryInForce": "2008-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/723",
       "dateDocument": "2007-09-28",
-      "roFundstelle": "AS 2007 723",
+      "roFundstelle": "AS 2007 5155",
       "titelDe": "Verordnung über die Invalidenversicherung (IVV)",
       "titelFr": "Règlement sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione per l'invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/723/de",
-      "sha": "bbb4633f1ab12e53ec4ca68b3adde42e70ed460c935fbcf5de1d70009dd6f3bf"
+      "sha": "ef7a28884ca2ea3be5593f2d510803f778d6d401961ba1d93e096e4bf0ce3425"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2008-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/800",
       "dateDocument": "2007-11-14",
-      "roFundstelle": "AS 2007 800",
+      "roFundstelle": "AS 2007 6037",
       "titelDe": "Verordnung über die Invalidenversicherung (IVV)",
       "titelFr": "Règlement sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione per l'invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/800/de",
-      "sha": "02089313a5d15bdd66116952a71ce6f1a820d07b7960ada576b6dfb9a95ed33c"
+      "sha": "d7061b059242d6efb250d3e57ab0dc1e4fcd1959f9eb0091a5e2b8cb203638fd"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2007-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/613",
       "dateDocument": "2006-09-22",
-      "roFundstelle": "AS 2006 613",
+      "roFundstelle": "AS 2006 4151",
       "titelDe": "Verordnung über die Invalidenversicherung (IVV)",
       "titelFr": "Règlement sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione per l'invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/613/de",
-      "sha": "7812badd095ca4386b772156c39c0551154d14644135ce8e24ce77b9a72a573c"
+      "sha": "60d4244f3551acc2fdfab1b4370fd2b10b279059ad62aeb6eb904c7a2515067d"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2006-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/311",
       "dateDocument": "2006-04-26",
-      "roFundstelle": "AS 2006 311",
+      "roFundstelle": "AS 2006 2007",
       "titelDe": "Verordnung über die Invalidenversicherung (IVV)",
       "titelFr": "Règlement sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione per l'invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/311/de",
-      "sha": "e7f17c8495b257cc3177b92f62b88e5e72ecacd38067c2cf6951073ce0e5a8bd"
+      "sha": "90b0af934b20e434a93e101a90192d662c3e97d43a6deaca44482ef3e227b95b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2006-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/769",
       "dateDocument": "2005-11-23",
-      "roFundstelle": "AS 2005 769",
+      "roFundstelle": "AS 2005 5635",
       "titelDe": "Verordnung über die Invalidenversicherung (IVV)",
       "titelFr": "Règlement sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione per l'invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/769/de",
-      "sha": "950fb72138b1b219b0194601d44a060c352c986399f7a1ecf49b0a90fb1d00b3"
+      "sha": "fbec9a1be6df471ba5710c028b76912d2633f61be0ed36ac82bdbf36b9b7b34d"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2005-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/662",
       "dateDocument": "2004-09-24",
-      "roFundstelle": "AS 2004 662",
+      "roFundstelle": "AS 2004 4367",
       "titelDe": "Verordnung über die Invalidenversicherung (IVV)",
       "titelFr": "Règlement sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione per l'invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/662/de",
-      "sha": "92db70762a8991d1c18a0e3a903cb46266b0cc7cb96959bce04f43ee8a58f2be"
+      "sha": "6827f61f825612b591dde7a99b65237f7d95620856634268eece02d1bf04896c"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2004-03-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/74",
       "dateDocument": "2004-01-28",
-      "roFundstelle": "AS 2004 74",
+      "roFundstelle": "AS 2004 743",
       "titelDe": "Verordnung über die Invalidenversicherung (IVV)",
       "titelFr": "Règlement sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione per l'invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/74/de",
-      "sha": "4669da9d1d9a5fcb14388b5d57faf88c403d0906a502a51de2c5d0f90eba1d7d"
+      "sha": "f0d5e950cc75d31051e315396cde33943c2a4e5f5a3c622c1c707fd80eead93c"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2004-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/561",
       "dateDocument": "2003-05-21",
-      "roFundstelle": "AS 2003 561",
+      "roFundstelle": "AS 2003 3859",
       "titelDe": "Verordnung über die Invalidenversicherung (IVV)",
       "titelFr": "Règlement sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione per l'invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/561/de",
-      "sha": "6eebaa64fb79439c88650391db8e2dc0b7b0ea158ac4afe52b30ac93dac93b3d"
+      "sha": "396f29c06eb3cf2d73e63fb81e98212acf7bbeb42340f0b37f5734242674f34f"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2003-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/321",
       "dateDocument": "2003-07-02",
-      "roFundstelle": "AS 2003 321",
+      "roFundstelle": "AS 2003 2181",
       "titelDe": "Verordnung über die Invalidenversicherung (IVV)",
       "titelFr": "Règlement sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione per l'invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/321/de",
-      "sha": "0bb30ec19924c2aa6f3bfe2ba47216afcb4b1d800692f6c6455373d3c9f76837"
+      "sha": "14351f88cb33902b2e27f385e206ed2c4aff0a2e07713df01e05fbade2fc5173"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2003-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/87",
       "dateDocument": "2003-02-12",
-      "roFundstelle": "AS 2003 87",
+      "roFundstelle": "AS 2003 383",
       "titelDe": "Verordnung über die Invalidenversicherung (IVV)",
       "titelFr": "Règlement sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione per l'invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/87/de",
-      "sha": "6f42de9e985a31b8312d3c9f8999c11346b740c4a4403456aa56a75c35bc721b"
+      "sha": "f30ce0778caf2d5407e528456cefe2b083199faf17be30b6a28c02448378df8e"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2003-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/504",
       "dateDocument": "2002-09-20",
-      "roFundstelle": "AS 2002 504",
+      "roFundstelle": "AS 2002 3346",
       "titelDe": "Verordnung über die Invalidenversicherung (IVV)",
       "titelFr": "Règlement sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione per l'invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/504/de",
-      "sha": "3ce4e2f69067296cfdc35cfcf18b57a6dba91a37fa027c2c5ee968d5553449ba"
+      "sha": "c1caee8da4a3493925e95a03c60470ec15e84834c623adc81f960d7605294a55"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2003-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/576",
       "dateDocument": "2002-09-11",
-      "roFundstelle": "AS 2002 576",
+      "roFundstelle": "AS 2002 3721",
       "titelDe": "Verordnung über die Invalidenversicherung (IVV)",
       "titelFr": "Règlement sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione per l'invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/576/de",
-      "sha": "75376a412ca84e7325a83f8e62da47e147440166a511901c8e58e94e196175ca"
+      "sha": "8d1691b08bd0caa7dd2b876ff501b933c91d98aa1b54b842acbb24df4fbe6840"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2002-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/210",
       "dateDocument": "2002-04-24",
-      "roFundstelle": "AS 2002 210",
+      "roFundstelle": "AS 2002 1374",
       "titelDe": "Verordnung über die Invalidenversicherung (IVV)",
       "titelFr": "Règlement sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione per l'invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/210/de",
-      "sha": "003ee63f6dc1ad7fc58d630e4777d0e948ca2f198f0cf07c25ec54d71a3d194c"
+      "sha": "368733c65e9a921f3b1ba413130d8acea0a177238f45253fe3b2ffc5b9767a5f"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2002-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/35",
       "dateDocument": "2001-11-14",
-      "roFundstelle": "AS 2002 35",
+      "roFundstelle": "AS 2002 200",
       "titelDe": "Verordnung über die Invalidenversicherung (IVV)",
       "titelFr": "Règlement sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione per l'invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/35/de",
-      "sha": "717151f3ae19d64e2fc6f408b813e90a203018e1b52a9b23c040c087bd0636d1"
+      "sha": "690cd52547cdea1bb750b44da204b98c54685556a62d11e2221366076f4f70d0"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/193",
       "dateDocument": "2000-02-02",
-      "roFundstelle": "AS 2000 193",
+      "roFundstelle": "AS 2000 1199",
       "titelDe": "Verordnung über die Invalidenversicherung (IVV)",
       "titelFr": "Règlement sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione per l'invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/193/de",
-      "sha": "69d7aa275d6a3864fc58e06a4cfc00621c9e43186f9dc869c3dcc648b8c8b7d1"
+      "sha": "e747eed39da0588d8d44db84c6fef3b250a6fa9bd0da2430036d5aba10fd4b21"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/425",
       "dateDocument": "2000-09-18",
-      "roFundstelle": "AS 2000 425",
+      "roFundstelle": "AS 2000 2635",
       "titelDe": "Verordnung über die Invalidenversicherung (IVV)",
       "titelFr": "Règlement sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione per l'invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/425/de",
-      "sha": "cd6ace77e6873c02d858f8f359db5d26989c798b011c5cdbbeea13938278edc8"
+      "sha": "2616bfbacbbe419fe5ce0aa805218f9c22bad243c4cbecd99ab7ad1b0540ab77"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/507",
       "dateDocument": "2000-11-22",
-      "roFundstelle": "AS 2000 507",
+      "roFundstelle": "AS 2000 2907",
       "titelDe": "Verordnung über die Invalidenversicherung (IVV)",
       "titelFr": "Règlement sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione per l'invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/507/de",
-      "sha": "3b52a31e5db4f63f12d6d6d4e8a9d28a766edd7d8ee31f5eba37e13d8bede670"
+      "sha": "794bc0339497455e1018643f93d9bc1b3d33308f3f4deb0bbbd6e7a9721bdb04"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/16",
       "dateDocument": "2000-12-04",
-      "roFundstelle": "AS 2001 16",
+      "roFundstelle": "AS 2001 89",
       "titelDe": "Verordnung über die Invalidenversicherung (IVV)",
       "titelFr": "Règlement sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione per l'invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/16/de",
-      "sha": "03cca73b3f825dd6e85ccfb4275b9421de54db7bfd15215eb2e9cdab59584c89"
+      "sha": "82d0a2cddee39be52892c52e765ed5532d01384a5a1ce035d39ab867d98d7959"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2000-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/422",
       "dateDocument": "1999-08-25",
-      "roFundstelle": "AS 1999 422",
+      "roFundstelle": "AS 1999 2687",
       "titelDe": "Verordung über die Invalidenversicherung (IVV)",
       "titelFr": "Règlement sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione per l'invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/422/de",
-      "sha": "5d5a65a6f2b8ae3c77ff149e968b5cc15218fc7c7d6927990f86d567e00d0595"
+      "sha": "513cec0f7c6db0a4bc0d21a15dd0771d26a479d3344c6828ca8c7de40733ab9d"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "1999-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/304",
       "dateDocument": "1999-05-31",
-      "roFundstelle": "AS 1999 304",
+      "roFundstelle": "AS 1999 1851",
       "titelDe": "Verordnung über die Invalidenversicherung (IVV)",
       "titelFr": "Règlement sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione per l'invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/304/de",
-      "sha": "d288aa205ff3ac41b9733d7aff17c1597ec87a3a9aef3462f683eee059e813f5"
+      "sha": "c96cc942be98ca79ff19126a4c6e105fa1f592481ec136aae1ae6f0d57ce44db"
     },
     {
       "art": "aenderung",
@@ -567,12 +567,12 @@
       "dateEntryInForce": "1999-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/12",
       "dateDocument": "1998-12-07",
-      "roFundstelle": "AS 1999 12",
+      "roFundstelle": "AS 1999 60",
       "titelDe": "Verordnung über die Invalidenversicherung (IVV)",
       "titelFr": "Ordonnance sur l'assurance-invalidité (RAI)",
       "titelIt": "Ordinanza sull'assicurazione invalidità (OAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/12/de",
-      "sha": "d29cbae2fcc775bf0f92d51041f16a79fe0b2e306f19dbb7998135d8c6690f21"
+      "sha": "e93fc6ba515afa5c1e44d86f6579688a980ae05b6f8436c827328d97a70b62a0"
     },
     {
       "art": "aenderung",
@@ -587,5 +587,5 @@
       "sha": "51715511f86e8cfcfbc233d11a8c99f370966397f8d4084bb046034c64d3c1a2"
     }
   ],
-  "sha": "ac681b71f7a440a5955d213ff9ec7c39a336b3b2d06d8defe2b8ea3cdb77c69b"
+  "sha": "543b1b01d41d2a113f1233751b270de03d30c504344d5ecb63ab6640fa5f5e7d"
 }

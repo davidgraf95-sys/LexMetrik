@@ -21,69 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-06-20"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über das Jugendstrafrecht (Jugendstrafgesetz, JStG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale régissant la condition pénale des mineurs (Droit pénal des mineurs, DPMin)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sul diritto penale minorile (Diritto penale minorile, DPMin)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "311.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/551"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-06-20"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Bundesgesetz über das Jugendstrafrecht (Jugendstrafgesetz, JStG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale régissant la condition pénale des mineurs (Droit pénal des mineurs, DPMin)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sul diritto penale minorile (Diritto penale minorile, DPMin)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "311.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/551"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-06-20"
+        "value": "RO 2006 3545"
       },
       "titleDe": {
         "type": "literal",
@@ -117,6 +57,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-06-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 3545"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über das Jugendstrafrecht (Jugendstrafgesetz, JStG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale régissant la condition pénale des mineurs (Droit pénal des mineurs, DPMin)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sul diritto penale minorile (Diritto penale minorile, DPMin)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "311.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/551"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-06-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 3545"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über das Jugendstrafrecht (Jugendstrafgesetz, JStG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale régissant la condition pénale des mineurs (Droit pénal des mineurs, DPMin)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sul diritto penale minorile (Diritto penale minorile, DPMin)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "311.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/551"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-06-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 3545"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über das Jugendstrafrecht (Jugendstrafgesetz, JStG)"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-11-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 6103"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über das Jugendstrafrecht (Jugendstrafgesetz, JStG)"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-11-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 6103"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über das Jugendstrafrecht (Jugendstrafgesetz, JStG)"
@@ -212,6 +236,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-11-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 6103"
       },
       "titleDe": {
         "type": "literal",

@@ -1,7 +1,7 @@
 {
   "erlassKey": "SORTG",
   "sr": "232.16",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -15,13 +15,13 @@
       "dateEntryInForce": "2008-09-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/526",
       "dateDocument": "2007-10-05",
-      "roFundstelle": "AS 2008 526",
+      "roFundstelle": "AS 2008 3897",
       "titelDe": "Bundesbeschluss über die Genehmigung des revidierten internationalen Übereinkommens zum Schutz von Pflanzenzüchtungen und die Änderung des Sortenschutzgesetzes und des Patentgesetzes",
       "titelFr": "Arrêté fédéral relatif à l'approbation de la Convention internationale révisée pour la protection des obtentions végétales et à la modification de la loi sur la protection des variétés et de la loi sur les brevets d'invention",
       "titelIt": "Decreto federale che approva la Convenzione internazionale riveduta per la protezione delle novità vegetali e modifica la legge federale sulla protezione delle novità vegetali e la legge sui brevetti d'invenzione",
       "botschaftKey": "BOTSCHAFT-2004-683",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/526/de",
-      "sha": "84d52a7fa82f096cd47aefec16ab3f5c92043f71abad283a3fdccc2cd01cb1cc"
+      "sha": "183b821b2208e95606293c513458954e164a31afde1d249a9727c7f4985849e3"
     },
     {
       "art": "sammelerlass-marker",
@@ -54,5 +54,5 @@
       "sha": "eef7df40a4e801ce654ef1c85d515abf8530349e3f3bb01dab87647bb6b21618"
     }
   ],
-  "sha": "4f3449c016225239e05d91ca7c979c4e5920c9f6745d2f3ff89f8ec263883fcf"
+  "sha": "71ae850ad5b8dd50e057649e19600fd97e21aa137f4080556c4615f770f185b6"
 }

@@ -1,7 +1,7 @@
 {
   "erlassKey": "TGBV",
   "sr": "211.432.11",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -33,25 +33,25 @@
       "dateEntryInForce": "2013-02-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/3",
       "dateDocument": "2012-12-28",
-      "roFundstelle": "AS 2013 3",
+      "roFundstelle": "AS 2013 9",
       "titelDe": "Technische Verordnung des EJPD und des VBS über das Grundbuch (TGBV)",
       "titelFr": "Ordonnance technique du DFJP et du DDPS concernant le registre foncier (OTRF)",
       "titelIt": "Ordinanza tecnica del DFGP e del DDPS sul registro fondiario (OTRF)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/3/de",
-      "sha": "18793434e570e2cedeaf3b23d6b0fbd57a31ca6b5f39323235c12404fea2036a"
+      "sha": "db6ba75239b47989ec3e109439ded394284626ffee4608d3be22a41b8830ac3b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2007-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/408",
       "dateDocument": "2007-06-06",
-      "roFundstelle": "AS 2007 408",
+      "roFundstelle": "AS 2007 3353",
       "titelDe": "Technische Verordnung des EJPD und des VBS über das Grundbuch (TGBV)",
       "titelFr": "Ordonnance technique du DFJP et du DDPS concernant le registre foncier (OTRF)",
       "titelIt": "Ordinanza tecnica del DFGP e del DDPS sul registro fondiario (OTRF)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/408/de",
-      "sha": "3a86d0e0beb2c81335e81e1e1f35ddde11191bbd03e94cd1b79febc45a1506f6"
+      "sha": "79ceffed08e87687e70ee29a310aa4cdc5737c6dd2bed6f1f1089696cbb8d9ce"
     }
   ],
-  "sha": "d4489e2405bad3f5b4be08a33295ad970303c33d3de0d79421e721006c716733"
+  "sha": "d3eca6bb66727279eb88f3001ff098ee13f2fd5e11afa8241fffc8e97c68e75d"
 }

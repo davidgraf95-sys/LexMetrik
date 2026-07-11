@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-05-18"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la protection contre les substances et les préparations dangereuses (Ordonnance sur les produits chimiques, OChim)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla protezione contro le sostanze e i preparati pericolosi (Ordinanza sui prodotti chimici, OPChim)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "813.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2005/466"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-08-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-05-18"
+        "value": "RO 2005 2721"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-05-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 2721"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-05-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 2721"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la protection contre les substances et les préparations dangereuses (Ordonnance sur les produits chimiques, OChim)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla protezione contro le sostanze e i preparati pericolosi (Ordinanza sui prodotti chimici, OPChim)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "813.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/466"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-05-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 2721"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-02-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 821"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-02-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 821"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
@@ -212,6 +236,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-02-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 821"
       },
       "titleDe": {
         "type": "literal",
@@ -245,37 +273,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-02-24"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la protection contre les substances et les préparations dangereuses (Ordonnance sur les produits chimiques, OChim)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla protezione contro le sostanze e i preparati pericolosi (Ordinanza sui prodotti chimici, OPChim)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "813.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/132"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-02-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-02-24"
+        "value": "RO 2009 805"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +309,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-02-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 805"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la protection contre les substances et les préparations dangereuses (Ordonnance sur les produits chimiques, OChim)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla protezione contro le sostanze e i preparati pericolosi (Ordinanza sui prodotti chimici, OPChim)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "813.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/132"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-02-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 805"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
@@ -340,6 +380,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-03-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 1135"
       },
       "titleDe": {
         "type": "literal",
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-03-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 1135"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-03-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 1135"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
@@ -437,37 +489,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-01-14"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la protection contre les substances et les préparations dangereuses (Ordonnance sur les produits chimiques, OChim)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla protezione contro le sostanze e i preparati pericolosi (Ordinanza sui prodotti chimici, OPChim)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "813.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/73"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-02-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-01-14"
+        "value": "RO 2009 401"
       },
       "titleDe": {
         "type": "literal",
@@ -501,6 +525,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-01-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 401"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la protection contre les substances et les préparations dangereuses (Ordonnance sur les produits chimiques, OChim)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla protezione contro le sostanze e i preparati pericolosi (Ordinanza sui prodotti chimici, OPChim)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "813.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/73"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-01-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 401"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-11-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5223"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-11-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5223"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
@@ -596,6 +668,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-11-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5223"
       },
       "titleDe": {
         "type": "literal",
@@ -629,37 +705,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-11-07"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la protection contre les substances et les préparations dangereuses (Ordonnance sur les produits chimiques, OChim)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla protezione contro le sostanze e i preparati pericolosi (Ordinanza sui prodotti chimici, OPChim)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "813.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/724"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-12-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-11-07"
+        "value": "RO 2012 6103"
       },
       "titleDe": {
         "type": "literal",
@@ -693,6 +741,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-11-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6103"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la protection contre les substances et les préparations dangereuses (Ordonnance sur les produits chimiques, OChim)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla protezione contro le sostanze e i preparati pericolosi (Ordinanza sui prodotti chimici, OPChim)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "813.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/724"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-12-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-11-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6103"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
@@ -725,6 +813,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6659"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV) (Betrifft nur den italienischen Text)"
@@ -757,6 +849,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6659"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV) (Betrifft nur den italienischen Text)"
@@ -788,6 +884,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6659"
       },
       "titleDe": {
         "type": "literal",
@@ -821,37 +921,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-01-15"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la protection contre les substances et les préparations dangereuses (Ordonnance sur les produits chimiques, OChim)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla protezione contro le sostanze e i preparati pericolosi (Ordinanza sui prodotti chimici, OPChim)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "813.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2013/23"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-01-15"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-01-15"
+        "value": "RO 2013 201"
       },
       "titleDe": {
         "type": "literal",
@@ -885,6 +957,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-01-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 201"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la protection contre les substances et les préparations dangereuses (Ordonnance sur les produits chimiques, OChim)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla protezione contro le sostanze e i preparati pericolosi (Ordinanza sui prodotti chimici, OPChim)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "813.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/23"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-01-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-01-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 201"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
@@ -917,6 +1029,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-06-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 2327"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
@@ -949,6 +1065,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-06-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 2327"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
@@ -980,6 +1100,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-06-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 2327"
       },
       "titleDe": {
         "type": "literal",
@@ -1013,37 +1137,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-08-20"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV) (Betrifft nur den italienischen Text)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la protection contre les substances et les préparations dangereuses (Ordonnance sur les produits chimiques, OChim) (Ne concerne que le texte italien)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla protezione contro le sostanze e i preparati pericolosi (Ordinanza sui prodotti chimici, OPChim)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "813.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2013/544"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-08-20"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-08-20"
+        "value": "RO 2013 2673"
       },
       "titleDe": {
         "type": "literal",
@@ -1077,6 +1173,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-08-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 2673"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV) (Betrifft nur den italienischen Text)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la protection contre les substances et les préparations dangereuses (Ordonnance sur les produits chimiques, OChim) (Ne concerne que le texte italien)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla protezione contro le sostanze e i preparati pericolosi (Ordinanza sui prodotti chimici, OPChim)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "813.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/544"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-08-20"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-08-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 2673"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV) (Betrifft nur den italienischen Text)"
@@ -1109,37 +1245,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-11-17"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la protection contre les substances et les préparations dangereuses (Ordonnance sur les produits chimiques, OChim)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla protezione contro le sostanze e i preparati pericolosi (Ordinanza sui prodotti chimici, OPChim)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "813.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2014/661"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-12-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-11-17"
+        "value": "RO 2014 3857"
       },
       "titleDe": {
         "type": "literal",
@@ -1173,6 +1281,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-11-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 3857"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la protection contre les substances et les préparations dangereuses (Ordonnance sur les produits chimiques, OChim)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla protezione contro le sostanze e i preparati pericolosi (Ordinanza sui prodotti chimici, OPChim)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "813.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/661"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-12-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-11-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 3857"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
@@ -1205,6 +1353,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1903"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV) "
@@ -1237,6 +1389,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1903"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV) "
@@ -1269,6 +1425,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1903"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV) "
@@ -1300,6 +1460,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1903"
       },
       "titleDe": {
         "type": "literal",
@@ -1333,37 +1497,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-08"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la protection contre les substances et les préparations dangereuses (Ordonnance sur les produits chimiques, OChim)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla protezione contro le sostanze e i preparati pericolosi (Ordinanza sui prodotti chimici, OPChim)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "813.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/568"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-09-08"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-09-08"
+        "value": "RO 2015 3017"
       },
       "titleDe": {
         "type": "literal",
@@ -1397,6 +1533,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 3017"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la protection contre les substances et les préparations dangereuses (Ordonnance sur les produits chimiques, OChim)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla protezione contro le sostanze e i preparati pericolosi (Ordinanza sui prodotti chimici, OPChim)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "813.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/568"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-09-08"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-09-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 3017"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
@@ -1429,6 +1605,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-11-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 4429"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
@@ -1461,6 +1641,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-11-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 4429"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
@@ -1492,6 +1676,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-11-02"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 4429"
       },
       "titleDe": {
         "type": "literal",
@@ -1525,37 +1713,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-11-01"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la protection contre les substances et les préparations dangereuses (Ordonnance sur les produits chimiques, OChim)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla protezione contro le sostanze e i preparati pericolosi (Ordinanza sui prodotti chimici, OPChim)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "813.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2016/670"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-12-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-11-01"
+        "value": "RO 2016 4041"
       },
       "titleDe": {
         "type": "literal",
@@ -1589,6 +1749,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-11-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4041"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la protection contre les substances et les préparations dangereuses (Ordonnance sur les produits chimiques, OChim)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla protezione contro le sostanze e i preparati pericolosi (Ordinanza sui prodotti chimici, OPChim)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "813.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/670"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-12-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-11-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4041"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
@@ -1620,6 +1820,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-01-31"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 801"
       },
       "titleDe": {
         "type": "literal",
@@ -1653,6 +1857,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-01-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 801"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
@@ -1685,6 +1893,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-01-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 801"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
@@ -1717,37 +1929,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-10-31"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la protection contre les substances et les préparations dangereuses (Ordonnance sur les produits chimiques, OChim)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla protezione contro le sostanze e i preparati pericolosi (Ordinanza sui prodotti chimici, OPChim)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "813.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2018/657"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-12-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-10-31"
+        "value": "RO 2018 4063"
       },
       "titleDe": {
         "type": "literal",
@@ -1781,37 +1965,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-10-31"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la protection contre les substances et les préparations dangereuses (Ordonnance sur les produits chimiques, OChim)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla protezione contro le sostanze e i preparati pericolosi (Ordinanza sui prodotti chimici, OPChim)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "813.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2018/85"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-03-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-02-05"
+        "value": "RO 2018 4063"
       },
       "titleDe": {
         "type": "literal",
@@ -1833,17 +1989,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2018/85"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/657"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-03-01"
+        "value": "2018-12-01"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-02-05"
+        "value": "2018-10-31"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 4063"
       },
       "titleDe": {
         "type": "literal",
@@ -1877,6 +2037,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-02-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 707"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la protection contre les substances et les préparations dangereuses (Ordonnance sur les produits chimiques, OChim)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla protezione contro le sostanze e i preparati pericolosi (Ordinanza sui prodotti chimici, OPChim)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "813.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/85"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-03-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-02-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 707"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la protection contre les substances et les préparations dangereuses (Ordonnance sur les produits chimiques, OChim)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla protezione contro le sostanze e i preparati pericolosi (Ordinanza sui prodotti chimici, OPChim)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "813.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/85"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-03-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-02-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 707"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
@@ -1908,6 +2144,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-06-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1647"
       },
       "titleDe": {
         "type": "literal",
@@ -1941,6 +2181,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-06-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1647"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
@@ -1973,6 +2217,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-06-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1647"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
@@ -2005,6 +2253,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-05-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1923"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
@@ -2037,6 +2289,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-05-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1923"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
@@ -2069,69 +2325,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-05-23"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la protection contre les substances et les préparations dangereuses (Ordonnance sur les produits chimiques, OChim)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla protezione contro le sostanze e i preparati pericolosi (Ordinanza sui prodotti chimici, OPChim)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "813.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2020/134"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2020-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2020-02-21"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la protection contre les substances et les préparations dangereuses (Ordonnance sur les produits chimiques, OChim)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla protezione contro le sostanze e i preparati pericolosi (Ordinanza sui prodotti chimici, OPChim)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "813.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2020/134"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2020-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2020-02-21"
+        "value": "RO 2019 1923"
       },
       "titleDe": {
         "type": "literal",
@@ -2165,6 +2361,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-02-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 727"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la protection contre les substances et les préparations dangereuses (Ordonnance sur les produits chimiques, OChim)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla protezione contro le sostanze e i preparati pericolosi (Ordinanza sui prodotti chimici, OPChim)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "813.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2020/134"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-02-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 727"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la protection contre les substances et les préparations dangereuses (Ordonnance sur les produits chimiques, OChim)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla protezione contro le sostanze e i preparati pericolosi (Ordinanza sui prodotti chimici, OPChim)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "813.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2020/134"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2020-02-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 727"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
@@ -2197,6 +2469,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-11-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 5293"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
@@ -2229,6 +2505,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-11-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 5293"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Schutz vor gefährlichen Stoffen und Zubereitungen (Chemikalienverordnung, ChemV)"
@@ -2260,6 +2540,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-11-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 5293"
       },
       "titleDe": {
         "type": "literal",

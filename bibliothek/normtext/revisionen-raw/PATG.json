@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1954-06-25"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom 25. Juni 1954 über die Erfindungspatente (Patentgesetz, PatG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 25 juin 1954 sur les brevets d'invention (Loi sur les brevets, LBI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 25 giugno 1954 sui brevetti d'invenzione (Legge sui brevetti, LBI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "232.14"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1955/871_893_899"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1956-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1954-06-25"
+        "value": "RO 1955 893"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1954-06-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1955 893"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 25. Juni 1954 über die Erfindungspatente (Patentgesetz, PatG)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1954-06-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1955 893"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 25. Juni 1954 über die Erfindungspatente (Patentgesetz, PatG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 25 juin 1954 sur les brevets d'invention (Loi sur les brevets, LBI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 25 giugno 1954 sui brevetti d'invenzione (Legge sui brevetti, LBI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "232.14"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1955/871_893_899"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1956-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1954-06-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1955 893"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 25. Juni 1954 über die Erfindungspatente (Patentgesetz, PatG)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-10-09"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Erfindungspatente (Patentgesetz, PatG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur les brevets d'invention (Loi sur les brevets, LBI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sui brevetti d'invenzione (Legge sui brevetti, LBI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "232.14"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1999/193"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-05-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-10-09"
+        "value": "RO 1999 1363"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-10-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 1363"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Erfindungspatente (Patentgesetz, PatG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les brevets d'invention (Loi sur les brevets, LBI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sui brevetti d'invenzione (Legge sui brevetti, LBI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "232.14"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/193"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-05-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-10-09"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 1363"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Erfindungspatente (Patentgesetz, PatG)"
@@ -244,6 +272,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-12-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 6479"
       },
       "titleDe": {
         "type": "literal",
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-12-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 6479"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung der Akte zur Revision des Europäischen Patentübereinkommens und über die Änderung des Patentgesetzes"
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-12-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 6479"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung der Akte zur Revision des Europäischen Patentübereinkommens und über die Änderung des Patentgesetzes"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-12-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 1739"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung des Übereinkommens über die Anwendung des Artikels 65 des Europäischen Patentübereinkommens und über die Änderung des Patentgesetzes"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-12-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 1739"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung des Übereinkommens über die Anwendung des Artikels 65 des Europäischen Patentübereinkommens und über die Änderung des Patentgesetzes"
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-12-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 1739"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung des Übereinkommens über die Anwendung des Artikels 65 des Europäischen Patentübereinkommens und über die Änderung des Patentgesetzes"
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-06-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2551"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Erfindungspatente (Patentgesetz, PatG)"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-06-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2551"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Erfindungspatente (Patentgesetz, PatG)"
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-06-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2551"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Erfindungspatente (Patentgesetz, PatG)"
@@ -532,6 +596,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-06-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2677"
       },
       "titleDe": {
         "type": "literal",
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-06-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2677"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung des Patentrechtsvertrags und der Ausführungsordnung"
@@ -597,6 +669,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-06-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2677"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung des Patentrechtsvertrags und der Ausführungsordnung"
@@ -629,6 +705,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-12-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 2615"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Erfindungspatente (Patentgesetz, PatG)"
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-12-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 2615"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Erfindungspatente (Patentgesetz, PatG)"
@@ -692,6 +776,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-12-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 2615"
       },
       "titleDe": {
         "type": "literal",
@@ -724,6 +812,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-07-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3793"
       },
       "titleDe": {
         "type": "literal",
@@ -757,6 +849,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-07-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3793"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Arzneimittel und Medizinprodukte (Heilmittelgesetz, HMG) (Betrifft nur den französischen und italienischen Text)"
@@ -788,6 +884,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-07-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3793"
       },
       "titleDe": {
         "type": "literal",

@@ -1,7 +1,7 @@
 {
   "erlassKey": "KG",
   "sr": "251",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -28,13 +28,13 @@
       "dateEntryInForce": "2014-12-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/645",
       "dateDocument": "2014-06-20",
-      "roFundstelle": "AS 2014 645",
+      "roFundstelle": "AS 2014 3711",
       "titelDe": "Bundesbeschluss über die Genehmigung des Abkommens zwischen der Schweiz und der EU über die Zusammenarbeit bei der Anwendung ihres Wettbewerbsrechts und über die Umsetzung (Änderung des Kartellgesetzes)",
       "titelFr": "Arrêté fédéral portant approbation et mise en uvre de l'accord entre la Suisse et l'UE concernant la coopération en matière d'application de leurs droits de la concurrence (modification de la loi sur les cartels)",
       "titelIt": "Decreto federale che approva l'Accordo tra la Svizzera e l'UE concernente la cooperazione in merito all'applicazione dei rispettivi diritti della concorrenza e lo traspone nel diritto svizzero (modifica della legge sui car-telli)",
       "botschaftKey": "BOTSCHAFT-2013-859",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/645/de",
-      "sha": "f92c5944d87fc34c34a8ae10d8f6cc3e285c816e2a2fef96ab07179c754e31e7"
+      "sha": "53247b1a3f8cc38fbe991182fe534db26798a4cac75a3c5d1a115c9f701ee5f0"
     },
     {
       "art": "sammelerlass-marker",
@@ -71,13 +71,13 @@
       "dateEntryInForce": "2004-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/172",
       "dateDocument": "2003-06-20",
-      "roFundstelle": "AS 2004 172",
+      "roFundstelle": "AS 2004 1385",
       "titelDe": "Bundesgesetz über Kartelle und andere Wettbewerbsbeschränkungen (Kartellgesetz, KG)",
       "titelFr": "Loi fédérale sur les cartels et autres restrictions à la concurrence (Loi sur les cartels, LCart)",
       "titelIt": "Legge federale sui cartelli e altre limitazioni della concorrenza (Legge sui cartelli, LCart)",
       "botschaftKey": "BOTSCHAFT-2002-265",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/172/de",
-      "sha": "569d829d953b901f706a1038630401dee135f4c595645c3346aaa93392eac1de"
+      "sha": "9b7074611f7249dacd60f6bc0ba90c4fc6a0e098f387abe3f6fde3f8457de8f0"
     },
     {
       "art": "sammelerlass-marker",
@@ -122,5 +122,5 @@
       "sha": "9fc8f567e3e24f93ea7a2e44a56268824adadf58159b17b34beeb6b36b41cad3"
     }
   ],
-  "sha": "d4724280cb962e8b37c659bf4f2f7702c4cc90d616d07c824b385d9036e03993"
+  "sha": "f9c3fc305458b97481f5a0e07e99255eaa16efd5413e8d4094498aac827928fc"
 }

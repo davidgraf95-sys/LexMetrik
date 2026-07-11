@@ -1,7 +1,7 @@
 {
   "erlassKey": "ADOV",
   "sr": "211.221.36",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -15,36 +15,36 @@
       "dateEntryInForce": "2012-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/505",
       "dateDocument": "2011-06-29",
-      "roFundstelle": "AS 2011 505",
+      "roFundstelle": "AS 2011 3637",
       "titelDe": "Verordnung über die Adoption (Adoptionsverordnung, AdoV)",
       "titelFr": "Ordonnance sur l'adoption (OAdo)",
       "titelIt": "Ordinanza sull'adozione (OAdoz)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/505/de",
-      "sha": "94c7abbf746d59b0ec4a6ad35f260b28e7c66b8a75167454ad1e5a679fbe6944"
+      "sha": "17339925db5d69c6edbb2a295e794de0466bd117375ae16cb04fe91a054a7aa1"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2012-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/601",
       "dateDocument": "2011-09-20",
-      "roFundstelle": "AS 2011 601",
+      "roFundstelle": "AS 2011 4381",
       "titelDe": "Verordnung über die Adoption (Adoptionsverordnung, AdoV) (Betrifft nur den italienischen Text)",
       "titelFr": "Ordonnance sur l'adoption (OAdo) (Ne concerne que le texte italien)",
       "titelIt": "Ordinanza sull'adozione (OAdoz)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/601/de",
-      "sha": "e5d6beb6840f388e6dccc2477219e243f32992b127c614471808e5b54af97946"
+      "sha": "46d177c59652ab00f31bf6612e2d188b921acd94aa11711903a2b84b3ec0e435"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2003-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/671",
       "dateDocument": "2002-11-29",
-      "roFundstelle": "AS 2002 671",
+      "roFundstelle": "AS 2002 4160",
       "titelDe": "Verordnung über die Adoptionsvermittlung (VAdoV)",
       "titelFr": "Ordonnance sur l'activité d'intermédiaire en vue de l'adoption (Oaiad)",
       "titelIt": "Ordinanza sul collocamento in vista d'adozione (OCAdo)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/671/de",
-      "sha": "436419c884d1ae4c38aa69937fa0f53a5ae267e20446dfbb684574232b7a22fe"
+      "sha": "5867e4572e069b5f7f20434958fddc3201d5872efe051960b33b4f56e015626e"
     },
     {
       "art": "aenderung",
@@ -59,5 +59,5 @@
       "sha": "7690dfb86aafdb50b16ef66967197b4008cbac326322952fdea24723c7e3b672"
     }
   ],
-  "sha": "507e78cd79be61b1363f66eab0d91e2cf8498f3cfd2c31d8f7c0a472f09986b4"
+  "sha": "43b4c6f9fc8bdbcc4dfb0d34bffe7f2523ce983fd0c0c848beef3bd92129b232"
 }

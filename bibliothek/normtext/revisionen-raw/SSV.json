@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1963-05-31"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 31. Mai 1963 über die Strassensignalisation"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 31 mai 1963 sur la signalisation routière"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 31 maggio 1963 sulla segnaletica stradale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.21"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1963/541_537_553"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1963-08-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1963-05-31"
+        "value": "RO 1963 537"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1963-05-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1963 537"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 31. Mai 1963 über die Strassensignalisation"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1963-05-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1963 537"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 31. Mai 1963 über die Strassensignalisation"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 31 mai 1963 sur la signalisation routière"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 31 maggio 1963 sulla segnaletica stradale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.21"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1963/541_537_553"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1963-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1963-05-31"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1963 537"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 31. Mai 1963 über die Strassensignalisation"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1979-09-05"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Signalisationsverordnung vom 5. September 1979 (SSV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 5 septembre 1979 sur la signalisation routière (OSR)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 5 settembre 1979 sulla segnaletica stradale (OSStr)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.21"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1979/1961_1961_1961"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1980-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1979-09-05"
+        "value": "RO 1979 1961"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1979-09-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1979 1961"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Signalisationsverordnung vom 5. September 1979 (SSV)"
@@ -245,6 +237,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1979-09-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1979 1961"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Signalisationsverordnung vom 5. September 1979 (SSV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 5 septembre 1979 sur la signalisation routière (OSR)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 5 settembre 1979 sulla segnaletica stradale (OSStr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.21"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1979/1961_1961_1961"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1980-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1979-09-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1979 1961"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Signalisationsverordnung vom 5. September 1979 (SSV)"
@@ -277,37 +309,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-09-28"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Signalisationsverordnung (SSV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la signalisation routière (OSR)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla segnaletica stradale (OSStr)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.21"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2001/406"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-09-28"
+        "value": "RO 2001 2719"
       },
       "titleDe": {
         "type": "literal",
@@ -341,6 +345,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-09-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 2719"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Signalisationsverordnung (SSV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la signalisation routière (OSR)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla segnaletica stradale (OSStr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.21"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2001/406"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-09-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 2719"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Signalisationsverordnung (SSV)"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-05-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1935"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Signalisationsverordnung (SSV)"
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-05-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1935"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Signalisationsverordnung (SSV)"
@@ -436,6 +488,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-05-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1935"
       },
       "titleDe": {
         "type": "literal",
@@ -469,37 +525,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-09-20"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Signalisationsverordnung (SSV) "
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la signalisation routière (OSR)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla segnaletica stradale (OSStr) "
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.21"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/470"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-09-23"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-09-20"
+        "value": "RO 2002 3174"
       },
       "titleDe": {
         "type": "literal",
@@ -533,6 +561,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-09-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3174"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Signalisationsverordnung (SSV) "
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la signalisation routière (OSR)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla segnaletica stradale (OSStr) "
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.21"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/470"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-09-23"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-09-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3174"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Signalisationsverordnung (SSV) "
@@ -565,37 +633,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-07-03"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Signalisationsverordnung (SSV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la signalisation routière (OSR)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla segnaletica stradale (OSStr)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.21"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/482"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-07-03"
+        "value": "RO 2002 3213"
       },
       "titleDe": {
         "type": "literal",
@@ -629,6 +669,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-07-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3213"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Signalisationsverordnung (SSV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la signalisation routière (OSR)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla segnaletica stradale (OSStr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.21"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/482"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-07-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3213"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Signalisationsverordnung (SSV)"
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-08-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 4495"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Signalisationsverordnung (SSV)"
@@ -693,6 +777,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-08-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 4495"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Signalisationsverordnung (SSV)"
@@ -724,6 +812,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-08-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 4495"
       },
       "titleDe": {
         "type": "literal",
@@ -757,37 +849,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-28"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Signalisationsverordnung (SSV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la signalisation routière (OSR)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla segnaletica stradale (OSSTr)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.21"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/298"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-03-28"
+        "value": "RO 2007 2105"
       },
       "titleDe": {
         "type": "literal",
@@ -821,6 +885,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 2105"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Signalisationsverordnung (SSV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la signalisation routière (OSR)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla segnaletica stradale (OSSTr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.21"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/298"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-03-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 2105"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Signalisationsverordnung (SSV)"
@@ -853,37 +957,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-08-19"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Signalisationsverordnung (SSV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la signalisation routière (OSR)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla segnaletica stradale (OSStr)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.21"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/518"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-08-19"
+        "value": "RO 2009 4241"
       },
       "titleDe": {
         "type": "literal",
@@ -917,6 +993,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-08-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 4241"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Signalisationsverordnung (SSV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la signalisation routière (OSR)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla segnaletica stradale (OSStr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.21"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/518"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-08-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 4241"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Signalisationsverordnung (SSV)"
@@ -949,6 +1065,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-11-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5971"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Signalisationsverordnung (SSV)"
@@ -981,6 +1101,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-11-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5971"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Signalisationsverordnung (SSV)"
@@ -1012,6 +1136,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-11-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5971"
       },
       "titleDe": {
         "type": "literal",
@@ -1045,37 +1173,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-03-02"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Signalisationsverordnung (SSV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la signalisation routière (OSR)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla segnaletica stradale (OSStr)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.21"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/260"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-03-02"
+        "value": "RO 2012 1823"
       },
       "titleDe": {
         "type": "literal",
@@ -1109,6 +1209,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-03-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 1823"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Signalisationsverordnung (SSV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la signalisation routière (OSR)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla segnaletica stradale (OSStr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.21"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/260"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-03-02"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 1823"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Signalisationsverordnung (SSV)"
@@ -1141,6 +1281,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-10-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 4623"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Signalisationsverordnung (SSV)"
@@ -1173,6 +1317,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-10-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 4623"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Signalisationsverordnung (SSV)"
@@ -1204,6 +1352,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-10-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 4623"
       },
       "titleDe": {
         "type": "literal",
@@ -1237,6 +1389,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-04-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1317"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Signalisationsverordnung (SSV)"
@@ -1269,6 +1425,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-04-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1317"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Signalisationsverordnung (SSV)"
@@ -1301,69 +1461,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-04-15"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Signalisationsverordnung (SSV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la signalisation routière (OSR)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla segnaletica stradale (OSStr)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.21"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/461"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-06-24"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Signalisationsverordnung (SSV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la signalisation routière (OSR)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla segnaletica stradale (OSStr)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.21"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/461"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-06-24"
+        "value": "RO 2015 1317"
       },
       "titleDe": {
         "type": "literal",
@@ -1397,6 +1497,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2459"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Signalisationsverordnung (SSV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la signalisation routière (OSR)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla segnaletica stradale (OSStr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.21"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/461"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-06-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2459"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Signalisationsverordnung (SSV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la signalisation routière (OSR)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla segnaletica stradale (OSStr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.21"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/461"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-06-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2459"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Signalisationsverordnung (SSV)"
@@ -1429,6 +1605,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-11-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 5131"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Signalisationsverordnung (SSV)"
@@ -1461,6 +1641,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-11-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 5131"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Signalisationsverordnung (SSV)"
@@ -1492,6 +1676,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-11-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 5131"
       },
       "titleDe": {
         "type": "literal",
@@ -1525,6 +1713,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-06-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2095"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Signalisationsverordnung (SSV) (Betrifft nur den italienischen Text)"
@@ -1557,6 +1749,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-06-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2095"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Signalisationsverordnung (SSV) (Betrifft nur den italienischen Text)"
@@ -1588,6 +1784,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-06-09"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2095"
       },
       "titleDe": {
         "type": "literal",
@@ -1620,6 +1820,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-05-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2145"
       },
       "titleDe": {
         "type": "literal",
@@ -1653,6 +1857,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-05-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2145"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Signalisationsverordnung (SSV)"
@@ -1684,6 +1892,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-05-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2145"
       },
       "titleDe": {
         "type": "literal",

@@ -21,69 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1997-11-19"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 19. November 1997 über kriminalpolizeiliche Zentralstellen im Bundesamt für Polizeiwesen (ZentV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 19 novembre 1997 sur les Offices centraux de police criminelle près l'Office fédéral de la police (OOC)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 19 novembre 1997 sugli Uffici centrali di polizia giudiziaria in seno all'Ufficio federale di polizia (OUC)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "360.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1998/34_34_34"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1997-11-19"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung vom 19. November 1997 über kriminalpolizeiliche Zentralstellen im Bundesamt für Polizeiwesen (ZentV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 19 novembre 1997 sur les Offices centraux de police criminelle près l'Office fédéral de la police (OOC)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 19 novembre 1997 sugli Uffici centrali di polizia giudiziaria in seno all'Ufficio federale di polizia (OUC)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "360.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1998/34_34_34"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1997-11-19"
+        "value": "RO 1998 34"
       },
       "titleDe": {
         "type": "literal",
@@ -117,6 +57,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1997-11-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1998 34"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 19. November 1997 über kriminalpolizeiliche Zentralstellen im Bundesamt für Polizeiwesen (ZentV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 19 novembre 1997 sur les Offices centraux de police criminelle près l'Office fédéral de la police (OOC)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 19 novembre 1997 sugli Uffici centrali di polizia giudiziaria in seno all'Ufficio federale di polizia (OUC)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "360.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1998/34_34_34"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1997-11-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1998 34"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 19. November 1997 über kriminalpolizeiliche Zentralstellen im Bundesamt für Polizeiwesen (ZentV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 19 novembre 1997 sur les Offices centraux de police criminelle près l'Office fédéral de la police (OOC)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 19 novembre 1997 sugli Uffici centrali di polizia giudiziaria in seno all'Ufficio federale di polizia (OUC)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "360.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1998/34_34_34"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1997-11-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1998 34"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 19. November 1997 über kriminalpolizeiliche Zentralstellen im Bundesamt für Polizeiwesen (ZentV)"
@@ -149,69 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-11-30"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Wahrnehmung kriminalpolizeilicher Aufgaben im Bundesamt für Polizei"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant l'exécution de tâches de police judiciaire au sein de l'Office fédéral de la police"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'adempimento di compiti di polizia giudiziaria in seno all'Ufficio federale di polizia"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "360.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/29"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-11-30"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung über die Wahrnehmung kriminalpolizeilicher Aufgaben im Bundesamt für Polizei"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance concernant l'exécution de tâches de police judiciaire au sein de l'Office fédéral de la police"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'adempimento di compiti di polizia giudiziaria in seno all'Ufficio federale di polizia"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "360.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/29"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-11-30"
+        "value": "RO 2002 163"
       },
       "titleDe": {
         "type": "literal",
@@ -245,6 +201,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-11-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 163"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Wahrnehmung kriminalpolizeilicher Aufgaben im Bundesamt für Polizei"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant l'exécution de tâches de police judiciaire au sein de l'Office fédéral de la police"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'adempimento di compiti di polizia giudiziaria in seno all'Ufficio federale di polizia"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "360.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/29"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-11-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 163"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Wahrnehmung kriminalpolizeilicher Aufgaben im Bundesamt für Polizei"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance concernant l'exécution de tâches de police judiciaire au sein de l'Office fédéral de la police"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'adempimento di compiti di polizia giudiziaria in seno all'Ufficio federale di polizia"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "360.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/29"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-11-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 163"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Wahrnehmung kriminalpolizeilicher Aufgaben im Bundesamt für Polizei"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-06-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 2503"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Wahrnehmung kriminalpolizeilicher Aufgaben im Bundesamt für Polizei"
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-06-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 2503"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Wahrnehmung kriminalpolizeilicher Aufgaben im Bundesamt für Polizei"
@@ -340,6 +380,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-06-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 2503"
       },
       "titleDe": {
         "type": "literal",
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-05-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 2549"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Wahrnehmung kriminalpolizeilicher Aufgaben im Bundesamt für Polizei"
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-05-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 2549"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Wahrnehmung kriminalpolizeilicher Aufgaben im Bundesamt für Polizei"
@@ -436,6 +488,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-05-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 2549"
       },
       "titleDe": {
         "type": "literal",

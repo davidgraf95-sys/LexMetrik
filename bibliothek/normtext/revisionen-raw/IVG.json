@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1959-06-19"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom 19. Juni 1959 über die Invalidenversicherung (IVG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 19 juin 1959 sur l'assurance-invalidité (LAI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 19 giugno 1959 su l'assicurazione per l'invalidità (LAI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1959/827_857_845"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1959-10-15"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1959-06-19"
+        "value": "RO 1959 857"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1959-06-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1959 857"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 19. Juni 1959 über die Invalidenversicherung (IVG)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1959-06-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1959 857"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 19. Juni 1959 über die Invalidenversicherung (IVG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 19 juin 1959 sur l'assurance-invalidité (LAI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 19 giugno 1959 su l'assicurazione per l'invalidità (LAI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1959/827_857_845"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1959-10-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1959-06-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1959 857"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 19. Juni 1959 über die Invalidenversicherung (IVG)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-12-08"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Invalidenversicherung"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi sur l'assurance-invalidité"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sull'assicurazione per l'invalidità"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1998/2829_2829_2829"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1997-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-12-08"
+        "value": "RO 1998 2829"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-12-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1998 2829"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Invalidenversicherung"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi sur l'assurance-invalidité"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'assicurazione per l'invalidità"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1998/2829_2829_2829"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1997-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-12-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1998 2829"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Invalidenversicherung"
@@ -245,37 +273,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-23"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Invalidenversicherung (IVG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur l'assurance-invalidité (LAI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sull'assicurazione per l'invalidità (LAI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/440"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-06-23"
+        "value": "RO 2000 2685"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +309,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2685"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Invalidenversicherung (IVG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'assurance-invalidité (LAI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'assicurazione per l'invalidità (LAI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/440"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-06-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2685"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Invalidenversicherung (IVG)"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-03-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3837"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Invalidenversicherung (IVG)"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-03-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3837"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Invalidenversicherung (IVG)"
@@ -404,6 +452,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-03-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3837"
       },
       "titleDe": {
         "type": "literal",
@@ -437,37 +489,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-12-16"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Invalidenversicherung (IVG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur l'assurance-invalidité (LAI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sull'assicurazione per l'invalidità (LAI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/310"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-12-16"
+        "value": "RO 2006 2003"
       },
       "titleDe": {
         "type": "literal",
@@ -501,6 +525,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-12-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 2003"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Invalidenversicherung (IVG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'assurance-invalidité (LAI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'assicurazione per l'invalidità (LAI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/310"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-12-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 2003"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Invalidenversicherung (IVG)"
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-10-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5129"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Invalidenversicherung (IVG)"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-10-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5129"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Invalidenversicherung (IVG)"
@@ -596,6 +668,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-10-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5129"
       },
       "titleDe": {
         "type": "literal",
@@ -629,6 +705,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-03-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 5659"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Invalidenversicherung (IVG) (6. IV-Revision, erstes Massnahmenpaket)"
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-03-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 5659"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Invalidenversicherung (IVG) (6. IV-Revision, erstes Massnahmenpaket)"
@@ -693,6 +777,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-03-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 5659"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Invalidenversicherung (IVG) (6. IV-Revision, erstes Massnahmenpaket)"
@@ -725,6 +813,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-05-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 3129"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Invalidenversicherung (IVG) (6. IV-Revision, erstes Massnahmenpaket)"
@@ -757,6 +849,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-05-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 3129"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Invalidenversicherung (IVG) (6. IV-Revision, erstes Massnahmenpaket)"
@@ -788,6 +884,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-05-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 3129"
       },
       "titleDe": {
         "type": "literal",
@@ -820,6 +920,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 5559"
       },
       "titleDe": {
         "type": "literal",
@@ -853,6 +957,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 5559"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Invalidenversicherung (IVG) (6. IV-Revision, zweites Massnahmenpaket: Kostenvergütung für stationäre Behandlungen)"
@@ -884,6 +992,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 5559"
       },
       "titleDe": {
         "type": "literal",
@@ -916,6 +1028,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5987"
       },
       "titleDe": {
         "type": "literal",
@@ -949,6 +1065,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5987"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Invalidenversicherung (IVG)"
@@ -980,6 +1100,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5987"
       },
       "titleDe": {
         "type": "literal",

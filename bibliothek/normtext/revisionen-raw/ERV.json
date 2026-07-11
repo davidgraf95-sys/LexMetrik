@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1969-03-21"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesbeschluss vom 21 März 1969 über die Bewilligungspflicht für aus ländisch beherrschte Banken"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Arrêté fédéral du 21 mars 1969 instituant le régime du permis pour les banques en mains étrangères"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Decreto federale del 21 marzo 1969 che istituisce l'obbligo dell'autorizzazione per le banche in mano straniera"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "952.03"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1969/442_450_448"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1969-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1969-03-21"
+        "value": "RO 1969 450"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1969-03-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1969 450"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss vom 21 März 1969 über die Bewilligungspflicht für aus ländisch beherrschte Banken"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1969-03-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1969 450"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesbeschluss vom 21 März 1969 über die Bewilligungspflicht für aus ländisch beherrschte Banken"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Arrêté fédéral du 21 mars 1969 instituant le régime du permis pour les banques en mains étrangères"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Decreto federale del 21 marzo 1969 che istituisce l'obbligo dell'autorizzazione per le banche in mano straniera"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.03"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1969/442_450_448"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1969-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1969-03-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1969 450"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss vom 21 März 1969 über die Bewilligungspflicht für aus ländisch beherrschte Banken"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-09-29"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken und Effektenhändler (Eigenmittelverordnung, ERV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les fonds propres et la répartition des risques des banques et des négociants en valeurs mobilières (Ordonnance sur les fonds propres, OFR)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sui fondi propri e la ripartizione dei rischi delle banche e dei commercianti di valori mobiliari (Ordinanza sui fondi propri, OFoP)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "952.03"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/662"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-09-29"
+        "value": "RO 2006 4307"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-09-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4307"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken und Effektenhändler (Eigenmittelverordnung, ERV)"
@@ -245,6 +237,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-09-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4307"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken und Effektenhändler (Eigenmittelverordnung, ERV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les fonds propres et la répartition des risques des banques et des négociants en valeurs mobilières (Ordonnance sur les fonds propres, OFR)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sui fondi propri e la ripartizione dei rischi delle banche e dei commercianti di valori mobiliari (Ordinanza sui fondi propri, OFoP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.03"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/662"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-09-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4307"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken und Effektenhändler (Eigenmittelverordnung, ERV)"
@@ -276,6 +308,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 1073"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 1073"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken und Effektenhändler (Eigenmittelverordnung, ERV) (Betrifft nur den italienischen Text)"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 1073"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken und Effektenhändler (Eigenmittelverordnung, ERV) (Betrifft nur den italienischen Text)"
@@ -373,37 +417,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-11-11"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken und Effektenhändler (Eigenmittelverordnung, ERV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les fonds propres et la répartition des risques des banques et des négociants en valeurs mobilières (Ordonnance sur les fonds propres, OFR)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sui fondi propri e la ripartizione dei rischi delle banche e dei commercianti di valori mobiliari (Ordinanza sui fondi propri, OFoP)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "952.03"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/747"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-11-11"
+        "value": "RO 2009 6101"
       },
       "titleDe": {
         "type": "literal",
@@ -437,37 +453,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-11-11"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken und Effektenhändler (Eigenmittelverordnung, ERV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les fonds propres et la répartition des risques des banques et des négociants en valeurs mobilières (Ordonnance sur les fonds propres, OFR)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sui fondi propri e la ripartizione dei rischi delle banche e dei commercianti di valori mobiliari (Ordinanza sui fondi propri, OFoP)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "952.03"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/770"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-11-10"
+        "value": "RO 2009 6101"
       },
       "titleDe": {
         "type": "literal",
@@ -489,17 +477,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/770"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/747"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-01-01"
+        "value": "2010-01-01"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-11-10"
+        "value": "2009-11-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 6101"
       },
       "titleDe": {
         "type": "literal",
@@ -533,6 +525,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-11-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5429"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken und Effektenhändler (Eigenmittelverordnung, ERV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les fonds propres et la répartition des risques des banques et des négociants en valeurs mobilières (Ordonnance sur les fonds propres, OFR)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sui fondi propri e la ripartizione dei rischi delle banche e dei commercianti di valori mobiliari (Ordinanza sui fondi propri, OFoP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.03"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/770"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-11-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5429"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken und Effektenhändler (Eigenmittelverordnung, ERV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les fonds propres et la répartition des risques des banques et des négociants en valeurs mobilières (Ordonnance sur les fonds propres, OFR)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sui fondi propri e la ripartizione dei rischi delle banche e dei commercianti di valori mobiliari (Ordinanza sui fondi propri, OFoP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.03"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/770"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-11-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5429"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken und Effektenhändler (Eigenmittelverordnung, ERV)"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 3539"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken und Effektenhändler (Eigenmittelverordnung, ERV)"
@@ -597,6 +669,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 3539"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken und Effektenhändler (Eigenmittelverordnung, ERV)"
@@ -628,6 +704,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 3539"
       },
       "titleDe": {
         "type": "literal",
@@ -660,6 +740,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 5441"
       },
       "titleDe": {
         "type": "literal",
@@ -693,6 +777,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 5441"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken und Effektenhändler (Eigenmittelverordnung, ERV)"
@@ -725,6 +813,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 5441"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken und Effektenhändler (Eigenmittelverordnung, ERV)"
@@ -756,6 +848,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 5441"
       },
       "titleDe": {
         "type": "literal",
@@ -789,37 +885,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-02-13"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken und Effektenhändler (Eigenmittelverordnung, ERV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les fonds propres et la répartition des risques des banques et des négociants en valeurs mobilières (Ordonnance sur les fonds propres, OFR)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sui fondi propri e sulla ripartizione dei rischi delle banche e dei commercianti di valori mobiliari (Ordinanza sui fondi propri, OFoP)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "952.03"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2013/129"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-03-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-02-13"
+        "value": "RO 2013 693"
       },
       "titleDe": {
         "type": "literal",
@@ -853,6 +921,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-02-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 693"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken und Effektenhändler (Eigenmittelverordnung, ERV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les fonds propres et la répartition des risques des banques et des négociants en valeurs mobilières (Ordonnance sur les fonds propres, OFR)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sui fondi propri e sulla ripartizione dei rischi delle banche e dei commercianti di valori mobiliari (Ordinanza sui fondi propri, OFoP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.03"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/129"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-03-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-02-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 693"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken und Effektenhändler (Eigenmittelverordnung, ERV)"
@@ -885,6 +993,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-01-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 437"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken und Effektenhändler (Eigenmittelverordnung, ERV)"
@@ -917,6 +1029,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-01-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 437"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken und Effektenhändler (Eigenmittelverordnung, ERV)"
@@ -948,6 +1064,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-01-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 437"
       },
       "titleDe": {
         "type": "literal",
@@ -981,37 +1101,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-05-10"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV) (Betrifft nur den französischen Text)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulle banche e le casse di risparmio (Ordinanza sulle banche, OBCR) (Concerne soltanto il testo francese)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "952.03"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2016/267"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-05-10"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-05-10"
+        "value": "RO 2016 1359"
       },
       "titleDe": {
         "type": "literal",
@@ -1045,6 +1137,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-05-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1359"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV) (Betrifft nur den französischen Text)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulle banche e le casse di risparmio (Ordinanza sulle banche, OBCR) (Concerne soltanto il testo francese)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.03"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/267"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-05-10"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-05-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1359"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV) (Betrifft nur den französischen Text)"
@@ -1077,37 +1209,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-05-11"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken und Effektenhändler (Eigenmittelverordnung, ERV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les fonds propres et la répartition des risques des banques et des négociants en valeurs mobilières (Ordonnance sur les fonds propres, OFR)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sui fondi propri e sulla ripartizione dei rischi delle banche e dei commercianti di valori mobiliari (Ordinanza sui fondi propri, OFoP)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "952.03"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2016/312"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-05-11"
+        "value": "RO 2016 1725"
       },
       "titleDe": {
         "type": "literal",
@@ -1141,6 +1245,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-05-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1725"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken und Effektenhändler (Eigenmittelverordnung, ERV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les fonds propres et la répartition des risques des banques et des négociants en valeurs mobilières (Ordonnance sur les fonds propres, OFR)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sui fondi propri e sulla ripartizione dei rischi delle banche e dei commercianti di valori mobiliari (Ordinanza sui fondi propri, OFoP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.03"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/312"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-05-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1725"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken und Effektenhändler (Eigenmittelverordnung, ERV)"
@@ -1172,6 +1316,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-11-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4683"
       },
       "titleDe": {
         "type": "literal",
@@ -1205,6 +1353,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-11-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4683"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken und Effektenhändler"
@@ -1237,6 +1389,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-11-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4683"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken und Effektenhändler"
@@ -1269,6 +1425,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-11-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 7625"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken und Effektenhändler (Eigenmittelverordnung, ERV)"
@@ -1301,6 +1461,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-11-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 7625"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken und Effektenhändler (Eigenmittelverordnung, ERV)"
@@ -1333,69 +1497,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-11-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken und Effektenhändler (Eigenmittelverordnung, ERV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les fonds propres et la répartition des risques des banques et des négociants en valeurs mobilières (Ordonnance sur les fonds propres, OFR)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sui fondi propri e sulla ripartizione dei rischi delle banche e dei commercianti di valori mobiliari (Ordinanza sui fondi propri, OFoP)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "952.03"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2018/800"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2019-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-11-21"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken und Effektenhändler (Eigenmittelverordnung, ERV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les fonds propres et la répartition des risques des banques et des négociants en valeurs mobilières (Ordonnance sur les fonds propres, OFR)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sui fondi propri e sulla ripartizione dei rischi delle banche e dei commercianti di valori mobiliari (Ordinanza sui fondi propri, OFoP)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "952.03"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2018/800"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2019-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-11-21"
+        "value": "RO 2017 7625"
       },
       "titleDe": {
         "type": "literal",
@@ -1429,6 +1533,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-11-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 5241"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken und Effektenhändler (Eigenmittelverordnung, ERV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les fonds propres et la répartition des risques des banques et des négociants en valeurs mobilières (Ordonnance sur les fonds propres, OFR)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sui fondi propri e sulla ripartizione dei rischi delle banche e dei commercianti di valori mobiliari (Ordinanza sui fondi propri, OFoP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.03"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/800"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-11-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 5241"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken und Effektenhändler (Eigenmittelverordnung, ERV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les fonds propres et la répartition des risques des banques et des négociants en valeurs mobilières (Ordonnance sur les fonds propres, OFR)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sui fondi propri e sulla ripartizione dei rischi delle banche e dei commercianti di valori mobiliari (Ordinanza sui fondi propri, OFoP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.03"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/800"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-11-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 5241"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken und Effektenhändler (Eigenmittelverordnung, ERV)"
@@ -1460,6 +1640,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-04-09"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1203"
       },
       "titleDe": {
         "type": "literal",
@@ -1493,6 +1677,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-04-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1203"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken  und Effektenhändler (Eigenmittelverordnung, ERV) (Betrifft nur den italienischen Text)"
@@ -1525,6 +1713,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-04-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1203"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken  und Effektenhändler (Eigenmittelverordnung, ERV) (Betrifft nur den italienischen Text)"
@@ -1557,6 +1749,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-11-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 4623"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken und Effektenhändler (Eigenmittelverordnung, ERV)"
@@ -1589,6 +1785,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-11-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 4623"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken und Effektenhändler (Eigenmittelverordnung, ERV)"
@@ -1620,6 +1820,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-11-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 4623"
       },
       "titleDe": {
         "type": "literal",
@@ -1652,6 +1856,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-03-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1105"
       },
       "titleDe": {
         "type": "literal",
@@ -1685,6 +1893,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-03-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1105"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Eigenmittel und Risikoverteilung für Banken und Effektenhändler (Eigenmittelverordnung, ERV)"
@@ -1716,6 +1928,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-03-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1105"
       },
       "titleDe": {
         "type": "literal",

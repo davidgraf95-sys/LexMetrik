@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-06-18"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Schweizerisches Strafgesetzbuch (Automatisiertes Strafregister)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code pénal suisse (Casier judiciaire informatisé)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice penale svizzero (Casellario giudiziale informatizzato)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "311.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1999/494"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-06-18"
+        "value": "RO 1999 3505"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-06-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 3505"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Schweizerisches Strafgesetzbuch (Automatisiertes Strafregister)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code pénal suisse (Casier judiciaire informatisé)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice penale svizzero (Casellario giudiziale informatizzato)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "311.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/494"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-06-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 3505"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Strafgesetzbuch (Automatisiertes Strafregister)"
@@ -117,37 +129,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-12-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Revision des Korruptionsstrafrechts (Änderung des Strafgesetzbuches und des Militärstrafgesetzes)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Révision du droit pénal de la corruption (Modification du code pénal et du code pénale militaire)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Revisione delle disposizioni penali in materia di corruzione (Modifica del Codice penale e del Codice penale militare)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "311.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/180"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-05-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-12-22"
+        "value": "RO 2000 1121"
       },
       "titleDe": {
         "type": "literal",
@@ -181,6 +165,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-12-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1121"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Revision des Korruptionsstrafrechts (Änderung des Strafgesetzbuches und des Militärstrafgesetzes)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Révision du droit pénal de la corruption (Modification du code pénal et du code pénale militaire)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Revisione delle disposizioni penali in materia di corruzione (Modifica del Codice penale e del Codice penale militare)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "311.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/180"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-05-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-12-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1121"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Revision des Korruptionsstrafrechts (Änderung des Strafgesetzbuches und des Militärstrafgesetzes)"
@@ -213,37 +237,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-06-18"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Schweizerisches Strafgesetzbuch (Informatisiertes Personennachweis-, Aktennachweis- und Verwaltungssystem im Bundesamt für Polizeiwesen)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code pénal suisse (Système informatisé de gestion et d'indexation de dossiers et de personnes de l'Office fédéral de la police)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice penale svizzero (Sistema informatizzato di gestione e indice informatizzato delle persone e dei fascicoli in seno all'Ufficio federale di polizia)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "311.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/285"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-06-18"
+        "value": "RO 2000 1855"
       },
       "titleDe": {
         "type": "literal",
@@ -277,6 +273,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-06-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1855"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Schweizerisches Strafgesetzbuch (Informatisiertes Personennachweis-, Aktennachweis- und Verwaltungssystem im Bundesamt für Polizeiwesen)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code pénal suisse (Système informatisé de gestion et d'indexation de dossiers et de personnes de l'Office fédéral de la police)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice penale svizzero (Sistema informatizzato di gestione e indice informatizzato delle persone e dei fascicoli in seno all'Ufficio federale di polizia)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "311.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/285"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-06-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1855"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Strafgesetzbuch (Informatisiertes Personennachweis-, Aktennachweis- und Verwaltungssystem im Bundesamt für Polizeiwesen)"
@@ -309,37 +345,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-03-24"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Änderung des Strafgesetzbuches, des Militärstrafgesetzes und der Bundesstrafrechtspflege"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale concernant la modification du code pénal, du code pénal militaire et de la procédure pénale fédérale"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale concernente la modifica del Codice penale, del Codice penale militare e della procedura penale federale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "311.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/454"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-12-15"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-03-24"
+        "value": "RO 2000 2725"
       },
       "titleDe": {
         "type": "literal",
@@ -373,6 +381,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-03-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2725"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Änderung des Strafgesetzbuches, des Militärstrafgesetzes und der Bundesstrafrechtspflege"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale concernant la modification du code pénal, du code pénal militaire et de la procédure pénale fédérale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale concernente la modifica del Codice penale, del Codice penale militare e della procedura penale federale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "311.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/454"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-12-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-03-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2725"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Änderung des Strafgesetzbuches, des Militärstrafgesetzes und der Bundesstrafrechtspflege"
@@ -405,37 +453,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-12-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Schweizerisches Strafgesetzbuch (Schaffung neuer Verfahrenskompetenzen des Bundes in den Bereichen organisiertes Verbrechen und Wirtschaftskriminalität)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code pénal suisse (Nouvelles compétences de procédure en faveur de la Confédération dans les domaines du crime organisé et de la criminalité économique)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice penale svizzero (Istituzione di nuove competenze procedurali della Confederazione nei settori della criminalità organizzata e della criminalità economica)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "311.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2001/459"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-12-22"
+        "value": "RO 2001 3071"
       },
       "titleDe": {
         "type": "literal",
@@ -469,6 +489,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-12-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 3071"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Schweizerisches Strafgesetzbuch (Schaffung neuer Verfahrenskompetenzen des Bundes in den Bereichen organisiertes Verbrechen und Wirtschaftskriminalität)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code pénal suisse (Nouvelles compétences de procédure en faveur de la Confédération dans les domaines du crime organisé et de la criminalité économique)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice penale svizzero (Istituzione di nuove competenze procedurali della Confederazione nei settori della criminalità organizzata e della criminalità economica)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "311.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2001/459"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-12-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 3071"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Strafgesetzbuch (Schaffung neuer Verfahrenskompetenzen des Bundes in den Bereichen organisiertes Verbrechen und Wirtschaftskriminalität)"
@@ -501,37 +561,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-06-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Änderung des Strafgesetzbuchs und des Militärstrafgesetzes (Rechtspflegedelikte vor internationalen Gerichten)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale portant modification du code pénal et du code pénal militaire (Infractions aux dispositions sur l'administration de la justice devant les tribunaux internationaux)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale concernente la modifica del Codice penale e del Codice penale militare (Reati contro l'amministrazione della giustizia commessi davanti a tribunali internazionali)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "311.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/236"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-06-22"
+        "value": "RO 2002 1491"
       },
       "titleDe": {
         "type": "literal",
@@ -565,6 +597,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-06-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1491"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Änderung des Strafgesetzbuchs und des Militärstrafgesetzes (Rechtspflegedelikte vor internationalen Gerichten)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale portant modification du code pénal et du code pénal militaire (Infractions aux dispositions sur l'administration de la justice devant les tribunaux internationaux)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale concernente la modifica del Codice penale e del Codice penale militare (Reati contro l'amministrazione della giustizia commessi davanti a tribunali internazionali)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "311.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/236"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-06-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1491"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Änderung des Strafgesetzbuchs und des Militärstrafgesetzes (Rechtspflegedelikte vor internationalen Gerichten)"
@@ -597,37 +669,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-03-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Schweizerisches Strafgesetzbuch. Militärstrafgesetz. (Verjährung der Strafverfolgung)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code pénal suisse. Code pénal militaire. (Prescription de l'action pénale)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice penale svizzero. Codice penale militare. (Prescrizione dell'azione penale)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "311.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/428"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-03-22"
+        "value": "RO 2002 2986"
       },
       "titleDe": {
         "type": "literal",
@@ -661,6 +705,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-03-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 2986"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Schweizerisches Strafgesetzbuch. Militärstrafgesetz. (Verjährung der Strafverfolgung)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code pénal suisse. Code pénal militaire. (Prescription de l'action pénale)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice penale svizzero. Codice penale militare. (Prescrizione dell'azione penale)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "311.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/428"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-03-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 2986"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Strafgesetzbuch. Militärstrafgesetz. (Verjährung der Strafverfolgung)"
@@ -693,37 +777,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-03-23"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Schweizerisches Strafgesetzbuch (Schwangerschaftsabbruch)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code pénal suisse (Interruption de grossesse)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice penale svizzero (Interruzione della gravidanza)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "311.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/429"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-03-23"
+        "value": "RO 2002 2989"
       },
       "titleDe": {
         "type": "literal",
@@ -757,6 +813,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-03-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 2989"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Schweizerisches Strafgesetzbuch (Schwangerschaftsabbruch)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code pénal suisse (Interruption de grossesse)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice penale svizzero (Interruzione della gravidanza)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "311.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/429"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-03-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 2989"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Strafgesetzbuch (Schwangerschaftsabbruch)"
@@ -789,37 +885,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-10-05"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Schweizerisches Strafgesetzbuch. Militärstrafgesetz. (Verjährung der Strafverfolgung im allgemeinen und bei Sexualdelikten an Kindern)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code pénal suisse. Code pénal militaire. (Prescription de l'action pénale en général et en cas d'infractions contre l'intégrité sexuelle des enfants)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice penale svizzero. Codice penale militare. (Prescrizione dell'azione penale in generale e in caso di reati sessuali commessi su fanciulli)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "311.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/430"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-10-05"
+        "value": "RO 2002 2993"
       },
       "titleDe": {
         "type": "literal",
@@ -853,6 +921,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-10-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 2993"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Schweizerisches Strafgesetzbuch. Militärstrafgesetz. (Verjährung der Strafverfolgung im allgemeinen und bei Sexualdelikten an Kindern)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code pénal suisse. Code pénal militaire. (Prescription de l'action pénale en général et en cas d'infractions contre l'intégrité sexuelle des enfants)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice penale svizzero. Codice penale militare. (Prescrizione dell'azione penale in generale e in caso di reati sessuali commessi su fanciulli)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "311.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/430"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-10-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 2993"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Strafgesetzbuch. Militärstrafgesetz. (Verjährung der Strafverfolgung im allgemeinen und bei Sexualdelikten an Kindern)"
@@ -885,37 +993,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-10-08"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Schweizerisches Strafgesetzbuch. Militärgesetz"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code pénal suisse (Ne concerne que le texte allemand)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice penale svizzero (Concerne solo il testo tedesco)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "311.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/465"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-10-08"
+        "value": "RO 2002 3146"
       },
       "titleDe": {
         "type": "literal",
@@ -949,6 +1029,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-10-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3146"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Schweizerisches Strafgesetzbuch. Militärgesetz"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code pénal suisse (Ne concerne que le texte allemand)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice penale svizzero (Concerne solo il testo tedesco)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "311.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/465"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-10-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3146"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Strafgesetzbuch. Militärgesetz"
@@ -981,37 +1101,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-10-05"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Schweizerisches Strafgesetzbuch (Strafbare Handlungen gegen die sexuelle Integrität; Verbot des Besitzes harter Pornografie)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code pénal suisse (Infractions contre l'intégrité sexuelle; interdiction de la possession d'objets ou de représentations relevant de la pornographie dure relevant de la pornographie dure)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice penale svizzero (Reati contro l'integrità sessuale; divieto del possesso di pornografia dura)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "311.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/92"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-10-05"
+        "value": "RO 2002 408"
       },
       "titleDe": {
         "type": "literal",
@@ -1045,6 +1137,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-10-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 408"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Schweizerisches Strafgesetzbuch (Strafbare Handlungen gegen die sexuelle Integrität; Verbot des Besitzes harter Pornografie)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code pénal suisse (Infractions contre l'intégrité sexuelle; interdiction de la possession d'objets ou de représentations relevant de la pornographie dure relevant de la pornographie dure)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice penale svizzero (Reati contro l'integrità sessuale; divieto del possesso di pornografia dura)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "311.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/92"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-10-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 408"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Strafgesetzbuch (Strafbare Handlungen gegen die sexuelle Integrität; Verbot des Besitzes harter Pornografie)"
@@ -1077,37 +1209,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-03-21"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Änderung des Strafgesetzbuches und des Bundesgesetzes betreffend die Überwachung des Post- und Fernmeldeverkehrs (Finanzierung des Terrorismus)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale concernant la modification du code pénal et de la loi fédérale sur la surveillance de la correspondance par poste et télécommunication (Financement du terrorisme)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale che modifica il Codice penale e la legge sulla sorveglianza della corrispondenza postale e del traffico delle telecomunicazioni (Finanziamento del terrorismo)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "311.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/417"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-03-21"
+        "value": "RO 2003 3043"
       },
       "titleDe": {
         "type": "literal",
@@ -1141,6 +1245,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-03-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3043"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Änderung des Strafgesetzbuches und des Bundesgesetzes betreffend die Überwachung des Post- und Fernmeldeverkehrs (Finanzierung des Terrorismus)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale concernant la modification du code pénal et de la loi fédérale sur la surveillance de la correspondance par poste et télécommunication (Financement du terrorisme)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale che modifica il Codice penale e la legge sulla sorveglianza della corrispondenza postale e del traffico delle telecomunicazioni (Finanziamento del terrorismo)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "311.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/417"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-03-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3043"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Änderung des Strafgesetzbuches und des Bundesgesetzes betreffend die Überwachung des Post- und Fernmeldeverkehrs (Finanzierung des Terrorismus)"
@@ -1173,37 +1317,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-02-17"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Schweizerisches Strafgesetzbuch (Strafbare Handlungen gegen die sexuelle Integrität; Verbot des Besitzes harter Pornografie) (Betrifft nur den italienischen Text)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code pénal suisse (Infractions contre l'intégrité sexuelle; interdiction de la possession d'objets ou de représentations relevant de la pornographie dure) (Ne concerne que le texte italien)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice penale svizzero"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "311.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/104"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-02-17"
+        "value": "RO 2004 915"
       },
       "titleDe": {
         "type": "literal",
@@ -1237,6 +1353,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-02-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 915"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Schweizerisches Strafgesetzbuch (Strafbare Handlungen gegen die sexuelle Integrität; Verbot des Besitzes harter Pornografie) (Betrifft nur den italienischen Text)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code pénal suisse (Infractions contre l'intégrité sexuelle; interdiction de la possession d'objets ou de représentations relevant de la pornographie dure) (Ne concerne que le texte italien)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice penale svizzero"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "311.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/104"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-02-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 915"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Strafgesetzbuch (Strafbare Handlungen gegen die sexuelle Integrität; Verbot des Besitzes harter Pornografie) (Betrifft nur den italienischen Text)"
@@ -1269,37 +1425,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-10-03"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Schweizerisches Strafgesetzbuch (Strafverfolgung in der Ehe und in der Partnerschaft)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code pénal suisse (Poursuite des infractions entre conjoints ou partenaires)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice penale svizzero (Perseguimento dei reati commessi tra coniugi o tra partner)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "311.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/176"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-10-03"
+        "value": "RO 2004 1403"
       },
       "titleDe": {
         "type": "literal",
@@ -1333,6 +1461,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-10-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 1403"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Schweizerisches Strafgesetzbuch (Strafverfolgung in der Ehe und in der Partnerschaft)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code pénal suisse (Poursuite des infractions entre conjoints ou partenaires)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice penale svizzero (Perseguimento dei reati commessi tra coniugi o tra partner)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "311.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/176"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-10-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 1403"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Strafgesetzbuch (Strafverfolgung in der Ehe und in der Partnerschaft)"
@@ -1365,37 +1533,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-10-03"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Schweizerisches Strafgesetzbuch"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code pénal suisse"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice penale svizzero"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "311.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/92"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-03-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-10-03"
+        "value": "RO 2004 823"
       },
       "titleDe": {
         "type": "literal",
@@ -1429,6 +1569,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-10-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 823"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Schweizerisches Strafgesetzbuch"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code pénal suisse"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice penale svizzero"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "311.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/92"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-03-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-10-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 823"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Strafgesetzbuch"
@@ -1460,6 +1640,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-03-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 1165"
       },
       "titleDe": {
         "type": "literal",
@@ -1493,6 +1677,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-03-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 1165"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Strafgesetzbuch, Militärstrafgesetz (Betrifft nur den italienischen Text)"
@@ -1525,6 +1713,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-03-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 1165"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Strafgesetzbuch, Militärstrafgesetz (Betrifft nur den italienischen Text)"
@@ -1557,37 +1749,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-12-02"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die vorzeitige Inkraftsetzung von Artikel 386 der Änderung vom 13. Dezember 2002 des Strafgesetzbuches"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la mise en vigueur anticipée de l'art. 386 de la modification du 13 décembre 2002 du code pénal"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'entrata in vigore anticipata dell'articolo 386 della modifica del 13 dicembre 2002 del Codice penale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "311.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2005/783"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-12-02"
+        "value": "RO 2005 5723"
       },
       "titleDe": {
         "type": "literal",
@@ -1621,6 +1785,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-12-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5723"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die vorzeitige Inkraftsetzung von Artikel 386 der Änderung vom 13. Dezember 2002 des Strafgesetzbuches"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la mise en vigueur anticipée de l'art. 386 de la modification du 13 décembre 2002 du code pénal"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'entrata in vigore anticipata dell'articolo 386 della modifica del 13 dicembre 2002 del Codice penale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "311.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/783"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-12-02"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5723"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die vorzeitige Inkraftsetzung von Artikel 386 der Änderung vom 13. Dezember 2002 des Strafgesetzbuches"
@@ -1653,37 +1857,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-10-07"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesbeschluss über die Genehmigung und die Umsetzung des Abkommens zwischen der Schweiz und dem Europäischen Polizeiamt"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Arrêté fédéral portant approbation et mise en uvre de l'Accord entre la Confédération suisse et l'Office européen de police"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Decreto federale che approva e traspone nel diritto svizzero l'Accordo tra la Confederazione Svizzera e l'Ufficio europeo di polizia"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "311.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/180"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-10-07"
+        "value": "RO 2006 1017"
       },
       "titleDe": {
         "type": "literal",
@@ -1717,6 +1893,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-10-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 1017"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesbeschluss über die Genehmigung und die Umsetzung des Abkommens zwischen der Schweiz und dem Europäischen Polizeiamt"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Arrêté fédéral portant approbation et mise en uvre de l'Accord entre la Confédération suisse et l'Office européen de police"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Decreto federale che approva e traspone nel diritto svizzero l'Accordo tra la Confederazione Svizzera e l'Ufficio europeo di polizia"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "311.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/180"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-10-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 1017"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung und die Umsetzung des Abkommens zwischen der Schweiz und dem Europäischen Polizeiamt"
@@ -1749,37 +1965,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-12-13"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Schweizerisches Strafgesetzbuch"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code pénal suisse"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice penale svizzero"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "311.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/549"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-12-13"
+        "value": "RO 2006 3459"
       },
       "titleDe": {
         "type": "literal",
@@ -1813,6 +2001,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-12-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 3459"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Schweizerisches Strafgesetzbuch"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code pénal suisse"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice penale svizzero"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "311.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/549"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-12-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 3459"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Strafgesetzbuch"
@@ -1844,6 +2072,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-03-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 3539"
       },
       "titleDe": {
         "type": "literal",
@@ -1877,6 +2109,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-03-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 3539"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Strafgesetzbuch und Militärstrafgesetz (Korrekturen am Sanktions- und Strafregisterrecht)"
@@ -1909,6 +2145,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-03-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 3539"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Strafgesetzbuch und Militärstrafgesetz (Korrekturen am Sanktions- und Strafregisterrecht)"
@@ -1941,37 +2181,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-07-06"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Strafgesetzbuch (StGB)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code pénal (CP)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice penale (CP)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "311.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/555"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-07-06"
+        "value": "RO 2006 3583"
       },
       "titleDe": {
         "type": "literal",
@@ -2005,6 +2217,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-07-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 3583"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Strafgesetzbuch (StGB)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code pénal (CP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice penale (CP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "311.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/555"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-07-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 3583"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Strafgesetzbuch (StGB)"
@@ -2037,37 +2289,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-03-24"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesbeschluss über die Genehmigung und die Umsetzung des Fakultativprotokolls vom 25. Mai 2000 zum Übereinkommen über die Rechte des Kindes, betreffend den Verkauf von Kindern, die Kinderprostitution und die Kinderpornografie"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Arrêté fédéral portant approbation et mise en uvre du Protocole facultatif du 25 mai 2000 se rapportant à la Convention relative aux droits de l'enfant, concernant la vente d'enfants, la prostitution des enfants et la pornographie mettant en scène des enfants"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Decreto federale che approva e traspone nel diritto svizzero il Protocollo facoltativo del 25 maggio 2000 alla Convenzione sui diritti del fanciullo concernente la vendita di fanciulli, la prostituzione infantile e la pedopornografia"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "311.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/823"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-12-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-03-24"
+        "value": "RO 2006 5437"
       },
       "titleDe": {
         "type": "literal",
@@ -2101,6 +2325,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-03-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 5437"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesbeschluss über die Genehmigung und die Umsetzung des Fakultativprotokolls vom 25. Mai 2000 zum Übereinkommen über die Rechte des Kindes, betreffend den Verkauf von Kindern, die Kinderprostitution und die Kinderpornografie"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Arrêté fédéral portant approbation et mise en uvre du Protocole facultatif du 25 mai 2000 se rapportant à la Convention relative aux droits de l'enfant, concernant la vente d'enfants, la prostitution des enfants et la pornographie mettant en scène des enfants"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Decreto federale che approva e traspone nel diritto svizzero il Protocollo facoltativo del 25 maggio 2000 alla Convenzione sui diritti del fanciullo concernente la vendita di fanciulli, la prostituzione infantile e la pedopornografia"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "311.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/823"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-12-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-03-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 5437"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung und die Umsetzung des Fakultativprotokolls vom 25. Mai 2000 zum Übereinkommen über die Rechte des Kindes, betreffend den Verkauf von Kindern, die Kinderprostitution und die Kinderpornografie"
@@ -2133,37 +2397,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-09-17"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Strafgesetzbuch (StGB) (Betrifft nur den französischen Text)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code pénal (CP)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice penale (CP) (Concerne solo il testo francese)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "311.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/636"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-09-17"
+        "value": "RO 2007 4523"
       },
       "titleDe": {
         "type": "literal",
@@ -2197,6 +2433,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-09-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 4523"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Strafgesetzbuch (StGB) (Betrifft nur den französischen Text)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code pénal (CP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice penale (CP) (Concerne solo il testo francese)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "311.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/636"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-09-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 4523"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Strafgesetzbuch (StGB) (Betrifft nur den französischen Text)"
@@ -2229,37 +2505,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-05-07"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über eine weitere teilweise Inkraftsetzung des Bundesbeschlusses über die Genehmigung und die Umsetzung der bilateralen Abkommen zwischen der Schweiz und der EU über die Assoziierung an Schengen und an Dublin"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'entrée en vigueur partielle de l'arrêté fédéral portant approbation et mise en oeuvre des accords bilatéraux d'association à l'Espace Schengen et à l'Espace Dublin"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'entrata in vigore parziale del decreto federale che approva e traspone nel diritto svizzero gli accordi bilaterali con l'UE per l'associazione della Svizzera alla normativa di Schengen e Dublino"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "311.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2008/324"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-06-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-05-07"
+        "value": "RO 2008 2227"
       },
       "titleDe": {
         "type": "literal",
@@ -2293,6 +2541,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-05-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2227"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über eine weitere teilweise Inkraftsetzung des Bundesbeschlusses über die Genehmigung und die Umsetzung der bilateralen Abkommen zwischen der Schweiz und der EU über die Assoziierung an Schengen und an Dublin"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'entrée en vigueur partielle de l'arrêté fédéral portant approbation et mise en oeuvre des accords bilatéraux d'association à l'Espace Schengen et à l'Espace Dublin"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'entrata in vigore parziale del decreto federale che approva e traspone nel diritto svizzero gli accordi bilaterali con l'UE per l'associazione della Svizzera alla normativa di Schengen e Dublino"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "311.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/324"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-05-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2227"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über eine weitere teilweise Inkraftsetzung des Bundesbeschlusses über die Genehmigung und die Umsetzung der bilateralen Abkommen zwischen der Schweiz und der EU über die Assoziierung an Schengen und an Dublin"
@@ -2325,37 +2613,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-12-21"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Schweizerisches Strafgesetzbuch (Lebenslängliche Verwahrung extrem gefährlicher Straftäter)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code pénal suisse (Internement à vie des délinquants extrêmement dangereux)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice penale svizzero (Internamento a vita di criminali estremamente pericolosi)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "311.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2008/413"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-08-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-12-21"
+        "value": "RO 2008 2961"
       },
       "titleDe": {
         "type": "literal",
@@ -2389,6 +2649,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-12-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2961"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Schweizerisches Strafgesetzbuch (Lebenslängliche Verwahrung extrem gefährlicher Straftäter)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code pénal suisse (Internement à vie des délinquants extrêmement dangereux)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice penale svizzero (Internamento a vita di criminali estremamente pericolosi)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "311.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/413"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-12-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2961"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Strafgesetzbuch (Lebenslängliche Verwahrung extrem gefährlicher Straftäter)"
@@ -2421,37 +2721,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-03-20"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Strafgesetzbuch"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Code pénal"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Codice penale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "311.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2008/631"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-03-20"
+        "value": "RO 2008 4501"
       },
       "titleDe": {
         "type": "literal",
@@ -2485,6 +2757,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-03-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 4501"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Strafgesetzbuch"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Code pénal"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Codice penale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "311.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/631"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-03-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 4501"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Strafgesetzbuch"
@@ -2517,6 +2829,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 361"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz zur Umsetzung der revidierten Empfehlungen der Groupe d'action financière"
@@ -2549,6 +2865,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 361"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz zur Umsetzung der revidierten Empfehlungen der Groupe d'action financière"
@@ -2580,6 +2900,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 361"
       },
       "titleDe": {
         "type": "literal",
@@ -2612,6 +2936,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-06-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4963"
       },
       "titleDe": {
         "type": "literal",
@@ -2645,6 +2973,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-06-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4963"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Änderung von Bundesgesetzen zur Umsetzung des Römer Statuts des Internationalen Strafgerichtshofs"
@@ -2676,6 +3008,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-06-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4963"
       },
       "titleDe": {
         "type": "literal",
@@ -2708,6 +3044,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-02-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 487"
       },
       "titleDe": {
         "type": "literal",
@@ -2741,6 +3081,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-02-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 487"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Armee und die Militärverwaltung (Militärgesetz, MG)"
@@ -2772,6 +3116,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-02-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 487"
       },
       "titleDe": {
         "type": "literal",
@@ -2804,6 +3152,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-03-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 6293"
       },
       "titleDe": {
         "type": "literal",
@@ -2837,6 +3189,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-03-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 6293"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung und die Umsetzung des Übereinkommens des Europarates über die Cyberkriminalität"
@@ -2868,6 +3224,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-03-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 6293"
       },
       "titleDe": {
         "type": "literal",
@@ -2900,6 +3260,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-09-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 2575"
       },
       "titleDe": {
         "type": "literal",
@@ -2933,6 +3297,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-09-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 2575"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Strafgesetzbuch"
@@ -2964,6 +3332,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-09-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 2575"
       },
       "titleDe": {
         "type": "literal",
@@ -2996,6 +3368,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 5951"
       },
       "titleDe": {
         "type": "literal",
@@ -3029,6 +3405,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 5951"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz zur Umsetzung von Artikel 123<i>b</i> der Bundesverfassung über die Unverjährbarkeit sexueller und pornografischer Straftaten an Kindern vor der Pubertät (Änderung des Strafgesetzbuches, des Militärstrafgesetzes und des Jugendstrafgesetzes)"
@@ -3060,6 +3440,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 5951"
       },
       "titleDe": {
         "type": "literal",
@@ -3092,6 +3476,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 7501"
       },
       "titleDe": {
         "type": "literal",
@@ -3125,6 +3513,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 7501"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Zivilgesetzbuch (Erwachsenenschutz, Personenrecht und Kindesrecht)"
@@ -3156,6 +3548,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 7501"
       },
       "titleDe": {
         "type": "literal",
@@ -3188,6 +3584,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-02-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 845"
       },
       "titleDe": {
         "type": "literal",
@@ -3221,6 +3621,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-02-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 845"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Zivilgesetzbuch (Erwachsenenschutz, Personenrecht und Kindesrecht)"
@@ -3252,6 +3656,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-02-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 845"
       },
       "titleDe": {
         "type": "literal",
@@ -3284,6 +3692,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-06-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4417"
       },
       "titleDe": {
         "type": "literal",
@@ -3317,6 +3729,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-06-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4417"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Strafgesetzbuch. Militärstrafgesetz (Verlängerung der Verfolgungsverjährung)"
@@ -3348,6 +3764,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-06-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4417"
       },
       "titleDe": {
         "type": "literal",
@@ -3380,6 +3800,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-09-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1159"
       },
       "titleDe": {
         "type": "literal",
@@ -3413,6 +3837,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-09-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1159"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung und Umsetzung des Übereinkommens des Europarats zum Schutz von Kindern vor sexueller Ausbeutung und sexuellem Missbrauch (Lanzarote-Konvention)"
@@ -3444,6 +3872,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-09-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1159"
       },
       "titleDe": {
         "type": "literal",
@@ -3476,6 +3908,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-12-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 2055"
       },
       "titleDe": {
         "type": "literal",
@@ -3509,6 +3945,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-12-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 2055"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über das Tätigkeitsverbot und das Kontakt- und Rayonverbot (Änderung des Strafgesetzbuchs, des Militärstrafgesetzes und des Jugendstrafgesetzes)"
@@ -3540,6 +3980,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-12-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 2055"
       },
       "titleDe": {
         "type": "literal",
@@ -3572,6 +4016,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-09-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1623"
       },
       "titleDe": {
         "type": "literal",
@@ -3605,6 +4053,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-09-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1623"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über das Informationsrecht des Opfers (Änderung des Strafgesetzbuchs, des Jugendstrafgesetzes, der Strafprozessordnung und des Militärstrafprozesses)"
@@ -3636,6 +4088,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-09-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1623"
       },
       "titleDe": {
         "type": "literal",
@@ -3668,6 +4124,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1249"
       },
       "titleDe": {
         "type": "literal",
@@ -3701,6 +4161,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1249"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Strafgesetzbuch und Militärstrafgesetz (Änderungen des Sanktionenrechts)"
@@ -3732,6 +4196,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1249"
       },
       "titleDe": {
         "type": "literal",
@@ -3764,6 +4232,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1287"
       },
       "titleDe": {
         "type": "literal",
@@ -3797,6 +4269,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1287"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Strafgesetzbuch (Korruptionsstrafrecht)"
@@ -3828,6 +4304,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1287"
       },
       "titleDe": {
         "type": "literal",
@@ -3860,6 +4340,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1831"
       },
       "titleDe": {
         "type": "literal",
@@ -3893,6 +4377,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1831"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Verbesserungen beim Informationsaustausch zwischen Behörden im Umgang mit Waffen"
@@ -3924,6 +4412,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1831"
       },
       "titleDe": {
         "type": "literal",
@@ -3956,6 +4448,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-03-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2329"
       },
       "titleDe": {
         "type": "literal",
@@ -3989,6 +4485,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-03-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2329"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Strafgesetzbuch und Militärstrafgesetz (Umsetzung von Art. 121 Abs. 36 BV über die Ausschaffung krimineller Ausländerinnen und Ausländer)"
@@ -4020,6 +4520,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-03-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2329"
       },
       "titleDe": {
         "type": "literal",
@@ -4052,6 +4556,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-12-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4687"
       },
       "titleDe": {
         "type": "literal",
@@ -4085,6 +4593,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-12-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4687"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung und die Umsetzung des Internationalen Übereinkommens zum Schutz aller Personen vor dem Verschwindenlassen"
@@ -4116,6 +4628,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-12-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4687"
       },
       "titleDe": {
         "type": "literal",
@@ -4148,6 +4664,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-07-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 3695"
       },
       "titleDe": {
         "type": "literal",
@@ -4181,6 +4701,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-07-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 3695"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Strafgesetzbuch und Militärstrafgesetz (Umsetzung von Art. 121 Abs. 36 BV über die Ausschaffung krimineller Ausländerinnen und Ausländer) (Betrifft nur den französichen Text)"
@@ -4212,6 +4736,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-07-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 3695"
       },
       "titleDe": {
         "type": "literal",
@@ -4244,6 +4772,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-11-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 7257"
       },
       "titleDe": {
         "type": "literal",
@@ -4277,6 +4809,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-11-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 7257"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Strafgesetzbuch und Militärstrafgesetz (Umsetzung von Art. 121 Abs. 36 BV über die Ausschaffung krimineller Ausländerinnen und Ausländer) (Betrifft nur den französichen Text)"
@@ -4308,6 +4844,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-11-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 7257"
       },
       "titleDe": {
         "type": "literal",
@@ -4341,6 +4881,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-03-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3803"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Strafgesetzbuch und Militärstrafgesetz (Umsetzung von Art. 123c BV)"
@@ -4373,6 +4917,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-03-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3803"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Strafgesetzbuch und Militärstrafgesetz (Umsetzung von Art. 123c BV)"
@@ -4405,6 +4953,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-06-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 567"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Strafgesetzbuch (Veröffentlichung amtlicher geheimer Verhandlungen)"
@@ -4437,6 +4989,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-06-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 567"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Strafgesetzbuch (Veröffentlichung amtlicher geheimer Verhandlungen)"
@@ -4468,6 +5024,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-06-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 567"
       },
       "titleDe": {
         "type": "literal",
@@ -4500,6 +5060,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-12-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1809"
       },
       "titleDe": {
         "type": "literal",
@@ -4533,6 +5097,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-12-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1809"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Änderung der Wiedergutmachungsregelung (Änderung des Strafgesetzbuchs, des Jugendstrafgesetzes und des Militärstrafgesetzes)"
@@ -4564,6 +5132,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-12-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1809"
       },
       "titleDe": {
         "type": "literal",
@@ -4596,6 +5168,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-02-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 623"
       },
       "titleDe": {
         "type": "literal",
@@ -4629,6 +5205,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-02-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 623"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Strafgesetzbuch (Betrifft nur den französischen Text)"
@@ -4660,6 +5240,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-02-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 623"
       },
       "titleDe": {
         "type": "literal",
@@ -4692,6 +5276,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-12-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1609"
       },
       "titleDe": {
         "type": "literal",
@@ -4725,6 +5313,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-12-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1609"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Strafgesetzbuch und Militärstrafgesetz (Diskriminierung und Aufruf zu Hass aufgrund der sexuellen Orientierung)"
@@ -4756,6 +5348,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-12-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1609"
       },
       "titleDe": {
         "type": "literal",
@@ -5173,6 +5769,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1937-12-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 54 781"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Strafgesetzbuch vom 21. Dezember 1937"
@@ -5205,6 +5805,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1937-12-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 54 781"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Strafgesetzbuch vom 21. Dezember 1937"
@@ -5237,6 +5841,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1937-12-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 54 781"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerisches Strafgesetzbuch vom 21. Dezember 1937"
@@ -5268,6 +5876,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1937-12-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 54 781"
       },
       "titleDe": {
         "type": "literal",

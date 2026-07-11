@@ -1,7 +1,7 @@
 {
   "erlassKey": "CO2_GESETZ",
   "sr": "641.71",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -39,13 +39,13 @@
       "dateEntryInForce": "2020-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/752",
       "dateDocument": "2019-03-22",
-      "roFundstelle": "AS 2019 752",
+      "roFundstelle": "AS 2019 4327",
       "titelDe": "Bundesbeschluss über die Genehmigung des Abkommens zwischen der Schweiz und der Europäischen Union zur Verknüpfung der Emissionshandelssysteme und über seine Umsetzung (Änderung des CO2-Gesetzes)",
       "titelFr": "Arrêté fédéral portant approbation et mise en uvre (modification de la loi sur le CO2) de l'Accord conclu entre la Suisse et l'Union européenne sur le couplage de leurs systèmes d'échange de quotas d'émission",
       "titelIt": "Decreto federale che approva l'Accordo tra la Svizzera e l'Unione europea sul collegamento dei rispettivi sistemi di scambio di quote di emissioni di gas a effetto serra e lo traspone nel diritto svizzero (modifica della legge sul COsub>2)",
       "botschaftKey": "BOTSCHAFT-2018-109",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/752/de",
-      "sha": "46a8285f4c0f3031c8d50ce2b255599ba6dd1a167524ee56009255fa2813c1a2"
+      "sha": "b94eb4cbb7f3a8f636119ad9f142b614d1188c1a7c8ad1b017607d63e4b8cbf4"
     },
     {
       "art": "sammelerlass-marker",
@@ -58,64 +58,64 @@
       "dateEntryInForce": "2013-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/855",
       "dateDocument": "2011-12-23",
-      "roFundstelle": "AS 2012 855",
+      "roFundstelle": "AS 2012 6989",
       "titelDe": "Bundesgesetz über die Reduktion der CO2-Emissionen (CO2-Gesetz)",
       "titelFr": "Loi fédérale sur la réduction des émissions de CO2 (Loi sur le CO2)",
       "titelIt": "Legge federale sulla riduzione delle emissioni di CO2 (Legge sul CO2)",
       "botschaftKey": "BOTSCHAFT-2009-1323",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/855/de",
-      "sha": "db6dfbe44ddae4686c7a07e7689c76a7337a525f01229f9f3c10b1f0c7683cd8"
+      "sha": "26926b42cd2171bd3d7751894a3bfe2792a1b3916e3ab225dd8ce842c37182c2"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2012-05-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/23",
       "dateDocument": "2011-03-18",
-      "roFundstelle": "AS 2012 23",
+      "roFundstelle": "AS 2012 351",
       "titelDe": "Bundesgesetz über die Reduktion der CO2-Emissionen (CO2-Gesetz)",
       "titelFr": "Loi fédérale sur la réduction des émissions de CO2 (Loi sur le CO2)",
       "titelIt": "Legge federale sulla riduzione delle emissioni di CO2 (Legge sul CO2)",
       "botschaftKey": "BOTSCHAFT-2010-181",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/23/de",
-      "sha": "abf72398ab25e2b78158f9a7b79dc33e361624a6f2ee5b4a9b1a00aeb6bd7e42"
+      "sha": "55a3a0dc3c2bd4fc659ba2547d738a4e21ee0525b75373b385b3c36ddbe5ccbd"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2011-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/5",
       "dateDocument": "2010-06-18",
-      "roFundstelle": "AS 2011 5",
+      "roFundstelle": "AS 2011 13",
       "titelDe": "Bundesgesetz über die Reduktion der CO2-Emissionen (CO2-Gesetz)",
       "titelFr": "Loi fédérale sur la réduction des émissions de CO2 (Loi sur le CO2)",
       "titelIt": "Legge federale sulla riduzione delle emissioni di CO2 (Legge sul CO2)",
       "botschaftKey": "BOTSCHAFT-2008-1554",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/5/de",
-      "sha": "a2587b515595c85bec3adf716f29c12445310b4b92511de26922d30bed4b74ff"
+      "sha": "30079919a1280442b45f60e256f03757b81d2455d6c307de19dcff1b82001bdb"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2010-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/152",
       "dateDocument": "2009-06-12",
-      "roFundstelle": "AS 2010 152",
+      "roFundstelle": "AS 2010 951",
       "titelDe": "Bundesgesetz über die Reduktion der CO2-Emissionen (CO2-Gesetz) (Anreize für energetisch wirksame Massnahmen im Gebäudebereich)",
       "titelFr": "Loi fédérale sur la réduction des émissions de CO2 (Loi sur le CO2) (Mesures incitatives visant à encourager les économies d'énergie dans le bâtiment)",
       "titelIt": "Legge federale sulla riduzione delle emissioni di CO2 (Legge sul CO2) (Incentivi per l'adozione di misure di efficienza energetica negli edifici)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/152/de",
-      "sha": "49e6066e7879009fc335f96aa7d65644e26d02170a4594914c339fd0d26dfc98"
+      "sha": "10dc5817323bd1f0bd0740683a1d93509371431b3002938e5ef5c1494c639b31"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2000-05-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/148",
       "dateDocument": "1999-10-08",
-      "roFundstelle": "AS 2000 148",
+      "roFundstelle": "AS 2000 979",
       "titelDe": "Bundesgesetz über die Reduktion der CO2-Emissionen (CO2-Gesetz)",
       "titelFr": "Loi fédérale sur la réduction des émissions de CO2 (Loi sur le CO2)",
       "titelIt": "Legge federale sulla riduzione delle emissioni di CO2 (Legge sul CO2)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/148/de",
-      "sha": "bcb9d773345b0de983d8e207b1a50b5d8c45316fe9572608959c74a8feb6e3b6"
+      "sha": "5410b6f79807cca46fea26c7c436c4d3964057e1cfa64e49dc95d91e6169bac0"
     }
   ],
-  "sha": "801027330d7632b1cb47fcbb93ef6f99833e3e2c5ad511fae75290c25a421718"
+  "sha": "c3a551f6ab5749a7423d1c423a57ffb0c3c120260bc9c3e5b626983530e468d2"
 }

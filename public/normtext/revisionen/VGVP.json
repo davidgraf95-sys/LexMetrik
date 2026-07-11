@@ -1,7 +1,7 @@
 {
   "erlassKey": "VGVP",
   "sr": "814.621",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -46,13 +46,13 @@
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/299",
       "dateDocument": "2000-07-05",
-      "roFundstelle": "AS 2000 299",
+      "roFundstelle": "AS 2000 1949",
       "titelDe": "Verordnung über Getränkeverpackungen (VGV)",
       "titelFr": "Ordonnance sur les emballages pour boissons (OEB)",
       "titelIt": "Ordinanza sugli imballaggi per bevande (OIB)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/299/de",
-      "sha": "7b3c162a0adf2936b05d0555410152587d8f32a7b9b02fd84f209918bc80f156"
+      "sha": "881055aa645610914f282be060d957357ee84367417ae46997f3f12ec4b277cf"
     }
   ],
-  "sha": "7ef3282df4fa1345f26eb254af8be5a99fa6885b987c5e973e1d192d3377d23a"
+  "sha": "71a8288e31a0bf45d94f5b5860611d9520254b432df87a79f17d784f54b7a86c"
 }

@@ -21,6 +21,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-03-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2355"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Gerichtsstand in Zivilsachen (Gerichtsstandsgesetz, GestG)"
@@ -53,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-03-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2355"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Gerichtsstand in Zivilsachen (Gerichtsstandsgesetz, GestG)"
@@ -85,6 +93,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-03-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2355"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Gerichtsstand in Zivilsachen (Gerichtsstandsgesetz, GestG)"
@@ -116,6 +128,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-03-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2355"
       },
       "titleDe": {
         "type": "literal",
@@ -148,6 +164,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-12-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1739"
       },
       "titleDe": {
         "type": "literal",
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-12-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1739"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerische Zivilprozessordnung (Zivilprozessordnung, ZPO)"
@@ -212,6 +236,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-12-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1739"
       },
       "titleDe": {
         "type": "literal",
@@ -244,6 +272,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-03-31"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1861"
       },
       "titleDe": {
         "type": "literal",
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-03-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1861"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die abschliessende Inkraftsetzung der Änderung vom 25. September 2009 des Zivilgesetzbuches (Bedenkzeit im Scheidungsverfahren auf gemeinsames Begehren)"
@@ -308,6 +344,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-03-31"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1861"
       },
       "titleDe": {
         "type": "literal",
@@ -340,6 +380,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-12-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5601"
       },
       "titleDe": {
         "type": "literal",
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-12-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5601"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung und die Umsetzung des Übereinkommens über die gerichtliche Zuständigkeit und die Anerkennung und Vollstreckung von Entscheidungen in Zivil- und Handelssachen (Lugano-Übereinkommen)"
@@ -404,6 +452,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-12-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5601"
       },
       "titleDe": {
         "type": "literal",
@@ -436,6 +488,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-09-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 851"
       },
       "titleDe": {
         "type": "literal",
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-09-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 851"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Schweizerische Zivilprozessordnung und Schweizerische Strafprozessordnung (Protokollierungsvorschriften)"
@@ -500,6 +560,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-09-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 851"
       },
       "titleDe": {
         "type": "literal",

@@ -1,7 +1,7 @@
 {
   "erlassKey": "ARGV3",
   "sr": "822.113",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -15,12 +15,12 @@
       "dateEntryInForce": "2015-10-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/214",
       "dateDocument": "2015-04-01",
-      "roFundstelle": "AS 2015 214",
+      "roFundstelle": "AS 2015 1079",
       "titelDe": "Verordnung 3 zum Arbeitsgesetz (Gesundheitsvorsorge, ArGV 3)",
       "titelFr": "Ordonnance 3 relative à la loi sur le travail (Hygiène, OLT 3)",
       "titelIt": "Ordinanza 3 concernente la legge sul lavoro (Igiene, OLL 3)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/214/de",
-      "sha": "5380c5742d3e215372036d54ce0ab5c82fcff6770cbc371b8d116c5db423d461"
+      "sha": "ecbe8ae8169ee37845c8fabbf3a4332bd4144cbbc4dbf2890b084df732dc6aa8"
     },
     {
       "art": "sammelerlass-marker",
@@ -59,5 +59,5 @@
       "sha": "8d34ee22028eac75dcb7f4009fa9e24e6a47a4b420724215b8a149d96e704246"
     }
   ],
-  "sha": "48a54bdd77fe2f8723c64d8669c2684f493819e0260a8c954b5800bdec7421a7"
+  "sha": "5bf728e3854e9c569e92fa83b7b9b56f6c8bc2b669dc35b035a42ebbbfcb0896"
 }

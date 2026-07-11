@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1986-12-15"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Lärmschutz-Verordnung vom 15. Dezember 1986 (LSV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 15 décembre 1986 sur la protection contre le bruit (OPB)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 15 dicembre 1986 contro l'inquinamento fonico (OIF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "814.41"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1987/338_338_338"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1987-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1986-12-15"
+        "value": "RO 1987 338"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1986-12-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1987 338"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Lärmschutz-Verordnung vom 15. Dezember 1986 (LSV)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1986-12-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1987 338"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Lärmschutz-Verordnung vom 15. Dezember 1986 (LSV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 15 décembre 1986 sur la protection contre le bruit (OPB)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 15 dicembre 1986 contro l'inquinamento fonico (OIF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "814.41"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1987/338_338_338"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1987-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1986-12-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1987 338"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Lärmschutz-Verordnung vom 15. Dezember 1986 (LSV)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-04-12"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Lärmschutz-Verordnung (LSV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la protection contre le bruit (OPB)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza contro l'inquinamento fonico (OIF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "814.41"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/218"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-05-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-04-12"
+        "value": "RO 2000 1388"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-04-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1388"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Lärmschutz-Verordnung (LSV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la protection contre le bruit (OPB)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza contro l'inquinamento fonico (OIF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "814.41"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/218"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-05-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-04-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1388"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Lärmschutz-Verordnung (LSV)"
@@ -245,6 +273,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-05-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1610"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Lärmschutz-Verordnung (LSV)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-05-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1610"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Lärmschutz-Verordnung (LSV)"
@@ -308,6 +344,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-05-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1610"
       },
       "titleDe": {
         "type": "literal",
@@ -341,37 +381,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-09-01"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Lärmschutz-Verordnung (LSV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la protection contre le bruit (OPB)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza contro l'inquinamento fonico (OIF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "814.41"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/623"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-09-01"
+        "value": "RO 2004 4167"
       },
       "titleDe": {
         "type": "literal",
@@ -405,6 +417,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-09-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 4167"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Lärmschutz-Verordnung (LSV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la protection contre le bruit (OPB)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza contro l'inquinamento fonico (OIF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "814.41"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/623"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-09-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 4167"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Lärmschutz-Verordnung (LSV)"
@@ -436,6 +488,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-10-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 4313"
       },
       "titleDe": {
         "type": "literal",
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-10-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 4313"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Lärmschutz-Verordnung vom 15. Dezember 1986 (LSV)"
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-10-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 4313"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Lärmschutz-Verordnung vom 15. Dezember 1986 (LSV)"
@@ -533,37 +597,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-05-09"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Lärmschutz-Verordnung (LSV) (Betrifft nur den italienischen Text)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la protection contre le bruit (OPB) (Ne concerne que le texte italien)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza contro l'inquinamento fonico (OIF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "814.41"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/279"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-05-09"
+        "value": "RO 2006 1789"
       },
       "titleDe": {
         "type": "literal",
@@ -597,6 +633,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-05-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 1789"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Lärmschutz-Verordnung (LSV) (Betrifft nur den italienischen Text)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la protection contre le bruit (OPB) (Ne concerne que le texte italien)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza contro l'inquinamento fonico (OIF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "814.41"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/279"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-05-09"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 1789"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Lärmschutz-Verordnung (LSV) (Betrifft nur den italienischen Text)"
@@ -629,6 +705,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-08-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 3693"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Lärmschutz-Verordnung (LSV)"
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-08-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 3693"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Lärmschutz-Verordnung (LSV)"
@@ -693,69 +777,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-08-23"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Lärmschutz-Verordnung (LSV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la protection contre le bruit (OPB)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza contro l'inquinamento fonico (OIF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "814.41"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/433"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-08-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-06-30"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Lärmschutz-Verordnung (LSV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la protection contre le bruit (OPB)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza contro l'inquinamento fonico (OIF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "814.41"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/433"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-08-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-06-30"
+        "value": "RO 2006 3693"
       },
       "titleDe": {
         "type": "literal",
@@ -789,6 +813,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-06-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 3223"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Lärmschutz-Verordnung (LSV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la protection contre le bruit (OPB)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza contro l'inquinamento fonico (OIF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "814.41"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/433"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-06-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 3223"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Lärmschutz-Verordnung (LSV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la protection contre le bruit (OPB)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza contro l'inquinamento fonico (OIF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "814.41"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/433"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-06-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 3223"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Lärmschutz-Verordnung (LSV)"
@@ -820,6 +920,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 7507"
       },
       "titleDe": {
         "type": "literal",
@@ -853,6 +957,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 7507"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Lärmschutz-Verordnung vom 15. Dezember 1986 (LSV) (Betrifft nur den französischen Text)"
@@ -885,6 +993,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 7507"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Lärmschutz-Verordnung vom 15. Dezember 1986 (LSV) (Betrifft nur den französischen Text)"
@@ -917,6 +1029,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-11-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 4501"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Lärmschutz-Verordnung (LSV)"
@@ -949,6 +1065,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-11-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 4501"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Lärmschutz-Verordnung (LSV)"
@@ -981,6 +1101,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-11-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 4501"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Lärmschutz-Verordnung (LSV)"
@@ -1013,6 +1137,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-02-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 965"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Lärmschutz-Verordnung (LSV)"
@@ -1045,6 +1173,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-02-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 965"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Lärmschutz-Verordnung (LSV)"
@@ -1076,6 +1208,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-02-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 965"
       },
       "titleDe": {
         "type": "literal",
@@ -1108,6 +1244,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-05-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1337"
       },
       "titleDe": {
         "type": "literal",
@@ -1141,6 +1281,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-05-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1337"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Lärmschutz-Verordnung (LSV) (Betrifft nur den französischen Text)"
@@ -1172,6 +1316,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-05-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1337"
       },
       "titleDe": {
         "type": "literal",

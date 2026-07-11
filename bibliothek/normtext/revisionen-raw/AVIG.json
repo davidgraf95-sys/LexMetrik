@@ -21,6 +21,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1982-06-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1982 2184"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 25. Juni 1982 über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
@@ -53,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1982-06-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1982 2184"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 25. Juni 1982 über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
@@ -85,6 +93,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1982-06-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1982 2184"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 25. Juni 1982 über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
@@ -116,6 +128,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1982-06-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1982 2184"
       },
       "titleDe": {
         "type": "literal",
@@ -148,6 +164,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-03-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 1289"
       },
       "titleDe": {
         "type": "literal",
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-03-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 1289"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Finanzierung der Arbeitslosenversicherung"
@@ -212,6 +236,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-03-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 1289"
       },
       "titleDe": {
         "type": "literal",
@@ -245,6 +273,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-11-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 3613"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Aufhebung des Bundesbeschlusses über die Finanzierung der Arbeitslosenversicherung"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-11-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 3613"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Aufhebung des Bundesbeschlusses über die Finanzierung der Arbeitslosenversicherung"
@@ -309,37 +345,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-23"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung  und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance chômage, LACI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "837.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/467"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-06-23"
+        "value": "RO 2000 2772"
       },
       "titleDe": {
         "type": "literal",
@@ -373,6 +381,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2772"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung  und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance chômage, LACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/467"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-06-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2772"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung  und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
@@ -405,37 +453,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-23"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance chômage, LACI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "837.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/562"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-06-23"
+        "value": "RO 2000 3093"
       },
       "titleDe": {
         "type": "literal",
@@ -469,6 +489,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 3093"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance chômage, LACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/562"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-06-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 3093"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
@@ -501,37 +561,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-11-29"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die vorzeitige Inkraftsetzung von Absatz 3 der Übergangsbestimmung zur Änderung vom 22. März 2002 des Arbeitslosenversicherungsgesetzes"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la mise en vigueur anticipée de l'al. 3 des dispositions transitoires de la modification du 22 mars 2002 de la loi sur l'assurance-chômage"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente la messa in vigore anticipata del capoverso 3 della disposizione transitoria della modifica del 22 marzo 2002 della legge sull'assicurazione contro la disoccupazione"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "837.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/693"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-11-29"
+        "value": "RO 2002 4288"
       },
       "titleDe": {
         "type": "literal",
@@ -565,6 +597,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-11-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 4288"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die vorzeitige Inkraftsetzung von Absatz 3 der Übergangsbestimmung zur Änderung vom 22. März 2002 des Arbeitslosenversicherungsgesetzes"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la mise en vigueur anticipée de l'al. 3 des dispositions transitoires de la modification du 22 mars 2002 de la loi sur l'assurance-chômage"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente la messa in vigore anticipata del capoverso 3 della disposizione transitoria della modifica del 22 marzo 2002 della legge sull'assicurazione contro la disoccupazione"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/693"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-11-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 4288"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die vorzeitige Inkraftsetzung von Absatz 3 der Übergangsbestimmung zur Änderung vom 22. März 2002 des Arbeitslosenversicherungsgesetzes"
@@ -597,37 +669,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-03-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance-chômage, LACI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "837.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/260"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-03-22"
+        "value": "RO 2003 1728"
       },
       "titleDe": {
         "type": "literal",
@@ -661,6 +705,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-03-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 1728"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance-chômage, LACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/260"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-03-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 1728"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
@@ -692,6 +776,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-05-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 1755"
       },
       "titleDe": {
         "type": "literal",
@@ -725,6 +813,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-05-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 1755"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die vollständige Inkraftsetzung der Änderung vom 22. März 2002 des Arbeitslosenversicherungsgesetzes"
@@ -757,6 +849,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-05-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 1755"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die vollständige Inkraftsetzung der Änderung vom 22. März 2002 des Arbeitslosenversicherungsgesetzes"
@@ -789,6 +885,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-03-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 1167"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
@@ -821,6 +921,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-03-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 1167"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
@@ -853,69 +957,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-03-19"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance-chômage, LACI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "837.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/73"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-09-30"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance-chômage, LACI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "837.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/73"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-09-30"
+        "value": "RO 2011 1167"
       },
       "titleDe": {
         "type": "literal",
@@ -949,6 +993,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-09-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 495"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance-chômage, LACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/73"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-09-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 495"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Loi sur l'assurance-chômage, LACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Legge sull'assicurazione contro la disoccupazione, LADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/73"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-09-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 495"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
@@ -981,6 +1101,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-06-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 3519"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
@@ -1013,6 +1137,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-06-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 3519"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)"
@@ -1044,6 +1172,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-06-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 3519"
       },
       "titleDe": {
         "type": "literal",
@@ -1076,6 +1208,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-09-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 3847"
       },
       "titleDe": {
         "type": "literal",
@@ -1109,6 +1245,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-09-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 3847"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG) (Zusatzfinanzierung Arbeitslosenversicherung)"
@@ -1140,6 +1280,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-09-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 3847"
       },
       "titleDe": {
         "type": "literal",

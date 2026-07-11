@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-04-12"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le système d'information central sur la migration (Ordonnance SYMIC)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente il sistema d'informazione centrale sulla migrazione (Ordinanza SIMIC)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.513"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/303"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-05-29"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-04-12"
+        "value": "RO 2006 1945"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-04-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 1945"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-04-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 1945"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le système d'information central sur la migration (Ordonnance SYMIC)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente il sistema d'informazione centrale sulla migrazione (Ordinanza SIMIC)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.513"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/303"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-05-29"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-04-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 1945"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5615"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5615"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)"
@@ -212,6 +236,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5615"
       },
       "titleDe": {
         "type": "literal",
@@ -245,37 +273,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-11-16"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le système d'information central sur la migration (Ordonnance SYMIC)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente il sistema d'informazione centrale sulla migrazione (Ordinanza SIMIC)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.513"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/750"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-12-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-11-16"
+        "value": "RO 2011 5197"
       },
       "titleDe": {
         "type": "literal",
@@ -309,37 +309,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-11-16"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le système d'information central sur la migration (Ordonnance SYMIC)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente il sistema d'informazione centrale sulla migrazione (Ordinanza SIMIC)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.513"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/242"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-12-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-04-11"
+        "value": "RO 2011 5197"
       },
       "titleDe": {
         "type": "literal",
@@ -361,7 +333,7 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/242"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/750"
       },
       "dateForce": {
         "type": "typed-literal",
@@ -371,7 +343,11 @@
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-04-11"
+        "value": "2011-11-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 5197"
       },
       "titleDe": {
         "type": "literal",
@@ -405,6 +381,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-04-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 1675"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le système d'information central sur la migration (Ordonnance SYMIC)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente il sistema d'informazione centrale sulla migrazione (Ordinanza SIMIC)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.513"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/242"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-12-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-04-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 1675"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le système d'information central sur la migration (Ordonnance SYMIC)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente il sistema d'informazione centrale sulla migrazione (Ordinanza SIMIC)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.513"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/242"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-12-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-04-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 1675"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)"
@@ -436,6 +488,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-05-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1231"
       },
       "titleDe": {
         "type": "literal",
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-05-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1231"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS Verordnung)"
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-05-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1231"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS Verordnung)"
@@ -533,37 +597,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-02"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le système d'information central sur la migration (Ordonnance SYMIC)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente il sistema d'informazione centrale sulla migrazione (Ordinanza SIMIC)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.513"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/573"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-09-02"
+        "value": "RO 2015 3047"
       },
       "titleDe": {
         "type": "literal",
@@ -597,6 +633,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 3047"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le système d'information central sur la migration (Ordonnance SYMIC)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente il sistema d'informazione centrale sulla migrazione (Ordinanza SIMIC)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.513"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/573"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-09-02"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 3047"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)"
@@ -629,6 +705,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 3731"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)"
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 3731"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)"
@@ -692,6 +776,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 3731"
       },
       "titleDe": {
         "type": "literal",
@@ -725,6 +813,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 2177"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)"
@@ -757,6 +849,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 2177"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)"
@@ -789,69 +885,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le système d'information central sur la migration (Ordonnance SYMIC)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente il sistema d'informazione centrale sulla migrazione (Ordinanza SIMIC)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.513"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2018/716"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2019-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-11-21"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le système d'information central sur la migration (Ordonnance SYMIC)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente il sistema d'informazione centrale sulla migrazione (Ordinanza SIMIC)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.513"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2018/716"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2019-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-11-21"
+        "value": "RO 2017 2177"
       },
       "titleDe": {
         "type": "literal",
@@ -885,6 +921,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-11-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 4569"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le système d'information central sur la migration (Ordonnance SYMIC)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente il sistema d'informazione centrale sulla migrazione (Ordinanza SIMIC)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.513"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/716"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-11-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 4569"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le système d'information central sur la migration (Ordonnance SYMIC)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente il sistema d'informazione centrale sulla migrazione (Ordinanza SIMIC)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.513"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/716"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-11-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 4569"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)"
@@ -916,6 +1028,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-04-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1257"
       },
       "titleDe": {
         "type": "literal",
@@ -949,6 +1065,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-04-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1257"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Lieferung von biometrischen Daten an und Zugriffe im Migrationsbereich auf das N-SIS"
@@ -981,6 +1101,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-04-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1257"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Lieferung von biometrischen Daten an und Zugriffe im Migrationsbereich auf das N-SIS"
@@ -1013,6 +1137,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-05-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1453"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)"
@@ -1045,6 +1173,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-05-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1453"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)"
@@ -1076,6 +1208,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-05-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1453"
       },
       "titleDe": {
         "type": "literal",
@@ -1108,6 +1244,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-02-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 933"
       },
       "titleDe": {
         "type": "literal",
@@ -1141,6 +1281,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-02-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 933"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)"
@@ -1172,6 +1316,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-02-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 933"
       },
       "titleDe": {
         "type": "literal",

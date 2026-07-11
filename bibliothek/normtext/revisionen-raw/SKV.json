@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-28"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Kontrolle des Strassenverkehrs (Strassenverkehrskontrollverordnung, SKV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le contrôle de la circulation routière (OCCR)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sul controllo della circolazione stradale (OCCS)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.013"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/296"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-03-28"
+        "value": "RO 2007 2081"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 2081"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Kontrolle des Strassenverkehrs (Strassenverkehrskontrollverordnung, SKV)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 2081"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Kontrolle des Strassenverkehrs (Strassenverkehrskontrollverordnung, SKV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le contrôle de la circulation routière (OCCR)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul controllo della circolazione stradale (OCCS)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.013"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/296"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-03-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 2081"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Kontrolle des Strassenverkehrs (Strassenverkehrskontrollverordnung, SKV)"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-06-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 3139"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Kontrolle des Strassenverkehrs (Strassenverkehrskontrollverordnung, SKV)"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-06-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 3139"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Kontrolle des Strassenverkehrs (Strassenverkehrskontrollverordnung, SKV)"
@@ -212,6 +236,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-06-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 3139"
       },
       "titleDe": {
         "type": "literal",
@@ -245,37 +273,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-11-04"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung zur Anpassung von Verordnungen im Rahmen der ersten Phase der Bahnreform 2"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance portant adaptation d'ordonnances dans le cadre de la première phase de la réforme des chemins de fer 2"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza che adegua ordinanze nell'ambito della prima fase della Riforma delle ferrovia 2"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.013"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/729"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-11-04"
+        "value": "RO 2009 5959"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +309,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-11-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5959"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung zur Anpassung von Verordnungen im Rahmen der ersten Phase der Bahnreform 2"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance portant adaptation d'ordonnances dans le cadre de la première phase de la réforme des chemins de fer 2"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza che adegua ordinanze nell'ambito della prima fase della Riforma delle ferrovia 2"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.013"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/729"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-11-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5959"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zur Anpassung von Verordnungen im Rahmen der ersten Phase der Bahnreform 2"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-05-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 2355"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Kontrolle des Strassenverkehrs (Strassenverkehrskontrollverordnung, SKV)"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-05-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 2355"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Kontrolle des Strassenverkehrs (Strassenverkehrskontrollverordnung, SKV)"
@@ -405,69 +453,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-05-11"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Kontrolle des Strassenverkehrs (Strassenverkehrskontrollverordnung, SKV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le contrôle de la circulation routière (OCCR)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sul controllo della circolazione stradale (OCCS)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.013"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/711"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-10-12"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung über die Kontrolle des Strassenverkehrs (Strassenverkehrskontrollverordnung, SKV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le contrôle de la circulation routière (OCCR)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sul controllo della circolazione stradale (OCCS)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "741.013"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/711"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-10-12"
+        "value": "RO 2011 2355"
       },
       "titleDe": {
         "type": "literal",
@@ -501,6 +489,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-10-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4929"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Kontrolle des Strassenverkehrs (Strassenverkehrskontrollverordnung, SKV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le contrôle de la circulation routière (OCCR)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul controllo della circolazione stradale (OCCS)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.013"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/711"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-10-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4929"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Kontrolle des Strassenverkehrs (Strassenverkehrskontrollverordnung, SKV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le contrôle de la circulation routière (OCCR)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul controllo della circolazione stradale (OCCS)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "741.013"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/711"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-10-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4929"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Kontrolle des Strassenverkehrs (Strassenverkehrskontrollverordnung, SKV)"
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-11-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4671"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Kontrolle des Strassenverkehrs (Strassenverkehrskontrollverordnung, SKV)"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-11-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4671"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Kontrolle des Strassenverkehrs (Strassenverkehrskontrollverordnung, SKV)"
@@ -596,6 +668,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-11-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 4671"
       },
       "titleDe": {
         "type": "literal",
@@ -629,6 +705,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-07-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2585"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Kontrolle des Strassenverkehrs (Strassenverkehrskontrollverordnung, SKV)"
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-07-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2585"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Kontrolle des Strassenverkehrs (Strassenverkehrskontrollverordnung, SKV)"
@@ -693,6 +777,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-07-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2585"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Kontrolle des Strassenverkehrs (Strassenverkehrskontrollverordnung, SKV)"
@@ -725,6 +813,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-11-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 239"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Kontrolle des Strassenverkehrs (Strassenverkehrskontrollverordnung, SKV)"
@@ -757,6 +849,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-11-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 239"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Kontrolle des Strassenverkehrs (Strassenverkehrskontrollverordnung, SKV)"
@@ -788,6 +884,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-11-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 239"
       },
       "titleDe": {
         "type": "literal",

@@ -21,6 +21,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1891-12-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 12 369"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung Nr. 1 zum Bundesgesetz über Schuldbetreibung und Konkurs: Reglement über die im Betreibungs- und Konkursverfahren zu verwendenden Formulare und Register und die Rechnungsführung"
@@ -53,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1891-12-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 12 369"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung Nr. 1 zum Bundesgesetz über Schuldbetreibung und Konkurs: Reglement über die im Betreibungs- und Konkursverfahren zu verwendenden Formulare und Register und die Rechnungsführung"
@@ -85,6 +93,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1891-12-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 12 369"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung Nr. 1 zum Bundesgesetz über Schuldbetreibung und Konkurs: Reglement über die im Betreibungs- und Konkursverfahren zu verwendenden Formulare und Register und die Rechnungsführung"
@@ -117,69 +129,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1996-06-05"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 5. Juni 1996 über die im Betreibungs- und Konkursverfahren zu verwendenden Formulare und Register sowie die Rechnungsführung (VFRR)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 5 juin 1996 sur les formulaires et registres à employer en matière de poursuite pour dettes et de faillite et sur la comptabilité (Oform)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Regolamento del 5 giugno 1996 sui formulari e registri da impiegare in tema d'esecuzione e di fallimento e sulla contabilità (Rform)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "281.31"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1996/2877_2877_2877"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1997-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1996-06-05"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung vom 5. Juni 1996 über die im Betreibungs- und Konkursverfahren zu verwendenden Formulare und Register sowie die Rechnungsführung (VFRR)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 5 juin 1996 sur les formulaires et registres à employer en matière de poursuite pour dettes et de faillite et sur la comptabilité (Oform)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Regolamento del 5 giugno 1996 sui formulari e registri da impiegare in tema d'esecuzione e di fallimento e sulla contabilità (Rform)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "281.31"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1996/2877_2877_2877"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1997-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1996-06-05"
+        "value": "RO 1996 2877"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +165,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1996-06-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1996 2877"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 5. Juni 1996 über die im Betreibungs- und Konkursverfahren zu verwendenden Formulare und Register sowie die Rechnungsführung (VFRR)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 5 juin 1996 sur les formulaires et registres à employer en matière de poursuite pour dettes et de faillite et sur la comptabilité (Oform)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Regolamento del 5 giugno 1996 sui formulari e registri da impiegare in tema d'esecuzione e di fallimento e sulla contabilità (Rform)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "281.31"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1996/2877_2877_2877"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1997-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1996-06-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1996 2877"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 5. Juni 1996 über die im Betreibungs- und Konkursverfahren zu verwendenden Formulare und Register sowie die Rechnungsführung (VFRR)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 5 juin 1996 sur les formulaires et registres à employer en matière de poursuite pour dettes et de faillite et sur la comptabilité (Oform)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Regolamento del 5 giugno 1996 sui formulari e registri da impiegare in tema d'esecuzione e di fallimento e sulla contabilità (Rform)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "281.31"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1996/2877_2877_2877"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1997-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1996-06-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1996 2877"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 5. Juni 1996 über die im Betreibungs- und Konkursverfahren zu verwendenden Formulare und Register sowie die Rechnungsführung (VFRR)"
@@ -245,6 +273,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-10-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 4007"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die im Betreibungs- und Konkursverfahren zu verwendenden Formulare und Register sowie die Rechnungsführung (VFRR)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-10-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 4007"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die im Betreibungs- und Konkursverfahren zu verwendenden Formulare und Register sowie die Rechnungsführung (VFRR)"
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-10-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 4007"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die im Betreibungs- und Konkursverfahren zu verwendenden Formulare und Register sowie die Rechnungsführung (VFRR)"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-11-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 4295"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die im Betreibungs- und Konkursverfahren zu verwendenden Formulare und Register sowie die Rechnungsführung (VFRR)"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-11-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 4295"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die im Betreibungs- und Konkursverfahren zu verwendenden Formulare und Register sowie die Rechnungsführung (VFRR)"
@@ -404,6 +452,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-11-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 4295"
       },
       "titleDe": {
         "type": "literal",

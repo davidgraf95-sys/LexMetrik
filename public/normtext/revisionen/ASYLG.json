@@ -1,7 +1,7 @@
 {
   "erlassKey": "ASYLG",
   "sr": "142.31",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -108,13 +108,13 @@
       "dateEntryInForce": "2020-11-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/742",
       "dateDocument": "2019-12-20",
-      "roFundstelle": "AS 2020 742",
+      "roFundstelle": "AS 2020 3989",
       "titelDe": "Asylgesetz (AsylG)",
       "titelFr": "Loi sur l'asile (LAsi)",
       "titelIt": "Legge sull'asilo (LAsi)",
       "botschaftKey": "BOTSCHAFT-2018-2305",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/742/de",
-      "sha": "a28b1858355eee4a0a66c17873066d078daefab6f1b9cf15e5e78eb15489d7b8"
+      "sha": "27006a8d8c2d9f4cd1d697d5b158b290dfe039e35aa42b7c716a7576d7075c74"
     },
     {
       "art": "sammelerlass-marker",
@@ -139,12 +139,12 @@
       "dateEntryInForce": "2019-03-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/438",
       "dateDocument": "2018-06-08",
-      "roFundstelle": "AS 2018 438",
+      "roFundstelle": "AS 2018 2855",
       "titelDe": "Verordnung über die abschliessende Inkraftsetzung der Änderung vom 25. September 2015 des Asylgesetzes",
       "titelFr": "Ordonnance portant dernière mise en vigueur de la modification du 25 septembre 2015 de la loi sur l'asile",
       "titelIt": "Ordinanza sull'entrata in vigore integrale della modifica del 25 settembre 2015 della legge sull'asilo",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/438/de",
-      "sha": "3e360319d45eb5369a1c01aa11a6fd65389526784fac1734c7563bcf9a3bf180"
+      "sha": "21537f35d4c5b8d734f70449367c6f2cda7c41d557c7062b544e0d56ecb8d018"
     },
     {
       "art": "sammelerlass-marker",
@@ -157,25 +157,25 @@
       "dateEntryInForce": "2018-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/685",
       "dateDocument": "2017-10-25",
-      "roFundstelle": "AS 2017 685",
+      "roFundstelle": "AS 2017 6171",
       "titelDe": "Verordnung über eine Teilinkraftsetzung der Änderung vom 25. September 2015 des Asylgesetzes",
       "titelFr": "Ordonnance portant mise en vigueur partielle de la modification du 25 septembre 2015 de la loi sur l'asile",
       "titelIt": "Ordinanza concernente l'entrata in vigore parziale della modifica del 25 settembre 2015 della legge sull'asilo",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/685/de",
-      "sha": "37d1c82b04e07605574f943d3f0616cbbf4684c446c98551a2468721b4c72a96"
+      "sha": "bcdb3e7cfbcb90db8a356892b33bec08ffcdcd5ff55db8c87a2a478986b5f21c"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2016-10-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/521",
       "dateDocument": "2015-09-25",
-      "roFundstelle": "AS 2016 521",
+      "roFundstelle": "AS 2016 3101",
       "titelDe": "Asylgesetz (AsylG)",
       "titelFr": "Loi sur l'asile (LAsi)",
       "titelIt": "Legge sull'asilo (LAsi)",
       "botschaftKey": "BOTSCHAFT-2014-1715",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/521/de",
-      "sha": "1c1b2f0ec3eb446d6ba78ea55089cd00249ec6aaf52a9647882458e8a8e071c4"
+      "sha": "5bf5996956a05cf7c4c4cd0e2bf23d1eb9bcc58f3d13eb2907df906a3416dbbc"
     },
     {
       "art": "sammelerlass-marker",
@@ -194,13 +194,13 @@
       "dateEntryInForce": "2015-09-29",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/379",
       "dateDocument": "2014-09-26",
-      "roFundstelle": "AS 2015 379",
+      "roFundstelle": "AS 2015 2047",
       "titelDe": "Asylgesetz (AsylG) (Verlängerung der dringlichen Änderungen des Asylgesetzes)",
       "titelFr": "Loi sur l'asile (LAsi) (Prorogation des modifications urgentes de la loi sur l'asile)",
       "titelIt": "Legge sull'asilo (LAsi) (Proroga delle modifiche urgenti della legge sull'asilo)",
       "botschaftKey": "BOTSCHAFT-2014-405",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/379/de",
-      "sha": "4004a9324f350517fe9fa705f1794807f9ec80b6276d6481fd2a16446a55b846"
+      "sha": "dbd12ee6d6583804366aef43141ae0fd8f605b7b58a3778a626d4237c743d0cc"
     },
     {
       "art": "sammelerlass-marker",
@@ -213,13 +213,13 @@
       "dateEntryInForce": "2015-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/360",
       "dateDocument": "2014-09-26",
-      "roFundstelle": "AS 2015 360",
+      "roFundstelle": "AS 2015 1871",
       "titelDe": "Asylgesetz (AsylG)",
       "titelFr": "Loi sur l'asile (LAsi)",
       "titelIt": "Legge sull'asilo (LAsi)",
       "botschaftKey": "BOTSCHAFT-2014-708",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/360/de",
-      "sha": "0350aeebd7999e254c1facaf73973d594736fc6d727ab022c05b454faeb5f2b9"
+      "sha": "ce90f007a8d6be11e56c03bac35622739cc5fd7ba3ca787061cc317cbfce1aca"
     },
     {
       "art": "sammelerlass-marker",
@@ -232,25 +232,25 @@
       "dateEntryInForce": "2014-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/778",
       "dateDocument": "2012-12-14",
-      "roFundstelle": "AS 2013 778",
+      "roFundstelle": "AS 2013 4375",
       "titelDe": "Asylgesetz (AsylG)",
       "titelFr": "Loi sur l'asile (LAsi)",
       "titelIt": "Legge sull'asilo (LAsi)",
       "botschaftKey": "BOTSCHAFT-2011-1209",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/778/de",
-      "sha": "6b8977a74bb619a2c9e3f371a2afc9161e72c64bc471fac4382a1556ca865d21"
+      "sha": "aef30358aea66703cf4f98c28b20957489ad2d8b1b3926ec2812c43dc5150ed3"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2014-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/855",
       "dateDocument": "2013-12-13",
-      "roFundstelle": "AS 2013 855",
+      "roFundstelle": "AS 2013 5357",
       "titelDe": "Verordnung über eine Teilinkraftsetzung der Änderung vom 14. Dezember 2012 des Asylgesetzes",
       "titelFr": "Ordonnance sur la mise en vigueur partielle de la modification du 14 décembre 2012 de la loi sur l'asile",
       "titelIt": "Ordinanza concernente un'entrata in vigore parziale della modifica del 14 dicembre 2012 della legge sull'asilo",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/855/de",
-      "sha": "c51d7f2416c216beb8e012ae9c7b5c2b3c6c88448d09205fd74b06bff8d2dfcd"
+      "sha": "82b0bf4e4a18bd077da93a6943b51af0ccd91843a2277f704306b6ec37ebe6d6"
     },
     {
       "art": "sammelerlass-marker",
@@ -263,38 +263,38 @@
       "dateEntryInForce": "2013-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/419",
       "dateDocument": "2012-06-15",
-      "roFundstelle": "AS 2012 419",
+      "roFundstelle": "AS 2012 3655",
       "titelDe": "Verordnung über die Anpassung von Gesetzen infolge der Neugliederung der Departemente",
       "titelFr": "Ordonnance portant adaptation de lois par suite de la réorganisation des départements",
       "titelIt": "Ordinanza sull'adeguamento di disposizioni di legge a seguito della riorganizzazione dei dipartimenti",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/419/de",
-      "sha": "9f6f098bf252161a2a40619d87e3507e07b5725204bccb2fc1a29c1acb035a87"
+      "sha": "0022807af25ae204c7a9b472258ef7112960e567990fc7bf31443487d96ab61c"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2012-09-29",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/612",
       "dateDocument": "2012-09-28",
-      "roFundstelle": "AS 2012 612",
+      "roFundstelle": "AS 2012 5359",
       "titelDe": "Asylgesetz (AsylG)",
       "titelFr": "Loi sur l'asile (LAsi)",
       "titelIt": "Legge sull'asilo (LAsi)",
       "botschaftKey": "BOTSCHAFT-2010-794",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/612/de",
-      "sha": "e6c6b6c21eb5425c2e4e50db961e2ce2310ae8af24cefda417d4546288a46324"
+      "sha": "7fbfba75ec1db1aa3609a1db70ff2b1870c3072187bcc2c898b6bf89da88e6fb"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2011-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/137",
       "dateDocument": "2010-10-01",
-      "roFundstelle": "AS 2011 137",
+      "roFundstelle": "AS 2011 925",
       "titelDe": "Bundesgesetz über die Koordination des Asyl- und des Auslieferungsverfahrens",
       "titelFr": "Loi fédérale sur la coordination entre la procédure d'asile et la procédure d'extradition",
       "titelIt": "Legge federale sul coordinamento tra la procedura d'asilo e la procedura d'estradizione",
       "botschaftKey": "BOTSCHAFT-2010-264",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/137/de",
-      "sha": "e99c0df4d2bc316b0398f7ac901584c42966c0b2488288b7046bc932b6fd547e"
+      "sha": "389c0ef971393333ba39b9239942992e5abc498f5184e8df35e0c228478b72b1"
     },
     {
       "art": "sammelerlass-marker",
@@ -319,37 +319,37 @@
       "dateEntryInForce": "2008-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/765",
       "dateDocument": "2007-10-24",
-      "roFundstelle": "AS 2007 765",
+      "roFundstelle": "AS 2007 5573",
       "titelDe": "Verordnung über die vollständige Inkraftsetzung der Änderung vom 16. Dezember 2005 des Asylgesetzes",
       "titelFr": "Ordonnance concernant la mise en vigueur totale de la modification du 16 décembre 2005 de la loi sur l'asile",
       "titelIt": "Ordinanza sull'entrata in vigore completa della modifica del 16 dicembre 2005 della legge sull'asilo",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/765/de",
-      "sha": "9349c510e54ed53a883325133aef7285714427bfee714953362ffa9af1b66601"
+      "sha": "875b4525f26a64ae58861e84ec9c2ce3ff5f830fa00bcd84d3ba4ae4133e1f9d"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2008-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/766",
       "dateDocument": "2007-10-24",
-      "roFundstelle": "AS 2007 766",
+      "roFundstelle": "AS 2007 5575",
       "titelDe": "Verordnung über die vollständige Inkraftsetzung der Änderung des Bundesgesetzes vom 16. Dezember 2005 über die Krankenversicherung",
       "titelFr": "Ordonnance concernant la mise en vigueur totale de la modification du 16 décembre 2005 de la loi fédérale sur l'assurance-maladie (LAMal)",
       "titelIt": "Ordinanza sull'entrata in vigore completa della modifica del 16 dicembre 2005 della legge federale sull'assicurazione malattie",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/766/de",
-      "sha": "ff4d69bad0c32a5c5a239f12d657e5001783ffea09402ab058357d4a6c11cc49"
+      "sha": "910ff331dc73fd2f46868fb2c050487ece31fe6805a262de999b1e3963f40bc7"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2007-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/727",
       "dateDocument": "2005-12-16",
-      "roFundstelle": "AS 2006 727",
+      "roFundstelle": "AS 2006 4745",
       "titelDe": "Asylgesetz (AsylG)",
       "titelFr": "Loi sur l'asile (LAsi)",
       "titelIt": "Legge sull'asilo (LAsi)",
       "botschaftKey": "BOTSCHAFT-2002-1106",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/727/de",
-      "sha": "779d45b246bd7431a4062be84d369c5e32d226ff324edb84d3b3b3b204968572"
+      "sha": "7bb924e77d2cedc9817d5474e6cfeee273ba8de28ccd4a0affe3963a31de0e57"
     },
     {
       "art": "sammelerlass-marker",
@@ -374,12 +374,12 @@
       "dateEntryInForce": "1999-10-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/358",
       "dateDocument": "1998-06-26",
-      "roFundstelle": "AS 1999 358",
+      "roFundstelle": "AS 1999 2262",
       "titelDe": "Asylgesetz (AsylG)",
       "titelFr": "Loi sur l'asile (LAsi)",
       "titelIt": "Legge sull'asilo (LAsi)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/358/de",
-      "sha": "9c5735f3abab327800ed60880bb824dad7f768d512e4d8230d96a2a2b85d718e"
+      "sha": "5fa273ce0c758a01855b091371c473318a4ceb73b3c426396af04cb6aa85627a"
     },
     {
       "art": "aenderung",
@@ -394,5 +394,5 @@
       "sha": "055fb7408f04ea0ffb3a219e96a8cb11c56a0f4567c9779c39999f9a50076cc3"
     }
   ],
-  "sha": "717cfa6be21f14f8eb901a1456459557815f2aee0ce07f295ff455adb7a8a294"
+  "sha": "b6d78962eaa78a20b16c43291e9697e796d9c03e9aef4ed9ad41b2313d1dcc8b"
 }

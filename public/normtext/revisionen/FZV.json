@@ -1,7 +1,7 @@
 {
   "erlassKey": "FZV",
   "sr": "831.425",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -41,12 +41,12 @@
       "dateEntryInForce": "2020-10-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/681",
       "dateDocument": "2020-08-26",
-      "roFundstelle": "AS 2020 681",
+      "roFundstelle": "AS 2020 3755",
       "titelDe": "Verordnung über Änderungen in der beruflichen Vorsorge",
       "titelFr": "Ordonnance portant modification de dispositions dans la prévoyance professionnelle",
       "titelIt": "Ordinanza concernente modifiche nell'ambito della previdenza professionale",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/681/de",
-      "sha": "11ce97d583ba266685de7d43e450b4623318e10e2ad6179d3f752f239eb29b80"
+      "sha": "b26746d8f07191cafe19f4fa3d57a9d905bac9fda230d4d524dd74f57edcd464"
     },
     {
       "art": "sammelerlass-marker",
@@ -65,12 +65,12 @@
       "dateEntryInForce": "2013-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/752",
       "dateDocument": "2012-09-21",
-      "roFundstelle": "AS 2012 752",
+      "roFundstelle": "AS 2012 6345",
       "titelDe": "Verordnung über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsverordnung, FZV)",
       "titelFr": "Ordonnance sur le libre passage dans la prévoyance professionnelle vieillesse, survivants et invalidité (Ordonnance sur le libre passage, OLP)",
       "titelIt": "Ordinanza sul libero passaggio nella previdenza professionale per la vecchiaia, i superstiti e l'invalidità (Ordinanza sul libero passaggio, OLP)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/752/de",
-      "sha": "46206af499161dc8f9688bad9cbc5a17d087ca27851ac77abd181fa0e51fbf9d"
+      "sha": "d6cd56d6f0c32fec12087b98bf3d9068a0267aae07a94d9f7342f6809eea480e"
     },
     {
       "art": "sammelerlass-marker",
@@ -83,12 +83,12 @@
       "dateEntryInForce": "2011-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/623",
       "dateDocument": "2010-09-17",
-      "roFundstelle": "AS 2010 623",
+      "roFundstelle": "AS 2010 4431",
       "titelDe": "Verordnung über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsverordnung, FZV)",
       "titelFr": "Ordonnance sur le libre passage dans la prévoyance professionnelle vieillesse, survivants et invalidité (Ordonnance sur le libre passage, OLP)",
       "titelIt": "Ordinanza sul libero passaggio nella previdenza professionale per la vecchiaia, i superstiti e l'invalidità (Ordinanza sul libero passaggio, OLP)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/623/de",
-      "sha": "80f884417dc1aaa28e63bd11c28d298b62cfc41ec9b6db2f9ac618ae50bf5925"
+      "sha": "955c4571f55b877f4651d3fa9f80c1d77c65a033e0be7938efa7f87a17a58ef4"
     },
     {
       "art": "sammelerlass-marker",
@@ -125,24 +125,24 @@
       "dateEntryInForce": "2000-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/520",
       "dateDocument": "1999-11-24",
-      "roFundstelle": "AS 1999 520",
+      "roFundstelle": "AS 1999 3604",
       "titelDe": "Verordnung über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsverordnung, FZV)",
       "titelFr": "Ordonnance sur le libre passage dans la prévoyance professionnelle vieillesse, survivants et invalidité (Ordonnance sur le libre passage, OLP)",
       "titelIt": "Ordinanza sul libero passaggio nella previdenza professionale per la vecchiaia, i superstiti e l'invalidità (Ordinanza sul libero passaggio, OLP)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/520/de",
-      "sha": "2280832f6672d423c83bed0eff40246c6dc28572befeda9080e149e2097785e8"
+      "sha": "02bde3dd740b82ad2cd9fad171d7f79700027922497f4b6f8a876e19c11ca1c3"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "1999-05-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/285",
       "dateDocument": "1999-04-19",
-      "roFundstelle": "AS 1999 285",
+      "roFundstelle": "AS 1999 1773",
       "titelDe": "Verordnung über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsverordnung, FZV)",
       "titelFr": "Ordonnance sur le libre passage dans la prévoyance professionnelle vieillesse, survivants et invalidité (Ordonnance sur le libre passage, OLP)",
       "titelIt": "Ordinanza sul libero passaggio nella previdenza professionale per la vecchiaia, i superstiti e l'invalidità (Ordinanza sul libero passaggio, OLP)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/285/de",
-      "sha": "f4ed119cf53a54ba9ac672ffbb5cd9517807209937ae40b8fc996e200cb84de2"
+      "sha": "e1bd286718b6dd44c03eab4c217135a537869fefb01a8c9148ddb6ed95cb8745"
     },
     {
       "art": "aenderung",
@@ -169,5 +169,5 @@
       "sha": "51e1b3d45f3554d728c3d1ccae43ad1cfdd65031dba36ec4e1f2ef07abcc71b5"
     }
   ],
-  "sha": "811c043d791fd4a25e5ffc7d0febbd6f346c506f9361da2766b3b3cf2665454a"
+  "sha": "a56c79aa396e2a3263a125c6cabb3193b7fce500433700c79719cec65ee2400c"
 }

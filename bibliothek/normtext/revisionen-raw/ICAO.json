@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-12-08"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Luftfahrt (Luftfahrtverordnung, LFV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'aviation (OSAv)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla navigazione aerea (ONA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.748.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1999/424"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-11-04"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-12-08"
+        "value": "RO 1999 2691"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-12-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2691"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Luftfahrt (Luftfahrtverordnung, LFV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'aviation (OSAv)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla navigazione aerea (ONA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.748.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/424"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-11-04"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-12-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2691"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Luftfahrt (Luftfahrtverordnung, LFV)"
@@ -117,37 +129,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-03-10"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Lufttransportreglement (LTrR)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement de transport aérien (RTA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Regolamento di trasporto aereo (RTrA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.748.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1999/425"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-11-04"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-03-10"
+        "value": "RO 1999 2692"
       },
       "titleDe": {
         "type": "literal",
@@ -181,6 +165,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-03-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2692"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Lufttransportreglement (LTrR)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement de transport aérien (RTA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Regolamento di trasporto aereo (RTrA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.748.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/425"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-11-04"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-03-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2692"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Lufttransportreglement (LTrR)"
@@ -213,37 +237,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1990-10-26"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Übereinkommen vom 7. Dezember 1944 über die internationale Zivilluftfahrt"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention du 7 décembre 1944 relative à l'aviation civile internationale"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione del 7 dicembre 1944 relativa all'aviazione civile internazionale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.748.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/580"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1997-06-20"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1990-10-26"
+        "value": "RO 2004 3999"
       },
       "titleDe": {
         "type": "literal",
@@ -277,6 +273,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1990-10-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 3999"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 7. Dezember 1944 über die internationale Zivilluftfahrt"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 7 décembre 1944 relative à l'aviation civile internationale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 7 dicembre 1944 relativa all'aviazione civile internazionale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.748.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/580"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1997-06-20"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1990-10-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 3999"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 7. Dezember 1944 über die internationale Zivilluftfahrt"
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1989-10-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 3335"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 7. Dezember 1944 über die internationale Zivilluftfahrt"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1989-10-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 3335"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 7. Dezember 1944 über die internationale Zivilluftfahrt"
@@ -372,6 +416,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1989-10-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 3335"
       },
       "titleDe": {
         "type": "literal",
@@ -405,37 +453,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-03-07"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Änderung von Anhang 9 des Übereinkommens vom 7. Dezember 1944 über die internationale Zivilluftfahrt"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Modification de l'annexe 9 de la Convention du 7 décembre 1944 relative à l'aviation civile internationale"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Modifica dell'allegato 9 della Convenzione del 7 dicembre 1944 relativa all'aviazione civile internazionale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.748.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/22"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-07-11"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-03-07"
+        "value": "RO 2006 87"
       },
       "titleDe": {
         "type": "literal",
@@ -469,6 +489,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-03-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 87"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Änderung von Anhang 9 des Übereinkommens vom 7. Dezember 1944 über die internationale Zivilluftfahrt"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Modification de l'annexe 9 de la Convention du 7 décembre 1944 relative à l'aviation civile internationale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Modifica dell'allegato 9 della Convenzione del 7 dicembre 1944 relativa all'aviazione civile internazionale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.748.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/22"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-07-11"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-03-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 87"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Änderung von Anhang 9 des Übereinkommens vom 7. Dezember 1944 über die internationale Zivilluftfahrt"
@@ -501,37 +561,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-03-14"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Übereinkommen vom 7. Dezember 1944 über die internationale Zivilluftfahrt"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention du 7 décembre 1944 relative à l'aviation civile internationale"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione del 7 dicembre 1944 relativa all'aviazione civile internazionale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.748.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2008/238"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-03-14"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-03-14"
+        "value": "RO 2008 1647"
       },
       "titleDe": {
         "type": "literal",
@@ -565,6 +597,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-03-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 1647"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 7. Dezember 1944 über die internationale Zivilluftfahrt"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 7 décembre 1944 relative à l'aviation civile internationale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 7 dicembre 1944 relativa all'aviazione civile internazionale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.748.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/238"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-03-14"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-03-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 1647"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 7. Dezember 1944 über die internationale Zivilluftfahrt"
@@ -597,6 +669,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-02-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2941"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 7. Dezember 1944 über die internationale Zivilluftfahrt"
@@ -629,6 +705,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-02-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2941"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 7. Dezember 1944 über die internationale Zivilluftfahrt"
@@ -660,6 +740,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-02-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2941"
       },
       "titleDe": {
         "type": "literal",
@@ -693,37 +777,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-03-02"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Übereinkommens vom 7. Dezember 1944 über die internationale Zivilluftfahrt"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention du 7 décembre 1944 relative à l'aviation civile internationale"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione del 7 dicembre 1944 relativa all'aviazione civile internazionale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.748.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/501"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-11-18"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-03-02"
+        "value": "RO 2011 3617"
       },
       "titleDe": {
         "type": "literal",
@@ -757,6 +813,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-03-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3617"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommens vom 7. Dezember 1944 über die internationale Zivilluftfahrt"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 7 décembre 1944 relative à l'aviation civile internationale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 7 dicembre 1944 relativa all'aviazione civile internazionale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.748.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/501"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-11-18"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-03-02"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3617"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommens vom 7. Dezember 1944 über die internationale Zivilluftfahrt"
@@ -789,37 +885,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-08-12"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Übereinkommen vom 7. Dezember 1944 über die internationale Zivilluftfahrt"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention du 7 décembre 1944 relative à l'aviation civile internationale"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione del 7 dicembre 1944 relativa all'aviazione civile internazionale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.748.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2014/459"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-08-12"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-08-12"
+        "value": "RO 2014 2613"
       },
       "titleDe": {
         "type": "literal",
@@ -853,6 +921,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-08-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 2613"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 7. Dezember 1944 über die internationale Zivilluftfahrt"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 7 décembre 1944 relative à l'aviation civile internationale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 7 dicembre 1944 relativa all'aviazione civile internazionale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.748.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/459"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-08-12"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-08-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 2613"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 7. Dezember 1944 über die internationale Zivilluftfahrt"
@@ -885,6 +993,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1325"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 7. Dezember 1944 über die internationale Zivilluftfahrt"
@@ -917,6 +1029,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1325"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 7. Dezember 1944 über die internationale Zivilluftfahrt"
@@ -948,6 +1064,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1325"
       },
       "titleDe": {
         "type": "literal",
@@ -981,37 +1101,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-02-25"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Übereinkommen vom 7. Dezember 1944 über die internationale Zivilluftfahrt"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention du 7 décembre 1944 relative à l'aviation civile internationale"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione del 7 dicembre 1944 relativa all'aviazione civile internazionale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.748.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2016/637"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-02-25"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-02-25"
+        "value": "RO 2016 3807"
       },
       "titleDe": {
         "type": "literal",
@@ -1045,6 +1137,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-02-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 3807"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen vom 7. Dezember 1944 über die internationale Zivilluftfahrt"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 7 décembre 1944 relative à l'aviation civile internationale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 7 dicembre 1944 relativa all'aviazione civile internazionale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.748.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/637"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-02-25"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-02-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 3807"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 7. Dezember 1944 über die internationale Zivilluftfahrt"
@@ -1077,6 +1209,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-11-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4791"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 7. Dezember 1944 über die internationale Zivilluftfahrt"
@@ -1109,6 +1245,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-11-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4791"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 7. Dezember 1944 über die internationale Zivilluftfahrt"
@@ -1140,6 +1280,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-11-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4791"
       },
       "titleDe": {
         "type": "literal",
@@ -1173,6 +1317,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-04-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 3625"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Abkommen vom 7. Dezember 1944 über die internationale Zivilluftfahrt"
@@ -1205,6 +1353,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-04-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 3625"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Abkommen vom 7. Dezember 1944 über die internationale Zivilluftfahrt"
@@ -1237,69 +1389,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-04-27"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Abkommen vom 7. Dezember 1944 über die internationale Zivilluftfahrt"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention du 7 décembre 1944 relative à l'aviation civile internationale"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione del 7 dicembre 1944 relativa all'aviazione civile internazionale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.748.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2017/712"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-01-01"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Abkommen vom 7. Dezember 1944 über die internationale Zivilluftfahrt"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention du 7 décembre 1944 relative à l'aviation civile internationale"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione del 7 dicembre 1944 relativa all'aviazione civile internazionale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.748.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2017/712"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-01-01"
+        "value": "RO 2017 3625"
       },
       "titleDe": {
         "type": "literal",
@@ -1333,6 +1425,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-01-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6503"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Abkommen vom 7. Dezember 1944 über die internationale Zivilluftfahrt"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 7 décembre 1944 relative à l'aviation civile internationale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 7 dicembre 1944 relativa all'aviazione civile internazionale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.748.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2017/712"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-01-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6503"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Abkommen vom 7. Dezember 1944 über die internationale Zivilluftfahrt"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention du 7 décembre 1944 relative à l'aviation civile internationale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione del 7 dicembre 1944 relativa all'aviazione civile internazionale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.748.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2017/712"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-01-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6503"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Abkommen vom 7. Dezember 1944 über die internationale Zivilluftfahrt"
@@ -1365,6 +1533,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-11-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 5395"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Abkommen über die internationale Zivilluftfahrt vom 7. Dezember 1944"
@@ -1397,6 +1569,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-11-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 5395"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Abkommen über die internationale Zivilluftfahrt vom 7. Dezember 1944"
@@ -1429,6 +1605,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-11-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 5395"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Abkommen über die internationale Zivilluftfahrt vom 7. Dezember 1944"
@@ -1461,6 +1641,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-06-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2371"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 7. Dezember 1944 über die internationale Zivilluftfahrt"
@@ -1493,6 +1677,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-06-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2371"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 7. Dezember 1944 über die internationale Zivilluftfahrt"
@@ -1524,6 +1712,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-06-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2371"
       },
       "titleDe": {
         "type": "literal",
@@ -1556,6 +1748,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-11-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 3433"
       },
       "titleDe": {
         "type": "literal",
@@ -1589,6 +1785,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-11-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 3433"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Abkommen über die internationale Zivilluftfahrt vom 7. Dezember 1944"
@@ -1620,6 +1820,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-11-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 3433"
       },
       "titleDe": {
         "type": "literal",
@@ -1845,6 +2049,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1944-12-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 63 1378"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 7. Dezember 1944 über die internationale Zivilluftfahrt "
@@ -1877,6 +2085,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1944-12-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 63 1378"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 7. Dezember 1944 über die internationale Zivilluftfahrt "
@@ -1909,6 +2121,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1944-12-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 63 1378"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen vom 7. Dezember 1944 über die internationale Zivilluftfahrt "
@@ -1940,6 +2156,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1944-12-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 63 1378"
       },
       "titleDe": {
         "type": "literal",

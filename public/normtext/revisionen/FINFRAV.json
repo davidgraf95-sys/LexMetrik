@@ -1,7 +1,7 @@
 {
   "erlassKey": "FINFRAV",
   "sr": "958.11",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -57,12 +57,12 @@
       "dateEntryInForce": "2020-10-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/697",
       "dateDocument": "2020-09-04",
-      "roFundstelle": "AS 2020 697",
+      "roFundstelle": "AS 2020 3801",
       "titelDe": "Verordnung über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (Finanzmarktinfrastrukturverordnung, FinfraV)",
       "titelFr": "Ordonnance sur les infrastructures des marchés financiers et le comportement sur le marché en matière de négociation de valeurs mobilières et de dérivés (Ordonnance sur l'infrastructure des marchés financiers, OIMF)",
       "titelIt": "Ordinanza sulle infrastrutture del mercato finanziario e il comportamento sul mercato nel commercio di valori mobiliari e derivati (Ordinanza sull'infrastruttura finanziaria, OInFi)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/697/de",
-      "sha": "3ca09dbb03dd7b10d1ca6c750e020ba32f5eeb29feb4356aaad49b3ff9f2a5f9"
+      "sha": "c6c8851063c67ea362d04eff998074c57cddf83f160bccc9e11a91ca7095e205"
     },
     {
       "art": "sammelerlass-marker",
@@ -75,60 +75,60 @@
       "dateEntryInForce": "2019-08-31",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/478",
       "dateDocument": "2019-06-28",
-      "roFundstelle": "AS 2019 478",
+      "roFundstelle": "AS 2019 2577",
       "titelDe": "Verordnung über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (Finanzmarktinfrastrukturverordnung, FinfraV)",
       "titelFr": "Ordonnance sur les infrastructures des marchés financiers et le comportement sur le marché en matière de négociation de valeurs mobilières et de dérivés (Ordonnance sur l'infrastructure des marchés financiers, OIMF)",
       "titelIt": "Ordinanza sulle infrastrutture del mercato finanziario e il comportamento sul mercato nel commercio di valori mobiliari e derivati (Ordinanza sull'infrastruttura finanziaria, OInFi)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/478/de",
-      "sha": "e6a66c899287527ddcd0fbde31452fc3e617cc5cd9e0a8ef25dfaaaf0a7c8e46"
+      "sha": "72eee76fb087489d1da7f58556fa39e1c26e7724010001ee21a0957cdf77de08"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2019-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/548",
       "dateDocument": "2018-09-14",
-      "roFundstelle": "AS 2018 548",
+      "roFundstelle": "AS 2018 3377",
       "titelDe": "Verordnung über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (Finanzmarktinfrastrukturverordnung, FinfraV)",
       "titelFr": "Ordonnance sur les infrastructures des marchés financiers et le comportement sur le marché en matière de négociation de valeurs mobilières et de dérivés (Ordonnance sur l'infrastructure des marchés financiers, OIMF)",
       "titelIt": "Ordinanza sulle infrastrutture del mercato finanziario e il comportamento sul mercato nel commercio di valori mobiliari e derivati (Ordinanza sull'infrastruttura finanziaria, OInFi)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/548/de",
-      "sha": "3e72e5a3be48c65c4983b1ab4c0b079eb1eba1e05b5758fc659509e78b318f9f"
+      "sha": "54c002522e2144e8309193757b77c5bcc000a3c7d19d897330212d6c46a140b5"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2018-08-16",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/459",
       "dateDocument": "2018-07-26",
-      "roFundstelle": "AS 2018 459",
+      "roFundstelle": "AS 2018 2995",
       "titelDe": "Verordnung über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (Finanzmarktinfrastrukturverordnung, FinfraV)",
       "titelFr": "Ordonnance sur les infrastructures des marchés financiers et le comportement sur le marché en matière de négociation de valeurs mobilières et de dérivés (Ordonnance sur l'infrastructure des marchés financiers, OIMF)",
       "titelIt": "Ordinanza sulle infrastrutture del mercato finanziario e il comportamento sul mercato nel commercio di valori mobiliari e derivati (Ordinanza sull'infrastruttura finanziaria, OInFI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/459/de",
-      "sha": "dd13826a279187a972d3f4d7ffbc8ae92b7dbd9ab0195a4d5ac09ab9d2a41264"
+      "sha": "28bb270dff59611436c14fc8d22294ff63b15b67639c14456d116bfdbd887a7a"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2017-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/429",
       "dateDocument": "2017-07-05",
-      "roFundstelle": "AS 2017 429",
+      "roFundstelle": "AS 2017 3715",
       "titelDe": "Verordnung über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (Finanzmarktinfrastrukturverordnung, FinfraV)",
       "titelFr": "Ordonnance sur les infrastructures des marchés financiers et le comportement sur le marché en matière de négociation de valeurs mobilières et de dérivés (Ordonnance sur l'infrastructure des marchés financiers, OIMF)",
       "titelIt": "Ordinanza sulle infrastrutture del mercato finanziario e il comportamento sul mercato nel commercio di valori mobiliari e derivati (Ordinanza sull'infrastruttura finanziaria, OInFi)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/429/de",
-      "sha": "b508199abe241cdde7574f5e8ebe5c5a1be6140fc82857a536889df2a60cf430"
+      "sha": "16def6689d2cf749b47875de9284886f01b7dd46e35e131287c71a4be25afe7b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2016-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/434",
       "dateDocument": "2016-06-29",
-      "roFundstelle": "AS 2016 434",
+      "roFundstelle": "AS 2016 2703",
       "titelDe": "Verordnung über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (Finanzmarktinfrastrukturverordnung, FinfraV)",
       "titelFr": "Ordonnance sur les infrastructures des marchés financiers et le comportement sur le marché en matière de négociation de valeurs mobilières et de dérivés (Ordonnance sur l'infrastructure des marchés financiers, OIMF)",
       "titelIt": "Ordinanza sulle infrastrutture del mercato finanziario e il comportamento sul mercato nel commercio di valori mobiliari e derivati (Ordinanza sull'infrastruttura finanziaria, OInFi)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/434/de",
-      "sha": "f5026501fe85487e04fb2751ee09100281eac101696a25dbbd4be1fe2d792095"
+      "sha": "4354602a9b208fcf9b7803d2974f4012a162b09959ae8f4d5e0588cc23b2a1b2"
     },
     {
       "art": "sammelerlass-marker",
@@ -141,13 +141,13 @@
       "dateEntryInForce": "2016-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/854",
       "dateDocument": "2015-11-25",
-      "roFundstelle": "AS 2015 854",
+      "roFundstelle": "AS 2015 5413",
       "titelDe": "Verordnung über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (Finanzmarktinfrastrukturverordnung, FinfraV)",
       "titelFr": "Ordonnance sur les infrastructures des marchés financiers et le comportement sur le marché en matière de négociation de valeurs mobilières et de dérivés (Ordonnance sur l'infrastructure des marchés financiers, OIMF)",
       "titelIt": "Ordinanza sulle infrastrutture del mercato finanziario e il comportamento sul mercato nel commercio di valori mobiliari e derivati (Ordinanza sull'infrastruttura finanziaria, OInFi)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/854/de",
-      "sha": "86fe524659132c43313bd225e85108992c145bab3837a2eb6def0647c75afaaf"
+      "sha": "d5907c03d7e34b191ad32e31bee017d655d7a74b048ee382678e55a6ac399267"
     }
   ],
-  "sha": "d9060610f3c38b16083f43da68e95e86a1def3a1865053c0efdaaf570c4200a5"
+  "sha": "679397ff857c32e71ab2add27f0c0f6ba53cb2aa93c0cdd2e190af624d67e11c"
 }

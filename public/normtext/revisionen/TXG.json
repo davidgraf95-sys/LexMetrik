@@ -1,7 +1,7 @@
 {
   "erlassKey": "TXG",
   "sr": "810.21",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -22,13 +22,13 @@
       "dateEntryInForce": "2021-02-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/1066",
       "dateDocument": "2020-06-19",
-      "roFundstelle": "AS 2020 1066",
+      "roFundstelle": "AS 2020 6567",
       "titelDe": "Bundesbeschluss über die Genehmigung des Übereinkommens des Europarats gegen den Handel mit menschlichen Organen und über seine Umsetzung (Änderung des Transplantationsgesetzes und des Humanforschungsgesetzes)",
       "titelFr": "Arrêté fédéral portant approbation et mise en uvre de la Convention du Conseil de l'Europe contre le trafic d'organes humains (modification de la loi sur la transplantation et de la loi relative à la recherche sur l'être humain)",
       "titelIt": "Decreto federale che approva e traspone nel diritto svizzero la Convenzione del Consiglio d'Europa contro il traffico di organi umani (Modifica della legge sui trapianti e della legge sulla ricerca umana)",
       "botschaftKey": "BOTSCHAFT-2019-2178",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/1066/de",
-      "sha": "15637d0998aca3ff1d49411fd398d7b85836515c20cb2780477494672542119b"
+      "sha": "23aca1614e48790134df7728cdb92cc3a12f42589aae7347c15b3a318c668c93"
     },
     {
       "art": "sammelerlass-marker",
@@ -47,12 +47,12 @@
       "dateEntryInForce": "2017-11-15",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/607",
       "dateDocument": "2017-10-18",
-      "roFundstelle": "AS 2017 607",
+      "roFundstelle": "AS 2017 5629",
       "titelDe": "Verordnung über die abschliessende Inkraftsetzung der Änderung vom 19. Juni 2015 des Transplantationsgesetzes",
       "titelFr": "Ordonnance sur l'entrée en vigueur définitive de la modification du 19 juin 2015 de la loi sur la transplantation",
       "titelIt": "Ordinanza sull'entrata in vigore integrale della modifica del 19 giugno 2015 della legge sui trapianti",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/607/de",
-      "sha": "25317d939250989905ce306c18f8b0df28b50cdeed27baef1b440678e6da9c70"
+      "sha": "f638669adaafb0e6bfa4bbed55cee6f667e68e0192cb9714b28ae7934e5694bb"
     },
     {
       "art": "sammelerlass-marker",
@@ -65,13 +65,13 @@
       "dateEntryInForce": "2016-05-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/217",
       "dateDocument": "2015-06-19",
-      "roFundstelle": "AS 2016 217",
+      "roFundstelle": "AS 2016 1163",
       "titelDe": "Bundesgesetz über die Transplantation von Organen, Geweben und Zellen (Transplantationsgesetz)",
       "titelFr": "Loi fédérale sur la transplantation d'organes, de tissus et de cellules (Loi sur la transplantation)",
       "titelIt": "Legge federale sul trapianto di organi, tessuti e cellule (Legge sui trapianti)",
       "botschaftKey": "BOTSCHAFT-2013-414",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/217/de",
-      "sha": "63245f34bc1c42f847ebb779af3e73625e2baa095226223657c966eaed75c8b6"
+      "sha": "9933b4ba429f4c606b065b810d9da92b855de7b2d570e6fb7e0e21d527d72397"
     },
     {
       "art": "sammelerlass-marker",
@@ -96,14 +96,14 @@
       "dateEntryInForce": "2007-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/279",
       "dateDocument": "2004-10-08",
-      "roFundstelle": "AS 2007 279",
+      "roFundstelle": "AS 2007 1935",
       "titelDe": "Bundesgesetz über die Transplantation von Organen, Geweben und Zellen (Transplantationsgesetz)",
       "titelFr": "Loi fédérale sur la transplantation d'organes, de tissus et de cellules (Loi sur la transplantation)",
       "titelIt": "Legge federale sul trapianto di organi, tessuti e cellule (Legge sui trapianti)",
       "botschaftKey": "BOTSCHAFT-2002-13",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/279/de",
-      "sha": "73e622a0439935ec5fb0aa05f40621ece7214193f5e78aaf7a24d67a6c831810"
+      "sha": "ff3729d1250888b2d510e9ebbd8a9165992690fb7232b133eaf3977d854bbba2"
     }
   ],
-  "sha": "4b0543d0990e67fad8cfb4e83d83e0c7bb13308297fde420ea314a22ef8f9e1b"
+  "sha": "cbe4df7f1bde838e5c193abd093251497cb7fdc1d81a276967cff104b98d9ecb"
 }

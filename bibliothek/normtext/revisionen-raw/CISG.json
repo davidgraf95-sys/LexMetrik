@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1980-04-11"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Übereinkommen der Vereinten Nationen vom 11. April 1980 über Verträge über den internationalen Warenkauf"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention des Nations Unies du 11 avril 1980 sur les contrats de vente internationale de marchandises"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione delle Nazioni Unite dell'11 aprile 1980 sui contratti di compravendita internazionale di merci"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.221.211.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1991/307_307_307"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1991-03-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1980-04-11"
+        "value": "RO 1991 307"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1980-04-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1991 307"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen der Vereinten Nationen vom 11. April 1980 über Verträge über den internationalen Warenkauf"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1980-04-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1991 307"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen der Vereinten Nationen vom 11. April 1980 über Verträge über den internationalen Warenkauf"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention des Nations Unies du 11 avril 1980 sur les contrats de vente internationale de marchandises"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione delle Nazioni Unite dell'11 aprile 1980 sui contratti di compravendita internazionale di merci"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.221.211.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1991/307_307_307"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1991-03-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1980-04-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1991 307"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen der Vereinten Nationen vom 11. April 1980 über Verträge über den internationalen Warenkauf"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-03-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 3455"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen der Vereinten Nationen vom 11. April 1980 über Verträge über den internationalen Warenkauf"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-03-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 3455"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen der Vereinten Nationen vom 11. April 1980 über Verträge über den internationalen Warenkauf"
@@ -212,6 +236,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-03-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 3455"
       },
       "titleDe": {
         "type": "literal",
@@ -245,37 +273,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-04-27"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Übereinkommen der Vereinten Nationen vom 11. April 1980 über Verträge über den internationalen Warenkauf"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention des Nations unies du 11 avril 1980 sur les contrats de vente internationale de marchandises"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione delle Nazioni Unite dell'11 aprile 1980 sui contratti di compravendita internazionale di merci"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.221.211.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/317"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-04-27"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-04-27"
+        "value": "RO 2006 2021"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +309,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-04-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 2021"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen der Vereinten Nationen vom 11. April 1980 über Verträge über den internationalen Warenkauf"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention des Nations unies du 11 avril 1980 sur les contrats de vente internationale de marchandises"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione delle Nazioni Unite dell'11 aprile 1980 sui contratti di compravendita internazionale di merci"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.221.211.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/317"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-04-27"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-04-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 2021"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen der Vereinten Nationen vom 11. April 1980 über Verträge über den internationalen Warenkauf"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-03-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 1659"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen der Vereinten Nationen vom 11. April 1980 über Verträge über den internationalen Warenkauf"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-03-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 1659"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen der Vereinten Nationen vom 11. April 1980 über Verträge über den internationalen Warenkauf"
@@ -404,6 +452,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-03-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 1659"
       },
       "titleDe": {
         "type": "literal",
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-04-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 2553"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen der Vereinten Nationen vom 11. April 1980 über Verträge über den internationalen Warenkauf"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-04-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 2553"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen der Vereinten Nationen vom 11. April 1980 über Verträge über den internationalen Warenkauf"
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-04-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 2553"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen der Vereinten Nationen vom 11. April 1980 über Verträge über den internationalen Warenkauf"
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-06-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 2153"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen der Vereinten Nationen vom 11. April 1980 über Verträge über den internationalen Warenkauf"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-06-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 2153"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen der Vereinten Nationen vom 11. April 1980 über Verträge über den internationalen Warenkauf"
@@ -597,69 +669,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-06-24"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Übereinkommen der Vereinten Nationen vom 11. April 1980 über Verträge über den internationalen Warenkauf"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention des Nations Unies du 11 avril 1980 sur les contrats de vente internationale de marchandises"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione delle Nazioni Unite dell'11 aprile 1980 sui contratti di compravendita internazionale di merci"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.221.211.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2016/478"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-08-04"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-08-04"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Übereinkommen der Vereinten Nationen vom 11. April 1980 über Verträge über den internationalen Warenkauf"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Convention des Nations Unies du 11 avril 1980 sur les contrats de vente internationale de marchandises"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Convenzione delle Nazioni Unite dell'11 aprile 1980 sui contratti di compravendita internazionale di merci"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.221.211.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2016/478"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-08-04"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-08-04"
+        "value": "RO 2014 2153"
       },
       "titleDe": {
         "type": "literal",
@@ -693,6 +705,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-08-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2891"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen der Vereinten Nationen vom 11. April 1980 über Verträge über den internationalen Warenkauf"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention des Nations Unies du 11 avril 1980 sur les contrats de vente internationale de marchandises"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione delle Nazioni Unite dell'11 aprile 1980 sui contratti di compravendita internazionale di merci"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.221.211.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/478"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-08-04"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-08-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2891"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Übereinkommen der Vereinten Nationen vom 11. April 1980 über Verträge über den internationalen Warenkauf"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention des Nations Unies du 11 avril 1980 sur les contrats de vente internationale de marchandises"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione delle Nazioni Unite dell'11 aprile 1980 sui contratti di compravendita internazionale di merci"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.221.211.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/478"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-08-04"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-08-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2891"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen der Vereinten Nationen vom 11. April 1980 über Verträge über den internationalen Warenkauf"
@@ -725,6 +813,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-02-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 877"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen der Vereinten Nationen vom 11. April 1980 über Verträge über den internationalen Warenkauf"
@@ -757,6 +849,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-02-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 877"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen der Vereinten Nationen vom 11. April 1980 über Verträge über den internationalen Warenkauf"
@@ -788,6 +884,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-02-09"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 877"
       },
       "titleDe": {
         "type": "literal",
@@ -821,6 +921,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-02-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 485"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen der Vereinten Nationen vom 11. April 1980 über Verträge über den internationalen Warenkauf"
@@ -853,6 +957,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-02-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 485"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Übereinkommen der Vereinten Nationen vom 11. April 1980 über Verträge über den internationalen Warenkauf"
@@ -884,6 +992,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-02-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 485"
       },
       "titleDe": {
         "type": "literal",

@@ -21,69 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-09-11"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über den Allgemeinen Teil des Sozialversicherungsrechts (ATSV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la partie générale du droit des assurances sociales (OPGA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla parte generale del diritto delle assicurazioni sociali (OPGA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "830.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/569"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-09-11"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung über den Allgemeinen Teil des Sozialversicherungsrechts (ATSV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la partie générale du droit des assurances sociales (OPGA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla parte generale del diritto delle assicurazioni sociali (OPGA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "830.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/569"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-09-11"
+        "value": "RO 2002 3703"
       },
       "titleDe": {
         "type": "literal",
@@ -117,6 +57,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-09-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3703"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über den Allgemeinen Teil des Sozialversicherungsrechts (ATSV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la partie générale du droit des assurances sociales (OPGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla parte generale del diritto delle assicurazioni sociali (OPGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "830.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/569"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-09-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3703"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über den Allgemeinen Teil des Sozialversicherungsrechts (ATSV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la partie générale du droit des assurances sociales (OPGA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla parte generale del diritto delle assicurazioni sociali (OPGA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "830.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/569"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-09-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3703"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Allgemeinen Teil des Sozialversicherungsrechts (ATSV)"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-09-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4139"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Allgemeinen Teil des Sozialversicherungsrechts (ATSV)"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-09-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4139"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Allgemeinen Teil des Sozialversicherungsrechts (ATSV)"
@@ -212,6 +236,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-09-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4139"
       },
       "titleDe": {
         "type": "literal",
@@ -245,6 +273,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-06-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2833"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Allgemeinen Teil des Sozialversicherungsrechts (ATSV)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-06-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2833"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Allgemeinen Teil des Sozialversicherungsrechts (ATSV)"
@@ -308,6 +344,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-06-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2833"
       },
       "titleDe": {
         "type": "literal",
@@ -340,6 +380,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-11-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 5149"
       },
       "titleDe": {
         "type": "literal",
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-11-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 5149"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Allgemeinen Teil des Sozialversicherungsrechts"
@@ -404,6 +452,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-11-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 5149"
       },
       "titleDe": {
         "type": "literal",

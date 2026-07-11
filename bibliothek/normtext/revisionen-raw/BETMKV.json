@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1952-03-04"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 4. März 1952 über die Betäubungsmittel (BetmV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 4 mars 1952 sur les stupéfiants (O Stup.)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 4 marzo 1952 sugli stupefacenti (Ostup.)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "812.121.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1952/252_252_256"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1952-06-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1952-03-04"
+        "value": "RO 1952 252"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1952-03-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1952 252"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 4. März 1952 über die Betäubungsmittel (BetmV)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1952-03-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1952 252"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 4. März 1952 über die Betäubungsmittel (BetmV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 4 mars 1952 sur les stupéfiants (O Stup.)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 4 marzo 1952 sugli stupefacenti (Ostup.)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "812.121.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1952/252_252_256"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1952-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1952-03-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1952 252"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 4. März 1952 über die Betäubungsmittel (BetmV)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1996-05-29"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 29. Mai 1996 über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelverordnung, BetmV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 29 mai 1996 sur les stupéfiants et les substances psychotropes (Ordonnance sur les stupéfiants, Ostup)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 29 maggio 1996 sugli stupefacenti e le sostanze psicotrope (Ordinanza sugli stupefacenti, O Stup)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "812.121.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1996/1679_1679_1679"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1996-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1996-05-29"
+        "value": "RO 1996 1679"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1996-05-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1996 1679"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 29. Mai 1996 über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelverordnung, BetmV)"
@@ -245,6 +237,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1996-05-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1996 1679"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 29. Mai 1996 über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelverordnung, BetmV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 29 mai 1996 sur les stupéfiants et les substances psychotropes (Ordonnance sur les stupéfiants, Ostup)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 29 maggio 1996 sugli stupefacenti e le sostanze psicotrope (Ordinanza sugli stupefacenti, O Stup)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "812.121.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1996/1679_1679_1679"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1996-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1996-05-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1996 1679"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 29. Mai 1996 über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelverordnung, BetmV)"
@@ -277,37 +309,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-10-17"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelverordnung, BetmV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les stupéfiants et les substances psychotropes (Ordonnance sur les stupéfiants, OStup)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sugli stupefacenti e le sostanze psicotrope (Ordinanza sugli stupefacenti, OStup)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "812.121.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2001/470"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-10-17"
+        "value": "RO 2001 3133"
       },
       "titleDe": {
         "type": "literal",
@@ -341,6 +345,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-10-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 3133"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelverordnung, BetmV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les stupéfiants et les substances psychotropes (Ordonnance sur les stupéfiants, OStup)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sugli stupefacenti e le sostanze psicotrope (Ordinanza sugli stupefacenti, OStup)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "812.121.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2001/470"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-10-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 3133"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelverordnung, BetmV)"
@@ -372,6 +416,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-08-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 4037"
       },
       "titleDe": {
         "type": "literal",
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-08-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 4037"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Änderung von Erlassen in der Heilmittelgesetzgebung"
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-08-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 4037"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Änderung von Erlassen in der Heilmittelgesetzgebung"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-01-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5577"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelverordnung, BetmV)"
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-01-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5577"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelverordnung, BetmV)"
@@ -533,69 +597,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-01-31"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelverordnung, BetmV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les stupéfiants et les substances psychotropes (Ordonnance sur les stupéfiants, OStup)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sugli stupefacenti e le sostanze psicotrope (Ordinanza sugli stupefacenti, OStup)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "812.121.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2008/773"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-12-12"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-11-26"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelverordnung, BetmV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les stupéfiants et les substances psychotropes (Ordonnance sur les stupéfiants, OStup)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sugli stupefacenti e le sostanze psicotrope (Ordinanza sugli stupefacenti, OStup)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "812.121.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2008/773"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-12-12"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-11-26"
+        "value": "RO 2008 5577"
       },
       "titleDe": {
         "type": "literal",
@@ -629,6 +633,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-11-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5583"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelverordnung, BetmV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les stupéfiants et les substances psychotropes (Ordonnance sur les stupéfiants, OStup)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sugli stupefacenti e le sostanze psicotrope (Ordinanza sugli stupefacenti, OStup)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "812.121.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/773"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-12-12"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-11-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5583"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelverordnung, BetmV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les stupéfiants et les substances psychotropes (Ordonnance sur les stupéfiants, OStup)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sugli stupefacenti e le sostanze psicotrope (Ordinanza sugli stupefacenti, OStup)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "812.121.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/773"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-12-12"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-11-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5583"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelverordnung, BetmV)"
@@ -661,69 +741,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-05-25"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Betäubungsmittelkontrolle (Betäubungsmittelkontrollverordnung, BetmKV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le contrôle des stupéfiants (OCStup)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sul controllo degli stupefacenti (OCStup)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "812.121.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/362"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-05-25"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung über die Betäubungsmittelkontrolle (Betäubungsmittelkontrollverordnung, BetmKV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le contrôle des stupéfiants (OCStup)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sul controllo degli stupefacenti (OCStup)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "812.121.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/362"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-05-25"
+        "value": "RO 2011 2561"
       },
       "titleDe": {
         "type": "literal",
@@ -757,6 +777,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-05-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 2561"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Betäubungsmittelkontrolle (Betäubungsmittelkontrollverordnung, BetmKV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le contrôle des stupéfiants (OCStup)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul controllo degli stupefacenti (OCStup)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "812.121.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/362"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-05-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 2561"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Betäubungsmittelkontrolle (Betäubungsmittelkontrollverordnung, BetmKV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le contrôle des stupéfiants (OCStup)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul controllo degli stupefacenti (OCStup)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "812.121.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/362"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-05-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 2561"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Betäubungsmittelkontrolle (Betäubungsmittelkontrollverordnung, BetmKV)"
@@ -789,6 +885,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-08-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3715"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Betäubungsmittelkontrolle (Betäubungsmittelkontrollverordnung, BetmKV)"
@@ -821,6 +921,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-08-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3715"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Betäubungsmittelkontrolle (Betäubungsmittelkontrollverordnung, BetmKV)"
@@ -852,6 +956,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-08-09"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3715"
       },
       "titleDe": {
         "type": "literal",

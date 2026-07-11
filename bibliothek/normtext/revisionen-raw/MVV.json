@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1964-03-20"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 20. März 1964 über die Militärversicherung (MVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 20 mars 1964 sur l'assurance militaire (OAM)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 20 marzo 1964 sull'assicurazione militare (OAM)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "833.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1964/265_258_257"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1964-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1964-03-20"
+        "value": "RO 1964 258"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1964-03-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1964 258"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 20. März 1964 über die Militärversicherung (MVV)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1964-03-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1964 258"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 20. März 1964 über die Militärversicherung (MVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 20 mars 1964 sur l'assurance militaire (OAM)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 20 marzo 1964 sull'assicurazione militare (OAM)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "833.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1964/265_258_257"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1964-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1964-03-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1964 258"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 20. März 1964 über die Militärversicherung (MVV)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1993-11-10"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 10. November 1993 über die Militärversicherung (MVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 10 novembre 1993 sur l'assurance militaire (OAM)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 10 novembre 1993 sull'assicurazione militare (OAM)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "833.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1993/3080_3080_3080"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1994-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1993-11-10"
+        "value": "RO 1993 3080"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1993-11-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1993 3080"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 10. November 1993 über die Militärversicherung (MVV)"
@@ -245,6 +237,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1993-11-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1993 3080"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 10. November 1993 über die Militärversicherung (MVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 10 novembre 1993 sur l'assurance militaire (OAM)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 10 novembre 1993 sull'assicurazione militare (OAM)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "833.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1993/3080_3080_3080"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1994-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1993-11-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1993 3080"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 10. November 1993 über die Militärversicherung (MVV)"
@@ -277,37 +309,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-06-23"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Militärversicherung (MVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance militaire (OAM)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione militare (OAM)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "833.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1999/342"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-06-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-06-23"
+        "value": "RO 1999 2172"
       },
       "titleDe": {
         "type": "literal",
@@ -341,6 +345,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-06-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2172"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Militärversicherung (MVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance militaire (OAM)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione militare (OAM)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "833.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/342"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-06-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2172"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Militärversicherung (MVV)"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-09-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2637"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Militärversicherung (MVV)"
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-09-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2637"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Militärversicherung (MVV)"
@@ -436,6 +488,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-09-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2637"
       },
       "titleDe": {
         "type": "literal",
@@ -469,37 +525,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-11-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Militärversicherung (MVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance militaire (OAM)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione militare (OAM)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "833.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/514"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-11-22"
+        "value": "RO 2000 2919"
       },
       "titleDe": {
         "type": "literal",
@@ -533,37 +561,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-11-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Militärversicherung (MVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance militaire (OAM)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione militare (OAM)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "833.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/561"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-11-27"
+        "value": "RO 2000 2919"
       },
       "titleDe": {
         "type": "literal",
@@ -585,7 +585,7 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/561"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/514"
       },
       "dateForce": {
         "type": "typed-literal",
@@ -595,7 +595,11 @@
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-11-27"
+        "value": "2000-11-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2919"
       },
       "titleDe": {
         "type": "literal",
@@ -629,6 +633,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-11-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 3092"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Militärversicherung (MVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance militaire (OAM)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione militare (OAM)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "833.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/561"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-11-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 3092"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Militärversicherung (MVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance militaire (OAM)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione militare (OAM)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "833.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/561"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-11-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 3092"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Militärversicherung (MVV)"
@@ -660,6 +740,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-09-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3937"
       },
       "titleDe": {
         "type": "literal",
@@ -693,6 +777,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-09-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3937"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Militärversicherung (MVV)"
@@ -725,6 +813,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-09-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3937"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Militärversicherung (MVV)"
@@ -757,37 +849,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-06-25"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Militärversicherung (MVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance militaire (OAM)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione militare (OAM)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "833.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/300"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-06-25"
+        "value": "RO 2003 1997"
       },
       "titleDe": {
         "type": "literal",
@@ -821,6 +885,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-06-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 1997"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Militärversicherung (MVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance militaire (OAM)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione militare (OAM)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "833.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/300"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-06-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 1997"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Militärversicherung (MVV)"
@@ -853,6 +957,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-05-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3883"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Militärversicherung (MVV)"
@@ -885,6 +993,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-05-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3883"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Militärversicherung (MVV)"
@@ -916,6 +1028,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-05-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3883"
       },
       "titleDe": {
         "type": "literal",
@@ -949,37 +1065,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-12-03"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Militärversicherung (MVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance militaire (OAM)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione militare (OAM)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "833.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/786"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-12-03"
+        "value": "RO 2004 5081"
       },
       "titleDe": {
         "type": "literal",
@@ -1013,6 +1101,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-12-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 5081"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Militärversicherung (MVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance militaire (OAM)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione militare (OAM)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "833.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/786"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-12-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 5081"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Militärversicherung (MVV)"
@@ -1045,6 +1173,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-04-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 2885"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Militärversicherung (MVV)"
@@ -1077,6 +1209,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-04-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 2885"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Militärversicherung (MVV)"
@@ -1108,6 +1244,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-04-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 2885"
       },
       "titleDe": {
         "type": "literal",
@@ -1141,37 +1281,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-11-16"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Militärversicherung (MVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance militaire (OAM)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione militare (OAM)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "833.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2005/773"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-11-16"
+        "value": "RO 2005 5645"
       },
       "titleDe": {
         "type": "literal",
@@ -1205,6 +1317,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-11-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5645"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Militärversicherung (MVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance militaire (OAM)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione militare (OAM)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "833.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/773"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-11-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5645"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Militärversicherung (MVV)"
@@ -1237,6 +1389,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-12-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 7123"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Militärversicherung (MVV)"
@@ -1269,6 +1425,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-12-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 7123"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Militärversicherung (MVV)"
@@ -1300,6 +1460,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-12-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 7123"
       },
       "titleDe": {
         "type": "literal",
@@ -1333,37 +1497,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-09-30"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Militärversicherung (MVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance militaire (OAM)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione militare (OAM)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "833.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/610"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-09-30"
+        "value": "RO 2009 5189"
       },
       "titleDe": {
         "type": "literal",
@@ -1397,6 +1533,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-09-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5189"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Militärversicherung (MVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance militaire (OAM)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione militare (OAM)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "833.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/610"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-09-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5189"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Militärversicherung (MVV)"
@@ -1429,6 +1605,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-10-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 3861"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Militärversicherung (MVV)"
@@ -1461,6 +1641,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-10-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 3861"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Militärversicherung (MVV)"
@@ -1492,6 +1676,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-10-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 3861"
       },
       "titleDe": {
         "type": "literal",
@@ -1525,6 +1713,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-11-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6345"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Militärversicherung (MVV)"
@@ -1557,6 +1749,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-11-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6345"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Militärversicherung (MVV)"
@@ -1589,69 +1785,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-11-01"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Militärversicherung (MVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance militaire (OAM)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione militare (OAM)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "833.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2018/669"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2019-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-10-31"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung über die Militärversicherung (MVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance militaire (OAM)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione militare (OAM)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "833.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2018/669"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2019-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2018-10-31"
+        "value": "RO 2017 6345"
       },
       "titleDe": {
         "type": "literal",
@@ -1685,6 +1821,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-10-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 4145"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Militärversicherung (MVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance militaire (OAM)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione militare (OAM)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "833.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/669"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-10-31"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 4145"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Militärversicherung (MVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance militaire (OAM)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione militare (OAM)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "833.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/669"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2018-10-31"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 4145"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Militärversicherung (MVV)"
@@ -1717,6 +1929,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-10-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 3419"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Militärversicherung (MVV)"
@@ -1749,6 +1965,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-10-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 3419"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Militärversicherung (MVV)"
@@ -1780,6 +2000,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-10-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 3419"
       },
       "titleDe": {
         "type": "literal",
@@ -1813,6 +2037,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-11-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 5303"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Militärversicherung (MVV)"
@@ -1845,6 +2073,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-11-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 5303"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Militärversicherung (MVV)"
@@ -1876,6 +2108,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-11-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 5303"
       },
       "titleDe": {
         "type": "literal",

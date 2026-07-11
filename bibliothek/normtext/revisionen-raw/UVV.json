@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1982-12-20"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 20. Dezember 1982 über die Unfallversicherung (UVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 20 décembre 1982 sur l'assurance-accidents (OLAA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 20 dicembre 1982 sull'assicurazione contro gli infortuni (OAINF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.202"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1983/38_38_38"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1984-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1982-12-20"
+        "value": "RO 1983 38"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1982-12-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1983 38"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 20. Dezember 1982 über die Unfallversicherung (UVV)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1982-12-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1983 38"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 20. Dezember 1982 über die Unfallversicherung (UVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 20 décembre 1982 sur l'assurance-accidents (OLAA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 20 dicembre 1982 sull'assicurazione contro gli infortuni (OAINF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.202"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1983/38_38_38"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1984-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1982-12-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1983 38"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 20. Dezember 1982 über die Unfallversicherung (UVV)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-09-28"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Unfallversicherung (UVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-accidents (OLAA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione contro gli infortuni (OAINF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.202"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1998/2588_2588_2588"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-09-28"
+        "value": "RO 1998 2588"
       },
       "titleDe": {
         "type": "literal",
@@ -213,37 +201,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-09-28"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Unfallversicherung (UVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-accidents (OLAA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione contro gli infortuni (OAINF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.202"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1999/453"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-09-20"
+        "value": "RO 1998 2588"
       },
       "titleDe": {
         "type": "literal",
@@ -265,7 +225,7 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1999/453"
+        "value": "https://fedlex.data.admin.ch/eli/oc/1998/2588_2588_2588"
       },
       "dateForce": {
         "type": "typed-literal",
@@ -275,7 +235,11 @@
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-09-20"
+        "value": "1998-09-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1998 2588"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +273,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-09-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2879"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Unfallversicherung (UVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-accidents (OLAA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione contro gli infortuni (OAINF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.202"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/453"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-09-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2879"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Unfallversicherung (UVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-accidents (OLAA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione contro gli infortuni (OAINF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.202"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/453"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-09-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2879"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Unfallversicherung (UVV)"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-11-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2913"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Unfallversicherung (UVV)"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-11-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2913"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Unfallversicherung (UVV)"
@@ -404,6 +452,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-11-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2913"
       },
       "titleDe": {
         "type": "literal",
@@ -437,37 +489,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-07-10"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Unfallversicherung (UVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-accidents (OLAA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione contro gli infortuni (OAINF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.202"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2001/252"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1996-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-07-10"
+        "value": "RO 2001 1663"
       },
       "titleDe": {
         "type": "literal",
@@ -501,6 +525,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-07-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1663"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Unfallversicherung (UVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-accidents (OLAA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione contro gli infortuni (OAINF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.202"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2001/252"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1996-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-07-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1663"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Unfallversicherung (UVV)"
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-06-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1740"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Unfallversicherung (UVV)"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-06-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1740"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Unfallversicherung (UVV)"
@@ -596,6 +668,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-06-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1740"
       },
       "titleDe": {
         "type": "literal",
@@ -629,37 +705,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-11-14"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Unfallversicherung (UVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-accidents (OLAA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione contro gli infortuni (OAINF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.202"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2001/430"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-12-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-11-14"
+        "value": "RO 2001 2887"
       },
       "titleDe": {
         "type": "literal",
@@ -693,6 +741,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-11-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 2887"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Unfallversicherung (UVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-accidents (OLAA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione contro gli infortuni (OAINF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.202"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2001/430"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-12-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-11-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 2887"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Unfallversicherung (UVV)"
@@ -725,6 +813,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-09-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3914"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Unfallversicherung (UVV)"
@@ -757,6 +849,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-09-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3914"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Unfallversicherung (UVV)"
@@ -788,6 +884,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-09-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3914"
       },
       "titleDe": {
         "type": "literal",
@@ -821,37 +921,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-06-25"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Unfallversicherung (UVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-accidents (OLAA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione contro gli infortuni (OAINF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.202"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/322"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-08-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-06-25"
+        "value": "RO 2003 2184"
       },
       "titleDe": {
         "type": "literal",
@@ -885,6 +957,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-06-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 2184"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Unfallversicherung (UVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-accidents (OLAA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione contro gli infortuni (OAINF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.202"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/322"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-06-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 2184"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Unfallversicherung (UVV)"
@@ -916,6 +1028,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-06-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3255"
       },
       "titleDe": {
         "type": "literal",
@@ -949,6 +1065,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-06-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3255"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Unfallversicherung (UVV)"
@@ -981,6 +1101,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-06-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3255"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Unfallversicherung (UVV)"
@@ -1013,37 +1137,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-05-21"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Unfallversicherung (UVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-accidents (OLAA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione contro gli infortuni (OAINF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.202"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/563"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-05-21"
+        "value": "RO 2003 3881"
       },
       "titleDe": {
         "type": "literal",
@@ -1077,6 +1173,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-05-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3881"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Unfallversicherung (UVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-accidents (OLAA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione contro gli infortuni (OAINF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.202"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/563"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-05-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3881"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Unfallversicherung (UVV)"
@@ -1109,6 +1245,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-11-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5261"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Unfallversicherung (UVV)"
@@ -1141,6 +1281,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-11-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5261"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Unfallversicherung (UVV)"
@@ -1172,6 +1316,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-11-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 5261"
       },
       "titleDe": {
         "type": "literal",
@@ -1205,37 +1353,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-06-27"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Unfallversicherung (UVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-accidents (OLAA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione contro gli infortuni (OAINF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.202"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/457"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-06-27"
+        "value": "RO 2007 3667"
       },
       "titleDe": {
         "type": "literal",
@@ -1269,6 +1389,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-06-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 3667"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Unfallversicherung (UVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-accidents (OLAA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione contro gli infortuni (OAINF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.202"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/457"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-06-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 3667"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Unfallversicherung (UVV)"
@@ -1301,6 +1461,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-11-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6227"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Unfallversicherung (UVV)"
@@ -1333,6 +1497,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-11-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6227"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Unfallversicherung (UVV)"
@@ -1364,6 +1532,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-11-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6227"
       },
       "titleDe": {
         "type": "literal",
@@ -1397,6 +1569,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-11-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 4213"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Unfallversicherung (UVV)"
@@ -1429,6 +1605,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-11-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 4213"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Unfallversicherung (UVV)"
@@ -1461,69 +1641,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-11-12"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Unfallversicherung (UVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-accidents (OLAA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione contro gli infortuni (OAINF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.202"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/639"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-09-18"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung über die Unfallversicherung (UVV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-accidents (OLAA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione contro gli infortuni (OAINF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "832.202"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/639"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-09-18"
+        "value": "RO 2014 4213"
       },
       "titleDe": {
         "type": "literal",
@@ -1557,6 +1677,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 3815"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Unfallversicherung (UVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-accidents (OLAA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione contro gli infortuni (OAINF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.202"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/639"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-09-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 3815"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Unfallversicherung (UVV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-accidents (OLAA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione contro gli infortuni (OAINF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "832.202"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/639"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-09-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 3815"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Unfallversicherung (UVV)"
@@ -1589,6 +1785,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-11-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4393"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Unfallversicherung (UVV)"
@@ -1621,6 +1821,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-11-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4393"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Unfallversicherung (UVV)"
@@ -1652,6 +1856,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-11-09"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4393"
       },
       "titleDe": {
         "type": "literal",
@@ -1685,6 +1893,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-01-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 237"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Unfallversicherung (UVV) (Betrifft nur den italienischen Text)"
@@ -1717,6 +1929,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-01-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 237"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Unfallversicherung (UVV) (Betrifft nur den italienischen Text)"
@@ -1748,6 +1964,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-01-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 237"
       },
       "titleDe": {
         "type": "literal",
@@ -1780,6 +2000,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-02-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 1025"
       },
       "titleDe": {
         "type": "literal",
@@ -1813,6 +2037,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-02-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 1025"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Unfallversicherung (UVV)"
@@ -1844,6 +2072,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-02-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 1025"
       },
       "titleDe": {
         "type": "literal",

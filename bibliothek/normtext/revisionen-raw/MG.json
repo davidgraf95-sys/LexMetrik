@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1995-02-03"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom 3. Februar 1995 über die Armee und die Militärverwaltung (Militärgesetz, MG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 3 février 1995 sur l'armée et l'administration militaire (Loi sur l'armée, LAAM)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 3 febbraio 1995 sull'esercito e sull'amministrazione militare (Legge militare, LM)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "510.10"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1995/4093_4093_4093"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1996-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1995-02-03"
+        "value": "RO 1995 4093"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1995-02-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1995 4093"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 3. Februar 1995 über die Armee und die Militärverwaltung (Militärgesetz, MG)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1995-02-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1995 4093"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 3. Februar 1995 über die Armee und die Militärverwaltung (Militärgesetz, MG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 3 février 1995 sur l'armée et l'administration militaire (Loi sur l'armée, LAAM)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 3 febbraio 1995 sull'esercito e sull'amministrazione militare (Legge militare, LM)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "510.10"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1995/4093_4093_4093"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1996-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1995-02-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1995 4093"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 3. Februar 1995 über die Armee und die Militärverwaltung (Militärgesetz, MG)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-03-20"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Armee und die Militärverwaltung (Militärgesetz, MG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur l'armée et l'administration militaire (LAAM)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sull'esercito e sull'amministrazione militare (Legge militare, LM)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "510.10"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1999/151"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-03-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-03-20"
+        "value": "RO 1999 1153"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-03-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 1153"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Armee und die Militärverwaltung (Militärgesetz, MG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'armée et l'administration militaire (LAAM)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'esercito e sull'amministrazione militare (Legge militare, LM)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "510.10"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/151"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-03-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-03-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 1153"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Armee und die Militärverwaltung (Militärgesetz, MG)"
@@ -244,6 +272,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-03-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1079"
       },
       "titleDe": {
         "type": "literal",
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-03-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1079"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Militärgesetz"
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-03-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1079"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Militärgesetz"
@@ -341,37 +381,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-10-06"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Armee und die Militärverwaltung (Militärgesetz, MG) (Ausbildungszusammenarbeit)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur l'armée et l'administration militaire (LAAM) (Coopération en matière d'instruction)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sull'esercito e sull'amministrazione militare (Legge militare, LM)(Cooperazione in materia di istruzione)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "510.10"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2001/323"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-09-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-10-06"
+        "value": "RO 2001 2264"
       },
       "titleDe": {
         "type": "literal",
@@ -405,6 +417,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-10-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 2264"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Armee und die Militärverwaltung (Militärgesetz, MG) (Ausbildungszusammenarbeit)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'armée et l'administration militaire (LAAM) (Coopération en matière d'instruction)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'esercito e sull'amministrazione militare (Legge militare, LM)(Cooperazione in materia di istruzione)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "510.10"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2001/323"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-09-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-10-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 2264"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Armee und die Militärverwaltung (Militärgesetz, MG) (Ausbildungszusammenarbeit)"
@@ -437,37 +489,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-10-06"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Armee und die Militärverwaltung (Militärgesetz, MG) (Bewaffnung)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur l'armée et l'administration militaire (LAAM) (Armement)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sull'esercito e sull'amministrazione militare (Legge militare, LM) (Armamento)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "510.10"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2001/324"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-09-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-10-06"
+        "value": "RO 2001 2266"
       },
       "titleDe": {
         "type": "literal",
@@ -501,6 +525,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-10-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 2266"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Armee und die Militärverwaltung (Militärgesetz, MG) (Bewaffnung)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'armée et l'administration militaire (LAAM) (Armement)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'esercito e sull'amministrazione militare (Legge militare, LM) (Armamento)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "510.10"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2001/324"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-09-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-10-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 2266"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Armee und die Militärverwaltung (Militärgesetz, MG) (Bewaffnung)"
@@ -533,37 +597,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-10-04"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Armee und die Militärverwaltung (Militärgesetz, MG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur l'armée et l'administration militaire (Loi sur l'armée, LAAM)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sull'esercito e sull'amministrazione militare (Legge militare, LM)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "510.10"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/570"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-10-04"
+        "value": "RO 2003 3957"
       },
       "titleDe": {
         "type": "literal",
@@ -597,6 +633,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-10-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3957"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Armee und die Militärverwaltung (Militärgesetz, MG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'armée et l'administration militaire (Loi sur l'armée, LAAM)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'esercito e sull'amministrazione militare (Legge militare, LM)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "510.10"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/570"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-10-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3957"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Armee und die Militärverwaltung (Militärgesetz, MG)"
@@ -628,6 +704,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-03-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 6015"
       },
       "titleDe": {
         "type": "literal",
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-03-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 6015"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Armee und die Militärverwaltung (Militärgesetz, MG)"
@@ -693,6 +777,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-03-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 6015"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Armee und die Militärverwaltung (Militärgesetz, MG)"
@@ -725,6 +813,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-08-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 3167"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Armee und die Militärverwaltung (Militärgesetz, MG) (Betrifft nur den französischen Text)"
@@ -757,6 +849,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-08-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 3167"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Armee und die Militärverwaltung (Militärgesetz, MG) (Betrifft nur den französischen Text)"
@@ -788,6 +884,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-08-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 3167"
       },
       "titleDe": {
         "type": "literal",
@@ -820,6 +920,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-03-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4277"
       },
       "titleDe": {
         "type": "literal",
@@ -853,6 +957,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-03-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4277"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Armee und die Militärverwaltung (Militärgesetz, MG) "
@@ -884,6 +992,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-03-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4277"
       },
       "titleDe": {
         "type": "literal",
@@ -916,6 +1028,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 2297"
       },
       "titleDe": {
         "type": "literal",
@@ -949,6 +1065,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 2297"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die abschliessende Inkraftsetzung der Änderung vom 18. März 2016 des Militärgesetzes"
@@ -980,6 +1100,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 2297"
       },
       "titleDe": {
         "type": "literal",
@@ -1012,6 +1136,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-08-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3079"
       },
       "titleDe": {
         "type": "literal",
@@ -1045,6 +1173,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-08-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3079"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Armee und die Militärverwaltung (Militärgesetz, MG) (Betrifft nur den italienischen Text)"
@@ -1076,6 +1208,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-08-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3079"
       },
       "titleDe": {
         "type": "literal",
@@ -1108,6 +1244,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-09-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1547"
       },
       "titleDe": {
         "type": "literal",
@@ -1141,6 +1281,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-09-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1547"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Armee und die Militärverwaltung (Militärgesetz, MG)"
@@ -1172,6 +1316,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-09-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1547"
       },
       "titleDe": {
         "type": "literal",
@@ -1301,6 +1449,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1907-04-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 23 695"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Militärorganisation (Militärorganisation [MO]) "
@@ -1333,6 +1485,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1907-04-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 23 695"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Militärorganisation (Militärorganisation [MO]) "
@@ -1365,6 +1521,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1907-04-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 23 695"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Militärorganisation (Militärorganisation [MO]) "
@@ -1396,6 +1556,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1907-04-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 23 695"
       },
       "titleDe": {
         "type": "literal",

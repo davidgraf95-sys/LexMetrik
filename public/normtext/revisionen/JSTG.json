@@ -1,7 +1,7 @@
 {
   "erlassKey": "JSTG",
   "sr": "311.1",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -82,25 +82,25 @@
       "dateEntryInForce": "2007-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/551",
       "dateDocument": "2003-06-20",
-      "roFundstelle": "AS 2006 551",
+      "roFundstelle": "AS 2006 3545",
       "titelDe": "Bundesgesetz über das Jugendstrafrecht (Jugendstrafgesetz, JStG)",
       "titelFr": "Loi fédérale régissant la condition pénale des mineurs (Droit pénal des mineurs, DPMin)",
       "titelIt": "Legge federale sul diritto penale minorile (Diritto penale minorile, DPMin)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/551/de",
-      "sha": "134b153dbd58a072b6ea47f7e9cc0a561e01953dadbb37b14cb681c3cad57cda"
+      "sha": "8d28d26bd6b16e9c7a643a3927242d57140860378f4d23d25058ee8961ce5c64"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2007-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/748",
       "dateDocument": "2009-11-19",
-      "roFundstelle": "AS 2009 748",
+      "roFundstelle": "AS 2009 6103",
       "titelDe": "Bundesgesetz über das Jugendstrafrecht (Jugendstrafgesetz, JStG)",
       "titelFr": "Loi fédérale régissant la condition pénale des mineurs (Droit pénal des mineurs, DPMin)",
       "titelIt": "Legge federale sul diritto penale minorile (Diritto penale minorile, DPMin)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/748/de",
-      "sha": "d0b1f26a3a1fa36aa6768e17c1e7261e38858fdb5dcb652a589d36676c55495b"
+      "sha": "dcc8b9896fc05c26f17f377a36c2f133626e2111aae8b653bf853af64df55b7f"
     }
   ],
-  "sha": "b5940e1f10168ba8085b375d3f6d94636c15caf851ecf9f73b904ed6dd3550a0"
+  "sha": "991703d62491bf1e616fe8429efc41dde09770e4a062abec81326822b113f682"
 }

@@ -1,7 +1,7 @@
 {
   "erlassKey": "FMG",
   "sr": "784.10",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -27,13 +27,13 @@
       "dateEntryInForce": "2021-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/1019",
       "dateDocument": "2019-03-22",
-      "roFundstelle": "AS 2020 1019",
+      "roFundstelle": "AS 2020 6159",
       "titelDe": "Fernmeldegesetz (FMG)",
       "titelFr": "Loi sur les télécommunications (LTC)",
       "titelIt": "Legge sulle telecomunicazioni (LTC)",
       "botschaftKey": "BOTSCHAFT-2017-1933",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/1019/de",
-      "sha": "e6586a71ff9ff37e95e60db8b7f41a631b7ae6be5b19dbdef281b744d0ce0a95"
+      "sha": "4f7b3eab716f567fe5929c2f17f568384fba42eabb2ed56b5a70752abcf4a706"
     },
     {
       "art": "sammelerlass-marker",
@@ -52,12 +52,12 @@
       "dateEntryInForce": "2017-12-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/648",
       "dateDocument": "2017-10-25",
-      "roFundstelle": "AS 2017 648",
+      "roFundstelle": "AS 2017 5929",
       "titelDe": "Verordnung über die abschliessende Inkraftsetzung der Änderung vom 26. September 2014 des Bundesgesetzes über Radio und Fernsehen",
       "titelFr": "Ordonnance portant dernière mise en vigueur de la modification du 26 septembre 2014 de la loi sur la radio et la télévision",
       "titelIt": "Ordinanza concernente l'entrata in vigore integrale della modifica del 26 settembre 2014 della legge federale sulla radiotelevisione",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/648/de",
-      "sha": "fc2d49b918d1d3e552530f8833f7f0941c8fb4c148a6e73798081cf13cc4253f"
+      "sha": "2b84e11a1a9ebefcbda3a5dfc642d0dc585912c6d8516a1e8956b25215be4078"
     },
     {
       "art": "sammelerlass-marker",
@@ -82,13 +82,13 @@
       "dateEntryInForce": "2007-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/165",
       "dateDocument": "2006-03-24",
-      "roFundstelle": "AS 2007 165",
+      "roFundstelle": "AS 2007 921",
       "titelDe": "Fernmeldegesetz (FMG)",
       "titelFr": "Loi sur les télécommunications (LTC)",
       "titelIt": "Legge sulle telecomunicazioni (LTC)",
       "botschaftKey": "BOTSCHAFT-2003-1351",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/165/de",
-      "sha": "2301a13a17bc0456177bab8a6c207ba68adae3539d0b69267d4f2c5f53a7451c"
+      "sha": "da02bd72c40594f62b5f22f15a78faf13a4ae05385698c680c03d0d29176fb34"
     },
     {
       "art": "sammelerlass-marker",
@@ -145,5 +145,5 @@
       "sha": "5ff21d76c3587795205e7ba83ba17424d5fc46b33dc8438f48aa19def62120f4"
     }
   ],
-  "sha": "3d21eff12916258d40b4a54fb281a0eecc356313303cbea29cf937479dfbc4c7"
+  "sha": "7756518a5088b0bfbfd9e3fc318a8ba4477a12f54a61469b30b6fea64a651d21"
 }

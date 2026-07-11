@@ -1,7 +1,7 @@
 {
   "erlassKey": "URG",
   "sr": "231.1",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -21,38 +21,38 @@
       "dateEntryInForce": "2022-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/498",
       "dateDocument": "2020-06-12",
-      "roFundstelle": "AS 2020 498",
+      "roFundstelle": "AS 2020 2743",
       "titelDe": "Verordnung über die Anpassung von Gesetzen infolge der Änderung der Bezeichnung der Eidgenössischen Zollverwaltung im Rahmen von deren Weiterentwicklung",
       "titelFr": "Ordonnance sur l'adaptation de lois à la suite de la modification de la désignation de l'Administration fédérale des douanes dans le cadre du développement de cette dernière",
       "titelIt": "Ordinanza sull'adeguamento di leggi in seguito al cambiamento della designazione dell'Amministrazione federale delle dogane nel quadro del suo ulteriore sviluppo",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/498/de",
-      "sha": "86136440fb30f312bb36965bdbd8cd71ab6b55f74c921c649694063d24478ae7"
+      "sha": "5a097d9bbc3531c900c9aadb5f6386e08673d09adccdd3ad56a29dd0bf80fbef"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2020-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/181",
       "dateDocument": "2019-09-27",
-      "roFundstelle": "AS 2020 181",
+      "roFundstelle": "AS 2020 1003",
       "titelDe": "Bundesgesetz über das Urheberrecht und verwandte Schutzrechte (Urheberrechtsgesetz, URG)",
       "titelFr": "Loi fédérale sur le droit d'auteur et les droits voisins (Loi sur le droit d'auteur, LDA)",
       "titelIt": "Legge federale sul diritto d'autore e sui diritti di protezione affini (Legge sul diritto d'autore, LDA)",
       "botschaftKey": "BOTSCHAFT-2018-184",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/181/de",
-      "sha": "10b3ac794ccf732c79f6fe99f69aebf1e7c61f973f02d437d1c1f3def91dd60f"
+      "sha": "10731224d003cd6e9da738faab98ed23e8923dc18bc29610ab6d4852b69a19dd"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2020-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/182",
       "dateDocument": "2019-06-21",
-      "roFundstelle": "AS 2020 182",
+      "roFundstelle": "AS 2020 1013",
       "titelDe": "Bundesbeschluss über die Genehmigung des Vertrags von Marrakesch über die Erleichterung des Zugangs zu veröffentlichten Werken für blinde, sehbehinderte oder sonst lesebehinderte Menschen und über seine Umsetzung (Änderung des Urheberrechtsgesetzes)",
       "titelFr": "Arrêté fédéral portant approbation et mise en uvre du Traité de Marrakech visant à faciliter l'accès des aveugles, des déficients visuels et des personnes ayant d'autres difficultés de lecture des textes imprimés aux uvres publiées (modification de la loi sur le droit d'auteur)",
       "titelIt": "Decreto federale che approva il Trattato di Marrakech volto a facilitare l'accesso alle opere pubblicate per le persone non vedenti, con disabilità visive o con altre difficoltà nella lettura di testi a stampa e lo traspone nel diritto svizzero (modifica della legge sul diritto d'autore)",
       "botschaftKey": "BOTSCHAFT-2018-184",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/182/de",
-      "sha": "8a1cb8720de43126b6f48020aa66c54b0a20ac941b6b4cff57fae790df9cda6c"
+      "sha": "fbd4c2af83e8ad9a83d647b5beebfaa41a7908612804a8d2c7d88c6da78100f2"
     },
     {
       "art": "sammelerlass-marker",
@@ -71,26 +71,26 @@
       "dateEntryInForce": "2008-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/347",
       "dateDocument": "2007-10-05",
-      "roFundstelle": "AS 2008 347",
+      "roFundstelle": "AS 2008 2421",
       "titelDe": "Bundesgesetz über das Urheberrecht und verwandte Schutzrechte (Urheberrechtsgesetz, URG)",
       "titelFr": "Loi fédérale sur le droit d'auteur et les droits voisins (Loi sur le droit d'auteur, LDA)",
       "titelIt": "Legge federale sul diritto d'autore e sui diritti di protezione affini (Legge sul diritto d'autore, LDA)",
       "botschaftKey": "BOTSCHAFT-2006-359",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/347/de",
-      "sha": "78d23eeab6be89e117c4ef69e6a75face463c15fcac2aa2df2a6f48b1cc87942"
+      "sha": "66a6f9bd6a89fcf471992b8bd03b84f4cd04163385d23bfbf3f48593a772db8d"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2008-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/357",
       "dateDocument": "2007-10-05",
-      "roFundstelle": "AS 2008 357",
+      "roFundstelle": "AS 2008 2497",
       "titelDe": "Bundesbeschluss über die Genehmigung von zwei Abkommen der Weltorganisation für geistiges Eigentum und über die Änderung des Urheberrechtsgesetzes",
       "titelFr": "Arrêté fédéral portant approbation de deux traités de l'Organisation Mondiale de la Propriété Intellectuelle et modification de la loi sur le droit d'auteur",
       "titelIt": "Decreto federale che approva due trattati dell'Organizzazione mondiale della Proprietà Intellettuale e modifica la legge sul diritto d'autore",
       "botschaftKey": "BOTSCHAFT-2006-359",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/357/de",
-      "sha": "a074f85744c25dec6883408635ab66005a26b00d35c50f7a826f920147268c9c"
+      "sha": "c7966719842c9838f8fe98ba5e4c547fec708da4db2b92ad226fc328e04febcc"
     },
     {
       "art": "sammelerlass-marker",
@@ -141,5 +141,5 @@
       "sha": "a7ec21db9b953544d74a17b96a2676b03efcb81c681c547bbb5408f561d9a5b5"
     }
   ],
-  "sha": "4d525e41e6a5f7d40c76316885ea2493a966f578c845dba2e9168d8b0af122dc"
+  "sha": "8b0ecafa65e649d5d5c6aa9ce766331299369b318bc4d8e2f4017a1c68ae76d2"
 }

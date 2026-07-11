@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-31"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Familienzulagen (Familienzulagenverordnung; FamZV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les allocations familiales (OAFam)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sugli assegni familiari (OAFami)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "836.21"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2008/52"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-10-31"
+        "value": "RO 2008 145"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 145"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Familienzulagen (Familienzulagenverordnung; FamZV)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 145"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Familienzulagen (Familienzulagenverordnung; FamZV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les allocations familiales (OAFam)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sugli assegni familiari (OAFami)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "836.21"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/52"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-10-31"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 145"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Familienzulagen (Familienzulagenverordnung; FamZV)"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-10-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5367"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Familienzulagen (Familienzulagenverordnung, FamZV)"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-10-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5367"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Familienzulagen (Familienzulagenverordnung, FamZV)"
@@ -213,69 +237,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-10-28"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Familienzulagen (Familienzulagenverordnung, FamZV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les allocations familiales (OAFam)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sugli assegni familiari (OAFami)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "836.21"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/637"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-10-15"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-09-08"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung über die Familienzulagen (Familienzulagenverordnung, FamZV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les allocations familiales (OAFam)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sugli assegni familiari (OAFami)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "836.21"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/637"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-10-15"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-09-08"
+        "value": "RO 2009 5367"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +273,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-09-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4495"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Familienzulagen (Familienzulagenverordnung, FamZV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les allocations familiales (OAFam)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sugli assegni familiari (OAFami)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "836.21"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/637"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-10-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-09-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4495"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Familienzulagen (Familienzulagenverordnung, FamZV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les allocations familiales (OAFam)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sugli assegni familiari (OAFami)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "836.21"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/637"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-10-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-09-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4495"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Familienzulagen (Familienzulagenverordnung, FamZV)"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-09-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4591"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Familienzulagen (Familienzulagenverordnung, FamZV)"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-09-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4591"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Familienzulagen (Familienzulagenverordnung, FamZV)"
@@ -404,6 +452,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-09-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4591"
       },
       "titleDe": {
         "type": "literal",
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-10-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4951"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Familienzulagen (Familienzulagenverordnung, FamZV)"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-10-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4951"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Familienzulagen (Familienzulagenverordnung, FamZV)"
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-10-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4951"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Familienzulagen (Familienzulagenverordnung, FamZV)"
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-06-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2779"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Familienzulagen (Familienzulagenverordnung, FamZV)"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-06-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2779"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Familienzulagen (Familienzulagenverordnung, FamZV)"
@@ -596,6 +668,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-06-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2779"
       },
       "titleDe": {
         "type": "literal",

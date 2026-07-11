@@ -1,7 +1,7 @@
 {
   "erlassKey": "GSCHG",
   "sr": "814.20",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -51,25 +51,25 @@
       "dateEntryInForce": "2016-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/574",
       "dateDocument": "2014-03-21",
-      "roFundstelle": "AS 2014 574",
+      "roFundstelle": "AS 2014 3327",
       "titelDe": "Bundesgesetz über den Schutz der Gewässer (Gewässerschutzgesetz, GSchG)",
       "titelFr": "Loi fédérale sur la protection des eaux (LEaux)",
       "titelIt": "Legge federale sulla protezione delle acque (LPAc)",
       "botschaftKey": "BOTSCHAFT-2013-1031",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/574/de",
-      "sha": "a73546c0695420a658724a630462885035ed9e55a83ffc75bb9ed593a02bdc52"
+      "sha": "8e7ea3fb329cb77df08b641d03311ff7c78b15bdee2e404ac6faac0d81f7cb93"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2015-09-08",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/569",
       "dateDocument": "2015-08-24",
-      "roFundstelle": "AS 2015 569",
+      "roFundstelle": "AS 2015 3021",
       "titelDe": "Bundesgesetz über den Schutz der Gewässer (Gewässerschutzgesetz, GSchG) (Betrifft nur den französischen Text)",
       "titelFr": "Loi fédérale sur la protection des eaux (LEaux)",
       "titelIt": "Legge federale sulla protezione delle acque (LPAc) (Concerne solo il testo francese)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/569/de",
-      "sha": "5d36d8d2bdb966f24b269b9622ac33b7c468d13ab9781e94e87bc61ea7997dc2"
+      "sha": "24d8ffd6df20df907faa8312314c742527abbb46bf0a40e053798ded0c6514a0"
     },
     {
       "art": "sammelerlass-marker",
@@ -88,24 +88,24 @@
       "dateEntryInForce": "2013-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/491",
       "dateDocument": "2013-03-22",
-      "roFundstelle": "AS 2013 491",
+      "roFundstelle": "AS 2013 2339",
       "titelDe": "Bundesgesetz über den Schutz der Gewässer (Gewässerschutzgesetz, GSchG)",
       "titelFr": "Loi fédérale sur la protection des eaux (LEaux)",
       "titelIt": "Legge federale sulla protezione delle acque (LPAc)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/491/de",
-      "sha": "51a1bb8653d8f3936045c5179913e6b9dbb6d72a79801c193997e1039305c56e"
+      "sha": "52a67ddc2e2c18726415cfa0a5b4f0c85e68d8b18fcdcc5e71b98bb200224154"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2011-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/620",
       "dateDocument": "2009-12-11",
-      "roFundstelle": "AS 2010 620",
+      "roFundstelle": "AS 2010 4285",
       "titelDe": "Bundesgesetz über den Schutz der Gewässer (Gewässerschutzgesetz, GSchG) (Renaturierung)",
       "titelFr": "Loi fédérale sur la protection des eaux (LEaux) (Renaturation)",
       "titelIt": "Legge federale sulla protezione delle acque (LPAc) (Rinaturazione)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/620/de",
-      "sha": "e13f48cf6fe5f1f8e244cc7b6dccfebe8f5a04ec24887b6d6486e3530205d979"
+      "sha": "3b24a0d25801a1199bef9ca3c352c629c802290a92dc418e677cedf3bc769980"
     },
     {
       "art": "sammelerlass-marker",
@@ -136,25 +136,25 @@
       "dateEntryInForce": "2007-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/656",
       "dateDocument": "2006-03-24",
-      "roFundstelle": "AS 2006 656",
+      "roFundstelle": "AS 2006 4287",
       "titelDe": "Bundesgesetz über den Schutz der Gewässer (Gewässerschutzgesetz, GSchG)",
       "titelFr": "Loi fédérale sur la protection des eaux (LEaux)",
       "titelIt": "Legge federale sulla protezione delle acque (LPAc)",
       "botschaftKey": "BOTSCHAFT-2005-114",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/656/de",
-      "sha": "465767831c14d56f3aee62c92780264ade92262949a6cf7724dc3ccc66a3e247"
+      "sha": "b49c53570df83ace1fa6afa7f23e4c96625864251d9b405a54fe4b6a76276c9a"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2006-10-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/575",
       "dateDocument": "2004-10-08",
-      "roFundstelle": "AS 2006 575",
+      "roFundstelle": "AS 2006 3859",
       "titelDe": "Bundesgesetz über den Schutz der Gewässer (Gewässerschutzgesetz, GSchG)",
       "titelFr": "Loi fédérale sur la protection des eaux (LEaux)",
       "titelIt": "Legge federale sulla protezione delle acque (LPAc)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/575/de",
-      "sha": "be42acfbf19f7534b2476c7728b356c4c992e6e9b3628b7a4bdf83ebd011ae4f"
+      "sha": "b488386963f43a5c7b04d71f82878d1f9b82a1e20e8080ef44c9a6d60272a0a6"
     },
     {
       "art": "sammelerlass-marker",
@@ -205,5 +205,5 @@
       "sha": "d02db2a072143f74fa7ec0b7c285a0e8690198883fb42ff99746ef637f457ec9"
     }
   ],
-  "sha": "bb7eddc6a5d733168b4b0adf1db64db291404e66efc3f58445b4c53ed67bd7d1"
+  "sha": "d09b7a7f09d9cbad96fe0f2807b2f7c587b38d562c2a00658d841e4af8a5ef51"
 }

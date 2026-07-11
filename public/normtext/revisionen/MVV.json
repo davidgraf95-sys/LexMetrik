@@ -1,7 +1,7 @@
 {
   "erlassKey": "MVV",
   "sr": "833.11",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -81,48 +81,48 @@
       "dateEntryInForce": "2021-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/918",
       "dateDocument": "2020-11-18",
-      "roFundstelle": "AS 2020 918",
+      "roFundstelle": "AS 2020 5303",
       "titelDe": "Verordnung über die Militärversicherung (MVV)",
       "titelFr": "Ordonnance sur l'assurance militaire (OAM)",
       "titelIt": "Ordinanza sull'assicurazione militare (OAM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/918/de",
-      "sha": "b182774a3f31247d6033ed54dcf3505c9eaefc903e56518e225f93a9fb264005"
+      "sha": "cd8f2da689b14f6c47a2e116ddcd3fabf6adc38e1155605248ba6668c91d7e4b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2020-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/619",
       "dateDocument": "2019-10-23",
-      "roFundstelle": "AS 2019 619",
+      "roFundstelle": "AS 2019 3419",
       "titelDe": "Verordnung über die Militärversicherung (MVV)",
       "titelFr": "Ordonnance sur l'assurance militaire (OAM)",
       "titelIt": "Ordinanza sull'assicurazione militare (OAM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/619/de",
-      "sha": "663d37ae2e2c8850f0f469a051ea93a9d8cc034ed82fa01d39b5fd6ae40ea482"
+      "sha": "a5fc97f76e99f738f267039b76bab3613cc9db70e7540aa6252a6b26eb4607d3"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2019-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/669",
       "dateDocument": "2018-10-31",
-      "roFundstelle": "AS 2018 669",
+      "roFundstelle": "AS 2018 4145",
       "titelDe": "Verordnung über die Militärversicherung (MVV)",
       "titelFr": "Ordonnance sur l'assurance militaire (OAM)",
       "titelIt": "Ordinanza sull'assicurazione militare (OAM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/669/de",
-      "sha": "b43acf82bb1fdc393e11151d110d3f23dff677cf2fb492c559e4d9124ed0204d"
+      "sha": "654908c3f0db41107cd686cab718efca3063bedf0755ecf8f6774ffab2a97643"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2018-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/705",
       "dateDocument": "2017-11-01",
-      "roFundstelle": "AS 2017 705",
+      "roFundstelle": "AS 2017 6345",
       "titelDe": "Verordnung über die Militärversicherung (MVV)",
       "titelFr": "Ordonnance sur l'assurance militaire (OAM)",
       "titelIt": "Ordinanza sull'assicurazione militare (OAM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/705/de",
-      "sha": "10d8f1b7a6dd30d4cec0810244be6e67575add4b56b80377e5d75c83b9a4083b"
+      "sha": "126302f6b8d066a67c5998aafaca8a4bcf38c88dc6f6a838ffb9d12c489780fc"
     },
     {
       "art": "sammelerlass-marker",
@@ -147,12 +147,12 @@
       "dateEntryInForce": "2014-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/709",
       "dateDocument": "2013-10-30",
-      "roFundstelle": "AS 2013 709",
+      "roFundstelle": "AS 2013 3861",
       "titelDe": "Verordnung über die Militärversicherung (MVV)",
       "titelFr": "Ordonnance sur l'assurance militaire (OAM)",
       "titelIt": "Ordinanza sull'assicurazione militare (OAM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/709/de",
-      "sha": "2685d4dad8c80034dffa1fa8e7f78c850a1e8076da7d8a87534e99671a8629df"
+      "sha": "c59e54792ddeb9c90f155ab1c8d0886dfc2c7f5080306a59dd1e316807bbda77"
     },
     {
       "art": "sammelerlass-marker",
@@ -171,12 +171,12 @@
       "dateEntryInForce": "2010-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/610",
       "dateDocument": "2009-09-30",
-      "roFundstelle": "AS 2009 610",
+      "roFundstelle": "AS 2009 5189",
       "titelDe": "Verordnung über die Militärversicherung (MVV)",
       "titelFr": "Ordonnance sur l'assurance militaire (OAM)",
       "titelIt": "Ordinanza sull'assicurazione militare (OAM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/610/de",
-      "sha": "fafd0ed9ac419eb53dca34008461e8e8d9bdeff64483c29a5f598807af230c0f"
+      "sha": "c0138be110e28722feb2af91907b49405017ffab061f396a305b9ef3bb126483"
     },
     {
       "art": "sammelerlass-marker",
@@ -189,12 +189,12 @@
       "dateEntryInForce": "2008-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/931",
       "dateDocument": "2007-12-07",
-      "roFundstelle": "AS 2007 931",
+      "roFundstelle": "AS 2007 7123",
       "titelDe": "Verordnung über die Militärversicherung (MVV)",
       "titelFr": "Ordonnance sur l'assurance militaire (OAM)",
       "titelIt": "Ordinanza sull'assicurazione militare (OAM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/931/de",
-      "sha": "7b26612d6f6268eb6ec10e1a7a84892ae166119249b71152e5ccff6051275089"
+      "sha": "b6c9e2b44240dd96a090c4933c3d63fc2c1fb6e2e9bd58134d91cc447535eafc"
     },
     {
       "art": "sammelerlass-marker",
@@ -207,72 +207,72 @@
       "dateEntryInForce": "2006-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/773",
       "dateDocument": "2005-11-16",
-      "roFundstelle": "AS 2005 773",
+      "roFundstelle": "AS 2005 5645",
       "titelDe": "Verordnung über die Militärversicherung (MVV)",
       "titelFr": "Ordonnance sur l'assurance militaire (OAM)",
       "titelIt": "Ordinanza sull'assicurazione militare (OAM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/773/de",
-      "sha": "ed48e22131cc5ce7d368d6331370340fff53ce0929ff859a9eaf47097ba9fdd9"
+      "sha": "22e170472d11ae7315bbd5858b70985ea365d7a599ed64fde2af9a5171d85f8c"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2005-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/473",
       "dateDocument": "2005-04-27",
-      "roFundstelle": "AS 2005 473",
+      "roFundstelle": "AS 2005 2885",
       "titelDe": "Verordnung über die Militärversicherung (MVV)",
       "titelFr": "Ordonnance sur l'assurance militaire (OAM)",
       "titelIt": "Ordinanza sull'assicurazione militare (OAM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/473/de",
-      "sha": "173d4d510bdae8f25389d30877705c9db318f8fdb15f2a3348beb73dfc566927"
+      "sha": "86498a7d22a8ed12def5a10efea85bd75a947c7518cc32df0c377f979cbd5b60"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2005-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/786",
       "dateDocument": "2004-12-03",
-      "roFundstelle": "AS 2004 786",
+      "roFundstelle": "AS 2004 5081",
       "titelDe": "Verordnung über die Militärversicherung (MVV)",
       "titelFr": "Ordonnance sur l'assurance militaire (OAM)",
       "titelIt": "Ordinanza sull'assicurazione militare (OAM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/786/de",
-      "sha": "200de77fb145312f1716a9f2c28dce5f114effe4f092ef315f2099439c473a34"
+      "sha": "0a7f42b1e4025c09574b5073f723b513414072e657267dff1074ac33589e180c"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2004-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/564",
       "dateDocument": "2003-05-21",
-      "roFundstelle": "AS 2003 564",
+      "roFundstelle": "AS 2003 3883",
       "titelDe": "Verordnung über die Militärversicherung (MVV)",
       "titelFr": "Ordonnance sur l'assurance militaire (OAM)",
       "titelIt": "Ordinanza sull'assicurazione militare (OAM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/564/de",
-      "sha": "c1a2977a3881cfa8a678bfc7e971d22a2f1efd858e5d89060f2510d6e480178b"
+      "sha": "2d48e8f1b23a5ec92e7efec43bbdafe6e20e10578db2991702b93823febf2472"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2003-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/300",
       "dateDocument": "2003-06-25",
-      "roFundstelle": "AS 2003 300",
+      "roFundstelle": "AS 2003 1997",
       "titelDe": "Verordnung über die Militärversicherung (MVV)",
       "titelFr": "Ordonnance sur l'assurance militaire (OAM)",
       "titelIt": "Ordinanza sull'assicurazione militare (OAM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/300/de",
-      "sha": "ccb74a2d07d89b3c7660852fe91376d0831985ea34cc695dafd7e8674b1ab6a2"
+      "sha": "0fde79f62619919109f7d22d63a7eab0c21088445bf5619acc220786faf43b20"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2003-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/617",
       "dateDocument": "2002-09-11",
-      "roFundstelle": "AS 2002 617",
+      "roFundstelle": "AS 2002 3937",
       "titelDe": "Verordnung über die Militärversicherung (MVV)",
       "titelFr": "Ordonnance sur l'assurance militaire",
       "titelIt": "Ordinanza sull'assicurazione militare (OAM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/617/de",
-      "sha": "a7b7f0ae2743c4e3975eb6fe861a37a324c0dbe8e93de08a585b433a4a5584e6"
+      "sha": "33941968ec1df352a3951a6a70392375aed1754c40b83641375a68db74f75ed3"
     },
     {
       "art": "sammelerlass-marker",
@@ -285,48 +285,48 @@
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/427",
       "dateDocument": "2000-09-18",
-      "roFundstelle": "AS 2000 427",
+      "roFundstelle": "AS 2000 2637",
       "titelDe": "Verordnung über die Militärversicherung (MVV)",
       "titelFr": "Ordonnance sur l'assurance militaire (OAM)",
       "titelIt": "Ordinanza sull'assicurazione militare (OAM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/427/de",
-      "sha": "9961e5c02a31842ad7a7a4b4c091aa7b3907e5de0dc222aa3a543cc47b2b9e4e"
+      "sha": "61202302496dc236f3efc48c12c7c303d47f0b85f3329b8ed3c9756ff1a42f5c"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/514",
       "dateDocument": "2000-11-22",
-      "roFundstelle": "AS 2000 514",
+      "roFundstelle": "AS 2000 2919",
       "titelDe": "Verordnung über die Militärversicherung (MVV)",
       "titelFr": "Ordonnance sur l'assurance militaire (OAM)",
       "titelIt": "Ordinanza sull'assicurazione militare (OAM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/514/de",
-      "sha": "82f12a17b3e3d3d5919a7a4a4cc11cec20b10d4e96dd2d609a349ab778bd55d8"
+      "sha": "61d50677cbe6d7d60fbf5adb4c6f684da4ca4d24ea3685fd5afd5474221d621c"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/561",
       "dateDocument": "2000-11-27",
-      "roFundstelle": "AS 2000 561",
+      "roFundstelle": "AS 2000 3092",
       "titelDe": "Verordnung über die Militärversicherung (MVV)",
       "titelFr": "Ordonnance sur l'assurance militaire (OAM)",
       "titelIt": "Ordinanza sull'assicurazione militare (OAM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/561/de",
-      "sha": "fcbdbd1af1ff96777d158e6e6632476e383cc1d5dab4867a25c34cd13baac20a"
+      "sha": "c4b3694bf5e5cd287de21c02e00e70c2a845d26d2fe62d25fc03cb8341bb5447"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "1999-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/342",
       "dateDocument": "1999-06-23",
-      "roFundstelle": "AS 1999 342",
+      "roFundstelle": "AS 1999 2172",
       "titelDe": "Verordnung über die Militärversicherung (MVV)",
       "titelFr": "Ordonnance sur l'assurance militaire (OAM)",
       "titelIt": "Ordinanza sull'assicurazione militare (OAM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/342/de",
-      "sha": "ec62f4fda80d73935d730b8602d4c33adb509600000a53a357253d01682b0c38"
+      "sha": "ae0df0bdb5a4b24f3a5b8adcd9b4d690cc91ba61238b8075722998c254d2b3ec"
     },
     {
       "art": "aenderung",
@@ -353,5 +353,5 @@
       "sha": "1daea168685add39ab480b469a2487303ae48c86588219530cb6ecd94803349c"
     }
   ],
-  "sha": "93f5ade8ace436b0b60f7b6d9b06e7dc0705c71bd6bf0eb645688c8f8bcd95b5"
+  "sha": "cf172e346850dfc80f67ff88607c32c74fabd40ca4058fdf4815839e92cf5ab6"
 }

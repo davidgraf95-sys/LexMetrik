@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-23"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom über die Alters- und Hinterlassenenversicherung (AHVG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur l'assurance-vieillesse et survivants (LAVS)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sull'assicurazione per la vecchiaia e per i superstiti (LAVS)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.10"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/439"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-06-23"
+        "value": "RO 2000 2677"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2677"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom über die Alters- und Hinterlassenenversicherung (AHVG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'assurance-vieillesse et survivants (LAVS)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'assicurazione per la vecchiaia e per i superstiti (LAVS)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.10"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/439"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-06-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2677"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom über die Alters- und Hinterlassenenversicherung (AHVG)"
@@ -117,37 +129,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-23"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Alters- und Hinterlassenenversicherung (AHVG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur l'assurance-vieillesse et survivants (LAVS)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sull'assicurazione per la vecchiaia e per i superstiti (LAVS)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.10"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/461"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-06-23"
+        "value": "RO 2000 2749"
       },
       "titleDe": {
         "type": "literal",
@@ -181,6 +165,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2749"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Alters- und Hinterlassenenversicherung (AHVG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'assurance-vieillesse et survivants (LAVS)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sull'assicurazione per la vecchiaia e per i superstiti (LAVS)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.10"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/461"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-06-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2749"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Alters- und Hinterlassenenversicherung (AHVG)"
@@ -213,6 +237,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-10-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 292"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Alters- und Hinterlassenenversicherung (AHVG)"
@@ -245,6 +273,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-10-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 292"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Alters- und Hinterlassenenversicherung (AHVG)"
@@ -276,6 +308,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-10-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 292"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-12-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4817"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Alters- und Hinterlassenenversicherung (AHVG)"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-12-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4817"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Alters- und Hinterlassenenversicherung (AHVG)"
@@ -372,6 +416,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-12-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4817"
       },
       "titleDe": {
         "type": "literal",
@@ -404,6 +452,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-06-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5259"
       },
       "titleDe": {
         "type": "literal",
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-06-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5259"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Alters- und Hinterlassenenversicherung (AHVG) (Neue AHV-Versichertennummer)"
@@ -468,6 +524,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-06-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5259"
       },
       "titleDe": {
         "type": "literal",
@@ -500,6 +560,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-06-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 2411"
       },
       "titleDe": {
         "type": "literal",
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-06-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 2411"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung der Weiterführung des Freizügigkeitsabkommens zwischen der Schweiz und der Europäischen Gemeinschaft und ihren Mitgliedstaaten sowie über die Genehmigung und die Umsetzung des Protokolls über die Ausdehnung des Freizügigkeitsabkommens auf Bulgarien und Rumänien"
@@ -564,6 +632,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-06-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 2411"
       },
       "titleDe": {
         "type": "literal",
@@ -596,6 +668,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-06-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 3517"
       },
       "titleDe": {
         "type": "literal",
@@ -629,6 +705,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-06-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 3517"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Neuordnung der Pflegefinanzierung"
@@ -660,6 +740,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-06-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 3517"
       },
       "titleDe": {
         "type": "literal",
@@ -692,6 +776,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-04-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1643"
       },
       "titleDe": {
         "type": "literal",
@@ -725,6 +813,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-04-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1643"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Neuordnung der Pflegefinanzierung (Betrifft nur den französischen Text)"
@@ -756,6 +848,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-04-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1643"
       },
       "titleDe": {
         "type": "literal",
@@ -788,6 +884,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-06-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4745"
       },
       "titleDe": {
         "type": "literal",
@@ -821,6 +921,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-06-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4745"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Alters- und Hinterlassenenversicherung (AHVG) (Verbesserung der Durchführung)"
@@ -852,6 +956,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-06-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4745"
       },
       "titleDe": {
         "type": "literal",
@@ -884,6 +992,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-06-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 5233"
       },
       "titleDe": {
         "type": "literal",
@@ -917,6 +1029,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-06-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 5233"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung und die Umsetzung des Protokolls zum Freizügigkeitsabkommen zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft sowie ihren Mitgliedstaaten andererseits betreffend die Ausdehnung auf die Republik Kroatien"
@@ -948,6 +1064,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-06-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 5233"
       },
       "titleDe": {
         "type": "literal",
@@ -1205,6 +1325,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1946-12-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 63 843"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 20. Dezember 1946 über die Alters- und Hinterlassenenversicherung (AHVG)"
@@ -1237,6 +1361,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1946-12-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 63 843"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 20. Dezember 1946 über die Alters- und Hinterlassenenversicherung (AHVG)"
@@ -1269,6 +1397,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1946-12-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 63 843"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 20. Dezember 1946 über die Alters- und Hinterlassenenversicherung (AHVG)"
@@ -1300,6 +1432,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1946-12-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 63 843"
       },
       "titleDe": {
         "type": "literal",

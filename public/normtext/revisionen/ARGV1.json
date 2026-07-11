@@ -1,7 +1,7 @@
 {
   "erlassKey": "ARGV1",
   "sr": "822.111",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -69,36 +69,36 @@
       "dateEntryInForce": "2020-11-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/754",
       "dateDocument": "2020-09-18",
-      "roFundstelle": "AS 2020 754",
+      "roFundstelle": "AS 2020 4135",
       "titelDe": "Verordnung 1 zum Arbeitsgesetz (ArGV 1)",
       "titelFr": "Ordonnance 1 relative à la loi sur le travail (OLT 1)",
       "titelIt": "Ordinanza 1 concernente la legge sul lavoro (OLL 1)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/754/de",
-      "sha": "b5f9ba1427e2a7dadba40c929d749e1945b1c935dc35241592d1af7eeccac198"
+      "sha": "9bcfd94b5e06c0e647bee10e48914ec08086ea9b1553a8f2ab12c28e2f35f676"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2016-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/787",
       "dateDocument": "2015-11-04",
-      "roFundstelle": "AS 2015 787",
+      "roFundstelle": "AS 2015 4809",
       "titelDe": "Verordnung 1 zum Arbeitsgesetz (ArGV 1)",
       "titelFr": "Ordonnance 1 relative à la loi sur le travail (OLT 1)",
       "titelIt": "Ordinanza 1 concernente la legge sul lavoro (OLL 1)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/787/de",
-      "sha": "c55dabab7bd85a093f279bba7be53b953ce1eb07963ec4bef923ebadf1615898"
+      "sha": "3ee2dd34548fa51237a1a9eeef3c597520db13609096704ae23d52a12f735332"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2014-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/227",
       "dateDocument": "2014-04-30",
-      "roFundstelle": "AS 2014 227",
+      "roFundstelle": "AS 2014 999",
       "titelDe": "Verordnung 1 zum Arbeitsgesetz (ArGV 1)",
       "titelFr": "Ordonnance 1 relative à la loi sur le travail (OLT 1)",
       "titelIt": "Ordinanza 1 concernente la legge sul lavoro (OLL 1)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/227/de",
-      "sha": "060120d0cd75611139911dec0a7624921408784672966a9ac2fb2ce4e18ca60c"
+      "sha": "a6c9c9c2f42c3edb0d0960020e93842ade1da2d44f9dbd96365162e908490717"
     },
     {
       "art": "sammelerlass-marker",
@@ -111,48 +111,48 @@
       "dateEntryInForce": "2011-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/455",
       "dateDocument": "2011-07-06",
-      "roFundstelle": "AS 2011 455",
+      "roFundstelle": "AS 2011 3381",
       "titelDe": "Verordnung 1 zum Arbeitsgesetz (ArGV 1)",
       "titelFr": "Ordonnance 1 relative à la loi sur le travail (OLT 1)",
       "titelIt": "Ordinanza 1 concernente la legge sul lavoro (OLL 1)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/455/de",
-      "sha": "f978abd8e5fcce9c433095b8a38782500791fee6183a3ae442437e4b5721d53e"
+      "sha": "9db7611cde49c411e56b3f2ceac1e730418829d190067e9893b6e32ee3a0ba6a"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2010-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/414",
       "dateDocument": "2010-06-30",
-      "roFundstelle": "AS 2010 414",
+      "roFundstelle": "AS 2010 3111",
       "titelDe": "Verordnung 1 zum Arbeitsgesetz (ArGV 1)",
       "titelFr": "Ordonnance 1 relative à la loi sur le travail (OLT 1)",
       "titelIt": "Ordinanza 1 concernente la legge sul lavoro (OLL 1)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/414/de",
-      "sha": "a9885d20b10c2b0a610104dbc36ebe8f968c76cab8145e40b0824eca0104493c"
+      "sha": "805f41f1d96f0e7f3a62ecb81420c178bb5b12de69cbeb4f0cce470d005318de"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2009-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/292",
       "dateDocument": "2009-05-06",
-      "roFundstelle": "AS 2009 292",
+      "roFundstelle": "AS 2009 2399",
       "titelDe": "Verordnung 1 zum Arbeitsgesetz (ArGV 1)",
       "titelFr": "Ordonnance 1 relative à la loi sur le travail (OLT 1)",
       "titelIt": "Ordinanza 1 concernente la legge sul lavoro (OLL 1)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/292/de",
-      "sha": "34f46deec985aaf1523a4f7886d14c9b056cb2b06ebe143b7cd752db14c3de02"
+      "sha": "14b0e3a21368a9e8126218041d7b604f83d245d728285cd0c58cdefa57d5bdcd"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2008-12-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/725",
       "dateDocument": "2008-10-29",
-      "roFundstelle": "AS 2008 725",
+      "roFundstelle": "AS 2008 5181",
       "titelDe": "Verordnung 1 zum Arbeitsgesetz (ArGV 1)",
       "titelFr": "Ordonnance 1 relative à la loi sur le travail (OLT 1)",
       "titelIt": "Ordinanza 1 concernente la legge sul lavoro (OLL 1)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/725/de",
-      "sha": "7bd6c9fc579afc60d01e66ab4ae418a1b51e13e7dad01f6869775c44d9e15860"
+      "sha": "f37da023fed69a099d5255da7a751562179d496fb8d88bf655223bcf96a95995"
     },
     {
       "art": "sammelerlass-marker",
@@ -165,36 +165,36 @@
       "dateEntryInForce": "2005-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/277",
       "dateDocument": "2004-04-07",
-      "roFundstelle": "AS 2004 277",
+      "roFundstelle": "AS 2004 2411",
       "titelDe": "Verordnung 1 zum Arbeitsgesetz (ArGV 1)",
       "titelFr": "Ordonnance 1 relative à la loi sur le travail (OLT 1)",
       "titelIt": "Ordinanza 1 concernente la legge sul lavoro (OLL 1)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/277/de",
-      "sha": "e096d98f8b6490a9f2a34355fead3c8159a425b5716e9667fc18f10805ae50b9"
+      "sha": "ce7c83e6784119fdb77ab2e52f6f0b7c46e3148eba4a2aa8f72adcd1ace9c6ab"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2002-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/200",
       "dateDocument": "2002-04-24",
-      "roFundstelle": "AS 2002 200",
+      "roFundstelle": "AS 2002 1347",
       "titelDe": "Verordnung 1 zum Arbeitsgesetz (ArGV 1)",
       "titelFr": "Ordonnance 1 relative à la loi sur le travail (OLT 1)",
       "titelIt": "Ordinanza 1 concernente la legge sul lavoro (OLL 1)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/200/de",
-      "sha": "d079585d1a185c2243c8831f7275f22dba88f84bd396011de330f2abf99546e1"
+      "sha": "82248dd4a4c51b474c4ae7e9a9d469f0d14f581e3ca628578a941994c899f4bd"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2000-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/243",
       "dateDocument": "2000-05-10",
-      "roFundstelle": "AS 2000 243",
+      "roFundstelle": "AS 2000 1581",
       "titelDe": "Verordnung 1 zum Arbeitsgesetz (ArGV 1)",
       "titelFr": "Ordonnance 1 relative à la loi sur le travail (OLT 1)",
       "titelIt": "Ordinanza 1 concernente la legge sul lavoro (OLL 1)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/243/de",
-      "sha": "5ba47efe11e98d6c36ddfe730c768cfce6035767a4177fd2897d6f0c18ae5e4e"
+      "sha": "f11b82ce7e4b027200be7f6be6f438e230ed8664ee9ae1ef6551f66be02d4f5c"
     },
     {
       "art": "aenderung",
@@ -209,5 +209,5 @@
       "sha": "b92b9cf1d46c0eab6bbc8b94e74cedf71e64f1a2da5fd8b37271af8b7d268780"
     }
   ],
-  "sha": "907a56edc42cd52039ebbf7b60adabde61f3afded541d39f22e99fac83f7216e"
+  "sha": "099d124cae21c954161d43c05146f1a7904082ca95eaf54cc34c953c3eef8e51"
 }

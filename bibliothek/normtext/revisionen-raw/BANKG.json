@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-04-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Banken und Sparkassen"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur les banques et les caisses d'épargne"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulle banche e le casse di risparmio"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "952.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1999/368"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-04-22"
+        "value": "RO 1999 2405"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-04-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2405"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Banken und Sparkassen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les banques et les caisses d'épargne"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle banche e le casse di risparmio"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/368"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-04-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2405"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Banken und Sparkassen"
@@ -117,37 +129,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-10-03"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur les banques et les caisses d'épargne (Loi sur les banques, LB)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulle banche e le casse di risparmio (Legge sulle banche, LBCR)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "952.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/340"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-10-03"
+        "value": "RO 2004 2767"
       },
       "titleDe": {
         "type": "literal",
@@ -181,6 +165,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-10-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 2767"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les banques et les caisses d'épargne (Loi sur les banques, LB)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulle banche e le casse di risparmio (Legge sulle banche, LBCR)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/340"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-10-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 2767"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG)"
@@ -213,6 +237,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-12-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 55"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG) (Verstärkung des Einlegerschutzes)"
@@ -245,6 +273,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-12-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 55"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG) (Verstärkung des Einlegerschutzes)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-12-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 55"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG) (Verstärkung des Einlegerschutzes)"
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-12-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 6405"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG) (Verstärkung des Einlegerschutzes)"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-12-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 6405"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG) (Verstärkung des Einlegerschutzes)"
@@ -372,6 +416,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-12-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 6405"
       },
       "titleDe": {
         "type": "literal",
@@ -404,6 +452,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-03-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3919"
       },
       "titleDe": {
         "type": "literal",
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-03-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3919"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG) (Sicherung der Einlagen)"
@@ -468,6 +524,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-03-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3919"
       },
       "titleDe": {
         "type": "literal",
@@ -500,6 +560,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-09-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 811"
       },
       "titleDe": {
         "type": "literal",
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-09-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 811"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG) (Stärkung der Stabilität im Finanzsektor; <i>too big to fail</i>)"
@@ -564,6 +632,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-09-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 811"
       },
       "titleDe": {
         "type": "literal",
@@ -596,6 +668,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-03-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1267"
       },
       "titleDe": {
         "type": "literal",
@@ -629,6 +705,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-03-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1267"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG) (Nachrichtenlose Vermögenswerte)"
@@ -660,6 +740,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-03-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1267"
       },
       "titleDe": {
         "type": "literal",
@@ -757,6 +841,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1934-11-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 51 121"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 8. November 1934 über die Banken und Sparkassen (Bankengesetz, BankG)"
@@ -789,6 +877,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1934-11-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 51 121"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 8. November 1934 über die Banken und Sparkassen (Bankengesetz, BankG)"
@@ -821,6 +913,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1934-11-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 51 121"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 8. November 1934 über die Banken und Sparkassen (Bankengesetz, BankG)"
@@ -852,6 +948,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1934-11-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 51 121"
       },
       "titleDe": {
         "type": "literal",

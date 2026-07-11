@@ -1,7 +1,7 @@
 {
   "erlassKey": "MSTP",
   "sr": "322.1",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -57,12 +57,12 @@
       "dateEntryInForce": "2019-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/625",
       "dateDocument": "2016-06-17",
-      "roFundstelle": "AS 2018 625",
+      "roFundstelle": "AS 2018 3911",
       "titelDe": "Militärstrafprozess (MStP)",
       "titelFr": "Procédure pénale militaire (PPM)",
       "titelIt": "Procedura penale militare (PPM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/625/de",
-      "sha": "615136b527ea0e440471b6da11f4c761f348fb2a5efed5b69ed5390a5e3600be"
+      "sha": "49b81c6dfce4fadd05a979156719791a952ee7803a11e2ccda65c898f4cf92fb"
     },
     {
       "art": "sammelerlass-marker",
@@ -141,13 +141,13 @@
       "dateEntryInForce": "2004-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/322",
       "dateDocument": "2003-12-19",
-      "roFundstelle": "AS 2004 322",
+      "roFundstelle": "AS 2004 2691",
       "titelDe": "Militärstrafprozess (MStP)",
       "titelFr": "Procédure pénale militaire (PPM)",
       "titelIt": "Procedura penale militare (PPM)",
       "botschaftKey": "BOTSCHAFT-2003-143",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/322/de",
-      "sha": "a64c8423b3c6a7bed61910a8a0bb54f47a841e2f643184e22b1c11a4e364ffa2"
+      "sha": "2be235fc1f4fa5c8ff2b4dd2e02107fc6e559f28278b27eb5d9b3de69b2d6d4a"
     },
     {
       "art": "sammelerlass-marker",
@@ -210,5 +210,5 @@
       "sha": "ae8755f52cdf4f464eead877fb40e6814d526c8201b436481911b74cdd343384"
     }
   ],
-  "sha": "755986eded0808d52d4aa1fa55104064f09d90483691589eeefb58ec674a4fa6"
+  "sha": "2a8264e4d16e9df44d1674516eebc983a637f5b430c6d1ae8a05f91a079c9170"
 }

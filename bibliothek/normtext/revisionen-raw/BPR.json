@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1976-12-17"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom 17. Dezember 1976 über die politischen Rechte (BPR)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 17 décembre 1976 sur les droits politiques (LDP)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 17 dicembre 1976 sui diritti politici (LDP)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "161.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1978/688_688_688"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1978-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1976-12-17"
+        "value": "RO 1978 688"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1976-12-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1978 688"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 17. Dezember 1976 über die politischen Rechte (BPR)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1976-12-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1978 688"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 17. Dezember 1976 über die politischen Rechte (BPR)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 17 décembre 1976 sur les droits politiques (LDP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 17 dicembre 1976 sui diritti politici (LDP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "161.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1978/688_688_688"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1978-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1976-12-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1978 688"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 17. Dezember 1976 über die politischen Rechte (BPR)"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-10-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 411"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die politischen Rechte (BPR)"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-10-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 411"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die politischen Rechte (BPR)"
@@ -213,6 +237,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-10-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 411"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die politischen Rechte (BPR)"
@@ -245,6 +273,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-06-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3193"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die politischen Rechte"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-06-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3193"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die politischen Rechte"
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-06-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3193"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die politischen Rechte"
@@ -340,6 +380,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-05-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 2095"
       },
       "titleDe": {
         "type": "literal",
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-05-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 2095"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die politischen Rechte (Betrifft nur den französischen Text)"
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-05-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 2095"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die politischen Rechte (Betrifft nur den französischen Text)"
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 4635"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz betreffend die Änderung der Bundesgesetzgebung über die politischen Rechte"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 4635"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz betreffend die Änderung der Bundesgesetzgebung über die politischen Rechte"
@@ -500,6 +560,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-03-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 4635"
       },
       "titleDe": {
         "type": "literal",
@@ -532,6 +596,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 1"
       },
       "titleDe": {
         "type": "literal",
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 1"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die politischen Rechte"
@@ -596,6 +668,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 1"
       },
       "titleDe": {
         "type": "literal",
@@ -628,6 +704,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-09-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 271"
       },
       "titleDe": {
         "type": "literal",
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-09-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 271"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die politischen Rechte (Bedingter Rückzug einer Volksinitiative)"
@@ -692,6 +776,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-09-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 271"
       },
       "titleDe": {
         "type": "literal",
@@ -724,6 +812,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-09-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 543"
       },
       "titleDe": {
         "type": "literal",
@@ -757,6 +849,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-09-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 543"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die politischen Rechte (Nationalratswahlen)"
@@ -788,6 +884,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-09-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 543"
       },
       "titleDe": {
         "type": "literal",

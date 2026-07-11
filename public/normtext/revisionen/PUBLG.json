@@ -1,7 +1,7 @@
 {
   "erlassKey": "PUBLG",
   "sr": "170.512",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -45,13 +45,13 @@
       "dateEntryInForce": "2016-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/669",
       "dateDocument": "2014-09-26",
-      "roFundstelle": "AS 2015 669",
+      "roFundstelle": "AS 2015 3977",
       "titelDe": "Bundesgesetz über die Sammlungen des Bundesrechts und das Bundesblatt (Publikationsgesetz, PublG)",
       "titelFr": "Loi fédérale sur les recueils du droit fédéral et la Feuille fédérale (Loi sur les publications officielles, LPubl)",
       "titelIt": "Legge federale sulle raccolte del diritto federale e sul Foglio federale (Legge sulle pubblicazioni ufficiali, LPubl)",
       "botschaftKey": "BOTSCHAFT-2013-1331",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/669/de",
-      "sha": "a618c91db3fb5b71372ff8093e22e81db9694eb7b7993b5a98f68fa0f883a323"
+      "sha": "20471b9814c09239cd8760ed8e6425e9ebbec2533009957d144b9a23f0da5168"
     },
     {
       "art": "sammelerlass-marker",
@@ -64,13 +64,13 @@
       "dateEntryInForce": "2005-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/745",
       "dateDocument": "2004-06-18",
-      "roFundstelle": "AS 2004 745",
+      "roFundstelle": "AS 2004 4929",
       "titelDe": "Bundesgesetz über die Sammlungen des Bundesrechts und das Bundesblatt (Publikationsgesetz, PublG)",
       "titelFr": "Loi fédérale sur les recueils du droit fédéral et la Feuille fédérale (Loi sur les publications officielles, LPubl)",
       "titelIt": "Legge federale sulle raccolte del diritto federale e sul Foglio federale (Legge sulle pubblicazioni ufficiali, LPubb)",
       "botschaftKey": "BOTSCHAFT-2003-1274",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/745/de",
-      "sha": "a33d0903d20c75aa7a823a3583a5f308d20e68834a0b33ce887623f43090f407"
+      "sha": "2cd46f427a95b235c89de647d686be3ffd035db673d852b6ee10f45d2d7454ab"
     },
     {
       "art": "aenderung",
@@ -89,12 +89,13 @@
       "dateEntryInForce": "1849-03-05",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/I/275_275_439",
       "dateDocument": "1849-03-05",
+      "roFundstelle": "RO I 275",
       "titelDe": "Verordnung vom 5. März 1849 betreffend die Herausgabe eines Bundesblattes",
       "titelFr": "Ordonnance du 5 mars 1849 relative à la publication d'une Feuille fédérale",
       "titelIt": "Ordinanza del 5 marzo 1849 sulla pubblicazione di un foglio federale",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/I/275_275_439/de",
-      "sha": "a6ab3c5bc96dd839a0b686f54cf1e54e871c45868dcc54563bd79364b58b5783"
+      "sha": "8e0397e2ef0e7b5b92ae09e7a79ae66569f58da2555cafe3a5fe0c3fb010c019"
     }
   ],
-  "sha": "0b9a1c04ba9b61cb6bdd94504a076bc1c783206f7f48c09b9fd2750d66e6562d"
+  "sha": "2bdf046c3b6a6d5655b1b41db5ca016e38a745bbc897654a466d7e387665165a"
 }

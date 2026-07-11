@@ -1,7 +1,7 @@
 {
   "erlassKey": "NHG",
   "sr": "451",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -27,12 +27,12 @@
       "dateEntryInForce": "2020-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/229",
       "dateDocument": "2019-09-27",
-      "roFundstelle": "AS 2020 229",
+      "roFundstelle": "AS 2020 1217",
       "titelDe": "Bundesgesetz über den Natur- und Heimatschutz (NHG)",
       "titelFr": "Loi fédérale sur la protection de la nature et du paysage (LPN)",
       "titelIt": "Legge federale sulla protezione della natura e del paesaggio (LPN)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/229/de",
-      "sha": "a0d3133ec3477ca46992941f98dbcbb8669f11bb0c6b1468b987564148806190"
+      "sha": "b055d8f2262aa0756973f5790687590180ce5b52edfefe771307302037fa1020"
     },
     {
       "art": "sammelerlass-marker",
@@ -51,13 +51,13 @@
       "dateEntryInForce": "2014-09-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/467",
       "dateDocument": "2014-03-21",
-      "roFundstelle": "AS 2014 467",
+      "roFundstelle": "AS 2014 2629",
       "titelDe": "Bundesbeschluss über die Genehmigung des Protokolls von Nagoya über den Zugang zu genetischen Ressourcen und die ausgewogene und gerechte Aufteilung der sich aus ihrer Nutzung ergebenden Vorteile (Nagoya-Protokoll) und dessen Umsetzung (Bundesgesetz über den Natur- und Heimatschutz)",
       "titelFr": "Arrêté fédéral portant approbation du Protocole de Nagoya sur l'accès aux ressources génétiques et le partage juste et équitable des avantages découlant de leur utilisation Protocole de Nagoya) et sa mise en uvre (loi fédérale sur la protection de la nature et du paysage)",
       "titelIt": "Decreto federale che approva il Protocollo di Nagoya sull'accesso alle risorse genetiche e la giusta ed equa condivisione dei benefici derivanti dalla loro utilizzazione (Protocollo di Nagoya) e lo traspone nel diritto svizzero (legge federale sulla protezione della natura e del paesaggio)",
       "botschaftKey": "BOTSCHAFT-2013-611",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/467/de",
-      "sha": "31a68b3e79245e8a58fba9b035868f5c05e7f93bc9015241259e4d2fd08c8667"
+      "sha": "4af4c601d83115403c8fcd42dfa142392e64a7a0bc433c92c08728543eb08028"
     },
     {
       "art": "sammelerlass-marker",
@@ -82,13 +82,13 @@
       "dateEntryInForce": "2007-12-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/742",
       "dateDocument": "2006-10-06",
-      "roFundstelle": "AS 2007 742",
+      "roFundstelle": "AS 2007 5237",
       "titelDe": "Bundesgesetz über den Natur- und Heimatschutz (NHG)",
       "titelFr": "Loi fédérale sur la protection de la nature et du paysage (LPN)",
       "titelIt": "Legge federale sulla protezione della natura e del paesaggio (LPN)",
       "botschaftKey": "BOTSCHAFT-2005-263",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/742/de",
-      "sha": "d7cf5357d2bd1dd463514657a02ef364b93e7d57c836038fb6b85317f549eb2b"
+      "sha": "045c1b3cd0330b0222d42c046d4105e03bf35dd1f44872088be9866b9246b128"
     },
     {
       "art": "sammelerlass-marker",
@@ -133,5 +133,5 @@
       "sha": "d2a4d25988fee734c409321e922c4c8601e515b4ff9be8dd0ec4ad2e73ef5fd1"
     }
   ],
-  "sha": "fb6bdcb1cf1266ca10e79fc9226c8d8b0e44c7ea7069c63aea9c1847bbe320a7"
+  "sha": "ba190cc30a8f378499bc3fd07eb762f02d88ebed78838e3ed00783f561a041ca"
 }

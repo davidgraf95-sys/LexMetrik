@@ -1,7 +1,7 @@
 {
   "erlassKey": "FIDLEV",
   "sr": "950.11",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -27,13 +27,13 @@
       "dateEntryInForce": "2020-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/759",
       "dateDocument": "2019-11-06",
-      "roFundstelle": "AS 2019 759",
+      "roFundstelle": "AS 2019 4459",
       "titelDe": "Verordnung über die Finanzdienstleistungen (Finanzdienstleistungsverordnung, FIDLEV)",
       "titelFr": "Ordonnance sur les services financiers (OSFin)",
       "titelIt": "Ordinanza sui servizi finanziari (OSerFi)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/759/de",
-      "sha": "dab620dc47ea568b8d658215214779e1dabc31ea8110e37652263d19636f1604"
+      "sha": "dab8cea1617181d9d783e7aaf168a8d9c860265e4e29fb30632b07542f386386"
     }
   ],
-  "sha": "bf6a2639eddd5e9d08696f1106e4829b5d85bf65ca8d0062468c420a2a034be4"
+  "sha": "250b0aac3a85a72e034d53e203a074f679619cb76ab8dcf467ee18c44fa9c32e"
 }

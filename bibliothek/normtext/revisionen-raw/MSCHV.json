@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1992-12-23"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 23. Dezember 1992 über den Schutz von Marken und Herkunftsangaben (MSchV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 23 décembre 1992 sur la protection des marques et des indications de provenance (OPM)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 23 dicembre 1992 sulla protezione dei marchi e delle indicazioni di provenienza (OPM)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "232.111"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1993/296_296_296"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1993-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1992-12-23"
+        "value": "RO 1993 296"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1992-12-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1993 296"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 23. Dezember 1992 über den Schutz von Marken und Herkunftsangaben (MSchV)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1992-12-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1993 296"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 23. Dezember 1992 über den Schutz von Marken und Herkunftsangaben (MSchV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 23 décembre 1992 sur la protection des marques et des indications de provenance (OPM)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 23 dicembre 1992 sulla protezione dei marchi e delle indicazioni di provenienza (OPM)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "232.111"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1993/296_296_296"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1993-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1992-12-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1993 296"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 23. Dezember 1992 über den Schutz von Marken und Herkunftsangaben (MSchV)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-03-08"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Markenschutzverordnung (MSchV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la protection des marques (OPM)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla protezione dei marchi (OPM)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "232.111"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/182"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-03-08"
+        "value": "RO 2002 1119"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-03-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1119"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Markenschutzverordnung (MSchV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la protection des marques (OPM)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla protezione dei marchi (OPM)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "232.111"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/182"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-03-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1119"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Markenschutzverordnung (MSchV)"
@@ -245,6 +273,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-12-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 5019"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Markenschutzverordnung (MSchV)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-12-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 5019"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Markenschutzverordnung (MSchV)"
@@ -308,6 +344,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-12-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 5019"
       },
       "titleDe": {
         "type": "literal",
@@ -341,37 +381,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-10-18"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Markenschutzverordnung (MSchV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la protection des marques (OPM)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla protezione dei marchi (OPM)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "232.111"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/689"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-10-18"
+        "value": "RO 2006 4479"
       },
       "titleDe": {
         "type": "literal",
@@ -405,6 +417,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-10-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4479"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Markenschutzverordnung (MSchV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la protection des marques (OPM)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla protezione dei marchi (OPM)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "232.111"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/689"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-10-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4479"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Markenschutzverordnung (MSchV)"
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-03-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 1893"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Markenschutzverordnung (MSchV)"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-03-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 1893"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Markenschutzverordnung (MSchV)"
@@ -500,6 +560,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-03-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 1893"
       },
       "titleDe": {
         "type": "literal",
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-05-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2547"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Markenschutzverordnung (MSchV)"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-05-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2547"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Markenschutzverordnung (MSchV)"
@@ -597,69 +669,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-05-21"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Markenschutzverordnung (MSchV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la protection des marques (OPM)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla protezione dei marchi (OPM)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "232.111"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/144"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-03-16"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-06-27"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Markenschutzverordnung (MSchV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la protection des marques (OPM)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla protezione dei marchi (OPM)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "232.111"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/144"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-03-16"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-06-27"
+        "value": "RO 2008 2547"
       },
       "titleDe": {
         "type": "literal",
@@ -693,6 +705,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-06-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 859"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Markenschutzverordnung (MSchV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la protection des marques (OPM)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla protezione dei marchi (OPM)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "232.111"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/144"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-03-16"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-06-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 859"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Markenschutzverordnung (MSchV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la protection des marques (OPM)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla protezione dei marchi (OPM)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "232.111"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/144"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-03-16"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-06-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 859"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Markenschutzverordnung (MSchV)"
@@ -725,6 +813,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-05-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 2243"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Markenschutzverordnung (MSchV)"
@@ -757,6 +849,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-05-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 2243"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Markenschutzverordnung (MSchV)"
@@ -788,6 +884,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-05-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 2243"
       },
       "titleDe": {
         "type": "literal",
@@ -821,6 +921,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 3649"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Markenschutzverordnung (MSchV)"
@@ -853,6 +957,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 3649"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Markenschutzverordnung (MSchV)"
@@ -885,6 +993,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 3649"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Markenschutzverordnung (MSchV)"
@@ -917,6 +1029,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-12-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4829"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Markenschutzverordnung (MSchV)"
@@ -949,6 +1065,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-12-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4829"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Markenschutzverordnung (MSchV)"
@@ -980,6 +1100,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-12-02"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 4829"
       },
       "titleDe": {
         "type": "literal",
@@ -1109,6 +1233,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1929-04-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 45 164"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 24. April 1929 über den Schutz der Fabrik- und Handelsmarken (MSchV) "
@@ -1141,6 +1269,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1929-04-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 45 164"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 24. April 1929 über den Schutz der Fabrik- und Handelsmarken (MSchV) "
@@ -1173,6 +1305,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1929-04-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 45 164"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 24. April 1929 über den Schutz der Fabrik- und Handelsmarken (MSchV) "
@@ -1204,6 +1340,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1929-04-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 45 164"
       },
       "titleDe": {
         "type": "literal",

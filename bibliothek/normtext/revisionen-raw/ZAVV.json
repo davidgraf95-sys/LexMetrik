@@ -21,6 +21,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-11-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5475"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Anwendung polizeilichen Zwangs und polizeilicher Massnahmen im Zuständigkeitsbereich des Bundes (Zwangsanwendungsverordnung, ZAV)"
@@ -53,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-11-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5475"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Anwendung polizeilichen Zwangs und polizeilicher Massnahmen im Zuständigkeitsbereich des Bundes (Zwangsanwendungsverordnung, ZAV)"
@@ -85,6 +93,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-11-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5475"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Anwendung polizeilichen Zwangs und polizeilicher Massnahmen im Zuständigkeitsbereich des Bundes (Zwangsanwendungsverordnung, ZAV)"
@@ -116,6 +128,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-11-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5475"
       },
       "titleDe": {
         "type": "literal",

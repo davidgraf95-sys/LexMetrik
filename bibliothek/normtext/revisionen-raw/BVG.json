@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1982-06-25"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom 25. Juni 1982 über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 25 juin 1982 sur la prévoyance professionnelle vieillesse, survivants et invalidité (LPP)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 25 giugno 1982 sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (LPP)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.40"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1983/797_797_797"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1985-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1982-06-25"
+        "value": "RO 1983 797"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1982-06-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1983 797"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 25. Juni 1982 über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1982-06-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1983 797"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 25. Juni 1982 über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 25 juin 1982 sur la prévoyance professionnelle vieillesse, survivants et invalidité (LPP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 25 giugno 1982 sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (LPP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.40"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1983/797_797_797"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1985-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1982-06-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1983 797"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 25. Juni 1982 über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-23"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur la prévoyance professionnelle vieillesse, survivants et invalidité (LPP)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (LPP)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.40"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/442"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-06-23"
+        "value": "RO 2000 2689"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2689"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur la prévoyance professionnelle vieillesse, survivants et invalidité (LPP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (LPP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.40"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/442"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-06-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2689"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG)"
@@ -244,6 +272,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-10-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 1677"
       },
       "titleDe": {
         "type": "literal",
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-10-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 1677"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG) (1. BVG-Revision)"
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-10-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 1677"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG) (1. BVG-Revision)"
@@ -341,37 +381,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-06-18"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur la prévoyance professionnelle vieillesse, survivants et invalidité (LPP)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (LPP)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.40"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/711"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-06-18"
+        "value": "RO 2004 4635"
       },
       "titleDe": {
         "type": "literal",
@@ -405,6 +417,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-06-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 4635"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur la prévoyance professionnelle vieillesse, survivants et invalidité (LPP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (LPP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.40"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/711"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-06-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 4635"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG)"
@@ -436,6 +488,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-12-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 1803"
       },
       "titleDe": {
         "type": "literal",
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-12-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 1803"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die berufliche Alters-, Hinterlassenen- und  Invalidenvorsorge (BVG) (Wechsel der Vorsorgeeinrichtung)"
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-12-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 1803"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die berufliche Alters-, Hinterlassenen- und  Invalidenvorsorge (BVG) (Wechsel der Vorsorgeeinrichtung)"
@@ -533,37 +597,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-12-11"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG) (Massnahmen zur Erleichterung der Arbeitsmarktbeteiligung älterer Arbeitnehmender)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur la prévoyance professionnelle vieillesse, survivants et invalidité (LPP) (Mesures destinées à faciliter la participation des travailleurs âgés au marché de l'emploi)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (LPP) (Misure per agevolare la partecipazione al mercato del lavoro dei lavoratori anziani)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.40"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/622"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-12-11"
+        "value": "RO 2010 4427"
       },
       "titleDe": {
         "type": "literal",
@@ -597,6 +633,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-12-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4427"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG) (Massnahmen zur Erleichterung der Arbeitsmarktbeteiligung älterer Arbeitnehmender)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur la prévoyance professionnelle vieillesse, survivants et invalidité (LPP) (Mesures destinées à faciliter la participation des travailleurs âgés au marché de l'emploi)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sulla previdenza professionale per la vecchiaia, i superstiti e l'invalidità (LPP) (Misure per agevolare la partecipazione al mercato del lavoro dei lavoratori anziani)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.40"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/622"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-12-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4427"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG) (Massnahmen zur Erleichterung der Arbeitsmarktbeteiligung älterer Arbeitnehmender)"
@@ -629,6 +705,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-12-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3385"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG) (Finanzierung von Vorsorgeeinrichtungen öffentlich-rechtlicher Körperschaften)"
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-12-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3385"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG) (Finanzierung von Vorsorgeeinrichtungen öffentlich-rechtlicher Körperschaften)"
@@ -693,6 +777,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-12-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3385"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG) (Finanzierung von Vorsorgeeinrichtungen öffentlich-rechtlicher Körperschaften)"
@@ -725,6 +813,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-03-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3393"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG) (Strukturreform)"
@@ -757,6 +849,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-03-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3393"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG) (Strukturreform)"
@@ -789,6 +885,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-03-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3393"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG) (Strukturreform)"
@@ -821,6 +921,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-06-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 2253"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Änderung des Zeitpunkts des Inkrafttretens von Bestimmungen des BVG über die Finanzierung von Vorsorgeeinrichtungen öffentlich-rechtlicher Körperschaften"
@@ -853,6 +957,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-06-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 2253"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Änderung des Zeitpunkts des Inkrafttretens von Bestimmungen des BVG über die Finanzierung von Vorsorgeeinrichtungen öffentlich-rechtlicher Körperschaften"
@@ -885,6 +993,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-06-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 2253"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Änderung des Zeitpunkts des Inkrafttretens von Bestimmungen des BVG über die Finanzierung von Vorsorgeeinrichtungen öffentlich-rechtlicher Körperschaften"
@@ -917,6 +1029,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6337"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG)"
@@ -949,6 +1065,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6337"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG)"
@@ -981,6 +1101,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6337"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG)"
@@ -1013,6 +1137,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-09-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 3845"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG)"
@@ -1045,6 +1173,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-09-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 3845"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG)"
@@ -1076,6 +1208,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-09-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 3845"
       },
       "titleDe": {
         "type": "literal",

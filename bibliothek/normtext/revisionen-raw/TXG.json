@@ -21,69 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-10-08"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Transplantation von Organen, Geweben und Zellen (Transplantationsgesetz)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur la transplantation d'organes, de tissus et de cellules (Loi sur la transplantation)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sul trapianto di organi, tessuti e cellule (Legge sui trapianti)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "810.21"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/279"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-10-08"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Bundesgesetz über die Transplantation von Organen, Geweben und Zellen (Transplantationsgesetz)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur la transplantation d'organes, de tissus et de cellules (Loi sur la transplantation)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sul trapianto di organi, tessuti e cellule (Legge sui trapianti)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "810.21"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/279"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-10-08"
+        "value": "RO 2007 1935"
       },
       "titleDe": {
         "type": "literal",
@@ -117,6 +57,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-10-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 1935"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Transplantation von Organen, Geweben und Zellen (Transplantationsgesetz)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur la transplantation d'organes, de tissus et de cellules (Loi sur la transplantation)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sul trapianto di organi, tessuti e cellule (Legge sui trapianti)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "810.21"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/279"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-10-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 1935"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Transplantation von Organen, Geweben und Zellen (Transplantationsgesetz)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur la transplantation d'organes, de tissus et de cellules (Loi sur la transplantation)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sul trapianto di organi, tessuti e cellule (Legge sui trapianti)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "810.21"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/279"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-10-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 1935"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Transplantation von Organen, Geweben und Zellen (Transplantationsgesetz)"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1163"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Transplantation von Organen, Geweben und Zellen (Transplantationsgesetz)"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1163"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Transplantation von Organen, Geweben und Zellen (Transplantationsgesetz)"
@@ -212,6 +236,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-06-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 1163"
       },
       "titleDe": {
         "type": "literal",
@@ -244,6 +272,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-10-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5629"
       },
       "titleDe": {
         "type": "literal",
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-10-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5629"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die abschliessende Inkraftsetzung der Änderung vom 19. Juni 2015 des Transplantationsgesetzes"
@@ -308,6 +344,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-10-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5629"
       },
       "titleDe": {
         "type": "literal",
@@ -340,6 +380,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-06-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 6567"
       },
       "titleDe": {
         "type": "literal",
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-06-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 6567"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung des Übereinkommens des Europarats gegen den Handel mit menschlichen Organen und über seine Umsetzung (Änderung des Transplantationsgesetzes und des Humanforschungsgesetzes)"
@@ -404,6 +452,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-06-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 6567"
       },
       "titleDe": {
         "type": "literal",

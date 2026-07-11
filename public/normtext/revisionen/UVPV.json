@@ -1,7 +1,7 @@
 {
   "erlassKey": "UVPV",
   "sr": "814.011",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -39,12 +39,12 @@
       "dateEntryInForce": "2015-10-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/545",
       "dateDocument": "2015-08-12",
-      "roFundstelle": "AS 2015 545",
+      "roFundstelle": "AS 2015 2903",
       "titelDe": "Verordnung über die Umweltverträglichkeitsprüfung (UVPV)",
       "titelFr": "Ordonnance relative à l'étude de l'impact sur l'environnement (OEIE)",
       "titelIt": "Ordinanza concernente l'esame dell'impatto sull'ambiente (OEIA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/545/de",
-      "sha": "f8e7df0216ebbc86fa26f18a70183d14cd1e7315647361f5408e1c9357d11cd3"
+      "sha": "01ef0484d85138959f3ee1b240710116d837579f9a1eeb98e145724809260da6"
     },
     {
       "art": "sammelerlass-marker",
@@ -75,12 +75,12 @@
       "dateEntryInForce": "2008-12-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/646",
       "dateDocument": "2008-09-19",
-      "roFundstelle": "AS 2008 646",
+      "roFundstelle": "AS 2008 4621",
       "titelDe": "Verordnung über die Umweltverträglichkeitsprüfung (UVPV)",
       "titelFr": "Ordonnance relative à l'étude de l'impact sur l'environnement (OEIE)",
       "titelIt": "Ordinanza concernente l'esame dell'impatto sull'ambiente (OEIA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/646/de",
-      "sha": "078fadb8439bafa2838ce3c9375cdeec53caeef1ae6be996c68a4f1336a4803c"
+      "sha": "c1dbb65d1426c0547456f0d5331f26d28db270ec451711486b1954cea03bf8b8"
     },
     {
       "art": "sammelerlass-marker",
@@ -119,5 +119,5 @@
       "sha": "aa7068b697a881ce124e51da46c7e28c0743cb935ffea3bd6e23bf519165d919"
     }
   ],
-  "sha": "98ac78b486bae4b2ee84ce062ec0cf4f8ae339697b79f0f8907f7fa0942f19ca"
+  "sha": "940398eb0b3c42498f625515debcc1c0695a10d4c9b6f74d4a7ee90d394771f4"
 }

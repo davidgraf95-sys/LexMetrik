@@ -21,69 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1993-06-14"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 14. Juni 1993 zum Bundesgesetz über den Datenschutz (VDSG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 14 juin 1993 relative à la loi fédérale sur la protection des données (OLPD)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 14 giugno 1993 relativa alla legge federale sulla protezione dei dati (OLPD)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "235.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1993/1962_1962_1962"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1993-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1993-06-14"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung vom 14. Juni 1993 zum Bundesgesetz über den Datenschutz (VDSG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 14 juin 1993 relative à la loi fédérale sur la protection des données (OLPD)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 14 giugno 1993 relativa alla legge federale sulla protezione dei dati (OLPD)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "235.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1993/1962_1962_1962"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1993-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1993-06-14"
+        "value": "RO 1993 1962"
       },
       "titleDe": {
         "type": "literal",
@@ -117,6 +57,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1993-06-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1993 1962"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 14. Juni 1993 zum Bundesgesetz über den Datenschutz (VDSG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 14 juin 1993 relative à la loi fédérale sur la protection des données (OLPD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 14 giugno 1993 relativa alla legge federale sulla protezione dei dati (OLPD)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "235.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1993/1962_1962_1962"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1993-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1993-06-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1993 1962"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 14. Juni 1993 zum Bundesgesetz über den Datenschutz (VDSG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 14 juin 1993 relative à la loi fédérale sur la protection des données (OLPD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 14 giugno 1993 relativa alla legge federale sulla protezione dei dati (OLPD)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "235.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1993/1962_1962_1962"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1993-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1993-06-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1993 1962"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 14. Juni 1993 zum Bundesgesetz über den Datenschutz (VDSG)"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-09-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 4993"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über den Datenschutz (VDSG)"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-09-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 4993"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über den Datenschutz (VDSG)"
@@ -213,69 +237,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-09-28"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung zum Bundesgesetz über den Datenschutz (VDSG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative à la loi fédérale sur la protection des données (OLPD)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza relativa alla legge federale sulla protezione dei dati (OLPD)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "235.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2008/58"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-01-22"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung zum Bundesgesetz über den Datenschutz (VDSG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative à la loi fédérale sur la protection des données (OLPD)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza relativa alla legge federale sulla protezione dei dati (OLPD)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "235.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2008/58"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-01-22"
+        "value": "RO 2007 4993"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +273,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-01-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 189"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung zum Bundesgesetz über den Datenschutz (VDSG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative à la loi fédérale sur la protection des données (OLPD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza relativa alla legge federale sulla protezione dei dati (OLPD)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "235.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/58"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-01-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 189"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung zum Bundesgesetz über den Datenschutz (VDSG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative à la loi fédérale sur la protection des données (OLPD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza relativa alla legge federale sulla protezione dei dati (OLPD)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "235.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/58"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-01-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 189"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über den Datenschutz (VDSG)"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-06-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 3399"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über den Datenschutz (VDSG)"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-06-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 3399"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über den Datenschutz (VDSG)"
@@ -404,6 +452,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-06-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 3399"
       },
       "titleDe": {
         "type": "literal",
@@ -436,6 +488,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-10-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 5521"
       },
       "titleDe": {
         "type": "literal",
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-10-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 5521"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über den Datenschutz (VDSG) (Betrifft nur den italienischen Text)"
@@ -500,6 +560,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-10-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 5521"
       },
       "titleDe": {
         "type": "literal",

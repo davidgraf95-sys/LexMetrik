@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1990-12-10"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Technische Verordnung vom 10. Dezember 1990 über Abfälle (TVA)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 10 décembre 1990 sur le traitement des déchets (OTD)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza tecnica del 10 dicembre 1990 sui rifiuti  (OTR)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "814.600"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1991/169_169_169"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1991-02-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1990-12-10"
+        "value": "RO 1991 169"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1990-12-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1991 169"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Technische Verordnung vom 10. Dezember 1990 über Abfälle (TVA)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1990-12-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1991 169"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Technische Verordnung vom 10. Dezember 1990 über Abfälle (TVA)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 10 décembre 1990 sur le traitement des déchets (OTD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza tecnica del 10 dicembre 1990 sui rifiuti  (OTR)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "814.600"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1991/169_169_169"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1991-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1990-12-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1991 169"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Technische Verordnung vom 10. Dezember 1990 über Abfälle (TVA)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-06-08"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Technische Verordnung über Abfälle (TVA)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le traitement des déchets (OTD)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza tecnica sui rifiuti (OTR)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "814.600"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/389"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-06-08"
+        "value": "RO 2007 2929"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-06-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 2929"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Technische Verordnung über Abfälle (TVA)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le traitement des déchets (OTD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza tecnica sui rifiuti (OTR)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "814.600"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/389"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-06-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 2929"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Technische Verordnung über Abfälle (TVA)"
@@ -245,37 +273,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-05-14"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Technische Verordnung über Abfälle (TVA) (Betrifft nur den französischen Text)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le traitement des déchets (OTD)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza tecnica sui rifiuti (OTR) (Concerne solo il testo francese)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "814.600"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2008/302"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1991-02-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-05-14"
+        "value": "RO 2008 2111"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +309,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-05-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2111"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Technische Verordnung über Abfälle (TVA) (Betrifft nur den französischen Text)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le traitement des déchets (OTD)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza tecnica sui rifiuti (OTR) (Concerne solo il testo francese)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "814.600"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/302"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1991-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-05-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 2111"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Technische Verordnung über Abfälle (TVA) (Betrifft nur den französischen Text)"
@@ -341,37 +381,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-12-04"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Vermeidung und die Entsorgung von Abfällen (Abfallverordnung, VVEA)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la limitation et l'élimination des déchets (Ordonnance sur les déchets, OLED)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla prevenzione e lo smaltimento dei rifiuti (Ordinanza sui rifiuti, OPSR)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "814.600"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/891"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-12-04"
+        "value": "RO 2015 5699"
       },
       "titleDe": {
         "type": "literal",
@@ -405,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-12-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 5699"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Vermeidung und die Entsorgung von Abfällen (Abfallverordnung, VVEA)"
@@ -437,6 +453,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-12-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 5699"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Vermeidung und die Entsorgung von Abfällen (Abfallverordnung, VVEA)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la limitation et l'élimination des déchets (Ordonnance sur les déchets, OLED)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla prevenzione e lo smaltimento dei rifiuti (Ordinanza sui rifiuti, OPSR)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "814.600"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/891"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-12-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 5699"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Vermeidung und die Entsorgung von Abfällen (Abfallverordnung, VVEA)"
@@ -468,6 +524,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-07-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2629"
       },
       "titleDe": {
         "type": "literal",
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-07-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2629"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Vermeidung und die Entsorgung von Abfällen (Abfallverordnung, VVEA) (Betrifft nur den französischen und italienischen Text)"
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-07-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 2629"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Vermeidung und die Entsorgung von Abfällen (Abfallverordnung, VVEA) (Betrifft nur den französischen und italienischen Text)"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-10-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5137"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Vermeidung und die Entsorgung von Abfällen (Abfallverordnung, VVEA) (Betrifft nur den französischen Text)"
@@ -597,6 +669,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-10-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5137"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Vermeidung und die Entsorgung von Abfällen (Abfallverordnung, VVEA) (Betrifft nur den französischen Text)"
@@ -629,6 +705,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-10-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5137"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Vermeidung und die Entsorgung von Abfällen (Abfallverordnung, VVEA) (Betrifft nur den französischen Text)"
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-09-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3515"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Vermeidung und die Entsorgung von Abfällen (Abfallverordnung, VVEA)"
@@ -693,6 +777,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-09-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3515"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Vermeidung und die Entsorgung von Abfällen (Abfallverordnung, VVEA)"
@@ -725,6 +813,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-09-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3515"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Vermeidung und die Entsorgung von Abfällen (Abfallverordnung, VVEA)"
@@ -756,6 +848,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-12-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 6283"
       },
       "titleDe": {
         "type": "literal",
@@ -789,6 +885,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-12-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 6283"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Vermeidung und die Entsorgung von Abfällen (Abfallverordnung, VVEA)"
@@ -821,6 +921,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-12-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 6283"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Vermeidung und die Entsorgung von Abfällen (Abfallverordnung, VVEA)"
@@ -853,6 +957,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-02-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 801"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Vermeidung und die Entsorgung von Abfällen (Abfallverordnung, VVEA)"
@@ -885,6 +993,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-02-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 801"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Vermeidung und die Entsorgung von Abfällen (Abfallverordnung, VVEA)"
@@ -916,6 +1028,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-02-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 801"
       },
       "titleDe": {
         "type": "literal",

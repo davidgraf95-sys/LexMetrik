@@ -1,7 +1,7 @@
 {
   "erlassKey": "STHG",
   "sr": "642.14",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -70,13 +70,13 @@
       "dateEntryInForce": "2019-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/547",
       "dateDocument": "2017-03-17",
-      "roFundstelle": "AS 2017 547",
+      "roFundstelle": "AS 2017 5039",
       "titelDe": "Bundesgesetz über die Harmonisierung der direkten Steuern der Kantone und Gemeinden (StHG)",
       "titelFr": "Loi fédérale sur l'harmonisation des impôts directs des cantons et des communes (LHID)",
       "titelIt": "Legge federale sull'armonizzazione delle imposte dirette dei Cantoni e dei Comuni (LAID)",
       "botschaftKey": "BOTSCHAFT-2016-1165",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/547/de",
-      "sha": "0e4c032f24505788d1badfe5349ddb4b805af9e701f157523a373a69ce999905"
+      "sha": "e82b1e9fc75696741bc98483d83f56893041a0b59ce1b64c61c6839454a34e7c"
     },
     {
       "art": "sammelerlass-marker",
@@ -101,12 +101,12 @@
       "dateEntryInForce": "2016-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/186",
       "dateDocument": "2015-02-18",
-      "roFundstelle": "AS 2015 186",
+      "roFundstelle": "AS 2015 993",
       "titelDe": "Bundesgesetz über die steuerliche Behandlung der berufsorientierten Aus- und Weiterbildungskosten",
       "titelFr": "Loi fédérale sur l'imposition des frais de formation et de perfectionnement à des fins professionnelles",
       "titelIt": "Legge federale sul trattamento fiscale delle spese di formazione e perfezionamento professionali",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/186/de",
-      "sha": "46421f0d6da07ae1c55d917f6a869e86a76c9304fc2b682343eb674865799045"
+      "sha": "c042dec096d4eb63c8b604dd69f3811d2f5d4b4193a4827cb9e0acbd3a6812bd"
     },
     {
       "art": "sammelerlass-marker",
@@ -125,12 +125,12 @@
       "dateEntryInForce": "2012-08-28",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/543",
       "dateDocument": "2012-08-28",
-      "roFundstelle": "AS 2012 543",
+      "roFundstelle": "AS 2012 4549",
       "titelDe": "Bundesgesetz über die Harmonisierung der direkten Steuern der Kantone und Gemeinden (StHG) (Betrifft nur den italienischen Text)",
       "titelFr": "Loi fédérale sur l'harmonisation des impôts directs des cantons et des communes (LHID) (Ne concerne que le texte italien)",
       "titelIt": "Legge federale sull'armonizzazione delle imposte dirette dei Cantoni e dei Comuni (LAID)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/543/de",
-      "sha": "a4ffd644f7cfa52702f12913438a0a4c50f7b01e6e4addc34cc4274eecd07c50"
+      "sha": "5784e1aecdbbc251d7def904860fae31aaf4e518c5f0c34d7da6804a61c9db52"
     },
     {
       "art": "sammelerlass-marker",
@@ -143,12 +143,12 @@
       "dateEntryInForce": "2010-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/689",
       "dateDocument": "2008-07-02",
-      "roFundstelle": "AS 2009 689",
+      "roFundstelle": "AS 2009 5683",
       "titelDe": "Bundesgesetz vom 14. Dezember 1990 über die Harmonisierung der direkten Steuern der Kantone und Gemeinden (StHG)",
       "titelFr": "Loi fédérale du 14 décembre 1990 sur l'harmonisation des impôts directs des cantons et des communes (LHID)",
       "titelIt": "Legge federale del 14 dicembre 1990 sull'armonizzazione delle imposte dirette dei Cantoni e dei Comuni (LAID)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/689/de",
-      "sha": "95b26b63cf11c6274fe00d4b66702a107cb5091fb941c93179b12526dd8a27ed"
+      "sha": "06b03613fe43d2df82477c686b37f2db652d0fee34d00cef0bc3afeb98d83be8"
     },
     {
       "art": "sammelerlass-marker",
@@ -239,12 +239,12 @@
       "dateEntryInForce": "1999-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/178",
       "dateDocument": "1998-10-09",
-      "roFundstelle": "AS 1999 178",
+      "roFundstelle": "AS 1999 1310",
       "titelDe": "Bundesgesetz über die Harmonisierung der direkten Steuern der Kantone und Gemeinden (StHG)",
       "titelFr": "Loi fédérale sur l'harmonisation des impôts directs des cantons et des communes (LHID)",
       "titelIt": "Legge federale sull'armonizzazione delle imposte dirette dei Cantoni e dei Comuni (LAID)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/178/de",
-      "sha": "1dfd0d43a3f27815af8928713ff8a89a828b95d83a719272c0e9a6414f280df1"
+      "sha": "7d9e4d8f4965ebe3305574998a38b2e9a3d41824765d24aa67224437e3c5f039"
     },
     {
       "art": "aenderung",
@@ -259,5 +259,5 @@
       "sha": "5a0a60371880d45fdac9224e2b27f0c40b4aaa42820d66c58a13e53b45d2a0fb"
     }
   ],
-  "sha": "305a6a74e0ee796634e4d03a8c3f713928a2d4b1f354fc0b5242a080d1f48090"
+  "sha": "d66ee45b292df7f06ca5ca563ccc6734f50558a9f73ef6a62c174f51a6bb1d9d"
 }

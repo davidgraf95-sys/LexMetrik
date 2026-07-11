@@ -71,6 +71,14 @@ in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
 <!-- KARTEN -->
 
+## Session 11.7.2026 — Revisionen-Reconciliation Staatsverträge (Paket 5 Nachzug, Worktree `lm-rev-recon`, Branch `fix/revisionen-staatsvertraege`)
+
+**Anlass:** Der Staatsverträge-Merge #186 fügte 9 Bund-Snapshots (SR 0.*) hinzu, ohne die Paket-5-Revisions-Sidecars nachzuziehen → `check:revisionen` auf main ROT (227 Bund-Erlasse vs. 218 Sidecars; Coverage-Drift Grundmenge↔Dateien). **Reconciliation:** Generator `normtext:revisionen` für die 9 (HKsÜ, HUVÜ, EAUe, CMR, Montrealer Übk., RBÜ, UNO-BRK, Istanbul-Konv., Apostille-Übk.) → 9 Sidecars + store-raw. **Befund 1:** SR-0.*-Verträge tragen im Fedlex-Graphen sehr wohl `eli/oc`-Änderungserlasse (Ratifikations-/Geltungsbereichs-Änderungen unter der SR-Taxonomie) — **82 Änderungs-Einträge** (alle 9 mit ≥1; keine Ausnahme/Leerzustand nötig, §8), 2 Sammelerlass-Marker (EAUe), 0 Botschafts-Joins (Staatsverträge tragen keine Paket-2-Botschaft).
+
+**Befund 2 (Gegenprüfung deckte einen KORPUSWEITEN Treue-Defekt auf → Scope erweitert):** Der Generator fabrizierte `roFundstelle` naiv aus der ELI-Nummer («AS <jahr> <ELI-num>»). Für **Einzel-Segment-ELI VOR der AS-Reform 2019** ist die ELI-Nummer die laufende `sequenceInTheYearOfPublication`, NICHT die AS-Seite → **falsche Fundstelle** (belegt live: `oc/2005/566` ⇒ real AS 2005 4395, nicht «AS 2005 566»). Ursache: der Paket-5-POC prüfte `jolux:historicalId` (leer) und schloss «keine historicalId» — die echte Fundstelle steht unter dem FEDLEX-INTERNEN Prädikat `<http://cogni.internal.system/model#historicalId>`. **Fix:** `fundstelle()` liest jetzt `historicalId` (Einzel-Segment → «AS <jahr> <echte-Seite>»); Multi-Segment-Alt-AS behält die DE-Ableitung (erstes Segment = DE-Seite, historicalId ist dort FR-paginiert); Einzel-Segment seit 2019 behält die Ableitung (Sequenz == Seite). **Da das Netz-Tor die Stichprobe live rebuildet, ist der Fix zwangsläufig korpusweit** → alle 227 Sidecars neu (Diff nur `roFundstelle`/`sha`/`abgerufen`; 0 Einträge hinzu/weg, 0 Datums-Drift). +4 Unit-Tests (`fundstelle`).
+
+**Determinismus:** 2 Läufe byte-identisch; Tor baut aus store-raw neu == committet. **Tore:** `check:revisionen(-netz)` grün (227 Sidecars, 5134 Einträge), `check:paritaet` (227 Revisionen byte-genau aus DB), `check:datenhaltung` (Manifest nachgezogen), voller `npm run gate` grün. **Gegenprüfung BESTANDEN** (unabh. Opus, frischer Kontext, live Fedlex-SPARQL + gerenderte AS-Seiten: Timeline MONTREAL/APOSTILLE/UNO_BRK deckungsgleich; roFundstelle-Fix gegen die amtlichen Werte belegt). Nur Daten/Sidecars, keine UI (KontextPanel #185 rendert sie bereits). Trailer `Roadmap: W2·6`.
+
 ## Session 10.7.2026 — Fedlex-Portfolio Paket 4 (Staatsverträge, letztes Paket), Worktree `feat/fedlex-p4-staatsvertraege`
 
 **W2·6 · Trailer `Roadmap: W2·6`.** 9 kuratierte SR-0.*-Staatsverträge neu als Volltext

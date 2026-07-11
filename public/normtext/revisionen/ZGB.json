@@ -1,7 +1,7 @@
 {
   "erlassKey": "ZGB",
   "sr": "210",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -133,12 +133,12 @@
       "dateEntryInForce": "2022-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/3",
       "dateDocument": "2019-12-06",
-      "roFundstelle": "AS 2020 3",
+      "roFundstelle": "AS 2020 5",
       "titelDe": "Verordnung über die abschliessende Inkraftsetzung der Änderung vom 20. März 2015 des Zivilgesetzbuches (Kindesunterhalt)",
       "titelFr": "Ordonnance portant dernière mise en vigueur partielle de la modification du 20 mars 2015 du code civil (Entretien de l'enfant)",
       "titelIt": "Ordinanza sull'entrata in vigore integrale della modifica del 20 marzo 2015 del Codice civile (Mantenimento del figlio)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/3/de",
-      "sha": "a7d3331c599b14d04d7cafa0553b10bcc04d346cc7aad6549375c199ba85e489"
+      "sha": "a9e1681f308e91f985da1f6c64fa291b5258594e7993ef0b8d195d1e2e098ccd"
     },
     {
       "art": "aenderung",
@@ -176,77 +176,77 @@
       "dateEntryInForce": "2020-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/432",
       "dateDocument": "2018-12-14",
-      "roFundstelle": "AS 2019 432",
+      "roFundstelle": "AS 2019 2273",
       "titelDe": "Bundesgesetz über die Verbesserung des Schutzes gewaltbetroffener Personen",
       "titelFr": "Loi fédérale sur l'amélioration de la protection des victimes de violence",
       "titelIt": "Legge federale intesa a migliorare la protezione delle vittime di violenza",
       "botschaftKey": "BOTSCHAFT-2017-2095",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/432/de",
-      "sha": "2df97e2799217bbc23d6bf2cc71cde802757cb20813b2b236db4f512fafea4fc"
+      "sha": "7f5a4928f8483f7826a6b2def2e74a8905c7337cf79a9987b1d62b5a170ae030"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2020-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/695",
       "dateDocument": "2018-09-28",
-      "roFundstelle": "AS 2019 695",
+      "roFundstelle": "AS 2019 3813",
       "titelDe": "Schweizerisches Zivilgesetzbuch",
       "titelFr": "Code civil suisse",
       "titelIt": "Codice civile svizzero",
       "botschaftKey": "BOTSCHAFT-2017-1991",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/695/de",
-      "sha": "72637d5ffd8d5fadfbbcb2e7e2d80dcbaf52b87ace5a692ecc6bafffbe1b279b"
+      "sha": "6e6ab94ae199dd7008827cf0c4ad271172d4ff5faa547be1ee24fd752b4111e4"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2019-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/423",
       "dateDocument": "2017-09-29",
-      "roFundstelle": "AS 2018 423",
+      "roFundstelle": "AS 2018 2801",
       "titelDe": "Schweizerisches Zivilgesetzbuch",
       "titelFr": "Code civil",
       "titelIt": "Codice civile svizzero",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/423/de",
-      "sha": "502774cd1673279d61c44f8bc07c4690567e8c6ff8353ab8a76dfd26f513cf07"
+      "sha": "c6627fd8ab2f679d80d594fe65312d1dea5b35d241142eed12ad7c04d494a2d8"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2019-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/450",
       "dateDocument": "2017-12-15",
-      "roFundstelle": "AS 2018 450",
+      "roFundstelle": "AS 2018 2947",
       "titelDe": "Schweizerisches Zivilgesetzbuch (Kindesschutz)",
       "titelFr": "Code civil suisse (Protection de l'enfant)",
       "titelIt": "Codice civile svizzero (Protezione dei minorenni)",
       "botschaftKey": "BOTSCHAFT-2015-838",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/450/de",
-      "sha": "59a8e6e6488bbab08694ea26e248ee9d2b6b494cfc8bd79141ed66dfcd815607"
+      "sha": "e30a13902b8419af8ec04f00b3794053fbadf0344fd215d1fd22741c7ed05333"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2019-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/649",
       "dateDocument": "2017-12-15",
-      "roFundstelle": "AS 2018 649",
+      "roFundstelle": "AS 2018 4017",
       "titelDe": "Schweizerisches Zivilgesetzbuch (Beurkundung des Personenstands und Grundbuch)",
       "titelFr": "Code civil suisse (Enregistrement de l'état civil et registre foncier)",
       "titelIt": "Codice civile svizzero (Atti dello stato civile e registro fondiario)",
       "botschaftKey": "BOTSCHAFT-2014-785",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/649/de",
-      "sha": "46b2574eeb75606d8ae5bb9e9dc4ae2a7e33bc43e636e3be75089e295462dae0"
+      "sha": "d94f26e130e9c1480c129f338251495176c7087a2f628795df50fc7c7005ba9f"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2018-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/425",
       "dateDocument": "2016-06-17",
-      "roFundstelle": "AS 2017 425",
+      "roFundstelle": "AS 2017 3699",
       "titelDe": "Schweizerisches Zivilgesetzbuch (Adoption)",
       "titelFr": "Code civil suisse (Droit de l'adoption)",
       "titelIt": "Codice civile svizzero (Adozione)",
       "botschaftKey": "BOTSCHAFT-2015-94",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/425/de",
-      "sha": "a810334667fd17817afb98b0c7d192abe0e5459e1545f676cf62a9ede8cc5505"
+      "sha": "93dd3bcd30f01d918cba6d4d77a0718e5025199f0fe8864453543733532199be"
     },
     {
       "art": "sammelerlass-marker",
@@ -259,50 +259,50 @@
       "dateEntryInForce": "2017-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/728",
       "dateDocument": "2015-03-20",
-      "roFundstelle": "AS 2015 728",
+      "roFundstelle": "AS 2015 4299",
       "titelDe": "Schweizerisches Zivilgesetzbuch (Kindesunterhalt)",
       "titelFr": "Code civil suisse (Entretien de l'enfant)",
       "titelIt": "Codice civile svizzero (Mantenimento del figlio)",
       "botschaftKey": "BOTSCHAFT-2014-98",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/728/de",
-      "sha": "cc9a2c5ff4c1f3a99355565d2724e489af8c8fe696a8bca98d2605854906a6ad"
+      "sha": "5ff9f2d0e57122bf805b13bbfc026f0dc8b6d9216dd9994dba01c266de47affd"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2017-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/822",
       "dateDocument": "2015-12-08",
-      "roFundstelle": "AS 2015 822",
+      "roFundstelle": "AS 2015 5017",
       "titelDe": "Schweizerisches Zivilgesetzbuch (Kindesunterhalt)",
       "titelFr": "Code civil suisse (Entretien de l'enfant)",
       "titelIt": "Codice civile svizzero (Mantenimento del figlio)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/822/de",
-      "sha": "97b6eb283845df3e3227f40db4614d132ba8de72437c1c974c9a101755e57345"
+      "sha": "a6805e3a0f7a11dd4fcf18bd3a356484f4fccd61c58946e5a14fc044d2ee317e"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2017-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/379",
       "dateDocument": "2015-06-19",
-      "roFundstelle": "AS 2016 379",
+      "roFundstelle": "AS 2016 2313",
       "titelDe": "Schweizerisches Zivilgesetzbuch (Vorsorgeausgleich bei Scheidung)",
       "titelFr": "Code civil suisse (Partage de la prévoyance professionnelle en cas de divorce)",
       "titelIt": "Codice civile svizzero (Conguaglio della previdenza professionale in caso di divorzio)",
       "botschaftKey": "BOTSCHAFT-2013-942",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/379/de",
-      "sha": "ee3e6a1d494a906fd02222e7ab103cf6f0dbd62d94caf3f122108dbdbae6e6e2"
+      "sha": "91e2773f616d8b26cdae71adf37d7b218fefba61feb215f27a48fc070bec3dc8"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2016-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/163",
       "dateDocument": "2015-09-25",
-      "roFundstelle": "AS 2016 163",
+      "roFundstelle": "AS 2016 935",
       "titelDe": "Schweizerisches Zivilgesetzbuch (Personalfürsorgestiftungen)",
       "titelFr": "Code civil suisse (Fondations de prévoyance en faveur du personnel)",
       "titelIt": "Codice civile svizzero (Fondazioni di previdenza a favore del personale)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/163/de",
-      "sha": "7ba375415e9ea01a77277fa17c59b22080f12d4001519f472a80e05c25f51321"
+      "sha": "c680a5868bfbacd549ef31fcfafd0b4892c6d3bc85ba75dfc55890300054a068"
     },
     {
       "art": "sammelerlass-marker",
@@ -315,26 +315,26 @@
       "dateEntryInForce": "2015-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/289",
       "dateDocument": "2014-12-12",
-      "roFundstelle": "AS 2015 289",
+      "roFundstelle": "AS 2015 1389",
       "titelDe": "Bundesgesetz zur Umsetzung der 2012 revidierten Empfehlungen der Groupe d'action financière",
       "titelFr": "Loi fédérale sur la mise en uvre des recommandations du Groupe d'action financière, révisées en 2012",
       "titelIt": "Legge federale concernente l'attuazione delle Raccomandazioni del Gruppo d'azione finanziaria rivedute nel 2012",
       "botschaftKey": "BOTSCHAFT-2014-100",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/289/de",
-      "sha": "aac879dcf2098352e8070d54c920d05d1aa632e2f9c5eedea09d27d3c714f6a1"
+      "sha": "9f04340200e58e810d29c44a4f6cf66d67c1e36b857dca644d234240288d9641"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2014-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/53",
       "dateDocument": "2013-06-21",
-      "roFundstelle": "AS 2014 53",
+      "roFundstelle": "AS 2014 357",
       "titelDe": "Schweizerisches Zivilgesetzbuch (Elterliche Sorge)",
       "titelFr": "Code civil suisse (Autorité parentale)",
       "titelIt": "Codice civile svizzero (Autorità parentale)",
       "botschaftKey": "BOTSCHAFT-2011-1580",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/53/de",
-      "sha": "b2b9ee2ee3bf00004eff45c2a0b4f2509f93cdcf83e5a2f7c6659266e27f7480"
+      "sha": "4e05f11c8a2f73b1d9983d6a12aa7e23e6e94faaa029f4bc4a9fb8bc2ded9920"
     },
     {
       "art": "sammelerlass-marker",
@@ -347,74 +347,74 @@
       "dateEntryInForce": "2013-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/114",
       "dateDocument": "2008-12-19",
-      "roFundstelle": "AS 2011 114",
+      "roFundstelle": "AS 2011 725",
       "titelDe": "Schweizerisches Zivilgesetzbuch (Erwachsenenschutz, Personenrecht und Kindesrecht)",
       "titelFr": "Code civil suisse (Protection de l'adulte, droit des personnes et droit de la filiation)",
       "titelIt": "Codice civile svizzero (Protezione degli adulti, diritto delle persone e diritto della filiazione)",
       "botschaftKey": "BOTSCHAFT-2006-899",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/114/de",
-      "sha": "e79fd27e0e2db11666710028289fa2a9f6fb43c774d7892a74a363f8d549d4e7"
+      "sha": "36e3414de9c3e1bfeb01882daa29127df998070aed921b3d1b0355b4f7842e0d"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2013-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/309",
       "dateDocument": "2011-09-30",
-      "roFundstelle": "AS 2012 309",
+      "roFundstelle": "AS 2012 2569",
       "titelDe": "Schweizerisches Zivilgesetzbuch (Name und Bürgerrecht)",
       "titelFr": "Code civil suisse (Nom et droit de cité)",
       "titelIt": "Codice civile svizzero (Cognome e cittadinanza)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/309/de",
-      "sha": "b824147ef6f252c2fb31f42f18b5ae45c4862d2815de4f4cb18f0c239a779e2f"
+      "sha": "df9e4da51e2b1b6fb3efd678139e6c68cd86075db979c9d384904a8963d0015f"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2013-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/368",
       "dateDocument": "2012-05-22",
-      "roFundstelle": "AS 2012 368",
+      "roFundstelle": "AS 2012 3227",
       "titelDe": "Zivilgesetzbuch (Name und Bürgerrecht)",
       "titelFr": "Code civil (Nom et droit de cité)",
       "titelIt": "Codice civile (Cognome e cittadinanza)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/368/de",
-      "sha": "e88665565e8d01dc8be8c85dcd1cf7c4019258550f1ce30ac857cb154fd07454"
+      "sha": "5e8f0e0624fd0486b62a484e3f1c16144466750e5fc754817337ea653f32a61e"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2012-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/666",
       "dateDocument": "2009-12-11",
-      "roFundstelle": "AS 2011 666",
+      "roFundstelle": "AS 2011 4637",
       "titelDe": "Schweizerisches Zivilgesetzbuch (Register-Schuldbrief und weitere Änderungen im Sachenrecht)",
       "titelFr": "Code civil suisse (Cédule hypothécaire de registre et autres modifications des droits réels)",
       "titelIt": "Codice civile svizzero (Cartella ipotecaria registrale e altre modifiche della disciplina dei diritti reali)",
       "botschaftKey": "BOTSCHAFT-2007-756",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/666/de",
-      "sha": "5874680eacce7fff2e6d5bfdadc4c20ffcc9ad46a2801a010066afefb9960775"
+      "sha": "af781cc721fee09f3355d456fb4640f87876478d5c168d37339f1f6aa70eb454"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2011-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/411",
       "dateDocument": "2009-06-12",
-      "roFundstelle": "AS 2010 411",
+      "roFundstelle": "AS 2010 3057",
       "titelDe": "Zivilgesetzbuch (ZGB) (Unterbindung von Ehen bei rechtswidrigem Aufenthalt)",
       "titelFr": "Code civil (CC) (Empêcher les mariages en cas de séjour irrégulier)",
       "titelIt": "Codice civile (CC) (Impedire la conclusione di matrimoni in caso di soggiorno irregolare)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/411/de",
-      "sha": "1af813ba9f233dabf784e960527354c0031c28892b15626be228a1e1e98ee17e"
+      "sha": "a65e22ce1d95eb59b870140ae69396637328b35feb7f4c6b71a5822079946570"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2010-02-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/37",
       "dateDocument": "2009-09-25",
-      "roFundstelle": "AS 2010 37",
+      "roFundstelle": "AS 2010 281",
       "titelDe": "Zivilgesetzbuch (Bedenkzeit im Scheidungsverfahren auf gemeinsames Begehren)",
       "titelFr": "Code civil (Délai de réflexion dans la procédure de divorce sur requête commune)",
       "titelIt": "Codice civile (Periodo di riflessione nella procedura di divorzio su richiesta comune)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/37/de",
-      "sha": "05a00d38559c48914e97182ed4a08e4ace315a0f64ec19832781243b881ba689"
+      "sha": "d776b69fc1c4c98d868c529c6a2bba86e385a9b09b170071f14e68bd73f9199b"
     },
     {
       "art": "sammelerlass-marker",
@@ -439,13 +439,13 @@
       "dateEntryInForce": "2008-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/787",
       "dateDocument": "2006-10-06",
-      "roFundstelle": "AS 2007 787",
+      "roFundstelle": "AS 2007 5779",
       "titelDe": "Bundesgesetz über die Schaffung und die Änderung von Erlassen zur Neugestaltung des Finanzausgleichs und der Aufgabenteilung zwischen Bund und Kantonen (NFA)",
       "titelFr": "Loi fédérale concernant l'adoption et la modification d'actes dans le cadre de la réforme de la péréquation financière et de la répartition des tâches entre la Confédération et les cantons (RPT)",
       "titelIt": "Legge federale che emana e modifica atti legislativi per la nuova impostazione della perequazione finanziaria e della ripartizione dei compiti tra Confederazione e Cantoni (NPC)",
       "botschaftKey": "BOTSCHAFT-2005-976",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/787/de",
-      "sha": "6a033355f4349bdb63dbfbea2e4ade1f24cd6233d65121d2ee36c027943c9226"
+      "sha": "d25301d9d56d536498efd5052c5dbb9f60bdd9d2a1288faaef7ce1347d3725be"
     },
     {
       "art": "sammelerlass-marker",
@@ -458,12 +458,12 @@
       "dateEntryInForce": "2007-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/32",
       "dateDocument": "2006-06-23",
-      "roFundstelle": "AS 2007 32",
+      "roFundstelle": "AS 2007 137",
       "titelDe": "Schweizerisches Zivilgesetzbuch (Schutz der Persönlichkeit gegen Gewalt, Drohungen oder Nachstellungen)",
       "titelFr": "Code civil suisse (Protection de la personnalité en cas de violence, de menaces ou de harcèlement)",
       "titelIt": "Codice civile svizzero (Protezione della personalità in caso di violenza, minacce o insidie)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/32/de",
-      "sha": "91b1bb465e0446f608ee2a9c77ffee6e790ed53fb0296bf23358a9a366acac30"
+      "sha": "10434ffa78214afc8e042c469ade2dd251c1722a80e52d529a8bad0b2049ff0c"
     },
     {
       "art": "sammelerlass-marker",
@@ -482,24 +482,24 @@
       "dateEntryInForce": "2006-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/591",
       "dateDocument": "2004-10-08",
-      "roFundstelle": "AS 2005 591",
+      "roFundstelle": "AS 2005 4545",
       "titelDe": "Schweizerisches Zivilgesetzbuch (Stiftungsrecht)",
       "titelFr": "Code civil suisse (Droit des fondations)",
       "titelIt": "Codice civile svizzero (Diritto delle fondazioni)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/591/de",
-      "sha": "08cf3a4d5311a974f680df9919421d20c7be01c5e7ab5771c0c9d01d413e840d"
+      "sha": "a80269710999abc58e913a0bdae5f9c5d2934629704b8df9592a6e50913233f2"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2005-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/344",
       "dateDocument": "2004-12-17",
-      "roFundstelle": "AS 2005 344",
+      "roFundstelle": "AS 2005 2117",
       "titelDe": "Zivilgesetzbuch (Festlegung der Beitragspflicht von Vereinsmitgliedern)",
       "titelFr": "Code civil suisse (Fixation des cotisations des membres d'associations)",
       "titelIt": "Codice civile svizzero (Determinazione dei contributi dei membri di associazioni)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/344/de",
-      "sha": "797dc4b3d459d897ba584bd97283fc0aad92b2b68244ff64b692ec52caa3b1bb"
+      "sha": "448bab91236dd3afc22e2bbdd69307b2cbcd8518b30100f858e5f88e60482a42"
     },
     {
       "art": "sammelerlass-marker",
@@ -512,25 +512,25 @@
       "dateEntryInForce": "2004-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/361",
       "dateDocument": "2001-10-05",
-      "roFundstelle": "AS 2004 361",
+      "roFundstelle": "AS 2004 2911",
       "titelDe": "Schweizerisches Zivilgesetzbuch (Elektronische Führung der Personenstandsregister)",
       "titelFr": "Code civil suisse (tenue informatisée des registres de l'état civil)",
       "titelIt": "Codice civile svizzero (Gestione elettronica dei registri dello stato civile)",
       "botschaftKey": "BOTSCHAFT-2001-407",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/361/de",
-      "sha": "16b534835a4f4b2175e5f648e5ea9d496ed0068f1b7e547313e5188111c9efd2"
+      "sha": "785fa7f9bd08653d5fafac914e872f61550b36ec419b05b038ced968623127f8"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2004-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/254",
       "dateDocument": "2003-12-19",
-      "roFundstelle": "AS 2004 254",
+      "roFundstelle": "AS 2004 2161",
       "titelDe": "Zivilgesetzbuch (Trennungsfrist im Scheidungsrecht)",
       "titelFr": "Code civil suisse (Délai de séparation en droit du divorce)",
       "titelIt": "Codice civile (Termine di separazione nel diritto del divorzio)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/254/de",
-      "sha": "f1c433f9c8b0ba1fb5b0fb5cec226c03860fd97a8f50bae9938de7d9c03f42ed"
+      "sha": "3a0ed3c5008173d99da00cce5c85af456e29b9b2e870827a461e65bf429abddd"
     },
     {
       "art": "sammelerlass-marker",
@@ -543,25 +543,25 @@
       "dateEntryInForce": "2004-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/613",
       "dateDocument": "2003-06-20",
-      "roFundstelle": "AS 2003 613",
+      "roFundstelle": "AS 2003 4121",
       "titelDe": "Zivilgesetzbuch",
       "titelFr": "Code civil",
       "titelIt": "Codice civile",
       "botschaftKey": "BOTSCHAFT-2002-780",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/613/de",
-      "sha": "a50a614e7e96012222588747ced02cd55d7f792c70b7d69c827a1a92c1eec726"
+      "sha": "d69b3d1be27886beab268cf71004b07ee0ba846920a58bfd95abe4201c46e526"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2003-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/100",
       "dateDocument": "2002-10-04",
-      "roFundstelle": "AS 2003 100",
+      "roFundstelle": "AS 2003 463",
       "titelDe": "Zivilgesetzbuch, Obligationenrecht, Strafgesetzbuch, Bundesgesetz über Schuldbetreibung und Konkurs (Grundsatzartikel Tiere)",
       "titelFr": "Code civil, Code des obligations, Code pénal, Loi fédérale sur la poursuite pour dettes et la faillite (Animaux)",
       "titelIt": "Codice civile, Codice delle obbligazioni, Codice penale, Legge federale sulla esecuzione e sul fallimento (Articolo di principio sugli animali)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/100/de",
-      "sha": "c464a028d28112bb28ce55c584cca7ef2e2c24eaab293997851da4e16731e060"
+      "sha": "b8b03d3474b5d720caef03a958c2082c8a52fbfa70dcaa700190fbecbf77b420"
     },
     {
       "art": "sammelerlass-marker",
@@ -574,12 +574,12 @@
       "dateEntryInForce": "2002-03-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/57",
       "dateDocument": "2001-10-05",
-      "roFundstelle": "AS 2002 57",
+      "roFundstelle": "AS 2002 269",
       "titelDe": "Schweizerisches Zivilgesetzbuch (Erbrecht des überlebenden Ehegatten)",
       "titelFr": "Code civil suisse (Droit de succession du conjoint survivant)",
       "titelIt": "Codice civile svizzero (Diritto successorio del coniuge superstite)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/57/de",
-      "sha": "253f43ea635dd8b9dbf1521746fe64200cc8b881833f479d492436c69c048b5e"
+      "sha": "f4807b29cc53afa6a0ab0cc0e2608afe4aa91d207f936e084d0be7ca0a13e328"
     },
     {
       "art": "sammelerlass-marker",
@@ -592,12 +592,12 @@
       "dateEntryInForce": "2000-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/149",
       "dateDocument": "1998-06-26",
-      "roFundstelle": "AS 1999 149",
+      "roFundstelle": "AS 1999 1118",
       "titelDe": "Schweizerisches Zivilgesetzbuch (Personenstand, Eheschliessung, Scheidung, Kindsrecht, Verwandtenunterstützungspflicht, Heimstätten, Vormundschaft, Ehevermittlung)",
       "titelFr": "Code civil suisse (état civil, conclusion du mariage et divorce, filiation, dette alimentaire, asiles de famille, tutelle et courtage matrimonial)",
       "titelIt": "Codice civile svizzero (stato civile, matrimonio, divorzio, diritto di filiazione, obbligo di assistenza fra parenti, asili di famiglia, tutela, mediazione matrimonile)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/149/de",
-      "sha": "71f727aa6c569e94a3859dbe413035e7c456babd9ab4bfab44e3d1c171a939fc"
+      "sha": "89b4d6cabb0d0848285fa8a779795bd5e47b201608c178a1feef1a6ba614e8de"
     },
     {
       "art": "aenderung",
@@ -612,5 +612,5 @@
       "sha": "7816624cb5380f010108eda078c0b020874c83b6c2d6d51129e0b72c73d6caf6"
     }
   ],
-  "sha": "3cfc545dd33ed924e40585d9a516a84cb71e809802984017eb906ec3ceb043ec"
+  "sha": "d201bb0c5c246a64a3bd9a7f38c29fc0e995768fa6375d74442a6df2d32a5a2e"
 }

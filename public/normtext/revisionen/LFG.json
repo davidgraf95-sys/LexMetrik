@@ -1,7 +1,7 @@
 {
   "erlassKey": "LFG",
   "sr": "748.0",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -77,13 +77,13 @@
       "dateEntryInForce": "2020-05-07",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/295",
       "dateDocument": "2020-05-06",
-      "roFundstelle": "AS 2020 295",
+      "roFundstelle": "AS 2020 1493",
       "titelDe": "Bundesgesetz über die Luftfahrt (Luftfahrtgesetz, LFG)",
       "titelFr": "Loi fédérale sur l'aviation (LA)",
       "titelIt": "Legge federale sulla navigazione aerea (LNA)",
       "botschaftKey": "BOTSCHAFT-2020-864",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/295/de",
-      "sha": "38aecc6257dad22fbc8198b7f4e0317db54dc90b559eb2c52a089f4654af5e8a"
+      "sha": "1d8a373f0ba7e605b7e09e819ed80adcabd818cb76cc3d1403c5fb3bc862003a"
     },
     {
       "art": "sammelerlass-marker",
@@ -96,25 +96,25 @@
       "dateEntryInForce": "2019-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/608",
       "dateDocument": "2018-10-17",
-      "roFundstelle": "AS 2018 608",
+      "roFundstelle": "AS 2018 3841",
       "titelDe": "Verordnung über eine Teilinkraftsetzung der Änderung vom 16. Juni 2017 des Luftfahrtgesetzes",
       "titelFr": "Ordonnance concernant l'entrée en vigueur partielle de la modification du 16 juin 2017 de la loi sur l'aviation",
       "titelIt": "Ordinanza concernente l'entrata in vigore parziale della modifica del 16 giugno 2017 della legge federale sulla navigazione aerea",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/608/de",
-      "sha": "95321dbe04d613b79d2cbdae11d618d8ac6bcb90ca31ed06609456e252dc9de4"
+      "sha": "cfdf170deb65632d64e07dc92c694c3d9f0b534efdb6d8b51af666cf2421b5a4"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2018-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/605",
       "dateDocument": "2017-06-16",
-      "roFundstelle": "AS 2017 605",
+      "roFundstelle": "AS 2017 5607",
       "titelDe": "Bundesgesetz über die Luftfahrt (Luftfahrtgesetz, LFG)",
       "titelFr": "Loi fédérale sur l'aviation (LA)",
       "titelIt": "Legge federale sulla navigazione aerea (LNA)",
       "botschaftKey": "BOTSCHAFT-2016-1536",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/605/de",
-      "sha": "2e20b22c038d446f74b6ffc86a315d39b14891f48fe0d8ad9777cf9fa71f88be"
+      "sha": "b9fce683a5a7f17d18d6cb1212a2a905ac32d0eea99c9c12c6545df89ef3e99f"
     },
     {
       "art": "sammelerlass-marker",
@@ -127,24 +127,24 @@
       "dateEntryInForce": "2014-09-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/285",
       "dateDocument": "2014-05-14",
-      "roFundstelle": "AS 2014 285",
+      "roFundstelle": "AS 2014 1337",
       "titelDe": "Verordnung über die abschliessende Inkraftsetzung der Änderung vom 1. Oktober 2010 des Luftfahrtgesetzes",
       "titelFr": "Ordonnance portant dernière mise en vigueur partielle de la modification du 1er octobre 2010 de la loi fédérale sur l'aviation",
       "titelIt": "Ordinanza sull'entrata in vigore integrale della modifica del 1o ottobre 2010 della legge sulla navigazione aerea",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/285/de",
-      "sha": "5e0c634e62b29e4aec09be5b3686c6480c5a380299bded2909473348cca0a182"
+      "sha": "7fa3ee7a0758a4e746c1d661e8c711a901db02d532fb20a67edfb427c04bc2a7"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2013-10-15",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/636",
       "dateDocument": "2013-09-24",
-      "roFundstelle": "AS 2013 636",
+      "roFundstelle": "AS 2013 3323",
       "titelDe": "Bundesgesetz über die Luftfahrt (Luftfahrtgesetz, LFG) (Betrifft nur den italienischen Text)",
       "titelFr": "Loi fédérale sur l'aviation (LA) (Ne concerne que le texte italien)",
       "titelIt": "Legge federale sulla navigazione aerea (LNA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/636/de",
-      "sha": "37eeab9123be359417279e7dc549d292b89af05d482bec4696e5729cbd0c1189"
+      "sha": "7bef28959f7c61b91f99048737d42d013e61854d31cc58ac52bf391d9e70c02a"
     },
     {
       "art": "sammelerlass-marker",
@@ -157,12 +157,12 @@
       "dateEntryInForce": "2012-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/327",
       "dateDocument": "2012-04-25",
-      "roFundstelle": "AS 2012 327",
+      "roFundstelle": "AS 2012 2751",
       "titelDe": "Verordnung über eine weitere Teilinkraftsetzung der Änderung vom 1. Oktober 2010 des Luftfahrtgesetzes",
       "titelFr": "Ordonnance concernant la mise en vigueur partielle ultérieure de la modification du 1er octobre 2010 de la loi sur l'aviation",
       "titelIt": "Ordinanza su un'ulteriore entrata in vigore parziale della modifica del 1o ottobre 2010 della legge sulla navigazione aerea",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/327/de",
-      "sha": "c52f254d7b22e5ecf9a4d132d398b512a4b3eb0eb9c7e35503bd1d986bf58964"
+      "sha": "998757b0373d737bc2b93fb6a695acb5f863c1c3f1fcf8e1afa76e29c645f73d"
     },
     {
       "art": "sammelerlass-marker",
@@ -175,13 +175,13 @@
       "dateEntryInForce": "2011-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/165",
       "dateDocument": "2010-10-01",
-      "roFundstelle": "AS 2011 165",
+      "roFundstelle": "AS 2011 1119",
       "titelDe": "Bundesgesetz über die Luftfahrt (Luftfahrtgesetz, LFG)",
       "titelFr": "Loi fédérale sur l'aviation (Loi sur l'aviation, LA)",
       "titelIt": "Legge federale sulla navigazione aerea (LNA)",
       "botschaftKey": "BOTSCHAFT-2009-850",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/165/de",
-      "sha": "de3212a432b127c1fd61931213ff40d88b5460a04a4911b4f0c48c7af6e5ef1c"
+      "sha": "4d78892aa8864ffb2ca7b8cae33d26fe2f9f8d5182e7b85c82734ad7d40948eb"
     },
     {
       "art": "sammelerlass-marker",
@@ -206,12 +206,12 @@
       "dateEntryInForce": "2007-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/163",
       "dateDocument": "2007-03-09",
-      "roFundstelle": "AS 2007 163",
+      "roFundstelle": "AS 2007 915",
       "titelDe": "Verordnung über die vollständige Inkraftsetzung der Änderung vom 16. Dezember 2005 des Bundesgesetzes über die Luftfahrt",
       "titelFr": "Ordonnance concernant la mise en vigueur intégrale de la modification du 16 décembre 2005 de la loi fédérale sur l'aviation",
       "titelIt": "Ordinanza concernente l'entrata in vigore integrale della modifica del 16 dicembre 2005 della legge federale sulla navigazione aerea",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/163/de",
-      "sha": "0e6ceb8198a616c079be21ecc27f9e5f6ad314db3c5374b752aee5347a6d95e8"
+      "sha": "aee07031ec62699d9e9f36f1995f2d89f642db808797acc7fcebdd6fe2ccfc87"
     },
     {
       "art": "sammelerlass-marker",
@@ -224,39 +224,39 @@
       "dateEntryInForce": "2006-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/305",
       "dateDocument": "2005-12-16",
-      "roFundstelle": "AS 2006 305",
+      "roFundstelle": "AS 2006 1989",
       "titelDe": "Bundesgesetz über die Luftfahrt (Luftfahrtgesetz, LFG)",
       "titelFr": "Loi fédérale sur l'aviation (LA)",
       "titelIt": "Legge federale sulla navigazione aerea (Legge sulla navigazione aerea, LNA)",
       "botschaftKey": "BOTSCHAFT-2005-561",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/305/de",
-      "sha": "bccd827bbaca7711fc58c81fec9e11b6af0010b90ee08c4c49454ca4a599dea9"
+      "sha": "b90742e60b6251bc62226db94b195a92c7cb41c772185447cd11884409858c99"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2004-09-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/534",
       "dateDocument": "2004-03-19",
-      "roFundstelle": "AS 2004 534",
+      "roFundstelle": "AS 2004 3867",
       "titelDe": "Bundesgesetz über die Luftfahrt (Luftfahrtgesetz, LFG)",
       "titelFr": "Loi fédérale sur l'aviation (LA)",
       "titelIt": "Legge federale sulla navigazione aerea (LNA)",
       "botschaftKey": "BOTSCHAFT-2003-998",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/534/de",
-      "sha": "40c2950a6dfad556afc12066a2953f8f230c03f3df63e8e1ac6296698bc184ea"
+      "sha": "9acadb9d78388952ad37b3f294c3b4591b719f2751c679be422460f21c156787"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2003-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/320",
       "dateDocument": "2003-03-21",
-      "roFundstelle": "AS 2003 320",
+      "roFundstelle": "AS 2003 2179",
       "titelDe": "Luftfahrtgesetz (LFG)",
       "titelFr": "Loi fédérale sur l'aviation (LA)",
       "titelIt": "Legge federale sulla navigazione aerea (LNA)",
       "botschaftKey": "BOTSCHAFT-2002-693",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/320/de",
-      "sha": "22dc1449b4b7bea6d16e03101bd2012887eb3b56f90eba9b061663362ca5606c"
+      "sha": "db844d4674ea883052a599d14a659a4034638a51b6d4513f529c2e06c961825e"
     },
     {
       "art": "sammelerlass-marker",
@@ -275,12 +275,12 @@
       "dateEntryInForce": "2001-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/257",
       "dateDocument": "1999-10-08",
-      "roFundstelle": "AS 2001 257",
+      "roFundstelle": "AS 2001 1678",
       "titelDe": "Bundesgesetz über die Luftfahrt (Luftfahrtgesetz, LFG)",
       "titelFr": "Loi fédérale sur l'aviation (LA)",
       "titelIt": "Legge federale sulla navigazione aerea (LNA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/257/de",
-      "sha": "3f0a3a1ea68c00b68d442075fa23f337d7001e3eb4e9a55dc3fe144629e886bf"
+      "sha": "d448153db806d2109c2aa6868ad8f65a7786126b567567ad066795b71c07a430"
     },
     {
       "art": "sammelerlass-marker",
@@ -313,5 +313,5 @@
       "sha": "ebee47c5cd7ddce0393f67cc889e503cdd082b8486dec76118491e776ffcd845"
     }
   ],
-  "sha": "f634aef3d6516d7d0f2f74f53d55e17b255773f59fdef1f3931fa6f49523c204"
+  "sha": "b8ed760afa8f6771e31503a94d3172b4336ded46a1c6c9e72756cd60c4f5d2d2"
 }

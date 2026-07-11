@@ -21,69 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1971-01-13"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 13. Januar 1971 über die ausländischen Anlagefonds"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 13 janvier 1971 sur les fonds de placement étrangers"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 13 gennaio 1971 sui fondi d'investimento stranieri"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "951.312"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1971/141_145_145"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1971-02-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1971-01-13"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung vom 13. Januar 1971 über die ausländischen Anlagefonds"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 13 janvier 1971 sur les fonds de placement étrangers"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 13 gennaio 1971 sui fondi d'investimento stranieri"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "951.312"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1971/141_145_145"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1971-02-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1971-01-13"
+        "value": "RO 1971 145"
       },
       "titleDe": {
         "type": "literal",
@@ -117,6 +57,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1971-01-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1971 145"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 13. Januar 1971 über die ausländischen Anlagefonds"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 13 janvier 1971 sur les fonds de placement étrangers"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 13 gennaio 1971 sui fondi d'investimento stranieri"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "951.312"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1971/141_145_145"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1971-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1971-01-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1971 145"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 13. Januar 1971 über die ausländischen Anlagefonds"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 13 janvier 1971 sur les fonds de placement étrangers"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 13 gennaio 1971 sui fondi d'investimento stranieri"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "951.312"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1971/141_145_145"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1971-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1971-01-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1971 145"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 13. Januar 1971 über die ausländischen Anlagefonds"
@@ -149,69 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-12-21"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die kollektiven Kapitalanlagen (Kollektivanlagenverordnung-FINMA, KKV-FINMA)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance de l'Autorité fédérale de surveillance des marchés financiers sur les placements collectifs de capitaux (Ordonnance de la FINMA sur les placements collectifs, OPC-FINMA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza dell'Autorità federale di vigilanza sui mercati finanziari sugli investimenti collettivi di capitale (Ordinanza FINMA sugli investimenti collettivi, OICol-FINMA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "951.312"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/66"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-02-15"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-12-21"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die kollektiven Kapitalanlagen (Kollektivanlagenverordnung-FINMA, KKV-FINMA)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance de l'Autorité fédérale de surveillance des marchés financiers sur les placements collectifs de capitaux (Ordonnance de la FINMA sur les placements collectifs, OPC-FINMA)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza dell'Autorità federale di vigilanza sui mercati finanziari sugli investimenti collettivi di capitale (Ordinanza FINMA sugli investimenti collettivi, OICol-FINMA)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "951.312"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/66"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-02-15"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-12-21"
+        "value": "RO 2007 301"
       },
       "titleDe": {
         "type": "literal",
@@ -245,6 +201,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-12-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 301"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die kollektiven Kapitalanlagen (Kollektivanlagenverordnung-FINMA, KKV-FINMA)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance de l'Autorité fédérale de surveillance des marchés financiers sur les placements collectifs de capitaux (Ordonnance de la FINMA sur les placements collectifs, OPC-FINMA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza dell'Autorità federale di vigilanza sui mercati finanziari sugli investimenti collettivi di capitale (Ordinanza FINMA sugli investimenti collettivi, OICol-FINMA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "951.312"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/66"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-02-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-12-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 301"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die kollektiven Kapitalanlagen (Kollektivanlagenverordnung-FINMA, KKV-FINMA)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance de l'Autorité fédérale de surveillance des marchés financiers sur les placements collectifs de capitaux (Ordonnance de la FINMA sur les placements collectifs, OPC-FINMA)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza dell'Autorità federale di vigilanza sui mercati finanziari sugli investimenti collettivi di capitale (Ordinanza FINMA sugli investimenti collettivi, OICol-FINMA)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "951.312"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/66"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-02-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-12-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 301"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die kollektiven Kapitalanlagen (Kollektivanlagenverordnung-FINMA, KKV-FINMA)"
@@ -276,6 +308,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-11-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5613"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-11-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5613"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Anpassung von Behördenverordnungen an das Finanzmarktaufsichtsgesetz"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-11-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5613"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Anpassung von Behördenverordnungen an das Finanzmarktaufsichtsgesetz"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-08-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 4237"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die kollektiven Kapitalanlagen (Kollektivanlagenverordnung-FINMA, KKV-FINMA)"
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-08-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 4237"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die kollektiven Kapitalanlagen (Kollektivanlagenverordnung-FINMA, KKV-FINMA)"
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-08-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 4237"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung der Eidgenössischen Finanzmarktaufsicht über die kollektiven Kapitalanlagen (Kollektivanlagenverordnung-FINMA, KKV-FINMA)"
@@ -468,6 +524,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-08-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 4237"
       },
       "titleDe": {
         "type": "literal",

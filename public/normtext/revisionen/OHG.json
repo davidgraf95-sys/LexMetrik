@@ -1,7 +1,7 @@
 {
   "erlassKey": "OHG",
   "sr": "312.5",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -39,37 +39,37 @@
       "dateEntryInForce": "2009-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/232",
       "dateDocument": "2007-03-23",
-      "roFundstelle": "AS 2008 232",
+      "roFundstelle": "AS 2008 1607",
       "titelDe": "Bundesgesetz über die Hilfe an Opfer von Straftaten (Opferhilfegesetz, OHG)",
       "titelFr": "Loi fédérale sur l'aide aux victimes d'infractions (Loi sur l'aide aux victimes, LAVI)",
       "titelIt": "Legge federale concernente l'aiuto alle vittime di reati (LAV)",
       "botschaftKey": "BOTSCHAFT-2005-1167",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/232/de",
-      "sha": "43d7d2f3ec48806b3beb362a24b846d79dad165a4cf195217e6e1b04f95e23df"
+      "sha": "f53c696683c6ee9bb4629bdaade27149f16669f640cd816972f03896a54dee16"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2009-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/197",
       "dateDocument": "2009-03-31",
-      "roFundstelle": "AS 2009 197",
+      "roFundstelle": "AS 2009 1263",
       "titelDe": "Bundesgesetz über die Hilfe an Opfer von Straftaten (Opferhilfegesetz, OHG) (Betrifft nur den italienischen Text)",
       "titelFr": "Loi fédérale sur l'aide aux victimes d'infractions (Loi sur l'aide aux victimes, LAVI) (Ne concerne que le texte italien)",
       "titelIt": "Legge federale concernente l'aiuto alle vittime di reati (LAV)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/197/de",
-      "sha": "650e0147f316084d55724e1aaaf7f461005fce98657f68b50f3ab845396a9080"
+      "sha": "63d0951200573ed4e7fcc1c088a8d6529dcf462639e81c5fbc1be0aaf09c371c"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2002-10-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/431",
       "dateDocument": "2001-03-23",
-      "roFundstelle": "AS 2002 431",
+      "roFundstelle": "AS 2002 2997",
       "titelDe": "Bundesgesetz über die Hilfe an Opfer von Straftaten (Opferhilfegesetz) (Verbesserung des Schutzes von Kindern als Opfer)",
       "titelFr": "Loi fédérale sur l'aide aux victimes d'infractions (Loi sur l'aide aux victimes) (Amélioration de la protection des enfants victimes)",
       "titelIt": "Legge federale concernente l'aiuto alle vittime di reati (Miglioramento della protezione delle vittime minori di 18 anni)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/431/de",
-      "sha": "2bc79a73d6c8dca475a5a0655f2f4a3e837428fef75761cadf5a37b56badb0ee"
+      "sha": "1f6b2603c6456ccb51682e948052d502bef8e84546f4429baafd31b93d8a82bc"
     },
     {
       "art": "aenderung",
@@ -84,5 +84,5 @@
       "sha": "0ec5d9dd5a028b6208d3f5f7d7fba3616e4ba4882197f51c0a7c85b36cfeb1b7"
     }
   ],
-  "sha": "ff51789bb8d3f0b682b350b29607c51067d994f7531673f614a4b42a02773e66"
+  "sha": "dc074c3ae52db8d602cc990b4843d0e497b3b5924212e5b9d2eba06a76f40e8c"
 }

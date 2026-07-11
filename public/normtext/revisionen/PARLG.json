@@ -1,7 +1,7 @@
 {
   "erlassKey": "PARLG",
   "sr": "171.10",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -141,72 +141,72 @@
       "dateEntryInForce": "2020-12-11",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/930",
       "dateDocument": "2020-12-10",
-      "roFundstelle": "AS 2020 930",
+      "roFundstelle": "AS 2020 5375",
       "titelDe": "Bundesgesetz über die Bundesversammlung (Parlamentsgesetz, ParlG) (Covid-19: Teilnahme an Abstimmungen im Nationalrat; Unterbruch oder Verschiebung der Session)",
       "titelFr": "Loi sur l'Assemblée fédérale (Loi sur le Parlement, LParl) (COVID-19: participation aux votes du Conseil national; interruption ou report de la session)",
       "titelIt": "Legge federale sull'Assemblea federale (Legge sul Parlamento, LParl) (COVID-19: partecipazione a votazioni nel Consiglio nazionale; interruzione o differimento della sessione)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/930/de",
-      "sha": "1ea7d19df93a50ea9bb265e225ced1ef5569144212622806fe9573cab97e5ce5"
+      "sha": "0ff6bf315ef7dd8a1ffe90b098a6931a40c76320704725be2a64e5e52d844fb9"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2019-12-02",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/575",
       "dateDocument": "2019-06-21",
-      "roFundstelle": "AS 2019 575",
+      "roFundstelle": "AS 2019 3119",
       "titelDe": "Bundesgesetz über die Zuständigkeiten für den Abschluss, die Änderung und die Kündigung völkerrechtlicher Verträge",
       "titelFr": "Loi fédérale sur les compétences en matière de conclusion, de modification et de dénonciation des traités internationaux",
       "titelIt": "Legge federale sulle competenze di concludere, modificare e denunciare trattati internazionali",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/575/de",
-      "sha": "8259e4f2563be65082b4c55b786b7f55cce6ac0962f575709b0575befa28f4ec"
+      "sha": "70553236747df26200562fea0ebef03333fb858c7d3b9942842cc458c1903f73"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2018-11-26",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/562",
       "dateDocument": "2018-06-15",
-      "roFundstelle": "AS 2018 562",
+      "roFundstelle": "AS 2018 3461",
       "titelDe": "Bundesgesetz über die Bundesversammlung (Parlamentsgesetz, ParlG) (Verschiedene Änderungen des Parlamentsrechts)",
       "titelFr": "Loi sur l'Assemblée fédérale (Loi sur le Parlement, LParl) (Modifications diverses du droit parlementaire)",
       "titelIt": "Legge federale sull'Assemblea federale (Legge sul Parlamento, LParl) (Diverse modifiche del diritto parlamentare)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/562/de",
-      "sha": "1713d804ea2c43054ebf2219f19b9908cee59c87e90777813bafd076d8bd91b7"
+      "sha": "a281a6d7fef9d4029c61f1bcfa19bb79ccec3127b287707cc40ecb278c2f786a"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2018-11-26",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/582",
       "dateDocument": "2018-03-16",
-      "roFundstelle": "AS 2018 582",
+      "roFundstelle": "AS 2018 3547",
       "titelDe": "Bundesgesetz über die Bundesversammlung (Parlamentsgesetz, ParlG) (Zeitgemässe Informations- und Dokumentationsangebote des Parlamentes)",
       "titelFr": "Loi sur l'Assemblée fédérale (Loi sur le Parlement, LParl) (Offres modernes d'information et de documentation du Parlement)",
       "titelIt": "Legge federale sull'Assemblea federale (Legge sul Parlamento, LParl) (Offerte d'informazione e di documentazione del Parlamento al passo con i tempi)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/582/de",
-      "sha": "0361a292277d69595d1107b5e5fbbf87e30d93bbd5d2730cae1bd9e454d68361"
+      "sha": "4493af1f82f8ff5f13803f554ae05782160db2248d8a24c3968769fab0df9161"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2018-02-27",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/126",
       "dateDocument": "2018-02-15",
-      "roFundstelle": "AS 2018 126",
+      "roFundstelle": "AS 2018 935",
       "titelDe": "Bundesgesetz über die Bundesversammlung (Parlamentsgesetz, ParlG) (Betrifft nur den französischen Text)",
       "titelFr": "Loi sur l'Assemblée fédérale (Loi sur le Parlement, LParl)",
       "titelIt": "Legge federale sull'Assemblea federale (Legge sul Parlamento, LParl) (Concerne soltanto il testo francese)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/126/de",
-      "sha": "5d49747947587646c1d092b5b8eaeb62e548d606329ded044a613e08ca8e6758"
+      "sha": "7626309680e347ed60a3fc1fed947ce6a3018493e0acdb17e63d8217a42cfb5c"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2016-03-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/125",
       "dateDocument": "2016-02-17",
-      "roFundstelle": "AS 2016 125",
+      "roFundstelle": "AS 2016 657",
       "titelDe": "Bundesgesetz über die Bundesversammlung (Parlamentsgesetz, ParlG) (Betrifft nur den italienischen Text)",
       "titelFr": "Loi sur l'Assemblée fédérale (Loi sur le Parlement, LParl) (Ne concerne que le texte italien)",
       "titelIt": "Legge federale sull'Assemblea federale (Legge sul Parlamento, LParl)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/125/de",
-      "sha": "768618447a3cbe9c8d8d8201db901aba22f6817d63f7fe8955ebb3d2c7cacc3a"
+      "sha": "ffd188d9c774978dfcadeca02b6b992fece6f8e3b0eed8e77fbdfaa3eda1134c"
     },
     {
       "art": "sammelerlass-marker",
@@ -237,60 +237,60 @@
       "dateEntryInForce": "2013-11-25",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/689",
       "dateDocument": "2013-06-21",
-      "roFundstelle": "AS 2013 689",
+      "roFundstelle": "AS 2013 3687",
       "titelDe": "Bundesgesetz über die Bundesversammlung (Parlamentsgesetz, ParlG) (Verbesserungen der Organisation und der Verfahren des Parlamentes)",
       "titelFr": "Loi sur l'Assemblée fédérale (Loi sur le Parlement, LParl) (Amélioration de l'organisation et des procédures du Parlement)",
       "titelIt": "Legge federale sull'Assemblea federale (Legge sul Parlamento, LParl) (Miglioramento dell'organizzazione e delle procedure del Parlamento)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/689/de",
-      "sha": "2b6284642d18cf7d6eeac6c8699bc407b2bb278e8a03353027a434dc0bfb4f45"
+      "sha": "15090a0578d2dab6f85053b9c13bc553c59a091b2de77eaa850e06081049cf9c"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2012-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/807",
       "dateDocument": "2010-12-17",
-      "roFundstelle": "AS 2011 807",
+      "roFundstelle": "AS 2011 5859",
       "titelDe": "Bundesgesetz über die Mitwirkung der Bundesversammlung bei der Steuerung der verselbstständigten Einheiten",
       "titelFr": "Loi fédérale relative à la participation de l'Assemblée fédérale au pilotage des entités devenues autonomes",
       "titelIt": "Legge federale sulla partecipazione dell'Assemblea federale alla determinazione dell'orientamento strategico delle unità rese autonome",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/807/de",
-      "sha": "583ccc90207f1acbb1293e2f9309b9472d88558216ba13989771c4f72616f2c2"
+      "sha": "d950ffeb0242d94b29c8e81347ca570659092c77029dfe2188a11b1334ded38c"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2011-12-05",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/663",
       "dateDocument": "2011-06-17",
-      "roFundstelle": "AS 2011 663",
+      "roFundstelle": "AS 2011 4627",
       "titelDe": "Bundesgesetz über die Bundesversammlung (Parlamentsgesetz, ParlG) (Gesuche um Aufhebung der Immunität)",
       "titelFr": "Loi sur l'Assemblée fédérale (Loi sur le Parlement, LParl) (Examen des requêtes visant à lever l'immunité)",
       "titelIt": "Legge federale sull'Assemblea federale (Legge sul Parlamento, LParl) (Richieste di soppressione dell'immunità)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/663/de",
-      "sha": "985321f72dd84454ed126402f6984ea88c8df08a59ab10b9b2a3de6940625d94"
+      "sha": "97807d40d1267c1241b9bf037c082cb39ade38eed18af3db1c9eefcf9bff1eda"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2011-11-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/633",
       "dateDocument": "2011-06-17",
-      "roFundstelle": "AS 2011 633",
+      "roFundstelle": "AS 2011 4537",
       "titelDe": "Bundesgesetz über die Bundesversammlung (Parlamentsgesetz, ParlG) (Präzisierung der Informationsrechte der Aufsichtskommissionen)",
       "titelFr": "Loi sur l'Assemblée fédérale (Loi sur le Parlement, LParl) (Précision du droit à l'information des commissions de surveillance)",
       "titelIt": "Legge federale sull'Assemblea federale (Legge sul Parlamento, LParl) (Precisazione dei diritti d'informazione delle commissioni di vigilanza)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/633/de",
-      "sha": "f0f85b4b9d39630b355fc56e83f60a79034d460c18057aa9e153ac8bbde03968"
+      "sha": "e0106d8539244f007229fa10714bb94a76d73475c26953e566e21551e2dbd289"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2011-05-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/210",
       "dateDocument": "2010-12-17",
-      "roFundstelle": "AS 2011 210",
+      "roFundstelle": "AS 2011 1381",
       "titelDe": "Bundesgesetz über die Wahrung von Demokratie, Rechtsstaat und Handlungsfähigkeit in ausserordentlichen Lagen",
       "titelFr": "Loi fédérale sur la sauvegarde de la démocratie, de l'Etat de droit et de la capacité d'action dans les situations extraordinaires",
       "titelIt": "Legge federale concernente la salvaguardia della democrazia, dello Stato di diritto e della capacità di agire in situazioni straordinarie",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/210/de",
-      "sha": "fc24fc413d3521c4a3c5e6c7638f7c402fed67998876eb92167d1e5255f88875"
+      "sha": "4adbd8c1d09c5bafa9196ae45736fa3379777c54a867261c5342bbab8fc3175c"
     },
     {
       "art": "sammelerlass-marker",
@@ -309,61 +309,61 @@
       "dateEntryInForce": "2009-03-02",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/124",
       "dateDocument": "2008-10-03",
-      "roFundstelle": "AS 2009 124",
+      "roFundstelle": "AS 2009 725",
       "titelDe": "Bundesgesetz über die Bundesversammlung (Parlamentsgesetz, ParlG) (Parlamentsrecht. Verschiedene Änderungen)",
       "titelFr": "Loi sur l'Assemblée fédérale (Loi sur le Parlement, LParl) (Droit parlementaire. Modifications diverses)",
       "titelIt": "Legge federale sull'Assemblea federale (Legge sul Parlamento, LParl) (Diritto parlamentare. Diverse modifiche)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/124/de",
-      "sha": "a7944905273b84dd9d63181a70417524fbc8a604a896c041ed998f9ee4723942"
+      "sha": "6e6d9fbac22c021b274cea7a13af0cdef5416401bdf6583ebbdbe2158436d68a"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2009-03-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/115",
       "dateDocument": "2008-10-03",
-      "roFundstelle": "AS 2009 115",
+      "roFundstelle": "AS 2009 697",
       "titelDe": "Bundesgesetz über die Bundesversammlung (Parlamentsgesetz, ParlG) (Geschäftsbericht des Bundesrates)",
       "titelFr": "Loi sur l'Assemblée fédérale (Loi sur le Parlement, LParl) (Rapport de gestion du Conseil fédéral)",
       "titelIt": "Legge federale sull'Assemblea federale (Legge sul Parlamento, LParl) (Rapporto di gestione del Consiglio federale)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/115/de",
-      "sha": "44c9ce5d129c355b568b05b4d34f60a994cea90a098a80018a0e007a5bc6f864"
+      "sha": "acfdd84c737a283f17a66f69610eaf1bf44d0b0d4ebd4bfa79732032e689d71c"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2008-05-26",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/303",
       "dateDocument": "2007-10-05",
-      "roFundstelle": "AS 2008 303",
+      "roFundstelle": "AS 2008 2113",
       "titelDe": "Bundesgesetz über die Bundesversammlung (Parlamentsgesetz, ParlG) (Verbindliche Wirkung der Motion)",
       "titelFr": "Loi fédérale sur l'Assemblée fédérale (Loi sur le Parlement, LParl) (Caractère contraignant de la motion)",
       "titelIt": "Legge federale sull'Assemblea federale (Legge sul Parlamento, LParl) (Effetto vincolante della mozione)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/303/de",
-      "sha": "e4d1b7f3087f43b47736bfee9d161161196e1d0efabb3409d869092e10faefa9"
+      "sha": "43ec6dee026d8d26c600dd4a0a5d1a914b7127e1375773963a2b9b676efef23c"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2007-12-03",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/550",
       "dateDocument": "2007-03-23",
-      "roFundstelle": "AS 2007 550",
+      "roFundstelle": "AS 2007 4129",
       "titelDe": "Bundesgesetz über die Bundesversammlung (Parlamentsgesetz, ParlG)",
       "titelFr": "Loi sur l'Assemblée fédérale (Loi sur le Parlement, LParl)",
       "titelIt": "Legge federale sull'Assemblea federale (Legge sul Parlamento, LParl)",
       "botschaftKey": "BOTSCHAFT-2006-1010",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/550/de",
-      "sha": "32c1512581148e3bccbd6aca2c1477851c489e494d314dbec7d063998200e2e9"
+      "sha": "8b89c96075a3516b857272003457547d3cfc5fe4734ec5070993801348931faa"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2007-12-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/740",
       "dateDocument": "2007-06-22",
-      "roFundstelle": "AS 2007 740",
+      "roFundstelle": "AS 2007 5231",
       "titelDe": "Bundesgesetz über die Bundesversammlung (Parlamentsgesetz, ParlG) (Legislaturplanung)",
       "titelFr": "Loi sur l'Assemblée fédérale (Loi sur le Parlement, LParl) (Programme de la législature)",
       "titelIt": "Legge federale sull'Assemblea federale (Legge sul Parlamento, LParl) (Programma di legislatura)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/740/de",
-      "sha": "5fe20f62b7f8319bba5f6e36eff7da10523af186d3c167d470f371785c47dfd4"
+      "sha": "f37076a623b220f799b1590524a7e07432b7540f96c4f0b30644f271a6576580"
     },
     {
       "art": "sammelerlass-marker",
@@ -394,49 +394,49 @@
       "dateEntryInForce": "2005-05-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/645",
       "dateDocument": "2004-12-17",
-      "roFundstelle": "AS 2005 645",
+      "roFundstelle": "AS 2005 4793",
       "titelDe": "Bundesgesetz über die Bundesversammlung (Parlamentsgesetz, ParlG)",
       "titelFr": "Loi sur l'Assemblée fédérale (Loi sur le Parlement, LParl)",
       "titelIt": "Legge federale sull'Assemblea federale (Legge sul Parlamento, LParl)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/645/de",
-      "sha": "95e967acfbe4ff1758eaa7a88d4ec6f40ea070ca4a24fd0b04d683125a23d3f1"
+      "sha": "0e73adc616faa6c5ee7039e7c05e00b0cfce0350e78aaebfdc52284dcbdf68a2"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2005-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/184",
       "dateDocument": "2004-10-08",
-      "roFundstelle": "AS 2005 184",
+      "roFundstelle": "AS 2005 1245",
       "titelDe": "Bundesgesetz über die vorläufige Anwendung von völkerrechtlichen Verträgen",
       "titelFr": "Loi fédérale sur l'application à titre provisoire de traités internationaux",
       "titelIt": "Legge federale sull'applicazione provvisoria di trattati internazionali",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/184/de",
-      "sha": "6b71aaed1cf3c709e5bd09ec7c728253d83ec4838a39cd39b3b628a8625e54ad"
+      "sha": "967746bc28e78d7fe536e4929f06aae7aa443f0366424985dcca0e02c750b2ed"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2003-12-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/510",
       "dateDocument": "2002-12-13",
-      "roFundstelle": "AS 2003 510",
+      "roFundstelle": "AS 2003 3543",
       "titelDe": "Bundesgesetz über die Bundesversammlung (Parlamentsgesetz, ParlG)",
       "titelFr": "Loi sur l'Assemblée fédérale (Loi sur le Parlement, LParl)",
       "titelIt": "Legge federale sull'Assemblea federale (Legge sul Parlamento, LParl)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/510/de",
-      "sha": "7837ebe6b51bce846eb58339dc3203d5fe251c79a031fbcf4f9126a2fbef57b2"
+      "sha": "42c1d105edc7aa72aa6638398843e2e5b3d712bb8d6383ae2b346571952f2102"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2003-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/894",
       "dateDocument": "2010-10-26",
-      "roFundstelle": "AS 2010 894",
+      "roFundstelle": "AS 2010 6385",
       "titelDe": "Bundesgesetz über die Bundesversammlung (Parlamentsgesetz, ParlG) (Betrifft nur den französischen Text)",
       "titelFr": "Loi sur l'Assemblée fédérale (Loi sur le Parlement, LParl)",
       "titelIt": "Legge federale sull'Assemblea federale (Legge sul Parlamento, LParl) (Concerne solo il testo francese)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/894/de",
-      "sha": "2996d603b43c9a9d22655800e5f0030388977907619324543f82f8c948b9d784"
+      "sha": "52065c35070eaaaf2f941671551ab6a4c7e268f8244784f50a58330360164a28"
     }
   ],
-  "sha": "44aa00559d558d775123d5e7a8ddb31716961865c6c627e5481a8be8f8e6ead4"
+  "sha": "6d45ffbadd9637de2e83b79c38bce7535b2bdec6a31da1dbd774d9f1c9b5f35b"
 }

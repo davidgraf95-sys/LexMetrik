@@ -1,7 +1,7 @@
 {
   "erlassKey": "SSV",
   "sr": "741.21",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -87,84 +87,84 @@
       "dateEntryInForce": "2021-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/424",
       "dateDocument": "2020-05-20",
-      "roFundstelle": "AS 2020 424",
+      "roFundstelle": "AS 2020 2145",
       "titelDe": "Signalisationsverordnung (SSV)",
       "titelFr": "Ordonnance sur la signalisation routière (OSR)",
       "titelIt": "Ordinanza sulla segnaletica stradale (OSStr)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/424/de",
-      "sha": "cddc30d4bf70f3ab4b13a5410ed8bee92704189cd51349fe6212fa05e92c9122"
+      "sha": "51fb3df2d1e6a229d0891ae6759521c0e905b17537902a0e12f8a4eb0d2b88ca"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2020-06-09",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/412",
       "dateDocument": "2020-06-09",
-      "roFundstelle": "AS 2020 412",
+      "roFundstelle": "AS 2020 2095",
       "titelDe": "Signalisationsverordnung (SSV) (Betrifft nur den italienischen Text)",
       "titelFr": "Ordonnance sur la signalisation routière (OSR) (Ne concerne que le texte italien)",
       "titelIt": "Ordinanza sulla segnaletica stradale (OSStr)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/412/de",
-      "sha": "2a7c8e8406114a62df9aca9b64d1b993f159b3ca4c63e566681e835514768331"
+      "sha": "fd6295f09b71e8dcda5207336525c970f00ea4dbe6456430f3243101f232c115"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2017-01-15",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/818",
       "dateDocument": "2016-11-16",
-      "roFundstelle": "AS 2016 818",
+      "roFundstelle": "AS 2016 5131",
       "titelDe": "Signalisationsverordnung (SSV)",
       "titelFr": "Ordonnance sur la signalisation routière (OSR)",
       "titelIt": "Ordinanza sulla segnaletica stradale (OSStr)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/818/de",
-      "sha": "1f317ab49fd93296f5f18bfffa51f19ebdf6e2db66da4888910d279488a79f27"
+      "sha": "d4905dda81a756833b8626febfcb5752e4d3d08cc59446c1dd436ec55c708b18"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2016-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/461",
       "dateDocument": "2015-06-24",
-      "roFundstelle": "AS 2015 461",
+      "roFundstelle": "AS 2015 2459",
       "titelDe": "Signalisationsverordnung (SSV)",
       "titelFr": "Ordonnance sur la signalisation routière (OSR)",
       "titelIt": "Ordinanza sulla segnaletica stradale (OSStr)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/461/de",
-      "sha": "124b051fff2dce25548f34eeb548f9713b4cea4cee9ab6831eb6274bf793ae1d"
+      "sha": "e7d1c34ff688f6edc38b3e2447a65f04937fc202b27c2788a50ae33eebc0ed7e"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2015-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/275",
       "dateDocument": "2015-04-15",
-      "roFundstelle": "AS 2015 275",
+      "roFundstelle": "AS 2015 1317",
       "titelDe": "Signalisationsverordnung (SSV)",
       "titelFr": "Ordonnance sur la signalisation routière (OSR)",
       "titelIt": "Ordinanza sulla segnaletica stradale (OSStr)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/275/de",
-      "sha": "c472e04cd2a540617746463ad882eb98c748cc5e9722a6e0275a0f9e2b5fbe1a"
+      "sha": "d68a20cbfba2640248a7d0f3778c03e5fc85b30f683f81968cb212cae43e604d"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2015-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/775",
       "dateDocument": "2014-10-29",
-      "roFundstelle": "AS 2014 775",
+      "roFundstelle": "AS 2014 4623",
       "titelDe": "Signalisationsverordnung (SSV)",
       "titelFr": "Ordonnance sur la signalisation routière (OSR)",
       "titelIt": "Ordinanza sulla segnaletica stradale (OSStr)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/775/de",
-      "sha": "a54a4fbb5b9edcbaf306a67105f0e5ad74ce76944bd5f799fdf814f3300b4fec"
+      "sha": "ccb9ea90ebb8fd72af55adb26ed47acaca5d5f253db9de3b396cdedfd3ed3213"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2012-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/260",
       "dateDocument": "2012-03-02",
-      "roFundstelle": "AS 2012 260",
+      "roFundstelle": "AS 2012 1823",
       "titelDe": "Signalisationsverordnung (SSV)",
       "titelFr": "Ordonnance sur la signalisation routière (OSR)",
       "titelIt": "Ordinanza sulla segnaletica stradale (OSStr)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/260/de",
-      "sha": "9cce28b2f8f2281d3ef317c0d0aa8c00f4a5ec7da942a699980978065fa3af5a"
+      "sha": "192a0b0cdb9fb517533708a05cf0183efce1362de59c1e8b35b5ad317f1a6b0b"
     },
     {
       "art": "sammelerlass-marker",
@@ -177,24 +177,24 @@
       "dateEntryInForce": "2010-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/730",
       "dateDocument": "2009-11-04",
-      "roFundstelle": "AS 2009 730",
+      "roFundstelle": "AS 2009 5971",
       "titelDe": "Signalisationsverordnung (SSV)",
       "titelFr": "Ordonnance sur la signalisation routière (OSR)",
       "titelIt": "Ordinanza sulla segnaletica stradale (OSStr)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/730/de",
-      "sha": "9ddfd0a825f016dfd35956efd87961e702182588013db14fdd05308becfd589e"
+      "sha": "fbd4020543cb24dd7d2bceb68bddc1aa16db3d65c15793c7489e42a65ae9b697"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2010-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/518",
       "dateDocument": "2009-08-19",
-      "roFundstelle": "AS 2009 518",
+      "roFundstelle": "AS 2009 4241",
       "titelDe": "Signalisationsverordnung (SSV)",
       "titelFr": "Ordonnance sur la signalisation routière (OSR)",
       "titelIt": "Ordinanza sulla segnaletica stradale (OSStr)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/518/de",
-      "sha": "f5b0d444de802224f93c03625089486fc78cc4b0c1d36abee7a3373bc4371051"
+      "sha": "90245a73c73aae7b47a7f50d1206b5956e9ce53a75c7800dae9824a0b1c876ee"
     },
     {
       "art": "sammelerlass-marker",
@@ -207,12 +207,12 @@
       "dateEntryInForce": "2007-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/298",
       "dateDocument": "2007-03-28",
-      "roFundstelle": "AS 2007 298",
+      "roFundstelle": "AS 2007 2105",
       "titelDe": "Signalisationsverordnung (SSV)",
       "titelFr": "Ordonnance sur la signalisation routière (OSR)",
       "titelIt": "Ordinanza sulla segnaletica stradale (OSSTr)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/298/de",
-      "sha": "e767682d2be1fa2b12bcfed3ec3e3f794e9b8d19bca25191b9fca238ee0f62dc"
+      "sha": "6757825f485c878e56ff27a1d96128bacd565de2f49778644073aedc7028a60d"
     },
     {
       "art": "sammelerlass-marker",
@@ -225,12 +225,12 @@
       "dateEntryInForce": "2006-03-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/582",
       "dateDocument": "2005-08-17",
-      "roFundstelle": "AS 2005 582",
+      "roFundstelle": "AS 2005 4495",
       "titelDe": "Signalisationsverordnung (SSV)",
       "titelFr": "Ordonnance sur la signalisation routière (OSR)",
       "titelIt": "Ordinanza sulla segnaletica stradale (OSStr)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/582/de",
-      "sha": "87acf5f38b3537bba132be7f225da74998212ed4f6efadd802e9659d58ea0b4e"
+      "sha": "a7beccd4e65de70d69d9703866b56f4b8e246ad7109a137afa82be1fa9f4ca58"
     },
     {
       "art": "sammelerlass-marker",
@@ -249,48 +249,48 @@
       "dateEntryInForce": "2003-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/482",
       "dateDocument": "2002-07-03",
-      "roFundstelle": "AS 2002 482",
+      "roFundstelle": "AS 2002 3213",
       "titelDe": "Signalisationsverordnung (SSV)",
       "titelFr": "Ordonnance sur la signalisation routière (OSR)",
       "titelIt": "Ordinanza sulla segnaletica stradale (OSStr)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/482/de",
-      "sha": "0bcf428a66840cef90bbc5ac4dff7a0718725d673be53032a3d8e438fbb494a3"
+      "sha": "26a0737e74ec21f2bc937f9728f8e5ae1766e394d1b783b9fa57b340a646f5d6"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2002-09-23",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/470",
       "dateDocument": "2002-09-20",
-      "roFundstelle": "AS 2002 470",
+      "roFundstelle": "AS 2002 3174",
       "titelDe": "Signalisationsverordnung (SSV)",
       "titelFr": "Ordonnance sur la signalisation routière (OSR)",
       "titelIt": "Ordinanza sulla segnaletica stradale (OSStr)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/470/de",
-      "sha": "675a8535f3f28c07f50934de516fd1749e9cea8c5f2a5555a31db4afa3f948b1"
+      "sha": "fa8df7f8714aca1c439bf67b1f431c10d477e95e25abbadb740f741c73807743"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2002-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/289",
       "dateDocument": "2002-05-15",
-      "roFundstelle": "AS 2002 289",
+      "roFundstelle": "AS 2002 1935",
       "titelDe": "Signalisationsverordnung (SSV)",
       "titelFr": "Ordonnance sur la signalisation routière (OSR)",
       "titelIt": "Ordinanza sulla segnaletica stradale (OSStr)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/289/de",
-      "sha": "d9ced4fca931e2a9b6bf9547b36fb49ac45527e30c191a349d8d7e8c414ddb8d"
+      "sha": "e92b94749061487c52c72465738e10f38cc8205bba1bb20e46eb55a26c9983c1"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2002-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/406",
       "dateDocument": "2001-09-28",
-      "roFundstelle": "AS 2001 406",
+      "roFundstelle": "AS 2001 2719",
       "titelDe": "Signalisationsverordnung (SSV)",
       "titelFr": "Ordonnance sur la signalisation routière (OSR)",
       "titelIt": "Ordinanza sulla segnaletica stradale (OSStr)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/406/de",
-      "sha": "58745d584b429a061c0379b38c1f958883d95e1c7d8a4840e86e25292cd46f29"
+      "sha": "b559318c7754d785d8bcfe2a01d91afb2b1e0c13c4a3928b359d45506bcbfbde"
     },
     {
       "art": "sammelerlass-marker",
@@ -323,5 +323,5 @@
       "sha": "66a0e32b92bb25bf085f8e97a6e7fb772a50ee6be74399a8f3590045ecd5d31f"
     }
   ],
-  "sha": "aa1a420fd56b659ef1937cebfb88be9a5ddcf943b3f608f4edd2820c5957a362"
+  "sha": "998fec368b4d9551e0cfeca78b0263e5b9ab12f8f28e13b1eeeaf3999b62fac7"
 }

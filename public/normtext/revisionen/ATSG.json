@@ -1,7 +1,7 @@
 {
   "erlassKey": "ATSG",
   "sr": "830.1",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -51,25 +51,25 @@
       "dateEntryInForce": "2021-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/892",
       "dateDocument": "2019-06-21",
-      "roFundstelle": "AS 2020 892",
+      "roFundstelle": "AS 2020 5137",
       "titelDe": "Bundesgesetz über den Allgemeinen Teil des Sozialversicherungsrechts (ATSG)",
       "titelFr": "Loi fédérale sur la partie générale du droit des assurances sociales (LPGA)",
       "titelIt": "Legge federale sulla parte generale del diritto delle assicurazioni sociali (LPGA)",
       "botschaftKey": "BOTSCHAFT-2018-671",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/892/de",
-      "sha": "469b018d1c342010261782e4b3d754186411fbe993931532b453f5b99f311f19"
+      "sha": "7967d304ce71c43d5f87f7d67f98106249a3bcfd0d2f9b8f58f30d034df66cfa"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2019-10-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/519",
       "dateDocument": "2018-03-16",
-      "roFundstelle": "AS 2019 519",
+      "roFundstelle": "AS 2019 2829",
       "titelDe": "Bundesgesetz über den Allgemeinen Teil des Sozialversicherungsrechts (ATSG) (Gesetzliche Grundlage für die Überwachung von Versicherten)",
       "titelFr": "Loi fédérale sur la partie générale du droit des assurances sociales (LPGA) (Base légale pour la surveillance des assurés)",
       "titelIt": "Legge federale sulla parte generale del diritto delle assicurazioni sociali (LPGA) (Base legale per la sorveglianza degli assicurati)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/519/de",
-      "sha": "e579a9e5b88e14e77245ff08473240d492384f831bef57bf49bb4cb2bd455203"
+      "sha": "475473db13b077d44c6697c981545b20610bd0f2c173929b7e7be1d016560829"
     },
     {
       "art": "sammelerlass-marker",
@@ -112,62 +112,62 @@
       "dateEntryInForce": "2003-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/510",
       "dateDocument": "2000-10-06",
-      "roFundstelle": "AS 2002 510",
+      "roFundstelle": "AS 2002 3371",
       "titelDe": "Bundesgesetz über den Allgemeinen Teil des Sozialversicherungsrechts (ATSG)",
       "titelFr": "Loi fédérale sur la partie générale du droit des assurances sociales (LPGA)",
       "titelIt": "Legge federale sulla parte generale del diritto delle assicurazioni sociali (LPGA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/510/de",
-      "sha": "8befbf9cf6d86274f4d720177f79e25b211c0a1c980ff5bc88051427105b2692"
+      "sha": "1376681a17aae94bd2e454f9d7f0cfed1342175096eeca86b00231219528a483"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2003-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/513",
       "dateDocument": "2002-06-21",
-      "roFundstelle": "AS 2002 513",
+      "roFundstelle": "AS 2002 3475",
       "titelDe": "Bundesgesetz über die Änderung des Anhangs zum Bundesgesetz über den Allgemeinen Teil des Sozialversicherungsrechts (Revision 3 des Anhangs zum ATSG)",
       "titelFr": "Loi fédérale sur la modification de l'annexe de la loi fédérale sur la partie générale du droit des assurances sociales (Révision 3 de l'annexe de la LPGA)",
       "titelIt": "Legge federale sulla modifica dell'allegato alla legge federale sulla parte generale del diritto delle assicurazioni sociali (Revisione 3 dell'allegato alla LPGA)",
       "botschaftKey": "BOTSCHAFT-2002-114",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/513/de",
-      "sha": "c2190997e7cc8d5a7a992c61170b74938b4179555ab442cdbafccc0c0313e1f8"
+      "sha": "38964635c486075a0980deba3a115fefb53eb82d1f33ab5e096c6e77afff295a"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2003-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/89",
       "dateDocument": "2004-02-10",
-      "roFundstelle": "AS 2004 89",
+      "roFundstelle": "AS 2004 811",
       "titelDe": "Bundesgesetz vom 6. Oktober 2000 über den Allgemeinen Teil des Sozialversicherungsrechts (ATSG) (Betrifft nur den italienischen Text)",
       "titelFr": "Loi fédérale du 6 octobre 2000 sur la partie générale du droit des assurances sociales (LPGA) (Ne concerne que le texte italien)",
       "titelIt": "Legge federale del 6 ottobre 2000 sulla parte generale del diritto delle assicurazioni sociali (LPGA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/89/de",
-      "sha": "0f2531a4821b71e38d8ca441527554cdcac96097daac6bcbba9ecdc5cf06eea1"
+      "sha": "66ea63fba45c5e3e27efdc9eee58fc16dfbb2cde2c607caf6a6f714f7ef71720"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2003-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/326",
       "dateDocument": "2005-05-03",
-      "roFundstelle": "AS 2005 326",
+      "roFundstelle": "AS 2005 1935",
       "titelDe": "Bundesgesetz über den Allgemeinen Teil des Sozialversicherungsrechts (ATSG) (Betrifft nur den italienischen Text)",
       "titelFr": "Loi fédérale sur la partie générale du droit des assurances sociales (LPGA) (Ne concerne que le texte italien)",
       "titelIt": "Legge federale sulla parte generale del diritto delle assicurazioni sociali (LPGA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/326/de",
-      "sha": "0ae0454cbdb142b6548b689122341f5f982025c8d145908205f554708fffa41b"
+      "sha": "908135bed14bbb790dec05034ee8f4ee67e5bff356fe0b1c7f6737653129879c"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2003-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/578",
       "dateDocument": "2009-09-29",
-      "roFundstelle": "AS 2009 578",
+      "roFundstelle": "AS 2009 5021",
       "titelDe": "Bundesgesetz über den Allgemeinen Teil des Sozialversicherungsrechts (ATSG) (Betrifft nur den italienischen Text)",
       "titelFr": "Loi fédérale sur la partie générale du droit des assurances sociales (LPGA) (Ne concerne que le texte italien)",
       "titelIt": "Legge federale sulla parte generale del diritto delle assicurazioni sociali (LPGA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/578/de",
-      "sha": "ed1ff1731422886d0b4fa104cb716df7a4361821f5ef019615af278ce7232de3"
+      "sha": "38ff4dd277bbeea6dccf5c241ce34ddfcec42a9a8a44383e939a7c9625d7e63a"
     }
   ],
-  "sha": "c5e95caa48d46cadef87245225d375be6baf9e86cd83b39b33243f702ed31cc6"
+  "sha": "b6acdf75d81c79d9d1d5a69f7f84a6f551659547613ca2b5afb295bc25045570"
 }

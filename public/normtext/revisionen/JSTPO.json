@@ -1,7 +1,7 @@
 {
   "erlassKey": "JSTPO",
   "sr": "312.1",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -27,13 +27,13 @@
       "dateEntryInForce": "2011-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/226",
       "dateDocument": "2009-03-20",
-      "roFundstelle": "AS 2010 226",
+      "roFundstelle": "AS 2010 1573",
       "titelDe": "Schweizerische Jugendstrafprozessordnung (Jugendstrafprozessordnung, JStPO)",
       "titelFr": "Loi fédérale sur la procédure pénale applicable aux mineurs (Procédure pénale applicable aux mineurs, PPMin)",
       "titelIt": "Legge federale di diritto processuale penale minorile (Procedura penale minorile, PPMin)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/226/de",
-      "sha": "a3ba15937a0578225b97359f6cf7c0b3512e21986dad42318946af6f4232ddf9"
+      "sha": "303142e7de397f1d5dd7bc830c27e7bc7fd464c9e182e0e833dac53b23bd5604"
     }
   ],
-  "sha": "b5beaffc3f2f98c409ebbc2af013530f5327cd7f8c156a3e526cba3fdc9138fd"
+  "sha": "8518a2da2c5a46ff094a65a28daab75cf374866d18c98e121262fd8533c53508"
 }

@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1986-11-12"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 12. November 1986 über die Erhaltung des Vorsorgeschutzes und die Freizügigkeit"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 12 novembre 1986 sur le maintien de la prévoyance et le libre passage"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 12 novembre 1986 sul mantenimento della previdenza e del libero passaggio"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.425"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1986/2008_2008_2008"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1987-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1986-11-12"
+        "value": "RO 1986 2008"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1986-11-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1986 2008"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 12. November 1986 über die Erhaltung des Vorsorgeschutzes und die Freizügigkeit"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1986-11-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1986 2008"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 12. November 1986 über die Erhaltung des Vorsorgeschutzes und die Freizügigkeit"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 12 novembre 1986 sur le maintien de la prévoyance et le libre passage"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 12 novembre 1986 sul mantenimento della previdenza e del libero passaggio"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.425"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1986/2008_2008_2008"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1987-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1986-11-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1986 2008"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 12. November 1986 über die Erhaltung des Vorsorgeschutzes und die Freizügigkeit"
@@ -149,69 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1994-10-03"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 3. Oktober 1994 über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsverordnung, FZV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 3 octobre 1994 sur le libre passage dans la prévoyance professionnelle vieillesse, survivants et invalidité (Ordonnance sur le libre passage, OLP)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 3 ottobre 1994 sul libero passaggio nella previdenza professionale per la vecchiaia, i superstiti e l'invalidità (Ordinanza sul libero passaggio, OLP)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.425"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1994/2399_2399_2399"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1995-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1994-10-03"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung vom 3. Oktober 1994 über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsverordnung, FZV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 3 octobre 1994 sur le libre passage dans la prévoyance professionnelle vieillesse, survivants et invalidité (Ordonnance sur le libre passage, OLP)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 3 ottobre 1994 sul libero passaggio nella previdenza professionale per la vecchiaia, i superstiti e l'invalidità (Ordinanza sul libero passaggio, OLP)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.425"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1994/2399_2399_2399"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1995-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1994-10-03"
+        "value": "RO 1994 2399"
       },
       "titleDe": {
         "type": "literal",
@@ -245,6 +201,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1994-10-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1994 2399"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 3. Oktober 1994 über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsverordnung, FZV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 3 octobre 1994 sur le libre passage dans la prévoyance professionnelle vieillesse, survivants et invalidité (Ordonnance sur le libre passage, OLP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 3 ottobre 1994 sul libero passaggio nella previdenza professionale per la vecchiaia, i superstiti e l'invalidità (Ordinanza sul libero passaggio, OLP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.425"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1994/2399_2399_2399"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1995-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1994-10-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1994 2399"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 3. Oktober 1994 über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsverordnung, FZV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 3 octobre 1994 sur le libre passage dans la prévoyance professionnelle vieillesse, survivants et invalidité (Ordonnance sur le libre passage, OLP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 3 ottobre 1994 sul libero passaggio nella previdenza professionale per la vecchiaia, i superstiti e l'invalidità (Ordinanza sul libero passaggio, OLP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.425"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1994/2399_2399_2399"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1995-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1994-10-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1994 2399"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 3. Oktober 1994 über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsverordnung, FZV)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-04-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 1773"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsverordnung, FZV)"
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-04-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 1773"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsverordnung, FZV)"
@@ -341,69 +381,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-04-19"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsverordnung, FZV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le libre passage dans la prévoyance professionnelle vieillesse, survivants et invalidité (Ordonnance sur le libre passage, OLP)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sul libero passaggio nella previdenza professionale per la vecchiaia, i superstiti e l'invalidità (Ordinanza sul libero passaggio, OLP)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.425"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1999/520"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-11-24"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsverordnung, FZV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le libre passage dans la prévoyance professionnelle vieillesse, survivants et invalidité (Ordonnance sur le libre passage, OLP)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sul libero passaggio nella previdenza professionale per la vecchiaia, i superstiti e l'invalidità (Ordinanza sul libero passaggio, OLP)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.425"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1999/520"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-11-24"
+        "value": "RO 1999 1773"
       },
       "titleDe": {
         "type": "literal",
@@ -437,6 +417,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-11-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 3604"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsverordnung, FZV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le libre passage dans la prévoyance professionnelle vieillesse, survivants et invalidité (Ordonnance sur le libre passage, OLP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul libero passaggio nella previdenza professionale per la vecchiaia, i superstiti e l'invalidità (Ordinanza sul libero passaggio, OLP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.425"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/520"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-11-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 3604"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsverordnung, FZV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le libre passage dans la prévoyance professionnelle vieillesse, survivants et invalidité (Ordonnance sur le libre passage, OLP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sul libero passaggio nella previdenza professionale per la vecchiaia, i superstiti e l'invalidità (Ordinanza sul libero passaggio, OLP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.425"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/520"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-11-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 3604"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsverordnung, FZV)"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-09-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4431"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsverordnung, FZV)"
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-09-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4431"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsverordnung, FZV)"
@@ -532,6 +596,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-09-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4431"
       },
       "titleDe": {
         "type": "literal",
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-09-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6345"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsverordnung, FZV)"
@@ -597,6 +669,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-09-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6345"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsverordnung, FZV)"
@@ -628,6 +704,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-09-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6345"
       },
       "titleDe": {
         "type": "literal",
@@ -660,6 +740,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-08-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 3755"
       },
       "titleDe": {
         "type": "literal",
@@ -693,6 +777,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-08-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 3755"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Änderungen in der beruflichen Vorsorge "
@@ -724,6 +812,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-08-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 3755"
       },
       "titleDe": {
         "type": "literal",

@@ -21,69 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-06-06"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Technische Verordnung des EJPD und des VBS über das Grundbuch (TGBV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance technique du DFJP et du DDPS concernant le registre foncier (OTRF)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza tecnica del DFGP e del DDPS sul registro fondiario (OTRF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "211.432.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/408"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-08-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-06-06"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Technische Verordnung des EJPD und des VBS über das Grundbuch (TGBV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance technique du DFJP et du DDPS concernant le registre foncier (OTRF)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza tecnica del DFGP e del DDPS sul registro fondiario (OTRF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "211.432.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/408"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-08-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-06-06"
+        "value": "RO 2007 3353"
       },
       "titleDe": {
         "type": "literal",
@@ -117,6 +57,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-06-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 3353"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Technische Verordnung des EJPD und des VBS über das Grundbuch (TGBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance technique du DFJP et du DDPS concernant le registre foncier (OTRF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza tecnica del DFGP e del DDPS sul registro fondiario (OTRF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "211.432.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/408"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-06-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 3353"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Technische Verordnung des EJPD und des VBS über das Grundbuch (TGBV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance technique du DFJP et du DDPS concernant le registre foncier (OTRF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza tecnica del DFGP e del DDPS sul registro fondiario (OTRF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "211.432.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/408"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-06-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 3353"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Technische Verordnung des EJPD und des VBS über das Grundbuch (TGBV)"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 9"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Technische Verordnung des EJPD und des VBS über das Grundbuch (TGBV)"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 9"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Technische Verordnung des EJPD und des VBS über das Grundbuch (TGBV)"
@@ -213,6 +237,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 9"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Technische Verordnung des EJPD und des VBS über das Grundbuch (TGBV)"
@@ -244,6 +272,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 9"
       },
       "titleDe": {
         "type": "literal",

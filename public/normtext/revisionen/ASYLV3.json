@@ -1,7 +1,7 @@
 {
   "erlassKey": "ASYLV3",
   "sr": "142.314",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -111,36 +111,36 @@
       "dateEntryInForce": "2019-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/281",
       "dateDocument": "2019-05-01",
-      "roFundstelle": "AS 2019 281",
+      "roFundstelle": "AS 2019 1437",
       "titelDe": "Asylverordnung 3 über die Bearbeitung von Personendaten (Asylverordnung 3, AsylV 3)",
       "titelFr": "Ordonnance 3 sur l'asile relative au traitement de données personnelles (Ordonnance 3 sur l'asile, OA 3)",
       "titelIt": "Ordinanza 3 sull'asilo relativa al trattamento di dati personali (Ordinanza 3 sull'asilo, OAsi 3)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/281/de",
-      "sha": "4c5186ffad7b97bb36e3e31c1b12156b6c9d6754f9528eae74d9fba35a202df9"
+      "sha": "a75041eb88cb9545fa2dc95007f78e6c8acc3ef9f00010d9c6e910ecc8fca8e6"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2019-03-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/441",
       "dateDocument": "2018-06-08",
-      "roFundstelle": "AS 2018 441",
+      "roFundstelle": "AS 2018 2889",
       "titelDe": "Asylverordnung 3 über die Bearbeitung von Personendaten (Asylverordnung 3, AsylV 3)",
       "titelFr": "Ordonnance 3 sur l'asile relative au traitement de données personnelles (Ordonnance 3 sur l'asile, OA 3)",
       "titelIt": "Ordinanza 3 sull'asilo relativa al trattamento di dati personali (Ordinanza 3 sull'asilo, OAsi 3)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/441/de",
-      "sha": "939808ca6247cc1e00802e6ddfa127aa271fc17bba567b154ffddefd25b4bced"
+      "sha": "a1b1ca5b3f15cf34ec31e8e8152feb4be0eb800059885557954beba6e4b44cac"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2017-04-15",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/200",
       "dateDocument": "2017-03-22",
-      "roFundstelle": "AS 2017 200",
+      "roFundstelle": "AS 2017 2175",
       "titelDe": "Asylverordnung 3 über die Bearbeitung von Personendaten (Asylverordnung 3, AsylV 3)",
       "titelFr": "Ordonnance 3 sur l'asile relative au traitement de données personnelles (Ordonnance 3 sur l'asile, OA 3)",
       "titelIt": "Ordinanza 3 sull'asilo relativa al trattamento di dati personali (Ordinanza 3 sull'asilo, OAsi 3)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/200/de",
-      "sha": "9643ba4858c2d8a489be71ab7377ff20e0504473d6efdbd1ead2313e490d1103"
+      "sha": "bd4e84a94f0ef2f11d0a6184204016c97d1b3f71c3d1cb6bfff49b8811c11436"
     },
     {
       "art": "sammelerlass-marker",
@@ -153,12 +153,12 @@
       "dateEntryInForce": "2015-10-15",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/627",
       "dateDocument": "2015-09-18",
-      "roFundstelle": "AS 2015 627",
+      "roFundstelle": "AS 2015 3729",
       "titelDe": "Asylverordnung 3 über die Bearbeitung von Personendaten (Asylverordnung 3, AsylV 3)",
       "titelFr": "Ordonnance 3 sur l'asile relative au traitement de données personnelles (Ordonnance 3 sur l'asile, OA 3)",
       "titelIt": "Ordinanza 3 sull'asilo relativa al trattamento di dati personali (Ordinanza 3 sull'asilo, OAsi 3)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/627/de",
-      "sha": "e15ec0f3770d43af9c5d371c49a3cf4470787326716a433f80ba5d53edd58a69"
+      "sha": "fc3e27c4d9acd1dcf93d18676fffa22d2a5f6ccc9ee23a6b9067480803fa5966"
     },
     {
       "art": "sammelerlass-marker",
@@ -171,12 +171,12 @@
       "dateEntryInForce": "2015-07-20",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/414",
       "dateDocument": "2015-07-07",
-      "roFundstelle": "AS 2015 414",
+      "roFundstelle": "AS 2015 2237",
       "titelDe": "Verordnung über die Anpassung von Verordnungen aufgrund von Neuerungen bezüglich des Dublin/Eurodac-Besitzstands (Betrifft nur den italienischen Text)",
       "titelFr": "Ordonnance portant adaptation d'actes en raison de nouveautés en lien avec l'acquis de Dublin/Eurodac (Ne concerne que le texte italien)",
       "titelIt": "Ordinanza sull'adeguamento di ordinanze in seguito a innovazioni concernenti l'acquis di Dublino/Eurodac",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/414/de",
-      "sha": "db402e851107b323ae74e7f2718198199b1913675c07da27e8407edea4960cf9"
+      "sha": "520d572fcb2cf3e7c1c354e2b62d0b94866e0a52a3df9a730c69aaf9d9080fb1"
     },
     {
       "art": "sammelerlass-marker",
@@ -195,24 +195,24 @@
       "dateEntryInForce": "2012-06-13",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/347",
       "dateDocument": "2012-05-09",
-      "roFundstelle": "AS 2012 347",
+      "roFundstelle": "AS 2012 2903",
       "titelDe": "Asylverordnung 3 über die Bearbeitung von Personendaten (Asylverordnung 3, AsylV 3)",
       "titelFr": "Ordonnance 3 sur l'asile relative au traitement de données personnelles (Ordonnance 3 sur l'asile, OA 3)",
       "titelIt": "Ordinanza 3 sull'asilo relativa al trattamento di dati personali (Ordinanza 3 sull'asilo, OAsi 3)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/347/de",
-      "sha": "c664bcc3da98de984c2e83c0802f434baec99991b54a8ec21d46c46292581303"
+      "sha": "8b9cabc012d7f00b2951467cafe4359c98f5f2618e40c7f0d5eeba4a0feb9ede"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2011-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/819",
       "dateDocument": "2010-11-24",
-      "roFundstelle": "AS 2010 819",
+      "roFundstelle": "AS 2010 5775",
       "titelDe": "Asylverordnung 3 über die Bearbeitung von Personendaten (Asylverordnung 3, AsylV 3)",
       "titelFr": "Ordonnance 3 sur l'asile relative au traitement de données personnelles (Ordonnance 3 sur l'asile, OA 3)",
       "titelIt": "Ordinanza 3 sull'asilo relativa al trattamento di dati personali (Ordinanza 3 sull'asilo, OAsi 3)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/819/de",
-      "sha": "e631afb5f94a99d8f3b59f8847509d5ef5cb540391290f6960d80c4910198a97"
+      "sha": "7c3c255b7b4be375715a97067068d8d057e9e58a8bdcb116db00a45f8f16fff8"
     },
     {
       "art": "sammelerlass-marker",
@@ -225,12 +225,12 @@
       "dateEntryInForce": "2008-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/769",
       "dateDocument": "2007-10-24",
-      "roFundstelle": "AS 2007 769",
+      "roFundstelle": "AS 2007 5611",
       "titelDe": "Asylverordnung 3 über die Bearbeitung von Personendaten (Asylverordnung 3, AsylV 3)",
       "titelFr": "Ordonnance 3 sur l'asile relative au traitement de données personnelles (Ordonnance 3 sur l'asile, OA 3)",
       "titelIt": "Ordinanza 3 sull'asilo relativa al trattamento di dati personali (Ordinanza 3 sull'asilo 3, OAsi 3)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/769/de",
-      "sha": "067fc7409630bdb5d6b0575c6a0459b22c09581b4a6ea5950640eaf4d181cd49"
+      "sha": "9a41c64660572ac01a6a1c3b83c124ed11b6ce2be9a00f5dfe94fc717344228a"
     },
     {
       "art": "sammelerlass-marker",
@@ -255,25 +255,25 @@
       "dateEntryInForce": "2001-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/274",
       "dateDocument": "2001-07-03",
-      "roFundstelle": "AS 2001 274",
+      "roFundstelle": "AS 2001 1752",
       "titelDe": "Asylverordnung 3 über die Bearbeitung von Personendaten (Asylverordnung 3, AsylV 3)",
       "titelFr": "Ordonnance 3 sur l'asile relative au traitement de données personnelles (Ordonnance 3 sur l'asile, OA 3)",
       "titelIt": "Ordinanza 3 sull'asilo relativa al trattamento di dati personali (Ordinanza 3 sull'asilo, OAsi 3)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/274/de",
-      "sha": "ab4aa3eea0a103ebce475144c5a4ba9a67ea83146de06e984e296ceb0335a049"
+      "sha": "3965b1a30c4ff1324a197e50137a00df3041af4cfc70d8b255fcf640d3af15f7"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "1999-10-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/361",
       "dateDocument": "1999-08-11",
-      "roFundstelle": "AS 1999 361",
+      "roFundstelle": "AS 1999 2351",
       "titelDe": "Asylverordnung 3 über die Bearbeitung von Personendaten (Asylverordnung 3, AsylV 3)",
       "titelFr": "Ordonnance 3 sur l'asile relative au traitement de données personnelles (Ordonnance 3 sur l'asile, OA 3)",
       "titelIt": "Ordinanza 3 sull'asilo relativa al trattamento di dati personali (Ordinanza 3 sull'asilo, OAsi 3)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/361/de",
-      "sha": "20689f39a2fef96a8866b53bc0e81513177e2f6154a137dbc22dbf3137850d15"
+      "sha": "84e1d3e7d1b2abbbc9008f3742baea1133d401d9d1721ca55f96072dc45a774c"
     }
   ],
-  "sha": "2d252cd3a3780cdcd0f19f5905b654c11d23ed7b086db6c890f4d0e6d510f734"
+  "sha": "fa61e16de9f8f0b68bc3ed44952ed90f4f6ab0f69a8d32c424a6bacc4d08a37b"
 }

@@ -1,7 +1,7 @@
 {
   "erlassKey": "FAMZV",
   "sr": "836.21",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -51,12 +51,12 @@
       "dateEntryInForce": "2020-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/503",
       "dateDocument": "2020-06-19",
-      "roFundstelle": "AS 2020 503",
+      "roFundstelle": "AS 2020 2779",
       "titelDe": "Verordnung über die Familienzulagen (Familienzulagenverordnung, FamZV)",
       "titelFr": "Ordonnance sur les allocations familiales (OAFam)",
       "titelIt": "Ordinanza sugli assegni familiari (OAFami)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/503/de",
-      "sha": "6f0aa4dac5e71f73b91442f20e22e6214f00ba7d2ed026af3e56d8cf09cc2af1"
+      "sha": "9816644fbfe8d75292d8cf5df8c11ffb1931b8cdaa808db1f04a00edb25ff583"
     },
     {
       "art": "sammelerlass-marker",
@@ -69,61 +69,61 @@
       "dateEntryInForce": "2012-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/719",
       "dateDocument": "2011-10-26",
-      "roFundstelle": "AS 2011 719",
+      "roFundstelle": "AS 2011 4951",
       "titelDe": "Verordnung über die Familienzulagen (Familienzulagenverordnung, FamZV)",
       "titelFr": "Ordonnance sur les allocations familiales (OAFam)",
       "titelIt": "Ordinanza sugli assegni familiari (OAFami)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/719/de",
-      "sha": "84ae4901aae74e29c8bf1b4676348d90d157216ed03ead8fe4c2615eba08b6d2"
+      "sha": "c475b9b0585564257f8dd009363a7cc0db32b3068832e37190081b5e36e900ca"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2011-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/662",
       "dateDocument": "2010-09-24",
-      "roFundstelle": "AS 2010 662",
+      "roFundstelle": "AS 2010 4591",
       "titelDe": "Verordnung über die Familienzulagen (Familienzulagenverordnung, FamZV)",
       "titelFr": "Ordonnance sur les allocations familiales (OAFam)",
       "titelIt": "Ordinanza sugli assegni familiari (OAFami)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/662/de",
-      "sha": "c943d0b90ff5967449a8818907e8711bb80c42e0a0be764814dec09f9f0127eb"
+      "sha": "dd1e2fd5c55b320f355f42326bbfb5151a329b50c09c986edb9ce22970870e1e"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2010-10-15",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/637",
       "dateDocument": "2010-09-08",
-      "roFundstelle": "AS 2010 637",
+      "roFundstelle": "AS 2010 4495",
       "titelDe": "Verordnung über die Familienzulagen (Familienzulagenverordnung, FamZV)",
       "titelFr": "Ordonnance sur les allocations familiales (OAFam)",
       "titelIt": "Ordinanza sugli assegni familiari (OAFami)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/637/de",
-      "sha": "ab7bca6e466252ba2611466c2631d90bfe4418f5153b1a410f913fc633d2287c"
+      "sha": "002b062abb057b5ed0565b4da3cdd6dc3b931e608d0d6643f13f8cd3f8aa2495"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2009-11-08",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/639",
       "dateDocument": "2009-10-28",
-      "roFundstelle": "AS 2009 639",
+      "roFundstelle": "AS 2009 5367",
       "titelDe": "Verordnung über die Familienzulagen (Familienzulagenverordnung, FamZV)",
       "titelFr": "Ordonnance sur les allocations familiales (OAFam)",
       "titelIt": "Ordinanza sugli assegni familiari (OAFami)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/639/de",
-      "sha": "c7ab1b1525dbcafe064b8ae0b7ceb2a27207385195d799bf0aa3855b5e3b9063"
+      "sha": "224d2b426e917e60a13a1aa40ce47ab8d5e4810199a15fb7529eb410e5319716"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2009-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/52",
       "dateDocument": "2007-10-31",
-      "roFundstelle": "AS 2008 52",
+      "roFundstelle": "AS 2008 145",
       "titelDe": "Verordnung über die Familienzulagen (Familienzulagenverordnung; FamZV)",
       "titelFr": "Ordonnance sur les allocations familiales (OAFam)",
       "titelIt": "Ordinanza sugli assegni familiari (OAFami)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/52/de",
-      "sha": "bf846696b6a7d1352e1cc654232fd8f615dc7dad7e8a7bab35d1ab610e9136ae"
+      "sha": "ce41ad8aaf77367160eb178414d2e17e8ab762f8ea573d1b03b6beac4243a473"
     }
   ],
-  "sha": "43f11f6c2a9d9ff7149897cbe00372cf31e82778d4c39396f05a9e5233f4f8ee"
+  "sha": "1e6bb36eb933236ac8a083fc99b5dee328c40c4ea8b8373deba40e75e07e7023"
 }

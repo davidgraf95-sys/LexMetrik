@@ -1,7 +1,7 @@
 {
   "erlassKey": "VSTV",
   "sr": "642.211",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -75,12 +75,12 @@
       "dateEntryInForce": "2017-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/148",
       "dateDocument": "2017-03-10",
-      "roFundstelle": "AS 2017 148",
+      "roFundstelle": "AS 2017 775",
       "titelDe": "Verordnung über die Verrechnungssteuer (Verrechnungssteuerverordnung, VStV)",
       "titelFr": "Ordonnance sur l'impôt anticipé (Ordonnance sur l'impôt anticipé, OIA)",
       "titelIt": "Ordinanza sull'imposta preventiva (OIPrev)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/148/de",
-      "sha": "ba375cd442248f631ebff8753a29ace589b9c279a8cd3d995fed11cfb30d7246"
+      "sha": "f049367484960d07ff1272232557f2b5d069c92bcd2888ba38f27d773aa19bb5"
     },
     {
       "art": "sammelerlass-marker",
@@ -99,12 +99,12 @@
       "dateEntryInForce": "2013-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/720",
       "dateDocument": "2012-10-31",
-      "roFundstelle": "AS 2012 720",
+      "roFundstelle": "AS 2012 6087",
       "titelDe": "Verordnung über die Verrechnungssteuer (Verrechnungssteuerverordnung, VStV)",
       "titelFr": "Ordonnance sur l'impôt anticipé (OIA)",
       "titelIt": "Ordinanza sull'imposta preventiva (OIPrev)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/720/de",
-      "sha": "2e7d83de01959dc8e62bdb18974c9c27b5603b3a7505f30391606b0767cd4aa8"
+      "sha": "60b8611508df72c891a4774e3627782584d20f4c226b39a664331ec0ca97abe6"
     },
     {
       "art": "sammelerlass-marker",
@@ -123,12 +123,12 @@
       "dateEntryInForce": "2010-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/427",
       "dateDocument": "2009-06-24",
-      "roFundstelle": "AS 2009 427",
+      "roFundstelle": "AS 2009 3471",
       "titelDe": "Vollziehungsverordnung zum Bundesgesetz über die Verrechnungssteuer (Verrechnungssteuerverordnung, VStV)",
       "titelFr": "Ordonnance d'exécution de la loi fédérale sur l'impôt anticipé (Ordonnance sur l'impôt anticipé, OIA)",
       "titelIt": "Ordinanza d'esecuzione della legge federale sull'imposta preventiva (Ordinanza sull'imposta preventiva, OIPrev)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/427/de",
-      "sha": "77d1d822be3f67640ad8bd8a9687dd5c32b37d916c0adad99d3605d236683043"
+      "sha": "d64b29470c5c100bc7dc87dbb588b02e71dbb1653cc7a21e033b0793f72a8e2f"
     },
     {
       "art": "sammelerlass-marker",
@@ -147,12 +147,12 @@
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/542",
       "dateDocument": "2000-11-22",
-      "roFundstelle": "AS 2000 542",
+      "roFundstelle": "AS 2000 2994",
       "titelDe": "Vollziehungsverordnung zum Bundesgesetz über die Verrechnungssteuer",
       "titelFr": "Ordonnance d'exécution sur l'impôt anticipé",
       "titelIt": "Ordinanza d'esecuzione della legge federale sull'imposta preventiva",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/542/de",
-      "sha": "b4560dc46e4909f59b886717194ec2b8553258a7ef7af840932e3930788f41e9"
+      "sha": "464fb576261d3a85a6f97e579ce655477d84043894430c7c8d6a7d5fa40e8157"
     },
     {
       "art": "aenderung",
@@ -167,5 +167,5 @@
       "sha": "62ce372647fba80a65f5e46f791113eb95ef9d35e653768f8e941d24b07c587c"
     }
   ],
-  "sha": "ac21ff05d50bc83fd913fb2dfbd6214a15478c3cd11b3405ce3e7cb9c224a40e"
+  "sha": "2c18ac77fa5016549c115e5c3f9e8d6f53d7281dd4c261511a4d7e98885f5007"
 }

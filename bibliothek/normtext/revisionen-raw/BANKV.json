@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1972-05-17"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 17. Mai 1972 über die Banken und Sparkassen (Bankenverordnung, BankV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 17 mai 1972 sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 17 maggio 1972 sulle banche e le casse di risparmio (Ordinanza sulle banche, OBCR)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "952.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1972/821_832_752"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1972-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1972-05-17"
+        "value": "RO 1972 832"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1972-05-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1972 832"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 17. Mai 1972 über die Banken und Sparkassen (Bankenverordnung, BankV)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1972-05-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1972 832"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 17. Mai 1972 über die Banken und Sparkassen (Bankenverordnung, BankV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 17 mai 1972 sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 17 maggio 1972 sulle banche e le casse di risparmio (Ordinanza sulle banche, OBCR)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1972/821_832_752"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1972-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1972-05-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1972 832"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 17. Mai 1972 über die Banken und Sparkassen (Bankenverordnung, BankV)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-10-21"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über Banken und Sparkassen (Bankenverordnung, BankV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulle banche e le casse di risparmio (Ordinanza sulle banche, OBCR)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "952.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1998/2646_2646_2646"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-12-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-10-21"
+        "value": "RO 1998 2646"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-10-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1998 2646"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über Banken und Sparkassen (Bankenverordnung, BankV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulle banche e le casse di risparmio (Ordinanza sulle banche, OBCR)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1998/2646_2646_2646"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-12-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-10-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1998 2646"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Banken und Sparkassen (Bankenverordnung, BankV)"
@@ -245,37 +273,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-10-04"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulle banche e le casse di risparmio(Ordinanza sulle banche, OBCR)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "952.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1999/456"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-11-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-10-04"
+        "value": "RO 1999 2891"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +309,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-10-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2891"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulle banche e le casse di risparmio(Ordinanza sulle banche, OBCR)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/456"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-11-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-10-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2891"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)"
@@ -341,37 +381,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-11-12"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza su le banche e le casse di risparmio (O sulle banche, OBCR)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "952.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/603"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-12-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-11-12"
+        "value": "RO 2003 4077"
       },
       "titleDe": {
         "type": "literal",
@@ -405,6 +417,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-11-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 4077"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza su le banche e le casse di risparmio (O sulle banche, OBCR)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/603"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-12-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-11-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 4077"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)"
@@ -437,37 +489,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-03-31"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza su le banche e le casse di risparmio (Ordinanza sulle banche, OBCR)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "952.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/341"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-03-31"
+        "value": "RO 2004 2777"
       },
       "titleDe": {
         "type": "literal",
@@ -501,37 +525,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-03-31"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza su le banche e le casse di risparmio (Ordinanza sulle banche, OBCR)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "952.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/355"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-03-24"
+        "value": "RO 2004 2777"
       },
       "titleDe": {
         "type": "literal",
@@ -553,17 +549,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/355"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/341"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-01-01"
+        "value": "2004-07-01"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-03-24"
+        "value": "2004-03-31"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 2777"
       },
       "titleDe": {
         "type": "literal",
@@ -597,6 +597,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-03-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 2875"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza su le banche e le casse di risparmio (Ordinanza sulle banche, OBCR)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/355"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-03-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 2875"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza su le banche e le casse di risparmio (Ordinanza sulle banche, OBCR)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/355"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-03-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 2875"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)"
@@ -629,6 +705,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-09-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 4849"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)"
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-09-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 4849"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)"
@@ -692,6 +776,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-09-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 4849"
       },
       "titleDe": {
         "type": "literal",
@@ -725,37 +813,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-03-14"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulle banche e le casse di risparmio (Ordinanza sulle banche, OBCR)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "952.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2008/215"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-03-14"
+        "value": "RO 2008 1199"
       },
       "titleDe": {
         "type": "literal",
@@ -789,6 +849,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-03-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 1199"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulle banche e le casse di risparmio (Ordinanza sulle banche, OBCR)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/215"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-03-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 1199"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)"
@@ -820,6 +920,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-05-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 2465"
       },
       "titleDe": {
         "type": "literal",
@@ -853,6 +957,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-05-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 2465"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung; BankV)"
@@ -885,6 +993,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-05-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 2465"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung; BankV)"
@@ -917,37 +1029,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-10-14"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza su le banche e le casse di risparmio (Ordinanza sulle banche, OBCR)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "952.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/623"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-10-14"
+        "value": "RO 2009 5279"
       },
       "titleDe": {
         "type": "literal",
@@ -981,6 +1065,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-10-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5279"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza su le banche e le casse di risparmio (Ordinanza sulle banche, OBCR)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/623"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-10-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5279"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)"
@@ -1013,37 +1137,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-08-24"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulle banche e le casse di risparmio (Ordinanza sulle banche, OBCR)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "952.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/560"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-09-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-08-24"
+        "value": "RO 2011 3931"
       },
       "titleDe": {
         "type": "literal",
@@ -1077,6 +1173,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-08-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3931"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulle banche e le casse di risparmio (Ordinanza sulle banche, OBCR)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/560"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-09-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-08-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3931"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)"
@@ -1109,6 +1245,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 5435"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)"
@@ -1141,6 +1281,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 5435"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)"
@@ -1173,69 +1317,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-01"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulle banche e le casse di risparmio (Ordinanza sulle banche, OBCR)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "952.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2014/273"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-04-30"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulle banche e le casse di risparmio (Ordinanza sulle banche, OBCR)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "952.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2014/273"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-04-30"
+        "value": "RO 2012 5435"
       },
       "titleDe": {
         "type": "literal",
@@ -1269,6 +1353,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-04-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1269"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)"
@@ -1300,6 +1388,82 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-04-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1269"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulle banche e le casse di risparmio (Ordinanza sulle banche, OBCR)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/273"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-04-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1269"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur les banques et les caisses d'épargne (Ordonnance sur les banques, OB)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulle banche e le casse di risparmio (Ordinanza sulle banche, OBCR)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "952.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/273"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-04-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1269"
       },
       "titleDe": {
         "type": "literal",
@@ -1333,6 +1497,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-11-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 4297"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV) (Betrifft nur den französischen Text)"
@@ -1365,6 +1533,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-11-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 4297"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV) (Betrifft nur den französischen Text)"
@@ -1397,6 +1569,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-11-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 4297"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV) (Betrifft nur den französischen Text)"
@@ -1429,6 +1605,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-07-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 3823"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)"
@@ -1461,6 +1641,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-07-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 3823"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)"
@@ -1493,6 +1677,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-07-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 3823"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)"
@@ -1525,6 +1713,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-11-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 5229"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)"
@@ -1557,6 +1749,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-11-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 5229"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Banken und Sparkassen (Bankenverordnung, BankV)"
@@ -1588,6 +1784,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-11-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 5229"
       },
       "titleDe": {
         "type": "literal",

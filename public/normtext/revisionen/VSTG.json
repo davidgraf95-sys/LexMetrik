@@ -1,7 +1,7 @@
 {
   "erlassKey": "VSTG",
   "sr": "642.21",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -58,50 +58,50 @@
       "dateEntryInForce": "2019-07-02",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/370",
       "dateDocument": "2019-06-25",
-      "roFundstelle": "AS 2019 370",
+      "roFundstelle": "AS 2019 2013",
       "titelDe": "Bundesgesetz über Geldspiele (Geldspielgesetz, BGS) (Betrifft nur den französischen Text)",
       "titelFr": "Loi fédérale sur les jeux d'argent (LJAr)",
       "titelIt": "Legge federale sui giochi in denaro (LGD) (Concerne soltanto il testo francese)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/370/de",
-      "sha": "59c249d8c72bea75f6267a7a95bd4b8e0b2bb6acab86449f0defd5a001669337"
+      "sha": "60b16cd5df6efbb35cddaab5e6ff2ca6d95fa35992c0ba2543d7dd9ce6e497ae"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2019-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/76",
       "dateDocument": "2018-09-28",
-      "roFundstelle": "AS 2019 76",
+      "roFundstelle": "AS 2019 433",
       "titelDe": "Bundesgesetz über die Verrechnungssteuer (Verrechnungssteuergesetz, VStG)",
       "titelFr": "Loi fédérale sur l'impôt anticipé (LIA)",
       "titelIt": "Legge federale sull'imposta preventiva (LIP)",
       "botschaftKey": "BOTSCHAFT-2018-890",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/76/de",
-      "sha": "d6e173b9d85de636549b101758c82a0fdc3dd24564f12af91ec397fc8fcdf637"
+      "sha": "1be73b0dcb3d7d06f3b7d9570532f056db37389af756ae63cec5cba7a0ff1bbe"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2017-02-15",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/83",
       "dateDocument": "2016-09-30",
-      "roFundstelle": "AS 2017 83",
+      "roFundstelle": "AS 2017 497",
       "titelDe": "Bundesgesetz über die Verrechnungssteuer (Verrechnungssteuergesetz, VStG)",
       "titelFr": "Loi fédérale sur l'impôt anticipé (LIA)",
       "titelIt": "Legge federale sull'imposta preventiva (LIP)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/83/de",
-      "sha": "5f8a73b41ab9af5d606d2e5dab799e63c1ce47419baf8661cad7455ad7faf9a8"
+      "sha": "ec94860e0b9bfe5493f46a52d1681890e37095e32d2c7c23e2e8fa1f15e0e4e0"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2017-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/583",
       "dateDocument": "2016-03-18",
-      "roFundstelle": "AS 2016 583",
+      "roFundstelle": "AS 2016 3451",
       "titelDe": "Bundesgesetz über die Verrechnungssteuer (Verrechnungssteuergesetz, VStG)",
       "titelFr": "Loi fédérale sur l'impôt anticipé (LIA)",
       "titelIt": "Legge federale sull'imposta preventiva (LIP)",
       "botschaftKey": "BOTSCHAFT-2015-1692",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/583/de",
-      "sha": "a2f2be27541f8cc81b676a3dbab73ff3ee5128c4229672d8371bf7a4b2877bcb"
+      "sha": "0b5847401cc836c8f6c112faadf8889a75d8720e5094d6d9a67d787ba103bcce"
     },
     {
       "art": "sammelerlass-marker",
@@ -120,13 +120,13 @@
       "dateEntryInForce": "2013-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/701",
       "dateDocument": "2012-06-15",
-      "roFundstelle": "AS 2012 701",
+      "roFundstelle": "AS 2012 5981",
       "titelDe": "Bundesgesetz über die Verrechnungssteuer (VStG)",
       "titelFr": "Loi fédérale sur l'impôt anticipé (LIA)",
       "titelIt": "Legge federale sull'imposta preventiva (LIP)",
       "botschaftKey": "BOTSCHAFT-2011-1054",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/701/de",
-      "sha": "f23313b65794294da4cb7e668eec5c057f876b7c73a62edf8d64156d82b3cbb2"
+      "sha": "568710d2cc6cdb1b64e559a76e715ce042867c3cf1f3c5b5d0d857a2c96b1358"
     },
     {
       "art": "sammelerlass-marker",
@@ -169,12 +169,12 @@
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/458",
       "dateDocument": "2000-06-23",
-      "roFundstelle": "AS 2000 458",
+      "roFundstelle": "AS 2000 2741",
       "titelDe": "Bundesgesetz über die Verrechnungssteuer (VStG)",
       "titelFr": "Loi fédérale sur l'impôt anticipé (LIA)",
       "titelIt": "Legge federale sull'imposta preventiva (LIP)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/458/de",
-      "sha": "9b6e4aa39507fba0e64df856b610b004e8d714936e33e893b998a1e00b5593fc"
+      "sha": "18a403dd6e2f5ef6bc07804dd40065633f093c66ab7e08816f13a1e0c9029859"
     },
     {
       "art": "sammelerlass-marker",
@@ -201,5 +201,5 @@
       "sha": "85afeb60638b9080f8bac7194413e4d09f9b3f99d4814c8a34461ae43f538049"
     }
   ],
-  "sha": "fb1c94a61e594e3423eff89576bffc32868aa21c579e8321b452610e5a3fd8b5"
+  "sha": "b37449360d980b1ba781dc77dccdea19bbcbcd0ce4870f2585d0b91a99bbeb43"
 }

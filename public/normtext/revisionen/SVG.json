@@ -1,7 +1,7 @@
 {
   "erlassKey": "SVG",
   "sr": "741.01",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -87,24 +87,24 @@
       "dateEntryInForce": "2019-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/425",
       "dateDocument": "2017-09-29",
-      "roFundstelle": "AS 2018 425",
+      "roFundstelle": "AS 2018 2807",
       "titelDe": "Strassenverkehrsgesetz (SVG)",
       "titelFr": "Loi fédérale sur la circulation routière (LCR)",
       "titelIt": "Legge federale sulla circolazione stradale (LCStr)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/425/de",
-      "sha": "05380d7a39408f3bec9b9d6ea2f0129ef59d24ba95ca8a2ebe5797aa5f3ecd6f"
+      "sha": "7accc83a52a937a4edd45e2e5b845af86d5688b00f9e94f5d8a9c79f92dc8eaf"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2019-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/781",
       "dateDocument": "2018-11-30",
-      "roFundstelle": "AS 2018 781",
+      "roFundstelle": "AS 2018 4985",
       "titelDe": "Verordnung über eine Teilinkraftsetzung der Änderung vom 15. Juni 2012 des Strassenverkehrsgesetzes",
       "titelFr": "Ordonnance portant mise en vigueur partielle de la modification du 15 juin 2012 de la loi fédérale sur la circulation routière",
       "titelIt": "Ordinanza concernente un'entrata in vigore parziale della modifica del 15 giugno 2012 della legge federale sulla circolazione stradale",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/781/de",
-      "sha": "18306bd807b043e85c31a9778e0a8c3f6837c9f2ad1a6034c30a0c8677907a22"
+      "sha": "0824702e61cf21bbe7cfa8c9f00242abbaa6c4149768d22297ec0140dcc6c5f5"
     },
     {
       "art": "sammelerlass-marker",
@@ -129,12 +129,12 @@
       "dateEntryInForce": "2016-10-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/489",
       "dateDocument": "2015-07-01",
-      "roFundstelle": "AS 2015 489",
+      "roFundstelle": "AS 2015 2583",
       "titelDe": "Verordnung über eine Teilinkraftsetzung der Änderung vom 15. Juni 2012 des Strassenverkehrsgesetzes",
       "titelFr": "Ordonnance concernant l'entrée en vigueur partielle de la modification du 15 juin 2012 de la loi fédérale sur la circulation routière",
       "titelIt": "Ordinanza concernente un'entrata in vigore parziale della modifica del 15 giugno 2012 della legge federale sulla circolazione stradale",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/489/de",
-      "sha": "2996fb3ad72e8499f8139ad10468bfec09bd0ba0e041b5fa2163ee06473d7929"
+      "sha": "8bd7ac323effcc50ac64544bdacdcb5f78bb7a1d6ef6946d60d0488cae6fd13f"
     },
     {
       "art": "sammelerlass-marker",
@@ -147,36 +147,36 @@
       "dateEntryInForce": "2016-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/488",
       "dateDocument": "2015-07-01",
-      "roFundstelle": "AS 2015 488",
+      "roFundstelle": "AS 2015 2581",
       "titelDe": "Verordnung über eine Teilinkraftsetzung der Änderung vom 15. Juni 2012 des Strassenverkehrsgesetzes",
       "titelFr": "Ordonnance concernant l'entrée en vigueur partielle de la modification du 15 juin 2012 de la loi fédérale sur la circulation routière",
       "titelIt": "Ordinanza concernente un'entrata in vigore parziale della modifica del 15 giugno 2012 della legge federale sulla circolazione stradale",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/488/de",
-      "sha": "5fc3cf5c801c8237612069209410fa5b10146a9f424139d4f19b488f8c02fea0"
+      "sha": "df1c2e8eb8992b2cc13b26a0889fbd31ed2db9906c06628e4be88c4abea3db0b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2016-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/376",
       "dateDocument": "2016-06-28",
-      "roFundstelle": "AS 2016 376",
+      "roFundstelle": "AS 2016 2307",
       "titelDe": "Verordnung über eine Teilinkraftsetzung der Änderung vom 15. Juni 2012 des Strassenverkehrsgesetzes",
       "titelFr": "Ordonnance concernant l'entrée en vigueur partielle de la modification du 15 juin 2012 de la loi fédérale sur la circulation routière",
       "titelIt": "Ordinanza concernente un'entrata in vigore parziale della modifica del 15 giugno 2012 della legge federale sulla circolazione stradale",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/376/de",
-      "sha": "ad94b53236793c30407c93c98f97dd69bce9a83658ff5bc6f2bff658444e628a"
+      "sha": "e0dc5bd3494044dd05f277c68b99b48ee6207595589d17b8c17ec4377765b030"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2015-05-20",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/288",
       "dateDocument": "2015-05-06",
-      "roFundstelle": "AS 2015 288",
+      "roFundstelle": "AS 2015 1387",
       "titelDe": "Strassenverkehrsgesetz (SVG)",
       "titelFr": "Loi fédérale du 19 décembre 1958 sur la circulation routière (LRC)",
       "titelIt": "Legge federale sulla circolazione stradale (LCStr)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/288/de",
-      "sha": "066c48d5796e91fc68569a862b074f87a24298291425154dbf788a209a07d55a"
+      "sha": "acfb1d6a5e97327c7915f77e0d0a5c897cbb8948510fd05fa6f2cee88219d311"
     },
     {
       "art": "sammelerlass-marker",
@@ -195,12 +195,12 @@
       "dateEntryInForce": "2014-06-11",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/293",
       "dateDocument": "2014-05-27",
-      "roFundstelle": "AS 2014 293",
+      "roFundstelle": "AS 2014 1387",
       "titelDe": "Strassenverkehrsgesetz (SVG) (Betrifft nur den französischen Text)",
       "titelFr": "Loi fédérale sur la circulation routière (LCR)",
       "titelIt": "Legge federale sulla circolazione stradale (LCStr) (Concerne solo il testo francese)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/293/de",
-      "sha": "792a3d05119112f4d7777779517beeb59c921df77a58bc114b639948474801ed"
+      "sha": "e7dad185df3006fec0604032aec9db8e421673508276394093b13556a08002d5"
     },
     {
       "art": "sammelerlass-marker",
@@ -213,24 +213,24 @@
       "dateEntryInForce": "2014-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/821",
       "dateDocument": "2013-11-29",
-      "roFundstelle": "AS 2013 821",
+      "roFundstelle": "AS 2013 4669",
       "titelDe": "Verordnung über eine Teilinkraftsetzung der Änderung vom 15. Juni 2012 des Strassenverkehrsgesetzes",
       "titelFr": "Ordonnance concernant l'entrée en vigueur partielle de la modification du 15 juin 2012 de la loi fédérale sur la circulation routière",
       "titelIt": "Ordinanza su un'entrata in vigore parziale della modifica del 15 giugno 2012 della legge federale ulla circolazione stradale",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/821/de",
-      "sha": "aa20a21195e997ec4e9b3014f257880ff104ab1377abd207914ba8921bff02d7"
+      "sha": "73eec156b970f826c6670aa3072fadb22f957a86162024431ec9b08969657721"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2013-12-27",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/891",
       "dateDocument": "2013-12-10",
-      "roFundstelle": "AS 2013 891",
+      "roFundstelle": "AS 2013 5577",
       "titelDe": "Strassenverkehrsgesetz (SVG)",
       "titelFr": "Loi fédérale sur la circulation routière (LCR) (Ne concerne que les textes allemand et italien)",
       "titelIt": "Legge federale sulla circolazione stradale (LCStr)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/891/de",
-      "sha": "b72a9481e0259b78b1ac5c05d40480f4ad20449023531d86d3c4e09142a14a54"
+      "sha": "f8418be6d3dbff4e463f769a64d86804a311454cef2c22f86ba1aa3fa90f1798"
     },
     {
       "art": "sammelerlass-marker",
@@ -243,13 +243,13 @@
       "dateEntryInForce": "2013-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/744",
       "dateDocument": "2012-06-15",
-      "roFundstelle": "AS 2012 744",
+      "roFundstelle": "AS 2012 6291",
       "titelDe": "Strassenverkehrsgesetz (SVG)",
       "titelFr": "Loi fédérale sur la circulation routière (LCR)",
       "titelIt": "Legge federale sulla circolazione stradale (LCStr)",
       "botschaftKey": "BOTSCHAFT-2010-1610",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/744/de",
-      "sha": "91a028ad91aa1359900c6c33457e99be499f6963801209d99a84f7d356dba1d1"
+      "sha": "fa9b9b387e4c384f4aee7fd2a741c0400999afb34ab506958f38abe42e6d779c"
     },
     {
       "art": "sammelerlass-marker",
@@ -262,24 +262,24 @@
       "dateEntryInForce": "2012-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/428",
       "dateDocument": "2010-12-17",
-      "roFundstelle": "AS 2011 428",
+      "roFundstelle": "AS 2011 3267",
       "titelDe": "Strassenverkehrsgesetz (SVG)",
       "titelFr": "Loi fédérale sur la circulation routière (LCR)",
       "titelIt": "Legge federale sulla circolazione stradale (LCStr)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/428/de",
-      "sha": "4e536b1fe78cb3e74812668c915de3f0689639df3ce58d7a81e15eaa9931a702"
+      "sha": "5f8c0a9fc365e98aa7e23ab3999ae6d66e38571fe5f176623f1095835430af35"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2012-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/710",
       "dateDocument": "2010-10-01",
-      "roFundstelle": "AS 2011 710",
+      "roFundstelle": "AS 2011 4925",
       "titelDe": "Strassenverkehrsgesetz (SVG)",
       "titelFr": "Loi fédérale sur la circulation routière (LCR)",
       "titelIt": "Legge federale sulla circolazione stradale (LCStr)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/710/de",
-      "sha": "2142e5ec1d7be1451181c1efe2ed2076c1d861da6f3fe6f44e4d93890d44f027"
+      "sha": "dc73a4d031529ae25096f4fb7bf25e75c5d5057b72d686b6f189d27f10fe5738"
     },
     {
       "art": "sammelerlass-marker",
@@ -310,13 +310,13 @@
       "dateEntryInForce": "2008-09-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/530",
       "dateDocument": "2008-03-20",
-      "roFundstelle": "AS 2008 530",
+      "roFundstelle": "AS 2008 3939",
       "titelDe": "Strassenverkehrsgesetz (SVG)",
       "titelFr": "Loi fédérale sur la circulation routière (LCR)",
       "titelIt": "Legge federale sulla circolazione stradale (LCStr)",
       "botschaftKey": "BOTSCHAFT-2007-1189",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/530/de",
-      "sha": "5d2113c5e690ceedd8d1f300228f31f3b8a8ee7139f707b60578eec5a0ab1ce3"
+      "sha": "e6d7a285bdbd9573e5a57ba39ce791fc1b808610ebeeff718d33c6398578b0d7"
     },
     {
       "art": "sammelerlass-marker",
@@ -353,36 +353,36 @@
       "dateEntryInForce": "2005-02-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/778",
       "dateDocument": "2004-10-27",
-      "roFundstelle": "AS 2004 778",
+      "roFundstelle": "AS 2004 5053",
       "titelDe": "Verordnung über die vollständige Inkraftsetzung der Änderung vom 14. Dezember 2001 des Strassenverkehrsgesetzes",
       "titelFr": "Ordonnance concernant la mise en vigueur complète de la modification du 14 décembre 2001 de la loi fédérale sur la circulation routière",
       "titelIt": "Ordinanza concernente l'entrata in vigore completa della modifica del 14 dicembre 2001 della legge federale sulla circolazione stradale",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/778/de",
-      "sha": "e68d505f3b4672f2c931a90e2dc82fe1edd0cd3cfa760536b81ec5685e20e61c"
+      "sha": "03e178f55e51dcc7a7d606c5c635606b09c71b599a6ebd4fae8e492d1c3eb6f4"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2005-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/350",
       "dateDocument": "2004-04-28",
-      "roFundstelle": "AS 2004 350",
+      "roFundstelle": "AS 2004 2849",
       "titelDe": "Verordnung über die Inkraftsetzung von weiteren Bestimmungen der Änderung vom 14. Dezember 2001 des Strassenverkehrsgesetzes",
       "titelFr": "Ordonnance concernant la mise en vigueur d'autres dispositions da la modification du 14 décembre 2001 de la loi fédérale sur la circulation routière",
       "titelIt": "Ordinanza concernente la messa in vigore di altre disposizioni della modifica del 14 dicembre 2001 della legge federale sulla circolazione stradale",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/350/de",
-      "sha": "7d5a1a8d2195ed8eedd3675fd7d876d0a14c0e9c6fc1c110c0026c6e84555539"
+      "sha": "fc0934cb8e7ae2f6cc76e62bd21ef8305b298e5352c92ad77d9c2b791db47a85"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2004-03-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/56",
       "dateDocument": "2004-01-14",
-      "roFundstelle": "AS 2004 56",
+      "roFundstelle": "AS 2004 647",
       "titelDe": "Verordnung über die Inkraftsetzung der Änderung des Artikels 67 Absätze 3 und 4 des Strassenverkehrkehrsgesetzes",
       "titelFr": "Ordonnance concernant la mise en vigueur de la modification de l'art. 67, al. 3 et 4, de la loi fédérale sur la circulation routière",
       "titelIt": "Ordinanza sulla messa in vigore della modifica dell'art. 67 cpv. 3 e 4 della legge federale sulla circolazione stradale",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/56/de",
-      "sha": "46f972b946b4cb2f46cee78c37f33b3b89497bb976c5a454490791ad879c606b"
+      "sha": "d65e543367cf752bf154083e5858b17a06aaf93af762c8218b1a89e838606088"
     },
     {
       "art": "sammelerlass-marker",
@@ -395,12 +395,12 @@
       "dateEntryInForce": "2003-10-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/468",
       "dateDocument": "2003-09-03",
-      "roFundstelle": "AS 2003 468",
+      "roFundstelle": "AS 2003 3368",
       "titelDe": "Verordnung über die vollständige Inkraftsetzung der Änderungen vom 18. Juni 1999 und 4. Oktober 2002 des Strassenverkehrsgesetzes",
       "titelFr": "Ordonnance concernant la mise en vigueur intégrale des modifications des 18 juin 1999 et 4 octobre 2002 de la loi fédérale sur la circulation routière",
       "titelIt": "Ordinanza concernente l'entrata in vigore delle modifiche del 18 giugno 1999 e del 4 ottobre 2002 della legge sulla circolazione stradale",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/468/de",
-      "sha": "332498c00299c43842f99a0926eca3976138c11713c82edece4400854cb1b5c4"
+      "sha": "c98e05eeb4cb01ab9389941b1f6e72fa80e44da4697491ac2a9e1446956a4bec"
     },
     {
       "art": "sammelerlass-marker",
@@ -413,62 +413,62 @@
       "dateEntryInForce": "2003-02-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/30",
       "dateDocument": "2002-10-04",
-      "roFundstelle": "AS 2003 30",
+      "roFundstelle": "AS 2003 222",
       "titelDe": "Strassenverkehrsgesetz (SVG)",
       "titelFr": "Loi fédérale sur la circulation routière (LCR)",
       "titelIt": "Legge federale sulla circolazione stradale (LCStr)",
       "botschaftKey": "BOTSCHAFT-2002-692",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/30/de",
-      "sha": "2044760d2d4a44d0cde205554612259a8cb84dc61ea32a9d1300c94976c63891"
+      "sha": "f499a5912563032d5708d5f5779bc006c0b858d3bb8a9de6d3b05429a3dd9699"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2003-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/408",
       "dateDocument": "2001-12-14",
-      "roFundstelle": "AS 2002 408",
+      "roFundstelle": "AS 2002 2767",
       "titelDe": "Strassenverkehrsgesetz (SVG)",
       "titelFr": "Loi fédérale sur la circulation routière (LCR)",
       "titelIt": "Legge sulla circolazione stradale (LCStr)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/408/de",
-      "sha": "6b1c7dff17868fd526ff189ca39b7f1c967e2b5c16865a17c824e487bb47bfae"
+      "sha": "71e6951c27788a58d303013b56771c0a24e996102204741ac9c38ea333c9989c"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/472",
       "dateDocument": "1999-06-18",
-      "roFundstelle": "AS 2000 472",
+      "roFundstelle": "AS 2000 2795",
       "titelDe": "Strassenverkehrsgesetz (Register für Fahrzeuge und Fahrzeughalter sowie für Administrativmassnahmen gegen Fahrzeugführer)",
       "titelFr": "Loi fédérale sur la circulation routière (Registre des véhicules et des détenteurs de véhicules et registre des mesures administratives frappant les conducteurs de véhicules)",
       "titelIt": "Legge federale sulla circolazione stradale (Registro dei veicoli e dei detentori nonché delle misure amministrative contro i conducenti dei veicoli)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/472/de",
-      "sha": "9ac1816619adcd590d3b549445b92f658319de0bcff05b846a1b9ee11ef18592"
+      "sha": "cb1ef225e0a7aabfd8a10fa52e9cf4cee4cc8ab6a59998f72c510b3ff5fe8fb8"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/497",
       "dateDocument": "1999-10-08",
-      "roFundstelle": "AS 2000 497",
+      "roFundstelle": "AS 2000 2877",
       "titelDe": "Bundesgesetz zum Abkommen zwischen der schweizerischen Eidgenossenschaft und der Europäischen Gemeinschaft über den Güter- und Personenverkehr auf Schiene und Strasse",
       "titelFr": "Loi fédérale concernant l'accord entre la Confédération suisse et la Communauté européenne sur le transport de marchandises et de voyageurs par rail et par route",
       "titelIt": "Legge federale concernente l'Accordo fra la Confederazione Svizzera e la Comunità europea sul trasporto di merci e di passeggeri su strada e per ferrovia",
       "botschaftKey": "BOTSCHAFT-1999-1_6128_5440_5092",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/497/de",
-      "sha": "0fadbb3ba64d6d1890795ebf153181511501d3f49b9318def1a9e049e3a43256"
+      "sha": "6ac1fe25e5b3458d04d042198883a451fd1f0fc74d6b9e306b913bdf18ea779b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/566",
       "dateDocument": "2000-12-28",
-      "roFundstelle": "AS 2000 566",
+      "roFundstelle": "AS 2000 3111",
       "titelDe": "Strassenverkehrsgesetz (Register für Fahrzeuge und Fahrzeughalter sowie für Administrativmassnahmen gegen Fahrzeugführer)",
       "titelFr": "Loi fédérale sur la circulation routière (Registre des véhicules et des détenteurs de véhicules et registre des mesures administratives frappant les conducteurs de véhicules)",
       "titelIt": "Legge federale sulla circolazione stradale (Registro dei veicoli e dei detentori nonché delle misure amministrative contro i conducenti di veicoli)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/566/de",
-      "sha": "8133b7bdc2a4ab1cd0c979582b9dfd69a6166de65defd5e2c6803d3e26142b7f"
+      "sha": "dfbd0d5456137e2820400a1a0dbc9d1e04c0f13fe51184e6a417c7eb7802574c"
     },
     {
       "art": "aenderung",
@@ -483,5 +483,5 @@
       "sha": "f5d17c78906cbdfde9bcc40129a91432605e36201ef5736e55314e44f98ac88c"
     }
   ],
-  "sha": "b29f26c3cfcfe48cd0e5b9851d1c75d1e074d13fa28d980190e74b4ce3348acc"
+  "sha": "fa42186f77da536446946a38f32037730c681f415dfd5f72c785b4c286aabec2"
 }

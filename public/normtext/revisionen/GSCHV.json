@@ -1,7 +1,7 @@
 {
   "erlassKey": "GSCHV",
   "sr": "814.201",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -58,48 +58,48 @@
       "dateEntryInForce": "2021-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/287",
       "dateDocument": "2019-04-17",
-      "roFundstelle": "AS 2019 287",
+      "roFundstelle": "AS 2019 1489",
       "titelDe": "Gewässerschutzverordnung (GSchV)",
       "titelFr": "Ordonnance sur la protection des eaux (OEaux)",
       "titelIt": "Ordinanza sulla protezione delle acque (OPAc)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/287/de",
-      "sha": "bffc0979d0fd2b0f19ad177cf6b1ecdfb4d80b9eea1214124172fa209f3d34fc"
+      "sha": "266b8a9bf7bd7a034477ca2f33d6a0c5755539951ae0b5a782f9cbc516d4aeb5"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2020-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/97",
       "dateDocument": "2020-02-13",
-      "roFundstelle": "AS 2020 97",
+      "roFundstelle": "AS 2020 515",
       "titelDe": "Gewässerschutzverordnung (GSchV)",
       "titelFr": "Ordonnance sur la protection des eaux (OEaux)",
       "titelIt": "Ordinanza sulla protezione delle acque (OPAc)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/97/de",
-      "sha": "97594c48bd473e17d09549aad9039e4ffc584ad4a03085831795bf81928ec942"
+      "sha": "ad611078d68fbb4052970936f9d844d02a839e3cdb9e119cc053eae77521e48d"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2020-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/286",
       "dateDocument": "2019-04-17",
-      "roFundstelle": "AS 2019 286",
+      "roFundstelle": "AS 2019 1487",
       "titelDe": "Verordnung über Anpassungen des Verordnungsrechts an die Weiterentwicklung der Programmvereinbarungen im Umweltbereich für die Programmperiode 20202024",
       "titelFr": "Ordonnance sur les adaptations d'ordonnances au développement des conventions-programmes dans le domaine de l'environnement pour la période 20202024",
       "titelIt": "Ordinanza che adegua ordinanze in materia ambientale all'ulteriore sviluppo degli accordi programmatici del periodo programmatico 20202024",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/286/de",
-      "sha": "4399a39f4a7ef4034ef58698f5d6aeb8cf1d894920769dc890ea43bfbde70034"
+      "sha": "3a38c938d8c206f3a0f435464e68caeacbd73132e4fed0c73c6fae346c9db1e0"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2018-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/251",
       "dateDocument": "2018-04-11",
-      "roFundstelle": "AS 2018 251",
+      "roFundstelle": "AS 2018 1685",
       "titelDe": "Gewässerschutzverordnung (GSchV)",
       "titelFr": "Ordonnance sur la protection des eaux (OEaux)",
       "titelIt": "Ordinanza sulla protezione delle acque (OPAc)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/251/de",
-      "sha": "01db2f39fc83f338f09277e411a5c38aa471c1cfecc63b03d43cc9aad034306e"
+      "sha": "0ac577c0372f5e11ecdd23852cd2dd0fe1ffe5fb8b5b1074ca338346213f53ad"
     },
     {
       "art": "sammelerlass-marker",
@@ -112,48 +112,48 @@
       "dateEntryInForce": "2017-05-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/245",
       "dateDocument": "2017-03-22",
-      "roFundstelle": "AS 2017 245",
+      "roFundstelle": "AS 2017 2585",
       "titelDe": "Gewässerschutzverordnung (GSchV)",
       "titelFr": "Ordonnance sur la protection des eaux (OEaux)",
       "titelIt": "Ordinanza sulla protezione delle acque (OPAc)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/245/de",
-      "sha": "ff1ac063463ccf34926a1dfa4a55ee4b640f6db33a4846c1d2696b02e6bf9c6e"
+      "sha": "f49bc38df9de2f597f2061f9906dae1747a45c94cf162c7c28106ace73fa829b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2017-02-07",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/88",
       "dateDocument": "2017-02-07",
-      "roFundstelle": "AS 2017 88",
+      "roFundstelle": "AS 2017 509",
       "titelDe": "Gewässerschutzverordnung (GSchV) (Betrifft nur den italienischen Text)",
       "titelFr": "Ordonnance sur la protection des eaux (OEaux) (Ne concerne que le texte italien)",
       "titelIt": "Ordinanza sulla protezione delle acque (OPAc)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/88/de",
-      "sha": "090b109d32581f9c9c803e7a46e38b211b3eb7c125217b0544be0c9f4270a46d"
+      "sha": "1b07ed7972740d775243461be550ece9feb094d78b4ccbd62d8e4e0a0285632e"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2016-02-02",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/78",
       "dateDocument": "2016-02-02",
-      "roFundstelle": "AS 2016 78",
+      "roFundstelle": "AS 2016 473",
       "titelDe": "Gewässerschutzverordnung (GSchV)",
       "titelFr": "Ordonnance sur la protection des eaux (OEaux)",
       "titelIt": "Ordinanza sulla protezione delle acque (OPAc)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/78/de",
-      "sha": "ca5135bc944112457ad20a32b75a84ced987bcbd4e567753cc9fe6fc49652a3d"
+      "sha": "dd8c98baf944844d5436f59b046dd8d7b05bb06155cb8a276f0052d7cbcce51c"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2016-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/786",
       "dateDocument": "2015-11-04",
-      "roFundstelle": "AS 2015 786",
+      "roFundstelle": "AS 2015 4791",
       "titelDe": "Gewässerschutzverordnung (GSchV)",
       "titelFr": "Ordonnance sur la protection des eaux (OEaux)",
       "titelIt": "Ordinanza sulla protezione delle acque (OPAc)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/786/de",
-      "sha": "c9ef58e212bbeac5aa78dd88dac82139ab97ee0b20b068576b0b98b237026e38"
+      "sha": "1817118c174c2815416508017de75ba71792fb84b920479ebd507f356d8c434f"
     },
     {
       "art": "sammelerlass-marker",
@@ -172,12 +172,12 @@
       "dateEntryInForce": "2011-08-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/454",
       "dateDocument": "2011-06-29",
-      "roFundstelle": "AS 2011 454",
+      "roFundstelle": "AS 2011 3379",
       "titelDe": "Verordnung über Anpassungen von Verordnungen im Umweltbereich",
       "titelFr": "Ordonnance sur des adaptations d'ordonnances dans le domaine de l'environnement",
       "titelIt": "Ordinanza concernente adeguamenti di ordinanze nel settore ambientale",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/454/de",
-      "sha": "6f486b965133502020cc497705ce69f0acaf285e74c3dfeaafb9e215b645c21a"
+      "sha": "e17b200b88615e4fe04a1130bf1ffb94c4af0148c5396fe12936e5a88e52cd5b"
     },
     {
       "art": "sammelerlass-marker",
@@ -190,12 +190,12 @@
       "dateEntryInForce": "2011-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/290",
       "dateDocument": "2011-05-04",
-      "roFundstelle": "AS 2011 290",
+      "roFundstelle": "AS 2011 1955",
       "titelDe": "Gewässerschutzverordnung (GSchV)",
       "titelFr": "Ordonnance sur la protection des eaux (OEaux)",
       "titelIt": "Ordinanza sulla protezione delle acque (OPAc)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/290/de",
-      "sha": "5883586f8627092b21cd48ec84b6ae73ec44140a74ae46ee2b7e0716185b3c55"
+      "sha": "ba55d040004fd52fd1e9268fea1fdbe9711c86d1fc496ee8ef18a954eeefefed"
     },
     {
       "art": "sammelerlass-marker",
@@ -220,12 +220,12 @@
       "dateEntryInForce": "2007-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/657",
       "dateDocument": "2006-10-18",
-      "roFundstelle": "AS 2006 657",
+      "roFundstelle": "AS 2006 4291",
       "titelDe": "Gewässerschutzverordnung (GSchV)",
       "titelFr": "Ordonnance sur la protection des eaux (OEaux)",
       "titelIt": "Ordinanza sulla protezione delle acque (OPAc)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/657/de",
-      "sha": "42c2922f73c4f164db466e1e09708d455eff97e18884a7122a33b4d401988d37"
+      "sha": "45ccc6cc056392d08deded4beef7924eccea0df567ec616587b52944e6d497f0"
     },
     {
       "art": "sammelerlass-marker",
@@ -250,24 +250,24 @@
       "dateEntryInForce": "2004-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/590",
       "dateDocument": "2003-10-22",
-      "roFundstelle": "AS 2003 590",
+      "roFundstelle": "AS 2003 4043",
       "titelDe": "Gewässerschutzverordnung (GSchV)",
       "titelFr": "Ordonnance sur la protection des eaux (OEaux)",
       "titelIt": "Ordinanza sulla protezione delle acque (OPAc)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/590/de",
-      "sha": "34bb7c3854a936bfddcc91a86213e94ad95b6968748ed747e92a9464a5effb82"
+      "sha": "0b007a9d455da45884aad1a74c6592986f150845814f4a396452e570615912e5"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2002-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/477",
       "dateDocument": "2001-10-31",
-      "roFundstelle": "AS 2001 477",
+      "roFundstelle": "AS 2001 3168",
       "titelDe": "Gewässerschutzverordnung (GSchV)",
       "titelFr": "Ordonnance sur la protection des eaux (OEaux)",
       "titelIt": "Ordinanza sulla protezione delle acque (OPAc)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/477/de",
-      "sha": "fbda09438e37e9ce74583915034731b26a5d5ac690a4cff48e7ff07919e25e8b"
+      "sha": "17c995db4a988462f179dde8a0756fec91f48469223317f8b3efa9bd8d826213"
     },
     {
       "art": "sammelerlass-marker",
@@ -306,5 +306,5 @@
       "sha": "4fcdee95941a93d5d076b58b6d3dd0b5a329dfc9cafc1cc1f048b7accdfb09de"
     }
   ],
-  "sha": "e26426c0d0e698c0a91094fdea4c8af74edaa47b3699797fdf6bdb74d2d4cfa6"
+  "sha": "a426abd5077782d2ba9d343470503d45002d298f9772a5ce12402ee592f99799"
 }

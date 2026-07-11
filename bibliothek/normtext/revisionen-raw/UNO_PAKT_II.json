@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1966-12-16"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Internationaler Pakt vom 16. Dezember 1966 über bürgerliche und politische Rechte"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Pacte international du 16 décembre 1966 relatif aux droits civils et politiques"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Patto internazionale del 16 dicembre 1966 relativo ai diritti civili e politici"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.103.2"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1993/750_750_750"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1992-09-18"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1966-12-16"
+        "value": "RO 1993 750"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1966-12-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1993 750"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über bürgerliche und politische Rechte"
@@ -117,37 +93,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1966-12-16"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Internationaler Pakt vom 16. Dezember 1966 über bürgerliche und politische Rechte"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Pacte international du 16 décembre 1966 relatif aux droits civils et politiques"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Patto internazionale del 16 dicembre 1966 relativo ai diritti civili e politici"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.103.2"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/604"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-11-05"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-11-05"
+        "value": "RO 1993 750"
       },
       "titleDe": {
         "type": "literal",
@@ -169,17 +117,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/604"
+        "value": "https://fedlex.data.admin.ch/eli/oc/1993/750_750_750"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-11-05"
+        "value": "1992-09-18"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-11-05"
+        "value": "1966-12-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1993 750"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +165,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-11-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 4079"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Internationaler Pakt vom 16. Dezember 1966 über bürgerliche und politische Rechte"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Pacte international du 16 décembre 1966 relatif aux droits civils et politiques"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Patto internazionale del 16 dicembre 1966 relativo ai diritti civili e politici"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.103.2"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/604"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-11-05"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-11-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 4079"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Internationaler Pakt vom 16. Dezember 1966 über bürgerliche und politische Rechte"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Pacte international du 16 décembre 1966 relatif aux droits civils et politiques"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Patto internazionale del 16 dicembre 1966 relativo ai diritti civili e politici"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.103.2"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/604"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-11-05"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-11-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 4079"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über bürgerliche und politische Rechte"
@@ -244,6 +272,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-01-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 1375"
       },
       "titleDe": {
         "type": "literal",
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-01-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 1375"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über bürgerliche und politische Rechte"
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-01-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 1375"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über bürgerliche und politische Rechte"
@@ -341,37 +381,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-06-15"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Internationaler Pakt vom 16. Dezember 1966 über bürgerliche und politische Rechte (UNO-Pakt II)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Pacte international du 16 décembre 1966 relatif aux droits civils et politiques (Pacte II de l'ONU)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Patto internazionale del 16 dicembre 1966 relativo ai diritti civili politici (Patto II dell'ONU)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.103.2"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2005/452"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-06-15"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-06-15"
+        "value": "RO 2005 2615"
       },
       "titleDe": {
         "type": "literal",
@@ -405,6 +417,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-06-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 2615"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Internationaler Pakt vom 16. Dezember 1966 über bürgerliche und politische Rechte (UNO-Pakt II)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Pacte international du 16 décembre 1966 relatif aux droits civils et politiques (Pacte II de l'ONU)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Patto internazionale del 16 dicembre 1966 relativo ai diritti civili politici (Patto II dell'ONU)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.103.2"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/452"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-06-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-06-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 2615"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über bürgerliche und politische Rechte (UNO-Pakt II)"
@@ -437,37 +489,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-05-07"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Internationaler Pakt vom 16. Dezember 1966 über bürgerliche und politische Rechte"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Pacte international du 16 décembre 1966 relatif aux droits civils et politiques"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Pacte international du 16 décembre 1966 relatif aux droits civils et politiques"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.103.2"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/496"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-05-07"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-05-07"
+        "value": "RO 2007 3837"
       },
       "titleDe": {
         "type": "literal",
@@ -501,6 +525,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-05-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 3837"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Internationaler Pakt vom 16. Dezember 1966 über bürgerliche und politische Rechte"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Pacte international du 16 décembre 1966 relatif aux droits civils et politiques"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Pacte international du 16 décembre 1966 relatif aux droits civils et politiques"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.103.2"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/496"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-05-07"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-05-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 3837"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über bürgerliche und politische Rechte"
@@ -532,6 +596,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-10-31"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 415"
       },
       "titleDe": {
         "type": "literal",
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-10-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 415"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über bürgerliche und politische Rechte"
@@ -596,6 +668,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-10-31"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 415"
       },
       "titleDe": {
         "type": "literal",
@@ -629,37 +705,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-02-15"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Internationaler Pakt vom 16. Dezember 1966 über bürgerliche und politische Rechte"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Pacte international du 16 décembre 1966 relatif aux droits civils et politiques"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Patto internazionale del 16 dicembre 1966 relativo ai diritti civili e politici"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.103.2"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2008/153"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-02-15"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-02-15"
+        "value": "RO 2008 645"
       },
       "titleDe": {
         "type": "literal",
@@ -693,6 +741,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-02-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 645"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Internationaler Pakt vom 16. Dezember 1966 über bürgerliche und politische Rechte"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Pacte international du 16 décembre 1966 relatif aux droits civils et politiques"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Patto internazionale del 16 dicembre 1966 relativo ai diritti civili e politici"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.103.2"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/153"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-02-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-02-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 645"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über bürgerliche und politische Rechte"
@@ -725,6 +813,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-12-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 7097"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über bürgerliche und politische Rechte"
@@ -757,6 +849,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-12-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 7097"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über bürgerliche und politische Rechte"
@@ -788,6 +884,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-12-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 7097"
       },
       "titleDe": {
         "type": "literal",
@@ -821,6 +921,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-05-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 2987"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über bürgerliche und politische Rechte"
@@ -853,6 +957,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-05-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 2987"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über bürgerliche und politische Rechte"
@@ -885,69 +993,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-05-11"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Internationaler Pakt vom 16. Dezember 1966 über bürgerliche und politische Rechte"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Pacte international du 16 décembre 1966 relatif aux droits civils et politiques"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Patto internazionale del 16 dicembre 1966 relativo ai diritti civili e politici"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.103.2"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/904"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-10-27"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-10-27"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Internationaler Pakt vom 16. Dezember 1966 über bürgerliche und politische Rechte"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Pacte international du 16 décembre 1966 relatif aux droits civils et politiques"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Patto internazionale del 16 dicembre 1966 relativo ai diritti civili e politici"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "0.103.2"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/904"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-10-27"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-10-27"
+        "value": "RO 2010 2987"
       },
       "titleDe": {
         "type": "literal",
@@ -981,6 +1029,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-10-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 6527"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Internationaler Pakt vom 16. Dezember 1966 über bürgerliche und politische Rechte"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Pacte international du 16 décembre 1966 relatif aux droits civils et politiques"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Patto internazionale del 16 dicembre 1966 relativo ai diritti civili e politici"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.103.2"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/904"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-10-27"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-10-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 6527"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Internationaler Pakt vom 16. Dezember 1966 über bürgerliche und politische Rechte"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Pacte international du 16 décembre 1966 relatif aux droits civils et politiques"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Patto internazionale del 16 dicembre 1966 relativo ai diritti civili e politici"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.103.2"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/904"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-10-27"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-10-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 6527"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über bürgerliche und politische Rechte"
@@ -1013,6 +1137,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-08-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 3149"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über bürgerliche und politische Rechte"
@@ -1045,6 +1173,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-08-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 3149"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über bürgerliche und politische Rechte"
@@ -1076,6 +1208,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-08-31"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 3149"
       },
       "titleDe": {
         "type": "literal",
@@ -1109,6 +1245,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 2247"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über bürgerliche und politische Rechte"
@@ -1141,6 +1281,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 2247"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über bürgerliche und politische Rechte"
@@ -1173,6 +1317,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 2247"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über bürgerliche und politische Rechte"
@@ -1205,6 +1353,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-05-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1791"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über bürgerliche und politische Rechte"
@@ -1237,6 +1389,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-05-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1791"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Internationaler Pakt vom 16. Dezember 1966 über bürgerliche und politische Rechte"
@@ -1268,6 +1424,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-05-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1791"
       },
       "titleDe": {
         "type": "literal",

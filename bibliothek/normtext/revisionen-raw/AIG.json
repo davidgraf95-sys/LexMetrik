@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-06-26"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über Aufenthalt und Niederlassung der Ausländer"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur le séjour et l'établissement des étrangers"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale concernente la dimora e il domicilio degli stranieri"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1999/148"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-03-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1998-06-26"
+        "value": "RO 1999 1111"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-06-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 1111"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über Aufenthalt und Niederlassung der Ausländer"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur le séjour et l'établissement des étrangers"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale concernente la dimora e il domicilio degli stranieri"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/148"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-03-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1998-06-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 1111"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Aufenthalt und Niederlassung der Ausländer"
@@ -117,37 +129,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-08-11"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die vollständige Inkraftsetzung der Änderung vom 26. Juni 1998 des Bundesgesetzes über Aufenthalt und Niederlassung der Ausländer"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la mise en vigueur intégrale de la modification du 26 juin 1998 de la loi fédérale sur le séjour et l'établissement des étrangers"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla messa in vigore integrale della modifica del 26 giugno 1998 della legge federale concernente la dimora e il domicilio degli stranieri"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1999/356"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-08-11"
+        "value": "RO 1999 2253"
       },
       "titleDe": {
         "type": "literal",
@@ -181,6 +165,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-08-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2253"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die vollständige Inkraftsetzung der Änderung vom 26. Juni 1998 des Bundesgesetzes über Aufenthalt und Niederlassung der Ausländer"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la mise en vigueur intégrale de la modification du 26 juin 1998 de la loi fédérale sur le séjour et l'établissement des étrangers"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla messa in vigore integrale della modifica del 26 giugno 1998 della legge federale concernente la dimora e il domicilio degli stranieri"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/356"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-08-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2253"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die vollständige Inkraftsetzung der Änderung vom 26. Juni 1998 des Bundesgesetzes über Aufenthalt und Niederlassung der Ausländer"
@@ -213,37 +237,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-04-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über Aufenthalt und Niederlassung der Ausländer (ANAG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur le séjour et l'établissement des étrangers (LSEE)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale concernente la dimora e il domicilio degli stranieri (LDDS)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1999/369"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-04-22"
+        "value": "RO 1999 2411"
       },
       "titleDe": {
         "type": "literal",
@@ -277,6 +273,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-04-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2411"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über Aufenthalt und Niederlassung der Ausländer (ANAG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur le séjour et l'établissement des étrangers (LSEE)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale concernente la dimora e il domicilio degli stranieri (LDDS)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/369"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-04-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2411"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Aufenthalt und Niederlassung der Ausländer (ANAG)"
@@ -309,37 +345,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-12-14"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz betreffend die Bestimmungen über die Personenfreizügigkeit im Abkommen vom 21. Juni 2001 zur Änderung des Übereinkommens vom 4. Januar 1960 zur Errichtung der Europäischen Freihandelsassoziation (EFTA)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale relative aux dispositions concernant la libre circulation des personnes de l'Accord du 21 juin 2001 amendant la Convention du 4 janvier 1960 instituant l'Association européenne de libre-échange (AELE)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale relativa alle disposizioni concernenti la libera circolazione delle persone dell'Accordo del 21 giugno 2001 di emendamento della Convenzione del 4 gennaio 1960 istitutiva dell'Associazione europea di libero scambio (AELS)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/139"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-06-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-12-14"
+        "value": "RO 2002 685"
       },
       "titleDe": {
         "type": "literal",
@@ -373,6 +381,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-12-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 685"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz betreffend die Bestimmungen über die Personenfreizügigkeit im Abkommen vom 21. Juni 2001 zur Änderung des Übereinkommens vom 4. Januar 1960 zur Errichtung der Europäischen Freihandelsassoziation (EFTA)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale relative aux dispositions concernant la libre circulation des personnes de l'Accord du 21 juin 2001 amendant la Convention du 4 janvier 1960 instituant l'Association européenne de libre-échange (AELE)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale relativa alle disposizioni concernenti la libera circolazione delle persone dell'Accordo del 21 giugno 2001 di emendamento della Convenzione del 4 gennaio 1960 istitutiva dell'Associazione europea di libero scambio (AELS)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/139"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-12-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 685"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz betreffend die Bestimmungen über die Personenfreizügigkeit im Abkommen vom 21. Juni 2001 zur Änderung des Übereinkommens vom 4. Januar 1960 zur Errichtung der Europäischen Freihandelsassoziation (EFTA)"
@@ -405,37 +453,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-10-08"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz zum Abkommen zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft sowie ihren Mitgliedstaaten andererseits über die Freizügigkeit"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur l'Accord entre, d'une part, la Confédération suisse et, d'autre part, la Communauté Européenne et ses Etats membres sur la libre circulation des personnes"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale concernente l'Accordo tra la Confederazione Svizzera, da una parte, e la Comunità europea ed i suoi Stati membri, dall'altra, sulla libera circolazione delle persone"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/140"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-06-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-10-08"
+        "value": "RO 2002 701"
       },
       "titleDe": {
         "type": "literal",
@@ -469,6 +489,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-10-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 701"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz zum Abkommen zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft sowie ihren Mitgliedstaaten andererseits über die Freizügigkeit"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur l'Accord entre, d'une part, la Confédération suisse et, d'autre part, la Communauté Européenne et ses Etats membres sur la libre circulation des personnes"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale concernente l'Accordo tra la Confederazione Svizzera, da una parte, e la Comunità europea ed i suoi Stati membri, dall'altra, sulla libera circolazione delle persone"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/140"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-10-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 701"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz zum Abkommen zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft sowie ihren Mitgliedstaaten andererseits über die Freizügigkeit"
@@ -501,37 +561,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-12-19"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über das Entlastungsprogramm 2003"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur le programme d'allégement budgétaire 2003"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sul programma di sgravio 2003"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/200"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-12-19"
+        "value": "RO 2004 1633"
       },
       "titleDe": {
         "type": "literal",
@@ -565,6 +597,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-12-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 1633"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über das Entlastungsprogramm 2003"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur le programme d'allégement budgétaire 2003"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sul programma di sgravio 2003"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/200"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-12-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 1633"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über das Entlastungsprogramm 2003"
@@ -597,37 +669,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-11-03"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Anpassung gesetzlicher Bestimmungen infolge der Zusammenlegung der Bundesämter IMES und BFF"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance relative à l'adaptation de dispositions légales à la suite de la réunion des offices fédéraux IMES et ODR"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente l'adeguamento delle disposizioni legali in seguito alla fusione degli uffici federali IMES e UFR"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/715"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-11-03"
+        "value": "RO 2004 4655"
       },
       "titleDe": {
         "type": "literal",
@@ -661,6 +705,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-11-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 4655"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Anpassung gesetzlicher Bestimmungen infolge der Zusammenlegung der Bundesämter IMES und BFF"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance relative à l'adaptation de dispositions légales à la suite de la réunion des offices fédéraux IMES et ODR"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente l'adeguamento delle disposizioni legali in seguito alla fusione degli uffici federali IMES e UFR"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/715"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-11-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 4655"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Anpassung gesetzlicher Bestimmungen infolge der Zusammenlegung der Bundesämter IMES und BFF"
@@ -693,37 +777,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-12-17"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesbeschluss über die Genehmigung und Umsetzung des Protokolls über die Ausdehnung des Freizügigkeitsabkommens auf die neuen EG-Mitgliedstaaten zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits sowie über die Genehmigung der Revision der flankierenden Massnahmen zur Personenfreizügigkeit"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Arrêté fédéral portant approbation et mise en uvre du protocole relatif à l'extension de l'accord entre la Confédération suisse, d'une part, et la Communauté européenne et ses Etats membres, d'autre part, sur la libre circulation des personnes aux nouveaux Etats membres de la Communauté européenne et portant approbation de la révision des mesures d'accompagnement concernant la libre circulation des personnes"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Decreto federale che approva e traspone nel diritto svizzero, mediante revisione delle misure collaterali, il Protocollo concluso con la Comunità europea e i suoi Stati membri relativo all'estensione dell'Accordo sulla libera circolazione delle persone ai nuovi Stati membri della Comunità europea"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/178"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-12-17"
+        "value": "RO 2006 979"
       },
       "titleDe": {
         "type": "literal",
@@ -757,6 +813,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-12-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 979"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesbeschluss über die Genehmigung und Umsetzung des Protokolls über die Ausdehnung des Freizügigkeitsabkommens auf die neuen EG-Mitgliedstaaten zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits sowie über die Genehmigung der Revision der flankierenden Massnahmen zur Personenfreizügigkeit"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Arrêté fédéral portant approbation et mise en uvre du protocole relatif à l'extension de l'accord entre la Confédération suisse, d'une part, et la Communauté européenne et ses Etats membres, d'autre part, sur la libre circulation des personnes aux nouveaux Etats membres de la Communauté européenne et portant approbation de la révision des mesures d'accompagnement concernant la libre circulation des personnes"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Decreto federale che approva e traspone nel diritto svizzero, mediante revisione delle misure collaterali, il Protocollo concluso con la Comunità europea e i suoi Stati membri relativo all'estensione dell'Accordo sulla libera circolazione delle persone ai nuovi Stati membri della Comunità europea"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/178"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-12-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 979"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung und Umsetzung des Protokolls über die Ausdehnung des Freizügigkeitsabkommens auf die neuen EG-Mitgliedstaaten zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits sowie über die Genehmigung der Revision der flankierenden Massnahmen zur Personenfreizügigkeit"
@@ -789,37 +885,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-12-20"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung der Bundesversammlung über die Anpassung von Erlassen an die Bestimmungen des Bundesgerichtsgesetzes und des Verwaltungsgerichtsgesetzes"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance de l'Assemblée fédérale concernant l'adaptation d'actes législatifs aux dispositions de la loi sur le Tribunal fédéral et de la loi sur le Tribunal administratif fédéral"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza dell'Assemblea federale che adegua taluni atti normativi alle disposizioni della legge sul Tribunale federale e della legge sul Tribunale amministrativo federale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/826"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-12-20"
+        "value": "RO 2006 5599"
       },
       "titleDe": {
         "type": "literal",
@@ -853,6 +921,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-12-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 5599"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung der Bundesversammlung über die Anpassung von Erlassen an die Bestimmungen des Bundesgerichtsgesetzes und des Verwaltungsgerichtsgesetzes"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance de l'Assemblée fédérale concernant l'adaptation d'actes législatifs aux dispositions de la loi sur le Tribunal fédéral et de la loi sur le Tribunal administratif fédéral"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza dell'Assemblea federale che adegua taluni atti normativi alle disposizioni della legge sul Tribunale federale e della legge sul Tribunale amministrativo federale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/826"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-12-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 5599"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung der Bundesversammlung über die Anpassung von Erlassen an die Bestimmungen des Bundesgerichtsgesetzes und des Verwaltungsgerichtsgesetzes"
@@ -885,37 +993,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-12-16"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Ausländerinnen und Ausländer und über die Integration (Ausländer- und Integrationsgesetz, AIG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur les étrangers et l'intégration (LEI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sugli stranieri e la loro integrazione (LStrI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/758"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-12-16"
+        "value": "RO 2007 5437"
       },
       "titleDe": {
         "type": "literal",
@@ -949,6 +1029,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-12-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5437"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Ausländerinnen und Ausländer und über die Integration (Ausländer- und Integrationsgesetz, AIG)"
@@ -981,6 +1065,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-12-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5437"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Ausländerinnen und Ausländer und über die Integration (Ausländer- und Integrationsgesetz, AIG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les étrangers et l'intégration (LEI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sugli stranieri e la loro integrazione (LStrI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/758"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-12-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5437"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Ausländerinnen und Ausländer und über die Integration (Ausländer- und Integrationsgesetz, AIG)"
@@ -1012,6 +1136,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-06-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5407"
       },
       "titleDe": {
         "type": "literal",
@@ -1045,6 +1173,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-06-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5407"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Ausländerinnen und Ausländer (AuG) (Ergänzungen im Rahmen der Umsetzung der Schengen- und Dublin-Assoziierungsabkommen)"
@@ -1077,6 +1209,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-06-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5407"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Ausländerinnen und Ausländer (AuG) (Ergänzungen im Rahmen der Umsetzung der Schengen- und Dublin-Assoziierungsabkommen)"
@@ -1109,37 +1245,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-06-13"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesbeschluss über die Genehmigung und die Umsetzung des Notenaustauschs zwischen der Schweiz und der Europäischen Gemeinschaft betreffend die Übernahme des Schengener Grenzkodex (Weiterentwicklung des Schengen-Besitzstands)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Arrêté fédéral portant approbation et mise en uvre de l'échange de notes entre la Suisse et la Communauté européenne concernant la reprise du code frontières Schengen (Développement de l'acquis de Schengen)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Decreto federale che approva e traspone nel diritto svizzero lo scambio di note tra la Svizzera e la Comunità europea concernente il recepimento del codice frontiere Schengen (Sviluppo dell'acquis di Schengen)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2008/779"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-12-12"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-06-13"
+        "value": "RO 2008 5629"
       },
       "titleDe": {
         "type": "literal",
@@ -1173,6 +1281,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-06-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5629"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesbeschluss über die Genehmigung und die Umsetzung des Notenaustauschs zwischen der Schweiz und der Europäischen Gemeinschaft betreffend die Übernahme des Schengener Grenzkodex (Weiterentwicklung des Schengen-Besitzstands)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Arrêté fédéral portant approbation et mise en uvre de l'échange de notes entre la Suisse et la Communauté européenne concernant la reprise du code frontières Schengen (Développement de l'acquis de Schengen)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Decreto federale che approva e traspone nel diritto svizzero lo scambio di note tra la Svizzera e la Comunità europea concernente il recepimento del codice frontiere Schengen (Sviluppo dell'acquis di Schengen)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/779"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-12-12"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-06-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 5629"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung und die Umsetzung des Notenaustauschs zwischen der Schweiz und der Europäischen Gemeinschaft betreffend die Übernahme des Schengener Grenzkodex (Weiterentwicklung des Schengen-Besitzstands)"
@@ -1205,37 +1353,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-07-14"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Ausländerinnen und Ausländer (AuG) (Betrifft nur den französischen Text)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur les étrangers (LEtr)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sugli stranieri (LStr) (Concerne solo il testo francese)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/439"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-07-14"
+        "value": "RO 2009 3541"
       },
       "titleDe": {
         "type": "literal",
@@ -1269,6 +1389,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-07-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 3541"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Ausländerinnen und Ausländer (AuG) (Betrifft nur den französischen Text)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les étrangers (LEtr)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sugli stranieri (LStr) (Concerne solo il testo francese)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/439"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-07-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 3541"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Ausländerinnen und Ausländer (AuG) (Betrifft nur den französischen Text)"
@@ -1301,37 +1461,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-12-11"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesbeschluss über die Genehmigung und die Umsetzung der Notenaustausche zwischen der Schweiz und der EU betreffend die Übernahme der Verordnung und des Beschlusses über das Visa-Informationssystem (VIS) (Weiterentwicklungen des Schengen-Besitzstands)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Arrêté fédéral portant approbation et mise en uvre des échanges de notes entre la Suisse et l'UE concernant la reprise du règlement et de la décision relatifs au système d'information sur les visas (VIS) (Développements de l'acquis de Schengen)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Decreto federale che approva e traspone nel diritto svizzero gli scambi di note tra la Svizzera e l'UE in merito al recepimento del regolamento e della decisione relativi al sistema d'informazione visti (VIS) (Sviluppi dell'acquis di Schengen)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/272"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-05-15"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-12-11"
+        "value": "RO 2010 2063"
       },
       "titleDe": {
         "type": "literal",
@@ -1365,6 +1497,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-12-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 2063"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesbeschluss über die Genehmigung und die Umsetzung der Notenaustausche zwischen der Schweiz und der EU betreffend die Übernahme der Verordnung und des Beschlusses über das Visa-Informationssystem (VIS) (Weiterentwicklungen des Schengen-Besitzstands)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Arrêté fédéral portant approbation et mise en uvre des échanges de notes entre la Suisse et l'UE concernant la reprise du règlement et de la décision relatifs au système d'information sur les visas (VIS) (Développements de l'acquis de Schengen)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Decreto federale che approva e traspone nel diritto svizzero gli scambi di note tra la Svizzera e l'UE in merito al recepimento del regolamento e della decisione relativi al sistema d'informazione visti (VIS) (Sviluppi dell'acquis di Schengen)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/272"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-05-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-12-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 2063"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung und die Umsetzung der Notenaustausche zwischen der Schweiz und der EU betreffend die Übernahme der Verordnung und des Beschlusses über das Visa-Informationssystem (VIS) (Weiterentwicklungen des Schengen-Besitzstands)"
@@ -1397,37 +1569,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-03-19"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Umsetzung des Rahmenbeschlusses 2008/977/JI über den Schutz von Personendaten im Rahmen der polizeilichen und justiziellen Zusammenarbeit in Strafsachen"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale portant mise en uvre de la décision-cadre 2008/977/JAI relative à la protection des données à caractère personnel traitées dans le cadre de la coopération policière et judiciaire en matière pénale"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale che traspone nel diritto svizzero la decisione quadro 2008/977/GAI sulla protezione dei dati personali trattati nell'ambito della cooperazione giudiziaria e di polizia in materia penale"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/464"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-12-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-03-19"
+        "value": "RO 2010 3387"
       },
       "titleDe": {
         "type": "literal",
@@ -1461,6 +1605,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-03-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 3387"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Umsetzung des Rahmenbeschlusses 2008/977/JI über den Schutz von Personendaten im Rahmen der polizeilichen und justiziellen Zusammenarbeit in Strafsachen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale portant mise en uvre de la décision-cadre 2008/977/JAI relative à la protection des données à caractère personnel traitées dans le cadre de la coopération policière et judiciaire en matière pénale"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale che traspone nel diritto svizzero la decisione quadro 2008/977/GAI sulla protezione dei dati personali trattati nell'ambito della cooperazione giudiziaria e di polizia in materia penale"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/464"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-12-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-03-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 3387"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Umsetzung des Rahmenbeschlusses 2008/977/JI über den Schutz von Personendaten im Rahmen der polizeilichen und justiziellen Zusammenarbeit in Strafsachen"
@@ -1493,37 +1677,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-06-18"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Ausländerinnen und Ausländer (AuG) (Automatisierte Grenzkontrolle, Dokumentenberaterinnen und Dokumentenberater, Informationssystem MIDES)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur les étrangers (LEtr) (Contrôle automatisé aux frontières, conseillers en matière de documents, système d'information MIDES)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sugli stranieri (LStr) (Controllo di confine automatizzato, consulenti in materia di documenti, sistema d'informazione MIDES)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/813"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-06-18"
+        "value": "RO 2010 5755"
       },
       "titleDe": {
         "type": "literal",
@@ -1557,6 +1713,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-06-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5755"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Ausländerinnen und Ausländer (AuG) (Automatisierte Grenzkontrolle, Dokumentenberaterinnen und Dokumentenberater, Informationssystem MIDES)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les étrangers (LEtr) (Contrôle automatisé aux frontières, conseillers en matière de documents, système d'information MIDES)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sugli stranieri (LStr) (Controllo di confine automatizzato, consulenti in materia di documenti, sistema d'informazione MIDES)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/813"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-06-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5755"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Ausländerinnen und Ausländer (AuG) (Automatisierte Grenzkontrolle, Dokumentenberaterinnen und Dokumentenberater, Informationssystem MIDES)"
@@ -1589,37 +1785,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-11-24"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über eine weitere Teilinkraftsetzung der Änderung des Bundesgesetzes über die Ausländerinnen und Ausländer"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance portant nouvelle mise en vigueur partielle de la modification de la loi fédérale sur les étrangers"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza su un'ulteriore entrata in vigore parziale della modifica della legge federale sugli stranieri"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/814"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-11-24"
+        "value": "RO 2010 5761"
       },
       "titleDe": {
         "type": "literal",
@@ -1653,6 +1821,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-11-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5761"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über eine weitere Teilinkraftsetzung der Änderung des Bundesgesetzes über die Ausländerinnen und Ausländer"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance portant nouvelle mise en vigueur partielle de la modification de la loi fédérale sur les étrangers"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza su un'ulteriore entrata in vigore parziale della modifica della legge federale sugli stranieri"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/814"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-11-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5761"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über eine weitere Teilinkraftsetzung der Änderung des Bundesgesetzes über die Ausländerinnen und Ausländer"
@@ -1685,37 +1893,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-06-18"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesbeschluss über die Genehmigung und die Umsetzung des Notenaustauschs zwischen der Schweiz und der EG betreffend die Übernahme der EG-Rückführungsrichtlinie (Richtlinie 2008/115/EG) (Weiterentwicklung des Schengen-Besitzstands)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Arrêté fédéral portant approbation et mise en uvre de l'échange de notes entre la Suisse et la CE concernant la reprise de la directive CE sur le retour (directive 2008/115/CE) (Développement de l'acquis de Schengen)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Decreto federale che approva e traspone nel diritto svizzero lo scambio di note tra la Svizzera e la CE concernente il recepimento della direttiva CE sul rimpatrio (direttiva 2008/115/CE) (Sviluppo dell'acquis di Schengen)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/848"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-06-18"
+        "value": "RO 2010 5925"
       },
       "titleDe": {
         "type": "literal",
@@ -1749,6 +1929,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-06-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5925"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesbeschluss über die Genehmigung und die Umsetzung des Notenaustauschs zwischen der Schweiz und der EG betreffend die Übernahme der EG-Rückführungsrichtlinie (Richtlinie 2008/115/EG) (Weiterentwicklung des Schengen-Besitzstands)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Arrêté fédéral portant approbation et mise en uvre de l'échange de notes entre la Suisse et la CE concernant la reprise de la directive CE sur le retour (directive 2008/115/CE) (Développement de l'acquis de Schengen)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Decreto federale che approva e traspone nel diritto svizzero lo scambio di note tra la Svizzera e la CE concernente il recepimento della direttiva CE sul rimpatrio (direttiva 2008/115/CE) (Sviluppo dell'acquis di Schengen)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/848"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-06-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5925"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung und die Umsetzung des Notenaustauschs zwischen der Schweiz und der EG betreffend die Übernahme der EG-Rückführungsrichtlinie (Richtlinie 2008/115/EG) (Weiterentwicklung des Schengen-Besitzstands)"
@@ -1781,37 +2001,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-06-18"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Ausländerinnen und Ausländer (AuG) (Erleichterte Zulassung von Ausländerinnen und Ausländern mit Schweizer Hochschulabschluss)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur les étrangers (LEtr) (Faciliter l'admission des étrangers diplômés d'une haute école suisse)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sugli stranieri (LStr) (Ammissione agevolata di stranieri con diploma universitario svizzero)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/854"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-06-18"
+        "value": "RO 2010 5957"
       },
       "titleDe": {
         "type": "literal",
@@ -1845,6 +2037,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-06-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5957"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Ausländerinnen und Ausländer (AuG) (Erleichterte Zulassung von Ausländerinnen und Ausländern mit Schweizer Hochschulabschluss)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les étrangers (LEtr) (Faciliter l'admission des étrangers diplômés d'une haute école suisse)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sugli stranieri (LStr) (Ammissione agevolata di stranieri con diploma universitario svizzero)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/854"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-06-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5957"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Ausländerinnen und Ausländer (AuG) (Erleichterte Zulassung von Ausländerinnen und Ausländern mit Schweizer Hochschulabschluss)"
@@ -1877,37 +2109,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-06-18"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Anpassung von Bestimmungen betreffend die Erfassung von Daten im Bereich der Migration"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale portant sur l'adaptation de dispositions relatives à la saisie de données dans le domaine migratoire"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale che adegua disposizioni concernenti la registrazione di dati nel settore della migrazione"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/17"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-01-24"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-06-18"
+        "value": "RO 2011 95"
       },
       "titleDe": {
         "type": "literal",
@@ -1941,6 +2145,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-06-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 95"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Anpassung von Bestimmungen betreffend die Erfassung von Daten im Bereich der Migration"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale portant sur l'adaptation de dispositions relatives à la saisie de données dans le domaine migratoire"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale che adegua disposizioni concernenti la registrazione di dati nel settore della migrazione"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/17"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-24"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-06-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 95"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Anpassung von Bestimmungen betreffend die Erfassung von Daten im Bereich der Migration"
@@ -1973,37 +2217,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-06-18"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesbeschluss über die Genehmigung und die Umsetzung des Notenaustausches zwischen der Schweiz und der EG betreffend die Einführung biometrischer Daten im Ausländerausweis (Weiterentwicklung des Schengen-Besitzstands)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Arrêté fédéral portant approbation et mise en uvre de l'échange de notes entre la Suisse et la CE concernant l'introduction des données biométriques dans les titres de séjour pour étrangers (Développement de l'acquis de Schengen)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Decreto federale che approva e traspone nel diritto svizzero lo scambio di note tra la Svizzera e la CE concernente l'introduzione di dati biometrici nelle carte di soggiorno per stranieri (Sviluppo dell'acquis di Schengen)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/25"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-01-24"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-06-18"
+        "value": "RO 2011 175"
       },
       "titleDe": {
         "type": "literal",
@@ -2037,6 +2253,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-06-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 175"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesbeschluss über die Genehmigung und die Umsetzung des Notenaustausches zwischen der Schweiz und der EG betreffend die Einführung biometrischer Daten im Ausländerausweis (Weiterentwicklung des Schengen-Besitzstands)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Arrêté fédéral portant approbation et mise en uvre de l'échange de notes entre la Suisse et la CE concernant l'introduction des données biométriques dans les titres de séjour pour étrangers (Développement de l'acquis de Schengen)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Decreto federale che approva e traspone nel diritto svizzero lo scambio di note tra la Svizzera e la CE concernente l'introduzione di dati biometrici nelle carte di soggiorno per stranieri (Sviluppo dell'acquis di Schengen)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/25"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-24"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-06-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 175"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung und die Umsetzung des Notenaustausches zwischen der Schweiz und der EG betreffend die Einführung biometrischer Daten im Ausländerausweis (Weiterentwicklung des Schengen-Besitzstands)"
@@ -2069,37 +2325,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-08-31"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die vollständige Inkraftsetzung des Bundesbeschlusses über die Genehmigung und die Umsetzung des Notenaustauschs zwischen der Schweiz und der Europäischen Gemeinschaft betreffend die Übernahme der Verordnung (EG) Nr. 2252/2004 über biometrische Pässe und Reisedokumente (Weiterentwicklung des Schengen-Besitzstands)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'entrée en vigueur intégrale de l'arrêté fédéral portant approbation et mise en uvre de l'échange de notes entre la Suisse et la Communauté européenne concernant la reprise du Règlement (CE) no 2252/2004 relatif aux passeports biométriques et aux documents de voyage (Développement de l'Acquis de Schengen)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'entrata in vigore integrale del decreto federale che approva e traspone nel diritto svizzero lo scambio di note tra la Svizzera e la Comunità europea concernente il recepimento del regolamento (CE) n. 2252/2004 sui passaporti e i documenti di viaggio biometrici (Sviluppo dell'acquis di Schengen)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/573"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-08-31"
+        "value": "RO 2011 4033"
       },
       "titleDe": {
         "type": "literal",
@@ -2133,6 +2361,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-08-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4033"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die vollständige Inkraftsetzung des Bundesbeschlusses über die Genehmigung und die Umsetzung des Notenaustauschs zwischen der Schweiz und der Europäischen Gemeinschaft betreffend die Übernahme der Verordnung (EG) Nr. 2252/2004 über biometrische Pässe und Reisedokumente (Weiterentwicklung des Schengen-Besitzstands)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'entrée en vigueur intégrale de l'arrêté fédéral portant approbation et mise en uvre de l'échange de notes entre la Suisse et la Communauté européenne concernant la reprise du Règlement (CE) no 2252/2004 relatif aux passeports biométriques et aux documents de voyage (Développement de l'Acquis de Schengen)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'entrata in vigore integrale del decreto federale che approva e traspone nel diritto svizzero lo scambio di note tra la Svizzera e la Comunità europea concernente il recepimento del regolamento (CE) n. 2252/2004 sui passaporti e i documenti di viaggio biometrici (Sviluppo dell'acquis di Schengen)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/573"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-08-31"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4033"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die vollständige Inkraftsetzung des Bundesbeschlusses über die Genehmigung und die Umsetzung des Notenaustauschs zwischen der Schweiz und der Europäischen Gemeinschaft betreffend die Übernahme der Verordnung (EG) Nr. 2252/2004 über biometrische Pässe und Reisedokumente (Weiterentwicklung des Schengen-Besitzstands)"
@@ -2165,37 +2433,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-09-23"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über eine weitere Teilinkraftsetzung der Änderung des Ausländergesetzes und des Bundesgesetzes über das Informationssystem für den Ausländer- und den Asylbereich"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance portant nouvelle mise en vigueur partielle de la modification de la loi fédérale sur les étrangers et de la loi sur le système d'information commun aux domaines des étrangers et de l'asile"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza su un'ulteriore entrata in vigore parziale della modifica della legge federale sugli stranieri e della legge federale sul sistema d'informazione per il settore degli stranieri e dell'asilo"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/609"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-10-11"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-09-23"
+        "value": "RO 2011 4449"
       },
       "titleDe": {
         "type": "literal",
@@ -2229,6 +2469,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-09-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4449"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über eine weitere Teilinkraftsetzung der Änderung des Ausländergesetzes und des Bundesgesetzes über das Informationssystem für den Ausländer- und den Asylbereich"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance portant nouvelle mise en vigueur partielle de la modification de la loi fédérale sur les étrangers et de la loi sur le système d'information commun aux domaines des étrangers et de l'asile"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza su un'ulteriore entrata in vigore parziale della modifica della legge federale sugli stranieri e della legge federale sul sistema d'informazione per il settore degli stranieri e dell'asilo"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/609"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-10-11"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-09-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4449"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über eine weitere Teilinkraftsetzung der Änderung des Ausländergesetzes und des Bundesgesetzes über das Informationssystem für den Ausländer- und den Asylbereich"
@@ -2260,6 +2540,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1035"
       },
       "titleDe": {
         "type": "literal",
@@ -2293,6 +2577,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1035"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Massnahmen gegen Zwangsheiraten"
@@ -2325,6 +2613,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-06-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1035"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Massnahmen gegen Zwangsheiraten"
@@ -2357,37 +2649,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-12-18"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über eine weitere Teilinkraftsetzung der Änderung des Ausländergesetzes und des Bundesgesetzes über das Informationssystem für den Ausländer- und den Asylbereich"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance portant nouvelle mise en vigueur partielle de la modification de la loi fédérale sur les étrangers et de la loi sur le système d'information commun aux domaines des étrangers et de l'asile"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza su un'ulteriore entrata in vigore parziale della modifica della legge federale sugli stranieri e della legge federale sul sistema d'informazione per il settore degli stranieri e dell'asilo"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2014/1"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-01-20"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-12-18"
+        "value": "RO 2014 1"
       },
       "titleDe": {
         "type": "literal",
@@ -2421,6 +2685,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-12-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über eine weitere Teilinkraftsetzung der Änderung des Ausländergesetzes und des Bundesgesetzes über das Informationssystem für den Ausländer- und den Asylbereich"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance portant nouvelle mise en vigueur partielle de la modification de la loi fédérale sur les étrangers et de la loi sur le système d'information commun aux domaines des étrangers et de l'asile"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza su un'ulteriore entrata in vigore parziale della modifica della legge federale sugli stranieri e della legge federale sul sistema d'informazione per il settore degli stranieri e dell'asilo"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/1"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-01-20"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-12-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über eine weitere Teilinkraftsetzung der Änderung des Ausländergesetzes und des Bundesgesetzes über das Informationssystem für den Ausländer- und den Asylbereich"
@@ -2453,37 +2757,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-09-26"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesbeschluss über die Genehmigung und die Umsetzung des Notenaustausches zwischen der Schweiz und der EU betreffend die Übernahme der Verordnung (EU) Nr. 604/2013 zur Festlegung der Kriterien und Verfahren zur Bestimmung des Mitgliedstaats, der für die Prüfung eines Antrags auf internationalen Schutz zuständig ist (Weiterentwicklung des Dublin/Eurodac-Besitzstands)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Arrêté fédéral portant approbation et mise en uvre de l'échange de notes entre la Suisse et l'UE concernant la reprise du règlement (UE) n<sup>o</sup> 604/2013 établissant les critères et mécanismes de détermination de l'Etat membre responsable de l'examen d'une demande de protection internationale (Développement de l'acquis de Dublin/Eurodac)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Decreto federale che approva e traspone nel diritto svizzero lo scambio di note tra la Svizzera e l'UE concernente il recepimento del regolamento (UE) n. 604/2013 che stabilisce i criteri e i meccanismi di determinazione dello Stato membro competente per l'esame di una domanda di protezione internazionale (Sviluppo dell'acquis di Dublino/Eurodac)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/357"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-09-26"
+        "value": "RO 2015 1841"
       },
       "titleDe": {
         "type": "literal",
@@ -2517,6 +2793,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-09-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1841"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesbeschluss über die Genehmigung und die Umsetzung des Notenaustausches zwischen der Schweiz und der EU betreffend die Übernahme der Verordnung (EU) Nr. 604/2013 zur Festlegung der Kriterien und Verfahren zur Bestimmung des Mitgliedstaats, der für die Prüfung eines Antrags auf internationalen Schutz zuständig ist (Weiterentwicklung des Dublin/Eurodac-Besitzstands)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Arrêté fédéral portant approbation et mise en uvre de l'échange de notes entre la Suisse et l'UE concernant la reprise du règlement (UE) n<sup>o</sup> 604/2013 établissant les critères et mécanismes de détermination de l'Etat membre responsable de l'examen d'une demande de protection internationale (Développement de l'acquis de Dublin/Eurodac)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Decreto federale che approva e traspone nel diritto svizzero lo scambio di note tra la Svizzera e l'UE concernente il recepimento del regolamento (UE) n. 604/2013 che stabilisce i criteri e i meccanismi di determinazione dello Stato membro competente per l'esame di una domanda di protezione internazionale (Sviluppo dell'acquis di Dublino/Eurodac)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/357"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-09-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1841"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung und die Umsetzung des Notenaustausches zwischen der Schweiz und der EU betreffend die Übernahme der Verordnung (EU) Nr. 604/2013 zur Festlegung der Kriterien und Verfahren zur Bestimmung des Mitgliedstaats, der für die Prüfung eines Antrags auf internationalen Schutz zuständig ist (Weiterentwicklung des Dublin/Eurodac-Besitzstands)"
@@ -2549,37 +2865,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-09-26"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesbeschluss über die Genehmigung und die Umsetzung des Notenaustausches zwischen der Schweiz und der EU betreffend die Übernahme der Verordnung (EU) Nr. 603/2013 über die Errichtung von Eurodac sowie zur Änderung der Verordnung (EU) Nr. 1077/2011 zur Errichtung der IT-Agentur (Weiterentwicklung des Dublin/Eurodac-Besitzstands)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Arrêté fédéral portant approbation et mise en uvre de l'échange de notes entre la Suisse et l'UE concernant la reprise du règlement (UE) n<sup>o</sup> 603/2013 relatif à la création d'Eurodac et modifiant le règlement (UE) n<sup>o</sup> 1077/2011 portant création de l'Agence IT (Développement de l'acquis de Dublin/Eurodac)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Decreto federale che approva e traspone nel diritto svizzero lo scambio di note tra la Svizzera e l'UE concernente il recepimento del regolamento (UE) n. 603/2013 che istituisce l'«Eurodac» e che modifica il regolamento (UE) n. 1077/2011 che istituisce l'agenzia IT (Sviluppo dell'acquis di Dublino/Eurodac)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/432"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-07-20"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-09-26"
+        "value": "RO 2015 2323"
       },
       "titleDe": {
         "type": "literal",
@@ -2613,6 +2901,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-09-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2323"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesbeschluss über die Genehmigung und die Umsetzung des Notenaustausches zwischen der Schweiz und der EU betreffend die Übernahme der Verordnung (EU) Nr. 603/2013 über die Errichtung von Eurodac sowie zur Änderung der Verordnung (EU) Nr. 1077/2011 zur Errichtung der IT-Agentur (Weiterentwicklung des Dublin/Eurodac-Besitzstands)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Arrêté fédéral portant approbation et mise en uvre de l'échange de notes entre la Suisse et l'UE concernant la reprise du règlement (UE) n<sup>o</sup> 603/2013 relatif à la création d'Eurodac et modifiant le règlement (UE) n<sup>o</sup> 1077/2011 portant création de l'Agence IT (Développement de l'acquis de Dublin/Eurodac)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Decreto federale che approva e traspone nel diritto svizzero lo scambio di note tra la Svizzera e l'UE concernente il recepimento del regolamento (UE) n. 603/2013 che istituisce l'«Eurodac» e che modifica il regolamento (UE) n. 1077/2011 che istituisce l'agenzia IT (Sviluppo dell'acquis di Dublino/Eurodac)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/432"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-07-20"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-09-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2323"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung und die Umsetzung des Notenaustausches zwischen der Schweiz und der EU betreffend die Übernahme der Verordnung (EU) Nr. 603/2013 über die Errichtung von Eurodac sowie zur Änderung der Verordnung (EU) Nr. 1077/2011 zur Errichtung der IT-Agentur (Weiterentwicklung des Dublin/Eurodac-Besitzstands)"
@@ -2645,37 +2973,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-06-20"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Ausländerinnen und Ausländer (Ausländergesetz, AuG) (Sorgfalts- und Meldepflichtverletzungen durch Luftverkehrsunternehmen, Informationssysteme)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur les étrangers (LEtr) (Violation du devoir de diligence et de l'obligation de communiquer par les entreprises de transport aérien; systèmes d'information)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sugli stranieri (LStr) (Violazioni dell'obbligo di diligenza e di comunicazione delle imprese di trasporto aereo; sistemi d'informazione)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/570"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-06-20"
+        "value": "RO 2015 3023"
       },
       "titleDe": {
         "type": "literal",
@@ -2709,6 +3009,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-06-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 3023"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Ausländerinnen und Ausländer (Ausländergesetz, AuG) (Sorgfalts- und Meldepflichtverletzungen durch Luftverkehrsunternehmen, Informationssysteme)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les étrangers (LEtr) (Violation du devoir de diligence et de l'obligation de communiquer par les entreprises de transport aérien; systèmes d'information)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sugli stranieri (LStr) (Violazioni dell'obbligo di diligenza e di comunicazione delle imprese di trasporto aereo; sistemi d'informazione)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/570"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-06-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 3023"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Ausländerinnen und Ausländer (Ausländergesetz, AuG) (Sorgfalts- und Meldepflichtverletzungen durch Luftverkehrsunternehmen, Informationssysteme)"
@@ -2741,37 +3081,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-09-26"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Ausländerinnen und Ausländer (Ausländergesetz, AuG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur les étrangers (Loi sur les étrangers, LEtr)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sugli stranieri (LStr)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.20"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2015/75"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2015-03-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2014-09-26"
+        "value": "RO 2015 533"
       },
       "titleDe": {
         "type": "literal",
@@ -2805,6 +3117,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-09-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 533"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Ausländerinnen und Ausländer (Ausländergesetz, AuG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les étrangers (Loi sur les étrangers, LEtr)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sugli stranieri (LStr)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.20"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2015/75"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2015-03-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-09-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 533"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Ausländerinnen und Ausländer (Ausländergesetz, AuG)"
@@ -2837,6 +3189,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-09-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 535"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung und die Umsetzung des Notenaustausches zwischen der Schweiz und der EU betreffend die Übernahme der Verordnung (EU) Nr. 1051/2013 zur Änderung des Schengener Grenzkodex zwecks Festlegung einer gemeinsamen Regelung für die vorübergehende Wiedereinführung von Kontrollen an den Binnengrenzen (Weiterentwicklung des Schengen-Besitzstands)"
@@ -2869,6 +3225,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-09-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 535"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung und die Umsetzung des Notenaustausches zwischen der Schweiz und der EU betreffend die Übernahme der Verordnung (EU) Nr. 1051/2013 zur Änderung des Schengener Grenzkodex zwecks Festlegung einer gemeinsamen Regelung für die vorübergehende Wiedereinführung von Kontrollen an den Binnengrenzen (Weiterentwicklung des Schengen-Besitzstands)"
@@ -2901,6 +3261,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-09-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 535"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung und die Umsetzung des Notenaustausches zwischen der Schweiz und der EU betreffend die Übernahme der Verordnung (EU) Nr. 1051/2013 zur Änderung des Schengener Grenzkodex zwecks Festlegung einer gemeinsamen Regelung für die vorübergehende Wiedereinführung von Kontrollen an den Binnengrenzen (Weiterentwicklung des Schengen-Besitzstands)"
@@ -2933,6 +3297,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-12-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6521"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Ausländerinnen und Ausländer (Ausländergesetz, AuG) (Integration)"
@@ -2965,6 +3333,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-12-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6521"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Ausländerinnen und Ausländer (Ausländergesetz, AuG) (Integration)"
@@ -2997,6 +3369,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-12-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 6521"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Ausländerinnen und Ausländer (Ausländergesetz, AuG) (Integration)"
@@ -3028,6 +3404,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-12-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3161"
       },
       "titleDe": {
         "type": "literal",
@@ -3061,6 +3441,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-12-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3161"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung und die Umsetzung des Notenaustauschs zwischen der Schweiz und der Europäischen Union betreffend die Übernahme der Verordnung (EU) 2016/1624 über die Europäische Grenz- und Küstenwache (Weiterentwicklung des Schengen-Besitzstands)"
@@ -3093,6 +3477,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-12-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3161"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung und die Umsetzung des Notenaustauschs zwischen der Schweiz und der Europäischen Union betreffend die Übernahme der Verordnung (EU) 2016/1624 über die Europäische Grenz- und Küstenwache (Weiterentwicklung des Schengen-Besitzstands)"
@@ -3125,6 +3513,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-08-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3171"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die abschliessende Inkraftsetzung der Änderung vom 16. Dezember 2016 des Ausländergesetzes"
@@ -3157,6 +3549,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-08-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3171"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die abschliessende Inkraftsetzung der Änderung vom 16. Dezember 2016 des Ausländergesetzes"
@@ -3188,6 +3584,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-08-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3171"
       },
       "titleDe": {
         "type": "literal",
@@ -3220,6 +3620,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-08-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3213"
       },
       "titleDe": {
         "type": "literal",
@@ -3253,6 +3657,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-08-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3213"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Ausländerinnen und Ausländer (Ausländergesetz, AuG) (Integration)"
@@ -3284,6 +3692,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-08-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3213"
       },
       "titleDe": {
         "type": "literal",
@@ -3316,6 +3728,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-12-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 733"
       },
       "titleDe": {
         "type": "literal",
@@ -3349,6 +3765,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-12-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 733"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Ausländerinnen und Ausländer (Ausländergesetz, AuG) (Steuerung der Zuwanderung und Vollzugsverbesserungen bei den Freizügigkeitsabkommen)"
@@ -3380,6 +3800,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-12-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 733"
       },
       "titleDe": {
         "type": "literal",
@@ -3412,6 +3836,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-12-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1413"
       },
       "titleDe": {
         "type": "literal",
@@ -3445,6 +3873,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-12-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1413"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Ausländerinnen und Ausländer und über die Integration (Ausländer- und Integrationsgesetz, AIG) (Verfahrensregelungen und Informationssysteme)"
@@ -3476,6 +3908,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-12-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1413"
       },
       "titleDe": {
         "type": "literal",
@@ -3508,6 +3944,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-06-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 3539"
       },
       "titleDe": {
         "type": "literal",
@@ -3541,6 +3981,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-06-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 3539"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Ausländerinnen und Ausländer und über die Integration (Ausländer- und Integrationsgesetz, AIG)"
@@ -3572,6 +4016,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-06-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 3539"
       },
       "titleDe": {
         "type": "literal",
@@ -3604,6 +4052,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-02-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 881"
       },
       "titleDe": {
         "type": "literal",
@@ -3637,6 +4089,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-02-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 881"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über eine Teilinkraftsetzung der Änderung vom 14. Dezember 2018 des Ausländer- und Integrationsgesetz"
@@ -3668,6 +4124,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-02-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 881"
       },
       "titleDe": {
         "type": "literal",
@@ -4853,6 +5313,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1931-03-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 49 279"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 26. März 1931 über Aufenthalt und Niederlassung der Ausländer (ANAG) "
@@ -4885,6 +5349,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1931-03-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 49 279"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 26. März 1931 über Aufenthalt und Niederlassung der Ausländer (ANAG) "
@@ -4917,6 +5385,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1931-03-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 49 279"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 26. März 1931 über Aufenthalt und Niederlassung der Ausländer (ANAG) "
@@ -4948,6 +5420,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1931-03-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 49 279"
       },
       "titleDe": {
         "type": "literal",

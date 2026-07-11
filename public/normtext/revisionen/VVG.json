@@ -1,7 +1,7 @@
 {
   "erlassKey": "VVG",
   "sr": "221.229.1",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -21,13 +21,13 @@
       "dateEntryInForce": "2022-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/884",
       "dateDocument": "2020-06-17",
-      "roFundstelle": "AS 2020 884",
+      "roFundstelle": "AS 2020 4969",
       "titelDe": "Bundesgesetz über den Versicherungsvertrag (Versicherungsvertragsgesetz, VVG)",
       "titelFr": "Loi fédérale sur le contrat d'assurance (Loi sur le contrat d'assurance, LCA)",
       "titelIt": "Legge federale sul contratto d'assicurazione (Legge sul contratto d'assicurazione, LCA)",
       "botschaftKey": "BOTSCHAFT-2017-1303",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/884/de",
-      "sha": "a663ce00c77dc2398df2258c3d839934ba114bd52fc710039c49b5fb2f07a3d1"
+      "sha": "160b35af5647487ee9e579c00d7b2edbc99cab63887971da790bbcc1705100bf"
     },
     {
       "art": "aenderung",
@@ -52,12 +52,12 @@
       "dateEntryInForce": "2009-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/365",
       "dateDocument": "2008-12-19",
-      "roFundstelle": "AS 2009 365",
+      "roFundstelle": "AS 2009 2799",
       "titelDe": "Bundesgesetz über den Versicherungsvertrag (Versicherungsvertragsgesetz, VVG)",
       "titelFr": "Loi fédérale sur le contrat d'assurance (Loi sur le contrat d'assurance, LCA)",
       "titelIt": "Legge federale sul contratto d'assicurazione (Legge sul contratto d'assicurazione, LCA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/365/de",
-      "sha": "794f18aa9672fe44415075f7cf9be8a39e0347d834c52e7791892aec7395c729"
+      "sha": "7998d2aade2b56356415e4e62b2e342bffad089bd97ccc3627571554235a973a"
     },
     {
       "art": "sammelerlass-marker",
@@ -82,25 +82,25 @@
       "dateEntryInForce": "2007-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/633",
       "dateDocument": "2006-10-24",
-      "roFundstelle": "AS 2006 633",
+      "roFundstelle": "AS 2006 4211",
       "titelDe": "Bundesgesetz über den Versicherungsvertrag (Betrifft nur den italienischen Text)",
       "titelFr": "Loi fédérale sur le contrat d'assurance (Ne concerne que le texte italien)",
       "titelIt": "Legge federale sul contratto d'assicurazione",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/633/de",
-      "sha": "76d224f73a23294f69af1c272fcc03fc68e32d4927efdb6114742e14d9c4887b"
+      "sha": "bce9be5328ad4a8ad24fe85704fdd8bac5941086940fbcdd6144662670ae07e9"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2006-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/726",
       "dateDocument": "2004-12-17",
-      "roFundstelle": "AS 2005 726",
+      "roFundstelle": "AS 2005 5245",
       "titelDe": "Bundesgesetz über den Versicherungsvertrag",
       "titelFr": "Loi fédérale sur le contrat d'assurance",
       "titelIt": "Legge federale sul contratto d'assicurazione",
       "botschaftKey": "BOTSCHAFT-2003-577",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/726/de",
-      "sha": "b855eeba8199230a3ad20b713600f7a5992581253c3250f3c65880c8f3688bd6"
+      "sha": "86c6a89eb690708af081c667ef1c118f705506c9fcfb9c580253ca7c9ef541f6"
     },
     {
       "art": "sammelerlass-marker",
@@ -121,5 +121,5 @@
       "sha": "f96b70b72e4e5f42dbe18b1b5fef8075337f29e2abb53c04278ef886223dad72"
     }
   ],
-  "sha": "9e76a44e55b2e980ed467145f6d55bd24a1866ac6dc4d3bb203fd34648969f80"
+  "sha": "8228dddcdf0cde5a6e8841a21bab5b80e491bda82dcd9d7bfbc96d1dab1facf7"
 }

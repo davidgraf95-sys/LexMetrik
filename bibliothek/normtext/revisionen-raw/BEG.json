@@ -21,6 +21,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 3577"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Bucheffekten (Bucheffektengesetz, BEG)"
@@ -53,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 3577"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Bucheffekten (Bucheffektengesetz, BEG)"
@@ -85,6 +93,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 3577"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Bucheffekten (Bucheffektengesetz, BEG)"
@@ -116,6 +128,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 3577"
       },
       "titleDe": {
         "type": "literal",

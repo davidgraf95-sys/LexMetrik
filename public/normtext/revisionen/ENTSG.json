@@ -1,7 +1,7 @@
 {
   "erlassKey": "ENTSG",
   "sr": "823.20",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -28,26 +28,26 @@
       "dateEntryInForce": "2017-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/184",
       "dateDocument": "2016-09-30",
-      "roFundstelle": "AS 2017 184",
+      "roFundstelle": "AS 2017 2077",
       "titelDe": "Bundesgesetz über die flankierenden Massnahmen bei entsandten Arbeitnehmerinnen und Arbeitnehmern und über die Kontrolle der in Normalarbeitsverträgen vorgesehenen Mindestlöhne (Entsendegesetz, EntsG)",
       "titelFr": "Loi fédérale sur les mesures d'accompagnement applicables aux travailleurs détachés et aux contrôles des salaires minimaux prévus par les contrats-types de travail (Loi sur les travailleurs détachés, LDét)",
       "titelIt": "Legge federale concernente le misure collaterali per i lavoratori distaccati e il controllo dei salari minimi previsti nei contratti normali di lavoro (Legge sui lavoratori distaccati, LDist)",
       "botschaftKey": "BOTSCHAFT-2015-1362",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/184/de",
-      "sha": "a6e4132be8e7b7d48283d41775f907698ee52b9f39e8c376a6d15ceb76ee515e"
+      "sha": "e85b2f1b61f9890c079342909b256dfebb3fbaf51946a59aa12b0ecefbc0b857"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2013-07-15",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/450",
       "dateDocument": "2012-12-14",
-      "roFundstelle": "AS 2013 450",
+      "roFundstelle": "AS 2013 2121",
       "titelDe": "Bundesgesetz über die flankierenden Massnahmen bei entsandten Arbeitnehmerinnen und Arbeitnehmern und über die Kontrolle der in Normalarbeitsverträgen vorgesehenen Mindestlöhne (Entsendegesetz, EntsG)",
       "titelFr": "Loi fédérale sur les mesures d'accompagnement applicables aux travailleurs détachés et aux contrôles des salaires minimaux prévus par les contrats-types de travail (Loi sur les travailleurs détachés, LDét)",
       "titelIt": "Legge federale concernente le misure collaterali per i lavoratori distaccati e il controllo dei salari minimi previsti nei contratti normali di lavoro (Legge sui lavoratori distaccati, LDist)",
       "botschaftKey": "BOTSCHAFT-2012-446",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/450/de",
-      "sha": "d8c0de310fab0ae317f8929ec5df65d7680d617a049d8261608d5b2e7a3463a7"
+      "sha": "3aff364d4ef1bd3e9a80609568b37bbc0a27b7355a574045e4c35d7b0ebfe1cd"
     },
     {
       "art": "sammelerlass-marker",
@@ -90,14 +90,14 @@
       "dateEntryInForce": "2003-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/231",
       "dateDocument": "1999-10-08",
-      "roFundstelle": "AS 2003 231",
+      "roFundstelle": "AS 2003 1370",
       "titelDe": "Bundesgesetz über die flankierenden Massnahmen bei entsandten Arbeitnehmerinnen und Arbeitnehmern und über die Kontrolle der in Normalarbeitsverträgen vorgesehenen Mindestlöhne (Entsendegesetz, EntsG)",
       "titelFr": "Loi fédérale sur les mesures d'accompagnement applicables aux travailleurs détachés et aux contrôles des salaires minimaux prévus par les contrats-types de travail (Loi sur les travailleurs détachés, LDét)",
       "titelIt": "Legge federale concernente le misure collaterali per i lavoratori distaccati e il controllo dei salari minimi previsti nei contratti normali di lavoro (Legge sui lavoratori distaccati, LDist)",
       "botschaftKey": "BOTSCHAFT-1999-1_6128_5440_5092",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/231/de",
-      "sha": "134785c08aca9ea5333a35b3d9920669ae90339de7d1fb104fe9357b356feccb"
+      "sha": "dba043ee5763c303d0a9bd9a77047b3d8c2c75c75d1dc4b3b3814fadfaa84b50"
     }
   ],
-  "sha": "fa0cf4e4081b54176a6c4d175cefbb67043c7e4c63f9abe72c3751928b2e081c"
+  "sha": "14d115757725917e91c7e4ed623dcd9f9c93d54fe4b0b44c1e8353662c90f81a"
 }

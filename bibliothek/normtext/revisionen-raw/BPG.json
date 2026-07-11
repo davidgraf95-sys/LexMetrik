@@ -21,69 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-03-24"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundespersonalgesetz (BPG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi sur le personnel de la Confédération (LPers)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge sul personale federale (LPers)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "172.220.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2001/123"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-03-24"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Bundespersonalgesetz (BPG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi sur le personnel de la Confédération (LPers)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge sul personale federale (LPers)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "172.220.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2001/123"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-03-24"
+        "value": "RO 2001 894"
       },
       "titleDe": {
         "type": "literal",
@@ -117,6 +57,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-03-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 894"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundespersonalgesetz (BPG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi sur le personnel de la Confédération (LPers)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge sul personale federale (LPers)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.220.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2001/123"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-03-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 894"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundespersonalgesetz (BPG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi sur le personnel de la Confédération (LPers)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge sul personale federale (LPers)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "172.220.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2001/123"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-03-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 894"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalgesetz (BPG)"
@@ -148,6 +164,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-06-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 5583"
       },
       "titleDe": {
         "type": "literal",
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-06-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 5583"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Optimierungen bei der Verwaltung von Personaldaten und bei den Anlagen von PUBLICA"
@@ -213,6 +237,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-06-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 5583"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über Optimierungen bei der Verwaltung von Personaldaten und bei den Anlagen von PUBLICA"
@@ -245,6 +273,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1493"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalgesetz (BPG)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1493"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalgesetz (BPG)"
@@ -308,6 +344,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-12-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1493"
       },
       "titleDe": {
         "type": "literal",
@@ -340,6 +380,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-03-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1021"
       },
       "titleDe": {
         "type": "literal",
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-03-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1021"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundespersonalgesetz (BPG) (Betrifft nur den italienischen Text)"
@@ -404,6 +452,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-03-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1021"
       },
       "titleDe": {
         "type": "literal",

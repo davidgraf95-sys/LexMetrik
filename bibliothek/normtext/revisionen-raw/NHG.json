@@ -21,69 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1966-07-01"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom 1. Juli 1966 über den Natur- und Heimatschutz (NHG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 1<sup>er</sup> juillet 1966 sur la protection de la nature et du paysage (LPN)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 1<sup>o</sup> luglio 1966 sulla protezione della natura e del paesaggio (LPN)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "451"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1966/1637_1694_1679"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1967-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1966-07-01"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Bundesgesetz vom 1. Juli 1966 über den Natur- und Heimatschutz (NHG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 1<sup>er</sup> juillet 1966 sur la protection de la nature et du paysage (LPN)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 1<sup>o</sup> luglio 1966 sulla protezione della natura e del paesaggio (LPN)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "451"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1966/1637_1694_1679"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1967-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1966-07-01"
+        "value": "RO 1966 1694"
       },
       "titleDe": {
         "type": "literal",
@@ -117,6 +57,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1966-07-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1966 1694"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 1. Juli 1966 über den Natur- und Heimatschutz (NHG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 1<sup>er</sup> juillet 1966 sur la protection de la nature et du paysage (LPN)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 1<sup>o</sup> luglio 1966 sulla protezione della natura e del paesaggio (LPN)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "451"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1966/1637_1694_1679"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1967-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1966-07-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1966 1694"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 1. Juli 1966 über den Natur- und Heimatschutz (NHG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 1<sup>er</sup> juillet 1966 sur la protection de la nature et du paysage (LPN)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 1<sup>o</sup> luglio 1966 sulla protezione della natura e del paesaggio (LPN)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "451"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1966/1637_1694_1679"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1967-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1966-07-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1966 1694"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 1. Juli 1966 über den Natur- und Heimatschutz (NHG)"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-10-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5237"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Natur- und Heimatschutz (NHG)"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-10-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5237"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Natur- und Heimatschutz (NHG)"
@@ -213,6 +237,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-10-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5237"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Natur- und Heimatschutz (NHG)"
@@ -244,6 +272,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-03-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 2629"
       },
       "titleDe": {
         "type": "literal",
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-03-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 2629"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung des Protokolls von Nagoya über den Zugang zu genetischen Ressourcen und die ausgewogene und gerechte Aufteilung der sich aus ihrer Nutzung ergebenden Vorteile (Nagoya-Protokoll) und dessen Umsetzung (Bundesgesetz über den Natur- und Heimatschutz)"
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-03-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 2629"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung des Protokolls von Nagoya über den Zugang zu genetischen Ressourcen und die ausgewogene und gerechte Aufteilung der sich aus ihrer Nutzung ergebenden Vorteile (Nagoya-Protokoll) und dessen Umsetzung (Bundesgesetz über den Natur- und Heimatschutz)"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-09-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1217"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Natur- und Heimatschutz (NHG)"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-09-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1217"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Natur- und Heimatschutz (NHG)"
@@ -404,6 +452,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-09-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1217"
       },
       "titleDe": {
         "type": "literal",

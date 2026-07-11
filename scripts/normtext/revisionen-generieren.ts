@@ -22,12 +22,15 @@
  * filtert die cc-Abstract-Dubletten heraus; Sprach-Realisierungen (isRealizedBy) kollabieren
  * über die Gruppierung nach ?oc.
  *
- * POC-Befund (Finding 6, VOR Aufwand-Freigabe erhoben): die Spec-OPTIONALs
- * `jolux:historicalId` (RO-Fundstelle) und `jolux:botschaftDate` liefern am oc-Knoten
- * NICHTS (0/7 an DSG, korpusweit leer). Deshalb:
- *   - RO/AS-Fundstelle wird deterministisch aus der oc-URI abgeleitet
- *     (`eli/oc/<jahr>/<num>` → «AS <jahr> <num>»; live gegen sequenceInTheYearOf-
- *     Publication+publicationDate gegengeprüft: deckungsgleich für die digitale AS).
+ * POC-Befund (Finding 6): die Spec-OPTIONALs `jolux:historicalId`/`jolux:botschaftDate`
+ * (jolux-Namespace) liefern am oc-Knoten NICHTS. Die massgebliche AS-Fundstelle steht aber
+ * unter dem FEDLEX-INTERNEN Prädikat `<http://cogni.internal.system/model#historicalId>`
+ * («RO <jahr> <seite>»; live belegt: `oc/2005/566` → «RO 2005 4395»). Deshalb:
+ *   - AS-Fundstelle = `historicalId` bei Einzel-Segment-ELI (digitale AS); sonst aus der
+ *     oc-URI abgeleitet (Multi-Segment-Alt-AS = DE-Seite im ersten Segment; Einzel-Segment
+ *     seit der AS-Reform 2019, wo Sequenz == Seite). Warum je Fall in `fundstelle()`.
+ *     Die reine ELI-Ableitung WAR für Einzel-Segment vor 2019 falsch (Sequenz ≠ Seite) —
+ *     durch `historicalId` geheilt (Gegenprüfung 11.7.2026).
  *   - Der Botschafts-Join läuft über die von Paket 2 persistierten `ocUris`
  *     (revision.ocUri ∈ botschaft.ocUris → botschaftKey), NICHT über botschaftDate.
  *
@@ -116,12 +119,34 @@ const REICHWEITE =
 // Änderungs-Erlasse (art='aenderung') werden NIE beschnitten (Vollständigkeit vor Kürze).
 export const MARKER_CUTOFF = '2000-01-01';
 
-/** oc-URI → «AS <jahr/band> <num>» (deterministisch; digitale AS + Alt-AS-Band-Nummerierung).
- *  Moderne AS: `eli/oc/2022/491` → «AS 2022 491». Alt-AS (vor 1948, Band-Nummerierung):
- *  `eli/oc/63/837_843_843` → «AS 63 837» (Band 63, Seite 837 = erstes Segment). */
+/** oc-URI → «AS <jahr/band> <num>» aus dem ELI-Pfad. NUR korrekt, wenn die ELI-Nummer
+ *  die AS-Seite IST: (1) Multi-Segment-ELI (Alt-AS, `DE_FR_IT`-Seiten) → erstes Segment =
+ *  DE-Seite, z. B. `eli/oc/1973/348_347_349` → «AS 1973 348»; (2) Einzel-Segment SEIT der
+ *  AS-Reform 1.1.2019, wo `sequenceInTheYearOfPublication` == Seite, z. B. `eli/oc/2022/491`
+ *  → «AS 2022 491». Für Einzel-Segment-ELI VOR 2019 ist die ELI-Nummer die laufende
+ *  Sequenz, NICHT die Seite (→ `fundstelle()` nimmt dort `historicalId`, sonst wäre die
+ *  Fundstelle fabriziert und falsch — belegt: `oc/2005/566` ⇒ real AS 2005 4395). */
 export function roFundstelleAusOc(ocUri: string): string | undefined {
   const m = /\/eli\/oc\/(\d+)\/(\d+)/.exec(ocUri);
   return m ? `AS ${m[1]} ${m[2]}` : undefined;
+}
+
+/** Massgebliche AS-Fundstelle eines oc-Erlasses (§7-Treue: gelesen, nie fabriziert).
+ *  - Einzel-Segment-ELI mit `historicalId` (cogni-Prädikat, digitale AS vor 2019):
+ *    `historicalId` («RO 2005 4395») trägt die echte AS-Seite → normalisiert auf die
+ *    DE-Etikette «AS 2005 4395» (AS=RO=RU dieselbe Sammlung; die digitale AS ist
+ *    sprach-einheitlich paginiert, Nummer == DE-Seite, live gegen die amtliche Seite belegt).
+ *  - Multi-Segment-ELI (Alt-AS): `historicalId` nennt die FR-Seite, das erste ELI-Segment
+ *    die DE-Seite → Ableitung bevorzugen (DE-treu).
+ *  - Einzel-Segment ohne `historicalId` (seit 2019): Ableitung (Sequenz == Seite). */
+export function fundstelle(ocUri: string, historicalId?: string): string | undefined {
+  const seg = /\/eli\/oc\/\d+\/([^/?#]+)/.exec(ocUri)?.[1] ?? '';
+  const multiSegment = seg.includes('_');
+  if (!multiSegment && historicalId) {
+    const m = /(\d{4})\s+(\d+)\s*$/.exec(historicalId.trim());
+    return m ? `AS ${m[1]} ${m[2]}` : historicalId.trim(); // unerwartetes Format: verbatim, nie fabrizieren
+  }
+  return roFundstelleAusOc(ocUri);
 }
 
 /** oc-URI → Fedlex-Live-Link (DE-Rendering des AS-Textes). */
@@ -173,7 +198,7 @@ export function baueRevisionen(
   ocZuBotschaft: Map<string, string>,
   abgerufen: string,
 ): RevisionSidecar {
-  interface Roh { oc: string; dateForce: string; dateDoc?: string; de?: string; fr?: string; it?: string; }
+  interface Roh { oc: string; dateForce: string; dateDoc?: string; roId?: string; de?: string; fr?: string; it?: string; }
   const proOc = new Map<string, Roh>();
   for (const b of bBindings) {
     const oc = b.oc?.value;
@@ -184,6 +209,7 @@ export function baueRevisionen(
     // min dateEntryInForce (erstes Inkrafttreten) — deterministisch, unabhängig der Bindungsreihenfolge.
     if (dateForce < r.dateForce) r.dateForce = dateForce;
     if (!r.dateDoc && b.dateDoc?.value) r.dateDoc = b.dateDoc.value;
+    if (!r.roId && b.roId?.value) r.roId = b.roId.value;
     if (!r.de && b.titleDe?.value) r.de = b.titleDe.value;
     if (!r.fr && b.titleFr?.value) r.fr = b.titleFr.value;
     if (!r.it && b.titleIt?.value) r.it = b.titleIt.value;
@@ -199,7 +225,7 @@ export function baueRevisionen(
       dateEntryInForce: r.dateForce,
       ocUri: r.oc,
       dateDocument: r.dateDoc?.slice(0, 10),
-      roFundstelle: roFundstelleAusOc(r.oc),
+      roFundstelle: fundstelle(r.oc, r.roId),
       titelDe: r.de ? titelText(r.de) : undefined,
       titelFr: r.fr ? titelText(r.fr) : undefined,
       titelIt: r.it ? titelText(r.it) : undefined,
@@ -252,11 +278,12 @@ export function baueRevisionen(
 export function baueQueryB(valuesInline: string): string {
   return `PREFIX jolux: <http://data.legilux.public.lu/resource/ontology/jolux#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-SELECT ?sr ?oc ?dateForce ?dateDoc ?titleDe ?titleFr ?titleIt WHERE {
+SELECT ?sr ?oc ?dateForce ?dateDoc ?roId ?titleDe ?titleFr ?titleIt WHERE {
   VALUES ?notation { ${valuesInline} }
   ?tax skos:notation ?notation . BIND(STR(?notation) AS ?sr)
   ?oc jolux:classifiedByTaxonomyEntry ?tax ; jolux:legalResourceFamilyType <https://fedlex.data.admin.ch/vocabulary/resource-family/oc> ; jolux:dateEntryInForce ?dateForce .
   OPTIONAL { ?oc jolux:dateDocument ?dateDoc . }
+  OPTIONAL { ?oc <http://cogni.internal.system/model#historicalId> ?roId . }
   OPTIONAL { ?oc jolux:isRealizedBy ?ede . ?ede jolux:language ${LANG.de} ; jolux:title ?titleDe . }
   OPTIONAL { ?oc jolux:isRealizedBy ?efr . ?efr jolux:language ${LANG.fr} ; jolux:title ?titleFr . }
   OPTIONAL { ?oc jolux:isRealizedBy ?eit . ?eit jolux:language ${LANG.it} ; jolux:title ?titleIt . }

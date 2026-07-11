@@ -1,0 +1,874 @@
+{
+  "sr": "0.231.15",
+  "korpusStand": "2024-06-06",
+  "bBindings": [
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.231.15"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1993/2659_2659_2659"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1993-09-25"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1971-07-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1993 2659"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Berner Übereinkunft zum Schutze von Werken der Literatur und Kunst, revidiert in Paris am 24. Juli 1971 (mit Anhang)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention de Berne pour la protection des œuvres littéraires et artistiques, révisée à Paris le 24 juillet 1971 (avec annexe)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione di Berna per la protezione delle opere letterarie e artistiche, riveduta a Parigi il 24 luglio  1971 (con annesso)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.231.15"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1993/2659_2659_2659"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1993-09-25"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1971-07-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1993 2659"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Berner Übereinkunft zum Schutze von Werken der Literatur und Kunst, revidiert in Paris am 24. Juli 1971 (mit Anhang)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention de Berne pour la protection des œuvres littéraires et artistiques, révisée à Paris le 24 juillet 1971 (avec annexe)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione di Berna per la protezione delle opere letterarie e artistiche, riveduta a Parigi il 24 luglio  1971 (con annesso)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.231.15"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1993/2659_2659_2659"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1993-09-25"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1971-07-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1993 2659"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Berner Übereinkunft zum Schutze von Werken der Literatur und Kunst, revidiert in Paris am 24. Juli 1971 (mit Anhang)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention de Berne pour la protection des œuvres littéraires et artistiques, révisée à Paris le 24 juillet 1971 (avec annexe)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione di Berna per la protezione delle opere letterarie e artistiche, riveduta a Parigi il 24 luglio  1971 (con annesso)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.231.15"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1993/2659_2659_2659"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1993-09-25"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1971-07-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1993 2659"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Berner Übereinkunft zum Schutze von Werken der Literatur und Kunst, revidiert in Paris am 24. Juli 1971 (mit Anhang)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention de Berne pour la protection des œuvres littéraires et artistiques, révisée à Paris le 24 juillet 1971 (avec annexe)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione di Berna per la protezione delle opere letterarie e artistiche, riveduta a Parigi il 24 luglio  1971 (con annesso)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.231.15"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/152"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-01-05"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-01-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 1291"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Berner Übereinkunft zum Schutze von Werken der Literatur und Kunst revidiert in Paris am 24. Juli 1971 (mit Anhang)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention de Berne pour la protection des uvres littéraires et artistiques, révisée à Paris le 24 juillet 1971 (avec annexe)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione di Berna per la protezione delle opere letterarie e artistiche riveduta a Parigi il 24 luglio  1971 (con annesso)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.231.15"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/152"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-01-05"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-01-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 1291"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Berner Übereinkunft zum Schutze von Werken der Literatur und Kunst revidiert in Paris am 24. Juli 1971 (mit Anhang)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention de Berne pour la protection des uvres littéraires et artistiques, révisée à Paris le 24 juillet 1971 (avec annexe)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione di Berna per la protezione delle opere letterarie e artistiche riveduta a Parigi il 24 luglio  1971 (con annesso)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.231.15"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/152"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-01-05"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-01-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 1291"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Berner Übereinkunft zum Schutze von Werken der Literatur und Kunst revidiert in Paris am 24. Juli 1971 (mit Anhang)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention de Berne pour la protection des uvres littéraires et artistiques, révisée à Paris le 24 juillet 1971 (avec annexe)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione di Berna per la protezione delle opere letterarie e artistiche riveduta a Parigi il 24 luglio  1971 (con annesso)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.231.15"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/106"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-11-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-11-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 757"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Berner Übereinkunft zum Schutze von Werken der Literatur und Kunst revidiert in Paris am 24. Juli 1971"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention de Berne pour la protection des œuvres littéraires et artistiques révisée à Paris le 24 juillet 1971"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione di Berna per la protezione delle opere letterarie e artistiche riveduta a Parigi il 24 luglio 1971"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.231.15"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/106"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-11-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-11-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 757"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Berner Übereinkunft zum Schutze von Werken der Literatur und Kunst revidiert in Paris am 24. Juli 1971"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention de Berne pour la protection des œuvres littéraires et artistiques révisée à Paris le 24 juillet 1971"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione di Berna per la protezione delle opere letterarie e artistiche riveduta a Parigi il 24 luglio 1971"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.231.15"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/106"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-11-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-11-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 757"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Berner Übereinkunft zum Schutze von Werken der Literatur und Kunst revidiert in Paris am 24. Juli 1971"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention de Berne pour la protection des œuvres littéraires et artistiques révisée à Paris le 24 juillet 1971"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione di Berna per la protezione delle opere letterarie e artistiche riveduta a Parigi il 24 luglio 1971"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.231.15"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/310"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-04-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 2497"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Berner Übereinkunft zum Schutze von Werken der Literatur und Kunst, revidiert in Paris am 24. Juli 1971"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention de Berne pour la protection des œuvres littéraires et artistiques, révisée à Paris le 24 juillet 1971"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione di Berna per la protezione delle opere letterarie e artistiche, riveduta a Parigi il 24 luglio 1971"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.231.15"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/310"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-04-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 2497"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Berner Übereinkunft zum Schutze von Werken der Literatur und Kunst, revidiert in Paris am 24. Juli 1971"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention de Berne pour la protection des œuvres littéraires et artistiques, révisée à Paris le 24 juillet 1971"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione di Berna per la protezione delle opere letterarie e artistiche, riveduta a Parigi il 24 luglio 1971"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.231.15"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/310"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-04-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 2497"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Berner Übereinkunft zum Schutze von Werken der Literatur und Kunst, revidiert in Paris am 24. Juli 1971"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention de Berne pour la protection des œuvres littéraires et artistiques, révisée à Paris le 24 juillet 1971"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione di Berna per la protezione delle opere letterarie e artistiche, riveduta a Parigi il 24 luglio 1971"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.231.15"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/88"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-02-07"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-02-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 483"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Berner Übereinkunft zum Schutze von Werken der Literatur und Kunst, revidiert in Paris am 24. Juli 1971"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention de Berne pour la protection des uvres littéraires et artistiques, révisée à Paris le 24 juillet 1971"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione di Berna per la protezione delle opere letterarie e artistiche, riveduta a Parigi il 24 luglio 1971"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.231.15"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/88"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-02-07"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-02-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 483"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Berner Übereinkunft zum Schutze von Werken der Literatur und Kunst, revidiert in Paris am 24. Juli 1971"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention de Berne pour la protection des uvres littéraires et artistiques, révisée à Paris le 24 juillet 1971"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione di Berna per la protezione delle opere letterarie e artistiche, riveduta a Parigi il 24 luglio 1971"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.231.15"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2014/88"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-02-07"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2014-02-07"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 483"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Berner Übereinkunft zum Schutze von Werken der Literatur und Kunst, revidiert in Paris am 24. Juli 1971"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention de Berne pour la protection des uvres littéraires et artistiques, révisée à Paris le 24 juillet 1971"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione di Berna per la protezione delle opere letterarie e artistiche, riveduta a Parigi il 24 luglio 1971"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.231.15"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/573"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-09-26"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-09-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 3411"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Berner Übereinkunft zum Schutze von Werken der Literatur und Kunst, revidiert in Paris am 24. Juli 1971"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention de Berne pour la protection des uvres littéraires et artistiques, révisée à Paris le 24 juillet 1971"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione di Berna per la protezione delle opere letterarie e artistiche, riveduta a Parigi il 24 luglio 1971"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.231.15"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/573"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-09-26"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-09-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 3411"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Berner Übereinkunft zum Schutze von Werken der Literatur und Kunst, revidiert in Paris am 24. Juli 1971"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention de Berne pour la protection des uvres littéraires et artistiques, révisée à Paris le 24 juillet 1971"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione di Berna per la protezione delle opere letterarie e artistiche, riveduta a Parigi il 24 luglio 1971"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.231.15"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/573"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-09-26"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-09-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 3411"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Berner Übereinkunft zum Schutze von Werken der Literatur und Kunst, revidiert in Paris am 24. Juli 1971"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention de Berne pour la protection des uvres littéraires et artistiques, révisée à Paris le 24 juillet 1971"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione di Berna per la protezione delle opere letterarie e artistiche, riveduta a Parigi il 24 luglio 1971"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.231.15"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2019/402"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-06-27"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-06-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2181"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Berner Übereinkunft zum Schutze von Werken der Literatur und Kunst, revidiert in Paris am 24. Juli 1971"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention de Berne pour la protection des uvres littéraires et artistiques, révisée à Paris le 24 juillet 1971"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione di Berna per la protezione delle opere letterarie e artistiche, riveduta a Parigi il 24 luglio 1971"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.231.15"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2019/402"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-06-27"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-06-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2181"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Berner Übereinkunft zum Schutze von Werken der Literatur und Kunst, revidiert in Paris am 24. Juli 1971"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention de Berne pour la protection des uvres littéraires et artistiques, révisée à Paris le 24 juillet 1971"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione di Berna per la protezione delle opere letterarie e artistiche, riveduta a Parigi il 24 luglio 1971"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.231.15"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2019/402"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-06-27"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2019-06-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 2181"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Berner Übereinkunft zum Schutze von Werken der Literatur und Kunst, revidiert in Paris am 24. Juli 1971"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention de Berne pour la protection des uvres littéraires et artistiques, révisée à Paris le 24 juillet 1971"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione di Berna per la protezione delle opere letterarie e artistiche, riveduta a Parigi il 24 luglio 1971"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.231.15"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2021/601"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-09-24"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2021-09-24"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Berner Übereinkunft zum Schutze von Werken der Literatur und Kunst, revidiert in Paris am 24. Juli 1971"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention de Berne pour la protection des œuvres littéraires et artistiques, révisée à Paris le 24 juillet 1971"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione di Berna per la protezione delle opere letterarie e artistiche, riveduta a Parigi il 24 luglio 1971"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "0.231.15"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2024/272"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2024-06-06"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2024-06-06"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Berner Übereinkunft zum Schutze von Werken der Literatur und Kunst, revidiert in Paris am 24. Juli 1971"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Convention de Berne pour la protection des œuvres littéraires et artistiques, révisée à Paris le 24 juillet 1971"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Convenzione di Berna per la protezione delle opere letterarie e artistiche, riveduta a Parigi il 24 luglio 1971"
+      }
+    }
+  ],
+  "aStaende": [
+    "1993-09-25",
+    "1995-03-31",
+    "2004-01-05",
+    "2005-11-01",
+    "2009-04-01",
+    "2014-02-07",
+    "2016-09-26",
+    "2019-06-27",
+    "2021-09-24",
+    "2024-06-06"
+  ]
+}

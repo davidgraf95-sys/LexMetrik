@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1987-12-18"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom 18. Dezember 1987 über das Internationale Privatrecht (IPRG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 18 décembre 1987 sur le droit international privé (LDIP)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 18 dicembre 1987 sul diritto internazionale privato (LDIP)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "291"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1988/1776_1776_1776"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1989-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1987-12-18"
+        "value": "RO 1988 1776"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1987-12-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1988 1776"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 18. Dezember 1987 über das Internationale Privatrecht (IPRG)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1987-12-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1988 1776"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 18. Dezember 1987 über das Internationale Privatrecht (IPRG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 18 décembre 1987 sur le droit international privé (LDIP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 18 dicembre 1987 sul diritto internazionale privato (LDIP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "291"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1988/1776_1776_1776"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1989-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1987-12-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1988 1776"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 18. Dezember 1987 über das Internationale Privatrecht (IPRG)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-05-25"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über das Internationale Privatrecht (Betrifft nur den italienischen Text) "
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur le droit international privé (Ne concerne que le texte italien)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sul diritto internazionale privato"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "291"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2005/422"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-05-25"
+        "value": "RO 2005 2477"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-05-25"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 2477"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über das Internationale Privatrecht (Betrifft nur den italienischen Text) "
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur le droit international privé (Ne concerne que le texte italien)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sul diritto internazionale privato"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "291"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/422"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-05-25"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 2477"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über das Internationale Privatrecht (Betrifft nur den italienischen Text) "
@@ -245,37 +273,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-10-06"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über das internationale Privatrecht (Schiedsgerichtsbarkeit. Zuständigkeit)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur le droit international privé (Arbitrage. Compétence)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sul diritto internazionale privato (Arbitrato. Competenza)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "291"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2007/75"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-03-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-10-06"
+        "value": "RO 2007 387"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +309,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-10-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 387"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über das internationale Privatrecht (Schiedsgerichtsbarkeit. Zuständigkeit)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur le droit international privé (Arbitrage. Compétence)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sul diritto internazionale privato (Arbitrato. Competenza)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "291"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/75"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-03-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-10-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 387"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über das internationale Privatrecht (Schiedsgerichtsbarkeit. Zuständigkeit)"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 6579"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung und die Umsetzung des Übereinkommens über die auf bestimmte Rechte an intermediärverwahrten Wertpapieren anzuwendende Rechtsordnung"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 6579"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung und die Umsetzung des Übereinkommens über die auf bestimmte Rechte an intermediärverwahrten Wertpapieren anzuwendende Rechtsordnung"
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-10-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 6579"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesbeschluss über die Genehmigung und die Umsetzung des Übereinkommens über die auf bestimmte Rechte an intermediärverwahrten Wertpapieren anzuwendende Rechtsordnung"
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-05-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 1771"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Mitteilung über die einseitige Anwendung des Haager Übereinkommens über die auf bestimmte Rechte an intermediärverwahrten Wertpapieren anzuwendende Rechtsordnung"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-05-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 1771"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Mitteilung über die einseitige Anwendung des Haager Übereinkommens über die auf bestimmte Rechte an intermediärverwahrten Wertpapieren anzuwendende Rechtsordnung"
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-05-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 1771"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Mitteilung über die einseitige Anwendung des Haager Übereinkommens über die auf bestimmte Rechte an intermediärverwahrten Wertpapieren anzuwendende Rechtsordnung"
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 1687"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Mitteilung betreffend die Gegenstandslosigkeit von Anhang 2 des Bundesgesetzes vom 18. Dezember 1987 über das Internationale Privatrecht"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 1687"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Mitteilung betreffend die Gegenstandslosigkeit von Anhang 2 des Bundesgesetzes vom 18. Dezember 1987 über das Internationale Privatrecht"
@@ -597,6 +669,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 1687"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Mitteilung betreffend die Gegenstandslosigkeit von Anhang 2 des Bundesgesetzes vom 18. Dezember 1987 über das Internationale Privatrecht"
@@ -629,6 +705,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-03-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3263"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über das Internationale Privatrecht (IPRG)"
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-03-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3263"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über das Internationale Privatrecht (IPRG)"
@@ -693,6 +777,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-03-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 3263"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über das Internationale Privatrecht (IPRG)"
@@ -725,6 +813,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-06-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 4179"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über das Internationale Privatrecht (IPRG)"
@@ -757,6 +849,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-06-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 4179"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über das Internationale Privatrecht (IPRG)"
@@ -788,6 +884,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-06-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 4179"
       },
       "titleDe": {
         "type": "literal",

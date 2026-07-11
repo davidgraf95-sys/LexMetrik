@@ -1,7 +1,7 @@
 {
   "erlassKey": "MG",
   "sr": "510.10",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -71,13 +71,13 @@
       "dateEntryInForce": "2020-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/307",
       "dateDocument": "2019-09-27",
-      "roFundstelle": "AS 2020 307",
+      "roFundstelle": "AS 2020 1547",
       "titelDe": "Bundesgesetz über die Armee und die Militärverwaltung (Militärgesetz, MG)",
       "titelFr": "Loi fédérale sur l'armée et l'administration militaire (Loi sur l'armée, LAAM)",
       "titelIt": "Legge federale sull'esercito e sull'amministrazione militare (Legge militare, LM)",
       "botschaftKey": "BOTSCHAFT-2019-618",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/307/de",
-      "sha": "f20970e4f91df2b2fc0a61f5d90a333d5cf82801fbad5e747ee0ace6351da02d"
+      "sha": "b31a6e9ff1e6c6d540c3fb41db45e6e6749e3822d8cd9fdf4d4b4b19ae4b7ca1"
     },
     {
       "art": "sammelerlass-marker",
@@ -90,24 +90,24 @@
       "dateEntryInForce": "2018-08-28",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/490",
       "dateDocument": "2018-08-16",
-      "roFundstelle": "AS 2018 490",
+      "roFundstelle": "AS 2018 3079",
       "titelDe": "Bundesgesetz über die Armee und die Militärverwaltung (Militärgesetz, MG) (Betrifft nur den italienischen Text)",
       "titelFr": "Loi fédérale sur l'armée et l'administration militaire (Loi sur l'armée, LAAM) (Ne concerne que le texte italien)",
       "titelIt": "Legge federale sull'esercito e sull'amministrazione militare (Legge militare, LM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/490/de",
-      "sha": "2ab278639445681f91e81e07e1b9757c30aab754c579f9244a7637d6d580e0af"
+      "sha": "a7c812bcc8ef67318d77f70f2ed8b10dad3d56deb6c9d4858d570ce2bef098df"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2018-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/215",
       "dateDocument": "2017-03-29",
-      "roFundstelle": "AS 2017 215",
+      "roFundstelle": "AS 2017 2297",
       "titelDe": "Verordnung über die abschliessende Inkraftsetzung der Änderung vom 18. März 2016 des Militärgesetzes",
       "titelFr": "Ordonnance portant dernière mise en vigueur partielle de la modification du 18 mars 2016 de la loi sur l'armée",
       "titelIt": "Ordinanza concernente l'entrata in vigore integrale della modifica del 18 marzo 2016 della legge militare",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/215/de",
-      "sha": "dfa5e5217e350de50034a0b8ad85fb344251a686310f4f5a2719265ae97857d3"
+      "sha": "09bcd77282a71c5e691993d61b56ba3d8cf2cf1957869bed730a9e490c80ab13"
     },
     {
       "art": "sammelerlass-marker",
@@ -120,25 +120,25 @@
       "dateEntryInForce": "2017-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/714",
       "dateDocument": "2016-03-18",
-      "roFundstelle": "AS 2016 714",
+      "roFundstelle": "AS 2016 4277",
       "titelDe": "Bundesgesetz über die Armee und die Militärverwaltung (Militärgesetz, MG)",
       "titelFr": "Loi fédérale sur l'armée et l'administration militaire (Loi sur l'armée, LAAM)",
       "titelIt": "Legge federale sull'esercito e sull'amministrazione militare (Legge militare, LM)",
       "botschaftKey": "BOTSCHAFT-2014-1566",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/714/de",
-      "sha": "7c620bbff2de75e72b2562fb0153d788eec2bdd4e6c4c0f01cc2d5f89dcd0e41"
+      "sha": "48bf1349c186ce688369c458ca5d5fa76f41507278531da9f6bac393c33d9a91"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2016-09-13",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/530",
       "dateDocument": "2016-08-23",
-      "roFundstelle": "AS 2016 530",
+      "roFundstelle": "AS 2016 3167",
       "titelDe": "Bundesgesetz über die Armee und die Militärverwaltung (Militärgesetz, MG) (Betrifft nur den französischen Text)",
       "titelFr": "Loi fédérale sur l'armée et l'administration militaire (Loi sur l'armée, LAAM)",
       "titelIt": "Legge federale sull'esercito e sull'amministrazione militare (Legge militare, LM) (Concerne soltanto il testo francese)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/530/de",
-      "sha": "b51f6745101e534fccbbc4a5b57892386f3840f5405602c0f98650d820365e49"
+      "sha": "ce7e500761e8633e83161fd1304fcfbb6fcbbe3d9a43185f893c9c032704462d"
     },
     {
       "art": "sammelerlass-marker",
@@ -157,13 +157,13 @@
       "dateEntryInForce": "2011-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/869",
       "dateDocument": "2010-03-19",
-      "roFundstelle": "AS 2010 869",
+      "roFundstelle": "AS 2010 6015",
       "titelDe": "Bundesgesetz über die Armee und die Militärverwaltung (Militärgesetz, MG)",
       "titelFr": "Loi fédérale sur l'armée et l'administration militaire (LAAM)",
       "titelIt": "Legge federale sull'esercito e sull'amministrazione militare (Legge militare, LM)",
       "botschaftKey": "BOTSCHAFT-2009-1057",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/869/de",
-      "sha": "6c420ed1493e509bc63e84b11d91e48f9703cbace9529c20ae7481869b682727"
+      "sha": "0a73f754aee8dda4d51ad0fab16e01c6beab7990d84892e5f38c0578d47ce87d"
     },
     {
       "art": "sammelerlass-marker",
@@ -212,52 +212,52 @@
       "dateEntryInForce": "2004-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/570",
       "dateDocument": "2002-10-04",
-      "roFundstelle": "AS 2003 570",
+      "roFundstelle": "AS 2003 3957",
       "titelDe": "Bundesgesetz über die Armee und die Militärverwaltung (Militärgesetz, MG)",
       "titelFr": "Loi fédérale sur l'armée et l'administration militaire (Loi sur l'armée, LAAM)",
       "titelIt": "Legge federale sull'esercito e sull'amministrazione militare (Legge militare, LM)",
       "botschaftKey": "BOTSCHAFT-2002-118",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/570/de",
-      "sha": "945f382fcb6a41965b4455573923af63ccfaa6699e7e2d315c94c6b2babf46df"
+      "sha": "9407194feb40126e8b15ecdc1cd2fec19b6763ab694cd5fc3431973c3ff24b52"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-09-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/323",
       "dateDocument": "2000-10-06",
-      "roFundstelle": "AS 2001 323",
+      "roFundstelle": "AS 2001 2264",
       "titelDe": "Bundesgesetz über die Armee und die Militärverwaltung (Militärgesetz, MG) (Ausbildungszusammenarbeit)",
       "titelFr": "Loi fédérale sur l'armée et l'administration militaire (LAAM) (Coopération en matière d'instruction)",
       "titelIt": "Legge federale sull'esercito e sull'amministrazione militare (Legge militare, LM)(Cooperazione in materia di istruzione)",
       "botschaftKey": "BOTSCHAFT-2000-142",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/323/de",
-      "sha": "86725680d4a46ec1f735b34b050d987ffbb50f23b3091eca8a016c0252a76d60"
+      "sha": "d1748c5241a88b39f87276074ee666085360e9f0fdd2b76c4cb77bef7487b9a2"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-09-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/324",
       "dateDocument": "2000-10-06",
-      "roFundstelle": "AS 2001 324",
+      "roFundstelle": "AS 2001 2266",
       "titelDe": "Bundesgesetz über die Armee und die Militärverwaltung (Militärgesetz, MG) (Bewaffnung)",
       "titelFr": "Loi fédérale sur l'armée et l'administration militaire (LAAM) (Armement)",
       "titelIt": "Legge federale sull'esercito e sull'amministrazione militare (Legge militare, LM) (Armamento)",
       "botschaftKey": "BOTSCHAFT-2000-142",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/324/de",
-      "sha": "2c4c8df7ee38d6c6f294d26ea6b27c73178c066d36ba4aa3b67b069550b614b7"
+      "sha": "234ed4c4abdabbc9bc39ccedaa652eb0cb3a147d02b5a1864265dc6b1439c0d8"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-05-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/165",
       "dateDocument": "2000-03-24",
-      "roFundstelle": "AS 2001 165",
+      "roFundstelle": "AS 2001 1079",
       "titelDe": "Militärgesetz",
       "titelFr": "Loi fédérale sur l'armée et l'administration militaire",
       "titelIt": "Legge militare",
       "botschaftKey": "BOTSCHAFT-2000-114",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/165/de",
-      "sha": "c0c4366d3afbbd1d4f59f5d161411b9944d6875e1c10dd86610cf1bb3ab62d39"
+      "sha": "5dff7cd8181f131f75171bb3c08c9e090ff44540b34a94062cbc4927e916baff"
     },
     {
       "art": "sammelerlass-marker",
@@ -282,12 +282,12 @@
       "dateEntryInForce": "1999-03-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/151",
       "dateDocument": "1998-03-20",
-      "roFundstelle": "AS 1999 151",
+      "roFundstelle": "AS 1999 1153",
       "titelDe": "Bundesgesetz über die Armee und die Militärverwaltung (Militärgesetz, MG)",
       "titelFr": "Loi fédérale sur l'armée et l'administration militaire (LAAM)",
       "titelIt": "Legge federale sull'esercito e sull'amministrazione militare (Legge militare, LM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/151/de",
-      "sha": "b320a9e658e1ac7c438a63f31178990a9df3816f0a7e81229fb1c7be0afcc878"
+      "sha": "e8dcd19927cc8ffaaab456312f241877919653bb2fc3546efdb193921740e903"
     },
     {
       "art": "aenderung",
@@ -314,5 +314,5 @@
       "sha": "e3f1d16099d93cb8c44a0232542131604ea212fee84ecea47049a0782b52a857"
     }
   ],
-  "sha": "215675278dc033eeb8f751e72c0001b72cea454519b0ad5eaaded553673a2853"
+  "sha": "d8ab477c097800a332427be689c41fc0c697ab9474b18332b63af6100ed312ea"
 }

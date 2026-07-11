@@ -21,69 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1902-10-11"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz betreffend die eidgenössische Oberaufsicht über die Forstpolizei "
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale concernant la haute surveillance de la Confédération sur la police des forêts "
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "LF concernente l'alta vigilanza della Confederazione sulla polizia delle foreste"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "921.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/19/492_456_469"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1903-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1902-10-11"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Bundesgesetz betreffend die eidgenössische Oberaufsicht über die Forstpolizei "
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale concernant la haute surveillance de la Confédération sur la police des forêts "
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "LF concernente l'alta vigilanza della Confederazione sulla polizia delle foreste"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "921.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/19/492_456_469"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1903-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1902-10-11"
+        "value": "RO 19 456"
       },
       "titleDe": {
         "type": "literal",
@@ -117,6 +57,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1902-10-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 19 456"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz betreffend die eidgenössische Oberaufsicht über die Forstpolizei "
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale concernant la haute surveillance de la Confédération sur la police des forêts "
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "LF concernente l'alta vigilanza della Confederazione sulla polizia delle foreste"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "921.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/19/492_456_469"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1903-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1902-10-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 19 456"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz betreffend die eidgenössische Oberaufsicht über die Forstpolizei "
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale concernant la haute surveillance de la Confédération sur la police des forêts "
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "LF concernente l'alta vigilanza della Confederazione sulla polizia delle foreste"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "921.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/19/492_456_469"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1903-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1902-10-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 19 456"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz betreffend die eidgenössische Oberaufsicht über die Forstpolizei "
@@ -149,69 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1991-10-04"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom 4. Oktober 1991 über den Wald (Waldgesetz, WaG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 4 octobre 1991 sur les forêts (Loi sur les forêts, LFo)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 4 ottobre 1991 sulle foreste (Legge forestale, LFo)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "921.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1992/2521_2521_2521"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1993-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1991-10-04"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Bundesgesetz vom 4. Oktober 1991 über den Wald (Waldgesetz, WaG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 4 octobre 1991 sur les forêts (Loi sur les forêts, LFo)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 4 ottobre 1991 sulle foreste (Legge forestale, LFo)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "921.0"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1992/2521_2521_2521"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1993-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1991-10-04"
+        "value": "RO 1992 2521"
       },
       "titleDe": {
         "type": "literal",
@@ -245,6 +201,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1991-10-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1992 2521"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 4. Oktober 1991 über den Wald (Waldgesetz, WaG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 4 octobre 1991 sur les forêts (Loi sur les forêts, LFo)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 4 ottobre 1991 sulle foreste (Legge forestale, LFo)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "921.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1992/2521_2521_2521"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1993-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1991-10-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1992 2521"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 4. Oktober 1991 über den Wald (Waldgesetz, WaG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 4 octobre 1991 sur les forêts (Loi sur les forêts, LFo)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 4 ottobre 1991 sulle foreste (Legge forestale, LFo)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "921.0"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1992/2521_2521_2521"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1993-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1991-10-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1992 2521"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 4. Oktober 1991 über den Wald (Waldgesetz, WaG)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-03-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1981"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Wald (Waldgesetz, WaG)"
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-03-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1981"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Wald (Waldgesetz, WaG)"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-03-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1981"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Wald (Waldgesetz, WaG)"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-03-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 3207"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Wald (Waldgesetz, WaG)"
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-03-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 3207"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über den Wald (Waldgesetz, WaG)"
@@ -436,6 +488,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-03-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 3207"
       },
       "titleDe": {
         "type": "literal",

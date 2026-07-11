@@ -1,7 +1,7 @@
 {
   "erlassKey": "AHVV",
   "sr": "831.101",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -112,24 +112,24 @@
       "dateEntryInForce": "2021-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/818",
       "dateDocument": "2020-10-14",
-      "roFundstelle": "AS 2020 818",
+      "roFundstelle": "AS 2020 4605",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance-vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/818/de",
-      "sha": "746dae645271a570b32f4008edaaf9ad030b861b333fea98873498fb148c5220"
+      "sha": "552835e0639b904d8ec7732c8206e31477d0523939e5de463197b4a1ed24739e"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2021-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/947",
       "dateDocument": "2020-11-18",
-      "roFundstelle": "AS 2020 947",
+      "roFundstelle": "AS 2020 5437",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance-vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/947/de",
-      "sha": "9ac09297595c905b9dce648c946d72bb868def04cbff771dc4a5afb659db2b6b"
+      "sha": "9c014c777f3e8b1af03d031ed3227caea2f55d250d41c4fe959b8a87ea6cb6ba"
     },
     {
       "art": "sammelerlass-marker",
@@ -142,48 +142,48 @@
       "dateEntryInForce": "2020-06-16",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/435",
       "dateDocument": "2020-06-16",
-      "roFundstelle": "AS 2020 435",
+      "roFundstelle": "AS 2020 2185",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV) (Betrifft nur den italienischen Text)",
       "titelFr": "Règlement sur l'assurance-vieillesse et survivants (RAVS) (Ne concerne que le texte italien)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/435/de",
-      "sha": "6abc994f85651d7c57f6924e150a225f4b77e49d0c88cdf87497c19db2c96834"
+      "sha": "97434b9cf1e30d8f1d115a20d5685d00fcbfa4b400687f82ec82647b17cc9006"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2020-03-21",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/168",
       "dateDocument": "2020-03-20",
-      "roFundstelle": "AS 2020 168",
+      "roFundstelle": "AS 2020 875",
       "titelDe": "Verordnung über Massnahmen im Zusammenhang mit dem Coronavirus (COVID-19) zur Kurzarbeitsentschädigung und zur Abrechnung der Sozialversicherungsbeiträge",
       "titelFr": "Ordonnance sur les mesures en lien avec le coronavirus (COVID-19) concernant l'indemnité en cas de réduction de l'horaire de travail et le décompte des cotisations aux assurances sociales",
       "titelIt": "Ordinanza sui provvedimenti riguardo al coronavirus concernenti l'indennità per lavoro ridotto e il conteggio dei contributi alle assicurazioni sociali",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/168/de",
-      "sha": "86e6b2064d3c9ca6d6a6fedb9bab668b7c32fa7002b09398dc2e79b874c4ffe4"
+      "sha": "2f34ec479cee236b3fc504613d202f7a267d76dd77bcdb9cf626deb77587d26b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2020-03-21",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/276",
       "dateDocument": "2020-04-29",
-      "roFundstelle": "AS 2020 276",
+      "roFundstelle": "AS 2020 1407",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/276/de",
-      "sha": "f1c1b014a78f305ead2e9b9b8f1c8674157f03728900e5db9ae8c88b16d2befd"
+      "sha": "12cfb67079abbb329656255615611e27a81ef66d06c6bf4a4b76c9f94d2de761"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2020-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/676",
       "dateDocument": "2019-11-13",
-      "roFundstelle": "AS 2019 676",
+      "roFundstelle": "AS 2019 3751",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance-vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/676/de",
-      "sha": "b4339496b2befd8a63f69343ebe149e892644d31c1adfdd9bf26b85f364c9c5d"
+      "sha": "15ba700a6b47d06611127771ded13068dc874d0da2e53010e63480175d0839eb"
     },
     {
       "art": "sammelerlass-marker",
@@ -196,24 +196,24 @@
       "dateEntryInForce": "2019-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/573",
       "dateDocument": "2018-09-21",
-      "roFundstelle": "AS 2018 573",
+      "roFundstelle": "AS 2018 3525",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance-vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/573/de",
-      "sha": "dae9456bd4d6f5154a96e8826308b6f5b02117166f52c3dbb5dc4c81933d34bf"
+      "sha": "a2ecfd8ec3fd7510b94eb3fbcca2d5d4b316dc099e9e1927f575537a5ed3220d"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2019-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/789",
       "dateDocument": "2018-11-30",
-      "roFundstelle": "AS 2018 789",
+      "roFundstelle": "AS 2018 5077",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance-vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/789/de",
-      "sha": "01f1b5967fb142ff6dab6a76868e346c72cadde1513d106d608b5ac7cc0fd9ff"
+      "sha": "d7cb714540c78a508f74f53d23178acfc33933b6ff2d25aa3fcfccbb872567b5"
     },
     {
       "art": "sammelerlass-marker",
@@ -226,24 +226,24 @@
       "dateEntryInForce": "2017-09-05",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/513",
       "dateDocument": "2017-09-05",
-      "roFundstelle": "AS 2017 513",
+      "roFundstelle": "AS 2017 4813",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV) (Betrifft nur den italienischen Text)",
       "titelFr": "Règlement sur l'assurance-vieillesse et survivants (RAVS) (Ne concerne que le texte italien)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/513/de",
-      "sha": "c1291b9ea652b4894594b7a5b1a486fcf29ba10a189e72d2120ea6112402598a"
+      "sha": "edb11ce39b742f65caf9329d08cd107702244c56a8407754116786a533892a6a"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2017-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/673",
       "dateDocument": "2016-10-26",
-      "roFundstelle": "AS 2016 673",
+      "roFundstelle": "AS 2016 4057",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance-vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/673/de",
-      "sha": "1d33528914164163ecce2b2a179abac692f9c578d215a2623b02c50fd0fcbf9b"
+      "sha": "d336dea46462ce94b4f6ec463aedd616d592568ace64fb5a82f7d3440fa2ffcd"
     },
     {
       "art": "sammelerlass-marker",
@@ -256,84 +256,84 @@
       "dateEntryInForce": "2016-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/260",
       "dateDocument": "2016-04-20",
-      "roFundstelle": "AS 2016 260",
+      "roFundstelle": "AS 2016 1317",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance-vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/260/de",
-      "sha": "7a0c01dc8350bae665805bfc234c1262b4c9807ae4cabe556f50c4b9086fcc4c"
+      "sha": "578a13fe615a3356a70a1fb439f0cf69c05f9d5e6ec6d102911c77da0a45a5f2"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2015-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/288",
       "dateDocument": "2014-05-14",
-      "roFundstelle": "AS 2014 288",
+      "roFundstelle": "AS 2014 1361",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance-vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/288/de",
-      "sha": "032891fdf71a4a3f6bafb543b573d0862a4a8d2ba0f8a304ae9e3d15f63a41e6"
+      "sha": "d7fb8ac25a076b586dcc7d094a0df1ef7154f7c640d7d1ab3d2ac7e1d3ecfcc7"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2015-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/575",
       "dateDocument": "2014-10-15",
-      "roFundstelle": "AS 2014 575",
+      "roFundstelle": "AS 2014 3331",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance-vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/575/de",
-      "sha": "a55e90f9818434bf931bcd4c666232da8128b440a62ba9ebd06fc432ab1a2f71"
+      "sha": "033406689a749fd5690f2cf60ac1a7746898bdf58b82c8099fcaf34f9a6d373e"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2014-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/798",
       "dateDocument": "2013-11-20",
-      "roFundstelle": "AS 2013 798",
+      "roFundstelle": "AS 2013 4519",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance-vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/798/de",
-      "sha": "49c6bfe39ba68932b1c715ee434c147b2f0935b62c4c68b71937329482f794d0"
+      "sha": "8e190c20db52e69e5d8813fdbfffcb1c225389cf8a5e27e355c337c0e0ac39f3"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2013-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/746",
       "dateDocument": "2012-09-21",
-      "roFundstelle": "AS 2012 746",
+      "roFundstelle": "AS 2012 6329",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance-vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/746/de",
-      "sha": "179ec81d9c6b2e5633ef315c71b22279b6cf8f1260e8c6356aaff3321f25cb54"
+      "sha": "b846efae30f67a4373a1b09f523a7b6500d0431b5fbfda7dc0f481dc698f7054"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2012-10-30",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/674",
       "dateDocument": "2012-10-30",
-      "roFundstelle": "AS 2012 674",
+      "roFundstelle": "AS 2012 5797",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance-vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/674/de",
-      "sha": "9150dfaa4dc4b5f8eacc6ce8473668ab2c2d901ee9e41e7a647e5687ff730a3c"
+      "sha": "a9b12ae16c53cc75b1de921e08a1180a0e8d8c2b2ecdbb36b41055a296f9f8ae"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2012-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/674",
       "dateDocument": "2011-10-19",
-      "roFundstelle": "AS 2011 674",
+      "roFundstelle": "AS 2011 4759",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance-vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/674/de",
-      "sha": "bcc2135b64c2bfc91cf90913caf78f38e4fbb8310ae40a998ba61de2bbe35a8b"
+      "sha": "503bac7e33472db7465025a45291fd12d5e877d19b9cb57fbe605b2dca348a1a"
     },
     {
       "art": "sammelerlass-marker",
@@ -346,24 +346,24 @@
       "dateEntryInForce": "2011-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/433",
       "dateDocument": "2009-06-24",
-      "roFundstelle": "AS 2009 433",
+      "roFundstelle": "AS 2009 3523",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/433/de",
-      "sha": "ddae9b4aaa0e0dcc0dd2e6ea4f04d45d24b0c19c7a053f3e8754904030f751da"
+      "sha": "36376fc262789fbb82e039450e7cf123de4f1ab74d406be7bf9e8b307432332d"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2011-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/655",
       "dateDocument": "2010-09-24",
-      "roFundstelle": "AS 2010 655",
+      "roFundstelle": "AS 2010 4573",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance-vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/655/de",
-      "sha": "4c80d6810644250f932da73d013cb63ccf6eb07687da428f0222e6ad58798214"
+      "sha": "9986c024a61ccd015401c5826fae2ef1184b0e6ce68f4ce21ab2b7bb5e0286ce"
     },
     {
       "art": "sammelerlass-marker",
@@ -376,48 +376,48 @@
       "dateEntryInForce": "2010-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/608",
       "dateDocument": "2009-09-30",
-      "roFundstelle": "AS 2009 608",
+      "roFundstelle": "AS 2009 5183",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance-vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/608/de",
-      "sha": "6cdd609731a4292c036abdd8ec0749981fd85fbe3aca08fa944ea5adbab92f7c"
+      "sha": "19a70bc4ff163e97d92d0958992042c8230de3f2d34123288329e770b04e9740"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2010-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/836",
       "dateDocument": "2009-12-04",
-      "roFundstelle": "AS 2009 836",
+      "roFundstelle": "AS 2009 6847",
       "titelDe": "Verordnung über die Änderung des Zeitpunkts des Inkrafttretens der Neuordnung der Pflegefinanzierung",
       "titelFr": "Ordonnance sur la modification de la date d'entrée en vigueur du nouveau régime de financement des soins",
       "titelIt": "Ordinanza sulla modifica della data dell'entrata in vigore del nuovo ordinamento del finanziamento delle cure",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/836/de",
-      "sha": "7da11da691900e8d3e315a7e92c4c09d695c97b92a0c7d549057362235a23059"
+      "sha": "2946522382feb67ad453dd7abcdf4ec936e506b7ecbe2c0e0915526ec7d58394"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2009-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/658",
       "dateDocument": "2008-09-26",
-      "roFundstelle": "AS 2008 658",
+      "roFundstelle": "AS 2008 4711",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance-vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/658/de",
-      "sha": "1f88cf9d28513b6800130d1f4580f2a03c29b5b01f35a07e91ece4cfaa522761"
+      "sha": "91114d55351bf2ff998271c01ce9ab032d242ee4ae9350313ba0805c12067589"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2009-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/882",
       "dateDocument": "2008-12-05",
-      "roFundstelle": "AS 2008 882",
+      "roFundstelle": "AS 2008 6483",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance-vieillesse (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/882/de",
-      "sha": "4698c0ea4f35f0132ca221a6221319fc044e6036bc196a4951b7ab75ae155363"
+      "sha": "cdfec2727e0432ae81ea81830be88160a9ce64dbf029269a0cbf7f627909d2b2"
     },
     {
       "art": "sammelerlass-marker",
@@ -430,276 +430,276 @@
       "dateEntryInForce": "2008-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/721",
       "dateDocument": "2007-10-17",
-      "roFundstelle": "AS 2007 721",
+      "roFundstelle": "AS 2007 5125",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance-vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/721/de",
-      "sha": "b942eef00309544372bfafab05ff248e5cb66e76b4d3857c3b11cffa6f5937b2"
+      "sha": "c724622de30ff07f04079066eb3f10b76bb5c557787a678b1e9ea435bfb08337"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2007-12-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/748",
       "dateDocument": "2007-11-07",
-      "roFundstelle": "AS 2007 748",
+      "roFundstelle": "AS 2007 5271",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance-vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/748/de",
-      "sha": "59554fed6095aa3933eb321646f30e5a3bf1cb4f298b6b10b259534c12cfebdc"
+      "sha": "fff6428eeeec6a8146f2541e0f3efb57fefc9aa5095fd771bf9c18eaa14871df"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2007-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/610",
       "dateDocument": "2006-09-22",
-      "roFundstelle": "AS 2006 610",
+      "roFundstelle": "AS 2006 4141",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance-vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/610/de",
-      "sha": "8b26a3a080cc24e3fadcacb5a55d4b71066b40d01c41d4b163bca1a934278197"
+      "sha": "a34bab89a78914ad03a6052abb50bcd82f1bb941c244ded67e0fbb4db2437084"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2006-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/767",
       "dateDocument": "2005-11-23",
-      "roFundstelle": "AS 2005 767",
+      "roFundstelle": "AS 2005 5631",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance-vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/767/de",
-      "sha": "e2b4f740492e1e5fd1a6ad3588d2d3f90c8e39c1acb21129bdc52737e96e95f7"
+      "sha": "e5919f2b9cfaa67440d3d776df5c963413769832660d2a603becfded4ecf624b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2005-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/660",
       "dateDocument": "2004-09-24",
-      "roFundstelle": "AS 2004 660",
+      "roFundstelle": "AS 2004 4361",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance-vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/660/de",
-      "sha": "9986c3601372588be9df33eb4b9153cd4b806df3d4e2e5621808a0cbbeef8910"
+      "sha": "ed0c06ca0ad7b4f5844e3202df650515d7e8036fa11b6ba8a69c0ba21da834d6"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2004-03-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/73",
       "dateDocument": "2004-01-28",
-      "roFundstelle": "AS 2004 73",
+      "roFundstelle": "AS 2004 741",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/73/de",
-      "sha": "6d5f35ac0d64c04498f86acf125ad976173ba6548596514422eee71080b2fcb9"
+      "sha": "05255976bfedf87174c5e713481bdfd93a92aa0881f5bf465fc2a696227d759b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2004-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/523",
       "dateDocument": "2003-09-10",
-      "roFundstelle": "AS 2003 523",
+      "roFundstelle": "AS 2003 3683",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance-vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/523/de",
-      "sha": "1edbe8634f3f90042ca8385dfa5a4c09f63078cf191a9ff201f1bf20365caa02"
+      "sha": "0f2a0a556c8000b0481a5a113de090072ed3da05cf4b757d4dcdee24ed4e102b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2004-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/559",
       "dateDocument": "2003-05-21",
-      "roFundstelle": "AS 2003 559",
+      "roFundstelle": "AS 2003 3835",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance-vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/559/de",
-      "sha": "35612fa3a011f9d0bc918a9a124af5d9fde0f09de9fb0779f3ee6bfac33403d0"
+      "sha": "c97498d86266d1dd3be281eecba79d7bec7523acec9d6a6ccd96c315a097d2a1"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2003-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/86",
       "dateDocument": "2003-02-12",
-      "roFundstelle": "AS 2003 86",
+      "roFundstelle": "AS 2003 382",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance-vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/86/de",
-      "sha": "8053c151dfc57b196c987ad1762f2f239a782effd672085f41b337fa946554ef"
+      "sha": "77aa0327295cecd02f0ca7da670009c9580c61c33d3a16c3161b18fbb4d83a0b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2003-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/500",
       "dateDocument": "2002-09-20",
-      "roFundstelle": "AS 2002 500",
+      "roFundstelle": "AS 2002 3337",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Réglement sur l'assurance-vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/500/de",
-      "sha": "a4c174f97e5b978dbc58ff13d1d4fea239046c2fbb25030e800c98e937e3ae25"
+      "sha": "f33c48fdb27b5725e194c4617754d0cee664a44486bf27e649a14b309ed828e7"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2003-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/570",
       "dateDocument": "2002-09-11",
-      "roFundstelle": "AS 2002 570",
+      "roFundstelle": "AS 2002 3710",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance-vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/570/de",
-      "sha": "81d6d4b14628efd091ee2d71ce3a8da4442e0a9219d743b5c76cc8da59a32052"
+      "sha": "b6910657856e543a2fee1a07d8b6404a5239952f08e1d60021b142bbec1f3cd4"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2002-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/201",
       "dateDocument": "2000-10-18",
-      "roFundstelle": "AS 2002 201",
+      "roFundstelle": "AS 2002 1351",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance-vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/201/de",
-      "sha": "d25e5f56e13f75a2427cba6c9c8ab1a76a614aff3453e5b4684c3bb2e401747b"
+      "sha": "4d85e4bd64d226f1b03dc98b7676a0e367be064cd1e8a9cbc7013d02b48b8252"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2002-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/209",
       "dateDocument": "2002-04-24",
-      "roFundstelle": "AS 2002 209",
+      "roFundstelle": "AS 2002 1373",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance-vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/209/de",
-      "sha": "6623437689b3e16300127c7ce98fdc1369f15effd94bb28fc4d385cf87b2ee9b"
+      "sha": "700d175cc1178235ce20d4ddef9905e004dbcef8e85ef60ccec3ddac2ecf3a0a"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2002-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/34",
       "dateDocument": "2001-11-14",
-      "roFundstelle": "AS 2002 34",
+      "roFundstelle": "AS 2002 199",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance-vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/34/de",
-      "sha": "c00184db6c15d16475184640639ed40992e35c9f1beda4ede64f8e8f40e4a09b"
+      "sha": "62783d69688fe60df6a2bc7a5a2396509f387060d97bfacbb6be743f2f8f3cbd"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/226",
       "dateDocument": "2000-03-01",
-      "roFundstelle": "AS 2000 226",
+      "roFundstelle": "AS 2000 1441",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance-vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/226/de",
-      "sha": "30f05dfbeaf7cd05a15d38a4e70838c4a2c5cf03b70aa480db1e7e5404e715ff"
+      "sha": "16b813b8f86a3ed221eb00a87b977f44ad3913b7fc6e9f74d21052b3b1c7d147"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/423",
       "dateDocument": "2000-09-18",
-      "roFundstelle": "AS 2000 423",
+      "roFundstelle": "AS 2000 2629",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/423/de",
-      "sha": "ba9d6e365984a8e930d8bb5b1995c564d4dcd5038e40cd8b271fa6d005e225de"
+      "sha": "66c51001e2a7c190e2a397ba522144cc1499a363a6177e644c35c0c082fe4506"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/478",
       "dateDocument": "2000-10-18",
-      "roFundstelle": "AS 2000 478",
+      "roFundstelle": "AS 2000 2824",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/478/de",
-      "sha": "bdec0d49ab3adee1df9ed41271d262e90109342a6a1f3814e6f2f8c1af464634"
+      "sha": "f0dfc6a566f0552f24a1beb9567891349008944866f2f2307c60c68ff8905c43"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/506",
       "dateDocument": "2000-11-22",
-      "roFundstelle": "AS 2000 506",
+      "roFundstelle": "AS 2000 2905",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/506/de",
-      "sha": "44e643fb0c097ec3be91bce8c93efdf494204ac8615591360a952f3f3b6ec5a2"
+      "sha": "5d2dfc7b0835ee5cd86e59951d3719fbb1c7c3b11adde29db52df14caf054352"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/100",
       "dateDocument": "2001-02-27",
-      "roFundstelle": "AS 2001 100",
+      "roFundstelle": "AS 2001 506",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance-vieillesse et survivants (RAVS) (seulement en allemand et italien)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/100/de",
-      "sha": "45daef5c4bc8784e4d406c09887642f54d714469771cadfd9b1ae7472848d6c4"
+      "sha": "3bc498e57aab1a15c026fd0c34230957c2084cc838664a888ae19bd79924258d"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/675",
       "dateDocument": "2005-11-08",
-      "roFundstelle": "AS 2005 675",
+      "roFundstelle": "AS 2005 4953",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV) (Betrifft nur den französischen Text)",
       "titelFr": "Règlement sur l'assurance-vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS) (Concerne solo il testo francese)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/675/de",
-      "sha": "cbc6cf2b524adeeacd3e1880383c170263e21260a2b9fadc4dc0d78b8706875a"
+      "sha": "af6ac495b7e1c3123a2dcf3ac0486735e2ee02ce301da8415b67bc64962c7547"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2000-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/268",
       "dateDocument": "2000-06-13",
-      "roFundstelle": "AS 2000 268",
+      "roFundstelle": "AS 2000 1765",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/268/de",
-      "sha": "9c6283ab87b31626216cd6360dbacdadc6da2f9378aaf87511bb28c6b0830ef3"
+      "sha": "be989899b40516c89c934ab404f3d240daa3d38f74fd5456423e4754ca88b809"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2000-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/419",
       "dateDocument": "1999-08-25",
-      "roFundstelle": "AS 1999 419",
+      "roFundstelle": "AS 1999 2681",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance-vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/419/de",
-      "sha": "58fbcae2407d1b443d527ef093230e7a1e5d74426a25b442b37a948f764ddd6a"
+      "sha": "3bf270325635bb7217548931e29b0fac1eccd7f9b086f8256c8ca654a18e2048"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2000-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/465",
       "dateDocument": "1999-11-10",
-      "roFundstelle": "AS 1999 465",
+      "roFundstelle": "AS 1999 3044",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV)",
       "titelFr": "Règlement sur l'assurance vieillesse et survivants (RAVS)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/465/de",
-      "sha": "956e1359259774c139e75c7b4e29245fb09e9b0d94833568da36819c6cc73669"
+      "sha": "f15e368e1f2fd0bfd5d5637b1daaf15d5a86f2c46776ac0795f166130e595892"
     },
     {
       "art": "aenderung",
@@ -730,12 +730,12 @@
       "dateEntryInForce": "1986-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/120",
       "dateDocument": "2000-02-15",
-      "roFundstelle": "AS 2000 120",
+      "roFundstelle": "AS 2000 701",
       "titelDe": "Verordnung über die Alters- und Hinterlassenenversicherung (AHVV) (nur ital.)",
       "titelFr": "Règlement sur l'assurance vieillesse et survivants (RAVS) (seulement en italien)",
       "titelIt": "Ordinanza sull'assicurazione per la vecchiaia e per i superstiti (OAVS)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/120/de",
-      "sha": "20cafb48d6b36f81a631bf2367644a43372c3225b1fbd808f0c0563b5049f293"
+      "sha": "c13a8a65739dca547da2777ef7923d7b108e6c7dcaec595e0bc97ec131e6373a"
     },
     {
       "art": "aenderung",
@@ -750,5 +750,5 @@
       "sha": "10b5966c7a18d195f7dcdff9cc8562f26673ef51559a820f8765041413213743"
     }
   ],
-  "sha": "2c5e7b88216020b761079ef6e41b7ddd0c2e60f33306a8972614eea146362d06"
+  "sha": "206899c4f6e6c92e76f57fbbe60c1b9c25b81ddcb1b58a446a486199a7734a2d"
 }

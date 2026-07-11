@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-08-11"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Asylverordnung 3 über die Bearbeitung von Personendaten (Asylverordnung 3, AsylV 3)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance 3 sur l'asile relative au traitement de données personnelles (Ordonnance 3 sur l'asile, OA 3)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza 3 sull'asilo relativa al trattamento di dati personali (Ordinanza 3 sull'asilo, OAsi 3)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.314"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1999/361"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-08-11"
+        "value": "RO 1999 2351"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-08-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2351"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 3 über die Bearbeitung von Personendaten (Asylverordnung 3, AsylV 3)"
@@ -117,37 +93,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-08-11"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Asylverordnung 3 über die Bearbeitung von Personendaten (Asylverordnung 3, AsylV 3)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance 3 sur l'asile relative au traitement de données personnelles (Ordonnance 3 sur l'asile, OA 3)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza 3 sull'asilo relativa al trattamento di dati personali (Ordinanza 3 sull'asilo, OAsi 3)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.314"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2001/274"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-08-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-07-03"
+        "value": "RO 1999 2351"
       },
       "titleDe": {
         "type": "literal",
@@ -169,17 +117,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2001/274"
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/361"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-08-01"
+        "value": "1999-10-01"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-07-03"
+        "value": "1999-08-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 2351"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +165,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-07-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1752"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Asylverordnung 3 über die Bearbeitung von Personendaten (Asylverordnung 3, AsylV 3)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance 3 sur l'asile relative au traitement de données personnelles (Ordonnance 3 sur l'asile, OA 3)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza 3 sull'asilo relativa al trattamento di dati personali (Ordinanza 3 sull'asilo, OAsi 3)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.314"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2001/274"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-07-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1752"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Asylverordnung 3 über die Bearbeitung von Personendaten (Asylverordnung 3, AsylV 3)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance 3 sur l'asile relative au traitement de données personnelles (Ordonnance 3 sur l'asile, OA 3)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza 3 sull'asilo relativa al trattamento di dati personali (Ordinanza 3 sull'asilo, OAsi 3)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.314"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2001/274"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-08-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-07-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1752"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 3 über die Bearbeitung von Personendaten (Asylverordnung 3, AsylV 3)"
@@ -244,6 +272,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5611"
       },
       "titleDe": {
         "type": "literal",
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5611"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 3 über die Bearbeitung von Personendaten (Asylverordnung 3, AsylV 3)"
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5611"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 3 über die Bearbeitung von Personendaten (Asylverordnung 3, AsylV 3)"
@@ -341,37 +381,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-11-24"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Asylverordnung 3 über die Bearbeitung von Personendaten (Asylverordnung 3, AsylV 3)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance 3 sur l'asile relative au traitement de données personnelles (Ordonnance 3 sur l'asile, OA 3)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza 3 sull'asilo relativa al trattamento di dati personali (Ordinanza 3 sull'asilo, OAsi 3)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.314"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/819"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-11-24"
+        "value": "RO 2010 5775"
       },
       "titleDe": {
         "type": "literal",
@@ -405,6 +417,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-11-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5775"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Asylverordnung 3 über die Bearbeitung von Personendaten (Asylverordnung 3, AsylV 3)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance 3 sur l'asile relative au traitement de données personnelles (Ordonnance 3 sur l'asile, OA 3)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza 3 sull'asilo relativa al trattamento di dati personali (Ordinanza 3 sull'asilo, OAsi 3)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.314"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/819"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-11-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5775"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 3 über die Bearbeitung von Personendaten (Asylverordnung 3, AsylV 3)"
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-05-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 2903"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 3 über die Bearbeitung von Personendaten (Asylverordnung 3, AsylV 3)"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-05-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 2903"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 3 über die Bearbeitung von Personendaten (Asylverordnung 3, AsylV 3)"
@@ -500,6 +560,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-05-09"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 2903"
       },
       "titleDe": {
         "type": "literal",
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-07-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2237"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Anpassung von Verordnungen aufgrund von Neuerungen bezüglich des Dublin/Eurodac-Besitzstands (Betrifft nur den italienischen Text)"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-07-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2237"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Anpassung von Verordnungen aufgrund von Neuerungen bezüglich des Dublin/Eurodac-Besitzstands (Betrifft nur den italienischen Text)"
@@ -597,6 +669,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-07-07"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 2237"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Anpassung von Verordnungen aufgrund von Neuerungen bezüglich des Dublin/Eurodac-Besitzstands (Betrifft nur den italienischen Text)"
@@ -629,6 +705,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 3729"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 3 über die Bearbeitung von Personendaten (Asylverordnung 3, AsylV 3)"
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 3729"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 3 über die Bearbeitung von Personendaten (Asylverordnung 3, AsylV 3)"
@@ -693,69 +777,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-09-18"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Asylverordnung 3 über die Bearbeitung von Personendaten (Asylverordnung 3, AsylV 3)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance 3 sur l'asile relative au traitement de données personnelles (Ordonnance 3 sur l'asile, OA 3)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza 3 sull'asilo relativa al trattamento di dati personali (Ordinanza 3 sull'asilo, OAsi 3)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.314"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2017/200"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-04-15"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-03-22"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Asylverordnung 3 über die Bearbeitung von Personendaten (Asylverordnung 3, AsylV 3)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance 3 sur l'asile relative au traitement de données personnelles (Ordonnance 3 sur l'asile, OA 3)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza 3 sull'asilo relativa al trattamento di dati personali (Ordinanza 3 sull'asilo, OAsi 3)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "142.314"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2017/200"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-04-15"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2017-03-22"
+        "value": "RO 2015 3729"
       },
       "titleDe": {
         "type": "literal",
@@ -789,6 +813,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-03-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 2175"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Asylverordnung 3 über die Bearbeitung von Personendaten (Asylverordnung 3, AsylV 3)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance 3 sur l'asile relative au traitement de données personnelles (Ordonnance 3 sur l'asile, OA 3)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza 3 sull'asilo relativa al trattamento di dati personali (Ordinanza 3 sull'asilo, OAsi 3)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.314"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2017/200"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-04-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-03-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 2175"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Asylverordnung 3 über die Bearbeitung von Personendaten (Asylverordnung 3, AsylV 3)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance 3 sur l'asile relative au traitement de données personnelles (Ordonnance 3 sur l'asile, OA 3)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza 3 sull'asilo relativa al trattamento di dati personali (Ordinanza 3 sull'asilo, OAsi 3)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "142.314"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2017/200"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-04-15"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-03-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 2175"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 3 über die Bearbeitung von Personendaten (Asylverordnung 3, AsylV 3)"
@@ -821,6 +921,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-06-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 2889"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 3 über die Bearbeitung von Personendaten (Asylverordnung 3, AsylV 3)"
@@ -853,6 +957,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-06-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 2889"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 3 über die Bearbeitung von Personendaten (Asylverordnung 3, AsylV 3)"
@@ -884,6 +992,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-06-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 2889"
       },
       "titleDe": {
         "type": "literal",
@@ -917,6 +1029,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-05-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1437"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 3 über die Bearbeitung von Personendaten (Asylverordnung 3, AsylV 3)"
@@ -949,6 +1065,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-05-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1437"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Asylverordnung 3 über die Bearbeitung von Personendaten (Asylverordnung 3, AsylV 3)"
@@ -980,6 +1100,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-05-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 1437"
       },
       "titleDe": {
         "type": "literal",

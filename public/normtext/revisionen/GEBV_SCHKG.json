@@ -1,7 +1,7 @@
 {
   "erlassKey": "GEBV_SCHKG",
   "sr": "281.35",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -33,24 +33,24 @@
       "dateEntryInForce": "2019-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/722",
       "dateDocument": "2018-11-30",
-      "roFundstelle": "AS 2018 722",
+      "roFundstelle": "AS 2018 4585",
       "titelDe": "Gebührenverordnung zum Bundesgesetz über Schuldbetreibung und Konkurs (GebV SchKG)",
       "titelFr": "Ordonnance sur les émoluments perçus en application de la loi fédérale sur la poursuite pour dettes et faillite (OELP)",
       "titelIt": "Ordinanza sulle tasse riscosse in applicazione della legge federale sulla esecuzione e sul fallimento (OTLEF)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/722/de",
-      "sha": "31ab213c2e31b4b6b860dc8f2f7a1b7a20163bd60a4cddaa658035aa319ac8b3"
+      "sha": "52b6d976be40b92cd430c15a4b8e4342f58a329a2d177820c865613b75bf4a15"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2016-02-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/38",
       "dateDocument": "2016-01-20",
-      "roFundstelle": "AS 2016 38",
+      "roFundstelle": "AS 2016 275",
       "titelDe": "Gebührenverordnung zum Bundesgesetz über Schuldbetreibung und Konkurs",
       "titelFr": "Ordonnance sur les émoluments perçus en application de la loi fédérale sur la poursuite pour dettes et la faillite (OELP)",
       "titelIt": "Ordinanza sulle tasse riscosse in applicazione della legge federale sulla esecuzione e sul fallimento",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/38/de",
-      "sha": "96e5e188972772779c041429f5160803ad3e40bc17858c6411f509ac045c272e"
+      "sha": "99a99e10ca693e098dc6942fa98e0904ce5f3b963e8b7ff0a8cc639b233b5fa6"
     },
     {
       "art": "sammelerlass-marker",
@@ -101,5 +101,5 @@
       "sha": "3543cdebfb7af4efdffe858ce6910a4553268a18aaa70617b1230c1542564e28"
     }
   ],
-  "sha": "acd6044dbb0e8d9efbd36c177a20cfeb71a53b1cfca83ba7ce273c152c81a447"
+  "sha": "42d54fc69efbb10815b4392358c38c754b0af9b265ba01056206d6f9068a7651"
 }

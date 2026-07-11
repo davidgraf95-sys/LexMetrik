@@ -1,7 +1,7 @@
 {
   "erlassKey": "EBG",
   "sr": "742.101",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -83,12 +83,12 @@
       "dateEntryInForce": "2014-01-14",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/20",
       "dateDocument": "2013-11-13",
-      "roFundstelle": "AS 2014 20",
+      "roFundstelle": "AS 2014 157",
       "titelDe": "Bundesgesetz über den zweiten Schritt der Bahnreform 2 (Betrifft nur den französischen Text)",
       "titelFr": "Loi fédérale sur la deuxième partie de la réforme des chemins de fer 2",
       "titelIt": "Legge federale sulla seconda fase della Riforma delle ferrovie 2 (Concerne solo il testo francese)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/20/de",
-      "sha": "107fbff61924a007458341a6d1eeaa7fe38fc5e018114831db6609fbcc6bd7a4"
+      "sha": "02996a39c2d0ac3fc9c2099ee75781bb3417a2e16b03780d89cba085ccb8ce38"
     },
     {
       "art": "sammelerlass-marker",
@@ -107,12 +107,12 @@
       "dateEntryInForce": "2011-11-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/648",
       "dateDocument": "2011-10-12",
-      "roFundstelle": "AS 2011 648",
+      "roFundstelle": "AS 2011 4573",
       "titelDe": "Verordnung über eine Teilinkraftsetzung der Änderung vom 1. Oktober 2010 des Luftfahrtgesetzes und über die Inkraftsetzung von Verordnungen im Bereich der Unfalluntersuchung",
       "titelFr": "Ordonnance portant première mise en vigueur partielle de la modification du 1er octobre 2010 de la loi fédérale sur l'aviation et mise en vigueur d'autres ordonnances relatives aux enquêtes sur les accidents",
       "titelIt": "Ordinanza concernente la messa in vigore parziale della modifica del 1o ottobre 2010 della legge federale sulla navigazione aerea e la messa in vigore di altre ordinanze relative alle inchieste sugli infortuni",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/648/de",
-      "sha": "bf5680cc0fbe7404077b64691757ae8348664551692063d9cb56436b48044cf0"
+      "sha": "0feca3f67cbb3a559426ed5f891cb910ffba409fb3f23d5b6530485b294b3f1d"
     },
     {
       "art": "sammelerlass-marker",
@@ -131,26 +131,26 @@
       "dateEntryInForce": "2010-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/679",
       "dateDocument": "2009-03-20",
-      "roFundstelle": "AS 2009 679",
+      "roFundstelle": "AS 2009 5597",
       "titelDe": "Bundesgesetz über die Bahnreform 2 (Revision der Erlasse über den öffentlichen Verkehr)",
       "titelFr": "Loi sur la réforme des chemins de fer 2 (Révision des actes normatifs relatifs aux transports publics)",
       "titelIt": "Legge federale sulla Riforma delle ferrovie 2 (Revisione della disciplina sui trasporti pubblici)",
       "botschaftKey": "BOTSCHAFT-2007-425",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/679/de",
-      "sha": "a46ece51320d03bf9027520fddab9f395509a2ef91b875125e3ca1bc216f97aa"
+      "sha": "c41b056f6fc63bf4a839437877991c39c4717f10be40fa5473f0947725bbfdd4"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2010-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/731",
       "dateDocument": "2008-12-19",
-      "roFundstelle": "AS 2009 731",
+      "roFundstelle": "AS 2009 5973",
       "titelDe": "Bundesgesetz über Änderungen des Transportrechts",
       "titelFr": "Loi fédérale sur les modifications du droit des transports",
       "titelIt": "Legge federale concernente modifiche del diritto dei trasporti",
       "botschaftKey": "BOTSCHAFT-2007-648",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/731/de",
-      "sha": "059ad068e7aea0ccb94be852968b42a23c262964df0869e62cf88d0fc28e1660"
+      "sha": "62373954beffbb675f4b6ef5c5a41eb8ece4428e16881b181be28263627a7ca6"
     },
     {
       "art": "sammelerlass-marker",
@@ -175,13 +175,13 @@
       "dateEntryInForce": "2005-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/636",
       "dateDocument": "2005-06-17",
-      "roFundstelle": "AS 2005 636",
+      "roFundstelle": "AS 2005 4775",
       "titelDe": "Eisenbahngesetz (EBG)",
       "titelFr": "Loi fédérale sur les chemins de fer (LCdF)",
       "titelIt": "Legge federale sulle ferrovie (Lferr)",
       "botschaftKey": "BOTSCHAFT-2004-959",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/636/de",
-      "sha": "40def42a0b833324198581f5789006924d8c7cc7d149c1a0cb029c665d758b73"
+      "sha": "0acdbf8aab5390cd15801be3b80984f2ec17c99b0e26130f5e071f9b12c483ac"
     },
     {
       "art": "sammelerlass-marker",
@@ -206,12 +206,12 @@
       "dateEntryInForce": "2000-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/25",
       "dateDocument": "1999-12-13",
-      "roFundstelle": "AS 2000 25",
+      "roFundstelle": "AS 2000 106",
       "titelDe": "Verordnung über die Änderung des Bundesratsbeschlusses betreffend die Inkraftsetzung der Änderung vom 20. März 1998 des Eisenbahngesetzes",
       "titelFr": "Ordonnance sur la modification de l'arrêté du Conseil fédéral concernant l'entrée en vigueur de la modification du 20 mars 1998 de la loi sur les chemins de fer",
       "titelIt": "Ordinanza che modifica la decisione del Consiglio federale concernente l'entrata in vigore della modifica del 20 marzo 1998 della legge sulle ferrovie",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/25/de",
-      "sha": "4f4f00550a9a47d3c88f46514e217d412d6728ed69d4191762aeb31fc69a3783"
+      "sha": "d0d7bd83fb4341e01fdc30db589c8a0423e0ef0d0473b3b1bfcb11ff0dcfef2d"
     },
     {
       "art": "aenderung",
@@ -238,5 +238,5 @@
       "sha": "d59e2efbed935fdf05b984cc00d33b7e0900b7f06f9f80ffb82e85b21c2fbf2d"
     }
   ],
-  "sha": "68abae48d27bfc951b74c9be34050bda63b0a242229e847f55905b7fbbc7db88"
+  "sha": "fc4bf759ee2e578c52f20201a78650d4783a55b1bf13b9a5ee98d1d9946c607c"
 }

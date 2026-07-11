@@ -1,7 +1,7 @@
 {
   "erlassKey": "ASYLV2",
   "sr": "142.312",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -81,48 +81,48 @@
       "dateEntryInForce": "2021-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/987",
       "dateDocument": "2020-11-18",
-      "roFundstelle": "AS 2020 987",
+      "roFundstelle": "AS 2020 5869",
       "titelDe": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)",
       "titelFr": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)",
       "titelIt": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/987/de",
-      "sha": "c92716ad01bd85fd6d05b5dd4238bb539110ff043c52a0d1839aa112599d14a1"
+      "sha": "d52a3ac784361816f1b0a2eff3e75c3d52b13d9eaa48d2711faea29e76e88337"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2020-11-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/743",
       "dateDocument": "2020-09-18",
-      "roFundstelle": "AS 2020 743",
+      "roFundstelle": "AS 2020 3991",
       "titelDe": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)",
       "titelFr": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)",
       "titelIt": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/743/de",
-      "sha": "10e3b26da91ac6538917fd6d8488beaab3d7562b5d465dd0ff61cb48ce373e62"
+      "sha": "4af6363519364f743f000de4d72f10f4a7d7d8c6b2e85aeab3bf79d21fd8c472"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2020-07-21",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/570",
       "dateDocument": "2020-07-21",
-      "roFundstelle": "AS 2020 570",
+      "roFundstelle": "AS 2020 3343",
       "titelDe": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2) (Betrifft nur den italienischen Text)",
       "titelFr": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2) (Ne concerne que le texte italien)",
       "titelIt": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/570/de",
-      "sha": "154c27b20b60cbaf9364f5e35caf22da12ab9c126621bd2d1a84d7ff624de829"
+      "sha": "f12d88e847ca67c7542569b6e977464b15122dfa853ffec9a29b538014832920"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2020-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/174",
       "dateDocument": "2020-02-19",
-      "roFundstelle": "AS 2020 174",
+      "roFundstelle": "AS 2020 915",
       "titelDe": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)",
       "titelFr": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)",
       "titelIt": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/174/de",
-      "sha": "ef0a812737894e77b5e9f7d28ad85d27d6289518baf643de65d19f054774f97a"
+      "sha": "ffa42a8aee479b4603bc39dcfde881c54d41488c0c2a748b748520a719e3d9b6"
     },
     {
       "art": "sammelerlass-marker",
@@ -135,72 +135,72 @@
       "dateEntryInForce": "2019-05-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/235",
       "dateDocument": "2019-04-10",
-      "roFundstelle": "AS 2019 235",
+      "roFundstelle": "AS 2019 1233",
       "titelDe": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)",
       "titelFr": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)",
       "titelIt": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/235/de",
-      "sha": "e9651a603d993332b1ab6ceef92cd2bee8d7ae79a6bfb4d42f90d472d10751bc"
+      "sha": "f97694a625eba7d30537423448a3becd0f9995107b6b00636daa35b80b620f31"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2019-03-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/440",
       "dateDocument": "2018-06-08",
-      "roFundstelle": "AS 2018 440",
+      "roFundstelle": "AS 2018 2875",
       "titelDe": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)",
       "titelFr": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)",
       "titelIt": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/440/de",
-      "sha": "930f7c6cfcced4425f0a4e9d15e4800bcb76be8de9218b193ad5f8b3f0a8e63f"
+      "sha": "4402f1a9731fdfeca5f63172eee871880bf772d52568e9b8efc2d6a32b9b6c93"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2018-10-02",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/533",
       "dateDocument": "2018-10-02",
-      "roFundstelle": "AS 2018 533",
+      "roFundstelle": "AS 2018 3311",
       "titelDe": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2) (Betrifft nur den italienischen Text)",
       "titelFr": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2) (Ne concerne que le texte italien)",
       "titelIt": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/533/de",
-      "sha": "acaf122a5edb5d1244cfc1d11a39ffed8dbd97cd59c474ba0490aa26699dc54c"
+      "sha": "9c188cbbd0c2fe265e7c195a721a71ab61e3c7bd2d85b6a48458d9e0978dc659"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2018-02-13",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/92",
       "dateDocument": "2018-02-13",
-      "roFundstelle": "AS 2018 92",
+      "roFundstelle": "AS 2018 731",
       "titelDe": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2). Betrifft nur den italienischen Text",
       "titelFr": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2). Ne concerne que le texte italien",
       "titelIt": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/92/de",
-      "sha": "11ffd320e8b95a4a6913def83c48388b628f573c494a77024be2f379dadfebbd"
+      "sha": "4bdce9c68d854c202e5cbb91a1d8f951e9724b43ec210025ea8b8fb4e7ce74a7"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2018-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/686",
       "dateDocument": "2017-10-25",
-      "roFundstelle": "AS 2017 686",
+      "roFundstelle": "AS 2017 6173",
       "titelDe": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)",
       "titelFr": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)",
       "titelIt": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/686/de",
-      "sha": "dd458091624eafb914221b97fb1a0bf4a70481c1a835db3d3827af992e353429"
+      "sha": "33234db537bbd39eca9ad0515abb7a4137de5ed8d3cac9813562286a494a54bb"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2018-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/721",
       "dateDocument": "2017-11-15",
-      "roFundstelle": "AS 2017 721",
+      "roFundstelle": "AS 2017 6545",
       "titelDe": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)",
       "titelFr": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)",
       "titelIt": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/721/de",
-      "sha": "4699a1fb53b0e93fdeb28fa3855e547773ca83b531e21232b213821aec043814"
+      "sha": "e891d6cfe5c0be16d822e75bba0c46a4a2be50f43da931ae47878092a6256340"
     },
     {
       "art": "sammelerlass-marker",
@@ -213,36 +213,36 @@
       "dateEntryInForce": "2016-12-15",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/707",
       "dateDocument": "2016-11-16",
-      "roFundstelle": "AS 2016 707",
+      "roFundstelle": "AS 2016 4223",
       "titelDe": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)",
       "titelFr": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)",
       "titelIt": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/707/de",
-      "sha": "36ca8e9e8f62f4c718649a4a29a7eec9212d7c293471ca2e35df8549cbe1c1f3"
+      "sha": "31f1eff98f7b96ece598db898a130df6987dbd74981a97eaa3047b7f68648bea"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2015-09-29",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/382",
       "dateDocument": "2015-06-05",
-      "roFundstelle": "AS 2015 382",
+      "roFundstelle": "AS 2015 2053",
       "titelDe": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)",
       "titelFr": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)",
       "titelIt": "Ordinanza 2 sull'asilo relativa a questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/382/de",
-      "sha": "f6b4e60afb0f13492bbd856f5df45c825d5eb24eeed7e45b0933ea24c31ae575"
+      "sha": "cd98cd133cfe491250bb484c9c1ba7d7f2275ba0ac6f1de49d8631f9e76e950c"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2014-02-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/856",
       "dateDocument": "2013-12-13",
-      "roFundstelle": "AS 2013 856",
+      "roFundstelle": "AS 2013 5359",
       "titelDe": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)",
       "titelFr": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)",
       "titelIt": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/856/de",
-      "sha": "cbdbce967d75dd31a7155e93248ec13f3d9b160acb5cd8c79246822e4236be04"
+      "sha": "11b5112b0730b42e9a80724e5d17a8e79029ca632b7e58245b85c72026fff951"
     },
     {
       "art": "sammelerlass-marker",
@@ -261,24 +261,24 @@
       "dateEntryInForce": "2013-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/842",
       "dateDocument": "2012-12-07",
-      "roFundstelle": "AS 2012 842",
+      "roFundstelle": "AS 2012 6951",
       "titelDe": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)",
       "titelFr": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)",
       "titelIt": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/842/de",
-      "sha": "9041fd09e0c118db46113406d36015f92215376912425e821b1b675cc2436ff3"
+      "sha": "0ab24830743378904bbcd6d0dddcd600d7bbd932aaca94c92b5d39ec8469437c"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2012-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/841",
       "dateDocument": "2011-11-30",
-      "roFundstelle": "AS 2011 841",
+      "roFundstelle": "AS 2011 6087",
       "titelDe": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)",
       "titelFr": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)",
       "titelIt": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/841/de",
-      "sha": "dad44c505d6d253ee6c27b6011923354ed4b107e9443d887cb6d923dcbdc4672"
+      "sha": "20ca57a6eba8a763722edd86c47d1d3599257c1735d66ac4cde19723b2d26e3a"
     },
     {
       "art": "sammelerlass-marker",
@@ -291,36 +291,36 @@
       "dateEntryInForce": "2009-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/225",
       "dateDocument": "2009-03-25",
-      "roFundstelle": "AS 2009 225",
+      "roFundstelle": "AS 2009 1563",
       "titelDe": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)",
       "titelFr": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)",
       "titelIt": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/225/de",
-      "sha": "6be4a9248f68d7374f96777cc892d2db7889fc14bb6f8ff84f4fe69833a27504"
+      "sha": "20add7166aeee7f2714a1b25b4c88d9fb8bcd831c143f9b560ad1cec1e3ebf9d"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2008-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/39",
       "dateDocument": "2008-12-12",
-      "roFundstelle": "AS 2009 39",
+      "roFundstelle": "AS 2009 235",
       "titelDe": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)",
       "titelFr": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)",
       "titelIt": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/39/de",
-      "sha": "5eb996c53f450c41efa7fe12475c88240f5b786c2c8a27870b80816650ae88a4"
+      "sha": "592346f46bd889a68e28d16580c24d861b09f9a059a8c8ddf2f19b0501486d98"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2008-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/768",
       "dateDocument": "2007-10-24",
-      "roFundstelle": "AS 2007 768",
+      "roFundstelle": "AS 2007 5585",
       "titelDe": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)",
       "titelFr": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)",
       "titelIt": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/768/de",
-      "sha": "06e54628d6104d0f80b28ca4492561582b6dda12727cfbea1e6bfe08b9340224"
+      "sha": "175850e09a04109dde1bcb3eac1f3d1c796201b881ecc92d14471faddb6550a5"
     },
     {
       "art": "sammelerlass-marker",
@@ -339,84 +339,84 @@
       "dateEntryInForce": "2006-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/166",
       "dateDocument": "2006-03-01",
-      "roFundstelle": "AS 2006 166",
+      "roFundstelle": "AS 2006 933",
       "titelDe": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2)",
       "titelFr": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile)",
       "titelIt": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/166/de",
-      "sha": "cc11e6999851980998e4ebe6d153a13b5c0ece498b6e1ff6603b85fc7bd3c43a"
+      "sha": "30da7392c4d730101796163d7aaf33256fa94684d450f16eae76a053c29110ce"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2005-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/763",
       "dateDocument": "2004-12-03",
-      "roFundstelle": "AS 2004 763",
+      "roFundstelle": "AS 2004 5007",
       "titelDe": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)",
       "titelFr": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)",
       "titelIt": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/763/de",
-      "sha": "3e717b1fa8f2ded7d76010f2b08b44de014584fea2c01e9708eb5941f6d77ab3"
+      "sha": "9fee21a73bd2ec19b8cf71c7773ac20a26ca0ff4cff5e8e64ee407ac2e2ab926"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2004-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/204",
       "dateDocument": "2004-03-24",
-      "roFundstelle": "AS 2004 204",
+      "roFundstelle": "AS 2004 1657",
       "titelDe": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)",
       "titelFr": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)",
       "titelIt": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/204/de",
-      "sha": "0a2faa5b61b4dd3f7c040d6a51aff4ceb1ebff03f7ea5556ff8af786211b67ef"
+      "sha": "b085d46b452ad5f54d165110f01879f471e02cd0646711d569cc85fe76b930f6"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2002-12-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/663",
       "dateDocument": "2002-11-06",
-      "roFundstelle": "AS 2002 663",
+      "roFundstelle": "AS 2002 4131",
       "titelDe": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)",
       "titelFr": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)",
       "titelIt": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/663/de",
-      "sha": "51b1850992e3e7dab92d5a8ed1f02a809e7faea1de411dc7aefeb727f9926eb6"
+      "sha": "ad48f316c15a181f3fa8821efb49871aec3334903de3dd685114e22cf39056f4"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/20",
       "dateDocument": "2000-12-04",
-      "roFundstelle": "AS 2001 20",
+      "roFundstelle": "AS 2001 113",
       "titelDe": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)",
       "titelFr": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)",
       "titelIt": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/20/de",
-      "sha": "522b08d2f8ce98dac668bad5cdbd79011a463bb8a3529891de8b80324eefc059"
+      "sha": "03db8f8d302b38ab520dab19bf5fd0d0b90b16302e4b5fb925e655f84a7fd937"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2000-03-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/112",
       "dateDocument": "2000-02-16",
-      "roFundstelle": "AS 2000 112",
+      "roFundstelle": "AS 2000 662",
       "titelDe": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)",
       "titelFr": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)",
       "titelIt": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/112/de",
-      "sha": "435d60df5dd28263fda2a685504a500b91f213a68331a8099c7848507c059cac"
+      "sha": "62b154d02f572d78aa212a3f79bd69c30eebdd51d2a9df3d45c374f73ad44c8b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "1999-10-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/360",
       "dateDocument": "1999-08-11",
-      "roFundstelle": "AS 1999 360",
+      "roFundstelle": "AS 1999 2318",
       "titelDe": "Asylverordnung 2 über Finanzierungsfragen (Asylverordnung 2, AsylV 2)",
       "titelFr": "Ordonnance 2 sur l'asile relative au financement (Ordonnance 2 sur l'asile, OA 2)",
       "titelIt": "Ordinanza 2 sull'asilo relativa alle questioni finanziarie (Ordinanza 2 sull'asilo, OAsi 2)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/360/de",
-      "sha": "8819607b80f1446e9c247c3032c7b2678c8b4aefbda8be6ee8553589dfa1e105"
+      "sha": "b5114c85560bd72f658bc8def93e3300b8acbb5dee216cb7ba8bc3592fb73957"
     },
     {
       "art": "aenderung",
@@ -431,5 +431,5 @@
       "sha": "011c92a3d1112b02f80b5bafef9b4cf6c8954f1c15c04332d20b72a27934db73"
     }
   ],
-  "sha": "7351ff217177abb853eac676a2b159072db7779a0a084836be2bb520121884c5"
+  "sha": "955fcb7ff20eef391087194cc202cbed41df91bc5e602e3f25e142a421dd903e"
 }

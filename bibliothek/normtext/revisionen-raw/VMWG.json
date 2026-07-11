@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1972-07-10"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 10. Juli 1972 über Massnahmen gegen Missbräuche im Mietwesen"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 10 juillet 1972 concernant des mesures contre les abus dans le secteur locatif"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 10 luglio 1972 concernente provvedimenti contro gli abusi in materia di locazione"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "221.213.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1972/1559_1590_1762"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1972-07-14"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1972-07-10"
+        "value": "RO 1972 1590"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1972-07-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1972 1590"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 10. Juli 1972 über Massnahmen gegen Missbräuche im Mietwesen"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1972-07-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1972 1590"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 10. Juli 1972 über Massnahmen gegen Missbräuche im Mietwesen"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 10 juillet 1972 concernant des mesures contre les abus dans le secteur locatif"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 10 luglio 1972 concernente provvedimenti contro gli abusi in materia di locazione"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "221.213.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1972/1559_1590_1762"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1972-07-14"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1972-07-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1972 1590"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 10. Juli 1972 über Massnahmen gegen Missbräuche im Mietwesen"
@@ -149,69 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1990-05-09"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 9. Mai 1990 über die Miete und Pacht von Wohn- und Geschäftsräumen (VMWG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 9 mai 1990 sur le bail à loyer et le bail à ferme d'habitations et de locaux commerciaux (OBLF)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 9 maggio 1990 concernente la locazione e l'affitto di locali d'abitazione o commerciali (OLAL)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "221.213.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1990/835_835_835"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1990-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1990-05-09"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung vom 9. Mai 1990 über die Miete und Pacht von Wohn- und Geschäftsräumen (VMWG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 9 mai 1990 sur le bail à loyer et le bail à ferme d'habitations et de locaux commerciaux (OBLF)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 9 maggio 1990 concernente la locazione e l'affitto di locali d'abitazione o commerciali (OLAL)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "221.213.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1990/835_835_835"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1990-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1990-05-09"
+        "value": "RO 1990 835"
       },
       "titleDe": {
         "type": "literal",
@@ -245,6 +201,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1990-05-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1990 835"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 9. Mai 1990 über die Miete und Pacht von Wohn- und Geschäftsräumen (VMWG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 9 mai 1990 sur le bail à loyer et le bail à ferme d'habitations et de locaux commerciaux (OBLF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 9 maggio 1990 concernente la locazione e l'affitto di locali d'abitazione o commerciali (OLAL)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "221.213.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1990/835_835_835"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1990-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1990-05-09"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1990 835"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 9. Mai 1990 über die Miete und Pacht von Wohn- und Geschäftsräumen (VMWG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 9 mai 1990 sur le bail à loyer et le bail à ferme d'habitations et de locaux commerciaux (OBLF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 9 maggio 1990 concernente la locazione e l'affitto di locali d'abitazione o commerciali (OLAL)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "221.213.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1990/835_835_835"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1990-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1990-05-09"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1990 835"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 9. Mai 1990 über die Miete und Pacht von Wohn- und Geschäftsräumen (VMWG)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-11-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 7021"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Miete und Pacht von Wohn- und Geschäftsräumen (VMWG)"
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-11-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 7021"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Miete und Pacht von Wohn- und Geschäftsräumen (VMWG)"
@@ -341,69 +381,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-11-28"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die Miete und Pacht von Wohn- und Geschäftsräumen (VMWG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le bail à loyer et le bail à ferme d'habitations et de locaux commerciaux (OBLF)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente la locazione e l'affitto di locali d'abitazione o commerciali (OLAL)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "221.213.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/702"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-12-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-10-26"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung über die Miete und Pacht von Wohn- und Geschäftsräumen (VMWG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur le bail à loyer et le bail à ferme d'habitations et de locaux commerciaux (OBLF)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza concernente la locazione e l'affitto di locali d'abitazione o commerciali (OLAL)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "221.213.11"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/702"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-12-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-10-26"
+        "value": "RO 2007 7021"
       },
       "titleDe": {
         "type": "literal",
@@ -437,6 +417,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-10-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4907"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Miete und Pacht von Wohn- und Geschäftsräumen (VMWG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le bail à loyer et le bail à ferme d'habitations et de locaux commerciaux (OBLF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente la locazione e l'affitto di locali d'abitazione o commerciali (OLAL)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "221.213.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/702"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-12-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-10-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4907"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die Miete und Pacht von Wohn- und Geschäftsräumen (VMWG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur le bail à loyer et le bail à ferme d'habitations et de locaux commerciaux (OBLF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza concernente la locazione e l'affitto di locali d'abitazione o commerciali (OLAL)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "221.213.11"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/702"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-12-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-10-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4907"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Miete und Pacht von Wohn- und Geschäftsräumen (VMWG)"
@@ -468,6 +524,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-01-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 417"
       },
       "titleDe": {
         "type": "literal",
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-01-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 417"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Miete und Pacht von Wohn- und Geschäftsräumen (VMWG)"
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-01-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 417"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Miete und Pacht von Wohn- und Geschäftsräumen (VMWG)"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-04-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1511"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Miete und Pacht von Wohn- und Geschäftsräumen (VMWG)"
@@ -597,6 +669,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-04-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1511"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Miete und Pacht von Wohn- und Geschäftsräumen (VMWG)"
@@ -628,6 +704,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-04-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 1511"
       },
       "titleDe": {
         "type": "literal",

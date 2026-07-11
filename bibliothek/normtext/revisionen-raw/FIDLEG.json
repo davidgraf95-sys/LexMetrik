@@ -21,6 +21,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-06-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 4417"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Finanzdienstleistungen (Finanzdienstleistungsgesetz, FIDLEG)"
@@ -53,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-06-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 4417"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Finanzdienstleistungen (Finanzdienstleistungsgesetz, FIDLEG)"
@@ -85,6 +93,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-06-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 4417"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Finanzdienstleistungen (Finanzdienstleistungsgesetz, FIDLEG)"
@@ -116,6 +128,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2018-06-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2019 4417"
       },
       "titleDe": {
         "type": "literal",

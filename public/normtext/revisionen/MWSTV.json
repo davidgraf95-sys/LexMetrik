@@ -1,7 +1,7 @@
 {
   "erlassKey": "MWSTV",
   "sr": "641.201",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -118,60 +118,60 @@
       "dateEntryInForce": "2019-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/162",
       "dateDocument": "2019-03-08",
-      "roFundstelle": "AS 2019 162",
+      "roFundstelle": "AS 2019 911",
       "titelDe": "Mehrwertsteuerverordnung (MWSTV)",
       "titelFr": "Ordonnance régissant la taxe sur la valeur ajoutée (OTVA)",
       "titelIt": "Ordinanza concernente l'imposta sul valore aggiunto (Ordinanza sull'IVA, OIVA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/162/de",
-      "sha": "3858d55a7f279e002202b1b884a4c05d1558c1ce96df756eabefe250134bed24"
+      "sha": "5ebf0788370c3401d22d66eab9601daf52191444725517ed5058f586c4a7b976"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2019-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/499",
       "dateDocument": "2018-08-15",
-      "roFundstelle": "AS 2018 499",
+      "roFundstelle": "AS 2018 3143",
       "titelDe": "Mehrwertsteuerverordnung (MWSTV)",
       "titelFr": "Ordonnance régissant la taxe sur la valeur ajoutée (OTVA)",
       "titelIt": "Ordinanza concernente l'imposta sul valore aggiunto (Ordinanza sull'IVA, OIVA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/499/de",
-      "sha": "19d77721f1d46c48e2614d19781c6455128720b471cbaaa261baddbb7dd8b6f6"
+      "sha": "4e389beca08adc7747c8491a70882c632b4e32253da5091eb451f9e834d1b727"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2018-01-30",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/56",
       "dateDocument": "2018-01-30",
-      "roFundstelle": "AS 2018 56",
+      "roFundstelle": "AS 2018 521",
       "titelDe": "Mehrwertsteuerverordnung (MWSTV). (Betrifft nur den italienischen Text)",
       "titelFr": "Ordonnance régissant la taxe sur la valeur ajoutée (OTVA). (Ne concerne que le texte italien)",
       "titelIt": "Ordinanza concernente l'imposta sul valore aggiunto (Ordinanza sull'IVA, OIVA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/56/de",
-      "sha": "4a53af1069a07b1fa518490da00e5d3758060d289ef155d7e5377348d12a8915"
+      "sha": "0ef831a6b7f330bf355ec07203e58b0b794b1598ba8df0398a0e95d39d9bb36b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2018-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/696",
       "dateDocument": "2017-10-18",
-      "roFundstelle": "AS 2017 696",
+      "roFundstelle": "AS 2017 6307",
       "titelDe": "Mehrwertsteuerverordnung (MWSTV)",
       "titelFr": "Ordonnance régissant la taxe sur la valeur ajoutée (OTVA)",
       "titelIt": "Ordinanza concernente l'imposta sul valore aggiunto (Ordinanza sull'IVA, OIVA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/696/de",
-      "sha": "775190c1b88e784edd421ff3bab08a80d47a2fca44ca563ac7fcd558af1fbc4f"
+      "sha": "30f66166239be4eddde6965c2986dabbc2fc57881b88a7bbb2d54b910677815c"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2017-12-12",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/789",
       "dateDocument": "2017-12-12",
-      "roFundstelle": "AS 2017 789",
+      "roFundstelle": "AS 2017 7263",
       "titelDe": "Mehrwertsteuerverordnung (MWSTV) (Betrifft nur den französischen Text)",
       "titelFr": "Ordonnance régissant la taxe sur la valeur ajoutée (OTVA)",
       "titelIt": "Ordinanza concernente l'imposta sul valore aggiunto (Ordinanza sull'IVA, OIVA) (Concerne soltanto il testo francese)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/789/de",
-      "sha": "2913382649f4a1ed765703a0ace7c12c35996d784e501b2006694fa6425c32c3"
+      "sha": "6f6d3330f47592a165511b6bd9ab8c2e74d89280913e5a4f35b8aa3f10d8dd67"
     },
     {
       "art": "sammelerlass-marker",
@@ -190,48 +190,48 @@
       "dateEntryInForce": "2015-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/659",
       "dateDocument": "2014-11-12",
-      "roFundstelle": "AS 2014 659",
+      "roFundstelle": "AS 2014 3847",
       "titelDe": "Mehrwertsteuerverordnung (MWSTV)",
       "titelFr": "Ordonnance régissant la taxe sur la valeur ajoutée (OTVA)",
       "titelIt": "Ordinanza concernente l'imposta sul valore aggiunto (OIVA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/659/de",
-      "sha": "7854c81f93fe7ec334fd74c715898cdcde970f3cf07dc5ab566fc829e1605469"
+      "sha": "01bbf7d46a507ea8ba3e9f09c41d7d2211811366c5a651e5eefc9014b8d7f2af"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2014-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/704",
       "dateDocument": "2013-10-30",
-      "roFundstelle": "AS 2013 704",
+      "roFundstelle": "AS 2013 3839",
       "titelDe": "Mehrwertsteuerverordnung (MWSTV)",
       "titelFr": "Ordonnance régissant la taxe sur la valeur ajoutée (OTVA)",
       "titelIt": "Ordinanza concernente l'imposta sul valore aggiunto (Ordinanza sull'IVA, OIVA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/704/de",
-      "sha": "c36f4368a4b4fbba2ef9bdc4bab865bd9914eefb31b53218c8b391fa5c528107"
+      "sha": "aea0e288d834593fc76ef2f01cddf61858610c524428150d5a136edfb25c6551"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2012-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/671",
       "dateDocument": "2011-10-12",
-      "roFundstelle": "AS 2011 671",
+      "roFundstelle": "AS 2011 4739",
       "titelDe": "Mehrwertsteuerverordnung (MWSTV)",
       "titelFr": "Ordonnance régissant la taxe sur la valeur ajoutée (OTVA)",
       "titelIt": "Ordinanza concernente l'imposta sul valore aggiunto (Ordinanza sull'IVA, OIVA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/671/de",
-      "sha": "79e544a1ef8fad52ad9fa7fcba9a68250a32c69743e3f5f4c3be7f46168ca383"
+      "sha": "18dcb322e5b52a25263723493e427f33e9ca410387d39798e9d24866400ae907"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2012-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/910",
       "dateDocument": "2011-12-28",
-      "roFundstelle": "AS 2011 910",
+      "roFundstelle": "AS 2011 6545",
       "titelDe": "Mehrwertsteuerverordnung (MWSTV) (Betrifft nur den italienischen Text)",
       "titelFr": "Ordonnance régissant la taxe sur la valeur ajoutée (OTVA) (Ne concerne que le texte italien)",
       "titelIt": "Ordinanza concernente l'imposta sul valore aggiunto (Ordinanza sull'IVA, OIVA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/910/de",
-      "sha": "e1ad0ec7fdf434e3d68d6fe79fb9b25dff7695a46562aa40849dd0f2c1abfc02"
+      "sha": "6bc2765008c6001818e76f818f086e940e53386d3575c4a044c747859f72230f"
     },
     {
       "art": "sammelerlass-marker",
@@ -244,72 +244,72 @@
       "dateEntryInForce": "2010-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/828",
       "dateDocument": "2009-11-27",
-      "roFundstelle": "AS 2009 828",
+      "roFundstelle": "AS 2009 6743",
       "titelDe": "Mehrwertsteuerverordnung (MWSTV)",
       "titelFr": "Ordonnance régissant la taxe sur la valeur ajoutée (OTVA)",
       "titelIt": "Ordinanza concernente l'imposta sul valore aggiunto (Ordinanza sull'IVA, OIVA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/828/de",
-      "sha": "b1a3f8f716e21ca93dc00c2a4d6bc0dc7e04e3ea934d9352586cbf1ff4dbb663"
+      "sha": "7f53b538597e171a6e5d87afdd541b7e902575d2a8c3412fd428c18d3fce6e75"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2010-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/371",
       "dateDocument": "2010-06-18",
-      "roFundstelle": "AS 2010 371",
+      "roFundstelle": "AS 2010 2833",
       "titelDe": "Mehrwertsteuerverordnung (MWSTV)",
       "titelFr": "Ordonnance régissant la taxe sur la valeur ajoutée (OTVA)",
       "titelIt": "Ordinanza concernente l'imposta sul valore aggiunto (Ordinanza sull'IVA, OIVA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/371/de",
-      "sha": "556c3879c59975ebfc0e6667052d5da23d142eec269cbd9ccb555426febe5c33"
+      "sha": "c860f187564377ecc4f433a81168f31f82f99da3b8614d80a782a0afefbfd2bc"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2006-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/360",
       "dateDocument": "2006-05-24",
-      "roFundstelle": "AS 2006 360",
+      "roFundstelle": "AS 2006 2353",
       "titelDe": "Verordnung zum Bundesgesetz über die Mehrwertsteuer (MWSTGV)",
       "titelFr": "Ordonnance relative à la loi sur la TVA (OLTVA)",
       "titelIt": "Ordinanza relativa alla legge federale concernente l'imposta sul valore aggiunto (OLIVA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/360/de",
-      "sha": "45e5ac70a178d7f2c281aa6a144dea0f5c1580b3389d2a3139165331d68a5b29"
+      "sha": "fece70cb3c21eda5f1700d3f7d0d5d32583375e2263cd4fe8276dfcfc0c44869"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2005-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/820",
       "dateDocument": "2004-12-10",
-      "roFundstelle": "AS 2004 820",
+      "roFundstelle": "AS 2004 5387",
       "titelDe": "Verordnung zum Bundesgesetz über die Mehrwertsteuer (MWSTGV)",
       "titelFr": "Ordonnance relative à la loi fédérale régissant la taxe sur la valeur ajoutée (OLTVA)",
       "titelIt": "Ordinanza relativa alla legge federale concernente l'imposta sul valore aggiunto (OLIVA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/820/de",
-      "sha": "46cffed51cbb5fd27d3c8e739f618b4d2e53fc19f4030755101492e61644bb1c"
+      "sha": "8531ba4d304c53d6d98101a4f460f5a522d392484d3051151120b03f841ad40f"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2004-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/654",
       "dateDocument": "2003-11-19",
-      "roFundstelle": "AS 2003 654",
+      "roFundstelle": "AS 2003 4353",
       "titelDe": "Verordnung zum Bundesgesetz über die Mehrwertsteuer (MWSTGV)",
       "titelFr": "Ordonnance relative à la loi fédérale régissant la taxe sur la valeur ajoutée (OLTVA)",
       "titelIt": "Ordinanza relativa alla legge federale concernente l'imposta sul valore aggiunto (OLIVA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/654/de",
-      "sha": "92872350d2ced40949e46bbc63b8af7bdfe669576f984a8e2f0d82a4140264c2"
+      "sha": "7e3b8908f60da889c6fcb223f39595d4de6ae3279735a4c774dd3dc60bf7531e"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/213",
       "dateDocument": "2000-03-29",
-      "roFundstelle": "AS 2000 213",
+      "roFundstelle": "AS 2000 1347",
       "titelDe": "Verordnung zum Bundesgesetz über die Mehrwertsteuer (MWSTGV)",
       "titelFr": "Ordonnance relative à la loi fédérale régissant la taxe sur la valeur ajoutée (OLTVA)",
       "titelIt": "Ordinanza relativa alla legge federale concernente l'imposta sul valore aggiunto (OLIVA)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/213/de",
-      "sha": "01f668acc92096a71c78ec39c8760cac8d6198f49551ad95ff3d345b35187a74"
+      "sha": "094f750ce8c1603eb790a6c508d07fbb2c41ff9792cb6f50803b8c185bc56dc7"
     },
     {
       "art": "aenderung",
@@ -336,5 +336,5 @@
       "sha": "4918b33462473dcd741db693bd76077c67e45b0a38e7e536e9a0840f027c6f91"
     }
   ],
-  "sha": "0abdef20f9fb54ffa2a62c17599f6ef1eefaf0beb18752a516483446167bb534"
+  "sha": "6409552f3bc533ae307d988fadb49b3fd2bd68dc76079af324d7bedf30ee4023"
 }

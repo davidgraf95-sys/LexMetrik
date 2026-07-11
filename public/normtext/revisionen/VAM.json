@@ -1,7 +1,7 @@
 {
   "erlassKey": "VAM",
   "sr": "812.212.21",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -123,12 +123,12 @@
       "dateEntryInForce": "2020-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/183",
       "dateDocument": "2020-02-28",
-      "roFundstelle": "AS 2020 183",
+      "roFundstelle": "AS 2020 1017",
       "titelDe": "Verordnung über die Arzneimittel (Arzneimittelverordnung, VAM)",
       "titelFr": "Ordonnance sur les médicaments (OMéd)",
       "titelIt": "Ordinanza sui medicamenti (OM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/183/de",
-      "sha": "260c901f1aebd0ae83d7aca38ff061fe697f3c8749bbb92d15d11e1ffd9659ce"
+      "sha": "a60fed8c0b2cec0a654ffeb7a746b919c2232253d983b9db9161047392181c42"
     },
     {
       "art": "sammelerlass-marker",
@@ -141,121 +141,121 @@
       "dateEntryInForce": "2019-09-15",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/507",
       "dateDocument": "2019-08-26",
-      "roFundstelle": "AS 2019 507",
+      "roFundstelle": "AS 2019 2683",
       "titelDe": "Verordnung über die Arzneimittel (Arzneimittelverordnung, VAM)",
       "titelFr": "Ordonnance sur les médicaments (OMéd)",
       "titelIt": "Ordinanza sui medicamenti (OM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/507/de",
-      "sha": "db2b989886016fcd3c3a8361bf8a0244ed0924cf3cd8ef0b4f6ae45c2e0627cc"
+      "sha": "9a8fb3304bb1b9a7a75d532f89cc087f530d14a7f3cfc7382de8696dad6e369f"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2019-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/588",
       "dateDocument": "2018-09-21",
-      "roFundstelle": "AS 2018 588",
+      "roFundstelle": "AS 2018 3577",
       "titelDe": "Verordnung über die Arzneimittel (Arzneimittelverordnung, VAM)",
       "titelFr": "Ordonnance sur les médicaments (OMéd)",
       "titelIt": "Ordinanza sui medicamenti (OM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/588/de",
-      "sha": "2f80bb5b706c8305fc849af8757a2185c7fb52f34bfc0d474c29e385de175519"
+      "sha": "209033a9562966a26f33384414df84b9975b2eec0b67d1a8751abe1349e1fb40"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2018-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/282",
       "dateDocument": "2017-04-05",
-      "roFundstelle": "AS 2017 282",
+      "roFundstelle": "AS 2017 2787",
       "titelDe": "Verordnung über die Arzneimittel (Arzneimittelverordnung, VAM)",
       "titelFr": "Ordonnance sur les médicaments (OMéd)",
       "titelIt": "Ordinanza sui medicamenti (OM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/282/de",
-      "sha": "92026839dc96c4fb1125fc200fb9249b72ab4eb33eb6724ad8df3b2304f78ccd"
+      "sha": "3d07ce401173e939d14272bb3c77f6fe12fd0142514b5c3e9940b42c06fd0fa1"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2010-10-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/585",
       "dateDocument": "2010-09-08",
-      "roFundstelle": "AS 2010 585",
+      "roFundstelle": "AS 2010 4039",
       "titelDe": "Verordnung über die Arzneimittel (Arzneimittelverordnung, VAM)",
       "titelFr": "Ordonnance sur les médicaments (OMéd)",
       "titelIt": "Ordinanza sui medicamenti (OM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/585/de",
-      "sha": "1b38daa7193e48150afdfc1905546c7b2b71a1d9e1e1266c4e1ea496f032b642"
+      "sha": "8a0250648129f7bb02bab81435482251e98274c07650aae2d80a49faa02754a6"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2010-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/480",
       "dateDocument": "2010-08-03",
-      "roFundstelle": "AS 2010 480",
+      "roFundstelle": "AS 2010 3439",
       "titelDe": "Verordnung über die Arzneimittel (Arzneimittelverordnung, VAM); Medizinprodukteverordnung (MepV) (Betrifft nur den französischen Text)",
       "titelFr": "Ordonnance sur les médicaments (OMéd); Ordonnance sur les dispositifs médicaux (ODim)",
       "titelIt": "Ordinanza sui medicamenti (OM); Ordinanza relativa ai dispositivi medici (ODmed) (Concerne solo il testo francese)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/480/de",
-      "sha": "5937dc96e7930ab6f88fe7f3fa16f3ba4ba57df1e0924f1113a8a3ee9b717985"
+      "sha": "31def23b8ecc0c7d5eebae017595c876ef17a2156986d4d2eac5fe7ee225bfa0"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2010-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/557",
       "dateDocument": "2010-09-09",
-      "roFundstelle": "AS 2010 557",
+      "roFundstelle": "AS 2010 3863",
       "titelDe": "Verordnung über die Arzneimittel (Arzneimittelverordnung, VAM) (Betrifft nur den französischen Text)",
       "titelFr": "Ordonnance sur les médicaments (OMéd)",
       "titelIt": "Ordinanza sui medicamenti (OM) (Concerne solo il testo francese)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/557/de",
-      "sha": "8841c2a41a5ed4d9f9230d8aae498dd43fc1e1b01547598b148109b3d7a0ab89"
+      "sha": "b92451ba8bd870801e473bea65f14ad6672d9c916a2d826e07fc542097586e0b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2010-04-15",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/187",
       "dateDocument": "2010-03-24",
-      "roFundstelle": "AS 2010 187",
+      "roFundstelle": "AS 2010 1295",
       "titelDe": "Verordnung über die Arzneimittel (Arzneimittelverordnung, VAM)",
       "titelFr": "Ordonnance sur les médicaments (OMéd)",
       "titelIt": "Ordinanza sui medicamenti (OM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/187/de",
-      "sha": "caef80b93fe048561d369174738bdaf5ac979db8e9c39d988ae428a363ee99ba"
+      "sha": "3b1ce297c795c8fba71d74a78ac791ec677aa1d11a435c9eeb8c63dba9027349"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2009-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/354",
       "dateDocument": "2009-05-29",
-      "roFundstelle": "AS 2009 354",
+      "roFundstelle": "AS 2009 2643",
       "titelDe": "Verordnung über die Arzneimittel (Arzneimittelverordnung, VAM)",
       "titelFr": "Ordonnance sur les médicaments (OMéd)",
       "titelIt": "Ordinanza sui medicamenti (OM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/354/de",
-      "sha": "5bfb8b260fa994212f4a6718e58124c5088316baedefa99c0ad1e1694529a110"
+      "sha": "606c20a1bd3de0f0b9c0d7f0ef9cfd1d7b955f63d4bedd5d516d43d227261d0e"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2004-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/703",
       "dateDocument": "2003-11-19",
-      "roFundstelle": "AS 2003 703",
+      "roFundstelle": "AS 2003 4793",
       "titelDe": "Verordnung über die Änderung von Verordnungen im Zusammenhang mit dem Gentechnikgesetz",
       "titelFr": "Ordonnance sur les modifications d'ordonnances dues à la loi sur le génie génétique",
       "titelIt": "Ordinanza concernente la modifica di ordinanze in relazione con la legge sull'ingegneria genetica",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/703/de",
-      "sha": "23d37904d41471bc5b2b8b6bdc6c6d4817e4520e1b57baed085ccd2e8bbf61ed"
+      "sha": "b8e32540c54f7866830fcd641e692549df7d8c8652c3e79074c20a4556da0e5f"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2002-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/516",
       "dateDocument": "2001-10-17",
-      "roFundstelle": "AS 2001 516",
+      "roFundstelle": "AS 2001 3420",
       "titelDe": "Verordnung über die Arzneimittel (Arzneimittelverordnung, VAM)",
       "titelFr": "Ordonnance sur les médicaments (OMéd)",
       "titelIt": "Ordinanza sui medicamenti (OM)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/516/de",
-      "sha": "0021a6e787180088085aefbc97a1ac390fa9d3de4fedfb0cc53bd48bcbd658ee"
+      "sha": "ee75bf7c1a7a26f0976f8e3ee6cee3a6dd6147f32f91eb5bc1ecd025b33f3ff1"
     }
   ],
-  "sha": "73ddeaab976cf804abe9eca512de0d5207281ef4371b80c57620a1f62a15ecaa"
+  "sha": "14e18f269a33b070ac6e09bf3f30626d0306013e191f527bb7ca51881737e093"
 }

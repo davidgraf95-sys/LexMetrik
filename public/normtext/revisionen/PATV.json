@@ -1,7 +1,7 @@
 {
   "erlassKey": "PATV",
   "sr": "232.141",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -47,24 +47,24 @@
       "dateEntryInForce": "2019-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/584",
       "dateDocument": "2018-09-21",
-      "roFundstelle": "AS 2018 584",
+      "roFundstelle": "AS 2018 3551",
       "titelDe": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)",
       "titelFr": "Ordonnance relative aux brevets d'invention (Ordonnance sur les brevets, OBI)",
       "titelIt": "Ordinanza relativa ai brevetti d'invenzione (Ordinanza sui brevetti, OBI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/584/de",
-      "sha": "af6a068bce5997fe82bd2327d01dea85c49c4ee73b84909f7e3c1739a7c26d5a"
+      "sha": "943ad970ffc34e1b05648e6de8429948dfd349fb79660e8d73abd47e5af3448c"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2017-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/776",
       "dateDocument": "2016-12-02",
-      "roFundstelle": "AS 2016 776",
+      "roFundstelle": "AS 2016 4837",
       "titelDe": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)",
       "titelFr": "Ordonnance relative aux brevets d'invention (Ordonnance sur les brevets, OBI)",
       "titelIt": "Ordinanza relativa ai brevetti d'invenzione (Ordinanza sui brevetti, OBI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/776/de",
-      "sha": "fa047c3e61bc979659d1d000d8af3f706f883691df167eba32901180873ffa0c"
+      "sha": "5b560862d65e6ab69b74bf33ae1fb69e2afdbf7b0fc081e04c36e94c4729e166"
     },
     {
       "art": "sammelerlass-marker",
@@ -77,12 +77,12 @@
       "dateEntryInForce": "2014-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/298",
       "dateDocument": "2013-05-01",
-      "roFundstelle": "AS 2013 298",
+      "roFundstelle": "AS 2013 1305",
       "titelDe": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)",
       "titelFr": "Ordonnance relative aux brevets d'invention (Ordonnance sur les brevets, OBI)",
       "titelIt": "Ordinanza relativa ai brevetti d'invenzione (Ordinanza sui brevetti, OBI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/298/de",
-      "sha": "4fd447b94976e01ad341674662afc126825f4f599f36dd0b1d08f6be2849fea1"
+      "sha": "2f278df4624e06ec09123d14d6baac0b8460f7fc24c9899ba7b583218b2e6c32"
     },
     {
       "art": "sammelerlass-marker",
@@ -95,12 +95,12 @@
       "dateEntryInForce": "2011-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/309",
       "dateDocument": "2011-05-11",
-      "roFundstelle": "AS 2011 309",
+      "roFundstelle": "AS 2011 2247",
       "titelDe": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)",
       "titelFr": "Ordonnance relative aux brevets d'invention (Ordonnance sur les brevets, OBI)",
       "titelIt": "Ordinanza relativa ai brevetti d'invenzione (Ordinanza sui brevetti, OBI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/309/de",
-      "sha": "4f22d6309d20b9c459d3f8f55636aa1a06b137121a5529d534b4181880483605"
+      "sha": "2889a2f5afb34964d1516fa9d6096208ec6fbc75a0618e1efa18df3e23d48ac5"
     },
     {
       "art": "sammelerlass-marker",
@@ -113,60 +113,60 @@
       "dateEntryInForce": "2008-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/367",
       "dateDocument": "2008-05-21",
-      "roFundstelle": "AS 2008 367",
+      "roFundstelle": "AS 2008 2585",
       "titelDe": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)",
       "titelFr": "Ordonnance relative aux brevets d'invention (Ordonnance sur les brevets, OBI)",
       "titelIt": "Ordinanza relativa ai brevetti d'invenzione (Ordinanza sui brevetti, OBI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/367/de",
-      "sha": "f106d85df1975cf7fc1574a1dcc8cb6eb2bc478f4e6bfebc716ee14b8bd4835c"
+      "sha": "c711fa3e6b5a24b9a84ca7bc083449abc013acbd28aa3087aac539b25fddd845"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2008-05-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/243",
       "dateDocument": "2008-03-14",
-      "roFundstelle": "AS 2008 243",
+      "roFundstelle": "AS 2008 1659",
       "titelDe": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)",
       "titelFr": "Ordonnance relative aux brevets d'invention (Ordonnance sur les brevets, OBI)",
       "titelIt": "Ordinanza relativa ai brevetti d'invenzione (Ordinanza sui brevetti, OBI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/243/de",
-      "sha": "9c8f921cc0137ec4634c3a45904ea2314c5314d78464994cc5ec289cba52f1c9"
+      "sha": "1e7fde769b2e385f98ccfd4ac8cff2817e6a7d33170db8330155bb76e94e126a"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2007-12-13",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/810",
       "dateDocument": "2007-10-17",
-      "roFundstelle": "AS 2007 810",
+      "roFundstelle": "AS 2007 6085",
       "titelDe": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)",
       "titelFr": "Ordonnance relative aux brevets d'invention (Ordonnance sur les brevets, OBI)",
       "titelIt": "Ordinanza relativa ai brevetti d'invenzione (Ordinanza sui brevetti, OBI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/810/de",
-      "sha": "00559ce9d009e354dd5c59bc4a2f3c1d1bc05b0f0944a4b092f85c2ca0274e86"
+      "sha": "aada09733d90ba4b2af5a0bd7d78815660b34f1b5fa537096f14dd0e8e20a07c"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2007-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/691",
       "dateDocument": "2006-10-18",
-      "roFundstelle": "AS 2006 691",
+      "roFundstelle": "AS 2006 4483",
       "titelDe": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)",
       "titelFr": "Ordonnance relative aux brevets d'invention (Ordonnance sur les brevets, OBI)",
       "titelIt": "Ordinanza relativa ai brevetti d'invenzione (Ordinanza sui brevetti, OBI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/691/de",
-      "sha": "e7bdc95af0971957db3b5eabb3e2e53978f7acf6e38c2d715ce0b5454d65900a"
+      "sha": "b0372c0874ef18e8aeee28cf2077ccb61970f014b7fa64dc08e89f22533a58bc"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2005-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/770",
       "dateDocument": "2004-12-03",
-      "roFundstelle": "AS 2004 770",
+      "roFundstelle": "AS 2004 5025",
       "titelDe": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)",
       "titelFr": "Ordonnance relative aux brevets d'invention (Ordonnance sur les brevets, OBI)",
       "titelIt": "Ordinanza relativa ai brevetti d'invenzione (Ordinanza sui brevetti, OBI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/770/de",
-      "sha": "98712bc5ecde7db932bf613c998539a751b8a96394c2d45253614174e9889f68"
+      "sha": "dc83e82107711f314177f2eb0f9c6c70fb9f22581df890b8cb861ce376587c8d"
     },
     {
       "art": "sammelerlass-marker",
@@ -179,24 +179,24 @@
       "dateEntryInForce": "2000-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/413",
       "dateDocument": "1999-08-11",
-      "roFundstelle": "AS 1999 413",
+      "roFundstelle": "AS 1999 2629",
       "titelDe": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)",
       "titelFr": "Ordonnance relative aux brevets d'invention (Ordonnance sur les brevets, OBI)",
       "titelIt": "Ordinanza relativa ai brevetti d'invenzione (Ordinanza sui brevetti, OBI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/413/de",
-      "sha": "a1063464feb397b8cb5bc7d200118a71d5253c17a1a93565e385fa81eec0271e"
+      "sha": "49968d132d4cb07d7d5f30d32ec7a71056ccfacee259a49bcbdf0e07f015675d"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "1999-05-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/216",
       "dateDocument": "1999-03-31",
-      "roFundstelle": "AS 1999 216",
+      "roFundstelle": "AS 1999 1443",
       "titelDe": "Verordnung über die Erfindungspatente (Patentverordnung, PatV)",
       "titelFr": "Ordonnance relative aux brevets d'invention (Ordonnance sur les brevets, OBI)",
       "titelIt": "Ordinanza relativa ai brevetti d'invenzione (Ordinanza sui brevetti, OBI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/216/de",
-      "sha": "61508b2371be8dd3abad85c1563562ad949134cf61fe5ea058e6c72c1073114d"
+      "sha": "a78c1f8c27cea1b86b0b0cd808d08f112f607d3942ec17812323856e8f352e97"
     },
     {
       "art": "aenderung",
@@ -223,5 +223,5 @@
       "sha": "cf21faa3e3f5b3017315476b7aabef4ba864b2ab6946a022823553024806e2f7"
     }
   ],
-  "sha": "108b749a2139ec674a9117a0103c4e31b370888b1f5ba33a5dee2b57d807fe68"
+  "sha": "baf7345eeccc4d4be73f9cec6c53c981ce3f7ca034471d615c5aa0fc4cdc4750"
 }

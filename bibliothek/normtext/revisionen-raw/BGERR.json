@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-11-20"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Reglement für das Bundesgericht (BGerR)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement du Tribunal fédéral (RTF)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Regolamento del Tribunale federale (RTF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "173.110.131"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/834"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-11-20"
+        "value": "RO 2006 5635"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-11-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 5635"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Reglement für das Bundesgericht (BGerR)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-11-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 5635"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Reglement für das Bundesgericht (BGerR)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement du Tribunal fédéral (RTF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Regolamento del Tribunale federale (RTF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "173.110.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/834"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-11-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 5635"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Reglement für das Bundesgericht (BGerR)"
@@ -148,6 +164,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-01-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 33"
       },
       "titleDe": {
         "type": "literal",
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-01-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 33"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Reglement für das Bundesgericht (BGerR)"
@@ -213,6 +237,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-01-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 33"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Reglement für das Bundesgericht (BGerR)"
@@ -245,37 +273,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-11-24"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Reglement für das Bundesgericht (BGerR)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement du Tribunal fédéral (RTF)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Regolamento del Tribunale federale (RTF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "173.110.131"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2008/863"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2008-11-24"
+        "value": "RO 2008 6415"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +309,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-11-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 6415"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Reglement für das Bundesgericht (BGerR)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement du Tribunal fédéral (RTF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Regolamento del Tribunale federale (RTF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "173.110.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/863"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2008-11-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 6415"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Reglement für das Bundesgericht (BGerR)"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-12-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 6387"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Reglement für das Bundesgericht (BGerR)"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-12-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 6387"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Reglement für das Bundesgericht (BGerR)"
@@ -404,6 +452,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-12-09"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 6387"
       },
       "titleDe": {
         "type": "literal",
@@ -437,37 +489,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-07-03"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Reglement für das Bundesgericht (BGerR)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement du Tribunal fédéral (RTF)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Regolamento del Tribunale federale (RTF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "173.110.131"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/458"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-07-03"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-07-03"
+        "value": "RO 2012 3945"
       },
       "titleDe": {
         "type": "literal",
@@ -501,6 +525,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-07-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 3945"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Reglement für das Bundesgericht (BGerR)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement du Tribunal fédéral (RTF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Regolamento del Tribunale federale (RTF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "173.110.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/458"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-07-03"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-07-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 3945"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Reglement für das Bundesgericht (BGerR)"
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-10-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6977"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Reglement für das Bundesgericht (BGerR)"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-10-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6977"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Reglement für das Bundesgericht (BGerR)"
@@ -596,6 +668,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-10-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 6977"
       },
       "titleDe": {
         "type": "literal",
@@ -629,6 +705,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-03-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1043"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Reglement für das Bundesgericht (BGerR)"
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-03-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 1043"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Reglement für das Bundesgericht (BGerR)"
@@ -693,69 +777,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-03-04"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Reglement für das Bundesgericht (BGerR)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement du Tribunal fédéral (RTF)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Regolamento del Tribunale federale (RTF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "173.110.131"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2013/516"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-06-24"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Reglement für das Bundesgericht (BGerR)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Règlement du Tribunal fédéral (RTF)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Regolamento del Tribunale federale (RTF)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "173.110.131"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2013/516"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2013-06-24"
+        "value": "RO 2013 1043"
       },
       "titleDe": {
         "type": "literal",
@@ -789,6 +813,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2013-06-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 2461"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Reglement für das Bundesgericht (BGerR)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement du Tribunal fédéral (RTF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Regolamento del Tribunale federale (RTF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "173.110.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/516"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-06-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 2461"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Reglement für das Bundesgericht (BGerR)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Règlement du Tribunal fédéral (RTF)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Regolamento del Tribunale federale (RTF)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "173.110.131"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2013/516"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2013-06-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 2461"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Reglement für das Bundesgericht (BGerR)"
@@ -821,6 +921,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-03-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 955"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Reglement für das Bundesgericht (BGerR)"
@@ -853,6 +957,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-03-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 955"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Reglement für das Bundesgericht (BGerR)"
@@ -884,6 +992,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-03-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 955"
       },
       "titleDe": {
         "type": "literal",
@@ -917,6 +1029,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-11-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 47"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Reglement für das Bundesgericht (BGerR)"
@@ -949,6 +1065,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-11-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 47"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Reglement für das Bundesgericht (BGerR)"
@@ -981,6 +1101,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-11-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 47"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Reglement für das Bundesgericht (BGerR)"
@@ -1013,6 +1137,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-10-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 4967"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Reglement für das Bundesgericht (BGerR)"
@@ -1045,6 +1173,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-10-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 4967"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Reglement für das Bundesgericht (BGerR)"
@@ -1076,6 +1208,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-10-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 4967"
       },
       "titleDe": {
         "type": "literal",

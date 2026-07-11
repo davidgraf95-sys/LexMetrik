@@ -1,7 +1,7 @@
 {
   "erlassKey": "IVG",
   "sr": "831.20",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -84,12 +84,12 @@
       "dateEntryInForce": "2018-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/654",
       "dateDocument": "2017-03-17",
-      "roFundstelle": "AS 2017 654",
+      "roFundstelle": "AS 2017 5987",
       "titelDe": "Bundesgesetz über die Invalidenversicherung (IVG)",
       "titelFr": "Loi fédérale sur l'assurance-invalidité (LAI)",
       "titelIt": "Legge federale sull'assicurazione per l'invalidità (LAI)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/654/de",
-      "sha": "c1a5ebb6667e2bd99fda6d5614292d314905037316a857985991003176e39f9f"
+      "sha": "8205ec9670ed6b40b2bcc231af33fe831228de9b5c4807e4987922cb4d565edf"
     },
     {
       "art": "sammelerlass-marker",
@@ -114,13 +114,13 @@
       "dateEntryInForce": "2013-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/644",
       "dateDocument": "2012-06-15",
-      "roFundstelle": "AS 2012 644",
+      "roFundstelle": "AS 2012 5559",
       "titelDe": "Bundesgesetz über die Invalidenversicherung (IVG) (6. IV-Revision, zweites Massnahmenpaket: Kostenvergütung für stationäre Behandlungen)",
       "titelFr": "Loi fédérale sur l'assurance-invalidité (LAI) (6e révision de l'AI, deuxième volet: prise en charge des traitements stationnaires hospitaliers)",
       "titelIt": "Legge federale sull'assicurazione per l'invalidità (LAI) (6a revisione AI, secondo pacchetto di misure: rimborso delle spese per cure ospedaliere)",
       "botschaftKey": "BOTSCHAFT-2011-855",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/644/de",
-      "sha": "cc209cbaa845a516bc18f515ddc47a0942c87d9bd6da11c0d122f3cdda01ad09"
+      "sha": "340e4b74d8cbd8116c3f5b3a1f8ad0d67c130560e7f64d0561441893e4597b44"
     },
     {
       "art": "sammelerlass-marker",
@@ -133,25 +133,25 @@
       "dateEntryInForce": "2012-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/799",
       "dateDocument": "2011-03-18",
-      "roFundstelle": "AS 2011 799",
+      "roFundstelle": "AS 2011 5659",
       "titelDe": "Bundesgesetz über die Invalidenversicherung (IVG) (6. IV-Revision, erstes Massnahmenpaket)",
       "titelFr": "Loi fédérale sur l'assurance-invalidité (LAI) (6e révision de l'AI, premier volet)",
       "titelIt": "Legge federale sull'assicurazione per l'invalidità (LAI) (6a revisione AI, primo pacchetto di misure)",
       "botschaftKey": "BOTSCHAFT-2010-340",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/799/de",
-      "sha": "ed9d7f818987dc695682bed74b2830ee35ddba460e69811703b12750ef5e2e49"
+      "sha": "b6639480f77a2cd825136ca6b6eae78b48e86dc97cd18edc6536953df0811ad1"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2012-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/357",
       "dateDocument": "2012-05-07",
-      "roFundstelle": "AS 2012 357",
+      "roFundstelle": "AS 2012 3129",
       "titelDe": "Bundesgesetz über die Invalidenversicherung (IVG) (6. IV-Revision, erstes Massnahmenpaket)",
       "titelFr": "Loi fédérale sur l'assurance-invalidité (LAI) (6e révision de l'AI, premier volet)",
       "titelIt": "Legge federale sull'assicurazione per l'invalidità (LAI) (6a revisione AI, primo pacchetto di misure)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/357/de",
-      "sha": "fb82a3b565b249cc8449744731564d5872136e78f9be988661b5bc176c97b202"
+      "sha": "1514581123d8e2b619fd065f905974487f6bcc70f921b65ab4eef9060830bd78"
     },
     {
       "art": "sammelerlass-marker",
@@ -182,13 +182,13 @@
       "dateEntryInForce": "2008-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/722",
       "dateDocument": "2006-10-06",
-      "roFundstelle": "AS 2007 722",
+      "roFundstelle": "AS 2007 5129",
       "titelDe": "Bundesgesetz über die Invalidenversicherung (IVG)",
       "titelFr": "Loi fédérale sur l'assurance-invalidité (LAI)",
       "titelIt": "Legge federale sull'assicurazione per l'invalidità (LAI)",
       "botschaftKey": "BOTSCHAFT-2005-719",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/722/de",
-      "sha": "12fe2749449e315da42f34e4d37d205ac629db44d6ea8e963bf0246ab5106b8d"
+      "sha": "b01b07ad8de5ab6e4f204a3bad9b3292d7ca149f6d3883b40725ad58d86f4c1e"
     },
     {
       "art": "sammelerlass-marker",
@@ -201,13 +201,13 @@
       "dateEntryInForce": "2006-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/310",
       "dateDocument": "2005-12-16",
-      "roFundstelle": "AS 2006 310",
+      "roFundstelle": "AS 2006 2003",
       "titelDe": "Bundesgesetz über die Invalidenversicherung (IVG)",
       "titelFr": "Loi fédérale sur l'assurance-invalidité (LAI)",
       "titelIt": "Legge federale sull'assicurazione per l'invalidità (LAI)",
       "botschaftKey": "BOTSCHAFT-2005-490",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/310/de",
-      "sha": "b1f695c07400f18a3869564eca3e9901760490e6b74540f395ad0456559fb78e"
+      "sha": "649477ea991630f7760c08767a513800941dc1f21eed59ee78287ab956f655e3"
     },
     {
       "art": "sammelerlass-marker",
@@ -220,13 +220,13 @@
       "dateEntryInForce": "2004-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2003/560",
       "dateDocument": "2003-03-21",
-      "roFundstelle": "AS 2003 560",
+      "roFundstelle": "AS 2003 3837",
       "titelDe": "Bundesgesetz über die Invalidenversicherung (IVG)",
       "titelFr": "Loi fédérale sur l'assurance-invalidité (LAI)",
       "titelIt": "Legge federale sull'assicurazione per l'invalidità (LAI)",
       "botschaftKey": "BOTSCHAFT-2001-617",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2003/560/de",
-      "sha": "43e3f3a02c8e63111a46c8a4fdb8b54b440d5677ec40bf706d5f304ea7bee7ce"
+      "sha": "d8f9a084dedbe54c5b544c8408a91dbff30e114f664cf0ef50946c566bb474cc"
     },
     {
       "art": "sammelerlass-marker",
@@ -245,13 +245,13 @@
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/440",
       "dateDocument": "2000-06-23",
-      "roFundstelle": "AS 2000 440",
+      "roFundstelle": "AS 2000 2685",
       "titelDe": "Bundesgesetz über die Invalidenversicherung (IVG)",
       "titelFr": "Loi fédérale sur l'assurance-invalidité (LAI)",
       "titelIt": "Legge federale sull'assicurazione per l'invalidità (LAI)",
       "botschaftKey": "BOTSCHAFT-2000-99",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/440/de",
-      "sha": "daba9f3f43fdb531a36d08a07c621d93d6c04cc5d8516bd67a641872128a5ba1"
+      "sha": "1c1c9f680695ef5ce52c8122ece1de86f0f1054aa6a9aeca70c185d77209fefd"
     },
     {
       "art": "aenderung",
@@ -278,5 +278,5 @@
       "sha": "8d931f9361014ee915dc64f9739d58cf972287c6f17d0efcc4ed1c80523260df"
     }
   ],
-  "sha": "43c28f5979df3f531cd58861f2c1b65df5b8b7f3364df7ca60acd4259cd233ee"
+  "sha": "0edc973d1e1ae8837b11cb46d6566dc32cce28a316f17792e427f85b9cbc5163"
 }

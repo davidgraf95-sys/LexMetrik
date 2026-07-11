@@ -21,6 +21,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-04-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1463"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemienverordnung, EpV)"
@@ -53,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-04-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1463"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemienverordnung, EpV)"
@@ -85,6 +93,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-04-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1463"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemienverordnung, EpV)"
@@ -116,6 +128,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-04-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1463"
       },
       "titleDe": {
         "type": "literal",

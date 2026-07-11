@@ -1,7 +1,7 @@
 {
   "erlassKey": "EPG",
   "sr": "818.101",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -45,25 +45,25 @@
       "dateEntryInForce": "2020-06-25",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/437",
       "dateDocument": "2020-06-19",
-      "roFundstelle": "AS 2020 437",
+      "roFundstelle": "AS 2020 2191",
       "titelDe": "Bundesgesetz über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemiengesetz, EpG)",
       "titelFr": "Loi fédérale sur la lutte contre les maladies transmissibles de l'homme (Loi sur les épidémies, LEp)",
       "titelIt": "Legge federale sulla lotta contro le malattie trasmissibili dell'essere umano (Legge sulle epidemie, LEp)",
       "botschaftKey": "BOTSCHAFT-2020-1024",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/437/de",
-      "sha": "5b06d858b1ae95edb7ae32ee8b0e6fdff0e3253e1c4030820c6358ceedf252c7"
+      "sha": "bee9067b7d6d397144ad151577eb11c825260069780d0144281f716b1f5d84ea"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2020-06-25",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2020/492",
       "dateDocument": "2020-06-30",
-      "roFundstelle": "AS 2020 492",
+      "roFundstelle": "AS 2020 2727",
       "titelDe": "Bundesgesetz über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemiengesetz, EpG)",
       "titelFr": "Loi fédérale sur la lutte contre les maladies transmissibles de l'homme (Loi sur les épidémies, LEp)",
       "titelIt": "Legge federale sulla lotta contro le malattie trasmissibili dell'essere umano (Legge sulle epidemie, LEp)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2020/492/de",
-      "sha": "f39e2ad83b399b53fb4aa5bf51bcac31844a7557329e0a44f24f23f993e4e9cf"
+      "sha": "8b9b8587dbec9c41e92f18db8a0caca6d271d32258118607f7766534b9864510"
     },
     {
       "art": "sammelerlass-marker",
@@ -76,39 +76,39 @@
       "dateEntryInForce": "2016-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/297",
       "dateDocument": "2012-09-28",
-      "roFundstelle": "AS 2015 297",
+      "roFundstelle": "AS 2015 1435",
       "titelDe": "Bundesgesetz über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemiengesetz, EpG)",
       "titelFr": "Loi fédérale sur la lutte contre les maladies transmissibles de l'homme (Loi sur les épidémies, LEp)",
       "titelIt": "Legge federale sulla lotta contro le malattie trasmissibili dell'essere umano (Legge sulle epidemie, LEp)",
       "botschaftKey": "BOTSCHAFT-2011-43",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/297/de",
-      "sha": "8d3a8605fc4139ff915f1d1db18ea0f557f61cf7e0bfe287356765f9a121450f"
+      "sha": "63944586b7fffcf0f2dca60b29f8205d0c21d43b2874a53f108c975367a65021"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2013-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/890",
       "dateDocument": "2012-12-14",
-      "roFundstelle": "AS 2012 890",
+      "roFundstelle": "AS 2012 7281",
       "titelDe": "Epidemiengesetz (Versorgung der Bevölkerung mit Heilmitteln)",
       "titelFr": "Loi sur les épidémies (Approvisionnement de la population en produits thérapeutiques)",
       "titelIt": "Legge sulle epidemie (Approvvigionamento della popolazione con agenti terapeutici)",
       "botschaftKey": "BOTSCHAFT-2012-1603",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/890/de",
-      "sha": "e254f2410784eba0236dc633b3e998e69f1e56887438a540f64c36e5c8746df2"
+      "sha": "7a50fb56e141b4fd8bf24fd12d0e9f68bcd34ae0c6e5bfef42e0f335f41ccad6"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2006-10-07",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/608",
       "dateDocument": "2006-10-06",
-      "roFundstelle": "AS 2006 608",
+      "roFundstelle": "AS 2006 4137",
       "titelDe": "Epidemiengesetz (Versorgung der Bevölkerung mit Heilmitteln)",
       "titelFr": "Loi sur les épidémies (Approvisionnement de la population en produits thérapeutiques)",
       "titelIt": "Legge sulle epidemie (Approvvigionamento della popolazione con agenti terapeutici)",
       "botschaftKey": "BOTSCHAFT-2006-666",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/608/de",
-      "sha": "3064a8787e99b0307e9c41d430dc375f80d6057c31913c4a918a2726829c54c7"
+      "sha": "1928e39ec8e728219f36065584749a9e88f9f2fe0e20f167ff6e50825b9287c2"
     },
     {
       "art": "aenderung",
@@ -135,5 +135,5 @@
       "sha": "9dac784b1485ac7678b5d802f84fe4fc1c0f2774c9e5b2800adb8ad0448c87a5"
     }
   ],
-  "sha": "348ffa5bdeb3d6eef77ac7ef6b585fea30a16b0cccaaa5be8a1ce1ab301c8ce1"
+  "sha": "41cff145c7841318850cd03607b43346b395e6a1101b05451397c1964d3328d1"
 }

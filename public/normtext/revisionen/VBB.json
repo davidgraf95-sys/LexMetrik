@@ -1,7 +1,7 @@
 {
   "erlassKey": "VBB",
   "sr": "281.31",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -9,24 +9,24 @@
       "dateEntryInForce": "2016-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/671",
       "dateDocument": "2015-10-14",
-      "roFundstelle": "AS 2015 671",
+      "roFundstelle": "AS 2015 4007",
       "titelDe": "Verordnung über die im Betreibungs- und Konkursverfahren zu verwendenden Formulare und Register sowie die Rechnungsführung (VFRR)",
       "titelFr": "Ordonnance sur les formulaires et registres à employer en matière de poursuite pour dettes et de faillite et sur la comptabilité (Oform)",
       "titelIt": "Regolamento sui formulari e registri da impiegare in tema d'esecuzione e di fallimento e sulla contabilità (Rform)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/671/de",
-      "sha": "20813768891a8ec6e824632c571bcfef9da34be30952b3fb94b9a5ca9a1d1046"
+      "sha": "fa2307654d5b39646bcec39d96cf17cffc29829222b7194e371c20640e38266c"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2016-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/726",
       "dateDocument": "2015-11-10",
-      "roFundstelle": "AS 2015 726",
+      "roFundstelle": "AS 2015 4295",
       "titelDe": "Verordnung über die im Betreibungs- und Konkursverfahren zu verwendenden Formulare und Register sowie die Rechnungsführung (VFRR)",
       "titelFr": "Ordonnance sur les formulaires et registres à employer en matière de poursuite pour dettes et de faillite et sur la comptabilité (Oform)",
       "titelIt": "Regolamento sui formulari e registri da impiegare in tema d'esecuzione e di fallimento e sulla contabilità (Rform)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/726/de",
-      "sha": "b2750f534eec656f4603ce8dac51054d4dac3d0c7f1a779c1de998b5ab9c7a36"
+      "sha": "6727c2b641e207c6e05d6b442921847eef944b170c44f518d3866cf71e58f17d"
     },
     {
       "art": "aenderung",
@@ -53,5 +53,5 @@
       "sha": "df11973338e2919ffdd1f54f76146374bd941202ee27a04eddce9fff5331c049"
     }
   ],
-  "sha": "44c9b8060c0ab45f14344b416af2f05053da8e1ca8f0a0f808efa417535386e8"
+  "sha": "478eda87541867a7dccbea2c03e227e44d244d0c4672e2598859e6f13d8d8401"
 }

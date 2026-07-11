@@ -1,7 +1,7 @@
 {
   "erlassKey": "KVG",
   "sr": "832.10",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -243,49 +243,49 @@
       "dateEntryInForce": "2019-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2019/226",
       "dateDocument": "2018-12-14",
-      "roFundstelle": "AS 2019 226",
+      "roFundstelle": "AS 2019 1211",
       "titelDe": "Bundesgesetz über die Krankenversicherung (KVG) (Befristete Verlängerung der Zulassungsbeschränkung nach Artikel 55a KVG)",
       "titelFr": "Loi fédérale sur l'assurance-maladie (LAMal) (Prolongation pour une durée déterminée de la limitation de l'admission à pratiquer définie à l'art. 55a LAMal)",
       "titelIt": "Legge federale sull'assicurazione malattie (LAMal) (Proroga a tempo determinato della limitazione dell'autorizzazione a esercitare di cui all'articolo 55a LAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2019/226/de",
-      "sha": "a4a916c6ac2ab4b3b9076146e1a6b9ed928f59826017402b678c03b99eeaf312"
+      "sha": "e42ee3f8bb9d37053aa26e31b11e5a7bb86088929f62fa4aef85feb1cbf10a7e"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2019-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/276",
       "dateDocument": "2017-03-17",
-      "roFundstelle": "AS 2018 276",
+      "roFundstelle": "AS 2018 1843",
       "titelDe": "Bundesgesetz über die Krankenversicherung (KVG)",
       "titelFr": "Loi fédérale sur l'assurance-maladie (LAMal)",
       "titelIt": "Legge federale sull'assicurazione malattie (LAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/276/de",
-      "sha": "503df083ae687d8dd907c89790c0dfec45b30a2570ec54fb8133aa17286c4bd5"
+      "sha": "887454cba2129a14b41c08732829d78dd262e0c863ab111b6a8d12f1cd11a9e5"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2019-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2018/457",
       "dateDocument": "2017-09-29",
-      "roFundstelle": "AS 2018 457",
+      "roFundstelle": "AS 2018 2989",
       "titelDe": "Bundesgesetz über die Krankenversicherung (KVG)",
       "titelFr": "Loi fédérale sur l'assurance-maladie (LAMal)",
       "titelIt": "Legge federale sull'assicurazione malattie (LAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2018/457/de",
-      "sha": "278591965702d34c6781778fd96e646dc403bde22b18470f0622e0b03d590ea9"
+      "sha": "10851a26d3ce5a065cfdc47cd75a8c9fe2a9ff09260c1985061f6c8be84d1549"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2018-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2017/748",
       "dateDocument": "2016-09-30",
-      "roFundstelle": "AS 2017 748",
+      "roFundstelle": "AS 2017 6717",
       "titelDe": "Bundesgesetz über die Krankenversicherung (KVG) (Anpassung von Bestimmungen mit internationalem Bezug)",
       "titelFr": "Loi fédérale sur l'assurance-maladie (LAMal) (Adaptation de dispositions à caractère international)",
       "titelIt": "Legge federale sull'assicurazione malattie (LAMal) (Adeguamento delle disposizioni con pertinenza internazionale)",
       "botschaftKey": "BOTSCHAFT-2016-1",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2017/748/de",
-      "sha": "257b62177875ed9977e7cf11484141316283479e3ea1d48b4a2cbfec1217e9c7"
+      "sha": "de18f0140f57d15cc7250b9503e8619b71780f095109cf7b60196a3a319d28fe"
     },
     {
       "art": "sammelerlass-marker",
@@ -310,24 +310,24 @@
       "dateEntryInForce": "2017-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/580",
       "dateDocument": "2014-03-21",
-      "roFundstelle": "AS 2014 580",
+      "roFundstelle": "AS 2014 3345",
       "titelDe": "Bundesgesetz über die Krankenversicherung (KVG)",
       "titelFr": "Loi fédérale sur l'assurance-maladie (LAMal)",
       "titelIt": "Legge federale sull'assicurazione malattie (LAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/580/de",
-      "sha": "0839cbd2c77c054da0c78b82fdeceb0a6ea89e483db6dc919d6b76cd6ef71869"
+      "sha": "aad804fe876f441c4db930338683b24d8d8cefab33567db5c8abf3e51053f0e4"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2016-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2016/361",
       "dateDocument": "2016-06-17",
-      "roFundstelle": "AS 2016 361",
+      "roFundstelle": "AS 2016 2265",
       "titelDe": "Bundesgesetz über die Krankenversicherung (KVG)",
       "titelFr": "Loi fédérale sur l'assurance-maladie (LAMal)",
       "titelIt": "Legge federale sull'assicurazione malattie (LAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2016/361/de",
-      "sha": "252212ca821a97feb6b61857a7f7875ed2bd77a70a9636c7b4d13540a7dcb98a"
+      "sha": "6b909673f5ec2c57361fbefbac07ae99c35a4b997eda59abdca68d5bde1c9de9"
     },
     {
       "art": "sammelerlass-marker",
@@ -340,62 +340,62 @@
       "dateEntryInForce": "2015-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/431",
       "dateDocument": "2014-03-21",
-      "roFundstelle": "AS 2014 431",
+      "roFundstelle": "AS 2014 2463",
       "titelDe": "Bundesgesetz über die Krankenversicherung (KVG) (Prämienkorrektur)",
       "titelFr": "Loi fédérale sur l'assurance-maladie (LAMal) (Correction des primes)",
       "titelIt": "Legge federale sull'assicurazione malattie (LAMal) (Correzione dei premi)",
       "botschaftKey": "BOTSCHAFT-2012-350",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/431/de",
-      "sha": "e3571727dc96137f1cf40c08566cae2f56d118cfe667b3607698055d577fc7aa"
+      "sha": "810ab83c82d55d3f76c5732297b698a937efeb5115b5d69e93353f96a3885ac3"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2014-03-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2014/56",
       "dateDocument": "2013-06-21",
-      "roFundstelle": "AS 2014 56",
+      "roFundstelle": "AS 2014 387",
       "titelDe": "Bundesgesetz über die Krankenversicherung (KVG)",
       "titelFr": "Loi fédérale sur l'assurance-maladie (LAMal)",
       "titelIt": "Legge federale sull'assicurazione malattie (LAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2014/56/de",
-      "sha": "9f5fefa521dd000b353872552f9926ae671a310017003a403510fac0b60dfa44"
+      "sha": "f97f6d4530fce1663f9c6d6eb50d7092391b50c6bf3dbf2c11f9ae9234dcab34"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2013-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/428",
       "dateDocument": "2013-06-21",
-      "roFundstelle": "AS 2013 428",
+      "roFundstelle": "AS 2013 2065",
       "titelDe": "Bundesgesetz über die Krankenversicherung (KVG) (Vorübergehende Wiedereinführung der bedarfsabhängigen Zulassung)",
       "titelFr": "Loi fédérale sur l'assurance-maladie (LAMal) (Réintroduction temporaire de l'admission selon le besoin)",
       "titelIt": "Legge federale sull'assicurazione malattie (LAMal) (Reintroduzione temporanea dell'autorizzazione secondo il bisogno)",
       "botschaftKey": "BOTSCHAFT-2012-1750",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/428/de",
-      "sha": "bbcbc865785985770b786094566fe8af25c1498e7ac0e02dc26ad1f203af3f57"
+      "sha": "aea10f5b0e769844310d821effb3e5a77b8d96f2b2522b70d1751ce39047a58b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2013-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/472",
       "dateDocument": "2011-12-23",
-      "roFundstelle": "AS 2012 472",
+      "roFundstelle": "AS 2012 4085",
       "titelDe": "Bundesgesetz über die Krankenversicherung (KVG)",
       "titelFr": "Loi fédérale sur l'assurance-maladie (LAMal)",
       "titelIt": "Legge federale sull'assicurazione malattie (LAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/472/de",
-      "sha": "eed0b52eb037bfd42dbcb77d12afb0615bd548863138a63eef96b39c193d7940"
+      "sha": "9c01e14ef15938ec11967927597eb4315c5500f16ea9b6664170f3aa0aaf95c5"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2013-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/473",
       "dateDocument": "2011-12-23",
-      "roFundstelle": "AS 2012 473",
+      "roFundstelle": "AS 2012 4087",
       "titelDe": "Bundesgesetz über die Krankenversicherung (KVG)",
       "titelFr": "Loi fédérale sur l'assurance-maladie (LAMal)",
       "titelIt": "Legge federale sull'assicurazione malattie (LAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/473/de",
-      "sha": "1ece050b69bfba2623f37ae9ab5fc84f4c440c25cabe6f13a06ba1e6489df5b6"
+      "sha": "1b9d76ffd5645a744eb43eb7b48aeedef570e9ec2e02a6e7db34bd2bcc1a1b87"
     },
     {
       "art": "sammelerlass-marker",
@@ -408,25 +408,25 @@
       "dateEntryInForce": "2012-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/476",
       "dateDocument": "2010-03-19",
-      "roFundstelle": "AS 2011 476",
+      "roFundstelle": "AS 2011 3523",
       "titelDe": "Bundesgesetz über die Krankenversicherung (KVG)",
       "titelFr": "Loi fédérale sur l'assurance-maladie (LAMal)",
       "titelIt": "Legge federale sull'assicurazione malattie (LAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/476/de",
-      "sha": "29e3229f0b26ce4e7ad01ccf517fa692ab47e11afaa658d9313860395ef5511c"
+      "sha": "60f33038127818aa98b5aad3f85182b9e467f09dba5d4a50edf2145183ef104b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2011-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/559",
       "dateDocument": "2007-12-21",
-      "roFundstelle": "AS 2009 559",
+      "roFundstelle": "AS 2009 4755",
       "titelDe": "Bundesgesetz über die Krankenversicherung (KVG) (Risikoausgleich)",
       "titelFr": "Loi fédérale sur l'assurance-maladie (LAMal) (Compensation des risques)",
       "titelIt": "Legge federale sull'assicurazione malattie (LAMal) (Compensazione dei rischi)",
       "botschaftKey": "BOTSCHAFT-2004-1024",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/559/de",
-      "sha": "371fa1c191a9943b468a3afbd9f5228dbd319d7144fc29a4d16c0fb161ef1797"
+      "sha": "ff9bd18e9a5237d6533c3b0c03689d5b188e3b4af7691b9a613f264b83410449"
     },
     {
       "art": "sammelerlass-marker",
@@ -439,12 +439,12 @@
       "dateEntryInForce": "2010-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2009/618",
       "dateDocument": "2009-06-12",
-      "roFundstelle": "AS 2009 618",
+      "roFundstelle": "AS 2009 5265",
       "titelDe": "Bundesgesetz über die Krankenversicherung (KVG)",
       "titelFr": "Loi fédérale sur l'assurance-maladie (LAMal)",
       "titelIt": "Legge federale sull'assicurazione malattie (LAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2009/618/de",
-      "sha": "c1cd666bf1afdb272c54004ea06ef675ac24683cff48bd79d696c3727f9558a2"
+      "sha": "cb7c61d9b1ae5a54376aaa08868de1bcaa624bb8d379bc6e388db106dcad243b"
     },
     {
       "art": "sammelerlass-marker",
@@ -457,13 +457,13 @@
       "dateEntryInForce": "2009-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/291",
       "dateDocument": "2007-12-21",
-      "roFundstelle": "AS 2008 291",
+      "roFundstelle": "AS 2008 2049",
       "titelDe": "Bundesgesetz über die Krankenversicherung (KVG) (Spitalfinanzierung)",
       "titelFr": "Loi fédérale sur l'assurance-maladie (LAMal) (Financement hospitalier)",
       "titelIt": "Legge federale sull'assicurazione malattie (LAMal) (Finanziamento ospedaliero)",
       "botschaftKey": "BOTSCHAFT-2004-1024",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/291/de",
-      "sha": "a60f7ab21a1a6484a16abb6d076f969226d1fb3bd9ba986379b70b197c032305"
+      "sha": "0dab545f0b0c9c388a47be5f31758be41657aceb3c8177dfdb28e75b377992de"
     },
     {
       "art": "sammelerlass-marker",
@@ -476,13 +476,13 @@
       "dateEntryInForce": "2008-06-14",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2008/401",
       "dateDocument": "2008-06-13",
-      "roFundstelle": "AS 2008 401",
+      "roFundstelle": "AS 2008 2917",
       "titelDe": "Bundesgesetz über die Krankenversicherung (KVG) (Bedarfsabhängige Zulassung)",
       "titelFr": "Loi fédérale sur l'assurance-maladie (LAMal) (Admission selon le besoin)",
       "titelIt": "Legge federale sull'assicurazione malattie (LAMal) (Autorizzazione a seconda del bisogno)",
       "botschaftKey": "BOTSCHAFT-2004-709",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2008/401/de",
-      "sha": "c32dc0b4f3f648637e681b914e3c71db8e585b8517540e4e5979f25434441fac"
+      "sha": "f8e1680ec5252849f5d61017e06f8de8452e088fc34c999dcb0276f8e4d00920"
     },
     {
       "art": "sammelerlass-marker",
@@ -501,37 +501,37 @@
       "dateEntryInForce": "2007-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/743",
       "dateDocument": "2005-12-16",
-      "roFundstelle": "AS 2006 743",
+      "roFundstelle": "AS 2006 4823",
       "titelDe": "Bundesgesetz über die Krankenversicherung (KVG)",
       "titelFr": "Loi fédérale sur l'assurance-maladie (LAMal)",
       "titelIt": "Legge federale sull'assicurazione malattie (LAMal)",
       "botschaftKey": "BOTSCHAFT-2002-1106",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/743/de",
-      "sha": "351464d2cb11eb49333b7dc0a94e9a328c052a675fa9dcefe1d0d2c3a0452a9a"
+      "sha": "d210b5f61da7a6f17e4248c841a9234d5ab05df73a4d49d0cf9f8ef8ca1f1263"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2006-12-21",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/855",
       "dateDocument": "2006-12-20",
-      "roFundstelle": "AS 2006 855",
+      "roFundstelle": "AS 2006 5767",
       "titelDe": "Bundesgesetz über die Krankenversicherung (KVG) (Pflegetarife)",
       "titelFr": "Loi fédérale sur l'assurance-maladie (LAMal) (Tarif des soins)",
       "titelIt": "Legge federale sull'assicurazione malattie (LAMal) (Tariffe delle cure)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/855/de",
-      "sha": "744751e9eb0c5fb4b84041cbdbf0ba708acdbe23f3bc4ceb08fd26f4152bcfbe"
+      "sha": "299bf9814577b72dd81951958b7aa2fe4baf08f9876efc13c5c5d44d536b97ef"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2006-12-21",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/74",
       "dateDocument": "2007-02-13",
-      "roFundstelle": "AS 2007 74",
+      "roFundstelle": "AS 2007 385",
       "titelDe": "Bundesgesetz über die Krankenversicherung (KVG) (Pflegetarife) (Betrifft nur den italienischen Text)",
       "titelFr": "Loi fédérale sur l'assurance-maladie (LAMal) (Tarif des soins) (Ne concerne que le texte italien)",
       "titelIt": "Legge federale sull'assicurazione malattie (LAMal) (Tariffe delle cure)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/74/de",
-      "sha": "70e1548e56688fd4e296ac6137a04a1e40bf053969024cc262dd192e615a02bf"
+      "sha": "10522be03ae164c4fdc572109e75c566cbae6da50a167d5c0ce2800fa060122d"
     },
     {
       "art": "sammelerlass-marker",
@@ -544,39 +544,39 @@
       "dateEntryInForce": "2006-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/523",
       "dateDocument": "2005-03-18",
-      "roFundstelle": "AS 2005 523",
+      "roFundstelle": "AS 2005 3587",
       "titelDe": "Bundesgesetz über die Krankenversicherung (KVG) (Prämienverbilligung)",
       "titelFr": "Loi fédérale sur l'assurance-maladie (LAMal) (Réduction des primes)",
       "titelIt": "Legge federale sull'assicurazione malattie (LAMal) (Riduzione dei premi)",
       "botschaftKey": "BOTSCHAFT-2004-711",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/523/de",
-      "sha": "e45f3b987605ab6efaefa051b27999cdb427cb8bdd690371f4fe64419a0bca5a"
+      "sha": "510da971f0fb0259ad5d925a5946d32193d0aa7b2428595f9cef388345e59a3f"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2005-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/666",
       "dateDocument": "2004-10-08",
-      "roFundstelle": "AS 2004 666",
+      "roFundstelle": "AS 2004 4375",
       "titelDe": "Bundesgesetz über die Krankenversicherung (KVG) (Pflegetarife)",
       "titelFr": "Loi fédérale sur l'assurance-maladie (LAMal) (Tarifs des soins)",
       "titelIt": "Legge federale sull'assicurazione malattie (LAMal) (Tariffe delle cure)",
       "botschaftKey": "BOTSCHAFT-2004-706",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/666/de",
-      "sha": "7d09f4362ed36211b521ccf0cdc96f24abf614c3dee9f2c93d2d46d37ec688eb"
+      "sha": "a0c18b67e9123cc173bc6e2e0dfe6f1819eb326092a9f30f994e7232df035d7b"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2005-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2005/139",
       "dateDocument": "2004-10-08",
-      "roFundstelle": "AS 2005 139",
+      "roFundstelle": "AS 2005 1071",
       "titelDe": "Bundesgesetz über die Krankenversicherung (KVG) (Gesamtstrategie und Risikoausgleich)",
       "titelFr": "Loi fédérale sur l'assurance-maladie (LAMal) (Stratégie globale, compensation des risques)",
       "titelIt": "Legge federale sull'assicurazione malattie (LAMal) (Strategia globale e compensazione dei rischi)",
       "botschaftKey": "BOTSCHAFT-2004-706",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2005/139/de",
-      "sha": "25c103eca4c005e2a8dd2e600c613488efc2da30361d10a8783e40a4a8ab4778"
+      "sha": "7083eb06dfba2821890d3c1b37a028531112061cf7b3af382bfd087b8f299367"
     },
     {
       "art": "sammelerlass-marker",
@@ -601,13 +601,13 @@
       "dateEntryInForce": "2002-06-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/151",
       "dateDocument": "2000-10-06",
-      "roFundstelle": "AS 2002 151",
+      "roFundstelle": "AS 2002 858",
       "titelDe": "Bundesgesetz über die Krankenversicherung (KVG)",
       "titelFr": "Loi fédérale sur l'assurance-maladie (LAMal)",
       "titelIt": "Legge federale sull'assicurazione malattie (LAMal)",
       "botschaftKey": "BOTSCHAFT-2000-875",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/151/de",
-      "sha": "9848da3dcffd3d3e9b7d626a39f04025f1e25d1b53b48c0bde533ddeb41d8a0e"
+      "sha": "7c1565890f3b676d0cafaadf05ff3a2cddc6c2272dc5eb38c53868328937f966"
     },
     {
       "art": "sammelerlass-marker",
@@ -620,49 +620,49 @@
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/463",
       "dateDocument": "2000-06-23",
-      "roFundstelle": "AS 2000 463",
+      "roFundstelle": "AS 2000 2755",
       "titelDe": "Bundesgesetz über die Krankenversicherung (KVG)",
       "titelFr": "Loi fédérale sur l'assurance-maladie (LAMal)",
       "titelIt": "Legge federale sull'assicurazione malattie (LAMal)",
       "botschaftKey": "BOTSCHAFT-2000-99",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/463/de",
-      "sha": "2cd036837b5274f8facd1a1807418b740ce874cbfaddc225e3d5004d128d4c5c"
+      "sha": "1054830d08dea18d95cdddb2a590b728da619d53a5170d11f458f248a1efedd7"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2000-10-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/365",
       "dateDocument": "2000-03-24",
-      "roFundstelle": "AS 2000 365",
+      "roFundstelle": "AS 2000 2305",
       "titelDe": "Bundesgesetz über die Krankenversicherung (KVG)",
       "titelFr": "Loi fédérale sur l'assurance-maladie (LAMal)",
       "titelIt": "Legge federale sull'assicurazione malattie (LAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/365/de",
-      "sha": "d6c61a4cebb7dbdaa60272f7576dbd41a1f79e3860c3fed71655f332f2c89197"
+      "sha": "3cf377792faedbc972b82ca5920383548318d7cf17e4d614277b9c85a45c9095"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "1999-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/319",
       "dateDocument": "1998-12-18",
-      "roFundstelle": "AS 1999 319",
+      "roFundstelle": "AS 1999 2041",
       "titelDe": "Bundesgesetz über die Krankenversicherung (KVG)",
       "titelFr": "Loi fédérale sur l'assurance-maladie (LAMal)",
       "titelIt": "Legge federale sull'assicurazione malattie (LAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/319/de",
-      "sha": "f577a6bc72e40388fac278bd3729368d950d7f41aa7834307fc739bbacc56b1d"
+      "sha": "f513bc1e45d04194175d25449b35c11c6d0f3017637ccfc95d24c04e332ac364"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "1999-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/1999/320",
       "dateDocument": "1998-03-20",
-      "roFundstelle": "AS 1999 320",
+      "roFundstelle": "AS 1999 2043",
       "titelDe": "Bundesgesetz über die Krankenversicherung (KVG)",
       "titelFr": "Loi fédérale sur l'assurance maladie (LAMal)",
       "titelIt": "Legge federale sull'assicurazione malattie (LAMal)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/1999/320/de",
-      "sha": "7d0a585635456bdfe56d6859a5bd6b6b0f61f48122ad8fc00a97dc0bae4da62c"
+      "sha": "bc8fb5b9689541c3f01c46fc69a9268deebc74d182ccc1bb07d195238990b452"
     },
     {
       "art": "aenderung",
@@ -689,5 +689,5 @@
       "sha": "5c69b42e37182cd4b3da4d0b29858dc36664f111128564fcfe4cf219328341a8"
     }
   ],
-  "sha": "fd5d0c3b2996f277454e0062f62697238f85e11047305df7f35544ea0fde746a"
+  "sha": "b765b23d9a4cb163ffc9bfcb595420f1e8574a12e6a538e6a908dcee10e8b67e"
 }

@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1993-02-10"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung des EFD vom 10. Februar 1993 über den Abzug der Berufskosten unselbstständig Erwerbstätiger bei der direkten Bundessteuer (Berufskostenverordnung)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du DFF du 10 février 1993 sur la déduction des frais professionnels des personnes exerçant une activité lucrative dépendante en matière d'impôt fédéral direct (Ordonnance sur les frais professionnels)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del DFF del 10 febbraio 1993 sulla deduzione delle spese professionali delle persone esercitanti un'attività lucrativa dipendente ai fini dell'imposta federale diretta (Ordinanza sulle spese professionali)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "642.118.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1993/1363_1363_1363"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1995-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1993-02-10"
+        "value": "RO 1993 1363"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1993-02-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1993 1363"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung des EFD vom 10. Februar 1993 über den Abzug der Berufskosten unselbstständig Erwerbstätiger bei der direkten Bundessteuer (Berufskostenverordnung)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1993-02-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1993 1363"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung des EFD vom 10. Februar 1993 über den Abzug der Berufskosten unselbstständig Erwerbstätiger bei der direkten Bundessteuer (Berufskostenverordnung)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du DFF du 10 février 1993 sur la déduction des frais professionnels des personnes exerçant une activité lucrative dépendante en matière d'impôt fédéral direct (Ordonnance sur les frais professionnels)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del DFF del 10 febbraio 1993 sulla deduzione delle spese professionali delle persone esercitanti un'attività lucrativa dipendente ai fini dell'imposta federale diretta (Ordinanza sulle spese professionali)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "642.118.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1993/1363_1363_1363"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1995-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1993-02-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1993 1363"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung des EFD vom 10. Februar 1993 über den Abzug der Berufskosten unselbstständig Erwerbstätiger bei der direkten Bundessteuer (Berufskostenverordnung)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-05-23"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über den Abzug von Berufskosten der unselbständigen Erwerbstätigkeit bei der direkten Bundessteuer"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur la déduction des frais professionnels des personnes exerçant une activité lucrative dépendante en matière d'impôt fédéral direct"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sulla deduzione delle spese professionali delle persone esercitanti un'attività lucrativa dipendente ai fini dell'imposta federale diretta"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "642.118.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/240"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-05-23"
+        "value": "RO 2000 1566"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-05-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1566"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über den Abzug von Berufskosten der unselbständigen Erwerbstätigkeit bei der direkten Bundessteuer"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur la déduction des frais professionnels des personnes exerçant une activité lucrative dépendante en matière d'impôt fédéral direct"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sulla deduzione delle spese professionali delle persone esercitanti un'attività lucrativa dipendente ai fini dell'imposta federale diretta"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "642.118.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/240"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-05-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1566"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Abzug von Berufskosten der unselbständigen Erwerbstätigkeit bei der direkten Bundessteuer"
@@ -245,6 +273,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-06-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 2474"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Abzug von Berufskosten der unselbstständigen Erwerbstätigkeit bei der direkten Bundessteuer"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-06-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 2474"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Abzug von Berufskosten der unselbstständigen Erwerbstätigkeit bei der direkten Bundessteuer"
@@ -308,6 +344,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-06-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 2474"
       },
       "titleDe": {
         "type": "literal",
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-08-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3309"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Abzug von Berufskosten der unselbstständigen Erwerbstätigkeit bei der direkten Bundessteuer"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-08-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3309"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Abzug von Berufskosten der unselbstständigen Erwerbstätigkeit bei der direkten Bundessteuer"
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-08-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3309"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Abzug von Berufskosten der unselbstständigen Erwerbstätigkeit bei der direkten Bundessteuer"
@@ -436,6 +488,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-07-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 3559"
       },
       "titleDe": {
         "type": "literal",
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-07-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 3559"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung des EFD über den Abzug von Berufskosten der unselbstständigen Erwerbstätigkeit bei der direkten Bundessteuer"
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-07-22"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 3559"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung des EFD über den Abzug von Berufskosten der unselbstständigen Erwerbstätigkeit bei der direkten Bundessteuer"
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-09-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 4815"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Abzug von Berufskosten der unselbstständigen Erwerbstätigkeit bei der direkten Bundessteuer"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-09-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 4815"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Abzug von Berufskosten der unselbstständigen Erwerbstätigkeit bei der direkten Bundessteuer"
@@ -597,6 +669,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-09-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 4815"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Abzug von Berufskosten der unselbstständigen Erwerbstätigkeit bei der direkten Bundessteuer"
@@ -629,6 +705,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-06-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 3247"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Abzug von Berufskosten der unselbstständigen Erwerbstätigkeit bei der direkten Bundessteuer"
@@ -661,6 +741,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-06-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 3247"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Abzug von Berufskosten der unselbstständigen Erwerbstätigkeit bei der direkten Bundessteuer"
@@ -692,6 +776,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-06-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 3247"
       },
       "titleDe": {
         "type": "literal",
@@ -724,6 +812,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-11-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4887"
       },
       "titleDe": {
         "type": "literal",
@@ -757,6 +849,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-11-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4887"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Abzug von Berufskosten der unselbständigen Erwerbstätigkeit bei der direkten Bundessteuer"
@@ -788,6 +884,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-11-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 4887"
       },
       "titleDe": {
         "type": "literal",
@@ -820,6 +920,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-07-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 4077"
       },
       "titleDe": {
         "type": "literal",
@@ -853,6 +957,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-07-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 4077"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung des EFD über den Abzug von Berufskosten der unselbstständigen Erwerbstätigkeit bei der direkten Bundessteuer (Berufskostenverordnung)"
@@ -884,6 +992,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2008-07-21"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 4077"
       },
       "titleDe": {
         "type": "literal",
@@ -916,6 +1028,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-04-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1109"
       },
       "titleDe": {
         "type": "literal",
@@ -949,6 +1065,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-04-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1109"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung des EFD über den Abzug von Berufskosten der unselbständigen Erwerbstätigkeit bei der direkten Bundessteuer (Berufskostenverordnung)"
@@ -980,6 +1100,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-04-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2014 1109"
       },
       "titleDe": {
         "type": "literal",
@@ -1012,6 +1136,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-03-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 861"
       },
       "titleDe": {
         "type": "literal",
@@ -1045,6 +1173,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-03-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 861"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung des EFD über den Abzug von Berufskosten der unselbständigen Erwerbstätigkeit bei der direkten Bundesteuer (Berufskostenverordnung)"
@@ -1076,6 +1208,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-03-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 861"
       },
       "titleDe": {
         "type": "literal",

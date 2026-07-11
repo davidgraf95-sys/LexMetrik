@@ -21,69 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1985-11-13"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 13. November 1985 über die steuerliche Abzugsberechtigung für Beiträge an anerkannte Vorsorgeformen (BVV 3)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 13 novembre 1985 sur les déductions admises fiscalement pour les cotisations versées à des formes reconnues de prévoyance (OPP 3)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 13 novembre 1985 sulla legittimazione alle deduzioni fiscali per i contributi a forme di previdenza riconosciute (OPP 3)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.461.3"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1985/1778_1778_1778"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1987-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1985-11-13"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung vom 13. November 1985 über die steuerliche Abzugsberechtigung für Beiträge an anerkannte Vorsorgeformen (BVV 3)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 13 novembre 1985 sur les déductions admises fiscalement pour les cotisations versées à des formes reconnues de prévoyance (OPP 3)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 13 novembre 1985 sulla legittimazione alle deduzioni fiscali per i contributi a forme di previdenza riconosciute (OPP 3)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.461.3"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1985/1778_1778_1778"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1987-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1985-11-13"
+        "value": "RO 1985 1778"
       },
       "titleDe": {
         "type": "literal",
@@ -117,6 +57,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1985-11-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1985 1778"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 13. November 1985 über die steuerliche Abzugsberechtigung für Beiträge an anerkannte Vorsorgeformen (BVV 3)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 13 novembre 1985 sur les déductions admises fiscalement pour les cotisations versées à des formes reconnues de prévoyance (OPP 3)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 13 novembre 1985 sulla legittimazione alle deduzioni fiscali per i contributi a forme di previdenza riconosciute (OPP 3)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.461.3"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1985/1778_1778_1778"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1987-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1985-11-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1985 1778"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 13. November 1985 über die steuerliche Abzugsberechtigung für Beiträge an anerkannte Vorsorgeformen (BVV 3)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 13 novembre 1985 sur les déductions admises fiscalement pour les cotisations versées à des formes reconnues de prévoyance (OPP 3)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 13 novembre 1985 sulla legittimazione alle deduzioni fiscali per i contributi a forme di previdenza riconosciute (OPP 3)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.461.3"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1985/1778_1778_1778"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1987-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1985-11-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1985 1778"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 13. November 1985 über die steuerliche Abzugsberechtigung für Beiträge an anerkannte Vorsorgeformen (BVV 3)"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-02-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1068"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die steuerliche Abzugsberechtigung für Beiträge an anerkannte Vorsorgeformen (BVV 3)"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-02-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1068"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die steuerliche Abzugsberechtigung für Beiträge an anerkannte Vorsorgeformen (BVV 3)"
@@ -213,6 +237,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-02-21"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1068"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die steuerliche Abzugsberechtigung für Beiträge an anerkannte Vorsorgeformen (BVV 3)"
@@ -245,6 +273,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5177"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die steuerliche Abzugsberechtigung für Beiträge an anerkannte Vorsorgeformen (BVV 3)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5177"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die steuerliche Abzugsberechtigung für Beiträge an anerkannte Vorsorgeformen (BVV 3)"
@@ -308,6 +344,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-10-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 5177"
       },
       "titleDe": {
         "type": "literal",

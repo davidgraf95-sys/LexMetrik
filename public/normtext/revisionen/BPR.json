@@ -1,7 +1,7 @@
 {
   "erlassKey": "BPR",
   "sr": "161.1",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -27,13 +27,13 @@
       "dateEntryInForce": "2015-03-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/79",
       "dateDocument": "2014-09-26",
-      "roFundstelle": "AS 2015 79",
+      "roFundstelle": "AS 2015 543",
       "titelDe": "Bundesgesetz über die politischen Rechte (Nationalratswahlen)",
       "titelFr": "Loi fédérale sur les droits politiques (Election du Conseil national)",
       "titelIt": "Legge federale sui diritti politici (Elezione del Consiglio nazionale)",
       "botschaftKey": "BOTSCHAFT-2013-1844",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/79/de",
-      "sha": "059d098e6cb203e60e9dfc2aee3c91d0de47eea93fdecc52846740a9b9e49461"
+      "sha": "e1034140f1fa61b622d275d9c0614baaa17247074a472e1a39472618329cd5df"
     },
     {
       "art": "sammelerlass-marker",
@@ -46,12 +46,12 @@
       "dateEntryInForce": "2010-02-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/35",
       "dateDocument": "2009-09-25",
-      "roFundstelle": "AS 2010 35",
+      "roFundstelle": "AS 2010 271",
       "titelDe": "Bundesgesetz über die politischen Rechte (Bedingter Rückzug einer Volksinitiative)",
       "titelFr": "Loi fédérale sur les droits politiques (Retrait conditionnel d'une initiative populaire)",
       "titelIt": "Legge federale sui diritti politici (Ritiro condizionato di un'iniziativa popolare)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/35/de",
-      "sha": "6cbe619ca00f5df06571e7e2b64bc17247a876206cbeaf0585ada697731a7e4b"
+      "sha": "6b2c58ac7517eeab746a32793173b8b4d1948679a29db2ba5ab151ed8943baf0"
     },
     {
       "art": "aenderung",
@@ -76,13 +76,13 @@
       "dateEntryInForce": "2008-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/649",
       "dateDocument": "2007-03-23",
-      "roFundstelle": "AS 2007 649",
+      "roFundstelle": "AS 2007 4635",
       "titelDe": "Bundesgesetz betreffend die Änderung der Bundesgesetzgebung über die politischen Rechte",
       "titelFr": "Loi fédérale sur la révision de la législation sur les droits politiques",
       "titelIt": "Legge federale che modifica la legislazione federale in materia di diritti politici",
       "botschaftKey": "BOTSCHAFT-2006-639",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/649/de",
-      "sha": "1e89d7e17455953816e5c098bb397b57cc87a05712fe8e20b405f27aec9165ed"
+      "sha": "b941513ccfb1fa38feefa5502da8677e9832f9bef6668f055da2c42598992b83"
     },
     {
       "art": "sammelerlass-marker",
@@ -113,13 +113,13 @@
       "dateEntryInForce": "2003-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/478",
       "dateDocument": "2002-06-21",
-      "roFundstelle": "AS 2002 478",
+      "roFundstelle": "AS 2002 3193",
       "titelDe": "Bundesgesetz über die politischen Rechte",
       "titelFr": "Loi fédérale sur les droits politiques",
       "titelIt": "Legge federale sui diritti politici",
       "botschaftKey": "BOTSCHAFT-2001-1111",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/478/de",
-      "sha": "b928a5ad42d1cb6fd8df29b28b0005aa7944598a0ba3d8e0443bc5037c7048b7"
+      "sha": "e7b80e91b75fac8571936a45ea12bd4c2fede7b9201fab8ca077dfc359820266"
     },
     {
       "art": "sammelerlass-marker",
@@ -132,25 +132,25 @@
       "dateEntryInForce": "2000-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/90",
       "dateDocument": "1999-10-08",
-      "roFundstelle": "AS 2000 90",
+      "roFundstelle": "AS 2000 411",
       "titelDe": "Bundesgesetz über die politischen Rechte (BPR)",
       "titelFr": "Loi fédérale sur les droits politiques (LDP)",
       "titelIt": "Legge federale sui diritti politici (LDP)",
       "botschaftKey": "BOTSCHAFT-1999-1_7922_7145_6784",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/90/de",
-      "sha": "1be6e2ffd4be95bf69d973924aa0aba75991be2d41d2e48c54a94244d381ac66"
+      "sha": "f7adb6bce63aae716bd192e4049825e70031b3065054d161ea323c07082d6809"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "1994-11-15",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/331",
       "dateDocument": "2006-05-30",
-      "roFundstelle": "AS 2006 331",
+      "roFundstelle": "AS 2006 2095",
       "titelDe": "Bundesgesetz über die politischen Rechte (Betrifft nur den französischen Text)",
       "titelFr": "Loi fédérale sur les droits politiques",
       "titelIt": "Legge federale sui diritti politici (Concerne solo il testo francese)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/331/de",
-      "sha": "53c7376118c0e61e2cf55c4a9fddba2a788894d00fb2e0597c2eaf07bc640f61"
+      "sha": "03c94c051cca0596f106edfd18a41c960055cb9da32709aa45b3b7e8faf320c6"
     },
     {
       "art": "aenderung",
@@ -165,5 +165,5 @@
       "sha": "6ebd831a1b4db1a3af4153351d728e90694227b76fdf7cd127a7b245c11cc4cb"
     }
   ],
-  "sha": "f7e5ccfcb71c10d172f55c5e8b1c3f5846bfe55261c6a66e9445de43cfe87533"
+  "sha": "77b41f92a1073357d3f5b2e75a751ec28aca4605e139e0539ba77364a759e331"
 }

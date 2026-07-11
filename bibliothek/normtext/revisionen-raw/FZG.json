@@ -21,69 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1993-12-17"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom 17. Dezember 1993 über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 17 décembre 1993 sur le libre passage dans la prévoyance professionnelle vieillesse, survivants et invalidité (Loi sur le libre passage, LFLP)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 17 dicembre 1993 sul libero passaggio nella  previdenza professionale per la vecchiaia, i superstiti e l'invalidità (Legge sul libero passaggio, LFLP)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.42"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1994/2386_2386_2386"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1995-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1993-12-17"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Bundesgesetz vom 17. Dezember 1993 über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 17 décembre 1993 sur le libre passage dans la prévoyance professionnelle vieillesse, survivants et invalidité (Loi sur le libre passage, LFLP)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 17 dicembre 1993 sul libero passaggio nella  previdenza professionale per la vecchiaia, i superstiti e l'invalidità (Legge sul libero passaggio, LFLP)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "831.42"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1994/2386_2386_2386"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1995-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1993-12-17"
+        "value": "RO 1994 2386"
       },
       "titleDe": {
         "type": "literal",
@@ -117,6 +57,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1993-12-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1994 2386"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 17. Dezember 1993 über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 17 décembre 1993 sur le libre passage dans la prévoyance professionnelle vieillesse, survivants et invalidité (Loi sur le libre passage, LFLP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 17 dicembre 1993 sul libero passaggio nella  previdenza professionale per la vecchiaia, i superstiti e l'invalidità (Legge sul libero passaggio, LFLP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.42"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1994/2386_2386_2386"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1995-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1993-12-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1994 2386"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 17. Dezember 1993 über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 17 décembre 1993 sur le libre passage dans la prévoyance professionnelle vieillesse, survivants et invalidité (Loi sur le libre passage, LFLP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 17 dicembre 1993 sul libero passaggio nella  previdenza professionale per la vecchiaia, i superstiti e l'invalidità (Legge sul libero passaggio, LFLP)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "831.42"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1994/2386_2386_2386"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1995-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1993-12-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1994 2386"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 17. Dezember 1993 über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-12-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 1384"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-12-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 1384"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)"
@@ -213,6 +237,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1998-12-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 1384"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)"
@@ -245,6 +273,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2693"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2693"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)"
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2693"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-06-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5187"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-06-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5187"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)"
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-06-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5187"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)"
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-12-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5019"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-12-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5019"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)"
@@ -500,6 +560,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2015-12-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 5019"
       },
       "titleDe": {
         "type": "literal",

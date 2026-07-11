@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1983-08-31"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 31. August 1983 über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 31 août 1983 sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 31 agosto 1983 sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "837.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1983/1205_1205_1205"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1984-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1983-08-31"
+        "value": "RO 1983 1205"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1983-08-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1983 1205"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 31. August 1983 über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1983-08-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1983 1205"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 31. August 1983 über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 31 août 1983 sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 31 agosto 1983 sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1983/1205_1205_1205"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1984-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1983-08-31"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1983 1205"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 31. August 1983 über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -149,37 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-10-04"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "837.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1999/523"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1999-10-04"
+        "value": "RO 1999 3614"
       },
       "titleDe": {
         "type": "literal",
@@ -213,6 +201,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-10-04"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 3614"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1999/523"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1999-10-04"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1999 3614"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -245,6 +273,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-11-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 174"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-11-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 174"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -308,6 +344,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1999-11-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 174"
       },
       "titleDe": {
         "type": "literal",
@@ -341,37 +381,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-11-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "837.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/515"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-11-22"
+        "value": "RO 2000 2921"
       },
       "titleDe": {
         "type": "literal",
@@ -405,37 +417,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-11-22"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "837.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/563"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2001-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-11-15"
+        "value": "RO 2000 2921"
       },
       "titleDe": {
         "type": "literal",
@@ -457,7 +441,7 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2000/563"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/515"
       },
       "dateForce": {
         "type": "typed-literal",
@@ -467,7 +451,11 @@
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2000-11-15"
+        "value": "2000-11-22"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 2921"
       },
       "titleDe": {
         "type": "literal",
@@ -501,6 +489,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-11-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 3097"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/563"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-11-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 3097"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/563"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2001-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2000-11-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 3097"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-11-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1094"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -565,6 +633,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-11-15"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1094"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -596,6 +668,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-11-15"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1094"
       },
       "titleDe": {
         "type": "literal",
@@ -629,37 +705,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-03-27"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "837.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/202"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-06-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-03-27"
+        "value": "RO 2002 1352"
       },
       "titleDe": {
         "type": "literal",
@@ -693,37 +741,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-03-27"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "837.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/507"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-09-30"
+        "value": "RO 2002 1352"
       },
       "titleDe": {
         "type": "literal",
@@ -745,17 +765,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2002/507"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/202"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-10-01"
+        "value": "2002-06-01"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2002-09-30"
+        "value": "2002-03-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 1352"
       },
       "titleDe": {
         "type": "literal",
@@ -789,6 +813,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-09-30"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3352"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/507"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-09-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3352"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2002/507"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2002-09-30"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3352"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -821,6 +921,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-09-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3945"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -853,6 +957,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-09-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3945"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -884,6 +992,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2002-09-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2002 3945"
       },
       "titleDe": {
         "type": "literal",
@@ -917,37 +1029,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-05-28"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "837.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/262"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-05-28"
+        "value": "RO 2003 1756"
       },
       "titleDe": {
         "type": "literal",
@@ -981,6 +1065,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-05-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 1756"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/262"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-05-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 1756"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -1012,6 +1136,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-05-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 1828"
       },
       "titleDe": {
         "type": "literal",
@@ -1045,6 +1173,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-05-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 1828"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -1077,6 +1209,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-05-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 1828"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -1109,37 +1245,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-09-19"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza  sull'assicurazione obbligatoria contro la disoccupazione  e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI) "
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "837.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/494"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-09-19"
+        "value": "RO 2003 3491"
       },
       "titleDe": {
         "type": "literal",
@@ -1173,6 +1281,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-09-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3491"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza  sull'assicurazione obbligatoria contro la disoccupazione  e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI) "
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/494"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2003-09-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 3491"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -1205,37 +1353,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-11-19"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "837.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2003/714"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2003-11-19"
+        "value": "RO 2003 4861"
       },
       "titleDe": {
         "type": "literal",
@@ -1269,37 +1389,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2003-11-19"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "837.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/210"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-03-24"
+        "value": "RO 2003 4861"
       },
       "titleDe": {
         "type": "literal",
@@ -1321,17 +1413,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2004/210"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2003/714"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-04-01"
+        "value": "2004-01-01"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2004-03-24"
+        "value": "2003-11-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2003 4861"
       },
       "titleDe": {
         "type": "literal",
@@ -1365,6 +1461,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-03-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 1715"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/210"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-03-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 1715"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2004/210"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2004-03-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 1715"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -1397,6 +1569,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-12-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 5443"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -1429,6 +1605,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-12-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 5443"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -1460,6 +1640,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2004-12-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2004 5443"
       },
       "titleDe": {
         "type": "literal",
@@ -1493,37 +1677,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-06-10"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza su l'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "837.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2005/435"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-06-10"
+        "value": "RO 2005 2529"
       },
       "titleDe": {
         "type": "literal",
@@ -1557,37 +1713,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-06-10"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza su l'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "837.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2005/524"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-06-29"
+        "value": "RO 2005 2529"
       },
       "titleDe": {
         "type": "literal",
@@ -1609,17 +1737,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2005/524"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/435"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-01-01"
+        "value": "2005-07-01"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2005-06-29"
+        "value": "2005-06-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 2529"
       },
       "titleDe": {
         "type": "literal",
@@ -1653,6 +1785,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-06-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 3591"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza su l'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/524"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-06-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 3591"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza su l'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2005/524"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2005-06-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 3591"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -1684,6 +1892,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-12-09"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 6649"
       },
       "titleDe": {
         "type": "literal",
@@ -1717,6 +1929,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-12-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 6649"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -1749,6 +1965,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2005-12-09"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2005 6649"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -1781,37 +2001,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-06-16"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 31 agosto 1983 su l'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "837.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/382"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-06-16"
+        "value": "RO 2006 2489"
       },
       "titleDe": {
         "type": "literal",
@@ -1845,6 +2037,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-06-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 2489"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 31 agosto 1983 su l'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/382"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-06-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 2489"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -1877,37 +2109,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-07-05"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "837.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/425"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-07-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-07-05"
+        "value": "RO 2006 2741"
       },
       "titleDe": {
         "type": "literal",
@@ -1941,6 +2145,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-07-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 2741"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/425"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-07-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-07-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 2741"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -1973,6 +2217,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-09-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 3945"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -2005,6 +2253,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-09-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 3945"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -2036,6 +2288,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-09-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 3945"
       },
       "titleDe": {
         "type": "literal",
@@ -2069,37 +2325,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-12-08"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "837.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/819"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-12-08"
+        "value": "RO 2006 5373"
       },
       "titleDe": {
         "type": "literal",
@@ -2133,37 +2361,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-12-08"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "837.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/158"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-02-11"
+        "value": "RO 2006 5373"
       },
       "titleDe": {
         "type": "literal",
@@ -2185,17 +2385,21 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/158"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/819"
       },
       "dateForce": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-04-01"
+        "value": "2007-01-01"
       },
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-02-11"
+        "value": "2006-12-08"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 5373"
       },
       "titleDe": {
         "type": "literal",
@@ -2229,6 +2433,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-02-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 1027"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/158"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-02-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 1027"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/158"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-02-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 1027"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -2260,6 +2540,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-08-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 4237"
       },
       "titleDe": {
         "type": "literal",
@@ -2293,6 +2577,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-08-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 4237"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -2325,6 +2613,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-08-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 4237"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -2357,37 +2649,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-10-14"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza su l'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "837.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/619"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-11-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-10-14"
+        "value": "RO 2009 5267"
       },
       "titleDe": {
         "type": "literal",
@@ -2421,6 +2685,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-10-14"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5267"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza su l'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/619"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-11-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-10-14"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5267"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -2453,6 +2757,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-11-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5859"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -2485,6 +2793,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-11-11"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5859"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -2516,6 +2828,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-11-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 5859"
       },
       "titleDe": {
         "type": "literal",
@@ -2549,37 +2865,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-11-27"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "837.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2009/807"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-11-27"
+        "value": "RO 2009 6561"
       },
       "titleDe": {
         "type": "literal",
@@ -2613,6 +2901,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2009-11-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 6561"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2009/807"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-11-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2009 6561"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -2645,6 +2973,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-02-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 669"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -2677,6 +3009,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-02-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 669"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -2708,6 +3044,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-02-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 669"
       },
       "titleDe": {
         "type": "literal",
@@ -2741,37 +3081,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-03-05"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza su l'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "837.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/141"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-03-05"
+        "value": "RO 2010 887"
       },
       "titleDe": {
         "type": "literal",
@@ -2805,37 +3117,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-03-05"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza su l'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "837.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/161"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-03-05"
+        "value": "RO 2010 887"
       },
       "titleDe": {
         "type": "literal",
@@ -2857,7 +3141,7 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/161"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/141"
       },
       "dateForce": {
         "type": "typed-literal",
@@ -2868,6 +3152,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-03-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 887"
       },
       "titleDe": {
         "type": "literal",
@@ -2901,6 +3189,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-03-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1055"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza su l'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/161"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-03-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1055"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza su l'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/161"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-03-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1055"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -2933,6 +3297,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-03-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1509"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -2965,6 +3333,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-03-31"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1509"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -2996,6 +3368,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-03-31"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 1509"
       },
       "titleDe": {
         "type": "literal",
@@ -3029,37 +3405,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-05-12"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "837.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/276"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-06-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-05-12"
+        "value": "RO 2010 2081"
       },
       "titleDe": {
         "type": "literal",
@@ -3093,6 +3441,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-05-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 2081"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/276"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-06-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-05-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 2081"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -3125,6 +3513,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-08-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 3563"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -3157,6 +3549,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-08-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 3563"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -3188,6 +3584,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-08-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 3563"
       },
       "titleDe": {
         "type": "literal",
@@ -3221,37 +3621,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-09-17"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "837.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/601"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-10-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-09-17"
+        "value": "RO 2010 4129"
       },
       "titleDe": {
         "type": "literal",
@@ -3285,6 +3657,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-09-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4129"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/601"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-10-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-09-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4129"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -3317,6 +3729,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-10-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4799"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -3349,6 +3765,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-10-20"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4799"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -3380,6 +3800,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-10-20"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4799"
       },
       "titleDe": {
         "type": "literal",
@@ -3413,37 +3837,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-11-17"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza su l'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "837.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/751"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-12-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-11-17"
+        "value": "RO 2010 5245"
       },
       "titleDe": {
         "type": "literal",
@@ -3477,6 +3873,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-11-17"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5245"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza su l'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/751"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-12-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-11-17"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5245"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -3509,6 +3945,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-11-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5529"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -3541,6 +3981,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-11-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5529"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -3572,6 +4016,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-11-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 5529"
       },
       "titleDe": {
         "type": "literal",
@@ -3605,37 +4053,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-12-10"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza su l'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "837.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2010/881"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2010-12-10"
+        "value": "RO 2010 6165"
       },
       "titleDe": {
         "type": "literal",
@@ -3669,6 +4089,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-12-10"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 6165"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza su l'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2010/881"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2010-12-10"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 6165"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -3701,37 +4161,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-03-11"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "837.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/172"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-03-11"
+        "value": "RO 2011 1179"
       },
       "titleDe": {
         "type": "literal",
@@ -3765,37 +4197,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-03-11"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "837.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/184"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-03-29"
+        "value": "RO 2011 1179"
       },
       "titleDe": {
         "type": "literal",
@@ -3817,7 +4221,7 @@
       },
       "oc": {
         "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/184"
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/172"
       },
       "dateForce": {
         "type": "typed-literal",
@@ -3827,7 +4231,11 @@
       "dateDoc": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-03-29"
+        "value": "2011-03-11"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 1179"
       },
       "titleDe": {
         "type": "literal",
@@ -3861,6 +4269,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-03-29"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 1241"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/184"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-03-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 1241"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/184"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-03-29"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 1241"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -3893,6 +4377,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-10-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4771"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -3925,6 +4413,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-10-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4771"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -3956,6 +4448,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-10-19"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4771"
       },
       "titleDe": {
         "type": "literal",
@@ -3989,37 +4485,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-03-02"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung  (Arbeitslosenversicherungsverordnung, AVIV) "
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "837.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2012/179"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-04-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2012-03-02"
+        "value": "RO 2012 1203"
       },
       "titleDe": {
         "type": "literal",
@@ -4053,6 +4521,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-03-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 1203"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung  (Arbeitslosenversicherungsverordnung, AVIV) "
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/179"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-04-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2012-03-02"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2012 1203"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung  (Arbeitslosenversicherungsverordnung, AVIV) "
@@ -4085,37 +4593,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-01-13"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "837.02"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2016/47"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-02-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2016-01-13"
+        "value": "RO 2016 351"
       },
       "titleDe": {
         "type": "literal",
@@ -4149,6 +4629,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2016-01-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 351"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance sur l'assurance-chômage obligatoire et l'indemnité en cas d'insolvabilité (Ordonnance sur l'assurance-chômage, OACI)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza sull'assicurazione obbligatoria contro la disoccupazione e l'indennità per insolvenza (Ordinanza sull'assicurazione contro la disoccupazione, OADI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "837.02"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2016/47"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2016-01-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2016 351"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -4181,6 +4701,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-06-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 3693"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -4213,6 +4737,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-06-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 3693"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -4244,6 +4772,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-06-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2017 3693"
       },
       "titleDe": {
         "type": "literal",
@@ -4277,6 +4809,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-12-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 845"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -4309,6 +4845,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-12-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 845"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -4341,6 +4881,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2017-12-08"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2018 845"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -4372,6 +4916,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-03-13"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 779"
       },
       "titleDe": {
         "type": "literal",
@@ -4405,6 +4953,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-03-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 779"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung  über die obligatorische Arbeitslosenversicherung  und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -4437,6 +4989,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-03-13"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 779"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung  über die obligatorische Arbeitslosenversicherung  und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -4469,6 +5025,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-07-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2875"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -4501,6 +5061,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-07-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2875"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -4533,6 +5097,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-07-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2875"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -4565,6 +5133,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-08-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 3611"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -4597,6 +5169,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-08-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 3611"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsverordnung, AVIV)"
@@ -4628,6 +5204,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-08-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 3611"
       },
       "titleDe": {
         "type": "literal",

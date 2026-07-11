@@ -1,7 +1,7 @@
 {
   "erlassKey": "FUSG",
   "sr": "221.301",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -27,12 +27,12 @@
       "dateEntryInForce": "2012-09-11",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2012/563",
       "dateDocument": "2012-08-29",
-      "roFundstelle": "AS 2012 563",
+      "roFundstelle": "AS 2012 4617",
       "titelDe": "Bundesgesetz über Fusion, Spaltung, Umwandlung und Vermögensübertragung (Fusionsgesetz, FusG) (Betrifft nur den italienischen Text)",
       "titelFr": "Loi fédérale sur la fusion, la scission, la transformation et le transfert de patrimoine (Loi sur la fusion, LFus) (Ne concerne que le texte italien)",
       "titelIt": "Legge federale sulla fusione, la scissione, la trasformazione e il trasferimento di patrimonio (Legge sulla fusione, LFus)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2012/563/de",
-      "sha": "32c416cf8a47664ea9a76ce3ad7229b08cfa901526f07f0c99e971bc95f9cabb"
+      "sha": "2067f208f4d414e44218f4c7a9820e5043dd887b68c6214cbe6954be3a2c2665"
     },
     {
       "art": "sammelerlass-marker",
@@ -57,14 +57,14 @@
       "dateEntryInForce": "2004-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2004/320",
       "dateDocument": "2003-10-03",
-      "roFundstelle": "AS 2004 320",
+      "roFundstelle": "AS 2004 2617",
       "titelDe": "Bundesgesetz über Fusion, Spaltung, Umwandlung und Vermögensübertragung (Fusionsgesetz, FusG)",
       "titelFr": "Loi fédérale sur la fusion, la scission, la transformation et le transfert de patrimoine (Loi sur la fusion, LFus)",
       "titelIt": "Legge federale sulla fusione, la scissione, la trasformazione e il trasferimento di patrimonio (Legge sulla fusione, LFus)",
       "botschaftKey": "BOTSCHAFT-2000-921",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2004/320/de",
-      "sha": "1df108b317e2943f5294d4876c2d85fa3191bc00b0723758c122510ab7608459"
+      "sha": "a61cbfe86554c680620fa0ff2eed55e70a87cbe38cda3c736ba74e4517d44a77"
     }
   ],
-  "sha": "44ae3586e7d48ec3342c17b9acd8a2cacfed805767dba4414aa0a10f1d49b7a9"
+  "sha": "341d9f7d93e139dc02632a5e6ed37bb9a83cec7ba9c452e7a18500a88e73742f"
 }

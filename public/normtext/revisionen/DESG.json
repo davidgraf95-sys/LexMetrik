@@ -1,7 +1,7 @@
 {
   "erlassKey": "DESG",
   "sr": "232.12",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -69,13 +69,13 @@
       "dateEntryInForce": "2002-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2002/226",
       "dateDocument": "2001-10-05",
-      "roFundstelle": "AS 2002 226",
+      "roFundstelle": "AS 2002 1456",
       "titelDe": "Bundesgesetz über den Schutz von Design (Designgesetz, DesG)",
       "titelFr": "Loi fédérale sur la protection des designs (Loi sur les designs, LDes)",
       "titelIt": "Legge federale sulla protezione del design (Legge sul design, LDes)",
       "botschaftKey": "BOTSCHAFT-2000-557",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2002/226/de",
-      "sha": "e8ea5c5c4d4cf2f4349794f02268192ba73595450f95e19279b7a40630a2e463"
+      "sha": "aef7d0484d347f66798ae98d980e4f6751f2229e9153150cb12933ed9835c0ae"
     },
     {
       "art": "aenderung",
@@ -90,5 +90,5 @@
       "sha": "57d49c04af06ff86b95d79251500b2a7c4ccc2bfbfb1a32726747a1e188b7b05"
     }
   ],
-  "sha": "066ec87c4afc1b7d979be81e560e6bd0d2a5a4d7f0010316e71dd0a80a7eeda1"
+  "sha": "f7c4b5f075b3d298a5198443709dea6a2f270ba1d7066c106d055d2ec8531fda"
 }

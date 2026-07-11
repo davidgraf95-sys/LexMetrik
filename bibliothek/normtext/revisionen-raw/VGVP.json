@@ -21,6 +21,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-07-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1949"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Getränkeverpackungen (VGV)"
@@ -53,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-07-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1949"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Getränkeverpackungen (VGV)"
@@ -85,6 +93,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-07-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1949"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Getränkeverpackungen (VGV)"
@@ -116,6 +128,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-07-05"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1949"
       },
       "titleDe": {
         "type": "literal",

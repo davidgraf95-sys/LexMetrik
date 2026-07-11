@@ -1,7 +1,7 @@
 {
   "erlassKey": "BVV3",
   "sr": "831.461.3",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -58,12 +58,12 @@
       "dateEntryInForce": "2008-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2007/725",
       "dateDocument": "2007-10-17",
-      "roFundstelle": "AS 2007 725",
+      "roFundstelle": "AS 2007 5177",
       "titelDe": "Verordnung über die steuerliche Abzugsberechtigung für Beiträge an anerkannte Vorsorgeformen (BVV 3)",
       "titelFr": "Ordonnance sur les déductions admises fiscalement pour les cotisations versées à des formes reconnues de prévoyance (OPP 3)",
       "titelIt": "Ordinanza sulla legittimazione alle deduzioni fiscali per i contributi a forme di previdenza riconosciute (OPP 3)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2007/725/de",
-      "sha": "04da2ec58b6a0a552663042801cebbee520f931a7803b797c149638c49f6f74b"
+      "sha": "0935d3b6843fcab8bea671c87e447abed051f655cce738ff8d21176a668ff27b"
     },
     {
       "art": "sammelerlass-marker",
@@ -88,12 +88,12 @@
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2001/162",
       "dateDocument": "2001-02-21",
-      "roFundstelle": "AS 2001 162",
+      "roFundstelle": "AS 2001 1068",
       "titelDe": "Verordnung über die steuerliche Abzugsberechtigung für Beiträge an anerkannte Vorsorgeformen (BVV 3)",
       "titelFr": "Ordonnance sur les déductions admises fiscalement pour les cotisations versées à des formes reconnues de prévoyance (OPP 3)",
       "titelIt": "Ordinanza sulla legittimazione alle deduzioni fiscali per i contributi a forme di previdenza riconosciute (OPP 3)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2001/162/de",
-      "sha": "131ed4c653c91353fbf859a2c713a4006c523aa899019199bfa8a5ef8b56488f"
+      "sha": "b9f37b13609c2fc1ffa874f7f11b61b68b53279433f6896e5aca9d1fbc98effd"
     },
     {
       "art": "aenderung",
@@ -108,5 +108,5 @@
       "sha": "e47cbd68d736727840cba004ab26b54ad82981b4860431308e0210f5c1cc72e0"
     }
   ],
-  "sha": "ee6c79677f2de07a3049c0f60e212e65c7fd005a0083b2962e4a282199d4892b"
+  "sha": "b6d239928833d5090f8161695eff5516cae6c1ea19757f1e71ac83dde8992d6a"
 }

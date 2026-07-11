@@ -1,7 +1,7 @@
 {
   "erlassKey": "UWG",
   "sr": "241",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -51,12 +51,12 @@
       "dateEntryInForce": "2015-12-31",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/933",
       "dateDocument": "2015-12-10",
-      "roFundstelle": "AS 2015 933",
+      "roFundstelle": "AS 2015 5999",
       "titelDe": "Bundesbeschluss über die Genehmigung und die Umsetzung des Strafrechtsübereinkommens und des Zusatzprotokolls des Europarates über Korruption (Betrifft nur den italienischen Text)",
       "titelFr": "Arrêté fédéral portant approbation et mise en uvre de la Convention pénale du Conseil de l'Europe sur la corruption et du Protocole additionnel à ladite convention (Ne concerne que le texte italien)",
       "titelIt": "Decreto federale che approva e traspone nel diritto svizzero la Convenzione penale del Consiglio d'Europa sulla corruzione e il relativo Protocollo aggiuntivo",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/933/de",
-      "sha": "5e7584522db7d85c92ecd26cc7afb3bcf89b26cbd0118bbfb33e89c847f34d33"
+      "sha": "6be6285ab376f62531e8ad698a641c24d71396f3e3052a74131c1a7ae1c25eff"
     },
     {
       "art": "sammelerlass-marker",
@@ -81,13 +81,13 @@
       "dateEntryInForce": "2012-04-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2011/703",
       "dateDocument": "2011-06-17",
-      "roFundstelle": "AS 2011 703",
+      "roFundstelle": "AS 2011 4909",
       "titelDe": "Bundesgesetz gegen den unlauteren Wettbewerb (UWG)",
       "titelFr": "Loi fédérale contre la concurrence déloyale (LCD)",
       "titelIt": "Legge federale contro la concorrenza sleale (LCSl)",
       "botschaftKey": "BOTSCHAFT-2009-1106",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2011/703/de",
-      "sha": "679150b4f53292ae24213f3609eadb891fa2afbfd210e29069fd72a92c23ea1f"
+      "sha": "b0922956442b36f8c7241a477faffd3b42001e7f3868d6c5ba2e04be62c20048"
     },
     {
       "art": "sammelerlass-marker",
@@ -112,13 +112,13 @@
       "dateEntryInForce": "2006-07-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/366",
       "dateDocument": "2005-10-07",
-      "roFundstelle": "AS 2006 366",
+      "roFundstelle": "AS 2006 2371",
       "titelDe": "Bundesbeschluss über die Genehmigung und die Umsetzung des Strafrechtsübereinkommens und des Zusatzprotokolls des Europarates über Korruption",
       "titelFr": "Arrêté fédéral portant approbation et mise en uvre de la Convention pénale du Conseil de l'Europe sur la corruption et du Protocole additionnel à ladite convention",
       "titelIt": "Decreto federale che approva e traspone nel diritto svizzero la Convenzione penale del Consiglio d'Europa sulla corruzione e il relativo Protocollo aggiuntivo",
       "botschaftKey": "BOTSCHAFT-2004-1217",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/366/de",
-      "sha": "7ff53e2b083bff0361aafab838a411123b3d02acf6e1adc709333c73a08480ea"
+      "sha": "ac0693a4bccb0170249aaa56361a9d46936ba73908d7b39d8e6367084a81b7e7"
     },
     {
       "art": "sammelerlass-marker",
@@ -157,5 +157,5 @@
       "sha": "2511f139bd24f9d33c5ab5d7070588940c4f3e6c9d8c01e48d6889b44fbccfc5"
     }
   ],
-  "sha": "8336a449b443966e3068bf86ebeb37ab4da5a57d4dcb4687aa263113a2041175"
+  "sha": "128826e05fc0102b165090d180880320f07af97cd703a3f70b3a9df60c76ac07"
 }

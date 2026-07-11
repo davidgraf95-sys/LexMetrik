@@ -21,69 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-03-24"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Familienzulagen und Finanzhilfen an Familienorganisationen (Familienzulagengesetz, FamZG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur les allocations familiales et les aides financières aux organisations familiales (Loi sur les allocations familiales, LAFam) "
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sugli assegni familiari e sugli aiuti finanziari a organizzazioni familiari (Legge sugli assegni familiari, LAFam) "
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "836.2"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2008/51"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-03-24"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Bundesgesetz über die Familienzulagen und Finanzhilfen an Familienorganisationen (Familienzulagengesetz, FamZG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur les allocations familiales et les aides financières aux organisations familiales (Loi sur les allocations familiales, LAFam) "
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sugli assegni familiari e sugli aiuti finanziari a organizzazioni familiari (Legge sugli assegni familiari, LAFam) "
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "836.2"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2008/51"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2009-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-03-24"
+        "value": "RO 2008 131"
       },
       "titleDe": {
         "type": "literal",
@@ -117,6 +57,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-03-24"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 131"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Familienzulagen und Finanzhilfen an Familienorganisationen (Familienzulagengesetz, FamZG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les allocations familiales et les aides financières aux organisations familiales (Loi sur les allocations familiales, LAFam) "
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sugli assegni familiari e sugli aiuti finanziari a organizzazioni familiari (Legge sugli assegni familiari, LAFam) "
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "836.2"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/51"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-03-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 131"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Familienzulagen und Finanzhilfen an Familienorganisationen (Familienzulagengesetz, FamZG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les allocations familiales et les aides financières aux organisations familiales (Loi sur les allocations familiales, LAFam) "
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sugli assegni familiari e sugli aiuti finanziari a organizzazioni familiari (Legge sugli assegni familiari, LAFam) "
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "836.2"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2008/51"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2009-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-03-24"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2008 131"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Familienzulagen und Finanzhilfen an Familienorganisationen (Familienzulagengesetz, FamZG)"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-06-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4491"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Familienzulagen (Familienzulagengesetz, FamZG)"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-06-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2010 4491"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Familienzulagen (Familienzulagengesetz, FamZG)"
@@ -213,69 +237,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2010-06-18"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die Familienzulagen (Familienzulagengesetz, FamZG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur les allocations familiales (Loi sur les allocations familiales, LAFam)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sugli assegni familiari (Legge sugli assegni familiari, LAFam)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "836.2"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/567"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-09-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-03-18"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Bundesgesetz über die Familienzulagen (Familienzulagengesetz, FamZG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur les allocations familiales (Loi sur les allocations familiales, LAFam)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sugli assegni familiari (Legge sugli assegni familiari, LAFam)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "836.2"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2011/567"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-09-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2011-03-18"
+        "value": "RO 2010 4491"
       },
       "titleDe": {
         "type": "literal",
@@ -309,6 +273,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-03-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3973"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Familienzulagen (Familienzulagengesetz, FamZG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les allocations familiales (Loi sur les allocations familiales, LAFam)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sugli assegni familiari (Legge sugli assegni familiari, LAFam)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "836.2"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/567"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-09-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-03-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3973"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die Familienzulagen (Familienzulagengesetz, FamZG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les allocations familiales (Loi sur les allocations familiales, LAFam)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sugli assegni familiari (Legge sugli assegni familiari, LAFam)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "836.2"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2011/567"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-09-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2011-03-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 3973"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Familienzulagen (Familienzulagengesetz, FamZG)"
@@ -340,6 +380,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-10-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4949"
       },
       "titleDe": {
         "type": "literal",
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-10-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4949"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die abschliessende Inkraftsetzung der Änderung vom 18. März 2011 des Bundesgesetzes über die Familienzulagen"
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-10-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 4949"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die abschliessende Inkraftsetzung der Änderung vom 18. März 2011 des Bundesgesetzes über die Familienzulagen"
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-09-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2775"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Familienzulagen (Familienzulagengesetz, FamZG)"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-09-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2775"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Familienzulagen (Familienzulagengesetz, FamZG)"
@@ -500,6 +560,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2019-09-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 2775"
       },
       "titleDe": {
         "type": "literal",

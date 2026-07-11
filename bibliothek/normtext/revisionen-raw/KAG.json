@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1966-07-01"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom 1. Juli 1966 über die Anlagefonds"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 1<sup>er</sup> juillet 1966 sur les fonds de placement"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 1<sup>o</sup> luglio 1966 sui fondi d'investimento"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "951.31"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1967/115_125_117"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1967-02-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1966-07-01"
+        "value": "RO 1967 125"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1966-07-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1967 125"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 1. Juli 1966 über die Anlagefonds"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1966-07-01"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1967 125"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 1. Juli 1966 über die Anlagefonds"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 1<sup>er</sup> juillet 1966 sur les fonds de placement"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 1<sup>o</sup> luglio 1966 sui fondi d'investimento"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "951.31"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1967/115_125_117"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1967-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1966-07-01"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1967 125"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 1. Juli 1966 über die Anlagefonds"
@@ -149,69 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1994-03-18"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz vom 18. März 1994 über die Anlagefonds (Anlagefondsgesetz, AFG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 18 mars 1994 sur les fonds de placement (LFP)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 18 marzo 1994 sui fondi d'investimento (LFI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "951.31"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1994/2523_2523_2523"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1995-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1994-03-18"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Bundesgesetz vom 18. März 1994 über die Anlagefonds (Anlagefondsgesetz, AFG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale du 18 mars 1994 sur les fonds de placement (LFP)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale del 18 marzo 1994 sui fondi d'investimento (LFI)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "951.31"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1994/2523_2523_2523"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1995-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1994-03-18"
+        "value": "RO 1994 2523"
       },
       "titleDe": {
         "type": "literal",
@@ -245,6 +201,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1994-03-18"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1994 2523"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 18. März 1994 über die Anlagefonds (Anlagefondsgesetz, AFG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 18 mars 1994 sur les fonds de placement (LFP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 18 marzo 1994 sui fondi d'investimento (LFI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "951.31"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1994/2523_2523_2523"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1995-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1994-03-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1994 2523"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz vom 18. März 1994 über die Anlagefonds (Anlagefondsgesetz, AFG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale du 18 mars 1994 sur les fonds de placement (LFP)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale del 18 marzo 1994 sui fondi d'investimento (LFI)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "951.31"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1994/2523_2523_2523"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1995-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1994-03-18"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1994 2523"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz vom 18. März 1994 über die Anlagefonds (Anlagefondsgesetz, AFG)"
@@ -277,69 +309,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-06-23"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Bundesgesetz über die kollektiven Kapitalanlagen (Kollektivanlagengesetz, KAG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur les placements collectifs de capitaux (Loi sur les placements collectifs, LPCC)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sugli investimenti collettivi di capitale (Legge sugli investimenti collettivi, LICol)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "951.31"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/822"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-06-23"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Bundesgesetz über die kollektiven Kapitalanlagen (Kollektivanlagengesetz, KAG)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Loi fédérale sur les placements collectifs de capitaux (Loi sur les placements collectifs, LPCC)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Legge federale sugli investimenti collettivi di capitale (Legge sugli investimenti collettivi, LICol)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "951.31"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/2006/822"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2007-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "2006-06-23"
+        "value": "RO 2006 5379"
       },
       "titleDe": {
         "type": "literal",
@@ -373,6 +345,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-06-23"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 5379"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die kollektiven Kapitalanlagen (Kollektivanlagengesetz, KAG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les placements collectifs de capitaux (Loi sur les placements collectifs, LPCC)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sugli investimenti collettivi di capitale (Legge sugli investimenti collettivi, LICol)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "951.31"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/822"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-06-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 5379"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über die kollektiven Kapitalanlagen (Kollektivanlagengesetz, KAG)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur les placements collectifs de capitaux (Loi sur les placements collectifs, LPCC)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sugli investimenti collettivi di capitale (Legge sugli investimenti collettivi, LICol)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "951.31"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2006/822"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2007-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2006-06-23"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 5379"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die kollektiven Kapitalanlagen (Kollektivanlagengesetz, KAG)"
@@ -404,6 +452,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-07-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 3351"
       },
       "titleDe": {
         "type": "literal",
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-07-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 3351"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die kollektiven Kapitalanlagen (Kollektivanlagengesetz, KAG) (Betrifft nur den italienischen Text)"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2007-07-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2007 3351"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die kollektiven Kapitalanlagen (Kollektivanlagengesetz, KAG) (Betrifft nur den italienischen Text)"
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-09-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 585"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die kollektiven Kapitalanlagen (Kollektivanlagengesetz, KAG)"
@@ -533,6 +597,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-09-28"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 585"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die kollektiven Kapitalanlagen (Kollektivanlagengesetz, KAG)"
@@ -564,6 +632,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2012-09-28"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2013 585"
       },
       "titleDe": {
         "type": "literal",
@@ -596,6 +668,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-12-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1535"
       },
       "titleDe": {
         "type": "literal",
@@ -629,6 +705,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-12-12"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1535"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Bundesgesetz über die Ausweitung der Strafbarkeit der Verletzung des Berufsgeheimnisses (Änderung des Kollektivanlagen-, des Banken- und des Börsengesetzes)"
@@ -660,6 +740,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2014-12-12"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2015 1535"
       },
       "titleDe": {
         "type": "literal",

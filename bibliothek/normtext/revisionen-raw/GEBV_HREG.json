@@ -21,69 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1954-12-03"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 3. Dezember 1954 über die Gebühren für das Handelsregister"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 3 décembre 1954 sur les émoluments en matière de registre du commerce"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 3 dicembre 1954 sulle tasse in materia di registro di commercio"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "221.411.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1954/1165_1189_1090"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1955-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1954-12-03"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung vom 3. Dezember 1954 über die Gebühren für das Handelsregister"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 3 décembre 1954 sur les émoluments en matière de registre du commerce"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 3 dicembre 1954 sulle tasse in materia di registro di commercio"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "221.411.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1954/1165_1189_1090"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1955-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1954-12-03"
+        "value": "RO 1954 1189"
       },
       "titleDe": {
         "type": "literal",
@@ -117,6 +57,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1954-12-03"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1954 1189"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 3. Dezember 1954 über die Gebühren für das Handelsregister"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 3 décembre 1954 sur les émoluments en matière de registre du commerce"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 3 dicembre 1954 sulle tasse in materia di registro di commercio"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "221.411.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1954/1165_1189_1090"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1955-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1954-12-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1954 1189"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 3. Dezember 1954 über die Gebühren für das Handelsregister"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 3 décembre 1954 sur les émoluments en matière de registre du commerce"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 3 dicembre 1954 sulle tasse in materia di registro di commercio"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "221.411.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1954/1165_1189_1090"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1955-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1954-12-03"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1954 1189"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 3. Dezember 1954 über die Gebühren für das Handelsregister"
@@ -149,6 +165,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-07-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 3387"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Gebühren für das Handelsregister"
@@ -181,6 +201,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-07-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 3387"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Gebühren für das Handelsregister"
@@ -213,6 +237,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2006-07-05"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2006 3387"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Gebühren für das Handelsregister"
@@ -245,6 +273,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-03-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 993"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Gebühren für das Handelsregister (GebV-HReg)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-03-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 993"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Gebühren für das Handelsregister (GebV-HReg)"
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-03-06"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 993"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über die Gebühren für das Handelsregister (GebV-HReg)"
@@ -340,6 +380,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2020-03-06"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2020 993"
       },
       "titleDe": {
         "type": "literal",

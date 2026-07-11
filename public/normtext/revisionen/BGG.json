@@ -1,7 +1,7 @@
 {
   "erlassKey": "BGG",
   "sr": "173.110",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -106,13 +106,13 @@
       "dateEntryInForce": "2016-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2015/3",
       "dateDocument": "2014-06-20",
-      "roFundstelle": "AS 2015 3",
+      "roFundstelle": "AS 2015 9",
       "titelDe": "Bundesgesetz über eine Neuregelung des Steuererlasses (Steuererlassgesetz)",
       "titelFr": "Loi fédérale relative à la nouvelle réglementation concernant la remise de l'impôt (Loi sur la remise de l'impôt)",
       "titelIt": "Legge federale concernente la nuova disciplina del condono dell'imposta (Legge sul condono dell'imposta)",
       "botschaftKey": "BOTSCHAFT-2013-1658",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2015/3/de",
-      "sha": "212a7546a4fd654ca1de6f14ae7dc2748ec172a956600dc283283648c38e320d"
+      "sha": "5d1f4c78a6d4918ee25c6be76dcb334f89b396345e8b3cd9e4bfa53ab98f97cf"
     },
     {
       "art": "sammelerlass-marker",
@@ -215,51 +215,51 @@
       "dateEntryInForce": "2007-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/218",
       "dateDocument": "2005-06-17",
-      "roFundstelle": "AS 2006 218",
+      "roFundstelle": "AS 2006 1205",
       "titelDe": "Bundesgesetz über das Bundesgericht (Bundesgerichtsgesetz, BGG)",
       "titelFr": "Loi sur le Tribunal fédéral (LTF)",
       "titelIt": "Legge sul Tribunale federale (LTF)",
       "botschaftKey": "BOTSCHAFT-2001-731",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/218/de",
-      "sha": "df01e8651a533e5d70185d7dfe88b2f3256ee8e8ba2d238f2a37cab249f1ab07"
+      "sha": "be10c0ee1ca60e3e32198ed91806cebc30f814b75ad902939e6ba9b724e09cc8"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2007-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2006/634",
       "dateDocument": "2006-06-23",
-      "roFundstelle": "AS 2006 634",
+      "roFundstelle": "AS 2006 4213",
       "titelDe": "Bundesgesetz über die Bereinigung und Aktualisierung der Totalrevision der Bundesrechtspflege",
       "titelFr": "Loi fédérale concernant la mise à jour de la révision totale de l'organisation judiciaire fédérale",
       "titelIt": "Legge federale che integra e attualizza la revisione totale dell'organizzazione giudiziaria federale",
       "botschaftKey": "BOTSCHAFT-2006-334",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2006/634/de",
-      "sha": "4371b6a3e08e418c63061d435dbed991f50ea61e296a74f6b1bfe726bd4d4efa"
+      "sha": "d85c6b6c2f016ef29162ee22a1afaf718abe38edc9ad5299d0687d3ac240bdac"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/453",
       "dateDocument": "2000-06-23",
-      "roFundstelle": "AS 2000 453",
+      "roFundstelle": "AS 2000 2719",
       "titelDe": "Bundesgesetz über die Organisation der Bundesrechtspflege (Bundesrechtspflegegesetz, OG)",
       "titelFr": "Loi fédérale d'organisation judiciaire (Organisation judiciaire, OJ)",
       "titelIt": "Legge federale sull'organizzazione giudiziaria (Organizzazione giudiziaria, OG)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/453/de",
-      "sha": "6c29c385726a8cc82fda1897276c6f4b939fe44961792a5904d344e349227b3c"
+      "sha": "f849b7a391804033834c42b5c9e855362ad59364bb1108bf8c0a8556079a4e74"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2000-03-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/95",
       "dateDocument": "1999-10-08",
-      "roFundstelle": "AS 2000 95",
+      "roFundstelle": "AS 2000 505",
       "titelDe": "Bundesgesetz über die Abschaffung der Bundesassisen",
       "titelFr": "Loi fédérale sur l'abolition des Assises fédérales",
       "titelIt": "Legge federale concernente la sopressione delle Assise federali",
       "botschaftKey": "BOTSCHAFT-1999-1_7922_7145_6784",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/95/de",
-      "sha": "540d08688111332ae882c120de5bfde4322a3d2b5dae5f9fad01107452787e78"
+      "sha": "1a3742c41d9119d10d0b9270575f32f80fa6dc86e958907889892d5fa2c7be7d"
     },
     {
       "art": "aenderung",
@@ -274,5 +274,5 @@
       "sha": "74992fbf1c7525e763309ca8224b5a1bce9a1506d11873fc0f88c751e40a3b5c"
     }
   ],
-  "sha": "c73ccf95757566ee34045d622a237bcda0eb87e11317d06fbb24a0ba9f3cae54"
+  "sha": "0e0755fa58d0126d0b5f1cdde4273a3bd5760cb2b7b0012177527b27a673448d"
 }

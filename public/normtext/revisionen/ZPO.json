@@ -1,7 +1,7 @@
 {
   "erlassKey": "ZPO",
   "sr": "272",
-  "abgerufen": "2026-07-10",
+  "abgerufen": "2026-07-11",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -124,12 +124,12 @@
       "dateEntryInForce": "2013-05-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2013/178",
       "dateDocument": "2012-09-28",
-      "roFundstelle": "AS 2013 178",
+      "roFundstelle": "AS 2013 851",
       "titelDe": "Schweizerische Zivilprozessordnung und Schweizerische Strafprozessordnung (Protokollierungsvorschriften)",
       "titelFr": "Code de procédure civile suisse et code de procédure pénale suisse (Dispositions relatives à la rédaction des procès-verbaux)",
       "titelIt": "Codice di diritto processuale civile svizzero e Codice di diritto processuale penale svizzero (Disposizioni sulla verbalizzazione)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2013/178/de",
-      "sha": "f7fdde8b5bbb236d79105e96212039cefea7c297a2ba95fcbf2c44a29c543cb5"
+      "sha": "f25846c326b3c23505797e0f65b6a56f81d4328ccde5adda47afce214e5da12f"
     },
     {
       "art": "sammelerlass-marker",
@@ -148,51 +148,51 @@
       "dateEntryInForce": "2011-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/262",
       "dateDocument": "2008-12-19",
-      "roFundstelle": "AS 2010 262",
+      "roFundstelle": "AS 2010 1739",
       "titelDe": "Schweizerische Zivilprozessordnung (Zivilprozessordnung, ZPO)",
       "titelFr": "Code de procédure civile (CPC)",
       "titelIt": "Codice di diritto processuale civile svizzero (Codice di procedura civile, CPC)",
       "botschaftKey": "BOTSCHAFT-2006-914",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/262/de",
-      "sha": "637e162f9cf95e2fba75e97bd1f4af42e478fe5f38a657eee7c4288d295929aa"
+      "sha": "5ece304c6ce9c9e9bbbc23a0294c5f5a73341303a65161e94f0b2725f998f054"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2011-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/263",
       "dateDocument": "2010-03-31",
-      "roFundstelle": "AS 2010 263",
+      "roFundstelle": "AS 2010 1861",
       "titelDe": "Verordnung über die abschliessende Inkraftsetzung der Änderung vom 25. September 2009 des Zivilgesetzbuches (Bedenkzeit im Scheidungsverfahren auf gemeinsames Begehren)",
       "titelFr": "Ordonnance portant mise en vigueur totale de la modification du 25 septembre 2009 du code civil (Délai de réflexion dans la procédure de divorce sur requête commune)",
       "titelIt": "Ordinanza sull'entrata in vigore integrale della modifica del 25 settembre 2009 del Codice civile (Periodo di riflessione nella procedura di divorzio su richiesta comune)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/263/de",
-      "sha": "c58ece8496715fbcb46618e39448e803c98b390e3ff37e9e36c31445fcb19272"
+      "sha": "68a7ea79a0cd8504e7989b96c062b99eaa7a233858c19f5c6fe5bc113642fc22"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2011-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2010/800",
       "dateDocument": "2009-12-11",
-      "roFundstelle": "AS 2010 800",
+      "roFundstelle": "AS 2010 5601",
       "titelDe": "Bundesbeschluss über die Genehmigung und die Umsetzung des Übereinkommens über die gerichtliche Zuständigkeit und die Anerkennung und Vollstreckung von Entscheidungen in Zivil- und Handelssachen (Lugano-Übereinkommen)",
       "titelFr": "Arrêté fédéral portant approbation et mise en uvre de la Convention concernant la compétence judiciaire, la reconnaissance et l'exécution des décisions en matière civile et commerciale (Convention de Lugano)",
       "titelIt": "Decreto federale che approva e traspone nel diritto svizzero la Convenzione concernente la competenza giurisdizionale, il riconoscimento e l'esecuzione delle decisioni in materia civile e commerciale (Convenzione di Lugano)",
       "botschaftKey": "BOTSCHAFT-2009-402",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2010/800/de",
-      "sha": "59a995dde42cf931f1b573804f0db53391d6e703928951ca7d70cd1e5976d57a"
+      "sha": "6c4b7bb79ffc09ce92b0200789191869b63e77e69bb0362a3580b9d68bcae886"
     },
     {
       "art": "aenderung",
       "dateEntryInForce": "2001-01-01",
       "ocUri": "https://fedlex.data.admin.ch/eli/oc/2000/374",
       "dateDocument": "2000-03-24",
-      "roFundstelle": "AS 2000 374",
+      "roFundstelle": "AS 2000 2355",
       "titelDe": "Bundesgesetz über den Gerichtsstand in Zivilsachen (Gerichtsstandsgesetz, GestG)",
       "titelFr": "Loi fédérale sur les fors en matière civile (Loi sur les fors, LFors)",
       "titelIt": "Legge federale sul foro in materia civile (Legge sul foro, LForo)",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2000/374/de",
-      "sha": "7e1f7d46e45c2fa208698f6cc77b04c89df76eb0a2aff0af9eff2fcacad60404"
+      "sha": "944ecc53f8c057daf01c18a9289550695c23540abc4abbfddcb1e79b0568e6ad"
     }
   ],
-  "sha": "272f7293e215a346ce39f21c5ae5f704309bc8fd2a0c0282b77f073463a6772b"
+  "sha": "1aa119d59bdb134474a12d4102d9abc6900b91de7047f642a12cc36a449def5d"
 }

@@ -21,37 +21,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1966-12-27"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Vollziehungsverordnung vom 27. Dezember 1966 zum Bundesgesetz über den Natur- und Heimatschutz"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance d'exécution du 27 décembre 1966 de la loi fédérale sur la protection de la nature et du paysage"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza d'esecuzione del 27 dicembre 1966 della legge federale sulla protezione della natura e del paesaggio"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "451.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1966/1646_1703_1688"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1967-01-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1966-12-27"
+        "value": "RO 1966 1703"
       },
       "titleDe": {
         "type": "literal",
@@ -85,6 +57,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1966-12-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1966 1703"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Vollziehungsverordnung vom 27. Dezember 1966 zum Bundesgesetz über den Natur- und Heimatschutz"
@@ -117,6 +93,46 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1966-12-27"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1966 1703"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Vollziehungsverordnung vom 27. Dezember 1966 zum Bundesgesetz über den Natur- und Heimatschutz"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance d'exécution du 27 décembre 1966 de la loi fédérale sur la protection de la nature et du paysage"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza d'esecuzione del 27 dicembre 1966 della legge federale sulla protezione della natura e del paesaggio"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "451.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1966/1646_1703_1688"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1967-01-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1966-12-27"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1966 1703"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Vollziehungsverordnung vom 27. Dezember 1966 zum Bundesgesetz über den Natur- und Heimatschutz"
@@ -149,69 +165,9 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1991-01-16"
       },
-      "titleDe": {
+      "roId": {
         "type": "literal",
-        "value": "Verordnung vom 16. Januar 1991 über den Natur- und Heimatschutz (NHV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 16 janvier 1991 sur la protection de la nature et du paysage (OPN)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 16 gennaio 1991 sulla protezione della natura e del paesaggio (OPN)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "451.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1991/249_249_249"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1991-02-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1991-01-16"
-      },
-      "titleDe": {
-        "type": "literal",
-        "value": "Verordnung vom 16. Januar 1991 über den Natur- und Heimatschutz (NHV)"
-      },
-      "titleFr": {
-        "type": "literal",
-        "value": "Ordonnance du 16 janvier 1991 sur la protection de la nature et du paysage (OPN)"
-      },
-      "titleIt": {
-        "type": "literal",
-        "value": "Ordinanza del 16 gennaio 1991 sulla protezione della natura e del paesaggio (OPN)"
-      }
-    },
-    {
-      "sr": {
-        "type": "literal",
-        "value": "451.1"
-      },
-      "oc": {
-        "type": "uri",
-        "value": "https://fedlex.data.admin.ch/eli/oc/1991/249_249_249"
-      },
-      "dateForce": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1991-02-01"
-      },
-      "dateDoc": {
-        "type": "typed-literal",
-        "datatype": "http://www.w3.org/2001/XMLSchema#date",
-        "value": "1991-01-16"
+        "value": "RO 1991 249"
       },
       "titleDe": {
         "type": "literal",
@@ -245,6 +201,82 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "1991-01-16"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1991 249"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 16. Januar 1991 über den Natur- und Heimatschutz (NHV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 16 janvier 1991 sur la protection de la nature et du paysage (OPN)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 16 gennaio 1991 sulla protezione della natura e del paesaggio (OPN)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "451.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1991/249_249_249"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1991-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1991-01-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1991 249"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Verordnung vom 16. Januar 1991 über den Natur- und Heimatschutz (NHV)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Ordonnance du 16 janvier 1991 sur la protection de la nature et du paysage (OPN)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Ordinanza del 16 gennaio 1991 sulla protezione della natura e del paesaggio (OPN)"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "451.1"
+      },
+      "oc": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1991/249_249_249"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1991-02-01"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "1991-01-16"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 1991 249"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung vom 16. Januar 1991 über den Natur- und Heimatschutz (NHV)"
@@ -277,6 +309,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-02-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 703"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über die Koordination und Vereinfachung von Entscheidverfahren"
@@ -309,6 +345,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-02-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 703"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über die Koordination und Vereinfachung von Entscheidverfahren"
@@ -341,6 +381,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-02-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 703"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung zum Bundesgesetz über die Koordination und Vereinfachung von Entscheidverfahren"
@@ -373,6 +417,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1869"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Natur- und Heimatschutz (NHV)"
@@ -405,6 +453,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1869"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Natur- und Heimatschutz (NHV)"
@@ -437,6 +489,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2000-06-19"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2000 1869"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Natur- und Heimatschutz (NHV)"
@@ -469,6 +525,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-06-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1662"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Natur- und Heimatschutz (NHV)"
@@ -501,6 +561,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-06-26"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1662"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über den Natur- und Heimatschutz (NHV)"
@@ -532,6 +596,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2001-06-26"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2001 1662"
       },
       "titleDe": {
         "type": "literal",
@@ -564,6 +632,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-02-02"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 649"
       },
       "titleDe": {
         "type": "literal",
@@ -597,6 +669,10 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-02-02"
       },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 649"
+      },
       "titleDe": {
         "type": "literal",
         "value": "Verordnung über Anpassungen des Verordnungsrechts an die Weiterentwicklung der Programmvereinbarungen im Umweltbereich"
@@ -628,6 +704,10 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#date",
         "value": "2011-02-02"
+      },
+      "roId": {
+        "type": "literal",
+        "value": "RO 2011 649"
       },
       "titleDe": {
         "type": "literal",
