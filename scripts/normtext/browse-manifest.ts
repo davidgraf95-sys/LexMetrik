@@ -25,6 +25,16 @@ import {
 
 const NORMTEXT_DIR = 'public/normtext';
 
+/** U-PDF/A12: amtliche PDF-URLs je Snapshot-Key (aus pdf-quellen.json, §5-Projektion). */
+type PdfQuelle = { url: string; stand: string; quelle: string };
+function ladePdfQuellen(basis: string): Record<string, PdfQuelle> {
+  try {
+    return JSON.parse(readFileSync(join(basis, 'pdf-quellen.json'), 'utf8')) as Record<string, PdfQuelle>;
+  } catch {
+    return {};
+  }
+}
+
 function jsonDateien(verzeichnis: string): string[] {
   return readdirSync(verzeichnis)
     .filter((f) => f.endsWith('.json') && f !== 'index.json' && f !== 'register.json')
@@ -118,7 +128,12 @@ function ohneAnker(url: string): string {
   return url.split('#')[0];
 }
 
-function bundEintrag(reg: ErlassRegistereintrag, datei: NormSnapshotDatei): BrowseErlass {
+/** U-PDF/A12: amtliches-PDF-Felder aus dem Sidecar (§8: nur wenn vorhanden). */
+function pdfFelder(pq: PdfQuelle | undefined): { pdfUrl?: string; pdfStand?: string } {
+  return pq ? { pdfUrl: pq.url, pdfStand: pq.stand } : {};
+}
+
+function bundEintrag(reg: ErlassRegistereintrag, datei: NormSnapshotDatei, pq?: PdfQuelle): BrowseErlass {
   return {
     key: reg.key, ebene: 'bund', kanton: null,
     kuerzel: reg.kuerzel, titel: reg.titel, sr: reg.sr ?? null,
@@ -129,10 +144,11 @@ function bundEintrag(reg: ErlassRegistereintrag, datei: NormSnapshotDatei): Brow
     quelleUrl: ohneAnker(datei.eintraege[0]?.quelleUrl ?? ''),
     fassungsToken: datei.eintraege[0]?.fassungsToken ?? '',
     pdfPfad: null,
+    ...pdfFelder(pq),
   };
 }
 
-function kantonEintrag(stamm: string, datei: NormSnapshotDatei): BrowseErlass {
+function kantonEintrag(stamm: string, datei: NormSnapshotDatei, pq?: PdfQuelle): BrowseErlass {
   const kanton = stamm.split('-')[0];
   const erstes = datei.eintraege[0];
   const { kuerzel, titel, sr } = identitaetAusErlass(erstes?.erlass ?? stamm);
@@ -146,6 +162,7 @@ function kantonEintrag(stamm: string, datei: NormSnapshotDatei): BrowseErlass {
     quelleUrl: ohneAnker(erstes?.quelleUrl ?? ''),
     fassungsToken: erstes?.fassungsToken ?? '',
     pdfPfad: null,
+    ...pdfFelder(pq),
   };
 }
 
@@ -189,6 +206,7 @@ function vergleiche(a: BrowseErlass, b: BrowseErlass): number {
 /** Baut das Browse-Manifest aus Register + Snapshot-Dateien (rein, testbar). */
 export function baueBrowseManifest(erzeugt: string, basis = NORMTEXT_DIR): BrowseManifest {
   const bundReg = new Map(ERLASS_REGISTER.filter((r) => r.ebene === 'bund').map((r) => [r.key, r]));
+  const pdfQuellen = ladePdfQuellen(basis);
   const erlasse: BrowseErlass[] = [];
 
   // Bund: jeder Snapshot MUSS einen Register-Eintrag haben (Orphan-Tor).
@@ -198,7 +216,7 @@ export function baueBrowseManifest(erzeugt: string, basis = NORMTEXT_DIR): Brows
     if (!datei) continue;
     const reg = bundReg.get(stamm);
     if (!reg) throw new Error(`browse-manifest: Bund-Snapshot ${stamm}.json ohne Register-Eintrag (ERLASS_REGISTER ergänzen).`);
-    erlasse.push(bundEintrag(reg, datei));
+    erlasse.push(bundEintrag(reg, datei, pdfQuellen[stamm]));
   }
 
   // Kanton: Identität aus Snapshot/Dateiname abgeleitet, Gebiet aus Register.
@@ -206,7 +224,7 @@ export function baueBrowseManifest(erzeugt: string, basis = NORMTEXT_DIR): Brows
     const stamm = f.replace(/\.json$/, '');
     const datei = ladeDatei(join(basis, 'kanton', f));
     if (!datei) continue;
-    erlasse.push(kantonEintrag(stamm, datei));
+    erlasse.push(kantonEintrag(stamm, datei, pdfQuellen[stamm]));
   }
 
   // Register-Einträge ohne Snapshot ergänzen: 'nur-live-link' (externer Link) und

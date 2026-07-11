@@ -1336,6 +1336,70 @@ Barrel, berechnungen.ts, CLS-Härtung), nicht dagegen. Reine Darstellung/Interak
   scrollMerk deckt den Pane-Modus-Wechsel/-Schliessen wie bisher) · kein
   Sub-Artikel-Passus-Highlight über den bestehenden Artikel-Blink hinaus · keine
   Änderung an `window.scrollY`-Restoration für Nicht-Leser-Routen.
+**Ausführungsvermerk U-PDF (A12) — AUSGEFÜHRT 11.7.2026 (Opus, Worktree
+`feat/u-pdf-a12`, kollisionsarm — Kopf-Aktions-Slot + Generator/Registerfeld, KEIN
+`inhalt.tsx`-Scroll-/Anker-Eingriff, `register.ts` unangetastet).**
+
+- **Ist-Befund des alten Knopfs (Spec-Auflage «zuerst erheben»):** zwei Pfade. (1)
+  `status:'pdf-embed'` (EMRK/NYÜ + kant. PDF) lieferte bereits das **amtliche**
+  self-hosted PDF («⬇ PDF herunterladen» → `/normtext/pdf/*.pdf`) — korrekt, nur
+  relabelt. (2) `status:'snapshot'` (Bund + Kanton Volltext) bot ein **render-
+  eigenes `.txt`** (`baueErlassText`, client-Blob) — genau der von §10.5 verbotene
+  «Schein-Download». **Behoben:** der Snapshot-Download lädt jetzt das amtliche PDF
+  der gepinnten Fassung; wo keins existiert, entfällt die Aktion (§8, nie render-
+  eigenes PDF). `baueErlassText`/`herunterladen()` ersatzlos entfernt (§5-Aufräumen).
+- **Ermittlung (build-time, KEINE Client-SPARQL):** neuer Netz-Generator
+  `scripts/normtext/pdf-quellen-generieren.ts` (`gen:pdf-quellen`) → Sidecar
+  `public/normtext/pdf-quellen.json` ({key:{url,stand,quelle}}); `browse-manifest.ts`
+  projiziert offline in `register.json` → **`BrowseErlass.pdfUrl/pdfStand`** (synchron
+  am Erlass ⇒ **CLS 0**, §15/2, kein zweiter Async-Fetch).
+  - **Bund:** Fedlex-`jolux:isExemplifiedBy` der pdf-a-Manifestation der Konsolidierung
+    mit `dateApplicability` == gepinnte Fassung. Die **EXAKTE** Filestore-URL wird
+    gelesen, nicht konstruiert — der Revisions-Suffix variiert real: (none)·-1·-2·-3·
+    -4·-5·-12 (Verteilung 109/69/24/9/11/4/1 über 227 Erlasse). **Suffix-Falle `-2`
+    (P1-a/b) damit gegenstandslos**: eine suffixlose Konstruktion hätte für 118/227
+    die ÄLTERE Datei geladen (HTTP 200, kein 404). **227/227 Bund** aufgelöst (inkl. 9 P4-Staatsverträge nach additivem Rebase).
+  - **Kanton:** LexWork `selected_version.pdf_link_tol`, nur bei Versions-Gleichstand
+    (In-Kraft-Datum == snapshot.stand, sonst Drift ⇒ weglassen, §8). **1184/1231**
+    (47 ehrlich ohne Aktion; 0 Netz-Fehler).
+  - **Staatsvertrag/pdf-embed:** bestehendes self-hosted PDF (EMRK `-2` kanonisch,
+    NYÜ suffixlos), nur ehrlich beschriftet.
+- **Abdeckung:** **1411 Erlasse** mit amtlichem PDF (227 Bund + 1184 Kanton) +
+  2 Staatsverträge; ehrlich ohne Aktion: 47 Kanton (Drift/kein PDF).
+- **Beschriftung (§8):** eine Komponente `parts/AmtlichesPdf.tsx` — «⬇ Amtliches PDF
+  (Fassung vom TT.MM.JJJJ)», `<a>` (Bund/Kanton neuer Tab; pdf-embed same-origin
+  `download`), `aria-label` vollständig, `lc-chip`-24px-Tap-Ziel (WCAG 2.2 §2.5.8).
+- **Drift/Pin-Überwachung (A12-Auflage):** neues Tor **`check:pdf-quellen`** (offline,
+  in `check`/`gate`) bindet jede Bund-PDF-URL an den `fedlex-cache.sh`-Pin (URL-
+  Konsolidierung == Pin-Konsolidierung == stand) + Projektions-Integrität register↔
+  Sidecar + Coverage-Floor; **`check:pdf-quellen-netz`** (in `check:netz`) HEAD-prüft
+  alle Bund-URLs + Kanton-Stichprobe auf `application/pdf`. `check:fedlex-versionen`
+  bleibt Currency-Arbiter der Pins (grün: alle geltend, inkl. pdf-embed).
+- **P5-Gegenprüfung (Risiko-Pfad, unabhängiger Opus-Pass, frischer Kontext, gegen
+  Fedlex-SPARQL + Filestore-PDF + LexWork):** Stichprobe 12 (AIG·BBG = Suffix-`-2`;
+  ZGB `-1`, OR `-4`, DSG none, BV `-3`; 3× Kanton AG; EMRK/NYÜ) — je unabhängig
+  re-derivierte URL == gespeichert UND **Fassungsdatum im PDF gegen `stand`** geprüft;
+  der `-2`-Fall gegen die suffixlose (ältere) Datei kontrastiert. **Verdikt:
+  `bestanden`** (`gegenpruefung:ok` quittiert, Diff-gebunden).
+- **A9-DoD:** e2e `gesetze-pdf-download` (Bund Fedlex-Filestore-Ziel + ehrliche
+  «Fassung vom …» + `target=_blank` + aria + Tastaturfokus; Kanton LexWork-Ziel);
+  `check:perf-budget` grün (CLS 0 — pdfUrl am Erlass, keine neue Async-Klasse).
+- **Tore:** tsc · vitest (inkl. neuer `pdf-quellen.test.ts`) · golden:vergleich
+  IDENTISCH · lint · build · e2e `gesetze-pdf-download` grün; `check:pdf-quellen`/
+  `check:paritaet`/`check:gegenpruefung` grün. **Alle CI-gated Stufen grün** (CI-`ci.yml`
+  fährt tsc/test/lint/build/golden/smoke/e2e/perf — NICHT die volle `check`-Kette).
+  **EINZIGES lokales Rot: der VORBESTEHENDE `check:revisionen`** — der P4-Merge (#186,
+  9 Staatsverträge) fügte 9 Bund-Snapshots OHNE Paket-5-Revisionen-Sidecar hinzu ⇒
+  auf `origin/main` bereits rot (227 Bund vs. 218 Sidecars), **nicht dieser Diff, nicht
+  CI-gated**; heilbar nur durch eine eigene Paket-5-Reconciliation (`normtext:revisionen`,
+  Risiko-Pfad — bewusst NICHT in U-PDF gebündelt, §14.2). **Golden-Klasse: Engine-Golden
+  byte-gleich** (kein `src/lib/vorlagen|tarif`-Eingriff); **register.json + daten-manifest
+  additiv-ändernd** (neues Feld `pdfUrl/pdfStand`, `datenhaltung:manifest` nachgezogen).
+- **Bewusst NICHT (U-PDF-Scope):** kein render-eigenes PDF (§10.5) · keine Client-
+  SPARQL · keine Kopf-Slot-Umlayoutierung (A22-K-1/K-2 «in Kraft seit» + Fussnoten-
+  Chip bleiben dem koordinierten V2-Kopf-PR, §10.8 A22 — U-PDF liefert nur den
+  Download-Slot) · kein Bund-Self-Hosting (direkter amtlicher Filestore-Link ist
+  ehrlicher + driftfrei; pdf-embed bleibt self-hosted wegen `X-Frame-Options`).
 
 ### 10.8 · Anmerkungs-Nachzug A19–A25 (David 10.7.2026) — Einordnung, Spec-Heimat V2
 

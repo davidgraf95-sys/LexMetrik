@@ -29,6 +29,17 @@ export interface BrowseErlass {
   fassungsToken: string;
   /** Nur status 'pdf-embed': Pfad zum gehosteten amtlichen PDF (z.B. 'pdf/EMRK.pdf'), sonst null. */
   pdfPfad: string | null;
+  // ── U-PDF / A12: amtliches PDF der gepinnten Fassung (Download-Aktion) ──
+  /** Nur status 'snapshot': absolute URL des AMTLICHEN PDF der gepinnten Fassung
+   *  (Bund: Fedlex-Filestore pdf-a via SPARQL isExemplifiedBy; Kanton: LexWork
+   *  pdf_link_tol). Projiziert aus public/normtext/pdf-quellen.json (§5). Fehlt sie
+   *  (kein amtliches PDF ODER Kanton-Drift), wird die Download-Aktion weggelassen
+   *  statt ein render-eigenes PDF anzubieten (§8, FAHRPLAN-GESETZES-UX §10.5). */
+  pdfUrl?: string;
+  /** Versionsdatum (ISO) des unter pdfUrl liegenden amtlichen PDF — der Generator
+   *  garantiert pdfStand == der ausgelieferten gepinnten Fassung; ehrliche
+   *  Beschriftung «Amtliches PDF (Fassung vom …)». */
+  pdfStand?: string;
 }
 
 export interface BrowseManifest {
