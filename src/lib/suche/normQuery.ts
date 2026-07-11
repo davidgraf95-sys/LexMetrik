@@ -84,6 +84,26 @@ export function baueNormIndex(erlasse: readonly NormErlass[]): NormIndex {
   return { map, kantone };
 }
 
+// FR/IT-Kürzel-Aliasse (UI-NAV S2/Z3 — billigster Romandie-Hebel): die welschen/
+// italienischen Kurztitel der grossen Kodifikationen zeigen auf das schon
+// vorhandene deutsche Erlass-Kürzel. Normalisierte Alias-Form → normalisierte
+// Ziel-Kürzel-Form. Greift NUR als Fallback: existiert ein echter Erlass mit dem
+// Alias-Kürzel, gewinnt der (holeErlasse prüft die Karte zuerst).
+const ALIAS: Readonly<Record<string, string>> = {
+  CO: 'OR',      // Code des obligations / Codice delle obbligazioni → OR
+  CC: 'ZGB',     // Code civil / Codice civile → ZGB
+  CP: 'STGB',    // Code pénal / Codice penale → StGB
+  CPC: 'ZPO',    // Code de procédure civile / Codice di diritto processuale civile → ZPO
+  LP: 'SCHKG',   // Loi sur la poursuite pour dettes et la faillite → SchKG
+};
+
+// Kandidaten zu einem normalisierten Kürzel holen; findet die Karte nichts, wird
+// EINMAL über die FR/IT-Alias-Tabelle nachgeschlagen (nie rekursiv). So bleibt ein
+// echtes Kürzel «CP» (falls je im Register) immer vorrangig vor dem Alias.
+function holeErlasse(index: NormIndex, key: string): NormErlass[] | undefined {
+  return index.map.get(key) ?? (ALIAS[key] ? index.map.get(ALIAS[key]) : undefined);
+}
+
 // Aus mehreren Kandidaten den EINEN wählen: genau ein Treffer → dieser; sonst
 // genau ein Bund-Treffer → dieser (Bund schlägt kollidierende Kantonskürzel wie
 // «StG», es sei denn der Kanton wird explizit genannt); sonst mehrdeutig → null.
@@ -112,12 +132,12 @@ function parseArtikel(tokens: string[]): { token: string; anzeige: string } | nu
 function loese(index: NormIndex, tokens: string[], filter?: (e: NormErlass) => boolean): { erlass: NormErlass; artikel: { token: string; anzeige: string } | null } | null {
   if (tokens.length === 0) return null;
   // (1) Reines Kürzel (ganze Eingabe) → Erlass-Sprung ohne Artikel.
-  const ganz = waehle(index.map.get(norm(tokens.join(''))), filter);
+  const ganz = waehle(holeErlasse(index, norm(tokens.join(''))), filter);
   if (ganz) return { erlass: ganz, artikel: null };
   // (2) Kürzel am ENDE (Artikel davor), längste Spanne zuerst (max. 3 Tokens für
   //     mehrteilige Kürzel wie «GebV SchKG»).
   for (let len = Math.min(3, tokens.length - 1); len >= 1; len--) {
-    const erlass = waehle(index.map.get(norm(tokens.slice(-len).join(''))), filter);
+    const erlass = waehle(holeErlasse(index, norm(tokens.slice(-len).join(''))), filter);
     if (erlass) {
       const artikel = parseArtikel(tokens.slice(0, -len));
       if (artikel) return { erlass, artikel };
@@ -125,7 +145,7 @@ function loese(index: NormIndex, tokens: string[], filter?: (e: NormErlass) => b
   }
   // (3) Kürzel am ANFANG (Artikel danach).
   for (let len = Math.min(3, tokens.length - 1); len >= 1; len--) {
-    const erlass = waehle(index.map.get(norm(tokens.slice(0, len).join(''))), filter);
+    const erlass = waehle(holeErlasse(index, norm(tokens.slice(0, len).join(''))), filter);
     if (erlass) {
       const artikel = parseArtikel(tokens.slice(len));
       if (artikel) return { erlass, artikel };
@@ -141,15 +161,25 @@ function bauHref(e: NormErlass, artikelToken: string | null): string {
   return artikelToken && e.status === 'snapshot' ? `${basis}#art-${artikelToken}` : basis;
 }
 
-/**
- * Löst eine Norm-Query auf einen Leser-Deep-Link auf, oder gibt null zurück
- * (→ normale Suche). Deterministisch, ohne Suchindex.
- */
-export function parseNormQuery(query: string, index: NormIndex): NormQueryTreffer | null {
-  const roh = query.trim();
-  if (!roh) return null;
-  const tokens = roh.split(/\s+/);
+// Kompaktform «or257d» (kein Trennzeichen zwischen Kürzel und Artikel) in zwei
+// Tokens auftrennen: der Alpha-Präfix (≥2 Buchstaben) ist das Kürzel, der
+// Ziffern-Rest der Artikel. Ambiguitäts-Vorsicht (Kürzel-mit-Ziffer wie «ArGV 1»):
+// die Auftrennung greift NUR als Fallback, NACHDEM die ungetrennte Auflösung
+// gescheitert ist — «ArGV1» löst sich vorher als ganzes Kürzel auf und erreicht
+// diesen Pfad nie. Gibt null, wenn kein Token eine solche Grenze hat.
+function kompaktSplit(tokens: string[]): string[] | null {
+  let veraendert = false;
+  const out: string[] = [];
+  for (const t of tokens) {
+    const m = t.match(/^([A-Za-zÀ-ÿ]{2,})(\d.*)$/);
+    if (m) { out.push(m[1], m[2]); veraendert = true; }
+    else out.push(t);
+  }
+  return veraendert ? out : null;
+}
 
+// Ein Auflösungs-Versuch für eine gegebene Token-Liste (Kantons-Pfad zuerst).
+function versuche(index: NormIndex, tokens: string[]): NormQueryTreffer | null {
   // Explizite Kantons-Angabe (2-Buchstaben-Code irgendwo in der Eingabe) grenzt
   // die Auflösung auf diesen Kanton ein und wird ZUERST versucht (der Nutzer
   // meint diesen Kanton, nicht den kollidierenden Bund-Treffer wie «StG»).
@@ -160,8 +190,22 @@ export function parseNormQuery(query: string, index: NormIndex): NormQueryTreffe
     const r = loese(index, rest, (e) => e.kanton != null && norm(e.kanton) === code);
     if (r) return { erlass: r.erlass, artikelToken: r.artikel?.token ?? null, artikelAnzeige: r.artikel?.anzeige ?? null, href: bauHref(r.erlass, r.artikel?.token ?? null) };
   }
-
   const r = loese(index, tokens);
   if (!r) return null;
   return { erlass: r.erlass, artikelToken: r.artikel?.token ?? null, artikelAnzeige: r.artikel?.anzeige ?? null, href: bauHref(r.erlass, r.artikel?.token ?? null) };
+}
+
+/**
+ * Löst eine Norm-Query auf einen Leser-Deep-Link auf, oder gibt null zurück
+ * (→ normale Suche). Deterministisch, ohne Suchindex.
+ */
+export function parseNormQuery(query: string, index: NormIndex): NormQueryTreffer | null {
+  const roh = query.trim();
+  if (!roh) return null;
+  const tokens = roh.split(/\s+/);
+  const direkt = versuche(index, tokens);
+  if (direkt) return direkt;
+  // Fallback: Kompaktform «or257d» auftrennen und erneut versuchen.
+  const kompakt = kompaktSplit(tokens);
+  return kompakt ? versuche(index, kompakt) : null;
 }

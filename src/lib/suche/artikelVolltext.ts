@@ -75,7 +75,7 @@ async function baue(): Promise<(q: string, limit?: number) => SuchTreffer[]> {
         // Label: Anzeige-Kürzel (e.ku, «StGB»); href: ROUTEN-Key (e.k, «STGB»).
         label: `${e.l} ${e.ku}`,
         untertitel: snippet(e.t, q),
-        marke: { text: 'Gesetzestext', ton: 'soft' as const },
+        marke: { text: 'Gesetzestext', ton: 'soft' as const, redundant: true },
         href: `/gesetze/bund/${encodeURIComponent(e.k)}#art-${e.a}`,
       };
     });

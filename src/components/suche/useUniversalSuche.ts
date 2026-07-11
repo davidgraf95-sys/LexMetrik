@@ -1,7 +1,11 @@
 import { useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
-import { sucheAlles, sprungGruppe, type SuchGruppe, type SuchTreffer } from '../../lib/universalSuche';
+import { sucheAlles, sprungGruppe, bgeSprungGruppe, type SuchGruppe, type SuchTreffer } from '../../lib/universalSuche';
 import { holeOnlineTreffer, MIN_ZEICHEN } from '../../lib/suche/onlineVolltext';
 import { baueNormIndex, parseNormQuery } from '../../lib/suche/normQuery';
+import { baueBgeIndex, parseBgeSprung } from '../../lib/suche/bgeQuery';
+import { meinenSie } from '../../lib/suche/vorschlag';
+import { vokabularBegriffe } from '../../lib/suche/vokabular';
+import { KATALOG_KARTEN } from '../../lib/startseiteConfig';
 import type { PresetIndexEintrag } from '../../lib/presetIndex';
 import type { BrowseErlass } from '../../lib/normtext/browse-typen';
 import type { BrowseEntscheid } from '../../lib/rechtsprechung/register';
@@ -19,10 +23,25 @@ import type { BrowseMaterial } from '../../lib/materialien/typen';
 // herausgezogen, damit Header und Hero EINEN Suchweg teilen (Auftrag David:
 // «Resultate überall im Dropdown»).
 
+/** §8-Korpus-Offenlegung (UI-NAV S3/E1): was die Suche wirklich abdeckt. Aus den
+ *  ohnehin geladenen Manifesten abgeleitet (kein Zweit-Index, K10). */
+export interface Abdeckung {
+  /** Bund-Erlasse im Volltext-Suchindex. */
+  volltext: number;
+  /** BGE/Leitentscheide im Bestand. */
+  bge: number;
+  /** Kantonale Erlasse (nur nach Titel durchsuchbar). */
+  kantonTitel: number;
+}
+
 export interface UniversalSucheErgebnis {
   gruppen: SuchGruppe[];
   /** true, sobald alle drei Datenquellen geladen sind (für ehrlichen Leerzustand). */
   allesGeladen: boolean;
+  /** «Meinten Sie …?»-Vorschlag bei mutmasslichem Tippfehler (oder null). */
+  vorschlag: string | null;
+  /** §8-Korpus-Offenlegung für die Fusszeile (oder null, solange Manifeste laden). */
+  abdeckung: Abdeckung | null;
 }
 
 export function useUniversalSuche(q: string): UniversalSucheErgebnis {
@@ -71,6 +90,15 @@ export function useUniversalSuche(q: string): UniversalSucheErgebnis {
   const normIndex = useMemo(() => (gesetze ? baueNormIndex(gesetze) : null), [gesetze]);
   const direkt = useMemo(() => (normIndex ? parseNormQuery(q, normIndex) : null), [normIndex, q]);
 
+  // BGE-Zitat-Direktsprung (UI-NAV S2): analoger, deterministischer Parser auf
+  // demselben Entscheid-Manifest (KEIN Zweit-Index, K10 — `bgeReferenz` trägt die
+  // Bestands-Info). Solange `entscheide` lädt, ist der Index null → der Parser
+  // meldet `laedt` statt voreilig «nicht im Bestand» (§8). Norm- und BGE-Sprung
+  // sind exklusiv (eine Query ist Norm ODER BGE), darum EIN Sprung-Slot: der
+  // Norm-Sprung hat Vorrang, sonst der BGE-Sprung.
+  const bgeIndex = useMemo(() => (entscheide ? baueBgeIndex(entscheide) : null), [entscheide]);
+  const bge = useMemo(() => parseBgeSprung(q, bgeIndex), [q, bgeIndex]);
+
   // §15.3/A9: die TEURE Artikel-Volltextsuche (~4 MB-Index, 40 Treffer) vom
   // reaktiven Pfad ENTKOPPELN. Sie lief bislang synchron IN der `gruppen`-Memo
   // und blockierte damit den GESAMTEN Trefferaufbau — inkl. des billigen,
@@ -104,15 +132,54 @@ export function useUniversalSuche(q: string): UniversalSucheErgebnis {
         entscheide,
         materialien,
       });
-      const sprung = sprungGruppe(direkt);
+      const sprung = sprungGruppe(direkt) ?? bgeSprungGruppe(bge);
       return [
         ...(sprung ? [sprung] : []),
         ...statisch,
         ...(onlineGruppe ? [onlineGruppe] : []),
       ];
     },
-    [q, direkt, presetSucheFn, artikelTreffer, gesetze, entscheide, materialien, onlineGruppe],
+    [q, direkt, bge, presetSucheFn, artikelTreffer, gesetze, entscheide, materialien, onlineGruppe],
   );
   const allesGeladen = presetSucheFn !== null && artikelSucheFn !== null && gesetze !== null && entscheide !== null && materialien !== null;
-  return { gruppen, allesGeladen };
+
+  // §8-Korpus-Offenlegung (S3/E1): rein aus den geladenen Manifesten (K10). Der
+  // Volltext-Suchindex ist Bund-only (artikelVolltext + Online-Edge, §11.5),
+  // kantonale Erlasse sind nur nach Titel durchsuchbar — genau so wird es gesagt.
+  const abdeckung = useMemo<Abdeckung | null>(() => {
+    if (!gesetze || !entscheide) return null;
+    return {
+      volltext: gesetze.filter((e) => e.ebene === 'bund' && e.status === 'snapshot').length,
+      bge: entscheide.filter((e) => e.bgeReferenz).length,
+      kantonTitel: gesetze.filter((e) => e.ebene === 'kanton').length,
+    };
+  }, [gesetze, entscheide]);
+
+  // «Meinten Sie …?» (S3): deterministischer Tippfehler-Vorschlag (§2, kein LLM)
+  // gegen Katalog-Titel + Erlass-Kürzel + Such-Vokabular. Kandidaten in
+  // Anzeige-Priorität (Katalog-Titel/Kürzel vor lowercase-Vokabular), dedupt.
+  const kandidaten = useMemo(() => {
+    const s: string[] = [];
+    const gesehen = new Set<string>();
+    const add = (w: string) => {
+      const n = w.trim().toLowerCase();
+      if (w && !gesehen.has(n)) { gesehen.add(n); s.push(w); }
+    };
+    for (const k of KATALOG_KARTEN) add(k.title);
+    for (const e of gesetze ?? []) if (e.kuerzel) add(e.kuerzel);
+    for (const b of vokabularBegriffe()) add(b);
+    return s;
+  }, [gesetze]);
+
+  // Nur bei spärlichem Ergebnis und stabilem (fertig geladenem) Zustand vorschlagen —
+  // kein Vorschlag, wenn ein Direkt-Sprung oder genügend Treffer da sind (kein Lärm).
+  const vorschlag = useMemo(() => {
+    if (!allesGeladen) return null;
+    if (gruppen.some((g) => g.id === 'sprung')) return null;
+    const total = gruppen.reduce((n, g) => n + g.treffer.length, 0);
+    if (total > 2) return null;
+    return meinenSie(q, kandidaten);
+  }, [allesGeladen, gruppen, q, kandidaten]);
+
+  return { gruppen, allesGeladen, vorschlag, abdeckung };
 }

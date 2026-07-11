@@ -102,14 +102,14 @@ function baueTreffer(antwort: SucheApiAntwort): { treffer: SuchTreffer[]; gesamt
     id: t.id,
     label: t.titel,
     untertitel: t.snippet,
-    marke: { text: 'Gesetz', ton: 'soft' as const },
+    marke: { text: 'Gesetz', ton: 'soft' as const, redundant: true },
     href: artikelTrefferHref(t.fundstelle),
   }));
   const entscheide: SuchTreffer[] = (antwort.entscheide?.treffer ?? []).map((t) => ({
     id: t.id,
     label: t.titel,
     untertitel: t.snippet,
-    marke: { text: 'Entscheid', ton: 'soft' as const },
+    marke: { text: 'Entscheid', ton: 'soft' as const, redundant: true },
     href: entscheidTrefferHref(t.id),
   }));
   return {

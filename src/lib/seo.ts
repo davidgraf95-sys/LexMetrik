@@ -86,6 +86,7 @@ const STATISCHE_SEITEN: Record<string, { titel: string; beschreibung: string; og
   '/ueber': { titel: 'Über — LexMetrik', beschreibung: 'Warum es LexMetrik gibt — entstanden bei der Vorbereitung auf die Anwaltsprüfung: überprüfbare, normtreue Rechtsberechnung statt Black Box.' },
   '/kontakt': { titel: 'Kontakt aufnehmen — LexMetrik', beschreibung: 'Fragen, Korrekturen zu einer Berechnung oder einem Baustein, Vorschläge für neue Rechner und Vorlagen — Hinweise auf Fehler sind besonders willkommen.' },
   '/datenschutz': { titel: 'Datenschutzerklärung — LexMetrik', beschreibung: 'Datenschutzerklärung von LexMetrik (Entwurf). Die Eingaben verlassen den Browser nicht — Berechnung und Dokumenterstellung laufen lokal im Gerät.' },
+  '/abdeckung': { titel: 'Was ist durchsuchbar — LexMetrik', beschreibung: 'Was die LexMetrik-Suche wirklich durchsucht: Bundeserlasse im Volltext, kantonale Erlasse nach Titel, Bundesgerichts-Leitentscheide und amtliche Materialien — ehrlich offengelegt, mit Live-Link zur amtlichen Fassung.' },
 };
 
 /** href → Pfad ohne Hash-Sprungmarke. */

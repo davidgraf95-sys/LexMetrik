@@ -115,7 +115,8 @@ präzisiert, nie autonom gekippt.
   Rechtsprechungs-Recherche stellt `rg` UND `q` wieder her. *(#42, #25, #43-Teil — macht die
   Zähler §8-ehrlich.)*
 
-### S2 · normQuery-Ausbau: BGE-Zitations-Direktsprung + Kompaktformen — M
+### S2 · normQuery-Ausbau: BGE-Zitations-Direktsprung + Kompaktformen — M ✅ (11.7.2026, `feat/uinav-s2-s3`)
+> **Gebaut:** `bgeQuery.ts` (deterministischer BGE-Parser + Bestands-Lookup über `bgeReferenz`, K10) → interner Sprung wenn im Bestand, sonst §8-ehrliche «nicht im Bestand»-Zeile + amtlicher search.bger.ch-CLIR-Permalink. Kompaktform «or257d» (Ambiguität «ArGV1» gewahrt) + FR/IT-Aliasse CO/CC/CP/CPC/LP. Unit-Tests inkl. Negativfälle; norm-sprung.e2e um BGE erweitert (A9-DoD grün).
 - **Kern:** deterministischer BGE-Parser (`BGE?\s*\d+\s+[IVX]+\s+\d+`, auch ohne Präfix
   «152 II 19») als sprungGruppe-Analogon **vor** allen Gruppen; **§8-Kernstück:** bei
   Nichtbestand ehrliche Zeile «BGE 145 III 63 ist nicht im Bestand» + amtlicher Link
@@ -128,7 +129,8 @@ präzisiert, nie autonom gekippt.
   (A6-Rangfolge) bleibt grün; «BGE 152 I 65» = erste Zeile «Direkt öffnen ★». *(#21+#39
   gemergt, #46, Z3.)*
 
-### S3 · Dropdown-Ehrlichkeit & Robustheit — M
+### S3 · Dropdown-Ehrlichkeit & Robustheit — M ✅ (11.7.2026, `feat/uinav-s2-s3`)
+> **Gebaut:** Enter-Puffer (#52), «Meinten Sie …?» (#44, `vorschlag.ts` Levenshtein §2), §8-Zähler «mindestens N …» (#5) + Mindesthöhen-Platzhalter (#48), Snippet zweizeilig + `<mark>` + redundanter Chip mobil aus (#56), **E1** Korpus-Fusszeile + neue Seite `/abdeckung` «Was ist drin» (aus Registern, K10). E2-Degradieren per Code verifiziert.
 - **Kern:** Trefferzähler erst final bzw. «10+ …» solange Sektionen laden *(#5)* ·
   Mindesthöhen-Platzhalter für ladende Gruppen statt Layout-Springen (§15.2) *(#48)* ·
   **Enter-Puffer** während der Ladephase (pending-Flag; mobil trifft die tote Suchen-Taste

@@ -14,6 +14,8 @@ const ERLASSE: NormErlass[] = [
   { key: 'AIG', ebene: 'bund', kanton: null, kuerzel: 'AIG', titel: 'Ausländer- und Integrationsgesetz', status: 'snapshot' },
   { key: 'VMWG', ebene: 'bund', kanton: null, kuerzel: 'VMWG', titel: 'Mietrechtsverordnung', status: 'snapshot' },
   { key: 'STGB', ebene: 'bund', kanton: null, kuerzel: 'StGB', titel: 'Strafgesetzbuch', status: 'snapshot' },
+  { key: 'ZPO', ebene: 'bund', kanton: null, kuerzel: 'ZPO', titel: 'Zivilprozessordnung', status: 'snapshot' },
+  { key: 'SchKG', ebene: 'bund', kanton: null, kuerzel: 'SchKG', titel: 'Schuldbetreibung und Konkurs', status: 'snapshot' },
   { key: 'GEBV_SCHKG', ebene: 'bund', kanton: null, kuerzel: 'GebV SchKG', titel: 'Gebührenverordnung SchKG', status: 'snapshot' },
   { key: 'ARGV1', ebene: 'bund', kanton: null, kuerzel: 'ArGV 1', titel: 'Verordnung 1 zum Arbeitsgesetz', status: 'snapshot' },
   { key: 'STG', ebene: 'bund', kanton: null, kuerzel: 'StG', titel: 'Stempelabgaben', status: 'snapshot' },
@@ -60,9 +62,27 @@ describe('parseNormQuery — Positivfälle (Deep-Link)', () => {
     ['StG AI 5', '/gesetze/kanton/AI-640.000#art-5'],
     // Eindeutiges Kantonskürzel
     ['ABRG 3', '/gesetze/kanton/AR-621.12#art-3'],
+    // Kompaktform ohne Trennzeichen «or257d» (UI-NAV S2)
+    ['or257d', '/gesetze/bund/OR#art-257_d'],
+    ['ZGB684', '/gesetze/bund/ZGB#art-684'],
+    ['stgb111', '/gesetze/bund/STGB#art-111'],
+    // FR/IT-Kürzel-Aliasse (UI-NAV S2/Z3)
+    ['CO 257d', '/gesetze/bund/OR#art-257_d'],
+    ['art. 8 CC', '/gesetze/bund/ZGB#art-8'],
+    ['CP 111', '/gesetze/bund/STGB#art-111'],
+    ['CPC 311', '/gesetze/bund/ZPO#art-311'],
+    ['LP 88', '/gesetze/bund/SchKG#art-88'],
+    // Alias-Kompaktform kombiniert
+    ['co257d', '/gesetze/bund/OR#art-257_d'],
   ];
   it.each(positiv)('%s → %s', (q, ziel) => {
     expect(href(q)).toBe(ziel);
+  });
+
+  it('«ArGV1» bleibt ganzes Kürzel (Kompaktform-Split greift nicht, Ambiguität)', () => {
+    // Ganz-Kürzel-Auflösung gewinnt vor der Ziffer-Auftrennung.
+    expect(href('ArGV1')).toBe('/gesetze/bund/ARGV1');
+    expect(href('ArGV1 5')).toBe('/gesetze/bund/ARGV1#art-5');
   });
 
   it('pdf-embed erhält KEINEN #art-Anker (kein gerenderter Volltext)', () => {

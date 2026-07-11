@@ -29,6 +29,7 @@ export function UniversalSuche() {
   const initialQ = params.get('q') ?? '';
   const [wert, setWert] = useState(initialQ);
   const [q, setQ] = useState(initialQ.trim());
+  const [enterQ, setEnterQ] = useState<string | null>(null);
 
   // Was WIR zuletzt in ?q= geschrieben haben — trennt eigene Writes von echten
   // externen Änderungen (Zurück-Taste, Permalink). Als State, damit der
@@ -46,6 +47,7 @@ export function UniversalSuche() {
   // History füllt.
   const setze = (v: string) => {
     setWert(v);
+    setEnterQ(null); // neue Eingabe verwirft einen gepufferten Enter
     const t = v.trim();
     setGeschrieben(t);
     const p = new URLSearchParams(params);
@@ -59,7 +61,18 @@ export function UniversalSuche() {
     return () => clearTimeout(id);
   }, [wert]);
 
-  const { gruppen, allesGeladen } = useUniversalSuche(q);
+  const { gruppen, allesGeladen, vorschlag, abdeckung } = useUniversalSuche(q);
+
+  // Enter-Puffer (S3/#52): Enter vor dem Laden merkt sich die Query und öffnet den
+  // obersten Treffer, sobald geladen (mobil trifft die «Suchen»-Taste sonst leer).
+  useEffect(() => {
+    if (enterQ === null) return;
+    if (!allesGeladen || enterQ !== q) return;
+    const ziel = gruppen.find((g) => g.treffer.length > 0)?.treffer[0]?.href;
+    // Deferred, damit kein synchrones set-state-in-effect kaskadiert (Repo-Muster).
+    const id = window.setTimeout(() => { setEnterQ(null); if (ziel) navigate(ziel); }, 0);
+    return () => window.clearTimeout(id);
+  }, [enterQ, q, allesGeladen, gruppen, navigate]);
 
   // Flache Trefferliste in Anzeigereihenfolge — Basis für Pfeil-Navigation und
   // die geteilten Options-IDs (suchOptionId, identisch im Panel gerendert).
@@ -89,10 +102,14 @@ export function UniversalSuche() {
     } else if (e.key === 'ArrowUp' && flach.length > 0) {
       e.preventDefault();
       setAktivIndex((i) => (i <= 0 ? flach.length - 1 : i - 1));
-    } else if (e.key === 'Enter' && flach.length > 0) {
+    } else if (e.key === 'Enter') {
       e.preventDefault();
-      const ziel = aktivIndex >= 0 && aktivIndex < flach.length ? flach[aktivIndex].href : flach[0].href;
-      navigate(ziel);
+      if (flach.length > 0) {
+        const ziel = aktivIndex >= 0 && aktivIndex < flach.length ? flach[aktivIndex].href : flach[0].href;
+        navigate(ziel);
+      } else if (wert.trim() !== '') {
+        setEnterQ(wert.trim()); // Puffer: öffnen, sobald geladen
+      }
     } else if (e.key === 'Escape') {
       setAktivIndex(-1);
     }
@@ -128,6 +145,7 @@ export function UniversalSuche() {
       </div>
 
       <SuchResultate gruppen={gruppen} allesGeladen={allesGeladen} q={q} listboxId={listboxId} aktivId={aktivId}
+        vorschlag={vorschlag} abdeckung={abdeckung} onVorschlag={(b) => setze(b)}
         onNavigate={(href) => navigate(href)} />
     </section>
   );

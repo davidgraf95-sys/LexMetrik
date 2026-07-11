@@ -1,7 +1,8 @@
 import { describe, it, expect } from 'vitest';
 import {
-  katalogGruppe, presetGruppe, gesetzGruppe, entscheidGruppe, artikelGruppe, sprungGruppe, sucheAlles, type SuchTreffer,
+  katalogGruppe, presetGruppe, gesetzGruppe, entscheidGruppe, artikelGruppe, sprungGruppe, bgeSprungGruppe, sucheAlles, type SuchTreffer,
 } from '../lib/universalSuche';
+import type { BgeSprung } from '../lib/suche/bgeQuery';
 import type { PresetIndexEintrag } from '../lib/presetIndex';
 import type { BrowseErlass } from '../lib/normtext/browse-typen';
 import type { BrowseEntscheid } from '../lib/rechtsprechung/register';
@@ -152,6 +153,39 @@ describe('universalSuche: Norm-Sprung-Gruppe (A5)', () => {
     const g = sprungGruppe({ ...treffer, artikelToken: null, artikelAnzeige: null, href: '/gesetze/bund/OR' })!;
     expect(g.treffer[0].label).toBe('OR');
     expect(g.treffer[0].href).toBe('/gesetze/bund/OR');
+  });
+});
+
+describe('universalSuche: BGE-Sprung-Gruppe (UI-NAV S2)', () => {
+  it('null → keine Gruppe', () => {
+    expect(bgeSprungGruppe(null)).toBeNull();
+  });
+
+  it('im Bestand → interner Direkt-Sprung als oberster Treffer', () => {
+    const bge: BgeSprung = { zitat: 'BGE 152 I 65', imBestand: true, key: 'bge_152_I_65', amtlichHref: 'https://search.bger.ch/x' };
+    const g = bgeSprungGruppe(bge)!;
+    expect(g.id).toBe('sprung');
+    expect(g.treffer).toHaveLength(1);
+    expect(g.treffer[0].marke).toEqual({ text: 'Direkt öffnen', ton: 'ok' });
+    expect(g.treffer[0].label).toBe('BGE 152 I 65');
+    expect(g.treffer[0].href).toBe('/rechtsprechung/bge_152_I_65');
+    expect(g.externLink).toBeUndefined();
+  });
+
+  it('nicht im Bestand → §8-ehrliche Zeile + amtlicher Extern-Link, KEIN interner Treffer', () => {
+    const bge: BgeSprung = { zitat: 'BGE 145 III 63', imBestand: false, key: null, amtlichHref: 'https://search.bger.ch/y' };
+    const g = bgeSprungGruppe(bge)!;
+    expect(g.treffer).toHaveLength(0);
+    expect(g.hinweis).toContain('nicht im Bestand');
+    expect(g.externLink).toEqual({ href: 'https://search.bger.ch/y', label: 'BGE 145 III 63 beim Bundesgericht öffnen' });
+  });
+
+  it('lädt → Platzhalter-Gruppe (kein voreiliges «nicht im Bestand»)', () => {
+    const bge: BgeSprung = { zitat: 'BGE 152 I 65', imBestand: false, key: null, amtlichHref: 'x', laedt: true };
+    const g = bgeSprungGruppe(bge)!;
+    expect(g.laedt).toBe(true);
+    expect(g.treffer).toHaveLength(0);
+    expect(g.externLink).toBeUndefined();
   });
 });
 
