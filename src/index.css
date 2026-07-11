@@ -53,7 +53,12 @@
        gewählten Ad-hoc-Opazitäten von --line (Artikel /70, Sektion voll|/50,
        Guide /60, Tabellenzeile/Fussnoten). Werte am bestehenden --line gemessen
        (10 %); nur der oberste Struktur-Trenner eine Spur kräftiger (14 %). */
-    --guide-gliederung:color-mix(in srgb, var(--ink-900) 10%, transparent);
+    /* V2·L-2: Gliederungs-Guide von 10 % auf --line-strong-Niveau (18 %) angehoben —
+       der Guide war mit ~1.2:1 praktisch unsichtbar (David-Befund «funktioniert
+       praktisch nicht»). NICHT höher (kein hartes 3:1): die Deko-Linie darf nicht
+       zur dunkelsten Linie des Systems werden (DESIGN-REGLEMENT F2 nimmt Deko von
+       3:1 aus). Rangfolge §4b bleibt: Typo > Einzug > Guide. */
+    --guide-gliederung:color-mix(in srgb, var(--ink-900) 18%, transparent);
     --rule-artikel:color-mix(in srgb, var(--ink-900) 10%, transparent);
     --rule-struktur:color-mix(in srgb, var(--ink-900) 14%, transparent);
     /* Messing – der eine Akzent (= gravierte Skala) */
@@ -166,7 +171,8 @@
     --line-strong:color-mix(in srgb, var(--ink-900) 24%, transparent);
     /* Linien-Kanon dunkel: helle Tinte auf Dunkel wirkt feiner → eine Spur
        kräftiger als hell (Guide/Artikel 14 %, Struktur 20 %). */
-    --guide-gliederung:color-mix(in srgb, var(--ink-900) 14%, transparent);
+    /* V2·L-2: dunkel analog von 14 % auf --line-strong-Niveau (24 %). */
+    --guide-gliederung:color-mix(in srgb, var(--ink-900) 24%, transparent);
     --rule-artikel:color-mix(in srgb, var(--ink-900) 14%, transparent);
     --rule-struktur:color-mix(in srgb, var(--ink-900) 20%, transparent);
     /* Messing: Text-Töne (800–600) hell, Flächen-Töne (100/200) dunkel,

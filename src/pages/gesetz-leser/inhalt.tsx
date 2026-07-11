@@ -938,15 +938,20 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     // einzigen Gliederungsebene → «flache Ebene sichtbar», sonst Ebene 1); tiefere
     // Ebenen tragen ihre Tiefe allein über den EINZUG (kein gestapelter «Barcode» aus
     // border-l pro Ebene, der ZGB Art. 684 / OR Art. 319 zupflasterte). `guideEbene
-    // === null` (flache Artikelliste) ⇒ gar kein Guide. Einzug-Skala: Tiefe 1–3 → je
-    // eine `einzug`-Stufe (20px), gedeckelt bei 3. MOBIL kollabiert der Einzug
-    // (`pl-0 sm:pl-einzug`), die eine Guide bleibt am Spaltenrand. CLS 0: Einzug =
-    // padding, Guide = border darauf. Der Guide wird bei jedem Erlass mit Gliederung
-    // emittiert; ob er im Auto-Default SICHTBAR ist, entscheidet der aufbau-basierte
-    // `data-guide-auto`-Toggle rein per CSS (kein Artikel-Re-Render, §15).
+    // === null` (flache Artikelliste) ⇒ gar kein Guide. Einzug-Skala (V2·L-1): Tiefe
+    // 1–5 → je eine `einzug`-Stufe (20px), gedeckelt bei 5 (vorher 3 — tiefe
+    // Kodifikationen ZGB/OR verloren ab Ebene 3 die visuelle Verschachtelung, David-
+    // Befund «funktioniert praktisch nicht»). MOBIL kollabiert der Einzug NICHT mehr
+    // auf 0, sondern trägt `einzug-mobil` (~0.75rem, `pl-einzug-mobil sm:pl-einzug`)
+    // → die Verschachtelung flüstert auch @390 weiter; die eine Guide bleibt am
+    // Spaltenrand. CLS 0: Einzug = padding, Guide = border darauf. Der Guide wird bei
+    // jedem Erlass mit Gliederung emittiert; ob er im Auto-Default SICHTBAR ist,
+    // entscheidet der aufbau-basierte `data-guide-auto`-Toggle rein per CSS (kein
+    // Artikel-Re-Render, §15). `data-linien="aus"` kollabiert den Einzug weiterhin
+    // auf 0 über ALLE Ebenen (index.css, padding-left:0).
     const guide = linien.guideEbene !== null && tiefe === linien.guideEbene;
-    const eingerueckt = tiefe > 0 && tiefe <= 3;
-    const einzugCls = eingerueckt ? (guide ? 'pl-3 sm:pl-einzug' : 'pl-0 sm:pl-einzug') : '';
+    const eingerueckt = tiefe > 0 && tiefe <= 5;
+    const einzugCls = eingerueckt ? 'pl-einzug-mobil sm:pl-einzug' : '';
     return (
       <section key={s.id} data-normtext-linie className={`space-y-3 ${guide ? 'border-l border-guide' : ''} ${einzugCls}`}>
         <SektionKopf s={s} refCb={regRef(s.id)} offen={auf} onToggle={() => toggle(s.id, defOpen)} bereich={sektionMeta.get(s.id)?.bereich} bereichEinzel={sektionMeta.get(s.id)?.einzel ?? false} />
