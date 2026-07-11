@@ -1,14 +1,16 @@
 {
-  "hash": "e9610fc8cc0dc8c2a1af01d6437d3b1e9825155a9822472eb35f4614fde2534d",
+  "hash": "848c6508b34dffe184778b3e65aa7302ab24341c8ae52ab0d262532b3362a5cf",
   "verdikt": "bestanden",
-  "quellePin": "fedlex isExemplifiedBy+filestore pdf-a + LexWork 20260711",
+  "quellePin": "gesetze.gl.ch /api/de/texts_of_law LexWork live 2026-07-11 (version_uid je Erlass identisch zu Snapshot)",
   "datum": "2026-07-11",
   "dateien": [
     "daten-manifest.json",
-    "public/normtext/pdf-quellen.json",
+    "public/normtext/kanton/GL-III%20B%2F3%2F2.json",
+    "public/normtext/kanton/GL-III%20B%2F7%2F1.json",
+    "public/normtext/kanton/GL-III%20B_7_1.json",
+    "public/normtext/kanton/GL-III-A.5.json",
+    "public/normtext/kanton/GL-III-C.1.json",
     "public/normtext/register.json",
-    "scripts/normtext/browse-manifest.ts",
-    "scripts/normtext/pdf-quellen-generieren.ts",
-    "src/lib/normtext/browse-typen.ts"
+    "scripts/normtext/adapter-lexwork.ts"
   ]
 }
