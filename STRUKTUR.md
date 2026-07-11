@@ -27,6 +27,20 @@ Steuer-Doks ihr Budget wieder überschreiten. Offene Abnahmen sind davon unberü
 (Spiegel: `ROADMAP.md` → «Abnahme-Warteschlange»; das frühere `HANDLUNGSPLAN.md` ist
 in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
+## Session 12.7.2026 — V2·FN-3 (A20): Präambel-Fussnoten inline — F1-Familie damit KOMPLETT (W2·5d, reines UI, Worktree `lm-v2-fn3`, Branch `feat/v2-fn3`)
+
+**Auftrag (Spec `FAHRPLAN-GESETZESDARSTELLUNG-V2.md` §2 F1 FN-3 · Z.32 / UX §10.8 A20; Davids Befund 10.7. «präambeln haben auch keine verlinkten fussnoten»).** Letzter Baustein der F1-Familie — nach FN-1/FN-2 (Extraktor, A19) und dem U-VERWEIS-A11-Merge (#170).
+
+**Befund vor Bau (Korpus-Scan über alle Sidecars):** Die Marker-Daten liegen bereits VOLLSTÄNDIG aus FN-1/FN-2 vor — **215 Erlasse mit Präambel-Markern, 555 Marker, 0 Orphans** (jede von einer Ingress-Zeile referenzierte `fnNrs`-Nummer hat ein passendes Kopf-Apparat-Ziel; VRK/OR/VZG stichprobenverifiziert). ⇒ FN-3 ist REIN Render (KEIN Extraktor-Eingriff, KEINE Regeneration, kein Datei unter `scripts/normtext`/`public/normtext`/`src/lib/normtext` berührt).
+
+**Gebaut (pathspec, `src/pages/gesetz-leser/parts/ErlassKopfBlock.tsx`):**
+- **Marker je Präambel-Zeile:** trägt `z.fnNrs` (aus FN-2) ⇒ `<FnRef artikel="kopf" nr={nr}>` HINTER dem A11-NormText-Element, gewickelt in `data-fn-marker` — dieselbe Glyphe/Mechanik wie der Artikel-Fliesstext (G2b). `artikel="kopf"` ⇒ FnRef-Popover speist sich aus `#fn-kopf-${nr}`.
+- **Kopf-Apparat-Anker:** die Apparat-Zeilen tragen jetzt `id="fn-kopf-${nr}"` + `nt-anker … target:bg-brass-100` (Sprungziel, wie der Artikel-Apparat).
+- **R9/§8-Sichtbarkeit (aus U-KOPF):** Marker + Apparat liegen IMMER im DOM (`data-fn-marker`/`data-fn-apparat`); die Prominenz steuert allein der `data-fussnoten`-CSS-Toggle (nie `display:none` am Substanz-Träger — Ctrl+F/Print/Screenreader vollständig). Additiv (Marker nur, wenn die Zeile amtliche `fnNrs` trägt).
+- **e2e** `verweis-u` FN-3-Block: OR (Kronjuwel, Note 1) · VZG (Alt-Form, Note 2) · VRK (Staatsvertrags-Kurz-Ingress, Note 2) — Marker→`#fn-kopf-nr`→Popover-Text; plus R9-Beweis (Marker+Anker immer im DOM). Nachbarn A7/A9/A10/A11/kopf-v2/kopf-g2b regressionsfrei (23/23).
+
+**Tore:** voller `npm run gate` **GRÜN** (tsc · vitest 3776 · **golden IDENTISCH 209 byte-gleich** — Reader ist Client-SPA, nicht im golden · lint · check). **A9-DoD:** CLS 0 by construction (synchroner Kopf-Render, kein async Mount; Popover fixed+Portal wie die bereits A9-gegatete FnRef). **Gegenprüfung n/a** (reines UI, kein Risiko-Pfad). Trailer `Roadmap: W2·5d`. **F1-Familie damit KOMPLETT** (FN-4/FN-5 bleiben deferiert, David-Go).
+
 ## Session 11.7.2026 — V2·L-3 (A24·L-3): Linien-Auto-Default-Umkehr — tiefe Kodifikationen ZGB/OR zeigen wieder ihren EINEN Guide (W2·5d, reines UI, Worktree `lm-v2-l3`, Branch `feat/v2-l3`)
 
 **Auftrag (Spec `FAHRPLAN-GESETZESDARSTELLUNG-V2.md` §2 F4 L-3 · Z.56, David 10.7. FREIGEGEBEN).** **Gate-Aufhebung:** David 11.7. im Chat «du hast bei allem was ich entscheiden muss selbst die wahl» → Orchestrator-Entscheid: bauen mit hartem Visual-Beweis (Council/Rückfrage entfällt). **Der eigentliche Hebel für Davids Befund** «Liniengliederung funktioniert praktisch nicht»: bis #161 deckelte die Tiefe den Auto-Guide (`strukturTiefe ≥ 3` ⇒ GANZ AUS) — das nahm genau ZGB/OR ihre Gliederungslinie. Denkfehler von #161: es gibt keinen Strich je Ebene, der Reader emittiert höchstens EINEN Guide auf `guideEbene` (kein Barcode).
