@@ -99,6 +99,14 @@ function Gruppe({ g, index, onAuswahl, onNavigate, listboxId, aktivId }: {
       </div>
       {/* Einmalige, dezente §8-Offenlegung (z. B. «Suchbegriffe verlassen den Browser»). */}
       {g.hinweis && <p className="px-4 pb-1 text-body-s text-ink-500">{g.hinweis}</p>}
+      {/* Externer Amtslink (BGE «nicht im Bestand» → search.bger.ch). Echter
+          `<a target>` (kein Listbox-Option — External-Navigation), rel gesichert. */}
+      {g.externLink && (
+        <a href={g.externLink.href} target="_blank" rel="noopener noreferrer"
+          className="mx-4 mb-2 mt-1 inline-flex items-center gap-1.5 text-body-s text-brass-700 no-underline hover:text-brass-600">
+          {g.externLink.label} <span aria-hidden>↗</span>
+        </a>
+      )}
       {g.laedt
         ? <p className="px-4 pb-3 text-body-s text-ink-500">wird durchsucht …</p>
         : <ul role={listboxId ? 'none' : undefined} className="pb-1.5">

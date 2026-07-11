@@ -53,6 +53,45 @@ test.describe('Norm-Sprung in der normalen Suchleiste (A5)', () => {
     await expect(page).toHaveURL(/\/gesetze\/kanton\/AR-621\.12#art-3$/)
   })
 
+  test('«BGE 152 II 19» ⇒ Entscheid-Sprung «Direkt öffnen», Enter öffnet den Entscheid (S2)', async ({ page }) => {
+    const fehler = fehlerSammeln(page)
+    await page.goto('/gesetze')
+    const feld = sucheFeld(page)
+    await feld.click()
+    await feld.fill('BGE 152 II 19')
+    const box = listbox(page)
+    await expect(box).toBeVisible()
+    await expect(box.getByText('Entscheid-Sprung', { exact: true })).toBeVisible()
+    await expect(box.getByText('Direkt öffnen', { exact: true })).toBeVisible()
+    await expect(box.getByRole('option').first()).toContainText('BGE 152 II 19')
+    await feld.press('Enter')
+    await expect(page).toHaveURL(/\/rechtsprechung\/bge_152_II_19$/)
+    expect(fehler).toEqual([])
+  })
+
+  test('BGE ohne Präfix «152 II 19» springt ebenfalls', async ({ page }) => {
+    await page.goto('/gesetze')
+    const feld = sucheFeld(page)
+    await feld.click()
+    await feld.fill('152 II 19')
+    await expect(listbox(page).getByText('Direkt öffnen', { exact: true })).toBeVisible()
+    await feld.press('Enter')
+    await expect(page).toHaveURL(/\/rechtsprechung\/bge_152_II_19$/)
+  })
+
+  test('BGE nicht im Bestand ⇒ §8-ehrliche Zeile + amtlicher bger.ch-Link (kein stilles Rauschen)', async ({ page }) => {
+    await page.goto('/gesetze')
+    const feld = sucheFeld(page)
+    await feld.click()
+    await feld.fill('BGE 1 I 1')
+    const box = listbox(page)
+    await expect(box.getByText(/nicht im Bestand/)).toBeVisible()
+    const amtlich = box.getByRole('link', { name: /beim Bundesgericht öffnen/ })
+    await expect(amtlich).toBeVisible()
+    await expect(amtlich).toHaveAttribute('href', /search\.bger\.ch.*atf.*1-I-1/)
+    await expect(amtlich).toHaveAttribute('target', '_blank')
+  })
+
   test('Freitext zeigt KEINEN Sprung, sondern die gruppierte Suche', async ({ page }) => {
     await page.goto('/gesetze')
     const feld = sucheFeld(page)

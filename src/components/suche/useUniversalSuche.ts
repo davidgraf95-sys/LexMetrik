@@ -1,7 +1,8 @@
 import { useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
-import { sucheAlles, sprungGruppe, type SuchGruppe, type SuchTreffer } from '../../lib/universalSuche';
+import { sucheAlles, sprungGruppe, bgeSprungGruppe, type SuchGruppe, type SuchTreffer } from '../../lib/universalSuche';
 import { holeOnlineTreffer, MIN_ZEICHEN } from '../../lib/suche/onlineVolltext';
 import { baueNormIndex, parseNormQuery } from '../../lib/suche/normQuery';
+import { baueBgeIndex, parseBgeSprung } from '../../lib/suche/bgeQuery';
 import type { PresetIndexEintrag } from '../../lib/presetIndex';
 import type { BrowseErlass } from '../../lib/normtext/browse-typen';
 import type { BrowseEntscheid } from '../../lib/rechtsprechung/register';
@@ -71,6 +72,15 @@ export function useUniversalSuche(q: string): UniversalSucheErgebnis {
   const normIndex = useMemo(() => (gesetze ? baueNormIndex(gesetze) : null), [gesetze]);
   const direkt = useMemo(() => (normIndex ? parseNormQuery(q, normIndex) : null), [normIndex, q]);
 
+  // BGE-Zitat-Direktsprung (UI-NAV S2): analoger, deterministischer Parser auf
+  // demselben Entscheid-Manifest (KEIN Zweit-Index, K10 — `bgeReferenz` trägt die
+  // Bestands-Info). Solange `entscheide` lädt, ist der Index null → der Parser
+  // meldet `laedt` statt voreilig «nicht im Bestand» (§8). Norm- und BGE-Sprung
+  // sind exklusiv (eine Query ist Norm ODER BGE), darum EIN Sprung-Slot: der
+  // Norm-Sprung hat Vorrang, sonst der BGE-Sprung.
+  const bgeIndex = useMemo(() => (entscheide ? baueBgeIndex(entscheide) : null), [entscheide]);
+  const bge = useMemo(() => parseBgeSprung(q, bgeIndex), [q, bgeIndex]);
+
   // §15.3/A9: die TEURE Artikel-Volltextsuche (~4 MB-Index, 40 Treffer) vom
   // reaktiven Pfad ENTKOPPELN. Sie lief bislang synchron IN der `gruppen`-Memo
   // und blockierte damit den GESAMTEN Trefferaufbau — inkl. des billigen,
@@ -104,14 +114,14 @@ export function useUniversalSuche(q: string): UniversalSucheErgebnis {
         entscheide,
         materialien,
       });
-      const sprung = sprungGruppe(direkt);
+      const sprung = sprungGruppe(direkt) ?? bgeSprungGruppe(bge);
       return [
         ...(sprung ? [sprung] : []),
         ...statisch,
         ...(onlineGruppe ? [onlineGruppe] : []),
       ];
     },
-    [q, direkt, presetSucheFn, artikelTreffer, gesetze, entscheide, materialien, onlineGruppe],
+    [q, direkt, bge, presetSucheFn, artikelTreffer, gesetze, entscheide, materialien, onlineGruppe],
   );
   const allesGeladen = presetSucheFn !== null && artikelSucheFn !== null && gesetze !== null && entscheide !== null && materialien !== null;
   return { gruppen, allesGeladen };

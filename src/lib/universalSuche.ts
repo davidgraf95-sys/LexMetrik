@@ -21,6 +21,7 @@ import type { PresetIndexEintrag } from './presetIndex';
 import type { BrowseMaterial } from './materialien/typen';
 import { filtere as filtereMaterialien, vergleicheGlobal } from './materialien/browse';
 import type { NormQueryTreffer } from './suche/normQuery';
+import type { BgeSprung } from './suche/bgeQuery';
 
 // 'sprung' = deterministischer Norm-Direktsprung (A5), von der Komponente VOR die
 // statischen Gruppen gehängt; er entsteht aus dem Parser normQuery.ts, nicht im
@@ -52,6 +53,9 @@ export interface SuchGruppe {
   laedt?: boolean;
   /** Einmalige, dezente §8-Offenlegung unter dem Gruppentitel (z. B. Online-Suche). */
   hinweis?: string;
+  /** Externer Amtslink (öffnet in neuem Reiter) — z. B. BGE «nicht im Bestand»
+   *  → search.bger.ch. Nicht Teil der Listbox-Optionen (echter `<a target>`). */
+  externLink?: { href: string; label: string };
 }
 
 const KAPPUNG = 6;
@@ -78,6 +82,44 @@ export function sprungGruppe(direkt: NormQueryTreffer | null): SuchGruppe | null
       marke: { text: 'Sprung', ton: 'ok' as const },
       href: direkt.href,
     }],
+  };
+}
+
+// ── BGE-Zitat-Sprung (UI-NAV S2) ─────────────────────────────────────────────
+
+/** Baut die eine BGE-Sprung-Gruppe aus dem Parser-Ergebnis (oder null → normale
+ *  Suche). Drei Zustände (§8): (a) `laedt` — Manifest noch nicht da, kein
+ *  voreiliges «nicht im Bestand»; (b) im Bestand — interner Direkt-Sprung als
+ *  oberster Treffer «Direkt öffnen»; (c) NICHT im Bestand — kein Treffer, sondern
+ *  eine ehrliche Zeile + amtlicher Bundesgerichts-Link (externLink), statt das
+ *  Zitat still unter Freitext-Treffern verschwinden zu lassen. Reine Abbildung
+ *  (§3): der Parser bgeQuery.ts hat bereits aufgelöst. Teilt die id 'sprung' mit
+ *  dem Norm-Sprung (beide sind exklusiv — eine Query ist Norm ODER BGE). */
+export function bgeSprungGruppe(bge: BgeSprung | null): SuchGruppe | null {
+  if (!bge) return null;
+  if (bge.laedt) return { id: 'sprung', titel: 'Entscheid-Sprung', treffer: [], gesamt: 0, laedt: true };
+  if (bge.imBestand && bge.key) {
+    return {
+      id: 'sprung',
+      titel: 'Entscheid-Sprung',
+      gesamt: 1,
+      treffer: [{
+        id: bge.key,
+        label: bge.zitat,
+        untertitel: 'Leitentscheid im Bestand — direkt öffnen',
+        marke: { text: 'Direkt öffnen', ton: 'ok' as const },
+        href: `/rechtsprechung/${encodeURIComponent(bge.key)}`,
+      }],
+    };
+  }
+  // Nicht im Bestand: ehrliche Auskunft + amtlicher Link (kein interner Treffer).
+  return {
+    id: 'sprung',
+    titel: 'Entscheid-Sprung',
+    gesamt: 0,
+    treffer: [],
+    hinweis: `${bge.zitat} ist nicht im Bestand von LexMetrik.`,
+    externLink: { href: bge.amtlichHref, label: `${bge.zitat} beim Bundesgericht öffnen` },
   };
 }
 
