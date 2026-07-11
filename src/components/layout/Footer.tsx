@@ -8,7 +8,11 @@ import { HERO_TITEL, SITE_KURZFORM } from '../../lib/seo';
 const NAVIGATION = [
   // Free/Pro-Zweiteilung aufgehoben (FAHRPLAN-EINE-HAUPTSEITE; Bug-Check
   // 7.6.2026 M-2: die alten zwei Einträge zeigten auf dieselbe Seite).
-  { to: '/', label: 'Rechner & Vorlagen' },
+  // W2·10-UI-NAV/N0a: der eine «Rechner & Vorlagen»-Eintrag zeigte auf «/»
+  // (Startseite), nicht auf die Übersichten, die das Label verspricht — die tote
+  // Verbindung ist zu zwei ehrlichen Zielen aufgelöst (/rechner · /vorlagen).
+  { to: '/rechner', label: 'Rechner' },
+  { to: '/vorlagen', label: 'Vorlagen' },
   { to: '/methodik', label: 'Methodik' },
   { to: '/ueber', label: 'Über LexMetrik' },
   { to: '/kontakt', label: 'Kontakt' },

@@ -239,6 +239,19 @@ export function StreitwertForm() {
 
       {fehler && <FehlerBox fehler={[fehler]} />}
 
+      {/* W2·10-UI-NAV/N0d·W1: Leerzustand-Platzhalter mit fester Mindesthöhe —
+          reserviert den Ergebnisplatz (CLS-positiv, §15.2) und sagt an, WAS
+          erscheint, ohne einen Fehler vor der ersten Eingabe zu zeigen (C2/§13). */}
+      {!ergebnis && !fehler && (
+        <div className="lc-tile border-dashed min-h-40 flex flex-col justify-center gap-1.5 text-center">
+          <p className="lc-overline text-ink-500">Ergebnis</p>
+          <p className="text-body-s text-ink-500 max-w-reading mx-auto">
+            Forderungsbetrag eingeben — hier erscheinen Streitwert, Verfahrensart
+            (Art. 243 ZPO) und der BGG-Abgleich.
+          </p>
+        </div>
+      )}
+
       {ergebnis && (
         <ErgebnisBlock>
           <ErgebnisAnzeige titel="Streitwert (Art. 91–94a ZPO)" ergebnis={ergebnis} />

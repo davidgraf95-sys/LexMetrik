@@ -21,7 +21,9 @@ import type { PdfBanner } from '../../lib/vorlagen/banner';
 // Schema, Schritte und Schritt-Inhalte – KEINE Fachlogik hier (§3).
 
 export function VorlagenWizardRahmen({
-  zurueckHref = '/', overline, titel, intro, norms, badge,
+  // W2·10-UI-NAV/N0a: «Zurück zum Katalog» führte auf «/» (Startseite) statt
+  // auf die Vorlagen-Übersicht — Default ans Label angeglichen (/vorlagen).
+  zurueckHref = '/vorlagen', overline, titel, intro, norms, badge,
   fussnote, zuruecksetzen, schritte, schritt, setSchritt, fehler,
   weiterDeaktiviert, inhalt, vorschau, kopfSchalter,
 }: {

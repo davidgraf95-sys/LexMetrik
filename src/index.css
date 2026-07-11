@@ -298,10 +298,15 @@
      proportionalen Schätzung (schaetzeArtikelHoehe, ArtikelLeser) → proportionaler
      Scrollbalken bei langen Gesetzen, ohne Logikverlust (content-visibility bleibt). */
   .nt-art-cv { content-visibility: auto; contain-intrinsic-size: auto 320px; }
-  /* Anker-Offset für #art-/#fn-/Sektions-Sprünge: folgt Header + Tab-Streifen
-     dynamisch (C4-Konsistenz), statt der statischen Magic-Number 8.5rem — so
-     landen native Anker-Sprünge auch bei offenen Reitern korrekt unter der Leiste. */
-  .nt-anker { scroll-margin-top: calc(4rem + 1rem); }
+  /* Anker-Offset für #art-/#fn-/Sektions-Sprünge (W2·10-UI-NAV/N0c): der frühere
+     Festwert calc(4rem + 1rem) = 80px war KLEINER als der reale Sticky-Stack —
+     Topbar (4rem) + Inhalts-Kopf (2.25rem) + die dritte klebende Zeile
+     (Suchleiste bzw. Section-Kontextkopf, ~3rem) ≈ 135–148px (empirisch gemessen:
+     Ziel-Artikelnummer verschwand um ~58px hinter der Leiste). Der Wert folgt
+     jetzt der tatsächlichen Sticky-Höhe über --nt-stick (Muster --rsp-stick des
+     Entscheid-Lesers, B3-Fix): der Reader setzt die Variable layout-abhängig
+     (Einzelansicht vs. Pane) inline; der Default deckt den Einzelansicht-Fall. */
+  .nt-anker { scroll-margin-top: var(--nt-stick, calc(4rem + 2.25rem + 3rem)); }
 
   /* Ankreuzfelder im Hausakzent (Messing) statt Browser-Blau, dazu etwas
      grösser für die Fingerbedienung (Redesign E7: native ~13px waren auf

@@ -145,6 +145,9 @@ export function ReiterUebersicht() {
         aria-haspopup="dialog"
         aria-expanded={panelOffen}
         aria-label="Alle geöffneten Reiter"
+        // W2·10-UI-NAV/N0d·O3: benennt die Funktion beim Hover (Reiter-Tracker +
+        // Danebenöffnen im Split-View), macht das ☰-Icon entdeckbar.
+        title="Reiter & Split-View"
         onClick={() => { if (!panelOffen) positioniere(); setPanelOffen((v) => !v); }}
       >
         <span aria-hidden className="text-base leading-none">☰</span>

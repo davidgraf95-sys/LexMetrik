@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from 'react';
 import { createPortal, flushSync } from 'react-dom';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { naechsteInstanz, merkeTab, aktualisiereTabArtikel, tabSchluessel } from '../../lib/tabs';
@@ -30,6 +30,7 @@ import {
   berechneSekPos, berechneSektionMeta, berechneSekLabelById,
 } from './berechnungen';
 import { AmtlichesPdf } from './parts/AmtlichesPdf';
+import { GesetzFehlSeite } from './FehlSeite';
 
 // ═══ ABSCHNITT · Reine Rechenlogik ausgelagert (QS-TOK/P5, §6 Ziff. 6) ═══════
 // paneRoot/istAnhangToken/findeArt (Pane-Scoping, referenzstabil, KEIN React
@@ -58,6 +59,12 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // revidiert hat (Normrevisions-Ehrlichkeit, §V1c).
   const [revisionShard, setRevisionShard] = useState<{ key: string; shard: RevisionShard | null } | null>(null);
   const [fehler, setFehler] = useState(false);
+  // W2·10-UI-NAV/N0d·O3: kurze Bestätigung nach «In neuem Reiter» — der Reader
+  // wird bei der ?r-Instanz-Navigation NICHT neu gemountet (gleicher key=schluessel),
+  // darum überlebt dieser Zustand den Soft-Nav und weist zum Reiter-Tracker (☰).
+  const [reiterToast, setReiterToast] = useState(false);
+  const reiterToastTimer = useRef<number | null>(null);
+  useEffect(() => () => { if (reiterToastTimer.current) window.clearTimeout(reiterToastTimer.current); }, []);
   const [suche, setSuche] = useState('');
   // Rank 9 (QS-PERF, §15/3): entprellter Suchwert. Das Eingabefeld bleibt sofort
   // responsiv (`suche`), aber die TEUREN Ableitungen — Treffer-Filter über ~1000
@@ -256,7 +263,22 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     if (ebene === 'kanton') void ladeKantonSystematik().then((s) => { if (lebt) setKantonSys(s); });
     void ladeErlass(schluessel).then(async (e) => {
       if (!lebt) return;
-      if (!e) { setFehler(true); return; }
+      if (!e) {
+        // W2·10-UI-NAV/N0b: Key case-insensitiv gegen das Register auflösen und auf
+        // die kanonische URL umleiten (/gesetze/bund/or → /gesetze/bund/OR). Nur bei
+        // EINDEUTIGEM Case-Treffer (kein Rate-Sprung); sonst ehrliche Fehlseite.
+        const m = await ladeBrowseManifest();
+        if (!lebt) return;
+        const roh = schluessel.toLowerCase();
+        const kandidaten = m?.erlasse.filter((x) => x.key.toLowerCase() === roh) ?? [];
+        if (kandidaten.length === 1) {
+          const ziel = kandidaten[0];
+          navigate(`/gesetze/${ziel.ebene}/${encodeURIComponent(ziel.key)}`, { replace: true });
+          return;
+        }
+        setFehler(true);
+        return;
+      }
       // pdf-embed: kein Snapshot-JSON — Erlass setzen, der Reader rendert das
       // eingebettete amtliche PDF (eintraege bleibt null).
       if (e.status === 'pdf-embed') { setErlass(e); return; }
@@ -779,12 +801,9 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   }, [manifest, erlass]);
 
   if (fehler) {
-    return (
-      <div className="space-y-4">
-        <Link to="/gesetze" className="text-body-s text-brass-700">‹ Zur Gesetzessammlung</Link>
-        <div className="lc-notice lc-notice-warn">Dieser Erlass ist nicht als Volltext verfügbar.</div>
-      </div>
-    );
+    // W2·10-UI-NAV/N0b: hilfreiche Fehlseite (angefragter Key + Fuzzy-Vorschläge +
+    // eingebettetes Erlass-Suchfeld) statt der nackten «nicht verfügbar»-Notiz.
+    return <GesetzFehlSeite schluessel={schluessel} manifest={manifest} />;
   }
   // ── pdf-embed: amtliches PDF in-app (kein extrahierbarer Volltext-HTML) ──────
   // Auftrag David 25.6.2026: statt nacktem Live-Link das amtliche Fedlex-PDF in
@@ -991,7 +1010,22 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     // Kodifikation bleibt ruhig (Guide unsichtbar, Einzug bleibt), 'an' = flaches/
     // mittleres Gesetz zeigt seine EINE Guide-Ebene. Löst den grundart-Kategorie-
     // Default (K11) ab. `data-grundart` bleibt als semantischer Marker (§5).
-    <div className="lc-leser space-y-5" data-grundart={meta.grundart ?? undefined} data-guide-auto={linien.autoGuide ? 'an' : 'aus'}>
+    <div className="lc-leser space-y-5" data-grundart={meta.grundart ?? undefined} data-guide-auto={linien.autoGuide ? 'an' : 'aus'}
+      // W2·10-UI-NAV/N0c: reale Sticky-Höhe für die .nt-anker-Sprünge. Einzelansicht:
+      // Topbar (4rem) + Inhalts-Kopf (2.25rem) + dritte klebende Zeile (~3rem). Im
+      // Pane liegen Topbar/PaneKopf ausserhalb des Scroll-Containers → nur die dritte
+      // Zeile (top 0.5rem) klebt (Muster --rsp-stick, Entscheid-Leser B3).
+      style={{ '--nt-stick': imPane ? '3.5rem' : 'calc(4rem + 2.25rem + 3rem)' } as CSSProperties}>
+      {/* O3: flüchtige Bestätigung nach «In neuem Reiter» — zeigt zum ☰-Reiter-
+          Tracker oben rechts (aria-live für Screenreader). Fixed, überlagert nichts
+          Interaktives; verschwindet nach ~3 s bzw. bei erneutem Reiter-Öffnen. */}
+      {reiterToast && (
+        <div role="status" aria-live="polite"
+          className="fixed right-3 top-20 z-50 flex items-center gap-2 rounded-lg border border-line bg-paper-raised px-3 py-2 text-body-s text-ink-700 shadow-lg">
+          <span aria-hidden className="text-brass-700">⧉</span>
+          Im neuen Reiter geöffnet — oben unter ☰
+        </div>
+      )}
       {/* Breadcrumb trägt seit A/F der Kopf: Einzelansicht → Inhalts-Kopf, Split-View
           → PaneKopf. Kein zweiter Inline-Breadcrumb mehr (sonst Dopplung im Pane).
           G2b: EINE Kopf-Komponente (ErlassLeserKopf) — dieselbe wie im pdf-embed-
@@ -1023,6 +1057,10 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
                 const ziel = naechsteInstanz(window.location.pathname + window.location.hash);
                 merkeTab(ziel, erlass.kuerzel);
                 navigate(ziel);
+                // O3: kurze Bestätigung mit Zeiger auf den Reiter-Tracker (☰ oben).
+                setReiterToast(true);
+                if (reiterToastTimer.current) window.clearTimeout(reiterToastTimer.current);
+                reiterToastTimer.current = window.setTimeout(() => setReiterToast(false), 3200);
               }}
               className="lc-chip hover:text-brass-700" title="Diesen Erlass zusätzlich in einem neuen Reiter öffnen">⧉ In neuem Reiter</button>
             {/* W2·5d U-PDF/A12: Download = AMTLICHES PDF der gepinnten Fassung

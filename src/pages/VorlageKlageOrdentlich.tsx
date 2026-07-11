@@ -422,7 +422,7 @@ export function VorlageKlageOrdentlich() {
 
   return (
     <VorlagenWizardRahmen
-      zurueckHref="/"
+      zurueckHref="/vorlagen"
       overline={`${card?.rechtsgebiet ?? 'Zivilprozess (ZPO)'} · Vorlage · ${a.gerichtsKanton === 'BS' ? 'Basel-Stadt' : `Kanton ${a.gerichtsKanton}`}`}
       titel="Klage im ordentlichen Verfahren"
       intro="Erstellt die Klageschrift nach Art. 221 ZPO aus festen Bausteinen: Rechtsbegehren, Streitwertangabe, Tatsachenbehauptungen mit Beweisofferte je Ziffer (Pflicht), fakultative rechtliche Begründung, Beweismittel- und Beilagenverzeichnis — Gerichts-Adressat für alle Kantone, Klagefrist-Berechnung mit Gerichtsferien. Ohne Sprachmodell."

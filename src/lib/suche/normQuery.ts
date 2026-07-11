@@ -45,7 +45,9 @@ export interface NormIndex {
 // Kürzel/Codes vergleichsfest machen: Grossschreibung, Diakritika weg
 // (Ö→O, kongruent für gespeicherten Wert UND Eingabe), nur A–Z0–9. So matcht
 // «GebV SchKG» = «GEBVSCHKG», «ArGV 1» = «ARGV1», «BGÖ» = «BGO».
-function norm(s: string): string {
+// Exportiert (W2·10-UI-NAV/N0b): dieselbe Normalisierung dient der
+// Erlass-Key-Auflösung + den Fuzzy-Vorschlägen der Fehlseite (kein neuer Index).
+export function norm(s: string): string {
   return s
     .toUpperCase()
     .normalize('NFD')

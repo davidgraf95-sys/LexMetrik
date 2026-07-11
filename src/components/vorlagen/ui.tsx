@@ -510,8 +510,26 @@ export function EckdatenKachel({ label, wert, sub, num, akzent }: { label: strin
 }
 
 /** Mobile Sprungmarke zum Live-Ergebnis (UX A7) — nur sichtbar, wenn ein
- *  Ergebnis existiert und der Schirm schmal ist; rein navigatorisch. */
+ *  Ergebnis existiert und der Schirm schmal ist; rein navigatorisch.
+ *  W2·10-UI-NAV/N0d·W5: blendet sich per IntersectionObserver aus, sobald das
+ *  Ergebnis selbst im Viewport steht (kein FAB, der auf ohnehin Sichtbares zeigt);
+ *  taucht beim Zurückscrollen zu den Eingaben wieder auf. Reine Navigation (§3). */
 export function ErgebnisSprung({ zielId }: { zielId: string }) {
+  const [zielSichtbar, setZielSichtbar] = useState(false);
+  useEffect(() => {
+    if (typeof IntersectionObserver === 'undefined') return;
+    const el = document.getElementById(zielId);
+    if (!el) return;
+    // −45 % Boden-Marge: als «sichtbar» gilt das Ergebnis erst, wenn es spürbar
+    // in den oberen Bildbereich rückt (nicht schon beim ersten Pixel am unteren Rand).
+    const io = new IntersectionObserver(
+      ([eintrag]) => setZielSichtbar(eintrag.isIntersecting),
+      { rootMargin: '0px 0px -45% 0px' },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [zielId]);
+  if (zielSichtbar) return null;
   return (
     <a href={`#${zielId}`} className="sm:hidden fixed bottom-4 right-4 z-40 lc-btn-outline lc-btn-sm shadow-md bg-surface"
       onClick={(e) => { e.preventDefault(); document.getElementById(zielId)?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}>
