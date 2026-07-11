@@ -1,8 +1,9 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-11",
  "kopf": {
   "srNummer": "810.21",
   "titel": "Bundesgesetz über die Transplantation von Organen, Geweben und Zellen",
+  "erlassdatum": "vom 8. Oktober 2004 (Stand am 1. Februar 2021)",
   "praeambel": [
    {
     "rolle": "autor",
@@ -28,7 +29,7 @@
     "links": [
      {
       "label": "SR <b>101</b>",
-      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404/20200101"
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4715"
      }
     ],
     "absatz": null,
@@ -139,14 +140,18 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "Fassung gemäss Anhang Ziff. 1 des BB vom 19. Juni 2020 über die Genehmigung des Übereinkommens des Europarats gegen den Handel mit menschlichen Organen und über seine Umsetzung, in Kraft seit 1. Febr. 2021 (<i>AS <b>2020</b> 6567</i>; BBl <b>2019</b> 5971).",
+     "text": "Fassung gemäss Anhang Ziff. 1 des BB vom 19. Juni 2020 über die Genehmigung des Übereinkommens des Europarats gegen den Handel mit menschlichen Organen und über seine Umsetzung, in Kraft seit 1. Febr. 2021 (AS <b>2020</b> 6567; BBl <b>2019</b> 5971).",
      "links": [
+      {
+       "label": "AS <b>2020</b> 6567",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/1066"
+      },
       {
        "label": "BBl <b>2019</b> 5971",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2178"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -168,14 +173,18 @@
    "fussnoten": [
     {
      "nr": "5",
-     "text": "Fassung gemäss Anhang Ziff. 1 des BB vom 19. Juni 2020 über die Genehmigung des Übereinkommens des Europarats gegen den Handel mit menschlichen Organen und über seine Umsetzung, in Kraft seit 1. Febr. 2021 (<i>AS <b>2020</b> 6567</i>; BBl <b>2019</b> 5971).",
+     "text": "Fassung gemäss Anhang Ziff. 1 des BB vom 19. Juni 2020 über die Genehmigung des Übereinkommens des Europarats gegen den Handel mit menschlichen Organen und über seine Umsetzung, in Kraft seit 1. Febr. 2021 (AS <b>2020</b> 6567; BBl <b>2019</b> 5971).",
      "links": [
+      {
+       "label": "AS <b>2020</b> 6567",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/1066"
+      },
       {
        "label": "BBl <b>2019</b> 5971",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2178"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "b"
     }
    ]
@@ -197,7 +206,7 @@
    "fussnoten": [
     {
      "nr": "6",
-     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163, <b>2017</b> 5629; BBl <b>2013</b> 2317).",
+     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163; <b>2017</b> 5629; BBl <b>2013</b> 2317).",
      "links": [
       {
        "label": "AS <b>2016</b> 1163",
@@ -212,7 +221,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/414"
       }
      ],
-     "absatz": null,
+     "absatz": "3bis",
      "item": null
     }
    ]
@@ -249,7 +258,7 @@
    "fussnoten": [
     {
      "nr": "7",
-     "text": "Fassung gemäss Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163, <b>2017</b> 5629; BBl <b>2013</b> 2317).",
+     "text": "Fassung gemäss Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163; <b>2017</b> 5629; BBl <b>2013</b> 2317).",
      "links": [
       {
        "label": "AS <b>2016</b> 1163",
@@ -329,7 +338,7 @@
     }
    ],
    "marginalie": [
-    "Schutz urteilsunfähiger oder minder­jähriger Personen"
+    "Schutz urteilsunfähiger oder minderjähriger Personen"
    ],
    "fussnoten": [
     {
@@ -367,7 +376,7 @@
    "fussnoten": [
     {
      "nr": "10",
-     "text": "Fassung gemäss Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163, <b>2017</b> 5629; BBl <b>2013</b> 2317).",
+     "text": "Fassung gemäss Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163; <b>2017</b> 5629; BBl <b>2013</b> 2317).",
      "links": [
       {
        "label": "AS <b>2016</b> 1163",
@@ -382,12 +391,12 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/414"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
      "nr": "11",
-     "text": "Fassung gemäss Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163, <b>2017</b> 5629; BBl <b>2013</b> 2317).",
+     "text": "Fassung gemäss Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163; <b>2017</b> 5629; BBl <b>2013</b> 2317).",
      "links": [
       {
        "label": "AS <b>2016</b> 1163",
@@ -402,12 +411,12 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/414"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "b"
     },
     {
      "nr": "12",
-     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163, <b>2017</b> 5629; BBl <b>2013</b> 2317).",
+     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163; <b>2017</b> 5629; BBl <b>2013</b> 2317).",
      "links": [
       {
        "label": "AS <b>2016</b> 1163",
@@ -422,7 +431,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/414"
       }
      ],
-     "absatz": null,
+     "absatz": "2bis",
      "item": null
     }
    ]
@@ -478,10 +487,10 @@
      "links": [
       {
        "label": "SR <b>0.142.112.681</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2002/243/20190101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/211"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "b"
     },
     {
@@ -490,10 +499,10 @@
      "links": [
       {
        "label": "SR <b>0.632.31</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1960/590_635_621/20171109"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/2314"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "b"
     },
     {
@@ -502,14 +511,14 @@
      "links": [
       {
        "label": "SR <b>142.20</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2007/758/20191201"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4851"
       },
       {
        "label": "SR <b>170.512</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2004/745/20181126"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4975"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "c"
     },
     {
@@ -525,7 +534,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/414"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "c"
     },
     {
@@ -541,7 +550,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/414"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -619,7 +628,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/414"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -656,7 +665,7 @@
    "fussnoten": [
     {
      "nr": "21",
-     "text": "Fassung des zweiten Satzes gemäss Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163, <b>2017</b> 5629; BBl <b>2013</b> 2317).",
+     "text": "Fassung des zweiten Satzes gemäss Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163; <b>2017</b> 5629; BBl <b>2013</b> 2317).",
      "links": [
       {
        "label": "AS <b>2016</b> 1163",
@@ -671,7 +680,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/414"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -693,7 +702,7 @@
    "fussnoten": [
     {
      "nr": "22",
-     "text": "Ausdruck gemäss Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163, <b>2017</b> 5629; BBl <b>2013</b> 2317). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163; <b>2017</b> 5629; BBl <b>2013</b> 2317). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
      "links": [
       {
        "label": "AS <b>2016</b> 1163",
@@ -708,7 +717,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/414"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -760,7 +769,7 @@
    "fussnoten": [
     {
      "nr": "23",
-     "text": "Fassung gemäss Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163, <b>2017</b> 5629; BBl <b>2013</b> 2317).",
+     "text": "Fassung gemäss Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163; <b>2017</b> 5629; BBl <b>2013</b> 2317).",
      "links": [
       {
        "label": "AS <b>2016</b> 1163",
@@ -775,7 +784,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/414"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "b"
     }
    ]
@@ -818,7 +827,7 @@
     },
     {
      "ebene": 2,
-     "label": "7. Abschnitt: Sorgfaltspflichten"
+     "label": "7. Abschnitt: S Sorgfaltspflichten"
     }
    ],
    "marginalie": [
@@ -833,7 +842,7 @@
     },
     {
      "ebene": 2,
-     "label": "7. Abschnitt: Sorgfaltspflichten"
+     "label": "7. Abschnitt: S Sorgfaltspflichten"
     }
    ],
    "marginalie": [
@@ -848,7 +857,7 @@
     },
     {
      "ebene": 2,
-     "label": "7. Abschnitt: Sorgfaltspflichten"
+     "label": "7. Abschnitt: S Sorgfaltspflichten"
     }
    ],
    "marginalie": [
@@ -863,7 +872,7 @@
     },
     {
      "ebene": 2,
-     "label": "7. Abschnitt: Sorgfaltspflichten"
+     "label": "7. Abschnitt: S Sorgfaltspflichten"
     }
    ],
    "marginalie": [
@@ -878,7 +887,7 @@
     },
     {
      "ebene": 2,
-     "label": "7. Abschnitt: Sorgfaltspflichten"
+     "label": "7. Abschnitt: S Sorgfaltspflichten"
     }
    ],
    "marginalie": [
@@ -893,7 +902,7 @@
     },
     {
      "ebene": 2,
-     "label": "7. Abschnitt: Sorgfaltspflichten"
+     "label": "7. Abschnitt: S Sorgfaltspflichten"
     }
    ],
    "marginalie": [
@@ -935,10 +944,10 @@
      "links": [
       {
        "label": "SR <b>810.30</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2013/617/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9248"
       }
      ],
-     "absatz": null,
+     "absatz": "6",
      "item": null
     }
    ]
@@ -1114,15 +1123,15 @@
      "links": [
       {
        "label": "SR <b>812.21</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2001/422/20200801"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9354"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
      "nr": "27",
-     "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 18. März 2016, in Kraft seit 1. Jan. 2020 (AS <b>2017</b> 2745, <b>2019</b> 1393; BBl <b>2013</b> 1).",
+     "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 18. März 2016, in Kraft seit 1. Jan. 2020 (AS <b>2017</b> 2745; <b>2019</b> 1393; BBl <b>2013</b> 1).",
      "links": [
       {
        "label": "AS <b>2017</b> 2745",
@@ -1137,12 +1146,12 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
      "nr": "28",
-     "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 18. März 2016, in Kraft seit 1. Jan. 2020 (AS <b>2017</b> 2745, <b>2019</b> 1393; BBl <b>2013</b> 1).",
+     "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 18. März 2016, in Kraft seit 1. Jan. 2020 (AS <b>2017</b> 2745; <b>2019</b> 1393; BBl <b>2013</b> 1).",
      "links": [
       {
        "label": "AS <b>2017</b> 2745",
@@ -1157,12 +1166,12 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     },
     {
      "nr": "29",
-     "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 18. März 2016, in Kraft seit 1. Jan. 2019 (AS <b>2017</b> 2745, <b>2018</b> 3575; BBl <b>2013</b> 1).",
+     "text": "Fassung gemäss Anhang Ziff. 3 des BG vom 18. März 2016, in Kraft seit 1. Jan. 2019 (AS <b>2017</b> 2745; <b>2018</b> 3575; BBl <b>2013</b> 1).",
      "links": [
       {
        "label": "AS <b>2017</b> 2745",
@@ -1177,7 +1186,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1"
       }
      ],
-     "absatz": null,
+     "absatz": "5",
      "item": null
     }
    ]
@@ -1277,7 +1286,7 @@
    "fussnoten": [
     {
      "nr": "31",
-     "text": "Fassung gemäss Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163, <b>2017</b> 5629; BBl <b>2013</b> 2317).",
+     "text": "Fassung gemäss Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163; <b>2017</b> 5629; BBl <b>2013</b> 2317).",
      "links": [
       {
        "label": "AS <b>2016</b> 1163",
@@ -1292,12 +1301,12 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/414"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "a"
     },
     {
      "nr": "32",
-     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163, <b>2017</b> 5629; BBl <b>2013</b> 2317).",
+     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163; <b>2017</b> 5629; BBl <b>2013</b> 2317).",
      "links": [
       {
        "label": "AS <b>2016</b> 1163",
@@ -1312,7 +1321,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/414"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "abis"
     }
    ]
@@ -1360,7 +1369,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/823"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "b"
     }
    ]
@@ -1440,7 +1449,7 @@
    "fussnoten": [
     {
      "nr": "34",
-     "text": "Fassung des zweiten Satzes gemäss Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163, <b>2017</b> 5629; BBl <b>2013</b> 2317).",
+     "text": "Fassung des zweiten Satzes gemäss Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163; <b>2017</b> 5629; BBl <b>2013</b> 2317).",
      "links": [
       {
        "label": "AS <b>2016</b> 1163",
@@ -1455,12 +1464,12 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/414"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
      "nr": "35",
-     "text": "Fassung gemäss Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163, <b>2017</b> 5629; BBl <b>2013</b> 2317).",
+     "text": "Fassung gemäss Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163; <b>2017</b> 5629; BBl <b>2013</b> 2317).",
      "links": [
       {
        "label": "AS <b>2016</b> 1163",
@@ -1475,12 +1484,12 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/414"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "a"
     },
     {
      "nr": "36",
-     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163, <b>2017</b> 5629; BBl <b>2013</b> 2317).",
+     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163; <b>2017</b> 5629; BBl <b>2013</b> 2317).",
      "links": [
       {
        "label": "AS <b>2016</b> 1163",
@@ -1495,7 +1504,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/414"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "c"
     }
    ]
@@ -1632,8 +1641,12 @@
    "fussnoten": [
     {
      "nr": "38",
-     "text": "Fassung gemäss Anhang Ziff. 1 des BB vom 19. Juni 2020 über die Genehmigung des Übereinkommens des Europarats gegen den Handel mit menschlichen Organen und über seine Umsetzung, in Kraft seit 1. Febr. 2021 (<i>AS <b>2020</b> 6567</i>; BBl <b>2019</b> 5971).",
+     "text": "Fassung gemäss Anhang Ziff. 1 des BB vom 19. Juni 2020 über die Genehmigung des Übereinkommens des Europarats gegen den Handel mit menschlichen Organen und über seine Umsetzung, in Kraft seit 1. Febr. 2021 (AS <b>2020</b> 6567; BBl <b>2019</b> 5971).",
      "links": [
+      {
+       "label": "AS <b>2020</b> 6567",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/1066"
+      },
       {
        "label": "BBl <b>2019</b> 5971",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2178"
@@ -1648,15 +1661,15 @@
      "links": [
       {
        "label": "SR <b>311.0</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799/20200303"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6196"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
      "nr": "40",
-     "text": "Fassung gemäss Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163, <b>2017</b> 5629; BBl <b>2013</b> 2317).",
+     "text": "Fassung gemäss Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163; <b>2017</b> 5629; BBl <b>2013</b> 2317).",
      "links": [
       {
        "label": "AS <b>2016</b> 1163",
@@ -1671,72 +1684,92 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/414"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
      "nr": "41",
-     "text": "Fassung gemäss Anhang Ziff. 1 des BB vom 19. Juni 2020 über die Genehmigung des Übereinkommens des Europarats gegen den Handel mit menschlichen Organen und über seine Umsetzung, in Kraft seit 1. Febr. 2021 (<i>AS <b>2020</b> 6567</i>; BBl <b>2019</b> 5971).",
+     "text": "Fassung gemäss Anhang Ziff. 1 des BB vom 19. Juni 2020 über die Genehmigung des Übereinkommens des Europarats gegen den Handel mit menschlichen Organen und über seine Umsetzung, in Kraft seit 1. Febr. 2021 (AS <b>2020</b> 6567; BBl <b>2019</b> 5971).",
      "links": [
+      {
+       "label": "AS <b>2020</b> 6567",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/1066"
+      },
       {
        "label": "BBl <b>2019</b> 5971",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2178"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "a"
     },
     {
      "nr": "42",
-     "text": "Fassung gemäss Anhang Ziff. 1 des BB vom 19. Juni 2020 über die Genehmigung des Übereinkommens des Europarats gegen den Handel mit menschlichen Organen und über seine Umsetzung, in Kraft seit 1. Febr. 2021 (<i>AS <b>2020</b> 6567</i>; BBl <b>2019</b> 5971).",
+     "text": "Fassung gemäss Anhang Ziff. 1 des BB vom 19. Juni 2020 über die Genehmigung des Übereinkommens des Europarats gegen den Handel mit menschlichen Organen und über seine Umsetzung, in Kraft seit 1. Febr. 2021 (AS <b>2020</b> 6567; BBl <b>2019</b> 5971).",
      "links": [
+      {
+       "label": "AS <b>2020</b> 6567",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/1066"
+      },
       {
        "label": "BBl <b>2019</b> 5971",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2178"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "b"
     },
     {
      "nr": "43",
-     "text": "Fassung gemäss Anhang Ziff. 1 des BB vom 19. Juni 2020 über die Genehmigung des Übereinkommens des Europarats gegen den Handel mit menschlichen Organen und über seine Umsetzung, in Kraft seit 1. Febr. 2021 (<i>AS <b>2020</b> 6567</i>; BBl <b>2019</b> 5971).",
+     "text": "Fassung gemäss Anhang Ziff. 1 des BB vom 19. Juni 2020 über die Genehmigung des Übereinkommens des Europarats gegen den Handel mit menschlichen Organen und über seine Umsetzung, in Kraft seit 1. Febr. 2021 (AS <b>2020</b> 6567; BBl <b>2019</b> 5971).",
      "links": [
+      {
+       "label": "AS <b>2020</b> 6567",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/1066"
+      },
       {
        "label": "BBl <b>2019</b> 5971",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2178"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "c"
     },
     {
      "nr": "44",
-     "text": "Eingefügt durch Anhang Ziff. 1 des BB vom 19. Juni 2020 über die Genehmigung des Übereinkommens des Europarats gegen den Handel mit menschlichen Organen und über seine Umsetzung, in Kraft seit 1. Febr. 2021 (<i>AS <b>2020</b> 6567</i>; BBl <b>2019</b> 5971).",
+     "text": "Eingefügt durch Anhang Ziff. 1 des BB vom 19. Juni 2020 über die Genehmigung des Übereinkommens des Europarats gegen den Handel mit menschlichen Organen und über seine Umsetzung, in Kraft seit 1. Febr. 2021 (AS <b>2020</b> 6567; BBl <b>2019</b> 5971).",
      "links": [
+      {
+       "label": "AS <b>2020</b> 6567",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/1066"
+      },
       {
        "label": "BBl <b>2019</b> 5971",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2178"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "cbis"
     },
     {
      "nr": "45",
-     "text": "Fassung gemäss Anhang Ziff. 1 des BB vom 19. Juni 2020 über die Genehmigung des Übereinkommens des Europarats gegen den Handel mit menschlichen Organen und über seine Umsetzung, in Kraft seit 1. Febr. 2021 (<i>AS <b>2020</b> 6567</i>; BBl <b>2019</b> 5971).",
+     "text": "Fassung gemäss Anhang Ziff. 1 des BB vom 19. Juni 2020 über die Genehmigung des Übereinkommens des Europarats gegen den Handel mit menschlichen Organen und über seine Umsetzung, in Kraft seit 1. Febr. 2021 (AS <b>2020</b> 6567; BBl <b>2019</b> 5971).",
      "links": [
+      {
+       "label": "AS <b>2020</b> 6567",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/1066"
+      },
       {
        "label": "BBl <b>2019</b> 5971",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2178"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
      "nr": "46",
-     "text": "Fassung gemäss Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163, <b>2017</b> 5629; BBl <b>2013</b> 2317).",
+     "text": "Fassung gemäss Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163; <b>2017</b> 5629; BBl <b>2013</b> 2317).",
      "links": [
       {
        "label": "AS <b>2016</b> 1163",
@@ -1751,19 +1784,23 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/414"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     },
     {
      "nr": "47",
-     "text": "Eingefügt durch Anhang Ziff. 1 des BB vom 19. Juni 2020 über die Genehmigung des Übereinkommens des Europarats gegen den Handel mit menschlichen Organen und über seine Umsetzung, in Kraft seit 1. Febr. 2021 (<i>AS <b>2020</b> 6567</i>; BBl <b>2019</b> 5971).",
+     "text": "Eingefügt durch Anhang Ziff. 1 des BB vom 19. Juni 2020 über die Genehmigung des Übereinkommens des Europarats gegen den Handel mit menschlichen Organen und über seine Umsetzung, in Kraft seit 1. Febr. 2021 (AS <b>2020</b> 6567; BBl <b>2019</b> 5971).",
      "links": [
+      {
+       "label": "AS <b>2020</b> 6567",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/1066"
+      },
       {
        "label": "BBl <b>2019</b> 5971",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2178"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     }
    ]
@@ -1781,7 +1818,7 @@
    "fussnoten": [
     {
      "nr": "48",
-     "text": "Fassung gemäss Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163, <b>2017</b> 5629; BBl <b>2013</b> 2317).",
+     "text": "Fassung gemäss Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163; <b>2017</b> 5629; BBl <b>2013</b> 2317).",
      "links": [
       {
        "label": "AS <b>2016</b> 1163",
@@ -1796,7 +1833,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/414"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -1805,15 +1842,15 @@
      "links": [
       {
        "label": "SR <b>311.0</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799/20200303"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6196"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "g"
     },
     {
      "nr": "50",
-     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163, <b>2017</b> 5629; BBl <b>2013</b> 2317).",
+     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163; <b>2017</b> 5629; BBl <b>2013</b> 2317).",
      "links": [
       {
        "label": "AS <b>2016</b> 1163",
@@ -1828,12 +1865,12 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/414"
       }
      ],
-     "absatz": null,
+     "absatz": "1bis",
      "item": null
     },
     {
      "nr": "51",
-     "text": "Fassung gemäss Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163, <b>2017</b> 5629; BBl <b>2013</b> 2317).",
+     "text": "Fassung gemäss Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163; <b>2017</b> 5629; BBl <b>2013</b> 2317).",
      "links": [
       {
        "label": "AS <b>2016</b> 1163",
@@ -1848,12 +1885,12 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/414"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     },
     {
      "nr": "52",
-     "text": "Aufgehoben durch Ziff. I des BG vom 19. Juni 2015, mit Wirkung seit 15. Nov. 2017 (AS <b>2016</b> 1163, <b>2017</b> 5629; BBl <b>2013</b> 2317).",
+     "text": "Aufgehoben durch Ziff. I des BG vom 19. Juni 2015, mit Wirkung seit 15. Nov. 2017 (AS <b>2016</b> 1163; <b>2017</b> 5629; BBl <b>2013</b> 2317).",
      "links": [
       {
        "label": "AS <b>2016</b> 1163",
@@ -1868,7 +1905,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/414"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     }
    ]
@@ -1890,22 +1927,26 @@
      "links": [
       {
        "label": "SR <b>313.0</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1974/1857_1857_1857/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6234"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
      "nr": "54",
-     "text": "Eingefügt durch Anhang Ziff. 1 des BB vom 19. Juni 2020 über die Genehmigung des Übereinkommens des Europarats gegen den Handel mit menschlichen Organen und über seine Umsetzung, in Kraft seit 1. Febr. 2021 (<i>AS <b>2020</b> 6567</i>; BBl <b>2019</b> 5971).",
+     "text": "Eingefügt durch Anhang Ziff. 1 des BB vom 19. Juni 2020 über die Genehmigung des Übereinkommens des Europarats gegen den Handel mit menschlichen Organen und über seine Umsetzung, in Kraft seit 1. Febr. 2021 (AS <b>2020</b> 6567; BBl <b>2019</b> 5971).",
      "links": [
+      {
+       "label": "AS <b>2020</b> 6567",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/1066"
+      },
       {
        "label": "BBl <b>2019</b> 5971",
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2178"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -1923,7 +1964,7 @@
    "fussnoten": [
     {
      "nr": "55",
-     "text": "[AS <b>1996</b> 2296, <b>2001 </b>1505 2790 Anhang Ziff. 7, <b>2002</b> 3335 Art. 1, <b>2005</b> 4779]",
+     "text": "[AS <b>1996</b> 2296; <b>2001 </b>1505, 2790 Anhang Ziff. 7; <b>2002</b> 3335 Art. 1; <b>2005</b> 4779]",
      "links": [
       {
        "label": "AS <b>1996</b> 2296",
@@ -1989,7 +2030,7 @@
    "fussnoten": [
     {
      "nr": "57",
-     "text": "Fassung gemäss Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163, <b>2017</b> 5629; BBl <b>2013</b> 2317).",
+     "text": "Fassung gemäss Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163; <b>2017</b> 5629; BBl <b>2013</b> 2317).",
      "links": [
       {
        "label": "AS <b>2016</b> 1163",
@@ -2022,7 +2063,7 @@
    "fussnoten": [
     {
      "nr": "58",
-     "text": "BRB vom 16. März 2007",
+     "text": "BRB vom 16. März 2007.",
      "links": [],
      "absatz": null,
      "item": null
@@ -2046,7 +2087,7 @@
    "fussnoten": [
     {
      "nr": "13",
-     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163, <b>2017</b> 5629; BBl <b>2013</b> 2317).",
+     "text": "Eingefügt durch Ziff. I des BG vom 19. Juni 2015, in Kraft seit 15. Nov. 2017 (AS <b>2016</b> 1163; <b>2017</b> 5629; BBl <b>2013</b> 2317).",
      "links": [
       {
        "label": "AS <b>2016</b> 1163",
@@ -2088,10 +2129,10 @@
      "links": [
       {
        "label": "SR <b>832.10</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1995/1328_1328_1328/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10133"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]

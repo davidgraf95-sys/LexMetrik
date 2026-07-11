@@ -1,8 +1,9 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-11",
  "kopf": {
   "srNummer": "281.31",
   "titel": "Verordnung über die im Betreibungs- und Konkursverfahren zu verwendenden Formulare und Register sowie die Rechnungsführung",
+  "erlassdatum": "vom 5. Juni 1996 (Stand am 1. Januar 2016)",
   "praeambel": [
    {
     "rolle": "autor",
@@ -28,7 +29,7 @@
     "links": [
      {
       "label": "SR <b>281.1</b>",
-      "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529/20200101"
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6149"
      }
     ],
     "absatz": null,
@@ -145,10 +146,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5703"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -353,7 +354,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1975/1987_1987_1987"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]

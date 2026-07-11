@@ -1,8 +1,9 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-11",
  "kopf": {
   "srNummer": "642.14",
   "titel": "Bundesgesetz über die Harmonisierung der direkten Steuern der Kantone und Gemeinden",
+  "erlassdatum": "vom 14. Dezember 1990 (Stand am 1. Januar 2025)",
   "praeambel": [
    {
     "rolle": "autor",
@@ -57,7 +58,7 @@
    },
    {
     "nr": "3",
-    "text": "Fassung gemäss Ziff. I 2 des BG vom 15. Dez. 2000 zur Koordination und Verein‑ fachung der Veranlagungsverfahren für die direkten Steuern im interkantonalen Verhältnis, in Kraft seit 1. Jan. 2001 (AS <b>2001</b> 1050; BBl <b>2000</b> 3898).",
+    "text": "Fassung gemäss Ziff. I 2 des BG vom 15. Dez. 2000 zur Koordination und Vereinfachung der Veranlagungsverfahren für die direkten Steuern im interkantonalen Verhältnis, in Kraft seit 1. Jan. 2001 (AS <b>2001</b> 1050; BBl <b>2000</b> 3898).",
     "links": [
      {
       "label": "AS <b>2001</b> 1050",
@@ -136,7 +137,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/815"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     },
     {
@@ -152,7 +153,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2003/194"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     }
    ]
@@ -185,11 +186,43 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1165"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
      "nr": "8",
+     "text": "Fassung gemäss Ziff. I 2 des BG vom 14. Juni 2024 über die Besteuerung der Telearbeit im internationalen Verhältnis, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 573; BBl <b>2024</b> 650).",
+     "links": [
+      {
+       "label": "AS <b>2024</b> 573",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/573"
+      },
+      {
+       "label": "BBl <b>2024</b> 650",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2024/650"
+      }
+     ],
+     "absatz": "2",
+     "item": "a"
+    },
+    {
+     "nr": "9",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 14. Juni 2024 über die Besteuerung der Telearbeit im internationalen Verhältnis, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 573; BBl <b>2024</b> 650).",
+     "links": [
+      {
+       "label": "AS <b>2024</b> 573",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/573"
+      },
+      {
+       "label": "BBl <b>2024</b> 650",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2024/650"
+      }
+     ],
+     "absatz": "2",
+     "item": "abis"
+    },
+    {
+     "nr": "10",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 17. Dez. 2010 über die Besteuerung von Mitarbeiterbeteiligungen, in Kraft seit 1. Jan. 2013 (AS <b>2011</b> 3259; BBl <b>2005</b> 575).",
      "links": [
       {
@@ -201,27 +234,27 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/88"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "b"
     },
     {
-     "nr": "9",
-     "text": "Fassung gemäss Anhang 2 Ziff. II 3 des Landesversorgungsgesetzes vom 17. Juni 2016, in Kraft seit 1. Juni 2017 (AS <b>2017</b> 3097; BBl <b>2014</b> 7119).",
+     "nr": "11",
+     "text": "Fassung gemäss Ziff. I 2 des BG vom 14. Juni 2024 über die Besteuerung der Telearbeit im internationalen Verhältnis, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 573; BBl <b>2024</b> 650).",
      "links": [
       {
-       "label": "AS <b>2017</b> 3097",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2017/308"
+       "label": "AS <b>2024</b> 573",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/573"
       },
       {
-       "label": "BBl <b>2014</b> 7119",
-       "url": "https://fedlex.data.admin.ch/eli/fga/2014/1571"
+       "label": "BBl <b>2024</b> 650",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2024/650"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "f"
     },
     {
-     "nr": "10",
+     "nr": "12",
      "text": "Eingefügt durch Ziff. I des BG vom 17. März 2017, in Kraft seit 1. Jan. 2019 (AS <b>2017</b> 5039; BBl <b>2016</b> 5357).",
      "links": [
       {
@@ -233,7 +266,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1165"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "g"
     }
    ]
@@ -269,7 +302,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "15",
+     "nr": "17",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2014 (AS <b>2013</b> 779; BBl <b>2011</b> 6021). Siehe auch die UeB dieser Änd. in Art. 78<i>e</i> am Schluss des Textes.",
      "links": [
       {
@@ -306,7 +339,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "16",
+     "nr": "18",
      "text": "Die Änd. gemäss BG vom 20. Juni 2014 über die Weiterbildung, in Kraft seit 1. Jan. 2017, betrifft nur den französischen und den italienischen Text (AS <b>2016</b> 689; BBl <b>2013 </b>3729).",
      "links": [
       {
@@ -318,11 +351,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/823"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "17",
+     "nr": "19",
      "text": "Fassung des dritten Satz gemäss Ziff. I 3 des BG vom 28. Sept. 2018 über die Steuerreform und die AHV-Finanzierung, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 2395 2413; BBl <b>2018</b> 2527).",
      "links": [
       {
@@ -338,11 +371,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1042"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "18",
+     "nr": "20",
      "text": "Vierter Satz eingefügt durch Ziff. I 3 des BG vom 28. Sept. 2018 über die Steuerreform und die AHV-Finanzierung, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 2395 2413; BBL <b>2018</b> 2527).",
      "links": [
       {
@@ -354,11 +387,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/448"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "19",
+     "nr": "21",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 27. Sept. 2013 über die steuerliche Behan lung der berufsorientierten Aus- und Weiterbildungskosten, in Kraft seit 1. Jan. 2016 (AS <b>2014</b> 1105; BBl <b>2011</b> 2607).",
      "links": [
       {
@@ -370,11 +403,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/381"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "20",
+     "nr": "22",
      "text": "SR <b>642.21</b>",
      "links": [
       {
@@ -382,11 +415,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/1966/371_385_384"
       }
      ],
-     "absatz": null,
+     "absatz": "1bis",
      "item": null
     },
     {
-     "nr": "21",
+     "nr": "23",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 10. Okt. 1997 über die Reform der Unternehmensbesteuerung 1997, in Kraft seit 1. Jan. 1998 (AS <b>1998</b> 669; BBl <b>1997</b> II 1164).",
      "links": [
       {
@@ -398,11 +431,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1997/2_1164_1058_963"
       }
      ],
-     "absatz": null,
+     "absatz": "1bis",
      "item": null
     },
     {
-     "nr": "22",
+     "nr": "24",
      "text": "Eingefügt durch Ziff. I 6 des BG vom 19. März 1999 über das Stabilisierungsprogramm 1998, in Kraft seit 1. Jan. 2001 (AS <b>1999</b> 2374; <i>BBl <b>1999</b> 4</i>).",
      "links": [
       {
@@ -410,11 +443,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/363"
       }
      ],
-     "absatz": null,
+     "absatz": "1ter",
      "item": null
     },
     {
-     "nr": "23",
+     "nr": "25",
      "text": "SR <b>221.229.1</b>",
      "links": [
       {
@@ -422,11 +455,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/24/719_735_717"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "a"
     },
     {
-     "nr": "24",
+     "nr": "26",
      "text": "SR <b>961.01</b>",
      "links": [
       {
@@ -434,11 +467,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2005/734"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "a"
     },
     {
-     "nr": "25",
+     "nr": "27",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 17. Juni 2022 über die Besteuerung von Leibrenten und ähnlichen Vorsorgeformen, in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 38; BBl <b>2021</b> 3028).",
      "links": [
       {
@@ -450,11 +483,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2021/3028"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "2"
     },
     {
-     "nr": "26",
+     "nr": "28",
      "text": "SR <b>951.31</b>",
      "links": [
       {
@@ -462,11 +495,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/822"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     },
     {
-     "nr": "27",
+     "nr": "29",
      "text": "Fassung gemäss Anhang Ziff. II 7 des Kollektivanlagengesetzes vom 23. Juni 2006, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 5379; BBl <b>2005</b> 6395).",
      "links": [
       {
@@ -478,11 +511,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/1000"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     },
     {
-     "nr": "28",
+     "nr": "30",
      "text": "Fassung gemäss Ziff. I 6 des BG vom 19. März 1999 über das Stabilisierungsprogramm 1998, in Kraft seit 1. Jan. 2001 (AS <b>1999</b> 2374; <i>BBl <b>1999</b> 4</i>).",
      "links": [
       {
@@ -490,11 +523,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/363"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": "d"
     },
     {
-     "nr": "29",
+     "nr": "31",
      "text": "Fassung gemäss Anhang Ziff. 8 des Zivildienstgesetzes vom 6. Okt. 1995, in Kraft seit 1. Okt. 1996 (AS <b>1996</b> 1445; BBl <b>1994</b> III 1609).",
      "links": [
       {
@@ -506,11 +539,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1994/3_1609_1579_1445"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": "h"
     },
     {
-     "nr": "30",
+     "nr": "32",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 27. Juni 2011 über die Steuerbefreiung des Feuerwehrsoldes, in Kraft seit 1. Jan. 2013 (AS <b>2012</b> 489; BBl <b>2010</b> 2855).",
      "links": [
       {
@@ -522,11 +555,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/508"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": "hbis"
     },
     {
-     "nr": "31",
+     "nr": "33",
      "text": "Eingefügt durch Anhang Ziff. 3 des Spielbankengesetzes vom 18. Dez. 1998 (AS <b>2000</b> 677; BBl <b>1997</b> III 145). Fassung gemäss Anhang Ziff. II 6 des Geldspielgesetzes vom 29. Sept. 2017, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5103; BBl <b>2015</b> 8387).",
      "links": [
       {
@@ -546,11 +579,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2039"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": "l"
     },
     {
-     "nr": "32",
+     "nr": "34",
      "text": "SR <b>935.51</b>",
      "links": [
       {
@@ -558,11 +591,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2018/795"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": "l"
     },
     {
-     "nr": "33",
+     "nr": "35",
      "text": "Eingefügt durch Anhang Ziff. II 6 des Geldspielgesetzes vom 29. Sept. 2017, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5103; BBl <b>2015</b> 8387).",
      "links": [
       {
@@ -574,11 +607,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2039"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": "lbis"
     },
     {
-     "nr": "34",
+     "nr": "36",
      "text": "Eingefügt durch Anhang Ziff. II 6 des Geldspielgesetzes vom 29. Sept. 2017, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5103; BBl <b>2015</b> 8387).",
      "links": [
       {
@@ -590,11 +623,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2039"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": "lter"
     },
     {
-     "nr": "35",
+     "nr": "37",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 15. Juni 2012 über die Vereinfachungen bei der Besteuerung von Lotteriegewinnen (AS <b>2012</b> 5977; BBl <b>2011 </b>6517 6543). Fassung gemäss Anhang Ziff. II 6 des Geldspielgesetzes vom 29. Sept. 2017, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5103; BBl <b>2015</b> 8387).",
      "links": [
       {
@@ -618,11 +651,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2039"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": "m"
     },
     {
-     "nr": "36",
+     "nr": "38",
      "text": "Eingefügt durch Anhang Ziff. 3 des BG vom 19. Juni 2020 über Überbrückungsleistungen für ältere Arbeitslose, in Kraft seit 1. Juli 2021 (AS <b>2021</b> 373; BBl <b>2019</b> 8251).",
      "links": [
       {
@@ -634,11 +667,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2838"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": "n"
     },
     {
-     "nr": "37",
+     "nr": "39",
      "text": "SR <b>837.2</b>",
      "links": [
       {
@@ -646,7 +679,7 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2021/373"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": "n"
     }
    ]
@@ -671,7 +704,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "47",
+     "nr": "49",
      "text": "Fassung gemäss Ziff. I 6 des BG vom 19. März 1999 über das Stabilisierungsprogramm 1998, in Kraft seit 1. Jan. 2001 (AS <b>1999</b> 2374; <i>BBl <b>1999</b> 4</i>).",
      "links": [
       {
@@ -679,39 +712,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/363"
       }
      ],
-     "absatz": null,
-     "item": null
-    },
-    {
-     "nr": "48",
-     "text": "Eingefügt durch Ziff. II 3 des Unternehmenssteuerreformgesetzes II vom 23. März 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 2893; BBl <b>2005</b> 4733).",
-     "links": [
-      {
-       "label": "AS <b>2008</b> 2893",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2008/397"
-      },
-      {
-       "label": "BBl <b>2005</b> 4733",
-       "url": "https://fedlex.data.admin.ch/eli/fga/2005/737"
-      }
-     ],
-     "absatz": null,
-     "item": null
-    },
-    {
-     "nr": "49",
-     "text": "Eingefügt durch Ziff. II 3 des Unternehmenssteuerreformgesetzes II vom 23. März 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 2893; BBl <b>2005</b> 4733).",
-     "links": [
-      {
-       "label": "AS <b>2008</b> 2893",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2008/397"
-      },
-      {
-       "label": "BBl <b>2005</b> 4733",
-       "url": "https://fedlex.data.admin.ch/eli/fga/2005/737"
-      }
-     ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -727,11 +728,43 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/737"
       }
      ],
-     "absatz": null,
+     "absatz": "2bis",
      "item": null
     },
     {
      "nr": "51",
+     "text": "Eingefügt durch Ziff. II 3 des Unternehmenssteuerreformgesetzes II vom 23. März 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 2893; BBl <b>2005</b> 4733).",
+     "links": [
+      {
+       "label": "AS <b>2008</b> 2893",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/397"
+      },
+      {
+       "label": "BBl <b>2005</b> 4733",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2005/737"
+      }
+     ],
+     "absatz": "2ter",
+     "item": null
+    },
+    {
+     "nr": "52",
+     "text": "Eingefügt durch Ziff. II 3 des Unternehmenssteuerreformgesetzes II vom 23. März 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 2893; BBl <b>2005</b> 4733).",
+     "links": [
+      {
+       "label": "AS <b>2008</b> 2893",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/397"
+      },
+      {
+       "label": "BBl <b>2005</b> 4733",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2005/737"
+      }
+     ],
+     "absatz": "2quater",
+     "item": null
+    },
+    {
+     "nr": "53",
      "text": "Eingefügt durch Ziff. I 3 des BG vom 28. Sept. 2018 über die Steuerreform und die AHV-Finanzierung, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 2395 2413; BBl <b>2018</b> 2527).",
      "links": [
       {
@@ -747,11 +780,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1042"
       }
      ],
-     "absatz": null,
+     "absatz": "2quinquies",
      "item": null
     },
     {
-     "nr": "52",
+     "nr": "54",
      "text": "Fassung gemäss Anhang Ziff. 8 des BG vom 16. Dez. 2005 (GmbH-Recht sowie Anpassungen im Aktien-, Genossenschafts-, Handelsregister- und Firmenrecht), in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 4791; BBl <b>2002</b> 3148, <b>2004</b> 3969).",
      "links": [
       {
@@ -767,11 +800,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/680"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     },
     {
-     "nr": "53",
+     "nr": "55",
      "text": "Fassung gemäss Anhang Ziff. 8 des Fusionsgesetzes vom 3. Okt. 2003, in Kraft seit 1. Juli 2004 (AS <b>2004</b> 2617; BBl <b>2000</b> 4337).",
      "links": [
       {
@@ -783,11 +816,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/921"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": "c"
     },
     {
-     "nr": "54",
+     "nr": "56",
      "text": "Eingefügt durch Anhang Ziff. 8 des Fusionsgesetzes vom 3. Okt. 2003, in Kraft seit 1. Juli 2004 (AS <b>2004</b> 2617; BBl <b>2000</b> 4337).",
      "links": [
       {
@@ -799,11 +832,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/921"
       }
      ],
-     "absatz": null,
+     "absatz": "3bis",
      "item": null
     },
     {
-     "nr": "55",
+     "nr": "57",
      "text": "Fassung gemäss Ziff. II 3 des Unternehmenssteuerreformgesetzes II vom 23. März 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 2893; BBl <b>2005</b> 4733).",
      "links": [
       {
@@ -815,7 +848,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/737"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     }
    ]
@@ -840,7 +873,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "57",
+     "nr": "59",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 27. Sept. 2013 über die steuerliche Behan lung der berufsorientierten Aus- und Weiterbildungskosten, in Kraft seit 1. Jan. 2016 (AS <b>2014</b> 1105; BBl <b>2011</b> 2607). Berichtigung der RedK der BVers vom 18. Feb. 2015 (AS <b>2015</b> 993).",
      "links": [
       {
@@ -856,11 +889,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/186"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "58",
+     "nr": "60",
      "text": "Fassung gemäss Ziff. II 3 des Unternehmenssteuerreformgesetzes II vom 23. März 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 2893; BBl <b>2005</b> 4733).",
      "links": [
       {
@@ -872,11 +905,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/737"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "a"
     },
     {
-     "nr": "59",
+     "nr": "61",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 17. Juni 2022 über die Besteuerung von Leibrenten und ähnlichen Vorsorgeformen, in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 38; BBl <b>2021</b> 3028).",
      "links": [
       {
@@ -888,11 +921,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2021/3028"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "b"
     },
     {
-     "nr": "60",
+     "nr": "62",
      "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 18. Juni 2004, in Kraft seit 1. Jan. 2005 (AS <b>2004</b> 4635; BBl <b>2003 </b>6399).",
      "links": [
       {
@@ -904,11 +937,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2003/1054"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "d"
     },
     {
-     "nr": "61",
+     "nr": "63",
      "text": "Fassung gemäss Anhang Ziff. 3 des Behindertengleichstellungsgesetzes vom 13. Dez. 2002, in Kraft seit 1. Jan. 2005 (AS <b>2003</b> 4487; BBl <b>2001</b> 1715).",
      "links": [
       {
@@ -920,11 +953,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/434"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "h"
     },
     {
-     "nr": "62",
+     "nr": "64",
      "text": "Eingefügt durch Anhang Ziff. 3 des Behindertengleichstellungsgesetzes vom 13. Dez. 2002, in Kraft seit 1. Jan. 2005 (AS <b>2003</b> 4487; BBl <b>2001</b> 1715).",
      "links": [
       {
@@ -936,11 +969,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/434"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "hbis"
     },
     {
-     "nr": "63",
+     "nr": "65",
      "text": "SR <b>151.3</b>",
      "links": [
       {
@@ -948,11 +981,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2003/667"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "hbis"
     },
     {
-     "nr": "64",
+     "nr": "66",
      "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 8. Okt. 2004 (Stiftungsrecht), in Kraft seit 1. Jan. 2006 (AS <b>2005 </b>4545; BBl <b>2003</b> 8153 8191).",
      "links": [
       {
@@ -968,11 +1001,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2003/1404"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "i"
     },
     {
-     "nr": "65",
+     "nr": "67",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 12. Juni 2009 über die steuerliche Abzugsfähigkeit von Zuwendungen an politische Parteien, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 449; BBl <b>2008</b> 7463 7485).",
      "links": [
       {
@@ -988,11 +1021,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1238"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "l"
     },
     {
-     "nr": "66",
+     "nr": "68",
      "text": "SR <b>161.1</b>",
      "links": [
       {
@@ -1000,11 +1033,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/1978/688_688_688"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "1"
     },
     {
-     "nr": "67",
+     "nr": "69",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 25. Sept. 2009 über die steuerliche Entlastung von Familien mit Kindern, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 455; BBl <b>2009</b> 4729). Berichtigt von der Redaktionskommission der BVers (Art. 58 Abs. 1 ParlG – SR<b> 171.10</b>).",
      "links": [
       {
@@ -1020,11 +1053,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2003/510"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "m"
     },
     {
-     "nr": "68",
+     "nr": "70",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 15. Juni 2012 über die Vereinfachungen bei der Besteuerung von Lotteriegewinnen (AS <b>2012</b> 5977; BBl <b>2011 </b>6517 6543). Fassung gemäss Anhang Ziff. II 6 des Geldspielgesetzes vom 29. Sept. 2017, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5103; BBl <b>2015</b> 8387).",
      "links": [
       {
@@ -1048,11 +1081,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2039"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "n"
     },
     {
-     "nr": "69",
+     "nr": "71",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 27. Sept. 2013 über die steuerliche Behandlung der berufsorientierten Aus- und Weiterbildungskosten, in Kraft seit 1. Jan. 2016 (AS <b>2014</b> 1105; BBl <b>2011</b> 2607).",
      "links": [
       {
@@ -1064,11 +1097,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/381"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "o"
     },
     {
-     "nr": "70",
+     "nr": "72",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 3. Okt. 2008 über die steuerliche Behandlung von Instandstellungskosten bei Liegenschaften, in Kraft seit 1. Jan. 2010 (AS <b>2009</b> 1515; BBl <b>2007</b> 7993 8009).",
      "links": [
       {
@@ -1084,11 +1117,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/1293"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     },
     {
-     "nr": "71",
+     "nr": "73",
      "text": "Fassung gemäss Anhang Ziff. II 4 des Energiegesetzes vom 30. Sept. 2016, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6839; BBl <b>2013</b> 7561).",
      "links": [
       {
@@ -1100,11 +1133,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1476"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": "a"
     },
     {
-     "nr": "72",
+     "nr": "74",
      "text": "Eingefügt durch Anhang Ziff. II 4 des Energiegesetzes vom 30. Sept. 2016, in Kraft seit 1. Jan. 2018 (AS <b>2017</b> 6839; BBl <b>2013</b> 7561).",
      "links": [
       {
@@ -1116,7 +1149,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1476"
       }
      ],
-     "absatz": null,
+     "absatz": "3bis",
      "item": null
     }
    ]
@@ -1141,7 +1174,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "73",
+     "nr": "75",
      "text": "Eingefügt durch Ziff. I 6 des BG vom 19. März 1999 über das Stabilisierungsprogramm 1998, in Kraft seit 1. Jan. 2001 (AS <b>1999</b> 2374; <i>BBl <b>1999</b> 4</i>).",
      "links": [
       {
@@ -1149,11 +1182,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/363"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "e"
     },
     {
-     "nr": "74",
+     "nr": "76",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 27. Sept. 2013 über die steuerliche Behandlung der berufsorientierten Aus- und Weiterbildungskosten, in Kraft seit 1. Jan. 2016 (AS <b>2014</b> 1105; BBl <b>2011</b> 2607).",
      "links": [
       {
@@ -1165,52 +1198,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/381"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "f"
-    },
-    {
-     "nr": "75",
-     "text": "Eingefügt durch Ziff. I 2 des BG vom 19. Juni 2020 über die steuerliche Behandlung finanzieller Sanktionen, in Kraft seit 1. Jan. 2022 (AS <b>2020</b> 5121; BBl <b>2016</b> 8503).",
-     "links": [
-      {
-       "label": "AS <b>2020</b> 5121",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2020/890"
-      },
-      {
-       "label": "BBl <b>2016</b> 8503",
-       "url": "https://fedlex.data.admin.ch/eli/fga/2016/2055"
-      }
-     ],
-     "absatz": null,
-     "item": "g"
-    },
-    {
-     "nr": "76",
-     "text": "Eingefügt durch Ziff. II des BG vom 22. Dez. 1999 über die Unzulässigkeit steuerlicher Abzüge von Bestechungsgeldern (AS <b>2000 </b>2147; BBl <b>1997</b> II 1037, IV 1336). Fassung gemäss Ziff. I 2 des BG vom 19. Juni 2020 über die steuerliche Behandlung finanzieller Sanktionen, in Kraft seit 1. Jan. 2022 (AS <b>2020</b> 5121; BBl <b>2016</b> 8503).",
-     "links": [
-      {
-       "label": "AS <b>2000 </b>2147",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2000/330"
-      },
-      {
-       "label": "BBl <b>1997</b> II 1037",
-       "url": "https://fedlex.data.admin.ch/eli/fga/1997/2_1037__"
-      },
-      {
-       "label": "IV 1336",
-       "url": "https://fedlex.data.admin.ch/eli/fga/1997/4_1336_1195_1072"
-      },
-      {
-       "label": "AS <b>2020</b> 5121",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2020/890"
-      },
-      {
-       "label": "BBl <b>2016</b> 8503",
-       "url": "https://fedlex.data.admin.ch/eli/fga/2016/2055"
-      }
-     ],
-     "absatz": null,
-     "item": "d"
     },
     {
      "nr": "77",
@@ -1225,11 +1214,51 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/2055"
       }
      ],
-     "absatz": null,
-     "item": "b"
+     "absatz": "1",
+     "item": "g"
     },
     {
      "nr": "78",
+     "text": "Eingefügt durch Ziff. II des BG vom 22. Dez. 1999 über die Unzulässigkeit steuerlicher Abzüge von Bestechungsgeldern (AS <b>2000 </b>2147; BBl <b>1997</b> II 1037, I<i>V 1336</i>). Fassung gemäss Ziff. I 2 des BG vom 19. Juni 2020 über die steuerliche Behandlung finanzieller Sanktionen, in Kraft seit 1. Jan. 2022 (AS <b>2020</b> 5121; BBl <b>2016</b> 8503).",
+     "links": [
+      {
+       "label": "AS <b>2000 </b>2147",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2000/330"
+      },
+      {
+       "label": "BBl <b>1997</b> II 1037",
+       "url": "https://fedlex.data.admin.ch/eli/fga/1997/2_1037__"
+      },
+      {
+       "label": "AS <b>2020</b> 5121",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/890"
+      },
+      {
+       "label": "BBl <b>2016</b> 8503",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/2055"
+      }
+     ],
+     "absatz": "1bis",
+     "item": "d"
+    },
+    {
+     "nr": "79",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 19. Juni 2020 über die steuerliche Behandlung finanzieller Sanktionen, in Kraft seit 1. Jan. 2022 (AS <b>2020</b> 5121; BBl <b>2016</b> 8503).",
+     "links": [
+      {
+       "label": "AS <b>2020</b> 5121",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2020/890"
+      },
+      {
+       "label": "BBl <b>2016</b> 8503",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2016/2055"
+      }
+     ],
+     "absatz": "1ter",
+     "item": "b"
+    },
+    {
+     "nr": "80",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 22. März 2013 über die formelle Bereinigung der zeitlichen Bemessung der direkten Steuern bei den natürlichen Personen, in Kraft seit 1. Jan. 2014 (AS <b>2013 </b>2397; BBl <b>2011 </b>3593).",
      "links": [
       {
@@ -1241,11 +1270,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/525"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
-     "nr": "79",
+     "nr": "81",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 15. Dez. 2000 zur Koordination und Vereinfachung der Veranlagungsverfahren für die direkten Steuern im interkantonalen Verhältnis, in Kraft seit 1. Jan. 2001 (AS <b>2001</b> 1050; BBl <b>2000</b> 3898).",
      "links": [
       {
@@ -1257,7 +1286,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/823"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     }
    ]
@@ -1280,7 +1309,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "81",
+     "nr": "83",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 25. Sept. 2009 über die steuerliche Entlastung von Familien mit Kindern, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 455; BBl <b>2009</b> 4729).",
      "links": [
       {
@@ -1292,11 +1321,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/815"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "82",
+     "nr": "84",
      "text": "SR <b>822.41</b>",
      "links": [
       {
@@ -1304,11 +1333,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/71"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     },
     {
-     "nr": "83",
+     "nr": "85",
      "text": "Eingefügt durch Anhang Ziff. 5 des BG vom 17. Juni 2005 gegen die Schwarzarbeit, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 359; BBl <b>2002</b> 3605).",
      "links": [
       {
@@ -1320,11 +1349,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/520"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     },
     {
-     "nr": "84",
+     "nr": "86",
      "text": "Berichtigt von der Redaktionskommission der BVers (Art. 58 Abs. 1 ParlG – SR<b> 171.10</b>).",
      "links": [
       {
@@ -1332,11 +1361,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2003/510"
       }
      ],
-     "absatz": null,
+     "absatz": "5",
      "item": null
     },
     {
-     "nr": "85",
+     "nr": "87",
      "text": "Eingefügt durch Ziff. II 3 des Unternehmenssteuerreformgesetzes II vom 23. März 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 2893; BBl <b>2005</b> 4733).",
      "links": [
       {
@@ -1348,7 +1377,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/737"
       }
      ],
-     "absatz": null,
+     "absatz": "5",
      "item": null
     }
    ]
@@ -1367,7 +1396,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "86",
+     "nr": "88",
      "text": "SR <b>700</b>",
      "links": [
       {
@@ -1375,11 +1404,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/1979/1573_1573_1573"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "e"
     },
     {
-     "nr": "87",
+     "nr": "89",
      "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 26. Juni 1998, in Kraft seit 1. Jan. 2000 (AS <b>1999</b> 1118; BBl <b>1996</b> I 1).",
      "links": [
       {
@@ -1391,11 +1420,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/1_1_1_1"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": "b"
     },
     {
-     "nr": "88",
+     "nr": "90",
      "text": "SR <b>210</b>",
      "links": [
       {
@@ -1403,11 +1432,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": "b"
     },
     {
-     "nr": "89",
+     "nr": "91",
      "text": "Fassung gemäss Anhang Ziff. 8 des Fusionsgesetzes vom 3. Okt. 2003, in Kraft seit 1. Juli 2004 (AS <b>2004</b> 2617; BBl <b>2000</b> 4337).",
      "links": [
       {
@@ -1419,7 +1448,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/921"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": "a"
     }
    ]
@@ -1440,7 +1469,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "90",
+     "nr": "92",
      "text": "Fassung gemäss Anhang Ziff. II 7 des Kollektivanlagengesetzes vom 23. Juni 2006, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 5379; BBl <b>2005</b> 6395).",
      "links": [
       {
@@ -1452,7 +1481,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/1000"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -1473,7 +1502,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "91",
+     "nr": "93",
      "text": "Zweiter Satz eingefügt durch Ziff. I 3 des BG vom 28. Sept. 2018 über die Steuerreform und die AHV-Finanzierung, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 2395 2413; BBl <b>2018</b> 2527).",
      "links": [
       {
@@ -1489,11 +1518,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1042"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     },
     {
-     "nr": "92",
+     "nr": "94",
      "text": "Fassung gemäss Ziff. II 3 des Unternehmenssteuerreformgesetzes II vom 23. März 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 2893; BBl <b>2005</b> 4733).",
      "links": [
       {
@@ -1505,7 +1534,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/737"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -1526,7 +1555,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "94",
+     "nr": "96",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 22. März 2013 über die formelle Bereinigung der zeitlichen Bemessung der direkten Steuern bei den natürlichen Personen, in Kraft seit 1. Jan. 2014 (AS <b>2013 </b>2397; BBl <b>2011 </b>3593).",
      "links": [
       {
@@ -1559,7 +1588,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "95",
+     "nr": "97",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 22. März 2013 über die formelle Bereinigung der zeitlichen Bemessung der direkten Steuern bei den natürlichen Personen, in Kraft seit 1. Jan. 2014 (AS <b>2013 </b>2397; BBl <b>2011 </b>3593).",
      "links": [
       {
@@ -1592,7 +1621,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "96",
+     "nr": "98",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 22. März 2013 über die formelle Bereinigung der zeitlichen Bemessung der direkten Steuern bei den natürlichen Personen, in Kraft seit 1. Jan. 2014 (AS <b>2013 </b>2397; BBl <b>2011 </b>3593).",
      "links": [
       {
@@ -1625,7 +1654,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "97",
+     "nr": "99",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 22. März 2013 über die formelle Bereinigung der zeitlichen Bemessung der direkten Steuern bei den natürlichen Personen, in Kraft seit 1. Jan. 2014 (AS <b>2013 </b>2397; BBl <b>2011 </b>3593).",
      "links": [
       {
@@ -1673,7 +1702,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "98",
+     "nr": "100",
      "text": "SR <b>951.31</b>",
      "links": [
       {
@@ -1681,11 +1710,27 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/822"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "99",
+     "nr": "101",
+     "text": "Fassung des zweiten Satzes gemäss Anhang Ziff. 3 des BG vom 17. Dez. 2021, in Kraft seit 1. März 2024 (AS <b>2024</b> 53; BBl <b>2020</b> 6885).",
+     "links": [
+      {
+       "label": "AS <b>2024</b> 53",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/53"
+      },
+      {
+       "label": "BBl <b>2020</b> 6885",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2020/1852"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "102",
      "text": "Fassung gemäss Anhang Ziff. II 7 des Kollektivanlagengesetzes vom 23. Juni 2006, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 5379; BBl <b>2005</b> 6395).",
      "links": [
       {
@@ -1697,7 +1742,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/1000"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -1718,7 +1763,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "100",
+     "nr": "103",
      "text": "Eingefügt durch Ziff. I des BG vom 17. März 2017, in Kraft seit 1. Jan. 2019 (AS <b>2017</b> 5039; BBl <b>2016</b> 5357).",
      "links": [
       {
@@ -1730,11 +1775,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1165"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "d"
     },
     {
-     "nr": "101",
+     "nr": "104",
      "text": "Fassung gemäss Ziff. I des BG vom 17. März 2017, in Kraft seit 1. Jan. 2019 (AS <b>2017</b> 5039; BBl <b>2016</b> 5357).",
      "links": [
       {
@@ -1746,7 +1791,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1165"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "b"
     }
    ]
@@ -1767,7 +1812,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "102",
+     "nr": "105",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 15. Dez. 2000 zur Koordination und Vereinfachung der Veranlagungsverfahren für die direkten Steuern im interkantonalen Verhältnis, in Kraft seit 1. Jan. 2001 (AS <b>2001</b> 1050; BBl <b>2000</b> 3898).",
      "links": [
       {
@@ -1800,7 +1845,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "103",
+     "nr": "106",
      "text": "Fassung gemäss Anhang Ziff. II 8 des Gaststaatgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 6637; BBl <b>2006</b> 8017).",
      "links": [
       {
@@ -1812,11 +1857,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/1012"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "h"
     },
     {
-     "nr": "104",
+     "nr": "107",
      "text": "SR <b>192.12</b>",
      "links": [
       {
@@ -1824,11 +1869,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/860"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "h"
     },
     {
-     "nr": "105",
+     "nr": "108",
      "text": "Eingefügt durch Anhang Ziff. II 7 des Kollektivanlagengesetzes vom 23. Juni 2006, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 5379; BBl <b>2005</b> 6395).",
      "links": [
       {
@@ -1840,11 +1885,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/1000"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "i"
     },
     {
-     "nr": "106",
+     "nr": "109",
      "text": "Eingefügt durch Ziff. II 11 des BG vom 20. März 2009 über die Bahnreform 2, in Kraft seit 1. Jan. 2010 (AS <b>2009</b> 5597; BBl <b>2005</b> 2415, <b>2007</b> 2681).",
      "links": [
       {
@@ -1860,11 +1905,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/425"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "j"
     },
     {
-     "nr": "107",
+     "nr": "110",
      "text": "Aufgehoben durch Ziff. II 11 des BG vom 20. März 2009 über die Bahnreform 2, mit Wirkung seit 1. Jan. 2010 (AS <b>2009</b> 5597; BBl <b>2005</b> 2415, <b>2007</b> 2681).",
      "links": [
       {
@@ -1880,11 +1925,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/425"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
-     "nr": "108",
+     "nr": "111",
      "text": "Fassung gemäss Anhang Ziff. II 7 des Kollektivanlagengesetzes vom 23. Juni 2006, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 5379; BBl <b>2005</b> 6395).",
      "links": [
       {
@@ -1896,7 +1941,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/1000"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     }
    ]
@@ -1921,7 +1966,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "109",
+     "nr": "112",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 26. Sept. 2014 (Anpassung an die allgemeinen Bestimmungen des StGB), in Kraft seit 1. Jan. 2017 (AS <b>2015</b> 779; BBl <b>2012</b> 2869).",
      "links": [
       {
@@ -1933,11 +1978,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/403"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "c"
     },
     {
-     "nr": "110",
+     "nr": "113",
      "text": "Fassung gemäss Anhang Ziff. 8 des Fusionsgesetzes vom 3. Okt. 2003, in Kraft seit 1. Juli 2004 (AS <b>2004</b> 2617; BBl <b>2000</b> 4337).",
      "links": [
       {
@@ -1949,11 +1994,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/921"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": "d"
     },
     {
-     "nr": "111",
+     "nr": "114",
      "text": "Fassung gemäss Ziff. I 3 des BG vom 28. Sept. 2018 über die Steuerreform und die AHV-Finanzierung, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 2395 2413; BBl <b>2018</b> 2527).",
      "links": [
       {
@@ -1969,11 +2014,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1042"
       }
      ],
-     "absatz": null,
+     "absatz": "3bis",
      "item": null
     },
     {
-     "nr": "112",
+     "nr": "115",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 10. Okt. 1997 über die Reform der Unternehmensbesteuerung 1997, in Kraft seit 1. Jan. 1998 (AS <b>1998</b> 669; BBl <b>1997</b> II 1164).",
      "links": [
       {
@@ -1985,59 +2030,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1997/2_1164_1058_963"
       }
      ],
-     "absatz": null,
-     "item": null
-    },
-    {
-     "nr": "113",
-     "text": "Eingefügt durch Anhang Ziff. 8 des Fusionsgesetzes vom 3. Okt. 2003, in Kraft seit 1. Juli 2004 (AS <b>2004</b> 2617; BBl <b>2000</b> 4337).",
-     "links": [
-      {
-       "label": "AS <b>2004</b> 2617",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2004/320"
-      },
-      {
-       "label": "BBl <b>2000</b> 4337",
-       "url": "https://fedlex.data.admin.ch/eli/fga/2000/921"
-      }
-     ],
-     "absatz": null,
-     "item": null
-    },
-    {
-     "nr": "114",
-     "text": "Fassung des zweiten Satzes gemäss Ziff. I 3 des BG vom 28. Sept. 2018 über die Steuerreform und die AHV-Finanzierung, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 2395 2413; BBl <b>2018</b> 2527).",
-     "links": [
-      {
-       "label": "AS <b>2019</b> 2395",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2019/447"
-      },
-      {
-       "label": "2413",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2019/448"
-      },
-      {
-       "label": "BBl <b>2018</b> 2527",
-       "url": "https://fedlex.data.admin.ch/eli/fga/2018/1042"
-      }
-     ],
-     "absatz": null,
-     "item": null
-    },
-    {
-     "nr": "115",
-     "text": "Eingefügt durch Anhang Ziff. 8 des Fusionsgesetzes vom 3. Okt. 2003, in Kraft seit 1. Juli 2004 (AS <b>2004</b> 2617; BBl <b>2000</b> 4337).",
-     "links": [
-      {
-       "label": "AS <b>2004</b> 2617",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2004/320"
-      },
-      {
-       "label": "BBl <b>2000</b> 4337",
-       "url": "https://fedlex.data.admin.ch/eli/fga/2000/921"
-      }
-     ],
-     "absatz": null,
+     "absatz": "3bis",
      "item": null
     },
     {
@@ -2053,11 +2046,63 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/921"
       }
      ],
-     "absatz": null,
+     "absatz": "3ter",
      "item": null
     },
     {
      "nr": "117",
+     "text": "Fassung des zweiten Satzes gemäss Ziff. I 3 des BG vom 28. Sept. 2018 über die Steuerreform und die AHV-Finanzierung, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 2395 2413; BBl <b>2018</b> 2527).",
+     "links": [
+      {
+       "label": "AS <b>2019</b> 2395",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/447"
+      },
+      {
+       "label": "2413",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2019/448"
+      },
+      {
+       "label": "BBl <b>2018</b> 2527",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/1042"
+      }
+     ],
+     "absatz": "3quater",
+     "item": null
+    },
+    {
+     "nr": "118",
+     "text": "Eingefügt durch Anhang Ziff. 8 des Fusionsgesetzes vom 3. Okt. 2003, in Kraft seit 1. Juli 2004 (AS <b>2004</b> 2617; BBl <b>2000</b> 4337).",
+     "links": [
+      {
+       "label": "AS <b>2004</b> 2617",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2004/320"
+      },
+      {
+       "label": "BBl <b>2000</b> 4337",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2000/921"
+      }
+     ],
+     "absatz": "3quater",
+     "item": null
+    },
+    {
+     "nr": "119",
+     "text": "Eingefügt durch Anhang Ziff. 8 des Fusionsgesetzes vom 3. Okt. 2003, in Kraft seit 1. Juli 2004 (AS <b>2004</b> 2617; BBl <b>2000</b> 4337).",
+     "links": [
+      {
+       "label": "AS <b>2004</b> 2617",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2004/320"
+      },
+      {
+       "label": "BBl <b>2000</b> 4337",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2000/921"
+      }
+     ],
+     "absatz": "3quinquies",
+     "item": null
+    },
+    {
+     "nr": "120",
      "text": "Eingefügt durch Anhang Ziff. 8 des Fusionsgesetzes vom 3. Okt. 2003 (AS <b>2004</b> 2617; BBl <b>2000</b> 4337). Fassung gemäss Ziff. II 3 des Unternehmenssteuerreformgesetzes II vom 23. März 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 2893; BBl <b>2005</b> 4733).",
      "links": [
       {
@@ -2077,7 +2122,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/737"
       }
      ],
-     "absatz": null,
+     "absatz": "4bis",
      "item": null
     }
    ]
@@ -2102,7 +2147,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "128",
+     "nr": "131",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 19. Juni 2020 über die steuerliche Behandlung finanzieller Sanktionen, in Kraft seit 1. Jan. 2022 (AS <b>2020</b> 5121; BBl <b>2016</b> 8503).",
      "links": [
       {
@@ -2114,11 +2159,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/2055"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "a"
     },
     {
-     "nr": "129",
+     "nr": "132",
      "text": "Fassung gemäss Anhang Ziff. 4 des BG vom 8. Okt. 2004 (Stiftungsrecht), in Kraft seit 1. Jan. 2006 (AS <b>2005 </b>4545; BBl <b>2003</b> 8153 8191).",
      "links": [
       {
@@ -2134,11 +2179,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2003/1404"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "c"
     },
     {
-     "nr": "130",
+     "nr": "133",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 27. Sept. 2013 über die steuerliche Behandlung der berufsorientierten Aus- und Weiterbildungskosten, in Kraft seit 1. Jan. 2016 (AS <b>2014</b> 1105; BBl <b>2011</b> 2607).",
      "links": [
       {
@@ -2150,11 +2195,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/381"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "e"
     },
     {
-     "nr": "131",
+     "nr": "134",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 19. Juni 2020 über die steuerliche Behandlung finanzieller Sanktionen, in Kraft seit 1. Jan. 2022 (AS <b>2020</b> 5121; BBl <b>2016</b> 8503).",
      "links": [
       {
@@ -2166,12 +2211,12 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/2055"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "f"
     },
     {
-     "nr": "132",
-     "text": "Eingefügt durch Ziff. II des BG vom 22. Dez. 1999 über die Unzulässigkeit steuerlicher Abzüge von Bestechungsgeldern (AS <b>2000</b> 2147; BBl <b>1997</b> II 1037, IV 1336). Fassung gemäss Ziff. I 2 des BG vom 19. Juni 2020 über die steuerliche Behandlung finanzieller Sanktionen, in Kraft seit 1. Jan. 2022 (AS <b>2020</b> 5121; BBl <b>2016</b> 8503).",
+     "nr": "135",
+     "text": "Eingefügt durch Ziff. II des BG vom 22. Dez. 1999 über die Unzulässigkeit steuerlicher Abzüge von Bestechungsgeldern (AS <b>2000</b> 2147; BBl <b>1997</b> II 1037, I<i>V 1336</i>). Fassung gemäss Ziff. I 2 des BG vom 19. Juni 2020 über die steuerliche Behandlung finanzieller Sanktionen, in Kraft seit 1. Jan. 2022 (AS <b>2020</b> 5121; BBl <b>2016</b> 8503).",
      "links": [
       {
        "label": "AS <b>2000</b> 2147",
@@ -2182,10 +2227,6 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1997/2_1037__"
       },
       {
-       "label": "IV 1336",
-       "url": "https://fedlex.data.admin.ch/eli/fga/1997/4_1336_1195_1072"
-      },
-      {
        "label": "AS <b>2020</b> 5121",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/890"
       },
@@ -2194,11 +2235,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/2055"
       }
      ],
-     "absatz": null,
+     "absatz": "1bis",
      "item": "d"
     },
     {
-     "nr": "133",
+     "nr": "136",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 19. Juni 2020 über die steuerliche Behandlung finanzieller Sanktionen, in Kraft seit 1. Jan. 2022 (AS <b>2020</b> 5121; BBl <b>2016</b> 8503).",
      "links": [
       {
@@ -2210,11 +2251,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/2055"
       }
      ],
-     "absatz": null,
+     "absatz": "1ter",
      "item": "b"
     },
     {
-     "nr": "134",
+     "nr": "137",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 15. Dez. 2000 zur Koordination und Vereinfachung der Veranlagungsverfahren für die direkten Steuern im interkantonalen Verhältnis, in Kraft seit 1. Jan. 2001 (AS <b>2001</b> 1050; BBl <b>2000</b> 3898).",
      "links": [
       {
@@ -2226,11 +2267,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/823"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
-     "nr": "135",
+     "nr": "138",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 15. Dez. 2000 zur Koordination und Vereinfachung der Veranlagungsverfahren für die direkten Steuern im interkantonalen Verhältnis, in Kraft seit 1. Jan. 2001 (AS <b>2001</b> 1050; BBl <b>2000</b> 3898).",
      "links": [
       {
@@ -2242,7 +2283,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/823"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     }
    ]
@@ -2267,7 +2308,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "140",
+     "nr": "143",
      "text": "Fassung gemäss Anhang Ziff. II 7 des Kollektivanlagengesetzes vom 23. Juni 2006, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 5379; BBl <b>2005</b> 6395).",
      "links": [
       {
@@ -2283,7 +2324,7 @@
      "item": null
     },
     {
-     "nr": "141",
+     "nr": "144",
      "text": "Fassung gemäss Anhang Ziff. II 7 des Kollektivanlagengesetzes vom 23. Juni 2006, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 5379; BBl <b>2005</b> 6395).",
      "links": [
       {
@@ -2295,7 +2336,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/1000"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -2339,7 +2380,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "143",
+     "nr": "146",
      "text": "Fassung gemäss Ziff. II 3 des Unternehmenssteuerreformgesetzes II vom 23. März 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 2893; BBl <b>2005</b> 4733).",
      "links": [
       {
@@ -2351,11 +2392,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/737"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "144",
+     "nr": "147",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 10. Okt. 1997 über die Reform der Unternehmensbesteuerung 1997, in Kraft seit 1. Jan. 1998 (AS <b>1998</b> 669; BBl <b>1997</b> II 1164).",
      "links": [
       {
@@ -2367,11 +2408,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1997/2_1164_1058_963"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "145",
+     "nr": "148",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 10. Okt. 1997 über die Reform der Unternehmensbesteuerung 1997 (AS <b>1998</b> 669; BBl <b>1997</b> II 1164). Fassung gemäss Ziff. II 3 des Unternehmenssteuerreformgesetzes II vom 23. März 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 2893; BBl <b>2005</b> 4733).",
      "links": [
       {
@@ -2391,11 +2432,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/737"
       }
      ],
-     "absatz": null,
+     "absatz": "1bis",
      "item": null
     },
     {
-     "nr": "146",
+     "nr": "149",
      "text": "Eingefügt durch Ziff. II 3 des Unternehmenssteuerreformgesetzes II vom 23. März 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 2893; BBl <b>2005</b> 4733).",
      "links": [
       {
@@ -2407,11 +2448,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/737"
       }
      ],
-     "absatz": null,
+     "absatz": "1ter",
      "item": null
     },
     {
-     "nr": "147",
+     "nr": "150",
      "text": "SR <b>952.0</b>",
      "links": [
       {
@@ -2419,11 +2460,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/51/117_121_129"
       }
      ],
-     "absatz": null,
+     "absatz": "1quater",
      "item": null
     },
     {
-     "nr": "148",
+     "nr": "151",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 14. Dez. 2018 über die Berechnung des Beteiligungsabzugs bei systemrelevanten Banken (AS <b>2019</b> 1207; BBl <b>2018</b> 1263). Fassung gemäss Anhang Ziff. 6 des BG vom 17. Dez. 2021 (Insolvenz und Einlagensicherung), in Kraft seit 1. Jan. 2023 (AS <b>2022</b> 732; BBl <b>2020</b> 6359).",
      "links": [
       {
@@ -2443,11 +2484,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1555"
       }
      ],
-     "absatz": null,
+     "absatz": "1quater",
      "item": null
     },
     {
-     "nr": "149",
+     "nr": "152",
      "text": "Aufgehoben durch Ziff. I 3 des BG vom 28. Sept. 2018 über die Steuerreform und die AHV-Finanzierung, mit Wirkung seit 1. Jan. 2020 (AS <b>2019</b> 2395 2413; BBl <b>2018</b> 2527).",
      "links": [
       {
@@ -2484,7 +2525,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "150",
+     "nr": "153",
      "text": "Fassung gemäss Ziff. II des BG vom 7. Okt. 1994, in Kraft seit 1. Jan. 1995 (AS <b>1995</b> 1449; BBl <b>1994</b> II 357).",
      "links": [
       {
@@ -2500,7 +2541,7 @@
      "item": null
     },
     {
-     "nr": "151",
+     "nr": "154",
      "text": "Aufgehoben durch Ziff. I 3 des BG vom 28. Sept. 2018 über die Steuerreform und die AHV-Finanzierung, mit Wirkung seit 1. Jan. 2020 (AS <b>2019</b> 2395 2413; BBl <b>2018</b> 2527).",
      "links": [
       {
@@ -2516,11 +2557,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1042"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "b"
     },
     {
-     "nr": "152",
+     "nr": "155",
      "text": "Fassung gemäss Ziff. I 3 des BG vom 28. Sept. 2018 über die Steuerreform und die AHV-Finanzierung, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 2395 2413; BBl <b>2018</b> 2527).",
      "links": [
       {
@@ -2536,7 +2577,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1042"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -2557,7 +2598,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "154",
+     "nr": "157",
      "text": "Eingefügt durch Ziff. II 3 des Unternehmenssteuerreformgesetzes II vom 23. März 2007, in Kraft seit 1. Jan. 2009 (AS <b>2008</b> 2893; BBl <b>2005</b> 4733).",
      "links": [
       {
@@ -2569,7 +2610,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/737"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -2588,7 +2629,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "155",
+     "nr": "158",
      "text": "Eingefügt durch Anhang Ziff. 8 des BG vom 19. Juni 2020 (Aktienrecht), in Kraft seit 1. Jan. 2023 (AS <b>2020</b> 4005; <b>2022</b> 109; BBl <b>2017</b> 399).",
      "links": [
       {
@@ -2604,11 +2645,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/112"
       }
      ],
-     "absatz": null,
+     "absatz": "3bis",
      "item": null
     },
     {
-     "nr": "156",
+     "nr": "159",
      "text": "Eingefügt durch Anhang Ziff. 8 des BG vom 19. Juni 2020 (Aktienrecht), in Kraft seit 1. Jan. 2023 (AS <b>2020</b> 4005; <b>2022</b> 109; BBl <b>2017</b> 399).",
      "links": [
       {
@@ -2624,7 +2665,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/112"
       }
      ],
-     "absatz": null,
+     "absatz": "5",
      "item": null
     }
    ]
@@ -2645,7 +2686,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "157",
+     "nr": "160",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 16. Dez. 2016 über die Revision der Quellenbesteuerung des Erwerbseinkommens, in Kraft seit 1. Jan. 2021 (AS <b>2018</b> 1813; BBl <b>2015</b> 657).",
      "links": [
       {
@@ -2661,7 +2702,7 @@
      "item": null
     },
     {
-     "nr": "158",
+     "nr": "161",
      "text": "SR <b>831.10</b>",
      "links": [
       {
@@ -2669,7 +2710,7 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/63/837_843_843"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": "c"
     }
    ]
@@ -2690,7 +2731,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "159",
+     "nr": "162",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 16. Dez. 2016 über die Revision der Quellenbesteuerung des Erwerbseinkommens, in Kraft seit 1. Jan. 2021 (AS <b>2018</b> 1813; BBl <b>2015</b> 657).",
      "links": [
       {
@@ -2706,7 +2747,7 @@
      "item": null
     },
     {
-     "nr": "160",
+     "nr": "163",
      "text": "SR <b>831.10</b>",
      "links": [
       {
@@ -2714,7 +2755,7 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/63/837_843_843"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     }
    ]
@@ -2733,7 +2774,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "163",
+     "nr": "166",
      "text": "Aufgehoben durch Ziff. I 2 des BG vom 16. Dez. 2016 über die Revision der Quellenbesteuerung des Erwerbseinkommens, mit Wirkung seit 1. Jan. 2021 (AS <b>2018</b> 1813; BBl <b>2015</b> 657).",
      "links": [
       {
@@ -2766,7 +2807,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "165",
+     "nr": "168",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 16. Dez. 2016 über die Revision der Quellenbesteuerung des Erwerbseinkommens, in Kraft seit 1. Jan. 2021 (AS <b>2018</b> 1813; BBl <b>2015</b> 657).",
      "links": [
       {
@@ -2778,11 +2819,27 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/56"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "166",
+     "nr": "169",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 14. Juni 2024 über die Besteuerung der Telearbeit im internationalen Verhältnis, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 573; BBl <b>2024</b> 650).",
+     "links": [
+      {
+       "label": "AS <b>2024</b> 573",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/573"
+      },
+      {
+       "label": "BBl <b>2024</b> 650",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2024/650"
+      }
+     ],
+     "absatz": "1",
+     "item": "abis"
+    },
+    {
+     "nr": "170",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 17. Dez. 2010 über die Besteuerung von Mitarbeiterbeteiligungen, in Kraft seit 1. Jan. 2013 (AS <b>2011</b> 3259; BBl <b>2005</b> 575).",
      "links": [
       {
@@ -2794,11 +2851,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/88"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "c"
     },
     {
-     "nr": "167",
+     "nr": "171",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 17. Dez. 2010 über die Besteuerung von Mitarbeiterbeteiligungen, in Kraft seit 1. Jan. 2013 (AS <b>2011</b> 3259; BBl <b>2005</b> 575).",
      "links": [
       {
@@ -2810,11 +2867,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/88"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "d"
     },
     {
-     "nr": "168",
+     "nr": "172",
      "text": "Fassung gemäss Ziff. I 6 des BG vom 19. März 1999 über das Stabilisierungsprogramm 1998, in Kraft seit 1. Jan. 2001 (AS <b>1999</b> 2374; <i>BBl <b>1999</b> 4</i>).",
      "links": [
       {
@@ -2822,27 +2879,27 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1999/363"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "f"
     },
     {
-     "nr": "169",
-     "text": "Fassung gemäss Ziff. I 2 des BG vom 16. Dez. 2016 über die Revision der Quellenbesteuerung des Erwerbseinkommens, in Kraft seit 1. Jan. 2021 (AS <b>2018</b> 1813; BBl <b>2015</b> 657).",
+     "nr": "173",
+     "text": "Fassung gemäss Ziff. I 2 des BG vom 14. Juni 2024 über die Besteuerung der Telearbeit im internationalen Verhältnis, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 573; BBl <b>2024</b> 650).",
      "links": [
       {
-       "label": "AS <b>2018</b> 1813",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2018/272"
+       "label": "AS <b>2024</b> 573",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/573"
       },
       {
-       "label": "BBl <b>2015</b> 657",
-       "url": "https://fedlex.data.admin.ch/eli/fga/2015/56"
+       "label": "BBl <b>2024</b> 650",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2024/650"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "h"
     },
     {
-     "nr": "170",
+     "nr": "174",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 17. Dez. 2010 über die Besteuerung von Mitarbeiterbeteiligungen, in Kraft seit 1. Jan. 2013 (AS <b>2011</b> 3259; BBl <b>2005</b> 575).",
      "links": [
       {
@@ -2854,11 +2911,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/88"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "i"
     },
     {
-     "nr": "171",
+     "nr": "175",
      "text": "Berichtigt von der Redaktionskommission der BVers (Art. 58 Abs. 1, ParlG; SR <b>171.10</b>).",
      "links": [
       {
@@ -2866,11 +2923,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2003/510"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "i"
     },
     {
-     "nr": "172",
+     "nr": "176",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 16. Dez. 2016 über die Revision der Quellenbesteuerung des Erwerbseinkommens, in Kraft seit 1. Jan. 2021 (AS <b>2018</b> 1813; BBl <b>2015</b> 657).",
      "links": [
       {
@@ -2882,11 +2939,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/56"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "j"
     },
     {
-     "nr": "173",
+     "nr": "177",
      "text": "SR <b>831.10</b>",
      "links": [
       {
@@ -2894,11 +2951,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/63/837_843_843"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "j"
     },
     {
-     "nr": "174",
+     "nr": "178",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 16. Dez. 2016 über die Revision der Quellenbesteuerung des Erwerbseinkommens, in Kraft seit 1. Jan. 2021 (AS <b>2018</b> 1813; BBl <b>2015</b> 657).",
      "links": [
       {
@@ -2910,11 +2967,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/56"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
-     "nr": "164",
+     "nr": "167",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 16. Dez. 2016 über die Revision der Quellenbesteuerung des Erwerbseinkommens, in Kraft seit 1. Jan. 2021 (AS <b>2018</b> 1813; BBl <b>2015</b> 657).",
      "links": [
       {
@@ -2948,7 +3005,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "177",
+     "nr": "181",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 16. Dez. 2016 über die Revision der Quellenbesteuerung des Erwerbseinkommens, in Kraft seit 1. Jan. 2021 (AS <b>2018</b> 1813; BBl <b>2015</b> 657).",
      "links": [
       {
@@ -2960,7 +3017,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/56"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "b"
     }
    ]
@@ -2979,7 +3036,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "179",
+     "nr": "183",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 17. Dez. 2010 über die Besteuerung von Mitarbeiterbeteiligungen, in Kraft seit 1. Jan. 2013 (AS <b>2011</b> 3259; BBl <b>2005</b> 575).",
      "links": [
       {
@@ -2991,11 +3048,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/88"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "d"
     },
     {
-     "nr": "180",
+     "nr": "184",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 16. Dez. 2016 über die Revision der Quellenbesteuerung des Erwerbseinkommens, in Kraft seit 1. Jan. 2021 (AS <b>2018</b> 1813; BBl <b>2015</b> 657).",
      "links": [
       {
@@ -3007,11 +3064,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/56"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
-     "nr": "181",
+     "nr": "185",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 16. Dez. 2016 über die Revision der Quellenbesteuerung des Erwerbseinkommens, in Kraft seit 1. Jan. 2021 (AS <b>2018</b> 1813; BBl <b>2015</b> 657).",
      "links": [
       {
@@ -3023,7 +3080,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/56"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -3044,7 +3101,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "182",
+     "nr": "186",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 16. Dez. 2016 über die Revision der Quellenbesteuerung des Erwerbseinkommens, in Kraft seit 1. Jan. 2021 (AS <b>2018</b> 1813; BBl <b>2015</b> 657).",
      "links": [
       {
@@ -3078,7 +3135,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "184",
+     "nr": "188",
      "text": "Eingefügt durch Anhang Ziff. 6 des BG vom 23. Juni 2006 (Neue AHV-Versicherten-nummer) (AS<b> 2007</b> 5259; BBl <b>2006</b> 501). Aufgehoben durch Anhang Ziff. 20 des BG vom 18. Dez. 2020 (Systematische Verwendung der AHV-Nummer durch Behörden), mit Wirkung seit 1. Jan. 2022 (AS <b>2021</b> 758; BBl <b>2019 </b>7359).",
      "links": [
       {
@@ -3098,7 +3155,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2681"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     }
    ]
@@ -3149,7 +3206,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "186",
+     "nr": "190",
      "text": "Fassung gemäss Anhang Ziff. 8 des BG vom 19. Juni 2020 (Aktienrecht), in Kraft seit 1. Jan. 2023 (AS <b>2020</b> 4005; <b>2022</b> 109; BBl <b>2017</b> 399).",
      "links": [
       {
@@ -3165,11 +3222,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/112"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": "b"
     },
     {
-     "nr": "187",
+     "nr": "191",
      "text": "SR <b>220</b>",
      "links": [
       {
@@ -3177,11 +3234,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": "b"
     },
     {
-     "nr": "188",
+     "nr": "192",
      "text": "Fassung gemäss Ziff. I 3 des Steuererlassgesetzes vom 20. Juni 2014, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 9; BBl <b>2013</b> 8435).",
      "links": [
       {
@@ -3193,11 +3250,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1658"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": "b"
     },
     {
-     "nr": "189",
+     "nr": "193",
      "text": "Eingefügt durch Ziff. I 3 des Steuererlassgesetzes vom 20. Juni 2014, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 9; BBl <b>2013</b> 8435).",
      "links": [
       {
@@ -3209,7 +3266,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1658"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     }
    ]
@@ -3227,6 +3284,24 @@
    ],
    "marginalie": [
     "Bescheinigungspflicht Dritter"
+   ],
+   "fussnoten": [
+    {
+     "nr": "194",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 14. Juni 2024 über die Besteuerung der Telearbeit im internationalen Verhältnis, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 573; BBl <b>2024</b> 650).",
+     "links": [
+      {
+       "label": "AS <b>2024</b> 573",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/573"
+      },
+      {
+       "label": "BBl <b>2024</b> 650",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2024/650"
+      }
+     ],
+     "absatz": "1bis",
+     "item": null
+    }
    ]
   },
   "44": {
@@ -3260,7 +3335,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "190",
+     "nr": "195",
      "text": "Fassung gemäss Anhang Ziff. II 7 des Kollektivanlagengesetzes vom 23. Juni 2006, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 5379; BBl <b>2005</b> 6395).",
      "links": [
       {
@@ -3272,11 +3347,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/1000"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "d"
     },
     {
-     "nr": "191",
+     "nr": "196",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 17. Dez. 2010 über die Besteuerung von Mitarbeiterbeteiligungen, in Kraft seit 1. Jan. 2013 (AS <b>2011</b> 3259; BBl <b>2005</b> 575).",
      "links": [
       {
@@ -3288,8 +3363,40 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/88"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "e"
+    },
+    {
+     "nr": "197",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 14. Juni 2024 über die Besteuerung der Telearbeit im internationalen Verhältnis, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 573; BBl <b>2024</b> 650).",
+     "links": [
+      {
+       "label": "AS <b>2024</b> 573",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/573"
+      },
+      {
+       "label": "BBl <b>2024</b> 650",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2024/650"
+      }
+     ],
+     "absatz": "1",
+     "item": "f"
+    },
+    {
+     "nr": "198",
+     "text": "Eingefügt durch Ziff. I 2 des BG vom 14. Juni 2024 über die Besteuerung der Telearbeit im internationalen Verhältnis, in Kraft seit 1. Jan. 2025 (AS <b>2024</b> 573; BBl <b>2024</b> 650).",
+     "links": [
+      {
+       "label": "AS <b>2024</b> 573",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/573"
+      },
+      {
+       "label": "BBl <b>2024</b> 650",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2024/650"
+      }
+     ],
+     "absatz": "2",
+     "item": null
     }
    ]
   },
@@ -3354,7 +3461,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "192",
+     "nr": "199",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 16. Dez. 2016 über die Revision der Quellenbesteuerung des Erwerbseinkommens, in Kraft seit 1. Jan. 2021 (AS <b>2018</b> 1813; BBl <b>2015</b> 657).",
      "links": [
       {
@@ -3366,11 +3473,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/56"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "b"
     },
     {
-     "nr": "193",
+     "nr": "200",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 16. Dez. 2016 über die Revision der Quellenbesteuerung des Erwerbseinkommens, in Kraft seit 1. Jan. 2021 (AS <b>2018</b> 1813; BBl <b>2015</b> 657).",
      "links": [
       {
@@ -3382,11 +3489,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/56"
       }
      ],
-     "absatz": null,
+     "absatz": "2bis",
      "item": null
     },
     {
-     "nr": "194",
+     "nr": "201",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 16. Dez. 2016 über die Revision der Quellenbesteuerung des Erwerbseinkommens, in Kraft seit 1. Jan. 2021 (AS <b>2018</b> 1813; BBl <b>2015</b> 657).",
      "links": [
       {
@@ -3398,11 +3505,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/56"
       }
      ],
-     "absatz": null,
+     "absatz": "2ter",
      "item": null
     },
     {
-     "nr": "195",
+     "nr": "202",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 16. Dez. 2016 über die Revision der Quellenbesteuerung des Erwerbseinkommens, in Kraft seit 1. Jan. 2021 (AS <b>2018</b> 1813; BBl <b>2015</b> 657).",
      "links": [
       {
@@ -3414,7 +3521,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/56"
       }
      ],
-     "absatz": null,
+     "absatz": "5",
      "item": null
     }
    ]
@@ -3478,7 +3585,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "196",
+     "nr": "203",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 20. März 2008 über die Vereinfachung der Nach-besteuerung in Erbfällen und die Einführung der straflosen Selbstanzeige, in Kraft seit 1. Jan. 2010 (AS <b>2008</b> 4453; BBl <b>2006</b> 8795).",
      "links": [
       {
@@ -3494,7 +3601,7 @@
      "item": null
     },
     {
-     "nr": "197",
+     "nr": "204",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 20. Dez. 2006 über Änderungen des Nachsteuerverfahrens und des Strafverfahrens wegen Steuerhinterziehung auf dem Gebiet der direkten Steuern, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 2973; BBl <b>2006</b> 4021 4039).",
      "links": [
       {
@@ -3510,7 +3617,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/464"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     }
    ]
@@ -3544,7 +3651,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "199",
+     "nr": "206",
      "text": "Ab 1. Jan. 2007 sind die angedrohten Strafen und die Verjährungsfristen in Anwendung von Art. 333 Abs. 2-6 des Strafgesetzbuches (SR <b>311.0</b>) in der Fassung des BG vom 13. Dez. 2002 (AS <b>2006</b> 3459; <i>BBl <b>1999</b> 1979</i>) zu interpretieren beziehungsweise umzurechnen.",
      "links": [
       {
@@ -3578,7 +3685,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "200",
+     "nr": "207",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 20. März 2008 über die Vereinfachung der Nach-besteuerung in Erbfällen und die Einführung der straflosen Selbstanzeige, in Kraft seit 1. Jan. 2010 (AS <b>2008</b> 4453; BBl <b>2006</b> 8795).",
      "links": [
       {
@@ -3594,7 +3701,7 @@
      "item": null
     },
     {
-     "nr": "201",
+     "nr": "208",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 20. März 2008 über die Vereinfachung der Nach-besteuerung in Erbfällen und die Einführung der straflosen Selbstanzeige, in Kraft seit 1. Jan. 2010 (AS <b>2008</b> 4453; BBl <b>2006</b> 8795).",
      "links": [
       {
@@ -3606,11 +3713,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/1131"
       }
      ],
-     "absatz": null,
+     "absatz": "1bis",
      "item": "c"
     },
     {
-     "nr": "202",
+     "nr": "209",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 20. März 2008 über die Vereinfachung der Nach-besteuerung in Erbfällen und die Einführung der straflosen Selbstanzeige, in Kraft seit 1. Jan. 2010 (AS <b>2008</b> 4453; BBl <b>2006</b> 8795).",
      "links": [
       {
@@ -3622,11 +3729,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/1131"
       }
      ],
-     "absatz": null,
+     "absatz": "1ter",
      "item": null
     },
     {
-     "nr": "203",
+     "nr": "210",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 20. März 2008 über die Vereinfachung der Nach-besteuerung in Erbfällen und die Einführung der straflosen Selbstanzeige, in Kraft seit 1. Jan. 2010 (AS <b>2008</b> 4453; BBl <b>2006</b> 8795).",
      "links": [
       {
@@ -3638,11 +3745,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/1131"
       }
      ],
-     "absatz": null,
+     "absatz": "3bis",
      "item": null
     },
     {
-     "nr": "204",
+     "nr": "211",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 20. März 2008 über die Vereinfachung der Nach-besteuerung in Erbfällen und die Einführung der straflosen Selbstanzeige, in Kraft seit 1. Jan. 2010 (AS <b>2008</b> 4453; BBl <b>2006</b> 8795).",
      "links": [
       {
@@ -3658,7 +3765,7 @@
      "item": null
     },
     {
-     "nr": "205",
+     "nr": "212",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 20. März 2008 über die Vereinfachung der Nach-besteuerung in Erbfällen und die Einführung der straflosen Selbstanzeige, in Kraft seit 1. Jan. 2010 (AS <b>2008</b> 4453; BBl <b>2006</b> 8795).",
      "links": [
       {
@@ -3670,7 +3777,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/1131"
       }
      ],
-     "absatz": null,
+     "absatz": "5",
      "item": "b"
     }
    ]
@@ -3691,7 +3798,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "206",
+     "nr": "213",
      "text": "Aufgehoben durch Ziff. I 2 des BG vom 8. Okt. 2004 über die Aufhebung der Haftung der Erben für Steuerbussen, mit Wirkung seit 1. März 2005 (AS <b>2005</b> 1051; BBl <b>2004</b> 1437 1451). Siehe auch Art. 78<i>c</i> hiernach.",
      "links": [
       {
@@ -3707,11 +3814,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/287"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     },
     {
-     "nr": "207",
+     "nr": "214",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 20. Dez. 2006 über Änderungen des Nachsteuerverfahrens und des Strafverfahrens wegen Steuerhinterziehung auf dem Gebiet der direkten Steuern, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 2973; BBl <b>2006</b> 4021 4039).",
      "links": [
       {
@@ -3727,7 +3834,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/464"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     }
    ]
@@ -3748,7 +3855,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "214",
+     "nr": "221",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 26. Sept. 2014 (Anpassung an die allgemeinen Bestimmungen des StGB), in Kraft seit 1. Jan. 2017 (AS <b>2015</b> 779; BBl <b>2012</b> 2869).",
      "links": [
       {
@@ -3781,7 +3888,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "215",
+     "nr": "222",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 26. Sept. 2014 (Anpassung an die allgemeinen Bestimmungen des StGB), in Kraft seit 1. Jan. 2017 (AS <b>2015</b> 779; BBl <b>2012</b> 2869).",
      "links": [
       {
@@ -3793,11 +3900,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/403"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "216",
+     "nr": "223",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 20. März 2008 über die Vereinfachung der Nach-besteuerung in Erbfällen und die Einführung der straflosen Selbstanzeige, in Kraft seit 1. Jan. 2010 (AS <b>2008</b> 4453, <b>2009</b> 5683; BBl <b>2006</b> 8795).",
      "links": [
       {
@@ -3813,11 +3920,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/1131"
       }
      ],
-     "absatz": null,
+     "absatz": "2bis",
      "item": null
     },
     {
-     "nr": "217",
+     "nr": "224",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 20. März 2008 über die Vereinfachung der Nach-besteuerung in Erbfällen und die Einführung der straflosen Selbstanzeige, in Kraft seit 1. Jan. 2010 (AS <b>2008</b> 4453, <b>2009</b> 5683; BBl <b>2006</b> 8795).",
      "links": [
       {
@@ -3833,11 +3940,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/1131"
       }
      ],
-     "absatz": null,
+     "absatz": "2ter",
      "item": null
     },
     {
-     "nr": "218",
+     "nr": "225",
      "text": "SR <b>311.0</b>",
      "links": [
       {
@@ -3845,7 +3952,7 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -3866,7 +3973,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "219",
+     "nr": "226",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 26. Sept. 2014 (Anpassung an die allgemeinen Bestimmungen des StGB), in Kraft seit 1. Jan. 2017 (AS <b>2015</b> 779; BBl <b>2012</b> 2869).",
      "links": [
       {
@@ -3899,7 +4006,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "220",
+     "nr": "227",
      "text": "Fassung des zweiten Satzes gemäss Anhang Ziff. 13 des Bundesgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 1205 1069; BBl <b>2001</b> 4202).",
      "links": [
       {
@@ -3936,7 +4043,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "222",
+     "nr": "229",
      "text": "Fassung gemäss Ziff. I 4 des BG vom 18. Juni 2021 über elektronische Verfahren im Steuerbereich, in Kraft seit 1. Jan. 2024 (AS <b>2021</b> 673; BBl <b>2020</b> 4705).",
      "links": [
       {
@@ -3948,7 +4055,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1111"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -3969,7 +4076,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "223",
+     "nr": "230",
      "text": "Fassung gemäss Ziff. I 4 des BG vom 18. Juni 2021 über elektronische Verfahren im Steuerbereich, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 673; BBl <b>2020</b> 4705).",
      "links": [
       {
@@ -3981,11 +4088,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1111"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "224",
+     "nr": "231",
      "text": "Fassung gemäss Ziff. I 4 des BG vom 18. Juni 2021 über elektronische Verfahren im Steuerbereich, in Kraft seit 1. Jan. 2022 (AS <b>2021</b> 673; BBl <b>2020</b> 4705).",
      "links": [
       {
@@ -3997,7 +4104,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/1111"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -4018,7 +4125,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "254",
+     "nr": "261",
      "text": "SR <b>173.110</b>",
      "links": [
       {
@@ -4026,11 +4133,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/218"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "255",
+     "nr": "262",
      "text": "Fassung gemäss Ziff. I 3 des Steuererlassgesetzes vom 20. Juni 2014, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 9; BBl <b>2013</b> 8435).",
      "links": [
       {
@@ -4042,11 +4149,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1658"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "256",
+     "nr": "263",
      "text": "Aufgehoben durch Ziff. I 2 des BG vom 26. Sept. 2014 (Anpassung an die allgemeinen Bestimmungen des StGB), mit Wirkung seit 1. Jan. 2017 (AS <b>2015</b> 779; BBl <b>2012</b> 2869).",
      "links": [
       {
@@ -4058,7 +4165,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/403"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -4079,7 +4186,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "257",
+     "nr": "264",
      "text": "Zweiter Satz eingefügt durch Ziff. I 2 des BG vom 15. Dez. 2000 zur Koordination und Vereinfachung der Veranlagungsverfahren für die direkten Steuern im interkantonalen Verhältnis, in Kraft seit 1. Jan. 2001 (AS <b>2001</b> 1050; BBl <b>2000</b> 3898).",
      "links": [
       {
@@ -4112,7 +4219,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "258",
+     "nr": "265",
      "text": "Die Änderung kann unter AS <b>1991</b> 1256 konsultiert werden.",
      "links": [
       {
@@ -4141,7 +4248,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "259",
+     "nr": "266",
      "text": "[AS <b>1949</b> 1671; <b>1956</b> 759; <b>1959</b> 303; <b>1964</b> 253; <b>1968</b> 563;<b>1972</b> 897 Art. 15 Ziff. 1; <b>1982 </b>1676 Anhang Ziff. 5, 2184 Art 116; <b>1990</b> 1882 Anhang Ziff. 9; <b>1991</b> 362 Ziff. II, 414. AS <b>1993</b> 3043 Anhang Ziff. 1]",
      "links": [
       {
@@ -4175,14 +4282,6 @@
       {
        "label": "2184",
        "url": "https://fedlex.data.admin.ch/eli/oc/1982/2184_2184_2184"
-      },
-      {
-       "label": "<b>1990</b> 1882",
-       "url": "https://fedlex.data.admin.ch/eli/oc/1990/1882_1882_1882"
-      },
-      {
-       "label": "<b>1991</b> 362",
-       "url": "https://fedlex.data.admin.ch/eli/oc/1991/362_362_362"
       },
       {
        "label": "AS <b>1993</b> 3043",
@@ -4225,7 +4324,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "260",
+     "nr": "267",
      "text": "Fassung gemäss Ziff. I 2 des BG vom 26. Sept. 2014 (Anpassung an die allgemeinen Bestimmungen des StGB), in Kraft seit 1. Jan. 2017 (AS <b>2015</b> 779; BBl <b>2012</b> 2869).",
      "links": [
       {
@@ -4241,7 +4340,7 @@
      "item": null
     },
     {
-     "nr": "261",
+     "nr": "268",
      "text": "SR <b>281.1</b>",
      "links": [
       {
@@ -4268,7 +4367,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "273",
+     "nr": "280",
      "text": "BRB vom 3. Juni 1991",
      "links": [],
      "absatz": null,
@@ -4296,7 +4395,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "80",
+     "nr": "82",
      "text": "Eingefügt durch Ziff. I 3 des BG vom 28. Sept. 2018 über die Steuerreform und die AHV-Finanzierung, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 2395 2413; BBl <b>2018</b> 2527).",
      "links": [
       {
@@ -4333,7 +4432,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "93",
+     "nr": "95",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 17. Dez. 2010 über die Besteuerung von Mitarbeiterbeteiligungen, in Kraft seit 1. Jan. 2013 (AS <b>2011</b> 3259; BBl <b>2005</b> 575).",
      "links": [
       {
@@ -4370,7 +4469,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "118",
+     "nr": "121",
      "text": "Eingefügt durch Ziff. I 3 des BG vom 28. Sept. 2018 über die Steuerreform und die AHV-Finanzierung, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 2395 2413; BBl <b>2018</b> 2527).",
      "links": [
       {
@@ -4390,7 +4489,7 @@
      "item": null
     },
     {
-     "nr": "119",
+     "nr": "122",
      "text": "SR <b>0.232.142.2</b>",
      "links": [
       {
@@ -4398,11 +4497,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/849"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "a"
     },
     {
-     "nr": "120",
+     "nr": "123",
      "text": "SR <b>232.14</b>",
      "links": [
       {
@@ -4410,11 +4509,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/1955/871_893_899"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "b"
     },
     {
-     "nr": "121",
+     "nr": "124",
      "text": "SR <b>231.2</b>",
      "links": [
       {
@@ -4422,11 +4521,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/1993/1828_1828_1828"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "b"
     },
     {
-     "nr": "122",
+     "nr": "125",
      "text": "SR <b>232.16</b>",
      "links": [
       {
@@ -4434,11 +4533,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/1977/862_862_862"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "c"
     },
     {
-     "nr": "123",
+     "nr": "126",
      "text": "SR <b>812.21</b>",
      "links": [
       {
@@ -4446,11 +4545,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2001/422"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "d"
     },
     {
-     "nr": "124",
+     "nr": "127",
      "text": "SR <b>910.1</b>",
      "links": [
       {
@@ -4458,7 +4557,7 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/1998/3033_3033_3033"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "e"
     }
    ]
@@ -4483,7 +4582,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "125",
+     "nr": "128",
      "text": "Eingefügt durch Ziff. I 3 des BG vom 28. Sept. 2018 über die Steuerreform und die AHV-Finanzierung, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 2395 2413; BBl <b>2018</b> 2527).",
      "links": [
       {
@@ -4524,7 +4623,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "126",
+     "nr": "129",
      "text": "Eingefügt durch Ziff. I 3 des BG vom 28. Sept. 2018 über die Steuerreform und die AHV-Finanzierung, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 2395 2413; BBl <b>2018</b> 2527).",
      "links": [
       {
@@ -4565,7 +4664,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "127",
+     "nr": "130",
      "text": "Eingefügt durch Ziff. I 3 des BG vom 28. Sept. 2018 über die Steuerreform und die AHV-Finanzierung, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 2395 2413; BBl <b>2018</b> 2527).",
      "links": [
       {
@@ -4606,7 +4705,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "136",
+     "nr": "139",
      "text": "Eingefügt durch Ziff. I 3 des BG vom 28. Sept. 2018 über die Steuerreform und die AHV-Finanzierung, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 2395 2413; BBl <b>2018</b> 2527).",
      "links": [
       {
@@ -4626,7 +4725,7 @@
      "item": null
     },
     {
-     "nr": "137",
+     "nr": "140",
      "text": "SR <b>420.1</b>",
      "links": [
       {
@@ -4634,7 +4733,7 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2013/786"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -4659,7 +4758,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "138",
+     "nr": "141",
      "text": "Eingefügt durch Ziff. I 3 des BG vom 28. Sept. 2018 über die Steuerreform und die AHV-Finanzierung, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 2395 2413; BBl <b>2018</b> 2527).",
      "links": [
       {
@@ -4700,7 +4799,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "139",
+     "nr": "142",
      "text": "Eingefügt durch Ziff. I 3 des BG vom 28. Sept. 2018 über die Steuerreform und die AHV-Finanzierung, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 2395 2413; BBl <b>2018</b> 2527).",
      "links": [
       {
@@ -4741,7 +4840,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "142",
+     "nr": "145",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 20. März 2015 über die Gewinnbesteuerung von juristischen Personen mit ideellen Zwecken, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 2947; BBl <b>2014</b> 5369).",
      "links": [
       {
@@ -4774,7 +4873,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "153",
+     "nr": "156",
      "text": "Eingefügt durch Ziff. II des BG vom 7. Okt. 1994, in Kraft seit 1. Jan. 1995 (AS <b>1995</b> 1449; BBl <b>1994</b> II 357).",
      "links": [
       {
@@ -4807,7 +4906,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "161",
+     "nr": "164",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 16. Dez. 2016 über die Revision der Quellenbesteuerung des Erwerbseinkommens, in Kraft seit 1. Jan. 2021 (AS <b>2018</b> 1813; BBl <b>2015</b> 657).",
      "links": [
       {
@@ -4840,7 +4939,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "162",
+     "nr": "165",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 16. Dez. 2016 über die Revision der Quellenbesteuerung des Erwerbseinkommens, in Kraft seit 1. Jan. 2021 (AS <b>2018</b> 1813; BBl <b>2015</b> 657).",
      "links": [
       {
@@ -4873,7 +4972,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "175",
+     "nr": "179",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 16. Dez. 2016 über die Revision der Quellenbesteuerung des Erwerbseinkommens, in Kraft seit 1. Jan. 2021 (AS <b>2018</b> 1813; BBl <b>2015</b> 657).",
      "links": [
       {
@@ -4906,7 +5005,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "176",
+     "nr": "180",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 16. Dez. 2016 über die Revision der Quellenbesteuerung des Erwerbseinkommens, in Kraft seit 1. Jan. 2021 (AS <b>2018</b> 1813; BBl <b>2015</b> 657).",
      "links": [
       {
@@ -4939,7 +5038,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "178",
+     "nr": "182",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 16. Dez. 2016 über die Revision der Quellenbesteuerung des Erwerbseinkommens, in Kraft seit 1. Jan. 2021 (AS <b>2018</b> 1813; BBl <b>2015</b> 657).",
      "links": [
       {
@@ -4987,7 +5086,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "183",
+     "nr": "187",
      "text": "Eingefügt durch Ziff. I 4 des BG vom 18. Juni 2021 über elektronische Verfahren im Steuerbereich, in Kraft seit 1. Jan. 2024 (AS <b>2021</b> 673; BBl <b>2020</b> 4705).",
      "links": [
       {
@@ -5020,7 +5119,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "185",
+     "nr": "189",
      "text": "Eingefügt durch Ziff. VI 4 des BG vom 24. März 2000 über die Schaffung und die Anpassung gesetzlicher Grundlagen für die Bearbeitung von Personendaten, in Kraft seit 1. Sept. 2000 (AS <b>2000</b> 1891; BBl <b>1999</b> 9005).",
      "links": [
       {
@@ -5053,7 +5152,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "11",
+     "nr": "13",
      "text": "Eingefügt durch Anhang Ziff. II 8 des Gaststaatgesetzes vom 22. Juni 2007, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 6637; BBl <b>2006</b> 8017).",
      "links": [
       {
@@ -5069,7 +5168,7 @@
      "item": null
     },
     {
-     "nr": "12",
+     "nr": "14",
      "text": "SR <b>192.12</b>",
      "links": [
       {
@@ -5098,7 +5197,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "13",
+     "nr": "15",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 22. März 2013 über die formelle Bereinigung der zeitlichen Bemessung der direkten Steuern bei den natürlichen Personen, in Kraft seit 1. Jan. 2014 (AS <b>2013 </b>2397; BBl <b>2011 </b>3593).",
      "links": [
       {
@@ -5114,7 +5213,7 @@
      "item": null
     },
     {
-     "nr": "14",
+     "nr": "16",
      "text": "Dritter Satz aufgehoben durch Ziff. I 2 des BG vom 16. Dez. 2016 über die Revision der Quellenbesteuerung des Erwerbseinkommens, mit Wirkung seit 1. Jan. 2021 (AS <b>2018</b> 1813; BBl <b>2015</b> 657).",
      "links": [
       {
@@ -5126,7 +5225,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/56"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -5147,7 +5246,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "198",
+     "nr": "205",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 20. März 2008 über die Vereinfachung der Nach-besteuerung in Erbfällen und die Einführung der straflosen Selbstanzeige, in Kraft seit 1. Jan. 2010 (AS <b>2008</b> 4453; BBl <b>2006</b> 8795).",
      "links": [
       {
@@ -5180,7 +5279,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "211",
+     "nr": "218",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 20. Dez. 2006 über Änderungen des Nachsteuerverfahrens und des Strafverfahrens wegen Steuerhinterziehung auf dem Gebiet der direkten Steuern, in Kraft seit 1. Jan. 2008 (AS <b>2007</b> 2973; BBl <b>2006</b> 4021 4039).",
      "links": [
       {
@@ -5217,7 +5316,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "212",
+     "nr": "219",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 20. März 2008 über die Vereinfachung der Nachbesteuerung in Erbfällen und die Einführung der straflosen Selbstanzeige, in Kraft seit 1. Jan. 2010 (AS <b>2008</b> 4453, <b>2009</b> 5683; BBl <b>2006</b> 8795).",
      "links": [
       {
@@ -5237,7 +5336,7 @@
      "item": null
     },
     {
-     "nr": "213",
+     "nr": "220",
      "text": "SR <b>221.301</b>",
      "links": [
       {
@@ -5245,7 +5344,7 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2004/320"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "b"
     }
    ]
@@ -5266,7 +5365,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "208",
+     "nr": "215",
      "text": "Eingefügt durch Art. 3 Ziff. 8 des BB vom 17. Dez. 2004 über die Genehmigung und die Umsetzung der bilateralen Abk. zwischen der Schweiz und der EU über die Assoziierung an Schengen und an Dublin (AS <b>2008</b> 447; BBl <b>2004</b> 5965). Fassung gemäss Ziff. I 2 des BG vom 26. Sept. 2014 (Anpassung an die allgemeinen Bestimmungen des StGB), in Kraft seit 1. Jan. 2017 (AS <b>2015</b> 779; BBl <b>2012</b> 2869).",
      "links": [
       {
@@ -5286,11 +5385,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/403"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "209",
+     "nr": "216",
      "text": "SR <b>173.110</b>",
      "links": [
       {
@@ -5298,11 +5397,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2006/218"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
-     "nr": "210",
+     "nr": "217",
      "text": "Fassung gemäss Anhang Ziff. 58 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 2197 1069; BBl <b>2001</b> 4202).",
      "links": [
       {
@@ -5318,7 +5417,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -5333,7 +5432,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "221",
+     "nr": "228",
      "text": "Aufgehoben durch Ziff. I 2 des BG vom 22. März 2013 über die formelle Bereinigung der zeitlichen Bemessung der direkten Steuern bei den natürlichen Personen, mit Wirkung seit 1. Jan. 2014 (AS <b>2013 </b>2397; BBl <b>2011 </b>3593).",
      "links": [
       {
@@ -5364,7 +5463,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "225",
+     "nr": "232",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 10. Okt. 1997 über die Reform der Unternehmensbesteuerung 1997 (AS <b>1998</b> 669; BBl <b>1997</b> II 1164). Aufgehoben durch Ziff. I 4 des BG vom 18. Juni 2021 über elektronische Verfahren im Steuerbereich, mit Wirkung seit 1. Jan. 2022 (AS <b>2021</b> 673; BBl <b>2020</b> 4705).",
      "links": [
       {
@@ -5403,7 +5502,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "226",
+     "nr": "233",
      "text": "Eingefügt durch Ziff. I 6 des BG vom 19. März 1999 über das Stabilisierungsprogramm 1998 (AS <b>1999</b> 2374; <i>BBl <b>1999</b> 4</i>). Aufgehoben durch Ziff. I 4 des BG vom 18. Juni 2021 über elektronische Verfahren im Steuerbereich, mit Wirkung seit 1. Jan. 2022 (AS <b>2021</b> 673; BBl <b>2020</b> 4705).",
      "links": [
       {
@@ -5438,7 +5537,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "227",
+     "nr": "234",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 15. Dez. 2000 zur Koordination und Vereinfachung der Veranlagungsverfahren für die direkten Steuern im interkantonalen Verhältnis (AS <b>2001</b> 1050; BBl <b>2000</b> 3898). Aufgehoben durch Ziff. I 2 des BG vom 25. Sept. 2009 über die steuerliche Entlastung von Familien mit Kindern, mit Wirkung seit 1. Jan. 2011 (AS <b>2010</b> 455; BBl <b>2009</b> 4729).",
      "links": [
       {
@@ -5477,7 +5576,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "228",
+     "nr": "235",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 15. Dez. 2000 zur Koordination und Vereinfachung der Veranlagungsverfahren für die direkten Steuern im interkantonalen Verhältnis (AS <b>2001</b> 1050; BBl <b>2000</b> 3898). Aufgehoben durch Ziff. I 4 des BG vom 18. Juni 2021 über elektronische Verfahren im Steuerbereich, mit Wirkung seit 1. Jan. 2022 (AS <b>2021</b> 673; BBl <b>2020</b> 4705).",
      "links": [
       {
@@ -5516,7 +5615,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "229",
+     "nr": "236",
      "text": "Eingefügt durch Anhang Ziff. 8 des Fusionsgesetzes vom 3. Okt. 2003 (AS <b>2004</b> 2617; BBl <b>2000</b> 4337). Aufgehoben durch Ziff. I 4 des BG vom 18. Juni 2021 über elektronische Verfahren im Steuerbereich, mit Wirkung seit 1. Jan. 2022 (AS <b>2021</b> 673; BBl <b>2020</b> 4705).",
      "links": [
       {
@@ -5555,7 +5654,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "230",
+     "nr": "237",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 23. Juni 2006 über dringende Anpassungen bei der Unternehmensbesteuerung (AS <b>2006</b> 4883; BBl <b>2005</b> 4733). Aufgehoben durch Ziff. I 4 des BG vom 18. Juni 2021 über elektronische Verfahren im Steuerbereich, mit Wirkung seit 1. Jan. 2022 (AS <b>2021</b> 673; BBl <b>2020</b> 4705).",
      "links": [
       {
@@ -5594,7 +5693,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "231",
+     "nr": "238",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 20. Dez. 2006 über Änderungen des Nachsteuerverfahrens und des Strafverfahrens wegen Steuerhinterziehung auf dem Gebiet der direkten Steuern (AS <b>2007</b> 2973; BBl <b>2006</b> 4021 4039). Aufgehoben durch Ziff. I 4 des BG vom 18. Juni 2021 über elektronische Verfahren im Steuerbereich, mit Wirkung seit 1. Jan. 2022 (AS <b>2021</b> 673; BBl <b>2020</b> 4705).",
      "links": [
       {
@@ -5637,7 +5736,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "232",
+     "nr": "239",
      "text": "Eingefügt durch Ziff. II 3 des Unternehmenssteuerreformgesetzes II vom 23. März 2007 (AS <b>2008</b> 2893; BBl <b>2005</b> 4733). Aufgehoben durch Ziff. I 4 des BG vom 18. Juni 2021 über elektronische Verfahren im Steuerbereich, mit Wirkung seit 1. Jan. 2022 (AS <b>2021</b> 673; BBl <b>2020</b> 4705).",
      "links": [
       {
@@ -5676,7 +5775,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "233",
+     "nr": "240",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 20. März 2008 über die Vereinfachung der Nach-besteuerung in Erbfällen und die Einführung der straflosen Selbstanzeige (AS <b>2008</b> 4453, <b>2009</b> 5683; BBl <b>2006</b> 8795). Aufgehoben durch Ziff. I 4 des BG vom 18. Juni 2021 über elektronische Verfahren im Steuerbereich, mit Wirkung seit 1. Jan. 2022 (AS <b>2021</b> 673; BBl <b>2020</b> 4705).",
      "links": [
       {
@@ -5719,7 +5818,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "234",
+     "nr": "241",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 3. Okt. 2008 über die steuerliche Behandlung von Instandstellungskosten bei Liegenschaften (AS <b>2009</b> 1515; BBl <b>2007</b> 7993 8009). Aufgehoben durch Ziff. I 4 des BG vom 18. Juni 2021 über elektronische Verfahren im Steuerbereich, mit Wirkung seit 1. Jan. 2022 (AS <b>2021</b> 673; BBl <b>2020</b> 4705).",
      "links": [
       {
@@ -5762,7 +5861,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "235",
+     "nr": "242",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 12. Juni 2009 über die steuerliche Abzugsfähigkeit von Zuwendungen an politische Parteien (AS <b>2010</b> 449; BBl <b>2008</b> 7463 7485). Aufgehoben durch Ziff. I 4 des BG vom 18. Juni 2021 über elektronische Verfahren im Steuerbereich, mit Wirkung seit 1. Jan. 2022 (AS <b>2021</b> 673; BBl <b>2020</b> 4705).",
      "links": [
       {
@@ -5805,7 +5904,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "236",
+     "nr": "243",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 25. Sept. 2009 über die steuerliche Entlastung von Familien mit Kindern (AS <b>2010</b> 455; BBl <b>2009</b> 4729). Aufgehoben durch Ziff. I 4 des BG vom 18. Juni 2021 über elektronische Verfahren im Steuerbereich, mit Wirkung seit 1. Jan. 2022 (AS <b>2021</b> 673; BBl <b>2020</b> 4705).",
      "links": [
       {
@@ -5844,7 +5943,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "237",
+     "nr": "244",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 17. Dez. 2010 über die Besteuerung von Mitarbeiterbeteiligungen (AS <b>2011</b> 3259; BBl <b>2005</b> 575). Aufgehoben durch Ziff. I 4 des BG vom 18. Juni 2021 über elektronische Verfahren im Steuerbereich, mit Wirkung seit 1. Jan. 2022 (AS <b>2021</b> 673; BBl <b>2020</b> 4705).",
      "links": [
       {
@@ -5883,7 +5982,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "238",
+     "nr": "245",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 27. Juni 2011 über die Steuerbefreiung des Feuerwehrsoldes (AS <b>2012</b> 489; BBl <b>2010</b> 2855). Aufgehoben durch Ziff. I 4 des BG vom 18. Juni 2021 über elektronische Verfahren im Steuerbereich, mit Wirkung seit 1. Jan. 2022 (AS <b>2021</b> 673; BBl <b>2020</b> 4705).",
      "links": [
       {
@@ -5922,7 +6021,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "239",
+     "nr": "246",
      "text": "Eingefügt durch Anhang Ziff. 6 des BG vom 23. Dez. 2011 (Rechnungslegungsrecht) (AS <b>2012</b> 6679; BBl <b>2008</b> 1589). Aufgehoben durch Ziff. I 4 des BG vom 18. Juni 2021 über elektronische Verfahren im Steuerbereich, mit Wirkung seit 1. Jan. 2022 (AS <b>2021</b> 673; BBl <b>2020</b> 4705).",
      "links": [
       {
@@ -5961,7 +6060,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "240",
+     "nr": "247",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 15. Juni 2012 über die Vereinfachungen bei der Besteuerung von Lotteriegewinnen (AS <b>2012</b> 5977; BBl <b>2011 </b>6517 6543). Aufgehoben durch Ziff. I 4 des BG vom 18. Juni 2021 über elektronische Verfahren im Steuerbereich, mit Wirkung seit 1. Jan. 2022 (AS <b>2021</b> 673; BBl <b>2020</b> 4705).",
      "links": [
       {
@@ -6004,7 +6103,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "241",
+     "nr": "248",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 28. Sept. 2012 (AS <b>2013</b> 779; BBl <b>2011</b> 6021). Aufgehoben durch Ziff. I 4 des BG vom 18. Juni 2021 über elektronische Verfahren im Steuerbereich, mit Wirkung seit 1. Jan. 2022 (AS <b>2021</b> 673; BBl <b>2020</b> 4705).",
      "links": [
       {
@@ -6043,7 +6142,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "242",
+     "nr": "249",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 27. Sept. 2013 über die steuerliche Behandlung der berufsorientierten Aus- und Weiterbildungskosten (AS <b>2014</b> 1105; BBl <b>2011</b> 2607). Aufgehoben durch Ziff. I 4 des BG vom 18. Juni 2021 über elektronische Verfahren im Steuerbereich, mit Wirkung seit 1. Jan. 2022 (AS <b>2021</b> 673; BBl <b>2020</b> 4705).",
      "links": [
       {
@@ -6082,7 +6181,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "243",
+     "nr": "250",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 26. Sept. 2014 (Anpassung an die allgemeinen Bestimmungen des StGB) (AS <b>2015</b> 779; BBl <b>2012</b> 2869). Aufgehoben durch Ziff. I 4 des BG vom 18. Juni 2021 über elektronische Verfahren im Steuerbereich, mit Wirkung seit 1. Jan. 2022 (AS <b>2021</b> 673; BBl <b>2020</b> 4705).",
      "links": [
       {
@@ -6123,7 +6222,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "244",
+     "nr": "251",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 20. März 2015 über die Gewinnbesteuerung von juristischen Personen mit ideellen Zwecken, in Kraft seit 1. Jan. 2016 (AS <b>2015</b> 2947; BBl <b>2014</b> 5369).",
      "links": [
       {
@@ -6139,7 +6238,7 @@
      "item": null
     },
     {
-     "nr": "245",
+     "nr": "252",
      "text": "SR <b>642.11</b>",
      "links": [
       {
@@ -6147,7 +6246,7 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/1991/1184_1184_1184"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -6166,7 +6265,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "246",
+     "nr": "253",
      "text": "Eingefügt durch Anhang Ziff. II 4 des Energiegesetzes vom 30. Sept. 2016 (AS <b>2017</b> 6839; BBl <b>2013</b> 7561). Aufgehoben durch Ziff. I 4 des BG vom 18. Juni 2021 über elektronische Verfahren im Steuerbereich, mit Wirkung seit 1. Jan. 2022 (AS <b>2021</b> 673; BBl <b>2020</b> 4705).",
      "links": [
       {
@@ -6205,7 +6304,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "247",
+     "nr": "254",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 16. Dez. 2016 (AS <b>2018</b> 1813; BBl <b>2015</b> 657). Aufgehoben durch Ziff. I 4 des BG vom 18. Juni 2021 über elektronische Verfahren im Steuerbereich, mit Wirkung seit 1. Jan. 2022 (AS <b>2021</b> 673; BBl <b>2020</b> 4705).",
      "links": [
       {
@@ -6244,7 +6343,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "248",
+     "nr": "255",
      "text": "Eingefügt durch Ziff. I des BG vom 17. März 2017 (AS <b>2017</b> 5039; BBl <b>2016</b> 5357). Aufgehoben durch Ziff. I 4 des BG vom 18. Juni 2021 über elektronische Verfahren im Steuerbereich, mit Wirkung seit 1. Jan. 2022 (AS <b>2021</b> 673; BBl <b>2020</b> 4705).",
      "links": [
       {
@@ -6285,7 +6384,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "249",
+     "nr": "256",
      "text": "Eingefügt durch Anhang Ziff. II 6 des Geldspielgesetzes vom 29. Sept. 2017, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5103; BBl <b>2015</b> 8387).",
      "links": [
       {
@@ -6301,7 +6400,7 @@
      "item": null
     },
     {
-     "nr": "250",
+     "nr": "257",
      "text": "SR <b>642.11</b>",
      "links": [
       {
@@ -6309,7 +6408,7 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/1991/1184_1184_1184"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -6328,7 +6427,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "251",
+     "nr": "258",
      "text": "Eingefügt durch Ziff. I 3 des BG vom 28. Sept. 2018 über die Steuerreform und die AHV-Finanzierung (AS <b>2019</b> 2395; BBl <b>2018</b> 2527). Aufgehoben durch Ziff. I 4 des BG vom 18. Juni 2021 über elektronische Verfahren im Steuerbereich, mit Wirkung seit 1. Jan. 2022 (AS <b>2021</b> 673; BBl <b>2020</b> 4705).",
      "links": [
       {
@@ -6367,7 +6466,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "252",
+     "nr": "259",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 14. Dez. 2018 über die Berechnung des Beteiligungsabzugs bei systemrelevanten Banken (AS <b>2019</b> 1207; BBl <b>2018</b> 1263). Aufgehoben durch Ziff. I 4 des BG vom 18. Juni 2021 über elektronische Verfahren im Steuerbereich, mit Wirkung seit 1. Jan. 2022 (AS <b>2021</b> 673; BBl <b>2020</b> 4705).",
      "links": [
       {
@@ -6406,7 +6505,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "253",
+     "nr": "260",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 19. Juni 2020 über die steuerliche Behandlung finanzieller Sanktionen (AS <b>2020</b> 5121; BBl <b>2016</b> 8503). Aufgehoben durch Ziff. I 4 des BG vom 18. Juni 2021 über elektronische Verfahren im Steuerbereich, mit Wirkung seit 1. Jan. 2022 (AS <b>2021</b> 673; BBl <b>2020</b> 4705).",
      "links": [
       {
@@ -6447,7 +6546,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "262",
+     "nr": "269",
      "text": "Eingefügt durch Ziff. I 6 des BG vom 19. März 1999 über das Stabilisierungsprogramm 1998, in Kraft seit 1. Jan. 2001 (AS <b>1999</b> 2374; <i>BBl <b>1999</b> 4</i>).",
      "links": [
       {
@@ -6474,7 +6573,7 @@
    "marginalie": [],
    "fussnoten": [
     {
-     "nr": "263",
+     "nr": "270",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 15. Dez. 2000 zur Koordination und Vereinfachung der Veranlagungsverfahren für die direkten Steuern im interkantonalen Verhältnis (AS <b>2001</b> 1050; BBl <b>2000</b> 3898). Aufgehoben durch Ziff. I 2 des BG vom 22. März 2013 über die formelle Bereinigung der zeitlichen Bemessung der direkten Steuern bei den natürlichen Personen, mit Wirkung seit 1. Jan. 2014 (AS <b>2013 </b>2397; BBl <b>2011 </b>3593).",
      "links": [
       {
@@ -6515,7 +6614,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "264",
+     "nr": "271",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 8. Oktober 2004 über die Aufhebung der Haftung der Erben für Steuerbussen, in Kraft seit 1. März 2005 (AS <b>2005</b> 1051; BBl <b>2004</b> 1437 1451).",
      "links": [
       {
@@ -6535,7 +6634,7 @@
      "item": null
     },
     {
-     "nr": "265",
+     "nr": "272",
      "text": "AS <b>1991</b> 1256",
      "links": [
       {
@@ -6543,7 +6642,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1991/1256_1256_1256"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -6564,7 +6663,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "266",
+     "nr": "273",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 20. März 2008 über die Vereinfachung der Nach-besteuerung in Erbfällen und die Einführung der straflosen Selbstanzeige, in Kraft seit 1. Jan. 2010 (AS <b>2008</b> 4453; BBl <b>2006</b> 8795).",
      "links": [
       {
@@ -6597,7 +6696,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "267",
+     "nr": "274",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 28. Sept. 2012, in Kraft seit 1. Jan. 2014 (AS <b>2013</b> 779; BBl <b>2011</b> 6021).",
      "links": [
       {
@@ -6613,7 +6712,7 @@
      "item": null
     },
     {
-     "nr": "268",
+     "nr": "275",
      "text": "SR <b>642.11</b>",
      "links": [
       {
@@ -6642,7 +6741,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "269",
+     "nr": "276",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 26. Sept. 2014 (Anpassung an die allgemeinen Bestimmungen des StGB), in Kraft seit 1. Jan. 2017 (AS <b>2015</b> 779; BBl <b>2012</b> 2869).",
      "links": [
       {
@@ -6675,7 +6774,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "270",
+     "nr": "277",
      "text": "Eingefügt durch Ziff. I 3 des BG vom 28. Sept. 2018 über die Steuerreform und die AHV-Finanzierung, in Kraft seit 9. Juli 2019 (AS <b>2019</b> 2395; BBl <b>2018</b> 2527).",
      "links": [
       {
@@ -6691,7 +6790,7 @@
      "item": null
     },
     {
-     "nr": "271",
+     "nr": "278",
      "text": "AS <b>1991</b> 1256, <b>1998</b> 669",
      "links": [
       {
@@ -6703,11 +6802,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1998/669_669_669"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "272",
+     "nr": "279",
      "text": "In Kraft seit 1. Jan. 2020 (AS <b>2019</b> 2395 2413; BBl <b>2018</b> 2527).",
      "links": [
       {
@@ -6723,7 +6822,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1042"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -6748,7 +6847,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "38",
+     "nr": "40",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 23. Juni 2006 über dringende Anpassungen bei der Unternehmensbesteuerung, in Kraft seit 1. Jan. 2008 (AS <b>2006</b> 4883; BBl <b>2005</b> 4733).",
      "links": [
       {
@@ -6764,7 +6863,7 @@
      "item": null
     },
     {
-     "nr": "39",
+     "nr": "41",
      "text": "Fassung gemäss Ziff. I 3 des BG vom 28. Sept. 2018 über die Steuerreform und die AHV-Finanzierung, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 2395 2413; BBl <b>2018</b> 2527).",
      "links": [
       {
@@ -6780,7 +6879,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1042"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "b"
     }
    ]
@@ -6805,7 +6904,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "40",
+     "nr": "42",
      "text": "Eingefügt durch Ziff. II 3 des Unternehmenssteuerreformgesetzes II vom 23. März 2007 (AS <b>2008</b> 2893; BBl <b>2005</b> 4733). Fassung gemäss Ziff. I 3 des BG vom 28. Sept. 2018 über die Steuerreform und die AHV-Finanzierung, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 2395 2413; BBl <b>2018</b> 2527).",
      "links": [
       {
@@ -6833,7 +6932,7 @@
      "item": null
     },
     {
-     "nr": "41",
+     "nr": "43",
      "text": "SR <b>220</b>",
      "links": [
       {
@@ -6841,11 +6940,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
-     "absatz": null,
+     "absatz": "6",
      "item": null
     },
     {
-     "nr": "42",
+     "nr": "44",
      "text": "Eingefügt durch Anhang Ziff. 8 des BG vom 19. Juni 2020 (Aktienrecht), in Kraft seit 1. Jan. 2023 (AS <b>2020</b> 4005; <b>2022</b> 109, 112; BBl <b>2017</b> 399).",
      "links": [
       {
@@ -6865,7 +6964,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/112"
       }
      ],
-     "absatz": null,
+     "absatz": "6",
      "item": null
     }
    ]
@@ -6890,7 +6989,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "43",
+     "nr": "45",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 17. Dez. 2010 über die Besteuerung von Mitarbeiterbeteiligungen, in Kraft seit 1. Jan. 2013 (AS <b>2011</b> 3259; BBl <b>2005</b> 575).",
      "links": [
       {
@@ -6927,7 +7026,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "44",
+     "nr": "46",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 17. Dez. 2010 über die Besteuerung von Mitarbeiterbeteiligungen, in Kraft seit 1. Jan. 2013 (AS <b>2011</b> 3259; BBl <b>2005</b> 575).",
      "links": [
       {
@@ -6964,7 +7063,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "45",
+     "nr": "47",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 17. Dez. 2010 über die Besteuerung von Mitarbeiterbeteiligungen, in Kraft seit 1. Jan. 2013 (AS <b>2011</b> 3259; BBl <b>2005</b> 575).",
      "links": [
       {
@@ -7001,7 +7100,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "46",
+     "nr": "48",
      "text": "Eingefügt durch Ziff. I 2 des BG vom 17. Dez. 2010 über die Besteuerung von Mitarbeiterbeteiligungen, in Kraft seit 1. Jan. 2013 (AS <b>2011</b> 3259; BBl <b>2005</b> 575).",
      "links": [
       {
@@ -7038,7 +7137,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "56",
+     "nr": "58",
      "text": "Eingefügt durch Ziff. I 3 des BG vom 28. Sept. 2018 über die Steuerreform und die AHV-Finanzierung, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 2395 2413; BBl <b>2018</b> 2527).",
      "links": [
       {

@@ -1,8 +1,9 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-11",
  "kopf": {
   "srNummer": "221.214.11",
   "titel": "Verordnung zum Konsumkreditgesetz",
+  "erlassdatum": "vom 6. November 2002 (Stand am 1. Juli 2021)",
   "praeambel": [
    {
     "rolle": "autor",
@@ -29,7 +30,7 @@
     "links": [
      {
       "label": "SR <b>221.214.1</b>",
-      "url": "https://fedlex.data.admin.ch/eli/cc/2002/593/20200101"
+      "url": "https://fedlex.data.admin.ch/eli/cc/2002/593"
      }
     ],
     "absatz": null,
@@ -41,7 +42,7 @@
     "links": [
      {
       "label": "SR <b>172.010</b>",
-      "url": "https://fedlex.data.admin.ch/eli/cc/1997/2022_2022_2022/20191202"
+      "url": "https://fedlex.data.admin.ch/eli/cc/1997/2022_2022_2022"
      }
     ],
     "absatz": null,
@@ -49,8 +50,13 @@
    },
    {
     "nr": "3",
-    "text": "Fassung gemäss Ziff. I der V vom 19. Mai 2021, in Kraft seit 1. Juli 2021 (<i>AS <b>2021</b> 319</i>).",
-    "links": [],
+    "text": "Fassung gemäss Ziff. I der V vom 19. Mai 2021, in Kraft seit 1. Juli 2021 (AS <b>2021</b> 319).",
+    "links": [
+     {
+      "label": "AS <b>2021</b> 319",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2021/319"
+     }
+    ],
     "absatz": null,
     "item": null
    }
@@ -68,8 +74,13 @@
    "fussnoten": [
     {
      "nr": "4",
-     "text": "Fassung gemäss Ziff. I der V vom 19. Mai 2021, in Kraft seit 1. Juli 2021 (<i>AS <b>2021</b> 319</i>).",
-     "links": [],
+     "text": "Fassung gemäss Ziff. I der V vom 19. Mai 2021, in Kraft seit 1. Juli 2021 (AS <b>2021</b> 319).",
+     "links": [
+      {
+       "label": "AS <b>2021</b> 319",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/319"
+      }
+     ],
      "absatz": null,
      "item": null
     }
@@ -95,7 +106,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/26"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -176,10 +187,10 @@
      "links": [
       {
        "label": "SR <b>412.10</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2003/674/20190101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2003/674"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "a"
     }
    ]
@@ -280,8 +291,13 @@
    "fussnoten": [
     {
      "nr": "7",
-     "text": "Eingefügt durch Ziff. I der V vom 19. Mai 2021, in Kraft seit 1. Juli 2021 (<i>AS <b>2021</b> 319</i>).",
-     "links": [],
+     "text": "Eingefügt durch Ziff. I der V vom 19. Mai 2021, in Kraft seit 1. Juli 2021 (AS <b>2021</b> 319).",
+     "links": [
+      {
+       "label": "AS <b>2021</b> 319",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/319"
+      }
+     ],
      "absatz": null,
      "item": null
     }
@@ -416,7 +432,7 @@
     }
    ]
   },
-  "lvl_d891e25": {
+  "annex_u1": {
    "gliederung": [
     {
      "ebene": 1,

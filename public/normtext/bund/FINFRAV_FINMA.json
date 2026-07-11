@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-30",
+  "erzeugt": "2026-07-11",
   "eintraege": [
     {
       "id": "bund/FINFRAV_FINMA/art_1",
@@ -71,14 +71,14 @@
         },
         {
           "absatz": "4",
-          "text": "Die eingegangenen Aufträge und die getätigten Abschlüsse, unabhängig davon, ob sie der Meldepflicht nach dem 2. Kapitel unterliegen oder nicht, sind grundsätzlich in standardisierter Form aufzuzeichnen, sodass der FINMA auf deren Verlangen Aus­künfte vollständig und unverzüglich geliefert werden können."
+          "text": "Die eingegangenen Aufträge und die getätigten Abschlüsse, unabhängig davon, ob sie der Meldepflicht nach dem 2. Kapitel unterliegen oder nicht, sind grundsätzlich in standardisierter Form aufzuzeichnen, sodass der FINMA auf deren Verlangen Auskünfte vollständig und unverzüglich geliefert werden können."
         }
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_1",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
-      "sha": "fd58a25400a2b3e732f0856fb06a180fdd6376566368c2fddfe633015ad12be9"
+      "sha": "0456836ee2f1ca18ee6e2766e5048a94cd44f1a06ce881421da3c0bb13cfa110"
     },
     {
       "id": "bund/FINFRAV_FINMA/art_2",
@@ -95,7 +95,7 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_2",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
       "sha": "6d23eb4581c0b6dc40dba4c4c00f6c75d2772169a0e585fd642ff61888c3da75"
     },
@@ -164,7 +164,7 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_3",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
       "sha": "bce92ea22534b4d5ddc2e9f459b26555aefde7f00b13a1896542a9e75ecc274a"
     },
@@ -183,7 +183,7 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_4",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
       "sha": "aa135db0fed146cea0cb438cb900ac2e5cda8e2e5fbf590a481fd8358e0985b5"
     },
@@ -218,7 +218,7 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_5",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
       "sha": "7c23dad9cb3adc268a0af48a2ec4c59ba6a4225b29092a6c270b385c683e506b"
     },
@@ -275,7 +275,7 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_6",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
       "sha": "764a622c5f833b935efd819852d7b5c407f52c0e9a3d4e55e8465f76d0b9d283"
     },
@@ -302,7 +302,7 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_7",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
       "sha": "aee63bbcb3a8b290aee7d1e470baaf6109561c35a64996aba1b541fcd48f4ded"
     },
@@ -313,6 +313,7 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "8",
       "artikelLabel": "Art. 8",
+      "grundlage": "(Art. 123 Abs. 1, 139 Abs. 5 FinfraG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -329,7 +330,7 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_8",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
       "sha": "41aa4138c500cb94d93d368c50148a008fd55af1572ae257b356ea83ea34b6ea"
     },
@@ -340,6 +341,7 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "9",
       "artikelLabel": "Art. 9",
+      "grundlage": "(Art. 123 Abs. 1 FinfraG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -360,7 +362,7 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_9",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
       "sha": "3639bb6dd011870e94f7157c55bfd7a1e71f55e05e191bdcd10a2053480c5bbc"
     },
@@ -371,6 +373,7 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "10",
       "artikelLabel": "Art. 10",
+      "grundlage": "(Art. 120 Abs. 1 und 3, 123 Abs. 1 FinfraG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -401,7 +404,7 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_10",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
       "sha": "ec7c48df51dd8470f366855bc1bb427764a97bdb8aed4d93d76324370daebd85"
     },
@@ -412,6 +415,7 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "11",
       "artikelLabel": "Art. 11",
+      "grundlage": "(Art. 120 Abs. 5, 123 Abs. 1 FinfraG)",
       "bloecke": [
         {
           "absatz": null,
@@ -434,7 +438,7 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_11",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
       "sha": "489a35468c73e7d87b2d28efaf1a8c94129e48017e2e6d55e5ec6aab5c2bee72"
     },
@@ -445,10 +449,11 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "12",
       "artikelLabel": "Art. 12",
+      "grundlage": "(Art. 120 Abs. 1, 121, 123 Abs. 1 FinfraG)",
       "bloecke": [
         {
           "absatz": "1",
-          "text": "In gemeinsamer Absprache oder als organisierte Gruppe handelt, wer seine Verhaltensweise im Hinblick auf den Erwerb oder die Veräusserung von Beteiligungs­papieren oder die Ausübung von Stimmrechten mit Dritten durch Vertrag oder andere organisierte Vorkehren oder von Gesetzes wegen abstimmt."
+          "text": "In gemeinsamer Absprache oder als organisierte Gruppe handelt, wer seine Verhaltensweise im Hinblick auf den Erwerb oder die Veräusserung von Beteiligungspapieren oder die Ausübung von Stimmrechten mit Dritten durch Vertrag oder andere organisierte Vorkehren oder von Gesetzes wegen abstimmt."
         },
         {
           "absatz": "2",
@@ -461,9 +466,9 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_12",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
-      "sha": "ebbef8bfad871d53a049f83952b8f6bc811d048c417d92acdc32c4edab49645c"
+      "sha": "a5c3a6da25f365298c5af971e849597cadf91bfb6567e665b9e86b2f662a5d64"
     },
     {
       "id": "bund/FINFRAV_FINMA/art_13",
@@ -472,6 +477,7 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "13",
       "artikelLabel": "Art. 13",
+      "grundlage": "(Art. 120 Abs. 1, 3 und 4, 123 Abs. 1 FinfraG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -483,14 +489,14 @@
         },
         {
           "absatz": "3",
-          "text": "Beim Erreichen, Über- oder Unterschreiten eines Grenzwerts infolge einer Erhöhung, Herabsetzung oder Umstrukturierung des Gesellschaftskapitals entsteht die Meldepflicht für Gesellschaften mit Sitz in der Schweiz mit der entsprechenden Veröffentlichung im Schweizerischen Handelsamtsblatt. Für Gesellschaften mit Sitz im Ausland, deren Beteiligungspapiere ganz oder teilweise in der Schweiz haupt­kotiert sind, entsteht die Meldepflicht im Zeitpunkt der Veröffentlichung gemäss Artikel 115 Absatz 3 FinfraV ."
+          "text": "Beim Erreichen, Über- oder Unterschreiten eines Grenzwerts infolge einer Erhöhung, Herabsetzung oder Umstrukturierung des Gesellschaftskapitals entsteht die Meldepflicht für Gesellschaften mit Sitz in der Schweiz mit der entsprechenden Veröffentlichung im Schweizerischen Handelsamtsblatt. Für Gesellschaften mit Sitz im Ausland, deren Beteiligungspapiere ganz oder teilweise in der Schweiz hauptkotiert sind, entsteht die Meldepflicht im Zeitpunkt der Veröffentlichung gemäss Artikel 115 Absatz 3 FinfraV ."
         }
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_13",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
-      "sha": "a819c6264d3097b3f4e2baa1358fb4dbeb018ef6f8d59de57e4347a1619e092c"
+      "sha": "8c0fb429b066274702e6d0d3bfffab7c922bd9fc6a86cb63eb4bc149c6e467e6"
     },
     {
       "id": "bund/FINFRAV_FINMA/art_14",
@@ -499,6 +505,7 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "14",
       "artikelLabel": "Art. 14",
+      "grundlage": "(Art. 120 Abs. 1 und 3, 123 Abs. 1 FinfraG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -556,7 +563,7 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_14",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
       "sha": "351b4e1f22d9cb30636cf134812d794deaafa64f2c630b53d3f086765516d494"
     },
@@ -567,10 +574,11 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "15",
       "artikelLabel": "Art. 15",
+      "grundlage": "(Art. 120 Abs. 1, 4 und 5, 123 Abs. 1 FinfraG)",
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Beteiligungsderivate im Sinne dieser Verordnung sind Instrumente, deren Wert sich zumindest teilweise vom Wert oder der Wertentwicklung von Beteiligungs­papieren von Gesellschaften gemäss Artikel 120 Absatz 1 FinfraG ableitet."
+          "text": "Beteiligungsderivate im Sinne dieser Verordnung sind Instrumente, deren Wert sich zumindest teilweise vom Wert oder der Wertentwicklung von Beteiligungspapieren von Gesellschaften gemäss Artikel 120 Absatz 1 FinfraG ableitet."
         },
         {
           "absatz": "2",
@@ -582,7 +590,7 @@
             },
             {
               "marke": "b",
-              "text": "das Einräumen (Schreiben) von Wandel- und Erwerbsrechten, insbesondere Call-Optionen, sowie von Veräusserungsrechten, insbesondere Put-Optio­nen, die eine Realerfüllung vorsehen oder zulassen; und"
+              "text": "das Einräumen (Schreiben) von Wandel- und Erwerbsrechten, insbesondere Call-Optionen, sowie von Veräusserungsrechten, insbesondere Put-Optionen, die eine Realerfüllung vorsehen oder zulassen; und"
             },
             {
               "marke": "c",
@@ -597,9 +605,9 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_15",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
-      "sha": "b5f5bfb8297b18f207ba6f0c79bb3f8a6c074265416fc46478116875833b1189"
+      "sha": "86ab14177d842611d6e241feaa6e13c532fd88d6f006518476e5ab0efcee35a3"
     },
     {
       "id": "bund/FINFRAV_FINMA/art_16",
@@ -608,6 +616,7 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "16",
       "artikelLabel": "Art. 16",
+      "grundlage": "(Art. 120 Abs. 1 und 4, 123 Abs. 1 FinfraG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -642,7 +651,7 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_16",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
       "sha": "83f660c54b594181274f40a2a04fa03034ff5ad5a6d0528a34487e1a332a330e"
     },
@@ -653,6 +662,7 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "17",
       "artikelLabel": "Art. 17",
+      "grundlage": "(Art. 120 Abs. 1, 123 Abs. 1 FinfraG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -687,7 +697,7 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_17",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
       "sha": "fab044af321e2bdd58de800996f5bd8fd138deb9690e89780ef14d85d479e92b"
     },
@@ -698,6 +708,7 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "18",
       "artikelLabel": "Art. 18",
+      "grundlage": "(Art. 120 Abs. 1, 121, 123 Abs. 1 FinfraG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -721,7 +732,7 @@
             },
             {
               "marke": "d",
-              "text": "Jedes Teilvermögen einer offenen kollektiven Kapitalanlage mit Teilver­mögen gilt als einzelne kollektive Kapitalanlage im Sinne von Absatz 1."
+              "text": "Jedes Teilvermögen einer offenen kollektiven Kapitalanlage mit Teilvermögen gilt als einzelne kollektive Kapitalanlage im Sinne von Absatz 1."
             }
           ]
         },
@@ -747,7 +758,7 @@
             },
             {
               "marke": "1",
-              "text": "die Konzernobergesellschaft und andere Gesellschaften, die von ihr beherrscht werden, nicht in Form von Weisungen oder in anderer Weise auf die Stimmrechtsausübung der Fondsleitung oder der Gesellschaft ein­wirken; und",
+              "text": "die Konzernobergesellschaft und andere Gesellschaften, die von ihr beherrscht werden, nicht in Form von Weisungen oder in anderer Weise auf die Stimmrechtsausübung der Fondsleitung oder der Gesellschaft einwirken; und",
               "tiefe": 1
             },
             {
@@ -786,9 +797,9 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_18",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
-      "sha": "7e1b54c6c04ef48b941cef2336b4625d18b57fd1d430ae90e630c16ef4ada531"
+      "sha": "16d57b3891e06d3c6501539d6dc24b33d615b03f71f370b164c9ba45969e2a3f"
     },
     {
       "id": "bund/FINFRAV_FINMA/art_19",
@@ -797,6 +808,7 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "19",
       "artikelLabel": "Art. 19",
+      "grundlage": "(Art. 123 Abs. 2 FinfraG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -827,7 +839,7 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_19",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
       "sha": "46df16d399e90b073240c2a58bf57e6e9b1fec256ebc7357e941a1c34669360e"
     },
@@ -838,6 +850,7 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "20",
       "artikelLabel": "Art. 20",
+      "grundlage": "(Art. 123 Abs. 1 FinfraG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -872,7 +885,7 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_20",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
       "sha": "ad6f0d060b7d74da12adf0588683759f43b8efd9a4e02c7ff213739b386b1a86"
     },
@@ -883,6 +896,7 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "21",
       "artikelLabel": "Art. 21",
+      "grundlage": "(Art. 123 Abs. 1 und 3 FinfraG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -890,14 +904,14 @@
         },
         {
           "absatz": "2",
-          "text": "Auf Gesuche für bereits abgeschlossene Geschäfte kann die zuständige Offen­legungsstelle ausnahmsweise eintreten."
+          "text": "Auf Gesuche für bereits abgeschlossene Geschäfte kann die zuständige Offenlegungsstelle ausnahmsweise eintreten."
         }
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_21",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
-      "sha": "49320b16e6a282ec9448a6225dfd127cc29a388f499135130ed5357654983d27"
+      "sha": "351529ce780b811706b2c1babb22cfd7e38b6158527871516e2d23072d8977c4"
     },
     {
       "id": "bund/FINFRAV_FINMA/art_22",
@@ -906,6 +920,7 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "22",
       "artikelLabel": "Art. 22",
+      "grundlage": "(Art. 123 Abs. 1 FinfraG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1075,7 +1090,7 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_22",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
       "sha": "827dc634dcd52e75ae65540e602a266c67a916789f3b6443243d77de2af78790"
     },
@@ -1086,17 +1101,18 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "23",
       "artikelLabel": "Art. 23",
+      "grundlage": "(Art. 123 Abs. 1 FinfraG)",
       "bloecke": [
         {
           "absatz": null,
-          "text": "(Art. 123 Abs. 1 FinfraG) Gegenüber der Offenlegungsstelle und der Gesellschaft ist bei jeder Meldung eine Kontaktperson unter Angabe von Name, Vorname, Adresse, Telefonnummer und elektronischer Adresse zu benennen."
+          "text": "Gegenüber der Offenlegungsstelle und der Gesellschaft ist bei jeder Meldung eine Kontaktperson unter Angabe von Name, Vorname, Adresse, Telefonnummer und elektronischer Adresse zu benennen."
         }
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_23",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
-      "sha": "02c79aab136db01707e47f968a2350f68c4d5e42cf91277ec33d047f9604c2fa"
+      "sha": "b5f6498b352cb50ce9f282c873517bdad5b122822b6943f36ed8b24a55099cf2"
     },
     {
       "id": "bund/FINFRAV_FINMA/art_24",
@@ -1105,6 +1121,7 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "24",
       "artikelLabel": "Art. 24",
+      "grundlage": "(Art. 123 Abs. 1 FinfraG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1120,14 +1137,14 @@
         },
         {
           "absatz": "4",
-          "text": "Bei Transaktionen in eigenen Effekten hat die Gesellschaft innert vier Börsentagen nach Entstehen der Meldepflicht sowohl die Meldung an die zuständige Offen­legungsstelle als auch die Veröffentlichung vorzunehmen."
+          "text": "Bei Transaktionen in eigenen Effekten hat die Gesellschaft innert vier Börsentagen nach Entstehen der Meldepflicht sowohl die Meldung an die zuständige Offenlegungsstelle als auch die Veröffentlichung vorzunehmen."
         }
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_24",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
-      "sha": "cb2eca408dc553a14bfd93f2e6fe9ef743796c9536fd2bf52155a32c6259118e"
+      "sha": "67b736f950319ef15f81e81a0ddcd05262c47e3a48ae0e8da68db417c1978b7b"
     },
     {
       "id": "bund/FINFRAV_FINMA/art_25",
@@ -1136,6 +1153,7 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "25",
       "artikelLabel": "Art. 25",
+      "grundlage": "(Art. 123 Abs. 1, 124 FinfraG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1148,7 +1166,7 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_25",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
       "sha": "79eb25281a096115b9210463f6db92fcb80544e24bd586ba10ae890ed4d85919"
     },
@@ -1159,6 +1177,7 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "26",
       "artikelLabel": "Art. 26",
+      "grundlage": "(Art. 123 Abs. 1 und 2, 124 FinfraG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1184,14 +1203,14 @@
         },
         {
           "absatz": "3",
-          "text": "Auf Gesuche für bereits abgeschlossene Geschäfte tritt die zuständige Offen­legungsstelle nur ausnahmsweise und bei Vorliegen ausserordentlicher Gründe ein."
+          "text": "Auf Gesuche für bereits abgeschlossene Geschäfte tritt die zuständige Offenlegungsstelle nur ausnahmsweise und bei Vorliegen ausserordentlicher Gründe ein."
         }
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_26",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
-      "sha": "89cc200bb4d997a7b6da56128505b9c2d2061bc9e50718889127e467f86e185c"
+      "sha": "3e5e58f9f197491af3760e32804da04b1088f9b313940400ce220c363e336ae5"
     },
     {
       "id": "bund/FINFRAV_FINMA/art_27",
@@ -1200,6 +1219,7 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "27",
       "artikelLabel": "Art. 27",
+      "grundlage": "(Art. 123, 124 FinfraG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1220,7 +1240,7 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_27",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
       "sha": "0147737c98eadefbb4f712c0ba34fa63f692a36b9b3a35aa2017580171f06e79"
     },
@@ -1231,6 +1251,7 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "28",
       "artikelLabel": "Art. 28",
+      "grundlage": "(Art. 123, 124 FinfraG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1242,7 +1263,7 @@
         },
         {
           "absatz": "3",
-          "text": "Die Offenlegungsstelle kann ihre Empfehlungen der Gesellschaft zustellen. Vor­behalten bleiben wesentliche Interessen des Gesuchstellers oder der Gesuchstellerin, namentlich Geschäftsgeheimnisse."
+          "text": "Die Offenlegungsstelle kann ihre Empfehlungen der Gesellschaft zustellen. Vorbehalten bleiben wesentliche Interessen des Gesuchstellers oder der Gesuchstellerin, namentlich Geschäftsgeheimnisse."
         },
         {
           "absatz": "4",
@@ -1277,9 +1298,9 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_28",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
-      "sha": "69a68a3e9bf628472792f7f2bf0a8b9ee893a79ed8ade3bb3c6455ca5c5b62c9"
+      "sha": "3454e816116d85c58365425eead825e995b80f9c6167a2bfa2a83dbf68568bf7"
     },
     {
       "id": "bund/FINFRAV_FINMA/art_29",
@@ -1288,17 +1309,18 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "29",
       "artikelLabel": "Art. 29",
+      "grundlage": "(Art. 8, 31, 123 Abs. 1 FinfraG)",
       "bloecke": [
         {
           "absatz": null,
-          "text": "(Art. 8, 31, 123 Abs. 1 FinfraG) Die FINMA kann die Offenlegungsstellen anweisen, Untersuchungen durchzuführen."
+          "text": "Die FINMA kann die Offenlegungsstellen anweisen, Untersuchungen durchzuführen."
         }
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_29",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
-      "sha": "19ab604561e4f2e13993b6f9d5a720100f5d4b540d809588321bffa0cbcc5d95"
+      "sha": "7d151dc571e2c8ac29a6059577743369c3da959c239e15bf47c67590343eec35"
     },
     {
       "id": "bund/FINFRAV_FINMA/art_30",
@@ -1307,17 +1329,18 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "30",
       "artikelLabel": "Art. 30",
+      "grundlage": "(Art. 135 Abs. 4 FinfraG)",
       "bloecke": [
         {
           "absatz": null,
-          "text": "(Art. 135 Abs. 4 FinfraG) Neben Artikel 135 FinfraG und den nachfolgenden Bestimmungen sind auf das Pflichtangebot die Artikel 125–134, 136–141, 152 sowie 163 FinfraG sowie die Ausführungsbestimmungen des Bundesrates und der Übernahmekommission über die öffentlichen Kaufangebote anwendbar."
+          "text": "Neben Artikel 135 FinfraG und den nachfolgenden Bestimmungen sind auf das Pflichtangebot die Artikel 125–134, 136–141, 152 sowie 163 FinfraG sowie die Ausführungsbestimmungen des Bundesrates und der Übernahmekommission über die öffentlichen Kaufangebote anwendbar."
         }
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_30",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
-      "sha": "69356375ad29ed8fc89459ff3d6743a260e0ede0aaebf26c94cde6be7990406f"
+      "sha": "1b91e61dc4a9322d5c35db167a4ed99fe7d2700cbc2f48ecf593e2c6d83aecfc"
     },
     {
       "id": "bund/FINFRAV_FINMA/art_31",
@@ -1326,17 +1349,18 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "31",
       "artikelLabel": "Art. 31",
+      "grundlage": "(Art. 135 Abs. 1 und 4 FinfraG)",
       "bloecke": [
         {
           "absatz": null,
-          "text": "(Art. 135 Abs. 1 und 4 FinfraG) Angebotspflichtig ist, wer direkt oder indirekt Beteiligungspapiere erwirbt und dadurch den gesetzlich oder statutarisch festgelegten Grenzwert nach Artikel 135 Absatz 1 FinfraG (Grenzwert) überschreitet."
+          "text": "Angebotspflichtig ist, wer direkt oder indirekt Beteiligungspapiere erwirbt und dadurch den gesetzlich oder statutarisch festgelegten Grenzwert nach Artikel 135 Absatz 1 FinfraG (Grenzwert) überschreitet."
         }
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_31",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
-      "sha": "7fb479071e4fb38a6b7ae9c82ee00ad97e03021a80ae11d844272664f198e2c4"
+      "sha": "4bc71a365bf22997846b1dfe92ffb3dfb4bf44acf21965ee7b3e58477732c29e"
     },
     {
       "id": "bund/FINFRAV_FINMA/art_32",
@@ -1345,17 +1369,18 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "32",
       "artikelLabel": "Art. 32",
+      "grundlage": "(Art. 135 Abs. 1 und 4 FinfraG)",
       "bloecke": [
         {
           "absatz": null,
-          "text": "(Art. 135 Abs. 1 und 4 FinfraG) Für den indirekten Erwerb von der Angebotspflicht unterliegenden Beteiligungen der Zielgesellschaft gelten Artikel 120 Absatz 5 FinfraG und Artikel 11 dieser Verordnung sinngemäss."
+          "text": "Für den indirekten Erwerb von der Angebotspflicht unterliegenden Beteiligungen der Zielgesellschaft gelten Artikel 120 Absatz 5 FinfraG und Artikel 11 dieser Verordnung sinngemäss."
         }
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_32",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
-      "sha": "c363d8907663686e2c81362840b71a8b7ddd23a5d53b77f260621311f4fde56f"
+      "sha": "4223b87e6e5975161def221dd833c000c8cff69f3f551c865a4a02d7c8bbef81"
     },
     {
       "id": "bund/FINFRAV_FINMA/art_33",
@@ -1364,17 +1389,18 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "33",
       "artikelLabel": "Art. 33",
+      "grundlage": "(Art. 135 Abs. 1 und 4, 136 Abs. 2 FinfraG)",
       "bloecke": [
         {
           "absatz": null,
-          "text": "(Art. 135 Abs. 1 und 4, 136 Abs. 2 FinfraG) Für Personen, die der Angebotspflicht unterliegende Beteiligungen der Zielgesellschaft im Hinblick auf die Beherrschung der Zielgesellschaft in gemeinsamer Absprache oder als organisierte Gruppe erwerben, gilt Artikel 12 Absatz 1."
+          "text": "Für Personen, die der Angebotspflicht unterliegende Beteiligungen der Zielgesellschaft im Hinblick auf die Beherrschung der Zielgesellschaft in gemeinsamer Absprache oder als organisierte Gruppe erwerben, gilt Artikel 12 Absatz 1."
         }
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_33",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
-      "sha": "dd3ea540c94e3a453011c4709cfbbc0e2602fe059377397dc9767ce0fecbb47a"
+      "sha": "d1d330789a849b3893906152d420f79f310dd9033097ce3850538fca15a5e32d"
     },
     {
       "id": "bund/FINFRAV_FINMA/art_34",
@@ -1383,6 +1409,7 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "34",
       "artikelLabel": "Art. 34",
+      "grundlage": "(Art. 135 Abs. 1 und 4 FinfraG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1390,7 +1417,7 @@
         },
         {
           "absatz": "2",
-          "text": "Für das Überschreiten des Grenzwertes sind sämtliche Beteiligungspapiere zu berücksichtigen, die im Eigentum der erwerbenden Person stehen oder ihr auf andere Weise Stimmrechte vermitteln, unabhängig davon, ob die Stimmrechte aus­übbar sind oder nicht."
+          "text": "Für das Überschreiten des Grenzwertes sind sämtliche Beteiligungspapiere zu berücksichtigen, die im Eigentum der erwerbenden Person stehen oder ihr auf andere Weise Stimmrechte vermitteln, unabhängig davon, ob die Stimmrechte ausübbar sind oder nicht."
         },
         {
           "absatz": "3",
@@ -1399,9 +1426,9 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_34",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
-      "sha": "428731f2011ea97679b3c3594f94556e24148e9f1e5cf1c03b3a5ce6f0531377"
+      "sha": "50829e49c68e11f1f7bd248298ed3aba8b662c5ee357cb4edff89ef405b6495a"
     },
     {
       "id": "bund/FINFRAV_FINMA/art_35",
@@ -1410,6 +1437,7 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "35",
       "artikelLabel": "Art. 35",
+      "grundlage": "(Art. 135 Abs. 1 und 4 FinfraG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1422,7 +1450,7 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_35",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
       "sha": "e6f295185e1508dbd6ef3e54333981cb51019bb3cb92cffe06d46a6a2a4ebc31"
     },
@@ -1433,17 +1461,18 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "36",
       "artikelLabel": "Art. 36",
+      "grundlage": "(Art. 135 Abs. 4, 136 Abs. 2, 163 FinfraG)",
       "bloecke": [
         {
           "absatz": null,
-          "text": "(Art. 135 Abs. 4, 136 Abs. 2, 163 FinfraG) Unterlag die Person, die bisher an den Beteiligungspapieren berechtigt war, nach der Übergangsregelung von Artikel 163 FinfraG der Pflicht, beim Überschreiten der Grenze von 50 Prozent der Stimmrechte ein Angebot für alle Beteiligungspapiere zu unterbreiten, so geht diese Pflicht auf die Person über, die eine Beteiligung zwischen 33⅓ und 50 Prozent der Stimmrechte erwirbt, wenn sie nach Artikel 136 Absatz 2 FinfraG von der Angebotspflicht befreit ist."
+          "text": "Unterlag die Person, die bisher an den Beteiligungspapieren berechtigt war, nach der Übergangsregelung von Artikel 163 FinfraG der Pflicht, beim Überschreiten der Grenze von 50 Prozent der Stimmrechte ein Angebot für alle Beteiligungspapiere zu unterbreiten, so geht diese Pflicht auf die Person über, die eine Beteiligung zwischen 33⅓ und 50 Prozent der Stimmrechte erwirbt, wenn sie nach Artikel 136 Absatz 2 FinfraG von der Angebotspflicht befreit ist."
         }
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_36",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
-      "sha": "b2db9b984fb70a9598f6b338859177c0b6e03355037ec68bb4fd3fe88e6c2b86"
+      "sha": "990bcb72d37c1a0fb9cddf291238962dd12a68f0081b3b14c5c47aca00c47efa"
     },
     {
       "id": "bund/FINFRAV_FINMA/art_37",
@@ -1452,17 +1481,18 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "37",
       "artikelLabel": "Art. 37",
+      "grundlage": "(Art. 135 Abs. 4 FinfraG)",
       "bloecke": [
         {
           "absatz": null,
-          "text": "(Art. 135 Abs. 4 FinfraG) Eine Person, die eine vor dem 1. Januar 1998 erworbene Beteiligung von 50 oder mehr Prozent der Stimmrechte einer Gesellschaft auf einen Anteil von unter 50 Prozent reduziert, muss ein Angebot nach Artikel 135 FinfraG unterbreiten, wenn sie später den Grenzwert von 50 Prozent wieder überschreitet."
+          "text": "Eine Person, die eine vor dem 1. Januar 1998 erworbene Beteiligung von 50 oder mehr Prozent der Stimmrechte einer Gesellschaft auf einen Anteil von unter 50 Prozent reduziert, muss ein Angebot nach Artikel 135 FinfraG unterbreiten, wenn sie später den Grenzwert von 50 Prozent wieder überschreitet."
         }
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_37",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
-      "sha": "6ff85ab1674698557ddb0366dd238684727c2b10d64bbb955450c1cb6e11a0a1"
+      "sha": "b33775091826cfe0db729806b1b647abc994e657905044304901e70a54416a76"
     },
     {
       "id": "bund/FINFRAV_FINMA/art_38",
@@ -1471,6 +1501,7 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "38",
       "artikelLabel": "Art. 38",
+      "grundlage": "(Art. 135 Abs. 1 und 4, 136 Abs. 2 FinfraG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1497,7 +1528,7 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_38",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
       "sha": "5167ae542e777eea042e2c202f92833319b858b0a358c72176873809e5c74170"
     },
@@ -1508,6 +1539,7 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "39",
       "artikelLabel": "Art. 39",
+      "grundlage": "(Art. 135 Abs. 1 und 4 FinfraG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1520,7 +1552,7 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_39",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
       "sha": "2edb97b3f261deefbfe8a65dc0ce318d086e38ecb3c03c24cea83f82a03a9a47"
     },
@@ -1531,6 +1563,7 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "40",
       "artikelLabel": "Art. 40",
+      "grundlage": "(Art. 135 Abs. 4, 136 FinfraG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1557,7 +1590,7 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_40",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
       "sha": "b7baf38091ade2754f1e4567a36e2319e10cd5c1917461ee64265f9b05d3f1b8"
     },
@@ -1568,6 +1601,7 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "41",
       "artikelLabel": "Art. 41",
+      "grundlage": "(Art. 135, 136 Abs. 1 FinfraG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1575,7 +1609,7 @@
         },
         {
           "absatz": "2",
-          "text": "Als weitere berechtigte Fälle nach Artikel 136 Absatz 1 FinfraG können ins­besondere die Fälle gelten, in denen:",
+          "text": "Als weitere berechtigte Fälle nach Artikel 136 Absatz 1 FinfraG können insbesondere die Fälle gelten, in denen:",
           "items": [
             {
               "marke": "a",
@@ -1583,7 +1617,7 @@
             },
             {
               "marke": "b",
-              "text": "ein Mitglied einer organisierten Gruppe nach Artikel 136 Absatz 1 Buch­stabe a FinfraG auch einzeln den Grenzwert überschreitet; oder"
+              "text": "ein Mitglied einer organisierten Gruppe nach Artikel 136 Absatz 1 Buchstabe a FinfraG auch einzeln den Grenzwert überschreitet; oder"
             },
             {
               "marke": "c",
@@ -1593,7 +1627,7 @@
         },
         {
           "absatz": "3",
-          "text": "Mit der Gewährung von Ausnahmen können Auflagen verbunden werden; ins­besondere können der erwerbenden Person Verpflichtungen für die Zukunft auferlegt werden."
+          "text": "Mit der Gewährung von Ausnahmen können Auflagen verbunden werden; insbesondere können der erwerbenden Person Verpflichtungen für die Zukunft auferlegt werden."
         },
         {
           "absatz": "4",
@@ -1602,9 +1636,9 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_41",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
-      "sha": "9f1d4ea8a9f586616add9480d62a1e2caa4b82491aa374c3c2127b750f4de814"
+      "sha": "db6b508f5d2fb220f7c0c71dd25b391ab727c4f44c4d457897f452b17edd1726"
     },
     {
       "id": "bund/FINFRAV_FINMA/art_42",
@@ -1613,10 +1647,11 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "42",
       "artikelLabel": "Art. 42",
+      "grundlage": "(Art. 135 Abs. 2–4 FinfraG)",
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Der Preis des Angebots muss für jede Art von Beteiligungspapieren der Ziel­gesellschaft mindestens dem Börsenkurs entsprechen."
+          "text": "Der Preis des Angebots muss für jede Art von Beteiligungspapieren der Zielgesellschaft mindestens dem Börsenkurs entsprechen."
         },
         {
           "absatz": "2",
@@ -1633,9 +1668,9 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_42",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
-      "sha": "54eba23065771f8057a27f63dff9ba295498d66dbe57c5da6a5f5edee9be6134"
+      "sha": "eaa623756c4beace851062419ee19cf42bd2b31e1681b53896d672199774f6f6"
     },
     {
       "id": "bund/FINFRAV_FINMA/art_43",
@@ -1644,6 +1679,7 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "43",
       "artikelLabel": "Art. 43",
+      "grundlage": "(Art. 135 Abs. 2–4 FinfraG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1659,7 +1695,7 @@
         },
         {
           "absatz": "4",
-          "text": "Hat die erwerbende oder die veräussernde Person beim vorausgegangenen Erwerb neben den Hauptleistungen andere wesent­liche Leistungen erbracht, hat sie insbesondere Sicherheiten oder Sachleistungen gewährt, so wird der Preis für den vorausgegangenen Erwerb um den Wert dieser Leistungen erhöht beziehungsweise gemindert."
+          "text": "Hat die erwerbende oder die veräussernde Person beim vorausgegangenen Erwerb neben den Hauptleistungen andere wesentliche Leistungen erbracht, hat sie insbesondere Sicherheiten oder Sachleistungen gewährt, so wird der Preis für den vorausgegangenen Erwerb um den Wert dieser Leistungen erhöht beziehungsweise gemindert."
         },
         {
           "absatz": "5",
@@ -1668,9 +1704,9 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_43",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
-      "sha": "ace1d0fe2f3bf5433c3c6dc71837c3318589c55399771a9d97302fb892b4c230"
+      "sha": "090c065a987eab32711c271df5e99262bf18ecbd69c4b3eedff0314913596641"
     },
     {
       "id": "bund/FINFRAV_FINMA/art_44",
@@ -1679,10 +1715,11 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "44",
       "artikelLabel": "Art. 44",
+      "grundlage": "(Art. 135 Abs. 2–4 FinfraG)",
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Erfolgte der vorausgegangene Erwerb indirekt im Sinne von Artikel 32 in Ver­bindung mit Artikel 11 Buchstabe c, so hat der Anbieter den auf die Beteiligungs­papiere der Zielgesellschaft entfallenden Anteil des bezahlten Preises im Angebotsprospekt offenzulegen."
+          "text": "Erfolgte der vorausgegangene Erwerb indirekt im Sinne von Artikel 32 in Verbindung mit Artikel 11 Buchstabe c, so hat der Anbieter den auf die Beteiligungspapiere der Zielgesellschaft entfallenden Anteil des bezahlten Preises im Angebotsprospekt offenzulegen."
         },
         {
           "absatz": "2",
@@ -1691,9 +1728,9 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_44",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
-      "sha": "401ca5127000af5ffc7a42f50cb42781bc09f68df5b42471f1898092ff89c035"
+      "sha": "75983b8ceda7914397e2586e8665e9380c2d7073b74d7a1cb39bb3452b4fbc9b"
     },
     {
       "id": "bund/FINFRAV_FINMA/art_45",
@@ -1702,6 +1739,7 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "45",
       "artikelLabel": "Art. 45",
+      "grundlage": "(Art. 135 Abs. 2–4 FinfraG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1714,7 +1752,7 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_45",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
       "sha": "947061cbebf835ea5b905665a6b988a85802adb9c5477ca2416ce2d6a68fda3c"
     },
@@ -1725,17 +1763,18 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "46",
       "artikelLabel": "Art. 46",
+      "grundlage": "(Art. 135 Abs. 2–4 FinfraG)",
       "bloecke": [
         {
           "absatz": null,
-          "text": "(Art. 135 Abs. 2–4 FinfraG) Für die Bestimmung des Wertes von zum Tausch angebotenen Effekten gilt Artikel 42 Absätze 2–4."
+          "text": "Für die Bestimmung des Wertes von zum Tausch angebotenen Effekten gilt Artikel 42 Absätze 2–4."
         }
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_46",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
-      "sha": "e1e78df7a9abe1f73937ee1b0184ac6d1137a6ee0a224952d124d936f5fca06a"
+      "sha": "07f0995bf73287909f37274d038f4592580213fdb1f79d35e1139b99173e8ae3"
     },
     {
       "id": "bund/FINFRAV_FINMA/art_47",
@@ -1744,17 +1783,18 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "47",
       "artikelLabel": "Art. 47",
+      "grundlage": "(Art. 135 Abs. 2–4 FinfraG)",
       "bloecke": [
         {
           "absatz": null,
-          "text": "(Art. 135 Abs. 2–4 FinfraG) Die Übernahmekommission kann aus wichtigen Gründen dem Anbieter in Einzelfällen Ausnahmen von den Regelungen dieses Abschnitts (Art. 40–44) gewähren."
+          "text": "Die Übernahmekommission kann aus wichtigen Gründen dem Anbieter in Einzelfällen Ausnahmen von den Regelungen dieses Abschnitts (Art. 40–44) gewähren."
         }
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_47",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
-      "sha": "ceec1e845151ed23df7761a8267f63969bf2d63be03b2644edd4bd3a5ce21ee3"
+      "sha": "960a41092da87fb5cb777d1eb100d681a5de5754bc0a23e08f729e140c497827"
     },
     {
       "id": "bund/FINFRAV_FINMA/art_48",
@@ -1763,6 +1803,7 @@
       "erlass": "FinfraV-FINMA",
       "artikel": "48",
       "artikelLabel": "Art. 48",
+      "grundlage": "(Art. 122, 123 Abs. 1 FinfraG; Art. 39 Abs. 1 FINMAG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1770,14 +1811,14 @@
         },
         {
           "absatz": "2",
-          "text": "Die involvierten Behörden und Stellen wahren dabei das Amts-, Berufs- und Geschäftsgeheimnis und verwenden die erhaltenen Informationen und sachbezogenen Unterlagen ausschliesslich zur Erfüllung ihrer jeweiligen gesetzlichen Auf­gaben."
+          "text": "Die involvierten Behörden und Stellen wahren dabei das Amts-, Berufs- und Geschäftsgeheimnis und verwenden die erhaltenen Informationen und sachbezogenen Unterlagen ausschliesslich zur Erfüllung ihrer jeweiligen gesetzlichen Aufgaben."
         }
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_48",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
-      "sha": "848c1b9068cefa09cbc2cf9ef50191d17d84eaa2204e54d38dde6c2a9f888265"
+      "sha": "9845b5acac1d1bd03a28e30add78d171631276e5aa812ef0526f63d22a339680"
     },
     {
       "id": "bund/FINFRAV_FINMA/art_49",
@@ -1794,7 +1835,7 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_49",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
       "sha": "5fdfd0da2b8e94f3d33dd417173c112114ce6e709a4f350286f1023c07503b81"
     },
@@ -1825,7 +1866,7 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_50",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
       "sha": "31837f0050475da232fb6c2e2c2d903e7cca3ab618b1abcdee8ca992d7c00236"
     },
@@ -1844,7 +1885,7 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_50_a",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
       "sha": "0a39ae0de1e0c80ca1e1b1693ca1e76869d4c9dcb4dbfa78abe7b42548b211d9"
     },
@@ -1867,7 +1908,7 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_50_b",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
       "sha": "db1e8e43e41ce82a6290b5eb3cb5eb6ac9cc8da240f23c6776284c67ca978d6e"
     },
@@ -1886,7 +1927,7 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#art_51",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
       "sha": "db9a6670ff2c4f562e07dd0a9776dd18fa7cdf8951d920151d67aaa4701808d6"
     },
@@ -1935,7 +1976,7 @@
               },
               {
                 "typ": "text",
-                "titel": "Art der Abwicklungs­währung"
+                "titel": "Art der Abwicklungswährung"
               },
               {
                 "typ": "text",
@@ -2086,9 +2127,9 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#annex_1",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
-      "sha": "c321c53cc6604e12544f67e406513c10c60bd09f751de7a4f99aa3dff94ea11c"
+      "sha": "9d56f4458c3992bbe3bb72c8f7857464de9045187713af9c5ad8097a9e68f377"
     },
     {
       "id": "bund/FINFRAV_FINMA/annex_2",
@@ -2130,7 +2171,7 @@
       ],
       "stand": "2023-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/855/de#annex_2",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230201",
       "sha": "23b2c347993e9a232716062cadcf05b736f658f6fb21111e36a787199e33cf15"
     }

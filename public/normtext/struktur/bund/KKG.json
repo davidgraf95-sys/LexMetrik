@@ -1,8 +1,9 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-11",
  "kopf": {
   "srNummer": "221.214.1",
   "titel": "Bundesgesetz über den Konsumkredit",
+  "erlassdatum": "vom 23. März 2001 (Stand am 1. September 2023)",
   "praeambel": [
    {
     "rolle": "autor",
@@ -68,7 +69,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -84,7 +85,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -153,7 +154,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -204,7 +205,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "e"
     },
     {
@@ -224,7 +225,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/680"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "f"
     }
    ]
@@ -269,7 +270,7 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2003/510"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -281,7 +282,7 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2003/510"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -391,7 +392,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/549"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -407,7 +408,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
-     "absatz": null,
+     "absatz": "1bis",
      "item": "b"
     },
     {
@@ -427,7 +428,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/549"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -443,7 +444,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
-     "absatz": null,
+     "absatz": "2bis",
      "item": null
     },
     {
@@ -455,7 +456,7 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     },
     {
@@ -475,7 +476,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/549"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -570,14 +571,14 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
      "nr": "19",
      "text": "Zurzeit Eidgenössisches Justiz- und Polizeidepartement",
      "links": [],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -586,34 +587,42 @@
      "links": [
       {
        "label": "SR <b>235.1</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1993/1945_1945_1945"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2022/491"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     },
     {
      "nr": "21",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 19 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (<i>AS <b>2022</b> 491</i>; BBl <b>2017</b> 6941).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 19 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
+      {
+       "label": "AS <b>2022</b> 491",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
+      },
       {
        "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     },
     {
      "nr": "22",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 19 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (<i>AS <b>2022</b> 491</i>; BBl <b>2017</b> 6941).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 19 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
+      {
+       "label": "AS <b>2022</b> 491",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
+      },
       {
        "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     }
    ]
@@ -642,7 +651,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -671,7 +680,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "b"
     },
     {
@@ -687,7 +696,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -716,7 +725,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -756,7 +765,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -768,7 +777,7 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -784,7 +793,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
-     "absatz": null,
+     "absatz": "5",
      "item": null
     }
    ]
@@ -813,7 +822,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -853,7 +862,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -873,7 +882,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/680"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -889,7 +898,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     },
     {
@@ -909,7 +918,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/680"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -922,7 +931,7 @@
     }
    ],
    "marginalie": [
-    "Sanktionen gegen Kreditgeberin­nen"
+    "Sanktionen gegen Kreditgeberinnen"
    ],
    "fussnoten": [
     {
@@ -978,7 +987,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": "b"
     }
    ]
@@ -1081,7 +1090,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -1093,7 +1102,7 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/51/117_121_129"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": "a"
     }
    ]
@@ -1126,7 +1135,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/680"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "a"
     }
    ]
@@ -1170,7 +1179,7 @@
     }
    ],
    "marginalie": [
-    "Pflicht zur Prüfung der Kreditfä­higkeit"
+    "Pflicht zur Prüfung der Kreditfähigkeit"
    ],
    "fussnoten": [
     {
@@ -1199,7 +1208,7 @@
     }
    ],
    "marginalie": [
-    "Sanktionen gegen Schwarmkre­dit-Vermittlerinnen"
+    "Sanktionen gegen Schwarmkredit-Vermittlerinnen"
    ],
    "fussnoten": [
     {

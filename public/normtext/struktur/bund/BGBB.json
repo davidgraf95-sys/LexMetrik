@@ -1,15 +1,16 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-11",
  "kopf": {
   "srNummer": "211.412.11",
   "titel": "Bundesgesetz über das bäuerliche Bodenrecht",
+  "erlassdatum": "vom 4. Oktober 1991 (Stand am 1. Januar 2014)",
   "praeambel": [
    {
     "rolle": "autor",
     "text": "Die Bundesversammlung der Schweizerischen Eidgenossenschaft,"
    },
    {
-    "rolle": "ingress",
+    "rolle": "praeambel",
     "text": "gestützt auf die Artikel 22, 31 und 64 der Bundesverfassung,",
     "fnNrs": [
      "1",
@@ -17,7 +18,7 @@
     ]
    },
    {
-    "rolle": "ingress",
+    "rolle": "praeambel",
     "text": "nach Einsicht in die Botschaft des Bundesrates vom 19. Oktober 1988,",
     "fnNrs": [
      "3"
@@ -31,7 +32,7 @@
   "fussnoten": [
    {
     "nr": "1",
-    "text": "[BS<b> 1</b> 3; AS <b>1969</b> 1249, <b>1996</b> 2502]. Den genannten Bestimmungen entsprechen heute die Art. 26, <i>36</i>, <i>104 </i>und <i>122 </i>der BV vom 18. April 1999 (SR <b>101</b>).",
+    "text": "[BS<b> 1</b> 3; AS <b>1969</b> 1249, <b>1996</b> 2502]. Den genannten Bestimmungen entsprechen heute die Art. 26, 36, 104 und 122 der BV vom 18. April 1999 (SR <b>101</b>).",
     "links": [
      {
       "label": "AS <b>1969</b> 1249",
@@ -43,7 +44,7 @@
      },
      {
       "label": "SR <b>101</b>",
-      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404/20200101"
+      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404"
      }
     ],
     "absatz": null,
@@ -67,7 +68,7 @@
     "links": [
      {
       "label": "BBl <b>1988</b> III 953",
-      "url": "https://fedlex.data.admin.ch/eli/fga/1988/3_953__"
+      "url": "https://fedlex.data.admin.ch/eli/fga/1988/3_953_889_821"
      }
     ],
     "absatz": null,
@@ -118,10 +119,10 @@
      "links": [
       {
        "label": "SR <b>700</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1979/1573_1573_1573/20190101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1979/1573_1573_1573"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "a"
     },
     {
@@ -137,7 +138,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "b"
     },
     {
@@ -153,7 +154,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     },
     {
@@ -173,7 +174,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/356"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     }
    ]
@@ -214,7 +215,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/356"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     }
    ]
@@ -322,7 +323,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/775"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -342,7 +343,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/356"
       }
      ],
-     "absatz": null,
+     "absatz": "4bis",
      "item": null
     }
    ]
@@ -372,7 +373,7 @@
       },
       {
        "label": "BBl <b>1996</b> IV 1",
-       "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1__"
+       "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1_1_1"
       }
      ],
      "absatz": null,
@@ -384,7 +385,7 @@
      "links": [
       {
        "label": "SR <b>221.213.2</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1986/926_926_926/20140101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1986/926_926_926"
       }
      ],
      "absatz": null,
@@ -417,10 +418,10 @@
       },
       {
        "label": "BBl <b>1996</b> IV 1",
-       "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1__"
+       "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1_1_1"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -450,7 +451,7 @@
       },
       {
        "label": "BBl <b>1996</b> III 513",
-       "url": "https://fedlex.data.admin.ch/eli/fga/1996/3_513__"
+       "url": "https://fedlex.data.admin.ch/eli/fga/1996/3_513_485_457"
       },
       {
        "label": "AS <b>2003 </b>4123",
@@ -461,7 +462,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -506,7 +507,7 @@
    "fussnoten": [
     {
      "nr": "17",
-     "text": "Ausdruck gemäss Anhang Ziff. 9 des BG vom 19. Dez. 2008 (Erwachsenenschutz, Per­sonenrecht und Kindesrecht), in Kraft seit 1. Jan. 2013 (AS <b>2011</b> 725; BBl <b>2006 </b>7001). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
+     "text": "Ausdruck gemäss Anhang Ziff. 9 des BG vom 19. Dez. 2008 (Erwachsenenschutz, Personenrecht und Kindesrecht), in Kraft seit 1. Jan. 2013 (AS <b>2011</b> 725; BBl <b>2006 </b>7001). Diese Änd. wurde im ganzen Erlass berücksichtigt.",
      "links": [
       {
        "label": "AS <b>2011</b> 725",
@@ -517,7 +518,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/899"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -833,7 +834,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "c"
     }
    ]
@@ -908,7 +909,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "d"
     }
    ]
@@ -1014,10 +1015,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     }
    ]
@@ -1062,10 +1063,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -1098,7 +1099,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "2"
     },
     {
@@ -1107,10 +1108,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -1170,10 +1171,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -1203,10 +1204,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -1331,10 +1332,10 @@
      "links": [
       {
        "label": "SR <b>221.213.2</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1986/926_926_926/20140101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1986/926_926_926"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "b"
     },
     {
@@ -1350,7 +1351,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -1415,10 +1416,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "3"
     }
    ]
@@ -1435,7 +1436,7 @@
     },
     {
      "ebene": 3,
-     "label": "5. Abschnitt: Gemeinsame Bestimmungen zu den bundesrechtlichen Vorkaufsrech­ten"
+     "label": "5. Abschnitt: Gemeinsame Bestimmungen zu den bundesrechtlichen Vorkaufsrechten"
     }
    ],
    "marginalie": [],
@@ -1470,7 +1471,7 @@
     },
     {
      "ebene": 3,
-     "label": "5. Abschnitt: Gemeinsame Bestimmungen zu den bundesrechtlichen Vorkaufsrech­ten"
+     "label": "5. Abschnitt: Gemeinsame Bestimmungen zu den bundesrechtlichen Vorkaufsrechten"
     }
    ],
    "marginalie": [
@@ -1489,7 +1490,7 @@
     },
     {
      "ebene": 3,
-     "label": "5. Abschnitt: Gemeinsame Bestimmungen zu den bundesrechtlichen Vorkaufsrech­ten"
+     "label": "5. Abschnitt: Gemeinsame Bestimmungen zu den bundesrechtlichen Vorkaufsrechten"
     }
    ],
    "marginalie": [
@@ -1508,7 +1509,7 @@
     },
     {
      "ebene": 3,
-     "label": "5. Abschnitt: Gemeinsame Bestimmungen zu den bundesrechtlichen Vorkaufsrech­ten"
+     "label": "5. Abschnitt: Gemeinsame Bestimmungen zu den bundesrechtlichen Vorkaufsrechten"
     }
    ],
    "marginalie": [
@@ -1527,7 +1528,7 @@
     },
     {
      "ebene": 3,
-     "label": "5. Abschnitt: Gemeinsame Bestimmungen zu den bundesrechtlichen Vorkaufsrech­ten"
+     "label": "5. Abschnitt: Gemeinsame Bestimmungen zu den bundesrechtlichen Vorkaufsrechten"
     }
    ],
    "marginalie": [
@@ -1546,7 +1547,7 @@
     },
     {
      "ebene": 3,
-     "label": "5. Abschnitt: Gemeinsame Bestimmungen zu den bundesrechtlichen Vorkaufsrech­ten"
+     "label": "5. Abschnitt: Gemeinsame Bestimmungen zu den bundesrechtlichen Vorkaufsrechten"
     }
    ],
    "marginalie": [
@@ -1615,7 +1616,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/775"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -1660,10 +1661,10 @@
       },
       {
        "label": "BBl <b>1996</b> III 513",
-       "url": "https://fedlex.data.admin.ch/eli/fga/1996/3_513__"
+       "url": "https://fedlex.data.admin.ch/eli/fga/1996/3_513_485_457"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -1679,7 +1680,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "b"
     },
     {
@@ -1692,10 +1693,10 @@
       },
       {
        "label": "BBl <b>1996</b> IV 1",
-       "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1__"
+       "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1_1_1"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "c"
     },
     {
@@ -1708,10 +1709,10 @@
       },
       {
        "label": "BBl <b>1996</b> III 513",
-       "url": "https://fedlex.data.admin.ch/eli/fga/1996/3_513__"
+       "url": "https://fedlex.data.admin.ch/eli/fga/1996/3_513_485_457"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "e"
     },
     {
@@ -1720,10 +1721,10 @@
      "links": [
       {
        "label": "SR <b>700</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1979/1573_1573_1573/20190101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1979/1573_1573_1573"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "e"
     },
     {
@@ -1736,7 +1737,7 @@
       },
       {
        "label": "BBl <b>1996</b> IV 1",
-       "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1__"
+       "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1_1_1"
       },
       {
        "label": "AS <b>2003 </b>4123",
@@ -1747,7 +1748,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "f"
     },
     {
@@ -1760,10 +1761,10 @@
       },
       {
        "label": "BBl <b>1996</b> IV 1",
-       "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1__"
+       "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1_1_1"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "g"
     },
     {
@@ -1776,10 +1777,10 @@
       },
       {
        "label": "BBl <b>1996</b> IV 1",
-       "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1__"
+       "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1_1_1"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "h"
     },
     {
@@ -1795,7 +1796,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "i"
     },
     {
@@ -1808,10 +1809,10 @@
       },
       {
        "label": "BBl <b>1996</b> IV 1",
-       "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1__"
+       "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1_1_1"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "c"
     }
    ]
@@ -1884,7 +1885,7 @@
      "links": [
       {
        "label": "SR <b>221.301</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2004/320/20140101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2004/320"
       }
      ],
      "absatz": null,
@@ -1937,10 +1938,10 @@
       },
       {
        "label": "BBl <b>1996</b> IV 1",
-       "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1__"
+       "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1_1_1"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "c"
     },
     {
@@ -1953,10 +1954,10 @@
       },
       {
        "label": "BBl <b>1996</b> IV 1",
-       "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1__"
+       "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1_1_1"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -1986,10 +1987,10 @@
       },
       {
        "label": "BBl <b>1996</b> IV 1",
-       "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1__"
+       "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1_1_1"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "a"
     },
     {
@@ -1998,10 +1999,10 @@
      "links": [
       {
        "label": "SR <b>700</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1979/1573_1573_1573/20190101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1979/1573_1573_1573"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "b"
     },
     {
@@ -2014,10 +2015,10 @@
       },
       {
        "label": "BBl <b>1996</b> IV 1",
-       "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1__"
+       "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1_1_1"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "g"
     }
    ]
@@ -2065,7 +2066,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/775"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -2108,7 +2109,7 @@
       },
       {
        "label": "BBl <b>1996</b> IV 1",
-       "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1__"
+       "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1_1_1"
       }
      ],
      "absatz": null,
@@ -2182,10 +2183,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     }
    ]
@@ -2214,7 +2215,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -2230,7 +2231,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -2252,10 +2253,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -2277,10 +2278,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "a"
     },
     {
@@ -2296,7 +2297,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "c"
     },
     {
@@ -2305,10 +2306,10 @@
      "links": [
       {
        "label": "SR <b>910.1</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1998/3033_3033_3033/20190101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1998/3033_3033_3033"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "c"
     }
    ]
@@ -2352,10 +2353,10 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     },
     {
@@ -2371,7 +2372,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/756"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -2384,7 +2385,7 @@
     }
    ],
    "marginalie": [
-    "Anerkennung von Genossenschaften, Stiftungen und kantonalen In­stitu­tionen"
+    "Anerkennung von Genossenschaften, Stiftungen und kantonalen Institutionen"
    ]
   },
   "80": {
@@ -2519,7 +2520,7 @@
      "links": [
       {
        "label": "SR <b>700</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1979/1573_1573_1573/20190101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/1979/1573_1573_1573"
       }
      ],
      "absatz": null,
@@ -2578,7 +2579,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
-     "absatz": null,
+     "absatz": "1bis",
      "item": null
     },
     {
@@ -2594,7 +2595,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     }
    ]
@@ -2641,7 +2642,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/974"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -2683,7 +2684,7 @@
      "links": [
       {
        "label": "SR <b>173.110</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2006/218/20190101"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2006/218"
       }
      ],
      "absatz": null,
@@ -2719,7 +2720,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -2752,7 +2753,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/775"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]

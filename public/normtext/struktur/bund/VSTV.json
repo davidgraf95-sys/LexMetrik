@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-11",
  "kopf": {
   "srNummer": "642.211",
   "titel": "Verordnung über die Verrechnungssteuer",
@@ -1697,10 +1697,10 @@
    "fussnoten": [
     {
      "nr": "80",
-     "text": "SR 221.229.1",
+     "text": "SR <b>221.229.1</b>",
      "links": [
       {
-       "label": "SR 221.229.1",
+       "label": "SR <b>221.229.1</b>",
        "url": "https://fedlex.data.admin.ch/eli/cc/24/719_735_717"
       }
      ],
@@ -1709,9 +1709,14 @@
     },
     {
      "nr": "81",
-     "text": "Eingefügt durch Ziff. I der V vom 9. Juni 2023, in Kraft seit 1. Jan. 2025 (AS 2023 305).",
-     "links": [],
-     "absatz": null,
+     "text": "Eingefügt durch Ziff. I der V vom 9. Juni 2023, in Kraft seit 1. Jan. 2025 (AS <b>2023</b> 305).",
+     "links": [
+      {
+       "label": "AS <b>2023</b> 305",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/305"
+      }
+     ],
+     "absatz": "6",
      "item": null
     }
    ]
@@ -2595,11 +2600,15 @@
    "fussnoten": [
     {
      "nr": "77",
-     "text": "Eingefügt durch Anhang 2 Ziff. II 3 der Geldspielverordnung vom 7. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5155).",
+     "text": "Eingefügt durch Anhang 2 Ziff. II 3 der Geldspielverordnung vom 7. Nov. 2018 (AS <b>2018</b> 5155). Fassung gemäss Ziff. I der V vom 10. April 2024, in Kraft seit 1. Juni 2024 (AS <b>2024</b> 161).",
      "links": [
       {
        "label": "AS <b>2018</b> 5155",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/796"
+      },
+      {
+       "label": "AS <b>2024</b> 161",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/161"
       }
      ],
      "absatz": null,
@@ -2626,11 +2635,15 @@
    "fussnoten": [
     {
      "nr": "78",
-     "text": "Eingefügt durch Anhang 2 Ziff. II 3 der Geldspielverordnung vom 7. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5155).",
+     "text": "Eingefügt durch Anhang 2 Ziff. II 3 der Geldspielverordnung vom 7. Nov. 2018 (AS <b>2018</b> 5155). Fassung gemäss Ziff. I der V vom 10. April 2024, in Kraft seit 1. Juni 2024 (AS <b>2024</b> 161).",
      "links": [
       {
        "label": "AS <b>2018</b> 5155",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/796"
+      },
+      {
+       "label": "AS <b>2024</b> 161",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/161"
       }
      ],
      "absatz": null,
@@ -2657,11 +2670,15 @@
    "fussnoten": [
     {
      "nr": "79",
-     "text": "Eingefügt durch Anhang 2 Ziff. II 3 der Geldspielverordnung vom 7. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018</b> 5155).",
+     "text": "Eingefügt durch Anhang 2 Ziff. II 3 der Geldspielverordnung vom 7. Nov. 2018 (AS <b>2018</b> 5155). Fassung gemäss Ziff. I der V vom 10. April 2024, in Kraft seit 1. Juni 2024 (AS <b>2024</b> 161).",
      "links": [
       {
        "label": "AS <b>2018</b> 5155",
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/796"
+      },
+      {
+       "label": "AS <b>2024</b> 161",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2024/161"
       }
      ],
      "absatz": null,

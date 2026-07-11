@@ -1,7 +1,8 @@
 import { describe, it, expect } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { lesePins } from '../../scripts/fedlex-pins';
+import { lesePins, lesePinsVoll } from '../../scripts/fedlex-pins';
+import { nAusUrl } from '../../scripts/fedlex-manifest';
 
 // ─── P1-b Parser-Selbsttest (QS-CURRENCY) ────────────────────────────────────
 // Der Pin-Parser (fedlex-pins.ts) ist die SSoT-Brücke zwischen cache.sh und
@@ -49,5 +50,30 @@ describe('fedlex-pins Parser-Selbsttest', () => {
   it('Pin-Namen sind eindeutig (kein Duplikat/Kollision in cache.sh)', () => {
     const namen = lesePins().map((p) => p.name);
     expect(new Set(namen).size).toBe(namen.length);
+  });
+});
+
+// ─── P1-a/b Kanonik: voller Pin-Parser + html-N-Extraktion ───────────────────
+describe('fedlex-pins lesePinsVoll + Manifest-Kanonik', () => {
+  it('lesePinsVoll liest exakt so viele Pins wie lesePins (gleiches 6-Feld-Format)', () => {
+    expect(lesePinsVoll().length).toBe(lesePins().length);
+  });
+
+  it('parst n als Zahl, anker als Liste, sr-Feld', () => {
+    const or = lesePinsVoll().find((p) => p.name === 'or');
+    expect(or).toBeTruthy();
+    expect(Number.isInteger(or!.n)).toBe(true);
+    expect(or!.anker.length).toBeGreaterThan(0);
+    expect(or!.anker.every((a) => /^art_/.test(a))).toBe(true);
+    expect(or!.sr).toBe('220');
+    expect(or!.konsKompakt).toMatch(/^\d{8}$/);
+  });
+
+  it('nAusUrl liest das kanonische html-N (Suffix bzw. echt suffixlos=0)', () => {
+    const base = 'https://x/eli/cc/2009/615/20250331/de/html/fedlex-data-admin-ch-eli-cc-2009-615-20250331-de-html';
+    expect(nAusUrl(`${base}-3.html`)).toBe(3);
+    expect(nAusUrl(`${base}-14.html`)).toBe(14);
+    expect(nAusUrl(`${base}.html`)).toBe(0);
+    expect(nAusUrl('https://x/foo.pdf')).toBeNull();
   });
 });

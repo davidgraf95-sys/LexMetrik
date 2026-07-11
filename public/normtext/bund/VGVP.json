@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-30",
+  "erzeugt": "2026-07-11",
   "eintraege": [
     {
       "id": "bund/VGVP/art_1",
@@ -30,7 +30,7 @@
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2000/299/de#art_1",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20220101",
       "sha": "d0d55c37358978bb49b5fb9a9d4203f58ac88d0d606fc5cb27b840f880c27143"
     },
@@ -48,18 +48,18 @@
         },
         {
           "absatz": "2",
-          "text": "Als Einwegverpackungen gelten Getränkeverpackungen, die nicht zur Wieder­befüllung vorgesehen sind."
+          "text": "Als Einwegverpackungen gelten Getränkeverpackungen, die nicht zur Wiederbefüllung vorgesehen sind."
         },
         {
           "absatz": "3",
-          "text": "Als Verwertung von Getränkeverpackungen gilt die Herstellung neuer Verpa­ckun­gen oder anderer Produkte aus gebrauchten Verpackungen."
+          "text": "Als Verwertung von Getränkeverpackungen gilt die Herstellung neuer Verpackungen oder anderer Produkte aus gebrauchten Verpackungen."
         }
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2000/299/de#art_2",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20220101",
-      "sha": "75ee8ae80f76a9dc11a96f74165c55a7fa14e57af441ec2b5f3d27548a566b4b"
+      "sha": "3aebbc19114a51c08f500536b0025326610eb6013b74788ffecc1d07d5f494b1"
     },
     {
       "id": "bund/VGVP/art_3",
@@ -71,14 +71,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Händler, Hersteller und Importeure dürfen Getränke nur in Verpackungen abgeben, die bei der Sammlung, Behandlung oder Verwertung durch bestehende Organisa­tionen nicht zu erheblichen Mehrkosten oder zu erheblichen technischen Schwierig­keiten führen."
+          "text": "Händler, Hersteller und Importeure dürfen Getränke nur in Verpackungen abgeben, die bei der Sammlung, Behandlung oder Verwertung durch bestehende Organisationen nicht zu erheblichen Mehrkosten oder zu erheblichen technischen Schwierigkeiten führen."
         }
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2000/299/de#art_3",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20220101",
-      "sha": "8a6e65a31e8eaef16e305d83148ba38d3c85aa164593b9479e088a354eb0c5b3"
+      "sha": "53366859139458a5e914e1ea4783283afa5248ba516f71ecb17ab45905fcf65a"
     },
     {
       "id": "bund/VGVP/art_4",
@@ -94,7 +94,7 @@
           "items": [
             {
               "marke": "a",
-              "text": "Mehrwegverpackungen als solche kennzeichnen; dies gilt nicht für Restau­rationsbetriebe;"
+              "text": "Mehrwegverpackungen als solche kennzeichnen; dies gilt nicht für Restaurationsbetriebe;"
             },
             {
               "marke": "b",
@@ -102,16 +102,16 @@
             },
             {
               "marke": "c",
-              "text": "auf Einwegverpackungen aus PVC den Namen und die Adresse eines Rück­nahmepflichtigen im Inland angeben."
+              "text": "auf Einwegverpackungen aus PVC den Namen und die Adresse eines Rücknahmepflichtigen im Inland angeben."
             }
           ]
         }
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2000/299/de#art_4",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20220101",
-      "sha": "f2f377f94535c25302bd69b9cec0d3f57931e5c6840576d86884f9d76d972941"
+      "sha": "1bdcd91931ab0ad793814787d21c410c882653a242ee063993694f54bbd1432f"
     },
     {
       "id": "bund/VGVP/art_5",
@@ -123,7 +123,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Händler, Hersteller und Importeure, die Getränke in Mehrwegverpackungen an Verbraucher abgeben, müssen ein Pfand erheben. Sie müssen Mehrwegverpa­ckungen, die sie in ihrem Sortiment führen, gegen Rückerstattung des Pfandes zurücknehmen."
+          "text": "Händler, Hersteller und Importeure, die Getränke in Mehrwegverpackungen an Verbraucher abgeben, müssen ein Pfand erheben. Sie müssen Mehrwegverpackungen, die sie in ihrem Sortiment führen, gegen Rückerstattung des Pfandes zurücknehmen."
         },
         {
           "absatz": "2",
@@ -131,11 +131,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "Inhaber von Restaurationsbetrieben, die das Einsammeln der Mehrwegver­packungen sicherstellen;"
+              "text": "Inhaber von Restaurationsbetrieben, die das Einsammeln der Mehrwegverpackungen sicherstellen;"
             },
             {
               "marke": "b",
-              "text": "Händler, Hersteller und Importeure, die bei der Hauslieferung den Verbrau­chern für die nicht zurückgegebenen Mehrwegverpackungen einen Betrag in der Höhe des Pfandes in Rechnung stellen."
+              "text": "Händler, Hersteller und Importeure, die bei der Hauslieferung den Verbrauchern für die nicht zurückgegebenen Mehrwegverpackungen einen Betrag in der Höhe des Pfandes in Rechnung stellen."
             }
           ]
         },
@@ -146,9 +146,9 @@
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2000/299/de#art_5",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20220101",
-      "sha": "9c7602f80435c32665a9fd5dba44dcda0adbe762b001d00e7b8fd7a56d037aba"
+      "sha": "208571e7eaa452d06117084f99b3c5b2d15be5de9fd85affaea45ada392ccb88"
     },
     {
       "id": "bund/VGVP/art_6",
@@ -160,7 +160,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Händler, Hersteller und Importeure, die Getränke in Einwegverpackungen aus PVC an Verbraucher abgeben, müssen ein Pfand erheben. Sie müssen Einwegverpa­ckungen aus PVC, die sie in ihrem Sortiment führen, gegen Rückerstattung des Pfandes zurücknehmen und auf eigene Rechnung der Verwertung zuführen."
+          "text": "Händler, Hersteller und Importeure, die Getränke in Einwegverpackungen aus PVC an Verbraucher abgeben, müssen ein Pfand erheben. Sie müssen Einwegverpackungen aus PVC, die sie in ihrem Sortiment führen, gegen Rückerstattung des Pfandes zurücknehmen und auf eigene Rechnung der Verwertung zuführen."
         },
         {
           "absatz": "2",
@@ -173,9 +173,9 @@
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2000/299/de#art_6",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20220101",
-      "sha": "b3452fe64cd640a7cb2f0e430f0ad40647d190387f286e88423fd05a4a3223fd"
+      "sha": "25db8c25ebffaee870db54998398c44ef50d1f048595905720c3c7fa4b22ee0d"
     },
     {
       "id": "bund/VGVP/art_7",
@@ -187,7 +187,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Händler, Hersteller und Importeure, die Getränke in Einwegverpackungen aus PET oder Metall an Verbraucher abgeben und die Entsorgung aller von ihnen abge­gebenen Verpackungen nicht durch finanzielle Beiträge an eine private Organisation sicherstellen, müssen:",
+          "text": "Händler, Hersteller und Importeure, die Getränke in Einwegverpackungen aus PET oder Metall an Verbraucher abgeben und die Entsorgung aller von ihnen abgegebenen Verpackungen nicht durch finanzielle Beiträge an eine private Organisation sicherstellen, müssen:",
           "items": [
             {
               "marke": "a",
@@ -210,9 +210,9 @@
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2000/299/de#art_7",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20220101",
-      "sha": "b8997b2a513be050d9a8fa86c55f66b949ec3b65a8a38aa3a3d0fa0f082b427f"
+      "sha": "e51abdc048438b8e91ab260dc337475fcdabba7196d0e2cb4f4bbf114451ec05"
     },
     {
       "id": "bund/VGVP/art_8",
@@ -224,7 +224,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Verwertungsquote bei Getränkeverpackungen aus Glas, PET und Aluminium soll je mindestens 75 Prozent betragen. Die Verwertungsquote eines Verpackungs­materials ist der prozentuale Anteil der während eines Kalenderjahres verwerteten Verpackungen am gesamten für die Verwendung im Inland abgegebenen Gewicht der Einwegverpackungen aus diesem Material."
+          "text": "Die Verwertungsquote bei Getränkeverpackungen aus Glas, PET und Aluminium soll je mindestens 75 Prozent betragen. Die Verwertungsquote eines Verpackungsmaterials ist der prozentuale Anteil der während eines Kalenderjahres verwerteten Verpackungen am gesamten für die Verwendung im Inland abgegebenen Gewicht der Einwegverpackungen aus diesem Material."
         },
         {
           "absatz": "2",
@@ -240,24 +240,24 @@
             },
             {
               "marke": "c",
-              "text": "die zurückgenommenen Verpackungen auf eigene Rechnung der Verwer­tung zuzuführen."
+              "text": "die zurückgenommenen Verpackungen auf eigene Rechnung der Verwertung zuzuführen."
             }
           ]
         },
         {
           "absatz": "3",
-          "text": "Das UVEK kann die Pfandpflicht auf diejenigen Verpackungen einschränken, welche die wesentliche Ursache für die ungenügende Verwertungsquote bilden. Es kann Ausnahmen von der Pfandpflicht festlegen, wenn die Verwertung der Ver­packungen auf andere Weise sichergestellt ist."
+          "text": "Das UVEK kann die Pfandpflicht auf diejenigen Verpackungen einschränken, welche die wesentliche Ursache für die ungenügende Verwertungsquote bilden. Es kann Ausnahmen von der Pfandpflicht festlegen, wenn die Verwertung der Verpackungen auf andere Weise sichergestellt ist."
         },
         {
           "absatz": "4",
-          "text": "Geben Hersteller und Importeure jährlich mehr als 100 t verwertbare Einwegver­packungen aus einem anderen Verpackungsmaterial als Glas, PET, Aluminium oder PVC ab, so kann das UVEK auch für dieses eine Mindestverwertungsquote und Massnahmen nach Absatz 2 festlegen."
+          "text": "Geben Hersteller und Importeure jährlich mehr als 100 t verwertbare Einwegverpackungen aus einem anderen Verpackungsmaterial als Glas, PET, Aluminium oder PVC ab, so kann das UVEK auch für dieses eine Mindestverwertungsquote und Massnahmen nach Absatz 2 festlegen."
         }
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2000/299/de#art_8",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20220101",
-      "sha": "05806ba5e231c3a481cee9f4dbba252ff0ddac59fdf5835036fa484e90662f51"
+      "sha": "abe17e380a84a2158067493e6eef939f1165950619f7b7985a66a6f0d201aec8"
     },
     {
       "id": "bund/VGVP/art_9",
@@ -269,7 +269,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Hersteller, die leere Getränkeverpackungen aus Glas für die Verwendung im Inland abgeben und Importeure, die solche Verpackungen einführen, müssen für diese einer vom Bundesamt für Umwelt (BAFU) beauftragten Organi­sation (Organisation) eine vorgezogene Entsorgungsgebühr (Gebühr) entrichten."
+          "text": "Hersteller, die leere Getränkeverpackungen aus Glas für die Verwendung im Inland abgeben und Importeure, die solche Verpackungen einführen, müssen für diese einer vom Bundesamt für Umwelt (BAFU) beauftragten Organisation (Organisation) eine vorgezogene Entsorgungsgebühr (Gebühr) entrichten."
         },
         {
           "absatz": "2",
@@ -281,20 +281,20 @@
           "items": [
             {
               "marke": "a",
-              "text": "Hersteller und Importeure, die Getränkeverpackungen mit einem Füll­­volumen von weniger als 0,09 l abgeben oder einführen;"
+              "text": "Hersteller und Importeure, die Getränkeverpackungen mit einem Füllvolumen von weniger als 0,09 l abgeben oder einführen;"
             },
             {
               "marke": "b",
-              "text": "Hersteller und Importeure, die pro Kalenderhalbjahr weniger als 1000 Ge­trän­keverpackungen abgeben oder einführen."
+              "text": "Hersteller und Importeure, die pro Kalenderhalbjahr weniger als 1000 Getränkeverpackungen abgeben oder einführen."
             }
           ]
         }
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2000/299/de#art_9",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20220101",
-      "sha": "d6c8d7f04d4021d9b24403755675e2a1ce636ba113b4169b01fadfc800809b5e"
+      "sha": "3521f80fa64257f46eae592edba8737931489451ca8054521a3000b4b9cb7b39"
     },
     {
       "id": "bund/VGVP/art_10",
@@ -319,7 +319,7 @@
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2000/299/de#art_10",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20220101",
       "sha": "099ddb4ec98a6ce0cf2abe3408b6d18001ae11c612c128558bb99a280e1863b4"
     },
@@ -333,11 +333,11 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Gebührenpflichtige müssen der Organisation spätestens 30 Tage nach Ablauf eines Kalenderhalbjahres die Anzahl der gebührenbelasteten Getränkeverpackungen mitteilen, die sie während dieses Zeitraumes abgegeben oder eingeführt haben. Sie glie­dern die Angaben nach den Vorgaben der Organisation und nach der Gebühren­höhe."
+          "text": "Gebührenpflichtige müssen der Organisation spätestens 30 Tage nach Ablauf eines Kalenderhalbjahres die Anzahl der gebührenbelasteten Getränkeverpackungen mitteilen, die sie während dieses Zeitraumes abgegeben oder eingeführt haben. Sie gliedern die Angaben nach den Vorgaben der Organisation und nach der Gebührenhöhe."
         },
         {
           "absatz": "2",
-          "text": "Die Gebühr für die während eines Kalenderhalbjahres abgegebenen oder ein­geführten Verpackungen wird jeweils 60 Tage nach dessen Ablauf fällig. Bei verspäteter Zahlung ist ein Verzugszins geschuldet; auf Vorauszahlungen kann die Organisation einen Vergütungszins gewähren."
+          "text": "Die Gebühr für die während eines Kalenderhalbjahres abgegebenen oder eingeführten Verpackungen wird jeweils 60 Tage nach dessen Ablauf fällig. Bei verspäteter Zahlung ist ein Verzugszins geschuldet; auf Vorauszahlungen kann die Organisation einen Vergütungszins gewähren."
         },
         {
           "absatz": "3",
@@ -346,9 +346,9 @@
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2000/299/de#art_11",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20220101",
-      "sha": "b9f7fc59e6e298b3aa395e48915df457360fbe8672f8274e41ee9afcccd0ad98"
+      "sha": "19ebf6cf0f06a612497fce3745c9310b3ab968b3f735d3ef48bd2c3e8b1e0768"
     },
     {
       "id": "bund/VGVP/art_12",
@@ -372,7 +372,7 @@
             },
             {
               "marke": "c",
-              "text": "das Reinigen und Aufbereiten von Glasscherben zur Herstellung von Ver­packungen und anderen Produkten;"
+              "text": "das Reinigen und Aufbereiten von Glasscherben zur Herstellung von Verpackungen und anderen Produkten;"
             },
             {
               "marke": "d",
@@ -384,16 +384,20 @@
             },
             {
               "marke": "f",
-              "text": "ihre eigenen Tätigkeiten im Rahmen des Auftrages des BAFU."
+              "text": "ihre eigenen Tätigkeiten im Rahmen des Auftrages des BAFU;"
+            },
+            {
+              "marke": "g",
+              "text": "die Deckung des Aufwands des BAFU für die Erfüllung seiner Aufgaben nach dieser Verordnung."
             }
           ]
         }
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2000/299/de#art_12",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20220101",
-      "sha": "2bedc0b38c970fe550910d5b9c7b52da8ad7c97d0ee3cf11474917e539262bb9"
+      "sha": "fac58fcf6df8c82947b8031b83012a1edb829c66ea36fcc5780cd2bbceae3063"
     },
     {
       "id": "bund/VGVP/art_13",
@@ -409,18 +413,18 @@
         },
         {
           "absatz": "2",
-          "text": "Die Organisation leistet Zahlungen an Dritte nur, soweit diese die Tätigkeiten wirtschaftlich und sachgemäss ausführen. Sie kann zu diesem Zweck Abklärungen durch­führen."
+          "text": "Die Organisation leistet Zahlungen an Dritte nur, soweit diese die Tätigkeiten wirtschaftlich und sachgemäss ausführen. Sie kann zu diesem Zweck Abklärungen durchführen."
         },
         {
           "absatz": "3",
-          "text": "Die Organisation leistet Zahlungen für Tätigkeiten nach Artikel 12 Buchstaben a–d auf Grund der verfügbaren Mittel. Sie berücksichtigt dabei insbesondere die Menge und Qualität des Altglases und die Belastung der Umwelt durch diese Tätig­keiten."
+          "text": "Die Organisation leistet Zahlungen für Tätigkeiten nach Artikel 12 Buchstaben a–d auf Grund der verfügbaren Mittel. Sie berücksichtigt dabei insbesondere die Menge und Qualität des Altglases und die Belastung der Umwelt durch diese Tätigkeiten."
         }
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2000/299/de#art_13",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20220101",
-      "sha": "c36c30e7b28173b96b7da3b28cd0fb89441d499dc36b84341c353a21e41dbdf0"
+      "sha": "0e3a8ff3061e633d7828586ccd2a511d552e99a432c5ea9d37d45520dd54bfb5"
     },
     {
       "id": "bund/VGVP/art_14",
@@ -440,14 +444,14 @@
         },
         {
           "absatz": "3",
-          "text": "Gesuche um Rückerstattung der Gebühr können bei der Organisation für jedes Kalenderhalbjahr eingereicht werden, müssen aber spätestens bis 31. März des nach­folgenden Jahres gestellt werden."
+          "text": "Gesuche um Rückerstattung der Gebühr können bei der Organisation für jedes Kalenderhalbjahr eingereicht werden, müssen aber spätestens bis 31. März des nachfolgenden Jahres gestellt werden."
         }
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2000/299/de#art_14",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20220101",
-      "sha": "4886c603b6ff2b3210967e01437b048065134229d7f0c401ecced06c2d6f096a"
+      "sha": "f6caea6ec7d1407ec87af6f47c1771d4aeb3a7aaa48e6fefcc0cfc20581b546d"
     },
     {
       "id": "bund/VGVP/art_15",
@@ -467,22 +471,22 @@
         },
         {
           "absatz": "3",
-          "text": "Die Organisation muss unabhängige Dritte mit der Revision betrauen. Sie muss ihnen alle erforderlichen Auskünfte erteilen und Akteneinsicht gewähren."
+          "text": "Die Organisation muss interne Kontrollen der Geschäftsführung durchführen und vom BAFU genehmigte, unabhängige Dritte mit der Prüfung der internen Kontrollergebnisse und mit der Revision betrauen. Sie muss ihnen alle erforderlichen Auskünfte erteilen und Akteneinsicht gewähren."
         },
         {
           "absatz": "4",
-          "text": "Sie kann mit dem BAZG die Erhebung der Gebühr bei der Einfuhr vereinbaren. Das BAZG kann sich dabei ver­pflich­ten, der Organisation die Angaben in den Zolldeklarationen sowie weitere Feststellungen im Zusammenhang mit der Ein- oder Ausfuhr von Getränke­verpackungen mitzuteilen."
+          "text": "Sie kann mit dem BAZG die Erhebung der Gebühr bei der Einfuhr vereinbaren. Das BAZG kann sich dabei verpflichten, der Organisation die Angaben in den Zolldeklarationen sowie weitere Feststellungen im Zusammenhang mit der Ein- oder Ausfuhr von Getränkeverpackungen mitzuteilen."
         },
         {
           "absatz": "5",
-          "text": "Die Organisation wahrt gegenüber Dritten das Geschäftsgeheimnis der Gebühren­pflichtigen."
+          "text": "Die Organisation wahrt gegenüber Dritten das Geschäftsgeheimnis der Gebührenpflichtigen."
         }
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2000/299/de#art_15",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20220101",
-      "sha": "53183cee2a6323e901e8e8edad3760189ebcc972c1b8712407b8117b79b67aec"
+      "sha": "e23e4ee09ae2662381670933397b6d6743ed05d630792299ccc67ce5135bead2"
     },
     {
       "id": "bund/VGVP/art_16",
@@ -514,7 +518,7 @@
             },
             {
               "marke": "c",
-              "text": "die Anzahl der ihr für das Vorjahr mitgeteilten gebührenbelasteten Getränke­verpackungen, aufgegliedert nach der Gebührenhöhe;"
+              "text": "die Anzahl der ihr für das Vorjahr mitgeteilten gebührenbelasteten Getränkeverpackungen, aufgegliedert nach der Gebührenhöhe;"
             },
             {
               "marke": "d",
@@ -524,14 +528,14 @@
         },
         {
           "absatz": "4",
-          "text": "Das BAFU veröffentlicht den Bericht; vorbehalten sind Angaben, die unter das Geschäfts- oder Fabrikationsgeheimnis fallen oder Rückschlüsse darauf ermög­­lichen."
+          "text": "Das BAFU veröffentlicht den Bericht; vorbehalten sind Angaben, die unter das Geschäfts- oder Fabrikationsgeheimnis fallen oder Rückschlüsse darauf ermöglichen."
         }
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2000/299/de#art_16",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20220101",
-      "sha": "171ab5ca50f9f7843c900aa1558e90ea17db6b55f4f5aa3ccf3e16280693af0e"
+      "sha": "f5e505ac221b7048b8b332dfd57ed62c2f56e6e65f4a4c5b341ef10e2a22aa2b"
     },
     {
       "id": "bund/VGVP/art_17",
@@ -552,7 +556,7 @@
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2000/299/de#art_17",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20220101",
       "sha": "45dfec01459be112f225f618bc9ebd177d79c08f67dc0f108658495980da6f70"
     },
@@ -581,7 +585,7 @@
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2000/299/de#art_18",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20220101",
       "sha": "85c1a33cd4755bce22cee0cf19144801fd9d1dee0150a8369b748b9deb2fc16e"
     },
@@ -595,7 +599,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Händler, Hersteller und Importeure, die verpflichtet sind, Einwegverpackungen zurückzunehmen (Art. 6 Abs. 1, Art. 7 Abs. 1, Art. 8 Abs. 2), müssen dem BAFU jeweils bis Ende Februar für das Vorjahr das Gewicht der zurückgenommenen und der verwerteten Verpackungen mitteilen. Die Angaben sind nach den Verpackungs­materialien aufzugliedern."
+          "text": "Händler, Hersteller und Importeure, die verpflichtet sind, Einwegverpackungen zurückzunehmen (Art. 6 Abs. 1, Art. 7 Abs. 1, Art. 8 Abs. 2), müssen dem BAFU jeweils bis Ende Februar für das Vorjahr das Gewicht der zurückgenommenen und der verwerteten Verpackungen mitteilen. Die Angaben sind nach den Verpackungsmaterialien aufzugliedern."
         },
         {
           "absatz": "2",
@@ -604,9 +608,9 @@
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2000/299/de#art_19",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20220101",
-      "sha": "51147d466d94f9ed0b6f14bcbbc8c794ceabdf9da90d44e86466028ad396790e"
+      "sha": "9f8bf8de44db922eede622f68c5618176954ce8d5189b9752d30bf91757dd3e5"
     },
     {
       "id": "bund/VGVP/art_20",
@@ -618,7 +622,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Mitteilungspflichtige können die Angaben auch bis Ende Februar privaten Melde­stellen mitteilen. In diesem Fall müssen sie dafür sorgen, dass die Meldestellen die Angaben zusammenfassen und dem BAFU jeweils bis Ende April mitteilen."
+          "text": "Mitteilungspflichtige können die Angaben auch bis Ende Februar privaten Meldestellen mitteilen. In diesem Fall müssen sie dafür sorgen, dass die Meldestellen die Angaben zusammenfassen und dem BAFU jeweils bis Ende April mitteilen."
         },
         {
           "absatz": "2",
@@ -627,9 +631,9 @@
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2000/299/de#art_20",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20220101",
-      "sha": "ebf262bede610e18c31d099b8e62a857e32735f3fef561e9e39b6ec94f3f9788"
+      "sha": "93d02836d2131e791576a6b966734c6f21035ea4c2849f8e20d7b9b60f50e975"
     },
     {
       "id": "bund/VGVP/art_21",
@@ -641,14 +645,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die Kantone vollziehen diese Verordnung, soweit der Vollzug nicht einer Bundes­behörde übertragen ist."
+          "text": "Die Kantone vollziehen diese Verordnung, soweit der Vollzug nicht einer Bundesbehörde übertragen ist."
         }
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2000/299/de#art_21",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20220101",
-      "sha": "f3b3d2e5aab5bbeb72a5fe8577cfd9f79969d8364f4366890d0a4413872ccaf7"
+      "sha": "a6720acb204678231356ebcf046d299292e1e4d585115e3ea350cef9d3722a86"
     },
     {
       "id": "bund/VGVP/art_22",
@@ -660,7 +664,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Verordnung vom 22. August 1990 über Getränkeverpackungen wird aufge­ho­ben."
+          "text": "Die Verordnung vom 22. August 1990 über Getränkeverpackungen wird aufgehoben."
         },
         {
           "absatz": "2",
@@ -669,9 +673,9 @@
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2000/299/de#art_22",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20220101",
-      "sha": "8933e2070c8c1fb2c879c70ef2fa4ad48f4708f3212220fce28ba997a9220650"
+      "sha": "faf48f25cfafb0e9efc5411cd0e2a7e94c08a5d8d070d247571101a6acc18465"
     },
     {
       "id": "bund/VGVP/art_23",
@@ -692,7 +696,7 @@
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2000/299/de#art_23",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20220101",
       "sha": "7369a7c1a9f49d1d20ca8c5c96070980a12a6bbd9aa0d3841c8b0b75bd9a8a6c"
     }

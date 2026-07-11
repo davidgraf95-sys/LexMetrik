@@ -1,8 +1,9 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-11",
  "kopf": {
   "srNummer": "281.32",
   "titel": "Verordnung über die Geschäftsführung der Konkursämter",
+  "erlassdatum": "vom 13. Juli 1911 (Stand am 1. August 2021)",
   "praeambel": [
    {
     "rolle": "autor",
@@ -40,7 +41,7 @@
     "links": [
      {
       "label": "SR <b>281.1</b>",
-      "url": "https://fedlex.data.admin.ch/eli/cc/11/529_488_529/20200101"
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6149"
      }
     ],
     "absatz": null,
@@ -143,14 +144,14 @@
     }
    ],
    "marginalie": [
-    "3. Muster für Bü­cher, Ver­zeich­nisse und Formu­lare"
+    "3. Muster für Bücher, Verzeichnisse und Formulare"
    ],
    "fussnoten": [
     {
      "nr": "7",
      "text": "In der AS nicht veröffentlicht.",
      "links": [],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -167,7 +168,7 @@
     }
    ],
    "marginalie": [
-    "4. Konkursver­zeichnis"
+    "4. Konkursverzeichnis"
    ],
    "fussnoten": [
     {
@@ -191,7 +192,7 @@
     }
    ],
    "marginalie": [
-    "5. Mitteilungen, Empfangsscheine und Bekanntma­chungen"
+    "5. Mitteilungen, Empfangsscheine und Bekanntmachungen"
    ],
    "fussnoten": [
     {
@@ -203,7 +204,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -215,7 +216,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -232,7 +233,7 @@
     }
    ],
    "marginalie": [
-    "6. Protokoll- und Aktenfüh­rung durch den Stellvertreter"
+    "6. Protokoll-und Aktenführung durch den Stellvertreter"
    ]
   },
   "7": {
@@ -247,7 +248,7 @@
     }
    ],
    "marginalie": [
-    "7. Amtsübergabe bei Beamtenwech­sel"
+    "7. Amtsübergabe bei Beamtenwechsel"
    ]
   },
   "8": {
@@ -262,8 +263,8 @@
     }
    ],
    "marginalie": [
-    "Konkursproto­koll",
-    "a. Zweck und In­halt"
+    "Konkursprotokoll",
+    "a. Zweck und Inhalt"
    ],
    "fussnoten": [
     {
@@ -287,7 +288,7 @@
     }
    ],
    "marginalie": [
-    "Konkursproto­koll",
+    "Konkursprotokoll",
     "b. Eintragungen"
    ]
   },
@@ -303,8 +304,8 @@
     }
    ],
    "marginalie": [
-    "Konkursproto­koll",
-    "c. Anlage und Auf­bewahrung"
+    "Konkursprotokoll",
+    "c. Anlage undAufbewahrung"
    ],
    "fussnoten": [
     {
@@ -316,7 +317,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -328,14 +329,14 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/54/131_131_123"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     },
     {
      "nr": "14",
      "text": "Ursprünglich Abs. 3.",
      "links": [],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     }
    ]
@@ -352,7 +353,7 @@
     }
    ],
    "marginalie": [
-    "Konkursproto­koll",
+    "Konkursprotokoll",
     "d. Edition"
    ],
    "fussnoten": [
@@ -432,14 +433,14 @@
     }
    ],
    "marginalie": [
-    "1. Ordnung und Nummerie­rung der Akten"
+    "1. Ordnung und Nummerierung der Akten"
    ],
    "fussnoten": [
     {
      "nr": "20",
-     "text": "Im italienischen Text bilden die Abs. 1 und <i>2 </i>einen einzigen Absatz.",
+     "text": "Im italienischen Text bilden die Abs. 1 und 2 einen einzigen Absatz.",
      "links": [],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -451,14 +452,14 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
      "nr": "22",
-     "text": "Im italienischen Text bilden die Abs. 1 und <i>2 </i>einen einzigen Absatz.",
+     "text": "Im italienischen Text bilden die Abs. 1 und 2 einen einzigen Absatz.",
      "links": [],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -483,7 +484,7 @@
     }
    ],
    "marginalie": [
-    "2. Aufbewah­rung",
+    "2. Aufbewahrung",
     "a. der Akten"
    ],
    "fussnoten": [
@@ -513,8 +514,8 @@
     }
    ],
    "marginalie": [
-    "2. Aufbewah­rung",
-    "b. der Geschäfts­bücher und Geschäftspapiere"
+    "2. Aufbewahrung",
+    "b. der Geschäftsbücher und Geschäftspapiere"
    ],
    "fussnoten": [
     {
@@ -535,7 +536,7 @@
      "links": [
       {
        "label": "SR <b>220</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
      "absatz": null,
@@ -592,8 +593,8 @@
     }
    ],
    "marginalie": [
-    "2. Kontokorrent­buch",
-    "a. Anlage im all­gemeinen"
+    "2. Kontokorrentbuch",
+    "a. Anlage im allgemeinen"
    ]
   },
   "18": {
@@ -608,7 +609,7 @@
     }
    ],
    "marginalie": [
-    "2. Kontokorrent­buch",
+    "2. Kontokorrentbuch",
     "b. Buchung der Depositen"
    ]
   },
@@ -639,7 +640,7 @@
     }
    ],
    "marginalie": [
-    "4. Form der Ein­tragungen und Berichtigun­gen"
+    "4. Form der Eintragungen und Berichtigungen"
    ]
   },
   "21": {
@@ -693,7 +694,7 @@
     }
    ],
    "marginalie": [
-    "7. Gesonderte Buch- und Kassa­führung"
+    "7. Gesonderte Buch- und Kassaführung"
    ]
   },
   "24": {
@@ -708,7 +709,7 @@
     }
    ],
    "marginalie": [
-    "8. Gebühren- und Auslagen­rech­nung"
+    "8. Gebühren- und Auslagenrechnung"
    ]
   },
   "25": {
@@ -719,12 +720,12 @@
     },
     {
      "ebene": 2,
-     "label": "I. Feststellung der Konkursmasse und Bestimmung des Ver­fahrens"
+     "label": "I. Feststellung der Konkursmasse und Bestimmung des Verfahrens"
     }
    ],
    "marginalie": [
     "1. Inventar",
-    "a. Anlage im all­gemeinen"
+    "a. Anlage im allgemeinen"
    ],
    "fussnoten": [
     {
@@ -736,7 +737,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -763,7 +764,7 @@
      ],
      "absatz": null,
      "item": null,
-     "sektion": "I. Feststellung der Konkursmasse und Bestimmung des Ver­fahrens"
+     "sektion": "I. Feststellung der Konkursmasse und Bestimmung des Verfahrens"
     }
    ]
   },
@@ -775,12 +776,12 @@
     },
     {
      "ebene": 2,
-     "label": "I. Feststellung der Konkursmasse und Bestimmung des Ver­fahrens"
+     "label": "I. Feststellung der Konkursmasse und Bestimmung des Verfahrens"
     }
    ],
    "marginalie": [
     "1. Inventar",
-    "b. Bei Grund­stücken im be­sondern"
+    "b. Bei Grundstücken im besondern"
    ],
    "fussnoten": [
     {
@@ -805,12 +806,12 @@
     },
     {
      "ebene": 2,
-     "label": "I. Feststellung der Konkursmasse und Bestimmung des Ver­fahrens"
+     "label": "I. Feststellung der Konkursmasse und Bestimmung des Verfahrens"
     }
    ],
    "marginalie": [
     "1. Inventar",
-    "c. Inventarisie­rung von Objek­ten im Aus­land und von Anfech­tungsansprüchen"
+    "c. Inventarisierung von Objekten im Ausland und von Anfechtungsansprüchen"
    ]
   },
   "28": {
@@ -821,12 +822,12 @@
     },
     {
      "ebene": 2,
-     "label": "I. Feststellung der Konkursmasse und Bestimmung des Ver­fahrens"
+     "label": "I. Feststellung der Konkursmasse und Bestimmung des Verfahrens"
     }
    ],
    "marginalie": [
     "1. Inventar",
-    "d. Behandlung der Eigentümer­pfandtitel"
+    "d. Behandlung der Eigentümerpfandtitel"
    ],
    "fussnoten": [
     {
@@ -851,12 +852,12 @@
     },
     {
      "ebene": 2,
-     "label": "I. Feststellung der Konkursmasse und Bestimmung des Ver­fahrens"
+     "label": "I. Feststellung der Konkursmasse und Bestimmung des Verfahrens"
     }
    ],
    "marginalie": [
     "1. Inventar",
-    "e. Anerkennung durch den Ge­meinschuldner und Un­terzeich­nung"
+    "e. Anerkennung durch den Gemeinschuldner und Unterzeichnung"
    ],
    "fussnoten": [
     {
@@ -868,7 +869,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -881,12 +882,12 @@
     },
     {
      "ebene": 2,
-     "label": "I. Feststellung der Konkursmasse und Bestimmung des Ver­fahrens"
+     "label": "I. Feststellung der Konkursmasse und Bestimmung des Verfahrens"
     }
    ],
    "marginalie": [
     "1. Inventar",
-    "f. Anerkennung an Stelle des Ge­meinschuldners"
+    "f. Anerkennung an Stelle des Gemeinschuldners"
    ],
    "fussnoten": [
     {
@@ -906,19 +907,24 @@
     },
     {
      "ebene": 2,
-     "label": "I. Feststellung der Konkursmasse und Bestimmung des Ver­fahrens"
+     "label": "I. Feststellung der Konkursmasse und Bestimmung des Verfahrens"
     }
    ],
    "marginalie": [
     "1. Inventar",
-    "g. Ausscheidung der Kompetenz­stücke und Mittei­lung an den Ge­mein­schuldner"
+    "g. Ausscheidung der Kompetenzstücke und Mitteilung an den Gemeinschuldner"
    ],
    "fussnoten": [
     {
      "nr": "42",
-     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
-     "links": [],
-     "absatz": null,
+     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 400).",
+     "links": [
+      {
+       "label": "AS <b>2021</b> 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": "1",
      "item": null
     }
    ]
@@ -931,7 +937,7 @@
     },
     {
      "ebene": 2,
-     "label": "I. Feststellung der Konkursmasse und Bestimmung des Ver­fahrens"
+     "label": "I. Feststellung der Konkursmasse und Bestimmung des Verfahrens"
     }
    ],
    "marginalie": [
@@ -947,7 +953,7 @@
     },
     {
      "ebene": 2,
-     "label": "I. Feststellung der Konkursmasse und Bestimmung des Ver­fahrens"
+     "label": "I. Feststellung der Konkursmasse und Bestimmung des Verfahrens"
     }
    ],
    "marginalie": [
@@ -977,7 +983,7 @@
     },
     {
      "ebene": 2,
-     "label": "I. Feststellung der Konkursmasse und Bestimmung des Ver­fahrens"
+     "label": "I. Feststellung der Konkursmasse und Bestimmung des Verfahrens"
     }
    ],
    "marginalie": [
@@ -987,8 +993,13 @@
    "fussnoten": [
     {
      "nr": "44",
-     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
-     "links": [],
+     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 400).",
+     "links": [
+      {
+       "label": "AS <b>2021</b> 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
      "absatz": null,
      "item": null
     }
@@ -1002,11 +1013,11 @@
     },
     {
      "ebene": 2,
-     "label": "I. Feststellung der Konkursmasse und Bestimmung des Ver­fahrens"
+     "label": "I. Feststellung der Konkursmasse und Bestimmung des Verfahrens"
     }
    ],
    "marginalie": [
-    "2. Kostenvor­schuss"
+    "2. Kostenvorschuss"
    ],
    "fussnoten": [
     {
@@ -1018,7 +1029,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -1031,11 +1042,11 @@
     },
     {
      "ebene": 2,
-     "label": "I. Feststellung der Konkursmasse und Bestimmung des Ver­fahrens"
+     "label": "I. Feststellung der Konkursmasse und Bestimmung des Verfahrens"
     }
    ],
    "marginalie": [
-    "3. Abschluss der Geschäftsbü­cher"
+    "3. Abschluss der Geschäftsbücher"
    ]
   },
   "37": {
@@ -1046,11 +1057,11 @@
     },
     {
      "ebene": 2,
-     "label": "I. Feststellung der Konkursmasse und Bestimmung des Ver­fahrens"
+     "label": "I. Feststellung der Konkursmasse und Bestimmung des Verfahrens"
     }
    ],
    "marginalie": [
-    "4. Einvernahme des Ge­mein­schuldners"
+    "4. Einvernahme des Gemeinschuldners"
    ],
    "fussnoten": [
     {
@@ -1059,7 +1070,7 @@
      "links": [
       {
        "label": "SR <b>221.229.1</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/719_735_717/20110101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5912"
       }
      ],
      "absatz": null,
@@ -1087,17 +1098,22 @@
     },
     {
      "ebene": 2,
-     "label": "I. Feststellung der Konkursmasse und Bestimmung des Ver­fahrens"
+     "label": "I. Feststellung der Konkursmasse und Bestimmung des Verfahrens"
     }
    ],
    "marginalie": [
-    "5. ..."
+    "5. …"
    ],
    "fussnoten": [
     {
      "nr": "48",
-     "text": "Aufgehoben durch Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, mit Wirkung seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
-     "links": [],
+     "text": "Aufgehoben durch Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, mit Wirkung seit 1. Aug. 2021 (AS <b>2021</b> 400).",
+     "links": [
+      {
+       "label": "AS <b>2021</b> 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
      "absatz": null,
      "item": null
     }
@@ -1111,11 +1127,11 @@
     },
     {
      "ebene": 2,
-     "label": "I. Feststellung der Konkursmasse und Bestimmung des Ver­fahrens"
+     "label": "I. Feststellung der Konkursmasse und Bestimmung des Verfahrens"
     }
    ],
    "marginalie": [
-    "6. Bestimmung des einzuschla­genden Verfah­rens"
+    "6. Bestimmung des einzuschlagenden Verfahrens"
    ],
    "fussnoten": [
     {
@@ -1144,14 +1160,19 @@
     }
    ],
    "marginalie": [
-    "1. Spezialanzei­gen über die Kon­kurseröff­nung"
+    "1. Spezialanzeigen über die Konkurseröffnung"
    ],
    "fussnoten": [
     {
      "nr": "52",
-     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
-     "links": [],
-     "absatz": null,
+     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 400).",
+     "links": [
+      {
+       "label": "AS <b>2021</b> 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": "2",
      "item": "d"
     },
     {
@@ -1163,7 +1184,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "e"
     },
     {
@@ -1185,7 +1206,7 @@
      ],
      "absatz": null,
      "item": null,
-     "sektion": "1. Spezialanzei­gen über die Kon­kurseröff­nung"
+     "sektion": "1. Spezialanzeigen über die Konkurseröffnung"
     }
    ]
   },
@@ -1230,7 +1251,7 @@
     }
    ],
    "marginalie": [
-    "1. Protokolle der Gläubigerver­sammlungen"
+    "1. Protokolle der Gläubigerversammlungen"
    ],
    "fussnoten": [
     {
@@ -1242,7 +1263,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -1259,7 +1280,7 @@
     }
    ],
    "marginalie": [
-    "2. Aktenübergabe an ausseramtliche Konkurs­verwaltungen. Mitteilung"
+    "2. Aktenübergabe an ausseramtliche Konkursverwaltungen. Mitteilung"
    ],
    "fussnoten": [
     {
@@ -1271,7 +1292,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -1285,7 +1306,7 @@
      ],
      "absatz": null,
      "item": null,
-     "sektion": "2. Aktenübergabe an ausseramtliche Konkurs­verwaltungen. Mitteilung"
+     "sektion": "2. Aktenübergabe an ausseramtliche Konkursverwaltungen. Mitteilung"
     }
    ]
   },
@@ -1330,14 +1351,19 @@
     }
    ],
    "marginalie": [
-    "4. Aussonde­rungsansprüche und Ansprüche auf kryptobasierte Vermögenswerte",
-    "a. Verfügung der Konkurs­ver­wal­tung"
+    "4. Aussonderungsansprüche und Ansprüche auf kryptobasierte Vermögenswerte",
+    "a. Verfügung der Konkursverwaltung"
    ],
    "fussnoten": [
     {
      "nr": "59",
-     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
-     "links": [],
+     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 400).",
+     "links": [
+      {
+       "label": "AS <b>2021</b> 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
      "absatz": null,
      "item": null
     }
@@ -1355,14 +1381,19 @@
     }
    ],
    "marginalie": [
-    "4. Aussonde­rungsansprüche und Ansprüche auf kryptobasierte Vermögenswerte",
-    "b. Klagefrist­ansetzung an den Dritten"
+    "4. Aussonderungsansprüche und Ansprüche auf kryptobasierte Vermögenswerte",
+    "b. Klagefristansetzung an den Dritten"
    ],
    "fussnoten": [
     {
      "nr": "60",
-     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
-     "links": [],
+     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 400).",
+     "links": [
+      {
+       "label": "AS <b>2021</b> 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
      "absatz": null,
      "item": null
     }
@@ -1380,14 +1411,19 @@
     }
    ],
    "marginalie": [
-    "4. Aussonde­rungsansprüche und Ansprüche auf kryptobasierte Vermögenswerte",
+    "4. Aussonderungsansprüche und Ansprüche auf kryptobasierte Vermögenswerte",
     "c. Wahrung der Gläubigerrechte"
    ],
    "fussnoten": [
     {
      "nr": "61",
-     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
-     "links": [],
+     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 400).",
+     "links": [
+      {
+       "label": "AS <b>2021</b> 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
      "absatz": null,
      "item": null
     }
@@ -1405,16 +1441,21 @@
     }
    ],
    "marginalie": [
-    "4. Aussonde­rungsansprüche und Ansprüche auf kryptobasierte Vermögenswerte",
+    "4. Aussonderungsansprüche und Ansprüche auf kryptobasierte Vermögenswerte",
     "c. Wahrung der Gläubigerrechte",
-    "aa. Im ordentli­chen Verfah­ren"
+    "aa. Im ordentlichen Verfahren"
    ],
    "fussnoten": [
     {
      "nr": "62",
-     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
-     "links": [],
-     "absatz": null,
+     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 400).",
+     "links": [
+      {
+       "label": "AS <b>2021</b> 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": "2",
      "item": null
     }
    ]
@@ -1431,9 +1472,9 @@
     }
    ],
    "marginalie": [
-    "4. Aussonde­rungsansprüche und Ansprüche auf kryptobasierte Vermögenswerte",
+    "4. Aussonderungsansprüche und Ansprüche auf kryptobasierte Vermögenswerte",
     "c. Wahrung der Gläubigerrechte",
-    "bb. Im summari­schen Verfahren"
+    "bb. Im summarischen Verfahren"
    ]
   },
   "50": {
@@ -1448,16 +1489,21 @@
     }
    ],
    "marginalie": [
-    "4. Aussonde­rungsansprüche und Ansprüche auf kryptobasierte Vermögenswerte",
+    "4. Aussonderungsansprüche und Ansprüche auf kryptobasierte Vermögenswerte",
     "c. Wahrung der Gläubigerrechte",
-    "cc. Bei nachträg­lich einge­ge­be­nen An­sprüchen"
+    "cc. Bei nachträglich eingegebenen Ansprüchen"
    ],
    "fussnoten": [
     {
      "nr": "63",
-     "text": "Eingefügt durch Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
-     "links": [],
-     "absatz": null,
+     "text": "Eingefügt durch Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 400).",
+     "links": [
+      {
+       "label": "AS <b>2021</b> 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": "2",
      "item": null
     }
    ]
@@ -1474,15 +1520,20 @@
     }
    ],
    "marginalie": [
-    "4. Aussonde­rungsansprüche und Ansprüche auf kryptobasierte Vermögenswerte",
+    "4. Aussonderungsansprüche und Ansprüche auf kryptobasierte Vermögenswerte",
     "c. Wahrung der Gläubigerrechte",
     "dd. Ausnahmen"
    ],
    "fussnoten": [
     {
      "nr": "64",
-     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
-     "links": [],
+     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 400).",
+     "links": [
+      {
+       "label": "AS <b>2021</b> 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
      "absatz": null,
      "item": null
     }
@@ -1500,14 +1551,19 @@
     }
    ],
    "marginalie": [
-    "4. Aussonde­rungsansprüche und Ansprüche auf kryptobasierte Vermögenswerte",
-    "d. Klagefrist­ansetzung bei Massarechts­abtretungen"
+    "4. Aussonderungsansprüche und Ansprüche auf kryptobasierte Vermögenswerte",
+    "d. Klagefristansetzung bei Massarechtsabtretungen"
    ],
    "fussnoten": [
     {
      "nr": "65",
-     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
-     "links": [],
+     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 400).",
+     "links": [
+      {
+       "label": "AS <b>2021</b> 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
      "absatz": null,
      "item": null
     }
@@ -1525,14 +1581,19 @@
     }
    ],
    "marginalie": [
-    "4. Aussonde­rungsansprüche und Ansprüche auf kryptobasierte Vermögenswerte",
-    "e. Konkurrenz von Pfand­ansprüchen mit Ansprüchen nach den Artikeln 242 und 242a SchKG"
+    "4. Aussonderungsansprüche und Ansprüche auf kryptobasierte Vermögenswerte",
+    "e. Konkurrenz von Pfandansprüchen mit Ansprüchen nach den Artikeln 242 und 242a SchKG"
    ],
    "fussnoten": [
     {
      "nr": "66",
-     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
-     "links": [],
+     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 400).",
+     "links": [
+      {
+       "label": "AS <b>2021</b> 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
      "absatz": null,
      "item": null
     }
@@ -1550,24 +1611,34 @@
     }
    ],
    "marginalie": [
-    "4. Aussonde­rungsansprüche und Ansprüche auf kryptobasierte Vermögenswerte",
-    "f. Konkurrenz von Pfand­ansprüchen und Ansprüchen nach den Artikeln 242 und 242a SchKG mit Kompe­tenz­ansprüchen"
+    "4. Aussonderungsansprüche und Ansprüche auf kryptobasierte Vermögenswerte",
+    "f. Konkurrenz von Pfandansprüchen und Ansprüchen nach den Artikeln 242 und 242a SchKG mit Kompetenzansprüchen"
    ],
    "fussnoten": [
     {
      "nr": "68",
-     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
-     "links": [],
-     "absatz": null,
+     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 400).",
+     "links": [
+      {
+       "label": "AS <b>2021</b> 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": "2",
      "item": null
     },
     {
      "nr": "67",
-     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
-     "links": [],
+     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 400).",
+     "links": [
+      {
+       "label": "AS <b>2021</b> 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
      "absatz": null,
      "item": null,
-     "sektion": "f. Konkurrenz von Pfand­ansprüchen und Ansprüchen nach den Artikeln 242 und 242a SchKG mit Kompe­tenz­ansprüchen"
+     "sektion": "f. Konkurrenz von Pfandansprüchen und Ansprüchen nach den Artikeln 242 und 242a SchKG mit Kompetenzansprüchen"
     }
    ]
   },
@@ -1579,11 +1650,11 @@
     },
     {
      "ebene": 2,
-     "label": "IV. Erwahrung der Konkursforderungen Kollokation der Gläu­biger"
+     "label": "IV. Erwahrung der Konkursforderungen Kollokation der Gläubiger"
     }
    ],
    "marginalie": [
-    "1. Protokollie­rung der Erklärungen des Gemein­schuld­ners"
+    "1. Protokollierung der Erklärungen des Gemeinschuldners"
    ]
   },
   "56": {
@@ -1594,11 +1665,11 @@
     },
     {
      "ebene": 2,
-     "label": "IV. Erwahrung der Konkursforderungen Kollokation der Gläu­biger"
+     "label": "IV. Erwahrung der Konkursforderungen Kollokation der Gläubiger"
     }
    ],
    "marginalie": [
-    "2. Kollokations­plan",
+    "2. Kollokationsplan",
     "a. Anordnung"
    ],
    "fussnoten": [
@@ -1611,7 +1682,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "b"
     }
    ]
@@ -1624,11 +1695,11 @@
     },
     {
      "ebene": 2,
-     "label": "IV. Erwahrung der Konkursforderungen Kollokation der Gläu­biger"
+     "label": "IV. Erwahrung der Konkursforderungen Kollokation der Gläubiger"
     }
    ],
    "marginalie": [
-    "2. Kollokations­plan",
+    "2. Kollokationsplan",
     "b. Abänderungen"
    ],
    "fussnoten": [
@@ -1654,11 +1725,11 @@
     },
     {
      "ebene": 2,
-     "label": "IV. Erwahrung der Konkursforderungen Kollokation der Gläu­biger"
+     "label": "IV. Erwahrung der Konkursforderungen Kollokation der Gläubiger"
     }
    ],
    "marginalie": [
-    "2. Kollokations­plan",
+    "2. Kollokationsplan",
     "c. Inhalt"
    ],
    "fussnoten": [
@@ -1671,7 +1742,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -1684,12 +1755,12 @@
     },
     {
      "ebene": 2,
-     "label": "IV. Erwahrung der Konkursforderungen Kollokation der Gläu­biger"
+     "label": "IV. Erwahrung der Konkursforderungen Kollokation der Gläubiger"
     }
    ],
    "marginalie": [
-    "2. Kollokations­plan",
-    "d. Form der Kol­lokationsver­fü­gungen"
+    "2. Kollokationsplan",
+    "d. Form der Kollokationsverfügungen"
    ],
    "fussnoten": [
     {
@@ -1714,12 +1785,12 @@
     },
     {
      "ebene": 2,
-     "label": "IV. Erwahrung der Konkursforderungen Kollokation der Gläu­biger"
+     "label": "IV. Erwahrung der Konkursforderungen Kollokation der Gläubiger"
     }
    ],
    "marginalie": [
-    "2. Kollokations­plan",
-    "e. Umschreibung der Anspra­chen"
+    "2. Kollokationsplan",
+    "e. Umschreibung der Ansprachen"
    ],
    "fussnoten": [
     {
@@ -1731,7 +1802,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -1744,12 +1815,12 @@
     },
     {
      "ebene": 2,
-     "label": "IV. Erwahrung der Konkursforderungen Kollokation der Gläu­biger"
+     "label": "IV. Erwahrung der Konkursforderungen Kollokation der Gläubiger"
     }
    ],
    "marginalie": [
-    "2. Kollokations­plan",
-    "f. Drittpfandgesi­cherte Forde­run­gen"
+    "2. Kollokationsplan",
+    "f. Drittpfandgesicherte Forderungen"
    ],
    "fussnoten": [
     {
@@ -1774,12 +1845,12 @@
     },
     {
      "ebene": 2,
-     "label": "IV. Erwahrung der Konkursforderungen Kollokation der Gläu­biger"
+     "label": "IV. Erwahrung der Konkursforderungen Kollokation der Gläubiger"
     }
    ],
    "marginalie": [
-    "2. Kollokations­plan",
-    "g. Forderungen mit ausländi­schem Pfand­ob­jekt"
+    "2. Kollokationsplan",
+    "g. Forderungen mit ausländischem Pfandobjekt"
    ],
    "fussnoten": [
     {
@@ -1804,12 +1875,12 @@
     },
     {
      "ebene": 2,
-     "label": "IV. Erwahrung der Konkursforderungen Kollokation der Gläu­biger"
+     "label": "IV. Erwahrung der Konkursforderungen Kollokation der Gläubiger"
     }
    ],
    "marginalie": [
-    "2. Kollokations­plan",
-    "h. Im Prozess lie­gende Forderun­gen"
+    "2. Kollokationsplan",
+    "h. Im Prozess liegende Forderungen"
    ]
   },
   "64": {
@@ -1820,12 +1891,12 @@
     },
     {
      "ebene": 2,
-     "label": "IV. Erwahrung der Konkursforderungen Kollokation der Gläu­biger"
+     "label": "IV. Erwahrung der Konkursforderungen Kollokation der Gläubiger"
     }
    ],
    "marginalie": [
-    "2. Kollokations­plan",
-    "i. Protokollie­rung der Verfü­gungen des Gläubigeraus­schusses und des Prozess­ergebnis­ses"
+    "2. Kollokationsplan",
+    "i. Protokollierung der Verfügungen des Gläubigerausschusses und des Prozessergebnisses"
    ]
   },
   "65": {
@@ -1836,11 +1907,11 @@
     },
     {
      "ebene": 2,
-     "label": "IV. Erwahrung der Konkursforderungen Kollokation der Gläu­biger"
+     "label": "IV. Erwahrung der Konkursforderungen Kollokation der Gläubiger"
     }
    ],
    "marginalie": [
-    "2. Kollokations­plan",
+    "2. Kollokationsplan",
     "k. Nachträgliche Abänderungen",
     "aa. Innerhalb der Anfechtungsfrist"
    ],
@@ -1861,7 +1932,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -1887,11 +1958,11 @@
     },
     {
      "ebene": 2,
-     "label": "IV. Erwahrung der Konkursforderungen Kollokation der Gläu­biger"
+     "label": "IV. Erwahrung der Konkursforderungen Kollokation der Gläubiger"
     }
    ],
    "marginalie": [
-    "2. Kollokations­plan",
+    "2. Kollokationsplan",
     "k. Nachträgliche Abänderungen",
     "bb. Im Prozess"
    ]
@@ -1904,11 +1975,11 @@
     },
     {
      "ebene": 2,
-     "label": "IV. Erwahrung der Konkursforderungen Kollokation der Gläu­biger"
+     "label": "IV. Erwahrung der Konkursforderungen Kollokation der Gläubiger"
     }
    ],
    "marginalie": [
-    "2. Kollokations­plan",
+    "2. Kollokationsplan",
     "l. Publikation"
    ]
   },
@@ -1920,12 +1991,12 @@
     },
     {
      "ebene": 2,
-     "label": "IV. Erwahrung der Konkursforderungen Kollokation der Gläu­biger"
+     "label": "IV. Erwahrung der Konkursforderungen Kollokation der Gläubiger"
     }
    ],
    "marginalie": [
-    "2. Kollokations­plan",
-    "m. Spezialanzei­gen"
+    "2. Kollokationsplan",
+    "m. Spezialanzeigen"
    ],
    "fussnoten": [
     {
@@ -1950,12 +2021,12 @@
     },
     {
      "ebene": 2,
-     "label": "IV. Erwahrung der Konkursforderungen Kollokation der Gläu­biger"
+     "label": "IV. Erwahrung der Konkursforderungen Kollokation der Gläubiger"
     }
    ],
    "marginalie": [
-    "2. Kollokations­plan",
-    "n. Behandlungver­späteter Kon­kurs­eingaben"
+    "2. Kollokationsplan",
+    "n. Behandlungverspäteter Konkurseingaben"
    ]
   },
   "70": {
@@ -1966,12 +2037,12 @@
     },
     {
      "ebene": 2,
-     "label": "IV. Erwahrung der Konkursforderungen Kollokation der Gläu­biger"
+     "label": "IV. Erwahrung der Konkursforderungen Kollokation der Gläubiger"
     }
    ],
    "marginalie": [
-    "2. Kollokations­plan",
-    "o. Im summari­schen Verfah­ren"
+    "2. Kollokationsplan",
+    "o. Im summarischen Verfahren"
    ]
   },
   "71": {
@@ -1986,7 +2057,7 @@
     }
    ],
    "marginalie": [
-    "1. Spezialanzei­gen über Grundstücks­steige­rungen"
+    "1. Spezialanzeigen über Grundstückssteigerungen"
    ],
    "fussnoten": [
     {
@@ -2015,8 +2086,8 @@
     }
    ],
    "marginalie": [
-    "2. Steigerungs­pro­tokoll",
-    "a. Anlage im all­gemeinen"
+    "2. Steigerungsprotokoll",
+    "a. Anlage im allgemeinen"
    ],
    "fussnoten": [
     {
@@ -2040,8 +2111,8 @@
     }
    ],
    "marginalie": [
-    "2. Steigerungs­pro­tokoll",
-    "b. Bei Liegen­schaftssteigerun­gen im besondern"
+    "2. Steigerungsprotokoll",
+    "b. Bei Liegenschaftssteigerungen im besondern"
    ]
   },
   "74": {
@@ -2056,7 +2127,7 @@
     }
    ],
    "marginalie": [
-    "3. Löschung der untergegan­ge­nen Grundpfandrechte"
+    "3. Löschung der untergegangenen Grundpfandrechte"
    ],
    "fussnoten": [
     {
@@ -2068,19 +2139,19 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
      "nr": "85",
-     "text": "Fassung gemäss den Art. 69 Abs. 3 und <i>136 </i>Abs. 2 der V des BGer vom 23. April 1920 über die Zwangsverwertung von Grundstücken, in Kraft seit 1. Jan. 1921 (AS <b>36 </b>425).",
+     "text": "Fassung gemäss den Art. 69 Abs. 3 und 136 Abs. 2 der V des BGer vom 23. April 1920 über die Zwangsverwertung von Grundstücken, in Kraft seit 1. Jan. 1921 (AS <b>36 </b>425).",
      "links": [
       {
        "label": "AS <b>36 </b>425",
        "url": "https://fedlex.data.admin.ch/eli/oc/36/425_433_469"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -2098,7 +2169,7 @@
    ],
    "marginalie": [
     "4. Spezialfälle",
-    "a. Entkräftung der Eigentümer­pfandtitel und Löschung der lee­ren Pfand­stellen"
+    "a. Entkräftung der Eigentümerpfandtitel und Löschung der leeren Pfandstellen"
    ],
    "fussnoten": [
     {
@@ -2119,7 +2190,7 @@
      "links": [
       {
        "label": "SR <b>210</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/24/233_245_233/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5703"
       }
      ],
      "absatz": null,
@@ -2140,7 +2211,7 @@
    ],
    "marginalie": [
     "4. Spezialfälle",
-    "b. Behandlung der vom Ge­meinschuldner ver­pfändeten Eigen­tümer­pfandtitel"
+    "b. Behandlung der vom Gemeinschuldner verpfändeten Eigentümerpfandtitel"
    ],
    "fussnoten": [
     {
@@ -2170,7 +2241,7 @@
    ],
    "marginalie": [
     "4. Spezialfälle",
-    "c. Verwertung von versicherten Gegenständen und von Le­bensversicherungsansprüchen"
+    "c. Verwertung von versicherten Gegenständen und von Lebensversicherungsansprüchen"
    ],
    "fussnoten": [
     {
@@ -2179,10 +2250,10 @@
      "links": [
       {
        "label": "SR <b>281.51</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/26/205_203_198/19970101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6169"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -2200,13 +2271,18 @@
    ],
    "marginalie": [
     "4. Spezialfälle",
-    "c. Verwertung von versicherten Gegenständen und von Le­bensversicherungsansprüchen"
+    "c. Verwertung von versicherten Gegenständen und von Lebensversicherungsansprüchen"
    ],
    "fussnoten": [
     {
      "nr": "90",
-     "text": "Aufgehoben durch Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, mit Wirkung seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
-     "links": [],
+     "text": "Aufgehoben durch Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, mit Wirkung seit 1. Aug. 2021 (AS <b>2021</b> 400).",
+     "links": [
+      {
+       "label": "AS <b>2021</b> 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
      "absatz": null,
      "item": null
     }
@@ -2225,7 +2301,7 @@
    ],
    "marginalie": [
     "4. Spezialfälle",
-    "c. Verwertung von versicherten Gegenständen und von Le­bensversicherungsansprüchen"
+    "c. Verwertung von versicherten Gegenständen und von Lebensversicherungsansprüchen"
    ],
    "fussnoten": [
     {
@@ -2254,7 +2330,7 @@
     }
    ],
    "marginalie": [
-    "5. Abtretung von Rechtsan­sprü­chen der Mas­se"
+    "5. Abtretung von Rechtsansprüchen der Masse"
    ]
   },
   "81": {
@@ -2269,7 +2345,7 @@
     }
    ],
    "marginalie": [
-    "5. Abtretung von Rechtsan­sprü­chen der Mas­se"
+    "5. Abtretung von Rechtsansprüchen der Masse"
    ],
    "fussnoten": [
     {
@@ -2298,7 +2374,7 @@
     }
    ],
    "marginalie": [
-    "1. Abschlagsver­teilungen"
+    "1. Abschlagsverteilungen"
    ]
   },
   "83": {
@@ -2313,8 +2389,8 @@
     }
    ],
    "marginalie": [
-    "2. Erstellung der definitiven Ver­tei­lungsli­ste",
-    "a. Voraussetzun­gen",
+    "2. Erstellung der definitiven Verteilungsliste",
+    "a. Voraussetzungen",
     "aa. Erledigung der Prozesse"
    ]
   },
@@ -2330,9 +2406,9 @@
     }
    ],
    "marginalie": [
-    "2. Erstellung der definitiven Ver­tei­lungsli­ste",
-    "a. Voraussetzun­gen",
-    "bb. Bestimmung der Spezialvergü­tung nach Art. 48 Gebührenverordnung"
+    "2. Erstellung der definitiven Verteilungsliste",
+    "a. Voraussetzungen",
+    "bb. Bestimmung der Spezialvergütung nach Art. 48 Gebührenverordnung"
    ],
    "fussnoten": [
     {
@@ -2353,7 +2429,7 @@
      "links": [
       {
        "label": "SR <b>281.35</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1996/2937_2937_2937/20190101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6165"
       }
      ],
      "absatz": null,
@@ -2373,8 +2449,8 @@
     }
    ],
    "marginalie": [
-    "2. Erstellung der definitiven Ver­tei­lungsli­ste",
-    "b. Anlage im all­gemeinen"
+    "2. Erstellung der definitiven Verteilungsliste",
+    "b. Anlage im allgemeinen"
    ],
    "fussnoten": [
     {
@@ -2403,7 +2479,7 @@
     }
    ],
    "marginalie": [
-    "2. Erstellung der definitiven Ver­tei­lungsli­ste",
+    "2. Erstellung der definitiven Verteilungsliste",
     "c. Im Fall des Art. 260 SchKG im Besonderen"
    ]
   },
@@ -2419,7 +2495,7 @@
     }
    ],
    "marginalie": [
-    "3. Anzeige über die Auflegung der Vertei­lungsliste"
+    "3. Anzeige über die Auflegung der Verteilungsliste"
    ],
    "fussnoten": [
     {
@@ -2431,7 +2507,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -2448,7 +2524,7 @@
     }
    ],
    "marginalie": [
-    "4. Vornahme der Verteilung. Vor­aussetzung"
+    "4. Vornahme der Verteilung. Voraussetzung"
    ]
   },
   "89": {
@@ -2463,13 +2539,18 @@
     }
    ],
    "marginalie": [
-    "4. Vornahme der Verteilung. Vor­aussetzung"
+    "4. Vornahme der Verteilung. Voraussetzung"
    ],
    "fussnoten": [
     {
      "nr": "97",
-     "text": "Aufgehoben durch Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, mit Wirkung seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
-     "links": [],
+     "text": "Aufgehoben durch Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, mit Wirkung seit 1. Aug. 2021 (AS <b>2021</b> 400).",
+     "links": [
+      {
+       "label": "AS <b>2021</b> 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
      "absatz": null,
      "item": null
     }
@@ -2487,7 +2568,7 @@
     }
    ],
    "marginalie": [
-    "4. Vornahme der Verteilung. Vor­aussetzung"
+    "4. Vornahme der Verteilung. Voraussetzung"
    ],
    "fussnoten": [
     {
@@ -2516,7 +2597,7 @@
     }
    ],
    "marginalie": [
-    "4. Vornahme der Verteilung. Vor­aussetzung"
+    "4. Vornahme der Verteilung. Voraussetzung"
    ],
    "fussnoten": [
     {
@@ -2604,7 +2685,7 @@
     }
    ],
    "marginalie": [
-    "3. Einfluss von Pro­zessen nach Art. 260 SchKG"
+    "3. Einfluss von Prozessen nach Art. 260 SchKG"
    ],
    "fussnoten": [
     {
@@ -2618,7 +2699,7 @@
      ],
      "absatz": null,
      "item": null,
-     "sektion": "3. Einfluss von Pro­zessen nach Art. 260 SchKG"
+     "sektion": "3. Einfluss von Prozessen nach Art. 260 SchKG"
     }
    ]
   },
@@ -2634,7 +2715,7 @@
     }
    ],
    "marginalie": [
-    "Besondere Vor­schriften für das summarische Ver­fahren"
+    "Besondere Vorschriften für das summarische Verfahren"
    ],
    "fussnoten": [
     {
@@ -2651,15 +2732,25 @@
     },
     {
      "nr": "103",
-     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
-     "links": [],
+     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 400).",
+     "links": [
+      {
+       "label": "AS <b>2021</b> 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
      "absatz": null,
      "item": null
     },
     {
      "nr": "104",
-     "text": "Aufgehoben durch Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, mit Wirkung seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
-     "links": [],
+     "text": "Aufgehoben durch Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, mit Wirkung seit 1. Aug. 2021 (AS <b>2021</b> 400).",
+     "links": [
+      {
+       "label": "AS <b>2021</b> 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
      "absatz": null,
      "item": "c"
     }
@@ -2669,12 +2760,12 @@
    "gliederung": [
     {
      "ebene": 1,
-     "label": "C. Geschäftsführung der ausseramtlichen Konkursverwal­tungen"
+     "label": "C. Geschäftsführung der ausseramtlichen Konkursverwaltungen"
     }
    ],
    "marginalie": [
-    "...",
-    "1. Bezeichnung der anwendbaren allgemeinen Be­stimmungen"
+    "…",
+    "1. Bezeichnung der anwendbarenallgemeinen Bestimmungen"
    ],
    "fussnoten": [
     {
@@ -2695,7 +2786,7 @@
      "links": [],
      "absatz": null,
      "item": null,
-     "sektion": "..."
+     "sektion": "…"
     }
    ]
   },
@@ -2703,19 +2794,19 @@
    "gliederung": [
     {
      "ebene": 1,
-     "label": "C. Geschäftsführung der ausseramtlichen Konkursverwal­tungen"
+     "label": "C. Geschäftsführung der ausseramtlichen Konkursverwaltungen"
     }
    ],
    "marginalie": [
-    "...",
-    "2. Besondere Be­stimmungen"
+    "…",
+    "2. Besondere Bestimmungen"
    ],
    "fussnoten": [
     {
      "nr": "107",
      "text": "Im italienischen Text besteht dieser Absatz aus zwei Absätzen. Jeder Absatz entspricht einem Satz des deutschen Textes.",
      "links": [],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -2727,7 +2818,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -2740,14 +2831,14 @@
     }
    ],
    "marginalie": [
-    "1. Zeitpunkt des Inkrafttre­tens"
+    "1. Zeitpunkt des Inkrafttretens"
    ],
    "fussnoten": [
     {
      "nr": "109",
      "text": "Gegenstandslose UeB.",
      "links": [],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -2760,7 +2851,7 @@
     }
    ],
    "marginalie": [
-    "2. Übergangsbe­stimmung"
+    "2. Übergangsbestimmung"
    ],
    "fussnoten": [
     {
@@ -2769,10 +2860,10 @@
      "links": [
       {
        "label": "SR <b>281.51</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/26/205_203_198/19970101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6169"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -2789,7 +2880,7 @@
     }
    ],
    "marginalie": [
-    "3. Aufzeichnung auf Bild- und Daten­trägern"
+    "3. Aufzeichnung auf Bild- und Datenträgern"
    ],
    "fussnoten": [
     {
@@ -2813,7 +2904,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/2884_2884_2884"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -2822,17 +2913,22 @@
      "links": [
       {
        "label": "SR <b>221.431</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2002/216/20130101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5936"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
      "nr": "31",
-     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
-     "links": [],
-     "absatz": null,
+     "text": "Fassung gemäss Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 400).",
+     "links": [
+      {
+       "label": "AS <b>2021</b> 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
+     "absatz": "2",
      "item": null
     },
     {
@@ -2846,7 +2942,7 @@
      ],
      "absatz": null,
      "item": null,
-     "sektion": "3. Aufzeichnung auf Bild- und Daten­trägern"
+     "sektion": "3. Aufzeichnung auf Bild- und Datenträgern"
     }
    ]
   },
@@ -2862,7 +2958,7 @@
     }
    ],
    "marginalie": [
-    "9. Andere Or­ganisationsart"
+    "9. Andere Organisationsart"
    ],
    "fussnoten": [
     {
@@ -2896,8 +2992,13 @@
    "fussnoten": [
     {
      "nr": "69",
-     "text": "Eingefügt durch Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (<i>AS <b>2021</b> 400</i>).",
-     "links": [],
+     "text": "Eingefügt durch Ziff. I 3 der V vom 18. Juni 2021 zur Anpassung des Bundesrechts an Entwicklungen der Technik verteilter elektronischer Register, in Kraft seit 1. Aug. 2021 (AS <b>2021</b> 400).",
+     "links": [
+      {
+       "label": "AS <b>2021</b> 400",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2021/400"
+      }
+     ],
      "absatz": null,
      "item": null
     }

@@ -1,8 +1,9 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-11",
  "kopf": {
   "srNummer": "172.056.11",
   "titel": "Verordnung über das öffentliche Beschaffungswesen",
+  "erlassdatum": "vom 12. Februar 2020 (Stand am 1. September 2023)",
   "praeambel": [
    {
     "rolle": "autor",
@@ -51,7 +52,7 @@
      "nr": "2",
      "text": "www.simap.ch",
      "links": [],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -260,7 +261,7 @@
      "links": [
       {
        "label": "SR <b>172.056.15</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2012/695"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2024/224"
       }
      ],
      "absatz": null,
@@ -341,10 +342,10 @@
      "links": [
       {
        "label": "SR <b>235.1</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1993/1945_1945_1945"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2022/491"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -356,7 +357,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/568"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -414,7 +415,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/1061"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -472,17 +473,9 @@
       {
        "label": "<b>2009</b> 6149",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/752"
-      },
-      {
-       "label": "<b>2015</b> 775",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2015/141"
-      },
-      {
-       "label": "<b>2017</b> 5161",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2017/568"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "1"
     },
     {
@@ -502,7 +495,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/634"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "2"
     },
     {
@@ -514,7 +507,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/127"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]

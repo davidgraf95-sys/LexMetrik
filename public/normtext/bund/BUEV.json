@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-30",
+  "erzeugt": "2026-07-11",
   "eintraege": [
     {
       "id": "bund/BUEV/art_1",
@@ -30,7 +30,7 @@
       ],
       "stand": "2019-07-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#art_1",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20190709",
       "sha": "1ddd4e3da19852d17fc265e45e28245786ec92ad7fbc3d8b55ddea282627d985"
     },
@@ -41,10 +41,11 @@
       "erlass": "BüV",
       "artikel": "2",
       "artikelLabel": "Art. 2",
+      "grundlage": "(Art. 11 Bst. b BüG)",
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Bewerberin oder der Bewerber ist mit den schweizerischen Lebensverhält­nissen vertraut, wenn sie oder er namentlich:",
+          "text": "Die Bewerberin oder der Bewerber ist mit den schweizerischen Lebensverhältnissen vertraut, wenn sie oder er namentlich:",
           "items": [
             {
               "marke": "a",
@@ -66,7 +67,7 @@
           "items": [
             {
               "marke": "a",
-              "text": "die Bewerberin oder der Bewerber sich mit Hilfe von geeigneten Hilfs­mitteln oder Kursen auf den Test vorbereiten kann; und"
+              "text": "die Bewerberin oder der Bewerber sich mit Hilfe von geeigneten Hilfsmitteln oder Kursen auf den Test vorbereiten kann; und"
             },
             {
               "marke": "b",
@@ -77,9 +78,9 @@
       ],
       "stand": "2019-07-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#art_2",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20190709",
-      "sha": "efbe5ae94956d06a3897962a988779fe9a0fd2616c8214166df2ddc0031c95bb"
+      "sha": "32a25ab3652e3e049c751dfe11e78f87e835a4612200cdc6677798e7163549d8"
     },
     {
       "id": "bund/BUEV/art_3",
@@ -88,17 +89,18 @@
       "erlass": "BüV",
       "artikel": "3",
       "artikelLabel": "Art. 3",
+      "grundlage": "(Art. 11 Bst. c, 20 Abs. 2 und 26 Abs. 1 Bst. e BüG)",
       "bloecke": [
         {
           "absatz": null,
-          "text": "(Art. 11 Bst. c, 20 Abs. 2 und 26 Abs. 1 Bst. e BüG) Eine konkrete Bedrohung der inneren oder äusseren Sicherheit der Schweiz ist gegeben, wenn ein bedeutendes Rechtsgut wie Leib und Leben oder die Freiheit von Personen oder der Bestand und das Funktionieren des Staates betroffen ist, indem die betroffene Person an Aktivitäten in den Bereichen nach Artikel 6 Absatz 1 Buchstabe a Ziffern 1–5 des Nachrichtendienstgesetzes vom 25. September 2015 oder an Aktivitäten der organisierten Kriminalität teilnimmt, solche Aktivitäten unterstützt, fördert oder dazu anwirbt."
+          "text": "Eine konkrete Bedrohung der inneren oder äusseren Sicherheit der Schweiz ist gegeben, wenn ein bedeutendes Rechtsgut wie Leib und Leben oder die Freiheit von Personen oder der Bestand und das Funktionieren des Staates betroffen ist, indem die betroffene Person an Aktivitäten in den Bereichen nach Artikel 6 Absatz 1 Buchstabe a Ziffern 1–5 des Nachrichtendienstgesetzes vom 25. September 2015 oder an Aktivitäten der organisierten Kriminalität teilnimmt, solche Aktivitäten unterstützt, fördert oder dazu anwirbt."
         }
       ],
       "stand": "2019-07-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#art_3",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20190709",
-      "sha": "b96d0efea386fbef4bf65f1c8fe8dd335cf88188259813adfc4de00cf5a523e5"
+      "sha": "ac5ecf29ec3e6bc5475a65cd748601954c0475408022c3fbe1ad35e9a8ff2b10"
     },
     {
       "id": "bund/BUEV/art_4",
@@ -107,6 +109,7 @@
       "erlass": "BüV",
       "artikel": "4",
       "artikelLabel": "Art. 4",
+      "grundlage": "(Art. 12 Abs. 1 Bst. a, 20 Abs. 1 und 26 Abs. 1 Bst. c BüG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -118,7 +121,7 @@
             },
             {
               "marke": "b",
-              "text": "wichtige öffentlich-rechtliche oder privatrechtliche Verpflichtungen mut­willig nicht erfüllt; oder"
+              "text": "wichtige öffentlich-rechtliche oder privatrechtliche Verpflichtungen mutwillig nicht erfüllt; oder"
             },
             {
               "marke": "c",
@@ -144,7 +147,7 @@
             },
             {
               "marke": "d",
-              "text": "eine bedingte oder teilbedingte Geldstrafe von mehr als 90 Tagessätzen, eine bedingte Freiheitsstrafe von mehr als 3 Monaten, ein bedingter oder teilbedingter Freiheitsentzug von mehr als 3 Monaten oder eine bedingte oder teilbedingte gemeinnützige Arbeit von mehr als 360 Stunden als Haupt­sanktion;"
+              "text": "eine bedingte oder teilbedingte Geldstrafe von mehr als 90 Tagessätzen, eine bedingte Freiheitsstrafe von mehr als 3 Monaten, ein bedingter oder teilbedingter Freiheitsentzug von mehr als 3 Monaten oder eine bedingte oder teilbedingte gemeinnützige Arbeit von mehr als 360 Stunden als Hauptsanktion;"
             },
             {
               "marke": "e",
@@ -167,9 +170,9 @@
       ],
       "stand": "2019-07-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#art_4",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20190709",
-      "sha": "da18e66d85bd367fbd6030694f97faec8c9aef3d80b25f0fdd73d8eb7fd95ed6"
+      "sha": "d17f29c98e00d04d91d574cc48c16ec600c6375e4b85d04120acc59c512eef17"
     },
     {
       "id": "bund/BUEV/art_5",
@@ -178,6 +181,7 @@
       "erlass": "BüV",
       "artikel": "5",
       "artikelLabel": "Art. 5",
+      "grundlage": "(Art. 12 Abs. 1 Bst. b, 20 Abs. 1 und 26 Abs. 1 Bst. d BüG)",
       "bloecke": [
         {
           "absatz": null,
@@ -200,7 +204,7 @@
       ],
       "stand": "2019-07-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#art_5",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20190709",
       "sha": "167a186bdc82c05d7c4f75fcc857fb54b591e8e585e2095cc45db73dbc1cbe35"
     },
@@ -211,6 +215,7 @@
       "erlass": "BüV",
       "artikel": "6",
       "artikelLabel": "Art. 6",
+      "grundlage": "(Art. 12 Abs. 1 Bst. c, 20 Abs. 1 und 26 Abs. 1 Bst. a BüG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -230,7 +235,7 @@
             },
             {
               "marke": "c",
-              "text": "eine Ausbildung auf Sekundarstufe II oder Tertiärstufe in einer Landes­sprache abgeschlossen hat; oder"
+              "text": "eine Ausbildung auf Sekundarstufe II oder Tertiärstufe in einer Landessprache abgeschlossen hat; oder"
             },
             {
               "marke": "d",
@@ -245,9 +250,9 @@
       ],
       "stand": "2019-07-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#art_6",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20190709",
-      "sha": "d7ded18aba97c000c90de317fb3a14744c832f8deadedf7ec5e1987c3a4ec031"
+      "sha": "de747ca718a366e247ad9ae8fbd1d7f2d1d6187385c727bb459b8d5c43ee0c30"
     },
     {
       "id": "bund/BUEV/art_7",
@@ -256,6 +261,7 @@
       "erlass": "BüV",
       "artikel": "7",
       "artikelLabel": "Art. 7",
+      "grundlage": "(Art. 12 Abs. 1 Bst. d, 20 Abs. 1 und 26 Abs. 1 Bst. a BüG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -272,7 +278,7 @@
       ],
       "stand": "2019-07-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#art_7",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20190709",
       "sha": "72402eae1fffbeb06b8b3e29f362eb787fafdf7091f3da8a3abcbf74fbf8e8f9"
     },
@@ -283,6 +289,7 @@
       "erlass": "BüV",
       "artikel": "8",
       "artikelLabel": "Art. 8",
+      "grundlage": "(Art. 12 Abs. 1 Bst. e und 26 Abs. 1 Bst. a BüG)",
       "bloecke": [
         {
           "absatz": null,
@@ -309,7 +316,7 @@
       ],
       "stand": "2019-07-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#art_8",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20190709",
       "sha": "06f9bd3dcbe8c995dba873a26dd7baadb4e148324e411377582d430dda769825"
     },
@@ -320,10 +327,11 @@
       "erlass": "BüV",
       "artikel": "9",
       "artikelLabel": "Art. 9",
+      "grundlage": "(Art. 12 Abs. 2 BüG)",
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die zuständige Behörde berücksichtigt die persönlichen Verhältnisse der Bewer­berin oder des Bewerbers angemessen bei der Beurteilung der Kriterien nach den Artikeln 6, 7 und 11 Absatz 1 Buchstabe b. Eine Abweichung von den Kriterien ist möglich, wenn die Bewerberin oder der Bewerber diese nicht oder nur unter erschwerten Bedingungen erfüllen können aufgrund:",
+          "text": "Die zuständige Behörde berücksichtigt die persönlichen Verhältnisse der Bewerberin oder des Bewerbers angemessen bei der Beurteilung der Kriterien nach den Artikeln 6, 7 und 11 Absatz 1 Buchstabe b. Eine Abweichung von den Kriterien ist möglich, wenn die Bewerberin oder der Bewerber diese nicht oder nur unter erschwerten Bedingungen erfüllen können aufgrund:",
           "items": [
             {
               "marke": "a",
@@ -362,9 +370,9 @@
       ],
       "stand": "2019-07-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#art_9",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20190709",
-      "sha": "039ce7a83ff6f9a73ff7f74d7bc48b1257969680ac606e9bcb20ef07a8e590ac"
+      "sha": "aca8e2d9e555f391571bec8905e795488e6de1aa019f3fa3acf3425b194de242"
     },
     {
       "id": "bund/BUEV/art_10",
@@ -373,6 +381,7 @@
       "erlass": "BüV",
       "artikel": "10",
       "artikelLabel": "Art. 10",
+      "grundlage": "(Art. 21 Abs. 1 Bst. a und Abs. 2 Bst. a)",
       "bloecke": [
         {
           "absatz": "1",
@@ -389,7 +398,7 @@
       ],
       "stand": "2019-07-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#art_10",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20190709",
       "sha": "68e7c5370eb44598b95087198826470643bc04a2562f25e0f92eae929c8809b2"
     },
@@ -400,6 +409,7 @@
       "erlass": "BüV",
       "artikel": "11",
       "artikelLabel": "Art. 11",
+      "grundlage": "(Art. 21 Abs. 2 Bst. b, 26 Abs. 1 Bst. b und 51 Abs. 1 und 2 BüG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -425,18 +435,18 @@
         },
         {
           "absatz": "2",
-          "text": "Die Voraussetzungen nach Absatz 1 Buchstaben a und d müssen von Referenz­personen mit Wohnsitz in der Schweiz bestätigt werden."
+          "text": "Die Voraussetzungen nach Absatz 1 Buchstaben a und d müssen von Referenzpersonen mit Wohnsitz in der Schweiz bestätigt werden."
         },
         {
           "absatz": "3",
-          "text": "Die zuständige Behörde berücksichtigt bei der Beurteilung von Absatz 1 Buch­stabe a die persönlichen Verhältnisse der Bewerberin oder des Bewerbers."
+          "text": "Die zuständige Behörde berücksichtigt bei der Beurteilung von Absatz 1 Buchstabe a die persönlichen Verhältnisse der Bewerberin oder des Bewerbers."
         }
       ],
       "stand": "2019-07-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#art_11",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20190709",
-      "sha": "d61a91ea96497f0710126e119ee4eddd0babf444e772ffcdf7e5a13301acb735"
+      "sha": "b6b76efaedbcdf55fe1e40a43ad0dc6d4d86a9921f1e99f9949615ff9546b917"
     },
     {
       "id": "bund/BUEV/art_12",
@@ -445,17 +455,18 @@
       "erlass": "BüV",
       "artikel": "12",
       "artikelLabel": "Art. 12",
+      "grundlage": "(Art. 18 Abs. 2 BüG)",
       "bloecke": [
         {
           "absatz": null,
-          "text": "(Art. 18 Abs. 2 BüG) Zieht die Bewerberin oder der Bewerber während des Verfahrens in eine andere Gemeinde oder in einen anderen Kanton um, so bleibt die vom Kanton bezeichnete Behörde zuständig, wenn sie die zur Zusicherung nach Artikel 13 Absatz 2 BüG notwendigen Abklärungen abgeschlossen hat."
+          "text": "Zieht die Bewerberin oder der Bewerber während des Verfahrens in eine andere Gemeinde oder in einen anderen Kanton um, so bleibt die vom Kanton bezeichnete Behörde zuständig, wenn sie die zur Zusicherung nach Artikel 13 Absatz 2 BüG notwendigen Abklärungen abgeschlossen hat."
         }
       ],
       "stand": "2019-07-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#art_12",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20190709",
-      "sha": "b6b08686d239c0c771fd06818078c3b6dfa73cdcd69d191931a91ce42f7a0c89"
+      "sha": "f73051e929b954f34ed204f2fc9e8ee5a14b6874ec209c2cc66f60645fadfb3e"
     },
     {
       "id": "bund/BUEV/art_13",
@@ -464,6 +475,7 @@
       "erlass": "BüV",
       "artikel": "13",
       "artikelLabel": "Art. 13",
+      "grundlage": "(Art. 14 Abs. 1 und 2 BüG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -479,14 +491,14 @@
         },
         {
           "absatz": "4",
-          "text": "Erfüllt eine Bewerberin oder ein Bewerber die Einbürgerungsvoraussetzungen bis zur Einbürgerung nicht mehr, so kann die zuständige kantonale Behörde das Ein­bürgerungsgesuch abschreiben."
+          "text": "Erfüllt eine Bewerberin oder ein Bewerber die Einbürgerungsvoraussetzungen bis zur Einbürgerung nicht mehr, so kann die zuständige kantonale Behörde das Einbürgerungsgesuch abschreiben."
         }
       ],
       "stand": "2019-07-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#art_13",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20190709",
-      "sha": "911d663a84b16032d7d14cde84462998d075ce2db04ad86018d91f73903c4544"
+      "sha": "8bd6c5a6889f3c768b495eb6eb1a985b451fad28d7782e8395a4b71c514662dc"
     },
     {
       "id": "bund/BUEV/art_14",
@@ -495,6 +507,7 @@
       "erlass": "BüV",
       "artikel": "14",
       "artikelLabel": "Art. 14",
+      "grundlage": "(Art. 25 Abs. 2, 29 Abs. 2, 34 Abs. 2 und 51 Abs. 1 und 2 BüG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -515,7 +528,7 @@
       ],
       "stand": "2019-07-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#art_14",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20190709",
       "sha": "ea87d56153e25ca71ce23f3a3ab2723fb3f9e7720d004c5305932e0e83671d9f"
     },
@@ -526,6 +539,7 @@
       "erlass": "BüV",
       "artikel": "15",
       "artikelLabel": "Art. 15",
+      "grundlage": "(Art. 25 Abs. 2, 29 Abs. 2 und 51 Abs. 1 und 2 BüG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -550,7 +564,7 @@
       ],
       "stand": "2019-07-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#art_15",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20190709",
       "sha": "e88c65461753906c55606f73631e076db6623c717101d463afbf371305785d49"
     },
@@ -561,6 +575,7 @@
       "erlass": "BüV",
       "artikel": "15_a",
       "artikelLabel": "Art. 15a",
+      "grundlage": "(Art. 24a BüG)",
       "bloecke": [
         {
           "absatz": null,
@@ -583,7 +598,7 @@
       ],
       "stand": "2019-07-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#art_15_a",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20190709",
       "sha": "dccc382c427d9ee89af50125e18b8caa23e46dcc53c12b08465d849319fc919e"
     },
@@ -594,6 +609,7 @@
       "erlass": "BüV",
       "artikel": "15_b",
       "artikelLabel": "Art. 15b",
+      "grundlage": "(Art. 24a BüG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -619,7 +635,7 @@
         },
         {
           "absatz": "2",
-          "text": "Ergibt sich der geforderte Aufenthaltstitel nicht klarerweise aus einem Auszug nach Absatz 1, so sind dem Gesuch weitere Unterlagen beizulegen, die geeignet sind, das Aufenthaltsrecht der ersten Generation aufzuzeigen. Dazu eignen sich ins­besondere:",
+          "text": "Ergibt sich der geforderte Aufenthaltstitel nicht klarerweise aus einem Auszug nach Absatz 1, so sind dem Gesuch weitere Unterlagen beizulegen, die geeignet sind, das Aufenthaltsrecht der ersten Generation aufzuzeigen. Dazu eignen sich insbesondere:",
           "items": [
             {
               "marke": "a",
@@ -638,9 +654,9 @@
       ],
       "stand": "2019-07-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#art_15_b",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20190709",
-      "sha": "3f763419ddf0273ec23f544b8b9ecb635aefa66110c75e919316a08df0a9e586"
+      "sha": "fdcdc879194e9705c2e7d4b5e726e2d36e150d2b9969acc0880cad6544121043"
     },
     {
       "id": "bund/BUEV/art_16",
@@ -649,17 +665,18 @@
       "erlass": "BüV",
       "artikel": "16",
       "artikelLabel": "Art. 16",
+      "grundlage": "(Art. 33 Abs. 2 BüG)",
       "bloecke": [
         {
           "absatz": null,
-          "text": "(Art. 33 Abs. 2 BüG) Der Aufenthalt im Ausland für höchstens ein Jahr im Auftrag des Arbeitgebers oder zu Aus- oder Weiterbildungszwecken gilt als kurzfristiges Verlassen der Schweiz mit der Absicht auf Rückkehr."
+          "text": "Der Aufenthalt im Ausland für höchstens ein Jahr im Auftrag des Arbeitgebers oder zu Aus- oder Weiterbildungszwecken gilt als kurzfristiges Verlassen der Schweiz mit der Absicht auf Rückkehr."
         }
       ],
       "stand": "2019-07-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#art_16",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20190709",
-      "sha": "9ebf90ac05bfd50b6f9100ba64deecff6c05eeea24ea960b1c8ca3cc4482f088"
+      "sha": "059216f3c7b6784914b1f7a237fcc5174d20ed6f26aa28c825be3e7851948ddd"
     },
     {
       "id": "bund/BUEV/art_17",
@@ -668,6 +685,7 @@
       "erlass": "BüV",
       "artikel": "17",
       "artikelLabel": "Art. 17",
+      "grundlage": "(Art. 34 Abs. 3 BüG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -718,7 +736,7 @@
       ],
       "stand": "2019-07-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#art_17",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20190709",
       "sha": "83b6626455be06ba357e9b995b2bd4077ec7267ffb6a5b743805228e653c55a3"
     },
@@ -729,6 +747,7 @@
       "erlass": "BüV",
       "artikel": "18",
       "artikelLabel": "Art. 18",
+      "grundlage": "(Art. 34 Abs. 3 BüG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -741,7 +760,7 @@
       ],
       "stand": "2019-07-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#art_18",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20190709",
       "sha": "4bd029a81156fd5fe0477813f05a79092ba33d5e88d9e1da76c7f72189cb50dd"
     },
@@ -752,6 +771,7 @@
       "erlass": "BüV",
       "artikel": "19",
       "artikelLabel": "Art. 19",
+      "grundlage": "(Art. 34 Abs. 3 BüG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -781,7 +801,7 @@
         },
         {
           "absatz": "3",
-          "text": "Kann die Bewerberin oder der Bewerber die Kriterien nach den Artikeln 7 und 11 Absatz 1 Buchstabe b wegen Krankheit, Behinderung oder anderen gewichtigen persönlichen Umständen nicht oder kaum erfüllen (Art. 9), so wird im Erhebungs­bericht darauf hingewiesen."
+          "text": "Kann die Bewerberin oder der Bewerber die Kriterien nach den Artikeln 7 und 11 Absatz 1 Buchstabe b wegen Krankheit, Behinderung oder anderen gewichtigen persönlichen Umständen nicht oder kaum erfüllen (Art. 9), so wird im Erhebungsbericht darauf hingewiesen."
         },
         {
           "absatz": "4",
@@ -790,9 +810,9 @@
       ],
       "stand": "2019-07-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#art_19",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20190709",
-      "sha": "a951ee0f42ad35371e92e50d70c97783fd8cf3bff0fc354f99ec16d487b3352c"
+      "sha": "3b4f14b02549825e9800e44e758f91ea172f79097dc8d69deb07d09a89ecc4e9"
     },
     {
       "id": "bund/BUEV/art_20",
@@ -801,6 +821,7 @@
       "erlass": "BüV",
       "artikel": "20",
       "artikelLabel": "Art. 20",
+      "grundlage": "(Art. 34 Abs. 3 BüG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -821,7 +842,7 @@
       ],
       "stand": "2019-07-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#art_20",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20190709",
       "sha": "71f24a19f71f655bd603aac9b7ce7f2ab7eb14c805403c778dfc68265a3c23ec"
     },
@@ -854,7 +875,7 @@
       ],
       "stand": "2019-07-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#art_21",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20190709",
       "sha": "093822eb74c26b2ce06c14e3e840aa76fd61774247a2be8c153ea9a51ab26858"
     },
@@ -865,17 +886,18 @@
       "erlass": "BüV",
       "artikel": "22",
       "artikelLabel": "Art. 22",
+      "grundlage": "(Art. 25 Abs. 2, 29 Abs. 2 und 34 Abs. 3 BüG)",
       "bloecke": [
         {
           "absatz": null,
-          "text": "(Art. 25 Abs. 2, 29 Abs. 2 und 34 Abs. 3 BüG) Werden die kantonale Einbürgerungsbehörde oder die Schweizer Vertretung im Ausland mit Erhebungen für die Beurteilung der Einbürgerungsvoraussetzungen beauftragt, so übermitteln sie ihren Erhebungsbericht in der Regel innerhalb von zwölf Monaten dem SEM."
+          "text": "Werden die kantonale Einbürgerungsbehörde oder die Schweizer Vertretung im Ausland mit Erhebungen für die Beurteilung der Einbürgerungsvoraussetzungen beauftragt, so übermitteln sie ihren Erhebungsbericht in der Regel innerhalb von zwölf Monaten dem SEM."
         }
       ],
       "stand": "2019-07-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#art_22",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20190709",
-      "sha": "fb1da20df4384548f147568676389d0e0fa1f9e9d9df59c18faa91f6ea1b77f4"
+      "sha": "7bd9ccfb8bdadc0309f8b0bdb18f7d594c0fc1292a4ec098fa863cd83d884b3d"
     },
     {
       "id": "bund/BUEV/art_23",
@@ -896,7 +918,7 @@
       ],
       "stand": "2019-07-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#art_23",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20190709",
       "sha": "b5c16a7bb0ca791fd6a4c38bc698a0de29061c6c53e965d89a03d7c612c385e4"
     },
@@ -915,7 +937,7 @@
       ],
       "stand": "2019-07-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#art_24",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20190709",
       "sha": "5dc381fbe82792c4d8f02fc2692f320e4ba31e93908c5d3908d4bcc18b4a7933"
     },
@@ -926,6 +948,7 @@
       "erlass": "BüV",
       "artikel": "25",
       "artikelLabel": "Art. 25",
+      "grundlage": "(Art. 35 Abs. 1 und 2 BüG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -941,15 +964,11 @@
                 "titel": ""
               },
               {
-                "typ": "text",
-                "titel": ""
+                "typ": "zahl",
+                "titel": "Franken"
               }
             ],
             "zeilen": [
-              [
-                "",
-                "Franken"
-              ],
               [
                 "a. für die Erteilung der Einbürgerungsbewilligung des Bundes an:",
                 ""
@@ -1016,14 +1035,10 @@
               },
               {
                 "typ": "text",
-                "titel": ""
+                "titel": "Franken"
               }
             ],
             "zeilen": [
-              [
-                "",
-                "Franken"
-              ],
               [
                 "a. für die Erstellung von Erhebungsberichten durch den Wohn-kanton je nach Arbeitsaufwand",
                 "höchstens 400"
@@ -1038,9 +1053,9 @@
       ],
       "stand": "2019-07-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#art_25",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20190709",
-      "sha": "a7e3b34464a40986746a620a9dc3ca4359415e072c4ed7dbf7a00a06b35c85d2"
+      "sha": "d404e919ee0f4f32a4c4cfa95a218e7912cf82c3499854a7d25a042784e27e66"
     },
     {
       "id": "bund/BUEV/art_26",
@@ -1057,7 +1072,7 @@
       ],
       "stand": "2019-07-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#art_26",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20190709",
       "sha": "f1c69e031ad66f7bc7d62eba5978d37d96b77d6adbb4f5a828d7fa0e7c6399e3"
     },
@@ -1068,6 +1083,7 @@
       "erlass": "BüV",
       "artikel": "27",
       "artikelLabel": "Art. 27",
+      "grundlage": "(Art. 35 Abs. 3 BüG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1106,7 +1122,7 @@
       ],
       "stand": "2019-07-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#art_27",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20190709",
       "sha": "d4631e3dd21bfe25ea58001d54c8deba536c9fa9b6350fb68980edfcc8322c84"
     },
@@ -1129,7 +1145,7 @@
       ],
       "stand": "2019-07-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#art_28",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20190709",
       "sha": "75d220741bb6868f4f2d8b6306a7f2c4ff3ac2ba9c41ee64413198ce02b4451c"
     },
@@ -1140,17 +1156,18 @@
       "erlass": "BüV",
       "artikel": "29",
       "artikelLabel": "Art. 29",
+      "grundlage": "(Art. 40 BüG)",
       "bloecke": [
         {
           "absatz": null,
-          "text": "(Art. 40 BüG) Erhebt die zuständige kantonale Behörde eine Gebühr für die Behandlung eines Entlassungsgesuchs, so ist sie zuständig für das Inkasso."
+          "text": "Erhebt die zuständige kantonale Behörde eine Gebühr für die Behandlung eines Entlassungsgesuchs, so ist sie zuständig für das Inkasso."
         }
       ],
       "stand": "2019-07-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#art_29",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20190709",
-      "sha": "73f29e274e862429597e36cf94e395bb37331cd8c84f1a10768f628218d8a218"
+      "sha": "9c3c6a6a134d43f6efb4928a8d910f1e1c3f8dec62a802c08d7ac4445689da62"
     },
     {
       "id": "bund/BUEV/art_30",
@@ -1159,6 +1176,7 @@
       "erlass": "BüV",
       "artikel": "30",
       "artikelLabel": "Art. 30",
+      "grundlage": "(Art. 42 BüG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1189,7 +1207,7 @@
       ],
       "stand": "2019-07-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#art_30",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20190709",
       "sha": "2dbef2c4109990a4cc77d52d3fa9b41f52a5a0f085bd42f713a9e9a0d8ea23bf"
     },
@@ -1208,7 +1226,7 @@
       ],
       "stand": "2019-07-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#art_31",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20190709",
       "sha": "93e22037e152e6d81645971e5e075550a6f8bcf0c089df8edfd926bdcabae6f5"
     },
@@ -1227,16 +1245,16 @@
       ],
       "stand": "2019-07-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#art_32",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20190709",
       "sha": "b9044bdb0ef722ab96d3f86cdff0d0cbfe44c75111ee3c4c15203a22e6c755b7"
     },
     {
-      "id": "bund/BUEV/lvl_d922e56",
+      "id": "bund/BUEV/annex_u1",
       "ebene": "bund",
       "quelle": "BUEV",
       "erlass": "BüV",
-      "artikel": "lvl_d922e56",
+      "artikel": "annex_u1",
       "artikelLabel": "Anhang",
       "bloecke": [
         {
@@ -1258,7 +1276,7 @@
           "items": [
             {
               "marke": "1",
-              "text": "Verordnung vom 23. November 2005 über die Gebühren zum Bürgerrechts­gesetz;"
+              "text": "Verordnung vom 23. November 2005 über die Gebühren zum Bürgerrechtsgesetz;"
             },
             {
               "marke": "2",
@@ -1280,10 +1298,10 @@
         }
       ],
       "stand": "2019-07-09",
-      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#lvl_d922e56",
-      "abgerufen": "2026-06-30",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/405/de#annex_u1",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20190709",
-      "sha": "f7bce261fea77e08d34db07513109cce3542c481006058ba6ba1dc610b57511a"
+      "sha": "b2af14eeab025a46c7d36a1544d151e17787f3259b4c2197f9d90345a1b40cb1"
     }
   ]
 }

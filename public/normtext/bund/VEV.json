@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-30",
+  "erzeugt": "2026-07-11",
   "eintraege": [
     {
       "id": "bund/VEV/art_1",
@@ -11,7 +11,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Diese Verordnung regelt die Einreise in die Schweiz, den Flughafentransit sowie die Visumerteilung an Ausländerinnen und Ausländer."
+          "text": "Diese Verordnung regelt die Einreise in die Schweiz, den Flughafentransit, die Visumerteilung an Ausländerinnen und Ausländer sowie das Überprüfungsverfahren bei illegalem Aufenthalt oder irregulärem Überschreiten der Schengen-Aussengrenzen."
         },
         {
           "absatz": "2",
@@ -98,9 +98,9 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_1",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
-      "sha": "a0d48b3c0203d684919d0dec9af5348b2bf2ba9c281f9047826363bc6b2d31e1"
+      "sha": "5cefa7f7c2a6e79204bdad8ea5f778f864cc6a4dba9394afc74b6fd411700694"
     },
     {
       "id": "bund/VEV/art_2",
@@ -171,7 +171,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_2",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "20631fb52b803970b3df4aeaac4dfe85fcaf8edbdca9a051f472b208e67ba819"
     },
@@ -234,7 +234,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_3",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "f79b7ac3b6bada174238e48f8c5c083edabee64af68ce73c7b036fa504d3761d"
     },
@@ -267,7 +267,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_4",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "677775e5a3a8a8a39d5e7c1472eacc376fa1bdcbfe7810a3b9bc32e9dfe441d1"
     },
@@ -312,7 +312,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_5",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "5a36896422b11efd3f017e3a800566439f97a8162057ba63df4daf3f92ca1a64"
     },
@@ -404,7 +404,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_6",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "4a0ca63002672a29d43f1f84d0e3faf1536101850b4221372ee77b78fea27907"
     },
@@ -423,7 +423,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_7",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "91481f1930b860a3716156b0a9bda3668fd3d3582d0e4b225ddb3c8a2fd56dcd"
     },
@@ -506,7 +506,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_8",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "beb3d71530f84b6b107b4da91efe63e81dbcd4fb9534d712df3c026fb1d443ce"
     },
@@ -529,7 +529,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_9",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "b0940f6ef1aa92dd2b3f914bc652b30a33767648a31bdd8ef0cc1532ed08c6a2"
     },
@@ -629,7 +629,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_10",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "1b3f6f8fa90576c698c9c024dea20b1c294d5c13a64c234d69d7410dea5bc01b"
     },
@@ -671,7 +671,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_10_a",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "c649343ae375c10a0ced1d880f7c83f15a8ffa5b76b3b1f4bd37e1c55edfebd7"
     },
@@ -700,7 +700,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_10_b",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "029af8893868bd69b4e1000f0496628b9a5b158d2e7b39b43b057fd25fa3e5f7"
     },
@@ -733,7 +733,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_11",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "3d4596bf6b8a2a5884a91c1537b98c6913c7fb4f0930697ea3a4417c24efb34a"
     },
@@ -756,7 +756,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_12",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "c010cdd8f4ab9dc672da940434c0c6b896dbab89ee14507ceaeea49bab8cd4b9"
     },
@@ -779,7 +779,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_13",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "2a0fd398a87dc9ac1e6f97070368766263f07967df7f0182ff1a61cd61e84dbe"
     },
@@ -820,7 +820,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_14",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "90ee4a0cc57cb09020ec63f438426c06275fdefffe5236901fb28aecc527c57d"
     },
@@ -869,7 +869,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_15",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "0dd3e967bf2bd77997175eb5e1ff1578acc7f010209a98e6893ad551ff071479"
     },
@@ -892,7 +892,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_16",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "450caf9ba2bdf84c11f4c3499fd75806e0bd64240ebe722e3a8cccf111fbe893"
     },
@@ -929,7 +929,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_17",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "bbab115adf7d2ef157c57dfe24384f30f49b35c97f218736d7ed46127819665f"
     },
@@ -948,7 +948,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_18",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "f62d7fa191316006484bfa3d296992171c0f0fd516753ec3adfec41cd3e826a2"
     },
@@ -967,7 +967,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_19",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "0864073d1b41a8a5fe4d805168843c767467ec7f0ff247aa836f039fe3825008"
     },
@@ -986,7 +986,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_20",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -1037,7 +1037,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_21",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "aef209e4158dff48f3150595440fca4b53aebf4205e823b7232d0a90dbac53b2"
     },
@@ -1064,7 +1064,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_22",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "6f11e3e9d659a30993e39453fc266d5e3ed734ea97113ccbd5c7f36d3bf821a9"
     },
@@ -1091,7 +1091,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_23",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "0cc096d8ec106df1efc252a2ab8bee60a82d4a94f73464f66b0ab35491df857e"
     },
@@ -1110,7 +1110,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_24",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "e0af9b03de51022c39f09bb11cdfec1d85b0dc4b567d6750b018a2ef383588b1"
     },
@@ -1129,7 +1129,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_25",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "92ff3232982fc3f37bac47e01a7c2d8977fc34dc6bd3e3730302f6da6aefa198"
     },
@@ -1156,7 +1156,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_26",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "2c62c7d093b7058b9a500a505511df47e3e63c5ba1196872e8a343f0b4e356a3"
     },
@@ -1179,7 +1179,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_27",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "786d7a6332a62e9f898e33a954aba3a8fc3f27b51482eaf34e11f8946b662ed8"
     },
@@ -1198,7 +1198,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_28",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "580b09e29ffb24214aa88f9197997069fd5c189ed717935e4715547c67d218fa"
     },
@@ -1222,7 +1222,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_29",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "93128eb2332ffddc89334d086e0efe53b24973031ff9b99c64d9bce144181f6d"
     },
@@ -1245,7 +1245,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_29_a",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "f5f1574b1406e73b901ce37ad062a3329eda7b3493f69ccde40dde4156923bb9"
     },
@@ -1287,7 +1287,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_30",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "da6df38f3b063b1f03f044a820d652df9d81b31ce93905fa1e18110be7a19514"
     },
@@ -1318,7 +1318,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_31",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "f684b0c026cfe2e098fc7142c15836b68c09949d988b7ac6211ebec4013d44cb"
     },
@@ -1392,7 +1392,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_32",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "3b7562d445aa1aacc285338bfd6092e679b1d1b51bbd537c3242bd51bd68e60d"
     },
@@ -1433,7 +1433,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_33",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "7556ba8c0fc166dd6cf379c2548c6244dc6fde94ca0e9f403ecd5cc17eb63f76"
     },
@@ -1552,7 +1552,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_34",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "1857ab54e78bf5388739c137098391c60e0bc6fc236d4df271d76c3296eff365"
     },
@@ -1715,7 +1715,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_34_a",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "0d38283e6078415396642d7dbb748b1c10cbd75e8ca6ea0d870c565177ec2006"
     },
@@ -1782,7 +1782,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_34_b",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "75a4e8e6f00dca6473c126d1abd09980f7353a93406a0e773f36edac1aa61011"
     },
@@ -1833,7 +1833,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_34_c",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "ab5c410e6de8374f8afddbf8ab880b2cd02404848d7eb620b7fbf8be31f7ee78"
     },
@@ -1866,7 +1866,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_34_d",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "72bca285a9cc984f488137489c37690c88c928707e6bda51a35bd1146181afda"
     },
@@ -1961,7 +1961,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_34_e",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "75a0c6e445a224b4711f1a3a9485de2907c6caf60145793228f1d5a448de4e98"
     },
@@ -2002,7 +2002,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_34_f",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "d4f2a3ce5ea7b4dd82849bfad913446499848dddb675cc3e3723e4b68b142443"
     },
@@ -2021,7 +2021,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_34_g",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "43b2ceb54b49428935bd63732078691a7453d79c36aea699ad7c2e9b0c03da30"
     },
@@ -2040,7 +2040,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_34_h",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "a6c74a901e4d87eca3f78c549ada4d652a1bd3f24d628d03b8e5ef2f0987eb37"
     },
@@ -2087,7 +2087,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_34_i",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "cbad1e402f7f6647b38cf8ac190d14422b2bcff48babe4f8fc396d991dc6215a"
     },
@@ -2116,7 +2116,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_34_j",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "088af6ce477ad40a9043eaa3b1e5e1e31e30e4d47290cd91583b80aa77afc18b"
     },
@@ -2179,7 +2179,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_34_k",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "86c384bc4caeaeebf4717a788b325bff442b070e0d084adb85a34bc11c92f2c9"
     },
@@ -2232,7 +2232,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_35",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "b855ef3ec62fc450b9f361ccf0cac96b9f826c1ff0691bab6cad02e29079ecc3"
     },
@@ -2251,7 +2251,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_36",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "aaa60a531aac840d371d0947b4ae497535f6389c049d4e140b78cceb3dcc02fa"
     },
@@ -2270,7 +2270,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_37",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "56a35743e98981c19d023199fb7fa5debf8d4eae7beb691723413411baba1bff"
     },
@@ -2311,7 +2311,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_38",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "765f81684014c1570b44514c05c9df4110daf2094a11cf76100514ec3d0e6240"
     },
@@ -2344,7 +2344,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_39",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "2432b384816302b9c871032614341c0de7e47879b184b0b475500797eeadc371"
     },
@@ -2405,7 +2405,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_39_a",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "004c8fadf87cc345075f043521ce99d349c7f85a4b87c1e75fb1a3b255387c79"
     },
@@ -2428,7 +2428,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_40",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "19c8287f9779316bed347fe667672c1fafe2e8ddf70ef90b5928779e9a1c6631"
     },
@@ -2477,7 +2477,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_41",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "d4ef51210a5bae8645b660c9f9b38fcd35a570871ac7d11ea8f81e219fd3a008"
     },
@@ -2500,7 +2500,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_42",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "b52f2cb9eaeb38aed8de9c147827f733d45026e7f358f035b50d01bb77e2792f"
     },
@@ -2519,7 +2519,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_43",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "8aaa6a92247d4aa48512ea063ffa34fef4ed28176b4b1f62bf8deb3ea458b3d6"
     },
@@ -2538,7 +2538,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_44",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "a6662b830a4942924e4690e8d724a2682910052010ec8cda53aaed3cbac5be54"
     },
@@ -2567,7 +2567,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_45",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "d320f607e2b8f4f59ac5e424d0ddecbe24c0a3b8bb896734d7ea56aff2f034bf"
     },
@@ -2586,7 +2586,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_46_53",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "fffd896179b5a05de5123ab834ecf45024e7a99fc81a9e6dc269c8d0b54294f4"
     },
@@ -2605,7 +2605,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_54",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "266f12a6439233117c2a2348246f5ac255c5b3f89208177e2a670985840a50c3"
     },
@@ -2666,7 +2666,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_55",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "d3f27eaa928aaa66ce5728584005c9cff0b8c00c6f516ebbb73a5574b5749564"
     },
@@ -2685,7 +2685,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_56",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "e5718a6e4695e86d785e044ba02659feb974ebea56139ed1f4c156fba8aa0d51"
     },
@@ -2714,7 +2714,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_57",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "94950f5d5b47b90e7417e65b47ef390047f0fb5a5190644b6f40c365ac661c8a"
     },
@@ -2737,7 +2737,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_58",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "e625d7bbe9f5ac35eaccea0ff0cde4a2b86328ddcb67452c5f72ecc17e8ba91c"
     },
@@ -2770,7 +2770,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_59",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "fcb2dacbe99ff78eb95934da99509f76f06887b973708b35c0cd26ed88e9ed19"
     },
@@ -2797,7 +2797,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_60",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "0d8ddb6f56eeb8aee2c40dac580c0dccd6e762b42b49ef6bcefa2f605b3d927c"
     },
@@ -2816,7 +2816,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_61",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "6817c8ffac46e3947dc5b8a0fca81baa0da6b45572e348288a72b1f057980e48"
     },
@@ -2835,7 +2835,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_62",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "c8bd5eed6a324af6f825a7d663e109057902be1c3c2d5f985bea4dddef213bc3"
     },
@@ -2858,7 +2858,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_63",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "af350be0d0581a3bdbbab15c515cdd9aad7b85262604f1fad29f68d6c781b29e"
     },
@@ -2891,7 +2891,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_64",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "d8caffe11fb384502b0bb87c303d4d3ba3ffe0b2577b8155ca9934b2d4b028b4"
     },
@@ -2932,7 +2932,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_65",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "5dc418a4258501dd6af5040d2cce2880a4f87d65ef637b20d9ff54ec7827c384"
     },
@@ -2973,7 +2973,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_66",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "a305e3ee9c35b1b69451b6febd030b655e09ce7aa5a958ee6a680b999227e71c"
     },
@@ -3000,7 +3000,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_67",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "60bc1c92f2fc3135ae05270c813670e68ecb9f09f748c0cc86e367e69a7c27f8"
     },
@@ -3023,9 +3023,211 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_68",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "ef8cde961d0fed85555ad931a105b3866eeeebb9e58b55e0ec53d181ab3d8395"
+    },
+    {
+      "id": "bund/VEV/art_68_a",
+      "ebene": "bund",
+      "quelle": "VEV",
+      "erlass": "VEV",
+      "artikel": "68_a",
+      "artikelLabel": "Art. 68a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die für die Überprüfung zuständige Behörde informiert die Ausländerinnen und Ausländer vor Beginn der Überprüfung über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Zweck, die Dauer und die einzelnen Schritte der Überprüfung nach der Verordnung (EU) 2024/1356;"
+            },
+            {
+              "marke": "b",
+              "text": "die möglichen Ergebnisse der Überprüfung;"
+            },
+            {
+              "marke": "c",
+              "text": "ihr Recht, ein Asylgesuch einzureichen;"
+            },
+            {
+              "marke": "d",
+              "text": "ihre Rechte und Pflichten während der Überprüfung, insbesondere über ihre Mitwirkungspflicht sowie ihre Rechte nach dem Datenschutzgesetz vom 25. September 2020."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sie informiert die Ausländerinnen und Ausländer im späteren Verlauf des Verfahrens über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Einreise- und Aufenthaltsbedingungen, insbesondere die Einreisevoraussetzungen nach der Verordnung (EU) 2016/399, falls diese Informationen nicht bereits zuvor mitgeteilt worden sind;"
+            },
+            {
+              "marke": "b",
+              "text": "falls angezeigt, den Zugang zur Rückkehr- und Wiedereingliederungshilfe nach Artikel 60 AIG."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Information nach den Absätzen 1 und 2 erfolgt in Papierform oder in elektronischer Form und in einer Sprache, die von der betroffenen Person verstanden wird oder von der ausgegangen werden kann, dass sie sie versteht. Falls notwendig, ist eine Dolmetscherin oder ein Dolmetscher beizuziehen. Bei minderjährigen Ausländerinnen und Ausländern erfolgt die Information auf eine kinderfreundliche und altersgerechte Weise, wobei ein Elternteil, ein erwachsener Familienangehöriger oder eine Vertrauensperson einbezogen wird."
+        },
+        {
+          "absatz": "4",
+          "text": "Das SEM stellt den für die Überprüfung zuständigen Behörden die erforderlichen Unterlagen zur Verfügung, um eine einheitliche Information zu gewährleisten."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_68_a",
+      "abgerufen": "2026-07-11",
+      "fassungsToken": "20260612",
+      "sha": "41be3abe6d120f53456c36688fc1176b37bc6f6f06da1bad34af6dc2b3391061"
+    },
+    {
+      "id": "bund/VEV/art_68_b",
+      "ebene": "bund",
+      "quelle": "VEV",
+      "erlass": "VEV",
+      "artikel": "68_b",
+      "artikelLabel": "Art. 68b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Ausländerinnen und Ausländer werden vor der Überprüfung an ein Zentrum des Bundes nach Artikel 24 AsylG beziehungsweise an ein kantonal oder kommunal geführtes Zentrum nach Artikel 24d AsylG zugewiesen, wenn sie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "im Hoheitsgebiet der Schweiz aufgegriffen werden und ein Asylgesuch einreichen; oder"
+            },
+            {
+              "marke": "b",
+              "text": "an der Schengen-Aussengrenze an einem Schweizer Flughafen ein Asylgesuch einreichen und kein Asylverfahren am Flughafen nach Artikel 22 AsylG durchgeführt wird."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_68_b",
+      "abgerufen": "2026-07-11",
+      "fassungsToken": "20260612",
+      "sha": "454e957fb4a242274bb3171e16afd160aeb8b8f2680c049a69e0252e32b27cf7"
+    },
+    {
+      "id": "bund/VEV/art_68_c",
+      "ebene": "bund",
+      "quelle": "VEV",
+      "erlass": "VEV",
+      "artikel": "68_c",
+      "artikelLabel": "Art. 68c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Überprüfung ist abgeschlossen, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "alle Schritte der Überprüfung nach Artikel 9b Absatz 2 AIG, Artikel 9c Absatz 2 AIG, Artikel 21a Absatz 4 des Asylgesetzes vom 26. Juni 1998 (AsylG) oder Artikel 26 Absatz 1ter AsylG innerhalb der vorgegebenen Fristen durchgeführt wurden;"
+            },
+            {
+              "marke": "b",
+              "text": "vor Beendigung aller Prüfschritte die Frist abgelaufen ist."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Reichen Ausländerinnen und Ausländer kein Asylgesuch ein, so führt die zuständige Behörde nach Abschluss der Überprüfung ein Wegweisungsverfahren nach Artikel 64 AIG durch."
+        },
+        {
+          "absatz": "3",
+          "text": "Reichen Ausländerinnen und Ausländer während der Überprüfung ein Asylgesuch ein, so werden sie nach Abschluss der Überprüfung an ein Zentrum des Bundes nach Artikel 24 AsylG beziehungsweise an ein kantonal oder kommunal geführtes Zentrum nach Artikel 24d AsylG verwiesen."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_68_c",
+      "abgerufen": "2026-07-11",
+      "fassungsToken": "20260612",
+      "sha": "5d54d5ce4dff4c61a0c9db02bd51482476905e401b8c7d1d72c558c04c90427f"
+    },
+    {
+      "id": "bund/VEV/art_68_d",
+      "ebene": "bund",
+      "quelle": "VEV",
+      "erlass": "VEV",
+      "artikel": "68_d",
+      "artikelLabel": "Art. 68d",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die für die Überprüfung zuständige Behörde füllt nach Abschluss der Überprüfung ein Formular nach Artikel 17 der Verordnung (EU) 2024/1356 aus. Das Formular wird vom SEM zur Verfügung gestellt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die betroffene Person erhält das ausgefüllte Formular oder die im Formular vermerkten Resultate der Überprüfung in Papierform oder in elektronischer Form. Die Ergebnisse der Abfragen von Informationssystemen zur Sicherheitskontrolle werden nicht mitgeteilt."
+        },
+        {
+          "absatz": "3",
+          "text": "Die betroffene Person kann auf unrichtige Angaben im Formular hinweisen. Die zuständige Behörde bringt einen entsprechenden Vermerk im ausgefüllten Formular an. Der betroffenen Person darf dadurch kein Nachteil in einem nachfolgenden Verfahren erwachsen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die zuständige Behörde leitet das ausgefüllte Formular an die für das nachfolgende Verfahren zuständige Behörde weiter."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_68_d",
+      "abgerufen": "2026-07-11",
+      "fassungsToken": "20260612",
+      "sha": "2a259357cd34edfae285475afff19006ff1eda8bf1788fa5da5129ecc6bf3518"
+    },
+    {
+      "id": "bund/VEV/art_68_e",
+      "ebene": "bund",
+      "quelle": "VEV",
+      "erlass": "VEV",
+      "artikel": "68_e",
+      "artikelLabel": "Art. 68e",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zuständige Behörde verzichtet auf die Durchführung einer Überprüfung, wenn die betroffene Person bereits zu einem früheren Zeitpunkt einer Überprüfung unterzogen worden ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie darf davon ausgehen, dass eine Überprüfung bereits erfolgt ist, wenn die betroffene Person nach dem 12. Juni 2026 im Informationssystem Eurodac erfasst wurde."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_68_e",
+      "abgerufen": "2026-07-11",
+      "fassungsToken": "20260612",
+      "sha": "03e383b37553b66cf942e0a7e8de6096e4a92ddb7d99d1eeaffa8538000ec68f"
+    },
+    {
+      "id": "bund/VEV/art_68_f",
+      "ebene": "bund",
+      "quelle": "VEV",
+      "erlass": "VEV",
+      "artikel": "68_f",
+      "artikelLabel": "Art. 68f",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ist gegen Ausländerinnen und Ausländer ein Straf- oder Auslieferungsverfahren hängig, so wird keine Überprüfung durchgeführt. Ausgenommen davon sind Strafverfahren, die gestützt auf Artikel 115 AIG eingeleitet wurden."
+        },
+        {
+          "absatz": "2",
+          "text": "Wird während der Überprüfung ein Straf- oder Auslieferungsverfahren gegen die betroffene Person eingeleitet, so wird die Überprüfung beendet. Ausgenommen davon sind Strafverfahren, die gestützt auf Artikel 115 AIG eingeleitet werden. Der Grund für die Beendigung wird im Formular nach Artikel 68d vermerkt."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_68_f",
+      "abgerufen": "2026-07-11",
+      "fassungsToken": "20260612",
+      "sha": "5d8b85af9362f19e646f316cd3a9ae425d94be648fc4cc62f328e870f70814a2"
     },
     {
       "id": "bund/VEV/art_69",
@@ -3050,7 +3252,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_69",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "c3153bfd7d55e3f2f8f5d2f0574f88910e6f3dc163a6786b5259b94dfcc85fb0"
     },
@@ -3069,7 +3271,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_70",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "64c7f69ca80821965f60f355c1750c0d2712c399ba49cd65902502a836e61aa3"
     },
@@ -3088,7 +3290,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#art_71",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "837e0ed19ccf7c1baba43d6c5a34acfca6d4c8522d4418569a05c3d4f7d71008"
     },
@@ -3142,7 +3344,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#annex_1",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "ab3cf1263c4fa7a94e54d3756c710e733aee473b8ae0ec35e354f435fde5fa55"
     },
@@ -3206,7 +3408,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#annex_2",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "ede50028a479840cbcecd1e17d0bd10c176c5164b202869acacd4ac9687d40a4"
     },
@@ -3336,7 +3538,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#annex_3",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "d724092218cbe9b863aeb785545054a52604aa80ef848f06aada0e130e87f435"
     },
@@ -3372,7 +3574,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#annex_4",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "1f4abed1b19313bfc4a4df932b3f48d5f33f617f38da5bc884ddfdf9b7a7b2ca"
     },
@@ -3400,7 +3602,7 @@
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/493/de#annex_5",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20260612",
       "sha": "0a3664b4221e37f22cf8829b95e922e714e62625301f00a69b7843c08dd95d1e"
     }

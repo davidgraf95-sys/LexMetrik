@@ -1,8 +1,9 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-11",
  "kopf": {
   "srNummer": "151.1",
   "titel": "Bundesgesetz über die Gleichstellung von Frau und Mann",
+  "erlassdatum": "vom 24. März 1995 (Stand am 1. Juli 2020)",
   "praeambel": [
    {
     "rolle": "autor",
@@ -29,7 +30,7 @@
     "links": [
      {
       "label": "SR <b>101</b>",
-      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404/20200101"
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4715"
      }
     ],
     "absatz": null,
@@ -57,7 +58,7 @@
     "links": [
      {
       "label": "BBl <b>1993</b> I 1248",
-      "url": "https://fedlex.data.admin.ch/eli/fga/1993/1_1248__"
+      "url": "https://fedlex.data.admin.ch/eli/fga/1993/1_1248_1163_987"
      }
     ],
     "absatz": null,
@@ -92,7 +93,7 @@
      "links": [
       {
        "label": "SR <b>220</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
      "absatz": null,
@@ -172,7 +173,7 @@
      "links": [
       {
        "label": "SR <b>220</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
      "absatz": null,
@@ -198,7 +199,7 @@
      "links": [
       {
        "label": "SR <b>220</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
      "absatz": null,
@@ -223,37 +224,10 @@
      "links": [
       {
        "label": "SR <b>220</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
-     "absatz": null,
-     "item": null
-    }
-   ]
-  },
-  "11": {
-   "gliederung": [
-    {
-     "ebene": 1,
-     "label": "3. Abschnitt: Besondere Bestimmungen für Arbeitsverhältnisse nach Obligationenrecht"
-    }
-   ],
-   "marginalie": [],
-   "fussnoten": [
-    {
-     "nr": "8",
-     "text": "Aufgehoben durch Anhang 1 Ziff. II 1 der Zivilprozessordnung vom 19. Dez. 2008, mit Wirkung seit 1. Jan. 2011 (AS <b>2010</b> 1739; BBl <b>2006</b> 7221).",
-     "links": [
-      {
-       "label": "AS <b>2010</b> 1739",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2010/262"
-      },
-      {
-       "label": "BBl <b>2006</b> 7221",
-       "url": "https://fedlex.data.admin.ch/eli/fga/2006/914"
-      }
-     ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     }
    ]
@@ -269,19 +243,35 @@
    "fussnoten": [
     {
      "nr": "9",
-     "text": "[BS <b>1</b> 489; AS <b>1958</b> 1413 Art. 27 Bst. c, <b>1997</b> 2465 Anhang Ziff. 4, <b>2000</b> 411 Ziff. II 1853, <b>2001</b> 894 Art. 39 Abs. 1 2197 Art. 2 3292 Art. 2. AS <b>2008</b> 3437 Ziff. I 1]. Siehe heute Art. 35 und <i>36 </i>des Bundespersonalgesetzes vom 24. März 2000 (SR <b>172.220.1</b>).",
+     "text": "[BS <b>1</b> 489; AS <b>1958</b> 1413 Art. 27 Bst. c, <b>1997</b> 2465 Anhang Ziff. 4, <b>2000</b> 411 Ziff. II 1853, <b>2001</b> 894 Art. 39 Abs. 1 2197 Art. 2 3292 Art. 2. AS <b>2008</b> 3437 Ziff. I 1]. Siehe heute Art. 35 und 36 des Bundespersonalgesetzes vom 24. März 2000 (SR <b>172.220.1</b>).",
      "links": [
       {
        "label": "AS <b>1958</b> 1413",
        "url": "https://fedlex.data.admin.ch/eli/oc/1958/1413_1483_1489"
       },
       {
+       "label": "<b>1997</b> 2465",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1997/2465_2465_2465"
+      },
+      {
        "label": "<b>2000</b> 411",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/90"
       },
       {
+       "label": "1853",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2000/284"
+      },
+      {
        "label": "<b>2001</b> 894",
        "url": "https://fedlex.data.admin.ch/eli/oc/2001/123"
+      },
+      {
+       "label": "2197",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2001/318"
+      },
+      {
+       "label": "3292",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2001/489"
       },
       {
        "label": "AS <b>2008</b> 3437",
@@ -289,10 +279,10 @@
       },
       {
        "label": "SR <b>172.220.1</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2001/123/20180101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5345"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -301,10 +291,10 @@
      "links": [
       {
        "label": "SR <b>172.021</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755/20200401"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5059"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     },
     {
@@ -320,7 +310,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2003/1299"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     },
     {
@@ -336,7 +326,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     },
     {
@@ -345,10 +335,10 @@
      "links": [
       {
        "label": "SR <b>173.110</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2006/218/20190101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5575"
       }
      ],
-     "absatz": null,
+     "absatz": "5",
      "item": null
     },
     {
@@ -364,7 +354,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
       }
      ],
-     "absatz": null,
+     "absatz": "5",
      "item": null
     }
    ]
@@ -426,6 +416,33 @@
      "nr": "22",
      "text": "BRB vom 25. Okt. 1995",
      "links": [],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "11_12": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Abschnitt: Besondere Bestimmungen für Arbeitsverhältnisse nach Obligationenrecht"
+    }
+   ],
+   "marginalie": [],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Aufgehoben durch Anhang 1 Ziff. II 1 der Zivilprozessordnung vom 19. Dez. 2008, mit Wirkung seit 1. Jan. 2011 (AS <b>2010</b> 1739; BBl <b>2006</b> 7221).",
+     "links": [
+      {
+       "label": "AS <b>2010</b> 1739",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2010/262"
+      },
+      {
+       "label": "BBl <b>2006</b> 7221",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2006/914"
+      }
+     ],
      "absatz": null,
      "item": null
     }
@@ -500,10 +517,10 @@
      "links": [
       {
        "label": "SR <b>220</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -512,10 +529,10 @@
      "links": [
       {
        "label": "SR <b>221.302</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2007/533/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5919"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "a"
     },
     {
@@ -524,10 +541,10 @@
      "links": [
       {
        "label": "SR <b>822.14</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1994/1037_1037_1037/20110101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9904"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "b"
     }
    ]
@@ -582,7 +599,7 @@
      "links": [
       {
        "label": "SR <b>220</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377/20200101"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
      "absatz": null,
@@ -659,7 +676,7 @@
     }
    ]
   },
-  "lvl_d1475e42": {
+  "annex_u1": {
    "gliederung": [
     {
      "ebene": 1,

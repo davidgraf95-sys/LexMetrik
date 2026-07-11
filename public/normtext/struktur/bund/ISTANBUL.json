@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-11",
  "kopf": {
   "srNummer": "0.311.35",
   "titel": "Übereinkommen des Europarats zur Verhütung und Bekämpfung von Gewalt gegen Frauen und häuslicher Gewalt",
@@ -12,7 +12,12 @@
    },
    {
     "rolle": "praeambel",
-    "text": "eingedenk der Konvention zum Schutz der Menschenrechte und Grundfreiheiten (SEV Nr. 5, 1950) und ihrer Protokolle, der Europäischen Sozialcharta (SEV Nr. 35, 1961, geändert 1996, SEV Nr. 163), des Übereinkommens des Europarats zur Bekämpfung des Menschenhandels (SEV Nr. 197, 2005) und des Übereinkommens des Europarats zum Schutz von Kindern vor sexueller Ausbeutung und sexuellem Missbrauch (SEV Nr. 201, 2007);"
+    "text": "eingedenk der Konvention zum Schutz der Menschenrechte und Grundfreiheiten (SEV Nr. 5, 1950) und ihrer Protokolle, der Europäischen Sozialcharta (SEV Nr. 35, 1961, geändert 1996, SEV Nr. 163), des Übereinkommens des Europarats zur Bekämpfung des Menschenhandels (SEV Nr. 197, 2005) und des Übereinkommens des Europarats zum Schutz von Kindern vor sexueller Ausbeutung und sexuellem Missbrauch (SEV Nr. 201, 2007);",
+    "fnNrs": [
+     "2",
+     "3",
+     "4"
+    ]
    },
    {
     "rolle": "praeambel",
@@ -24,15 +29,31 @@
    },
    {
     "rolle": "praeambel",
-    "text": "in Anbetracht des Internationalen Pakts über bürgerliche und politische Rechte (1966), des Internationalen Pakts über wirtschaftliche, soziale und kulturelle Rechte (1966), des Übereinkommens der Vereinten Nationen zur Beseitigung jeder Form von Diskriminierung der Frau («CEDAW», 1979) und seines Fakultativprotokolls (1999) sowie der Allgemeinen Empfehlung Nr. 19 des CEDAW-Ausschusses für die Beseitigung der Diskriminierung der Frau zur Gewalt gegen Frauen, des Übereinkommens der Vereinten Nationen über die Rechte des Kindes (1989) und seiner Fakultativprotokolle (2000) und des Übereinkommens der Vereinten Nationen über die Rechte von Menschen mit Behinderungen (2006);"
+    "text": "in Anbetracht des Internationalen Pakts über bürgerliche und politische Rechte (1966), des Internationalen Pakts über wirtschaftliche, soziale und kulturelle Rechte (1966), des Übereinkommens der Vereinten Nationen zur Beseitigung jeder Form von Diskriminierung der Frau («CEDAW», 1979) und seines Fakultativprotokolls (1999) sowie der Allgemeinen Empfehlung Nr. 19 des CEDAW-Ausschusses für die Beseitigung der Diskriminierung der Frau zur Gewalt gegen Frauen, des Übereinkommens der Vereinten Nationen über die Rechte des Kindes (1989) und seiner Fakultativprotokolle (2000) und des Übereinkommens der Vereinten Nationen über die Rechte von Menschen mit Behinderungen (2006);",
+    "fnNrs": [
+     "5",
+     "6",
+     "7",
+     "8",
+     "9",
+     "10",
+     "11"
+    ]
    },
    {
     "rolle": "praeambel",
-    "text": "unter Berücksichtigung des Römer Statuts des Internationalen Strafgerichtshofs (2002);"
+    "text": "unter Berücksichtigung des Römer Statuts des Internationalen Strafgerichtshofs (2002);",
+    "fnNrs": [
+     "12"
+    ]
    },
    {
     "rolle": "praeambel",
-    "text": "eingedenk der Grundsätze des humanitären Völkerrechts und insbesondere des IV. Genfer Abkommens über den Schutz von Zivilpersonen in Kriegszeiten (1949) sowie der Zusatzprotokolle I und II (1977) hierzu;"
+    "text": "eingedenk der Grundsätze des humanitären Völkerrechts und insbesondere des IV. Genfer Abkommens über den Schutz von Zivilpersonen in Kriegszeiten (1949) sowie der Zusatzprotokolle I und II (1977) hierzu;",
+    "fnNrs": [
+     "13",
+     "14"
+    ]
    },
    {
     "rolle": "praeambel",
@@ -1193,6 +1214,15 @@
    ]
   },
   "annex_u1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Anhänge"
+    }
+   ],
+   "marginalie": []
+  },
+  "scope_u1": {
    "gliederung": [
     {
      "ebene": 1,

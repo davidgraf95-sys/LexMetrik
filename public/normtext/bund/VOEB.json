@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-30",
+  "erzeugt": "2026-07-11",
   "eintraege": [
     {
       "id": "bund/VOEB/art_1",
@@ -8,6 +8,7 @@
       "erlass": "VöB",
       "artikel": "1",
       "artikelLabel": "Art. 1",
+      "grundlage": "(Art. 6 Abs. 2 und 3 sowie 52 Abs. 2 BöB)",
       "bloecke": [
         {
           "absatz": "1",
@@ -24,7 +25,7 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/127/de#art_1",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230901",
       "sha": "1d7d29b19bc156803e2074dcf9b00d1c1cdecae47fbca8dfc817cdd1302b96d2"
     },
@@ -35,6 +36,7 @@
       "erlass": "VöB",
       "artikel": "2",
       "artikelLabel": "Art. 2",
+      "grundlage": "(Art. 7 BöB)",
       "bloecke": [
         {
           "absatz": "1",
@@ -51,7 +53,7 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/127/de#art_2",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230901",
       "sha": "0016d18fdde47b6d0655f81d06613c4313b18c3e631523b7db5d73cd79e8fcd4"
     },
@@ -62,6 +64,7 @@
       "erlass": "VöB",
       "artikel": "3",
       "artikelLabel": "Art. 3",
+      "grundlage": "(Art. 11 Bst. b BöB)",
       "bloecke": [
         {
           "absatz": "1",
@@ -84,7 +87,7 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/127/de#art_3",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230901",
       "sha": "53a1f5da5a3a8eb023c62335bba4f2f525998f217e1fe664bd39e55b4a0b12d5"
     },
@@ -95,6 +98,7 @@
       "erlass": "VöB",
       "artikel": "4",
       "artikelLabel": "Art. 4",
+      "grundlage": "(Art. 12, 26 und 27 BöB)",
       "bloecke": [
         {
           "absatz": "1",
@@ -115,7 +119,7 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/127/de#art_4",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230901",
       "sha": "8a6cbe933cc06d1c2e515dfc28bf6346038deea9744f232966c71f493abaf66a"
     },
@@ -126,17 +130,18 @@
       "erlass": "VöB",
       "artikel": "5",
       "artikelLabel": "Art. 5",
+      "grundlage": "(Art. 20 BöB)",
       "bloecke": [
         {
           "absatz": null,
-          "text": "(Art. 20 BöB) Die Auftraggeberin lädt mindestens eine Anbieterin ein, die einem anderen Sprachraum der Schweiz angehört, falls dies möglich und zumutbar ist."
+          "text": "Die Auftraggeberin lädt mindestens eine Anbieterin ein, die einem anderen Sprachraum der Schweiz angehört, falls dies möglich und zumutbar ist."
         }
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/127/de#art_5",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230901",
-      "sha": "9e0e2f6dd39a38add30147c7545d8391aac49b00d9823a670f713ad7716e4aaa"
+      "sha": "1339edd6cf78292cfbac5de667cf53829915d10cde94435e6242dc9d01cb0d06"
     },
     {
       "id": "bund/VOEB/art_6",
@@ -145,6 +150,7 @@
       "erlass": "VöB",
       "artikel": "6",
       "artikelLabel": "Art. 6",
+      "grundlage": "(Art. 24 BöB)",
       "bloecke": [
         {
           "absatz": "1",
@@ -161,7 +167,7 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/127/de#art_6",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230901",
       "sha": "453b1fe10195466757242c132e2f886ed657eb5952bb995365005baf0a91a8f7"
     },
@@ -172,6 +178,7 @@
       "erlass": "VöB",
       "artikel": "7",
       "artikelLabel": "Art. 7",
+      "grundlage": "(Art. 36 Bst. b BöB)",
       "bloecke": [
         {
           "absatz": "1",
@@ -179,14 +186,14 @@
         },
         {
           "absatz": "2",
-          "text": "Statt einer Beschreibung nach Absatz 1 kann sie das Ziel der Beschaffung fest­legen."
+          "text": "Statt einer Beschreibung nach Absatz 1 kann sie das Ziel der Beschaffung festlegen."
         }
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/127/de#art_7",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230901",
-      "sha": "2fd0e8da4fb00493dfaea6488040ee035581afd6956e5e7e52b855b326cd619b"
+      "sha": "11a628cb61cf6ec8457eb226388e0dc48361f05c0821a5bc9770ba0f7059128b"
     },
     {
       "id": "bund/VOEB/art_8",
@@ -195,10 +202,11 @@
       "erlass": "VöB",
       "artikel": "8",
       "artikelLabel": "Art. 8",
+      "grundlage": "(Art. 36 BöB)",
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Auftraggeberin kann in den Ausschreibungsunterlagen bestimmen, bis zu wel­chem Zeitpunkt Fragen entgegengenommen werden."
+          "text": "Die Auftraggeberin kann in den Ausschreibungsunterlagen bestimmen, bis zu welchem Zeitpunkt Fragen entgegengenommen werden."
         },
         {
           "absatz": "2",
@@ -207,9 +215,9 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/127/de#art_8",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230901",
-      "sha": "2db32ec2ad2aff21d125b2993edf961b2256acfe24cb536fba0f45ef8d9c3bf9"
+      "sha": "e653f3bac2dceb38dcd3067a3698ab214750b27ec2eb37984ad8b34b91b37fec"
     },
     {
       "id": "bund/VOEB/art_9",
@@ -218,6 +226,7 @@
       "erlass": "VöB",
       "artikel": "9",
       "artikelLabel": "Art. 9",
+      "grundlage": "(Art. 24 Abs. 3 Bst. c und 36 Bst. h BöB)",
       "bloecke": [
         {
           "absatz": "1",
@@ -230,7 +239,7 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/127/de#art_9",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230901",
       "sha": "1fc619bcd39291135c44eb509acc5aa9fa7561fbfca7a5990128585e788f73e4"
     },
@@ -241,6 +250,7 @@
       "erlass": "VöB",
       "artikel": "10",
       "artikelLabel": "Art. 10",
+      "grundlage": "(Art. 37, 38, 39 Abs. 4 und 40 Abs. 1 BöB)",
       "bloecke": [
         {
           "absatz": "1",
@@ -275,7 +285,7 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/127/de#art_10",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230901",
       "sha": "f64399a1cf0ae1d3ef6c4ab4e47c38290f694b4fe3b253e0e7d40b57e610a9d9"
     },
@@ -286,6 +296,7 @@
       "erlass": "VöB",
       "artikel": "11",
       "artikelLabel": "Art. 11",
+      "grundlage": "(Art. 42 BöB)",
       "bloecke": [
         {
           "absatz": "1",
@@ -298,7 +309,7 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/127/de#art_11",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230901",
       "sha": "b70eda5b84695c0293ecc959bc39864a5ca5666971aefaba29bfb2cebdfcf72c"
     },
@@ -309,6 +320,7 @@
       "erlass": "VöB",
       "artikel": "12",
       "artikelLabel": "Art. 12",
+      "grundlage": "(Art. 51 BöB)",
       "bloecke": [
         {
           "absatz": "1",
@@ -316,14 +328,14 @@
         },
         {
           "absatz": "2",
-          "text": "Im Debriefing werden insbesondere die wesentlichen Gründe für die Nichtberücksichtigung des Angebots bekannt gegeben. Die Vertraulichkeit nach Artikel 51 Ab­satz 4 BöB ist zu beachten."
+          "text": "Im Debriefing werden insbesondere die wesentlichen Gründe für die Nichtberücksichtigung des Angebots bekannt gegeben. Die Vertraulichkeit nach Artikel 51 Absatz 4 BöB ist zu beachten."
         }
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/127/de#art_12",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230901",
-      "sha": "9285082134f1040b941bf6a356280c85d99032ae0b7a04100a6b5e7a91f70d0a"
+      "sha": "fae09a84c9fdef392e5eb9eb450fb9044611ddffc33047c68b4bab4fd06b21c4"
     },
     {
       "id": "bund/VOEB/art_13",
@@ -340,7 +352,7 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/127/de#art_13",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230901",
       "sha": "5585fdf9ed72804b5d3733168643de4f06a806bd4931d6f5d6e4403b6c89f854"
     },
@@ -354,7 +366,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Mit Wettbewerbs- und mit Studienauftragsverfahren kann die Auftraggeberin ver­schiedene Lösungen, insbesondere in konzeptioneller, gestalterischer, ökologischer, wirtschaftlicher, funktionaler oder technischer Hinsicht, ausarbeiten lassen."
+          "text": "Mit Wettbewerbs- und mit Studienauftragsverfahren kann die Auftraggeberin verschiedene Lösungen, insbesondere in konzeptioneller, gestalterischer, ökologischer, wirtschaftlicher, funktionaler oder technischer Hinsicht, ausarbeiten lassen."
         },
         {
           "absatz": "2",
@@ -367,9 +379,9 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/127/de#art_14",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230901",
-      "sha": "4368854dbe29ffea74076091f782b63d13366ff637abc4d2cea5d9ab9f736f3c"
+      "sha": "3d7ccf47bcb750057852517d07f4efa92e99ae71503c79f4c997d5d9f5b4c2b1"
     },
     {
       "id": "bund/VOEB/art_15",
@@ -381,7 +393,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Wettbewerbe und Studienaufträge sind im offenen oder im selektiven Verfahren auszuschreiben, sofern der Auftragswert den massgebenden Schwellenwert nach An­hang 4 BöB erreicht."
+          "text": "Wettbewerbe und Studienaufträge sind im offenen oder im selektiven Verfahren auszuschreiben, sofern der Auftragswert den massgebenden Schwellenwert nach Anhang 4 BöB erreicht."
         },
         {
           "absatz": "2",
@@ -394,9 +406,9 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/127/de#art_15",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230901",
-      "sha": "eb00cde7f80abb4d84e2e8e05d798644aa076a2f9efd13aab7fe1125b204aa2d"
+      "sha": "1afbc81e27c24e9c2c27d8c7607e146d77cc61e039b169370eeaa6515207dc5d"
     },
     {
       "id": "bund/VOEB/art_16",
@@ -453,7 +465,7 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/127/de#art_16",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230901",
       "sha": "171e682e4d2bd31b64adbc3a406f6d7b567743ae4c626564ee136b2881791e22"
     },
@@ -480,7 +492,7 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/127/de#art_17",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230901",
       "sha": "eadcfe969a44153ddb1fc415540e5855c4c3b34b4b21d7ca10947176c62a9da6"
     },
@@ -533,7 +545,7 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/127/de#art_18",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230901",
       "sha": "3650ba691c403967fbc266ecdae42ab886471cc23df97444271567bfade07eb3"
     },
@@ -555,16 +567,16 @@
             },
             {
               "marke": "b",
-              "text": "der Koordinationskonferenz der Bau- und Liegenschaftsorgane der öffent­lichen Bauherren (KBOB) nach Artikel 27 der Verordnung vom 5. Dezember 2008 über das Immobilienmanagement und die Logistik des Bundes."
+              "text": "der Koordinationskonferenz der Bau- und Liegenschaftsorgane der öffentlichen Bauherren (KBOB) nach Artikel 27 der Verordnung vom 5. Dezember 2008 über das Immobilienmanagement und die Logistik des Bundes."
             }
           ]
         }
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/127/de#art_19",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230901",
-      "sha": "6bda3e7889ac684d677550c6c15da573bf3edf4ba1cf39b119a16c3a507a096b"
+      "sha": "95c4b795e7bfd0d10a4ef34ff709ee332ef0fffd10d3f0964d0160bfc26fab31"
     },
     {
       "id": "bund/VOEB/art_20",
@@ -573,6 +585,7 @@
       "erlass": "VöB",
       "artikel": "20",
       "artikelLabel": "Art. 20",
+      "grundlage": "(Art. 48 Abs. 4 und 5 BöB)",
       "bloecke": [
         {
           "absatz": "1",
@@ -595,7 +608,7 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/127/de#art_20",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230901",
       "sha": "60f85a243d1767c738be9c5db66504aa877f2558022b962c683817eddf34107e"
     },
@@ -606,6 +619,7 @@
       "erlass": "VöB",
       "artikel": "21",
       "artikelLabel": "Art. 21",
+      "grundlage": "(Art. 47 Abs. 3 und 48 Abs. 5 BöB)",
       "bloecke": [
         {
           "absatz": "1",
@@ -636,7 +650,7 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/127/de#art_21",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230901",
       "sha": "f69327edff73a22b2204a737bd6df7f7b341655b63feee9cf98e9d39442cb0ef"
     },
@@ -659,7 +673,7 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/127/de#art_22",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230901",
       "sha": "e507d5c13254a25724d7b8e80c18114684c1d9ece1fb140290d17017ff17d2d3"
     },
@@ -670,6 +684,7 @@
       "erlass": "VöB",
       "artikel": "23",
       "artikelLabel": "Art. 23",
+      "grundlage": "(Art. 35 Bst. m BöB)",
       "bloecke": [
         {
           "absatz": "1",
@@ -677,7 +692,7 @@
         },
         {
           "absatz": "2",
-          "text": "Bei der Wahl der Verfahrenssprache berücksichtigt sie nach Möglichkeit, aus welcher Sprachregion für die zu erbringende Leistung die meisten Angebote zu erwarten sind. Bei Bauleistungen und damit zusammenhängenden Lieferungen und Dienstleistungen ist davon auszugehen, dass am meisten Angebote in der Amts­sprache am Standort der Baute eintreffen."
+          "text": "Bei der Wahl der Verfahrenssprache berücksichtigt sie nach Möglichkeit, aus welcher Sprachregion für die zu erbringende Leistung die meisten Angebote zu erwarten sind. Bei Bauleistungen und damit zusammenhängenden Lieferungen und Dienstleistungen ist davon auszugehen, dass am meisten Angebote in der Amtssprache am Standort der Baute eintreffen."
         },
         {
           "absatz": "3",
@@ -686,9 +701,9 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/127/de#art_23",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230901",
-      "sha": "31d916b667b15bd4d7d3f359d9fe22b9d1d8ca302e9866f4b77d303a68b4794c"
+      "sha": "92ee92ffaeaaf6b5bbdb4dd8bfdba16996b2d2fb933c9cdeb5d461d1e78e70e6"
     },
     {
       "id": "bund/VOEB/art_24",
@@ -721,7 +736,7 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/127/de#art_24",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230901",
       "sha": "7be6dd928eaf66f88ba8b2804a701144cb12a46399c411d9f425aa3926bab536"
     },
@@ -732,6 +747,7 @@
       "erlass": "VöB",
       "artikel": "25",
       "artikelLabel": "Art. 25",
+      "grundlage": "(Art. 44 und 45 BöB)",
       "bloecke": [
         {
           "absatz": "1",
@@ -792,7 +808,7 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/127/de#art_25",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230901",
       "sha": "b4fe407ef25dce2b0a43f5270d626c7dfc7fe9ac181be68662b9a1ebf5266a99"
     },
@@ -803,17 +819,18 @@
       "erlass": "VöB",
       "artikel": "26",
       "artikelLabel": "Art. 26",
+      "grundlage": "(Art. 37 Abs. 2 und 49 BöB)",
       "bloecke": [
         {
           "absatz": null,
-          "text": "(Art. 37 Abs. 2 und 49 BöB) Die Wettbewerbskommission oder deren Sekretariat erhält auf Anfrage Zugang zu den Protokollen der Angebotsöffnung."
+          "text": "Die Wettbewerbskommission oder deren Sekretariat erhält auf Anfrage Zugang zu den Protokollen der Angebotsöffnung."
         }
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/127/de#art_26",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230901",
-      "sha": "e76c9a9f1c7e916208bd0a50297937fcd5a6356f96436f5dac40692a5185ee03"
+      "sha": "9bf490ec89e30ba87ca740af86936259aae4d796f8fd7e176cf02b4776436c6c"
     },
     {
       "id": "bund/VOEB/art_27",
@@ -856,7 +873,7 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/127/de#art_27",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230901",
       "sha": "841df4b97b25643ac18cc9a51bc5ffa3da6267104f9c459ac973c04a84a6a889"
     },
@@ -867,6 +884,7 @@
       "erlass": "VöB",
       "artikel": "28",
       "artikelLabel": "Art. 28",
+      "grundlage": "(Art. 50 BöB)",
       "bloecke": [
         {
           "absatz": "1",
@@ -879,7 +897,7 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/127/de#art_28",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230901",
       "sha": "5a4b32088b3f2a483f60269680e66698c75273b2f91f62a354f7718f8737bede"
     },
@@ -890,6 +908,7 @@
       "erlass": "VöB",
       "artikel": "29",
       "artikelLabel": "Art. 29",
+      "grundlage": "(Art. 59 BöB)",
       "bloecke": [
         {
           "absatz": "1",
@@ -910,7 +929,7 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/127/de#art_29",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230901",
       "sha": "45abe30a797e49f38e7f7c1e4a8bf373ab05808e1d41a0e13c234bffae53c59d"
     },
@@ -931,12 +950,16 @@
           "text": "Die internen Kontrollorgane der Auftraggeberinnen überwachen die Einhaltung dieser Verordnung."
         },
         {
+          "absatz": null,
+          "text": "Art. 31 Aufhebung und Änderung anderer Erlasse"
+        },
+        {
           "absatz": "1",
           "text": "Folgende Erlasse werden aufgehoben:",
           "items": [
             {
               "marke": "1",
-              "text": "Verordnung vom 11. Dezember 1995 über das öffentliche Beschaffungs­wesen;"
+              "text": "Verordnung vom 11. Dezember 1995 über das öffentliche Beschaffungswesen;"
             },
             {
               "marke": "2",
@@ -951,9 +974,9 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/127/de#art_30",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230901",
-      "sha": "93c64587a3897be9f80046778d46754d9315f411d845cfa6b1a9b271a2b5e1ee"
+      "sha": "e581ad0ccc497d9194512955955f29d3a72c94428c67212647e66bcf4746d94e"
     },
     {
       "id": "bund/VOEB/art_32",
@@ -970,7 +993,7 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/127/de#art_32",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230901",
       "sha": "40bba22c3191a58fa71b67783157cf9114623c9cdee054cc80d17d4f5a7240ee"
     },
@@ -1028,7 +1051,7 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/127/de#annex_1",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230901",
       "sha": "a411394e3cad635f6bae55b97eef8c0ecbf21ec714dbdde8d503c39328af97e2"
     },
@@ -1090,7 +1113,7 @@
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/127/de#annex_2",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230901",
       "sha": "9be0634410f346da5ed2ecff29d839dce2a0c7c4a27b037fbab2102608bf61fc"
     },
@@ -1153,11 +1176,11 @@
             },
             {
               "marke": "5",
-              "text": "Bilanzen oder Bilanzauszüge der Anbieterin für die letzten drei Geschäfts­jahre vor der Ausschreibung;"
+              "text": "Bilanzen oder Bilanzauszüge der Anbieterin für die letzten drei Geschäftsjahre vor der Ausschreibung;"
             },
             {
               "marke": "6",
-              "text": "Erklärung über den Gesamtumsatz der Anbieterin in den der Ausschrei­bung vorangegangenen drei Jahren;"
+              "text": "Erklärung über den Gesamtumsatz der Anbieterin in den der Ausschreibung vorangegangenen drei Jahren;"
             },
             {
               "marke": "7",
@@ -1173,7 +1196,7 @@
             },
             {
               "marke": "10",
-              "text": "Bescheinigung über das Vorliegen eines anerkannten Qualitätsmanagementsy­stems;"
+              "text": "Bescheinigung über das Vorliegen eines anerkannten Qualitätsmanagementsystems;"
             },
             {
               "marke": "11",
@@ -1181,19 +1204,19 @@
             },
             {
               "marke": "12",
-              "text": "Referenzen, bei denen die Auftraggeberin in Erfahrung bringen kann, ob die Anbieterin ihre bisherigen Leistungen ordnungsgemäss erbracht hat, und insbesondere folgende Auskünfte einholen kann: Wert der Leistung; Zeit und Ort der Leistungserbringung; Stel­lungnahme der damaligen Auftraggeberin, ob die Leistung den anerkannten Regeln der Technik entsprach und ob die Anbieterin sie ordnungsgemäss erbracht hat;"
+              "text": "Referenzen, bei denen die Auftraggeberin in Erfahrung bringen kann, ob die Anbieterin ihre bisherigen Leistungen ordnungsgemäss erbracht hat, und insbesondere folgende Auskünfte einholen kann: Wert der Leistung; Zeit und Ort der Leistungserbringung; Stellungnahme der damaligen Auftraggeberin, ob die Leistung den anerkannten Regeln der Technik entsprach und ob die Anbieterin sie ordnungsgemäss erbracht hat;"
             },
             {
               "marke": "13",
-              "text": "bei Planungswettbewerben objektspezifische Nachweise, insbesondere hin­sichtlich Ausbildung, Leistungsfähigkeit und Praxis der Anbieterin;"
+              "text": "bei Planungswettbewerben objektspezifische Nachweise, insbesondere hinsichtlich Ausbildung, Leistungsfähigkeit und Praxis der Anbieterin;"
             },
             {
               "marke": "14",
-              "text": "Erklärung über Anzahl und Funktion der in den drei Jahren vor der Ausschrei­­bung bei der Anbieterin beschäftigten Personen;"
+              "text": "Erklärung über Anzahl und Funktion der in den drei Jahren vor der Ausschreibung bei der Anbieterin beschäftigten Personen;"
             },
             {
               "marke": "15",
-              "text": "Erklärung betreffend einsetzbare Personalkapazität und Ausstattung im Hin­blick auf die Erbringung des zu vergebenden Auftrags;"
+              "text": "Erklärung betreffend einsetzbare Personalkapazität und Ausstattung im Hinblick auf die Erbringung des zu vergebenden Auftrags;"
             },
             {
               "marke": "16",
@@ -1201,16 +1224,16 @@
             },
             {
               "marke": "17",
-              "text": "Strafregisterauszug der Führungskräfte sowie der für die Ausführung des ausgeschriebenen Auftrags vorgesehenen verantwortlichen Personen."
+              "text": "Privatauszug aus dem Strafregister-Informationssystem VOSTRA der verantwortlichen Führungskräfte sowie der für die Ausführung des ausgeschriebenen Auftrages vorgesehenen verantwortlichen Personen."
             }
           ]
         }
       ],
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/127/de#annex_3",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20230901",
-      "sha": "507b68dad016fd0f57facc51dc0b2adf3b597bec5c8b39b3a0c0805477203c1a"
+      "sha": "e2eb001e7bca4465566fadbd19454e7e69a165f10e316a85a372505d36922a14"
     }
   ]
 }

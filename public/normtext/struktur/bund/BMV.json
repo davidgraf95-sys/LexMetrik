@@ -1,8 +1,9 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-11",
  "kopf": {
   "srNummer": "412.103.1",
   "titel": "Verordnung über die eidgenössische Berufsmaturität",
+  "erlassdatum": "vom 24. Juni 2009 (Stand am 23. August 2016)",
   "praeambel": [
    {
     "rolle": "autor",
@@ -27,7 +28,7 @@
     "links": [
      {
       "label": "SR <b>412.10</b>",
-      "url": "https://fedlex.data.admin.ch/eli/cc/2003/674/20190101"
+      "url": "https://fedlex.data.admin.ch/eli/cc/2003/674"
      }
     ],
     "absatz": null,
@@ -82,14 +83,14 @@
    "fussnoten": [
     {
      "nr": "2",
-     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 16 Abs. 3 der Publikations­verordnung vom 17. Nov. 2004 (AS <b>2004 </b>4937) auf den 1. Jan. 2013 angepasst. Die Anpassung wurde im ganzen Text vorgenommen.",
+     "text": "Die Bezeichnung der Verwaltungseinheit wurde in Anwendung von Art. 16 Abs. 3 der Publikationsverordnung vom 17. Nov. 2004 (AS <b>2004 </b>4937) auf den 1. Jan. 2013 angepasst. Die Anpassung wurde im ganzen Text vorgenommen.",
      "links": [
       {
        "label": "AS <b>2004 </b>4937",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/746"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -101,7 +102,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/497"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -244,10 +245,10 @@
      "links": [
       {
        "label": "SR <b>412.101</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2003/748/20190201"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2003/748"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -437,7 +438,7 @@
      "links": [
       {
        "label": "SR <b>412.101</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2003/748/20190201"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2003/748"
       }
      ],
      "absatz": null,
@@ -476,7 +477,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/599"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -516,7 +517,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/772"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -528,7 +529,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/423"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]

@@ -44,6 +44,13 @@ const BEWUSST_IGNORIERT: Record<string, string> = {
   // Leerer Seiten-Abstandshalter (<p class="abstand1seite">) — Layout-Spacer ohne
   // Textinhalt (z.B. GebV-SchKG art_63a). Kein Normtext.
   abstand1seite: 'Leerer Layout-Abstandshalter — kein Textinhalt',
+  // Manuskript-Abstandshalter (<p class="man-space-before-0 …"></p>) — reiner
+  // Layout-Spacer OHNE Textinhalt (z.B. ENTG). Erscheint neu mit den P1-a/b
+  // kanonisch re-gepinnten Fassungen (11.7.2026). Empirisch geprüft: als LEIT-
+  // Token ausschliesslich leer; wo er als ZWEIT-Token an echtem Text hängt
+  // (`erlasssubtitel man-space-before-0`, `man-template-tab-krpr man-space-before-0`),
+  // entscheidet der jeweilige Leit-Token, nicht dieser. Kein Normtext.
+  'man-space-before-0': 'Manuskript-Layout-Abstandshalter (leer) — kein Textinhalt (P1-a/b kanonische Fassungen)',
   // Standalone <p class="bild"> OHNE <img> = eine als MathML/Text gesetzte Formel
   // (GBV art_34i Gebührenformel, Einzelfall). DEFERIERT: Formel-als-Text braucht
   // eigene MathML-Behandlung, nicht in diesem Schritt. Bekannte Rest-Lücke.

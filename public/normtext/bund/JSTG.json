@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-30",
+  "erzeugt": "2026-07-11",
   "eintraege": [
     {
       "id": "bund/JSTG/art_1",
@@ -100,7 +100,7 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_1",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
       "sha": "24432aa218a36a4fa5d0750afb68b4d233ded64b12271dabe752ca54f7a62fb1"
     },
@@ -123,7 +123,7 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_2",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
       "sha": "75ccbc7bee0dedf5f9eed07b0f06f6bcb0699cbcd73936c4b612d0f4f55762ab"
     },
@@ -146,7 +146,7 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_3",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
       "sha": "cf4955997e1a151dbf7e3f0e1d9d610b3b9b78fa74b72cbe39c912ec226c0c46"
     },
@@ -160,14 +160,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Stellt die zuständige Behörde im Laufe eines Verfahrens fest, dass eine Tat von einem Kind unter zehn Jahren begangen worden ist, so benachrichtigt sie die gesetzlichen Vertreter des Kindes. Liegen Anzeichen dafür vor, dass das Kind besondere Hilfe benötigt, so ist auch die Vormundschaftsbehörde oder die durch das kantonale Recht bezeichnete Fachstelle für Jugendhilfe zu benachrichtigen."
+          "text": "Stellt die zuständige Behörde im Laufe eines Verfahrens fest, dass eine Tat von einem Kind unter zehn Jahren begangen worden ist, so benachrichtigt sie die gesetzlichen Vertreter des Kindes. Liegen Anzeichen dafür vor, dass das Kind besondere Hilfe benötigt, so ist auch die Kindesschutzbehörde oder die durch das kantonale Recht bezeichnete Fachstelle für Jugendhilfe zu benachrichtigen."
         }
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_4",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
-      "sha": "1319a6fd848f5ad6803b2a2f892b6d28f3132f0618033dbd22bfb841a7d3000a"
+      "sha": "83fae4072547175aaa39fa849ac01d2fa84f13a28ecd1efd6aee048655f26004"
     },
     {
       "id": "bund/JSTG/art_5",
@@ -184,7 +184,7 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_5",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
       "sha": "df9ba02d0fc33e2e0564e52a16dfa8905188b8c2e777868dc1263dcf84f5e3b2"
     },
@@ -203,7 +203,7 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_6_8",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -226,13 +226,17 @@
         {
           "absatz": "3",
           "text": "Besteht ernsthafter Anlass, an der physischen oder psychischen Gesundheit des Jugendlichen zu zweifeln, oder erscheint die Unterbringung zur Behandlung einer psychischen Störung in einer offenen Einrichtung oder die Unterbringung in einer geschlossenen Einrichtung angezeigt, so ordnet die zuständige Behörde eine medizinische oder psychologische Begutachtung an."
+        },
+        {
+          "absatz": "4",
+          "text": "Sind die Voraussetzungen nach Artikel 25a Absatz 1 Buchstaben a–c erfüllt, so ordnet die zuständige Behörde eine sachverständige Begutachtung der Gefahr an, die vom Jugendlichen für Dritte ausgeht."
         }
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_9",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
-      "sha": "2288e8cf74ab8cc83967461301b71b8d295a05cd477d423a15ccd24269dc34e6"
+      "sha": "c326ae1331806261fa447d618bb0ecb5171bf55a616641a143807b63c350f67f"
     },
     {
       "id": "bund/JSTG/art_10",
@@ -244,7 +248,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Hat der Jugendliche eine mit Strafe bedrohte Tat begangen und ergibt die Abklärung, dass er einer besonderen erzieherischen Betreuung oder therapeutischen Behandlung bedarf, so ordnet die urteilende Behörde die nach den Umständen erforderlichen Schutzmassnahmen an, unabhängig davon, ob er schuldhaft gehandelt hat."
+          "text": "Hat der Jugendliche eine mit Strafe bedrohte Tat begangen und ergibt die Abklärung, dass er einer besonderen erzieherischen Betreuung oder therapeutischen Behandlung bedarf, so ordnet die urteilende Behörde die nach den Umständen erforderlichen Schutzmassnahmen an, unabhängig davon, ob er schuldhaft gehandelt hat. Sind mehrere Schutzmassnahmen erforderlich, so kann die urteilende Behörde diese zusammen anordnen."
         },
         {
           "absatz": "2",
@@ -253,9 +257,9 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_10",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
-      "sha": "b9b5ff8ce0abdd5b650eed67e7552455cd464e173e3ffa16bb8548a2078a8291"
+      "sha": "8bf1fc6cf94aad3477b69e099cfb63cd79b40dce5e147ad958326e5919b68e9d"
     },
     {
       "id": "bund/JSTG/art_11",
@@ -276,7 +280,7 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_11",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
       "sha": "d3f62ef72b5cfdfe27c59fa5d2f72baf572b6159db612ffbee7654abb0ad86f8"
     },
@@ -294,18 +298,18 @@
         },
         {
           "absatz": "2",
-          "text": "Ist der Jugendliche bevormundet, so darf keine Aufsicht angeordnet werden."
+          "text": "Steht der Jugendliche unter Vormundschaft oder der junge Erwachsene unter Beistandschaft, so darf keine Aufsicht angeordnet werden."
         },
         {
           "absatz": "3",
-          "text": "Die Aufsicht kann nach Erreichen des Mündigkeitsalters nur mit Einverständnis des Betroffenen angeordnet werden."
+          "text": "Die Aufsicht kann nach Erreichen der Volljährigkeit nur mit Einverständnis des jungen Erwachsenen angeordnet werden."
         }
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_12",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
-      "sha": "9fa639b4afa231340b8c9cbba8dd70f14934e0ef0d03931a99a1f503afba33ef"
+      "sha": "b55c03da6662f696166fa959e4dcd26e06f228926e20a1a78dafce71facf44fb"
     },
     {
       "id": "bund/JSTG/art_13",
@@ -325,18 +329,18 @@
         },
         {
           "absatz": "3",
-          "text": "Ist der Jugendliche bevormundet, so darf keine persönliche Betreuung angeordnet werden."
+          "text": "Steht der Jugendliche unter Vormundschaft oder der junge Erwachsene unter Beistandschaft, so darf keine persönliche Betreuung angeordnet werden."
         },
         {
           "absatz": "4",
-          "text": "Die persönliche Betreuung kann nach Erreichen des Mündigkeitsalters nur mit Einverständnis des Betroffenen angeordnet werden."
+          "text": "Die persönliche Betreuung kann nach Erreichen der Volljährigkeit nur mit Einverständnis des jungen Erwachsenen angeordnet werden."
         }
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_13",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
-      "sha": "f2bf9fc53a42eb162d45d086634c2a524bbaa87aadcf640b15a3083ce52137d4"
+      "sha": "9776efedb2f9247de00894195247ded916ded0b7da4b5410c904a9fd02cf7ce9"
     },
     {
       "id": "bund/JSTG/art_14",
@@ -352,14 +356,14 @@
         },
         {
           "absatz": "2",
-          "text": "Die ambulante Behandlung kann mit der Aufsicht (Art. 12) oder der persönlichen Betreuung (Art. 13) oder der Unterbringung in einer Erziehungseinrichtung (Art. 15 Abs. 1) verbunden werden."
+          "text": "…"
         }
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_14",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
-      "sha": "feb30e4920524c9a867b5d2054fb94a995559eb60429a30585a77decae4445a8"
+      "sha": "9cff5f4de93e9f295c3f4bd693553e1fc2cbae5945375a03ffe19faa48ccc00f"
     },
     {
       "id": "bund/JSTG/art_15",
@@ -393,14 +397,18 @@
         },
         {
           "absatz": "4",
-          "text": "Ist der Jugendliche bevormundet, so teilt die urteilende Behörde der Vormundschaftsbehörde die Anordnung der Unterbringung mit."
+          "text": "Steht der Jugendliche unter Vormundschaft oder der junge Erwachsene unter Beistandschaft, so teilt die urteilende Behörde der Kindes- oder Erwachsenenschutzbehörde die Anordnung der Unterbringung mit."
+        },
+        {
+          "absatz": "5",
+          "text": "Wurde die Unterbringung in einer geschlossenen Einrichtung aufgrund eines Mordes (Art. 112 StGB) und zum Schutz Dritter vor schwerwiegender Gefährdung durch den Jugendlichen angeordnet, so kann sie unter den Voraussetzungen nach Artikel 19c in Form der Verwahrung nach Artikel 64 Absatz 1 StGB weitergeführt werden."
         }
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_15",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
-      "sha": "fd4b96829dc92747c0d3572334f7e7319b265c61826489b945b42222f6434231"
+      "sha": "7bb63348eb4fdc335242f8a777f8ae51f6903acc87f27eb9cde03518cce36e1c"
     },
     {
       "id": "bund/JSTG/art_16",
@@ -429,7 +437,7 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_16",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
       "sha": "b51f8b97689654866988a1545691663c3f5bad5fb5e959966d1d83a9bb0eda46"
     },
@@ -460,7 +468,7 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_16_a",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
       "sha": "dcf0fdc1a5ef08b4b72b87cb59225a9640335a0d5646f049b6cb281df3b260d6"
     },
@@ -487,7 +495,7 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_17",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
       "sha": "84d05389d01f2ead5119e0cff9276e40bd7e8f917880e8b149da8f358606be34"
     },
@@ -510,7 +518,7 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_18",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
       "sha": "4bb7f03aa66e163af4abf73587a92b9f2dc87f61aaf4f601c053ab43ca813bd0"
     },
@@ -527,23 +535,140 @@
           "text": "Die Vollzugsbehörde prüft jährlich, ob und wann die Massnahme aufgehoben werden kann. Sie hebt sie auf, wenn ihr Zweck erreicht ist oder feststeht, dass sie keine erzieherischen oder therapeutischen Wirkungen mehr entfaltet."
         },
         {
+          "absatz": "1bis",
+          "text": "Wurde eine Unterbringung in einer geschlossenen Einrichtung aufgrund eines Mordes (Art. 112 StGB) und zum Schutz Dritter vor schwerwiegender Gefährdung durch den Jugendlichen angeordnet, so entscheidet die Vollzugsbehörde gestützt auf die Beurteilung der Fachkommission nach Artikel 91a StGB."
+        },
+        {
           "absatz": "2",
           "text": "Alle Massnahmen enden mit Vollendung des 25. Altersjahres."
         },
         {
           "absatz": "3",
-          "text": "Ist der Wegfall einer Schutzmassnahme für den Betroffenen selber oder für die Sicherheit Dritter mit schwer wiegenden Nachteilen verbunden und kann diesen nicht auf andere Weise begegnet werden, so beantragt die Vollzugsbehörde rechtzeitig die Anordnung geeigneter vormundschaftlicher Massnahmen."
+          "text": "…"
         },
         {
           "absatz": "4",
-          "text": "Ist der Wegfall eines Verbots nach Artikel 16a für die Sicherheit Dritter mit schwerwiegenden Nachteilen verbunden, so beantragt die Vollzugsbehörde rechtzeitig dem Gericht am Wohnsitz des Jugendlichen zu prüfen, ob die Voraussetzungen für ein Verbot nach Artikel 67 oder 67b StGB gegeben sind. Sind die Voraussetzungen gegeben, so wird das Verbot nach Erwachsenenstrafrecht angeordnet. Sind die Voraussetzungen für ein Verbot nach Artikel 67 Absatz 3 oder 4 StGB gegeben, so legt das Gericht eine Frist zwischen einem Jahr und zehn Jahren fest."
+          "text": "…"
         }
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_19",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
-      "sha": "e581f3b8420a3c3ea67fa1d7b450aa78abf40a46ab33fd0045684e5dbde3c659"
+      "sha": "7d016962d507fff670daf49bd9ec948df25b0d30149606345c3479915b5ecc51"
+    },
+    {
+      "id": "bund/JSTG/art_19_a",
+      "ebene": "bund",
+      "quelle": "JSTG",
+      "erlass": "JStG",
+      "artikel": "19_a",
+      "artikelLabel": "Art. 19a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ist der Wegfall einer Schutzmassnahme für den Jugendlichen oder den jungen Erwachsenen selber oder für die Sicherheit Dritter mit schwerwiegenden Nachteilen verbunden und kann diesen nicht auf andere Weise begegnet werden, so beantragt die Vollzugsbehörde rechtzeitig die Anordnung geeigneter Kindes- oder Erwachsenenschutzmassnahmen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Vollzugsbehörde kann gestützt auf die Artikel 19b und 19c eine Massnahme nach dem StGB nur beantragen, wenn die Voraussetzungen für die Anordnung von Erwachsenenschutzmassnahmen nicht gegeben sind oder solche Massnahmen nicht genügen, um schwerwiegende Nachteile für die Sicherheit Dritter abzuwenden."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_19_a",
+      "abgerufen": "2026-07-11",
+      "fassungsToken": "20250701",
+      "sha": "5968c7e10e833efe7e5f1b0b3eabc9b6a54f490de2aa4f562a72aeb089106c84"
+    },
+    {
+      "id": "bund/JSTG/art_19_b",
+      "ebene": "bund",
+      "quelle": "JSTG",
+      "erlass": "JStG",
+      "artikel": "19_b",
+      "artikelLabel": "Art. 19b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ist der Wegfall eines Verbots nach Artikel 16a für die Sicherheit Dritter mit schwerwiegenden Nachteilen verbunden, so beantragt die Vollzugsbehörde dem Erwachsenengericht am Wohnsitz des jungen Erwachsenen die Anordnung eines Verbots nach Artikel 67 Absatz 2 oder 67b Absatz 1 StGB."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Erwachsenengericht kann gestützt auf die Artikel 67 Absatz 2bis und 67b Absatz 5 StGB die Verbote auf Antrag der Vollzugsbehörde verlängern."
+        },
+        {
+          "absatz": "3",
+          "text": "Es kann gestützt auf Artikel 67d Absatz 1 StGB die Verbote auf Antrag der Vollzugsbehörde erweitern oder ein zusätzliches Verbot anordnen."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_19_b",
+      "abgerufen": "2026-07-11",
+      "fassungsToken": "20250701",
+      "sha": "792d3ba8e402c91211c8d19d367242a86f5c617ea49d74fc284254d5b754936b"
+    },
+    {
+      "id": "bund/JSTG/art_19_c",
+      "ebene": "bund",
+      "quelle": "JSTG",
+      "erlass": "JStG",
+      "artikel": "19_c",
+      "artikelLabel": "Art. 19c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Vollzugsbehörde beantragt dem Erwachsenengericht am Wohnsitz des jungen Erwachsenen vor dem Ende der Unterbringung in einer geschlossenen Einrichtung oder eines Freiheitsentzugs, der im Anschluss an diese Massnahme vollzogen wird, die Anordnung einer Verwahrung nach Artikel 64 Absatz 1 StGB, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der junge Erwachsene nach Vollendung des 16. Altersjahres einen Mord (Art. 112 StGB) begangen hat;"
+            },
+            {
+              "marke": "b",
+              "text": "aufgrund der Tat eine Unterbringung angeordnet wurde, die zum Schutz Dritter vor schwerwiegender Gefährdung in einer geschlossenen Einrichtung vollzogen wurde;"
+            },
+            {
+              "marke": "c",
+              "text": "bei Wegfall der Unterbringung in einer geschlossenen Einrichtung oder am Ende des im Anschluss an diese Massnahme vollzogenen Freiheitsentzugs ernsthaft zu erwarten ist, dass er erneut einen Mord (Art. 112 StGB) begeht; und"
+            },
+            {
+              "marke": "d",
+              "text": "er volljährig ist."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Vollzugsbehörde stützt ihren Antrag auf:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Bericht der Leitung der Vollzugseinrichtung;"
+            },
+            {
+              "marke": "b",
+              "text": "eine unabhängige sachverständige Begutachtung nach Artikel 56 Absätze 3 und 4 StGB;"
+            },
+            {
+              "marke": "c",
+              "text": "die Beurteilung der Fachkommission nach Artikel 91a StGB; und"
+            },
+            {
+              "marke": "d",
+              "text": "die Anhörung des jungen Erwachsenen."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Ordnet das Erwachsenengericht eine Verwahrung nach Artikel 64 Absatz 1 StGB an, so hebt es die noch bestehende geschlossene Unterbringung auf."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_19_c",
+      "abgerufen": "2026-07-11",
+      "fassungsToken": "20250701",
+      "sha": "1d6974e9c8c9d65213ce02951caf3fc18bac0a0a636301e7072a21f6c661ea5f"
     },
     {
       "id": "bund/JSTG/art_20",
@@ -596,7 +721,7 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_20",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
       "sha": "420b9d41c7fcc387ac1ebda760d235887d1858677b4a7676f9fb806b1937c637"
     },
@@ -664,7 +789,7 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_21",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
       "sha": "a880c21ac18dce53ebb1a84d39f1d98ff41e47765b11caea23e38982297751e5"
     },
@@ -687,7 +812,7 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_22",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
       "sha": "d061c0b886a06f38469a25bfcdd49ed83c3b85f7033f0564ad6b9c470b6ccecf"
     },
@@ -736,7 +861,7 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_23",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
       "sha": "e1ed213a3cd222fb9a4aa45935338aad1b2869f6b120b9bb9068efdcaf1eb378"
     },
@@ -771,7 +896,7 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_24",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
       "sha": "66f38f67bbd3bc2f937451efae0f4488dcfaed9199db7b993b928efa517a8199"
     },
@@ -804,9 +929,72 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_25",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
       "sha": "ee0e4fc9a00c16858013c47da639744ef8e0e74859c9126c7e3ed7d152c77bd8"
+    },
+    {
+      "id": "bund/JSTG/art_25_a",
+      "ebene": "bund",
+      "quelle": "JSTG",
+      "erlass": "JStG",
+      "artikel": "25_a",
+      "artikelLabel": "Art. 25a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die urteilende Behörde behält im Grundurteil die Anordnung einer Verwahrung nach Artikel 64 Absatz 1 StGB für die Zeit nach dem 18. Altersjahr des Jugendlichen vor, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "dieser einen Mord (Art. 112 StGB) begangen hat;"
+            },
+            {
+              "marke": "b",
+              "text": "er wegen dieser Tat zu einem Freiheitsentzug von mindestens drei Jahren verurteilt wird;"
+            },
+            {
+              "marke": "c",
+              "text": "keine Unterbringung nach Artikel 15 angeordnet wird; und"
+            },
+            {
+              "marke": "d",
+              "text": "aufgrund der Tatumstände und der Persönlichkeit des Jugendlichen zum Zeitpunkt des Grundurteils davon ausgegangen werden muss, dass der Jugendliche eine schwerwiegende Gefahr für Dritte darstellt."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Wird der Jugendliche im selben Verfahren wegen mehrerer Straftaten zu einem Freiheitsentzug verurteilt, so legt die urteilende Behörde fest, welcher Anteil der Strafe auf Mord entfällt. Dieser Strafanteil ist massgebend dafür, ob die Voraussetzung nach Absatz 1 Buchstabe b erfüllt ist."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Vorbehalt gilt bis zur endgültigen Entlassung aus dem Freiheitsentzug. Wird während des Vollzugs eines Urteils mit einem Vorbehalt für denselben Jugendlichen aufgrund einer Straftat ein neues Urteil nach diesem Gesetz gefällt, so gilt der Vorbehalt bis zur Beendigung des Vollzugs des neuen Urteils."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Vollzugsbehörde hebt den Vorbehalt auf, wenn der Jugendliche keine schwerwiegende Gefahr für Dritte darstellt. Sie prüft jährlich, ob der Vorbehalt aufgehoben werden kann; dabei stützt sie sich auf:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Bericht der Leitung der Vollzugseinrichtung sowie der Person, die den Jugendlichen begleitet;"
+            },
+            {
+              "marke": "b",
+              "text": "eine sachverständige Begutachtung;"
+            },
+            {
+              "marke": "c",
+              "text": "die Anhörung des Jugendlichen, wenn der Vorbehalt beibehalten werden soll."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_25_a",
+      "abgerufen": "2026-07-11",
+      "fassungsToken": "20250701",
+      "sha": "52df588684ae5eb150892f1d91e004bddafcd76983a85e0ecb46bcf68c0b1366"
     },
     {
       "id": "bund/JSTG/art_26",
@@ -823,7 +1011,7 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_26",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
       "sha": "c98c83d69f08d7db91de2e4c216555f6e089c0e43bc15fd83b930743adc0bc13"
     },
@@ -862,9 +1050,68 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_27",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
       "sha": "d122b1b1e32b29d54df27dc4d46d5e68e15cd25ce2ab0937df3f7b5161970aea"
+    },
+    {
+      "id": "bund/JSTG/art_27_a",
+      "ebene": "bund",
+      "quelle": "JSTG",
+      "erlass": "JStG",
+      "artikel": "27_a",
+      "artikelLabel": "Art. 27a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Vollzugsbehörde beantragt dem Erwachsenengericht am Wohnsitz des verurteilten Jugendlichen vor dem Ende des Freiheitsentzugs die Anordnung einer Verwahrung nach Artikel 64 Absatz 1 StGB, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Verwahrung gestützt auf Artikel 25a vorbehalten wurde;"
+            },
+            {
+              "marke": "b",
+              "text": "bei Beendigung des Freiheitsentzugs ernsthaft zu erwarten ist, dass der verurteilte Jugendliche erneut einen Mord (Art. 112 StGB) begeht;"
+            },
+            {
+              "marke": "c",
+              "text": "die Voraussetzungen für eine geeignete Erwachsenenschutzmassnahme des Zivilrechts nicht gegeben sind; und"
+            },
+            {
+              "marke": "d",
+              "text": "der verurteilte Jugendliche bei seiner Entlassung volljährig ist."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Vollzugsbehörde stützt ihren Antrag auf:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Bericht der Leitung der Vollzugseinrichtung;"
+            },
+            {
+              "marke": "b",
+              "text": "das Gutachten eines unabhängigen Sachverständigen nach Artikel 56 Absätze 3 und 4 StGB;"
+            },
+            {
+              "marke": "c",
+              "text": "die Beurteilung der Fachkommission nach Artikel 91a StGB; und"
+            },
+            {
+              "marke": "d",
+              "text": "die Anhörung des jungen Erwachsenen."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_27_a",
+      "abgerufen": "2026-07-11",
+      "fassungsToken": "20250701",
+      "sha": "e961e757c90c2e7baaf0316e8a8eca858af42de1ca169c37fcc669f81bf62d2c"
     },
     {
       "id": "bund/JSTG/art_28",
@@ -884,7 +1131,7 @@
         },
         {
           "absatz": "3",
-          "text": "Ist der Freiheitsentzug nach Artikel 25 Absatz 2 verhängt worden, so entscheidet die Vollzugsbehörde nach Anhörung einer Kommission nach Artikel 62d Absatz 2 StGB."
+          "text": "Ist der Freiheitsentzug nach Artikel 25 Absatz 2 verhängt worden, so entscheidet die Vollzugsbehörde gestützt auf die Beurteilung der Fachkommission nach Artikel 91a StGB."
         },
         {
           "absatz": "4",
@@ -893,9 +1140,9 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_28",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
-      "sha": "f12a9c99e2db967c471725f4f30a4e02b5f496cca05c51784d71be6370355e2b"
+      "sha": "5e3119454c6edf7f9429c406252a8178780e1a836095a188e76d82b88dd9cb1e"
     },
     {
       "id": "bund/JSTG/art_29",
@@ -920,7 +1167,7 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_29",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
       "sha": "54492817f2ac0d179bee6362321a751618f3984d7ad7e38032e7ec84544a77de"
     },
@@ -939,7 +1186,7 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_30",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
       "sha": "3dbc622895d122867c2fa181726fa3e81376acc425f3e255fd3331eb7c5488d9"
     },
@@ -974,7 +1221,7 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_31",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
       "sha": "7c0b9d942eb1af7845a16d99fbc8ea8d7844115940573109283847f7b5465e73"
     },
@@ -996,7 +1243,7 @@
         },
         {
           "absatz": "3",
-          "text": "Wird die Unterbringung aus einem anderen Grund aufgehoben, so entscheidet die urteilende Behörde, ob und wieweit der Freiheitsentzug noch zu vollziehen ist. Dabei ist die mit der Unterbringung verbundene Freiheitsbeschränkung anzurechnen."
+          "text": "Wird die Unterbringung aus einem anderen Grund aufgehoben, so entscheidet die urteilende Behörde, ob und wieweit der Freiheitsentzug noch zu vollziehen ist. Dabei ist die mit der Unterbringung verbundene Freiheitsbeschränkung anzurechnen. Wird eine Unterbringung in einer geschlossenen Einrichtung, die aufgrund eines Mordes (Art. 112 StGB) und zum Schutz Dritter vor schwerwiegender Gefährdung durch den Jugendlichen angeordnet wurde, aus einem anderen Grund aufgehoben, so ordnet die Vollzugsbehörde den Vollzug der Reststrafe an."
         },
         {
           "absatz": "4",
@@ -1005,9 +1252,9 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_32",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
-      "sha": "af28428ccb20fac5a3d1e3132e401f067adfbfb0daa3d1713cb5bbce19d0dedf"
+      "sha": "b3ce4d9d7f7b7d830b9d1b54383d78b030900f85000b1e4cfc43a8eb62b085ce"
     },
     {
       "id": "bund/JSTG/art_33",
@@ -1024,7 +1271,7 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_33",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
       "sha": "6db150fb3abd6bba84d08ae366c0ff62f6709c7f8f678d04005074bd4cbe0db8"
     },
@@ -1051,7 +1298,7 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_34",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
       "sha": "e3f7b4f261ed5ad810c7f6f1dcc6e49cb29f59d1abb17a2537b116d9b83b703d"
     },
@@ -1074,7 +1321,7 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_35",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
       "sha": "69c0438ebe74b2b8606ca3120c9f21adb6a915e2a98b09fc4f9162cbfd5e717b"
     },
@@ -1119,7 +1366,7 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_36",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
       "sha": "591e15d864ac8ea92d8df8d511b4e7e8d927dbb60ce21b9b7ed16264c644c8a9"
     },
@@ -1152,7 +1399,7 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_37",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
       "sha": "66390fd503fd1847200ac0662f563ce38a716e55bed045c419fcb79778e3492d"
     },
@@ -1181,7 +1428,7 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_38",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
       "sha": "400a43fb3c28083cf05a73e7a316940a074301950a6f2d4fa21c772085986dda"
     },
@@ -1200,7 +1447,7 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_39_43",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -1219,7 +1466,7 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_44",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -1237,14 +1484,14 @@
         },
         {
           "absatz": "2",
-          "text": "Liegen Anzeichen dafür vor, dass das Kind besondere Hilfe benötigt, so benachrichtigt die vollziehende Behörde die Vormundschaftsbehörde oder die durch das kantonale Recht bezeichnete Fachstelle für Jugendhilfe."
+          "text": "Liegen Anzeichen dafür vor, dass das Kind besondere Hilfe benötigt, so benachrichtigt die Vollzugsbehörde die Kindesschutzbehörde oder die durch das kantonale Recht bezeichnete Fachstelle für Jugendhilfe."
         }
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_45",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
-      "sha": "28fd0b93c4dfd174ed453780cfb682a9c72186a2209b71e697ca85702be8b8a8"
+      "sha": "f137151769e5d8d5ea5590fee4721b4d881b4863fd9fc5166673a7db2adb573c"
     },
     {
       "id": "bund/JSTG/art_46",
@@ -1283,7 +1530,7 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_46",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
       "sha": "e140893e76a74b346ba73eb3dbff770d7263b54ccbb7afe7488a25267757245a"
     },
@@ -1306,7 +1553,7 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_47",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
       "sha": "61eedf47e6d399b2b2c61f3065f433049e3e5ff25bce1a31174c2bcd560f5e0d"
     },
@@ -1325,7 +1572,7 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_48",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
       "sha": "04af095234701964bf2dde90014dcd44d1525ed7592c0eb60dd2fe286d26bb59"
     },
@@ -1344,7 +1591,7 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_48_a",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
       "sha": "542ac3c273c3ad916310d5d24de87c5765322abafc8b026a1c1ef61c7ea70bd9"
     },
@@ -1371,7 +1618,7 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de#art_49",
-      "abgerufen": "2026-06-30",
+      "abgerufen": "2026-07-11",
       "fassungsToken": "20250701",
       "sha": "b4f180b27a92963c33c3b15eb9f51b75f8a6c189533432ec0820451d05c448c0"
     }

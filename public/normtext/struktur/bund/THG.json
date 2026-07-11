@@ -1,8 +1,9 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-11",
  "kopf": {
   "srNummer": "946.51",
   "titel": "Bundesgesetz über die technischen Handelshemmnisse",
+  "erlassdatum": "vom 6. Oktober 1995 (Stand am 1. September 2023)",
   "praeambel": [
    {
     "rolle": "autor",
@@ -10,7 +11,7 @@
    },
    {
     "rolle": "ingress",
-    "text": "gestützt auf die Zuständigkeit des Bundes in auswärtigen Angelegenheiten sowie auf die Artikel 31 Absätze 1 und 2 und 64 der Bundesverfassung, in Anwendung des Abkommens vom 21. Juni 2001 zur Änderung des Übereinkom­mens vom 4. Januar 1960 zur Errichtung der Europäischen Freihandelsassoziation (EFTA) und seines Anhanges H, in Anwendung des Abkommens vom 22. Juli 1972 zwischen der Schweizerischen Eidgenossenschaft und der Europäischen Wirtschaftsgemeinschaft, in Anwendung des WTO-Übereinkommens vom 15. April 1994 über technische Handelshemmnisse, nach Einsicht in die Botschaft des Bundesrates vom 15. Februar 1995,",
+    "text": "gestützt auf die Zuständigkeit des Bundes in auswärtigen Angelegenheiten sowie auf die Artikel 31 Absätze 1 und 2 und 64 der Bundesverfassung, in Anwendung des Abkommens vom 21. Juni 2001 zur Änderung des Übereinkommens vom 4. Januar 1960 zur Errichtung der Europäischen Freihandelsassoziation (EFTA) und seines Anhanges H, in Anwendung des Abkommens vom 22. Juli 1972 zwischen der Schweizerischen Eidgenossenschaft und der Europäischen Wirtschaftsgemeinschaft, in Anwendung des WTO-Übereinkommens vom 15. April 1994 über technische Handelshemmnisse, nach Einsicht in die Botschaft des Bundesrates vom 15. Februar 1995,",
     "fnNrs": [
      "1",
      "2",
@@ -28,7 +29,7 @@
   "fussnoten": [
    {
     "nr": "1",
-    "text": "[BS<b> 1</b> 3]. Den genannten Bestimmungen entsprechen heute die Art. 54, <i>95 </i>und <i>101 </i>der BV vom 18. April 1999 (SR <b>101</b>).",
+    "text": "[BS<b> 1</b> 3]. Den genannten Bestimmungen entsprechen heute die Art. 54, 95 und 101 der BV vom 18. April 1999 (SR <b>101</b>).",
     "links": [
      {
       "label": "SR <b>101</b>",
@@ -129,7 +130,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "bbis"
     }
    ]
@@ -158,7 +159,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -264,7 +265,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": "c"
     },
     {
@@ -280,7 +281,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": "e"
     },
     {
@@ -296,7 +297,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
       }
      ],
-     "absatz": null,
+     "absatz": "5",
      "item": "c"
     },
     {
@@ -312,7 +313,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
       }
      ],
-     "absatz": null,
+     "absatz": "6",
      "item": null
     }
    ]
@@ -357,7 +358,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -399,7 +400,7 @@
     },
     {
      "ebene": 2,
-     "label": "1. Abschnitt: Prüfung, Konformitätsbewertung, Anmeldung, Zulassung, Konformi­tätszeichen"
+     "label": "1. Abschnitt: Prüfung, Konformitätsbewertung, Anmeldung, Zulassung, Konformitätszeichen"
     }
    ],
    "marginalie": [
@@ -414,7 +415,7 @@
     },
     {
      "ebene": 2,
-     "label": "1. Abschnitt: Prüfung, Konformitätsbewertung, Anmeldung, Zulassung, Konformi­tätszeichen"
+     "label": "1. Abschnitt: Prüfung, Konformitätsbewertung, Anmeldung, Zulassung, Konformitätszeichen"
     }
    ],
    "marginalie": [
@@ -429,7 +430,7 @@
     },
     {
      "ebene": 2,
-     "label": "1. Abschnitt: Prüfung, Konformitätsbewertung, Anmeldung, Zulassung, Konformi­tätszeichen"
+     "label": "1. Abschnitt: Prüfung, Konformitätsbewertung, Anmeldung, Zulassung, Konformitätszeichen"
     }
    ],
    "marginalie": [
@@ -462,7 +463,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": "b"
     }
    ]
@@ -568,7 +569,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "e"
     },
     {
@@ -664,7 +665,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -697,7 +698,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "c"
     },
     {
@@ -713,7 +714,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -735,7 +736,7 @@
    "fussnoten": [
     {
      "nr": "37",
-     "text": "Heute: «Staatssekretariat für Wirtschaft (SECO)» (Art. 5 der Organisations­ver­ordnung für das Eidgenössische Volkswirtschaftsdepartement vom 14. Juni 1999 – SR <b>172.216.1</b>; AS <b>2000</b> 187 Art. 16).",
+     "text": "Heute: «Staatssekretariat für Wirtschaft (SECO)» (Art. 5 der Organisationsverordnung für das Eidgenössische Volkswirtschaftsdepartement vom 14. Juni 1999 – SR <b>172.216.1</b>; AS <b>2000</b> 187 Art. 16).",
      "links": [
       {
        "label": "SR <b>172.216.1</b>",
@@ -746,7 +747,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/34"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -775,7 +776,7 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755"
       }
      ],
-     "absatz": null,
+     "absatz": "8",
      "item": null
     },
     {
@@ -821,7 +822,7 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2003/510"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     }
    ]
@@ -887,7 +888,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
@@ -903,7 +904,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1231"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -1045,7 +1046,7 @@
     }
    ],
    "marginalie": [
-    "Unberechtigtes Ausstellen von Konformitätserklärungen, unberechtig­tes Anbringen und Verwenden von Konformitätszeichen"
+    "Unberechtigtes Ausstellen von Konformitätserklärungen, unberechtigtes Anbringen und Verwenden von Konformitätszeichen"
    ],
    "fussnoten": [
     {
@@ -1306,7 +1307,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/853"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "b"
     },
     {
@@ -1318,7 +1319,7 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2017/62"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "b"
     }
    ]
@@ -1381,7 +1382,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -1423,7 +1424,7 @@
     }
    ],
    "marginalie": [
-    "Ausgestaltung der technischen Vorschriften über die Produktinformation"
+    "Ausgestaltung der technischen Vorschriftenüber die Produktinformation"
    ],
    "fussnoten": [
     {
@@ -1452,7 +1453,7 @@
     }
    ],
    "marginalie": [
-    "Ausgestaltung der technischen Vorschriften über Einbau, Inbetriebnahme und Verwendung"
+    "Ausgestaltung der technischen Vorschriften über Einbau,Inbetriebnahme und Verwendung"
    ],
    "fussnoten": [
     {
@@ -1473,7 +1474,7 @@
     }
    ]
   },
-  "lvl_u1": {
+  "annex_u1": {
    "gliederung": [
     {
      "ebene": 1,

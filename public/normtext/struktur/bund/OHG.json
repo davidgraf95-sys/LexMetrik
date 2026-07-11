@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-11",
  "kopf": {
   "srNummer": "312.5",
   "titel": "Bundesgesetz über die Hilfe an Opfer von Straftaten",
@@ -29,7 +29,7 @@
     "links": [
      {
       "label": "SR <b>101</b>",
-      "url": "https://fedlex.data.admin.ch/eli/cc/1999/404"
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4715"
      }
     ],
     "absatz": null,
@@ -140,7 +140,7 @@
      "links": [
       {
        "label": "SR <b>831.30</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2007/804"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10077"
       }
      ],
      "absatz": "1",
@@ -253,7 +253,7 @@
      "links": [
       {
        "label": "SR <b>312.0</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2010/267"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6214"
       }
      ],
      "absatz": "1",
@@ -442,7 +442,7 @@
      "links": [
       {
        "label": "SR <b>220</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
      "absatz": "2",
@@ -522,7 +522,7 @@
      "links": [
       {
        "label": "SR <b>220</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/27/317_321_377"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
      "absatz": "1",
@@ -595,7 +595,7 @@
      "links": [
       {
        "label": "SR <b>311.0</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6196"
       }
      ],
      "absatz": "2",
@@ -607,7 +607,7 @@
      "links": [
       {
        "label": "SR <b>321.0</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/43/359_375_369"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6242"
       }
      ],
      "absatz": "2",
@@ -734,7 +734,7 @@
      "links": [
       {
        "label": "SR <b>831.30</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2007/804"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10077"
       }
      ],
      "absatz": "3",
@@ -764,6 +764,10 @@
       {
        "label": "<b>1997</b> 2952",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2952_2952_2952"
+      },
+      {
+       "label": "<b>2002</b> 2997",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2002/431"
       },
       {
        "label": "<b>2005</b> 5685",
@@ -814,7 +818,7 @@
      "links": [
       {
        "label": "SR <b>831.30</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/2007/804"
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10077"
       }
      ],
      "absatz": null,

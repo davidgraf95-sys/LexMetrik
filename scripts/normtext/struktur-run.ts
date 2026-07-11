@@ -9,6 +9,7 @@
  * Aufruf: npm run normtext:struktur -- --datum=$(date +%F)
  */
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { execSync } from 'node:child_process';
 import { extrahiereStruktur, extrahiereAnhangStruktur } from './struktur-extrahiere.ts';
 import { extrahiereKopf } from './kopf-extrahiere.ts';
 import { extrahiereFussnoten, fnDefinitionen, type Fussnote } from './fussnoten-extrahiere.ts';
@@ -27,6 +28,17 @@ mkdirSync(ZIEL, { recursive: true });
 const bund = ERLASS_REGISTER.filter((r) => r.ebene === 'bund' && r.status === 'snapshot');
 let geschrieben = 0;
 const fehlend: string[] = [];
+
+// P1-a/b (Querschnitts-Wurzel): /tmp-Caches überleben Neustarts NICHT und ein
+// fehlender Cache führte hier zu STILLEM Skip (continue) mit Exit 0 → grüner
+// No-op-Lauf, der die Sidecars der übersprungenen Erlasse still veralten liess
+// (Symptom «54 Sidecars ohne Erlassdatum»). Darum VOR dem Lauf die Caches
+// sicherstellen — genau wie der Snapshot-Generator (normtext-snapshot.ts).
+const alleFehlen = bund.filter((r) => !existsSync(`/tmp/${r.key.toLowerCase()}.html`));
+if (alleFehlen.length > 0) {
+  console.log(`\n[Cache] ${alleFehlen.length} HTML-Cache(s) fehlen — lade via bash scripts/fedlex-cache.sh …`);
+  execSync('bash scripts/fedlex-cache.sh', { stdio: 'inherit' });
+}
 
 for (const reg of bund) {
   const cache = `/tmp/${reg.key.toLowerCase()}.html`;
@@ -63,4 +75,14 @@ for (const reg of bund) {
 }
 
 console.log(`Struktur-Sidecars: ${geschrieben}/${bund.length} Bund-Erlasse → ${ZIEL}/`);
-if (fehlend.length) console.log(`Ohne Cache/leer (übersprungen): ${fehlend.join(', ')}  — ggf. 'bash scripts/fedlex-cache.sh' laufen lassen`);
+// «0 übersprungen»-Pflichtkontrolle (P1-a/b): ein übersprungener Erlass ist ein
+// harter Fehler, kein Hinweis — sonst regeneriert ein grüner No-op-Lauf still aus
+// veralteten/fehlenden Caches (Soft-404-Shell → 0 Token → früher lautlos skip).
+if (fehlend.length) {
+  console.error(
+    `\nFEHLER: ${fehlend.length} Erlass(e) ohne verwertbaren Cache übersprungen: ${fehlend.join(', ')}\n` +
+      `→ 'bash scripts/fedlex-cache.sh' erfolgreich laufen lassen (kanonische html-N-Pins prüfen); ` +
+      `ein (0) markiert eine Soft-404-Shell/leeren Extrakt — Pin-Kanonik in fedlex-cache.sh prüfen.`,
+  );
+  process.exit(1);
+}

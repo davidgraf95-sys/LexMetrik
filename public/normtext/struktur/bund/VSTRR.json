@@ -1,8 +1,9 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-11",
  "kopf": {
   "srNummer": "313.0",
   "titel": "Bundesgesetz über das Verwaltungsstrafrecht",
+  "erlassdatum": "vom 22. März 1974 (Stand am 1. September 2023)",
   "praeambel": [
    {
     "rolle": "autor",
@@ -10,7 +11,7 @@
    },
    {
     "rolle": "ingress",
-    "text": "gestützt auf die Artikel 64, 106 und 114 der Bundesverfassung, nach Einsicht in eine Botschaft des Bundesrates vom 21. April 1971,",
+    "text": "gestützt auf Artikel 123 Absatz 1 der Bundesverfassung, nach Einsicht in eine Botschaft des Bundesrates vom 21. April 1971,",
     "fnNrs": [
      "1",
      "2",
@@ -25,12 +26,8 @@
   "fussnoten": [
    {
     "nr": "1",
-    "text": "[BS <b>1</b> 3]. Den genannten Bestimmungen entsprechen heute die Art. 123, <i>188 </i>und <i>190</i>(nach Inkrafttreten des BB vom 8. Okt. 1999 über die Reform der Justiz – BBl <b>1999</b> 8633 – Art. 123, <i>188 </i>und <i>189</i>) der BV vom 18. April 1999 (SR <b>101</b>).",
+    "text": "SR <b>101</b>",
     "links": [
-     {
-      "label": "BBl <b>1999</b> 8633",
-      "url": "https://fedlex.data.admin.ch/eli/fga/1999/1_8633_7831_7454"
-     },
      {
       "label": "SR <b>101</b>",
       "url": "https://fedlex.data.admin.ch/eli/cc/1999/404"
@@ -41,11 +38,15 @@
    },
    {
     "nr": "2",
-    "text": "Fassung gemäss Ziff. I des BG vom 22. Dez. 1999, in Kraft seit 1. Okt. 2000 (AS <b>2000</b> 2141; <i>BBl <b>1998</b> 1529</i>).",
+    "text": "Fassung gemäss Ziff. I 13 des BG vom 17. Dez. 2021 über die Harmonisierung der Strafrahmen, in Kraft seit 1. Juli 2023 (AS <b>2023</b> 259; BBl <b>2018</b> 2827).",
     "links": [
      {
-      "label": "AS <b>2000</b> 2141",
-      "url": "https://fedlex.data.admin.ch/eli/oc/2000/326"
+      "label": "AS <b>2023</b> 259",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2023/259"
+     },
+     {
+      "label": "BBl <b>2018</b> 2827",
+      "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
      }
     ],
     "absatz": null,
@@ -89,7 +90,7 @@
     }
    ],
    "marginalie": [
-    "A. Anwendung des Schweize­ri­schen Straf­­gesetzbuches"
+    "A. Anwendung des Schweizerischen Strafgesetzbuches"
    ],
    "fussnoten": [
     {
@@ -118,7 +119,7 @@
     }
    ],
    "marginalie": [
-    "B. Ordnungs­­­widrigkeit"
+    "B. Ordnungswidrigkeit"
    ]
   },
   "4": {
@@ -133,7 +134,7 @@
     }
    ],
    "marginalie": [
-    "C. Abweichun­gen vom Strafgesetzbuch",
+    "C. Abweichungen vom Strafgesetzbuch",
     "I. Jugendliche"
    ],
    "fussnoten": [
@@ -163,7 +164,7 @@
     }
    ],
    "marginalie": [
-    "C. Abweichun­gen vom Strafgesetzbuch",
+    "C. Abweichungen vom Strafgesetzbuch",
     "II. Teilnahme"
    ]
   },
@@ -179,8 +180,8 @@
     }
    ],
    "marginalie": [
-    "C. Abweichun­gen vom Strafgesetzbuch",
-    "III. Wider­handlungen in Geschäftsbetrieben, durch Be­auf­trag­te u. dgl.",
+    "C. Abweichungen vom Strafgesetzbuch",
+    "III. Widerhandlungen in Geschäftsbetrieben, durch Beauftragte u. dgl.",
     "1. Regel"
    ]
   },
@@ -196,9 +197,9 @@
     }
    ],
    "marginalie": [
-    "C. Abweichun­gen vom Strafgesetzbuch",
-    "III. Wider­handlungen in Geschäftsbetrieben, durch Be­auf­trag­te u. dgl.",
-    "2. Sonder­ordnung bei Bussen bis zu 5000 Franken"
+    "C. Abweichungen vom Strafgesetzbuch",
+    "III. Widerhandlungen in Geschäftsbetrieben, durch Beauftragte u. dgl.",
+    "2. Sonderordnung bei Bussen bis zu 5000 Franken"
    ]
   },
   "8": {
@@ -213,8 +214,8 @@
     }
    ],
    "marginalie": [
-    "C. Abweichun­gen vom Strafgesetzbuch",
-    "IV. Straf­zumessung",
+    "C. Abweichungen vom Strafgesetzbuch",
+    "IV. Strafzumessung",
     "1. Bussen"
    ]
   },
@@ -230,9 +231,9 @@
     }
    ],
    "marginalie": [
-    "C. Abweichun­gen vom Strafgesetzbuch",
-    "IV. Straf­zumessung",
-    "2. Zusammen­treffen von straf­baren Hand­lungen oder von Straf­bestim­mungen"
+    "C. Abweichungen vom Strafgesetzbuch",
+    "IV. Strafzumessung",
+    "2. Zusammentreffen von strafbaren Handlungen oder von Strafbestimmungen"
    ],
    "fussnoten": [
     {
@@ -261,7 +262,7 @@
     }
    ],
    "marginalie": [
-    "C. Abweichun­gen vom Strafgesetzbuch",
+    "C. Abweichungen vom Strafgesetzbuch",
     "V. Umwandlung der Busse"
    ],
    "fussnoten": [
@@ -282,7 +283,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -299,8 +300,58 @@
     }
    ],
    "marginalie": [
-    "C. Abweichun­gen vom Strafgesetzbuch",
+    "C. Abweichungen vom Strafgesetzbuch",
     "VI. Verjährung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "Fassung gemäss Ziff. I 13 des BG vom 17. Dez. 2021 über die Harmonisierung der Strafrahmen, in Kraft seit 1. Juli 2023 (AS <b>2023</b> 259; BBl <b>2018</b> 2827).",
+     "links": [
+      {
+       "label": "AS <b>2023</b> 259",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/259"
+      },
+      {
+       "label": "BBl <b>2018</b> 2827",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "9",
+     "text": "Fassung gemäss Ziff. I 13 des BG vom 17. Dez. 2021 über die Harmonisierung der Strafrahmen, in Kraft seit 1. Juli 2023 (AS <b>2023</b> 259; BBl <b>2018</b> 2827).",
+     "links": [
+      {
+       "label": "AS <b>2023</b> 259",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/259"
+      },
+      {
+       "label": "BBl <b>2018</b> 2827",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "10",
+     "text": "Fassung gemäss Ziff. I 13 des BG vom 17. Dez. 2021 über die Harmonisierung der Strafrahmen, in Kraft seit 1. Juli 2023 (AS <b>2023</b> 259; BBl <b>2018</b> 2827).",
+     "links": [
+      {
+       "label": "AS <b>2023</b> 259",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/259"
+      },
+      {
+       "label": "BBl <b>2018</b> 2827",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
+      }
+     ],
+     "absatz": "3",
+     "item": "b"
+    }
    ]
   },
   "12": {
@@ -315,8 +366,8 @@
     }
    ],
    "marginalie": [
-    "D. Hinter­ziehung; Erschlei­chen eines Bei­trages u. dgl.",
-    "I. Leistungs- und Rück­leistungs­pflicht"
+    "D. Hinterziehung; Erschleichen eines Beitrages u. dgl.",
+    "I. Leistungs- und Rückleistungspflicht"
    ]
   },
   "13": {
@@ -331,7 +382,7 @@
     }
    ],
    "marginalie": [
-    "D. Hinter­ziehung; Erschlei­chen eines Bei­trages u. dgl.",
+    "D. Hinterziehung; Erschleichen eines Beitrages u. dgl.",
     "II. Selbstanzeige"
    ]
   },
@@ -348,65 +399,24 @@
    ],
    "marginalie": [
     "A. Strafbare Handlungen",
-    "I. Leistungs- und Abgabebe­trug"
+    "I. Leistungs- und Abgabebetrug"
    ],
    "fussnoten": [
     {
-     "nr": "9",
-     "text": "Fassung gemäss Ziff. III des BG vom 17. Juni 1994, in Kraft seit 1. Jan. 1995 (AS <b>1994</b> 2290; BBl <b>1991</b> II 969).",
+     "nr": "11",
+     "text": "Fassung gemäss Ziff. I 13 des BG vom 17. Dez. 2021 über die Harmonisierung der Strafrahmen, in Kraft seit 1. Juli 2023 (AS <b>2023</b> 259; BBl <b>2018</b> 2827).",
      "links": [
       {
-       "label": "AS <b>1994</b> 2290",
-       "url": "https://fedlex.data.admin.ch/eli/oc/1994/2290_2290_2290"
+       "label": "AS <b>2023</b> 259",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/259"
       },
       {
-       "label": "BBl <b>1991</b> II 969",
-       "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_969_933_797"
+       "label": "BBl <b>2018</b> 2827",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
      "absatz": null,
      "item": null
-    },
-    {
-     "nr": "10",
-     "text": "Eingefügt durch Ziff. I 2 des BG vom 3. Okt. 2008 zur Umsetzung der revidierten Empfehlungen der Groupe d’action financière (AS <b>2009</b> 361; BBl <b>2007</b> 6269). Fassung gemäss Ziff. I 5 des BG vom 12. Dez. 2014 zur Umsetzung der 2012 revidierten Empfehlungen der Groupe d'action financière, in Kraft seit 1. Jan. 2016 (AS <b>2015 </b>1389; BBl <b>2014 </b>605).",
-     "links": [
-      {
-       "label": "AS <b>2009</b> 361",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2009/64"
-      },
-      {
-       "label": "BBl <b>2007</b> 6269",
-       "url": "https://fedlex.data.admin.ch/eli/fga/2007/938"
-      },
-      {
-       "label": "AS <b>2015 </b>1389",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2015/289"
-      },
-      {
-       "label": "BBl <b>2014 </b>605",
-       "url": "https://fedlex.data.admin.ch/eli/fga/2014/100"
-      }
-     ],
-     "absatz": null,
-     "item": null
-    },
-    {
-     "nr": "8",
-     "text": "Ab 1. Jan. 2007 sind die angedrohten Strafen und die Verjährungsfristen in Anwendung von Art. 333 Abs. 2–6 des Strafgesetzbuches (SR <b>311.0</b>) in der Fassung des BG vom 13. Dez. 2002 (AS <b>2006</b> 3459; <i>BBl <b>1999</b> 1979</i>) zu interpretieren beziehungsweise umzu­rechnen.",
-     "links": [
-      {
-       "label": "SR <b>311.0</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
-      },
-      {
-       "label": "AS <b>2006</b> 3459",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
-      }
-     ],
-     "absatz": null,
-     "item": null,
-     "sektion": "A. Strafbare Handlungen"
     }
    ]
   },
@@ -423,7 +433,25 @@
    ],
    "marginalie": [
     "A. Strafbare Handlungen",
-    "II. Urkunden­­fälschung; Er­schleichen einer falschen Beur­kundung"
+    "II. Urkundenfälschung; Erschleichen einer falschen Beurkundung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "Fassung gemäss Ziff. I 13 des BG vom 17. Dez. 2021 über die Harmonisierung der Strafrahmen, in Kraft seit 1. Juli 2023 (AS <b>2023</b> 259; BBl <b>2018</b> 2827).",
+     "links": [
+      {
+       "label": "AS <b>2023</b> 259",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/259"
+      },
+      {
+       "label": "BBl <b>2018</b> 2827",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
+      }
+     ],
+     "absatz": null,
+     "item": null
+    }
    ]
   },
   "16": {
@@ -439,7 +467,25 @@
    ],
    "marginalie": [
     "A. Strafbare Handlungen",
-    "III. Unter­­drückung von Ur­kun­den"
+    "III. Unterdrückung von Urkunden"
+   ],
+   "fussnoten": [
+    {
+     "nr": "13",
+     "text": "Fassung gemäss Ziff. I 13 des BG vom 17. Dez. 2021 über die Harmonisierung der Strafrahmen, in Kraft seit 1. Juli 2023 (AS <b>2023</b> 259; BBl <b>2018</b> 2827).",
+     "links": [
+      {
+       "label": "AS <b>2023</b> 259",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/259"
+      },
+      {
+       "label": "BBl <b>2018</b> 2827",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
    ]
   },
   "17": {
@@ -455,20 +501,20 @@
    ],
    "marginalie": [
     "A. Strafbare Handlungen",
-    "IV. Begünsti­gung"
+    "IV. Begünstigung"
    ],
    "fussnoten": [
     {
-     "nr": "11",
-     "text": "Fassung gemäss Ziff. I 2 des BG vom 3. Okt. 2008 zur Umsetzung der revidierten Empfehlungen der Groupe d’action financière, in Kraft seit 1. Febr. 2009 (AS <b>2009</b> 361; BBl <b>2007</b> 6269).",
+     "nr": "14",
+     "text": "Fassung gemäss Ziff. I 13 des BG vom 17. Dez. 2021 über die Harmonisierung der Strafrahmen, in Kraft seit 1. Juli 2023 (AS <b>2023</b> 259; BBl <b>2018</b> 2827).",
      "links": [
       {
-       "label": "AS <b>2009</b> 361",
-       "url": "https://fedlex.data.admin.ch/eli/oc/2009/64"
+       "label": "AS <b>2023</b> 259",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2023/259"
       },
       {
-       "label": "BBl <b>2007</b> 6269",
-       "url": "https://fedlex.data.admin.ch/eli/fga/2007/938"
+       "label": "BBl <b>2018</b> 2827",
+       "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
      "absatz": null,
@@ -488,7 +534,7 @@
     }
    ],
    "marginalie": [
-    "B. Gleich­stellung der mit öf­fent­lich-recht­li­chen Aufgaben be­trauten Or­ga­ni­sationen"
+    "B. Gleichstellung der mit öffentlich-rechtlichen Aufgaben betrauten Organisationen"
    ]
   },
   "19": {
@@ -504,7 +550,7 @@
    ],
    "marginalie": [
     "A. Behörden",
-    "I. Anzeige und dringliche Mass­nahmen"
+    "I. Anzeige und dringliche Massnahmen"
    ]
   },
   "20": {
@@ -524,7 +570,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "13",
+     "nr": "16",
      "text": "Eingefügt durch Ziff. I des BG vom 22. Dezember 1999, in Kraft seit 1. Okt. 2000 (AS <b>2000 </b>2141; <i>BBl <b>1998</b> 1529</i>).",
      "links": [
       {
@@ -532,7 +578,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/326"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -551,11 +597,11 @@
    "marginalie": [
     "A. Behörden",
     "III. Beurteilung",
-    "1. Sachliche Zu­ständigkeit"
+    "1. Sachliche Zuständigkeit"
    ],
    "fussnoten": [
     {
-     "nr": "14",
+     "nr": "17",
      "text": "SR <b>311.0</b>",
      "links": [
       {
@@ -563,11 +609,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "15",
+     "nr": "18",
      "text": "Fassung gemäss Anhang Ziff. 6 des BG vom 20. März 2015 (Umsetzung von Art. 121 Abs. 3–6 BV über die Ausschaffung krimineller Ausländerinnen und Ausländer), in Kraft seit 1. Okt. 2016 (AS <b>2016</b> 2329; BBl <b>2013</b> 5975).",
      "links": [
       {
@@ -579,7 +625,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1078"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -598,11 +644,11 @@
    "marginalie": [
     "A. Behörden",
     "III. Beurteilung",
-    "2. Örtliche Zu­ständigkeit"
+    "2. Örtliche Zuständigkeit"
    ],
    "fussnoten": [
     {
-     "nr": "16",
+     "nr": "19",
      "text": "SR <b>312.0</b>",
      "links": [
       {
@@ -610,11 +656,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2010/267"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "17",
+     "nr": "20",
      "text": "Fassung gemäss Anhang 1 Ziff. II 11 der Strafprozessordnung vom 5. Okt. 2007, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 1881; BBl <b>2006</b> 1085).",
      "links": [
       {
@@ -626,11 +672,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/124"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "18",
+     "nr": "21",
      "text": "Fassung gemäss Anhang 1 Ziff. II 11 der Strafprozessordnung vom 5. Okt. 2007, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 1881; BBl <b>2006</b> 1085).",
      "links": [
       {
@@ -642,11 +688,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/124"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
-     "nr": "19",
+     "nr": "22",
      "text": "Ausdruck gemäss Anhang Ziff. 10 des Strafgerichtsgesetzes vom 4. Okt. 2002, in Kraft seit 1. April 2004 (AS <b>2003</b> 2133 2131; BBl <b>2001</b> 4202).",
      "links": [
       {
@@ -662,7 +708,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -684,7 +730,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "20",
+     "nr": "23",
      "text": "Fassung gemäss Art. 44 Ziff. 2 des Jugendstrafgesetzes vom 20. Juni 2003, in Kraft seit 1. Jan. 2007 (AS <b>2006</b> 3545; <i>BBl <b>1999</b> 1979</i>).",
      "links": [
       {
@@ -692,11 +738,11 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/551"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "21",
+     "nr": "24",
      "text": "SR <b>312.1</b>",
      "links": [
       {
@@ -704,11 +750,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2010/226"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
-     "nr": "22",
+     "nr": "25",
      "text": "Fassung gemäss Anhang Ziff. 2 der Jugendstrafprozessordnung vom 20. März 2009, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 1573; BBl <b>2006</b> 1085, <b>2008 </b>3121).",
      "links": [
       {
@@ -724,12 +770,12 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/675"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
-     "nr": "23",
-     "text": "Fassung gemäss Anhang Ziff. 15 des BG vom 19. Dez. 2008 (Erwachsenenschutz, Per­sonenrecht und Kindesrecht), in Kraft seit 1. Jan. 2013 (AS <b>2011</b> 725; BBl <b>2006 </b>7001).",
+     "nr": "26",
+     "text": "Fassung gemäss Anhang Ziff. 15 des BG vom 19. Dez. 2008 (Erwachsenenschutz, Personenrecht und Kindesrecht), in Kraft seit 1. Jan. 2013 (AS <b>2011</b> 725; BBl <b>2006 </b>7001).",
      "links": [
       {
        "label": "AS <b>2011</b> 725",
@@ -740,7 +786,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/899"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -762,7 +808,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "24",
+     "nr": "27",
      "text": "Fassung gemäss Anhang 1 Ziff. II 11 der Strafprozessordnung vom 5. Okt. 2007, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 1881; BBl <b>2006</b> 1085).",
      "links": [
       {
@@ -792,11 +838,11 @@
    ],
    "marginalie": [
     "A. Behörden",
-    "VI. Beschwerde­kammer"
+    "VI. Beschwerdekammer"
    ],
    "fussnoten": [
     {
-     "nr": "26",
+     "nr": "29",
      "text": "Ausdruck gemäss Anhang Ziff. 10 des Strafgerichtsgesetzes vom 4. Okt. 2002, in Kraft seit 1. April 2004 (AS <b>2003</b> 2133 2131; BBl <b>2001</b> 4202). Diese Änd. ist im ganzen Erlass berücksichtigt.",
      "links": [
       {
@@ -812,11 +858,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "27",
+     "nr": "30",
      "text": "SR <b>173.71</b>",
      "links": [
       {
@@ -824,11 +870,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2010/444"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     },
     {
-     "nr": "28",
+     "nr": "31",
      "text": "Fassung gemäss Anhang Ziff. II 9 des Strafbehördenorganisationsgesetzes vom 19. März 2010, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 3267; BBl <b>2008 </b>8125).",
      "links": [
       {
@@ -840,11 +886,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/1395"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     },
     {
-     "nr": "25",
+     "nr": "28",
      "text": "Ausdruck gemäss Anhang Ziff. 10 des Strafgerichtsgesetzes vom 4. Okt. 2002, in Kraft seit 1. April 2004 (AS <b>2003</b> 2133 2131; BBl <b>2001</b> 4202). Diese Änd. ist im ganzen Erlass berücksichtigt.",
      "links": [
       {
@@ -862,7 +908,7 @@
      ],
      "absatz": null,
      "item": null,
-     "sektion": "VI. Beschwerde­kammer"
+     "sektion": "VI. Beschwerdekammer"
     }
    ]
   },
@@ -878,8 +924,8 @@
     }
    ],
    "marginalie": [
-    "B. Beschwerde gegen Unter­­suchungs­handlun­gen",
-    "I. Bei Zwangs­massnahmen"
+    "B. Beschwerde gegen Untersuchungshandlungen",
+    "I. Bei Zwangsmassnahmen"
    ]
   },
   "27": {
@@ -894,8 +940,8 @@
     }
    ],
    "marginalie": [
-    "B. Beschwerde gegen Unter­­suchungs­handlun­gen",
-    "II. Bei sonstigen Unter­suchungs­handlungen"
+    "B. Beschwerde gegen Untersuchungshandlungen",
+    "II. Bei sonstigen Untersuchungshandlungen"
    ]
   },
   "28": {
@@ -910,7 +956,7 @@
     }
    ],
    "marginalie": [
-    "B. Beschwerde gegen Unter­­suchungs­handlun­gen",
+    "B. Beschwerde gegen Untersuchungshandlungen",
     "III. Gemeinsame Bestimmungen"
    ]
   },
@@ -926,12 +972,12 @@
     }
    ],
    "marginalie": [
-    "C. Allgemeine Verfahrens­bestimmungen",
+    "C. Allgemeine Verfahrensbestimmungen",
     "I. Ausstand"
    ],
    "fussnoten": [
     {
-     "nr": "29",
+     "nr": "32",
      "text": "Fassung gemäss Anhang Ziff. 21 des Partnerschaftsgesetzes vom 18. Juni 2004, in Kraft seit 1. Jan. 2007 (AS <b>2005</b> 5685; BBl <b>2003</b> 1288).",
      "links": [
       {
@@ -943,11 +989,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2003/194"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "b"
     },
     {
-     "nr": "30",
+     "nr": "33",
      "text": "Eingefügt durch Anhang Ziff. 21 des Partnerschaftsgesetzes vom 18. Juni 2004, in Kraft seit 1. Jan. 2007 (AS <b>2005</b> 5685; BBl <b>2003</b> 1288).",
      "links": [
       {
@@ -959,8 +1005,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2003/194"
       }
      ],
-     "absatz": null,
-     "item": "bbis"
+     "absatz": "1",
+     "item": null
     }
    ]
   },
@@ -976,12 +1022,12 @@
     }
    ],
    "marginalie": [
-    "C. Allgemeine Verfahrens­bestimmungen",
+    "C. Allgemeine Verfahrensbestimmungen",
     "II. Rechtshilfe"
    ],
    "fussnoten": [
     {
-     "nr": "31",
+     "nr": "34",
      "text": "SR <b>312.0</b>",
      "links": [
       {
@@ -989,11 +1035,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2010/267"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
-     "nr": "32",
+     "nr": "35",
      "text": "Fassung zweiter Satz gemäss Anhang 1 Ziff. II 11 der Strafprozessordnung vom 5. Okt. 2007, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 1881; BBl <b>2006</b> 1085).",
      "links": [
       {
@@ -1005,11 +1051,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/124"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
-     "nr": "33",
+     "nr": "36",
      "text": "Fassung gemäss Anhang 1 Ziff. II 11 der Strafprozessordnung vom 5. Okt. 2007, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 1881; BBl <b>2006</b> 1085).",
      "links": [
       {
@@ -1021,7 +1067,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/124"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -1038,12 +1084,12 @@
     }
    ],
    "marginalie": [
-    "C. Allgemeine Verfahrens­bestimmungen",
+    "C. Allgemeine Verfahrensbestimmungen",
     "III. Fristen"
    ],
    "fussnoten": [
     {
-     "nr": "34",
+     "nr": "37",
      "text": "SR <b>172.021</b>",
      "links": [
       {
@@ -1051,11 +1097,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "35",
+     "nr": "38",
      "text": "SR <b>312.0</b>",
      "links": [
       {
@@ -1063,11 +1109,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2010/267"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
-     "nr": "36",
+     "nr": "39",
      "text": "Fassung gemäss Anhang 1 Ziff. II 11 der Strafprozessordnung vom 5. Okt. 2007, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 1881; BBl <b>2006</b> 1085).",
      "links": [
       {
@@ -1079,7 +1125,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/124"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -1141,11 +1187,11 @@
    ],
    "marginalie": [
     "B. Zustellung",
-    "I. Zustellungs­domizil"
+    "I. Zustellungsdomizil"
    ],
    "fussnoten": [
     {
-     "nr": "38",
+     "nr": "41",
      "text": "Fassung gemäss Anhang Ziff. 2 des Finanzdienstleistungsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 4417; BBl <b>2015</b> 8901).",
      "links": [
       {
@@ -1178,7 +1224,7 @@
     }
    ],
    "marginalie": [
-    "C. Teilnahme an Beweis­­aufnah­men"
+    "C. Teilnahme an Beweisaufnahmen"
    ]
   },
   "36": {
@@ -1201,7 +1247,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "40",
+     "nr": "43",
      "text": "SR <b>172.021</b>",
      "links": [
       {
@@ -1249,7 +1295,7 @@
     }
    ],
    "marginalie": [
-    "B. Protokollie­rung"
+    "B. Protokollierung"
    ]
   },
   "39": {
@@ -1268,7 +1314,7 @@
     }
    ],
    "marginalie": [
-    "C. Einver­nahmen, Auskünfte",
+    "C. Einvernahmen, Auskünfte",
     "I. Beschuldigter"
    ]
   },
@@ -1288,7 +1334,7 @@
     }
    ],
    "marginalie": [
-    "C. Einver­nahmen, Auskünfte",
+    "C. Einvernahmen, Auskünfte",
     "II. Auskünfte"
    ]
   },
@@ -1308,12 +1354,12 @@
     }
    ],
    "marginalie": [
-    "C. Einver­nahmen, Auskünfte",
+    "C. Einvernahmen, Auskünfte",
     "III. Zeugen"
    ],
    "fussnoten": [
     {
-     "nr": "41",
+     "nr": "44",
      "text": "SR <b>312.0</b>",
      "links": [
       {
@@ -1321,11 +1367,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2010/267"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
-     "nr": "42",
+     "nr": "45",
      "text": "SR <b>273</b>",
      "links": [
       {
@@ -1333,11 +1379,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/1948/485_473_421"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
-     "nr": "43",
+     "nr": "46",
      "text": "SR <b>311.0</b>",
      "links": [
       {
@@ -1345,11 +1391,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
-     "nr": "44",
+     "nr": "47",
      "text": "Fassung gemäss Anhang 1 Ziff. II 11 der Strafprozessordnung vom 5. Okt. 2007, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 1881; BBl <b>2006</b> 1085).",
      "links": [
       {
@@ -1361,7 +1407,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/124"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -1382,7 +1428,7 @@
     }
    ],
    "marginalie": [
-    "C. Einver­nahmen, Auskünfte",
+    "C. Einvernahmen, Auskünfte",
     "IV. Vorladung und Vorführung"
    ]
   },
@@ -1402,11 +1448,11 @@
     }
    ],
    "marginalie": [
-    "D. Sach­verständige"
+    "D. Sachverständige"
    ],
    "fussnoten": [
     {
-     "nr": "45",
+     "nr": "48",
      "text": "Fassung gemäss Anhang Ziff. 10 des Strafgerichtsgesetzes vom 4. Okt. 2002, in Kraft seit 1. April 2004 (AS <b>2003</b> 2133 2131; BBl <b>2001</b> 4202).",
      "links": [
       {
@@ -1422,11 +1468,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
-     "nr": "46",
+     "nr": "49",
      "text": "SR <b>312.0</b>",
      "links": [
       {
@@ -1434,11 +1480,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2010/267"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
-     "nr": "47",
+     "nr": "50",
      "text": "SR <b>273</b>",
      "links": [
       {
@@ -1446,11 +1492,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/1948/485_473_421"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
-     "nr": "48",
+     "nr": "51",
      "text": "Fassung zweiter Satz gemäss Anhang 1 Ziff. II 11 der Strafprozessordnung vom 5. Okt. 2007, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 1881; BBl <b>2006</b> 1085).",
      "links": [
       {
@@ -1462,7 +1508,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/124"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -1502,7 +1548,7 @@
     }
    ],
    "marginalie": [
-    "F. Zwangs­mass­nahmen",
+    "F. Zwangsmassnahmen",
     "I. Allgemeine Bestimmungen"
    ]
   },
@@ -1522,13 +1568,13 @@
     }
    ],
    "marginalie": [
-    "F. Zwangs­mass­nahmen",
-    "II. Beschlag­nahme",
+    "F. Zwangsmassnahmen",
+    "II. Beschlagnahme",
     "1. Gegenstand"
    ],
    "fussnoten": [
     {
-     "nr": "49",
+     "nr": "52",
      "text": "SR <b>935.61</b>",
      "links": [
       {
@@ -1536,11 +1582,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2002/153"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     },
     {
-     "nr": "50",
+     "nr": "53",
      "text": "Eingefügt durch Ziff. I 7 des BG vom 28. Sept. 2012 über die Anpassung von verfahrens-rechtlichen Bestimmungen zum anwaltlichen Berufsgeheimnis, in Kraft seit 1. Mai 2013 (AS <b>2013</b> 847; BBl <b>2011</b> 8181).",
      "links": [
       {
@@ -1552,7 +1598,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1435"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -1573,8 +1619,8 @@
     }
    ],
    "marginalie": [
-    "F. Zwangs­mass­nahmen",
-    "II. Beschlag­nahme",
+    "F. Zwangsmassnahmen",
+    "II. Beschlagnahme",
     "2. Verfahren"
    ]
   },
@@ -1594,13 +1640,13 @@
     }
    ],
    "marginalie": [
-    "F. Zwangs­mass­nahmen",
-    "III. Durch­suchung von Woh­nungen und Personen",
+    "F. Zwangsmassnahmen",
+    "III. Durchsuchung von Wohnungen und Personen",
     "1. Gründe, Zuständigkeit"
    ],
    "fussnoten": [
     {
-     "nr": "51",
+     "nr": "54",
      "text": "Fassung gemäss Ziff. I der V vom 21. Nov. 2018, in Kraft seit 1. Jan. 2019 (AS <b>2018 </b>4587).",
      "links": [
       {
@@ -1608,7 +1654,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2018/723"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -1629,8 +1675,8 @@
     }
    ],
    "marginalie": [
-    "F. Zwangs­mass­nahmen",
-    "III. Durch­suchung von Woh­nungen und Personen",
+    "F. Zwangsmassnahmen",
+    "III. Durchsuchung von Wohnungen und Personen",
     "2. Durchführung"
    ]
   },
@@ -1650,8 +1696,8 @@
     }
    ],
    "marginalie": [
-    "F. Zwangs­mass­nahmen",
-    "IV. Durch­suchung von Pa­pie­ren"
+    "F. Zwangsmassnahmen",
+    "IV. Durchsuchung von Papieren"
    ]
   },
   "51": {
@@ -1670,7 +1716,7 @@
     }
    ],
    "marginalie": [
-    "F. Zwangs­mass­nahmen",
+    "F. Zwangsmassnahmen",
     "V. Vorläufige Festnahme und Vorführung vor den Richter"
    ]
   },
@@ -1690,7 +1736,7 @@
     }
    ],
    "marginalie": [
-    "F. Zwangs­mass­nahmen",
+    "F. Zwangsmassnahmen",
     "VI. Verhaftung",
     "1. Zulässigkeit"
    ]
@@ -1711,7 +1757,7 @@
     }
    ],
    "marginalie": [
-    "F. Zwangs­mass­nahmen",
+    "F. Zwangsmassnahmen",
     "VI. Verhaftung",
     "2. Haftbefehl",
     "a. Zuständigkeit; Form"
@@ -1733,7 +1779,7 @@
     }
    ],
    "marginalie": [
-    "F. Zwangs­mass­nahmen",
+    "F. Zwangsmassnahmen",
     "VI. Verhaftung",
     "2. Haftbefehl",
     "b. Vollzug; Fahndung"
@@ -1755,7 +1801,7 @@
     }
    ],
    "marginalie": [
-    "F. Zwangs­mass­nahmen",
+    "F. Zwangsmassnahmen",
     "VI. Verhaftung",
     "2. Haftbefehl",
     "c. Einvernahme des Verhafteten"
@@ -1777,7 +1823,7 @@
     }
    ],
    "marginalie": [
-    "F. Zwangs­mass­nahmen",
+    "F. Zwangsmassnahmen",
     "VI. Verhaftung",
     "3. Mitteilung an die Angehörigen"
    ]
@@ -1798,7 +1844,7 @@
     }
    ],
    "marginalie": [
-    "F. Zwangs­mass­nahmen",
+    "F. Zwangsmassnahmen",
     "VI. Verhaftung",
     "4. Dauer der Haft"
    ]
@@ -1819,13 +1865,13 @@
     }
    ],
    "marginalie": [
-    "F. Zwangs­mass­nahmen",
+    "F. Zwangsmassnahmen",
     "VI. Verhaftung",
     "5. Durchführung der Haft"
    ],
    "fussnoten": [
     {
-     "nr": "52",
+     "nr": "55",
      "text": "SR <b>312.0</b>",
      "links": [
       {
@@ -1833,11 +1879,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2010/267"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     },
     {
-     "nr": "53",
+     "nr": "56",
      "text": "Eingefügt durch Anhang 1 Ziff. II 11 der Strafprozessordnung vom 5. Okt. 2007, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 1881; BBl <b>2006</b> 1085).",
      "links": [
       {
@@ -1849,7 +1895,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/124"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -1870,9 +1916,9 @@
     }
    ],
    "marginalie": [
-    "F. Zwangs­mass­nahmen",
+    "F. Zwangsmassnahmen",
     "VI. Verhaftung",
-    "6. Haft­­entlassung"
+    "6. Haftentlassung"
    ]
   },
   "60": {
@@ -1891,13 +1937,13 @@
     }
    ],
    "marginalie": [
-    "F. Zwangs­mass­nahmen",
+    "F. Zwangsmassnahmen",
     "VI. Verhaftung",
-    "7. Freilassung gegen Sicher­heitsleistung"
+    "7. Freilassung gegen Sicherheitsleistung"
    ],
    "fussnoten": [
     {
-     "nr": "54",
+     "nr": "57",
      "text": "SR <b>312.0</b>",
      "links": [
       {
@@ -1905,11 +1951,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2010/267"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
-     "nr": "55",
+     "nr": "58",
      "text": "Fassung gemäss Anhang 1 Ziff. II 11 der Strafprozessordnung vom 5. Okt. 2007, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 1881; BBl <b>2006</b> 1085).",
      "links": [
       {
@@ -1921,14 +1967,14 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/124"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
-     "nr": "56",
+     "nr": "59",
      "text": "Bezeichnung gemäss nicht veröffentlichtem BRB vom 19. Dez. 1997.",
      "links": [],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -1949,11 +1995,11 @@
     }
    ],
    "marginalie": [
-    "G. Schluss­protokoll"
+    "G. Schlussprotokoll"
    ],
    "fussnoten": [
     {
-     "nr": "57",
+     "nr": "60",
      "text": "Aufgehoben durch Anhang Ziff. 2 des Finanzdienstleistungsgesetzes vom 15. Juni 2018, mit Wirkung seit 1. Jan. 2020 (AS <b>2019</b> 4417; BBl <b>2015</b> 8901).",
      "links": [
       {
@@ -1965,7 +2011,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
-     "absatz": null,
+     "absatz": "5",
      "item": null
     }
    ]
@@ -1986,8 +2032,8 @@
     }
    ],
    "marginalie": [
-    "A. Art des Ent­scheids",
-    "I. Im Straf­­verfah­ren"
+    "A. Art des Entscheids",
+    "I. Im Strafverfahren"
    ]
   },
   "63": {
@@ -2006,8 +2052,8 @@
     }
    ],
    "marginalie": [
-    "A. Art des Ent­scheids",
-    "II. Über die Lei­stungs- oder Rück­leistungs­pflicht"
+    "A. Art des Entscheids",
+    "II. Über die Leistungs- oder Rückleistungspflicht"
    ]
   },
   "64": {
@@ -2027,11 +2073,11 @@
    ],
    "marginalie": [
     "B. Strafbescheid",
-    "I. Im ordent­lichen Verfahren"
+    "I. Im ordentlichen Verfahren"
    ],
    "fussnoten": [
     {
-     "nr": "58",
+     "nr": "61",
      "text": "Aufgehoben durch Anhang Ziff. 2 des Finanzdienstleistungsgesetzes vom 15. Juni 2018, mit Wirkung seit 1. Jan. 2020 (AS <b>2019</b> 4417; BBl <b>2015</b> 8901).",
      "links": [
       {
@@ -2043,7 +2089,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2141"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -2065,11 +2111,11 @@
    ],
    "marginalie": [
     "B. Strafbescheid",
-    "II. Im abgekürz­ten Verfahren"
+    "II. Im abgekürzten Verfahren"
    ],
    "fussnoten": [
     {
-     "nr": "59",
+     "nr": "62",
      "text": "Fassung gemäss Anhang Ziff. 3 des Zollgesetzes vom 18. März 2005, in Kraft seit 1. Mai 2007 (AS <b>2007</b> 1411; BBl <b>2004</b> 567).",
      "links": [
       {
@@ -2081,7 +2127,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/129"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -2143,7 +2189,7 @@
    ],
    "marginalie": [
     "C. Einsprache",
-    "II. Einreiche­stelle und Form"
+    "II. Einreichestelle und Form"
    ]
   },
   "69": {
@@ -2183,7 +2229,7 @@
    ],
    "marginalie": [
     "C. Einsprache",
-    "IV. Straf­verfügung"
+    "IV. Strafverfügung"
    ]
   },
   "71": {
@@ -2203,7 +2249,7 @@
    ],
    "marginalie": [
     "C. Einsprache",
-    "V. Überspringen des Einspra­che­verfahrens"
+    "V. Überspringen des Einspracheverfahrens"
    ]
   },
   "72": {
@@ -2222,7 +2268,7 @@
     }
    ],
    "marginalie": [
-    "D. Begehren um gerichtliche Be­urteilung"
+    "D. Begehren um gerichtliche Beurteilung"
    ]
   },
   "73": {
@@ -2242,7 +2288,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "60",
+     "nr": "63",
      "text": "SR <b>311.0</b>",
      "links": [
       {
@@ -2250,11 +2296,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "61",
+     "nr": "64",
      "text": "Fassung gemäss Anhang Ziff. 6 des BG vom 20. März 2015 (Umsetzung von Art. 121 Abs. 3–6 BV über die Ausschaffung krimineller Ausländerinnen und Ausländer), in Kraft seit 1. Okt. 2016 (AS <b>2016</b> 2329; BBl <b>2013</b> 5975).",
      "links": [
       {
@@ -2266,11 +2312,11 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1078"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "62",
+     "nr": "65",
      "text": "SR <b>312.0</b>",
      "links": [
       {
@@ -2278,11 +2324,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2010/267"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     },
     {
-     "nr": "63",
+     "nr": "66",
      "text": "Fassung gemäss Anhang 1 Ziff. II 11 der Strafprozessordnung vom 5. Okt. 2007, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 1881; BBl <b>2006</b> 1085).",
      "links": [
       {
@@ -2294,7 +2340,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/124"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -2316,7 +2362,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "64",
+     "nr": "67",
      "text": "Fassung gemäss Anhang 1 Ziff. II 11 der Strafprozessordnung vom 5. Okt. 2007, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 1881; BBl <b>2006</b> 1085).",
      "links": [
       {
@@ -2328,7 +2374,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/124"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -2346,11 +2392,11 @@
    ],
    "marginalie": [
     "A. Verfahren vor den kantonalen Gerichten",
-    "III. Vorbereitung der Haupt­ver­handlung"
+    "III. Vorbereitung der Hauptverhandlung"
    ],
    "fussnoten": [
     {
-     "nr": "65",
+     "nr": "68",
      "text": "Fassung gemäss Anhang 1 Ziff. II 11 der Strafprozessordnung vom 5. Okt. 2007, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 1881; BBl <b>2006</b> 1085).",
      "links": [
       {
@@ -2362,7 +2408,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/124"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     }
    ]
@@ -2380,7 +2426,7 @@
    ],
    "marginalie": [
     "A. Verfahren vor den kantonalen Gerichten",
-    "IV. Säumnis­urteil"
+    "IV. Säumnisurteil"
    ]
   },
   "77": {
@@ -2396,7 +2442,7 @@
    ],
    "marginalie": [
     "A. Verfahren vor den kantonalen Gerichten",
-    "V. Haupt­­verhandlung"
+    "V. Hauptverhandlung"
    ]
   },
   "78": {
@@ -2412,11 +2458,11 @@
    ],
    "marginalie": [
     "A. Verfahren vor den kantonalen Gerichten",
-    "VI. Rückzug der Strafverfügung oder des Begeh­rens um gericht­liche Beurteilung"
+    "VI. Rückzug der Strafverfügung oder des Begehrens um gerichtliche Beurteilung"
    ],
    "fussnoten": [
     {
-     "nr": "66",
+     "nr": "69",
      "text": "Fassung gemäss Anhang 1 Ziff. II 11 der Strafprozessordnung vom 5. Okt. 2007, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 1881; BBl <b>2006</b> 1085).",
      "links": [
       {
@@ -2428,7 +2474,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/124"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -2466,7 +2512,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "67",
+     "nr": "70",
      "text": "Fassung gemäss Anhang 1 Ziff. II 11 der Strafprozessordnung vom 5. Okt. 2007, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 1881; BBl <b>2006</b> 1085).",
      "links": [
       {
@@ -2482,7 +2528,7 @@
      "item": null
     },
     {
-     "nr": "68",
+     "nr": "71",
      "text": "SR <b>312.0</b>",
      "links": [
       {
@@ -2490,7 +2536,7 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2010/267"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -2507,7 +2553,7 @@
     }
    ],
    "marginalie": [
-    "B. Verfahren vor dem Bundes­straf­gericht"
+    "B. Verfahren vor dem Bundesstrafgericht"
    ]
   },
   "82": {
@@ -2526,7 +2572,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "69",
+     "nr": "72",
      "text": "Fassung gemäss Anhang 1 Ziff. II 11 der Strafprozessordnung vom 5. Okt. 2007, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 1881; BBl <b>2006</b> 1085).",
      "links": [
       {
@@ -2542,7 +2588,7 @@
      "item": null
     },
     {
-     "nr": "70",
+     "nr": "73",
      "text": "SR <b>312.0</b>",
      "links": [
       {
@@ -2571,7 +2617,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "71",
+     "nr": "74",
      "text": "Aufgehoben durch Anhang 1 Ziff. II 11 der Strafprozessordnung vom 5. Okt. 2007, mit Wirkung seit 1. Jan. 2011 (AS <b>2010</b> 1881; BBl <b>2006</b> 1085).",
      "links": [
       {
@@ -2601,7 +2647,7 @@
    ],
    "marginalie": [
     "A. Entscheide der Verwaltung",
-    "I. Revisions­gründe"
+    "I. Revisionsgründe"
    ]
   },
   "85": {
@@ -2622,7 +2668,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "72",
+     "nr": "75",
      "text": "Fassung gemäss Anhang Ziff. 21 des Partnerschaftsgesetzes vom 18. Juni 2004, in Kraft seit 1. Jan. 2007 (AS <b>2005</b> 5685; BBl <b>2003</b> 1288).",
      "links": [
       {
@@ -2634,7 +2680,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2003/194"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -2687,7 +2733,7 @@
    "marginalie": [
     "A. Entscheide der Verwaltung",
     "III. Entscheid",
-    "2. Verneinung des Revisions­grundes"
+    "2. Verneinung des Revisionsgrundes"
    ]
   },
   "89": {
@@ -2706,7 +2752,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "73",
+     "nr": "76",
      "text": "Fassung gemäss Anhang 1 Ziff. II 11 der Strafprozessordnung vom 5. Okt. 2007, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 1881; BBl <b>2006</b> 1085).",
      "links": [
       {
@@ -2722,7 +2768,7 @@
      "item": null
     },
     {
-     "nr": "74",
+     "nr": "77",
      "text": "SR <b>312.0</b>",
      "links": [
       {
@@ -2777,7 +2823,7 @@
     }
    ],
    "marginalie": [
-    "C. Rückgabe be­schlagnahmter Gegenstände; Verwertung"
+    "C. Rückgabe beschlagnahmter Gegenstände; Verwertung"
    ]
   },
   "93": {
@@ -2792,11 +2838,11 @@
     }
    ],
    "marginalie": [
-    "D. Verwendung der Bussen, ein­gezogenen Ver­mögenswerte usw."
+    "D. Verwendung der Bussen, eingezogenen Vermögenswerte usw."
    ],
    "fussnoten": [
     {
-     "nr": "75",
+     "nr": "78",
      "text": "SR <b>311.0</b>. Heute: nach Art. 70 Abs. 1.",
      "links": [
       {
@@ -2804,11 +2850,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/54/757_781_799"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
-     "nr": "76",
+     "nr": "79",
      "text": "SR <b>172.021</b>",
      "links": [
       {
@@ -2816,11 +2862,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/1969/737_757_755"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
-     "nr": "77",
+     "nr": "80",
      "text": "Fassung gemäss Anhang Ziff. 10 des Strafgerichtsgesetzes vom 4. Okt. 2002, in Kraft seit 1. April 2004 (AS <b>2003</b> 2133 2131; BBl <b>2001</b> 4202).",
      "links": [
       {
@@ -2836,7 +2882,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/731"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -2889,7 +2935,7 @@
    "marginalie": [
     "A. Kosten",
     "I. Im Verfahren der Verwaltung",
-    "3. Beschwerde gegen Kosten­­erkenntnis"
+    "3. Beschwerde gegen Kostenerkenntnis"
    ]
   },
   "97": {
@@ -2905,11 +2951,11 @@
    ],
    "marginalie": [
     "A. Kosten",
-    "II. Im gericht­lichen Verfahren"
+    "II. Im gerichtlichen Verfahren"
    ],
    "fussnoten": [
     {
-     "nr": "78",
+     "nr": "81",
      "text": "SR <b>312.0</b>",
      "links": [
       {
@@ -2917,11 +2963,11 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2010/267"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
-     "nr": "79",
+     "nr": "82",
      "text": "Fassung gemäss Anhang 1 Ziff. II 11 der Strafprozessordnung vom 5. Okt. 2007, in Kraft seit 1. Jan. 2011 (AS <b>2010</b> 1881; BBl <b>2006</b> 1085).",
      "links": [
       {
@@ -2933,7 +2979,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/124"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -2951,11 +2997,11 @@
    ],
    "marginalie": [
     "A. Kosten",
-    "III. Kosten­­ver­gütung an den Kan­ton"
+    "III. Kostenvergütung an den Kanton"
    ],
    "fussnoten": [
     {
-     "nr": "80",
+     "nr": "83",
      "text": "Eingefügt durch Ziff. I des BG vom 22. Dez. 1999, in Kraft seit 1. Okt. 2000 (AS <b>2000 </b>2141; <i>BBl <b>1998</b> 1529</i>).",
      "links": [
       {
@@ -2963,7 +3009,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/326"
       }
      ],
-     "absatz": null,
+     "absatz": "1bis",
      "item": null
     }
    ]
@@ -2980,7 +3026,7 @@
     }
    ],
    "marginalie": [
-    "B. Entschädi­gung",
+    "B. Entschädigung",
     "I. Im Verfahren der Verwaltung",
     "1. Anspruch"
    ]
@@ -2997,9 +3043,9 @@
     }
    ],
    "marginalie": [
-    "B. Entschädi­gung",
+    "B. Entschädigung",
     "I. Im Verfahren der Verwaltung",
-    "2. Geltend­­machung"
+    "2. Geltendmachung"
    ]
   },
   "101": {
@@ -3014,8 +3060,8 @@
     }
    ],
    "marginalie": [
-    "B. Entschädi­gung",
-    "II. Im gericht­lichen Verfahren"
+    "B. Entschädigung",
+    "II. Im gerichtlichen Verfahren"
    ]
   },
   "102": {
@@ -3030,8 +3076,8 @@
     }
    ],
    "marginalie": [
-    "B. Entschädi­gung",
-    "III. Rückgriffs­anspruch"
+    "B. Entschädigung",
+    "III. Rückgriffsanspruch"
    ]
   },
   "103": {
@@ -3055,11 +3101,11 @@
     }
    ],
    "marginalie": [
-    "A. Änderung von Bundeser­lassen"
+    "A. Änderung von Bundeserlassen"
    ],
    "fussnoten": [
     {
-     "nr": "81",
+     "nr": "84",
      "text": "[BS <b>6</b> 283; AS <b>1974</b> 1955, <b>2007</b> 1469 Anhang 4 Ziff. 27. AS <b>2007</b> 2909 Art. 23 Ziff. 1]. Siehe heute: die Biersteuerverordnung vom 15. Juni 2007 (SR <b>641.411.1</b>).",
      "links": [
       {
@@ -3079,7 +3125,7 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2007/386"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     }
    ]
@@ -3092,7 +3138,7 @@
     }
    ],
    "marginalie": [
-    "B. Neue Zu­stän­digkeiten"
+    "B. Neue Zuständigkeiten"
    ]
   },
   "106": {
@@ -3103,11 +3149,11 @@
     }
    ],
    "marginalie": [
-    "C. Übergangs­bestimmungen"
+    "C. Übergangsbestimmungen"
    ],
    "fussnoten": [
     {
-     "nr": "82",
+     "nr": "85",
      "text": "[BS <b>3</b> 303; AS <b>1971</b> 777 Ziff. III 4, <b>1974</b> 1857 Anhang Ziff. 2, <b>1978</b> 688 Art. 88 Ziff. 4, <b>1979</b> 1170, <b>1992</b> 288 Anhang Ziff. 15 2465 Anhang Ziff. 2, <b>1993</b> 1993, <b>1997</b> 2465 Anhang Ziff. 7, <b>2000</b> 505 Ziff. I 3 2719 Ziff. II 3 2725 Ziff. II, <b>2001</b> 118 Ziff. I 3 3071 Ziff. II 1 3096 Anhang Ziff. 2 3308, <b>2003</b> 2133 Anhang Ziff. 9, <b>2004</b> 1633 Ziff. I 4, <b>2005</b> 5685 Anhang Ziff. 19, <b>2006</b> 1205 Anhang Ziff. 10, <b>2007</b> 6087, <b>2008</b> 1607 Anhang Ziff. 1 4989 Anhang 1 Ziff. 6 5463 Anhang Ziff. 3, <b>2009</b> 6605 Anhang Ziff. II 3. AS <b>2010</b> 1881 Anhang 1 Ziff. I 1]",
      "links": [
       {
@@ -3131,6 +3177,10 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1992/288_288_288"
       },
       {
+       "label": "2465",
+       "url": "https://fedlex.data.admin.ch/eli/oc/1992/2465_2465_2465"
+      },
+      {
        "label": "<b>1993</b> 1993",
        "url": "https://fedlex.data.admin.ch/eli/oc/1993/1993_1993_1993"
       },
@@ -3141,6 +3191,30 @@
       {
        "label": "<b>2000</b> 505",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/95"
+      },
+      {
+       "label": "2719",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2000/453"
+      },
+      {
+       "label": "2725",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2000/454"
+      },
+      {
+       "label": "<b>2001</b> 118",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2001/22"
+      },
+      {
+       "label": "3071",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2001/459"
+      },
+      {
+       "label": "3096",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2001/467"
+      },
+      {
+       "label": "3308",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2001/492"
       },
       {
        "label": "<b>2003</b> 2133",
@@ -3167,6 +3241,14 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/232"
       },
       {
+       "label": "4989",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/698"
+      },
+      {
+       "label": "5463",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2008/759"
+      },
+      {
        "label": "<b>2009</b> 6605",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/821"
       },
@@ -3175,7 +3257,7 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/267"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
@@ -3192,7 +3274,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "83",
+     "nr": "86",
      "text": "BRB vom 25. Nov. 1974",
      "links": [],
      "absatz": null,
@@ -3212,13 +3294,17 @@
     }
    ],
    "marginalie": [
-    "A. Beschaffung von Personen­­­­daten"
+    "A. Beschaffung von Personendaten"
    ],
    "fussnoten": [
     {
-     "nr": "12",
-     "text": "Eingefügt durch Anhang 1 Ziff. II 27 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (<i>AS <b>2022</b> 491</i>; BBl <b>2017</b> 6941).",
+     "nr": "15",
+     "text": "Eingefügt durch Anhang 1 Ziff. II 27 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
+      {
+       "label": "AS <b>2022</b> 491",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
+      },
       {
        "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
@@ -3242,7 +3328,7 @@
     }
    ],
    "marginalie": [
-    "B. Bearbeitung von Personen­daten"
+    "B. Bearbeitung von Personendaten"
    ]
   },
   "18_c": {
@@ -3302,12 +3388,12 @@
     }
    ],
    "marginalie": [
-    "C. Allgemeine Verfahrens­bestimmungen",
+    "C. Allgemeine Verfahrensbestimmungen",
     "IV. Form der Mitteilungen und der Zustellung"
    ],
    "fussnoten": [
     {
-     "nr": "37",
+     "nr": "40",
      "text": "Eingefügt durch Anhang Ziff. 2 des Finanzdienstleistungsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 4417; BBl <b>2015</b> 8901).",
      "links": [
       {
@@ -3341,11 +3427,11 @@
    ],
    "marginalie": [
     "B. Zustellung",
-    "II. Zustellung durch Veröffent­lichung"
+    "II. Zustellung durch Veröffentlichung"
    ],
    "fussnoten": [
     {
-     "nr": "39",
+     "nr": "42",
      "text": "Eingefügt durch Anhang Ziff. 2 des Finanzdienstleistungsgesetzes vom 15. Juni 2018, in Kraft seit 1. Jan. 2020 (AS <b>2019</b> 4417; BBl <b>2015</b> 8901).",
      "links": [
       {
@@ -3362,7 +3448,7 @@
     }
    ]
   },
-  "lvl_u1": {
+  "annex_u1": {
    "gliederung": [
     {
      "ebene": 1,

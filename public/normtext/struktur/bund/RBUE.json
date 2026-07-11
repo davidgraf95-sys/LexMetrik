@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-11",
  "kopf": {
   "srNummer": "0.231.15",
   "titel": "Berner Übereinkunft zum Schutz von Werken der Literatur und Kunst revidiert in Paris am 24. Juli 1971",
@@ -19,7 +19,10 @@
    },
    {
     "rolle": "praeambel",
-    "text": "haben beschlossen, die von der Stockholmer Konferenz angenommene Fassung dieser Übereinkunft unter unveränderter Beibehaltung der Artikel 1–20 und 22–26 zu revidieren."
+    "text": "haben beschlossen, die von der Stockholmer Konferenz angenommene Fassung dieser Übereinkunft unter unveränderter Beibehaltung der Artikel 1–20 und 22–26 zu revidieren.",
+    "fnNrs": [
+     "2"
+    ]
    },
    {
     "rolle": "praeambel",
@@ -427,6 +430,15 @@
    "marginalie": []
   },
   "annex_u1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Anhänge"
+    }
+   ],
+   "marginalie": []
+  },
+  "scope_u1": {
    "gliederung": [
     {
      "ebene": 1,

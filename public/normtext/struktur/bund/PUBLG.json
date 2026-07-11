@@ -1,8 +1,9 @@
 {
- "erzeugt": "2026-07-10",
+ "erzeugt": "2026-07-11",
  "kopf": {
   "srNummer": "170.512",
   "titel": "Bundesgesetz über die Sammlungen des Bundesrechts und das Bundesblatt",
+  "erlassdatum": "vom 18. Juni 2004 (Stand am 1. September 2023)",
   "praeambel": [
    {
     "rolle": "autor",
@@ -162,7 +163,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "b"
     },
     {
@@ -178,7 +179,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -381,7 +382,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "b"
     },
     {
@@ -393,7 +394,7 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2003/510"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -413,7 +414,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/1999"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -429,7 +430,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -483,7 +484,7 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2003/510"
       }
      ],
-     "absatz": null,
+     "absatz": "3",
      "item": null
     }
    ]
@@ -510,7 +511,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "b"
     },
     {
@@ -526,7 +527,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "c"
     },
     {
@@ -542,7 +543,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "fbis"
     },
     {
@@ -558,7 +559,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": "c"
     }
    ]
@@ -607,7 +608,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
-     "absatz": null,
+     "absatz": "2",
      "item": null
     },
     {
@@ -623,7 +624,7 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2005/543"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     },
     {
@@ -647,7 +648,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1759"
       }
      ],
-     "absatz": null,
+     "absatz": "4",
      "item": null
     },
     {
@@ -659,7 +660,7 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2009/821"
       }
      ],
-     "absatz": null,
+     "absatz": "5",
      "item": null
     },
     {
@@ -675,7 +676,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
-     "absatz": null,
+     "absatz": "5",
      "item": null
     },
     {
@@ -691,7 +692,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
       }
      ],
-     "absatz": null,
+     "absatz": "6",
      "item": null
     }
    ]
@@ -939,7 +940,7 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1759"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "b"
     },
     {
@@ -951,7 +952,7 @@
        "url": "https://fedlex.data.admin.ch/eli/cc/2005/542"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": "b"
     },
     {
@@ -1068,22 +1069,26 @@
      "links": [
       {
        "label": "SR <b>235.1</b>",
-       "url": "https://fedlex.data.admin.ch/eli/cc/1993/1945_1945_1945"
+       "url": "https://fedlex.data.admin.ch/eli/cc/2022/491"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     },
     {
      "nr": "42",
-     "text": "Fassung gemäss Anhang 1 Ziff. II 11 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (<i>AS <b>2022</b> 491</i>; BBl <b>2017</b> 6941).",
+     "text": "Fassung gemäss Anhang 1 Ziff. II 11 des Datenschutzgesetzes vom 25. Sept. 2020, in Kraft seit 1. Sept. 2023 (AS <b>2022</b> 491; BBl <b>2017</b> 6941).",
      "links": [
+      {
+       "label": "AS <b>2022</b> 491",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2022/491"
+      },
       {
        "label": "BBl <b>2017</b> 6941",
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
-     "absatz": null,
+     "absatz": "1",
      "item": null
     }
    ]
