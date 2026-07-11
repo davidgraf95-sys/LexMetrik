@@ -263,10 +263,10 @@ Farbe — kein Ton trägt zwei Bedeutungen:
 
 | Ton | Bedeutung (die EINE) | Trägt sie |
 | --- | --- | --- |
-| **brass** (Messing) | Marke / Hervorhebung / Wortlaut-Referenz. Kein Rechtsstatus-Urteil. | Norm-KantenChip-Tick (`kategorie='norm'`, Default), ★-Leitentscheid-Glyph, Verweis-Links, Verweise-Overline-Punkt (`lc-punkt`, V2·C-2 — auf `--paper` in brass-600, s. u.) |
-| **slate** | **Neutraler Referenz-/Sekundärton** — maschinell/prozedural, ohne Wertung. Kein Rechtsstatus-Urteil, insbesondere **NICHT** «ungeprüft/in Vorbereitung». | Rechtsprechungs-KantenChip-Tick (`kategorie='entscheid'`: Leitfälle + zitierte Entscheide), Leitfälle-Overline-Punkt (`lc-punkt-entscheid`, V2·C-2), soft-Badges «maschinell»/«nur Verweis» (`lc-badge-soft`) |
+| **brass** (Messing) | Marke / Hervorhebung / Wortlaut-Referenz. Kein Rechtsstatus-Urteil. | Norm-KantenChip-Tick (`kategorie='norm'`, Default), ★-Leitentscheid-Glyph, Verweis-Links, Verweise-Overline-Punkt (`lc-punkt`, V2·C-2 — auf `--paper` in brass-600, s. u.), NormChip (Pillen-Default inkl. `hover:border-brass-400`, V2·C-3), Familien-Punkt der Norm-Gruppen (`punkt='norm'` an `KontextGruppe`, V2·C-3) |
+| **slate** | **Neutraler Referenz-/Sekundärton** — maschinell/prozedural, ohne Wertung. Kein Rechtsstatus-Urteil, insbesondere **NICHT** «ungeprüft/in Vorbereitung». | Rechtsprechungs-KantenChip-Tick (`kategorie='entscheid'`: Leitfälle + zitierte Entscheide), Leitfälle-Overline-Punkt (`lc-punkt-entscheid`, V2·C-2), soft-Badges «maschinell»/«nur Verweis» (`lc-badge-soft`), Familien-Punkt der Entscheid-Gruppen (`punkt='entscheid'`, V2·C-3) |
 | **warn** | Echter Fassungs-/Sachvorbehalt (eine Warnung, keine Ampel-Wertung des Entscheids). | Revisions-↻-Glyph (`glyphTon: text-warn-700`), Currency-Chip-Tick «nächste Fassung ab …» (`lc-chip-vorbehalt`, V2·C-2 — angekündigt, noch nicht in Kraft) |
-| **sage** | Currency «geltend geprüft am … (maschinell)» — neutraler, maschineller Freshness-Beweis, KEIN Rechtsstatus-Urteil («(maschinell)»-Wording bleibt tragend, §7/§8). | Currency-Chip-Tick `lc-chip-geltend` (V2·C-2) |
+| **sage** | **Materialien-Familie** (Botschaften/Vernehmlassungen/amtliche Soft-Law-Publikationen — kein Gesetzesrang) + Currency «geltend geprüft am … (maschinell)» — beides neutrale, maschinell-bibliografische Einordnung, KEIN Rechtsstatus-Urteil («(maschinell)»-Wording bleibt tragend, §7/§8). | Currency-Chip-Tick `lc-chip-geltend` (V2·C-2), Familien-Punkt der Materialien-Gruppen (`lc-punkt-material` via `punkt='material'`, V2·C-3: Entstehungsgeschichte/Botschaften, Vernehmlassungen, Amtliche Materialien) |
 
 **slate-Doppelbelegung aufgelöst (David-Entscheid §3 Ziff. 3):** slate war latent
 sowohl «Rechtsprechungs-Kante» als auch «ungeprüft/in-Vorbereitung-Status». Fixiert:
@@ -310,6 +310,35 @@ warn-vorbehalt-Tick **3.02** / **5.52** — alle ≥ Schwelle. **Gegated:**
 `v2-c2-farbwoerterbuch.test` (Leitfälle-slate-Punkt, geltend-sage + «(maschinell)» +
 kein «gegengeprüft/verifiziert», vorbehalt-warn, leer ⇒ kein toter Marker), Golden
 byte-gleich. Gegenprüfung n/a (reines UI).
+
+**V2·C-3 (Farb-Wörterbuch ABSCHLUSS, 11.7.2026) — das Wörterbuch ist damit
+komplett; jede weitere Farbträger-Erweiterung MUSS sich in eine der vier Zeilen
+oben einordnen (EIN Entscheid je Farbe), sonst neuer David-Entscheid:**
+
+1. **Materialien-Familie = sage:** die Referenzgruppen-Überschriften
+   (`KontextGruppe`, `punkt`-Prop `'norm'|'entscheid'|'material'`) tragen den
+   Familien-Punkt ihrer Farbfamilie — Materialien-Gruppen (Entstehungsgeschichte/
+   Botschaften, Vernehmlassungen, Amtliche Materialien; auch VerweisKontext) den
+   **sage**-Punkt (`lc-punkt-material`), Entscheid-Gruppen slate, Norm-Gruppen
+   brass. Ohne `punkt`-Prop KEIN Punkt (Werkzeuge/Revisionen bleiben neutral).
+   Redundant zum Gruppentitel (`aria-hidden`, Farbe trägt NIE allein, §13/F2);
+   `--sage-500` in `html.dark` bewusst NICHT überschrieben.
+2. **NormChip-Verweisfarbe:** der Pillen-Default (`CHIP_LINK_CLASS`) trägt neu
+   `hover:border-brass-400` — vorher der EINZIGE Norm-Chip ohne den brass-
+   Hover-Border; jetzt EINE brass-Hover-Anatomie für die ganze Norm-Familie
+   (KantenChip 'norm', rechtsprechung/NormChip, MassgebendeGesetze, NormChip).
+   SSR-Assertions (`normLinkSsr.test`) deklariert nachgezogen (§6.3).
+
+Kontrast als Gate gemessen (WCAG 1.4.11 ≥3:1, Light+Dark, Desktop+Mobil@390,
+Playwright, auf `--paper`): sage-Punkt **4.48** hell / **3.84** dunkel;
+slate-Punkt **5.21** / **3.31**; brass-600-Punkt **3.71** / **11.74** — alle
+≥ Schwelle. CLS 0 (Punkt inline im Gruppen-h3, kein separater async-Mount;
+Chip-Änderung hover-only). **Gegated:** `v2-c3-farbwoerterbuch.test` (Familien-
+Punkt je Kategorie + Fremdfamilien-Ausschluss + neutral ohne Prop + NormChip-
+brass-Hover), Golden byte-gleich. Gegenprüfung n/a (reines UI). §7-Befund
+offengelegt: die frühere Annahme «0 lc-chip im prerenderten HTML» stimmt für
+Rechner-/Vorlagen-Routen nicht (NormChip ist dort prerendert) — unschädlich,
+Prerender wird je Deploy neu gebaut.
 
 ### §4c · Leser-Darstellungsoptionen (W2·5d G2a, 4.7.2026; U-KOPF/A1+A4, 5.7.2026; V2·B-1/B-2/K-2, 11.7.2026)
 

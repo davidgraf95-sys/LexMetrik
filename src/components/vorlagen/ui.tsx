@@ -103,10 +103,15 @@ export function GruppenTitel({ children }: { children: React.ReactNode }) {
 // SSR/Prerender: offen=false initial, kein Effekt läuft, der erste Render ist
 // byte-identisch zum heutigen <a> (Golden unverändert).
 // Default-Styling des Chip-Links — der heutige Pillen-Look. Als Default-Wert von
-// linkClass ausgelagert, damit alle Bestands-Aufrufe (ohne linkClass) SSR-byte-
-// identisch bleiben (§6) und nur der Inline-Auto-Linker (NormText) ein anderes,
+// linkClass ausgelagert, damit alle Bestands-Aufrufe (ohne linkClass) dasselbe
+// Markup teilen und nur der Inline-Auto-Linker (NormText) ein anderes,
 // fliesstext-taugliches Styling übergibt.
-const CHIP_LINK_CLASS = 'lc-chip no-underline hover:text-brass-700';
+// V2·C-3 (§4b-B, NormChip-Verweisfarbe): + hover:border-brass-400 — der NormChip
+// war der EINZIGE Norm-Chip ohne den brass-Hover-Border (KantenChip 'norm',
+// rechtsprechung/NormChip, MassgebendeGesetze, EntscheidLeser tragen ihn alle);
+// jetzt komplette brass-Familie (Norm/Verweis) auf einer Hover-Anatomie.
+// SSR-Assertion in normLinkSsr.test deklariert nachgezogen (§6.3).
+const CHIP_LINK_CLASS = 'lc-chip no-underline hover:text-brass-700 hover:border-brass-400';
 
 export function NormChip({ artikel, anzeige, hrefOverride, title, linkClass = CHIP_LINK_CLASS }: {
   /** Norm-Text für die Snapshot-Auflösung (bundSnapshotRef) + Fallback-URL. */

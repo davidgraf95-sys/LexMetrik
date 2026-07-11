@@ -49,17 +49,19 @@ describe('NormLink — SSR/Prerender unverändert', () => {
 //  (a) ohne title rendert KEIN title=-Attribut,
 //  (b) NormLink rendert weiterhin mit Default-title,
 //  (c) ein wizard-typischer Chip-Aufruf erzeugt href/target/rel/class wie vorher.
+// V2·C-3 (§4b-B, deklarierte Änderung §6.3): die Klassenzeile trägt neu
+// hover:border-brass-400 (NormChip-Verweisfarbe = komplette brass-Hover-Familie).
 describe('NormChip — geteilter Chip-Kern (SSR-Byte-Gleichheit)', () => {
   it('(a) mit artikel + hrefOverride ohne title: <a class="lc-chip …">, KEIN title=', () => {
     const out = ssr(<NormChip artikel="Art. 335c OR" hrefOverride="https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#art_335_c" />);
     expect(out).toContain('<a');
-    expect(out).toContain('class="lc-chip no-underline hover:text-brass-700"');
+    expect(out).toContain('class="lc-chip no-underline hover:text-brass-700 hover:border-brass-400"');
     expect(out).not.toContain('title=');
   });
 
   it('(b) NormLink rendert wie bisher: lc-chip + Default-title', () => {
     const out = ssr(<NormLink artikel="Art. 335c Abs. 1 OR" />);
-    expect(out).toContain('class="lc-chip no-underline hover:text-brass-700"');
+    expect(out).toContain('class="lc-chip no-underline hover:text-brass-700 hover:border-brass-400"');
     expect(out).toContain('title="Art. 335c Abs. 1 OR auf Fedlex öffnen"');
   });
 
@@ -69,7 +71,7 @@ describe('NormChip — geteilter Chip-Kern (SSR-Byte-Gleichheit)', () => {
     expect(out).toContain(`href="${href}"`);
     expect(out).toContain('target="_blank"');
     expect(out).toMatch(/rel="[^"]*noopener[^"]*"/);
-    expect(out).toContain('class="lc-chip no-underline hover:text-brass-700"');
+    expect(out).toContain('class="lc-chip no-underline hover:text-brass-700 hover:border-brass-400"');
     expect(out).not.toContain('title=');
     // Anzeigetext = artikel (Default-anzeige)
     expect(out).toContain('Art. 266l OR');

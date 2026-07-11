@@ -111,7 +111,7 @@ export function ZitierteNormenGruppe({ abschnitte, zitierteNormen, regesteAnker,
   };
 
   return (
-    <KontextGruppe titel="Zitierte Normen" richtung="Wendet an" anzahl={zitierteNormen.length}
+    <KontextGruppe titel="Zitierte Normen" richtung="Wendet an" punkt="norm" anzahl={zitierteNormen.length}
       hinweis={<><span className="num">{zitierteNormen.length}</span> erfasste Normen — aus der Quelle übernommen, maschinell und ohne redaktionelle Durchsicht. Klick springt zur Fundstelle im Urteilstext.</>}>
       <div className="flex flex-wrap gap-2">
         {zitierteNormen.map((norm) => {
@@ -180,7 +180,7 @@ export function ZitiertGruppe({ zitierteEntscheide, abschnitte, selbstKey }: {
 
   const aufgeloest = daten.kanten.filter((k) => k.ziel);
   return (
-    <KontextGruppe titel="Zitierte Entscheide" richtung="Zitiert" anzahl={daten.gesamt}
+    <KontextGruppe titel="Zitierte Entscheide" richtung="Zitiert" punkt="entscheid" anzahl={daten.gesamt}
       hinweis={<>
         Zitiert <span className="num">{daten.gesamt}</span> erfasste Entscheide, davon <span className="num">{daten.imKorpus}</span> im
         Korpus. Übrige Zitate maschinell aus dem Urteilstext gelesen — im Korpus (noch) nicht erfasst.
