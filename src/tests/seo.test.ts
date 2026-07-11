@@ -28,10 +28,10 @@ describe('prerenderRouten()', () => {
     // International, 24.6.2026), /materialien (Rubrik Materialien, 27.6.2026) und
     // — seit der UI-Welle — /rechner + /vorlagen (Rubrik-Übersichten, lösen
     // /recherche ab).
-    for (const p of ['/', '/rechner', '/vorlagen', '/gesetze', '/rechtsprechung', '/international', '/materialien', '/methodik', '/ueber', '/kontakt', '/datenschutz']) {
+    for (const p of ['/', '/rechner', '/vorlagen', '/gesetze', '/rechtsprechung', '/international', '/materialien', '/methodik', '/ueber', '/kontakt', '/datenschutz', '/abdeckung']) {
       expect(ROUTEN).toContain(p);
     }
-    expect(ROUTEN).toHaveLength(kartenPfade.size + 11);
+    expect(ROUTEN).toHaveLength(kartenPfade.size + 12);
   });
 
   it('enthält keine Duplikate, Hashes oder relativen Pfade', () => {

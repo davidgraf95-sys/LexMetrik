@@ -37,7 +37,7 @@ export interface SuchTreffer {
   untertitel?: string;
   /** Status-/Zuordnungs-Marke (z. B. «ZPO»). `ton: 'leitentscheid'` rendert das
    *  geteilte StatusBadge-Vokabular (W2·7-VZUI, EIN aria-label an allen Fundorten). */
-  marke?: { text: string; ton: 'ok' | 'entwurf' | 'soft' | 'leitentscheid' };
+  marke?: { text: string; ton: 'ok' | 'entwurf' | 'soft' | 'leitentscheid'; redundant?: boolean };
   href: string;
 }
 
@@ -136,7 +136,7 @@ export function katalogGruppe(q: string, kappung = KAPPUNG): SuchGruppe {
     id: k.id,
     label: k.title,
     untertitel: k.rechtsgebiet,
-    marke: { text: k.modus === 'vorlage' ? 'Vorlage' : 'Rechner', ton: 'soft' as const },
+    marke: { text: k.modus === 'vorlage' ? 'Vorlage' : 'Rechner', ton: 'soft' as const, redundant: true },
     href: k.href!,
   }));
 
@@ -201,7 +201,7 @@ export function materialGruppe(liste: BrowseMaterial[] | null, q: string, kappun
     id: m.key,
     label: m.nummer ? `${m.behoerdeKuerzel} ${m.nummer} · ${m.titel}` : `${m.behoerdeKuerzel} · ${m.titel}`,
     untertitel: [m.behoerdeName, m.doktypLabel].filter(Boolean).join(' — '),
-    marke: { text: 'Material', ton: 'soft' as const },
+    marke: { text: 'Material', ton: 'soft' as const, redundant: true },
     href: `/materialien/${encodeURIComponent(m.key)}`,
   }));
   return {

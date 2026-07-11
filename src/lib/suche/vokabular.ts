@@ -46,6 +46,17 @@ const LOOKUP: Map<string, string[]> = (() => {
   return m;
 })();
 
+/** Alle bekannten Vokabular-Begriffe (Schlüssel + Werte, normalisiert, dedupt) —
+ *  Kandidaten-Fundus für den «Meinten Sie …?»-Vorschlag (UI-NAV S3). Rein. */
+export function vokabularBegriffe(): string[] {
+  const s = new Set<string>();
+  for (const [k, werte] of LOOKUP) {
+    s.add(k);
+    for (const w of werte) s.add(w);
+  }
+  return [...s];
+}
+
 /**
  * Erweitert einen Suchbegriff um sein Vokabular. Gibt NUR die zusätzlichen
  * Begriffe zurück (ohne den Originalbegriff) — der Aufrufer sucht Original +

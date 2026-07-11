@@ -106,6 +106,20 @@ test.describe('Norm-Sprung in der normalen Suchleiste (A5)', () => {
     await expect(box.getByRole('option').first()).toBeVisible()
   })
 
+  test('§8-Korpus-Offenlegung: Fusszeile «Durchsucht …» + Link auf /abdeckung (S3/E1)', async ({ page }) => {
+    await page.goto('/gesetze')
+    const feld = sucheFeld(page)
+    await feld.click()
+    await feld.fill('Miete')
+    // Fusszeile erscheint, sobald die Manifeste geladen sind (für jede Query).
+    await expect(page.getByText(/Durchsucht:/)).toBeVisible()
+    const link = page.getByRole('link', { name: /Was ist drin/ })
+    await expect(link).toHaveAttribute('href', '/abdeckung')
+    await link.click()
+    await expect(page).toHaveURL(/\/abdeckung$/)
+    await expect(page.getByRole('heading', { level: 1 })).toContainText('Was ist durchsuchbar')
+  })
+
   test('⌘K/Ctrl-K fokussiert die Suchleiste (kein Overlay mehr)', async ({ page }) => {
     await page.goto('/gesetze')
     // Kein Dialog/Overlay: die frühere Palette existiert nicht mehr.

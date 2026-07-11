@@ -1,5 +1,7 @@
+import type { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import type { SuchGruppe, SuchTreffer } from '../../lib/universalSuche';
+import type { Abdeckung } from './useUniversalSuche';
 import { suchOptionId } from './suchOptionId';
 import { StatusBadge } from '../verzahnung/StatusBadge';
 
@@ -17,23 +19,43 @@ import { StatusBadge } from '../verzahnung/StatusBadge';
 // Die knappe Trefferzahl wird über EINE sr-only Live-Region angesagt — nicht
 // mehr das ganze Panel, das sonst bei jedem Tastendruck neu vorgelesen würde.
 
-function Marke({ text, ton }: NonNullable<SuchTreffer['marke']>) {
+function Marke({ text, ton, redundant }: NonNullable<SuchTreffer['marke']>) {
   // Leitentscheid über das geteilte StatusBadge-Vokabular (W2·7-VZUI): EIN
   // aria-label an allen vier Fundorten (Suche, Panel, Leitfall-Zeile, Reader).
   // Nicht interaktiv — die Zeile ist eine ARIA-Option (kein nested-interactive).
   if (ton === 'leitentscheid') return <StatusBadge praedikat="leitentscheid" className="shrink-0" />;
   const cls = ton === 'ok' ? 'lc-badge-ok' : ton === 'entwurf' ? 'lc-badge-entwurf' : 'lc-badge-soft';
-  return <span className={`lc-badge ${cls} shrink-0`}>{text}</span>;
+  // Redundanter Typ-Chip (dupliziert den Gruppentitel «Gesetzestext»/«Material»/…):
+  // auf Mobil ausgeblendet, wo der Platz knapp ist (S3/#56). Desktop bleibt.
+  const mobil = redundant ? 'max-sm:hidden ' : '';
+  return <span className={`${mobil}lc-badge ${cls} shrink-0`}>{text}</span>;
 }
 
 const ZEILE_CLS = 'group/z flex items-center gap-3 px-4 py-2 no-underline transition-colors hover:bg-brass-100/40';
 
-function ZeileInhalt({ t, sprung }: { t: SuchTreffer; sprung?: boolean }) {
+// Query-Wörter im Snippet/Untertitel deterministisch hervorheben (S3/#56). Rein:
+// Wörter ab 2 Zeichen, regex-escaped, case-insensitiv als <mark> umschlossen.
+function escapeRe(s: string): string {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+function markiere(text: string, q: string): ReactNode {
+  const worte = q.trim().split(/\s+/).filter((w) => w.length >= 2).map(escapeRe);
+  if (worte.length === 0) return text;
+  const muster = worte.join('|');
+  const teile = text.split(new RegExp(`(${muster})`, 'ig'));
+  const test = new RegExp(`^(?:${muster})$`, 'i');
+  return teile.map((teil, i) => (test.test(teil)
+    ? <mark key={i} className="rounded-[0.15rem] bg-brass-100 text-inherit">{teil}</mark>
+    : teil));
+}
+
+function ZeileInhalt({ t, sprung, q }: { t: SuchTreffer; sprung?: boolean; q: string }) {
   return (
     <>
       <span className="min-w-0 flex-1">
         <span className="block truncate text-body-s font-medium text-ink-900 transition-colors group-hover/z:text-brass-800">{t.label}</span>
-        {t.untertitel && <span className="block truncate text-body-s text-ink-500">{t.untertitel}</span>}
+        {/* Zweizeiliges Snippet mit Highlight (S3/#56) statt einzeiligem Abschnitt. */}
+        {t.untertitel && <span className="line-clamp-2 text-body-s text-ink-500">{markiere(t.untertitel, q)}</span>}
       </span>
       {t.marke && <Marke {...t.marke} />}
       {/* Norm-Sprung (A5): ↵ signalisiert die Primäraktion «Enter springt».
@@ -45,7 +67,7 @@ function ZeileInhalt({ t, sprung }: { t: SuchTreffer; sprung?: boolean }) {
   );
 }
 
-function Zeile({ t, onAuswahl, onNavigate, optionId, aktiv, alsOption, sprung }: {
+function Zeile({ t, onAuswahl, onNavigate, optionId, aktiv, alsOption, sprung, q }: {
   t: SuchTreffer;
   onAuswahl?: () => void;
   onNavigate?: (href: string) => void;
@@ -53,6 +75,7 @@ function Zeile({ t, onAuswahl, onNavigate, optionId, aktiv, alsOption, sprung }:
   aktiv?: boolean;
   alsOption?: boolean;
   sprung?: boolean;
+  q: string;
 }) {
   // Listbox-Option: KEIN inneres <a> (ein fokussierbarer Link in role=option ist
   // nested-interactive, axe serious — Entscheid David 26.6.2026). Maus/Touch
@@ -63,26 +86,27 @@ function Zeile({ t, onAuswahl, onNavigate, optionId, aktiv, alsOption, sprung }:
       <li role="option" id={optionId} aria-selected={!!aktiv}
         onClick={() => { onAuswahl?.(); onNavigate?.(t.href); }}
         className={`${ZEILE_CLS} cursor-pointer${aktiv ? ' bg-brass-100/40' : ''}`}>
-        <ZeileInhalt t={t} sprung={sprung} />
+        <ZeileInhalt t={t} sprung={sprung} q={q} />
       </li>
     );
   }
   return (
     <li>
       <Link to={t.href} onClick={onAuswahl} className={ZEILE_CLS}>
-        <ZeileInhalt t={t} sprung={sprung} />
+        <ZeileInhalt t={t} sprung={sprung} q={q} />
       </Link>
     </li>
   );
 }
 
-function Gruppe({ g, index, onAuswahl, onNavigate, listboxId, aktivId }: {
+function Gruppe({ g, index, onAuswahl, onNavigate, listboxId, aktivId, q }: {
   g: SuchGruppe;
   index: number;
   onAuswahl?: () => void;
   onNavigate?: (href: string) => void;
   listboxId?: string;
   aktivId?: string;
+  q: string;
 }) {
   return (
     <div role={listboxId ? 'group' : undefined} aria-label={listboxId ? g.titel : undefined}
@@ -108,19 +132,21 @@ function Gruppe({ g, index, onAuswahl, onNavigate, listboxId, aktivId }: {
         </a>
       )}
       {g.laedt
-        ? <p className="px-4 pb-3 text-body-s text-ink-500">wird durchsucht …</p>
+        // Mindesthöhen-Platzhalter (§15.2): reserviert eine Trefferzeile, damit
+        // die Gruppen darunter beim Einwachsen weniger springen (min-h-11-Token).
+        ? <p className="px-4 pb-3 text-body-s text-ink-500 min-h-11">wird durchsucht …</p>
         : <ul role={listboxId ? 'none' : undefined} className="pb-1.5">
             {g.treffer.map((t) => {
               const oid = listboxId ? suchOptionId(listboxId, g.id, t.id) : undefined;
               return <Zeile key={`${g.id}:${t.id}`} t={t} onAuswahl={onAuswahl} onNavigate={onNavigate}
-                optionId={oid} aktiv={!!oid && oid === aktivId} alsOption={!!listboxId} sprung={g.id === 'sprung'} />;
+                optionId={oid} aktiv={!!oid && oid === aktivId} alsOption={!!listboxId} sprung={g.id === 'sprung'} q={q} />;
             })}
           </ul>}
     </div>
   );
 }
 
-export function SuchResultate({ gruppen, allesGeladen, q, onAuswahl, onNavigate, listboxId, aktivId }: {
+export function SuchResultate({ gruppen, allesGeladen, q, onAuswahl, onNavigate, listboxId, aktivId, vorschlag, abdeckung, onVorschlag }: {
   gruppen: SuchGruppe[];
   allesGeladen: boolean;
   q: string;
@@ -131,18 +157,39 @@ export function SuchResultate({ gruppen, allesGeladen, q, onAuswahl, onNavigate,
   listboxId?: string;
   /** Options-ID des aktuell hervorgehobenen Treffers (aria-activedescendant). */
   aktivId?: string;
+  /** «Meinten Sie …?»-Vorschlag (S3) — oder null/undefined. */
+  vorschlag?: string | null;
+  /** §8-Korpus-Offenlegung für die Fusszeile (S3/E1) — oder null. */
+  abdeckung?: Abdeckung | null;
+  /** Übernimmt einen Vorschlag als neue Query (setzt das Feld). */
+  onVorschlag?: (begriff: string) => void;
 }) {
   if (q === '') return null;
 
-  const sichtbar = gruppen.reduce((n, g) => n + g.treffer.length, 0);
+  // §8-ehrlicher Zähler (S3/#5): solange Sektionen laden, ist die Zahl nicht final
+  // → «N+ … wird noch durchsucht»; erst wenn alles geladen ist, die feste Zahl.
+  const nochLaedt = !allesGeladen || gruppen.some((g) => g.laedt);
+  const gesamt = gruppen.reduce((n, g) => n + (g.laedt ? 0 : g.gesamt), 0);
   const status = gruppen.length === 0
     ? (allesGeladen ? 'Keine Treffer' : 'wird durchsucht …')
-    : `${sichtbar} Treffer`;
+    : nochLaedt ? `mindestens ${gesamt} Treffer, wird noch durchsucht …` : `${gesamt} Treffer`;
 
   return (
     <>
       {/* Knappe Live-Region: nur die Trefferzahl, nicht die ganze Liste (§13/F4). */}
       <p className="sr-only" role="status" aria-live="polite">{status}</p>
+      {/* «Meinten Sie …?» (S3) — deterministischer Tippfehler-Vorschlag, ausserhalb
+          der Listbox (kein Options-Element), setzt bei Klick die Query. */}
+      {vorschlag && (
+        <p className="lc-card mb-2 px-4 py-2 text-body-s text-ink-600">
+          Meinten Sie{' '}
+          <button type="button" onClick={() => onVorschlag?.(vorschlag)}
+            className="font-medium text-brass-700 underline decoration-dotted underline-offset-2 hover:text-brass-600">
+            {vorschlag}
+          </button>
+          ?
+        </p>
+      )}
       <div className="lc-card overflow-hidden"
         role={listboxId ? 'listbox' : undefined} id={listboxId}
         aria-label={listboxId ? 'Suchtreffer' : undefined}>
@@ -152,8 +199,17 @@ export function SuchResultate({ gruppen, allesGeladen, q, onAuswahl, onNavigate,
                 ? <>Keine Treffer zu «{q}». Versuchen Sie einen Erlass, eine Norm oder ein Stichwort.</>
                 : <>wird durchsucht …</>}
             </p>
-          : gruppen.map((g, i) => <Gruppe key={g.id} g={g} index={i} onAuswahl={onAuswahl} onNavigate={onNavigate} listboxId={listboxId} aktivId={aktivId} />)}
+          : gruppen.map((g, i) => <Gruppe key={g.id} g={g} index={i} onAuswahl={onAuswahl} onNavigate={onNavigate} listboxId={listboxId} aktivId={aktivId} q={q} />)}
       </div>
+      {/* §8-Korpus-Offenlegung (S3/E1): was die Suche wirklich durchsucht, ausserhalb
+          der Listbox. Link auf die Abdeckungsseite «Was ist drin». */}
+      {abdeckung && (
+        <p className="mt-2 px-1 text-micro leading-snug text-ink-500">
+          Durchsucht: {abdeckung.volltext} Bund-Erlasse im Volltext · {abdeckung.bge} BGE ·
+          {' '}kantonale Erlasse ({abdeckung.kantonTitel}): nur nach Titel.{' '}
+          <Link to="/abdeckung" onClick={onAuswahl} className="text-brass-700 no-underline hover:text-brass-600">Was ist drin? →</Link>
+        </p>
+      )}
     </>
   );
 }

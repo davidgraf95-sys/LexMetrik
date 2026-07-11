@@ -31,7 +31,13 @@ export function HeaderSuche() {
     return () => clearTimeout(id);
   }, [wert]);
 
-  const { gruppen, allesGeladen } = useUniversalSuche(q);
+  const { gruppen, allesGeladen, vorschlag, abdeckung } = useUniversalSuche(q);
+
+  // Enter-Puffer (S3/#52): Wird Enter gedrückt, BEVOR Treffer geladen sind (mobil
+  // trifft die «Suchen»-Taste sonst ins Leere), merkt sich das Feld die Query und
+  // öffnet den obersten Treffer, sobald geladen. `wert.trim()`, weil `q` dem
+  // Debounce nachhängt; bei weiterem Tippen wird der Puffer verworfen (onChange).
+  const [enterQ, setEnterQ] = useState<string | null>(null);
 
   // Flache Trefferliste + Hervorhebungs-Index für Pfeil-Navigation — identisch
   // zum Hero (EIN Suchweg, §5); geteilte Options-IDs via suchOptionId.
@@ -92,7 +98,26 @@ export function HeaderSuche() {
     return () => { window.removeEventListener('pointerdown', aus); window.removeEventListener('keydown', esc); };
   }, [offen]);
 
-  const auswahl = () => { setOffen(false); setWert(''); setQ(''); setAktivIndex(-1); };
+  const auswahl = () => { setOffen(false); setWert(''); setQ(''); setAktivIndex(-1); setEnterQ(null); };
+
+  // Übernimmt einen «Meinten Sie …?»-Vorschlag als neue Query (S3).
+  const uebernehmeVorschlag = (begriff: string) => { setWert(begriff); setQ(begriff); setOffen(true); setAktivIndex(-1); };
+
+  // Gepufferten Enter auslösen, sobald der Index geladen UND der Debounce
+  // eingeholt ist (enterQ === q). Öffnet den obersten Treffer der ersten
+  // nicht-leeren Gruppe; gibt es keinen (echte Nulltreffer/BGE nicht im Bestand),
+  // bleibt das Panel mit der ehrlichen Auskunft stehen (§8).
+  useEffect(() => {
+    if (enterQ === null) return;
+    if (!allesGeladen || enterQ !== q) return;
+    const ziel = gruppen.find((g) => g.treffer.length > 0)?.treffer[0]?.href;
+    // Deferred, damit kein synchrones set-state-in-effect kaskadiert (Repo-Muster).
+    const id = window.setTimeout(() => {
+      setEnterQ(null);
+      if (ziel) { navigate(ziel); setOffen(false); setWert(''); setQ(''); setAktivIndex(-1); }
+    }, 0);
+    return () => window.clearTimeout(id);
+  }, [enterQ, q, allesGeladen, gruppen, navigate]);
 
   // Aktiven Treffer in den sichtbaren Bereich rollen (lange Trefferliste).
   useEffect(() => {
@@ -114,6 +139,7 @@ export function HeaderSuche() {
         ? flach[aktivIndex].href
         : gruppen.find((g) => g.treffer.length > 0)?.treffer[0]?.href;
       if (ziel) { navigate(ziel); auswahl(); }
+      else if (wert.trim() !== '') { setEnterQ(wert.trim()); setOffen(true); } // Puffer: öffnen, sobald geladen
     }
   };
 
@@ -123,7 +149,7 @@ export function HeaderSuche() {
         ref={feld}
         type="search"
         value={wert}
-        onChange={(e) => { setWert(e.target.value); setOffen(true); }}
+        onChange={(e) => { setWert(e.target.value); setOffen(true); setEnterQ(null); }}
         onFocus={() => { if (wert.trim()) setOffen(true); }}
         onKeyDown={aufTaste}
         placeholder="Suchen oder Norm springen (z. B. «OR 257d») …"
@@ -154,6 +180,7 @@ export function HeaderSuche() {
         // Seitenränder inset-x-2) → lesbare Breite OHNE horizontalen Overflow.
         <div className="absolute left-0 right-0 top-full mt-2 z-30 max-h-[70vh] overflow-y-auto overscroll-contain rounded-lg max-sm:fixed max-sm:inset-x-2 max-sm:left-2 max-sm:right-2 max-sm:top-[3.75rem] max-sm:mt-0">
           <SuchResultate gruppen={gruppen} allesGeladen={allesGeladen} q={q} onAuswahl={auswahl} listboxId={listboxId} aktivId={aktivId}
+            vorschlag={vorschlag} abdeckung={abdeckung} onVorschlag={uebernehmeVorschlag}
             onNavigate={(href) => navigate(href)} />
         </div>
       )}
