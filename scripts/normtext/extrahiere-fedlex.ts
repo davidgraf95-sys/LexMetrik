@@ -1104,6 +1104,15 @@ function anhangUeberschrift(hInner: string): string {
  * EINZELNER unnummerierter «Anhang» (annex_uN — BVG/KVG/IPRG/VAG/AHVG) und der
  * Sonderfall OHNE annex-Präfix (lvl_uN — KAG/FIDLEG).
  *
+ * P1-a/b-Nachzug (11.7.2026): zusätzlich «scope»/«decl» — die kanonischen
+ * isExemplifiedBy-Fassungen der Staatsverträge (SR 0.*: LugÜ/GFK/HZÜ/VRK/… —
+ * 14 Erlasse) tragen Geltungsbereich (<section id="scope_uN">) und Erklärungen/
+ * Vorbehalte der Schweiz (<section id="decl_uN">) als EIGENE Sektionen im
+ * annex-Container; die alten Alias-Dumps exponierten denselben Inhalt als
+ * generierte lvl_dXeY-Sektionen (wurden erfasst). Ohne diese Präfixe verlöre
+ * die kanonische Regeneration die CH-Erklärungen (LUGUE: 2 Blöcke, ex
+ * lvl_d1141e136/137). Rein additiv: Erlasse ohne solche Sektionen unverändert.
+ *
  * RECORD = ein Kandidat, der KEINEN anderen Kandidaten umschliesst (Blatt im
  * Anhang-Baum). Damit fällt die Deckblatt-Sektion («Anhänge», umschliesst die
  * nummerierten annex_N als Geschwister, z.B. ChemRRV annex_u1) automatisch weg —
@@ -1115,7 +1124,7 @@ export function alleAnhangAnker(html: string): string[] {
   const divStart = html.search(/<div\s+id="annex"\s*>/i);
   if (divStart < 0) return [];
   const seg = html.slice(divStart);
-  const re = /<section[^>]*\sid="((?:annex|lvl)[^"/]*)"/gi;
+  const re = /<section[^>]*\sid="((?:annex|lvl|scope|decl)[^"/]*)"/gi;
   const kandidaten: Array<{ id: string; start: number; end: number }> = [];
   for (const m of seg.matchAll(re)) {
     if (m[1] === 'annex') continue; // (die Container-id ist ein <div>, kein <section>; defensiv)
@@ -1314,6 +1323,12 @@ export function extrahiereAnhang(html: string, ankerRoh: string): AnhangText | n
 /** Fallback-Label aus dem Anker, wenn die Sektion keinen Titel trägt.
  *  'annex_1' → «Anhang 1»; 'annex_1_1' → «Anhang 1.1»; 'annex_4_a' → «Anhang 4a». */
 export function anhangLabelVonAnker(anker: string): string {
-  const roh = anker.replace(/__\d+$/, '').replace(/^annex_/, '');
+  const basis = anker.replace(/__\d+$/, '');
+  // P1-a/b-Nachzug: sprechende Fallback-Labels für die Staatsvertrags-Sektionen
+  // Geltungsbereich (scope_*) und Erklärungen/Vorbehalte (decl_*). Greift nur,
+  // wenn die Sektion keine eigene Überschrift trägt (extrahiereAnhang.titel leer).
+  if (/^scope/.test(basis)) return 'Geltungsbereich';
+  if (/^decl/.test(basis)) return 'Erklärungen und Vorbehalte';
+  const roh = basis.replace(/^annex_/, '');
   return 'Anhang ' + roh.replace(/_(?=\d)/g, '.').replace(/_/g, '');
 }

@@ -3659,6 +3659,101 @@
       "abgerufen": "2026-07-11",
       "fassungsToken": "20160408",
       "sha": "20c80a39522c9a3a381441d87a5d521d7cc62b01f24b74b43ebcf0d734f9984d"
+    },
+    {
+      "id": "bund/LUGUE/scope_u1",
+      "ebene": "bund",
+      "quelle": "LUGUE",
+      "erlass": "LUGUE",
+      "artikel": "scope_u1",
+      "artikelLabel": "Geltungsbereich am 3. März 2011",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "kopf": [
+              "Vertragsstaaten",
+              "Ratifikation",
+              "",
+              "Inkrafttreten",
+              ""
+            ],
+            "zeilen": [
+              [
+                "Dänemarka",
+                "24. September",
+                "2009",
+                "1. Januar",
+                "2010"
+              ],
+              [
+                "Europäische Union*",
+                "18. Mai",
+                "2009",
+                "1. Januar",
+                "2010"
+              ],
+              [
+                "Island",
+                "25. Februar",
+                "2011",
+                "1. Mai",
+                "2011"
+              ],
+              [
+                "Norwegen",
+                "1. Juli",
+                "2009",
+                "1. Januar",
+                "2010"
+              ],
+              [
+                "Schweiz*",
+                "20. Oktober",
+                "2010",
+                "1. Januar",
+                "2011"
+              ],
+              [
+                "* Vorbehalte und Erklärungen. Die Vorbehalte und Erklärungen werden in der AS nicht veröffentlicht, mit Ausnahme jener der Schweiz. Die französischen Texte können auf der Internetseite des Depositars: www.eda.admin.ch eingesehen oder bei der Direktion für Völkerrecht, Sektion Staatsverträge, 3003 Bern bezogen werden. a Das Übereinkommen gilt nicht für die Färöer-Inseln und Grönland."
+              ]
+            ]
+          }
+        }
+      ],
+      "stand": "2016-04-08",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#scope_u1",
+      "abgerufen": "2026-07-11",
+      "fassungsToken": "20160408",
+      "sha": "994f1db6bf795f0f90054f0f5f3515dc721f8c1c76db5db4fecf05f9cab835bf"
+    },
+    {
+      "id": "bund/LUGUE/decl_u2",
+      "ebene": "bund",
+      "quelle": "LUGUE",
+      "erlass": "LUGUE",
+      "artikel": "decl_u2",
+      "artikelLabel": "Vorbehalte und Erklärungen",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Schweiz"
+        },
+        {
+          "absatz": null,
+          "text": "Die Schweizerische Eidgenossenschaft behält sich das in Artikel I Absatz 2 des Protokolls 1 vorgesehene Recht vor, für die Zustellung von Schriftstücken zwischen gerichtlichen Amtspersonen von und nach der Schweiz die Einhaltung abweichender Formen zu verlangen."
+        },
+        {
+          "absatz": null,
+          "text": "Die Schweizerische Eidgenossenschaft erklärt entsprechend Artikel III Absatz 1 des Protokolls 1, dass sie den folgenden Teilsatz der Bestimmung von Artikel 34 Absatz 2 nicht anwenden wird: «es sei denn, der Beklagte hat gegen die Entscheidung keinen Rechtsbehelf eingelegt, obwohl er die Möglichkeit dazu hatte»."
+        }
+      ],
+      "stand": "2016-04-08",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#decl_u2",
+      "abgerufen": "2026-07-11",
+      "fassungsToken": "20160408",
+      "sha": "5b382e07dd1d96ba6afcffd475a2851ee4e788c35260df130fa2f6314434e0ac"
     }
   ]
 }

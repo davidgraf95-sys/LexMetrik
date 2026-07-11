@@ -72,6 +72,38 @@ scraping-swiss-official-sources) gegen Fedlex LIVE: OR (Kronjuwel), UNO_PAKT_II
 (lvl-Reduktion), GFK/LUGUE (Soft-404-Heilung), DBG (Fussnoten-Drift). Verdikt:
 siehe Commit-Trailer / `bibliothek/.gegenpruefung-pending`.
 
+## Nachtrag (11.7.2026, CI-Befund PR #195): decl/scope-Extraktion + Spec-Nachzug
+
+Zwei e2e-Specs scheiterten reproduzierbar an der regenerierten Fläche — Verdikt
+je Spec sauber getrennt:
+
+- **`normrevision-badge.e2e.ts` = Fall (a), Spec erwartete Alt-Daten:** die
+  kanonische AIG-Fassung (kons 20260612) trägt an Art. 5 die NEUERE Fussnote
+  «in Kraft seit 12. Juni 2026» (AS 2026 231, Eurodac/Schengen); der alte
+  Alias-Dump endete bei 15.6.2025 (AS 2025 346). Amtlich am Filestore-HTML
+  verifiziert (beide Fussnoten vorhanden, max = 12.06.2026). Spec deklariert
+  nachgezogen; Temporal-Semantik (Urteil 30.10.2024 < Revision) unverändert.
+- **`gesetze-ux-g3b-anhang.e2e.ts` = Fall (a) + kleiner Fall (b):**
+  - (a) Der Spec ankerte auf dem GENERIERTEN Alt-Dump-Id `#art-lvl_d1141e112`;
+    die kanonische Fassung trägt die LugÜ-Protokolle unter dem stabilen eId
+    `annex_u1` (Label «Protokoll 1 über …»). Spec auf den kanonischen Anker
+    umgestellt, Verhalten identisch.
+  - (b) Real: die kanonische Struktur legt Geltungsbereich (`scope_u1`) und
+    «Vorbehalte und Erklärungen» (`decl_u2`) als EIGENE Sektionen in den
+    annex-Container — der Scanner (`alleAnhangAnker`) kannte nur `annex|lvl`,
+    dadurch verlor die Regeneration die CH-Erklärungen (LUGUE, ex
+    lvl_d1141e136/137; 2 Blöcke). **Extraktions-Fix:** Scanner-Präfixe um
+    `scope|decl` erweitert (+ Fallback-Labels), 14 Staatsverträge regeneriert
+    (apostille cmr gfk haue heue hksue96 hkue hzue icao istanbul lugue rbue
+    staatenlose vrk): **Recall OLD ⊆ NEW = 1.0** (rein additiv, +1–2 Token je
+    Erlass, Kronjuwelen byte-gleich). Der Fix stellt die verlorenen Erklärungen
+    wieder her UND erschliesst den Geltungsbereich der ganzen Vertrags-Klasse
+    (vorher strukturell nie extrahiert, nur zufällig via Alt-Dump-lvl-Ids).
+  - Offener Folge-Posten (TABU-Zone Kopf-PR): `istAnhangToken`
+    (`src/pages/gesetz-leser/berechnungen.ts:25`) um `decl|scope` erweitern,
+    damit die neuen Sektionen die abgesetzte Anhang-Darstellung erhalten
+    (Inhalt ist bereits im Reader sichtbar/findbar; reine Darstellung).
+
 ## Neue/erweiterte Werkzeuge
 
 - `scripts/fedlex-manifest.ts` — `loeseHtmlManifeste`, `nAusUrl` (kanonische

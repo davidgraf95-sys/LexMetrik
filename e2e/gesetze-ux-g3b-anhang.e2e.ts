@@ -32,12 +32,34 @@ test('③ GSchV: die «Anhänge»-Sektion ist im Gliederungs-TOC verlinkt', asyn
 });
 
 // ── ⑤ LugÜ: Protokolle als abgesetzte Struktur-Sektionen ──────────────────────
-test('⑤ LugÜ: Protokolle (lvl_*) rendern als abgesetzte data-anhang-Blöcke', async ({ page }) => {
+// P1-a/b Kanonik-Re-Pin (11.7.2026, amtlich deklariert): der alte Alias-Dump
+// exponierte die Protokolle als GENERIERTE lvl_dXeY-Sektionen (#art-lvl_d1141e112);
+// die kanonische isExemplifiedBy-Fassung (html-12) trägt sie unter dem stabilen
+// eId `annex_u1` («Protokoll 1 über …» als Sektions-Titel). Gleiches Verhalten
+// (data-anhang-Block + verlinkte Überschrift), kanonischer Anker.
+test('⑤ LugÜ: Protokolle rendern als abgesetzte data-anhang-Blöcke (kanonisch annex_u1)', async ({ page }) => {
   await warteReader(page, '/gesetze/bund/LUGUE');
-  const protokoll = page.locator('#art-lvl_d1141e112');
+  const protokoll = page.locator('#art-annex_u1');
   await expect(protokoll).toBeVisible({ timeout: 20000 });
   await expect(protokoll).toHaveAttribute('data-anhang', '');
   await expect(protokoll.getByRole('link', { name: /^Protokoll 1 über/ })).toBeVisible();
+});
+
+// ── ⑤ LugÜ: CH-Erklärungen (decl_u2) — P1-a/b-Extraktions-Nachzug ─────────────
+// Die kanonische Fassung trägt Geltungsbereich (scope_u1) und «Vorbehalte und
+// Erklärungen» (decl_u2) als eigene Sektionen; der Extraktor erfasst sie seit
+// dem decl/scope-Nachzug (vorher nur zufällig via Alt-Dump-lvl_-Ids). Hier wird
+// die INHALTS-Präsenz gesichert (Snapshot → DOM). Die data-anhang-Absetzung
+// braucht EIN Zeilen-Update in istAnhangToken (berechnungen.ts:25 → decl|scope) —
+// bewusst NICHT hier: src/pages/gesetz-leser ist für den parallelen Kopf-PR
+// reserviert; Absetzung folgt dort (deklarierter Folge-Posten).
+test('⑤ LugÜ: «Vorbehalte und Erklärungen» (decl_u2) sind im Reader vorhanden', async ({ page }) => {
+  await warteReader(page, '/gesetze/bund/LUGUE');
+  const erklaerungen = page.locator('#art-decl_u2');
+  await expect(erklaerungen).toBeVisible({ timeout: 20000 });
+  await expect(erklaerungen.getByRole('link', { name: /Vorbehalte und Erklärungen/ })).toBeVisible();
+  // Kerninhalt (CH-Zustellungs-Vorbehalt nach Art. I Abs. 2 Protokoll 1) ist da.
+  await expect(erklaerungen.getByText(/behält sich das in Artikel I Absatz 2/)).toBeVisible();
 });
 
 // ── ⑤ LugÜ Ratifikations-Tabelle: overflow-x-Container, KEIN Seiten-H-Overflow ─
