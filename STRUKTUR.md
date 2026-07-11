@@ -105,6 +105,18 @@ in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
 <!-- KARTEN -->
 
+## Session 11.7.2026 — QS-PERF: zwei CI-instabile e2e-Specs gehärtet (Worktree `lm-e2e-haertung`, Branch `fix/e2e-ci-haertung`)
+
+**Auftrag (QS-PERF):** `e2e/norm-sprung.e2e.ts` + `e2e/gesetze-ux-g3a.e2e.ts` scheiterten seit dem V2-Merge auf fast jedem PR im 2-Kern-CI-Runner (Symptome `getByText('Sprung')`-12s-Timeout, `toBeVisible`-Timeouts, vereinzelt CLS), lokal grün. Nur Test-Dateien anfassen (useUniversalSuche-Fläche = Parallel-Agent), keine Schwelle aufweichen (A9-SINN).
+
+**Fail LOKAL reproduziert:** dist gebaut, 40 CPU-Busy-Loops als Ballast (loadavg ~45–50 auf 10 Kernen) + `nice -19` + `CI=1 --workers=1 --retries=0 --repeat-each=3`. Bei repeat-2 fiel **norm-sprung A9** (`toHaveURL` 15s) — Enter landete 8×/8 auf **`SCHKG#art-257` statt `OR#art-257_d`**. Kein reiner Timeout, sondern eine RACE.
+
+**Wurzeln:**
+- **norm-sprung A9** (Produkt-Race, aber test-only geheilt): `HeaderSuche.tsx` führt `aktivIndex` als POSITIONS-Index in die per `flatMap` gebaute Trefferliste. Die per `useDeferredValue` (#183/§15.3) entkoppelte ~4-MB-Artikelgruppe landet «einen Tick später» → unter Drossel zeigt der pfeil-gesetzte Index auf einen nachträglich eingeschobenen Artikel-Treffer. **Fix (Test):** nach dem Reaktivitäts-Beweis (aria-activedescendant) die Query zurücksetzen (leeren→neu) ⇒ `aktivIndex`=-1 ⇒ Enter nimmt deterministisch den Norm-Sprung (exakt der A5/P3-Kontrakt). Alle drei scharfen Throttle-Beweise (tippen · navigieren · springen + CLS<0.05) bleiben. Keine Timeout-/Schwellen-Aufweichung. Die eigentliche Reorder-Korrektheit gehört der useUniversalSuche-Fläche (Parallel-Agent) — hier nur test-seitig entschärft.
+- **gesetze-ux-g3a** (§194-Muster, Fixture): «Kopf-Label OR» lud das 935-KB-OR, «U-LINIEN ZGB» das 606-KB-ZGB → beide 16–19s nahe der 20-s-`warteReader`-Latte, starvten den Runner. **Fix:** Umzug auf semantik-gleiche Klein-Fixtures — Kopf-Label «Bundesgesetz» auf **ELG** (~50 KB), tiefe-Kodifikation-ruhig auf **BUEG** (~34 KB, `strukturTiefe` 3 = dieselbe `autoGuide=false`-Klasse). ZGB/OR bleiben als Referenz-Verdikte im `check:linien-kanon`-Tor über den vollen Korpus gegated.
+
+**Stabilitäts-Beweis:** beide Specs **10×** (170/170) unter Ballast + `--workers=1 --retries=0 --repeat-each=10` GRÜN (7 min); zuvor unter identischen Bedingungen roter SCHKG-Fail. gesetze-ux-g3a 46s→5s (Giant-Load weg). Voller `npm run gate` grün bis auf fremd-vorbestehendes `check:p-klassen`/`check:vollstaendigkeit` (Normtext-Daten, nicht CI-gated, auch auf pristine main rot) — nur Test-Dateien berührt, golden 209 byte-gleich. Gegenprüfung n/a (Test-Infrastruktur). Trailer `Roadmap: QS-PERF`.
+
 ## Session 11.7.2026 — UI-NAV O1 «Verlauf-Initiative» (Worktree `lm-uinav-o1`, Branch `feat/uinav-o1-verlauf`)
 
 **Auftrag (David-Go «run till dry»):** Einheit O1 aus `FAHRPLAN-UI-NAVIGATION.md` §5 — den lokalen Verlauf ausweiten und global zugänglich machen. Reines UI, EINE Verlauf-Quelle (§5).
