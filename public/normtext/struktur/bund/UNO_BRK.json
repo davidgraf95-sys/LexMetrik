@@ -1,0 +1,452 @@
+{
+ "erzeugt": "2026-07-10",
+ "kopf": {
+  "srNummer": "0.109",
+  "titel": "Übereinkommen über die Rechte von Menschen mit Behinderungen",
+  "erlassdatum": "(Stand am 1. Mai 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Vertragsstaaten dieses Übereinkommens,"
+   },
+   {
+    "rolle": "verb",
+    "text": "haben Folgendes vereinbart:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "AS <b>2014</b> 1117",
+    "links": [
+     {
+      "label": "AS <b>2014</b> 1117",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2014/244"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR <b>0.120</b>",
+    "links": [
+     {
+      "label": "SR <b>0.120</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/41"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR <b>0.103.1</b>",
+    "links": [
+     {
+      "label": "SR <b>0.103.1</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/19"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "4",
+    "text": "SR <b>0.103.2</b>",
+    "links": [
+     {
+      "label": "SR <b>0.103.2</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/20"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "5",
+    "text": "SR <b>0.104</b>",
+    "links": [
+     {
+      "label": "SR <b>0.104</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/24"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "6",
+    "text": "SR <b>0.108</b>",
+    "links": [
+     {
+      "label": "SR <b>0.108</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/34"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "7",
+    "text": "SR <b>0.105</b>",
+    "links": [
+     {
+      "label": "SR <b>0.105</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/25"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "8",
+    "text": "SR <b>0.107</b>",
+    "links": [
+     {
+      "label": "SR <b>0.107</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/28"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
+ "artikel": {
+  "1": {
+   "gliederung": [],
+   "marginalie": [
+    "Zweck"
+   ]
+  },
+  "2": {
+   "gliederung": [],
+   "marginalie": [
+    "Begriffsbestimmungen"
+   ]
+  },
+  "3": {
+   "gliederung": [],
+   "marginalie": [
+    "Allgemeine Grundsätze"
+   ]
+  },
+  "4": {
+   "gliederung": [],
+   "marginalie": [
+    "Allgemeine Verpflichtungen"
+   ]
+  },
+  "5": {
+   "gliederung": [],
+   "marginalie": [
+    "Gleichberechtigung und Nichtdiskriminierung"
+   ]
+  },
+  "6": {
+   "gliederung": [],
+   "marginalie": [
+    "Frauen mit Behinderungen"
+   ]
+  },
+  "7": {
+   "gliederung": [],
+   "marginalie": [
+    "Kinder mit Behinderungen"
+   ]
+  },
+  "8": {
+   "gliederung": [],
+   "marginalie": [
+    "Bewusstseinsbildung"
+   ]
+  },
+  "9": {
+   "gliederung": [],
+   "marginalie": [
+    "Zugänglichkeit"
+   ]
+  },
+  "10": {
+   "gliederung": [],
+   "marginalie": [
+    "Recht auf Leben"
+   ]
+  },
+  "11": {
+   "gliederung": [],
+   "marginalie": [
+    "Gefahrensituationen und humanitäre Notlagen"
+   ]
+  },
+  "12": {
+   "gliederung": [],
+   "marginalie": [
+    "Gleiche Anerkennung vor dem Recht"
+   ]
+  },
+  "13": {
+   "gliederung": [],
+   "marginalie": [
+    "Zugang zur Justiz"
+   ]
+  },
+  "14": {
+   "gliederung": [],
+   "marginalie": [
+    "Freiheit und Sicherheit der Person"
+   ]
+  },
+  "15": {
+   "gliederung": [],
+   "marginalie": [
+    "Freiheit von Folter oder grausamer, unmenschlicheroder erniedrigender Behandlung oder Strafe"
+   ]
+  },
+  "16": {
+   "gliederung": [],
+   "marginalie": [
+    "Freiheit von Ausbeutung, Gewalt und Missbrauch"
+   ]
+  },
+  "17": {
+   "gliederung": [],
+   "marginalie": [
+    "Schutz der Unversehrtheit der Person"
+   ]
+  },
+  "18": {
+   "gliederung": [],
+   "marginalie": [
+    "Freizügigkeit und Staatsangehörigkeit"
+   ]
+  },
+  "19": {
+   "gliederung": [],
+   "marginalie": [
+    "Unabhängige Lebensführung und Einbeziehung in die Gemeinschaft"
+   ]
+  },
+  "20": {
+   "gliederung": [],
+   "marginalie": [
+    "Persönliche Mobilität"
+   ]
+  },
+  "21": {
+   "gliederung": [],
+   "marginalie": [
+    "Recht der freien Meinungsäusserung, Meinungsfreiheit und Zugang zu Informationen"
+   ]
+  },
+  "22": {
+   "gliederung": [],
+   "marginalie": [
+    "Achtung der Privatsphäre"
+   ]
+  },
+  "23": {
+   "gliederung": [],
+   "marginalie": [
+    "Achtung der Wohnung und der Familie"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "Schweiz: Beistandschaft",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "24": {
+   "gliederung": [],
+   "marginalie": [
+    "Bildung"
+   ]
+  },
+  "25": {
+   "gliederung": [],
+   "marginalie": [
+    "Gesundheit"
+   ]
+  },
+  "26": {
+   "gliederung": [],
+   "marginalie": [
+    "Habilitation und Rehabilitation"
+   ]
+  },
+  "27": {
+   "gliederung": [],
+   "marginalie": [
+    "Arbeit und Beschäftigung"
+   ]
+  },
+  "28": {
+   "gliederung": [],
+   "marginalie": [
+    "Angemessener Lebensstandard und sozialer Schutz"
+   ]
+  },
+  "29": {
+   "gliederung": [],
+   "marginalie": [
+    "Teilhabe am politischen und öffentlichen Leben"
+   ]
+  },
+  "30": {
+   "gliederung": [],
+   "marginalie": [
+    "Teilhabe am kulturellen Leben sowie an Erholung, Freizeit und Sport"
+   ]
+  },
+  "31": {
+   "gliederung": [],
+   "marginalie": [
+    "Statistik und Datensammlung"
+   ]
+  },
+  "32": {
+   "gliederung": [],
+   "marginalie": [
+    "Internationale Zusammenarbeit"
+   ]
+  },
+  "33": {
+   "gliederung": [],
+   "marginalie": [
+    "Innerstaatliche Durchführung und Überwachung"
+   ]
+  },
+  "34": {
+   "gliederung": [],
+   "marginalie": [
+    "Ausschuss für die Rechte von Menschen mit Behinderungen"
+   ]
+  },
+  "35": {
+   "gliederung": [],
+   "marginalie": [
+    "Berichte der Vertragsstaaten"
+   ]
+  },
+  "36": {
+   "gliederung": [],
+   "marginalie": [
+    "Prüfung der Berichte"
+   ]
+  },
+  "37": {
+   "gliederung": [],
+   "marginalie": [
+    "Zusammenarbeit zwischen den Vertragsstaaten und dem Ausschuss"
+   ]
+  },
+  "38": {
+   "gliederung": [],
+   "marginalie": [
+    "Beziehungen des Ausschusses zu anderen Organen"
+   ]
+  },
+  "39": {
+   "gliederung": [],
+   "marginalie": [
+    "Bericht des Ausschusses"
+   ]
+  },
+  "40": {
+   "gliederung": [],
+   "marginalie": [
+    "Konferenz der Vertragsstaaten"
+   ]
+  },
+  "41": {
+   "gliederung": [],
+   "marginalie": [
+    "Verwahrer"
+   ],
+   "fussnoten": [
+    {
+     "nr": "10",
+     "text": "Österreich, Schweiz: Depositar",
+     "links": [],
+     "absatz": null,
+     "item": null
+    },
+    {
+     "nr": "11",
+     "text": "Österreich, Schweiz: Depositar",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "42": {
+   "gliederung": [],
+   "marginalie": [
+    "Unterzeichnung"
+   ]
+  },
+  "43": {
+   "gliederung": [],
+   "marginalie": [
+    "Zustimmung, gebunden zu sein"
+   ]
+  },
+  "44": {
+   "gliederung": [],
+   "marginalie": [
+    "Organisationen der regionalen Integration"
+   ],
+   "fussnoten": [
+    {
+     "nr": "12",
+     "text": "Österreich, Schweiz: Depositar",
+     "links": [],
+     "absatz": null,
+     "item": null
+    }
+   ]
+  },
+  "45": {
+   "gliederung": [],
+   "marginalie": [
+    "Inkrafttreten"
+   ]
+  },
+  "46": {
+   "gliederung": [],
+   "marginalie": [
+    "Vorbehalte"
+   ]
+  },
+  "47": {
+   "gliederung": [],
+   "marginalie": [
+    "Änderungen"
+   ]
+  },
+  "48": {
+   "gliederung": [],
+   "marginalie": [
+    "Kündigung"
+   ]
+  },
+  "49": {
+   "gliederung": [],
+   "marginalie": [
+    "Zugängliches Format"
+   ]
+  },
+  "50": {
+   "gliederung": [],
+   "marginalie": [
+    "Verbindliche Wortlaute"
+   ]
+  }
+ }
+}

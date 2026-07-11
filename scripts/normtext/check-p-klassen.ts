@@ -23,6 +23,14 @@ const BEWUSST_IGNORIERT: Record<string, string> = {
   // Vollzugs-Metadaten (kein Artikel-Normtext); das In-Kraft-Datum trägt bereits
   // die Provenienz-Spalte `stand` (§7). Trailing-Ziffer = AS-Fussnote.
   inkrafttreten: 'Vollzugs-Metadaten (In-Kraft-Datum) — steht in `stand` (§7), kein Artikel-Normtext',
+  // Staatsvertrags-Schlussformel «Zu Urkund dessen haben die … Bevollmächtigten
+  // dieses Übereinkommen unterschrieben» (Testimonium/Unterzeichnungs-Attestat am
+  // Vertragsende, nach dem letzten Artikel). Authentische, aber NICHT-normative
+  // Schluss-Boilerplate ohne art_-Anker; im artikel-getasteten Snapshot-Modell nicht
+  // als Artikel abbildbar (Paket 4: kein neues Format/Skript). Erscheint bei den P4-
+  // Verträgen (RBÜ/CMR/Montreal/HKsÜ/HUVÜ/EAUe/UNO-BRK/Istanbul); Fundstelle bleibt
+  // über den Live-Link zur amtlichen Fassung (§7/§8) einsehbar.
+  schlussint: 'Staatsvertrags-Testimonium (Unterzeichnungs-Attestat) — nicht-normative Schluss-Boilerplate ohne art_-Anker (Paket 4)',
   // Präsentations-Varianten der Absatz-Klasse (Punktgrösse/Kursiv), die die
   // wortgebundene alt1-Regex (\babsatz\b) NICHT trifft. Inhalt gemischt
   // (Inkrafttreten-Kleindruck-Datumslisten UND vereinzelt Sondertext: ParlG-Eid,

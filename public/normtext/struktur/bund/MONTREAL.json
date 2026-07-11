@@ -1,0 +1,815 @@
+{
+ "erzeugt": "2026-07-10",
+ "kopf": {
+  "srNummer": "0.748.411",
+  "titel": "Übereinkommen zur Vereinheitlichung bestimmter Vorschriften über die Beförderung im internationalen Luftverkehr",
+  "erlassdatum": "(Stand am 7. April 2026)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Die Vertragsstaaten dieses Übereinkommens,"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "in Anerkennung des bedeutenden Beitrags, den das am 12. Oktober 1929 in Warschau unterzeichnete Abkommen zur Vereinheitlichung von Regeln über die Beförderung im internationalen Luftverkehr (im Folgenden als «Warschauer Abkommen» bezeichnet) und andere damit zusammenhängende Übereinkünfte zur Harmonisierung des internationalen Luftprivatrechts geleistet haben,"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "in der Erkenntnis, dass es notwendig ist, das Warschauer Abkommen und die damit zusammenhängenden Übereinkünfte zu modernisieren und zusammenzuführen;"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "in Anerkennung der Bedeutung des Schutzes der Verbraucherinteressen bei der Beförderung im internationalen Luftverkehr und eines angemessenen Schadenersatzes nach dem Grundsatz des vollen Ausgleichs;"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "in Bekräftigung des Wunsches nach einer geordneten Entwicklung des internationalen Luftverkehrs und einer reibungslosen Beförderung von Reisenden, Reisegepäck und Gütern in Übereinstimmung mit den Grundsätzen und Zielen des am 7. Dezember 1944 in Chicago beschlossenen Abkommens über die Internationale Zivilluftfahrt;"
+   },
+   {
+    "rolle": "praeambel",
+    "text": "in der Überzeugung, dass gemeinsames Handeln der Staaten zur weiteren Harmonisierung und Kodifizierung bestimmter Vorschriften über die Beförderung im internationalen Luftverkehr durch ein neues Übereinkommen das beste Mittel ist, um einen gerechten Interessenausgleich zu erreichen"
+   },
+   {
+    "rolle": "verb",
+    "text": "sind wie folgt übereingekommen:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "AS <b>2005</b> 4393",
+    "links": [
+     {
+      "label": "AS <b>2005</b> 4393",
+      "url": "https://fedlex.data.admin.ch/eli/oc/2005/565"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SR <b>0.748.410</b>",
+    "links": [
+     {
+      "label": "SR <b>0.748.410</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/3299"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "3",
+    "text": "SR <b>0.748.0</b>",
+    "links": [
+     {
+      "label": "SR <b>0.748.0</b>",
+      "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/3110"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
+ "artikel": {
+  "1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel I: Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Anwendungsbereich"
+   ]
+  },
+  "2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel I: Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Staatlich ausgeführte Beförderung und Beförderung von Postsendungen"
+   ]
+  },
+  "3": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel II: Urkunden und Pflichten der Parteien betreffend die Beförderung von Reisenden, Reisegepäck und Gütern"
+    }
+   ],
+   "marginalie": [
+    "Reisende und Reisegepäck"
+   ]
+  },
+  "4": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel II: Urkunden und Pflichten der Parteien betreffend die Beförderung von Reisenden, Reisegepäck und Gütern"
+    }
+   ],
+   "marginalie": [
+    "Güter"
+   ]
+  },
+  "5": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel II: Urkunden und Pflichten der Parteien betreffend die Beförderung von Reisenden, Reisegepäck und Gütern"
+    }
+   ],
+   "marginalie": [
+    "Inhalt des Luftfrachtbriefs und der Empfangsbestätigung über Güter"
+   ]
+  },
+  "6": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel II: Urkunden und Pflichten der Parteien betreffend die Beförderung von Reisenden, Reisegepäck und Gütern"
+    }
+   ],
+   "marginalie": [
+    "Angaben zur Art der Güter"
+   ]
+  },
+  "7": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel II: Urkunden und Pflichten der Parteien betreffend die Beförderung von Reisenden, Reisegepäck und Gütern"
+    }
+   ],
+   "marginalie": [
+    "Luftfrachtbrief"
+   ]
+  },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel II: Urkunden und Pflichten der Parteien betreffend die Beförderung von Reisenden, Reisegepäck und Gütern"
+    }
+   ],
+   "marginalie": [
+    "Mehrere Frachtstücke"
+   ]
+  },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel II: Urkunden und Pflichten der Parteien betreffend die Beförderung von Reisenden, Reisegepäck und Gütern"
+    }
+   ],
+   "marginalie": [
+    "Nichtbeachtung der Bestimmungen über Beförderungsurkunden"
+   ]
+  },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel II: Urkunden und Pflichten der Parteien betreffend die Beförderung von Reisenden, Reisegepäck und Gütern"
+    }
+   ],
+   "marginalie": [
+    "Haftung für die Angaben in den Urkunden"
+   ]
+  },
+  "11": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel II: Urkunden und Pflichten der Parteien betreffend die Beförderung von Reisenden, Reisegepäck und Gütern"
+    }
+   ],
+   "marginalie": [
+    "Beweiskraft der Urkunden"
+   ]
+  },
+  "12": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel II: Urkunden und Pflichten der Parteien betreffend die Beförderung von Reisenden, Reisegepäck und Gütern"
+    }
+   ],
+   "marginalie": [
+    "Verfügungsrecht über die Güter"
+   ]
+  },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel II: Urkunden und Pflichten der Parteien betreffend die Beförderung von Reisenden, Reisegepäck und Gütern"
+    }
+   ],
+   "marginalie": [
+    "Ablieferung der Güter"
+   ]
+  },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel II: Urkunden und Pflichten der Parteien betreffend die Beförderung von Reisenden, Reisegepäck und Gütern"
+    }
+   ],
+   "marginalie": [
+    "Geltendmachung der Rechte des Absenders und des Empfängers"
+   ]
+  },
+  "15": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel II: Urkunden und Pflichten der Parteien betreffend die Beförderung von Reisenden, Reisegepäck und Gütern"
+    }
+   ],
+   "marginalie": [
+    "Rechtsverhältnisse zwischen Absender und Empfänger oder Dritten"
+   ]
+  },
+  "16": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel II: Urkunden und Pflichten der Parteien betreffend die Beförderung von Reisenden, Reisegepäck und Gütern"
+    }
+   ],
+   "marginalie": [
+    "Vorschriften der Zoll-, der Polizei- und anderer Behörden"
+   ]
+  },
+  "17": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel III: Haftung des Luftfrachtführers und Umfang des Schadenersatzes"
+    }
+   ],
+   "marginalie": [
+    "Tod und Körperverletzung von Reisenden – Beschädigung von Reisegepäck"
+   ]
+  },
+  "18": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel III: Haftung des Luftfrachtführers und Umfang des Schadenersatzes"
+    }
+   ],
+   "marginalie": [
+    "Beschädigung von Gütern"
+   ]
+  },
+  "19": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel III: Haftung des Luftfrachtführers und Umfang des Schadenersatzes"
+    }
+   ],
+   "marginalie": [
+    "Verspätung"
+   ]
+  },
+  "20": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel III: Haftung des Luftfrachtführers und Umfang des Schadenersatzes"
+    }
+   ],
+   "marginalie": [
+    "Haftungsbefreiung"
+   ]
+  },
+  "21": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel III: Haftung des Luftfrachtführers und Umfang des Schadenersatzes"
+    }
+   ],
+   "marginalie": [
+    "Schadenersatz bei Tod oder Körperverletzung von Reisenden"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "Haftungshöchstbetrag gemäss Änd. vom 16. Okt. 2024, in Kraft seit 28. Dez. 2024 (AS <b>2026</b> 106).",
+     "links": [
+      {
+       "label": "AS <b>2026</b> 106",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2026/106"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "Haftungshöchstbetrag gemäss Änd. vom 16. Okt. 2024, in Kraft seit 28. Dez. 2024 (AS <b>2026</b> 106).",
+     "links": [
+      {
+       "label": "AS <b>2026</b> 106",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2026/106"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "22": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel III: Haftung des Luftfrachtführers und Umfang des Schadenersatzes"
+    }
+   ],
+   "marginalie": [
+    "Haftungshöchstbeträge bei Verspätung sowie für Reisegepäck und Güter"
+   ],
+   "fussnoten": [
+    {
+     "nr": "6",
+     "text": "Haftungshöchstbetrag gemäss Änd. vom 16. Okt. 2024, in Kraft seit 28. Dez. 2024 (AS <b>2026</b> 106).",
+     "links": [
+      {
+       "label": "AS <b>2026</b> 106",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2026/106"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "7",
+     "text": "Haftungshöchstbetrag gemäss Änd. vom 16. Okt. 2024, in Kraft seit 28. Dez. 2024 (AS <b>2026</b> 106).",
+     "links": [
+      {
+       "label": "AS <b>2026</b> 106",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2026/106"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "8",
+     "text": "Haftungshöchstbetrag gemäss Änd. vom 16. Okt. 2024, in Kraft seit 28. Dez. 2024 (AS <b>2026</b> 106).",
+     "links": [
+      {
+       "label": "AS <b>2026</b> 106",
+       "url": "https://fedlex.data.admin.ch/eli/oc/2026/106"
+      }
+     ],
+     "absatz": "3",
+     "item": null
+    }
+   ]
+  },
+  "23": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel III: Haftung des Luftfrachtführers und Umfang des Schadenersatzes"
+    }
+   ],
+   "marginalie": [
+    "Umrechnung von Rechnungseinheiten"
+   ]
+  },
+  "24": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel III: Haftung des Luftfrachtführers und Umfang des Schadenersatzes"
+    }
+   ],
+   "marginalie": [
+    "Überprüfung der Haftungshöchstbeträge"
+   ]
+  },
+  "25": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel III: Haftung des Luftfrachtführers und Umfang des Schadenersatzes"
+    }
+   ],
+   "marginalie": [
+    "Vereinbarungen über Haftungshöchstbeträge"
+   ]
+  },
+  "26": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel III: Haftung des Luftfrachtführers und Umfang des Schadenersatzes"
+    }
+   ],
+   "marginalie": [
+    "Unwirksamkeit von Vertragsbestimmungen"
+   ]
+  },
+  "27": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel III: Haftung des Luftfrachtführers und Umfang des Schadenersatzes"
+    }
+   ],
+   "marginalie": [
+    "Vertragsfreiheit"
+   ]
+  },
+  "28": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel III: Haftung des Luftfrachtführers und Umfang des Schadenersatzes"
+    }
+   ],
+   "marginalie": [
+    "Vorauszahlungen"
+   ]
+  },
+  "29": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel III: Haftung des Luftfrachtführers und Umfang des Schadenersatzes"
+    }
+   ],
+   "marginalie": [
+    "Grundsätze für Ansprüche"
+   ]
+  },
+  "30": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel III: Haftung des Luftfrachtführers und Umfang des Schadenersatzes"
+    }
+   ],
+   "marginalie": [
+    "Leute des Luftfrachtführers – Mehrheit von Ansprüchen"
+   ]
+  },
+  "31": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel III: Haftung des Luftfrachtführers und Umfang des Schadenersatzes"
+    }
+   ],
+   "marginalie": [
+    "Fristgerechte Schadensanzeige"
+   ]
+  },
+  "32": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel III: Haftung des Luftfrachtführers und Umfang des Schadenersatzes"
+    }
+   ],
+   "marginalie": [
+    "Tod des Schadenersatzpflichtigen"
+   ]
+  },
+  "33": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel III: Haftung des Luftfrachtführers und Umfang des Schadenersatzes"
+    }
+   ],
+   "marginalie": [
+    "Gerichtsstand"
+   ]
+  },
+  "34": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel III: Haftung des Luftfrachtführers und Umfang des Schadenersatzes"
+    }
+   ],
+   "marginalie": [
+    "Schiedsverfahren"
+   ]
+  },
+  "35": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel III: Haftung des Luftfrachtführers und Umfang des Schadenersatzes"
+    }
+   ],
+   "marginalie": [
+    "Ausschlussfrist"
+   ]
+  },
+  "36": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel III: Haftung des Luftfrachtführers und Umfang des Schadenersatzes"
+    }
+   ],
+   "marginalie": [
+    "Aufeinanderfolgende Beförderung"
+   ]
+  },
+  "37": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel III: Haftung des Luftfrachtführers und Umfang des Schadenersatzes"
+    }
+   ],
+   "marginalie": [
+    "Rückgriffsrecht gegenüber Dritten"
+   ]
+  },
+  "38": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel IV: Gemischte Beförderung"
+    }
+   ],
+   "marginalie": [
+    "Gemischte Beförderung"
+   ]
+  },
+  "39": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel V: Luftbeförderung durch einen anderen als den vertraglichen Luftfrachtführer"
+    }
+   ],
+   "marginalie": [
+    "Vertraglicher Luftfrachtführer – Ausführender Luftfrachtführer"
+   ]
+  },
+  "40": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel V: Luftbeförderung durch einen anderen als den vertraglichen Luftfrachtführer"
+    }
+   ],
+   "marginalie": [
+    "Haftung des vertraglichen und des ausführenden Luftfrachtführers"
+   ]
+  },
+  "41": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel V: Luftbeförderung durch einen anderen als den vertraglichen Luftfrachtführer"
+    }
+   ],
+   "marginalie": [
+    "Wechselseitige Zurechnung"
+   ]
+  },
+  "42": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel V: Luftbeförderung durch einen anderen als den vertraglichen Luftfrachtführer"
+    }
+   ],
+   "marginalie": [
+    "Beanstandungen und Weisungen"
+   ]
+  },
+  "43": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel V: Luftbeförderung durch einen anderen als den vertraglichen Luftfrachtführer"
+    }
+   ],
+   "marginalie": [
+    "Leute der Luftfrachtführer"
+   ]
+  },
+  "44": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel V: Luftbeförderung durch einen anderen als den vertraglichen Luftfrachtführer"
+    }
+   ],
+   "marginalie": [
+    "Betrag des gesamten Schadenersatzes"
+   ]
+  },
+  "45": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel V: Luftbeförderung durch einen anderen als den vertraglichen Luftfrachtführer"
+    }
+   ],
+   "marginalie": [
+    "Beklagter"
+   ]
+  },
+  "46": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel V: Luftbeförderung durch einen anderen als den vertraglichen Luftfrachtführer"
+    }
+   ],
+   "marginalie": [
+    "Weiterer Gerichtsstand"
+   ]
+  },
+  "47": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel V: Luftbeförderung durch einen anderen als den vertraglichen Luftfrachtführer"
+    }
+   ],
+   "marginalie": [
+    "Unwirksamkeit vertraglicher Bestimmungen"
+   ]
+  },
+  "48": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel V: Luftbeförderung durch einen anderen als den vertraglichen Luftfrachtführer"
+    }
+   ],
+   "marginalie": [
+    "Innenverhältnis von vertraglichem und ausführendem Luftfrachtführer"
+   ]
+  },
+  "49": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel VI: Sonstige Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Zwingendes Recht"
+   ]
+  },
+  "50": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel VI: Sonstige Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Versicherung"
+   ]
+  },
+  "51": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel VI: Sonstige Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Beförderung unter aussergewöhnlichen Umständen"
+   ]
+  },
+  "52": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel VI: Sonstige Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Bestimmung des Begriffs «Tage»"
+   ]
+  },
+  "53": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel VII: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Unterzeichnung, Ratifikation und Inkrafttreten"
+   ]
+  },
+  "54": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel VII: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Kündigung"
+   ]
+  },
+  "55": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel VII: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Verhältnis zu anderen mit dem Warschauer Abkommen zusammenhängenden Übereinkünften"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "SR <b>0.748.410.1</b>",
+     "links": [
+      {
+       "label": "SR <b>0.748.410.1</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/3300"
+      }
+     ],
+     "absatz": null,
+     "item": "b"
+    },
+    {
+     "nr": "10",
+     "text": "SR <b>0.748.410.2</b>",
+     "links": [
+      {
+       "label": "SR <b>0.748.410.2</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/3301"
+      }
+     ],
+     "absatz": null,
+     "item": "c"
+    },
+    {
+     "nr": "11",
+     "text": "SR<b> 0.748.410.3</b>,<b>0.748.410.4</b>,<b>0.748.410.6</b>",
+     "links": [
+      {
+       "label": "SR<b> 0.748.410.3</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/3302"
+      },
+      {
+       "label": "<b>0.748.410.4</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/3303"
+      },
+      {
+       "label": "<b>0.748.410.6</b>",
+       "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/3304"
+      }
+     ],
+     "absatz": null,
+     "item": "e"
+    }
+   ]
+  },
+  "56": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel VII: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Staaten mit mehreren Rechtsordnungen"
+   ]
+  },
+  "57": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Kapitel VII: Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Vorbehalte"
+   ]
+  }
+ }
+}

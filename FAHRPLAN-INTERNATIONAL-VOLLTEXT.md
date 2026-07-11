@@ -76,11 +76,44 @@ Volltext gesamt **18**, Bund 228. Gate grün, Prod verifiziert (KRK 54 Art.).
 EMRK (0.101) — alle 10 Konsolidierungen 1982–2005 leer; NYÜ Schiedssprüche
 (0.277.12) — leer. Beide bleiben §8-Live-Link (kein Volltext-HTML existiert).
 
+## ERLEDIGT P4 — Fedlex-Portfolio Paket 4: 9 kuratierte Staatsverträge (10.7.2026, Roadmap W2·6)
+Detailquelle/§11-Beleg: `bibliothek/register/fedlex-staatsvertraege-2026-07-10.md`.
+Königsweg = bestehende konsolidierte `eli/cc`-Pipeline (kein `eli/treaty`-Extraktor,
+kein neues Format/Skript). **9 neu als Volltext (rang 110–118):** HKsÜ 96 (0.211.231.011),
+HUVÜ 1973 (0.211.213.02 — amtlich das Übk. vom 2.10.1973, nicht 2007), EAUe (0.353.1),
+CMR (0.741.611), Montreal (0.748.411), RBÜ (0.231.15), UNO-BRK (0.109), Istanbul-Konv.
+(0.311.35), Apostille (0.172.030.4). **POC-Befund:** SPARQL-Graph exponiert **keine**
+strukturierte Vertragsparteien-/Ratifikations-Kante → «Geltungsbereich am …»-Anhang
+verbatim als `annex_*` (deterministisch, nichts geraten); **html-0 bei 5/9 stale** →
+kanonische html-N via `isExemplifiedBy` gepinnt (HUVÜ=3, EAUe=5, CMR=3, RBÜ=2, Istanbul=1,
+Apostille=4); **Apostille geltend 2024-09-04** (Arbiter `check:fedlex-versionen`), nicht
+die 2016er-Shell-Fassung. Testimonium «Zu Urkund dessen» (`schlussint`) bewusst als
+nicht-normative Boilerplate in `check:p-klassen` dokumentiert. International-Volltext
+gesamt **27**, Bund 227. Alle Tore grün; adversariale Gegenprüfung (Opus) bestanden.
+
+**Bewusst NICHT gebaut (Scope-Disziplin):** ESÜ (0.211.230.01, durch HKsÜ überholt),
+WÜD/WÜK (0.191.01/.02, Immunitäts-Nische), DBA-DE (0.672.913.62, Struktur-/Scope-Creep-
+Risiko → eigenes DBA-Paket), EPÜ 2000 (0.232.142.2, kein HTML UND kein PDF/A → nur Live-Link).
+
+## OFFEN — Extraktor-Ausbau Geltungsbereich/Vorbehalte (korpusweit, aus P4-Gegenprüfung 10.7.2026)
+**Befund:** Der Fedlex-Extraktor erfasst den `<div id="annex">`-Anhang (`annex_*`), aber **nicht**
+die separate `<div id="scope">`-Sektion — **`scope_u1` «Geltungsbereich am …»** (Vertragsstaaten/
+Ratifikation/Inkrafttreten je Partei) und **`decl_u2`/`decl_u3` «Vorbehalte und Erklärungen (Schweiz)»**
+(für die CH normativ). Betrifft **alle 27** Staatsverträge **korpusweit gleich** (die 18 deployten
+droppen sie byte-identisch, verifiziert an KRK) — kein P4-Regress, sondern eine bestehende
+Extraktor-Grenze. Bis dahin: vollständige Fassung inkl. Geltungsbereich/Vorbehalten über den
+amtlichen Live-Link (§7c, nicht stumm — L0/§8). **Fix (eigene Bau-Einheit):** neuer
+`<div id="scope">`-Scanner in `scripts/normtext/extrahiere-fedlex.ts` analog `alleAnhangAnker`
+(dieselbe `extrahiereAnhang`-Block-Maschine), dann Re-Extraktion **aller** Staatsverträge (je
+eigener Golden-Diff + Gegenprüfung; §6/§14.2). Risiko-Pfad, Opus.
+**Priorität (Gegenprüfer-Hinweis 10.7.):** `decl_*` «Vorbehalte und Erklärungen Schweiz»
+ZUERST — sie sind für die CH **materiell verbindliches Recht** (stabil); die `scope_*`-
+Geltungsbereichs-/Parteien-Tabelle ist nachrangig (zeitveränderliche Verwaltungsdaten,
+Fedlex führt dafür eine eigene Live-Fassung).
+
 ## OFFEN P2-Rest — noch mehr SR 0.* (optional, gleiche Mechanik + Gehalt-Test)
-Kandidaten: weitere Haager Übk. (0.211.221.*, 0.211.231.*), Rechtshilfe Strafsachen
-(0.351.*), Doppelbesteuerung-Muster, NYÜ Schiedssprüche (0.277.12), UNO-Pakt I
-(0.103.1), Kinderrechtskonvention (0.107), CEDAW (0.108), Anti-Folter (0.105),
-weitere Bilaterale CH–EU. Pro Vertrag derselbe Pfad wie P1.
+Kandidaten: weitere Rechtshilfe Strafsachen (0.351.*), Doppelbesteuerung-Paket (DBA,
+kohärent statt einzeln), weitere Bilaterale CH–EU, WÜD/WÜK. Pro Vertrag derselbe Pfad.
 
 ## ERLEDIGT P3 — `/gesetze`-Übersicht neu designt (inkl. International) — Commit `0f9a9043`
 `src/pages/Gesetze.tsx` umgebaut: Bund / Kantone / **International** sind

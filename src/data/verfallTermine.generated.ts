@@ -66,6 +66,30 @@ export const VERFALL_TERMINE: VerfallTermin[] = [
     "rhythmus": "einmalig — Fedlex-Konsolidierung, dann re-pinnen (§7)"
   },
   {
+    "label": "Künftige Fassung LRV (SR 814.318.142.1)",
+    "datum": "2026-08-01",
+    "quelle": "Tabelle",
+    "fundstelle": "`scripts/fedlex-cache.sh` (LRV)",
+    "wert": "gepinnt 1.1.2026",
+    "rhythmus": "einmalig — Fedlex-Konsolidierung, dann re-pinnen (§7)"
+  },
+  {
+    "label": "Künftige Fassung USG (SR 814.01)",
+    "datum": "2026-08-01",
+    "quelle": "Tabelle",
+    "fundstelle": "`scripts/fedlex-cache.sh` (USG)",
+    "wert": "gepinnt 1.4.2026",
+    "rhythmus": "einmalig — Fedlex-Konsolidierung, dann re-pinnen (§7)"
+  },
+  {
+    "label": "Künftige Fassung VVEA (SR 814.600)",
+    "datum": "2026-08-01",
+    "quelle": "Tabelle",
+    "fundstelle": "`scripts/fedlex-cache.sh` (VVEA)",
+    "wert": "gepinnt 1.1.2026",
+    "rhythmus": "einmalig — Fedlex-Konsolidierung, dann re-pinnen (§7)"
+  },
+  {
     "label": "Künftige Fassung ZEMIS-V (SR 142.513)",
     "datum": "2026-08-01",
     "quelle": "Tabelle",
@@ -94,6 +118,14 @@ export const VERFALL_TERMINE: VerfallTermin[] = [
     "datum": "2026-10-01",
     "quelle": "Tabelle",
     "fundstelle": "`scripts/fedlex-cache.sh` (BBG)",
+    "wert": "gepinnt 1.3.2025",
+    "rhythmus": "einmalig — Fedlex-Konsolidierung, dann re-pinnen (§7)"
+  },
+  {
+    "label": "Künftige Fassung BBV (SR 412.101)",
+    "datum": "2026-10-01",
+    "quelle": "Tabelle",
+    "fundstelle": "`scripts/fedlex-cache.sh` (BBV)",
     "wert": "gepinnt 1.3.2025",
     "rhythmus": "einmalig — Fedlex-Konsolidierung, dann re-pinnen (§7)"
   },
@@ -127,6 +159,14 @@ export const VERFALL_TERMINE: VerfallTermin[] = [
     "quelle": "Tabelle",
     "fundstelle": "`scripts/fedlex-cache.sh` (GWG)",
     "wert": "gepinnt 1.3.2024",
+    "rhythmus": "einmalig — Fedlex-Konsolidierung, dann re-pinnen (§7)"
+  },
+  {
+    "label": "Künftige Fassung HRegV (SR 221.411)",
+    "datum": "2026-10-01",
+    "quelle": "Tabelle",
+    "fundstelle": "`scripts/fedlex-cache.sh` (HREGV)",
+    "wert": "gepinnt 1.1.2025",
     "rhythmus": "einmalig — Fedlex-Konsolidierung, dann re-pinnen (§7)"
   },
   {
