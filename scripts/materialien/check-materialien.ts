@@ -54,6 +54,10 @@ import { wortfeldTreffer, wortfeldImQuellcode } from './wortfeld.ts';
 
 // ══ Gate ════════════════════════════════════════════════════════════════════════
 const QUELLEN_ENUM = new Set(['amtlich', 'kuratiert', 'maschinell']);
+const VERN_STATUS = new Set([
+  'in-vorbereitung', 'geplant', 'laufend',
+  'abgeschlossen-stellungnahmen', 'abgeschlossen-bericht', 'abgeschlossen', 'zurueckgezogen',
+]);
 const KEY_UNSICHER = /[\\/#?\s]/;
 const ISO = /^\d{4}-\d{2}-\d{2}$/;
 const DB_BUDGET_MB = 50;
@@ -81,6 +85,12 @@ function main(): void {
 
   const datumArg = process.argv.find((a) => a.startsWith('--datum='));
   const heute = datumArg?.slice('--datum='.length);
+  // Für die Vernehmlassungs-Staleness-Assertion (Finding 7) IMMER gegen den echten heutigen
+  // Tag prüfen, auch ohne --datum im Default-gate (das ist der belastbare Currency-Schutz,
+  // da check:vernehmlassungen-netz nicht im Default-gate läuft). Kein Engine-Date.now (§2) —
+  // dies ist ein Staleness-Tor; eine abgelaufene «laufend»-Frist SOLL das Tor rot machen und
+  // zur Neu-Generierung zwingen.
+  const heuteEff = heute ?? new Date().toISOString().slice(0, 10);
 
   // ── 1. Register-Grundchecks (kuratiert + generierte Botschaften) ──────────────
   const gesehen = new Set<string>();
@@ -105,6 +115,32 @@ function main(): void {
       if (r.botschaftDate !== r.stand) fehler.push(`${r.key}: botschaftDate (${r.botschaftDate}) ≠ stand (${r.stand}).`);
       if (!/^https:\/\/www\.fedlex\.admin\.ch\/eli\/fga\//.test(r.quelleUrl)) {
         fehler.push(`${r.key}: quelleUrl ist kein Fedlex-fga-Live-Link: ${r.quelleUrl}.`);
+      }
+    }
+    // Vernehmlassungen (Paket 3, W3·11): Status-/Frist-/Konsistenz-Invarianten.
+    if (r.behoerde === 'BUND') {
+      if (r.doktyp !== 'vernehmlassung') fehler.push(`${r.key}: BUND-Eintrag mit doktyp '${r.doktyp}' ≠ 'vernehmlassung'.`);
+      if (!r.normKeys || r.normKeys.length === 0) fehler.push(`${r.key}: Vernehmlassung ohne normKeys (verwaist, §8).`);
+      if (!/^https:\/\/www\.fedlex\.admin\.ch\/eli\/dl\/proj\//.test(r.quelleUrl)) {
+        fehler.push(`${r.key}: quelleUrl ist kein Fedlex-Vernehmlassungs-Live-Link (eli/dl/proj): ${r.quelleUrl}.`);
+      }
+      const v = r.vernehmlassung;
+      if (!v) {
+        fehler.push(`${r.key}: Vernehmlassung ohne vernehmlassung-Feld (Status/Frist fehlen, §8).`);
+      } else {
+        if (!VERN_STATUS.has(v.status)) fehler.push(`${r.key}: Vernehmlassungs-Status '${v.status}' ∉ Enum (${[...VERN_STATUS].join('|')}).`);
+        if (!v.projEli) fehler.push(`${r.key}: Vernehmlassung ohne projEli (Gesetzgebungs-Graph-Anker fehlt).`);
+        if (v.fristStart && !ISO.test(v.fristStart)) fehler.push(`${r.key}: fristStart kein ISO-Datum: ${v.fristStart}.`);
+        if (v.fristEnde && !ISO.test(v.fristEnde)) fehler.push(`${r.key}: fristEnde kein ISO-Datum: ${v.fristEnde}.`);
+        if (v.fristStart && v.fristEnde && v.fristStart > v.fristEnde) {
+          fehler.push(`${r.key}: fristStart ${v.fristStart} > fristEnde ${v.fristEnde} (unmöglicher Zeitraum).`);
+        }
+        // Finding 7 (P0, user-sichtbar): 'laufend' mit abgelaufener Frist gegen HEUTE (nicht gegen
+        // das mit-alternde stand) = still-falsche «läuft»-Anzeige → rot. Offline-Schutz, da
+        // check:vernehmlassungen-netz (Currency-Arbiter) NICHT im Default-gate läuft.
+        if (v.status === 'laufend' && v.fristEnde && v.fristEnde < heuteEff) {
+          fehler.push(`${r.key}: Status 'laufend', aber fristEnde ${v.fristEnde} < heute ${heuteEff} — Konsistenz-Verstoss (Finding 7). Neu generieren (materialien:vernehmlassungen).`);
+        }
       }
     }
   }

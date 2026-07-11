@@ -4,6 +4,7 @@ import {
   MATERIAL_REGISTER, BEHOERDEN, DOKTYPEN, DOKTYP_LABEL, behoerdeVon,
 } from '../lib/materialien/register';
 import { BOTSCHAFTEN } from '../lib/materialien/botschaften.generated';
+import { VERNEHMLASSUNGEN } from '../lib/materialien/vernehmlassungen.generated';
 import { baueMaterialManifest } from '../../scripts/materialien/material-manifest';
 import { projiziereRegister, dbDokAusZustand } from '../../scripts/materialien/soft-law-projektion';
 import { ladeZustand } from '../../scripts/materialien/soft-law-zustand';
@@ -73,11 +74,14 @@ describe('Tor 2 — committetes Manifest == frischer Build (Merge-Modell §2.7, 
     const kuratiertKeys = new Set(MATERIAL_REGISTER.map((m) => m.key));
     const registerKeys = new Set(committet.materialien.map((m) => m.key));
     for (const k of kuratiertKeys) expect(registerKeys.has(k)).toBe(true);
-    // Paket 2 (W2·6): + generierte Botschaften (nicht im in-Bundle MATERIAL_REGISTER, §15;
-    // gemerged in die Projektion via ALLE_MATERIALIEN). Länge = kuratiert + Botschaften + DB.
-    expect(committet.materialien.length).toBe(MATERIAL_REGISTER.length + BOTSCHAFTEN.length + dbDocs.length);
+    // Paket 2 (W2·6) + Paket 3 (W3·11): + generierte Botschaften/Vernehmlassungen (nicht im
+    // in-Bundle MATERIAL_REGISTER, §15; gemerged via ALLE_MATERIALIEN). Länge = kuratiert +
+    // Botschaften + Vernehmlassungen + DB.
+    expect(committet.materialien.length).toBe(MATERIAL_REGISTER.length + BOTSCHAFTEN.length + VERNEHMLASSUNGEN.length + dbDocs.length);
     const botschaften = committet.materialien.filter((m) => m.behoerde === 'BR');
     expect(botschaften.length).toBe(BOTSCHAFTEN.length);
+    const vernehmlassungen = committet.materialien.filter((m) => m.behoerde === 'BUND');
+    expect(vernehmlassungen.length).toBe(VERNEHMLASSUNGEN.length);
   });
 
   it('jeder Manifest-Eintrag löst Behörde-/Doktyp-Labels auf', () => {

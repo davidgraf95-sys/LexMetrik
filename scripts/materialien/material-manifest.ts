@@ -24,11 +24,14 @@ import type {
 // in die lazy register.json-Projektion (Browse + Kontext-Panel), ohne den App-Bundle zu
 // belasten. Diese Datei ist ein scripts/-Modul (kein src-Import → kein Bundling).
 import { BOTSCHAFTEN } from '../../src/lib/materialien/botschaften.generated.ts';
+// Vernehmlassungen (Paket 3, W3·11): analog zu den Botschaften nur hier gemerged (Build-Zeit),
+// nie im App-Bundle (§15). Fliessen in die lazy register.json-Projektion.
+import { VERNEHMLASSUNGEN } from '../../src/lib/materialien/vernehmlassungen.generated.ts';
 
 /** Alle kuratierten + generierten Materialien-Register-Einträge (Build-Zeit-SSoT der
- *  Projektion). Botschaften nur hier, nie im App-Bundle (§15). */
+ *  Projektion). Botschaften + Vernehmlassungen nur hier, nie im App-Bundle (§15). */
 export const ALLE_MATERIALIEN: ReadonlyArray<MaterialRegistereintrag> = [
-  ...MATERIAL_REGISTER, ...BOTSCHAFTEN,
+  ...MATERIAL_REGISTER, ...BOTSCHAFTEN, ...VERNEHMLASSUNGEN,
 ];
 
 export const REGISTER_PFAD = join('public', 'materialien', 'register.json');
@@ -46,6 +49,13 @@ export function shaEintrag(r: MaterialRegistereintrag): string {
     ...(r.behoerde === 'BR'
       ? [r.titelFr ?? '', r.titelIt ?? '', r.projEli ?? '', (r.ocUris ?? []).join(',')]
       : []),
+    // Vernehmlassungen (Paket 3, BUND): Titel FR/IT + Verfahrens-Zustand (Status/Frist/projEli)
+    // im Drift-Token — Currency-Token für den mutablen Status. NUR für BUND anhängen →
+    // bestehende Einträge (kuratiert/BR) byte-identisch.
+    ...(r.behoerde === 'BUND'
+      ? [r.titelFr ?? '', r.titelIt ?? '', r.vernehmlassung?.status ?? '',
+         r.vernehmlassung?.fristStart ?? '', r.vernehmlassung?.fristEnde ?? '', r.vernehmlassung?.projEli ?? '']
+      : []),
   ].join('');
   return createHash('sha256').update(norm, 'utf8').digest('hex');
 }
@@ -62,6 +72,15 @@ function browseEintrag(r: MaterialRegistereintrag): BrowseMaterial {
         ...(r.ocUris ? { ocUris: r.ocUris } : {}),
         ...(r.botschaftDate ? { botschaftDate: r.botschaftDate } : {}),
         ...(r.artAnker ? { artAnker: r.artAnker } : {}),
+      }
+    : {};
+  // Vernehmlassungs-Zusatzfelder NUR für BUND emittieren (Paket 3) → bestehende Einträge
+  // byte-identisch (keine neuen Keys in kuratierten/BR-register.json-Zeilen).
+  const vernehmlassungsFelder = r.behoerde === 'BUND'
+    ? {
+        ...(r.titelFr ? { titelFr: r.titelFr } : {}),
+        ...(r.titelIt ? { titelIt: r.titelIt } : {}),
+        ...(r.vernehmlassung ? { vernehmlassung: r.vernehmlassung } : {}),
       }
     : {};
   return {
@@ -82,6 +101,7 @@ function browseEintrag(r: MaterialRegistereintrag): BrowseMaterial {
     normKeys: r.normKeys ?? [],
     hinweis: r.hinweis ?? null,
     ...botschaftsFelder,
+    ...vernehmlassungsFelder,
     sha: shaEintrag(r),
   };
 }

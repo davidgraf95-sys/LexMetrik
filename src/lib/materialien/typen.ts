@@ -35,7 +35,8 @@ export type BehoerdeId =
   | 'FINMA'  // Eidg. Finanzmarktaufsicht
   | 'BSV'    // Bundesamt für Sozialversicherungen
   | 'IGE'    // Eidg. Institut für Geistiges Eigentum
-  | 'BR';    // Bundesrat (Botschaften / Bundesblatt — Paket 2, W2·6)
+  | 'BR'     // Bundesrat (Botschaften / Bundesblatt — Paket 2, W2·6)
+  | 'BUND';  // Bund generisch (Vernehmlassungen: BR/Departemente ODER parl. Kommissionen — Paket 3, W3·11)
 
 export interface Behoerde {
   id: BehoerdeId;
@@ -63,7 +64,20 @@ export type DoktypId =
   | 'taetigkeitsbericht'
   | 'anleitung'
   | 'botschaft' // Botschaft des Bundesrates (Entstehungsgeschichte) — Paket 2, W2·6
+  | 'vernehmlassung' // Vernehmlassung / Anhörung (Gesetzgebung in Arbeit) — Paket 3, W3·11
   | 'mitteilung';
+
+// ── Vernehmlassungs-Status (amtliches Vokabular consultation-status/0–6, 1:1) ──
+// Paket 3 (W3·11): mutabler Zustand eines Vernehmlassungsverfahrens. Löst die
+// «laufend vs. abgeschlossen»-Frage amtlich (kein Heuristik-Rateschritt, §2).
+export type VernehmlassungStatus =
+  | 'in-vorbereitung'            // 0
+  | 'geplant'                    // 1
+  | 'laufend'                    // 2 — Anhörung offen (Frist-Badge)
+  | 'abgeschlossen-stellungnahmen' // 3
+  | 'abgeschlossen-bericht'      // 4
+  | 'abgeschlossen'              // 5
+  | 'zurueckgezogen';            // 6
 
 export interface Doktyp {
   id: DoktypId;
@@ -108,6 +122,17 @@ export interface MaterialRegistereintrag {
   botschaftDate?: string;
   /** Grobe art_*-Zuordnung (Moat-Hebel 2, artikelweise Genese; heute meist leer). */
   artAnker?: string[];
+  // ── Vernehmlassungs-Zusatzfeld (Paket 3, W3·11; nur bei doktyp==='vernehmlassung') ──
+  /** Verfahrens-Zustand + Frist + Projekt-Anker. status ist mutabel → Currency-Arbiter
+   *  ist das Netz-Tor; die Offline-Assertion `laufend && fristEnde < heute ⇒ rot` schützt
+   *  gegen still-falsche «läuft»-Anzeige (Finding 7). projEli = Gesetzgebungs-Graph-Anker
+   *  (aus der cons-URI, data.admin.ch-Host). */
+  vernehmlassung?: {
+    status: VernehmlassungStatus;
+    fristStart?: string; // ISO YYYY-MM-DD; fehlt bei Status in-vorbereitung/geplant
+    fristEnde?: string;  // ISO YYYY-MM-DD
+    projEli: string;
+  };
   /**
    * Kuratierte artikelscharfe Bezüge (E6a·M5, quelle='kuratiert'): der Artikel,
    * den das Dokument im amtlichen TITEL nennt, als Korpus-Token je Erlass
@@ -148,6 +173,13 @@ export interface BrowseMaterial {
   ocUris?: string[];
   botschaftDate?: string;
   artAnker?: string[];
+  // ── Vernehmlassungs-Zusatzfeld (Paket 3; nur bei doktyp==='vernehmlassung' gesetzt) ──
+  vernehmlassung?: {
+    status: VernehmlassungStatus;
+    fristStart?: string;
+    fristEnde?: string;
+    projEli: string;
+  };
   /** sha-256 über die Identitätsfelder (Drift-/Provenienz-Token). */
   sha: string;
 }

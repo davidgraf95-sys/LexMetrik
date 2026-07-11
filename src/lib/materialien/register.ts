@@ -36,6 +36,10 @@ export const BEHOERDEN: ReadonlyArray<Behoerde> = [
   // die ~400 generierten Botschaften stehen in der Browse-Rubrik hinter den
   // kuratierten Behörden-Publikationen (Doktyp-Filter «Botschaft» trennt sie).
   { id: 'BR', kuerzel: 'BR', name: 'Bundesrat (Botschaften)', rang: 8 },
+  // Bund generisch: Vernehmlassungen (Gesetzgebung in Arbeit, Paket 3, W3·11). rang zuletzt →
+  // die generierten Verfahren stehen hinter Botschaften; eröffnende Stelle (BR/Departement/
+  // Kommission) variiert je Verfahren, daher generische Behörde statt 'BR'.
+  { id: 'BUND', kuerzel: 'Bund', name: 'Bund (Vernehmlassungen)', rang: 9 },
 ];
 
 export const BEHOERDE_RANG: Record<BehoerdeId, number> = Object.fromEntries(
@@ -64,6 +68,7 @@ export const DOKTYPEN: ReadonlyArray<Doktyp> = [
   { id: 'anleitung', label: 'Anleitung' },
   { id: 'taetigkeitsbericht', label: 'Tätigkeitsbericht' },
   { id: 'botschaft', label: 'Botschaft' },
+  { id: 'vernehmlassung', label: 'Vernehmlassung' },
   { id: 'mitteilung', label: 'Praxismitteilung' },
 ];
 

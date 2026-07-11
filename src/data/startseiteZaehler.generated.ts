@@ -32,7 +32,7 @@ export const STARTSEITE_ZAEHLER: StartseiteZaehler = {
   "gesetzeKantonVolltext": 1231,
   "gesetzeVolltext": 1458,
   "rechtsprechungVolltext": 342,
-  "materialien": 727,
+  "materialien": 1549,
   "rechner": 23,
   "vorlagen": 26,
   "standGesetze": "2026-07-10",
