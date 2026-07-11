@@ -27,8 +27,9 @@ import { ladeLeitfallShard, normArtikelToken, type LeitfallShard } from '../../l
 import { ladeRevisionShard, revisionFuerToken, type RevisionShard } from '../../lib/verzahnung/artikel-revisionen';
 import {
   paneRoot, istAnhangToken, findeArt,
-  berechneSekPos, berechneSektionMeta, berechneSekLabelById, baueErlassText,
+  berechneSekPos, berechneSektionMeta, berechneSekLabelById,
 } from './berechnungen';
+import { AmtlichesPdf } from './parts/AmtlichesPdf';
 
 // ═══ ABSCHNITT · Reine Rechenlogik ausgelagert (QS-TOK/P5, §6 Ziff. 6) ═══════
 // paneRoot/istAnhangToken/findeArt (Pane-Scoping, referenzstabil, KEIN React
@@ -795,7 +796,7 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
           overline={`${erlass.ebene === 'bund' ? 'Staatsvertrag' : `Kanton ${erlass.kanton}`} · amtliches PDF`}
           hinweis="Amtliches PDF — massgeblich ist die amtliche Fassung"
           aktionen={
-            <a href={`/normtext/${erlass.pdfPfad}`} download={`${erlass.kuerzel}.pdf`} className="lc-chip no-underline hover:text-brass-700" title="Amtliches PDF herunterladen">⬇ PDF herunterladen</a>
+            <AmtlichesPdf href={`/normtext/${erlass.pdfPfad}`} stand={erlass.stand} extern={false} dateiname={`${erlass.kuerzel}.pdf`} />
           } />
         {/* M5: Erlass-Kopf-Slot auch im pdf-embed-Pfad (für PDF-Erlasse ohne
             Struktur-Sidecar bleibt kopf=null → nichts gerendert). */}
@@ -875,13 +876,6 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   };
   const fn = (tok: string) => struktur?.[tok]?.fussnoten;
 
-  // S8 (BS-Audit 23.6.2026): Doppeltitel «Advokaturgesetz — Advokaturgesetz
-  // (291.100)» vermeiden. Trägt der Volltitel (ohne abschliessendes «(…)»-Suffix,
-  // z. B. die SR-Nr.) denselben Wortlaut wie das Kürzel, ist der «— {titel}»-Teil
-  // reine Wiederholung → weglassen. Reine Darstellung (§3); keine Datenänderung.
-  const titelOhneSuffix = erlass.titel.replace(/\s*\([^)]*\)\s*$/, '').trim();
-  const titelRedundant = titelOhneSuffix.toLowerCase() === erlass.kuerzel.trim().toLowerCase();
-
   // N13 (BS-Audit 23.6.2026): die Reader-Overline zeigte für JEDEN kantonalen
   // Erlass stur das Einheits-Rechtsgebiet («Öffentliches Recht»). Stattdessen das
   // echte Sachgebiet aus der amtlichen Kanton-Systematik (sachgruppe→topTitel).
@@ -908,18 +902,6 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
   // Artikel-Bereich «Art. 1–10» + Einzelartikel-Flag je Sektion kommen aus dem
   // `sektionMeta`-useMemo (Rank 4) — einmal bottom-up berechnet statt je Render.
 
-  // Erlass als Gesamtheit herunterladen (client-seitig, reiner Text) —
-  // Text-Aufbau ausgelagert nach ./berechnungen.ts (baueErlassText).
-  const herunterladen = () => {
-    if (typeof document === 'undefined') return;
-    const blob = new Blob([baueErlassText(erlass, eintraege, struktur, titelRedundant)], { type: 'text/plain;charset=utf-8' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `${erlass.kuerzel.replace(/[^\w.-]/g, '_')}.txt`;
-    a.click();
-    URL.revokeObjectURL(url);
-  };
 
   // Jede Sektionsstufe ist klappbar (Fedlex-analog); Inhalt rendert nur offen.
   // Randtitel-promotete Knoten (s.randtitel) bekommen einen ruhigen Einzug-Strich,
@@ -1004,7 +986,13 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
         hinweis="Snapshot — massgeblich ist die amtliche Fassung"
         aktionen={
           <>
-            <button type="button" onClick={herunterladen} className="lc-chip hover:text-brass-700" title="Ganzen Erlass als Textdatei herunterladen">⬇ Herunterladen</button>
+            {/* W2·5d U-PDF/A12: Download = AMTLICHES PDF der gepinnten Fassung
+                (Bund Fedlex-Filestore / Kanton LexWork; aus erlass.pdfUrl,
+                synchron am Erlass ⇒ CLS 0, §15/2). Fehlt die amtliche PDF-URL,
+                entfällt die Aktion (nie render-eigenes PDF, §8/§10.5). */}
+            {erlass.pdfUrl && (
+              <AmtlichesPdf href={erlass.pdfUrl} stand={erlass.pdfStand ?? erlass.stand} extern />
+            )}
             {/* Dasselbe Gesetz zusätzlich in einem zweiten Reiter öffnen (Auftrag
                 David) — zum Vergleich zweier Stellen; die Reiter unterscheiden sich
                 im Label über den Artikel («OR – Art. 41» / «OR – Art. 97»). */}

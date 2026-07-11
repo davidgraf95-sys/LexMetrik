@@ -4,11 +4,9 @@
 // Hooks, Effekte und das Rendering bleiben in inhalt.tsx. Die useMemo-Rümpfe rufen
 // diese Funktionen mit denselben Deps auf (byte-gleiche Ableitung, golden + e2e).
 import type { RefObject } from 'react';
-import { trenneAenderungshistorie, labelMitBereich } from '../../lib/normtext/darstellung';
-import type { Sektion, StrukturMap } from '../../lib/normtext/browse';
-import type { BrowseErlass } from '../../lib/normtext/browse-typen';
+import type { Sektion } from '../../lib/normtext/browse';
 import type { NormSnapshot } from '../../lib/normtext/typen';
-import { formatiereDatum, romanFrei } from './helpers';
+import { romanFrei } from './helpers';
 
 // ─── Pane-Scoping-Helfer (B-2.5) — MODUL-Ebene = referenzstabil ────────────
 // Bewusst KEIN React Compiler im Projekt → in-Komponente definierte Funktionen
@@ -153,43 +151,4 @@ export function schaetzeArtikelHoehe(e: NormSnapshot): number {
     if (b.mehrspaltig) h += (b.mehrspaltig.zeilen.length + 1) * 30 + 14;             // Mehrspalten-Tabelle inkl. Kopf
   }
   return Math.max(120, Math.round(h));
-}
-
-// Erlass als Gesamtheit herunterladen (client-seitig, reiner Text).
-export function baueErlassText(
-  erlass: BrowseErlass,
-  eintraege: NormSnapshot[],
-  struktur: StrukturMap | null,
-  titelRedundant: boolean,
-): string {
-  const L: string[] = [
-    titelRedundant ? erlass.kuerzel : `${erlass.kuerzel} — ${erlass.titel}`,
-    [erlass.sr ? `SR ${erlass.sr}` : '', erlass.stand ? `Stand ${formatiereDatum(erlass.stand)}` : ''].filter(Boolean).join(' · '),
-    `Quelle: ${erlass.quelleUrl}`,
-    'Heruntergeladen aus LexMetrik — massgeblich ist die amtliche Fassung (Live-Link).',
-    '',
-  ];
-  let prev: string[] = [];
-  for (const e of eintraege) {
-    const st = struktur?.[e.artikel];
-    const gl = st?.gliederung ?? [];
-    for (let i = 0; i < gl.length; i++) {
-      if (gl[i].label !== prev[i]) L.push('', `${'#'.repeat(Math.min(gl[i].ebene, 4))} ${gl[i].label}`);
-    }
-    prev = gl.map((g) => g.label);
-    const m = st?.marginalie ?? [];
-    L.push('', `${labelMitBereich(e.artikelLabel, e.artikel)}${m.length ? `  [${m.join(' · ')}]` : ''}`);
-    for (const b of e.bloecke) {
-      // Eingemischte Änderungshistorie (verdoppelte Fussnoten-Nr) abtrennen.
-      const { wortlaut, historie } = trenneAenderungshistorie(b.text);
-      const txt = wortlaut.trim() ? wortlaut : historie ? '[aufgehoben]' : b.text;
-      L.push(`${b.absatz ? `${b.absatz} ` : ''}${txt}`);
-      for (const it of b.items ?? []) L.push(`    ${it.marke}. ${it.text}`);
-      // Extrahierte Historie nur, wenn keine amtliche Sidecar-Fussnote da ist
-      // (sonst Doppelung mit der Fussnoten-Schleife unten).
-      if (historie && !(st?.fussnoten?.length)) L.push(`    — ${historie}`);
-    }
-    for (const f of st?.fussnoten ?? []) L.push(`  [${f.nr}] ${f.text}`);
-  }
-  return L.join('\n');
 }

@@ -702,8 +702,15 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   + e2e grün, `Gegenpruefung: n/a` · U-UEBERSICHT (A14/A15: Titel umbrechen statt kappen,
   Relevanz-Sortierung dokumentiert-deterministisch, Gliederungs-Umschalter
   Relevanz/Systematisch/Rechtsgebiet auf allen 3 Säulen; G6 = Modus statt vierte
-  Tür) · U-PDF (A12: Download = amtliches PDF der gepinnten Fassung, SPARQL
-  build-time, Pin-Überwachung). A18 (BGE-Regeste nach Sprachen) → W2·6-B B2.
+  Tür) · **U-PDF ✅ AUSGEFÜHRT (11.7., PR `feat/u-pdf-a12`, Auto-Merge armiert;
+  Ausführungsvermerk `FAHRPLAN-GESETZES-UX.md` §10.7):** Download = amtliches PDF
+  der gepinnten Fassung (Bund Fedlex-`isExemplifiedBy` build-time — Suffix-Falle `-2`
+  durch exakte URL statt Konstruktion gelöst, 218/218; Kanton LexWork bei Versions-
+  Gleichstand, 1184/1231; Staatsvertrag self-hosted; render-eigenes `.txt` entfernt,
+  §10.5); neues Tor `check:pdf-quellen` bindet die PDF-URL an die `fedlex-cache.sh`-
+  Pins; `Gegenpruefung: bestanden` (P5-Stichprobe 12, Fassungsdatum-im-PDF-Beweis
+  inkl. `-2`). **Damit ist die kollisionsarme A1–A18-Welle gebaut; offen nur das in
+  CI laufende U-POSITION (A2/A16/A17).** A18 (BGE-Regeste nach Sprachen) → W2·6-B B2.
   A9 = DoD-Querschnitt (CPU-Throttle-Beweis) in jedem Bau-Prompt. **Kollisions-
   Precheck gegen laufende Worktrees (lm-qsperf/lm-l0) vor jeder Einheit; W2·7-Klingen
   #154 und W2·6a-MAT sind gemergt — nicht mehr live.** Trailer `Roadmap: W2·5d`.
