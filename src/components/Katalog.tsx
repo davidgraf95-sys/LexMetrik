@@ -116,15 +116,19 @@ function FristenRegister({ karten }: { karten: CalculatorCard[] }) {
 
   return (
     <div className="space-y-5">
-      <div className="space-y-2">
-        <div className="flex items-center gap-3">
-          <h3 className="lc-overline text-brass-700">Fristen berechnen</h3>
-          <span aria-hidden className="flex-1 h-px bg-line" />
+      {/* W2·10-UI-NAV/N0d·W4: Kopf «Fristen berechnen» nur, wenn Haupteinstiege
+          vorhanden sind — bei aktivem Übersichts-Filter sonst leerer Kopf. */}
+      {haupt.length > 0 && (
+        <div className="space-y-2">
+          <div className="flex items-center gap-3">
+            <h3 className="lc-overline text-brass-700">Fristen berechnen</h3>
+            <span aria-hidden className="flex-1 h-px bg-line" />
+          </div>
+          <div className="grid grid-cols-1 gap-3">
+            {haupt.map((h) => <FristenHauptKarte key={h.id} k={h.k} untertitel={h.untertitel} />)}
+          </div>
         </div>
-        <div className="grid grid-cols-1 gap-3">
-          {haupt.map((h) => <FristenHauptKarte key={h.id} k={h.k} untertitel={h.untertitel} />)}
-        </div>
-      </div>
+      )}
       {rubrik('Prozessuale Fristen',
         'Fristen im Verfahren mit eigenem Stillstands-Regime – Gerichtsferien (ZPO) bzw. Betreibungsferien (SchKG).',
         prozessual)}
@@ -152,15 +156,19 @@ function ZustaendigkeitRegister({ karten }: { karten: CalculatorCard[] }) {
 
   return (
     <div className="space-y-5">
-      <div className="space-y-2">
-        <div className="flex items-center gap-3">
-          <h3 className="lc-overline text-brass-700">Rechtswege</h3>
-          <span aria-hidden className="flex-1 h-px bg-line" />
+      {/* W2·10-UI-NAV/N0d·W4: Kopf «Rechtswege» nur bei vorhandenen Feldern
+          (bei aktivem Übersichts-Filter sonst leerer Kopf). */}
+      {felder.length > 0 && (
+        <div className="space-y-2">
+          <div className="flex items-center gap-3">
+            <h3 className="lc-overline text-brass-700">Rechtswege</h3>
+            <span aria-hidden className="flex-1 h-px bg-line" />
+          </div>
+          <div className="grid grid-cols-[repeat(auto-fill,minmax(min(380px,100%),1fr))] gap-3">
+            {felder.map((f) => <ListenZeile key={f.id} k={f.k} subLabel={f.untertitel} zeigeGeplant />)}
+          </div>
         </div>
-        <div className="grid grid-cols-[repeat(auto-fill,minmax(min(380px,100%),1fr))] gap-3">
-          {felder.map((f) => <ListenZeile key={f.id} k={f.k} subLabel={f.untertitel} zeigeGeplant />)}
-        </div>
-      </div>
+      )}
       {weitere.length > 0 && (
         <div className="space-y-2">
           <div className="flex items-center gap-3">
@@ -304,7 +312,7 @@ function VorlagenRegister({ karten }: { karten: CalculatorCard[] }) {
 
 // ─── Registerteil: eine Oberkategorie mit Gebiets-Gruppen + Geplant-Zeile ───
 
-export function KategorieSektion({ kat, karten, onZurueck, ohneKopf }: { kat: Oberkategorie; karten: CalculatorCard[]; onZurueck?: () => void; ohneKopf?: boolean }) {
+export function KategorieSektion({ kat, karten, onZurueck, ohneKopf, alleOffen }: { kat: Oberkategorie; karten: CalculatorCard[]; onZurueck?: () => void; ohneKopf?: boolean; alleOffen?: boolean }) {
   const [params, setParams] = useSearchParams();
   // Übersichtlichkeits-Politur (Auftrag David 10.6.2026): ZWEI ruhige
   // Gebrauchs-Ebenen statt einer Mischliste — «Alltag» (Praxis-Rang 1)
@@ -448,7 +456,9 @@ export function KategorieSektion({ kat, karten, onZurueck, ohneKopf }: { kat: Ob
       )}
 
       {geplant.length > 0 && (
-        <details className="group">
+        // W2·10-UI-NAV/N0d·W4: bei aktivem Übersichts-Filter aufgeklappt, damit
+        // passende «In Vorbereitung»-Karten nicht hinter dem Accordion verborgen bleiben.
+        <details className="group" open={alleOffen || undefined}>
           <summary className="cursor-pointer list-none text-body-s text-ink-500 hover:text-brass-700 transition-colors select-none">
             <span aria-hidden className="inline-block mr-1.5 transition-transform group-open:rotate-90">▸</span>
             In Vorbereitung <span className="num">({geplant.length})</span>
