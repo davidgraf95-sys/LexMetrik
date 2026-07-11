@@ -32,6 +32,36 @@
 import { dekodiereEntities } from './html-entities.ts';
 import { reichereMehrspaltig } from './mehrspaltige-tabelle.ts';
 
+/**
+ * Soft-404 / Angular-Shell des LexWork-`/api/`-Endpunkts.
+ *
+ * Migriert ein LexWork-Host seinen strukturierten Endpunkt (Befund GL/
+ * gesetze.gl.ch, 11.7.2026: der `/app/`-SPA-Pfad liefert bereits eine 2.3 KB
+ * «Casemates»-Angular-Shell mit HTTP 200 + text/html), kann `/api/texts_of_law/{id}`
+ * dieselbe Shell statt des JSON-Bodys ausliefern — HTTP 200, aber kein
+ * `text_of_law`. Ohne eigene Erkennung würde `res.json()` mit einem kryptischen
+ * «Unexpected token '<'» scheitern, im Drift-Tor als blosse Netz-WARNUNG
+ * durchrutschen und die Snapshots **still veralten** (scraping-Skill Fakt 3:
+ * Fehler am Content-Type erkennen, nie am Status-Code). Diese eigene Fehlerklasse
+ * macht die Bedingung im Tor (`check:normtext-netz`) zu einem HARTEN Fehler.
+ */
+export class LexWorkShellError extends Error {
+  /** Diskriminator für den Fall, dass `instanceof` über Modul-Grenzen bricht. */
+  readonly istSoftShell = true as const;
+  readonly url: string;
+  readonly detail: string;
+  constructor(url: string, detail: string) {
+    super(
+      `LexWork ${url}: Soft-404-Shell — ${detail}. Der strukturierte Endpunkt ` +
+        `liefert kein JSON (vermutlich Angular-/Casemates-Shell). Quell-Migration? ` +
+        `Snapshots würden sonst still veralten (§7 Drift-Erkennung).`,
+    );
+    this.name = 'LexWorkShellError';
+    this.url = url;
+    this.detail = detail;
+  }
+}
+
 export interface LexArtikel {
   bloecke: Array<{
     absatz: string | null;
@@ -599,7 +629,16 @@ export async function holeLexWork(
   if (!res.ok) {
     throw new Error(`LexWork ${url}: HTTP ${res.status}`);
   }
-  const json = (await res.json()) as {
+  // Soft-404-Erkennung (§7, scraping-Skill Fakt 3): ein HTTP 200 kann eine
+  // Angular-Shell (text/html) statt des JSON-Bodys sein, wenn der Host den
+  // strukturierten Endpunkt migriert. Am Content-Type erkennen, nicht am Status.
+  // Fehlt der Header (z. B. in Tests mit Minimal-Mock), fällt die Erkennung auf
+  // den JSON-Parse-Fehler unten zurück — beides mündet in LexWorkShellError.
+  const contentType = res.headers?.get?.('content-type') ?? '';
+  if (contentType && !/json/i.test(contentType)) {
+    throw new LexWorkShellError(url, `Content-Type "${contentType}" statt application/json`);
+  }
+  let json: {
     text_of_law?: {
       title?: string;
       abbreviation?: string;
@@ -617,6 +656,14 @@ export async function holeLexWork(
       } | null;
     };
   };
+  try {
+    json = await res.json();
+  } catch (e) {
+    // 200 + JSON-Content-Type (oder fehlender Header) aber HTML-/Shell-Body →
+    // Parse scheitert. Als Soft-404-Shell melden (harter Drift-Tor-Fehler),
+    // nicht als generischer SyntaxError (der im Tor zur blossen Warnung würde).
+    throw new LexWorkShellError(url, `Antwort ist kein gültiges JSON (${e instanceof Error ? e.message : String(e)})`);
+  }
 
   const tol = json.text_of_law;
   if (!tol) {

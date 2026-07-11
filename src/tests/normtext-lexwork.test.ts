@@ -368,4 +368,44 @@ describe('holeLexWork — mit gemocktem fetch', () => {
     );
     await expect(holeLexWork('x', 'de', '1.1')).rejects.toThrow('HTTP 404');
   });
+
+  // Soft-404-Shell (GL-Klasse, 11.7.2026): HTTP 200 + text/html-Angular-Shell
+  // statt des JSON-Bodys. MUSS als LexWorkShellError erkannt werden (harter
+  // Drift-Tor-Fehler), nicht als generischer JSON-Parse-Fehler (der im Tor zur
+  // blossen Netz-Warnung würde und den Snapshot still veralten liesse).
+  it('erkennt Soft-404-Shell am Content-Type (text/html + HTTP 200)', async () => {
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(async () => ({
+        ok: true,
+        status: 200,
+        headers: new Headers({ 'content-type': 'text/html; charset=UTF-8' }),
+        json: async () => {
+          throw new SyntaxError("Unexpected token '<'");
+        },
+      } as unknown as Response)),
+    );
+    await expect(holeLexWork('gesetze.gl.ch', 'de', 'III B/7/1')).rejects.toMatchObject({
+      istSoftShell: true,
+    });
+    await expect(holeLexWork('gesetze.gl.ch', 'de', 'III B/7/1')).rejects.toThrow(/Soft-404-Shell/);
+  });
+
+  it('erkennt Shell auch ohne Content-Type-Header (JSON-Parse scheitert am HTML-Body)', async () => {
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(async () => ({
+        ok: true,
+        status: 200,
+        // kein headers → Content-Type-Weiche greift nicht; der JSON-Parse-Fehler
+        // muss trotzdem als Shell klassifiziert werden.
+        json: async () => {
+          throw new SyntaxError("Unexpected token '<'");
+        },
+      } as unknown as Response)),
+    );
+    await expect(holeLexWork('gesetze.gl.ch', 'de', 'III B/7/1')).rejects.toMatchObject({
+      istSoftShell: true,
+    });
+  });
 });
