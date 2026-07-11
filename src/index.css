@@ -242,13 +242,16 @@
 
   /* Linien AUTO = AUFBAU-basierter Default (W2·5d U-LINIEN/A8, löst den grundart-
      Kategorie-Default K11 ab): `data-guide-auto` am .lc-leser-Root kommt aus
-     linienAufbau.ts (Gliederungstiefe + Artikel-Dichte je Ebene). 'aus' = tiefe
-     Kodifikation (ZGB/OR, Tiefe ≥ 3): der vertikale Guide wird ausgeblendet, damit
-     die vielen Ebenen nicht in Linien ERTRINKEN — der EINZUG bleibt aber stehen
-     (Rangfolge §4b: Typo > Einzug > Guide), die Tiefe flüstert weiter. 'an' =
-     flaches/mittleres Gesetz (ArG, Kurzerlass, Staatsvertrag): der Guide zeigt
-     seine EINE Ebene sichtbar. Ein expliziter Klick ('an'/'aus') übersteuert das
-     global. Nur border-Farbe → CLS 0, Prosa/Ctrl+F/Anker byte-gleich. */
+     linienAufbau.ts (Artikel-Dichte je Ebene). V2·L-3 (David 10.7., Umkehr #161):
+     der Auto-Guide hängt allein am Dichte-Boden, die Tiefe deckelt NICHT mehr. 'an'
+     = der Aufbau TRÄGT den EINEN Guide (genug Artikel je Sektion) — das umfasst
+     jetzt AUCH die tiefen Kodifikationen ZGB/OR (der eine Guide auf `guideEbene`
+     ist keine Ebenen-Stapelung, sondern die Gliederungshilfe, die David sehen will).
+     'aus' = der Aufbau trägt ihn NICHT (Dichte < 2 ⇒ Per-Artikel-Barcode-Gefahr):
+     der vertikale Guide wird ausgeblendet, der EINZUG bleibt (Rangfolge §4b: Typo >
+     Einzug > Guide). Flache Erlasse (Tiefe 0) haben gar keinen Guide. Ein expliziter
+     Klick ('an'/'aus') übersteuert das global (K11-Tri-State unangetastet). Nur
+     border-Farbe → CLS 0, Prosa/Ctrl+F/Anker byte-gleich. */
   html[data-linien="auto"] .lc-leser[data-guide-auto="aus"] [data-normtext-linie] {
     border-left-color: transparent;
   }

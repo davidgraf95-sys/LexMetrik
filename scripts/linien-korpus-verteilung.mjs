@@ -36,7 +36,8 @@ function profil(struktur) {
   if (tiefe === 0) return { strukturTiefe: 0, guideEbene: null, dichteAmGuide: 0, autoGuide: false };
   const ge = Math.min(tiefe - 1, 1);
   const dg = median([...(aps[ge]?.values() ?? [])]);
-  return { strukturTiefe: tiefe, guideEbene: ge, dichteAmGuide: dg, autoGuide: tiefe <= TIEF_AB - 1 && dg >= DICHTE_MIN };
+  // V2·L-3 (Umkehr #161): Auto-Guide allein am Dichte-Boden, die Tiefe deckelt nicht mehr.
+  return { strukturTiefe: tiefe, guideEbene: ge, dichteAmGuide: dg, autoGuide: dg >= DICHTE_MIN };
 }
 
 const rows = [];
@@ -61,7 +62,7 @@ console.log(`Korpus: ${rows.length} Sidecar-Erlasse`);
 console.log('Gliederungstiefe-Verteilung:', JSON.stringify(distTiefe));
 console.log(`  flach (Tiefe 0): ${flach}  ·  tiefe Kodifikation (Tiefe ≥ ${TIEF_AB}): ${tief}`);
 console.log(`Auto-Guide AN: ${autoAn}  ·  AUS: ${rows.length - autoAn}`);
-console.log(`Schwellen: TIEF_AB=${TIEF_AB} (≥ ⇒ ruhig), DICHTE_MIN=${DICHTE_MIN} (Median Art./Sektion)`);
+console.log(`Schwellen: DICHTE_MIN=${DICHTE_MIN} (Median Art./Sektion, EINZIGER Auto-Guide-Boden seit V2·L-3); TIEF_AB=${TIEF_AB} nur noch «tiefe Kodifikation»-Klassifikation`);
 for (const k of ['ZGB', 'OR', 'ARG', 'VMWG']) {
   const r = rows.find((x) => x.key === k && x.ebene === 'bund');
   if (r) console.log(`  ${k.padEnd(5)} tiefe=${r.strukturTiefe} dichte@guide=${r.dichteAmGuide} → autoGuide=${r.autoGuide}`);

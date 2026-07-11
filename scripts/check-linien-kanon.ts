@@ -13,9 +13,18 @@
 //     TATSÄCHLICHEN Aufbau (Struktur-Sidecar: Gliederungstiefe + Artikel-Dichte je
 //     Ebene, SSoT src/pages/gesetz-leser/linienAufbau.ts), NICHT der grundart-Schublade.
 //     Gegated wird: (1) korpusweite Invarianten über ALLE Sidecars; (2) die
-//     Referenz-Verdikte (ZGB/OR ruhig, ArG/Kurzerlass/Staatsvertrag sichtbar, VMWG
-//     flach) — dieselbe `linienProfil`-Funktion, die der Reader nutzt (kein Drift);
-//     (3) die Verdrahtung im Reader + CSS (data-guide-auto, guideEbene).
+//     Referenz-Verdikte (ZGB/OR zeigen ihren EINEN Guide, ArG/Kurzerlass/Staats-
+//     vertrag sichtbar, VMWG flach) — dieselbe `linienProfil`-Funktion, die der
+//     Reader nutzt (kein Drift); (3) die Verdrahtung im Reader + CSS (data-guide-auto,
+//     guideEbene).
+//
+//  V2·L-3 (Auto-Default-UMKEHR, David 10.7.2026): Bis #161 deckelte die Tiefe den
+//  Auto-Guide (strukturTiefe ≥ 3 ⇒ AUS) — das nahm genau ZGB/OR ihre Gliederungs-
+//  linie, was David als «funktioniert praktisch nicht» re-meldete. Die Obergrenze
+//  ist WEG: der Auto-Guide hängt nun allein am Dichte-Boden (DICHTE_MIN); tiefe
+//  Kodifikationen erhalten ihren EINEN Guide auf `guideEbene`. Deklarierte Regel-
+//  werk-Änderung: B1-Invariante von der Tiefe-Obergrenze auf ein Biconditional
+//  umgestellt, B2-Verdikte ZGB/OR von AUS auf AN gedreht (SSoT linienAufbau.ts).
 //
 // Ein falsch gedrehter Schwellwert, ein toter Guide-Token, ein entferntes
 // data-guide-auto oder ein `border-line/70` an einem markierten Element färbt das
@@ -106,7 +115,7 @@ const inhalt = lies('src/pages/gesetz-leser/inhalt.tsx');
 if (!/linienProfil\s*\(/.test(inhalt)) fehler.push('inhalt.tsx ruft `linienProfil()` nicht auf — der Aufbau-Default ist abgeklemmt.');
 if (!inhalt.includes('linien.guideEbene')) fehler.push('renderSektion nutzt `linien.guideEbene` nicht — der Guide sitzt wieder auf tiefe===1 statt aufbau-basiert.');
 if (!inhalt.includes('data-guide-auto')) fehler.push('inhalt.tsx setzt `data-guide-auto` nicht am .lc-leser-Root — der Auto-Default ist nicht verdrahtet.');
-if (!css.includes('[data-guide-auto="aus"]')) fehler.push('index.css wertet `[data-guide-auto="aus"]` nicht aus — tiefe Kodifikationen werden nicht ruhig gestellt.');
+if (!css.includes('[data-guide-auto="aus"]')) fehler.push('index.css wertet `[data-guide-auto="aus"]` nicht aus — Erlasse ohne tragende Dichte werden nicht ruhig gestellt.');
 // Negativ-Sicherung: der frühere grundart-Kategorie-Default darf NICHT zurückkehren.
 if (css.includes(':not([data-grundart="KODIFIKATION"]) [data-normtext-linie]')) {
   fehler.push('index.css enthält noch den grundart-Kategorie-Default (`:not([data-grundart="KODIFIKATION"])`) — U-LINIEN/A8 hat ihn abgelöst.');
@@ -132,11 +141,14 @@ if (korpus.length < 500) fehler.push(`Nur ${korpus.length} Struktur-Sidecars gef
 
 let invariantenVerletzt = 0;
 for (const { key, profil: p } of korpus) {
+  // V2·L-3 (Auto-Default-Umkehr): der Auto-Guide hängt allein am Dichte-Boden —
+  // die Tiefe deckelt NICHT mehr (die alte Obergrenze `strukturTiefe <= 2` ist
+  // WEG, damit tiefe Kodifikationen ZGB/OR ihren EINEN Guide zeigen). Biconditional:
+  // autoGuide ⟺ (Erlass hat mind. eine Ebene UND Dichte-Boden erfüllt).
   const ok =
     (p.guideEbene === null || p.guideEbene === 0 || p.guideEbene === 1) &&
     (p.strukturTiefe !== 0 || (p.guideEbene === null && !p.autoGuide)) &&
-    (p.strukturTiefe < LINIEN_SCHWELLEN.TIEF_AB || !p.autoGuide) &&
-    (!p.autoGuide || (p.strukturTiefe >= 1 && p.strukturTiefe <= 2 && p.dichteAmGuide >= LINIEN_SCHWELLEN.DICHTE_MIN));
+    (p.autoGuide === (p.strukturTiefe >= 1 && p.dichteAmGuide >= LINIEN_SCHWELLEN.DICHTE_MIN));
   if (!ok) {
     invariantenVerletzt++;
     if (invariantenVerletzt <= 3) fehler.push(`Invarianten-Bruch bei ${key}: ${JSON.stringify(p)}`);
@@ -147,8 +159,8 @@ if (invariantenVerletzt > 0) fehler.push(`${invariantenVerletzt} Erlass(e) verle
 // B2 · Referenz-Verdikte (positiv+negativ): das Herz von Davids A8-Befund.
 type Erwartung = Partial<LinienProfil> & { hinweis: string };
 const REFERENZ: Record<string, Erwartung> = {
-  ZGB: { strukturTiefe: 5, guideEbene: 1, autoGuide: false, hinweis: 'tiefe Kodifikation bleibt RUHIG (Guide aus)' },
-  OR: { strukturTiefe: 4, guideEbene: 1, autoGuide: false, hinweis: 'tiefe Kodifikation bleibt RUHIG' },
+  ZGB: { strukturTiefe: 5, guideEbene: 1, autoGuide: true, hinweis: 'V2·L-3: tiefe Kodifikation zeigt ihren EINEN Guide (Ebene 1)' },
+  OR: { strukturTiefe: 4, guideEbene: 1, autoGuide: true, hinweis: 'V2·L-3: tiefe Kodifikation zeigt ihren EINEN Guide (Ebene 1)' },
   ARG: { strukturTiefe: 2, guideEbene: 1, autoGuide: true, hinweis: 'flaches Gesetz zeigt seine Ebene (Guide an)' },
   VMWG: { strukturTiefe: 0, guideEbene: null, autoGuide: false, hinweis: 'flache Artikelliste — kein Guide' },
   BVV3: { guideEbene: 0, autoGuide: true, hinweis: 'Kurzerlass mit EINER Ebene → Guide auf Ebene 0 sichtbar' },
@@ -175,5 +187,5 @@ const autoAn = korpus.filter((r) => r.profil.autoGuide).length;
 console.log(
   `check:linien-kanon GRÜN — ${markierteGesamt} markierte Container / 3 Rollen-Tokens (hell+dunkel); ` +
   `Aufbau-Regelwerk über ${korpus.length} Sidecars invariant (Auto-Guide AN: ${autoAn}), ` +
-  `Referenz-Verdikte ZGB/OR ruhig · ArG/Kurzerlass/Staatsvertrag sichtbar · VMWG flach — bestätigt.`,
+  `Referenz-Verdikte ZGB/OR zeigen ihren EINEN Guide (V2·L-3) · ArG/Kurzerlass/Staatsvertrag sichtbar · VMWG flach — bestätigt.`,
 );

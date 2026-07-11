@@ -16,36 +16,49 @@
 // Reine Darstellung (§3): entscheidet nur über eine border-Sichtbarkeit, nie über
 // Rechtsinhalt. Der amtliche Wortlaut ist unberührt.
 //
-// ── Empirische Schwellen-Herleitung (Korpus-Verteilung, 1135 Sidecar-Erlasse) ──
-// `node scripts/linien-korpus-verteilung.mjs` erhebt die Verteilung.
-// Gliederungstiefe (max. Sidecar-Verschachtelung) je Erlass:
+// ── Auto-Default-Umkehr V2·L-3 (David 10.7.2026, «deine Empfehlung» = JA) ──────
+// URSPRUNG (#161-Politik, 5.7.): tiefe Kodifikationen (strukturTiefe ≥ 3, also
+// genau ZGB/OR) bekamen den Auto-Guide GANZ AUS — die Annahme war, ein Strich JE
+// Sektion würde bei vielen Ebenen zum «Barcode». David hat das re-gemeldet als
+// «funktioniert praktisch nicht»: gerade seine tiefen Leit-Kodifikationen zeigten
+// keine Gliederungslinie. Der Denkfehler von #161: es gibt gar keinen Strich JE
+// Ebene — der Reader emittiert HÖCHSTENS EINEN Guide, fix auf `guideEbene`
+// (= min(tiefe−1, 1), also Ebene 1 bei tiefen Erlassen; renderSektion). Ein
+// einziger vertikaler Guide auf der inneren Gruppierungsebene ist KEIN Barcode,
+// sondern genau die Gliederungshilfe, die David sehen will. Darum UMKEHR:
+//   Auto-Guide AN, sobald der Aufbau ihn TRÄGT — unabhängig von der Tiefe.
+// «Trägt» heisst allein: genug Artikel je geführter Sektion, damit der EINE Guide
+// eine Gruppe bündelt statt einzelne Artikel zu umranden (Per-Artikel-Barcode).
+// Das leistet weiterhin der Dichte-Boden:
+//   DICHTE_MIN = 2  →  Median Artikel/Sektion auf der Guide-Ebene ≥ 2, sonst AUS
+//                      (9 Ur-Korpus-Erlasse bleiben ruhig, z. B. AKKBV @1-Artikel).
+// Die Tiefe selbst deckelt NICHTS mehr (TIEF_AB nur noch Klassifikations-Schwelle
+// «ab hier tiefe Kodifikation», rein für Diagnose/Doku). FLACHE Erlasse ändern
+// sich NICHT (strukturTiefe 0 ⇒ FLACH ⇒ nie ein Guide) — kein neues Linien-Rauschen
+// dort, wo der Aufbau keine Ebene hat. Empirie der Umkehr (1144 Sidecars):
+//   Auto-Guide AN 158 → 230 (+72, alle strukturTiefe ≥ 3, alle dichte ≥ 2:
+//   tiefe 3: 57, tiefe 4: 12, tiefe 5: 3) — deckt genau die tiefen Kodifikationen.
+//
+// Gliederungstiefe (max. Sidecar-Verschachtelung) je Erlass, zur Einordnung:
 //   Tiefe 0: 900 (79 %)  ·  1: 64  ·  2: 98  ·  3: 58  ·  4: 12  ·  5: 3
-// Der Bruch liegt sichtbar zwischen «flach/mittel» (≤2 Ebenen) und «tiefe
-// Kodifikation» (≥3 Ebenen): ab 3 gleichzeitig sichtbaren Überschriften-Ebenen
-// trägt die TYPO-Staffel + der horizontale Struktur-Trenner + der Einzug die
-// Hierarchie bereits vollständig — ein zusätzlicher vertikaler Strich JE Sektion
-// wird zum «Barcode» (ZGB Art. 684 / OR Art. 319, der Ur-Befund von R4). Darum:
-//   TIEF_AB = 3  →  strukturTiefe ≥ 3 ⇒ Auto-Guide AUS (ruhig, Einzug bleibt).
-// Zusätzlich ein Dichte-Boden: bei Median ≤ 1 Artikel je geführter Sektion wäre
-// der Guide selbst auf flachen Erlassen ein Per-Artikel-Barcode (9 Erlasse im
-// Korpus, z. B. AKKBV sek=[6,18]@1-Artikel). Darum:
-//   DICHTE_MIN = 2  →  Median Artikel/Sektion auf der Guide-Ebene ≥ 2, sonst AUS.
 //
 // Referenz-Verdikte (im Tor `check:linien-kanon` positiv+negativ gegated):
-//   ZGB  tiefe5 dichte92 → AUS (ruhig)      OR   tiefe4 dichte22 → AUS (ruhig)
-//   ArG  tiefe2 dichte4  → AN  (Ebene 1)    VMWG tiefe0          → kein Guide (flach)
+//   ZGB  tiefe5 dichte92 → AN (der EINE Guide)   OR   tiefe4 dichte22 → AN
+//   ArG  tiefe2 dichte4  → AN  (Ebene 1)          VMWG tiefe0        → kein Guide (flach)
 //   Kurzerlass/Staatsvertrag tiefe1 → AN (Ebene 0, «flache Ebene sichtbar»)
 
 import type { StrukturMap } from '../../lib/normtext/browse';
 
 export const LINIEN_SCHWELLEN = {
-  /** Ab dieser Gliederungstiefe gilt ein Erlass als «tiefe Kodifikation»: der
-   *  Auto-Guide bleibt AUS, damit die vielen Ebenen nicht in Linien ertrinken
-   *  (Typo + Einzug tragen die Hierarchie). Empirisch: Bruch der Korpus-Tiefen-
-   *  Verteilung zwischen ≤2 und ≥3 Ebenen. */
+  /** Ab dieser Gliederungstiefe gilt ein Erlass als «tiefe Kodifikation» (ZGB/OR).
+   *  NUR NOCH Klassifikations-Schwelle für Diagnose/Doku — seit V2·L-3 deckelt die
+   *  Tiefe den Auto-Guide NICHT mehr (Umkehr der #161-Politik): tiefe Kodifikationen
+   *  erhalten ihren EINEN Guide, weil ein einzelner Guide auf `guideEbene` keine
+   *  Ebenen-Stapelung ist. Die Auto-Guide-Entscheidung hängt allein an DICHTE_MIN. */
   TIEF_AB: 3,
   /** Median Artikel je geführter Sektion; darunter wäre der Guide ein Per-
-   *  Artikel-Barcode statt einer Gruppierung ⇒ Auto-Guide AUS. */
+   *  Artikel-Barcode statt einer Gruppierung ⇒ Auto-Guide AUS. Seit V2·L-3 der
+   *  EINZIGE Auto-Guide-Schwellwert (die Tiefe deckelt nicht mehr). */
   DICHTE_MIN: 2,
 } as const;
 
@@ -100,8 +113,11 @@ export function linienProfil(struktur: StrukturMap | null | undefined): LinienPr
   // «die flache Ebene sichtbar» (Kurzerlass/Staatsvertrag mit einer Gliederung).
   const guideEbene = Math.min(strukturTiefe - 1, 1);
   const dichteAmGuide = median([...(artProSektion[guideEbene]?.values() ?? [])]);
-  const autoGuide =
-    strukturTiefe <= LINIEN_SCHWELLEN.TIEF_AB - 1 && dichteAmGuide >= LINIEN_SCHWELLEN.DICHTE_MIN;
+  // V2·L-3: Auto-Guide AN, sobald der Aufbau ihn trägt (Dichte-Boden) — die Tiefe
+  // deckelt NICHT mehr (Umkehr #161). Tiefe Kodifikationen (ZGB/OR) zeigen damit
+  // wieder ihren EINEN Guide auf `guideEbene`; der Dichte-Boden hält den Per-
+  // Artikel-Barcode fern. Flache Erlasse (strukturTiefe 0) sind oben schon FLACH.
+  const autoGuide = dichteAmGuide >= LINIEN_SCHWELLEN.DICHTE_MIN;
 
   return { strukturTiefe, guideEbene, dichteAmGuide, autoGuide };
 }
