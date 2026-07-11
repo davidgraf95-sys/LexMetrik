@@ -681,9 +681,19 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   abgetrennt Amtliche Materialien; `VerweisKontext`, geteilte Shards, Top-3+Zähler,
   CLS 0 by construction) · A13 Materialien-Kanten klarer (artikelscharf prominent,
   Erlass-Ebene hinter `<details>`-Zähler). Reglement §5a; Gate voll grün, Engine-
-  Golden byte-gleich, e2e 188/188 inkl. `verweis-u` (A9-Throttle) →** U-POSITION
-  (A2/A16/A17: Scrollbalken-Proportionalität, exakte Zurück-Restoration,
-  Split-View-Fundstellen-Sprung — hart NACH QS-PERF). Parallel kollisionsarm:
+  Golden byte-gleich, e2e 188/188 inkl. `verweis-u` (A9-Throttle) →**
+  **U-POSITION ✅ gebaut (11.7., PR `feat/u-position-a2-a16-a17`;
+  Ausführungsvermerk §10.7):** A2 inhalts-proportionale content-visibility-
+  Platzhalterhöhe (`schaetzeArtikelHoehe`, überschreibt den Flach-320px →
+  proportionaler Scrollbalken, content-visibility bleibt = kein Logikverlust) ·
+  A16 anker-basierte Scroll-Restoration (`scrollAnker.ts`, oberster Artikel +
+  Offset, element-basiert robust gegen die Höhenschätzung; interne Verweise
+  navigieren über den Router = echter History-Eintrag; NormPopover «Im Gesetz
+  öffnen» SPA-`<Link>` → Cross-Erlass-Zurück landet am Ausgangs-Artikel) · A17
+  Split-View liest den Pane-lokalen Hash/`?norm` ⇒ Norm-⧉ öffnet an Art.+Passus,
+  Entscheid-⧉ an der Erwägung (nie stumm falsch). Golden byte-gleich (Client-
+  Reader; kein `public/normtext`), Gate voll grün, e2e `leser-position-u` (P4 +
+  A9-Throttle CLS 0). Parallel kollisionsarm:
   **U-SUCHE ✅ AUSGEFÜHRT (5.7., PR feat/u-suche-a5-a6, Auto-Merge armiert;
   Ausführungsvermerk `FAHRPLAN-GESETZES-UX.md` §10.7):** normQuery aus der
   gelöschten `BefehlsPalette` in die NORMALE Suchleiste (Sprung = oberster

@@ -1258,6 +1258,85 @@ frischer Kontext, gegen amtliche Fedlex-Filestore-HTMLs + SPARQL).
   Suffixe > sexies (septies/octies …) bleiben unverlinkt-unterdrückt
   (konsistent mit artikelToken; Extraktor-Backlog).
 
+**Ausführungsvermerk U-POSITION (A2 + A16 + A17) — AUSGEFÜHRT 11.7.2026 (Opus).**
+
+**Status: gebaut, voller Gate grün (nur der VORBESTEHENDE `check:plan`-Orphan
+W3·14-Responsive-Defekte war rot — mit-reconciliert), e2e grün, PR mit armiertem
+Auto-Merge.** Worktree `lm-u-position` (`feat/u-position-a2-a16-a17`), Trailer
+`Roadmap: W2·5d`. Baut auf dem gemergten QS-PERF/#181/#183-Stand auf (parts.tsx-
+Barrel, berechnungen.ts, CLS-Härtung), nicht dagegen. Reine Darstellung/Interaktion
+⇒ `Gegenpruefung: n/a` (kein Linker/Extraktion/Rechnen, kein `public/normtext`).
+
+- **A2 — Scrollbalken-Proportionalität.** Wurzel EMPIRISCH bestätigt: die
+  `.nt-art-cv`-Klasse gab JEDEM Artikel denselben `contain-intrinsic-size: auto
+  320px` (index.css) — ein 40-Absatz-Artikel und ein Einzeiler reservierten
+  dieselbe Platzhalterhöhe, die Summe (Dokumenthöhe vor dem Rendern) wich stark
+  von der Realität ab ⇒ Daumen-ans-Ende landete in der Gesetzes-Mitte, Höhe „lief
+  weg". **Fix-Kandidat gewählt: per-Artikel-Höhenschätzung aus dem Snapshot**
+  (`schaetzeArtikelHoehe`, berechnungen.ts: Absätze × Zeilenmass + Items +
+  Tabellen; deterministisch, unit-getestet), inline als `contain-intrinsic-size`
+  je `<article>` gesetzt (überschreibt den Flachwert). **Logikverlust-Bewertung:
+  KEINER** — `content-visibility:auto` BLEIBT (Off-Screen spart Layout/Paint),
+  jeder Knoten bleibt im DOM (Ctrl+F/Anker/Screenreader/Druck/SEO unberührt); nur
+  der PLATZHALTER-Schätzwert wird inhalts-proportional statt konstant. Golden/
+  Prerender unberührt (der String-Builder `erlassVolltextHtml` emittiert kein
+  `nt-art-cv`; die Optimierung existiert nur im Client-Reader). `check:perf-budget`
+  bleibt grün (content-visibility unverändert; genauere Schätzungen mindern eher
+  Scroll-Anchoring-Sprünge). Deaktivierung auf langen Erlassen (Kandidat 3)
+  VERWORFEN — hätte Tempo geopfert ohne Not; Höhen-Cache (Kandidat 2) überflüssig,
+  da `auto` die echte Höhe nach erstem Render ohnehin merkt.
+- **A16 — Zurück landet exakt am Ausgangsort (anker-basiert).** `scrollAnker.ts`
+  (neu): Registry {Artikel-Token, Offset} je Reiter-Identität; ein passiver,
+  rAF-entprellter Scroll-Listener im Reader hält den obersten sichtbaren Artikel +
+  Offset fest (§15, kein setState). `App.tsx:ScrollWiederherstellung` nutzt für
+  Leser-Reiter den Anker als Ziel — je Frame der bestehenden Konvergenz-Schleife
+  gegen das AKTUELLE DOM aufgelöst (`aufloeseAnkerY`, `getElementById` → element-
+  basiert, robust gegen die content-visibility-Höhenschätzung, Davids Hinweis);
+  `scrollY` bleibt Fallback → jede Nicht-Leser-Route byte-gleich. Interne Verweise
+  navigieren jetzt über den **Router** (echter History-Eintrag; der `letzteNavKey`-
+  Effekt führt den Sprung aus) — ein MANUELLES `pushState` war der EMPIRISCH
+  widerlegte Irrweg (desynchronisiert react-router ⇒ Zurück löste keinen Location-
+  Wechsel/keinen Rück-Sprung aus, debug-belegt). NormPopover «Im Gesetz öffnen»
+  wurde von Vollseiten-`<a>` auf SPA-`<Link>` umgestellt (deklarierte Änderung),
+  damit der In-Memory-Anker das Verweis-Folgen überlebt ⇒ **Cross-Erlass
+  AIG→StGB→zurück landet wieder an Art. 5**. Im PANE bleibt der direkte Sprung
+  (eigene Pane-History unangetastet).
+- **A17 — Split-View öffnet an der Fundstelle.** Der ⧉ legte den Pfad zwar MIT
+  Fundstelle ab (readerLink `#art-token`, Leitfall/Kontext `?norm=`), aber die
+  Reader lasen sie aus `window.location.hash` (= Haupt-URL, NICHT der Pane-Pfad)
+  und brachen für Panes ab ⇒ Pane öffnete oben. Fix: Gesetz-Leser springt auch im
+  sekundären Pane, Fundstelle aus der PANE-LOKALEN Location (`<Routes location>` →
+  `useLocation`); EntscheidLeser liest den `?norm`-Guard + `#e`-Hash Pane-lokal
+  (sonst brach ein Gesetz-Pane mit `#art-…` in der Haupt-URL den Erwägungs-Sprung
+  fälschlich als „Hash gewinnt" ab). **Nie stumm falsch:** ohne auflösbare
+  Fundstelle (`ersteFundstelle`→null) ehrlicher Dokumentanfang. Materialien haben
+  keinen In-App-Volltext (nur-live-link, §8) ⇒ keine Ziffer-Fundstelle zum
+  Anspringen, kein Falsch-Sprung möglich (n/a by Datenlage).
+- **P4-Beweise einzeln (e2e `leser-position-u`, gegen dist):** A2 — OR: Scroll-
+  Position bildet die Dokument-Position proportional ab (Top-Index bei 0.25/0.5/
+  0.75 der Balkenhöhe monoton, Mitte≈Mitte; scrollHeight weit über dem 320px-Boden)
+  ✓. A16 — Cross-Erlass AIG→StGB (Popover) → Zurück = Art. 5 im Viewport ✓; interner
+  Verweis MWSTG Art. 5→31 → Zurück = Art. 5 im Viewport ✓. A17 — Norm-⧉ aus dem
+  Entscheid öffnet das Pane an Art. 18 (nicht oben) ✓; Split-View-e2e (`verzahnung`,
+  Pane-History) grün ✓. A9-DoD — Scroll unter CPU-Throttle (rate 4) flüssig, CLS 0
+  (Tastatur-Scroll = echtes Input ⇒ content-visibility-Reflow input-exkludiert;
+  der neue Anker-Listener erzeugt keinen unerwarteten Shift) ✓.
+- **Golden-Klasse:** byte-gleich — alle Änderungen sind Client-Reader (inline
+  `style`/Navigation/CSS-Kommentar); kein `public/normtext`, kein Daten-Manifest,
+  kein `erlassVolltextHtml`-Eingriff. `golden:vergleich` IDENTISCH; `check:normtext`/
+  `check:struktur-konsistenz` grün.
+- **Tore:** voller `npm run gate` grün bis auf den VORBESTEHENDEN `check:plan`-
+  Orphan `W3·14-Responsive-Defekte` (10.7.-Session hatte das @meta in der ROADMAP,
+  aber nicht in `scripts/plan/inventar.ts` registriert) — im Doku-Commit mit-
+  reconciliert (Inventar-Zeile ergänzt, §12-„fehlende Karte nachtragen"). Voll-e2e-
+  Sweep 192/192 (die einmalige `norm-sprung`-A9-Flake unter Parallel-Last löst
+  standalone grün — bekannte Throttle-Flake-Klasse, nicht auf U-POSITION-Fläche).
+- **Bewusst NICHT (U-POSITION-Scope):** keine Pane-interne Per-History-Eintrag-
+  Scroll-Restoration (Pane-`go`/`push`; Pane-eigene History unangetastet, Shell-
+  scrollMerk deckt den Pane-Modus-Wechsel/-Schliessen wie bisher) · kein
+  Sub-Artikel-Passus-Highlight über den bestehenden Artikel-Blink hinaus · keine
+  Änderung an `window.scrollY`-Restoration für Nicht-Leser-Routen.
+
 ### 10.8 · Anmerkungs-Nachzug A19–A25 (David 10.7.2026) — Einordnung, Spec-Heimat V2
 
 **Quelle (WÖRTLICH massgeblich):** Davids Anmerkungen 10.7.2026, im Repo persistiert
