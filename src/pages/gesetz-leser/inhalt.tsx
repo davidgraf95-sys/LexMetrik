@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from 'react';
 import { createPortal, flushSync } from 'react-dom';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { naechsteInstanz, merkeTab, aktualisiereTabArtikel, tabSchluessel } from '../../lib/tabs';
@@ -991,7 +991,12 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     // Kodifikation bleibt ruhig (Guide unsichtbar, Einzug bleibt), 'an' = flaches/
     // mittleres Gesetz zeigt seine EINE Guide-Ebene. Löst den grundart-Kategorie-
     // Default (K11) ab. `data-grundart` bleibt als semantischer Marker (§5).
-    <div className="lc-leser space-y-5" data-grundart={meta.grundart ?? undefined} data-guide-auto={linien.autoGuide ? 'an' : 'aus'}>
+    <div className="lc-leser space-y-5" data-grundart={meta.grundart ?? undefined} data-guide-auto={linien.autoGuide ? 'an' : 'aus'}
+      // W2·10-UI-NAV/N0c: reale Sticky-Höhe für die .nt-anker-Sprünge. Einzelansicht:
+      // Topbar (4rem) + Inhalts-Kopf (2.25rem) + dritte klebende Zeile (~3rem). Im
+      // Pane liegen Topbar/PaneKopf ausserhalb des Scroll-Containers → nur die dritte
+      // Zeile (top 0.5rem) klebt (Muster --rsp-stick, Entscheid-Leser B3).
+      style={{ '--nt-stick': imPane ? '3.5rem' : 'calc(4rem + 2.25rem + 3rem)' } as CSSProperties}>
       {/* Breadcrumb trägt seit A/F der Kopf: Einzelansicht → Inhalts-Kopf, Split-View
           → PaneKopf. Kein zweiter Inline-Breadcrumb mehr (sonst Dopplung im Pane).
           G2b: EINE Kopf-Komponente (ErlassLeserKopf) — dieselbe wie im pdf-embed-
