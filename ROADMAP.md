@@ -759,8 +759,16 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
       (Norm=brass byte-identisch / Entscheid=slate-Tick+Hover), ↻ Revision→warn-700
       (★ bleibt brass), slate-Doppelbelegung aufgelöst → DESIGN-REGLEMENT-NORMTEXT
       §4b-B (Farb-Wörterbuch). Golden byte-gleich, Kontrast als Gate gemessen, CLS 0.
-    - [ ] **C-2/C-3** nach U-VERWEIS/im Kopf-PR (Overline-Punkte, Currency-Tonung,
-      NormChip-Verweisfarbe + Materialien-Familie). **Bau-Go erteilt, seq. deferiert.**
+    - [x] **C-2 ✅ (11.7.2026, feat/v2-c2, #201):** Overline-Farbpunkte Leitfälle/
+      Verweise (`lc-punkt`/`lc-punkt-entscheid`) + Currency-Chip-Tonung
+      (`lc-chip-geltend` sage «geltend geprüft (maschinell)» / `lc-chip-vorbehalt`
+      warn «nächste Fassung ab»). Kontrast gemessen, golden byte-gleich, CLS 0.
+    - [x] **C-3 ✅ (11.7.2026, feat/v2-c3) — Farb-Wörterbuch KOMPLETT:**
+      Materialien-Familie sage (`lc-punkt-material` + `punkt`-Prop an KontextGruppe:
+      Materialien/Norm/Entscheid-Gruppen tragen ihren Familien-Punkt) + NormChip-
+      Verweisfarbe (`hover:border-brass-400`, brass-Hover-Familie vereinheitlicht).
+      Kontrast gemessen (sage 4.48/3.84 ≥3:1), golden byte-gleich, CLS 0. V2 §2 F5,
+      DESIGN-REGLEMENT §4b-B Abschluss.
   - [ ] **DEFER FN-5/M14** wortgenaue Marker: hinter QS-PERF/U-POSITION, separates
     David-Go (Entscheid 10.7.). V2 §2 F1.
 - [ ] **5e · UI-Nutzwert & Navigation (Ultracode-Synthese 11.7.)** *(`[OF]`, reine UI/Navigation)*:
