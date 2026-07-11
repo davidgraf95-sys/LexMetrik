@@ -5,6 +5,7 @@ import { kartenDerKategorie } from '../lib/katalogKategorie';
 import { KatalogHinweis } from '../components/KatalogHinweis';
 import { MassgebendeGesetze } from '../components/normtext/MassgebendeGesetze';
 import { SeitenKopf } from '../components/layout/SeitenKopf';
+import { EntwurfLegende } from '../components/EntwurfLegende';
 
 // ─── Vorlagen-Übersicht (/vorlagen) — UI-Welle, Ersatz für /recherche ───────
 //
@@ -23,6 +24,8 @@ export function VorlagenUebersicht() {
         titel="Vorlagen"
         intro="Verträge, Eingaben, Erklärungen und Dokumentmappen – regelbasiert aufgesetzt, mit ehrlichen Form-Grenzen. Nach Rechtsgebiet filterbar."
       />
+
+      <EntwurfLegende />
 
       <KategorieSektion kat={VORLAGEN_KATEGORIE} karten={kartenDerKategorie(KATALOG_KARTEN, 'vorlagen')} ohneKopf />
 

@@ -7,6 +7,7 @@ import { kartePasst, LEERER_FILTER } from '../lib/katalogSuche';
 import { KatalogHinweis } from '../components/KatalogHinweis';
 import { MassgebendeGesetze } from '../components/normtext/MassgebendeGesetze';
 import { SeitenKopf } from '../components/layout/SeitenKopf';
+import { EntwurfLegende } from '../components/EntwurfLegende';
 import { ZweiachsigerEinstieg } from '../components/ZweiachsigerEinstieg';
 import { Zeiterfassung } from '../components/start/Zeiterfassung';
 
@@ -45,12 +46,15 @@ export function RechnerUebersicht() {
         intro="Zwei Wege hinein: nach Rechtsgebiet (aufklappbar) oder nach Aufgabe (Zuständigkeiten · Fristen · Gebühren). Oder unten filtern bzw. oben im Feld suchen (Kürzel «/»)."
       />
 
-      <div className="space-y-1.5">
-        <label htmlFor="rechner-filter" className="lc-overline text-ink-500">Rechner filtern</label>
-        <input id="rechner-filter" type="search" value={filter}
-          onChange={(e) => setFilter(e.target.value)}
-          placeholder="Titel, Rechtsgebiet oder Norm …" aria-label="Rechner filtern"
-          className="lc-input h-9 py-0 text-body-s w-full max-w-reading" />
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+        <div className="space-y-1.5">
+          <label htmlFor="rechner-filter" className="lc-overline text-ink-500">Rechner filtern</label>
+          <input id="rechner-filter" type="search" value={filter}
+            onChange={(e) => setFilter(e.target.value)}
+            placeholder="Titel, Rechtsgebiet oder Norm …" aria-label="Rechner filtern"
+            className="lc-input h-9 py-0 text-body-s w-full max-w-reading" />
+        </div>
+        <EntwurfLegende />
       </div>
 
       {!gefiltert && <ZweiachsigerEinstieg />}
