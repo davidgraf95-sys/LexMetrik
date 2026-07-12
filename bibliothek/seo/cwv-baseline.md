@@ -6,6 +6,8 @@
 > W2.8 (Payload-Splitting). Erneut messen: `npm run build && npm run messung:cwv`.
 
 - **Stand (Commit):** `ca2e46e3`
+- **Status:** ERSTRECHERCHE (Mess-Infrastruktur/Strang B, kein Fach-Dossier; Re-Messung via
+  `npm run build && npm run messung:cwv`)
 - **Methode:** Chromium headless, viewport 1280×900, `waitUntil:'load'` + 600 ms
   Ruhe; LCP = letzter `largest-contentful-paint`-Eintrag; Transfer = Summe der
   Resource-/Navigation-`transferSize`.

@@ -12,7 +12,7 @@ export type VerfallTermin = {
   rhythmus?: string;
 };
 
-export const VERFALL_STAND = "7.6.2026";
+export const VERFALL_STAND = "11.7.2026";
 export const VERFALL_QUELLE = "bibliothek/register/parameter-verfall.md";
 export const VERFALL_MANUELL_ANZAHL = 20;
 

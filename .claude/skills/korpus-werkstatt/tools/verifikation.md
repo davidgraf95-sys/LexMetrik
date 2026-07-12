@@ -135,7 +135,7 @@ Pfad ist ein Risiko-Pfad. Dort ist die adversariale Gegenprüfung **verpflichten
 — sie läuft zum Produktionsabschluss, getrennt vom user-getriggerten `review.md`-Audit.
 
 - **Muster:** unabhängige Sub-Agenten (Fan-out, mehrere Linsen) gegen die Quelle, Ergebnis als
-  **Befund-Tabelle mit `Datei:Zeile` + Auflösung** — Vorbild `bibliothek/AUDIT-TARIF-2026-06-17.md`
+  **Befund-Tabelle mit `Datei:Zeile` + Auflösung** — Vorbild `bibliothek/register/AUDIT-TARIF-2026-06-17.md`
   (z. B. Abschnitt B: richtiger Text unter falschem Erlass-Label gefangen). Konkreter
   Gegentest-Kandidat: der dokumentierte **Tabelle-verloren / Spaltenmerge**-Befund (52 Gesetze +
   22 Kantonstarife, `STRUKTUR.md`).

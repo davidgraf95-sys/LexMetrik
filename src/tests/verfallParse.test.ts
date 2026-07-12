@@ -65,6 +65,6 @@ describe('sammleTermine — gegen das echte Register', () => {
 
 describe('registerStand', () => {
   it('liest die Stand-Zeile des Registers', () => {
-    expect(registerStand(md)).toContain('7.6.2026');
+    expect(registerStand(md)).toContain('11.7.2026');
   });
 });

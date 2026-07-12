@@ -13,8 +13,9 @@ for f in recherche/*.md; do
   b=$(basename "$f"); [ "$b" = "INDEX.md" ] && continue
   grep -q "($b)" recherche/INDEX.md || melde S7 "recherche/INDEX.md ohne Zeile für $b"
 done
-for f in behoerden/*.md kosten/*.md normen/*.md rechtsprechung/*.md register/*.md muster/MANIFEST.md STANDARDS.md; do
+for f in behoerden/*.md kosten/*.md normen/*.md rechtsprechung/*.md register/*.md materialien/*.md normtext/*.md seo/*.md muster/MANIFEST.md *.md; do
   b=$(basename "$f")
+  [ "$b" = "INDEX.md" ] && continue
   grep -q "$b" INDEX.md || melde S7 "Haupt-INDEX ohne Eintrag für $f"
 done
 
@@ -30,7 +31,7 @@ done | tee /tmp/bibcheck-links.txt
 [ -s /tmp/bibcheck-links.txt ] && fehler=$((fehler+$(wc -l < /tmp/bibcheck-links.txt)))
 
 # ── S1: Pflichtkopf (Erstellt/Datum + Status) in Fach-Dossiers ──────────────
-for f in recherche/*.md behoerden/*.md kosten/*.md normen/*.md; do
+for f in recherche/*.md behoerden/*.md kosten/*.md normen/*.md materialien/*.md normtext/*.md seo/*.md; do
   b=$(basename "$f"); [ "$b" = "INDEX.md" ] && continue
   kopf=$(head -30 "$f")
   echo "$kopf" | grep -qiE '\*\*(Erstellt|Datum|Stand)\b' || melde S1 "$f ohne Erstellt-/Datums-Zeile im Kopf"
