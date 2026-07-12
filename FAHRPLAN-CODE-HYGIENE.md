@@ -391,3 +391,36 @@
   grün); Gegenprüfung für die beiden Risiko-Dateien (browse.ts/variantenInventar.ts)
   unabhängig als reine Diff-Verifikation gefahren (nur `-`-Zeilen, kein Norm-/Tarif-Wert
   berührt) und quittiert. Nächster Schritt: H-5.
+- **12.7.2026 (H-5 ✅, Worktree `lm-h5`, Branch `chore/h5-skripte`):**
+  Skript-Inventar-Durchgang `scripts/`, 4 Pathspec-Commits. **B2:** beide
+  tote Exporte nach FAHRPLAN-Check BEHALTEN mit TODO-Anker —
+  `alleErlassFassungen` (Anker FAHRPLAN-DATENHALTUNG §3.3 Fassungs-Diff,
+  wartet auf Paket-5-Historie in `erlass_fassungen`), `shaBotschaft`
+  (Anker PORTFOLIO §Paket 2 sha-Feld + DATENHALTUNG §3 `soft_law.sha`,
+  E6b-Ingest); Negativ-Grep je exakt 1 Deklarations-Treffer. **B7:**
+  Bestand am Bau-Tag nachgezählt (strikt «Kopf sagt einmalig/POC» +
+  abgeschlossen) = **4**, nicht ~12: `ti-miete-generieren` ·
+  `refetch-bestand-netz` · `backfill-legal-area` ·
+  `poc-linkedom-tiefenzaehler` → `git mv` nach `scripts/archiv/` mit
+  Beleg-Kopfzeile + 5-Zeilen-README; Import-Pfade nachgezogen (lauffähig
+  aus dem Archiv); Referenz-Grep scripts/+package.json+.github/ = 0
+  Alt-Treffer. Ausnahmen geblieben: `p3-drop-inventar`,
+  `lexfind-discovery-run`, `screenshots`; zusätzlich mit Negativ-Check
+  behalten: `linien-korpus-verteilung.mjs` (aktiver Anker
+  FAHRPLAN-GESETZES-UX §U-LINIEN), `fedlex-manifest-audit`/`-repin-kanonik`
+  (offene Bau-Einheit P1-a/b). **B29:** (a) 8 Pflege-Generatoren verdrahtet
+  (`gen:plz`/`gen:strassen`/`gen:zh-kreise`/`gen:zh-strassen`/
+  `gen:bge-register`/`gen:lik`/`abnahme:ag`/`abnahme:dossiers`), je 1×
+  lauffähig belegt (Quell-abhängige: korrekte Invokation + sauberer
+  ENOENT-Abbruch auf dem dokumentierten /tmp-Quellpfad); (c) Bibliotheks-
+  module unangetastet. **BEFUND am Rande:** `abnahme:dossiers`-Probe-Lauf
+  zeigt 5 gedriftete Dossiers (ARBEITSVERTRAG/EHESCHUTZ/MIET/SCHEIDUNG×2)
+  — Regen NICHT committet; Nachzug gehört in den im Plan vorgesehenen
+  EIGENEN Drift-Guard-PR. **Beifang B9:** `npm run check:tot` (knip
+  `--no-exit-code`, Vite-/Playwright-freundliche Konfig, Archiv+generated
+  ignoriert) NUR Report, KEIN Tor; Stand 12.7.: 64 unused exports ·
+  87 unused types · 2 unlisted deps; einziger `_leere*Cache`-Fund =
+  `_leereRevisionCache`, deckungsgleich mit H-4/B1. `npm run gate` GRÜN
+  (inkl. `check:smoke`), Gegenprüfung n/a (verhaltensneutral, G1: nur
+  Kommentare/Moves/Verdrahtung, kein Prod-Code). Nächster Schritt: H-3
+  bzw. H-6 (je Kette).
