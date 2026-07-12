@@ -59,6 +59,15 @@ const ARBITRARY_FARB_RE = new RegExp(`\\b(?:${PRAEFIX})-\\[(?:#|rgb|hsl)[^\\]]*\
 // Beide Reihenfolgen, nur innerhalb DESSELBEN className-Strings (kein Treffer
 // über Quote-Grenzen hinweg — verschachtelte eigenständige Spans sind aus Scope).
 const OVERLINE_DIM_RE = /\blc-overline\b[^"'`]*\btext-ink-(?:500|400|300)\b|\btext-ink-(?:500|400|300)\b[^"'`]*\blc-overline\b/;
+// ── Verbot: Reinweiss als Fläche (§13-Nachtrag d / Befund 41, Reinweiss-Invariante) ──
+// Lese-/Arbeitsflächen tragen --paper*/--surface* (warmes Papier), nie #FFFFFF;
+// --paper-raised deckt kleine erhabene Flächen ab. Kein bg-white/text-white/…-white
+// (Tailwind-Keyword) und kein #fff/#ffffff im Inline-Style. Arbitrary-Hex-White
+// (bg-[#fff]) fängt bereits ARBITRARY_FARB_RE. Dokumentierte Ausnahmen (@media
+// print body #fff, text-paper auf ink-Buttons) leben in index.css, ausserhalb
+// dieses Komponenten-Scopes. Heute 0 Treffer = billige Versicherung (F6/F7).
+const WHITE_UTIL_RE = new RegExp(`\\b(?:${PRAEFIX})-white\\b`, 'g');
+const INLINE_WHITE_RE = /(?:background|backgroundColor|color)\s*:\s*['"]#(?:fff|ffffff)['"]/i;
 
 function dateien(dir: string): string[] {
   const out: string[] = [];
@@ -97,6 +106,12 @@ for (const datei of dateien(WURZEL)) {
       fehler.push(`${datei}:${i + 1} — Arbitrary-Farbe «${am[0]}» (Hex/rgb/hsl in Komponente verboten, §13 Pkt.1). Wert als CSS-Variable führen und …-[var(--…)] nutzen.`);
     if (OVERLINE_DIM_RE.test(zeile))
       fehler.push(`${datei}:${i + 1} — lc-overline mit text-ink-500/400/300 gedimmt (AA-Fail bei 11px, D-1.2/E1). Override strippen — lc-overline trägt die kalibrierte ink-600-Basis.`);
+    let wm: RegExpExecArray | null;
+    WHITE_UTIL_RE.lastIndex = 0;
+    while ((wm = WHITE_UTIL_RE.exec(zeile)) !== null)
+      fehler.push(`${datei}:${i + 1} — Reinweiss-Utility «${wm[0]}» (§13-Nachtrag d / Reinweiss-Invariante). Warme Fläche/Tinte nutzen: bg-paper*/bg-surface* bzw. text-paper (nie #FFFFFF als Lesefläche).`);
+    if (INLINE_WHITE_RE.test(zeile))
+      fehler.push(`${datei}:${i + 1} — Reinweiss #fff im Inline-Style (§13-Nachtrag d / Reinweiss-Invariante). Token nutzen: var(--paper*)/var(--surface*) bzw. var(--paper) für Tinte auf Dunkel.`);
   });
 }
 
