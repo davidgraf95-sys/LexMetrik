@@ -481,7 +481,13 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam }: { schlues
           publizierten BGE «Regeste», sonst maschinelle «Zusammenfassung» — ehrlich
           gekennzeichnet (Abnahme-Kritik: kein Etikettenschwindel). */}
       {zeigeRegeste && snap.regeste && (
-        <RegesteBlock regeste={snap.regeste} amtlich={snap.regesteAmtlich} />
+        /* D-1.4 (Befund 20): Regeste in die Lesespalte — vorher volle Breite
+           (~115–120 CPL im wichtigsten Textblock); jetzt dieselbe zentrierte
+           max-w-reading-Spalte wie der EntscheidBody darunter (Pfad 2 bei
+           Z.~630 liegt bereits in der Spalte). Box-Optik (brass) unverändert. */
+        <div className="mx-auto w-full max-w-reading">
+          <RegesteBlock regeste={snap.regeste} amtlich={snap.regesteAmtlich} />
+        </div>
       )}
 
       {/* Lesespalte 60–75 Zeichen (Reglement R1). Bei offenem Lesemodus NICHT rendern —
