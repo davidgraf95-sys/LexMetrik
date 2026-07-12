@@ -1,14 +1,10 @@
 {
-  "hash": "1004fa71dfbed4b55453547e4708ebd2757f2a6aa4e9d354d7718a035e114431",
+  "hash": "eb85f8bef486c8103d0c95ee16dabf249b59f9006df93bd7d26b9a817a60b989",
   "verdikt": "bestanden",
-  "quellePin": "fedlex SPARQL dateEntryInForce 20260712",
+  "quellePin": "n/a — kein Norm-/Tarif-Wert betroffen",
   "datum": "2026-07-12",
   "dateien": [
-    "daten-manifest.json",
-    "public/normtext/inkrafttreten.json",
-    "public/normtext/register.json",
-    "scripts/normtext/browse-manifest.ts",
-    "scripts/normtext/inkrafttreten-generieren.ts",
-    "src/lib/normtext/browse-typen.ts"
+    "src/lib/normtext/browse.ts",
+    "src/lib/vorlagen/variantenInventar.ts"
   ]
 }

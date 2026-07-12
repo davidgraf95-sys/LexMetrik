@@ -1,11 +1,12 @@
 import { describe, it, expect } from 'vitest';
 import {
-  VERTRAGS_INVENTAR, dokumenteJeKarte, dokumenteGesamt, fortschrittProzent, ZIEL_DOKUMENTE,
+  VERTRAGS_INVENTAR, dokumenteJeKarte, dokumenteGesamt,
 } from '../lib/vorlagen/variantenInventar';
 
-// Fixiert den ehrlichen Fortschritt Richtung 1000 (FAHRPLAN-VERTRAGS-VARIANTEN
-// P1f). Bricht bei stillem Schwund/Aufblähung – jede Änderung ist deklariert
-// nachzuführen (§8).
+// Fixiert das Dokumenten-Inventar (FAHRPLAN-VERTRAGS-VARIANTEN P1f). Bricht bei
+// stillem Schwund/Aufblähung – jede Änderung ist deklariert nachzuführen (§8).
+// Das 1000er-Ziel wurde 16.6.2026 gestrichen (Memory Vertrags-Varianten);
+// ZIEL_DOKUMENTE/fortschrittProzent + zugehöriger Test entfernt (H-4/B6).
 
 describe('Varianten-Inventar', () => {
   it('VI-1 Arbeitsvertrag-Karte: 5 Untertypen, 78 erzeugbare Dokumente', () => {
@@ -33,10 +34,5 @@ describe('Varianten-Inventar', () => {
   it('VI-4 Gesamtzahl fixiert (kein stiller Schwund/Aufblähung)', () => {
     // AV 78 + Mietvertrag 48 + Auftrag 12 + Werkvertrag 12 + NDA 9 + Konkubinat 9
     expect(dokumenteGesamt()).toBe(168);
-  });
-
-  it('VI-5 Fortschritt ehrlich gegen das 1000-Ziel', () => {
-    expect(ZIEL_DOKUMENTE).toBe(1000);
-    expect(fortschrittProzent()).toBe(17);
   });
 });
