@@ -363,3 +363,19 @@
   mitabgedeckt (Nachtrag für die nächste Synthese-Revision). `npm run gate`
   GRÜN, `check:bibliothek` grün, Gegenprüfung n/a (reine Doku). Nächster
   Schritt: H-2 (läuft zwingend NACH H-1, §0 Regel 2).
+- **12.7.2026 (H-2 ✅, Worktree `lm-h2`, Branch `chore/h2-bibliothek-check`):**
+  bibliothek-check-Scope dichtgemacht (B37). `scripts/bibliothek-check.sh`:
+  S7.1-Loop (Haupt-INDEX-Zeile) UND S1-Loop (Pflichtkopf) auf `materialien/`,
+  `normtext/`, `seo/` erweitert; S7.1 zusätzlich generisch auf lose Root-`*.md`
+  (INDEX.md selbst ausgenommen) — S1 bewusst NICHT auf Root, da INDEX.md/
+  STANDARDS.md Meta-/Regeldokumente sind, keine Fach-Dossiers (Root ist seit
+  H-1/B38 ohnehin leer von Streu-Dateien). `bibliothek/STANDARDS.md` S1-
+  Ordnerliste nachgezogen. Reihenfolge zwingend eingehalten: erst Report-Lauf
+  gegen den erweiterten Scope, 3 echte Neu-Verstösse gefunden
+  (`materialien/vernehmlassungen-2026-07-10.md` + `normtext/revisionen-
+  2026-07-10.md` ohne S1-tauglicher **Stand**/**Status**-Zeile,
+  `seo/cwv-baseline.md` ohne **Status**-Zeile) und im selben Commit behoben,
+  DANN erst das erweiterte Gate exit-1-scharf. Negativ-Beweis lokal geführt
+  (Test-Datei in `seo/` ohne Kopf/INDEX-Zeile bricht das Gate, Entfernen
+  macht wieder grün). `npm run gate` GRÜN, `check:bibliothek` grün,
+  Gegenprüfung n/a (Prüf-Infrastruktur). Nächster Schritt: H-3.
