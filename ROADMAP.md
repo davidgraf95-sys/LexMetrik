@@ -268,6 +268,23 @@ uebergabe: nur per explizitem `plan:set <id> slot=inhaber`-Commit; check:plan er
   sha/Zeilenzahlen vs. committete Projektion; bestehende `check:*-netz` bleiben Quellen-Arbiter).
   Kuratiertes Schaufenster bleibt prerendert (§15); Long-Tail on-demand inhaltsvollständig (§15 Regel 6).
   Bau-Strang = **W2·6-DATA**; Detailquelle **`FAHRPLAN-DATENHALTUNG.md`**. **Stand 3.7.2026: E0/E0+/E1/E1-Rest-A + E2-Vorarbeiten durch** (E1 = Generator-Flip Bund + Tor `check:datenhaltung`; **E2-Vorarbeiten = hot-FTS build-time [`fts_artikel` external content + `fts_entscheide_schaufenster` standalone, Tokenizer `unicode61 remove_diacritics 2`, HOT-Replika 178 MiB/1 GB] + Such-Query-Modul `scripts/datenhaltung/suche.ts` mit Pagination-by-design + Edge-Funktion `api/suche.ts` [503 ohne Turso]**; **E2-Anbindung ✅ 3.7.2026 = Gruppe «Volltext-Suche (online)» im geteilten `useUniversalSuche`/`SuchResultate` [`src/lib/suche/onlineVolltext.ts`, debounced Fetch, AbortController ~4 s, §8-Offenlegung, ehrliches Degradieren bei 503/Netz/Timeout/200-leer, 5-min-Feature-Cache]**) — **E2 offen NUR: Turso-Hot-Daten laden/synchronisieren [David-Handschritt; Prod-Edge liefert aktuell 200-leer] → dann perf-budget/Payload-Grenz-Test greifen**. **§11.2 Leitfälle-Chips (3.7.2026): das tote `proNormArtikel`-Modell ist verdrahtet — Schaufenster-Shards je Erlass (`public/rechtsprechung/norm-index/<ERLASS>.json`, 19) + `leitfaelleFuerArtikel`-Lazy-Lader + Chip-Zeile im `ArtikelLeser` (Chip → Entscheid + «⧉ daneben öffnen»); Weiche-B-Masse-Anteil «+n weitere (online)» offen bis E2-live.** Details am Schritt W2·6-DATA. Trailer `Roadmap: W2·6-DATA`.
+- **Optimierungs-Research Juli 2026 — Betrieb/Frische/Prüf-Tore/FR-IT** *(QS-OPT, `[OF]`, neu 12.7.2026)*.
+  <!-- @meta id: QS-OPT · status: ready · of: ja · blocker: null · dep: [] · kollision: [vercel.json, .github/workflows/normen-monitor.yml, src/lib/normtext/laden.ts] · worktree: ja · 26x: nein · fahrplan: FAHRPLAN-OPTIMIERUNG-2026-07.md -->
+  Kritik-gefilterte Ablage des allgemeinen Ultracode-Optimierungs-Research (Auftrag David
+  12.7.2026; 0 Befunde widerlegt, 2 Prämissen veraltet). Detailquelle
+  **`FAHRPLAN-OPTIMIERUNG-2026-07.md`**: **O-1 Betrieb & Wachhund** (sofort baubar: CSP-Fix
+  LiveSuche [Prod-Feature empirisch tot], Prod-Smoke + alle 10 Netz-Tore im Normen-Monitor,
+  Soft-404-Rewrite-Ausnahmen, Case-Redirect, LIK-Freshness-Tor, `laden.ts`-Fehler-Cache,
+  Zefix/geo-Vertragstests; `/api/fehler` = Mini-Gate Datenschutztext) · **O-2 Frische-Automatik**
+  (sofort baubar, Verortung QS-CURRENCY/QS-DATA; **terminkritisch: Batch-Re-Pin vor dem
+  1.8.-Berg — 10 Erlasse fällig, check:verfall-Vorlauf läuft**; einmaliges David-Rahmen-Gate
+  für unbeaufsichtigte Repair-PRs + Turso-CI-Secret) · **O-3 Prüf-Tore** (Golden-Matrix
+  prozesskosten/beurkundung/grundbuch/notariat = grösster Rechen-Blindspot →
+  waitForTimeout-Abbau+Flake-Telemetrie → e2e-Sharding → erst dann e2e-Masse) ·
+  **O-4 FR/IT-Zugang** (sofort: Alias-Tabelle CO/CC/CP/LP, FR|IT-Chips; klein-Gate David:
+  DE-Filter der BGer-Pipeline heben) · **O-5 SEO-Nachträge** (GEPARKT, als §10 in
+  `FAHRPLAN-SEO-A11Y-GOVERNANCE.md` einsortiert) · **O-6 Werkzeug-Empirie** (DAVID-GATE §0a,
+  als Notiz-Block in `KATALOG-ROADMAP.md` §D verortet). **Nur Plan — kein Bau in diesem Schritt.**
 
 ---
 

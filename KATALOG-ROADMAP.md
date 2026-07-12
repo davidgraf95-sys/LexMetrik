@@ -308,6 +308,21 @@ familie-fristen-Restbestand.
 **Abnahme-Start (A-Rangliste):** Tagerechner → zpo-fristen → schkg-fristen →
 zustaendigkeit → mietrecht → … (Blocker: Feiertags-Kantonsverifikation).
 
+**Empirie-Notizen (Optimierungs-Research 12.7.2026, `FAHRPLAN-OPTIMIERUNG-2026-07.md`
+O-6 — ändert KEINEN Entscheid-Status, senkt nur den Bau-Aufwand nach Öffnung):**
+Kostenvorschuss → Berechnung liegt komplett (`prozesskosten.ts:398–402` Art. 98 ZPO
+Stand 1.1.2025 + BGG Z.217; Falten = Deep-Link) · BGer-Gebühren → doppelt verifizierter
+Tarif `src/data/tarif/bundesgericht.ts` + `instanz='bundesgericht'` in der Engine
+(`prozesskosten.ts:63/194`), nur Verdrahtung fehlt · Schadenszins → 5%-Mechanik inkl.
+Kumulationsverbots-Warnung (BGE 122 III 53/131 III 12) fertig in `verzugszins.ts:301–302`
+(stützt den Preset-Vorschlag) · Mietzinsanpassung (C-Rang #6) → LIK-Reihe+Teuerungs-Engine
+liegen, fehlt nur BWO-Referenzzins-Reihe + VMWG-Formel (Art. 13/16); Verfallsregister-
+Kandidat (Quartals-Pflege) · Straf-Verjährung (C-Rang #7) → fristenEngine-Muster erprobt,
+StGB-Volltext im Korpus, Nachbar-Engines existieren · Ferien → Verhinderungs-Eingaben
+überschneiden mit `lohnfortzahlung.ts` (Formular-Synergie für den EIN-Rechner-Vorschlag) ·
+SchKG-Vorlagen-Paket (C-Rang #10) → Vorlagen-Framework voll ausgebaut, je Vorlage nur
+Schema+Seite.
+
 ---
 
 ## Backlog (Ermessen — bewusst nicht im Katalog; bestätigt)
