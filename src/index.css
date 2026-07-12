@@ -31,7 +31,7 @@
     /* Tinte – Text & Struktur */
     /* Solitär-Bindung (D-1.8): --ink-fixed-dark ist der EINE nicht-flippende
        Dunkel-Tinten-Wert — speist helles ink-900 UND --auf-gold. Flippt
-       bewusst NIE mit dem Thema (html.dark überschreibt ink-900 separat).
+       bewusst NIE mit dem Thema (der Dunkel-Block überschreibt ink-900 separat).
        Bei D-4-Rekalibrierung wandern beide Verbraucher mit EINEM Wert. */
     --ink-fixed-dark:#1A1A17;
     --ink-900:var(--ink-fixed-dark); --ink-800:#2A2A25; --ink-700:#3A3A33; --ink-600:#54544B; --ink-500:#6E6E64;
@@ -82,7 +82,7 @@
        z. B. das Timeline-Label im Dunkel auf hell und wird unlesbar (~1.3:1).
        Wert = ink-900 (Hell), hier nicht überschrieben. D-1.8: aus dem
        Solitär --ink-fixed-dark gespeist (Nicht-Flip-Absicht bleibt — das
-       Token wird in html.dark NICHT überschrieben). */
+       Token wird im Dunkel-Block NICHT überschrieben). */
     --auf-gold:var(--ink-fixed-dark);
     /* Status — alle Hintergründe nach EINEM Rezept (gleiche Tönung auf
        Papier), damit die vier Familien zusammengehören */
