@@ -258,6 +258,75 @@ prüft der Orchestrator separat). Vier Klassen:
    **Erstlauf-WARNUNG** (Sollwerte legen erst D-4/D-5 fest, dann scharf).
    **APCA-Spalte NUR beratend** (Lc), nie Fail — WCAG 2.2 bleibt das Gate.
 
+## G · Rollen, Farb-Wörterbuch & Wärme-Architektur (D-2-Nachträge)
+
+Deklarierte §13-Nachträge aus FAHRPLAN-DESIGN-WAERME **D-2** (Rollen-Alias-
+Schicht). Grundsatz der Schicht: **Rollen vor Stufen** — Komponenten greifen
+eine wertidentische Rolle (`--accent-*`, `…-solid/-text`, `--ok-*`; in
+`tailwind.config.js` als `accent-*`/`ok-*`/`…-solid`/`…-text` exportiert), nie
+die nackte Basis-Stufe. Eine spätere Farb-Rekalibrierung (D-4/D-5) wird damit
+ein reiner `:root`-Eingriff. Basis-Stufen (`brass-700`, `sage-500`, …) sind für
+**neue** Komponenten privat; Bestand migriert opportunistisch (kein Riesen-Diff).
+
+**a — Brass ist Signal, nicht Tapete.** Grosse Messing-Flächen bleiben dem
+semantisch Massgeblichen vorbehalten (Marke/Wortlaut-Referenz, §4b-B). Abnahme-
+Ritual je Kernseite: **Squint-Test** — kneift man die Augen zu, darf Brass nur
+dort leuchten, wo es Bedeutung trägt, nicht als flächige Einfärbung.
+
+**b — Ton vor Schatten.** Erhebung primär über Flächenton (`--paper`→`--surface`
+→`--paper-raised`) + 1px `--line`; Schatten ist **sekundär**, erst ab
+«schwebend» (Dropdown/Popover/Modal). Kein Schatten-Verbot (das `lc-card`-
+Doppelsignal bleibt), aber die Regel: **Tiefe = Stufe + Border, nie Schatten
+allein.**
+
+**c — Temperatur-Dramaturgie.** Fläche→Temperatur trägt das Wörterbuch: **warm
+empfangen** (Startseite/Rubriken), **neutral-kühl prüfen** (Entscheid/Rechner/
+Fristen). Der Temperatur-Kontrast ist Feature, kein Fehler; Signaturen (gravierte
+Brass-Linie, Regeste-Box) sind katalogisierter Motiv-Rhythmus, keine Tapete.
+
+**d — Reinweiss-Invariante (im Gate).** Kein `#FFFFFF`/`bg-white` als Lese-/
+Arbeitsfläche — Papier ist warm (`--paper*`/`--surface*`); `--paper-raised` deckt
+nur kleine erhabene Flächen. **Maschinell erzwungen** in `check:design-tokens`
+(bg-white/text-white/…-white + `#fff`/`#ffffff` im Inline-Style, negativ-
+kontrolliert). Dokumentierte Ausnahmen: `@media print` (`body #fff`) und
+`text-paper` auf ink-Buttons — beide in `src/index.css`, ausserhalb des
+Komponenten-Scopes des Gates.
+
+**e — Zwei-Stimmen-Regel (grep-auditiert).** Serif (`--font-serif`) trägt
+**ausschliesslich** zitierfähigen Quelltext (Normtext, Entscheidtext, Regesten,
+Erlass-Kopf); Sans (`--font-sans`) alles Interaktive; Mono nur Zahlen/
+Aktenzeichen. Audit 12.7.2026 (`grep font-serif src/`): alle 15 Fundstellen
+liegen im Gesetzes-Reader (`gesetz-leser/*`) und der Rechtsprechung
+(`RegesteBlock`/`EntscheidBody`/`EntscheidKarte`) — **null** Produkt-UI. Keine
+dritte Schrift (§15). Regel erfüllt, keine Code-Änderung nötig.
+
+**f — Linien unter der Tinte, Textur-NEIN.** Struktur-/Haarlinien sind immer
+schwächer als der ink-600-Sekundärtext und laufen nur über die color-mix-Tokens
+(`--line`, `--line-strong`, `--rule-*`, `--guide-gliederung`). Explizites **NEIN**
+zu Papier-Texturen/Noise-Overlays (auch §15 Performance).
+
+**g — Wärme-Architektur (der EINE Steuerhebel).** Wärme wird ausschliesslich
+über die `--paper`/`--ink`-Basiswerte + die color-mix-Rezepte gesteuert; **nie**
+flächen-lokale Warmtöne, **kein** dritter (Sepia-)Modus. Änderungspfad:
+`--paper`/`--ink-900` verschieben, alles andere folgt aus den Rezepten.
+
+**h — Navy-Fussnote.** `slate` bleibt der neutrale Entscheid-/Referenz-
+Semantikton (§4b-B), **nie** eine Markenfläche. Die Identität wird nicht Richtung
+Kanzlei-Navy «abgesichert» — brass bleibt die Marke.
+
+**i — Werkstoff- vs. Zustandsfarbe (F1, aufgelöst).** `sage` war doppelt belegt
+(Materialien-Kennfarbe **und** ok/Live-Zustand). Aufgelöst: die Zustands-Rolle
+**`--ok-*`** (wertidentisch zu sage, semantisch getrennt) trägt Status; die drei
+namentlichen Sites `lc-badge-ok`/`lc-live`/`lc-termin-ring` sind darauf migriert
+(§4b-B-i). `sage` bleibt Materialien-Familie + bibliografische Currency
+(`lc-punkt-material`, `lc-chip-geltend`). Eine Status-Einfärbung ist damit nicht
+mehr zweideutig.
+
+**j — Interaktions-Zustände (F5).** Wärme-Verhalten von hover/active/selected
+folgt EINER Regel: **eine Flexoki-Stufe «tiefer»** (mehr Chroma, weniger
+Lightness) — die Rollen `--accent-hover`/`--accent-bg-hover` kapseln das.
+Verhindert Patchwork bei künftigen Interaktions-Feinschliffen.
+
 ## Audit: Stand der Webseite gegen dieses Reglement
 
 Code-Audit 25.6.2026 (adversarial, read-only). Gesamtbild: **Die Webseite
