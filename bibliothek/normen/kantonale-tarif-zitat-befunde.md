@@ -2,7 +2,7 @@
 
 **Erstellt:** 16.6.2026  
 **Auftrag:** David «weiter verbessern», Vorstufe Norm-Vorschau-Vollständigkeitstest  
-**Status:** ZWEIFACH GEPRÜFT (live LexWork-API + Inhalts-Gegenprobe); Umsetzung der Wertänderungen offen für Davids Abnahme  
+**Status:** ZWEIFACH GEPRÜFT (live LexWork-API + Inhalts-Gegenprobe); alle 3 Befunde (LU/OW/SH) BEHOBEN (SH zuletzt 16.6.2026, Commit `b7587a51`, fachl. freigegeben David) — je Fundort verifizieren, generelle Rechtssicherheits-Abnahme des Katalogs bleibt Davids Sache (Zeitsperre)  
 **Quellen:**
 - LU SRL 258 (BeurkGebV): https://srl.lu.ch/app/de/texts_of_law/258
 - LU SRL 228 (GBGT): https://srl.lu.ch/app/de/texts_of_law/228
@@ -51,22 +51,31 @@ Der Prozesskosten-Rechner bildet die **erstinstanzliche Entscheidgebühr im orde
 
 ---
 
-## Befund 3 — SH schlichtung.ts (~Z. 131) + nicht-vermoegensrechtlich.ts (~Z. 104) (OFFEN, fachlich — Entscheid David)
+## Befund 3 — SH schlichtung.ts (Z. 130–141) + nicht-vermoegensrechtlich.ts (Z. 110–114) + zustaendigkeitKosten.ts (Z. 141) — BEHOBEN 16.6.2026 (§7, fachl. freigegeben David)
 
-**Dateien:**  
-- `src/data/tarif/schlichtung.ts`, SH-Eintrag (~Z. 131), zitiert `SHR 273.100 Art. 109`  
-- `src/data/tarif/nicht-vermoegensrechtlich.ts`, SH-Eintrag (~Z. 104), zitiert ebenfalls `SHR 273.100 Art. 109`  
+**Dateien:**
+- `src/data/tarif/schlichtung.ts`, SH-Eintrag (Z. 130–141), zitierte vormals `SHR 273.100 Art. 109`
+- `src/data/tarif/nicht-vermoegensrechtlich.ts`, SH-Eintrag (Z. 110–114, `SCHLICHTUNG_NV`), zitierte ebenfalls `SHR 273.100 Art. 109`
+- **dritte Fundstelle (Beleg-Härte-Nachtrag):** `src/data/zustaendigkeitKosten.ts:141` (SH-Eintrag im UI-Kurztext-Register, dieselbe Wertänderung)
 
-**Befund:** SHR 273.100 ist die **kantonale ZPO von 1951** — am 1.1.2011 mit Inkrafttreten der eidgenössischen ZPO aufgehoben. LexWork-API liefert HTTP 404; in `BEKANNTE_LUECKEN` als `fetch-404`. Art. 109 SHR 273.100 ist **totes Recht** (kein geltendes Zitat).  
+**Befund:** SHR 273.100 war die **kantonale ZPO von 1951** — am 1.1.2011 mit Inkrafttreten der eidgenössischen ZPO aufgehoben. LexWork-API liefert HTTP 404; in `BEKANNTE_LUECKEN` als `fetch-404`. Art. 109 SHR 273.100 war **totes Recht** (kein geltendes Zitat).
 **Geltende Norm (live verifiziert):** **Justizgesetz JG SHR 173.200, Art. 82** — Schlichtungspauschale, LexWork version_uid ce466f93…, in `public/normtext/kanton/SH-173.200.json` als `art_82` gesnapshottet und seit 16.6.2026 verdrahtet.
 
-**WERTÄNDERUNG (Entscheid David):**
-- Aktuell kodiert (aus der aufgehobenen 1951er-Norm): **CHF 50–300**
-- Art. 82 JG SHR 173.200 (geltend): **CHF 100–1000**
+**WERTÄNDERUNG UMGESETZT (fachlich freigegeben David, 16.6.2026):**
+- Vormals kodiert (aus der aufgehobenen 1951er-Norm): CHF 50–300
+- **Jetzt kodiert, Art. 82 JG SHR 173.200 (geltend): CHF 100–1000**
 
-Dies ist eine fachliche Änderung am Rechenergebnis — Schlichtungsgebühren SH würden sich nach oben verschieben. Keine Code-Änderung ohne Davids Abnahme.
+**Beleg-Zitat (Code-Kommentar `schlichtung.ts` Z. 131–136):**
+> «Korrektur 16.6.2026 (§7, fachl. freigegeben David): bisher zitierte kantonale
+> ZPO «SHR 273.100 Art. 109» (1951) wurde am 1.1.2011 mit der eidg. ZPO
+> aufgehoben (totes Recht, LexWork-API 404). Geltend ist Art. 82 Justizgesetz
+> (JG): «Im Schlichtungsverfahren beträgt die Pauschalgebühr Fr. 100.00 bis
+> Fr. 1'000.00, wenn das Verfahren nicht kostenlos ist.» Quelle:
+> rechtsbuch.sh.ch JG 173.200, version_uid ce466f93…, i.K. 1.5.2026.»
 
-**Hinweis:** Der SH-Gerichtskosten-Eintrag in `src/data/tarif/gerichtskosten.ts` (~Z. 193) zitiert SHR 173.200 Art. 83 — dieser ist KORREKT (kein Befund).
+**Commit:** `b7587a51` — «fix(tarif): SH Schlichtung auf geltendes JG SHR 173.200 Art. 82 (100–1000; totes ZPO-273.100 ersetzt)». Analoger Korrekturvermerk in `nicht-vermoegensrechtlich.ts` Z. 110–113 (SCHLICHTUNG_NV, gleicher Commit-Kontext).
+
+**Hinweis:** Der SH-Gerichtskosten-Eintrag in `src/data/tarif/gerichtskosten.ts` (~Z. 193) zitiert SHR 173.200 Art. 83 — dieser ist KORREKT (kein Befund, unverändert).
 
 ---
 
@@ -76,7 +85,7 @@ Dies ist eine fachliche Änderung am Rechenergebnis — Schlichtungsgebühren SH
 |--------|-------|--------|--------|
 | LU GRUNDPFAND quelleUrl 228→258 | notariat-grundbuch.ts:138 | **BEHOBEN 16.6.** | wertneutral; Snapshot LU-258 art_29 erzeugt |
 | OW gerichtskosten Art. 7 aufgehoben | gerichtskosten.ts | **BEHOBEN 16.6.** | Art. 12 (Kantonsgericht, ordentl. Verf.); ≤30'000 Art. 9; stand 1.3.2015; %-Tail 3 % statt Platzhalter; Snapshot art_12 |
-| SH schlichtung/nv Art. 109 totes Recht | schlichtung.ts:131, nicht-vermoegensrechtlich.ts:104 | **OFFEN** | Entscheid David: Art. 82 JG (CHF 100–1000 statt 50–300) |
+| SH schlichtung/nv/zustaendigkeitKosten Art. 109 totes Recht | schlichtung.ts:130–141, nicht-vermoegensrechtlich.ts:110–114, zustaendigkeitKosten.ts:141 | **BEHOBEN 16.6.** (Commit `b7587a51`) | Art. 82 JG (CHF 100–1000 statt 50–300), fachl. freigegeben David |
 
 ---
 
