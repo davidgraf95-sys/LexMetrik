@@ -27,13 +27,29 @@ export default {
           400: 'var(--brass-400)', 500: 'var(--brass-500)', 600: 'var(--brass-600)',
           700: 'var(--brass-700)', 800: 'var(--brass-800)',
         },
+        // ── Rollen-Alias-Schicht (D-2, Radix-Muster) ──────────────────────
+        // Wertidentische Rollen über den Basis-Skalen (Werte in src/index.css).
+        // NEUE Komponenten greifen die Rolle (text-accent-text, bg-accent-bg,
+        // border-accent-line …), nie die nackte Stufe (brass-700). Damit ist
+        // eine Rekalibrierung (D-4/D-5) ein reiner :root-Eingriff. Die absichtl.
+        // Dark-Brass-Inversion (Befund 9) trägt --accent-hover — kein Werte-Tausch.
+        accent: {
+          bg: 'var(--accent-bg)', 'bg-hover': 'var(--accent-bg-hover)',
+          'line-decor': 'var(--accent-line-decor)', line: 'var(--accent-line)',
+          solid: 'var(--accent-solid)', text: 'var(--accent-text)',
+          'text-strong': 'var(--accent-text-strong)', hover: 'var(--accent-hover)',
+        },
+        // F1 (§4b-B-i): Zustands-Rolle «ok/geltend/live», wertidentisch zu sage,
+        // aber semantisch getrennt von der Materialien-Kennfarbe sage.
+        ok: { solid: 'var(--ok-solid)', text: 'var(--ok-text)', bg: 'var(--ok-bg)', line: 'var(--ok-line)' },
         // `line`-Stufen (D-1.3): Nicht-Text-Kanten/Balken greifen den
         // Linien-Alias (dunkel auf -700 gehoben), NIE -500 direkt (1.4.11).
-        sage: { 500: 'var(--sage-500)', 700: 'var(--sage-700)', bg: 'var(--sage-bg)', line: 'var(--sage-line)' },
-        slate: { 500: 'var(--slate-500)', 700: 'var(--slate-700)', bg: 'var(--slate-bg)', line: 'var(--slate-line)' },
+        // `solid`/`text`-Rollen (D-2) analog zu accent — …-500/-700 als Rolle.
+        sage: { 500: 'var(--sage-500)', 700: 'var(--sage-700)', bg: 'var(--sage-bg)', line: 'var(--sage-line)', solid: 'var(--sage-solid)', text: 'var(--sage-text)' },
+        slate: { 500: 'var(--slate-500)', 700: 'var(--slate-700)', bg: 'var(--slate-bg)', line: 'var(--slate-line)', solid: 'var(--slate-solid)', text: 'var(--slate-text)' },
         well: 'var(--well)',
-        warn: { 500: 'var(--warn-500)', 700: 'var(--warn-700)', bg: 'var(--warn-bg)', line: 'var(--warn-line)' },
-        danger: { 500: 'var(--danger-500)', 700: 'var(--danger-700)', bg: 'var(--danger-bg)', line: 'var(--danger-line)' },
+        warn: { 500: 'var(--warn-500)', 700: 'var(--warn-700)', bg: 'var(--warn-bg)', line: 'var(--warn-line)', solid: 'var(--warn-solid)', text: 'var(--warn-text)' },
+        danger: { 500: 'var(--danger-500)', 700: 'var(--danger-700)', bg: 'var(--danger-bg)', line: 'var(--danger-line)', solid: 'var(--danger-solid)', text: 'var(--danger-text)' },
       },
       fontFamily: {
         display: ['var(--font-display)', 'system-ui', 'sans-serif'],
