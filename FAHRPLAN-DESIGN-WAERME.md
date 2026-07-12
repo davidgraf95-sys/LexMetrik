@@ -217,7 +217,7 @@ Gegenprüfung n/a (reine Token-Schicht). Trailer `Roadmap: W2·11-DESIGN`.
      Patchwork.
 - **Aufwand:** S–M · **Golden:** neutral (additiv + Doku).
 
-### D-3 · color-mix `srgb` → `oklab` (eigener Mess-Commit)
+### D-3 · color-mix `srgb` → `oklab` (eigener Mess-Commit) ✅ (12.7.2026, PR feat/design-d3-oklab)
 *(Befund 36 — grösster Wärme-Hebel pro Zeile: srgb-Interpolation frisst bei 10–18 %-Tönungen Farbigkeit → Status-Flächen grauer/kälter als das Rezept verspricht)*
 - **Kern:** `in srgb` → `in oklab` in den vier `-bg`-Rezepten
   (`--sage-bg/--slate-bg/--warn-bg/--danger-bg`) + Linien-Mixen (`--line`,
@@ -229,6 +229,17 @@ Gegenprüfung n/a (reine Token-Schicht). Trailer `Roadmap: W2·11-DESIGN`.
   `check:linien-kanon` bleibt grün (prüft Verwendung, nicht Werte). VOR D-4/D-5 —
   sonst misst man alte srgb-Fehler in die neuen Rampen ein.
 - **Aufwand:** S · **Golden:** neutral (CSS-only).
+- **Umsetzung 12.7.2026:** alle 19 Stellen umgestellt; Mess-Befund: 15 der 19
+  mischen mit `transparent` → gerendert **byte-identisch** (premultiplied alpha),
+  sichtbar verschieben sich NUR die vier `-bg`-Flächen (wärmer, alle `-700`-Texte
+  ≥5.1:1, kein AA-Riss, keine Einzel-Kalibrierung nötig). **C-1/C-2/C-3-Referenz-
+  werte NEU GEMESSEN: unverändert** (Voll-Token auf solidem `--well`, kein
+  color-mix im Pfad — 4.81/3.47 · 5.24/9.43 · 4.91/10.48); Tor-Nachführung =
+  deklarierter No-op (Kommentar `check-farbwelt.ts`, Nachtrag `DESIGN-REGLEMENT.md
+  §F2b` mit Vorher/Nachher-Tabelle, Notiz §4b-B). golden 209 byte-gleich, gate
+  voll GRÜN, axe 26/26 hell+dunkel, Mappe `abnahme/design-waerme/d3/`.
+  INFO: einziger Call-Site-Mix `Shell.tsx` (sunken/paper) rendert raumunabhängig
+  identisch — für D-5 vorgemerkt, hier nicht angefasst.
 
 ### D-4 · Ink-Wärme: EINE Hue-Normalisierung der Grau-Achse
 *(Befunde 3+34 konsolidiert [Radix-Regel «saturated gray closest to accent»] + 15-Anteil)*

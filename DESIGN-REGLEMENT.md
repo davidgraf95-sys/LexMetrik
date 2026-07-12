@@ -258,6 +258,36 @@ prüft der Orchestrator separat). Vier Klassen:
    **Erstlauf-WARNUNG** (Sollwerte legen erst D-4/D-5 fest, dann scharf).
    **APCA-Spalte NUR beratend** (Lc), nie Fail — WCAG 2.2 bleibt das Gate.
 
+**F2b-Nachtrag D-3 (12.7.2026) — color-mix `in srgb` → `in oklab` (Befund 36,
+FAHRPLAN-DESIGN-WAERME D-3).** Alle 19 `color-mix`-Rezepte in `src/index.css`
+interpolieren in **oklab** (srgb frisst bei 10–18 %-Tönungen Farbigkeit —
+Status-Flächen wurden grauer/kälter als das Rezept verspricht). Neu gemessen
+(deterministisch, culori, hell+dunkel):
+
+- **Referenzwerte C-1/C-2/C-3 (Tabelle oben): UNVERÄNDERT** — alle drei Paare
+  sind Voll-Token auf dem soliden `--well`, kein color-mix im Pfad
+  (vorher = nachher: 4.81/3.47 · 5.24/9.43 · 4.91/10.48).
+- **Mixe mit `transparent` (15 der 19 Stellen — Haarlinien `--line`/
+  `--line-strong`/`--guide-gliederung`/`--rule-*`, `lc-glass`, Badge-Outlines,
+  Schraffur, brass-Unterstreichung): gerendert BYTE-IDENTISCH** — bei
+  premultiplied alpha trägt der transparente Endpunkt kein Farbgewicht, die
+  Interpolation ist raumunabhängig.
+- **Sichtbar verschieben sich NUR die vier `-bg`-Flächen** (wärmer/chromatischer,
+  Text = `-700` bleibt überall ≥ 5.1:1):
+
+  | Rezept | hell alt→neu | K(-700) alt→neu | dunkel alt→neu | K(-700) alt→neu |
+  |---|---|---|---|---|
+  | `--sage-bg` | `#EBEBE3`→`#EAEBE2` | 5.81→5.77 | `#23271C`→`#22251B` | 8.25→8.44 |
+  | `--slate-bg` | `#EAEAE5`→`#E9E9E5` | 6.58→6.52 | `#222421`→`#21231F` | 7.63→7.77 |
+  | `--warn-bg` | `#F4EBDC`→`#F5EBDE` | 5.11→5.12 | `#352711`→`#312515` | 7.12→7.32 |
+  | `--danger-bg` | `#F0E5DF`→`#F2E5DD` | 7.55→7.54 | `#2E1D15`→`#2C1D15` | 6.67→6.68 |
+
+  `lc-badge-entwurf`-Text (warn-700 auf transparenter Fläche): 5.87/5.67 hell ·
+  8.47/9.00 dunkel (surface/paper) — unberührt vom Raumwechsel.
+  Alle 46 farbwelt-Pflichtpaare bleiben ≥ Schwellen; kein Guard musste bewegt
+  werden. Neue Rezepte schreiben `color-mix(in oklab, …)`; `in srgb` ist für
+  Farb-Rezepte nicht mehr zulässig (Ausnahme: keine bekannt).
+
 ## G · Rollen, Farb-Wörterbuch & Wärme-Architektur (D-2-Nachträge)
 
 Deklarierte §13-Nachträge aus FAHRPLAN-DESIGN-WAERME **D-2** (Rollen-Alias-
