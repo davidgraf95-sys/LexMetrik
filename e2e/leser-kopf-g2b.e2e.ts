@@ -10,20 +10,24 @@ async function warteReader(page: Page, url: string): Promise<void> {
   await expect(page.locator('#art-1').first()).toBeVisible({ timeout: 20000 });
 }
 
-test('Kopf-Zusammenführung: EIN <header> trägt Overline + Titel + «Ansicht»-Dropdown', async ({ page }) => {
+test('Kopf-Zusammenführung + A26: EIN <header> (Overline/Titel), «Ansicht»-Dropdown in der immer sichtbaren Positionsleiste', async ({ page }) => {
   await warteReader(page, '/gesetze/bund/BV');
   // Genau EIN Leser-Kopf (kein duplizierter Block): der <header> mit der Overline.
   const header = page.locator('.lc-leser > header');
   await expect(header).toHaveCount(1);
   await expect(header.getByText('Bundesverfassung', { exact: false }).first()).toBeTruthy();
-  // Das «Ansicht»-Dropdown (U-KOPF/A4) sitzt IM Kopf; geöffnet zeigt es die
-  // Darstellungsoptionen-Gruppe mit den drei Switches.
-  const ansicht = header.getByRole('button', { name: 'Ansicht' });
+  // A26 (David 11.7.2026): das «Ansicht»-Dropdown ist AUS dem weggescrollenden
+  // Erlass-Kopf in die IMMER sichtbare Positions-/Kontextleiste (Inhalts-Kopf mit
+  // Brotkrümel) gewandert — damit die Darstellungsoptionen jederzeit erreichbar
+  // sind, während man im Gesetz ist. Im Kopf steht es daher nicht mehr.
+  await expect(header.getByRole('button', { name: 'Ansicht' })).toHaveCount(0);
+  const leiste = page.locator('div.sticky', { has: page.locator('nav[aria-label="Brotkrümel"]') });
+  const ansicht = leiste.getByRole('button', { name: 'Ansicht' });
   await expect(ansicht).toBeVisible();
   await expect(ansicht).toHaveAttribute('aria-expanded', 'false');
   await ansicht.click();
   await expect(ansicht).toHaveAttribute('aria-expanded', 'true');
-  await expect(header.locator('[aria-label="Darstellungsoptionen"]')).toBeVisible();
+  await expect(leiste.locator('[aria-label="Darstellungsoptionen"]')).toBeVisible();
 });
 
 // U-KOPF/A4 a11y: das «Ansicht»-Dropdown ist eine ehrliche Disclosure (kein

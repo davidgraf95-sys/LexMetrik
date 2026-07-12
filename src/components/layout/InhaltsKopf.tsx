@@ -19,8 +19,11 @@ export function InhaltsKopf({ daten, breiteKlasse, onSchliessen }: {
   const letzter = daten.breadcrumb.length - 1;
   return (
     // Klebt unter der Topbar (sticky top-16 = 4rem), bleibt beim Scrollen sichtbar
-    // (damit der Live-Artikel mitläuft). z unter der Topbar (z-20).
-    <div className="sticky top-16 z-10 border-b border-line bg-paper">
+    // (damit der Live-Artikel mitläuft). z ÜBER den Inhalts-Sticky-Leisten (Suche
+    // z-16 / Sektions-Kontextkopf z-15), damit das A26-«Ansicht»-Dropdown-Panel
+    // beim Aufklappen über sie legt statt dahinter zu verschwinden; die Leiste
+    // selbst überlappt sie nicht (sie sitzt 36 px höher), das z ist rein fürs Panel.
+    <div className="sticky top-16 z-30 border-b border-line bg-paper">
       <div className={`${breiteKlasse} mx-auto px-5 sm:px-6 h-9 grid grid-cols-[1fr_auto_1fr] items-center gap-2`}>
         <nav aria-label="Brotkrümel" className="flex min-w-0 items-center gap-1 text-xs text-ink-500">
           {daten.breadcrumb.map((b, i) => (
@@ -34,6 +37,10 @@ export function InhaltsKopf({ daten, breiteKlasse, onSchliessen }: {
         </nav>
         <span className="num justify-self-center text-xs font-medium text-ink-700">{daten.artikel ?? ''}</span>
         <div className="flex items-center justify-self-end gap-2">
+          {/* A26 (David 11.7.2026): das grundart-spezifische Bedien-Element (beim
+              Gesetzes-Volltext das «Ansicht»-Dropdown) — links vom Stand/✕, damit die
+              Darstellungsoptionen immer erreichbar sind, während man im Gesetz ist. */}
+          {daten.ansichtSlot}
           {daten.stand && <span className="text-xs text-ink-500">Stand <span className="num">{daten.stand}</span></span>}
           <button type="button" onClick={onSchliessen}
             aria-label="Schliessen (zur Startseite)" title="Schliessen (zur Startseite)"

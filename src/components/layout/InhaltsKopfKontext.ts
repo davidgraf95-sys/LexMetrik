@@ -1,4 +1,4 @@
-import { createContext, useContext } from 'react';
+import { createContext, useContext, type ReactNode } from 'react';
 import { verlaufLabel, type VerlaufManifeste } from '../../lib/verlaufLabel';
 
 // Kontext + Helfer des Inhalts-Kopfs (Einzelansicht «analog Split-View»). Getrennt
@@ -12,6 +12,13 @@ export interface KopfDaten {
   stand?: string | null;
   /** Aktueller Artikel (nur Gesetz, live beim Scrollen), z. B. «Art. 5». */
   artikel?: string | null;
+  /** A26 (David 11.7.2026): grundart-spezifisches Bedien-Element, das der Kopf
+   *  RECHTS mitführt — beim Gesetzes-Volltext das «Ansicht»-Dropdown
+   *  (Darstellungsoptionen), damit es immer sichtbar ist, während man im Gesetz
+   *  ist. Der Reader meldet das fertige Element (Layer-Trennung: der Kopf in
+   *  components/layout rendert es opak, ohne die Reader-Interna zu kennen); andere
+   *  Inhaltstypen lassen es weg → kein Element. */
+  ansichtSlot?: ReactNode;
 }
 
 // Melde-Funktion: Inhaltsseiten rufen sie (im Effect) mit ihren Kopfdaten bzw.

@@ -21,7 +21,7 @@ import type { BrowseErlass, BrowseManifest } from '../../lib/normtext/browse-typ
 import type { NormSnapshot } from '../../lib/normtext/typen';
 import { formatiereDatum, passtAufSuche, pfadZu, baueZitat, kopfOverline, grundartMeta } from './helpers';
 import { ArtikelLeser, SektionKopf, SektionBaumTOC, ErlassKopfBlock, ErlassLeserKopf, SektionKontextKopf } from './parts';
-import { LeserAnsichtMenu, LeserFussnotenChip } from './LeserAnsichtMenu';
+import { LeserAnsichtMenu } from './LeserAnsichtMenu';
 import { beiLeerlauf } from '../../lib/leerlauf';
 import { ladeLeitfallShard, normArtikelToken, type LeitfallShard } from '../../lib/rechtsprechung/norm-index';
 import { ladeRevisionShard, revisionFuerToken, type RevisionShard } from '../../lib/verzahnung/artikel-revisionen';
@@ -305,27 +305,8 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     document.title = `${erlass.kuerzel} (${kurz}) — LexMetrik`;
   }, [erlass, istSekundaer]);
 
-  // A/A2/A3/F: Kopf melden (Breadcrumb Gesetze › Ebene › Kürzel · Stand · aktueller
-  // Artikel). Wird vom NÄCHSTEN Provider gefangen: Einzelansicht → Inhalts-Kopf
-  // (Shell); Split-View → der jeweilige PaneKopf (SekundaerPane bzw. primär Shell).
-  // Live-Artikel kommt aus dem IntersectionObserver.
-  useEffect(() => {
-    if (!erlass) return;
-    const ebeneLabel = erlass.rechtsgebiet === 'international'
-      ? 'International'
-      : erlass.ebene === 'bund' ? 'Bund' : `Kanton ${erlass.kanton}`;
-    // Ebene-Segment klickbar → gefilterte Gesetzes-Übersicht (?ebene=/?kt=).
-    const ebeneTo = erlass.rechtsgebiet === 'international'
-      ? '/gesetze?ebene=international'
-      : erlass.ebene === 'bund' ? '/gesetze'
-        : `/gesetze?ebene=kanton&kt=${encodeURIComponent(erlass.kanton ?? '')}`;
-    meldeInhaltsKopf({
-      breadcrumb: [{ label: 'Gesetze', to: '/gesetze' }, { label: ebeneLabel, to: ebeneTo }, { label: erlass.kuerzel }],
-      stand: erlass.stand ? formatiereDatum(erlass.stand) : null,
-      // Hinter dem laufenden Artikel die Gesetzesabkürzung (z. B. «Art. 7 OR»).
-      artikel: aktArtikel ? `${aktArtikel} ${erlass.kuerzel}` : null,
-    });
-  }, [erlass, aktArtikel, meldeInhaltsKopf]);
+  // A/A2/A3/F: Kopf melden — die Meldung selbst steht weiter unten (nach `linien`/
+  // `fussnotenAnzahl`, die der A26-Ansicht-Slot braucht; TDZ). Hier nur das Aufräumen.
   // Beim Verlassen den Kopf räumen (Shell setzt bei Routenwechsel ohnehin zurück).
   useEffect(() => () => meldeInhaltsKopf(null), [meldeInhaltsKopf]);
 
@@ -354,6 +335,35 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     for (const v of Object.values(struktur)) n += v?.fussnoten?.length ?? 0;
     return n;
   }, [struktur]);
+
+  // A/A2/A3/F + A26: Kopf melden (Breadcrumb Gesetze › Ebene › Kürzel · Stand ·
+  // aktueller Artikel · «Ansicht»-Dropdown). Wird vom NÄCHSTEN Provider gefangen:
+  // Einzelansicht → Inhalts-Kopf (Shell); Split-View → der jeweilige PaneKopf.
+  // Live-Artikel kommt aus dem IntersectionObserver.
+  // A26 (David 11.7.2026): NUR die Einzelansicht (!imPane) trägt das «Ansicht»-
+  // Dropdown im immer sichtbaren Inhalts-Kopf mit — im Split-View bleibt es (ohne
+  // PaneKopf-Umbau/Stacking-Risiko) im Erlass-Kopf. `eintraege` (Volltext-Snapshot)
+  // grenzt pdf-embed/nur-live-link aus (dort wären die Optionen wirkungslos, §13 F4).
+  useEffect(() => {
+    if (!erlass) return;
+    const ebeneLabel = erlass.rechtsgebiet === 'international'
+      ? 'International'
+      : erlass.ebene === 'bund' ? 'Bund' : `Kanton ${erlass.kanton}`;
+    // Ebene-Segment klickbar → gefilterte Gesetzes-Übersicht (?ebene=/?kt=).
+    const ebeneTo = erlass.rechtsgebiet === 'international'
+      ? '/gesetze?ebene=international'
+      : erlass.ebene === 'bund' ? '/gesetze'
+        : `/gesetze?ebene=kanton&kt=${encodeURIComponent(erlass.kanton ?? '')}`;
+    meldeInhaltsKopf({
+      breadcrumb: [{ label: 'Gesetze', to: '/gesetze' }, { label: ebeneLabel, to: ebeneTo }, { label: erlass.kuerzel }],
+      stand: erlass.stand ? formatiereDatum(erlass.stand) : null,
+      // Hinter dem laufenden Artikel die Gesetzesabkürzung (z. B. «Art. 7 OR»).
+      artikel: aktArtikel ? `${aktArtikel} ${erlass.kuerzel}` : null,
+      ansichtSlot: !imPane && eintraege
+        ? <LeserAnsichtMenu zeigeLinien={linien.guideEbene !== null} linienAutoAn={linien.autoGuide} fussnotenAnzahl={fussnotenAnzahl} />
+        : undefined,
+    });
+  }, [erlass, aktArtikel, meldeInhaltsKopf, imPane, eintraege, linien, fussnotenAnzahl]);
 
   // Dokument-Position (Index des ersten enthaltenen Artikels) je Sektion — EINMAL
   // bottom-up berechnet, damit renderSektion die Kinder + direkten Artikel eines
@@ -1043,12 +1053,11 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
                 (Linien/Fussnoten/Verweise/Entscheide + Zeitraum) — reine data-*-/
                 CSS-Toggles bzw. JS-Filter (leserOptionen.ts), global, jede Instanz
                 synchron. Linien-Schalter nur bei geschachteltem Gesetz (sonst
-                wirkungslos). */}
-            <LeserAnsichtMenu zeigeLinien={linien.guideEbene !== null} linienAutoAn={linien.autoGuide} />
-            {/* V2·K-2: prominentes Kopf-Signal + Toggle für die Fussnoten (Zähler N
-                aus dem Sidecar); Einschalten springt zum Apparat. Kein Chip ohne
-                Fussnoten / vor dem Sidecar-Laden (CLS-schonend). */}
-            <LeserFussnotenChip anzahl={fussnotenAnzahl} />
+                wirkungslos). A26 (David 11.7.2026): in der EINZELANSICHT wandert das
+                Dropdown in den immer sichtbaren Inhalts-Kopf (oben, via ansichtSlot)
+                — hier bleibt es NUR im Split-View-Pane (dort trägt der PaneKopf keine
+                Optionen). Der Fussnoten-Chip ist als Eintrag ins Menü aufgegangen. */}
+            {imPane && <LeserAnsichtMenu zeigeLinien={linien.guideEbene !== null} linienAutoAn={linien.autoGuide} fussnotenAnzahl={fussnotenAnzahl} />}
             {/* Dasselbe Gesetz zusätzlich in einem zweiten Reiter öffnen (Auftrag
                 David) — zum Vergleich zweier Stellen; die Reiter unterscheiden sich
                 im Label über den Artikel («OR – Art. 41» / «OR – Art. 97»). */}
