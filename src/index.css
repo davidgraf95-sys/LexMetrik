@@ -87,6 +87,11 @@
     /* Status — alle Hintergründe nach EINEM Rezept (gleiche Tönung auf
        Papier), damit die vier Familien zusammengehören */
     --status-tint:10%;
+    /* D-1.9 (Befund 10): die drei Status-Zwischentöne sind DREI benannte
+       ROLLEN statt Magic-Mixe — gleiche Endwerte (§6 verhaltensneutral):
+       Badge-Outline (lc-badge-entwurf) · weiche Status-Border (lc-badge-soft)
+       · Schraffur-Streifen (lc-hatch-warn). */
+    --status-outline:45%; --status-border-soft:30%; --status-hatch:26%;
     --sage-500:#5F7A58; --sage-700:#48603F;
     --sage-bg:color-mix(in srgb, var(--sage-500) var(--status-tint), var(--paper));
     --slate-500:#5B6B73; --slate-700:#46535A;
@@ -436,7 +441,7 @@
     background-color: var(--warn-bg);
     background-image: repeating-linear-gradient(
       135deg,
-      color-mix(in srgb, var(--warn-500) 26%, transparent) 0 1px,
+      color-mix(in srgb, var(--warn-500) var(--status-hatch), transparent) 0 1px,
       transparent 1px 5px
     );
   }
@@ -559,10 +564,10 @@
      Oberkante der Karte. (Design-Review 6.6.2026, Freigabe David) */
   .lc-badge-entwurf {
     @apply lc-badge bg-transparent text-warn-700;
-    border: 1px solid color-mix(in srgb, var(--warn-500) 45%, transparent);
+    border: 1px solid color-mix(in srgb, var(--warn-500) var(--status-outline), transparent);
   }
   .lc-badge-danger { @apply bg-danger-bg text-danger-700; }
-  .lc-badge-soft { background: var(--slate-bg); color: var(--slate-700); border: 1px solid color-mix(in srgb, var(--slate-500) 30%, transparent); }
+  .lc-badge-soft { background: var(--slate-bg); color: var(--slate-700); border: 1px solid color-mix(in srgb, var(--slate-500) var(--status-border-soft), transparent); }
 
   /* Notices: Varianten sind eigenständig (Basis-Anatomie immer gleich —
      kein Inline-Nachbau von Padding/Border mehr nötig) */
