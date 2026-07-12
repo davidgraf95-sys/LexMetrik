@@ -18,21 +18,24 @@
 //     Reader nutzt (kein Drift); (3) die Verdrahtung im Reader + CSS (data-guide-auto,
 //     guideEbene).
 //
-//  V2·L-3 (Auto-Default-UMKEHR, David 10.7.2026): Bis #161 deckelte die Tiefe den
-//  Auto-Guide (strukturTiefe ≥ 3 ⇒ AUS) — das nahm genau ZGB/OR ihre Gliederungs-
-//  linie, was David als «funktioniert praktisch nicht» re-meldete. Die Obergrenze
-//  ist WEG: der Auto-Guide hängt nun allein am Dichte-Boden (DICHTE_MIN); tiefe
-//  Kodifikationen erhalten ihren EINEN Guide auf `guideEbene`. Deklarierte Regel-
-//  werk-Änderung: B1-Invariante von der Tiefe-Obergrenze auf ein Biconditional
-//  umgestellt, B2-Verdikte ZGB/OR von AUS auf AN gedreht (SSoT linienAufbau.ts).
+//  V2·A28 (Auto-Default-RÜCKZUG, David 12.7.2026): die L-3-Einheit (#207, 11.7.)
+//  hatte den Auto-Guide für dichte Erlasse AN geschaltet (inkl. ZGB/OR). David hat
+//  das LIVE verworfen — «das mit den linien funktioniert überhaupt nicht» / «also
+//  ist überhaupt nicht fördernd für die übersicht». Der Auto-Default wird darum
+//  KORPUSWEIT zurückgezogen: autoGuide=false für JEDEN Erlass. Deklarierte Regel-
+//  werk-Änderung (Quelle = Davids Verdikt): B1-Invariante auf `!autoGuide` für den
+//  ganzen Korpus, B2-Verdikte ZGB/OR/ArG/Kurzerlass/Staatsvertrag von AN auf AUS
+//  (SSoT linienAufbau.ts). Das FEATURE bleibt (K11-Tri-State-Schalter); nur das
+//  Aufdrängen endet. guideEbene/strukturTiefe bleiben gegated (Nutzer-«an» trifft
+//  denselben Ort).
 //
-// Ein falsch gedrehter Schwellwert, ein toter Guide-Token, ein entferntes
+// Ein wieder eingeschalteter Auto-Guide, ein toter Guide-Token, ein entferntes
 // data-guide-auto oder ein `border-line/70` an einem markierten Element färbt das
 // Tor ROT.
 
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { linienProfil, LINIEN_SCHWELLEN, type LinienProfil } from '../src/pages/gesetz-leser/linienAufbau';
+import { linienProfil, type LinienProfil } from '../src/pages/gesetz-leser/linienAufbau';
 import type { StrukturMap } from '../src/lib/normtext/browse';
 
 const wurzel = resolve(import.meta.dirname ?? '.', '..');
@@ -141,14 +144,14 @@ if (korpus.length < 500) fehler.push(`Nur ${korpus.length} Struktur-Sidecars gef
 
 let invariantenVerletzt = 0;
 for (const { key, profil: p } of korpus) {
-  // V2·L-3 (Auto-Default-Umkehr): der Auto-Guide hängt allein am Dichte-Boden —
-  // die Tiefe deckelt NICHT mehr (die alte Obergrenze `strukturTiefe <= 2` ist
-  // WEG, damit tiefe Kodifikationen ZGB/OR ihren EINEN Guide zeigen). Biconditional:
-  // autoGuide ⟺ (Erlass hat mind. eine Ebene UND Dichte-Boden erfüllt).
+  // V2·A28 (Auto-Default-Rückzug, Davids Live-Verdikt): der Auto-Guide ist KORPUSWEIT
+  // aus — autoGuide MUSS für jeden Erlass false sein. guideEbene bleibt strukturell
+  // (0/1/null), damit der Nutzer-Override «an» denselben Ort trifft; flache Erlasse
+  // (Tiefe 0) haben keine Sektion (guideEbene null).
   const ok =
     (p.guideEbene === null || p.guideEbene === 0 || p.guideEbene === 1) &&
-    (p.strukturTiefe !== 0 || (p.guideEbene === null && !p.autoGuide)) &&
-    (p.autoGuide === (p.strukturTiefe >= 1 && p.dichteAmGuide >= LINIEN_SCHWELLEN.DICHTE_MIN));
+    (p.strukturTiefe !== 0 || p.guideEbene === null) &&
+    p.autoGuide === false;
   if (!ok) {
     invariantenVerletzt++;
     if (invariantenVerletzt <= 3) fehler.push(`Invarianten-Bruch bei ${key}: ${JSON.stringify(p)}`);
@@ -159,12 +162,12 @@ if (invariantenVerletzt > 0) fehler.push(`${invariantenVerletzt} Erlass(e) verle
 // B2 · Referenz-Verdikte (positiv+negativ): das Herz von Davids A8-Befund.
 type Erwartung = Partial<LinienProfil> & { hinweis: string };
 const REFERENZ: Record<string, Erwartung> = {
-  ZGB: { strukturTiefe: 5, guideEbene: 1, autoGuide: true, hinweis: 'V2·L-3: tiefe Kodifikation zeigt ihren EINEN Guide (Ebene 1)' },
-  OR: { strukturTiefe: 4, guideEbene: 1, autoGuide: true, hinweis: 'V2·L-3: tiefe Kodifikation zeigt ihren EINEN Guide (Ebene 1)' },
-  ARG: { strukturTiefe: 2, guideEbene: 1, autoGuide: true, hinweis: 'flaches Gesetz zeigt seine Ebene (Guide an)' },
-  VMWG: { strukturTiefe: 0, guideEbene: null, autoGuide: false, hinweis: 'flache Artikelliste — kein Guide' },
-  BVV3: { guideEbene: 0, autoGuide: true, hinweis: 'Kurzerlass mit EINER Ebene → Guide auf Ebene 0 sichtbar' },
-  HKUE: { guideEbene: 0, autoGuide: true, hinweis: 'Staatsvertrag mit EINER Ebene → Guide sichtbar' },
+  ZGB: { strukturTiefe: 5, guideEbene: 1, autoGuide: false, hinweis: 'V2·A28: Auto-Guide korpusweit aus (guideEbene bleibt für Nutzer-«an»)' },
+  OR: { strukturTiefe: 4, guideEbene: 1, autoGuide: false, hinweis: 'V2·A28: Auto-Guide korpusweit aus (guideEbene bleibt für Nutzer-«an»)' },
+  ARG: { strukturTiefe: 2, guideEbene: 1, autoGuide: false, hinweis: 'V2·A28: kein Auto-Guide; Nutzer-«an» trifft Ebene 1' },
+  VMWG: { strukturTiefe: 0, guideEbene: null, autoGuide: false, hinweis: 'flache Artikelliste — kein Guide möglich' },
+  BVV3: { guideEbene: 0, autoGuide: false, hinweis: 'V2·A28: Kurzerlass, Auto-Guide aus (guideEbene 0 für Nutzer-«an»)' },
+  HKUE: { guideEbene: 0, autoGuide: false, hinweis: 'V2·A28: Staatsvertrag, Auto-Guide aus (guideEbene 0 für Nutzer-«an»)' },
 };
 for (const [key, erw] of Object.entries(REFERENZ)) {
   const row = korpus.find((r) => r.key === key);
@@ -186,6 +189,6 @@ if (fehler.length > 0) {
 const autoAn = korpus.filter((r) => r.profil.autoGuide).length;
 console.log(
   `check:linien-kanon GRÜN — ${markierteGesamt} markierte Container / 3 Rollen-Tokens (hell+dunkel); ` +
-  `Aufbau-Regelwerk über ${korpus.length} Sidecars invariant (Auto-Guide AN: ${autoAn}), ` +
-  `Referenz-Verdikte ZGB/OR zeigen ihren EINEN Guide (V2·L-3) · ArG/Kurzerlass/Staatsvertrag sichtbar · VMWG flach — bestätigt.`,
+  `Aufbau-Regelwerk über ${korpus.length} Sidecars invariant (Auto-Guide korpusweit AUS, V2·A28: ${autoAn}), ` +
+  `Referenz-Verdikte ZGB/OR/ArG/Kurzerlass/Staatsvertrag autoGuide=false (guideEbene bleibt für Nutzer-«an») · VMWG flach — bestätigt.`,
 );
