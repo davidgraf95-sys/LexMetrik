@@ -57,7 +57,7 @@ export function SperrtageZaehler({ sperrtage }: { sperrtage: NonNullable<Sperrfr
               {anteil !== null && (
                 <div className="h-1.5 rounded-full bg-paper-sunken overflow-hidden" role="img"
                   aria-label={`${z.beansprucht} von ${z.kontingent} Sperrtagen beansprucht`}>
-                  <div className={`h-full rounded-full ${anteil >= 1 ? 'bg-danger-500' : 'bg-brass-500'}`}
+                  <div className={`h-full rounded-full ${anteil >= 1 ? 'bg-danger-line' : 'bg-brass-500'}`}
                     style={{ width: `${Math.round(anteil * 100)}%` }} />
                 </div>
               )}

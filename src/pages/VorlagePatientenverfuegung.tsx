@@ -169,8 +169,8 @@ export function VorlagePatientenverfuegung() {
                     onClick={() => set('massnahmen', { ...a.massnahmen, [m.id]: e.code })}
                     className={`px-2.5 py-1 rounded-full text-xs font-medium border transition-colors ${
                       a.massnahmen[m.id] === e.code
-                        ? e.code === 'ablehnen' ? 'bg-danger-bg border-danger-500 text-danger-700'
-                          : e.code === 'zustimmen' ? 'bg-sage-bg border-sage-500 text-sage-700'
+                        ? e.code === 'ablehnen' ? 'bg-danger-bg border-danger-line text-danger-700'
+                          : e.code === 'zustimmen' ? 'bg-sage-bg border-sage-line text-sage-700'
                           : e.code === 'nur_befristet' ? 'bg-warn-bg border-warn-500 text-warn-700'
                           : 'bg-ink-900 border-ink-900 text-paper'
                         : 'bg-surface border-line text-ink-600 hover:border-brass-400'

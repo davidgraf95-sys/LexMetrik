@@ -225,7 +225,7 @@ export function KuendigungSperrForm({ onBeendigung }: {
           {/* Prominente Eckdaten – ein kohärentes Ergebnis */}
           {gesamt.status === 'nichtig' ? (
             <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-3', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-3')}>
-              <div className="lc-tile border-t-[3px] border-t-danger-500">
+              <div className="lc-tile border-t-[3px] border-t-danger-line">
                 <p className="lc-overline mb-1">Status</p>
                 <p className="text-h2 leading-none font-semibold text-danger-700">NICHTIG</p>
               </div>

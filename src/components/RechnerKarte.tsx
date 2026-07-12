@@ -32,7 +32,7 @@ export function RechnerKarte({ card, headingLevel = 'h3', onOeffnen }: Props) {
   return (
     <article className={`relative h-full min-w-0 lc-card p-6 flex flex-col gap-3 transition-[transform,box-shadow,color] motion-reduce:transition-none motion-reduce:transform-none ${
       aktiv
-        ? `bg-surface-raised border-t-[3px] ${entwurf ? 'border-t-warn-500' : 'border-t-brass-500'} hover:shadow-lg hover:-translate-y-0.5`
+        ? `bg-surface-raised border-t-[3px] ${entwurf ? 'border-t-warn-line' : 'border-t-brass-500'} hover:shadow-lg hover:-translate-y-0.5`
         // «gedämpft» AA-konform: flache Fläche/grauer Akzent statt Opacity
         : 'bg-surface shadow-none cursor-default'
     }`}>
@@ -76,7 +76,7 @@ export function RechnerKarte({ card, headingLevel = 'h3', onOeffnen }: Props) {
         <ul className="space-y-0.5">
           {card.szenarien.map((sz) => (
             <li key={sz.label} className={`text-xs leading-relaxed ${sz.status === 'geplant' ? 'text-ink-500' : 'text-ink-600'}`}>
-              <span aria-hidden className={`mr-1 ${sz.status === 'geplant' ? 'text-ink-300' : 'text-warn-500'}`}>–</span>
+              <span aria-hidden className={`mr-1 ${sz.status === 'geplant' ? 'text-ink-300' : 'text-warn-line'}`}>–</span>
               {sz.label}{sz.status === 'geplant' && <span className="text-ink-500"> · in Vorbereitung</span>}
             </li>
           ))}

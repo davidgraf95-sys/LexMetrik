@@ -99,6 +99,11 @@
     --brass-line:var(--brass-500);
     --warn-line:var(--warn-500);
     --danger-line:var(--danger-500);
+    /* D-1.3: sage/slate nach demselben Muster — Call-Sites greifen NIE mehr
+       -500 direkt für Nicht-Text (Borders/Balken); die -500-Mitten bleiben
+       unangetastet (sie speisen die -bg-color-mix-Flächen). */
+    --sage-line:var(--sage-500);
+    --slate-line:var(--slate-500);
     /* Abgesetzter Doppelring (Fokus): Papier-Spalt + Messing — auf warmem
        Papier klar sichtbar und vom Hover unterscheidbar (Redesign A11y). */
     --ring:0 0 0 2px var(--surface), 0 0 0 4px var(--focus);
@@ -191,6 +196,12 @@
        Linien-Ton nutzt den hellen danger-700 (≥3:1). brass-/warn-line bleiben
        auf -500 (dort bereits ≥3:1). */
     --danger-line:var(--danger-700);
+    /* D-1.3: sage/slate-Linien dunkel ebenfalls auf -700 heben — sage-500
+       (3.84:1) und slate-500 (3.31:1) liegen dunkel nur knapp über 3:1;
+       die -700-Töne (9.93/8.97:1) geben Nicht-Text-Kanten klaren Headroom,
+       ohne die -500-Mitten (Speiser der -bg-Mixe) zu verschieben. */
+    --sage-line:var(--sage-700);
+    --slate-line:var(--slate-700);
     /* Schweiz-Karte im Dunkel: Pastelle deutlich dämpfen, sonst leuchten die
        Kantonsflächen grell aus dem dunklen Papier. */
     --karte-l-basis:30%; --karte-l-hover:42%; --karte-l-aktiv:55%;

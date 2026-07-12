@@ -218,6 +218,11 @@ const PFLICHT: Paar[] = [
   NICHT('brass-line', 'surface', 'lc-akzent-brass (index.css:402)'),
   NICHT('warn-line', 'surface', 'lc-akzent-warn (index.css:403)'),
   NICHT('danger-line', 'surface', 'lc-akzent-danger (index.css:404/193)'),
+  // D-1.3: sage/slate-Linien-Aliasse (dunkel auf -700 gehoben) — Nicht-Text-
+  // Kanten/Balken greifen den Alias, nie -500 direkt.
+  NICHT('sage-line', 'surface', 'D-1.3 border-sage-line (Patientenverfügung u. a.)'),
+  NICHT('slate-line', 'surface', 'D-1.3 --slate-line-Alias'),
+  NICHT('danger-line', 'paper', 'D-1.3 border-t-danger-line/SperrtageZaehler-Balken'),
 ];
 
 // (Referenz) C-1/C-2/C-3-Farb-Wörterbuch (§4b-B) — dokumentierte Zahlen als
@@ -241,7 +246,10 @@ const FIXPUNKT: { token: string; mode: Mode; soll: string }[] = [
 const BASELINE_TOL = 0.03;
 const RISSE: { fg: string; bg: string; mode: Mode; schwelle: number; ist: number; tag: string }[] = [
   { fg: 'ink-500', bg: 'well', mode: 'hell', schwelle: 4.5, ist: 4.48, tag: 'D-4 (ink-Wärme: ink-500 ≥4.5 auf well)' },
-  { fg: 'danger-500', bg: 'paper', mode: 'dunkel', schwelle: 3.0, ist: 2.72, tag: 'D-1.3 (danger-500 direkt als Nicht-Text dunkel)' },
+  // D-1.3 ✅: alle direkten Nicht-Text-Call-Sites von danger-500 sind auf
+  // --danger-line aliassiert (dunkel = -700, 7.54:1) — das Token-PAAR bleibt
+  // als Baseline-Guard, bis D-4/D-5 die -500-Mitte selbst kalibriert.
+  { fg: 'danger-500', bg: 'paper', mode: 'dunkel', schwelle: 3.0, ist: 2.72, tag: 'D-1.3 Call-Sites aliassiert (--danger-line); Token-Paar bis D-4/D-5' },
 ];
 
 // ── 4 · tailwind.config-Drift-Wächter: jedes geprüfte Token muss als Utility
