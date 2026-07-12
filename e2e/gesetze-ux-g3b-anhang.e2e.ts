@@ -48,15 +48,17 @@ test('⑤ LugÜ: Protokolle rendern als abgesetzte data-anhang-Blöcke (kanonisc
 // ── ⑤ LugÜ: CH-Erklärungen (decl_u2) — P1-a/b-Extraktions-Nachzug ─────────────
 // Die kanonische Fassung trägt Geltungsbereich (scope_u1) und «Vorbehalte und
 // Erklärungen» (decl_u2) als eigene Sektionen; der Extraktor erfasst sie seit
-// dem decl/scope-Nachzug (vorher nur zufällig via Alt-Dump-lvl_-Ids). Hier wird
-// die INHALTS-Präsenz gesichert (Snapshot → DOM). Die data-anhang-Absetzung
-// braucht EIN Zeilen-Update in istAnhangToken (berechnungen.ts:25 → decl|scope) —
-// bewusst NICHT hier: src/pages/gesetz-leser ist für den parallelen Kopf-PR
-// reserviert; Absetzung folgt dort (deklarierter Folge-Posten).
-test('⑤ LugÜ: «Vorbehalte und Erklärungen» (decl_u2) sind im Reader vorhanden', async ({ page }) => {
+// dem decl/scope-Nachzug (vorher nur zufällig via Alt-Dump-lvl_-Ids). Neben der
+// INHALTS-Präsenz (Snapshot → DOM) ist seit dem istAnhangToken-Nachzug
+// (berechnungen.ts: decl|scope) auch die abgesetzte Anhang-Optik gesichert
+// (data-anhang-Block, identisch zu annex_u1).
+test('⑤ LugÜ: «Vorbehalte und Erklärungen» (decl_u2) rendern als abgesetzter data-anhang-Block', async ({ page }) => {
   await warteReader(page, '/gesetze/bund/LUGUE');
   const erklaerungen = page.locator('#art-decl_u2');
   await expect(erklaerungen).toBeVisible({ timeout: 20000 });
+  // decl/scope-Nachzug: abgesetzte Anhang-Optik wie annex_u1 (istAnhangToken).
+  await expect(erklaerungen).toHaveAttribute('data-anhang', '');
+  await expect(page.locator('#art-scope_u1')).toHaveAttribute('data-anhang', '');
   await expect(erklaerungen.getByRole('link', { name: /Vorbehalte und Erklärungen/ })).toBeVisible();
   // Kerninhalt (CH-Zustellungs-Vorbehalt nach Art. I Abs. 2 Protokoll 1) ist da.
   await expect(erklaerungen.getByText(/behält sich das in Artikel I Absatz 2/)).toBeVisible();
