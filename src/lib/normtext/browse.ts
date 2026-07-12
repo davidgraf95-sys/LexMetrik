@@ -4,7 +4,6 @@
 
 import type { BrowseManifest, BrowseErlass } from './browse-typen';
 import type { NormSnapshot, NormSnapshotDatei } from './typen';
-import { GEBIETE, type Rechtsgebiet } from './register';
 import type { KantonSystematik } from './systematik';
 import { randtitelKnoten } from './darstellung';
 
@@ -101,15 +100,7 @@ export function ladeErlassDatei(datei: string): Promise<NormSnapshotDatei | null
 }
 
 // ── Gruppieren / Filtern (rein, testbar) ─────────────────────────────────────
-export interface GebietGruppe { gebiet: Rechtsgebiet; label: string; erlasse: BrowseErlass[] }
 export interface KantonGruppe { kanton: string; erlasse: BrowseErlass[] }
-
-/** Bund-Erlasse nach Rechtsgebiet (Anzeige-Reihenfolge GEBIETE), leere weggelassen. */
-export function gruppiereNachGebiet(erlasse: BrowseErlass[]): GebietGruppe[] {
-  return GEBIETE
-    .map((g) => ({ gebiet: g.id, label: g.label, erlasse: erlasse.filter((e) => e.rechtsgebiet === g.id) }))
-    .filter((g) => g.erlasse.length > 0);
-}
 
 /** Kanton-Erlasse nach Kantonskürzel (alphabetisch). */
 export function gruppiereNachKanton(erlasse: BrowseErlass[]): KantonGruppe[] {
@@ -132,31 +123,6 @@ export function filtern(erlasse: BrowseErlass[], term: string): BrowseErlass[] {
     || e.titel.toLowerCase().includes(s)
     || (e.sr ?? '').toLowerCase().includes(s)
     || (e.kanton ?? '').toLowerCase().includes(s));
-}
-
-// ── Artikel-Bänder (Lesesicht-Navigation + zuklappbare Abschnitte) ───────────
-// Bis echte amtliche Gliederung in den Snapshots liegt (P5), gliedern wir lange
-// Erlasse in Bänder fixer Grösse — kurze Sprung-Navigation + zuklappbare
-// Abschnitte. Reine Darstellung (§3).
-export interface Band { id: string; label: string; eintraege: NormSnapshot[] }
-
-export function baueBaender(eintraege: NormSnapshot[], groesse = 40): Band[] {
-  if (eintraege.length === 0) return [];
-  const baender: Band[] = [];
-  for (let i = 0; i < eintraege.length; i += groesse) {
-    const teil = eintraege.slice(i, i + groesse);
-    baender.push({
-      id: `band-${i / groesse}`,
-      label: `${teil[0].artikelLabel} – ${teil[teil.length - 1].artikelLabel}`,
-      eintraege: teil,
-    });
-  }
-  return baender;
-}
-
-/** Index des Bandes, das den Artikel-Token enthält, oder -1. */
-export function bandFuerToken(baender: Band[], token: string): number {
-  return baender.findIndex((b) => b.eintraege.some((e) => e.artikel === token));
 }
 
 // ── Amtliche Gliederung + Marginalien (Struktur-Sidecar, Rubrik V Richtung A) ──

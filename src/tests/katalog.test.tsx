@@ -6,8 +6,6 @@ import { Startseite } from '../pages/Startseite';
 import { RechnerUebersicht } from '../pages/RechnerUebersicht';
 import { VorlagenUebersicht } from '../pages/VorlagenUebersicht';
 import { HeaderSuche } from '../components/layout/HeaderSuche';
-import { RechnerKarte } from '../components/RechnerKarte';
-import { ALLE_KARTEN, istVerfuegbar } from '../lib/startseiteConfig';
 import { HERO_TITEL } from '../lib/seo';
 
 // Akzeptanztests Katalog/Rubriken. Stand UI-Welle (deklarierte Anpassung
@@ -209,24 +207,6 @@ describe('Startseite V3 — Hero + Kachel-Landkarte (Schritt 4, deklarierte Anpa
     expect(html).toContain('>Zuständigkeit<');
     // Aktiver Tab (Fristen) zeigt das echte Engine-Ergebnis-Umfeld + Voll-Rechner-Link
     expect(html).toContain('href="/rechner/tagerechner"');
-  });
-});
-
-describe('Karten-Invarianten', () => {
-  it('Karten tragen KEINEN Favoriten-Stern (weder verfügbar noch geplant; Anweisung 5.6.2026)', () => {
-    const geplant = ALLE_KARTEN.find((k) => k.status === 'geplant')!;
-    const verf = ALLE_KARTEN.find((k) => istVerfuegbar(k) && k.href)!;
-    const render = (card: typeof geplant) => renderToString(
-      <MemoryRouter><LocaleProvider>
-        <RechnerKarte card={card} />
-      </LocaleProvider></MemoryRouter>,
-    );
-    for (const html of [render(geplant), render(verf)]) {
-      expect(html).not.toContain('Favorit');
-      expect(html).not.toContain('aria-pressed');
-      expect(html).not.toContain('★');
-      expect(html).not.toContain('☆');
-    }
   });
 });
 

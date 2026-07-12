@@ -1,3 +1,8 @@
+// bewusstes Test-only-QA-Werkzeug (lintet generierte Texte); 3 Test-Konsumenten
+// (konventionen.test.ts, gerichtszitat.test.ts, begruendungLinter.test.ts) —
+// NICHT löschen, NICHT nach tests/helfer verschieben (H-4/B8; ein Move würde
+// 3 Import-Pfade ohne Zusatznutzen anfassen, siehe FAHRPLAN-CODE-HYGIENE.md).
+//
 // ─── Zitier- und Formulierungskonvention – SSoT (Auftrag 5.6.2026) ──────────
 //
 // Verbindliche Plattformstandards (Schweizer Recht, Deutschschweiz):

@@ -379,3 +379,15 @@
   (Test-Datei in `seo/` ohne Kopf/INDEX-Zeile bricht das Gate, Entfernen
   macht wieder grün). `npm run gate` GRÜN, `check:bibliothek` grün,
   Gegenprüfung n/a (Prüf-Infrastruktur). Nächster Schritt: H-3.
+- **12.7.2026: H-4 ✅** Tot-Sweep src (B1/B3/B4/B5/B6/B8), je Posten eigener Commit
+  (Branch `chore/h4-tot-sweep`): B1 `internerRechtsprechungLink`+`_leereRevisionCache`+
+  `vergissAnker` entfernt (Geschwister-Seams `_leereShardCache`/`_leereKantenShardCache`
+  bewusst unangetastet) · B3 `haeufigGebraucht.ts` + Test komplett weg · B4 `RechnerKarte.tsx`
+  + Assertions weg (Vorcheck FAHRPLAN-STARTSEITE-V3.md: kein Wiederverwendungs-Treffer) ·
+  B5 `browse.ts`: `gruppiereNachGebiet`/`baueBaender`/`bandFuerToken`/`interface Band`/
+  `GebietGruppe` weg, genutzte Nachbarn unangetastet · B6 (eigener Commit) `ZIEL_DOKUMENTE`/
+  `fortschrittProzent` weg (Davids gestrichenes 1000er-Ziel) · B8 `konventionen.ts` NICHT
+  verschoben, nur Kopfkommentar. Beweis G1 (tsc+vitest+golden+lint grün, `npm run gate` voll
+  grün); Gegenprüfung für die beiden Risiko-Dateien (browse.ts/variantenInventar.ts)
+  unabhängig als reine Diff-Verifikation gefahren (nur `-`-Zeilen, kein Norm-/Tarif-Wert
+  berührt) und quittiert. Nächster Schritt: H-5.

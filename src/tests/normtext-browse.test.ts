@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import {
-  gruppiereNachGebiet, gruppiereNachKanton, filtern, baueBaender, bandFuerToken,
+  gruppiereNachKanton, filtern,
   baueGliederungsbaum, type Sektion, type StrukturMap,
 } from '../lib/normtext/browse';
 import type { BrowseErlass } from '../lib/normtext/browse-typen';
@@ -15,18 +15,6 @@ function be(p: Partial<BrowseErlass>): BrowseErlass {
     ...p,
   };
 }
-
-describe('gruppiereNachGebiet', () => {
-  it('gruppiert nach Rechtsgebiet, leere Gruppen weg, GEBIETE-Reihenfolge', () => {
-    const g = gruppiereNachGebiet([
-      be({ key: 'OR', rechtsgebiet: 'privat' }),
-      be({ key: 'StGB', rechtsgebiet: 'straf' }),
-      be({ key: 'ZGB', rechtsgebiet: 'privat' }),
-    ]);
-    expect(g.map((x) => x.gebiet)).toEqual(['privat', 'straf']);
-    expect(g[0].erlasse.map((e) => e.key)).toEqual(['OR', 'ZGB']);
-  });
-});
 
 describe('gruppiereNachKanton', () => {
   it('gruppiert alphabetisch nach Kanton', () => {
@@ -139,21 +127,5 @@ describe('baueGliederungsbaum — Randtitel-Promotion (6b)', () => {
     );
     expect(sektionen).toHaveLength(0);
     expect(ohneGliederung.map((e) => e.artikel)).toEqual(['6']);
-  });
-});
-
-describe('baueBaender / bandFuerToken', () => {
-  const eintraege = Array.from({ length: 95 }, (_, i) => snap(String(i + 1), `Art. ${i + 1}`));
-  it('chunked in Bänder fixer Grösse mit Spannen-Label', () => {
-    const b = baueBaender(eintraege, 40);
-    expect(b).toHaveLength(3);
-    expect(b[0].label).toBe('Art. 1 – Art. 40');
-    expect(b[2].eintraege).toHaveLength(15);
-  });
-  it('leere Liste → keine Bänder', () => { expect(baueBaender([])).toEqual([]); });
-  it('bandFuerToken findet das richtige Band', () => {
-    const b = baueBaender(eintraege, 40);
-    expect(bandFuerToken(b, '45')).toBe(1);
-    expect(bandFuerToken(b, '999')).toBe(-1);
   });
 });

@@ -36,10 +36,6 @@ export function leseAnker(key: string): ScrollAnker | undefined {
   return anker.get(key);
 }
 
-export function vergissAnker(key: string): void {
-  anker.delete(key);
-}
-
 /**
  * Bezugslinie (px ab Container-Oberkante), an der «der oberste angeschnittene
  * Artikel» gemessen wird — deckungsgleich mit dem Scroll-Spy (`inhalt.tsx`) und

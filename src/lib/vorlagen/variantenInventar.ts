@@ -68,8 +68,6 @@ export const VERTRAGS_INVENTAR: KartenInventar[] = [
   },
 ];
 
-export const ZIEL_DOKUMENTE = 1000;
-
 export function dokumenteJeUntertyp(u: UntertypInventar): number {
   return u.detailgrade * u.modulprofile;
 }
@@ -80,9 +78,4 @@ export function dokumenteJeKarte(k: KartenInventar): number {
 
 export function dokumenteGesamt(inv: KartenInventar[] = VERTRAGS_INVENTAR): number {
   return inv.reduce((s, k) => s + dokumenteJeKarte(k), 0);
-}
-
-/** Ehrlicher Fortschritt gegen das 1000-Ziel (gerundetes Prozent). */
-export function fortschrittProzent(inv: KartenInventar[] = VERTRAGS_INVENTAR): number {
-  return Math.round((dokumenteGesamt(inv) / ZIEL_DOKUMENTE) * 100);
 }
