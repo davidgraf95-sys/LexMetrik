@@ -481,7 +481,8 @@
   /* «Eingekreister» Termin: Doppelring wie der von Hand eingekreiste
      Fristablauf im Fristenkontrollbuch — Papier-Spalt + Haarlinien-Ring
      in der Farbe des Markers (currentColor der Kreisfläche via CSS-Var). */
-  .lc-termin-ring { box-shadow: 0 0 0 2px var(--surface), 0 0 0 3px var(--ring-farbe, var(--sage-500)); }
+  /* F1: Termin-Ring = Zustand «ok» → --ok-solid (wertidentisch zu sage-500). */
+  .lc-termin-ring { box-shadow: 0 0 0 2px var(--surface), 0 0 0 3px var(--ring-farbe, var(--ok-solid)); }
 
   /* Sanftes Auf-/Zuklappen aller <details> (auch .lc-sektion): EIN
      @supports-Block am Dateiende — die frühere lc-sektion-Sonderregel war
@@ -588,7 +589,8 @@
     @apply inline-flex items-center rounded-full;
     font-size: .75rem; font-weight: 500; padding: 2px 10px;
   }
-  .lc-badge-ok { @apply bg-sage-bg text-sage-700; }
+  /* F1 (§4b-B-i): Zustand «ok», nicht Materialien-sage → --ok-Rolle (wertidentisch). */
+  .lc-badge-ok { @apply bg-ok-bg text-ok-text; }
   /* «massgeblich»-Hervorhebung (Messing) — eigene Klasse statt Inline-Override von lc-badge-ok */
   .lc-badge-massgeblich { @apply bg-brass-100 text-brass-700; }
   .lc-badge-warn { @apply bg-warn-bg text-warn-700; }
@@ -660,9 +662,10 @@
   .lc-ziel-blink { animation: lc-ziel-blink 2.4s var(--ease); border-radius: .375rem; }
 
   .lc-live { display: inline-flex; align-items: center; gap: .4rem; }
+  /* F1: Live-Punkt = Zustand «live/ok» → --ok-Rolle (wertidentisch zu sage). */
   .lc-live::before {
     content: ''; width: .5rem; height: .5rem; border-radius: 9999px;
-    background: var(--sage-500); box-shadow: 0 0 0 3px var(--sage-bg);
+    background: var(--ok-solid); box-shadow: 0 0 0 3px var(--ok-bg);
   }
 
   /* Dünne, zurückhaltende Scrollleiste für horizontale Schienen (Verlauf-
