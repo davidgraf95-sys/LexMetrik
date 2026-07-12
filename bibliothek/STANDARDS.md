@@ -8,7 +8,8 @@ Bug-Check §9 vor jedem Deploy, der Bibliotheks-Änderungen enthält.
 
 ## S1 — Pflichtkopf jedes Dossiers
 
-Jede Datei in `recherche/`, `behoerden/`, `normen/`, `kosten/` beginnt mit:
+Jede Datei in `recherche/`, `behoerden/`, `normen/`, `kosten/`, `materialien/`,
+`normtext/`, `seo/` beginnt mit:
 
 1. `# Titel` (Zeile 1),
 2. **Erstellt:**-Zeile mit Datum **und Auftrag/Anlass** (wer hat es warum

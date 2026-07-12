@@ -2,6 +2,10 @@
 
 > §11-Ablage zum POC + Bau vom 10.7.2026 (Fedlex-Portfolio Paket 3, RISIKOPFAD Extraktion).
 > Go David 10.7.2026 («go zu allem»; Reihenfolge 1→2→5→3→4, Pakete 1/2/5 gebaut).
+>
+> **Stand:** 10.7.2026 (Abfragedatum — Status ist mutabel, siehe §1). **Status:** ZWEIFACH
+> GEPRÜFT (Erstrecherche + adversariale Gegenprüfung, §5); fachlich nicht durch David
+> abgenommen (Zeitsperre bis 1.12.2026).
 
 ## 0. POC-Verdikt (Phase 1, VOR Bau) — **MACHBAR**
 
