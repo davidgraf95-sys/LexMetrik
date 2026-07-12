@@ -129,10 +129,28 @@ bleibt stets die amtliche Quelle. NICHT von Hand editieren — Block wird von
 
 ## NE: Umzug Tribunal régional Montagnes/Val-de-Ruz (Sommer 2026)
 - **Was:** TR La Chaux-de-Fonds zieht von Av. Léopold-Robert 10 auf
-  **Av. Léopold-Robert 63** (Postgebäude); Akteneinsicht 27.4.–27.5.2026
-  gesperrt; «Umzug im Sommer 2026». NICHT das Tribunal cantonal!
-- **Prüfen:** ab Juli 2026 auf ne.ch, vor jeder Stammdaten-Übernahme NE.
-- **Quelle:** ne.ch/Presse (Doppelcheck-Durchgang 5.6.2026).
+  **Av. Léopold-Robert 63** (2. OG, Postgebäude / bâtiment de la Poste);
+  Akteneinsicht 27.4.–27.5.2026 gesperrt. NICHT das Tribunal cantonal!
+- **PRÜFUNG 12.7.2026 (fällig 12.7.2026): Adresse amtlich UNVERÄNDERT.**
+  Die amtliche ne.ch-Behördenseite listet als operative Adresse weiterhin
+  **Av. Léopold-Robert 10, 2300 La Chaux-de-Fonds** (Hôtel judiciaire); der
+  Umzugs-Hinweis nennt dort noch KEINE neue Adresse, nur die Bücher-Ausleih-
+  Sperre **1.7.–14.8.2026**. NE-Regionalmedien (RTN 8.7.2026) bestätigen nun
+  konkret Nr. 63 (2. OG Postgebäude) und dass ab **Abschluss des Umzugs,
+  vorgesehen 17.8.2026**, alle Audienzen an der neuen Adresse stattfinden.
+  → Engine-Wert (Nr. 10) heute korrekt; Stammdaten-Hinweise in 3 Dateien
+  auf den dat­ierten, medienbestätigten Stand geschärft (s. unten). Adresse
+  erst umstellen, wenn ne.ch selbst auf Nr. 63 wechselt.
+- **Betroffene Stammdaten:** `src/data/zivilgerichteErstinstanz.ts` (NE),
+  `src/data/strafgerichte.ts` (NE), `src/data/schlichtungsstellen.ts` (NE) —
+  nur `hinweis`-Felder geschärft, Adresswert Nr. 10 unverändert.
+- **Wiedervorlage:** **ab 18.8.2026** (nach vorgesehenem Umzugs-Abschluss
+  17.8.2026) ne.ch-Adresse erneut prüfen und bei amtlicher Umstellung die
+  Adresswerte auf Av. Léopold-Robert 63 (2. OG) nachführen.
+- **Belege:** ne.ch-Behördenseite (Tribunal d'instance, live abgerufen
+  12.7.2026: <https://www.ne.ch/autorites/PJNE/tribunaux-regionaux/Pages/INST-CHX.aspx>);
+  RTN NE 8.7.2026 (<https://www.rtn.ch/rtn/Actualite/Region/20260708-La-Chaux-de-Fonds-le-Tribunal-regional-des-Montagnes-demenage.html>);
+  ursprünglicher Doppelcheck-Durchgang 5.6.2026.
 
 ## ~~GL LexWork-Migration `gesetze.gl.ch` — `xhtml_tol`-Endpunkt tot~~ → AUFGELÖST (Prämisse widerlegt, 11.7.2026 abends)
 - **Ursprungs-Befund (11.7.2026, POC):** Glarus ist von `gl.clex.ch` (301) auf

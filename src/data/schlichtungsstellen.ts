@@ -101,7 +101,7 @@ const NE_TRIBUNAUX: SchlichtungsAdresse[] = [
   // Postfach-PLZ amtlich 2002 (Bug-Check B4 11.6.2026; Standort 2000)
   A('Tribunal régional Littoral/Val-de-Travers', 'Rue de l’Hôtel-de-Ville 2 (CP 1)', '2002 Neuchâtel 2', 'Littoral/Val-de-Travers'),
   A('Tribunal régional Littoral/Val-de-Travers (Boudry)', 'Rue Louis-Favre 39, CP 36', '2017 Boudry', 'Littoral/Val-de-Travers'),
-  A('Tribunal régional Montagnes/Val-de-Ruz', 'Av. Léopold-Robert 10, CP 2284', '2300 La Chaux-de-Fonds', 'Montagnes/Val-de-Ruz', 'Umzug ins Hauptpost-Gebäude 1.7.–14.8.2026 angekündigt'),
+  A('Tribunal régional Montagnes/Val-de-Ruz', 'Av. Léopold-Robert 10, CP 2284', '2300 La Chaux-de-Fonds', 'Montagnes/Val-de-Ruz', 'Umzug ins Postgebäude Av. Léopold-Robert 63 (2. OG); Audienzen dort ab Abschluss ~17.8.2026 (RTN NE 8.7.2026). ne.ch-Adresse 12.7.2026 noch Nr. 10'),
 ];
 // Arbeitsrecht inkl. GlG (LJT-VD): das Tribunal de prud'hommes ist die
 // spezialisierte Kammer JEDES Tribunal d'arrondissement (Art. 5 LJT) —
