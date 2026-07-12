@@ -424,3 +424,22 @@
   (inkl. `check:smoke`), Gegenprüfung n/a (verhaltensneutral, G1: nur
   Kommentare/Moves/Verdrahtung, kein Prod-Code). Nächster Schritt: H-3
   bzw. H-6 (je Kette).
+
+
+- **12.7.2026: H-6 ✅** Kanton-Typ/KANTONE-Konsolidierung (B12), Branch
+  `chore/h6-kanton-typ` (Worktree `lm-h6`): `src/data/tarif/typen.ts` deklariert
+  `KantonCode`/`KANTONE` nicht mehr selbst, sondern `export type KantonCode = Kanton`
+  (Alias auf `src/types/legal.ts`) + `export { KANTONE } from '../../lib/kantone'`.
+  Auflage (a) erfüllt: Mutations-Grep (`.sort/.push/.pop/.splice/.reverse/.shift` u. a.
+  auf `KANTONE`) über src+scripts+e2e → kein Treffer (einziger `.sort()` auf `HG_KANTONE`,
+  anderer Konstante); beide Seiten jetzt `readonly` + `Object.freeze` (readonly-Vertrag der
+  Tarif-Konsumenten bleibt). Auflage (b): Kommentar in `lib/kantone.ts` über die bewusst
+  abweichenden LOKALEN Listen (KombinierteAnsicht/LohnfortzahlungForm/Vorsorgeauftrag)
+  erhalten — NICHT mitkonsolidiert. Kein neuer Zyklus (data→lib existierte schon via
+  `lib/tarif/staffel`). Beweis G1: tsc + vitest + golden byte-gleich + lint + `npm run
+  gate` voll grün; Konsumenten (24 KantonCode- + legal-Importe) unberührt. Gegenprüfung
+  (G3, Tor triggerte auf `src/data/tarif/**`): unabhängige Diff-Verifikation — BV-Art.1-
+  Ordnung eigenständig abgeleitet, Sequenz der re-exportierten Liste byte-gleich zur
+  entfernten Liste UND zur Norm-Ordnung, Union-Sets `KantonCode`≡`Kanton` (26 distinct),
+  Randfälle (Ordnung/Mutation/Shared-Instanz) durchgespielt → Verdikt «bestanden»,
+  `gegenpruefung:ok` quittiert.
