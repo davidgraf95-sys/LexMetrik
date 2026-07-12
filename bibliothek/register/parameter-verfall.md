@@ -4,9 +4,10 @@ Alle **datierten Parameter** im Code: Werte, die sich ausserhalb des Repos ände
 und darum regelmässig geprüft werden müssen. Wer einen neuen datierten Wert
 verdrahtet, trägt ihn HIER ein (mit Fundstelle, Stand, Prüfrhythmus).
 
-Stand des Registers: 7.6.2026 (Bibliotheks-Audit: 6 Gründungs-/Notariats-
-Kandidaten nachgetragen, die in den Dossiers nur als «Verfallsregister-
-Kandidat» markiert waren).
+Stand des Registers: 11.7.2026 (fortlaufend gepflegt — Fedlex-Pin-Kanonik/
+GL-LexWork-Migration/SG-GKV-Sunset zuletzt inhaltlich ergänzt; das Datum wird
+maschinell gelesen — `scripts/verfall-parse.ts` `registerStand()` — bei jeder
+inhaltlichen Ergänzung mitziehen, nicht nur beim jährlichen Audit).
 
 | Parameter | Fundstelle | Wert / Stand | Prüfrhythmus | Nächste Prüfung |
 |---|---|---|---|---|
