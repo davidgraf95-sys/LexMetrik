@@ -86,8 +86,13 @@ const NAV_TYPEN: Abschnittstyp[] = ['regeste', 'sachverhalt', 'erwaegung', 'disp
 const FS_STUFEN = [1.0, 1.08, 1.18, 1.3];
 function ladeFsIdx(): number {
   try {
-    const v = Number(localStorage.getItem('rsp-fs-idx'));
-    if (Number.isInteger(v) && v >= 0 && v < FS_STUFEN.length) return v;
+    // Null-Guard (D-1.1): `Number(null) === 0` liess jeden ERSTBESUCHER still auf
+    // Stufe 0 (1.0rem) statt Default 1 (1.08rem) fallen — R2-Bruch ohne Symptom.
+    const roh = localStorage.getItem('rsp-fs-idx');
+    if (roh !== null) {
+      const v = Number(roh);
+      if (Number.isInteger(v) && v >= 0 && v < FS_STUFEN.length) return v;
+    }
   } catch { /* localStorage nicht verfügbar */ }
   return 1;
 }
