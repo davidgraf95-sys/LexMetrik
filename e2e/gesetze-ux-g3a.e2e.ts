@@ -49,37 +49,40 @@ test('Kopf-Label: Gesetz bleibt «Bundesgesetz» (ELG)', async ({ page }) => {
   await expect(page.locator('.lc-leser > header .lc-overline').first()).toContainText('Bundesgesetz');
 });
 
-// ── U-LINIEN/A8 + V2·L-3: AUFBAU-abhängiger Linien-Default (data-guide-auto) ────
-// Davids A8-Befund («zgb sehr viele, arg fast keine») geheilt: der Auto-Default
-// folgt dem TATSÄCHLICHEN Aufbau, nicht der grundart-Schublade. V2·L-3 (David
-// 10.7., Umkehr #161): die TIEFE deckelt den Auto-Guide NICHT mehr — die ruhige
-// Klasse ist jetzt allein «Dichte < 2» (der EINE Guide wäre ein Per-Artikel-
-// Barcode statt einer Gruppierung). NEGATIV: dichte-armer Erlass bleibt ruhig;
-// POSITIV: das flache Gesetz zeigt seine Ebene.
-// Fixture-Wechsel BUEG → STG (deklariert, §6.3): das #210-Fixture BUEG
-// (strukturTiefe 3, dichteAmGuide 4) war gewählt, WEIL es unter der ALTEN Regel
-// autoGuide=false hatte — unter der L-3-Regel (dichte≥2 ⇒ AN) ist es autoGuide=true
-// und damit kein Ruhig-Fall mehr. STG (~104 KB, strukturTiefe 3, dichteAmGuide 1)
-// ist ein ECHTER Ruhig-Fall der neuen Regel: tief UND dichte-arm ⇒ Guide aus.
-// ZGB/OR (jetzt autoGuide=true) bleiben als Referenz-Verdikte im Aufbau-Tor
-// (check:linien-kanon) über den vollen Korpus gegated.
-test('U-LINIEN/L-3: dichte-armer Erlass STG bleibt im Auto-Default RUHIG (Guide transparent)', async ({ page }) => {
+// ── V2·A28: Auto-Guide korpusweit AUS (Davids Live-Verdikt) ────────────────────
+// David hat die L-3-Einheit (#207, Auto-Guide AN für dichte Erlasse) live verworfen:
+// «das mit den linien funktioniert überhaupt nicht» / «also ist überhaupt nicht
+// fördernd für die übersicht». Der Auto-Default ist darum korpusweit zurückgezogen:
+// data-guide-auto ist stets "aus", KEIN Erlass drängt die Linie auf. Das FEATURE
+// bleibt: der explizite K11-Schalter «Linien AN» zeigt den EINEN Guide wieder.
+// NEGATIV: der Auto-Default lässt den Guide auch beim flachen ArG transparent;
+// POSITIV: der Nutzer-Override 'an' macht ihn sichtbar (auf `guideEbene`).
+test('V2·A28: STG bleibt im Auto-Default RUHIG (Guide transparent, korpusweit aus)', async ({ page }) => {
   await warteReader(page, '/gesetze/bund/STG#art-10');
   await expect(page.locator('.lc-leser')).toHaveAttribute('data-guide-auto', 'aus');
   await expect(page.locator('html')).toHaveAttribute('data-linien', 'auto');
   await expect(page.locator('#art-10')).toBeVisible({ timeout: 20000 });
   const farbe = await guideFarbe(page, 'art-10');
   expect(farbe, 'Guide-Container bleibt strukturell im DOM').not.toBeNull();
-  expect(farbe).toBe('rgba(0, 0, 0, 0)'); // dichte < 2 → ruhig, Guide unsichtbar (L-3)
+  expect(farbe).toBe('rgba(0, 0, 0, 0)'); // A28: Auto-Guide korpusweit aus
 });
 
-test('U-LINIEN: flaches Gesetz ArG zeigt seine Ebene im Auto-Default (Guide sichtbar)', async ({ page }) => {
+test('V2·A28: ArG-Guide im Auto-Default AUS (transparent), Nutzer-Override «an» zeigt ihn wieder', async ({ page }) => {
   await warteReader(page, '/gesetze/bund/ARG#art-9');
-  await expect(page.locator('.lc-leser')).toHaveAttribute('data-guide-auto', 'an');
+  // Auto-Default: korpusweit aus (auch das flache Gesetz drängt die Linie nicht auf).
+  await expect(page.locator('.lc-leser')).toHaveAttribute('data-guide-auto', 'aus');
   await expect(page.locator('#art-9')).toBeVisible({ timeout: 20000 });
-  const farbe = await guideFarbe(page, 'art-9');
-  expect(farbe, 'ArG-Guide vorhanden').not.toBeNull();
-  expect(farbe).not.toBe('rgba(0, 0, 0, 0)'); // flaches Gesetz → Ebene sichtbar
+  const autoFarbe = await guideFarbe(page, 'art-9');
+  expect(autoFarbe, 'Guide-Container bleibt strukturell im DOM').not.toBeNull();
+  expect(autoFarbe).toBe('rgba(0, 0, 0, 0)'); // A28: kein aufgedrängter Guide
+  // POSITIV: das FEATURE bleibt — expliziter K11-Schalter «Linien AN» zeigt den
+  // EINEN Guide auf `guideEbene` wieder (data-linien="an" übersteuert global).
+  await page.getByRole('button', { name: 'Ansicht' }).first().click();
+  await page.getByRole('switch', { name: 'Linien' }).click();
+  await expect(page.locator('html')).toHaveAttribute('data-linien', 'an');
+  const anFarbe = await guideFarbe(page, 'art-9');
+  expect(anFarbe, 'ArG-Guide vorhanden').not.toBeNull();
+  expect(anFarbe).not.toBe('rgba(0, 0, 0, 0)'); // Nutzer-«an» → Ebene sichtbar
 });
 
 // ── ⑥ KANTON §-Label: sichtbares «§ N», Anker bleibt #art- (R8) ────────────────

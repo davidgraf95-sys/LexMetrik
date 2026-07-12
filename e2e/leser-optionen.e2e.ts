@@ -60,20 +60,21 @@ async function guide(page: Page, artId: string) {
   }, artId);
 }
 
-test('Options-Leiste: vier role=switch (V2·B-1 «Entscheide»); Fussnoten/Verweise/Entscheide an, Linien-Default aufbau-basiert (auto, U-LINIEN/A8)', async ({ page }) => {
+test('Options-Leiste: vier role=switch (V2·B-1 «Entscheide»); Fussnoten/Verweise/Entscheide an, Linien-Default aus (V2·A28, Auto-Guide korpusweit zurückgezogen)', async ({ page }) => {
   await warteReader(page, '/gesetze/bund/BGBM', 'art-1');
   await ansichtOeffnen(page);
   const gruppe = page.locator('[aria-label="Darstellungsoptionen"]').first();
   await expect(gruppe).toBeVisible();
   // V2·B-1 (David 10.7.2026, überstimmt «genau drei Toggles», A19+): 4. Schalter
-  // «Entscheide» im Dropdown. BGBM geschachtelt → Linien sichtbar ⇒ 4 Switches.
+  // «Entscheide» im Dropdown. BGBM hat eine Gliederungs-Sektion → der Linien-Schalter
+  // ERSCHEINT (zeigeLinien=guideEbene!==null, feature-abhängig, unverändert) ⇒ 4 Switches.
   await expect(gruppe.getByRole('switch')).toHaveCount(4);
-  // W2·5d U-LINIEN/A8: Linien-Default ist 'auto' — AUFBAU-basiert (nicht mehr die
-  // grundart-Schublade K11). BGBM ist ein flacher Kurzerlass mit EINER Gliederungs-
-  // ebene → der Guide macht diese Ebene sichtbar (autoGuide), der Schalter zeigt
-  // ehrlich «an» (§8). Fussnoten/Verweise bleiben unverändert an (R6-No-op).
-  await expect(page.locator('.lc-leser').first()).toHaveAttribute('data-guide-auto', 'an');
-  await expect(gruppe.getByRole('switch', { name: 'Linien' })).toHaveAttribute('aria-checked', 'true');
+  // V2·A28 (David 12.7.2026, Live-Verdikt «funktioniert überhaupt nicht»): der Auto-
+  // Guide ist KORPUSWEIT aus → data-guide-auto="aus", der Linien-Schalter zeigt
+  // ehrlich «aus» (§8). Das FEATURE bleibt: ein Klick «Linien AN» zeigt den Guide.
+  // Fussnoten/Verweise bleiben unverändert an (R6-No-op).
+  await expect(page.locator('.lc-leser').first()).toHaveAttribute('data-guide-auto', 'aus');
+  await expect(gruppe.getByRole('switch', { name: 'Linien' })).toHaveAttribute('aria-checked', 'false');
   for (const name of ['Fussnoten', 'Verweise']) {
     await expect(gruppe.getByRole('switch', { name })).toHaveAttribute('aria-checked', 'true');
   }
@@ -85,43 +86,38 @@ test('Options-Leiste: vier role=switch (V2·B-1 «Entscheide»); Fussnoten/Verwe
   await expect(html).toHaveAttribute('data-leitfaelle', 'an');
 });
 
-test('Linien-Toggle: explizit AUS transparent (Guide bleibt im DOM), persistiert über Reload', async ({ page }) => {
-  // BV ist eine tiefe Struktur (Gliederungstiefe 3, dichte 8). V2·L-3 (David 10.7.,
-  // Umkehr #161): der Auto-Default zeigt jetzt AUCH bei tiefen Kodifikationen den
-  // EINEN Guide (data-guide-auto="an") — die Tiefe deckelt nicht mehr. Ein expliziter
-  // Klick setzt den globalen Zustand ('an'/'aus') und übersteuert den Aufbau-Default;
-  // der border-Container BLEIBT bei 'aus' im DOM (nur transparent).
+test('Linien-Toggle: Auto-Default transparent (V2·A28), Nutzer «an» zeigt / «aus» versteckt den Guide, persistiert über Reload', async ({ page }) => {
+  // BV ist eine tiefe Struktur (Gliederungstiefe 3, dichte 8). V2·A28 (David 12.7.,
+  // Live-Verdikt «funktioniert überhaupt nicht»): der Auto-Guide ist korpusweit
+  // zurückgezogen (data-guide-auto="aus") — auch die tiefe Kodifikation drängt die
+  // Linie nicht mehr auf. Der border-Container BLEIBT im DOM (nur transparent).
   await warteReader(page, '/gesetze/bund/BV#art-8', 'art-8');
   await expect(page.locator('html')).toHaveAttribute('data-linien', 'auto');
-  await expect(page.locator('.lc-leser').first()).toHaveAttribute('data-guide-auto', 'an');
-  const autoAn = await guide(page, 'art-8');
-  expect(autoAn, 'Guide-Container existiert (auch im Auto-Default)').not.toBeNull();
-  expect(parseFloat(autoAn!.width)).toBeGreaterThan(0);
-  expect(autoAn!.color).not.toBe('rgba(0, 0, 0, 0)'); // V2·L-3: tiefe Kodifikation zeigt den Guide
+  await expect(page.locator('.lc-leser').first()).toHaveAttribute('data-guide-auto', 'aus');
+  const autoAus = await guide(page, 'art-8');
+  expect(autoAus, 'Guide-Container existiert (auch im Auto-Default)').not.toBeNull();
+  expect(parseFloat(autoAus!.width)).toBeGreaterThan(0);
+  expect(autoAus!.color).toBe('rgba(0, 0, 0, 0)'); // V2·A28: Auto-Guide korpusweit aus
 
   // A4: Switches liegen im «Ansicht»-Dropdown — öffnen (bleibt über die Klicks offen).
   await ansichtOeffnen(page);
-  // NEGATIV: BV startet im Aufbau-Default sichtbar (V2·L-3) → erster Klick auf den
-  // effektiv-an-Schalter setzt explizit AUS. Attribut gesetzt, Kante transparent,
-  // aber Element (border-Breite > 0) BLEIBT — kein Textknoten bewegt, kein display-
-  // Wechsel.
-  await page.getByRole('switch', { name: 'Linien' }).click();
-  await expect(page.locator('html')).toHaveAttribute('data-linien', 'aus');
-  const aus = await guide(page, 'art-8');
-  expect(aus, 'Guide-Container bleibt strukturell erhalten').not.toBeNull();
-  expect(parseFloat(aus!.width)).toBeGreaterThan(0);
-  expect(aus!.color).toBe('rgba(0, 0, 0, 0)'); // transparent
-  expect(aus!.padding).toBe('0px'); // Einzug kollabiert (flach)
-
-  // POSITIV: zweiter Klick → «Linien» explizit AN → Kante wieder sichtbar.
+  // POSITIV: der Auto-Default ist effektiv AUS → erster Klick setzt explizit «Linien
+  // AN» (K11-Tri-State übersteuert global) → der EINE Guide auf `guideEbene` wird
+  // sichtbar. Das FEATURE bleibt voll funktionsfähig, nur das Aufdrängen endete.
   await page.getByRole('switch', { name: 'Linien' }).click();
   await expect(page.locator('html')).toHaveAttribute('data-linien', 'an');
   const an = await guide(page, 'art-8');
-  expect(an!.color).not.toBe('rgba(0, 0, 0, 0)');
+  expect(an, 'Guide-Container bleibt strukturell erhalten').not.toBeNull();
+  expect(parseFloat(an!.width)).toBeGreaterThan(0);
+  expect(an!.color).not.toBe('rgba(0, 0, 0, 0)'); // Nutzer-«an» → Guide sichtbar
 
-  // Zurück auf AUS für den Persistenz-Teil (dritter Klick).
+  // NEGATIV: zweiter Klick → «Linien» explizit AUS → Kante transparent, Einzug
+  // kollabiert (flach), Element (border-Breite > 0) BLEIBT — kein display-Wechsel.
   await page.getByRole('switch', { name: 'Linien' }).click();
   await expect(page.locator('html')).toHaveAttribute('data-linien', 'aus');
+  const aus = await guide(page, 'art-8');
+  expect(aus!.color).toBe('rgba(0, 0, 0, 0)'); // transparent
+  expect(aus!.padding).toBe('0px'); // Einzug kollabiert (flach)
 
   // Persistenz + Pre-Paint: Reload stellt data-linien=aus wieder her.
   const ls = await page.evaluate(() => localStorage.getItem('lm.leser.optionen'));

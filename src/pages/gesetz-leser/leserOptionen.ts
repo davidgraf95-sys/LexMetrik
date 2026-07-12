@@ -22,15 +22,15 @@
 // UND jedes Split-View-Pane) folgen derselben Wahl ohne Re-Render.
 //
 // Fussnoten/Verweise/Entscheide: Default 'an' = heutige Darstellung → data-*="an"
-// ist ein CSS-No-op (R6: Grundzustand byte-gleich). Linien: Default 'auto' (W2·5d
-// U-LINIEN/A8) = AUFBAU-abhängig — nicht mehr die grundart-Schublade (K11)
-// entscheidet, sondern der tatsächliche Aufbau des Erlasses (linienAufbau.ts:
-// Gliederungstiefe + Artikel-Dichte). Der Reader schreibt das Ergebnis als
-// data-guide-auto="an|aus" an den `.lc-leser`-Root; CSS zeigt den EINEN Guide bei
-// 'an' (flaches/mittleres Gesetz — seine Ebene wird sichtbar) und blendet ihn bei
-// 'aus' (tiefe Kodifikation — bleibt ruhig, Einzug bleibt). Ein expliziter Klick
-// setzt 'an'/'aus' und übersteuert das global. Alle CSS-Regeln sind auf
-// `.lc-leser` gescopt (index.css), damit sie NUR den Reader treffen.
+// ist ein CSS-No-op (R6: Grundzustand byte-gleich). Linien: Default 'auto'. V2·A28
+// (David 12.7.2026, Live-Verdikt «das mit den linien funktioniert überhaupt nicht»):
+// der Auto-Guide ist KORPUSWEIT zurückgezogen — linienAufbau.ts liefert autoGuide=
+// false für jeden Erlass, der Reader schreibt darum data-guide-auto="aus" an den
+// `.lc-leser`-Root, und im Default 'auto' bleibt der vertikale Guide überall aus
+// (Einzug bleibt). Das FEATURE bleibt: ein expliziter Klick «Linien AN» setzt
+// data-linien="an" und zeigt den EINEN Guide auf `guideEbene` wieder (K11-Tri-State,
+// übersteuert den Auto-Default global). Alle CSS-Regeln sind auf `.lc-leser` gescopt
+// (index.css), damit sie NUR den Reader treffen.
 //
 // V2·B-2 (David 10.7.2026): der Leitfall-ZEITRAUM «alle · 20 · 10 · 5 J.» ist KEIN
 // data-*-Toggle, sondern ein JS-konsumierter Filterwert — die Leitfall-Zeile
