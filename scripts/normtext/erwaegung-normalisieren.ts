@@ -17,7 +17,7 @@
 // erfindet aber NIE Worte und stellt NIE um. Die Wort-Invariante ist getestet.
 
 import type { EntscheidBlock } from '../../src/lib/rechtsprechung/typen';
-import type { OclParagraph } from './adapter-entscheide';
+import type { OclParagraph } from './adapter-typen';
 import { bereinigeFliesstext } from '../../src/lib/rechtsprechung/register';
 
 /** Monatsname am Absatz-Anfang ⇒ Jahreszahl-Datum als Marke fehlgeparst. */

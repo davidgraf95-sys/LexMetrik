@@ -8,7 +8,8 @@
 import type {
   EntscheidSnapshot, EntscheidAbschnitt, EntscheidBlock, EntscheidSprache, EntscheidRubrum,
 } from '../../src/lib/rechtsprechung/typen';
-import type { Rechtsgebiet } from '../../src/lib/normtext/register';
+import type { Rechtsgebiet } from '../../src/lib/normtext/register-typen';
+import type { OclParagraph } from './adapter-typen';
 import { normalisiereRegeste, bereinigeFliesstext } from '../../src/lib/rechtsprechung/register';
 import { rubrumFeldPlausibel } from '../../src/lib/rechtsprechung/rubrum';
 import { teileSachverhalt } from '../../src/lib/rechtsprechung/sachverhalt';
@@ -37,10 +38,11 @@ export interface OclDecision {
   source_url?: string; canonical_url?: string;
   [k: string]: unknown;
 }
-export interface OclParagraph {
-  e_number?: string; depth?: number; parent?: string;
-  text?: string; text_excerpt?: string; text_chars?: number;
-}
+// H-8/B22: OclParagraph liegt jetzt in adapter-typen.ts (löst den Typ-Zyklus
+// mit erwaegung-normalisieren.ts); hier re-exportiert (`export type`), damit
+// bestehende `from './adapter-entscheide'`-Importeure (u. a. Tests) stabil
+// bleiben.
+export type { OclParagraph } from './adapter-typen';
 export interface OclStructure {
   sachverhalt_excerpt?: string; sachverhalt_chars?: number;
   erwaegungen_paragraphs?: OclParagraph[]; erwaegungen_paragraph_count?: number;

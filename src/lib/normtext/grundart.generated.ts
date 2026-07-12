@@ -15,7 +15,7 @@
 //   KODIFIKATION: 17
 //   LIVE_VERWEIS: 9
 //   PDF_EMBED: 2
-import type { Grundart, ErlassTyp } from './register';
+import type { Grundart, ErlassTyp } from './register-typen';
 
 export interface GrundartSeed {
   grundart: Grundart;
