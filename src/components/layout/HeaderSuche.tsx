@@ -4,6 +4,7 @@ import { useUniversalSuche } from '../suche/useUniversalSuche';
 import { SuchResultate } from '../suche/SuchResultate';
 import { SucheLeerzustand } from '../suche/SucheLeerzustand';
 import { suchOptionId } from '../suche/suchOptionId';
+import { aktivePosition, naechsterKey, vorigerKey, gewaehlterHref } from '../suche/trefferAuswahl';
 
 // ─── Globale Suche im Top-Streifen (UI-Welle: Dropdown überall) ─────────────
 //
@@ -40,23 +41,28 @@ export function HeaderSuche() {
   // Debounce nachhängt; bei weiterem Tippen wird der Puffer verworfen (onChange).
   const [enterQ, setEnterQ] = useState<string | null>(null);
 
-  // Flache Trefferliste + Hervorhebungs-Index für Pfeil-Navigation — identisch
-  // zum Hero (EIN Suchweg, §5); geteilte Options-IDs via suchOptionId.
+  // Flache Trefferliste + Pfeil-Auswahl über einen STABILEN Treffer-Key (die
+  // oid), NICHT über einen Positions-Index — identisch zum Hero (EIN Suchweg,
+  // §5); geteilte Options-IDs via suchOptionId. Wächst die per useDeferredValue
+  // entkoppelte Artikelgruppe (§15.3/#183) einen Tick später ein und verschiebt
+  // die Positionen, folgt die Auswahl dem SEMANTISCH gleichen Treffer statt auf
+  // einen fremden umzuspringen (Race-Fix #210, Logik in trefferAuswahl.ts).
   const flach = gruppen.flatMap((g) => g.treffer.map((t) => ({ oid: suchOptionId(listboxId, g.id, t.id), href: t.href })));
-  const [aktivIndex, setAktivIndex] = useState(-1);
+  const [aktivKey, setAktivKey] = useState<string | null>(null);
   // Bei neuer Query zurücksetzen (Render-Phasen-Abgleich statt setState-im-Effekt).
   const [letzteQuery, setLetzteQuery] = useState(q);
   if (q !== letzteQuery) {
     setLetzteQuery(q);
-    setAktivIndex(-1);
+    setAktivKey(null);
   }
+  const aktivPos = aktivePosition(flach, aktivKey);
   // UI-NAV O1: das Feld öffnet auch LEER (⌘K/Fokus) → Verlauf + kuratierte
   // Einstiege (SucheLeerzustand). `feldLeer` an `wert` (nicht am nachhängenden `q`),
   // damit der Leerzustand beim ersten Tastendruck sofort den Treffern weicht.
   const feldLeer = wert.trim() === '';
   const zeigtPanel = offen && !feldLeer;
   const zeigtLeer = offen && feldLeer;
-  const aktivId = zeigtPanel && aktivIndex >= 0 && aktivIndex < flach.length ? flach[aktivIndex].oid : undefined;
+  const aktivId = zeigtPanel && aktivPos >= 0 ? flach[aktivPos].oid : undefined;
 
   // Globale Fokus-Shortcuts: «/» UND ⌘K/Ctrl-K fokussieren das Feld (A5 — die
   // frühere Palette ist entfallen, der Shortcut bleibt nützlich). In Eingabe-
@@ -105,10 +111,10 @@ export function HeaderSuche() {
     return () => { window.removeEventListener('pointerdown', aus); window.removeEventListener('keydown', esc); };
   }, [offen]);
 
-  const auswahl = () => { setOffen(false); setWert(''); setQ(''); setAktivIndex(-1); setEnterQ(null); };
+  const auswahl = () => { setOffen(false); setWert(''); setQ(''); setAktivKey(null); setEnterQ(null); };
 
   // Übernimmt einen «Meinten Sie …?»-Vorschlag als neue Query (S3).
-  const uebernehmeVorschlag = (begriff: string) => { setWert(begriff); setQ(begriff); setOffen(true); setAktivIndex(-1); };
+  const uebernehmeVorschlag = (begriff: string) => { setWert(begriff); setQ(begriff); setOffen(true); setAktivKey(null); };
 
   // Gepufferten Enter auslösen, sobald der Index geladen UND der Debounce
   // eingeholt ist (enterQ === q). Öffnet den obersten Treffer der ersten
@@ -121,7 +127,7 @@ export function HeaderSuche() {
     // Deferred, damit kein synchrones set-state-in-effect kaskadiert (Repo-Muster).
     const id = window.setTimeout(() => {
       setEnterQ(null);
-      if (ziel) { navigate(ziel); setOffen(false); setWert(''); setQ(''); setAktivIndex(-1); }
+      if (ziel) { navigate(ziel); setOffen(false); setWert(''); setQ(''); setAktivKey(null); }
     }, 0);
     return () => window.clearTimeout(id);
   }, [enterQ, q, allesGeladen, gruppen, navigate]);
@@ -137,14 +143,13 @@ export function HeaderSuche() {
     if (e.key === 'ArrowDown' && flach.length > 0) {
       e.preventDefault();
       setOffen(true);
-      setAktivIndex((i) => (i + 1) % flach.length);
+      setAktivKey((k) => naechsterKey(flach, k));
     } else if (e.key === 'ArrowUp' && flach.length > 0) {
       e.preventDefault();
-      setAktivIndex((i) => (i <= 0 ? flach.length - 1 : i - 1));
+      setAktivKey((k) => vorigerKey(flach, k));
     } else if (e.key === 'Enter') {
-      const ziel = aktivIndex >= 0 && aktivIndex < flach.length
-        ? flach[aktivIndex].href
-        : gruppen.find((g) => g.treffer.length > 0)?.treffer[0]?.href;
+      const ziel = gewaehlterHref(flach, aktivKey)
+        ?? gruppen.find((g) => g.treffer.length > 0)?.treffer[0]?.href;
       if (ziel) { navigate(ziel); auswahl(); }
       else if (wert.trim() !== '') { setEnterQ(wert.trim()); setOffen(true); } // Puffer: öffnen, sobald geladen
     }
