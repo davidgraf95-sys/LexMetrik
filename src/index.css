@@ -465,10 +465,15 @@
   select.lc-input, .lc-select {
     appearance: none; -webkit-appearance: none;
     padding-right: 38px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none' stroke='%238A6A2F' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 6l4 4 4-4'/%3E%3C/svg%3E");
+    /* Chevron-Hex = --brass-700 (#826225, a11y-Kalibrierung 26.6.2026) — bei
+       Rekalibrierung MITZIEHEN (D-1.6: data-URI kann kein var() tragen; die
+       CSS-mask-Variante ist am nackten <select> nicht machbar, weil background
+       bereits die Well-Füllung trägt — verworfen, s. FAHRPLAN §3). */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none' stroke='%23826225' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 6l4 4 4-4'/%3E%3C/svg%3E");
     background-repeat: no-repeat; background-position: right 12px center; background-size: 16px;
   }
-  /* Dunkelmodus: heller Messing-Chevron (der Light-SVG ist auf Dunkel blind). */
+  /* Dunkelmodus: heller Messing-Chevron (der Light-SVG ist auf Dunkel blind).
+     Hex = dunkles --brass-700 (#D8BD78) — bei Rekalibrierung mitziehen. */
   html.dark select.lc-input, html.dark .lc-select {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none' stroke='%23D8BD78' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 6l4 4 4-4'/%3E%3C/svg%3E");
   }
