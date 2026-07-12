@@ -1,10 +1,9 @@
 {
-  "hash": "eb85f8bef486c8103d0c95ee16dabf249b59f9006df93bd7d26b9a817a60b989",
+  "hash": "869cce2a470513cbeba032e0ced1ebb8b6f8857c3d5ab4f2def03f593baf7258",
   "verdikt": "bestanden",
-  "quellePin": "n/a — kein Norm-/Tarif-Wert betroffen",
+  "quellePin": "BV Art. 1 Kantons-Reihenfolge; lib/kantone.ts + src/types/legal.ts",
   "datum": "2026-07-12",
   "dateien": [
-    "src/lib/normtext/browse.ts",
-    "src/lib/vorlagen/variantenInventar.ts"
+    "src/data/tarif/typen.ts"
   ]
 }

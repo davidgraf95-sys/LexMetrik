@@ -9,16 +9,16 @@
 // tarife-kantone.md (amtlich doppelt verifiziert) + Re-Verifikation 14.6.2026.
 
 import type { TarifRegel } from '../../lib/tarif/staffel';
+import type { Kanton } from '../../types/legal';
 
-export type KantonCode =
-  | 'ZH' | 'BE' | 'LU' | 'UR' | 'SZ' | 'OW' | 'NW' | 'GL' | 'ZG'
-  | 'FR' | 'SO' | 'BS' | 'BL' | 'SH' | 'AR' | 'AI' | 'SG' | 'GR'
-  | 'AG' | 'TG' | 'TI' | 'VD' | 'VS' | 'NE' | 'GE' | 'JU';
+// H-6 (B12): `KantonCode` ist ein Alias auf den zentralen `Kanton`-Typ
+// (`types/legal.ts`); die 26-Kantone-Liste `KANTONE` wird aus `lib/kantone.ts`
+// re-exportiert statt hier neu deklariert (beide Listen wertgleich in amtlicher
+// Reihenfolge verifiziert, TS-Union-Reihenfolge irrelevant). Beide Seiten
+// `readonly`/`Object.freeze` — der readonly-Vertrag der Tarif-Konsumenten bleibt.
+export type KantonCode = Kanton;
 
-export const KANTONE: readonly KantonCode[] = [
-  'ZH', 'BE', 'LU', 'UR', 'SZ', 'OW', 'NW', 'GL', 'ZG', 'FR', 'SO', 'BS', 'BL',
-  'SH', 'AR', 'AI', 'SG', 'GR', 'AG', 'TG', 'TI', 'VD', 'VS', 'NE', 'GE', 'JU',
-];
+export { KANTONE } from '../../lib/kantone';
 
 export const KANTON_NAMEN: Record<KantonCode, string> = {
   ZH: 'Zürich', BE: 'Bern', LU: 'Luzern', UR: 'Uri', SZ: 'Schwyz', OW: 'Obwalden',
