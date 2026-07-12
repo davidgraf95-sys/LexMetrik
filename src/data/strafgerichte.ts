@@ -476,7 +476,7 @@ export const STRAFGERICHTE: Record<Kanton, KantonStrafgerichte> = {
       system: '2 Tribunaux régionaux — Tribunal de police (Einzelrichter, bis 2 J. FS, Art. 25–27 OJN) und Tribunal criminel (3 Richter, > 2 J., Art. 28–30 OJN)',
       strasse: 'Rue de l’Hôtel-de-Ville 2',
       plzOrt: '2000 Neuchâtel',
-      hinweis: 'Sitze: Neuchâtel (Hôtel-de-Ville 2) / Boudry (Louis-Favre 39) / La Chaux-de-Fonds (Léopold-Robert 10 — ⚠ Umzug Sommer 2026 auf Léopold-Robert 63). Adressen: gerichtsbehoerden-kantone.md',
+      hinweis: 'Sitze: Neuchâtel (Hôtel-de-Ville 2) / Boudry (Louis-Favre 39) / La Chaux-de-Fonds (Léopold-Robert 10 — ⚠ Umzug ins Postgebäude Léopold-Robert 63, Audienzen dort ab Abschluss ~17.8.2026; ne.ch-Adresse 12.7.2026 noch Nr. 10). Adressen: gerichtsbehoerden-kantone.md',
     },
     berufung: berufungVon('NE', 'Tribunal cantonal, Cour pénale / Autorité de recours pénal'),
     zmg: {

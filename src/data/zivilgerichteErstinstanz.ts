@@ -346,7 +346,7 @@ export const ZIVILGERICHTE_ERSTINSTANZ: Record<Kanton, KantonZivilgerichteErstin
       gerichte: [
         { name: 'Tribunal régional Littoral/Val-de-Travers (Neuchâtel)', strasse: 'Rue de l’Hôtel-de-Ville 2, Case postale 1', plzOrt: '2002 Neuchâtel', zustaendigFuer: 'Littoral et Val-de-Travers' },
         { name: 'Tribunal régional Littoral/Val-de-Travers (Boudry)', strasse: 'Rue Louis-Favre 39, Case postale 36', plzOrt: '2017 Boudry', zustaendigFuer: 'Littoral et Val-de-Travers (Standort Boudry)' },
-        { name: 'Tribunal régional Montagnes/Val-de-Ruz', strasse: 'Avenue Léopold-Robert 10, Case postale 2284', plzOrt: '2300 La Chaux-de-Fonds', zustaendigFuer: 'Montagnes et Val-de-Ruz', hinweis: 'Umzug Sommer 2026 angekündigt (mutmasslich Nr. 63 — amtlich unbestätigt); vor Einreichung prüfen' },
+        { name: 'Tribunal régional Montagnes/Val-de-Ruz', strasse: 'Avenue Léopold-Robert 10, Case postale 2284', plzOrt: '2300 La Chaux-de-Fonds', zustaendigFuer: 'Montagnes et Val-de-Ruz', hinweis: 'Umzug ins Postgebäude Av. Léopold-Robert 63 (2. OG) läuft; Audienzen dort ab Abschluss ~17.8.2026 (RTN NE 8.7.2026). ne.ch-Adresse per 12.7.2026 noch Nr. 10 — vor Einreichung prüfen' },
       ],
     },
   },
