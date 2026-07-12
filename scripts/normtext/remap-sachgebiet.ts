@@ -9,7 +9,7 @@
 //
 // legal_area-Bedarf (§7-treu): die mehrdeutige II. öff.-rechtl. Abteilung (2A/2C/
 // 2D) ohne eindeutiges Norm-Signal fällt in der reparierten Logik auf die OCL-
-// legal_area zurück. Diese ist seit dem Backfill (backfill-legal-area.ts) als
+// legal_area zurück. Diese ist seit dem Backfill (scripts/archiv/backfill-legal-area.ts) als
 // `legalArea` IM Snapshot gespeichert → der Re-Map liest sie OFFLINE aus dem Feld
 // (kein Live-Fetch mehr). Damit ist die Klassierung deterministisch (§2) und ohne
 // Netz reproduzierbar.
