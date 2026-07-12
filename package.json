@@ -176,5 +176,10 @@
     "vite": "^8.0.12",
     "vite-node": "^6.0.0",
     "vitest": "^4.1.8"
+  },
+  "overrides": {
+    "madge": {
+      "typescript": "$typescript"
+    }
   }
 }
