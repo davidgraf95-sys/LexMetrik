@@ -53,8 +53,8 @@
     --surface:#FDFCF7; --surface-raised:var(--paper-raised);
     --well:var(--paper-sunken);
     /* Haarlinien */
-    --line:color-mix(in srgb, var(--ink-900) 10%, transparent);
-    --line-strong:color-mix(in srgb, var(--ink-900) 18%, transparent);
+    --line:color-mix(in oklab, var(--ink-900) 10%, transparent);
+    --line-strong:color-mix(in oklab, var(--ink-900) 18%, transparent);
     /* Gesetzes-Reader — EINE Linien-Sprache (W2·5d G1, DESIGN-REGLEMENT-NORMTEXT
        §Linien-Kanon): genau DREI benannte Rollen ersetzen die früher frei
        gewählten Ad-hoc-Opazitäten von --line (Artikel /70, Sektion voll|/50,
@@ -65,9 +65,9 @@
        praktisch nicht»). NICHT höher (kein hartes 3:1): die Deko-Linie darf nicht
        zur dunkelsten Linie des Systems werden (DESIGN-REGLEMENT F2 nimmt Deko von
        3:1 aus). Rangfolge §4b bleibt: Typo > Einzug > Guide. */
-    --guide-gliederung:color-mix(in srgb, var(--ink-900) 18%, transparent);
-    --rule-artikel:color-mix(in srgb, var(--ink-900) 10%, transparent);
-    --rule-struktur:color-mix(in srgb, var(--ink-900) 14%, transparent);
+    --guide-gliederung:color-mix(in oklab, var(--ink-900) 18%, transparent);
+    --rule-artikel:color-mix(in oklab, var(--ink-900) 10%, transparent);
+    --rule-struktur:color-mix(in oklab, var(--ink-900) 14%, transparent);
     /* Messing – der eine Akzent (= gravierte Skala) */
     --brass-800:#654C1E; /* a11y: ≥4.5 Kontrast auf brass-100 (12px) */
     /* brass-700 a11y-kalibriert (Entscheid David 26.6.2026): WCAG 4.5:1 für
@@ -85,7 +85,13 @@
        Token wird im Dunkel-Block NICHT überschrieben). */
     --auf-gold:var(--ink-fixed-dark);
     /* Status — alle Hintergründe nach EINEM Rezept (gleiche Tönung auf
-       Papier), damit die vier Familien zusammengehören */
+       Papier), damit die vier Familien zusammengehören.
+       D-3 (Befund 36): Interpolation in OKLAB statt srgb — srgb frisst bei
+       10–18 %-Tönungen Farbigkeit (Status-Flächen grauer/kälter als das
+       Rezept verspricht). Gilt site-weit für ALLE color-mix; bei Mixen mit
+       `transparent` ist das Ergebnis wegen premultiplied alpha byte-identisch,
+       sichtbar verschieben sich NUR die vier -bg-Flächen (gemessen, PR-Quittung).
+       Alle -700-auf--bg-Paare bleiben ≥5.1:1 (check:farbwelt). */
     --status-tint:10%;
     /* D-1.9 (Befund 10): die drei Status-Zwischentöne sind DREI benannte
        ROLLEN statt Magic-Mixe — gleiche Endwerte (§6 verhaltensneutral):
@@ -93,13 +99,13 @@
        · Schraffur-Streifen (lc-hatch-warn). */
     --status-outline:45%; --status-border-soft:30%; --status-hatch:26%;
     --sage-500:#5F7A58; --sage-700:#48603F;
-    --sage-bg:color-mix(in srgb, var(--sage-500) var(--status-tint), var(--paper));
+    --sage-bg:color-mix(in oklab, var(--sage-500) var(--status-tint), var(--paper));
     --slate-500:#5B6B73; --slate-700:#46535A;
-    --slate-bg:color-mix(in srgb, var(--slate-500) var(--status-tint), var(--paper));
+    --slate-bg:color-mix(in oklab, var(--slate-500) var(--status-tint), var(--paper));
     --warn-500:#C07A1A; --warn-700:#8C570F;
-    --warn-bg:color-mix(in srgb, var(--warn-500) var(--status-tint), var(--paper));
+    --warn-bg:color-mix(in oklab, var(--warn-500) var(--status-tint), var(--paper));
     --danger-500:#9A3F30; --danger-700:#7A2F23;
-    --danger-bg:color-mix(in srgb, var(--danger-500) var(--status-tint), var(--paper));
+    --danger-bg:color-mix(in oklab, var(--danger-500) var(--status-tint), var(--paper));
     /* Semantische Aliase */
     --accent-text:var(--brass-700);  /* Brass-Text & Links (kontraststark) */
     /* Fokus-Ton: brass-500 verfehlt im Hell die 3:1 (WCAG 1.4.11) auf
@@ -219,14 +225,14 @@
     --surface:#1D1B14; --surface-raised:var(--paper-raised);
     --well:#100F0A;
     /* Haarlinien etwas kräftiger (helle Tinte auf Dunkel wirkt sonst zu fein) */
-    --line:color-mix(in srgb, var(--ink-900) 14%, transparent);
-    --line-strong:color-mix(in srgb, var(--ink-900) 24%, transparent);
+    --line:color-mix(in oklab, var(--ink-900) 14%, transparent);
+    --line-strong:color-mix(in oklab, var(--ink-900) 24%, transparent);
     /* Linien-Kanon dunkel: helle Tinte auf Dunkel wirkt feiner → eine Spur
        kräftiger als hell (Guide/Artikel 14 %, Struktur 20 %). */
     /* V2·L-2: dunkel analog von 14 % auf --line-strong-Niveau (24 %). */
-    --guide-gliederung:color-mix(in srgb, var(--ink-900) 24%, transparent);
-    --rule-artikel:color-mix(in srgb, var(--ink-900) 14%, transparent);
-    --rule-struktur:color-mix(in srgb, var(--ink-900) 20%, transparent);
+    --guide-gliederung:color-mix(in oklab, var(--ink-900) 24%, transparent);
+    --rule-artikel:color-mix(in oklab, var(--ink-900) 14%, transparent);
+    --rule-struktur:color-mix(in oklab, var(--ink-900) 20%, transparent);
     /* Messing: Text-Töne (800–600) hell, Flächen-Töne (100/200) dunkel,
        Linien/Skala (500/400/300) bleiben Gold. */
     --brass-800:#EAD6A4; --brass-700:#D8BD78; --brass-600:#E6CD8C;
@@ -471,7 +477,7 @@
     background-color: var(--warn-bg);
     background-image: repeating-linear-gradient(
       135deg,
-      color-mix(in srgb, var(--warn-500) var(--status-hatch), transparent) 0 1px,
+      color-mix(in oklab, var(--warn-500) var(--status-hatch), transparent) 0 1px,
       transparent 1px 5px
     );
   }
@@ -579,7 +585,7 @@
   /* Glas-Effekt für sticky Chrome (Topbar/TabStreifen) — eine Quelle statt
      byte-identischem Inline-Style an zwei Stellen. */
   .lc-glass {
-    background: color-mix(in srgb, var(--paper) 96%, transparent);
+    background: color-mix(in oklab, var(--paper) 96%, transparent);
     backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
   }
   .lc-badge {
@@ -596,10 +602,10 @@
      Oberkante der Karte. (Design-Review 6.6.2026, Freigabe David) */
   .lc-badge-entwurf {
     @apply lc-badge bg-transparent text-warn-700;
-    border: 1px solid color-mix(in srgb, var(--warn-500) var(--status-outline), transparent);
+    border: 1px solid color-mix(in oklab, var(--warn-500) var(--status-outline), transparent);
   }
   .lc-badge-danger { @apply bg-danger-bg text-danger-700; }
-  .lc-badge-soft { background: var(--slate-bg); color: var(--slate-700); border: 1px solid color-mix(in srgb, var(--slate-500) var(--status-border-soft), transparent); }
+  .lc-badge-soft { background: var(--slate-bg); color: var(--slate-700); border: 1px solid color-mix(in oklab, var(--slate-500) var(--status-border-soft), transparent); }
 
   /* Notices: Varianten sind eigenständig (Basis-Anatomie immer gleich —
      kein Inline-Nachbau von Padding/Border mehr nötig) */
@@ -699,7 +705,7 @@
 .rsp-prose a {
   text-decoration: none;
   color: var(--ink-900);
-  border-bottom: 1px solid color-mix(in srgb, var(--brass-500) 38%, transparent);
+  border-bottom: 1px solid color-mix(in oklab, var(--brass-500) 38%, transparent);
   transition: color .15s, border-color .15s;
 }
 .rsp-prose a:hover {

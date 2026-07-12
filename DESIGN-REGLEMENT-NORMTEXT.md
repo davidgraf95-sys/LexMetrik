@@ -296,7 +296,9 @@ zitierten Normen im KontextPanel bleiben brass). Kontrast als Gate gemessen
 hell / **3.47** dunkel; warn-700-↻ **5.24** / **9.43**; brass-700-★ **4.91** / **10.48**.
 `--slate-500` wird in `html.dark` bewusst NICHT überschrieben (Tick-Kontrast bleibt
 gehalten). **Gegated:** `verzahnung.test` (Default byte-identisch, Entscheid-Slate,
-↻-warn), Golden byte-gleich.
+↻-warn), Golden byte-gleich. **D-3-Neu-Messung (12.7.2026, color-mix srgb→oklab):
+alle drei Referenzpaare UNVERÄNDERT** (Voll-Token auf solidem `--well`, kein
+color-mix im Pfad); Details + `-bg`-Verschiebung in `DESIGN-REGLEMENT.md` §F2b.
 
 **V2·C-2 (Farb-Wörterbuch Teil 2, 11.7.2026, David «go zu allem») — zwei weitere
 Bausteine, gleiche Anatomie-Disziplin (nur Tick/Punkt-Farbe, CLS 0):**
