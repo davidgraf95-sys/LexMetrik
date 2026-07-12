@@ -146,6 +146,17 @@ in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
 <!-- KARTEN -->
 
+## Session 12.7.2026 — W2·10-UI-NAV: Such-Dropdown-Race an der Wurzel geschlossen (stabiler Treffer-Key statt Positions-Index; Worktree `lm-suche-race`, Branch `fix/suche-aktivindex-race`)
+
+**Auftrag (W2·10-UI-NAV, §1-naher UX-Korrektheitsfehler; Befund aus der e2e-Härtung #210).** Die Pfeil-Auswahl im Such-Dropdown (HeaderSuche **und** Hero UniversalSuche) lief als **Positions-Index** (`aktivIndex`) in die per `flatMap` gebaute Trefferliste. Die per `useDeferredValue` entkoppelte Artikel-Volltextgruppe (§15.3/#183 — GEWOLLT, nicht rückgebaut) landet «einen Tick später» und wächst ein → der pfeil-gesetzte Index zeigte danach auf einen ANDEREN Treffer, Enter sprang ins falsche Ziel (empirisch unter CPU-Drossel: SCHKG#art-257 statt OR#art-257_d). #210 hatte den e2e nur deterministisch gemacht (Query-Reset), die Race für ECHTE Nutzer bestand weiter.
+
+**Wurzel-Fix (reines UI, §2/§3 Navigations-Arithmetik):**
+- **Neu `src/components/suche/trefferAuswahl.ts`** — geteilte, reine Auswahl-Logik über den **stabilen Options-Key** (die `oid`, suchOptionId) statt der Position: `aktivePosition`/`naechsterKey`/`vorigerKey`/`gewaehlterHref`/`aktiveOptionId`. Wächst die deferred Gruppe ein, relokalisiert `findIndex` den SEMANTISCH gleichen Treffer an seine neue Stelle → die Auswahl folgt ihm, das Ziel bleibt unverändert. Verschwindet der gewählte Treffer ganz, fällt die Auswahl sauber auf «nichts» zurück (Enter → oberster Treffer/Norm-Sprung, A5/P3-Kontrakt) statt auf einen Nachbarn zu springen; `aria-activedescendant` nur gesetzt, wenn der Treffer wirklich in der Liste steht (kein hängender ARIA-Verweis).
+- **HeaderSuche.tsx + UniversalSuche.tsx** auf `aktivKey: string|null` umgestellt (EIN Suchweg, §5 — beide teilen jetzt dieselbe Auswahl-Logik). Wrap-Verhalten (ArrowDown/Up), Enter-Puffer, Reset-bei-neuer-Query unverändert.
+- **A9-Test (#210) NICHT geändert** — der Query-Reset bleibt als belt-and-suspenders bestehen und grün; die Race ist jetzt auch ohne Reset geschlossen.
+
+**Beweis:** Neuer deterministischer Repro/Regression-Test `src/tests/suche/trefferAuswahl.test.ts` (bildet «Pfeil runter → Gruppe wächst ein → Enter ⇒ Ziel UNVERÄNDERT» ab; eingebauter Positions-Resolver zeigt rot, Key-Resolver grün). Volle vitest-Suite **3792 grün**; `norm-sprung`+`suche-seite`+`tastatur` **10×/10 grün** unter CI-Drossel (rate 4, retries 2 — #210-Methode); A9 unter CI-Drossel 3/3 (lokal rate 6 pre-existing host-contention-flaky, unberührt von diesem Fix). **golden:vergleich IDENTISCH** (209 byte-gleich), SSR-Smoke grün, lint 0 Errors (2 pre-existing warnings fremde Datei), build 63 Routen. **Gegenprüfung n/a** (reines UI/Navigation, kein Rechnen/Extraktion/Norm-Tarif-Risikopfad). Trailer `Roadmap: W2·10-UI-NAV`. PR mit armiertem Auto-Merge.
+
 ## Session 12.7.2026 — V2·K-1 (A22·K-1): «in Kraft seit» im Gesetzes-Kopf (Ur-Inkrafttreten, Datenteil F2, Worktree `lm-v2-k1`, Branch `feat/v2-k1`)
 
 **Auftrag (Spec `FAHRPLAN-GESETZESDARSTELLUNG-V2.md` §2 F2 K-1 · UX §10.8 A22).** Bau-Go = Davids General-Delegation 11.7. «du hast bei allem was ich entscheiden muss selbst die wahl» → Orchestrator-Entscheid: bauen. **Skills:** `scraping-swiss-official-sources` + `gegenpruefung` (Datenteil = Risiko-Pfad-nah).

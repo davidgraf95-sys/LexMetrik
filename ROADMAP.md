@@ -790,6 +790,13 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
   (Fedlex-P1a/b + Freigabe). Verworfen mit Grund (Command-Palette [A5-Entscheid],
   Normtext-Virtualisierung [§15.1], Minimap, Scroll-Hash-Sync u. a.).
   Detail: **[`FAHRPLAN-UI-NAVIGATION.md`](FAHRPLAN-UI-NAVIGATION.md)**. Trailer `Roadmap: W2·10-UI-NAV`.
+  **Teillieferung 12.7.2026 (`fix/suche-aktivindex-race`):** Such-Dropdown-Race
+  gegen die deferred Artikelgruppe (#183/§15.3) an der Wurzel geschlossen — die
+  Pfeil-Auswahl folgt jetzt einem STABILEN Treffer-Key (`src/components/suche/trefferAuswahl.ts`,
+  geteilt von HeaderSuche + Hero) statt einem Positions-Index; nachwachsende
+  Treffer verschieben das Enter-Ziel nicht mehr (empirisch war Enter auf
+  SCHKG#art-257 statt OR#art-257_d gelandet). Deterministischer Repro-Test +
+  10×-Drossel-Beweis grün; die #210-A9-Reset-Härtung bleibt als Redundanz.
   **Stand 11.7.:** Einheit **N0 (Quick-Win-Paket, N0a–N0d) ✅ gebaut+belegt** (Opus, Playwright
   Desktop+Mobil): tote Rückwege · Erlass-Key-case-insensitiv+hilfreiche Fehlseite · Anker-`--nt-stick` ·
   Kleinposten (Ergebnis-FAB-IO · Rechner-Filter · Streitwert-Leerzustand · Entwurf-Legende-Popover ·

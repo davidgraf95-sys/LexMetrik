@@ -3,6 +3,7 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useUniversalSuche } from '../suche/useUniversalSuche';
 import { SuchResultate } from '../suche/SuchResultate';
 import { suchOptionId } from '../suche/suchOptionId';
+import { aktivePosition, naechsterKey, vorigerKey, gewaehlterHref } from '../suche/trefferAuswahl';
 
 // ─── Universal-Suche (Held der Startseite) ──────────────────────────────────
 //
@@ -74,19 +75,23 @@ export function UniversalSuche() {
     return () => window.clearTimeout(id);
   }, [enterQ, q, allesGeladen, gruppen, navigate]);
 
-  // Flache Trefferliste in Anzeigereihenfolge — Basis für Pfeil-Navigation und
-  // die geteilten Options-IDs (suchOptionId, identisch im Panel gerendert).
+  // Flache Trefferliste in Anzeigereihenfolge + Pfeil-Auswahl über einen
+  // STABILEN Treffer-Key (die oid), NICHT über einen Positions-Index — identisch
+  // zur Header-Suche (EIN Suchweg, §5). Wächst die per useDeferredValue
+  // entkoppelte Artikelgruppe (§15.3/#183) einen Tick später ein und verschiebt
+  // die Positionen, folgt die Auswahl dem SEMANTISCH gleichen Treffer, statt auf
+  // einen fremden umzuspringen (Race-Fix #210, Logik in trefferAuswahl.ts).
   const flach = gruppen.flatMap((g) => g.treffer.map((t) => ({ oid: suchOptionId(listboxId, g.id, t.id), href: t.href })));
-  const [aktivIndex, setAktivIndex] = useState(-1);
-  // Bei jeder neuen Query die Hervorhebung zurücksetzen (sonst zeigt der Index
-  // auf einen Treffer, der nach dem Tippen nicht mehr an gleicher Stelle steht).
-  // Anpassung während des Renders (React-Muster statt setState-im-Effekt).
+  const [aktivKey, setAktivKey] = useState<string | null>(null);
+  // Bei jeder neuen Query die Hervorhebung zurücksetzen (Render-Phasen-Abgleich
+  // statt setState-im-Effekt).
   const [letzteQuery, setLetzteQuery] = useState(q);
   if (q !== letzteQuery) {
     setLetzteQuery(q);
-    setAktivIndex(-1);
+    setAktivKey(null);
   }
-  const aktivId = aktivIndex >= 0 && aktivIndex < flach.length ? flach[aktivIndex].oid : undefined;
+  const aktivPos = aktivePosition(flach, aktivKey);
+  const aktivId = aktivPos >= 0 ? flach[aktivPos].oid : undefined;
 
   // Aktiven Treffer in den sichtbaren Bereich rollen (Hero-Liste kann lang sein).
   useEffect(() => {
@@ -98,20 +103,20 @@ export function UniversalSuche() {
   const aufTaste = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'ArrowDown' && flach.length > 0) {
       e.preventDefault();
-      setAktivIndex((i) => (i + 1) % flach.length);
+      setAktivKey((k) => naechsterKey(flach, k));
     } else if (e.key === 'ArrowUp' && flach.length > 0) {
       e.preventDefault();
-      setAktivIndex((i) => (i <= 0 ? flach.length - 1 : i - 1));
+      setAktivKey((k) => vorigerKey(flach, k));
     } else if (e.key === 'Enter') {
       e.preventDefault();
       if (flach.length > 0) {
-        const ziel = aktivIndex >= 0 && aktivIndex < flach.length ? flach[aktivIndex].href : flach[0].href;
+        const ziel = gewaehlterHref(flach, aktivKey) ?? flach[0].href;
         navigate(ziel);
       } else if (wert.trim() !== '') {
         setEnterQ(wert.trim()); // Puffer: öffnen, sobald geladen
       }
     } else if (e.key === 'Escape') {
-      setAktivIndex(-1);
+      setAktivKey(null);
     }
   };
 
