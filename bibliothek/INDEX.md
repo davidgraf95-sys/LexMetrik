@@ -1,10 +1,9 @@
 # Bibliothek — Informationsgrundlagen für LexMetrik
 
 Zentrale Ablage für recherchierte Grundlagen, Quellenregister und Arbeitsmaterial,
-das (noch) nicht Code ist. **62 Dokumente in 7 Ordnern** (Stand 7.6.2026,
-Bibliotheks-Audit: Zählung korrigiert, recherche-INDEX vervollständigt,
-Verfallsregister um 6 Gründungs-Kandidaten ergänzt, Muster-Quellsammlung
-aus /tmp dauerhaft archiviert, Engine-Map neu).
+das (noch) nicht Code ist. Gliederung in Ordnern (siehe unten); Bestandszahl
+NICHT hier hartkodiert (Kurzregel 5 unten — Ordnerinhalt/Tabellen sind die
+Wahrheit, keine von Hand geschriebene Kopfzahl).
 Verbindlich seit 6.6.2026: **CLAUDE.md §11** — jede Recherche mündet hier in eine
 geordnete, engine-orientierte Übersichtsliste mit INDEX-Eintrag.
 **Verbindliche Mindeststandards S1–S10: [STANDARDS.md](STANDARDS.md)** —
@@ -19,11 +18,10 @@ maschinell durchgesetzt via `bash scripts/bibliothek-check.sh` (Teil des
    nach fachlicher Abnahme durch David.
 3. **Unsicherheiten bleiben sichtbar** (§8) — nie weggeglättet.
 4. **Datiertes datiert halten** → [Parameter-Verfallsregister](register/parameter-verfall.md).
-
-- [register/p3-drop-klassen-inventar-2026-07-05.md](register/p3-drop-klassen-inventar-2026-07-05.md) — **W2·5b P3** Korpusweite `<p>`-Klassen-Drop-Inventur (218 Bund-Erlasse): welche `<p class>` der Extraktor still verwarf. Verdikt je Klasse (extrahieren: `man-template-tab-krpr`/OR 361-362 + bare `referenz`→grundlage; bewusst ignorieren: inkrafttreten/utit-Titel; deferiert: absatz-pt-Varianten/ParlG-Eid). Tor `check:p-klassen` friert das Vokabular ein.
-- [register/poc-linkedom-tiefenzaehler-2026-07-05.md](register/poc-linkedom-tiefenzaehler-2026-07-05.md) — **W2·5b** linkedom-POC gegen die Regex-Tiefenzähler `findeDlEnde`/`findeDdEnde` (44 740 `<dl>`/`<dd>`-Grenzen, 0 Abweichungen) → Verdikt: Regex DOM-äquivalent, KEINE Migration (§7-Messung).
-- [register/e6a-quell-inventar-2026-07-03.md](register/e6a-quell-inventar-2026-07-03.md) — E6a-Quell-Inventar Verwaltungsverordnungen (9 Behörden, Probe-Fetches, Ranking: ESTV-MWST-HTML > ESTV-KS-PDF > BSV; VPB tot, Fallen dokumentiert)
-- [register/e4-lokal-2026-07-03.md](register/e4-lokal-2026-07-03.md) — **QS-DATA E4-Lokal** (Zitat-Graph → `norm_rangliste` + Oracle-Tor): Q4-law-code-Kanonisierung (DE/FR/IT→erlasse.key, SR-belegt, Abdeckung 35,2 %→78,4 %) · materialisierte topische In-degree (1 387 680 Zeilen, max gewicht 12 413 = BGE 133 II 249 @ BGG/106, idempotent) · **Oracle-Tor GRÜN 0 UNERKLÄRT** (462 identisch/284 erhöht/178 vintage-absent/7 erklärt-delta; Snapshot max BGE-Band 151)
+5. **Hartkodierte Bestandszahlen (Dokumenten-/Dossier-Anzahl u. Ä.) nur generator-
+   gepflegt oder gar nicht** — eine von Hand geschriebene Kopfzahl veraltet
+   unbemerkt und wird selbst zur zweiten Wahrheit (§5); Ordnerinhalt/Tabelle
+   sind die Wahrheit, nicht ihre Zählung im Fliesstext.
 
 ## Gliederung
 
@@ -37,6 +35,8 @@ bibliothek/
   muster/      Amtliche Vorlagen verbatim (.txt) + MANIFEST (Quellen-URLs/Stände)
   rechtsprechung/  Register aller zitierten Bundesgerichtsentscheide (Links + Fundorte)
   materialien/ Amtliche Ressourcen / Soft-Law (Behörden-Publikationen) — Rubrik «Materialien»
+  normtext/    Volltext-Nebenprodukte (Änderungshistorie/Revisionen-Timeline, Rohdaten) zu den Bund-Erlassen
+  seo/         Sichtbarkeit & Performance (CWV-Baseline, Indexierung)
   quellen/     Lokale Quellkopien aus Davids Ablagen (gitignored, Urheberrecht) — committet nur die Sichtung [SICHTUNG.md](quellen/SICHTUNG.md)
 ```
 
@@ -146,6 +146,10 @@ zugeordnet (grob bei Mantelvorlagen, §8); fachliche Abnahme David offen.
 | Dokument | Inhalt |
 |---|---|
 | [quellen-register.md](register/quellen-register.md) | Verifizierte Fedlex-Quellen (ELI, Konsolidierung, geprüfte Anker, Filestore-Muster) |
+| [p3-drop-klassen-inventar-2026-07-05.md](register/p3-drop-klassen-inventar-2026-07-05.md) | **W2·5b P3** Korpusweite `<p>`-Klassen-Drop-Inventur (218 Bund-Erlasse): welche `<p class>` der Extraktor still verwarf. Verdikt je Klasse (extrahieren: `man-template-tab-krpr`/OR 361-362 + bare `referenz`→grundlage; bewusst ignorieren: inkrafttreten/utit-Titel; deferiert: absatz-pt-Varianten/ParlG-Eid). Tor `check:p-klassen` friert das Vokabular ein |
+| [poc-linkedom-tiefenzaehler-2026-07-05.md](register/poc-linkedom-tiefenzaehler-2026-07-05.md) | **W2·5b** linkedom-POC gegen die Regex-Tiefenzähler `findeDlEnde`/`findeDdEnde` (44 740 `<dl>`/`<dd>`-Grenzen, 0 Abweichungen) → Verdikt: Regex DOM-äquivalent, KEINE Migration (§7-Messung) |
+| [e6a-quell-inventar-2026-07-03.md](register/e6a-quell-inventar-2026-07-03.md) | E6a-Quell-Inventar Verwaltungsverordnungen (9 Behörden, Probe-Fetches, Ranking: ESTV-MWST-HTML > ESTV-KS-PDF > BSV; VPB tot, Fallen dokumentiert) |
+| [e4-lokal-2026-07-03.md](register/e4-lokal-2026-07-03.md) | **QS-DATA E4-Lokal** (Zitat-Graph → `norm_rangliste` + Oracle-Tor): Q4-law-code-Kanonisierung (DE/FR/IT→erlasse.key, SR-belegt, Abdeckung 35,2 %→78,4 %) · materialisierte topische In-degree (1 387 680 Zeilen, max gewicht 12 413 = BGE 133 II 249 @ BGG/106, idempotent) · **Oracle-Tor GRÜN 0 UNERKLÄRT** (462 identisch/284 erhöht/178 vintage-absent/7 erklärt-delta; Snapshot max BGE-Band 151) |
 | [fedlex-gap-report-2026-07-02.md](register/fedlex-gap-report-2026-07-02.md) | **Fedlex Coverage-/Currency-Gap-Report Bund** (neu 2.7.2026, SPARQL-nativ): alle 229 Bund-Erlasse gegen `jolux:dateApplicability` — Coverage vollständig (218 Volltext, 11 bewusste Stubs); **20 stale** (neuere geltende Fassung, Juli-2026-Zyklus), davon **6 ungepinnte blinde Flecken** (AsylV 1/2/3, ArGV 2, EMRK, NYÜ — Cron `check:fedlex-versionen` sieht sie nicht) + 14 gepinnt-überholt; 56 angekündigte künftige Fassungen (Re-Extraktions-Horizont) + 11 Volltexte ohne Pin. Anlass: Analyse Dritt-Repo `droid-f/fedlex` (CC BY-NC-SA, nicht als Quelle genutzt) | Momentaufnahme; laufende Wahrheit bleibt `check:fedlex-versionen` |
 | [fedlex-currency-2026-07-05.md](register/fedlex-currency-2026-07-05.md) | **Fedlex-Currency-Lauf 5.7.2026 — Paket 1 · P1-a + P1-b** (QS-CURRENCY): 18 überholte Bund-Snapshots + 2 PDF-Embeds (EMRK/NYÜ) auf die geltende Fassung; html-N SPARQL-kanonisch via `isExemplifiedBy` (klv/vrv=8, ssv=14); Artikel-Diff +85, 9 eId-Renames 1:1, 0 Verlust; Regex-Fix + Coverage-Assertion + PDF-Embed-Monitoring; `check:fedlex-versionen` Exit 0. Gegenprüfung bestanden. | Ausführungsbeleg §11 |
 | [fedlex-staatsvertraege-2026-07-10.md](register/fedlex-staatsvertraege-2026-07-10.md) | **Fedlex-Portfolio Paket 4 — kuratierte Staatsverträge SR 0.*** (10.7.2026, W2·6, letztes Paket): 9 Verträge als Volltext (HKsÜ 96, HUVÜ 1973, EAUe, CMR, Montreal, RBÜ, UNO-BRK, Istanbul, Apostille) über die konsolidierte `eli/cc`-Pipeline (kein `eli/treaty`-Extraktor, kein neues Format). POC-Befund: Graph exponiert **keine** strukturierte Parteien-/Ratifikations-Kante → «Geltungsbereich»-Anhang verbatim als `annex_*`; html-0 bei 5/9 stale → kanonische html-N via `isExemplifiedBy` gepinnt; Apostille geltend 2024-09-04 (nicht 2016). 5 Kandidaten bewusst verworfen (ESÜ/WÜD/WÜK/DBA-DE/EPÜ). Gegenprüfung bestanden. | Ausführungsbeleg §11 |
@@ -163,6 +167,8 @@ zugeordnet (grob bei Mantelvorlagen, §8); fachliche Abnahme David offen.
 | [sonderkonstellationen-kantone.md](register/sonderkonstellationen-kantone.md) | **Kantonale Sonderkonstellationen** (neu 14.–15.6.2026, Workflow wi80t134r): 877 kostenrelevante Sonderregeln über 26 Kantone (Erhöhung/Reduktion, einkommensabhängig, Materie-Sondertarife, Streitgenossen, MwSt/Auslagen), je mit §/Artikel; doppelt verifiziert |
 | [gegenpruefung-register.md](register/gegenpruefung-register.md) | **Gegenprüfungs-Register** (neu 1.7.2026, QS-GP): protokollierte adversariale Zweitdurchgänge je Snapshot/Engine — Datum · Diff-Hash · Verdikt · Quelle-Pin · Beleg; automatisch von `npm run gegenpruefung:ok` gepflegt, Türsteher des Tors `check:gegenpruefung` (in `npm run gate`). Design: `docs/superpowers/specs/2026-07-01-gegenpruefung-gate-design.md` |
 | [QS-GP-KAMPAGNE-2026-07-02.md](register/QS-GP-KAMPAGNE-2026-07-02.md) | **QS-GP-Kampagne Alt-Rechen-Engines** (2.7.2026, Baustein d): rückwirkende adversariale Gegenprüfung aller Alt-Rechen-Engines gegen die amtliche Norm — 127 Rohbefunde/38 Dateien, ~45 Fixes angewandt (7-Verifier-Doppelcheck 45 CONFIRMED/0 REFUTED), 3 Übergriffe → §9-Backlog. Report + Outcomes + Follow-ups; Verdikte im [Gegenprüfungs-Register](register/gegenpruefung-register.md) |
+| [AUDIT-TARIF-2026-06-17.md](register/AUDIT-TARIF-2026-06-17.md) | **Tarif-Rechen-Audit 17.6.2026** (aus `bibliothek/` nach `register/` verschoben, H-1): 4-Agenten-Fan-out gegen ~250 Tarif-Einträge/lokale Normtext-Snapshots, Mehrheit OK; Kategorie A = echte Wert-/Norm-Abweichungen **OFFEN (Entscheid David 17.6.2026: nur geflaggt, Fix später)**; B/C dokumentiert für späteren Durchgang. Nichts an der Rechen-`regel` geändert |
+| [AUDIT-BUGS-2026-06-19.md](register/AUDIT-BUGS-2026-06-19.md) | **Bug-/Logik-Audit 19.6.2026** (aus `bibliothek/` nach `register/` verschoben, H-1): zweistufiger read-only-Review der gesamten Codebasis (~87 500 LOC), 7+8 Reviewer/Sweeps; HOCH/MITTEL-Befunde adversariell mit Repro belegt. Status je Befund im Dokument — **nicht pauschal «erledigt»**, Einzelstand nachschlagen |
 
 ## normen/ — Regelwerke (Engine-Grundlagen, Wortlaute verbatim)
 
@@ -182,7 +188,7 @@ zugeordnet (grob bei Mantelvorlagen, §8); fachliche Abnahme David offen.
 | [feiertage-kantone-bj.md](normen/feiertage-kantone-bj.md) | Feiertags-Matrix 26 Kantone (BJ-Verzeichnis SR 0.221.122.3, lit. a = lit. b) inkl. bedingter Tage (NE/UR/AR/AI-Fussnoten), Näfelser-Fahrt-Karwoche-Regel, offengelegte Annahmen | 26/26 Sektionen zweifach geprüft (Agent + Vollabgleich am PDF) ✓ |
 | [norm-vorschau-snapshot-system.md](normen/norm-vorschau-snapshot-system.md) | **Volltext-Snapshot-System** (neu 16.6.2026): Popover mit Gesetzestext Bund (5760 Art./18 Gesetze, Vollabdeckung) + Kantone (LexWork-Adapter, 19 Kt.); Datenmodell, Build-Regel (CLAUDE.md §7), genuine Lücken, Drift-/Vollständigkeits-Checks; speist `public/normtext/` + NormPopover | ZWEIFACH GEPRÜFT (Extraktion + 2 Bug-Checks + Drift/Vollständigkeit grün); Abnahme David offen |
 | [gesetzessammlung-rubrik-v.md](normen/gesetzessammlung-rubrik-v.md) | **Rubrik V «Gesetze»** (neu 17.6.2026): browsbare Gesetzessammlung über den Snapshots — Erlass-Register (SSoT Identität+Taxonomie) → generiertes `register.json` → Übersicht + Lesesicht (Sticky-TOC, zuklappbare Bänder, In-Gesetz-Suche, Querverweis-Autolink, Popover-Brücke); Speicher-/Darstellungsregeln, 7 Konsistenz-Tore, Wettbewerbs-Differenzierung | ERSTRECHERCHE (gate-grün, browser-verifiziert); Abnahme David offen |
-| [kantonale-tarif-zitat-befunde.md](normen/kantonale-tarif-zitat-befunde.md) | **Kantonale Tarif-Zitat-Befunde LU/OW/SH + NE/GE** (16.–17.6.2026): Befunde aus Norm-Vorschau-Vollständigkeitstest — LU GRUNDPFAND quelleUrl 228→258 (BEHOBEN); OW GDB 134.15 Art. 7 aufgehoben (Art. 9/12, BEHOBEN); SH 273.100 Art. 109 totes Recht (JG 173.200 Art. 82, OFFEN); **+ 5 NE/GE-Zitatkorrekturen 17.6.2026 (alle wertneutral BEHOBEN): NE Art. 54/81→Art. 14 ch. (RSN 166.31 endet Art. 17, Chiffres in Art. 14); NE GRUNDPFAND Art. 44→Art. 10 (LERF); GE GRUNDPFAND Art. 16/84→Art. 4 al. 6 (REmORFDIT — RTFMC-Hypothese live widerlegt)** | ZWEIFACH GEPRÜFT (live htm-Quelle + Token-Auflösung); golden byte-gleich; Wertänderung SH offen für Davids Abnahme |
+| [kantonale-tarif-zitat-befunde.md](normen/kantonale-tarif-zitat-befunde.md) | **Kantonale Tarif-Zitat-Befunde LU/OW/SH + NE/GE** (16.–17.6.2026): Befunde aus Norm-Vorschau-Vollständigkeitstest — LU GRUNDPFAND quelleUrl 228→258 (BEHOBEN); OW GDB 134.15 Art. 7 aufgehoben (Art. 9/12, BEHOBEN); SH 273.100 Art. 109 totes Recht (JG 173.200 Art. 82, **BEHOBEN 16.6.**, Commit `b7587a51`, fachl. freigegeben David — Fundorte schlichtung.ts/nicht-vermoegensrechtlich.ts/zustaendigkeitKosten.ts:141); **+ 5 NE/GE-Zitatkorrekturen 17.6.2026 (alle wertneutral BEHOBEN): NE Art. 54/81→Art. 14 ch. (RSN 166.31 endet Art. 17, Chiffres in Art. 14); NE GRUNDPFAND Art. 44→Art. 10 (LERF); GE GRUNDPFAND Art. 16/84→Art. 4 al. 6 (REmORFDIT — RTFMC-Hypothese live widerlegt)** | ZWEIFACH GEPRÜFT (live htm-Quelle + Token-Auflösung); golden byte-gleich; generelle Rechtssicherheits-Abnahme bleibt Davids Sache |
 
 ## behoerden/ — Behördenlisten
 
@@ -275,7 +281,7 @@ im Verfallsregister («Amtliche Muster-Suiten»).
 
 - `scripts/fedlex-cache.sh` — konsolidierte Filestore-HTMLs nach /tmp + Anker-Prüfung
 - `scripts/plz-generieren.ts` — amtliches PLZ-Register (swisstopo) + Gemeinde→Amt-Daten
-- `scripts/golden-outputs.ts` — Golden-Protokoll der Engines (53 Fälle)
+- `scripts/golden-outputs.ts` — Golden-Protokoll der Engines (Fallzahl nicht hier hartkodiert, §Kurzregel 5 — aktueller Stand: [`golden/lexmetrik-golden.json`](../golden/lexmetrik-golden.json))
 - `scripts/og-bild.ts` — Generator der Social-Card `public/og.png` (W1.10, `npm run og:bild`)
 - `scripts/messung-cwv.ts` — CWV-Messung am Indexierungs-Hebel (W1.11, `npm run messung:cwv`)
 
