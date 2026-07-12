@@ -11,9 +11,13 @@ Wortlaut am Fedlex-Cache wo verfügbar) · Regelwerk-Skizze · **§2-Beurteilung
 (deterministisch / parametrisiert / Gerüst / Backlog) · Datenbedarf inkl. Verfallsregister ·
 Fallstricke · Aufwand S/M/L · Wiederverwendung bestehender Engines.
 
-**Status aller Dossiers: Recherche-Entwurf.** Web-Quellen einfach belegt, Cache-Zitate
+**Status je Dossier: siehe Tabelle unten.** Web-Quellen einfach belegt, Cache-Zitate
 verbatim; fachliche Abnahme durch David (§7) und die je im Dossier-Kopf gelisteten
-Verifikations-TODOs stehen aus. Nichts davon ist umgesetzt.
+Verifikations-TODOs stehen bei den offenen Dossiers aus. **GEBAUT-Vermerke in der
+Tabelle beachten** — mehrere Dossiers sind längst umgesetzt (u. a.
+`verzahnungs-klingen-w27`, `untermietvertrag`, `kuendigungs-masken`,
+`kvg-grundversicherung-kuendigung`); die vormalige Pauschale «nichts davon ist
+umgesetzt» war veraltet und hätte neue Sessions in Doppelbau-Risiko geführt.
 
 | Dossier | Inhalt (Rechner · Vorlagen) | Top-Empfehlung |
 |---|---|---|
