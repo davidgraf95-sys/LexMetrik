@@ -81,7 +81,15 @@ Jede Einheit = eigener PR mit Mess-Quittung (Output `check:farbwelt` ab D-0),
 axe-e2e hell+dunkel, golden-Beweis. Token-Einheiten (D-3…D-6) sind flip-reversibel;
 Call-Site-Einheiten (D-8) nicht → Pilot zuerst. Bau durch Opus (Daueranweisung).
 
-### D-0 · Mess-Fundament `scripts/check-farbwelt.ts` — SCHRITT 0
+### D-0 · Mess-Fundament `scripts/check-farbwelt.ts` — SCHRITT 0 ✅ (PR #209, 11.7.2026)
+
+**✅ GEBAUT (Nachtrag durch D-1 — der D-0-Branch entstand vor dem #208-Merge):**
+`check:farbwelt` live in `check:seriell`→`gate` (culori+apca-w3 devDep): 40
+WCAG-Pflichtpaare hell+dunkel (FAIL), 6 §4b-B-Referenzwerte + 2 --paper-Fixpunkte
+(FAIL bei Drift), Flächen-L-Leiter (FAIL); Hue-Drift/L-Monotonie/Chroma-Dämpfung
+Erstlauf-WARNUNG; APCA nur beratend. Bekannte Risse als Baseline-Guard:
+ink-500/well hell 4.48 (→D-4) · danger-500/paper dunkel 2.72 (→D-1.3).
+Sollwert-Tabelle: `DESIGN-REGLEMENT.md` §F2b.
 *(Befunde 33+38+40; ohne dieses Tor ist jedes «Kontrast-Gate» der Folge-Einheiten Prosa)*
 - **Kern:** Script (culori, devDep + apca-w3) parst alle `:root`- und `html.dark`-Token
   aus `src/index.css` und prüft: (a) **WCAG-Paare hell+dunkel als FAIL** (Text ≥4.5:1,
@@ -96,7 +104,20 @@ Call-Site-Einheiten (D-8) nicht → Pilot zuerst. Bau durch Opus (Daueranweisung
   Sollwert-Tabelle als §13-Nachtrag in `DESIGN-REGLEMENT.md`.
 - **Aufwand:** M · **Golden:** neutral (reines Prüf-Script, kein Runtime).
 
-### D-1 · Sofort-Fixes (messbare Verstösse/Bugs — kein Geschmacksurteil, kein David-Entscheid)
+### D-1 · Sofort-Fixes (messbare Verstösse/Bugs — kein Geschmacksurteil, kein David-Entscheid) ✅ (12.7.2026)
+
+**✅ GEBAUT (9 Posten, je eigener Pathspec-Commit mit Messwert vorher→nachher):**
+1 FS-Null-Guard (Erstbesucher 1.0→1.08rem; Einstellungen-Bridge nicht betroffen) ·
+2 Overline-AA (55 Overrides gestrippt, ink-500/well 4.48→ink-600 6.65; Regex-Gate in
+`check:design-tokens`, Negativ-Beweis) · 3 sage/slate-line-Aliasse + 7 Call-Site-Swaps
+(danger dunkel 2.72→7.54; +3 farbwelt-Pflichtpaare 40→46; -500-Mitten unangetastet) ·
+4 Regeste in max-w-reading (~115–120→~70–75 CPL; Prerender = reine SEO-Shell, nicht
+betroffen) · 5 Verdikt-Prosa max-w-reading (nur Prosa-`<p>`, 18 Formulare im geteilten
+Rahmen) · 6 Chevron-Hex #8A6A2F→#826225 (4.37→4.91 auf well) · 7 Motion-Dedup
+(`var(--dur-*)`) · 8 `--ink-fixed-dark`-Solitär (VOR D-4) + `--placeholder` als
+dokumentierte Stufe · 9 `--status-outline/-border-soft/-hatch` (45/30/26 %,
+verhaltensneutral). golden 209 byte-gleich; danger-RISS im Tor bleibt als
+Token-Paar-Baseline bis D-4/D-5 (Call-Sites aliassiert).
 *(Befunde 19, 18, 11, 20, 21, 12, 14, 15, 10 — alle klein, golden-neutral)*
 1. **FS-Bug Entscheid-Reader** (19): `ladeFsIdx()` in `src/pages/EntscheidLeser.tsx:88–93`
    — `Number(null)===0` → jeder Erstbesucher liest 1.0rem statt Default 1.08rem
