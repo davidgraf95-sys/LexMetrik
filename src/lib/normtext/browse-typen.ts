@@ -40,6 +40,13 @@ export interface BrowseErlass {
    *  garantiert pdfStand == der ausgelieferten gepinnten Fassung; ehrliche
    *  Beschriftung «Amtliches PDF (Fassung vom …)». */
   pdfStand?: string;
+  // ── V2 / K-1: «in Kraft seit» (Ur-Inkrafttreten des Erlasses) ──
+  /** Nur status 'snapshot' (Bund): das URSPRÜNGLICHE Inkrafttreten des Erlasses
+   *  (ISO), aus Fedlex-SPARQL `jolux:dateEntryInForce` am Abstract-ELI. Projiziert
+   *  aus public/normtext/inkrafttreten.json (§5). Distinkt vom «Stand»
+   *  (Konsolidierungsdatum) und vom Erlassdatum «vom …». Kanton trägt es nicht
+   *  (LexWork hat kein strukturelles Ur-Inkrafttreten) ⇒ Feld fehlt, §8. */
+  inkraftSeit?: string;
 }
 
 export interface BrowseManifest {

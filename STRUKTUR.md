@@ -132,6 +132,22 @@ in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
 <!-- KARTEN -->
 
+## Session 12.7.2026 — V2·K-1 (A22·K-1): «in Kraft seit» im Gesetzes-Kopf (Ur-Inkrafttreten, Datenteil F2, Worktree `lm-v2-k1`, Branch `feat/v2-k1`)
+
+**Auftrag (Spec `FAHRPLAN-GESETZESDARSTELLUNG-V2.md` §2 F2 K-1 · UX §10.8 A22).** Bau-Go = Davids General-Delegation 11.7. «du hast bei allem was ich entscheiden muss selbst die wahl» → Orchestrator-Entscheid: bauen. **Skills:** `scraping-swiss-official-sources` + `gegenpruefung` (Datenteil = Risiko-Pfad-nah).
+
+**Kern-Befund (§7 empirisch geprobt):** Das Ur-Inkrafttreten steht als **`jolux:dateEntryInForce` am ABSTRACT-ELI (cc)** des Erlasses — EIN kanonischer Wert (OR/ZGB 1912-01-01, BV 2000-01-01, nDSG 2023-09-01, AHVG 1948-01-01, SchKG 1892-01-01, alle famos-amtlich). **Falle vermieden:** die früheste `dateEntryInForce` der Paket-5-Revisionen ist NICHT das Ur-Inkrafttreten (listet über die SR-Taxonomie auch Vorgänger-Erlasse; ADOV → 1973er Vorläufer-Verordnung) — Auftrags-Warnung empirisch bestätigt.
+
+**Gebaut (pathspec, Muster U-PDF #189 build-time, KEINE Client-SPARQL):**
+- **Generator** `scripts/normtext/inkrafttreten-generieren.ts` (`gen:inkrafttreten`) → Sidecar `public/normtext/inkrafttreten.json` ({key:{datum,quelle:'fedlex'}}). Konservativ (§7/§8): nur bei GENAU EINEM Datum je Abstract; null/mehrdeutig ⇒ weggelassen. **227/227 Bund** (0 mehrdeutig, 0 fehlend).
+- **Projektion** `browse-manifest.ts`: `inkrafttreten.json` → `BrowseErlass.inkraftSeit` (synchron am Erlass ⇒ CLS 0). Typ in `browse-typen.ts`.
+- **Render** `ErlassLeserKopf.tsx`: «in Kraft seit …» nach «Stand» in der Meta-Zeile; «vom …» (Ingress) NICHT gedoppelt.
+- **Kanton bewusst weggelassen (§8):** LexWork trägt kein strukturelles Ur-Inkrafttreten (`enactment`=Beschluss, `version_dates_str`=Stand) — abgeleitet wäre es falsch oder Stand-Dublette.
+- **Gegated:** `inkrafttreten.test.ts` (9 Tests: Erhebe-Logik/Konservatismus/Sidecar+Projektions-Integrität/Coverage-Boden) · e2e `leser-kopf-v2` K-1 (BGBM «in Kraft seit 01.07.1996»).
+- **Golden-Klasse: Engine-Golden byte-gleich** (`golden:vergleich` IDENTISCH 209); register.json + daten-manifest additiv (`inkraftSeit`), `check:paritaet` grün (Feld überlebt DB-Projektion).
+
+**Gegenprüfung (unabhängiger Opus-Sub-Agent, frischer Kontext, gegen Fedlex-SPARQL+HTML):** Stichprobe 9 inkl. SchKG (Alt <1900) + FZA/LugÜ (Staatsverträge) — Verdikt siehe Commit-Trailer. **TABU eingehalten:** kein Eingriff in InhaltsKopf/LeserAnsichtMenu (#198), keine Such-/Design-Token-/Fussnoten-Extraktions-Dateien (FN-3 parallel). Trailer `Roadmap: W2·5d`.
+
 ## Session 11.7.2026 — QS-PERF: zwei CI-instabile e2e-Specs gehärtet (Worktree `lm-e2e-haertung`, Branch `fix/e2e-ci-haertung`)
 
 **Auftrag (QS-PERF):** `e2e/norm-sprung.e2e.ts` + `e2e/gesetze-ux-g3a.e2e.ts` scheiterten seit dem V2-Merge auf fast jedem PR im 2-Kern-CI-Runner (Symptome `getByText('Sprung')`-12s-Timeout, `toBeVisible`-Timeouts, vereinzelt CLS), lokal grün. Nur Test-Dateien anfassen (useUniversalSuche-Fläche = Parallel-Agent), keine Schwelle aufweichen (A9-SINN).

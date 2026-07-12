@@ -1,6 +1,8 @@
 import { test, expect, type Page } from '@playwright/test';
 
 // FAHRPLAN-GESETZESDARSTELLUNG-V2 — koordinierter Kopf-PR (A22/A23, David 10.7.2026):
+//   · K-1  «in Kraft seit …» in der Meta-Zeile (Ur-Inkrafttreten, Fedlex
+//          dateEntryInForce, build-time projiziert ⇒ CLS 0); nur Bund.
 //   · K-2  Fussnoten-Chip im Kopf: Zähler N + echter Toggle (aria-pressed) +
 //          Apparat-Sprung bei Einschalten; CLS 0 beim Toggle.
 //   · B-1  «Entscheide»-Schalter im Ansicht-Dropdown blendet die BGE-Leitfall-
@@ -19,6 +21,13 @@ async function ansichtOeffnen(page: Page): Promise<void> {
   await page.getByRole('button', { name: 'Ansicht' }).first().click();
   await expect(page.locator('[aria-label="Darstellungsoptionen"]').first()).toBeVisible();
 }
+
+test('K-1: «in Kraft seit» in der Meta-Zeile (Bund), nicht beim Kanton', async ({ page }) => {
+  // Bund BGBM: Ur-Inkrafttreten 01.07.1996 (Fedlex dateEntryInForce), distinkt vom Stand.
+  await warteReader(page, '/gesetze/bund/BGBM', 'art-1');
+  const zeile = page.getByText(/in Kraft seit\s+01\.07\.1996/);
+  await expect(zeile).toBeVisible({ timeout: 15000 });
+});
 
 test('K-2: Fussnoten-Chip im Kopf — Zähler + Toggle (aria-pressed), CLS 0 beim Umschalten', async ({ page }) => {
   await warteReader(page, '/gesetze/bund/BGBM', 'art-1');

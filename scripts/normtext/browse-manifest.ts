@@ -35,6 +35,16 @@ function ladePdfQuellen(basis: string): Record<string, PdfQuelle> {
   }
 }
 
+/** V2/K-1: Ur-Inkrafttreten je Snapshot-Key (aus inkrafttreten.json, §5-Projektion). */
+type InkraftQuelle = { datum: string; quelle: string };
+function ladeInkrafttreten(basis: string): Record<string, InkraftQuelle> {
+  try {
+    return JSON.parse(readFileSync(join(basis, 'inkrafttreten.json'), 'utf8')) as Record<string, InkraftQuelle>;
+  } catch {
+    return {};
+  }
+}
+
 function jsonDateien(verzeichnis: string): string[] {
   return readdirSync(verzeichnis)
     .filter((f) => f.endsWith('.json') && f !== 'index.json' && f !== 'register.json')
@@ -133,7 +143,12 @@ function pdfFelder(pq: PdfQuelle | undefined): { pdfUrl?: string; pdfStand?: str
   return pq ? { pdfUrl: pq.url, pdfStand: pq.stand } : {};
 }
 
-function bundEintrag(reg: ErlassRegistereintrag, datei: NormSnapshotDatei, pq?: PdfQuelle): BrowseErlass {
+/** V2/K-1: «in Kraft seit»-Feld aus dem Sidecar (§8: nur wenn vorhanden = Bund). */
+function inkraftFelder(iq: InkraftQuelle | undefined): { inkraftSeit?: string } {
+  return iq ? { inkraftSeit: iq.datum } : {};
+}
+
+function bundEintrag(reg: ErlassRegistereintrag, datei: NormSnapshotDatei, pq?: PdfQuelle, iq?: InkraftQuelle): BrowseErlass {
   return {
     key: reg.key, ebene: 'bund', kanton: null,
     kuerzel: reg.kuerzel, titel: reg.titel, sr: reg.sr ?? null,
@@ -145,6 +160,7 @@ function bundEintrag(reg: ErlassRegistereintrag, datei: NormSnapshotDatei, pq?: 
     fassungsToken: datei.eintraege[0]?.fassungsToken ?? '',
     pdfPfad: null,
     ...pdfFelder(pq),
+    ...inkraftFelder(iq),
   };
 }
 
@@ -207,6 +223,7 @@ function vergleiche(a: BrowseErlass, b: BrowseErlass): number {
 export function baueBrowseManifest(erzeugt: string, basis = NORMTEXT_DIR): BrowseManifest {
   const bundReg = new Map(ERLASS_REGISTER.filter((r) => r.ebene === 'bund').map((r) => [r.key, r]));
   const pdfQuellen = ladePdfQuellen(basis);
+  const inkrafttreten = ladeInkrafttreten(basis);
   const erlasse: BrowseErlass[] = [];
 
   // Bund: jeder Snapshot MUSS einen Register-Eintrag haben (Orphan-Tor).
@@ -216,7 +233,7 @@ export function baueBrowseManifest(erzeugt: string, basis = NORMTEXT_DIR): Brows
     if (!datei) continue;
     const reg = bundReg.get(stamm);
     if (!reg) throw new Error(`browse-manifest: Bund-Snapshot ${stamm}.json ohne Register-Eintrag (ERLASS_REGISTER ergänzen).`);
-    erlasse.push(bundEintrag(reg, datei, pdfQuellen[stamm]));
+    erlasse.push(bundEintrag(reg, datei, pdfQuellen[stamm], inkrafttreten[stamm]));
   }
 
   // Kanton: Identität aus Snapshot/Dateiname abgeleitet, Gebiet aus Register.
