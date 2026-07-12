@@ -218,52 +218,52 @@ an/aus, global) bleibt unangetastet — hier geht es allein um den AUTO-Default.
 Verschachtelung; `guideEbene` = Sektions-tiefe, die den EINEN Guide trägt (`null` =
 flache Artikelliste); `dichteAmGuide` = Median Artikel je Sektion auf `guideEbene`;
 `autoGuide` = zeigt der Guide im Auto-Default? Der Reader schreibt `autoGuide` als
-`data-guide-auto="an|aus"` an den `.lc-leser`-Root; CSS wertet es aus.
+`data-guide-auto="an|aus"` an den `.lc-leser`-Root; CSS wertet es aus. **V2·A28
+(David 12.7.2026): `autoGuide` ist korpusweit `false` — `data-guide-auto` ist stets
+`"aus"`.**
 
 | Aufbau (`strukturTiefe`) | `guideEbene` | Auto-Default | Wirkung |
 |---|---|---|---|
-| **0** (flache Artikelliste, z. B. VMWG, Kanton-§) | `null` | — | Kein Guide; Artikel trennt der feine Artikel-Trenner. |
-| **1** (eine Gliederungsebene, z. B. Kurzerlass, Staatsvertrag) | 0 | **AN** (Dichte ≥ 2) | Die EINE Ebene wird sichtbar («flache Ebene sichtbar»). |
-| **2** (zwei Ebenen, z. B. ArG) | 1 | **AN** (Dichte ≥ 2) | Guide auf der inneren Gruppierung; die äussere trägt Typo + Struktur-Trenner. |
-| **≥ 3** (tiefe Kodifikation, z. B. BV, OR, ZGB) | 1 | **AN** (Dichte ≥ 2) | **V2·L-3 (Umkehr #161):** der EINE Guide auf `guideEbene 1` — keine Ebenen-Stapelung, sondern die Gliederungshilfe, die David sehen will; die tieferen Ebenen tragen ihre Tiefe weiter über Einzug + Typo. |
+| **0** (flache Artikelliste, z. B. VMWG, Kanton-§) | `null` | — | Kein Guide möglich; Artikel trennt der feine Artikel-Trenner. |
+| **1** (eine Gliederungsebene, z. B. Kurzerlass, Staatsvertrag) | 0 | **AUS** (A28) | Kein aufgedrängter Guide; Nutzer-«an» zeigt die EINE Ebene auf `guideEbene 0`. |
+| **2** (zwei Ebenen, z. B. ArG) | 1 | **AUS** (A28) | Kein aufgedrängter Guide; Nutzer-«an» zeigt die innere Gruppierung auf `guideEbene 1`. |
+| **≥ 3** (tiefe Kodifikation, z. B. BV, OR, ZGB) | 1 | **AUS** (A28) | Kein aufgedrängter Guide; Nutzer-«an» zeigt den EINEN Guide auf `guideEbene 1` (≤ 1 Guide-Stapel, kein Barcode; die tieferen Ebenen tragen ihre Tiefe über Einzug + Typo). |
 
-**Auto-Default-UMKEHR (V2·L-3, David 10.7.2026, «deine Empfehlung» = JA).** Bis #161
-deckelte die *Tiefe* den Auto-Guide (ab `strukturTiefe ≥ 3` GANZ AUS) — das nahm
-genau ZGB/OR ihre Gliederungslinie, was David als «funktioniert praktisch nicht»
-re-meldete. Der Denkfehler von #161: es gibt keinen Strich *je Ebene* — der Reader
-emittiert **höchstens EINEN** Guide, fix auf `guideEbene` (`min(tiefe−1, 1)`). Ein
-einzelner vertikaler Guide auf der inneren Gruppierungsebene ist kein Barcode.
-Darum hängt der Auto-Guide seit V2·L-3 **allein am Dichte-Boden** (`DICHTE_MIN`),
-die Tiefe deckelt nichts mehr; tiefe Kodifikationen zeigen wieder ihren EINEN Guide.
+**Auto-Default-RÜCKZUG (V2·A28, David 12.7.2026, Live-Feedback auf L-3/#207).** L-3
+(gebaut 11.7.) hatte den Auto-Guide für dichte Erlasse AN geschaltet (inkl. ZGB/OR),
+gestützt auf die Theorie, ein einzelner Guide auf `guideEbene` sei die hilfreiche
+Gliederungshilfe. David hat das **live verworfen**: *«das mit den linien funktioniert
+überhaupt nicht»* / *«also ist überhaupt nicht fördernd für die übersicht»* (Wortlaut
+`docs/ux-audit-2026-07/ANMERKUNGEN-DAVID-2026-07-12.md`). Das ist ein Total-Urteil
+über den aufgedrängten Guide, kein Schwellwert-Feedback. Konsequenz: der Auto-Default
+wird **korpusweit zurückgezogen** — `autoGuide = false` für JEDEN Erlass. Der Reader
+drängt die Gliederungslinie nie auf.
 
-**Dichte-Boden (der einzige Auto-Guide-Schwellwert):** bei `dichteAmGuide ≤ 1`
-(Median 1 Artikel je geführter Sektion) bleibt `autoGuide` **AUS** — der Guide wäre
-sonst ein Per-Artikel-Barcode statt einer Gruppierung. Dieser Boden schützt auch
-die neu eingeschalteten tiefen Erlasse. FLACHE Erlasse (`strukturTiefe 0`) bekommen
-weiterhin *nie* einen Guide — die Umkehr fügt dort **kein** Linien-Rauschen hinzu.
+**Das FEATURE bleibt — nur das Aufdrängen endet.** Der K11-Tri-State-Nutzer-Schalter
+«Linien» (`data-linien` an/aus/auto, global) ist voll funktionsfähig: ein Klick
+«Linien AN» zeigt den EINEN Guide auf `guideEbene`. `strukturTiefe`/`guideEbene`/
+`dichteAmGuide` bleiben voll berechnet (sie steuern, WO der Guide sitzt und OB der
+Schalter erscheint — `zeigeLinien = guideEbene !== null`). `DICHTE_MIN`/`TIEF_AB`
+bleiben nur noch Diagnose-/Doku-Schwellen (deckeln nichts mehr am Auto-Default).
 
-**Empirische Schwellen-Herleitung** (`node scripts/linien-korpus-verteilung.mjs`,
-1135 Sidecar-Erlasse). Gliederungstiefe-Verteilung: `Tiefe 0: 900 (79 %) · 1: 64 ·
-2: 98 · 3: 58 · 4: 12 · 5: 3`. Der Bruch liegt sichtbar zwischen «flach/mittel»
-(≤ 2 Ebenen) und «tiefe Kodifikation» (≥ 3): ab drei gleichzeitig sichtbaren
-Überschriften-Ebenen trägt die Typo-Staffel + der horizontale Struktur-Trenner + der
-Einzug die Hierarchie bereits vollständig. `DICHTE_MIN = 2` bleibt der Boden gegen den
-Per-Artikel-Barcode; `TIEF_AB = 3` ist seit V2·L-3 nur noch die Klassifikations-
-Schwelle «tiefe Kodifikation» (deckelt den Auto-Guide NICHT mehr). Ergebnis nach der
-Umkehr: **230** Erlasse zeigen den Guide im Auto-Default (vorher 153) — dazu gekommen
-sind **+72** tiefe Kodifikationen (alle `strukturTiefe ≥ 3` UND `dichte ≥ 2`: Tiefe 3: 57 ·
-4: 12 · 5: 3); die restlichen tiefen Erlasse ohne tragende Dichte bleiben ruhig.
+**Warum «korpusweit AUS» statt Feinjustage:** Davids Urteil ist ein Grundsatz-Nein
+zum aufgedrängten Guide. Jede verbleibende Auto-Heuristik (Dichte/Tiefe/Kategorie)
+bliebe eine Wette gegen dieses Urteil. Der konservative Zustand ist: nicht aufdrängen.
+Weitere Justage nur auf neues, positives David-Signal. Alternativen für echte
+Struktur-Übersicht (Typo-Hierarchie · Sticky-Mini-Kontext · TOC-Scroll-Spy ·
+Abschnitts-Rhythmus) sind in `FAHRPLAN-GESETZES-UX.md §10.9` skizziert (nur Doku).
 
-**Referenz-Verdikte** (im Tor gegated, positiv+negativ): ZGB (Tiefe 5) → **Guide auf
-Ebene 1 sichtbar** · OR (Tiefe 4) → **Guide auf Ebene 1 sichtbar** · ArG (Tiefe 2) →
-**Guide auf Ebene 1 sichtbar** · VMWG (Tiefe 0) → **kein Guide** ·
-Kurzerlass/Staatsvertrag (Tiefe 1) → **Guide auf Ebene 0 sichtbar**.
+**Referenz-Verdikte** (im Tor gegated): ZGB (Tiefe 5) → **Auto-Guide AUS** · OR
+(Tiefe 4) → **AUS** · ArG (Tiefe 2) → **AUS** · VMWG (Tiefe 0) → **kein Guide** ·
+Kurzerlass/Staatsvertrag (Tiefe 1) → **AUS**. `guideEbene`/`strukturTiefe` bleiben
+gegated (Nutzer-«an» trifft denselben Ort).
 
 **Maschinell gegated:** `check:linien-kanon` (Nachfolger von R1/R4, in `npm run
 gate`) importiert dieselbe `linienProfil`-Funktion, beweist die korpusweiten
-Invarianten (Biconditional `autoGuide ⟺ dichte ≥ 2`) + die Referenz-Verdikte + die
-Reader-/CSS-Verdrahtung (kein Drift); e2e `gesetze-ux-g3a`/`leser-optionen` beweisen
-das gerenderte Ergebnis (ZGB zeigt den Guide, ArG sichtbar, ≤ 1 Guide-Stapel).
+Invarianten (`autoGuide` korpusweit `false`) + die Referenz-Verdikte + die
+Reader-/CSS-Verdrahtung (kein Drift); e2e `gesetze-ux-g3a`/`leser-optionen`/
+`leser-linien-kanon` beweisen das gerenderte Ergebnis (Auto-Default 0 sichtbare
+Guides; Nutzer-«an» ⇒ genau 1 Guide, ≤ 1 Guide-Stapel).
 **Wortlaut byte-gleich** (nur Klassen/Attribute), Engine-Golden byte-gleich.
 
 ### §4b-B · Farb-Wörterbuch der Referenzschicht (W2·5d V2·C-1, 10.7.2026, David «go zu allem»)

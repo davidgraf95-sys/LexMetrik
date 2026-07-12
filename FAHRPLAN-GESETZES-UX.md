@@ -1464,3 +1464,86 @@ als Opus-Einheiten; Fable orchestriert nur.
    byte-gleich als Nicht-Regressions-Beweis). Vor jeder Regeneration `fedlex-cache.sh`
    + «0 übersprungen»-Kontrolle (sonst grüner No-op-Lauf).
 5. **Deferiert:** FN-5/M14 hart nach QS-PERF (separates David-Go).
+
+### 10.9 · A28 — Auto-Linien-Default korpusweit zurückgezogen (David 12.7.2026, Live-Feedback auf L-3)
+
+**Quelle (WÖRTLICH massgeblich):** Davids Chat-Anmerkung 12.7.2026, im Repo persistiert
+unter `docs/ux-audit-2026-07/ANMERKUNGEN-DAVID-2026-07-12.md`:
+
+> «das mit den linien funktioniert überhaupt nicht»
+>
+> «also ist überhaupt nicht fördernd für die übersicht»
+
+**Einordnung.** L-3 (Auto-Default-Umkehr, gebaut 11.7. als #207/PR — der Auto-Guide
+wurde für dichte Erlasse AN geschaltet, inklusive der tiefen Kodifikationen ZGB/OR)
+beruhte auf der THEORIE, ein einzelner Guide auf `guideEbene` sei die Gliederungshilfe,
+die David sehen will. David hat das gestern LIVE an seinen eigenen Leit-Erlassen
+gegengeprüft und die Prämisse klar falsifiziert: der aufgedrängte Guide fördert die
+Übersicht nicht. **Daten schlagen Theorie** — statt weiter an der Dichte-Schwelle zu
+drehen, wird der aufgedrängte Guide zurückgezogen.
+
+**Entscheid A28 (gebaut 12.7., `feat/a28-linien-default`, Trailer `Roadmap: W2·5d`):**
+Der Auto-Default wird **korpusweit AUS** gesetzt — `linienProfil().autoGuide = false`
+für JEDEN Erlass (SSoT `src/pages/gesetz-leser/linienAufbau.ts`), `data-guide-auto` am
+`.lc-leser`-Root ist stets `"aus"`. Kein Erlass drängt die Gliederungslinie mehr auf.
+
+*Begründung der Wahl «korpusweit AUS» (statt Feinjustage):* David sagt nicht «bei ZGB
+zu viel, bei ArG zu wenig» (das war A8, per Aufbau-Regel geheilt), sondern «funktioniert
+überhaupt nicht» / «überhaupt nicht fördernd» — ein Total-Urteil über den aufgedrängten
+Guide als Übersichts-Mittel. Jede verbleibende Auto-Heuristik (Dichte, Tiefe, Kategorie)
+bliebe eine Wette gegen dieses Urteil. Der konservative, ehrliche Zustand ist: nicht
+aufdrängen. Weitere Justage nur auf neues, positives David-Signal.
+
+**Das FEATURE bleibt — nur das AUFDRÄNGEN endet.** Der K11-Tri-State-NUTZER-Schalter
+«Linien» (`data-linien` an/aus/auto, global, `LeserAnsichtMenu`) ist voll funktionsfähig:
+wer die Gliederungslinie will, klickt «Linien AN» und bekommt den EINEN Guide auf genau
+`guideEbene`. `strukturTiefe`/`guideEbene`/`dichteAmGuide` bleiben voll berechnet (sie
+steuern, WO der Guide sitzt und OB der Schalter erscheint — `zeigeLinien = guideEbene
+!== null`). Nur der Auto-Default ist aus.
+
+**Nachgezogen (Quelle = Davids Verdikt):**
+- `check:linien-kanon` (B1-Invariante auf `!autoGuide` korpusweit; B2-Referenz-Verdikte
+  ZGB/OR/ArG/BVV3/HKUE auf `autoGuide=false`, `guideEbene`/`strukturTiefe` weiter gegated
+  als Verdrahtungs-Nachweis) — GRÜN, 1144 Sidecars, Auto-Guide AN: 0.
+- e2e `leser-linien-kanon` (Auto-Default 0 sichtbare Guides bei ZGB/STG/ArG + neuer
+  Override-Positiv-Fall «Linien AN» ⇒ genau 1 sichtbarer Guide, R4 ≤1 hält),
+  `gesetze-ux-g3a` (STG/ArG Auto-Default transparent + ArG-Override-Positiv),
+  `leser-optionen` (BGBM Linien-Default `aus`; BV Toggle-Zyklus auf A28 umgestellt).
+- DESIGN-REGLEMENT-NORMTEXT §4b (Linien-Kanon-Comment index.css/leserOptionen.ts auf
+  «Auto-Guide korpusweit aus, Feature via K11» nachgeführt).
+
+Golden byte-gleich (reine Reader-CSS/TS, kein Datenpfad), CLS 0, A9-DoD erfüllt.
+Gegenprüfung n/a (keine Rechen-/Extraktions-/Norm-Tarif-Berührung).
+
+**A28-Alternativen-Skizze — Struktur-Übersicht in tiefen Gesetzen (NUR Doku, kein Bau).**
+Anker = Davids Wortlaut «überhaupt nicht fördernd für die übersicht». Der zurückgezogene
+Auto-Guide war EIN Mittel für Übersicht; er hat versagt. Belegbare Alternativen, die
+Übersicht schaffen, ohne eine Linie in den Normtext-Körper zu zeichnen (Rangfolge §4b:
+Typo > Einzug > Guide — die ersten drei liegen ÜBER dem Guide):
+
+1. **Typo-Hierarchie der Zwischentitel.** Die Gliederungs-Überschriften (Teil/Titel/
+   Kapitel/Abschnitt) tragen die Struktur über Schriftgrad/Gewicht/Laufweite/Abstand
+   statt über eine vertikale Linie. Übersicht entsteht beim Scrollen aus dem Text selbst
+   (kein Chrome). Beleg: §4b stellt Typo bereits an die Spitze der Rangfolge; heute sind
+   die Zwischentitel-Stufen nur schwach differenziert. Risiko gering (reine Token/CSS,
+   golden-nah zu prüfen). **ROI-Kandidat #1.**
+2. **Sticky-Mini-Kontext (Breadcrumb der aktuellen Sektion).** Ein dünnes, sticky
+   Kontext-Band unter dem Inhalts-Kopf zeigt IMMER, in welchem Teil/Titel/Abschnitt man
+   gerade liest (via IntersectionObserver, den der Reader schon für den Live-Artikel
+   führt). Übersicht = «wo bin ich», nicht «wie ist alles gegliedert». Beleg: A26 hat den
+   IMMER sichtbaren Inhalts-Kopf bereits etabliert; `SektionKontextKopf` existiert (A27
+   parallel — Kollision beachten). Mittleres Risiko (Sticky-Stacking, CLS).
+3. **TOC-Scroll-Spy-Ausbau.** Das vorhandene `SektionBaumTOC` wird zum aktiven Navigator:
+   die gerade sichtbare Sektion wird im Baum hervorgehoben + der Baum auto-scrollt mit.
+   Übersicht = die Gliederung als eigene, dauerhaft sichtbare Spalte (Desktop) bzw.
+   ausklappbar (Mobil) — getrennt vom Normtext-Körper. Beleg: `SektionBaumTOC.tsx` ist
+   bereits im Linien-Kanon-READER-Set. Mittleres Risiko (Viewport-Sync, Mobil-Platz).
+4. **Abschnitts-Rhythmus (vertikaler Weissraum-Takt).** Grössere, gestufte Abstände
+   ZWISCHEN Gliederungsebenen (Teil ≫ Titel ≫ Abschnitt ≫ Artikel) geben dem Auge den
+   Takt der Struktur, ohne eine einzige Linie. Übersicht = Rhythmus statt Markierung.
+   Beleg: klassisches Gesetzblatt-Satzbild; rein `margin`/`padding`-Token, golden-nah,
+   niedrigstes Risiko. Gut mit #1 kombinierbar.
+
+Reihenfolge-Empfehlung (falls David eine Richtung freigibt): #1+#4 zuerst (billig,
+golden-nah, körper-intern) → messen → dann #2/#3 (Chrome-Schicht, teurer). **Alle vier
+sind Skizze; kein Bau ohne separaten David-Entscheid.**
