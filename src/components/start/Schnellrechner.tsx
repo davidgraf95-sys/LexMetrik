@@ -89,7 +89,7 @@ export function Schnellrechner() {
       {/* «live hergeleitet»-Badge entfernt (Auftrag David 25.6.2026): redundant zum
           Live-Hinweis im Ergebnisblock des Formulars — ein Live-Indikator genügt. */}
       <div className="flex items-center justify-between gap-3 px-5 py-3.5 border-b border-line">
-        <span className="lc-overline text-ink-500">Schnell rechnen</span>
+        <span className="lc-overline">Schnell rechnen</span>
       </div>
       <div role="tablist" aria-label="Schnellrechner" className="flex gap-1 px-3 pt-3">
         {TABS.map((t) => {
@@ -115,7 +115,7 @@ export function Schnellrechner() {
                 <EinfacheFristForm minimal onErgebnis={setFristErgebnis} />
               </div>
               <div className={pk('space-y-2 lg:border-l lg:border-line lg:pl-5', 'space-y-2 @3xl/pane:border-l @3xl/pane:border-line @3xl/pane:pl-5')}>
-                <span className="lc-overline text-ink-500">Kalender-Ansicht</span>
+                <span className="lc-overline">Kalender-Ansicht</span>
                 <FristenKalender markierung={fristErgebnis?.markierung ?? null} kanton={fristErgebnis?.kanton ?? getStandardKanton()} />
               </div>
             </div>

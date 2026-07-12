@@ -265,7 +265,7 @@ export function EinfacheFristForm({ minimal = false, onErgebnis }: {
            Ergebnisblock mit eigener Sprungmarke). */
         <ErgebnisBlock id="lc-ergebnis-einfach" sprung={false}>
           <div className="lc-notice space-y-1.5">
-            <p className="lc-overline text-ink-500">Fristende</p>
+            <p className="lc-overline">Fristende</p>
             <p className="text-h3 font-semibold text-ink-900 num">{ende}</p>
             {endeZusatz !== '' && <p className="text-body-s text-ink-600">{endeZusatz}</p>}
             {/* Im Minimal-Modus (Startseite) nur das Fristende — Rechenweg-Zeilen

@@ -20,7 +20,7 @@ const TOP_ERLASSE: { kuerzel: string; key: string }[] = [
 export function GesetzeChips() {
   return (
     <div className="flex flex-wrap items-center gap-1.5">
-      <span className="lc-overline text-ink-500 mr-1">Direktzugriff</span>
+      <span className="lc-overline mr-1">Direktzugriff</span>
       {TOP_ERLASSE.map((e) => (
         <Link key={e.key} to={`/gesetze/bund/${e.key}`}
           className="lc-chip no-underline hover:text-brass-700 hover:border-brass-400">

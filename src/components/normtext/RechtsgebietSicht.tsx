@@ -76,7 +76,7 @@ function ThemaKarte({ t, proKey }: { t: RechtsgebietThema; proKey: Map<string, B
       {/* Verzahnung (Burggraben Norm ↔ Werkzeug ↔ Entscheid, §4.4): passende
           Werkzeuge (wo vorhanden) + die Rechtsprechung des Grundgerüst-Gebiets. */}
       <div className="flex flex-wrap items-center gap-1.5 pt-1 border-t border-line/70">
-        <span className="lc-overline text-ink-500 mr-1">Verzahnt</span>
+        <span className="lc-overline mr-1">Verzahnt</span>
         {werkzeuge.map((c) => (
           <Link key={c.slug} to={`/rechner/${c.slug}`}
             className="lc-chip no-underline hover:border-brass-400 hover:text-brass-700 transition-colors">

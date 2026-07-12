@@ -227,7 +227,7 @@ export function Rechtsprechung() {
                     Karte bleibt der BGE-Auszug→Volltext-Brücke vorbehalten (oben). */}
                 {gruppen.weitere.length > 0 && (
                   <div className="space-y-6">
-                    <h2 className="lc-overline text-ink-500 flex items-center gap-3">
+                    <h2 className="lc-overline flex items-center gap-3">
                       Weitere Entscheide — nicht amtlich publiziert
                       <span className="num text-ink-500">{gruppen.weitere.length}</span>
                       <span aria-hidden className="h-px flex-1 bg-line" />

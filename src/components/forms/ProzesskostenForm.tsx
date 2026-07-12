@@ -393,7 +393,7 @@ export function ProzesskostenForm({ minimal = false }: { minimal?: boolean } = {
                   Interkantonaler Vergleich {nv ? '(nicht vermögensrechtlich)' : `bei Streitwert CHF ${streitwertRoh?.toLocaleString('de-CH')}`} ({VERFAHRENSPHASEN.find((p) => p.wert === phase)?.label}{verfahrenRelevant && verfahren !== 'ordentlich' ? `, ${VERFAHRENSARTEN.find((v) => v.wert === verfahren)?.label}` : ''}{instanz === 'rechtsmittel' ? ', Rechtsmittel' : ''}, {MATERIEN.find((m) => m.wert === materie)?.label}) — Gerichtsgebühr / Parteientschädigung, aufsteigend sortiert (günstigste zuoberst; nicht bezifferbare Tarife zuunterst). Quelle je Kanton verlinkt.
                 </caption>
                 <thead>
-                  <tr className="lc-overline text-ink-500 border-b border-line">
+                  <tr className="lc-overline border-b border-line">
                     <th className="text-left py-2 pr-3">Kanton</th>
                     <th className="text-right py-2 px-3">Gerichtskosten</th>
                     <th className="text-right py-2 pl-3">Parteientschädigung</th>
@@ -416,11 +416,11 @@ export function ProzesskostenForm({ minimal = false }: { minimal?: boolean } = {
 
           {zug && instanzenzug && (
             <div className="mt-4 rounded-xl border border-line bg-surface p-4">
-              <p className="lc-overline text-ink-500">Gesamtkostenrisiko über den Instanzenzug</p>
+              <p className="lc-overline">Gesamtkostenrisiko über den Instanzenzug</p>
               <div className="mt-3 overflow-x-auto">
                 <table className="w-full min-w-[30rem] text-body-s border-collapse">
                   <thead>
-                    <tr className="lc-overline text-ink-500 border-b border-line">
+                    <tr className="lc-overline border-b border-line">
                       <th className="text-left py-2 pr-3">Stufe</th>
                       <th className="text-right py-2 px-3">Gerichtskosten</th>
                       <th className="text-right py-2 pl-3">Parteientschädigung</th>
@@ -453,7 +453,7 @@ export function ProzesskostenForm({ minimal = false }: { minimal?: boolean } = {
 
           {kaution && sicherheit && (
             <div className="mt-4 rounded-xl border border-line bg-surface p-4">
-              <p className="lc-overline text-ink-500"><NormText text={`Sicherheit für die Parteientschädigung (Art. 99 ZPO)`} /></p>
+              <p className="lc-overline"><NormText text={`Sicherheit für die Parteientschädigung (Art. 99 ZPO)`} /></p>
               {sicherheit.moeglich ? (
                 <p className="mt-2 num text-body-l font-semibold text-ink-900">{sicherheit.spanne ? spanneText(sicherheit.spanne) : 'nicht beziffert'}</p>
               ) : (

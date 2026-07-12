@@ -439,7 +439,7 @@ export function Stepper({ schritte, aktiv, onWechsel }: {
 /** Live-Hinweis über dem Ergebnisblock — vorher 9× wortgleich dupliziert. */
 export function LiveHeader() {
   return (
-    <p className="lc-live lc-overline lc-overline-soft text-ink-500">
+    <p className="lc-live lc-overline lc-overline-soft">
       Live-Berechnung – aktualisiert sich automatisch
     </p>
   );
@@ -484,7 +484,7 @@ export function FehlerBox({ fehler }: { fehler: string[] }) {
 export function BeispielChips({ items }: { items: { label: string; laden: () => void }[] }) {
   return (
     <div className="flex flex-wrap items-center gap-2">
-      <span className="lc-overline lc-overline-soft text-ink-500">Beispiel laden:</span>
+      <span className="lc-overline lc-overline-soft">Beispiel laden:</span>
       {items.map((b) => (
         <button type="button" key={b.label} onClick={b.laden} className="lc-chip hover:bg-brass-200 transition-colors">{b.label}</button>
       ))}

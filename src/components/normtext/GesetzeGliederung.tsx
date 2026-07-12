@@ -27,7 +27,7 @@ export function GliederungUmschalter({ wert, onWahl }: {
 }) {
   return (
     <div role="group" aria-label="Gliederung" className="inline-flex flex-wrap items-center gap-1.5">
-      <span className="lc-overline text-ink-500">Gliederung</span>
+      <span className="lc-overline">Gliederung</span>
       {GLIEDERUNGEN.map((g) => (
         <button key={g.id} type="button" onClick={() => onWahl(g.id)} aria-pressed={wert === g.id}
           className={`rounded px-2.5 py-0.5 text-body-s font-medium transition-colors ${

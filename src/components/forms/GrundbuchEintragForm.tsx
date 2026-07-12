@@ -156,7 +156,7 @@ export function GrundbuchEintragForm() {
                   Interkantonaler Vergleich – Grundbuchgebühr {def.label}{wertNoetig && w ? ` bei Wert ${chf(w)}` : ''}, aufsteigend (günstigste zuoberst; offene/nicht bezifferbare Tarife zuunterst).
                 </caption>
                 <thead>
-                  <tr className="lc-overline text-ink-500 border-b border-line">
+                  <tr className="lc-overline border-b border-line">
                     <th className="text-left py-2 pr-3">Kanton</th>
                     <th className="text-right py-2 pl-3">Grundbuchgebühr</th>
                   </tr>

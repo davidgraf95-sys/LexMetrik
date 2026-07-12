@@ -172,7 +172,7 @@ function ZustaendigkeitRegister({ karten }: { karten: CalculatorCard[] }) {
       {weitere.length > 0 && (
         <div className="space-y-2">
           <div className="flex items-center gap-3">
-            <h3 className="lc-overline text-ink-500">Weitere Werkzeuge <span className="num">({weitere.length})</span></h3>
+            <h3 className="lc-overline">Weitere Werkzeuge <span className="num">({weitere.length})</span></h3>
             <span aria-hidden className="flex-1 h-px bg-line" />
           </div>
           <div className="grid grid-cols-[repeat(auto-fill,minmax(min(380px,100%),1fr))] gap-3">
@@ -267,7 +267,7 @@ function VorlagenRegister({ karten }: { karten: CalculatorCard[] }) {
                 if (rVerf.length === 0) return null;
                 return (
                   <div key={r.id} className="space-y-2">
-                    <h4 className="lc-overline text-ink-500">{r.titel}</h4>
+                    <h4 className="lc-overline">{r.titel}</h4>
                     {zeilen(rVerf, (v) => v.klageGebiet ?? v.rechtsgebiet)}
                   </div>
                 );
@@ -284,7 +284,7 @@ function VorlagenRegister({ karten }: { karten: CalculatorCard[] }) {
                     {rVerf.length > 6 ? (
                       <details className="group space-y-2">
                         <summary className="cursor-pointer list-none select-none">
-                          <h4 className="lc-overline text-ink-500 inline">
+                          <h4 className="lc-overline inline">
                             <span aria-hidden className="inline-block mr-1.5 transition-transform group-open:rotate-90">▸</span>
                             {r.titel} <span className="num text-ink-500">({rVerf.length})</span>
                           </h4>
@@ -293,7 +293,7 @@ function VorlagenRegister({ karten }: { karten: CalculatorCard[] }) {
                       </details>
                     ) : (
                       <>
-                        <h4 className="lc-overline text-ink-500">{r.titel}</h4>
+                        <h4 className="lc-overline">{r.titel}</h4>
                         {zeilen(rVerf)}
                       </>
                     )}
@@ -380,7 +380,7 @@ export function KategorieSektion({ kat, karten, onZurueck, ohneKopf, alleOffen }
               <span className="font-sans font-semibold text-ink-900 text-h3 tracking-tight">{kat.titel}</span>
             </h2>
             <span aria-hidden className="flex-1 h-px bg-line" />
-            <span className="lc-overline num text-ink-500 whitespace-nowrap">
+            <span className="lc-overline num whitespace-nowrap">
               <span className="text-brass-700">{verfuegbar.length}</span> verfügbar
             </span>
           </div>
@@ -403,7 +403,7 @@ export function KategorieSektion({ kat, karten, onZurueck, ohneKopf, alleOffen }
               {vorhandeneGebiete.map((g) => <option key={g} value={g}>{g}</option>)}
             </select>
           </label>
-          <span className="lc-overline num text-ink-500">
+          <span className="lc-overline num">
             <span className="text-brass-700">{verfuegbar.length}</span> verfügbar
           </span>
         </div>
@@ -444,7 +444,7 @@ export function KategorieSektion({ kat, karten, onZurueck, ohneKopf, alleOffen }
           {weitere.length > 0 && (
             <div className="space-y-2">
               <div className="flex items-center gap-3">
-                <h3 className="lc-overline text-ink-500">{alltag.length > 0 ? 'Weitere Werkzeuge' : 'Werkzeuge'} <span className="num">({weitere.length})</span></h3>
+                <h3 className="lc-overline">{alltag.length > 0 ? 'Weitere Werkzeuge' : 'Werkzeuge'} <span className="num">({weitere.length})</span></h3>
                 <span aria-hidden className="flex-1 h-px bg-line" />
               </div>
               <div className="grid grid-cols-[repeat(auto-fill,minmax(min(380px,100%),1fr))] gap-3">

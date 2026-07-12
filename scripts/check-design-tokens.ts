@@ -51,6 +51,14 @@ const DEFAULT_PALETTE = 'red|green|blue|yellow|orange|purple|pink|gray|grey|zinc
 const DEFAULT_FARB_RE = new RegExp(`\\b(?:${PRAEFIX})-(?:${DEFAULT_PALETTE})-[0-9]+(?:/[0-9.]+)?\\b`, 'g');
 // ── Verbot: Arbitrary-Color Hex/rgb/hsl in Komponenten (§13 Pkt.1). var(--…) bleibt erlaubt (Token-Escape). ──
 const ARBITRARY_FARB_RE = new RegExp(`\\b(?:${PRAEFIX})-\\[(?:#|rgb|hsl)[^\\]]*\\]`, 'g');
+// ── Verbot: lc-overline mit ink-Dimm-Override (D-1.2, Befund 18 / E1-Schranke) ──
+// lc-overline ist auf ink-600 kalibriert (≥4.5:1 auch auf getönten Flächen);
+// text-ink-500/400/300 daneben degradiert die 11px-Overline unter AA (gemessen
+// ink-500 4.05:1 auf sage-/warn-bg) — axe-e2e war trotz Verstoss grün, dieses
+// Regex ist der einzige Wächter. brass-Pairings (text-brass-*) bleiben erlaubt.
+// Beide Reihenfolgen, nur innerhalb DESSELBEN className-Strings (kein Treffer
+// über Quote-Grenzen hinweg — verschachtelte eigenständige Spans sind aus Scope).
+const OVERLINE_DIM_RE = /\blc-overline\b[^"'`]*\btext-ink-(?:500|400|300)\b|\btext-ink-(?:500|400|300)\b[^"'`]*\blc-overline\b/;
 
 function dateien(dir: string): string[] {
   const out: string[] = [];
@@ -87,6 +95,8 @@ for (const datei of dateien(WURZEL)) {
     ARBITRARY_FARB_RE.lastIndex = 0;
     while ((am = ARBITRARY_FARB_RE.exec(zeile)) !== null)
       fehler.push(`${datei}:${i + 1} — Arbitrary-Farbe «${am[0]}» (Hex/rgb/hsl in Komponente verboten, §13 Pkt.1). Wert als CSS-Variable führen und …-[var(--…)] nutzen.`);
+    if (OVERLINE_DIM_RE.test(zeile))
+      fehler.push(`${datei}:${i + 1} — lc-overline mit text-ink-500/400/300 gedimmt (AA-Fail bei 11px, D-1.2/E1). Override strippen — lc-overline trägt die kalibrierte ink-600-Basis.`);
   });
 }
 

@@ -5,7 +5,7 @@
 export function PflichtDisclaimer({ text, kurz }: { text?: string; kurz?: string }) {
   return (
     <details className="lc-notice" role="note">
-      <summary className="lc-overline cursor-pointer text-ink-500">Rechtlicher Hinweis – keine Rechtsberatung</summary>
+      <summary className="lc-overline cursor-pointer">Rechtlicher Hinweis – keine Rechtsberatung</summary>
       {kurz && <p className="text-body-s text-ink-700 mt-2 font-medium">{kurz}</p>}
       <p className="text-body-s text-ink-600 mt-2">
         {text ??

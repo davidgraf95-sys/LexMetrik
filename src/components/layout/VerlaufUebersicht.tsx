@@ -109,7 +109,7 @@ export function VerlaufUebersicht() {
         >
           {gruppen.map((g) => (
             <div key={g.id} className="mb-1 last:mb-0">
-              <p className="lc-overline px-2 pt-1.5 pb-1 text-ink-500">{g.label}</p>
+              <p className="lc-overline px-2 pt-1.5 pb-1">{g.label}</p>
               <ul className="space-y-0.5">
                 {g.eintraege.map((e) => (
                   <li key={e.route}>

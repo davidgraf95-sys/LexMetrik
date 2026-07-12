@@ -117,7 +117,7 @@ function GruppenInhalt({ titel, items }: { titel: string; items: BrowseErlass[] 
       {gesetze.length > 0 && <Gitter erlasse={gesetze} />}
       {verordnungen.length > 0 && (
         <div className="pl-3 border-l-2 border-line/70 ml-0.5">
-          <p className="lc-overline text-ink-500 mb-1">Verordnungen &amp; Ausführungsrecht</p>
+          <p className="lc-overline mb-1">Verordnungen &amp; Ausführungsrecht</p>
           <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-x-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-x-4')}>
             {verordnungen.map((e) => <ErlassZeile key={e.key} e={e} />)}
           </div>
@@ -399,7 +399,7 @@ function KantonAuswahl({ gruppen, alleKantone, onWaehle }: {
         {/* §4.3.2 — Sortierung des 26er-Rasters (nur in der Liste sinnvoll). */}
         {ansicht === 'liste' && (
           <div role="group" aria-label="Sortierung" className="inline-flex flex-wrap items-center gap-1.5">
-            <span className="lc-overline text-ink-500">Sortieren</span>
+            <span className="lc-overline">Sortieren</span>
             {([['alpha', 'Alphabet'], ['anzahl', 'Erlass-Zahl'], ['region', 'Region']] as const).map(([id, label]) => (
               <button key={id} type="button" onClick={() => setSortierung(id)} aria-pressed={sortierung === id}
                 className={`rounded px-2 py-0.5 text-body-s font-medium transition-colors ${sortierung === id ? 'bg-brass-100 text-brass-800' : 'text-ink-500 hover:bg-paper-sunken hover:text-brass-700'}`}>
@@ -482,7 +482,7 @@ function Einstieg({ bund, bundArtikel, kantone, kantonErlasse, international, on
           >
             <span className="flex items-baseline gap-2">
               <span className="num font-display text-h1 leading-none text-brass-700">{k.zahl}</span>
-              <span className="lc-overline text-ink-500">{k.einheit}</span>
+              <span className="lc-overline">{k.einheit}</span>
             </span>
             <span className="font-sans font-semibold text-ink-900 text-h3 tracking-tight group-hover:text-brass-700 transition-colors">{k.titel}</span>
             <span className="text-body-s text-ink-500">{k.sub}</span>
@@ -804,7 +804,7 @@ export function Gesetze() {
                           <span className="font-sans font-semibold text-ink-900 text-h3 tracking-tight leading-tight">{KANTON_NAMEN[kanton] ?? 'Kanton'}</span>
                           <span aria-hidden className="num text-body-s text-ink-500">{kanton}</span>
                         </span>
-                        <span className="lc-overline text-ink-500">Kantonale Erlasse</span>
+                        <span className="lc-overline">Kantonale Erlasse</span>
                       </span>
                       <span className="num text-body-s text-ink-500 ml-auto self-end">{kantGefiltert.filter((e) => e.kanton === kanton).length}</span>
                     </div>

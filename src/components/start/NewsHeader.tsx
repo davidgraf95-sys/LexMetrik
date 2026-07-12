@@ -72,7 +72,7 @@ export function NewsHeader() {
   return (
     <section aria-label="Neue Bundesgerichtsentscheide" className="space-y-2 min-h-modul-news">
       <div className="flex items-center justify-between gap-3">
-        <span className="lc-overline text-ink-500">Neues vom Bundesgericht</span>
+        <span className="lc-overline">Neues vom Bundesgericht</span>
         <div className="flex items-center gap-2">
           {/* Durchblättern per Klick (#9) — auf Touch/schmal ist zudem Wischen möglich. */}
           <div className="hidden sm:flex items-center gap-1" role="group" aria-label="Entscheide durchblättern">
