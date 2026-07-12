@@ -160,8 +160,21 @@ Token-Paar-Baseline bis D-4/D-5 (Call-Sites aliassiert).
    → drei benannte Tokens, gleiche Endwerte (§6 verhaltensneutral), Komponenten drauf.
 - **Aufwand:** S–M je Posten · **Mess:** betroffene Paare hell+dunkel, axe-e2e.
 
-### D-2 · Rollen-Schicht + deklarierte §13-Reglement-Nachträge
+### D-2 · Rollen-Schicht + deklarierte §13-Reglement-Nachträge ✅ (12.7.2026, PR feat/design-d2-rollen)
 *(Befunde 39+9 [Alias statt Werte-Tausch] + Doku 26a/28/29/31/32/41/43/47 + Fehlstellen F1/F5 der Kohärenz-Linse)*
+
+**GEBAUT (Opus, autonom):** Rollen-Alias-Schicht additiv in `src/index.css` +
+`tailwind.config.js` (Akzent `--accent-*`, Status `--{sage,slate,warn,danger}-solid/
+-text`, Zustand `--ok-*`). Befund 9 gelöst OHNE Werte-Tausch (die Dark-Brass-
+Inversion trägt `--accent-hover` = brass-800, erbt den Flip aus den Familien-Token).
+F1 aufgelöst: `lc-badge-ok`/`lc-live`/`lc-termin-ring` auf `--ok-*` migriert
+(grep-vollständig; sage bleibt Materialien/Currency). Reinweiss-Invariante (d) ins
+Gate `check:design-tokens` (negativ-kontrolliert). §13-Nachträge a–j als Block G in
+`DESIGN-REGLEMENT.md`. **Beweis:** `check:farbwelt` vorher==nachher BYTE-IDENTISCH
+(46/6/2/9 unverändert — Aliase sind für das name-basierte Tor inert); golden 209
+byte-gleich; dist-CSS-Kette `--ok-*→sage`/`--accent-*→brass`; `npm run gate` grün;
+axe-e2e 26/26 hell+dunkel; Visual-Belege 8 Screens in `abnahme/design-waerme/d2/`.
+Gegenprüfung n/a (reine Token-Schicht). Trailer `Roadmap: W2·11-DESIGN`.
 - **Rollen-Aliase (rein additiv, keine Wertänderung):** je Familie
   `--accent-bg`(=brass-100) / `--accent-bg-hover`(=200) / `--accent-line-decor`(=300) /
   `--accent-line` / `--accent-solid`(=500) / `--accent-text`(existiert) /
