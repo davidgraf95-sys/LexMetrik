@@ -133,8 +133,3 @@ export async function ladeRevisionShards(
   );
   return new Map(paare);
 }
-
-/** Nur für Tests: den Shard-Promise-Cache leeren. */
-export function _leereRevisionCache(): void {
-  shardPromises.clear();
-}

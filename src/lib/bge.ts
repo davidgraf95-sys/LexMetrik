@@ -65,21 +65,3 @@ export function rechtsprechungUrl(aktenzeichen: string): RechtsprechungsLink | n
  */
 export const RECHTSPRECHUNG_IM_TEXT =
   /BGE\s+\d{1,3}\s+(?:III|II|I(?:a|b)?|IV|V)\s+\d+|(?:BGer\s+)?\d[A-Z][._]\d+\/\d{4}/g;
-
-// ── Interne Verlinkungs-Brücke (Fahrplan 8.5): synchron + pure ──────────────
-// Wenn ein im Text genanntes BGer-Aktenzeichen als Entscheid-Snapshot erfasst
-// ist, zeigt der Link in den internen Reader statt extern auf bger.ch. ERFASST
-// ist ein build-time generiertes Set (kein fetch, kein Flackern, golden-neutral
-// für nicht erfasste Zitate).
-import { ERFASST } from './rechtsprechung/erfasste-keys.generated';
-
-/**
- * Interner Reader-Pfad ('/rechtsprechung/<key>') für ein BGer-Aktenzeichen, wenn
- * der Entscheid erfasst ist; sonst null (→ bestehender externer Link greift).
- */
-export function internerRechtsprechungLink(aktenzeichen: string): string | null {
-  const m = /(\d[A-Z])[._](\d+)\/(\d{4})/.exec(aktenzeichen.trim());
-  if (!m) return null;
-  const key = `bger_${m[1]}_${m[2]}_${m[3]}`;
-  return ERFASST.has(key) ? `/rechtsprechung/${key}` : null;
-}
