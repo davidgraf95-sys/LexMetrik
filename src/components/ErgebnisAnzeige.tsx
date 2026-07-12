@@ -85,7 +85,10 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
             6.6.2026); Tabellenziffern bleiben für Daten im Satz erhalten. */}
         <div className="space-y-3">
           <span className={cfg.cls} title={cfg.hint}>{cfg.label}</span>
-          <p className={`font-display font-semibold text-h3 leading-snug ${cfg.verdikt}`}
+          {/* D-1.5 (Befund 21): Verdikt-/Prosa-Zeilen auf die Lesespalte begrenzt
+              (vorher ~135 CPL auf breiten Rechner-Layouts, B2-Verstoss) —
+              NUR Prosa-<p>; Kacheln/lc-tile/Tabellen bleiben unbegrenzt. */}
+          <p className={`font-display font-semibold text-h3 leading-snug max-w-reading ${cfg.verdikt}`}
             style={{ fontVariantNumeric: 'lining-nums tabular-nums' }}>
             {ergebnis.ergebnis}
           </p>
@@ -102,7 +105,7 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
             {warnungenOffen && (
               <div className="bg-warn-bg px-4 pb-3 space-y-1">
                 {/* Norm- UND Entscheid-Zitate in Warnungen verlinkt (Web-Anzeige; Text unverändert) */}
-                {ergebnis.warnungen.map((w, i) => <p key={i} className="text-body-s text-warn-700"><NormText text={w} /></p>)}
+                {ergebnis.warnungen.map((w, i) => <p key={i} className="text-body-s text-warn-700 max-w-reading"><NormText text={w} /></p>)}
               </div>
             )}
           </div>
@@ -176,7 +179,7 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
 
         {/* Disclaimer */}
         <div className="border-t border-line pt-4">
-          <p className="text-body-s text-ink-500 italic leading-relaxed">{DISCLAIMER}</p>
+          <p className="text-body-s text-ink-500 italic leading-relaxed max-w-reading">{DISCLAIMER}</p>
         </div>
       </div>
       </div>
