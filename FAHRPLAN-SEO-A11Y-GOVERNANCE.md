@@ -160,3 +160,24 @@ Nie befüllt im Audit: FAQ-Texte, Hub-Einleitungen, Keyword-Schwerpunkte, kurati
 - **Andockpunkt `FAHRPLAN-LERNPHASE-2026.md` (Strang B = Verifikations-/Infrastruktur):** der gesamte autonome Teil (Welle 1+2) gehört thematisch hierhin (ohne David-Fachzeit, vor 1.12.2026). Strang C (Fristen-Warteschlange) nimmt die Welle-3-Punkte mit `TODO(David)` auf.
 - **`FAHRPLAN-RECHTSSAMMLUNG.md` / `GESETZE-IMPORT-3TIER.md`:** liefern den `status`-/`snapshot`-Begriff, auf dem W1.5 (Thin-Content-Filter) aufsetzt — referenzieren, nicht neu definieren.
 - **`PRODUKTAUSBAU-BURGGRABEN.md`:** W2.1 (Rück-Verlinkung) + W3.2 (Themen-Hubs) zahlen direkt auf den Burggraben ein → dort als SEO-Sichtbarmachung der bestehenden Verzahnung verlinken.
+
+## 10. Nachträge aus dem Optimierungs-Research 12.7.2026 (`FAHRPLAN-OPTIMIERUNG-2026-07.md` O-5)
+
+Live-verifizierte, **echt neue** Posten (kein Duplikat zu W1–W3); Zone bleibt geparkt,
+Einsortierung ohne Bau:
+
+| ID | Was | Beleg (live 12.7.2026) | Aufwand |
+|---|---|---|---|
+| W2.1b | **Hub→Detail-Registerseiten**: prerenderte A–Z-/Registerseiten je Ebene/Kanton + Entscheid-Chronik + Verzahnungs-Links im prerenderten Detail-HTML (ERLASS_WERKZEUGE invertiert, normKeys Entscheid→Gesetz, Breadcrumb als echte `<a>`) — geht über W1.1/W2.1 hinaus (W2.1 = Rechner→Norm, nicht Hub→Detail) | Hubs `/gesetze`,`/rechtsprechung`,`/materialien`,`/abdeckung` enthalten im ausgelieferten HTML **0 Links** auf Detailseiten; ~3400 Detail-URLs hängen nur an der Sitemap (Orphan-Pages) | M |
+| W1.5b | **Thin-Content-Schutz Materialien** (Analogon zu W1.5, das nur Gesetze deckt): Stubs unter Substanz-Schwelle noindex/aus der Sitemap, oder mechanische Anreicherung aus Registerfeldern | `/materialien/ESTV-KS-DBG-37`: 227 Zeichen Body, indexierbar, Article-Schema; sitemap-materialien = 1549 URLs (grösste Teil-Sitemap) | S |
+| W1.3b | **JSON-LD-Anreicherung** (W1.3-Erweiterung, rein mechanisch aus Registern, W1.3-Trennstrich «kein Geltungs-Claim» gilt): Legislation + `sameAs`→Fedlex-ELI (quelleUrl im Register!), `legislationDate`/`dateModified` (stand), Jurisdiktion; Entscheidseiten erstmals mit Fach-Typ (heute nur BreadcrumbList trotz gericht/datum/zitierung/sachgebiet im Register) | Legislation-Knoten live nur name/alternateName/inLanguage/url/legislationIdentifier | S |
+| W1.10b | **OG-Bilder per Typ/Dokument** (build-zeitlich, `scripts/og-bild.ts` existiert als Generator; Template mit Kürzel/SR-Nr. bzw. Aktenzeichen) — niedrigste Priorität, erst nach Index-Aufbau | og:image = ein statisches `/og.png` für alle 3400 Detailseiten, og:type überall `website` (og:title/description pro Dokument korrekt) | M |
+
+Prioritätsvermerke aus demselben Research: **W1.12** (GSC) bleibt Freischalt-Posten —
+`site:lexmetrik.vercel.app` liefert 0 Treffer, kein Verifikations-Tag; **W1.11/W2.8**
+steigen in der Dringlichkeit (923 KB HTML auf `/gesetze/bund/OR` live, `cache-control
+max-age=0` — CWV-Problem genau auf den Haupt-Keyword-Seiten, Schnitt QS-PERF); **W3.4**
+(Domain) je früher vor Erstindex, desto billiger. Zwei ursprünglich hier verortete
+Befunde sind als **Betriebs-Härtung** nach `FAHRPLAN-OPTIMIERUNG-2026-07.md` O-1
+gewandert (nicht «reines SEO»): Soft-404-Rewrite-Ausnahmen + case-insensitiver
+301-Redirect (`/gesetze/bund/or` → noindex-Shell ohne Redirect, live belegt).
