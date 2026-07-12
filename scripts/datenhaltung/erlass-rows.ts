@@ -177,7 +177,13 @@ export function projiziereErlass(db: DatabaseSync, key: string, fassungsToken: s
   return JSON.stringify({ erzeugt: fass.abgerufen, eintraege }, null, 2);
 }
 
-/** Alle (erlass_key, fassungs_token)-Paare mit Ziel-Zeilen — für Doppellauf/Report. */
+/** Alle (erlass_key, fassungs_token)-Paare mit Ziel-Zeilen — für Doppellauf/Report.
+ *
+ * TODO(H-5/B2, Fahrplan-Anker): heute 0 Aufrufer, BEWUSST behalten — der Fassungs-Diff
+ * «bei jedem neuen erlass_fassungen-Eintrag dreistufiger Diff (stabil/verändert/verschwunden,
+ * umgezogen via sha)» (FAHRPLAN-DATENHALTUNG §3.3) braucht genau diese Enumeration, sobald
+ * der Paket-5-Historie-Rohstoff in erlass_fassungen landet (E-Strecke; heute 1 Fassung je
+ * Erlass, s. stabilitaets-report.ts-Kopf). Negativ-Check H-5 12.7.2026: kein weiterer Konsument. */
 export function alleErlassFassungen(db: DatabaseSync): Array<{ key: string; fassungsToken: string }> {
   const rows = db
     .prepare('SELECT erlass_key AS key, fassungs_token AS ft FROM erlass_fassungen ORDER BY erlass_key, fassungs_token')
