@@ -424,8 +424,6 @@
   (inkl. `check:smoke`), Gegenprüfung n/a (verhaltensneutral, G1: nur
   Kommentare/Moves/Verdrahtung, kein Prod-Code). Nächster Schritt: H-3
   bzw. H-6 (je Kette).
-
-
 - **12.7.2026: H-6 ✅** Kanton-Typ/KANTONE-Konsolidierung (B12), Branch
   `chore/h6-kanton-typ` (Worktree `lm-h6`): `src/data/tarif/typen.ts` deklariert
   `KantonCode`/`KANTONE` nicht mehr selbst, sondern `export type KantonCode = Kanton`
@@ -443,3 +441,29 @@
   entfernten Liste UND zur Norm-Ordnung, Union-Sets `KantonCode`≡`Kanton` (26 distinct),
   Randfälle (Ordnung/Mutation/Shared-Instanz) durchgespielt → Verdikt «bestanden»,
   `gegenpruefung:ok` quittiert.
+- **12.7.2026 (H-7 ✅, Worktree `lm-h7`, Branch `chore/h7-sg-generator`):**
+  **B16** SG-GebT-60.13-Staffel-Generator. Datei-lokaler
+  `sg6013Baender(anzahl, kappeChf)` in `src/data/tarif/beurkundung.ts`
+  ersetzt das 6× wörtlich duplizierte Band-Literal (5× 183-Bänder/Kappe
+  15'000 für ag_gruendung/gmbh_gruendung/kapitalerhoehung/
+  kapitalherabsetzung + 1× 45-Bänder/Kappe 3'850 Stiftung Nr. 60.01).
+  BEIDE Parameter (Anzahl UND Kappe) → die 45-Bänder-Variante ist
+  array-gleich, nicht bloss verhaltens-gleich reproduziert (§1/§4:
+  derselbe Erlass, regime-gleich). Nur das `baender`-Array geteilt;
+  `hinweis`/`artikel`/Bemessung je Stelle unangetastet. **G1
+  wertneutral:** unabhängiger Paritätsbeweis 966 Bänder (5×184 + 46)
+  byte-/wertgleich zu origin/main; `golden:vergleich` byte-gleich; volle
+  Test-Suite unverändert grün. **G3 Gegenprüfung (bestanden, Opus):**
+  amtliche Quelle in Prüfsession geöffnet — LexWork
+  `api/de/versions/3849/pdf_file`, GebT sGS 821.5 Nr. 60.13, in Vollzug
+  01.01.2026 (Currency via `selected_version` bestätigt): «erste
+  Fr. 100 000 = 385; je weitere volle Fr. 100 000 = 80; höchstens 15 000».
+  Aus der Norm blind nachgerechnet (`min(385+i·80, kappe)`), dann gegen
+  Engine im dichten Sweep (ag/gmbh/stiftung, inkl. Staffelgrenzen 200k/300k
+  + Kappe): 0 Abweichungen. Permanenter Drift-Tripwire
+  `src/tests/h7-gegenpruefung.test.ts` (additiv). **Rand-Befund (vorbestehend,
+  NICHT von H-7 berührt):** Stiftung-Zeilenminimum amtlich 330 vs
+  Code-Sockel 385 (Ansätze «wie 60.13» ⇒ 385) → Tarif-Backlog, kein
+  H-7-Regress (origin/main hatte 385 identisch). `npm run gate` GRÜN.
+  Zeilen-Netto +14 im File (Generator +14 Z., 6 Literale gekürzt), aber
+  Drift-Fläche 6 Stellen → 1 SSOT. Nächster Schritt: H-8/H-9.
