@@ -121,7 +121,11 @@ Vor jedem Struktur-Umbau gilt das Protokoll:
    (`vorlagen/datum.ts`, `datumsUtils.ts`), nicht als lokale Kopie — es sei
    denn, die Semantik weicht fachlich bewusst ab (dann am Fundort begründen,
    §1). So lädt eine Session weniger Kontext pro Aufgabe (weniger Tokens, ohne
-   Qualitätsverlust).
+   Qualitätsverlust). **Fassaden-Muster beim Split (Konvention, Befund H-1/B31):**
+   Inhalt in Geschwister-Dateien verschieben, das alte Modul wird zur schlanken
+   Fassade (`export * from './geschwister'`), Konsumenten-Importpfade bleiben
+   unverändert — Beweis ist Byte-Identität des Outputs (golden/Snapshot-
+   Vergleich), nicht nur `tsc` grün.
 
 ## §7 Normen: verifizieren, nicht vertrauen
 
