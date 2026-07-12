@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { renderToString } from 'react-dom/server';
-import { NormChip, NormLink } from '../components/vorlagen/ui';
+import { NormLink } from '../components/vorlagen/ui';
+import { NormChip } from '../components/vorlagen/NormChip';
 import { LocaleProvider } from '../components/locale';
 
 // Progressive Enhancement, NULL Regression (§6): der serverseitige Erst-Render

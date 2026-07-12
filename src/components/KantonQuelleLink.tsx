@@ -3,7 +3,7 @@ import { parsePassus } from '../lib/normtext/passus';
 import { ladeKantonSnapshotViaUrl } from '../lib/normtext/laden';
 import type { NormSnapshot } from '../lib/normtext/typen';
 import { NormPopover } from './NormPopover';
-import { NormPopoverOverlay, NormPopoverHuelle } from './vorlagen/ui';
+import { NormPopoverOverlay, NormPopoverHuelle } from './vorlagen/NormChip';
 import { NormText } from './NormText';
 
 // Kantonaler «amtliche Quelle ↗»-Link mit Volltext-Vorschau (§7-Zitat-Ausnahme,

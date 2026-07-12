@@ -11,7 +11,7 @@
 import { describe, it, expect } from 'vitest';
 import { renderToString } from 'react-dom/server';
 import { KontextGruppe } from '../components/kontext/KontextPanel';
-import { NormChip } from '../components/vorlagen/ui';
+import { NormChip } from '../components/vorlagen/NormChip';
 import { LocaleProvider } from '../components/locale';
 
 const ssr = (punkt?: 'norm' | 'entscheid' | 'material') => renderToString(

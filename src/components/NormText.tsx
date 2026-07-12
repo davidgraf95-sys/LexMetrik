@@ -3,7 +3,7 @@ import {
   normVerweiseImText, fremdgesetzNachArtikel, fremdRoutingFormB,
   artikelnPluralVerweise,
 } from '../lib/fedlex';
-import { NormChip } from './vorlagen/ui';
+import { NormChip } from './vorlagen/NormChip';
 import { RechtsprechungText } from './RechtsprechungLink';
 
 // ─── Inline-Norm-Auto-Linker (Auftrag David 17.6.2026) ─────────────────────
