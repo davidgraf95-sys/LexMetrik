@@ -227,6 +227,11 @@ const PFLICHT: Paar[] = [
 
 // (Referenz) C-1/C-2/C-3-Farb-Wörterbuch (§4b-B) — dokumentierte Zahlen als
 // Regressions-Referenz; Drift > Toleranz = FAIL.
+// D-3 (srgb→oklab, 12.7.2026): NEU GEMESSEN — alle drei Paare sind Voll-Token
+// auf dem soliden --well, kein color-mix im Pfad → Werte byte-identisch
+// (4.81/3.47 · 5.24/9.43 · 4.91/10.48). Die oklab-Umstellung verschiebt
+// sichtbar NUR die vier -bg-Rezepte (PFLICHT-Badge-Paare oben, alle ≥5.1:1);
+// Mixe mit `transparent` rendern wegen premultiplied alpha raumunabhängig gleich.
 type Ref = { fg: string; bg: string; hell: number; dunkel: number; quelle: string };
 const REF_TOL = 0.06;
 const REFERENZ: Ref[] = [
