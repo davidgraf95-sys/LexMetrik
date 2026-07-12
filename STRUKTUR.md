@@ -173,6 +173,37 @@ in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
 **Auftrag (Verfallsregister `parameter-verfall.md`, NE-Block, Wiedervorlage 12.7.2026).** Amtliche NE-Quelle read-only geprüft: ne.ch-Behördenseite (Tribunal d'instance, INST-CHX.aspx) **live 12.7.2026** listet als operative Adresse des TR Montagnes/Val-de-Ruz weiterhin **Av. Léopold-Robert 10, 2300 La Chaux-de-Fonds** (Hôtel judiciaire); der Umzugs-Hinweis nennt dort noch KEINE neue Adresse, nur die Bücher-Ausleih-Sperre 1.7.–14.8.2026. **→ Befund (a): Adresswert amtlich UNVERÄNDERT — keine Engine-Wert-Änderung.** NE-Regionalmedien (RTN 8.7.2026) bestätigen nun konkret die neue Adresse **Av. Léopold-Robert 63 (2. OG, bâtiment de la Poste)** und dass ab Umzugs-Abschluss, vorgesehen **17.8.2026**, alle Audienzen dort stattfinden. **Geändert (nur `hinweis`-Felder, Adresswert Nr. 10 belassen):** `src/data/zivilgerichteErstinstanz.ts`, `src/data/strafgerichte.ts`, `src/data/schlichtungsstellen.ts` — Umzugs-Hinweise vom vagen «Sommer 2026 / amtlich unbestätigt» auf den datierten, medienbestätigten Stand geschärft (Nr. 63 · 2. OG · Audienzen ab ~17.8.2026 · «ne.ch-Adresse 12.7.2026 noch Nr. 10 — vor Einreichung prüfen»). Register-NE-Block mit Prüfdatum + Belegen aktualisiert, **Wiedervorlage auf ab 18.8.2026** fortgeschrieben (dann Adresswerte auf Nr. 63 nachführen, sobald ne.ch selbst umstellt). **Belege:** ne.ch INST-CHX.aspx (live 12.7.2026); RTN NE 8.7.2026. **Gegenprüfung:** unabhängig gegen die live geöffnete amtliche ne.ch-Quelle re-derivert (Adresse Nr. 10 verbatim bestätigt; Nr. 63/Datum medienbestätigt) — `bestanden`; das Tor `check:gegenpruefung` scoped diese Stammdaten-Dateien nicht als Risiko-Pfad (kein Rechnen/Extraktion/Norm-Tarif). Voller `npm run gate` GRÜN. Trailer `Roadmap: QS-CURRENCY`. PR mit armiertem Auto-Merge.
 
+## Session 12.7.2026 — H-1 «Bibliothek-Wahrheits-Sweep» (FAHRPLAN-CODE-HYGIENE.md P0, Worktree `lm-h1`, Branch `chore/h1-bibliothek`)
+
+**Auftrag (Ultracode-Synthese 12.7.2026, ROADMAP W2·12-HYGIENE).** Reine Doku-Fläche
+(`bibliothek/**` nur .md, `CLAUDE.md`, Memory), 6 Pathspec-Commits. **B32** (Prio 1):
+SH-Schlichtungsgebühr-Doppel-Wahrheit — Dossier sagte «OFFEN, 50–300», Engine trägt
+seit 16.6. (Commit `b7587a51`, §7 freigegeben David) den Wert 100–1000; Befund +
+Zusammenfassungstabelle in `kantonale-tarif-zitat-befunde.md` auf BEHOBEN mit
+wörtlichem Code-Zitat nachgezogen, dritte Fundstelle `zustaendigkeitKosten.ts:141`
+ergänzt. **B34/B35/B38/B41/B37-Vorbereitung:** INDEX-Kopf zählerfrei + normtext/+seo/
+im Baum, 4 geparkte register-Einträge in die Tabelle einsortiert, Root-Alt-Audits
+nach `register/` verschoben + ehrlicher Status, golden-53-Behauptung durch Verweis
+auf `golden/lexmetrik-golden.json` ersetzt, neue Kurzregel 5 (Bestandszahlen nur
+generator-gepflegt). **B39:** recherche-INDEX-Pauschale «nichts ist umgesetzt»
+(Doppelbau-Risiko) durch «Status je Dossier in der Tabelle» ersetzt. **B40-Kopf:**
+Verfallsregister-Stand-Datum 7.6.→11.7.2026 nachgezogen (maschinell gelesen,
+`gen:verfall` gelaufen, Testerwartung mitgezogen). **B31:** Fassaden-Muster-
+Konvention (1 Absatz, CLAUDE.md §6 Ziff. 6). **Memory-Austrag** (ausserhalb Repo):
+B19 (P3 MWST/Streitwert-Schwelle, geschlossen-bewusst) + B11-Teil-1 (SG-60.13-Rest
+kapitalerhöhung/-herabsetzung, ERLEDIGT seit QS-GP 2.7., `beurkundung.ts:322/343`)
+in `lexmetrik-engine-synergien.md` nachgetragen. B36 im Fahrplan-Kopf ohne eigene
+Kern-Beschreibung — durch den allgemeinen INDEX-Wahrheitssweep (B34/B35/B38)
+mitabgedeckt. **Gegenprüfung:** n/a — reine Doku, Code-Berührung nur an bereits
+bestehenden, korrekten Werten (kein Rechenverhalten geändert); Beleg-Zitate/
+Commit-Hash von Hand gegengelesen. **Tore:** voller `npm run gate` GRÜN
+(tsc·vitest·golden:vergleich·lint·check inkl. `check:bibliothek`). Trailer
+`Roadmap: W2·12-HYGIENE`. PR mit armiertem Auto-Merge. **Offen im Fahrplan:**
+H-2…H-14 (H-1-Nachfolger H-2 muss NACH diesem PR laufen — Reihenfolge-Vorgabe
+Fahrplan). FAHRPLAN-CODE-HYGIENE.md lag nur in einem inzwischen entfernten
+Scratch-Worktree (`/private/tmp/lm-code-plan`, ausserhalb dieses Repos) — dessen
+«H-1 ✅»-Status-Log kann von hier aus nicht nachgezogen werden.
+
 ## Session 12.7.2026 — W2·10-UI-NAV: Such-Dropdown-Race an der Wurzel geschlossen (stabiler Treffer-Key statt Positions-Index; Worktree `lm-suche-race`, Branch `fix/suche-aktivindex-race`)
 
 **Auftrag (W2·10-UI-NAV, §1-naher UX-Korrektheitsfehler; Befund aus der e2e-Härtung #210).** Die Pfeil-Auswahl im Such-Dropdown (HeaderSuche **und** Hero UniversalSuche) lief als **Positions-Index** (`aktivIndex`) in die per `flatMap` gebaute Trefferliste. Die per `useDeferredValue` entkoppelte Artikel-Volltextgruppe (§15.3/#183 — GEWOLLT, nicht rückgebaut) landet «einen Tick später» und wächst ein → der pfeil-gesetzte Index zeigte danach auf einen ANDEREN Treffer, Enter sprang ins falsche Ziel (empirisch unter CPU-Drossel: SCHKG#art-257 statt OR#art-257_d). #210 hatte den e2e nur deterministisch gemacht (Query-Reset), die Race für ECHTE Nutzer bestand weiter.
