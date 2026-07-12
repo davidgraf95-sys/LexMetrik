@@ -1,6 +1,8 @@
 # Änderungshistorie / Amtliche Sammlung — Fedlex-Portfolio Paket 5 (W2·6-REV)
 
 **Ausführungsbeleg §11 · 10.7.2026 · Opus-Bau-Session · Branch `feat/fedlex-p5-historie`.**
+**Stand:** 10.7.2026. **Status:** ZWEIFACH GEPRÜFT (Erstrecherche + adversariale
+Gegenprüfung, §5); fachliche Abnahme durch David offen.
 
 Je Bund-Volltext-Erlass eine «Änderungen / Revisionen»-Timeline: welche AS/RO-Änderungs-
 erlasse (`eli/oc`) haben das Gesetz wann geändert. Schwester zu Paket 2 (Botschaften =
