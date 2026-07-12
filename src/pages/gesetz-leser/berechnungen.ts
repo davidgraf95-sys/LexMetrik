@@ -18,11 +18,13 @@ export function paneRoot(imPane: boolean, wurzel: RefObject<HTMLElement | null> 
   return imPane ? wurzel?.current ?? null : null;
 }
 // W2·5d G3b (③/⑤): Anhang- (`annex_*`) bzw. Staatsvertrags-Protokoll-Token
-// (`lvl_*`, LugÜ) — steuert die abgesetzte Anhang-Block-Darstellung (ArtikelLeser
-// istAnhang) und das Unterdrücken des «Bereich»-Badges reiner Anhang-Sektionen.
-// Modul-Ebene (referenzstabil, §15/4). Namespaces aus M13 (annex-Extraktion).
+// (`lvl_*`, LugÜ) sowie Erklärungs-/Geltungsbereichs-Token (`decl_*`/`scope_*`,
+// PR #195: Schweizer Erklärungen zu Staatsverträgen) — steuert die abgesetzte
+// Anhang-Block-Darstellung (ArtikelLeser istAnhang) und das Unterdrücken des
+// «Bereich»-Badges reiner Anhang-Sektionen. Modul-Ebene (referenzstabil, §15/4).
+// Namespaces aus M13 (annex-Extraktion) + Anhang-Scanner (scope_|decl_).
 export function istAnhangToken(token: string): boolean {
-  return /^(annex|lvl)_/i.test(token);
+  return /^(annex|lvl|decl|scope)_/i.test(token);
 }
 export function findeArt(root: HTMLElement | null, token: string): HTMLElement | null {
   if (!root) return document.getElementById(`art-${token}`);
