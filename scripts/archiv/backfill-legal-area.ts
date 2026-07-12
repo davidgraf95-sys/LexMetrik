@@ -1,3 +1,4 @@
+// ARCHIVIERT (H-5/B7, 12.7.2026) — einmalig ausgeführt: legalArea-Backfill 258 BGer + 3 Kanton gesetzt, Commit efd5ebd2; Beleg archiv/STRUKTUR-SESSIONKARTEN.md («§2-Lücke geschlossen»); Nachfolger-Plan PLAN-OCL-ABBAU.md C9 (branch_map.py).
 // ─── Backfill: OCL legal_area in die bestehenden Snapshots persistieren (§2/§7) ─
 //
 // Die Sachgebiet-Klassierung der mehrdeutigen II. öffentlich-rechtlichen BGer-
@@ -23,7 +24,7 @@
 //
 import { readFileSync, readdirSync, writeFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
-import { jget } from './adapter-entscheide';
+import { jget } from '../normtext/adapter-entscheide';
 import type { EntscheidSnapshot, EntscheidSnapshotDatei } from '../../src/lib/rechtsprechung/typen';
 
 const ROOT = process.cwd();

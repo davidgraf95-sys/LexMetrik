@@ -1,3 +1,4 @@
+// ARCHIVIERT (H-5/B7, 12.7.2026) — einmalig ausgeführt: Erwägungs-Re-Fetch des Bestands-Korpus, marke-Abdeckung 34 %→91 % (104→261 Entscheide strukturiert); Beleg archiv/STRUKTUR-SESSIONKARTEN.md (Karte «#2 BGE-Darstellung vereinheitlicht»).
 // ─── Erwägungs-Re-Fetch des BESTEHENDEN Korpus über OCL (#2, einmalig) ────────
 //
 // Die bestehenden Snapshots haben die OCL-e_number VERLOREN (alter, zu strenger
@@ -21,9 +22,9 @@
 //
 import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
-import { holeEntscheidOCL, jget } from './adapter-entscheide';
-import { schreibeKorpus } from './entscheide-schreiben';
-import { sha256EntscheidBloecke } from './sha-entscheide';
+import { holeEntscheidOCL, jget } from '../normtext/adapter-entscheide';
+import { schreibeKorpus } from '../normtext/entscheide-schreiben';
+import { sha256EntscheidBloecke } from '../normtext/sha-entscheide';
 import type {
   EntscheidBlock, EntscheidSnapshot, EntscheidSnapshotDatei,
 } from '../../src/lib/rechtsprechung/typen';

@@ -1,3 +1,4 @@
+// ARCHIVIERT (H-5/B7, 12.7.2026) — einmalig ausgeführt: TI_MIETE-Patch in src/data/schlichtung/aemterKantone.json angewandt (Dossier §51, Vollerhebung 12.6.2026; Beleg archiv/STRUKTUR-SESSIONKARTEN.md «97 Gemeinden eindeutig (TI_MIETE, Dossier §51 + Patch-Generator)»).
 // Patch-Generator: TI_MIETE in aemterKantone.json (Sektion 51 des Dossiers).
 //
 // Quelle: bibliothek/behoerden/schlichtungsaemter-gemeindezuordnung.md,

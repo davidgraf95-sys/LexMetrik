@@ -1,3 +1,4 @@
+// ARCHIVIERT (H-5/B7, 12.7.2026) — POC abgeschlossen: 44 740 dl/dd-Grenzen, 0 Abweichungen → Verdikt «keine Migration, Regex bleibt»; Beleg bibliothek/register/poc-linkedom-tiefenzaehler-2026-07-05.md (referenziert in FAHRPLAN-NORMTEXT-DARSTELLUNG.md + ROADMAP.md).
 /**
  * POC (W2·5b, §7-Messpflicht): löst der linkedom-DOM-Parser die Regex-
  * Tiefenzähler `findeDlEnde`/`findeDdEnde` in `extrahiere-fedlex.ts` verlustfrei
@@ -18,8 +19,8 @@
  */
 import { readFileSync, existsSync } from 'node:fs';
 import { parseHTML } from 'linkedom';
-import { findeDlEnde, findeDdEnde } from './extrahiere-fedlex.ts';
-import { parseFedlexCacheEintraege } from './inventar-bund.ts';
+import { findeDlEnde, findeDdEnde } from '../normtext/extrahiere-fedlex.ts';
+import { parseFedlexCacheEintraege } from '../normtext/inventar-bund.ts';
 
 const z = (s: string, re: RegExp) => (s.match(re) ?? []).length;
 

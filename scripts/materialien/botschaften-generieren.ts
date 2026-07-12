@@ -182,7 +182,13 @@ export function baueBotschaften(bindings: SparqlBinding[], meta: ErlassMeta[]): 
   return out;
 }
 
-/** sha256 über die Identitätsfelder inkl. normKeys (Drift-/Currency-Token, §7d). */
+/** sha256 über die Identitätsfelder inkl. normKeys (Drift-/Currency-Token, §7d).
+ *
+ * TODO(H-5/B2, Fahrplan-Anker): heute 0 Aufrufer (check-botschaften-netz vergleicht bewusst
+ * über intrinsischeSig, s. dort), BEWUSST behalten — FAHRPLAN-FEDLEX-PORTFOLIO §Paket 2
+ * spezifiziert `sha` als Drift-/Currency-Token je Botschaft, und die E6b-Zieltabelle
+ * `soft_law` (FAHRPLAN-DATENHALTUNG §3) trägt die Spalte `sha`; dieser Hash ist der
+ * designierte Befüller beim Soft-Law-Ingest. Negativ-Check H-5 12.7.2026: kein Konsument. */
 export function shaBotschaft(e: BotschaftEintrag): string {
   const norm = [
     e.key, e.behoerde, e.doktyp, e.titel, e.titelFr ?? '', e.titelIt ?? '', e.nummer ?? '',
