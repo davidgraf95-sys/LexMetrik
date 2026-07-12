@@ -352,3 +352,14 @@
 
 - **12.7.2026:** Plan erstellt (Ultracode-Recherche + 3 Kritik-Linsen), ROADMAP-Schritt
   `W2·12-HYGIENE` angelegt. Noch keine Einheit gebaut. Nächster Schritt: H-1.
+- **12.7.2026 (H-1 ✅, Worktree `lm-h1`, Branch `chore/h1-bibliothek`):**
+  Bibliothek-Wahrheits-Sweep gebaut, 6 Pathspec-Commits. B32 (Prio 1, SH-
+  Schlichtungsgebühr) behoben nachgezogen mit Beleg-Zitat + Commit-Hash
+  `b7587a51` + dritter Fundstelle `zustaendigkeitKosten.ts:141`; B34/B35/B38/
+  B41/B37-Vorbereitung (INDEX-Wahrheit/-Struktur); B39 (recherche-INDEX-
+  Pauschale); B40-Kopf (Verfallsregister-Stand); B31 (Fassaden-Muster-
+  Konvention CLAUDE.md §6 Ziff. 6); Memory-Austrag B19+B11-Teil-1. B36 ohne
+  eigene Kern-Beschreibung im Plan — durch den INDEX-Wahrheitssweep
+  mitabgedeckt (Nachtrag für die nächste Synthese-Revision). `npm run gate`
+  GRÜN, `check:bibliothek` grün, Gegenprüfung n/a (reine Doku). Nächster
+  Schritt: H-2 (läuft zwingend NACH H-1, §0 Regel 2).
