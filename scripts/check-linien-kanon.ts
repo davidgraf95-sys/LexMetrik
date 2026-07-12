@@ -51,7 +51,6 @@ const READER = [
   'src/pages/gesetz-leser/parts/ArtikelLeser.tsx',
   'src/pages/gesetz-leser/parts/ErlassKopfBlock.tsx',
   'src/pages/gesetz-leser/parts/ErlassLeserKopf.tsx',
-  'src/pages/gesetz-leser/parts/SektionKontextKopf.tsx',
   'src/pages/gesetz-leser/parts/SektionKopf.tsx',
   'src/pages/gesetz-leser/parts/SektionBaumTOC.tsx',
   'src/pages/gesetz-leser/inhalt.tsx',

@@ -19,15 +19,15 @@ import { GEBIET_LABEL } from '../../lib/normtext/register';
 import { KontextPanel } from '../../components/kontext/KontextPanel';
 import type { BrowseErlass, BrowseManifest } from '../../lib/normtext/browse-typen';
 import type { NormSnapshot } from '../../lib/normtext/typen';
-import { formatiereDatum, passtAufSuche, pfadZu, baueZitat, kopfOverline, grundartMeta } from './helpers';
-import { ArtikelLeser, SektionKopf, SektionBaumTOC, ErlassKopfBlock, ErlassLeserKopf, SektionKontextKopf } from './parts';
+import { formatiereDatum, passtAufSuche, pfadZu, kopfOverline, grundartMeta } from './helpers';
+import { ArtikelLeser, SektionKopf, SektionBaumTOC, ErlassKopfBlock, ErlassLeserKopf } from './parts';
 import { LeserAnsichtMenu } from './LeserAnsichtMenu';
 import { beiLeerlauf } from '../../lib/leerlauf';
 import { ladeLeitfallShard, normArtikelToken, type LeitfallShard } from '../../lib/rechtsprechung/norm-index';
 import { ladeRevisionShard, revisionFuerToken, type RevisionShard } from '../../lib/verzahnung/artikel-revisionen';
 import {
   paneRoot, istAnhangToken, findeArt,
-  berechneSekPos, berechneSektionMeta, berechneSekLabelById,
+  berechneSekPos, berechneSektionMeta,
 } from './berechnungen';
 import { AmtlichesPdf } from './parts/AmtlichesPdf';
 import { GesetzFehlSeite } from './FehlSeite';
@@ -397,12 +397,6 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
     (eintraege ?? []).forEach((e) => map.set(e.artikel, labelMitBereich(e.artikelLabel, e.artikel)));
     return map;
   }, [eintraege]);
-
-  // W2·5d G2b (Sticky Section-Kontextkopf): Sektions-ID → kompaktes Anzeige-Label
-  // (der beschreibende Teil ohne «Erster Titel:»-Aufzähler, wie im TOC). EINMAL
-  // bottom-up aus dem Gliederungsbaum; die Kopf-Zeile mappt aktivIds darüber (keine
-  // neue Scroll-Infra). Reine Darstellung (§3).
-  const sekLabelById = useMemo(() => berechneSekLabelById(sektionen), [sektionen]);
 
   // Ueberschrift je Artikel im FLIESSTEXT: nur noch die artikel-EIGENE
   // Sachueberschrift (das Randtitel-Blatt). Die uebergeordneten, von mehreren
@@ -1202,22 +1196,13 @@ export function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schlue
             Spalte (parts.tsx, ebenfalls max-w-reading) die Begrenzung; darunter
             zentriert die ganze Spalte auf max-w-reading. */}
         <div className={`group/lese ${sektionen.length > 0 && tocOffen ? (istXl ? 'w-full' : 'mx-auto w-full max-w-reading') : 'mx-auto w-full max-w-reading'}`}>
-          {/* W2·5d G2b (K12a+K12b): Sticky Section-Kontextkopf «Titel › … › Art. N»
-              + «Zitat kopieren». Nur im 2-Spalten-Lesemodus (zweiSpalten: die Suche
-              lebt dann in der TOC-Spalte, die Lesespalten-Oberkante ist frei — kein
-              Stapeln mit der Vollbreiten-Suchleiste) und nicht in der Trefferliste.
-              Speist sich aus der VORHANDENEN Scroll-Spy-State (aktivIds/aktArtikel)
-              — kein neuer Observer, keine Scroll-Listener-Kaskade (§15). */}
-          {zweiSpalten && !treffer && (
-            <SektionKontextKopf
-              glieder={aktivIds
-                .map((id) => ({ id, label: sekLabelById.get(id) ?? '' }))
-                .filter((g) => g.label !== '')}
-              onSpringe={springeZuSektion}
-              artikelLabel={aktArtikel ? `${aktArtikel} ${erlass.kuerzel}` : null}
-              zitat={baueZitat(erlass, aktArtikel ?? '')}
-              top={imPane ? '0.5rem' : 'calc(4rem + 2.25rem)'} />
-          )}
+          {/* A27 (David 12.7.2026): der Sticky Section-Kontextkopf «Titel › … ›
+              Art. N › ⧉ Zitat» ist ENTFERNT. Seit A26 (#198) trägt der immer
+              sichtbare Inhalts-Kopf (InhaltsKopf, Brotkrümel + Live-Artikel) die
+              Orientierung; der tiefe In-Erlass-Gliederungspfad war für David
+              «nicht notwendig». Die «Zitat kopieren»-Aktion bleibt vollständig
+              erhalten — sie steht (identisches baueZitat-Voll-Zitat) je Artikel in
+              der Artikelnummer-Zeile (ArtikelLeser). §15 Funktions-Treue gewahrt. */}
           {treffer ? (
             <div className="space-y-4">
               <p className="text-body-s text-ink-500"><span className="num">{treffer.length}</span> Treffer für «{sucheDebounced.trim()}»</p>

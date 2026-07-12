@@ -69,3 +69,27 @@ Vollständig hergeleitet in `FAHRPLAN-GESETZES-UX.md §10.9`; jede erst nach sep
 David-Entscheid.
 
 ## (weitere Anmerkungen folgen)
+
+# Anmerkungen David — 12.7.2026 (Chat, reines UI, Gesetz-Reader)
+
+Wörtlich massgeblich. Per Pathspec committet (§12 Ziff. 2). Spec-Einordnung als **A27**
+in `FAHRPLAN-GESETZES-UX.md` §10.8.
+
+## A27 — Gliederungspfad-Zeile am Artikel entfernen
+
+> bei den gesetzen ist diese line nicht notwendig llgemeine Bestimmungen › Zuständigkeit der Gerichte und Ausstand › Örtliche Zuständigkeit › Allgemeine Bestimmungen › Art. 9 ZPO ⧉ Zitat
+
+**Einordnung:** Die zitierte Zeile ist der Sticky Section-Kontextkopf
+(`SektionKontextKopf`, 2-Spalten-Lesemodus) — der tiefe In-Erlass-Gliederungspfad
+«Titel › Abschnitt › … › Art. N» plus die «⧉ Zitat»-Kopieraktion. Seit **A26 (#198)**
+trägt der immer sichtbare Inhalts-Kopf (`InhaltsKopf.tsx`, Brotkrümel «Gesetze › Bund
+› ZPO» + Live-Artikel + Stand) die Orientierung; der zusätzliche tiefe Pfad war
+redundant.
+
+**Umsetzung (reines UI):** `SektionKontextKopf` ist komplett entfernt (Komponente,
+Export, Nutzung in `inhalt.tsx`). Das «⧉ Zitat» dieser Zeile war die
+Zitat-Kopier-Aktion (kein «Pane öffnen» — das ⧉ war Chip-Dekor). Diese Funktion geht
+NICHT verloren: jeder Artikel trägt schon in der Artikelnummer-Zeile (`ArtikelLeser`)
+denselben «Zitat»-Kopierknopf mit identischem `baueZitat`-Voll-Zitat (Fundstelle + SR +
+Stand). Das echte «Pane öffnen»-⧉ (`oeffneDaneben`, Leitfall-Zeile) ist unberührt.
+§15 Funktions-Treue gewahrt.
