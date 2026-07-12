@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import type { Calculator } from '../../lib/calculators';
 import { sansAmp } from '../typografie';
-import { NormChip } from '../vorlagen/ui';
+import { NormChip } from '../vorlagen/NormChip';
 
 // Gemeinsamer Rechner-Kopf (Vorlage Abschnitt 4): Zurück-Pfeil, Breadcrumb,
 // Overline, H1, Einleitung, Chips.

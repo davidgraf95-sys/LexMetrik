@@ -467,3 +467,32 @@
   H-7-Regress (origin/main hatte 385 identisch). `npm run gate` GRÜN.
   Zeilen-Netto +14 im File (Generator +14 Z., 6 Literale gekürzt), aber
   Drift-Fläche 6 Stellen → 1 SSOT. Nächster Schritt: H-8/H-9.
+- **12.7.2026: H-8 ✅** (Worktree `lm-h8`, Branch `chore/h8-zyklen`, 3 Pathspec-Commits
+  B21→B22→B23 in Reihenfolge). B21: `NormChip` (+ das daran hängende Duo
+  `NormPopoverOverlay`/`NormPopoverHuelle`, 2 Konsumenten, keine eigene Zyklus-Beteiligung)
+  aus `vorlagen/ui.tsx` → `src/components/vorlagen/NormChip.tsx`; Overlay/Huelle mussten
+  MIT ziehen, sonst neuer `NormChip.tsx`↔`ui.tsx`-Zyklus (empirisch entdeckt, nicht vorab
+  im Fahrplan-Text). Import-Pfade repo-weit nachgezogen (11 Stellen + `wizard.tsx`). B22:
+  `Rechtsgebiet`/`Sprache`/`ErlassStatus`/`Grundart`/`ErlassTyp`/`ErlassRegistereintrag` →
+  `src/lib/normtext/register-typen.ts`; `OclParagraph` → `scripts/normtext/adapter-typen.ts`;
+  `register.ts`/`adapter-entscheide.ts` re-exportieren mit `export type`. Generator-
+  Templates angepasst (nicht die generierten Dateien): `bund-stubs-generieren.ts`,
+  `seed-grundart.mjs`. `grundart.generated.ts` ECHT regeneriert (lokale Quelle, 1469
+  Einträge unverändert) — `bund-stubs.generated.ts` konnte MANGELS NETZZUGRIFF in der
+  Sandbox nicht regeneriert werden (ein Testlauf leerte den einzigen PrHG-Eintrag auf 0),
+  Import-Zeile deshalb 1:1 dem fixierten Template-Output nachgezogen, Rest byte-identisch —
+  Nachtrag: bei nächster echter Regenerierung (mit Netz) verifizieren, dass Output
+  unverändert bleibt. B23: `check:zyklen` (`scripts/check-zyklen.ts`, madge --circular) neu
+  in `check:seriell`; `madge` als devDependency (`--legacy-peer-deps`, rein additiv).
+  **Abweichung vom Wortlaut «auf 0 kalibriert»:** madge sank 7→1, NICHT auf 0. Empirisch
+  bestätigt: der letzte Zyklus `NormText.tsx → NormChip.tsx → NormPopover.tsx →
+  ArtikelBody.tsx → NormText.tsx` ist eine echte, beabsichtigte rekursive UI-Struktur (Norm-
+  Popover zeigt Artikeltext mit weiteren Norm-Chips) — alle 4 Kanten echte Wert-Importe;
+  Auflösung auf 0 bräuchte DI-/Lazy-Refactor (Verhaltens-Eingriff jenseits §6/"reiner Move"
+  und jenseits Aufwand S). Gate deshalb auf Schranke 1 kalibriert, Begründung im
+  Skript-Kopf; bricht bei jedem neuen Zyklus UND bei unsynchron gelassener Schranke.
+  Negativ-Beweis zweimal geführt (künstlicher Rückimport → 2 Zyklen/exit 1; entfernt →
+  wieder 1/grün). Beweis: `npm run gate` (voll) GRÜN — tsc, vitest 3794/3794, golden
+  209/209 byte-gleich, lint, check inkl. `check:zyklen`. Gegenprüfung n/a (G1, reine
+  Verschiebung/Zyklen-Auflösung, kein Norm-/Tarif-Wert berührt). ESLint
+  `consistent-type-imports` bleibt deferiert (G2, wie vorgegeben).

@@ -1,7 +1,8 @@
 import { useMemo, useRef, useState } from 'react';
 import { NormText } from '../components/NormText';
 import { Link } from 'react-router-dom';
-import { Field, GruppenTitel, inputCls, NormChip } from '../components/vorlagen/ui';
+import { Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
+import { NormChip } from '../components/vorlagen/NormChip';
 import { MappenAnsicht, MappenGates, NotariatsHinweis, HrAmtHinweis } from '../components/vorlagen/Dokumentmappe';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import {

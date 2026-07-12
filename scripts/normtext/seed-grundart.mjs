@@ -150,7 +150,7 @@ function main() {
 //
 // Grundart-Verteilung:
 ${verteilungKommentar}
-import type { Grundart, ErlassTyp } from './register';
+import type { Grundart, ErlassTyp } from './register-typen';
 
 export interface GrundartSeed {
   grundart: Grundart;

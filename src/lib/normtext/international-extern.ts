@@ -11,7 +11,7 @@
 // gemerged; rechtsgebiet 'international' hält sie aus der regulären Gesetze-
 // Übersicht heraus (nur unter «International» sichtbar).
 
-import type { ErlassRegistereintrag } from './register';
+import type { ErlassRegistereintrag } from './register-typen';
 
 // EU-Verordnung als reiner Live-Link-Eintrag (EUR-Lex CELEX). KEIN Volltext —
 // EU-Recht liegt nicht in Fedlex; massgeblich ist die amtliche EUR-Lex-Fassung.

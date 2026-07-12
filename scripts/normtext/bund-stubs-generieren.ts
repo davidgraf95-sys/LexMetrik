@@ -9,7 +9,7 @@
  * Aufruf: npm run normtext:bund-stubs -- --datum=$(date +%F)
  */
 import { writeFileSync } from 'node:fs';
-import type { Rechtsgebiet } from '../../src/lib/normtext/register.ts';
+import type { Rechtsgebiet } from '../../src/lib/normtext/register-typen.ts';
 
 const datumArg = process.argv.find((a) => a.startsWith('--datum='));
 const heute = datumArg ? datumArg.slice('--datum='.length) : '';
@@ -89,7 +89,7 @@ for (const [sr, kuerzel, gebiet] of LISTE) {
 const datei = `// AUTO-GENERIERT von scripts/normtext/bund-stubs-generieren.ts — NICHT von Hand editieren.
 // Verifizierte «nur-live-link»-Stubs wichtiger Bundesgesetze (Titel/ELI/Stand aus
 // Fedlex-SPARQL, §7). Regenerieren: npm run normtext:bund-stubs -- --datum=$(date +%F)
-import type { ErlassRegistereintrag } from './register';
+import type { ErlassRegistereintrag } from './register-typen';
 
 export const BUND_STUBS: ErlassRegistereintrag[] = [
 ${eintraege.join('\n')}

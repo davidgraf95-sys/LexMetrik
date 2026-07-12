@@ -1,4 +1,4 @@
-import type { ErlassRegistereintrag, Rechtsgebiet } from './register';
+import type { ErlassRegistereintrag, Rechtsgebiet } from './register-typen';
 
 // ─── pdf-embed: amtliches PDF als In-App-Darstellung (Auftrag David 25.6.2026) ──
 //

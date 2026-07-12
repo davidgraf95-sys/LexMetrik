@@ -1,6 +1,7 @@
 import { useState, type Dispatch, type ReactNode, type SetStateAction } from 'react';
 import { Link } from 'react-router-dom';
-import { FehlerBox, NormChip, NormLink, Stepper } from './ui';
+import { FehlerBox, NormLink, Stepper } from './ui';
+import { NormChip } from './NormChip';
 import { NormText } from '../NormText';
 import { useLocale, fedlexLokalisiert } from '../locale';
 import { usePaneKlasse } from '../layout/PaneKontext';

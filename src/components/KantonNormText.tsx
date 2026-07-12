@@ -1,5 +1,5 @@
 import { NORM_IM_TEXT, fedlexLinkFuerArtikel } from '../lib/fedlex';
-import { NormChip } from './vorlagen/ui';
+import { NormChip } from './vorlagen/NormChip';
 import { KantonQuelleLink } from './KantonQuelleLink';
 import { RechtsprechungText } from './RechtsprechungLink';
 

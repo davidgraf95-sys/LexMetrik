@@ -6,7 +6,8 @@ import {
   type GmbhStatutKlausel,
   type Phase,
 } from '../lib/gruendungsunterlagen';
-import { Field, GruppenTitel, inputCls, NormChip, NormLink } from '../components/vorlagen/ui';
+import { Field, GruppenTitel, inputCls, NormLink } from '../components/vorlagen/ui';
+import { NormChip } from '../components/vorlagen/NormChip';
 import { NormText } from '../components/NormText';
 import { GmbhDokumentmappe } from '../components/vorlagen/GmbhDokumentmappe';
 import { PflichtDisclaimer } from '../components/PflichtDisclaimer';
