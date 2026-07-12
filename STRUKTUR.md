@@ -264,6 +264,18 @@ in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
 **Verifikation:** je Quick-Win Playwright-Beweis (Desktop+Mobil@390). Tore: **tsc · vitest 3701 · golden `IDENTISCH` byte-gleich · lint** grün; `check` 26/28 Sub-Checks grün; **fremd-vorbestehend rot: `check:p-klassen` + `check:vollstaendigkeit`** (Normtext-Daten, vom reinen UI-Diff unberührt — ausgewiesen, nicht gefixt). Build: alle 61 Routen prerendert. **W4-Test** (`/rechner` «kein Suchfeld») auf das neue Filterfeld gezogen (§6.3 deklariert). Gegenprüfung **n/a** (reines UI/Routing). Trailer `Roadmap: W2·10-UI-NAV`.
 
+## Session 12.7.2026 — A27: Gliederungspfad-Zeile am Artikel entfernt (Worktree `lm-a27-pfadzeile`, Branch `feat/a27-pfadzeile`)
+
+**Auftrag (David 12.7., Chat, reines UI):** «bei den gesetzen ist diese line nicht notwendig llgemeine Bestimmungen › Zuständigkeit der Gerichte und Ausstand › Örtliche Zuständigkeit › Allgemeine Bestimmungen › Art. 9 ZPO ⧉ Zitat». Wortlaut persistiert `docs/ux-audit-2026-07/ANMERKUNGEN-DAVID-2026-07-12.md`, eingeordnet als **A27** in `FAHRPLAN-GESETZES-UX.md §10.8`.
+
+**Identifikation:** die Zeile ist der Sticky Section-Kontextkopf (`SektionKontextKopf.tsx`, nur ≥1024px-2-Spalten-Lesemodus) — tiefer In-Erlass-Gliederungspfad «Titel › … › Art. N» + «⧉ Zitat»-Chip. Seit **A26 (#198)** trägt der immer sichtbare Inhalts-Kopf (`InhaltsKopf.tsx`, Brotkrümel + Live-Artikel «Art. 9 ZPO» + Stand + ✕) die Orientierung → der zusätzliche Pfad war redundant.
+
+**Umsetzung:** Komponente `SektionKontextKopf.tsx` gelöscht, Export aus `parts.tsx` entfernt, Nutzung + tote Ableitungen (`sekLabelById`-useMemo, `baueZitat`/`berechneSekLabelById`-Importe) aus `inhalt.tsx` entfernt. **Funktions-Treue (§15):** das «⧉ Zitat» war die Zitat-Kopieraktion (kein «Pane öffnen» — ⧉ = Chip-Dekor) → keine Funktion verloren: jeder Artikel trägt schon in der Artikelnummer-Zeile (`ArtikelLeser`) denselben «Zitat»-Kopierknopf mit identischem `baueZitat`-Voll-Zitat; das echte Pane-⧉ (`oeffneDaneben`, Leitfall-Zeile) unberührt.
+
+**e2e-Nachzug:** `leser-kopf-g2b` — 3 Kontextkopf-Tests (Standort-Anzeige, A3-Breadcrumbs klickbar, @1024-Overflow) entfernt, «Zitat kopieren»-Test auf den Artikel-Knopf (`#art-8`) umgehängt. `leser-kopf-a9` — CLS-0-Sprungschritt von der entfernten Breadcrumb auf die TOC-Gliederung (`[data-toc] [data-toc-aktiv]`) umgehängt. `check:linien-kanon`-READER-Liste um die gelöschte Datei bereinigt (kein Marker/Regel-Eingriff; Tor grün).
+
+**Verifikation:** voller `npm run gate` **GRÜN** (tsc · vitest · golden `IDENTISCH` byte-gleich — Reader-Chrome ausserhalb Golden-Scope · lint · check). e2e `leser-kopf-g2b`/`-a9`/`leser-position-u` 12/12 grün (a9 CLS 0). Playwright-Beleg ZPO Art. 9 Desktop+Mobil (`data-kontext-kopf=0`, Artikel-Zitat-Knopf vorhanden, kein Layout-Sprung). Gegenprüfung **n/a** (reines UI). **TABU eingehalten:** kein Linien-Kanon-Regelwerk, keine Design-Tokens, kein `berechnungen.ts` (nur Import gelöst), keine Rechtsprechung. Trailer `Roadmap: W2·5d`.
+
 ## Session 11.7.2026 — A26: «Ansicht»-Dropdown in die immer sichtbare Positionsleiste + Fussnoten-Auswahl ins Menü (Worktree `lm-sticky-ansicht`, Branch `feat/ansicht-sticky-leiste`)
 
 **Auftrag (David 11.7., Chat, reines UI):** «ansichtsdropdown menu in … diese leiste integrieren `Gesetze › Bund › ZPO … Stand … ✕` … immer sichtbar wenn man im gesetz ist» + «fussnotenauswahl ebenfalls in dropdownmenu einfügen». Wortlaut persistiert `docs/ux-audit-2026-07/ANMERKUNGEN-DAVID-2026-07-11.md`, eingeordnet als **A26** in `FAHRPLAN-GESETZES-UX.md §10.8`.

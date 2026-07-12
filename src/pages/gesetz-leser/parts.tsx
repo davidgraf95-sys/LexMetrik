@@ -7,6 +7,5 @@
 export { ArtikelLeser } from './parts/ArtikelLeser';
 export { ErlassKopfBlock } from './parts/ErlassKopfBlock';
 export { ErlassLeserKopf } from './parts/ErlassLeserKopf';
-export { SektionKontextKopf } from './parts/SektionKontextKopf';
 export { SektionKopf } from './parts/SektionKopf';
 export { SektionBaumTOC } from './parts/SektionBaumTOC';
