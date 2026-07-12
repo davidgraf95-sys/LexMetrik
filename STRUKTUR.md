@@ -183,6 +183,16 @@ in `ROADMAP.md` eingefaltet und nach `archiv/` verschoben).
 
 <!-- KARTEN -->
 
+## Session 12.7.2026 — W2·6 BGE-Band-Nachzug PR-A: Bände 146+147 (Jahrgänge 2020/2021, 404 amtliche BGE alle Sprachen) vollständig in den Korpus (RISIKOPFAD Extraktion, Worktree `lm-bge-2020`, Branch `feat/bge-bis-2020`)
+
+**Auftrag David 12.7.2026:** «bge bis 2020 integrieren» + «alles doppelt verifizieren». Ziel Bände 146–149 (**788** BGE, alle Sprachen); **datenbasiert band-weise** (PR-A 146+147 = 404, PR-B 148+149 = 384), weil Datenmenge (~+54 MB Vollausbau) + Crawl-/Prüf-Risiko einen Big-Bang nicht rechtfertigen.
+
+**Gebaut:** (1) `enumeriereBgeBaender` (adapter-entscheide.ts) — band-basierte de/fr/it-Voll-Enumeration mit Band-Filter aus `citation_string_de`, je Fundstelle bevorzugt die `bge_BGE_*`-Record-Familie. **Quirks:** Q1 Bandjahr (date_from verlöre ~8 %) + **Sprachfilter-Falle** (`language=de` verlöre 247 fr/it-BGE) + OCL führt BGE in ZWEI Record-Familien. (2) **`parseClirUrteilskopf`** (clir-regeste.ts, + Fixtures/3 Unit-Tests): der AMTLICHE bger.ch-Urteilskopf («… 1C_22/2019 / 1C_476/2019 vom 6. April 2020 Regeste», fr «du 1er septembre 2021») ist die primäre aza↔BGE-Bindung + Datumsquelle; Fallbacks OCL-`docket_number_2` → Kopf-Regex. (3) Orchestrator-Modus `--additiv --bge-baender=…`: Bestand byte-treu, nur fehlende BGE neu (A2-Volltext-Merge, Kollisions-/Inversions-Quarantäne, `--bge-neu-limit`), dreisprachige clir-Regeste (A18) nur für Neue; Auszug-only-Datum = clir-Kopf, sonst Bandjahr-Platzhalter. (4) `BUDGET_MB` 35→100.
+
+**Gegenprüfung (Davids Auflage, hart):** **Runde 1 (Opus, unabhängig): `widerlegt`** — Regeste-Text DE/FR/IT quellentreu, ABER (1) 31/31 Auszug-Daten falsch (OCL-Streudaten), (2) 2 aza-Fehlzuordnungen (zitierte Präjudizien statt Eigenfall: 146 V 185, 146 II 304 — bei 146 II 304 ist sogar OCLs `docket_number_2` falsch), (3) fr/it-BGE fehlten still. → Alle 3 Befunde gefixt (siehe Gebaut 1–3), die 5 Befund-Fälle im Smoke exakt auf die amtlichen clir-Werte verifiziert, Korpus auf main-Stand zurückgesetzt und mit fixem Code VOLL neu gebaut, **Runde 2 = volle neue unabhängige Opus-Runde** (Verdikt im Commit-Trailer + §4 des Belegs). Beleg `bibliothek/rechtsprechung/bge-baender-146-149-nachzug-2026-07-12.md`.
+
+**Offen:** PR-B (148+149 = 384) gleiche Mechanik + eigene volle Gegenprüfung; danach ROADMAP-Vermerk PR-B nachziehen.
+
 ## Session 12.7.2026 — H-7 «SG-GebT-60.13-Staffel-Generator» (B16, FAHRPLAN-CODE-HYGIENE.md P1, Risikopfad Tarif, Worktree `lm-h7`, Branch `chore/h7-sg-generator`)
 
 **Auftrag (FAHRPLAN-CODE-HYGIENE.md H-7, ROADMAP W2·12-HYGIENE).** Das 6× wörtlich duplizierte SG-Band-Literal in `src/data/tarif/beurkundung.ts` (5× 183-Bänder/Kappe 15'000 = ag_gruendung/gmbh_gruendung/kapitalerhoehung/kapitalherabsetzung; 1× 45-Bänder/Kappe 3'850 = Stiftung Nr. 60.01) durch den datei-lokalen Generator `sg6013Baender(anzahl, kappeChf)` ersetzt — BEIDE Parameter, damit die kürzere 45-Bänder-Variante nicht bloss verhaltens-, sondern **array-gleich** aus demselben Erlass (GebT sGS 821.5 Nr. 60.13, regime-gleich i.S. §1/§4) reproduziert wird. Nur das `baender`-Array geteilt; `hinweis`/`artikel`/Bemessung je Stelle unangetastet. Löst den einzigen Befund mit belegtem Drift-Vorfall (QS-GP 2.7. musste 5 Stellen synchron anfassen) → 6 Drift-Stellen zu 1 SSOT.

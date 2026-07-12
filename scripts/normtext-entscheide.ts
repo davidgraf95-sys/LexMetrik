@@ -11,11 +11,11 @@
 //     --courts=zh_obergericht,be_verwaltungsgericht --kanton-pro=8
 //
 import {
-  holeEntscheidOCL, enumeriereNeueste, enumeriereNeuesteAlle, citedRefZuId, enumeriereBge, holeBgeLeitentscheid,
+  holeEntscheidOCL, enumeriereNeueste, enumeriereNeuesteAlle, citedRefZuId, enumeriereBge, enumeriereBgeBaender, holeBgeLeitentscheid,
 } from './normtext/adapter-entscheide';
 import { schreibeKorpus, ladeBestandSnapshots } from './normtext/entscheide-schreiben';
 import { sha256EntscheidBloecke } from './normtext/sha-entscheide';
-import { holeRegesteSprachfassungen } from './normtext/clir-regeste';
+import { holeRegesteSprachfassungen, holeClirHtml, parseClirUrteilskopf, bgeRefZuClirId } from './normtext/clir-regeste';
 import type { EntscheidSnapshot } from '../src/lib/rechtsprechung/typen';
 import type { Rechtsgebiet } from '../src/lib/normtext/register';
 import * as path from 'node:path';
@@ -61,6 +61,11 @@ const bgeRefresh = process.argv.includes('--bge-refresh');
 // (kopf+absaetze je Sprache, sortiert DE→FR→IT) + (B1) aza-Voll-Resolution der BGE
 // ohne `azaUrteil`. Bund/Kanton/eidg + die restlichen BGE bleiben byte-treu (§6).
 const regesteRefresh = process.argv.includes('--regeste-refresh');
+// --bge-baender=146,147 (additiver Voll-Band-Nachzug, W2·6): zieht die VOLLSTÄNDIGEN
+// amtlichen BGE-Bände band-basiert (nicht datums-basiert; Q1-Bandjahr-Quirk) nach,
+// ergänzt sie zum committeten Bestand (byte-treu, §6), inkl. dreisprachiger clir-
+// Regeste (A18) für die NEUEN BGE. Bund/Kanton/eidg + Bestands-BGE bleiben unberührt.
+const bgeBaender = (arg('--bge-baender') ?? '').split(',').map((s) => Number(s.trim())).filter((n) => Number.isFinite(n) && n > 0);
 // Cache-Verzeichnis der rohen clir-HTML (gitignored; Re-Parse ohne Re-Crawl).
 const CLIR_CACHE = path.join(process.cwd(), 'daten', 'cache', 'clir-regeste');
 // Court-spezifischer Sachgebiets-Hint (deterministisch, deklariert): Patentstreit =
@@ -195,6 +200,95 @@ const docketSlug = (d: string) => d.replace(/\s+/g, '').replace(/[^A-Za-z0-9]/g,
 
 async function main() {
   console.log(`[entscheide] Build ${datum} · BGE ${bgeVon ?? '–'} · Bund-Limit ${bundLimit} · Kantone [${kantCourts.join(',') || '–'}] je ${kantonPro}${additiv ? ` · ADDITIV eidg [${eidgCourts.join(',') || '–'}] je ${eidgPro}` : ''}`);
+
+  // ── BGE-Band-Nachzug (W2·6): vollständige Bände additiv ergänzen ─────────────
+  // Band-basiert (Q1-Quirk: date_from lässt platzhalter-datierte BGE fallen). Lädt
+  // den committeten Bestand byte-treu, ergänzt NUR die noch fehlenden BGE der
+  // Zielbände (Volltext-Merge + Kollisions-/Inversions-Quarantäne wie im Vollbau)
+  // und reichert die NEUEN mit dreisprachiger clir-Regeste an (A18). §6: Bestand
+  // (BGE 150–152 + Bund/Kanton/eidg) bleibt unverändert.
+  if (bgeBaender.length) {
+    const basis = ladeBestandSnapshots();
+    const bestandIds = new Set(basis.map((s) => s.id));
+    console.log(`[bge-baender] Zielbände [${bgeBaender.join(',')}] · Bestand ${basis.length} (davon BGE ${basis.filter((s) => s.gericht === 'bge').length}).`);
+
+    const idZuRef = (id: string) =>
+      id.replace(/^bge_/i, '').replace(/^BGE[_ ]/i, '').replace(/_/g, ' ').replace(/\s+/g, ' ').trim();
+    const alleIds = await enumeriereBgeBaender(bgeBaender);
+    if (!alleIds.length) { console.log('[bge-baender] 0 IDs enumeriert (OCL nicht erreichbar?) — Korpus unberührt.'); return; }
+    // Vollständigkeits-Ausweis je Band (gegen die amtliche Bandliste zu prüfen).
+    const proBand: Record<number, number> = {};
+    for (const id of alleIds) { const b = parseInt(idZuRef(id), 10); if (b) proBand[b] = (proBand[b] ?? 0) + 1; }
+    console.log(`[bge-baender] enumeriert (band-basiert): ${alleIds.length} — ${Object.entries(proBand).sort((a, b) => +a[0] - +b[0]).map(([b, n]) => `${b}:${n}`).join(' ')}`);
+    let neueIds = alleIds.filter((id) => !bestandIds.has(`bund/bge/${idZuRef(id).replace(/ /g, '_')}`));
+    console.log(`[bge-baender] davon neu (noch nicht im Bestand): ${neueIds.length}`);
+    // Optionaler Deckel (Smoke-Test / gestaffelter Resume): die N ältesten neuen zuerst
+    // (Enumeration ist date_desc → tail = älteste; deterministisch, §2).
+    const neuLimit = Number(arg('--bge-neu-limit') ?? '0');
+    if (neuLimit > 0 && neueIds.length > neuLimit) { neueIds = neueIds.slice(0, neuLimit); console.log(`[bge-baender] Deckel --bge-neu-limit=${neuLimit} → ${neueIds.length} bearbeitet.`); }
+
+    // Amtliche aza↔BGE-Bindung + Urteilsdatum je BGE ZUERST aus dem bger.ch clir-
+    // Urteilskopf (DE-Fassung; Cache geteilt mit der Regeste-Anreicherung) — OCLs
+    // docket_number_2/Kopf-Regex sind nur Fallbacks (Befund Gegenprüfung 12.7.2026).
+    const neu = (await mapLimit(neueIds, 4, async (id) => {
+      const clirId = bgeRefZuClirId(idZuRef(id));
+      const html = clirId ? await holeClirHtml(clirId, 'de', CLIR_CACHE, 300) : null;
+      const kopf = html ? parseClirUrteilskopf(html) : { aza: null, datumIso: null };
+      const s = await holeBgeLeitentscheid(id, datum, { azaAz: kopf.aza, datumFallback: kopf.datumIso });
+      process.stdout.write(s ? (s.azaUrteil ? '.' : '·') : 'x');
+      return s;
+    })).filter((s): s is EntscheidSnapshot => !!s);
+    process.stdout.write('\n');
+    // Leer-Guard (§6): fehlgeschlagener Lauf entwertet nie den Bestand.
+    if (neueIds.length && neu.length === 0) { console.log('[bge-baender] 0 geholt (Quelle nicht erreichbar?) — Korpus unberührt.'); return; }
+    // Duplikat-Guard: nie ein bereits erfasstes id doppelt (idempotent bei Re-Run).
+    const neuUniq = neu.filter((s) => !bestandIds.has(s.id));
+    const mitVoll = neuUniq.filter((s) => s.azaUrteil).length;
+    console.log(`[bge-baender] neu erfasst: ${neuUniq.length} (Volltext ${mitVoll}, Auszug ${neuUniq.length - mitVoll})`);
+
+    // Kollisions-Quarantäne (§8) über den GANZEN BGE-Satz (Bestand + neu): teilt sich
+    // ein aza-key auf mehrere BGE, ist ≥1 Zuordnung falsch → NUR die NEUEN Kollidierer
+    // auf Auszug zurückstufen (die Bestands-Auflösungen wurden beim Bau validiert).
+    const alleBge = [...basis.filter((s) => s.gericht === 'bge'), ...neuUniq];
+    const azaN: Record<string, number> = {};
+    for (const s of alleBge) if (s.azaUrteil) azaN[s.azaUrteil.key] = (azaN[s.azaUrteil.key] ?? 0) + 1;
+    let quar = 0;
+    for (const s of neuUniq) if (s.azaUrteil && azaN[s.azaUrteil.key] > 1) { aufAuszugZurueck(s); quar++; }
+    if (quar) console.log(`[bge-baender] Kollisions-Quarantäne: ${quar} neue BGE auf Auszug zurückgestuft.`);
+
+    // A18: dreisprachige, strukturierte clir-Regeste NUR für die neuen amtlichen BGE
+    // (Bestand behält seine — §6 byte-treu). Cache (daten/cache/clir-regeste) macht
+    // Re-Runs crawl-frei.
+    const amtlichNeu = neuUniq.filter((s) => s.regeste && s.regesteAmtlich && s.bgeReferenz);
+    const fassungen = await mapLimit(amtlichNeu, 2, async (s) => {
+      const f = await holeRegesteSprachfassungen(s.bgeReferenz!, CLIR_CACHE, 300);
+      process.stdout.write(f.length === 3 ? '.' : f.length ? '+' : 'x');
+      return { s, f };
+    });
+    process.stdout.write('\n');
+    let mitFassung = 0; const luecken: string[] = [];
+    for (const { s, f } of fassungen) {
+      if (f.length && f.some((x) => x.sprache === 'de')) {
+        s.regeste = { ...s.regeste!, sprachfassungen: f };
+        mitFassung++;
+        if (f.length < 3) luecken.push(`${s.bgeReferenz} [${f.map((x) => x.sprache).join('/')}]`);
+      } else luecken.push(`${s.bgeReferenz} [ohne dt. clir-Regeste — §1 unverändert]`);
+    }
+    console.log(`[bge-baender] clir-Regeste: ${mitFassung}/${amtlichNeu.length} neue BGE dreisprachig strukturiert.`);
+    if (luecken.length) console.log(`[bge-baender] nicht vollständig dreisprachig (${luecken.length}): ${luecken.join(', ')}`);
+
+    // Dedup wie im Vollbau: ein bger-Routine-Bestand, der jetzt als BGE-aza-Volltext
+    // dient, würde sonst doppelt geführt (Leit-UND-Routine, §8) → aus dem Bestand nehmen.
+    const neueAzaIds = new Set(neuUniq.filter((s) => s.azaUrteil).map((s) => `bund/bger/${docketSlug(s.azaUrteil!.aktenzeichen)}`));
+    const basisGefiltert = basis.filter((s) => !(s.gericht === 'bger' && neueAzaIds.has(s.id)));
+    if (basisGefiltert.length !== basis.length) console.log(`[bge-baender] ${basis.length - basisGefiltert.length} bger-Routine-Einträge entfernt (nun BGE-aza-Volltext).`);
+
+    const seen = new Set<string>();
+    const auswahl = [...basisGefiltert, ...neuUniq].filter((s) => { if (seen.has(s.id)) return false; seen.add(s.id); return true; });
+    const res = schreibeKorpus(auswahl, datum);
+    console.log(`[bge-baender] geschrieben: ${res.anzahl} Manifest-Einträge (Bestand ${basisGefiltert.length} + neu ${neuUniq.length} BGE), ${res.normBuckets} Norm-Buckets.`);
+    return;
+  }
 
   // ── Regeste-Refresh (W2·6-B B1+B2+A18): amtliche BGE anreichern ──────────────
   if (regesteRefresh) {

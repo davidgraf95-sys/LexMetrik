@@ -23,7 +23,12 @@ const PUB = join(ROOT, 'public', 'rechtsprechung');
 // Freigabe David 26.6.2026: dieser Deckel wird pro Aufgabe FLIESSEND gesetzt (Ist +
 // grosszügige Reserve) und bei Bedarf deliberat angehoben — er bremst Unfälle, limitiert
 // aber nicht künstlich. Bei Korpus-Ausbau bewusst nachziehen.
-const BUDGET_MB = 35;
+// 12.7.2026 (W2·6 BGE-Band-Nachzug 146–149): 35 → 100 MB. Der Korpus wächst von 272 auf
+// 1060 amtliche BGE (Bände 146–149 VOLLSTÄNDIG = 788 neu, alle Sprachen — der frühere
+// de-Filter hätte 247 fr/it-BGE still fehlen lassen; je ~70 KB Volltext+Auszug) ⇒ Ist
+// nach Vollausbau ~78 MB. Deckel mit Reserve (fliessend, bremst Unfälle, Freigabe-Logik
+// David 26.6.2026).
+const BUDGET_MB = 100;
 // Eigenes Budget für die eine Datei norm-index.json (W3): die neue Artikel-Ebene
 // (proNormArtikel, keyed 'LAW/ART') fächert breit auf — ein Deckel verhindert, dass
 // der Fan-out still ballooniert. Ist 2.7.2026 ≈ 0.53 MB (Erlass- + Artikel-Ebene);

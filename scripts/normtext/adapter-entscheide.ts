@@ -31,7 +31,7 @@ const API = 'https://mcp.opencaselaw.ch/api';
 export interface OclDecision {
   decision_id?: string;
   court?: string; court_name?: string; canton?: string; chamber?: string | null;
-  docket_number?: string; bge_reference?: string | null; citation_string_de?: string;
+  docket_number?: string; docket_number_2?: string | null; bge_reference?: string | null; citation_string_de?: string;
   decision_date?: string; language?: string; marked_for_publication?: boolean;
   legal_area?: string | null; regeste?: string | null; full_text?: string;
   statutes?: string[]; cited_decisions?: string | string[]; content_hash?: string;
@@ -530,6 +530,61 @@ export async function enumeriereBge(dateFrom: string, anzahl = 300): Promise<str
 }
 
 /**
+ * Enumeriert amtliche BGE eines/mehrerer BÄNDE VOLLSTÄNDIG (band-basiert, nicht
+ * datums-basiert). Grund (Q1-Befund 12.7.2026): das OCL-`decision_date` ist bei
+ * etlichen BGE ein Platzhalter/Fehlwert (Bandjahr-Quirk) — eine `date_from`-
+ * Enumeration lässt darum ~8 % eines Bandes still fallen (Band 146–149:
+ * date_from=2019 fand 497, band-basiert 541). Der BGE-BAND (aus `citation_string_de`
+ * «BGE 146 III 225») ist die kanonische, deterministische Bandzugehörigkeit (§2).
+ * Darum: die GANZE bge-Sammlung compact durchpaginieren (date_desc) und nach Band
+ * filtern. Vollständigkeit ist gegen die amtliche Bandliste (bger.ch) gegenzuprüfen.
+ * Rückgabe: eindeutige decision_ids der Zielbände, neueste zuerst.
+ */
+export async function enumeriereBgeBaender(baender: number[], seite = 500, maxSeiten = 200): Promise<string[]> {
+  const ziel = new Set(baender);
+  // Fundstelle aus citation_string_de («BGE 146 III 225») bzw. docket_number
+  // («BGE 146 III 225» / «146 III 225») — kanonische Bandzugehörigkeit (§2).
+  const citAus = (x: OclDecision): string | null => {
+    const s = String(x.citation_string_de ?? x.docket_number ?? '');
+    const m = /(\d{1,3})\s+([IVX]+[ab]?)\s+(\d+)\b/.exec(s);
+    return m ? `${m[1]} ${m[2]} ${m[3]}` : null;
+  };
+  type Liste = { results?: OclDecision[]; total?: number; has_more?: boolean; next_offset?: number };
+  // OCL führt BGE in ZWEI Record-Familien: `bge_BGE_146_V_185` (trägt docket_number_2 =
+  // eigenes aza-Az. + meist echtes Datum) und `bge_146 V 185` (Alt-Import, z.T. Fehl-
+  // daten, kein docket_number_2). Je Fundstelle die bge_BGE-Form BEVORZUGEN (Befund
+  // Gegenprüfung 12.7.2026: 2 aza-Fehlzuordnungen + 31 Streudaten kamen aus der
+  // Alt-Familie/Kopf-Regex). Sprachen de+fr+it einzeln paginieren — ein language-
+  // Filter=de liess 247 fr/it-BGE der Bände 146–149 STILL fehlen (Befund 3).
+  const proCit = new Map<string, { bgeu: string | null; space: string | null }>();
+  for (const lang of ['de', 'fr', 'it']) {
+    let offset = 0;
+    for (let seiten = 0; seiten < maxSeiten; seiten++) {
+      const url = `${API}/decisions?court=bge&language=${lang}&date_from=1800-01-01&sort=date_desc&limit=${seite}&offset=${offset}&fields=compact`;
+      const d = await jget<Liste | OclDecision[]>(url, 5, 120000);
+      const arr: OclDecision[] = Array.isArray(d) ? d : (d?.results ?? []);
+      if (!arr.length) break;
+      for (const x of arr) {
+        const cit = citAus(x);
+        const id = String(x.decision_id ?? x.id ?? '');
+        if (!id || !cit || !ziel.has(Number(cit.split(' ')[0]))) continue;
+        const e = proCit.get(cit) ?? { bgeu: null, space: null };
+        if (id.startsWith('bge_BGE_')) e.bgeu = e.bgeu ?? id; else e.space = e.space ?? id;
+        proCit.set(cit, e);
+      }
+      const hasMore = Array.isArray(d) ? arr.length === seite : !!d?.has_more;
+      if (!hasMore) break;
+      offset = (Array.isArray(d) ? undefined : d?.next_offset) ?? (offset + arr.length);
+    }
+  }
+  // Deterministische Ordnung (§2): Fundstelle sortiert (Band, röm. Abteilung, Seite).
+  const roem: Record<string, number> = { I: 1, II: 2, III: 3, IV: 4, V: 5 };
+  const key = (c: string) => { const [b, r, s] = c.split(' '); return [Number(b), roem[r] ?? 9, Number(s)] as const; };
+  const cits = [...proCit.keys()].sort((a, b) => { const x = key(a), y = key(b); return x[0] - y[0] || x[1] - y[1] || x[2] - y[2]; });
+  return cits.map((c) => proCit.get(c)!.bgeu ?? proCit.get(c)!.space!).filter(Boolean);
+}
+
+/**
  * aza-Aktenzeichen des EIGENEN Falls aus dem BGE-Urteilskopf (R8-sicher, §8).
  * Im Kopf steht das Az. unmittelbar vor «vom <Datum>» (Eigenfall-Signatur), NICHT
  * als zitiertes Präjudiz (die stehen erst in den Erwägungen). Quarantäne: nur im
@@ -581,7 +636,11 @@ export function bgeRoemischSachgebiet(docket: string): Rechtsgebiet | null {
  * unterliegenden bger-Urteil an (A2-Merge). Ohne eindeutig/plausibel auflösbares
  * aza-Az.: ehrlicher Sammlungs-Auszug (azaUrteil=null), nie ein vermuteter Body (§8).
  */
-export async function holeBgeLeitentscheid(bgeId: string, abgerufen: string): Promise<EntscheidSnapshot | null> {
+export async function holeBgeLeitentscheid(
+  bgeId: string,
+  abgerufen: string,
+  kopf: { azaAz?: string | null; datumFallback?: string | null } = {},
+): Promise<EntscheidSnapshot | null> {
   // OCL liefert decision_id inkonsistent (`bge_BGE_150_III_223`, `bge_152 III 51`) UND die
   // Keyed-Lookup matcht kurze Seiten-Ids PRÄFIXUNSCHARF: `/decisions/151_V_1` → 151_V_194.
   // Die präfix-volle bzw. mit-Spaces-Form löst eindeutig auf. Darum mehrere Id-Formen probieren
@@ -589,9 +648,12 @@ export async function holeBgeLeitentscheid(bgeId: string, abgerufen: string): Pr
   // strippen) — so bleibt eine Fehlzuordnung (151_V_1 → 151_V_194) ausgeschlossen (§8).
   const idNorm = (s: string) => s.toLowerCase().replace(/bge/g, '').replace(/[_\s.-]/g, '');
   let det: OclDecision | null = null;
+  // Sprache NICHT auf 'de' filtern (Befund Gegenprüfung 12.7.2026): die amtliche
+  // Sammlung publiziert jeden BGE in seiner Verfahrenssprache — ein de-Filter liess
+  // 247 fr/it-BGE der Bände 146–149 still fehlen. Sprach-Label kommt aus dem Body.
   for (const kand of [bgeId, bgeId.replace(/_/g, ' '), `bge_BGE_${bgeId}`]) {
     const d = await jget<OclDecision>(`${API}/decisions/${encodeURIComponent(kand)}?fields=full`);
-    if (d?.decision_id && d.court === 'bge' && (d.language ?? 'de') === 'de'
+    if (d?.decision_id && d.court === 'bge'
         && idNorm(String(d.decision_id)) === idNorm(bgeId)) { det = d; break; }
   }
   if (!det) return null;
@@ -601,14 +663,25 @@ export async function holeBgeLeitentscheid(bgeId: string, abgerufen: string): Pr
   const str = await jget<OclStructure>(`${API}/structure/${encodeURIComponent(kanonId)}?paragraph_excerpt_chars=5000`);
   await fuelleGekappteErwaegungen(kanonId, str);
 
-  const azaAz = azaAusBgeKopf(det.full_text);
+  // Eigenes aza-Az. — Prioritätskette (Befund Gegenprüfung 12.7.2026: die Kopf-Regex
+  // griff bei 2 BGE ein in den Erwägungen ZITIERTES Az.; OCLs `docket_number_2` ist
+  // ebenfalls vereinzelt falsch, z.B. 146 II 304 → 1C_345/2014 statt 1C_22/2019):
+  //   1. AMTLICHER clir-Urteilskopf (kopf.azaAz, vom Aufrufer aus bger.ch extrahiert),
+  //   2. strukturelles OCL-Feld `docket_number_2` (bge_BGE-Record-Familie),
+  //   3. Kopf-Regex über den OCL-full_text (Alt-Fallback).
+  const dn2 = String(det.docket_number_2 ?? '').trim();
+  const azaAz = kopf.azaAz
+    ?? (/^\d[A-Z][._ ]\d+\/\d{4}$/.test(dn2) ? dn2.replace(/^(\d[A-Z])[._ ]/, '$1_') : null)
+    ?? azaAusBgeKopf(det.full_text);
   const azaKey = azaAz ? citedRefZuId(azaAz) : null;
   // Referenzjahr für die aza-Plausibilität = der BGE-BAND (ein Band je Jahrgang
   // seit 1875 ⇒ Jahr = Band + 1874), NICHT das OCL-`decision_date`: dieses ist bei
   // etlichen BGE ein Platzhalter/Fehlwert (z.B. «1999»/«2006» für Band 151/2025 —
   // W2·6-B B1-Befund) und liess plausible Volltexte fälschlich durchfallen. Der Band
   // ist die kanonische, deterministische Jahresquelle (§2). Fallback: decision_date.
-  const band = parseInt(String(det.docket_number ?? det.bge_reference ?? '').trim(), 10);
+  // Band-Parse: die bge_BGE-Familie trägt docket_number MIT «BGE »-Präfix → strippen,
+  // sonst NaN und der Fallback wäre wieder das (fehleranfällige) decision_date.
+  const band = parseInt(String(det.docket_number ?? det.bge_reference ?? '').replace(/^(?:BGE|ATF|DTF)\s+/i, '').trim(), 10);
   const bandJahr = (Number.isFinite(band) && band > 0 ? band + 1874 : null)
     ?? (Number(String(det.decision_date ?? '').slice(0, 4)) || null);
 
@@ -667,5 +740,12 @@ export async function holeBgeLeitentscheid(bgeId: string, abgerufen: string): Pr
       sha: azaSnap.sha,
     };
   }
-  return { ...basis, azaUrteil: null };
+  // Auszug-only (§8): OHNE aufgelöstes Urteil ist das OCL-`decision_date` KEINE
+  // verlässliche Datumsquelle (Streudaten aus dem Fliesstext, z.B. «1959-05-24» für
+  // BGE 147 IV 433 — Befund Gegenprüfung 12.7.2026: 31/31 Auszug-Daten falsch).
+  // Datum: (1) echtes Urteilsdatum aus dem AMTLICHEN clir-Urteilskopf («… vom
+  // 6. April 2020», kopf.datumFallback), sonst (2) deklarierter Bandjahr-Platzhalter
+  // `<band+1874>-01-01` (UI: «BGE-Jahrgang», Konvention wie aufAuszugZurueck).
+  const auszugDatum = kopf.datumFallback ?? (bandJahr ? `${bandJahr}-01-01` : basis.datum);
+  return { ...basis, datum: auszugDatum, azaUrteil: null };
 }

@@ -1,0 +1,354 @@
+{
+  "erzeugt": "2026-07-12",
+  "eintraege": [
+    {
+      "id": "bund/bge/146_III_106",
+      "gericht": "bge",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "abteilung": "III",
+      "nummer": "146 III 106",
+      "bgeReferenz": "146 III 106",
+      "zitierung": "BGE 146 III 106",
+      "datum": "2020-02-10",
+      "sprache": "de",
+      "leitcharakter": "leitentscheid",
+      "sachgebiet": "privat",
+      "legalArea": "civil",
+      "rubrum": {
+        "besetzung": "Bundesrichter Herrmann, Präsident, Bundesrichterin Escher, Bundesrichter Bovey, Gerichtsschreiber Levante",
+        "parteien": "A.________, vertreten durch Rechtsanwalt Dr. Jean-Daniel Schmid, Beschwerdeführer, gegen B.________, vertreten durch Rechtsanwalt Lukas Blättler, Beschwerdegegner, Betreibungsamt Küsnacht-Zollik on-Zumikon",
+        "gegenstand": "Zahlungsbefehl",
+        "vorinstanz": "Obergerichts des Kantons Zürich, II. Zivilkammer, als oberer kantonaler Aufsichtsbehörde über Schuldbetreibung und Konkurs, vom 11. Juli 2018 (PS180049-O/U)"
+      },
+      "regeste": {
+        "text": "Art. 49, 65 Abs. 3 SchKG; Art. 518 ZGB; Betreibung des Erbschaftsgläubigers gegen den Willensvollstrecker; Betreibungsort. Der Betreibungsort der unverteilten Erbschaft bestimmt sich nach Art. 49 SchKG. Dies gilt auch bei einer gegen den Willensvollstrecker gerichteten Betreibung (E. 3).\nRegeste\n Art. 49, 65 al. 3 LP; art. 518 CC; poursuite du créancier de la succession contre l'exécuteur testamentaire; for de la poursuite. Le for de la poursuite de la succession non partagée se détermine selon l'art. 49 LP. Cela vaut également dans le cas d'une poursuite dirigée contre l'exécuteur testamentaire (consid. 3).\nRegesto\n Art. 49, 65 cpv. 3 LEF; art. 518 CC; esecuzione del creditore della successione contro l'esecutore testamentario; foro d'esecuzione. Il foro d'esecuzione della successione indivisa si determina secondo l'art. 49 LEF. Ciò vale anche in caso di un'esecuzione diretta contro l'esecutore testamentario (consid. 3).",
+        "quelle": "opencaselaw",
+        "sprachfassungen": [
+          {
+            "sprache": "de",
+            "kopf": "Art. 49, 65 Abs. 3 SchKG; Art. 518 ZGB; Betreibung des Erbschaftsgläubigers gegen den Willensvollstrecker; Betreibungsort.",
+            "absaetze": [
+              "Der Betreibungsort der unverteilten Erbschaft bestimmt sich nach Art. 49 SchKG. Dies gilt auch bei einer gegen den Willensvollstrecker gerichteten Betreibung (E. 3)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F146-III-106%3Ade&lang=de&type=show_document"
+          },
+          {
+            "sprache": "fr",
+            "kopf": "Art. 49, 65 al. 3 LP; art. 518 CC; poursuite du créancier de la succession contre l'exécuteur testamentaire; for de la poursuite.",
+            "absaetze": [
+              "Le for de la poursuite de la succession non partagée se détermine selon l'art. 49 LP. Cela vaut également dans le cas d'une poursuite dirigée contre l'exécuteur testamentaire (consid. 3)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F146-III-106%3Afr&lang=fr&type=show_document"
+          },
+          {
+            "sprache": "it",
+            "kopf": "Art. 49, 65 cpv. 3 LEF; art. 518 CC; esecuzione del creditore della successione contro l'esecutore testamentario; foro d'esecuzione.",
+            "absaetze": [
+              "Il foro d'esecuzione della successione indivisa si determina secondo l'art. 49 LEF. Ciò vale anche in caso di un'esecuzione diretta contro l'esecutore testamentario (consid. 3)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F146-III-106%3Ait&lang=it&type=show_document"
+          }
+        ]
+      },
+      "regesteAmtlich": true,
+      "abschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "A.a. Am 8. Dezember 2017 stellte B.________ beim Betreibungsamt Küsnacht-Zollikon-Zumikon das Begehren um Betreibung gegen A.________ \"als Willensvollstrecker im Nachlass C.________ sel.\" für eine Forderung von Fr. 1'280'000.-- nebst Zins von 5% seit 1. April 2017. A.b. Das Betreibungsamt erliess am 11. Dezember 2017 den Zahlungsbefehl Nr. xxx, welcher als Schuldner \"A.________\" und als Forderungsgrund \"1. Kaufpreistranche gemäss Kaufvertrag vom 2./10. Dezember 2016, Passivlegitimation aufgrund Prozessstandschaft als Willensvollstrecker im Nachlass C.________\" nennt. Gegen den am 11. Januar 2018 zugestellten Zahlungsbefehl erhob A.________ gleichentags Rechtsvorschlag. A.c. Gegen den Zahlungsbefehl erhob A.________ am 22. Januar 2018 betreibungsrechtliche Beschwerde beim Bezirksgericht Meilen als untere kantonale Aufsichtsbehörde über die Betreibungsämter. Er beantragte, es sei die Nichtigkeit der Betreibung Nr. xxx (Zahlungsbefehl vom 11. Dezember 2017) des Betreibungsamtes Küsnacht-Zollikon-Zumikon festzustellen, eventualiter sei diese aufzuheben. Mit Entscheid vom 21. März 2018 hob die untere Aufsichtsbehörde die erwähnte Betreibung auf."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "Gegen den Entscheid der unteren Aufsichtsbehörde gelangte B.________ am 5. April 2018 an das Obergericht des Kantons Zürich als obere kantonale Aufsichtsbehörde über Schuldbetreibung und Konkurs. Mit Entscheid vom 11. Juli 2018 wurde die Beschwerde gutgeheissen; der erstinstanzliche Beschwerdeentscheid wurde aufgehoben und der erwähnte Zahlungsbefehl (durch Abweisung der Beschwerde von A.________ vom 22. Januar 2018) bestätigt."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Mit Eingabe vom 2. August 2018 hat A.________ Beschwerde in Zivilsachen erhoben. Der Beschwerdeführer beantragt, es seien das obergerichtliche Urteil aufzuheben und die von B.________ (Beschwerdegegner) mit Zahlungsbefehl vom 11. Dezember 2017 des Betreibungsamtes Küsnacht-Zollikon-Zumikon eingeleitete Betreibung Nr. xxx aufzuheben; eventualiter sei die Sache zur Neubeurteilung an die Vorinstanz zurückzuweisen. Das Obergericht hat auf eine Vernehmlassung verzichtet. Der Beschwerdegegner beantragt die Abweisung der Beschwerde, soweit darauf einzutreten sei. Der Beschwerdeführer und der Beschwerdegegner haben dupliziert bzw. repliziert."
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 1.1",
+              "tiefe": 2,
+              "text": "Angefochten ist ein Entscheid des Obergerichts als kantonaler Aufsichtsbehörde über Schuldbetreibung und Konkurs, welche den mit Beschwerde gegen den Zahlungsbefehl - als betreibungsamtliche Verfügung (Art. 17 SchKG) - angefochtenen Betreibungsort beurteilt hat. Dagegen ist die Beschwerde in Zivilsachen unabhängig eines Streitwertes gegeben (Art. 19 SchKG i.V.m. Art. 72 Abs. 2 lit. a, Art. 74 Abs. 2 lit. c und Art. 75 Abs. 1 BGG)."
+            },
+            {
+              "marke": "E. 1.2",
+              "tiefe": 2,
+              "text": "Der im kantonalen Verfahren unterlegene Beschwerdeführer ist als Willensvollstrecker vom angefochtenen Entscheid hinreichend berührt und hat ein schutzwürdiges Interesse an dessen Aufhebung oder Änderung. Insoweit ist er zur Beschwerde berechtigt (Art. 76 Abs. 1 lit. b BGG)."
+            },
+            {
+              "marke": "E. 1.3",
+              "tiefe": 2,
+              "text": "Mit der vorliegenden Beschwerde kann insbesondere die Verletzung von Bundesrecht gerügt werden (Art. 95 lit. a BGG). In der Beschwerde ist in gedrängter Form darzulegen, inwiefern der angefochtene Entscheid Recht verletzt (Art. 42 Abs. 2 BGG; BGE 140 III 86 E. 2). Die Verletzung verfassungsmässiger Rechte ist ebenfalls zu begründen, wobei hier das Rügeprinzip gilt (BGE 142 III 364 E. 2.4). Das Bundesgericht legt seinem Urteil den Sachverhalt zugrunde, den die Vorinstanz festgestellt hat (Art. 105 BGG)."
+            },
+            {
+              "marke": "E. 2",
+              "tiefe": 1,
+              "text": "Die Aufsichtsbehörde hat im Wesentlichen festgehalten, dass der Willensvollstrecker in gerichtlichen Verfahren und Betreibungen, in welchen es um Aktiven und Passiven der Erbschaft geht, die er zu verwalten hat, in Prozessstandschaft handle. Der Willensvollstrecker habe aufgrund seiner Position im Verfahren \"die Stellung des Schuldners\", weshalb der ordentliche Betreibungsort an seinem Wohnsitz - d.h. am Wohnsitz des Willensvollstreckers - sei. Bei der Betreibung gegen den Nachlass selbst oder gegen den Willensvollstrecker handle es sich um zwei verschiedene Möglichkeiten, eine Vollstreckung in die gleichen Nachlassaktiven zu erhalten. Gewisse Argumente (Beschränkung des Haftungssubstrates, geringer örtlicher Bezug des Willensvollstreckers zur Person des Erblassers bzw. zum Nachlass) würden zwar für die Anwendbarkeit von Art. 49 SchKG sprechen; der Schluss erscheine \"möglich, aber nicht zwingend\". Insgesamt sei überzeugender, den Betreibungsort gemäss Art. 49 SchKG für \"Betreibungen gegen den unverteilten Nachlass\" anzuwenden, allerdings nicht (auch nicht alternativ) im Falle, dass ein Willensvollstrecker ernannt sei. Diesfalls sei der Wohnsitz des Willensvollstreckers (gemäss Art. 46 SchKG) als Betreibungsort zu betrachten. Laut Vorinstanz geben sodann die konkreten Angaben im Zahlungsbefehl keinen Grund zum Zweifel, dass der Beschwerdeführer als Willensvollstrecker im Nachlass des Erblassers für eine mutmassliche Forderung \"gegen den Erblasser bzw. den Nachlass\" betrieben werde. Insgesamt sei der Zahlungsbefehl am Wohnsitz des Beschwerdeführers örtlich korrekt und in gültiger Wiese erlassen worden."
+            },
+            {
+              "marke": "E. 3",
+              "tiefe": 1,
+              "text": "Anlass zur vorliegenden Beschwerde gibt der Zahlungsbefehl gegen einen Willensvollstrecker, gegen welchen in dieser Funktion eine Forderung gegen den Erblasser auf dem Betreibungsweg geltend gemacht wird."
+            },
+            {
+              "marke": "E. 3.1",
+              "tiefe": 2,
+              "text": "Streitpunkt ist, ob ein Betreibungsort am Wohnsitz des Willensvollstreckers - als Wohnsitz des Schuldners (Art. 46 SchKG) - oder ob der Betreibungsort der unverteilten Erbschaft, d.h. der Ort, wo der Erblasser zum Zeitpunkt seines Todes betrieben werden konnte (Art. 49 SchKG), massgebend ist. Der Willensvollstrecker als Beschwerdeführer beruft sich auf Art. 49 SchKG und wirft der Vorinstanz eine Verletzung von Bundesrecht vor, weil sie auf seinen Wohnsitz abgestellt hat. Der Beschwerdegegner macht demgegenüber (unter Hinweis auf die Vorinstanz) geltend, Art. 49 SchKG gelte nicht, wenn der Erblasser einen Willensvollstrecker eingesetzt habe."
+            },
+            {
+              "marke": "E. 3.2",
+              "tiefe": 2,
+              "text": "Für die Betreibung gegen die unverteilte Erbschaft und zur Stellung des Willensvollstreckers gelten folgende Grundsätze."
+            },
+            {
+              "marke": "E. 3.2.1",
+              "tiefe": 3,
+              "text": "Gemäss Art. 49 SchKG kann eine Erbschaft, solange die Teilung nicht erfolgt, eine vertragliche Gemeinderschaft nicht gebildet oder eine amtliche Liquidation nicht angeordnet ist, in der auf den Verstorbenen anwendbaren Betreibungsart an dem Ort betrieben werden, wo der Erblasser zur Zeit seines Todes betrieben werden konnte. Trotz fehlender Rechtspersönlichkeit hat die unverteilte Erbschaft kraft Art. 49 SchKG Parteifähigkeit in einer gegen sie gerichteten Betreibung, d.h. sie ist passiv betreibungsfähig (u.a. GILLIÉRON, Poursuite pour dettes, faillite et concordat, 5. Aufl. 2012, Rz. 339; BGE 116 III 4 E. 2a). Zur Entgegennahme der für die unverteilte Erbschaft bestimmten Betreibungsurkunden ist als Vertreter im Sinne von Art. 65 Abs. 3 SchKG der Willensvollstrecker legitimiert (BGE 101 III 1 E. 1). Wird die unverteilte Erbschaft betrieben, richtet sich die Betreibung gegen die Vermögenswerte der Erbschaft, nicht gegen die Erben persönlich (BGE 116 III 4 E. 2a; 113 III 79 E. 4)."
+            },
+            {
+              "marke": "E. 3.2.2",
+              "tiefe": 3,
+              "text": "Nach der Rechtsprechung ist der Willensvollstrecker in Prozessen um Aktiven und Passiven der Erbschaft Partei, soweit ihm gemäss Art. 518 ZGB die Verwaltung der betreffenden Erbschaftswerte zusteht (BGE 129 V 113 E. 4.2). Abgesehen von den Fällen, wo der Willensvollstrecker in eigener Sache als Partei auftritt, geht es im Streit um Erbschaftswerte nicht um seine eigene materielle Berechtigung. Er führt den Prozess an Stelle des materiell Berechtigten oder Verpflichteten in eigenem Namen und als Partei, wobei er auf seine gesetzliche Ermächtigung hinzuweisen hat. Es handelt sich dabei um eine Prozessstandschaft oder Befugnis der Prozessführung als Partei, welche dem Willensvollstrecker kraft Bundesprivatrecht zusteht (BGE 129 V 113 E. 4.2; Urteil 5A_134/2013 vom 23. Mai 2013 E. 5.1.2; Urteil 4A_600/2018 vom 1. April 2019 E. 4.1). Das Haftungssubstrat bei Prozessen oder Betreibungen gegen den Willensvollstrecker ist auf die Nachlassaktiven beschränkt (BGE 116 II 131 E. 3b; 59 II 119 E. 2 S. 123)."
+            },
+            {
+              "marke": "E. 3.3",
+              "tiefe": 2,
+              "text": "Vorliegend steht fest, dass sich - wie die Aufsichtsbehörde festgehalten hat - die Betreibung gegen den Beschwerdeführer als Willensvollstrecker im Nachlass C.________ richtet und er (der Willensvollstrecker) für eine Forderung des Gläubigers des Erblassers betrieben wird. Unstrittig war die Willensvollstreckung bei Einleitung der Betreibung noch nicht beendet und der Nachlass nicht geteilt. Mit der Frage, wo sich der Betreibungsort einer gegen den Nachlass bzw. Willensvollstrecker gerichteten Betreibung befindet, haben sich Rechtsprechung und Lehre befasst."
+            },
+            {
+              "marke": "E. 3.3.1",
+              "tiefe": 3,
+              "text": "In einem Urteil aus dem Jahre 1939 hielt das Bundesgericht zum Betreibungsort des Wohnsitzes des Willensvollstreckers fest, dass ein Vertreter gemäss Art. 65 Abs. 3 SchKG (wie der Willensvollstrecker) wohl als Zustellungsempfänger in Betracht komme. Hingegen spiele der Wohnsitz des Willensvollstreckers, der auch im Ausland sein könne, keine Rolle für den Betreibungsort in der Schweiz; massgebend sei der Betreibungsort nach Art. 49 SchKG (Urteil B 286/1939 vom 11. Dezember 1939, ZR 1940 Nr. 159 S. 349)."
+            },
+            {
+              "marke": "E. 3.3.2",
+              "tiefe": 3,
+              "text": "Gemäss ESCHER/ESCHER (Berner Kommentar, 1959, N. 33a zu Art. 518 ZGB) ist hinsichtlich der passiven Betreibung gegen den Willensvollstrecker \"die Betreibungsfähigkeit der Erbschaft nach Art. 49 SchKG von Bedeutung\" (ebenso KARRER/VOGT/LEU, in: Basler Kommentar, Zivilgesetzbuch II, 5. Aufl. 2015, N. 72, 79 zu Art. 518 ZGB; STEINAUER, Le droit des successions, 2. Aufl. 2015, Rz. 1183a, je mit Hinw. auf Art. 49 SchKG). Für die Art der Betreibung (auf Pfändung oder Konkurs) wird auf den Erblasser abgestellt, nicht auf die Erben oder den Willensvollstrecker, und der Betreibungsort der unverteilten Erbschaft (Art. 49 SchKG) gilt auch bei einer Betreibung gegen den Willensvollstrecker (KÜNZLE, Berner Kommentar, 2011, N. 508/509 zu Art. 517-518 ZGB; PILLER, in: Commentaire romand, Code civil II, 2016, N. 131 zu Art. 518 ZGB)."
+            },
+            {
+              "marke": "E. 3.3.3",
+              "tiefe": 3,
+              "text": "Weitere Autoren und die kantonale Praxis unterscheiden (einzig) zwischen der Betreibung gegen den (die) Erben einerseits und gegen die unverteilte Erbschaft andererseits. Im letzteren Fall wird auf die Rolle des Willensvollstreckers eingegangen (Art. 65 Abs. 3 SchKG), ohne dass der Betreibungsort (Art. 49 SchKG) davon abhängig wäre, ob ein Willensvollstrecker ernannt worden ist oder nicht (u.a. SCHMID, in: Basler Kommentar, Bundesgesetz über Schuldbetreibung und Konkurs, 2. Aufl. 2010, N. 6 ff., 12 zu Art. 49 SchKG; LAYDU MOLINARI, La poursuite pour les dettes successorales, 1999, S. 157, 167; TSCHUMY, Droit de successions et droit de la poursuite [...], successio 2017 S. 214; SCHÜPBACH, in: Commentaire romand, Poursuite et faillite, 2005, N. 8 zu Art. 49 SchKG; Entscheid ABS 16 273 des Obergerichts Bern vom 23. November 2016 E. 15.1; Entscheid des Obergerichts Obwalden vom 24. November 1993 E. 2, AbR 1992/93 Nr. 23 S. 74)."
+            },
+            {
+              "marke": "E. 3.4",
+              "tiefe": 2,
+              "text": "Die Aufsichtsbehörde hält die (teilweise zitierte) Rechtsprechung und Lehre für nicht überzeugend, um Art. 49 SchKG auf die Betreibung gegen den Willensvollstrecker anzuwenden. Nach der Vorinstanz spricht der Umstand, dass die Betreibung zufolge Prozessstandschaft gegen den Willensvollstrecker persönlich gerichtet sei, für die Anwendung von Art. 46 SchKG, weil er die Stellung des Schuldners habe. Zutreffend ist, dass der Willensvollstrecker nach der Rechtsprechung (E. 3.2.2) kraft seines Amtes Parteistellung hat (sog. Amtstheorie; Urteil 5P.355/2006 vom 8. November 2006 E. 3.1). Entgegen der Auffassung der Vorinstanz führt indessen sowohl die Betreibung gegen die \"unverteilte Erbschaft\" als auch gegen den \"Willensvollstrecker\" zur Anwendung von Art. 49 SchKG, wie im Folgenden darzulegen ist."
+            },
+            {
+              "marke": "E. 3.4.1",
+              "tiefe": 3,
+              "text": "Richtig ist, dass die Erbschaft keine Parteifähigkeit zur aktiven Betreibung hat, sondern hierfür einzig der Willensvollstrecker berechtigt ist (Urteil 5A_768/2014 vom 2. November 2015 E. 1.2.1). Hingegen kommt der unverteilten Erbschaft in der gegen sie gerichteten Betreibung kraft Art. 49 SchKG die Parteifähigkeit und passive Betreibungsfähigkeit zu: In diesem Fall wird die Erbschaft als Partei betrachtet. Danach kommt ihr die Parteirolle zu, und nicht dem Willensvollstrecker, welcher insoweit nur der Vertreter der Erbschaft ist (LORANDI, Erblasser, Erbengemeinschaft, Erbe[n] und Erbschaft als Schuldner, AJP 2012 S. 1388). Es trifft zu, dass die Parteifähigkeit der unverteilten Erbschaft in den gerichtlichen SchKG-Verfahren (Inzidenzverfahren) unterschiedlich beantwortet wird (LORANDI, a.a.O., S. 1387 mit Hinw.). Für die Betreibung ist jedenfalls das betreibungsrechtliche Sonderregime von Art. 49 SchKG massgebend; dieses geht insoweit als lex specialis der allgemeinen Regelung des ZGB vor (LORANDI, a.a.O.; LÖTSCHER, Die Prozessstandschaft, 2016, Rz. 1045), ebenso den bundesrechtlichen Zuständigkeitsvorschriften (Botschaft vom 18. November 1998 zum Gerichtsstandsgesetz, BBl 1999 2829 Ziff. 243, S. 2855). Bei dieser Sichtweise richten sich die Modalitäten der Betreibung (Art, Ort) nach Art. 49 SchKG, und weder Art noch Ort der Betreibung hängen von der Person des Willensvollstreckers ab. Der Willensvollstrecker ist hingegen ausschliesslich befugt, sich der Betreibung zu widersetzen, und in dieser Eigenschaft berechtigt, die Betreibungsurkunden zu empfangen (LAYDU MOLINARI, a.a.O., S. 158). Dies führt zum Schluss, dass im Fall, in welchem - wie hier - eine ungeteilte Erbschaft besteht, die Betreibung am Ort anzuheben ist, wo der Erblasser zur Zeit seines Todes betrieben werden konnte, und nicht am Wohnsitz des Willensvollstreckers."
+            },
+            {
+              "marke": "E. 3.4.2",
+              "tiefe": 3,
+              "text": "Kein anderes Ergebnis folgt aus dem Blickwinkel, wonach der Erbschaftsgläubiger seine Betreibung gegen den Willensvollstrecker richtet. Auch hier bestimmen sich nach einhelliger Meinung (E. 3.3.2) die Art der Betreibung (auf Pfändung oder Konkurs) und der Betreibungsort nach der Person des Erblassers bzw. der unverteilten Erbschaft (Art. 49 SchKG). Um deren passiven Betreibungsfähigkeit Rechnung zu tragen, unterscheidet sich die Parteistellung des Willensvollstreckers im Ergebnis nicht von derjenigen eines Vertreters des Nachlasses. Dieses Ergebnis - d.h. die Einschränkung der Parteirolle des Willensvollstreckers in der Passivbetreibung - steht im Einklang mit Bundesrecht: Der Gesetzgeber hat das Bedürfnis anerkannt, bereits schwebende Betreibungen mit dem Tod des Schuldners mit Beschränkung auf die Nachlassaktiven fortzusetzen (Art. 59 Abs. 2 SchKG) oder auch für Erbschaftsschulden neu einzuleiten (Art. 49 SchKG), insbesondere wenn die Erben auswärts wohnen und der Nachlass nach der Teilung in alle Winde verweht wird (FRITZSCHE/ WALDER, Schuldbetreibung und Konkurs, Bd. I, 1984, § 11 Rz. 10; LAYDU MOLINARI, a.a.O., S. 150 f.). Grenze ist jedoch die Teilung der Erbschaft oder die Bildung der Gemeinderschaft oder amtliche Liquidation, nicht die Einsetzung eines Willensvollstreckers. Seine persönlichen Verhältnisse sind nicht ausschlaggebend: Sein Wohnsitz stellt einen zufälligen Anknüpfungspunkt dar (PICHLER, Die Stellung des Willensvollstreckers in \"nichterbrechtlichen\" Zivilprozessen, 2011, S. 177); nicht sein Privatvermögen, sondern die Nachlassaktiven werden von der Betreibung erfasst (E. 3.2.2). Unter Beachtung von Art. 49 SchKG weist die Betreibung die notwendige Sachnähe nicht nur zum Betreibungsort des Erblassers auf, wie die Vorinstanz selber eingeräumt hat, sondern auch zur Betreibungsart: Dass eine Fortsetzung der Betreibung z.B. auf Konkurs am Wohnort des Willensvollstreckers Sinne mache, weil der Willensvollstrecker - zufällig - der Konkursbetreibung unterliegt, ist nicht ersichtlich. Es besteht kein Anlass, an der Auffassung zu zweifeln, dass die besondere Regelung gemäss Art. 49 SchKG massgebend ist."
+            },
+            {
+              "marke": "E. 3.4.3",
+              "tiefe": 3,
+              "text": "Dem Ergebnis steht sodann nicht entgegen, dass die Betreibung (nicht gegen den \"Nachlass C.________, vertreten durch Willensvollstrecker A.________\", sondern) - wie verbindlich feststeht - gegen den Beschwerdeführer \"als Willensvollstrecker im Nachlass C.________\" gerichtet wurde. Mit der Parteibezeichnung wird bezweckt, dass weder das Privatvermögen des Willensvollstreckers noch das Privatvermögen der Erben betroffen ist (vgl. PICHLER, a.a.O., S. 59 ff.), sondern die Nachlassaktiven. Wegen der unterschiedlichen Haftungsfolgen, muss sich ein Gläubiger mit einer Betreibung von Erbschaftsschulden jedenfalls klar darüber aussprechen, gegen wen er die Betreibung richtet, ob gegen die (oder einzelne) Erben oder gegen die Erbschaft (FRITZSCHE/WALDER, a.a.O., § 11 Rz. 11; BGE 116 III 4 E. 1a; Urteil 5A_967/2015 vom 1. Juli 2016 E. 5.1 mit Hinw.). Dass hier weder die Erben betrieben werden sollen, noch der Willensvollstrecker in eigener Sache, steht ausser Frage, weshalb sich vorliegend aus der Parteibezeichnung nichts gegen die Anwendung von Art. 49 SchKG ableiten lässt."
+            },
+            {
+              "marke": "E. 3.4.4",
+              "tiefe": 3,
+              "text": "Kein anderes Resultat ergibt sich aus den internationalen Bezügen, welche die Vorinstanz herangezogen hat. Der Nachlass des Erblassers untersteht vorliegend (unstrittig) schweizerischem Recht, was indes für die Frage der Anwendbarkeit von Art. 49 SchKG (als zwangsvollstreckungs- und verfahrensrechtliche Norm) nicht als massgebend erachtet wird (SCHMID, a.a.O., N. 17 zu Art. 49 SchKG; vgl. BGE 145 III 205 E. 4.4.6). Vorliegend steht nach dem angefochtenen Urteil fest, dass der Erblasser in der Schweiz keinen Ort hatte, wo er im Zeitpunkt seines Todes betrieben werden konnte (Art. 49 SchKG). Der Wohnsitz des Willensvollstreckers, der auch im Ausland sein kann, spielt indes für die Massgeblichkeit von Art. 49 SchKG keine Rolle - wie das Bundesgericht im Jahre 1939 festgehalten hat (E. 3.3.1). Der Beschwerdeführer kritisiert mit guten Gründen die Auffassung der Vorinstanz, wonach mit der Betreibung am Wohnsitz des Willensvollstreckers dennoch die Betreibung ermöglicht werden soll. Ob und unter welchen Voraussetzungen eine Betreibung am Ort eingeleitet werden kann, wo sich Arrestgegenstände befinden, ist hier nicht zu erörtern; eine Arrestbetreibung liegt unstrittig nicht vor."
+            },
+            {
+              "marke": "E. 3.5",
+              "tiefe": 2,
+              "text": "Nach dem Dargelegten ist mit Bundesrecht nicht vereinbar, wenn die obere Aufsichtsbehörde zum Ergebnis gelangt ist, die Betreibung gegen den Beschwerdegegner als Willensvollstrecker im Nachlass C.________ sei am Wohnsitz des Willensvollstreckers einzuleiten. Die Beschwerde ist begründet und der vom Betreibungsamt am Wohnsitz des Beschwerdeführers ausgestellte Zahlungsbefehl, Betreibung Nr. xxx, ist aufzuheben."
+            },
+            {
+              "marke": "E. 4",
+              "tiefe": 1,
+              "text": "Der Beschwerde ist Erfolg beschieden. In Gutheissung der Beschwerde sind das angefochtene Urteil der oberen kantonalen Aufsichtsbehörde sowie der vom Betreibungsamt Küsnacht-Zollikon-Zumikon ausgestellte Zahlungsbefehl, Betreibung Nr. xxx, aufzuheben. Bei diesem Verfahrensausgang wird der Beschwerdegegner kosten- und entschädigungspflichtig (Art. 66 Abs. 1, Art. 68 Abs. 1 BGG)."
+            }
+          ]
+        },
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": "1.",
+              "text": "Die Beschwerde wird gutgeheissen. Das Urteil des Obergerichts des Kantons Zürich, II. Zivilkammer, als oberer kantonaler Aufsichtsbehörde über Schuldbetreibung und Konkurs, vom 11. Juli 2018 und der Zahlungsbefehl, Betreibung Nr. xxx des Betreibungsamtes Küsnacht-Zollikon-Zumikon, werden aufgehoben."
+            },
+            {
+              "marke": "2.",
+              "text": "Die Gerichtskosten von Fr. 3'000.-- werden dem Beschwerdegegner auferlegt."
+            },
+            {
+              "marke": "3.",
+              "text": "Der Beschwerdegegner hat den Beschwerdeführer mit Fr. 4'500.-- zu entschädigen."
+            },
+            {
+              "marke": "4.",
+              "text": "Dieses Urteil wird den Parteien, dem Betreibungsamt Küsnacht-Zollikon-Zumikon und dem Obergericht des Kantons Zürich, II. Zivilkammer, als oberer kantonaler Aufsichtsbehörde über Schuldbetreibung und Konkurs, schriftlich mitgeteilt."
+            },
+            {
+              "marke": null,
+              "text": "Lausanne, 10. Februar 2020 Im Namen der II. zivilrechtlichen Abteilung des Schweizerischen Bundesgerichts Der Präsident: Herrmann Der Gerichtsschreiber: Levante"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Die Beschwerde wird gutgeheissen. Das Urteil des Obergerichts des Kantons Zürich, II. Zivilkammer, als oberer kantonaler Aufsichtsbehörde über Schuldbetreibung und Konkurs, vom 11. Juli 2018 und der Zahlungsbefehl, Betreibung Nr. xxx des Betreibungsamtes Küsnacht-Zollikon-Zumikon, werden aufgehoben.",
+        "Die Gerichtskosten von Fr. 3'000.-- werden dem Beschwerdegegner auferlegt.",
+        "Der Beschwerdegegner hat den Beschwerdeführer mit Fr. 4'500.-- zu entschädigen.",
+        "Dieses Urteil wird den Parteien, dem Betreibungsamt Küsnacht-Zollikon-Zumikon und dem Obergericht des Kantons Zürich, II. Zivilkammer, als oberer kantonaler Aufsichtsbehörde über Schuldbetreibung und Konkurs, schriftlich mitgeteilt."
+      ],
+      "zitierteNormen": [
+        "Art. 46 SCHKG",
+        "Art. 49 LEF",
+        "Art. 49 LP",
+        "Art. 49 SCHKG",
+        "Art. 518 CC",
+        "Art. 518 ZGB",
+        "Art. 59 Abs. 2 SCHKG",
+        "Art. 65 Abs. 3 SCHKG"
+      ],
+      "normKeys": [
+        "SCHKG",
+        "ZGB",
+        "BGG"
+      ],
+      "zitierteEntscheide": [],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=18&from_date=&to_date=&from_year=2020&to_year=2020&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=180&highlight_docid=atf%3A%2F%2F146-III-106%3Ade&number_of_ranks=200&azaclir=clir",
+      "abgerufen": "2026-07-12",
+      "fassungsToken": "e58695ff82160c4568c28bf46cc08da14f7f4e425e9893711097d9239b83a5f6",
+      "sha": "b5e07ed2b7ac48a1033329296d8287b274fc17a8c7e66984de133d56fbdcd08b",
+      "auszugAbschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": ""
+            },
+            {
+              "marke": "A.a",
+              "tiefe": 2,
+              "text": "Am 8. Dezember 2017 stellte B. beim Betreibungsamt N. das Begehren um Betreibung gegen A. \"als Willensvollstrecker im Nachlass C. sel.\" für eine Forderung von Fr. 1'280'000.- nebst Zins von 5 % seit 1. April 2017."
+            },
+            {
+              "marke": "A.b",
+              "tiefe": 2,
+              "text": "Das Betreibungsamt erliess am 11. Dezember 2017 den Zahlungsbefehl Nr. x, welcher als Schuldner \"A.\" und als Forderungsgrund \"1. Kaufpreistranche gemäss Kaufvertrag vom 2./10. Dezember 2016, Passivlegitimation aufgrund Prozessstandschaft als Willensvollstrecker im Nachlass C.\" nennt. Gegen den am 11. Januar 2018 zugestellten Zahlungsbefehl erhob A. gleichentags Rechtsvorschlag."
+            },
+            {
+              "marke": "A.c",
+              "tiefe": 2,
+              "text": "Gegen den Zahlungsbefehl erhob A. am 22. Januar 2018 betreibungsrechtliche Beschwerde beim Bezirksgericht Meilen als untere kantonale Aufsichtsbehörde über die Betreibungsämter. Er beantragte, es sei die Nichtigkeit der Betreibung Nr. x (Zahlungsbefehl vom11. Dezember 2017) des Betreibungsamtes N. festzustellen, eventualiter sei diese aufzuheben. Mit Entscheid vom 21. März 2018 hob die untere Aufsichtsbehörde die erwähnte Betreibung auf. B. Gegen den Entscheid der unteren Aufsichtsbehörde gelangte B. am 5. April 2018 an das Obergericht des Kantons Zürich als obere kantonale Aufsichtsbehörde über Schuldbetreibung und Konkurs. Mit Entscheid vom 11. Juli 2018 wurde die Beschwerde gutgeheissen; der erstinstanzliche Beschwerdeentscheid wurde aufgehoben und der erwähnte Zahlungsbefehl (durch Abweisung der Beschwerde von A. vom 22. Januar 2018) bestätigt. C. Mit Eingabe vom 2. August 2018 hat A. Beschwerde in Zivilsachen erhoben. Der Beschwerdeführer beantragt, es seien das obergerichtliche Urteil aufzuheben und die von B. (Beschwerdegegner) mit Zahlungsbefehl vom 11. Dezember 2017 des Betreibungsamtes N. eingeleitete Betreibung Nr. x aufzuheben; eventualiter sei die Sache zur Neubeurteilung an die Vorinstanz zurückzuweisen. (...) Das Bundesgericht heisst die Beschwerde gut. (Auszug)"
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 3",
+              "tiefe": 1,
+              "text": "Anlass zur vorliegenden Beschwerde gibt der Zahlungsbefehl gegen einen Willensvollstrecker, gegen welchen in dieser Funktion eine Forderung gegen den Erblasser auf dem Betreibungsweg geltend gemacht wird."
+            },
+            {
+              "marke": "E. 3.1",
+              "tiefe": 2,
+              "text": "Streitpunkt ist, ob ein Betreibungsort am Wohnsitz des Willensvollstreckers - als Wohnsitz des Schuldners (Art. 46 SchKG) - oder ob der Betreibungsort der unverteilten Erbschaft, d.h. der Ort, wo der Erblasser zum Zeitpunkt seines Todes betrieben werden konnte (Art. 49 SchKG), massgebend ist. Der Willensvollstrecker als Beschwerdeführer beruft sich auf Art. 49 SchKG und wirft der Vorinstanz eine Verletzung von Bundesrecht vor, weil sie auf seinen Wohnsitz abgestellt hat. Der Beschwerdegegner macht demgegenüber (unter Hinweis auf die Vorinstanz) geltend, Art. 49 SchKG gelte nicht, wenn der Erblasser einen Willensvollstrecker eingesetzt habe."
+            },
+            {
+              "marke": "E. 3.2",
+              "tiefe": 2,
+              "text": "Für die Betreibung gegen die unverteilte Erbschaft und zur Stellung des Willensvollstreckers gelten folgende Grundsätze. BGE 146 III 106 S. 108"
+            },
+            {
+              "marke": "E. 3.2.1",
+              "tiefe": 3,
+              "text": "Gemäss Art. 49 SchKG kann eine Erbschaft, solange die Teilung nicht erfolgt, eine vertragliche Gemeinderschaft nicht gebildet oder eine amtliche Liquidation nicht angeordnet ist, in der auf den Verstorbenen anwendbaren Betreibungsart an dem Ort betrieben werden, wo der Erblasser zur Zeit seines Todes betrieben werden konnte. Trotz fehlender Rechtspersönlichkeit hat die unverteilte Erbschaft kraft Art. 49 SchKG Parteifähigkeit in einer gegen sie gerichteten Betreibung, d.h. sie ist passiv betreibungsfähig (u.a. GILLIÉRON, Poursuite pour dettes, faillite et concordat, 5. Aufl. 2012, Rz. 339; BGE 116 III 4 E. 2a). Zur Entgegennahme der für die unverteilte Erbschaft bestimmten Betreibungsurkunden ist als Vertreter im Sinne von Art. 65 Abs. 3 SchKG der Willensvollstrecker legitimiert (BGE 101 III 1 E. 1). Wird die unverteilte Erbschaft betrieben, richtet sich die Betreibung gegen die Vermögenswerte der Erbschaft, nicht gegen die Erben persönlich (BGE 116 III 4 E. 2a; BGE 113 III 79 E. 4)."
+            },
+            {
+              "marke": "E. 3.2.2",
+              "tiefe": 3,
+              "text": "Nach der Rechtsprechung ist der Willensvollstrecker in Prozessen um Aktiven und Passiven der Erbschaft Partei, soweit ihm gemäss Art. 518 ZGB die Verwaltung der betreffenden Erbschaftswerte zusteht (BGE 129 V 113 E. 4.2). Abgesehen von den Fällen, wo der Willensvollstrecker in eigener Sache als Partei auftritt, geht es im Streit um Erbschaftswerte nicht um seine eigene materielle Berechtigung. Er führt den Prozess an Stelle des materiell Berechtigten oder Verpflichteten in eigenem Namen und als Partei, wobei er auf seine gesetzliche Ermächtigung hinzuweisen hat. Es handelt sich dabei um eine Prozessstandschaft oder Befugnis der Prozessführung als Partei, welche dem Willensvollstrecker kraft Bundesprivatrecht zusteht (BGE 129 V 113 E. 4.2; Urteile 5A_134/2013 vom 23. Mai 2013 E. 5.1.2; 4A_600/2018 vom 1. April 2019 E. 4.1). Das Haftungssubstrat bei Prozessen oder Betreibungen gegen den Willensvollstrecker ist auf die Nachlassaktiven beschränkt (BGE 116 II 131 E. 3b; 59 II 119 E. 2 S. 123)."
+            },
+            {
+              "marke": "E. 3.3",
+              "tiefe": 2,
+              "text": "Vorliegend steht fest, dass sich - wie die Aufsichtsbehörde festgehalten hat - die Betreibung gegen den Beschwerdeführer als Willensvollstrecker im Nachlass C. richtet und er (der Willensvollstrecker) für eine Forderung des Gläubigers des Erblassers betrieben wird. Unstrittig war die Willensvollstreckung bei Einleitung der Betreibung noch nicht beendet und der Nachlass nicht geteilt. Mit der Frage, wo sich der Betreibungsort einer gegen den Nachlass bzw. Willensvollstrecker gerichteten Betreibung befindet, haben sich Rechtsprechung und Lehre befasst. BGE 146 III 106 S. 109"
+            },
+            {
+              "marke": "E. 3.3.1",
+              "tiefe": 3,
+              "text": "In einem Urteil aus dem Jahre 1939 hielt das Bundesgericht zum Betreibungsort des Wohnsitzes des Willensvollstreckers fest, dass ein Vertreter gemäss Art. 65 Abs. 3 SchKG (wie der Willensvollstrecker) wohl als Zustellungsempfänger in Betracht komme. Hingegen spiele der Wohnsitz des Willensvollstreckers, der auch im Ausland sein könne, keine Rolle für den Betreibungsort in der Schweiz; massgebend sei der Betreibungsort nach Art. 49 SchKG (Urteil B 286/1939 vom 11. Dezember 1939, in: ZR 1940 Nr. 159 S. 349)."
+            },
+            {
+              "marke": "E. 3.3.2",
+              "tiefe": 3,
+              "text": "Gemäss ESCHER/ESCHER (Berner Kommentar, 1959, N. 33a zu Art. 518 ZGB) ist hinsichtlich der passiven Betreibung gegen den Willensvollstrecker \"die Betreibungsfähigkeit der Erbschaft nach Art. 49 SchKG von Bedeutung\" (ebenso KARRER/VOGT/LEU, in: Basler Kommentar, Zivilgesetzbuch, Bd. II, 5. Aufl. 2015, N. 72, 79 zu Art. 518 ZGB; STEINAUER, Le droit des successions, 2. Aufl. 2015, Rz. 1183a; je mit Hinweisen auf Art. 49 SchKG). Für die Art der Betreibung (auf Pfändung oder Konkurs) wird auf den Erblasser abgestellt, nicht auf die Erben oder den Willensvollstrecker, und der Betreibungsort der unverteilten Erbschaft (Art. 49 SchKG) gilt auch bei einer Betreibung gegen den Willensvollstrecker (KÜNZLE, Berner Kommentar, 2011, N. 508/509 zu Art. 517-518 ZGB; PILLER, in: Commentaire romand, Code civil, Bd. II, 2016, N. 131 zu Art. 518 ZGB)."
+            },
+            {
+              "marke": "E. 3.3.3",
+              "tiefe": 3,
+              "text": "Weitere Autoren und die kantonale Praxis unterscheiden (einzig) zwischen der Betreibung gegen den (die) Erben einerseits und gegen die unverteilte Erbschaft andererseits. Im letzteren Fall wird auf die Rolle des Willensvollstreckers eingegangen (Art. 65 Abs. 3 SchKG), ohne dass der Betreibungsort (Art. 49 SchKG) davon abhängig wäre, ob ein Willensvollstrecker ernannt worden ist oder nicht (u.a. SCHMID, in: Basler Kommentar, Bundesgesetz über Schuldbetreibung und Konkurs, 2. Aufl. 2010, N. 6 ff., 12 zu Art. 49 SchKG; LAYDU MOLINARI, La poursuite pour les dettes successorales, 1999, S. 157, 167; TSCHUMY, Droit de successions et droit de la poursuite [...], successio 2017 S. 214; SCHÜPBACH, in: Commentaire romand, Poursuite et faillite, 2005, N. 8 zu Art. 49 SchKG; Entscheid ABS 16 273 des Obergerichts Bern vom 23. November 2016 E. 15.1; Entscheid des Obergerichts Obwalden vom 24. November 1993 E. 2, in: Amtsbericht über die Rechtspflege des Kantons Obwalden [AbR] 1992/93 Nr. 23 S. 74)."
+            },
+            {
+              "marke": "E. 3.4",
+              "tiefe": 2,
+              "text": "Die Aufsichtsbehörde hält die (teilweise zitierte) Rechtsprechung und Lehre für nicht überzeugend, um Art. 49 SchKG auf die BGE 146 III 106 S. 110 Betreibung gegen den Willensvollstrecker anzuwenden. Nach der Vorinstanz spricht der Umstand, dass die Betreibung zufolge Prozessstandschaft gegen den Willensvollstrecker persönlich gerichtet sei, für die Anwendung von Art. 46 SchKG, weil er die Stellung des Schuldners habe. Zutreffend ist, dass der Willensvollstrecker nach der Rechtsprechung (E. 3.2.2) kraft seines Amtes Parteistellung hat (sog. Amtstheorie; Urteil 5P.355/2006 vom 8. November 2006 E. 3.1). Entgegen der Auffassung der Vorinstanz führt indessen sowohl die Betreibung gegen die \"unverteilte Erbschaft\" als auch gegen den \"Willensvollstrecker\" zur Anwendung von Art. 49 SchKG, wie im Folgenden darzulegen ist."
+            },
+            {
+              "marke": "E. 3.4.1",
+              "tiefe": 3,
+              "text": "Richtig ist, dass die Erbschaft keine Parteifähigkeit zur aktiven Betreibung hat, sondern hierfür einzig der Willensvollstrecker berechtigt ist (Urteil 5A_768/2014 vom 2. November 2015 E. 1.2.1). Hingegen kommt der unverteilten Erbschaft in der gegen sie gerichteten Betreibung kraft Art. 49 SchKG die Parteifähigkeit und passive Betreibungsfähigkeit zu: In diesem Fall wird die Erbschaft als Partei betrachtet. Danach kommt ihr die Parteirolle zu, und nicht dem Willensvollstrecker, welcher insoweit nur der Vertreter der Erbschaft ist (LORANDI, Erblasser, Erbengemeinschaft, Erbe[n] und Erbschaft als Schuldner, AJP 2012 S. 1388). Es trifft zu, dass die Parteifähigkeit der unverteilten Erbschaft in den gerichtlichen SchKG-Verfahren (Inzidenzverfahren) unterschiedlich beantwortet wird (LORANDI, a.a.O., S. 1387 mit Hinweisen). Für die Betreibung ist jedenfalls das betreibungsrechtliche Sonderregime von Art. 49 SchKG massgebend; dieses geht insoweit als lex specialis der allgemeinen Regelung des ZGB vor (LORANDI, a.a.O.; LÖTSCHER, Die Prozessstandschaft, 2016, Rz. 1045), ebenso den bundesrechtlichen Zuständigkeitsvorschriften (Botschaft vom 18. November 1998 zum Gerichtsstandsgesetz, BBl 1999 2829, 2855 Ziff. 243). Bei dieser Sichtweise richten sich die Modalitäten der Betreibung (Art, Ort) nach Art. 49 SchKG, und weder Art noch Ort der Betreibung hängen von der Person des Wilensvollstreckers ab. Der Willensvollstrecker ist hingegen ausschliesslich befugt, sich der Betreibung zu widersetzen, und in dieser Eigenschaft berechtigt, die Betreibungsurkunden zu empfangen (LAYDU MOLINARI, a.a.O., S. 158). Dies führt zum Schluss, dass im Fall, in welchem - wie hier - eine ungeteilte Erbschaft besteht, die Betreibung am Ort anzuheben ist, wo der Erblasser zur Zeit seines Todes betrieben werden konnte, und nicht am Wohnsitz des Willensvollstreckers."
+            },
+            {
+              "marke": "E. 3.4.2",
+              "tiefe": 3,
+              "text": "Kein anderes Ergebnis folgt aus dem Blickwinkel, wonach der Erbschaftsgläubiger seine Betreibung gegen den Willensvollstrecker BGE 146 III 106 S. 111 richtet. Auch hier bestimmen sich nach einhelliger Meinung (E. 3.3.2) die Art der Betreibung (auf Pfändung oder Konkurs) und der Betreibungsort nach der Person des Erblassers bzw. der unverteilten Erbschaft (Art. 49 SchKG). Um deren passiven Betreibungsfähigkeit Rechnung zu tragen, unterscheidet sich die Parteistellung des Willensvollstreckers im Ergebnis nicht von derjenigen eines Vertreters des Nachlasses. Dieses Ergebnis - d.h. die Einschränkung der Parteirolle des Willensvollstreckers in der Passivbetreibung - steht im Einklang mit Bundesrecht: Der Gesetzgeber hat das Bedürfnis anerkannt, bereits schwebende Betreibungen mit dem Tod des Schuldners mit Beschränkung auf die Nachlassaktiven fortzusetzen (Art. 59 Abs. 2 SchKG) oder auch für Erbschaftsschulden neu einzuleiten (Art. 49 SchKG), insbesondere wenn die Erben auswärts wohnen und der Nachlass nach der Teilung in alle Winde verweht wird (FRITZSCHE/WALDER, Schuldbetreibung und Konkurs, Bd. I, 1984, § 11 Rz. 10; LAYDU MOLINARI, a.a.O., S. 150 f.). Grenze ist jedoch die Teilung der Erbschaft oder die Bildung der Gemeinderschaft oder amtliche Liquidation, nicht die Einsetzung eines Willensvollstreckers. Seine persönlichen Verhältnisse sind nicht ausschlaggebend: Sein Wohnsitz stellt einen zufälligen Anknüpfungspunkt dar (PICHLER, Die Stellung des Willensvollstreckers in \"nichterbrechtlichen\" Zivilprozessen, 2011, S. 177); nicht sein Privatvermögen, sondern die Nachlassaktiven werden von der Betreibung erfasst (E. 3.2.2). Unter Beachtung von Art. 49 SchKG weist die Betreibung die notwendige Sachnähe nicht nur zum Betreibungsort des Erblassers auf, wie die Vorinstanz selber eingeräumt hat, sondern auch zur Betreibungsart: Dass eine Fortsetzung der Betreibung z.B. auf Konkurs am Wohnort des Willensvollstreckers Sinne mache, weil der Willensvollstrecker - zufällig - der Konkursbetreibung unterliegt, ist nicht ersichtlich. Es besteht kein Anlass, an der Auffassung zu zweifeln, dass die besondere Regelung gemäss Art. 49 SchKG massgebend ist."
+            },
+            {
+              "marke": "E. 3.4.3",
+              "tiefe": 3,
+              "text": "Dem Ergebnis steht sodann nicht entgegen, dass die Betreibung (nicht gegen den \"Nachlass C., vertreten durch Willensvollstrecker A.\", sondern) - wie verbindlich feststeht - gegen den Beschwerdeführer \"als Willensvollstrecker im Nachlass C.\" gerichtet wurde. Mit der Parteibezeichnung wird bezweckt, dass weder das Privatvermögen des Willensvollstreckers noch das Privatvermögen der Erben betroffen ist (vgl. PICHLER, a.a.O., S. 59 ff.), sondern die Nachlassaktiven. Wegen der unterschiedlichen Haftungsfolgen, muss sich ein Gläubiger mit einer Betreibung von Erbschaftsschulden jedenfalls klar darüber aussprechen, gegen wen er die Betreibung richtet, BGE 146 III 106 S. 112 ob gegen die (oder einzelne) Erben oder gegen die Erbschaft (FRITZSCHE/WALDER, a.a.O., § 11 Rz. 11; BGE 116 III 4 E. 1a; Urteil 5A_967/2015 vom 1. Juli 2016 E. 5.1 mit Hinweisen). Dass hier weder die Erben betrieben werden sollen, noch der Willensvollstrecker in eigener Sache, steht ausser Frage, weshalb sich vorliegend aus der Parteibezeichnung nichts gegen die Anwendung von Art. 49 SchKG ableiten lässt."
+            },
+            {
+              "marke": "E. 3.4.4",
+              "tiefe": 3,
+              "text": "Kein anderes Resultat ergibt sich aus den internationalen Bezügen, welche die Vorinstanz herangezogen hat. Der Nachlass des Erblassers untersteht vorliegend (unstrittig) schweizerischem Recht, was indes für die Frage der Anwendbarkeit von Art. 49 SchKG (als zwangsvollstreckungs- und verfahrensrechtliche Norm) nicht als massgebend erachtet wird (SCHMID, a.a.O., N. 17 zu Art. 49 SchKG; vgl. BGE 145 III 205 E. 4.4.6). Vorliegend steht nach dem angefochtenen Urteil fest, dass der Erblasser in der Schweiz keinen Ort hatte, wo er im Zeitpunkt seines Todes betrieben werden konnte (Art. 49 SchKG). Der Wohnsitz des Willensvollstreckers, der auch im Ausland sein kann, spielt indes für die Massgeblichkeit von Art. 49 SchKG keine Rolle - wie das Bundesgericht im Jahre 1939 festgehalten hat (E. 3.3.1). Der Beschwerdeführer kritisiert mit guten Gründen die Auffassung der Vorinstanz, wonach mit der Betreibung am Wohnsitz des Willensvollstreckers dennoch die Betreibung ermöglicht werden soll. Ob und unter welchen Voraussetzungen eine Betreibung am Ort eingeleitet werden kann, wo sich Arrestgegenstände befinden, ist hier nicht zu erörtern; eine Arrestbetreibung liegt unstrittig nicht vor."
+            },
+            {
+              "marke": "E. 3.5",
+              "tiefe": 2,
+              "text": "Nach dem Dargelegten ist mit Bundesrecht nicht vereinbar, wenn die obere Aufsichtsbehörde zum Ergebnis gelangt ist, die Betreibung gegen den Beschwerdegegner als Willensvollstrecker im Nachlass C. sei am Wohnsitz des Willensvollstreckers einzuleiten. Die Beschwerde ist begründet und der vom Betreibungsamt am Wohnsitz des Beschwerdeführers ausgestellte Zahlungsbefehl, Betreibung Nr. x, ist aufzuheben."
+            }
+          ]
+        }
+      ],
+      "azaUrteil": {
+        "aktenzeichen": "5A_638/2018",
+        "key": "bger_5A_638_2018",
+        "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=1&from_date=10.02.2020&to_date=10.02.2020&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=3&azaclir=aza&highlight_docid=aza%3A%2F%2F10-02-2020-5A_638-2018&number_of_ranks=31"
+      },
+      "ecli": "ECLI:CH:BGE:2020:146.III.106"
+    }
+  ]
+}

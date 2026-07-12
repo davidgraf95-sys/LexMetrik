@@ -1,0 +1,388 @@
+{
+  "erzeugt": "2026-07-12",
+  "eintraege": [
+    {
+      "id": "bund/bge/146_III_303",
+      "gericht": "bge",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "abteilung": "III",
+      "nummer": "146 III 303",
+      "bgeReferenz": "146 III 303",
+      "zitierung": "BGE 146 III 303",
+      "datum": "2020-03-10",
+      "sprache": "fr",
+      "leitcharakter": "leitentscheid",
+      "sachgebiet": "privat",
+      "legalArea": null,
+      "rubrum": {
+        "besetzung": "Mme et MM. les Juges fédéraux Herrmann, Président, Escher et Bovey. Greffière: Mme Achtari",
+        "parteien": "A.________ SA (A.________), représentée par Me Alain Ribordy, avocat, recourante, contre Office des poursuites de la Veveyse, B.________ SA, représentée par Me Jean-Marc Reymond, avocat",
+        "gegenstand": "Prise d'inventaire pour sauvegarde d'un droit de rétention du bailleur (plainte 17 LP)",
+        "vorinstanz": "Tribunal cantonal de l'Etat de Fribourg, Chambre des poursuites et faillites, en qualité d'Autorité de surveillance, du 13 septembre 2019 (105 2019 103 & 112)"
+      },
+      "regeste": {
+        "text": "Art. 95, 98 BGG; Art. 283 SchKG; Rechtsnatur der Aufnahme des Retentionsverzeichnisses; Folgen für die Beschwerde in Zivilsachen. Unterscheidung der Rechtsnatur der Aufnahme des Retentionsverzeichnisses danach, ob die materiellen Voraussetzungen oder der Vollzug dieser Massnahme streitig sind (E. 2).\nRegeste\n Art. 95, 98 LTF; art. 283 LP; nature de la prise d'inventaire pour sauvegarde des droits de rétention du bailleur; conséquence sur le recours en matière civile. Distinction sur la nature de la prise d'inventaire selon que le litige porte sur les conditions matérielles ou sur l'exécution de cette mesure (consid. 2).\nRegesto\n Art. 95, 98 LTF; art. 283 LEF; natura dell'inventario degli oggetti vincolati al diritto di ritenzione del locatore; conseguenza sul ricorso in materia civile. Distinzione circa la natura dell'inventario a seconda che il litigio verta sulle condizioni materiali o sull'esecuzione di tale misura (consid. 2).",
+        "quelle": "opencaselaw",
+        "sprachfassungen": [
+          {
+            "sprache": "de",
+            "kopf": "Art. 95, 98 BGG; Art. 283 SchKG; Rechtsnatur der Aufnahme des Retentionsverzeichnisses; Folgen für die Beschwerde in Zivilsachen.",
+            "absaetze": [
+              "Unterscheidung der Rechtsnatur der Aufnahme des Retentionsverzeichnisses danach, ob die materiellen Voraussetzungen oder der Vollzug dieser Massnahme streitig sind (E. 2)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F146-III-303%3Ade&lang=de&type=show_document"
+          },
+          {
+            "sprache": "fr",
+            "kopf": "Art. 95, 98 LTF; art. 283 LP; nature de la prise d'inventaire pour sauvegarde des droits de rétention du bailleur; conséquence sur le recours en matière civile.",
+            "absaetze": [
+              "Distinction sur la nature de la prise d'inventaire selon que le litige porte sur les conditions matérielles ou sur l'exécution de cette mesure (consid. 2)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/fr/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F146-III-303%3Afr&lang=fr&type=show_document"
+          },
+          {
+            "sprache": "it",
+            "kopf": "Art. 95, 98 LTF; art. 283 LEF; natura dell'inventario degli oggetti vincolati al diritto di ritenzione del locatore; conseguenza sul ricorso in materia civile.",
+            "absaetze": [
+              "Distinzione circa la natura dell'inventario a seconda che il litigio verta sulle condizioni materiali o sull'esecuzione di tale misura (consid. 2)."
+            ],
+            "quelleUrl": "https://www.bger.ch/ext/eurospider/live/it/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F146-III-303%3Ait&lang=it&type=show_document"
+          }
+        ]
+      },
+      "regesteAmtlich": true,
+      "abschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": "A.",
+              "tiefe": 1,
+              "text": "La société A.________ SA (ci-après: A.________), en qualité de locataire, et la société B.________ SA, en qualité de bailleresse, ont conclu plusieurs contrats de bail à loyer portant sur différents locaux commerciaux sis à la route xxx, à U.________. Le 16 octobre 2018, la bailleresse a résilié les baux en question avec effet au 30 novembre 2018. La locataire a contesté cette résiliation devant la Commission de conciliation en matière de bail à loyer des districts du Sud à une date indéterminée. Cette procédure est toujours pendante."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": "B.a. B.a.a. Le 20 juin 2019, B.________ SA a requis une prise d'inventaire pour sauvegarde des droits de rétention du bailleur à l'encontre de A.________ auprès de l'Office des poursuites de la Veveyse (ci-après: office). L'office a exécuté l'inventaire le 25 juin 2019 et établi les procès-verbaux nos 1, 2, 3 et 4 en date du 2 juillet 2019, qu'il a ensuite communiqués aux parties. B.a.b. Le 10 juillet 2019, B.________ SA a introduit les poursuites nos 5, 6 et 7 en validation d'inventaire auprès de l'office. Le 15 juillet 2019, les trois commandements de payer ont été notifiés à A.________, laquelle a formé opposition totale le même jour. B.b. B.b.a. Par acte du 5 juillet 2019, A.________ a saisi la Chambre des poursuites et faillites du Tribunal cantonal de l'Etat de Fribourg (ci-après: Chambre des poursuites et faillites) d'une première plainte concluant, principalement, à ce que la nullité des inventaires précités de l'office soit constatée, subsidiairement, à ce que ces inventaires soient annulés, plus subsidiairement, à ce qu'elle soit autorisée, sous le contrôle de l'office, à déménager les biens faisant l'objet des inventaires litigieux dans les locaux qu'elle compte exploiter à la route de yyy, à U.________, encore plus subsidiairement, à ce qu'elle soit autorisée à déménager les biens faisant l'objet des inventaires précités moyennant la fourniture de sûretés à hauteur de 2'201 fr. B.b.b. Par acte du 17 juillet 2019, A.________ a saisi la Chambre des poursuites et faillites d'une seconde plainte concluant, principalement, à ce que la nullité des commandements de payer précités de l'office soit constatée, subsidiairement, à ce que ces commandements de payer soient annulés. B.b.c. Par arrêt du 13 septembre 2019, après avoir joint les plaintes, la Chambre des poursuites et faillites a rejeté celles-ci, dans la mesure de leur recevabilité."
+            },
+            {
+              "marke": "C.",
+              "tiefe": 1,
+              "text": "Par acte posté le 24 septembre 2019, A.________ exerce un recours en matière civile contre cet arrêt devant le Tribunal fédéral. Elle conclut à la réforme de l'arrêt attaqué en ce sens que, principalement, la nullité des quatre inventaires et des trois commandements de payer précités est constatée, subsidiairement, à ce que ces actes sont annulés, encore plus subsidiairement, à ce qu'elle est autorisée à déménager les objets portés aux quatre inventaires précités de l'office dans les locaux qu'elle exploitera route de yyy à U.________, sous le contrôle de l'office. En substance, elle se plaint de la violation de son droit d'être entendu (art. 29 al. 2 Cst.), d'arbitraire dans l'établissement des faits (art. 9 Cst.), d'abus de droit (art. 2 CC), et de la violation des art. 268 CO, 92 et 98 LP. Des observations n'ont pas été requises."
+            },
+            {
+              "marke": "D.",
+              "tiefe": 1,
+              "text": "Par ordonnance du 26 septembre 2019, la requête d'effet suspensif assortissant le recours a été déclarée sans objet et celle de mesures provisionnelles tendant à autoriser la recourante à déménager les objets portés aux inventaires rejetée."
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 1",
+              "tiefe": 1,
+              "text": "Le recours est interjeté en temps utile (art. 100 al. 2 let. a LTF) à l'encontre d'une décision finale (art. 90 LTF; ATF 133 III 350 consid. 1.2), rendue en matière de poursuite pour dettes (art. 72 al. 2 let. a LTF, en relation avec l' art. 19 LP) par une autorité de surveillance de dernière (unique) instance cantonale (art. 75 LTF). Il est ouvert indépendamment de la valeur litigieuse (art. 74 al. 2 let. c LTF). La plaignante, qui a succombé devant la cour cantonale a qualité pour recourir (art. 76 al. 1 LTF)."
+            },
+            {
+              "marke": "E. 2",
+              "tiefe": 1,
+              "text": "La question de la nature de la mesure attaquée, provisionnelle ou non, se pose. Si les mesures provisionnelles en matière civile sont soumises à la même voie de recours que les jugements au fond (art. 72 ss LTF), cette qualification influe sur les moyens recevables en instance fédérale (art. 98 LTF) - donc sur la cognition du Tribunal fédéral -, l'obligation de motiver (art. 106 al. 2 LTF) et la computation du délai de recours (art. 46 al. 2 LTF; BRACONI, Le contentieux des mesures provisionnelles au Tribunal fédéral en matière de poursuite pour dettes et faillite,\n\nin Mélanges à la mémoire de Bernard Corboz, 2019, p. 317 ss [318]; cité: Mesures provisionnelles). Plus précisément, si la décision attaquée porte sur des mesures provisionnelles au sens de l' art. 98 LTF, seule peut être invoquée dans le recours en matière civile la violation de droits constitutionnels. Le Tribunal fédéral n'examine de tels griefs que s'ils ont été invoqués et motivés (\" principe d'allégation \", art. 106 al. 2 LTF), à savoir expressément soulevés et exposés de manière claire et détaillée (ATF 134 I 83 consid. 3.2 et les références). A l'inverse, si la décision n'est pas de nature provisionnelle, le recours en matière civile peut être formé pour violation du droit, tel qu'il est délimité par les art. 95 s. LTF."
+            },
+            {
+              "marke": "E. 2.1",
+              "tiefe": 2,
+              "text": "De manière générale, les mesures provisionnelles au sens de l' art. 98 LTF sont les décisions à caractère temporaire qui règlent une situation juridique en attente d'une réglementation définitive au travers d'une décision principale ultérieure (ATF 133 III 393 consid. 5.1). Pour qualifier une mesure de provisionnelle, le type de procédure dans lequel la décision a été rendue n'est pas pertinent; il s'agit plutôt de déterminer si elle tranche l'affaire matériellement au fond avec l'autorité de la chose jugée, sur la base d'une appréciation complète des faits et du droit et sans que la décision finale ne soit réservée à une procédure principale (ATF 133 III 589 consid. 1).\n\nEn matière d'exécution forcée, bon nombre d'actes des organes de poursuite visent uniquement à préserver les droits d'exécution du créancier, de sorte qu'il est difficile de qualifier ceux-ci de mesures provisionnelles au sens de l' art. 98 LTF. A défaut, des parties entières de la LP ne pourraient être contrôlées qu'à l'aune de griefs limités à ceux de nature constitutionnelle, ce que le législateur n'a pas envisagé. Au vu de cette situation, les décisions des organes de poursuite qui, en tant qu'actes matériels, mettent en oeuvre une décision judiciaire ou qui ne sont que la conséquence d'une décision entrée en force n'entrent pas dans le champ d'application de l' art. 98 LTF, même si la décision suite à laquelle ils agissent constitue elle-même une mesure provisionnelle; il en va ainsi de l'exécution du séquestre (ATF 136 III 379 consid. 1.2). A l'inverse, les décisions des organes de poursuite qui sont prises avant qu'une décision définitive soit rendue et qui visent uniquement à sauvegarder des biens précis en l'attente de cette décision sont des mesures provisionnelles au sens de l' art. 98 LTF; il en va ainsi des mesures de sûretés si elles sont prises avant la saisie et sont nécessaires à préparer celle-ci et à préserver les intérêts du créancier (ATF 142 III 643 consid. 2.1; 115 III 41 consid. 2; arrêt 5A_616/2017 du 14 mars 2018 consid. 6; LEVANTE,\n\nin Basler Kommentar, SchKG I, 2\n\nème éd., 2010, nos 70 ss ad art. 19 LTF)."
+            },
+            {
+              "marke": "E. 2.2.1",
+              "tiefe": 3,
+              "text": "Le droit de rétention du bailleur de locaux commerciaux est un droit de gage légal qui a pour but de garantir les loyers écoulés et du semestre courant (art. 268 al. 1 CO).\n\nDans l'exécution forcée, il est considéré comme un gage mobilier (art. 37 al. 2 LP) que le bailleur doit faire valoir par la voie de la poursuite en réalisation du gage (art. 151 ss LP; ATF 124 III 215 consid. 1b; BRACONI, L'exécution forcée des créances pécuniaires et en prestation de sûretés en matière de bail,\n\nin 16\n\nème Séminaire sur le droit du bail, 2010, p. 138 ss [143]; SCHNYDER/WIEDE,\n\nin Basler Kommentar, SchKG II, 2\n\nème éd., 2010, n° 8 ad art. 283 LP).\n\nL' art. 283 LP confère au bailleur la possibilité de requérir le concours de l'office des poursuites pour obtenir la protection provisoire de son droit de rétention. A cette fin, l'office dresse un inventaire des objets soumis au droit de rétention et assigne au bailleur un délai pour requérir la poursuite en réalisation de gage (arrêt 7B.82/2002 du 23 juillet 2002 consid. 2.2, publié\n\nin Pra 2002 (214) p. 1138). La prise d'inventaire a un effet conservatoire déterminant. En effet, le droit de rétention naît avec l'arrivée des meubles dans les locaux loués, la prise d'inventaire de l' art. 283 LP ne faisant que lui donner une manifestation extérieure. Toutefois, sous réserve du droit de suite du bailleur selon l' art. 268b CO, ce droit s'éteint dès que les meubles sortent définitivement des locaux loués, à moins que l'inventaire ait été dressé (arrêt 5C.52/2000 du 18 avril 2000 consid. 2c)."
+            },
+            {
+              "marke": "E. 2.2.2",
+              "tiefe": 3,
+              "text": "Si tant le Tribunal fédéral que la doctrine qualifient la prise d'inventaire de mesure conservatoire (ATF 116 III 120 consid. 3c; AMONN/WALTHER, Grundriss des Schuldbetreibungs- und Konkursrechts, 9ème éd., 2013, § 34 n° 28; BRACONI,\n\nop. cit., p. 145; SCHNYDER/ WIEDE,\n\nop. cit., n° 59 ad art. 283 LP; STOFFEL/CHABLOZ, Voies d'exécution, 3\n\nème éd., 2016, § 6 n° 53; STOFFEL/OULEVEY,\n\nin Commentaire romand, Poursuite et faillite, 2005, n° 5 ad art. 283 LP), les conséquences de cette qualification sur l'application de l' art. 98 LTF au recours ne sont pas évidentes. Dans un arrêt non publié de 2016, le Tribunal fédéral a affirmé que la décision par laquelle l'office ordonne l'inventaire des biens du locataire en vertu de l' art. 283 LP porte sur des mesures provisionnelles au sens de l' art. 98 LTF par analogie avec le séquestre (arrêt 5A_361/2015 du 28 janvier 2016 consid. 1.2, publié\n\nin RtiD 2016 II p. 677); l'année suivante, s'il a certes laissé ouverte la question de savoir si cet arrêt devait être confirmé, il a en revanche affirmé que la prise d'inventaire n'était en tant que telle pas provisoire et qu'une limitation des griefs à ceux de nature constitutionnelle ne semblait pas justifiée dans le recours en matière civile (arrêt 5A_240/2017 du 21 novembre 2017 consid. 1.2). Il convient dès lors de lever l'incertitude sur cette question (cf. KREN KOSTKIEWICZ, Schuldbetreibungs- & Konkursrecht, 3\n\nème éd., 2018, n° 1058)."
+            },
+            {
+              "marke": "E. 2.3.1",
+              "tiefe": 3,
+              "text": "La prise d'inventaire est une mesure unilatérale, ordonnée sur la base de la réquisition du créancier, sans convocation du débiteur (ATF 93 III 20 consid. 3). Celui-ci en est informé lors de la communication du procès-verbal d'inventaire (STOFFEL/OULEVEY,\n\nop. cit., n° 29 ad art. 283 LP). L'office des poursuites examine sommairement et à titre préjudiciel (ATF 109 III 42 consid. 1) si les conditions matérielles du droit de rétention sont remplies (ATF 52 III 122 [126]). Il ne peut refuser, pour des raisons de droit matériel, de dresser un inventaire des objets soumis au droit de rétention du bailleur, que si l'inexistence de ce droit est manifeste (ATF 97 III 43 consid. 1). Il appartient ensuite au juge civil d'en décider définitivement (ATF 71 III 15 consid. 2; 52 précité; AMONN/WALTHER,\n\nop. cit., § 34 nos 16 s.; ROHNER,\n\nin Kurzkommentar SchKG, 2ème éd., 2014, nos 13 et 15 ad art. 283 LP; SCHNYDER/WIEDE,\n\nop. cit., n° 51 ad art. 283 LP).\n\nL'examen sommaire des conditions matérielles du droit de rétention du bailleur, notamment son étendue d'un point de vue matériel et temporel, par les autorités de poursuite est exceptionnellement justifié dans cette procédure particulière. A l'inverse des autres mesures d'exécution, en particulier du séquestre (art. 272 LP), il est porté atteinte de manière importante aux droits du débiteur sans examen préalable par une autorité judiciaire. Cela étant, il demeure que les autorités de poursuite ne sont en principe pas qualifiées pour trancher des questions de nature purement civile, comme celle de l'existence ou de la non-existence du droit de rétention. Dès lors, à moins que la solution ne s'impose d'emblée avec évidence, elles doivent se garder de prendre une position qui exclue la possibilité de soumettre le conflit au juge. En cas de doute sur des questions de droit matériel, elles ne doivent donc pas anticiper sur la décision judiciaire et exécuter la requête de prise d'inventaire (ATF 105 III 80 consid. 1; 59 III 10 consid. 2; SCHNYDER/WIEDE,\n\nop. cit., n° 52 ad art. 283 LP)."
+            },
+            {
+              "marke": "E. 2.3.2",
+              "tiefe": 3,
+              "text": "Le bailleur peut requérir la prise d'inventaire en tout temps (art. 56 LP), avec ou sans poursuite préalable (art. 283 al. 1 LP; cf. GASSER, Betreibung für Miet- und Pachtzinsforderungen,\n\nin BlSchK 1999 p. 81 ss [87 ss]). Dans le premier cas, il joint la demande d'inventaire à sa réquisition de poursuite. Dans le second cas, l'office procède immédiatement à la prise d'inventaire et octroie un délai au bailleur pour valider la mesure par une poursuite en réalisation de gage (art. 283 al. 3 LP). La poursuite doit être requise, pour les créances de loyer échues, dans les dix jours dès la notification du procès-verbal d'inventaire des objets frappés du droit de rétention et, pour les créances de loyer courant, dans les dix jours dès leur échéance (ATF 105 III 85 consid. 2). La situation spéciale de la prise d'inventaire doit être liquidée sans retard, pour éviter que les droits du locataire soient injustement compromis par les effets de la prise d'inventaire, de sorte que l' art. 278 LP doit s'appliquer par analogie (ATF 52 III 122 [125]). Il suffit cependant, pour maintenir les effets de la prise d'inventaire pour le loyer courant, d'introduire une poursuite dans les dix jours à compter de l'échéance du dernier terme de la période de loyer pour laquelle le droit de rétention est exercé (ATF 105 III précité). La validation doit porter sur la créance pour laquelle l'inventaire a été autorisé (ATF 120 III 157 consid. 2). Si le jugement prononce la mainlevée provisoire de l'opposition tant pour la créance que pour le droit de rétention, le poursuivi doit ouvrir action en libération pour contester et la créance et le droit de rétention. S'il la refuse ou ne la prononce que pour la créance, il appartient alors au bailleur d'ouvrir action pour faire reconnaître ses droits (ATF 71 III 15 consid. 2)."
+            },
+            {
+              "marke": "E. 2.3.3",
+              "tiefe": 3,
+              "text": "Le procès-verbal d'inventaire constitue une liste qui recense les biens du débiteur soumis au droit de rétention du bailleur. L'établissement du procès-verbal d'inventaire n'a aucune influence sur l'existence du droit de rétention; cet acte constate uniquement quels objets sont soumis au droit de rétention et ouvre, en tant que mesure conservatoire du droit des poursuites, la possibilité pour le créancier de faire valoir par la suite sa créance avec succès par la voie de la poursuite (ATF 116 III 120 consid. 3c)."
+            },
+            {
+              "marke": "E. 2.3.4",
+              "tiefe": 3,
+              "text": "L'inventaire a les mêmes effets que la saisie, soit notamment celui de priver le débiteur de disposer des biens inventoriés (STOFFEL/CHABLOZ,\n\nop. cit., § 6 n° 49). Pour le dresser, l'office des poursuites agit dès lors comme dans le cas de la saisie (art. 91 ss LP par analogie). Il ne peut inventorier que les biens nécessaires pour satisfaire les prétentions du bailleur en capital, intérêts et frais (art. 97 al. 2 LP; ATF 97 III 43 consid. 4 et la référence). A cet effet, il doit estimer les biens inventoriés en fonction du produit probable de leur réalisation (ATF 120 III 52 consid. 5). La saisie ne peut toutefois être exécutée que lorsque l'opposition a été levée, en d'autres termes lorsqu'un juge a examiné la réalité de la prétention qui fonde la poursuite. Sur ce point, l'inventaire s'écarte de l'exécution du séquestre. Même si la prise d'inventaire a une certaine ressemblance avec cette mesure, le séquestre repose pour sa part sur une ordonnance qui a été rendue par le juge, c'est-à-dire une instance indépendante de l'office des poursuites, à la suite d'un examen, certes sommaire, de la réalité de la prétention poursuivie (art. 272 al. 1 ch. 1 et art. 274 al. 1 LP). La personne concernée par un séquestre peut en outre immédiatement faire opposition auprès du juge du séquestre (art. 278 LP). A l'inverse de la prise d'inventaire lors de l'exercice du droit de rétention du bailleur, la loi (art. 275 LP) prévoit aussi expressément l'application par analogie de l' art. 98 LP, de même que d'autres dispositions du droit de la saisie, à l'exécution du séquestre (ATF 127 III 111 consid. 3a, b et c; cf. aussi ROHNER,\n\nop. cit., n° 13 ad art. 283 LP)."
+            },
+            {
+              "marke": "E. 2.3.5",
+              "tiefe": 3,
+              "text": "Le débiteur peut contester tant la créance que le droit de rétention par le biais de l'opposition au commandement de payer, devant le juge civil (ROHNER,\n\nop. cit., nos 16 et 18 ad art. 283 LP; SCHNYDER/WIEDE,\n\nop. cit., n° 81 ad art. 283 LP; STOFFEL/CHABLOZ,\n\nop. cit., § 6 nos 53 ss). L' art. 278 al. 2 LP s'applique par analogie à l' art. 283 LP, en ce sens que, en cas d'opposition, le créancier doit requérir la mainlevée de l'opposition ou intenter l'action en reconnaissance de sa créance, et de son droit de rétention, dans les dix jours; en outre, s'il succombe dans la procédure de mainlevée de l'opposition, le créancier doit intenter l'action ordinaire encore dans les dix jours dès la notification de la décision. Ces conclusions se fondent sur le fait que le débiteur, par l'établissement de l'inventaire, perd la faculté de disposer des objets inventoriés, même si par la suite le droit de rétention devait se révéler matériellement infondé, et qu'il est donc inadmissible de prolonger les effets de cet empêchement, comparables à ceux du séquestre, à la convenance du créancier. Il convient donc de mettre à disposition du débiteur les moyens propres à empêcher que les biens inventoriés restent sous main de justice jusqu'à l'extinction de la poursuite (ATF 106 III 28 consid. 1a).\n\nSi les délais de validation de l'inventaire ne sont pas observés, les effets de cette mesure conservatoire s'éteignent (ATF 105 III 825 consid. 2). Matériellement, le droit de rétention demeure, de sorte que la bailleur peut requérir une nouvelle prise d'inventaire qui pourra être à nouveau validée (AMONN/WALTHER,\n\nop. cit., § 34 n° 34)\n\nEn revanche, si le débiteur entend contester l'inventaire tel qu'il a été dressé par l'office, il doit agir dans les dix jours par la voie de la plainte dès la réception du procès-verbal d'inventaire (art. 17 LP). Il peut ainsi contester le caractère saisissable d'un bien ou l'estimation faite par l'office (ATF 110 III 53 consid. 3; 93 III 20 consid. 4; 90 III 99 consid. 1; ROHNER,\n\nop. cit., n° 16). S'agissant des conditions matérielles du droit de rétention lui-même, notamment l'étendue de celui-ci (ATF 120 III 157 consid. 2), que l'office examine sommairement à titre préjudiciel (ATF 109 III 42 consid. 1), le locataire peut faire valoir par la voie de la plainte uniquement qu'il est évident que le bailleur commet un abus de droit (ATF 105 III 80 consid. 2) ou que l'inexistence du droit de rétention exercé par le bailleur est manifeste (ATF 97 III 43 consid. 1; BRACONI,\n\nop. cit., p. 148 s.; SCHNYDER/WIEDE,\n\nop. cit., n° 51 ad art. 283 LP)."
+            },
+            {
+              "marke": "E. 2.4",
+              "tiefe": 2,
+              "text": "Il résulte de ce qui précède que la difficulté à qualifier la prise d'inventaire de mesures provisionnelles au sens de l' art. 98 LTF tient au fait que l'office des poursuites a exceptionnellement une compétence de nature juridictionnelle pour décider du prononcé de la mesure conservatoire qui doit être validée par le juge civil, avant d'exercer son rôle classique tendant à exécuter cette mesure. Elle tient aussi à la voie de droit contre la décision de l'office, soit la plainte (art. 17 LP), qui reste la même quel que soit l'objet du litige. Cette situation particulière appelle dès lors une solution différenciée au niveau du recours fédéral, selon l'objet du litige.\n\nAinsi, lorsque le litige a trait aux conditions de fond de la mesure, que les autorités de poursuite examinent sommairement, il faut admettre que, à l'instar de l'ordonnance de séquestre (ATF 135 III 232 consid. 1.2), il porte sur la mesure provisionnelle de nature conservatoire en tant que telle et entre dans le champ d'application de l' art. 98 LTF. En effet, sur ce point, l'office ne procède pas à un acte matériel, mais admet ou déboute le requérant en vertu de la compétence de nature juridictionnelle qui lui revient en la matière et lui permet d'examiner les conditions matérielles du droit de rétention du bailleur. Le recourant ne peut dès lors se plaindre que d'une violation de ses droits constitutionnels. En revanche, comme celle du séquestre (ATF 135 III 193 consid. 1.2), l'exécution de la prise d'inventaire constitue le fondement de la continuation de la poursuite; la prise d'inventaire est, du reste, exécutée comme une saisie définitive dont les règles s'appliquent par analogie et produit les mêmes effets. On ne discerne dès lors aucun motif justifiant un régime procédural différencié; aussi faut-il admettre que l'exécution de la prise d'inventaire n'entre pas dans le champ d'application de l' art. 98 LTF; le recours en matière civile peut donc être formé pour violation du droit, tel qu'il est délimité par les art. 95 s. LTF (BRACONI, Mesures provisionnelles, p. 327 s.)."
+            },
+            {
+              "marke": "E. 2.5",
+              "tiefe": 2,
+              "text": "En l'espèce, la recourante se plaint tant de la violation des conditions matérielles de la prise d'inventaire que de l'exécution de celui-ci. S'agissant des conditions matérielles, elle ne peut se plaindre que de la violation d'un de ses droits constitutionnels (art. 98 LTF). S'agissant de l'exécution en revanche, elle peut se plaindre de la violation des art. 92 ss LP, applicables par analogie. Tel est le cas étant donné qu'elle se plaint de la violation de son droit d'être entendu (art. 29 al. 2 Cst.) et d'arbitraire (art. 9 Cst.) dans la constatation des faits nécessaires à établir le droit à demander l'inventaire, ainsi que de la violation des art. 92 et 98 LP."
+            },
+            {
+              "marke": "E. 3",
+              "tiefe": 1,
+              "text": "L'autorité cantonale a tout d'abord retenu que la critique de la recourante selon laquelle elle n'aurait aucune dette de loyer faute de contrat de bail encore existant ne pouvait être soulevée dans le cadre d'une procédure de plainte au sens de l' art. 17 LP, mais seulement dans celui de l'opposition. Dans tous les cas, elle a jugé que cette critique était contradictoire avec le comportement de la recourante vu qu'elle avait contesté la résiliation des baux, qu'elle reconnaissait dans le cadre de la procédure en question une créance de loyer de 30'169 fr. à tout le moins et que cette procédure était encore pendante. Ensuite, elle a jugé que la recourante ne pouvait prétendre que la somme de 2'201 fr., laquelle correspondait à l'estimation de l'ensemble des biens inventoriés, était suffisante pour couvrir toutes les créances de loyer alléguées par la créancière poursuivante, lesquelles dépassaient les 75'000 fr. Enfin, l'autorité cantonale a jugé que des mesures de sûreté ne pouvaient être ordonnées que lorsque l'opposition éventuellement faite dans la poursuite en validation avait été définitivement écartée. En conséquence, et contrairement à ce la recourante réclamait, l'office n'était pas autorisé à prendre sous sa garde les objets qui étaient concernés par le droit de rétention aussi longtemps que l'opposition formée par la débitrice poursuivie n'avait pas été levée ou, au contraire, rejetée."
+            },
+            {
+              "marke": "E. 4",
+              "tiefe": 1,
+              "text": "La recourante se plaint de la violation de l' art. 29 al. 2 Cst. en tant que l'autorité cantonale n'aurait pas traité son grief d'abus de droit soulevé dans sa plainte du 5 juillet 2019."
+            },
+            {
+              "marke": "E. 4.1",
+              "tiefe": 2,
+              "text": "La jurisprudence a notamment déduit du droit d'être entendu le devoir pour le juge de motiver sa décision afin que le justiciable puisse la comprendre, la contester utilement s'il y a lieu et exercer son droit de recours à bon escient. Pour répondre à ces exigences, le juge doit mentionner, au moins brièvement, les motifs qui l'ont guidé et sur lesquels il a fondé sa décision, de manière à ce que l'intéressé puisse se rendre compte de la portée de celle-ci et l'attaquer en connaissance de cause (ATF 141 V 557 consid. 3.2.1; 139 IV 179 consid. 2.2; 134 I 83 consid. 4.1 et les références). Dès lors que l'on peut discerner les motifs qui ont guidé la décision de l'autorité, le droit à une décision motivée est respecté même si la motivation présentée est erronée. La motivation peut d'ailleurs être implicite et résulter des différents considérants de la décision (ATF 143 III 65 consid. 5.2; 142 II 154 consid. 4.2; 141 V 557 consid. 3.2.1)."
+            },
+            {
+              "marke": "E. 4.2",
+              "tiefe": 2,
+              "text": "En l'espèce, il ressort de la plainte du 5 juillet 2019 que la recourante a opposé à l'intimée d'abuser de son droit en exigeant d'elle de libérer les locaux tout en sollicitant de l'office une mesure destinée à lui interdire de déménager les objets inventoriés.\n\nDans l'arrêt attaqué, l'instance précédente n'a certes pas consacré de motivation particulière à l'abus de droit. Il en ressort toutefois que l'intimée a allégué une créance de loyer de plus de 75'000 fr. et qu'une procédure portant sur la résiliation des baux est encore en cours. On comprend donc implicitement de cette motivation que l'autorité cantonale a considéré qu'il n'y avait pas d'abus de droit à demander la protection du droit de rétention pour obtenir le paiement de loyers. Cela est suffisant, sous l'angle du droit d'être entendu, la motivation pouvant être implicite et résulter des différents considérants d'un arrêt.\n\nIl suit de là que le grief doit être rejeté."
+            },
+            {
+              "marke": "E. 5",
+              "tiefe": 1,
+              "text": "La recourante se plaint ensuite d'arbitraire dans la constatation des faits destinés à démontrer soit l'abus de droit, soit l'inexistence de la créance. Toutefois, son grief vise à contester les conditions matérielles du droit de rétention, en soutenant que l'intimée ne pourrait pas faire valoir son gage pour des créances postérieures à la résiliation. Or, la recourante n'expose pas que l'autorité cantonale aurait fait une application arbitraire de la notion de loyer que garantit le droit de rétention (art. 268 CO), de sorte qu'elle ne démontre pas que les faits qu'elle allègue auraient une influence sur le résultat de la cause. Dans tous les cas, il faut lui opposer que, de jurisprudence constante, en plus du loyer au sens strict, le droit de rétention englobe également l'indemnité due par le locataire qui est resté dans les locaux à l'expiration du contrat (ATF 73 III 77 consid. 1). Il suit de là que, faute de conséquence sur le sort de la cause, il n'y a pas lieu d'examiner si l'autorité cantonale a omis de prendre en considération les faits allégués par la recourante (cf. art. 97 al. 1 LTF). Le grief doit dès lors être déclaré irrecevable."
+            },
+            {
+              "marke": "E. 6",
+              "tiefe": 1,
+              "text": "La recourante se plaint de la violation de l' art. 92 LP. Elle soutient que l'inventaire comprend des objets nécessaires pour son activité professionnelle et que l'autorité cantonale aurait dû le constater d'office (art. 20a al. 2 LP) sur la base des allégués 3 et 12 de sa plainte."
+            },
+            {
+              "marke": "E. 6.1",
+              "tiefe": 2,
+              "text": "La procédure de plainte est régie par la maxime inquisitoire et le principe de disposition. L'autorité de surveillance constate donc les faits d'office et, sous réserve d'un cas de nullité (art. 22 al. 1 LP), elle est liée par les conclusions des parties (art. 20a al. 2 ch. 3 LP; ATF 142 III 234 consid. 2.1).\n\nLa maxime inquisitoire impose à l'autorité de surveillance de diriger la procédure, de définir les faits pertinents et les preuves nécessaires, d'ordonner l'administration de ces preuves et de les apprécier d'office. L'autorité doit établir d'elle-même les faits pertinents dans la mesure qu'exige l'application correcte de la loi et ne peut se contenter d'attendre que les parties lui demandent d'instruire ou lui apportent spontanément les preuves idoines. Les parties intéressées à une procédure d'exécution forcée n'en sont pas moins tenues de collaborer à l'établissement des faits; il en est ainsi, notamment, lorsque la partie saisit dans son propre intérêt les autorités de surveillance ou qu'il s'agit de circonstances qu'elle est la mieux à même de connaître ou qui touchent à sa situation personnelle, surtout lorsqu'elle sort de l'ordinaire (ATF 123 III 328 consid. 3; arrêt 5A_253/2015 du 9 juin 2015 consid. 4.1 et les autres références)."
+            },
+            {
+              "marke": "E. 6.2",
+              "tiefe": 2,
+              "text": "En l'espèce, la recourante ne s'est pas prévalue de la violation de l' art. 92 LP devant l'autorité cantonale. Dans les allégués qu'elle cite, le genre des biens saisis n'est même pas évoqué. Au vu de ces éléments, aucune violation de l' art. 20a al. 2 LP ne peut être opposée à l'autorité cantonale et le grief doit être rejeté.\n\nAu demeurant, la recourante étant une société anonyme, il sied de rappeler que, dans un arrêt ancien (ATF 63 III 17), dont le principe a été confirmé ultérieurement (ATF 80 III 15; arrêt 5A_783/2015 du 15 janvier 2016 consid. 3.3.2, publié\n\nin SJ 2016 I p. 301), le Tribunal fédéral a nié à une personne morale le droit d'invoquer le bénéfice de compétence au motif que seules les personnes physiques peuvent posséder les capacités et connaissances personnelles nécessaires à l'exercice d'une profession au sens de l' art. 92 al. 1 ch. 3 LP et que l'insaisissabilité de certains biens se justifie pour des motifs d'humanité qui ne peuvent exister pour les personnes morales."
+            },
+            {
+              "marke": "E. 7",
+              "tiefe": 1,
+              "text": "La recourante se plaint ensuite de la violation de l' art. 98 al. 3 LP et du principe de proportionnalité. Elle reproche à l'autorité cantonale d'avoir refusé que les biens inventoriés soient placés sous la garde de l'office dans les nouveaux locaux qu'elle exploitera depuis fin novembre 2019, de manière à ce qu'elle puisse continuer son activité, en interprétant de manière incorrecte l' ATF 127 III 111."
+            },
+            {
+              "marke": "E. 7.1",
+              "tiefe": 2,
+              "text": "Les mesures de sûreté visent à conserver les biens patrimoniaux du débiteur poursuivi afin qu'ils puissent servir au désintéressement du créancier poursuivant. Elles sont destinées à prévenir les actes de disposition illicites du débiteur et à empêcher les tiers de se prévaloir de leur bonne foi (cf. entre autres: DE GOTTRAU,\n\nin Commentaire romand, Poursuite et faillite, 2005, n° 1 ad art. 98 LP)."
+            },
+            {
+              "marke": "E. 7.2",
+              "tiefe": 2,
+              "text": "En l'espèce, l'office n'a pris aucune mesure de sûreté. La recourante se méprend sur le but de telles mesures lorsqu'elle prétend que certaines pourraient être prises à sa demande, en sa faveur. L'autorité cantonale ne viole à l'évidence pas l' art. 98 LP en rejetant de telles conclusions. Au demeurant, on ne saisit même pas comment on pourrait y donner suite en tant que la recourante requiert à la fois de pouvoir user de ses biens tout en laissant ceux-ci sous la garde de l'office. En réalité, la recourante entend obtenir une réponse à la question de savoir si la prise d'inventaire a pour effet de lui interdire de déplacer les biens inventoriés. Or, elle ne prétend pas que l'office aurait rendu une décision négative sur ce point contre laquelle elle aurait saisi l'autorité cantonale; pour peu qu'elle y soit même légitimée, elle ne prétend pas non plus qu'elle aurait requis de cette autorité qu'elle instruise l'office à ce sujet. Il suit de là qu'il n'y a pas lieu de trancher cette question, faute d'épuisement des instances (art. 75 al. 1 LTF); le grief doit donc être rejeté, dans la mesure où il est recevable.\n\nLe grief visant à faire constater la nullité des commandements de payer, pour autant que recevable, devient sans objet."
+            },
+            {
+              "marke": "E. 8",
+              "tiefe": 1,
+              "text": "En définitive, le recours est rejeté dans la mesure où il est recevable. Les frais judiciaires, arrêtés à 2'000 fr., sont mis à la charge de la recourante qui succombe (art. 66 al. 1 LTF). Des dépens ne sont pas dus (art. 68 al. 1 et 3 LTF)."
+            }
+          ]
+        },
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": "1.",
+              "text": "Le recours est rejeté dans la mesure de sa recevabilité."
+            },
+            {
+              "marke": "2.",
+              "text": "Les frais judiciaires, arrêtés à 2'000 fr., sont mis à la charge de la recourante."
+            },
+            {
+              "marke": "3.",
+              "text": "Le présent arrêt est communiqué à la recourante, à l'Office des poursuites de la Veveyse, à B.________ SA et au Tribunal cantonal de l'Etat de Fribourg, Chambre des poursuites et faillites, en qualité d'Autorité de surveillance."
+            },
+            {
+              "marke": null,
+              "text": "Lausanne, le 10 mars 2020\n\nAu nom de la IIe Cour de droit civil\n\ndu Tribunal fédéral suisse\n\nLe Président: Herrmann\n\nLa Greffière: Achtari"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Le recours est rejeté dans la mesure de sa recevabilité.",
+        "Les frais judiciaires, arrêtés à 2'000 fr., sont mis à la charge de la recourante.",
+        "Le présent arrêt est communiqué à la recourante, à l'Office des poursuites de la Veveyse, à B.________ SA et au Tribunal cantonal de l'Etat de Fribourg, Chambre des poursuites et faillites, en qualité d'Autorité de surveillance."
+      ],
+      "zitierteNormen": [
+        "Art. 106 Abs. 2 LTF",
+        "Art. 151 LP",
+        "Art. 17 LP",
+        "Art. 19 LTF",
+        "Art. 268 Abs. 1 CO",
+        "Art. 268b CO",
+        "Art. 272 LP",
+        "Art. 274 Abs. 1 LP"
+      ],
+      "normKeys": [],
+      "zitierteEntscheide": [
+        "5A_240/2017",
+        "5A_253/2015",
+        "5A_361/2015",
+        "5A_616/2017",
+        "5A_764/2019",
+        "5A_783/2015",
+        "5C.52/2000",
+        "7B.82/2002",
+        "BGE 105 III 80",
+        "BGE 105 III 825",
+        "BGE 105 III 85",
+        "BGE 106 III 28",
+        "BGE 109 III 42",
+        "BGE 110 III 53",
+        "BGE 116 III 120",
+        "BGE 120 III 157",
+        "BGE 120 III 52",
+        "BGE 123 III 328",
+        "BGE 124 III 215",
+        "BGE 127 III 111",
+        "BGE 133 III 350",
+        "BGE 133 III 393",
+        "BGE 133 III 589",
+        "BGE 134 I 83",
+        "BGE 135 III 193",
+        "BGE 135 III 232",
+        "BGE 136 III 379",
+        "BGE 141 V 557",
+        "BGE 142 III 234",
+        "BGE 142 III 643",
+        "BGE 143 III 65",
+        "BGE 52 III 122",
+        "BGE 63 III 17",
+        "BGE 71 III 15",
+        "BGE 73 III 77",
+        "BGE 80 III 15",
+        "BGE 93 III 20",
+        "BGE 97 III 43"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?lang=de&type=highlight_simple_query&page=17&from_date=&to_date=&from_year=2020&to_year=2020&sort=relevance&insertion_date=&from_date_push=&top_subcollection_clir=bge&query_words=&part=all&de_fr=&de_it=&fr_de=&fr_it=&it_de=&it_fr=&orig=&translation=&rank=169&highlight_docid=atf%3A%2F%2F146-III-303%3Ade&number_of_ranks=200&azaclir=clir",
+      "abgerufen": "2026-07-12",
+      "fassungsToken": "0bf25a1d2b51e3cd274ae18cb48692bdb7327c9a97d61bc66a67d9560a160ba3",
+      "sha": "5579525eeb30519ca56d2629809c1e694bca468c4acbee00faed421096bcf7ad",
+      "auszugAbschnitte": [
+        {
+          "typ": "sachverhalt",
+          "vollstaendig": true,
+          "bloecke": [
+            {
+              "marke": null,
+              "text": "A. La société A. SA (ci-après: A.), en qualité de locataire, et la société B. SA, en qualité de bailleresse, ont conclu plusieurs contrats de bail à loyer portant sur différents locaux commerciaux sis à la route x, à U. Le 16 octobre 2018, la bailleresse a résilié les baux en question avec effet au 30 novembre 2018. La locataire a contesté cette résiliation devant la Commission de conciliation en matière de bail à loyer des districts du Sud à une date indéterminée. Cette procédure est toujours pendante."
+            },
+            {
+              "marke": "B.",
+              "tiefe": 1,
+              "text": ""
+            },
+            {
+              "marke": "B.a",
+              "tiefe": 2,
+              "text": "B.a.a Le 20 juin 2019, B. SA a requis une prise d'inventaire pour sauvegarde des droits de rétention du bailleur à l'encontre de A. auprès de l'Office des poursuites de la Veveyse (ci-après: office). L'office a exécuté l'inventaire le 25 juin 2019 et établi les procès-verbaux n os 1, 2, 3 et 4 en date du 2 juillet 2019, qu'il a ensuite communiqués aux parties. B.a.b Le 10 juillet 2019, B. SA a introduit les poursuites n os 5, 6 et 7 en validation d'inventaire auprès de l'office. Le 15 juillet 2019, les trois commandements de payer ont été notifiés à A., laquelle a formé opposition totale le même jour."
+            },
+            {
+              "marke": "B.b",
+              "tiefe": 2,
+              "text": "B.b.a Par acte du 5 juillet 2019, A. a saisi la Chambre des poursuites et faillites du Tribunal cantonal de l'Etat de Fribourg (ci-après: Chambre des poursuites et faillites) d'une première plainte concluant, principalement, à ce que la nullité des inventaires précités de l'office soit constatée, subsidiairement, à ce que ces inventaires soient annulés, plus subsidiairement, à ce qu'elle soit autorisée, sous le contrôle de l'office, à déménager les biens faisant l'objet des inventaires litigieux dans les locaux qu'elle compte exploiter à la route de y, à U., encore plus subsidiairement, à ce qu'elle soit autorisée à déménager les biens faisant l'objet des inventaires précités moyennant la fourniture de sûretés à hauteur de 2'201 fr. B.b.b Par acte du 17 juillet 2019, A. a saisi la Chambre des poursuites et faillites d'une seconde plainte concluant, principalement, à ce que la nullité des commandements de payer précités de l'office soit constatée, subsidiairement, à ce que ces commandements de payer soient annulés. B.b.c Par arrêt du 13 septembre 2019, après avoir joint les plaintes, la Chambre des poursuites et faillites a rejeté celles-ci, dans la mesure de leur recevabilité. (...) Par arrêt du 10 mars 2020, le Tribunal fédéral a rejeté dans la mesure de sa recevabilité le recours en matière civile interjeté par A. contre cet arrêt. (extrait)"
+            }
+          ]
+        },
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": "E. 2",
+              "tiefe": 1,
+              "text": "La question de la nature de la mesure attaquée, provisionnelle ou non, se pose. Si les mesures provisionnelles en matière civile sont soumises à la même voie de recours que les jugements au fond (art. 72 ss LTF), cette qualification influe sur les moyens recevables en instance fédérale (art. 98 LTF) - donc sur la cognition du Tribunal fédéral -, l'obligation de motiver (art. 106 al. 2 LTF) et la computation du délai de recours (art. 46 al. 2 LTF; BRACONI, Le contentieux des mesures provisionnelles au Tribunal fédéral en matière de poursuite pour dettes et faillite, in Mélanges à la mémoire de Bernard Corboz, 2019, p. 317 ss [318]; ci-après: Mesures provisionnelles). Plus précisément, si la décision attaquée porte sur des mesures provisionnelles au sens de l' art. 98 LTF, seule peut être invoquée dans le recours en matière civile la violation de droits constitutionnels. Le Tribunal fédéral n'examine de tels griefs que s'ils ont été invoqués et motivés (\"principe d'allégation\", art. 106 al. 2 LTF), à savoir expressément soulevés et exposés de manière claire et détaillée (ATF 134 I 83 consid. 3.2 et les références). A l'inverse, si la décision n'est pas de nature provisionnelle, le recours en matière civile peut être formé pour violation du droit, tel qu'il est délimité par les art. 95 s. LTF."
+            },
+            {
+              "marke": "E. 2.1",
+              "tiefe": 2,
+              "text": "De manière générale, les mesures provisionnelles au sens de l' art. 98 LTF sont les décisions à caractère temporaire qui règlent une situation juridique en attente d'une réglementation définitive au travers d'une décision principale ultérieure (ATF 133 III 393 consid. 5.1). Pour qualifier une mesure de provisionnelle, le type de procédure dans lequel la décision a été rendue n'est pas pertinent; il s'agit plutôt de déterminer si elle tranche l'affaire matériellement au fond avec l'autorité de la chose jugée, sur la base d'une appréciation complète des faits et du droit et sans que la décision finale ne soit réservée à une procédure principale (ATF 133 III 589 consid. 1). En matière d'exécution forcée, bon nombre d'actes des organes de poursuite visent uniquement à préserver les droits d'exécution du créancier, de sorte qu'il est difficile de qualifier ceux-ci de mesures provisionnelles au sens de l' art. 98 LTF. A défaut, des parties entières de la LP ne pourraient être contrôlées qu'à l'aune de griefs limités à ceux de nature constitutionnelle, ce que le législateur n'a pas envisagé. Au vu de cette situation, les décisions des organes de poursuite qui, en tant qu'actes matériels, mettent en oeuvre une décision BGE 146 III 303 S. 306 judiciaire ou qui ne sont que la conséquence d'une décision entrée en force n'entrent pas dans le champ d'application de l' art. 98 LTF, même si la décision suite à laquelle ils agissent constitue elle-même une mesure provisionnelle; il en va ainsi de l'exécution du séquestre (ATF 136 III 379 consid. 1.2). A l'inverse, les décisions des organes de poursuite qui sont prises avant qu'une décision définitive soit rendue et qui visent uniquement à sauvegarder des biens précis en l'attente de cette décision sont des mesures provisionnelles au sens de l' art. 98 LTF; il en va ainsi des mesures de sûretés si elles sont prises avant la saisie et sont nécessaires à préparer celle-ci et à préserver les intérêts du créancier (ATF 142 III 643 consid. 2.1; ATF 115 III 41 consid. 2; arrêt 5A_616/2017 du 14 mars 2018 consid. 6; LEVANTE, in Basler Kommentar, Bundesgesetz über Schuldbetreibung und Konkurs, vol. I, 2 e éd. 2010, n os 70 ss ad art. 19 LTF)."
+            },
+            {
+              "marke": "E. 2.2.1",
+              "tiefe": 3,
+              "text": "Le droit de rétention du bailleur de locaux commerciaux est un droit de gage légal qui a pour but de garantir les loyers écoulés et du semestre courant (art. 268 al. 1 CO). Dans l'exécution forcée, il est considéré comme un gage mobilier (art. 37 al. 2 LP) que le bailleur doit faire valoir par la voie de la poursuite en réalisation du gage (art. 151 ss LP; ATF 124 III 215 consid. 1b; BRACONI, L'exécution forcée des créances pécuniaires et en prestation de sûretés en matière de bail, in 16 ème Séminaire sur le droit du bail, 2010, p. 138 ss [143]; SCHNYDER/WIEDE, in Basler Kommentar, Bundesgesetz über Schuldbetreibung und Konkurs, vol. II, 2 e éd. 2010, n° 8 ad art. 283 LP). L' art. 283 LP confère au bailleur la possibilité de requérir le concours de l'office des poursuites pour obtenir la protection provisoire de son droit de rétention. A cette fin, l'office dresse un invenaire des objets soumis au droit de rétention et assigne au bailleur un délai pour requérir la poursuite en réalisation de gage (arrêt 7B.82/2002 du 23 juillet 2002 consid. 2.2, in Pra 2002 n. 214 p. 1138). La prise d'inventaire a un effet conservatoire déterminant. En effet, le droit de rétention naît avec l'arrivée des meubles dans les locaux loués, la prise d'inventaire de l' art. 283 LP ne faisant que lui donner une manifestation extérieure. Toutefois, sous réserve du droit de suite du bailleur selon l' art. 268b CO, ce droit s'éteint dès que les meubles sortent définitivement des locaux loués, à moins que l'inventaire ait été dressé (arrêt 5C.52/2000 du 18 avril 2000 consid. 2c). BGE 146 III 303 S. 307"
+            },
+            {
+              "marke": "E. 2.2.2",
+              "tiefe": 3,
+              "text": "Si tant le Tribunal fédéral que la doctrine qualifient la prise d'inventaire de mesure conservatoire (ATF 116 III 120 consid. 3c; AMONN/WALTHER, Grundriss des Schuldbetreibungs- und Konkursrechts, 9 e éd. 2013, § 34 n. 28; BRACONI, op. cit., p. 145; SCHNYDER/ WIEDE, op. cit., n° 59 ad art. 283 LP; STOFFEL/CHABLOZ, Voies d'exécution, 3 e éd. 2016, § 6 n. 53; STOFFEL/OULEVEY, in Commentaire romand, Poursuite et faillite, 2005, n° 5 ad art. 283 LP), les conséquences de cette qualification sur l'application de l' art. 98 LTF au recours ne sont pas évidentes. Dans un arrêt non publié de 2016, le Tribunal fédéral a affirmé que la décision par laquelle l'office ordonne l'inventaire des biens du locataire en vertu de l' art. 283 LP porte sur des mesures provisionnelles au sens de l' art. 98 LTF par analogie avec le séquestre (arrêt 5A_361/2015 du 28 janvier 2016 consid. 1.2, in RtiD 2016 II p. 677); l'année suivante, s'il a certes laissé ouverte la question de savoir si cet arrêt devait être confirmé, il a en revanche affirmé que la prise d'inventaire n'était en tant que telle pas provisoire et qu'une limitation des griefs à ceux de nature constitutionnelle ne semblait pas justifiée dans le recours en matière civile (arrêt 5A_240/2017 du 21 novembre 2017 consid. 1.2). Il convient dès lors de lever l'incertitude sur cette question (cf. KREN KOSTKIEWICZ, Schuldbetreibungs- & Konkursrecht, 3 e éd. 2018, n. 1058)."
+            },
+            {
+              "marke": "E. 2.3.1",
+              "tiefe": 3,
+              "text": "La prise d'inventaire est une mesure unilatérale, ordonnée sur la base de la réquisition du créancier, sans convocation du débiteur (ATF 93 III 20 consid. 3). Celui-ci en est informé lors de la communication du procès-verbal d'inventaire (STOFFEL/OULEVEY, op. cit., n° 29 ad art. 283 LP). L'office des poursuites examine sommairement et à titre préjudiciel (ATF 109 III 42 consid. 1) si les conditions matérielles du droit de rétention sont remplies (ATF 52 III 122, 126). Il ne peut refuser, pour des raisons de droit matériel, de dresser un inventaire des objets soumis au droit de rétention du bailleur, que si l'inexistence de ce droit est manifeste (ATF 97 III 43 consid. 1). Il appartient ensuite au juge civil d'en décider définitivement (ATF 71 III 15 consid. 2; 52 précité; AMONN/WALTHER, op. cit., § 34 n. 16 s.; ROHNER, in Schuldbetreibungs- und Konkursgesetz, Kurzkommentar, 2 e éd. 2014, n os 13 et 15 ad art. 283 LP; SCHNYDER/ WIEDE, op. cit., n° 51 ad art. 283 LP). L'examen sommaire des conditions matérielles du droit de rétention du bailleur, notamment son étendue d'un point de vue matériel et temporel, par les autorités de poursuite est exceptionnellement justifié BGE 146 III 303 S. 308 dans cette procédure particulière. A l'inverse des autres mesures d'exécution, en particulier du séquestre (art. 272 LP), il est porté atteinte de manière importante aux droits du débiteur sans examen préalable par une autorité judiciaire. Cela étant, il demeure que les autorités de poursuite ne sont en principe pas qualifiées pour trancher des questions de nature purement civile, comme celle de l'existence ou de la non-existence du droit de rétention. Dès lors, à moins que la solution ne s'impose d'emblée avec évidence, elles doivent se garder de prendre une position qui exclue la possibilité de soumettre le conflit au juge. En cas de doute sur des questions de droit matériel, elles ne doivent donc pas anticiper sur la décision judiciaire et exécuter la requête de prise d'inventaire (ATF 105 III 80 consid. 1; 59 III 10 consid. 2; SCHNYDER/WIEDE, op. cit., n° 52 ad art. 283 LP)."
+            },
+            {
+              "marke": "E. 2.3.2",
+              "tiefe": 3,
+              "text": "Le bailleur peut requérir la prise d'inventaire en tout temps (art. 56 LP), avec ou sans poursuite préalable (art. 283 al. 1 LP; cf. GASSER, Betreibung für Miet- und Pachtzinsforderungen, BlSchK 1999 p. 81 ss, 87 ss). Dans le premier cas, il joint la demande d'inventaire à sa réquisition de poursuite. Dans le second cas, l'office procède immédiatement à la prise d'inventaire et octroie un délai au bailleur pour valider la mesure par une poursuite en réalisation de gage (art. 283 al. 3 LP). La poursuite doit être requise, pour les créances de loyer échues, dans les dix jours dès la notification du procès-verbal d'inventaire des objets frappés du droit de rétention et, pour les créances de loyer courant, dans les dix jours dès leur échéance (ATF 105 III 85 consid. 2). La situation spéciale de la prise d'inventaire doit être liquidée sans retard, pour éviter que les droits du locataire soient injustement compromis par les effets de la prise d'inventaire, de sorte que l' art. 278 LP doit s'appliquer par analogie (ATF 52 III 122, 125). Il suffit cependant, pour maintenir les effets de la prise d'inventaire pour le loyer courant, d'introduire une poursuite dans les dix jours à compter de l'échéance du dernier terme de la période de loyer pour laquelle le droit de rétention est exercé (ATF 105 III précité). La validation doit porter sur la créance pour laquelle l'inventaire a été autorisé (ATF 120 III 157 consid. 2). Si le jugement prononce la mainlevée provisoire de l'opposition tant pour la créance que pour le droit de rétention, le poursuivi doit ouvrir action en libération pour contester et la créance et le droit de rétention. S'il la refuse ou ne la prononce que pour la créance, il appartient alors au bailleur d'ouvrir action pour faire reconnaître ses droits (ATF 71 III 15 consid. 2). BGE 146 III 303 S. 309"
+            },
+            {
+              "marke": "E. 2.3.3",
+              "tiefe": 3,
+              "text": "Le procès-verbal d'inventaire constitue une liste qui recense les biens du débiteur soumis au droit de rétention du bailleur. L'établissement du procès-verbal d'inventaire n'a aucune influence sur l'existence du droit de rétention; cet acte constate uniquement quels objets sont soumis au droit de rétention et ouvre, en tant que mesure conservatoire du droit des poursuites, la possibilité pour le créancier de faire valoir par la suite sa créance avec succès par la voie de la poursuite (ATF 116 III 120 consid. 3c)."
+            },
+            {
+              "marke": "E. 2.3.4",
+              "tiefe": 3,
+              "text": "L'inventaire a les mêmes effets que la saisie, soit notamment celui de priver le débiteur de disposer des biens inventoriés (STOFFEL/ CHABLOZ, op. cit., § 6 n. 49). Pour le dresser, l'office des poursuites agit dès lors comme dans le cas de la saisie (art. 91 ss LP par analogie). Il ne peut inventorier que les biens nécessaires pour satisfaire les prétentions du bailleur en capital, intérêts et frais (art. 97 al. 2 LP; ATF 97 III 43 consid. 4 et la référence). A cet effet, il doit estimer les biens inventoriés en fonction du produit probable de leur réalisation (ATF 120 III 52 consid. 5). La saisie ne peut toutefois être exécutée que lorsque l'opposition a été levée, en d'autres termes lorsqu'un juge a examiné la réalité de la prétention qui fonde la poursuite. Sur ce point, l'inventaire s'écarte de l'exécution du séquestre. Même si la prise d'inventaire a une certaine ressemblance avec cette mesure, le séquestre repose pour sa part sur une ordonnance qui a été rendue par le juge, c'est-à-dire une instance indépendante de l'office des poursuites, à la suite d'un examen, certes sommaire, de la réalité de la prétention poursuivie (art. 272 al. 1 ch. 1 et art. 274 al. 1 LP). La personne concernée par un séquestre peut en outre immédiatement faire opposition auprès du juge du séquestre (art. 278 LP). A l'inverse de la prise d'inventaire lors de l'exercice du droit de rétention du bailleur, la loi (art. 275 LP) prévoit aussi expressément l'application par analogie de l' art. 98 LP, de même que d'autres dispositions du droit de la saisie, à l'exécution du séquestre (ATF 127 III 111 consid. 3a, b et c; cf. aussi ROHNER, op. cit., n° 13 ad art. 283 LP)."
+            },
+            {
+              "marke": "E. 2.3.5",
+              "tiefe": 3,
+              "text": "Le débiteur peut contester tant la créance que le droit de rétention par le biais de l'opposition au commandement de payer, devant le juge civil (ROHNER, op. cit., n os 16 et 18 ad art. 283 LP; SCHNYDER/WIEDE, op. cit., n° 81 ad art. 283 LP; STOFFEL/CHABLOZ, op. cit., § 6 n. 53 ss). L' art. 278 al. 2 LP s'applique par analogie à l' art. 283 LP, en ce sens que, en cas d'opposition, le créancier doit requérir la mainlevée de l'opposition ou intenter l'action en BGE 146 III 303 S. 310 reconnaissance de sa créance, et de son droit de rétention, dans les dix jours; en outre, s'il succombe dans la procédure de mainlevée de l'opposition, le créancier doit intenter l'action ordinaire encore dans les dix jours dès la notification de la décision. Ces conclusions se fondent sur le fait que le débiteur, par l'établissement de l'inventaire, perd la faculté de disposer des objets inventoriés, même si par la suite le droit de rétention devait se révéler matériellement infondé, et qu'il est donc inadmissible de prolonger les effets de cet empêchement, comparables à ceux du séquestre, à la convenance du créancier. Il convient donc de mettre à disposition du débiteur les moyens propres à empêcher que les biens inventoriés restent sous main de justice jusqu'à l'extinction de la poursuite (ATF 106 III 28 consid. 1a). Si les délais de validation de l'inventaire ne sont pas observés, les effets de cette mesure conservatoire s'éteignent (ATF 105 III 825 consid. 2). Matériellement, le droit de rétention demeure, de sorte que la bailleur peut requérir une nouvelle prise d'inventaire qui pourra être à nouveau validée (AMONN/WALTHER, op. cit., § 34 n. 34). En revanche, si le débiteur entend contester l'inventaire tel qu'il a été dressé par l'office, il doit agir dans les dix jours par la voie de la plainte dès la réception du procès-verbal d'inventaire (art. 17 LP). Il peut ainsi contester le caractère saisissable d'un bien ou l'estimation faite par l'office (ATF 110 III 53 consid. 3; ATF 93 III 20 consid. 4; ATF 90 III 99 consid. 1; ROHNER, op. cit., n° 16 ad art. 283 LP). S'agissant des conditions matérielles du droit de rétention lui-même, notamment l'étendue de celui-ci (ATF 120 III 157 consid. 2), que l'office examine sommairement à titre préjudiciel (ATF 109 III 42 consid. 1), le locataire peut faire valoir par la voie de la plainte uniquement qu'il est évident que le bailleur commet un abus de droit (ATF 105 III 80 consid. 2) ou que l'inexistence du droit de rétention exercé par le bailleur est manifeste (ATF 97 III 43 consid. 1; BRACONI, op. cit., p. 148 s.; SCHNYDER/WIEDE, op. cit., n° 51 ad art. 283 LP)."
+            },
+            {
+              "marke": "E. 2.4",
+              "tiefe": 2,
+              "text": "Il résulte de ce qui précède que la difficulté à qualifier la prise d'inventaire de mesures provisionnelles au sens de l' art. 98 LTF tient au fait que l'office des poursuites a exceptionnellement une compétence de nature juridictionnelle pour décider du prononcé de la mesure conservatoire qui doit être validée par le juge civil, avant d'exercer son rôle classique tendant à exécuter cette mesure. Elle tient aussi à la voie de droit contre la décision de l'office, soit la plainte (art. 17 LP), qui reste la même quel que soit l'objet du litige. Cette situation BGE 146 III 303 S. 311 particulière appelle dès lors une solution différenciée au niveau du recours fédéral, selon l'objet du litige. Ainsi, lorsque le litige a trait aux conditions de fond de la mesure, que les autorités de poursuite examinent sommairement, il faut admettre que, à l'instar de l'ordonnance de séquestre (ATF 135 III 232 consid. 1.2), il porte sur la mesure provisionnelle de nature conservatoire en tant que telle et entre dans le champ d'application de l' art. 98 LTF. En effet, sur ce point, l'office ne procède pas à un acte matériel, mais admet ou déboute le requérant en vertu de la compétence de nature juridictionnelle qui lui revient en la matière et lui permet d'examiner les conditions matérielles du droit de rétention du bailleur. Le recourant ne peut dès lors se plaindre que d'une violation de ses droits constitutionnels. En revanche, comme celle du séquestre (ATF 135 III 193 consid. 1.2), l'exécution de la prise d'inventaire constitue le fondement de la continuation de la poursuite; la prise d'inventaire est, du reste, exécutée comme une saisie définitive dont les règles s'appliquent par analogie et produit les mêmes effets. On ne discerne dès lors aucun motif justifiant un régime procédural différencié; aussi faut-il admettre que l'exécution de la prise d'inventaire n'entre pas dans le champ d'application de l' art. 98 LTF; le recours en matière civile peut donc être formé pour violation du droit, tel qu'il est délimité par les art. 95 s. LTF (BRACONI, Mesures provisionnelles, op. cit., p. 327 s.)."
+            },
+            {
+              "marke": "E. 2.5",
+              "tiefe": 2,
+              "text": "En l'espèce, la recourante se plaint tant de la violation des conditions matérielles de la prise d'inventaire que de l'exécution de celui-ci. S'agissant des conditions matérielles, elle ne peut se plaindre que de la violation d'un de ses droits constitutionnels (art. 98 LTF). S'agissant de l'exécution en revanche, elle peut se plaindre de la violation des art. 92 ss LP, applicables par analogie. Tel est le cas étant donné qu'elle se plaint de la violation de son droit d'être entendu (art. 29 al. 2 Cst.) et d'arbitraire (art. 9 Cst.) dans la constatation des faits nécessaires à établir le droit à demander l'inventaire, ainsi que de la violation des art. 92 et 98 LP."
+            }
+          ]
+        }
+      ],
+      "azaUrteil": {
+        "aktenzeichen": "5A_764/2019",
+        "key": "bger_5A_764_2019",
+        "quelleUrl": "http://relevancy.bger.ch/cgi-bin/JumpCGI?id=10.03.2020_5A_764/2019"
+      },
+      "ecli": "ECLI:CH:BGE:2020:146.III.303"
+    }
+  ]
+}

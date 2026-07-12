@@ -31,11 +31,11 @@ export const STARTSEITE_ZAEHLER: StartseiteZaehler = {
   "gesetzeBundVolltext": 227,
   "gesetzeKantonVolltext": 1231,
   "gesetzeVolltext": 1458,
-  "rechtsprechungVolltext": 342,
+  "rechtsprechungVolltext": 752,
   "materialien": 1549,
   "rechner": 23,
   "vorlagen": 26,
   "standGesetze": "2026-07-12",
-  "standRechtsprechung": "2026-07-05",
+  "standRechtsprechung": "2026-07-12",
   "standMaterialien": "2026-07-10"
 };
