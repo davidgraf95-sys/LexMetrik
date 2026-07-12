@@ -27,11 +27,13 @@ export default {
           400: 'var(--brass-400)', 500: 'var(--brass-500)', 600: 'var(--brass-600)',
           700: 'var(--brass-700)', 800: 'var(--brass-800)',
         },
-        sage: { 500: 'var(--sage-500)', 700: 'var(--sage-700)', bg: 'var(--sage-bg)' },
-        slate: { 500: 'var(--slate-500)', 700: 'var(--slate-700)', bg: 'var(--slate-bg)' },
+        // `line`-Stufen (D-1.3): Nicht-Text-Kanten/Balken greifen den
+        // Linien-Alias (dunkel auf -700 gehoben), NIE -500 direkt (1.4.11).
+        sage: { 500: 'var(--sage-500)', 700: 'var(--sage-700)', bg: 'var(--sage-bg)', line: 'var(--sage-line)' },
+        slate: { 500: 'var(--slate-500)', 700: 'var(--slate-700)', bg: 'var(--slate-bg)', line: 'var(--slate-line)' },
         well: 'var(--well)',
-        warn: { 500: 'var(--warn-500)', 700: 'var(--warn-700)', bg: 'var(--warn-bg)' },
-        danger: { 500: 'var(--danger-500)', 700: 'var(--danger-700)', bg: 'var(--danger-bg)' },
+        warn: { 500: 'var(--warn-500)', 700: 'var(--warn-700)', bg: 'var(--warn-bg)', line: 'var(--warn-line)' },
+        danger: { 500: 'var(--danger-500)', 700: 'var(--danger-700)', bg: 'var(--danger-bg)', line: 'var(--danger-line)' },
       },
       fontFamily: {
         display: ['var(--font-display)', 'system-ui', 'sans-serif'],
@@ -59,7 +61,9 @@ export default {
         sm: 'var(--radius-sm)', md: 'var(--radius-md)', lg: 'var(--radius-lg)',
         xl: 'var(--radius-xl)', '2xl': 'var(--radius-2xl)',
       },
-      transitionDuration: { fast: '120ms', base: '160ms', slow: '220ms', stage: '420ms' },
+      // D-1.7 Motion-Dedup: Literale auf die --dur-*-Token gemappt (Muster der
+      // Nachbar-Keys ease/shadow) — index.css ist die EINE Motion-Quelle.
+      transitionDuration: { fast: 'var(--dur-fast)', base: 'var(--dur-base)', slow: 'var(--dur-slow)', stage: 'var(--dur-stage)' },
       transitionTimingFunction: { DEFAULT: 'var(--ease)' },
       boxShadow: { sm: 'var(--shadow-sm)', md: 'var(--shadow-md)', lg: 'var(--shadow-lg)' },
       maxWidth: { content: '70rem', reading: '40rem' }, // content ≈ 1120px (Iteration 3: einheitlich schmalere Spalte)

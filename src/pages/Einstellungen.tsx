@@ -160,7 +160,7 @@ export function Einstellungen() {
       <section className="lc-card p-5 sm:p-6 space-y-3">
         <Zeile titel="Zurücksetzen" hinweis="Löscht alle gespeicherten Einstellungen, offenen Reiter, Favoriten und Vorlagen-Entwürfe in diesem Browser.">
           <button type="button" onClick={reset}
-            className="rounded-lg border border-danger-500 bg-surface px-3.5 py-2 text-body-s font-medium text-danger-700 transition-colors hover:bg-danger-bg">
+            className="rounded-lg border border-danger-line bg-surface px-3.5 py-2 text-body-s font-medium text-danger-700 transition-colors hover:bg-danger-bg">
             Alles zurücksetzen …
           </button>
         </Zeile>

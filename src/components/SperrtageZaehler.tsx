@@ -26,7 +26,7 @@ export function SperrtageZaehler({ sperrtage }: { sperrtage: NonNullable<Sperrfr
       <div className="flex items-center gap-4">
         <h3 className="lc-overline text-ink-700">Sperrtage-Zähler</h3>
         <div className="flex-1 h-px bg-line" />
-        <span className="lc-overline text-ink-500"><NormText text={`Art. 336c OR`} /></span>
+        <span className="lc-overline"><NormText text={`Art. 336c OR`} /></span>
       </div>
 
       <ul className="space-y-3">
@@ -57,7 +57,7 @@ export function SperrtageZaehler({ sperrtage }: { sperrtage: NonNullable<Sperrfr
               {anteil !== null && (
                 <div className="h-1.5 rounded-full bg-paper-sunken overflow-hidden" role="img"
                   aria-label={`${z.beansprucht} von ${z.kontingent} Sperrtagen beansprucht`}>
-                  <div className={`h-full rounded-full ${anteil >= 1 ? 'bg-danger-500' : 'bg-brass-500'}`}
+                  <div className={`h-full rounded-full ${anteil >= 1 ? 'bg-danger-line' : 'bg-brass-500'}`}
                     style={{ width: `${Math.round(anteil * 100)}%` }} />
                 </div>
               )}

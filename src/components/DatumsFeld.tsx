@@ -182,7 +182,7 @@ export function DatumsFeld({ value, onChange, className = 'lc-input', wrapperCla
           <div role="grid" aria-label={`${MONATE[m]} ${jahr}`} onKeyDown={rasterTaste} className="text-center">
             <div role="row" className="grid grid-cols-7 gap-0.5">
               {WTAGE.map((w) => (
-                <div key={w} role="columnheader" className="lc-overline text-ink-500 py-1">{w}</div>
+                <div key={w} role="columnheader" className="lc-overline py-1">{w}</div>
               ))}
             </div>
             {Array.from({ length: Math.ceil(zellen.length / 7) }, (_, w) => zellen.slice(w * 7, w * 7 + 7)).map((woche, w) => (

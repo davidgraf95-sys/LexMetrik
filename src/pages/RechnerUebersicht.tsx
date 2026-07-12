@@ -48,7 +48,7 @@ export function RechnerUebersicht() {
 
       <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div className="space-y-1.5">
-          <label htmlFor="rechner-filter" className="lc-overline text-ink-500">Rechner filtern</label>
+          <label htmlFor="rechner-filter" className="lc-overline">Rechner filtern</label>
           <input id="rechner-filter" type="search" value={filter}
             onChange={(e) => setFilter(e.target.value)}
             placeholder="Titel, Rechtsgebiet oder Norm …" aria-label="Rechner filtern"
@@ -79,7 +79,7 @@ export function RechnerUebersicht() {
               statt auf der Startseite — Komponente unverändert, gleiche Selbst-
               Höhe wie zuvor (CLS-neutral). */}
           <section className="space-y-2.5" aria-labelledby="werkzeuge-titel">
-            <h2 id="werkzeuge-titel" className="lc-overline text-ink-500">Werkzeuge</h2>
+            <h2 id="werkzeuge-titel" className="lc-overline">Werkzeuge</h2>
             <Zeiterfassung />
           </section>
 

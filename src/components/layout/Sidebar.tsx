@@ -165,11 +165,11 @@ function Abschnitt({ a, loc, onNavigate }: { a: typeof NAVIGATION[number]; loc: 
       <div className="flex items-center gap-1 px-2.5 pt-1 pb-1.5 rounded-md hover:bg-brass-100/30">
         {a.ziel ? (
           <Link to={a.ziel} onClick={() => { onNavigate?.(); setZuklappGen((g) => g + 1); }} aria-current={aktiv ? 'page' : undefined}
-            className={`lc-overline flex-1 no-underline transition-colors ${aktiv ? 'text-brass-700' : 'text-ink-500 hover:text-brass-700'}`}>
+            className={`lc-overline flex-1 no-underline transition-colors ${aktiv ? 'text-brass-700' : ' hover:text-brass-700'}`}>
             {a.titel}
           </Link>
         ) : (
-          <span className="lc-overline text-ink-500 flex-1">{a.titel}</span>
+          <span className="lc-overline flex-1">{a.titel}</span>
         )}
         <button type="button" onClick={() => setOffen((o) => !o)} aria-expanded={offen}
           aria-label={`${a.titel} ${offen ? 'einklappen' : 'aufklappen'}`}

@@ -153,7 +153,7 @@ export function RechnerTagerechner() {
                     Hinweis-Links, der WARUM-Satz erklärt die Abzweigung. */}
                 {abzweigungen.length > 0 && (
                   <div className="lc-notice space-y-1.5">
-                    <p className="lc-overline text-ink-500">Eigenes Regime – Spezialrechner</p>
+                    <p className="lc-overline">Eigenes Regime – Spezialrechner</p>
                     {abzweigungen.map((a) => (
                       <p key={a.karte.id} className="text-body-s text-ink-600 leading-snug">
                         <Link to={a.karte.href!}

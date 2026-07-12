@@ -29,12 +29,19 @@
   :root {
     /* ── LexMetrik-Designtokens (Designsystem §2) ─────────────────────── */
     /* Tinte – Text & Struktur */
-    --ink-900:#1A1A17; --ink-800:#2A2A25; --ink-700:#3A3A33; --ink-600:#54544B; --ink-500:#6E6E64;
+    /* Solitär-Bindung (D-1.8): --ink-fixed-dark ist der EINE nicht-flippende
+       Dunkel-Tinten-Wert — speist helles ink-900 UND --auf-gold. Flippt
+       bewusst NIE mit dem Thema (der Dunkel-Block überschreibt ink-900 separat).
+       Bei D-4-Rekalibrierung wandern beide Verbraucher mit EINEM Wert. */
+    --ink-fixed-dark:#1A1A17;
+    --ink-900:var(--ink-fixed-dark); --ink-800:#2A2A25; --ink-700:#3A3A33; --ink-600:#54544B; --ink-500:#6E6E64;
     --ink-400:#8B8B81; --ink-300:#A9A99F;
     /* Eigener Platzhalter-Ton (Auftrag David 25.6.2026, max. Lesbarkeit):
        ink-300 war auf dem Well nur ~2:1 → quasi unsichtbar. Eigenes Token
        4.75:1 auf --well (WCAG 1.4.3 AA erfüllt), ohne den Haarlinien-/Deko-Ton
-       ink-300 zu verschieben. (#7A7A70 erreichte real nur 3.77:1.) */
+       ink-300 zu verschieben. (#7A7A70 erreichte real nur 3.77:1.)
+       D-1.8: als DOKUMENTIERTE Stufe der ink-Rampe geführt (zwischen 500 und
+       400) — D-4 rekalibriert sie mit der Rampe, sie ist kein Ad-hoc-Wert. */
     --placeholder:#6A6A60;
     /* Papier – Flächen. Token-Landkarte (Regel, ohne Wertänderung):
        --paper*   = SEITENHINTERGRUND (Body, grosse Flächen)
@@ -73,11 +80,18 @@
     /* Fixe dunkle Tinte für Text auf STETS hellen Gold-Flächen (brass-300 ist
        in BEIDEN Modi hell). Flippt bewusst NICHT mit dem Thema — sonst kippt
        z. B. das Timeline-Label im Dunkel auf hell und wird unlesbar (~1.3:1).
-       Wert = ink-900 (Hell), hier nicht überschrieben. */
-    --auf-gold:#1A1A17;
+       Wert = ink-900 (Hell), hier nicht überschrieben. D-1.8: aus dem
+       Solitär --ink-fixed-dark gespeist (Nicht-Flip-Absicht bleibt — das
+       Token wird im Dunkel-Block NICHT überschrieben). */
+    --auf-gold:var(--ink-fixed-dark);
     /* Status — alle Hintergründe nach EINEM Rezept (gleiche Tönung auf
        Papier), damit die vier Familien zusammengehören */
     --status-tint:10%;
+    /* D-1.9 (Befund 10): die drei Status-Zwischentöne sind DREI benannte
+       ROLLEN statt Magic-Mixe — gleiche Endwerte (§6 verhaltensneutral):
+       Badge-Outline (lc-badge-entwurf) · weiche Status-Border (lc-badge-soft)
+       · Schraffur-Streifen (lc-hatch-warn). */
+    --status-outline:45%; --status-border-soft:30%; --status-hatch:26%;
     --sage-500:#5F7A58; --sage-700:#48603F;
     --sage-bg:color-mix(in srgb, var(--sage-500) var(--status-tint), var(--paper));
     --slate-500:#5B6B73; --slate-700:#46535A;
@@ -99,6 +113,11 @@
     --brass-line:var(--brass-500);
     --warn-line:var(--warn-500);
     --danger-line:var(--danger-500);
+    /* D-1.3: sage/slate nach demselben Muster — Call-Sites greifen NIE mehr
+       -500 direkt für Nicht-Text (Borders/Balken); die -500-Mitten bleiben
+       unangetastet (sie speisen die -bg-color-mix-Flächen). */
+    --sage-line:var(--sage-500);
+    --slate-line:var(--slate-500);
     /* Abgesetzter Doppelring (Fokus): Papier-Spalt + Messing — auf warmem
        Papier klar sichtbar und vom Hover unterscheidbar (Redesign A11y). */
     --ring:0 0 0 2px var(--surface), 0 0 0 4px var(--focus);
@@ -191,6 +210,12 @@
        Linien-Ton nutzt den hellen danger-700 (≥3:1). brass-/warn-line bleiben
        auf -500 (dort bereits ≥3:1). */
     --danger-line:var(--danger-700);
+    /* D-1.3: sage/slate-Linien dunkel ebenfalls auf -700 heben — sage-500
+       (3.84:1) und slate-500 (3.31:1) liegen dunkel nur knapp über 3:1;
+       die -700-Töne (9.93/8.97:1) geben Nicht-Text-Kanten klaren Headroom,
+       ohne die -500-Mitten (Speiser der -bg-Mixe) zu verschieben. */
+    --sage-line:var(--sage-700);
+    --slate-line:var(--slate-700);
     /* Schweiz-Karte im Dunkel: Pastelle deutlich dämpfen, sonst leuchten die
        Kantonsflächen grell aus dem dunklen Papier. */
     --karte-l-basis:30%; --karte-l-hover:42%; --karte-l-aktiv:55%;
@@ -416,7 +441,7 @@
     background-color: var(--warn-bg);
     background-image: repeating-linear-gradient(
       135deg,
-      color-mix(in srgb, var(--warn-500) 26%, transparent) 0 1px,
+      color-mix(in srgb, var(--warn-500) var(--status-hatch), transparent) 0 1px,
       transparent 1px 5px
     );
   }
@@ -454,10 +479,15 @@
   select.lc-input, .lc-select {
     appearance: none; -webkit-appearance: none;
     padding-right: 38px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none' stroke='%238A6A2F' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 6l4 4 4-4'/%3E%3C/svg%3E");
+    /* Chevron-Hex = --brass-700 (#826225, a11y-Kalibrierung 26.6.2026) — bei
+       Rekalibrierung MITZIEHEN (D-1.6: data-URI kann kein var() tragen; die
+       CSS-mask-Variante ist am nackten <select> nicht machbar, weil background
+       bereits die Well-Füllung trägt — verworfen, s. FAHRPLAN §3). */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none' stroke='%23826225' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 6l4 4 4-4'/%3E%3C/svg%3E");
     background-repeat: no-repeat; background-position: right 12px center; background-size: 16px;
   }
-  /* Dunkelmodus: heller Messing-Chevron (der Light-SVG ist auf Dunkel blind). */
+  /* Dunkelmodus: heller Messing-Chevron (der Light-SVG ist auf Dunkel blind).
+     Hex = dunkles --brass-700 (#D8BD78) — bei Rekalibrierung mitziehen. */
   html.dark select.lc-input, html.dark .lc-select {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none' stroke='%23D8BD78' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 6l4 4 4-4'/%3E%3C/svg%3E");
   }
@@ -534,10 +564,10 @@
      Oberkante der Karte. (Design-Review 6.6.2026, Freigabe David) */
   .lc-badge-entwurf {
     @apply lc-badge bg-transparent text-warn-700;
-    border: 1px solid color-mix(in srgb, var(--warn-500) 45%, transparent);
+    border: 1px solid color-mix(in srgb, var(--warn-500) var(--status-outline), transparent);
   }
   .lc-badge-danger { @apply bg-danger-bg text-danger-700; }
-  .lc-badge-soft { background: var(--slate-bg); color: var(--slate-700); border: 1px solid color-mix(in srgb, var(--slate-500) 30%, transparent); }
+  .lc-badge-soft { background: var(--slate-bg); color: var(--slate-700); border: 1px solid color-mix(in srgb, var(--slate-500) var(--status-border-soft), transparent); }
 
   /* Notices: Varianten sind eigenständig (Basis-Anatomie immer gleich —
      kein Inline-Nachbau von Padding/Border mehr nötig) */

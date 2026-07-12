@@ -35,7 +35,7 @@ export function RechnerKopf({ calc, titelOverride, kategorieOverride, kurzbeschr
           Alle Rechner
         </Link>
         <span aria-hidden className="h-4 w-px bg-line-strong shrink-0" />
-        <span className="lc-overline lc-overline-soft text-ink-500 truncate">
+        <span className="lc-overline lc-overline-soft truncate">
           <Link to="/rechner" className="inline-block py-1 no-underline text-ink-500 hover:text-ink-600">Rechner</Link>
           <span className="mx-1.5">/</span>
           <span className="text-ink-500">{titel}</span>

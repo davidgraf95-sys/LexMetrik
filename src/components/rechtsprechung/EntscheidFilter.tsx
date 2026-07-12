@@ -29,7 +29,7 @@ function FacettenGruppe({ label, optionen }: {
 }) {
   return (
     <div role="group" aria-label={label} className="flex flex-wrap items-center gap-x-2 gap-y-1.5">
-      <span aria-hidden className="lc-overline shrink-0 text-ink-500">{label}</span>
+      <span aria-hidden className="lc-overline shrink-0">{label}</span>
       {optionen.map((o) => (
         <button key={o.id} type="button" aria-pressed={o.aktiv} onClick={o.waehle}
           aria-label={`${label}: ${o.voll ?? o.text} (${o.n})`} title={o.voll}

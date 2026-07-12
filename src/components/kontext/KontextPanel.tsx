@@ -442,7 +442,7 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false,
                         <li key={v.key} className="text-body-s">
                           <a href={fedlexLokalisiert(v.quelleUrl, locale)} target="_blank" rel="noopener noreferrer"
                             className="no-underline hover:text-brass-700">
-                            <span className={`lc-overline ${laeuft ? 'text-brass-700' : 'text-ink-500'}`}>
+                            <span className={`lc-overline ${laeuft ? 'text-brass-700' : ''}`}>
                               {laeuft && v.fristEnde ? `läuft bis ${kurzDatum(v.fristEnde)}` : VERNEHMLASSUNG_STATUS_LABEL[v.status]}
                             </span>
                             {' — '}<span className="font-medium">{titel}</span>

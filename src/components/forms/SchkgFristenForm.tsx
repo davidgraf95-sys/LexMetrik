@@ -228,7 +228,7 @@ export function SchkgFristenForm() {
 
       {verweise.length > 0 && (
         <div className="lc-panel p-3 space-y-1">
-          <p className="lc-overline text-ink-500">Rechtsprechung (zu verifizieren)</p>
+          <p className="lc-overline">Rechtsprechung (zu verifizieren)</p>
           {verweise.map((r) => (
             <p key={r.aktenzeichen} className="text-body-s text-ink-600">
               <span className="lc-badge lc-badge-warn mr-1.5">{r.verifiziert ? 'verifiziert' : 'zu verifizieren'}</span>

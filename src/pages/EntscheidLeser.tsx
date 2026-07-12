@@ -86,8 +86,13 @@ const NAV_TYPEN: Abschnittstyp[] = ['regeste', 'sachverhalt', 'erwaegung', 'disp
 const FS_STUFEN = [1.0, 1.08, 1.18, 1.3];
 function ladeFsIdx(): number {
   try {
-    const v = Number(localStorage.getItem('rsp-fs-idx'));
-    if (Number.isInteger(v) && v >= 0 && v < FS_STUFEN.length) return v;
+    // Null-Guard (D-1.1): `Number(null) === 0` liess jeden ERSTBESUCHER still auf
+    // Stufe 0 (1.0rem) statt Default 1 (1.08rem) fallen — R2-Bruch ohne Symptom.
+    const roh = localStorage.getItem('rsp-fs-idx');
+    if (roh !== null) {
+      const v = Number(roh);
+      if (Number.isInteger(v) && v >= 0 && v < FS_STUFEN.length) return v;
+    }
   } catch { /* localStorage nicht verfügbar */ }
   return 1;
 }
@@ -476,7 +481,13 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam }: { schlues
           publizierten BGE «Regeste», sonst maschinelle «Zusammenfassung» — ehrlich
           gekennzeichnet (Abnahme-Kritik: kein Etikettenschwindel). */}
       {zeigeRegeste && snap.regeste && (
-        <RegesteBlock regeste={snap.regeste} amtlich={snap.regesteAmtlich} />
+        /* D-1.4 (Befund 20): Regeste in die Lesespalte — vorher volle Breite
+           (~115–120 CPL im wichtigsten Textblock); jetzt dieselbe zentrierte
+           max-w-reading-Spalte wie der EntscheidBody darunter (Pfad 2 bei
+           Z.~630 liegt bereits in der Spalte). Box-Optik (brass) unverändert. */
+        <div className="mx-auto w-full max-w-reading">
+          <RegesteBlock regeste={snap.regeste} amtlich={snap.regesteAmtlich} />
+        </div>
       )}
 
       {/* Lesespalte 60–75 Zeichen (Reglement R1). Bei offenem Lesemodus NICHT rendern —

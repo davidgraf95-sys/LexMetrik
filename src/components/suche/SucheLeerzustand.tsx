@@ -33,7 +33,7 @@ export function SucheLeerzustand({ onAuswahl }: { onAuswahl?: () => void }) {
     <div className="lc-card overflow-hidden">
       {verlauf.length > 0 && (
         <div className="border-b border-line">
-          <p className="lc-overline px-4 pt-3 pb-1 text-ink-500">Zuletzt geöffnet</p>
+          <p className="lc-overline px-4 pt-3 pb-1">Zuletzt geöffnet</p>
           <ul className="pb-1.5">
             {verlauf.map((e) => (
               <li key={e.route}>
@@ -51,7 +51,7 @@ export function SucheLeerzustand({ onAuswahl }: { onAuswahl?: () => void }) {
       )}
 
       <div>
-        <p className="lc-overline px-4 pt-3 pb-1 text-ink-500">Einstieg</p>
+        <p className="lc-overline px-4 pt-3 pb-1">Einstieg</p>
         <ul className="pb-1.5">
           {EINSTIEGE.map((e) => (
             <li key={e.route}>

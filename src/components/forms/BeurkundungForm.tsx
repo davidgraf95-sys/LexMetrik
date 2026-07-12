@@ -217,7 +217,7 @@ function AllgemeineBeurkundung({ art, startKanton, startWert }: { art: Geschaeft
                   {wertNoetig && geschaeftswert ? ` bei Geschäftswert ${chf(geschaeftswert)}` : ''}, aufsteigend (günstigste zuoberst; nicht bezifferbare/offene Tarife zuunterst).
                 </caption>
                 <thead>
-                  <tr className="lc-overline text-ink-500 border-b border-line">
+                  <tr className="lc-overline border-b border-line">
                     <th className="text-left py-2 pr-3">Kanton</th>
                     <th className="text-right py-2 pl-3">Beurkundungsgebühr</th>
                   </tr>

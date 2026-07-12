@@ -113,7 +113,7 @@ export function GerichtszitatForm() {
           {ergebnis.langform && (
             <div className="flex flex-wrap items-center justify-between gap-3 pt-1 border-t border-line">
               <div>
-                <p className="lc-overline text-ink-500">Langform</p>
+                <p className="lc-overline">Langform</p>
                 <p className="text-body-s text-ink-700 num">{ergebnis.langform}</p>
               </div>
               <KopierKnopf text={ergebnis.langform} />

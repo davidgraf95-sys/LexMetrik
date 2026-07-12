@@ -207,7 +207,7 @@ export function AllgemeineFristForm() {
 
           {/* Presets */}
           <div className="flex flex-wrap items-center gap-2">
-            <span className="lc-overline lc-overline-soft text-ink-500">Voreinstellung:</span>
+            <span className="lc-overline lc-overline-soft">Voreinstellung:</span>
             {MECHANIK_PRESETS.map((p) => (
               <button type="button" key={p.label} onClick={() => setForm((f) => ({ ...f, ...p.patch }))}
                 title={p.info} className="lc-chip hover:bg-brass-200 transition-colors">{p.label}</button>
@@ -218,7 +218,7 @@ export function AllgemeineFristForm() {
               Fristen ohne Sonderregime — Länge/Einheit + ehrlicher Kontext
               (§8) im Tooltip und nach Wahl als Hinweis. */}
           <div className="flex flex-wrap items-center gap-2">
-            <span className="lc-overline lc-overline-soft text-ink-500">Familienrecht &amp; Status:</span>
+            <span className="lc-overline lc-overline-soft">Familienrecht &amp; Status:</span>
             {FAM_STATUS_PRESETS.map((p) => (
               <button type="button" key={p.label}
                 onClick={() => { setForm((f) => ({ ...f, laenge: p.laenge, einheit: p.einheit, wochenendeVerschieben: true, feiertageVerschieben: true })); setFamPreset(p); }}

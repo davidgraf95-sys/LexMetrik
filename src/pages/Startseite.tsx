@@ -16,7 +16,7 @@ import { START_MODULE } from '../lib/startseiteModule';
 function Seclabel({ id, children }: { id: string; children: React.ReactNode }) {
   return (
     <div className="flex items-center gap-3 mb-3">
-      <h2 id={id} className="lc-overline text-ink-500">{children}</h2>
+      <h2 id={id} className="lc-overline">{children}</h2>
       <span aria-hidden className="flex-1 h-px bg-line" />
     </div>
   );

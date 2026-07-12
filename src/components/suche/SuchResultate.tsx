@@ -121,7 +121,7 @@ function Gruppe({ g, index, onAuswahl, onNavigate, listboxId, aktivId, q, sektio
     <div role={alsGruppe ? 'group' : undefined} aria-label={alsGruppe ? g.titel : undefined}
       className="lc-reveal border-t border-line first:border-t-0" style={{ animationDelay: `${index * 55}ms` }}>
       <div className="flex items-baseline gap-2 px-4 pt-3 pb-1">
-        <span className="lc-overline text-ink-500">{g.titel}</span>
+        <span className="lc-overline">{g.titel}</span>
         {/* Zähler je Gruppe (A6) — ausser beim einzeiligen Norm-Sprung («1» wäre Lärm). */}
         {!g.laedt && g.id !== 'sprung' && <span className="num text-xs text-ink-500">{g.gesamt}</span>}
         {g.mehrHref && (

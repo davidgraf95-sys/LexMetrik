@@ -142,7 +142,7 @@ export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, still
             <Fragment key={`${jahr}-${m}`}>
               {trenner && (
                 <div aria-hidden className="hidden sm:flex self-center px-0.5">
-                  <span className="lc-overline text-ink-500 tracking-[0.3em]">···</span>
+                  <span className="lc-overline tracking-[0.3em]">···</span>
                 </div>
               )}
               {/* kompakt: die 17rem-Kappe hält MEHRERE Monate gleich breit; ein
@@ -157,7 +157,7 @@ export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, still
                 </p>
                 <div className="grid grid-cols-7 gap-x-0 gap-y-0.5 text-center">
                   {WTAGE.map((w) => (
-                    <div key={w} className="lc-overline py-1 text-ink-500">{w}</div>
+                    <div key={w} className="lc-overline py-1">{w}</div>
                   ))}
                   {zellen.map((d, i) => {
                     if (!d) return <div key={i} />;
@@ -216,7 +216,7 @@ export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, still
           die Flächen (Band/Schraffur) und die abgeschwächten arbeitsfreien
           Tage. Muster sind Miniaturen der echten Zellen-Rezepte. */}
       <div className="flex flex-wrap items-center gap-x-5 gap-y-2 mt-4 pt-3 border-t border-line text-body-s text-ink-700">
-        <span className="lc-overline text-ink-500">Legende</span>
+        <span className="lc-overline">Legende</span>
         {ereignisISO !== aQuoISO && <Legende kreis="border-2 border-ink-900 bg-paper-raised" label={L.ereignis} />}
         {aQuoISO && <Legende kreis="bg-brass-500" label={L.aquo} />}
         <Legende kreis="bg-sage-500 lc-termin-ring" label={L.adquem} />

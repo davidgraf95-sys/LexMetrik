@@ -210,7 +210,7 @@ export function NotariatGrundbuchForm({ minimal = false }: { minimal?: boolean }
                   Interkantonaler Vergleich bei Kaufpreis {kaufpreis !== undefined ? chf(kaufpreis) : ''} — Notariat / Grundbuch / Handänderungssteuer, aufsteigend nach Gebühren (günstigste zuoberst; nicht bezifferbare Tarife zuunterst). Quelle je Kanton verlinkt.
                 </caption>
                 <thead>
-                  <tr className="lc-overline text-ink-500 border-b border-line">
+                  <tr className="lc-overline border-b border-line">
                     <th className="text-left py-2 pr-3">Kanton</th>
                     <th className="text-right py-2 px-3">Notariat</th>
                     <th className="text-right py-2 px-3">Grundbuch</th>

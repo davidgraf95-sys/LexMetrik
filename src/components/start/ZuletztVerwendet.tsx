@@ -25,7 +25,7 @@ export function ZuletztVerwendet() {
   if (eintraege.length === 0) return null;
   return (
     <section aria-labelledby={titelId} className="space-y-2 min-h-modul-zuletzt" suppressHydrationWarning>
-      <h2 id={titelId} className="lc-overline text-ink-500">Zuletzt verwendet</h2>
+      <h2 id={titelId} className="lc-overline">Zuletzt verwendet</h2>
       {/* Harte 1-Zeilen-Kappung ohne Seiten-Overflow (@390 px, S3-Fix):
            · overflow-x-auto  → der Streifen scrollt IN sich, statt die Seite zu weiten
            · min-w-0          → Flex-/Grid-Basis-Falle: ohne dies erzwingt ein

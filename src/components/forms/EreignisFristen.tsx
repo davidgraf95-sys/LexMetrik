@@ -341,7 +341,7 @@ export function EreignisFristen({ ereignisse, zustellungVorgabe }: {
               <p className="text-body-s font-medium text-ink-700">
                 Fristen ab {ergebnis.ereignisDatumISO.split('-').reverse().join('.')}
               </p>
-              <p className="lc-overline text-ink-500"><span className="num">{ergebnis.zeilen.length}</span> Zeilen</p>
+              <p className="lc-overline"><span className="num">{ergebnis.zeilen.length}</span> Zeilen</p>
             </div>
             <div className="divide-y divide-line">
               {ergebnis.zeilen.map((z) => <ZeileAnzeige key={z.key} z={z} aktenzeichen={aktenzeichen} query={spiegelQuery} />)}

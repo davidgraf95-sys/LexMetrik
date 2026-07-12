@@ -151,7 +151,7 @@ export function TabPanel({ tabs, manifeste, aktivSchluessel, onNavigate, onSchli
   // Klappbarer Gruppen-/Untergruppen-Kopf.
   const kopf = (id: string, label: string, anzahl: number, tief: boolean) => (
     <button type="button" onClick={() => toggle(id)} aria-expanded={offen(id)}
-      className={`flex w-full items-center gap-1.5 rounded px-1.5 py-1 text-left transition-colors hover:bg-paper-sunken/60 ${tief ? 'text-xs text-ink-500 pl-3' : 'lc-overline'}`}>
+      className={`flex w-full items-center gap-1.5 rounded px-1.5 py-1 text-left transition-colors hover:bg-paper-sunken/60 ${tief ? 'text-xs pl-3' : 'lc-overline'}`}>
       <span aria-hidden className={`text-micro text-ink-400 transition-transform ${offen(id) ? '' : '-rotate-90'}`}>▾</span>
       <span className="flex-1 truncate">{label}</span>
       <span className="num text-micro text-ink-400">{anzahl}</span>
