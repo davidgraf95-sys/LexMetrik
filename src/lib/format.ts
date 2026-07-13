@@ -7,6 +7,8 @@
 // Ursache war strukturell). `vorlagen/datum.ts` re-exportiert diese Symbole
 // unverändert (Fassade, §6 Ziff. 6) — kein Konsument-Importpfad bricht.
 
+import { ISO_DATUM_RE } from './datumsUtils';
+
 // Langes Schweizer Datumsformat für Briefkopf/Unterschriften der Vorlagen
 // («5. Juni 2026») – deterministisch aus ISO, kein Locale-API.
 const MONATE = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni',
@@ -27,7 +29,7 @@ export const fmtDatum = (iso?: string): string =>
  *  Bewusst strenger als fmtDatum (Regex statt includes; '________' statt Roh-ISO).
  *  Zuvor 6× wortgleich in den Vertrags-Schemas (Entdoppelung, golden-bewiesen). */
 export const fmtIsoStrict = (iso: string): string =>
-  /^\d{4}-\d{2}-\d{2}$/.test(iso) ? iso.split('-').reverse().join('.') : '________';
+  ISO_DATUM_RE.test(iso) ? iso.split('-').reverse().join('.') : '________';
 
 /** CHF-Betrag mit Tausender-Apostroph und zwei Dezimalen. */
 export function fmtCHF(roh: string): string {
