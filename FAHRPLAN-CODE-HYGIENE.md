@@ -496,3 +496,19 @@
   209/209 byte-gleich, lint, check inkl. `check:zyklen`. Gegenprüfung n/a (G1, reine
   Verschiebung/Zyklen-Auflösung, kein Norm-/Tarif-Wert berührt). ESLint
   `consistent-type-imports` bleibt deferiert (G2, wie vorgegeben).
+- **13.7.2026: H-10 ✅** (Worktree `lm-h10`, Branch `chore/h10-split`, 2 Pathspec-Commits
+  B27→B26). **B27:** `Gesetze.tsx` 846→481 Z. (<500 ✓): BundSystematik/KantonSystematik/
+  KantonAuswahl(+KantonKachel) als reiner Move nach `src/pages/gesetze-teile/`
+  (`BundSystematik.tsx` · `KantonSystematik.tsx` · `KantonAuswahl.tsx` · `geteilt.tsx`
+  mit Gitter/Kategorie/GruppenInhalt), Props unverändert; einzige mechanische Anpassung:
+  Typ-Alias `KantonSystematikBaum` in Gesetze.tsx (Namenskollision Typ↔Komponente),
+  `istVerordnung` modulintern (react-refresh-Regel). e2e-Gesetze-Tests UNANGEPASST.
+  **B26:** `startseiteVorlagen.ts` 1148→24 Z. + 3 Teilmodule entlang der Rubrik-Blöcke
+  (`…VorsorgeVertraege` I–II · `…EingabenGesellschaft` III–IV · `…Ausbau` Phase 3);
+  `startseiteKarten.ts` 890→19 Z. + 3 Teilmodule (`…Fristen` I · `…BetraegeWerkzeuge`
+  II–IV · `…Ausbau` Phase 3); Stamm-Module per Spread in Original-Key-Reihenfolge,
+  Export-Namen VORLAGEN/KARTEN unverändert. **Beweis (G1):** Vorher/Nachher-
+  `JSON.stringify` byte-identisch — VORLAGEN sha256 `49c61269…890bb` (56 425 B, 71 Keys),
+  KARTEN sha256 `da84fb7c…3290` (42 498 B, 63 Keys); volle Hashes im Commit `B26`.
+  `npm run gate` (voll) GRÜN (tsc · vitest · golden · lint · check). Gegenprüfung n/a
+  (G1, verhaltensneutraler Move/Split, kein Risikopfad).
