@@ -196,9 +196,10 @@ const PFLICHT: Paar[] = [
   TEXT('ink-600', 'well', 'lc-overline/lc-fineprint (index.css:350/374)'),
   TEXT('ink-600', 'paper', 'ink-600 Sekundärtext'),
   TEXT('ink-600', 'surface', 'ink-600 auf Karte'),
-  // Tertiärtext ink-500 (NICHT auf well — dort 4.48 = bekannter Riss, s. u.)
-  TEXT('ink-500', 'paper', 'ink-500 Tertiärtext (D-4-Referenz)'),
-  TEXT('ink-500', 'surface', 'ink-500 auf Karte (index.css: D-5-Referenz 5.01)'),
+  // Tertiärtext ink-500 — D-4 (13.7.): well-Riss geheilt (4.48→4.62), jetzt Pflicht.
+  TEXT('ink-500', 'paper', 'ink-500 Tertiärtext (D-4: 5.00)'),
+  TEXT('ink-500', 'surface', 'ink-500 auf Karte (D-4: 5.17)'),
+  TEXT('ink-500', 'well', 'ink-500 auf Eingabefeld (D-4 geheilt: 4.62, vorher 4.48)'),
   TEXT('placeholder', 'well', 'lc-input::placeholder (index.css:37/164)'),
   // Messing-Text/Links
   TEXT('brass-700', 'paper', 'a/--accent-text (index.css:90/214)'),
@@ -250,7 +251,8 @@ const FIXPUNKT: { token: string; mode: Mode; soll: string }[] = [
 // bei Verschlechterung gegenüber dem gemessenen Ist-Wert (Baseline-Guard).
 const BASELINE_TOL = 0.03;
 const RISSE: { fg: string; bg: string; mode: Mode; schwelle: number; ist: number; tag: string }[] = [
-  { fg: 'ink-500', bg: 'well', mode: 'hell', schwelle: 4.5, ist: 4.48, tag: 'D-4 (ink-Wärme: ink-500 ≥4.5 auf well)' },
+  // D-4 ✅ (13.7.): ink-500/well hell 4.48→4.62 (L −0.007 bei Hue-Normalisierung) —
+  // aus RISSE entfernt, jetzt harte PFLICHT (s. o.).
   // D-1.3 ✅: alle direkten Nicht-Text-Call-Sites von danger-500 sind auf
   // --danger-line aliassiert (dunkel = -700, 7.54:1) — das Token-PAAR bleibt
   // als Baseline-Guard, bis D-4/D-5 die -500-Mitte selbst kalibriert.
@@ -322,26 +324,31 @@ for (const mode of ['hell', 'dunkel'] as Mode[]) {
       fehler.push(`Flächen-L-Leiter ${mode}: ${leiter[i - 1]}(L${Ls[i - 1].toFixed(3)}) ≥ ${leiter[i]}(L${Ls[i].toFixed(3)}) — Erhebungs-Logik verletzt (D-0c/D-6).`);
 }
 
-// (b) OKLCH Hue-Drift + L-Monotonie je Familie — ERSTLAUF WARNUNG.
+// (b) OKLCH Hue-Drift + L-Monotonie je Familie.
+//  D-4 (13.7.): die ink-Achse ist auf EINEN Ziel-Hue (88°, brass-verwandt)
+//  normalisiert → für ink SCHARF geschaltet (FAIL bei Hue-Drift >8° oder gebrochener
+//  L-Monotonie). brass bleibt beratend (WARNUNG), bis D-9/Stripe-L-Anker entscheidet.
 const FAMILIEN: Record<string, string[]> = {
   ink: ['ink-900', 'ink-800', 'ink-700', 'ink-600', 'ink-500', 'ink-400', 'ink-300'],
   brass: ['brass-800', 'brass-700', 'brass-600', 'brass-500', 'brass-400', 'brass-300'],
 };
 const HUE_DRIFT_MAX = 8;
 for (const [fam, toks] of Object.entries(FAMILIEN)) {
+  const senke = fam === 'ink' ? fehler : warnungen;
+  const stufe = fam === 'ink' ? 'HART (D-4)' : 'beratend';
   for (const mode of ['hell', 'dunkel'] as Mode[]) {
     const oks = toks.map((t) => oklchOf(t, mode));
     const hues = oks.map((o) => o.h).filter((h): h is number => h != null && Number.isFinite(h));
     if (hues.length) {
       const spanne = Math.max(...hues) - Math.min(...hues);
       if (spanne > HUE_DRIFT_MAX)
-        warnungen.push(`[b] Hue-Drift ${fam} ${mode}: ${spanne.toFixed(1)}° > ${HUE_DRIFT_MAX}° — EIN Ziel-Hue je Achse (D-4). Erstlauf beratend.`);
+        senke.push(`[b] Hue-Drift ${fam} ${mode}: ${spanne.toFixed(1)}° > ${HUE_DRIFT_MAX}° — EIN Ziel-Hue je Achse (D-4). ${stufe}.`);
     }
     // L-Monotonie: -900 dunkelste Stufe (Text) … monoton fallende L Richtung -300.
     const Ls = oks.map((o) => o.l);
     for (let i = 1; i < Ls.length; i++)
       if (mode === 'hell' ? Ls[i] <= Ls[i - 1] : Ls[i] >= Ls[i - 1]) {
-        warnungen.push(`[b] L-Monotonie ${fam} ${mode}: bei ${toks[i - 1]}→${toks[i]} nicht monoton — Rampe (D-4/D-5). Erstlauf beratend.`);
+        senke.push(`[b] L-Monotonie ${fam} ${mode}: bei ${toks[i - 1]}→${toks[i]} nicht monoton — Rampe (D-4/D-5). ${stufe}.`);
         break;
       }
   }

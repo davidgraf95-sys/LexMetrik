@@ -241,8 +241,23 @@ Gegenprüfung n/a (reine Token-Schicht). Trailer `Roadmap: W2·11-DESIGN`.
   INFO: einziger Call-Site-Mix `Shell.tsx` (sunken/paper) rendert raumunabhängig
   identisch — für D-5 vorgemerkt, hier nicht angefasst.
 
-### D-4 · Ink-Wärme: EINE Hue-Normalisierung der Grau-Achse
+### D-4 · Ink-Wärme: EINE Hue-Normalisierung der Grau-Achse ✅ (13.7.2026, PR feat/design-d4-ink)
 *(Befunde 3+34 konsolidiert [Radix-Regel «saturated gray closest to accent»] + 15-Anteil)*
+
+**✅ GEBAUT (13.7.2026):** ink-Rampe (900…300) + `--placeholder`, hell UND dunkel
+(16 Werte), in OKLCH auf **EINEN Ziel-Hue 88°** normalisiert (hell zuvor ~107°=grün-gelb,
+dunkel 84–90° gestreut → jetzt Span **1.3° hell / 1.2° dunkel**), **L gehalten**,
+Chroma-Glocke (C≈0.008 Enden, ~0.012–0.015 Mitten 600–400). Alle Werte deterministisch
+mit culori gemessen (F2, keine Annahme). **Mess-Quittung:** ink-500/well hell
+**4.48→4.62** (Riss geheilt, einzige L-Abweichung −0.007 bei ink-500 zum Erreichen von
+4.5; als WCAG-Pflichtpaar geführt) · ink-500 paper/surface **5.00/5.17** hell, **5.52/5.20**
+dunkel · `--placeholder`/well **4.76** hell / **5.21** dunkel (Ziel ≥4.5, vorher 4.75) ·
+ink-600 ≥6.6:1 überall · `--auf-gold` auf brass-300 10.71:1. `--ink-fixed-dark`-Solitär
+`#1A1A17→#1C1A15` (hell ink-900 + `--auf-gold` wandern mit EINEM Wert). **D-0 für ink
+scharf geschaltet:** Hue-Drift + L-Monotonie sind für `ink` jetzt harter FAIL (brass
+bleibt beratend); ink-500/well aus RISSE in PFLICHT verschoben → `check:farbwelt`
+**48 WCAG-Pflichtpaare** grün. golden byte-gleich (CSS-only). Reglement-Nachtrag
+`DESIGN-REGLEMENT.md §F2b-Nachtrag D-4`; Abnahme-Mappe `abnahme/design-waerme/d4/`.
 - **Kern:** ink-Rampe (900…300) + `--placeholder`, hell UND dunkel (16 Werte), in
   OKLCH auf EINEN Ziel-Hue (~Brass-Hue 85–95°) normalisieren; Chroma als flache
   Glocke (C≈0.008 an den Enden, C≈0.012–0.015 in den Mitten 600–400 — dort sitzt
