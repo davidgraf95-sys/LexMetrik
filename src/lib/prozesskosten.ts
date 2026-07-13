@@ -10,6 +10,7 @@
 // Grundlage/Verifikation: bibliothek/recherche/prozesskosten-zpo-95-96.md.
 
 import type { Berechnungsergebnis, Rechenschritt, Normverweis } from '../types/legal';
+import { chfGanz } from './format';
 import { auswertenTarif, skaliereErgebnis, type TarifErgebnis } from './tarif/staffel';
 import { MODIFIKATOREN, type Faktor } from '../data/tarif/modifikatoren';
 import { GERICHTSKOSTEN } from '../data/tarif/gerichtskosten';
@@ -618,7 +619,7 @@ export function berechneInstanzenzug(
 
 const spanneAlsText = (s: Spanne | null): string =>
   !s ? '—' : s.vonChf === s.bisChf ? chfText(s.vonChf) : `${chfText(s.vonChf)} – ${chfText(s.bisChf)}`;
-const chfText = (n: number): string => `CHF ${Math.round(n).toLocaleString('de-CH')}`;
+const chfText = chfGanz; // geteilte Formatter-Heimat (lib/format, H-9), byte-gleich
 
 export interface BerichtZusatz {
   vorschuss?: Kostenvorschuss;
@@ -780,8 +781,10 @@ export function postenText(p: PostenErgebnis): string {
   if (p.schlichtungspauschale) return 'Schlichtungspauschale (separater Tarif)';
   const e = p.ergebnis;
   if (!e) return '—';
-  if (e.deterministisch) return `CHF ${Math.round(e.betragChf).toLocaleString('de-CH')}`;
-  const f = (n: number | undefined) => n == null ? null : `CHF ${Math.round(n).toLocaleString('de-CH')}`;
+  if (e.deterministisch) return chfGanz(e.betragChf);
+  // Nullable-Wrapper um chfGanz (Randsemantik n==null → null) — bewusst KEIN
+  // Merge in chfGanz, sondern lokale Hülle (H-9).
+  const f = (n: number | undefined) => n == null ? null : chfGanz(n);
   const von = f(e.vonChf); const bis = f(e.bisChf);
   if (von && bis) return `${von} – ${bis}`;
   if (bis) return `bis ${bis}`;

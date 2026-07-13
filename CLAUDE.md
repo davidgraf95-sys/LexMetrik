@@ -118,8 +118,11 @@ Vor jedem Struktur-Umbau gilt das Protokoll:
    diesem §6, golden byte-gleich). Aufteilen ist erlaubt und erwünscht — es ist
    das Gegenteil der nach §4 verbotenen Engine-**Verschmelzung**. Robuste Zahl-/
    CHF-Parser und Altersberechnung kommen aus der geteilten Infrastruktur
-   (`vorlagen/datum.ts`, `datumsUtils.ts`), nicht als lokale Kopie — es sei
-   denn, die Semantik weicht fachlich bewusst ab (dann am Fundort begründen,
+   — **Formatter-Heimat = `lib/format.ts`** (fachneutrale Datum-/CHF-/Zahl-
+   Formatter; `vorlagen/datum.ts` ist nur noch Fassade darauf, H-9) sowie
+   `datumsUtils.ts` (Datums-Rechnen/-Validierung) —, nicht als lokale Kopie
+   — es sei denn, die Semantik weicht fachlich bewusst ab (dann am Fundort
+   begründen,
    §1). So lädt eine Session weniger Kontext pro Aufgabe (weniger Tokens, ohne
    Qualitätsverlust). **Fassaden-Muster beim Split (Konvention, Befund H-1/B31):**
    Inhalt in Geschwister-Dateien verschieben, das alte Modul wird zur schlanken

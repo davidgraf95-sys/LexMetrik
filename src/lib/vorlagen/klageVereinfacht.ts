@@ -6,6 +6,7 @@ import { behoerdeManuellVollstaendig, type BehoerdeManuell } from './behoerden';
 import { ZPO_SCHWELLEN } from '../zustaendigkeit';
 import { berechneFrist } from '../zpoFristen';
 import { KANTONE } from '../kantone';
+import { ISO_DATUM_RE } from '../datumsUtils';
 import type { Kanton } from '../../types/legal';
 
 // ─── Klage im vereinfachten Verfahren (Art. 243 ff. ZPO) · Basel-Stadt ───────
@@ -131,7 +132,7 @@ export function kvRouting(materie: KvMaterie, streitwertCHF: number | null, kant
 export function kvKlagefrist(kbDatumISO: string, materie: KvMaterie, kanton: Kanton = 'BS'): {
   ablauf: string; ablaufISO: string; stillstandAktiv: boolean; fristLabel: string;
 } | null {
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(kbDatumISO)) return null;
+  if (!ISO_DATUM_RE.test(kbDatumISO)) return null;
   // Kalender-Gültigkeit zusätzlich zur Syntax (Bug-Check 5.6.2026: «2025-02-30»
   // passierte den Regex und warf in der Fristen-Engine) — Roundtrip-Probe hält
   // den |null-Vertrag auch bei unsauberer Aufrufquelle (Defense-in-Depth).
@@ -250,6 +251,8 @@ export const KV_DEFAULTS: KvAnswers = {
 export function kvStreitwert(a: KvAnswers): number | null {
   const roh = a.begehrenTyp === 'unbeziffert' ? a.unbeziffertMindest : a.streitwert;
   if (roh == null || roh === '') return null;
+  // Bewusst lokal (B15/§1): Randsemantik (leer→0 ohne Trim-Guard) verschieden von
+  // `vorlagen/datum.zahl` (leer→null); leer ist hier bereits oben abgefangen. Nicht mergen.
   const n = Number(String(roh).replace(/['’\s]/g, '').replace(',', '.'));
   return Number.isFinite(n) ? n : null;
 }
