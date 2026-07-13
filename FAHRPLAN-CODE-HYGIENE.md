@@ -528,10 +528,12 @@
   chfGanz hätte es verdoppelt = Verhaltensänderung). Kommentar «BEWUSST verschieden
   von `chf` … nicht zusammenführen (§1)» mit `chfGanz` nach `lib/format` gewandert;
   `chf`/`chfGanz` bleiben getrennte Exporte. **B18 (Beifang):** nur die KONSTANTE
-  `export const ISO_DATUM_RE` in `datumsUtils.ts` zentralisiert; einzige ersetzte
-  Kopie = `istGueltigesISO` selbst (ohnehin offene Datei); NIRGENDS auf
-  `istGueltigesISO` umgestellt (Regex akzeptiert 2026-02-30 — Umstellung wäre
-  Verhaltensänderung). **B15 (abgewertet):** die 6 lokalen Schweizer-Zahl-Parser
+  `export const ISO_DATUM_RE` in `datumsUtils.ts` zentralisiert; ersetzte Kopien
+  NUR in ohnehin offenen Dateien = `istGueltigesISO` (datumsUtils selbst),
+  `format.ts` (`fmtIsoStrict`) und `klageVereinfacht.ts` (`kvKlagefrist`);
+  die ~14 übrigen Kopien (kuendigung*-Familie, engine.ts, Pages …) bewusst
+  stehen gelassen; NIRGENDS auf `istGueltigesISO` umgestellt (Regex akzeptiert
+  2026-02-30 — Umstellung wäre Verhaltensänderung). **B15 (abgewertet):** die 6 lokalen Schweizer-Zahl-Parser
   (`arbeitsvertrag.lohnZahl` · `schlichtungsgesuchBs.ts` ×2 · `klageVereinfacht` ·
   `mahnung` · `ErbteilungForm.num`) NICHT gemergt — je Stelle Kommentar «bewusst
   lokal, Randsemantik (leer→0/NaN vs. `vorlagen/datum.zahl`→null) verschieden»;
